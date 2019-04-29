@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8e227e4d382dac627626b977427aae05d0295744
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582337"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62855312"
 ---
 # <a name="rename-user-sys"></a>Переименуйте пользователя с именем sys
   Помощник по обновлению обнаружил в базе данных имя пользователя **sys** . Это имя зарезервировано. Переименуйте пользователя перед обновлением. Если пользователь не переименован, то после обновления база данных будет помечена как подозрительная и недоступна до тех пор, пока не будет переведена в режим «в сети».  

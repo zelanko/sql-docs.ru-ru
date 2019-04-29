@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ab29cc94071b95f6ff8cffb95902851d1796ed80
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583277"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62985871"
 ---
 # <a name="verify-autogrow-is-turned-on-for-all-data-and-log-files-during-the-upgrade-process"></a>Убедитесь, что во время процесса обновления автоувеличение размера включено для всех файлов с данными и файлов журнала
   Помощник по обновлению обнаружил файлы данных или журнала, для которых не установлен параметр «Автоувеличение». Новые и усовершенствованные функции требуют дополнительного места на диске для пользовательских баз данных и **tempdb** системной базы данных. Чтобы обеспечить ресурсы позволяют справиться с увеличением размеров при обновлении и последующих рабочих операциях, рекомендуется Автоувеличение для всех файлов журналов и данных пользователей и **tempdb** файлов данных и журналов, перед обновлением.  

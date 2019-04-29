@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: aa906aaf6d9ae2033b6d029f4844c5d388bb44ea
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358386"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62851495"
 ---
 # <a name="upgrade-to-sql-server-2014"></a>Обновление до SQL Server 2014
   Экземпляры [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]или [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] можно обновить до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Перед запуском программы установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для обновления до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]просмотрите [техническое руководство по обновлению SQL Server 2014](https://download.microsoft.com/download/7/1/5/715BDFA7-51B6-4D7B-AF17-61E78C7E538F/SQL_Server_2014_Upgrade_technical_guide.pdf) (загружается в формате PDF), ознакомьтесь со статьями о процессе обновления в этом разделе и прочитайте [заметки о выпуске SQL Server 2014](https://go.microsoft.com/fwlink/?LinkID=296445).  

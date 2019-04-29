@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 3a35d5cdb9db4c56579a4229b2d08014a99da542
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52392028"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63072770"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>Устойчивость таблиц, оптимизированных для памяти
   [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] обеспечивает полную устойчивость хранения для таблиц, оптимизированных для памяти. При фиксации транзакции, которая изменила таблицу, оптимизированную для памяти, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (как и для дисковых таблиц) гарантирует, что изменения будут необратимы (выдержат перезапуск базы данных) при доступности используемого хранилища. Есть два ключевых компонента устойчивости таблицы: ведение журнала транзакций и сохранение изменений данных в хранилище на диске.  
@@ -111,7 +111,7 @@ ms.locfileid: "52392028"
  При необходимости слияние может быть явно выполнено путем вызова [sys.sp_xtp_merge_checkpoint_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-merge-checkpoint-files-transact-sql).  
   
 ### <a name="life-cycle-of-a-cfp"></a>Жизненный цикл пары файлов контрольной точки CFP  
- Пары файлов проходят несколько этапов, прежде чем они могут быть удалены из памяти. В любой момент времени пары файлов находятся на одной из четырех стадий. PRECREATED, UNDER CONSTRUCTION, ACTIVE, MERGE TARGET, MERGED SOURCE, REQUIRED FOR BACKUP/HA, IN TRANSITION TO TOMBSTONE и TOMBSTONE. Описание этих этапов см. в разделе [sys.dm_db_xtp_checkpoint_files (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql).  
+ Пары файлов проходят несколько этапов, прежде чем они могут быть удалены из памяти. В любой момент времени пары файлов находятся в одном из следующих этапов: PRECREATED, UNDER CONSTRUCTION, ACTIVE, MERGE TARGET, MERGED SOURCE, REQUIRED FOR BACKUP/HA, IN TRANSITION TO TOMBSTONE и TOMBSTONE. Описание этих этапов см. в разделе [sys.dm_db_xtp_checkpoint_files (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql).  
   
  После учета памяти, занимаемой парами файлов на различных стадиях, общий объем памяти, занимаемой устойчивыми, оптимизированными для памяти таблицами, может быть в 2 раза больше размера таблиц в памяти. Динамическое административное Представление [sys.dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql) можно запросить, чтобы получить список всех пар файлов оптимизированной для памяти файловой группы, включая фазу. На переход CFP от состояния MERGE SOURCE к состоянию TOMBSTONE и сборку мусора может уйти до пяти контрольных точек, за каждой из которых следует создание резервной копии журнала транзакций, если в базе данных настроена модель полного восстановления или модель восстановления с неполным протоколированием.  
   

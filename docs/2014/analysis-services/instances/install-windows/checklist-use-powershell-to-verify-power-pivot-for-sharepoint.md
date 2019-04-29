@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fe75fc89ffa1642ebc3fa4301cb0a80c83895141
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087793"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730002"
 ---
 # <a name="checklist-use-powershell-to-verify-powerpivot-for-sharepoint"></a>Контрольный список: Использование PowerShell для проверки PowerPivot для SharePoint
   Ни одна из операций установки или восстановления [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] не завершена без прохождения проверочного теста, который подтверждает работоспособность служб и данных. В этой статье рассказывается о том, как выполнить эти шаги с помощью Windows PowerShell. Каждому шагу посвящен отдельный подраздел с тем, чтобы можно было перейти непосредственно к конкретным задачам. Например, выполните скрипт, приведенный в подразделе [Базы данных](#bkmk_databases) этого раздела для проверки имени приложения службы и баз данных содержимого, если необходимо запланировать их для обслуживания или резервного копирования.  
@@ -29,7 +29,7 @@ ms.locfileid: "55087793"
 |-|  
 |**[!INCLUDE[applies](../../../includes/applies-md.md)]** SharePoint 2013 #124; SharePoint 2010|  
   
- **В этом разделе**: Обозначенные буквами элементы в содержании соответствуют областям на диаграмме. На диаграмме показано:  
+ **В этом разделе**: Обозначенные буквами элементы в Содержании соответствуют области схемы. На диаграмме показано:  
   
 |||  
 |-|-|  
@@ -286,7 +286,7 @@ MidTierAcctReadPermissionRule    True PowerPivot: MidTier process account should
   
  Следующая команда выполняет поиск в журнале событий Windows событий, связанных с экземпляром [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] в режиме SharePoint. Сведения об отключении события или изменении уровня событий см. в разделе [Настройка и просмотр файлов журнала SharePoint и журнала диагностики &#40;PowerPivot для SharePoint&#41;](../../power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md).  
   
- **Имя службы:** MSOLAP$POWERPIVOT  
+ **Имя службы:** MSOLAP$ POWERPIVOT  
   
  **Отображаемое имя в службах Windows:** SQL Server Analysis Services (POWERPIVOT)  
   

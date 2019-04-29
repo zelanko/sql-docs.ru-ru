@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 448eda8c3c77f410bedd88d1193f2302c926ee95
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681372"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062930"
 ---
 # <a name="ado-fundamentals"></a>Основные принципы ADO
 ADO предоставляет разработчикам это мощные и логических объектная модель для программного доступа к, изменение и обновление данных из разнообразных источников данных посредством системные интерфейсы OLE DB. Наиболее распространенный случай использования ADO — запрос или несколько таблиц в реляционной базе данных, извлечения и отображения результатов в приложении и возможно позволяют внести и сохранить изменения в данных. Ниже приведены другие задачи:  
@@ -59,7 +59,7 @@ ADO предоставляет разработчикам это мощные и
   
 -   [Объекты и коллекции ADO](../../../ado/guide/data/ado-objects-and-collections.md)  
   
--   [HelloData: простое приложение ADO](../../../ado/guide/data/hellodata-a-simple-ado-application.md)  
+-   [HelloData: Простое приложение ADO](../../../ado/guide/data/hellodata-a-simple-ado-application.md)  
   
 -   [Поставщики OLE DB](../../../ado/guide/data/ole-db-providers-ado.md)  
   

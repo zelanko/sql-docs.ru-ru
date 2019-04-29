@@ -16,11 +16,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: d1c846f7ed60bbecac64021e9a881312e1f1f64c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134124"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011347"
 ---
 # <a name="join-a-role"></a>присоединение к роли
   В этом разделе описывается назначение ролей для имен входа и пользователей базы данных в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Для эффективного управления разрешениями в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] используются роли. Назначайте разрешения ролям, а затем добавляйте и удаляйте пользователей и имена входа в роли. Благодаря ролям нет необходимости задавать разрешения для каждого пользователя в отдельности.  

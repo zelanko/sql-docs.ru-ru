@@ -23,11 +23,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 273e0343fc57af419a349725482047df08619cdd
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376512"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62896326"
 ---
 # <a name="developing-a-user-interface-for-a-data-flow-component"></a>Разработка пользовательского интерфейса для компонента потока данных
   Разработчики компонентов могут включить для компонента настраиваемый пользовательский интерфейс, отображающийся в среде [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] во время изменения компонента. Реализация пользовательского интерфейса обеспечивает возможность получать уведомления, когда компонент добавляется или удаляется из задачи потока данных или при вызове справки по компоненту.  

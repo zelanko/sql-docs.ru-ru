@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 7e308589ab565b5702bbf2cba939835a50c08d8e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678373"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63126654"
 ---
 # <a name="getting-started-with-ssma-for-sap-ase-sybasetosql"></a>Начало работы с SSMA для SAP ASE (SybaseToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) для SAP ASE позволяет быстро, преобразование схем баз данных SAP Adaptive Server Enterprise (ASE), чтобы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или схемы базы данных SQL Azure, отправьте полученный схем в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или базы данных SQL Azure и переноса данных из SAP ASE для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или база данных Azure SQL.  
@@ -64,7 +64,7 @@ SSMA содержит два проводников метаданных для 
 Дополнительные сведения см. в разделе [загрузка преобразовать объекты базы данных в SQL Server &#40;SybaseToSQL&#41;](../../ssma/sybase/loading-converted-database-objects-into-sql-server-sybasetosql.md).  
   
 ### <a name="metadata"></a>Метаданные  
-Справа от каждого обозреватель метаданных находятся вкладки, которые описывают выбранного объекта. Например, если выбрать таблицу в обозревателе метаданных Sybase, шесть вкладок: **таблицы**, **SQL**, **сопоставления типов**, **данных**,  **Свойства**, и **отчета**. **Отчетов** вкладка содержит сведения только в том случае, после создания отчета, содержащего выбранный объект. Если выбрать таблицу в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или обозреватель метаданных SQL Azure, отображается три вкладки: **таблицы**, **SQL**, и **данных**.  
+Справа от каждого обозреватель метаданных находятся вкладки, которые описывают выбранного объекта. Например если выбрать таблицу в обозревателе метаданных Sybase, шесть вкладок: **Таблица**, **SQL**, **сопоставление типов**, **данных**, **свойства**, и **отчета**. **Отчетов** вкладка содержит сведения только в том случае, после создания отчета, содержащего выбранный объект. Если выбрать таблицу в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или обозреватель метаданных SQL Azure, отображается три вкладки: **Таблица**, **SQL**, и **данных**.  
   
 Большинство параметров метаданных доступны только для чтения. Тем не менее можно изменить следующие метаданные:  
   

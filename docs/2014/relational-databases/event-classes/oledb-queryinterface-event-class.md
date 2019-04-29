@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b420e0b4b9c9531209f3d3227f534116e26dd206
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763626"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63032430"
 ---
 # <a name="oledb-queryinterface-event-class"></a>OLEDB QueryInterface, класс событий
   Класс событий **OLEDB QueryInterface** возникает, когда [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] вызывает функцию **QueryInterface** OLE DB при обращении к распределенным запросам и удаленным хранимым процедурам. Этот класс событий включается в трассировку, выполняющую наблюдение за проблемами, связанными с выполнением распределенных запросов и удаленных хранимых процедур.  

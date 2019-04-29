@@ -18,11 +18,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1f39b4295aceadc7c738ade04379d85d39377d9b
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59964680"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011572"
 ---
 # <a name="configure-a-report-server-for-remote-administration"></a>настроить сервер отчетов для удаленного администрирования
   В службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]экземпляры сервера отчетов можно настраивать локально или удаленно. Чтобы настроить удаленный экземпляр сервера отчетов, можно использовать программу настройки служб Reporting Services. Также можно написать пользовательский код, который будет использовать поставщик инструментария управления Windows (WMI) служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Программа настройки служб Reporting Services предоставляет графический интерфейс поставщика WMI, поэтому такая настройка сервера отчетов не требует написания кода. При запуске программы можно указать, к какому удаленному серверу необходимо подключаться.  

@@ -21,11 +21,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a7913d82b471b50605c51fbfb61b3782cf135382
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59242342"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62898862"
 ---
 # <a name="identifiers-ssis"></a>Идентификаторы (службы SSIS)
   В выражениях идентификаторы обозначают столбцы и переменные, значения которых могут быть использованы в операциях. Выражения могут использовать обычные и сложные идентификаторы.  

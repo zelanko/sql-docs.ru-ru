@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bb9678f56bc261edbe8450dbcc03840f8d18fc8b
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59933631"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63182910"
 ---
 # <a name="lesson-4-define-a-data-connection-and-data-table-for-child-report"></a>Занятие 4: Определение подключения к данным и таблицы данных для родительского отчета
   После проектирования родительского отчета далее необходимо создать подключение к данным и таблицу данных для дочернего отчета. В этом учебнике в качестве источника подключения к данным используется база данных AdventureWorks2008. Предусмотрена также возможность установить подключение к базе данных AdventureWorks2012.  

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 928be152faec37ed1f954561a7f14f176c92cfbc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688562"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63027908"
 ---
 # <a name="isolationlevel-and-mode-properties-example-vc"></a>Примеры IsolationLevel и Mode свойства (Visual C++)
 В этом примере используется [режим](../../../ado/reference/ado-api/mode-property-ado.md) свойства, чтобы открыть монопольное подключение и [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) свойства, чтобы открыть транзакцию, которая выполняется отдельно от других транзакций.  
@@ -236,12 +236,12 @@ void PrintComError(_com_error &e) {
 **Но это понятное для пользователя? -popular_comp**  
 **Секреты Силиконовой долине - popular_comp**  
 **NET этикет - popular_comp**  
-**Phobic компьютера и лиц, не боятся: Изменений поведения - self_help**  
+**Компьютер Phobic и не боятся частных лиц: Изменений поведения - self_help**  
 **Является злоумышленником гнев? -self_help**  
 **Жизнь, не опасаясь - self_help**  
-**Длительного Deprivation данных: Четыре примеры внедрения - self_help**  
+**Deprivation длительного данных: Четыре конкретных примера - self_help**  
 **Эмоциональную безопасности: Новый алгоритм - self_help**  
-**Луковиц Ликс и чесночный: кулинарные секреты морская - trad_cook**  
+**Луковиц Ликс и чесночный: Приготовление секреты морская - trad_cook**  
 **50 лет в машины Palace Buckingham - trad_cook**  
 **Суши, любой пользователь? -trad_cook**   
 ## <a name="see-also"></a>См. также  

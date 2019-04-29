@@ -18,11 +18,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cb523d8e9b1dbbb136475d0aa739491935f755ee
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188334"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62922164"
 ---
 # <a name="complete-database-restores-full-recovery-model"></a>Выполнение полного восстановления базы данных (модель полного восстановления)
   Задача полного восстановления — восстановить базу данных целиком. В период восстановления база данных находится вне сети. Прежде чем какая-либо часть базы данных перейдет в режим «в сети», все данные восстанавливаются до точки согласования, в которой все части базы данных находятся в одном и том же моменте времени и в которой нет незафиксированных транзакций.  
@@ -161,7 +161,7 @@ GO
   
  **Восстановление резервной копии журнала транзакций**  
   
--   [Восстановление резервной копии журнала транзакций &#40;SQL Server&#41;](restore-a-transaction-log-backup-sql-server.md)  
+-   [Восстановление резервной копии журнала транзакций (SQL Server)](restore-a-transaction-log-backup-sql-server.md)  
   
  **Восстановление резервной копии с помощью управляющих объектов SQL Server (SMO)**  
   

@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2332e4f80e0dded930b22d9f0faf76d80ec09141
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52413419"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013236"
 ---
 # <a name="sysdmexecquerymemorygrants-transact-sql"></a>sys.dm_exec_query_memory_grants (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,9 +53,9 @@ ms.locfileid: "52413419"
 |**max_used_memory_kb**|**bigint**|Максимальный объем используемой до данного момента физической памяти в килобайтах.|  
 |**query_cost**|**float**|Ожидаемая стоимость запроса.|  
 |**timeout_sec**|**int**|Время ожидания данного запроса в секундах до отказа от обращения за предоставлением памяти.|  
-|**resource_semaphore_id**|**smallint**|Неуникальный идентификатор семафора ресурса, которого ожидает данный запрос.<br /><br /> **Примечание.** Данный идентификатор уникален в более ранних версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], чем [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Данное изменение может повлиять на устранение проблем в запросах. Дополнительные сведения см. в подразделе «Замечания» далее в этом разделе.|  
+|**resource_semaphore_id**|**smallint**|Неуникальный идентификатор семафора ресурса, которого ожидает данный запрос.<br /><br /> **Примечание.** Этот идентификатор уникален в версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ранее [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Данное изменение может повлиять на устранение проблем в запросах. Дополнительные сведения см. в подразделе «Замечания» далее в этом разделе.|  
 |**queue_id**|**smallint**|Идентификатор ожидающей очереди, в которой данный запрос ожидает предоставления памяти. Значение NULL, если память уже предоставлена.|  
-|**wait_order**|**int**|Последовательный порядок ожидающих запросов в пределах указанного **queue_id**. Это значение может изменяться для заданного запроса, если другие запросы отказываются от предоставления памяти или получают ее. Значение NULL, если память уже предоставлена.|  
+|**wait_order**|**int**|Последовательный порядок ожидающих запросов в пределах указанного **queue_id**. Это значение можно изменить для конкретного запроса, если другие запросы отказываются от предоставления памяти или истечения времени ожидания. Значение NULL, если память уже предоставлена.|  
 |**is_next_candidate**|**bit**|Является следующим кандидатом на предоставление памяти.<br /><br /> 1 = да<br /><br /> 0 = нет<br /><br /> NULL = память уже предоставлена.|  
 |**wait_time_ms**|**bigint**|Время ожидания в миллисекундах. Значение NULL, если память уже предоставлена.|  
 |**plan_handle**|**varbinary(64)**|Идентификатор для данного плана запроса. Используйте **sys.dm_exec_query_plan** извлечь фактический план XML.|  

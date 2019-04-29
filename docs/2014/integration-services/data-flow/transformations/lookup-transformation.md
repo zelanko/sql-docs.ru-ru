@@ -20,11 +20,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 47b04c547700eda94d4c4f19b4a1211f8cdbf694
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386552"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62900289"
 ---
 # <a name="lookup-transformation"></a>Преобразование «Уточняющий запрос»
   Преобразование «Уточняющий запрос» выполняет уточняющие запросы, объединяя данные во входных столбцах со столбцами в ссылочном наборе данных. Уточняющие запросы используются для доступа к дополнительной информации в связанной таблице, основанной на значениях в общих столбцах.  
@@ -129,11 +129,11 @@ ms.locfileid: "58386552"
   
 ## <a name="related-content"></a>См. также  
   
--   Видео с руководством по [ Реализовать преобразование «Уточняющий запрос» в режиме полного кэширования](https://go.microsoft.com/fwlink/?LinkId=131031), на сайте msdn.microsoft.com  
+-   Видео с руководством по [ реализации преобразования "Уточняющий запрос" в режиме полного кэширования](https://go.microsoft.com/fwlink/?LinkId=131031) на сайте msdn.microsoft.com.  
   
 -   Запись в блоге, [Рекомендации по использованию режимов кэширования для преобразования «Уточняющий запрос»](https://go.microsoft.com/fwlink/?LinkId=146623), на сайте blogs.msdn.com  
   
--   Запись в блоге [шаблон уточняющего запроса: Без учета регистра](https://go.microsoft.com/fwlink/?LinkId=157782), на сайте blogs.msdn.com  
+-   Запись в блоге [Lookup Pattern: Case Insensitive](https://go.microsoft.com/fwlink/?LinkId=157782) (Шаблон уточняющего запроса: без учета регистра символов) на сайте blogs.msdn.com.  
   
 -   Образец, [Преобразование «Уточняющий запрос»](https://go.microsoft.com/fwlink/?LinkId=267528), на сайте msftisprodsamples.codeplex.com.  
   

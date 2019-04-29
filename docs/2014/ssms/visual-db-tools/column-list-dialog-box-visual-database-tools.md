@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7a6853d721a1504c3b44e733a2f2fbc6f37608be
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52815776"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62936449"
 ---
 # <a name="column-list-dialog-box-visual-database-tools"></a>Диалоговое окно «Список столбцов» (визуальные инструменты для баз данных)
   При написании запросов полезно иметь перед собой список столбцов, доступных для выбранных табличных объектов.  

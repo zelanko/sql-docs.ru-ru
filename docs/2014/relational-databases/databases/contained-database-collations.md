@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f1345051d06493a456172a183defce3a8bd555ca
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526516"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62872058"
 ---
 # <a name="contained-database-collations"></a>Параметры сортировки автономной базы данных
   На порядок сортировки и семантику сравнения текстовых данных влияют различные свойства, в том числе учет регистра, учет диакритических знаков и используемый базовый язык. Эти характеристики выражаются в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] посредством выбора параметров сортировки для данных. Подробное обсуждение параметров сортировки см. в разделе [Поддержка параметров сортировки и Юникода](../collations/collation-and-unicode-support.md).  

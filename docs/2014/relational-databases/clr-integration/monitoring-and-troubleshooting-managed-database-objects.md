@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f03266a5460e9e34a404256e5df415f799b29d98
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090654"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62918930"
 ---
 # <a name="monitoring-and-troubleshooting-managed-database-objects"></a>Наблюдение и устранение неполадок в управляемых объектах базы данных
   Данный раздел содержит информацию о средствах, которые можно использовать для наблюдения и диагностики управляемых объектов базы данных и сборок, работающих в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -37,7 +37,7 @@ ms.locfileid: "48090654"
 ## <a name="performance-counters"></a>Счетчики производительности  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] предоставляет объекты и счетчики, которые могут применяться системным монитором для отслеживания активности на компьютере, где запущен экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Объект представляет собой любой ресурс [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], например блокировку [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] или процесс Windows. В каждом объекте содержатся один или более счетчиков, определяющих различные аспекты объектов для мониторинга. Дополнительные сведения см. в разделе [Использование объектов SQL Server](../performance-monitor/use-sql-server-objects.md).  
   
-|Объект|Описание|  
+|Object|Описание|  
 |------------|-----------------|  
 |[SQL Server, объект CLR](../performance-monitor/sql-server-clr-object.md)|Общее время выполнения в среде CLR.|  
   

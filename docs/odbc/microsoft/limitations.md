@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9901d2169876930a41956338bb216c1282f7bc71
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828838"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63026836"
 ---
 # <a name="limitations"></a>Ограничения
 В этом разделе описываются ограничения драйверов ODBC для настольных баз данных, относительно следующих тем:  
@@ -45,4 +45,4 @@ ms.locfileid: "47828838"
 |||[Представления](../../odbc/microsoft/views-limitations.md)|  
 |||[ГДЕ предложения](../../odbc/microsoft/where-clause-limitations.md)|  
 |||[ГДЕ ТЕКУЩЕГО предложения](../../odbc/microsoft/where-current-of-clause-limitations.md)|  
-|||[Строковые значения](../../odbc/microsoft/string-limitations.md)|
+|||[String](../../odbc/microsoft/string-limitations.md)|

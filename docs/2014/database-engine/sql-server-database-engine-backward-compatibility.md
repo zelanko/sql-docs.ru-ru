@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: dc5681577b051ebb26959856a9eb775ae2ae409f
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52639469"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842851"
 ---
 # <a name="sql-server-database-engine-backward-compatibility"></a>Обратная совместимость компонента SQL Server Database Engine
   В подразделах раздела об обратной совместимости описаны отличия в поведении для разных версий [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  

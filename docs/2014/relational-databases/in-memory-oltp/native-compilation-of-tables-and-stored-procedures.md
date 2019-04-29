@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9e70ab55fedcc5053cf82a78c040c850a23824eb
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536676"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63075202"
 ---
 # <a name="native-compilation-of-tables-and-stored-procedures"></a>Собственная компиляция таблиц и хранимых процедур
   В In-Memory OLTP введено понятие компиляции в собственном коде. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеет возможность компиляции в собственном коде хранимых процедур, которые обращаются к оптимизированным для памяти таблицам. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может также скомпилировать в собственном коде оптимизированные для памяти таблицы. Компиляция в собственном коде обеспечивает повышение скорости доступа к данным и более эффективное выполнение запросов по сравнению с интерпретируемыми (традиционными) командами [!INCLUDE[tsql](../../includes/tsql-md.md)]. Компиляция таблиц и хранимых процедур в собственном коде создает библиотеки DLL.  

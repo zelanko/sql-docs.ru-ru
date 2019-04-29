@@ -26,11 +26,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d0caed882338b4ac1ce2f3e1e225693017ff1605
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378382"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62899937"
 ---
 # <a name="term-extraction-transformation"></a>преобразование «Извлечение терминов»
   Преобразование «Извлечение терминов» извлекает термины из текста во входном столбце преобразования, а затем записывает термины в выходной столбец преобразования. Это преобразование работает только с англоязычным текстом и использует собственный словарь и лингвистические сведения об английском языке.  

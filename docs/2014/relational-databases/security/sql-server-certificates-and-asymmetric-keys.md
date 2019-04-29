@@ -13,11 +13,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: af78f507b56ec83c2768bbf3d30f5d8d7313d7c8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125114"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63025802"
 ---
 # <a name="sql-server-certificates-and-asymmetric-keys"></a>Сертификаты SQL Server и асимметричные ключи
   Криптография с открытым ключом представляет собой форму обеспечения конфиденциальности сообщений, подразумевающую создание *открытого* и *закрытого* ключей. Закрытый ключ хранится в секрете, а открытый ключ передается другим лицам. Хотя ключи математически связаны, закрытый ключ нельзя легко вычислить с помощью открытого ключа. Открытый ключ используется при шифровании данных, а закрытый ключ используется при расшифровке данных. Сообщение, зашифрованное с помощью открытого ключа, можно расшифровать только с помощью правильного закрытого ключа. Поскольку применяются два различных ключа, эти ключи *асимметричные*.  
@@ -66,14 +66,14 @@ ms.locfileid: "48125114"
   
 |||  
 |-|-|  
-|Инструмент|Назначение|  
+|Инструмент|Цель|  
 |[makecert](http://msdn2.microsoft.com/library/bfsktky3\(VS.80\).aspx)|Создает сертификаты.|  
 |[sn](http://msdn2.microsoft.com/library/k5b5tt23\(VS.80\).aspx)|Создает строгие имена для симметричных ключей.|  
   
 ## <a name="related-tasks"></a>Связанные задачи  
  [Выбор алгоритма шифрования](encryption/choose-an-encryption-algorithm.md)  
   
- [CREATE SYMMETRIC KEY (Transact-SQL)](/sql/t-sql/statements/create-symmetric-key-transact-sql)  
+ [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-symmetric-key-transact-sql)  
   
  [CREATE CERTIFICATE (Transact-SQL)](/sql/t-sql/statements/create-certificate-transact-sql)  
   

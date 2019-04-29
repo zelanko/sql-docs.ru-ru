@@ -13,11 +13,11 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 ms.openlocfilehash: 85901ba63607de721259431ab83d3a0cd3a3185d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115924"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011715"
 ---
 # <a name="create-identical-symmetric-keys-on-two-servers"></a>Создание идентичных симметричных ключей на двух серверах
   В этом разделе описывается создание идентичных симметричных ключей на двух разных серверах в среде [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Для расшифровки текста необходим ключ, который был использован для его шифрования. Если шифрование и расшифровка происходят в одной и той же базе данных, ключ хранится в базе данных и доступен для шифрования и расшифровки в зависимости от разрешений. Но если шифрование и расшифровка происходят в разных базах данных или на разных серверах, ключ хранится в одной из них и недоступен для использования в другой.  
@@ -49,7 +49,7 @@ ms.locfileid: "48115924"
   
 #### <a name="to-create-identical-symmetric-keys-on-two-different-servers"></a>Создание идентичных симметричных ключей на двух разных серверах  
   
-1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   

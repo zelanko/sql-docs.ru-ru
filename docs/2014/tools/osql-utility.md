@@ -24,11 +24,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ebcb8171ef63411fface757d2e6000e95eec6822
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126754"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63017189"
 ---
 # <a name="osql-utility"></a>Программа osql
   Программа **osql** позволяет вводить инструкции [!INCLUDE[tsql](../includes/tsql-md.md)] , системные процедуры и файлы скриптов. Для связи с сервером эта программа использует ODBC.  
@@ -294,7 +294,7 @@ osql -E -Q "EXIT(SELECT COUNT(*) FROM '%1')"
 > [!NOTE]  
 >  Выполняет пакет, завершает выполнение и не возвращает значения.  
   
--   ВЫХОД **(*`query`*)**  
+-   EXIT **(*`query`*)**  
   
 > [!NOTE]  
 >  Выполняет пакет, включая запрос, затем возвращает результаты запроса и завершает работу.  

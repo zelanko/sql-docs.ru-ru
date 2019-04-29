@@ -21,11 +21,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4733ba204671ec3ed691e77626fb08861b7e6763
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59969550"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63020746"
 ---
 # <a name="report-and-group-variables-collections-references-report-builder-and-ssrs"></a>Ссылки на коллекции переменных отчета и группы (построитель отчетов и службы SSRS)
   При сложном вычислении, которое используется несколько раз в выражениях отчета, может потребоваться создание переменной. Можно создать переменную отчета или переменную группы. В отчете имена переменных должны быть уникальными.  

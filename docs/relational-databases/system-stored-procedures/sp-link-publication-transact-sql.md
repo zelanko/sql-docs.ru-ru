@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 94d074985848bb510c15907f6b17dc492904f5c0
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537844"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62960184"
 ---
 # <a name="splinkpublication-transact-sql"></a>sp_link_publication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,8 +60,8 @@ sp_link_publication [ @publisher = ] 'publisher'
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|**0**|Использует [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверка подлинности с помощью имени входа, заданного в этой хранимой процедуре как *входа* и *пароль*.<br /><br /> Примечание. В предыдущих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью этого параметра задавался динамический удаленный вызов процедур (RPC).|  
-|**1**|Использует контекст безопасности (проверка подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или Windows) пользователя, редактирующего подписчика.<br /><br /> Примечание. Эта учетная запись должна существовать также и на издателе с соответствующими правами доступа. В случае использования проверки подлинности Windows должно поддерживаться делегирование учетной записи безопасности.|  
+|**0**|Использует [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверка подлинности с помощью имени входа, заданного в этой хранимой процедуре как *входа* и *пароль*.<br /><br /> Примечание. В предыдущих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], этот параметр используется для указания динамического удаленного вызова процедур (RPC).|  
+|**1**|Использует контекст безопасности (проверка подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или Windows) пользователя, редактирующего подписчика.<br /><br /> Примечание. Эта учетная запись также должна существовать на издателе с достаточными правами. В случае использования проверки подлинности Windows должно поддерживаться делегирование учетной записи безопасности.|  
 |**2**|Используется существующее, определенное пользователем связанного сервера имя для входа создан с помощью **sp_link_publication**.|  
   
 `[ @login = ] 'login'` — Это имя. Аргумент *login* имеет тип **sysname** и значение по умолчанию NULL. Этот параметр должен быть указан при *security_mode* — **0**.  

@@ -16,11 +16,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: d7dceef4651804dabf4080d6f8b85d0597b1957b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135283"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62919619"
 ---
 # <a name="dropping-an-assembly"></a>Удаление сборки
   Сборки, зарегистрированные в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с помощью инструкции CREATE ASSEMBLY, могут быть удалены, если предоставляемые ими функциональные возможности больше не требуются. При удалении сборки из базы данных удаляются и все связанные с ней файлы, такие как файлы отладки. Чтобы удалить сборку, используйте инструкцию DROP ASSEMBLY со следующим синтаксисом:  

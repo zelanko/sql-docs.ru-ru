@@ -1,5 +1,5 @@
 ---
-title: Слияние секций в службах Analysis Services (SSAS — многомерные) | Документы Microsoft
+title: Слияние секций в службах Analysis Services (SSAS — многомерные) | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b488997ae97a54a2755847ad9112047015fb0eb5
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025401"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62988626"
 ---
 # <a name="merge-partitions-in-analysis-services-ssas---multidimensional"></a>Объединение секций в службах Analysis Services (SSAS — многомерные данные)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -91,13 +91,13 @@ ms.locfileid: "34025401"
   
  По той же причине требуется обновление секций, получающих сегментированные данные из именованных запросов. Объединенная секция должна иметь именованный запрос, который возвращает совместный результирующий набор, полученный ранее из разных именованных запросов.  
   
-## <a name="partition-storage-considerations-molap"></a>Замечания о хранилищах для секций: MOLAP  
+## <a name="partition-storage-considerations-molap"></a>Замечания о хранилищах секции: MOLAP  
  При слиянии секций многомерного OLAP (MOLAP) также осуществляется слияние фактов, хранимых в многомерных структурах секций. В результате получается внутренне полная и последовательная секция. Однако факты, хранимые в секциях MOLAP, представляют собой копии фактов из таблицы фактов. При последующей обработке секции факты в многомерной структуре удаляются (только в случае полной обработки и обновления) и данные копируются из таблицы фактов, как указано в источнике данных и фильтре для секции. Если исходная секция использует не ту таблицу фактов, которую использует целевая секция, то необходимо вручную осуществить слияние таблицы фактов исходной секции с таблицей фактов целевой секции для гарантии того, что полный набор данных доступен при обработке получившейся в результате секции. Это также имеет место, когда две секции были основаны на различных именованных запросах.  
   
 > [!IMPORTANT]  
 >  Получившаяся в результате секция MOLAP с неполной таблицей фактов содержит таблицу фактов, получившуюся в результате внутреннего слияния, и функционирует корректно до ее обработки.  
   
-## <a name="partition-storage-considerations-holap-and-rolap-partitions"></a>Замечания о хранилищах для секций: секции HOLAP и ROLAP  
+## <a name="partition-storage-considerations-holap-and-rolap-partitions"></a>Замечания о хранилищах секции: Секции HOLAP и ROLAP  
  При слиянии секций гибридного OLAP (HOLAP) или реляционного OLAP (ROLAP), имеющих разные таблицы фактов, слияние этих таблиц фактов не осуществляется автоматически. Если слияние этих таблиц фактов не осуществлено вручную, то для получившейся в результате секции доступна только таблица фактов, связанная с целевой секцией. Факты, связанные с исходной секцией, недоступны для углубленной детализации в получившейся в результате секции, и при обработке этой секции статистические вычисления не суммируют данные из недоступной таблицы.  
   
 > [!IMPORTANT]  
@@ -114,7 +114,7 @@ ms.locfileid: "34025401"
   
 1.  В обозревателе объектов разверните узел **Группы мер** куба, содержащего секции, слияние которых необходимо осуществить, разверните узел **Секции**и щелкните правой кнопкой мыши секцию, которая является целью операции слияния. Например, если перемещаются квартальные фактические данные в секцию, которая хранит данные за год, выберите секцию, которая содержит годовые фактические данные.  
   
-2.  Нажмите кнопку **слияние секций** Открытие **слияние секций \<имя секции >** диалоговое окно.  
+2.  Нажмите кнопку **слияние секций** открыть **слияние секций \<имя секции >** диалоговое окно.  
   
 3.  В разделе **Исходные секции**установите флажок рядом с каждой исходной секцией, для которой необходимо слияние осуществить с целевой секцией, затем нажмите кнопку **ОК**.  
   
@@ -128,11 +128,11 @@ ms.locfileid: "34025401"
 ##  <a name="bkmk_partitionsXMLA"></a> Как объединять секции с помощью XMLA  
  В этом разделе сведения см. в разделе [Слияние секций (XML)](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/merging-partitions-xmla.md).  
   
-## <a name="see-also"></a>См. также:  
- [Обработка служб Analysis Services объектов](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md)   
- [Секций & #40; Analysis Services — многомерные данные & #41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
- [Создание и управление локальной секции & #40; Службы Analysis Services & #41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)   
- [Создание и управление удаленной секцией & #40; Службы Analysis Services & #41;](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md)   
+## <a name="see-also"></a>См. также  
+ [Обработка объектов служб Analysis Services](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md)   
+ [Секции (службы Analysis Services — многомерные данные)](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+ [Создание локальной секции и управление ею (службы Analysis Services)](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)   
+ [Создание удаленной секции и управление ею (службы Analysis Services)](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md)   
  [Настройка обратной записи секции](../../analysis-services/multidimensional-models/set-partition-writeback.md)   
  [Секции, доступные для записи](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
  [Настройка хранилища строк для измерений и секций](../../analysis-services/multidimensional-models/configure-string-storage-for-dimensions-and-partitions.md)  

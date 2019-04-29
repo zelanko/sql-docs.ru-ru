@@ -34,11 +34,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b1ab8545714e84c8ecf8ee6c9cb89b7b8c0d3831
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62922246"
 ---
 # <a name="backup-history-and-header-information-sql-server"></a>Журнал и сведения о заголовке резервной копии (SQL Server)
   Полный журнал резервных копий и операций восстановления на экземпляре сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] хранится в базе данных **msdb** . В этом разделе рассказывается о таблицах журнала восстановления, а также об инструкциях [!INCLUDE[tsql](../../includes/tsql-md.md)] , которые используются для доступа к журналам резервного копирования. В этом разделе также обсуждается удобство составления списка файлов базы данных и журнала транзакций и использование данных в заголовке носителя в сравнении с использованием данных в заголовке резервной копии.  

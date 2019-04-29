@@ -1,5 +1,5 @@
 ---
-title: 'Шаг 6: Изменения отправляются на сервер (учебник по RDS) | Документация Майкрософт'
+title: Шаг 6. Изменения отправляются на сервер (учебник по RDS) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,13 +14,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8bfeb9ad607fc35c055e025fcc67435323d3143e
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559971"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62955721"
 ---
-# <a name="step-6-changes-are-sent-to-the-server-rds-tutorial"></a>Шаг 6. Изменения отправлены на сервер (учебник по RDS)
+# <a name="step-6-changes-are-sent-to-the-server-rds-tutorial"></a>Шаг 6. Изменения отправлены на сервер (учебник по RDS)
 Если **записей** редактирования объекта, любые изменения (то есть строк, которые добавлены, изменены или удалены) могут отправляться на сервер.  
   
 > [!NOTE]

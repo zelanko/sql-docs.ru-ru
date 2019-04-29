@@ -16,11 +16,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 4e06dfced9b9800c0e5c0b7d0dca208bac67c900
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122785"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62920841"
 ---
 # <a name="deploying-clr-database-objects"></a>Развертывание объектов базы данных CLR
   Развертывание — это процесс, посредством которого распространяется завершенное приложение или модуль, который необходимо запустить на другом компьютере. С помощью среды [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio можно разрабатывать объекты базы данных среды CLR и развертывать их на тестовом сервере. Вместо среды Visual Studio управляемые объекты базы данных можно компилировать с помощью файлов распространения платформы [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework. После компиляции сборки, содержащие объекты базы данных CLR можно развернуть на тестовом сервере с помощью среды Visual Studio или инструкций [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Обратите внимание, что среду Visual Studio .NET 2003 нельзя использовать для программирования или развертывания в интеграции со средой CLR. В состав [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] входит предварительно установленная платформа .NET Framework, а Visual Studio .NET 2003 не может использовать сборки .NET Framework версии 2.0.  

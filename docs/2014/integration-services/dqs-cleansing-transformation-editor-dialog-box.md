@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c6367e846f3b542101db5c4328cd99e1a16f0416
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385572"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62898872"
 ---
 # <a name="dqs-cleansing-transformation-editor-dialog-box"></a>Диалоговое окно редактора преобразования «Очистка DQS»
   Диалоговое окно **Редактор преобразования "Очистка DQS"** служит для исправления данных с помощью служб Data Quality Services (DQS). Дополнительные сведения см. в статье [Data Quality Services Concepts](../../2014/data-quality-services/data-quality-services-concepts.md).  

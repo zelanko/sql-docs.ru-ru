@@ -1,5 +1,5 @@
 ---
-title: Вычисляемые меры представление (табличное) | Документы Microsoft
+title: Вычисляемые меры представление (табличное) | Документация Майкрософт
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,19 +10,20 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: eb14a3114edde51f55a0d540a9ab7c8aa7578de2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63019288"
 ---
-# <a name="tables---calculated-measure-representation"></a>Таблицы - представление вычисляемой меры
+# <a name="tables---calculated-measure-representation"></a>Таблицы — представление вычисляемой меры
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Вычисляемая мера — это именованное выражение DAX, вычисляемое при каждом использовании.  
   
 ## <a name="calculated-measure-representation"></a>Представление вычисляемой меры  
   
 ### <a name="calculated-measure-in-amo"></a>Вычисляемая мера в объектах AMO  
- При использовании объектов AMO для управления вычисляемой мерой табличной модели существует соответствие «один к одному» между объектом вычисляемой меры и мерой, определенной в объекте <xref:Microsoft.AnalysisServices.Command> объекта <xref:Microsoft.AnalysisServices.MdxScript>. Каждый **вычисляемая мера** определяется как **Создание меры** выражение внутри <xref:Microsoft.AnalysisServices.Command> объекта и разделяются точкой с запятой. Все вычисляемые меры в табличной модели соответствуют строке коллекции **Создание меры** строки в одном командном объекте в <xref:Microsoft.AnalysisServices.MdxScript> объекта. Для каждой вычисляемой меры существует соответствие «один к одному» с объектом <xref:Microsoft.AnalysisServices.CalculationProperty>.  
+ При использовании объектов AMO для управления вычисляемой мерой табличной модели существует соответствие «один к одному» между объектом вычисляемой меры и мерой, определенной в объекте <xref:Microsoft.AnalysisServices.Command> объекта <xref:Microsoft.AnalysisServices.MdxScript>. Каждый **вычисляемая мера** определяется как **CREATE MEASURE** выражения внутри <xref:Microsoft.AnalysisServices.Command> объекта и разделенные точкой с запятой. Все вычисляемые меры в табличной модели соответствуют коллекции **CREATE MEASURE** строки в одном командном объекте в <xref:Microsoft.AnalysisServices.MdxScript> объекта. Для каждой вычисляемой меры существует соответствие «один к одному» с объектом <xref:Microsoft.AnalysisServices.CalculationProperty>.  
   
  В следующем фрагменте кода показано, как создать вычисляемую меру.  
   

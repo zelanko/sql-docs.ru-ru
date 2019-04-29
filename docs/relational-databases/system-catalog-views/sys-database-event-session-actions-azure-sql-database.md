@@ -13,11 +13,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: da64525978a5655df1832d70959929d6221c9a7b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595532"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62936324"
 ---
 # <a name="sysdatabaseeventsessionactions-azure-sql-database"></a>sys.database_event_session_actions (база данных SQL Azure)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "47595532"
   
 ||  
 |-|  
-|**Применяется к**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] версии 12 и любые более поздние версии.|  
+|**Область применения**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] До версии 12 и любые более поздние версии.|  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  

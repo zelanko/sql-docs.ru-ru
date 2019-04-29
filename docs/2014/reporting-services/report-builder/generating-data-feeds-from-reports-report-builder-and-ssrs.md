@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 17f63e9c4f6d1e560e6945a1ae6f01100d59703a
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59956600"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62990064"
 ---
 # <a name="generating-data-feeds-from-reports-report-builder-and-ssrs"></a>Формирование веб-каналов данных из отчетов (построитель отчетов и службы SSRS)
   Модуль подготовки отчетов служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Atom формирует сервисный документ Atom, в котором перечислены веб-каналы данных, доступные в отчете, а также веб-каналы данных из областей данных в отчете. Этот модуль используется для формирования совместимых с Atom потоков данных, которые допускают чтение и обмен данными с приложениями, которые потребляют потоки данных, формируемые отчетами. Модуль подготовки отчетов Atom можно применить, например, для формирования веб-каналов данных, которые будут использоваться клиентом [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  

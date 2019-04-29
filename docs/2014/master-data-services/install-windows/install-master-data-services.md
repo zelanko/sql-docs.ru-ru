@@ -11,27 +11,27 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c52c5a160148b914874d5b237ecfae7edf8518c3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352866"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62924151"
 ---
 # <a name="install-master-data-services"></a>Установка служб Master Data Services
   В этой статье приведен обзор установки и настройки служб [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]. [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] устанавливается в три этапа:  
   
--   [Предваряющие установку задачи](#preinstall): проверьте требования к системе для установки служб [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
+-   [Предварительная подготовка](#preinstall). Проверьте системные требования перед установкой [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
   
--   [Установка](#install): Установите [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] с помощью программы установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или из командной строки.  
+-   [Установка](#install): Установка [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установки или командной строки.  
   
--   [Действия перед установкой](#postinstall): Откройте программу [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] и выполните действия после установки. Создайте и настройте базу данных [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] , веб-приложение [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] и веб-службу, а также разверните образец модели.  
+-   [Действия после установки](#postinstall). Откройте [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] и выполните действия после установки. Создайте и настройте базу данных [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] , веб-приложение [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] и веб-службу, а также разверните образец модели.  
   
 ##  <a name="preinstall"></a> Предварительная подготовка  
   
 |Действие|Сведения|См. также|  
 |------------|-------------|--------------------|  
 |Проверьте требования к установке|Компьютер, на котором запускается программа установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , должен соответствовать минимальным требованиям.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] к установке;<br /><br /> Веб-приложение [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] и веб-службы.<br /><br /> База данных служб [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] , если она размещается на этом же компьютере в виде веб-приложения.<br /><br /> Обратите внимание, что можно разделить веб-сервер и компьютер сервера базы данных, запустив программу установки только на компьютере веб-сервера и создание [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] базы данных на удаленном компьютере под управлением поддерживаемой версии и выпуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[Возможности, поддерживаемые различными выпусками SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)<br /><br /> [Требования к оборудованию и программному обеспечению для установки SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)<br /><br /> [Требования веб-приложений (службы Master Data Services)](web-application-requirements-master-data-services.md)<br /><br /> [Требования к базе данных (службы Master Data Services)](database-requirements-master-data-services.md)|  
-|Настройка необходимых ролей, служб ролей и компонентов|Перед запуском установки настройте на компьютере необходимые роли Windows, службы ролей и компоненты.<br /><br /> Примечание. Этот этап можно выполнить и позже в рабочем процессе, однако рекомендуется провести такую настройку до запуска установки, чтобы сразу после нее можно было перейти к веб-конфигурации.|[Требования веб-приложений (службы Master Data Services)](web-application-requirements-master-data-services.md)|  
+|Настройка необходимых ролей, служб ролей и компонентов|Перед запуском установки настройте на компьютере необходимые роли Windows, службы ролей и компоненты.<br /><br /> Примечание. Этот этап можно выполнить позже в рабочем процессе, однако рекомендуется провести такую настройку до запуска программы установки, чтобы можно было выполнять сразу после нее задач веб-конфигурации.|[Требования веб-приложений (службы Master Data Services)](web-application-requirements-master-data-services.md)|  
 |Общие сведения о поддержке языков|Определите язык установки и пользовательского интерфейса служб [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] .|[Многоязычное и международное развертывание (службы Master Data Services)](multi-lingual-and-global-deployments-master-data-services.md)|  
   
 ##  <a name="install"></a> Установка  

@@ -1,5 +1,5 @@
 ---
-title: 'События класса TM: Класс события Save Tran Starting | Документация Майкрософт'
+title: TM. Класс события Save Tran Starting | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,16 +15,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2b33f4a2d85f2613b238c9bd9b2e59415784b2a3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52801446"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061355"
 ---
-# <a name="tm-save-tran-starting-event-class"></a>События класса TM: Класс события Save Tran Starting
-  События класса TM: Save Tran Starting указывают на начало выполнения запроса SAVE TRANSACTION. Запрос отправляется клиентом через интерфейс управления транзакциями.  
+# <a name="tm-save-tran-starting-event-class"></a>TM. Класс события Save Tran Starting
+  TM: Save Tran Starting, класс событий указывает, что запрос SAVE TRANSACTION начался. Запрос отправляется клиентом через интерфейс управления транзакциями.  
   
-## <a name="tm-save-tran-starting-event-class-data-columns"></a>События класса TM: Save Tran Starting  
+## <a name="tm-save-tran-starting-event-class-data-columns"></a>TM. Save Tran Starting столбцы данных класса событий  
   
 |Имя столбца данных|Тип данных|Описание|Идентификатор столбца|Фильтруемый|  
 |----------------------|---------------|-----------------|---------------|----------------|  

@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 7bbf2dface759da63bd6b9845f4e62321b1cbe76
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460638"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63027517"
 ---
 # <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>Настраивать PolyBase для доступа к внешним данным в хранилище BLOB-объектов Azure
 
@@ -89,7 +89,7 @@ ms.locfileid: "49460638"
                USE_TYPE_DEFAULT = TRUE)  
    ```
 
-1. Создайте внешнюю таблицу, указывающую на данные, хранящиеся в службе хранилища Azure, с помощью инструкции [CREATE EXTERNAL TABLE](../t-sql/statements/create-external-table-transact-sql.md). В этом примере внешние данные содержат данные датчиков автомобиля.
+1. Создайте внешнюю таблицу, указывающую на данные, хранящиеся в службе хранилища Azure, с помощью инструкции [CREATE EXTERNAL TABLE](../t-sql/statements/create-external-table-transact-sql.md). В этом примере внешние данные представляют собой данные датчика автомобиля.
 
    ```sql
    -- LOCATION: path to file or directory that contains the data (relative to HDFS root).  
@@ -179,5 +179,5 @@ WHERE T2.YearMeasured = 2009 and T2.Speed > 40;
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Дополнительные сведения о PolyBase см. в разделе [что такое PolyBase?](../relational-databases/polybase/polybase-guide.md). 
+Дополнительные сведения о PolyBase см. в [этом руководстве](../relational-databases/polybase/polybase-guide.md). 
 

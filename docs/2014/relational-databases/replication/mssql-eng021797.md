@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 88f9fff576b52e83073bbf917a43edf0a7648086
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753786"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63023580"
 ---
 # <a name="mssqleng021797"></a>MSSQL_ENG021797
     
@@ -30,7 +30,7 @@ ms.locfileid: "52753786"
 |Источник события|MSSQLSERVER|  
 |Компонент|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |Символическое имя||  
-|Текст сообщения|'%s' должно быть допустимым именем входа Windows, представленным в следующем виде: "КОМПЬЮТЕР\имя_входа" или "ДОМЕН\имя_входа". См. документацию по "%s".»|  
+|Текст сообщения|«%s» должен быть допустимым именем входа Windows в виде: «КОМПЬЮТЕР\имя_входа» или «ДОМЕН\имя_входа». См. документацию по "%s".»|  
   
 ## <a name="explanation"></a>Объяснение  
  Эта ошибка возникает при работе следующих хранимых процедур репликации, если для параметра **@job_login** задано недопустимое значение или значение NULL. Эта ошибка может возникнуть, если член предопределенной роли базы данных **db_owner** запускает скрипты из предыдущих версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Модель безопасности в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]изменилась, поэтому эти скрипты необходимо обновить.  

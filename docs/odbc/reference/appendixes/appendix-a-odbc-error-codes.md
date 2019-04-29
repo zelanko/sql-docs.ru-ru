@@ -1,5 +1,5 @@
 ---
-title: Приложение а. коды ошибок ODBC | Документация Майкрософт
+title: Приложение А. Коды ошибок ODBC | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e93e9dd8da111d367657d99dfba19513ff7f7539
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767742"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63026795"
 ---
 # <a name="appendix-a-odbc-error-codes"></a>Приложение А. Коды ошибок ODBC
 В этом разделе рассматриваются значениях SQLSTATE для ODBC 3. *x*. Дополнительные сведения о ODBC 3. *x* значения SQLSTATE, см. в разделе [сопоставления SQLSTATE](../../../odbc/reference/develop-app/sqlstate-mappings.md).  
   
- **SQLGetDiagRec** или **SQLGetDiagField** возвращает значения SQLSTATE Open Group *управления данными: Structured Query Language (SQL), версия 2* (марта 1995 г.). Значения SQLSTATE являются строками, содержащими пять символов. В следующей таблице перечислены значения SQLSTATE, для возвращения драйвер **SQLGetDiagRec**.  
+ **SQLGetDiagRec** или **SQLGetDiagField** возвращает значения SQLSTATE Open Group *управления данными: Язык структурированных запросов (SQL), версия 2* (марта 1995 г.). Значения SQLSTATE являются строками, содержащими пять символов. В следующей таблице перечислены значения SQLSTATE, для возвращения драйвер **SQLGetDiagRec**.  
   
  Строковое значение возвращается для SQLSTATE состоит из значения класса двух символов, за которым следует значение подкласс трех символов. Значение класса «01» указывает на предупреждение и сопровождается код возврата SQL_SUCCESS_WITH_INFO. Класс значения, отличные от «01», за исключением класса «Обмен мгновенными Сообщениями,» указывает на ошибку и сопровождаются возвращаемое значение SQL_ERROR. Класс «IM» относится только к предупреждения и ошибки, которые являются производными от реализации ODBC. Подкласс значение «000» в любом классе, указывает на наличие не подкласса для этой SQLSTATE. Назначение значений класс и подкласс определяется SQL-92.  
   
@@ -97,8 +97,8 @@ ms.locfileid: "47767742"
 |44000|Нарушение параметра WITH CHECK OPTION|**SQLBulkOperations**<br /><br /> **SQLExecDirect**<br /><br /> **SQLExecute**<br /><br /> **SQLParamData**<br /><br /> **SQLSetPos**|  
 |HY000|Общая ошибка|Все функции ODBC, за исключением:<br /><br /> **SQLError**<br /><br /> **SQLGetDiagField**<br /><br /> **SQLGetDiagRec**|  
 |HY001|Ошибка выделения памяти|Все функции ODBC, за исключением:<br /><br /> **SQLError**<br /><br /> **SQLGetDiagField**<br /><br /> **SQLGetDiagRec**|  
-|HY003 И СООБЩЕНИЕМ|Недопустимый тип буфера приложения|**SQLBindCol**<br /><br /> **SQLBindParameter**<br /><br /> **SQLGetData**|  
-|HY004 И СООБЩЕНИЕМ|Недопустимый тип данных SQL|**SQLBindParameter**<br /><br /> **SQLGetTypeInfo**|  
+|HY003|Недопустимый тип буфера приложения|**SQLBindCol**<br /><br /> **SQLBindParameter**<br /><br /> **SQLGetData**|  
+|HY004|Недопустимый тип данных SQL|**SQLBindParameter**<br /><br /> **SQLGetTypeInfo**|  
 |HY007|Связанная инструкция не подготовлена|**SQLCopyDesc**<br /><br /> **SQLGetDescField**<br /><br /> **SQLGetDescRec**|  
 |HY008|Операция отменена|Все функции ODBC, которые могут обрабатываться асинхронно:<br /><br /> **SQLBrowseConnect**<br /><br /> **SQLBulkOperations**<br /><br /> **SQLColAttribute**<br /><br /> **SQLColumnPrivileges**<br /><br /> **SQLColumns**<br /><br /> **SQLConnect**<br /><br /> **SQLDescribeCol**<br /><br /> **SQLDescribeParam**<br /><br /> **SQLDisconnect**<br /><br /> **SQLDriverConnect**<br /><br /> **SQLEndTran**<br /><br /> **SQLExecDirect**<br /><br /> **SQLExecute**<br /><br /> **SQLExtendedFetch**<br /><br /> **SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLForeignKeys**<br /><br /> **SQLGetData**<br /><br /> **SQLGetTypeInfo**<br /><br /> **SQLMoreResults**<br /><br /> **SQLNumParams**<br /><br /> **SQLNumResultCols**<br /><br /> **SQLParamData**<br /><br /> **SQLPrepare**<br /><br /> **SQLPrimaryKeys**<br /><br /> **SQLProcedureColumns**<br /><br /> **SQLProcedures**<br /><br /> **SQLPutData**<br /><br /> **SQLSetConnectAttr**<br /><br /> **SQLSetPos**<br /><br /> **SQLSpecialColumns**<br /><br /> **SQLStatistics**<br /><br /> **SQLTablePrivileges**<br /><br /> **SQLTables**|  
 |HY009|Недопустимое использование пустого указателя|**SQLAllocHandle**<br /><br /> **SQLBindParameter**<br /><br /> **SQLBulkOperations**<br /><br /> **SQLColumnPrivileges**<br /><br /> **SQLColumns**<br /><br /> **SQLExecDirect**<br /><br /> **SQLForeignKeys**<br /><br /> **SQLGetCursorName**<br /><br /> **SQLGetData**<br /><br /> **SQLGetFunctions**<br /><br /> **SQLNativeSql**<br /><br /> **SQLPrepare**<br /><br /> **SQLPrimaryKeys**<br /><br /> **SQLProcedureColumns**<br /><br /> **SQLProcedures**<br /><br /> **SQLPutData**<br /><br /> **SQLSetConnectAttr**<br /><br /> **SQLSetCursorName**<br /><br /> **SQLSetEnvAttr**<br /><br /> **SQLSetStmtAttr**<br /><br /> **SQLSpecialColumns**<br /><br /> **SQLStatistics**<br /><br /> **SQLTablePrivileges**<br /><br /> **SQLTables**|  
@@ -106,7 +106,7 @@ ms.locfileid: "47767742"
 |HY011|Атрибут нельзя установить сейчас|**SQLBulkOperations**<br /><br /> **SQLParamData**<br /><br /> **QLSetPos**<br /><br /> **SQLSetStmtAttr**|  
 |HY012|Недопустимый код операции транзакции|**SQLEndTran**|  
 |HY013|Ошибка управления памятью|Все функции ODBC, за исключением:<br /><br /> **SQLGetDiagField**<br /><br /> **SQLGetDiagRec**|  
-|HY014 ДОСТИГНУТ|Предельное число дескрипторов|**SQLAllocHandle**|  
+|HY014|Предельное число дескрипторов|**SQLAllocHandle**|  
 |HY015|Имена курсоров недоступны|**SQLGetCursorName**|  
 |HY016|Не удается изменить дескриптор строки реализации|**SQLCopyDesc**<br /><br /> **SQLSetDescField**<br /><br /> **SQLSetDescRec**|  
 |HY017|Недопустимое использование автоматически выделенного дескриптора|**SQLFreeHandle**<br /><br /> **SQLSetStmtAttr**|  

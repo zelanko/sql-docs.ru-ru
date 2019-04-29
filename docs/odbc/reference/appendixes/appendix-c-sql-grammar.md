@@ -1,5 +1,5 @@
 ---
-title: Приложение c. Грамматика SQL | Документация Майкрософт
+title: Приложение В. Грамматика SQL | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c1de83d96e8116ee1ab9991a0a2fe78bed165c2f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660623"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63027051"
 ---
 # <a name="appendix-c-sql-grammar"></a>Приложение В. Грамматика SQL
 Это приложение содержит следующие разделы.  

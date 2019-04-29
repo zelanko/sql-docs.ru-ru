@@ -26,11 +26,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: db3a72facf1676360e7c338663facac66840a113
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089154"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874119"
 ---
 # <a name="getting-started-with-clr-integration"></a>Приступая к работе с интеграцией со средой CLR
   В этом разделе представлен обзор пространств имен и библиотеки, необходимые для компиляции объектов базы данных с помощью [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] интеграции с .NET Framework среда CLR (CLR). В этом разделе также показано, как написать, скомпилировать и выполнить простую хранимую процедуру CLR на языке [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#.  

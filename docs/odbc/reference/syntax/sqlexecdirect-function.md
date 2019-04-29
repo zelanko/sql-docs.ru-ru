@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 794dc83a27d3c4882b5df4edbb4f2a645cd5ca1c
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590708"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061512"
 ---
 # <a name="sqlexecdirect-function"></a>Функция SQLExecDirect
 **Соответствие стандартам**  
@@ -55,7 +55,7 @@ SQLRETURN SQLExecDirect(
  [Вход] Длина **StatementText* в символах.  
   
 ## <a name="returns"></a>Возвращает  
- Значение SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NEED_DATA, SQL_STILL_EXECUTING, значение SQL_ERROR, значение SQL_NO_DATA, SQL_INVALID_HANDLE или SQL_PARAM_DATA_AVAILABLE.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NEED_DATA, SQL_STILL_EXECUTING, SQL_ERROR, SQL_NO_DATA, SQL_INVALID_HANDLE, or SQL_PARAM_DATA_AVAILABLE.  
   
 ## <a name="diagnostics"></a>Диагностика  
  Когда **SQLExecDirect** возвращает значение SQL_ERROR или SQL_SUCCESS_WITH_INFO, можно получить путем вызова связанного значения SQLSTATE **SQLGetDiagRec** с *HandleType* значение SQL_HANDLE_STMT и *обрабатывать* из *StatementHandle*. В следующей таблице перечислены значения SQLSTATE, обычно возвращаемые **SQLExecDirect** и объясняется каждый из них в контексте этой функции; описания SQLSTATE, возвращаемых диспетчером драйверов предшествует обозначение «(DM)». Возвращается связанный с каждого значения SQLSTATE значение SQL_ERROR, если не указано иное.  

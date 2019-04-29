@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a3f9d1589c9e7434b16ce3f500b44eb1d9374cd8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52756816"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62923291"
 ---
 # <a name="data-import-master-data-services"></a>Импорт данных (службы Master Data Services)
   После создания модели для данных в [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]можно добавлять данные и вносить в них изменения в базе данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .   Используются промежуточные таблицы [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , хранимые процедуры и диспетчер основных данных.  

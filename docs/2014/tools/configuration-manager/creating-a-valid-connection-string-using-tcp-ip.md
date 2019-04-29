@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6449b073adb406d15f41cfe02d477a05ad8b0b31
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764256"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065512"
 ---
 # <a name="creating-a-valid-connection-string-using-tcp-ip"></a>Создание допустимой строки подключения с использованием протокола TCP/IP
   Чтобы создать допустимую строку подключения с использованием протокола TCP/IP, выполните следующие действия.  
@@ -37,7 +37,7 @@ ms.locfileid: "52764256"
  Во время соединения компонент собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] считывает значения сервера, протокола и порта из реестра для заданного имени псевдонима и создает строку подключения в формате `tcp:<servername>[\<instancename>],<port>` или `tcp:<IPAddress>[\<instancename>],<port>`.  
   
 > [!NOTE]  
->  Брандмауэр Windows [!INCLUDE[msCoName](../../includes/msconame-md.md)] по умолчанию закрывает порт 1433. Так как [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] осуществляет связь через порт 1433, необходимо повторно открыть этот порт, если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] настроен на прослушивание клиентских соединений с использованием TCP/IP. Сведения о настройке брандмауэра см. в разделе «Как настроить брандмауэр для приложения SQL Server Access» в электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или в документации используемого брандмауэра.  
+>  Брандмауэр Windows [!INCLUDE[msCoName](../../includes/msconame-md.md)] по умолчанию закрывает порт 1433. Так как [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] осуществляет связь через порт 1433, необходимо повторно открыть этот порт, если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] настроен на прослушивание клиентских соединений с использованием TCP/IP. Сведения о настройке брандмауэра см. в разделе «как: Настройка брандмауэра для доступа к SQL Server» в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] документации или документации используемого брандмауэра.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и собственный клиент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] полностью поддерживают протокол IP версии 4 (IPv4) и версии 6 (IPv6). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Диспетчер конфигурации для IP-адресов принимает как формат IPv4, так и формат IPv6. Сведения о протоколе IPv6 см. в разделе "Подключение при помощи IPv6" электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -166,7 +166,7 @@ Server             .\<instancename>
 ```  
   
 > [!NOTE]  
->  Сведения об указании сетевого протокола **sqlcmd** параметр, см. в разделе «как: соединиться с компонентом Database Engine при помощи программы sqlcmd.exe» электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+>  Сведения о том, как указать сетевой протокол с помощью параметра **sqlcmd**, см. в разделе "Как Подключиться к ядру СУБД при помощи sqlcmd.exe» в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] документации.  
   
 ## <a name="see-also"></a>См. также  
  [Создание допустимой строки соединения с использованием протокола общей памяти](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)   

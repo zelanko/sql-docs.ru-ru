@@ -18,11 +18,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: c6d1b302d6ed0f35ce6fcb60e0afb90415c21d1e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130484"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874820"
 ---
 # <a name="clr-integration-and-transactions"></a>Интеграция со средой CLR и транзакции
   Пространство имен `System.Transactions` предоставляет новую платформу транзакций, полностью интегрированную с ADO.NET и со средой CLR [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Совместное использование пространства имен `System.Transactions` и ADO.NET позволяет расширить и упростить использование локальных и распределенных транзакций в управляемых приложениях.  

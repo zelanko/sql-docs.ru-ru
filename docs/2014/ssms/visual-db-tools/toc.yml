@@ -361,7 +361,7 @@
       href: table-properties-visual-database-tools.md
     - name: Свойства табличного объекта (столбца) (визуальные инструменты для баз данных)
       href: table-valued-object-column-properties-visual-database-tools.md
-    - name: Свойства табличных объектов (визуальные инструменты для баз данных)
+    - name: Свойства объектов с табличными значениями (визуальные инструменты для баз данных)
       href: table-valued-object-properties-visual-database-tools.md
     - name: Диалоговое окно «Обновление таблицы» (визуальные инструменты для баз данных)
       href: update-table-dialog-box-visual-database-tools.md

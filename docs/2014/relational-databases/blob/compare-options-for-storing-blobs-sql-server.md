@@ -11,11 +11,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: c90dd764a04b3eb470f0cf76d29e2ee2002d6b97
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364716"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62877221"
 ---
 # <a name="compare-options-for-storing-blobs-sql-server"></a>Сравнение параметров для хранения больших двоичных объектов (SQL Server)
   Рассматриваются и сравниваются параметры, доступные для хранения файлов и документов в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -56,7 +56,7 @@ ms.locfileid: "53364716"
 |**Реляционный доступ к атрибутам файлов**|нет|нет|**Да**|  
   
 ##  <a name="CompareRBS"></a> Сравнение FILESTREAM и удаленного хранилища больших двоичных объектов (RBS)  
- Сравнение двух этих компонентов приведено в статье в блоге группы RBS: [Сравнение функций SQL Server Remote BLOB Store and FILESTREAM](https://go.microsoft.com/fwlink/?LinkId=210317).  
+ Сравнение этих двух средств см. в статье в блоге группы RBS: [Сравнение функций SQL Server Remote BLOB Store and FILESTREAM](https://go.microsoft.com/fwlink/?LinkId=210317).  
   
 ##  <a name="more"></a> Дополнительные сведения  
  [FILESTREAM (SQL Server)](filestream-sql-server.md)  

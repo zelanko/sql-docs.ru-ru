@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 61bb013885238492d9c7324658ede198c489361d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818742"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127321"
 ---
 # <a name="functions-accepting-string-parameters"></a>Функции, принимающие строковые параметры
 Все функции, которые принимают параметры строки преобразуются в Юникод. (Будут экспортированы форму функции «W».) Число байт, преобразуется в число символов для этих применимо API ODBC. Это относится к следующим функциям:  

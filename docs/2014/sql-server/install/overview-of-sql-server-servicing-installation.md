@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 65797fdf770196723a74510501d381fb608ad2ff
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369066"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011649"
 ---
 # <a name="overview-of-sql-server-servicing-installation"></a>Общие сведения об обслуживании установки SQL Server
   Можно обновить любой установленный компонент [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], применив сервисное обновление [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Если версия существующего компонента [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] новее, чем версия обновления, то программа установки исключит этот компонент из списка обновления. Дополнительные сведения о применении сервисного обновления, см. в разделе [установить SQL Server 2014 обновлений для обслуживания](../../database-engine/install-windows/install-sql-server-servicing-updates.md).  
@@ -36,7 +36,7 @@ ms.locfileid: "53369066"
 ## <a name="requirements-and-known-issues"></a>Требования и известные проблемы  
  Для загрузки и извлечения пакета рекомендуется, чтобы объем свободного места на диске превышал размер пакета примерно в 2,5 раза. После установки пакета обновления загруженный пакет можно удалить с компьютера. Любые временные файлы будут удалены автоматически.  
   
- **Ознакомьтесь с известными проблемами:** Дополнительные сведения об известных проблемах текущего выпуска см. в соответствующем разделе заметок о выпуске: [Заметки о выпуске SQL Server](https://msdn.microsoft.com/f617a0af-92dd-47aa-82c3-f51b1346bcd8).  
+ **Ознакомьтесь с известными проблемами:** Дополнительные сведения об известных проблемах текущего выпуска см. в разделе соответствующего разделе заметок о выпуске здесь: [Заметки о выпуске SQL Server](https://msdn.microsoft.com/f617a0af-92dd-47aa-82c3-f51b1346bcd8).  
   
 ## <a name="installation-overview"></a>Общие сведения об установке  
  В этом разделе описывается установка накопительных обновлений и пакетов обновлений для [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], включая описание следующих действий:  
@@ -88,7 +88,7 @@ ms.locfileid: "53369066"
 #### <a name="starting-a-includesscurrentincludessscurrent-mdmd-update"></a>Начало обновления [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  Чтобы установить обновление [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , запустите файл самоизвлекающегося пакета.  
   
- Пакет с накопительным обновлением: \<SQLServer2014 > - KBxxxxxx -*PPP*.exe  
+ Накопительный пакет обновления (CU): \<SQLServer2014>-KBxxxxxx-*PPP*.exe  
   
  Пакет обновления (PCU): \<SQLServer2014 >\<SPx > - KBxxxxxx-PPP-LLL.exe  
   
@@ -96,7 +96,7 @@ ms.locfileid: "53369066"
   
 -   PPP указывает конкретную платформу.  
   
--   LLL обозначает буквенный код языка [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], например: LLL для английского языка ― ENU.  
+-   LLL обозначает буквенный код для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] языка, например: LLL для английского языка ― ENU.  
   
  Сведения об установке обновлений для компонентов [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , входящих в состав кластера отработки отказа, см. в подразделе по установке кластера отработки отказа. Дополнительные сведения об установке обновлений в автоматическом режиме см. в разделе [Установка SQL Server 2014 из командной строки](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
   

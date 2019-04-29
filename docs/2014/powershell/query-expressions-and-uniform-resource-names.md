@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d92557b37cac982a70d5b3203472c40a2fd72ce4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52752076"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62922890"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>Выражения запросов и универсальные имена ресурсов
   В моделях объектов SMO [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и оснастках [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell используется два типа строк выражений, которые похожи на выражения XPath. Выражения запроса — это строки, которые указывают набор условий, используемых для перечисления одного или нескольких объектов в иерархии объектной модели. Универсальное имя ресурса (URN) — это конкретный тип строки выражения запроса, который уникально определяет один объект.  

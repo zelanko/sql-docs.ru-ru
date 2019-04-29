@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c0ed819643e7ea818fc17c0fa317473afc8f5ca3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706382"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63007869"
 ---
 # <a name="binding-columns-for-use-with-block-cursors"></a>Привязка столбцов для использования с блочными курсорами
 Так как блочные курсоры возвращать несколько строк, приложения, использующие их необходимо привязать массив переменных с каждым столбцом, а не одной переменной. Такие массивы называются *буферы строк*. Ниже приведены два стиля привязки.  

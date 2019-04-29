@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9093ac313f0b72671e647461318793c21f476c75
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52772036"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63032028"
 ---
 # <a name="article-issues"></a>Проблемы в статьях
   На странице **Проблемы в статьях** перечисляются условия, определенные для статей, а также изменения, проведение которых необходимо при этих условиях. В следующей таблице перечисляются возможные проблемы и действия, необходимые для гарантированного корректного выполнения репликации и существующих приложений.  

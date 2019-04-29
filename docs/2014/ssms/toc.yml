@@ -211,7 +211,7 @@
   items:
     - name: Подключение к любому компоненту сервера SQL Server из среды SQL Server Management Studio
       href: f1-help/connect-to-any-sql-server-component-from-sql-server-management-studio.md
-    - name: Соединение с сервером (компонент Database Engine)
+    - name: Соединение с сервером (ядро СУБД)
       href: f1-help/connect-to-server-database-engine.md
       items:
         - name: "Соединение с сервером\_(страница \"Вход\") ядра СУБД"
@@ -257,10 +257,10 @@
   href: menu-help/sql-server-management-studio-menu-help.md
 - name: Агент SQL Server +
   href: agent/sql-server-agent.md
-- name: 'Руководство: SQL Server Management Studio'
+- name: Руководство. SQL Server Management Studio
   href: tutorials/tutorial-sql-server-management-studio.md
   items:
-    - name: Занятие 1. Основные возможности перемещения в среде SQL Server Management Studio
+    - name: "Урок 1. Основы работы в среде SQL\_Server Management\_Studio"
       href: tutorials/lesson-1-basic-navigation-in-sql-server-management-studio.md
       items:
         - name: Запуск среды SQL Server Management Studio
@@ -279,9 +279,9 @@
           href: tutorials/lesson-1-7-set-the-startup-options.md
         - name: Восстановление установленной по умолчанию конфигурации среды SQL Server Management Studio
           href: tutorials/lesson-1-8-restore-the-default-sql-server-management-studio-configuration.md
-        - name: Сводка. Основные средства перемещения
+        - name: Сводка. Основы работы
           href: tutorials/lesson-1-9-summary-basic-navigation.md
-    - name: Занятие 2. Создание инструкций на языке Transact-SQL
+    - name: Урок 2. Создание инструкций на языке Transact-SQL
       href: tutorials/lesson-2-writing-transact-sql.md
       items:
         - name: Соединение с редактором запросов

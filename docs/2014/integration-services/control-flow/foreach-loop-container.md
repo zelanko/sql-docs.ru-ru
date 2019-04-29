@@ -18,11 +18,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bb50b4000397ca3dd51be58867e45135d1d587f1
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58380262"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62831591"
 ---
 # <a name="foreach-loop-container"></a>Контейнер «цикл по каждому элементу»
   Контейнер «цикл по каждому элементу» определяет повторяющийся поток управления в пакете. Реализация цикла схожа с циклической структурой **Foreach** в языках программирования. Организация цикла в пакете происходит с помощью перечислителя Foreach.  Контейнер «цикл по каждому элементу» повторяет операции потока управления для каждого члена заданного перечислителя.  

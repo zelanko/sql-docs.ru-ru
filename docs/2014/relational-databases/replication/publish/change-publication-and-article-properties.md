@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 207f934a9fba6e60bf1903544b12c88b4924dc23
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135814"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63021320"
 ---
 # <a name="change-publication-and-article-properties"></a>Изменение свойств публикации и статьи
   После того как публикация создана, большинство свойств публикаций и статей можно изменить, но для некоторых изменений требуется, повторное создание моментального снимка и/или повторная инициализация подписок. В этом разделе содержатся сведения обо всех свойствах, требуемых для одного или обоих этих действий (если они изменяются).  
@@ -93,7 +93,7 @@ ms.locfileid: "54135814"
 |Изменение владельца целевой таблицы.|**sp_changemergearticle**|**destination_owner**|Создание моментального снимка.<br /><br /> Повторная инициализация подписок.|  
   
 ## <a name="see-also"></a>См. также  
- [Администрирование репликации часто задаваемые вопросы](../administration/frequently-asked-questions-for-replication-administrators.md)   
+ [Вопросы и ответы об администрировании репликации](../administration/frequently-asked-questions-for-replication-administrators.md)   
  [Создание и применение моментального снимка](../create-and-apply-the-snapshot.md)   
  [Повторная инициализация подписок](../reinitialize-subscriptions.md)   
  [sp_addmergefilter (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql)   

@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d998c2f9ecc19167f34530e6fa2d0190f71287ce
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59956570"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63020836"
 ---
 # <a name="change-a-chart-type-report-builder-and-ssrs"></a>Изменение типа диаграммы (построитель отчетов и службы SSRS)
   При первом создании диаграммы в отчете появляется диалоговое окно **Выбор типа диаграммы** . Если закрыть это диалоговое окно, по умолчанию будет создана диаграмма в виде гистограммы.  

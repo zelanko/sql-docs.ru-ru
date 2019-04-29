@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: dd30631b5ecdcfb55fcb571bd8bf3c1eb39713dc
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59937640"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62987097"
 ---
 # <a name="keyboard-shortcuts-report-builder"></a>Сочетания клавиш (построитель отчетов)
   При работе в построителе отчетов имеется доступ ко всем сочетаниям клавиш для перемещения по документам, имеющимся в среде Windows. На выбор доступны несколько стандартных схем раскладки клавиатуры.  

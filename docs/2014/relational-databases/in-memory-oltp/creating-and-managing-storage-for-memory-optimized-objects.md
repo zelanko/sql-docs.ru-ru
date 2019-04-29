@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 1d6bb42e4b35a74ef2bd6eefb85ea81b0ed18e40
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416975"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63073849"
 ---
 # <a name="creating-and-managing-storage-for-memory-optimized-objects"></a>Создание и управление хранилищем для оптимизированных для памяти объектов
   Механизм [!INCLUDE[hek_2](../../includes/hek-2-md.md)] интегрирован в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], что позволяет использовать оптимизированные для памяти таблицы и (традиционные) таблицы на диске в одной базе данных. Тем не менее структуры хранилища оптимизированных для памяти таблиц и таблиц на диске отличаются.  

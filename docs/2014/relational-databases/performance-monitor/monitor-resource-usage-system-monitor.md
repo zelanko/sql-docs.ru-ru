@@ -26,11 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8bd4676eed22cea99808d87016231dbd2ebaf4cc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777066"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63032125"
 ---
 # <a name="monitor-resource-usage-system-monitor"></a>Наблюдение за использованием ресурсов (системный монитор)
   В состав серверной операционной системы Microsoft Windows входит графическое средство для измерения производительности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]— системный монитор. Он позволяет просматривать объекты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , счетчики производительности, а также поведения других объектов, таких как процессоры, память, кэш, потоки и процессы. С каждым из этих объектов связан набор счетчиков, измеряющих степень использования устройства, длину очередей, задержки и другие показатели производительности и внутренней перегрузки.  

@@ -16,11 +16,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: e434f416ca936fdf1cc0361a70cf89f92f4814ed
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52805396"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013383"
 ---
 # <a name="add-attributes-to-a-change-tracking-group-master-data-services"></a>Добавление атрибутов в группу отслеживания изменений (службы Master Data Services)
 
@@ -70,11 +70,11 @@ ms.locfileid: "52805396"
   
 10. Повторяйте эти шаги для всех атрибутов, которые необходимо включить в группу. Используйте для каждого атрибута в группе один и тот же номер группы отслеживания изменений.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Следующие шаги  
   
 -   [Инициирование действия на основе значения атрибута (службы Master Data Services)](../master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Создание текстового атрибута (службы Master Data Services)](../master-data-services/create-a-text-attribute-master-data-services.md)   
  [Создание атрибута на основе домена (службы Master Data Services)](../master-data-services/create-a-domain-based-attribute-master-data-services.md)  
   

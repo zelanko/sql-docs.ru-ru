@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 289b58b5547b515dbc82cb0823def8c6087a9bb3
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38054712"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63019337"
 ---
-# <a name="tables---partition-representation"></a>Таблицы — представление секции
+# <a name="tables---partition-representation"></a>Таблицы — представление секции
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   В оперативных целях таблица может быть разделена на разные подмножества строк, которые, будучи объединенными, формируют таблицу; каждое из таких подмножеств является секцией таблицы.  
   

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 02f7d4bac5aca4892330a745b65c853ab0d8fc19
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765272"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127386"
 ---
 # <a name="fixed-width-text-file"></a>Текстовый файл фиксированной ширины
 Если используется драйвер для текстовых, последний столбец фиксированной ширины текстового файла может быть переменной длины.

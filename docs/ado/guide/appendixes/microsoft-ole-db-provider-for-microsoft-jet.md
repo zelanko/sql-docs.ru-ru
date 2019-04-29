@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 986c1bf7f604f531180a14a4456325ce01702b94
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350598"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62855492"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-jet-overview"></a>Поставщик Microsoft OLE DB для Jet (Майкрософт) Обзор
 Поставщик OLE DB для Jet (Майкрософт) позволяет ADO для доступа к базам данных Microsoft Jet.
@@ -62,13 +62,13 @@ Microsoft.Jet.OLEDB.4.0
 |---------------|-----------------|
 |Сумма освобожденное место OLEDB:Compact Jet (DBPROP_JETOLEDB_COMPACTFREESPACESIZE)|Указывает приблизительное количество места, в байтах, которые могут быть освобождены при сжатии базы данных. Это значение допустимо только в случае, после установления подключения к базе данных.|
 |Элемент управления OLEDB:Connection Jet (DBPROP_JETOLEDB_CONNECTIONCONTROL)|Указывает, могут ли пользователи подключаться к базе данных.|
-|Jet OLEDB: Создание базы данных системы (DBPROP_JETOLEDB_CREATESYSTEMDATABASE)|Указывает, должен ли быть создан системную базу данных при создании нового источника данных.|
+|Jet OLEDB:Create System Database (DBPROP_JETOLEDB_CREATESYSTEMDATABASE)|Указывает, должен ли быть создан системную базу данных при создании нового источника данных.|
 |Режим блокировки Jet OLEDB: Database (DBPROP_JETOLEDB_DATABASELOCKMODE)|Указывает режим блокировки для этой базы данных. Первый пользователь для открытия базы данных определяет режим, используемый при открытом базы данных.|
 |Jet OLEDB: Database Password (DBPROP_JETOLEDB_DATABASEPASSWORD)|Указывает пароль базы данных.|
 |Jet OLEDB: не копируйте языковой стандарт в Compact (DBPROP_JETOLEDB_COMPACT_DONTCOPYLOCALE)|Указывает, следует ли Jet копирование информации о языковом стандарте при сжатии базы данных.|
 |Jet OLEDB: шифрование базы данных (DBPROP_JETOLEDB_ENCRYPTDATABASE)|Указывает, следует ли шифровать сжатой базы данных. Если это свойство не задано, будут зашифрованы сжатой базы данных, если исходная база данных также был зашифрован.|
 |Тип OLEDB:Engine Jet (DBPROP_JETOLEDB_ENGINE)|Указывает подсистему хранилища, используемую для доступа к текущего хранилища данных.|
-|Задержка Async OLEDB:Exclusive Jet (DBPROP_JETOLEDB_EXCLUSIVEASYNCDELAY)|Указывает максимальный период времени, в миллисекундах, которое Jet могут вызвать задержку асинхронные операции записи на диск, когда база данных открыта в монопольном режиме.<br /><br /> Это свойство игнорируется, если **время ожидания транзакций OLEDB:Flush Jet** имеет значение 0.|
+|Jet OLEDB:Exclusive Async Delay (DBPROP_JETOLEDB_EXCLUSIVEASYNCDELAY)|Указывает максимальный период времени, в миллисекундах, которое Jet могут вызвать задержку асинхронные операции записи на диск, когда база данных открыта в монопольном режиме.<br /><br /> Это свойство игнорируется, если **время ожидания транзакций OLEDB:Flush Jet** имеет значение 0.|
 |Время ожидания транзакций OLEDB:Flush Jet (DBPROP_JETOLEDB_FLUSHTRANSACTIONTIMEOUT)|Указывает время ожидания, прежде чем данные, хранящиеся в кэше для асинхронной записи фактически записанных на диск. Этот параметр переопределяет значения **Jet OLEDB: общие задержки Async** и **Jet OLEDB:Exclusive асинхронная задержка**.|
 |Jet OLEDB: глобальный массовые транзакции (DBPROP_JETOLEDB_GLOBALBULKNOTRANSACTIONS)|Указывает, является ли SQL массовые транзакции остаются активными, несмотря.|
 |Jet OLEDB: глобальный частичного массового Ops (DBPROP_JETOLEDB_GLOBALBULKPARTIAL)|Указывает пароль, используемый для открытия базы данных.|

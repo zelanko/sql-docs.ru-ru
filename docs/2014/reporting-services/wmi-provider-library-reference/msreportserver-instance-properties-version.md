@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ff82109bc54fb1360df0f9280a196c547e53039b
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59953670"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63020197"
 ---
 # <a name="version-property-wmi-msreportserverinstance"></a>Version Property (WMI MSReportServer_Instance)
   Возвращает версию сервера отчетов в формате Основной_номер.Дополнительный_номер.Номер_сборки.Номер_редакции. Только для чтения.  

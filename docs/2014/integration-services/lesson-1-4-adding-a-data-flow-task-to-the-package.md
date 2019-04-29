@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 542b7e3ffcc4a1db5b2053c840b785f775384fe1
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381192"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62891805"
 ---
-# <a name="step-4-adding-a-data-flow-task-to-the-package"></a>Шаг 4. Добавление задачи потока данных в пакет
+# <a name="step-4-adding-a-data-flow-task-to-the-package"></a>Шаг 4. Добавление в пакет задачу потока данных
   После того как были созданы диспетчеры соединений для исходных и целевых данных, предстоит добавить в пакет задачу потока данных. Задача потока данных включает в себя подсистему обработки потока данных, которая осуществляет передачу данных между источниками и назначениями, а также преобразует, очищает и изменяет данные при их перемещении. В задаче потока данных сосредоточена большая часть работы в процессе извлечения, преобразования и загрузки.  
   
 > [!NOTE]  

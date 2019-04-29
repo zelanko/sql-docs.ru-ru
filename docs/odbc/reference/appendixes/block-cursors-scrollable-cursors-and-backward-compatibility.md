@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d3896473a1fa08f769f13d94bd1d81f373cf67c0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854513"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63026602"
 ---
 # <a name="block-cursors-scrollable-cursors-and-backward-compatibility"></a>Блочные курсоры, прокручиваемые курсоры и обратная совместимость
 Наличие обоих **SQLFetchScroll** и **SQLExtendedFetch** представляет сначала удалить разделить между прикладного программного интерфейса (API), которого представляет собой набор функций ODBC приложение вызывает и службу поставщика интерфейса (SPI), который представляет собой набор функций в драйвере реализованы. Это разделение необходим, чтобы ODBC 3. *x*, которая использует **SQLFetchScroll**, bealigned стандартам, а также быть совместим с ODBC 2. *x*, которая использует **SQLExtendedFetch**.  

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 21a2ea98ea4592d9900cd9623502a8d918b34c9b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47774192"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63027851"
 ---
 # <a name="positionenum"></a>PositionEnum
 Задает текущую позицию указателя записи в [записей](../../../ado/reference/ado-api/recordset-object-ado.md).  

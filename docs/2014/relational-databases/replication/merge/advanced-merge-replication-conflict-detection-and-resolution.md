@@ -20,11 +20,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5aaf7031afb1b3c148bbef2bcafd5d40f4947f8d
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132884"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63000349"
 ---
 # <a name="advanced-merge-replication-conflict-detection-and-resolution"></a>Advanced Merge Replication Conflict Detection and Resolution
   Когда издатель и подписчик соединяются и происходит синхронизация, агент слияния проверяет наличие конфликтов. При обнаружении конфликтов сопоставитель слияния использует арбитр конфликтов (указанный при добавлении статьи в публикацию), чтобы определить, какие данные являются приемлемыми и распространяются на другие сайты.  
@@ -94,9 +94,9 @@ ms.locfileid: "54132884"
   
  Указание типа подписки на публикацию слиянием и приоритета устранения конфликтов см. в разделе  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. [Укажите тип подписки слиянием и приоритета устранения конфликтов &#40;SQL Server Management Studio&#41;](../specify-a-merge-subscription-type-and-conflict-resolution-priority.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. [Указание типа подписки слиянием и приоритета устранения конфликтов (SQL Server Management Studio)](../specify-a-merge-subscription-type-and-conflict-resolution-priority.md)  
   
--   Программирование репликации с помощью [!INCLUDE[tsql](../../../includes/tsql-md.md)] и объектов RMO: [Создание подписки по запросу](../create-a-pull-subscription.md) и [Создание принудительной подписки](../create-a-push-subscription.md)  
+-   Репликация [!INCLUDE[tsql](../../../includes/tsql-md.md)] программирования и программирования Replication Management Objects (RMO): [Создание подписки по запросу](../create-a-pull-subscription.md) и [Создание принудительной подписки](../create-a-push-subscription.md).  
   
 ### <a name="interactive-resolver"></a>Интерактивный сопоставитель  
  Репликация предоставляет пользовательский интерфейс интерактивного сопоставителя, который может использоваться совместно либо с сопоставителем конфликтов на основе приоритетов (по умолчанию), либо с сопоставителем статей. При выполнении синхронизации по требованию с помощью диспетчера синхронизации [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows интерактивный сопоставитель отображает конфликтные данные во время выполнения, позволяя выбрать методы разрешения конфликтов. Дополнительные сведения о том, как включить интерактивное устранение конфликтов и запуск интерактивного сопоставителя, см. в разделе [Interactive Conflict Resolution](advanced-merge-replication-conflict-interactive-resolution.md).  

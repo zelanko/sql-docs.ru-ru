@@ -14,11 +14,11 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 ms.openlocfilehash: c6615baf7d9a5bf228b75a0e8cf520f86bf2109c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066519"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011656"
 ---
 # <a name="encrypt-a-column-of-data"></a>Шифрование столбца данных
   В этом разделе описывается шифрование столбца данных с помощью симметричного шифрования в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -50,7 +50,7 @@ ms.locfileid: "48066519"
   
 #### <a name="to-encrypt-a-column-of-data-using-a-simple-symmetric-encryption"></a>Шифрование столбца данных с помощью простого симметричного шифрования  
   
-1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   
@@ -113,7 +113,7 @@ ms.locfileid: "48066519"
   
 #### <a name="to-encrypt-a-column-of-data-using-symmetric-encryption-that-includes-an-authenticator"></a>Шифрование столбца данных с помощью симметричного шифрования, включающего структуру проверки подлинности  
   
-1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   
@@ -178,7 +178,7 @@ ms.locfileid: "48066519"
   
 -   [CREATE CERTIFICATE (Transact-SQL)](/sql/t-sql/statements/create-certificate-transact-sql)  
   
--   [CREATE SYMMETRIC KEY (Transact-SQL)](/sql/t-sql/statements/create-symmetric-key-transact-sql)  
+-   [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-symmetric-key-transact-sql)  
   
 -   [ALTER TABLE (Transact-SQL)](/sql/t-sql/statements/alter-table-transact-sql)  
   

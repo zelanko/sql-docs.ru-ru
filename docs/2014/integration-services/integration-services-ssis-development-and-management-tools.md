@@ -19,11 +19,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7c8f05c1b822cc3cad81ed910b71cb46621554eb
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377091"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62892468"
 ---
 # <a name="integration-services-ssis-and-studio-environments"></a>Службы Integration Services (SSIS) и среды Studio
   Службы[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] содержат две интегрированные среды для работы со службами [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]:  

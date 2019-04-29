@@ -18,11 +18,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2b7430a12c64ab669182ab2877bb6620b42b2f48
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52795424"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62924957"
 ---
 # <a name="database-logins-users-and-roles-master-data-services"></a>Имена входа, пользователи и роли базы данных (службы Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] включает имена входа, пользователей и роли, которые автоматически устанавливаются на экземпляр [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] , где размещена база данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Изменять этих пользователей, имена входа и роли не рекомендуется.  
@@ -39,7 +39,7 @@ ms.locfileid: "52795424"
 |Пользовательская|Описание|  
 |----------|-----------------|  
 |`mds_clr_user`|Не используется.<br /><br /> Сопоставляется с mds_dlp_login.|  
-|`mds_email_user`|Используется для уведомлений.<br /><br /> Сопоставляется с mds_email_login.<br /><br /> Является членом следующей роли: DatabaseMailUserRole.|  
+|`mds_email_user`|Используется для уведомлений.<br /><br /> Сопоставляется с mds_email_login.<br /><br /> Является членом роли: DatabaseMailUserRole.|  
   
 ## <a name="master-data-services-database-users"></a>Пользователи базы данных Master Data Services  
   

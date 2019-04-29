@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: aef64ed8031664dcbefa7d0e30bf9f63435b292c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52778946"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63015705"
 ---
 # <a name="add-columns-to-queries-visual-database-tools"></a>Добавление столбцов в запросы (визуальные инструменты для баз данных)
   Для использования столбца в запросе его необходимо туда добавить. Можно добавлять столбцы для отображения в результатах выполнения запроса, для использования при сортировке, поиска или обобщения их содержимого. Выбрать, какие используемые в запросе столбцы необходимо включить на панель результатов, можно при выполнении запроса. Дополнительные сведения см. в разделе [Удаление столбцов из результатов запроса (визуальные инструменты для баз данных)](visual-database-tools.md).  

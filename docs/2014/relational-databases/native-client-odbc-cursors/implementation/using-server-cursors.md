@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cef56db912d786b6908271d0747fe45690e90536
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094654"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011843"
 ---
 # <a name="using-server-cursors"></a>Использование серверных курсоров
   Если приложение ODBC задает атрибуты курсора ODBC значение, отличное от значения по умолчанию, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] драйвер ODBC собственного клиента запрашивает серверу Применить серверный курсор API того же типа. Использование серверных курсоров API-интерфейса обеспечивает высвобождение памяти клиента и может существенно сократить объем сетевого трафика между клиентом и сервером.  

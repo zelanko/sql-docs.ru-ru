@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1bedefd277f1be7f44d807e6539097dd24f5ab2f
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58380760"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62900914"
 ---
 # <a name="raw-file-source"></a>источник «Необработанный файл»
   Источник «Необработанный файл» считывает необработанные данные из файла. Поскольку данные представлены в собственном формате источника, их преобразование не требуется. Также практически не требуется синтаксический анализ. Это означает, что источник необработанных файлов в состоянии считывать данные быстрее, чем другие источники, такие как источник «Неструктурированный файл» и источник «OLE DB».  

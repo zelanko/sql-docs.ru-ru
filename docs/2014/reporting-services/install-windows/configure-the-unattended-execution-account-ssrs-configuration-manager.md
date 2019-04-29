@@ -20,11 +20,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2d79a28204600adbe247864df68853b24bf8cf51
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59946930"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63182961"
 ---
 # <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>Настройка учетной записи автоматического выполнения (диспетчер конфигурации служб SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предусматривает специальную учетную запись, предназначенную для автоматической обработки отчетов и отправки запросов на соединение по сети. Эти учетные записи используются для следующего.  

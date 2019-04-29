@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 022b1ca3c1ab4c0e1921cbac86c3059f10087f21
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207823"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62916365"
 ---
 # <a name="mssqlserver10001"></a>MSSQLSERVER_10001
     
@@ -40,6 +40,6 @@ ms.locfileid: "48207823"
   
 ## <a name="see-also"></a>См. также  
  [Шаблоны и разрешения приложения SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
- [SQL Server Native Client &#40;OLE DB&#41;](../native-client/ole-db/sql-server-native-client-ole-db.md)  
+ [SQL Server Native Client (OLE DB)](../native-client/ole-db/sql-server-native-client-ole-db.md)  
   
   

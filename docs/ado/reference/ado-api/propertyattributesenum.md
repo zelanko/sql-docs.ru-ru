@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0bb38a73008d86144751ee324eb442bf711d65a5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47835972"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63027674"
 ---
 # <a name="propertyattributesenum"></a>PropertyAttributesEnum
 Указывает атрибуты [свойство](../../../ado/reference/ado-api/property-object-ado.md) объекта.  

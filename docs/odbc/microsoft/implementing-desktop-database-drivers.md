@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c8be5ffca0ad28793b1b5e22bbeabca05001e361
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645882"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127256"
 ---
 # <a name="implementing-desktop-database-drivers"></a>Реализация драйверов для баз данных на настольном компьютере
 Инструкции и технические примечания о том, как реализовать и настроить драйверы для баз данных Microsoft ODBC рабочего стола можно найти в интерактивной справке администратор источников данных ODBC. Этот файл может осуществляться во время процедур установки драйвера из [администратор источников данных ODBC Microsoft](../../odbc/admin/odbc-data-source-administrator.md).  
@@ -31,7 +31,7 @@ ms.locfileid: "47645882"
   
 -   [Файлы компонентов ODBC](../../odbc/microsoft/odbc-component-files.md)  
   
--   [Оборудованию и программному обеспечению](../../odbc/microsoft/hardware-and-software-requirements-odbc.md)  
+-   [Требования к оборудованию и программному обеспечению](../../odbc/microsoft/hardware-and-software-requirements-odbc.md)  
   
 -   [Дескрипторы с драйверы для настольных систем баз данных](../../odbc/microsoft/descriptors-and-desktop-database-drivers.md)  
   

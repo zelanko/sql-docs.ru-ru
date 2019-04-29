@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 985cb58b860c594e8cfc3e405934fafd9cfb245a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789452"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184944"
 ---
 # <a name="using-a-recordset-object"></a>Использование объекта Recordset
 Кроме того, можно использовать **Recordset.Open** неявно установить подключение и команду через это подключение в рамках одной операции. Например в Visual Basic:  

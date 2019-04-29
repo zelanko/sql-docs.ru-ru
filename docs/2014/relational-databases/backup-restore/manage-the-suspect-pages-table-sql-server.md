@@ -19,11 +19,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0f6c6afc1822e2f56189aace2836a15486d1b73b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053504"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62922022"
 ---
 # <a name="manage-the-suspectpages-table-sql-server"></a>Управление таблицей suspect_pages (SQL Server)
   В этом разделе описывается управление таблицей **suspect_pages** в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с использованием [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Таблица **suspect_pages** содержит сведения о потенциально поврежденных страницах и используется при принятии решений о необходимости восстановления. Таблица [suspect_pages](/sql/relational-databases/system-tables/suspect-pages-transact-sql) находится в [базе данных msdb](../databases/msdb-database.md).  

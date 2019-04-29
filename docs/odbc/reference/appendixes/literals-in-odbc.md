@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 73f0a50b1ab06eeea97b54b6776135e35e56520e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598762"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181399"
 ---
 # <a name="literals-in-odbc"></a>Литералы в ODBC
-Для интервала и числовые литералы в ODBC используется синтаксис в следующих разделах. Этот синтаксис предоставляется здесь как вспомогательные средства для записи драйверов при выполнении преобразования из строкового типа к типу numeric или интервал, или из типа numeric или интервал в строковый тип символа. Дополнительные сведения см. в разделе [литералы интервала](../../../odbc/reference/appendixes/interval-literals.md) и [числовые литералы](../../../odbc/reference/appendixes/numeric-literals.md) в типах данных приложение D:.  
+Для интервала и числовые литералы в ODBC используется синтаксис в следующих разделах. Этот синтаксис предоставляется здесь как вспомогательные средства для записи драйверов при выполнении преобразования из строкового типа к типу numeric или интервал, или из типа numeric или интервал в строковый тип символа. Дополнительные сведения см. в разделе [литералы интервала](../../../odbc/reference/appendixes/interval-literals.md) и [числовые литералы](../../../odbc/reference/appendixes/numeric-literals.md) в приложение г Типы данных.  
   
  Это приложение содержит следующие разделы.  
   

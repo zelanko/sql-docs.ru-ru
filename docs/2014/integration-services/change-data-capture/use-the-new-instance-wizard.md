@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 854336885617ac9f3bea98880433a7ce870c4844
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393804"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62834580"
 ---
 # <a name="use-the-new-instance-wizard"></a>Использование мастера создания экземпляра
   Мастер создания экземпляра используется для создания новых экземпляров для службы CDC. Мастер создания экземпляра Oracle CDC открывается из консоли конструктора CDC. Мастер создания экземпляра позволяет выполнить следующие действия.  

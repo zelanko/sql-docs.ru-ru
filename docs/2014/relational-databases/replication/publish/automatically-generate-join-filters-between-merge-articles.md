@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 66c32615b3fd9f417eab27f156b2645c2c89593b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770136"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63020977"
 ---
 # <a name="automatically-generate-a-set-of-join-filters-between-merge-articles-sql-server-management-studio"></a>Автоматическое формирование набора фильтров соединения между статьями публикации слиянием (среда SQL Server Management Studio)
   Набор фильтров соединения можно автоматически сформировать на странице **Фильтрация строк таблицы** мастера создания публикаций или на странице **Фильтрация строк** диалогового окна **Свойства публикации — \<Публикация>**. Дополнительные сведения об использовании мастера и доступе к этому диалоговому окну см. в статьях [Создание публикации](create-a-publication.md) и [Просмотр и изменение свойств публикации](view-and-modify-publication-properties.md).  

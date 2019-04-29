@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ddb50c8993de72230e97cdde729416258272bb1e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351498"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046383"
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>Доступ к диагностическим сведениям в журнале расширенных событий
   Начиная с версии [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], Native Client [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и отслеживание доступа к данным ([Трассировка доступа к данным](https://go.microsoft.com/fwlink/?LinkId=125805)) обновлены. Упрощено получение диагностических сведений об ошибках подключения из кольцевого буфера соединений и сведений о производительности приложений из журнала расширенных событий.  

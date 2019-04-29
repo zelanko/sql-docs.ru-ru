@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 10b14aa8a1f68b32c00ecb321c1af36fb15b868e
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386012"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62900957"
 ---
 # <a name="aggregate-values-in-a-dataset-by-using-the-aggregate-transformation"></a>Статистическая обработка значений в наборе данных с помощью преобразования «Агрегатная обработка»
   Для добавления и настройки преобразования «Агрегатная обработка» пакет должен обладать как минимум одной задачей потока данных и одним источником.  

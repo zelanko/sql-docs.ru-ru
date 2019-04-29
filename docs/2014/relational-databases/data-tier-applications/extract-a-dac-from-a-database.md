@@ -22,16 +22,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7fc0aab989eb46b64ef6b9919f999ba13c4ef74f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527187"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62872874"
 ---
 # <a name="extract-a-dac-from-a-database"></a>Извлечение приложения уровня данных из базы данных
   Извлечение пакета приложения уровня данных из существующей базы данных SQL Server можно с помощью **мастера извлечения приложения уровня данных** или скрипта Windows PowerShell. В результате извлечения будет создан файл пакета DAC, содержащий определения объектов базы данных и связанные элементы уровня экземпляра. Например, файл пакета DAC содержит все таблицы базы данных, хранимые процедуры, представления, пользователей и имена входа, сопоставленные с пользователями базы данных.  
   
--   **Перед началом работы**  [Ограничения](#LimitationsRestrictions), [разрешения](#Permissions)  
+-   **Перед началом:**  [ограничения](#LimitationsRestrictions), [разрешения](#Permissions)  
   
 -   **Для извлечения DAC, с помощью:**  [Мастера извлечения приложения уровня данных](#UsingDACExtractWizard), [PowerShell](#ExtractDACPowerShell)  
   

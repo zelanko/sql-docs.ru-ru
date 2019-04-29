@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5a35156a465e521ceea60fa090142836da6a4c1a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52787836"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62917471"
 ---
 # <a name="copy-databases-with-backup-and-restore"></a>Копирование баз данных путем создания и восстановления резервных копий
   В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]можно создать новую базу данных, восстановив резервную копию пользовательской базы данных, созданной в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] или более поздней версии. Однако резервные копии баз данных **master**, **model** и **msdb** , созданных в более ранней версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , восстановить на [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]невозможно. Кроме того, резервные копии, созданные в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , невозможно восстановить в более ранних версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

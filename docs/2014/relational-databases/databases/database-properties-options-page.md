@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a4420aaf7b11eccecf0b04bb67a55386215f1fc9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774426"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62917092"
 ---
 # <a name="database-properties-options-page"></a>Свойства базы данных (страница «Параметры»)
   Эта страница используется для изменения параметров выделенной базы данных. Дополнительные сведения о параметрах, доступных на этой странице, см. в разделе [параметры ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
@@ -27,7 +27,7 @@ ms.locfileid: "52774426"
  Задайте параметры сортировки для базы данных, выбрав из списка. Дополнительные сведения см. в разделе [Set or Change the Database Collation](../collations/set-or-change-the-database-collation.md).  
   
  **Модель восстановления**  
- Укажите одну из следующих моделей для восстановления базы данных: **Полный**, **восстановления с неполным протоколированием**, или **простой**. Дополнительные сведения о моделях восстановления см. в разделе [Модели восстановления (SQL Server)](../backup-restore/recovery-models-sql-server.md).  
+ Укажите одно из следующих моделей для восстановления базы данных. **Полная**, **С неполным протоколированием** или **Простая**. Дополнительные сведения о моделях восстановления см. в разделе [Модели восстановления (SQL Server)](../backup-restore/recovery-models-sql-server.md).  
   
  **Уровень совместимости**  
  Укажите последнюю версию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которую поддерживает база данных. Возможные значения:  **SQL Server 2014 (120)**,  **SQL Server 2012 (110)** и **SQL Server 2008 (100)**. При обновлении базы данных SQL Server 2005 до версии SQL Server 2014 уровень совместимости для этой базы данных изменяется от 90 до 100.  Уровень совместимости 90 не поддерживается в SQL Server 2014. Дополнительные сведения см. в разделе [Уровень совместимости инструкции ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level).  
@@ -93,7 +93,7 @@ ms.locfileid: "52774426"
  Укажите имя каталога для данных FILESTREAM, связанных с выбранной базой данных.  
   
  **Нетранзакционный доступ к файловому потоку**  
- Укажите один из следующих параметров для нетранзакционного доступа через файловую систему к данным FILESTREAM, хранящимся в FileTables: **ОТКЛЮЧЕНИЕ**, **READ_ONLY**, или **полный**. Если на сервере не включена поддержка FILESTREAM, это значение устанавливается в OFF и отключается. Дополнительные сведения см в разделе [FileTables (SQL Server)](../blob/filetables-sql-server.md).  
+ Укажите одно из следующих параметров для нетранзакционного доступа через файловую систему к данным FILESTREAM, хранящимся в таблицах Filetable. **OFF**, **READ_ONLY** или **FULL**. Если на сервере не включена поддержка FILESTREAM, это значение устанавливается в OFF и отключается. Дополнительные сведения см в разделе [FileTables (SQL Server)](../blob/filetables-sql-server.md).  
   
 ## <a name="miscellaneous"></a>Разное  
  **ANSI NULL по умолчанию**  

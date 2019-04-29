@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e70dc047456549b625a1e66250d413009293f4a0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684239"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62910823"
 ---
 # <a name="receiving-multiple-recordsets"></a>Получение нескольких наборов записей
 [Поставщик Microsoft OLE DB для SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) поддерживает возврат нескольких **записей** объекты для одной команды, содержащего несколько инструкций SQL, один **записей**одной инструкции SQL. Порядок, в котором **записей**возвращаются будет учитываться порядок, в котором указаны инструкции SQL в тексте команды.  

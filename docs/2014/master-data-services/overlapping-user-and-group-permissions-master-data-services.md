@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3f68f367f782a28f062ea807fb0b7680df15c69d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52799266"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62923157"
 ---
 # <a name="overlapping-user-and-group-permissions-master-data-services"></a>Перекрытие разрешений пользователей и групп (службы основных данных)
   Разрешения пользователя основаны:  
@@ -50,7 +50,7 @@ ms.locfileid: "52799266"
   
  Группа 2 имеет **только для чтения** разрешения для сущности Product.  
   
- Результат: Действующее разрешение пользователя — **обновления** для сущности Product.  
+ Результат: Действующее разрешение пользователя — **Обновление** для сущности Product.  
   
 ## <a name="example-2"></a>Пример 2  
  ![mds_conc_user_group_ex_2](../../2014/master-data-services/media/mds-conc-user-group-ex-2.gif "mds_conc_user_group_ex_2")  
@@ -63,7 +63,7 @@ ms.locfileid: "52799266"
   
  Группа 2 имеет разрешение **Запретить** для сущности Product.  
   
- Результат: Действующее разрешение пользователя — **Deny** для сущности Product.  
+ Результат: Действующее разрешение пользователя — **Запретить** для сущности Product.  
   
 ## <a name="example-3"></a>Пример 3  
  ![mds_conc_user_group_ex_3](../../2014/master-data-services/media/mds-conc-user-group-ex-3.gif "mds_conc_user_group_ex_3")  
@@ -76,7 +76,7 @@ ms.locfileid: "52799266"
   
  Группа 2 имеет **только для чтения** разрешение для группы элементов в узле иерархии.  
   
- Результат: Действующее разрешение пользователя — **обновления** членам.  
+ Результат: действующее разрешение пользователя — **Обновить** для элементов.  
   
 ## <a name="see-also"></a>См. также  
  [Способ определения разрешений (службы Master Data Services)](how-permissions-are-determined-master-data-services.md)   

@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b11aa11f942e6f0f801de36c7d15e17cae4141b7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353282"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62916624"
 ---
 # <a name="publish-a-database-sql-server-management-studio"></a>Публикация базы данных (среда SQL Server Management Studio)
   **Мастер формирования и публикации скриптов** служит для публикации всей базы данных или отдельных ее объектов на поставщике услуг размещения.  

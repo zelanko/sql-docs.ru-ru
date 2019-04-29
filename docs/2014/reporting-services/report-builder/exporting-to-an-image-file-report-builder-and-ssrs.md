@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3bdbed10df5dd2d8b52fdaa49d04758d150098b5
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59946620"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62991472"
 ---
 # <a name="exporting-to-an-image-file-report-builder-and-ssrs"></a>Экспорт в файл изображения (построитель отчетов и службы SSRS)
   Модуль подготовки отчетов изображений преобразует отчет в битовую карту или метафайл. По умолчанию модуль подготовки изображения создает отчет в файле TIFF, который можно просматривать на нескольких страницах. Полученное изображение клиент может просмотреть в программе просмотра изображений и распечатать. В этом разделе содержатся сведения о модуле подготовки изображений и описаны исключения из правил подготовки к просмотру.  

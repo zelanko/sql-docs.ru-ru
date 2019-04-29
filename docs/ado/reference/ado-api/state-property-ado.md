@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 98d3e61b37eb22ebaf793252f49b2b11621abd80
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659362"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63027671"
 ---
 # <a name="state-property-ado"></a>Свойство State (ADO)
 Указывает для всех объектов, применимо ли состояние объекта открытым или закрытым. Если объект выполняется асинхронный метод, указывает ли текущее состояние объекта подключение, выполнение или извлечения.  

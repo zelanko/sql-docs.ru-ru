@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e36b6c114e7e5f2f95c0747d6e36e4dabc118daa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074194"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62876224"
 ---
 # <a name="deferred-transactions-sql-server"></a>Отложенные транзакции (SQL Server)
   В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise поврежденная транзакция может быть отложена, если данные, которые требуются для отката (отмены), находятся в режиме "вне сети" во время запуска базы данных. *Отложенная транзакция* представляет собой транзакцию, которая не фиксируется по завершении стадии наката и которая вызывает ошибку, препятствующую ее откату. Поскольку нельзя выполнить откат этой транзакции, она откладывается.  
@@ -84,14 +84,14 @@ ms.locfileid: "48074194"
   
          Сведения об аварийном режиме см. в разделе [Database States](../databases/database-states.md).  
   
-    -   Затем восстановите базу данных, используя параметр DBCC REPAIR_ALLOW_DATA_LOSS в одной из следующих инструкций DBCC: [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql), [DBCC CHECKALLOC](/sql/t-sql/database-console-commands/dbcc-checkalloc-transact-sql)или [DBCC CHECKTABLE](/sql/t-sql/database-console-commands/dbcc-checktable-transact-sql).  
+    -   Затем восстановите базу данных, используя параметр DBCC REPAIR_ALLOW_DATA_LOSS в одной из следующих инструкций DBCC: [Инструкция DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql), [DBCC CHECKALLOC](/sql/t-sql/database-console-commands/dbcc-checkalloc-transact-sql), или [DBCC CHECKTABLE](/sql/t-sql/database-console-commands/dbcc-checktable-transact-sql).  
   
          При возникновении страницы с поврежденными данными DBCC освобождает эту страницу и исправляет связанные с ней ошибки. Такой подход дает возможность возвратить базу данных в режиме «в сети» в физически согласованное состояние. Но при этом могут быть также потеряны дополнительные данные, поэтому этот подход должен применяться только в исключительных случаях.  
   
 ## <a name="see-also"></a>См. также  
  [Обзор процессов восстановления (SQL Server)](restore-and-recovery-overview-sql-server.md)   
  [Удаление уничтоженных файловых групп (SQL Server)](remove-defunct-filegroups-sql-server.md)   
- [Файлы из резервных копий (модель полного восстановления)](file-restores-full-recovery-model.md)   
+ [Восстановления файлов (модель полного восстановления)](file-restores-full-recovery-model.md)   
  [Восстановление файлов (простая модель восстановления)](file-restores-simple-recovery-model.md)   
  [Восстановление страниц (SQL Server)](restore-pages-sql-server.md)   
  [Поэтапное восстановление (SQL Server)](piecemeal-restores-sql-server.md)   

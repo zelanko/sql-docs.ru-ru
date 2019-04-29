@@ -21,11 +21,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 4753e1097dee300d4d806c42b71954e6e557ed12
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186704"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63064015"
 ---
 # <a name="keep-nulls-or-use-default-values-during-bulk-import-sql-server"></a>Сохранение значений NULL или использование значений по умолчанию при массовом импорте данных (SQL Server)
   При импорте данных в таблицу команда **bcp** и инструкция BULK INSERT используют значения по умолчанию, которые определены для столбцов таблицы. Например, если поле в файле данных имеет значение NULL, вместо него загружается значение по умолчанию соответствующего столбца. И команда **bcp**, и инструкция BULK INSERT позволяют пользователю указать, следует ли оставлять значения NULL.  
@@ -212,7 +212,7 @@ GO
 ## <a name="see-also"></a>См. также  
  [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql)   
  [OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql)   
- [Программа bcp](../../tools/bcp-utility.md)   
+ [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT (Transact-SQL)](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [Табличные указания (Transact-SQL)](/sql/t-sql/queries/hints-transact-sql-table)  
   

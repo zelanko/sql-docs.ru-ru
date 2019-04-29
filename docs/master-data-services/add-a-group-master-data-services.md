@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 1ac283320d94cc77b26c09baf8e75ed7f19e6be4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777236"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63016946"
 ---
 # <a name="add-a-group-master-data-services"></a>Добавление группы (службы Master Data Services)
 
@@ -49,11 +49,11 @@ ms.locfileid: "52777236"
     > [!NOTE]  
     >  После первого обращения пользователя к [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]имя пользователя добавляется в список пользователей [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] .  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Следующие шаги  
   
 -   [Назначение разрешений для функциональной области (службы Master Data Services)](../master-data-services/assign-functional-area-permissions-master-data-services.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Безопасность (службы Master Data Services)](../master-data-services/security-master-data-services.md)  
   
   

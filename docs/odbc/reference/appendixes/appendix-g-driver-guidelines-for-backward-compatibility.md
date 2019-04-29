@@ -1,5 +1,5 @@
 ---
-title: Приложение ж Рекомендации по драйверов для обеспечения обратной совместимости | Документация Майкрософт
+title: Приложение Ж. Рекомендации по драйверов для обеспечения обратной совместимости | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,13 +16,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d78de7b3bd1d91351a4159847d6605e30cc1353d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516901"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63026625"
 ---
-# <a name="appendix-g-driver-guidelines-for-backward-compatibility"></a>Приложение ж Рекомендации по драйверов для обеспечения обратной совместимости
+# <a name="appendix-g-driver-guidelines-for-backward-compatibility"></a>Приложение Ж. Рекомендации по обеспечению обратной совместимости с драйвером
 В этом приложении сведения для модулей записи драйвер, работа в ODBC 3. *x* драйверы, которые должны поддерживать ODBC 2. *x* приложений. Дополнительные сведения об обратной совместимости см. в разделе [обратной совместимости и соответствия стандартам](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md).  
   
  Этот раздел содержит следующие подразделы.  

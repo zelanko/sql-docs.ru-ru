@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: db2b2aa3eb59b32894b7ca6bfcf0a8a519bf3903
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604542"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63027581"
 ---
 # <a name="status-property-example-recordset-vb"></a>Пример свойства Status (объект Recordset) (Visual Basic)
 В этом примере используется [состояние](../../../ado/reference/ado-api/status-property-ado-recordset.md) свойство для отображения записи, которые были изменены в пакетной операции перед произошла пакетного обновления.  

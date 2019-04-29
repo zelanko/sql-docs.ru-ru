@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 485c748aad8b07a5e8b92a02c03d51a82e5f362a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354055"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62990705"
 ---
 # <a name="extended-events"></a>Расширенные события
   Расширенная подсистема событий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеет чрезвычайно масштабируемую и легко настраиваемую архитектуру, которая позволяет пользователям собирать именно такое количество информации, которое необходимо для устранения нарушения в работе или выявления проблемы производительности.  

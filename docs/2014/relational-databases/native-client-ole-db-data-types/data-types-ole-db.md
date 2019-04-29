@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e9371f053f95754cdcb7107559f9e0bc3eca2e9a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193984"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062146"
 ---
 # <a name="data-types-ole-db"></a>Типы данных (OLE DB)
   Для выполнения [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкций и обработки результатов при помощи [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщика OLE DB для собственного клиента, необходимо знать, как [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] maps поставщика OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типы данных в типы данных OLE DB при привязке параметров или столбцов в наборе строк, а также при использовании **ITableDefinition** интерфейс, чтобы создать таблицу в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -34,6 +34,6 @@ ms.locfileid: "48193984"
 -   [Структура SSVARIANT](ssvariant-structure.md)  
   
 ## <a name="see-also"></a>См. также  
- [SQL Server Native Client &#40;OLE DB&#41;](../native-client/ole-db/sql-server-native-client-ole-db.md)  
+ [SQL Server Native Client (OLE DB)](../native-client/ole-db/sql-server-native-client-ole-db.md)  
   
   

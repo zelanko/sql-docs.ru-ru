@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4b86348e6e7fa8331697c4a0aa3b23a494ae54a5
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374762"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62890178"
 ---
 # <a name="partition-processing-destination-editor-connection-manager-page"></a>Редактор назначения обработки секций (страница «Диспетчер соединений»)
   Используйте страницу **Диспетчер соединений** диалогового окна **Редактор назначения обработки секций** , чтобы определить соединение с проектом служб [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] или экземпляром служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  

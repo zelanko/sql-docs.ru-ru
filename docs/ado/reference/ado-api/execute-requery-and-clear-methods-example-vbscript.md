@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 48028d073c7ab3d730a0af5c433d1a8f0c8f2de8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727132"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63070913"
 ---
 # <a name="execute-requery-and-clear-methods-example-vbscript"></a>EXECUTE, Requery и Clear методы (VBScript)
 В этом примере показано **Execute** метод, при запуске из обоих [команда](../../../ado/reference/ado-api/command-object-ado.md) объекта и [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекта. Он также использует [Requery](../../../ado/reference/ado-api/requery-method.md) метод для извлечения текущих данных в [записей](../../../ado/reference/ado-api/recordset-object-ado.md)и [снимите](../../../ado/reference/ado-api/clear-method-ado.md) метод, чтобы удалить содержимое [ошибки](../../../ado/reference/ado-api/errors-collection-ado.md)коллекции. ExecuteCommand и PrintOutput процедуры необходимы для выполнения этой процедуры.  

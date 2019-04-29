@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9e9d03ee424f9e192a7218f289bfe133456789d7
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59950467"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63020779"
 ---
 # <a name="lists-report-builder-and-ssrs"></a>Списки (построитель отчетов и службы SSRS)
   Область списка данных повторяется с каждой группой или строкой набора данных отчета. Список может использоваться для создания отчетов произвольного формата, таких как счета, либо совместно с другими областями данных. Можно определять списки, содержащие любое количество элементов отчета. Список может быть вложен в другой список, образуя несколько групп данных.  

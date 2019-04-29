@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8a8fb9b2103316219bcdac74c1b861ac0a2668cb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853692"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63003563"
 ---
 # <a name="syskeyencryptions-transact-sql"></a>sys.key_encryptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47853692"
 |**key_id**|**int**|Идентификатор зашифрованного ключа.|  
 |**отпечаток**|**varbinary(32)**|Хэш SHA-1 сертификата, с помощью которого был зашифрован ключ, или идентификатор GUID симметричного ключа, которым был зашифрован этот ключ.|  
 |**crypt_type**|**char(4)**|Тип шифрования:<br /><br /> ESKS = зашифровано симметричным ключом<br /><br /> ESKP, ESP2 или ESP3 = зашифровано паролем<br /><br /> EPUC = зашифровано сертификатом<br /><br /> EPUA = зашифровано асимметричным ключом<br /><br /> ESKM = зашифровано главным ключом|  
-|**crypt_type_desc**|**nvarchar(60)**|Описание типа шифрования:<br /><br /> ENCRYPTION BY SYMMETRIC KEY<br /><br /> ENCRYPTION BY PASSWORD <br />(Начиная с версии [!INCLUDE[sssqlv14_md](../../includes/sssqlv14-md.md)], включает номер версии для использования в CSS.)<br /><br /> ENCRYPTION BY CERTIFICATE<br /><br /> ENCRYPTION BY ASYMMETRIC KEY<br /><br /> ENCRYPTION BY MASTER KEY<br /><br /> Примечание: Windows DPAPI используется для защиты главного ключа службы.|  
+|**crypt_type_desc**|**nvarchar(60)**|Описание типа шифрования:<br /><br /> ENCRYPTION BY SYMMETRIC KEY<br /><br /> ENCRYPTION BY PASSWORD <br />(Начиная с версии [!INCLUDE[sssqlv14_md](../../includes/sssqlv14-md.md)], включает номер версии для использования в CSS.)<br /><br /> ENCRYPTION BY CERTIFICATE<br /><br /> ENCRYPTION BY ASYMMETRIC KEY<br /><br /> ENCRYPTION BY MASTER KEY<br /><br /> Примечание. API защиты данных Windows используется для защиты главного ключа службы.|  
 |**crypt_property**|**varbinary(max)**|Подписанные или зашифрованные биты.|  
   
 ## <a name="permissions"></a>Разрешения  

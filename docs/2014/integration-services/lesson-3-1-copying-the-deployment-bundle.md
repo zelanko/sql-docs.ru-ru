@@ -1,5 +1,5 @@
 ---
-title: Шаг 1. Копирование пакета развертывания | Документация Майкрософт
+title: Шаг 1. Копирование пакета развертывания | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1d28a85e4dccaa6165d96046848513879998136f
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376502"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62891713"
 ---
-# <a name="step-1-copying-the-deployment-bundle"></a>Шаг 1. Копирование пакета развертывания
+# <a name="step-1-copying-the-deployment-bundle"></a>Шаг 1. Копирование пакета развертывания
   В этой задаче требуется скопировать пакет развертывания на целевой компьютер.  
   
  Самый простой способ скопировать пакет развертывания на целевой компьютер включает создание общей папки на целевом компьютере, сопоставление соответствующего сетевого диска и копирование комплекта развертывания в эту общую папку. Если сведения о создании и настройке общих папок или сопоставлении сетевых дисков отсутствуют, обратитесь к документации по операционной системе Windows.  
@@ -33,7 +33,7 @@ ms.locfileid: "58376502"
 3.  Найдите общую папку на целевом компьютере, куда будет производиться копирование, и щелкните **Вставить**.  
   
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
- [Шаг 2. Запуск мастера установки пакета](../integration-services/lesson-3-2-running-the-package-installation-wizard.md)  
+ [Шаг 2. Запуск мастера установки пакета.](../integration-services/lesson-3-2-running-the-package-installation-wizard.md)  
   
 ![Значок служб Integration Services (маленький)](media/dts-16.gif "значок служб Integration Services (маленький)")**оставаться до даты со службами Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетите страницу служб Integration Services на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
   

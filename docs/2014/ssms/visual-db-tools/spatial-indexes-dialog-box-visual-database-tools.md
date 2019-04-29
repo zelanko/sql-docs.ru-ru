@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 00c5e0017b8d81eaea6960f016e40dbc381e69e8
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100539"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049139"
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>Диалоговое окно «Пространственные индексы» (визуальные инструменты для баз данных)
   Используйте диалоговое окно **Пространственные индексы** для создания индексов для столбцов с типом данных **geometry** или **geography** (*пространственный столбец*), которые не могут быть индексированы с использованием диалогового окна **Индексы/Ключи** . Для каждого пространственного столбца может существовать несколько пространственных индексов, но их следует создавать по очереди.  

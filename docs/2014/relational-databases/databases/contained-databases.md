@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ee9d1c22a216024f388d30978dbb62be933425cb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822518"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62917573"
 ---
 # <a name="contained-databases"></a>Автономные базы данных
   *Автономная база данных* — это база данных, изолированная от других баз данных и от экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , на котором размещена эта база данных.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] помогает пользователю изолировать свою базу данных от экземпляра четырьмя способами.  

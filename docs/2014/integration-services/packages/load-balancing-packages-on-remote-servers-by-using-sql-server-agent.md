@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a7c1f4792d97ae82561f0d05fe9754daae0a2bf3
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58383880"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62890188"
 ---
 # <a name="load-balancing-packages-on-remote-servers-by-using-sql-server-agent"></a>Пакеты балансировки нагрузки на удаленном сервере с использованием агента SQL Server
   Если нужно загрузить много пакетов, удобно использовать другие доступные серверы. Балансировка нагрузки — это метод использования других серверов для загрузки пакетов, когда пакеты находятся под контролем родительского пакета. В службах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]балансировка нагрузки — это ручная процедура, которая должна быть разработана владельцами пакетов. Балансировка нагрузки не выполняется серверами автоматически. Кроме того, пакеты, выполняемые на удаленных серверах, должны быть полными, а не отдельными задачами из других пакетов.  

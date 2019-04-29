@@ -17,11 +17,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ffd706cdb17bd73281ee4a62842362b09c6311ef
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360365"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62922558"
 ---
 # <a name="common-language-runtime-clr-integration-programming-concepts"></a>Основные понятия о программировании интеграции со средой CLR
   Начиная с версии [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] обеспечивает интеграцию с компонентами CLR платформы .NET Framework для [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows. Это означает, что хранимые процедуры, триггеры, определяемые пользователем типы, определяемые пользователем функции, определяемые пользователем статистические функции и возвращающие табличные значение потоковые функции теперь могут разрабатываться с использованием любого языка .NET Framework, включая [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic .NET и [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#.  

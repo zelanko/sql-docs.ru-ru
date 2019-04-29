@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: b0209f3d8e77cfe893a0e462fc9ccf3761da8dfa
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373756"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62911396"
 ---
 # <a name="setstringvalue-method-sqlserviceadvancedproperty-class-"></a>Метод SetStringValue (класс SqlServiceAdvancedProperty)
   Задает строковое значение свойства.  

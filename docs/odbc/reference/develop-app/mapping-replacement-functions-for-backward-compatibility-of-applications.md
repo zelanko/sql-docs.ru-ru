@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6cecc7fcd5ffa7234544dd0a9bc10407b1ea5cb1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626952"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63032825"
 ---
 # <a name="mapping-replacement-functions-for-backward-compatibility-of-applications"></a>Сопоставление замещающих функций для обеспечения обратной совместимости приложений
 ODBC 3 *.x* приложение, которое работает через ODBC 3 *.x* диспетчера драйверов будет работать для ODBC 2. *x* драйвера, если используются нет новых функций. Оба дублирование функциональные возможности и изменения в поведении Однако, влиять на, ODBC 3. *x* приложение работает в ODBC 2. *x* драйвера. При работе с ODBC 2. *x* драйвера, диспетчер драйверов сопоставляет следующие ODBC 3. *x* функций, которые были заменены один или несколько ODBC 2. *x* функции, в соответствующие ODBC 2. *x* функции.  
@@ -453,10 +453,10 @@ SQLParamOptions (StatementHandle, Size, &RowCount);
 |------------|-----------|  
 |ColumnName|"" (пустая строка)|  
 |* NameLengthPtr|0|  
-|* DataTypePtr|SQL_BINARY|  
+|*DataTypePtr|SQL_BINARY|  
 |* ColumnSizePtr|4|  
 |* DecimalDigitsPtr|0|  
-|* NullablePtr|SQL_NO_NULLS|  
+|*NullablePtr|SQL_NO_NULLS|  
   
 ### <a name="sqlgetdata"></a>SQLGetData  
  Когда ODBC 3. *x* приложение, которое работает с ODBC 2. *x* драйвер производит вызов **SQLGetData** извлекаемого закладки:  

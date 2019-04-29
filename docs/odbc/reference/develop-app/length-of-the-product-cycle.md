@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2c8a5b88f3fdca03be7740ba086e7ff61edbf684
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656152"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127230"
 ---
 # <a name="length-of-the-product-cycle"></a>Продолжительность цикла продукта
 Последний вопрос о взаимодействии — это время. Разработка приложения с возможностью взаимодействия обычно занимает больше времени, чем разработка noninteroperable один. Причина заключается в приложение необходимо проверить возможности СУБД, выполнять те же задачи по-разному для разных СУБД, обойти функциональные возможности, поддерживаемые в некоторых СУБД, но не другие что т. д.  

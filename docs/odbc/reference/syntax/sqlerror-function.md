@@ -21,20 +21,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 66968fe0ec81f437c3da76428fe981041c7892d9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598579"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061548"
 ---
 # <a name="sqlerror-function"></a>Функция SQLError
 **Соответствие стандартам**  
- Версия была введена: ODBC 1.0 соответствует стандартам: устарело  
+ Представленные версии: Соответствие стандартам 1.0 ODBC: Устарело  
   
  **Сводка**  
  **SQLError** возвращает сведения об ошибках и состоянии.  
   
- Дополнительные сведения о какие диспетчера драйверов сопоставляет эту функцию, чтобы при ODBC 2. *x* при работе с ODBC 3. *x* драйвера, см. в разделе [сопоставление устаревшей функции](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) в приложении G: драйвер рекомендации для обеспечения обратной совместимости.  
+ Дополнительные сведения о какие диспетчера драйверов сопоставляет эту функцию, чтобы при ODBC 2. *x* при работе с ODBC 3. *x* драйвера, см. в разделе [сопоставление устаревшей функции](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) в приложении G: Рекомендации по драйверов для обеспечения обратной совместимости.  
   
 ## <a name="see-also"></a>См. также  
  [Справочник по API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   

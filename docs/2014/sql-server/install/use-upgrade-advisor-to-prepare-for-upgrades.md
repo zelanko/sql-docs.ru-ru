@@ -18,11 +18,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8b12b22af124250fe05baab5d08a6585de061b56
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368076"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62992370"
 ---
 # <a name="use-upgrade-advisor-to-prepare-for-upgrades"></a>Использование помощника по обновлению для подготовки к обновлениям
   Помощник по обновлению [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] помогает произвести подготовку к обновлениям [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Помощник по обновлению анализирует установленные компоненты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и создает отчет, содержащий список проблем, которые должны быть решены перед началом обновления.  

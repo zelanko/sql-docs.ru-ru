@@ -40,11 +40,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2686eb387854823ff16a722fe3219c6e2acb2adc
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131494"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62872220"
 ---
 # <a name="configure-database-mail"></a>Настройка компонента Database Mail
   В этом разделе описано включение и настройка компонента Database Mail с помощью мастера настройки компонента Database Mail и создание скрипта настройки компонента Database Mail с помощью шаблонов.  
@@ -90,7 +90,7 @@ ms.locfileid: "54131494"
  Страница **Выбор задачи настройки** позволяет указать, какую задачу необходимо выполнять каждый раз при использовании этого мастера. Чтобы изменить решение перед завершением мастера, нажмите кнопку **Назад** , вернитесь на эту страницу и выберите другую задачу.  
   
 > [!NOTE]  
->  Если компонент Database Mail не включен, будет получено следующее сообщение: **Функция компонента Database Mail недоступна.  Включить эту функцию?** Ответ **Да**эквивалентен включению компонента Database Mail с помощью параметра [Database Mail XPs](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) системной хранимой процедуры **sp_configure** .  
+>  Если компонент Database Mail не включен, вы получите сообщение: **Компонент Database Mail недоступен.  Включить эту функцию?** Ответ **Да**эквивалентен включению компонента Database Mail с помощью параметра [Database Mail XPs](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) системной хранимой процедуры **sp_configure** .  
   
  **Установка компонента Database Mail при помощи выполнения следующих задач**  
  Выполнить все задачи, необходимые для первой установки компонента Database Mail. Этот параметр включает в себя все три остальных.  

@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3b4c1126983f5936e123d46d6c1c6e4c16ace034
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52819006"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62924227"
 ---
 # <a name="initiate-actions-based-on-attribute-value-changes-master-data-services"></a>Инициирование действия на основе значения атрибута (службы Master Data Services)
   В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]для инициации действий на основе значения атрибута создаются бизнес-правила. Например, когда значение определенного атрибута изменяется, может потребоваться изменить значение, отправить уведомление или запустить внешний рабочий процесс.  

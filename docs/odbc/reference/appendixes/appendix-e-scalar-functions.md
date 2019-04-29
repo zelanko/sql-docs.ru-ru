@@ -1,5 +1,5 @@
 ---
-title: Приложение д. Скалярные функции | Документация Майкрософт
+title: Приложение Д. Скалярные функции | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,13 +16,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 71c80efdb2f4a87537d472ee4b6dc6bdc65af70f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540510"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63026680"
 ---
-# <a name="appendix-e-scalar-functions"></a>Приложение д. Скалярные функции
+# <a name="appendix-e-scalar-functions"></a>Приложение Д. Скалярные функции
 ODBC определяет следующие скалярные функции, с подробными сведениями о каждом из этих типов функции, в соответствующих разделах данного приложения. Описания функции содержат синтаксис.  
   
  Это приложение содержит следующие разделы.  

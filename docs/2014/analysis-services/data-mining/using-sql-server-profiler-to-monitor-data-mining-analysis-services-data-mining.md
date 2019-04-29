@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ccf4e335f3b6d700fd47e1073e4f9432cc81cd29
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48139910"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732585"
 ---
 # <a name="using-sql-server-profiler-to-monitor-data-mining-analysis-services---data-mining"></a>Наблюдение за интеллектуальным анализом данных с помощью приложения SQL Server Profiler (службы Analysis Services — интеллектуальный анализ данных)
   При наличии необходимых разрешений приложение SQL Server Profiler можно использовать для наблюдения за интеллектуальным анализом данных, в процессе которого выполняются запросы к экземпляру служб SQL Server Analysis Services. В это понятие включается обработка моделей и структур, запросы прогнозов и содержимого, а также создание новых моделей и структур.  
   
- SQL Server Profiler использует `trace` для наблюдения за запросами от нескольких клиентов, включая [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], SQL Server Management Studio, веб-служб или интеллектуального анализа данных надстройки для Excel, поскольку при всех обращениях использовать один и тот же экземпляр сервера SQL Server Службы Analysis Services. Для каждого отслеживаемого экземпляра служб SQL Server Analysis Services необходима отдельная трассировка. Общие сведения о трассировках и об использовании приложения SQL Server Profiler см. в разделе [Использование приложения SQL Server Profiler для мониторинга служб Analysis Services](../instances/use-sql-server-profiler-to-monitor-analysis-services.md).  
+ Приложение SQL Server Profiler использует `trace` для наблюдения за запросами от нескольких клиентов, в том числе среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], среды SQL Server Management Studio, веб-служб и надстройки интеллектуального анализа данных для Excel, поскольку при всех обращениях к службам SQL Server Analysis Services используется один экземпляр. Для каждого отслеживаемого экземпляра служб SQL Server Analysis Services необходима отдельная трассировка. Общие сведения о трассировках и об использовании приложения SQL Server Profiler см. в разделе [Использование приложения SQL Server Profiler для мониторинга служб Analysis Services](../instances/use-sql-server-profiler-to-monitor-analysis-services.md).  
   
  Справочные сведения о типах захватываемых событий см. в разделе [Создание трассировки приложения Profiler для воспроизведения (службы Analysis Services)](../instances/create-profiler-traces-for-replay-analysis-services.md).  
   
@@ -43,7 +43,7 @@ ms.locfileid: "48139910"
  Просмотр инструкций команд в журнале трассировки дает также возможность ознакомиться с синтаксисом сложных инструкций, передаваемых клиентом серверу служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , включая вызовы системных хранимых процедур. Эти сведения могут оказаться полезными при отладке или в качестве источника шаблонов для создания новых прогнозирующих запросов и моделей. С несколькими примерами вызовов хранимых процедур, которые могут быть получены через трассировку, можно ознакомиться в разделе [Примеры запросов к модели кластеризации](clustering-model-query-examples.md).  
   
 ## <a name="see-also"></a>См. также  
- [Наблюдение за экземпляром служб Analysis Services](../instances/monitor-an-analysis-services-instance.md)   
+ [Monitor an Analysis Services Instance](../instances/monitor-an-analysis-services-instance.md)   
  [Использование расширенных событий SQL Server &#40;XEvents&#41; мониторинг Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md)  
   
   

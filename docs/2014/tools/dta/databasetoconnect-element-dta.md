@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4fef2df598d96b33def41f27345f88226fd4c6b5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52821928"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185411"
 ---
 # <a name="databasetoconnect-element-dta"></a>Элемент DatabaseToConnect (DTA)
   Позволяет задать первую базу данных, к которой подключается помощник по настройке ядра СУБД при настройке рабочей нагрузки.  
@@ -39,7 +39,7 @@ ms.locfileid: "52821928"
 |--------------------|-----------------|  
 |**Тип данных и длина**|`string`, неограниченная длина|  
 |**Значение по умолчанию**|Нет.|  
-|**Наличие**|Необязательный. Может использоваться один раз для каждого элемента `TuningOptions`.|  
+|**Наличие**|Необязательный параметр. Может использоваться один раз для каждого элемента `TuningOptions`.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   

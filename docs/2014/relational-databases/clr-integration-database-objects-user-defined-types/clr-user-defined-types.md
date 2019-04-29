@@ -33,11 +33,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 7044fdc4c29110870e20cd2f9fe4f2140659e551
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107374"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874440"
 ---
 # <a name="clr-user-defined-types"></a>Определяемые пользователем типы данных CLR
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] позволяет создавать объекты базы данных, которые программируются по сборке, созданной в среде CLR платформы .NET Framework. Объекты базы данных, которые способны пользоваться преимуществами многофункциональной модели программирования, предоставляемыми средой CLR, содержат триггеры, хранимые процедуры, функции, агрегатные функции и типы.  

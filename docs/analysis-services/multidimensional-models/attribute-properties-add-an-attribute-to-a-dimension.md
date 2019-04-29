@@ -1,5 +1,5 @@
 ---
-title: Добавление атрибута в измерение | Документы Microsoft
+title: Добавление атрибута в измерение | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 02773eadf282fe9ac25fa96543a86c5d3e77da4c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021001"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63020614"
 ---
-# <a name="attribute-properties---add-an--attribute-to-a-dimension"></a>Атрибут свойства — Добавление атрибута в измерение
+# <a name="attribute-properties---add-an--attribute-to-a-dimension"></a>Свойства атрибута — добавление атрибута в измерение
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   В службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]добавлять атрибуты в измерение можно автоматически или вручную.  
   

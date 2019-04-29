@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d080df993035bc34783bb39991d80d6a8e692618
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58373822"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62894507"
 ---
 # <a name="fast-parse"></a>Fast Parse
   Быстрый синтаксический анализ обеспечивает быстрый и простой набор процессов для анализа данных. Эти процедуры не учитывают локали и поддерживают только подмножество форматов дат, времени и целых чисел.  

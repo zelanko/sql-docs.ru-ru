@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 49fce70b4fc01f77fe7ca54e3951f0372ba18489
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52815736"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63067650"
 ---
 # <a name="sql-server-failover-cluster-installation"></a>Установка отказоустойчивого кластера SQL Server
   Чтобы установить отказоустойчивый кластер [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , необходимо создать и настроить экземпляр отказоустойчивого кластера, запустив программу установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
@@ -43,7 +43,7 @@ ms.locfileid: "52815736"
   
 ## <a name="includessnoversionincludesssnoversion-mdmd-failover-cluster-installation-options"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Параметры установки отказоустойчивого кластера  
   
-##### <a name="option-1-integrated-installation-with-add-node"></a>Вариант 1. Интегрированная установка с добавлением узлов  
+##### <a name="option-1-integrated-installation-with-add-node"></a>Вариант 1. Интегрированная установка с добавлением узла  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] состоит из двух шагов.  
   
 1.  Создайте и настройте состоящий из одиночного узла экземпляр отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . После завершения настройки узла готов полностью функциональный экземпляр отказоустойчивого кластера. В данный момент этот отказоустойчивый кластер не имеет высокого уровня готовности, поскольку в него входит только один узел.  

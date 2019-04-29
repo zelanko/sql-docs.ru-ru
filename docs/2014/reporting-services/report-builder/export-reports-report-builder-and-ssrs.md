@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 91d702b8b5b3402783fb47819bdd18d552682931
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59961830"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62987897"
 ---
 # <a name="exporting-reports-report-builder-and-ssrs"></a>Экспорт отчетов (построитель отчетов и службы SSRS)
   После запуска отчета его можно экспортировать в другой формат, например Excel или PDF, либо экспортировать отчет путем создания сервисного документа Atom, в котором перечислены соответствующие Atom веб-каналы данных, доступные в отчете.  

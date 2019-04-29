@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5452b53bf6171b7e516f246972aa0d9d56e321a3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770616"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63050754"
 ---
 # <a name="sqlfulltextquery-event-class"></a>SQL:FullTextQuery, класс событий
   Класс событий SQL:FullTextQuery возникает, когда [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняет полнотекстовый запрос. Включайте этот класс событий в трассировку, служащую для мониторинга проблем, связанных с полнотекстовыми каталогами.  
@@ -43,7 +43,7 @@ ms.locfileid: "52770616"
 |HostName|`nvarchar`|Имя компьютера, на котором выполняется клиентская программа. Этот столбец данных заполняется, если клиент предоставляет имя узла. Чтобы определить имя узла, используйте функцию HOST_NAME.|8|Да|  
 |IntegerData|`int`|Количество возвращенных строк. Если запрос возвращает ошибку, это значение равно NULL. Если запрос не возвращает строк, это значение равно 0.|25|Да|  
 |IsSystem|`int`|Указывает, произошло событие в системном или в пользовательском процессе. 1 = системный, 0 = пользовательский.|60|Да|  
-|LoginName|NVARCHAR|Имя входа пользователя (либо защищенное имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , либо учетные данные входа [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows в формате «ДОМЕН\имя_пользователя»).|11|Да|  
+|LoginName|nvarchar|Имя входа пользователя (либо защищенное имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , либо учетные данные входа [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows в формате «ДОМЕН\имя_пользователя»).|11|Да|  
 |LoginSid|`image`|Идентификатор безопасности вошедшего в систему пользователя. Эти сведения можно найти в представлении каталога sys.server_principals. Значение идентификатора безопасности уникально для каждого имени входа на сервере.|41|Да|  
 |NTDomainName|`nvarchar`|Домен Windows, к которому принадлежит пользователь.|7|Да|  
 |ObjectID|`int`|Назначенный системой идентификатор целевого объекта.|22|Да|  

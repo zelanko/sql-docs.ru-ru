@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a147330733efe641b8baf844723e4027e7ada5bc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094154"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733235"
 ---
 # <a name="physical-architecture-analysis-services---data-mining"></a>Физическая архитектура (службы Analysis Services — интеллектуальный анализ данных)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] используются как серверный, так и клиентский компоненты.  
@@ -52,6 +52,6 @@ ms.locfileid: "48094154"
  Вся связь между клиентом и сервером служб Analysis Services основана на протоколе XMLA, независимом от платформы или языка. Если от клиента поступает запрос, службы Analysis Services определяют, связан ли он с OLAP или с интеллектуальным анализом данных, и соответствующим образом назначают маршрут. Дополнительные сведения см. в разделе [Серверные компоненты ядра OLAP](../multidimensional-models/olap-physical/olap-engine-server-components.md).  
   
 ## <a name="see-also"></a>См. также  
- [Логическая архитектура &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](logical-architecture-analysis-services-data-mining.md)  
+ [Логическая архитектура (службы Analysis Services — интеллектуальный анализ данных)](logical-architecture-analysis-services-data-mining.md)  
   
   

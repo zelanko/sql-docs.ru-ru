@@ -1,5 +1,5 @@
 ---
-title: Этап 2. Запуск мастера установки пакета | Документация Майкрософт
+title: Шаг 2. Запуск мастера установки пакета | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0fe0862438943fec36728a3c4e6c796061c86593
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385542"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62891582"
 ---
-# <a name="step-2-running-the-package-installation-wizard"></a>Этап 2. Запуск мастера установки пакета
+# <a name="step-2-running-the-package-installation-wizard"></a>Шаг 2. Запуск мастера установки пакета
   В этой задаче мастер установки пакета используется для развертывания пакетов из проекта Deployment Tutorial в экземпляре [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. В таблицу sysssispackages базы данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] msdb можно установить только пакеты; файлы поддержки, включенные в пакет развертывания, будут развернуты в файловой системе.  
   
  Мастер установки пакета проводит пользователя через последовательность шагов по установке и настройке пакетов. Пакеты будут устанавливаться в экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на компьютере назначения (куда скопирован пакет развертывания). Будет также создана папка «C:\DeploymentTutorialInstall», в которую мастер установит файлы, не относящиеся к пакету.  
@@ -81,11 +81,11 @@ ms.locfileid: "58385542"
   
      Поскольку значения переменных среды на целевом компьютере отличаются от значений переменных среды на компьютере разработчика, на странице проверки пакетов отображается несколько предупреждений. Следует ожидать следующих предупреждений.  
   
-    -   Недопустимый файл конфигурации  «C:\DeploymentTutorial\DataTransferConfig.dtsConfig». Проверьте имя файла конфигурации.  
+    -   Файл конфигурации: «C:\DeploymentTutorial\DataTransferConfig.dtsConfig» является недопустимым. Проверьте имя файла конфигурации.  
   
     -   Не удалось загрузить по крайней мере одну запись конфигурации в пакете. Проверьте записи конфигурации и предыдущие предупреждения, чтобы увидеть, какая из них ошибочна.  
   
-    -   Недопустимый файл конфигурации  «C:\DeploymentTutorial\LoadXMLDataConfig.dtsConfig». Проверьте имя файла конфигурации.  
+    -   Файл конфигурации: «C:\DeploymentTutorial\LoadXMLDataConfig.dtsConfig недопустим. Проверьте имя файла конфигурации.  
   
     -   Не удалось загрузить по крайней мере одну запись конфигурации в пакете. Проверьте записи конфигурации и предыдущие предупреждения, чтобы увидеть, какая из них ошибочна.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "58385542"
     >  Для проверки пакетов создается временный файл журнала. Этот файл не используется при выполнении пакета.  
   
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
- [Шаг 3. Тестирование развернутых пакетов](../integration-services/lesson-3-3-testing-the-deployed-packages.md)  
+ [Шаг 3. Тестирование развернутых пакетов.](../integration-services/lesson-3-3-testing-the-deployed-packages.md)  
   
 ![Значок служб Integration Services (маленький)](media/dts-16.gif "значок служб Integration Services (маленький)")**оставаться до даты со службами Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетите страницу служб Integration Services на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
   

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 999eb43304150c9af8d61be591f3c4c0ab62566f
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559581"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62929850"
 ---
 # <a name="registering-business-objects-on-the-client-for-use-with-dcom"></a>Регистрация бизнес-объектов в клиенте для использования с DCOM
 Настраиваемые бизнес-объекты должны гарантировать, что на стороне клиента можно сопоставить их имя программы (ProgId) с идентификатором (CLSID), который может использоваться через DCOM. По этой причине идентификатор ProgID объекта DCOM должно быть в реестре клиентского и сопоставить с Идентификатором класса серверных бизнес-объекта. Для других поддерживаемых протоколов (HTTP, HTTPS и внутри процесса) это не является обязательным.  

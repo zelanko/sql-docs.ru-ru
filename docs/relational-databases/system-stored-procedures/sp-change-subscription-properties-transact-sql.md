@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7f783b86757cbc54fe47671f75082228d8ddc1e0
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493066"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62997100"
 ---
 # <a name="spchangesubscriptionproperties-transact-sql"></a>sp_change_subscription_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +85,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 |**internet_login**||Имя входа, используемое агентом слияния для подключения к веб-серверу, на котором доступна веб-синхронизация с обычной проверкой подлинности.|  
 |**internet_password**||Пароль, используемый агентом слияния для подключения к веб-серверу, на котором доступна веб-синхронизация с обычной проверкой подлинности.|  
 |**internet_security_mode**|**1**|Для веб-синхронизации используется встроенная проверка подлинности Windows. При веб-синхронизации рекомендуется использовать обычную проверку подлинности. Дополнительные сведения см. в разделе [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md).|  
-||**0**|Для веб-синхронизации используется обычная проверка подлинности.<br /><br /> Примечание. Для веб-синхронизации необходимо соединение с веб-сервером по протоколу SSL.|  
+||**0**|Для веб-синхронизации используется обычная проверка подлинности.<br /><br /> Примечание. Веб-синхронизации требуется подключение SSL на веб-сервер.|  
 |**internet_timeout**||Время (в секундах) перед отменой запроса на веб-синхронизацию.|  
 |**internet_url**||UR-адрес, который представляет собой адрес средства прослушивания репликации для веб-синхронизации.|  
 |**merge_job_login**||Имя входа учетной записи Windows, от имени которой выполняется агент.|  

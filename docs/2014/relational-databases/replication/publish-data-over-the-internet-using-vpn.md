@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f090e48f97f4756f6c87b7cac2a6db64105ef265
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804476"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63021065"
 ---
 # <a name="publish-data-over-the-internet-using-vpn"></a>Публикация данных через Интернет с помощью виртуальных частных сетей
   Обеспечивая защищенный обмен данными, технология виртуальных частных сетей (Virtual Private Networking, VPN) предоставляет работающим дома пользователям, филиалам компании, удаленным пользователям и другим компаниям возможность подключения к корпоративной сети через Интернет. Пользователи могут использовать проверку подлинности Windows, как если бы они находились в локальной сети. Репликации [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] всех типов могут реплицировать данные через виртуальную частную сеть, но для репликации слиянием необходимо предусмотреть веб-синхронизацию, так как в этом случае применение виртуальной частной сети не требуется. Дополнительные сведения см. в статье [Web Synchronization for Merge Replication](web-synchronization-for-merge-replication.md).  

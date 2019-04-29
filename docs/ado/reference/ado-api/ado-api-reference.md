@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2b2f91a0b2ded038e89be6dfee29bea344ed010f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707412"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065192"
 ---
 # <a name="ado-api-reference"></a>Справочник по API ADO
 В этом разделе документации по объектам ADO разделы для каждого ADO объекта, коллекции, свойство, динамического свойства, метода, событий и перечисления. Кроме того он содержит список индексы синтаксиса ADO для использования с Microsoft Visual C++ и классов Windows Foundation (WFC).  
@@ -46,8 +46,8 @@ ms.locfileid: "47707412"
 -   [Примеры кода ADO](../../../ado/reference/ado-api/ado-code-examples.md)  
   
 ## <a name="see-also"></a>См. также  
- [Приложении d примеры ADO](../../../ado/guide/appendixes/appendix-d-ado-samples.md)   
+ [Приложение г. Примеры ADO](../../../ado/guide/appendixes/appendix-d-ado-samples.md)   
  [Объекты данных Microsoft ActiveX (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
  [Приложение c. Программирование с использованием ADO](../../../ado/guide/appendixes/appendix-c-programming-with-ado.md)   
- [Приложение а. поставщики](../../../ado/guide/appendixes/appendix-a-providers.md)   
+ [Приложение а. Поставщики](../../../ado/guide/appendixes/appendix-a-providers.md)   
  [Журнал объектов ADO](../../../ado/guide/ado-history.md)

@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b309669027da801681c1386abe604fce2f915f3d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52798126"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62923253"
 ---
 # <a name="transactions-master-data-services"></a>Транзакции (службы Master Data Services)
   В [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]транзакция регистрируется при каждом выполнении действия с элементом. Все пользователи могут просматривать транзакции, а администраторы также могут их обращать (отменять). Транзакции отображают дату, время и пользователя, выполнившего действие, а также другие сведения. Пользователь может добавить к транзакции заметку, чтобы указать причину выполнения транзакции.  

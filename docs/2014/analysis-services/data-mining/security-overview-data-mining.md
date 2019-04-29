@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 85a208cdc973cf4e54bb0a68020182d41eb798f3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149624"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733046"
 ---
 # <a name="security-overview-data-mining"></a>Общие сведения о безопасности (интеллектуальный анализ данных)
   Защита служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] выполняется на нескольких уровнях. Необходимо защитить каждый экземпляр служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] и его источники данных, чтобы убедиться, что только авторизованные пользователи имеют разрешения на чтение или на чтение и запись в выбранных измерениях, моделях интеллектуального анализа данных и источниках данных. Необходимо также обезопасить базовые источники данных, чтобы предотвратить несанкционированный доступ к конфиденциальным бизнес-данным. Процесс защиты экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] описывается в следующих разделах.  
@@ -26,13 +26,13 @@ ms.locfileid: "48149624"
 ##  <a name="bkmk_Architecture"></a> Архитектура защиты  
  В следующих источниках приводятся сведения об архитектуре безопасности экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], включая то, как службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] используют проверку подлинности [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows для проверки подлинности доступа пользователей.  
   
--   [Роли безопасности &#40;службы Analysis Services — многомерные данные&#41;](../multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)  
+-   [Роли безопасности (службы Analysis Services — многомерные данные)](../multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)  
   
 -   [Свойства безопасности](../server-properties/security-properties.md)  
   
--   [Настройка учетных записей служб &#40;служб Analysis Services&#41;](../instances/configure-service-accounts-analysis-services.md)  
+-   [Настройка учетных записей служб (службы Analysis Services)](../instances/configure-service-accounts-analysis-services.md)  
   
--   [Авторизация доступа к объектам и операциям &#40;служб Analysis Services&#41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
+-   [Предоставление доступа к объектам и операциям (службы Analysis Services)](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
   
 ##  <a name="bkmk_Logon"></a> Настройка учетной записи входа для служб Analysis Services  
  Необходимо выбрать подходящую учетную запись входа для служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] и указать для нее разрешения. Следует убедиться, что учетная запись входа служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] обладает только теми разрешениями, которые необходимы для выполнения требуемых задач, включая соответствующие разрешения на доступ к базовым источникам данных.  
@@ -57,6 +57,6 @@ ms.locfileid: "48149624"
  При использовании пакетов служб Integration Services для очистки данных, обновления моделей интеллектуального анализа данных или для прогнозирования необходимо позаботиться о том, чтобы служба Integration Services имела соответствующие разрешения на работу с базой данных, в которой хранится модель, и соответствующие разрешения на работу с данными источника.  
   
 ## <a name="see-also"></a>См. также  
- [Роли и разрешения &#40;служб Analysis Services&#41;](../multidimensional-models/roles-and-permissions-analysis-services.md)  
+ [Роли и разрешения (службы Analysis Services)](../multidimensional-models/roles-and-permissions-analysis-services.md)  
   
   

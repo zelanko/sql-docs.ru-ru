@@ -19,11 +19,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b824129d1687dce8471800f79d106328b9ee36f6
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388950"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62892287"
 ---
 # <a name="integration-services-ssis-variables"></a>Переменные в службах Integration Services (SSIS)
   Переменные хранят значения, которые могут использоваться пакетом служб [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , а также его контейнерами, задачами и обработчиками событий во время выполнения. Скрипты в задаче «Скрипт» и компоненте скрипта также могут использовать переменные. Управления очередностью, которые упорядочивают задачи и контейнеры в рабочий процесс, могут использовать переменные, если связанные с ними определения ограничений включают в себя выражения.  

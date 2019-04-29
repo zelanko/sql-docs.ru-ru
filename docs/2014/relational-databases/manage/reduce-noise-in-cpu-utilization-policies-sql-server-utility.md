@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ce41c287105f97ce4a9cc0ce92facf9919f7ad33
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818280"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63035800"
 ---
 # <a name="reduce-noise-in-cpu-utilization-policies-sql-server-utility"></a>Уменьшение уровня шума в политиках загрузки ЦП (служебная программа SQL Server)
   Чтобы сократить число неважных записей в отчетах и нежелательных нарушений в политиках использования ресурсов программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , применяются следующие стратегии.  

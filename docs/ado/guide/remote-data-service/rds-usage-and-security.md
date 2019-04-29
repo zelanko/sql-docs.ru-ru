@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2abbebbf03984e3950ae9fadac1b574db64990ef
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559561"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62929849"
 ---
 # <a name="rds-usage-and-security"></a>Использование RDS и безопасность
 Используйте сведения в этом разделе для настройки сервера и быстро использовать служб удаленных рабочих СТОЛОВ. Этот раздел содержит шаги определенные настройки, которые могут потребоваться при реализации служб удаленных рабочих СТОЛОВ, описываются некоторые ключевые связи между служб удаленных рабочих СТОЛОВ и других технологий и помогает определить способы решения проблем, которые могут возникнуть при настройке Решение служб удаленных рабочих СТОЛОВ.  

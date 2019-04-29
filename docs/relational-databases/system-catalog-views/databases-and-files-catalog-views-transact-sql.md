@@ -20,11 +20,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ec0ce7f6ec09dd60d36ab3faecf6fd723e0f5868
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670833"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63005829"
 ---
 # <a name="databases-and-files-catalog-views-transact-sql"></a>Представления каталогов баз данных и файлов (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

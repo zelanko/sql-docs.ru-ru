@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 947933540c992b063e88db01c6f84663483dd113
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386682"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62898362"
 ---
 # <a name="derived-column-transformation-editor"></a>редактор преобразования «Производный столбец»
   Используйте диалоговое окно **Редактор преобразования «Производный столбец»** для создания выражений, которые заполняют новые или замещающие столбцы.  
@@ -45,7 +45,7 @@ ms.locfileid: "58386682"
   
  Значение этого свойства можно задать с помощью выражения свойства.  
   
- **См. также**: [Службы Integration Services &#40;SSIS&#41; выражения](expressions/integration-services-ssis-expressions.md), [операторы &#40;выражение служб SSIS&#41;](expressions/operators-ssis-expression.md), и [функции &#40;выражение служб SSIS&#41;](expressions/functions-ssis-expression.md)  
+ **См. также:** [Выражения служб Integration Services (SSIS)](expressions/integration-services-ssis-expressions.md), [Операторы (выражение служб SSIS)](expressions/operators-ssis-expression.md) и [Функции (выражение служб SSIS)](expressions/functions-ssis-expression.md).  
   
  **Тип данных**  
  При добавлении данных в новый столбец диалоговое окно **Редактор преобразования "Производный столбец"** автоматически оценивает выражение и задает соответствующий тип данных. Значение этого столбца доступно только для чтения. Дополнительные сведения см. в разделе [Integration Services Data Types](data-flow/integration-services-data-types.md).  

@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 40e4b4bdab9772f5af95de8f23053b4b060ffdcc
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58382720"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62837396"
 ---
 # <a name="add-a-data-viewer-to-a-data-flow"></a>Добавление средства просмотра данных к потоку данных
   В данном разделе рассматриваются добавление средства просмотра данных к потоку данных и настройка этого средства. Средство просмотра данных отображает данные, перемещаемые между двумя компонентами потока данных. Например, средство просмотра данных может отображать данные, извлеченные из источника данных до того, как преобразование в потоке данных изменит данные.  

@@ -1,5 +1,5 @@
 ---
-title: Шаг 1. Копирование пакета занятия 1 | Документация Майкрософт
+title: Шаг 1. Копирование пакета занятия 1 | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d473cdf45eebeb0a5bd6268ed79c071741e74e8c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386092"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62891677"
 ---
-# <a name="step-1-copying-the-lesson-1-package"></a>Шаг 1. Копирование пакета занятия 1
+# <a name="step-1-copying-the-lesson-1-package"></a>Шаг 1. Копирование пакета занятия 1
   В этой задаче будет создана копия пакета Lesson 1.dtsx, созданного на занятии 1. Если вы не прошли занятие 1, можно добавить пакет задания 1, прилагаемый к учебнику по проекту, и скопировать его. Полученная копия впоследствии будет использоваться на протяжении всего занятия 2.  
   
 ### <a name="to-create-the-lesson-2-package"></a>Создание пакета занятия 2  

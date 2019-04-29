@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7ac8dd7682ecfe8df3b317bba578bca8358b9b11
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783566"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62916506"
 ---
 # <a name="value-for-extended-property-dialog-box"></a>диалоговое окно «Значение для расширенного свойства»
   Используйте диалоговое окно **Значение** *\<имя свойства>* для ввода или просмотра значения. Это часто используемое диалоговое окно, которое можно открыть из разных местоположений.  

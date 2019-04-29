@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 827221a60598a6a9f4179a86783c05512072f5b0
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59940840"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63020756"
 ---
 # <a name="add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs"></a>Добавление или удаление группы в области данных (построитель отчетов и службы SSRS)
   Группа добавляется к области данных для организации данных в зависимости от указанного значения или набора выражений, для отображения и вычислений. Группа имеет имя и выражение, указывающее, какие данные из набора принадлежат к этой группе. Дополнительные сведения о группах см. в разделе [Основные сведения о группах (построитель отчетов и службы SSRS)](understanding-groups-report-builder-and-ssrs.md).  

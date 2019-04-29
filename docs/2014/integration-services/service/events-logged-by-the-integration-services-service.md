@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dedffe0f30c62399e4d694f7ee1bf5247222e87d
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392952"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62889281"
 ---
 # <a name="events-logged-by-the-integration-services-service"></a>Cобытия, зарегистрированные службами Integration Services
   Служба [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] регистрирует различные сообщения в журнале событий приложений Windows. Служба записывает эти события в журнал при своем запуске, остановке и при возникновении некоторых проблем.  
@@ -31,7 +31,7 @@ ms.locfileid: "58392952"
 ## <a name="messages-about-the-status-of-the-service"></a>Сообщения о состоянии службы  
  При выборе установки служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] служба [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] устанавливается и запускается, а тип ее запуска устанавливается в автоматический.  
   
-|Идентификатор события|Символическое имя|Текста|Примечания|  
+|Идентификатор события|Символическое имя|Text|Примечания|  
 |--------------|-------------------|----------|-----------|  
 |256|DTS_MSG_SERVER_STARTING|Запуск службы [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] .|Служба запускается.|  
 |257|DTS_MSG_SERVER_STARTED|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] Служба   запущена.|Служба запущена.|  
@@ -42,7 +42,7 @@ ms.locfileid: "58392952"
 ## <a name="messages-about-the-configuration-file"></a>Сообщения о файле конфигурации  
  Параметры службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] хранятся в XML-файле, который можно изменять. Дополнительные сведения см. в разделе [Настройка служб Integration Services (службы SSIS)](../configuring-the-integration-services-service-ssis-service.md).  
   
-|Идентификатор события|Символическое имя|Текста|Примечания|  
+|Идентификатор события|Символическое имя|Text|Примечания|  
 |--------------|-------------------|----------|-----------|  
 |274|DTS_MSG_SERVER_MISSING_CONFIG_REG|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] : %nпараметр реестра, определяющий файл конфигурации, не существует. %nпопытка загрузки файла конфигурации по умолчанию.|Не существует записи реестра, содержащей путь к файлу конфигурации, или этот путь пустой.|  
 |272|DTS_MSG_SERVER_MISSING_CONFIG|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] не существует.%nПроизводится загрузка с установками по умолчанию.|В заданном расположении отсутствует файл конфигурации.|  
@@ -50,7 +50,7 @@ ms.locfileid: "58392952"
   
 ## <a name="other-messages"></a>Другие сообщения  
   
-|Идентификатор события|Символическое имя|Текста|Примечания|  
+|Идентификатор события|Символическое имя|Text|Примечания|  
 |--------------|-------------------|----------|-----------|  
 |336|DTS_MSG_SERVER_STOPPING_PACKAGE|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] : остановка выполняющегося пакета.%nИдентификатор экземпляра пакета: %1%nИдентификатор пакета: %2%nИмя пакета: %3%nОписание пакета: %4%nПакет запущен: %5.|Служба пытается остановить выполнение пакета. В среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]можно вести наблюдение и останавливать выполнение пакетов. Сведения об управлении пакетами в среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] см. в разделе [Управление пакетами (службы SSIS)](package-management-ssis-service.md).|  
   

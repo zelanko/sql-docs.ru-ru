@@ -1,5 +1,5 @@
 ---
-title: Приложение г. Типы данных | Документация Майкрософт
+title: Приложение Г. Типы данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,13 +17,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 75ff7e83aa87bca9f33a3a8f44447af2eb60c581
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504016"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63026773"
 ---
-# <a name="appendix-d-data-types"></a>Приложение г. Типы данных
+# <a name="appendix-d-data-types"></a>Приложение Г. Типы данных
 ODBC определяет два набора типов данных: Типы данных SQL и типы данных C. Типы данных SQL указания типа данных данные, хранящиеся в источнике данных. Типы данных C указания типа данных данные, хранящиеся в буферы приложения.  
   
  Типы данных SQL определяются каждой СУБД в соответствии со стандартом SQL-92. Для каждого типа данных SQL, определенных в стандарте SQL-92, ODBC определяет идентификатор типа, который является **#define** значение, которое передается в качестве аргумента в функции ODBC или возвращаются в метаданных результирующего набора. Только SQL-92, типы данных, не поддерживаются в ODBC бит (ODBC SQL_BIT типа имеет разные характеристики), BIT_VARYING, TIME_WITH_TIMEZONE, TIMESTAMP_WITH_TIMEZONE и NATIONAL_CHARACTER. Драйверы отвечают за сопоставление типов данных SQL зависящие от источника данных идентификаторы типа данных ODBC SQL и идентификаторы типа данных для драйвера SQL. В поле SQL_DESC_CONCISE_TYPE дескриптор реализации указывается тип данных SQL.  

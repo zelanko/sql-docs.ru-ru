@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c85692c3ae50df88c59d2622fc1ca06925413ba2
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59940870"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185582"
 ---
 # <a name="collect-small-slices-on-a-pie-chart-report-builder-and-ssrs"></a>Сбор мелких срезов на круговой диаграмме (построитель отчетов и службы SSRS)
   Если круговая диаграмма содержит слишком много данных, она выглядит загроможденной. Чтобы исправить это, можно отобразить на круговой диаграмме все данные, находящиеся в пределах определенного значения, одним срезом.  

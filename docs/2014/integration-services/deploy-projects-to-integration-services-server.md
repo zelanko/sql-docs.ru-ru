@@ -12,11 +12,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 76c3c915224af50fce1265f733082054e0eeaa98
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386632"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62898882"
 ---
 # <a name="deploy-projects-to-integration-services-server"></a>Deploy Projects to Integration Services Server
   В текущей версии служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]вы можете развертывать проекты на сервере служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Сервер служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] позволяет управлять пакетами, выполнять пакеты и настраивать значения времени выполнения для пакетов с помощью сред.  
@@ -30,7 +30,7 @@ ms.locfileid: "58386632"
   
 1.  Создайте каталог SSISDB, если он еще не создан. Дополнительные сведения см. в разделе [Создание каталога служб SSIS](catalog/ssis-catalog.md).  
   
-2.  **Мастер преобразования проекта служб Integration Services** преобразует проект в модель развертывания проекта. Дополнительные сведения см. в инструкциях ниже. [Преобразование проекта в модель развертывания проекта](#convert)  
+2.  **Мастер преобразования проекта служб Integration Services** преобразует проект в модель развертывания проекта. Дополнительные сведения см. в инструкциях ниже: [Преобразование проекта в модель развертывания проекта](#convert)  
   
     -   При создании проекта в службах [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)]по умолчанию проект использует модель развертывания проекта.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "58386632"
   
      Дополнительные сведения об обновлении пакетов см. в разделах [Обновление пакетов служб Integration Services](install-windows/upgrade-integration-services-packages.md) и [Обновление пакетов служб Integration Services с помощью мастера обновления пакетов служб SSIS](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md).  
   
-3.  Разверните проект на сервере служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Дополнительные сведения см. в инструкциях ниже. [Развертывание проекта на сервере служб Integration Services](#deploy)  
+3.  Разверните проект на сервере служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Дополнительные сведения см. в инструкциях ниже: [Развертывание проекта на сервере служб Integration Services](#deploy)  
   
 4.  (Необязательно.) Создайте среду для развернутого проекта. Дополнительные сведения см. в статье [Создание и сопоставление серверной среды](../../2014/integration-services/create-and-map-a-server-environment.md).  
   

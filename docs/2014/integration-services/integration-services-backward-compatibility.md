@@ -18,11 +18,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 262a6404ced039e629aa7e507c211949dab7bad2
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391282"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62892300"
 ---
 # <a name="integration-services-backward-compatibility"></a>Обратная совместимость служб Reporting Services
   В этом разделе описаны различия между разными версиями служб [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Здесь рассмотрены функции, которые больше не доступны или запланированы к удалению в следующем выпуске. Кроме того, описываются внесенные в продукт изменения, которые могут вызвать изменения в поведении или привести к неработоспособности существующих приложений, использующих функции служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c522a8d278080d9249761309d29f465befe217d8
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255059"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184784"
 ---
 # <a name="xslt-transformations"></a>Преобразования XSLT
 XSLT могут применяться в созданный XML-документ для преобразования его в другой формат. Общие сведения о формате XML в ADO помогает в разработке XSLT-шаблоны, которые можно преобразовать в более удобные форму.  

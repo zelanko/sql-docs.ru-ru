@@ -14,11 +14,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1780f4236c70d8685c1ce2050a08bc305a3f0853
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103234"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62919669"
 ---
 # <a name="disallowed-types-and-members-in-systemdll"></a>Запрещенные типы и элементы в System.dll
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] общего программирования интеграции (со средой CLR) языка не допускает использования типа или члена, имеющего `HostProtectionAttribute` , указывающий `System.Security.Permissions.HostProtectionResource` перечисление со значением `ExternalProcessMgmt`, `ExternalThreading`, `MayLeakOnAbort`, `SecurityInfrastructure`, `SelfAffectingProcessMgmnt`, `SelfAffectingThreading`, **SharedState**, `Synchronization`, или `UI`. В следующей таблице приведены элементы и типы сборки System.dll, значения атрибута защиты сервера которых запрещены.  

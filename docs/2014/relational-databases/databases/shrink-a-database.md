@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 21f58cd6991b760edeefb81c37e02c617f8e09cd
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52784031"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62917011"
 ---
 # <a name="shrink-a-database"></a>Сжатие базы данных
   В этом подразделе содержатся инструкции по сжатию базы данных при помощи обозревателя объектов [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -100,7 +100,7 @@ ms.locfileid: "52784031"
   
  [!code-sql[DBCC#DBCC_SHRINKDB1](../../snippets/tsql/SQL14/tsql/dbcc/transact-sql/dbcc_other.sql#dbcc_shrinkdb1)]  
   
-##  <a name="FollowUp"></a> Дальнейшие действия: После сжатия базы данных  
+##  <a name="FollowUp"></a> Дальнейшие действия. После сжатия базы данных  
  Данные, перемещаемые в процессе сжатия файла, могут быть разбросаны по любым доступным местам в файле. Это вызывает фрагментацию индекса и может увеличить время выполнения запросов, выполняющих поиск в диапазоне индекса. Чтобы устранить фрагментацию, предусмотрите возможность перестроения индексов файла после сжатия.  
   
 ## <a name="see-also"></a>См. также  

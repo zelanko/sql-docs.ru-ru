@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 001238b4e5d47b22ca991efcd8b4ee28971d7af7
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213093"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62982308"
 ---
 # <a name="sqlfetch-function"></a>Функция SQLFetch
 **Соответствие стандартам**  
@@ -47,7 +47,7 @@ SQLRETURN SQLFetch(
  [Вход] Дескриптор инструкции.  
   
 ## <a name="returns"></a>Возвращает  
- Значение SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_STILL_EXECUTING, значение SQL_ERROR или SQL_INVALID_HANDLE.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_STILL_EXECUTING, SQL_ERROR, or SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Диагностика  
  Когда **SQLFetch** возвращает значение SQL_ERROR или SQL_SUCCESS_WITH_INFO, соответствующее значение SQLSTATE можно получить, вызвав [функция SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md) с *HandleType*значение SQL_HANDLE_STMT и *обрабатывать* из *StatementHandle*. В следующей таблице перечислены значения SQLSTATE, обычно возвращаемые при помощи **SQLFetch** и объясняется каждый из них в контексте этой функции; описания SQLSTATE, возвращаемых диспетчером драйверов предшествует обозначение «(DM)». Возвращается связанный с каждого значения SQLSTATE значение SQL_ERROR, если не указано иное. При возникновении ошибки по одному столбцу, [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) может вызываться с *DiagIdentifier* из SQL_DIAG_COLUMN_NUMBER, чтобы определить столбец, произошла ошибка; в противном и  **SQLGetDiagField** может вызываться с *DiagIdentifier* из SQL_DIAG_ROW_NUMBER для определения строки, содержащий этот столбец.  
@@ -183,8 +183,8 @@ SQLRETURN SQLFetch(
 |SQL_ROW_SUCCESS_WITH_INFO|Строка была успешно получен и не был изменен с момента последней загрузки из этого результирующего набора. Тем не менее предупреждение было возвращено о строке.|  
 |SQL_ROW_ERROR|Произошла ошибка при извлечении строки.|  
 |SQL_ROW_UPDATED [1], [2] и [3]|Строка была успешно сделана выборка и был изменен с момента последней загрузки из этого результирующего набора. Если строки заново извлечь из этого результирующего набора или обновляется в **SQLSetPos**, состояние изменяется на новое состояние строки.|  
-|ЗНАЧЕНИЕ SQL_ROW_DELETED [3]|Строка была удалена с момента последней загрузки из этого результирующего набора.|  
-|SQL_ROW_ADDED [4]|Строка была вставлена **SQLBulkOperations**. Если строки заново извлечь из этого результирующего набора или обновляется в **SQLSetPos**, его состояние будет SQL_ROW_SUCCESS.|  
+|SQL_ROW_DELETED[3]|Строка была удалена с момента последней загрузки из этого результирующего набора.|  
+|SQL_ROW_ADDED[4]|Строка была вставлена **SQLBulkOperations**. Если строки заново извлечь из этого результирующего набора или обновляется в **SQLSetPos**, его состояние будет SQL_ROW_SUCCESS.|  
 |SQL_ROW_NOROW|Набор строк overlapped конец результирующего набора, и строка не был возвращен, что, предоставивших к данному элементу массив статусов строк.|  
   
  [1] для ключей, смешанных и динамических курсоров, если обновляется значение ключа, строка данных считается была удалена, и добавлена новая строка.  

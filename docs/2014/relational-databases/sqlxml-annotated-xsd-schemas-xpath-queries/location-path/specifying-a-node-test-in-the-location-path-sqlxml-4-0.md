@@ -16,11 +16,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 7450810f45d81dd1530699677a80a052840ed867
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806006"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127592"
 ---
 # <a name="specifying-a-node-test-in-the-location-path-sqlxml-40"></a>Задание проверки узла в пути доступа (SQLXML 4.0)
   Проверка узла задает тип узла, выбранного на шаге доступа. Каждая ось (`child`, `parent`, `attribute` или `self`) имеет тип узла участника. Для `attribute` является основным типом узла оси,  **\<атрибут >**. Для `parent`, `child`, и `self` является основным типом узла оси,  **\<элемент >**.  

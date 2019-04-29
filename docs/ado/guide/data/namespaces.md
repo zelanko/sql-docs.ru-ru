@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e352a6c4d548b382d700c54cf0167fadcec8bf7b
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254550"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63126881"
 ---
 # <a name="namespaces"></a>Пространства имен
 Формат сохраняемости XML в ADO использует следующие четыре пространства имен.  

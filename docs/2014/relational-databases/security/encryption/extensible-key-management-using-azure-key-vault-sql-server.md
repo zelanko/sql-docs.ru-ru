@@ -17,11 +17,11 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 ms.openlocfilehash: 852f65073a55cbe6e8d29b1dc17981cb5356d95f
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59242212"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011525"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Расширенное управление ключами с помощью хранилища ключей Azure (SQL Server)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Соединитель для [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Azure Key Vault позволяет [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] шифрования для использования службы Azure Key Vault в качестве [расширенного управления ключами &#40;расширенного управления Ключами&#41; ](extensible-key-management-ekm.md) поставщика для защиты его ключи шифрования.  

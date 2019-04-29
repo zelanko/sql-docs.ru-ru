@@ -19,11 +19,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fbd39569da4623eda3bb3906fd81bd5da69ab831
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58382072"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62902452"
 ---
 # <a name="integration-services-data-types"></a>Типы данных служб Integration Services
   Когда данные входят в поток данных в пакете, источник, извлекающий данные, преобразовывает их в тип данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Числовым данным назначается числовой тип данных, строковым — символьный тип данных, а датам — тип даты. Другим данным, таким как идентификатор GUID и BLOB (Binary Large Object Blocks), также назначаются соответствующие типы данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Если данные имеют тип, не преобразуемый в тип данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , возникает ошибка.  
@@ -227,7 +227,7 @@ ms.locfileid: "58382072"
 |DT_DBDATE|[date &#40;Transact-SQL&#41;](/sql/t-sql/data-types/date-transact-sql)|[date &#40;Transact-SQL&#41;](/sql/t-sql/data-types/date-transact-sql)||date|date|date|  
 |DT_DBTIME||||TIMESTAMP|time|time|  
 |DT_DBTIME2|[time &#40;Transact-SQL&#41;](/sql/t-sql/data-types/time-transact-sql)(p)|[time &#40;Transact-SQL&#41;](/sql/t-sql/data-types/time-transact-sql) (p)|||||  
-|DT_DBTIMESTAMP|[datetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime-transact-sql), [smalldatetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/smalldatetime-transact-sql)|[datetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime-transact-sql), [smalldatetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/smalldatetime-transact-sql)|DateTime|TIMESTAMP, DATE, INTERVAL|TIME, TIMESTAMP, DATE|TIME, TIMESTAMP, DATE|  
+|DT_DBTIMESTAMP|[datetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime-transact-sql), [smalldatetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/smalldatetime-transact-sql)|[datetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime-transact-sql), [smalldatetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/smalldatetime-transact-sql)|Datetime|TIMESTAMP, DATE, INTERVAL|TIME, TIMESTAMP, DATE|TIME, TIMESTAMP, DATE|  
 |DT_DBTIMESTAMP2|[datetime2 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime2-transact-sql)|[datetime2 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime2-transact-sql)||TIMESTAMP|TIMESTAMP|TIMESTAMP|  
 |DT_DBTIMESTAMPOFFSET|[datetimeoffset &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetimeoffset-transact-sql)(p)|[datetimeoffset &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetimeoffset-transact-sql) (p)||timestampoffset|timestamp,<br /><br /> varchar|timestamp,<br /><br /> varchar|  
 |DT_DECIMAL|||||||  
@@ -238,10 +238,10 @@ ms.locfileid: "58382072"
 |DT_I4|ssNoversion|ssNoversion|Long||INTEGER|INTEGER|  
 |DT_I8|BIGINT|BIGINT|||bigint|bigint|  
 |DT_NUMERIC|decimal, numeric|decimal, numeric|Decimal|NUMBER, INT|decimal, numeric|decimal, numeric|  
-|DT_R4|REAL|REAL|Один||real|real|  
+|DT_R4|real|real|Один||real|real|  
 |DT_R8|FLOAT|FLOAT|Double|FLOAT, REAL|FLOAT, DOUBLE|FLOAT, DOUBLE|  
 |DT_STR|char, varchar||varchar||char, varchar|char, varchar|  
-|DT_UI1|TINYINT|TINYINT|Byte||||  
+|DT_UI1|tinyint|tinyint|Byte||||  
 |DT_UI2|||||||  
 |DT_UI4|||||||  
 |DT_UI8|||||||  

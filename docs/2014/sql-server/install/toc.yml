@@ -27,17 +27,17 @@
 - name: Инструкции по работе с помощником по обновлению
   href: upgrade-advisor-how-to-topics.md
   items:
-    - name: Установка помощника по обновлению
+    - name: Руководство. Установка помощника по обновлению
       href: how-to-install-upgrade-advisor.md
-    - name: Запуск помощника по обновлению
+    - name: Руководство. Запуск помощника по обновлению
       href: how-to-launch-upgrade-advisor.md
-    - name: Как запустить мастер анализа помощника по обновлению
+    - name: Руководство. Запуск мастера анализа помощника по обновлению
       href: how-to-run-the-upgrade-advisor-analysis-wizard.md
-    - name: Просмотр отчета помощника по обновлению
+    - name: Руководство. Просмотр отчета помощника по обновлению
       href: how-to-view-an-upgrade-advisor-report.md
-    - name: Фильтрация отчетов
+    - name: Руководство. Фильтрация отчетов
       href: how-to-filter-reports.md
-    - name: Экспорт отчетов
+    - name: Руководство. Export Reports
       href: how-to-export-reports.md
 - name: Справочник по пользовательскому интерфейсу
   href: upgrade-advisor-user-interface-reference.md
@@ -424,7 +424,7 @@
   items:
     - name: Установка обновлений из командной строки
       href: ../../database-engine/install-windows/installing-updates-from-the-command-prompt.md
-    - name: Инструкции. Проверка успешности установки обновления SQL Server
+    - name: Руководство. Проверка успешности установки обновления SQL Server
       href: how-to-validate-successful-installation-of-a-sql-server-update.md
     - name: Общие сведения об обслуживании установки SQL Server
       href: overview-of-sql-server-servicing-installation.md

@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5c95c4e28a5f32131307daeaa61e214af887b577
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848142"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63069706"
 ---
 # <a name="odbc-core-subkey"></a>Подраздел Core ODBC
 Значение в разделе подраздел ODBC Core предоставляет счетчик использования для основных компонентов (диспетчер драйверов, библиотека курсоров, библиотека DLL установщика и т. д.). В следующей таблице показан формат данного значения.  
   
-|Имя|Тип данных|Данные |  
+|Имя|Тип данных|Данные|  
 |----------|---------------|----------|  
 |UsageCount|REG_DWORD|*count*|  
   

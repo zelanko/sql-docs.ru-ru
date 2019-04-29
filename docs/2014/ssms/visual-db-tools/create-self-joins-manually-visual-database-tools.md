@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dd8e26099ec7152aac08a11b6f7e38550834d248
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52769076"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184236"
 ---
 # <a name="create-self-joins-manually-visual-database-tools"></a>Создание самосоединения вручную (визуальные инструменты для баз данных)
   Самосоединение таблицы может быть создано даже в случае отсутствия рефлексивной связи таблица — база данных. Например, самосоединение может быть использовано для извлечения сведений о парах авторов, живущих в одном городе.  

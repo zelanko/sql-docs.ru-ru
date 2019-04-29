@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a2f439c1d3350a30f1bdd8fe8c3fe917686d2401
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52768876"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63125967"
 ---
 # <a name="discard-changes-made-to-diagrams-visual-database-tools"></a>Отмена изменений, внесенных в диаграммы (визуальные инструменты для баз данных)
   Пользователь имеет возможность отменить изменения, внесенные в диаграмму базы данных, если не хочет сохранять их в ней.  

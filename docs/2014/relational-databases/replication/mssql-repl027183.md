@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 87adf79d9420f70e132fd9a6c41a9ddacf298fa7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52776976"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63022712"
 ---
 # <a name="mssqlrepl027183"></a>MSSQL_REPL027183
     
@@ -58,7 +58,7 @@ ms.locfileid: "52776976"
   
 -   Укажите наименьшее возможное значение срока хранения данной публикации, потому что репликация не может выполнять очистку метаданных в базах данных публикации и подписок, пока не истечет срок хранения. Дополнительные сведения см. в разделе [Subscription Expiration and Deactivation](subscription-expiration-and-deactivation.md).  
   
--   В процессе обслуживания репликации слиянием иногда проверяйте увеличение размера системных таблиц, связанных с репликацией слиянием. **MSmerge_contents**, **MSmerge_genhistory**, и **MSmerge_tombstone**, **MSmerge_current_partition_mappings**, и **MSmerge_ past_partition_mappings**. Время от времени проводите повторную индексацию этих таблиц. Дополнительные сведения см. в статье [Реорганизация и перестроение индексов](../indexes/indexes.md).  
+-   В процессе обслуживания репликации слиянием иногда проверяйте увеличение размера системных таблиц, связанных с репликацией слиянием: **MSmerge_contents**, **MSmerge_genhistory**, **MSmerge_tombstone**, **MSmerge_current_partition_mappings** и **MSmerge_past_partition_mappings**. Время от времени проводите повторную индексацию этих таблиц. Дополнительные сведения см. в статье [Реорганизация и перестроение индексов](../indexes/indexes.md).  
   
 -   Убедитесь в том, что столбцы, используемые для фильтрации, надлежащим образом проиндексированы, и при необходимости перестройте такие индексы заново. Дополнительные сведения см. в статье [Реорганизация и перестроение индексов](../indexes/indexes.md).  
   

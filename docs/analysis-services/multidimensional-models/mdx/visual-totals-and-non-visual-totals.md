@@ -1,5 +1,5 @@
 ---
-title: Визуальные и невизуальные итоги | Документы Microsoft
+title: Визуальные и невизуальные итоги | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 90925c99f281d128ff197fb7b0ef3b088faf5b7d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026751"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62984451"
 ---
 # <a name="visual-totals-and-non-visual-totals"></a>Визуальные и невизуальные итоги
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -89,7 +89,7 @@ ms.locfileid: "34026751"
   
 |||||  
 |-|-|-|-|  
-||All Products|Accessories|Clothing|  
+||Все продукты|Accessories|Clothing|  
 |All Resellers|$ 73 694 430,80|$ 506 172,45|$ 1 524 906,93|  
 |Value Added Reseller|$ 34 967 517,33|$ 175 002,81|$ 592 385,71|  
 |Warehouse|$ 38 726 913,48|$ 331 169,64|$ 932 521,23|  
@@ -97,12 +97,12 @@ ms.locfileid: "34026751"
  При сравнении с предыдущими результатами можно заметить, что в строке [All Resellers] складываются отображаемые значения [Value Added Reseller] и [Warehouse], однако столбец [All Products] отображает общее значение для всех продуктов, включая те, которые не отображаются.  
   
 ## <a name="see-also"></a>См. также  
- [Ключевые понятия многомерных Выражений & #40; Службы Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
- [Автоматическая проверка существования](../../../analysis-services/multidimensional-models/mdx/autoexists.md)   
- [Работа с членами, кортежей и наборов & #40; Многомерные Выражения & #41;](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)   
- [Основные принципы запросов многомерных Выражений & #40; Службы Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
- [Базовый запрос многомерных Выражений & #40; Многомерные Выражения & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md)   
- [Ограничение запроса с & #40; запросов и осей среза Многомерные Выражения & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-restricting-the-query.md)   
- [Определение контекста куба в запросе & #40; Многомерные Выражения & #41;](../../../analysis-services/multidimensional-models/mdx/establishing-cube-context-in-a-query-mdx.md)  
+ [Основные понятия многомерных выражений (службы Analysis Services)](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+ [Autoexists](../../../analysis-services/multidimensional-models/mdx/autoexists.md)   
+ [Работа с элементами, кортежами и наборами (многомерные выражения)](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)   
+ [Основные принципы запросов многомерных выражений (службы Analysis Services)](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
+ [Базовый запрос многомерных выражений (многомерные выражения)](../../../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md)   
+ [Ограничение запроса с помощью осей запроса и среза (многомерные выражения)](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-restricting-the-query.md)   
+ [Определение контекста куба в запросе (многомерные выражения)](../../../analysis-services/multidimensional-models/mdx/establishing-cube-context-in-a-query-mdx.md)  
   
   

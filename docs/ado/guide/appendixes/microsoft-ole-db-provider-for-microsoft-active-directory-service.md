@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 25a076118df9f85ff2449c35dc0273db8a499fac
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538159"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62855183"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Поставщик Microsoft OLE DB для службы Microsoft Active Directory
 Поставщик интерфейсы служб Active Directory (ADSI) разрешает ADO для подключения к службам разнородных directory через ADSI. Это дает приложения ADO доступ только для чтения в каталоге служб Microsoft Windows NT 4.0 и Microsoft Windows 2000, а также все службы, совместимой с LDAP directory и служб каталога Novell. Сам интерфейс ADSI основан на модели поставщика, таким образом, если имеется новый предоставить доступ поставщика в другой каталог, приложения ADO будет получить к ним доступ без проблем. Поставщик ADSI является свободнопотоковым и Юникод.  

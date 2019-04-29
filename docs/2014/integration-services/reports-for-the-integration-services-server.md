@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6be914812be9d58fb59316b1b4793eb5d9e07043
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58394092"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62889811"
 ---
 # <a name="reports-for-the-integration-services-server"></a>Отчеты для сервера служб Integration Services
   Для текущего выпуска служб [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] предусмотрены стандартные отчеты, помогающие отслеживать проекты служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , развернутые на сервере [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Эти отчеты позволяют просмотреть состояние пакета и журнал, а также, если необходимо, определить причину сбоев при выполнении пакетов.  

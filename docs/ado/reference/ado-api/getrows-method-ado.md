@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 65d346cb9394613a92f95f7466e429b10c54b1a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616971"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63027951"
 ---
 # <a name="getrows-method-ado"></a>Метод GetRows (ADO)
 Извлекает несколько записей для [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объект в массив.  
@@ -42,7 +42,7 @@ array = recordset.GetRows(Rows, Start, Fields )
  Необязательный параметр. Объект [GetRowsOptionEnum](../../../ado/reference/ado-api/getrowsoptionenum.md) значение, указывающее количество извлекаемых записей. По умолчанию используется **adGetRowsRest**.  
   
  *Запуск*  
- Необязательный параметр. Объект **строка** значение или **Variant** , результатом которого является закладка для записи из которой **GetRows** должна начаться операция. Можно также использовать [BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md) значение.  
+ Необязательный. Объект **строка** значение или **Variant** , результатом которого является закладка для записи из которой **GetRows** должна начаться операция. Можно также использовать [BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md) значение.  
   
  *Fields*  
  Необязательный параметр. Объект **Variant** , представляющий одно поле имя или порядковый номер или массив имен полей или номера порядковый номер. ADO возвращает только данные в этих полях.  

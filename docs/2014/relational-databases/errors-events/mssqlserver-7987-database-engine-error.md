@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c0541f066c653a233508a48d7b8f02504d36f25b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130510"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62913281"
 ---
 # <a name="mssqlserver7987"></a>MSSQLSERVER_7987
     
@@ -30,7 +30,7 @@ ms.locfileid: "48130510"
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
 |Символическое имя|DBCC2_PRE_CHECKS_CHAIN_LINKAGE_MISMATCH|  
-|Текст сообщения|Предварительная проверка системных таблиц: идентификатор объекта O_ID содержит ошибку в цепочке ссылок. P_ID1->next = P_ID2, но P_ID2->prev = P_ID3. Инструкция проверки прервана из-за непоправимой ошибки.|  
+|Текст сообщения|Предварительная проверка системных таблиц: Идентификатор объекта O_ID содержит ошибку в цепочке. P_ID1->next = P_ID2, но P_ID2->prev = P_ID3. Инструкция проверки прервана из-за непоправимой ошибки.|  
   
 ## <a name="explanation"></a>Объяснение  
  Первый этап работы DBCC CHECKDB заключается в осуществлении примитивных проверок страниц данных важных системных таблиц. Найденные на этом этапе ошибки не подлежат исправлению, поэтому при их обнаружении DBCC CHECKDB немедленно прекращает свою работу.  

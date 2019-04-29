@@ -13,14 +13,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d4e583b08cf0ba55268c4acb9e19722d3a693d50
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187784"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62987319"
 ---
 # <a name="icommand-ole-db"></a>ICommand (OLE DB)
-  В этом разделе обсуждаются особенности OLE DB, касающиеся собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  В этом разделе обсуждаются особенности OLE DB, касающиеся собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="icommandexecute"></a>ICommand::Execute  
  Вставка данных, превышающих размер столбца, как правило, приводит к ошибке. Однако в некоторых ситуациях происходит возврат значения S_OK, хотя параметру *dwStatus* присваивается значение DBSTATUS_S_TRUNCATED. Обычно такая ситуация возникает при вставке данных с параметрами, когда размера столбца не хватает для размещения данных и не был вызван метод `ICommandWithParameters::SetParameterInfo`.  

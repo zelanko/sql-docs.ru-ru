@@ -1,5 +1,5 @@
 ---
-title: С помощью куба и вложенного куба выражений | Документы Microsoft
+title: С помощью куба и вложенного куба выражений | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f13d92c114783646bbeab9451c3d212ff01b8f8c
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743383"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63125430"
 ---
 # <a name="using-cube-and-subcube-expressions"></a>Выражения куба и вложенного куба
 
@@ -24,7 +24,7 @@ ms.locfileid: "34743383"
 ## <a name="cube-expressions"></a>Выражения куба  
  Выражение куба содержит идентификатор куба или ключевое слово CURRENTCUBE и поэтому может быть только простым выражением. Ключевое слово CURRENTCUBE позволяет ссылаться на контекст текущего куба, не указывая его идентификатор в явном виде.  
   
- Идентификатор куба представлен как *Cube_Name* в форме БЭКУСА нотации описаниях инструкций многомерных Выражений.  
+ Идентификатор куба представлен как *Cube_Name* в описаниях инструкций многомерных Выражений BNF нотации.  
   
  Выражения куба могут встречаться в нескольких местах. В инструкции SELECT многомерных выражений они указывают куб, из которого должны быть получены данные. В следующем примере запроса выражение [Adventure Works] ссылается на куб с этим именем:  
   
@@ -70,10 +70,10 @@ ms.locfileid: "34743383"
  Идентификатор вложенного куба представлен как *Subcube_Name*. в описаниях инструкций многомерных выражений в форме Бэкуса-Наура.  
   
 ## <a name="see-also"></a>См. также  
- [Базовый запрос многомерных Выражений &#40;многомерных Выражений&#41;](../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md)   
+ [Базовый запрос многомерных выражений (многомерные выражения)](../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md)   
  [Построение вложенных кубов в многомерных Выражениях &#40;многомерных Выражений&#41;](../analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx.md)   
  [Инструкция CREATE SUBCUBE &#40;многомерных Выражений&#41;](../mdx/mdx-data-definition-create-subcube.md)   
  [Выражения &#40;многомерных Выражений&#41;](../mdx/expressions-mdx.md)   
- [Инструкция SCOPE &#40;многомерных Выражений&#41;](../mdx/mdx-scripting-scope.md)  
+ [Инструкция SCOPE (многомерные выражения)](../mdx/mdx-scripting-scope.md)  
   
   

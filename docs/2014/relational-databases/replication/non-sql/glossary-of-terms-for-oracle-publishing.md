@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fa1959a4f0fa6a2afa2fdf585d0c82d1238a019b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781126"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63022396"
 ---
 # <a name="glossary-of-terms-for-oracle-publishing"></a>Глоссарий терминов публикации Oracle
   Для администрирования и настройки конфигурации публикации Oracle необходимо ознакомиться со следующей терминологией Oracle. Полный список терминов Oracle см. в электронной документации Oracle.  

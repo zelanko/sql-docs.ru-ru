@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e998245ecb72f889af3fb2c699d6f1e961d8874e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813646"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63012451"
 ---
 # <a name="audit-server-object-management-event-class"></a>Audit Server Object Management, класс событий
   Класс событий **Audit Server Object Management** возникает в случае использования инструкций CREATE, ALTER или DROP для объектов сервера.  

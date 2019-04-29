@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 956316eb83291f71932c0ee70460274090b7069d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193374"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842453"
 ---
 # <a name="trace-file-properties-events-selection-tab"></a>Свойства файла трассировки (вкладка «Выбор событий»)
   Вкладка **Выбор событий** диалогового окна **Свойства шаблона файла трассировки** позволяет просматривать столбец свойств трассировки и удалять из трассировки столбцы данных.  
@@ -49,7 +49,7 @@ ms.locfileid: "48193374"
  После выбора **событий** и столбцов данных для трассировки нажмите кнопку **Упорядочить столбцы**, чтобы принудительно переупорядочить столбцы в окне результатов трассировки.  
   
 ## <a name="see-also"></a>См. также  
- [Указать столбцы событий и данных для файла трассировки &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)   
+ [Указание столбцов событий и данных для файла трассировки (приложение SQL Server Profiler)](../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)   
  [Фильтрация событий в трассировке &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md)   
  [Просмотр сведений фильтров (приложение SQL Server Profiler)](../tools/sql-server-profiler/view-filter-information-sql-server-profiler.md)   
  [Изменение фильтра &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/modify-a-filter-sql-server-profiler.md)   
