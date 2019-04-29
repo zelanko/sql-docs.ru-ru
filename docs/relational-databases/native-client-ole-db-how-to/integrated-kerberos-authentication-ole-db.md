@@ -13,17 +13,17 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: cdc506836eb1dea86c12225286a62802f586c21f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47665592"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63016260"
 ---
 # <a name="integrated-kerberos-authentication-ole-db"></a>Интеграция проверки подлинности Kerberos (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Этот образец показывает, как выполнить взаимную проверку подлинности Kerberos с использованием OLE DB в собственном клиенте [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Данный образец работает с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] или более поздней версией.  
+  Этот образец показывает, как выполнить взаимную проверку подлинности Kerberos с использованием OLE DB в собственном клиенте [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Данный образец работает с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] или более поздней версией.  
   
  Дополнительные сведения об именах субъектов-служб и проверке подлинности Kerberos см. в статье [Поддержка имени участника-службы &#40;SPN&#41; в клиентских соединениях](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md).  
   

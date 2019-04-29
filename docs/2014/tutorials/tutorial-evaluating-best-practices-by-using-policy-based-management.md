@@ -20,13 +20,13 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 72d4d0863c516fed3a318aca45e8ec478af46a58
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013155"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62956171"
 ---
-# <a name="tutorial-evaluating-best-practices-by-using-policy-based-management"></a>Учебник. выполнение политик рекомендаций с помощью управления на основе политик
+# <a name="tutorial-evaluating-best-practices-by-using-policy-based-management"></a>Учебник. Выполнение политик рекомендаций с помощью управления на основе политик
   Добро пожаловать в учебник по выполнению рекомендаций с помощью управления на основе политик. Этот учебник предназначен для пользователей, имеющих представление о [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], но незнакомых с управлением на основе политик. Управление на основе политик — это система определения политик, которые можно использовать для обеспечения принудительного выполнения стандартов администрирования. Управление на основе политик подразумевает использование набора рекомендуемых политик, которые могут быть использованы для анализа экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и дают возможность определить, соответствует ли он советам и рекомендациям.  
   
 ## <a name="what-you-will-learn"></a>Обзор учебника  

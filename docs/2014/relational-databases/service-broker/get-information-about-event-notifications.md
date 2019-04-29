@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9786faaf44724b1a2452bd5304b63deb2c9ea54e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191484"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63015316"
 ---
 # <a name="get-information-about-event-notifications"></a>Получение сведений об уведомлениях о событиях
   Следующие представления каталога доступны для запроса метаданных об уведомлениях о событиях.  
@@ -29,14 +29,14 @@ ms.locfileid: "48191484"
 -   [sys.event_notifications (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-event-notifications-transact-sql)  
   
 > [!NOTE]  
->  Необходимые минимальные требования для просмотра метаданных о любом уведомлении в **sys.event_notifications** , созданном на уровне базы данных: иметь разрешение CONTROL, ALTER, TAKE OWNERSHIP или VIEW DEFINITION для базы данных, быть владельцем уведомления о событии или иметь разрешение ALTER ANY DATABASE EVENT NOTIFICATION. Необходимые минимальные требования для уведомлений о событиях, созданных в определенной очереди: иметь разрешение CONTROL, ALTER, TAKE OWNERSHIP или VIEW DEFINITION для объекта, быть владельцем уведомления о событии или иметь разрешение ALTER ANY DATABASE EVENT NOTIFICATION.  
+>  Для просмотра метаданных любого уведомления о событии в **sys.event_notifications** созданных на базе уровне, как минимум должны быть следующие компоненты: Элемент УПРАВЛЕНИЯ, ALTER, TAKE OWNERSHIP или VIEW DEFINITION для базы данных, быть владельцем уведомления о событии или иметь разрешение ALTER ANY DATABASE EVENT NOTIFICATION. Для уведомлений о событиях, созданных в определенной очереди по меньшей мере необходимо иметь следующее: Элемент УПРАВЛЕНИЯ, ALTER, TAKE OWNERSHIP или VIEW DEFINITION на объект, быть владельцем уведомления о событии или иметь разрешение ALTER ANY DATABASE EVENT NOTIFICATION.  
   
  **Получение сведений об уведомлениях о событиях серверного уровня**  
   
 -   [sys.server_event_notifications (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql)  
   
 > [!NOTE]  
->  Необходимые минимальные требования для просмотра метаданных любого уведомления о событии в представлении каталога **sys.server_event_notifications**: иметь разрешение CONTROL или VIEW ANY DEFINITION для сервера, быть именем входа или владельцем уведомления о событии или иметь разрешение ALTER ANY EVENT NOTIFICATION.  
+>  Как минимум необходимо иметь следующее: Элемент УПРАВЛЕНИЯ или просмотр ЛЮБОГО определения разрешений на сервере, быть именем входа или владельцем уведомления о событии или иметь разрешение ALTER ANY EVENT NOTIFICATION для просмотра метаданных любого уведомления о событии в **sys.server_event_notifications**.  
   
  **Получение сведений обо всех событиях, которые могут создать уведомления**  
   

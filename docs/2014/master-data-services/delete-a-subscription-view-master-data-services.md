@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: e01209b78acb778d39d376172192ca7ee0f1a9e7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52796822"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62924913"
 ---
 # <a name="delete-a-subscription-view-master-data-services"></a>Удаление представления подписки (службы Master Data Services)
   В службах [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]представление подписки удаляется тогда, когда в нем отпадает необходимость. При удалении представления подписки в службах [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] представление удаляется из базы данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  

@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 305f544bf34b4f5e9ab4132dc2ffb45ff89cf0df
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47774232"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013499"
 ---
 # <a name="sysdmexecconnections-transact-sql"></a>sys.dm_exec_connections (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,9 +39,9 @@ ms.locfileid: "47774232"
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |session_id|**int**|Идентифицирует сеанс, связанный с данным соединением. Допускает значение NULL.|  
-|most_recent_session_id|**int**|Представляет собой идентификатор сеанса самого последнего запроса, связанного с данным соединением. (Соединения SOAP можно повторно использовать в другом сеансе.) Допускает значение NULL.|  
+|most_recent_session_id|**int**|Представляет собой идентификатор сеанса самого последнего запроса, связанного с данным соединением. (Соединения SOAP можно использовать в другом сеансе.) Допускает значение NULL.|  
 |connect_time|**datetime**|Метка времени установления соединения. Не допускает значение NULL.|  
-|net_transport|**nvarchar(40)**|Всегда возвращает **сеанса** когда соединение имеет несколько активных результирующих наборов (MARS) включен.<br /><br /> **Примечание:** описание физического транспортного протокола, используемого данным соединением. Не допускает значение NULL.|  
+|net_transport|**nvarchar(40)**|Всегда возвращает **сеанса** когда соединение имеет несколько активных результирующих наборов (MARS) включен.<br /><br /> **Примечание.** Описание физического транспортного протокола, используемого данным соединением. Не допускает значение NULL.|  
 |protocol_type|**nvarchar(40)**|Указывает тип протокола передачи полезных данных. В настоящее время различаются протоколы TDS (TSQL) и SOAP. Допускает значение NULL.|  
 |protocol_version|**int**|Версия протокола доступа к данным, связанного с данным соединением. Допускает значение NULL.|  
 |endpoint_id|**int**|Идентификатор, описывающий тип соединения. Этот идентификатор endpoint_id может использоваться для запросов к представлению sys.endpoints. Допускает значение NULL.|  
@@ -53,7 +53,7 @@ ms.locfileid: "47774232"
 |last_read|**datetime**|Метка времени о последнем полученном пакете данных. Допускает значение NULL.|  
 |last_write|**datetime**|Метка времени о последнем отправленном пакете данных. Не допускает значения NULL.|  
 |net_packet_size|**int**|Размер сетевого пакета, используемый для передачи данных. Допускает значение NULL.|  
-|client_net_address|**varchar(48)**|Сетевой адрес удаленного клиента. Допускает значение NULL.<br /><br /> До версии 12 в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], этот столбец всегда возвращает значение NULL.|  
+|client_net_address|**varchar(48)**|Сетевой адрес удаленного клиента. Допускает значение NULL.<br /><br /> До версии 12 в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] этот столбец всегда возвращает значение NULL.|  
 |client_tcp_port|**int**|Номер порта на клиентском компьютере, который используется при осуществлении соединения. Допускает значение NULL.<br /><br /> В [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] этот столбец всегда возвращает NULL.|  
 |local_net_address|**varchar(48)**|IP-адрес сервера, с которым установлено данное соединение. Доступен только для соединений, которые в качестве транспорта данных используют протокол TCP. Допускает значение NULL.<br /><br /> В [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] этот столбец всегда возвращает NULL.|  
 |local_tcp_port|**int**|TCP-порт сервера, если соединение использует протокол TCP. Допускает значение NULL.<br /><br /> В [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] этот столбец всегда возвращает NULL.|  

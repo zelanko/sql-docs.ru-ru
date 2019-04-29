@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4aab3372068a621235da9e26461df29240928440
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633514"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184162"
 ---
 # <a name="attributes-property-example-vc"></a>Пример свойства Attributes (Visual C++)
 В этом примере показано [атрибуты](../../../ado/reference/adox-api/attributes-property-adox.md) свойство [столбец](../../../ado/reference/adox-api/column-object-adox.md). Задание значения **adColNullable** позволяет пользователю задать значение [записей](../../../ado/reference/ado-api/recordset-object-ado.md) [поле](../../../ado/reference/ado-api/field-object.md) пустую строку. В этом случае пользователь может различать записи, где данные неизвестны и записи, где данные не применяются.  

@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1e155fb51bd5f78a3c4a639e9233746131ddf6f5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719822"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63004145"
 ---
 # <a name="spsyscollectorcreatecollectionitem-transact-sql"></a>sp_syscollector_create_collection_item (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +47,10 @@ sp_syscollector_create_collection_item
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @collection_set_id =] *collection_set_id*  
+ [ @collection_set_id = ] *collection_set_id*  
  Уникальный локальный идентификатор набора элементов сбора. *collection_set_id* — **int**.  
   
- [ @collector_type_uid =] '*аргумент collector_type_uid*"  
+ [ @collector_type_uid = ] '*collector_type_uid*'  
  Идентификатор GUID, идентифицирующий тип сборщика, используемый для этого элемента *аргумент collector_type_uid* — **uniqueidentifier** без значения по умолчанию... Чтобы получить список типов сборщиков, выполните запрос системного представления syscollector_collector_types.  
   
  [ @name =] '*имя*"  

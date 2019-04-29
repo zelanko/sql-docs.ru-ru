@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 26af58e208527d155b5ddf3506be4509627c1f7e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52778456"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62918342"
 ---
 # <a name="management-data-warehouse"></a>хранилище данных управления
   Хранилище данных управления — это реляционная база данных, собираемых с сервера, который при сборе данных является целевым. Эти данные используются при подготовке отчетов для наборов сбора системных данных и могут быть использованы для создания настраиваемых отчетов.  

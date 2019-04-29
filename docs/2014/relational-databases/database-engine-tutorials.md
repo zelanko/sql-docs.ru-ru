@@ -11,11 +11,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: b1a6158dca30d6419be59cf5eb68dff9892cc2dc
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360706"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62872670"
 ---
 # <a name="database-engine-tutorials"></a>Учебники по компоненту ядра СУБД
   В этом разделе приведены учебники по [!INCLUDE[ssDECurrent](../includes/ssdecurrent-md.md)].  
@@ -26,7 +26,7 @@ ms.locfileid: "53360706"
  [Учебник. SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)  
  В этом учебнике описывается интегрированная среда для управления инфраструктурой [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] представляет собой графический интерфейс для настройки экземпляров [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], наблюдения за ними и управления ими. Такая среда также позволяет развертывать, наблюдать и обновлять компоненты уровня данных, используемых приложениями, например базами и хранилищами данных. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] также предоставляет редакторы [!INCLUDE[tsql](../includes/tsql-md.md)], языка многомерных выражений, расширений интеллектуального анализа данных и XML для изменения и отладки скриптов.  
   
- [Учебник. Написание инструкций Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md)  
+ [Учебник. Составление инструкций Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md)  
  В этом учебнике описываются основополагающие навыки по написанию инструкций [!INCLUDE[tsql](../includes/tsql-md.md)] для создания объектов в базе данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и управления этими объектами.  
   
  [Учебник. Помощник по настройке ядра СУБД](../tools/dta/tutorial-database-engine-tuning-advisor.md)  
@@ -47,7 +47,7 @@ ms.locfileid: "53360706"
  [Учебник. Выполнение политик рекомендаций с помощью управления на основе политик](../tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md)  
  В этом учебнике показано, как создавать политики, которые могут использоваться для анализа экземпляров компонента [!INCLUDE[ssDE](../includes/ssde-md.md)] в поисках известных проблем.  
   
- [Учебник. SQL Server Backup and Restore для Windows Azure Blob Storage Service](tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+ [Учебник. Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Microsoft Azure](tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
  В этом учебнике показано, как выполнять резервное копирование и восстановление в SQL Server для службы хранения больших двоичных объектов в Windows Azure.  
   
  [Учебник. SQL Server Data Files в службе хранилища Windows Azure](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
@@ -55,6 +55,6 @@ ms.locfileid: "53360706"
   
 ## <a name="see-also"></a>См. также  
  [Учебные материалы по SQL Server 2014](../tutorials/tutorials-for-sql-server-2014.md)   
- [Вики-сайте TechNet: Образцы SQL Server 2012](https://go.microsoft.com/fwlink/?linkID=220734)  
+ [TechNet WIKI: образцы SQL Server 2012](https://go.microsoft.com/fwlink/?linkID=220734)  
   
   

@@ -309,7 +309,7 @@
       href: ../../native-client-odbc-how-to/support-for-large-udts.md
     - name: Вызов SQLColumns для таблиц с разреженными столбцами
       href: ../../native-client-odbc-how-to/call-sqlcolumns-on-a-table-with-sparse-columns.md
-    - name: Как вставлять строки в столбец Geography (ODBC)
+    - name: Руководство. Вставка строк в столбец Geography (ODBC)
       href: ../../native-client-odbc-how-to/how-to-insert-rows-into-geography-column-odbc.md
     - name: Выполнение взаимной проверки подлинности Kerberos
       href: ../../native-client-odbc-how-to/get-mutual-kerberos-authentication.md

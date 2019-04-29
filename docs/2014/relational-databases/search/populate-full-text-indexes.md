@@ -25,11 +25,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: c8e9ea6b068f39e9e1e63bb5e9831f977619367f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545346"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046159"
 ---
 # <a name="populate-full-text-indexes"></a>Заполнение полнотекстовых индексов
   Создание и обслуживание полнотекстового индекса включает процесс *заполнения* индекса (которое также называется *сканированием*).  
@@ -211,7 +211,7 @@ GO
 ##  <a name="crawl"></a> Устранение ошибок в заполнении средства полнотекстового (поиска сканирование)  
  При возникновении ошибки во время сканирования модуль протоколирования сканирования, входящий в механизм полнотекстового поиска, создает и обновляет журнал сканирования, хранящийся в текстовом файле. Каждый журнал сканирования соответствует конкретному полнотекстовому каталогу. По умолчанию журналы сканирования для данного экземпляра в данном случае первому экземпляру, расположены в %ProgramFiles%\Microsoft SQL Server\MSSQL12. Папка MSSQLSERVER\MSSQL\LOG. Имена файлов журналов сканирования имеют следующий формат.  
   
- SQLFT\<DatabaseID >\<FullTextCatalogID >. ЖУРНАЛ [\<n >]  
+ SQLFT\<DatabaseID>\<FullTextCatalogID>.LOG[\<n>]  
   
  <`DatabaseID`>  
  Идентификатор базы данных. <`dbid`> — это пятизначное число с ведущими нулями.  

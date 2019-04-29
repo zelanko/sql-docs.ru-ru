@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 386854ec9a20931571ececf4bca943f95fc0dbf7
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58380902"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62836459"
 ---
 # <a name="analysis-services-processing-task-editor-analysis-services-page"></a>Редактор задачи «Обработка средствами Analysis Services» (страница «Средства Analysis Services»)
   Используйте страницу **Службы Analysis Services** диалогового окна **Редактор задачи «Обработка средствами Analysis Services»** для задания диспетчера соединений служб Analysis Services, выбора аналитических объектов для обработки, установки параметров обработки и действий при ошибках.  
@@ -44,7 +44,7 @@ ms.locfileid: "58380902"
  **Создать**  
  Создайте новый диспетчер соединений служб Analysis Services.  
   
- **См. также:** [Диспетчер соединений служб Analysis Services](connection-manager/analysis-services-connection-manager.md), [Добавление службами Analysis Services диспетчер соединений диалогового окна пользовательского интерфейса в справочник](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
+ **См. также:** подробные сведения о [диспетчере подключений Analysis Services](connection-manager/analysis-services-connection-manager.md) и о [добавлении диалогового окна диспетчера подключений Analysis Services](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md).  
   
  **Список объектов**  
  |Свойство|Описание|  
@@ -63,7 +63,7 @@ ms.locfileid: "58380902"
  **Анализ влияния**  
  Выполните анализ влияния на выбранный объект.  
   
- **См. также:** [Влияет на диалоговое окно «Анализ» &#40;службы Analysis Services — многомерные данные&#41;](../../2014/analysis-services/impact-analysis-dialog-box-analysis-services-multidimensional-data.md)  
+ **См. также:** подробные сведения о [диалоговом окне "Анализ влияния" &#40;Analysis Services — многомерные данные&#41;](../../2014/analysis-services/impact-analysis-dialog-box-analysis-services-multidimensional-data.md).  
   
  **Сводка о настройках пакета**  
  |Свойство|Описание|  
@@ -77,7 +77,7 @@ ms.locfileid: "58380902"
  **Изменить настройки**  
  Измените параметры обработки и действия при ошибках в ключах измерения.  
   
- **См. также:** [Изменить параметры &#40;службы Analysis Services — многомерные данные&#41;](../../2014/analysis-services/change-settings-dialog-box-analysis-services-multidimensional-data.md)  
+ **См. также:** подробные сведения о [диалоговом окне "Изменение параметров" &#40;Analysis Services — многомерные данные&#41;](../../2014/analysis-services/change-settings-dialog-box-analysis-services-multidimensional-data.md).  
   
 ## <a name="see-also"></a>См. также  
  [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   

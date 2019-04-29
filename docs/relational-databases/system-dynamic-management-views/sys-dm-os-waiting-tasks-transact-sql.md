@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 10a17dba594359ca83fbc3b15e148fb72356e162
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629522"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62998007"
 ---
 # <a name="sysdmoswaitingtasks-transact-sql"></a>sys.dm_os_waiting_tasks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -55,11 +55,11 @@ ms.locfileid: "47629522"
   
  **Владелец ресурса пула потоков:**  
   
--   Идентификатор пула потоков = планировщик\<hex-address >  
+-   threadpool id=scheduler\<hex-address>  
   
  **Владелец ресурса параллельного запроса:**  
   
--   exchangeEvent id = {порта | Канал}\<hex-address > WaitType =\<exchange-wait-type > nodeId =\<exchange узел id >  
+-   exchangeEvent id={Port|Pipe}\<hex-address> WaitType=\<exchange-wait-type> nodeId=\<exchange-node-id>  
   
  **Exchange-wait-type:**  
   
@@ -79,7 +79,7 @@ ms.locfileid: "47629522"
   
  **Владелец ресурса блокировки:**  
   
--   \<Тип specific-description > id = блокировка\<блокировки hex-address > режим =\<режим > associatedObjectId =\<связанные obj-id >  
+-   \<type-specific-description> id=lock\<lock-hex-address> mode=\<mode> associatedObjectId=\<associated-obj-id>  
   
      **\<Тип specific-description > может быть:**  
   
@@ -103,7 +103,7 @@ ms.locfileid: "47629522"
   
     -   Для HOBT: Hobtlock hobtid =\<hobt-id > subresource =\<hobt-subresource > dbid =\<db-id >  
   
-    -   Для ALLOCATION_UNIT: Allocunitlock hobtid =\<hobt-id > subresource =\<alloc-unit-subresource > dbid =\<db-id >  
+    -   For ALLOCATION_UNIT: allocunitlock hobtid=\<hobt-id> subresource=\<alloc-unit-subresource> dbid=\<db-id>  
   
      **\<Режим > может быть:**  
   
@@ -115,7 +115,7 @@ ms.locfileid: "47629522"
   
  **Владелец универсального ресурса:**  
   
--   Рабочая область TransactionInfo TransactionMutex =\<идентификатор рабочей области >  
+-   TransactionMutex TransactionInfo Workspace=\<workspace-id>  
   
 -   Mutex  
   
@@ -133,7 +133,7 @@ ms.locfileid: "47629522"
   
 -   \<ИДЕНТИФИКАТОР GUID &GT;  
   
--   \<Класс кратковременных блокировок > (\<кратковременной блокировки address >)  
+-   \<latch-class> (\<latch-address>)  
   
 ## <a name="permissions"></a>Разрешения
 

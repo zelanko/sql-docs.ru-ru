@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9df56209254696a538cf8640685c5675af3b9858
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161714"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62913309"
 ---
 # <a name="mssqlserver7984"></a>MSSQLSERVER_7984
     
@@ -30,7 +30,7 @@ ms.locfileid: "48161714"
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
 |Символическое имя|DBCC2_PRE_CHECKS_BAD_PAGE_TYPE|  
-|Текст сообщения|Предварительная проверка системных таблиц: объект с идентификатором O_ID. Страница P_ID имеет непредвиденный тип PAGETYPE. Инструкция проверки прервана из-за непоправимой ошибки.|  
+|Текст сообщения|Предварительная проверка системных таблиц: Идентификатор объекта O_ID. Страница P_ID имеет непредвиденный тип PAGETYPE. Инструкция проверки прервана из-за непоправимой ошибки.|  
   
 ## <a name="explanation"></a>Объяснение  
  Обнаружена страница типа, отличного от DATA_PAGE, на уровне данных заданного объекта. Эта ошибка возникает на первой стадии проверки команды DBCC CHECKDB. На этой стадии команда DBCC CHECKDB выполняет простые проверки страниц данных важных системных базовых таблиц.  

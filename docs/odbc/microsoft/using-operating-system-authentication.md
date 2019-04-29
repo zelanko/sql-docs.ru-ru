@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5a532c253ea2204fa3636c24c503cbefd3fa6311
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686502"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127815"
 ---
 # <a name="using-operating-system-authentication"></a>Использование функций проверки подлинности операционной системы
 > [!IMPORTANT]  
@@ -27,9 +27,9 @@ ms.locfileid: "47686502"
   
  Проверка подлинности Oracle операционной системы зависит от операционной системы для управления доступом к учетным записям базы данных. Пользователи не должны ввести пароль, при использовании этого типа входа.  
   
- Чтобы воспользоваться преимуществами этой функции, укажите «/» в качестве идентификатора пользователя и пароль не указан, при подключении с помощью любого из следующих подключения API-интерфейсов: [SQLBrowseConnect](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md), [SQLConnect](../../odbc/microsoft/core-level-api-functions-odbc-driver-for-oracle.md), или [ SQLDriverConnect](../../odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md).  
+ Чтобы воспользоваться преимуществами этой функции, укажите «/» в качестве идентификатора пользователя и пароль не указан, при подключении с помощью любого из следующих подключения API-интерфейсы: [SQLBrowseConnect](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md), [SQLConnect](../../odbc/microsoft/core-level-api-functions-odbc-driver-for-oracle.md), или [SQLDriverConnect](../../odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md).  
   
- Баз данных Oracle с помощью SQL * Net службы проверки подлинности для проверки подлинности пользователей, которые вошли в систему. Эта служба работает также в том случае, если пользователи вошли в Oracle через SQLPlus; Тем не менее вошедшего в систему пользователя — это служба, таких как службы IIS, проверка подлинности завершается. Это известное ограничение SQL\*Net проверки подлинности и выдаст следующую ошибку: «[Microsoft] [драйвер ODBC для Oracle] [Oracle] ORA-12641: не удалось инициализировать службу TNS:authentication.»  
+ Баз данных Oracle с помощью SQL * Net службы проверки подлинности для проверки подлинности пользователей, которые вошли в систему. Эта служба работает также в том случае, если пользователи вошли в Oracle через SQLPlus; Тем не менее вошедшего в систему пользователя — это служба, таких как службы IIS, проверка подлинности завершается. Это известное ограничение SQL\*Net проверки подлинности и выдаст следующую ошибку: «[Microsoft] [драйвер ODBC для Oracle] [Oracle] ORA-12641: TNS:Authentication службе не удалось инициализировать.»  
   
  Эту проблему можно решить, изменив файл Sqlnet.ora. Этот файл конфигурации обычно хранятся в подкаталоге Network\Admin Oracle домашнего каталога. Добавьте следующую строку Sqlnet.ora:  
   

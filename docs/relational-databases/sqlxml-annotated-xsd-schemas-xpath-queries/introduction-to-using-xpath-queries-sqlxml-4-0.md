@@ -17,11 +17,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 57029e2aad7497e68eba2b2007102654f6aa58e0
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041635"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013354"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>Основные сведения об использовании запросов XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -119,7 +119,7 @@ ms.locfileid: "56041635"
   
  При указании запросов XPath в шаблоне обратите внимание на следующее поведение.  
   
--   XPath может содержать символы, такие как < or &, которые имеют особые значения в XML (и шаблон является XML-документом). При использовании &-кодировки XML необходимо экранировать эти символы или указывать XPath в URL-адресе.  
+-   XPath может содержать символы, такие как < или &, имеют специальное значение в формате XML (и шаблон — это документ XML). Необходимо экранировать эти символы, с помощью XML &-кодировки, или указывать XPath в URL-адрес.  
   
 ## <a name="see-also"></a>См. также  
  [Использование запросов XPath в SQLXML 4.0](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/using-xpath-queries-in-sqlxml-4-0.md)  

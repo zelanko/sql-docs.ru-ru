@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e3e973c30ea178a544b9da3501d88f43cf9b1ddb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527753"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63054819"
 ---
 # <a name="install-analysis-services-in-power-pivot-mode"></a>Установка служб Analysis Services в режиме Power Pivot
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -23,9 +23,9 @@ ms.locfileid: "52527753"
 ##  <a name="bkmk_background"></a> Историческая справка  
  [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для SharePoint представляет собой набор служб среднего уровня и серверных служб, обеспечивающих доступ к данным [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] в ферме SharePoint 2016 или SharePoint 2013.  
   
--   **Серверные службы.** Если для создания книг с аналитическими данными используется [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для Excel, то для доступа к этим данным в серверной среде потребуется [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для SharePoint. Вы можете запустить программу установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на компьютере, где установлен SharePoint Server или на другом компьютере, где нет ПО SharePoint. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] нисколько не зависят от SharePoint.  
+-   **Серверные службы.** Если вы используете [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для создания книг с аналитическими данными в Excel, необходимо иметь [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для SharePoint для доступа к этим данным в серверной среде. Вы можете запустить программу установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на компьютере, где установлен SharePoint Server или на другом компьютере, где нет ПО SharePoint. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] нисколько не зависят от SharePoint.  
   
-     **Примечание.** В этом разделе описывается установка сервера [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] и серверных служб.  
+     **Примечание.** В этом разделе описывается установка [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] сервера и серверных служб.  
   
 -   **Средний уровень:** Усовершенствования [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] возможности работы в SharePoint, включая [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] коллекции, расписания обновления данных, панель мониторинга управления и поставщиков данных. Дополнительные сведения об установке и настройке среднего уровня см. в следующем документе:  
   
@@ -56,7 +56,7 @@ ms.locfileid: "52527753"
 ###  <a name="bkmk_sqleditions"></a> Требования к выпуску SQL Server  
  Не все функции бизнес-аналитики доступны во всех выпусках [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Дополнительные сведения см. в разделе [Analysis Services функции, поддерживаемые различными выпусками SQL Server 2016](../../../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md) и [выпуски и компоненты SQL Server 2016](../../../sql-server/editions-and-components-of-sql-server-2016.md).  
   
-##  <a name="InstallSQL"></a> Шаг 1. Установка Power Pivot для SharePoint  
+##  <a name="InstallSQL"></a> Шаг 1. Установка Power Pivot для SharePoint  
  На этом шаге запускается программа установки SQL Server Setup, чтобы установить сервер [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] в режиме [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] . На следующем шаге необходимо настроить службы Excel на использование данного сервера для моделей данных книги.  
   
 1.  Запустите мастер установки SQL Server (Setup.exe).  
@@ -77,7 +77,7 @@ ms.locfileid: "52527753"
   
 9. Если отображаются другие **правила поддержки установки**, просмотрите все предупреждения и нажмите кнопку **Далее**.  
   
-     **Примечание.** Так как брандмауэр Windows включен, отобразится предупреждение о том, что для включения удаленного доступа необходимо открыть порты.  
+     **Примечание.** Брандмауэр Windows включен, пользователь увидит предупреждение для включения удаленного доступа необходимо открыть порты.  
   
 10. На странице **Роль установки** выберите пункт **Установка компонентов SQL Server**.  
   
@@ -139,7 +139,7 @@ ms.locfileid: "52527753"
   
 3.  Подключитесь к экземпляру служб Analysis Services, например к **[имя сервера]\POWERPIVOT**. Если вы можете подключиться к экземпляру, то служба запущена.  
   
-##  <a name="bkmk_config"></a> Шаг 2. Настройка базовой интеграции служб Analysis Services с SharePoint  
+##  <a name="bkmk_config"></a> Шаг 2. Настройка интеграции с SharePoint базовый анализ основных служб  
  Следующие шаги описывают изменения в конфигурации, необходимые для взаимодействия с расширенными моделями данных Excel в библиотеке документов SharePoint. Выполните эти шаги после того, как установите SharePoint и службы SQL Server Analysis Services.  
   
 ### <a name="sharepoint-2016"></a>SharePoint 2016  
@@ -215,10 +215,10 @@ ms.locfileid: "52527753"
   
     ```  
   
-##  <a name="bkmk_verify"></a> Шаг 3. Проверка интеграции  
+##  <a name="bkmk_verify"></a> Шаг 3. Проверка интеграции  
  Следующие шаги содержат пошаговые инструкции для создания и передачи новой книги как способа проверки интеграции служб Analysis Services. Для выполнения этих шагов потребуется база данных SQL Server.  
   
-1.  **Примечание.** Если уже имеется книга с такими дополнительными функциями, как срезы и фильтры, то можно передать ее в библиотеку документов SharePoint и проверить, есть ли возможность взаимодействия со срезами и фильтрами из представления библиотеки документов.  
+1.  **Примечание.** Если у вас уже есть книга расширенные с срезы или фильтры, можно передать его в библиотеку документов SharePoint и проверьте возможность взаимодействия со срезами и фильтрами из представления библиотеки документов.  
   
 2.  Создайте новую книгу в Excel.  
   

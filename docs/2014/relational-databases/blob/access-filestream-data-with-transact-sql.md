@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 88fe39b5be43082ffc9648814eccf5384585f2b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061044"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62920502"
 ---
 # <a name="access-filestream-data-with-transact-sql"></a>Доступ к данным FILESTREAM с помощью Transact-SQL
   В этом разделе описаны способы использования инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT, UPDATE и DELETE для управления данными FILESTREAM.  
@@ -26,7 +26,7 @@ ms.locfileid: "48061044"
 >  Для примеров в этом разделе требуется база данных с поддержкой FILESTREAM и таблица, которая создана в разделе [Создание базы данных с поддержкой FILESTREAM](create-a-filestream-enabled-database.md) и [Создание таблицы для хранения данных FILESTREAM](create-a-table-for-storing-filestream-data.md).  
   
 ##  <a name="ins"></a> Вставка строки, содержащей данные FILESTREAM  
- Чтобы вставить строку в таблицу, которая поддерживает данные FILESTREAM, используйте инструкцию [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT. При вставке данных в столбец FILESTREAM, можно вставить значение NULL или `varbinary(max)` значение.  
+ Чтобы вставить строку в таблицу, которая поддерживает данные FILESTREAM, используйте инструкцию [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT. Значение, вставляемое в столбец FILESTREAM, может быть либо значением NULL, либо значением типа `varbinary(max)`.  
   
 ### <a name="inserting-null"></a>Вставка значения NULL  
  Следующий пример иллюстрирует порядок вставки значения `NULL`. Если значение FILESTREAM равно `NULL`, компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] не создает файл в файловой системе.  

@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1312312718a082aaf5b7f6a1e798d29db83a8bb8
-ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
+ms.openlocfilehash: f74b6b9fe659f6d2af0f30bd6a2b629939fc5628
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58072188"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013555"
 ---
 # <a name="sysdmexeccachedplandependentobjects-transact-sql"></a>sys.dm_exec_cached_plan_dependent_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ sys.dm_exec_cached_plan_dependent_objects(plan_handle)
   
 ## <a name="arguments"></a>Аргументы  
 *plan_handle*  
-Уникально идентифицирует план выполнения запросов для выполненного пакета, план которого хранится в кэше планов. *plan_handle* — **varbinary(64)**.   
+— Это маркер, который уникально идентифицирует план выполнения запроса для запущенного пакета, и ее план находится в кэше планов. *plan_handle* — **varbinary(64)**.   
 
 *Plan_handle* можно получить из следующих объектов DMO:  
   
@@ -64,7 +64,7 @@ sys.dm_exec_cached_plan_dependent_objects(plan_handle)
 |**cacheobjtype**|**nvarchar(50)**|Тип объекта кэша плана. Столбец не может содержать значение NULL. Возможные значения.<br /><br /> Исполняемый план.<br /><br /> Скомпилированная функция CLR.<br /><br /> Скомпилированная процедура CLR.<br /><br /> Курсор|  
   
 ## <a name="permissions"></a>Разрешения  
- необходимо разрешение VIEW SERVER STATE на сервере.  
+ Необходимо разрешение `VIEW SERVER STATE` на сервере.  
   
 ## <a name="physical-joins"></a>Физические соединения  
  ![Диаграмма связей](../../relational-databases/system-dynamic-management-views/media/dm-dependent-objects.gif "Диаграмма связей")  

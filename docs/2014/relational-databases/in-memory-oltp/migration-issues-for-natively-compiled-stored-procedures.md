@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 73415bf802973fcac8cd0fe29c6db3bd5e110f6f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058454"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63015286"
 ---
 # <a name="migration-issues-for-natively-compiled-stored-procedures"></a>Проблемы миграции, связанные с хранимыми процедурами, скомпилированными в собственном коде
   В этом разделе описываются некоторые проблемы, связанные с созданием скомпилированных в собственном коде хранимых процедур.  

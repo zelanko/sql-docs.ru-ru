@@ -21,18 +21,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1b33e0d78dfe308c537ea5297b55415bce304474
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129422"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62918148"
 ---
 # <a name="register-a-database-as-a-dac"></a>Регистрация базы данных в качестве приложения уровня данных
   Использовать **зарегистрировать Data-tier Application Wizard** или Windows PowerShell скрипта Создайте определение приложения УРОВНЯ данных, описывающее объекты из существующей базы данных, а затем зарегистрировать определение DAC в `msdb` системной базы данных (**master** в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]).  
   
--   **Перед началом работы**  [Ограничения](#LimitationsRestrictions), [разрешения](#Permissions)  
+-   **Перед началом:**  [ограничения](#LimitationsRestrictions), [разрешения](#Permissions)  
   
--   **Для обновления приложения уровня данных, с помощью:**  [Мастер регистрации приложения уровня данных](#UsingRegisterDACWizard), [PowerShell](#RegisterDACPowerShell)  
+-   **Обновление приложения уровня данных с использованием:**  [Мастер регистрации приложения уровня данных](#UsingRegisterDACWizard), [PowerShell](#RegisterDACPowerShell)  
   
 ## <a name="before-you-begin"></a>Перед началом  
  Процесс регистрации создает определение DAC, которое определяет объекты в базе данных. Сочетание определения DAC и базы данных образует экземпляр DAC. Если база данных регистрируется как DAC на управляемом экземпляре компонента Database Engine, зарегистрированный компонент DAC будет включен в служебную программу SQL Server при следующей передаче набора элементов сбора программы с экземпляра в точку управления служебной программой. После этого приложение уровня данных появится в узле **Развернутые приложения уровня данных** в окне [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Обозреватель программ** , а соответствующие сведения будут отображаться на странице сведений **Развернутые приложения уровня данных** .  

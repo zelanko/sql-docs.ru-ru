@@ -1,5 +1,5 @@
 ---
-title: Определение и поиск перспектив | Документы Microsoft
+title: Определение и поиск перспектив | Документация Майкрософт
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 46ce0cb6005ce6465c623fa51286061e8f1e89c5
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018031"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63017392"
 ---
-# <a name="lesson-9-1---defining-and-browsing-perspectives"></a>Занятие 9-1-Определение и поиск перспектив
+# <a name="lesson-9-1---defining-and-browsing-perspectives"></a>Урок 9 – 1-Определение и поиск перспектив
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 Перспектива может упростить вид куба для определенных целей. По умолчанию пользователям доступны для просмотра все элементы куба, на которые они имеют разрешения. Все элементы, которые видит пользователь при просмотре всего куба служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , называются перспективой по умолчанию для куба. Представление полного куба может оказаться слишком сложным для перемещений, особенно для тех пользователей, которым для решения задач, связанных с бизнес-аналитикой и отчетностью, достаточно доступа лишь к малой его части.  
@@ -34,7 +34,7 @@ ms.locfileid: "34018031"
   
     Все объекты и их типы отображаются на панели **Перспективы** , как показано на рисунке ниже.  
   
-    ![Вкладка «Перспективы» конструктора кубов](../analysis-services/media/l9-perspectives-1.gif "вкладка «Перспективы» конструктора кубов")  
+    ![Панель «перспективы» конструктора кубов](../analysis-services/media/l9-perspectives-1.gif "панель «перспективы» конструктора кубов")  
   
 2.  На панели инструментов вкладки **Перспективы** нажмите кнопку **Создать перспективу** .  
   
@@ -171,11 +171,11 @@ ms.locfileid: "34018031"
   
 4.  При выполнении команды «Анализ в Excel» выводится запрос выбора перспективы, которая будет использоваться при просмотре модели в Excel, как показано на следующем рисунке.  
   
-    ![Объекты для перспективы Internet Sales](../analysis-services/media/l9-perspectives-3.gif "объектов для перспективы Internet Sales")  
+    ![Объекты для перспективы Internet Sales](../analysis-services/media/l9-perspectives-3.gif "объекты для перспективы Internet Sales")  
   
 5.  Кроме того, можно запустить Excel из меню «Пуск» Windows, определить подключение к базе данных учебника по службам Analysis Services на узле localhost и выбрать перспективу в мастере подключения к данным, как показано на следующем рисунке.  
   
-    ![Мастер подключения данных в Excel](../analysis-services/media/l9-perspectives-3b.gif "мастер подключения данных в Excel")  
+    ![Мастер подключения к данным в Excel](../analysis-services/media/l9-perspectives-3b.gif "мастер подключения данных в Excel")  
   
 6.  Выберите **Продажи через Интернет** в списке **Перспектива** и проверьте меры и измерения в области метаданных.  
   
@@ -192,7 +192,7 @@ ms.locfileid: "34018031"
     ![Меры Internet Sales и Reseller Sales](../analysis-services/media/l9-perspectives-4.gif "меры Internet Sales и Reseller Sales")  
   
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
-[Определение и Просмотр переводов](../analysis-services/lesson-9-2-defining-and-browsing-translations.md)  
+[Определение и просмотр переводов](../analysis-services/lesson-9-2-defining-and-browsing-translations.md)  
   
 ## <a name="see-also"></a>См. также  
 [Perspectives](../analysis-services/multidimensional-models-olap-logical-cube-objects/perspectives.md)  

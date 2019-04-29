@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a47820c60b221773ad4ce312f49d2192eeddc547
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762036"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63182929"
 ---
 # <a name="open-condition-dialog-box-dependent-policies-page"></a>Диалоговое окно «Открытие условия», вкладка «Зависимые политики»
   Используйте это диалоговое окно для отображения списка политик, которые в данный момент ссылаются на это условие управления на основе политик. Дополнительные сведения о связи условий с аспектами и политиками см. в статье [Администрирование серверов с помощью управления на основе политик](administer-servers-by-using-policy-based-management.md).  

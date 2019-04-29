@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ae2645057670ba65a33bb8b5da238c7e01790ae9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713792"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042240"
 ---
 # <a name="update-method"></a>Метод Update
 Сохраняет любые изменения, вносимые в текущей строке [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта, или [поля](../../../ado/reference/ado-api/fields-collection-ado.md) коллекцию [записи](../../../ado/reference/ado-api/record-object-ado.md) объекта.  
@@ -39,7 +39,7 @@ record.Fields.Update
  Необязательный параметр. Объект **Variant** , представляющий одно имя, или **Variant** массив, представляющий имена или порядковые номера поле или поля, которую нужно изменить.  
   
  *Значения*  
- Необязательный параметр. Объект **Variant** , представляющий одно значение, или **Variant** массив, представляющий значения для поля или поля в новой записи.  
+ Необязательный. Объект **Variant** , представляющий одно значение, или **Variant** массив, представляющий значения для поля или поля в новой записи.  
   
 ## <a name="remarks"></a>Примечания  
   

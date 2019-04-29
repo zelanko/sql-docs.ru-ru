@@ -1,5 +1,5 @@
 ---
-title: Учебник по службам SSIS. Развертывание пакетов | Документация Майкрософт
+title: Руководство по службам SSIS. Развертывание пакетов | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -21,13 +21,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3752c7e0f99a62534a670743c0ee7deb3c2e07a8
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379722"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62899012"
 ---
-# <a name="ssis-tutorial-deploying-packages"></a>Учебник по службам SSIS. Развертывание пакетов
+# <a name="ssis-tutorial-deploying-packages"></a>Руководство по службам SSIS. Развертывание пакетов
   Службы[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] содержат средства, облегчающие развертывание пакетов на другом компьютере. Средства развертывания управляют любыми зависимостями, такими как конфигурации или требуемые пакету файлы. В данном учебнике демонстрируется, как с помощью этих средств устанавливать пакеты и их зависимости на целевом компьютере.  
   
  Сначала требуется выполнить задачи для подготовки к развертыванию. Необходимо создать новый проект служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] и добавить в проект существующие пакеты и файлы данных. Не нужно создавать никакие пакеты; вместо этого работа ведется только с завершенными пакетами, созданными при выполнении заданий этого учебника. Функциональность пакетов из данного учебника менять не придется, тем не менее, может оказаться полезным после добавления пакетов в проект открыть их в конструкторе служб [!INCLUDE[ssIS](../includes/ssis-md.md)] и просмотреть содержимое каждого пакета. Содержимое пакетов показывает их зависимости, такие как файлы журнала, а также другие интересные особенности пакетов.  
@@ -46,7 +46,7 @@ ms.locfileid: "58379722"
  Новые средства, элементы управления и возможности служб [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] лучше всего изучать на практике. С помощью данного учебника шаг за шагом создается проект служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , куда затем добавляются пакеты и другие необходимые файлы. Когда проект полностью завершен, пользователь создает комплект развертывания и копирует его на целевой компьютер, куда затем устанавливаются пакеты.  
   
 ## <a name="requirements"></a>Требования  
- Этот учебник предназначен для пользователей, знакомых с основными операциями файловой системы, но имеющих ограниченное представление о новых возможностях служб [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Для лучшего понимания основных понятий служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], с которыми знакомит данный учебник, может пригодиться предварительное изучение следующих учебников по использованию служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]: [Запуск SQL Server мастер импорта и экспорта](import-export-data/start-the-sql-server-import-and-export-wizard.md) и [учебник по службам SSIS: Создание простого ETL-пакета](../integration-services/ssis-how-to-create-an-etl-package.md).  
+ Этот учебник предназначен для пользователей, знакомых с основными операциями файловой системы, но имеющих ограниченное представление о новых возможностях служб [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Для лучшего понимания основных [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] концепции, которыми знакомит данный учебник, вы может пригодиться предварительное изучение следующих [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] учебники: [Запуск SQL Server мастер импорта и экспорта](import-export-data/start-the-sql-server-import-and-export-wizard.md) и [учебник по службам SSIS: Создание простого ETL-пакета](../integration-services/ssis-how-to-create-an-etl-package.md).  
   
  **Компьютер-источник.** На компьютере, где создается пакет развертывания, должны быть установлены следующие компоненты:  
   

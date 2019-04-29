@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b9e26930db786b986fd1f4ba633e2cc5953f3df3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681362"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62910458"
 ---
 # <a name="records-and-streams"></a>Записи и потоки
 В настоящее время предоставляет ADO [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объект в качестве основного средства доступа к данным из источников данных, например реляционных баз данных. Тем не менее, некоторые поставщики поддерживают [записи](../../../ado/reference/ado-api/record-object-ado.md) и [Stream](../../../ado/reference/ado-api/stream-object-ado.md) объектов как альтернативные или дополнительные объекты, с которыми можно управлять данных от поставщиков. Подробные сведения о **записи** поведение, см. в документации поставщика.  

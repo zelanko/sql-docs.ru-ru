@@ -1,5 +1,5 @@
 ---
-title: Занятие 2. Создание учетных данных SQL Server | Документация Майкрософт
+title: Урок 2. Создание учетных данных SQL Server | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: fbea11b0500c075105bff885cdb1cd8264b320d6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014085"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62931633"
 ---
-# <a name="lesson-2-create-a-sql-server-credential"></a>Занятие 2. Создание учетных данных SQL Server
+# <a name="lesson-2-create-a-sql-server-credential"></a>Урок 2. Создание учетных данных SQL Server
   **Учетные данные**. Учетные данные [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] являются объектом, который используется для хранения информации о проверке подлинности, которая необходима для подключения к источнику за пределами SQL Server.  В данном случае процессы резервного копирования и восстановления [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] используют учетные данные для проверки подлинности в службе хранилища больших двоичных объектов Windows Azure. Учетные данные хранят имя учетной записи хранилища и значения **ключа доступа** учетной записи хранилища. После создания учетных данных их необходимо указать в параметре WITH CREDENTIAL при выполнении инструкций BACKUP/RESTORE. Дополнительную информацию о просмотре, копировании или повторном создании учетной записи хранилища **access keys**см. в разделе [Ключи доступа к учетной записи](https://msdn.microsoft.com/library/windowsazure/hh531566.aspx).  
   
  Общие сведения об учетных данных см. в разделе [Учетные данные](../relational-databases/security/authentication-access/credentials-database-engine.md).  

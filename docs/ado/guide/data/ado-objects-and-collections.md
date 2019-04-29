@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5743e04b402302cc53b7694d8160edfb11769e0c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783882"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062920"
 ---
 # <a name="ado-objects-and-collections"></a>Объекты и коллекции ADO
 ADO состоит из следующих девяти объектов и четыре коллекции.  

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b60f402cdc7ba861a0d0550a92d16fa7dd1f59b7
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51557852"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62931416"
 ---
 # <a name="rds-programming-model-with-objects"></a>Модель программирования RDS с объектами
 Цель служб удаленных рабочих СТОЛОВ — для получения доступа к и обновления источникам данных через посредника, такого как IIS. Модель программирования определяет последовательность действий, необходимых для достижения этой цели. Объектная модель задает объекты, методы и свойства влияют на модель программирования.  

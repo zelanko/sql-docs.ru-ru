@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e75b79934022743ba806722427dd37ab733bc2f2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535555"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62853330"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Поставщик Microsoft OLE DB для ODBC-Обзор
 Для использования программистами ADO или служб удаленных рабочих СТОЛОВ идеальном мире бы один, в котором каждый источник предоставляет интерфейс OLE DB таким образом, ADO может вызывать непосредственно в источнике данных. Несмотря на то, что все чаще других поставщиков базы данных при реализации интерфейсов OLE DB, некоторые источники данных не еще доступны таким образом. Однако большинство систем СУБД, в настоящее время может осуществляться через ODBC.
@@ -101,13 +101,13 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |Имя драйвера (KAGPROP_DRIVERNAME)|Указывает имя файла драйвера ODBC.|
 |Версия драйвера ODBC (KAGPROP_DRIVERODBCVER)|Указывает версию ODBC, который поддерживает этот драйвер.|
 |Использование файла (KAGPROP_FILEUSAGE)|Указывает, как драйвер обрабатывает файл в источнике данных; как таблицу или каталогом.|
-|Как и предложение Escape (KAGPROP_LIKEESCAPECLAUSE)|Указывает ли драйвер поддерживает определение и использование escape-символа для символ процента (%) и символом подчеркивания (_) в предикате LIKE предложения WHERE.|
+|Как и предложение Escape (KAGPROP_LIKEESCAPECLAUSE)|Указывает, поддерживает ли драйвер, определение и использование escape-символа для символа процента (%) и подчеркивание (_) символ в предложения WHERE предиката LIKE.|
 |Максимальное количество столбцов в Group By (KAGPROP_MAXCOLUMNSINGROUPBY)|Указывает максимальное число столбцов, которые могут быть перечислены в предложении GROUP BY инструкции SELECT.|
 |Максимальное количество столбцов в индексе (KAGPROP_MAXCOLUMNSININDEX)|Указывает максимальное число столбцов, которые могут быть включены в индекс.|
 |Максимальное количество столбцов в Order By (KAGPROP_MAXCOLUMNSINORDERBY)|Указывает максимальное число столбцов, которые могут быть перечислены в предложении ORDER BY инструкции SELECT.|
 |Максимальное количество столбцов в Select (KAGPROP_MAXCOLUMNSINSELECT)|Указывает максимальное число столбцов, которые могут быть перечислены в части SELECT инструкции SELECT.|
 |Максимальное количество столбцов в таблице (KAGPROP_MAXCOLUMNSINTABLE)|Указывает максимальное число столбцов, допустимое в таблице.|
-|Числовые функции (KAGPROP_NUMERICFUNCTIONS)|Указывает числовые функции, которые поддерживаются драйвером ODBC. Список имен функций и связанных значений, используемых в этой битовой маске, см. в разделе [приложении E: Скалярные функции](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md), в документации ODBC.|
+|Numeric Functions (KAGPROP_NUMERICFUNCTIONS)|Указывает числовые функции, которые поддерживаются драйвером ODBC. Список имен функций и связанных значений, используемых в этой битовой маске, см. в разделе [приложении E: Скалярные функции](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md), в документации ODBC.|
 |Возможности внешнего соединения (KAGPROP_OJCAPABILITY)|Указывает типы ВНЕШНИХ соединений, поддерживаемых поставщиком.|
 |Внешние соединения (KAGPROP_OUTERJOINS)|Указывает, поддерживает ли поставщик ВНЕШНИЕ соединения.|
 |Специальные символы (KAGPROP_SPECIALCHARACTERS)|Указывает, какие символы имеют особое значение для драйвера ODBC.|
@@ -268,7 +268,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |Многотабличное обновление|DBPROP_MULTITABLEUPDATE|
 |Порядок сортировки NULL|DBPROP_NULLCOLLATION|
 |Поведение при конкатенации с NULL|DBPROP_CONCATNULLBEHAVIOR|
-|Службы OLE DB|DBPROP_INIT_OLEDBSERVICES, УСТАНОВИТЬ|
+|Службы OLE DB|DBPROP_INIT_OLEDBSERVICES|
 |Версия OLE DB|DBPROP_PROVIDEROLEDBVER|
 |Поддержка объектов OLE|DBPROP_OLEOBJECTS|
 |Поддержка открытия наборов данных|DBPROP_OPENROWSETSUPPORT|

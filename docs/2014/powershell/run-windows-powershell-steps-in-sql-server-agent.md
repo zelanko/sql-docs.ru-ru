@@ -11,18 +11,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 460d66b7e2d4f314db65213819fca1800af2da4f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52798206"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62922903"
 ---
 # <a name="run-windows-powershell-steps-in-sql-server-agent"></a>Использование Windows PowerShell в шагах агента SQL Server
   Агент SQL Server применяется для запуска скриптов SQL Server PowerShell в запланированное время.  
   
-1.  **Перед началом работы**  [Пределы и ограничения](#LimitationsRestrictions)  
+1.  **Перед началом:**  [Ограничения](#LimitationsRestrictions)  
   
-2.  **Запуск PowerShell из агента SQL Server, с помощью:**  [Шаг задания PowerShell](#PShellJob), [шаг задания командной строки](#CmdExecJob)  
+2.  **Запуск PowerShell из агента SQL Server с помощью:**  [шагов задания PowerShell](#PShellJob), [шагов задания командной строки](#CmdExecJob).  
   
 ## <a name="before-you-begin"></a>Перед началом  
  Существует несколько типов шагов заданий агента [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Каждый тип связан с некоторой подсистемой, в которой реализуется определенная среда, например агент репликации или среда командной строки. Можно создавать скрипты Windows PowerShell, а затем использовать агент [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , чтобы включить скрипты в задания, которые выполняются в запланированное время или в ответ на события [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Скрипты Windows PowerShell можно запускать либо с помощью шагов задания командной строки, либо с помощью шагов задания PowerShell.  

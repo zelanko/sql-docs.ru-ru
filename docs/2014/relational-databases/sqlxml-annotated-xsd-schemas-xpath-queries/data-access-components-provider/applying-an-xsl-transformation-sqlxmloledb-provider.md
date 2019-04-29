@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 74f8834ef29e4b5a1cf2b3988585f771cb9d1f1f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52800020"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63016292"
 ---
 # <a name="applying-an-xsl-transformation-sqlxmloledb-provider"></a>Применение преобразования XSL (поставщик SQLXMLOLEDB)
   В этом образце приложения ADO выполняется SQL-запрос, и к результату применяется преобразование XSL. ClientSideXML свойству присвоено значение True, обеспечивает обработку набора строк на стороне клиента. Диалект команды имеет значение {5d531cb2-e6ed-11d2-b252-00c04f681b71}, поскольку SQL-запрос задан в шаблоне, а при выполнении шаблона должен указываться этот диалект. Свойство xsl задает XSL-файл, использовать для применения преобразования. Значение свойства базовый путь используется для поиска XSL-файл. Если путь указан в значении свойства xsl, путь задается относительно пути, указанного в свойстве базовый путь.  

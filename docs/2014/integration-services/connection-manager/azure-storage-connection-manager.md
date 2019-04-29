@@ -14,14 +14,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ea689f96911af35176d6467e73d496b59f35e3c9
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374112"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62833562"
 ---
 # <a name="azure-storage-connection-manager"></a>Диспетчер подключений службы хранилища Azure
-  Диспетчер подключений службы хранилища Azure позволяет пакету служб SSIS для подключения к учетной записи хранения Azure, используя значения, указываемые для свойств: Имя учетной записи хранения и ключ учетной записи.  
+  Диспетчер подключений службы хранилища Azure позволяет пакету служб SSIS для подключения к учетной записи хранения Azure, используя значения, указываемые для свойств: имени учетной записи хранения и ключа учетной записи.  
   
 1.  В диалоговом окне **Добавление диспетчера соединений со службами SSIS** выберите **AzureStorage**и щелкните **Добавить**.  
   

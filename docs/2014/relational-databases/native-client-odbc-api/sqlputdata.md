@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7e15353cd9f4c4a837fe5978d00259ad5460d50d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358556"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046629"
 ---
 # <a name="sqlputdata"></a>SQLPutData
   Применяются следующие ограничения при использовании функции SQLPutData для отправки более чем 65 535 байт данных (для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] версии 4.21a) или 400 КБ данных (для SQL Server версии 6.0 и более поздние версии) для SQL_LONGVARCHAR (`text`), SQL_WLONGVARCHAR (`ntext`) или SQL_LONGVARBINARY (`image`) столбец:  
@@ -51,7 +51,7 @@ ms.locfileid: "53358556"
   
  *DataPtr* параметр учитывается, но должно быть присвоено значение отличное от NULL. Дополнительные сведения см. в разделе на привязка строк возвращающего табличное значение Параметра переменной в [привязки и Data Transfer of Table-Valued параметры и значения столбцов](../native-client-odbc-table-valued-parameters/binding-and-data-transfer-of-table-valued-parameters-and-column-values.md).  
   
- Если *StrLen_Or_Ind* имеет значение, отличное от SQL_DEFAULT_PARAM, или число между 0 и SQL_PARAMSET_SIZE (то есть *ColumnSize* функции SQLBindParameter), является ошибкой. В результате этой ошибки функция SQLPutData возвращает SQL_ERROR: SQLSTATE=HY090, «Недопустимая длина строки или буфера».  
+ Если *StrLen_Or_Ind* имеет значение, отличное от SQL_DEFAULT_PARAM, или число между 0 и SQL_PARAMSET_SIZE (то есть *ColumnSize* функции SQLBindParameter), является ошибкой. В результате этой ошибки функция SQLPutData возвращает SQL_ERROR: SQLSTATE = HY090, «Недопустимая длина строки или буфера».  
   
  Дополнительные сведения о возвращающих табличные значения параметров, см. в разделе [возвращающего табличное значение параметров &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   

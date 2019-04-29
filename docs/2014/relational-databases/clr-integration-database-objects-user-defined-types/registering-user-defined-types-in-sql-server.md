@@ -34,11 +34,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 19ea6e9f077b5097b8c5daa6d967a17336553ba7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508446"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62919952"
 ---
 # <a name="registering-user-defined-types-in-sql-server"></a>Регистрация определяемых пользователем типов в SQL Server
   Для использования определяемого пользователем типа (UDT) в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], необходимо зарегистрировать его. Регистрация определяемого пользователем типа включает регистрацию сборки и создание типа в базе данных, в которой его нужно использовать. Определяемые пользователем типы находятся в одной базе данных и не могут использоваться в нескольких базах данных, пока идентичная сборка и определяемый пользователем тип не будут зарегистрированы в каждой базе данных. После регистрации сборки определяемого пользователем типа и создания типа этот тип можно использовать в [!INCLUDE[tsql](../../includes/tsql-md.md)] и клиентском коде. Дополнительные сведения об определяемых пользователем типах данных CLR см. в разделе [Определяемые пользователем типы данных CLR](clr-user-defined-types.md).  

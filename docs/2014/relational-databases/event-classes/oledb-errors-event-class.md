@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9a0f4e99247fe1a4a80734e56d8db1e05b961e43
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52803656"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62961076"
 ---
 # <a name="oledb-errors-event-class"></a>OLEDB Errors, класс событий
   Класс событий OLEDB Errors происходит в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в случаях, когда вызов поставщика OLE DB возвращает ошибку. Включение данного класса событий в трассировку позволяет просмотреть результат типа HRESULT от поставщика OLE DB.  

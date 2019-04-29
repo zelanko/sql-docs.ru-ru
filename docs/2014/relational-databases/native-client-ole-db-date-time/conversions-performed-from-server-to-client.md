@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d9e922f5bf8d07e75c976dbfc07b89b8527dbbc8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763600"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63023367"
 ---
 # <a name="conversions-performed-from-server-to-client"></a>Преобразования, выполняемые при передаче от сервера к клиенту
   В данном разделе описываются преобразования даты и времени, выполняемые между [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (или более поздней версией) и клиентским приложением, написанным с использованием OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -25,12 +25,12 @@ ms.locfileid: "52763600"
 ## <a name="conversions"></a>Преобразования  
  В следующей таблице описываются преобразования между типом, возвращенным клиенту, и типом в привязке. Для выходных параметров, если был вызван ICommandWithParameters::SetParameterInfo и тип, указанный в *pwszDataSourceType* не соответствует фактическому типу на сервере, неявное преобразование будет выполняться на сервере , и тип, возвращаемый клиенту будет совпадать с типом, заданные с помощью ICommandWithParameters::SetParameterInfo. Это может привести к непредвиденным результатам преобразования, если правила преобразования сервера отличаются от описанных в этом разделе. Например, когда требуется предоставить дату по умолчанию, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует значение 1900-1-1, а не 1899-12-30.  
   
-|В -><br /><br /> От|DATE|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
+|Для "->"<br /><br /> От|DATE|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
 |----------------------|----------|------------|------------|-------------|-----------------|-----------------------|--------------|-----------|-------------|---------------|----------|---------|----------|  
 |Дата|1,7|OK|-|-|1|1,3|1,7|-|ОК (VT_BSTR)|OK|OK|4|4|  
 |Time|5,6,7|-|9|OK|6|3,6|5,6|-|ОК (VT_BSTR)|OK|OK|4|4|  
 |Smalldatetime|7|8|9,10|10|OK|3|7|-|7 (VT_DATE)|OK|OK|4|4|  
-|DATETIME|5,7|8|9,10|10|OK|3|7|-|7 (VT_DATE)|OK|OK|4|4|  
+|Datetime|5,7|8|9,10|10|OK|3|7|-|7 (VT_DATE)|OK|OK|4|4|  
 |Datetime2|5,7|8|9,10|10|7|3|5,7|-|ОК (VT_BSTR)|OK|OK|4|4|  
 |Datetimeoffset|5,7,11|8,11|9,10,11|10,11|7,11|OK|5,7,11|-|ОК (VT_BSTR)|OK|OK|4|4|  
 |Char, Varchar,<br /><br /> Nchar, Nvarchar|7, 13|12|12,9|12|12|12|7,13|Н/Д|Недоступно|Недоступно|Недоступно|Недоступно|Н/Д|  

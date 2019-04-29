@@ -17,11 +17,11 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 ms.openlocfilehash: 5be9eb21e12402f7463c7e79714ef93e7eccb455
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093146"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011448"
 ---
 # <a name="encryption-hierarchy"></a>Иерархия средств шифрования
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] шифрует данные, используя иерархическую структуру средств шифрования и управления ключами. На каждом уровне данные низшего уровня шифруются на основе комбинации сертификатов, асимметричных ключей и симметричных ключей. Асимметричные и симметричные ключи можно хранить вне модуля расширенного управления ключами [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  

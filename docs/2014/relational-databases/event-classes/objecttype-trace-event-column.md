@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 31ba88f3bc49d78dc8c68ac77ba6bda90e63aad0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52803756"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63028381"
 ---
 # <a name="objecttype-trace-event-column"></a>Столбец события ObjectType Trace
   Столбец события трассировки Object Type используется в различных событиях трассировки. В этом подразделе приведены возможные значения этого столбца и связанные с ними определения.  
@@ -43,7 +43,7 @@ ms.locfileid: "52803756"
 |8280|Расширенная хранимая процедура|  
 |16724|Триггер CLR|  
 |16964|База данных|  
-|16975|Объект|  
+|16975|Object|  
 |17222|Полнотекстовый каталог|  
 |17232|Хранимая процедура CLR|  
 |17235|схема|  

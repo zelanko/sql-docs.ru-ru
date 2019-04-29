@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: da50163b90d4a871c2524e1723797474386be8f6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356211"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046678"
 ---
 # <a name="sqlparamdata"></a>SQLParamData
   При возвращении SQLParamData *ValuePtrPtr* сопоставленный табличное значение параметра, приложение должно вызвать SQLPutData с *StrLen_Or_Ind*. Если *StrLen_Or_Ind* имеет значение больше 0, это означает, что приложение будет готово к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента для сбора данных параметр для следующей строки возвращающих табличные значения параметра. Если *StrLen_Or_Ind* имеет значение 0, оно означает, что есть больше нет строк данных для возвращающих табличные значения параметра. Дополнительные сведения см. в разделе [привязки и Data Transfer of Table-Valued параметры и значения столбцов](../native-client-odbc-table-valued-parameters/binding-and-data-transfer-of-table-valued-parameters-and-column-values.md).  

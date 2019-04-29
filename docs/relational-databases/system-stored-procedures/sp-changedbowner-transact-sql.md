@@ -19,11 +19,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 1a38be84e5f1980b680d674e1c04c2ba95d1a537
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794302"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62994280"
 ---
 # <a name="spchangedbowner-transact-sql"></a>sp_changedbowner (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ sp_changedbowner [ @loginame = ] 'login'
  [ @loginame=] '*входа*"  
  Идентификатор имени входа нового владельца текущей базы данных. *Имя входа* — **sysname**, не имеет значения по умолчанию. *Имя входа* должен быть уже существующим [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имени входа или пользователя Windows. *Имя входа* не может стать владельцем текущей базы данных, если он уже имеет доступ к базе данных с помощью существующей учетной записи безопасности в базе данных. Чтобы избежать этой ситуации, сначала удалите данного пользователя в текущей базе данных.  
   
- [ @map=] *remap_alias_flag*  
+ [ @map= ] *remap_alias_flag*  
  *Remap_alias_flag* параметр является устаревшим, поскольку псевдонимы имени входа были удалены из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. С помощью *remap_alias_flag* параметр не вызывает ошибку, но не оказывает влияния.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  

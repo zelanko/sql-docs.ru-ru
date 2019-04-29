@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1306c4463544d2aee882645a2f0a9401a8fb3a60
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227874"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62913179"
 ---
 # <a name="mssqlserver7934"></a>MSSQLSERVER_7934
     
@@ -30,7 +30,7 @@ ms.locfileid: "48227874"
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
 |Символическое имя|DBCC2_FS_MISSING_ROWSET_DIRECTORY|  
-|Текст сообщения|Ошибка в таблице: не найден каталог Filestream C_ID для объекта с идентификатором O_ID с идентификатором индекса I_ID и идентификатором секции PN_ID.|  
+|Текст сообщения|Ошибка таблицы: Не найден каталог файловых потоков для объекта с Идентификатором O_ID, Идентификатором индекса I_ID, Идентификатором секции PN_ID.|  
   
 ## <a name="explanation"></a>Объяснение  
  При выполнении команды DBCC CHECKDB секция была найдена, но соответствующий каталог набора строк FILESTREAM в пространстве данных FILESTREAM не найден.  

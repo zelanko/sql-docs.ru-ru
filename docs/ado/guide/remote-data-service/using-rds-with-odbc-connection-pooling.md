@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7fbc75772a48b4990ebbc31877a3f7a95b442087
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506353"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62955761"
 ---
 # <a name="using-rds-with-odbc-connection-pooling"></a>Использование RDS с регулированием количества запросов подключений ODBC
 Если вы используете источник данных ODBC, группировки подключений в Internet Information Services (IIS) можно использовать для достижения высокой производительности обработки загрузки клиента. Организация пулов соединений является обслуживание в открытое состояние на часто используемые подключения диспетчером ресурсов для подключений.  

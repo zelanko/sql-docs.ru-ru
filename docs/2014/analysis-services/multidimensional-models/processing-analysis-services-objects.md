@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 704b775a881bc3c08f9789229231e05b56005257
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050974"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62736792"
 ---
 # <a name="processing-analysis-services-objects"></a>Обработка объектов служб Analysis Services
   Обрабатываются следующие типы объектов [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] : базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , кубы, измерения, группы мер, секции, а также структуры и модели интеллектуального анализа данных. Для каждого объекта можно указать уровень обработки или назначить его обработку по умолчанию, чтобы службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] могли выбрать его автоматически. Дополнительные сведения об уровнях обработки для каждого объекта см. в разделе [Настройка параметров обработки (службы Analysis Services)](processing-options-and-settings-analysis-services.md).  
@@ -55,9 +55,9 @@ ms.locfileid: "48050974"
 ##  <a name="bkmk_procdim"></a> Обработка измерения  
  При обработке измерения службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] создают и выполняют запрос, который возвращает из таблицы измерения данные, необходимые для обработки.  
   
-|Страна|Регион продаж|Состояние|  
+|Страна|Регион продаж|Штат|  
 |-------------|------------------|-----------|  
-|США|West|Калифорния|  
+|США|West|California|  
 |США|West|Орегон|  
 |США|West|Washington|  
   
@@ -73,7 +73,7 @@ ms.locfileid: "48050974"
   
  Обработка измерения не приводит к созданию или обновлению вычисляемых элементов, определение которых выполняется на уровне куба. Вычисляемые элементы изменяются при обновлении определения куба. В результате обработки измерения агрегаты не создаются и не обновляются. Тем не менее в результате обработки измерения агрегаты могут быть удалены. Создание или обновление агрегатов выполняется только в ходе обработки секций.  
   
- При обработке измерения помните, что измерение может использоваться в нескольких кубах. При обработке измерения эти кубы отмечаются как необработанные и становятся недоступными для запросов. Чтобы одновременно обработать измерение и связанные с ним кубы, используйте настройки пакетной обработки. Дополнительные сведения см. в разделе [Batch Processing &#40;Analysis Services&#41;](batch-processing-analysis-services.md).  
+ При обработке измерения помните, что измерение может использоваться в нескольких кубах. При обработке измерения эти кубы отмечаются как необработанные и становятся недоступными для запросов. Чтобы одновременно обработать измерение и связанные с ним кубы, используйте настройки пакетной обработки. Дополнительные сведения см. в разделе [Пакетная обработка (службы Analysis Services)](batch-processing-analysis-services.md).  
   
 ##  <a name="bkmk_procmeasure"></a> Обработка группы мер  
  При обработке группы мер службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] обрабатывают некоторые или все секции в пределах этой группы мер и все необработанные измерения, участвующие в этой группе мер. Конкретная обработка зависит от выбранного параметра обработки. Можно обработать одну или несколько групп мер в службах [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , не затрагивая другие группы мер в кубе.  
@@ -94,8 +94,8 @@ ms.locfileid: "48050974"
  Дополнительные сведения об обработке структур и моделей интеллектуального анализа данных см. в разделе [Требования к обработке и связанные замечания (интеллектуальный анализ данных)](../data-mining/processing-requirements-and-considerations-data-mining.md).  
   
 ## <a name="see-also"></a>См. также  
- [Средства и способы обработки &#40;служб Analysis Services&#41;](tools-and-approaches-for-processing-analysis-services.md)   
- [Пакетная обработка &#40;служб Analysis Services&#41;](batch-processing-analysis-services.md)   
+ [Средства и способы обработки (службы Analysis Services)](tools-and-approaches-for-processing-analysis-services.md)   
+ [Пакетная обработка (службы Analysis Services)](batch-processing-analysis-services.md)   
  [Обработка объектов многомерной модели](processing-a-multidimensional-model-analysis-services.md)  
   
   

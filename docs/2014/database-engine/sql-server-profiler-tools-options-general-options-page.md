@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e0dbabfc0564d1338fb4eec8b9688acd99538576
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113064"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62844931"
 ---
 # <a name="sql-server-profiler---tools-options-general-options-page"></a>SQL Server Profiler — Сервис Параметры (страница «Общие параметры»)
   Диалоговое окно **Общие параметры** используется для просмотра или указания следующих параметров.  
@@ -61,7 +61,7 @@ ms.locfileid: "48113064"
  При открытии файла трассировки перед добавлением файла продолжения выдается запрос приложения [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] .  
   
  **Никогда не загружать последующие файлы продолжения**  
- Приложение [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] никогда не загружает последующие файлы продолжения при открытии файла трассировки.  
+ [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] никогда не загружает последующие файлы продолжения при открытии файла трассировки.  
   
 ### <a name="replay-options"></a>Параметры воспроизведения  
  **Число потоков воспроизведения по умолчанию**  
@@ -71,12 +71,12 @@ ms.locfileid: "48113064"
  Задает интервал ожидания воспроизведения в секундах. По умолчанию — 3 600 секунд (1 час). Этот параметр влияет на продолжительность времени, которое разрешается для выполнения потока, прежде чем его завершит монитор исправности.  
   
  **Интервал опроса монитора исправности по умолчанию (сек)**  
- Задайте интервал опроса монитора исправности во время воспроизведения в секундах. По умолчанию — 60 секунд. Это значение дает возможность пользователю определить, как часто монитор исправности выполняет опрос кандидатов на завершение.  
+ Задайте интервал опроса монитора исправности во время воспроизведения в секундах. По умолчанию — 60 секунд. Это значение дает возможность пользователю определить, как часто монитор исправности выполняет опрос кандидатов на завершение.  
   
 ## <a name="see-also"></a>См. также  
- [Запуск трассировки после соединения с сервером, автоматически &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)   
- [Настройка параметров по умолчанию отображения трассировки &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/set-trace-display-defaults-sql-server-profiler.md)   
- [Воспроизведение таблицы трассировки &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)   
+ [Автоматически запустить трассировку после соединения с сервером (приложение SQL Server Profiler)](../tools/sql-server-profiler/start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)   
+ [Задание значений по умолчанию для отображения трассировки (приложение SQL Server Profiler)](../tools/sql-server-profiler/set-trace-display-defaults-sql-server-profiler.md)   
+ [Воспроизведение таблицы трассировки (приложение SQL Server Profiler)](../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)   
  [Воспроизведение файла трассировки (приложение SQL Server Profiler)](../tools/sql-server-profiler/replay-a-trace-file-sql-server-profiler.md)   
  [Воспроизведение трассировок](../tools/sql-server-profiler/replay-traces.md)   
  [Настройка глобальных параметров трассировки &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/set-global-trace-options-sql-server-profiler.md)   

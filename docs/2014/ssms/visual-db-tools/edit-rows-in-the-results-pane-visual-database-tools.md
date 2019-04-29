@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f1ff20051f5486fc8e9550c961f838ab5dc5c738
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818676"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63028361"
 ---
 # <a name="edit-rows-in-the-results-pane-visual-database-tools"></a>изменить строки на панели результатов (визуальные инструменты для баз данных)
   В большинстве случаев данные на [панели результатов](visual-database-tools.md)можно изменять. Сведения об изменении данных см. в разделах [Правила обновления результатов (визуальные инструменты для баз данных)](rules-for-updating-results-visual-database-tools.md) и [Работа с данными на панели результатов (визуальные инструменты для баз данных)](work-with-data-in-the-results-pane-visual-database-tools.md)можно изменять.  

@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 648b389adf8af04e0a59365efe8be7108a265435
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384242"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62927218"
 ---
 # <a name="transfer-error-messages-task-editor-general-page"></a>Редактор задачи «Передача сообщений об ошибках» (страница «Общие»)
   Используйте страницу **Общие** диалогового окна **Редактор задачи «Передача сообщений об ошибках»** , чтобы задать имя и описание для задачи «Передача сообщений об ошибках». Задача "Передача сообщений об ошибках" передает одно или несколько пользовательских сообщений об ошибках [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] между экземплярами [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Дополнительные сведения об этой задаче см. в разделе [Transfer Error Messages Task](control-flow/transfer-error-messages-task.md).  

@@ -1,6 +1,6 @@
 - name: Инструменты
   href: reporting-services-tools.md
-- name: Учебник. Инструкции по поиску и запуску средств служб Reporting Services (SSRS)
+- name: "Руководство. Инструкции по поиску и запуску средств служб Reporting\_Services"
   href: tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md
 - name: Службы Reporting Services в SQL Server Data Tools
   href: reporting-services-in-sql-server-data-tools-ssdt.md
@@ -183,13 +183,13 @@
           href: ../new-linked-report-page-report-manager.md
         - name: Страница «Создание модели»
           href: ../new-model-page-report-manager.md
-        - name: 'Страница "Создание назначения роли", "Изменение назначения роли"'
+        - name: 'Создание назначения ролей: страница "Изменение назначения ролей"'
           href: ../new-role-assignment-edit-role-assignment-page-report-manager.md
-        - name: 'Страница "Создание расписания", "Изменение расписания"'
+        - name: 'Создание расписания: страница "Изменение расписания"'
           href: ../new-schedule-edit-schedule-page-report-manager.md
         - name: Страница "Создание подписки" или "Изменение подписки"
           href: ../new-subscription-or-edit-subscription-page-report-manager.md
-        - name: 'Страница "Создание назначения системной роли": "Изменение назначения системных ролей"'
+        - name: 'Создание назначения системной роли: страница "Изменение назначения системных ролей"'
           href: ../new-system-role-assignments-edit-system-role-assignments-page-report-manager.md
         - name: Страница «Свойства параметров»
           href: ../parameters-properties-page-report-manager.md

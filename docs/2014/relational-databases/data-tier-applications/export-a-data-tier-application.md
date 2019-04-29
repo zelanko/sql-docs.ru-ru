@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6ceac86445154648b946148d6267f6e8949af423
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59242302"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62918043"
 ---
 # <a name="export-a-data-tier-application"></a>Экспорт приложения уровня данных
   При экспорте развернутого приложения уровня данных (DAC) или базы данных создается файл экспорта, содержащий определения объектов в базе данных и все данные, содержащиеся в таблицах. Файл экспорта затем можно импортировать в другой экземпляр компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] или в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Операции экспорта-импорта могут быть совмещены для переноса приложения уровня данных с одного экземпляра на другой, а также для создания логической резервной копии или создания находящейся на предприятии копии базы данных, развернутой в службах [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  

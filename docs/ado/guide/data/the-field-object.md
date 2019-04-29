@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e152c3147ab7c316494c6891424c0a7c8173f002
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516536"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062672"
 ---
 # <a name="the-field-object"></a>Объект Field
 Каждый **поле** объекта обычно соответствует столбец в таблице базы данных. Тем не менее **поле** может также представлять указатель на другой **записей**, вызывается Глава. Исключения, например столбцах, будет рассматриваться далее в этом руководстве.  

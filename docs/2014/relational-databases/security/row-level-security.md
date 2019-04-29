@@ -17,11 +17,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8e5167948e456b721ba831bd8a3d637bb7ea3d3b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810806"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62985761"
 ---
 # <a name="row-level-security"></a>Безопасность на уровне строк
   Безопасность на уровне строк позволяет пользователям управлять доступом к строкам в таблице базы данных в зависимости от характеристик пользователя, выполняющего запрос (например, членство или контекст выполнения). Безопасность на уровне строк теперь доступна в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016. Существующее описание этой функции см. в текущей документации, в разделе [Безопасность на уровне строк](https://msdn.microsoft.com/library/dn765131.aspx) .  

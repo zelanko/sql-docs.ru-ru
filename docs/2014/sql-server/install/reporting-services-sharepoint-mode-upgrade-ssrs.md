@@ -15,11 +15,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: fe7c3f16f608d0f6e890be74cd5ae48ec4d1a121
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371636"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62913207"
 ---
 # <a name="reporting-services-sharepoint-mode-upgrade-ssrs"></a>обновление служб Reporting Services в режиме SharePoint (службы SSRS)
   На странице **Службы Reporting Services в режиме SharePoint** подтвердите обновление всех общих компонентов. Службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме SharePoint являются общим компонентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и будут обновлены вместе со всеми остальными общими компонентами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Мастер установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не поддерживает обновление одиночных общих компонентов. Все общие компоненты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обновляются одновременно.  

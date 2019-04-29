@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 08b27cdf4c3b50e1605a9e35f54eaebbdc2bb5bd
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817076"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63182903"
 ---
 # <a name="select-objects-object-explorer"></a>Выбор объектов (обозреватель объектов)
   Используйте диалоговое окно **Выбор объектов**, чтобы добавить объект к списку в другом диалоговом окне. Заголовок диалогового окна и параметры, доступные в нем, зависят от того, каким способом окно было открыто. Отображаются только доступные параметры; например доступны только имена входа, если необходимо выбрать владельца для нового объекта.  

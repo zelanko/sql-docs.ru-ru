@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bf554cac0bf20e93826c183c888b1b0176e6e7da
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377562"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62900942"
 ---
 # <a name="sql-server-compact-edition-destination-custom-properties"></a>Пользовательские свойства назначения «SQL Server Compact Edition»
   Назначение « [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact» имеет как пользовательские, так и общие для всех компонентов потока данных свойства.  

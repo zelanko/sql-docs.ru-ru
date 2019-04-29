@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 18370885fedb106f02c9b404ea946680aa048b8b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811132"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62911373"
 ---
 # <a name="provider-errors"></a>Ошибки поставщика
 При возникновении ошибки поставщика, возвращается ошибка времени выполнения объекта -2147467259. При появлении этой ошибки проверьте **ошибки** коллекцию активных **подключения** объект, который будет содержать одну или несколько ошибок, описывающие, что именно произошло.  

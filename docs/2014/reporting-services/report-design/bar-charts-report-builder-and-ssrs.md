@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a09af051826fc771f37a912f5266554f7d98fe1c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59961250"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63021074"
 ---
 # <a name="bar-charts-report-builder-and-ssrs"></a>Линейчатые диаграммы (построитель отчетов и службы SSRS)
   На линейчатой диаграмме ряд отображается в виде наборов горизонтальных линий. Простая линейчатая диаграмма очень напоминает гистограмму, на которой ряд отображается в виде наборов вертикальных линий, и линейчатую диаграмму диапазонов, на которой ряд отображается в виде наборов горизонтальных линий с разными начальными и конечными точками.  

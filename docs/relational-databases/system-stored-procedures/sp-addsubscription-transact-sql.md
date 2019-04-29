@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6a0064787eee6c3ac267b3ababcd9881e794ff2e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206393"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62998312"
 ---
 # <a name="spaddsubscription-transact-sql"></a>sp_addsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -85,15 +85,15 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @subscriber=] '*подписчика*"  
  Имя подписчика. *подписчик* — **sysname**, значение по умолчанию NULL.  
   
- [ @destination_db=] '*destination_db*"  
+ [ @destination_db=] '*destination_db*'  
  Имя целевой базы данных, в которую помещаются реплицированные данные. *destination_db* — **sysname**, значение по умолчанию NULL. Если задано значение NULL, *destination_db* присваивается имя базы данных публикации. Для издателей Oracle *destination_db* должен быть указан. Для отличных от подписчика SQL Server, укажите значение (назначение по умолчанию) для *destination_db*.  
   
- [ @sync_type=] '*sync_type*"  
+ [ @sync_type=] '*sync_type*'  
  Тип синхронизации подписки. *sync_type* — **nvarchar(255)**, и может принимать одно из следующих значений:  
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|none|Подписчик уже имеет схему и начальные данные для опубликованных таблиц.<br /><br /> Примечание. Этот аргумент является устаревшим. Вместо этого используйте значение «replication support only».|  
+|none|Подписчик уже имеет схему и начальные данные для опубликованных таблиц.<br /><br /> Примечание. Этот параметр является устаревшим. Вместо этого используйте значение «replication support only».|  
 |automatic (по умолчанию)|Схема и начальные данные для опубликованных таблиц вначале передаются подписчику.|  
 |replication support only|Предоставляет автоматическое создание на подписчике статьи хранимой процедуры и триггеров, которые поддерживают обновляемые подписки, если это подходит. Предполагает, что подписчик уже имеет схему и начальные данные для опубликованных таблиц. При настройке топологии одноранговой репликации транзакций убедитесь, что данные во всех узлах топологии идентичны. Дополнительные сведения см. в разделе [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).<br /><br /> *Не поддерживается для подписок на публикации SQL Server.*|  
 |initialize with backup|Схема и начальные данные для опубликованных таблиц извлекаются из резервной копии базы данных публикации. Предполагает, что подписчик имеет доступ к резервной копии базы данных публикации. Расположение резервной копии и тип носителя для резервной копии задаются *backupdevicename* и *backupdevicetype*. При использовании этого аргумента топология одноранговой репликации транзакций должна быть зафиксирована во время настройки.<br /><br /> *Не поддерживается для подписок на публикации SQL Server.*|  
@@ -110,13 +110,13 @@ sp_addsubscription [ @publication = ] 'publication'
 |active|Подписка инициализирована и готова к принятию изменений. Этот параметр задается, если значение *sync_type* имеет значение none, инициализации с помощью резервной копии или только поддержка репликации.|  
 |subscribed|Требуется инициализация подписки. Этот параметр задается, если значение *sync_type* выполняется автоматически.|  
   
- [ @subscription_type=] '*subscription_type*"  
+ [ @subscription_type=] '*subscription_type*'  
  Тип подписки. *subscription_type* — **nvarchar(4)**, значение по умолчанию push. Может принимать значения push или pull. Агенты распространителя принудительных подписок находятся на распространителе, а агенты распространителя подписок по запросу на подписчике. *subscription_type* может принимать значение pull для создания именованной подписки по запросу, известной издателю. Дополнительные сведения см. в статье [Подписка на публикации](../../relational-databases/replication/subscribe-to-publications.md).  
   
 > [!NOTE]  
 >  Анонимные подписки не нуждаются в использовании этой хранимой процедуры.  
   
- [ @update_mode=] '*update_mode*"  
+ [ @update_mode=] '*update_mode*'  
  — Это тип обновления. *update_mode* — **nvarchar(30)**, и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
@@ -202,10 +202,10 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @reserved=] '*зарезервированные*"  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ @enabled_for_syncmgr=] '*enabled_for_syncmgr*"  
+ [ @enabled_for_syncmgr=] '*enabled_for_syncmgr*'  
  Является ли подписку можно синхронизировать через [!INCLUDE[msCoName](../../includes/msconame-md.md)] диспетчера синхронизации Windows. *enabled_for_syncmgr* — **nvarchar(5)**, значение по умолчанию FALSE. Если это значение равно FALSE, подписка не регистрируется диспетчером синхронизации Windows. Если значение равно TRUE, подписка регистрируется диспетчером синхронизации Windows и может быть синхронизирована без запуска среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Не поддерживается для издателей Oracle.  
   
- [ @offloadagent=] '*remote_agent_activation*"  
+ [ @offloadagent= ] '*remote_agent_activation*'  
  Указывает на то, что агент может быть активирован удаленно. *remote_agent_activation* — **бит** значение по умолчанию 0.  
   
 > [!NOTE]  
@@ -319,7 +319,7 @@ sp_addsubscription [ @publication = ] 'publication'
 ## <a name="see-also"></a>См. также  
  [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
  [Создание подписки для подписчика, отличного от подписчика SQL Server](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)   
- [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
+ [Подписка на публикации](../../relational-databases/replication/subscribe-to-publications.md)   
  [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)   
  [sp_changesubstatus &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   
  [sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   

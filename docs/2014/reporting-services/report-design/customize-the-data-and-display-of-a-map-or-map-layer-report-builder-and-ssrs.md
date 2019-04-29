@@ -25,11 +25,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d3bd3ef7205591d0353d7e8ee75e2d0ec49a221d
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59954990"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185490"
 ---
 # <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>Настройка данных и отображения карты или слоя карты (построитель отчетов и службы SSRS)
   После добавления в отчет карты или слоя карты с помощью мастера может потребоваться изменить способ отображения карты в отчете. При внесении изменений следует учитывать следующие соображения.  

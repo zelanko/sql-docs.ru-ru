@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d12bf6f0e002b1f06bc96ff97608f88bd305b34b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52776336"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62960815"
 ---
 # <a name="oledb-dataread-event-class"></a>OLEDB DataRead, класс событий
   Класс событий OLEDB DataRead происходит, когда [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] вызывает поставщик OLE DB для распределенных запросов и удаленных хранимых процедур. Этот класс событий следует включать в трассировки, которые наблюдают за выполнением запросов данных от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] к поставщику OLE DB.  

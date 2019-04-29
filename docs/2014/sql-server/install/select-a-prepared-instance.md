@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3a956d03695eea8ed76151daf0d563ea649e5180
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125241"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62931618"
 ---
 # <a name="select-a-prepared-instance"></a>Выбор подготовленного экземпляра
   На странице **Выбор подготовленного экземпляра** можно указать подготовленный экземпляр для завершения.  
@@ -26,7 +26,7 @@ ms.locfileid: "48125241"
   
 ## <a name="uielement-list"></a>Список элементов пользовательского интерфейса  
  **Выберите идентификатор экземпляра**  
- Список включает все подготовленные экземпляры, которые могут быть завершены на компьютере, где выполняется установка [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Выберите подготовленный экземпляр для завершения.  
+ Список включает все подготовленные экземпляры, которые могут быть завершены на компьютере, где выполняется установка [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Выберите подготовленный экземпляр для завершения.  
   
  **Установленные экземпляры**  
  Список включает установленные, подготовленные и завершенные экземпляры.  

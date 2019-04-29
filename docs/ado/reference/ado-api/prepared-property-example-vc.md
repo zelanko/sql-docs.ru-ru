@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7be1a190773483e198a005b91470dbdbcfc50663
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532595"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63028001"
 ---
 # <a name="prepared-property-example-vc"></a>Пример свойства Prepared (Visual C++)
 В этом примере показано [подготовленных](../../../ado/reference/ado-api/prepared-property-ado.md) свойство, открыв два [команда](../../../ado/reference/ado-api/command-object-ado.md) объектов - подготовлены и не подготовлена.  

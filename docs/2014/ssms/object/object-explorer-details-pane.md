@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 76362bedfd982fe0fb513873c6822fdcf56af6de
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779026"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62999942"
 ---
 # <a name="object-explorer-details-pane"></a>Область сведений обозревателя объектов
   Подробности обозревателя объектов — это компонент среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], который обеспечивает просмотр всех объектов сервера и пользовательский интерфейс для управления ими. Возможности обозревателя объектов могут незначительно отличаться в зависимости от типа сервера, но в общем случае они включают функции разработки для баз данных, а также функции управления для всех типов серверов.  

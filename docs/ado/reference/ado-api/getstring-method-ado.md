@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1570918c423291b6c4fdd212fcb82f518dfb766e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708062"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63028201"
 ---
 # <a name="getstring-method-ado"></a>Метод GetString (ADO)
 Возвращает [записей](../../../ado/reference/ado-api/recordset-object-ado.md) как строка.  
@@ -48,7 +48,7 @@ Variant = recordset.GetString(StringFormat, NumRows, ColumnDelimiter, RowDelimit
  Необязательный параметр. Разделитель, используемый между столбцами, если указано, в противном случае символ табуляции.  
   
  *RowDelimiter*  
- Необязательный параметр. Разделитель, используемый между строками, если указано, в противном случае символ возврата каретки.  
+ Необязательный. Разделитель, используемый между строками, если указано, в противном случае символ возврата каретки.  
   
  *NullExpr*  
  Необязательный параметр. Выражение, используемое вместо значение null, если указано, в противном случае пустая строка.  

@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 17c751898aee25fa98bfeb6c2a7e1f1143bc61ae
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52752256"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62931627"
 ---
 # <a name="choose-a-resolver"></a>Выбор сопоставителя
   При выборе сопоставителя рассмотрите важность разрешения конфликтов в приложении, и определите, можно ли использовать стандартный сопоставитель конфликтов на основе приоритетов или необходимо выбрать сопоставитель статей.  

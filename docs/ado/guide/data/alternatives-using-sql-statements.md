@@ -1,5 +1,5 @@
 ---
-title: 'Варианты: С помощью инструкций SQL | Документация Майкрософт'
+title: 'Альтернатива: С помощью инструкций SQL | Документация Майкрософт'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,13 +16,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b95e6f0bd2b702080b3580b8b9eeb80ac5b06e8d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674262"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63063130"
 ---
-# <a name="alternatives-using-sql-statements"></a>Варианты: с помощью инструкций SQL
+# <a name="alternatives-using-sql-statements"></a>Альтернатива: использование инструкций SQL
 ADO также позволяет с помощью команд в качестве альтернативы его встроенные свойства и методы для изменения данных. В зависимости от поставщика, все операции, описанные в этом разделе может также быть выполнено путем передачи команды к источнику данных. Например, можно использовать инструкции SQL UPDATE для изменения данных без использования **значение** свойство **поле**. Инструкции SQL INSERT может использоваться для добавления новых записей в источник данных, а не метод ADO **AddNew**. Дополнительные сведения о SQL или языка обработки данных поставщика см. в документации источника данных.  
   
  Например можно передать строку SQL, содержащий инструкции DELETE с базой данных, как показано в следующем коде:  

@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 78cdaabe867ae67e3a1dfcb80e82cfaf95a94ed1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797912"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042220"
 ---
 # <a name="connecting-with-sqldriverconnect"></a>Подключение с помощью SQLDriverConnect
 **SQLDriverConnect** используется для подключения к источнику данных, используя строку подключения. **SQLDriverConnect** используется вместо **SQLConnect** по следующим причинам:  

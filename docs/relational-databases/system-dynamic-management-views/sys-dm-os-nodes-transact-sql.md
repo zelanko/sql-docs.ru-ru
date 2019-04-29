@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: dec718bfea5748db1baa4bb5d9be8c01b85ace26
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47643492"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013061"
 ---
 # <a name="sysdmosnodes-transact-sql"></a>sys.dm_os_nodes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47643492"
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |node_id|**smallint**|Идентификатор узла.|  
-|node_state_desc|**nvarchar(256)**|Описание состояния узла. Сначала отображаются взаимоисключающие значения, затем все их комбинации. Пример:<br /> «В сети», «Недостаток ресурсов потоков», «Отложенный с вытеснением»<br /><br />Существует четыре взаимоисключающих значения параметра node_state_desc. Они перечислены с описаниями.<br /><ul><li>СЕТИ: Узел находится в сети<li>В автономном режиме: Узел находится в автономном режиме<li>ПРОСТОЯ: Узел имеет нет ожидающих обработки запросов и он перешел в состояние простоя.<li>IDLE_READY: Узел не имеет ожидающих обработки запросов и готов к переходу в состояние бездействия.</li></ul><br />Существует три значения параметра node_state_desc, перечисленные далее вместе с описаниями.<br /><ul><li>Приложения уровня данных: Данный узел зарезервирован для [выделенного административного соединения](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md).<li>THREAD_RESOURCES_LOW: Новые потоки не могут создаваться на этом узле из-за условия нехватки памяти.<li>"Горячий" ДОБАВЛЕН: Указывает, что узлы были добавлены в ответ с поддержкой горячей события ЦП.</li></ul>|  
+|node_state_desc|**nvarchar(256)**|Описание состояния узла. Сначала отображаются взаимоисключающие значения, затем все их комбинации. Пример:<br /> «В сети», «Недостаток ресурсов потоков», «Отложенный с вытеснением»<br /><br />Существует четыре взаимоисключающих значения параметра node_state_desc. Они перечислены с описаниями.<br /><ul><li>ONLINE: Узел находится в сети<li>OFFLINE: Узел находится в автономном режиме<li>ПРОСТОЯ: Узел имеет нет ожидающих обработки запросов и он перешел в состояние простоя.<li>IDLE_READY: Узел не имеет ожидающих обработки запросов и готов к переходу в состояние бездействия.</li></ul><br />Существует три значения параметра node_state_desc, перечисленные далее вместе с описаниями.<br /><ul><li>ПРИЛОЖЕНИЯ УРОВНЯ ДАННЫХ: Данный узел зарезервирован для [выделенного административного соединения](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md).<li>THREAD_RESOURCES_LOW: Новые потоки не могут создаваться на этом узле из-за условия нехватки памяти.<li>"ГОРЯЧИЙ" ДОБАВЛЕНЫ: Указывает, что узлы были добавлены в ответ с поддержкой горячей события ЦП.</li></ul>|  
 |memory_object_address|**varbinary(8)**|Адрес объекта памяти, связанного с данным узлом. Отношение один к одному [sys.dm_os_memory_objects](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).memory_object_address.|  
 |memory_clerk_address|**varbinary(8)**|Адрес клерка памяти, связанного с данным узлом. Отношение один к одному [sys.dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md).memory_clerk_address.|  
 |io_completion_worker_address|**varbinary(8)**|Адрес исполнителя, связанного с завершением сеанса ввода-вывода для данного узла. Отношение один к одному [sys.dm_os_workers](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).worker_address.|  

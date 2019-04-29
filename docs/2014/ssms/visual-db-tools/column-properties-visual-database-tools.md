@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9865425573ae3d9c8f2e16af0da283c5ea684150
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52757586"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62990202"
 ---
 # <a name="column-properties-visual-database-tools"></a>Свойства столбца (визуальные инструменты для баз данных)
   Имеется два набора свойств столбцов: полный набор, который можно увидеть на вкладке **Свойства столбца[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в конструкторе таблиц (доступен только для баз данных**  [!INCLUDE[msCoName](../../includes/msconame-md.md)]), и сокращенный набор, который доступен в окне "Свойства" обозревателя серверов.  

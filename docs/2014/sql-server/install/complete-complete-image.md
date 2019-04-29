@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 09e18e6553837b8842ec9cd7c38bd451e5b174de
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208944"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63063310"
 ---
 # <a name="complete---complete-image"></a>Завершение (завершение образа)
   На странице **Завершение** можно проверить завершение настройки подготовленного экземпляра.  

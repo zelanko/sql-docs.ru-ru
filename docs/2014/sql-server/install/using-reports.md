@@ -37,11 +37,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: eb2537af2539854f0f66e3f6c39c3b6e5315ec6f
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59581929"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62989768"
 ---
 # <a name="using-reports"></a>Использование отчетов
   Для каждого компонента и, если необходимо, для каждого экземпляра, проанализированного мастером анализа помощника по обновлению на сервере, создается свой отчет. В отчете содержатся сведения об известных проблемах, влияющих на обновление. В отчете содержатся также ссылки на сведения и предлагаются действия по решению выявленных проблем.  

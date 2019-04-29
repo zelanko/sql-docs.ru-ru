@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 99f3b353231da86af00bc4531e2645fe0a5b1994
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753736"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63012431"
 ---
 # <a name="audit-server-operation-event-class"></a>Audit Server Operation, класс событий
   Класс событий **Audit Server Operation** возникает при выполнении таких операций аудита безопасности, как настройка параметров, ресурсов, доступа к внешним ресурсам или авторизации.  

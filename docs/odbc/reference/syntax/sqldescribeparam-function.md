@@ -21,15 +21,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 62d61d43638c0ca6e3e43da83367dff461033463
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750852"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62982296"
 ---
 # <a name="sqldescribeparam-function"></a>Функция SQLDescribeParam
 **Соответствие стандартам**  
- Версия была введена: ODBC 1.0 соответствует стандартам: ODBC  
+ Представленные версии: Соответствие стандартам 1.0 ODBC: интерфейс ODBC  
   
  **Сводка**  
  **SQLDescribeParam** возвращает описание маркер параметра, связанный с подготовленной инструкции SQL. Эта информация также доступна в полях IPD.  
@@ -55,13 +55,13 @@ SQLRETURN SQLDescribeParam(
  [Вход] Параметр маркера заказанного количества последовательно в порядке возрастания параметра, начиная с 1.  
   
  *DataTypePtr*  
- [Выход] Указатель на буфер, в которую будет возвращен тип данных SQL параметра. Это значение считывается из поля записи SQL_DESC_CONCISE_TYPE в IPD. Это будет иметь одно из значений в [типы данных SQL](../../../odbc/reference/appendixes/sql-data-types.md) раздел типы данных приложение D: или к типу данных специфические для драйвера SQL.  
+ [Выход] Указатель на буфер, в которую будет возвращен тип данных SQL параметра. Это значение считывается из поля записи SQL_DESC_CONCISE_TYPE в IPD. Это будет иметь одно из значений в [типы данных SQL](../../../odbc/reference/appendixes/sql-data-types.md) части приложение г Типы данных, или к типу данных специфические для драйвера SQL.  
   
  В ODBC 3. *x*, SQL_TYPE_DATE SQL_TYPE_TIME и SQL_TYPE_TIMESTAMP будет возвращаться в  *\*DataTypePtr* для даты, времени или данных отметки времени соответственно; в ODBC 2. *x*, SQL_DATE, SQL_TIME или SQL_TIMESTAMP будет возвращаться. Диспетчер драйверов выполняет обязательные сопоставления при ODBC 2. *x* при работе с ODBC 3. *x* драйвера или ODBC 3. *x* при работе с ODBC 2. *x* драйвера.  
   
  Когда *ColumnNumber* равен 0 (для столбца закладки) SQL_BINARY возвращается в  *\*DataTypePtr* для закладок переменной длины. (SQL_INTEGER возвращается, если закладки используются ODBC 3. *x* приложение, которое работает с ODBC 2. *x* драйвера или ODBC 2. *x* приложение, которое работает с ODBC 3. *x* драйвера.)  
   
- Дополнительные сведения см. в разделе [типы данных SQL](../../../odbc/reference/appendixes/sql-data-types.md) в типах данных приложение D:. Сведения о типах данных драйвера SQL см. в разделе документации по драйверу.  
+ Дополнительные сведения см. в разделе [типы данных SQL](../../../odbc/reference/appendixes/sql-data-types.md) в приложение г Типы данных. Сведения о типах данных драйвера SQL см. в разделе документации по драйверу.  
   
  *ParameterSizePtr*  
  [Выход] Указатель на буфер, в которую будет возвращен размер в символах, столбца или выражения соответствующего маркера параметра, как определено в источнике данных. Дополнительные сведения о размер столбца, см. в разделе [размер столбца, десятичных разрядов, длительность октета передачи и отображаемый размер](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md).  
@@ -79,7 +79,7 @@ SQLRETURN SQLDescribeParam(
 -   SQL_NULLABLE_UNKNOWN: Драйвер не может определить, допускает ли параметр значения NULL.  
   
 ## <a name="returns"></a>Возвращает  
- Значение SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, значение SQL_ERROR или SQL_INVALID_HANDLE.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR, or SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Диагностика  
  Когда **SQLDescribeParam** возвращает значение SQL_ERROR или SQL_SUCCESS_WITH_INFO, а связанное значение SQLSTATE можно получить, вызвав **SQLGetDiagRec** с *HandleType* из Значение SQL_HANDLE_STMT и *обрабатывать* из *StatementHandle*. В следующей таблице перечислены значения SQLSTATE, обычно возвращаемые при помощи **SQLDescribeParam** и объясняется каждый из них в контексте этой функции; описания SQLSTATE, возвращаемых диспетчером драйверов предшествует обозначение «(DM)». Возвращается связанный с каждого значения SQLSTATE значение SQL_ERROR, если не указано иное.  

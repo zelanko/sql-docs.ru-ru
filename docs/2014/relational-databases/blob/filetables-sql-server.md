@@ -16,11 +16,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 9064fc889b784d94d333c8c488e07ae7785cc558
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188206"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874759"
 ---
 # <a name="filetables-sql-server"></a>Таблицы FileTable (SQL Server)
   Функция FileTable обеспечивает поддержку пространства имен файлов Windows и совместимость с приложениями Windows для файлов данных, хранящихся в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Таблица FileTable позволяет приложению интегрировать свои компоненты хранения и управления данными, а также обеспечивает работу интегрированных служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , включая полнотекстовый и семантический поиск, с неструктурированными данными и метаданными.  
@@ -132,7 +132,7 @@ ms.locfileid: "48188206"
  [Совместимость FileTable с другими компонентами SQL Server](filetable-compatibility-with-other-sql-server-features.md)  
  Описывает работу таблиц FileTable совместно с другими компонентами SQL Server.  
   
- [Инструкции DDL, функции, хранимые процедуры и представления для FileTable](../views/views.md)  
+ [Инструкции FileTable языка DDL, функции, хранимые процедуры и представления](../views/views.md)  
  Приведен список инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] и объектов базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , добавленных или измененных для поддержки функциональности FileTable.  
   
  

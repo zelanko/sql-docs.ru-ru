@@ -1,5 +1,5 @@
 ---
-title: Представление перспективы (табличное) | Документы Microsoft
+title: Представление перспективы (табличное) | Документация Майкрософт
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,17 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8ee406b4a5f1f9e366457ac150f10da226551f79
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63019312"
 ---
 # <a name="perspective-representation-tabular"></a>Представление перспективы (табличное)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Перспектива представляет собой механизм упрощения или фокусировки модели в меньшую ее часть для клиентского приложения.  
   
- В разделе [представление перспективы (табличные данные)](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/perspective-representation-tabular.md) подробные пояснения о том, как создать и управлять ею представление перспективы.  
+ См. в разделе [представление перспективы (табличные данные)](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/perspective-representation-tabular.md) Дополнительные сведения о способах создания и управления им представление перспективы.  
   
 > [!WARNING]  
 >  Перспективы не являются механизмом безопасности; к объектам вне перспективы пользователь все равно может получить доступ посредством других интерфейсов.  

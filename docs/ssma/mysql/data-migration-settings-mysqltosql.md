@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 90f76ef4d52fd5a1b7ed04d268954d0fed756324
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681152"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63183067"
 ---
 # <a name="data-migration-settings-mysqltosql"></a>Параметры миграции данных (MySQLToSQL)
   
@@ -48,9 +48,9 @@ ms.locfileid: "51681152"
   
 Существуют две кнопки присутствует находящие отклик у.:  
   
--   **Применить:** щелкните **применить** для применения параметров, которые были изменены.  
+-   **Примените:** Нажмите кнопку **применить** для применения параметров, которые были изменены.  
   
--   **Отмена:** щелкните **отменить** восстановления присутствует параметров, прежде чем были внесены изменения.  
+-   **Отмена:** Нажмите кнопку **отменить** восстановления присутствует параметров, прежде чем были внесены изменения.  
   
 ## <a name="see-also"></a>См. также  
 [Перенос данных MySQL в SQL Server/SQL Azure](https://msdn.microsoft.com/a6a7f4d6-68aa-4a38-93bf-53eba0d7dc82)  

@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: eb61a77aca509393143d4abae98af0a9efb5e888
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407151"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63048048"
 ---
 # <a name="sysdmoslatchstats-transact-sql"></a>sys.dm_os_latch_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "52407151"
 |-----------------|---------------|-----------------|  
 |latch_class|**nvarchar(120)**|Имя класса кратковременных блокировок.|  
 |waiting_requests_count|**bigint**|Число ожиданий кратковременных блокировок в данном классе. Этот счетчик увеличивается в начале ожидания кратковременной блокировки.|  
-|wait_time_ms|**bigint**|Общее время ожидания кратковременных блокировок в данном классе в миллисекундах.<br /><br /> **Примечание.** Этот столбец обновляется раз в пять минут в течение периода ожидания кратковременной блокировки и в конце ожидания кратковременной блокировки.|  
+|wait_time_ms|**bigint**|Общее время ожидания кратковременных блокировок в данном классе в миллисекундах.<br /><br /> **Примечание.** Этот столбец обновляется каждые пять минут, во время ожидания кратковременной блокировки и в конце ожидания кратковременной блокировки.|  
 |max_wait_time_ms|**bigint**|Максимальный период времени ожидания данной кратковременной блокировки объектом памяти. Если данное значение неестественно велико, это может указывать на взаимоблокировку.|  
 |pdw_node_id|**int**|**Применяется к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор для узла, это распределение является на.|  
   

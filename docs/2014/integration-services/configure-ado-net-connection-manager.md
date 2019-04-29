@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 75408785e3aad3a535b418983e2fbcd16df40429
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58380232"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62834491"
 ---
 # <a name="configure-adonet-connection-manager"></a>настройка диспетчера соединений ADO.NET
   Диалоговое окно **Настройка диспетчера соединений ADO.NET** используется для добавления соединения с источником данных, доступ к которому будет осуществляться с помощью поставщика данных .NET Framework, например поставщиком SqlClient. Диспетчер соединений использует существующее соединение, либо можно создать новое.  

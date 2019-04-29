@@ -20,11 +20,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7ba2dd0979fd1bd82fc8bd7821fe039f721a6f84
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59962510"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63020159"
 ---
 # <a name="instanceid-property-wmi-msreportserverinstance"></a>Свойство InstanceID (WMI MSReportServer_Instance)
   Этот объект поддерживает инфраструктуру служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и не предназначен для использования непосредственно из программного кода.  

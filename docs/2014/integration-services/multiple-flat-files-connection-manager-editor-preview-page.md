@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 410846777858b8c0923c544d33656e76b1199301
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392062"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62890586"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-preview-page"></a>Редактор диспетчера соединений с несколькими неструктурированными файлами (страница «Предварительный просмотр»)
   Используйте страницу **Предварительный просмотр** диалогового окна **Редактор диспетчера соединений с несколькими неструктурированными файлами** для просмотра содержимого первого выбранного исходного файла, разделенного на столбцы в соответствии с определениями пользователя.  

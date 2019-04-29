@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fd6f1d63b0de5e8ce0fda7ab4fbc727c70f67bbd
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52794376"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63022735"
 ---
 # <a name="mssqlrepl027056"></a>MSSQL_REPL027056
     
@@ -48,7 +48,7 @@ ms.locfileid: "52794376"
   
 2.  Укажите наименьшее возможное значение срока хранения публикации. Дополнительные сведения см. в разделе [Subscription Expiration and Deactivation](subscription-expiration-and-deactivation.md).  
   
-3.  В процессе обслуживания репликации слиянием иногда проверяйте увеличение размера системных таблиц, связанных с репликацией слиянием. **MSmerge_contents**, **MSmerge_genhistory**, и **MSmerge_tombstone**, **MSmerge_current_partition_mappings**, и **MSmerge_ past_partition_mappings**. Время от времени проводите повторную индексацию этих таблиц. Дополнительные сведения см. в статье [Реорганизация и перестроение индексов](../indexes/indexes.md).  
+3.  В процессе обслуживания репликации слиянием иногда проверяйте увеличение размера системных таблиц, связанных с репликацией слиянием: **MSmerge_contents**, **MSmerge_genhistory**, **MSmerge_tombstone**, **MSmerge_current_partition_mappings** и **MSmerge_past_partition_mappings**. Время от времени проводите повторную индексацию этих таблиц. Дополнительные сведения см. в статье [Реорганизация и перестроение индексов](../indexes/indexes.md).  
   
 ## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и событиям (репликация)](errors-and-events-reference-replication.md)  

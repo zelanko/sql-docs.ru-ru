@@ -1,5 +1,5 @@
 ---
-title: 'Резервное копирование и восстановление: взаимодействие и сосуществование (SQL Server) | Документация Майкрософт'
+title: 'Резервное копирование и восстановление: Взаимодействие и сосуществование (SQL Server) | Документация Майкрософт'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,13 +17,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 96fd1b081ec9d990014dc61db7938f745cffa041
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155574"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62922439"
 ---
-# <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>Резервное копирование и восстановление: взаимодействие и сосуществование
+# <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>Резервное копирование и восстановление: Взаимодействие и сосуществование (SQL Server)
   В этом разделе описываются вопросы резервного копирования и восстановления для нескольких функций [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Это восстановление файлов и запуск базы данных, оперативное восстановление и отключенные индексы, зеркальное отображение базы данных, поэтапное восстановление и полнотекстовые индексы.  
   
  **В этом разделе.**  
@@ -132,6 +132,6 @@ ms.locfileid: "48155574"
 ## <a name="see-also"></a>См. также  
  [Резервное копирование и восстановление баз данных SQL Server](back-up-and-restore-of-sql-server-databases.md)   
  [Создание резервных копий реплицируемых баз данных и восстановление из них](../replication/administration/back-up-and-restore-replicated-databases.md)   
- [Активные вторичные реплики: Резервное копирование во вторичных репликах &#40;группы доступности AlwaysOn&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
+ [Активные вторичные реплики: Резервного копирования во вторичных репликах &#40;группы доступности AlwaysOn&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
   
   

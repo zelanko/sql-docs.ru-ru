@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cbfbb923a831901bd42724759372f8b1f7ccbc0c
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493456"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62997950"
 ---
 # <a name="spchangearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -90,7 +90,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**0x1000**|Реплицирует параметры сортировки на уровне столбцов.|  
 ||**0x2000**|Реплицирует расширенные свойства, связанные с исходным объектом опубликованной статьи.|  
 ||**0x4000**|Реплицирует уникальные ключи для статьи таблицы, если они определены.|  
-||**0x8000**|Реплицирует первичный ключ и уникальные ключи статьи таблиц в виде ограничений, используя инструкции ALTER TABLE.<br /><br /> Примечание. Этот аргумент является устаревшим. Используйте **0x80** и **0x4000** вместо этого.|  
+||**0x8000**|Реплицирует первичный ключ и уникальные ключи статьи таблиц в виде ограничений, используя инструкции ALTER TABLE.<br /><br /> Примечание. Этот параметр является устаревшим. Используйте **0x80** и **0x4000** вместо этого.|  
 ||**0x10000**|Реплицирует ограничения CHECK как NOT FOR REPLICATION, чтобы они не применялись при синхронизации.|  
 ||**0x20000**|Реплицирует ограничения FOREIGN KEY как NOT FOR REPLICATION, чтобы они не применялись при синхронизации.|  
 ||**0x40000**|Реплицирует файловые группы, связанные с секционированной таблицей или индексом.|  

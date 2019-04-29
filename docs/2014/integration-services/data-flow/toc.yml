@@ -385,7 +385,7 @@
   items:
     - name: Установка и удаление компонента источника OData
       href: ../install-and-uninstall-odata-source-component.md
-    - name: Учебник. Использование источника OData
+    - name: "Руководство. Использование источника\_OData"
       href: tutorial-using-the-odata-source.md
     - name: Изменение запроса источника OData во время выполнения
       href: modify-odata-source-query-at-runtime.md

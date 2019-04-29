@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e3ecd203bfce80ffe4c64dcf0ca274f7e50f6ff1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544394"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62736943"
 ---
 # <a name="unary-operators-in-parent-child-dimensions"></a>Унарные операторы в измерениях типа «родители-потомки»
   В измерении, содержащем связь типа "родитель-потомок" в службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], нужно указывать столбец унарного оператора (или пользовательской свертки), который определяет пользовательскую свертку для всех невычисляемых элементов родительского атрибута. Унарный оператор применяется к элементам каждый раз, когда оцениваются значения родительских элементов. Свойство **UnaryOperatorColumn** в родительском атрибуте (**Использование**=Родитель) задает столбец таблицы в представлении источника данных, в которой содержатся унарные операторы. Значения для операторов пользовательской свертки, хранящихся в данном столбце, применяются к каждому элементу атрибута.  

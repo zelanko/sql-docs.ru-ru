@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d80de6087997b6af0202dafae7576ba442514abf
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212393"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062412"
 ---
 # <a name="sqldriverconnect-function"></a>Функция SQLDriverConnect
 **Соответствие стандартам**  
@@ -93,7 +93,7 @@ SQLRETURN SQLDriverConnect(
  (Дополнительные сведения см. в разделе «Комментарии».)  
   
 ## <a name="returns"></a>Возвращает  
- Значение SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, значение SQL_ERROR, SQL_INVALID_HANDLE или SQL_STILL_EXECUTING.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_ERROR, SQL_INVALID_HANDLE, or SQL_STILL_EXECUTING.  
   
 ## <a name="diagnostics"></a>Диагностика  
  Когда **SQLDriverConnect** возвращает значение SQL_ERROR или SQL_SUCCESS_WITH_INFO, можно получить путем вызова связанного значения SQLSTATE **SQLGetDiagRec** с *fHandleType*из SQL_HANDLE_DBC и *hHandle* из *ConnectionHandle*. В следующей таблице перечислены значения SQLSTATE, обычно возвращаемые **SQLDriverConnect** и объясняется каждый из них в контексте этой функции; описания SQLSTATE, возвращаемых диспетчером драйверов предшествует обозначение «(DM)». Возвращается связанный с каждого значения SQLSTATE значение SQL_ERROR, если не указано иное.  
@@ -145,11 +145,11 @@ SQLRETURN SQLDriverConnect(
 ## <a name="comments"></a>Комментарии  
  Строка подключения имеет следующий синтаксис:  
   
- *Строка подключения* :: = *пустой строкой*[;] &#124; *атрибут*[;] &#124; *атрибут*; *строки подключения*  
+ *connection-string* ::= *empty-string*[;] &#124; *attribute*[;] &#124; *attribute*; *connection-string*  
   
- *пустой строкой* :: =*атрибут* :: = *ключевым словом атрибутов*=*значение атрибута* &#124; ДРАЙВЕР = [{}] *значение атрибута*[}]  
+ *empty-string* ::=*attribute* ::= *attribute-keyword*=*attribute-value* &#124; DRIVER=[{]*attribute-value*[}]  
   
- *Ключевое слово атрибута* :: = DSN &#124; UID &#124; PWD &#124; *драйвер определенные атрибут-ключевое слово*  
+ *attribute-keyword* ::= DSN &#124; UID &#124; PWD &#124; *driver-defined-attribute-keyword*  
   
  *attribute-value* ::= *character-string*  
   
