@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6e4327de10dd03b3ff8cf034ade64391d18d2a86
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758346"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63192898"
 ---
 # <a name="view-and-modify-replication-agent-command-prompt-parameters-sql-server-management-studio"></a>Просмотр и изменение параметров командной строки агента репликации (среда SQL Server Management Studio)
   Агенты репликации — это исполняемые файлы, принимающие параметры командной строки. По умолчанию агенты выполняются в рамках шагов заданий агента [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], поэтому эти параметры можно просматривать и изменять с помощью диалогового окна **Свойства задания — \<задание>**. Доступ к этому диалоговому окну можно получить из папки **Задания** в среде [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] и на вкладке **Агенты** монитора репликации. Сведения о запуске монитора репликации см. в [этой статье](../monitor/start-the-replication-monitor.md).  

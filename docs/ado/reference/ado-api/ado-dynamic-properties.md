@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c940fbdc48d900da77d03dfb3b806080cff0c04e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726602"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249053"
 ---
 # <a name="ado-dynamic-properties"></a>Динамические свойства ADO
 Динамические свойства, которые могут добавляться к [свойства](../../../ado/reference/ado-api/properties-collection-ado.md) коллекции [подключения](../../../ado/reference/ado-api/connection-object-ado.md), [команда](../../../ado/reference/ado-api/command-object-ado.md), или [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объектов. Источником для этих свойств является либо поставщик данных, таких как [поставщик OLE DB для SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md), или к поставщику услуг, таких как [служба курсора Майкрософт для OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md). Укажите ссылку на подходящий поставщик данных или документации по поставщику службы Дополнительные сведения об определенном свойстве динамического.  
@@ -41,7 +41,7 @@ ms.locfileid: "47726602"
  [Справочник по API ADO](../../../ado/reference/ado-api/ado-api-reference.md)   
  [Коллекции ADO](../../../ado/reference/ado-api/ado-collections.md)   
  [Перечисляемые константы ADO](../../../ado/reference/ado-api/ado-enumerated-constants.md)   
- [Приложение б. ошибки объектов ADO](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
+ [Приложение б. Ошибки ADO](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
  [События ADO](../../../ado/reference/ado-api/ado-events.md)   
  [Методы ADO](../../../ado/reference/ado-api/ado-methods.md)   
  [Объектная модель ADO](../../../ado/reference/ado-api/ado-object-model.md)   

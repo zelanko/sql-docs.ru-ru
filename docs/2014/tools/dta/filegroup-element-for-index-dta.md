@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d88acb23573afbd38e24836e254e8f54921806c0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782976"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63154608"
 ---
 # <a name="filegroup-element-for-index-dta"></a>Элемент Filegroup описания индекса (DTA)
   Определяет группу файлов, по которой будет создан индекс в пользовательской конфигурации.  
@@ -41,7 +41,7 @@ ms.locfileid: "52782976"
 |--------------------|-----------------|  
 |**Тип данных и длина**|`string`, неограниченная длина|  
 |**Значение по умолчанию**|Нет.|  
-|**Наличие**|Необязательный. Может использоваться один раз для каждого элемента `Index`. Этот элемент нельзя использовать, если для элемента `PartitionScheme` определены элементы `PartitionColumn` и `Index`.|  
+|**Наличие**|Необязательный параметр. Может использоваться один раз для каждого элемента `Index`. Этот элемент нельзя использовать, если для элемента `PartitionScheme` определены элементы `PartitionColumn` и `Index`.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   

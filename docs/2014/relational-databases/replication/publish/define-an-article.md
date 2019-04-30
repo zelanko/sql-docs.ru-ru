@@ -19,11 +19,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 21ae1c8019617005bd87e426ec314f6237fdab38
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355968"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63128721"
 ---
 # <a name="define-an-article"></a>Определение статьи
   В данном разделе описывается определение статьи в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или объектов RMO.  
@@ -48,7 +48,7 @@ ms.locfileid: "53355968"
   
 ###  <a name="Restrictions"></a> Ограничения  
   
--   Названия статей не могут содержать следующие символы: % , * , [ , ] , | , : , " , ? , ', \, /, \< , >. Если объекты в базе данных, содержащие любые из этих символов, нужно реплицировать, необходимо задать для статьи имя, отличное от имени объекта.  
+-   Названия статей не могут содержать следующие символы: % , * , [ , ] , | , : , " , ? , ' , \ , / , \< , >. Если объекты в базе данных, содержащие любые из этих символов, нужно реплицировать, необходимо задать для статьи имя, отличное от имени объекта.  
   
 ##  <a name="Security"></a> безопасность  
  По возможности предлагайте пользователям вводить учетные данные системы безопасности во время выполнения приложения. Если необходимо хранить учетные данные, используйте [службы шифрования](https://go.microsoft.com/fwlink/?LinkId=34733) , предоставляемые платформой [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows .NET Framework.  
