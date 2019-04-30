@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d56689bb045a6540bfdfbb9c7147dc34db110bde
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123630"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63207005"
 ---
 # <a name="date-and-time-improvements-odbc"></a>Улучшения функций даты и времени (ODBC)
   В [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] добавлены новые типы данных даты и времени. В этом разделе описывается, каким образом эти новые типы доступны в виде расширений в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Общие сведения о [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддержки собственным клиентом новые типы даты и времени данных, см. в разделе [время улучшения функций даты и](../native-client/features/date-and-time-improvements.md). Образец, демонстрирующий поддержку ODBC даты и времени, см. в разделе [использование данных даты и времени типы](../native-client-odbc-how-to/use-date-and-time-types.md).  

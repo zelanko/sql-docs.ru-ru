@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ff48c85e24c0f2c21e06fa868ee933e9455e25c3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102684"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63244712"
 ---
 # <a name="installation-progress"></a>Ход выполнения установки
   Страница **Выполнение установки** мастера установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] позволяет наблюдать за состоянием установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

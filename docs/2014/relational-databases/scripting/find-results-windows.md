@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 10e5dfa6bd2ca34fe24433333bc20c99bcf25a66
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328464"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63225252"
 ---
 # <a name="find-results-windows"></a>Окна «Результаты поиска»
   В двух окнах «Результаты поиска» отображаются совпадения, найденные с использованием вкладок **Поиск в файлах** или **Замена в файлах** диалогового окна **Найти и заменить** . Команда **Параметры результата** для **Поиск в файлах** и **Замена в файлах** позволяет выбрать окно «Результаты поиска», содержащее список найденных совпадений.  

@@ -1,5 +1,5 @@
 ---
-title: StdevP (многомерные Выражения) | Документы Microsoft
+title: StdevP (многомерные Выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 14117ed4a3e3e7afc0152c5e659d1c7f040957e9
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742933"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63150139"
 ---
 # <a name="stdevp-mdx"></a>StdevP (многомерные выражения)
 
@@ -36,7 +36,7 @@ StdevP(Set_Expression [ ,Numeric_Expression ] )
  Допустимое числовое выражение (обычно многомерное выражение координат ячейки), возвращающее число.  
   
 ## <a name="remarks"></a>Примечания  
- **StdevP** функция использует смещенной совокупности формул при [Stdev](../mdx/stdev-mdx.md) функции используется формула несмещенной совокупности.  
+ **StdevP** функция использует смещенной совокупности формул при [Stdev](../mdx/stdev-mdx.md) функция использует формулу несмещенной совокупности.  
   
 ## <a name="example"></a>Пример  
  В следующем примере возвращается среднеквадратичное отклонение количества сделанных через Интернет заказов, которое вычисляется за первые три месяца 2003 г., при этом используется формула смещенной совокупности.  
@@ -53,6 +53,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Справочник по функциям многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0ec40b97f8953f114081292ac82069fd4a81692a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208650"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63132715"
 ---
 # <a name="sqlinstalldriverex-function"></a>Функция SQLInstallDriverEx
 **Соответствие стандартам**  

@@ -23,16 +23,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4d546fff544c616d4f2750dba76c4b8e68d21aab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619529"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63241006"
 ---
 # <a name="datetime-data-types"></a>Типы данных даты и времени
 В ODBC 3 *.x*, идентификаторы для даты, времени и типы данных timestamp SQL были изменены относительно SQL_DATE, SQL_TIME и SQL_TIMESTAMP (экземплярами **#define** в файле заголовка, 9, 10 и 11) для SQL_ TYPE_DATE, SQL_TYPE_TIME и SQL_TYPE_TIMESTAMP (экземплярами **#define** в файле заголовка, 91, 92 и 93), соответственно. Соответствующий тип C идентификаторы были изменены относительно SQL_C_DATE SQL_C_TIME и SQL_C_TIMESTAMP SQL_C_TYPE_DATE SQL_C_TYPE_TIME и SQL_C_TYPE_TIMESTAMP, соответственно и в экземплярах **#define** были изменены соответствующим образом.  
   
- Размер столбца и десятичных цифр, возвращаемых для типов данных даты и времени SQL в ODBC 3 *.x* являются, так же, как точность и масштаб возвращается для них в ODBC 2. *x*. Эти значения могут отличаться от значений в полях дескриптора SQL_DESC_PRECISION и SQL_DESC_SCALE. (Дополнительные сведения см. в разделе [размер столбца, десятичных разрядов, длительность октета передачи и отображаемый размер](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) в типах данных приложение D:.)  
+ Размер столбца и десятичных цифр, возвращаемых для типов данных даты и времени SQL в ODBC 3 *.x* являются, так же, как точность и масштаб возвращается для них в ODBC 2. *x*. Эти значения могут отличаться от значений в полях дескриптора SQL_DESC_PRECISION и SQL_DESC_SCALE. (Дополнительные сведения см. в разделе [размер столбца, десятичных разрядов, длительность октета передачи и отображаемый размер](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) в приложение г Типы данных).  
   
  Эти изменения влияют на **SQLDescribeCol**, **SQLDescribeParam**, и **SQLColAttributes**; **SQLBindCol**, **SQLBindParameter**, и **SQLGetData**; и **SQLColumns**, **SQLGetTypeInfo** , **SQLProcedureColumns**, **SQLStatistics**, и **SQLSpecialColumns**.  
   

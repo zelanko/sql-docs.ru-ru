@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c9876003e57a69b8a1eacddaa3e41b681c806e7f
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59953800"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200983"
 ---
 # <a name="report-server-in-management-studio-f1-help"></a>Справка F1 по использованию сервера отчетов среде Management Studio
   Этот раздел включает подразделы с описанием диалоговых окон в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , которые можно использовать для управления серверами отчетов.  

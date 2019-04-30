@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a79e97721f246d47f8fab413be8074836f753cbe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826262"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63135312"
 ---
 # <a name="sqlgetinfo-returned-values-for-access"></a>Возвращаемые значения SQLGetInfo для Access
 В следующей таблице перечислены языка C# defines для *fInfoType* аргумент и соответствующие значения, возвращаемые методом **SQLGetInfo**. Эти сведения можно получить, передав перечисленных языка C# defines **SQLGetInfo** в *fInfoType* аргумент. Дополнительные сведения о значениях, возвращаемых **SQLGetInfo**, см. в разделе *Справочник по программированию ODBC*.  
@@ -142,7 +142,7 @@ ms.locfileid: "47826262"
 |SQL_NON_NULLABLE_COLUMNS|SQL_NNC_NON_NULL|  
 |SQL_NULL_COLLATION|SQL_NC_LOW|  
 |SQL_NUMERIC_FUNCTIONS|Несколько значений|  
-|SQL_ODBC_SAG_CLI_ СООТВЕТСТВИЯ|SQL_OSCC_COMPLIANT|  
+|SQL_ODBC_SAG_CLI_ CONFORMANCE|SQL_OSCC_COMPLIANT|  
 |SQL_ODBC_SQL_INTEGRITY|"N"|  
 |SQL_ODBC_VER|Из диспетчера драйверов|  
 |SQL_OJ_CAPABILITIES|Несколько значений|  

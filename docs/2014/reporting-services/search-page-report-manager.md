@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 66b4e98e08db2799d2038973db815b73ece63f53
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59933310"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63237709"
 ---
 # <a name="search-page-report-manager"></a>Страница «Поиск» (диспетчер отчетов)
   На странице «Результаты поиска» можно просмотреть результаты операции поиска, заданной в отчете, моделях отчетов, связанном отчете, общем источнике данных, папке или ресурсе. Результаты поиска приводятся в списке в алфавитном порядке. Их можно сортировать по типу, имени или описанию.  

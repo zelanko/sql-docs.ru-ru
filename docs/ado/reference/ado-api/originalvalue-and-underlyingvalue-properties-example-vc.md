@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e6b2f13f84f8776756253592f9b293a2a3764da9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623732"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239945"
 ---
 # <a name="originalvalue-and-underlyingvalue-properties-example-vc"></a>Примеры OriginalValue и Underlyingvalue свойства (Visual C++)
 В этом примере показано [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) и [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md) свойства, отображая сообщение, если запись основного данных был изменен в течение [записей](../../../ado/reference/ado-api/recordset-object-ado.md) пакетное обновление.  
@@ -196,27 +196,27 @@ void PrintComError(_com_error &e) {
 ```  
   
  **Данные изменились!**  
-**Идентификатор, название: PS1372**  
+**Идентификатор заголовка: PS1372**  
 **Текущее значение: self_help**   
 **Исходное значение: психологии**   
 **Базовое значение: социологии**   
 **Данные изменились!**  
-**Идентификатор, название: PS2091**  
+**Идентификатор заголовка: PS2091**  
 **Текущее значение: self_help**   
 **Исходное значение: психологии**   
 **Базовое значение: социологии**   
 **Данные изменились!**  
-**Идентификатор, название: PS2106**  
+**Идентификатор заголовка: PS2106**  
 **Текущее значение: self_help**   
 **Исходное значение: психологии**   
 **Базовое значение: социологии**   
 **Данные изменились!**  
-**Идентификатор, название: PS3333**  
+**Идентификатор заголовка: PS3333**  
 **Текущее значение: self_help**   
 **Исходное значение: психологии**   
 **Базовое значение: социологии**   
 **Данные изменились!**  
-**Идентификатор, название: PS7777**  
+**Идентификатор заголовка: PS7777**  
 **Текущее значение: self_help**   
 **Исходное значение: психологии**   
 **Базовое значение: социологии**    

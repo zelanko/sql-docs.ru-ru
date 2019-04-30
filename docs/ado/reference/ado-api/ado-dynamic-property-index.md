@@ -13,14 +13,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 60347cbffcc169c47149e27cf1064cd9c68494f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684732"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249558"
 ---
 # <a name="ado-dynamic-property-index"></a>Индекс динамических свойств ADO
-Поставщики данных, поставщиков служб и компонентов службы можно добавить все динамические свойства **свойства** коллекции неоткрытый [подключения](../../../ado/reference/ado-api/connection-object-ado.md) и [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекты. Данного поставщика также может добавить дополнительные свойства, при открытии этих объектов. Некоторые из этих свойств, перечислены в [динамические свойства ADO](../../../ado/reference/ado-api/ado-dynamic-properties.md) раздел. Сведения отображаются в категории определенными поставщиками в [приложение а. Поставщики](../../../ado/guide/appendixes/appendix-a-providers.md) раздел.  
+Поставщики данных, поставщиков служб и компонентов службы можно добавить все динамические свойства **свойства** коллекции неоткрытый [подключения](../../../ado/reference/ado-api/connection-object-ado.md) и [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекты. Данного поставщика также может добавить дополнительные свойства, при открытии этих объектов. Некоторые из этих свойств, перечислены в [динамические свойства ADO](../../../ado/reference/ado-api/ado-dynamic-properties.md) раздел. Сведения отображаются в категории определенными поставщиками в [приложении a. Поставщики](../../../ado/guide/appendixes/appendix-a-providers.md) раздел.  
   
  В следующих таблицах представлены cross-indexes имен для каждого стандартный OLE DB поставщика динамические свойства ADO и OLE DB. Ваши поставщики могут добавлять больше свойств, чем перечисленные ниже. Сведения о динамических свойствах конкретного поставщика см. в документации поставщика.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "47684732"
 |Многотабличное обновление|DBPROP_MULTITABLEUPDATE|  
 |Порядок сортировки NULL|DBPROP_NULLCOLLATION|  
 |Поведение при конкатенации с NULL|DBPROP_CONCATNULLBEHAVIOR|  
-|Службы OLE DB|DBPROP_INIT_OLEDBSERVICES, УСТАНОВИТЬ|  
+|Службы OLE DB|DBPROP_INIT_OLEDBSERVICES|  
 |Версия OLE DB|DBPROP_PROVIDEROLEDBVER|  
 |Поддержка объектов OLE|DBPROP_OLEOBJECTS|  
 |Поддержка открытия наборов данных|DBPROP_OPENROWSETSUPPORT|  
@@ -196,7 +196,7 @@ ms.locfileid: "47684732"
 |Уникальный каталог|DBPROP_ADC_UNIQUECATALOG|  
 |Уникальные строки|DBPROP_UNIQUEROWS|  
 |Уникальной схемы|DBPROP_ADC_UNIQUESCHEMA|  
-|Уникальной таблицы|DBPROP_ADC_UNIQUETABLE|  
+|уникальная таблица|DBPROP_ADC_UNIQUETABLE|  
 |Возможности обновления|DBPROP_UPDATABILITY|  
 |Обновления условиям|DBPROP_ADC_UPDATECRITERIA|  
 |Повторная синхронизация обновления|DBPROP_ADC_UPDATERESYNC|  

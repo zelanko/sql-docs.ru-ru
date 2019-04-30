@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d92a15ae855c5521319abd252b1f5a7efc2bf300
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131414"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63191661"
 ---
 # <a name="replication-queue-reader-agent"></a>Агент чтения очереди репликации
   Агент чтения очереди репликации — это исполняемый файл, который считывает сообщения, хранящиеся в очереди [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] или очереди сообщений [!INCLUDE[msCoName](../../../includes/msconame-md.md)] , а затем применяет их к издателю. Агент чтения очереди используется совместно с публикациями транзакций и публикациями моментальных снимков, которые допускают обновление посредством очередей.  

@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7a94b17d36429c27e2ddc9b958a4d0e8d8278f9c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59943880"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185825"
 ---
 # <a name="built-in-collections-in-expressions-report-builder-and-ssrs"></a>Встроенные коллекции в выражениях (построитель отчетов и службы SSRS)
   В выражении в отчете можно включить ссылки на следующие встроенные коллекции: ReportItems, параметры, поля, наборы данных, источников данных, переменные и встроенные поля для общих сведений, таких как имя отчета. В диалоговом окне **Выражения** отображаются не все коллекции. Коллекции DataSets и DataSources доступны только во время выполнения для отчетов, опубликованных на сервере отчетов. Коллекция ReportItems является коллекцией текстовых полей в области отчета, например текстовых полей на странице или в верхнем колонтитуле.  

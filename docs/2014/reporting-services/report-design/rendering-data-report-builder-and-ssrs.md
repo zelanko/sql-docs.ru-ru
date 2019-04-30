@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 681fffa274b9ec8bf9f4e5d76e909325d1611d6b
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59964070"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215474"
 ---
 # <a name="rendering-data-report-builder-and-ssrs"></a>Подготовка данных к просмотру (построитель отчетов и службы SSRS)
   При использовании шаблонных модулей подготовки отчета, таких как HTML, MHTML, Word, Excel, PDF или изображения, данные и их организация не меняются. При экспорте в формате модуля подготовки отчетов, например в формате значений, разделенных запятыми (CSV) или в формате XML, визуальные элементы макета не отображаются. Модули подготовки в форматах CSV и XML при подготовке отчета обрабатывают его текст по определенным правилам. Правила определяют, как отображаются данные в этих форматах.  

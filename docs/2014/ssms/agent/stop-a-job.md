@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f334834ff1deecebbc719ec71fb8348c13e4f68e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358766"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63245809"
 ---
 # <a name="stop-a-job"></a>Остановка задания
   В этом разделе описывается, как останавливать задания агента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Задание — это указанная последовательность действий, выполняемая агентом SQL Server.  

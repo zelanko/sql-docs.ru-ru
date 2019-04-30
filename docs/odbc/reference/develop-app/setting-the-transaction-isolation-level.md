@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 37b575f9e208b5a1b7fa03b170b74633da149c67
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750622"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63237879"
 ---
 # <a name="setting-the-transaction-isolation-level"></a>Установка уровня изоляции транзакций
 Чтобы задать уровень изоляции транзакции, приложение использует атрибут соединения SQL_ATTR_TXN_ISOLATION. Если источник данных не поддерживает запрошенный уровень изоляции, драйверу или источнику данных можно задать более высокого уровня. Чтобы определить, какой уровень изоляции транзакции уровни источник данных поддерживает и является уровень изоляции по умолчанию, приложение вызывает **SQLGetInfo** с параметрами SQL_TXN_ISOLATION_OPTION и SQL_DEFAULT_TXN_ISOLATION соответственно.  

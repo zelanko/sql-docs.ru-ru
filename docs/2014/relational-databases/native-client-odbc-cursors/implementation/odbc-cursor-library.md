@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9b81a7871434691a5940a04c7c60aaad9254b645
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115698"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63201170"
 ---
 # <a name="odbc-cursor-library"></a>Библиотека курсоров ODBC
   Некоторые драйверы ODBC поддерживают только параметры курсора по умолчанию; Эти драйверы также не поддерживают позиционированных операций с курсором, таких как **SQLSetPos**. Библиотека курсоров ODBC — компонент доступа к данным MDAC, используемый для реализации блочных или статических курсоров на драйвере, который обычно не поддерживает их. Библиотека курсоров также реализует позиционированные инструкции UPDATE и DELETE и **SQLSetPos** для создаваемых курсоров.  

@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 631ae416116832c725de8335780db87c03811320
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141566"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63224818"
 ---
 # <a name="accept-license-terms"></a>Принятие условий лицензионного соглашения
   На странице **Принять условия лицензии** мастера установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] примите условия лицензии для этого выпуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -31,7 +31,7 @@ ms.locfileid: "48141566"
 ## <a name="customer-experience-improvement-program-ceip"></a>Программа улучшения качества программного обеспечения (CEIP)  
  Если включить отчеты программы улучшения качества программного обеспечения, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] будет настроен для периодической отправки отчетов в [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Отчеты будут содержать сведения о конфигурации оборудования, а также об использовании [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и его компонентов. Эти данные используются корпорацией [!INCLUDE[msCoName](../../includes/msconame-md.md)] для совершенствования [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Эта функция отслеживает следующие компоненты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   В [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
+-   Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]  
   
@@ -53,7 +53,7 @@ ms.locfileid: "48141566"
   
  Применительно ко всем прочим компонентам [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сбор сведений производится всего один раз в день по всем разрешенным экземплярам [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. По умолчанию сбор запланирован на полночь, что позволяет свести к минимуму нагрузку на сервер. Если необходимо изменить время сбора данных, можно вручную отредактировать раздел реестра, управляющий этим временем. Каждый экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует собственный раздел реестра:  
   
- HKLM\Software\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12.\< ИДЕНТИФИКАТОР_ЭКЗЕМПЛЯРА > \CPE\TimeofReporting  
+ HKLM\Software\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12.\<INSTANCEID>\CPE\TimeofReporting  
   
  Значение этого раздела реестра содержит время сбора данных как число минут с 00:00 (полуночи) до времени запуска. Например, значение, равное 60, запустит сбор данных в 1:00, значение 1200 — в 20:00, и так далее.  
   
@@ -64,9 +64,9 @@ ms.locfileid: "48141566"
  По умолчанию функции сбора данных об использовании компонентов и отчета об ошибках отключены для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и его компонентов в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Отчет об ошибках  
- Если включить функцию отчетов об ошибках, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] будет настроен для автоматической отправки отчета в [!INCLUDE[msCoName](../../includes/msconame-md.md)] в случае неустранимой ошибки в любом из следующих компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+ Если включить функцию отчетов об ошибках, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] будет настроен для автоматической отправки отчета в [!INCLUDE[msCoName](../../includes/msconame-md.md)] в случае неустранимой ошибки в любом из следующих компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
--   В [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
+-   Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 -   Агент[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]   
   
@@ -78,9 +78,9 @@ ms.locfileid: "48141566"
   
 -   Репликация  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] использует отчеты об ошибках для улучшения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] функциональные возможности и любые поступающие данные расценивает как конфиденциальные.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] использует отчеты об ошибках, чтобы улучшить функциональность [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], и любые поступающие данные расценивает как конфиденциальные.  
   
- Сведения об ошибках отправляются в [!INCLUDE[msCoName](../../includes/msconame-md.md)] по защищенному (HTTPS) соединению и хранятся там с ограничением доступа. Вместо этого отчеты об ошибках можно отправлять на собственный корпоративный сервер отчетов об ошибках.  
+ Сведения об ошибках отправляются в [!INCLUDE[msCoName](../../includes/msconame-md.md)]по защищенному (HTTPS) соединению и хранятся там с ограничением доступа. Вместо этого отчеты об ошибках можно отправлять на собственный корпоративный сервер отчетов об ошибках.  
   
  Отчеты об ошибках содержат следующие сведения:  
   
@@ -94,7 +94,7 @@ ms.locfileid: "48141566"
   
 -   данные из памяти или файлов процесса, вызвавшего ошибку.  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] не собирает преднамеренно файлы, имя, адрес, адрес электронной почты или любые другие формы персональных данных. Однако в отчет об ошибке из памяти или файлов процесса, вызвавшего ошибку, могут попасть персональные данные. Хотя потенциально эти сведения можно использовать, чтобы идентифицировать пользователя, [!INCLUDE[msCoName](../../includes/msconame-md.md)] не использует их с этой целью.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] не собирает преднамеренно файлы, имя, адрес, адрес электронной почты или персональные данные в любой другой форме. Однако в отчет об ошибке из памяти или файлов процесса, вызвавшего ошибку, могут попасть персональные данные. Хотя потенциально эти сведения можно использовать, чтобы идентифицировать пользователя, [!INCLUDE[msCoName](../../includes/msconame-md.md)] не использует их с этой целью.  
   
  Дополнительные сведения о правилах сбора данных и обращения с личными сведениями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в разделе [Заявление о конфиденциальности Microsoft SQL Server](../../../2014/getting-started/microsoft-sql-server-privacy-statement.md).  
   

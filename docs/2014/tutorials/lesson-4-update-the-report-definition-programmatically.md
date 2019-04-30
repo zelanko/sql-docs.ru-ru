@@ -1,5 +1,5 @@
 ---
-title: Урок 4. Обновление определения отчета программным способом | Документация Майкрософт
+title: 'Занятие 4: Обновление определения отчета программным способом | Документация Майкрософт'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 703643f2c51ec86090cb03ba7089080dfe416620
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012705"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63137464"
 ---
-# <a name="lesson-4-update-the-report-definition-programmatically"></a>Урок 4. Обновление определения отчета программным способом
+# <a name="lesson-4-update-the-report-definition-programmatically"></a>Занятие 4: Обновление определения отчета программным способом
   После загрузки определения отчета с сервера отчетов и при наличии ссылки на него через поле отчета необходимо обновить определение отчета. В этом примере будет обновлено свойство `Description` отчета.  
   
 ### <a name="to-update-the-report-definition"></a>Обновление определения отчета  
@@ -88,7 +88,7 @@ ms.locfileid: "56012705"
     ```  
   
 ## <a name="next-lesson"></a>Следующее занятие  
- На следующем занятии обновленное определение отчета будет сохранено назад на сервер отчетов. См. в разделе [Урок 5: Публикация определения отчета на сервере отчетов](../../2014/tutorials/lesson-5-publish-the-report-definition-to-the-report-server.md).  
+ На следующем занятии обновленное определение отчета будет сохранено назад на сервер отчетов. См. [Занятие 5. Публикация определения отчета на сервере отчетов](../../2014/tutorials/lesson-5-publish-the-report-definition-to-the-report-server.md).  
   
 ## <a name="see-also"></a>См. также  
  [Обновление отчетов с помощью классов, созданных из RDL-схемы &#40;учебник по службам SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)  

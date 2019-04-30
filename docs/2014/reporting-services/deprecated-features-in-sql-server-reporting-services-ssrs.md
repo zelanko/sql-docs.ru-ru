@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5b2b832fbd7eb83fa26353750770894bfb6f2a8a
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59965711"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63165157"
 ---
 # <a name="deprecated-features-in-sql-server-reporting-services-in-sql-server-2014"></a>Устаревшие функции служб SQL Server Reporting Services в SQL Server 2014
   В этом разделе описываются устаревшие функции служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Эти функции по-прежнему доступны в выпуске, где они признаны устаревшими, однако запланировано их удаление в следующем выпуске [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Не следует использовать устаревшие функции в новых приложениях.  

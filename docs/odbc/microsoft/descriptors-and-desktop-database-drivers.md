@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 17058af1d7f0ab1e35c2d6b31c0337daed4c9e01
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817472"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240388"
 ---
 # <a name="descriptors-and-desktop-database-drivers"></a>Дескрипторы и драйверы для баз данных на настольном компьютере
 Дескриптор — это структура данных, в котором содержатся сведения о данных в столбце или динамических параметров. **SQLGetDescField** может использоваться для получения поддерживаемой дескрипторов, перечисленных ниже. Не дескрипторов параметра реализации (IPD) заполняются автоматически, так как **SQLDescribeParam** не поддерживается. Поля дескриптора, которые недоступны через Jet (например, SQL_DESC_BASE_TABLE_NAME) также не поддерживается.  

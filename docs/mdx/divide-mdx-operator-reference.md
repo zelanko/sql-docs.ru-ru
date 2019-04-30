@@ -1,5 +1,5 @@
 ---
-title: (Деление) (МНОГОМЕРНЫЕ ВЫРАЖЕНИЯ) | Документы Microsoft
+title: (Деление) (МНОГОМЕРНЫЕ ВЫРАЖЕНИЯ) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ba8cdf3a403d5673dc3114e88251f9b47f1f6e09
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740013"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248178"
 ---
-# <a name="divide---mdx-operator-reference"></a>Разделите - Справочник по операторам многомерных Выражений
+# <a name="divide---mdx-operator-reference"></a>Divide - Справочник по операторам многомерных Выражений
 
 
   Выполняет арифметическую операцию, которая делит одно число на другое.  
@@ -29,10 +29,10 @@ Dividend / Divisor
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *делимое*  
+ *Делимое*  
  Допустимое многомерное выражение, возвращающее числовое значение.  
   
- *делитель*  
+ *Делитель*  
  Допустимое многомерное выражение, возвращающее числовое значение.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
@@ -101,6 +101,6 @@ WHERE
   
 ## <a name="see-also"></a>См. также  
  [IIf &#40;многомерных Выражений&#41;](../mdx/iif-mdx.md)   
- [Справочник по операторам Многомерных &#40;многомерных Выражений&#41;](../mdx/mdx-operator-reference-mdx.md)  
+ [Справочник по операторам многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

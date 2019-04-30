@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ee1d76052402ab775e9e8de20e1ef6da07e23432
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558452"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63214794"
 ---
 # <a name="configuring-rds-on-windows-2000"></a>Настройка RDS в Windows 2000
 При возникновении затруднений при получении служб удаленных рабочих СТОЛОВ для правильной работы после обновления до Windows 2000, выполните следующие действия для устранения неполадок.  
@@ -29,7 +29,7 @@ ms.locfileid: "51558452"
   
 3.  С помощью программы RegEdit, перейдите к «HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\DataFactory\HandlerInfo» и убедитесь, что **HandlerRequired** имеет значение 0 и **DefaultHandler** — «» (значение Null, строка).  
   
-     **Примечание** Если внести изменения в этот раздел реестра, необходимо остановить и перезапустить службу веб-публикации, введя следующие команды в командной строке: «NET STOP W3SVC» и «NET запустить W3SVC».  
+     **Примечание** Если внести изменения в этот раздел реестра, необходимо остановить и перезапустить службу веб-публикации, введя следующие команды в командной строке: «NET STOP W3SVC» и «W3SVC запустить NET».  
   
 4.  С помощью программы RegEdit, перейдите в реестр, чтобы «HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W3SVC\Parameters\ADCLaunch» и убедитесь, что ключ с именем **RDSServer.Datafactory**. Если нет, создайте его.  
   

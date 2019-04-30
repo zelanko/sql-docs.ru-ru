@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1b47ef4c2df8a326d993a95e056b27d331dc649f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205603"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63186207"
 ---
 # <a name="sqlprocedurecolumns-function"></a>SQLProcedureColumns, функция
 **Соответствие стандартам**  
@@ -87,7 +87,7 @@ SQLRETURN SQLProcedureColumns(
  [Вход] Длина в символах **ColumnName*.  
   
 ## <a name="returns"></a>Возвращает  
- Значение SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, значение SQL_ERROR или SQL_INVALID_HANDLE.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR, or SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Диагностика  
  Когда **SQLProcedureColumns** возвращает значение SQL_ERROR или SQL_SUCCESS_WITH_INFO, а связанное значение SQLSTATE можно получить, вызвав **SQLGetDiagRec** с *HandleType* значение SQL_HANDLE_STMT и *обрабатывать* из *StatementHandle*. В следующей таблице перечислены значения SQLSTATE, обычно возвращаемые **SQLProcedureColumns** и объясняется каждый из них в контексте этой функции; описания SQLSTATE, возвращаемых драйвером предшествует обозначение «(DM)» Диспетчер. Возвращается связанный с каждого значения SQLSTATE значение SQL_ERROR, если не указано иное.  

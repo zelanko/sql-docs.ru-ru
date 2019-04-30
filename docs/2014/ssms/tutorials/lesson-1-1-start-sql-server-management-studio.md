@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 94466dc6c069ced5b2743cbd8a14d98271303477
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373636"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188835"
 ---
 # <a name="start-sql-server-management-studio"></a>Запуск среды SQL Server Management Studio
   В начале этого учебника кратко рассмотрим среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

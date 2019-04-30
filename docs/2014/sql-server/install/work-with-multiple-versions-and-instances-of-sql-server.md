@@ -21,11 +21,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ec56d95cdd0550fb15d6a28eca683a8136ffdd6e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762738"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63205306"
 ---
 # <a name="work-with-multiple-versions-and-instances-of-sql-server"></a>Работа с несколькими версиями и экземплярами SQL Server
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает на одном компьютере несколько экземпляров компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)], служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]и служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Кроме того, можно обновить уже установленные на компьютере предыдущие версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]либо установить [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на этот же компьютер с более ранними версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Поддерживаемые сценарии обновления см. в разделе [Поддерживаемые обновления версий и выпусков](../../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
@@ -48,7 +48,7 @@ ms.locfileid: "52762738"
 ### <a name="components-shared-by-all-versions-of-includessnoversionincludesssnoversion-mdmd"></a>Общие компоненты для всех версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Определенные компоненты, которые являются общими для всех установленных версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. При параллельной установке различных версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на одном компьютере эти компоненты обновляются до последней версии. Такие компоненты обычно удаляются автоматически при удалении последнего экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- Примеры: браузер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и службы синхронизации контроля версий Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Примеры: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Браузер и Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] модуль записи VSS.  
   
 ### <a name="components-shared-across-all-instances-of-the-same-major-version-of-includessnoversionincludesssnoversion-mdmd"></a>Компоненты, общие для всех экземпляров основной версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Версии, общие для всех экземпляров основной версии, имеют общие компоненты во всех экземплярах. Если общие компоненты выбираются при выполнении обновления, то существующие компоненты обновляются до последней версии.  
@@ -68,7 +68,7 @@ ms.locfileid: "52762738"
 ### <a name="components-that-are-independent-of-the-includessnoversionincludesssnoversion-mdmd-versions"></a>Компоненты, не зависящие от версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Некоторые компоненты устанвливаются при установке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , но не зависят от версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Они могут совместно использоваться всеми версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- Примеры: Microsoft Sync Framework, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact.  
+ Примеры: Microsoft Sync Framework [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact.  
   
  Дополнительные сведения о [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact установки, см. в разделе [Установка SQL Server 2014 с помощью мастера установки &#40;установки&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md). Дополнительные сведения об удалении [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact см. в разделе [Удаление существующего экземпляра SQL Server (программа установки)](../../../2014/sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md).  
   

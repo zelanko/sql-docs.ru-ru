@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f1bff3c8a155e1e9378acbb659f00817f478382e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602383"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161605"
 ---
 # <a name="grandchild-aggregates"></a>Статистические выражения внучатых элементов
 Глава столбец, созданный в предложении команды фигуры может предоставляться *Глава псевдоним* (обычно с ключевым словом AS). Можно указать любой столбец в любой главе форму **записей** с полным именем, которое идентифицирует дочерний элемент, которая содержит столбец. Например если родительского главе, chap1, содержит дочерние Глава, chap2, имеющей столбец amount, amt, то полное имя будет chap1.chap2.amt. Полное имя затем может использоваться в качестве аргумента одному из агрегатные функции (SUM, AVG, MAX, MIN, COUNT, STDEV или любой).  

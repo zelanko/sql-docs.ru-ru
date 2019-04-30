@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b7b6ffacb618dd2b7714be59814f3f1a88a52228
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47813922"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63208484"
 ---
 # <a name="header-record"></a>Запись заголовка
 Поля в заголовочной записи содержат общие сведения о выполнении функции, включая код возврата, число строк, число записей состояния и типом выполняемой инструкции. Если функция возвращает SQL_INVALID_HANDLE всегда создается запись заголовка. Полный список полей в заголовочной записи, см. в разделе [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) описание функции.

@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c70a558b065765dd9f8c0895345959e8aa22ebfe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854030"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63232097"
 ---
 # <a name="standard-gateway"></a>Стандартный шлюз
 Объект *шлюза* — это программное обеспечение, которое вызывает один СУБД, чтобы он выглядел другой. Т. е шлюз принимает интерфейс программирования, грамматику SQL и данных протокола единый СУБД и переводит его в интерфейс программирования, грамматику SQL, и протокол скрытые СУБД потока данных. Например приложения, написанные для использования Microsoft® SQL Server™ можно также доступ к данным DB2 через шлюз DB2 Decisionware Micro; Этот продукт приводит к DB2, чтобы он выглядел SQL Server. При использовании шлюзов другой шлюз должен быть написан таким образом, для каждой целевой базы данных.  

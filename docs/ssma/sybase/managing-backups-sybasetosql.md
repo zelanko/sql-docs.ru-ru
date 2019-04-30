@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 3a1a5172de403d7ecfa99887439db218adb1141a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504097"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63132312"
 ---
 # <a name="managing-backups-sybasetosql"></a>Управление резервными копиями (SybaseToSQL)
 Управление резервным копированием Sybase позволяет резервного копирования и восстановления данные таблицы, до или после выполнения теста. Кроме того, вы можете управлять содержимое резервной копии с помощью диалогового окна управления содержимое резервной копии.  

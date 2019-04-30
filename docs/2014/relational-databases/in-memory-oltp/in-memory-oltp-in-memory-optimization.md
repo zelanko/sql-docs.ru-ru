@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c3be59fd99f072b7cb3a9156b92d5ee794208f1f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359536"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63158021"
 ---
 # <a name="in-memory-oltp-in-memory-optimization"></a>In-Memory OLTP (оптимизация в памяти)
   Новое в [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] может значительно улучшить производительность приложения базы данных OLTP. [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] является оптимизированным для памяти ядром СУБД, встроенным в ядро [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], оптимизированное для OLTP.  

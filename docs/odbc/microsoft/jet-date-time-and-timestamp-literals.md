@@ -1,5 +1,5 @@
 ---
-title: 'Jet: Дата, время и литералы Timestamp | Документация Майкрософт'
+title: 'Jet: Литералы отметки времени, даты и времени | Документация Майкрософт'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2325cd7e4a10e91f351aa2107c64c0978b843fa6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825842"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63224591"
 ---
-# <a name="jet-date-time-and-timestamp-literals"></a>Jet: литералы даты, времени и отметок времени
+# <a name="jet-date-time-and-timestamp-literals"></a>Jet: Литералы даты, времени и отметок времени
 Для максимальной совместимости приложений следует передавать литералы даты в канонический формат ODBC с использованием синтаксиса escape-предложении:  
   
 -   Для литералов даты {d '*значение*"}, где *значени*e указывается в формате «гггг мм дд»  

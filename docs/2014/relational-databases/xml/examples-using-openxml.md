@@ -1,5 +1,5 @@
 ---
-title: 'Примеры: Использование инструкции OPENXML | Документация Майкрософт'
+title: 'Примеры: Использование инструкции OPENXML | Документация Майкрософт'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -27,13 +27,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9887a9af6735b54a78dd72ed3a90aeff70c7990f
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536906"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63205104"
 ---
-# <a name="examples-using-openxml"></a>Примеры: использование инструкции OPENXML
+# <a name="examples-using-openxml"></a>Примеры: Использование OPENXML
   Примеры в этом подразделе иллюстрируют использование инструкции OPENXML для создания представления наборов строк XML-документа. Дополнительные сведения о синтаксисе инструкции OPENXML см. в разделе [OPENXML (Transact-SQL)](/sql/t-sql/functions/openxml-transact-sql). Примеры показывают все аспекты инструкции OPENXML, но не определяют метасвойства в ней. Дополнительные сведения о том, как использовать метасвойства в OPENXML, см. в статье [Определение метасвойств в инструкции OPENXML](specify-metaproperties-in-openxml.md).  
   
 ## <a name="examples"></a>Примеры  

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 16d0590d3297b52891bf399822ce984674022583
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808934"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188919"
 ---
 # <a name="interval-data-type-length"></a>Длина интервального типа данных
 Следующие правила используются для определения длины типа данных интервал в символах. Длина выражается в символах. Число байтов, которое зависит от набора символов. Длина включает в себя следующие значения, добавленные друг с другом:  

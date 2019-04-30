@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7c64bf641a6519c42ad0d3a8cdfd578458f84439
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061510"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63150925"
 ---
 # <a name="enable-or-disable-a-plan-guide"></a>Включение или отключение структуры плана.
   В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] отключать и включать руководства планов можно с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Включить или отключить можно как одно руководство планов, так и все сразу.  
@@ -76,7 +76,7 @@ ms.locfileid: "48061510"
   
 #### <a name="to-disable-or-enable-a-plan-guide"></a>Включение или отключение структуры плана  
   
-1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   
@@ -120,7 +120,7 @@ ms.locfileid: "48061510"
   
 #### <a name="to-disable-or-enable-all-plan-guides-in-a-database"></a>Отключение или включение всех структур планов в базе данных  
   
-1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   

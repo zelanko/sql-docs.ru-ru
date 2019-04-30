@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b4fd1a406848006739b83c1b8a0886d5c2d4bdfa
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527146"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155718"
 ---
 # <a name="supported-constructs-in-natively-compiled-stored-procedures"></a>Поддерживаемые конструкции для хранимых процедур, скомпилированных в собственном коде
   В этом разделе содержится список поддерживаемых функций для скомпилированных хранимых процедур ([CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)):  
@@ -81,9 +81,9 @@ ms.locfileid: "58527146"
 ##  <a name="bfncsp"></a> Встроенные функции в собственном коде хранимых процедурах  
  Следующие функции поддерживаются в ограничениях по умолчанию для оптимизированных для памяти таблиц и в хранимых процедурах, скомпилированных в собственном коде.  
   
--   Математические функции: ACOS, ASIN, ATAN, ATN2, COS, COT, DEGREES, EXP, LOG, LOG10, PI, POWER, RADIANS, RAND, SIN, SQRT, SQUARE и TAN  
+-   Математические функции: ACOS, ASIN, ATAN, ATN2, COS, COT, ГРАДУСОВ, EXP, LOG, LOG10, PI, POWER, RADIANS, RAND, SIN, SQRT, КВАДРАТНЫЕ и TAN  
   
--   Функции для работы с датой: CURRENT_TIMESTAMP, DATEADD, DATEDIFF, DATEFROMPARTS, DATEPART, DATETIME2FROMPARTS, DATETIMEFROMPARTS, DAY, EOMONTH, GETDATE, GETUTCDATE, MONTH, SMALLDATETIMEFROMPARTS, SYSDATETIME, SYSUTCDATETIME и YEAR.  
+-   Функции даты: CURRENT_TIMESTAMP, DATEADD, DATEDIFF, DATEFROMPARTS, DATEPART, DATETIME2FROMPARTS, DATETIMEFROMPARTS, день, EOMONTH, GETDATE, GETUTCDATE, MONTH, SMALLDATETIMEFROMPARTS, SYSDATETIME, SYSUTCDATETIME и YEAR.  
   
 -   Строковые функции: LEN, LTRIM, RTRIM и SUBSTRING  
   
@@ -93,7 +93,7 @@ ms.locfileid: "58527146"
   
 -   Функции уникальных идентификаторов: NEWID и NEWSEQUENTIALID  
   
--   Функции ошибок: ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY и ERROR_STATE  
+-   Функции ошибок: Функция ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY и ERROR_STATE  
   
 -   Преобразования: CAST и CONVERT. Не поддерживаются преобразования между символьными строками в Юникоде и отличными от Юникода (n(var)char и (var)char).  
   
@@ -172,13 +172,13 @@ ms.locfileid: "58527146"
 ##  <a name="los"></a> Ограничения на сортировку  
  В запросе с использованием [TOP (Transact-SQL)](/sql/t-sql/queries/top-transact-sql) и [предложения ORDER BY (Transact-SQL)](/sql/t-sql/queries/select-order-by-clause-transact-sql) можно сортировать более 8 000 строк. Без [предложения ORDER BY (Transact-SQL)](/sql/t-sql/queries/select-order-by-clause-transact-sql) [TOP (Transact-SQL)](/sql/t-sql/queries/top-transact-sql) позволяет сортировать не более 8 000 строк (меньше, если есть соединения).  
   
- Если в запросе используется как оператор [TOP (Transact-SQL)](/sql/t-sql/queries/top-transact-sql), так и [предложение ORDER BY (Transact-SQL)](/sql/t-sql/queries/select-order-by-clause-transact-sql), для оператора TOP можно указать не более 8192 строк. Если указано больше 8192 строк, возникает следующее сообщение об ошибке: **Сообщение 41398, уровень 16, состояние 1, процедура  *\<Имя_процедуры >*, строки  *\<номер_строки >* оператор TOP может возвращать не более 8192 строк;  *\<номер >* был запрошен.**  
+ Если в запросе используется как оператор [TOP (Transact-SQL)](/sql/t-sql/queries/top-transact-sql), так и [предложение ORDER BY (Transact-SQL)](/sql/t-sql/queries/select-order-by-clause-transact-sql), для оператора TOP можно указать не более 8192 строк. При указании более 8192 строк вы получаете сообщение об ошибке: **Сообщение 41398, уровень 16, состояние 1, процедура  *\<Имя_процедуры >*, строки  *\<номер_строки >* оператор TOP может возвращать не более 8192 строк;  *\<номер >* был запрошен.**  
   
  Если отсутствует предложение TOP, то можно отсортировать любое количество строк с помощью предложения ORDER BY.  
   
  Если не используется предложение ORDER BY, то можно использовать любое целочисленное значение с оператором TOP.  
   
- Пример для оператора TOP с числом значений 8192: Компиляция  
+ Пример с TOP N = 8192: Компилирует  
   
 ```sql  
 CREATE PROCEDURE testTop  
@@ -191,7 +191,7 @@ WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION
 GO  
 ```  
   
- Пример для оператора TOP с числом значений > 8192: Ошибка компиляции.  
+ Пример с TOP N > 8192: Ошибка компиляции.  
   
 ```sql  
 CREATE PROCEDURE testTop  
@@ -206,7 +206,7 @@ GO
   
  Ограничение в 8192 строки применяется только к `TOP N` , где `N` является константой, как показано в предыдущих примерах.  Если нужно, чтобы `N` было больше 8192, можно присвоить это значение переменной и использовать ее с оператором `TOP`.  
   
- Пример использования переменной. Компиляция  
+ Пример использования переменной: Компилирует  
   
 ```sql  
 CREATE PROCEDURE testTop  
@@ -220,7 +220,7 @@ WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION
 GO  
 ```  
   
- **Ограничения возвращаемых строк:** Существует два варианта, когда возможно уменьшение числа строк, возвращаемых оператором TOP.  
+ **Ограничения возвращаемых строк:** Существует два варианта, когда могут уменьшить количество строк, возвращаемых оператором TOP:  
   
 -   Использование соединений в запросе.  Влияние соединений на ограничения зависит от плана запроса.  
   

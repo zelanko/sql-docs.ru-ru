@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b86cf307bddcd384369cae429569f39315787635
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59952120"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63231539"
 ---
 # <a name="activate-the-report-server-and-power-view-integration-features-in-sharepoint"></a>Активация функций интеграции семейства веб-сайтов с сервером отчетов и Power View в SharePoint
   Функции семейства веб-сайтов служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] обычно активируются по умолчанию после установки надстройки служб [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] для продуктов SharePoint. В некоторых ситуациях эти функции требуется активировать вручную.  

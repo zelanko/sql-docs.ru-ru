@@ -1,5 +1,5 @@
 ---
-title: Занятие 2. Соединение с другого компьютера | Документация Майкрософт
+title: Урок 2. Соединение с другого компьютера | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: eedbde338ad3cc2af5477cc263eac7444707c0d8
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127214"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63144811"
 ---
-# <a name="lesson-2-connecting-from-another-computer"></a>Занятие 2. Соединение с другого компьютера
+# <a name="lesson-2-connecting-from-another-computer"></a>Урок 2. Подключение с другого компьютера
   В целях повышения безопасности к компоненту [!INCLUDE[ssDE](../includes/ssde-md.md)] выпусков [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer Edition, Express Edition и Evaluation Edition нельзя получить доступ с другого компьютера при первоначальной установке. В этом занятии показано, как включить протоколы, настроить порты и брандмауэр Windows для соединения, используя другие компьютеры.  
   
  Это занятие содержит следующие задачи.  

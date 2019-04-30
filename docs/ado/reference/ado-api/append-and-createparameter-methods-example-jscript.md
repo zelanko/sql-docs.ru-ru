@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f9bd0c28d481ef107dc31e36e13582fba459b502
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827622"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248812"
 ---
 # <a name="append-and-createparameter-methods-example-jscript"></a>Append и CreateParameter методы (JScript)
 В этом примере используется [Append](../../../ado/reference/ado-api/append-method-ado.md) и [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) методы для выполнения хранимой процедуры с входным параметром. Вырежьте и вставьте следующий код в блокноте или другом текстовом редакторе и сохраните его в **AppendJS.asp**.  

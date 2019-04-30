@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 68dfb8976312016ee7f2e42fc4fcdecb93fd28cf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848902"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199376"
 ---
 # <a name="binding-parameters-by-name-named-parameters"></a>Привязка параметров по имени (именованные параметры)
 Некоторые СУБД позволяют приложению задать параметры в хранимую процедуру по имени, а не по позиции в вызове процедуры. Такие параметры называются *именованные параметры*. ODBC поддерживает использование именованных параметров. В ODBC именованные параметры используются только в вызовы хранимых процедур и не может использоваться в других инструкциях SQL.  

@@ -14,18 +14,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e2bcb3cfa20948e6bb0964d29331ca1d426b8916
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816788"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199912"
 ---
 # <a name="change-workload-group-settings"></a>Изменение параметров группы рабочей нагрузки
   Параметры группы рабочей нагрузки можно изменить с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
--   **Перед началом работы**  [Ограничения](#LimitationsRestrictions), [разрешения](#Permissions)  
+-   **Перед началом:**  [ограничения](#LimitationsRestrictions), [разрешения](#Permissions)  
   
--   **Чтобы изменить параметры для рабочей нагрузки группы, с использованием:**  [SQL Server Management Studio](#ChgWGProp), [Transact-SQL](#ChgWGTSQL)  
+-   **Изменение параметров для группы рабочей нагрузки с использованием:**  [среды SQL Server Management Studio](#ChgWGProp), [Transact-SQL](#ChgWGTSQL)  
   
 ## <a name="before-you-begin"></a>Перед началом  
   

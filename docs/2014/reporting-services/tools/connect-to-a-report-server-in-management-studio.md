@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9f87ea4b801e9f7c60364e235877f84db810384c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59951290"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63217986"
 ---
 # <a name="connect-to-a-report-server-in-management-studio"></a>Подключение к серверу отчетов в среде Management Studio
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] предоставляет обозреватель объектов, позволяющий подключиться к любому серверу семейства [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и просматривать его содержимое в графическом виде. Применительно к службам Reporting Services, обозреватель объектов можно использовать для следующих операций.  

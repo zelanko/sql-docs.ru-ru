@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: db51298ccadb2dc3ef6b9060bc3d83987bb3c9ba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203694"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63233149"
 ---
 # <a name="read-a-filestream-column-to-file-using-ibcpsession-ole-db"></a>Чтение столбца FILESTREAM в файле с использованием интерфейса IBCPSession (OLE DB)
   Этот образец считывает столбец файлового потока в файл с помощью интерфейса IBCPSession и записывает файл форматирования.  

@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 19bc563e6080d1eba9768e95db5315d1d808a9b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603192"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63180289"
 ---
 # <a name="eos-and-lineseparator-properties-and-skipline-method-example-vb"></a>EOS и LineSeparator свойства и метод SkipLine (Visual Basic)
 В этом примере показано, как управлять текстового потоки по одной строке за раз. Эффект от изменения строки используется разделитель строк из по умолчанию каретки возврата и перевода строки (**adCRLF**) чтобы просто перевода строки (**adLF**) или символ возврата каретки (**adCR**) отображается.  

@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f6069aba71f5c6026db2bfa083a71d923a727e50
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59934150"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63206840"
 ---
 # <a name="add-change-or-delete-a-report-parameter-report-builder-and-ssrs"></a>Добавление, изменение или удаление параметра отчета (построитель отчетов и службы SSRS)
   Параметры отчета позволяют выбирать данные отчета, соединять связанные отчеты и изменять представление отчета. Можно предоставить значения по умолчанию и список доступных значений, чтобы пользователи могли их изменять.  

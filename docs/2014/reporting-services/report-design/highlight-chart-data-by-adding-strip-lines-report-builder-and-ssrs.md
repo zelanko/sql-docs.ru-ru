@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6935c6a113aa90d656b6aa91c5fd840856b11774
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59970376"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63224942"
 ---
 # <a name="highlight-chart-data-by-adding-strip-lines-report-builder-and-ssrs"></a>Выделение данных диаграммы путем добавления полосковых линий (построитель отчетов и службы SSRS)
   Полосковые линии, или полосы, представляют собой горизонтальные или вертикальные области, которые оттеняют фон диаграммы через регулярные или заданные пользователем интервалы. Полосковые линии используют, чтобы:  

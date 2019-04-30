@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b4e7850cb0c66b6acbc7be54178cbc9ace27ce72
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59961110"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63190890"
 ---
 # <a name="report-server-http-log"></a>Журнал HTTP-запросов сервера отчетов
   В файлах журнала HTTP сервера отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] хранится информация для каждого HTTP-запроса и ответа, обработанного сервером отчетов. Сообщения об ошибках, связанных с переполнением очереди запросов и временем ожидания, не достигают сервера отчетов, поэтому не регистрируются в файле журнала.  

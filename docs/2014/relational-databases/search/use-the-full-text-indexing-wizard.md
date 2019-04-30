@@ -24,11 +24,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 767c83b5eb6483ca4804e8602886932ff8e40793
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054304"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63237814"
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>Использование мастера полнотекстового индексирования
   Мастер полнотекстового индексирования поможет выполнить ряд шагов, спланированных для создания полнотекстового индекса.  
@@ -79,7 +79,7 @@ ms.locfileid: "48054304"
     |-|-|  
     |**Создать новый каталог**|Установите флажок для того, чтобы создать новый полнотекстовый каталог.|  
   
-     **Название**  
+     **Name**  
      Введите имя нового полнотекстового каталога.  
   
      **Назначить каталогом по умолчанию**  

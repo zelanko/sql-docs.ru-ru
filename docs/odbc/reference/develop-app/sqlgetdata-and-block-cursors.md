@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a14c98f045fd974b404209cc998496dc5fa7193e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755531"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149070"
 ---
 # <a name="sqlgetdata-and-block-cursors"></a>SQLGetData и блочные курсоры
 **SQLGetData** работает по одному столбцу из одной строки и не может получить массив, содержащий данные из нескольких строк. Это так, как использовать основной **SQLGetData** — выборка данных long в части, и практически не причин для этого для более чем одной строке за раз.  

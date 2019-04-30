@@ -1,5 +1,5 @@
 ---
-title: 'Шаг 6: Отключение от источника данных | Документация Майкрософт'
+title: Шаг 6. Отключение от источника данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,13 +16,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a42465e763f8f6d520ed9c1dac42612aa1b28575
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802442"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149220"
 ---
-# <a name="step-6-disconnect-from-the-data-source"></a>Шаг 6. Отключение от источника данных
+# <a name="step-6-disconnect-from-the-data-source"></a>Шаг 6. Отключение от источника данных
 Последним шагом является отключение от источника данных, как показано на следующем рисунке. Во-первых, приложение освободит все дескрипторы инструкций путем вызова **SQLFreeHandle**. Дополнительные сведения см. в разделе [освободить дескриптор инструкции](../../../odbc/reference/develop-app/freeing-a-statement-handle-odbc.md).  
   
  ![Показывает, отключение от источника данных](../../../odbc/reference/develop-app/media/pr17.gif "pr17")  

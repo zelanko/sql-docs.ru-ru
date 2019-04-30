@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a5c5a0d7d51acfd2ecf6d0ffda945a6223c7e04f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696963"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63228111"
 ---
 # <a name="understanding-cursors-and-locks"></a>Основные сведения о курсорах и блокировок
 Важно понимать принципы работы курсоров, чтобы вы могли выбрать тип курсора лучшим и наиболее эффективным для доступа к данным требованиям приложения. Менее чем оптимальной конфигурации курсора можно сделать еще медленных операций доступа к данным.  

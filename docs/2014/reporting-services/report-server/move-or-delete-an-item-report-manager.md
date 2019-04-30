@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ed81395066cd25ed30b095d4e080019abc8c9b26
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59958980"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63191210"
 ---
 # <a name="move-or-delete-an-item-report-manager"></a>Перемещение или удаление элемента (диспетчер отчетов)
   Отчеты и связанные с ними элементы, публикуемые на сервере отчетов, хранятся в папках. Элементы можно переместить в другую папку; ссылки на эти элементы будут автоматически обновлены на сервере отчетов. Прежде чем удалить какой-либо элемент, определите, не зависят ли от него другие элементы.  

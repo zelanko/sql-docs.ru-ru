@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b1445f89200a876b5ac945ea1a577d6cc3f7445a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544162"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149265"
 ---
 # <a name="sql-statements"></a>Инструкции SQL
 Приложения ODBC выполнять почти все доступа к базе данных при выполнении инструкций SQL. Формат инструкций - жестко или сформированные во время выполнения, с возможностью взаимодействия или зависящие от источника данных и т. д. — зависит от требований приложения.  

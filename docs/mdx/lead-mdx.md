@@ -1,5 +1,5 @@
 ---
-title: Lead (многомерные Выражения) | Документы Microsoft
+title: Lead (многомерные Выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d72af1bf0b671eeb2bd4b84c194f129ed1ce6bfe
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741033"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63205435"
 ---
 # <a name="lead-mdx"></a>Lead (многомерные выражения)
 
@@ -29,7 +29,7 @@ Member_Expression.Lead( Index )
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *Member_Expression.*  
+ *Member_Expression*  
  Допустимое многомерное выражение, возвращающее элемент.  
   
  *Index*  
@@ -44,7 +44,7 @@ Member_Expression.Lead( Index )
   
  `Lead(1)` эквивалентно [NextMember](../mdx/nextmember-mdx.md) функции. `Lead(-1)` эквивалентно [PrevMember](../mdx/prevmember-mdx.md) функции.  
   
- **Привести** функция подобна [запаздывания](../mdx/lag-mdx.md) за тем исключением, которое **запаздывания** функция выглядит в направлении, противоположном направлению **привести** функции. Таким образом, вызов `Lead(n)` эквивалентен вызову `Lag(-n)`.  
+ **Привести** функция аналогична [Lag](../mdx/lag-mdx.md) за тем исключением, которое **Lag** функция ищет в обратном направлении для **привести** функция. Таким образом, вызов `Lead(n)` эквивалентен вызову `Lag(-n)`.  
   
 ## <a name="example"></a>Пример  
  В следующем примере возвращается значения для декабря 2001 г.:  
@@ -64,6 +64,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Справочник по функциям многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
   
   

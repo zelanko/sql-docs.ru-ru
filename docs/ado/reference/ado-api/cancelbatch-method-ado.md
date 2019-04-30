@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4c8f0268a91b66f6f26eec1d87502355a1c9795a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828392"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239780"
 ---
 # <a name="cancelbatch-method-ado"></a>Метод CancelBatch (ADO)
 Отменяет ожидающие пакетного обновления.  
@@ -36,7 +36,7 @@ recordset.CancelBatchAffectRecords
   
 #### <a name="parameters"></a>Параметры  
  *AffectRecords*  
- Необязательный параметр. [AffectEnum](../../../ado/reference/ado-api/affectenum.md) значение, указывающее, сколько записей **CancelBatch** повлияет на метод.  
+ Необязательный. [AffectEnum](../../../ado/reference/ado-api/affectenum.md) значение, указывающее, сколько записей **CancelBatch** повлияет на метод.  
   
 ## <a name="remarks"></a>Примечания  
  Используйте **CancelBatch** метод, чтобы отменить все имеющиеся обновления в [записей](../../../ado/reference/ado-api/recordset-object-ado.md) в пакетном режиме обновления. Если **записей** находится в режиме немедленного обновления, вызвав **CancelBatch** без **adAffectCurrent** приводит к ошибке.  

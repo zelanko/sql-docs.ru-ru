@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 772dbc55fdeb3b038399a3740be472497666e4da
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51290790"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63222010"
 ---
 # <a name="referencing-the-ado-libraries-in-a-visual-c-application"></a>Ссылки на библиотеки ADO в приложении Visual C++
 Чтобы использовать последнюю версию ADO в приложении Visual C++, используйте следующую команду `#import` директивы:  

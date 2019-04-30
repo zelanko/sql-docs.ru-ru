@@ -14,19 +14,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 015ea45d1383e6813973aeb1e4c86451a506a2aa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855422"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63213329"
 ---
 # <a name="sqlgetinfo-visual-foxpro-odbc-driver"></a>SQLGetInfo (драйвер ODBC для Visual FoxPro)
 > [!NOTE]  
 >  Этот раздел содержит сведения Visual FoxPro ODBC-драйвером. Общие сведения об этой функции см. в соответствующем разделе [Справочник по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Поддержка: полный  
+ Поддержка: Полное  
   
- Соответствия API ODBC: 1 уровень  
+ Соответствие API ODBC: уровне 1  
   
  Возвращает общие сведения о драйвер ODBC для Visual FoxPro и источник данных, связанный с дескриптором соединения, *hdbc*. В следующем списке показано значение, возвращаемое для каждого драйвера ODBC для Visual FoxPro *fInfoType* аргумент и комментарии, касающиеся возвращаемые значения.  
   
@@ -384,7 +384,7 @@ ms.locfileid: "47855422"
   
  Возвращает SQL_TIMEDATE_ADD_INTERVALS:  
   
--   ВТОРОЙ SQL_FN_TSI_  
+-   SQL_FN_TSI_ SECOND  
   
 -   SQL_FN_TSI_MINUTE  
   
@@ -406,7 +406,7 @@ ms.locfileid: "47855422"
   
  Возвращает SQL_TIMEDATE_DIFF_INTERVALS:  
   
--   ВТОРОЙ SQL_FN_TSI_  
+-   SQL_FN_TSI_ SECOND  
   
 -   SQL_FN_TSI_MINUTE  
   

@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: af8fd934206361e0abb43a84a9a036772e90fc52
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59966006"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63157291"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>Службы Reporting Services в SQL Server Data Tools (SSDT)
   [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] — [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] среды с расширениями, специфичными для решений бизнес-аналитики. Среда [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] входит в состав [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  

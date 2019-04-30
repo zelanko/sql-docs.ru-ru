@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e1a59377a075d7db189b91543590aee8c2cb0013
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328232"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63144464"
 ---
 # <a name="replace-in-files"></a>Замена в файлах
   Вкладка **Замена в файлах** окна «Найти и заменить» позволяет осуществлять поиск в коде заданного набора файлов заданной строки или выражения и заменять все или некоторые из найденных совпадений. Обнаруженные совпадения и предпринятые действия перечисляются в окне «Результаты поиска», выбранном в диалоговом окне **Параметры результата**.  

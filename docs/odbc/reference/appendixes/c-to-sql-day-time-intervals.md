@@ -1,5 +1,5 @@
 ---
-title: 'Преобразование из C в SQL: интервалы времени дня | Документация Майкрософт'
+title: 'C в SQL: Интервалы времени дня | Документация Майкрософт'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,13 +17,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cb41d658637258c6d60b5adb4e0d7abb9ae81d91
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757662"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63213416"
 ---
-# <a name="c-to-sql-day-time-intervals"></a>Преобразование из C в SQL: интервалы времени дня
+# <a name="c-to-sql-day-time-intervals"></a>C в SQL: Интервалы времени дня
 Идентификаторы для типов данных ODBC C интервал времени дня следующие:  
   
  SQL_C_INTERVAL_DAY  
@@ -52,7 +52,7 @@ ms.locfileid: "47757662"
 |-------------------------|----------|--------------|  
 |SQL_CHAR [a]<br /><br /> SQL_VARCHAR, [a]<br /><br /> SQL_LONGVARCHAR [a]|Длина столбца в байтах > = байтов символов<br /><br /> Длина в байтах столбца < символов байт []<br /><br /> Значение данных не является допустимое значение литерала интервала|н/д<br /><br /> 22001<br /><br /> 22015|  
 |SQL_WCHAR [a]<br /><br /> SQL_WVARCHAR [a]<br /><br /> SQL_WLONGVARCHAR [a]|Длина столбца символ > = символьную длину данных<br /><br /> Длина столбца символ < символ длину данных, [a]<br /><br /> Значение данных не является допустимое значение литерала интервала|н/д<br /><br /> 22001<br /><br /> 22015|  
-|SQL_TINYINT [b]<br /><br /> SQL_SMALLINT [b] SQL_INTEGER [b]<br /><br /> SQL_BIGINT [b] SQL_NUMERIC [b]<br /><br /> SQL_DECIMAL [b]|Преобразование интервала одному полю не привел к усечение целой части<br /><br /> Преобразование привело к усечению целой части|н/д<br /><br /> 22003|  
+|SQL_TINYINT [b]<br /><br /> SQL_SMALLINT[b] SQL_INTEGER[b]<br /><br /> SQL_BIGINT [b] SQL_NUMERIC [b]<br /><br /> SQL_DECIMAL [b]|Преобразование интервала одному полю не привел к усечение целой части<br /><br /> Преобразование привело к усечению целой части|н/д<br /><br /> 22003|  
 |SQL_INTERVAL_DAY<br /><br /> SQL_INTERVAL_HOUR<br /><br /> SQL_INTERVAL_MINUTE<br /><br /> SQL_INTERVAL_SECOND<br /><br /> SQL_INTERVAL_DAY_TO_HOUR<br /><br /> SQL_INTERVAL_DAY_TO_MINUTE<br /><br /> SQL_INTERVAL_DAY_TO_SECOND<br /><br /> SQL_INTERVAL_HOUR_TO_MINUTE<br /><br /> SQL_INTERVAL_HOUR_TO_SECOND<br /><br /> SQL_INTERVAL_MINUTE_TO_SECOND|Значение данных был преобразован без усечения всех полей<br /><br /> Одно или несколько полей данных значения были усечены во время преобразования|н/д<br /><br /> 22015|  
   
  [a] все C интервальных типов данных могут преобразовываться в символьный тип данных.  

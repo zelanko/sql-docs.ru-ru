@@ -1,5 +1,5 @@
 ---
-title: 'Задача 2 (необязательно): Создание представления подписки MDS с помощью диспетчера основных данных | Документация Майкрософт'
+title: Задача 2 (необязательно). Создание представления подписки MDS с помощью диспетчера основных данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4596485b4eebeba66028d03f5a54b3ee2461205b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015285"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198888"
 ---
-# <a name="task-2-optional-creating-a-mds-subscription-view-using-master-data-manager"></a>Задача 2 (необязательно): Создание представления подписки MDS с помощью диспетчера основных данных
+# <a name="task-2-optional-creating-a-mds-subscription-view-using-master-data-manager"></a>Задача 2 (необязательно). Создание представления подписки MDS с помощью диспетчера основных данных
   В этой задаче вы Создание представления подписки для предоставления **поставщика** сущности в **поставщики** модели для других приложений. Это представление в текущей версии учебника не используется.  
   
 1.  Переключиться на главную страницу **диспетчера основных данных** ([http://localhost/MDS](http://localhost/MDS)), щелкнув **SQL Server 2012 Master Data Services** вверху.  

@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: e7b77b445ff8cbef8be3acb72ef9cdb6fa3af159
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013745"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63224598"
 ---
 # <a name="exploring-the-decision-tree-model-basic-data-mining-tutorial"></a>Изучение модели дерева принятия решений (учебник по интеллектуальному анализу данных — начальный уровень)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] Алгоритм дерева принятия решений прогнозирует, какие столбцы влияют на решение о приобретении велосипеда на основании оставшихся столбцов в обучающем наборе.  

@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a14a3eb7a7b80c5af04ba86e75f80fd20329558f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221014"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63205028"
 ---
 # <a name="cluster-node-configuration"></a>Настройка узла кластера
   Для добавления или удаления узлов в экземпляре отказоустойчивого кластера используется страница «Настройка узла кластера». Чтобы установить или обновить отказоустойчивый кластер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , необходимо запустить программу установки на каждом узле кластера. Чтобы добавить узел в существующий отказоустойчивый кластер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , необходимо запустить программу установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на узле, который добавляется в экземпляр отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

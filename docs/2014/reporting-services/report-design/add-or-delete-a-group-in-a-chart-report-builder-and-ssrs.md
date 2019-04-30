@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 89dc9cf211a9ab66c5617b6ef545795f332546f0
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59940040"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63206480"
 ---
 # <a name="add-or-delete-a-group-in-a-chart-report-builder-and-ssrs"></a>Добавление или удаление группы в диаграмме (построитель отчетов и службы SSRS)
   Щелкните в диаграммной области данных, чтобы отобразить панель **Данные диаграммы** . Создайте группы, перетащив поля набора данных в области **Группы категорий** и **Группы рядов** . Чтобы добавить вложенные группы, в область добавляют несколько полей.  

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 98bd56051c724186d7308eff669263d29b82ecd5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47813832"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198167"
 ---
 # <a name="delete-statement-limitations"></a>Ограничения инструкции DELETE
 Инструкции DELETE не поддерживается для драйвера Microsoft Excel или текст. Обратите внимание на то, что драйвер для текстовых поддерживается инструкции INSERT.  
