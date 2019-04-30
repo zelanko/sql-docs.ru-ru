@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f39911901b6ab729382c2e08b34c3452d4ec65cd
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367056"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63246034"
 ---
 # <a name="windows-server-failover-clustering-wsfc-with-sql-server"></a>Отказоустойчивая кластеризация Windows Server (WSFC) с SQL Server
   Новая *Отказоустойчивая кластеризация Windows Server* (WSFC) представляет собой группу независимых серверов, совместная работа которых позволяет повысить доступность приложений и служб. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] поддержка экземпляров отказоустойчивого кластера [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] и [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] осуществляется с использованием служб и возможностей WSFC.  
@@ -181,7 +181,7 @@ ms.locfileid: "53367056"
   
 ##  <a name="RelatedContent"></a> См. также  
   
--   [Технологии Windows Server:  Отказоустойчивые кластеры](https://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)  
+-   [Технологии Windows Server.  Отказоустойчивые кластеры](https://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)  
   
 -   [Отказоустойчивые кластеры в Windows Server 2008 R2](https://technet.microsoft.com/library/ff182338\(WS.10\).aspx)  
   

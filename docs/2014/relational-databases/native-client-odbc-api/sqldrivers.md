@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 87b7f550bf63c9cf14f16c829932398470848e6f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364166"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63192332"
 ---
 # <a name="sqldrivers"></a>SQLDrivers
   Диспетчер драйверов ODBC возвращает все спецификации атрибутов **SQLDrivers** . Дополнительные сведения о строках атрибутов и определении значений см. в [Data Access and Storage Developer Center (центре разработчиков средств доступа к данным и их хранения)](https://go.microsoft.com/fwlink/?LinkId=4173)или [справочник по программированию ODBC](https://go.microsoft.com/fwlink/?LinkId=45250) в сети.  

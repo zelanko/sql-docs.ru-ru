@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 70c597e7dd98d0eac435ae18423d296785369fa2
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59966010"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215487"
 ---
 # <a name="range-charts-report-builder-and-ssrs"></a>Диаграммы диапазонов (построитель отчетов и службы SSRS)
   Тип диаграммы диапазонов предназначен для отображения набора точек данных, каждая из которых определена несколькими значениями, относящимися к одной и той же категории. Значения представлены высотой маркера на оси значений. Метки категорий отображаются на оси категорий. В простой диаграмме диапазонов заполняется область между верхним и нижним значениями для каждой точки данных.  

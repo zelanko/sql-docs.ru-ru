@@ -1,5 +1,5 @@
 ---
-title: DefaultMember (многомерные Выражения) | Документы Microsoft
+title: DefaultMember (многомерные Выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3a0c11acadcbdcadfd9398baff09db9292c87eb2
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740133"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248130"
 ---
 # <a name="defaultmember-mdx"></a>DefaultMember (многомерные выражения)
 
@@ -36,7 +36,7 @@ Hierarchy_Expression.DefaultMember
  Элемент по умолчанию атрибута используется для оценки выражений, когда атрибут не включен в запрос.  
   
 ## <a name="example"></a>Пример  
- В следующем примере используется **DefaultMember** функции вместе с **имя** функцию для возвращения элемента по умолчанию для измерения Destination Currency в кубе Adventure Works. В примере возвращается **доллара США**. **Имя** функция используется для возвращения имени меры, а не свойство по умолчанию для меры, которое является **значение**.  
+ В следующем примере используется **DefaultMember** функция в сочетании с **имя** для возвращения элемента по умолчанию для измерения Destination Currency в кубе Adventure Works. В примере возвращается **доллар США**. **Имя** функция используется для возвращения имени меры, а не свойство по умолчанию измерения, который является **значение**.  
   
 ```  
 WITH MEMBER Measures.x AS   
@@ -46,7 +46,7 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Справочник по функциям многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-function-reference-mdx.md)   
- [Определяет элемент по умолчанию](../analysis-services/multidimensional-models/attribute-properties-define-a-default-member.md)  
+ [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)   
+ [Определение элемента по умолчанию](../analysis-services/multidimensional-models/attribute-properties-define-a-default-member.md)  
   
   

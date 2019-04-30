@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a4f0b3fcf58f3f2767fbdc653327bec334545bdd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072714"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63213527"
 ---
 # <a name="tables-and-indexes"></a>Таблицы и индексы
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщик OLE DB для собственного клиента предоставляет **IIndexDefinition** и **ITableDefinition** интерфейсы, позволяя потребителям создавать, изменять и удалять [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] таблиц и индексы. Допустимые определения таблиц и индексов зависят от версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -37,7 +37,7 @@ ms.locfileid: "48072714"
   
 |Идентификатор свойства|Описание|  
 |-----------------|-----------------|  
-|SSPROP_COL_COLLATIONNAME|Тип: VT_BSTR<br /><br /> Запись и запись:<br /><br /> По умолчанию: Null<br /><br /> Описание: это свойство используется только в интерфейсе **ITableDefinition**. Строка, указанная в этом свойстве, используется при создании инструкции [CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql).<br /><br /> .|  
+|SSPROP_COL_COLLATIONNAME|Тип: VT_BSTR<br /><br /> И ЗАПИСЬ: запись<br /><br /> По умолчанию: NULL<br /><br /> Описание. Это свойство используется только в **ITableDefinition**. Строка, указанная в этом свойстве, используется при создании инструкции [CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql).<br /><br /> .|  
   
 ## <a name="in-this-section"></a>в этом разделе  
   

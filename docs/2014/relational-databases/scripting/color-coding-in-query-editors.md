@@ -15,18 +15,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4145c76666b1f0da2b50f3a48ae5553a21ba2748
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092004"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63209655"
 ---
 # <a name="color-coding-in-query-editors"></a>Выделение цветом в редакторах запросов
   Тексту, который вводится в редакторах кода, присваивается категория. Каждая категория идентифицируется по цвету. Цвета помогают быстро находить текст в коде. Например, комментарии выделены темно-зеленым. В следующей таблице приведены наиболее часто применяемые цвета. Чтобы просмотреть полный список цветов и их категорий, а также настроить пользовательскую цветовую схему, в меню **Сервис**выберите пункт **Параметры** . Дополнительные сведения об изменении цветов по умолчанию см. в разделе [Change Font Color, Size, and Style](change-font-color-size-and-style.md).  
   
 ## <a name="default-code-colors"></a>Цвета по умолчанию  
   
-|Color|Категория|  
+|Color|Category|  
 |-----------|--------------|  
 |Красный|Строка SQL|  
 |Темно-зеленый|Комментарий|  

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f8e6464fee5779e35559b6eca23981aa09312aeb
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534796"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63193262"
 ---
 # <a name="use-auto-mode-with-for-xml"></a>Использование с AUTO Mode для FOR XML
   Как описано в статье [FOR XML (SQL Server)](for-xml-sql-server.md), в режиме AUTO результаты запросов возвращаются в виде вложенных XML-элементов. Такой механизм не обеспечивает достаточное управление структурой XML, формируемой из результатов запроса. Запросы в режиме AUTO полезны, если необходимо формировать простые иерархии. При этом [использование режима EXPLICIT совместно с предложением FOR XML](use-explicit-mode-with-for-xml.md) и [использование режима PATH совместно с FOR XML](use-path-mode-with-for-xml.md) дают больше контроля и гибкости при выборе формы XML из результатов запроса.  

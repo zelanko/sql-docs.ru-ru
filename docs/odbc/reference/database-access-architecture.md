@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 43c6ffd93020b1db1b90ad1768822075299d16b2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527680"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63186274"
 ---
 # <a name="database-access-architecture"></a>Архитектура доступа к базе данных
 Один из вопросов в разработке ODBC был какой части архитектура доступа к базе данных для стандартизации. Программные интерфейсы SQL, описанный в предыдущем разделе - embedded SQL модулей SQL и CLI - являются только одной частью этой архитектуры. На самом деле поскольку ODBC был главным образом предназначен для подключения приложений на основе персональных компьютеров миникомпьютер и мэйнфреймов СУБД, было также ряд компонентов сети, некоторые из которых может быть стандартизированный.  

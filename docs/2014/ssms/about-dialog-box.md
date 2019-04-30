@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fe32ce0b356a1c184cd8aba66c9be3d27805f3a1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52769426"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63226226"
 ---
 # <a name="about-dialog-box"></a>Диалоговое окно "О программе"
   В диалоговом окне **О программе** содержатся сведения о продукте, а также предоставляется доступ к сведениям о компьютере, на котором он запущен. Для копий с ограниченным сроком действия запись [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] содержит число дней, оставшихся до прекращения срока действия установленной копии. Это диалоговое окно открывается из меню **Справка** .  

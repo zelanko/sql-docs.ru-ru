@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 601573a34082f386bfee238308a8f97c41743e4b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655422"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239779"
 ---
 # <a name="chapter-property-ado"></a>Свойство Chapter (ADO)
 Возвращает или задает поставщика OLE DB **глава** объектов или из [интерфейс ADORecordsetConstruction](../../../ado/reference/ado-api/adorecordsetconstruction-interface.md) объекта. При использовании **put_Chapter** присвоить **глава** объекта, подмножество строк превращается в ADO [объект Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) объекта. Таким образом задается в текущем главе **набора строк**объекта. Это свойство доступно для чтения/записи.  

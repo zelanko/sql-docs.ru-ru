@@ -15,11 +15,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 2b39faa18a310a652b9a0b52c5c50c55060ab0f2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52799776"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63218219"
 ---
 # <a name="deprecated-full-text-search-features-in-sql-server-2014"></a>Устаревшие функции полнотекстового поиска в SQL Server 2014
   В этом разделе описаны устаревшие функции полнотекстового поиска, по-прежнему доступные в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Эти функции будут удалены в следующем выпуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Не следует использовать устаревшие функции в новых приложениях.  
@@ -48,7 +48,7 @@ ms.locfileid: "52799776"
   
 |Устаревшая функция|Замена|Имя функции|Идентификатор функции|  
 |------------------------|-----------------|------------------|----------------|  
-|инструкции CONTAINS и CONTAINSTABLE, универсальный оператор NEAR:<br /><br /> {<simple_term> &#124; <prefix_term>}<br /><br /> {<br /><br /> { { NEAR &#124; ~ }    {<simple_term> &#124; <prefix_term>} } [...*n*]<br /><br /> }|Пользовательский оператор NEAR:<br /><br /> NEAR(<br /><br /> {   {<simple_term> &#124; <prefix_term>} [ ,...*n* ]<br /><br /> &#124; ( {<simple_term> &#124; <prefix_term>} [,...*n*] )<br /><br /> [,\<расстояние > [,\<порядок >]]<br /><br /> }<br /><br /> )<br /><br /> \<расстояние >:: = {*целое число* &#124; **MAX**}<br /><br /> \<Порядок >:: = {TRUE &#124; **FALSE**}|FULLTEXT_OLD_NEAR_SYNTAX|247|  
+|инструкции CONTAINS и CONTAINSTABLE, универсальный оператор NEAR:<br /><br /> {<simple_term> &#124; <prefix_term>}<br /><br /> {<br /><br /> { { NEAR &#124; ~ }    {<simple_term> &#124; <prefix_term>} } [...*n*]<br /><br /> }|Пользовательский оператор NEAR:<br /><br /> NEAR(<br /><br /> {   {<simple_term> &#124; <prefix_term>} [ ,...*n* ]<br /><br /> &#124; ( {<simple_term> &#124; <prefix_term>} [,...*n*] )<br /><br /> [,\<расстояние > [,\<порядок >]]<br /><br /> }<br /><br /> )<br /><br /> \<distance> ::= {*integer* &#124; **MAX**}<br /><br /> \<order> ::= {TRUE &#124; **FALSE**}|FULLTEXT_OLD_NEAR_SYNTAX|247|  
 |Параметр CREATE FULLTEXT CATALOG:<br /><br /> IN PATH '*rootpath*'<br /><br /> ON FILEGROUP *filegroup*|Нет.|CREATE FULLTEXT CATLOG IN PATH<br /><br /> Нет.*|237<br /><br /> Нет.<sup>*</sup>|  
 |Свойство DATABASEPROPERTYEX: IsFullTextEnabled|Нет.|DATABASEPROPERTYEX **('IsFullTextEnabled')**|202|  
 |Параметр sp_detach_db:<br /><br /> [ @keepfulltextindexfile = ] '*KeepFulltextIndexFile*'|Нет.|sp_detach_db @keepfulltextindexfile|226|  

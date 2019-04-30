@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: eb02dd54ea57af668e56fe910ca92830fb09c418
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514692"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63186280"
 ---
 # <a name="data-sources"></a>обозревателе решений
 Объект *источника данных* является просто источником данных. Он может быть файлом, определенной базы данных в СУБД или даже веб-канал данных в реальном времени. Данные могут быть расположены на одном компьютере с программой, или на другом компьютере, где-нибудь в сети. Например источник данных может быть СУБД Oracle под управлением операционной системы OS/2®, осуществляется Novell® Netware; СУБД IBM DB2, доступ через шлюз; Коллекция файлов Xbase в каталоге сервера. или локального файла базы данных Microsoft® Access.  

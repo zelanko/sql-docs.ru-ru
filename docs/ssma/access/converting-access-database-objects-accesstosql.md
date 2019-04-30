@@ -31,11 +31,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: c4bb3d1b6fdc57e1251e9c8ca39f0c7437ffb126
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666203"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63139030"
 ---
 # <a name="converting-access-database-objects-accesstosql"></a>Преобразование объектов базы данных Access (AccessToSQL)
 После добавления базы данных Access и подключены к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure, SSMA отображает метаданные для доступа и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или объекты базы данных SQL Azure. Теперь Выбор объектов базы данных Access и затем преобразовать схемы в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или схем SQL Azure.  
@@ -60,7 +60,7 @@ ms.locfileid: "51666203"
 |column|column|  
 |индекс|индекс|  
 |внешний ключ|внешний ключ|  
-|Запрос|представление<br /><br />Наиболее ВЫБЕРИТЕ запросы, преобразуются в представления. Другие запросы, например запросы обновления, не переносятся.<br /><br />Запросы SELECT, которые принимают параметры, не преобразуются, а также не перекрестные запросы.|  
+|запрос|представление<br /><br />Наиболее ВЫБЕРИТЕ запросы, преобразуются в представления. Другие запросы, например запросы обновления, не переносятся.<br /><br />Запросы SELECT, которые принимают параметры, не преобразуются, а также не перекрестные запросы.|  
 |отчет|не преобразовано|  
 |Формы|не преобразовано|  
 |макрос|не преобразовано|  

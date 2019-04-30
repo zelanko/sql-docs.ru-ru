@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 83fde7d8d43086114b2aae4350ce374b713ff4ec
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806497"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63204665"
 ---
 # <a name="validation-warnings-dialog-box-visual-database-tools"></a>Диалоговое окно «Предупреждения проверки» (визуальные инструменты для баз данных)
   Это диалоговое окно появляется при попытке сохранить изменения с потенциально опасными побочными эффектами или в случае вероятной неудачи операции фиксации базы данных. Это диалоговое окно указывает возможные побочные эффекты или возможные причины неудачи операции фиксации. Диалоговое окно предоставляет возможность продолжить действие или отменить его.  

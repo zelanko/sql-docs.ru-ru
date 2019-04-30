@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0053228f5d52f2a1dad8e41e2406d34fdaf9b2b2
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59940410"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155732"
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>Представление конструктора общих наборов данных (построитель отчетов)
   В окне конструктора общих наборов данных создаются запросы к наборам данных, которые будут доступны другим пользователям. Окно позволяет выбрать общий источник данных, указать свойства для общего набора данных и создать запрос в конструкторе запросов.  

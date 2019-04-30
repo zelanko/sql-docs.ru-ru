@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cf05de13f0aada12da055f2e9c1e5a3a0db1d1df
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52780476"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63195017"
 ---
 # <a name="page-setup-dialog-box"></a>Диалоговое окно «Параметры страницы»
   Структуру страницы можно настроить, выбирая параметры в диалоговом окне **Параметры страницы** . Доступность некоторых параметров зависит от языков, установленных и применяемых для изменения.  

@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c52bc6b7781b6593f945d582e033653aeb61dc9f
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59956730"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242827"
 ---
 # <a name="granting-permissions-on-report-server-items-on-a-sharepoint-site"></a>Предоставление разрешений для элементов сервера отчетов на сайте SharePoint
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] предоставляют встроенные средства безопасности, которые можно использовать для предоставления права доступа к элементам сервера отчетов, к которым предоставляется доступ с сайтов и из библиотек SharePoint. Если пользователям уже назначены разрешения, они получат и доступ к элементам и операциям сервера отчетов сразу после настройки параметров интеграции служб [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] и сервера отчетов. Можно использовать имеющиеся разрешения для передачи определений отчетов и других документов, просмотра отчетов, создания подписок и управления элементами.  

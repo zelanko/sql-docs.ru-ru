@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f8481d843ce49227c343b71111c0f56a8af00a5e
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601585"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63134348"
 ---
 # <a name="synchronize-method-rds"></a>Метод Synchronize (служба удаленных рабочих столов)
 Синхронизировать наборе записей с помощью базы данных, указанной в строке подключения для использования в ADO 2.5 и более поздних версий.  

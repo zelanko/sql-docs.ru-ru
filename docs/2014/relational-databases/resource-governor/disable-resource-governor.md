@@ -13,18 +13,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 75feaf114355c3a23abad6ec23be9011e0de5e06
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52761426"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63209716"
 ---
 # <a name="disable-resource-governor"></a>Отключение регулятора ресурсов
   Регулятор ресурсов можно отключить в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или с помощью Transact-SQL.  
   
--   **Перед началом работы**  [Ограничения](#LimitationsRestrictions), [разрешения](#Permissions)  
+-   **Перед началом:**  [ограничения](#LimitationsRestrictions), [разрешения](#Permissions)  
   
--   **Отключение регулятора ресурсов с помощью:**  [Обозреватель объектов](#RGOffObjEx), [свойства регулятора ресурсов](#RGOffProp), [Transact-SQL](#RGOffTSQL)  
+-   **Отключение Resource Governor с использованием:**  [обозревателя объектов](#RGOffObjEx), [свойств Resource Governor](#RGOffProp), [Transact-SQL](#RGOffTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
  В результате отключения регулятора ресурсов происходит следующее.  

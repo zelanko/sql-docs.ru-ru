@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ce182fda15373e15baffcda73cc777c2cf154065
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59935210"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63207206"
 ---
 # <a name="adding-data-to-a-tablix-data-region-report-builder-and-ssrs"></a>Добавление данных в область данных табликса (построитель отчетов и службы SSRS)
   Чтобы отобразить данные из набора данных отчета в таблице или матрице, в каждой ячейке данных следует указать нужное имя поля из набора данных. Можно отображать подробные или сгруппированные данные. Если добавить в таблицу или матрицу группы, то строки и столбцы для групповых значений и сгруппированные данные добавляются автоматически. Затем к данным можно добавить подытоги и итоги.  

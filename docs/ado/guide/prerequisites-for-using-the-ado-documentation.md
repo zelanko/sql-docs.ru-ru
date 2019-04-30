@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d778f2e005003a0ab3cb50b6a25823c2d711441f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761342"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63221999"
 ---
 # <a name="prerequisites-for-using-the-ado-documentation"></a>Обязательные условия для использования документации по объектам ADO
 Для использования этой документации, вам следует ознакомиться, как минимум, опыт создания приложения с помощью Microsoft Visual Basic, так как в большинстве примеров в руководстве по записываются на этом языке. Кроме того, существуют также некоторые примеры на языке Microsoft Visual C++, Java, Visual Basic Scripting Edition (VBScript) и Microsoft JScript.  

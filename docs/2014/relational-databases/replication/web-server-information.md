@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b5f5c2385b4c58447db008544124ae9048566958
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52805846"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199942"
 ---
 # <a name="web-server-information"></a>Сведения о веб-сервере
   Сведения о веб-сервере необходимы для использования функции веб-синхронизации при репликации слиянием. Дополнительные сведения о конфигурации для веб-синхронизации см. в статье [Настройка веб-синхронизации](configure-web-synchronization.md).  
@@ -30,10 +30,10 @@ ms.locfileid: "52805846"
  Позволяет указать тип проверки подлинности, используемой для подключения к веб-серверу. Рекомендуется использовать обычную проверку подлинности для подключений к серверу IIS в сопряжении с безопасным протоколом Secure Sockets Layer (SSL). Если выбрана обычная проверка подлинности, введите имя входа и пароль, которые будут использоваться для подключения подписчика к серверу IIS.  
   
 ## <a name="see-also"></a>См. также  
- [Create a Pull Subscription](create-a-pull-subscription.md)   
+ [Создание подписки по запросу](create-a-pull-subscription.md)   
  [Просмотр и изменение свойств подписки по запросу](view-and-modify-pull-subscription-properties.md)   
  [Подписчики, отличные от подписчиков SQL Server](non-sql/non-sql-server-subscribers.md)   
- [Subscribe to Publications](subscribe-to-publications.md)   
+ [Подписка на публикации](subscribe-to-publications.md)   
  [Web Synchronization for Merge Replication](web-synchronization-for-merge-replication.md)  
   
   

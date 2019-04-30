@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b4d92d2784649e4366113b3070b54598df585370
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711442"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240308"
 ---
 # <a name="desktop-database-driver-performance-issues"></a>Проблемы производительности драйверов для баз данных на настольном компьютере
 Чтобы обеспечить совместимость с существующими приложениями ANSI, типов данных SQL_WCHAR, SQL_WVARCHAR и SQL_WLONGVARCHAR предоставляются как SQL_CHAR и SQL_VARCHAR, SQL_LONGVARCHAR Microsoft Access 4.0 или более поздней версии источников данных. Источники данных не возвращают CHAR РАСШИРЕННЫХ типов данных, но данные по-прежнему должны отправляться Jet в форме широкий Char. Важно понимать, что преобразование будет выполняться в случае привязанного столбца SQL_C_CHAR результат или параметр с типом данных SQL_CHAR в приложение ANSI.  

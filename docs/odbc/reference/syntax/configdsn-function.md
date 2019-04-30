@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d65b7f31010aeb768f7b04c06753f185d3cc792f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210100"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63232039"
 ---
 # <a name="configdsn-function"></a>Функция ConfigDSN
 **Соответствие стандартам**  
@@ -56,7 +56,7 @@ BOOL ConfigDSN(
   
  ODBC_CONFIG_DSN: Настройка (изменить) существующего источника данных.  
   
- ЗНАЧЕНИЕ ODBC_REMOVE_DSN: Удаление существующего источника данных.  
+ ODBC_REMOVE_DSN: Удаление существующего источника данных.  
   
  *lpszDriver*  
  [Вход] Описание драйвера (обычно имя связанного СУБД) предоставляемые пользователям вместо имени физического драйвера.  
@@ -75,7 +75,7 @@ BOOL ConfigDSN(
 |ODBC_ERROR_INVALID_HWND|Недопустимый дескриптор окна|*HwndParent* предоставил недопустимый аргумент.|  
 |ODBC_ERROR_INVALID_KEYWORD_VALUE|Пары "недопустимое ключевое слово значение"|*LpszAttributes* аргумент содержит синтаксическую ошибку.|  
 |ODBC_ERROR_INVALID_NAME|Недопустимое имя драйвера или перевода|*LpszDriver* предоставил недопустимый аргумент. Он не будет найден в реестре.|  
-|ODBC_ERROR_INVALID_REQUEST_TYPE|Недопустимый тип запроса|*FRequest* аргумент не является одним из следующих:<br /><br /> ЗНАЧЕНИЕ ODBC_REMOVE_DSN ODBC_CONFIG_DSN ODBC_ADD_DSN|  
+|ODBC_ERROR_INVALID_REQUEST_TYPE|Недопустимый тип запроса|*FRequest* аргумент не является одним из следующих:<br /><br /> ODBC_ADD_DSN ODBC_CONFIG_DSN ODBC_REMOVE_DSN|  
 |ODBC_ERROR_REQUEST_FAILED|*Запросить* сбой|Не удалось выполнить операцию, запрошенную *fRequest* аргумент.|  
 |ODBC_ERROR_DRIVER_SPECIFIC|Ошибка драйвера или перевода|Ошибка драйвера, для которого отсутствуют определенные ошибки установщика ODBC. *SzError* аргумента в вызове **SQLPostInstallerError** функция должна содержать сообщении об ошибке специфические для драйвера.|  
   

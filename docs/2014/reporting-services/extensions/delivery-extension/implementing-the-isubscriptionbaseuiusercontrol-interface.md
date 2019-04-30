@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2664d71243d98e9b8152c5c5c7ce241a4f3669f8
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60156631"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164353"
 ---
 # <a name="implementing-the-isubscriptionbaseuiusercontrol-interface-for-a-delivery-extension"></a>Реализация интерфейса ISubscriptionBaseUIUserControl для модуля доставки
   Модули доставки служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] могут содержать реализацию пользовательского интерфейса подписки для сбора сведений, относящихся к модулю, в диспетчере отчетов. Пользовательский интерфейс вызывается, когда пользователь создает новую подписку или изменяет существующую подписку. Когда создается новая подписка, в пользовательском интерфейсе выводятся походящие значения по умолчанию, а пользователи получают возможность взаимодействовать с поставщиком доставки. Когда подписка изменяется, пользовательский интерфейс заранее заполняется сведениями, содержащимися в текущей подписке.  

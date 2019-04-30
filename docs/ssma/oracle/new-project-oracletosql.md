@@ -11,17 +11,17 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: acfc9cc5593001e3a9a918abe788494b1b7fd405
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601879"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63209832"
 ---
 # <a name="new-project-oracletosql"></a>Создание проекта (OracleToSQL)
 Используйте **новый проект** диалоговое окно для создания нового проекта SSMA. Чтобы получить доступ к **новый проект** диалоговом окне **файл** меню, щелкните **новый проект**.  
   
 ## <a name="options"></a>Параметры  
-**Название**  
+**Name**  
 Введите имя проекта. SSMA добавляет расширение файла.  
   
 **Местоположение**  
@@ -40,5 +40,5 @@ ms.locfileid: "47601879"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   
--   База данных Azure SQL  
+-   БД SQL Azure  
   

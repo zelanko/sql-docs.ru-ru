@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cc959fa8406453230ee133bf6183fa3dc1ba51f1
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355796"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63190337"
 ---
 # <a name="before-installing-failover-clustering"></a>Подготовка к установке отказоустойчивого кластера
   Перед тем как установить отказоустойчивый кластер [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], необходимо выбрать оборудование и операционную систему, на которых [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] будет работать. Кроме того, необходимо настроить отказоустойчивую кластеризацию Windows Server (WSFC) и проверить настройки сети, безопасности и другого программного обеспечения, которое будет запускаться на отказоустойчивом кластере.  
@@ -47,7 +47,7 @@ ms.locfileid: "53355796"
   
     -   Платформа .NET Framework 3.5 с пакетом обновления 1 (SP1) больше не устанавливается программой установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], но может потребоваться при установке [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в старых операционных системах Windows. Дополнительные сведения см. в статье [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][Заметки о выпуске](https://go.microsoft.com/fwlink/?LinkId=296445).  
   
-    -   **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Пакет обновления.** Чтобы избежать перезагрузки компьютера из-за установки .NET Framework 4 во время установки, программа установки [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] требует установки на компьютере центра обновления [!INCLUDE[msCoName](../../../includes/msconame-md.md)].  Это обновление включено в установку [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] в Windows 7 с пакетом обновления 1 (SP1) или [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] с пакетом обновления 2 (SP2). При установке в более старой операционной системе Windows загрузите его по ссылке: [Центр обновления Майкрософт для .NET Framework 4.0 в Windows Vista и Windows Server 2008](https://go.microsoft.com/fwlink/?LinkId=198093).  
+    -   **Пакет обновления [!INCLUDE[msCoName](../../../includes/msconame-md.md)]:** Чтобы избежать перезагрузки компьютера из-за установки .NET Framework 4 во время установки, программа установки [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] требует установки на компьютере центра обновления [!INCLUDE[msCoName](../../../includes/msconame-md.md)].  Это обновление включено в установку [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] в Windows 7 с пакетом обновления 1 (SP1) или [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] с пакетом обновления 2 (SP2). При установке в более старой операционной системе Windows загрузите его по ссылке: [Центр обновления Майкрософт для .NET Framework 4.0 в Windows Vista и Windows Server 2008](https://go.microsoft.com/fwlink/?LinkId=198093).  
   
     -   .NET Framework 4. Программа установки устанавливает платформу .NET Framework 4 в кластеризованной операционной системе. Чтобы сократить время установки, перед запуском программы установки рекомендуется установить .NET Framework 4.  
   

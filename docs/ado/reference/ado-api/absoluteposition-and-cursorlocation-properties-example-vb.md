@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a22afb8e59d692ae4fae010adc819cd930b8ab46
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770848"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155240"
 ---
 # <a name="absoluteposition-and-cursorlocation-properties-example-vb"></a>Примеры AbsolutePosition и CursorLocation свойства (Visual Basic)
 В этом примере показано, как [примеры AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) свойство можно отслеживать ход выполнения цикла, который перечисляет все записи из [записей](../../../ado/reference/ado-api/recordset-object-ado.md). Она использует [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) свойство, чтобы включить **примеры AbsolutePosition** свойства, установив курсор для клиентского курсора.  

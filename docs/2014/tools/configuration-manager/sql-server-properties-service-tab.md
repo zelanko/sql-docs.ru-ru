@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f79b52e62a8080c70865ae8ebe33d1a8a87faa04
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779316"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63237991"
 ---
 # <a name="sql-server-properties-service-tab"></a>Свойства SQL Server (вкладка «Службы»)
   Используйте вкладку **Службы**в диалоговом окне **Свойства MSSQLSERVER** , чтобы просмотреть или указать следующие параметры.  
@@ -45,9 +45,9 @@ ms.locfileid: "52779316"
  **Режим запуска**  
  Установите для этой службы один из следующих вариантов:  
   
--   Вручную. Эта служба не запускается автоматически при запуске компьютера. Необходимо запустить службу при помощи диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или другого средства.  
+-   Вручную: Эта служба запускается автоматически при запуске компьютера. Необходимо запустить службу при помощи диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или другого средства.  
   
--   Автоматически. Эта служба пытается запуститься при запуске компьютера.  
+-   Автоматически: Эта служба пытается запуститься при запуске этого компьютера.  
   
 -   Отключено: Служба не может быть запущена.  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Создание моделей интеллектуального анализа данных и выполнение к ним запросов с помощью расширений интеллектуального анализа данных: Учебники (службы Analysis Services — Интеллектуальный анализ данных) | Документация Майкрософт'
+title: 'Создание моделей и выполнение к ним запросов с помощью расширений интеллектуального анализа данных: Учебники (службы Analysis Services — Интеллектуальный анализ данных) | Документация Майкрософт'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 22ed01105a32f460bcbeb2c067299fdf62af2eed
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012525"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63180551"
 ---
-# <a name="creating-and-querying-data-mining-models-with-dmx-tutorials-analysis-services---data-mining"></a>Создание моделей интеллектуального анализа данных и выполнение к ним запросов с помощью расширений интеллектуального анализа данных: учебники (службы Analysis Services — интеллектуальный анализ данных)
+# <a name="creating-and-querying-data-mining-models-with-dmx-tutorials-analysis-services---data-mining"></a>Создание моделей и выполнение к ним запросов с помощью расширений интеллектуального анализа данных: Учебники (службы Analysis Services — Интеллектуальный анализ данных)
   После создания решения интеллектуального анализа данных с помощью [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], можно создавать запросы к модели интеллектуального анализа данных для прогнозирования трендов, выявления закономерностей в данных и измерения точности моделей интеллектуального анализа данных.  
   
  Приведенные в следующем списке пошаговые учебники помогут вам понять, как построение и запуск запросов интеллектуального анализа данных с помощью [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , чтобы вы могли получить ваши данные.  

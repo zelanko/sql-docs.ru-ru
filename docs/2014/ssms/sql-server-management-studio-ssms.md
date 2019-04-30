@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6918d5542ddda98a0182bc327fbff9eb9af9714e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812356"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63154990"
 ---
 # <a name="sql-server-management-studio"></a>SQL Server Management Studio
   Среда [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] — это интегрированная среда для управления инфраструктурой SQL Server. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] предоставляет средства для настройки, наблюдения и администрирования экземпляров SQL Server. Она также предоставляет средства для развертывания, наблюдения и обновления компонентов уровня данных, например баз данных и хранилищ данных, используемых приложениями, а также для построения запросов и скриптов.  
@@ -37,6 +37,6 @@ ms.locfileid: "52812356"
   
 ## <a name="see-also"></a>См. также  
  [Учебник. SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)   
- [Учебник. Написание инструкций Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md)  
+ [Учебник. Составление инструкций Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md)  
   
   

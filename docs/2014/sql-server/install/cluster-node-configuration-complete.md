@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cb472e106438aee781bf54fd6216d2ed32f7f190
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531843"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63190720"
 ---
 # <a name="cluster-node-configuration-complete"></a>Настройка узла кластера (Полная)
   Воспользуйтесь страницей «Настройка узла кластера (полная)», чтобы указать существующий экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], который подготовлен для работы в кластере. Чтобы установить или обновить отказоустойчивый кластер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], необходимо запустить программу установки на каждом узле кластера. Чтобы добавить узел в существующий отказоустойчивый кластер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , необходимо запустить программу установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на узле, который добавляется в экземпляр отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

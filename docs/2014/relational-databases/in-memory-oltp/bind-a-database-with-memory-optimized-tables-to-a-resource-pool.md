@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: d64b5bf6b60f37bf386840031c304dd5b13faaeb
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528446"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63158808"
 ---
 # <a name="bind-a-database-with-memory-optimized-tables-to-a-resource-pool"></a>Привязка базы данных с таблицами, оптимизированными для памяти, к пулу ресурсов
   Пул ресурсов представляет подмножество физических ресурсов, доступных для управления. По умолчанию базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] привязываются к пулу и потребляют ресурсы пула по умолчанию. Чтобы защитить [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] от использования его ресурсов одной или несколькими оптимизированными для памяти таблицами, а также чтобы другие потребители не занимали память, необходимую таким таблицам, рекомендуется создать отдельный пул ресурсов для управления использованием памяти для базы данных с оптимизированными для памяти таблицами.  
@@ -63,7 +63,7 @@ GO
 ### <a name="create-a-resource-pool-and-configure-memory"></a>Создайте новый пул ресурсов и настройте память.  
  При настройке памяти для таблиц, оптимизированных для памяти, планирование загрузки следует выполнять на основе MIN_MEMORY_PERCENT, но не MAX_MEMORY_PERCENT.  Сведения о MIN_MEMORY_PERCENT и MAX_MEMORY_PERCENT см. в разделе [ALTER RESOURCE POOL (Transact-SQL)](/sql/t-sql/statements/alter-resource-pool-transact-sql). Это повышает прогнозируемую доступность памяти для таблиц, оптимизированных для памяти, так как использование MIN_MEMORY_PERCENT повышает нагрузку на другие пулы ресурсов, чтобы добиться выделения памяти. Чтобы обеспечить доступность памяти и избежать ее нехватки, значения MIN_MEMORY_PERCENT и MAX_MEMORY_PERCENT должны быть одинаковыми. В разделе [Процент доступной памяти для оптимизированных для памяти таблиц и индексов](#percent-of-memory-available-for-memory-optimized-tables-and-indexes) ниже процент доступной памяти для таблиц, оптимизированных для памяти, основан на объеме выделенной памяти.  
   
- См. раздел [Рекомендации. Использование In-Memory OLTP в среде ВМ](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) Дополнительные сведения при работе в среде ВМ.  
+ См. в разделе [советы и рекомендации: Использование In-Memory OLTP в среде ВМ](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) Дополнительные сведения при работе в среде ВМ.  
   
  Следующий код [!INCLUDE[tsql](../../includes/tsql-md.md)] создает пул ресурсов с именем Pool_IMOLTP, в котором для использования будет доступно 50 % памяти.  После создания пула регулятор ресурсов настраивается для включения Pool_IMOLTP.  
   
@@ -119,7 +119,7 @@ GO
  Теперь база данных будет привязана к пулу ресурсов.  
   
 ## <a name="change-min-memory-percent-and-max-memory-percent-on-an-existing-pool"></a>Изменить ПРОЦЕНТ памяти MIN и МАКСИМАЛЬНЫЙ объем памяти в ПРОЦЕНТАХ для существующего пула  
- Если на сервере увеличилась дополнительная память либо если изменился объем памяти, необходимый оптимизированным для памяти таблицам, может потребоваться изменить значения MIN_MEMORY_PERCENT и MAX_MEMORY_PERCENT. Следующие шаги показывают, как изменить значение MIN_MEMORY_PERCENT и MAX_MEMORY_PERCENT в пуле ресурсов. Инструкции по использованию значений для MIN_MEMORY_PERCENT и MAX_MEMORY_PERCENT см. ниже.  Дополнительные сведения см. в разделе [Рекомендации. Использование In-Memory OLTP в среде ВМ](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) Дополнительные сведения.  
+ Если на сервере увеличилась дополнительная память либо если изменился объем памяти, необходимый оптимизированным для памяти таблицам, может потребоваться изменить значения MIN_MEMORY_PERCENT и MAX_MEMORY_PERCENT. Следующие шаги показывают, как изменить значение MIN_MEMORY_PERCENT и MAX_MEMORY_PERCENT в пуле ресурсов. Инструкции по использованию значений для MIN_MEMORY_PERCENT и MAX_MEMORY_PERCENT см. ниже.  См. в разделе [рекомендации: Использование In-Memory OLTP в среде ВМ](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) Дополнительные сведения.  
   
 1.  Используйте `ALTER RESOURCE POOL` , чтобы изменить значение как MIN_MEMORY_PERCENT, так и MAX_MEMORY_PERCENT.  
   

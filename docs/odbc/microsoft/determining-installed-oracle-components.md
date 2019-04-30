@@ -14,17 +14,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7de783ae116a61aaa4c8801ca132127352020161
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849721"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240281"
 ---
 # <a name="determining-installed-oracle-components"></a>Определение установленных компонентов Oracle
 > [!IMPORTANT]  
 >  Этот компонент будет удален в будущих версиях Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Вместо этого используйте драйвер ODBC, предоставляемого корпорацией Oracle.  
   
- Чтобы определить компоненты Oracle, установленные в системе (и их версий), перейдите в каталог \Orainst Oracle в домашнем каталоге. Откройте один из следующих текстовых файлов: Nt.rgs, Win95.rgs или Win98.rgs.  
+ Чтобы определить компоненты Oracle, установленные в системе (и их версий), перейдите в каталог \Orainst Oracle в домашнем каталоге. Откройте один из следующих текстовых файлов: NT.rgs Win95.rgs и Win98.rgs.  
   
  Формат файла — аналогичен следующему:  
   

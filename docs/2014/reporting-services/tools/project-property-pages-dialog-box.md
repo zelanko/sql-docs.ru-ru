@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a76281eead6430ca0dafae8671c7990f3c6c2de3
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59947980"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63201076"
 ---
 # <a name="project-property-pages-dialog-box"></a>Диалоговое окно страниц свойств проекта
   Страницы свойств проекта позволяют настраивать свойства развертывания проекта сервера отчетов. Чтобы открыть это диалоговое окно, в меню **Проект** щелкните _\<Имя проекта отчета_**Свойства**.  

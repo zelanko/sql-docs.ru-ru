@@ -1,5 +1,5 @@
 ---
-title: DISTINCT (многомерные Выражения) | Документы Microsoft
+title: DISTINCT (многомерные Выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: fc3e4680991f88743bbab8eec1de3bb629c94b66
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739933"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248249"
 ---
 # <a name="distinct-mdx"></a>Distinct (многомерные выражения)
 
@@ -33,7 +33,7 @@ Distinct(Set_Expression)
  Допустимое многомерное выражение, возвращающее набор.  
   
 ## <a name="remarks"></a>Примечания  
- Если **Distinct** функция находит повторяющиеся кортежи в заданном наборе, она оставляет только первый экземпляр повторяющегося кортежа, оставляя неизменной упорядочение набора.  
+ Если **Distinct** функция находит повторяющиеся кортежи в заданном наборе, она оставляет только первый экземпляр повторяющегося кортежа, при котором порядок набора не затрагиваются.  
   
 ## <a name="examples"></a>Примеры  
  В следующем запросе показано использование функции Distinct с именованным набором, а также с функцией Count для подсчета количества кортежей в наборе.  
@@ -61,6 +61,6 @@ Distinct(Set_Expression)
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>См. также  
- [Справочник по функциям многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
   
   

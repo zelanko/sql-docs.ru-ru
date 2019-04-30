@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6b892adaf02f13ec7de150ae1de9966a65ac1d7b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195514"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200386"
 ---
 # <a name="executing-queries-how-to-topics-odbc"></a>Инструкции по выполнению запросов (ODBC)
   Выполнение инструкции SQL в приложении ODBC требует выделения дескриптора инструкции, установки атрибутов инструкции и подготовки и выполнения инструкции SQL.  

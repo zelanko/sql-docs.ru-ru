@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 260406eddd6caef88035376a764c3e140547e6c4
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204673"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63186130"
 ---
 # <a name="sqlprocedures-function"></a>Функция SQLProcedures
 **Соответствие стандартам**  
@@ -77,7 +77,7 @@ SQLRETURN SQLProcedures(
  [Вход] Длина в символах **ProcName*.  
   
 ## <a name="returns"></a>Возвращает  
- Значение SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, значение SQL_ERROR или SQL_INVALID_HANDLE.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR, or SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Диагностика  
  Когда **SQLProcedures** возвращает значение SQL_ERROR или SQL_SUCCESS_WITH_INFO, а связанное значение SQLSTATE можно получить, вызвав **SQLGetDiagRec** с *HandleType* из SQL_ HANDLE_STMT и *обрабатывать* из *StatementHandle*. В следующей таблице перечислены значения SQLSTATE, обычно возвращаемые **SQLProcedures** и объясняется каждый из них в контексте этой функции; описания SQLSTATE, возвращаемых диспетчером драйверов предшествует обозначение «(DM)». Возвращается связанный с каждого значения SQLSTATE значение SQL_ERROR, если не указано иное.  
@@ -135,7 +135,7 @@ SQLRETURN SQLProcedures(
 |NUM_OUTPUT_PARAMS (ODBC 2.0)|5|Н/Д|Зарезервировано для последующего использования. Приложения, не следует полагаться на данные, возвращаемые в этих столбцах результата.|  
 |NUM_RESULT_SETS (ODBC 2.0)|6|Н/Д|Зарезервировано для последующего использования. Приложения, не следует полагаться на данные, возвращаемые в этих столбцах результата.|  
 |"ПРИМЕЧАНИЯ" (ODBC 2.0)|7|Varchar|Описание процедуры.|  
-|PROCEDURE_TYPE (ODBC 2.0)|8|Smallint|Определяет тип процедуры:<br /><br /> SQL_PT_UNKNOWN: Не удается определить, является ли процедура возвращает значение.<br /><br /> SQL_PT_PROCEDURE: Возвращаемый объект является процедуре. то есть он не имеет возвращаемого значения.<br /><br /> ЗНАЧЕНИЕ SQL_PT_FUNCTION: Возвращаемый объект является функцией; то есть он имеет возвращаемое значение.|  
+|PROCEDURE_TYPE (ODBC 2.0)|8|Smallint|Определяет тип процедуры:<br /><br /> SQL_PT_UNKNOWN: Не удается определить, является ли процедура возвращает значение.<br /><br /> SQL_PT_PROCEDURE: Возвращаемый объект является процедуре. то есть он не имеет возвращаемого значения.<br /><br /> SQL_PT_FUNCTION: Возвращаемый объект является функцией; то есть он имеет возвращаемое значение.|  
   
  *SchemaName* и *ProcName* аргументы принимают шаблонов поиска. Дополнительные сведения о шаблонах допустимым поиска см. в разделе [аргументы значения шаблона](../../../odbc/reference/develop-app/pattern-value-arguments.md).  
   

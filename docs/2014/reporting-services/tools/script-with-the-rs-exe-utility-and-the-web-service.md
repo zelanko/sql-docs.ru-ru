@@ -18,11 +18,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cc585670b2f91253e85159b1a7715c2a7a603f16
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59946860"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63158274"
 ---
 # <a name="script-with-the-rsexe-utility-and-the-web-service"></a>Создание скриптов с помощью программы rs.exe и веб-службы
   Разработчики и администраторы сервера отчетов могут выполнять на сервере отчетов операции с помощью программы **rs** (RS.exe). Эта программа позволяет управлять сервером отчетов программно с помощью скриптов на языке [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  

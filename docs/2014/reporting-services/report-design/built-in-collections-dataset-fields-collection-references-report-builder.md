@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 906cda310ff4478854d2b308332571fa6dbdd155
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59950140"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185816"
 ---
 # <a name="dataset-fields-collection-references-report-builder-and-ssrs"></a>Ссылки на коллекцию полей набора данных (построитель отчетов и службы SSRS)
   В каждом наборе данных отчета содержится одна коллекция Fields. Коллекция Fields представляет собой набор полей, заданных запросом набора данных, и все созданные дополнительные вычисляемые поля. После создания набора данных коллекция полей появляется в области **Данные отчета** .  

@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c10649c3dbe873464bcc52ca5bc54e5b948d547a
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59951280"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63157598"
 ---
 # <a name="server-properties-history-page"></a>Свойства сервера (страница «Журнал»)
   Используйте эту страницу для задания значения по умолчанию для количества сохраняемых копий журнала отчета. Значение по умолчанию предоставляет начальный параметр, который задает пределы объема журнала отчета для всех отчетов. Эти настройки можно изменить для отдельных отчетов.  

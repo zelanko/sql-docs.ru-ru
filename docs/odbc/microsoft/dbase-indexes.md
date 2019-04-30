@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 66dab60f4a9a180d2a8b74ce4d0c8f4d7bf8d242
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682842"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240396"
 ---
 # <a name="dbase-indexes"></a>Индексы dBASE
 Драйвер для dBASE ODBC автоматически открывает и обновляет файлы dBASE IV индекса. Необходимо использовать **Выбор индексов** диалогового окна через ODBC администратора источника данных должен быть сопоставлен dBASE III .ndx файлы dBASE-файлов.  

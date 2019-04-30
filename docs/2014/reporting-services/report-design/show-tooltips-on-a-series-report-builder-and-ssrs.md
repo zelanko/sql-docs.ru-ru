@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5e9e02af6adf0e674d6af2775cb427440b4471c9
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59939460"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215195"
 ---
 # <a name="show-tooltips-on-a-series-report-builder-and-ssrs"></a>Отображение всплывающих подсказок для ряда (построитель отчетов и службы SSRS)
   К каждой точке данных ряда диаграммы можно добавить подсказку со сведениями, относящимися к точке данных, например имя группы, значение точки данных, значение точки данных в процентах от всего ряда; она отображается при удержании указателя над точкой данных отображаемого отчета.  

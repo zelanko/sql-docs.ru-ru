@@ -1,5 +1,5 @@
 ---
-title: IsLeaf (многомерные Выражения) | Документы Microsoft
+title: IsLeaf (многомерные Выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 13b609d0abb7d032828dca78b185652ad138977b
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741273"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63224549"
 ---
 # <a name="isleaf-mdx"></a>IsLeaf (многомерные выражения)
 
@@ -29,11 +29,11 @@ IsLeaf(Member_Expression)
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *Member_Expression.*  
+ *Member_Expression*  
  Допустимое многомерное выражение, возвращающее элемент.  
   
 ## <a name="remarks"></a>Примечания  
- **IsLeaf** возврата функцией **true** Если указанный элемент является конечным элементом. В противном случае функция возвращает **false**.  
+ **IsLeaf** возвращает **true** Если указанный элемент является конечным элементом. В противном случае функция возвращает **false**.  
   
 ## <a name="example"></a>Пример  
  В следующем примере возвращается значение TRUE, если элемент [Date].[Fiscal].CurrentMember является конечным:  
@@ -49,6 +49,6 @@ IsLeaf(Member_Expression)
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>См. также  
- [Справочник по функциям многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
   
   

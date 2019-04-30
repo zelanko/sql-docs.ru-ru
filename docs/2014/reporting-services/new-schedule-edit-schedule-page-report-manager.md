@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a43744243713fb522356814df8fa80a3e11197bd
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59967920"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188357"
 ---
 # <a name="new-schedule-edit-schedule-page-report-manager"></a>Создание расписания: Страница «Изменение расписания» (диспетчер отчетов)
   Используйте страницу «Создание расписания» / «Изменение расписания», чтобы создать расписание для отчета. Расписания используются с подписками для обновления кэшированных отчетов и для создания моментальных снимков в качестве отдельных элементов или в журнале отчета.  

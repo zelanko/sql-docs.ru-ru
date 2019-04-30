@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 207d82f740b7b5ff174e220e647d67d5bac7f9ea
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019455"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63190827"
 ---
 # <a name="creating-a-market-basket-structure-and-model-intermediate-data-mining-tutorial"></a>Создание структуры и модели «Потребительская корзина» (учебник по интеллектуальному анализу данных — средний уровень)
   Теперь, после создания представления источников данных, при помощи мастера интеллектуального анализа данных создадим новую структуру интеллектуального анализа. В этой задаче вы создадите структуру интеллектуального анализа данных и модель интеллектуального анализа данных, основанный на [!INCLUDE[msCoName](../includes/msconame-md.md)] алгоритм взаимосвязей.  
@@ -55,11 +55,11 @@ ms.locfileid: "56019455"
   
     |Столбцы|Тип содержимого|Тип данных|  
     |-------------|------------------|---------------|  
-    |IncomeGroup|Discrete|Текста|  
-    |Order Number|Ключ|Текста|  
-    |Region|Discrete|Текста|  
+    |IncomeGroup|Discrete|Text|  
+    |Order Number|Ключ|Text|  
+    |Region|Discrete|Text|  
     |vAssocSeqLineItems|||  
-    |Модель|Ключ|Текста|  
+    |Модель|Ключ|Text|  
   
 12. На **Create set тестирования** странице, значение по умолчанию для параметра **процент проверочных данных** — 30 процентов. Измените его на **0**. Нажмите кнопку **Далее**.  
   

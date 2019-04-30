@@ -1,5 +1,5 @@
 ---
-title: Инструкция CREATE SESSION CUBE (многомерные Выражения) | Документы Microsoft
+title: Инструкция CREATE SESSION CUBE (многомерные Выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 09e093b46127090d232f023a7c7277c398ec349c
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742473"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248175"
 ---
-# <a name="mdx-data-definition---create-session-cube"></a>Определения данных многомерных Выражений — создать КУБ СЕАНСА
+# <a name="mdx-data-definition---create-session-cube"></a>Определение данных многомерных выражений — CREATE SESSION CUBE
 
 
   Создает куб сеанса и заполняет его данными существующего куба сервера. Куб сеанса видим только на панели текущего сеанса. Просмотреть куб сеанса и выполнить к нему запрос из любого другого сеанса невозможно. При закрытии сеанса куб сеанса неявно удаляется.  
@@ -108,7 +108,7 @@ CREATE SESSION CUBE session_cube_name FROM <cube list> (<param list>)
  NOT_RELATED_TO_FACTS  
  Спецификация, допустимая только для определения производного измерения.  
   
- \<Тип уровня >  
+ \<уровень тип >  
  Спецификация, допустимая только для определения производного измерения.  
   
 ## <a name="remarks"></a>Примечания  

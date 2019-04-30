@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 181d07e187c6b1091d38ebbe0018c61ae856caf3
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529066"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63204986"
 ---
 # <a name="generate-xml-from-rowsets-with-for-xml"></a>Использование предложения XML FOR для создания XML на основе набора строк
   Вы можете создать `xml` экземпляр типа данных из набора строк с помощью FOR XML с новым **тип** директива.  
@@ -26,7 +26,7 @@ ms.locfileid: "58529066"
   
  Новая директива **FOR XML TYPE** позволяет определять для реляционных данных XML-представления, поддерживающие только чтение, используя синтаксис SQL. Как показано в следующих примерах, представление можно запрашивать при помощи инструкций SQL и встроенного механизма XQuery. К этим SQL-представлениям можно также обращаться в хранимых процедурах.  
   
-## <a name="example-sql-view-returning-generated-xml-data-type"></a>Пример SQL-представление, возвращающее сформированный тип xml-данных  
+## <a name="example-sql-view-returning-generated-xml-data-type"></a>Пример Тип данных SQL представление, возвращающее сформированный xml  
  Следующий код создает XML-представление для реляционного столбца pk и заносит в него информацию об авторах, извлекаемую из XML-столбца:  
   
 ```  

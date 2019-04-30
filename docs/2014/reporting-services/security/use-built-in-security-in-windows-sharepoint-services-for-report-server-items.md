@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b7d912f7f71a642fbcdad0aa4fdd5ed60305f14d
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59948650"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63191879"
 ---
 # <a name="use-built-in-security-in-windows-sharepoint-services-for-report-server-items"></a>Использование встроенных средств безопасности служб Windows SharePoint Services при работе с элементами сервера отчетов
   Службы SharePoint предоставляют встроенные функции безопасности, которые можно использовать для доступа к элементам сервера отчетов с сайтов и из библиотек SharePoint. Если пользователям уже назначены разрешения на сайты и списки, они получат доступ к элементам и операциям сервера отчетов сразу после настройки параметров интеграции служб SharePoint и сервера отчетов.  

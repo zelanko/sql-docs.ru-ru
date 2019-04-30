@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5f07e71e5b8314320f76be4496744da5a9d9e81a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535253"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63208461"
 ---
 # <a name="tupletostr-mdx"></a>TupleToStr (многомерные выражения)
 
@@ -36,7 +36,7 @@ TupleToStr(Tuple_Expression)
  Эта функция используется для передачи строкового представления кортежа внешней функции для дальнейшего анализа. Возвращаемая строка заключается в фигурные скобки {} и каждого элемента, если более чем один явным образом в кортеже, разделенные запятой.  
   
 ## <a name="examples"></a>Примеры  
- Следующий пример возвращает строку ([Date].[Calendar Year].&[2001],[Geography].[Geography].[Country].&[United States]):  
+ Следующий пример возвращает строку ([Date]. [ Calendar Year]. & [2001], [Geography]. [Geography]. [Страна]. & [United States]):  
   
 ```  
 WITH MEMBER Measures.x AS TupleToStr   

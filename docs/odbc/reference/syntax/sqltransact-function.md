@@ -21,15 +21,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b76b7a550211522c2b2100776b88f311abb2b932
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646862"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63233348"
 ---
 # <a name="sqltransact-function"></a>Функция SQLTransact
 **Соответствие стандартам**  
- Версия была введена: ODBC 1.0 соответствует стандартам: устарело  
+ Представленные версии: Соответствие стандартам 1.0 ODBC: Устарело  
   
  **Сводка**  
  В ODBC 3. *x*, ODBC 2 *.x* функция **SQLTransact** был заменен классом **SQLEndTran**. Дополнительные сведения см. в разделе [SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).  

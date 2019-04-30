@@ -21,11 +21,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5c0c6449082f1c5ca016cfdb0a0f18430cf74731
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124439"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63156809"
 ---
 # <a name="create-indexes-with-included-columns"></a>Создание индексов с включенными столбцами
   В этой теме описывается добавление невключенных или неключевых столбцов, чтобы расширить функциональные возможности некластеризованных индексов в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] при помощи среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Добавление неключевых столбцов позволяет создавать некластеризованные индексы, покрывающие больше запросов. Это обусловлено следующими преимуществами неключевых столбцов.  
@@ -41,7 +41,7 @@ ms.locfileid: "54124439"
   
  **В этом разделе**  
   
--   **Перед началом работы**  
+-   **Перед началом:**  
   
      [Рекомендации по проектированию](#DesignRecs)  
   
@@ -79,7 +79,7 @@ ms.locfileid: "54124439"
   
     -   изменение поведения столбца в отношении значения NULL с NOT NULL на NULL;  
   
-    -   увеличение длины столбцов типов `varchar`, `nvarchar` и `varbinary`.  
+    -   Увеличение длины столбцов типов `varchar`, `nvarchar` и `varbinary`.  
   
 ###  <a name="Security"></a> безопасность  
   

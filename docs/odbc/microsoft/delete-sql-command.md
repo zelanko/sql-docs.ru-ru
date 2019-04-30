@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dac94d8bfb0e2bc0ab91f6a18e6f18606481b112
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202033"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198576"
 ---
 # <a name="delete---sql-command"></a>DELETE (команда SQL)
 Помечает записи для удаления.  

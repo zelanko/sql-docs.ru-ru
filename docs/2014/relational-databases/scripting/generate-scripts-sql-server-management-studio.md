@@ -12,18 +12,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3118d85b3b17bef5a0095445f50b7193123e6d91
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156094"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63144662"
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>Формирование скриптов (среда SQL Server Management Studio)
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] предоставляет два механизма формирования скриптов [!INCLUDE[tsql](../../includes/tsql-md.md)] . Создать скрипты для нескольких объектов можно с помощью **мастера формирования и публикации скриптов**. Можно также создать скрипты для отдельных или нескольких объектов с помощью меню **Сформировать скрипт как** в **обозревателе объектов**.  
   
-1.  **Выберите метод**  [Мастер формирования и публикации скриптов](#GenPubScriptWiz), [Меню "Сформировать скрипт как" в обозревателе объектов](#OEScriptAsMenu)  
+1.  **Выбор метода:**  [Сценарии мастер формирования и публикации](#GenPubScriptWiz), [сформировать скрипт как меню в обозревателе объектов](#OEScriptAsMenu)  
   
-2.  **Использование меню "Сформировать скрипт как"**  [Скрипт для одного объекта](#ScriptSingleObject), [Скрипт для двух объектов с помощью обозревателя объектов](#ScriptTwoObjectsOE), [Скрипт для двух объектов с помощью данных обозревателя объектов](#ScriptTwoObjectsOED)  
+2.  **Использование меню "сформировать скрипт как":**  [Скрипта для одного объекта](#ScriptSingleObject), [скрипт для двух объектов с помощью обозревателя объектов](#ScriptTwoObjectsOE), [скрипт для двух объектов с помощью обозревателя объектов](#ScriptTwoObjectsOED)  
   
 ## <a name="before-you-begin"></a>Перед началом  
  Выберите механизм, который лучше всего соответствует имеющимся требованиям.  

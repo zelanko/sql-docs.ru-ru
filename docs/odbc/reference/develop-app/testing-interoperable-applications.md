@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 509dd17efeeb982c51938d7a18fad99a2e84ba5b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794182"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63148933"
 ---
 # <a name="testing-interoperable-applications"></a>Тестирование приложений с поддержкой взаимодействия
 Тестирование приложений с возможностью взаимодействия в самом лучшем много бизнеса и в худшем случае невозможно, так как постоянно появляются новые драйверы, представленными на рынке. Тем не менее можно более разумным степень тестирования. Приложения с низкой или ограниченные взаимодействия требуется только проверены те драйверы, которые они гарантированно поддерживают. Тем не менее они должны быть полностью проверены эти драйверы.  

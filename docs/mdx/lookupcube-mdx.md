@@ -1,5 +1,5 @@
 ---
-title: LookupCube (многомерные Выражения) | Документы Microsoft
+title: LookupCube (многомерные Выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8f8338a542bf9e15816205930704c45a536a5629
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741723"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63208517"
 ---
 # <a name="lookupcube-mdx"></a>LookupCube (многомерные выражения)
 
@@ -47,7 +47,7 @@ LookupCube(Cube_Name, String_Expression )
   
  Если строковое выражение указано, **LookupCube** функция вычисляет указанного строкового выражения в заданном кубе и возвращает строковое значение.  
   
- **LookupCube** функция применяется к кубам внутри той же базе данных как исходного куба, на котором запрос многомерных Выражений, который содержит **LookupCube** функция выполняется.  
+ **LookupCube** функция применяется к кубам внутри той же базе данных, как исходного куба, на котором запрос многомерных Выражений, который содержит **LookupCube** функция выполняется.  
   
 > [!IMPORTANT]  
 >  В числовом или строковом выражении необходимо указывать все необходимые текущие элементы, поскольку контекст текущего запроса не переносятся в запрашиваемый куб.  
@@ -66,6 +66,6 @@ LookupCube(Cube_Name, String_Expression )
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>См. также  
- [Справочник по функциям многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
   
   

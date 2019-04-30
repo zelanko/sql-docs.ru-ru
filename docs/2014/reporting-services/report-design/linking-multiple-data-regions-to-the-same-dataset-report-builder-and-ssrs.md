@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7debd6d28ef938a5bde777067824b39b9b55a914
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59947650"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63209342"
 ---
 # <a name="linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs"></a>Связывание нескольких областей данных с одним набором данных (построитель отчетов и службы SSRS)
   В отчет можно добавить несколько областей данных, чтобы предоставить несколько представлений для одного и того же набора данных в отчете. Например, можно отобразить данные в виде таблицы и также отобразить их наглядно в виде диаграммы. Для этого необходимо использовать одинаковые выражения и области для соответствующих выражений фильтра, сортировки и групп.  

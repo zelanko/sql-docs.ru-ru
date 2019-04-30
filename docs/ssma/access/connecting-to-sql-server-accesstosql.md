@@ -23,11 +23,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 0bedb8ba74d7965df34a102fb0d53a0cbdb248dc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649282"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63139028"
 ---
 # <a name="connecting-to-sql-server-accesstosql"></a>Подключение к SQL Server (AccessToSQL)
 Для переноса баз данных Access [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], необходимо подключиться к целевому экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. При подключении, SSMA получает метаданные о базах данных в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и отображает метаданные базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обозреватель метаданных. SSMA хранит сведения о какой экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подключены, но не хранит пароли.  
@@ -63,9 +63,9 @@ ms.locfileid: "47649282"
   
     -   Если вы подключаетесь к экземпляру по умолчанию на другом компьютере, введите имя компьютера.  
   
-    -   Если вы подключаетесь к именованному экземпляру, введите имя компьютера, обратную косую черту и имя экземпляра. Например: Сервер\экземпляр.  
+    -   Если вы подключаетесь к именованному экземпляру, введите имя компьютера, обратную косую черту и имя экземпляра. Пример: Сервер\экземпляр.  
   
-    -   Для подключения к активному экземпляру пользователя из [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)], подключение по именованным каналам протокола и указав имя канала, такие как \\ \\.\pipe\sql\query. Дополнительные сведения см. в документации по [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)].  
+    -   Для подключения к активному экземпляру пользователя из [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)], подключение по именованным каналам протокола и указав имя канала, такие как \\ \\.\pipe\sql\query. Дополнительные сведения см. в разделе [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)] документации.  
   
 3.  Если экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] настроен на прием подключений через нестандартный порт, введите номер порта, который используется для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подключений в **порт сервера** поле. Для экземпляра по умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], номер порта по умолчанию — 1433. Для именованных экземпляров SSMA будет пытаться получить номер порта из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] службы браузера.  
   

@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ed78d5ff91d09f9d8370eef31fd3a6651b301a38
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812116"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188214"
 ---
 # <a name="manage-events"></a>Управление событиями
   Все сообщения об ошибках, удовлетворяющие заданному уровню серьезности либо превышающие его, могут быть перенаправлены экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Данное действие называется *пересылкой событий*. Сервер пересылки является выделенным сервером, который может также являться главным. Пересылка событий может быть использована для централизации управления предупреждениями в группе серверов, что позволяет снизить рабочую нагрузку на сильно загруженные серверы.  

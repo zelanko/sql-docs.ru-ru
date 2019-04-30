@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: abd8dd7c3c23a13b1cdff7a2d6f76fb99375a641
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812776"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155257"
 ---
 # <a name="how-the-query-and-view-designer-represents-joins-visual-database-tools"></a>Как конструктор запросов и представлений представляет соединения (визуальные инструменты для баз данных)
   При соединении таблиц [конструктор запросов и представлений](visual-database-tools.md) представляет соединение графически на [панели диаграммы](diagram-pane-visual-database-tools.md) и в виде синтаксиса языка SQL на [панели SQL](sql-pane-visual-database-tools.md).  

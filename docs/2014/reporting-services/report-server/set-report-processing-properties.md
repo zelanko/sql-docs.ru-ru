@@ -19,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d03a03aeec28f6aef2f1c62ea62c0500be2bf435
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59947130"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63190844"
 ---
 # <a name="set-report-processing-properties"></a>Установка свойств обработки отчетов
   Свойства выполнения отчета определяют, как отчет обрабатывается. Свойства выполнения должны быть установлены для каждого отчета отдельно.  

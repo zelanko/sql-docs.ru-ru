@@ -1,5 +1,5 @@
 ---
-title: AddCalculatedMembers (многомерные Выражения) | Документы Microsoft
+title: AddCalculatedMembers (многомерные Выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 18ccf4ad808c15945d82f1ca05616f0da878a7ca
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739393"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63201606"
 ---
 # <a name="addcalculatedmembers-mdx"></a>AddCalculatedMembers (многомерные выражения)
 
@@ -33,7 +33,7 @@ AddCalculatedMembers(Set_Expression)
  Допустимое многомерное выражение, возвращающее набор.  
   
 ## <a name="remarks"></a>Примечания  
- По умолчанию в языке многомерных выражений вычисляемые элементы исключаются при вычислении функций набора. **AddCalculatedMembers** функция просматривает выражение набора, указанного в *Set_Expression,* и включает вычисляемые одноуровневые элементы, содержащиеся в области данного выражения набора.  
+ По умолчанию в языке многомерных выражений вычисляемые элементы исключаются при вычислении функций набора. **AddCalculatedMembers** функция просматривает выражение набора, указанного в *Set_Expression,* и включает вычисляемые одноуровневые элементы, содержащиеся в пределах этого набора выражение.  
   
 > [!NOTE]  
 >  Эту функцию можно использовать только для одномерных выражений наборов.  
@@ -51,7 +51,7 @@ SELECT
 FROM [Adventure Works]   
 ```  
   
- В следующем примере возвращается `Measures.[Unit Price]` вместе со всеми вычисляемыми элементами в **меры** измерения, от **Adventure Works** куба.  
+ В следующем примере возвращается `Measures.[Unit Price]` члена, а также все вычисляемые элементы в **меры** измерения, от **Adventure Works** куба.  
   
 ```  
 SELECT  
@@ -61,6 +61,6 @@ FROM
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Справочник по функциям многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
   
   

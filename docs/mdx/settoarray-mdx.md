@@ -1,5 +1,5 @@
 ---
-title: SetToArray (многомерные Выражения) | Документы Microsoft
+title: SetToArray (многомерные Выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0e545cb4b41f1a0d60e471c15753a82079978ee5
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743313"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149300"
 ---
 # <a name="settoarray-mdx"></a>SetToArray (многомерные выражения)
 
@@ -51,7 +51,7 @@ SetToArray(Set_Expression1 [ ,Set_Expression2,...n ][ ,Numeric_Expression ] )
 ```  
   
 > [!NOTE]  
->  Тип возвращаемого значения **SetToArray** функция имеет тип VARIANT, то есть VT_ARRAY. Таким образом, выходные данные **SetToArray** функцию следует использовать только в качестве входных данных для определяемой пользователем функции.  
+>  Тип возвращаемого значения **SetToArray** функция — это значения типа VARIANT, VT_ARRAY. Таким образом, выходные данные **SetToArray** функция должна использоваться только в качестве входных данных для определяемой пользователем функции.  
   
 ## <a name="example"></a>Пример  
  Следующий пример возвращает массив.  
@@ -61,6 +61,6 @@ SetToArray([Geography].[Geography].Members, [Measures].[Internet Sales Amount])
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Справочник по функциям многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
   
   

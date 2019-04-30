@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 6e631a8983705d4f58e4b193823c9a255284f346
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015255"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63204810"
 ---
 # <a name="creating-a-forecasting-structure-and-model-intermediate-data-mining-tutorial"></a>Создание структуры и модели прогнозирования (учебник по интеллектуальному анализу данных — средний уровень)
   Далее будет использоваться мастер интеллектуального анализа данных для создания новой структуры интеллектуального анализа данных и модели интеллектуального анализа данных на основе только что созданного представления источников данных. В этой задаче вы укажете, что модели интеллектуального анализа данных следует использовать [!INCLUDE[msCoName](../includes/msconame-md.md)] алгоритм временных рядов.  

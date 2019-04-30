@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cd82e2c3c44f05a27e9d14442d8d0fb58e1986cc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849142"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63232054"
 ---
 # <a name="static-sql"></a>Статический SQL
 Embedded SQL, показанный на [пример Embedded SQL](../../odbc/reference/embedded-sql-example.md) называется статического SQL. Он вызывается статический SQL, поскольку инструкций SQL в программе являются статическими; то есть они меняются при каждом запуске программы. Как описано в предыдущем разделе, эти инструкции, компилируются при компиляции остальные части программы.  

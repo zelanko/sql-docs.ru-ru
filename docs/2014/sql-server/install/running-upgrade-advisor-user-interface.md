@@ -19,11 +19,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c402516980f5cf3e1790f8a5fa6d594c93b0e500
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176114"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63245962"
 ---
 # <a name="running-upgrade-advisor-user-interface"></a>Запуск помощника по обновлению (пользовательский интерфейс)
   Советник по переходу может быть запущен для анализа локальных или удаленных компонентов в процессе планирования обновления. Для каждого проанализированного компонента и экземпляра помощник по обновлению создает отчет.  
@@ -48,7 +48,7 @@ ms.locfileid: "48176114"
   
 6.  Создайте отчет о выявленных проблемах обновления.  
   
- Дополнительные сведения о мастера анализа помощника по обновлению см. в разделе [как: запустить мастер анализа помощника по обновлению](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md).  
+ Дополнительные сведения о мастера анализа помощника по обновлению см. в разделе [как: Запустить мастер анализа помощника по обновлению](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md).  
   
  Дополнительные сведения, необходимые для каждого шага, см. в разделе [Справочник по интерфейсу пользователя помощника по обновлению](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md).  
   
@@ -69,14 +69,14 @@ ms.locfileid: "48176114"
   
  Пошаговые инструкции по использованию средства просмотра отчетов см. в следующих разделах.  
   
--   [Просмотр отчета помощника по обновлению](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md)  
+-   [Как Просмотреть отчет помощника по обновлению](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md)  
   
--   [Фильтрация отчетов](../../../2014/sql-server/install/how-to-filter-reports.md)  
+-   [Как Фильтрация отчетов](../../../2014/sql-server/install/how-to-filter-reports.md)  
   
--   [Экспорт отчетов](../../../2014/sql-server/install/how-to-export-reports.md)  
+-   [Как Экспорт отчетов](../../../2014/sql-server/install/how-to-export-reports.md)  
   
 ## <a name="see-also"></a>См. также  
- [Практическое: запустить мастер анализа помощника по обновлению](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
+ [Как Запустить мастер анализа помощника по обновлению](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
  [Справочник по пользовательскому интерфейсу помощника по обновлению](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)   
  [Разрешение проблем при обновлении](../../../2014/sql-server/install/resolving-upgrade-issues.md)   
  [Работа с помощником по обновлению](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  

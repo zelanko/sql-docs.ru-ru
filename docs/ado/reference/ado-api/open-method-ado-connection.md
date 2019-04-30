@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 008ff3dacaa4bf3256429984973608c10a73d43e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606498"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63217670"
 ---
 # <a name="open-method-ado-connection"></a>Метод Open (объект Connection ADO)
 Открывает подключение к источнику данных.  
@@ -39,8 +39,8 @@ connection.Open ConnectionString, UserID, Password, Options
  *connectionString*  
  Необязательный параметр. Объект **строка** значение, содержащее сведения о соединении. См. в разделе [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) свойство Дополнительные сведения о допустимых параметров.  
   
- *Идентификатор пользователя*  
- Необязательный параметр. Объект **строка** значение, содержащее имя пользователя для использования при установке соединения.  
+ *UserID*  
+ Необязательный. Объект **строка** значение, содержащее имя пользователя для использования при установке соединения.  
   
  *Пароль*  
  Необязательный параметр. Объект **строка** значение, содержащее пароль для использования при установке соединения.  

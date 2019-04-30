@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 11e379973d6ef0c124427a2897ef7293811f9e3f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539062"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240169"
 ---
 # <a name="command-line-options-in-ssma-console-sybasetosql"></a>Параметры командной строки в консоли SSMA (SybaseToSQL)
 Майкрософт предоставляет широкий набор параметров командной строки для выполнения и SSMA действия управления. В последующих разделах подробно описано же.  

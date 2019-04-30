@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b150c7e42cf5389783706138c055c4a7fdea9b05
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59960606"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63219167"
 ---
 # <a name="add-a-new-or-existing-report-to-a-report-project-ssrs"></a>Добавление в проект отчета новый или существующий отчет (службы SSRS)
   В среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]можно либо добавить в проект новый пустой отчет, либо воспользоваться мастером отчетов. Кроме того, можно добавить в проект существующий отчет. После добавления отчета его имя появляется в папке **Отчеты** проекта.  

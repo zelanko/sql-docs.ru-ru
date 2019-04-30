@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3e9f40c4a5810ab712c4b6f67737fd308594de97
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614452"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248982"
 ---
 # <a name="ado-events-model-example-vc"></a>Пример модели событий ADO (Visual C ++)
 В разделе Visual C++ [создание экземпляра события ADO языком](../../../ado/guide/data/ado-event-instantiation-by-language.md) предоставляет общее описание способов создания экземпляра модели событий ADO. Ниже приведен конкретный пример создания экземпляра модели событий в среде, созданные **#import** директива.  

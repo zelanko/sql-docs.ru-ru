@@ -21,21 +21,21 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ff7d1349666d236e640d8de3524a7d069662ec86
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729172"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63226353"
 ---
 # <a name="sqlcolattributes-function"></a>Функция SQLColAttributes
 **Соответствие стандартам**  
- Версия была введена: ODBC 1.0 соответствует стандартам: устарело  
+ Представленные версии: Соответствие стандартам 1.0 ODBC: Устарело  
   
  **Сводка**  
  В ODBC 3. *x*, функция ODBC 2.0 **SQLColAttributes** был заменен классом **SQLColAttribute**. Дополнительные сведения см. в разделе [функция SQLColAttribute](../../../odbc/reference/syntax/sqlcolattribute-function.md).  
   
 > [!NOTE]  
->  Дополнительные сведения о какие диспетчера драйверов сопоставляет эту функцию, чтобы при ODBC 2. *x* при работе с ODBC 3. *x* драйвера, см. в разделе [сопоставление устаревшей функции](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) в приложении G: драйвер рекомендации для обеспечения обратной совместимости.  
+>  Дополнительные сведения о какие диспетчера драйверов сопоставляет эту функцию, чтобы при ODBC 2. *x* при работе с ODBC 3. *x* драйвера, см. в разделе [сопоставление устаревшей функции](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) в приложении G: Рекомендации по драйверов для обеспечения обратной совместимости.  
   
  См. в разделе [сведения о ODBC 64-разрядном](../../../odbc/reference/odbc-64-bit-information.md), если приложение выполняется в 64-разрядной операционной системе.  
   

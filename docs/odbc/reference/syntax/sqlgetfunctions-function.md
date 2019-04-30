@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7ac3d24b1213096be20658fb48dbfe9a6d39df8f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206973"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240240"
 ---
 # <a name="sqlgetfunctions-function"></a>SQLGetFunctions, функция
 **Соответствие стандартам**  
@@ -139,7 +139,7 @@ SQLRETURN SQLGetFunctions(
   
  [2] **SQLCancelHandle** будет возвращаться как поддерживаются, только если драйвер поддерживает оба **SQLCancel** и **SQLCancelHandle**. Если **SQLCancel** поддерживается, но **SQLCancelHandle** — нет, приложение по-прежнему может вызвать **SQLCancelHandle** для дескриптора инструкции, поскольку он будет сопоставлен с  **SQLCancel**.  
   
-## <a name="sqlfuncexists-macro"></a>Макрос SQL_FUNC_EXISTS  
+## <a name="sqlfuncexists-macro"></a>SQL_FUNC_EXISTS Macro  
  SQL_FUNC_EXISTS (*SupportedPtr*, *FunctionID*) макрос используется для определения поддержки ODBC 3 *.x* или более ранней функции после **SQLGetFunctions**  был вызван с *FunctionId* аргумент SQL_API_ODBC3_ALL_FUNCTIONS. Приложение вызывает SQL_FUNC_EXISTS с *SupportedPtr* аргумент значение *SupportedPtr* переданный *SQLGetFunctions*и с  *FunctionID* аргумент значение **#define** для функции. SQL_FUNC_EXISTS в противном случае возвращает SQL_TRUE, если поддерживается функция and SQL_FALSE.  
   
 > [!NOTE]

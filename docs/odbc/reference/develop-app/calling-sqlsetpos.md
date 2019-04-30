@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 70d574f867934af87ac7b5071b7f30bc9e89bccf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616062"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199445"
 ---
 # <a name="calling-sqlsetpos"></a>Вызов SQLSetPos
 В ODBC 2. *x*, указатель на массив статусов строк был аргумента **SQLExtendedFetch**. Массив статусов строк позже была обновлена с помощью вызова **SQLSetPos**. Некоторые драйверы полагались на тот факт, что этот массив не меняется между **SQLExtendedFetch** и **SQLSetPos**. В ODBC 3. *x*, поле дескриптора является указатель на массив состояний, и поэтому приложения можно легко изменить его в другой массив. Это может стать проблемой при ODBC 3. *x* при работе с ODBC 2. *x* драйвер, но вызывает **SQLSetStmtAttr** задать указатель состояния массива и вызывает **SQLFetchScroll** для выборки данных. Диспетчер драйверов сопоставляет ее как последовательность вызовов **SQLExtendedFetch**. В следующем коде ошибка обычно должно порождаться при диспетчера драйверов сопоставляет второй **SQLSetStmtAttr** вызывать при работе с ODBC 2 *.x* драйвера:  

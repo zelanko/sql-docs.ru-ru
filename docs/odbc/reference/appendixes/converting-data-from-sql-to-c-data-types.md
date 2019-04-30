@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 553596f474cd8e7c4f4c91911b0167d5b1bc0b4a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680842"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63224488"
 ---
 # <a name="converting-data-from-sql-to-c-data-types"></a>Преобразование данных из SQL в типы данных C
 Если приложение вызывает **SQLFetch**, **SQLFetchScroll**, или **SQLGetData**, драйвер получает данные из источника данных. При необходимости, она преобразует данные из типа данных, в котором драйвер получены его тип данных, указанный в *TargetType* аргумента в **SQLBindCol** или **SQLGetData.** Наконец, он сохраняет данные в расположении, указанном *TargetValuePtr* аргумента в **SQLBindCol** или **SQLGetData** (и поле SQL_DESC_DATA_PTR Отменить).  
@@ -49,28 +49,28 @@ ms.locfileid: "47680842"
   
 -   **Длина байтов символьной** — общее количество байтов, необходимое для отображения данных в символьном формате. Это, как определено для каждого типа данных C в разделе [отображения размер](../../../odbc/reference/appendixes/display-size.md), за исключением того, что символ байт находится в байтах, а размер экрана в символы.  
   
--   Ключевые слова в *курсив* представляют аргументы функции или элементы в грамматику SQL. Синтаксис элементов грамматики, см. в разделе [грамматике SQL в C: приложение](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md).  
+-   Ключевые слова в *курсив* представляют аргументы функции или элементы в грамматику SQL. Синтаксис элементов грамматики, см. в разделе [приложение в: Грамматика SQL](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md).  
   
  Этот раздел содержит следующие подразделы.  
   
--   [Преобразование данных из SQL в C: символы](../../../odbc/reference/appendixes/sql-to-c-character.md)  
+-   [SQL в C: Символ](../../../odbc/reference/appendixes/sql-to-c-character.md)  
   
--   [Преобразование данных из SQL в C: числовые данные](../../../odbc/reference/appendixes/sql-to-c-numeric.md)  
+-   [SQL в C: Numeric](../../../odbc/reference/appendixes/sql-to-c-numeric.md)  
   
--   [Преобразование данных из SQL в C: битовые данные](../../../odbc/reference/appendixes/sql-to-c-bit.md)  
+-   [SQL в C: Бит](../../../odbc/reference/appendixes/sql-to-c-bit.md)  
   
--   [Преобразование данных из SQL в C: двоичные данные](../../../odbc/reference/appendixes/sql-to-c-binary.md)  
+-   [SQL в C: Двоичный](../../../odbc/reference/appendixes/sql-to-c-binary.md)  
   
--   [Преобразование данных из SQL в C: даты](../../../odbc/reference/appendixes/sql-to-c-date.md)  
+-   [SQL в C: Дата](../../../odbc/reference/appendixes/sql-to-c-date.md)  
   
--   [Преобразование данных из SQL в C: GUID](../../../odbc/reference/appendixes/sql-to-c-guid.md)  
+-   [SQL в C: ИДЕНТИФИКАТОР GUID](../../../odbc/reference/appendixes/sql-to-c-guid.md)  
   
--   [Преобразование данных из SQL в C: время](../../../odbc/reference/appendixes/sql-to-c-time.md)  
+-   [SQL в C: время](../../../odbc/reference/appendixes/sql-to-c-time.md)  
   
--   [Преобразование данных из SQL в C: отметки времени](../../../odbc/reference/appendixes/sql-to-c-timestamp.md)  
+-   [SQL в C: Метка времени](../../../odbc/reference/appendixes/sql-to-c-timestamp.md)  
   
--   [Преобразование данных из SQL в C: интервалы месяцев года](../../../odbc/reference/appendixes/sql-to-c-year-month-intervals.md)  
+-   [SQL в C: Интервалы месяцев года](../../../odbc/reference/appendixes/sql-to-c-year-month-intervals.md)  
   
--   [Преобразование данных из SQL в C: интервалы времени дня](../../../odbc/reference/appendixes/sql-to-c-day-time-intervals.md)  
+-   [SQL в C: Интервалы времени дня](../../../odbc/reference/appendixes/sql-to-c-day-time-intervals.md)  
   
 -   [Примеры преобразования данных из SQL в C](../../../odbc/reference/appendixes/sql-to-c-data-conversion-examples.md)

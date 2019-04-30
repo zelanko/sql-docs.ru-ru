@@ -1,5 +1,5 @@
 ---
-title: --(Комментарий) (многомерные Выражения) | Документы Microsoft
+title: --(Комментарий) (многомерные Выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: dc8bf49f6d25c4e00c2d5693ff6a9cf48d5450ee
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739913"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63208758"
 ---
 # <a name="comment---mdx-operator-reference"></a>Комментарий - Справочник по операторам многомерных Выражений
 
@@ -58,6 +58,6 @@ WHERE
 ## <a name="see-also"></a>См. также  
  [Комментарий (MDX)](../mdx/comment-mdx.md)   
  [&#40;Комментарий&#41; &#40;многомерных Выражений&#41;](../mdx/comment-mdx-double-slash.md)   
- [Справочник по операторам Многомерных &#40;многомерных Выражений&#41;](../mdx/mdx-operator-reference-mdx.md)  
+ [Справочник по операторам многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e648bd9dcb3c6a073419cde42587f1be706fff4d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513903"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161520"
 ---
 # <a name="more-ways-to-move-in-a-recordset"></a>Дополнительные способы перемещения в наборе записей
 Следующие четыре метода используются для перемещения, а также, в **записей**: [Примеры MoveFirst, MoveLast, MoveNext и MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md). (Некоторые из этих методов недоступны на курсоры последовательного доступа.)  

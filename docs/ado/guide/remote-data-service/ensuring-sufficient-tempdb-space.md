@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 67dc3f6bb82799382fa2b65754b3645dd735acab
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560421"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63214822"
 ---
 # <a name="ensuring-sufficient-tempdb-space"></a>Обеспечение достаточного места в TempDB
 Если возникают ошибки при обработке [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объектов, требующих обработки пространство на Microsoft SQL Server 6.5, может потребоваться увеличить размер базы данных tempdb. (Некоторые запросы требуют обработка временных пространства; например, запрос с предложением ORDER BY требует сортировки из **записей**, которая требует некоторых места временного хранения.)  

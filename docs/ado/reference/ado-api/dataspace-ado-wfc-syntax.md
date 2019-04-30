@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 94a539fb2ba3285bd8bb5c3668879695598725a4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718352"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63140098"
 ---
 # <a name="dataspace-ado---wfc-syntax"></a>DataSpace (ADO — синтаксис WFC)
 **CreateObject** метод **DataSpace** класс задает оба бизнес-объект для обработки клиентских запросов приложения (*progid*) и протокол связи и сервер (*подключения*). **createObject** возвращает [ObjectProxy](../../../ado/reference/ado-api/objectproxy-ado-wfc-syntax.md) объект, представляющий сервер.  

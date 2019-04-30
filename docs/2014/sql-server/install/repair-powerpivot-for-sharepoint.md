@@ -12,11 +12,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 408d6a3bfdd2618931ceefa5d6d82ad6ab581485
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065234"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198962"
 ---
 # <a name="repair-powerpivot-for-sharepoint"></a>Восстановление PowerPivot для SharePoint
   С помощью средства настройки PowerPivot можно исправить существующую установку PowerPivot для SharePoint. Средство считывает параметры конфигурации для локального экземпляра PowerPivot для SharePoint и предоставляет возможность повторной настройки параметров, не согласованных с установкой PowerPivot для SharePoint. Например, если остановить службу или извлечь решение, средство предложит запуск службы и развертывание решения.  

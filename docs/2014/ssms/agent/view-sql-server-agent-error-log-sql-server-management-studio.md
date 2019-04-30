@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3835f83efff9e720f7f8631d527b9547e3b4239a
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100779"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63245612"
 ---
 # <a name="view-sql-server-agent-error-log-sql-server-management-studio"></a>просмотреть журнал ошибок агента SQL Server (среда SQL Server Management Studio)
   В этом разделе содержатся сведения о просмотре журнала ошибок агента  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -70,7 +70,7 @@ ms.locfileid: "54100779"
   
 4.  Щелкните правой кнопкой журнал ошибок, который необходимо просмотреть, и выберите **Просмотреть журнал агента**.  
   
-     Следующие пункты доступны в **средство просмотра журнала -**_имя_сервера_ диалоговое окно:  
+     В диалоговом окне **Просмотр файла журнала —**_имя_сервера_ доступны указанные ниже параметры.  
   
      **Загрузить журнал**  
      Открывает диалоговое окно, в котором можно указать загружаемый файл журнала.  

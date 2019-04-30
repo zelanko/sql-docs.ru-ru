@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7ef2839bd49e48615ed77ab917a90169ac20bca3
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59932580"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188154"
 ---
 # <a name="publishing-data-sources-and-reports"></a>Публикация источников данных и отчетов
   До публикации отчета его следует просмотреть, чтобы проверить его внешний вид. Макет отчета можно изменять, пока не будут достигнуты нужные результаты.  

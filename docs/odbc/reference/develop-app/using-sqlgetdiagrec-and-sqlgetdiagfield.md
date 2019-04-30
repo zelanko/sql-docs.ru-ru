@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1db402e7c015ef50ce47b5137e670d9f1836a326
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204703"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63208433"
 ---
 # <a name="using-sqlgetdiagrec-and-sqlgetdiagfield"></a>Использование SQLGetDiagRec и SQLGetDiagField
 Приложения вызывают **SQLGetDiagRec** или **SQLGetDiagField** получения диагностических сведений. Эти функции принимают дескриптор среды, подключения, инструкции или дескриптора и возвращают диагностики из функции, которая последний раз использовали этот дескриптор. Вход в систему определенного дескриптора диагностики отменяются в том случае, когда новая функция вызывается с помощью данного дескриптора. Если функция возвращает несколько диагностических записей, приложение вызывает эти функции несколько раз. Общее число записей состояния получается путем вызова **SQLGetDiagField** для заголовочной записи (запись 0) с параметром SQL_DIAG_NUMBER.  

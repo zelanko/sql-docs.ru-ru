@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8899881a83137d4038cd3a04adf3df1feb08d981
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670934"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63157813"
 ---
 # <a name="visual-foxpro-odbc-driver"></a>Драйвер ODBC для Visual FoxPro
 Microsoft Visual FoxPro — это мощная среда объектно ориентированного конструирования и приложения разработки баз данных. Драйвер ODBC Microsoft Visual FoxPro позволяет приложениям откройте запрос и обновления данных в Visual FoxPro и более ранних версиях FoxPro через интерфейс откройте Database Connectivity (ODBC).  

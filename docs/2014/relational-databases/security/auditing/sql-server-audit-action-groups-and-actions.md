@@ -22,11 +22,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: e204a1865c2a928079fcd9b32b31a8ae0c0bd0a8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222994"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63238136"
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>Действия и группы действий подсистемы аудита SQL Server
   Подсистема аудита [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] позволяет производить аудит групп событий или отдельных событий на уровне сервера или базы данных. Дополнительные сведения см. в статье [Подсистема аудита SQL Server (ядро СУБД)](sql-server-audit-database-engine.md).  
@@ -80,8 +80,8 @@ ms.locfileid: "48222994"
 |DATABASE_CHANGE_GROUP|Это событие вызывается при создании, изменении или удалении базы данных. Это событие возникает при создании, изменении или удалении любой базы данных. Эквивалентно [Audit Database Management Event Class](../../event-classes/audit-database-management-event-class.md).|  
 |DATABASE_LOGOUT_GROUP|Это событие возникает при выходе пользователя автономной базы данных из базы данных. Эквивалентно классу событий Audit Database Logout.|  
 |DATABASE_MIRRORING_LOGIN_GROUP|Это событие вызывается для составления отчета о сообщениях аудита, связанных с механизмом обеспечения безопасности транспорта зеркального отображения базы данных. Эквивалентно [Audit Database Mirroring Login Event Class](../../event-classes/audit-database-mirroring-login-event-class.md).|  
-|DATABASE_OBJECT_ACCESS_GROUP|Это событие вызывается каждый раз при обращении к типам сообщений, сборкам и контрактам.<br /><br /> Это событие возникает при любом доступе к любой базе данных. **Примечание:** это потенциально может привести к большого количества записей аудита. <br /><br /> Эквивалентно [Audit Database Object Access Event Class](../../event-classes/audit-database-object-access-event-class.md).|  
-|DATABASE_OBJECT_CHANGE_GROUP|Это событие вызывается в тот момент, когда для объекта базы данных (например, для схемы) выполняется инструкция CREATE, ALTER или DROP. Это событие возникает при создании, изменении или удалении любого объекта базы данных. **Примечание:** это может привести к очень большому количеству записей аудита. <br /><br /> Эквивалентно [Audit Database Object Management Event Class](../../event-classes/audit-database-object-management-event-class.md).|  
+|DATABASE_OBJECT_ACCESS_GROUP|Это событие вызывается каждый раз при обращении к типам сообщений, сборкам и контрактам.<br /><br /> Это событие возникает при любом доступе к любой базе данных. **Примечание.**  Это может привести к большого количества записей аудита. <br /><br /> Эквивалентно [Audit Database Object Access Event Class](../../event-classes/audit-database-object-access-event-class.md).|  
+|DATABASE_OBJECT_CHANGE_GROUP|Это событие вызывается в тот момент, когда для объекта базы данных (например, для схемы) выполняется инструкция CREATE, ALTER или DROP. Это событие возникает при создании, изменении или удалении любого объекта базы данных. **Примечание.**  Это может привести к очень большому количеству записей аудита. <br /><br /> Эквивалентно [Audit Database Object Management Event Class](../../event-classes/audit-database-object-management-event-class.md).|  
 |DATABASE_OBJECT_OWNERSHIP_CHANGE_GROUP|Это событие возникает при изменении владельца объекта в области базы данных. Это событие возникает при любом изменении владельца объекта в любой базе данных на сервере. Эквивалентно [Audit Database Object Take Ownership Event Class](../../event-classes/audit-database-object-take-ownership-event-class.md).|  
 |DATABASE_OBJECT_PERMISSION_CHANGE_GROUP|Это событие возникает в тот момент, когда для объекта базы данных (например, сборки или схемы) выполняется инструкция GRANT, REVOKE или DENY. Это событие возникает при любом изменении разрешения на объект для любой базы данных на сервере. Эквивалентно [Audit Database Object GDR Event Class](../../event-classes/audit-database-object-gdr-event-class.md).|  
 |DATABASE_OPERATION_GROUP|Это событие вызывается при выполнении различных операций в базе данных, например при создании контрольной точки или уведомлении о запросе подписки. Это событие возникает при любой операции с базой данных в любой базе данных. Эквивалентно [Audit Database Operation Event Class](../../event-classes/audit-database-operation-event-class.md).|  

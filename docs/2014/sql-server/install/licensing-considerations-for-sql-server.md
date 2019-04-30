@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ecea0b6803db3614ca797b0206d7932f3384c165
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356812"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63195123"
 ---
 # <a name="licensing-considerations-for-sql-server"></a>Вопросы лицензирования в SQL Server
   Дополнительные сведения о параметрах лицензирования [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. на веб-сайте [Microsoft SQL Server](https://www.microsoft.com/sqlserver/sql-server-2014.aspx).  

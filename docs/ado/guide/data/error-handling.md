@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5d8f96b28a15258df4b7d093ce14f227f28ad9b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633522"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161746"
 ---
 # <a name="error-handling"></a>Обработка ошибок
 ADO использует несколько различных методов для оповещения приложения, возникающих ошибок. В этом разделе рассматриваются типы ошибок, которые могут возникнуть при использовании ADO и способ уведомления приложения. Он приводит рекомендации о том, как обрабатывать эти ошибки.  

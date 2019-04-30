@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 51dac05945565e7952141b247f3f3e326e7ad9d5
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59952580"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63216225"
 ---
 # <a name="aggregate-functions-reference-report-builder-and-ssrs"></a>Справочник по агрегатным функциям (построитель отчетов и службы SSRS)
   Чтобы включить в отчет статистические значения, в выражениях можно использовать агрегатные функции. Агрегатная функция по умолчанию для числовых полей — функция SUM. Можно изменить выражение и использовать другую встроенную агрегатную функцию или указать другую область. Область определяет набор данных, используемый при вычислениях.  

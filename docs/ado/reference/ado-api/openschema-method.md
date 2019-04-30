@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f2b4df18cf783e23792b51fb2c437b82c6a8ec52
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606214"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239994"
 ---
 # <a name="openschema-method"></a>Метод OpenSchema
 Получает сведения о схеме базы данных от поставщика.  
@@ -62,10 +62,10 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
 >  **Удаленное использование службы данных** **OpenSchema** метод недоступен на стороне клиента [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекта.  
   
 > [!NOTE]
->  В Visual Basic, столбцами, имеющими целого числа без знака размером 4 байта (DBTYPE UI4) во **набор записей** возвращаемые **OpenSchema** метод **подключения** объект нельзя похож на другие переменные. Дополнительные сведения о типах данных OLE DB см. в разделе [типы данных в OLE DB (OLE DB)](https://msdn.microsoft.com/6039292f-74e0-49b2-b133-17bc117ebf6a) и [типы данных о приложении](https://msdn.microsoft.com/e3a0533a-2196-4eb0-a31e-92fe9556ada6) справочника Microsoft программиста OLE DB.  
+>  В Visual Basic, столбцами, имеющими целого числа без знака размером 4 байта (DBTYPE UI4) во **набор записей** возвращаемые **OpenSchema** метод **подключения** объект нельзя похож на другие переменные. Дополнительные сведения о типах данных OLE DB см. в разделе [типы данных в OLE DB (OLE DB)](https://msdn.microsoft.com/6039292f-74e0-49b2-b133-17bc117ebf6a) и [приложении a. Типы данных](https://msdn.microsoft.com/e3a0533a-2196-4eb0-a31e-92fe9556ada6) справочника по программированию Microsoft OLE DB.  
   
 > [!NOTE]
->  **Пользователи Visual C/C++** без использования курсоров на стороне клиента, извлечение «ORDINAL_POSITION» столбец схемы в ADO возвращает разновидностью VT_R8 MDAC 2.7, MDAC 2.8 и компоненты доступа к данным Windows (Windows DAC) 6.0, а тип, используемый в состав компонентов MDAC 2.6 было VT_I4. Программы, написанные для компонентов MDAC 2.6 подобное только для типа variant вернул типа VT_I4 получит в нулевое значение для каждого порядковый номер, если выполняются под MDAC 2.7, MDAC 2.8 и 6.0 Windows приложения уровня данных без изменений. Это изменение было внесено, так как тип данных, OLE DB возвращает DBTYPE_UI4, а в тип со знаком VT_I4 не хватает места для хранения всех возможных значений без возможно усечение происходит и тем самым приводит к потере данных.  
+>  **Visual C /C++ пользователей** без использования курсоров на стороне клиента, извлечение «ORDINAL_POSITION» столбец схемы в ADO возвращает разновидностью VT_R8 MDAC 2.7, MDAC 2.8 и компоненты доступа к данным Windows (Windows DAC) 6.0, а тип, используемый в компоненты MDAC 2.6 было VT_I4. Программы, написанные для компонентов MDAC 2.6 подобное только для типа variant вернул типа VT_I4 получит в нулевое значение для каждого порядковый номер, если выполняются под MDAC 2.7, MDAC 2.8 и 6.0 Windows приложения уровня данных без изменений. Это изменение было внесено, так как тип данных, OLE DB возвращает DBTYPE_UI4, а в тип со знаком VT_I4 не хватает места для хранения всех возможных значений без возможно усечение происходит и тем самым приводит к потере данных.  
   
 ## <a name="applies-to"></a>Объект применения  
  [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
@@ -77,4 +77,4 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
  [Метод Open (объект Record ADO)](../../../ado/reference/ado-api/open-method-ado-record.md)   
  [Метод Open (объект Recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [Метод Open (ADO Stream)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
- [Приложение А. Поставщики](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [Приложение а. Поставщики](../../../ado/guide/appendixes/appendix-a-providers.md)

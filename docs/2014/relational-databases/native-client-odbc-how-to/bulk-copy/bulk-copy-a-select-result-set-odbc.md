@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a90937eafc531612968ac4248b329ba7a0a47d83
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357015"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63225528"
 ---
 # <a name="bulk-copy-a-select-result-set-odbc"></a>Выполнение массового копирования результирующего набора SELECT (ODBC)
   В данном образце показано, как осуществить массовое копирование результирующего набора инструкции SELECT с помощью функций массового копирования. Этот образец разработан для ODBC версии 3.0 или более поздней.  
@@ -43,7 +43,7 @@ ms.locfileid: "53357015"
   
     -   Имя файла данных, в который сохраняются все сообщения об ошибках массового копирования (укажите значение NULL, если файл для сообщений не требуется).  
   
-    -   Направление копирования: DB_OUT.  
+    -   Направление копирования: ЗНАЧЕНИЕ DB_OUT.  
   
 5.  Вызовите [bcp_control](../../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md), установите параметр eOption в BCPHINTS и поместите ivalue присвойте указатель на массив SQLTCHAR, содержащую инструкцию SELECT.  
   

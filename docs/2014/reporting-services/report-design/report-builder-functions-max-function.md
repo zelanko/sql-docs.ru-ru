@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 78a9aa951b96354f628a8aa6fd180fbc01b186a7
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59961540"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215396"
 ---
 # <a name="max-function-report-builder-and-ssrs"></a>Функция Max (построитель отчетов и службы SSRS)
   Возвращает максимальное значение всех числовых значений, отличных от NULL, заданных выражением, вычисляемым в контексте данной области.  

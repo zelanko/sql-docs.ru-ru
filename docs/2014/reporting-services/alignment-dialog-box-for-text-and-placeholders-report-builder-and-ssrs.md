@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0663bfce435187be66889858316b5ced0573f149
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59953720"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63233456"
 ---
 # <a name="alignment-dialog-box-for-text-and-placeholders-report-builder-and-ssrs"></a>Диалоговое окно «Выравнивание» для текста и заполнителей (построитель отчетов и службы SSRS)
   Выберите вкладку **Выравнивание** , чтобы изменить расположение значений в выбранной ячейке или области данных. В текстовом поле для отдельного фрагмента текста можно форматировать только выравнивание по горизонтали. Для задания значений заполнения текстового поля и выравнивания текста по вертикали используются свойства соответствующего текстового поля. Дополнительные сведения см. в разделе [текстовое поле свойства, выравнивания &#40;построитель отчетов и службы SSRS&#41;](../../2014/reporting-services/text-box-properties-dialog-box-alignment-report-builder-and-ssrs.md).  

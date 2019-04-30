@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: eb3edf70f1823017b1c155c085044a2432f332b3
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59955620"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63223516"
 ---
 # <a name="set-processing-options-reporting-services-in-sharepoint-integrated-mode"></a>установить параметры обработки (службы Reporting Services в режиме интеграции с SharePoint)
   Можно установить параметры обработки для отчета [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , определяющие время обработки данных. Также при обработке отчета можно определить интервал ожидания и задать параметры, определяющие порядок создания журнала отчета для текущего отчета.  

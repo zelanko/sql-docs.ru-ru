@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b2d7e879c35e7cbf2f2b261d94eff22936f7880b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775352"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63238099"
 ---
 # <a name="sqldriverconnect-excel-driver"></a>SQLDriverConnect (драйвер для Excel)
 > [!NOTE]  

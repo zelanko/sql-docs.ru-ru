@@ -19,11 +19,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: ec774e4c8500df0fe9af42bf6cf48f5f691f72bc
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530296"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239260"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>Поиск свойств документа с использованием списков свойств поиска
   Ранее содержимое свойств документа нельзя было отличить от содержимого текста документа. Это ограничивало полнотекстовые запросы, позволяя выполнять только поиск во всем документе. Теперь можно настроить полнотекстовый индекс для поддержки поиска по определенным свойствам, например Author и Title, для поддерживаемых типов документов в столбцах двоичных данных `varbinary`, `varbinary(max)` (включая `FILESTREAM`) или `image`. Такая форма поиска называется *поиск свойств*.  

@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4096d6fed3d73faffdc8798c475954bdb031dd68
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59944960"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63165093"
 ---
 # <a name="data-alert-manager-for-alerting-administrators"></a>Диспетчер предупреждений данных для оповещения администраторов
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] предоставляет диспетчер предупреждений об изменении данных, позволяющий администраторам предупреждений SharePoint управлять предупреждениями об изменении данных. Администраторы предупреждений могут просматривать сведения обо всех предупреждениях, сохраненных на сайте, и удалять предупреждения. На следующем рисунке показаны функции, предоставляемые администраторам предупреждений SharePoint в диспетчере предупреждений об изменении данных.  

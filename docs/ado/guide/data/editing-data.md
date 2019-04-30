@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0c12692a6ebd1467148b52f993a77043ff495d43
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47823394"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161776"
 ---
 # <a name="editing-data"></a>Изменение данных
 Мы объяснили как использовать ADO для подключения к источнику данных, выполнение команды, получить результаты в **записей** , а также перемещаться **записей**. Этот раздел посвящен следующей фундаментальные операции ADO: редактирование данных.  
@@ -92,4 +92,4 @@ End Function
   
 -   [Удаление записей с помощью метода Delete](../../../ado/guide/data/deleting-records-using-the-delete-method.md)  
   
--   [Варианты: с помощью инструкций SQL](../../../ado/guide/data/alternatives-using-sql-statements.md)
+-   [Альтернативные варианты: С помощью инструкций SQL](../../../ado/guide/data/alternatives-using-sql-statements.md)

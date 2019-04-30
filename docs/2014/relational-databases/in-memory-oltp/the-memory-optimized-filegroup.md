@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 64402f73fdf43c0ebcbeff338ed72d56d55227be
-ms.sourcegitcommit: f62f70298651d6223fa5d215b6a7a0d2ffecbd0d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "51947568"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155574"
 ---
 # <a name="the-memory-optimized-filegroup"></a>Оптимизированная для памяти файловая группа
   Для создания оптимизированных для памяти таблиц необходимо сначала создать оптимизированную для памяти файловую группу. Оптимизированная для памяти файловая группа содержит один или несколько контейнеров. В каждом контейнере содержатся файлы данных или разностных файлы (или и те и другие).  

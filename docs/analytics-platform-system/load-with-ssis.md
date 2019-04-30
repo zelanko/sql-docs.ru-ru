@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: b8a1ca0ec3662dddb2baa5fbac5fe01ed4d4f2e5
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700922"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63213376"
 ---
 # <a name="load-data-with-integration-services-to-parallel-data-warehouse"></a>Загрузка данных с помощью служб Integration Services для Parallel Data Warehouse
 Предоставляет ссылки и информация о развертывании для загрузки данных в SQL Server Parallel Data Warehouse с помощью пакетов служб SQL Server Integration Services (SSIS).  
@@ -61,7 +61,7 @@ For general information about developing Integration Services packages, see [Des
 ### <a name="run-from-a-windows-command-prompt"></a>Командная строка для запуска из Windows 
 Чтобы запустить пакет из командной строки Windows, с помощью **dtexec** служебной программы: `dtexec /FILE <packagePath>`  
   
-Например: `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`.  
+Например: `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
   
 ## <a name="DataTypes"></a>Типы данных  
 При использовании служб Integration Services для загрузки данных из источника данных в базу данных SQL Server PDW, данные сначала сопоставляется из источника данных в типы данных служб Integration Services. Это позволяет сопоставлять данные из нескольких источников с общим набором типов данных.  
@@ -218,7 +218,7 @@ id,city,lastUpdateDate,orderDate
   
 5.  Заполните сведения для базы данных сервера, пользователя, пароль и назначение содержимым, относящимся к устройству. (Ниже приведены примеры). Затем нажмите кнопку **ОК**.  
   
-    Для соединения InfiniBand **имя сервера**: введите < имя устройства >-SQLCTL01 17001.  
+    Для соединения InfiniBand **имя сервера**: Введите < имя устройства >-SQLCTL01 17001.  
   
     Для подключения Ethernet **имя сервера**: Введите IP-адрес узла кластера управления, запятая, порт 17001. Например 10.192.63.134,17001.  
   
@@ -250,7 +250,7 @@ id,city,lastUpdateDate,orderDate
 [Создание задачи «скрипт», который использует адаптер загрузки данных PDW служб SSIS](create-ssis-script-task-using-pdw-destination-adapter.md)  
 [SQL Server Integration Services](../integration-services/sql-server-integration-services.md)  
 [Проектирование и разработка пакетов (службы Integration Services)](https://msdn.microsoft.com/library/ms141091\(v=sql11\).aspx)  
-[Учебник: Создание основного пакета с помощью мастера](https://technet.microsoft.com/library/ms365330\(v=sql11\).aspx)  
+[Учебник. Создание основного пакета с помощью мастера](https://technet.microsoft.com/library/ms365330\(v=sql11\).aspx)  
 [Приступая к работе (службы Integration Services)](https://go.microsoft.com/fwlink/?LinkId=202412)  
 [Пример формирования динамических пакетов](https://go.microsoft.com/fwlink/?LinkId=202413)  
 [Проектирование пакетов служб SSIS для параллелизма (видеоматериал SQL Server)](https://msdn.microsoft.com/library/dd795221.aspx)  

@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 8e538b96c482a6a16fffcfdac197e62885426b52
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419925"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63243800"
 ---
 # <a name="workload-management-tasks-in-analytics-platform-system"></a>Задача управления рабочими нагрузками в Analytics Platform System
 Задача управления рабочими нагрузками в Analytics Platform System.
@@ -47,7 +47,7 @@ WHERE
 ## <a name="change-the-system-resources-allocated-to-a-request"></a>Изменение системных ресурсов, выделенных на запрос
 Описывается, как выяснить, какой ресурс класса, выполняется запрос SQL Server PDW, а затем изменить системные ресурсы для данного запроса. Изменение ресурсов для запроса требуется изменение членства класс ресурсов для имени входа, отправив запрос с помощью [ALTER SERVER ROLE](../t-sql/statements/alter-server-role-transact-sql.md) инструкции.  
   
-### <a name="step-1-determine-the-resource-class-for-the-login-running-the-request"></a>Шаг 1. Определите класс ресурсов для имени входа, выполнение запроса.  
+### <a name="step-1-determine-the-resource-class-for-the-login-running-the-request"></a>Шаг 1. Определите класс ресурсов для имени входа, выполнение запроса.  
 Этот запрос отображает имена входа, являющиеся членами членство в роли сервера ресурсов класса. Существует три класса ресурсов **mediumrc**, **largerc**, и **xlargerc**.  
   
 > [!IMPORTANT]  
@@ -72,7 +72,7 @@ GO
   
 Список связанных с выделением ресурсов для каждого класса ресурсов, см. в разделе [управления рабочими нагрузками](workload-management.md).  
   
-### <a name="step-2-run-the-request-under-a-login-with-different-resource-class-membership"></a>Этап 2. Запустите запрос в имени входа с членство в классе другому ресурсу  
+### <a name="step-2-run-the-request-under-a-login-with-different-resource-class-membership"></a>Шаг 2. Запустите запрос в имени входа с членство в классе другому ресурсу  
 Для выполнения запроса с либо больше или меньше системных ресурсов двумя способами:  
   
 -   Запустите запрос под другим именем входа, которая является членом класса больше или меньше ресурсов.  

@@ -12,11 +12,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 129e7de66e896e1f452c5d68fc4891d9cc5eafa3
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030338"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63238296"
 ---
 # <a name="includeazure-data-studioincludesname-sosmd-faq"></a>[!INCLUDE[Azure Data Studio](../includes/name-sos.md)] ВОПРОСЫ И ОТВЕТЫ
 
@@ -81,14 +81,14 @@ Azure Data Studio обеспечивает согласованную работ
 
 ### <a name="shell-features"></a>Возможности оболочки
 
-|Компонент|Azure Data Studio.|SSMS|
+|Компонент|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |Вход в Azure|Да|Да|
 |Панель мониторинга|Да| |
 |Модули|Да| |
 |Интегрированный терминал|Да||
 |обозревателе объектов|Да|Да|
-|Сценарии объектов|Да|Да|
+|Скрипты объектов|Да|Да|
 |Система проектов|Да||
 |Выбрать из таблицы|Да|Да|
 |Системы управления исходным кодом|Да||
@@ -103,7 +103,7 @@ Azure Data Studio обеспечивает согласованную работ
 
 ### <a name="query-editor"></a>Редактор запросов
 
-|Компонент|Azure Data Studio.|SSMS|
+|Компонент|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |Средства просмотра диаграмм|Да||
 |Экспортировать результаты в CSV, JSON, XLSX|Да||
@@ -121,7 +121,7 @@ Azure Data Studio обеспечивает согласованную работ
 
 ### <a name="operating-system-support"></a>Поддержка операционных систем
 
-|Компонент|Azure Data Studio.|SSMS|
+|Компонент|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |Windows|Да|Да|
 |macOS|Да||
@@ -129,7 +129,7 @@ Azure Data Studio обеспечивает согласованную работ
 
 ### <a name="data-engineering"></a>Проектирование данных
 
-|Компонент|Azure Data Studio.|SSMS|
+|Компонент|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |Мастер внешних данных|Предварительный просмотр||
 |Интеграция HDFS|Предварительный просмотр||
@@ -137,7 +137,7 @@ Azure Data Studio обеспечивает согласованную работ
 
 ### <a name="database-administration"></a>Администрирование базы данных
 
-|Компонент|Azure Data Studio.|SSMS|
+|Компонент|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |Резервное копирование и восстановление|Да|Да|
 |Импорт неструктурированного файла|Предварительный просмотр|Да|

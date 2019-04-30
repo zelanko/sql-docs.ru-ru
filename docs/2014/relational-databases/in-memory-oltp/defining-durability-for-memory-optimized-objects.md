@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: ecf171c8c50e1f7ce1e7cdc9e86cd27ac6fe558b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169554"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161991"
 ---
 # <a name="defining-durability-for-memory-optimized-objects"></a>Определение устойчивости для оптимизированных для памяти объектов
   OLTP в памяти гарантирует полную атомарность, согласованность, изолированность и устойчивость (ACID). Устойчивость в контексте [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и оптимизированных для памяти таблиц предоставляет следующие гарантии.  

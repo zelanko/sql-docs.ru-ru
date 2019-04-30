@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0de0501bc62d8aa305f1bcd08e8fe3de5433ff9c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59932720"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215215"
 ---
 # <a name="start-pie-chart-values-at-the-top-of-the-pie-report-builder-and-ssrs"></a>Вывод значений круговой диаграммы в верхней части диаграммы (построитель отчетов и службы SSRS)
   По умолчанию в круговых диаграммах первое значение набора данных отсчитывается с 90-го градуса от верхней части диаграммы. Можно указать, чтобы первое значение отсчитывалось от верхней части диаграммы.  

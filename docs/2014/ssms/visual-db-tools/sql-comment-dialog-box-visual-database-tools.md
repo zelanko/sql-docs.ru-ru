@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c70ec2c669c779e29dfb23ef61ba80865f68b532
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774966"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63194976"
 ---
 # <a name="sql-comment-dialog-box-visual-database-tools"></a>Диалоговое окно «Комментарий SQL» (визуальные инструменты для баз данных)
   Это диалоговое окно предоставляет редактируемую область, в которой можно записать подробное описание запроса. Чтобы получить доступ к диалоговому окну, откройте запрос или представление в конструкторе запросов и представлений, в окне **Свойства** выберите **Комментарий SQL** и нажмите кнопку с многоточием (**...**) справа от поля свойств.  

@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9bef75196b2106fd72e3f1f4989e70b994508723
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351241"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63233061"
 ---
 # <a name="change-a-sql-server-authentication-user-password-ole-db"></a>Изменения пароля проверки подлинности пользователя SQL Server (OLE DB)
   Этот образец показывает, как использовать OLE DB для изменения пароля учетной записи пользователя при проверке подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

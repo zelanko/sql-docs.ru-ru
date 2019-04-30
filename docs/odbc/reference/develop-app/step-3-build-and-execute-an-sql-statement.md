@@ -1,5 +1,5 @@
 ---
-title: 'Шаг 3: Построение и выполнение инструкций SQL | Документация Майкрософт'
+title: Шаг 3. Построение и выполнение инструкций SQL | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a3427057e70ee27fe1108fde71c833f0c511836b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801372"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63148972"
 ---
-# <a name="step-3-build-and-execute-an-sql-statement"></a>Шаг 3. Построение и выполнение инструкции SQL
+# <a name="step-3-build-and-execute-an-sql-statement"></a>Шаг 3. Построение и выполнение инструкции SQL
 Третий шаг — построение и выполнение инструкций SQL, как показано на следующем рисунке. Методы, используемые для выполнения этого шага могут значительно отличаться. Приложение может предлагать пользователю введите инструкцию SQL, создайте инструкцию SQL, на основе ввода пользователя, или использовать жестко запрограммированные инструкции SQL. Дополнительные сведения см. в разделе [построение инструкций SQL](../../../odbc/reference/develop-app/constructing-sql-statements.md).  
   
  ![Показывает создание и выполнение инструкции SQL](../../../odbc/reference/develop-app/media/pr13.gif "pr13")  
@@ -36,6 +36,6 @@ ms.locfileid: "47801372"
   
 |Тип инструкции SQL|Перейти к|  
 |---------------------------|----------------|  
-|**ВЫБЕРИТЕ** или каталога, функция|[Шаг 4а. Выборка результатов](../../../odbc/reference/develop-app/step-4a-fetch-the-results.md)|  
-|**ОБНОВЛЕНИЕ**, **удалить**, или **вставки**|[Шаг 4б. Выборка числа строк](../../../odbc/reference/develop-app/step-4b-fetch-the-row-count.md)|  
-|Все другие инструкции SQL|Шаг 3: Построение и выполнение инструкции SQL (этот раздел) или [Step 5: зафиксировать транзакцию](../../../odbc/reference/develop-app/step-5-commit-the-transaction.md)|
+|**ВЫБЕРИТЕ** или каталога, функция|[Шаг 4а. Получить результаты](../../../odbc/reference/develop-app/step-4a-fetch-the-results.md)|  
+|**ОБНОВЛЕНИЕ**, **удалить**, или **вставки**|[Шаг 4б. Выборка числа строк](../../../odbc/reference/develop-app/step-4b-fetch-the-row-count.md)|  
+|Все другие инструкции SQL|Шаг 3. Построение и выполнение инструкции SQL (этот раздел) или [Step 5: Зафиксировать транзакцию](../../../odbc/reference/develop-app/step-5-commit-the-transaction.md)|

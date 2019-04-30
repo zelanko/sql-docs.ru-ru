@@ -1,5 +1,5 @@
 ---
-title: DataMember (многомерные Выражения) | Документы Microsoft
+title: DataMember (многомерные Выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 98b10c951043416280c05fd6a0e5eeb5df92c104
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739493"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248152"
 ---
 # <a name="datamember-mdx"></a>DataMember (многомерные выражения)
 
@@ -29,11 +29,11 @@ Member_Expression.DataMember
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *Member_Expression.*  
+ *Member_Expression*  
  Допустимое многомерное выражение, возвращающее элемент.  
   
 ## <a name="remarks"></a>Примечания  
- Эта функция работает с неконечными элементами любой иерархии и могут использоваться [UPDATE CUBE Statement (MDX)](../mdx/mdx-data-manipulation-update-cube.md) для обратной записи данных непосредственно в неконечные элементы, а не в потомки конечных элементов.  
+ Эта функция работает с неконечными элементами любой иерархии и может использоваться [UPDATE CUBE Statement (MDX)](../mdx/mdx-data-manipulation-update-cube.md) для обратной записи данных непосредственно в неконечные элементы, а не в потомки конечных элементов.  
   
 > [!NOTE]  
 >  Возвращает указанный элемент, если он является конечным или если с неконечным элементом не связан элемент данных.  
@@ -51,7 +51,7 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Справочник по функциям многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-function-reference-mdx.md)   
- [Основные понятия многомерных выражений &#40;служб Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)  
+ [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)   
+ [Основные понятия многомерных выражений (службы Analysis Services)](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)  
   
   

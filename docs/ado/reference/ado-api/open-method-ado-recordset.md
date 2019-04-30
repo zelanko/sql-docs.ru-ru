@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c2b02ac3d8e95bb583515dfa780f473402ea798f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206323"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63241102"
 ---
 # <a name="open-method-ado-recordset"></a>Метод Open (объект Recordset ADO)
 Открывает курсор на [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта.  
@@ -36,7 +36,7 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
   
 #### <a name="parameters"></a>Параметры  
  *Source*  
- Необязательный. Объект **Variant** , результатом которого является допустимым является [команда](../../../ado/reference/ado-api/command-object-ado.md) объекта, инструкции SQL, имя таблицы, вызов хранимой процедуры, URL-адрес или имя файла или [Stream](../../../ado/reference/ado-api/stream-object-ado.md) объект, содержащий постоянно храниться [записей](../../../ado/reference/ado-api/recordset-object-ado.md).  
+ Необязательный параметр. Объект **Variant** , результатом которого является допустимым является [команда](../../../ado/reference/ado-api/command-object-ado.md) объекта, инструкции SQL, имя таблицы, вызов хранимой процедуры, URL-адрес или имя файла или [Stream](../../../ado/reference/ado-api/stream-object-ado.md) объект, содержащий постоянно храниться [записей](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
  *ActiveConnection*  
  Необязательный. Либо **Variant** , результатом которого является допустимым является [подключения](../../../ado/reference/ado-api/connection-object-ado.md) переменная с именем объекта или **строка** , содержащий [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) параметры.  
@@ -45,10 +45,10 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
  Необязательный. Объект [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md) значение, определяющее тип курсора, поставщик следует использовать при открытии **записей**. Значение по умолчанию — **adOpenForwardOnly**.  
   
  *LockType*  
- Необязательный. Объект [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) значение, которое определяет, какой тип блокировки (параллелизм) поставщик следует использовать при открытии **записей**. Значение по умолчанию — **adLockReadOnly**.  
+ Необязательный параметр. Объект [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) значение, которое определяет, какой тип блокировки (параллелизм) поставщик следует использовать при открытии **записей**. Значение по умолчанию — **adLockReadOnly**.  
   
  *Параметры*  
- Необязательный. Объект **Long** значение, указывающее, каким образом следует оценить, поставщик *источника* аргумент, если что-то отличное от **команда** объекта или, **Записей** должен быть восстановлен из файла, где он был ранее сохранен. Может быть один или несколько [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) или [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) значения, которые могут быть объединены с помощью побитового оператора OR.  
+ Необязательный параметр. Объект **Long** значение, указывающее, каким образом следует оценить, поставщик *источника* аргумент, если что-то отличное от **команда** объекта или, **Записей** должен быть восстановлен из файла, где он был ранее сохранен. Может быть один или несколько [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) или [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) значения, которые могут быть объединены с помощью побитового оператора OR.  
   
 > [!NOTE]
 >  При открытии **записей** из **Stream** содержащий материализованный **записей**, с использованием [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) значение **adAsyncFetchNonBlocking** не окажет никакого воздействия; выборка будет иметь синхронной и блокировки.  

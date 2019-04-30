@@ -14,18 +14,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2daf8fe7e12cec5317335a0dcce273b16d428bcc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764026"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215802"
 ---
 # <a name="delete-a-workload-group"></a>Удаление группы рабочей нагрузки
   Группу рабочей нагрузки или пул ресурсов можно удалить в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] либо с помощью Transact-SQL.  
   
--   **Перед началом работы**  [Ограничения](#LimitationsRestrictions), [разрешения](#Permissions)  
+-   **Перед началом:**  [Ограничения](#LimitationsRestrictions), [Разрешения](#Permissions)  
   
--   **Для удаления рабочей нагрузки группы, с использованием:**  [Обозреватель объектов](#DelWGObjEx), [свойства регулятора ресурсов](#DelWGRGProp), [Transact-SQL](#DelWGTSQL)  
+-   **Удаление группы рабочей нагрузки с помощью**:  [обозревателя объектов](#DelWGObjEx), [свойств Resource Governor](#DelWGRGProp), [Transact-SQL](#DelWGTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
  Группу рабочей нагрузки нельзя удалить, если она содержит активные сеансы.  

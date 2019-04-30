@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ecb486f51caa97c715d54885c34575a60bfdfb83
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723332"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63231845"
 ---
 # <a name="installer-dll-function-summary"></a>Сводка по функциям библиотеки DLL установщика
 Ниже перечислены функции в DLL установщика. Дополнительные сведения о синтаксисе и семантике для каждой функции см. в разделе [Справочник по API библиотеки DLL установщика](../../../odbc/reference/syntax/installer-dll-api-reference-function.md).  
   
-|Задача|Имя функции|Назначение|  
+|Задача|Имя функции|Цель|  
 |----------|-------------------|-------------|  
 |Установка ODBC|[SQLConfigDriver](../../../odbc/reference/syntax/sqlconfigdriver-function.md)|Загружает DLL-файлов установки драйвера.|  
 ||[SQLGetInstalledDrivers](../../../odbc/reference/syntax/sqlgetinstalleddrivers-function.md)|Возвращает список установленных драйверов.|  

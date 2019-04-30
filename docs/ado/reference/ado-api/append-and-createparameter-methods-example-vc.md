@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: feb3dd4a2e70b48c9f238e36d9cda417f21d29d4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630892"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248159"
 ---
 # <a name="append-and-createparameter-methods-example-vc"></a>Append и CreateParameter методы (Visual C++)
 В этом примере используется [Append](../../../ado/reference/ado-api/append-method-ado.md) и [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) методы для выполнения хранимой процедуры с входным параметром.  

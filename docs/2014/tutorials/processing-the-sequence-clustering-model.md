@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 63f46f2d548437a707922bb9cf8b58727061253b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022175"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188140"
 ---
 # <a name="processing-the-sequence-clustering-model"></a>Обработка модели кластеризации последовательностей
   После создания новой структуры интеллектуального анализа данных необходимо выполнить развертывание изменений, внесенных в решение интеллектуального анализа данных, а затем обработать структуру. После завершения обработки новой структуры и модели интеллектуального анализа данных можно просмотреть модель интеллектуального анализа данных.  

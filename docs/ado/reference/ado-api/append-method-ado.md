@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5e03e29d5c9696efb55ef5ce6ec47fcf28fc0467
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47712397"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249031"
 ---
 # <a name="append-method-ado"></a>Метод Append (ADO)
 Добавляет объект в коллекцию. Если коллекция [поля](../../../ado/reference/ado-api/fields-collection-ado.md), новый [поле](../../../ado/reference/ado-api/field-object.md) объект может быть создан, прежде чем он будет добавлен к коллекции.  
@@ -44,7 +44,7 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
  *object*  
  Переменной объекта, который представляет объект для добавления.  
   
- *Название*  
+ *Name*  
  Объект **строка** значение, содержащее имя нового **поле** объекта, и не должен быть тем же именем, как любой другой объект в *поля*.  
   
  *Тип*  
@@ -54,7 +54,7 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
  Необязательный параметр. Объект **Long** значение, представляющее заданный размер, в символах или байтах нового поля. Значение по умолчанию для этого параметра является производным от *тип*. Поля, *DefinedSize* длиной более 255 байт, обрабатываются как столбцы переменной длины. По умолчанию для *DefinedSize* не определен.  
   
  *Attrib*  
- Необязательный параметр. Объект [FieldAttributeEnum](../../../ado/reference/ado-api/fieldattributeenum.md) значение, значение которого по умолчанию равно **adFldDefault**, который задает атрибуты для нового поля. Если это значение не указано, будет содержать поле атрибутов, производных от *тип*.  
+ Необязательный. Объект [FieldAttributeEnum](../../../ado/reference/ado-api/fieldattributeenum.md) значение, значение которого по умолчанию равно **adFldDefault**, который задает атрибуты для нового поля. Если это значение не указано, будет содержать поле атрибутов, производных от *тип*.  
   
  *FieldValue*  
  Необязательный параметр. Объект **Variant** , представляющий значение для нового поля. Если не указан, поле добавляется со значением null.  

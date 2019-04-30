@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b9e9d744955faa41b771834095a6cc51233af4bd
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350388"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63217660"
 ---
 # <a name="visual-c-extensions-header"></a>Заголовок расширений Visual C++
 Следующий заголовок **icrsint.h**, подробно интерфейс, позволяющий клиентам для извлечения полей из **записей** в переменные, определенные в классе, производном от **CADORecordBinding**. Необходимо указать макроса привязку ADO для каждого поля, которое необходимо будет получить доступ.  

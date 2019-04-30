@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2b489fda1c051ecd08b63f28d6232a0e213d9fcb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52794006"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188874"
 ---
 # <a name="modify-a-resource-health-policy-definition-sql-server-utility"></a>Изменение определения политики исправности ресурсов (служебная программа SQL Server)
   В этом разделе описано, как изменить определение политики исправности ресурсов в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Прежде чем изменять политику использования ресурсов в служебной программе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , необходимо создать точку управления служебной программой (UCP). Дополнительные сведения см. в разделе [Функции и задачи служебной программы SQL Server](sql-server-utility-features-and-tasks.md).  

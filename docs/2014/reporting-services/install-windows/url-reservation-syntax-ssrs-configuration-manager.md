@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 885e8ffb9eaa02aae02db590c8d042dadb1f2ab0
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59961220"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63224921"
 ---
 # <a name="url-reservation-syntax--ssrs-configuration-manager"></a>Синтаксис резервирования URL-адресов (диспетчер конфигурации служб SSRS)
   В этом разделе описываются компоненты URL-адресов веб-службы сервера отчетов и диспетчера отчетов. Хранимое внутреннее представление URL-адреса имеет структуру, отличную от URL-адресов, вводимых в поле адреса окна браузера. Строка резервирования URL-адресов отображается в окне «Результаты» программы настройки служб Reporting Services и в файле конфигурации RSReportServer.config при настройке URL-адресов. Знание структуры определения URL-адреса может оказаться полезным при диагностике резервирования URL-адресов или при просмотре внутреннего резервирования URL-адресов сервера по запросу компонента HTTP.SYS.  

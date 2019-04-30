@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 975140d00a0566f1776e7a3743d82fc3077b43ff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47835402"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63140144"
 ---
 # <a name="delete-method-example-vc"></a>Пример метода Delete (Visual C++)
 В этом примере используется [удалить](../../../ado/reference/ado-api/delete-method-ado-recordset.md) способ удаления указанной записи из [записей](../../../ado/reference/ado-api/recordset-object-ado.md).  

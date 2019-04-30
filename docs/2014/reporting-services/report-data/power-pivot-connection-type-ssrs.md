@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b391c7e76ab5feeeb6e355924349a578c446c882
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59943000"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63218063"
 ---
 # <a name="powerpivot-connection-type-ssrs"></a>Тип соединения PowerPivot (службы SSRS)
   Для извлечения данных из книги PowerPivot, опубликованной в галерее PowerPivot на сайте SharePoint, можно использовать модуль обработки данных служб SQL Server Analysis Services.  

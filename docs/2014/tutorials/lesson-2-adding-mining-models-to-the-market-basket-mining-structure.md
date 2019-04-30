@@ -1,5 +1,5 @@
 ---
-title: Занятие 2. Добавление моделей интеллектуального анализа данных к структуре интеллектуального анализа данных потребительской корзины | Документация Майкрософт
+title: Урок 2. Добавление моделей интеллектуального анализа данных к структуре интеллектуального анализа данных потребительской корзины | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: b9573d9359983e33cf23533787c26039572710ea
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041455"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63204719"
 ---
-# <a name="lesson-2-adding-mining-models-to-the-market-basket-mining-structure"></a>Занятие 2. Добавление моделей интеллектуального анализа данных к структуре интеллектуального анализа данных "Потребительская корзина"
+# <a name="lesson-2-adding-mining-models-to-the-market-basket-mining-structure"></a>Урок 2. Добавление моделей к структуре интеллектуального анализа данных покупательского поведения
   На этом занятии будет добавлено две модели интеллектуального анализа данных к структуре интеллектуального анализа Market Basket, созданный в [занятии 1: Создание структуры интеллектуального анализа данных потребительской корзины](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md). С помощью этих моделей интеллектуального анализа данных можно будет создавать прогнозы.  
   
  Для прогнозирования типов товара, которые клиент стремится заказать одновременно, необходимо создать две модели интеллектуального анализа данных с помощью [Microsoft Association Algorithm](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md) и два разных значения *MINIMUM_PROBABILTY* параметра.  

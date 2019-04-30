@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 65447904f32b7e0457ed807f18e942b334ddc236
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626622"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188801"
 ---
 # <a name="like-escape-sequence"></a>Escape-последовательность LIKE
 ODBC использует escape-последовательности для предложения LIKE. Синтаксис escape-последовательность выглядит следующим образом:  
@@ -32,14 +32,14 @@ ODBC использует escape-последовательности для п�
 ## <a name="remarks"></a>Примечания  
  В форме Бэкуса-Наура синтаксис выглядит следующим образом:  
   
- *Like-escape-последовательность ODBC* :: =  
+ *ODBC-like-escape* ::=  
   
  *ODBC-esc инициатор* escape "*escape-символ*" *ODBC esc признак конца.*  
   
- *escape-символ* :: = *символ*  
+ *escape-character* ::= *character*  
   
- *ODBC-esc инициатор* :: = {}  
+ *ODBC-esc-initiator* ::= {  
   
- *ODBC-esc-признак конца* :: =}  
+ *ODBC-esc-terminator* ::= }  
   
  Чтобы определить, поддерживает ли драйвер LIKE escape последовательности, приложение может вызвать **SQLGetInfo** с типом SQL_LIKE_ESCAPE_CLAUSE сведения.

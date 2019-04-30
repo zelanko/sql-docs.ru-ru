@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 809f893a38af6f269899e8e9d5913116b32864cc
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59941520"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164800"
 ---
 # <a name="data-alert-messages"></a>Предупреждающие сообщения
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] предупреждения об изменении данных доступны два типа предупреждающих сообщений по электронной почте: Сообщения с помощью данных результаты предупреждения и сообщения с описаниями ошибок. Сообщения с результатами информируют всех получателей об изменениях в данных отчетов, представляющих для них интерес и важных для принятия бизнес-решений. Если по какой-то причине произошла ошибка и результаты оказались недоступны, вместо сообщения с результатами будет отправлено сообщение об ошибке.  

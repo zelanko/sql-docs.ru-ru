@@ -1,5 +1,5 @@
 ---
-title: Инструкция DROP KPI (многомерные Выражения) | Документы Microsoft
+title: Инструкция DROP KPI (многомерные Выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 336eebbc8bcc98ec684faaaa1092b511cf95f100
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741453"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248243"
 ---
-# <a name="mdx-data-definition---drop-kpi"></a>Определения данных многомерных Выражений — DROP KPI
+# <a name="mdx-data-definition---drop-kpi"></a>Определение данных многомерных выражений — DROP KPI
 
 
   Удаляет указанный ключевой показатель эффективности из заданного куба.  

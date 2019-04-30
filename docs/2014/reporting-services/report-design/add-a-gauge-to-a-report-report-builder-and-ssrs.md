@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cc9b19a2693f28ccbfd3811ba81f8fb7b90de61b
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59932347"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63206884"
 ---
 # <a name="add-a-gauge-to-a-report-report-builder-and-ssrs"></a>Добавление датчика в отчет (построитель отчетов и службы SSRS)
   Если необходимо создать сводку данных в визуальном формате, то можно использовать область данных «Датчик». После добавления области данных датчика в область конструктора можно перетаскивать поля набора данных отчета на панель данных в датчике.  

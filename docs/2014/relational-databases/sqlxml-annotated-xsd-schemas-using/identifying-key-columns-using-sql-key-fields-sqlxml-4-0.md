@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 1d1db0287c0876c80d5353657c525f4e0597c5f0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52795646"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63228456"
 ---
 # <a name="identifying-key-columns-using-sqlkey-fields-sqlxml-40"></a>Идентификация ключевых столбцов с использованием sql:key-fields (SQLXML 4.0)
   При указании запроса XPath к схеме XSD в большинстве случаев необходимы ключевые сведения, чтобы правильно организовать вложенность в результатах. Указание заметки `sql:key-fields` представляет собой один из способов, который гарантирует формирование надлежащей иерархии.  
@@ -46,7 +46,7 @@ ms.locfileid: "52795646"
   
  Рассмотрим следующую схему. Схема задает иерархию между  **\<порядок >** и  **\<клиента >** элементов, в который  **\<порядок >** элемент является родительским и  **\<клиента >** элемент является дочерним.  
   
-  **\<SQL: Relationship >** тег используется для указания «родитель потомок». Он идентифицирует столбец CustomerID в таблице Sales.SalesOrderHeader как родительский ключ, который ссылается на дочерний ключ CustomerID таблицы Sales.Customer. Сведения в  **\<SQL: Relationship >** не достаточно для уникальной идентификации строк в родительской таблице (Sales.SalesOrderHeader). Поэтому без заметки `sql:key-fields` формируемая иерархия является неточной.  
+ **\<SQL: Relationship >** тег используется для указания «родитель потомок». Он идентифицирует столбец CustomerID в таблице Sales.SalesOrderHeader как родительский ключ, который ссылается на дочерний ключ CustomerID таблицы Sales.Customer. Сведения в  **\<SQL: Relationship >** не достаточно для уникальной идентификации строк в родительской таблице (Sales.SalesOrderHeader). Поэтому без заметки `sql:key-fields` формируемая иерархия является неточной.  
   
  С помощью `sql:key-fields` указано на  **\<порядок >**, заметка однозначно определяет строки в родительской таблице (Sales.SalesOrderHeader) и его дочерние элементы выводятся под родительским.  
   

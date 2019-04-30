@@ -1,5 +1,5 @@
 ---
-title: Current (многомерные Выражения) | Документы Microsoft
+title: Current (многомерные Выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4e4962dfd9eba7d3a21710fef33aa39256dcfbfa
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739483"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249669"
 ---
 # <a name="current-mdx"></a>Current (многомерные выражения)
 
@@ -41,7 +41,7 @@ Set_Expression.Current
 >  Функция работает только с имеющими имя наборами — используя псевдоним набора или определяя именованный набор.  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере показано, как использовать **текущей** функции внутри **формирования**:  
+ В следующем примере показано, как использовать **текущей** работать внутри **формирования**:  
   
  `WITH`  
   
@@ -68,6 +68,6 @@ Set_Expression.Current
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>См. также  
- [Справочник по функциям многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
   
   

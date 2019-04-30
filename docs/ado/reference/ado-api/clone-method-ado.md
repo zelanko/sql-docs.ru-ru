@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b4768c0f01c38ef72735f3577c4d581c019b4595
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830312"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239731"
 ---
 # <a name="clone-method-ado"></a>Метод Clone (ADO)
 Создает дубликат [записей](../../../ado/reference/ado-api/recordset-object-ado.md) из существующего **записей** объекта. При необходимости указывает, что клона быть доступны только для чтения.  

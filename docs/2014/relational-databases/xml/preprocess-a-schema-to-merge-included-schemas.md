@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f878c64620ab0cd3f0bc439164ef86b54ab3b78e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526356"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63241231"
 ---
 # <a name="preprocess-a-schema-to-merge-included-schemas"></a>Предпроцессор схемы для слияния включаемых схем
   Элемент W3C XSD **include** обеспечивает поддержку модульного принципа, при котором схема XML может быть разделена на несколько физических файлов. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не поддерживает этот элемент. XML-схемы, содержащие данный элемент, будут отклонены сервером.  

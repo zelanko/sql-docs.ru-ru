@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b8889cf8cf24ddc9befd356af98d8c982eb562ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778992"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239682"
 ---
 # <a name="openschema-method-example-vb"></a>Пример метода OpenSchema (Visual Basic)
 В этом примере используется [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) метод, чтобы отобразить имя и тип для всех таблиц в ***Pubs*** базы данных.  

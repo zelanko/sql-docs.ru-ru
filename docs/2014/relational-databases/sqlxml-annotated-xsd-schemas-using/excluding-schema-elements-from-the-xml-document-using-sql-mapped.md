@@ -23,11 +23,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 50ec2b9a4c35fdf16b8d7f696b9d227eb63ff7cb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52793806"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63228466"
 ---
 # <a name="excluding-schema-elements-from-the-resulting-xml-document-using-sqlmapped-sqlxml-40"></a>Исключение элементов схемы из результирующего XML-документа с помощью sql:mapped (SQLXML 4.0)
   В результате сопоставления по умолчанию каждый элемент и атрибут в схеме XSD будет сопоставлен с таблицей и столбцом в базе данных. Если в схеме XSD нужно создать элемент, не сопоставленный никакой таблице, никакому представлению или столбцу базы данных и не фигурирующий в XML, нужно создать для него заметку `sql:mapped`.  
@@ -44,7 +44,7 @@ ms.locfileid: "52793806"
   
  При сопоставлении этой схемы XSD с таблицей Person.Contact в базе данных AdventureWorks, `sql:mapped` заметка указывается для **HomeAddress** атрибут, поскольку таблица Employees не хранятся домашние адреса сотрудников. В результате этот атрибут не сопоставлен с базой данных и не возвращается в результирующем XML-документе в ответ на запрос XPath к схеме сопоставления.  
   
- Для остальной части схемы используется сопоставление по умолчанию.  **\<Person.Contact >** элемент сопоставляется с таблицей Person.Contact, а все атрибуты сопоставляются со столбцами с тем же именем в таблице Person.Contact.  
+ Для остальной части схемы используется сопоставление по умолчанию. **\<Person.Contact >** элемент сопоставляется с таблицей Person.Contact, а все атрибуты сопоставляются со столбцами с тем же именем в таблице Person.Contact.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

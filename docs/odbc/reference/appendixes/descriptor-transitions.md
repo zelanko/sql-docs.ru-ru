@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 027b711c5c1a2cb2d35e65efdc2b00f441841d8c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718022"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240978"
 ---
 # <a name="descriptor-transitions"></a>Переходы дескрипторов
 Дескрипторы ODBC имеет три состояния.  
   
-|Состояние|Описание|  
+|Штат|Описание|  
 |-----------|-----------------|  
 |D0|Нераспределенное дескриптора|  
 |D1i|Неявно выделенные дескриптора|  
@@ -35,9 +35,9 @@ ms.locfileid: "47718022"
   
 ## <a name="sqlallochandle"></a>SQLAllocHandle  
   
-|D0<br /><br /> Не выделено|D1i<br /><br /> Неявно|D1e<br /><br /> Явно|  
+|D0<br /><br /> Не выделено|D1i<br /><br /> Неявные|D1e<br /><br /> Явно|  
 |------------------------|----------------------|----------------------|  
-|D1i [1]|--|--|  
+|D1i[1]|--|--|  
 |D1e [2]|--|--|  
   
  [1] в этой строке показаны переходы при *HandleType* был значение SQL_HANDLE_STMT.  
@@ -46,13 +46,13 @@ ms.locfileid: "47718022"
   
 ## <a name="sqlcopydesc"></a>SQLCopyDesc  
   
-|D0<br /><br /> Не выделено|D1i<br /><br /> Неявно|D1e<br /><br /> Явно|  
+|D0<br /><br /> Не выделено|D1i<br /><br /> Неявные|D1e<br /><br /> Явно|  
 |------------------------|----------------------|----------------------|  
 |(IH)|--|--|  
   
 ## <a name="sqlfreehandle"></a>SQLFreeHandle  
   
-|D0<br /><br /> Не выделено|D1i<br /><br /> Неявно|D1e<br /><br /> Явно|  
+|D0<br /><br /> Не выделено|D1i<br /><br /> Неявные|D1e<br /><br /> Явно|  
 |------------------------|----------------------|----------------------|  
 |--[1]|D0|--|  
 |(IH) [2]|(HY017)|D0|  
@@ -63,13 +63,13 @@ ms.locfileid: "47718022"
   
 ## <a name="sqlgetdescfield-and-sqlgetdescrec"></a>SQLGetDescField и SQLGetDescRec  
   
-|D0<br /><br /> Не выделено|D1i<br /><br /> Неявно|D1e<br /><br /> Явно|  
+|D0<br /><br /> Не выделено|D1i<br /><br /> Неявные|D1e<br /><br /> Явно|  
 |------------------------|----------------------|----------------------|  
 |(IH)|--|--|  
   
 ## <a name="sqlsetdescfield-and-sqlsetdescrec"></a>SQLSetDescField и SQLSetDescRec  
   
-|D0<br /><br /> Не выделено|D1i<br /><br /> Неявно|D1e<br /><br /> Явно|  
+|D0<br /><br /> Не выделено|D1i<br /><br /> Неявные|D1e<br /><br /> Явно|  
 |------------------------|----------------------|----------------------|  
 |(IH) [1]|--|--|  
   
@@ -77,6 +77,6 @@ ms.locfileid: "47718022"
   
 ## <a name="all-other-odbc-functions"></a>Все остальные функции ODBC  
   
-|D0<br /><br /> Не выделено|D1i<br /><br /> Неявно|D1e<br /><br /> Явно|  
+|D0<br /><br /> Не выделено|D1i<br /><br /> Неявные|D1e<br /><br /> Явно|  
 |------------------------|----------------------|----------------------|  
 |--|--|--|

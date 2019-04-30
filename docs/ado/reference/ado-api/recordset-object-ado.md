@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1bf2aab4e9f11ff3dae9852dd80007867fe5a462
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770832"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240819"
 ---
 # <a name="recordset-object-ado"></a>Объект Recordset (ADO)
 Представляет полный набор записей из базовой таблицы или результаты выполнения команды. В любое время **записей** объект ссылается на одну запись в наборе как текущую запись.  
@@ -81,4 +81,4 @@ Debug.Print objRs(0)              '  the Value of Item(0).
  [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Коллекция Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Коллекция Properties (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
- [Приложение А. Поставщики](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [Приложение а. Поставщики](../../../ado/guide/appendixes/appendix-a-providers.md)

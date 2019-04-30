@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 90ee103d7f176ea4a61703450cc250dd517f7481
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59955860"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63223152"
 ---
 # <a name="shared-data-source-properties-dialog-box-credentials"></a>Диалоговое окно «Свойства общего источника данных» — «Учетные данные»
   Выберите вкладку **Учетные данные** в диалоговом окне **Свойства общего источника данных** для отображения и изменения учетных данных, используемых для подключения к общему источнику данных в отчете. Предоставленные учетные данные используются для доступа к источнику данных и кэширования копии данных для предварительного просмотра отчета. Дополнительные сведения о кэшировании данных для предварительного просмотра см. в разделе [Предварительный просмотр отчетов](reports/previewing-reports.md). Дополнительные сведения об учетных данных см. в разделе [Указание учетных данных и сведений о соединении для источников данных отчета](report-data/specify-credential-and-connection-information-for-report-data-sources.md).  

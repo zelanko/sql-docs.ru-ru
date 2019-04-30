@@ -1,5 +1,5 @@
 ---
-title: SUM (многомерные Выражения) | Документы Microsoft
+title: SUM (многомерные Выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: bdf003a65e6923acf2bbf5c17e93d412e2d194fa
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743273"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63241382"
 ---
 # <a name="sum-mdx"></a>Sum (многомерные выражения)
 
@@ -67,7 +67,7 @@ SELECT Measures.x ON 0
 FROM [Adventure Works]  
 ```  
   
- В следующем примере используется ключевое слово WITH MEMBER и **сумма** для определения вычисляемого элемента в измерении мер, содержащей сумму меры Reseller Sales Amount для элементов Canada и United States иерархии атрибута Country в измерении «География».  
+ В следующем примере используется ключевое слово WITH MEMBER и **SUM** функцию для определения вычисляемого элемента в измерении мер, содержащее сумму меры Reseller Sales Amount для элементов Canada и United States Иерархии атрибута Country в измерении Geography.  
   
 ```  
 WITH MEMBER Measures.NorthAmerica AS SUM   
@@ -81,7 +81,7 @@ SELECT {[Measures].[NorthAmerica]} ON 0,
 FROM [Adventure Works]  
 ```  
   
- Часто **сумма** функция используется в **CURRENTMEMBER** функции или функции, такие как **YTD** , возвращающие набор, который изменяется в зависимости от текущего элемента иерархии. Например, приведенный ниже запрос возвращает сумму меры Internet Sales Amount для всех дат с начала календарного года до даты, отображенной по оси строк:  
+ Часто **SUM** функция используется в **CURRENTMEMBER** функции или функции, такие как **YTD** , возвращающими набор, в зависимости от currentmember иерархии. Например, приведенный ниже запрос возвращает сумму меры Internet Sales Amount для всех дат с начала календарного года до даты, отображенной по оси строк:  
   
  `WITH MEMBER MEASURES.YTDSUM AS`  
   
@@ -94,6 +94,6 @@ FROM [Adventure Works]
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>См. также  
- [Справочник по функциям многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
   
   

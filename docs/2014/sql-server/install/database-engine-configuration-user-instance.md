@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 423573c78c78cb97b83f8709e19a0bfd6d642645
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52399437"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63162221"
 ---
 # <a name="database-engine-configuration---user-instance"></a>Конфигурация компонента Database Engine — пользовательский экземпляр
   Страница **Пользовательский экземпляр** используется для создания отдельного экземпляра компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] для пользователей, не имеющих разрешений администратора, и для добавления пользователей к роли администратора.  

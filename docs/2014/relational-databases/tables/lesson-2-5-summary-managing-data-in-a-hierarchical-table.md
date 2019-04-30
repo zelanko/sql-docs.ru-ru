@@ -14,17 +14,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 26fefad9fa8b2a20e03a8a87e873556427db1646
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210764"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63223326"
 ---
 # <a name="summary-managing-data-in-a-hierarchical-table"></a>Сводка. Управление данными в иерархической таблице
   Тип данных `hierarchyid` позволяет легко создавать таблицы, отражающие иерархические данные, а затем создавать индексы по ширине и глубине для организации эффективного доступа к ним. Для выполнения запросов и управления данными используйте иерархические методы.  
   
 ## <a name="return-to-the-start-of-the-tutorial"></a>Вернуться к началу учебника  
- [Руководство. Использование типа данных hierarchyid](tutorial-using-the-hierarchyid-data-type.md)  
+ [Учебник. Использование типа данных hierarchyid](tutorial-using-the-hierarchyid-data-type.md)  
   
 ## <a name="see-also"></a>См. также  
  [Иерархические данные &#40;SQL Server&#41;](../hierarchical-data-sql-server.md)   

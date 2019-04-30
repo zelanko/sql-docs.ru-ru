@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a575e4df609430d5dc71517032f4c3da739bba24
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613312"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161390"
 ---
 # <a name="how-event-handlers-work-together"></a>Совместная работа обработчиков событий
 Если вы программируете на Visual Basic, все обработчики событий для **подключения** и **записей** события должен быть реализован, независимо от того, ли вы фактически обработать все события. Объем работ по реализации, что необходимо сделать зависит от языка программирования. Дополнительные сведения см. в разделе [создание экземпляра события ADO языком](../../../ado/guide/data/ado-event-instantiation-by-language.md).  

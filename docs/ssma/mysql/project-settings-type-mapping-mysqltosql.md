@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: e0a11a0b49589c3763b5af67623c9e819038c217
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713252"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63231821"
 ---
 # <a name="project-settings-type-mapping-mysqltosql"></a>Параметры проекта (сопоставление типов) (MySQLToSQL)
 Параметры сопоставления типов проекта позволяет настроить сопоставления типов по умолчанию для проекта SSMA.  
@@ -54,7 +54,7 @@ ms.locfileid: "47713252"
 |**Тип данных MySQL**|**Тип данных SQL Server**|  
 |BIGINT|BIGINT|  
 |bigint [*.. 255]|BIGINT|  
-|BINARY|двоичные [1]|  
+|binary|двоичные [1]|  
 |двоичный файл [от 0 до 1]|двоичные [1]|  
 |двоичные [2..255]|двоичные [*]|  
 |bit|двоичные [1]|  
@@ -72,7 +72,7 @@ ms.locfileid: "47713252"
 |BLOB-объектов [8001.. *]|varbinary(max)|  
 |bool|bit|  
 |boolean|bit|  
-|char;|nchar [1]|  
+|char|nchar [1]|  
 |char байтов|двоичные [1]|  
 |char байтов [от 0 до 1]|двоичные [1]|  
 |char байтов [2..255]|двоичные [*]|  
@@ -80,11 +80,11 @@ ms.locfileid: "47713252"
 |char [2..255]|nchar [*]|  
 |character|nchar [1]|  
 |символ varying [от 0 до 1]|nvarchar [1]|  
-|символ varying [2..255]|NVARCHAR|  
+|символ varying [2..255]|nvarchar|  
 |символ [от 0 до 1]|nchar [1]|  
 |символ [2..255]|nchar [*]|  
-|Дата|Дата|  
-|DATETIME|datetime2 [0]|  
+|date|date|  
+|datetime|datetime2 [0]|  
 |dec|Decimal|  
 |DEC [*.. 65]|Decimal [*] [0]|  
 |DEC [*.. 65] [\*.. 30]|Decimal [*] [\*]|  
@@ -124,7 +124,7 @@ ms.locfileid: "47713252"
 |Национальный varchar [от 0 до 1]|nvarchar [1]|  
 |Национальный varchar [2..4000]|nvarchar [*]|  
 |Национальный varchar [4001.. *]|nvarchar(max)|  
-|NCHAR|nchar [1]|  
+|nchar|nchar [1]|  
 |varchar, nchar|nvarchar [1]|  
 |nchar, varchar [от 0 до 1]|nvarchar [1]|  
 |nchar, varchar [2..4000]|nvarchar [*]|  
@@ -134,24 +134,24 @@ ms.locfileid: "47713252"
 |NUMERIC|NUMERIC|  
 |числовые [*.. 65]|числовые [*] [0]|  
 |числовые [*.. 65] [\*.. 30]|числовые [*] [\*]|  
-|NVARCHAR|nvarchar [1]|  
+|nvarchar|nvarchar [1]|  
 |nvarchar [от 0 до 1]|nvarchar [1]|  
 |nvarchar [2..4000]|nvarchar [*]|  
-|nvarchar [4001.. *]|nvarchar(max)|  
-|REAL|число с плавающей запятой [53]|  
+|nvarchar[4001..*]|nvarchar(max)|  
+|real|число с плавающей запятой [53]|  
 |реальные [*.. 255] [\*.. 30]|числовые [*] [\*]|  
 |последовательный|BIGINT|  
-|SMALLINT|SMALLINT|  
-|smallint [*.. 255]|SMALLINT|  
+|smallint|smallint|  
+|smallint [*.. 255]|smallint|  
 |text|nvarchar(max)|  
 |текст [от 0 до 1]|nvarchar [1]|  
 |текст [2..4000]|nvarchar [*]|  
 |текст [4001.. *]|nvarchar(max)|  
 |time|time|  
-|TIMESTAMP|DATETIME|  
+|TIMESTAMP|datetime|  
 |tinyblob|varbinary [255]|  
-|TINYINT|SMALLINT|  
-|tinyint [*.. 255]|SMALLINT|  
+|tinyint|smallint|  
+|tinyint [*.. 255]|smallint|  
 |tinytext|nvarchar [255]|  
 |unsigned bigint|BIGINT|  
 |unsigned bigint [*.. 255]|BIGINT|  
@@ -183,17 +183,17 @@ ms.locfileid: "47713252"
 |неподписанные реальных [*.. 255 [[\*.. 30]|числовые [*] [\*]|  
 |без знака smallint|ssNoversion|  
 |без знака smallint [*.. 255]|ssNoversion|  
-|без знака tinyint|TINYINT|  
-|без знака tinyint [*.. 255]|TINYINT|  
+|без знака tinyint|tinyint|  
+|без знака tinyint [*.. 255]|tinyint|  
 |varbinary [от 0 до 1]|varbinary [1]|  
 |varbinary [2..8000]|varbinary [*]|  
 |varbinary [8001.. *]|varbinary(max)|  
 |varchar [от 0 до 1]|nvarchar [1]|  
 |varchar [2..4000]|nvarchar [*]|  
 |varchar [4001.. *]|nvarchar(max)|  
-|year|SMALLINT|  
-|год [2..2]|SMALLINT|  
-|год [4..4]|SMALLINT|  
+|year|smallint|  
+|год [2..2]|smallint|  
+|год [4..4]|smallint|  
   
 ##### <a name="add"></a>Добавить  
 Щелкните, чтобы добавить в список сопоставления типа данных.  

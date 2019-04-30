@@ -15,18 +15,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 93ddc3881796aee3194ec5268afc68ecbab1a487
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782892"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63233007"
 ---
 # <a name="create-index-statement"></a>Инструкция CREATE INDEX
 Используется следующий синтаксис инструкции CREATE INDEX:  
   
  Создание ИНДЕКСА [UNIQUE] *имя индекса* ON *имя таблицы* (*идентификатор столбца* [ASC] [DESC] [, *идентификатор столбца* [ASC][DESC]...]) С помощью \< *список параметров индекса*>  
   
- где \< *список параметров индекса*> может быть: ОСНОВНОЙ &#124; DISALLOW NULL &#124; ИГНОРИРОВАТЬ значение NULL  
+ где \< *список параметров индекса*> может быть: ОСНОВНОЙ &AMP;#124; DISALLOW NULL &AMP;#124; IGNORE NULL  
   
  Только драйвером Microsoft Access использует параметры индекса запретить NULL и ИГНОРИРОВАТЬ NULL. DBASE и драйверов для Paradox принимать синтаксис, но не учитывать наличие любого из этих вариантов.  
   

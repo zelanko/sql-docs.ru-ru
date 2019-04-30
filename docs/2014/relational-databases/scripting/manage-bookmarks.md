@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 76105982e4a1655fcb91e8432ea69bcee658a7fd
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63191818"
 ---
 # <a name="manage-bookmarks"></a>Управление закладками
   При работе в редакторе кода в окне **Закладки** можно создавать ссылки на определенные строки кода в документе. Это окно можно открыть из меню **Вид** .  

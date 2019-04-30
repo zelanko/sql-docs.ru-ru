@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3a1022770526386640f0ad2aa114a2161ba16dc8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52792736"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63140386"
 ---
 # <a name="conventions-for-combining-search-conditions-in-the-criteria-pane-visual-database-tools"></a>Обозначения для условий комбинированного поиска на панели критериев (визуальные инструменты для баз данных)
   Предусмотрена возможность создания запросов, включающих любое количество условий поиска, соединенных любым количеством операторов AND и OR. Запрос с сочетанием предложений AND и OR может стать сложным, поэтому важно знать, как такой запрос интерпретируется при выполнении и представляется на [панели критериев](visual-database-tools.md) и [панели SQL](sql-pane-visual-database-tools.md).  

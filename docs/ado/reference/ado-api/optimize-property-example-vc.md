@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3cb58d24675c414cefc3e2d19dc306986aa8b440
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601802"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240071"
 ---
 # <a name="optimize-property-example-vc"></a>Пример свойства Optimize (Visual C++)
 В этом примере показано [поле](../../../ado/reference/ado-api/field-object.md) динамический объект **оптимизировать** свойство. **Zip** поле **авторов** в таблицу **Pubs** базы данных не индексируется. Установка [оптимизировать](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) свойства **True** на **zip** поле авторизует ADO для создания индекса, который повышает производительность [найти](../../../ado/reference/ado-api/find-method-ado.md)метод.  

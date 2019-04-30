@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 95117c82c213851d2e0600e65d8061ce532d9933
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601612"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200453"
 ---
 # <a name="sqlsetpos-desktop-database-drivers"></a>SQLSetPos (драйверы для баз данных на настольном компьютере)
 Семантика модель массовой для **SQLSetPos** вызывает с *irow* поддерживаются аргумента равно 0.  

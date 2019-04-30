@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 348b2876e4293ad912383859ace47e462da31bcf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707976"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63207181"
 ---
 # <a name="append-method-adox-procedures"></a>Метод Append (коллекция Procedures ADOX)
 Добавляет новый [процедуры](../../../ado/reference/adox-api/procedure-object-adox.md) объект [процедуры](../../../ado/reference/adox-api/procedures-collection-adox.md) коллекции.  
@@ -35,7 +35,7 @@ Procedures.Append Name, Command
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *Название*  
+ *Name*  
  Объект **строка** значение, указывающее имя процедуры для создания и добавления.  
   
  *Command*  

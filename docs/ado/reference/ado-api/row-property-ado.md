@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 041356f05daaaef50e6e81d995209ab5379fc901
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747412"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63192821"
 ---
 # <a name="row-property-ado"></a>Свойство Row (ADO)
 Возвращает или задает поставщика OLE DB **строки** объект из или в [интерфейс ADORecordConstruction](../../../ado/reference/ado-api/adorecordconstruction-interface.md) объекта. При использовании **put_Row** присвоить **строки** объект, строка преобразуется в объект ADO **записи** объекта.  

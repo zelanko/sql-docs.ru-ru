@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 53e9fdb135b46cedaad6e79fa4ff12c06a4c3ea8
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503945"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198331"
 ---
 # <a name="microsoft-open-database-connectivity-odbc"></a>Microsoft Open Database Connectivity (ODBC)
 Интерфейс Microsoft Open Database Connectivity (ODBC) является интерфейс языка программирования C, который позволяет приложениям получать доступ к данным из различных систем управления базами данных (СУБД). ODBC — это интерфейс низкого уровня, высокой производительности, который разработан специально для хранилищ реляционных данных.  
@@ -44,7 +44,7 @@ ms.locfileid: "52503945"
   
  Определяет условия, относящиеся к ODBC.  
   
- [ODBCCONF. EXE-ФАЙЛА](../odbc/odbcconf-exe.md)  
+ [ODBCCONF.EXE](../odbc/odbcconf-exe.md)  
   
  Описывает служебную программу командной строки для настройки драйверов и имена источников данных.  
   

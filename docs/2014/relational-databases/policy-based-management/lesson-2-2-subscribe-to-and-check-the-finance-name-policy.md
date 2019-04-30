@@ -12,11 +12,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f1b91c1d46bc4a396a8b0358a1a3bf3aa8acbcd8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137084"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63135716"
 ---
 # <a name="subscribe-to-and-check-the-finance-name-policy"></a>Подписка на политику имен финансов и ее проверка
   В этой задаче будет произведена настройка по подписке базы данных Finance к категории политики финансов. Затем будет протестирована политика имен финансов.  
@@ -69,7 +69,7 @@ ms.locfileid: "48137084"
  В этом учебнике показано создание условий управления на основе политик, политик и групп политик, а также применение фильтров и проверка соответствия целей управления на основе политик.  
   
 ## <a name="next"></a>Дальше  
- Данный учебник завершен. Чтобы вернуться к началу, щелкните ссылку [Учебник. Администрирование серверов с помощью управления на основе политик](tutorial-administering-servers-by-using-policy-based-management.md).  
+ Данный учебник завершен. Чтобы вернуться к началу, щелкните [руководства: Администрирование серверов с помощью управления на основе](tutorial-administering-servers-by-using-policy-based-management.md).  
   
  Список учебников, см. в разделе [учебные материалы по SQL Server 2014](../../tutorials/tutorials-for-sql-server-2014.md).  
   

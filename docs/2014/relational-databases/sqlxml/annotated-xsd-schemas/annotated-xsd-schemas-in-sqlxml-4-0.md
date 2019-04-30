@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 85142b248fe8e734aeb1700d8eee353df1684d51
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810866"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63131195"
 ---
 # <a name="annotated-xsd-schemas-in-sqlxml-40"></a>Схемы XSD с заметками в SQLXML 4.0
   В этом разделе приводятся сведения об использовании аннотированных схем XSD в SQLXML 4.0. В предшествующих версиях SQLXML аналогичные функциональные возможности обеспечивались с помощью схем с сокращенными XML-данными (XDR). Кроме того, в этом разделе приводятся сведения по XDR для прежних версий приложений.  

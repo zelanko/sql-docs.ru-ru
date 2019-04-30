@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cf5f7a4bee10b58f644d98fe03ada0a9e8d0faa3
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59966520"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63151548"
 ---
 # <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>Учебник. Добавление параметра к отчету (построитель отчетов)
   Добавление в отчет параметра позволяет пользователям фильтровать в нем данные, полученные из источника данных. Параметры отчета создаются автоматически для каждого параметра запроса, включенного в запрос к набору данных. От типа данных параметра зависит то, как он будет выглядеть на панели инструментов средства просмотра отчетов.  

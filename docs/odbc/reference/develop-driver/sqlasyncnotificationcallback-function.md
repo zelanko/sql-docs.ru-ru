@@ -12,17 +12,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b78764e1dccb7118d43cc967f3b03838366d6eb0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758052"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63224514"
 ---
 # <a name="sqlasyncnotificationcallback-function"></a>Функция SQLAsyncNotificationCallback
 **Соответствие стандартам**  
- Версия была введена: ODBC 3.8  
+ Представленные версии: ODBC 3.8  
   
- Соответствие стандартам: нет  
+ Соответствие стандартам: None  
   
  **Сводка**  
  **SQLAsyncNotificationCallback** позволяет драйверу обратный вызов в диспетчер драйверов, когда имеется наблюдать выполнение некоторых операций для текущей асинхронной операции после драйвер возвращает значение SQL_STILL_EXECUTING. **SQLAsyncNotificationCallback** можно только вызывается с помощью драйвера.  

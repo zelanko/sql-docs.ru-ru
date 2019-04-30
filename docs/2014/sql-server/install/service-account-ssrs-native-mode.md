@@ -14,23 +14,23 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 96cee57e82cc9fbb01a43dc1ec13bf0691f737fc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079134"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185535"
 ---
 # <a name="service-account-ssrs-native-mode"></a>Учетная запись службы (службы Reporting Services в собственном режиме)
   На странице «Учетная запись службы» укажите учетную запись, от которой будет запускаться служба сервера отчетов. Начальная конфигурация этой учетной записи выполняется программой установки. Ее можно изменить, если необходимо изменить учетную запись или пароль. Веб-служба сервера отчетов, диспетчер отчетов и приложение фоновой обработки будут запускаться с удостоверением службы, заданным на этой странице.  
   
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в собственном режиме.  
   
- Учетная запись, указанная для службы сервера отчетов, должна иметь разрешение на доступ к реестру, а также программным файлам и базе данных сервера отчетов. Все разрешения настраиваются для учетной записи автоматически при использовании [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager для настройки учетной записи. Если вы используете учетную запись службы для подключения к базе данных сервера отчетов, Configuration Manager создает имя входа для учетной записи и необходимые разрешения, сделав эту учетную запись к роли RSExecRole на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , на котором размещается экземпляр База данных сервера отчетов. База данных сервера отчетов является единственным хранилищем данных, в которую производит запись сервер отчетов. Учетной записи службы не требуются разрешения на какие бы то ни было другие хранилища данных.  
+ Учетная запись, указанная для службы сервера отчетов, должна иметь разрешение на доступ к реестру, а также программным файлам и базе данных сервера отчетов. Все разрешения настраиваются для учетной записи автоматически, если эта учетная запись настраивалась при помощи диспетчера конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Если вы используете учетную запись службы для подключения к базе данных сервера отчетов, Configuration Manager создает имя входа для учетной записи и необходимые разрешения, сделав эту учетную запись к роли RSExecRole на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , на котором размещается экземпляр База данных сервера отчетов. База данных сервера отчетов является единственным хранилищем данных, в которую производит запись сервер отчетов. Учетной записи службы не требуются разрешения на какие бы то ни было другие хранилища данных.  
   
- Чтобы открыть эту страницу, запустите [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager и выберите ссылку в области навигации. Дополнительные сведения см. в разделе [Использование диспетчера конфигурации служб Reporting Services (собственный режим)](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
+ Чтобы открыть эту страницу, запустите диспетчер конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и выберите ссылку на панели навигации. Дополнительные сведения см. в разделе [Использование диспетчера конфигурации служб Reporting Services (собственный режим)](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
 > [!IMPORTANT]  
->  Каждый раз, когда необходимо обновить учетную запись или пароль, настоятельно рекомендуется использовать [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager. Это гарантирует, что при обновлении учетной записи службы все остальные, зависящие от нее внутренние параметры будут автоматически обновлены.  
+>  При необходимости обновления учетной записи или пароля настоятельно рекомендуется использовать диспетчер конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Это гарантирует, что при обновлении учетной записи службы все остальные, зависящие от нее внутренние параметры будут автоматически обновлены.  
   
 ## <a name="options"></a>Параметры  
  **Использование встроенной учетной записи**  
@@ -48,7 +48,7 @@ ms.locfileid: "48079134"
 > [!NOTE]  
 >  Диспетчер конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] при каждом изменении учетной записи службы напоминает о необходимости создания резервной копии и восстановления ключа шифрования. Эти шаги необходимы для того, чтобы обеспечить доступность для сервера отчетов зашифрованных данных. Дополнительные сведения об этих действиях см. в разделе [ключи шифрования &#40;собственный режим служб SSRS&#41;](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md).  
   
- Кроме того, при наличии сервера отчетов, настроенных для работы в интеграции с SharePoint режиме и используется изменить учетную запись службы с помощью [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager, необходимо также открыть центр администрирования SharePoint и использовать [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **Grant Database Access** страницу, чтобы повторно применить параметры сервера отчетов и экземпляра. Этот шаг новые службы учетной записи предоставляется доступ к базам данных SharePoint, необходимый для интеграции [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с продуктами или технологиями SharePoint. Дополнительные сведения о том, как предоставлять доступ к базе данных в центре администрирования SharePoint, см. в разделе [Настройка и администрирование сервера отчетов &#40;Reporting Services SharePoint Mode&#41; ](../../../2014/reporting-services/configure-administer-report-server-reporting-services-sharepoint-mode.md) и [ Установку в режиме интеграции с SharePoint служб Reporting Services &#40;SharePoint 2010 и SharePoint 2013&#41;](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md).  
+ Кроме того, если сервер отчетов настроен для работы в режиме интеграции с SharePoint и учетная запись службы была изменена с помощью диспетчера конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , необходимо также открыть центр администрирования SharePoint и на странице [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **Предоставление доступа к базе данных** повторно применить параметры сервера отчетов и экземпляра. На этом шаге новой учетной записи службы предоставляется доступ к базам данных SharePoint, необходимый для интеграции служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с продуктами или технологиями SharePoint. Дополнительные сведения о том, как предоставлять доступ к базе данных в центре администрирования SharePoint, см. в разделе [Настройка и администрирование сервера отчетов &#40;Reporting Services SharePoint Mode&#41; ](../../../2014/reporting-services/configure-administer-report-server-reporting-services-sharepoint-mode.md) и [ Установку в режиме интеграции с SharePoint служб Reporting Services &#40;SharePoint 2010 и SharePoint 2013&#41;](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md).  
   
 ## <a name="choosing-an-account"></a>Выбор учетной записи  
  Чтобы получить наилучший результат, укажите учетную запись, обладающую разрешениями сетевого подключения и имеющую доступ к контроллерам домена, шлюзам и SMTP-серверам предприятия. В следующей сводной таблице перечислены учетные записи и рекомендации по их использованию.  
@@ -73,7 +73,7 @@ ms.locfileid: "48079134"
   
 ## <a name="see-also"></a>См. также  
  [Настройка учетной записи службы сервера отчетов (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
- [Настройка учетной записи службы &#40;диспетчер конфигурации служб SSRS&#41;](../../../2014/sql-server/install/configure-a-service-account-ssrs-configuration-manager.md)   
+ [Настройка учетной записи службы (диспетчер конфигурации служб SSRS)](../../../2014/sql-server/install/configure-a-service-account-ssrs-configuration-manager.md)   
  [Разделы справки F1 диспетчера конфигурации служб Reporting Services &#40;собственный режим служб SSRS&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)  
   
   

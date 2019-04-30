@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0c84c1c87aa492ebc0643a72de863504eec883c6
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59959050"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63154781"
 ---
 # <a name="previewing-reports-in-report-builder"></a>Предварительный просмотр отчетов в построителе отчетов
   При создании отчета полезно часто осуществлять предварительный просмотр, чтобы убедиться, что отчет отображает то, что нужно. Нажмите кнопку **Выполнить**для предварительного просмотра отчета. Отчет подготавливается к просмотру в режиме предварительного просмотра.  

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a9d38f80dcc44afa0d399885559b10f20027f906
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670614"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161656"
 ---
 # <a name="named-commands"></a>Именованные команды
 [Создание и выполнение простой команды](../../../ado/guide/data/creating-and-executing-a-simple-command.md) показан один из способов для выполнения команды. Есть еще один способ: можно сделать его именованную команду, а затем вызовите этот именованный команду непосредственно на **подключения** объекта (назначенный **ActiveConnection** свойство **команда** объекта). Именование команды означает, что назначение имени для **имя** свойство **команда** объекта. Например,  

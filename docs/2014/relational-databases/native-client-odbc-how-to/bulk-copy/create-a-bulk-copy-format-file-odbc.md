@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 54f57ae8d03037639076e890b93c0cff9021bd78
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352851"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63157223"
 ---
 # <a name="create-a-bulk-copy-format-file-odbc"></a>Создание файла форматирования массового копирования (ODBC)
   В этом образце показано использование функций массового копирования для создания как файла данных, так и файла форматирования. Этот образец разработан для ODBC версии 3.0 или более поздней.  
@@ -42,7 +42,7 @@ ms.locfileid: "53352851"
   
     -   Имя файла данных, в который сохраняются все сообщения об ошибках массового копирования (укажите значение NULL, если файл для сообщений не требуется).  
   
-    -   Направление копирования: DB_OUT — в файл из таблицы или представления.  
+    -   Направление копирования: Db_out — в файл из таблицы или представления.  
   
 5.  Вызовите [bcp_columns](../../native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) задать число столбцов.  
   

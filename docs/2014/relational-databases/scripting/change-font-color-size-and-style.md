@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ecba74cbaa5a03ddca94b7bc3a9fdd6dd52be43f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146443"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63209774"
 ---
 # <a name="change-font-color-size-and-style"></a>Изменение цвета, размера и стиля шрифта
   В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]можно настроить внешний вид текста в редакторе, а также в других приложениях пакета.  

@@ -1,5 +1,5 @@
 ---
-title: Статистическое выражение (MDX) | Документы Microsoft
+title: Aggregate (многомерные Выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 11e10d5a03702329a5ed59ed42acee0abc2d27c8
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740573"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200628"
 ---
 # <a name="aggregate-mdx"></a>Aggregate (многомерные выражения)
 
@@ -38,11 +38,11 @@ Aggregate(Set_Expression [ ,Numeric_Expression ])
 ## <a name="remarks"></a>Примечания  
  Если задан набор пустых кортежей или пустой набор, функция возвращает пустое значение.  
   
- В следующей таблице описаны как **статистические** результаты, возвращаемые функцией различных статистических функций.  
+ В следующей таблице описаны как **агрегатные** функция ведет себя так, с помощью различных статистических функций.  
   
 |Статистический оператор|Результат|  
 |--------------------------|------------|  
-|SUM|Возвращает сумму значений в наборе.|  
+|Sum|Возвращает сумму значений в наборе.|  
 |Count|Возвращает количество значений в наборе.|  
 |Max|Возвращает максимальное значение в наборе.|  
 |Min|Возвращает минимальное значение в наборе.|  
@@ -56,7 +56,7 @@ Aggregate(Set_Expression [ ,Numeric_Expression ])
 |Назначения|Назначения обрабатываются статистически соответственно статистической функции обработки мер. Если функция статистической обработки мер является счетчиком различных объектов, назначение суммируется.|  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере возвращается сумма `Measures.[Order Quantity]` член, суммарный за первые восемь месяцев календарного 2003, содержащихся в `Date` измерения, от **Adventure Works** куба.  
+ В следующем примере возвращается сумма `Measures.[Order Quantity]` член, вычисленная за первые восемь месяцев календарного 2003, которые содержатся в `Date` измерения, от **Adventure Works** куба.  
   
 ```  
 WITH MEMBER [Date].[Calendar].[First8Months2003] AS  
@@ -123,15 +123,15 @@ WHERE ([Geography].[State-Province].x,
 ```  
   
 ## <a name="see-also"></a>См. также  
- [PeriodsToDate &#40;многомерных Выражений&#41;](../mdx/periodstodate-mdx.md)   
- [Дочерние элементы &#40;многомерных Выражений&#41;](../mdx/children-mdx.md)   
- [Hierarchize &#40;многомерных Выражений&#41;](../mdx/hierarchize-mdx.md)   
- [Число &#40;задать&#41; &#40;многомерных Выражений&#41;](../mdx/count-set-mdx.md)   
- [Фильтр &#40;многомерных Выражений&#41;](../mdx/filter-mdx.md)   
- [AddCalculatedMembers &#40;многомерных Выражений&#41;](../mdx/addcalculatedmembers-mdx.md)   
- [DrilldownLevel &#40;многомерных Выражений&#41;](../mdx/drilldownlevel-mdx.md)   
- [Свойства &#40;многомерных Выражений&#41;](../mdx/properties-mdx.md)   
- [PrevMember &#40;многомерных Выражений&#41;](../mdx/prevmember-mdx.md)   
- [Справочник по функциям многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [PeriodsToDate (многомерные выражения)](../mdx/periodstodate-mdx.md)   
+ [Children (многомерные выражения)](../mdx/children-mdx.md)   
+ [Hierarchize (многомерные выражения)](../mdx/hierarchize-mdx.md)   
+ [Count (наборы) (многомерные выражения)](../mdx/count-set-mdx.md)   
+ [Filter (многомерные выражения)](../mdx/filter-mdx.md)   
+ [AddCalculatedMembers (многомерные выражения)](../mdx/addcalculatedmembers-mdx.md)   
+ [DrilldownLevel (многомерные выражения)](../mdx/drilldownlevel-mdx.md)   
+ [Properties (многомерные выражения)](../mdx/properties-mdx.md)   
+ [PrevMember (многомерные выражения)](../mdx/prevmember-mdx.md)   
+ [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
   
   

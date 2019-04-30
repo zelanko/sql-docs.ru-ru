@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b50f5245ed476fd09acd2556b4f7f5e2186fce10
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756822"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248969"
 ---
 # <a name="ado-collections"></a>Коллекции ADO
 Связи между этих коллекций и объектов ADO, представлены в [объектная модель ADO](../../../ado/reference/ado-api/ado-object-model.md).  
@@ -37,7 +37,7 @@ ms.locfileid: "47756822"
  [Справочник по API ADO](../../../ado/reference/ado-api/ado-api-reference.md)   
  [Динамические свойства ADO](../../../ado/reference/ado-api/ado-dynamic-properties.md)   
  [Перечисляемые константы ADO](../../../ado/reference/ado-api/ado-enumerated-constants.md)   
- [Приложение б. ошибки объектов ADO](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
+ [Приложение б. Ошибки ADO](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
  [События ADO](../../../ado/reference/ado-api/ado-events.md)   
  [Методы ADO](../../../ado/reference/ado-api/ado-methods.md)   
  [Объектная модель ADO](../../../ado/reference/ado-api/ado-object-model.md)   

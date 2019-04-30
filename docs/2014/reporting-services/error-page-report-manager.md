@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0b5e8c919b496ea739b6152a6159b5ffae62dfbd
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59944930"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164679"
 ---
 # <a name="error-page-report-manager"></a>Страница «Ошибка» (диспетчер отчетов)
   Страница «Ошибка» используется для просмотра подробностей состояния ошибки. На этой странице отображаются ошибки сервера или сеанса. Ошибки проверки, связанные с конкретными элементами управления на страницах, отображаются в строке сразу после соответствующего элемента.  

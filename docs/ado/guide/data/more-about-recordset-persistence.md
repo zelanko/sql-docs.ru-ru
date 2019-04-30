@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3e626c924e7b84312877b47f811329e215f47e42
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846865"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161582"
 ---
 # <a name="more-about-recordset-persistence"></a>Дополнительные сведения о сохраняемости набора записей
 Объект ADO Recordset поддерживает хранение содержимого **записей** объекта в файл с помощью его [Сохранить](../../../ado/reference/ado-api/save-method.md) метод. Постоянно сохраненного файла могут существовать на локальном диске сервера, или как URL-адрес, на веб-сайта. Позже, можно восстановить файл с помощью [откройте](../../../ado/reference/ado-api/open-method-ado-recordset.md) метод **записей** объекта или [Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md) метод [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объект.  

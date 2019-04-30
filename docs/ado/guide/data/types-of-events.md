@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 78505f010706a39e5278d50219dd4504e33dd67c
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254869"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63142943"
 ---
 # <a name="types-of-events"></a>Типы событий
 Существует два основных типа событий. «Будет события,» которые вызываются до начала операции, обычно включают «Будет» в именах - например, **события WillChangeRecordset** или **WillConnect**. События, которые вызываются после события обычно включают «Complete» в именах -, например, **RecordChangeComplete** или **ConnectComplete**. Существуют исключения — например **InfoMessage** -, но это происходит после завершения связанной операции.  

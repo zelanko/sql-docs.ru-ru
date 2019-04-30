@@ -1,5 +1,5 @@
 ---
-title: CustomData (многомерные Выражения) | Документы Microsoft
+title: CustomData (многомерные Выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 172915d99b231490cbdca24f70d1d38da27a1d3d
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739309"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248314"
 ---
 # <a name="customdata-mdx"></a>CustomData (многомерные выражения)
 
 
-  Возвращает значение **CustomData** свойство строки подключения, если определен; в противном случае — **null**.  
+  Возвращает значение **CustomData** свойство строки соединения, если определен; в противном случае — **null**.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -29,10 +29,10 @@ CustomData()
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- **CustomData** может получить функция **CustomData** свойства строки соединения и передавать параметр конфигурации для использоваться функции многомерных выражений (MDX) и инструкции, такие как [UserName (многомерные Выражения)](../mdx/username-mdx.md) и [инструкция CALL (Многомерные)](../mdx/mdx-data-manipulation-call.md). Например, эта функция может использоваться в динамическом выражении безопасности для выбора разрешенных или запрещенных наборов элементов для строкового значения в **CustomData** свойство строки соединения.  
+ **CustomData** функция может извлечь **CustomData** подключения свойство типа string и передавать параметр для использования функции многомерных выражений (MDX), а также операторы, такие как конфигурации [UserName (многомерные Выражения)](../mdx/username-mdx.md) и [инструкции CALL (многомерные Выражения)](../mdx/mdx-data-manipulation-call.md). Например, эта функция может использоваться в динамическом выражении безопасности для выбора разрешенных или запрещенных наборов элементов для строкового значения в **CustomData** свойство строки подключения.  
   
 ## <a name="example"></a>Пример  
- Следующий запрос отображает значение, возвращаемое **CustomData** функции в вычисляемой мере:  
+ Следующий запрос отображает значение, возвращенное **CustomData** функции в вычисляемой мере:  
   
 ```  
 WITH MEMBER [Measures].CUSTOMDATADEMO AS CUSTOMDATA()  
@@ -42,6 +42,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Справочник по функциям многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
   
   

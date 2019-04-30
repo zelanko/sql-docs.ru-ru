@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c69113e4bb5457cb997f832179e5c1aab2841d82
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518868"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199091"
 ---
 # <a name="retrieving-data-type-information-with-sqlgettypeinfo"></a>Получение сведений о типе данных с помощью SQLGetTypeInfo
 Поскольку сопоставления из базовых типов данных SQL для идентификаторов типов ODBC являются приблизительными, ODBC предоставляет функцию (**SQLGetTypeInfo**) через который полностью можно драйвер описания каждого типа данных SQL в источнике данных. Эта функция возвращает результирующий набор, каждая строка, из которых описывает характеристики одного типа, например имя, идентификатор типа, точность, масштаб и допустимость значений NULL.  

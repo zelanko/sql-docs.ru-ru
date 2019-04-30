@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a13adf7aa1a769f6e63f9686938cb801cd6383fe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761568"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249056"
 ---
 # <a name="ado-enumerated-constants"></a>Перечисляемые константы ADO
 Чтобы упростить отладку, ADO перечисления списка значение для каждой константы. Тем не менее это значение исключительно рекомендации и может отличаться от одного выпуска ADO в другой. Ваш код должен основываться только на имя, а не фактическое значение каждого перечислимой константы.  
@@ -82,7 +82,7 @@ ms.locfileid: "47761568"
  [Справочник по API ADO](../../../ado/reference/ado-api/ado-api-reference.md)   
  [Коллекции ADO](../../../ado/reference/ado-api/ado-collections.md)   
  [Динамические свойства ADO](../../../ado/reference/ado-api/ado-dynamic-properties.md)   
- [Приложение б. ошибки объектов ADO](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
+ [Приложение б. Ошибки ADO](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
  [События ADO](../../../ado/reference/ado-api/ado-events.md)   
  [Методы ADO](../../../ado/reference/ado-api/ado-methods.md)   
  [Объектная модель ADO](../../../ado/reference/ado-api/ado-object-model.md)   

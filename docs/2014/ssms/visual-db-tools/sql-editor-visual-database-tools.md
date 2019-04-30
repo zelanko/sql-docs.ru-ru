@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 973ad34d5d24eecd0c3af0e0451b0d2ba9058222
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52768956"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63194915"
 ---
 # <a name="sql-editor-visual-database-tools"></a>Редактор SQL (визуальные инструменты для баз данных)
   Используйте редактор SQL для изменения существующих хранимых процедур, функций, триггеров и скриптов SQL. Данное окно появляется при открытии любого из перечисленных объектов. Если нужно создать новую инструкцию SQL для работы со своим источником данных, воспользуйтесь [панелью SQL](visual-database-tools.md) конструктора запросов.  

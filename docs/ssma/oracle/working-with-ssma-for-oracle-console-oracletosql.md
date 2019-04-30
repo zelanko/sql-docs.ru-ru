@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 6131551a793257e201809dff469ee0980b8ece61
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639452"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63132329"
 ---
 # <a name="working-with-ssma-for-oracle-console-oracletosql"></a>Работа с консолью SSMA для Oracle (OracleToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Выпуск миграции Assistant (SSMA) для Oracle теперь доступна через консольное приложение командной строки. Файлы скриптов образуют входных данных для приложения, для выполнения команд. Как консольное приложение SSMA обеспечивает взаимодействие на уровне сценария позволяет сократить цикл миграции и масштабирует мероприятий по миграции.  

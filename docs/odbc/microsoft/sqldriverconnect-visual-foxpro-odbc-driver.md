@@ -14,19 +14,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dc0bcf6a191f67b87b422b17778f56feda1f5227
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792722"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63238081"
 ---
 # <a name="sqldriverconnect-visual-foxpro-odbc-driver"></a>SQLDriverConnect (драйвер ODBC для Visual FoxPro)
 > [!NOTE]  
 >  Этот раздел содержит сведения Visual FoxPro ODBC-драйвером. Общие сведения об этой функции см. в соответствующем разделе [Справочник по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Поддержка: полный  
+ Поддержка: Полное  
   
- Соответствия API ODBC: 1 уровень  
+ Соответствие API ODBC: уровне 1  
   
  Подключается к существующего источника данных, который может представлять собой [базы данных](../../odbc/microsoft/visual-foxpro-terminology.md) или каталог [свободных таблиц](../../odbc/microsoft/visual-foxpro-terminology.md). Ключевые слова ODBC атрибута UID и PWD игнорируются. В следующей таблице перечислены ключевые слова дополнительных поддерживаемых атрибутов.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "47792722"
 |Монопольно|«Yes» или «No»|  
 |SourceDB|Полный путь к каталогу, содержащему ноль или более [свободных таблиц](../../odbc/microsoft/visual-foxpro-terminology.md), или абсолютный путь и имя файла для [базы данных](../../odbc/microsoft/visual-foxpro-terminology.md).|  
 |Тип источника|«DBC» или «DBF»|  
-|Версия||  
+|Version||  
   
  Если имя источника данных не указан, the Driver Manager запрашивает у пользователя сведения (в зависимости от параметра *fDriverCompletion* аргумент), а затем продолжает. Если требуются дополнительные сведения, драйвер ODBC для Visual FoxPro Отображение диалогового окна запроса.  
   

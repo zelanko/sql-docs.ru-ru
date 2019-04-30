@@ -21,11 +21,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 3493657fb537057f7c0ff8e126582ceb6faccc11
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502843"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63238401"
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>Поиск слов близких к другим с использованием оператора NEAR
   Выражение с учетом расположения (NEAR) может применяться в предикате [CONTAINS](/sql/t-sql/queries/contains-transact-sql) или функции [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) для поиска слов или фраз, расположенных рядом. Также можно указать максимальное количество слов, которые не включаются в поиск и разделяют первое и последнее из искомых слов. Кроме того, можно искать два слова или две фразы в любом порядке или в порядке, в котором они указаны. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] поддерживает [термин универсальное выражение с учетом](#Generic_NEAR), которое теперь считается устаревшим и [термин настраиваемое выражение с учетом](#Custom_NEAR), которое впервые появилось в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  

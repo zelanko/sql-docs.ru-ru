@@ -17,13 +17,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c9a3d63f0bf1923905c5281655aff2af294b8284
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848192"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63241325"
 ---
 # <a name="data-type-support"></a>Поддержка типов данных
 Драйверы ODBC должны поддерживать по крайней мере один из SQL_CHAR и SQL_VARCHAR. Поддержка других типов данных определяется уровень соответствия SQL-92 источник драйвера или данных. Приложение должно вызывать **SQLGetTypeInfo** для определения типов данных, поддерживаемых драйвером.  
   
- Дополнительные сведения о типах данных см. в разделе [типы данных приложение D:](../../../odbc/reference/appendixes/appendix-d-data-types.md).
+ Дополнительные сведения о типах данных см. в разделе [приложение г Типы данных](../../../odbc/reference/appendixes/appendix-d-data-types.md).

@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 848eb1bc39b45d76e1e1ffd97fbd05d557a740a0
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59943210"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63224997"
 ---
 # <a name="include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs"></a>Добавление индикаторов и датчиков на панель датчиков (построитель отчетов и службы SSRS)
   Панель датчиков — это контейнер верхнего уровня, который содержит один или несколько датчиков и индикаторов. Индикаторы могут быть встроены в датчики или помещены рядом с ними на панели датчиков.  

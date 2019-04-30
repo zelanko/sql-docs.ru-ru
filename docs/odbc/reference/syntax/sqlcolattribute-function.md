@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: eb4ba702d540ccad7a976cc4045408d5e1d88766
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542166"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63226412"
 ---
 # <a name="sqlcolattribute-function"></a>Функция SQLColAttribute
 **Соответствие стандартам**  
@@ -90,7 +90,7 @@ SQLRETURN SQLColAttribute (
  [Выход] Указатель на буфер целое число, в которую будет возвращено значение в *FieldIdentifier* поле *ColumnNumber* строки ird, если поле является числовой дескриптор типа, например SQL_DESC_COLUMN_LENGTH. В противном случае поле не используется. Обратите внимание на то, что некоторые драйверы могут вести запись только в нижнем 32-разрядном или 16-разрядное буфера и оставьте без изменений бит высокого порядка. Таким образом приложения следует инициализировать значение 0, перед вызовом этой функции.  
   
 ## <a name="returns"></a>Возвращает  
- Значение SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, значение SQL_ERROR или SQL_INVALID_HANDLE.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR, or SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Диагностика  
  Когда **SQLColAttribute** возвращает значение SQL_ERROR или SQL_SUCCESS_WITH_INFO, можно получить путем вызова связанного значения SQLSTATE **SQLGetDiagRec** с *HandleType*значение SQL_HANDLE_STMT и *обрабатывать* из *StatementHandle*. В следующей таблице перечислены значения SQLSTATE, обычно возвращаемые **SQLColAttribute** и объясняется каждый из них в контексте этой функции; описания SQLSTATE, возвращаемых диспетчером драйверов предшествует обозначение «(DM)». Возвращается связанный с каждого значения SQLSTATE значение SQL_ERROR, если не указано иное.  

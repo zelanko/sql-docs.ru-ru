@@ -20,11 +20,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 2401fab80c6210e3061e9cb949f1c92bab456525
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222224"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63187929"
 ---
 # <a name="metadata-visibility-configuration"></a>Настройка видимости метаданных
   Видимость метаданных ограничивается защищаемыми объектами, которыми пользователь владеет или на которые пользователю предоставлено разрешение. Например, следующий запрос возвращает строку, если пользователю было предоставлено разрешение SELECT или INSERT на таблицу `myTable`.  

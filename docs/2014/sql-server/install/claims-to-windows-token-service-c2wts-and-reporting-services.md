@@ -17,11 +17,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 0f6443f8015d3b2a4c94c9470a35a5b1433691d8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354361"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63206446"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>Служба Claims to Windows Token Service (C2WTS) и службы Reporting Services
   SharePoint Claims to Windows Token Service (c2WTS) является обязательным при использовании [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] режима SharePoint, если вы хотите использовать проверку подлинности windows для источников данных, которые находятся за пределами фермы SharePoint. Это верно, даже если пользователь получает доступ к источникам данных с использованием проверки подлинности Windows, поскольку для связи между клиентским веб-интерфейсом и общей службой [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] всегда используется проверка подлинности Claims.  
@@ -41,7 +41,7 @@ ms.locfileid: "53354361"
 ## <a name="prerequisites"></a>предварительные требования  
   
 > [!NOTE]  
->  Примечание. Некоторые шаги по настройке могут отличаться или могут не работать в определенных топологиях фермы. Например, установка одиночного сервера не поддерживает службы c2WTS Windows Identity Foundation, поэтому в этой конфигурации фермы требования сценариев делегирования токенов Windows невозможны.  
+>  Примечание. Некоторые действия по настройке может измениться, или могут не работать в определенных топологиях фермы. Например, установка одиночного сервера не поддерживает службы c2WTS Windows Identity Foundation, поэтому в этой конфигурации фермы требования сценариев делегирования токенов Windows невозможны.  
   
 ### <a name="basic-steps-needed-to-configure-c2wts"></a>Основные шаги для настройки службы c2WTS  
   

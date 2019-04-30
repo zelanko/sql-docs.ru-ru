@@ -15,12 +15,12 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 575c456736242bebfe23544c430efe414d5097d2
-ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
+ms.openlocfilehash: ec274af1b3674cb821f0f5a477d1f798c404000e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57974183"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63154675"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>Запустите помощник по миграции данных из командной строки
 В версии 2.1 и выше, когда установки помощника по миграции данных, также устанавливается dmacmd.exe в *% ProgramFiles %\\Microsoft Data Migration Assistant\\*. Используйте dmacmd.exe для оценки баз данных в автоматическом режиме и вывода результата JSON или CSV-файл. Этот метод особенно полезен при оценке в нескольких базах данных или огромных баз данных. 
@@ -46,8 +46,8 @@ DmaCmd.exe /AssessmentName="string"
 | `/help or /?`     | Как использовать dmacmd.exe текст справки        | Нет
 |`/AssessmentName`     |   Имя проекта оценки   | Да
 |`/AssessmentDatabases`     | Разделенный пробелами список строк подключения. Имя базы данных (начальный каталог) учитывается регистр. | Да
-|`/AssessmentSourcePlatform`     | Платформа источника для оценки, поддерживаемые значения: SqlOnPrem RdsSqlServer. Оценка готовности целевой также поддерживают Cassandra в качестве платформы источника. Значение по умолчанию — SqlOnPrem   | Нет
-|`/AssessmentTargetPlatform`     | Целевая платформа для оценки, поддерживаемые значения: AzureSqlDatabase, ManagedSqlServer, SqlServer2012, SqlServer2014, SqlServer2016, SqlServerLinux2017 и SqlServerWindows2017. Оценка готовности целевой также поддерживают CosmosDB в качестве целевой платформы. Значение по умолчанию — SqlServerWindows2017   | Нет
+|`/AssessmentSourcePlatform`     | Платформа источника для оценки: <br>Поддерживаемые значения для оценки: SqlOnPrem RdsSqlServer (по умолчанию) <br>Поддерживаемые значения для оценки готовности целевой объект: SqlOnPrem RdsSqlServer (по умолчанию), Cassandra (Предварительная версия)   | Нет
+|`/AssessmentTargetPlatform`     | Целевая платформа для оценки:  <br> Поддерживаемые значения для оценки: AzureSqlDatabase, ManagedSqlServer, SqlServer2012, SqlServer2014, SqlServer2016, SqlServerLinux2017 и SqlServerWindows2017 (по умолчанию)  <br> Поддерживаемые значения для оценки готовности целевой объект: ManagedSqlServer (по умолчанию), CosmosDB (Предварительная версия)   | Нет
 |`/AssessmentEvaluateFeatureParity`  | Запустите правила равенства. Если платформа источника RdsSqlServer, вычисление четности компонентов не поддерживается для целевой платформы AzureSqlDatabase  | Нет
 |`/AssessmentEvaluateCompatibilityIssues`     | Выполнение правил совместимости  | Да <br> (AssessmentEvaluateCompatibilityIssues или AssessmentEvaluateRecommendations является обязательным.)
 |`/AssessmentEvaluateRecommendations`     | Выполните рекомендуемые возможности        | Да <br> (AssessmentEvaluateCompatibilityIssues или AssessmentEvaluateRecommendationsis требуется)

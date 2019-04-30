@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 45f3dfbf7a4caa2744ef57a352b0434e7eb1bf37
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533716"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63193040"
 ---
 # <a name="xml-schema-collections-sql-server"></a>Коллекции XML-схем (SQL Server)
   Как описано в разделе [xml &#40;Transact-SQL&#41;](/sql/t-sql/xml/xml-transact-sql), SQL Server предоставляет собственное хранилище XML-данных через `xml` тип данных. XSD-схем можно связать с переменной или столбцом типа `xml` тип с помощью коллекции XML-схем. Коллекция XML-схем хранит импортированные XML-схемы и используется для решения следующих задач:  
@@ -171,7 +171,7 @@ ms.locfileid: "58533716"
   
  Все это поясняют следующие примеры.  
   
-### <a name="example-enumerate-the-xml-namespaces-in-an-xml-schema-collection"></a>Пример Перечисление пространств имен XML, входящих в коллекцию XML-схем  
+### <a name="example-enumerate-the-xml-namespaces-in-an-xml-schema-collection"></a>Пример Перечислить пространства имен XML в коллекцию схем XML  
  Выполните следующий запрос для коллекции XML-схем «myCollection»:  
   
 ```  
@@ -190,7 +190,7 @@ SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection')
   
  Отдельные XML-схемы в коллекции можно получить как `xml` экземпляры типа данных, указав целевое пространство имен в качестве третьего аргумента **XML_SCHEMA_NAMESPACE()**. Это показано в следующем примере.  
   
-### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>Пример Вывод конкретной схемы из коллекции XML-схем  
+### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>Пример Вывод конкретной схемы из коллекции схем XML  
  Следующая инструкция выводит XML-схему с целевым пространством имен "<https://www.microsoft.com/books>" из коллекции XML-схем "myCollection" реляционной схемы dbo.  
   
 ```  

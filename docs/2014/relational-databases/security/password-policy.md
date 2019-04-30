@@ -33,11 +33,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 7b28043d797585496686dea6fd0c5fad276f16b9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049997"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63187970"
 ---
 # <a name="password-policy"></a>Политика паролей
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживается использование механизмов политики паролей Windows. Политика паролей применяется к имени входа, которое использует проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , и к пользователю автономной базы данных с паролем.  

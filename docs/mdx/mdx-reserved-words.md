@@ -1,5 +1,5 @@
 ---
-title: Многомерные Выражения зарезервированные слова | Документы Microsoft
+title: Зарезервированные слова многомерных Выражений | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5eec141a82b4cf7aca5fd8c112249c362a1242d4
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742293"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63187579"
 ---
 # <a name="mdx-reserved-words"></a>Зарезервированные слова языка многомерных выражений
 
@@ -41,7 +41,7 @@ ms.locfileid: "34742293"
 |BASC|DROP|MEMBERTOSTR|STRTOVAL|  
 |BDESC|EMPTY|MIN|STRTOVALUE|  
 |BEFORE|END|MTD|SUBSET|  
-|BEFORE_AND_AFTER|Ошибка|NAME|SUM|  
+|BEFORE_AND_AFTER|ошибка|NAME|SUM|  
 |BOTTOMCOUNT|EXCEPT|NAMETOSET|TAIL|  
 |BOTTOMPERCENT|EXCLUDEEMPTY|NEST|THIS|  
 |BOTTOMSUM|EXTRACT|NEXTMEMBER|TOGGLEDRILLSTATE|  
@@ -59,7 +59,7 @@ ms.locfileid: "34742293"
 |CHILDREN|HEAD|PARENT|UPDATE|  
 |CLEAR|HIDDEN|PASS|USE|  
 |CLOSINGPERIOD|HIERARCHIZE|PERIODSTODATE|USE_EQUAL_ALLOCATION|  
-|COALESCEEMPTY|HIERARCHY|POST|USE_WEIGHTED_ALLOCATION|  
+|COALESCEEMPTY|HIERARCHY|ПОМЕСТИТЬ|USE_WEIGHTED_ALLOCATION|  
 |COLUMN|IGNORE|PREDICT|USE_WEIGHTED_INCREMENT|  
 |COLUMNS|IIF|PREVMEMBER|USERNAME|  
 |CORRELATION|INCLUDEEMPTY|PROPERTIES|VALIDMEASURE|  
@@ -80,6 +80,6 @@ ms.locfileid: "34742293"
   
 ## <a name="see-also"></a>См. также  
  [Зарезервированные ключевые слова &#40;синтаксис многомерных Выражений&#41;](../mdx/reserved-keywords-mdx-syntax.md)   
- [Справочник по языку многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-language-reference-mdx.md)  
+ [Справочник по языку многомерных выражений (многомерные выражения)](../mdx/mdx-language-reference-mdx.md)  
   
   

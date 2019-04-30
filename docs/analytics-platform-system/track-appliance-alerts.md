@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: f38f76975290538a35203ddbbed84b9354285edc
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909794"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63156982"
 ---
 # <a name="track-appliance-alerts-in-analytics-platform-system"></a>Отслеживание оповещений устройства в Analytics Platform System
 В этом разделе описывается использование консоли администрирования и системных представлений для отслеживания оповещений в устройстве SQL Server PDW.  

@@ -1,5 +1,5 @@
 ---
-title: Задача 13. Добавление назначения OLE DB для записи данных в промежуточную таблицу MDS | Документация Майкрософт
+title: Задача 13. Добавление назначения OLE DB для записи данных в промежуточную таблицу MDS | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 34f68c4604d70dc83579f8c9284802b82cc6291d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035075"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63222603"
 ---
-# <a name="task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table"></a>Задача 13. Добавление назначения "OLE DB" для записи данных в промежуточную таблицу MDS
+# <a name="task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table"></a>Задача 13. Добавление назначения OLE DB для записи данных в промежуточную таблицу MDS
   Теперь, когда вы добавили **ImportType** и **BatchTag** значения для всех записей, вы будете готовы отправить их через MDS для промежуточного хранения. В этой задаче использовать назначение «OLE DB» для записи данных в **stg.supplier_Leaf** Промежуточная таблица.  
   
 1.  Перетащите **назначение OLE DB** из **другие назначения** статьи **область элементов служб SSIS** для **потока данных** вкладку и отпустите его в  **Добавление столбцов, необходимых MDS**.  

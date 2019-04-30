@@ -14,20 +14,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7dd52c6fb0c5533450a7e32ad68a156406873fdb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085376"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63136255"
 ---
 # <a name="run-transact-sql-script-files-using-sqlcmd"></a>Выполнение файлов скрипта Transact-SQL с использованием программы sqlcmd
-  Для запуска файла скрипта [!INCLUDE[tsql](../../includes/tsql-md.md)] можно использовать программу командной строки `sqlcmd`. Объект [!INCLUDE[tsql](../../includes/tsql-md.md)] файл скрипта — это текстовый файл, который может содержать сочетание [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкций, `sqlcmd` команды и переменные скрипта.  
+  Для запуска файла скрипта [!INCLUDE[tsql](../../includes/tsql-md.md)] можно использовать программу командной строки `sqlcmd`. Файл скрипта [!INCLUDE[tsql](../../includes/tsql-md.md)] является текстовым файлом, содержащим сочетание инструкций языка [!INCLUDE[tsql](../../includes/tsql-md.md)], команд `sqlcmd` и переменных скрипта.  
   
- Чтобы создать простой файл скрипта [!INCLUDE[tsql](../../includes/tsql-md.md)], используя приложение «Блокнот», следуйте перечисленным ниже шагам.  
+ Чтобы создать простой файл скрипта [!INCLUDE[tsql](../../includes/tsql-md.md)] , используя приложение «Блокнот», следуйте перечисленным ниже шагам.  
   
 1.  Нажмите кнопку **Пуск**, последовательно укажите пункты **Все программы**, **Стандартные**и выберите пункт **Блокнот**.  
   
-2.  Скопируйте и вставьте следующий [!INCLUDE[tsql](../../includes/tsql-md.md)] код в Блокнот:  
+2.  Скопируйте и вставьте следующий код языка [!INCLUDE[tsql](../../includes/tsql-md.md)] в приложение «Блокнот»:  
   
     ```  
     USE AdventureWorks2012;  
@@ -50,7 +50,7 @@ ms.locfileid: "48085376"
   
 1.  Откройте окно командной строки.  
   
-2.  В окне командной строки введите следующую команду: `sqlcmd -S myServer\instanceName -i C:\myScript.sql`  
+2.  В окне командной строки введите: `sqlcmd -S myServer\instanceName -i C:\myScript.sql`  
   
 3.  Нажмите клавишу ВВОД.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "48085376"
   
 1.  Откройте окно командной строки.  
   
-2.  В окне командной строки введите следующую команду: `sqlcmd -S myServer\instanceName -i C:\myScript.sql -o C:\EmpAdds.txt`  
+2.  В окне командной строки введите: `sqlcmd -S myServer\instanceName -i C:\myScript.sql -o C:\EmpAdds.txt`  
   
 3.  Нажмите клавишу ВВОД.  
   
@@ -68,6 +68,6 @@ ms.locfileid: "48085376"
   
 ## <a name="see-also"></a>См. также  
  [Запуск программу sqlcmd](sqlcmd-start-the-utility.md)   
- [Служебная программа sqlcmd](../../tools/sqlcmd-utility.md)  
+ [Программа sqlcmd](../../tools/sqlcmd-utility.md)  
   
   

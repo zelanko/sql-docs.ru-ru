@@ -1,5 +1,5 @@
 ---
-title: + (Добавить) (МНОГОМЕРНЫЕ ВЫРАЖЕНИЯ) | Документы Microsoft
+title: + (Добавить) (МНОГОМЕРНЫЕ ВЫРАЖЕНИЯ) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 59031a14dd4c844aa8b0540d640e683c9d2f0894
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739713"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63201676"
 ---
 # <a name="-add-mdx"></a>+ (сложение) (многомерные выражения)
 
@@ -39,6 +39,6 @@ Numeric_Expression + Numeric_Expression
  Оба выражения должны иметь одинаковый тип данных, или одно из выражений должно допускать неявное преобразование к типу данных другого выражения. Если результатом вычисления одного выражения является значение NULL, оператор возвращает результат вычисления другого выражения.  
   
 ## <a name="see-also"></a>См. также  
- [Справочник по операторам Многомерных &#40;многомерных Выражений&#41;](../mdx/mdx-operator-reference-mdx.md)  
+ [Справочник по операторам многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: d702e1dcf8bc710324e7593ebe469317d9f43e68
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214204"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63237908"
 ---
 # <a name="set-the-service-account-for-the-full-text-filter-daemon-launcher"></a>Настройка учетной записи службы средства запуска управляющей программы полнотекстовой фильтрации
   В этом разделе объясняется, как задать учетную запись службы для службы запуска управляющей программы полнотекстовой фильтрации SQL Server (MSSQLFDLauncher) при использовании диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Служба запуска управляющей программы полнотекстовой фильтрации SQL используется в полнотекстовом поиске ssNoVersion для запуска хост-процесса управляющей программы полнотекстовой фильтрации, которая выполняет фильтрацию полнотекстового поиска и разбивку по словам. Для использования полнотекстового поиска эта служба должна быть запущена.  

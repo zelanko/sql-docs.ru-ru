@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d081d53458ec59eb2ac9f05c5c1d47d6991b5010
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47647172"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240360"
 ---
 # <a name="desktop-database-driver-compatibility"></a>Совместимость драйверов для баз данных на настольном компьютере
 Юникод является метод программного обеспечения кодировки символов, считает все символы с фиксированной ширины в два байта. Этот метод используется в качестве альтернативы для кодировки Windows ANSI, являющийся, так как он представляет символы в один байт, ограничена 256 символами. Поскольку Юникода может представлять более 65 000 символов, его можно использовать для многих языков, символы которой не представлены в кодировке ANSI.  

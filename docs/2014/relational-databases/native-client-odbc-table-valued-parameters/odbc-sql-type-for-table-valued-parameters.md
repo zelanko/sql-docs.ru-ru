@@ -13,17 +13,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 90857b24fb467df0292beeb88fb9751e68204d12
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103934"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199989"
 ---
 # <a name="odbc-sql-type-for-table-valued-parameters"></a>Тип ODBC SQL для параметров, возвращающих табличное значение
   Поддержка возвращающих табличное значение параметров обеспечивается новым типом ODBC SQL — SQL_SS_TABLE.  
   
 ## <a name="remarks"></a>Примечания  
- Тип SQL_SS_TABLE нельзя преобразовать в любой другой тип данных ODBC или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Тип SQL_SS_TABLE нельзя преобразовать в любой другой тип данных ODBC или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Если тип SQL_SS_TABLE используется как тип данных C в *ValueType* параметр SQLBindParameter или попытка присвоить свойству SQL_DESC_TYPE в записи дескриптора (APD) приложения параметр типа sql_ss_table, возвращается значение SQL_ERROR и создается запись диагностики с кодом SQLSTATE = hy003 и сообщением «недопустимый тип буфера приложения».  
   

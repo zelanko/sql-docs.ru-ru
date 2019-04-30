@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 43b54740d0d7870423778e2e8a692089fa3a8ebd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133005"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63225269"
 ---
 # <a name="enable-disable-and-delete-breakpoints"></a>Включение, отключение и удаление точек останова
   Для просмотра всех открытых точек останова и управления ими используется окно **Точки останова** . Используйте данное окно для просмотра сведений о точках останова, а также для выполнения таких действий, как удаление, отключение или включение точек останова.  

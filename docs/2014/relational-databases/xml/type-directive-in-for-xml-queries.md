@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 21ff73c95bb85167dfba64d434ed7b6c42051c07
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531117"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63193283"
 ---
 # <a name="type-directive-in-for-xml-queries"></a>Директива TYPE в запросах FOR XML
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поддержка [xml &#40;Transact-SQL&#41; ](/sql/t-sql/xml/xml-transact-sql) позволяет запросить получение результата запроса FOR XML как `xml` тип данных путем указания директивы TYPE. Это позволяет обрабатывать результат запроса FOR XML на сервере. Например, можно задать запрос XQuery, присвоить его результат `xml` переменной типа, или написать [вложенные запросы FOR XML](use-nested-for-xml-queries.md).  

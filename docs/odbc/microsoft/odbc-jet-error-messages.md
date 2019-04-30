@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ec549f256caeab598f6e49632b2a50cfa5841710
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620282"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63244620"
 ---
 # <a name="odbc-jet-error-messages"></a>Сообщения об ошибках ODBC Jet
 Для ошибок, возникших в источнике данных драйвер ODBC возвращает сообщение об ошибке, возвращаемый библиотеке файлов ODBC. Для ошибок, возникших в драйвере ODBC или диспетчера драйверов этот драйвер возвращает сообщение об ошибке на основе текста, связанный с SQLSTATE.  
@@ -35,5 +35,5 @@ ms.locfileid: "47620282"
   
 |Сообщение об ошибке|Расположение ошибки|  
 |-------------------|--------------------|  
-|[Майкрософт] [Диспетчер драйверов ODBC] *текст сообщения*|Диспетчер драйверов (Odbc32.dll)|  
+|[Майкрософт] [Диспетчер драйверов ODBC] *текст сообщения*|Driver Manager (Odbc32.dll)|  
 |[Майкрософт] [ODBC *имя драйвера*]*текст сообщения*|Драйвер ISAM (см. в разделе ISAMs драйвера)|

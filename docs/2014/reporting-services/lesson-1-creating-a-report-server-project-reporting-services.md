@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 52050b9513de2638cacc394309f7e87d6ba77709
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59967900"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63143282"
 ---
 # <a name="lesson-1-creating-a-report-server-project-reporting-services"></a>Урок 1. Создание проекта сервера отчетов (службы Reporting Services)
   Чтобы создать отчет в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], необходимо сначала создать проект сервера отчетов, в котором будет сохранен файл определения отчета (с расширением RDL) и другие файлы ресурсов, необходимые для отчета. Затем будет создан действительный файл определения отчета, определен источник данных для этого отчета, набор данных и макет отчета. При выполнении отчета происходит получение и объединение фактических данных с макетом, затем осуществляется его подготовка к просмотру на экране, после чего может быть выполнен их импорт, печать или сохранение.  

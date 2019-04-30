@@ -1,5 +1,5 @@
 ---
-title: Задача 2. Добавление значений домена вручную | Документация Майкрософт
+title: Задача 2. Добавление значений домена вручную | Документация Майкрософт
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 14bfb87bca7a375ce471ed22dde4ee68714ed906
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022845"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63244665"
 ---
-# <a name="task-2-adding-domain-values-manually"></a>Задача 2. Добавление значений домена вручную
+# <a name="task-2-adding-domain-values-manually"></a>Задача 2. Добавление значений домена вручную
   В этой задаче вы добавляете значение для **страны** домена вручную. См. в разделе [Change Domain Values](https://msdn.microsoft.com/library/hh510408.aspx) Дополнительные сведения о полях на этой странице.  
   
 1.  Нажмите кнопку **страны** домена в **список доменов**.  

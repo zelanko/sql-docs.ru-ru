@@ -20,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: d297b8516cb09db317ba835b49fe41b3e13be9e3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52793586"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63228549"
 ---
 # <a name="specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-40"></a>Задание целевого пространства имен с помощью атрибута targetNamespace (SQLXML 4.0)
   При написании схем XSD, можно использовать XSD **targetNamespace** атрибут для указания целевого пространства имен. Здесь описывается, как XSD **targetNamespace**, **elementFormDefault**, и **attributeFormDefault** атрибуты работают, как они влияют на экземпляр XML, создан, и как запросы XPath указываются с пространствами имен.  
@@ -77,7 +77,7 @@ ms.locfileid: "52793586"
   
 -   **CustomerType** и **OrderType** объявления типов являются глобальными и поэтому включаются в целевое пространство имен схемы. Таким образом, когда эти ссылки на типы в объявлении  **\<клиента >** элемент и его  **\<порядок >** дочерний элемент, указан префикс, который связан для целевого пространства имен.  
   
--    **\<Клиента >** элемент также включается в целевое пространство имен схемы, так как это глобальный элемент в схеме.  
+-   **\<Клиента >** элемент также включается в целевое пространство имен схемы, так как это глобальный элемент в схеме.  
   
  Выполните следующий XPath-запрос к схеме:  
   

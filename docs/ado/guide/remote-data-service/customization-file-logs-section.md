@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 71a9130c385032acfad7c0c1040b293486bff525
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558711"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63214905"
 ---
 # <a name="customization-file-logs-section"></a>Настройка раздела журналов файла
 **Журналы** раздел содержит запись файла журнала, который указывает имя файла, в который записываются ошибки во время работы **DataFactory**.  

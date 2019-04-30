@@ -13,18 +13,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 81b43a14a2410fc24bcc1bcd6968b9d87181cefa
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528486"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63218157"
 ---
 # <a name="find-key-phrases-in-documents-with-semantic-search"></a>Поиск ключевых фраз в документах с использованием семантического поиска
   Описывает способ поиска ключевых фраз в документах или текстовых столбцах, настроенных для статистического семантического индексирования.  
   
 ##  <a name="BasicsQueryKey"></a> Поиск ключевых фраз в документах  
   
-###  <a name="howtofind"></a> Инструкции: искать ключевые фразы в документах с помощью SEMANTICKEYPHRASETABLE  
+###  <a name="howtofind"></a> Инструкции: Поиск ключевых фраз в документах с помощью SEMANTICKEYPHRASETABLE  
  Для поиска ключевых фраз в определенных документах или для поиска документов, содержащих определенные ключевые фразы, можно запросить функцию [semantickeyphrasetable (Transact-SQL)](/sql/relational-databases/system-functions/semantickeyphrasetable-transact-sql).  
   
  Функция SEMANTICKEYPHRASETABLE возвращает таблицу с нулем, одной или несколькими строками для ключевых фраз, связанных со столбцами в указанной таблице. На эту функцию набора строк можно ссылаться из предложения FROM инструкции SELECT так же, как и на обычное имя таблицы.  
@@ -37,7 +37,7 @@ ms.locfileid: "58528486"
 > [!IMPORTANT]  
 >  Для целевых столбцов должно быть включено полнотекстовое и семантическое индексирование.  
   
-###  <a name="HowToTopPhrases"></a> Пример 1. Поиск наиболее важных ключевых фраз в определенном документе  
+###  <a name="HowToTopPhrases"></a> Пример 1. Поиск ключевых фраз в определенном документе  
  В следующем примере извлекаются 10 первых ключевых фраз из документа, указанного в переменной @DocumentId в столбце Document таблицы Production.Document в тестовой базе данных AdventureWorks. Переменная @DocumentId представляет значение из ключевого столбца полнотекстового индекса.  
   
 ```sql  
@@ -54,7 +54,7 @@ GO
   
  Функция **SEMANTICKEYPHRASETABLE** эффективно извлекает эти результаты поиском по индексу, а не путем просмотра таблицы.  
   
-###  <a name="HowToTopDocuments"></a> Пример 2. Найти наиболее важные документы, содержащие определенную ключевую фразу  
+###  <a name="HowToTopDocuments"></a> Пример 2. Поиск наиболее важных документов, содержащих определенную ключевую фразу  
  В следующем примере извлекаются 25 первых документов, содержащих ключевую фразу Bracket в столбце Document таблицы Production.Document примера базы данных AdventureWorks.  
   
 ```sql  

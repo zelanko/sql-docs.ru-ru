@@ -1,5 +1,5 @@
 ---
-title: Задача 6. Добавление источника Excel в поток данных | Документация Майкрософт
+title: Задача 6. Добавление источника Excel в поток данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 644b80d6a547c58b058c4c932a261762a0235430
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032795"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63156668"
 ---
-# <a name="task-6-adding-excel-source-to-the-data-flow"></a>Задача 6. Добавление источника Excel в поток данных
+# <a name="task-6-adding-excel-source-to-the-data-flow"></a>Задача 6. Добавление в поток данных источника Excel
   В этой задаче источник Excel будет добавлен в поток данных, что позволит считывать данные поставщиков из исходного файла Excel. Источник Excel извлекает данные из листов или диапазонов в книгах Microsoft Excel. Дополнительные сведения см. в разделе [Источник Excel](../integration-services/data-flow/excel-source.md) .  
   
 1.  Перетащите **Источник Excel** из области **Другие источники** на **панели элементов служб SSIS** на вкладке **Поток данных** .  

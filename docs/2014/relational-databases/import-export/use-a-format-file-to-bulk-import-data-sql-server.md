@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: fddec2033997a1b76f34fa9a2fe006d385bc0132
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364086"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155850"
 ---
 # <a name="use-a-format-file-to-bulk-import-data-sql-server"></a>Использование файла форматирования для массового импорта данных (SQL Server)
   Эта тема посвящена использованию файла форматирования в операциях массового импорта. Файл форматирования сопоставляет поля файла данных столбцам таблицы.  При массовом импорте данных можно использовать как формат XML, так и формат, отличный от XML, если импорт выполняется с помощью команды **bcp** или инструкций BULK INSERT или INSERT... SELECT * FROM OPENROWSET(BULK...) языка [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -41,7 +41,7 @@ ms.locfileid: "53364086"
  Дополнительные сведения см. в статьях [Программа bcp](../../tools/bcp-utility.md), [BULK INSERT (SQL Server)](/sql/t-sql/statements/bulk-insert-transact-sql) и [OPENROWSET (SQL Server)](/sql/t-sql/functions/openrowset-transact-sql).  
   
 > [!NOTE]  
->  Для массового экспорта или импорта данных SQLXML используется один из следующих типов данных в файле форматирования. SQLCHAR или SQLVARYCHAR (данные посылаются в кодовой странице клиента или в кодовой странице, предполагаемой параметрами сортировки), SQLNCHAR или SQLNVARCHAR (данные посылаются в формате Юникод) и SQLBINARY или SQLVARYBIN (данные посылаются без преобразования).  
+>  Для массового экспорта или импорта данных SQLXML используется один из следующих типов данных в файле форматирования. SQLCHAR или SQLVARYCHAR (данные отправляются в кодовой странице клиента или в кодовой странице, предполагаемой параметрами сортировки), SQLNCHAR или SQLNVARCHAR (данные отправляются в Юникоде), и SQLBINARY или SQLVARYBIN (данные отправляются без преобразования).  
   
 ## <a name="examples"></a>Примеры  
  В примерах этой статьи показано, как использовать файлы форматирования для массового импорта данных с помощью команды **bcp**, а также инструкций BULK INSERT и INSERT ... SELECT * FROM OPENROWSET(BULK...). Перед выполнением примеров массового импортирования необходимо создать учебную таблицу, файл данных и файл форматирования.  
