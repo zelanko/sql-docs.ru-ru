@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7c5bb124af74d1fa009a61237edb54a9c8baec74
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591548"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63267684"
 ---
 # <a name="declaring-the-application39s-odbc-version"></a>Объявление приложения&#39;s версия ODBC
 Перед приложение выделяет соединение, его необходимо задать атрибут SQL_ATTR_ODBC_VERSION среды. Этот атрибут утверждает, что приложение соответствует ODBC 2. *x* или ODBC 3. *x* спецификации при использовании следующих элементов:  
@@ -32,7 +32,7 @@ ms.locfileid: "53591548"
   
 -   **Дата, время и идентификаторы типа Timestamp**. Ниже приведены идентификаторы типов для даты и времени данных timestamp в ODBC 2. *x* и ODBC 3. *x*.  
   
-    |ODBC 2. *x*|ODBC 3. *x*|  
+    |ODBC 2.*x*|ODBC 3.*x*|  
     |----------------|----------------|  
     |**Идентификаторы типа SQL**||  
     |SQL_DATE|SQL_TYPE_DATE|  

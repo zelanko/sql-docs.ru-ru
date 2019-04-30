@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 223f587b35a55b6f2df6d31ca64f48aac96fd6f1
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530696"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63288340"
 ---
 # <a name="change-existing-columns-to-xml-columns"></a>Замена существующих столбцов на XML-столбцы
   Инструкция ALTER TABLE поддерживает тип данных `xml`. Например, можно преобразовать столбец любого строкового типа в тип данных `xml`. Учтите, что в этом случае документы, содержащиеся в этом столбце, должны быть корректными. Также при изменении типа столбца со строкового на типизированный xml, содержащиеся в столбце документы должны проходить проверку по указанным XSD-схемам.  

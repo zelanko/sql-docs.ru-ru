@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 11f2aa43220ef419325f64c368f80ea7691b3b65
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59947880"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63272790"
 ---
 # <a name="open-and-close-a-report-report-manager"></a>Открытие и закрытие отчетов (диспетчер отчетов)
   Диспетчер отчетов можно использовать для просмотра отчетов, опубликованных на сервере отчетов. По умолчанию все отчеты открываются в формате HTML. После открытия отчета, его можно экспортировать для просмотра в формате других приложений. Если отчет содержит интерактивные функции, либо разработан в построителе отчетов и содержит интерактивные данные, можно щелкать ссылки для просмотра дополнительных отчетов или данных.  

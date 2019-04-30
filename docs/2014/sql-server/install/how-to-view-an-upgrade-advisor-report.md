@@ -1,5 +1,5 @@
 ---
-title: 'Практическое: просмотра отчетов помощника по обновлению | Документация Майкрософт'
+title: Практическое руководство. Просмотреть отчет помощника по обновлению | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,13 +18,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 90b9ca2879897bb427981e92d610a7f09916c68e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201934"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63294552"
 ---
-# <a name="how-to-view-an-upgrade-advisor-report"></a>Просмотр отчета помощника по обновлению
+# <a name="how-to-view-an-upgrade-advisor-report"></a>Практическое руководство. Просмотр отчета помощника по обновлению
   Помощник по обновлению создает отчеты по каждому компоненту, выбранному для анализа. В этом разделе рассказывается о том, как просмотреть отчет помощника по обновлению с начальной страницы помощника по обновлению.  
   
 > [!IMPORTANT]  
@@ -74,8 +74,8 @@ ms.locfileid: "48201934"
 >  Отчет может содержать элементы, указывающие на необнаруживаемые проблемы. Это проблемы, которые не могут быть обнаружены или формируют слишком много ложных положительных результатов. Нажмите кнопку **Подробнее об этой проблеме и способах ее устранения** ссылку, чтобы просмотреть список необнаруживаемых проблем по данному компоненту.  
   
 ## <a name="see-also"></a>См. также  
- [Практическое: экспорт отчетов](../../../2014/sql-server/install/how-to-export-reports.md)   
- [Практическое: запустить мастер анализа помощника по обновлению](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
+ [Как Экспорт отчетов](../../../2014/sql-server/install/how-to-export-reports.md)   
+ [Как Запустить мастер анализа помощника по обновлению](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
  [Разрешение проблем при обновлении](../../../2014/sql-server/install/resolving-upgrade-issues.md)   
  [Разделы руководства помощника по обновлению](../../../2014/sql-server/install/upgrade-advisor-how-to-topics.md)   
  [Работа с помощником по обновлению](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  

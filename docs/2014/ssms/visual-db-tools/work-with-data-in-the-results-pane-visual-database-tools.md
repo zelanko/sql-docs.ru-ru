@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d5f3dffc7661fc5843dcd220f27beb1117a85729
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52757846"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63313771"
 ---
 # <a name="work-with-data-in-the-results-pane-visual-database-tools"></a>Работа с данными на панели результатов (визуальные инструменты для баз данных)
   После запуска запроса или представления результаты отображаются на панели результатов. Теперь с этими результатами можно работать. Например, можно добавить и удалить строки, ввести или изменить данные и легко просмотреть большие наборы результатов.  

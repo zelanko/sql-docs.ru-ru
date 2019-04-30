@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 048f9ca3d17a2fdc716786afb6fe2c48d3f83fa6
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59940720"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287512"
 ---
 # <a name="reporting-services-tutorials-ssrs"></a>Учебники по службам Reporting Services (SSRS)
   В этом разделе приведены учебники по [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  

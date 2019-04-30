@@ -20,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: d272b3ea7efa7800c30518aa2ffb7b43bf7fccb7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514670"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63280699"
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>Выбор языка при создании полнотекстового индекса
   При создании полнотекстового индекса необходимо указать язык уровня столбца для индексируемого столбца. В полнотекстовых запросах к столбцу будут использоваться [средства разбиения по словам и парадигматические модули](configure-and-manage-word-breakers-and-stemmers-for-search.md) указанного языка. При выборе языка столбца в процессе создания полнотекстового индекса следует учитывать несколько факторов. Они связаны со способом, которым текст размечается на лексемы и затем индексируется средством полнотекстового поиска.  

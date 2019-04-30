@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: c5ce10a437ecba5e865ce1e2436ee5041839b7e6
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52618001"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63299243"
 ---
 # <a name="save-metadata-accesstosql"></a>Сохранение метаданных (AccessToSQL)
 **Сохранить метаданные** диалоговое окно с предложением загрузить метаданные в проект SSMA, прежде чем сохранить его. Это позволяет, у вас есть полный файл проекта, которые можно использовать в автономном режиме и отправить другим пользователям, например отдела технической поддержки.  

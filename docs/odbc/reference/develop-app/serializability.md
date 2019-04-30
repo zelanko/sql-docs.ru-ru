@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7e7972fb72607edca8c1599c2d028b073c184642
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518288"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63251468"
 ---
 # <a name="serializability"></a>Возможность сериализации
 В идеале, транзакции должны быть *сериализуемые*. Транзакции — это возможность сериализации, если результаты выполнения транзакции одновременно одинаковы как результаты выполнения их последовательно - то есть один за другим. Не важно какой транзакции сначала выполняется, только то, что результат не отражает использование смешанных транзакций.  

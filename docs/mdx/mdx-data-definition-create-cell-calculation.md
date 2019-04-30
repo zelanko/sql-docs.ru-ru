@@ -1,5 +1,5 @@
 ---
-title: Инструкция CREATE CELL CALCULATION (многомерные Выражения) | Документы Microsoft
+title: Инструкция CREATE CELL CALCULATION (многомерные Выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7e69aa9e3da29abe054aaf272c5fe3ed12172a4d
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741303"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63309135"
 ---
-# <a name="mdx-data-definition---create-cell-calculation"></a>Определения данных многомерных Выражений — Создание ВЫЧИСЛЕНИЯ ЯЧЕЙКИ.
+# <a name="mdx-data-definition---create-cell-calculation"></a>Определение данных многомерных выражений — CREATE CELL CALCULATION
 
 
   Формирует вычисление для расчета многомерных выражений по указанному набору кортежей в кубе.  
@@ -50,7 +50,7 @@ CREATE CELL CALCULATION CURRENTCUBE | Cube_Name.Calculation_Name
  *Set_Expression*  
  Допустимое многомерное выражение, возвращающее набор.  
   
- *Строковые значения*  
+ *String*  
  Допустимое строковое значение.  
   
  *MDX_Expression*  
@@ -59,7 +59,7 @@ CREATE CELL CALCULATION CURRENTCUBE | Cube_Name.Calculation_Name
  *Logical_Expression*  
  Допустимое логическое многомерное выражение.  
   
- *Целочисленный*  
+ *Integer*  
  Допустимое целое значение.  
   
  *Calculation_Name*  
@@ -76,10 +76,10 @@ CREATE CELL CALCULATION CURRENTCUBE | Cube_Name.Calculation_Name
   
 ## <a name="see-also"></a>См. также  
  [Создание вычисляемых ячеек с областью действия сеанса](../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-session-scoped-calculated-cells.md)   
- [Создание вычислений ячеек с областью действия запроса &#40;многомерных Выражений&#41;](../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-query-scoped-cell-calculations.md)   
+ [Создание вычислений ячеек с областью действия запроса (многомерные выражения)](../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-query-scoped-cell-calculations.md)   
  [Построение вычислений значений ячеек в многомерном Выражении &#40;многомерных Выражений&#41;](../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-build-cell-calculations.md)   
- [Свойства ячеек &#40;многомерных Выражений&#41;](../analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md)   
- [Строка формата Format_string &#40;многомерных Выражений&#41;](../analysis-services/multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md)   
+ [Использование свойств ячеек (многомерные выражения)](../analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md)   
+ [Содержание строки FORMAT_STRING (многомерные выражения)](../analysis-services/multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md)   
  [Свойства ячеек FORE_COLOR и Back_color &#40;многомерных Выражений&#41;](../analysis-services/multidimensional-models/mdx/mdx-cell-properties-fore-color-and-back-color-contents.md)   
  [Инструкции определения данных многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   

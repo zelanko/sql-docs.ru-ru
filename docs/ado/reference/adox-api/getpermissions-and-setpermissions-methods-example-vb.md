@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ad89f93569a9df0c14630506a3cea3d9091e8bf7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675472"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298022"
 ---
 # <a name="getpermissions-and-setpermissions-methods-example-vb"></a>Примеры методов GetPermissions и SetPermissions (Visual Basic)
 В этом примере показано [GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md) и [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md) методы. Следующий код дает полный доступ для таблицы Orders пользователю с правами администратора.  

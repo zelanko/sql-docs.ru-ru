@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7a97f50030d123181b1b3c0d2a5fda59a0005188
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115623"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63312850"
 ---
 # <a name="full-text-search-upgrade-issues"></a>Проблемы обновления компонента Full-Text Search
   В следующих разделах описаны проблемы, связанные с полнотекстовым поиском, которые могут помешать обновлению. В следующих разделах описаны действия, позволяющие смягчить воздействие этих изменений на рабочую среду.  

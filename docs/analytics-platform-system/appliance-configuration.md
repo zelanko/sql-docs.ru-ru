@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: ada3d2f782a33caf5334361a9682c53cf7cdec95
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398607"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63276052"
 ---
 # <a name="appliance-configuration-checklists-for-analytics-platform-system"></a>Контрольные списки конфигурации устройства для Analytics Platform System
 Предоставляет контрольные списки для задачи, необходимые для настройки Analytics Platform System для конкретной среды. Эти задачи настройки необходимы, прежде чем использовать модуль.  

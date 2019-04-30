@@ -1,5 +1,5 @@
 ---
-title: This (многомерные Выражения) | Документы Microsoft
+title: This (многомерные Выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 77db403ee016283a565a6bc86d2f6857de0eff45
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743253"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63259031"
 ---
 # <a name="this-mdx"></a>This (многомерные выражения)
 
@@ -29,7 +29,7 @@ This
 ```  
   
 ## <a name="remarks"></a>Примечания  
- **Это** функцию можно использовать вместо любого выражения вложенного куба для предоставления к текущему вложенному кубу в текущей области в скрипте вычисления многомерного Выражения. **Это** необходимо использовать функцию в левой части назначения.  
+ **Это** функция, которая может использоваться вместо любого выражения вложенного куба для предоставления к текущему вложенному кубу в текущей области в скрипте вычисления многомерного Выражения. **Это** необходимо использовать функцию в левой части назначения.  
   
 ## <a name="examples"></a>Примеры  
  Следующий фрагмент скрипта многомерных выражений показывает, как использовать ключевое слово This с инструкциями SCOPE для назначений вложенным кубам:  
@@ -75,7 +75,7 @@ This
  `End Scope;`  
   
 ## <a name="see-also"></a>См. также  
- [Справочник по функциям многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-function-reference-mdx.md)   
+ [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)   
  [Вычисления](../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md)  
   
   

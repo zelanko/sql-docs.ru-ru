@@ -19,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f66896479ec06d78b94d6fe084ff806e3af67727
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157790"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63265379"
 ---
 # <a name="asserting-permissions-in-custom-assemblies"></a>Проверка предположений о наличии разрешений в пользовательских сборках
   По умолчанию код пользовательской сборки выполняется с ограниченным набором разрешений **Execution**. В некоторых случаях требуется реализация пользовательских сборок, выполняющих безопасные вызовы к защищенным ресурсам внутри системы безопасности (например, к файлу или реестру). Для этого необходимо выполнить следующие действия.  

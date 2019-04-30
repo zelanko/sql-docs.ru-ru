@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f16faf950954c0c642971c81061f347a03716267
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59964950"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63278549"
 ---
 # <a name="map-viewport-properties-dialog-box-general"></a>Диалоговое окно «Свойства окна просмотра карты», вкладка «Общие»
   Перейдите на вкладку **Общие** диалогового окна **Свойства окна просмотра карты** , чтобы изменить параметры системы координат, проекции и границ.  

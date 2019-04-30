@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 781963ddd2011c9e16cf67fdcd878039527546cd
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52768986"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63294460"
 ---
 # <a name="query-definitions-differ-dialog-box-visual-database-tools"></a>Диалоговое окно «Определения запроса различаются» (визуальные инструменты для баз данных)
   Это диалоговое окно уведомляет о том, что данный запрос не может быть графически представлен на панелях «Диаграмма» и «Критерии» и его можно редактировать только на панели SQL.  

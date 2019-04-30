@@ -20,11 +20,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cc7751f0d2403bddf188f58dea5a48048df3e04c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59962050"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63255380"
 ---
 # <a name="upload-files-to-a-folder"></a>Передача файлов в папку
   Предусмотрена возможность передавать файлы из файловой системы и сохранять их в качестве управляемых элементов в базе данных сервера отчетов. Действия системы при передаче зависят от типа файла.  

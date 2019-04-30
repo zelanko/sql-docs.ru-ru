@@ -24,11 +24,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6a19bfa830b8f57d8df891fb2cfea9435c2716b4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781006"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249683"
 ---
 # <a name="manage-partition-wizard-f1-help"></a>Справка F1 мастера управления секциями
   **Мастер управления секциями** используется для управления и изменения существующих секционированных таблиц с помощью переключения секций или реализации сценария скользящего окна. Этот мастер облегчает управление секциями и упрощает регулярный перенос данных в таблицы и из них.  

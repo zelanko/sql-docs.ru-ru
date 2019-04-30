@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: af3859f5e402dce2854cce02439ff6cb26529f46
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52413461"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63299508"
 ---
 # <a name="new-project-ssma-accesstosql"></a>Новый проект (SSMA) (AccessToSQL)
 Используйте **новый проект** диалоговое окно для создания нового проекта SSMA. Чтобы получить доступ к **новый проект** диалоговом окне **файл** меню, щелкните **новый проект**.  

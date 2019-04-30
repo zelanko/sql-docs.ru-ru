@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 334f96c221e87188bc830c868170852d690e3269
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718942"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63308366"
 ---
 # <a name="adox-object-model"></a>Объектная модель ADOX
 На схеме ниже как представляются и ADOX связанных объектов. Дополнительные сведения о отдельный объект или коллекцию, см. в разделе конкретной ссылке, или [объекты ADOX](../../../ado/reference/adox-api/adox-objects.md) и [коллекции ADOX](../../../ado/reference/adox-api/adox-collections.md).  

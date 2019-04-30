@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ca92258bb764014b6f985ea08aa1a2606037a019
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328384"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63316067"
 ---
 # <a name="design-queries-and-views-how-to-topics-visual-database-tools"></a>Разделы по конструированию запросов и представлений (визуальные инструменты для баз данных)
   Конструктор запросов и представлений помогает создавать и поддерживать фрагменты для получения данных и управления данными для приложения.  

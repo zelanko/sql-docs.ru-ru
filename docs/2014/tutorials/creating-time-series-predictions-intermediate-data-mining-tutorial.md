@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: ca1aa4022931c78f6139a8058c05adc707af5e77
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027995"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63313892"
 ---
 # <a name="creating-time-series-predictions-intermediate-data-mining-tutorial"></a>Создание прогнозов временных рядов (учебник по интеллектуальному анализу данных — средний уровень)
   В ходе выполнения предыдущей задачи данного занятия была создана модель временных рядов и изучены результаты. По умолчанию службы [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] всегда создают набор из пяти (5) прогнозов для модели временных рядов и отображают прогнозируемые значения в виде части диаграммы прогнозирования. Однако можно также создавать прогнозы путем построения прогнозирующих запросов расширений интеллектуального анализа данных (DMX).  

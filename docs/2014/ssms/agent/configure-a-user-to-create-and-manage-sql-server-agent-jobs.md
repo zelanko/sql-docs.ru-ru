@@ -16,23 +16,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a62f6c2e1ef86a6fcd5e532b2ef413d8142698e6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52796146"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63253563"
 ---
 # <a name="configure-a-user-to-create-and-manage-sql-server-agent-jobs"></a>Настройка пользователя для создания заданий агента SQL Server и управления заданиями
   В этом разделе описано, как настроить пользователя для создания или выполнения заданий агента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   **Перед началом работы**  [Безопасность](#Security)  
+-   **Перед началом:**  [Безопасность](#Security)  
   
--   **Чтобы настроить пользователя для создания и управления заданиями агента SQL Server, с помощью:**  [SQL Server Management Studio](#SSMS)  
+-   **Чтобы настроить пользователя для создания и управления заданиями агента SQL Server, с помощью:**  [Среда SQL Server Management Studio](#SSMS)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
 ###  <a name="Security"></a> безопасность  
- Чтобы разрешить пользователю создавать задания агента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и управлять ими, необходимо сначала добавить существующее имя входа для SQL Server или роль базы данных msdb к одной из следующих предопределенных ролей базы данных агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в базе данных msdb: SQLAgentUserRole, SQLAgentReaderRole или SQLAgentOperatorRole.  
+ Настройка пользователя для создания или выполнения [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] задания агента, необходимо сначала добавить существующее имя входа или msdb роль SQL Server на один из следующих [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предопределенных ролей базы данных в базе данных msdb агента: SQLAgentUserRole, SQLAgentReaderRole или SQLAgentOperatorRole.  
   
  По умолчанию члены этих ролей базы данных могут создавать свои собственные шаги заданий, которые запускаются сами по себе. Если пользователи, не являющиеся администраторами, желают выполнить задания, которые выполняют другие типы шагов заданий, например пакеты [!INCLUDE[ssIS](../../includes/ssis-md.md)] , им необходимо будет получить доступ к учетной записи-посреднику. Все члены предопределенной роли сервера sysadmin имеют разрешения на создание, изменение и удаление учетных записей-посредников. Дополнительные сведения о разрешениях, связанных с этими предопределенными ролями баз данных агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , см. в разделе [Предопределенные роли базы данных агента SQL Server](sql-server-agent-fixed-database-roles.md).  
   

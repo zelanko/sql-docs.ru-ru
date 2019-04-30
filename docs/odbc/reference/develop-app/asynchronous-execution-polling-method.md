@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8ca0a5094e40f13aef4b4f87d5642e51e7a9b765
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523436"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63306303"
 ---
 # <a name="asynchronous-execution-polling-method"></a>Асинхронное выполнение (метод опроса)
 Прежде чем ODBC 3.8 и пакет SDK Windows 7 асинхронные операции были разрешены только для функций с инструкциями. Дополнительные сведения см. в разделе **выполнение асинхронной операции инструкции**далее в этом разделе.  

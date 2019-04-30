@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a943d0ed7cfb0932f7eec757b40fef4d8de6504c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775046"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63306005"
 ---
 # <a name="map-many-to-many-relationships-visual-database-tools"></a>Построение связи «многие ко многим» (визуальные инструменты для баз данных)
   Отношения «многие ко многим» позволяют связать каждую строку одной таблицы с несколькими строками другой таблицы и наоборот. Например, отношение «многие ко многим» можно создать для таблиц `authors` и `titles` , чтобы связать каждого автора с его книгами и сопоставить каждой книге ее автора. Если создать связь «один ко многим» в любой таблице, получится, что каждая книга сможет иметь только одного автора или каждый автор — только одну книгу.  

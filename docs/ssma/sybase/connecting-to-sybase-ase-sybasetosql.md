@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: d9c76a33a650284fde21b28af3a61b197829ef98
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807362"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298542"
 ---
 # <a name="connecting-to-sybase-ase-sybasetosql"></a>Подключение к Sybase ASE (SybaseToSQL)
 Для переноса баз данных Sybase Adaptive Server Enterprise (ASE) для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure, необходимо подключиться к Adaptive сервер, содержащий базы данных, которые требуется перенести. При подключении, SSMA получает метаданные обо всех базах данных на сервере адаптивной и отображает метаданные базы данных на панели обозревателя метаданных Sybase. SSMA хранит сведения о сервере базы данных, но не хранит пароли.  

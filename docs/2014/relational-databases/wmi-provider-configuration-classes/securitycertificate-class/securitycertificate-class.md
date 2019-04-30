@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: f5d0ddc957cfca8e122920321acc7ccebb70ef72
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52792396"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270772"
 ---
 # <a name="securitycertificate-class"></a>Класс SecurityCertificate
   Securitycertificate [SecurityCertificate Class]-class.md) представляет сертификат безопасности. Сертификат – это подписанная цифровой подписью инструкция, связывающая значение открытого ключа с экземпляром [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], содержащим соответствующий закрытый ключ. Сертификат выдается центром сертификации.  

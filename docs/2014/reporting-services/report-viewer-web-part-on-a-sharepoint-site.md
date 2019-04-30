@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1b63b7d6591e7296b5b45349351620595c2b5d02
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59960820"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63255494"
 ---
 # <a name="report-viewer-web-part-on-a-sharepoint-site"></a>Веб-часть средства просмотра отчетов на сайте SharePoint
   Средство просмотра отчетов — это специальная веб-часть, устанавливаемая в составе надстройки служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] для технологий SharePoint. Она позволяет просматривать, печатать и экспортировать отчеты с сервера отчетов, настроенного для работы в режиме интеграции с SharePoint. Веб-часть "Средство просмотра отчетов" связана с расширением файлов определения отчетов (RDL), которые обрабатываются сервером отчетов служб [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Ее нельзя использовать с отчетами, созданными с помощью других программных продуктов.  

@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 4ad868122fd8986c642bace1b2c9cf419bb89182
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634336"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63288402"
 ---
 # <a name="connecting-to-oracle-database-oracletosql"></a>Подключение к базе данных Oracle (OracleToSQL)
 Для переноса баз данных Oracle в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], необходимо подключиться к базе данных Oracle, которые требуется перенести. При подключении, SSMA получает метаданные о всех схем Oracle и затем отображается в панели обозревателя метаданных Oracle. SSMA хранит сведения о сервере базы данных, но не хранит пароли.  

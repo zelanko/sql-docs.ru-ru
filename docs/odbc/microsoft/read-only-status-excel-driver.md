@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 17425e76814a8397b9d2e6167248f35e52ac6cfa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47697442"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63316739"
 ---
 # <a name="read-only-status-excel-driver"></a>Состояние только для чтения (драйвер для Excel)
 При использовании драйвера Microsoft Excel таблицы источника данных открыта только для чтения, по умолчанию и можно открыть только один пользователь одновременно. Несмотря на то, что таблицы имеют состояние только для чтения, тем не менее, приложения могут выполнять операции вставки и обновления для таблиц Microsoft Excel.  

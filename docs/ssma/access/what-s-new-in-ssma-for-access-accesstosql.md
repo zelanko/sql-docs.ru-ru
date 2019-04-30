@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 7557a34698f90054806aeafe9b7285970af092c3
-ms.sourcegitcommit: d7ed341b2c635dcdd6b0f5f4751bb919a75a6dfe
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57527047"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63299070"
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>Новые возможности в SSMA для Access (AccessToSQL)
 В этой статье перечислены SQL Server Migration Assistant (SSMA) для изменения доступа в каждом выпуске.  

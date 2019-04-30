@@ -1,5 +1,5 @@
 ---
-title: Пример Указание директив ID и IDREFS | Документация Майкрософт
+title: Пример Указание директив ID и IDREFS | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8771eb523153a2a03b7e10dd58b3c1a85504f63e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531256"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63288878"
 ---
-# <a name="example-specifying-the-id-and-idrefs-directives"></a>Пример Задание директив ID и IDREFS
+# <a name="example-specifying-the-id-and-idrefs-directives"></a>Пример Указание директив ID и IDREFS
   Атрибут элемента может быть указан в качестве атрибута с типом `ID`, а атрибут `IDREFS` может быть использован для ссылки на него. Этим включаются связи внутри документа, которые похожи на связи первичного и внешнего ключей в реляционных базах данных.  
   
  Этот пример иллюстрирует, как директивы `ID` и `IDREFS` могут быть использованы для создания атрибутов с типами `ID` и `IDREFS`. Так как идентификаторы не могут быть целочисленными, значения ID в этом примере преобразуются. Другими словами, они подвергаются приведению типа. Префиксы используются для значений ID.  

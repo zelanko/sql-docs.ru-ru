@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bdbd67d5e4d7d4647b92b32590a5258de038c80f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729482"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63308302"
 ---
 # <a name="adox-enumerated-constants"></a>ADOX Enumerated Constants
 Для целей отладки, константы ADOX перечисления списка значение для каждой константы. Тем не менее это значение исключительно рекомендации и может отличаться от одного выпуска ADOX на другой. Ваш код должен основываться только на имя, а не фактического значения, перечислимых констант.  

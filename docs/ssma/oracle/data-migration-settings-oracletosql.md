@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 96b60573b81625c8896fb9022a6a718770f349ed
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656142"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287182"
 ---
 # <a name="data-migration-settings-oracletosql"></a>Параметры миграции данных (OracleToSQL)
   
@@ -48,9 +48,9 @@ ms.locfileid: "51656142"
   
 Существуют две кнопки присутствует находящие отклик у.:  
   
--   **Применить:** щелкните **применить** для применения параметров, которые были изменены.  
+-   **Примените:** Нажмите кнопку **применить** для применения параметров, которые были изменены.  
   
--   **Отмена:** щелкните **отменить** восстановления присутствует параметров, прежде чем были внесены изменения.  
+-   **Отмена:** Нажмите кнопку **отменить** восстановления присутствует параметров, прежде чем были внесены изменения.  
   
 ## <a name="see-also"></a>См. также  
 [Перенос данных Oracle в SQL Server](migrating-oracle-data-into-sql-server-oracletosql.md)  

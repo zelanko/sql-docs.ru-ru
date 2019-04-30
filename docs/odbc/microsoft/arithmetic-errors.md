@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c0d957d6091dc5fa29ee8a0b707c0e7fe7dfc7c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696302"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63302039"
 ---
 # <a name="arithmetic-errors"></a>Ошибки арифметических действий
 Драйвер ODBC оценивает предложение WHERE в инструкции SELECT, так как она получает каждой строки. Если строка содержит значение, которое вызывает арифметическую ошибку, например переполнение, деление на ноль или числовое, драйвер возвращает все строки, но возвращает ошибки для столбцов с помощью арифметических ошибок. При вставке или обновлении, тем не менее, драйвер ODBC останавливает, вставки или обновления данных при обнаружении первой арифметические ошибки.

@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8aa1315ca0f4a69e234d627a415ba088bd45742b
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59943938"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266076"
 ---
 # <a name="column-visibility-dialog-box-report-builder"></a>Диалоговое окно «Видимость столбцов» (построитель отчетов)
   Используйте диалоговое окно **Видимость столбца** , чтобы отобразить или скрыть выбранный столбец при первом запуске отчета либо назначить другой элемент отчета для переключения видимости столбца.  

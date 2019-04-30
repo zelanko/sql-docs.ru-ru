@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e3caa5feb387a7acdfa682f048bf77f2d999b560
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201843"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63305802"
 ---
 # <a name="unicode-function-arguments"></a>Аргументы функции Юникода
 Диспетчер драйверов ODBC 3.5 (или более поздней версии) поддерживает версии ANSI и Юникод для всех функций, которые принимают указатели на символьные строки или указатель SQLPOINTER в своих аргументах. Функции Юникода реализованы в виде функции (с суффиксом *W*), а не как макросы. Функции ANSI (который можно вызывать с или без суффикса *A*) аналогичны текущей функций ODBC API.  

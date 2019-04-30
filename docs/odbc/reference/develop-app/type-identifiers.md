@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cbefab0f02f3229d8b4c0a62a568634ec222290b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825172"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63305667"
 ---
 # <a name="type-identifiers"></a>Идентификаторы типов
 Для описания типов данных SQL и C, ODBC определяет два набора *введите идентификаторы*. Идентификатор типа описывает тип SQL столбца или C буфера. Это **#define** значение и является обычно передается в качестве аргумента функции или возвращены в метаданных.  

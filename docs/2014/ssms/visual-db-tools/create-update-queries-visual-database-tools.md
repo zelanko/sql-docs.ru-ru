@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 47951e101a5f8f480496c8570a22cd1a950b3309
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52821749"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270576"
 ---
 # <a name="create-update-queries-visual-database-tools"></a>Создание запросов на обновление (визуальные инструменты для баз данных)
   Запрос UPDATE позволяет изменить содержимое нескольких строк одной операцией. Например, в таблице `titles` можно с помощью запроса UPDATE увеличить цену всех книг определенного издателя на 10%.  

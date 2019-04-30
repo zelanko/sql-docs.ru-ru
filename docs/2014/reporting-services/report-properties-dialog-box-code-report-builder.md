@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 40e3bdb096f6e755d65c64d99774cbc0bc606c94
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59958520"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63302395"
 ---
 # <a name="report-properties-dialog-box-code-report-builder"></a>Диалоговое окно «Свойства отчета» — «Код» (построитель отчетов)
   Выберите **Код** в диалоговом окне **Свойства отчета** , чтобы определить пользовательский код, используемый выражениями в отчете.  

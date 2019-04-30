@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 1191a29fa3988b85548578e8a38efc12d9fce41c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658138"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63297425"
 ---
 # <a name="data-migration-settings-sybasetosql"></a>Параметры миграции данных (SybaseToSQL)
   
@@ -48,9 +48,9 @@ ms.locfileid: "51658138"
   
 Существуют две кнопки присутствует находящие отклик у.:  
   
--   **Применить:** щелкните **применить** для применения параметров, которые были изменены.  
+-   **Примените:** Нажмите кнопку **применить** для применения параметров, которые были изменены.  
   
--   **Отмена:** щелкните **отменить** восстановления присутствует параметров, прежде чем были внесены изменения.  
+-   **Отмена:** Нажмите кнопку **отменить** восстановления присутствует параметров, прежде чем были внесены изменения.  
   
 ## <a name="see-also"></a>См. также  
 [Перенос данных Sybase в SQL Server/SQL Azure](https://msdn.microsoft.com/54a39f5e-9250-4387-a3ae-eae47c799811)  

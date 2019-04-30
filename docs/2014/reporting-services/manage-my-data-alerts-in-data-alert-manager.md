@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 37ca741b57be38108407b52ed5e626f80466aea6
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59971850"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63302813"
 ---
 # <a name="manage-my-data-alerts-in-data-alert-manager"></a>Управление предупреждениями данных в диспетчере предупреждений данных
   Пользователи SharePoint могут просматривать список созданных ими предупреждений об изменении данных и сведения о них. Также вы можете удалять свои предупреждения, открывать определения предупреждений для их изменения в конструкторе предупреждений об изменении данных и запускать свои предупреждения. На следующем рисунке показаны функции, доступные пользователям в диспетчере предупреждений об изменении данных.  

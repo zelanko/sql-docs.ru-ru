@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ee7cc12f4fde3a2e5116458034ae3d4a8cc1c13a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015115"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63313850"
 ---
 # <a name="enterprise-information-management-tutorials"></a>Учебники по информационному менеджменту предприятия
   В этом разделе содержатся учебники по управлению данными на предприятии с помощью технологий управления данными на предприятии (EIM), включенных в службы [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]. Технологии управления данными на предприятии (EIM) предоставляют портфель корпоративных решений, которые позволяют организациям обеспечивать надежность и согласованность своих данных, для принятия на их основе важных бизнес-решений. [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] содержит следующие технологии, помогающие в реализации решений EIM на предприятии.  

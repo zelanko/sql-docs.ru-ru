@@ -1,5 +1,5 @@
 ---
-title: '&lt;= (Меньше или равно) (многомерные Выражения) | Документы Microsoft'
+title: '&lt;= (Меньше или равно) (многомерные Выражения) | Документация Майкрософт'
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 02f6990698603efdf813e244d11e57c3bd6bb7eb
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741243"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63311903"
 ---
 # <a name="lt-less-than-or-equal-to-mdx"></a>&lt;= (Меньше или равно) (многомерные Выражения)
 
@@ -62,6 +62,6 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Справочник по операторам Многомерных &#40;многомерных Выражений&#41;](../mdx/mdx-operator-reference-mdx.md)  
+ [Справочник по операторам многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

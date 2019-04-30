@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 65f9070aabc6f64e1fc327abe67e595696c04423
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761742"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266461"
 ---
 # <a name="project-settingsloading-system-objects-db2tosql"></a>Параметры (Загрузка системных объектов) проекта (DB2ToSQL)
 На странице загрузки Системные объекты **параметры проекта** диалоговое окно позволяет указать, какие объекты системы DB2 SSMA преобразует и загружает в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -37,7 +37,7 @@ ms.locfileid: "47761742"
   
 -   SYS. STANDARD  
   
--   SYS. UTL_FILE  
+-   SYS.UTL_FILE  
   
 -   SYS.DBMS_LOB  
   

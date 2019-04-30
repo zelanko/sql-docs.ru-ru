@@ -1,5 +1,5 @@
 ---
-title: Урок 4. Выполните восстановление из полной резервной копии | Документация Майкрософт
+title: 'Занятие 4: Выполните восстановление из полной резервной копии | Документация Майкрософт'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 077fb708f09db0182bc5f1510f0264b139beab13
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017095"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63312072"
 ---
-# <a name="lesson-4-perform-a-restore-from-a-full-database-backup"></a>Урок 4. Выполнение восстановления базы данных из полной резервной копии
+# <a name="lesson-4-perform-a-restore-from-a-full-database-backup"></a>Занятие 4: Восстановление базы данных из полной резервной копии
   На этом занятии рассматривается использование инструкции TSQL для выполнения восстановления из полной резервной копии базы данных, созданной на предыдущем уроке.  
   
 ## <a name="perform-a-restore-of-a-database-backup"></a>Выполнение восстановления резервной копии базы данных  

@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 67a5dce0e92f9d9b90f5af3b6e638112b92d450b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783726"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298112"
 ---
 # <a name="export-registered-server-information-sql-server-management-studio"></a>Выполнение экспорта сведений компонента «Зарегистрированные серверы» (среда SQL Server Management Studio)
   В этом разделе описывается, как сохранить и экспортировать сведения о зарегистрированных серверах в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]и передать их другим сотрудникам и на другие серверы. Данную возможность экспорта можно использовать для создания согласованного пользовательского интерфейса на нескольких компьютерах.  

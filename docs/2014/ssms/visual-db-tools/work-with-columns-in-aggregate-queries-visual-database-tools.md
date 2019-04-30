@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c14608a34c2df5a0e93fea985d8135a37d5ffa53
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52795946"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63273274"
 ---
 # <a name="work-with-columns-in-aggregate-queries-visual-database-tools"></a>Работа со столбцами в агрегатных запросах (визуальные инструменты для баз данных)
   [Конструктор запросов и представлений](visual-database-tools.md) делает некоторые предположения для создания правильного статистического запроса. Например, если при создании статистического запроса помечается столбец данных для вывода, конструктор запросов и представлений автоматически включает этот столбец в предложение GROUP BY, чтобы в итоговых результатах случайно не было отображено содержимое отдельной строки.  

@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 35bed6e63aa352986e1072bfad1b5ddf836845e0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763146"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63268495"
 ---
 # <a name="permissions-and-visual-database-tools-visual-database-tools"></a>Разрешения и визуальные инструменты для баз данных (визуальные инструменты для баз данных)
   Разрешения, дающие пользователям доступ к объектам источников данных, предоставляются в источнике данных, а не в визуальных инструментах для баз данных. Предоставляемые разрешения на доступ к объектам источников данных определяются политикой обеспечения безопасности конкретной установки сервера баз данных. Если отсутствуют разрешения на доступ к определенным объектам базы данных, обратитесь к своему администратору баз данных.  

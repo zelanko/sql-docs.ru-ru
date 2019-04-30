@@ -1,5 +1,5 @@
 ---
-title: WTD (многомерные Выражения) | Документы Microsoft
+title: WTD (многомерные Выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9a548f25d9114e9032f2462bbc97bda637abd6d9
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743784"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63251524"
 ---
 # <a name="wtd-mdx"></a>Wtd (многомерные выражения)
 
@@ -29,18 +29,18 @@ Wtd( [ Member_Expression ] )
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *Member_Expression.*  
+ *Member_Expression*  
  Допустимое многомерное выражение, возвращающее элемент.  
   
 ## <a name="remarks"></a>Примечания  
- Если выражение элемента не указано, по умолчанию используется текущий элемент первой иерархии с уровнем типа недель в первом измерении типа Time (**Time.CurrentMember**) в группе мер.  
+ Если выражение элемента не указано, по умолчанию используется текущий элемент или первый в иерархии с уровнем типа недель в первом измерении типа Time (**Time.CurrentMember**) в группе мер.  
   
- **Wtd** функция — это функция ярлык для [PeriodsToDate](../mdx/periodstodate-mdx.md) функции, где устанавливается уровень *недели*. Таким образом, вызов `Wtd(Member_Expression)` эквивалентен вызову `PeriodsToDate(Week_Level_Expression,Member_Expression)`.  
+ **Wtd** функция является сокращенным вариантом функции для [PeriodsToDate](../mdx/periodstodate-mdx.md) функции, где выбран режим *недель*. Таким образом, вызов `Wtd(Member_Expression)` эквивалентен вызову `PeriodsToDate(Week_Level_Expression,Member_Expression)`.  
   
 ## <a name="see-also"></a>См. также  
  [QTD &#40;многомерных Выражений&#41;](../mdx/qtd-mdx.md)   
  [MTd &#40;многомерных Выражений&#41;](../mdx/mtd-mdx.md)   
  [С начала года &#40;многомерных Выражений&#41;](../mdx/ytd-mdx.md)   
- [Справочник по функциям многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
   
   

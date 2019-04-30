@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c8fe4b85282a2c625a05b65223f26cf34dc16ff2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226734"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63269924"
 ---
 # <a name="verify-uninstall-options"></a>Проверка параметров удаления
   Проверьте свой выбор и нажмите кнопку **Далее** , чтобы продолжить.  

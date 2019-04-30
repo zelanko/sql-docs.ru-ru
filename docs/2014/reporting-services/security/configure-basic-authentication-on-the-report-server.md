@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 34ef8153b717c13b6fc5fdf2147b90339f8640e4
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59942740"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242771"
 ---
 # <a name="configure-basic-authentication-on-the-report-server"></a>Настройка проверки подлинности Windows на сервере отчетов
   По умолчанию службы Reporting Services принимают запросы, в которых задана проверка подлинности NTLM или Negotiated. Если конфигурация развертывания включает клиентские приложения или браузеры, использующие обычную проверку подлинности, то необходимо добавить обычную проверку подлинности в список поддерживаемых типов. Кроме того, если планируется использование построителя отчетов, то необходимо разрешить анонимный доступ к его файлам.  

@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 92e3b7b2099aabaa763fb6f6642bcc6267ebe6f1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748026"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63277430"
 ---
 # <a name="connect-to-an-instance-from-object-explorer"></a>Подключение к экземпляру из обозревателя объектов
   Для управления объектами с помощью обозревателя объектов необходимо вначале подключить обозреватель объектов к экземпляру, содержащему объекты. Можно одновременно подключить обозреватель объектов к нескольким экземплярам.  

@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e464af6b057465aec03a611ac741549c10de0638
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59960942"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266183"
 ---
 # <a name="create-an-embedded-or-shared-data-source-ssrs"></a>создать внедренный или общий источник данных (службы SSRS)
   Источник данных отчета задает имя и информацию для соединения. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] поддерживает два типа источников данных: внедренные и Общие. Внедренный источник данных определяется в определении отчета и используется только этим отчетом. Общий источник данных определяется как отдельный элемент и может использоваться несколькими отчетами. Дополнительные сведения см. в разделе [внедренные и общие подключения к данным или источники данных &#40;построитель отчетов и службы SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md).  

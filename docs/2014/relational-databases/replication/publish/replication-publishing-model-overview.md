@@ -23,11 +23,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 71c462baf00d4129b4efaea0eb39b3a08e6c7ce6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52811216"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63261888"
 ---
 # <a name="replication-publishing-model-overview"></a>Обзор модели публикации репликации
   Репликация использует метафору издательского дела, в основе топологии репликации лежат такие компоненты как издатель, распространитель, подписчики, публикации, статьи и подписки. Удобно представить репликацию [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с помощью терминологии журнала:  

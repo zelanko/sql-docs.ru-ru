@@ -14,19 +14,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: be2414074e6c4278c23633f8b0de955b605d4018
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636763"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63305712"
 ---
 # <a name="sqlsetcursorname-visual-foxpro-odbc-driver"></a>SQLSetCursorName (драйвер ODBC для Visual FoxPro)
 > [!NOTE]  
 >  Этот раздел содержит сведения Visual FoxPro ODBC-драйвером. Общие сведения об этой функции см. в соответствующем разделе [Справочник по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Поддержка: полный  
+ Поддержка: Полное  
   
- Соответствия API ODBC: Уровень Core  
+ Соответствие API ODBC: Уровня ядра  
   
  Связывает имя курсора с дескриптором активный оператор, *hstmt*. **SQLSetCursorName** включен в API драйвера ODBC Visual FoxPro, так как он является частью API ODBC Core уровень функциональности; он не может использоваться с другими функциями API так, как драйвер не поддерживает позиционированные обновления.  
   

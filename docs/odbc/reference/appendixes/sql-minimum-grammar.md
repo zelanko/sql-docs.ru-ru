@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 26cf76200010edae7f85993ec33eb3722f35e94e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818908"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270500"
 ---
 # <a name="sql-minimum-grammar"></a>Минимальная грамматика SQL
 В этом разделе описывается минимальный синтаксис SQL, драйвер ODBC должен поддерживать. Синтаксис, описанный в этом разделе — это подмножество запись уровня синтаксиса SQL-92.  
@@ -29,7 +29,7 @@ ms.locfileid: "47818908"
  Драйверы, которые работают только с источниками данных только для чтения могут не поддерживать те части грамматики этого раздела, которые имеют дело с изменением данных. Приложение можно определить, является ли источник данных только для чтения, вызвав **SQLGetInfo** с типом SQL_DATA_SOURCE_READ_ONLY сведения.  
   
 ## <a name="statement"></a>.  
- *— Инструкция CREATE table* :: =  
+ *create-table-statement* ::=  
   
  CREATE TABLE *base-table-name*  
   
@@ -38,19 +38,19 @@ ms.locfileid: "47818908"
 > [!IMPORTANT]  
 >  Как *тип данных* в *-инструкция create table*, приложения должны использовать тип данных результирующего набора, возвращаемого в столбце TYPE_NAME **SQLGetTypeInfo**.  
   
- *Поиск DELETE инструкции* :: =  
+ *delete-statement-searched* ::=  
   
  УДАЛИТЬ из *имя таблицы* [ГДЕ *условие поиска*]  
   
- *Инструкция DROP-table* :: =  
+ *drop-table-statement* ::=  
   
  DROP TABLE *base-table-name*  
   
- *инструкции INSERT* :: =  
+ *insert-statement* ::=  
   
  INSERT INTO *имя таблицы* [( *идентификатор столбца* [, *идентификатор столбца*]...)]      ЗНАЧЕНИЯ (*вставки значение*[, *вставки значение*]...)  
   
- *Инструкция SELECT* :: =  
+ *select-statement* ::=  
   
  ВЫБЕРИТЕ [все &#124; DISTINCT] *список выбора*  
   
@@ -60,17 +60,17 @@ ms.locfileid: "47818908"
   
  [*предложение order by*]  
   
- *Инструкция* :: = *-инструкция create table*  
+ *statement* ::= *create-table-statement*  
   
- &#124;*поиск delete оператор*  
+ &#124; *delete-statement-searched*  
   
- &#124;*инструкции drop таблица*  
+ &#124; *drop-table-statement*  
   
- &#124;*инструкции insert*  
+ &#124; *insert-statement*  
   
- &#124;*инструкцией select*  
+ &#124; *select-statement*  
   
- &#124;*поиск обновления оператор*  
+ &#124; *update-statement-searched*  
   
  *Поиск обновления оператор*  
   
@@ -78,7 +78,7 @@ ms.locfileid: "47818908"
   
  ЗАДАЙТЕ *идентификатор столбца* = {*выражение* &#124; NULL}  
   
- [, *идентификатор столбца* = {*выражение* &#124; NULL}]...  
+ [, *column-identifier* = {*expression* &#124; NULL}]...  
   
  [ГДЕ *условие поиска*]  
   

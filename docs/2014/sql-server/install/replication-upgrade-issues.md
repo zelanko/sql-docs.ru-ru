@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5ec1e3b914a5dd0a3df05e181b7f11d5bef6c30b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158944"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63282225"
 ---
 # <a name="replication-upgrade-issues"></a>Проблемы репликации при обновлении
   Следующие разделы посвящены проблемам репликации, которые могут возникнуть при обновлении до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. В перечисленных разделах описаны меры, которые позволят смягчить последствия изменений в системе.  

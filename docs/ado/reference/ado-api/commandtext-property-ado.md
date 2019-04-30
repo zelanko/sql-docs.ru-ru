@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e9593b45e8b336fe777b8e240061e82c23543c1d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691182"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63316182"
 ---
 # <a name="commandtext-property-ado"></a>Свойство CommandText (ADO)
 Указывает текст команды для выполнен по отношению к поставщику.  

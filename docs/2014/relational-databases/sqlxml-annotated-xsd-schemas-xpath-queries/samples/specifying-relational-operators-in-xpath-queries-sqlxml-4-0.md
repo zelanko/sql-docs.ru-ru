@@ -16,11 +16,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 2189c2efbdf7c67399c8a06e5823f073b69c82b4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804452"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63268610"
 ---
 # <a name="specifying-relational-operators-in-xpath-queries-sqlxml-40"></a>Применение реляционных операторов в запросах XPath (SQLXML 4.0)
   В следующих примерах показано, как задаются реляционные операторы в запросах XPath. В данных примерах запросы XPath определены в соответствии со схемой сопоставления, которая содержится в файле SampleSchema1.xml. Сведения об этом образце схемы см. в разделе [образец аннотированные схемы XSD для примеров XPath &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
@@ -92,7 +92,7 @@ ms.locfileid: "52804452"
 ```  
   
 > [!NOTE]  
->  Если в шаблоне задается этот запрос, то символ < должен кодироваться в виде сущности, поскольку символ < имеет особое значение в XML-документе. В шаблоне используйте `<`, чтобы задать символ <.  
+>  Если указан этот запрос в шаблоне < символ должен быть закодированы, поскольку в сущность < символ имеет особое значение в XML-документа. В шаблоне, использовать `<` для указания < символ.  
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Проверка запроса XPath к схеме сопоставления  
   

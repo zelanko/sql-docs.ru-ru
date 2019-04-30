@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 98b6b3e454aa37e220bbcb62fa932c4b127ecd79
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783932"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63302335"
 ---
 # <a name="clone-method-example-vb"></a>Пример метода Clone (Visual Basic)
 В этом примере используется [клона](../../../ado/reference/ado-api/clone-method-ado.md) метод для создания копии [записей](../../../ado/reference/ado-api/recordset-object-ado.md) и затем позволяет пользователям указатель записи каждой копии независимо друг от друга.  

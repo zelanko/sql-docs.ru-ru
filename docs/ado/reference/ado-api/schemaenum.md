@@ -17,17 +17,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c95ec9525fe0890d241fd6a99a6c298f6ef7568e
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603671"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63315800"
 ---
 # <a name="schemaenum"></a>SchemaEnum
 Указывает тип схемы **записей** , [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) методом.  
   
 ## <a name="remarks"></a>Примечания  
- Дополнительные сведения о функции и столбцы, возвращаемые для каждой константы ADO см. в разделах [приложение б. наборы строк схемы](https://msdn.microsoft.com/2b5fbf03-e50d-44ee-bc57-5a57666c55f1) ссылки на программиста OLE DB. Имя каждого раздела указывается в скобках в разделе "Описание" в следующей таблице.  
+ Дополнительные сведения о функции и столбцы, возвращаемые для каждой константы ADO см. в разделах [приложении б: Наборы строк схемы](https://msdn.microsoft.com/2b5fbf03-e50d-44ee-bc57-5a57666c55f1) справочника программиста OLE DB. Имя каждого раздела указывается в скобках в разделе "Описание" в следующей таблице.  
   
  Дополнительные сведения о функции и столбцы, возвращаемые для каждой константы ADO MD можно найти в разделах [OLE DB для OLAP-объекты и наборы строк схемы](https://msdn.microsoft.com/d20bb2a6-68bd-423f-9ec8-eb930cd0c144) в OLE DB для документации оперативной аналитической обработки (OLAP). Имя каждого раздела указывается в скобках в столбце "Описание" в следующей таблице.  
   
@@ -53,8 +53,8 @@ ms.locfileid: "51603671"
 |**adSchemaDimensions**|33|Возвращает сведения об измерениях в данном кубе. Он содержит одну строку для каждого измерения.<br /><br /> (Набор строк ИЗМЕРЕНИЙ)|CATALOG_NAME SCHEMA_NAME CUBE_NAME DIMENSION_NAME DIMENSION_UNIQUE_NAME|  
 |**adSchemaForeignKeys**|27|Возвращает столбцы внешнего ключа, определенные в каталоге данным пользователем.<br /><br /> (Набор строк FOREIGN_KEYS)|PK_TABLE_CATALOG PK_TABLE_SCHEMA PK_TABLE_NAME FK_TABLE_CATALOG FK_TABLE_SCHEMA FK_TABLE_NAME|  
 |**adSchemaHierarchies**|34|Возвращает сведения об иерархиях, доступных в измерении.<br /><br /> (Набор строк ИЕРАРХИЙ)|CATALOG_NAME SCHEMA_NAME CUBE_NAME DIMENSION_UNIQUE_NAME HIERARCHY_NAME HIERARCHY_UNIQUE_NAME|  
-|**adSchemaIndexes**|12|Возвращает индексы, определенные в каталоге и принадлежащие данному пользователю.<br /><br /> (Набор строк ИНДЕКСЫ)|INDEX_NAME ТИП ЗНАЧЕНИЯМ TABLE_CATALOG TABLE_SCHEMA ИМЯ_ТАБЛИЦЫ|  
-|**adSchemaKeyColumnUsage**|8|Возвращает столбцы, определенные в каталоге, которые являются ограниченными как ключи данным пользователем.<br /><br /> (Набор строк KEY_COLUMN_USAGE)|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA CONSTRAINT_NAME ЗНАЧЕНИЯМ TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME|  
+|**adSchemaIndexes**|12|Возвращает индексы, определенные в каталоге и принадлежащие данному пользователю.<br /><br /> (Набор строк ИНДЕКСЫ)|TABLE_CATALOG TABLE_SCHEMA INDEX_NAME TYPE TABLE_NAME|  
+|**adSchemaKeyColumnUsage**|8|Возвращает столбцы, определенные в каталоге, которые являются ограниченными как ключи данным пользователем.<br /><br /> (Набор строк KEY_COLUMN_USAGE)|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA CONSTRAINT_NAME TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME|  
 |**adSchemaLevels**|35|Возвращает сведения об уровнях, доступных в измерении.<br /><br /> (Набор строк УРОВНЕЙ)|CATALOG_NAME SCHEMA_NAME CUBE_NAME DIMENSION_UNIQUE_NAME HIERARCHY_UNIQUE_NAME LEVEL_NAME LEVEL_UNIQUE_NAME|  
 |**adSchemaMeasures**|36|Возвращает сведения о доступных мер.<br /><br /> (Набор строк меры)|CATALOG_NAME SCHEMA_NAME CUBE_NAME MEASURE_NAME MEASURE_UNIQUE_NAME|  
 |**adSchemaMembers**|38|Возвращает сведения о доступных элементов.<br /><br /> (ЭЛЕМЕНТЫ в набор строк)|Оператор CATALOG_NAME SCHEMA_NAME CUBE_NAME DIMENSION_UNIQUE_NAME HIERARCHY_UNIQUE_NAME LEVEL_UNIQUE_NAME MEMBER_NAME LEVEL_NUMBER MEMBER_UNIQUE_NAME MEMBER_CAPTION дерева MEMBER_TYPE. Дополнительные сведения см. в разделе OLE DB для оперативной аналитической обработки (OLAP).|  
@@ -62,7 +62,7 @@ ms.locfileid: "51603671"
 |**adSchemaProcedureColumns**|29|Возвращает информацию о столбцах наборов строк, возвращаемых процедурами.<br /><br /> (Набор строк PROCEDURE_COLUMNS)|PROCEDURE_CATALOG PROCEDURE_SCHEMA PROCEDURE_NAME COLUMN_NAME|  
 |**adSchemaProcedureParameters**|26|Возвращает информацию о параметрах и кодах возврата процедур.<br /><br /> (Набор строк PROCEDURE_PARAMETERS)|PROCEDURE_CATALOG PROCEDURE_SCHEMA PROCEDURE_NAME PARAMETER_NAME|  
 |**adSchemaProcedures**|16|Возвращает процедуры, определенные в каталоге и принадлежащие данному пользователю.<br /><br /> (Набор строк ПРОЦЕДУР)|PROCEDURE_CATALOG PROCEDURE_SCHEMA PROCEDURE_NAME PROCEDURE_TYPE|  
-|**adSchemaProperties**|37|Возвращает сведения о доступных свойствах для каждого уровня измерения.<br /><br /> (Свойства набора строк)|SCHEMA_NAME CATALOG_NAME CUBE_NAME DIMENSION_UNIQUE_NAME HIERARCHY_UNIQUE_NAME LEVEL_UNIQUE_NAME MEMBER_UNIQUE_NAME PROPERTY_TYPE PROPERTY_NAME|  
+|**adSchemaProperties**|37|Возвращает сведения о доступных свойствах для каждого уровня измерения.<br /><br /> (Свойства набора строк)|CATALOG_NAME SCHEMA_NAME CUBE_NAME DIMENSION_UNIQUE_NAME HIERARCHY_UNIQUE_NAME LEVEL_UNIQUE_NAME MEMBER_UNIQUE_NAME PROPERTY_TYPE PROPERTY_NAME|  
 |**adSchemaProviderSpecific**|-1|Используется, если поставщик определяет свой собственный запросов нестандартные схемы.|\<Зависит от поставщика >|  
 |**adSchemaProviderTypes**|22|Возвращает типы (базовый) данных, поддерживаемые поставщиком данных.<br /><br /> (Набор строк PROVIDER_TYPES)|DATA_TYPE BEST_MATCH|  
 |**AdSchemaReferentialConstraints**|9|Возвращает ссылочные ограничения, определенные в каталоге, принадлежащие данному пользователю.<br /><br /> (Набор строк REFERENTIAL_CONSTRAINTS)|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA CONSTRAINT_NAME|  
@@ -74,7 +74,7 @@ ms.locfileid: "51603671"
 |**adSchemaTables**|20|Возвращает таблицы (включая представления) определены в каталоге, которые доступны для данного пользователя.<br /><br /> (Набор строк таблицы)|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME TABLE_TYPE|  
 |**adSchemaTranslations**|21|Возвращает преобразования знаков, определенные в каталоге и доступные указанному пользователю.<br /><br /> (Переводы строк)|TRANSLATION_CATALOG TRANSLATION_SCHEMA TRANSLATION_NAME|  
 |**adSchemaTrustees**|39|Зарезервировано для последующего использования.||  
-|**adSchemaUsagePrivileges**|15|Возвращает привилегии USAGE для объектов, определенные в каталоге, которые доступны или предоставленные указанному пользователю.<br /><br /> (Набор строк USAGE_PRIVILEGES)|OBJECT_CATALOG OBJECT_SCHEMA OBJECT_NAME OBJECT_TYPE GRANTOR УЧАСТНИКА|  
+|**adSchemaUsagePrivileges**|15|Возвращает привилегии USAGE для объектов, определенные в каталоге, которые доступны или предоставленные указанному пользователю.<br /><br /> (Набор строк USAGE_PRIVILEGES)|OBJECT_CATALOG OBJECT_SCHEMA OBJECT_NAME OBJECT_TYPE GRANTOR GRANTEE|  
 |**adSchemaViewColumnUsage**|24|Возвращает столбцы, по которым просматриваемые таблицы, определенные в каталоге и принадлежащие данному пользователю, зависят.<br /><br /> (Набор строк VIEW_COLUMN_USAGE)|VIEW_CATALOG VIEW_SCHEMA VIEW_NAME|  
 |**adSchemaViews**|23|Возвращает представления, определенные в каталоге и доступные указанному пользователю.<br /><br /> (Набор строк ПРЕДСТАВЛЕНИЯ)|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME|  
 |**adSchemaViewTableUsage**|25|Возвращает просматриваемые таблицы, определенные в каталоге и принадлежащие данному пользователю, таблиц, в котором зависят.<br /><br /> (Набор строк VIEW_TABLE_USAGE)|VIEW_CATALOG VIEW_SCHEMA VIEW_NAME|  

@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0aada3a83a29a921584a204f51695e6598131e0a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130254"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63312568"
 ---
 # <a name="select-the-keyboard-shortcut-scheme"></a>Выбор схемы сочетаний клавиш
   Вместо стандартной схемы сочетаний клавиш среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] можно настроить [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] на использование схемы сочетаний клавиш, совместимой с [!INCLUDE[vs_dev10_long](../../includes/vs-dev10-long-md.md)].  

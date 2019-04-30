@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9b21947a879517196bc2447ae9a0cde0db1be6a8
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59961590"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63305212"
 ---
 # <a name="understanding-groups-report-builder-and-ssrs"></a>Основные сведения о группах (построитель отчетов и службы SSRS)
   В построителе отчетов группа является именованным набором данных из набора данных отчета, привязанного к области данных. В основном, группа организует представление набора данных отчета. Все группы в области данных задают различные представления одного набора данных отчета.  

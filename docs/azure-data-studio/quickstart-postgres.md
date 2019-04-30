@@ -12,11 +12,11 @@ author: rachel-msft
 ms.author: raagyema
 manager: craigg
 ms.openlocfilehash: dbf7b427c8c978538370a576aa50c35dd15417cf
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58162152"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63252972"
 ---
 # <a name="quickstart-connect-and-query-postgresql-using-includename-sosincludesname-sos-shortmd"></a>Краткое руководство. Подключение и запрос PostgreSQL с помощью [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 В этом кратком руководстве показано, как использовать [!INCLUDE[name-sos](../includes/name-sos-short.md)] для подключения к Postgres и последующее использование инструкций SQL для создания базы данных *tutorialdb* и запрос к ним.

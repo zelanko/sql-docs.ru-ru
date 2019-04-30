@@ -1,5 +1,5 @@
 ---
-title: 'Примеры: Использование режима AUTO | Документация Майкрософт'
+title: 'Примеры: Использование режима AUTO | Документация Майкрософт'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 93a26764a7111a01b07d23c61bfbfb5c4a728e72
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538456"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287811"
 ---
 # <a name="examples-using-auto-mode"></a>Примеры: Использование режима AUTO
   В следующем примере иллюстрируется применение режима AUTO. Многие из этих запросов являются запросами к XML-документам с инструкциями по производству велосипедов, хранящимся в столбце Instructions таблицы ProductModel образца базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] .  
   
-## <a name="example-retrieving-customer-order-and-order-detail-information"></a>Пример Извлечение данных о заказчике, заказе и подробных сведений о заказе  
+## <a name="example-retrieving-customer-order-and-order-detail-information"></a>Пример Извлечение данных клиента, заказе и подробных сведений о заказе  
  Следующий запрос получает данные о заказчике, заказе и подробные данные о заказе определенного заказчика.  
   
 ```  
@@ -93,7 +93,7 @@ FOR XML AUTO;
   
  `</Cust>`  
   
-## <a name="example-specifying-group-by-and-aggregate-functions"></a>Пример Использование предложения GROUP BY и агрегатных функций  
+## <a name="example-specifying-group-by-and-aggregate-functions"></a>Пример Предложения GROUP BY и агрегатных функций  
  Следующий запрос возвращает отдельные идентификаторы заказчиков и номера заказов, запрашиваемых заказчиками.  
   
 ```  
@@ -222,7 +222,7 @@ FOR XML AUTO;
   
  Это может быть проблемой, особенно если запросы на объекты базы данных выполняются для базы данных с учетом регистра. Во избежание этого регистр задаваемого в запросах имени таблицы или столбца должен соответствовать регистру имени таблицы или столбца в базе данных.  
   
-## <a name="example-understanding-the-encoding"></a>Пример Основные сведения о кодировке  
+## <a name="example-understanding-the-encoding"></a>Пример Основные сведения о кодировка  
  В этом примере демонстрируется использование различных кодировок, которые могут применяться в результате.  
   
  Создайте такую таблицу:  
