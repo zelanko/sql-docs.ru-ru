@@ -1,5 +1,5 @@
 ---
-title: Функции кортежей | Документы Microsoft
+title: Функции кортежей | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 578192fa982b8bbf65527f4ff1d71b6595a2400d
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743829"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63251634"
 ---
 # <a name="using-tuple-functions"></a>Функции кортежей
 
@@ -23,7 +23,7 @@ ms.locfileid: "34743829"
   
  Функции кортежей, подобно функциям элементов и функциям наборов, важны для согласования многомерных структур, обнаруженных в службах [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
- В многомерных Выражениях существуют три функции кортежей [текущей &#40;многомерных Выражений&#41;](../mdx/current-mdx.md), [элемент &#40;кортежа&#41; &#40;многомерных Выражений&#41; ](../mdx/item-tuple-mdx.md) и [StrToTuple &#40;&#41;](../mdx/strtotuple-mdx.md). Следующий пример запроса демонстрирует использование каждой из них:  
+ Существует три функции кортежей в многомерных Выражениях, [текущей &#40;многомерных Выражений&#41;](../mdx/current-mdx.md), [элемент &#40;кортежа&#41; &#40;многомерных Выражений&#41; ](../mdx/item-tuple-mdx.md) и [StrToTuple &#40;&#41;](../mdx/strtotuple-mdx.md). Следующий пример запроса демонстрирует использование каждой из них:  
   
  `WITH`  
   

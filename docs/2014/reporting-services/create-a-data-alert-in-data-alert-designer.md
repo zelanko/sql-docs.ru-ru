@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f2dd3739d481162e7685b7021a120dd5d48e844a
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59963980"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266387"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>Создание предупреждения данных в конструкторе предупреждений данных
   Создание определений предупреждений об изменении данных осуществляется в конструкторе предупреждений об изменении данных. После сохранения их можно открыть, изменить, а затем снова сохранить в конструкторе предупреждений об изменении данных. Дополнительные сведения об изменении определений предупреждений см. в разделах [Управление предупреждениями данных в диспетчере предупреждений данных](manage-my-data-alerts-in-data-alert-manager.md) и [Изменение предупреждения данных в конструкторе предупреждений](edit-a-data-alert-in-alert-designer.md).  

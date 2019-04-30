@@ -14,14 +14,14 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: d79b50e70f3eae3d9183ae220002136b39717e46
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102495"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63278563"
 ---
 # <a name="database-ssrs-native-mode"></a>База данных (службы Reporting Services в собственном режиме)
-  Страница «База данных» используется для создания и настройки баз данных сервера отчетов, предназначенных для внутреннего хранения одного или нескольких экземпляров сервера отчетов. Если при настройке сервера отчетов для использования удаленного сервера отчетов, необходимо использовать [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager для создания базы данных.  
+  Страница «База данных» используется для создания и настройки баз данных сервера отчетов, предназначенных для внутреннего хранения одного или нескольких экземпляров сервера отчетов. При настройке сервера отчетов для использования удаленной базы данных сервера отчетов необходимо создать ее с помощью диспетчера конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в собственном режиме.  
   
@@ -29,11 +29,11 @@ ms.locfileid: "48102495"
   
  Базой данных сервера отчетов должен поддерживаться определенный режим сервера. Режимом по умолчанию является собственный режим, но можно также создать базу данных сервера отчетов для работы в режиме интеграции с SharePoint, если сервер отчетов используется в крупномасштабном развертывании продукта или технологии SharePoint. Дополнительные сведения см. в разделе [Создание базы данных сервера отчетов, работающего в собственном режиме (диспетчер конфигураций служб SSRS)](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
   
- Чтобы открыть эту страницу, запустите [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager и нажмите кнопку **базы данных** в области навигации. Дополнительные сведения см. в разделе [Использование диспетчера конфигурации служб Reporting Services (собственный режим)](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
+ Для открытия данной страницы запустите диспетчер конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и нажмите кнопку **База данных** на панели навигации. Дополнительные сведения см. в разделе [Использование диспетчера конфигурации служб Reporting Services (собственный режим)](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
 ## <a name="options"></a>Параметры  
  **Имя SQL Server**  
- В текущей базе данных сервера отчетов **имя SQL Server** имя [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] , работает база данных сервера отчетов. Можно использовать экземпляр по умолчанию или именованный экземпляр на локальном или удаленном компьютере.  
+ В текущей базе данных сервера отчетов параметр **Имя SQL Server** является именем компонента [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] , на котором работает база данных сервера отчетов. Можно использовать экземпляр по умолчанию или именованный экземпляр на локальном или удаленном компьютере.  
   
  **Database Name**  
  Позволяет указать имя базы данных сервера отчетов, в которой хранятся серверные данные.  
@@ -45,10 +45,10 @@ ms.locfileid: "48102495"
  Запуск пошагового мастера необходим для создания или выбора базы данных сервера отчетов.  
   
  **Тип учетных данных**  
- Позволяет задать учетные данные, используемые сервером отчетов для соединения со своей базой данных. Включать типы учетных данных, можно указать учетную запись службы пользователя домена Windows, локального пользователя Windows, или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имя входа базы данных. Дополнительные сведения о выборе учетных данных см. в разделе [Настройка подключения к базе данных сервера отчетов &#40;диспетчер конфигурации служб SSRS&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
+ Позволяет задать учетные данные, используемые сервером отчетов для соединения со своей базой данных. Возможно задать следующие типы учетных данных: учетная запись службы, пользователь домена Windows, локальный пользователь Windows или имя входа базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения о выборе учетных данных см. в разделе [Настройка подключения к базе данных сервера отчетов &#40;диспетчер конфигурации служб SSRS&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
  **Имя пользователя**  
- Указывает учетную запись пользователя домена, если вы используете учетные данные Windows, или объект [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] входа. Если вы используете [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] учетные данные. Если вы используете учетные данные Windows, укажите их в следующем формате:  *\<домена >\\< учетная запись\>*.  
+ Позволяет задать учетную запись пользователя домена (в случае использования учетных данных Windows) или имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (в случае использования учетных данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ). Если вы используете учетные данные Windows, укажите их в следующем формате:  *\<домена >\\< учетная запись\>*.  
   
  **Пароль**  
  Позволяет задать пароль для учетной записи.  
@@ -60,6 +60,6 @@ ms.locfileid: "48102495"
  [Создание базы данных сервера отчетов, работающего в собственном режиме (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
  [Разделы справки F1 диспетчера конфигурации служб Reporting Services &#40;собственный режим служб SSRS&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
  [База данных сервера отчетов (службы Reporting Services в собственном режиме)](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
- [Настройка подключения к базе данных сервера отчетов &#40;диспетчер конфигурации служб SSRS&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
+ [Настройка подключения к базе данных сервера отчетов (диспетчер конфигураций служб Reporting Services)](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
   
   

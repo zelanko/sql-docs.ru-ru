@@ -1,5 +1,5 @@
 ---
-title: Использование скалярных выражений | Документы Microsoft
+title: Использование скалярных выражений | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a80933b1a9845ec2676fba470ed39e06ee7f4ad8
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743903"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63251434"
 ---
 # <a name="using-scalar-expressions"></a>Использование скалярных выражений
 

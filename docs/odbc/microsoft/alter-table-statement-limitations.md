@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 02ce530385cdc911250a81d831dd2fdb81873f76
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828862"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63301979"
 ---
 # <a name="alter-table-statement-limitations"></a>Ограничения инструкции ALTER TABLE
 Когда dBASE или драйвер для Paradox используется, после создания индекса и добавления новой записи, структура таблицы может быть изменен с помощью инструкции ALTER TABLE, только индекс удаляется и содержание таблицы удаляются.  

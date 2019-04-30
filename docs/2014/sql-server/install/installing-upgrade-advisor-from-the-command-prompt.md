@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: df68b9ee1e778d0523b63d69bd010022b6f6f219
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589868"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63301334"
 ---
 # <a name="installing-upgrade-advisor-from-the-command-prompt"></a>Установка помощника по обновлению из командной строки
   Установить помощник по обновлению можно как с помощью мастера установки, так и из командной строки. С помощью командной строки можно производить установку в автоматическом режиме.  
@@ -37,7 +37,7 @@ ms.locfileid: "53589868"
 |--------------|-----------------|  
 |/q [n&#124;b&#124;r&#124;f]|Задает уровень пользовательского интерфейса (UI):<br /><br /> n = без интерфейса<br /><br /> b = базовый интерфейс (только ход выполнения, без подсказок)<br /><br /> r = сокращенный интерфейс (диалоговое окно в конце установки)<br /><br /> f = полный интерфейс|  
 |/L|Определяет параметры файла журнала. Для регистрации всех сообщений для *log_file_name*, использовать **-L\*v**_log_file_name_. Чтобы записывать только сообщения об ошибках, укажите `-Le` *log_file_name*.|  
-|ADDLOCAL = ALL&AMP;#124; УДАЛИТЬ = ALL&AMP;#124;REINSTALL = ALL|Определяет, нужно ли установить (ADDLOCAL), удалить (REMOVE) или переустановить (REINSTALL) помощник по обновлению.|  
+|ADDLOCAL=ALL&#124; REMOVE=ALL&#124;REINSTALL=ALL|Определяет, нужно ли установить (ADDLOCAL), удалить (REMOVE) или переустановить (REINSTALL) помощник по обновлению.|  
 |UAINSTALLDIR=path|Устанавливает помощник по обновлению в местоположение, указанное в параметре path.|  
   
 ## <a name="installation-examples"></a>Примеры установки  

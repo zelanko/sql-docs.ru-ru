@@ -16,11 +16,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 039728bd18abcd1f3a660297fa0a1d937b7b1eb3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520696"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63288246"
 ---
 # <a name="command-line-options-in-ssma-console-oracletosql"></a>Параметры командной строки в консоли SSMA (OracleToSQL)
 Майкрософт предоставляет надежные параметры командной строки для выполнения и SSMA действия управления. В последующих разделах подробно описано же.  

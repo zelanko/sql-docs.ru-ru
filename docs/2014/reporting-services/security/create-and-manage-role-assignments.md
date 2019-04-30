@@ -18,11 +18,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2f22a5af8401a0cf16c508f805dbb38ee9970780
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59932801"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242680"
 ---
 # <a name="create-and-manage-role-assignments"></a>Создание назначений ролей и управление ими
   *Назначение ролей* представляет собой политику безопасности, определяющую, может ли пользователь или группа получить доступ к определенному элементу сервера отчетов или выполнить над ним операцию. Назначение ролей состоит из одного имени учетной записи пользователя или группы пользователей и одного или более определений роли.  

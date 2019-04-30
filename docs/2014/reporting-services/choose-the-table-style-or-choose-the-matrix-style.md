@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2153c8d47afdf0770b03509554d9aa46673956ec
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59951510"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266084"
 ---
 # <a name="choose-the-table-style-or-choose-the-matrix-style"></a>Выбор стиля таблицы или матрицы
   На этих страницах мастера отчетов можно выбрать стили текста и линии отчета. Список стилей основан на настраиваемом шаблоне. Конструктор отчетов предоставляет следующие исходные шаблоны: Содержание рекламы, леса, организации, полужирным шрифтом, «Аквамарин» и универсальный.  

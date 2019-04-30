@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: eb3365195e3a64353fb0cbd45e832cd0206f678e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526436"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63241287"
 ---
 # <a name="load-xml-data"></a>Загрузка XML-данных
   Есть несколько способов передачи XML-данных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Пример:  
@@ -32,7 +32,7 @@ ms.locfileid: "58526436"
 ## <a name="bulk-loading-xml-data"></a>Массовая загрузка XML-данных  
  Массовую загрузку XML-данных на сервер можно осуществить при помощи реализованных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]средств массовой загрузки, таких как bcp. Инструкция OPENROWSET позволяет загрузить данные в XML-столбец из файлов. Это показано в следующем примере.  
   
-##### <a name="example-loading-xml-from-files"></a>Пример загрузка XML-данных из файлов  
+##### <a name="example-loading-xml-from-files"></a>Пример Загрузка XML из файлов  
  Следующий пример показывает, как вставить строку в таблицу T. Значение XML-столбца загружается из файла «C:\MyFile\xmlfile.xml» как объект CLOB, а целочисленному столбцу назначается значение 10.  
   
 ```  

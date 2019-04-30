@@ -1,5 +1,5 @@
 ---
-title: Пример Задание корневого элемента для XML, сформированного предложением FOR XML | Документация Майкрософт
+title: Пример Задание корневого элемента для XML-документа, сформированного предложением FOR XML | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 97b1a4ecc9cfbe0f9f8b793cddc788baf81a2200
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531206"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63288375"
 ---
-# <a name="example-specifying-a-root-element-for-the-xml-generated-by-for-xml"></a>Пример Задание корневого элемента для XML-документа, сформированного предложением FOR XML
+# <a name="example-specifying-a-root-element-for-the-xml-generated-by-for-xml"></a>Пример Определение корневого элемента для XML-документа, созданного предложением FOR XML
   Путем определения параметра `ROOT` в запросе `FOR XML` можно выполнить запрос одного элемента высшего уровня для итогового XML-документа, как показано в этом запросе. Данный аргумент, определенный для директивы `ROOT` , задает имя корневого элемента.  
   
 ## <a name="example"></a>Пример  

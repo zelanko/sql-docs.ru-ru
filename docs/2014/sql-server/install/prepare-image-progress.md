@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a15bb67033b3524d511e3308b1a4243345dc5e88
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058784"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63276570"
 ---
 # <a name="prepare-image-progress"></a>Ход выполнения подготовки образа
   Страница **Ход выполнения подготовки образа** мастера установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] позволяет следить за состоянием установки подготовки образа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . После завершения этого шага на данной странице будут перечислены состояния для каждого из компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], подготовленных при выполнении этой операции.  

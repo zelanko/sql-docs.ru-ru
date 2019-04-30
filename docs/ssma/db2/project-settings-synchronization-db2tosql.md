@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 5dce11338b2d67412df1259e48d50c0734778d0d
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49071768"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270074"
 ---
 # <a name="project-settingssynchronization-db2tosql"></a>Проекта (Синхронизация) (DB2ToSQL)
 На странице синхронизации **параметры проекта** диалоговое окно содержит настройки, установленные как SSMA загружает и обновления объектов, таких как таблицы и хранимые процедуры базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

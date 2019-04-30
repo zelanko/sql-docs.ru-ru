@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3b88fcbd191317259c1d2d2c1facfb6e6b1ade1c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59949250"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63265978"
 ---
 # <a name="contents-page-report-manager"></a>Страница «Содержимое» (диспетчер отчетов)
   Используйте страницу «Содержимое», чтобы просмотреть содержимое текущей папки, выбрать элементы для просмотра, а также для навигации к другим папкам. Эта страница открывается при выборе пользователем папки. Она также является домашней страницей для диспетчера отчетов.  

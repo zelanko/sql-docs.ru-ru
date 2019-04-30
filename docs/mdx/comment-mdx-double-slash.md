@@ -1,5 +1,5 @@
 ---
-title: (Примечание) (МНОГОМЕРНЫЕ ВЫРАЖЕНИЯ) | Документы Microsoft
+title: / / (Комментарий) (МНОГОМЕРНЫЕ ВЫРАЖЕНИЯ) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6570694bc38eb6f32f660006f1ed1b6797793b7b
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739523"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63306343"
 ---
-# <a name="comment-mdx-double-slash"></a>Двойная косая черта многомерных Выражений комментария
+# <a name="comment-mdx-double-slash"></a>Двойная косая черта для многомерных Выражений комментарий
 
 
   Обозначает текст комментария пользователя.  
@@ -58,6 +58,6 @@ WHERE
 ## <a name="see-also"></a>См. также  
  [Комментарий (MDX)](../mdx/comment-mdx.md)   
  [-- (Комментарий) (MDX)](../mdx/comment-mdx-operator-reference.md)   
- [Справочник по операторам Многомерных &#40;многомерных Выражений&#41;](../mdx/mdx-operator-reference-mdx.md)  
+ [Справочник по операторам многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

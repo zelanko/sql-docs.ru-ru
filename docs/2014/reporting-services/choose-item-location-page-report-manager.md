@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1833989b2dd5fed0616a7587252ac97a09cb75f2
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59939730"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266236"
 ---
 # <a name="choose-item-location-page-report-manager"></a>Страница «Выбор расположения элементов» (диспетчер отчетов)
   Страница «Выбор расположения элемента» позволяет выбрать папку для нового связанного отчета или новой модели. При создании связанного отчета или модели для определенной группы пользователей может потребоваться переместить элемент в папку с другими отчетами и моделями этой группы пользователей. Необходимо выбрать существующую папку, для которой имеется разрешение на добавление данных.  

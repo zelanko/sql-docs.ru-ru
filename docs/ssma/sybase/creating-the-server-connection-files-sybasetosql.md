@@ -14,16 +14,16 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 5d42e8166198cbf97b2589b55f77d40514e56dee
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534702"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63297589"
 ---
 # <a name="creating-the-server-connection-files-sybasetosql"></a>Создание файлов подключения к серверу (SybaseToSQL)
 В разделе "серверы" файла скрипта или в файле подключения отдельный сервер можно указать сведения о сервере. — Параметр командной строки файла подключения к серверу, `-c <serverconnectionfile>`. Если один и тот же идентификатор сервера присутствует в файл скрипта и файла подключения сервера, тогда считается определение сервера в файле скрипта.  
   
-**Пример:**  
+**Пример.**  
   
 ```  
 1.<!--Sample of server connection file commands -->  

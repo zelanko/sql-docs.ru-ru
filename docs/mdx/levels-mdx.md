@@ -1,5 +1,5 @@
 ---
-title: Levels (многомерные Выражения) | Документы Microsoft
+title: Levels (многомерные Выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6e8edfdc3c6888c34dd789c521bc42c6b919e1a4
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741193"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63269951"
 ---
 # <a name="levels-mdx"></a>Levels (многомерные выражения)
 
@@ -45,15 +45,15 @@ Hierarchy_Expression.Levels( Level_Name )
 ## <a name="remarks"></a>Примечания  
  Если указан номер уровня, **уровни** функция возвращает уровень, связанный с указанной позиции (с нуля).  
   
- Если указано имя уровня **уровни** функция возвращает указанный уровень.  
+ Если имя уровня указано, **уровни** функция возвращает указанный уровень.  
   
 > [!NOTE]  
 >  Для пользовательских функций используйте синтаксис строкового выражения.  
   
 ## <a name="examples"></a>Примеры  
- В следующих примерах показаны каждого из **уровни** синтаксис функции.  
+ В следующих примерах показаны всех **уровни** синтаксис функции.  
   
-### <a name="numeric"></a>Числовой  
+### <a name="numeric"></a>Numeric  
  Следующий пример возвращает уровень Сountry.  
   
 ```  
@@ -70,6 +70,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Справочник по функциям многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Задача 5. Задание связей на основе | Документация Майкрософт
+title: Задача 5. Задание связей на основе | Документация Майкрософт
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 322c5a5afcd7c5d82982a86cb9398e66bb248c5d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034455"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63277252"
 ---
-# <a name="task-5-setting-term-based-relationships"></a>Задача 5. Задание связей на основе терминов
+# <a name="task-5-setting-term-based-relationships"></a>Задача 5. Задание связей на основе термина
   В этой задаче вы определите несколько связей на основе терма для значений **Supplier Name** домена. Связь на основе терма позволяет исправить терм, являющийся частью значения в домене. Это позволяет считать идентичными синонимами несколько значений, идентичных по написанию во всем, кроме отдельных частей. Например **Inc.** возможность исправления **Incorporated**. Службы DQS используют эти связи при обнаружении знаний, очистке и сопоставлении. См. в разделе [создания связей на основе терма](https://msdn.microsoft.com/library/hh510404.aspx) для получения дополнительных сведений.  
   
 1.  Выберите **Supplier Name** в **список доменов**.  

@@ -14,11 +14,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: d35db315cebcc6292ca11b1e31f81015238fbcb9
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617484"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63299430"
 ---
 # <a name="user-interface-reference-accesstosql"></a>Справочник по пользовательскому интерфейсу (AccessToSQL)
 В этом разделе содержатся разделы справки по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) для доступа.  

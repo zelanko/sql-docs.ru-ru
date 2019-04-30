@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 216e0182c9226306fb2feafe9dee6e8fb13562ad
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818726"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298471"
 ---
 # <a name="disconnect-from-a-registered-server-sql-server-management-studio"></a>Отключение от зарегистрированного сервера (среда SQL Server Management Studio)
   В этом разделе описывается, как отключить обозреватель объектов от сервера в любое время в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Это не приведет к отключению других компонентов среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , например редактора SQL.  

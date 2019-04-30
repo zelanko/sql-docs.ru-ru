@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a6e1399c97e77a2b7b0bb68a8022effefb1d4814
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59964110"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63265915"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>Создание управляемой данными подписки (учебник по службам SSRS)
   Службы [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] предоставляют управляемые данными подписки, позволяющие настроить распространение отчета на основе динамических данных подписчиков. Управляемые данными подписки предназначены для следующих типов сценариев:  

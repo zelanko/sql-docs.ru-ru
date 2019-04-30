@@ -24,11 +24,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1188f0d5cb68a86b6e3f3305ec9b5a40e51a8d3a
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59932816"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242469"
 ---
 # <a name="granting-permissions-on-a-native-mode-report-server"></a>Предоставление разрешений на сервер отчетов в собственном режиме
   Службы SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] используют авторизацию, основанную на ролях, и подсистему проверки подлинности для определения того, кто может выполнять операции и обращаться к элементам на сервере отчетов. Основанная на ролях авторизация разбивает на категории (роли) множество действий, которые может выполнять отдельный пользователь или группа. Проверка подлинности основывается на встроенной проверке подлинности Windows либо в пользовательском модуле проверки подлинности, предоставленном пользователем. Можно использовать стандартные или настраиваемые роли с любым типом проверки подлинности.  

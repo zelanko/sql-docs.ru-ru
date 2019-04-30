@@ -1,5 +1,5 @@
 ---
-title: Задача 3. Создание и запуск проекта качества данных для сопоставления | Документация Майкрософт
+title: Задача 3. Создание и запуск проекта качества данных для сопоставления | Документация Майкрософт
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: abca2dcf68472884eb3c1e42f0ff9c14004098c5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035867"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250028"
 ---
-# <a name="task-3-creating-and-running-a-data-quality-project-for-matching"></a>Задача 3. Создание и запуск проекта служб DQS для сопоставления
+# <a name="task-3-creating-and-running-a-data-quality-project-for-matching"></a>Задача 3. Создание и запуск проекта качества данных для сопоставления
   В этой задаче вы создадите проект служб DQS для операции сопоставления и выполните сопоставление очищенных данных поставщика, чтобы удалить все повторяющиеся значения.  
   
 1.  На главной странице **клиента DQS**нажмите кнопку **Создать проект качества данных**.  

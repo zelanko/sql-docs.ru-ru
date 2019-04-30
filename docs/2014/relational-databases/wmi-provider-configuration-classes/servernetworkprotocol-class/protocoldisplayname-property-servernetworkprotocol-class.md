@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 174691a92836a2548e1fa5776872801cd1225afc
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368636"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266490"
 ---
 # <a name="protocoldisplayname-property-servernetworkprotocol-class"></a>Свойство ProtocolDisplayName (класс ServerNetworkProtocol)
   Возвращает отображаемое имя сетевого протокола сервера.  

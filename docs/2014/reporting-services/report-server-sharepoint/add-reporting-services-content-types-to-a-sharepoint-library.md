@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 566ae0a91dd36d71ab6690e8910f1dd1cfe50043
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59963500"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63306383"
 ---
 # <a name="add-the-report-viewer-web-part-to-a-web-page-reporting-services-in-sharepoint-integrated-mode"></a>добавить на веб-страницу веб-часть средства просмотра отчетов (службы Reporting Services в режиме интеграции с SharePoint)
   Веб-часть «Средство просмотра отчетов» может применяться для просмотра отчетов, запускаемых на сервере отчетов, настроенном для работы в режиме интеграции с SharePoint. Она позволяет отображать файлы определения отчетов (RDL), созданные в построителе отчетов или конструкторе отчетов и переданные в библиотеку.  

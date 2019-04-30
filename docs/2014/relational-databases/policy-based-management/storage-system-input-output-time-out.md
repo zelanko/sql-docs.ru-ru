@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9d349a21fdd522b5af299c3ad130cdce984f569c
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241982"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63253173"
 ---
 # <a name="storage-system-input-output-time-out"></a>Время ожидания ввода-вывода для системы хранения
   Это правило проверяет журнал системных событий на наличие ошибки с идентификатором EventId 9. Сообщение указывает на превышение времени ожидания ввода-вывода в системе хранения.  

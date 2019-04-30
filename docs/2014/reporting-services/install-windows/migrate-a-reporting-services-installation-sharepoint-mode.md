@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 46b689a3eee612bdeb5bac5e0706574e21493635
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59952880"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63260989"
 ---
 # <a name="migrate-a-reporting-services-installation-sharepoint-mode"></a>Перенос установки служб Reporting Services (режим интеграции с SharePoint)
   В этом разделе дается обзор шагов, необходимых для миграции развертывания служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint из одной среды SharePoint в другую. Конкретные шаги могут различаться в зависимости от версии, с которой выполняется перенос. Дополнительные сведения о сценариях обновления и переноса в режиме интеграции с SharePoint см. в разделе [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md). Если требуется только скопировать элементы отчета с одного сервера на другой, см. в разделе [Образец скрипта программы rs.exe служб Reporting Services для переноса содержимого между серверами отчетов](../tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  

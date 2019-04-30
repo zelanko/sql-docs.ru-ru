@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f46f391e905ed8ea0bce4aaa4d692e2b79de4ac7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131964"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63276480"
 ---
 # <a name="product-key"></a>Ключ продукта
   На странице «Ключ продукта» можно проверить экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]или указать бесплатный выпуск [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для установки.  

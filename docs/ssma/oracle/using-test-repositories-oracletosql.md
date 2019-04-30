@@ -14,11 +14,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: cae34190da8179663996c7a385cc13541353ee0d
-ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56319245"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63283514"
 ---
 # <a name="using-test-repositories-oracletosql"></a>Использование репозиториев тестирования (OracleToSQL)
 Хранилище тестов SSMA хранилищами тестировщик SSMA тестовых случаев и результаты теста для последующего использования. Данные хранилища сохраняются в таблицах SQL Server **TestCaseRepository** и **RunTestCaseResultRepository** в схеме **ssma_oracle_utilities** из **ssmatesterdb** базы данных.  

@@ -1,5 +1,5 @@
 ---
-title: Арифметические операторы | Документы Microsoft
+title: Арифметические операторы | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c422df08152eaf9266a6ca3408bfce12e023c2a3
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739463"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63284520"
 ---
 # <a name="arithmetic-operators"></a>Арифметические операторы
 
@@ -44,7 +44,7 @@ ms.locfileid: "34739463"
 -   Выражения внутри скобок выполняются прежде всех других операторов.  
   
 ## <a name="see-also"></a>См. также  
- [Справочник по операторам Многомерных &#40;многомерных Выражений&#41;](../mdx/mdx-operator-reference-mdx.md)   
+ [Справочник по операторам многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-operator-reference-mdx.md)   
  [Операторы &#40;синтаксис многомерных Выражений&#41;](../mdx/operators-mdx-syntax.md)  
   
   

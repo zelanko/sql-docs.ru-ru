@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 959d219565de6577e31d9548f5daea0fe0d2419e
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51695958"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298117"
 ---
 # <a name="instant-file-initialization-configuration"></a>Конфигурация мгновенной инициализации файлов
 Мгновенная инициализация файлов является компонентом SQL Server, который обеспечивает более быстрое выполнение операций файла данных. Установите флажок, чтобы включить мгновенную инициализацию файлов улучшит производительность SQL Server PDW. Тем не менее если это представляет угрозу безопасности для вас бизнеса, оставьте поле флажок снят.  

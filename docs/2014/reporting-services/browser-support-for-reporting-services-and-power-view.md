@@ -10,11 +10,11 @@ ms.topic: conceptual
 ms.custom: ''
 ms.date: 06/13/2017
 ms.openlocfilehash: 58ed105619ca5ad5eadb00271e18ddaa10c6bfe3
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59953960"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266815"
 ---
 # <a name="planning-for-reporting-services-and-power-view-browser-support-reporting-services-2014"></a>Планирование служб Reporting Services и поддержки Power View в браузерах (Reporting Services 2014)
   В [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)][!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] для просмотра отчетов и запуска диспетчера отчетов используется веб-браузер. Не все браузеры поддерживают полную функциональность отчетов. Этот раздел содержит справочные сведения и требования для функций управления диспетчером отчетов, просмотра отчетов и элементов управления средства просмотра отчетов в Visual Studio. В этом разделе также указаны доступные функции для поддерживаемых браузеров, требования к проверке подлинности и написанию скриптов.  

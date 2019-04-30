@@ -18,11 +18,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e89bfac90a0658c8f5ba839632451187ffa9760d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810956"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63261903"
 ---
 # <a name="replicate-identity-columns"></a>Репликация столбцов идентификаторов
   Когда столбцу назначается свойство IDENTITY, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] автоматически создает последовательные номера для новых строк, вставляемых в таблицу, которая содержит столбец идентификаторов. Дополнительные сведения см. в статье о [свойстве IDENTITY (Transact-SQL)](/sql/t-sql/statements/create-table-transact-sql-identity-property). Так как столбцы идентификаторов могут быть включены как часть первичного ключа, важно исключить появление повторяющихся значений в столбцах идентификаторов. Для использования столбцов идентификаторов в топологии репликации, имеющей обновления на нескольких узлах, все узлы топологии репликации должны использовать разные диапазоны значений идентификаторов, чтобы исключить появление повторяющихся идентификаторов.  

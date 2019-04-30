@@ -1,5 +1,5 @@
 ---
-title: Задача 5. Экспорт результатов в файл Excel очистки | Документация Майкрософт
+title: Задача 5. Экспорт результатов в файл Excel очистки | Документация Майкрософт
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: aab1eff896ba602f118606b8f80894260e26f7ec
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028925"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63276768"
 ---
-# <a name="task-5-exporting-cleansing-results-to-an-excel-file"></a>Задача 5. Экспорт результатов очистки в файл Excel.
+# <a name="task-5-exporting-cleansing-results-to-an-excel-file"></a>Задача 5. Экспорт результатов очистки в файл Excel
   В этой задаче вы экспортируете результаты операции очистки в файл Excel. См. в разделе [этап экспорта](https://msdn.microsoft.com/library/hh213061.aspx#Export) Дополнительные сведения.  
   
 1.  В области справа выберите **Excel** для **конечный тип**.  

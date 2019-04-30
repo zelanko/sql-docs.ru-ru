@@ -16,11 +16,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: b6dc03709ea16fb718ff93ed60f75ad4d1515eaf
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541403"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63273214"
 ---
 # <a name="get-started-with-full-text-search"></a>Приступая к работе с компонентом Full-Text Search
   Базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживают полнотекстовую индексацию по умолчанию. Однако для использования полнотекстового индекса в таблице надо настроить полнотекстовое индексирование для столбцов таблиц, к которым планируется обращение при использовании средства полнотекстового поиска.  
@@ -129,7 +129,7 @@ SELECT FULLTEXTCATALOGPROPERTY('AdvWksDocFTCat', 'Populatestatus');
  Как правило, если выполняется полное заполнение, возвращается значение 1.  
   
   
-##  <a name="example"></a> Пример: Подготовка к работе средств полнотекстового поиска  
+##  <a name="example"></a> Пример. Настройка полнотекстового поиска  
  В следующем примере из двух частей в базе данных AdventureWorks создается полнотекстовый каталог с именем `AdvWksDocFTCat`, затем создается полнотекстовый индекс в таблице `Document` базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Эта инструкция создает полнотекстовый каталог в папке по умолчанию, указанной во время установки, то есть папка `AdvWksDocFTCat` будет вложена в каталог по умолчанию.  
   
 1.  Для создания полнотекстового каталога `AdvWksDocFTCat` в примере используется инструкция [CREATE FULLTEXT CATALOG](/sql/t-sql/statements/create-fulltext-catalog-transact-sql):  

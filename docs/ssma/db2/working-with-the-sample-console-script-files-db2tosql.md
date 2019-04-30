@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: dc7976fae322dddc24eda7cf6ef84ef20a7a9e61
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52394933"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63259004"
 ---
 # <a name="working-with-the-sample-console-script-files-db2tosql"></a>Работа с образцами файлов сценария консоли (DB2ToSQL)
 Справочник по пользовательскому и использовании были предоставлены несколько образцы файлов вместе с продуктом. В этом разделе описывается способ легко настроить эти сценарии в соответствии с потребностями пользователя.  

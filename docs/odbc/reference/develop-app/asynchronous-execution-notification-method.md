@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6aa634f154eb0594c76ae7e65b8d237175a3f92e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543399"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63288522"
 ---
 # <a name="asynchronous-execution-notification-method"></a>Асинхронное выполнение (метод уведомления)
 ODBC позволяет асинхронное выполнение подключения и операций инструкции. Поток приложения можно вызывать функции ODBC в асинхронном режиме, и функция может вернуть, прежде чем операция будет завершена, возвращая поток приложения, для выполнения других задач. В Windows 7 SDK, асинхронные инструкции или операций соединения приложения определить, что асинхронная операция была завершались с использованием метода опроса. Дополнительные сведения см. в разделе [асинхронное выполнение (метод опроса)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md). Начиная с пакета SDK Windows 8, необходимо выяснить, что асинхронная операция завершена с помощью метода уведомления.  
@@ -327,7 +327,7 @@ if (SQL_ASYNC_NOTIFICATION_CAPABLE == InfoValue)
   
  Атрибуты соединения SQL_ATTR_ASYNC_DBC_FUNCTION_ENABLE и SQL_ATTR_ASYNC_DBC_EVENT определить ли ODBC выполняет в асинхронном режиме и ли ODBC включает режим уведомлений для дескриптора соединения. Атрибуты инструкции атрибуту SQL_ATTR_ASYNC_ENABLE и SQL_ATTR_ASYNC_STMT_EVENT определить ли ODBC выполняет в асинхронном режиме и ли ODBC включает режим уведомлений для дескриптора инструкции.  
   
-|Атрибуту SQL_ATTR_ASYNC_ENABLE или SQL_ATTR_ASYNC_DBC_FUNCTION_ENABLE|SQL_ATTR_ASYNC_STMT_EVENT или SQL_ATTR_ASYNC_DBC_EVENT|Режим|  
+|SQL_ATTR_ASYNC_ENABLE or SQL_ATTR_ASYNC_DBC_FUNCTION_ENABLE|SQL_ATTR_ASYNC_STMT_EVENT or SQL_ATTR_ASYNC_DBC_EVENT|Режим|  
 |-------------------------------------------------------------------------|-------------------------------------------------------------------|----------|  
 |Включить|отличное от null|Асинхронное уведомление|  
 |Включить|null|Асинхронные опроса|  

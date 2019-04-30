@@ -1,5 +1,5 @@
 ---
-title: Функция VarP (многомерные Выражения) | Документы Microsoft
+title: VarP (многомерные Выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: dc1e6276de9a03af9800b9e242d54130c4241732
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63251487"
 ---
 # <a name="varp-mdx"></a>VarP (многомерные выражения)
 
@@ -38,9 +38,9 @@ VarP(Set_Expression [ ,Numeric_Expression ] )
 ## <a name="remarks"></a>Примечания  
  **VarP** функция возвращает смещенную дисперсию указанного числового выражения, рассчитанного для указанного набора.  
   
- **VarP** функция использует смещенной совокупности формул при [Var](../mdx/var-mdx.md) функции используется формула несмещенной совокупности.  
+ **VarP** функция использует смещенной совокупности формул при [Var](../mdx/var-mdx.md) функция использует формулу несмещенной совокупности.  
   
 ## <a name="see-also"></a>См. также  
- [Справочник по функциям многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
   
   

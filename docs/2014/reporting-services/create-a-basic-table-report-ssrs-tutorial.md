@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1f8dcab2a07aca7971ea8c799660b075fe0bcfd2
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59944911"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266264"
 ---
 # <a name="create-a-basic-table-report-ssrs-tutorial"></a>Создание простого табличного отчета (учебник по службам SSRS)
   Этот учебник предназначен для создания простой табличный отчет на основе [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] базы данных с помощью конструктора отчетов. Для создания отчетов также можно использовать построитель отчетов и мастер отчетов. В этом учебнике требуется создать проект отчета, указать сведения о соединении, определить запрос, добавить область данных таблицы и выполнить предварительный просмотр отчета.  

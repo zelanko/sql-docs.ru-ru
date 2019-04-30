@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a50b1b947ce82eb38ef7c7f6fd026bc9f83376f4
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59964886"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63261100"
 ---
 # <a name="general-properties-page-shared-data-sources-report-manager"></a>Страница «Общие свойства», общие источники данных (диспетчер отчетов)
   На странице свойств «Общие» можно просматривать и изменять свойства общего элемента источника данных. Все изменения свойств вступают в силу для всех отчетов, обращающихся к данному элементу, после нажатия кнопки **Применить**.  

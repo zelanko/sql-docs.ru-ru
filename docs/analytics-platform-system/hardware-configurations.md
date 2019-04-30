@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 2a252e5f2aebd8d51b9b0eb1f353ded504155c2e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507945"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63283280"
 ---
 # <a name="hardware-configurations---analytics-platform-system"></a>Конфигурации оборудования - Analytics Platform System
 Analytics Platform System (APS) оборудования спроектирована с масштабируемые единицы таким образом, чтобы приобрести подходящий объем обработки и хранения в соответствии с требованиями бизнеса. Модуль масштабирует хранилища для SQL Server Parallel Data Wareouse (PDW) с нескольких терабайт до более чем 6 петабайт данных.  

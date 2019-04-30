@@ -1,5 +1,5 @@
 ---
-title: Использование логических функций | Документы Microsoft
+title: Использование логических функций | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,20 +10,20 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a63d8cb22a8533cf352acb690f87916e2e9d568d
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743523"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249829"
 ---
 # <a name="using-logical-functions"></a>Использование логических функций
 
 
   Логическая функция выполняет логическую операцию или сравнение объектов и выражений, результатом вычисления логической функции будет логическое значение. В многомерных выражениях логические функции крайне важны для определения положения элементов.  
   
- Наиболее часто используемые Логическая функция — **IsEmpty** функции. Дополнительные сведения об использовании **IsEmpty** см. в разделе [пустые значения](../mdx/working-with-empty-values.md).  
+ Наиболее часто используемые Логическая функция — это **IsEmpty** функции. Дополнительные сведения об использовании **IsEmpty** функции, см. в разделе [работа с пустыми значениями](../mdx/working-with-empty-values.md).  
   
- Следующий запрос показывает использование **IsLeaf** и **IsAncestor** функции:  
+ Следующий запрос показывает, как использовать **IsLeaf** и **IsAncestor** функции:  
   
  `WITH`  
   

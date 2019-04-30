@@ -1,5 +1,5 @@
 ---
-title: Задача 3. Импорт значений домена из файла Excel | Документация Майкрософт
+title: Задача 3. Импорт значений домена из файла Excel | Документация Майкрософт
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,13 +8,13 @@ ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 242e8309-1195-495b-9cd5-aa127748c185
 ms.openlocfilehash: 323f555337afa56b51ded0fb303f58960a52f310
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037255"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250194"
 ---
-# <a name="task-3-importing-domain-values-from-an-excel-file"></a>Задача 3. Импорт значений домена из файла Excel
+# <a name="task-3-importing-domain-values-from-an-excel-file"></a>Задача 3. Импорт значений домена из файла Excel
   При выполнении этой задачи вы импортируете значения для домена **Штат** из листа файла Excel.  
   
 1.  Выберите домен **Штат** в **списке доменов**.  

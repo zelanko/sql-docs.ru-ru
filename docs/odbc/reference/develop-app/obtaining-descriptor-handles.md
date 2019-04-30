@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 983097de95e41914bb4d577cb071d790a795f96d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853952"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63254677"
 ---
 # <a name="obtaining-descriptor-handles"></a>Получение указателей дескрипторов
 Приложение получает дескриптор любые явно выделенные дескрипторы в виде выходного аргумент вызова **SQLAllocHandle**. Дескриптор дескриптор неявно выделенные получается путем вызова **SQLGetStmtAttr**.

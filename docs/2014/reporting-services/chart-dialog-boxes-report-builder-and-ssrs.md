@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7adf0b27a30b938904b73a75669a7fb2e7923ffb
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59937030"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266248"
 ---
 # <a name="chart-dialog-boxes-report-builder-and-ssrs"></a>Диалоговые окна диаграммы (построитель отчетов и службы SSRS)
   В этом разделе содержится справка по некоторым диалоговым окнам диаграмм. Также можно открыть справку, нажав клавишу F1 или кнопку «Справка» в диалоговом окне.  

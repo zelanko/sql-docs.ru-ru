@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 313ebe2cee8fdae430401eb5443604a84b057a83
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828852"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63241152"
 ---
 # <a name="save-and-open-methods-example-vb"></a>Примеры методов Save и Open (Visual Basic)
 Этих трех примерах показано, как [Сохранить](../../../ado/reference/ado-api/save-method.md) и [откройте](../../../ado/reference/ado-api/open-method-ado-recordset.md) методы, которые могут использоваться совместно.  

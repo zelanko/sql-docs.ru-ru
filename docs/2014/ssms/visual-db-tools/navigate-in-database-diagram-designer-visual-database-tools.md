@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e56a15d10bc267e6613d24ff934daf4561831c1a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816926"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63254463"
 ---
 # <a name="navigate-in-database-diagram-designer-visual-database-tools"></a>Навигация в конструкторе диаграмм баз данных (визуальные инструменты для баз данных)
   В конструкторе диаграмм баз данных можно работать как при помощи мыши, так и при помощи клавиатуры. Дополнительные сведения об особых методах, использованных в конструкторе диаграмм баз данных, см. в следующих таблицах.  

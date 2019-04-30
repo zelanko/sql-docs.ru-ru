@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5f071cf4391c760f7d269382537c3cd4f2b758c3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772072"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63278312"
 ---
 # <a name="overriding-default-precision-and-scale-for-numeric-data-types"></a>Переопределение заданных по умолчанию точности и шкалы для числовых типов данных
 Если поле SQL_DESC_TYPE в Отменить присвоено SQL_C_NUMERIC, с помощью вызова **SQLBindCol** или **SQLSetDescField**, поле SQL_DESC_SCALE в Отменить имеет значение 0, и поле SQL_DESC_PRECISION установлено с точностью до драйвера по умолчанию. Это также имеет значение true, если поле SQL_DESC_TYPE в APD присвоено SQL_C_NUMERIC, с помощью вызова **SQLBindParameter** или **SQLSetDescField**. Это справедливо для входных данных, ввода вывода или выходные параметры.  

@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 870243a5ee69f6058fdc34597ccd4a78b93859e4
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359676"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63252856"
 ---
 # <a name="management-of-logins-and-jobs-after-role-switching-sql-server"></a>Управление именами входа и заданиями после переключения ролей (SQL Server)
   При развертывании решения по обеспечению высокой доступности или аварийного восстановления для базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] важно воспроизвести значимые данные, хранящиеся в этой базе данных, в базе данных **master** или **msdb** . Обычно к таким данным относятся задания базы данных-источника или основной базы данных, а также имена входа пользователей или процессов, которым требуется подключаться к базе данных. Эти данные следует скопировать на экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , где размещена база данных-получатель или зеркальная база данных. После переключения ролей рекомендуется по возможности программно воспроизвести эти данные в новой базе данных-источнике или основной базе данных.  

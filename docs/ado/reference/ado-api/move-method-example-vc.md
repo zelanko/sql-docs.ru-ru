@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b9a158f5f31239a9e8c3dc791a86e4fdacceb8c5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666238"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242888"
 ---
 # <a name="move-method-example-vc"></a>Пример метода Move (Visual C++)
 В этом примере используется [переместить](../../../ado/reference/ado-api/move-method-ado.md) метод для записи указателя на основе ввода пользователя.  

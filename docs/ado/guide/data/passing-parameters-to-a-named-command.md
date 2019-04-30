@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4c221030b54aef21ffa0a2df891561976aacff76
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505707"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63302369"
 ---
 # <a name="passing-parameters-to-a-named-command"></a>Передача параметров именованной команде
 Так же, как результат выполнения команды ошибку, передается как *out* переменной именованные команды и параметры для параметризованной команды можно было переданного в качестве *в* переменные в именованную команду.  

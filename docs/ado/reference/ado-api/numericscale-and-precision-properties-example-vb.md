@@ -17,13 +17,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fc8f2ee894416d8e290fe9e1a54b6123664b3c7c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612402"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242402"
 ---
-# <a name="numericscale-and-precision-properties-example-vb"></a>Свойств NumericScale и Precision (Visual Basic)
+# <a name="numericscale-and-precision-properties-example-vb"></a>Примеры свойств NumericScale и Precision (VB)
 В этом примере используется [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) и [точности](../../../ado/reference/ado-api/precision-property-ado.md) свойства для отображения числового масштаба и точности полей в ***скидки*** таблицы  ***Pubs*** базы данных.  
   
 ```  

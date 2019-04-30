@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1ef74d98102c424a71ac1728d664fddbeac2296c
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215603"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63258861"
 ---
 # <a name="sqlconfigdatasource-function"></a>SQLConfigDataSource, функция
 **Соответствие стандартам**  
@@ -58,7 +58,7 @@ BOOL SQLConfigDataSource(
   
  ODBC_CONFIG_DSN: Настройка (изменить) существующего источника данных.  
   
- ЗНАЧЕНИЕ ODBC_REMOVE_DSN: Удаление существующего источника данных.  
+ ODBC_REMOVE_DSN: Удаление существующего источника данных.  
   
  ODBC_ADD_SYS_DSN: Добавьте новый источник данных системы.  
   
@@ -84,7 +84,7 @@ BOOL SQLConfigDataSource(
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|Ошибки общие установщика|Произошла ошибка для которой нет ошибок определенных установщика.|  
 |ODBC_ERROR_INVALID_HWND|Недопустимый дескриптор окна|*HwndParent* аргумент был недопустимым, или значение NULL.|  
-|ODBC_ERROR_INVALID_REQUEST_TYPE|Недопустимый тип запроса|*FRequest* аргумент не является одним из следующих:<br /><br /> ODBC_ADD_DSN ODBC_CONFIG_DSN ЗНАЧЕНИЕ ODBC_REMOVE_DSN ODBC_ADD_SYS_DSN ODBC_CONFIG_SYS_DSN ODBC_REMOVE_SYS_DSN ODBC_REMOVE_DEFAULT_DSN|  
+|ODBC_ERROR_INVALID_REQUEST_TYPE|Недопустимый тип запроса|*FRequest* аргумент не является одним из следующих:<br /><br /> ODBC_ADD_DSN ODBC_CONFIG_DSN ODBC_REMOVE_DSN ODBC_ADD_SYS_DSN ODBC_CONFIG_SYS_DSN ODBC_REMOVE_SYS_DSN ODBC_REMOVE_DEFAULT_DSN|  
 |ODBC_ERROR_INVALID_NAME|Недопустимое имя драйвера или перевода|*LpszDriver* предоставил недопустимый аргумент. Он не будет найден в реестре.|  
 |ODBC_ERROR_INVALID_KEYWORD_VALUE|Пары "недопустимое ключевое слово значение"|*LpszAttributes* аргумент содержит синтаксическую ошибку.|  
 |ODBC_ERROR_REQUEST_FAILED|*Запросить* сбой|Программа установки не удалось выполнить операцию, запрошенную *fRequest* аргумент. Вызов **ConfigDSN** не удалось.|  
@@ -102,7 +102,7 @@ BOOL SQLConfigDataSource(
 |----------------|------------------------|  
 |ODBC_ADD_DSN|USERDSN_ONLY|  
 |ODBC_CONFIG_DSN|USERDSN_ONLY|  
-|ЗНАЧЕНИЕ ODBC_REMOVE_DSN|USERDSN_ONLY|  
+|ODBC_REMOVE_DSN|USERDSN_ONLY|  
 |ODBC_ADD_SYS_DSN|SYSTEMDSN_ONLY|  
 |ODBC_CONFIG_SYS_DSN|SYSTEMDSN_ONLY|  
 |ODBC_REMOVE_SYS_DSN|SYSTEMDSN_ONLY|  

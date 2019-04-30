@@ -1,5 +1,5 @@
 ---
-title: Занятие 5. Публикация определения отчета на сервере отчетов | Документация Майкрософт
+title: 'Занятие 5.: Публикация определения отчета на сервере отчетов | Документация Майкрософт'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: c9c561657767c1b1e593fa9dcd9702b72193004d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033625"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63272867"
 ---
-# <a name="lesson-5-publish-the-report-definition-to-the-report-server"></a>Занятие 5. Публикация определения отчета на сервере отчетов
+# <a name="lesson-5-publish-the-report-definition-to-the-report-server"></a>Занятие 5.: Публикация определения отчета на сервере отчетов
   Последним шагом обновления определения отчета является его публикация на сервере отчетов.  
   
 ### <a name="to-publish-the-report-to-the-report-catalog"></a>Публикация отчета в каталоге отчетов  
@@ -77,7 +77,7 @@ ms.locfileid: "56033625"
     ```  
   
 ## <a name="next-lesson"></a>Следующее занятие  
- В следующем занятии будет скомпилировать и запустить `SampleRDLSchema` приложения. См. в разделе [Урок 6: Выполнение приложения схемы языка определения Отчетов &#40;VB-C&#35;&#41;](../../2014/tutorials/lesson-6-run-the-rdl-schema-application-vb-csharp.md).  
+ В следующем занятии будет скомпилировать и запустить `SampleRDLSchema` приложения. См. [Занятие 6. Выполнение приложения схемы языка определения Отчетов &#40;VB-C&#35;&#41;](../../2014/tutorials/lesson-6-run-the-rdl-schema-application-vb-csharp.md).  
   
 ## <a name="see-also"></a>См. также  
  [Обновление отчетов с помощью классов, созданных из RDL-схемы &#40;учебник по службам SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   

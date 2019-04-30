@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 60d3b2660f3a20883e9b9f2d3b4202526c15a943
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559781"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242783"
 ---
 # <a name="address-book-navigation-buttons"></a>Кнопки навигации адресной книги
 Приложения адресной книги отображаются кнопки навигации в нижней части веб-страницы. Кнопки перехода можно использовать для перемещения по данным в сетке отображается HTML, выбирая первой или последней строки или строк, смежных к текущему выделению.  

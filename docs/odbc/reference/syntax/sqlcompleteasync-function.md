@@ -16,17 +16,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 91046e19e77d3074a8ecef2163e8d46ab528bec9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639852"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63259358"
 ---
 # <a name="sqlcompleteasync-function"></a>Функция SQLCompleteAsync
 **Соответствие стандартам**  
- Версия была введена: ODBC 3.8  
+ Представленные версии: ODBC 3.8  
   
- Соответствие стандартам: нет  
+ Соответствие стандартам: None  
   
  **Сводка**  
  **SQLCompleteAsync** может использоваться для определения, по завершении асинхронной функции с помощью либо обработки на основе уведомлений или опроса. Дополнительные сведения об асинхронных операциях см. в разделе [асинхронное выполнение](../../../odbc/reference/develop-app/asynchronous-execution.md).  
@@ -67,11 +67,11 @@ SQLRETURN SQLCompleteAsync(
   
  **SQLCompleteAsync** возвращает код, отличный от SQL_SUCCESS, чтобы указать, что **SQLCompleteAsync** выполняется неправильно. **SQLCompleteAsync** не будет учитывать любые диагностические записи в этом случае. Ниже приведены возможные коды возврата.  
   
--   SQL_INVALID_HANDLE: Дескриптор обозначается *HandleType* и *обрабатывать* не является допустимым дескриптором.  
+-   SQL_INVALID_HANDLE: Указывает дескриптор *HandleType* и *обрабатывать* не является допустимым дескриптором.  
   
--   Значение SQL_ERROR: *AsyncRetCodePtr* имеет значение NULL или асинхронной обработки не включен для дескриптора.  
+-   ЗНАЧЕНИЕ SQL_ERROR: *AsyncRetCodePtr* имеет значение NULL или асинхронной обработки не включен для дескриптора.  
   
--   Значение SQL_NO_DATA: В режиме уведомлений асинхронная операция не выполняется, или диспетчер драйверов не получал уведомление о приложения. В режиме опроса асинхронной операции не выполняется.  
+-   SQL_NO_DATA: В режиме уведомлений асинхронная операция не выполняется, или диспетчер драйверов не получал уведомление о приложения. В режиме опроса асинхронной операции не выполняется.  
   
 ## <a name="comments"></a>Комментарии  
  В режиме опроса на основе асинхронной обработки *AsyncRetCodePtr* может быть SQL_STILL_EXECUTING при **SQLCompleteAsync** возвращает значение SQL_SUCCESS. Приложения должны периодически опрашивать до *AsyncRetCodePtr* не SQL_STILL_EXECUTING. В режиме асинхронной обработки на основе уведомлений *AsyncRetCodePtr* никогда не будет SQL_STILL_EXECUTING.  

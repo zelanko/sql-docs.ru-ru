@@ -21,15 +21,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2f8c585bc758b74c666c8da625c1e57af7af2582
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601112"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63258801"
 ---
 # <a name="sqlgetdescrec-function"></a>Функция SQLGetDescRec
 **Соответствие стандартам**  
- Версия была введена: ODBC 3.0 соответствует стандартам: ISO-92  
+ Представленные версии: ODBC 3.0 стандартов соответствия: ISO-92  
   
  **Сводка**  
  **SQLGetDescRec** возвращает текущие параметры или значения нескольких полей в записи дескриптора. Поля, возвращаемые описывают имя, тип данных и хранение данных столбца или параметра.  
@@ -59,7 +59,7 @@ SQLRETURN SQLGetDescRec(
  *RecNumber*  
  [Вход] Указывает запись дескриптора, из которого приложение ищет сведения. Записи дескриптора нумеруются от 1, записей номером 0 является записи закладки. *RecNumber* аргумент должен быть меньше или равно значению SQL_DESC_COUNT. Если *RecNumber* меньше или равно SQL_DESC_COUNT, но строка не содержит данных для столбца или параметра, вызов **SQLGetDescRec** будет возвращать значения по умолчанию для поля. (Дополнительные сведения см. в разделе «Инициализация поля дескриптора» в [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md).)  
   
- *Название*  
+ *Name*  
  [Выход] Указатель на буфер, в которую будет возвращен поля SQL_DESC_NAME для записи дескриптора.  
   
  Если *имя* имеет значение NULL, *StringLengthPtr* по-прежнему возвращает общее число символов (включая знак завершения null для символьных данных) для возврата в буфере, на которые указывают  *Имя*.  
@@ -89,7 +89,7 @@ SQLRETURN SQLGetDescRec(
  [Выход] Указатель на буфер, в которую будет возвращено значение поля SQL_DESC_NULLABLE для записи дескриптора.  
   
 ## <a name="returns"></a>Возвращает  
- Значение SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, значение SQL_ERROR, SQL_NO_DATA или SQL_INVALID_HANDLE.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, SQL_NO_DATA, or SQL_INVALID_HANDLE.  
   
  Будет возвращено значение SQL_NO_DATA, если *RecNumber* больше, чем текущее количество записей дескриптора.  
   

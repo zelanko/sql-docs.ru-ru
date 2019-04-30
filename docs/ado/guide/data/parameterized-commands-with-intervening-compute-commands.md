@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9e892aed72ba1d74f9bdafc319c71a39546f4402
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527656"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63302478"
 ---
 # <a name="parameterized-commands-with-intervening-compute-commands"></a>Параметризованные команды с промежуточными командами COMPUTE
 Типичный параметризованные фигуры команда APPEND имеет предложение, которое создает родительского **набор записей** с командой запроса и другое предложение, которое создается **набор записей** с помощью команды параметризованного запроса - то есть команду, содержащую заполнителя параметра (знак вопроса «?»). Полученный в результате формируется **записей** имеет два уровня, в которых родительским занимает верхний уровень и дочерние занимает более низкий уровень.  

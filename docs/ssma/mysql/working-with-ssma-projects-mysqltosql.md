@@ -16,11 +16,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 518f899118d5a7d2dce4f56d185fce9d5b1e47df
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661673"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287852"
 ---
 # <a name="working-with-ssma-projects-mysqltosql"></a>Работа с проектами SSMA (MySQLToSQL)
 Чтобы перенести базы данных MySQL в SQL Server или SQL Azure, необходимо сначала создать проект SSMA. Проект — это файл, который содержит следующие сведения:  
@@ -84,7 +84,7 @@ SSMA содержит несколько параметров для преоб�
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014  
   
-    -   База данных Azure SQL  
+    -   БД SQL Azure  
   
 А затем нажмите кнопку **ОК**  
   

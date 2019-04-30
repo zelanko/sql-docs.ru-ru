@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ca2a52eb08cdf1b1b9cb5a23805da34aab915b7a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664632"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63273392"
 ---
 # <a name="usage-counting"></a>Подсчет использования
 > [!NOTE]  
@@ -48,7 +48,7 @@ ms.locfileid: "47664632"
 >   
 >  ПРОГРАММНОЕ ОБЕСПЕЧЕНИЕ  
 >   
->  Microsoft  
+>  Майкрософт  
 >   
 >  Windows  
 >   
@@ -60,9 +60,9 @@ ms.locfileid: "47664632"
   
  В следующей таблице показан формат значения счетчика использования файла.  
   
-|Имя|Тип данных|Данные |  
+|Имя|Тип данных|Данные|  
 |----------|---------------|----------|  
-|*Full-path*|REG_DWORD|*count*|  
+|*full-path*|REG_DWORD|*count*|  
   
  Например предположим, что драйвер для Informix используются файлы Infrmx32.dll и Infrmx32.hlp и Предположим, что этот драйвер был установлен дважды. Значения в подразделе SharedDlls Informix драйвера будет выглядеть следующим образом:  
   

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ea282362853ca25a761f870970a288585a00160e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802932"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63275895"
 ---
 # <a name="error-object"></a>Объект Error
 Содержит сведения об ошибках доступа к данным, которые относятся к одной операции с участием поставщика.  
@@ -62,4 +62,4 @@ ms.locfileid: "47802932"
  [Описание, HelpContext, HelpFile, NativeError, номер, источника и пример свойства SQLState (Visual C++)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
  [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Коллекция Errors (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
- [Приложение А. Поставщики](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [Приложение а. Поставщики](../../../ado/guide/appendixes/appendix-a-providers.md)

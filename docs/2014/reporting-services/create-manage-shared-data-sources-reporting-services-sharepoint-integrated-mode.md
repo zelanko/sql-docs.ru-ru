@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f4920a345d3be827f369257be231654cf193fd04
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59949400"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63265641"
 ---
 # <a name="create-and-manage-shared-data-sources-reporting-services-in-sharepoint-integrated-mode"></a>Создание общих источников данных и управление ими (службы Reporting Services в режиме интеграции с SharePoint)
   При запуске отчета из библиотеки SharePoint сведения о соединении могут определяться внутри отчета или во внешнем файле, связанном с отчетом. Если сведения о соединении внедряются в отчет, то источник данных называется пользовательским. Если сведения о соединении определены во внешнем файле, то источник данных называется общим. Внешний файл может являться RSDS-файлом источника данных сервера отчетов или ODC-файлом подключения к данным Office.  

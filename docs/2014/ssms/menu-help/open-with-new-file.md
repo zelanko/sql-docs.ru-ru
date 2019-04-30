@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 92d0b5adcdb6b5c482b2a0abcf4ca00f83674df9
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328364"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240134"
 ---
 # <a name="open-with-new-file"></a>Открыть с помощью (создать файл)
   Можно открыть документ в одном или нескольких редакторах, щелкнув **Открыть** в меню **Файл**, а затем выбрав **Файл**. В диалоговом окне **Открытие файла** выберите файл, щелкните стрелку **Открыть** , затем щелкните **Открыть с помощью**. В диалоговом окне **Открыть с помощью** в списке **Выберите программу для открытия** выберите нужную программу и нажмите **Открыть**.  

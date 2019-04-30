@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b7b04dc2554b820fc6ac8344457754aae984d4b8
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213113"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63258850"
 ---
 # <a name="sqldatasources-function"></a>Функция SQLDataSources
 **Соответствие стандартам**  
@@ -83,7 +83,7 @@ SQLRETURN SQLDataSources(
  [Выход] Указатель на буфер, в которую будет возвращено общее число символов (за исключением знака завершения null) для возврата в \* *описание*. Если количество символов, доступных для возврата больше или равно *BufferLength2*, описание драйвера в \* *описание* усекается до *BufferLength2*  минус длина знак завершения null.  
   
 ## <a name="returns"></a>Возвращает  
- Значение SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, значение SQL_ERROR или SQL_INVALID_HANDLE.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_ERROR, or SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Диагностика  
  Когда **SQLDataSources** возвращает значение SQL_ERROR или SQL_SUCCESS_WITH_INFO, можно получить путем вызова связанного значения SQLSTATE **SQLGetDiagRec** с *HandleType*из SQL_HANDLE_ENV и *обрабатывать* из *EnvironmentHandle*. В следующей таблице перечислены значения SQLSTATE, обычно возвращаемые при помощи **SQLDataSources** и объясняется каждый из них в контексте этой функции; описания SQLSTATE, возвращаемых диспетчером драйверов предшествует обозначение «(DM)». Возвращается связанный с каждого значения SQLSTATE значение SQL_ERROR, если не указано иное.  

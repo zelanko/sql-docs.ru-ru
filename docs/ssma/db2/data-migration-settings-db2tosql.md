@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 7dbdee734d6d8a1dac825ad8f502c5851f746f42
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681082"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298882"
 ---
 # <a name="data-migration-settings-db2tosql"></a>Параметры миграции данных (DB2ToSQL)
   
@@ -48,9 +48,9 @@ ms.locfileid: "51681082"
   
 Существуют две кнопки присутствует находящие отклик у.:  
   
--   **Применить:** щелкните **применить** для применения параметров, которые были изменены.  
+-   **Примените:** Нажмите кнопку **применить** для применения параметров, которые были изменены.  
   
--   **Отмена:** щелкните **отменить** восстановления присутствует параметров, прежде чем были внесены изменения.  
+-   **Отмена:** Нажмите кнопку **отменить** восстановления присутствует параметров, прежде чем были внесены изменения.  
   
 ## <a name="see-also"></a>См. также  
 [Перенос данных DB2 в SQL Server](https://msdn.microsoft.com/86cbd39f-6dac-409a-9ce1-7dd54403f84b)  

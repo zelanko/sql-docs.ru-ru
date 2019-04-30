@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4a24ccf58a1cd0f6d0f4fb2fd32dbee79feb896b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204443"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63259641"
 ---
 # <a name="sqlgetconnectattr-function"></a>Функция SQLGetConnectAttr
 **Соответствие стандартам**  
@@ -78,7 +78,7 @@ SQLRETURN SQLGetConnectAttr(
  [Выход] Указатель на буфер, в которую будет возвращено общее число байтов (за исключением знака завершения null) для возврата в \* *ValuePtr*. Если \* *ValuePtr* является указателем null, длина не возвращается. Если значение атрибута — строка символов, а также количество байтов, доступных для возврата больше, чем *BufferLength* минус длина символа завершения null, данные в  *\*ValuePtr*усекается до *BufferLength* минус длина знак завершения null и заканчивается нулевым байтом драйвером.  
   
 ## <a name="returns"></a>Возвращает  
- Значение SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, значение SQL_ERROR или SQL_INVALID_HANDLE.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_ERROR, or SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Диагностика  
  Когда **SQLGetConnectAttr** возвращает значение SQL_ERROR или SQL_SUCCESS_WITH_INFO, а связанное значение SQLSTATE можно получить из структуры диагностических данных, вызвав **SQLGetDiagRec** с *HandleType* из SQL_HANDLE_DBC и *обрабатывать* из *ConnectionHandle*. В следующей таблице перечислены значения SQLSTATE, обычно возвращаемые при помощи **SQLGetConnectAttr** и объясняется каждый из них в контексте этой функции; описания SQLSTATE, возвращаемых диспетчером драйверов предшествует обозначение «(DM)» . Возвращается связанный с каждого значения SQLSTATE значение SQL_ERROR, если не указано иное.  

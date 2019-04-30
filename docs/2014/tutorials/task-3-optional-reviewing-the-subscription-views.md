@@ -1,5 +1,5 @@
 ---
-title: 'Задача 3 (необязательно): Анализ представлений подписки | Документация Майкрософт'
+title: Задача 3 (необязательно). Анализ представлений подписки | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 27e7351f1643d18790d67703858ec6df7694ebd8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030765"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250001"
 ---
-# <a name="task-3-optional-reviewing-the-subscription-views"></a>Задача 3 (необязательно): Анализ представлений подписки
+# <a name="task-3-optional-reviewing-the-subscription-views"></a>Задача 3 (необязательно). Проверка представлений подписки
   В этой задаче вы ознакомитесь с созданием представлений SQL с помощью среды SQL Server Management Studio.  
   
 1.  Запустите **SQL Server Management Studio**. Нажмите кнопку **запустить** , выберите элемент **все программы**, нажмите кнопку **Microsoft SQL Server 2012**, а затем нажмите кнопку **SQL Server Management Studio**.  

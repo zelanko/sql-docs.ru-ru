@@ -1,5 +1,5 @@
 ---
-title: 'SQL в C: GUID | Документация Майкрософт'
+title: 'SQL в C: ИДЕНТИФИКАТОР GUID | Документация Майкрософт'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,13 +16,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 21054bdb3f869a0f06349b32e481144b3582de4e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849002"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63258819"
 ---
-# <a name="sql-to-c-guid"></a>Преобразование данных из SQL в C: GUID
+# <a name="sql-to-c-guid"></a>SQL в C: GUID
 Идентификатор для типа данных GUID ODBC SQL представляет собой:  
   
  SQL_GUID  
@@ -31,13 +31,13 @@ ms.locfileid: "47849002"
   
 |Идентификатор типа C|Тест|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_CHAR|*BufferLength* > байт символов|Данные |36|н/д|  
+|SQL_C_CHAR|*BufferLength* > байт символов|Данные|36|н/д|  
 ||*BufferLength* < 37|Не определено.|Не определено.|22003|  
-|SQL_C_WCHAR|*BufferLength* > Длина символьной|Данные |36|н/д|  
+|SQL_C_WCHAR|*BufferLength* > Длина символьной|Данные|36|н/д|  
 ||*BufferLength* < 37|Не определено.|Не определено.|22003|  
-|SQL_C_BINARY|Байтовая длина данных \< =  *BufferLength*|Данные |Длина данных в байтах|н/д|  
+|SQL_C_BINARY|Байтовая длина данных \< =  *BufferLength*|Данные|Длина данных в байтах|н/д|  
 ||Длину данных в байтах > *BufferLength*|Не определено.|Не определено.|22003|  
-|SQL_C_GUID|Нет [a]|Данные |16 [b]|н/д|  
+|SQL_C_GUID|Нет [a]|Данные|16 [b]|н/д|  
   
  [a] значение *BufferLength* игнорируется для этого преобразования. Драйвер предполагает, что размер **TargetValuePtr* — это размер типа данных C.  
   

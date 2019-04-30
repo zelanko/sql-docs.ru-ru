@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 788e749d7fbfe62e61bedb57b53c994351427be3
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59962180"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266292"
 ---
 # <a name="cube-selection-dialog-box-report-builder"></a>Диалоговое окно «Выбор куба» (построитель отчетов)
   Для выбора в качестве источника данных для отчета другого куба используйте диалоговое окно **Выбор куба** . При выборе другого куба запрос может стать недопустимым.  

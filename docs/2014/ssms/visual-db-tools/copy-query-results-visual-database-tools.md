@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c078597954ac6754966a1a485ac03fc19f817618
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806516"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63269899"
 ---
 # <a name="copy-query-results-visual-database-tools"></a>Копирование результатов запросов (визуальные инструменты для баз данных)
   Можно скопировать результирующий набор в виде текста с разделителями табуляции с панели **Результаты** . Можно скопировать весь результирующий набор или любое количество смежных или несмежных строк или ячеек.  

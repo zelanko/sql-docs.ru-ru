@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a6b4b76edb7eb7761511e39ba97b811dcf3d5e99
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59953500"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63260668"
 ---
 # <a name="general-properties-page-resources-report-manager"></a>Страница свойств «Общие», ресурсы (диспетчер отчетов)
   Страница свойств «Общие» для ресурсов служит для переименования, удаления, перемещения и замены ресурсов. В верхней части страницы отображаются сведения о том, кто добавил ресурс или изменил его свойства.  

@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2905ce39c487a1df04d839b6efe360803674ffb9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52747726"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63255228"
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-description-page"></a>Диалоговое окно «Создание новой политики» или «Открытие политики», страница «Описание»
   С помощью этого диалогового окна можно добавить описания и дополнительные сведения к политике управления на основе политик.  
