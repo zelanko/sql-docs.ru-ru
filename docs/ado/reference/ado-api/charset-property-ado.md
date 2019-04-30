@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 20fff124f33bfeccaec665c74687753e2c0af20b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752342"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239743"
 ---
 # <a name="charset-property-ado"></a>Свойство Charset (ADO)
 Указывает кодировку, в которой содержимое текстового [Stream](../../../ado/reference/ado-api/stream-object-ado.md) преобразования для хранения в внутренний буфер **Stream** объекта.  
@@ -36,7 +36,7 @@ ms.locfileid: "47752342"
   
  **CharSet** используется только с текстом **Stream** объектов ([тип](../../../ado/reference/ado-api/type-property-ado-stream.md) — **adTypeText**). Это свойство учитывается, если **тип** — **adTypeBinary**.  
   
- Пример кода, см. в разделе [Step 4: заполнение текстового поля сведений](../../../ado/guide/data/step-4-populate-the-details-text-box.md).  
+ Пример кода, см. в разделе [Step 4: Заполнение текстового поля сведений](../../../ado/guide/data/step-4-populate-the-details-text-box.md).  
   
 ## <a name="applies-to"></a>Объект применения  
  [Объект Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

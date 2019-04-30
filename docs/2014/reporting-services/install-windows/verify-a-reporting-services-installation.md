@@ -20,11 +20,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1e6d84046679ec69346d721f8ad93d0693a86e8c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59961780"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63143129"
 ---
 # <a name="verify-a-reporting-services-installation"></a>Verify a Reporting Services Installation
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] можно установить в один из двух режимов — в собственном режиме или в режиме интеграции с SharePoint. Шаги, которые необходимо выполнить для проверки установки, зависят от выбранного режима сервера отчетов.  

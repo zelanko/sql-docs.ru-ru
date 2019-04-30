@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 37d6bdb61e23c3a48b54aa7d0e6488122486ffe5
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205273"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63186210"
 ---
 # <a name="sqlprimarykeys-function"></a>Функция SQLPrimaryKeys
 **Соответствие стандартам**  
@@ -77,7 +77,7 @@ SQLRETURN SQLPrimaryKeys(
  [Вход] Длина в символах **TableName*.  
   
 ## <a name="returns"></a>Возвращает  
- Значение SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, значение SQL_ERROR или SQL_INVALID_HANDLE.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR, or SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Диагностика  
  Когда **SQLPrimaryKeys** возвращает значение SQL_ERROR или SQL_SUCCESS_WITH_INFO, а связанное значение SQLSTATE можно получить, вызвав **SQLGetDiagRec** с *HandleType* из SQL _HANDLE_STMT и *обрабатывать* из *StatementHandle*. В следующей таблице перечислены значения SQLSTATE, обычно возвращаемые **SQLPrimaryKeys** и объясняется каждый из них в контексте этой функции; описания SQLSTATE, возвращаемых диспетчером драйверов предшествует обозначение «(DM)». Возвращается связанный с каждого значения SQLSTATE значение SQL_ERROR, если не указано иное.  
@@ -124,7 +124,7 @@ SQLRETURN SQLPrimaryKeys(
 |Имя столбца|Номер столбца|Тип данных|Комментарии|  
 |-----------------|-------------------|---------------|--------------|  
 |TABLE_CAT (ODBC 1.0)|1|Varchar|Имя каталога таблицы первичного ключа; Значение NULL, если не применим к источнику данных. Если драйвер поддерживает каталоги для некоторых таблиц, но не для других пользователей, например, когда драйвер извлекает данные из разных СУБД, возвращается пустая строка ("») для этих таблиц, у которых нет каталогов.|  
-|ПО ЗНАЧЕНИЯМ TABLE_SCHEM (ODBC 1.0)|2|Varchar|Имя схемы таблицы первичного ключа; Значение NULL, если не применим к источнику данных. Если драйвер поддерживает схемы для некоторых таблиц, но не для других пользователей, например, когда драйвер извлекает данные из разных СУБД, возвращается пустая строка ("») для этих таблиц, у которых нет схемы.|  
+|TABLE_SCHEM (ODBC 1.0)|2|Varchar|Имя схемы таблицы первичного ключа; Значение NULL, если не применим к источнику данных. Если драйвер поддерживает схемы для некоторых таблиц, но не для других пользователей, например, когда драйвер извлекает данные из разных СУБД, возвращается пустая строка ("») для этих таблиц, у которых нет схемы.|  
 |TABLE_NAME (ODBC 1.0)|3|Varchar not NULL|Имя таблицы первичных ключей.|  
 |COLUMN_NAME (ODBC 1.0)|4|Varchar not NULL|Имя столбца первичного ключа. Драйвер возвращает пустую строку для столбца, который не имеет имени.|  
 |KEY_SEQ (ODBC 1.0)|5|Smallint, не NULL|Порядковый номер столбца в ключе (начиная с 1).|  

@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9403e6e2cf1c341780a06bbdff1c5f38685dd34a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52805592"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63150971"
 ---
 # <a name="display-an-actual-execution-plan"></a>Отображение действительного плана выполнения
   В этой теме описывается, как создать фактические графические планы выполнения с использованием среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. При создании фактических планов выполнения выполняются запросы или пакеты [!INCLUDE[tsql](../../includes/tsql-md.md)] . Создаваемый план выполнения отображает фактический план выполнения запроса, который используется [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] для выполнения запросов.  

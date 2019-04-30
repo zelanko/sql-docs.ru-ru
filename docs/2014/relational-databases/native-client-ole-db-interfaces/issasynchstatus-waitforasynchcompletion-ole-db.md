@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: af77f5f5519a49e2d9a744dceca2857cc88ce8e1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089980"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63192313"
 ---
 # <a name="issasynchstatuswaitforasynchcompletion-ole-db"></a>ISSAsynchStatus::WaitForAsynchCompletion (OLE DB)
   Ожидает завершения асинхронно выполняющейся операции или истечения времени ожидания.  
@@ -60,7 +60,7 @@ HRESULT WaitForAsynchCompletion(
  Свойство времени ожидания для асинхронных операций не учитывается. Параметр истечения времени ожидания **ISSAsynchStatus::WaitForAsynchCompletion** задает максимальное время, которое должно пройти, прежде чем управление будет передано вызывающему объекту. По истечении этого времени ожидания возвращается значение DB_S_ASYNCHRONOUS. Время ожидания никогда не отменяет асинхронные операции. Если приложению необходимо отменить асинхронную операцию, которая не завершена в течение времени ожидания, то оно должно дождаться истечения этого времени, а затем явно отменить операцию, если возвращено значение DB_S_ASYNCHRONOUS.  
   
 > [!NOTE]  
->  При использовании компонентов службы OLE DB может быть возвращено значение S_OK вместо DB_S_ASYNCHRONOUS, поэтому при возврате одного из этих значений приложение должно вызывать метод [ISSAsynchStatus::GetStatus](issasynchstatus-getstatus-ole-db.md), чтобы проверить состояние завершения операции.  
+>  При использовании компонентов службы OLE DB может быть возвращено значение S_OK вместо DB_S_ASYNCHRONOUS, поэтому при возврате одного из этих значений приложение должно вызывать метод [ISSAsynchStatus::GetStatus](issasynchstatus-getstatus-ole-db.md) , чтобы проверить состояние завершения операции.  
   
  Если параметр *dwMillisecTimeOut* имеет значение INFINITE, то метод **ISSAsynchStatus::WaitForAsynchCompletion** блокируется до завершения операции. Если параметр *dwMillisecTimeOut* имеет значение 0, то метод немедленно вернет состояние отложенной операции. Если время ожидания истекло до завершения операции, возвращается значение DB_S_ASYNCHRONOUS.  
   

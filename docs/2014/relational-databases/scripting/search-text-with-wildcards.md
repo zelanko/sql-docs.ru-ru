@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f86985f75446399803e4cac6ed7d883d1c7e1921
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328264"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63136229"
 ---
 # <a name="search-text-with-wildcards"></a>Поиск текста с символами-шаблонами
   С помощью следующих выражений можно заменять символы либо цифры в поле **Найти** среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Найти и заменить** .  

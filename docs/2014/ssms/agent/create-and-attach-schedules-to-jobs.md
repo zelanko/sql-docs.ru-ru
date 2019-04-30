@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 414ff334139919e08b06291ec910f8531c70cd55
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52757543"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63136286"
 ---
 # <a name="create-and-attach-schedules-to-jobs"></a>Создание и присоединение расписаний к заданиям
   Планирование заданий агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предполагает определение условия или условий, при которых выполнение задания должно начаться без вмешательства пользователя. Можно запланировать автоматическое выполнение задания, создав новое расписание для задания или присоединив к нему существующее расписание.  

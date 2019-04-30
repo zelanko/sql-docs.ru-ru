@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e160733e01c3df2063a57d61bb8178438d383e1a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069942"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155024"
 ---
 # <a name="using-imultipleresults-to-process-multiple-result-sets"></a>Обработка нескольких результирующих наборов при помощи интерфейса IMultipleResults
   Потребители используют **IMultipleResults** интерфейс для обработки результатов, возвращенных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполнение команды поставщика OLE DB для собственного клиента. Когда [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщика OLE DB для собственного клиента отправляет команду для выполнения, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняет инструкции и возвращает результаты.  

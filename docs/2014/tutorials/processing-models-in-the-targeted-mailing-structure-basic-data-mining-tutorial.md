@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 605088d405cbd2dcfba92a2da5fa4e07c38d8f0b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038985"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188227"
 ---
 # <a name="processing-models-in-the-targeted-mailing-structure-basic-data-mining-tutorial"></a>Обработка моделей в структуре интеллектуального анализа данных прямой почтовой рассылки (учебник по интеллектуальному анализу данных — начальный уровень)
   Прежде чем выполнить обзор моделей интеллектуального анализа данных или приступить к работе с ними, необходимо развернуть проект служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], а также обработать структуру и модели интеллектуального анализа данных.  

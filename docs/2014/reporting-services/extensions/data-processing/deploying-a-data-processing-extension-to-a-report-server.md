@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f0f593b2488d9bb7226edad1f8d98a244f4df191
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154220"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164063"
 ---
 # <a name="how-to-deploy-a-data-processing-extension-to-a-report-server"></a>Практическое руководство. Развертывание модуля обработки данных на сервере отчетов
   Серверы отчетов используют модули обработки данных для получения и обработки данных в отчетах, готовых для просмотра. Сборка модуля обработки данных развертывается на сервере отчетов как закрытая сборка. Нужно также внести запись в файл конфигурации сервера отчетов RSReportServer.config.  

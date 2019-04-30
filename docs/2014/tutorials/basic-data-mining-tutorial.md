@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: d434df95a26485d4d7795d3ab960b8d2457b8ff6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033685"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185572"
 ---
 # <a name="basic-data-mining-tutorial"></a>Учебник по основам интеллектуального анализа данных
   Добро пожаловать в [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] учебник интеллектуального анализа данных. [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] предоставляет интегрированную среду для создания моделей интеллектуального анализа данных и создания прогнозов. В этом учебнике предлагается выполнить сценарий кампании целевой рассылки, в которой используется машинное обучение для анализа и прогнозирования поведения заказчика. Он демонстрирует использование трех наиболее важных алгоритмов интеллектуального анализа данных: кластеризации, деревьев принятия решений и упрощенного алгоритма Байеса. Вы также узнаете, как анализировать результаты с помощью средства просмотра моделей интеллектуального анализа данных и создания прогнозов и диаграмм точности, с помощью средства интеллектуального анализа данных, включенных в [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Во всех примерах используется вымышленная компания [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)].  
@@ -51,7 +51,7 @@ ms.locfileid: "56033685"
  [Занятие 3. Добавление и обработка моделей](../../2014/tutorials/lesson-3-adding-and-processing-models.md)  
  На этом занятии будет рассмотрено добавление модели в структуру. Создаваемые модели построены на основе следующих алгоритмов.  
   
--   алгоритм дерева принятия решений [!INCLUDE[msCoName](../includes/msconame-md.md)]  
+-   алгоритм дерева принятия решений ([!INCLUDE[msCoName](../includes/msconame-md.md)]);  
   
 -   алгоритм кластеризации [!INCLUDE[msCoName](../includes/msconame-md.md)]  
   

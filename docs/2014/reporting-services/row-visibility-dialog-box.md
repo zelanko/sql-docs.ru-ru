@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3f823df1f479cb0be29acb7511e5a87ed20a4afa
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59955990"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63205164"
 ---
 # <a name="row-visibility-dialog-box"></a>Диалоговое окно «Видимость строки»
   Диалоговое окно **Видимость строки** используется, чтобы показать или скрыть выбранную строку при первом запуске отчета, а также для переключения видимости строки с помощью другого элемента отчета.  

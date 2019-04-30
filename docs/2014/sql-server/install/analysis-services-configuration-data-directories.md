@@ -12,11 +12,11 @@ author: heidisteen
 ms.author: heidist
 manager: craigg
 ms.openlocfilehash: f01bec92621022c875ff43c479356df1a35b8157
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147684"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215136"
 ---
 # <a name="analysis-services-configuration---data-directories"></a>Настройка служб Analysis Services — каталоги данных
   Приведенные в следующей таблице каталоги по умолчанию можно изменить с помощью программы установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Разрешение на доступ к этим файлам предоставляется локальным администраторам и членам группы безопасности SQLServerMSASUser$\<экземпляр>, которая создается и настраивается во время установки.  

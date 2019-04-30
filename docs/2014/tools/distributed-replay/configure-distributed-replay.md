@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c5e44910c72e5162b9acb74ebbf74cd19d7ce1bc
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124574"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149529"
 ---
 # <a name="configure-distributed-replay"></a>Настройка распределенного воспроизведения
   Сведения о конфигурации распределенного воспроизведения [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] задаются в XML-файлах на контроллере распределенного воспроизведения, на клиентах, а также в месте установки средства администрирования. Эти файлы включают в себя:  
@@ -28,7 +28,7 @@ ms.locfileid: "54124574"
   
 -   [Файла конфигурации воспроизведения](#ReplayConfig)  
   
-##  <a name="DReplayController"></a> Файл конфигурации контроллера: DReplayController.config  
+##  <a name="DReplayController"></a>Файл конфигурации контроллера: DReplayController.config  
  При запуске службы контроллера распределенного воспроизведения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] загружаются данные об уровне ведения журнала из файла конфигурации контроллера `DReplayController.config`. Этот файл находится в папке, в которую установлена служба контроллера распределенного воспроизведения:  
   
  **\<путь установки контроллера>\DReplayController.config**  
@@ -49,7 +49,7 @@ ms.locfileid: "54124574"
 </Options>  
 ```  
   
-##  <a name="DReplayClient"></a> Файл конфигурации клиента: DReplayClient.config  
+##  <a name="DReplayClient"></a>Файл конфигурации клиента: DReplayClient.config  
  При запуске служба клиента распределенного воспроизведения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] загружает параметры конфигурации из файла конфигурации клиента `DReplayClient.config`. Этот файл находится на каждом клиентском компьютере в папке, где установлена служба клиента распределенного воспроизведения:  
   
  **\<путь установки клиента>\DReplayClient.config**  
@@ -76,7 +76,7 @@ ms.locfileid: "54124574"
 </Options>  
 ```  
   
-##  <a name="PreprocessConfig"></a> Файл конфигурации предварительной обработки: DReplay.exe.preprocess.config  
+##  <a name="PreprocessConfig"></a>Файл конфигурации предварительной обработки: DReplay.exe.preprocess.config  
  При использовании средства администрирования для запуска предварительной обработки оно загружает параметры из файла конфигурации предварительной обработки `DReplay.exe.preprocess.config`.  
   
  Расположение измененного файла конфигурации предварительной обработки можно указать в файле конфигурации по умолчанию или в параметре средства администрирования **-c**. Дополнительные сведения об использовании параметра предварительной обработки средства администрирования см. в разделе [Параметр предварительной обработки (средство администрирования распределенного воспроизведения)](preprocess-option-distributed-replay-administration-tool.md).  
@@ -105,7 +105,7 @@ ms.locfileid: "54124574"
 </Options>  
 ```  
   
-##  <a name="ReplayConfig"></a> Файл конфигурации воспроизведения: DReplay.exe.replay.config  
+##  <a name="ReplayConfig"></a>Файл конфигурации воспроизведения: DReplay.exe.replay.config  
  При использовании средства администрирования для запуска воспроизведения событий оно загружает параметры воспроизведения из файла конфигурации воспроизведения `DReplay.exe.replay.config`.  
   
  Расположение измененного файла конфигурации воспроизведения можно указать в файле конфигурации по умолчанию или в параметре средства администрирования **-c**. Дополнительные сведения об использовании параметра воспроизведения средства администрирования см. в разделе [Параметр воспроизведения (средство администрирования распределенного воспроизведения)](replay-option-distributed-replay-administration-tool.md).  

@@ -20,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 441c13a725b69d70b4267ec90d7eaeeace2b3070
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202704"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63140647"
 ---
 # <a name="bulk-import-large-object-data-by-using-the-openrowset-bulk-rowset-provider-sql-server"></a>Массовый импорт данных больших объектов при помощи поставщика больших наборов строк OPENROWSET (SQL Server)
   Поставщик больших наборов строк OPENROWSET в среде [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] позволяет выполнять массовый импорт файла данных как большого объекта данных.  
@@ -50,7 +50,7 @@ ms.locfileid: "48202704"
  [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql)   
  [OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql)   
  [Сохранение значений NULL или использование значений по умолчанию при массовом импорте данных (SQL Server)](keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)   
- [Программа bcp](../../tools/bcp-utility.md)   
+ [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT (Transact-SQL)](/sql/t-sql/statements/bulk-insert-transact-sql)  
   
   

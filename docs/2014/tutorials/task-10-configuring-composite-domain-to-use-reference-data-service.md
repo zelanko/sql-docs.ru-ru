@@ -1,5 +1,5 @@
 ---
-title: Задача 10. Настройка составного домена для использования службы ссылочных данных | Документация Майкрософт
+title: Задача 10. Настройка составного домена для использования службы ссылочных данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b8e309592588a38a57d2e5160845ad171346e758
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011596"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63222828"
 ---
-# <a name="task-10-configuring-composite-domain-to-use-reference-data-service"></a>Задача 10. Настройка составного домена для использования службы ссылочных данных
+# <a name="task-10-configuring-composite-domain-to-use-reference-data-service"></a>Задача 10. Настройка составного домена для использования службы эталонных данных
   В этой задаче вы настраиваете **проверка адреса** составного домена для использования **Melissa Data — Address Check** службы. Во время выполнения при проведении очистки данных службы DQS передают значения доменов в домен проверки адреса, чтобы служба выполнила очистку данных. См. в разделе [карты домена/составного домена к эталонным данным](https://msdn.microsoft.com/library/hh213030.aspx) для получения дополнительных сведений.  
   
 1.  На главной странице **клиента DQS**, нажмите кнопку **Suppliers (Управление доменами)** под **Недавние базы знаний** для запуска **Управление доменами**страницы.  

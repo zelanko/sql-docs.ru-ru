@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7e7c57cf6444e5833b6deee0dcae36d71b7a6430
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076751"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63195125"
 ---
 # <a name="data-at-execution-and-text-ntext-or-image-columns"></a>Данные времени выполнения и столбцы text, ntext или image
   Данные времени выполнения ODBC позволяют приложениям работать с очень большими объемами данных в связанных столбцах или параметрах. При получении очень больших **текст**, **ntext**, или **изображение** столбцы, приложение не может иметь возможность просто выделить огромный буфер, привязать столбец в буфер и получения Строка. При обновлении очень больших **текст**, **ntext**, или **изображение** столбцы, приложение не может иметь возможность просто выделить огромный буфер, привязать его к маркеру параметра в SQL инструкции, а затем выполняется инструкция. В этом случае приложение должно использовать [SQLGetData](../native-client-odbc-api/sqlgetdata.md) или [SQLPutData](../native-client-odbc-api/sqlputdata.md) с его параметрами данных во время выполнения.  

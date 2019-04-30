@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7be00967d8d17731e4564a0a23aa245e609c6e8a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838862"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161447"
 ---
 # <a name="handling-errors-in-jscript"></a>Обработка ошибок в JScript
 Необходимо проверить код Your Microsoft® JScript® **число** свойство **подключения** объекта **ошибки** коллекции. Если значение больше 0, итерации по коллекции и вывода значений, как это делается в любом другом языке.  

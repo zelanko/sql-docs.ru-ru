@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ec21ff98d49cff26bde48452a30fd347c23782fe
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129544"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215999"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
   Агент слияния репликации — это исполняемый файл программы, который применяет к подписчикам исходный моментальный снимок, содержащийся в таблицах базы данных. Кроме того, он выполняет слияние добавочных изменений данных, которые произошли на издателе после создания исходного моментального снимка, а также улаживает конфликты либо в соответствии с правилами, заданными пользователем, либо с помощью созданного пользователем сопоставителя.  

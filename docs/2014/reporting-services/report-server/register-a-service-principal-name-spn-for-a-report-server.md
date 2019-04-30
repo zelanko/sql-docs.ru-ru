@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4eaee8179c874bfa19418222b03afd54dc1bd419
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59960360"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63190981"
 ---
 # <a name="register-a-service-principal-name-spn-for-a-report-server"></a>зарегистрировать имя участника-службы для сервера отчетов
   При развертывании служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в сети, где для взаимной проверки подлинности используется протокол Kerberos, а сервер отчетов настроен для запуска от учетной записи пользователя домена, необходимо создать для службы сервера отчетов имя участника-службы (SPN).  

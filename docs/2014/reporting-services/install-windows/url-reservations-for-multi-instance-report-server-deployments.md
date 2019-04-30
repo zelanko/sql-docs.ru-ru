@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ac6232b85990bb065d8188ede372e2b44cdd20c5
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59949530"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63143261"
 ---
 # <a name="url-reservations-for-multi-instance-report-server-deployments--ssrs-configuration-manager"></a>Резервирование URL-адресов при развертывании сервера отчетов на нескольких экземплярах (диспетчер конфигурации служб SSRS)
   При установке нескольких экземпляров служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] на одном компьютере необходимо учесть необходимость резервирования URL-адресов для каждого экземпляра. Для каждого экземпляра веб-службе сервера отчетов и диспетчеру отчетов необходимо, по крайней мере, по одному зарезервированному URL-адресу. Все зарезервированные адреса должны быть уникальны в рамках HTTP.SYS.  

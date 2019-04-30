@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 865534b607e8f8de0f0058f712ed12a87c50804d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595672"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198226"
 ---
 # <a name="configuring-data-sources"></a>Настройка источников данных
 Сведения об источниках данных хранится в системном реестре. Пользователи изменять к источнику данных через программу администрирования. Это может быть администратор ODBC, устройство ODBC панели управления или администрирования программу, написанную разработчиком приложения или драйвера.  

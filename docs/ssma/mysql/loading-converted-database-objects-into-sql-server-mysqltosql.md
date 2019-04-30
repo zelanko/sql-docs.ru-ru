@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: b2e58eb534088482493e6f36c3841f36644183af
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732179"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63187228"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-mysqltosql"></a>Загрузка преобразованных объектов базы данных в SQL Server (MySQLToSQL)
 После преобразования баз данных MySQL для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure, можно загрузить результирующие объекты базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure. Можно иметь SSMA создания объектов, или можно внести в скрипт объекты и запускать сценарии самостоятельно. Кроме того, SSMA позволяет обновлять целевые метаданные с фактическое содержимое [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или базы данных SQL Azure.  

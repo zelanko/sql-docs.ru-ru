@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8ceb1bcf0e05a667372aefa625c40d4ef0238661
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47712802"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240022"
 ---
 # <a name="ado-md-fundamentals"></a>Основные принципы объектов данных ActiveX (MD)
 Microsoft® ActiveX® Data Objects (многомерные выражения) (многомерные Объекты ADO) обеспечивает простой доступ к многомерным данным из языков, таких как Microsoft Visual Basic®, Microsoft Visual C++®. ADO MD расширяет Microsoft ActiveX® Data Objects (ADO) для включения объекты, относящиеся к многомерным данным, например [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) и [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) объектов. С ADO MD Обзор многомерной схемой, запроса куба и получения результатов.  

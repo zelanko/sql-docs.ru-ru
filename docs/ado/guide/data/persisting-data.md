@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b89f05822ee23f5ad62c627b8bc6d67ebe401a2e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527631"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63130209"
 ---
 # <a name="persisting-data"></a>Сохранение данных
 Портативные компьютеры (например, используя переносные компьютеры), создала потребность в приложения, работающие в подключенном и автономном состоянии. ADO имеет дополнительную поддержку для этого, предоставляя разработчику возможность сохранения клиентский курсор **записей** на диск и перезагрузить его позже.  

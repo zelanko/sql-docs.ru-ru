@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 1211a1d5f22758b5c3732aa1b9843fe11ef8b3db
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540951"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63132293"
 ---
 # <a name="converting-mysql-databases-mysqltosql"></a>Преобразование баз данных MySQL (MySQLToSQL)
 После подключения к MySQL, подключенных к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure и задание проекта и параметры сопоставления данных, можно преобразовать объекты базы данных MySQL для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или объекты базы данных SQL Azure.  

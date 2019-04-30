@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1e33b0c3e957e13ea6178a3d7e65279a3be84794
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59960300"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185921"
 ---
 # <a name="add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs"></a>Добавление интерактивной сортировки в таблицу или матрицу (построитель отчетов и службы SSRS)
   Добавьте кнопки интерактивной сортировки, чтобы дать пользователям возможность менять порядок сортировки строк и столбцов в таблицах или матрицах. Эта возможность доступна только в форматах подготовки к просмотру, поддерживающих взаимодействие с пользователем, например HTML.  

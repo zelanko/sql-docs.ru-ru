@@ -1,5 +1,5 @@
 ---
-title: Урок 1. Подключение к компоненту Database Engine | Документация Майкрософт
+title: Урок 1. Подключение к ядру СУБД | Документация Майкрософт
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 32b78c210647ab5b3722f01f334e9cb2e8bbfc13
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375306"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63145500"
 ---
-# <a name="lesson-1-connecting-to-the-database-engine"></a>Урок 1. Соединение с компонентом Database Engine
+# <a name="lesson-1-connecting-to-the-database-engine"></a>Урок 1. Подключение к ядру СУБД
   Набор средств, устанавливаемых с компонентом [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], зависит от выпуска и от параметров, заданных при установке. На этом уроке рассматриваются важнейшие средства, а также показываются способы подключения и выполнения одной из базовых функций (разрешение входа дополнительным пользователям).  
   
   
@@ -101,6 +101,6 @@ ms.locfileid: "53375306"
 >  Это базовые сведения, позволяющие начать работу. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] предоставляет безопасную среду; безопасность безусловно важна при выполнении операций с базой данных.  
   
 ## <a name="next-lesson"></a>Следующее занятие  
- [Занятие 2. Соединение с другого компьютера](lesson-2-connecting-from-another-computer.md)  
+ [Занятие 2. Подключение с другого компьютера](lesson-2-connecting-from-another-computer.md)  
   
   

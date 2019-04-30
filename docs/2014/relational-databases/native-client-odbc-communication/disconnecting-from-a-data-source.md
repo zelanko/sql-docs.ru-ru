@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 43ccc784d0d8759c559e705cbbb65861040f6e8a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144734"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63205679"
 ---
 # <a name="disconnecting-from-a-data-source"></a>Отсоединение от источника данных
   Когда приложение завершило использование источника данных, он вызывает **SQLDisconnect**. **SQLDisconnect** освобождает все инструкции, выделенных для подключения и отсоединяет драйвер от источника данных. После отсоединения приложение может вызвать [SQLFreeHandle](../native-client-odbc-api/sqlfreehandle.md) для освобождения дескриптора соединения. Перед завершением работы приложение также вызывает **SQLFreeHandle** для освобождения дескриптора среды.  

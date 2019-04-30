@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f803ea892166819cee846a7dc97ef435802e9ae3
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148419"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63187638"
 ---
 # <a name="mdx-data-manipulation---select"></a>Операции с данными многомерных выражений — SELECT
 
@@ -430,7 +430,7 @@ WHERE
 |||||  
 |-|-|-|-|  
 ||Все продукты|Accessories|Clothing|  
-|Все торговые посредники|$ 73 694 430,80|$ 506 172,45|$ 1 524 906,93|  
+|All Resellers|$ 73 694 430,80|$ 506 172,45|$ 1 524 906,93|  
 |Value Added Reseller|$ 34 967 517,33|$ 175 002,81|$ 592 385,71|  
 |Warehouse|$ 38 726 913,48|$ 331 169,64|$ 932 521,23|  
   

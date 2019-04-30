@@ -1,5 +1,5 @@
 ---
-title: 'Преобразование из C в SQL: символ | Документация Майкрософт'
+title: 'C в SQL: Символ | Документация Майкрософт'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,13 +16,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0158da62ed360e926cdb5382b89b1491c0723550
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776462"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63201627"
 ---
-# <a name="c-to-sql-character"></a>Преобразование из C в SQL: символы
+# <a name="c-to-sql-character"></a>C в SQL: Символ
 Идентификаторы для символов типа данных ODBC C следующие:  
   
  SQL_C_CHAR  

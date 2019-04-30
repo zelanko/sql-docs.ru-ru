@@ -11,14 +11,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 359419f0da19151172689090272e0c42e18cc906
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193356"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200377"
 ---
 # <a name="odbc-how-to-topics"></a>ODBC How-to Topics
-  Чтобы использовать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] драйвера ODBC, необходимо будет создать источники данных ODBC и убедиться, что сервер имеет правильную версию хранимых процедур каталога. Для написания приложения ODBC, в котором используется SQL Server, необходимо знать, как выделять дескрипторы ODBC, устанавливать атрибуты, соединяться с экземпляром SQL Server, выполнять запросы и вычислять результаты.  
+  Для использования драйвера ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] необходимо предусмотреть возможность создания источников данных ODBC и убедиться в том, что на сервере находится правильная версия хранимых процедур каталога. Для написания приложения ODBC, в котором используется SQL Server, необходимо знать, как выделять дескрипторы ODBC, устанавливать атрибуты, соединяться с экземпляром SQL Server, выполнять запросы и вычислять результаты.  
   
 ## <a name="in-this-section"></a>в этом разделе  
   

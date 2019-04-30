@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c6314eb5a81d2384763b69dbc44296913f1ba49d
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59965380"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63225312"
 ---
 # <a name="feature-reference-reporting-services"></a>Справочник по функциям (службы Reporting Services)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] включают несколько средств и приложений, которые могут использоваться для создания, управления и просмотра отчетов. В этом разделе приводятся конкретные подразделы, описывающие диалоговые окна, веб-страницы и мастера этих инструментальных средств и приложений.  

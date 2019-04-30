@@ -11,11 +11,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: e9ee204d55114b7e31a9a9550d86cae3baa4dffc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210824"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63130367"
 ---
 # <a name="capture-logon-trigger-event-data"></a>Захват данных событий триггера входа
   XML-данные о событиях LOGON для использования внутри триггеров входа могут быть захвачены с использованием функции [EVENTDATA](/sql/t-sql/functions/eventdata-transact-sql) . Для события LOGON возвращается следующая схема данных событий:  

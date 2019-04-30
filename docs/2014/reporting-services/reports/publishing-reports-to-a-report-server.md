@@ -25,11 +25,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 135a736f6d0cf0cd5c51cf40b05c95a33d5c435b
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59967940"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63128628"
 ---
 # <a name="publishing-reports-to-a-report-server"></a>Публикация отчетов на сервере отчетов
   После создания и проверки отчета или набора отчетов можно воспользоваться встроенными функциями развертывания в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] для публикации отчетов на сервере отчетов. Можно опубликовать отдельные отчеты или проект «Сервер отчетов». Публикация проекта сервера отчетов — это самый простой способ публикации нескольких отчетов. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] использует термин *развертывание*, вместо термина *публикации*. Два этих термина взаимозаменяемы.  

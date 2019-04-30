@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 09c16397bae867309fce5d47cc5f0397825d7953
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59935630"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63216010"
 ---
 # <a name="union-function-report-builder-and-ssrs"></a>Функция Union (построитель отчетов и службы SSRS)
   Возвращает объединение всех числовых значений, отличных от NULL, заданных выражением, вычисляемым для данной области.  

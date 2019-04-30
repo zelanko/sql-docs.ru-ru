@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 649731c1dbbe3f52dec899cc47366cfeb15c9c56
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160163"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63195241"
 ---
 # <a name="ole-automation-result-sets"></a>Результирующие наборы OLE-автоматизации
   Если свойство или метод OLE-автоматизации возвращает данные в одномерный или двухмерный массив, то массив возвращается клиенту как результирующий набор следующего вида.  

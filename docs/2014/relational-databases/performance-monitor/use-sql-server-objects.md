@@ -31,11 +31,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 67edebf9b4adcf40c12190446997dbd7c4b6e57b
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100729"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63151176"
 ---
 # <a name="use-sql-server-objects"></a>Использование объектов SQL Server
   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет объекты и счетчики, которые могут использоваться системным монитором для мониторинга активности на компьютере, где запущен экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Объект представляет собой любой ресурс [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , например блокировку [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или процесс Windows. В каждом объекте содержатся один или более счетчиков, определяющих различные аспекты объектов для мониторинга. Например, объект **Блокировки SQL Server** содержит счетчики с названием **Количество взаимоблокировок/с** и **Превышений времени ожидания блокировки в секунду**.  
@@ -105,13 +105,13 @@ ms.locfileid: "54100729"
 |[SQLServer:Locks](sql-server-locks-object.md)|Предоставляет сведения об отдельных запросах на блокировку, сделанных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], например время ожидания блокировки и взаимоблокировки. Может существовать несколько экземпляров этого объекта.|  
 |[SQLServer:Memory Manager](sql-server-memory-manager-object.md)|Предоставляет сведения об использовании памяти [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , например общее число выделенных на данный момент структур блокировок.|  
 |[SQLServer:Plan Cache](sql-server-plan-cache-object.md)|Предоставляет сведения о кэше [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , использующемся для хранения таких объектов, как хранимые процедуры, триггеры и планы запросов.|  
-|[SQLServer: Resource Pool Stats](sql-server-resource-pool-stats-object.md)|Предоставляет статистические данные о пуле ресурсов регулятора ресурсов.|  
+|[SQLServer: статистика пула ресурсов](sql-server-resource-pool-stats-object.md)|Предоставляет статистические данные о пуле ресурсов регулятора ресурсов.|  
 |[SQLServer:SQL Errors](sql-server-sql-errors-object.md)|Предоставляет сведения об ошибках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |[SQLServer:SQL Statistics](sql-server-sql-statistics-object.md)|Предоставляет сведения о разных аспектах запросов [!INCLUDE[tsql](../../includes/tsql-md.md)] , например число пакетов инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] , полученных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[SQLServer:Transactions](sql-server-transactions-object.md)|Предоставляет сведения об активных транзакциях в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], например общее число транзакций и число транзакций моментальных снимков.|  
 |[SQLServer:User Settable](sql-server-user-settable-object.md)|Выполняет пользовательское наблюдение. Каждый счетчик может быть пользовательской хранимой процедурой или любой инструкцией [!INCLUDE[tsql](../../includes/tsql-md.md)] , возвращающей значение, которое можно отслеживать.|  
-|[SQLServer: Статистика ожидания](sql-server-wait-statistics-object.md)|Предоставляет сведения об ожиданиях.|  
-|[SQLServer: Workload Group Stats](sql-server-workload-group-stats-object.md)|Предоставляет статистические данные о группе рабочей нагрузки регулятора ресурсов.|  
+|[SQLServer: статистика ожидания](sql-server-wait-statistics-object.md)|Предоставляет сведения об ожиданиях.|  
+|[SQLServer: статистика группы рабочей нагрузки](sql-server-workload-group-stats-object.md)|Предоставляет статистические данные о группе рабочей нагрузки регулятора ресурсов.|  
   
 ##  <a name="SQLServerReplicationPOs"></a> Объекты производительности репликации SQL Server  
  Следующая таблица содержит список объектов измерения производительности репликации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

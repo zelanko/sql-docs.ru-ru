@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ae9d8c9b156b2b7b1655c0b854a4615264e56b3c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59970006"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63143013"
 ---
 # <a name="legend-properties-dialog-box-general-report-builder-and-ssrs"></a>Диалоговое окно «Свойства условных обозначений» — «Общие» (построитель отчетов и службы SSRS)
   Используйте диалоговое окно **Условные обозначения** , чтобы определить внешний вид и макет условных обозначений на диаграмме. Дополнительные сведения см. в разделе [форматирование условных обозначений на диаграмме &#40;построитель отчетов и службы SSRS&#41;](report-design/chart-legend-formatting-report-builder.md).  

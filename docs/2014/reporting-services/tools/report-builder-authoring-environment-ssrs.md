@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 525eccd52a0a680304533ac73bb852f4f5c4e74c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59933070"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63201207"
 ---
 # <a name="report-builder-ssrs"></a>Построитель отчетов (SSRS)
   Построитель отчетов — это среда создания отчетов для бизнес-пользователей, предпочитающих работать в среде [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office. При создании отчета задается, откуда брать данные, какие данные брать и как их отображать. При запуске отчета обработчик получает все указанные сведения, извлекает данные и объединяет их с макетом отчета, чтобы создать отчет.  

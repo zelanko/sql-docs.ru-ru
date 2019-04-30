@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5182ab1a72caac4181e50df2199f3e0457d3aaac
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806596"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200215"
 ---
 # <a name="autotranslation-of-character-data"></a>Автоматическое преобразование символьных данных
   Символьные данные, такие как ANSI символьные переменные, объявленные с помощью SQL_C_CHAR или данные, хранящиеся в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью **char**, **varchar**, или **текст** типы данных, можно представляют только ограниченный набор символов. Символьные данные, в которых для обозначения одного символа требуется один байт данных, могут представлять только 256 символов. Для интерпретации значений, содержащихся в переменных SQL_C_CHAR, используются кодовые страницы ANSI (ACP) клиентского компьютера. Значения, сохраненные с использованием **char**, **varchar**, или **текст** типов данных на сервере, вычисляются с помощью ACP сервера.  

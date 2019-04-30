@@ -27,11 +27,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 29dac7e1636026da3f77ac832a148a832abe240a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356735"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63151456"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>Просмотр и работа с выходными данными помощника по настройке ядра СУБД
   Когда помощник по настройке ядра СУБД настраивает базы данных, он создает сводки, рекомендации, отчеты и журналы настройки. Выходные данные журналов настройки можно использовать, чтобы устранять неполадки в сеансах помощника по настройке ядра СУБД. Сводки, рекомендации и отчеты помогут решить, следует ли реализовать рекомендации по настройке либо продолжать ее до тех пор, пока не будет достигнуто повышение производительности выполнения запросов, необходимое для установки [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Информация об использовании помощника по настройке базы создания рабочих нагрузок и настройки базы данных см. в разделе [Запуск и использование помощника по настройке ядра СУБД](database-engine-tuning-advisor.md).  

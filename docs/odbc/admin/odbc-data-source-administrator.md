@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: adbc90288789838199a0eee866eb36896a360009
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674033"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198549"
 ---
 # <a name="odbc-data-source-administrator"></a>Администратор источников данных ODBC
 Администратор источников данных ODBC от Microsoft® управляет драйверами базы данных и источниками данных. Это приложение находится в панели управления Windows в разделе **Администрирование**. Начиная с Windows 8, значок называется **источники данных ODBC**, а в 64-разрядных операционных системах доступны 32- и 64-разрядные версии.  

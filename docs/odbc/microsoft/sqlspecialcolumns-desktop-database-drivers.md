@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f319e6a28a1eba5f803e9cf7f7087f45f227fd87
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840012"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200505"
 ---
 # <a name="sqlspecialcolumns-desktop-database-drivers"></a>SQLSpecialColumns (драйверы для баз данных на настольном компьютере)
 Уникальный индекс будет возвращаться (если он существует) SQL_BEST_ROWID флажка в *fColType*. Результирующий набор не возвращается для флага SQL_ROWVER.  

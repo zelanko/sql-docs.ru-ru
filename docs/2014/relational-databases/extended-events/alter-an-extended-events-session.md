@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 99984df84d2eb24ebf3d58f3fa697d11c5ad4a1d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52752146"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63128606"
 ---
 # <a name="alter-an-extended-events-session"></a>Изменение сеанса расширенных событий
   После того как создан сеанс расширенных событий, его можно изменить необходимым образом с помощью **Мастера расширенных событий SQL Server**.  
@@ -42,7 +42,7 @@ ms.locfileid: "52752146"
   
 ## <a name="how-to-alter-an-extended-events-session-using-the-sql-server-extended-events-wizard"></a>Как изменить сеанс расширенных событий с помощью мастера расширенных событий SQL Server  
   
--   В обозревателе объектов откройте сервер, разверните **Управление**, **Планы обслуживания**и затем **Сеансы**.  
+-   В обозревателе объектов разверните **Управление**, **Расширенные события** и затем **Сеансы**.  
   
 -   Щелкните правой кнопкой мыши сеанс, который нужно изменить, и выберите **Свойства**.  
   

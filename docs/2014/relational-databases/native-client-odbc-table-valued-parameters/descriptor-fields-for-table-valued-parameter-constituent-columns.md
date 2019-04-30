@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a31491b56e5b5cd700e744be2b7a84f10f1e0121
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086364"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199935"
 ---
 # <a name="descriptor-fields-for-table-valued-parameter-constituent-columns"></a>Поля дескриптора для столбцов, содержащих параметры, возвращающие табличные значения
   Поля дескрипторов возвращающего табличное значение параметра, описанные в этом разделе осуществляется с помощью [SQLSetDescField](../native-client-odbc-api/sqlsetdescfield.md) и [SQLSetDescField](../native-client-odbc-api/sqlsetdescfield.md) с дескриптором для дескриптора параметра реализации ( IPD).  

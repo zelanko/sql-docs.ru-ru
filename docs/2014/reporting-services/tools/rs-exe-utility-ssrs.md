@@ -20,11 +20,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e75c56597a351f7c76ff509e3347d37dc40e41b4
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59942630"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63201384"
 ---
 # <a name="rsexe-utility-ssrs"></a>Служебная программа RS.exe (SSRS)
   Скрипт, предоставленный во входном файле, обрабатывается служебной программой rs.exe. Используйте эту программу для автоматизации развертывания сервера отчетов и административных задач.  

@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 1d9317b63b01a4d1e78f5c8d4818c63d9974be4f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656594"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63187187"
 ---
 # <a name="installing-ssma-for-mysql-client-mysqltosql"></a>Установка клиента SSMA для MySQL (MySQLToSQL)
 SSMA для MySQL клиента состоит из программных файлов, которые выполняют следующие задачи:  
@@ -53,7 +53,7 @@ SSMA для MySQL предназначен для работы с MySQL 4.1 ил
   
 -   4 ГБ ОЗУ рекомендуется.  
   
-## <a name="installing-ssma-for-mysql-client"></a>Установка SSMA для MySQL клиента  
+## <a name="installing-ssma-for-mysql-client"></a>Установка клиента SSMA для MySQL  
 SSMA можно загрузить из Интернета. Чтобы загрузить последнюю версию, см. в разделе [SQL Server Migration Assistant страницу загрузки](https://aka.ms/ssmaformysql).  
   
 После загрузки последней версии, необходимо извлечь файлы установки перед установкой SSMA.  

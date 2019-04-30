@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 158110c1273c64cb9fdf86d1b9f4bc4a40d780a8
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59967760"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63144168"
 ---
 # <a name="supported-combinations-of-sharepoint-and-reporting-services-server-and-add-in-sql-server-2014"></a>Поддерживаемые сочетания SharePoint, компонентов служб Reporting Services и надстроек (SQL Server 2014)
   Сервер отчетов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] может быть установлен в режиме интеграции с SharePoint и интегрирован с развертыванием SharePoint. Не все функции поддерживаются во всех сочетаниях сервера отчетов, надстройки служб Reporting Services для SharePoint и продуктов SharePoint. В этом разделе описаны поддерживаемые сочетания. В [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] интеграция обеспечивается следующим сочетанием.  

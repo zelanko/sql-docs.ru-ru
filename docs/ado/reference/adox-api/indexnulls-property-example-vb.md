@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 895082ffe456e38ccaf120688e2bf77c1b410344
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688132"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63213333"
 ---
 # <a name="indexnulls-property-example-vb"></a>Пример свойства IndexNulls (Visual Basic)
 В этом примере показано [IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md) свойство [индекс](../../../ado/reference/adox-api/index-object-adox.md). Код создает новый индекс и задает значение **IndexNulls** на основе ввода пользователя (из списка с именем List1). Затем **индекс** добавляется к **сотрудников** [таблицы](../../../ado/reference/adox-api/table-object-adox.md) в *Northwind* [каталога](../../../ado/reference/adox-api/catalog-object-adox.md). Новый **индекс** применяется к [записей](../../../ado/reference/ado-api/recordset-object-ado.md) на основе **сотрудников** таблицы и **записей** открыт. Добавляется новая запись **сотрудников** таблицы, с помощью **Null** значение индексированного поля. Следует ли отображать этой новой записи зависит от параметра **IndexNulls** свойство.  

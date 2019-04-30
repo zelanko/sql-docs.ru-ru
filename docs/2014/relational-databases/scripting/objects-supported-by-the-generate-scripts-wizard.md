@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 32148fabf2e10e620f308bad63648e3e74f48e86
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202464"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63143460"
 ---
 # <a name="objects-supported-by-the-generate-scripts-wizard"></a>Объекты, поддерживаемые мастером создания скриптов
   Мастер создания и публикации скриптов поддерживает подмножество объектов, поддерживаемое компонентом [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
@@ -26,7 +26,7 @@ ms.locfileid: "48202464"
   
 ||||||  
 |-|-|-|-|-|  
-|роль приложения;|Роль базы данных|Схема|Определяемое пользователем статистическое выражение|Представление<sup>1</sup>|  
+|Роль приложения|Роль базы данных|схема|Определяемое пользователем статистическое выражение|Представление<sup>1</sup>|  
 |Сборка|Ограничение DEFAULT|Хранимая процедура<sup>1</sup>|Определяемый пользователем тип данных|Коллекция схем XML|  
 |Ограничение CHECK|Полнотекстовый каталог|Синоним|Определяемая пользователем функция||  
 |Хранимая процедура CLR (среда CLR)<sup>1</sup>|Индекс |Таблица|Определяемая пользователем таблица||  

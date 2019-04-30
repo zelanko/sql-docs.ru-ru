@@ -18,11 +18,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: efd8e80d223e75503bd034c77483d60a51ff9e1a
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59947700"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63219620"
 ---
 # <a name="relational-query-designer-user-interface-report-builder"></a>Пользовательский интерфейс конструктора реляционных запросов (построитель отчетов)
   Построитель отчетов предоставляет графический конструктор запросов и конструктор запросов на основе текста, которые помогают создавать запрос, указывающий данные для извлечения из [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)] реляционных баз данных и [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] для набора данных отчета. Графический конструктор запросов используется для просмотра метаданных, интерактивного создания запроса, а также для просмотра его результатов. Текстовый конструктор запросов используется для просмотра запроса, созданного графическим конструктором запросов, или для его изменения. Также можно импортировать существующий запрос из файла или отчета.  

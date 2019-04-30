@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c92c08349a473aa4a83205cc539eec3577619109
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52754196"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63150428"
 ---
 # <a name="save-showplan-xml-events-separately-sql-server-profiler"></a>Раздельное сохранение события Showplan XML (приложение SQL Server Profiler)
   В этом разделе описано сохранение событий инструкции **Showplan XML** , захваченных при трассировке в отдельные файлы .SQLPlan с помощью приложения [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Файлы событий **Showplan XML** можно открыть в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], позволяющей просматривать графическое представление плана выполнения для каждого события.  

@@ -16,11 +16,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 35ae7fec6e2a5800ec82e815b2b7bc3cdc4f8926
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804516"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63131297"
 ---
 # <a name="using-xpath-queries-in-sqlxml-40"></a>Использование запросов XPath в SQLXML 4.0
   Поддержка Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] аннотированных схем XSD позволяет создавать XML-представления реляционных данных, хранящихся в базе данных. Можно использовать подмножество языка XPath для запроса XML-представлений, созданных аннотированными схемами XSD.  

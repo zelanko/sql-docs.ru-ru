@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 8e8bbc4289a31d39c6e2801b39ec24039a69973d
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127584"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63151630"
 ---
 # <a name="import-bulk-data-by-using-bulk-insert-or-openrowsetbulk-sql-server"></a>Массовый импорт данных при помощи инструкции BULK INSERT или OPENROWSET(BULK...) (SQL Server)
   Этот раздел содержит общие сведения об использовании инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] BULK INSERT и INSERT...SELECT * FROM OPENROWSET(BULK...) для массового импорта данных из файла данных в таблицу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . В разделе также описываются вопросы безопасности при использовании BULK INSERT и OPENROWSET(BULK…), а также применение этих методов для массового импорта из удаленного источника данных.  
@@ -71,7 +71,7 @@ ms.locfileid: "54127584"
   
  Инструкции INSERT ... SELECT * FROM OPENROWSET(BULK...).  
   
- При использовании инструкции INSERT функция OPENROWSET(BULK...) поддерживает табличные указания. Кроме обычных табличных указаний вроде TABLOCK, предложение BULK принимает следующие специальные табличные указания: IGNORE_CONSTRAINTS (не учитывается только ограничения CHECK), IGNORE_TRIGGERS, KEEPDEFAULTS и KEEPIDENTITY. Дополнительные сведения см. в разделе [Табличные указания (Transact-SQL)](/sql/t-sql/queries/hints-transact-sql-table).  
+ При использовании инструкции INSERT функция OPENROWSET(BULK...) поддерживает табличные указания. Кроме обычных табличных указаний вроде TABLOCK предложение BULK принимает следующие специальные табличные указания: IGNORE_CONSTRAINTS (пропускает только ограничения CHECK), IGNORE_TRIGGERS, KEEPDEFAULTS и KEEPIDENTITY. Дополнительные сведения см. в разделе [Табличные указания (Transact-SQL)](/sql/t-sql/queries/hints-transact-sql-table).  
   
  Сведения о дополнительном использовании параметра BULK см. в разделе [OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql).  
   

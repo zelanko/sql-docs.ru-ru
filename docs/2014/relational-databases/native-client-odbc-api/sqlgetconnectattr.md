@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 818c136814062c94491cfa02b84d2fff443a1f0a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375646"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63128667"
 ---
 # <a name="sqlgetconnectattr"></a>SQLGetConnectAttr
   Драйвер ODBC собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определяет характерные для драйвера атрибуты соединения. Некоторые из этих атрибутов доступны для `SQLGetConnectAttr`, и функция используется для определения их текущих значений. Нельзя быть уверенным в правильности значений этих атрибутов, сообщаемых функцией, до тех пор, пока не будет установлено соединение или атрибут не будет задан при помощи функции [SQLSetConnectAttr](sqlsetconnectattr.md).  

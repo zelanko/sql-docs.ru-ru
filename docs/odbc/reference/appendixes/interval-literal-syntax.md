@@ -16,65 +16,65 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d477dbc6b54d7ebd82b7e2ef8611f5f6dd807e83
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694061"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188815"
 ---
 # <a name="interval-literal-syntax"></a>Синтаксис литерала интервала
 Для интервала литералы в ODBC используется следующий синтаксис.  
   
- *литерал интервала:: = ИНТЕРВАЛ* [+*&#124;*-] *интервал интервал строка квалификатор*  
+ *interval-literal ::= INTERVAL* [+*&#124;*-] *interval-string interval-qualifier*  
   
- *Интервал string* :: = *квоты* { *год месяц literal* &#124; *день литерал времени* } *квоты*  
+ *interval-string* ::= *quote* { *year-month-literal* &#124; *day-time-literal* } *quote*  
   
- *год месяц literal* :: = *значение года* &#124; [*значение года* -] *значение месяцев*  
+ *year-month-literal* ::= *years-value* &#124; [*years-value* -] *months-value*  
   
- *день литерал времени* :: = *день интервал* &#124; *интервал времени*  
+ *day-time-literal* ::= *day-time-interval* &#124; *time-interval*  
   
- *день интервала* :: = *значение дней* [*значение часов* [:*значение минут*[:*значение секунд*]]]  
+ *day-time-interval* ::= *days-value* [*hours-value* [:*minutes-value*[:*seconds-value*]]]  
   
- *интервал времени* :: = *значение часов* [:*значение минут* [:*значение секунд* ]]  
+ *time-interval* ::= *hours-value* [:*minutes-value* [:*seconds-value* ] ]  
   
- &#124;*значение минут* [:*значение секунд* ]  
+ &#124; *minutes-value* [:*seconds-value* ]  
   
- &#124;*значение секунд*  
+ &#124; *seconds-value*  
   
- *значение года* :: = *значение даты и времени*  
+ *years-value* ::= *datetime-value*  
   
- *значение месяцев* :: = *значение даты и времени*  
+ *months-value* ::= *datetime-value*  
   
- *значение дней* :: = *значение даты и времени*  
+ *days-value* ::= *datetime-value*  
   
- *значение часов* :: = *значение даты и времени*  
+ *hours-value* ::= *datetime-value*  
   
- *значение минут* :: = *значение даты и времени*  
+ *minutes-value* ::= *datetime-value*  
   
- *значение секунд* :: = *секунд целое* [. [ *доли секунд*]]  
+ *seconds-value* ::= *seconds-integer-value* [.[*seconds-fraction*] ]  
   
- *секунд целое* :: = *unsigned integer*  
+ *seconds-integer-value* ::= *unsigned-integer*  
   
- *доли секунд* :: = *unsigned integer*  
+ *seconds-fraction* ::= *unsigned-integer*  
   
- *значение даты и времени* :: = *unsigned integer*  
+ *datetime-value* ::= *unsigned-integer*  
   
- *Интервал квалификатор* :: = *поле начала* TO *конец поля* &#124; *одним поля даты и времени*  
+ *interval-qualifier* ::= *start-field* TO *end-field* &#124; *single-datetime-field*  
   
- *поле начала* :: = *не секунду поля даты и времени* [(*интервал начальные поля точности* )]  
+ *start-field* ::= *non-second-datetime-field* [(*interval-leading-field-precision* )]  
   
- *конец поля* :: = *не секунду поля даты и времени* &#124; второй [(*интервал--секунд — точность в долях секунды*)]  
+ *end-field* ::= *non-second-datetime-field* &#124; SECOND[(*interval-fractional-seconds-precision*)]  
   
  *поля для даты и времени одного* :: = *не секунду поля даты и времени —* [(*интервал начальные поля точности*)] &#124; второй [(*интервал начальные поля точности*  [, (*интервал--секунд — точность в долях секунды*)]  
   
- *поля даты и времени* :: = *не секунду поля даты и времени* &#124; второй  
+ *datetime-field* ::= *non-second-datetime-field* &#124; SECOND  
   
  *не секунду поля даты и времени* :: = год &#124; месяц &#124; день &#124; час &#124; МИНУТУ  
   
- *интервал--секунд — точность в долях секунды* :: = *unsigned integer*  
+ *interval-fractional-seconds-precision* ::= *unsigned-integer*  
   
- *Интервал начальные поля точности* :: = *unsigned integer*  
+ *interval-leading-field-precision* ::= *unsigned-integer*  
   
- *Квота* :: = "  
+ *quote* ::= '  
   
- *unsigned integer* :: = *цифра...*
+ *unsigned-integer* ::= *digit...*

@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 3734c2efaaefae44a17381cab46029f2d57666a4
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418165"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63207844"
 ---
 # <a name="converting-sap-ase-database-objects-sybasetosql"></a>Преобразование объектов базы данных SAP ASE (SybaseToSQL)
 После подключения к SAP Adaptive Server Enterprise (ASE), подключенных к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или Azure SQL и задание проекта и параметры сопоставления данных, можно преобразовать объекты базы данных SAP Adaptive Server Enterprise (ASE) для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или базы данных Azure SQL объекты.  

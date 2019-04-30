@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5e5fe086d16728a95b9ee8f2a52878d5a2c4bad4
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59962130"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164914"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-in-report-builder"></a>Подключения к данным, источники данных и строки подключения в построителе отчетов
   Чтобы включить в отчет данные, необходимо создать подключения к данным и наборы данных. Подключение к данным содержит сведения о получении доступа к внешнему источнику данных. Набор данных содержит команду запроса, определяющую данные, которые необходимо выбрать из подключения к данным.  

@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: f0acfa636a3432dcffb18cfec57ee7625c1eb01b
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696433"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215523"
 ---
 # <a name="install-sql-server-operations-manager-scom-management-packs-for-analytics-platform-system"></a>Установить пакеты управления SQL Server Operations Manager (SCOM) для системы платформы аналитики
 Выполните следующие действия, чтобы скачать и установить пакеты управления System Center Operations Manager (SCOM) для SQL Server PDW. Пакеты управления требуются для наблюдения за SQL Server PDW из SCOM.  
@@ -24,7 +24,7 @@ ms.locfileid: "51696433"
   
 System Center Operations Manager должны быть установлены и запущены. SQL Server PDW 2012 требуется System Center Operations Manager 2007 R2, System Center Operations Manager 2012 или System Center Operations Manager 2012 с пакетом обновления 1.  
   
-## <a name="Step1"></a>Шаг 1: Загрузка пакетов управления  
+## <a name="Step1"></a>Шаг 1. Загрузить пакеты управления  
 Для рабочей нагрузки APS PDW, загрузите [пакет управления System Center для Microsoft Analytics Platform System](https://go.microsoft.com/fwlink/?LinkId=396857).  
   
 Для управления устройством, загрузите [пакет управления SQL Server Appliance Base](https://www.microsoft.com/download/details.aspx?displaylang=en&id=11436).  
@@ -33,7 +33,7 @@ System Center Operations Manager должны быть установлены и
   
 <!-- MISSING LINKS - For the HDInsight workload, download the [System Center Management Pack for HDInsight](https://go.microsoft.com/fwlink/?LinkId=390208).  -->
   
-## <a name="Step2"></a>Шаг 2: Установка пакетов управления  
+## <a name="Step2"></a>Шаг 2. Установить пакеты управления  
   
 ### <a name="install-the-sql-server-appliance-base-management-pack"></a>Установить SQL Server Appliance базовый пакет управления  
   
@@ -76,7 +76,7 @@ System Center Operations Manager должны быть установлены и
     ![Завершение установки](./media/install-the-scom-management-packs/SCOM_licnse_agmtB3.png "SCOM_licnse_agmtB3")  
   
 ## <a name="next-step"></a>Следующий шаг  
-Теперь, когда пакеты управления, установленные, перейдите к следующему шагу: [импортировать пакет управления SCOM для PDW &#40;Analytics Platform System&#41;](import-the-scom-management-pack-for-pdw.md).  
+Теперь, когда у вас есть установленные пакеты управления, перейдите к следующему шагу: [Импорт пакета управления SCOM для PDW &#40;Analytics Platform System&#41;](import-the-scom-management-pack-for-pdw.md).  
   
 <!-- MISSING LINKS ## See Also  
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  

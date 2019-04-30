@@ -21,11 +21,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cb9d48156ecd1ca98dc36c10c2680883160582c1
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377486"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63157113"
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>Администрирование серверов с помощью управления на основе политик
   Управление на основе политик — это система управления одним или несколькими экземплярами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если администраторы политик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используют управление на основе политик, то они применяют среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] для создания политик управления сущностями на сервере, например экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], базами данных или другими объектами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

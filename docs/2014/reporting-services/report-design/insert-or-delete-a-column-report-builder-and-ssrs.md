@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4f3d77e65361081a2c06e9e10c25b1bf6757d5d6
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59949770"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63209266"
 ---
 # <a name="insert-or-delete-a-column-report-builder-and-ssrs"></a>Вставка или удаление столбца (построитель отчетов и службы SSRS)
   Добавить или удалить столбцы можно в области данных табликса. Областью данных табликса может быть таблица, матрица или список. Следующие процедуры не применяются к области данных диаграммы и датчика.  

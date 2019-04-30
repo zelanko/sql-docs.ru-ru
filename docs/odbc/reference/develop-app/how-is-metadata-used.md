@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a3604e9f3bd47a10ae1a6e5ec401b198675c2d3e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637052"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149291"
 ---
 # <a name="how-is-metadata-used"></a>Как используются метаданные?
 Метаданные требуются приложениям для большинства операций с результирующими наборами. Например, приложение использует тип данных столбца, чтобы определить, какую переменную привязывать к этому столбцу. Он использует байтовая длина символьного столбца, чтобы определить, сколько места требуется отобразить данные из этого столбца. Способ определения метаданных для столбца зависит от типа приложения.  

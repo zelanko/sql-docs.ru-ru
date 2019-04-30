@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 66dadc7a6163b8da7024818a9ecee16d5b3df696
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59949520"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215073"
 ---
 # <a name="text-boxes-report-builder-and-ssrs"></a>Текстовые поля (построитель отчетов и службы SSRS)
   Часто под термином «текстовое поле» подразумевается изолированное поле с текстом, например [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office PowerPoint. В построителе отчетов некоторые текстовые поля такие же и могут отображать буквенный текст для заголовков, определений и меток или динамический текст, основанный на выражениях. Каждая ячейка в таблице или матрице (области данных табликса) содержит текстовое поле, которое можно форматировать аналогично изолированным текстовым полям в отчете.  

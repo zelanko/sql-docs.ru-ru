@@ -16,14 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 89be9c958cb848384a67e7eaf74cfecc72f07c35
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855022"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63148884"
 ---
 # <a name="sqlstate-mappings"></a>Сопоставления SQLSTATE
-В этом разделе рассматриваются значениях SQLSTATE для ODBC 2. *x* и ODBC 3. *x*. Дополнительные сведения о ODBC 3. *x* значения SQLSTATE, см. в разделе [коды ошибок ODBC приложение A:](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md).  
+В этом разделе рассматриваются значениях SQLSTATE для ODBC 2. *x* и ODBC 3. *x*. Дополнительные сведения о ODBC 3. *x* значения SQLSTATE, см. в разделе [приложении a. Коды ошибок ODBC](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md).  
   
  В ODBC 3. *x*HYxxx SQLSTATE возвращаются вместо S1xxx и SQLSTATE 42Sxx возвращаются вместо S00XX. Это было сделано в соответствии со стандартами Open Group и ISO. Во многих случаях сопоставление не один к одному, так как стандарты переопределен интерпретацию несколько SQLSTATE.  
   
@@ -51,8 +51,8 @@ ms.locfileid: "47855022"
 |S1000|HY000||  
 |S1001|HY001||  
 |S1002|07009|ODBC 2. *x* SQLSTATE S1002 сопоставляется с ODBC 3. *x* SQLSTATE 07009 при базовой функции **SQLBindCol**, **SQLColAttribute**, **SQLExtendedFetch**, **SQLFetch** , **SQLFetchScroll**, или **SQLGetData**.|  
-|S1003|HY003 И СООБЩЕНИЕМ||  
-|S1004|HY004 И СООБЩЕНИЕМ||  
+|S1003|HY003||  
+|S1004|HY004||  
 |S1008|HY008||  
 |S1009|HY009|Возвращается для недопустимое использование пустого указателя.|  
 |S1009|HY024|Возвращается для недопустимым значением атрибута.|  

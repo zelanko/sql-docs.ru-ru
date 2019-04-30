@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1aea946703b9ebe06c32fcc25044a3b68326625e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398137"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199252"
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>Большие определяемые пользователем типы данных CLR (OLE DB)
   В этом разделе описываются изменения OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], связанные с поддержкой больших определяемых пользователем типов данных среды CLR.  

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 79b7f15ed90684e495e20064f092b0ff70b97549
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707322"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63194887"
 ---
 # <a name="programming-with-ado-md"></a>Программирование с объектами данных ActiveX (MD)
 Чтобы использовать ADO MD со средством разработки, необходимо установить ссылку на библиотеку типов многомерные Объекты ADO. Описание библиотеки ADO MD — объектов данных Microsoft ActiveX (многомерные) Библиотека. Имя файла библиотеки ADO MD msadomd.dll, и код программы (ProgID) — «ADOMD». Дополнительные сведения о том, как установить ссылки на библиотеки см. в документации средства разработки.  

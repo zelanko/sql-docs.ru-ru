@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cb15d3b64496374bed5b16f2661528c7ba1f9aae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761332"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63201636"
 ---
 # <a name="basic-odbc-application-steps"></a>Общие шаги по работе с приложением ODBC
 В этом разделе описывается общая схема потока приложения ODBC. Маловероятно, что любое приложение вызывает все эти функции именно в такой последовательности. Однако большинство приложений использует некоторую вариацию следующие действия. На следующем рисунке показаны этапы основные приложения.  
@@ -28,16 +28,16 @@ ms.locfileid: "47761332"
   
  Этот раздел содержит следующие подразделы.  
   
--   [Шаг 1. Подключение к источнику данных](../../../odbc/reference/develop-app/step-1-connect-to-the-data-source.md)  
+-   [Шаг 1. Подключение к источнику данных](../../../odbc/reference/develop-app/step-1-connect-to-the-data-source.md)  
   
--   [Шаг 2. Инициализация приложения](../../../odbc/reference/develop-app/step-2-initialize-the-application.md)  
+-   [Шаг 2. Инициализация приложения](../../../odbc/reference/develop-app/step-2-initialize-the-application.md)  
   
--   [Шаг 3. Построение и выполнение инструкции SQL](../../../odbc/reference/develop-app/step-3-build-and-execute-an-sql-statement.md)  
+-   [Шаг 3. Построение и выполнение инструкции SQL](../../../odbc/reference/develop-app/step-3-build-and-execute-an-sql-statement.md)  
   
--   [Шаг 4а. Выборка результатов](../../../odbc/reference/develop-app/step-4a-fetch-the-results.md)  
+-   [Шаг 4а. Получить результаты](../../../odbc/reference/develop-app/step-4a-fetch-the-results.md)  
   
--   [Шаг 4б. Выборка числа строк](../../../odbc/reference/develop-app/step-4b-fetch-the-row-count.md)  
+-   [Шаг 4б. Выборка числа строк](../../../odbc/reference/develop-app/step-4b-fetch-the-row-count.md)  
   
--   [Шаг 5. Фиксация транзакции](../../../odbc/reference/develop-app/step-5-commit-the-transaction.md)  
+-   [Шаг 5. Зафиксировать транзакцию](../../../odbc/reference/develop-app/step-5-commit-the-transaction.md)  
   
--   [Шаг 6. Отключение от источника данных](../../../odbc/reference/develop-app/step-6-disconnect-from-the-data-source.md)
+-   [Шаг 6. Отключение от источника данных](../../../odbc/reference/develop-app/step-6-disconnect-from-the-data-source.md)

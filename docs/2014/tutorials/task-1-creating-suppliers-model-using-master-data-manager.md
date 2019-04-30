@@ -1,5 +1,5 @@
 ---
-title: Упражнение 1. Создание модели поставщиков с помощью диспетчера основных данных | Документация Майкрософт
+title: Задача 1. Создание модели поставщиков с помощью диспетчера основных данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 275b7cd57336c22b6d1f67206d1e1cdb0b7d2abd
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035485"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63222664"
 ---
-# <a name="task-1-creating-suppliers-model-using-master-data-manager"></a>Упражнение 1. Создание модели поставщиков с помощью диспетчера основных данных
+# <a name="task-1-creating-suppliers-model-using-master-data-manager"></a>Задача 1. Создание модели поставщиков с помощью диспетчера основных данных
   В этой задаче вы создадите модель с именем **поставщики** в MDS с помощью **диспетчера основных данных**.  
   
 1.  Перейдите к [ http://localhost/mds ](http://localhost/mds) для запуска **диспетчера основных данных**. Замените URL-адрес, если при настройке веб-приложения было указано другое имя или другой веб-сайт.  

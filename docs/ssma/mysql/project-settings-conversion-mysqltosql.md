@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 12e2e61c6b55bf3c549c08f2b090059d674ed83d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52411271"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63162025"
 ---
 # <a name="project-settings-conversion-mysqltosql"></a>Параметры проекта (преобразование) (MySQLToSQL)
 На странице преобразования **параметры проекта** диалоговое окно содержит настройки, установленные как SSMA преобразует синтаксис MySQL в синтаксис SQL Server или SQL Azure.  

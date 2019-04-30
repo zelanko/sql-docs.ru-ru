@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1fb077261eda4b2e013abd6d87e894637a29216a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691132"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181231"
 ---
 # <a name="odbc-cursor-library-error-codes"></a>Коды ошибок для библиотеки курсоров ODBC
 > [!IMPORTANT]  
@@ -38,10 +38,10 @@ ms.locfileid: "47691132"
 |01000|Библиотека курсоров не используется. Поддержка драйверов недостаточно.|**SQLBrowseConnect**<br /><br /> **SQLConnect**<br /><br /> **SQLDriverConnect**|  
 |01000|Библиотека курсоров не используется. Несовпадение версий с помощью диспетчера драйверов.|**SQLBrowseConnect**<br /><br /> **SQLConnect**<br /><br /> **SQLDriverConnect**|  
 |01000|Драйвер возвращается SQL_SUCCESS_WITH_INFO. Предупреждающее сообщение было потеряно.|**SQLFetch**<br /><br /> **SQLFetchScroll**|  
-|S1000|Общая ошибка: не удалось создать буфер для файла.|**SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**|  
-|S1000|Общая ошибка: не удается считать из буфера файла.|**SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**|  
-|S1000|Общая ошибка: не удается записать файл буфера.|**SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**|  
-|S1000|Общая ошибка: не удалось закрыть или удалить файловый буфер.|**SQLFreeHandle**<br /><br /> **SQLFreeStmt**|  
+|S1000|Общая ошибка: Не удалось создать буфер для файла.|**SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**|  
+|S1000|Общая ошибка: Не удается прочитать из файла буфера.|**SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**|  
+|S1000|Общая ошибка: Не удалось записать файл буфера.|**SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**|  
+|S1000|Общая ошибка: Не удалось закрыть или удалить файловый буфер.|**SQLFreeHandle**<br /><br /> **SQLFreeStmt**|  
 |SL001|Невозможно выполнить позиционированные запрос, так как нет доступных для поиска столбцов были привязаны.|**SQLExecDirect**<br /><br /> **SQLGetData**<br /><br /> **SQLPrepare**|  
 |SL002|Позиционированные запрос не может быть выполнена, так как результирующий набор был создан в условии соединения.|**SQLExecute**<br /><br /> **SQLExecDirect**<br /><br /> **SQLGetData**|  
 |SL003|Привязанные буфера превышает максимальный размер.|**SQLFetch**<br /><br /> **SQLFetchScroll**|  

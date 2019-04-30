@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0c366cca32c8d441ff25f9688a841e2f0fac77a9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775919"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63204559"
 ---
 # <a name="table-valued-object-properties-visual-database-tools"></a>Свойства объектов с табличными значениями (визуальные инструменты для баз данных)
   Эти свойства отображаются в окне свойств при выборе табличного объекта в **конструкторе запросов и представлений**. Табличный объект может быть представлением, синонимом, производной таблицей или возвращающей табличное значение функцией. Если не указано иное, в окне **Свойства** эти свойства отображаются только для чтения.  

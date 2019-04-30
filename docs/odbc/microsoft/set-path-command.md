@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f3d810e66249779b2d3706e92ea39f89a0f87cff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727552"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63159257"
 ---
 # <a name="set-path-command"></a>Команда SET PATH
 Указывает путь для поиска файлов. Сведения см. в разделе "Примечания".  

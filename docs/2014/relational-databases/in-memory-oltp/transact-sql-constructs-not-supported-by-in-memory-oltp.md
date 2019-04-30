@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dda74f247f9899b9e0a23d43143a5031574d8c13
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541239"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155299"
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>Конструкции языка Transact-SQL, неподдерживаемые в In-Memory OLTP
   Оптимизированные для памяти таблицы и скомпилированные хранимые процедуры не поддерживают полную контактную зону [!INCLUDE[tsql](../../includes/tsql-md.md)], которая поддерживается дисковыми таблицами и интерпретируемыми хранимыми процедурами [!INCLUDE[tsql](../../includes/tsql-md.md)]. При попытке использовать одну из неподдерживаемых функций сервер возвращает ошибку.  

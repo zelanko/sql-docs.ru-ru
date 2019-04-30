@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: f5ed900eae974eb768223d534e6ac43025e9718c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202874"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63154872"
 ---
 # <a name="specify-field-length-by-using-bcp-sql-server"></a>Указание длины поля с помощью программы bcp (SQL Server)
   Длина поля указывает максимальное количество символов, необходимых для представления данных в символьном формате. Длина поля известна заранее, если данные хранятся в собственном формате, например значение типа `int` занимает 4 байта. Если указано значение 0 в качестве значения длины префикса **bcp** команда запрашивает длину поля, длины поля по умолчанию и влияние длины поля на хранении данных в файлах данных, которые содержат `char` данных.  

@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3f740965cdc0b3c17e1a889975fae72bf37a85a6
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59951710"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63206507"
 ---
 # <a name="controlling-the-tablix-data-region-display-on-a-report-page-report-builder-and-ssrs"></a>Управление отображением области данных табликса на странице отчетов (построитель отчетов и службы SSRS)
   В данном разделе описываются свойства области данных табликса, которые можно изменять для изменения отображения области данных табликса во время просмотра в отчете.  

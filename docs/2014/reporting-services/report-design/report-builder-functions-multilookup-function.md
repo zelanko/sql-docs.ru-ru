@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1350c25450dfae5ed02b9761ed79182ccac817d5
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59958220"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63216239"
 ---
 # <a name="multilookup-function-report-builder-and-ssrs"></a>Функция Multilookup (построитель отчетов и службы SSRS)
   Возвращает набор первых подходящих значений для указанного набора имен из набора данных, содержащего пары «имя-значение».  

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 74ea4a208cad079933b27a7305a5ce0462e08515
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639202"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161398"
 ---
 # <a name="filtering-for-updated-records"></a>Фильтрация обновленных записей
 Перед вызовом метода UpdateBatch, можно использовать свойство фильтра набора записей, чтобы просмотреть только те записи, которые были изменены с момента открытия набора записей или последнего вызова UpdateBatch. Чтобы сделать это, установите фильтр adFilterPendingRecords, чтобы определить, сколько записей будет обновлено, как показано в примере кода в следующем разделе.  

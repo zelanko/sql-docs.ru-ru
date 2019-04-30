@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 232b7c739e274ba9252c14dd28e739934cbd42e6
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54257049"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63142973"
 ---
 # <a name="visual-c-ado-programming"></a>Программирование объектов ADO с использованием Visual C++
 Справочник по API ADO представлены функции ADO интерфейс программирования (API) с помощью синтаксиса для Microsoft Visual Basic. То, что целевая аудитория всем пользователям, программистам ADO использовать разных языков, например Visual Basic, Visual C++ (с и без **#import** директивы) и Visual J ++ (с пакетом класс ADO и WFC).  
@@ -293,7 +293,7 @@ _variant_t  vtMissingYours(DISP_E_PARAMNOTFOUND, VT_ERROR); 
 Dim VariableName As Variant  
 ```
   
- В Visual C++, объявите переменную как тип **_variant_t**. Несколько схема **_variant_t** объявления, показаны ниже.  
+ В визуальном элементе C++, объявите переменную как тип **_variant_t**. Несколько схема **_variant_t** объявления, показаны ниже.  
   
 > [!NOTE]
 >  Эти объявления просто предоставить примерно представляете себе, что кода в своей программе. Дополнительные сведения см. в приведенных ниже примерах и документации Visual C ++.  
@@ -325,7 +325,7 @@ Dim fld As ADODB.Field
 End Sub  
 ```
   
- В следующем примере Visual C++ демонстрируется использование **SafeArray** использовании **_variant_t**.  
+ Следующий визуальный C++ примере показано использование метода **SafeArray** использовании **_variant_t**.  
   
 #### <a name="notes"></a>Примечания  
  Следующие заметки о соответствуют закомментированные разделы в примере кода.  

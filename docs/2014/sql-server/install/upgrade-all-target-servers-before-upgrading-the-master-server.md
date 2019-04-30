@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 97272209c1ceba780711ecf4a07178ddf8943d49
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061957"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63156723"
 ---
 # <a name="upgrade-all-target-servers-before-upgrading-the-master-server"></a>Обновите все целевые серверы перед обновлением главного сервера
   Перед обновлением главного сервера обновите все компьютеры, на которых работают серверы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , настроенные в качестве целевых серверов.  
@@ -37,7 +37,7 @@ ms.locfileid: "48061957"
 ## <a name="corrective-action"></a>Действие по исправлению  
  Если нельзя обновить все целевые серверы до обновления главного сервера, то следует исключить все целевые серверы и после обновления прикрепить их повторно.  
   
- Дополнительные сведения об определении выполняемых задач см. в разделах «Автоматизация администрирования в масштабах предприятия», «Как отключить целевой сервер от главного сервера» и «Как прикрепить целевой сервер к главному серверу» в электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Дополнительные сведения см. в разделах «Автоматизация администрирования в масштабах предприятия,» «как: Отключение целевого сервера от главного сервера» и «как: Прикрепление целевого сервера с шаблоном» в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] документации.  
   
 ## <a name="see-also"></a>См. также  
  [Проблемы при обновлении агента SQL Server](../../../2014/sql-server/install/sql-server-agent-upgrade-issues.md)   

@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d78101fd564e18467e6833f480cec2409dc2c44b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856262"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198306"
 ---
 # <a name="default-driver-subkey"></a>Подраздел драйвера по умолчанию
 По умолчанию подраздел содержит одно значение, которое описывает драйвер, используемый источник данных по умолчанию. В следующей таблице показан формат данного значения.  
   
-|Имя|Тип данных|Данные |  
+|Имя|Тип данных|Данные|  
 |----------|---------------|----------|  
 |**Драйвер**|REG_SZ|*Описание по умолчанию драйвер*|  
   

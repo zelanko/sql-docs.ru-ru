@@ -1,5 +1,5 @@
 ---
-title: FirstChild (многомерные Выражения) | Документы Microsoft
+title: FirstChild (многомерные Выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ed769da991c54b4ae7bc85091a652a27f5399a73
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740383"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155186"
 ---
 # <a name="firstchild-mdx"></a>FirstChild (многомерные выражения)
 
@@ -29,7 +29,7 @@ Member_Expression.FirstChild
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *Member_Expression.*  
+ *Member_Expression*  
  Допустимое многомерное выражение, возвращающее элемент.  
   
 ### <a name="example"></a>Пример  
@@ -42,6 +42,6 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>См. также  
  [LastChild &#40;многомерных Выражений&#41;](../mdx/lastchild-mdx.md)   
- [Справочник по функциям многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
   
   

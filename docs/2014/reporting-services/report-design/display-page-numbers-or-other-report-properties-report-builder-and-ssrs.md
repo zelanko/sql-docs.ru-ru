@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0aa360b52f6928db53a473712c38bbfc2d05de78
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59961790"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63135495"
 ---
 # <a name="display-page-numbers-or-other-report-properties-report-builder-and-ssrs"></a>Отображение номеров страниц или других свойств отчета (построитель отчетов и службы SSRS)
   К верхним или нижним колонтитулам страниц в отчете легко добавить номера страниц, заголовок отчета, имя файла и другие свойства отчета. Эти свойства хранятся в виде полей в папке «Встроенные поля» в области данных отчета.  

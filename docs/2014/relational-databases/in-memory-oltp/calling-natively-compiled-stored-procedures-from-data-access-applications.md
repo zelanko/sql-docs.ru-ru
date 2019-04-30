@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 09f68c2a8f316189b1b28e9b252950ce6761d19d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368006"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63156831"
 ---
 # <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>Вызов хранимых процедур, скомпилированных в собственном коде, из приложений для доступа к данным
   В этом разделе приведены рекомендации по вызову хранимых процедур, скомпилированных в собственном коде, из приложений для доступа к данным.  
@@ -31,7 +31,7 @@ ms.locfileid: "53368006"
   
  SqlClient не поддерживает получение данных только схемы (обнаружение метаданных) о результирующих наборах, возвращенных скомпилированной в собственном коде хранимой процедурой (CommandType.SchemaOnly). Используйте вместо этого процедуру [sp_describe_first_result_set (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql).  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Собственный клиент  
+ Собственный клиент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
  Версии [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client до [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] не позволяют получить данные только схемы (обнаружение метаданных) о результирующих наборах, возвращенных скомпилированной в собственном коде хранимой процедурой. Используйте вместо этого процедуру [sp_describe_first_result_set (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql).  
   
  Следующие рекомендации применимы к вызовам хранимой процедуры, скомпилированным в собственном коде, с помощью драйвера ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  

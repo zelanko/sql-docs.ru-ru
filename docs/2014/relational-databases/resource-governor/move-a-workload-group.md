@@ -16,18 +16,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1c1fedfc0c21d78e73f38b5bfdf084eb37e5311d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52799684"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63209750"
 ---
 # <a name="move-a-workload-group"></a>Перемещение группы рабочей нагрузки
   Группу рабочей нагрузки регулятора ресурсов можно переместить в другой пул ресурсов в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или с помощью Transact-SQL.  
   
--   **Перед началом работы**  [Ограничения](#LimitationsRestrictions), [разрешения](#Permissions)  
+-   **Перед началом:**  [ограничения](#LimitationsRestrictions), [разрешения](#Permissions)  
   
--   **Для перемещения рабочей нагрузки группы, с использованием:**  [SQL Server Management Studio](#MoveWGSSMS), [Transact-SQL](#MoveWGTSQL)  
+-   **Перемещение группы рабочей нагрузки с использованием:**  [среды SQL Server Management Studio](#MoveWGSSMS), [Transact-SQL](#MoveWGTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
  Перемещение группы рабочей нагрузки становится невозможным, если имеется ожидающая выполнения операция настройки регулятора ресурсов.  

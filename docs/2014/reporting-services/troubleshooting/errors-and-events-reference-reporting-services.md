@@ -18,11 +18,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: eb18f324ca3f4ed6111181d5f6ed2fd3ca58ce1f
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59962871"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63190794"
 ---
 # <a name="errors-and-events-reference-reporting-services"></a>Справочник по ошибкам и событиям (службы Reporting Services)
   Этот раздел содержит сведения об ошибках и событиях служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Файлы журналов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] также содержат сведения об ошибках. Дополнительные сведения о доступных типах файлов журналов и способах просмотра журналов см. в разделе [Файлы и источники журналов служб Reporting Services](../report-server/reporting-services-log-files-and-sources.md).  

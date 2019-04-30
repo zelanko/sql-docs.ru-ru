@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: db6d6220fbb0f756b539e63dc2496d9ddb46d9f5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775406"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63228494"
 ---
 # <a name="modify-a-filter-sql-server-profiler"></a>изменить фильтр (приложение SQL Server Profiler)
   Фильтры добавляются в шаблоны трассировки, которые содержат определение трассировки, чтобы ограничить число событий, собираемых трассировкой. Ограничение числа собираемых событий может уменьшить влияние трассировки на производительность. Если были установлены фильтры для шаблона трассировки, и обнаружилось, что трассировка не собирает необходимый вид сведений, то фильтр может быть отредактирован.  

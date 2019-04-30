@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cc18212852954accfddd9f3082b5c8f8a5485b58
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615292"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63140286"
 ---
 # <a name="datatypeenum"></a>DataTypeEnum
 Указывает тип данных [поле](../../../ado/reference/ado-api/field-object.md), [параметр](../../../ado/reference/ado-api/parameter-object.md), или [свойство](../../../ado/reference/ado-api/property-object-ado.md). В круглых скобках в столбце "Описание" в следующей таблице показан соответствующий индикатор типа OLE DB.  

@@ -19,11 +19,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0f59763b63f4e73687620482a2c1e739fe21fb6f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373926"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63150731"
 ---
 # <a name="reduce-the-production-server-tuning-load"></a>Уменьшение настроечной загрузки рабочего сервера
   [!INCLUDE[ssDE](../../../includes/ssde-md.md)] полагается на оптимизатор запросов, который анализирует рабочую нагрузку и создает рекомендации по настройке. Выполнение этого анализа на рабочем сервере добавляет нагрузки этому серверу и может снизить его производительность на время сеанса настройки. Чтобы уменьшить дополнительную нагрузку сервера во время сеанса настройки, можно использовать тестовый сервер в дополнение к рабочему серверу.  

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f0db2028840491a448cb0bf3bd07cbb6dfe10fe8
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601204"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63140296"
 ---
 # <a name="deleterecord-and-moverecord-methods-example-vb"></a>Примеры DeleteRecord и Moverecord методы (Visual Basic)
 В этом примере показано, как скопировать, переместить, изменить и удалить содержимое в текстовый файл, опубликованных в веб-папку. Другие свойства и методы, используемые включают [GetChildren](../../../ado/reference/ado-api/getchildren-method-ado.md), [ParentURL](../../../ado/reference/ado-api/parenturl-property-ado.md), [источника](../../../ado/reference/ado-api/source-property-ado-record.md), и [Flush](../../../ado/reference/ado-api/flush-method-ado.md).  

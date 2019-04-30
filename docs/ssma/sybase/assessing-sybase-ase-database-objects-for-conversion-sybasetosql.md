@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: e7d1b0b68835fe8b909369a87814a3d1c41e07d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841062"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240249"
 ---
 # <a name="assessing-sap-ase-database-objects-for-conversion-sybasetosql"></a>Оценка объектов базы данных SAP ASE для преобразования (SybaseToSQL)
 Прежде чем загружать объекты и перенести данные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или Azure SQL, следует определить, каким образом сложность миграции и сколько времени займет. SSMA можно создать отчет об оценке процента объектов и процедуры, которые успешно преобразуются в [!INCLUDE[tsql](../../includes/tsql-md.md)]. SSMA также позволяет просматривать конкретные проблемы, которые могут вызвать ошибки преобразования.  
@@ -35,7 +35,7 @@ ms.locfileid: "47841062"
   
     SSMA показывает ход выполнения в строке состояния в нижней части окна. Если область вывода, вы увидите все связанные сообщения.  
   
-    По завершении оценки, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant для Sybase: откроется окно отчета об оценке.  
+    По завершении оценки, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant для Sybase: Будет открыто окно отчета оценки.  
   
 ## <a name="use-assessment-reports"></a>Использование отчетов с оценкой  
 Отчет об оценке окно содержит три панели:  

@@ -12,11 +12,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 2bcb706eda464730d978d0098281c2ebcd2336ed
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365766"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63192283"
 ---
 # <a name="deployment-topologies-for-sql-server-bi-features-in-sharepoint"></a>Deployment Topologies for SQL Server BI Features in SharePoint
   В этом разделе описываются типовые топологии для установки компонентов SQL Server Business Intelligence [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и [!INCLUDE[ssGeminiShortvnext](../../includes/ssgeminishortvnext-md.md)] в средах SharePoint 2010 и SharePoint 2013. Например, один сервер и три уровня.  
@@ -169,7 +169,7 @@ ms.locfileid: "53365766"
 ##  <a name="bkmk_sharepoint2010_scaleserver"></a> Трехуровневой конфигурации с масштабным развертыванием  
  Эта топология иллюстрирует масштабное развертывание, при котором одна и та же общая служба выполняется на нескольких серверах, что позволяет обслуживать большое количество запросов и предоставлять дополнительные мощности по обработке данных PowerPivot или отчетов служб Reporting Services. На нижеследующей диаграмме показаны три кластера серверов приложений, в каждом из которых в различных сочетаниях выполняются общие службы. В среде SharePoint функции обнаружения и проверки доступности служб встроены в ферму. Балансировка загрузки нескольких физических серверов, на которых выполняется одно и то же приложение общей службы, является частью архитектуры общих служб.  
   
- При развертывании многосерверной фермы следуйте инструкциям, приведенным в статье по SharePoint: [Несколько серверов для трехуровневой фермы (SharePoint Server 2010)](https://go.microsoft.com/fwlink/?linkID=219834).  
+ При развертывании многосерверной фермы, обязательно следуйте инструкциям в статье по SharePoint: [Несколько серверов для трехуровневой фермы (SharePoint Server 2010)](https://go.microsoft.com/fwlink/?linkID=219834).  
   
  ![Топология из пяти серверов](../../../2014/sql-server/install/media/sql11bisetup-5server.gif "топология из пяти серверов")  
   

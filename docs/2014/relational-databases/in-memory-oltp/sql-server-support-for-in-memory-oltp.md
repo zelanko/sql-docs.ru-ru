@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 470b3edf0435099b2a9fd17b14ac299299274a71
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142989"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181240"
 ---
 # <a name="sql-server-support-for-in-memory-oltp"></a>Поддержка SQL Server для In-Memory OLTP
   В этом разделе рассматриваются новый и обновленный синтаксис и функции поддержки таблиц, оптимизированных для памяти.  

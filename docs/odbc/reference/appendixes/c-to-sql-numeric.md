@@ -1,5 +1,5 @@
 ---
-title: 'Преобразование из C в SQL: числовые | Документация Майкрософт'
+title: 'C в SQL: Числовые | Документация Майкрософт'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,13 +16,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 816394bb8469148504c1b2b416e77fec814bef8f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47786672"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63191735"
 ---
-# <a name="c-to-sql-numeric"></a>Преобразование из C в SQL: числовые данные
+# <a name="c-to-sql-numeric"></a>C в SQL: Numeric
 Идентификаторы для числовых типов данных ODBC C следующие:  
   
  SQL_C_STINYINT  
@@ -62,7 +62,7 @@ ms.locfileid: "47786672"
 |SQL_DECIMAL [b]<br /><br /> SQL_NUMERIC [b]<br /><br /> SQL_TINYINT [b]<br /><br /> SQL_SMALLINT [b]<br /><br /> SQL_INTEGER [b]<br /><br /> SQL_BIGINT [b]|Данные преобразуются без усечения, или усекается цифр дробной части<br /><br /> Данные преобразуются с помощью усечение целой части|н/д<br /><br /> 22003|  
 |SQL_REAL<br /><br /> SQL_FLOAT<br /><br /> SQL_DOUBLE|Данные не выходят за диапазон типа данных, в который преобразуется значение<br /><br /> Данных находится вне диапазона типа данных, в который преобразуется значение|н/д<br /><br /> 22003|  
 |SQL_BIT|Данные являются 0 или 1<br /><br /> Данные больше 0, меньше 2 и не равно 1<br /><br /> Данных меньше 0 или больше или равно 2|н/д<br /><br /> 22001<br /><br /> 22003|  
-|SQL_INTERVAL_YEAR [a]<br /><br /> SQL_INTERVAL_MONTH [a]<br /><br /> SQL_INTERVAL_DAY [a]<br /><br /> SQL_INTERVAL_HOUR [a]<br /><br /> SQL_INTERVAL_MINUTE [a]<br /><br /> SQL_INTERVAL_SECOND [a]|Данные не усекаются.<br /><br /> Усечение данных.|н/д<br /><br /> 22015|  
+|SQL_INTERVAL_YEAR [a]<br /><br /> SQL_INTERVAL_MONTH [a]<br /><br /> SQL_INTERVAL_DAY [a]<br /><br /> SQL_INTERVAL_HOUR [a]<br /><br /> SQL_INTERVAL_MINUTE[a]<br /><br /> SQL_INTERVAL_SECOND [a]|Данные не усекаются.<br /><br /> Усечение данных.|н/д<br /><br /> 22015|  
   
  [a] Эти преобразования поддерживаются только для точных числовых типов данных (SQL_C_STINYINT, SQL_C_UTINYINT, SQL_C_SSHORT, SQL_C_USHORT, SQL_C_SLONG, SQL_C_ULONG или SQL_C_NUMERIC). Они не поддерживаются для приблизительных числовых типов данных (SQL_C_FLOAT или SQL_C_DOUBLE). Точные числовые типы данных C нельзя преобразовать тип SQL, точности которого интервала не состоит из одного поля интервала.  
   

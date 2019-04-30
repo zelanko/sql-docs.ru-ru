@@ -1,5 +1,5 @@
 ---
-title: Пример Указание директивы XMLTEXT | Документация Майкрософт
+title: Пример Указание директивы XMLTEXT | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 75f04b8dfb6cfec70c6fc141178dfb56c9ffd94c
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537356"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63205102"
 ---
-# <a name="example-specifying-the-xmltext-directive"></a>Пример Задание директивы XMLTEXT
+# <a name="example-specifying-the-xmltext-directive"></a>Пример Определение директивы XMLTEXT
   Этот пример иллюстрирует, как при помощи директивы `XMLTEXT` в инструкции `SELECT`, использующей режим EXPLICIT, осуществляется обращение к данным столбца Overflow.  
   
  Рассмотрим таблицу `Person` . В этой таблице имеется столбец `Overflow` , в котором хранится неиспользуемая часть XML-документа.  

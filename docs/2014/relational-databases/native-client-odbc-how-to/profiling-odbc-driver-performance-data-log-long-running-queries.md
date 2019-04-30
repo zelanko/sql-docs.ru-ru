@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 13cb285396d63f2b06d004afab4a0ec8c7504fb0
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350672"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200360"
 ---
 # <a name="log-long-running-queries-odbc"></a>Ведение журналов длительных запросов (ODBC)
   В этом образце демонстрируются параметры ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], относящиеся к драйверу, для долго выполняемых запросов. При запуске этот образец создает файл журнала Odbcqry.log, содержащий список запросов, время выполнения которых превысило интервал, установленный приложением. Этот образец не поддерживается на архитектуре IA64. Этот образец разработан для ODBC версии 3.0 или более поздней.  

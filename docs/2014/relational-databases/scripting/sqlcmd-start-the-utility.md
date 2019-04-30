@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3098b4f768089c06c3c0ba9f38d1201e4ed15f5c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228354"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63135362"
 ---
 # <a name="start-the-sqlcmd-utility"></a>Запуск программу sqlcmd
   Чтобы начать использовать программу `sqlcmd`, требуется запустить ее и подключиться к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Можно соединиться или с экземпляром, установленным по умолчанию, или с именованным экземпляром. Первый шаг — запуск программы `sqlcmd`.  
@@ -49,7 +49,7 @@ ms.locfileid: "48228354"
   
 2.  Нажмите клавишу ВВОД.  
   
-     Приглашение программы `sqlcmd` (1>) указывает, что установлено соединение с указанным экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     `sqlcmd` Строки (1 >) указывает, что вы подключены к указанному экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
     > [!NOTE]  
     >  Введенные инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] хранятся в буфере. Они выполняются как пакет при обнаружении команды GO.  

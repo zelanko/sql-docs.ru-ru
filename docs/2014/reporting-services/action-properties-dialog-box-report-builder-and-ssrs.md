@@ -35,11 +35,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 125b40193edca5dc60fa86fe5818f7722f5af91c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59956830"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63231184"
 ---
 # <a name="action-properties-dialog-box-report-builder-and-ssrs"></a>Диалоговое окно «Свойства действия» (построитель отчетов и службы SSRS)
   С помощью диалогового окна **Действие** можно включить параметры гиперссылок для диаграммы, датчика и элементов карты, поддерживающих ссылки. Определите действие, чтобы дать пользователю возможность щелкнуть отчет и перейти по URL-адресу к другому отчету на том же сервере отчетов или на сайте SharePoint, интегрированном с сервером отчетов, или к другому расположению в текущем отчете.  

@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3d127e2da3397e96059c7d04305a983766ca1db6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767314"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198335"
 ---
 # <a name="automatic-population-of-the-ipd"></a>Автоматическое заполнение IPD
 Некоторые драйверы можно настроить поля IPD после подготовки параметризованного запроса. Поля дескриптора автоматически заполняются данными о параметре, включая тип данных, точность, масштаб и другие характеристики. Это эквивалентно поддержкой **SQLDescribeParam**. Эта информация может быть особенно ценна для приложения, когда он находится в другой способ обнаружить его, например когда нерегламентированный запрос выполняется с параметрами, которые приложение не знает о.  

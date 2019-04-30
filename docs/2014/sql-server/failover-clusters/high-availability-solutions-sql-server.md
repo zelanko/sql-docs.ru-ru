@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 43727e0c7795fbd1f2f0c6a56693c2f06fdf4536
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579044"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63193043"
 ---
 # <a name="high-availability-solutions-sql-server"></a>Решения высокого уровня доступности (SQL Server)
   В данном разделе представлены некоторые решения высокой доступности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , позволяющие повысить уровень доступности серверов или баз данных. Решения по повышению уровня доступности защищают от последствий ошибок в программах и сбоев оборудования, помогая сохранить доступность приложений, и предельно сокращают для пользователей время простоя.  

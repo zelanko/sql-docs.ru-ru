@@ -11,19 +11,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ec4d66af36ff74b5b0a9160529990c9fc52fc961
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138471"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200275"
 ---
 # <a name="use-table-valued-parameters-odbc"></a>Использование возвращающих табличные значения параметров (ODBC)
   В нем демонстрируется вставка нескольких строк с несколькими столбцами за одно обращение к серверу при помощи возвращающего табличное значение параметра.  
   
- Дополнительные сведения о возвращающих табличные значения параметров, см. в разделе [возвращающего табличное значение параметров &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md). Дополнительные образцы использования возвращающих табличные значения параметров см. в разделе [ODBC Table-valued Parameter Programming Examples](../../database-engine/dev-guide/odbc-table-valued-parameter-programming-examples.md).  
+ Дополнительные сведения о возвращающих табличные значения параметров, см. в разделе [возвращающего табличное значение параметров &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md). Дополнительные образцы использования возвращающих табличное значение параметров см. в разделе [ODBC Table-Valued Parameter Programming Examples](../../database-engine/dev-guide/odbc-table-valued-parameter-programming-examples.md).  
   
 ## <a name="example"></a>Пример  
- Кроме того, потребуется источник данных ODBC с именем TVPDemo. По умолчанию в качестве базы данных для источника данных TVPDemo может быть указана любая тестовая база данных на компьютере. Этот источник данных должен быть основан на драйвере ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Кроме того, потребуется источник данных ODBC с именем TVPDemo. По умолчанию в качестве базы данных для источника данных TVPDemo может быть указана любая тестовая база данных на компьютере. Этот источник данных должен быть основан на драйвере ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  При построении и запуске этого образца как 32-разрядного приложения в 64-разрядной операционной системе необходимо создать источник данных ODBC с помощью программы администрирования ODBC (исполняемый файл %windir%\SysWOW64\odbcad32.exe).  
   

@@ -15,11 +15,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 5628df909bc5d28706ab6c9032f6dc62a13489c3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109436"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63151086"
 ---
 # <a name="humanresourcesmyteam-sample-table-sql-server"></a>Образец таблицы HumanResources.myTeam (SQL Server)
   Большинству примеров кода в разделе [Импорт и экспорт больших массивов данных](bulk-import-and-export-of-data-sql-server.md) требуется специальная учебная таблица **myTeam**. Перед выполнением примеров необходимо создать таблицу **myTeam** в схеме **HumanResources** базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
@@ -32,7 +32,7 @@ ms.locfileid: "48109436"
 |Столбец|Тип данных|Допускает значения NULL|Описание|  
 |------------|---------------|-----------------|-----------------|  
 |**EmployeeID**|`smallint`|Нет|Первичный ключ для строк таблицы. Идентификатор сотрудника — члена команды.|  
-|**Название**|`nvarchar(50)`|Нет|Имя члена команды.|  
+|**Name**|`nvarchar(50)`|Нет|Имя члена команды.|  
 |**Title**|`nvarchar(50)`|Допускает значения NULL|Должность, которую сотрудник занимает в команде.|  
 |**Историческая справка**|`nvarchar(50)`|Нет|Дата и время последнего обновления строки (по умолчанию)|  
   

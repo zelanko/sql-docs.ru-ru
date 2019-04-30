@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6e23f7b373eb0b1f089c2c38eb28027dedc48849
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772932"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161511"
 ---
 # <a name="handling-errors-in-other-languages"></a>Обработка ошибок на других языках
 На данный момент в этом разделе описывается ошибок с точки зрения Microsoft® Visual Basic®. В оставшейся части этого раздела будет позволяют получить общие сведения для обработки ошибок в языках, отличных от Visual Basic.  

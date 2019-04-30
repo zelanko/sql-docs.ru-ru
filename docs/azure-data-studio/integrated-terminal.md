@@ -12,11 +12,11 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.openlocfilehash: 6677119a35d1d51ac8b6563d9bd9b9f32668c273
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030438"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239355"
 ---
 # <a name="integrated-terminal"></a>Интегрированный терминал
 
@@ -96,8 +96,8 @@ ms.locfileid: "53030438"
 
 Key|Command
 ---|---
-**CTRL + "**|Показать встроенный терминал
-**Ctrl + Shift + "**|Создать новый терминал
+**CTRL +'**| Показать встроенный терминал
+**Ctrl + Shift + "**| Создать новый терминал
 **CTRL + стрелка вверх**|Прокрутите страницу вверх
 **CTRL + стрелка вниз**|Прокрутите вниз
 **Ctrl + PageUp**|Прокрутка страницы вверх
@@ -130,7 +130,7 @@ Key|Command
 Сочетания клавиш для копирования и вставки по соблюдать стандарты платформы:
 
 * Linux: **Ctrl + Shift + C** и **Ctrl + Shift + V**
-* MAC: **Cmd + C** и **Cmd + V**
+* Mac: **Cmd + C** и **Cmd + V**
 * Windows: **CTRL + C** и **Ctrl + V**
 
 ### <a name="find"></a>Найти

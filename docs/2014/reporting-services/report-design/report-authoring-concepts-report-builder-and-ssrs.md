@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b7aa95480780c89dadcbcba4b4d08016adae50f4
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59945340"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215431"
 ---
 # <a name="report-authoring-concepts-report-builder-and-ssrs"></a>Основные понятия разработки отчетов (построитель отчетов и службы SSRS)
   В этом разделе кратко определены основные понятия, используемые в документации по построителю отчетов и конструктору отчетов. Определения отдельных слов и терминов см. в разделе [Глоссарий (построитель отчетов)](../report-builder/glossary-report-builder.md).  

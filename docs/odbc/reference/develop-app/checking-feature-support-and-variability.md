@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b9af2cfd73556baca4870428cdcdfcee3e07191d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648822"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63217613"
 ---
 # <a name="checking-feature-support-and-variability"></a>Проверка поддержки и изменчивости функций
 Чтобы проверить, поддержки и изменчивости функций, приложения обычно вызывают **SQLGetInfo**, **SQLGetFunctions**, и **SQLGetTypeInfo**. Хорошей отправной точкой является драйвера API и SQL грамматики уровни соответствия. Они описывают широкий уровней поддержки. Затем приложение может вызвать **SQLGetInfo** с другими параметрами для определения поддержки или изменчивость компоненты, необходимые, **SQLGetFunctions** для определения ли функции его потребностей за пределы возвращенного уровень соответствия, поддерживаются, и **SQLGetTypeInfo** для определения, какие типы данных SQL поддерживаются.  

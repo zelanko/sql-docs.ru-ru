@@ -44,16 +44,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7d7c1da71445659d61fa95dc30bc7f128a1e1d40
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373616"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63225438"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>Мастер формирования и публикации скриптов
   С помощью **мастера формирования и публикации скриптов** можно создавать скрипты для переноса баз данных между экземплярами [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] или [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Скрипты для базы данных вы можете создавать на экземпляре компонента ядра СУБД в локальной сети или из [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Сформированные скрипты могут выполняться на другом экземпляре компонента ядра СУБД или [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. С помощью мастера также можно публиковать содержимое базы данных непосредственно в веб-службе, созданной с помощью проекта служб Database Publishing Services. Создать скрипты можно как для всей базы данных, так и ограничить их определенными данными или объектами.  
   
-1.  **Перед началом работы**  [Публикация в размещенной службе](#PubHostSvc), [разрешения](#Permissions)  
+1.  **Перед началом:**  [Публикация в размещенной службе](#PubHostSvc), [разрешения](#Permissions)  
   
 2.  **Создание или публикация скрипта с помощью:**  [Создание мастера и публикации скриптов](#GenPubScriptWiz)  
   

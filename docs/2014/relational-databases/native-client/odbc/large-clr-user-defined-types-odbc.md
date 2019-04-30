@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5af4f85652fc1a8a333912c741f96df014655ebe
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072288"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63144314"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>Определяемые пользователем типы данных больших значений CLR (ODBC)
   В этом разделе обсуждаются изменения ODBC в собственном клиенте SQL Server для поддержки определяемых пользователем типов данных CLR.  

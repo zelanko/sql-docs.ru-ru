@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e808f1fc82dfe0a9fd6fa96999e6e2c5320ee452
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142234"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63162018"
 ---
 # <a name="metadata-discovery"></a>Обнаружение метаданных
   Улучшенное обнаружение метаданных в [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] позволяет [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] форматирования собственные клиентские приложения, чтобы убедиться, что метаданные столбца или параметра, возвращенные в результате выполнения запроса, идентичен или совместимая с метаданными, вы указали перед Вы выполнили запрос. Если формат метаданных, возвращенных в результате выполнения запроса, будет несовместим с форматом, указанным до выполнения запроса, возвращается ошибка.  

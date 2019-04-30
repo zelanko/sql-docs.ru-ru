@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b310b51c32e4a0b3254035311c7a10182c06e550
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076254"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63154736"
 ---
 # <a name="working-with-upgrade-advisor"></a>Работа с помощником по обновлению
   Чтобы обеспечить успешное обновление до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], советник по переходу содержит центральную консоль для выявления проблем с установкой перед обновлением до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  

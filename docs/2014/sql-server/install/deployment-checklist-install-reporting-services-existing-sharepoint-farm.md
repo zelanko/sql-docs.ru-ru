@@ -1,5 +1,5 @@
 ---
-title: 'Контрольный список по развертыванию: Установка служб Reporting Services в существующей ферме SharePoint | Документация Майкрософт'
+title: 'Контрольный список развертывания: Установка служб Reporting Services в существующей ферме SharePoint | Документация Майкрософт'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,13 +12,13 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 27e6b4a1fb9726496ac4ae99a08b2e47a9136562
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52399667"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63195206"
 ---
-# <a name="deployment-checklist-install-reporting-services-into-an-existing-sharepoint-farm"></a>Контрольный список по развертыванию: установка служб Reporting Services в существующей ферме SharePoint
+# <a name="deployment-checklist-install-reporting-services-into-an-existing-sharepoint-farm"></a>Контрольный список развертывания: установка служб Reporting Services в существующей ферме SharePoint
   Серверы отчетов SharePoint служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] можно установить в новой или существующей ферме SharePoint. В этом разделе описаны возможные сценарии и рекомендации по установке служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в новой и существующей ферме SharePoint.  
   
 ## <a name="prerequisites"></a>предварительные требования  
@@ -29,7 +29,7 @@ ms.locfileid: "52399667"
 |Создайте или определите учетные записи, используемые при развертывании сервера отчетов. Необходима учетная запись службы сервера отчетов, а также учетные данные для соединения с базой данных сервера отчетов||  
 |Выберите экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , на котором будет размещаться база данных сервера отчетов. Это может быть как локальный, так и удаленный экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Необходимо выбрать экземпляр на том компьютере, который имеет достаточный объем памяти для размещения отчетов.||  
 |(Необязательно.) Выясните название SMTP-сервера или шлюза, предоставляющего услуги электронной почты для организации, если в подписках планируется использование электронной почты сервера отчетов|[Настройка сервера отчетов для доставки электронной почты &#40;диспетчер конфигурации служб SSRS&#41;](../../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)|  
-|Примечание. При обновлении компьютера, на котором установлен предыдущий CTP-версии [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] с пользовательскими изменениями в файлах конфигурации, необходимо произвести аналогичные изменения в файлах конфигурации после обновления до версии [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Затрагиваются файлы **web.config** и **client.config**.||  
+|Примечание. Если при обновлении компьютера с предыдущей CTP-версии [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и вы пользовательскими изменениями в файлах конфигурации, необходимо будет внесения изменений в файлах конфигурации после обновления до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Затрагиваются файлы **web.config** и **client.config**.||  
   
 ## <a name="installation-scenarios"></a>Сценарии установки  
  В следующей таблице описаны возможные сценарии установки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в новой и существующей ферме SharePoint. Локальный режим позволяет подготавливать отчеты локально из библиотеки документов SharePoint без интеграции с сервером отчетов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Надстройка служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для продуктов SharePoint является обязательной в отличие от сервера отчетов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Дополнительные сведения о локальном режиме см. в разделе [Отчеты, созданные в локальном Подключенном режиме в средстве просмотра отчетов &#40;служб Reporting Services в режиме интеграции с SharePoint&#41; ](../../../2014/reporting-services/local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md) и [где найти надстройку служб Reporting Services для продуктов SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  

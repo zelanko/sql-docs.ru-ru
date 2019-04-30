@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5a3ea199f6e2e86f5dc2e51199386f31b93e9377
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52815746"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63194985"
 ---
 # <a name="parameter-queries-visual-database-tools"></a>Запросы с параметрами (визуальные инструменты для баз данных)
   В некоторых случаях нужно создать запрос, который можно использовать многократно, на каждый раз с разными значениями. Например: можно часто запускать запрос, чтобы найти все `title_ids` , записанные одним автором, можно выполнять один запрос для каждого поиска, меняя только идентификатор автора.  

@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2e15dbb5b7cb21d29936fce5c9b0d1f215d244ac
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591679"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63187010"
 ---
 # <a name="sqlmaint-utility"></a>sqlmaint, программа
   Программа**sqlmaint** выполняет заданный набор операций обслуживания с одной или несколькими базами данных. Программа **sqlmaint** используется для выполнения проверок DBCC, создания резервных копий базы данных и ее журнала транзакций, обновления статистики и перестроения индексов. При всех действиях по обслуживанию базы данных формируется отчет, который можно записать в указанный текстовый файл, в HTML-файл или отправить по электронной почте. Программа**sqlmaint** выполняет планы обслуживания баз данных, созданные в предыдущих версиях [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Для запуска планов обслуживания [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] из командной строки используйте программу [dtexec utility](../integration-services/packages/dtexec-utility.md).  

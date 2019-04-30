@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 80238e8edb5b84bc353eca63d63491a8ee74c8ad
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59936880"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164008"
 ---
 # <a name="export-a-report-using-url-access"></a>Экспорт отчета с применением доступа по URL-адресу
   При необходимости можно указать формат, в котором будет подготовлен отчет с помощью *rs: Format* параметра. Например, чтобы получить копию отчета в формате PDF прямо с сервера отчетов, работающего в собственном режиме:  

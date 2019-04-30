@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fe7194c8a6f54da50eeef21891bc1049735ddd1e
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59968240"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164982"
 ---
 # <a name="dataset-properties-dialog-box-parameters-report-builder"></a>Диалоговое окно «Свойства набора данных» — «Настройки» (построитель отчетов)
   Выберите **параметры** на **свойства набора данных** диалоговое окно для добавления, изменения и удаления параметров запроса.  

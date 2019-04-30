@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3e9f7dfa941d02ac86f31f8d5d93fa55be6130ab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617232"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63156331"
 ---
 # <a name="activecommand-property-example-jscript"></a>Пример свойства ActiveCommand (JScript)
 В этом примере показано [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md) свойство. Вырежьте и вставьте следующий код в блокноте или другом текстовом редакторе и сохраните его в **ActiveCommandJS.asp**.  

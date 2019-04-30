@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 6fe7d2bf1ef6b8932704242e94c377a2b11c0619
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353657"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63137246"
 ---
 # <a name="numberofflags-property-sinstance-class"></a>Свойство NumberOfFlags (класс SInstance)
   Возвращает число флагов для экземпляра [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  

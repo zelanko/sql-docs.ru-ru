@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1697197bf9450a6487e70b0257160221e59359f8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822532"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181013"
 ---
 # <a name="endofrecordset-event-ado"></a>Событие EndOfRecordset (ADO)
 **EndOfRecordset** событие вызывается при попытке перейти к строке после конца [записей](../../../ado/reference/ado-api/recordset-object-ado.md).  

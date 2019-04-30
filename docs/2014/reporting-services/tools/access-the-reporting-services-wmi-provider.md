@@ -21,11 +21,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d2b162dca8b51a21be0d7757c5cd2b952bb3ff70
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59960850"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63217846"
 ---
 # <a name="access-the-reporting-services-wmi-provider"></a>Доступ к поставщику WMI для служб Reporting Services
   Поставщик WMI служб Reporting Services отображает два класса WMI для администрирования экземпляров серверов отчетов, работающих в собственном режиме, путем создания сценариев:  

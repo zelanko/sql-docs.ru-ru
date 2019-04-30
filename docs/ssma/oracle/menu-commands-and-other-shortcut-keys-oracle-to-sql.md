@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 960bdc184d4d71015a3d5dd1530929ccb9b9f01e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609485"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63209897"
 ---
 # <a name="menu-commands-and-other-shortcut-keysoracle-to-sql"></a>Команды меню и другие сочетания клавиш (OracleToSQL)
 В следующих разделах описаны сочетания клавиш для доступа к командам меню и других сочетаний клавиш, используемых в различных диалоговых окнах из SSMA для Oracle приложения.  

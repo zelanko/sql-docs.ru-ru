@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 1dbc3dd467aab0cf60cdb255165767fc12a0f518
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048534"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63156769"
 ---
 # <a name="best-practices-for-calling-natively-compiled-stored-procedures"></a>Рекомендации по вызову хранимых процедур, скомпилированных в собственном коде
   Скомпилированные в собственном коде хранимые процедуры:  
@@ -48,7 +48,7 @@ ms.locfileid: "48048534"
   
  Использование именованных параметров с хранимыми процедурами, скомпилированными в собственном коде, можно обнаружить с помощью XEvent `hekaton_slow_parameter_passing` с `reason=named_parameters`.  
   
- Аналогичным образом можно определить использование несовместимых типов через то же событие XEvent `hekaton_slow_parameter_passing`, с помощью `reason=parameter_conversion`.  
+ Аналогично можно определить использование несовместимых типов через то же событие XEvent `hekaton_slow_parameter_passing` с `reason=parameter_conversion`.  
   
  Чтобы реализовать логику повторного выполнения при использовании таблиц с оптимизацией для памяти (во многих сценариях) и обойти ограничения некоторых функций, можно создать интерпретируемую оболочкой хранимую процедуру [!INCLUDE[tsql](../../includes/tsql-md.md)] . Например, см. в разделе [Guidelines for Retry Logic для транзакции на оптимизированных для памяти таблицах](memory-optimized-tables.md).  
   

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1b81b6d1e28b37947f10a9ec78c8c97f60119841
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713832"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161611"
 ---
 # <a name="errors-ado"></a>Ошибки (ADO)
 Любая операция, включающее объекты ADO можно создать один или несколько ошибок поставщика. Так как возникли ошибки, один или несколько **ошибка** объекты размещаются в **ошибки** коллекцию **подключения** объекта. Дополнительные сведения об обработке предупреждений и ошибок в приложении ADO см. в разделе [обработка ошибок](../../../ado/guide/data/error-handling.md).  

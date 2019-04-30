@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 40cd9973bfdce68b1ccbe63edd8c875519dbd22b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620192"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63201590"
 ---
 # <a name="c-to-sql-data-conversion-examples"></a>Примеры преобразования данных из C в SQL
 В следующих примерах показано, как драйвер преобразует данных C в данных SQL:  

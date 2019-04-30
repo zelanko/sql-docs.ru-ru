@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c9b8ed6778a087c2200012c6df1409b187b39329
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125384"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199067"
 ---
 # <a name="tutorial-preparing-the-server-for-replication"></a>Учебник. Подготовка сервера к репликации
   Перед тем, как настраивать топологию репликации, важно предусмотреть средства безопасности. В этом учебнике описывается, как лучше обезопасить топологию репликации и как настроить распространение, которое является первым шагом в репликации данных. В первую очередь необходимо пройти именно этот учебник.  
@@ -43,7 +43,7 @@ ms.locfileid: "54125384"
   
 -   [Занятие 2. Подготовка папки моментальных снимков](lesson-2-preparing-the-snapshot-folder.md)  
   
--   [Занятие 3. Настройка распространения](lesson-3-configuring-distribution.md)  
+-   [Занятие 3. Настройка распространения](lesson-3-configuring-distribution.md)  
   
  [Приступить к изучению](lesson-1-creating-windows-accounts-for-replication.md)  
   

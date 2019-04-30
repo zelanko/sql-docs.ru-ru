@@ -1,5 +1,5 @@
 ---
-title: 'Преобразование из C в SQL: интервалы месяцев года | Документация Майкрософт'
+title: 'C в SQL: Интервалы месяцев года | Документация Майкрософт'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,13 +17,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d12727f9298eb63fe10b44c48b9d3b7996a839d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692772"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63159287"
 ---
-# <a name="c-to-sql-year-month-intervals"></a>Преобразование из C в SQL: интервалы месяцев года
+# <a name="c-to-sql-year-month-intervals"></a>C в SQL: Интервалы месяцев года
 Идентификаторы для интервальных типов данных ODBC C год месяц следующие:  
   
  SQL_C_INTERVAL_MONTH SQL_C_INTERVAL_YEAR SQL_C_INTERVAL_YEAR_TO_MONTH  

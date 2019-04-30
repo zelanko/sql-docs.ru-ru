@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 660515f10797e1f11fac22c1baf4ed74e9f67c0c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375036"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63157244"
 ---
 # <a name="supported-sql-server-features"></a>Поддерживаемые возможности SQL Server
   В этом разделе описаны возможности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которые поддерживаются и не поддерживаются для использования с оптимизированными для памяти объектами.  
@@ -63,11 +63,11 @@ ms.locfileid: "53375036"
   
 -   Интеграция с AlwaysOn. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет несколько вариантов обеспечения высокого уровня доступности сервера или базы данных, включая AlwaysOn. Дополнительные сведения см. в разделе [Решения высокого уровня доступности (SQL Server)](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md).  
   
--   Доставка журналов. Доставка журналов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] позволяет автоматически отправлять резервные копии журналов транзакций из базы данных-источника экземпляра сервера-источника в одну или более баз данных-получателей других экземпляров сервера-получателя. Дополнительные сведения см. в разделе [Сведения о доставке журналов (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md).  
+-   Доставка журналов. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Доставка журналов позволяет автоматически отправлять резервные копии журналов транзакций из базы данных-источника на экземпляр сервера-источника в одну или несколько баз данных-получателей на экземплярах сервера-получателя. Дополнительные сведения см. в разделе [Сведения о доставке журналов (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md).  
   
 -   Репликация транзакций в оптимизированные для памяти таблицы на подписчиках поддерживается с некоторыми ограничениями. Дополнительные сведения см. в разделе [Репликация на подписчиков оптимизированных для памяти таблиц](../replication/replication-to-memory-optimized-table-subscribers.md).  
   
--   Регулятор ресурсов. Регулятор ресурсов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] — это компонент, предназначенный для управления рабочей нагрузкой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и использованием системных ресурсов. Регулятор ресурсов позволяет задать ограничения на загрузку ЦП, физических средств ввода-вывода и использование памяти, которые доступны для входящих запросов приложений. Дополнительные сведения см. в разделах [Managing Memory for In-Memory OLTP](../../database-engine/managing-memory-for-in-memory-oltp.md) и [Resource Governor](../resource-governor/resource-governor.md).  
+-   Регулятор ресурсов. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Регулятор ресурсов — это компонент, который можно использовать для управления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] рабочей нагрузки и потреблением системных ресурсов. Регулятор ресурсов позволяет задать ограничения на загрузку ЦП, физических средств ввода-вывода и использование памяти, которые доступны для входящих запросов приложений. Дополнительные сведения см. в разделах [Managing Memory for In-Memory OLTP](../../database-engine/managing-memory-for-in-memory-oltp.md) и [Resource Governor](../resource-governor/resource-governor.md).  
   
 -   OLTP в памяти имеет ограничения на поддерживаемые кодовые страницы для столбцов (var)char в оптимизированных для памяти таблицах и на параметры сортировки, используемые в индексах и скомпилированные в собственном коде в хранимых процедурах. Дополнительные сведения см. в разделе [Collations and Code Pages](../../database-engine/collations-and-code-pages.md).  
   

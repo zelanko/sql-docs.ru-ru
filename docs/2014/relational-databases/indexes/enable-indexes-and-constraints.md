@@ -18,11 +18,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7d68f329aecdd1284bac311db4139470bba55e41
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533145"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63162382"
 ---
 # <a name="enable-indexes-and-constraints"></a>Включение индексов и ограничений
   В этом разделе описывается включение отключенного индекса в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. После отключения индекс остается в отключенном состоянии до тех пор, пока он не будет перестроен или удален.  

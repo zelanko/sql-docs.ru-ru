@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: aeb073b7e44060c0382d3d641aa196b93fbb402d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52785396"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63150586"
 ---
 # <a name="start-system-monitor-windows"></a>Запуск системного монитора (Windows)
   Системный монитор позволяет отслеживать использование системных ресурсов, сбор и просмотр текущих данных производительности в виде счетчиков ресурсов сервера, например счетчиков использования процессора и оперативной памяти, а также многих ресурсов Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , таких как блокировки и транзакции.  

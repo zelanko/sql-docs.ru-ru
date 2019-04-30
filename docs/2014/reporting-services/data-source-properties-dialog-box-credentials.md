@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6423c2caca256a257f660eabb8ce5eaf2d81c55f
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59961520"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63165304"
 ---
 # <a name="data-source-properties-dialog-box-credentials"></a>Диалоговое окно «Свойства источника данных» — «Учетные данные»
   Вкладка **Общие** в диалоговом окне **Свойства источника данных** позволяет просмотреть и изменить учетные данные, используемые для подключения отчета к источнику данных. Предоставленные учетные данные используются для доступа к источнику данных и кэширования копии данных для предварительного просмотра отчета. Дополнительные сведения о кэшировании данных для предварительного просмотра см. в разделе [Предварительный просмотр отчетов](reports/previewing-reports.md). Дополнительные сведения об учетных данных см. в разделе [Указание учетных данных и сведений о соединении для источников данных отчета](report-data/specify-credential-and-connection-information-for-report-data-sources.md).  

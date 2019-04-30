@@ -21,11 +21,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7289c18fac421bbdb5ccc0e00a3bea60b7a22d9e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797576"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63150618"
 ---
 # <a name="server-performance-and-activity-monitoring"></a>Производительность сервера и мониторинг активности
   Наблюдение за базами данных выполняется с целью оценки производительности сервера. Эффективное наблюдение подразумевает регулярное создание моментальных снимков текущей производительности для обнаружения процессов, вызывающих неполадки, и постоянный сбор данных для отслеживания тенденций роста или изменения производительности. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и операционной системы [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows входят программы, позволяющие следить за текущим состоянием базы данных и измерять производительность по мере изменения состояния.  

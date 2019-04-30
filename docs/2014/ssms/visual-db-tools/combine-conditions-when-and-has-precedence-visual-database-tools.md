@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4d0a0bcb7115255c3c6b3750cd930e7d06b9e2df
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52769484"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63225814"
 ---
 # <a name="combine-conditions-when-and-has-precedence-visual-database-tools"></a>Объединение условий, если приоритет имеет оператор AND (визуальные инструменты для баз данных)
   Для объединения условий с оператором AND столбец добавляется к запросу дважды для каждого из условий. Для объединения условий с оператором OR первое условие необходимо вставить в столбец "Фильтр", а дополнительные условия — в столбец **Или...**  

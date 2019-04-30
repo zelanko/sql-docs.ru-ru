@@ -19,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 38aed7f227c4720f334f6a4791a6f2c61583c0d3
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59961660"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63144550"
 ---
 # <a name="initialize-a-report-server-ssrs-configuration-manager"></a>Инициализация сервера отчетов (диспетчер конфигурации служб SSRS)
   В службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]инициализированный сервер — это сервер, способный шифровать и дешифровать данные в базе данных сервера отчетов. Инициализация является необходимым условием функционирования сервера отчетов. Инициализация происходит, когда служба сервера отчетов запускается впервые. Она также происходит, когда сервер отчетов соединяется с уже развернутой системой или когда вручную повторно создаются ключи как часть процесса восстановления. Дополнительные сведения о том, как и почему использовать ключи шифрования, см. в разделах [Настройка ключей шифрования и управление ими (диспетчер конфигурации служб SSRS)](ssrs-encryption-keys-manage-encryption-keys.md) и [Хранение зашифрованных данных сервера отчетов (диспетчер конфигурации служб SSRS)](ssrs-encryption-keys-store-encrypted-report-server-data.md).  

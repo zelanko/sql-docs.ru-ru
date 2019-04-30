@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 52d059977481236883be931a78a302c249f43ae4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818774"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63137549"
 ---
 # <a name="sql-native-client-110-configuration"></a>Конфигурация собственного клиента SQL 11.0
   В этом разделе содержатся разделы справки F1 диалоговых окон модуля **Конфигурация собственного клиента SQL Server** в диспетчере конфигурации [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] является сетевой библиотекой, при помощи которой клиентские компьютеры подключаются к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], начиная с [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

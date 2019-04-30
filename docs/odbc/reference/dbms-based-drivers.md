@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cc35f7bceff2d9e92b70448040bb602117b76c84
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629642"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63186306"
 ---
 # <a name="dbms-based-drivers"></a>Драйверы на основе СУБД
 Драйверы на основе СУБД используются с источниками данных, например Oracle или SQL Server, которые предоставляют изолированный компонент database engine для использования драйвера. Эти драйверы доступа к данным физических через автономный обработчика. то есть они отправлять инструкции SQL и получения результатов от обработчика.  

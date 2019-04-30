@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 87a6aae22985b462c65e229ffe607a33748ddad5
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59965360"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63209375"
 ---
 # <a name="merge-cells-in-a-data-region-report-builder-and-ssrs"></a>Объединение ячеек в области данных (построитель отчетов и службы SSRS)
   Можно объединить ячейки в области данных, чтобы соединить их, улучшить внешний вид области данных или сформировать метки для групп столбцов и строк.  

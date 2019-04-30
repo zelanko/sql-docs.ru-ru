@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a063bfa08ee0c405b52c123f0af03397751a2289
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558442"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63214878"
 ---
 # <a name="deadlocks-with-read-repeatable-isolation-level"></a>Взаимоблокировки с уровнем изоляции с повторяющимся чтением
 Если пользовательский бизнес-объект использует уровня изоляции read repeatable для доступа к SQL Server и бизнес-объект одновременно вызывается два клиента, которые отправляют запрос и обновление в той же транзакции, возможна взаимоблокировка. Служба Remote Data Service позволяет один из процессов истечения времени ожидания для освобождения взаимоблокировки, но обновление завершится ошибкой, для этого клиента.  

@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bf9b9bfd500c5ddb9e10fb1e2320bf0287114808
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59934500"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164819"
 ---
 # <a name="embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs"></a>Внедренные и общие подключения к данным или источники данных (построитель отчетов и службы SSRS)
   Отчеты используют подключения к данным для получения данных об отчете при выполнении запросов или при обработке отчета. Подключение можно выбрать из списка встроенных типов подключений: к реляционной базе данных, к многомерной базе данных, веб-службе или некоторым другим источникам данных. При описании подключений к данным используются следующие термины.  

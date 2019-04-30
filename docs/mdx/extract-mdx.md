@@ -1,5 +1,5 @@
 ---
-title: Extract (многомерные Выражения) | Документы Microsoft
+title: Extract (многомерные Выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a3c58799cc3e95efd7d49b3aff0bf31a1fce22b1
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740313"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155202"
 ---
 # <a name="extract-mdx"></a>Extract (многомерные выражения)
 
@@ -44,7 +44,7 @@ Extract(Set_Expression, Hierarchy_Expression1 [,Hierarchy_Expression2, ...n] )
  **Извлечь** Функция противоположна из [Crossjoin](../mdx/crossjoin-mdx.md) функции.  
   
 ## <a name="examples"></a>Примеры  
- Следующий запрос показывает использование **извлечь** для одного набора кортежей, возвращенных **NonEmpty** функции:  
+ Следующий запрос показывает, как использовать **извлечь** функцию применительно к набору кортежей, возвращенных **NonEmpty** функции:  
   
  `SELECT [Measures].[Internet Sales Amount] ON 0,`  
   
@@ -79,6 +79,6 @@ Extract(Set_Expression, Hierarchy_Expression1 [,Hierarchy_Expression2, ...n] )
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>См. также  
- [Справочник по функциям многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
   
   

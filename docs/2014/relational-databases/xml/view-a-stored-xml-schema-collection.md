@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8cde5898fc4c9ae8b71452bfb22ff58e0c3c9725
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536166"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63233606"
 ---
 # <a name="view-a-stored-xml-schema-collection"></a>Просмотр хранимой коллекции схем XML
   После импорта коллекции XML-схем с помощью команды [Создать коллекцию схем XML](/sql/t-sql/statements/create-xml-schema-collection-transact-sql)компоненты схемы будут храниться в метаданных. Можно использовать внутреннюю функцию [xml_schema_namespace](/sql/t-sql/xml/xml-schema-namespace), чтобы повторно построить коллекцию XML-схем. Эта функция возвращает экземпляр типа данных `xml`.  

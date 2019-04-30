@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9fa024e9e744fd955e4ccc323919cb22a97b7dd3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519873"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63151188"
 ---
 # <a name="create-a-new-plan-guide"></a>Создание структуры плана
   Структуру плана в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] можно создать с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Структура плана влияет на оптимизацию запросов путем присоединения указаний запросов или фиксированного плана запросов к ним. В структуре плана указывается оператор [!INCLUDE[tsql](../../includes/tsql-md.md)] , который нужно оптимизировать, и либо предложение OPTION, которое содержит указания запросов, которые будут использоваться, либо специальный план запроса, который используется для оптимизации запроса. Когда запрос выполняется, оптимизатор запросов сопоставляет инструкцию [!INCLUDE[tsql](../../includes/tsql-md.md)] со структурой плана и либо присоединяет условие OPTION к запросу в процессе выполнения, либо использует указанный план запроса.  

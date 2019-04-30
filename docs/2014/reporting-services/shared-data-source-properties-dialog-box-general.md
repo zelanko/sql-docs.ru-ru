@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3936047c89a76181710fa3bba04cc20b95ef70b9
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59956030"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63222957"
 ---
 # <a name="shared-data-source-properties-dialog-box-general"></a>Диалоговое окно «Свойства общего источника данных» — «Общие»
   С помощью диалогового окна **Свойства общего источника данных** можно просмотреть или изменить сведения о соединении для общего источника данных в отчете.  

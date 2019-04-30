@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 852fb3c6cee7c65f8799102bbd65ab368cd0d9e2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538574"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63134394"
 ---
 # <a name="create-an-aps-domain-administrator"></a>Создайте учетную запись администратора домена APS
 Некоторые операции требуют привилегий администратора домена Analytics Platform System. Это объясняется, как создать дополнительные устройства администраторов домена.  

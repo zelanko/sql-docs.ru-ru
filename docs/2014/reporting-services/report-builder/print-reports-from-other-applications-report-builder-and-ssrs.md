@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 28dcf8712214e7240eb60ef3caa6b28cda31c38e
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59947120"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155763"
 ---
 # <a name="print-reports-from-other-applications-report-builder-and-ssrs"></a>Печать отчетов из других приложений (построитель отчетов и службы SSRS)
   Построитель отчетов поддерживает возможность экспорта, которая позволяет просматривать отчеты в других приложениях. При открытии отчета в браузере или в веб-приложении в его верхней части появляется панель инструментов отчета, в которой доступна команда `Export`. Экспорт обеспечивает просмотр отчетов в других приложениях (например, экспортированный в [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)]отчет открывается именно в этом приложении). Рекомендуется экспортировать отчет для печати только в том случае, если это дает существенные преимущества при распечатывании.  

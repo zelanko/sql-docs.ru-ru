@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3cea4731ee665e401429679d764832247b2a2242
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126164"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155371"
 ---
 # <a name="create-clustered-indexes"></a>Создание кластеризованных индексов
   Кластеризованные индексы для таблиц в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] можно создать с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. За некоторыми исключениями, каждая таблица должна иметь кластеризованный индекс. Кроме того, что кластеризованный индекс повышает производительность запросов, его можно перестраивать или переорганизовывать по запросу, управляя фрагментацией таблицы. Кластеризованный индекс может быть также создан для представления. (Кластеризованные индексы определены в разделе [Описания кластеризованных и некластеризованных индексов](clustered-and-nonclustered-indexes-described.md).)  

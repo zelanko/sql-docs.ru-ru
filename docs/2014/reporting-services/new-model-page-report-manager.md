@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b0d571210c44026fc34ab43cb07e18bbd8526ed5
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59948580"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188416"
 ---
 # <a name="new-model-page-report-manager"></a>Страница «Создание модели» (диспетчер отчетов)
   Эта страница позволяет создать модель отчетов по умолчанию на основе общего источника данных. Модели отчетов можно создавать только из многомерных источников данных службы [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , реляционных источников данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и реляционных источников данных Oracle.  

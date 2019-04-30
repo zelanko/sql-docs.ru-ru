@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0a7b8baf1eb666e6639e7e7f47cbf6c321dc217b
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328644"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63225281"
 ---
 # <a name="find-in-files"></a>Найти в файлах
   Вкладка **Найти в файлах** окна «Найти и заменить» позволяет найти код, содержащий определенную строку или выражение, в заданном наборе файлов. Обнаруженные совпадения и предпринятые действия перечисляются в окне «Результаты поиска», выбранном в диалоговом окне **Параметры результата**.  

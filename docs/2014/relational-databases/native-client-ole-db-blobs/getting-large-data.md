@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e0c042b367cbd8a56d21ed57735f9334d24003d1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120276"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63195224"
 ---
 # <a name="getting-large-data"></a>Возврат больших данных
   Как правило, потребители должны изолировать код, создающий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] объект хранилища поставщика OLE DB для собственного клиента из другого кода, который обрабатывает данные, не сослаться через **ISequentialStream** указатель на интерфейс.  

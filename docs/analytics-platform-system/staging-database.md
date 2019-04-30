@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 52ede16185515c3df00ff21ece784d62eec984ef
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52396519"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63157690"
 ---
 # <a name="using-a-staging-database-in-parallel-data-warehouse-pdw"></a>В Parallel Data Warehouse (PDW) с помощью промежуточной базы данных
 SQL Server Parallel Data хранилища (PDW) использует промежуточной базы данных для хранения данных временно в процессе загрузки. По умолчанию SQL Server PDW использует целевую базу данных как промежуточную базу данных, что может привести к фрагментации таблицы. Чтобы снизить уровень фрагментации таблицы, можно создать промежуточную базу данных на определяемые пользователем. Или, при откат после сбоя загрузки не имеет значения, fastappend, в режиме загрузки можно использовать для улучшения производительности путем пропуска временной таблицы и загрузки непосредственно в целевую таблицу.  

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 35cee52e9a85989123bcb10d998d37ce86a28601
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215884"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63209816"
 ---
 # <a name="irowsetfastload-ole-db"></a>Метод IRowsetFastLoad (OLE DB)
   `IRowsetFastLoad` Интерфейс предоставляет поддержку [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] операции массового копирования на основе памяти. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Потребители поставщика собственного клиента OLE DB используют интерфейс для быстрого добавления данных в существующий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] таблицы.  
@@ -30,7 +30,7 @@ ms.locfileid: "48215884"
   
 |Метод|Описание|  
 |------------|-----------------|  
-|[IRowsetFastLoad::Commit &#40;OLE DB&#41;](irowsetfastload-commit-ole-db.md)|Обозначает конец пакета вставляемых строк и записывает эти строки в таблицу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|[IRowsetFastLoad::Commit &#40;OLE DB&#41;](irowsetfastload-commit-ole-db.md)|Обозначает конец пакета вставляемых строк и записывает эти строки в таблицу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |[IRowsetFastLoad::InsertRow &#40;OLE DB&#41;](irowsetfastload-insertrow-ole-db.md)|Добавляет строку в набор строк для массового копирования.|  
   
 ## <a name="see-also"></a>См. также  

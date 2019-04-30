@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 552ca2c2d53ae073ab50c8db64c185a5d0bd1675
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59937702"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215204"
 ---
 # <a name="specifying-paths-to-external-items-report-builder-and-ssrs"></a>Указание путей к внешним элементам (построитель отчетов и службы SSRS)
   В свойствах элемента отчета укажите пути к нужным элементам, таким как детализированные отчеты, вложенные отчеты и файлы изображений, которые являются внешними для файла определения отчета и размещены на сервере отчетов.  

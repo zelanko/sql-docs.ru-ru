@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7a1051b194c9ca9f5ad185d9759b85a252f6eec4
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59964130"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63225290"
 ---
 # <a name="group-expression-examples-report-builder-and-ssrs"></a>Примеры выражений групп (построитель отчетов и службы SSRS)
   В области данных можно группировать данные по одному полю или создавать более сложные выражения, определяющие данные, по которым выполняется группирование. Сложные выражения могут включать ссылки на несколько полей или параметров, условные инструкции или пользовательский код. При определении группы для области данных эти выражения добавляются к свойству **Группировать** . Дополнительные сведения см. в разделе [Добавление или удаление группы в области данных (построитель отчетов и службы SSRS)](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md).  

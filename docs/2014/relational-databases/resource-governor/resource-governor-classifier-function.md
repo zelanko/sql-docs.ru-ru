@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 32962186ac6fdf7b0cc18801d635e9b5ef9f5d22
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807876"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63209740"
 ---
 # <a name="resource-governor-classifier-function"></a>Resource Governor Classifier Function
   Процесс классификации регулятора ресурсов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] назначает входящие сеансы группе рабочей нагрузки с учетом характеристик сеанса. Логику классификации можно адаптировать путем написания определяемой пользователем функции, называемой функцией-классификатором.  

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 07f87bf0f231419e4f1345369211ba6ceebf1d12
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093394"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199172"
 ---
 # <a name="managing-bulk-copy-batch-sizes"></a>Управление размером пакета массового копирования
   Основным назначением пакета в операциях массового копирования является определение области транзакции. Если размер пакета не задан, то функции массового копирования рассматривают все массовое копирование как единую транзакцию. Если указан размер пакета, каждый пакет представляет собой транзакцию, которая фиксируется после завершения работы пакета.  

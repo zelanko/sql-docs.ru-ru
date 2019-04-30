@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bff145e7e3c6e429ca0877c81c5188b02e428809
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143044"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63207165"
 ---
 # <a name="cursor-rowset-size"></a>Размер набора строк курсора
   Возможности курсоров ODBC не ограничены выбором только одной строки за один раз. Они могут извлекать несколько строк в каждом вызове **SQLFetch** или [SQLFetchScroll](../../native-client-odbc-api/sqlfetchscroll.md). При работе с базой данных Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в режиме клиент-сервер значительно эффективнее извлекать несколько строк за один раз. Число строк, возвращаемых при извлечении, называется размером набора строк и задается с помощью параметра sql_attr_row_array_size функции [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md).  

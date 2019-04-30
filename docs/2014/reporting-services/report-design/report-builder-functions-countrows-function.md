@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5967303b875ed7bc2ddaba8d1c77c169d0025d04
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59936540"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63216081"
 ---
 # <a name="countrows-function-report-builder-and-ssrs"></a>Функция CountRows (построитель отчетов и службы SSRS)
   Возвращает число строк в указанной области, включая строки со значениями NULL.  

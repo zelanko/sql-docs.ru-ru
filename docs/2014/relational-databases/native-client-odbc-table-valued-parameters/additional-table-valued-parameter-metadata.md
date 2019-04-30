@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f7b9aea58b56308764f907f8cf54bf74bb0663c3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141526"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200578"
 ---
 # <a name="additional-table-valued-parameter-metadata"></a>Дополнительные метаданные возвращающего табличное значение параметра
   Чтобы получить метаданные для возвращающих табличные значения параметра, приложение вызывает SQLProcedureColumns. Для возвращающих табличные значения параметра SQLProcedureColumns возвращает одну строку. Два дополнительных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-определенные столбцы, столбцы SS_TYPE_CATALOG_NAME и SS_TYPE_SCHEMA_NAME, были добавлены для предоставления сведений о схеме и каталоге для табличных типов, связанных с возвращающих табличное значение параметрами. В соответствии со спецификацией ODBC столбцы SS_TYPE_CATALOG_NAME и SS_TYPE_SCHEMA_NAME находятся перед столбцами, зависящими от драйвера, добавленными в более ранних версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], и после всех столбцов, обязательных для ODBC.  

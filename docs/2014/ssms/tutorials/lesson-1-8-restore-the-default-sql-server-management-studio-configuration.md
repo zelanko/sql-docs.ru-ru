@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1df89b0c8f9ee694fcb2a77b21c82c3d7839287d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202066"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63151534"
 ---
 # <a name="restore-the-default-sql-server-management-studio-configuration"></a>Восстановление установленной по умолчанию конфигурации среды SQL Server Management Studio
   Начинающие пользователи среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] могут неумышленно закрыть или скрыть окна, не зная, как восстановить первоначальный вид среды [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Следующие шаги позволяют вернуться к заданному по умолчанию виду среды [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] .  

@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 70a4cdef25a096f4ff0514f169839df482e9f4b3
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59938080"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215382"
 ---
 # <a name="report-parts-in-report-designer-ssrs"></a>Части отчетов в конструкторе отчетов (SSRS)
   В конструкторе отчетов можно создавать таблицы, графики и другие элементы отчетов в проекте, а также публиковать их в виде *элементов отчета* на сервере отчетов или сайте SharePoint, интегрированном с сервером отчетов, для дальнейшего использования в других отчетах.  

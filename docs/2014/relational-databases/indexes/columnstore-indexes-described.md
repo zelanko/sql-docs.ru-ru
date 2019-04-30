@@ -17,11 +17,11 @@ author: mikeraymsft
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 58bf23c84914d7df4b9f2637cc7682de2021bf08
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109811"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155503"
 ---
 # <a name="columnstore-indexes-described"></a>Columnstore Indexes Described
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] *Индекс columnstore в памяти* хранит данные и управляет ими с помощью хранилища данных на основе столбца и обработки запросов на основе столбца. Индексы Columnstore подходят для рабочих нагрузок хранилища данных, которые выполняют в основном массовую загрузку и запросы только для чтения. Используйте индекс columnstore для повышения **производительности запросов максимум в 10 раз** относительно традиционного хранилища, основанного на строках, и **повышения эффективности сжатия данных до 7 раз** относительно несжатых данных.  
@@ -40,7 +40,7 @@ ms.locfileid: "48109811"
 -   [Связанные задачи и разделы](#related)  
   
 ##  <a name="basics"></a> Основы  
- *columnstore index* — это технология хранения, получения данных и управления ими с помощью формата хранения данных в один столбец, называемого columnstore. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает как кластеризованные и некластеризованные индексы columnstore. В обоих используется одна и та же технология columnstore в памяти, но имеются некоторые различия в целях и в поддерживаемых функциях.  
+ *columnstore index* — это технология хранения, получения данных и управления ими с помощью формата хранения данных в один столбец, называемого columnstore. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает как кластеризованные, так и некластеризованные индексы columnstore. В обоих используется одна и та же технология columnstore в памяти, но имеются некоторые различия в целях и в поддерживаемых функциях.  
   
 ###  <a name="benefits"></a> Преимущества  
  Индексы columnstore подходят для главным образом для запросов только для чтения, которые используют для анализа большие наборы данных. Часто эти запросы используются для рабочих нагрузок хранилищ данных. Индексы columnstore обеспечивают значительное повышение производительности для запросов с полным сканированием таблицы и неоптимально подходят для запросов, которые выполняют поиск конкретного значения.  
@@ -64,7 +64,7 @@ ms.locfileid: "48109811"
 |-|  
 |**Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].|  
   
- В [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], кластеризованный индекс columnstore:  
+ В [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]кластеризованный индекс columnstore:  
   
 -   Доступен в выпусках Enterprise, Developer и Evaluation.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "48109811"
 |-|  
 |**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].|  
   
- В [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], некластеризованный индекс columnstore:  
+ В [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]некластеризованный индекс columnstore:  
   
 -   Поддерживается индексация подмножества столбцов в кластеризованном индексе или куче. Например, его можно использовать для индексации часто используемых столбцов.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "48109811"
  Следующие основные концепции и понятия связаны с индексами columnstore.  
   
  индекс columnstore  
- *columnstore index* — это технология хранения, получения данных и управления ими с помощью формата хранения данных в один столбец, называемого columnstore. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает как кластеризованные и некластеризованные индексы columnstore. В обоих используется одна и та же технология columnstore в памяти, но имеются некоторые различия в целях и в поддерживаемых функциях.  
+ *columnstore index* — это технология хранения, получения данных и управления ими с помощью формата хранения данных в один столбец, называемого columnstore. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает как кластеризованные, так и некластеризованные индексы columnstore. В обоих используется одна и та же технология columnstore в памяти, но имеются некоторые различия в целях и в поддерживаемых функциях.  
   
  columnstore  
  *columnstore* — это данные, логически организованные в виде таблицы, состоящей из строк и столбцов, и физически хранящиеся в формате данных в столбцах.  
@@ -157,12 +157,12 @@ ms.locfileid: "48109811"
   
  Таблица с некластеризованным индексом columnstore доступна только для чтения до тех пор, пока индекс не будет удален или отключен. Обновить таблицу и некластеризованный индекс columnstore можно путем входящего и исходящего переключения секций. Можно также отключить индекс, обновить таблицу и перестроить индекс.  
   
- Дополнительные сведения см. в разделе [Using Nonclustered Columnstore Indexes](indexes.md)  
+ Дополнительные сведения см. в разделе [Using Nonclustered Columnstore Indexes](indexes.md).  
   
 ###  <a name="dataload_cci"></a> Загрузка данных в кластеризованный индекс Columnstore  
  ![Загрузка в кластеризованный индекс columnstore](../../database-engine/media/sql-server-pdw-columnstore-loadprocess.gif "Загрузка в кластеризованный индекс columnstore")  
   
- Как видно на диаграмме, чтобы загрузить данные в кластеризованный индекс columnstore, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
+ Согласно указаниям диаграммы, для загрузки данных в кластеризованный индекс columnstore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
   
 1.  Вставляет rowgroup максимального размера непосредственно в columnstore. По мере загрузки данных компонент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] назначает строки данных в порядке FIFO в открытую группу строк.  
   
@@ -182,7 +182,7 @@ ms.locfileid: "48109811"
   
     2.  Если число строк меньше минимального числа строк для rowgroup, строки добавляются к deltastore.  
   
- Дополнительные сведения о задачах и процессах deltastore см. в разделе [Using Clustered Columnstore Indexes](../../database-engine/using-clustered-columnstore-indexes.md)  
+ Дополнительные сведения о задачах и процессах deltastore см. в разделе [Using Clustered Columnstore Indexes](../../database-engine/using-clustered-columnstore-indexes.md).  
   
 ##  <a name="performance"></a> Советы по повышению производительности  
   
@@ -196,7 +196,7 @@ ms.locfileid: "48109811"
 ##  <a name="related"></a> Связанные задачи и разделы  
   
 ### <a name="nonclustered-columnstore-indexes"></a>Некластеризованные индексы columnstore  
- Общие задачи, см. в разделе [Using Nonclustered Columnstore Indexes](../../database-engine/using-nonclustered-columnstore-indexes.md).  
+ Дополнительные сведения о стандартных задачах см. в разделе [Using Nonclustered Columnstore Indexes](../../database-engine/using-nonclustered-columnstore-indexes.md).  
   
 -   [CREATE COLUMNSTORE INDEX (Transact-SQL)](/sql/t-sql/statements/create-columnstore-index-transact-sql)  
   
@@ -205,7 +205,7 @@ ms.locfileid: "48109811"
 -   [DROP INDEX (Transact-SQL)](/sql/t-sql/statements/drop-index-transact-sql)  
   
 ### <a name="clustered-columnstore-indexes"></a>Кластеризованные индексы columnstore  
- Общие задачи, см. в разделе [Using Clustered Columnstore Indexes](../../database-engine/using-clustered-columnstore-indexes.md).  
+ Дополнительные сведения о стандартных задачах см. в разделе [Using Clustered Columnstore Indexes](../../database-engine/using-clustered-columnstore-indexes.md).  
   
 -   [СОЗДАТЬ КЛАСТЕРИЗОВАННЫЙ индекс COLUMNSTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql)  
   

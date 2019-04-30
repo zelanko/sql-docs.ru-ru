@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a3f750c2383253636db255cbe9f1ce0ee676a9d9
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158030"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63163962"
 ---
 # <a name="using-the-report-class-for-a-delivery-extension"></a>Использование класса Report в модуле доставки
   Класс <xref:Microsoft.ReportingServices.Interfaces.Report> представляет отчет в базе данных сервера отчетов. Каждая подписка связывается с определенным отчетом. Отчет содержится в уведомлении. Модули доставки могут использовать объект <xref:Microsoft.ReportingServices.Interfaces.Report>, являющийся частью уведомления, для подготовки отчета к просмотру. Объект <xref:Microsoft.ReportingServices.Interfaces.Report> также содержит свойства, относящиеся к отчету, такие как URL-адреса отчета на сервере отчетов и имя отчета. Все эти свойства можно использовать в составе поставщика доставки.  

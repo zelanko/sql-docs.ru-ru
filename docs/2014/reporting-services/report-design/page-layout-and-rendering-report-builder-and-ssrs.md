@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fa140a2c4311a3bfa77ba056fc957bacbb99e5d9
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59945440"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63209091"
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>Макет страницы и подготовка к просмотру (построитель отчетов и службы SSRS)
   При создании отчетов важно понимать поведение модуля подготовки отчетов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , чтобы быть уверенным, что отчет, готовый для просмотра, выглядит должным образом, включая макет страницы и разбивку на страницы. Также, вероятно, понадобится убедиться в том, что отчет, готовый для просмотра, соответствует размеру обычно используемой бумаги.  

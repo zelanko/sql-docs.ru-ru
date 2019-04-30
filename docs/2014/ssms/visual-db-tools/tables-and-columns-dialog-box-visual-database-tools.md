@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 056c200ec6b73cb7cf11ee4b3acf35bc331110b3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52821998"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63204668"
 ---
 # <a name="tables-and-columns-dialog-box-visual-database-tools"></a>Диалоговое окно «Таблицы и столбцы» (визуальные инструменты для баз данных)
   Это диалоговое окно используется для сопоставления первичного ключа одной таблицы с внешним ключом другой. Для доступа к этому диалоговому окну из меню **Конструктор таблиц** щелкните **Связи**. В диалоговом окне **Связи по внешнему ключу** щелкните поле **Спецификация таблиц и столбцов**, а затем щелкните многоточие **(…)** справа от свойства.  

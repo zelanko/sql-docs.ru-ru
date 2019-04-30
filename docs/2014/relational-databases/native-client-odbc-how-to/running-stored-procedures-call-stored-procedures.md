@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 58e5160065847d5729548702b5f1d65eb31bf694
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377686"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200262"
 ---
 # <a name="call-stored-procedures-odbc"></a>Вызов хранимых процедур (ODBC)
   Когда инструкция SQL вызывает хранимую процедуру при помощи ODBC CALL предложения escape, Microsoft?? SQL Server код драйвер отправляет процедуру на SQL Server с помощью хранимых механизм удаленного вызова процедуры (RPC). Запросы RPC пропускают большую часть синтаксической проверки и обработки параметров инструкции в SQL Server; они быстрее, чем инструкция Transact-SQL EXECUTE.  

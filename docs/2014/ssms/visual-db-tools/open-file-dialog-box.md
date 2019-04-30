@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 57e89016641469cbb3215429ff0f2b9053f758c9
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328604"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63138901"
 ---
 # <a name="open-file-dialog-box"></a>Диалоговое окно «Открытие файла»
   Используйте диалоговое окно **Открытие файла** для открытия существующего файла. Это диалоговое окно можно также использовать для повторного открытия уже открытого файла с другими параметрами языковой кодировки.  

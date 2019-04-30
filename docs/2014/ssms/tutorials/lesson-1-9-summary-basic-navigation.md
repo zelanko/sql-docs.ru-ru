@@ -1,5 +1,5 @@
 ---
-title: Сводка. Основы работы | Документы Майкрософт
+title: Сводка. Основы работы | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f25cc02e61fceb42a8c02919d4deaab42c0ab586
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086484"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63151501"
 ---
-# <a name="summary-basic-navigation"></a>Сводка. Основные средства перемещения
+# <a name="summary-basic-navigation"></a>Сводка. Основы работы
   Область конструктора среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] может быть настроена в соответствии с предпочтениями пользователя и требованиями работы.  
   
  Ниже следуют рекомендации по эффективному использованию рабочего пространства среды [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] .  
@@ -31,6 +31,6 @@ ms.locfileid: "48086484"
 -   Выберите параметр **При запуске** , чтобы настроить стандартный макет рабочей среды.  
   
 ## <a name="next-lesson"></a>Следующее занятие  
- [Занятие 2. Создание инструкций на языке Transact-SQL](lesson-2-writing-transact-sql.md)  
+ [Занятие 2. Создание Transact-SQL](lesson-2-writing-transact-sql.md)  
   
   

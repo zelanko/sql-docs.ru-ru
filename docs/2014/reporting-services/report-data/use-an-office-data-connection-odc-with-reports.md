@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e51660f2b357b0ae1101b47f73ec0f66c7555265
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59935690"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63207042"
 ---
 # <a name="use-an-office-data-connection-odc-with-reports-reporting-services-in-sharepoint-integrated-mode"></a>Использование ODC-файла подключения к данным Office в отчетах (службы Reporting Services в режиме интеграции с SharePoint)
   В некоторых случаях для предоставления в отчет служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] сведений о соединении можно использовать существующий ODC-файл. ODC-файл может быть использован вместо RSDS-файла при создании общего источника данных. Сервер отчетов использует ODC-файл так же, как и RSDS-файлы. Он считывает из файла тип источника данных, строку соединения и сведения об учетных данных.  

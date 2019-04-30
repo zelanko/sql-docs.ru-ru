@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f6540789cbd05f2a7c5e5b61bf5597221dc3305f
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583247"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63162478"
 ---
 # <a name="database-engine-upgrade-issues"></a>Проблемы обновления компонента Database Engine
   В подразделах этого раздела описаны проблемы в работе компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , которые могут повлиять на процесс обновления до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. В следующих разделах описаны действия, позволяющие смягчить воздействие этих изменений на рабочую среду.  

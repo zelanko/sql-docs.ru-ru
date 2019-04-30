@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 77ad00d9c21a7f7558f8f5cafc66464c1ffc54f7
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600184"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63217646"
 ---
 # <a name="server-property-rds"></a>Свойство Server (служба удаленных рабочих столов)
 Указывает протокол, имя и обмен данными Internet Information Services (IIS).  
@@ -112,7 +112,7 @@ DataControl.Server=""
  Объект **строка** значение, содержащее Интернета или интрасети путь или имя компьютера, если сервер выполняется на удаленном компьютере; или пустая строка, если сервер выполняется на локальном компьютере.  
   
  *port*  
- Необязательный параметр. Порт, используемый для подключения к серверу, на котором запущены службы IIS. Номер порта задается в Internet Explorer (на **представление** меню, нажмите кнопку **параметры**, а затем выберите **подключения** вкладку) или в службах IIS.  
+ Необязательный. Порт, используемый для подключения к серверу, на котором запущены службы IIS. Номер порта задается в Internet Explorer (на **представление** меню, нажмите кнопку **параметры**, а затем выберите **подключения** вкладку) или в службах IIS.  
   
  *DataControl*  
  Объектную переменную, которая представляет **RDS. DataControl** объекта.  
@@ -126,7 +126,7 @@ DataControl.Server=""
 ## <a name="see-also"></a>См. также  
  [Пример свойства Server (VBScript)](../../../ado/reference/rds-api/server-property-example-vbscript.md)   
  [Свойство (RDS)](../../../ado/reference/rds-api/connect-property-rds.md)   
- [Свойство SQL](../../../ado/reference/rds-api/sql-property.md)   
+ [SQL Property](../../../ado/reference/rds-api/sql-property.md)   
  [Метод SubmitChanges (служба удаленных рабочих столов)](../../../ado/reference/rds-api/submitchanges-method-rds.md)
 
 

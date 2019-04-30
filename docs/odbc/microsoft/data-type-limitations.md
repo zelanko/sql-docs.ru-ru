@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d4ce0eb96832f4a6b9c1953b0a9a9d0af65cb3b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687982"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63187440"
 ---
 # <a name="data-type-limitations"></a>Ограничения типов данных
 Драйверы для баз данных Microsoft ODBC Desktop накладывает следующие ограничения на типы данных:  
