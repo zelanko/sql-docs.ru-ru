@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 6121c75390e7493052a16b2e898eac69283e41ec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844892"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63294569"
 ---
 # <a name="installing-ssma-components-on-sql-server-sybasetosql"></a>Установка компонентов SSMA в SQL Server (SybaseToSQL)
 Помимо установки SSMA, для использования миграции данных на стороне сервера, необходимо также установить компоненты на компьютере, на котором выполняется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Эти компоненты включают пакет расширений SSMA, которая поддерживает перенос данных и поставщики Sybase, чтобы обеспечить подключение между серверами.  

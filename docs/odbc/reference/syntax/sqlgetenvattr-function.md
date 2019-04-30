@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 70fe1ca95f5160f801eaf3528e625116705eda6d
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203813"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63258839"
 ---
 # <a name="sqlgetenvattr-function"></a>Функция SQLGetEnvAttr
 **Соответствие стандартам**  
@@ -65,7 +65,7 @@ SQLRETURN SQLGetEnvAttr(
  [Выход] Указатель на буфер, в которую будет возвращено общее число байтов (за исключением знака завершения null) для возврата в  *\*ValuePtr*. Если *ValuePtr* является указателем null, длина не возвращается. Если значение атрибута — строка символов, а также количество байтов, доступных для возврата больше или равно *BufferLength*, данные в \* *ValuePtr* усекается до  *BufferLength* минус длина знак завершения null и заканчивается нулевым байтом драйвером.  
   
 ## <a name="returns"></a>Возвращает  
- Значение SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, значение SQL_ERROR или SQL_INVALID_HANDLE.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_ERROR, or SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Диагностика  
  Когда **SQLGetEnvAttr** возвращает значение SQL_ERROR или SQL_SUCCESS_WITH_INFO, а связанное значение SQLSTATE можно получить, вызвав **SQLGetDiagRec** с *HandleType* из SQL_ HANDLE_ENV и *обрабатывать* из *EnvironmentHandle*. В следующей таблице перечислены значения SQLSTATE, обычно возвращаемые **SQLGetEnvAttr** и объясняется каждый из них в контексте этой функции; описания SQLSTATE, возвращаемых диспетчером драйверов предшествует обозначение «(DM)». Возвращается связанный с каждого значения SQLSTATE значение SQL_ERROR, если не указано иное.  

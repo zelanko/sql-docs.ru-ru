@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0fb65d55d2b6b135c562f9dd4b02170de6b7df3c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52787876"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63297871"
 ---
 # <a name="arrange-tables-in-diagrams-visual-database-tools"></a>Размещение таблиц в диаграммах (визуальные инструменты для баз данных)
   Для наглядного представления каждой таблицы и связей между таблицами можно быстро разместить таблицы в диаграмме базы данных.  

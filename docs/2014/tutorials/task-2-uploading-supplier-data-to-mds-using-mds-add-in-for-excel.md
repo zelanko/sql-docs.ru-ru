@@ -1,5 +1,5 @@
 ---
-title: Задача 2. Передача данных поставщика в MDS с помощью надстройки MDS для Excel | Документация Майкрософт
+title: Задача 2. Передача данных поставщика в MDS с помощью надстройки MDS для Excel | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 1cbaacd23fcaa1e28d6cce6d64a168d0fab4befc
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025665"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250216"
 ---
-# <a name="task-2-uploading-supplier-data-to-mds-using-mds-add-in-for-excel"></a>Задача 2. Передача данных поставщика в MDS с помощью надстройки MDS для Excel
+# <a name="task-2-uploading-supplier-data-to-mds-using-mds-add-in-for-excel"></a>Задача 2. Отправка данных поставщика в MDS с помощью надстройки MDS для Excel
   В этой задаче очищенные и поставщика данных для публикации **MDS** с помощью **надстройки MDS для Excel**. Создать сущность с именем **поставщика** в **поставщики** модель, созданную на предыдущем занятии. Сущность будет иметь атрибуты для каждого столбца в файле Excel. Атрибуты Code и Name сущности Supplier соответствуют **SupplierID** и **Supplier Name** столбцов в Excel.  
   
 1.  Откройте **очищены и сопоставлены Suppliers.xls** в **Excel**.  

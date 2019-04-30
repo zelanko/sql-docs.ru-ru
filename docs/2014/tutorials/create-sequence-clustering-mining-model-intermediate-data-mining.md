@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: b7f4f543952fd86cf6c3c66f9f4b2c51019b1869
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039356"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63273477"
 ---
 # <a name="creating-a-sequence-clustering-mining-model-structure-intermediate-data-mining-tutorial"></a>Создание структуры модели интеллектуального анализа данных кластеризации последовательностей (учебник по интеллектуальному анализу данных — средний уровень)
   Первым шагом создания последовательности, модели кластеризации интеллектуального анализа данных является использование мастера интеллектуального анализа данных для создания новой структуры интеллектуального анализа данных и модели интеллектуального анализа данных на основе [!INCLUDE[msCoName](../includes/msconame-md.md)] алгоритм кластеризации последовательностей.  
@@ -71,12 +71,12 @@ ms.locfileid: "56039356"
   
     |Таблицы и столбцы|Тип содержимого|Тип данных|  
     |---------------------|------------------|---------------|  
-    |IncomeGroup|Discrete|Текста|  
-    |OrderNumber|Ключ|Текста|  
-    |Region|Discrete|Текста|  
+    |IncomeGroup|Discrete|Text|  
+    |OrderNumber|Ключ|Text|  
+    |Region|Discrete|Text|  
     |vAssocSeqLineItems|||  
     |Line Number|Ключевая последовательность|Long|  
-    |Модель|Discrete|Текста|  
+    |Модель|Discrete|Text|  
   
 9. На **создание проверочного набора** странице **процент проверочных данных** 20, а затем нажмите кнопку **Далее**.  
   

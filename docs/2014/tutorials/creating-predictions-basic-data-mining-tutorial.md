@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: b32ffb832baf12a72df6e32b07386f24448b3c35
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035265"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63285691"
 ---
 # <a name="creating-predictions-basic-data-mining-tutorial"></a>Создание прогнозов (учебник по интеллектуальному анализу данных — начальный уровень)
   После тестирования точности моделей интеллектуального анализа данных и решили, что вы удовлетворены результатами, то можно создавать прогнозы с помощью построителя прогнозирующих запросов на **Прогноз модели интеллектуального анализа данных** вкладку в интеллектуальном анализе данных Конструктор.  

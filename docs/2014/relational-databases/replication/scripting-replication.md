@@ -18,11 +18,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 55407c52c5fb7bf0c9537eaf8fb7a7d31d2675e1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52792337"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250526"
 ---
 # <a name="scripting-replication"></a>Создание сценариев репликации
   Все компоненты репликации в топологии должны использоваться в скриптах как часть плана аварийного восстановления, а скрипты могут также использоваться для автоматизации повторяющихся задач. Скрипт содержит системные хранимые процедуры Transact-SQL, необходимые для выполнения элементов скрипта репликации, таких как публикация или подписка. Скрипты могут быть созданы с помощью мастера (например, мастера создания публикаций) или в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] после создания компонента. Скрипт можно просмотреть, изменить и запустить с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или **sqlcmd**. Скрипты могут сохраняться с файлами резервных копий для использования в случае, если необходимо перенастроить топологию репликации.  

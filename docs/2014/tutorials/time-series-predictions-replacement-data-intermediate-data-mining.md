@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: c96b70775105ea9446810ac3b064ae7cb07d4337
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010236"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63312883"
 ---
 # <a name="time-series-predictions-using-replacement-data-intermediate-data-mining-tutorial"></a>Прогнозы временных рядов с заменой данных (учебник по интеллектуальному анализу данных — средний уровень)
   В этой задаче вы создадите новую модель на основе данных о продажах во всем мире. Затем вы создадите прогнозирующий запрос, в котором модель мировых продаж будет применена к одному из регионов  
@@ -52,9 +52,9 @@ ms.locfileid: "56010236"
   
     -   Выберите следующие столбцы для ключа ряда и временного ключа:  
   
-         Key time: ReportingDate  
+         Ключевое время: ReportingDate  
   
-         Раздел реестра: Region  
+         Ключ: Region  
   
     -   Выберите следующие столбцы для `Input` и `Predict`:  
   

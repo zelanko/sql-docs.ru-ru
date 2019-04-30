@@ -1,5 +1,5 @@
 ---
-title: Задача 9. Создание производной иерархии с помощью диспетчера основных данных | Документация Майкрософт
+title: Задача 9. Создание производной иерархии с помощью диспетчера основных данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6b3bc7d64e10e4803a2c2c069ab4b21cf8b139ec
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039335"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63262368"
 ---
-# <a name="task-9-creating-a-derived-hierarchy-using-master-data-manager"></a>Задача 9. Создание производной иерархии с помощью диспетчера основных данных
+# <a name="task-9-creating-a-derived-hierarchy-using-master-data-manager"></a>Задача 9. Создание производной иерархии с помощью диспетчера основных данных
   В этой задаче вы создадите производную иерархию с помощью диспетчера основных данных. Это производная иерархия наследуется от связей атрибутов на основе домена между **поставщика** и **состояние** сущностей.  
   
 1.  Переключиться на главную страницу **диспетчера основных данных** , щелкнув **SQL Server 2012 Master Data Services** в верхней части страницы.  

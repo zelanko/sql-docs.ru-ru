@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8d3ff679af7a577433a8191d3beca10eed1d22cf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602424"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281899"
 ---
 # <a name="setpermissions-method-adox"></a>Метод SetPermissions (ADOX)
 Определяет разрешения для [группы](../../../ado/reference/adox-api/group-object-adox.md) или [пользователя](../../../ado/reference/adox-api/user-object-adox.md) объекта.  
@@ -37,7 +37,7 @@ GroupOrUser.SetPermissions Name, ObjectType, Action, Rights [, Inherit] [, Objec
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *Название*  
+ *Name*  
  Объект **строка** значение, указывающее имя объекта, для которого задаются разрешения.  
   
  *ObjectType*  
@@ -53,7 +53,7 @@ GroupOrUser.SetPermissions Name, ObjectType, Action, Rights [, Inherit] [, Objec
  Необязательный параметр. Объект **Long** значение, которое может быть одним из [InheritTypeEnum](../../../ado/reference/adox-api/inherittypeenum.md) констант, определяющих, как объекты наследуют эти разрешения. Значение по умолчанию — **adInheritNone**.  
   
  *ObjectTypeId*  
- Необязательный параметр. Объект **Variant** значение, которое указывает идентификатор GUID для типа объекта поставщика, который не определен в спецификации OLE DB. Этот параметр является обязательным, если *ObjectType* присваивается **adPermObjProviderSpecific**; в противном случае он не используется.  
+ Необязательный. Объект **Variant** значение, которое указывает идентификатор GUID для типа объекта поставщика, который не определен в спецификации OLE DB. Этот параметр является обязательным, если *ObjectType* присваивается **adPermObjProviderSpecific**; в противном случае он не используется.  
   
 ## <a name="remarks"></a>Примечания  
  Если поставщик не поддерживает параметр права доступа для групп или пользователей, произойдет ошибка.  

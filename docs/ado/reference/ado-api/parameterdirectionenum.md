@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 01f423652f32b9afe801ef99e299f65a6a860a8a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726882"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63314825"
 ---
 # <a name="parameterdirectionenum"></a>ParameterDirectionEnum
 Указывает ли [параметр](../../../ado/reference/ado-api/parameter-object.md) представляет входного параметра, выходного параметра, как входные, так и выходной параметр или возвращаемое значение из хранимой процедуры.  

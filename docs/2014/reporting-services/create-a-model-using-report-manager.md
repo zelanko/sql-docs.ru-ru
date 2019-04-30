@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 07865f96b0e4086af346ffc076b1df6d07cda6cd
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59955160"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63265971"
 ---
 # <a name="create-a-model-using-report-manager"></a>Создание модели с помощью диспетчера отчетов
   С помощью диспетчера отчетов можно создавать модели на основе куба служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , базы данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] или базы данных Oracle. Модели отчета создаются на основе общих источников данных, опубликованных на сервере отчетов. Если еще не создано ни одного общего источника данных, то его необходимо создать.  

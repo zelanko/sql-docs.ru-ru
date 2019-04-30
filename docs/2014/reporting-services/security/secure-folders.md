@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 338bd9ce47d0cc8ba323677af438793083337bc4
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59956580"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63306349"
 ---
 # <a name="secure-folders"></a>Обеспечение защиты папок
   Безопасность папок является основой защиты всего содержимого сервера отчетов. Поскольку безопасность является унаследованной в структуре папок, можно определить разрешения определенного доступа для больших или маленьких разделов иерархии папок.  

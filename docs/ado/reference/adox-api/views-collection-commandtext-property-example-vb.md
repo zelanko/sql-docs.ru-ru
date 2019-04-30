@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 13dc0a46daa2636dc56cf84f91ad8d014c4a3bdb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731332"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281359"
 ---
 # <a name="views-collection-commandtext-property-example-vb"></a>Примеры коллекции Views и свойства CommandText (Visual Basic)
 Следующий код демонстрирует использование [команда](../../../ado/reference/adox-api/command-property-adox.md) свойства для обновления представления текста.  

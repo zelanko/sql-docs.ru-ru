@@ -14,21 +14,21 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 62f1033abeaa32499602534f7f43b17fefe55ce9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767262"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63313180"
 ---
 # <a name="sqlgetconnectoption-visual-foxpro-odbc-driver"></a>SQLGetConnectOption (драйвер ODBC для Visual FoxPro)
 > [!NOTE]  
 >  Этот раздел содержит сведения Visual FoxPro ODBC-драйвером. Общие сведения об этой функции см. в соответствующем разделе [Справочник по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Поддержка: частичная  
+ Поддержка: Частичный  
   
- Соответствия API ODBC: 1 уровень  
+ Соответствие API ODBC: уровне 1  
   
- Возвращает текущее значение параметра соединения. Эта функция поддерживается частично: драйвер поддерживает все значения для *fOption* аргумент, но не поддерживает некоторые *vParam* значений в параметре *fOption* аргумент SQL_TXN_ISOLATION.  
+ Возвращает текущее значение параметра соединения. Эта функция поддерживается частично: Драйвер поддерживает все значения для *fOption* аргумент, но не поддерживает некоторые *vParam* значений в параметре *fOption* аргумент SQL_TXN_ISOLATION.  
   
  В следующей таблице описаны только те аргументы, поведение, характерное для реализации драйвер ODBC для Visual FoxPro **SQLGetConnectOption**.  
   

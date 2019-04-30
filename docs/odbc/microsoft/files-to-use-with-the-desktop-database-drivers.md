@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 42f22cc0214929f283209fa12542e9620dbdcc08
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726622"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63314229"
 ---
 # <a name="files-to-use-with-the-desktop-database-drivers"></a>Файлы, используемые с драйверами для баз данных на настольном компьютере
 Драйверы для баз данных ODBC Desktop используются с ядра СУБД Microsoft Jet, устанавливаемые ISAM файлы и файлы Microsoft ODBC. Не все необходимые для распространения продукта, и не все из них являются основными компонентами.  

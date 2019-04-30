@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dfb57a6512245c9adb36a511ce48721dd901995c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715422"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63313103"
 ---
 # <a name="updating-rows-in-the-rowset-with-sqlsetpos"></a>Обновление строк в наборе строк с помощью SQLSetPos
 Операции обновления из **SQLSetPos** позволяет обновить один или несколько выбранных строк таблицы, используя данные в буферах приложения для каждого привязанного столбца (если значение в буфер длины/индикатора не SQL_COLUMN_IGNORE) источника данных. Столбцы, которые не связаны не обновляется.  

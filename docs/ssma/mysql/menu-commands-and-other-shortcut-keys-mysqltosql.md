@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 19e9abcf3af93ef85934d536de6ca726139afde0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677252"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63311841"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-mysqltosql"></a>Команды меню и другие сочетания клавиш (MySQLToSQL)
 В следующих разделах описаны сочетания клавиш для доступа к командам меню и другие сочетания клавиш, используемое в различных диалоговых окон из SSMA для MySQL приложения.  

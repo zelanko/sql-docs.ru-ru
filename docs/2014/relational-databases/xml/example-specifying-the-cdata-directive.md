@@ -1,5 +1,5 @@
 ---
-title: Пример Задание директивы CDATA | Документация Майкрософт
+title: Пример Указание директивы CDATA | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fa5cec5be4153547d60e1592c21f00470ab1a5fe
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531666"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287772"
 ---
-# <a name="example-specifying-the-cdata-directive"></a>Пример Задание директивы CDATA
+# <a name="example-specifying-the-cdata-directive"></a>Пример Определение директивы CDATA
   Если указана директива **CDATA**, содержащиеся данные не будут закодированы в сущность, а будут помещены в раздел CDATA. Атрибуты **CDATA** должны быть безымянными.  
   
  Следующий запрос упаковывает описания итога модели продукта в раздел CDATA.  

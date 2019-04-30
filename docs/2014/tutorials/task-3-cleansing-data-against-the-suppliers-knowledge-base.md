@@ -1,5 +1,5 @@
 ---
-title: Задача 3. Очистка данных в базе знаний поставщиков | Документация Майкрософт
+title: Задача 3. Очистка данных в базе знаний поставщиков | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 53dde66e84dd7304f81c4b6fd7de8dbe939d22d4
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035915"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250145"
 ---
-# <a name="task-3-cleansing-data-against-the-suppliers-knowledge-base"></a>Задача 3. Очистка данных в базе знаний поставщиков
+# <a name="task-3-cleansing-data-against-the-suppliers-knowledge-base"></a>Задача 3. Очистка данных в базе знаний о поставщиках
   В этой задаче вы выполняете автоматизированную очистку данных. Службы DQS используют мощные алгоритмы и степени достоверности на основе пороговых значений, позволяющие анализировать данные по выбранной базе знаний, затем выполнять очистку. Дополнительные сведения см. в разделе [Очистка данных с использованием набора знаний служб DQS (внутренних)](https://msdn.microsoft.com/library/hh213061.aspx) .  
   
 1.  Нажмите кнопку **Запустить** , чтобы начать автоматизированный процесс очистки.  

@@ -11,16 +11,16 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: ea6d9a77cc7639bc9adc8daa38f12d0e21dbfb71
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664354"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298908"
 ---
 # <a name="creating-the-server-connection-files-db2tosql"></a>Создание файлов подключения к серверу (DB2ToSQL)
 В разделе "серверы" файла скрипта или в файле подключения отдельный сервер можно указать сведения о сервере. — Параметр командной строки файла подключения к серверу, `-c <serverconnectionfile>`. Если один и тот же идентификатор сервера присутствует в файл скрипта и файла подключения сервера, тогда считается определение сервера в файле скрипта.  
   
-**Пример: 1**  
+**Пример. 1**  
   
 ```  
 <!--Sample of server connection file commands -->  

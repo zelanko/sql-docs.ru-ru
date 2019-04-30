@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 875348a501c292e55b267ece769f16dd6bc9dbdd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792668"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270935"
 ---
 # <a name="supported-cursor-model-visual-foxpro-odbc-driver"></a>Поддерживаемая модель курсоров (драйвер ODBC для Visual FoxPro)
 Драйвер ODBC для Visual FoxPro поддерживает как *блок* (*набора строк*) и *статический* курсоров. Статические курсоры поддерживаются для любой драйвер, который соответствует ODBC 1 уровень соответствия. Драйвер не поддерживает динамические, управляемые набором ключей или смешанная (keyset и dynamic) курсоров.  

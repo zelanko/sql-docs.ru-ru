@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 01ef137ef7297be5171bcfdcacd13c80e4da4624
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814156"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63301733"
 ---
 # <a name="operator-properties-history-page"></a>Свойства оператора (страница «Журнал»)
   Эта страница используется для просмотра даты, времени и типа последних уведомлений, отправленных оператору.  
@@ -33,6 +33,6 @@ ms.locfileid: "52814156"
  Последние попытки передачи уведомлений с помощью команды net send или значение **(не отправлено командой net send)** , если уведомления никогда не отправлялись этому оператору с помощью команды net send.  
   
 ## <a name="see-also"></a>См. также  
- [Операторы](operators.md)  
+ [Инструкции](operators.md)  
   
   

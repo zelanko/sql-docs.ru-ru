@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6517b09e682853492cd129e0c43abfd7164ed2e7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648998"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63313272"
 ---
 # <a name="getpermissions-method-adox"></a>Метод GetPermissions (ADOX)
 Возвращает разрешения для [группы](../../../ado/reference/adox-api/group-object-adox.md) или [пользователя](../../../ado/reference/adox-api/user-object-adox.md) на объект или объект контейнера.  
@@ -33,14 +33,14 @@ ms.locfileid: "47648998"
   
 ```  
   
-ReturnValue=GroupOrUser.GetPermissions(Name, ObjectType    [,ObjectTypeId])  
+ReturnValue=GroupOrUser.GetPermissions(Name, ObjectType    [,ObjectTypeId])  
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Возвращает **Long** значение, указывающее Битовая маска, содержащая разрешения, которые группа или пользователь оказывает на данный объект. Это значение может быть один или несколько [RightsEnum](../../../ado/reference/adox-api/rightsenum.md) константы.  
   
 #### <a name="parameters"></a>Параметры  
- *Название*  
+ *Name*  
  Объект **Variant** значение, указывающее имя объекта, для которого задаются разрешения. Задайте *имя* в значение null, если вы хотите получить разрешения для контейнера объекта.  
   
  *ObjectType*  

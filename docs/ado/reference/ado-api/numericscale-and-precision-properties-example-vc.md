@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c8cde8f5d9d50b37f3d89154d09d6d60ac3bc987
-ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57972783"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242630"
 ---
 # <a name="numericscale-and-precision-properties-example-vc"></a>Примеры свойств NumericScale и Precision (Visual C++)
 В этом примере используется [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) и [точности](../../../ado/reference/ado-api/precision-property-ado.md) свойства для отображения числового масштаба и точности полей в ***скидки*** таблицы  ***Pubs*** базы данных.  

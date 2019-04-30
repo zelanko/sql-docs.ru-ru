@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1f03d615bf17cf4086482d02dfca001230276b1b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613292"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249020"
 ---
 # <a name="ado-code-examples-in-visual-c"></a>Примеры кода ADO в Visual C++
 Используйте в следующих примерах кода, чтобы узнать, как использовать ADO методы, свойства и события при записи в Microsoft Visual C++.  
@@ -149,4 +149,4 @@ ms.locfileid: "47613292"
 ## <a name="see-also"></a>См. также  
  [Примеры кода ADO в Visual Basic](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)   
  [VBScript примеры кода ADO](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)   
- [Приложение Г. Образцы объектов ADO](../../../ado/guide/appendixes/appendix-d-ado-samples.md)
+ [Приложение г. Примеры ADO](../../../ado/guide/appendixes/appendix-d-ado-samples.md)

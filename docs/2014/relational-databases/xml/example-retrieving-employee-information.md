@@ -1,5 +1,5 @@
 ---
-title: Пример Получение сведений о сотрудниках | Документация Майкрософт
+title: Пример Получение сведений о сотрудниках | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3d24f945eeb64975c71e416ed1e53d04fd5ffff9
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526986"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287841"
 ---
 # <a name="example-retrieving-employee-information"></a>Пример Получение сведений о сотрудниках
   В этом примере извлекаются идентификаторы и имена всех работников. В базе данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] значение employeeID может быть получено из столбца BusinessEntityID таблицы Employee. Имена работников могут быть получены из таблицы Person. Столбец BusinessEntityID можно использовать для соединения этих таблиц.  

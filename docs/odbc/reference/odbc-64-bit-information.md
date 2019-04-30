@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 744a31b805fb46302f4f9ad34a1bc2576a180694
-ms.sourcegitcommit: 98324d9803edfa52508b6d5d3554614d0350a0b9
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52321670"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63273418"
 ---
 # <a name="odbc-64-bit-information"></a>Сведения о 64-разрядном интерфейсе ODBC
 Начиная с Windows Server 2003, поддерживаемые библиотеки ODBC 64-разрядных операционных систем Microsoft. ODBC заголовки и библиотеки, сначала в состав MDAC 2.7 SDK содержат изменения, позволяющий программистам легко написать код для нового 64-разрядных платформах. Убедившись, что код использует ODBC определенных типов, перечисленных ниже, можно скомпилировать одного исходного кода для 64-разрядных и 32-разрядных платформ на основе **_WIN64** или **WIN32** макросы.  
@@ -231,7 +231,7 @@ typedef SQLULEN BOOKMARK;
   
  Когда *атрибут* параметр имеет одно из следующих значений, 64-разрядное значение возвращается в *значение*:  
   
- АТРИБУТУ SQL_ATTR_ASYNC_ENABLE  
+ SQL_ATTR_ASYNC_ENABLE  
   
  SQL_ATTR_ENLIST_IN_DTC  
   
@@ -303,7 +303,7 @@ typedef SQLULEN BOOKMARK;
   
  SQL_ATTR_APP_ROW_DESC  
   
- АТРИБУТУ SQL_ATTR_ASYNC_ENABLE  
+ SQL_ATTR_ASYNC_ENABLE  
   
  SQL_ATTR_CONCURRENCY  
   
@@ -323,9 +323,9 @@ typedef SQLULEN BOOKMARK;
   
  SQL_ATTR_IMP_ROW_DESC  
   
- АТРИБУТА SQL_ATTR_KEYSET_SIZE  
+ SQL_ATTR_KEYSET_SIZE  
   
- ЗНАЧЕНИЯ SQL_ATTR_MAX_LENGTH  
+ SQL_ATTR_MAX_LENGTH  
   
  SQL_ATTR_MAX_ROWS  
   
@@ -357,7 +357,7 @@ typedef SQLULEN BOOKMARK;
   
  SQL_ATTR_ROW_OPERATION_PTR  
   
- ЗНАЧЕНИЯ SQL_ATTR_ROW_STATUS_PTR  
+ SQL_ATTR_ROW_STATUS_PTR  
   
  SQL_ATTR_SIMULATE_CURSOR  
   
@@ -379,7 +379,7 @@ typedef SQLULEN BOOKMARK;
   
  Когда *атрибут* параметр имеет одно из следующих значений, 64-разрядное значение передается в *значение*:  
   
- АТРИБУТУ SQL_ATTR_ASYNC_ENABLE  
+ SQL_ATTR_ASYNC_ENABLE  
   
  SQL_ATTR_ENLIST_IN_DTC  
   
@@ -425,7 +425,7 @@ typedef SQLULEN BOOKMARK;
   
  SQL_ATTR_APP_ROW_DESC  
   
- АТРИБУТУ SQL_ATTR_ASYNC_ENABLE  
+ SQL_ATTR_ASYNC_ENABLE  
   
  SQL_ATTR_CONCURRENCY  
   
@@ -443,9 +443,9 @@ typedef SQLULEN BOOKMARK;
   
  SQL_ATTR_IMP_ROW_DESC  
   
- АТРИБУТА SQL_ATTR_KEYSET_SIZE  
+ SQL_ATTR_KEYSET_SIZE  
   
- ЗНАЧЕНИЯ SQL_ATTR_MAX_LENGTH  
+ SQL_ATTR_MAX_LENGTH  
   
  SQL_ATTR_MAX_ROWS  
   
@@ -477,7 +477,7 @@ typedef SQLULEN BOOKMARK;
   
  SQL_ATTR_ROW_OPERATION_PTR  
   
- ЗНАЧЕНИЯ SQL_ATTR_ROW_STATUS_PTR  
+ SQL_ATTR_ROW_STATUS_PTR  
   
  SQL_ATTR_ROWS_FETCHED_PTR  
   

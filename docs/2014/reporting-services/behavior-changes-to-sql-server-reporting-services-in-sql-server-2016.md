@@ -25,11 +25,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6722c72c8d6ac152697c65b2c910e1f8d29139c9
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59937360"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266611"
 ---
 # <a name="behavior-changes-to-sql-server-reporting-services--in-sql-server-2014"></a>Изменения в работе служб SQL Server Reporting Services в выпуске SQL Server 2014
   В этом разделе описаны изменения в работе служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Изменения в работе затрагивают работу и взаимодействие компонентов в [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] по сравнению с предыдущими версиями [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  

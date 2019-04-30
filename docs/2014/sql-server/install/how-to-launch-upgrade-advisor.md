@@ -1,5 +1,5 @@
 ---
-title: 'Практическое: запустить помощник по обновлению | Документация Майкрософт'
+title: Практическое руководство. Запустите помощник по обновлению | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,13 +17,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5523f40b556e654ee6ef71041c648b757a2d766a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066518"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63295119"
 ---
-# <a name="how-to-launch-upgrade-advisor"></a>Запуск помощника по обновлению
+# <a name="how-to-launch-upgrade-advisor"></a>Практическое руководство. Запуск помощника по обновлению
   Помощник по обновлению содержит центральную консоль, предназначенную для запуска мастера анализа помощника по обновлению и средства просмотра отчетов помощника по обновлению. В этом разделе описана процедура запуска помощника по обновлению.  
   
 ### <a name="to-launch-upgrade-advisor"></a>Запуск помощника по обновлению  

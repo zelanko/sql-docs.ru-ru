@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 324801cbfc97db4e2a1137fa04df0c74dc1897a1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714532"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63280395"
 ---
 # <a name="reshaping"></a>Изменение формы данных
 Объект **набор записей** создан с помощью предложения фигуры могут быть выделены команды *псевдоним* (обычно с ключевым словом AS). Псевдоним фигурной **записей** можно ссылаться в совершенно другую команду. То есть вы можете повторно использовать, или *reshape*, ранее фигурной **записей** в новую команду фигуры. Для поддержки этой возможности, ADO предоставляет свойство [изменить форму имени](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md).  

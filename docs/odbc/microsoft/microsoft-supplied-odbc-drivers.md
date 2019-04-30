@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fead9d6f80c62995cf156adc092221113a9ff24c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713612"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63313479"
 ---
 # <a name="microsoft-supplied-odbc-drivers"></a>Драйверы ODBC, предоставляемые корпорацией Майкрософт
 *Драйверы* библиотеки, которые реализуют функции в API-Интерфейс ODBC. Каждый драйвер соответствует своей системе управления определенной базы данных (СУБД). В большинстве случаев драйверы доступ к функциям базовой СУБД; они не требуются для реализации возможностей, не поддерживаемых в СУБД. Драйверы, выполнять определенные задачи и можно разделить на две категории: файловые и на основе СУБД. Дополнительные сведения о драйверах и архитектура драйвера см. в разделе [драйверы](../../odbc/reference/drivers.md).  

@@ -14,15 +14,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ce48e7aa89451131b7ed483fa5132af22565c170
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673553"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63252748"
 ---
 # <a name="sqlcleanupconnectionpoolid-function"></a>Функция SQLCleanupConnectionPoolID
 **Соответствие стандартам**  
- Версия была введена: ODBC 3,81 соответствие стандартам: ODBC  
+ Представленные версии: Соответствие стандартам 3,81 ODBC: интерфейс ODBC  
   
  **Сводка**  
  **SQLCleanupConnectionPoolID** информирует драйвер, истекло время ожидания идентификатор пула. Истекло время ожидания пула, идентификатор может времени ожидания, каждый раз, когда были все соединения в пул, связанный с таким Идентификатором пула. См. в разделе [пула в Microsoft Data Access Components](https://msdn.microsoft.com/library/ms810829.aspx) Дополнительные сведения о времени ожидания соединения.  

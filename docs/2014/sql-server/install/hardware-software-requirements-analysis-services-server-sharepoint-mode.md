@@ -11,11 +11,11 @@ ms.topic: conceptual
 ms.custom: ''
 ms.date: 06/13/2017
 ms.openlocfilehash: 95004fde44989d130664d73b044f833cd94f8d88
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59581898"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63295390"
 ---
 # <a name="hardware-and-software-requirements-for-analysis-services-server-in-sharepoint-mode-sql-server-2014"></a>Требования к оборудованию и программному обеспечению для сервера служб Analysis Services в режиме интеграции с SharePoint (SQL Server 2014)
 

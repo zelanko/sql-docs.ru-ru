@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a15613c61db7469b242bbd5b76e5d1e51912e6be
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52790396"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270562"
 ---
 # <a name="customize-the-amount-of-information-displayed-in-diagrams-visual-database-tools"></a>Настройка объема сведений, отображаемых в диаграммах (визуальные инструменты для баз данных)
   При добавлении таблицы в диаграмму базы данных эта таблица появляется вместе с рядом отображаемых свойств. Количество отображаемых сведений можно задать в меню вариаций или создавать пользовательский набор свойств.  

@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1b42339c74102b86fe08c84b15da3266a1040dfd
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212453"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63258963"
 ---
 # <a name="sqlgetdata-function"></a>Функция SQLGetData
 **Соответствие стандартам**  
@@ -86,12 +86,12 @@ SQLRETURN SQLGetData(
   
 -   SQL_NO_TOTAL  
   
--   ЗНАЧЕНИЕ SQL_NULL_DATA  
+-   SQL_NULL_DATA  
   
  Дополнительные сведения см. в разделе [использование значений длины и индикатора](../../../odbc/reference/develop-app/using-length-and-indicator-values.md) и «Комментарии» в этом разделе.  
   
 ## <a name="returns"></a>Возвращает  
- Значение SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_STILL_EXECUTING, значение SQL_ERROR или SQL_INVALID_HANDLE.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_STILL_EXECUTING, SQL_ERROR, or SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Диагностика  
  Когда **SQLGetData** возвращает значение SQL_ERROR или SQL_SUCCESS_WITH_INFO, можно получить путем вызова связанного значения SQLSTATE **SQLGetDiagRec** с *HandleType* из Значение SQL_HANDLE_STMT и *обрабатывать* из *StatementHandle*. В следующей таблице перечислены значения SQLSTATE, обычно возвращаемые **SQLGetData** и объясняется каждый из них в контексте этой функции; описания SQLSTATE, возвращаемых диспетчером драйверов предшествует обозначение «(DM)». Возвращается связанный с каждого значения SQLSTATE значение SQL_ERROR, если не указано иное.  
@@ -113,7 +113,7 @@ SQLRETURN SQLGetData(
 |24000|Недопустимое состояние курсора|(DM), что функция была вызвана без предварительного вызова функции **SQLFetch** или **SQLFetchScroll** для позиционирования курсора в строке данных обязательно.<br /><br /> (DM) *StatementHandle* была выполненного состоянии, но результирующий набор не связан с *StatementHandle*.<br /><br /> Курсор был открыт на *StatementHandle* и **SQLFetch** или **SQLFetchScroll** бы вызывалась, но курсор был установлен перед началом результирующего набора или после конец результирующего набора.|  
 |HY000|Общая ошибка|Произошла ошибка, для которой было нет конкретных SQLSTATE и SQLSTATE не зависящие от реализации, который был определен. Сообщение об ошибке, возвращенные **SQLGetDiagRec** в *MessageText* буфера описывает ошибку и его причины.|  
 |HY001|Ошибка выделения памяти|Драйвер не удалось выделить память, необходимую для поддержки выполнения или завершения функции.|  
-|HY003 И СООБЩЕНИЕМ|Тип программы вне допустимого диапазона|(DM) аргумент *TargetType* не допустимый тип данных, SQL_C_DEFAULT, SQL_ARD_TYPE (в случае получение данных столбца) или SQL_APD_TYPE (в случае получения данных параметра).<br /><br /> (DM) аргумент *Col_or_Param_Num* было 0, а аргумент *TargetType* не SQL_C_BOOKMARK для закладки фиксированной длины или SQL_C_VARBOOKMARK для закладки переменной длины.|  
+|HY003|Тип программы вне допустимого диапазона|(DM) аргумент *TargetType* не допустимый тип данных, SQL_C_DEFAULT, SQL_ARD_TYPE (в случае получение данных столбца) или SQL_APD_TYPE (в случае получения данных параметра).<br /><br /> (DM) аргумент *Col_or_Param_Num* было 0, а аргумент *TargetType* не SQL_C_BOOKMARK для закладки фиксированной длины или SQL_C_VARBOOKMARK для закладки переменной длины.|  
 |HY008|Операция отменена|Асинхронная обработка была включена для *StatementHandle*. Функция была вызвана, и до его завершения выполнения, **SQLCancel** или **SQLCancelHandle** был вызван для *StatementHandle*, и затем вызова функции еще раз на *StatementHandle*.<br /><br /> Функция была вызвана, и до его завершения выполнения, **SQLCancel** или **SQLCancelHandle** был вызван для *StatementHandle* из другого потока в многопоточные приложения, а затем функция был снова вызван на *StatementHandle*.|  
 |HY009|Недопустимое использование пустого указателя|(DM) аргумент *TargetValuePtr* был пустым указателем.|  
 |HY010|Ошибка последовательности функций|(DM) указанного *StatementHandle* не находился в состоянии выполненного. Функция был вызван без предварительного вызова функции **SQLExecDirect**, **SQLExecute** или функции каталога.<br /><br /> (DM) был вызван асинхронно выполняемой функции для дескриптора соединения, связанный с *StatementHandle*. Если по-прежнему выполнении асинхронной функции **SQLGetData** была вызвана функция.<br /><br /> (DM) асинхронно выполняемой функции (не такой) был вызван для *StatementHandle* и еще выполнялась при вызове этой функции.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, или **SQLSetPos** был вызван для  *StatementHandle* и возвращается значение SQL_NEED_DATA. Эта функция был вызван перед отправкой данных для всех параметров данных времени выполнения или столбцов.<br /><br /> (DM) *StatementHandle* была выполненного состоянии, но результирующий набор не связан с *StatementHandle*.<br /><br /> Вызов **SQLExeceute**, **SQLExecDirect**, или **SQLMoreResults** возвращается SQL_PARAM_DATA_AVAILABLE, но **SQLGetData** был вызван , а не **SQLParamData**.|  

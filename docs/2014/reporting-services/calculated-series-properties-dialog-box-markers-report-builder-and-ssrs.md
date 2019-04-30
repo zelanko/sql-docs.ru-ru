@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2fdc0a6ee75b2d08b06d440a4d9dd6da48a6b6b7
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59971950"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266358"
 ---
 # <a name="calculated-series-properties-dialog-box-markers-report-builder-and-ssrs"></a>Диалоговое окно «Свойства вычисляемого ряда» — «Маркеры» (построитель отчетов и службы SSRS)
   Чтобы определить, как будут отображаться маркеры в каждой точке данных рядов, перейдите на вкладку **Маркеры** в диалоговом окне **Свойства вычисляемого ряда** . Маркеры доступны только для некоторых типов диаграмм. Маркеры поддерживаются следующие диаграммы: Область, строки, столбца, линейный график, Полярная и Точечная. Дополнительные сведения о функциях диаграмм см. в статье [Типы диаграмм (построитель отчетов и службы SSRS)](report-design/chart-types-report-builder-and-ssrs.md).  
