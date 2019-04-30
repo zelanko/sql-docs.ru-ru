@@ -21,11 +21,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 00645f619a89010bb4e2b112d50e00cbc6f40dce
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360876"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127159"
 ---
 # <a name="srvparamset-extended-stored-procedure-api"></a>srv_paramset (API-интерфейс расширенных хранимых процедур)
     
@@ -76,7 +76,7 @@ len
   
 |Новые типы данных|Длина возвращаемых данных|  
 |--------------------|------------------------|  
-|`BITN`|**NULL:** *len* = 0, data = IG, RET = 0<br /><br /> **НУЛЬ:** Н/Д<br /><br /> **> = 255:** Н/Д<br /><br /> **< 255:** Н/Д|  
+|`BITN`|**NULL:** *len* = 0, data = IG, RET = 0<br /><br /> **ZERO:** Н/Д<br /><br /> **>=255:** Н/Д<br /><br /> **<255:** Н/Д|  
 |`BIGVARCHAR`|**NULL:** *len* = 0, data = IG, RET = 1<br /><br /> **ZERO:** *len* = IG, data = IG, RET = 0<br /><br /> **>=255:** *len* = max8k, data = valid, RET = 0<br /><br /> **<255:** *len* = <8k, data = valid, RET = 1|  
 |`BIGCHAR`|**NULL:** *len* = 0, data = IG, RET = 1<br /><br /> **ZERO:** *len* = IG, data = IG, RET = 0<br /><br /> **>=255:** *len* = max8k, data = valid, RET = 0<br /><br /> **<255:** *len* = <8k, data = valid, RET = 1|  
 |`BIGBINARY`|**NULL:** *len* = 0, data = IG, RET = 1<br /><br /> **ZERO:** *len* = IG, data = IG, RET = 0<br /><br /> **>=255:** *len* = max8k, data = valid, RET = 0<br /><br /> **<255:** *len* = <8k, data = valid, RET = 1|  
@@ -98,7 +98,7 @@ len
  Когда удаленная хранимая процедура вызывается с параметрами, эти параметры могут быть переданы либо по имени, либо по позиции — без указания имени. Если при вызове удаленной хранимой процедуры часть параметров передается по имени, а часть — по позиции, возникает ошибка. Обработчик SRV_RPC по-прежнему вызывается, однако он отображается так, как если бы не имел параметров, а функция **srv_rpcparams** возвращает 0.  
   
 > [!IMPORTANT]  
->  Необходимо тщательно просмотреть исходный код расширенных хранимых процедур и проверить скомпилированные библиотеки DLL перед их установкой на рабочий сервер. Сведения о проверке безопасности см. на следующем [веб-сайте Майкрософт](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
+>  Необходимо тщательно просмотреть исходный код расширенных хранимых процедур и проверить скомпилированные библиотеки DLL перед их установкой на рабочий сервер. Сведения о проверке безопасности см. на следующем [веб-сайте Майкрософт](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409 https://msdn.microsoft.com/security/).  
   
 ## <a name="see-also"></a>См. также  
  [srv_paramsetoutput (интерфейс API расширенных хранимых процедур)](srv-paramsetoutput-extended-stored-procedure-api.md)  

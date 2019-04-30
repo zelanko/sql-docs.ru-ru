@@ -21,11 +21,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 6bc430354ca8ef220caed882f1f8c7942b44d158
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350935"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127271"
 ---
 # <a name="srvconvert-extended-stored-procedure-api"></a>srv_convert (API-интерфейс расширенных хранимых процедур)
     
@@ -112,7 +112,7 @@ destlen
 -   При преобразовании строки символов в числовой тип произошла синтаксическая ошибка.  
   
 > [!IMPORTANT]  
->  Необходимо тщательно просмотреть исходный код расширенных хранимых процедур и проверить скомпилированные библиотеки DLL перед их установкой на рабочий сервер. Сведения о проверке безопасности см. на следующем [веб-сайте Майкрософт](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
+>  Необходимо тщательно просмотреть исходный код расширенных хранимых процедур и проверить скомпилированные библиотеки DLL перед их установкой на рабочий сервер. Сведения о проверке безопасности см. на следующем [веб-сайте Майкрософт](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409 https://msdn.microsoft.com/security/).  
   
 ## <a name="see-also"></a>См. также  
  [srv_setutype (интерфейс API расширенных хранимых процедур)](srv-setutype-extended-stored-procedure-api.md)   
