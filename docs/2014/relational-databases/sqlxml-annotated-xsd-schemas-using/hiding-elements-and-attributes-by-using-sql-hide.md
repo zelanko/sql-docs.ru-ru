@@ -25,11 +25,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 541f5ccff727552730e4648552ad5126fdfd4858
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52793616"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63228477"
 ---
 # <a name="hiding-elements-and-attributes-by-using-sqlhide"></a>Скрытие элементов и атрибутов при помощи sql:hide
   При выполнении запроса XPath к схеме XSD результирующий XML-документ содержит элементы и атрибуты, указанные в схеме. Заметка `sql:hide` позволяет указать, что некоторые элементы и атрибуты скрыты в схеме. Это может оказаться полезным в тех случаях, когда критерий выбора запроса требует определенных элементов или атрибутов в схеме, но они не должны возвращаться в формируемом XML-документе.  
@@ -42,7 +42,7 @@ ms.locfileid: "52793616"
 ### <a name="a-specifying-sqlhide-on-an-attribute"></a>A. Указание sql:hide для атрибута  
  В этом примере схема XSD состоит из  **\<Person.Contact >** элемент с **ContactID**, **FirstName**, и **LastName** атрибуты.  
   
-  **\<Person.Contact >** элемент имеет сложный тип и, следовательно, сопоставляется с таблицей с тем же именем (сопоставление по умолчанию). Все атрибуты  **\<Person.Contact >** элемента имеют простой тип и сопоставляются со столбцами с теми же именами в Person.Contacttable в базе данных AdventureWorks. В схеме `sql:hide` задана заметка для **ContactID** атрибута. При указании запроса XPath к этой схеме **ContactID** не возвращается в XML-документе.  
+ **\<Person.Contact >** элемент имеет сложный тип и, следовательно, сопоставляется с таблицей с тем же именем (сопоставление по умолчанию). Все атрибуты  **\<Person.Contact >** элемента имеют простой тип и сопоставляются со столбцами с теми же именами в Person.Contacttable в базе данных AdventureWorks. В схеме `sql:hide` задана заметка для **ContactID** атрибута. При указании запроса XPath к этой схеме **ContactID** не возвращается в XML-документе.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   

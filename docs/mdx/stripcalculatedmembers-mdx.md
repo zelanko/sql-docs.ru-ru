@@ -1,5 +1,5 @@
 ---
-title: StripCalculatedMembers (многомерные Выражения) | Документы Microsoft
+title: StripCalculatedMembers (многомерные Выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ef9eb558c2f73c51c78f1464ed7951c743bc4ef0
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743093"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63150200"
 ---
 # <a name="stripcalculatedmembers-mdx"></a>StripCalculatedMembers (многомерные выражения)
 
@@ -33,7 +33,7 @@ StripCalculatedMembers(Set_Expression)
  Допустимое многомерное выражение, возвращающее набор.  
   
 ## <a name="remarks"></a>Примечания  
- **StripCalculatedMembers** функция удаляет вычисляемые элементы из набора. Вычисляемые элементы можно добавить в набор с помощью [AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md) функции, которая возвращает вычисляемые элементы, определенные на сервере или вычисляемые элементы, которые были добавлены в самом запросе с помощью конструкции WITH MEMBER.  
+ **StripCalculatedMembers** функция удаляет вычисляемые элементы из набора. Вычисляемые элементы могут добавляться к набору с помощью [AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md) функции, которая возвращает вычисляемые элементы, определенные на сервере или вычисляемые элементы, которые были добавлены в самом запросе с помощью аргумента WITH Синтаксис ЭЛЕМЕНТА.  
   
 ## <a name="example"></a>Пример  
  В следующем примере из запроса удаляются все вычисляемые элементы.  
@@ -79,6 +79,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Справочник по функциям многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
   
   

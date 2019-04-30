@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 42fa69e6456b23f95d6a203062b580bd04f443fa
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779146"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63144677"
 ---
 # <a name="check-database-integrity-task-maintenance-plan"></a>Задача «Проверка целостности базы данных» (план обслуживания)
   Диалоговое окно **Задача "Проверка целостности базы данных"** используется для проверки распределения и структурной целостности пользовательских и системных таблиц, а также индексов в базе данных путем запуска инструкции `DBCC CHECKDB`[!INCLUDE[tsql](../../includes/tsql-md.md)] . Запуск `DBCC` гарантирует, что будет сообщено обо всех проблемах с целостностью в базе данных, таким образом позволяя системному администратору или владельцу базы данных устранить их позже.  

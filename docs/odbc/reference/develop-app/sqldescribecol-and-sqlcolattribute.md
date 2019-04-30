@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e569e51540cbaa5612b158abdacac5faae77f940
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722632"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149032"
 ---
 # <a name="sqldescribecol-and-sqlcolattribute"></a>SQLDescribeCol и SQLColAttribute
 **SQLDescribeCol** и **SQLColAttribute** получаются метаданные результирующего набора. Это различие между этими двумя функциями **SQLDescribeCol** всегда возвращает те же пять части сведений (столбца имя, тип данных, точность, масштаб и допустимость значений NULL), при **SQLColAttribute** возвращает одну часть сведений, запрашиваемой приложением. Тем не менее **SQLColAttribute** можно возвращать богаче набор метаданных, включая чувствительность к регистру столбца, отображения размера, возможность обновления и возможность поиска.  

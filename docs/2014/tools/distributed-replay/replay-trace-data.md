@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: efb54bb64481dc29c50976cb58df813bad411f9c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52819356"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149892"
 ---
 # <a name="replay-trace-data"></a>Воспроизведение данные трассировки
   После подготовки входных данных трассировки можно запустить распределенное воспроизведение с помощью средства распределенного воспроизведения [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в статье [Подготовка входных данных трассировки](prepare-the-input-trace-data.md).  

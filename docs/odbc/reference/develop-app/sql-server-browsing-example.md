@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f8dc57d738c1d5726d2208b930c5d4fadcd93b39
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47786702"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149316"
 ---
 # <a name="sql-server-browsing-example"></a>Пример просмотра SQL Server
 В следующем примере показан как **SQLBrowseConnect** может использоваться для просмотра подключения, доступные с драйвером для SQL Server. Во-первых приложение запрашивает дескриптора соединения:  

@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9c0534bf3a12aa81a9fc84d0e2c4f82a189748a0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52811206"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63150754"
 ---
 # <a name="monitor-sql-server-components"></a>Наблюдение за компонентами SQL Server
   Важность мониторинга обусловлена динамикой среды, в которой выполняется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Данные приложений постоянно изменяются. Меняется тип доступа, который требуется пользователям. Меняется способ подключения пользователей. Может измениться даже тип приложений, обращающихся к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , однако [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] автоматически управляет такими системными ресурсами, как память и место на диске, поэтому ручная настройка системы практически не требуется. Мониторинг позволяет администраторам следить за тенденциями изменения производительности и определять ситуации, когда требуются изменения.  

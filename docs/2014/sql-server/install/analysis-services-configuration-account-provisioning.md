@@ -15,11 +15,11 @@ author: heidisteen
 ms.author: heidist
 manager: craigg
 ms.openlocfilehash: 095709115c15e770b8ad54678d4a359ab4b04ac8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351823"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215159"
 ---
 # <a name="analysis-services-configuration---account-provisioning"></a>Настройка служб Analysis Services — провизионирование учетных записей
   На этой странице можно выбрать режим сервера и предоставить административные разрешения пользователям или службам, которым требуется неограниченный доступ к службам [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Программа установки не добавляет автоматически локальную группу Windows BUILTIN\Администраторы в роль администратора сервера служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] устанавливаемого экземпляра. Если к роли администратора сервера требуется добавить локальную группу администраторов, необходимо явно указать эту группу.  

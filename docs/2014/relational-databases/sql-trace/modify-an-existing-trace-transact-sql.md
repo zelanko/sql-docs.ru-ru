@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 56d4f7d922c0c229b1e2126f93611670adf7c702
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591848"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63135621"
 ---
 # <a name="modify-an-existing-trace-transact-sql"></a>изменить существующую трассировку (Transact-SQL)
   В этом подразделе описано, как при помощи хранимых процедур изменить существующую трассировку.  
@@ -47,7 +47,7 @@ ms.locfileid: "53591848"
     ||NOT NULL|Столбец выключен для указанного события.|  
   
 > [!IMPORTANT]
->  В отличие от обычных хранимых процедур, параметры всех [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] хранимые процедуры (<strong>sp_trace_*xx*</strong>) жестко типизированы и не поддерживают автоматическое преобразование типов данных. Если эти параметры не вызываются вместе с правильными типами данных входных параметров, как указано в описании аргумента, хранимая процедура возвращает ошибку.  
+>  Параметры всех хранимых процедур [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] (<strong>sp_trace_*xx*</strong>), в отличие от обычных хранимых процедур, жестко типизированы и не поддерживают автоматическое преобразование типов данных. Если эти параметры не вызываются вместе с правильными типами данных входных параметров, как указано в описании аргумента, хранимая процедура возвращает ошибку.  
 
 ## <a name="see-also"></a>См. также  
  [Хранимая процедура sp_trace_setevent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   

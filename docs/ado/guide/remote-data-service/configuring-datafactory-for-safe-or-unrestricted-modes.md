@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 32b87f7ddcd871748adbba66eb0a64a10204f0c1
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559917"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63214857"
 ---
 # <a name="configuring-datafactory-for-safe-or-unrestricted-modes"></a>Настройка безопасного или неограниченного режимов в DataFactory
 > [!IMPORTANT]
@@ -36,7 +36,7 @@ ms.locfileid: "51559917"
   
  Чтобы настроить записи реестра обработчика для безопасная конфигурация предоставляется handsafe.reg файл реестра. Для запуска в безопасном режиме, запустите handsafe.reg.  
   
- После выполнения handsafe.reg, необходимо остановить и перезапустить службу World Wide Web Publishing веб-сервера, введя следующие команды в окне командной строки: «NET STOP W3SVC» и «NET запустить W3SVC».  
+ После выполнения handsafe.reg, необходимо остановить и перезапустить службу World Wide Web публикации веб-сервера, введя следующие команды в окне командной строки: «NET STOP W3SVC» и «W3SVC запустить NET».  
   
 ## <a name="see-also"></a>См. также  
  [Настройка DataFactory](../../../ado/guide/remote-data-service/datafactory-customization.md)   

@@ -13,18 +13,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 186294182e39845ce600c04b35804759b61eb0f6
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531026"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63218090"
 ---
 # <a name="find-similar-and-related-documents-with-semantic-search"></a>Поиск похожих и связанных документов с использованием семантического поиска
   Описывает процесс поиска схожих или связанных документов или текстовых значений и сведений об их сходстве или связи в столбцах, настроенных для статистического семантического индексирования.  
   
 ##  <a name="BasicsQuerySimilar"></a> Поиск схожих или связанных документов  
   
-###  <a name="HowToQuerySimilar"></a> Инструкции: найти аналогичные или связанные документы с помощью функции SEMANTICSIMILARITYTABLE  
+###  <a name="HowToQuerySimilar"></a> Инструкции: Поиск схожих или связанных документов с помощью функции SEMANTICSIMILARITYTABLE  
  Чтобы найти схожие или связанные документы в данном столбце, запросите функцию [semanticsimilaritytable (Transact-SQL)](/sql/relational-databases/system-functions/semanticsimilaritytable-transact-sql).  
   
  Функция**SEMANTICSIMILARITYTABLE** возвращает таблицу, состоящую из нуля, одной или нескольких строк, содержимое которых в указанном столбце семантически схоже с заданным документом. На эту функцию набора строк можно ссылаться в предложении FROM инструкции SELECT как на обычное имя таблицы.  
@@ -53,7 +53,7 @@ GO
   
 ##  <a name="BasicsQuerySimilarity"></a> Поиск сведений о документов схожими или связанными  
   
-###  <a name="HowToQuerySimilarity"></a> Инструкции: найти сведения о схожести или связи документов с помощью функции SEMANTICSIMILARITYDETAILSTABLE  
+###  <a name="HowToQuerySimilarity"></a> Инструкции: Узнайте больше о том, как документы схожими или связанными с помощью функции SEMANTICSIMILARITYDETAILSTABLE  
  Чтобы получить дополнительные сведения о ключевых фразах, которые делают документы схожими или связанными, вызовите функцию [semanticsimilaritydetailstable (Transact-SQL)](/sql/relational-databases/system-functions/semanticsimilaritydetailstable-transact-sql).  
   
  Функция **SEMANTICSIMILARITYDETAILSTABLE** возвращает таблицу из нуля, одной или нескольких строк с ключевыми фразами, общими для двух документов (исходного документа и сопоставленного документа), содержимое которых семантически схоже. На эту функцию набора строк можно ссылаться в предложении FROM инструкции SELECT как на обычное имя таблицы.  
@@ -63,7 +63,7 @@ GO
 > [!IMPORTANT]  
 >  Для целевых столбцов должно быть включено полнотекстовое и семантическое индексирование.  
   
-###  <a name="HowToSimilarPhrases"></a> Пример. Поиск ключевых фраз, которые больше всего схожи в разных документах  
+###  <a name="HowToSimilarPhrases"></a> Пример. Поиск ключевых фраз, которые схожи в разных документах  
  В следующем примере производится извлечение 5 ключевых фраз, имеющих высший показатель подобия среди указанных кандидатов в таблице **HumanResources.JobCandidate** образца базы данных AdventureWorks2012.  
   
 ```sql  

@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 50a96884a5b97e0e4a287b0c731143dfa2d6e81f
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59969430"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215703"
 ---
 # <a name="aggregate-function-report-builder-and-ssrs"></a>Агрегатная функция (построитель отчетов и службы SSRS)
   Возвращает пользовательские статистические данные заданного выражения в соответствии с определением поставщика данных.  

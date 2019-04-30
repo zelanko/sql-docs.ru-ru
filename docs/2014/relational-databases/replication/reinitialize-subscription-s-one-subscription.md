@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: af1548ad29203f06e6d9cc49c048f1973afa3e3b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52800576"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63131462"
 ---
 # <a name="reinitialize-subscriptions---one-subscription"></a>Повторная инициализация подписок — одна подписка
   При помощи диалогового окна **Повторная инициализация подписок** можно выбрать подписки для повторной инициализации. Повторная инициализация подразумевает применение моментального снимка к подписчику; она выполняется агентом распространителя для подписок на публикации транзакций и агентом слияния для подписок на публикации слиянием.  

@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 44b0a20461df3214f605e68bbebb861cadf01849
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59958880"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63225301"
 ---
 # <a name="grant-permissions-to-users-and-alerting-administrators"></a>Предоставление разрешений для пользователей и оповещение администраторов
   Чтобы создавать, изменять, удалять и просматривать предупреждения данных, пользователи и администраторы предупреждений должны иметь разрешения SharePoint. Специальных разрешений для функции предупреждений об изменении данных в службах [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] нет, для этого используются встроенные разрешения SharePoint.  

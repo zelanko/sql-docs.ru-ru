@@ -1,5 +1,5 @@
 ---
-title: TopSum (многомерные Выражения) | Документы Microsoft
+title: TopSum (многомерные Выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 853390f99f02352fd7814fcec208bba1508c03a7
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743413"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63208823"
 ---
 # <a name="topsum-mdx"></a>TopSum (многомерные выражения)
 
@@ -32,7 +32,7 @@ TopSum(Set_Expression, Value, Numeric_Expression)
  *Set_Expression*  
  Допустимое многомерное выражение, возвращающее набор.  
   
- *Value*  
+ *Значение*  
  Допустимое числовое выражение, указывающее величину, с которой сравнивается каждый кортеж.  
   
  *Numeric_Expression*  
@@ -42,7 +42,7 @@ TopSum(Set_Expression, Value, Numeric_Expression)
  **TopSum** функция вычисляет сумму заданной меры, рассчитанной указанного набора, отсортированного в убывающем порядке. Функция возвращает элементы с самыми высокими значениями, чьи итоги на основе указанного числового выражения по меньшей мере равны заданному значению. Функция возвращает самый маленький поднабор набора, совокупное значение которого равно по меньшей мере заданному значению. Возвращенные элементы упорядочены по убыванию.  
   
 > [!IMPORTANT]  
->  Как [BottomSum](../mdx/bottomsum-mdx.md) функции **TopSum** функция всегда нарушает иерархию.  
+>  Как и [BottomSum](../mdx/bottomsum-mdx.md) функции **TopSum** всегда ломает иерархию.  
   
 ## <a name="example"></a>Пример  
  В следующем примере возвращается наименьший набор элементов уровня City в иерархии Geography в измерении Geography для категории Bike (начиная с элементов данного набора с наибольшим количеством продаж), совокупный итог этих элементов на основе меры Reseller Sales Amount равен по меньшей мере 6 000 000.  
@@ -59,6 +59,6 @@ WHERE([Product].[Product Categories].Bikes)
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Справочник по функциям многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
   
   

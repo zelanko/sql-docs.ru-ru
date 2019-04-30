@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6c973b6c0868729c43b56f588aed944845ab898d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210418"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63130474"
 ---
 # <a name="full-text-search-word-breakers-and-filters-significantly-improved-in-sql-server-2005-and-sql-server-2008"></a>В SQL Server 2005 и SQL Server 2008 средства разбиения по словам и фильтры полнотекстового поиска были существенно улучшены
   Средства разбиения по словам и фильтры значительно изменились. Были дополнительно улучшены средства разбиения по словам, включая улучшенную поддержку языков и надежность.  

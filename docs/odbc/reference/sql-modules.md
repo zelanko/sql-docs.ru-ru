@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 30c116878049c4f6a8f36e988731ab641e03c6d7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834752"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63232775"
 ---
 # <a name="sql-modules"></a>Модули SQL
 Второй прием для отправки инструкций SQL СУБД — через модули. Коротко говоря модуль состоит из нескольких процедур, которые вызываются из языка программирования ведущих приложений. Каждая процедура содержит одну инструкцию SQL и данных передается через параметры и процедуры.  
