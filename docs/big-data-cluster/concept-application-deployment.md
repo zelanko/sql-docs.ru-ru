@@ -11,11 +11,11 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
 ms.openlocfilehash: 44e0be15c9b9cc3abb8af3e8f2e7fc8049d385df
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58872371"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63283723"
 ---
 # <a name="what-is-application-deployment-on-a-sql-server-2019-big-data-cluster"></a>Что такое развертывание приложения в кластере SQL Server 2019 больших данных?
 

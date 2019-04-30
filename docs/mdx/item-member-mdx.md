@@ -1,5 +1,5 @@
 ---
-title: Item (элемент) (многомерные Выражения) | Документы Microsoft
+title: Item (элемент) (многомерные Выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 92745085a408503a2b435eb160daf431c7fdaa32
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740343"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63272834"
 ---
 # <a name="item-member-mdx"></a>Item (элемент) (многомерные выражения)
 
@@ -36,7 +36,7 @@ Tuple_Expression.Item( Index )
  Допустимое числовое выражение, указывающее положение элемента внутри возвращаемого кортежа.  
   
 ## <a name="remarks"></a>Примечания  
- **Элемент** функция возвращает элемент указанного кортежа. Функция возвращает элемент, находящийся в позиции (с нуля), заданной параметром *индекса*.  
+ **Элемент** функция возвращает элемент указанного кортежа. Функция возвращает элемент, находящийся в позиции (с нуля), заданной параметром *индекс*.  
   
 ## <a name="example"></a>Пример  
  Следующий пример возвращает элемент `[2003]` — первый элемент в кортеже `[Date].[Calendar Year].&[2003], [Measures].[Internet Sales Amount] ).` — в столбцах:  
@@ -50,6 +50,6 @@ Tuple_Expression.Item( Index )
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>См. также  
- [Справочник по функциям многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
   
   

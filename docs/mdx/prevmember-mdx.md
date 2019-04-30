@@ -1,5 +1,5 @@
 ---
-title: PrevMember (многомерные Выражения) | Документы Microsoft
+title: PrevMember (многомерные Выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 19aecc4dc642e9aee636c860f63b9b39e0471fa4
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742583"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63278039"
 ---
 # <a name="prevmember-mdx"></a>PrevMember (многомерные выражения)
 
@@ -29,7 +29,7 @@ Member_Expression.PrevMember
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *Member_Expression.*  
+ *Member_Expression*  
  Допустимое многомерное выражение, возвращающее элемент.  
   
 ## <a name="remarks"></a>Примечания  
@@ -77,6 +77,6 @@ WHERE ([Geography].[State-Province].x,
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Справочник по функциям многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
   
   

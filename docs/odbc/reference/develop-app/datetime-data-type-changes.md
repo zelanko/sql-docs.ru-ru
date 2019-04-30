@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a5a87a1cbfbdff5eb428e73d74cdd1199955d673
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834012"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63267695"
 ---
 # <a name="datetime-data-type-changes"></a>Изменения в типе данных Datetime
 В ODBC 3. *x*, идентификаторы для даты, времени и типы данных timestamp SQL были изменены относительно SQL_DATE, SQL_TIME и SQL_TIMESTAMP (экземплярами **#define** в файле заголовка, 9, 10 и 11) для SQL_TYPE_DATE не поддерживается, SQL_TYPE_TIME и SQL_TYPE_TIMESTAMP (экземплярами **#define** в файле заголовка, 91, 92 и 93), соответственно. Соответствующие идентификаторы типа C были изменены относительно SQL_C_DATE SQL_C_TIME и SQL_C_TIMESTAMP SQL_C_TYPE_DATE SQL_C_TYPE_TIME и SQL_C_TYPE_TIMESTAMP, соответственно.  

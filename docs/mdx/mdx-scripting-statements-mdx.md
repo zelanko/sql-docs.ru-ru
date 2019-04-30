@@ -1,5 +1,5 @@
 ---
-title: (Многомерные Выражения) инструкции сценариев многомерных Выражений | Документы Microsoft
+title: (Многомерные Выражения) инструкции сценариев многомерных Выражений | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a79b52295ede211dcf7ceb6e3f23ab9e742b31d9
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741763"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63267922"
 ---
 # <a name="mdx-scripting-statements-mdx"></a>Инструкции сценариев многомерных выражений (многомерные выражения)
 
@@ -25,17 +25,17 @@ ms.locfileid: "34741763"
   
 |Раздел|Описание|  
 |-----------|-----------------|  
-|[Инструкция CALCULATE &#40;многомерных Выражений&#41;](../mdx/mdx-scripting-calculate.md)|Вычисляет вложенный куб, по желанию определяя порядок разрешения измерений в этом кубе.|  
-|[Инструкция CASE &#40;многомерных Выражений&#41;](../mdx/case-statement-mdx.md)|Позволяет возвращать указанные значения из нескольких сравнений согласно условию.|  
-|[Ключевое слово EXISTING &#40;многомерных Выражений&#41;](../analysis-services/multidimensional-models/mdx/mdx-query-existing-keyword.md)|Указывает, что заданный набор должен вычисляться принудительно в текущем контексте.|  
-|[Инструкция FREEZE &#40;многомерных Выражений&#41;](../mdx/mdx-scripting-freeze.md)|Фиксирует текущие значения ячеек заданного вложенного куба.|  
-|[Если инструкция &#40;многомерных Выражений&#41;](../mdx/mdx-scripting-if.md)|Выполняет инструкцию, если условие истинно.|  
-|[Инструкция SCOPE &#40;многомерных Выражений&#41;](../mdx/mdx-scripting-scope.md)|Ограничивает область заданных инструкций многомерных выражений указанным вложенным кубом.|  
+|[Инструкция CALCULATE (многомерные выражения)](../mdx/mdx-scripting-calculate.md)|Вычисляет вложенный куб, по желанию определяя порядок разрешения измерений в этом кубе.|  
+|[Инструкция CASE (многомерные выражения)](../mdx/case-statement-mdx.md)|Позволяет возвращать указанные значения из нескольких сравнений согласно условию.|  
+|[Ключевое слово EXISTING (многомерные выражения)](../analysis-services/multidimensional-models/mdx/mdx-query-existing-keyword.md)|Указывает, что заданный набор должен вычисляться принудительно в текущем контексте.|  
+|[Инструкция FREEZE (многомерные выражения)](../mdx/mdx-scripting-freeze.md)|Фиксирует текущие значения ячеек заданного вложенного куба.|  
+|[Инструкция IF (многомерные выражения)](../mdx/mdx-scripting-if.md)|Выполняет инструкцию, если условие истинно.|  
+|[Инструкция SCOPE (многомерные выражения)](../mdx/mdx-scripting-scope.md)|Ограничивает область заданных инструкций многомерных выражений указанным вложенным кубом.|  
   
 ## <a name="see-also"></a>См. также  
  [Справка по инструкциям многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-statement-reference-mdx.md)   
  [Инструкции определения данных многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-data-definition-statements-mdx.md)   
- [Инструкции языка манипулирования данными &#40;многомерных Выражений&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
- [Основные понятия о сценариях многомерных Выражений &#40;служб Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)  
+ [Инструкции для манипулирования данными многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
+ [Основные принципы создания скриптов многомерных выражений (службы Analysis Services)](../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)  
   
   

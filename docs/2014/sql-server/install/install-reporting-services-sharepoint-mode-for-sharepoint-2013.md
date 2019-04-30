@@ -12,11 +12,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: ec3e854d72f28646ba556d09514b6646dbb3e60c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359846"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298820"
 ---
 # <a name="install-reporting-services-sharepoint-mode-for-sharepoint-2013"></a>Установка служб Reporting Services в режиме SharePoint для SharePoint 2013
   В данном разделе подробно описываются процедуры установки одиночного сервера [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме SharePoint. Эти шаги охватывают запуск мастера установки SQL Server, а также выполнение дополнительных задач по настройке с использованием центра администрирования SharePoint. В разделе также можно ознакомиться с отдельными процедурами обновления существующей установки, например с созданием приложения службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -83,7 +83,7 @@ ms.locfileid: "53359846"
   
      В целях безопасности не рекомендуется, чтобы учетные записи администраторов фермы SharePoint также являлись учетными записями администраторов локальной операционной системы. Если вы добавили учетную запись администратора фермы в группу локальных администраторов в ходе процесса настройки, рекомендуется удалить учетную запись из группы локальных администраторов после завершения установки.  
   
-##  <a name="bkmk_install_SSRS"></a> Шаг 1. Установка сервера отчетов служб Reporting Services в режиме интеграции с SharePoint  
+##  <a name="bkmk_install_SSRS"></a> Шаг 1. Установка сервера отчетов служб Reporting Services в режиме интеграции с SharePoint  
  На этом шаге устанавливается сервер отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint и надстройка служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для продуктов SharePoint. В зависимости от продуктов, уже установленных на компьютере, могут не отображаться некоторые страницы установки, описанные в следующих разделах.  
   
 1.  Запустите мастер установки SQL Server (Setup.exe).  
@@ -161,7 +161,7 @@ ms.locfileid: "53359846"
   
 20. Для выполнения программы установки требуется несколько минут. Появится страница **Готово** с перечислением функций и состояния каждого компонента. Возможно, откроется диалоговое окно с уведомлением о необходимости перезагрузки компьютера.  
   
-##  <a name="bkmk_install_SSRS_sharedservice"></a> Шаг 2. Регистрация и запуск службы Reporting Services SharePoint  
+##  <a name="bkmk_install_SSRS_sharedservice"></a> Шаг 2. Регистрация и запуск службы Reporting Services в SharePoint  
  ![Содержимое, связанное с PowerShell](../../../2014/reporting-services/media/rs-powershellicon.jpg "Содержимое, связанное с PowerShell")  
   
 > [!NOTE]  
@@ -222,7 +222,7 @@ ms.locfileid: "53359846"
     > [!NOTE]  
     >  Если служба Reporting Services остается в состоянии **Запускается** и не переходит в состояние **Запущена**, в диспетчере Windows Server убедитесь в том, что запущена служба "Администрирование SharePoint 2013".  
   
-##  <a name="bkmk_create_serrviceapplication"></a> Шаг 3. Создание приложения службы Reporting Services  
+##  <a name="bkmk_create_serrviceapplication"></a> Шаг 3. Создание приложения службы Reporting Services  
  В этом разделе описаны шаги по созданию приложения службы и описания его свойств (в случае просмотра существующего приложения службы).  
   
 1.  В центре администрирования SharePoint в разделе **Управление приложениями** выберите **Управление приложениями служб**.  
@@ -258,7 +258,7 @@ ms.locfileid: "53359846"
   
 -   Статья [Создание приложения службы Reporting Services с помощью PowerShell](../../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md#bkmk_powershell_create_ssrs_serviceapp).  
   
-##  <a name="bkmk_powerview"></a> Шаг 4. Активация функции Power View семейства веб-сайтов.  
+##  <a name="bkmk_powerview"></a> Шаг 4. Активируйте компонент коллекции сайтов Power View.  
  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], компонент надстройки служб [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для продуктов [!INCLUDE[msCoName](../../includes/msconame-md.md)] SharePoint, является компонентом семейства веб-сайтов. Этот компонент активируется автоматически для корневых семейств веб-сайтов, созданных после установки надстройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Если вы планируете использовать [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], необходимо удостовериться в том, что этот компонент активирован.  
   
  При установке надстройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для продуктов SharePoint Server после установки SharePoint Server функции интеграции с сервером отчетов и с Power View будут активированы только для корневых семейств веб-сайтов. Для других семейств веб-сайтов необходимо активировать эти компоненты вручную.  

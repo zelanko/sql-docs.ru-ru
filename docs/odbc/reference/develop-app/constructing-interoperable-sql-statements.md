@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dc8072a6d7291a546f0f12256aa4b336da037a83
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809172"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281090"
 ---
 # <a name="constructing-interoperable-sql-statements"></a>Построение инструкций SQL с поддержкой взаимодействия
 Как упоминалось в предыдущих разделах, с возможностью взаимодействия приложения должны использовать SQL-грамматику ODBC. За использование данной грамматикой, тем не менее, ряд дополнительных проблем все чаще сталкиваются с возможностью взаимодействия приложений. Например что делает приложение? если он хочет использовать функцию, например внешних соединений, который поддерживается не всеми источниками данных  

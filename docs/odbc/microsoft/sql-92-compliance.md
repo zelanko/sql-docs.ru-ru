@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cf6d8d056c1658a924de4b108d3c0d025e8a58f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791492"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63313403"
 ---
 # <a name="sql-92-compliance"></a>Соответствие SQL-92
 Драйверы для баз данных ODBC рабочего стола и базового ядра Microsoft Jet не соответствует SQL-92. Они поддерживают множество функций, которые были определены в SQL-92. Некоторые функции, поддерживаемые в драйвере не поддерживаются в SQL-92. Дополнительные сведения см. в разделе *Microsoft Jet Database Engine Programmer's Guide*. Ниже приведены основные различия между ними.  

@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ee7cf624e7c118a5d9ef36738c810aecc4ec5684
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711542"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281011"
 ---
 # <a name="odbc-subkey"></a>Подраздел ODBC
 Значения в столбце подраздел ODBC укажите параметры трассировки ODBC. Эти параметры задаются «трассировка» диалогового окна Администратор источников данных ODBC, отображаемого элементом **SQLManageDataSources**. Подраздел ODBC является необязательным. Формат этих значений является, как показано в следующей таблице.  
   
-|Имя|Тип данных|Данные |  
+|Имя|Тип данных|Данные|  
 |----------|---------------|----------|  
 |Trace|REG_SZ|**0** &#124; **1**|  
 |TraceFile|REG_SZ|*путь файла трассировки*|  

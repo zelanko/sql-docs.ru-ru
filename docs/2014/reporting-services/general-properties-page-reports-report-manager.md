@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c44bc306aaa1e55aa5005663ecfcfbf261576593
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59940305"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63260816"
 ---
 # <a name="general-properties-page-reports-report-manager"></a>Страница «Общие свойства», отчеты (диспетчер отчетов)
   На странице свойств отчета «Общие» можно переименовывать, удалять, перемещать или заменять определения отчета. Кроме того, на этой странице можно создавать связанные отчеты. Подробности о том, кто создал или изменил отчет, а также о том, когда были внесены изменения, отображаются в верхней части страницы.  

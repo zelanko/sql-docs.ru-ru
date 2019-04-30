@@ -19,11 +19,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 03e2d3d672d0bfa407a3fb553a1139d30696971e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52793476"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63285613"
 ---
 # <a name="creating-constant-elements-using-sqlis-constant-sqlxml-40"></a>Создание постоянных элементов при помощи sql:is-constant (SQLXML 4.0)
   Чтобы указать постоянный элемент — то есть элемент в схеме XSD, которые не сопоставлены для любой таблицы базы данных или столбца-можно использовать `sql:is-constant` заметки. Эта заметка имеет логическое значение (0 = false, 1 = true). Допустимые значения: 0, 1, true и false. Заметка `sql:is-constant` может быть указана для элемента, не имеющего атрибутов. Если она задана для элемента, имеющего значение true (или 1), то этот элемент не будет сопоставлен с базой данных, но будет по-прежнему отображаться в XML-документе.  

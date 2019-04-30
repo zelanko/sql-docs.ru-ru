@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: da1804ffec1ffd5e016590e83ac229c9e888ff97
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035405"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63313862"
 ---
 # <a name="enterprise-information-management-using-ssis-mds-and-dqs-together-tutorial"></a>Информационный менеджмент предприятия совместным использованием SSIS, MDS и DQS [учебник]
   Для управления информацией на предприятии, как правило, требуется интеграция данных со всего предприятия и из-за его пределов, очистка данных, проверка данных на наличие повторений, стандартизация данных, обогащение данных, согласование данных с юридическими и нормативными требованиями и последующее сохранение данных в централизованном расположении со всеми необходимыми параметрами безопасности.  
@@ -48,7 +48,7 @@ ms.locfileid: "56035405"
   
     3.  Службы Data Quality Services (DQS)  
   
-    4.  SQL Server Data Tools (SSDT)  
+    4.  SQL Server Data Tools  
   
          См. в разделе [руководство по установке SQL Server 2012](../database-engine/install-windows/installation-for-sql-server.md) Дополнительные сведения об установке продукта.  
   
@@ -83,6 +83,6 @@ ms.locfileid: "56035405"
 |[Занятие 5. Автоматизация очистки данных и сопоставления с помощью служб SSIS](../../2014/tutorials/lesson-5-automating-the-cleansing-and-matching-using-ssis.md)|На этом занятии вы создадите решение служб SSIS, которое автоматически очищает входные данные с помощью служб DQS, сопоставляет очищенные данные для удаления повторений и сохраняет очищенные и сопоставленные данные в службах MDS.|75|  
   
 ## <a name="next-steps"></a>Следующие шаги  
- Чтобы приступить к изучению этого учебника, перейдите к первому занятию: [Занятие 1. Создание базы знаний DQS поставщики](../../2014/tutorials/lesson-1-creating-the-suppliers-dqs-knowledge-base.md).  
+ Чтобы приступить к изучению учебника, перейдите к первому занятию: [Занятие 1. Создание базы знаний DQS поставщики](../../2014/tutorials/lesson-1-creating-the-suppliers-dqs-knowledge-base.md).  
   
   

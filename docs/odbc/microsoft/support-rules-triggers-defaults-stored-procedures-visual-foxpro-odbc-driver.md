@@ -30,11 +30,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 47795998b019df22b01852519f75f6e8d3d274dd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655012"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63269868"
 ---
 # <a name="support-for-rules-triggers-default-values-and-stored-procedures-visual-foxpro-odbc-driver"></a>Поддержка правил, триггеров, значений по умолчанию и хранимых процедур (драйвер ODBC для Visual FoxPro)
 Не удается создать правила Visual FoxPro, триггеры, значения по умолчанию или хранимых процедур с помощью драйвера ODBC для Visual FoxPro. Тем не менее приложение может взаимодействовать с существующие правила, триггеры, значения по умолчанию или хранимых процедур, как он вставляет, обновляются или удаляются из базы данных Visual FoxPro.  
@@ -202,7 +202,7 @@ ms.locfileid: "47655012"
 |ПАРАМЕТРЫ команды|(ОСНОВНОЙ)-функция|Команда PRIVATE|  
 |Функция PI)|ПРОГРАММЫ ()-функция|ПРАВИЛЬНЫЙ ()-функция|  
 |Команда ПРОЦЕДУРЫ|PV ()-функция||  
-|ОТКРЫТЫЙ команды|() PADL &#124; (PADR) &#124; PADC функции)||  
+|ОТКРЫТЫЙ команды|PADL( ) &#124; PADR( ) &#124; PADC( ) Functions||  
   
 ## <a name="r"></a>Чтение  
   

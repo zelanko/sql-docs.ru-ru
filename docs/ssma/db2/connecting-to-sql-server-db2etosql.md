@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 26410a933c7432189f664c2b04d2b41e3e31c9c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790512"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298985"
 ---
 # <a name="connecting-to-sql-server-db2etosql"></a>Подключение к SQL Server (DB2eToSQL)
 Для переноса баз данных DB2 в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014 или Azure SQL DB, необходимо подключиться к любой из этих экземпляров целевого [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. При подключении, SSMA получает метаданные обо всех базах данных в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и отображает метаданные базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обозреватель метаданных. SSMA хранит сведения о какой экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] вы подключены, но не хранит пароли.  
@@ -81,11 +81,11 @@ ms.locfileid: "47790512"
   
 ||||||  
 |-|-|-|-|-|  
-|**ВЕРСИЯ целевого сервера Vs тип проекта**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 <br />(Version:11.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 <br />(Version:12.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 <br />(Version:13.x)|База данных Azure SQL|  
+|**ВЕРСИЯ целевого сервера Vs тип проекта**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 <br />(Version:11.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 <br />(Version:12.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 <br />(Version:13.x)|БД SQL Azure|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012|Да|Да|Да||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014||Да|Да||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014|||Да||  
-|База данных Azure SQL||||Да|  
+|БД SQL Azure||||Да|  
   
 > [!IMPORTANT]  
 > Преобразование объектов базы данных выполняется в соответствии с типом проекта, но не в соответствии с версией [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] вы подключены. В частности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 г., [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 или Azure SQL DB.  

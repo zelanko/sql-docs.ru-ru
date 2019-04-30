@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: 021458a2c47f9c57f641da575b346ab09c66fee9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818922"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63299028"
 ---
 # <a name="working-with-ssma-for-access-console-accesstosql"></a>Работа с SSMA для доступа к консоли (AccessToSQL)
 Microsoft SQL Server миграции Assistant (SSMA) для доступа теперь доступна через консольное приложение командной строки. Файлы скриптов образуют входных данных для приложения, для выполнения команд. Как консольное приложение SSMA обеспечивает взаимодействие на уровне сценария позволяет сократить цикл миграции и масштабирует мероприятий по миграции.  

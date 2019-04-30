@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8f4e6d2b82fedca6f36536a2ea06db5ea8614319
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598082"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287154"
 ---
 # <a name="application-and-driver-compatibility"></a>Совместимость приложения и драйвера
 Приложения ODBC и драйвер делятся на несколько категорий, в дополнение к их версии. Некоторые из этих приложений несовместимы с некоторые драйверы; в других случаях тип приложения или драйвера возможно, влияют на совместимость между ними.  

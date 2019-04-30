@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 88629dc1457d148b4a8e01537e35f2f5ccfbbdb3
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128620"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63273150"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>Улучшение производительности полнотекстовых индексов
   Производительность полнотекстового индекса и полнотекстовых запросов зависит от архитектуры компьютера, а также от объема памяти, скорости работы ЦП и жесткого диска и других ресурсов оборудования.  

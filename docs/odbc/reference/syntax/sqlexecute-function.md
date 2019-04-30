@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ad8aec58fea182c080d55217db94ea2cda08184b
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590438"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63259235"
 ---
 # <a name="sqlexecute-function"></a>Функция SQLExecute
 **Соответствие стандартам**  
@@ -47,7 +47,7 @@ SQLRETURN SQLExecute(
  [Вход] Дескриптор инструкции.  
   
 ## <a name="returns"></a>Возвращает  
- Значение SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NEED_DATA, SQL_STILL_EXECUTING, значение SQL_ERROR, значение SQL_NO_DATA, SQL_INVALID_HANDLE или SQL_PARAM_DATA_AVAILABLE.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NEED_DATA, SQL_STILL_EXECUTING, SQL_ERROR, SQL_NO_DATA, SQL_INVALID_HANDLE, or SQL_PARAM_DATA_AVAILABLE.  
   
 ## <a name="diagnostics"></a>Диагностика  
  Когда **SQLExecute** возвращает значение SQL_ERROR или SQL_SUCCESS_WITH_INFO, можно получить путем вызова связанного значения SQLSTATE **SQLGetDiagRec** с *HandleType* из Значение SQL_HANDLE_STMT и *обрабатывать* из *StatementHandle*. В следующей таблице перечислены значения SQLSTATE, обычно возвращаемые **SQLExecute** и объясняется каждый из них в контексте этой функции; описания SQLSTATE, возвращаемых диспетчером драйверов предшествует обозначение «(DM)». Возвращается связанный с каждого значения SQLSTATE значение SQL_ERROR, если не указано иное.  

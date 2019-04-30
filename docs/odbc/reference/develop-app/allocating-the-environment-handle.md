@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7a8eefe5bc6678462099afda8381d6b16bd076dd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602982"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287666"
 ---
 # <a name="allocating-the-environment-handle"></a>Выделение дескриптора среды
 Первая задача для любого приложения ODBC является загрузка диспетчера драйверов; как это можно сделать зависит от операционной системы. Например, на компьютере под управлением Microsoft® Windows NT® Server и Windows 2000 Server, Windows NT Workstation и Windows 2000 Professional или Microsoft Windows® 95/98, либо ссылается приложение библиотеки диспетчера драйверов или вызовы  **LoadLibrary** загрузить библиотеку DLL диспетчера драйверов.  

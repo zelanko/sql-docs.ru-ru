@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 9bb2c6457122a5ea49824ca178b6950d88f75563
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016815"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63280430"
 ---
 # <a name="exploring-the-clustering-model-basic-data-mining-tutorial"></a>Изучение модели кластеризации (учебник по интеллектуальному анализу данных — начальный уровень)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] Алгоритм кластеризации группировку вариантов в кластеры, имеющие одинаковые характеристики. Такие группирования полезно использовать для просмотра данных, выявления в них аномалий и создания прогнозов.  

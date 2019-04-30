@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: ee8d2e4c16987f5cc012f734cdf649cde7f4ebb8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808052"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63288576"
 ---
 # <a name="edit-type-mapping-oracletosql"></a>Изменение сопоставления типов (OracleToSQL)
 **Изменение сопоставления типа** диалоговое окно позволяет указать, как типы сопоставляются между объектами базы данных источника и назначения.  

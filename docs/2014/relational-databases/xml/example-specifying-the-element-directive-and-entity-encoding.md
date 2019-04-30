@@ -1,5 +1,5 @@
 ---
-title: Пример Указание директивы ELEMENT и кодировка сущности | Документация Майкрософт
+title: Пример Указание директивы ELEMENT и кодировка сущности | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 28e0e9f808820acc1959ccc11266174e5610600c
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58532396"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287241"
 ---
 # <a name="example-specifying-the-element-directive-and-entity-encoding"></a>Пример Указание директивы ELEMENT и кодировка сущности
   Этот пример демонстрирует различие между директивами **ELEMENT** и **XML** . Директива **ELEMENT** преобразует данные в сущность, а директива **XML** не делает этого. Элемент \<Summary> представляет XML `<Summary>This is summary description</Summary>`, назначенный в запросе.  

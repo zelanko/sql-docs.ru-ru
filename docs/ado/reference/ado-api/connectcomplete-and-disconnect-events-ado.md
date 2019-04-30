@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d1466b8f718318d8224ec2c7dcf3e873139fffed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752772"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63309153"
 ---
 # <a name="connectcomplete-and-disconnect-events-ado"></a>События ConnectComplete и Disconnect (ADO)
 **ConnectComplete** событие вызывается после начала соединения. **Disconnect** событие вызывается после завершения соединения.  

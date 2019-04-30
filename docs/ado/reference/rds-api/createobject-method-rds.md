@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d220a9abc0e2dc72d7ab65306b514a9925b4fc43
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54419929"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281058"
 ---
 # <a name="createobject-method-rds"></a>Метод CreateObject (служба удаленных рабочих столов)
 Создает прокси для целевого бизнес-объекта и возвращает указатель на него. Прокси-сервера пакетов и выполняет маршалинг данные заглушки на стороне сервера для обмена данными с бизнес-объект для отправки запросов и данных через Интернет. Для объектов в процессе компонент прокси-серверы не используются, предоставляется только указатель на объект.  
@@ -30,7 +30,7 @@ ms.locfileid: "54419929"
 ## <a name="syntax"></a>Синтаксис  
  Служба Remote Data Service поддерживает следующие протоколы: HTTP, HTTPS (HTTP через протокол SSL), DCOM и внутри процесса.  
   
-|Протокол|Синтаксис|  
+|Protocol|Синтаксис|  
 |--------------|------------|  
 |HTTP|Set object = DataSpace.CreateObject("ProgId", "https\://awebsrvr")|  
 |HTTPS|Set object = DataSpace.CreateObject("ProgId", "https\://awebsrvr")|  

@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b29dc4e8f6dc32a1bda1ace7f029e77d8b1a45b9
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583127"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63301469"
 ---
 # <a name="large-backup-or-restore-history-tables-make-upgrade-appear-to-not-respond"></a>Резервное копирование или восстановление больших таблиц журналов может привести к кажущемуся отсутствию ответа от процесса обновления
   В [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] в некоторые таблицы журнала резервного копирования и восстановления были добавлены новые столбцы. При обновлении этих таблиц требуется изменить их для добавления новых столбцов. Если одна или несколько из этих таблиц содержит большое количество строк, обновление задержится на длительное время на инструкции ALTER TABLE, которая добавляет столбцы в эту таблицу.  

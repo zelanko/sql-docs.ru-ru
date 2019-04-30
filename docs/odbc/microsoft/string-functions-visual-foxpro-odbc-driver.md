@@ -17,20 +17,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1a9e1c94eec150cc24522cd6e4c57eb35b4a2126
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854832"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270916"
 ---
 # <a name="string-functions-visual-foxpro-odbc-driver"></a>Строковые функции (драйвер ODBC для Visual FoxPro)
 В следующей таблице перечислены функции обработки строк ODBC, поддерживаемых драйвером Visual FoxPro ODBC; Если Visual FoxPro грамматики для той же функции отличается от синтаксиса ODBC, Visual FoxPro эквивалентное отображаются.  
   
 |Грамматика ODBC|Грамматика Visual FoxPro|  
 |------------------|---------------------------|  
-|ASCII *(строковое_выражение)*|ASC *(строковое_выражение)*|  
+|ASCII *(string_exp)*|ASC *(строковое_выражение)*|  
 |CHAR *(код)*|CHR *(строковое_выражение)*|  
-|CONCAT *(строковое_выражение1, строковое_выражение2)*|*строковое_выражение1 + строковое_выражение2*|  
+|CONCAT *(строковое_выражение1, строковое_выражение2)*|*string_exp1 + string_exp2*|  
 |РАЗЛИЧИЕ *(строковое_выражение1, строковое_выражение2)*||  
 |Вставить *(строковое_выражение1, начало, длина, строковое_выражение2)*|STUFF *(строковое_выражение1, начало, длина, строковое_выражение2)*|  
 |LCASE *(строковое_выражение)*|НИЖНИЙ *(строковое_выражение)*|  

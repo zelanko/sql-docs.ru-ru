@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 869286901a428cf2b327fe65ba8c46877df092d3
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59971590"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63255122"
 ---
 # <a name="report-wizard-help"></a>Справка мастера отчетов
   В этом разделе представлена справка F1 мастера отчетов. Мастер отчетов автоматизирует процесс создания табличных и матричных отчетов. В следующей таблице описаны подразделы, содержащиеся в этом разделе.  

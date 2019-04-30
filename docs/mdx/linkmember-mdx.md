@@ -1,5 +1,5 @@
 ---
-title: LinkMember (многомерные Выражения) | Документы Microsoft
+title: LinkMember (многомерные Выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 71235953f592572bd7ac0dcb2493d97dd509f8b7
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741503"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63269936"
 ---
 # <a name="linkmember-mdx"></a>LinkMember (многомерные выражения)
 
@@ -29,7 +29,7 @@ LinkMember(Member_Expression, Hierarchy_Expression)
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *Member_Expression.*  
+ *Member_Expression*  
  Допустимое многомерное выражение, возвращающее элемент.  
   
  *Hierarchy_Expression*  
@@ -53,8 +53,8 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Hierarchize &#40;многомерных Выражений&#41;](../mdx/hierarchize-mdx.md)   
- [Предки &#40;многомерных Выражений&#41;](../mdx/ascendants-mdx.md)   
- [Справочник по функциям многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Hierarchize (многомерные выражения)](../mdx/hierarchize-mdx.md)   
+ [Ascendants &#40;многомерных Выражений&#41;](../mdx/ascendants-mdx.md)   
+ [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
   
   

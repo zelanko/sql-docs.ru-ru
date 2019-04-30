@@ -1,5 +1,5 @@
 ---
-title: Инструкция DROP ACTION (многомерные Выражения) | Документы Microsoft
+title: Инструкция DROP ACTION (многомерные Выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f47eaad9a13966abd1d08b0121fdd9c0a64a7438
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741653"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63285062"
 ---
-# <a name="mdx-data-definition---drop-action"></a>Определение данных MDX - действия удаления
+# <a name="mdx-data-definition---drop-action"></a>Определение данных многомерных выражений — DROP ACTION
 
 
   Удаляет указанное действие из указанного куба.  
@@ -33,7 +33,7 @@ DROP ACTION CURRENTCUBE | Cube_Name
  *Cube_Name*  
  Допустимое строковое выражение, возвращающее имя куба.  
   
- *Имя_действия*  
+ *Action_Name*  
  Допустимое строковое выражение, возвращающее имя действия, которое необходимо удалить.  
   
 ## <a name="see-also"></a>См. также  

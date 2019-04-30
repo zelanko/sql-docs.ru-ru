@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fb62318b9f8eb03fbd3c9732dc8ad0caa9127d17
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742602"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63294431"
 ---
 # <a name="adding-multiple-fields-and-values"></a>Добавление нескольких полей и значений
 В некоторых случаях может оказаться более эффективной, передаваемые в массив полей и их соответствующие значения для **AddNew** метод, а не параметр **значение** несколько раз для каждого нового поля. Если *"списокполей"* является массивом, *значения* также должен быть массивом с тем же число членов; в противном случае возникает ошибка. Порядок имен полей должен соответствовать порядку значений полей в каждом массиве. Следующий код передает массив полей и массив значений для **AddNew** метод.

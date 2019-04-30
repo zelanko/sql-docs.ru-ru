@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f6762eb4ea9b350a76fc794fa7074af2a107b511
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204093"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63258928"
 ---
 # <a name="sqlgetdescfield-function"></a>Функция SQLGetDescField
 **Соответствие стандартам**  
@@ -81,7 +81,7 @@ SQLRETURN SQLGetDescField(
  [Выход] Указатель на буфер, в которую будет возвращено общее число байтов (за исключением число байтов, необходимых для символа завершения null) для возврата в **ValuePtr*.  
   
 ## <a name="returns"></a>Возвращает  
- Значение SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, значение SQL_ERROR, SQL_NO_DATA или SQL_INVALID_HANDLE.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, SQL_NO_DATA, or SQL_INVALID_HANDLE.  
   
  Будет возвращено значение SQL_NO_DATA, если *RecNumber* больше, чем текущее количество записей дескриптора.  
   

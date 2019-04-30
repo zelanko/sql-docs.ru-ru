@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: ae0350a239414b4e20299cf42d46ebc5b9a69023
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807196"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63273362"
 ---
 # <a name="specifying-boolean-operators-in-xpath-queries-sqlxml-40"></a>Указание логических операторов в запросах XPath (SQLXML 4.0)
   В следующем примере показано, каким образом логические операторы задаются в запросах XPath. В этом примере задается запрос XPath к схеме сопоставления, содержащейся в файле SampleSchema1.xml. Сведения об этом образце схемы см. в разделе [образец аннотированные схемы XSD для примеров XPath &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  

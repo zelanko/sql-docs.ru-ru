@@ -1,5 +1,5 @@
 ---
-title: Cousin (многомерные Выражения) | Документы Microsoft
+title: Cousin (многомерные Выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ad604900ac31cbcfb7e9a68fba4241c5f539b491
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740033"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63284984"
 ---
 # <a name="cousin-mdx"></a>Cousin (многомерные выражения)
 
@@ -29,7 +29,7 @@ Cousin( Member_Expression , Ancestor_Member_Expression )
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *Member_Expression.*  
+ *Member_Expression*  
  Допустимое многомерное выражение, возвращающее элемент.  
   
  *Ancestor_Member_Expression*  
@@ -60,6 +60,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Справочник по функциям многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
   
   

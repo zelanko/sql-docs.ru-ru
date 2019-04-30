@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cd7773177f6ec9d02df9d3d669abf561919ffe0b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748406"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250611"
 ---
 # <a name="sql-server-locks-object"></a>SQL Server, объект Locks
   Объект **SQLServer: блокировки** в Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет сведения о блокировках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , полученных для отдельных типов ресурсов. Блокировки выдаются на такие ресурсы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , как прочитанные или измененные транзакцией строки, для предотвращения одновременного использования ресурсов несколькими транзакциями. Например, если исключительная (X) блокировка получена транзакцией на строку в таблице, никакая другая транзакция не сможет изменить эту строку, пока блокировка не будет освобождена. Минимизация использования блокировок повышает параллелизм, что может улучшить общую производительность. Одновременно может отслеживаться несколько экземпляров объекта **Locks** , каждый из которых будет представлять собой блокировку отдельного вида ресурсов.  

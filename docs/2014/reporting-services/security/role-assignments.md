@@ -18,11 +18,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3b9875628e8868e38ed471b15b411eab86bbd1cb
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59969040"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63278718"
 ---
 # <a name="role-assignments"></a>Назначения ролей
   В службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] *назначения ролей* определяют доступ к сохраненным элементам и к самому серверу отчетов. Назначение ролей состоит из следующих частей.  

@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b1d1a55d3b417ff7a0a673bda8d289a72d7c1cb1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658432"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63312854"
 ---
 # <a name="long-data-and-sqlsetpos-and-sqlbulkoperations"></a>Данные типа Long Data и функции SQLSetPos и SQLBulkOperations
 Как и в случае с параметрами в инструкции SQL, могут отправляться данные большой длины, при обновлении строки со **SQLBulkOperations** или **SQLSetPos** или при вставке строк с **SQLBulkOperations**. Данные отправляются в части, и в нескольких вызовах **SQLPutData**. Столбцы, для которых данные отправляются во время выполнения, называются *столбцов данных времени выполнения*.  
@@ -46,4 +46,4 @@ ms.locfileid: "47658432"
   
 6.  Вызовы **SQLParamData** еще раз, чтобы указать, что он отправлены все данные для столбца. Если какие-либо столбцы данных времени выполнения, для которых данные не были отправлены, драйвер возвращает SQL_NEED_DATA и уникальное значение для следующего столбца данных во время выполнения; приложение возвращается к шагу 5. Если данные отправлены для всех столбцов данных времени выполнения, данные для строки отправляются в источник данных. **SQLParamData** возвращает SQL_SUCCESS или SQL_SUCCESS_WITH_INFO и может возвращать любой SQLSTATE **SQLBulkOperations** или **SQLSetPos** может возвращать.  
   
- После **SQLBulkOperations** или **SQLSetPos** возвращает SQL_NEED_DATA и до передачи данных полностью для последнего столбца данных во время выполнения, инструкция находится в состоянии необходимые данные. В этом состоянии приложение может вызвать только **SQLPutData**, **SQLParamData**, **SQLCancel**, **SQLGetDiagField**, или **SQLGetDiagRec**; все остальные функции возвращают параметром SQLSTATE HY010 (функционировать ошибка последовательности). Вызов **SQLCancel** отменяет выполнение инструкции и возвращает его в предыдущее состояние. Дополнительные сведения см. в разделе [таблицы перехода состояния ODBC B: приложение](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).
+ После **SQLBulkOperations** или **SQLSetPos** возвращает SQL_NEED_DATA и до передачи данных полностью для последнего столбца данных во время выполнения, инструкция находится в состоянии необходимые данные. В этом состоянии приложение может вызвать только **SQLPutData**, **SQLParamData**, **SQLCancel**, **SQLGetDiagField**, или **SQLGetDiagRec**; все остальные функции возвращают параметром SQLSTATE HY010 (функционировать ошибка последовательности). Вызов **SQLCancel** отменяет выполнение инструкции и возвращает его в предыдущее состояние. Дополнительные сведения см. в разделе [приложении б: Таблицы перехода состояния ODBC](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).

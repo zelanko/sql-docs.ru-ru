@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c8a4377d11040abde228383ec35dd9284f14760a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52754226"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63278926"
 ---
 # <a name="protocols-for-ltservergt-sql-server-configuration-manager"></a>Протоколы для сервера &lt;сервер&gt; (диспетчер конфигурации SQL Server)
   Чтобы настроить протоколы, используемые компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)], выберите элемент **Протоколы** для нужного экземпляра сервера в консольной панели, щелкните правой кнопкой мыши соответствующий протокол на панели сведений, а затем выберите пункт **Свойства**.  

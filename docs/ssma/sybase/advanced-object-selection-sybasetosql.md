@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 2f1ee73e2d6ad21ea57825bd31997db0a519a720
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721852"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63283615"
 ---
 # <a name="advanced-object-selection-sybasetosql"></a>Расширенный выбор объектов (SybaseToSQL)
 **Расширенный объект разделе** диалоговое окно позволяет фильтровать объекты базы данных с помощью строки и подстроки в качестве имени объекта, а затем выберите или отмените выделение этих объектов. SSMA выполняет преобразование и миграцию операции, для выбранных объектов.  

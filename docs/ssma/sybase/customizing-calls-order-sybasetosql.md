@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: df1608fd078aa4c95bd50249eef59d4650a4889f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744522"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298522"
 ---
 # <a name="customizing-calls-order-sybasetosql"></a>Настройка порядка вызовов (SybaseToSQL)
 На этом этапе выберите порядок, в котором будет вызываться объектов для проверки.  

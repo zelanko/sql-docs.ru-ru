@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ac1a80e94d225b26cf879b27bdb0e138e0b0d1d9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692202"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63306326"
 ---
 # <a name="64-bit-integer-structures"></a>64-разрядные целочисленные структуры
 _Int64 принадлежит к типу C SQL_C_SBIGINT и SQL_C_UBIGINT идентификаторы типа данных на компиляторы Microsoft C. При использовании компилятора, отличный от компилятора Microsoft® C тип C может отличаться. Если компилятор имеет встроенную поддержку 64-разрядных целых чисел, драйвера или приложения следует определить ODBCINT64 как тип собственного 64-разрядное целое число. Если компилятор не поддерживает 64-разрядных целых чисел, приложения или драйвера можно определить следующие структуры, чтобы гарантировать, что доступ к этим данным:  

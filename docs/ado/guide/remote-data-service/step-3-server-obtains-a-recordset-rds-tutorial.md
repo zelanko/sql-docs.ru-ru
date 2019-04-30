@@ -1,5 +1,5 @@
 ---
-title: 'Шаг 3: Сервер получает набор записей (учебник по RDS) | Документация Майкрософт'
+title: Шаг 3. Сервер получает набор записей (учебник по RDS) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,13 +14,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5dc57cd55667691433515319762f9c4727060cdf
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51557771"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63316765"
 ---
-# <a name="step-3-server-obtains-a-recordset-rds-tutorial"></a>Шаг 3. Сервер получает набор записей (учебник по RDS)
+# <a name="step-3-server-obtains-a-recordset-rds-tutorial"></a>Шаг 3. Сервер получает набор записей (учебник по RDS)
 Программа server использует текст строки и команду connect для запросов к источнику данных для нужные строки. ADO обычно используется для извлечения этого **записей**, несмотря на то, что интерфейсы, доступа к данным других Майкрософт, таких как OLE DB, могут использоваться.  
   
 > [!IMPORTANT]
@@ -39,5 +39,5 @@ End Function
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Шаг 4: Сервер возвращает набор записей (учебник по RDS)](../../../ado/guide/remote-data-service/step-4-server-returns-the-recordset-rds-tutorial.md)   
+ [Шаг 4. Сервер возвращает набор записей (учебник по RDS)](../../../ado/guide/remote-data-service/step-4-server-returns-the-recordset-rds-tutorial.md)   
  [Учебник по RDS (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   

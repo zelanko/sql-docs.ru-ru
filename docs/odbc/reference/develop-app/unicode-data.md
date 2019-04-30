@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 74de6c44aaf109a434f0cf76c6902abfba92efe1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655022"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63305773"
 ---
 # <a name="unicode-data"></a>Данные в Юникоде
 Типы данных SQL в Юникоде предоставленный для описания данные, которые находятся в формате Юникод, изначально в СУБД. Тип данных Юникода C предоставляется позволяют приложениям для привязки данных в Юникоде буфер. Диспетчер драйверов можно преобразовать данные из типа C Юникод (SQL_C_WCHAR), чтобы сделать его функции с помощью драйвера ANSI.  

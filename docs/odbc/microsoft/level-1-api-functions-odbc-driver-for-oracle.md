@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6a70116fb0e8ef1236b18cb478184e96fe08fce5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47829422"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63262232"
 ---
 # <a name="level-1-api-functions-odbc-driver-for-oracle"></a>Функции API уровня 1 (драйвер ODBC для Oracle)
 > [!IMPORTANT]  
@@ -42,7 +42,7 @@ ms.locfileid: "47829422"
 |**SQLGetTypeInfo**|Возвращает сведения о типах данных, поддерживаемых источником данных. Драйвер возвращает сведения в результирующем наборе SQL.|  
 |**SQLParamData**|Используется в сочетании с **SQLPutData** для указания параметра данных во время выполнения инструкции.|  
 |**SQLPutData**|Позволяет приложению отправлять данные для параметра или столбца к драйверу во время выполнения инструкции.|  
-|**SQLSetConnectOption**|Предоставляет доступ к параметрам, которые управляют аспектах соединения. Эта функция поддерживается частично: драйвер поддерживает все значения для *fOption* аргумент, но не поддерживает некоторые *vParam* значений в параметре *fOption* аргумент [SQL_TXN_ISOLATION](../../odbc/microsoft/connect-options.md). Дополнительные сведения см. в разделе [параметров подключения](../../odbc/microsoft/connect-options.md).|  
+|**SQLSetConnectOption**|Предоставляет доступ к параметрам, которые управляют аспектах соединения. Эта функция поддерживается частично: Драйвер поддерживает все значения для *fOption* аргумент, но не поддерживает некоторые *vParam* значений в параметре *fOption* аргумент [SQL_TXN_ISOLATION ](../../odbc/microsoft/connect-options.md). Дополнительные сведения см. в разделе [параметров подключения](../../odbc/microsoft/connect-options.md).|  
 |**SQLSetStmtOption**|Задает параметры, связанные с дескриптор инструкции *hstmt*. Дополнительные сведения см. в разделе [параметров инструкции](../../odbc/microsoft/statement-options.md).|  
 |**SQLSpecialColumns**|Возвращает оптимальный набор столбцов, уникально определяющий строку в таблице.|  
 |**SQLStatistics**|Извлекает список статистику о одной таблицы и индексы или имена тегов, связанные с таблицей. Драйвер возвращает данные в виде результирующего набора.|  

@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b150fe1c0c7260960140558eeff74b54c0798d80
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631352"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63308619"
 ---
 # <a name="createparameter-method-ado"></a>Метод CreateParameter (ADO)
 Создает новый [параметр](../../../ado/reference/ado-api/parameter-object.md) объект с указанными свойствами.  
@@ -38,11 +38,11 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
  Возвращает **параметр** объекта.  
   
 #### <a name="parameters"></a>Параметры  
- *Название*  
- Необязательный параметр. Объект **строка** значение, содержащее имя **параметр** объекта.  
+ *Name*  
+ Необязательный. Объект **строка** значение, содержащее имя **параметр** объекта.  
   
  *Тип*  
- Необязательный параметр. Объект [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) значение, указывающее тип данных **параметр** объекта.  
+ Необязательный. Объект [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) значение, указывающее тип данных **параметр** объекта.  
   
  *Направление*  
  Необязательный параметр. Объект [ParameterDirectionEnum](../../../ado/reference/ado-api/parameterdirectionenum.md) значение, указывающее тип **параметр** объекта.  
@@ -50,7 +50,7 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
  *Размер*  
  Необязательный параметр. Объект **Long** значение, которое указывает максимальную длину для значения параметра в символах или байтах.  
   
- *Value*  
+ *Значение*  
  Необязательный параметр. Объект **Variant** , указывающее значение для **параметр** объекта.  
   
 ## <a name="remarks"></a>Примечания  

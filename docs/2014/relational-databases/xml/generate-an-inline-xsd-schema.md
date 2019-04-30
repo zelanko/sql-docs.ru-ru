@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9b6c8233b95f3f95235bb4f618358d4680d3088f
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529336"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287480"
 ---
 # <a name="generate-an-inline-xsd-schema"></a>Создание встроенных схем XSD
   В предложении FOR XML можно запросить, чтобы запрос возвращал встроенную схему вместе с результатами запроса. Если нужно получить XDR-схему, то в предложении FOR XML следует использовать ключевое слово XMLDATA. Если нужно получить XSD-схему, то тогда следует использовать ключевое слово XMLSCHEMA.  
@@ -221,7 +221,7 @@ FOR XML RAW, XMLSCHEMA, ELEMENTS
 ## <a name="element-name-clashes"></a>Конфликты имен элементов  
  В предложении FOR XML одинаковые имена иногда соответствуют различным подэлементам. Например, следующий запрос получает значения продуктов ListPrice и DealerPrice, но определяет для этих двух столбцов один и тот же псевдоним Price. Поэтому в результирующем наборе строк будут присутствовать два столбца с одинаковым именем.  
   
-### <a name="case-1-both-subelements-are-nonkey-columns-of-the-same-type-and-can-be-null"></a>Вариант 1. Оба подэлемента являются неключевыми столбцами одинакового типа и могут иметь значение NULL  
+### <a name="case-1-both-subelements-are-nonkey-columns-of-the-same-type-and-can-be-null"></a>Вариант 1. Оба подэлемента являются неключевыми столбцами того же типа и может иметь значение NULL  
  В следующем запросе оба подэлемента являются неключевыми столбцами одинакового типа и могут иметь значение NULL.  
   
 ```  
@@ -313,7 +313,7 @@ for    XML RAW, ELEMENTS, XMLSCHEMA
   
  `</row>`  
   
-### <a name="case-2-one-key-and-one-nonkey-column-of-the-same-type"></a>Вариант 2. Один ключевой столбец и один неключевой столбец одинакового типа  
+### <a name="case-2-one-key-and-one-nonkey-column-of-the-same-type"></a>Вариант 2. Один ключ и один неключевой столбец того же типа  
  В следующем запросе находится один ключевой столбец и один неключевой столбец одинакового типа.  
   
 ```  
@@ -391,7 +391,7 @@ FOR XML RAW, ELEMENTS, XMLSCHEMA
   
  Обратите внимание, что во встроенной XSD-схеме элемент <`Col`> соответствует столбцу Col2 с параметром minOccurs, равным 0.  
   
-### <a name="case-3-both-elements-of-different-types-and-corresponding-columns-can-be-null"></a>Случай 3. Оба элемента различных типов и соответствующие столбцы могут иметь значение NULL  
+### <a name="case-3-both-elements-of-different-types-and-corresponding-columns-can-be-null"></a>Вариант 3. Оба элемента различных типов и соответствующие столбцы могут иметь значение NULL  
  Для случая 2 показан следующий запрос, заданный относительно таблицы-образца:  
   
 ```  

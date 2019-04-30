@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 47e1250a92b78aefdc1611fd88e0ee9b0f772ad0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539902"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63254167"
 ---
 # <a name="multiple-results"></a>Множественные результаты
 Объект *результат* что-то возвращается в источнике данных после выполнения инструкции. ODBC имеет два типа результатов: результирующие наборы и количества строк. *Счетчики строк* , количество строк, затронутых при операции обновления, удаления или вставки инструкции. Разделы, описанные в [пакеты инструкций SQL](../../../odbc/reference/develop-app/batches-of-sql-statements.md), можно создать несколько результатов.  
@@ -31,8 +31,8 @@ ms.locfileid: "52539902"
   
 |Тип пакета|Количество строк|Результирующие наборы|  
 |----------------|----------------|-----------------|  
-|Явные пакетной службы|SQL_BATCH_ROW_COUNT [a]|--[b].|  
-|Процедура|SQL_BATCH_ROW_COUNT [a]|--[b].|  
+|Явные пакетной службы|SQL_BATCH_ROW_COUNT[a]|--[b].|  
+|Процедура|SQL_BATCH_ROW_COUNT[a]|--[b].|  
 |Массивы параметров|SQL_PARAM_ARRAYS_ROW_COUNTS|SQL_PARAM_ARRAYS_SELECTS|  
   
  [] строки генерирующими число инструкций в пакете могут поддерживаться, но возвращаемое количество строк не поддерживается. Параметр SQL_BATCH_SUPPORT в **SQLGetInfo** указывает, следует ли инструкции создания число строк допускаются в пакетах; параметр SQL_BATCH_ROW_COUNTS указывает, возвращаются ли эти числа строк в приложение.  

@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3860434236f5a0751ddb857c6b8bce1cf54d19ac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718782"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63308691"
 ---
 # <a name="cursorlocation-property-ado"></a>Свойство CursorLocation (ADO)
 Указывает расположение службы курсора.  
@@ -49,4 +49,4 @@ ms.locfileid: "47718782"
 |[Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)|[Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
   
 ## <a name="see-also"></a>См. также  
- [Приложение А. Поставщики](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [Приложение а. Поставщики](../../../ado/guide/appendixes/appendix-a-providers.md)

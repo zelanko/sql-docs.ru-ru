@@ -1,5 +1,5 @@
 ---
-title: BottomSum (многомерные Выражения) | Документы Microsoft
+title: BottomSum (многомерные Выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0f923761144389a97962f7269cc5164d0dbdbf51
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739613"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63306720"
 ---
 # <a name="bottomsum-mdx"></a>BottomSum (многомерные выражения)
 
@@ -32,7 +32,7 @@ BottomSum(Set_Expression, Value, Numeric_Expression)
  *Set_Expression*  
  Допустимое многомерное выражение, возвращающее набор.  
   
- *Value*  
+ *Значение*  
  Допустимое числовое выражение, указывающее величину, с которой сравнивается каждый кортеж.  
   
  *Numeric_Expression*  
@@ -42,7 +42,7 @@ BottomSum(Set_Expression, Value, Numeric_Expression)
  **BottomSum** функция вычисляет сумму заданной меры, рассчитанной указанного набора, отсортированного в возрастающем порядке. Функция возвращает элементы с самыми низкими значениями, чьи итоги на основе указанного числового выражения по меньшей мере равны заданному значению. Функция возвращает самый маленький поднабор набора, совокупное значение которого равно по меньшей мере заданному значению. Возвращенные элементы упорядочены по возрастанию.  
   
 > [!IMPORTANT]  
->  **BottomSum** функция, как [TopSum](../mdx/topsum-mdx.md) , всегда нарушает иерархию.  
+>  **BottomSum** функция, как и [TopSum](../mdx/topsum-mdx.md) функции, всегда нарушает иерархию.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере возвращается наименьший набор элементов уровня City в иерархии Geography в измерении Geography за 2003 финансовый год для категории Bike, чей совокупный итог по мере Reseller Sales Amount составляет не менее 50 000.  
@@ -66,6 +66,6 @@ BottomSum(Set_Expression, Value, Numeric_Expression)
  `WHERE([Measures].[Reseller Sales Amount],[Date].[Fiscal].[Fiscal Year].[FY 2003])`  
   
 ## <a name="see-also"></a>См. также  
- [Справочник по функциям многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
   
   

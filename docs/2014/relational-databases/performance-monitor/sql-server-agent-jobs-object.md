@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5bd37ab434dbefbb01862f1004ca62e673df0453
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52747566"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63251032"
 ---
 # <a name="sql-server-agent-jobs-object"></a>Агент SQL Server, объект Jobs
   Объект производительности **Jobs** агента SQL Server содержит счетчики производительности, отображающие сведения о заданиях агента SQL Server. В следующей таблице перечислены счетчики этого объекта.  

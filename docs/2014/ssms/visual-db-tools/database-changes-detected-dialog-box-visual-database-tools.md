@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0d5850ce71e483ea33bb99972c243140a63da5f0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822788"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270537"
 ---
 # <a name="database-changes-detected-dialog-box-visual-database-tools"></a>Диалоговое окно «Обнаружены изменения базы данных» (визуальные инструменты для баз данных)
   Это диалоговое окно появляется при попытке сохранить диаграмму базы данных или выбранных таблиц, но при этом некоторые объекты базы данных, на которых распространяется действие сохранения, являются устаревшими по сравнению с базой данных. Принятие изменений, показанных в диалоговом окне, обновит базу данных до соответствия с диаграммой и перезапишет изменения, сделанные другими пользователями.  

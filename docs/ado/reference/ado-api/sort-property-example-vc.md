@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 623afddc5f9490afd1b0e162025641112fb36300
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762042"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63315159"
 ---
 # <a name="sort-property-example-vc"></a>Пример свойства Sort (Visual C++)
 В этом примере используется [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта [сортировки](../../../ado/reference/ado-api/sort-property.md) свойство для изменения порядка строк **записей** производным от ***авторы*** таблицы **Pubs** базы данных. Вторичный служебной процедуры выводит каждую строку.  

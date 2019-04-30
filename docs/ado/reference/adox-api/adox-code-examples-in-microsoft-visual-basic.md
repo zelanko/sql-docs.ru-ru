@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c38902c2e1692dd1a1d2782e8989f480ad5a837d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645752"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63308784"
 ---
 # <a name="adox-code-examples-in-microsoft-visual-basic"></a>Примеры кода ADOX в Microsoft Visual Basic
 В этих разделах обсуждаются образцы кода помогут вам понять, как использовать ADOX. Все примеры кода написаны с помощью Microsoft Visual Basic.  

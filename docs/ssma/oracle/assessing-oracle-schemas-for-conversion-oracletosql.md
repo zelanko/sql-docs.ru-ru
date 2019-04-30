@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: acf31c29b498562708c7cb049e89a0a7425fd31f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631202"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63288454"
 ---
 # <a name="assessing-oracle-schemas-for-conversion-oracletosql"></a>Оценка схем Oracle для преобразования (OracleToSQL)
 Прежде чем загружать объекты и перенести данные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], следует определить, насколько сложным будут миграции и сколько времени займет перенос. SSMA можно создать отчет об оценке, который показывает процент объектов, которые будет успешно преобразован. SSMA также позволяет просматривать конкретные проблемы, вызывающие ошибки преобразования.  
@@ -37,7 +37,7 @@ ms.locfileid: "47631202"
   
     SSMA ход выполнения отображается в строке состояния в нижней части окна. Если область вывода, вы увидите сообщения в области вывода.  
   
-    По завершении оценки, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant для Oracle: откроется окно отчета об оценке.  
+    По завершении оценки, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant для Oracle: Будет открыто окно отчета оценки.  
   
 ## <a name="using-assessment-reports"></a>С помощью отчетов с оценкой  
 Отчет об оценке окно содержит три панели:  

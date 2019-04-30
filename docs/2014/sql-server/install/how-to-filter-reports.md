@@ -1,5 +1,5 @@
 ---
-title: 'Практическое: фильтрация отчетов | Документация Майкрософт'
+title: Практическое руководство. Фильтрация отчетов | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,18 +15,18 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8eb337798afec3311b6e31027b7acbff96b8d8a8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222144"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63294853"
 ---
-# <a name="how-to-filter-reports"></a>Фильтрация отчетов
+# <a name="how-to-filter-reports"></a>Практическое руководство. Фильтрация отчетов
   В этом разделе описывается использование средства просмотра отчетов помощника по обновлению для фильтрации отчетов.  
   
 ### <a name="to-filter-reports"></a>Фильтрация отчетов  
   
-1.  Откройте в средстве просмотра отчетов отчет, который необходимо отфильтровать. Инструкции см. в разделе [как: просмотра отчетов помощника по обновлению](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md).  
+1.  Откройте в средстве просмотра отчетов отчет, который необходимо отфильтровать. Инструкции см. в разделе [как: Просмотреть отчет помощника по обновлению](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md).  
   
 2.  В **фильтровать по** выберите тип проблемы для просмотра:  
   
@@ -43,7 +43,7 @@ ms.locfileid: "48222144"
     -   **Неустраненные проблемы**. Отображаются все проблемы, которые еще не были решены.  
   
 ## <a name="see-also"></a>См. также  
- [Практическое: запустить мастер анализа помощника по обновлению](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
+ [Как Запустить мастер анализа помощника по обновлению](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
  [Разрешение проблем при обновлении](../../../2014/sql-server/install/resolving-upgrade-issues.md)   
  [Разделы руководства помощника по обновлению](../../../2014/sql-server/install/upgrade-advisor-how-to-topics.md)   
  [Работа с помощником по обновлению](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  

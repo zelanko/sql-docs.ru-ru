@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 094cd2859c9973c2d91145de5960d4752800ce1a
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538375"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287682"
 ---
 # <a name="for-xml-support-for-the-timestamp-data-type"></a>Поддержка режима FOR XML для типа данных timestamp
   В преобразовании FOR XML значения типа данных **timestamp** рассматриваются как данные типа **varbinary(8)** и всегда будут иметь кодировку base-64. Схема XSD или XDR, если она запрошена, отображает этот тип.  
