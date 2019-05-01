@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 744690e12569a46c184ec712eec48498e080e99b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807076"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63131334"
 ---
 # <a name="introduction-to-annotated-xsd-schemas-sqlxml-40"></a>Введение в схемы XSD с заметками (SQLXML 4.0)
   Можно создавать представления схем XML реляционных данных при помощи языка XSD. Затем можно выполнять запросы к этим представлениям при помощи языка XPath (XML Path). Это аналогично созданию представлений с помощью инструкции CREATE VIEW с последующим указанием запросов SQL к представлению.  
@@ -67,7 +67,7 @@ ms.locfileid: "52807076"
  Префикс пространства имен может быть произвольным. В этой документации **sql** префикс используется для задания пространства имен заметок и для отличия заметок данного пространства имен от заметок других пространств имен.  
   
 ## <a name="example-of-an-annotated-xsd-schema"></a>Пример схемы XSD с заметками  
- В следующем примере схема XSD состоит из  **\<Person.Contact >** элемент.  **\<Сотрудника >** элемент имеет **ContactID** атрибут и  **\<FirstName >** и  **\< LastName >** дочерние элементы:  
+ В следующем примере схема XSD состоит из **\<Person.Contact >** элемент. **\<Сотрудника >** элемент имеет **ContactID** атрибут и  **\<FirstName >** и **\< LastName >** дочерние элементы:  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">  

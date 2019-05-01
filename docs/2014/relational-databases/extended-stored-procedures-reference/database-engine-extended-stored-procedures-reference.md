@@ -16,11 +16,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 40a621af401b33394b996468c581e85e3635355c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351911"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63137599"
 ---
 # <a name="extended-stored-procedures-programmer39s-reference"></a>Расширенные хранимые процедуры программист&#39;Справочник
     
@@ -32,7 +32,7 @@ ms.locfileid: "53351911"
  С появлением новых и более мощных технологий, таких как интеграция со средой CLR, необходимость расширенных хранимых процедур значительно уменьшилась.  
   
 > [!IMPORTANT]  
->  Необходимо тщательно просмотреть исходный код расширенных хранимых процедур и проверить скомпилированные библиотеки DLL перед их установкой на рабочий сервер. Сведения о проверке безопасности см. на следующем [веб-сайте Майкрософт](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
+>  Необходимо тщательно просмотреть исходный код расширенных хранимых процедур и проверить скомпилированные библиотеки DLL перед их установкой на рабочий сервер. Сведения о проверке безопасности см. на следующем [веб-сайте Майкрософт](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409 https://msdn.microsoft.com/security/).  
   
 ## <a name="in-this-section"></a>в этом разделе  
   
