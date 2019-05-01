@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 33dbfad3c3774abe3de74d4dbf1d67575630b21e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52801856"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63460112"
 ---
 # <a name="storageboundinmb-element-dta"></a>Элемент StorageBoundInMB (DTA)
   Определяет максимальный размер в мегабайтах, который может быть использован в рекомендациях по настройке помощника по настройке ядра СУБД (для набора индексов и секционирования).  
@@ -40,7 +40,7 @@ ms.locfileid: "52801856"
 |--------------------|-----------------|  
 |**Тип данных и длина**|`unsignedInt`, неограниченная длина|  
 |**Значение по умолчанию**|Нет.|  
-|**Наличие**|Необязательный. Может быть использован только один раз для элемента `TuningOptions`.|  
+|**Наличие**|Необязательный параметр. Может быть использован только один раз для элемента `TuningOptions`.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   

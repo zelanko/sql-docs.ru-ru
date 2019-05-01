@@ -6,17 +6,17 @@ author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: jroth
 manager: craigg
-ms.date: 03/27/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 40919c7b300ffed0bdc84f4214b28c8ea71b15b8
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
-ms.translationtype: MT
+ms.openlocfilehash: 5953b5b36639438d80805bfb3dacc850d8c67dce
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582449"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63472241"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-big-data-cluster-preview"></a>Развертывание приложения в кластере SQL Server больших данных (Предварительная версия)
 
@@ -45,7 +45,7 @@ ms.locfileid: "59582449"
 
 ## <a name="capabilities"></a>Возможности
 
-В SQL Server 2019 CTP 2.4 (Предварительная версия) можно создавать, удалять, описания, инициализации список, выполнять и обновлять приложения. В следующей таблице описаны команды развертывания приложения, которые можно использовать с **mssqlctl**.
+В SQL Server 2019 CTP-версии 2.5 (Предварительная версия) можно создавать, удалять, описания, инициализации список, выполнять и обновлять приложения. В следующей таблице описаны команды развертывания приложения, которые можно использовать с **mssqlctl**.
 
 |Command |Описание |
 |:---|:---|
@@ -68,19 +68,19 @@ mssqlctl app create --help
 
 ## <a name="sign-in"></a>Вход
 
-Перед развертыванием или взаимодействия с приложениями, сначала войдите в кластер для обработки больших данных с использованием SQL Server `mssqlctl login` команды. Укажите внешний IP-адрес `endpoint-service-proxy` службы (например: `https://ip-address:30777`), а также имя пользователя и пароль для кластера.
+Перед развертыванием или взаимодействия с приложениями, сначала войдите в кластер для обработки больших данных с использованием SQL Server `mssqlctl login` команды. Укажите внешний IP-адрес `mgmtproxy-svc-external` службы (например: `https://ip-address:30777`), а также имя пользователя и пароль для кластера.
 
 ```bash
-mssqlctl login -e https://<ip-address-of-endpoint-service-proxy>:30777 -u <user-name> -p <password>
+mssqlctl login -e https://<ip-address-of-mgmtproxy-svc-external>:30777 -u <user-name> -p <password>
 ```
 
 ## <a name="aks"></a>AKS
 
-Если вы используете AKS, необходимо выполнить следующую команду, чтобы получить IP-адрес `endpoint-service-proxy` службу, выполнив следующую команду в окне bash или cmd:
+Если вы используете AKS, необходимо выполнить следующую команду, чтобы получить IP-адрес `mgmtproxy-svc-external` службу, выполнив следующую команду в окне bash или cmd:
 
 
 ```bash
-kubectl get svc endpoint-service-proxy -n <name of your cluster>
+kubectl get svc mgmtproxy-svc-external -n <name of your cluster>
 ```
 
 ## <a name="kubeadm-or-minikube"></a>Kubeadm или Minikube

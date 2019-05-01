@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d82bf60225c2559866ee100127058e5b58a2bdd9
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59948525"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63461974"
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>Управление Служебным приложением SharePoint службы Reporting Services
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] осуществляется из центра администрирования SharePoint. Страницы управления и свойств позволяют обновлять конфигурацию приложения службы, а также выполнять типовые административные задачи.  

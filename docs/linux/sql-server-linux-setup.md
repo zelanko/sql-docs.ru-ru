@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
-ms.openlocfilehash: e400d73137750bda913003aed1717793634cfd41
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
-ms.translationtype: MT
+ms.openlocfilehash: 1edc63d4dc29e05a914bbfbd891df06a4b3a7255
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280628"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63455084"
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Руководство по установке для SQL Server в Linux
 
@@ -109,7 +109,7 @@ SQL Server 2017 имеет следующие требования к систе
 
 Для отката или на более раннюю версию SQL Server предыдущего выпуска сделайте следующее:
 
-1. Определите номер версии для пакета SQL Server, который вы хотите понизить до. Список номеров пакета, см. в разделе [заметки о выпуске](sql-server-linux-release-notes.md).
+1. Определите номер версии для пакета SQL Server, который вы хотите понизить до. Список номеров пакета, см. в разделе [заметки о выпуске](../linux/sql-server-linux-release-notes.md).
 
 1. Возврат к предыдущей версии SQL Server. В следующих командах замените `<version_number>` с номером версии SQL Server, определенного на шаге 1.
 
@@ -178,7 +178,7 @@ sudo MSSQL_PID=Developer ACCEPT_EULA=Y MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>'
 > [!TIP]
 > Если вы успешно установили при выполнении действий в краткие руководства, вы не обязательно должны загружать или вручную устанавливать пакеты SQL Server. Этот раздел предназначен только для автономного сценария.
 
-1. **Скачайте пакет ядра СУБД для вашей платформы**. Найдите ссылки для загрузки пакета в разделе сведений о пакете [заметки о выпуске](sql-server-linux-release-notes.md).
+1. **Скачайте пакет ядра СУБД для вашей платформы**. Найдите ссылки для загрузки пакета в разделе сведений о пакете [заметки о выпуске](../linux/sql-server-linux-release-notes.md).
 
 1. **Перемещение скачанного пакета на компьютер Linux**. Если вы использовали другую машину, чтобы скачать пакеты, один из способов перемещения пакетов на компьютер Linux, — с **scp** команды.
 

@@ -1,26 +1,26 @@
 ---
-title: Расширение языка Java в SQL Server 2019 - службы машинного обучения SQL Server
+title: Расширение языка Java в SQL Server 2019 - расширения языка SQL Server
 description: Установка, Настройка и проверка расширение языка Java на SQL Server 2019 для систем Windows и Linux.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 03/27/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 725aebbcd40adf0c571dd6b99b68cf1be389af8b
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
-ms.translationtype: MT
+ms.openlocfilehash: db57689227445b0f50d6ff59fbf81e1d84ecacdb
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582094"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473408"
 ---
 # <a name="java-language-extension-in-sql-server-2019"></a>Расширение языка Java в SQL Server 2019 
 
-Начиная с версии SQL Server 2019 preview на Windows и Linux, можно выполнять пользовательский код Java [extensibility framework](../concepts/extensibility-framework.md) как дополнительный компонент для экземпляра компонента database engine. 
+Начиная с версии SQL Server 2019 preview на Windows и Linux, вы можете запустить, пользовательские Java-код и используя [extensibility framework](../concepts/extensibility-framework.md) как дополнительный компонент для экземпляра компонента database engine.
 
-Инфраструктура расширяемости — это архитектура для выполнения внешнего кода: Java (начиная с SQL Server 2019), [Python (начиная с SQL Server 2017)](../concepts/extension-python.md), и [R (начиная с SQL Server 2016)](../concepts/extension-r.md). Выполнение кода является изолированной от основных процессов, но полностью интегрирован с выполнение запроса SQL Server. Это означает, что можно передавать данные из любого запроса SQL Server в среду выполнения внешних и использовать или сохранить результаты обратно в SQL Server.
+Инфраструктура расширяемости — это архитектура для выполнения внешнего кода: Java (начиная с SQL Server 2019), [Python (начиная с SQL Server 2017)](../concepts/extension-python.md), и [R (начиная с SQL Server 2016)](../concepts/extension-r.md). Выполнение кода изолированы от ядра основные процессы, но полностью интегрирован с выполнение запроса SQL Server. Это означает, что можно передавать данные из любого запроса SQL Server в среду выполнения внешних (Java) и использовать или сохранить результаты обратно в SQL Server.
 
 Как и в любых программирования расширений языка, системная хранимая процедура [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) — это интерфейс для выполнения предварительно скомпилированный код Java.
 
@@ -30,7 +30,7 @@ ms.locfileid: "59582094"
 
 Экземпляр SQL Server 2019 предварительной версии является обязательным. Более ранние версии не имеют интеграции Java.
 
-Поддерживается Java 8. Среда выполнения Java (JRE) является обязательным, но пакеты JDK полезны, если требуется компилятор Java или пакеты разработки. Поскольку JDK все включительно, если установить JDK, JRE не требуется.
+Java 8 в настоящее время является поддерживаемой версией. Более поздние версии, например Java 11, следует с помощью расширения языка, но в настоящее время не поддерживается. Среда выполнения Java (JRE) является обязательным, но JDK полезно, если требуется компилятор Java и разработки пакетов. Поскольку JDK все включительно, если установить JDK, JRE не требуется.
 
 Можно использовать распределение вероятностей Java 8. Ниже приведены два предлагаемых распределений.
 
@@ -39,7 +39,7 @@ ms.locfileid: "59582094"
 | [Oracle Java SE](https://www.oracle.com/technetwork/java/javase/downloads/index.html) | 8 | Windows и Linux | Да | Да |
 | [Zulu OpenJDK](https://www.azul.com/downloads/zulu/) | 8 | Windows и Linux | Да | Нет |
 
-В Linux **mssql-server расширяемости java** пакет автоматически устанавливает JRE 8, если они еще не установлены. Скрипты установки также добавить переменную среды с именем переменная путь виртуальной машины Java.
+В Linux, в настоящее время **mssql-server расширяемости java** пакет автоматически устанавливает JRE 8, если они еще не установлены. Скрипты установки также добавить переменную среды с именем переменная путь виртуальной машины Java.
 
 В Windows, мы рекомендуем установить JDK в стандартной `/Program Files/` папку, если это возможно. В противном случае требуется дополнительная настройка для предоставления разрешений для исполняемых файлов. Дополнительные сведения см. в разделе [разрешение (Windows)](#perms-nonwindows) настоящего документа.
 
@@ -63,7 +63,7 @@ sudo apt-get install mssql-server-extensibility-java
 sudo zypper install mssql-server-extensibility-java
 ```
 
-При установке **mssql-server расширяемости java**, пакет автоматически устанавливает JRE 8, если они еще не установлены. Он также добавляется путь виртуальной машины Java для переменной среды JAVA_HOME.
+При установке **mssql-server расширяемости java**, пакет автоматически устанавливает JRE 8, если они еще не установлены. Он также добавляется путь виртуальной машины Java для переменной среды с именем переменная.
 
 После завершения установки, ваш следующий шаг — [настройте выполнение внешних скриптов](#configure-script-execution).
 
@@ -81,9 +81,8 @@ sudo zypper install mssql-server-extensibility-java
 ```cmd
 chmod ug+rx <MyJarFile.jar>
 ```
+
 Необходимо также предоставить разрешения mssql_satellite JAR-файл для чтения и выполнения.
-
-
 
 ```cmd
 chown mssql_satellite:mssql_satellite <MyJarFile.jar>
@@ -105,12 +104,12 @@ chown mssql_satellite:mssql_satellite <MyJarFile.jar>
 
 ### <a name="add-the-jrehome-variable"></a>Добавить переменную-переменная
 
-Переменная является переменной среды, который указывает расположение интерпретатора Java. На этом шаге необходимо создайте системную переменную среды для него на Windows.
+Переменная является переменной среды операционной системы, который указывает расположение интерпретатора Java. На этом шаге необходимо создайте системную переменную среды для него на Windows.
 
 1. Найдите и скопируйте путь к корневому JRE (например, `C:\Program Files\Zulu\zulu-8\jre\`).
 
-    В зависимости от Java нужным образом страну JDK или JRE может отличаться от пути пример выше. 
-    Даже если у вас установлен пакет JDK, часто раз появится JRE вложенной папки в процессе установки. 
+    В зависимости от Java нужным образом страну JDK или JRE может отличаться от пути пример выше.
+    Даже если у вас установлен пакет JDK, вы часто раз будет получить вложенную папку JRE как часть установки, поэтому в этом случае указывают на папку jre.
     Расширение Java будет пытаться загрузить jvm.dll из пути % JRE_HOME%\bin\server.
 
 2. В панели управления откройте **система и безопасность**откройте **системы**и нажмите кнопку **дополнительные свойства системы**.
@@ -129,7 +128,7 @@ chown mssql_satellite:mssql_satellite <MyJarFile.jar>
 
 ### <a name="grant-access-to-non-default-jre-folder-windows-only"></a>Предоставление доступа к папке JRE не по умолчанию (только Windows)
 
-Запустите **icacls** команд *с повышенными правами* строки для предоставления доступа к **SQLRUsergroup** и учетные записи служб SQL Server (в **ALL_APPLICATION_ ПАКЕТЫ**) для доступа к JRE. Команды будут рекурсивно доступ к данным для всех файлов и папок в пути данного каталога.
+Если вы не устанавливали JDK или JRE каталоге program files, необходимо выполнить следующие действия. Запустите **icacls** команд *с повышенными правами* строки для предоставления доступа к **SQLRUsergroup** и учетные записи служб SQL Server (в **ALL_APPLICATION_ ПАКЕТЫ**) для доступа к JRE. Команды будут рекурсивно доступ к данным для всех файлов и папок в пути данного каталога.
 
 #### <a name="sqlrusergroup-permissions"></a>Разрешения SQLRUserGroup
 
@@ -151,7 +150,7 @@ icacls "PATH to JRE" /grant "ALL APPLICATION PACKAGES":(OI)(CI)RX /T
 
 ## <a name="configure-script-execution"></a>Настройте выполнение сценария
 
-На этом этапе все почти готово для выполнения кода Java в Linux или Windows. В качестве последнего шага переключитесь в SQL Server Management Studio или другое средство, которое запускает сценарий Transact-SQL, чтобы включить выполнение внешних скриптов.
+На этом этапе все почти готово для выполнения кода Java в Linux или Windows. В качестве последнего шага переключитесь в SQL Server Management Studio, Azure data studio, SQL CMD или другое средство, которое дает возможность запускать сценарий Transact-SQL, чтобы включить выполнение внешних скриптов.
 
   ```sql
   EXEC sp_configure 'external scripts enabled', 1
@@ -161,13 +160,13 @@ icacls "PATH to JRE" /grant "ALL APPLICATION PACKAGES":(OI)(CI)RX /T
 
 ## <a name="verify-installation"></a>Проверка установки
 
-Чтобы подтвердить работоспособность установки, создания и выполнения [пример приложения](java-first-sample.md) с помощью JDK, установленный, поместив файлы в пути к классам, настроенного ранее.
+Чтобы подтвердить работоспособность установки, создания и выполнения [пример приложения](java-first-sample.md) использование просто устанавливается и добавляется переменная среды выполнения Java.
 
-## <a name="differences-in-ctp-24"></a>Различия в CTP-версии 2.4
+## <a name="differences-in-ctp-25"></a>Различия в CTP-версии 2.5
 
 Если вы уже знакомы со службами машинного обучения, авторизация и изоляция модель расширения был изменен в этом выпуске. Дополнительные сведения см. в разделе [отличия в установке служб машинного обучения 2019 г. для SQL Server](../install/sql-machine-learning-services-ver15.md).
 
-## <a name="limitations-in-ctp-24"></a>Ограничения в CTP-версии 2.4
+## <a name="limitations-in-ctp-25"></a>Ограничения в CTP-версии 2.5
 
 * Не может превышать количество значений в входного и выходного буферов `MAX_INT (2^31-1)` потому, что это максимальное количество элементов, которые могут быть распределены в виде массива в Java.
 
@@ -194,4 +193,5 @@ jar -cf <MyJar.jar> *.class
 
 + [Как вызвать Java в SQL Server](howto-call-java-from-sql.md)
 + [Пример Java в SQL Server](java-first-sample.md)
++ [Расширения Microsoft SDK для Java для Microsoft SQL Server](java-sdk.md)
 + [Типы данных Java и SQL Server](java-sql-datatypes.md)

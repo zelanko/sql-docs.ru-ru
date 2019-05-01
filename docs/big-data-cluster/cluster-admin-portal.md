@@ -6,17 +6,17 @@ author: yualan
 ms.author: alayu
 ms.reviewer: jroth
 manager: craigg
-ms.date: 03/27/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: fbb43d39e28a8b99e49a4dcaf0b2b4f0fc83e670
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
-ms.translationtype: MT
+ms.openlocfilehash: 3e0f3c939f4d20e65262453e23ac127b02c6d212
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582240"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63472137"
 ---
 # <a name="how-to-use-the-cluster-administration-portal-to-monitor-a-sql-server-big-data-cluster"></a>Как использовать портал администрирования кластера для мониторинга кластера больших данных SQL Server
 
@@ -35,10 +35,10 @@ ms.locfileid: "59582240"
 
 Выполните [быстрого запуска для развертывания кластера больших данных](quickstart-big-data-cluster-deploy.md) пока не дойдете до **портал администрирования кластера** раздел. Когда кластер больших данных, выполняющийся с mssqlctl, выполните следующие действия:
 
-После запуска модуль контроллера на портале администрирования кластера можно использовать для мониторинга развертывания. Доступны на портале с помощью внешних IP-адрес и порт номер для `endpoint-service-proxy` (например: **https://\<ip адрес\>: 30777: портал**). Учетные данные для доступа к порталу администрирования являются значениями `CONTROLLER_USERNAME` и `CONTROLLER_PASSWORD` переменные среды, приведенные выше.
+После запуска модуль контроллера на портале администрирования кластера можно использовать для мониторинга развертывания. Доступны на портале с помощью внешних IP-адрес и порт номер для `mgmtproxy-svc-external` (например: **https://\<ip адрес\>: 30777: портал**). Учетные данные для доступа к порталу администрирования являются значениями `CONTROLLER_USERNAME` и `CONTROLLER_PASSWORD` переменные среды, приведенные выше.
 
 > [!NOTE]
-> Для CTP-версии 2.4 имеется предупреждение системы безопасности при доступе к веб-страницы, поскольку оно использует SSL-сертификатов, автоматически созданный.
+> Для CTP-версии 2.5 отображается предупреждение безопасности при доступе к веб-страницы, поскольку оно использует SSL-сертификатов, автоматически созданный.
 
 ## <a name="overview"></a>Обзор
 

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2e555ff4a3b33c4c827371dc1ad63546736d7189
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745862"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473037"
 ---
 # <a name="unicode-drivers"></a>Драйверы Юникода
 Следует ли драйвер драйвер Юникода или ANSI полностью зависит от характера источника данных. Если источник данных поддерживает данные в Юникоде, драйвер должен быть драйвер Юникода. Если источник данных поддерживает только данных ANSI, драйвер должен оставаться драйвером ANSI.  

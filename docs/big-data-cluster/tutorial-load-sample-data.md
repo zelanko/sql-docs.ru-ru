@@ -5,17 +5,17 @@ description: Этом руководстве показано, как Загру
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 04/23/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: faee29ed293c59752988760ea9ca27a4cf3e372a
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
-ms.translationtype: MT
+ms.openlocfilehash: a270274d252a657d5eac8935b6f5d1b2e8b7f71e
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58859995"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473515"
 ---
 # <a name="tutorial-load-sample-data-into-a-sql-server-big-data-cluster"></a>Учебник. Загрузка образца данных в кластер SQL Server больших данных
 
@@ -71,7 +71,7 @@ ms.locfileid: "58859995"
    | <KNOX_PASSWORD> | Пароль для шлюза HDFS или Spark. |
 
    > [!TIP]
-   > Используйте [kubectl](cluster-troubleshooting-commands.md) найти IP-адреса для главного экземпляра SQL Server и Knox. Запустите `kubectl get svc -n <your-cluster-name>` и посмотрите на внешний IP-адреса основной экземпляр (**конечной точки master-pool**) и Knox (**безопасности конечных точек**).
+   > Используйте [kubectl](cluster-troubleshooting-commands.md) найти IP-адреса для главного экземпляра SQL Server и Knox. Запустите `kubectl get svc -n <your-cluster-name>` и посмотрите на внешний IP-адреса основной экземпляр (**master-svc-external**) и Knox (**шлюз svc-external**).
 
 1. Скрипт начальной загрузки.
 
@@ -107,7 +107,7 @@ ms.locfileid: "58859995"
    | <KNOX_PASSWORD> | Пароль для шлюза HDFS или Spark. |
 
    > [!TIP]
-   > Используйте [kubectl](cluster-troubleshooting-commands.md) найти IP-адреса для главного экземпляра SQL Server и Knox. Запустите `kubectl get svc -n <your-cluster-name>` и посмотрите на внешний IP-адреса основной экземпляр (**конечной точки master-pool**) и Knox (**безопасности конечных точек**).
+   > Используйте [kubectl](cluster-troubleshooting-commands.md) найти IP-адреса для главного экземпляра SQL Server и Knox. Запустите `kubectl get svc -n <your-cluster-name>` и посмотрите на внешний IP-адреса основной экземпляр (**master-svc-external**) и Knox (**шлюз svc-external**).
 
 1. Скрипт начальной загрузки.
 

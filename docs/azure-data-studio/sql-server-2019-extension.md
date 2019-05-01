@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 11dee99f7d0648a4c7fc701234796e6d552d47a9
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
-ms.translationtype: MT
+ms.openlocfilehash: fe3c7fa2a383ea7d8b969ed149a2a762531e0a84
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59934130"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63472188"
 ---
 # <a name="sql-server-2019-extension-preview"></a>Расширение SQL Server 2019 (Предварительная версия)
 
@@ -30,9 +30,9 @@ ms.locfileid: "59934130"
 
    |Платформа|Загрузить|Дата выпуска|Версия
    |:---|:---|:---|:---|
-   |Windows|[.VSIX](https://go.microsoft.com/fwlink/?linkid=2087443)|18 апреля 2019 г. |0.12.0
-   |macOS|[.VSIX](https://go.microsoft.com/fwlink/?linkid=2087442)|18 апреля 2019 г. |0.12.0
-   |Linux|[.VSIX](https://go.microsoft.com/fwlink/?linkid=2087441)|18 апреля 2019 г. |0.12.0
+   |Windows|[.VSIX](https://go.microsoft.com/fwlink/?linkid=2087443)|18 апреля 2019 г. |0.12.1
+   |macOS|[.VSIX](https://go.microsoft.com/fwlink/?linkid=2087442)|18 апреля 2019 г. |0.12.1
+   |Linux|[.VSIX](https://go.microsoft.com/fwlink/?linkid=2087441)|18 апреля 2019 г. |0.12.1
 
 1. В Azure Data Studio выберите **установить расширения из пакета VSIX** из **файл** меню и выберите загруженный VSIX-файл.
 
@@ -44,7 +44,7 @@ ms.locfileid: "59934130"
 
 1. После зависимостей завершить установку, закройте и снова откройте Studio данных Azure. **Кластера больших данных в SQL Server** тип подключения недоступен, необходимо перезапустить Studio данных Azure.
 
-## <a name="changes-in-release-012"></a>Изменения в версии 0.12
+## <a name="changes-in-release-0121"></a>Изменения в выпуске 0.12.1
 
 * **Кластера больших данных в SQL Server** тип подключения был удален в этом выпуске. Все функции, ранее доступные из подключение к кластеру больших данных SQL Server теперь доступна в подключении к SQL Server.
 * Просмотр HDFS можно найти в разделе **Data Services** папки

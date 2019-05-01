@@ -4,18 +4,18 @@ description: Эта статья содержит заметки о выпуск
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/27/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9c3ee750afe0af5971f571a2a0352397ed8c4f40
-ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
-ms.translationtype: MT
+ms.openlocfilehash: 56cb3c4fc617e4b158b974c82bec87401c01fca5
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58566573"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63455145"
 ---
 # <a name="release-notes-for-sql-server-2019-preview-on-linux"></a>Заметки о выпуске для предварительной версии SQL Server 2019 в Linux
 
@@ -24,7 +24,7 @@ ms.locfileid: "58566573"
 Следующие заметки о выпуске применимы к SQL Server 2019 preview под управлением Linux. В этой статье разбивается на разделы для каждого выпуска. Каждый выпуск содержит ссылки поддержки статьи, описывающие CU изменения, а также ссылки на Linux, файлы для загрузки пакета.
 
 > [!TIP]
-> Дополнительные сведения о новых возможностях Linux SQL Server 2019, см. в разделе [новые возможности в SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15#sqllinux).
+> Дополнительные сведения о новых возможностях Linux SQL Server 2019, см. в разделе [новые возможности в SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15#sql-server-on-linux).
 
 ## <a name="supported-platforms"></a>Поддерживаемые платформы
 
@@ -46,7 +46,7 @@ ms.locfileid: "58566573"
 
 В следующей таблице перечислены журнал выпуска для предварительной версии SQL Server 2019 выпусков CTP.
 
-| Выпуск               | Версия       | Дата выпуска |
+| Выпуск               | Version       | Дата выпуска |
 |-----------------------|---------------|--------------|
 | [CTP 2.4](#CTP24)     | 15.0.1400.75  | 2019-3-27    |
 | [CTP-ВЕРСИИ 2.3](#CTP23)     | 15.0.1300.359 | 2019-3-01    |

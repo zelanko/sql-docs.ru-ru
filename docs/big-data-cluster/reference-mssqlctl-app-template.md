@@ -5,16 +5,16 @@ description: Справочная статья по команд шаблона 
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 04/23/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c67ed74750ac36d1a5c79503417414a9dd8ab6b5
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
-ms.translationtype: MT
+ms.openlocfilehash: 0b4cbae0ba35c0cef777b3535b2012ab78f8e6da
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860105"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473452"
 ---
 # <a name="mssqlctl-app-template"></a>Шаблон приложения mssqlctl
 
@@ -22,81 +22,79 @@ ms.locfileid: "58860105"
 
 В следующей статье приведены ссылки для **шаблон приложения** команды в **mssqlctl** средство. Дополнительные сведения о других **mssqlctl** команды, см. в разделе [mssqlctl ссылку](reference-mssqlctl.md).
 
-## <a id="commands"></a> Команды
-
-|||
-|---|---|
-| [list](#list) | Получите поддерживаемые шаблоны. |
-| [По запросу](#pull) | Скачайте поддерживаемые шаблоны. |
-
-## <a id="list"></a> Список шаблонов mssqlctl приложения
-
-Получите поддерживаемые шаблоны.
-
+## <a name="commands"></a>Команды
+|     |     |
+| --- | --- |
+[Список шаблонов mssqlctl приложения](#mssqlctl-app-template-list) | Получите поддерживаемые шаблоны.
+[mssqlctl приложения шаблона на включение внесенных изменений](#mssqlctl-app-template-pull) | Скачайте поддерживаемые шаблоны.
+## <a name="mssqlctl-app-template-list"></a>Список шаблонов mssqlctl приложения
+Получите поддерживаемые шаблоны в разделе указанный репозиторий github [URL].
+```bash
+mssqlctl app template list [--url -u] 
+                           
 ```
-mssqlctl app template list
-   --url
-```
-
-### <a name="parameters"></a>Параметры
-
-| Параметры | Описание |
-|---|---|
-| **--URL-адрес -u** | Укажите расположение репозитория другой шаблон. Значение по умолчанию — https://github.com/Microsoft/sql-server-samples.git. |
-
 ### <a name="examples"></a>Примеры
-
 Получите все шаблоны в расположении по умолчанию шаблон репозитория.
-
-```
+```bash
 mssqlctl app template list
 ```
-
 Получите все шаблоны в расположении другого репозитория.
-
-```
+```bash
 mssqlctl app template list --url https://github.com/diffrent/templates.git
 ```
-
-## <a id="pull"></a> mssqlctl приложения шаблона на включение внесенных изменений
-
-Скачайте поддерживаемые шаблоны.
-
+### <a name="optional-parameters"></a>Необязательные параметры
+#### `--url -u`
+Укажите расположение репозитория другой шаблон. Значение по умолчанию: https://github.com/Microsoft/SQLBDC-AppDeploy.git
+### <a name="global-arguments"></a>Глобальные аргументы
+#### `--debug`
+Увеличьте уровень подробного ведения журнала для отображения всех журналов отладки.
+#### `--help -h`
+Отображение этого справочного сообщения и выход.
+#### `--output -o`
+Формат выходных данных.  Допустимые значения: json, jsonc, table, tsv.  По умолчанию: json.
+#### `--query -q`
+Строка запроса JMESPath. См. в разделе [ http://jmespath.org/ ](http://jmespath.org/]) Дополнительные сведения и примеры.
+#### `--verbose`
+Увеличьте уровень подробного ведения журнала. Используйте параметр--debug, чтобы получить полные журналы отладки.
+## <a name="mssqlctl-app-template-pull"></a>mssqlctl приложения шаблона на включение внесенных изменений
+Скачайте поддерживаемые шаблоны в разделе указанный репозиторий github [URL].
+```bash
+mssqlctl app template pull [--name -n] 
+                           [--url -u]  
+                           [--destination -d]
 ```
-mssqlctl app template pull
-   --destination
-   --name
-   --url
-```
-
-### <a name="parameters"></a>Параметры
-
-| Параметры | Описание |
-|---|---|
-| **--назначения -d** | Где разместить шаблон скелет приложения.  Значение по умолчанию:. / шаблоны. |
-| **--name - n** | Имя шаблона. Для получения полного списка off имена поддерживаемых шаблонов запустите `mssqlctl app template list`. |
-| **--URL-адрес -u** | Укажите расположение репозитория другой шаблон. По умолчанию:
-https://github.com/Microsoft/sql-server-samples.git. |
-
 ### <a name="examples"></a>Примеры
-
 Загрузите все шаблоны в расположении по умолчанию шаблон репозитория.
-
-```
+```bash
 mssqlctl app template pull
 ```
-
 Загрузите все шаблоны в расположении другого репозитория.
-
-```
+```bash
 mssqlctl app template list --url https://github.com/diffrent/templates.git
 ```
-
 Скачайте отдельного шаблона по имени.
-
+```bash
+mssqlctl app template pull --name ssis            
 ```
-mssqlctl app template pull --name ssis
-```
+### <a name="optional-parameters"></a>Необязательные параметры
+#### `--name -n`
+Имя шаблона. Полный список off namesrun поддерживаемых шаблона `mssqlctl app template list`
+#### `--url -u`
+Укажите расположение репозитория другой шаблон. Значение по умолчанию: https://github.com/Microsoft/SQLBDC-AppDeploy.git
+#### `--destination -d`
+Где разместить шаблон скелет приложения.
+`./templates`
+### <a name="global-arguments"></a>Глобальные аргументы
+#### `--debug`
+Увеличьте уровень подробного ведения журнала для отображения всех журналов отладки.
+#### `--help -h`
+Отображение этого справочного сообщения и выход.
+#### `--output -o`
+Формат выходных данных.  Допустимые значения: json, jsonc, table, tsv.  По умолчанию: json.
+#### `--query -q`
+Строка запроса JMESPath. См. в разделе [ http://jmespath.org/ ](http://jmespath.org/]) Дополнительные сведения и примеры.
+#### `--verbose`
+Увеличьте уровень подробного ведения журнала. Используйте параметр--debug, чтобы получить полные журналы отладки.
 
 ## <a name="next-steps"></a>Следующие шаги
 

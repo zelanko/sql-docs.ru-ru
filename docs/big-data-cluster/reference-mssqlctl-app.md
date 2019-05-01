@@ -5,16 +5,16 @@ description: Справочная статья по mssqlctl команд при
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 04/23/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b418f1ded8d9911143b431ae9793c467c4e26eb4
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
-ms.translationtype: MT
+ms.openlocfilehash: 850964adc9cd790a27cf69e3e0f5229cdaf589c8
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860655"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473266"
 ---
 # <a name="mssqlctl-app"></a>Приложение mssqlctl
 
@@ -22,275 +22,251 @@ ms.locfileid: "58860655"
 
 В следующей статье приведены ссылки для **приложения** команды в **mssqlctl** средство. Дополнительные сведения о других **mssqlctl** команды, см. в разделе [mssqlctl ссылку](reference-mssqlctl.md).
 
-## <a id="commands"></a> Команды
-
-|||
-|---|---|
-| [Создание](#create) | Создайте приложение. |
-| [delete](#delete) | Для удаления приложения. |
-| [описания](#describe) | Описание приложения. |
-| [init](#init) | Kickstart новый скелет приложения. |
-| [list](#list) | Список приложений. |
-| [запустить](#run) | Запустите приложение. |
-| [Обновление](#update) | Обновите приложение. |
-| [шаблон](reference-mssqlctl-app-template.md) | Шаблон команды. |
-
-## <a id="create"></a> Создание приложения mssqlctl
-
-Создайте приложение.
-
+## <a name="commands"></a>Команды
+|     |     |
+| --- | --- |
+[Шаблон приложения mssqlctl](reference-mssqlctl-app-template.md) | шаблоны.
+[init mssqlctl приложения](#mssqlctl-app-init) | Kickstart новый скелет приложения.
+[Создание приложения mssqlctl](#mssqlctl-app-create) | Создайте приложение.
+[обновление приложения mssqlctl](#mssqlctl-app-update) | Обновите приложение.
+[Список приложений mssqlctl](#mssqlctl-app-list) | Список приложений.
+[Удаление приложения mssqlctl](#mssqlctl-app-delete) | Для удаления приложения.
+[Запуск приложения mssqlctl](#mssqlctl-app-run) | Запустите приложение.
+[описания mssqlctl приложения](#mssqlctl-app-describe) | Описание приложения.
+## <a name="mssqlctl-app-init"></a>init mssqlctl приложения
+Поможет вам kickstart новый скелет приложения и/или спецификаций файлов в зависимости от среды выполнения.
+```bash
+mssqlctl app init [--spec -s] 
+                  [--name -n]  
+                  [--version -v]  
+                  [--template -t]  
+                  [--destination -d]  
+                  [--url -u]
 ```
-mssqlctl app create
-   --assets
-   --code
-   --description
-   --entrypoint
-   --inputs
-   --name
-   --outputs
-   --runtime
-   --spec
-   --version
-   --yes
-```
-
-### <a name="parameters"></a>Параметры
-
-| Параметры | Описание |
-|---|---|
-| **--активы -** | Список файловых ресурсов дополнительное приложение для включения. |
-| **--code - c** | Путь к файлу кода R или Python. |
-| **— Описание -d** | Описание приложения. |
-| **--entrypoint** |  |
-| **--входных данных** | Схема входного параметра. |
-| **--name - n** | Имя приложения. |
-| **--выходные данные** | Схема параметров выходных данных. |
-| **Среда выполнения--- r** | Среда выполнения приложения.  Допустимые значения: Mleap, Python, R, служб SSIS. |
-| **--spec -s** | Путь к каталогу с файлом YAML спецификаций, описывающий приложение. |
-| **--версии - v** | Версия приложения. |
-| **--Да -y** | Не запрашивать подтверждение при создании приложения из файла spec.yaml CWD. |
-
 ### <a name="examples"></a>Примеры
-
-Создайте новое приложение с помощью spec.yaml (рекомендуется).
-
-```
-mssqlctl app create --spec /path/to/dir/with/spec/yaml
-```
-
-Создайте новые встроенные приложения Python, с использованием аргументов.
-
-```
-mssqlctl app create --name add --version v1 --inputs x=float, y=float --outputs result=float --runtime Python --code add.py  --init init.py
-```
-
-Создайте новые встроенные приложения R, используя аргументы.
-
-```
-mssqlctl app create --name add --version v1 --inputs x=numeric, y=numeric --outputs result=numeric --runtime R --code add.R  --init init.R
-```
-
-Создайте новые встроенные приложения R с дополнительным файлом активы должны быть включены.
-
-```
-mssqlctl app create --name add --version v1 --runtime R --code  add.R --assets file.RData,/path/to/more/files
-```
-
-## <a id="delete"></a> mssqlctl app delete
-
-Для удаления приложения.
-
-```
-mssqlctl app delete
-   --name
-   --version
-```
-
-### <a name="parameters"></a>Параметры
-
-| Параметры | Описание |
-|---|---|
-| **--name - n** | Имя приложения. |
-| **--версии - v** | Версия приложения. |
-
-### <a name="examples"></a>Примеры
-
-Удаление приложения по имени и версии.
-
-```
-mssqlctl app delete --name reduce --version v1
-```
-
-## <a id="describe"></a> mssqlctl app describe
-
-Описание приложения.
-
-```
-mssqlctl app describe
-   --name
-   --spec
-   --version
-```
-
-### <a name="parameters"></a>Параметры
-
-| Параметры | Описание |
-|---|---|
-| **--name - n** | Имя приложения. |
-| **--spec -s** | Путь к каталогу с файлом YAML спецификаций, описывающий приложение. |
-| **--версии - v** | Версия приложения. |
-
-### <a name="examples"></a>Примеры
-
-Описывают приложение.
-
-```
-mssqlctl app describe --name reduce --version v1
-```
-
-## <a id="init"></a> init mssqlctl приложения
-
-Kickstart новый скелет приложения.
-
-```
-mssqlctl app init
-   --destination
-   --name
-   --spec
-   --template
-   --url
-   --version
-```
-
-### <a name="parameters"></a>Параметры
-
-| Параметры | Описание |
-|---|---|
-| **--назначения -d** | Где разместить скелет приложения. Значение по умолчанию — текущий рабочий каталог. |
-| **--name - n** | Имя приложения. |
-| **--spec -s** | Создайте просто spec.yaml приложения. |
-| **--шаблон -t** | Имя шаблона. Для получения полного списка off имена поддерживаемых шаблонов запустите `mssqlctl app template list`. |
-| **--URL-адрес -u** | Укажите расположение репозитория другой шаблон. Значение по умолчанию — https://github.com/Microsoft/sql-server-samples.git. |
-| **--версии - v** | Версия приложения. |
-
-### <a name="examples"></a>Примеры
-
 Сформировать шаблон нового приложения `spec.yaml` только.
-
-```
+```bash
 mssqlctl app init --spec
 ```
-
 Сформировать шаблон нового R приложения скелет приложения на основе `r` шаблона.
-
-```
+```bash
 mssqlctl app init --name reduce --template r
 ```
-
 Сформировать шаблон нового Python приложения скелет приложения на основе `python` шаблона.
-
-```
+```bash
 mssqlctl app init --name reduce --template python
 ```
-
 Сформировать шаблон нового SSIS приложения скелет приложения на основе `ssis` шаблона.
-
+```bash
+mssqlctl app init --name reduce --template ssis            
 ```
-mssqlctl app init --name reduce --template ssis
+### <a name="optional-parameters"></a>Необязательные параметры
+#### `--spec -s`
+Создайте просто spec.yaml приложения.
+#### `--name -n`
+Имя приложения.
+#### `--version -v`
+Версия приложения.
+#### `--template -t`
+Имя шаблона. Полный список off имена поддерживаемых шаблонов параметров запуска `mssqlctl app template list`
+#### `--destination -d`
+Где разместить скелет приложения. Значение по умолчанию — текущий рабочий каталог.
+#### `--url -u`
+Укажите расположение репозитория другой шаблон. Значение по умолчанию: https://github.com/Microsoft/SQLBDC-AppDeploy.git
+### <a name="global-arguments"></a>Глобальные аргументы
+#### `--debug`
+Увеличьте уровень подробного ведения журнала для отображения всех журналов отладки.
+#### `--help -h`
+Отображение этого справочного сообщения и выход.
+#### `--output -o`
+Формат выходных данных.  Допустимые значения: json, jsonc, table, tsv.  По умолчанию: json.
+#### `--query -q`
+Строка запроса JMESPath. См. в разделе [ http://jmespath.org/ ](http://jmespath.org/]) Дополнительные сведения и примеры.
+#### `--verbose`
+Увеличьте уровень подробного ведения журнала. Используйте параметр--debug, чтобы получить полные журналы отладки.
+## <a name="mssqlctl-app-create"></a>Создание приложения mssqlctl
+Создание приложения.
+```bash
+mssqlctl app create --spec -s 
+                    
 ```
-
-## <a id="list"></a> mssqlctl app list
-
-Список приложений.
-
-```
-mssqlctl app list
-   --name
-   --version
-```
-
-### <a name="parameters"></a>Параметры
-
-| Параметры | Описание |
-|---|---|
-| **--name - n** | Имя приложения. |
-| **--версии - v** | Версия приложения. |
-
 ### <a name="examples"></a>Примеры
-
-Приложение списка по имени и версии.
-
+Создайте новое приложение из каталога, содержащий спецификацию допустимым spec.yaml развертывания.
+```bash
+mssqlctl app create --spec /path/to/dir/with/spec/yaml
 ```
+### <a name="required-parameters"></a>Обязательные параметры
+#### `--spec -s`
+Путь к каталогу с файлом YAML спецификаций, описывающий приложение.
+### <a name="global-arguments"></a>Глобальные аргументы
+#### `--debug`
+Увеличьте уровень подробного ведения журнала для отображения всех журналов отладки.
+#### `--help -h`
+Отображение этого справочного сообщения и выход.
+#### `--output -o`
+Формат выходных данных.  Допустимые значения: json, jsonc, table, tsv.  По умолчанию: json.
+#### `--query -q`
+Строка запроса JMESPath. См. в разделе [ http://jmespath.org/ ](http://jmespath.org/]) Дополнительные сведения и примеры.
+#### `--verbose`
+Увеличьте уровень подробного ведения журнала. Используйте параметр--debug, чтобы получить полные журналы отладки.
+## <a name="mssqlctl-app-update"></a>обновление приложения mssqlctl
+Обновление приложения.
+```bash
+mssqlctl app update [--spec -s] 
+                    [--yes -y]
+```
+### <a name="examples"></a>Примеры
+Обновление существующего приложения из каталога, содержащий спецификацию допустимым spec.yaml развертывания.
+```bash
+mssqlctl app update --spec /path/to/dir/with/spec/yaml    
+```
+### <a name="optional-parameters"></a>Необязательные параметры
+#### `--spec -s`
+Путь к каталогу с файлом YAML спецификаций, описывающий приложение.
+#### `--yes -y`
+Не запрашивать подтверждение при обновлении приложения из файла spec.yaml CWD.
+### <a name="global-arguments"></a>Глобальные аргументы
+#### `--debug`
+Увеличьте уровень подробного ведения журнала для отображения всех журналов отладки.
+#### `--help -h`
+Отображение этого справочного сообщения и выход.
+#### `--output -o`
+Формат выходных данных.  Допустимые значения: json, jsonc, table, tsv.  По умолчанию: json.
+#### `--query -q`
+Строка запроса JMESPath. См. в разделе [ http://jmespath.org/ ](http://jmespath.org/]) Дополнительные сведения и примеры.
+#### `--verbose`
+Увеличьте уровень подробного ведения журнала. Используйте параметр--debug, чтобы получить полные журналы отладки.
+## <a name="mssqlctl-app-list"></a>Список приложений mssqlctl
+Список приложений.,
+```bash
+mssqlctl app list [--name -n] 
+                  [--version -v]
+```
+### <a name="examples"></a>Примеры
+Приложение списка по имени и версии.
+```bash
 mssqlctl app list --name reduce  --version v1
 ```
-
 Список всех версий приложения по имени.
-
-```
+```bash
 mssqlctl app list --name reduce
 ```
-
-Список всех приложений.
-
-```
+Список всех версий приложения по имени.
+```bash
 mssqlctl app list
 ```
-
-## <a id="run"></a> Запуск приложения mssqlctl
-
-Запустите приложение.
-
+### <a name="optional-parameters"></a>Необязательные параметры
+#### `--name -n`
+Имя приложения.
+#### `--version -v`
+Версия приложения.
+### <a name="global-arguments"></a>Глобальные аргументы
+#### `--debug`
+Увеличьте уровень подробного ведения журнала для отображения всех журналов отладки.
+#### `--help -h`
+Отображение этого справочного сообщения и выход.
+#### `--output -o`
+Формат выходных данных.  Допустимые значения: json, jsonc, table, tsv.  По умолчанию: json.
+#### `--query -q`
+Строка запроса JMESPath. См. в разделе [ http://jmespath.org/ ](http://jmespath.org/]) Дополнительные сведения и примеры.
+#### `--verbose`
+Увеличьте уровень подробного ведения журнала. Используйте параметр--debug, чтобы получить полные журналы отладки.
+## <a name="mssqlctl-app-delete"></a>Удаление приложения mssqlctl
+Удалите приложение.
+```bash
+mssqlctl app delete --name -n 
+                    --version -v
 ```
-mssqlctl app run
-   --name
-   --version
-   --inputs
-```
-
-### <a name="parameters"></a>Параметры
-
-| Параметры | Описание |
-|---|---|
-| **--name - n** | Имя приложения. |
-| **--версии - v** | Версия приложения. |
-| **--входных данных** | Приложение входных параметров в CSV-ФАЙЛ `name=value` формат. |
-
 ### <a name="examples"></a>Примеры
-
-Запустите приложение без входных параметров.
-
+Удаление приложения по имени и версии.
+```bash
+mssqlctl app delete --name reduce --version v1    
 ```
+### <a name="required-parameters"></a>Обязательные параметры
+#### `--name -n`
+Имя приложения.
+#### `--version -v`
+Версия приложения.
+### <a name="global-arguments"></a>Глобальные аргументы
+#### `--debug`
+Увеличьте уровень подробного ведения журнала для отображения всех журналов отладки.
+#### `--help -h`
+Отображение этого справочного сообщения и выход.
+#### `--output -o`
+Формат выходных данных.  Допустимые значения: json, jsonc, table, tsv.  По умолчанию: json.
+#### `--query -q`
+Строка запроса JMESPath. См. в разделе [ http://jmespath.org/ ](http://jmespath.org/]) Дополнительные сведения и примеры.
+#### `--verbose`
+Увеличьте уровень подробного ведения журнала. Используйте параметр--debug, чтобы получить полные журналы отладки.
+## <a name="mssqlctl-app-run"></a>Запуск приложения mssqlctl
+Запустите приложение.
+```bash
+mssqlctl app run --name -n 
+                 --version -v  
+                 [--inputs]
+```
+### <a name="examples"></a>Примеры
+Запустите приложение без входных параметров.
+```bash
 mssqlctl app run --name reduce --version v1
 ```
-
 Запуск приложения с помощью один входной параметр.
-
-```
+```bash
 mssqlctl app run --name reduce --version v1 --inputs x=10
 ```
-
 Запустите приложение с несколькими входными параметрами.
-
+```bash
+mssqlctl app run --name reduce --version v1 --inputs x=10,y5.6    
 ```
-mssqlctl app run --name reduce --version v1 --inputs x=10,y5.6
+### <a name="required-parameters"></a>Обязательные параметры
+#### `--name -n`
+Имя приложения.
+#### `--version -v`
+Версия приложения.
+### <a name="optional-parameters"></a>Необязательные параметры
+#### `--inputs`
+Приложение входных параметров в CSV-ФАЙЛ `name=value` формат.
+### <a name="global-arguments"></a>Глобальные аргументы
+#### `--debug`
+Увеличьте уровень подробного ведения журнала для отображения всех журналов отладки.
+#### `--help -h`
+Отображение этого справочного сообщения и выход.
+#### `--output -o`
+Формат выходных данных.  Допустимые значения: json, jsonc, table, tsv.  По умолчанию: json.
+#### `--query -q`
+Строка запроса JMESPath. См. в разделе [ http://jmespath.org/ ](http://jmespath.org/]) Дополнительные сведения и примеры.
+#### `--verbose`
+Увеличьте уровень подробного ведения журнала. Используйте параметр--debug, чтобы получить полные журналы отладки.
+## <a name="mssqlctl-app-describe"></a>описания mssqlctl приложения
+Описание приложения.
+```bash
+mssqlctl app describe [--spec -s] 
+                      [--name -n]  
+                      [--version -v]
 ```
-
-## <a id="update"></a> обновление приложения mssqlctl
-
-Обновите приложение.
-
+### <a name="examples"></a>Примеры
+Описывают приложение.
+```bash
+mssqlctl app describe --name reduce --version v1    
 ```
-mssqlctl app update
-   --spec
-   --yes
-```
-
-### <a name="parameters"></a>Параметры
-
-| Параметры | Описание |
-|---|---|
-| **--spec -s** | Путь к каталогу с файлом YAML спецификаций, описывающий приложение. |
-| **--Да -y** | Не запрашивать подтверждение при обновлении приложения из файла spec.yaml CWD. |
+### <a name="optional-parameters"></a>Необязательные параметры
+#### `--spec -s`
+Путь к каталогу с файлом YAML спецификаций, описывающий приложение.
+#### `--name -n`
+Имя приложения.
+#### `--version -v`
+Версия приложения.
+### <a name="global-arguments"></a>Глобальные аргументы
+#### `--debug`
+Увеличьте уровень подробного ведения журнала для отображения всех журналов отладки.
+#### `--help -h`
+Отображение этого справочного сообщения и выход.
+#### `--output -o`
+Формат выходных данных.  Допустимые значения: json, jsonc, table, tsv.  По умолчанию: json.
+#### `--query -q`
+Строка запроса JMESPath. См. в разделе [ http://jmespath.org/ ](http://jmespath.org/]) Дополнительные сведения и примеры.
+#### `--verbose`
+Увеличьте уровень подробного ведения журнала. Используйте параметр--debug, чтобы получить полные журналы отладки.
 
 ## <a name="next-steps"></a>Следующие шаги
 

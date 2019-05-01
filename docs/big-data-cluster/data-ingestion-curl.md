@@ -5,17 +5,17 @@ description: Используйте curl для загрузки данных в
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 56bee3241427b9de9768e7bdd9e49646b51521d1
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
-ms.translationtype: MT
+ms.openlocfilehash: 74e08c16e528c580bf78b3928a1aaf0c9b3eb069
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59947800"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63472091"
 ---
 # <a name="use-curl-to-load-data-into-hdfs-on-sql-server-big-data-clusters"></a>Используйте curl для загрузки данных в HDFS в кластерах больших данных в SQL Server
 
@@ -25,10 +25,10 @@ ms.locfileid: "59947800"
 
 ## <a name="obtain-the-service-external-ip"></a>Получить внешний IP-адрес службы
 
-WebHDFS запускается после завершения развертывания, и доступ к нему осуществляется через Knox. Конечная точка Knox предоставляется через службу Kubernetes, именуемую **безопасности конечных точек**.  Чтобы создать необходимые WebHDFS URL-адрес для отправки или скачивания файлов, вам понадобится **безопасности конечных точек** службы внешний IP-адрес и имя кластера. Вы можете получить **безопасности конечных точек** службы внешний IP-адрес, выполнив следующую команду:
+WebHDFS запускается после завершения развертывания, и доступ к нему осуществляется через Knox. Конечная точка Knox предоставляется через службу Kubernetes, именуемую **шлюз svc-external**.  Чтобы создать необходимые WebHDFS URL-адрес для отправки или скачивания файлов, вам понадобится **шлюз svc-external** службы внешний IP-адрес и имя кластера. Вы можете получить **шлюз svc-external** службы внешний IP-адрес, выполнив следующую команду:
 
 ```bash
-kubectl get service endpoint-security -n <cluster name> -o json | jq -r .status.loadBalancer.ingress[0].ip
+kubectl get service gateway-svc-external -n <cluster name> -o json | jq -r .status.loadBalancer.ingress[0].ip
 ```
 
 > [!NOTE]
@@ -38,7 +38,7 @@ kubectl get service endpoint-security -n <cluster name> -o json | jq -r .status.
 
 Теперь можно создать URL-адрес для доступа к WebHDFS следующим образом:
 
-`https://<endpoint-security service external IP address>:30443/gateway/default/webhdfs/v1/`
+`https://<gateway-svc-external service external IP address>:30443/gateway/default/webhdfs/v1/`
 
 Пример:
 
@@ -49,7 +49,7 @@ kubectl get service endpoint-security -n <cluster name> -o json | jq -r .status.
 Файл списка в разделе **hdfs: / / / airlinedata**, используйте следующую команду curl:
 
 ```bash
-curl -i -k -u root:root-password -X GET 'https://<endpoint-security IP external address>:30443/gateway/default/webhdfs/v1/airlinedata/?op=liststatus'
+curl -i -k -u root:root-password -X GET 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/airlinedata/?op=liststatus'
 ```
 
 ## <a name="put-a-local-file-into-hdfs"></a>Локальный файл помещается в HDFS
@@ -57,7 +57,7 @@ curl -i -k -u root:root-password -X GET 'https://<endpoint-security IP external 
 Чтобы поместить новый файл **test.csv** из локального каталога в каталог airlinedata, используйте следующую команду curl ( **Content-Type** параметр является обязательным):
 
 ```bash
-curl -i -L -k -u root:root-password -X PUT 'https://<endpoint-security IP external address>:30443/gateway/default/webhdfs/v1/airlinedata/test.csv?op=create' -H 'Content-Type: application/octet-stream' -T 'test.csv'
+curl -i -L -k -u root:root-password -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/airlinedata/test.csv?op=create' -H 'Content-Type: application/octet-stream' -T 'test.csv'
 ```
 
 ## <a name="create-a-directory"></a>Создайте каталог
@@ -65,7 +65,7 @@ curl -i -L -k -u root:root-password -X PUT 'https://<endpoint-security IP extern
 Чтобы создать каталог **тестирования** под `hdfs:///`, используйте следующую команду:
 
 ```bash
-curl -i -L -k -u root:root-password -X PUT 'https://<endpoint-security IP external address>:30443/gateway/default/webhdfs/v1/test?op=MKDIRS'
+curl -i -L -k -u root:root-password -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/test?op=MKDIRS'
 ```
 
 ## <a name="next-steps"></a>Следующие шаги

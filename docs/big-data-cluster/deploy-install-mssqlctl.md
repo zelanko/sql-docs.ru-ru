@@ -5,16 +5,16 @@ description: Узнайте, как установить средство mssqlc
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/27/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d9c35971c0c0acf69065734cdcdbe670710ef5e4
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
-ms.translationtype: MT
+ms.openlocfilehash: 0d260ae91a5890938949525f34dfae20a81a8fea
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582388"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473511"
 ---
 # <a name="install-mssqlctl-to-manage-sql-server-big-data-clusters"></a>Установка mssqlctl для управления кластерами больших данных в SQL Server
 
@@ -25,7 +25,7 @@ ms.locfileid: "59582388"
 **mssqlctl** — программа командной строки, написанный на Python, что позволяет кластера администраторов для начальной загрузки и управления кластером больших данных с помощью REST API. Минимальная требуемая версия Python — версии 3.5. Необходимо также иметь `pip` , используемый для загрузки и установки **mssqlctl** средство. В инструкциях ниже приведены примеры для Windows и Ubuntu. Установка Python на других платформах, см. в разделе [документации Python](https://wiki.python.org/moin/BeginnersGuide/Download).
 
 > [!IMPORTANT]
-> При установке новой версии кластеров больших данных, необходимо создать резервную копию данных и удалить старый кластер *перед* обновление **mssqlctl** и установки новой версии. Дополнительные сведения см. в разделе [обновление до нового выпуска](deployment-guidance.md#upgrade).
+> При установке новой версии кластеров больших данных, необходимо создать резервную копию данных и удалить старый кластер *перед* обновление **mssqlctl** и установки новой версии. Дополнительные сведения см. в разделе [обновление до нового выпуска](deployment-upgrade.md).
 
 ## <a id="windows"></a> Mssqlctl установки Windows
 
@@ -38,13 +38,13 @@ ms.locfileid: "59582388"
 
 1. Если у вас есть все предыдущие выпуски **mssqlctl** установлен, очень важно удалить **mssqlctl** перед установкой последней версии.
 
-   Если вы являетесь mssqlctl unisntalling соответствующий CTP версии 2.2 или более раннюю выполните:
+   Если вы удаляете **mssqlctl** до CTP-версии 2.2 или ниже версии запуска:
 
    ```powershell
    pip3 uninstall mssqlctl
    ```
 
-   Для CTP2.3 или более поздней версии запуск (Замените `ctp-2.3` в команде с версией mssqlctl, вы удаляете):
+   Для CTP-версия 2.3 или более поздней версии выполните следующую команду. Замените `ctp-2.3` в команде с версией **mssqlctl** , при удалении:
 
    ```powershell
    pip3 uninstall -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt
@@ -53,7 +53,7 @@ ms.locfileid: "59582388"
 1. Установка **mssqlctl** , выполнив следующую команду:
 
    ```powershell
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.4/mssqlctl/requirements.txt
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.5/mssqlctl/requirements.txt
    ```
 
 ## <a id="linux"></a> Установка mssqlctl Linux
@@ -76,22 +76,22 @@ ms.locfileid: "59582388"
 
 1. Если у вас есть все предыдущие выпуски **mssqlctl** установлен, очень важно удалить **mssqlctl** перед установкой последней версии.
 
-   Если вы являетесь mssqlctl unisntalling соответствующий CTP версии 2.2 или более раннюю выполните:
+   Если вы удаляете **mssqlctl** до CTP-версии 2.2 или ниже версии запуска:
 
-   ```bash
+   ```powershell
    pip3 uninstall mssqlctl
    ```
 
-   Для CTP2.3 или более поздней версии запуск (Замените `ctp-2.3` в команде с версией mssqlctl, вы удаляете):
+   Для CTP-версия 2.3 или более поздней версии выполните следующую команду. Замените `ctp-2.3` в команде с версией **mssqlctl** , при удалении:
 
-   ```bash
+   ```powershell
    pip3 uninstall -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt
    ```
 
 1. Установка **mssqlctl** , выполнив следующую команду:
 
    ```bash
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.4/mssqlctl/requirements.txt --user
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.5/mssqlctl/requirements.txt --user
    ```
 
    > [!NOTE]

@@ -19,12 +19,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 00cfd52bfd6293e6875054fb7b7746b1ac52a7cb
-ms.sourcegitcommit: f62f70298651d6223fa5d215b6a7a0d2ffecbd0d
-ms.translationtype: MT
+ms.openlocfilehash: af6c2996877f4ab7d8a2305c4f6fe4b30a0127cc
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "51947658"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473752"
 ---
 # <a name="sysdatabasescopedconfigurations-transact-sql"></a>sys.database_scoped_configurations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -38,15 +38,14 @@ ms.locfileid: "51947658"
 |**value**|**SQLVARIANT**|Значение, заданное для этого параметра конфигурации для первичной реплики.|  
 |**value_for_secondary**|**SQLVARIANT**|Значение, заданное для этого параметра конфигурации для вторичных реплик.|  
 |**is_value_default**|**bit** |Указывает, является ли заданное значение по умолчанию.|
-|**elevate_resumable**|nvarchar(60)|Базы данных с заданной областью набора по умолчанию для Возобновляемый параметр для операций с индексами| 
   
 ##  <a name="Permissions"></a> Permissions  
- Необходимо быть членом роли **public**.  
+Необходимо быть членом роли **public**.  
   
 ## <a name="remarks"></a>Примечания  
- Если возвращается значение NULL в качестве значения для **value_for_secondary**, это означает, что получатель присвоено ОСНОВНОЙ.  
+Если возвращается значение NULL в качестве значения для **value_for_secondary**, это означает, что получатель присвоено ОСНОВНОЙ.  
  
- Параметры конфигурации уровня базы данных будут перенесены вместе с базой данных. Это означает, что при восстановлении или прикреплении заданной базы данных существующие параметры конфигурации будут сохранены.
+Параметры конфигурации уровня базы данных будут перенесены вместе с базой данных. Это означает, что при восстановлении или прикреплении заданной базы данных существующие параметры конфигурации будут сохранены.
   
 ## <a name="see-also"></a>См. также  
  [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)  

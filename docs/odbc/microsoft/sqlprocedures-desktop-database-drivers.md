@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f5d27a09715259bf6adf08cb9b9de1d01ffa228a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47813639"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63457396"
 ---
 # <a name="sqlprocedures-desktop-database-drivers"></a>SQLProcedures (драйверы для баз данных на настольном компьютере)
 **SQLProcedures** , возвращает только строки для этих процедур, которые имеют по крайней мере один аргумент. Процедуры, которые не имеют аргументов, рассматриваются как представления.  

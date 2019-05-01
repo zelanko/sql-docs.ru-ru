@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 40c592cd753c5c6b4e88fbf66d9b81ebc4aa2fb5
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59963700"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63461871"
 ---
 # <a name="map-color-rules-dialog-box-general"></a>Диалоговое окно «Правила цвета карты» — «Общие»
   Перейдите на страницу **Общие** в диалоговом окне **Свойства правил цвета** , чтобы определить параметры цвета для элементов карты на данном слое. Элементы карты включают многоугольники, линии и точки. Правила цвета можно применить, если создана связь между элементами карты на основе пространственных и аналитических данных из поля набора данных либо из поля источника пространственных данных.  

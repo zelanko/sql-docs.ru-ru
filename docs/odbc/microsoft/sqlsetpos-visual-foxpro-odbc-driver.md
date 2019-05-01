@@ -14,19 +14,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 299a4c6379f1323128e28dc992e18fd7228014ea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669302"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473110"
 ---
 # <a name="sqlsetpos-visual-foxpro-odbc-driver"></a>SQLSetPos (драйвер ODBC для Visual FoxPro)
 > [!NOTE]  
 >  Этот раздел содержит сведения Visual FoxPro ODBC-драйвером. Общие сведения об этой функции см. в соответствующем разделе [Справочник по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Поддержка: полный  
+ Поддержка: Полное  
   
- Соответствия API ODBC: Уровень 2  
+ Соответствие API ODBC: Уровень 2  
   
  Задает положение курсора в наборе строк. Можно использовать **SQLSetPos** с [SQLGetData](../../odbc/microsoft/sqlgetdata-visual-foxpro-odbc-driver.md) для получения строк из несвязанных столбцов после позиционирования курсора в указанную строку в наборе строк.  
   

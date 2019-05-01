@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: d1dbbb57527fc2d362837e0340f35a241d764b75
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408321"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473526"
 ---
 # <a name="executing-the-ssma-console-accesstosql"></a>Выполнение команд консоли SSMA (AccessToSQL)
 Майкрософт предоставляет широкий набор команд файла скрипта и параметры командной строки для выполнения и SSMA действия управления. В последующих разделах подробно описано же.  
@@ -47,11 +47,11 @@ ms.locfileid: "52408321"
   
     -   SQL server 2016 г.  
   
-    -   SQL azure  
+    -   sql-azure  
   
     Значение по умолчанию — «sql server 2008».  
   
-**Пример:**  
+**Пример.**  
   
 ```xml  
 <create-new-project  
@@ -547,9 +547,9 @@ Connect-target-database
   
 3.  `on-error:` Указывает, следует ли для указания ошибок синхронизации в качестве предупреждения или ошибки. Доступные параметры для при ошибке:  
   
-    -   Общее число отчетов как предупреждение  
+    -   report-total-as-warning  
   
-    -   отчет each как предупреждение  
+    -   report-each-as-warning  
   
     -   Сбой скрипта  
   
@@ -612,9 +612,9 @@ Connect-target-database
   
 3.  `on-error:` Указывает, следует ли для указания ошибки обновления как предупреждения или ошибки. Доступные параметры для при ошибке:  
   
-    -   Общее число отчетов как предупреждение  
+    -   report-total-as-warning  
   
-    -   отчет each как предупреждение  
+    -   report-each-as-warning  
   
     -   Сбой скрипта  
   
@@ -661,7 +661,7 @@ Connect-target-database
   
 **Command**  
   
-Сохранить как сценарий  
+save-as-script  
   
 Позволяет сохранить скрипты объектов в файле, упомянутом при метабазы = цель, это является альтернативой команду синхронизации, где в мы получить скрипты и выполнить соответствует в целевой базе данных.  
   

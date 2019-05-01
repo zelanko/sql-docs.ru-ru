@@ -5,16 +5,16 @@ description: Справочная статья по mssqlctl команды кл
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 04/23/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e4e54ac3c7206ad8a6592c8cfe0b45d9ea4b8fd8
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
-ms.translationtype: MT
+ms.openlocfilehash: c69aeced2378e018376172e1fb6370d56706ecb7
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860475"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473327"
 ---
 # <a name="mssqlctl-cluster"></a>Кластер mssqlctl
 
@@ -22,48 +22,58 @@ ms.locfileid: "58860475"
 
 В следующей статье приведены ссылки для **кластера** команды в **mssqlctl** средство. Дополнительные сведения о других **mssqlctl** команды, см. в разделе [mssqlctl ссылку](reference-mssqlctl.md).
 
-## <a id="commands"></a> Команды
-
-|||
-|---|---|
-| [Создание](#create) | Создание кластера. |
-| [delete](#delete) | Удаление кластера. |
-| [конфигурации](reference-mssqlctl-cluster-config.md) | Команды для настройки кластера. |
-| [debug](reference-mssqlctl-cluster-debug.md) | Команды отладки. |
-
-## <a id="create"></a> Создание кластера mssqlctl
-
-Создание кластера.
-
+## <a name="commands"></a>Команды
+|     |     |
+| --- | --- |
+[Создание кластера mssqlctl](#mssqlctl-cluster-create) | Создание кластера.
+[mssqlctl cluster delete](#mssqlctl-cluster-delete) | Удаление кластера.
+[mssqlctl конфигурации кластера](reference-mssqlctl-cluster-config.md) | Команды для настройки кластера.
+[Отладка кластера mssqlctl](reference-mssqlctl-cluster-debug.md) | Команды отладки.
+## <a name="mssqlctl-cluster-create"></a>Создание кластера mssqlctl
+Создайте кластер SQL Server больших данных.
+```bash
+mssqlctl cluster create [--config-file -f] 
+                        [--accept-eula -e]  
 ```
-mssqlctl cluster create
-   --name
-   --accept-eula
+### <a name="optional-parameters"></a>Необязательные параметры
+#### `--config-file -f`
+Кластер профиля конфигурации, используемый для развертывания кластера: ["aks-dev-test.json", "kubeadm-dev-test.json", "minikube-dev-test.json"]
+#### `--accept-eula -e`
+Вы принимаете условия лицензионного соглашения? [Да/Нет].
+### <a name="global-arguments"></a>Глобальные аргументы
+#### `--debug`
+Увеличьте уровень подробного ведения журнала для отображения всех журналов отладки.
+#### `--help -h`
+Отображение этого справочного сообщения и выход.
+#### `--output -o`
+Формат выходных данных.  Допустимые значения: json, jsonc, table, tsv.  По умолчанию: json.
+#### `--query -q`
+Строка запроса JMESPath. См. в разделе [ http://jmespath.org/ ](http://jmespath.org/]) Дополнительные сведения и примеры.
+#### `--verbose`
+Увеличьте уровень подробного ведения журнала. Используйте параметр--debug, чтобы получить полные журналы отладки.
+## <a name="mssqlctl-cluster-delete"></a>mssqlctl cluster delete
+Удаление кластера больших данных SQL Server.
+```bash
+mssqlctl cluster delete --name -n 
+                        [--force -f]
 ```
-
-### <a name="parameters"></a>Параметры
-
-| Параметры | Описание |
-|---|---|
-| **--name - n** | Имя кластера, используемые для пространств имен kubernetes. |
-| **--принимать лицензионное соглашение - e** | Вы принимаете условия лицензионного соглашения? \[Да/Нет\].  Допустимые значения: нет, Да. Обязательный. |
-
-## <a id="delete"></a> mssqlctl cluster delete
-
-Удаление кластера.
-
-```
-mssqlctl cluster delete
-   --name
-   [--force]
-```
-
-### <a name="parameters"></a>Параметры
-
-| Параметры | Описание |
-|---|---|
-| **--name - n** | Имя кластера, используемые для пространств имен kubernetes. Обязательный. |
-| **--force -f** | Принудительное удаление кластера. |
+### <a name="required-parameters"></a>Обязательные параметры
+#### `--name -n`
+Имя кластера, используемые для пространств имен kubernetes.
+### <a name="optional-parameters"></a>Необязательные параметры
+#### `--force -f`
+Принудительное удаление кластера.
+### <a name="global-arguments"></a>Глобальные аргументы
+#### `--debug`
+Увеличьте уровень подробного ведения журнала для отображения всех журналов отладки.
+#### `--help -h`
+Отображение этого справочного сообщения и выход.
+#### `--output -o`
+Формат выходных данных.  Допустимые значения: json, jsonc, table, tsv.  По умолчанию: json.
+#### `--query -q`
+Строка запроса JMESPath. См. в разделе [ http://jmespath.org/ ](http://jmespath.org/]) Дополнительные сведения и примеры.
+#### `--verbose`
+Увеличьте уровень подробного ведения журнала. Используйте параметр--debug, чтобы получить полные журналы отладки.
 
 ## <a name="next-steps"></a>Следующие шаги
 

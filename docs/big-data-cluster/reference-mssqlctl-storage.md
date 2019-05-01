@@ -5,16 +5,16 @@ description: Справочная статья по mssqlctl команды хр
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 04/23/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 47c4d331c2f1848265c1322bda88c358b61cf56a
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
-ms.translationtype: MT
+ms.openlocfilehash: 120f230fad10c968590ab7e5c1430433598ddcd6
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860620"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473196"
 ---
 # <a name="mssqlctl-storage"></a>Хранилище mssqlctl
 
@@ -22,11 +22,10 @@ ms.locfileid: "58860620"
 
 В следующей статье приведены ссылки для **хранения** команды в **mssqlctl** средство. Дополнительные сведения о других **mssqlctl** команды, см. в разделе [mssqlctl ссылку](reference-mssqlctl.md).
 
-## <a id="commands"></a> Команды
-
-|||
-|---|---|
-| [подключить](reference-mssqlctl-storage-mount.md) | Управление подключение удаленного хранилища в файловой системе HDFS. |
+## <a name="commands"></a>Команды
+|     |     |
+| --- | --- |
+[mssqlctl подключения хранилища](reference-mssqlctl-storage-mount.md) | Управление подключение удаленного хранилища в файловой системе HDFS.
 
 ## <a name="next-steps"></a>Следующие шаги
 

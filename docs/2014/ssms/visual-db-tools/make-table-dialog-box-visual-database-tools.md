@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b9873268608072ed7f2d6cdb4d0026ba62e5d090
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810696"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63459980"
 ---
 # <a name="make-table-dialog-box-visual-database-tools"></a>Диалоговое окно «Создание таблицы» (визуальные инструменты для баз данных)
   Позволяет присвоить имя созданной таблице, в которую копируются строки. Это диалоговое окно появляется при изменении типа запроса на MAKE TABLE. Чтобы изменить тип запроса, в меню **Конструктор запросов** выберите пункт **Тип изменения**, а затем щелкните **Создать таблицу**.  

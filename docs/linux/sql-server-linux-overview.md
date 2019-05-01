@@ -4,20 +4,20 @@ description: В этой статье описывается, как SQL Server 
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 09/25/2018
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
-ms.openlocfilehash: 37cd2269d6d8fe413b730a111ad0a5f604ed8994
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: MT
+ms.openlocfilehash: c24e4fa86c92a183c957c44a33a2d3524cdd1f8c
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408881"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63457364"
 ---
-# <a name="sql-server-on-linux"></a>SQL Server в Linux:
+# <a name="sql-server-on-linux"></a>SQL Server в Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -26,22 +26,22 @@ ms.locfileid: "52408881"
 ::: moniker-end
 
 ::: moniker range=">= sql-server-ver15 || >= sql-server-linux-ver15"
-Предварительная версия SQL Server 2019 выполняется в системе Linux. Это такое же ядро СУБД SQL Server, много подобных возможностей и служб независимо от операционной системы. Чтобы узнать больше об этом выпуске, см. в разделе [новые возможности в предварительной версии SQL Server 2019 для Linux](../sql-server/what-s-new-in-sql-server-ver15.md#sqllinux).
+Предварительная версия SQL Server 2019 выполняется в системе Linux. Это такое же ядро СУБД SQL Server, много подобных возможностей и служб независимо от операционной системы. Чтобы узнать больше об этом выпуске, см. в разделе [новые возможности в предварительной версии SQL Server 2019 для Linux](../sql-server/what-s-new-in-sql-server-ver15.md#sql-server-on-linux).
 ::: moniker-end
 
 ::: moniker range="= sql-server-2017"
 > [!TIP]
-> [Предварительная версия SQL Server 2019](sql-server-linux-overview.md?view=sql-server-ver15) была выпущена! Новые возможности для Linux в последнем выпуске см. в статье [новые возможности в предварительной версии SQL Server 2019 для Linux](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15#sqllinux).
+> [Предварительная версия SQL Server 2019](sql-server-linux-overview.md?view=sql-server-ver15) была выпущена! Новые возможности для Linux в последнем выпуске см. в статье [новые возможности в предварительной версии SQL Server 2019 для Linux](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15#sql-server-on-linux).
 ::: moniker-end
 
 ::: moniker range="= sql-server-linux-2017"
 > [!TIP]
-> [Предварительная версия SQL Server 2019](sql-server-linux-overview.md?view=sql-server-linux-ver15) была выпущена! Новые возможности для Linux в последнем выпуске см. в статье [новые возможности в предварительной версии SQL Server 2019 для Linux](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-linux-ver15#sqllinux).
+> [Предварительная версия SQL Server 2019](sql-server-linux-overview.md?view=sql-server-linux-ver15) была выпущена! Новые возможности для Linux в последнем выпуске см. в статье [новые возможности в предварительной версии SQL Server 2019 для Linux](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-linux-ver15#sql-server-on-linux).
 ::: moniker-end
 
 ::: moniker range="= sqlallproducts-allversions"
 > [!TIP]
-> Предварительная версия SQL Server 2019 была выпущена! Новые возможности для Linux в последнем выпуске см. в статье [новые возможности в предварительной версии SQL Server 2019 для Linux](../sql-server/what-s-new-in-sql-server-ver15.md#sqllinux).
+> Предварительная версия SQL Server 2019 была выпущена! Новые возможности для Linux в последнем выпуске см. в статье [новые возможности в предварительной версии SQL Server 2019 для Linux](../sql-server/what-s-new-in-sql-server-ver15.md#sql-server-on-linux).
 ::: moniker-end
 
 ## <a name="install"></a>Установка
@@ -99,7 +99,7 @@ SQL Server 2017 и [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] им�
 Затем рассмотрим новые возможности:
 
 - [Новые возможности SQL Server 2017](sql-server-linux-whats-new.md)
-- [Новые возможности предварительной версии SQL Server 2019 в Linux](../sql-server/what-s-new-in-sql-server-ver15.md#sqllinux)
+- [Новые возможности предварительной версии SQL Server 2019 в Linux](../sql-server/what-s-new-in-sql-server-ver15.md#sql-server-on-linux)
 
 ::: moniker-end
 

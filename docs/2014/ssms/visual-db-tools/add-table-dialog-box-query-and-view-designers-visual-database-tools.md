@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 374014ee4ccdd783cee3eeb7bad5c5e728906299
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781506"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63460165"
 ---
 # <a name="add-table-dialog-box-query-and-view-designers-visual-database-tools"></a>Диалоговое окно «Добавить таблицу» (конструкторы запросов и представлений) (визуальные инструменты для баз данных)
   Это диалоговое окно позволяет добавлять таблицы, представления, определяемые пользователем функции или синонимы к запросу или представлению.  

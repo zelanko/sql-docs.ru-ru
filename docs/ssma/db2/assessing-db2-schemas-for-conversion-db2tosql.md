@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: fe66ff5b8902a737ff9a2ac0815069a4f01ea129
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608951"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63453431"
 ---
 # <a name="assessing-db2-schemas-for-conversion-db2tosql"></a>Оценка схем DB2 для преобразования (DB2ToSQL)
 Прежде чем загружать объекты и перенести данные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], следует определить, насколько сложным будут миграции и сколько времени займет перенос. SSMA можно создать отчет об оценке, который показывает процент объектов, которые будет успешно преобразован. SSMA также позволяет просматривать конкретные проблемы, вызывающие ошибки преобразования.  
@@ -35,7 +35,7 @@ ms.locfileid: "47608951"
   
     SSMA ход выполнения отображается в строке состояния в нижней части окна. Если область вывода, вы увидите сообщения в области вывода.  
   
-    По завершении оценки, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] помощника по миграции для DB2: откроется окно отчета об оценке.  
+    По завершении оценки, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] помощника по миграции для DB2: Будет открыто окно отчета оценки.  
   
 ## <a name="using-assessment-reports"></a>С помощью отчетов с оценкой  
 Отчет об оценке окно содержит три панели:  

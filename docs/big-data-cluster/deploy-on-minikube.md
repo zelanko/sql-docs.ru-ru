@@ -5,17 +5,17 @@ description: Сведения о настройке minikube для развер
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: b091ec919c928f7c78eb37feca2543f06fe4f584
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
-ms.translationtype: MT
+ms.openlocfilehash: afa5c3bae6eb7898ccaedf534382c9aeb467f01c
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860695"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473494"
 ---
 # <a name="configure-minikube-for-sql-server-big-data-cluster-deployments"></a>Настройка minikube, для развертывания кластера больших данных в SQL Server
 
@@ -27,7 +27,7 @@ ms.locfileid: "58860695"
 
 - 32 ГБ памяти (рекомендуется 64 ГБ).
 
-- Если на компьютере установлена только минимум, рекомендованный объем памяти, затем настройки развертывания кластера могут быть только 1 вычислительный экземпляр пула, 1 экземпляр пула данных и экземпляр пула хранения 1. Эта конфигурация должна использоваться только в тестовых средах где устойчивости и доступности данных не важен. См. в разделе [документации по развертыванию](deployment-guidance.md#env) Дополнительные сведения о переменных среды, чтобы задать для настройки числа реплик для данных пулов вычислительных пулов и пулы носителей.
+- Если на компьютере установлена только минимум, рекомендованный объем памяти, затем настройки развертывания кластера могут быть только 1 вычислительный экземпляр пула, 1 экземпляр пула данных и экземпляр пула хранения 1. Эта конфигурация должна использоваться только в тестовых средах где устойчивости и доступности данных не важен. См. в разделе [документации по развертыванию](deployment-guidance.md#configfile) Дополнительные сведения о переменных среды, чтобы задать для настройки числа реплик для данных пулов вычислительных пулов и пулы носителей.
 
 - Виртуализации VT-x или AMD-v необходимо включить в BIOS компьютера.
 
@@ -44,11 +44,11 @@ ms.locfileid: "58860695"
    - Для Linux, установите [VirtualBox](https://www.virtualbox.org/wiki/Downloads) или [KVM](https://www.linux-kvm.org/).
    - Для Windows, установите [VirtualBox](https://www.virtualbox.org/wiki/Downloads) или [Hyper-V](https://msdn.microsoft.com/virtualization/hyperv_on_windows/quick_start/walkthrough_install). Если у вас внешний коммутатор, настроенный в hyper-v, создайте приложение, имеющее доступ внешней сети.  См. в разделе Практическое [создать внешний коммутатор в hyper-v для minikube](https://blogs.msdn.microsoft.com/wasimbloch/2017/01/23/setting-up-kubernetes-on-windows10-laptop-with-minikube/).
 
-## <a name="install-minikube"></a>Установка Minikube
+## <a name="install-minikube"></a>Установка minikube
 
-Установка Minikube в соответствии с инструкциями для [v0.28.2 выпуска](https://github.com/kubernetes/minikube/releases/tag/v0.28.2). Кластера SQL Server 2019 больших данных (Предварительная версия) работает только в версии v0.24.1 и более.
+Установка minikube в соответствии с инструкциями для [v0.28.2 выпуска](https://github.com/kubernetes/minikube/releases/tag/v0.28.2). Кластера SQL Server 2019 больших данных (Предварительная версия) работает только в версии v0.24.1 и более.
 
-## <a name="create-a-minikube-cluster"></a>Создание кластера Minikube
+## <a name="create-a-minikube-cluster"></a>Создание кластера minikube
 
 Следующая команда создает кластер minikube в виртуальной Машине Hyper-V с 8 процессорами, 28 ГБ памяти и диск размером 100 ГБ. Размер диска не зарезервированного пространства.  При необходимости, то его значение роста, размер на диске.  Мы рекомендуем не будет изменен на диске пространства на что-нибудь менее 100 ГБ, как мы столкнулись с проблемами с этим при тестировании. Это также указывает коммутатора hyper-v с внешним доступом явным образом.
 
@@ -58,7 +58,7 @@ ms.locfileid: "58860695"
 minikube start --vm-driver="hyperv" --cpus 8 --memory 28672 --disk-size 100g --hyperv-virtual-switch "External"
 ```
 
-Если вы используете Minikube с помощью VirtualBox, команда будет выглядеть следующим образом:
+Если вы используете minikube с помощью VirtualBox, команда будет выглядеть следующим образом:
 
 ```base
 minikube start --cpus 8 --memory 28672 --disk-size 100g
@@ -74,6 +74,6 @@ Set-VM -Name minikube -CheckpointType Disabled -AutomaticCheckpointsEnabled $fal
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Действия, описанные в этой статье настроили кластер Minikube. Следующим шагом является развертывание кластера SQL Server 2019 больших данных. Инструкции см. следующую статью:
+Действия, описанные в этой статье настроили кластер minikube. Следующим шагом является развертывание кластера SQL Server 2019 больших данных. Инструкции см. следующую статью:
 
 [Развертывание кластеров SQL Server 2019 больших данных в Kubernetes](deployment-guidance.md#deploy)

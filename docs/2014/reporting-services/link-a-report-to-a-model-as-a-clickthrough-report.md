@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 90b21c6fa21322afe1d9351e73460fce1a4592f8
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59944160"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63461876"
 ---
 # <a name="link-a-report-to-a-model-as-a-clickthrough-report"></a>Связывание отчета с моделью в качестве отчета с дополнительной информацией
   Вместо использования применяемых по умолчанию шаблонов отчетов с дополнительной информацией можно создать отчет в построителе отчетов, а затем установить его связь с конкретной сущностью в модели отчета. Когда пользователь, просматривающий отчет, щелкает мышью интерактивные данные в основном отчете, отчет отображается как отчет с дополнительной информацией. Для установления связи между отчетом и сущностью используется диспетчер отчетов служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  

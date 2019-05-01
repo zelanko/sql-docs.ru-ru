@@ -1,5 +1,5 @@
 ---
-title: '* (Умножение) (МНОГОМЕРНЫЕ ВЫРАЖЕНИЯ) | Документы Microsoft'
+title: '* (Умножение) (МНОГОМЕРНЫЕ ВЫРАЖЕНИЯ) | Документация Майкрософт'
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3f752aec0a2e1b49fbf1145129876d2f8c5901ed
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742273"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63456585"
 ---
 # <a name="-multiply-mdx"></a>* (умножение) (многомерные выражения)
 
@@ -39,6 +39,6 @@ Numeric_Expression * Numeric_Expression
  Оба выражения должны иметь одинаковый тип данных, или одно из выражений должно допускать неявное преобразование к типу данных другого выражения. Если результатом вычисления одного выражения является значение NULL, то и оператор возвращает значение NULL.  
   
 ## <a name="see-also"></a>См. также  
- [Справочник по операторам Многомерных &#40;многомерных Выражений&#41;](../mdx/mdx-operator-reference-mdx.md)  
+ [Справочник по операторам многомерных Выражений &#40;многомерных Выражений&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

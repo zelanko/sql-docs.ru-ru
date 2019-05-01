@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ac92c6d40ea9ead6b8875e3338bb740b4bdf8523
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631822"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473175"
 ---
 # <a name="types-of-changes"></a>Типы изменений
 Три типа изменения вносятся в ODBC 3. *x* (и какая-либо версия ODBC). Каждый из них по-разному влияет на обратной совместимости и обрабатывается по-разному. Эти изменения описаны в следующей таблице.  

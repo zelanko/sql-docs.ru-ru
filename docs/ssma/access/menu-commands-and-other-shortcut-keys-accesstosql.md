@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 10cf92089a87f2d57fc303d8b722df70941fb455
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819502"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63453452"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-accesstosql"></a>Команды меню и другие сочетания клавиш (AccessToSQL)
 В следующих разделах описаны сочетания клавиш для доступа к командам меню и другие сочетания клавиш, используемые в различных диалоговых окнах из SSMA для доступа приложения.  
@@ -73,7 +73,7 @@ ms.locfileid: "47819502"
 |Добавьте текущий макет|ALT + V + L + A|  
 |Выберите макет по умолчанию|ALT + V + L + D или CTRL + ALT + 1|  
 |Выберите без обозревателей макета|ALT + V + L + W или CTRL + ALT + 2|  
-|Отобразить диалоговое окно Управление макетами.|ALT + V + L + M|  
+|Отобразить диалоговое окно Управление макетами.|Alt + V + L + M|  
   
 ## <a name="tools-menu-commands"></a>Команды меню средства  
 Для доступа к меню "Сервис", — использовать сочетание клавиш ALT + t. В следующей таблице описаны сочетания, сочетания клавиш используются для доступа к элементам меню в меню "Сервис".  

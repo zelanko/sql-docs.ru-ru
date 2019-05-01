@@ -5,16 +5,16 @@ description: Узнайте, как подключаться к основной
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ed563fe6d0bfd69ce5dfb7484d4213bc9a47dd54
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
-ms.translationtype: MT
+ms.openlocfilehash: 8291f2a192868544fb34da95d537f7a8a6b0f004
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860175"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63472279"
 ---
 # <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>Подключение к кластеру больших данных SQL Server с помощью Azure Data Studio
 
@@ -45,7 +45,7 @@ ms.locfileid: "58860175"
 1. Из командной строки найти IP-адрес главного экземпляра с помощью следующей команды:
 
    ```
-   kubectl get svc endpoint-master-pool -n <your-cluster-name>
+   kubectl get svc master-svc-external -n <your-cluster-name>
    ```
 
 1. В Azure данных Studio нажмите клавишу **F1** > **новое подключение**.
@@ -83,7 +83,7 @@ ms.locfileid: "58860175"
 1. Из командной строки найти IP-адрес шлюза HDFS/Spark с помощью одного из следующих команд.
 
    ```
-   kubectl get svc endpoint-security -n <your-cluster-name>
+   kubectl get svc gateway-svc-external -n <your-cluster-name>
    ```
  
 1. В Azure данных Studio нажмите клавишу **F1** > **новое подключение**.
