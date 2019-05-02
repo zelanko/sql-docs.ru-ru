@@ -77,7 +77,7 @@ ms.locfileid: "63207066"
   
 -   Параметр NOT FOR REPLICATION по умолчанию задается для ограничений внешнего ключа и проверочных ограничений. Ограничения используются для пользовательских операций, но не для операций агентов.  
   
- Сведения об установке параметров схемы, которые управляют репликацией ограничений, см. в разделе [Specify Schema Options](../publish/specify-schema-options.md).  
+ Сведения об установке параметров схемы, которые управляют репликацией ограничений, см. в разделе [Указание параметров схемы](../publish/specify-schema-options.md).  
   
 ### <a name="how-do-i-manage-identity-columns"></a>Как управлять столбцами идентификаторов?  
  Репликация обеспечивает автоматическое управление диапазонами идентификаторов для топологий репликации, включающих обновления на подписчике. Дополнительные сведения см. в статье [Репликация столбцов идентификаторов](../publish/replicate-identity-columns.md).  
@@ -88,10 +88,10 @@ ms.locfileid: "63207066"
 ### <a name="can-multiple-publications-use-the-same-distribution-database"></a>Могут ли несколько публикаций использовать одну и ту же базу данных распространителя?  
  Да. Ограничение на количество или типы публикаций, которые могут использовать одну и ту же базу данных распространителя, отсутствует. Все публикации одного издателя должны использовать одного и того же распространителя и базу данных распространителя.  
   
- При наличии нескольких публикаций на распространителе можно настроить несколько баз данных распространителя для гарантии того, что данные, проходящие через каждую базу данных распространителя, идут из одной публикации. Для добавления базы данных распространителя нужно использовать диалоговое окно **Свойства распространителя** или процедуру [sp_adddistributiondb (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql). Дополнительные сведения о доступе к этому диалоговому окну см. в статье [View and Modify Distributor and Publisher Properties](../view-and-modify-distributor-and-publisher-properties.md) (Просмотр и изменение свойств издателя и распространителя).  
+ При наличии нескольких публикаций на распространителе можно настроить несколько баз данных распространителя для гарантии того, что данные, проходящие через каждую базу данных распространителя, идут из одной публикации. Для добавления базы данных распространителя нужно использовать диалоговое окно **Свойства распространителя** или процедуру [sp_adddistributiondb (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql). Дополнительные сведения о доступе к этому диалоговому окну см. в статье [Просмотр и изменение свойств издателя и распространителя](../view-and-modify-distributor-and-publisher-properties.md).  
   
 ### <a name="how-do-i-find-information-on-the-distributor-and-publisher-such-as-which-objects-in-a-database-are-published"></a>Как искать сведения о распространителе и издателе (например, какие объекты в базе данных являются публикуемыми)?  
- Эти сведения можно получить в среде [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]и через вызов некоторых хранимых процедур репликации. Дополнительные сведения см. в статье [Distributor and Publisher Information Script](distributor-and-publisher-information-script.md).  
+ Эти сведения можно получить в среде [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]и через вызов некоторых хранимых процедур репликации. Дополнительные сведения см. в статье [Скрипт вывода сведений о распространителе и издателе](distributor-and-publisher-information-script.md).  
   
 ### <a name="does-replication-encrypt-data"></a>Шифруются ли данные при репликации?  
  Нет. При репликации данные, которые хранятся в базе данных или передаются по сети, не шифруются. Дополнительные сведения см. в разделе «Шифрование» раздела [безопасность репликации SQL Server](../security/view-and-modify-replication-security-settings.md).  
@@ -101,7 +101,7 @@ ms.locfileid: "63207066"
   
 -   Виртуальная частная сеть. Дополнительные сведения см. в статье [Публикация данных через Интернет с помощью виртуальных частных сетей](../publish-data-over-the-internet-using-vpn.md).  
   
--   Параметр веб-синхронизации для репликации слиянием. Дополнительные сведения см. в статье [Web Synchronization for Merge Replication](../web-synchronization-for-merge-replication.md).  
+-   Параметр веб-синхронизации для репликации слиянием. Дополнительные сведения см. в статье [Веб-синхронизация для репликации слиянием](../web-synchronization-for-merge-replication.md).  
   
  Репликации [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] всех типов могут реплицировать данные через виртуальную частную сеть, но для репликации слиянием необходимо предусмотреть веб-синхронизацию.  
   
@@ -230,6 +230,6 @@ ms.locfileid: "63207066"
   
 ## <a name="see-also"></a>См. также  
  [Вопросы и ответы об администрировании репликации](frequently-asked-questions-for-replication-administrators.md)   
- [Best Practices for Replication Administration](best-practices-for-replication-administration.md)  
+ [Рекомендации по администрированию репликации](best-practices-for-replication-administration.md)  
   
   
