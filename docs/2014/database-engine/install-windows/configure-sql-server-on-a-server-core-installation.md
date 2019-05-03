@@ -30,19 +30,19 @@ ms.locfileid: "62779737"
   
  Дополнительные сведения о дистанционной настройке и управлении установкой Server Core см. в следующих разделах:  
   
--   [Windows Server 2008 R2: Рекомендации по развертыванию ядра сервера](https://go.microsoft.com/fwlink/?LinkID=245957) ()https://go.microsoft.com/fwlink/?LinkID=245957)  
+-   [Windows Server 2008 R2: Рекомендации по развертыванию ядра сервера](https://go.microsoft.com/fwlink/?LinkID=245957) (https://go.microsoft.com/fwlink/?LinkID=245957)  
   
--   [Настройка установки Server Core: Общие сведения о](https://go.microsoft.com/fwlink/?LinkId=245958) ()https://go.microsoft.com/fwlink/?LinkId=245958)  
+-   [Настройка установки Server Core: Общие сведения о](https://go.microsoft.com/fwlink/?LinkId=245958) (https://go.microsoft.com/fwlink/?LinkId=245958)  
   
--   [Настройка установки Server Core Windows Server 2008 R2 с помощью Sconfig.cmd](https://go.microsoft.com/fwlink/?LinkId=245959) ()https://go.microsoft.com/fwlink/?LinkId=245959)  
+-   [Настройка установки Server Core Windows Server 2008 R2 с помощью Sconfig.cmd](https://go.microsoft.com/fwlink/?LinkId=245959) (https://go.microsoft.com/fwlink/?LinkId=245959)  
   
--   [Установка роли сервера на сервере под управлением установки Server Core Windows Server 2008 R2: Общие сведения о](https://go.microsoft.com/fwlink/?LinkId=245960) ()https://go.microsoft.com/fwlink/?LinkId=245960)  
+-   [Установка роли сервера на сервере под управлением установки Server Core Windows Server 2008 R2: Общие сведения о](https://go.microsoft.com/fwlink/?LinkId=245960) (https://go.microsoft.com/fwlink/?LinkId=245960)  
   
--   [Установка компонентов Windows на сервере под управлением установки Server Core Windows Server 2008 R2: Общие сведения о](https://go.microsoft.com/fwlink/?LinkId=245961) ()https://go.microsoft.com/fwlink/?LinkId=245961)  
+-   [Установка компонентов Windows на сервере под управлением установки Server Core Windows Server 2008 R2: Общие сведения о](https://go.microsoft.com/fwlink/?LinkId=245961) (https://go.microsoft.com/fwlink/?LinkId=245961)  
   
--   [Управление установкой Server Core. Общие сведения о](https://go.microsoft.com/fwlink/?LinkId=245962) ()https://go.microsoft.com/fwlink/?LinkId=245962)  
+-   [Управление установкой Server Core. Общие сведения о](https://go.microsoft.com/fwlink/?LinkId=245962) (https://go.microsoft.com/fwlink/?LinkId=245962)  
   
--   [Администрирование установки Server Core](https://go.microsoft.com/fwlink/?LinkId=245963) ()https://go.microsoft.com/fwlink/?LinkId=245963)  
+-   [Администрирование установки Server Core](https://go.microsoft.com/fwlink/?LinkId=245963) (https://go.microsoft.com/fwlink/?LinkId=245963)  
   
 ##  <a name="install-updates"></a>Установка обновлений  
  Этот раздел содержит сведения об установке обновлений для [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] на компьютере под управлением Windows Server Core. Пользователям рекомендуется своевременно оценивать и устанавливать последние обновления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , чтобы обеспечить наличие последних обновлений безопасности для систем. Дополнительные сведения об установке [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] на компьютере под управлением Windows Server Core см. в разделе [Установка SQL Server 2014 на Server Core](install-sql-server-on-server-core.md).  
