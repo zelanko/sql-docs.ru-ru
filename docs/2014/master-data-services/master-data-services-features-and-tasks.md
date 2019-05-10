@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 7b614f31292999dd5424935d57e4cd1412dee864
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c648a1f48396a40db0451de14facd342a8bfa797
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62764846"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65482892"
 ---
 # <a name="master-data-services-features-and-tasks"></a>Функции и задачи служб Master Data Services
   Сведения об использовании [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] для управления основными данными организации. Сведения о создании и обработке объектов модели, которые являются контейнерами для данных. Сведения об организации и обслуживании основных данных. Сведения об импорте и экспорте основных данных, а также о совместном использовании моделей в тестовой и рабочей средах. Наконец, сведения о разработке пользовательских приложений, обращающихся к веб-службе [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  

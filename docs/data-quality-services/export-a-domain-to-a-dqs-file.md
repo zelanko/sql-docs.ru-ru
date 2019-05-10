@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: eba10d3d-b5c4-447b-8a30-fa07996cb28e
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 1348b0a08f8e3725cc7a3e7d18e97ded02652028
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: fa750d7cba97b0b81f74232c7d617846d62951cb
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010265"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65487366"
 ---
 # <a name="export-a-domain-to-a-dqs-file"></a>Экспорт домена в файл .dqs
 
@@ -35,7 +35,7 @@ ms.locfileid: "56010265"
 ###  <a name="Prerequisites"></a> Предварительные требования  
  Чтобы экспортировать домен в файл данных .dqs, необходимо предварительно создать и выбрать одиночный домен или составной домен, содержащий несколько одиночных доменов. Файл DQS не требуется, он будет создан в процессе экспорта.  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
 ####  <a name="Permissions"></a> Permissions  
  Для экспорта домена в файл данных .dqs необходимы роли dqs_kb_editor или dqs_administrator в базе данных DQS_MAIN.  
