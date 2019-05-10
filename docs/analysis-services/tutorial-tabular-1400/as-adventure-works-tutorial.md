@@ -1,6 +1,6 @@
 ---
-title: Учебник по службам Analysis Services Adventure Works (1400) | Документация Майкрософт
-ms.date: 03/08/2019
+title: Учебник по службам Analysis Services Adventure Works Internet Sales (1400) | Документация Майкрософт
+ms.date: 05/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -10,14 +10,14 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: d4fae7f55543be52342692d344f250f8e08ba877
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 39d4c0e19d89438aa08ff2f7ead24184196d5412
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685491"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503276"
 ---
-# <a name="tabular-modeling-1400-compatibility-level"></a>Табличное моделирование (с уровнем совместимости 1400)
+# <a name="adventure-works-internet-sales-tutorial-1400"></a>Учебник по Adventure Works Internet Sales (1400)
 
 [!INCLUDE[ssas-appliesto-sql2017-later-aas](../../includes/ssas-appliesto-sql2017-later-aas.md)]
 
@@ -47,7 +47,7 @@ ms.locfileid: "57685491"
   
 -   Сервер Azure Analysis Services или сервером SQL Server 2017 Analysis Services в табличном режиме. Зарегистрируйтесь для получения бесплатной [пробной версии служб Azure Analysis Services](https://azure.microsoft.com/services/analysis-services/) и [создание сервера](https://docs.microsoft.com/azure/analysis-services/analysis-services-create-server) или загрузить бесплатные [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 
--   [Хранилище данных SQL Azure](https://docs.microsoft.com/azure/sql-data-warehouse/create-data-warehouse-portal) с **образца базы данных AdventureWorksDW**, или хранилище данных на локальном SQL Server с [образец базы данных AdventureWorksDW](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks). При установке хранилища данных SQL Server в локальной базе данных AdventureWorksDW, используйте версию образец БД, соответствующую в вашей версии сервера. 
+-   [Хранилище данных SQL Azure](https://docs.microsoft.com/azure/sql-data-warehouse/create-data-warehouse-portal) с **образца базы данных AdventureWorksDW**, или хранилище данных на локальном SQL Server с [образец базы данных AdventureWorksDW](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks). При установке хранилища данных SQL Server в локальной базе данных AdventureWorksDW, используйте версию образца базы данных, соответствующую в вашей версии сервера. 
 
     **Внимание!** Если установить образец базы данных в хранилище данных SQL Server в локальной и развернуть модель на сервере служб Azure Analysis Services, [локальный шлюз данных](https://docs.microsoft.com/azure/analysis-services/analysis-services-gateway) является обязательным.
 

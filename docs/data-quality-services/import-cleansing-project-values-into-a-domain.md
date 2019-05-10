@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.kb.importprojectvalues.f1
 ms.assetid: f23e38e2-39e0-42d7-abd5-34d8fcca5d2a
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 5ee0818babb7fb973aed7e61c5efc4b42600af5a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: 5153aebb1598a3cba9ff860654e2dae9ae7f33d8
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031725"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65487317"
 ---
 # <a name="import-cleansing-project-values-into-a-domain"></a>Импорт значений проекта очистки в домен
 
@@ -34,7 +34,7 @@ ms.locfileid: "56031725"
   
 -   Необходимо, чтобы проект очистки в клиенте Data Quality Client или пакете служб Integration Services с компонентом очистки DQS успешно завершился.  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
 ####  <a name="Permissions"></a> Permissions  
  Для импорта знаний служб DQS, собранных в процессе очистки, в домен необходимо быть членом роли dqs_kb_editor или dqs_administrator в базе данных DQS_MAIN.  
@@ -114,7 +114,7 @@ ms.locfileid: "56031725"
   
 -   Импортировать значения из проекта можно только тогда, когда база знаний имеет состояние «в обработке» и заблокирована пользователем, выполняющим импорт.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Очистка данных](../data-quality-services/data-cleansing.md)   
  [Преобразование "Очистка DQS"](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)  
   

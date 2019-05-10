@@ -1,5 +1,5 @@
 ---
-title: Задача 7. Создание составного домена | Документация Майкрософт
+title: Задача 7. Создание составного домена | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: ae778647-1df0-4952-9a69-0ef6177eea9c
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: c48144ca3720565c3c745ffd8aa39b0896e1fb66
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bbc00117e10e48adbde37b9f0561610feff8f87e
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62866293"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488966"
 ---
-# <a name="task-7-creating-a-composite-domain"></a>Задача 7. Создание составного домена
+# <a name="task-7-creating-a-composite-domain"></a>Задача 7. Создание составного домена
   В этой задаче создается составной домен, **проверка адреса**, который состоит из **строка адреса**, **Город**, **состояние**и  **ZIP-** доменов. Составной домен позволяет определить междоменное правило, включающее несколько доменов. Есть и другие преимущества составных доменов, например возможность анализировать значение поля в нескольких доменах.  Например, значение для поля «Полное имя» может быть проанализировано в отдельных доменах «Имя», «Отчество» и «Фамилия». В этом учебнике вы определяете только междоменное правило. См. в разделе [управление составным доменом](https://msdn.microsoft.com/library/hh510399.aspx) для получения дополнительных сведений.  
   
 1.  В левой области щелкните **создать составной домен** на панели инструментов.  

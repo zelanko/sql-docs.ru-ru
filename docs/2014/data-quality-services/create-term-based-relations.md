@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.dm.kbtermsbased.f1
 ms.assetid: 66db9277-d892-4dae-8a82-060fd3ba6949
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 1b276f913c70619933d5f317f322fc840cc4d672
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 54a899036513854d8a091165646b6fb4a955c962
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62756443"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65480818"
 ---
 # <a name="create-term-based-relations"></a>Создание связей на основе термина
   В этом разделе описано создание связей на основе термина для домена в [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Связь на основе термина (TBR) позволяет исправить термин, являющийся частью значения в домене. Это позволяет считать идентичными синонимами несколько значений, идентичных по написанию во всем, кроме отдельных частей. Например, вы можете задать связь на основе термина, которая изменяет термин Inc. на Incorporated. Термин Inc. будет заменяться при каждом его появлении в домене. Экземпляры Contoso, Inc. будут заменяться на Contoso, Incorporated, и эти два значения станут рассматриваться как точные синонимы.  

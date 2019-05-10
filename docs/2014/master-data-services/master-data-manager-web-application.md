@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 8eac727c-2304-4612-bc1f-14539295b4b3
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 20783b06559eab97cec56b527c5c8ab0f13518e9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3c8777250946ad689c324314ecbbdff7bf9dcc9b
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62923886"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65482904"
 ---
 # <a name="master-data-manager-web-application"></a>Веб-приложение диспетчера основных данных
   Веб-приложение [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] используется администраторами для выполнения административных задач. К примеру, только администраторы могут создавать модели, бизнес-правила или версии данных. Дополнительные сведения об администраторах см. в разделе [Администраторы (службы Master Data Services)](administrators-master-data-services.md).  

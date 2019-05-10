@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 41ac0e62-860a-4905-a318-68d6f814fb59
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 571f0bbd06c141173e7717e304722eb7d4bcd346
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 063e68b8efad6227643d6309f08bcf3c6bf9c38c
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62765107"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65479325"
 ---
 # <a name="integration-management-functional-area-master-data-manager"></a>Функциональная область управления интеграцией (диспетчер основных данных)
   В функциональной области «Управление интеграцией» администраторы могут выполнять импорт данных из промежуточных таблиц и создавать представления подписки для систем подписки. Дополнительные сведения об администраторах см. в разделе [Администраторы (службы Master Data Services)](administrators-master-data-services.md).  

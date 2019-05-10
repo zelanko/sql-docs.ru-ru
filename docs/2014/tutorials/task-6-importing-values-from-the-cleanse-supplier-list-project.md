@@ -1,5 +1,5 @@
 ---
-title: Задача 6. Импорт значений из проекта очистки списка поставщиков | Документация Майкрософт
+title: Задача 6. Импорт значений из проекта очистки списка поставщиков | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: fec0deef-a729-4ff1-b709-72d2b3f407ac
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 0780636d3bcaecfe0519192bd450bb538d78bbf9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f6b90a36238cd4a02e86d49125ee662f07d32882
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62866788"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489098"
 ---
-# <a name="task-6-importing-values-from-the-cleanse-supplier-list-project"></a>Задача 6. Импорт значений из проекта очистки списка поставщиков
+# <a name="task-6-importing-values-from-the-cleanse-supplier-list-project"></a>Задача 6. Импорт значений из проекта очистки списка поставщиков
   В этой задаче вы импортируете наборы знаний служб DQS, полученные в процессе очистки. Дополнительные сведения см. в разделе [Импорт значений проекта очистки в домен](https://msdn.microsoft.com/library/hh479581.aspx) . Вы также экспортируете базу знаний в файл служб DQS перед публикацией обновленной базы знаний **Поставщики** .  
   
 1.  На главной странице **клиента DQS**щелкните **правой кнопкой** рядом с элементом **Поставщики** в разделе **Последние базы знаний** и выберите команду **Управление доменами**.  

@@ -18,12 +18,12 @@ ms.assetid: 0fe7d554-6b67-4d55-9d3e-4096802c47f8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b57c4dfe7a0b798801968acb8afa7b5a2b0341de
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d2d3cc319a99c9e1b157e5b6bc06cabea2dd19a7
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747032"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65450059"
 ---
 # <a name="spoasetproperty-transact-sql"></a>sp_OASetProperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ sp_OASetProperty objecttoken , propertyname , newvalue [ , index... ]
  Дополнительные сведения о кодах возврата HRESULT см. в разделе [OLE Automation коды возврата и сведения об ошибках](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
   
 ## <a name="permissions"></a>Разрешения  
- Необходимо членство в предопределенной роли сервера **sysadmin** .  
+ Требуется членство в **sysadmin** предопределенной роли сервера или разрешение на выполнение непосредственно в этой хранимой процедуры. `Ole Automation Procedures` Конфигурация должна быть **включена** для использования любой системной процедуры, связанные с OLE-автоматизации.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере задается `HostName` свойство (созданного ранее **SQLServer** объекта) на новое значение.  

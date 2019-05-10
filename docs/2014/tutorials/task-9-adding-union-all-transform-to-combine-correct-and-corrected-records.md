@@ -1,5 +1,5 @@
 ---
-title: Задача 9. Добавление объединить все преобразования для объединения верных и исправленных записей | Документация Майкрософт
+title: Задача 9. Добавление объединить все преобразования для объединения верных и исправленных записей | Документация Майкрософт
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 24ba466d-a7d3-49e7-9111-b348399c9e58
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 2a3861e7de24e4fdf43ea11cf447b448c9d17b48
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 93b160b6e513ad866126df8b401b82ee1270be84
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62866437"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489653"
 ---
-# <a name="task-9-adding-union-all-transform-to-combine-correct-and-corrected-records"></a>Задача 9. Добавление объединить все преобразования для объединения верных и исправленных записей
+# <a name="task-9-adding-union-all-transform-to-combine-correct-and-corrected-records"></a>Задача 9. Добавление преобразования "Объединить все" для объединения верных и исправленных записей
   В этой задаче в поток данных добавляется преобразование «Объединить все». Преобразование «Объединить все» объединяет несколько входов в один выход. В вашем сценарии это преобразование позволяет объединить верные и исправленные записи в одном потоке.  
   
 1.  Перетащите **объединить все** преобразования из **распространенных** раздел **область элементов служб SSIS** для **потока данных** вкладку и поместите его под **Выбор верных и исправленных записей**.  

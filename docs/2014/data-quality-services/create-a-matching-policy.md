@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.dqs.kb.kbmatchingmap.f1
 - sql12.dqs.kb.kbmatchingpolicy.f1
 ms.assetid: cce77a06-ca31-47b6-8146-22edf001d605
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b5fff7c8804feab436271d60f3e5542b372ada60
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f0623f79c3d17f3e350c151d64bb00372e3ffe56
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62793172"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65481026"
 ---
 # <a name="create-a-matching-policy"></a>Создание политики сопоставления
   В этом разделе описывается создание политики сопоставления в базе знаний в службах [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Подготовка процесса сопоставления в DQS с помощью выполнения операции политики сопоставления на образце данных. В данной операции создается и проверяется одно или несколько правил сопоставления в политике, затем публикуется база знаний, что делает правила сопоставления доступными для общего пользования. В базе знаний может быть только одна политика сопоставления, но эта политика может содержать несколько правил сопоставления.  
