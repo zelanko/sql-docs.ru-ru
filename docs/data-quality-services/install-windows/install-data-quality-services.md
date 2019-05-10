@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 486e4216-a946-4c6e-828c-61bc905f7ec1
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 677432f74ac67ecdcc835520cf4cfc208cbc33de
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: 6834e3dd223f8b27a8c038e58f0e4121a670b9c3
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024725"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65487428"
 ---
 # <a name="install-data-quality-services"></a>Установка служб Data Quality Services
 
@@ -26,7 +26,7 @@ ms.locfileid: "56024725"
   
 |Компонент DQS|Описание|  
 |-------------------|-----------------|  
-|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] устанавливается поверх компонента [!INCLUDE[ssNoversion](../../includes/ssNoVersion-md.md)] Database Engine и включают три базы данных: базы данных DQS_MAIN, DQS_PROJECTS и DQS_STAGING_DATA. База данных DQS_MAIN содержит хранимые процедуры DQS, ядро DQS и опубликованные базы знаний. База данных DQS_PROJECTS содержит сведения о проекте служб DQS. DQS_STAGING_DATA представляет собой промежуточную область для копирования источника данных с целью выполнения операций DQS и последующего экспорта обработанных данных.|  
+|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] устанавливается поверх компонента [!INCLUDE[ssNoversion](../../includes/ssNoVersion-md.md)] компонент Database Engine и включает три базы данных: DQS_MAIN, DQS_PROJECTS и DQS_STAGING_DATA. База данных DQS_MAIN содержит хранимые процедуры DQS, ядро DQS и опубликованные базы знаний. База данных DQS_PROJECTS содержит сведения о проекте служб DQS. DQS_STAGING_DATA представляет собой промежуточную область для копирования источника данных с целью выполнения операций DQS и последующего экспорта обработанных данных.|  
 |[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]|[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] — это автономное приложение, которое позволяет подключаться к [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]и имеет наглядный графический пользовательский интерфейс, используемый в операциях обеспечения качества данных и выполнения других административных задач служб DQS.|  
   
 > [!IMPORTANT]  
@@ -38,11 +38,11 @@ ms.locfileid: "56024725"
   
  Установка DQS представляет собой процесс из трех частей.  
   
--   [Предварительная подготовка](#PreInstallationTasks). Перед установкой DQS проверьте требования к системе.  
+-   [Предварительная подготовка](#PreInstallationTasks). Проверьте системные требования перед установкой DQS.  
   
--   [Задачи по установке служб Data Quality Services](#DQSInstallation). Установите службы DQS с помощью программы установки SQL Server.  
+-   [Задачи по установке служб Data Quality Services](#DQSInstallation). Установите DQS с помощью программы установки SQL Server.  
   
--   [Действия после установки](#PostInstallationTasks). Для завершения установки служб DQS после окончания работы программы установки SQL Server выполните следующие задачи.  
+-   [Действия после установки](#PostInstallationTasks). Выполните следующие задачи после окончания работы программы установки SQL Server для завершения установки DQS.  
   
 > [!NOTE]  
 >  Этот раздел не содержит инструкций по запуску программы установки из командной строки. Дополнительные сведения о параметрах командной строки для установки [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] и клиента см. в разделе [Параметры компонентов](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Feature) статьи [Установка SQL Server из командной строки](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
@@ -52,7 +52,7 @@ ms.locfileid: "56024725"
   
 |Компонент DQS|Минимальные требования к системе|  
 |-------------------|---------------------------------|  
-|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|Память (ОЗУ): Минимум 2 ГБ, рекомендуется 4 ГБ и более.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] Компонент Database Engine. Дополнительные сведения см. в статье [Установка компонентов SQL Server Database Engine](../../database-engine/install-windows/install-sql-server-database-engine.md).|  
+|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|Память (ОЗУ): Минимальные: 2 ГБ, рекомендуется 4 ГБ и более<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] Компонент Database Engine. Дополнительные сведения см. в статье [Установка компонентов SQL Server Database Engine](../../database-engine/install-windows/install-sql-server-database-engine.md).|  
 |[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]|Платформа .NET Framework 4.0 (при ее отсутствии устанавливается во время установки клиента [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] )<br /><br /> Internet Explorer 6.0 с пакетом обновления 1 (SP1) или более поздняя версия.|  
   
 > [!IMPORTANT]  
@@ -115,7 +115,7 @@ ms.locfileid: "56024725"
      Дополнительные сведения см. в разделе  
                     [Предоставление доступа к данным для операций со службами DQS](../../data-quality-services/install-windows/access-data-for-the-dqs-operations.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Видео: Install and Configure DQS (Установка и настройка служб DQS)](https://go.microsoft.com/fwlink/?LinkId=238241)   
  [Обновление сборок SQLCLR после обновления .NET Framework](../../data-quality-services/install-windows/upgrade-sqlclr-assemblies-after-net-framework-update.md)   
  [Экспорт и импорт баз знаний DQS с помощью DQSInstaller.exe](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)   

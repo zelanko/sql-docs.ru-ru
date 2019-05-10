@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 598deb57-e0cc-4e0a-aeb1-94432c094c67
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 1cbaacd23fcaa1e28d6cce6d64a168d0fab4befc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 57a5044ccee040ef1eba95925c689f48739c259f
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63250216"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65484663"
 ---
 # <a name="task-2-uploading-supplier-data-to-mds-using-mds-add-in-for-excel"></a>Задача 2. Отправка данных поставщика в MDS с помощью надстройки MDS для Excel
   В этой задаче очищенные и поставщика данных для публикации **MDS** с помощью **надстройки MDS для Excel**. Создать сущность с именем **поставщика** в **поставщики** модель, созданную на предыдущем занятии. Сущность будет иметь атрибуты для каждого столбца в файле Excel. Атрибуты Code и Name сущности Supplier соответствуют **SupplierID** и **Supplier Name** столбцов в Excel.  

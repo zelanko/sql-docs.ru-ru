@@ -1,5 +1,5 @@
 ---
-title: Задача 4. Управление и просмотр результатов | Документация Майкрософт
+title: Задача 4. Управление и просмотр результатов | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: ecc3ba7e-fecf-478f-8825-6e4764b00e99
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: c719b7d4bcd9b792beaa59fdbcf69783d7d3259d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2df7517a8043269efe40d21b112100edaf9e847f
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62745635"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489458"
 ---
-# <a name="task-4-manaing-and-viewing-results"></a>Задача 4. Управление и просмотр результатов
+# <a name="task-4-manaing-and-viewing-results"></a>Задача 4. Управление и просмотр результатов
   В этой задаче будет выполнен просмотр результатов автоматизированной очистки, а также интерактивная очистка данных поставщика. См. в разделе [этап интерактивной очистки](https://msdn.microsoft.com/library/hh213061.aspx#Interactive) для получения дополнительных сведений.  
   
 1.  Выберите **контактный адрес электронной почты** домен из списка доменов.  

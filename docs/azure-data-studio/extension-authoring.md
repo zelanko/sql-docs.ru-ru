@@ -2,21 +2,21 @@
 title: Создание расширений
 titleSuffix: Azure Data Studio
 description: Дополнительные сведения о создании и добавлении расширения в студию данных Azure
-ms.custom: seodec18
-ms.date: 09/24/2018
-ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 54036ccf8d8b47eedede1d2ddfe5d85b6dbee351
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.reviewer: alayu; sstein
+ms.custom: seodec18
+ms.date: 09/24/2018
+ms.openlocfilehash: d7d51459c49bd170b676a219474d35d8e50c1862
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63237719"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105132"
 ---
 # <a name="extend-the-functionality-by-creating-azure-data-studio-extensions"></a>Расширить функциональные возможности путем создания расширений Studio данных Azure
 

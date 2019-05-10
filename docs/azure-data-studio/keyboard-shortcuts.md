@@ -2,21 +2,21 @@
 title: Создание и Настройка сочетаний клавиш
 titleSuffix: Azure Data Studio
 description: Узнайте, как создание и Настройка сочетаний клавиш в студии данных Azure
-ms.custom: seodec18
-ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
 ms.topic: conceptual
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: dd58bb28fe5969fcf0553576d70dd62314f5f974
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.reviewer: alayu; sstein
+ms.custom: seodec18
+ms.date: 09/24/2018
+ms.openlocfilehash: 9ce8b817a704e6bae6d56a47b49f78fd1c17a2d3
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63238911"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65104754"
 ---
 # <a name="keyboard-shortcuts-in-includename-sosincludesname-sosmd"></a>Сочетания клавиш в [!INCLUDE[name-sos](../includes/name-sos.md)]
 

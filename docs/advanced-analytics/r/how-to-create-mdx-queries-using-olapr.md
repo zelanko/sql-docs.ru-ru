@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 1bee5741d00e4043314c36800cd4fe5cf61aab48
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c0b9cb6e9b52ff1823a613c7e81f7b026c22948f
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62503741"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65357517"
 ---
 # <a name="how-to-create-mdx-queries-in-r-using-olapr"></a>Создание запросов многомерных Выражений в R с помощью olapR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "62503741"
 
 Следующие примеры основаны на данных киоска и куба проекта AdventureWorks, так как этот проект является широко доступны в нескольких версиях, включая файлы резервных копий, которые могут быть легко возвращены к службам Analysis Services. Если у вас нет существующего куба, получите образец куба при помощи любого из этих параметров:
 
-+ Создайте куб, который используется в этих примерах, следуя руководству служб Analysis Services вплоть до занятия 4: [Создание куба OLAP](../../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)
++ Создайте куб, который используется в этих примерах, следуя руководству служб Analysis Services вплоть до занятия 4: [Создание куба OLAP](../../analysis-services/multidimensional-tutorial/multidimensional-modeling-adventure-works-tutorial.md)
 
 + Скачать существующий куб в качестве резервной копии и восстановить его на экземпляре служб Analysis Services. Например этот сайт обеспечивает полностью обработанный куб в формате ZIP. [Adventure Works многомерной модели SQL 2014](https://msftdbprodsamples.codeplex.com/downloads/get/882334). Извлеките файл, а затем восстановите его в своем экземпляр SSAS. Дополнительные сведения см. в разделе [резервного копирования и восстановления](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md), или [командлет Restore-ASDatabase](../../analysis-services/powershell/restore-asdatabase-cmdlet.md).
 

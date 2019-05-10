@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: a2ace569180006f54461631848ecbf5342b2c1e3
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
-ms.translationtype: HT
+ms.openlocfilehash: 99e9c837250c6020bb91c376a6ec34c5e5847f2b
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63472043"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099484"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Развертывание кластеров больших данных SQL Server в Kubernetes
 
@@ -133,12 +133,12 @@ mssqlctl cluster create
 
 ## <a id="env"></a> Переменные среды
 
-Для параметров безопасности, которые не хранятся в файле конфигурации развертывания используются следующие переменные среды.
+Для параметров безопасности, которые не хранятся в файле конфигурации развертывания используются следующие переменные среды. Обратите внимание на то, что параметры Docker, за исключением учетных данных может быть задано в файле конфигурации.
 
 | Переменная среды | Описание |
 |---|---|---|---|
-| **DOCKER_REGISTRY** | Частный реестр, где хранятся образы, используемые для развертывания кластера. |
-| **DOCKER_REPOSITORY** | Частный репозиторий в реестре выше, где хранятся образы. |
+| **DOCKER_REGISTRY** | Частный реестр, где хранятся образы, используемые для развертывания кластера. Используйте *private repo.microsoft.com* для ducration условная общедоступная Предварительная версия.|
+| **DOCKER_REPOSITORY** | Частный репозиторий в реестре выше, где хранятся образы. Используйте *mssql закрытой предварительной версии* в течение условная общедоступная Предварительная версия.|
 | **DOCKER_USERNAME** | Имя пользователя для доступа к образы контейнеров, в случае, если они хранятся в частный репозиторий. |
 | **DOCKER_PASSWORD** | Пароль для доступа к выше частный репозиторий. |
 | **DOCKER_IMAGE_TAG** | Метка, используемая для добавлять теги к изображениям. По умолчанию используется **последнюю**, но мы рекомендуем использовать тег, соответствующий выпуск во избежание проблем с совместимостью версии. |
@@ -152,12 +152,12 @@ mssqlctl cluster create
 В следующем примере показано, как задать переменные среды для Linux (bash) и Windows (PowerShell):
 
 ```bash
-export CONTROLLER_USERNAME=<controller_user>
+export CONTROLLER_USERNAME=admin
 export CONTROLLER_PASSWORD=<password>
-export DOCKER_REGISTRY=<docker-registry>
-export DOCKER_REPOSITORY=<docker-repository>
 export MSSQL_SA_PASSWORD=<password>
 export KNOX_PASSWORD=<password>
+export DOCKER_REGISTRY=private-repo.microsoft.com
+export DOCKER_REPOSITORY=mssql-private-preview
 export DOCKER_USERNAME=<docker-username>
 export DOCKER_PASSWORD=<docker-password>
 export DOCKER_IMAGE_TAG=ctp2.5
@@ -166,10 +166,10 @@ export DOCKER_IMAGE_TAG=ctp2.5
 ```PowerShell
 SET CONTROLLER_USERNAME=admin
 SET CONTROLLER_PASSWORD=<password>
-SET DOCKER_REGISTRY=<docker-registry>
-SET DOCKER_REPOSITORY=<docker-repository>
 SET MSSQL_SA_PASSWORD=<password>
 SET KNOX_PASSWORD=<password>
+SET DOCKER_REGISTRY=private-repo.microsoft.com
+SET DOCKER_REPOSITORY=mssql-private-preview
 SET DOCKER_USERNAME=<docker-username>
 SET DOCKER_PASSWORD=<docker-password>
 SET DOCKER_IMAGE_TAG=ctp2.5

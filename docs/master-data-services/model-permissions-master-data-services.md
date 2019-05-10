@@ -11,15 +11,15 @@ helpviewer_keywords:
 - models [Master Data Services], permissions
 - permissions [Master Data Services], models
 ms.assetid: 210f440b-2cc1-4c49-94b1-3a97e2af7bc3
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: c63ffb3a8fcb32169d3ec35eabe1df1970022e19
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 1f42513c7f8fa52fddfa9d3f77f537d81a34c0bc
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52819173"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65484086"
 ---
 # <a name="model-permissions-master-data-services"></a>Разрешения модели (службы Master Data Services)
 

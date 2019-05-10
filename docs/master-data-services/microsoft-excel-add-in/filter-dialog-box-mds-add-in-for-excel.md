@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: b987b141-5abf-4161-a073-4cfc3e7f5aae
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 0ae5e6ad40a9a4c071ca452d893ca6644dae133d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+ms.openlocfilehash: 879ee3d55a178e2ef5fc7feca3f6ef475e683a8c
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403899"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65477166"
 ---
 # <a name="filter-dialog-box-mds-add-in-for-excel"></a>Диалоговое окно «Фильтр» (надстройка MDS для Excel)
 
@@ -24,7 +24,7 @@ ms.locfileid: "52403899"
 
   В [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]воспользуйтесь диалоговым окном **Фильтр** , чтобы сузить список данных, управляемых MDS, прежде чем загружать их в Excel.  
   
- В этом диалоговом окне имеется три раздела: **Столбцы**, **Строки**и **Сводка**.  
+ Это диалоговое окно содержит три раздела: **Столбцы**, **строк**, и **Сводка**.  
   
 ## <a name="columns"></a>Столбцы  
  В разделе **Столбцы** можно определить атрибуты (столбцы), которые должны отображаться в Excel.  
@@ -43,7 +43,7 @@ ms.locfileid: "52403899"
   
 |Имя элемента управления|Описание|  
 |------------------|-----------------|  
-|attribute|Отображает атрибут, по которому необходимо фильтровать. Если в списке нет атрибутов, это означает, что они не добавлены.<br /><br /> Примечание. Можно выполнять фильтрацию по атрибутам, которые не планируется показывать на листе.|  
+|attribute|Отображает атрибут, по которому необходимо фильтровать. Если в списке нет атрибутов, это означает, что они не добавлены.<br /><br /> Примечание. Можно фильтровать по атрибутам, которые не планируется показывать на листе.|  
 |Оператор|Содержит операторы, соответствующие типу выбранного атрибута. Дополнительные сведения см. в разделе [Операторы фильтров (службы Master Data Services)](../../master-data-services/filter-operators-master-data-services.md).|  
 |Критерии|Условие, по которому нужно выполнить фильтрацию.|  
 |Обновить сводку|При открытии больших баз данных щелкните, чтобы выбрать обновление в разделе **Сводка** сведений об объемах данных, которые будут загружены.|  
@@ -64,6 +64,6 @@ ms.locfileid: "52403899"
   
 ## <a name="see-also"></a>См. также:  
  [Фильтрация данных перед их экспортом (надстройка MDS для Excel)](../../master-data-services/microsoft-excel-add-in/filter-data-before-exporting-mds-add-in-for-excel.md)   
- [Обзор экспорта данных в Excel (надстройка MDS для Excel)](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
+ [Обзор: экспорт данных в Excel (надстройка MDS для Excel)](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
   
   

@@ -1,7 +1,7 @@
 ---
 title: Ограничения и известные проблемы для служб SSIS в Linux | Документация Майкрософт
 description: В этой статье описываются ограничения и известные проблемы для SQL Server Integration Services (SSIS) на компьютерах с Linux
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 ms.reviewer: douglasl
 manager: craigg
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: cb186426441092ddfcb350d6c8ad6c5e65a972d6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 95a2918e2461fec5cdbf0261679c28cfb1693300
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839992"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65487766"
 ---
 # <a name="limitations-and-known-issues-for-ssis-on-linux"></a>Ограничения и известные проблемы для служб SSIS в Linux
 
@@ -28,7 +28,7 @@ ms.locfileid: "47839992"
 Следующие функции не поддерживаются в этом выпуске служб SSIS в Linux:
   - База данных каталога служб SSIS
   - Выполнение запланированного пакетов с агента SQL Server
-  - Проверка подлинности Windows.
+  - Проверка подлинности Windows
   - Компоненты независимых производителей
   - Система отслеживания измененных данных (CDC)
   - SSIS Scale Out
