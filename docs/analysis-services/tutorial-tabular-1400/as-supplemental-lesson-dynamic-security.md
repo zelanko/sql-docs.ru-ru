@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile"
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3fa566c26c95d84544ecd2dbb9f54c815f677e02
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 9fbc474dbf7621b0da68edb7b310bb55ffcde7d5
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685711"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64776088"
 ---
 # <a name="supplemental-lesson---dynamic-security"></a>Дополнительный урок. Динамическая безопасность
 
@@ -29,7 +29,7 @@ ms.locfileid: "57685711"
   
 Эти задачи являются уникальными для сценария табличной модели Adventure Works, но они не могут иметь прямого отношения к реальному сценарию. Каждое задание включает дополнительные сведения, описывающие цель задания.  
   
-Предполагаемое время выполнения данного занятия: **30 минут**  
+Предполагаемое время для выполнения этого занятия: **30 минут**  
   
 ## <a name="prerequisites"></a>предварительные требования  
 
@@ -43,7 +43,7 @@ ms.locfileid: "57685711"
   
 1.  В обозревателе табличных моделей > **источников данных**, щелкните правой кнопкой мыши подключение и нажмите кнопку **импортировать новые таблицы**.  
 
-    Если открылось диалоговое окно «Учетные данные олицетворения», введите учетные данные олицетворения, использованные на занятии 2: Добавление данных.
+    Если появится диалоговое окно учетных данных олицетворения, введите учетные данные олицетворения, которая использовалась в занятии 2: Добавление данных.
   
 2.  В навигаторе выберите **DimSalesTerritory** таблицы, а затем нажмите кнопку **ОК**.    
   
@@ -150,10 +150,9 @@ ms.locfileid: "57685711"
 9. Для **DimSalesTerritory** таблицы, введите следующую формулу:  
 
     ```  
-    ='Sales Territory'[Sales Territory Id]=LOOKUPVALUE('Employee Security'[Sales Territory Id], 
-      'Employee Security'[Login Id], USERNAME(), 
-      'Employee Security'[Sales Territory Id], 
-      'Sales Territory'[Sales Territory Id]) 
+    ='DimSalesTerritory'[SalesTerritoryKey]=LOOKUPVALUE('EmployeeSecurity'[SalesTerritoryId], 
+      'EmployeeSecurity'[LoginId], USERNAME(), 
+      'EmployeeSecurity'[SalesTerritoryId], 'DimSalesTerritory'[SalesTerritoryKey]) 
     ```
   
     В этой формуле функция LOOKUPVALUE возвращает все значения для столбца DimEmployeeSecurity [SalesTerritoryId], где EmployeeSecurity [LoginId] совпадает со значением текущего имени пользователя Windows, а EmployeeSecurity [SalesTerritoryId] — совпадает с DimSalesTerritory [SalesTerritoryId].  
