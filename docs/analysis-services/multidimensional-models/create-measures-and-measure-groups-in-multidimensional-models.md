@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9c963256ce1d2d0fa37c34d7ea96df60834f125f
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 357b7d9e6ec63de52c5a7128b60330ce53943251
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241972"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65357372"
 ---
 # <a name="create-measures-and-measure-groups-in-multidimensional-models"></a>Создание мер и групп мер в многомерных моделях
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "59241972"
   
 |||  
 |-|-|  
-|Мастер кубов|Запустите мастер кубов в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] для создания куба.<br /><br /> В обозревателе решений щелкните правой кнопкой мыши узел **Кубы** и выберите команду **Создать куб**. Справку по этим действиям см. в разделе [Многомерное моделирование (учебник по Adventure Works)](../../analysis-services/multidimensional-modeling-adventure-works-tutorial.md).<br /><br /> При создании куба на основе таблиц из существующего хранилища данных определения мер и групп мер материализуются в качестве части процесса создания куба. В мастере выберите, какие факты и таблицы фактов нужно использовать в качестве основы для объектов меры и группы мер в кубе.|  
+|Мастер кубов|Запустите мастер кубов в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] для создания куба.<br /><br /> В обозревателе решений щелкните правой кнопкой мыши узел **Кубы** и выберите команду **Создать куб**. Справку по этим действиям см. в разделе [Многомерное моделирование (учебник по Adventure Works)](../../analysis-services/multidimensional-tutorial/multidimensional-modeling-adventure-works-tutorial.md).<br /><br /> При создании куба на основе таблиц из существующего хранилища данных определения мер и групп мер материализуются в качестве части процесса создания куба. В мастере выберите, какие факты и таблицы фактов нужно использовать в качестве основы для объектов меры и группы мер в кубе.|  
 |Диалоговое окно создания меры|Если куб уже существует в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], дважды щелкните имя куба в обозревателе решений, чтобы открыть его в конструкторе кубов. В области "Меры" щелкните правой кнопкой мыши верхний узел, чтобы создать новую группу мер или новую меру с помощью указания исходной таблицы, столбца и типа агрегирования. Этот подход требует выбора метода агрегирования из фиксированного списка готовых функций. В разделе [Use Aggregate Functions](../../analysis-services/multidimensional-models/use-aggregate-functions.md) представлено описание наиболее часто используемых агрегатов.|  
 |вычисляемый элемент|Вычисляемые элементы позволяют добиться гибкости и широких возможностей анализа кубов в [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , так как можно управлять временем и способом их создания. Иногда мера требуется только временно — в течение сеанса пользователя или в среде Management Studio в рамках исследования.<br /><br /> В [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]откройте вкладку "Вычисления", чтобы создать новый вычисляемый элемент.<br /><br /> Выберите этот подход при создании меры на основе многомерного выражения. Дополнительные сведения см. [Построение мер в многомерных Выражениях](../../analysis-services/multidimensional-models/mdx/mdx-building-measures.md), [вычисления](../../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md), [вычисления в многомерных моделях](../../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md) и [основные принципы создания скриптов многомерных Выражений &#40;служб Analysis Services&#41; ](../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md).|  
 |Многомерные выражения или XMLA|В SQL Server Management Studio можно выполнять многомерные выражения или XMLA, чтобы изменить базу данных для включения новой вычисляемой меры. Этот подход полезен для нерегламентированной проверки данных после развертывания решения на сервере. См. раздел [Document and Script an Analysis Services Database](../../analysis-services/multidimensional-models/document-and-script-an-analysis-services-database.md).|  

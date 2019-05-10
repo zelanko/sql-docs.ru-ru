@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - versions [Master Data Services], changing name
 ms.assetid: cba8b814-155f-49c5-b636-afddc5b0de4f
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 7c77f802f7714e24345449405d0de75bd874a75f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 93f8af2203496e385ceaede559c99c337cf9651a
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777876"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65485298"
 ---
 # <a name="change-a-version-name-master-data-services"></a>Изменение имени версии (службы Master Data Services)
 
@@ -45,7 +45,7 @@ ms.locfileid: "52777876"
   
 4.  Нажмите клавишу ВВОД.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Подтверждение исправления проблемы, обнаруженной при проверке на соответствие бизнес-правилам (службы Master Data Services)](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)   
  [Блокировка версии (службы Master Data Services)](../master-data-services/lock-a-version-master-data-services.md)   
  [Фиксация версии (службы Master Data Services)](../master-data-services/commit-a-version-master-data-services.md)   
