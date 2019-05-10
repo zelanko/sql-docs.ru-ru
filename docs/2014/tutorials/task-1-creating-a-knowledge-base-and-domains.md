@@ -1,5 +1,5 @@
 ---
-title: Упражнение 1. Создание базы знаний и домены | Документация Майкрософт
+title: Задача 1. Создание базы знаний и домены | Документация Майкрософт
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 7d74a60b-8933-4038-bcbb-4e9dcc4f70e9
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: eeaebadd43fe1969ae1c728f8e2f8284ddf7f7ac
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 79edd8566f2b3c9b586bc8c8815e1d9bc586fb05
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62822213"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65481245"
 ---
-# <a name="task-1-creating-a-knowledge-base-and-domains"></a>Упражнение 1. Создание базы знаний и домены
+# <a name="task-1-creating-a-knowledge-base-and-domains"></a>Задача 1. Создание базы знаний и доменов
   В этой задаче вы создадите **поставщики** знаний и домены, используется для очистки и сопоставления данных, чтобы удалить повторяющиеся значения.  
   
 1.  Запустите **Data Quality Client**. Нажмите кнопку **запустить**, пункты **все программы**, нажмите кнопку **Microsoft SQL Server 2012**, нажмите кнопку **служб Data Quality Services**, а затем нажмите кнопку  **Клиент Data Quality**.  

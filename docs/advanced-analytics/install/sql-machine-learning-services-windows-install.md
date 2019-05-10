@@ -3,17 +3,17 @@ title: Установка SQL Server служб машинного обучен�
 description: R в SQL Server или Python на действия по установке SQL Server для служб SQL Server 2017 машинного обучения на Windows.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 02/28/2019
+ms.date: 05/03/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 4cd076ae79db7537235aa2a57fe4992ac0993473
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 088a553b28e968c1241486040de3c628fd6299cc
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748676"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65097293"
 ---
 # <a name="install-sql-server-machine-learning-services-on-windows"></a>Установка SQL Server службы машинного обучения на Windows
 
@@ -252,6 +252,7 @@ I will inform HeidiSteen  [GeneMi, 2019/01/17]
 * [Включить дополнительные сетевые протоколы](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)
 * [Включение удаленных подключений](../../database-engine/configure-windows/configure-the-remote-access-server-configuration-option.md)
 * [Создайте имя входа для SQLRUserGroup](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md)
+* [Управление дисковыми квотами](https://docs.microsoft.com/windows/desktop/fileio/managing-disk-quotas) во избежание внешних скриптов выполняемые задачи, которые исчерпания дискового пространства
 
 <a name="bkmk_configureAccounts"></a> 
 <a name="permissions-external-script"></a> 

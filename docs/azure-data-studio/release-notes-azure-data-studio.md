@@ -2,25 +2,40 @@
 title: Заметки о выпуске
 titleSuffix: Azure Data Studio
 description: Заметки о выпуске Azure Data Studio
-ms.custom: seodec18
-ms.date: 04/19/2019
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
 ms.topic: conceptual
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f142602efa4e2c0d7c12b4f5f7634f2a9b668cb3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.reviewer: alayu; sstein
+ms.custom: seodec18
+ms.date: 05/08/2019
+ms.openlocfilehash: ee445dcf1a427adc23c38c40430965712c52d4e9
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63143713"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65450024"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Заметки о выпуске для Azure Data Studio
 
 **[Скачайте и установите последний выпуск!](download.md)**
+
+## <a name="may-2019"></a>Мая 2019 г.
+
+8 мая 2019 &nbsp;  /  &nbsp; версии: 1.7.0 
+
+&nbsp;
+
+| Изменить | Сведения |
+| :----- | :------ |
+| Версия расширения сравнения схем | Сравнение схем является хорошо известной функцией в SQL Server Data Tools (SSDT), которая его основная причина использования для сравнения и визуализировать различия между базами данных и DACPAC-файлы и выполнять действия, чтобы сделать их одинаковыми. |
+| Переместить представление задач в окне вывода | Пользователи теперь могут просматривать состояние длительных задач, таких как резервное копирование, восстановление и сравнение схем в представление задач в окне вывода
+| Добавлена страница приветствия | &bull; &nbsp; Ссылки на общие действия, такие как новый запрос, новый файл новой записной книжки <br/>&bull; &nbsp; Ссылки на документацию и Github |
+| Усовершенствования SQL записной книжки | &bull; &nbsp; Усовершенствования отрисовки markdown, включая улучшенную поддержку заметок и таблиц <br/>&bull; &nbsp; Повышение удобства использования на панели инструментов <br/>&bull; &nbsp; Markdown ссылки для доверенных записных книжек больше не требуют Cmd или Ctrl + нажмите кнопку и можно щелкнуть непосредственно <br/>&bull; &nbsp; Усовершенствования в очистке процессов Jupyter после закрытия записных книжек и уменьшая число ошибок при запуске одновременно несколько записных книжек <br/>&bull; &nbsp; Усовершенствования подключений SQL записной книжки, чтобы ошибки не возникают при выполнении 2 записные книжки для той же базе данных <br/>&bull; &nbsp; Усовершенствования в записную книжку, автоматическая прокрутка в настоящий момент ячейку при нажатии кнопки запуска ячеек на панели инструментов <br/>&bull; &nbsp; Общие улучшения стабильности и производительности |
+| Разрешенные ошибки и проблемы. | См. в разделе [ошибок и проблем на GitHub](https://github.com/microsoft/azuredatastudio/milestone/31?closed=1). |
+| &nbsp; | &nbsp; |
 
 ## <a name="april-2019"></a>Апрель 2019 г.
 

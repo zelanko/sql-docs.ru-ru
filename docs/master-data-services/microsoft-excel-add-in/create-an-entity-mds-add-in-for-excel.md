@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: d354abb3-88fe-4b40-a374-f6256b84ffae
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 79a35e83a492a45f3683759445eafe815b43e789
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: ea995a4d0f188db2e958b3020da9646a6b069a21
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663742"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488235"
 ---
 # <a name="create-an-entity-mds-add-in-for-excel"></a>Создание сущности (надстройка MDS для Excel)
 
@@ -29,7 +29,7 @@ ms.locfileid: "47663742"
   
 -   необходимо иметь разрешение на доступ к функциональным областям **Администрирование системы** и **Обозреватель** ;  
   
--   необходимо быть администратором модели. Дополнительные сведения см. в статье [Administrators &#40;Master Data Services&#41;](../../master-data-services/administrators-master-data-services.md).  
+-   необходимо быть администратором модели. Дополнительные сведения см. в статье [Администраторы (службы Master Data Services)](../../master-data-services/administrators-master-data-services.md).  
   
 -   Должна существовать модель, в которой создается сущность. Дополнительные сведения см. в разделе [Создание модели (службы Master Data Services)](../../master-data-services/create-a-model-master-data-services.md).  
   
@@ -73,13 +73,13 @@ ms.locfileid: "47663742"
   
 12. Нажмите кнопку **ОК**. После успешного создания сущности отображается строка с новым заголовком, выделяются ячейки, а имя листа изменяется на имя сущности.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Следующие шаги  
   
 -   Для просмотра возникших ошибок в группе **Публикация и проверка** нажмите кнопку **Показать состояние**. Отображаются столбцы ValidationStatus и InputStatus. Дополнительные сведения см. в разделе [Проверка данных (надстройка MDS для Excel)](../../master-data-services/microsoft-excel-add-in/validating-data-mds-add-in-for-excel.md).  
   
 -   Убедитесь, что созданные атрибуты имеют запланированный тип данных.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Создание атрибута на основе домена (надстройка MDS для Excel)](../../master-data-services/microsoft-excel-add-in/create-a-domain-based-attribute-mds-add-in-for-excel.md)  
   
   

@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.dqs.matchingproject.export.f1
 - sql12.dqs.matchingproject.map.f1
 ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f020f30d651acd8ac9267b510d116af808d9b5e7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7c17f478c8c7735aca0100a2fd99d6315d923bad
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62792342"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65481090"
 ---
 # <a name="run-a-matching-project"></a>Запуск проекта сопоставления
   В этом разделе описано, как выполнить сопоставление данных в [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). В процессе сопоставления выявляются кластеры соответствующих друг другу записей согласно правилам сопоставления в политике сопоставления, одна запись из каждого кластера обозначается как «выжившая» согласно правилу выживания, и результаты экспортируются. Процесс сопоставления в службах DQS, называемый также удалением дубликатов, является автоматизированным, однако правила сопоставления можно создавать интерактивно, также можно выбирать правило выживания из нескольких вариантов, таким образом можно управлять процессом сопоставления.  

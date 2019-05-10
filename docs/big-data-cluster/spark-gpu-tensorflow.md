@@ -10,12 +10,12 @@ ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4913526270e919e95c2ff6dad73fa4b67693a038
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
-ms.translationtype: HT
+ms.openlocfilehash: 2d31736ee4dd68857e3afce678b6dd806701a82b
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63473306"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64774955"
 ---
 # <a name="deploy-a-big-data-cluster-with-gpu-support-and-run-tensorflow"></a>Развертывание кластера больших данных с поддержкой GPU и запустите TensorFlow
 
@@ -53,11 +53,11 @@ ms.locfileid: "63473306"
 1. Создание кластера Kubernetes в AKS при помощи [создать az aks](https://docs.microsoft.com/cli/azure/aks) команды. В следующем примере создается кластер Kubernetes с именем `gpucluster` в `sqlbigdatagroupgpu` группы ресурсов.
 
    ```azurecli
-   az aks create --name gpucluster --resource-group sqlbigdatagroupgpu --generate-ssh-keys --node-vm-size Standard_NC6 --node-count 3 --node-osdisk-size 50 --kubernetes-version 1.11.9 --location eastus
+   az aks create --name gpucluster --resource-group sqlbigdatagroupgpu --generate-ssh-keys --node-vm-size Standard_NC6s_v3 --node-count 3 --node-osdisk-size 50 --kubernetes-version 1.11.9 --location eastus
    ```
 
    > [!NOTE]
-   > Этот кластер использует **Standard_NC6** [размер виртуальной машины, оптимизированных для GPU](https://docs.microsoft.com/azure/virtual-machines/linux/sizes-gpu), которая является одной из специализированные виртуальные машины с одним или несколькими графическими процессорами NVIDIA. Дополнительные сведения см. в разделе [использования GPU для интенсивных вычислительных рабочих нагрузок в службе Azure Kubernetes (AKS)](https://docs.microsoft.com/azure/aks/gpu-cluster).
+   > Этот кластер использует **Standard_NC6s_v3** [размер виртуальной машины, оптимизированных для GPU](https://docs.microsoft.com/azure/virtual-machines/linux/sizes-gpu), которая является одной из специализированные виртуальные машины с одним или несколькими графическими процессорами NVIDIA. Дополнительные сведения см. в разделе [использования GPU для интенсивных вычислительных рабочих нагрузок в службе Azure Kubernetes (AKS)](https://docs.microsoft.com/azure/aks/gpu-cluster).
 
 1. Чтобы настроить kubectl для подключения к кластеру Kubernetes, выполните [az aks get-credentials](https://docs.microsoft.com/cli/azure/aks?view=azure-cli-latest#az-aks-get-credentials) команды.
 
@@ -69,7 +69,7 @@ ms.locfileid: "63473306"
 
 1. Используйте **kubectl** создать пространство имен Kubernetes с именем `gpu-resources`.
 
-   ```
+   ```bash
    kubectl create namespace gpu-resources
    ```
 
@@ -122,69 +122,31 @@ ms.locfileid: "63473306"
 
 1. Сейчас использование kubectl apply команду, чтобы создать DaemonSet. **NVIDIA устройства plugin-ds.yaml** должно быть в рабочем каталоге, когда вы выполните следующую команду:
 
-   ```
+   ```bash
    kubectl apply -f nvidia-device-plugin-ds.yaml
    ```
 
 ## <a name="deploy-the-big-data-cluster"></a>Развертывание кластера больших данных
 
-Для развертывания кластера больших данных SQL Server 2019 (Предварительная версия), который поддерживает графические процессоры, необходимо развернуть из реестра определенные docker и репозиторий. В частности, можно использовать разные значения для **DOCKER_REGISTRY**, **DOCKER_REPOSITORY**, **DOCKER_USERNAME**, **DOCKER_PASSWORD**, и **DOCKER_EMAIL**. В следующих разделах приведены примеры того, как задать переменные среды. Используйте разделы Windows или Linux в зависимости от платформы клиента, который вы используете для развертывания кластера больших данных.
+Для развертывания кластера больших данных SQL Server 2019 (Предварительная версия), который поддерживает графические процессоры, необходимо развернуть из реестра определенные docker и репозиторий. Следующие переменные среды отличаются для развертывания GPU:
 
-### <a name="windows"></a>Windows
+| Переменная среды | Значение |
+|---|---|
+| **DOCKER_REGISTRY** | `marinchcreus3.azurecr.io` |
+| **DOCKER_REPOSITORY** | `ctp25-8-0-61-gpu` |
+| **DOCKER_USERNAME** | `<your username, gpu-specific credentials provided by Microsoft>` |
+| **DOCKER_PASSWORD** | `<your password, gpu-specific credentials provided by Microsoft>` |
 
-   1. С помощью окна командной строки (не PowerShell), настройте следующие переменные среды. Не используйте кавычки вокруг значений.
+Используйте **mssqlctl** для развертывания кластера, выберите конфигурацию aks-dev-test.json и поставок, настраиваемые значения выше, при появлении запроса.
 
-      ```cmd
-      SET ACCEPT_EULA=yes
-      SET CLUSTER_PLATFORM=aks
+```bash
+mssqlctl cluster create
+```
 
-      SET CONTROLLER_USERNAME=<controller_admin_name - can be anything>
-      SET CONTROLLER_PASSWORD=<controller_admin_password - can be anything, password complexity compliant>
-      SET KNOX_PASSWORD=<knox_password - can be anything, password complexity compliant>
-      SET MSSQL_SA_PASSWORD=<sa_password_of_master_sql_instance, password complexity compliant>
+> [!TIP]
+> Имя по умолчанию кластера больших данных — `mssql-cluster`.
 
-      SET DOCKER_REGISTRY=marinchcreus3.azurecr.io
-      SET DOCKER_REPOSITORY=ctp24-8-0-61-gpu
-      SET DOCKER_USERNAME=<your username, gpu-specific credentials provided by Microsoft>
-      SET DOCKER_PASSWORD=<your password, gpu-specific credentials provided by Microsoft>
-      SET DOCKER_EMAIL=<your email address>
-      SET DOCKER_PRIVATE_REGISTRY=1
-      SET STORAGE_SIZE=10Gi
-      ```
-
-   1. Развертывание кластера больших данных:
-
-      ```cmd
-      mssqlctl cluster create --name gpubigdatacluster
-      ```
-
-### <a name="linux"></a>Linux
-
-   1. Инициализируйте следующие переменные среды. В bash можно использовать кавычки вокруг каждого значения.
-
-      ```bash
-      export ACCEPT_EULA=yes
-      export CLUSTER_PLATFORM="aks"
-
-      export CONTROLLER_USERNAME="<controller_admin_name - can be anything>"
-      export CONTROLLER_PASSWORD="<controller_admin_password - can be anything, password complexity compliant>"
-      export KNOX_PASSWORD="<knox_password - can be anything, password complexity compliant>"
-      export MSSQL_SA_PASSWORD="<sa_password_of_master_sql_instance, password complexity compliant>"
-
-      export DOCKER_REGISTRY="marinchcreus3.azurecr.io"
-      export DOCKER_REPOSITORY="ctp24-8-0-61-gpu"
-      export DOCKER_USERNAME="<your username, gpu-specific credentials provided by Microsoft>"
-      export DOCKER_PASSWORD="<your password, gpu-specific credentials provided by Microsoft>"
-      export DOCKER_EMAIL="<your email address>"
-      export DOCKER_PRIVATE_REGISTRY="1"
-      export STORAGE_SIZE="10Gi"
-      ```
-
-   1. Развертывание кластера больших данных:
-
-      ```bash
-      mssqlctl cluster create --name gpubigdatacluster
-      ```
+Также можно настроить дополнительные развертывания, передав файл конфигурации развертывания. Дополнительные сведения см. в разделе [руководство по развертыванию](deployment-guidance.md#customconfig).
 
 ## <a name="run-the-tensorflow-example"></a>Запустите пример TensorFlow
 
@@ -198,7 +160,7 @@ ms.locfileid: "63473306"
 Поместите файл соответствующие записной книжки на локальный компьютер и затем откройте и запустите его в Azure Data Studio, используя ядро PySpark3. Если у вас нет необходимости в более старой версии CUDA или TensorFlow, выберите CUDA 9 и CUDNN 7/TensorFlow 1.12.0. Дополнительные сведения о том, как использовать записные книжки с кластерами больших данных, см. в разделе [использованию записных книжек в предварительной версии SQL Server 2019](notebooks-guidance.md).
 
 > [!NOTE]
-> Обратите внимание на то, что записные книжки установки программного обеспечения в системе. Это возможно, так как записные книжки в настоящее время работает с правами привилегированного пользователя в CTP 2.4.
+> Обратите внимание на то, что записные книжки установки программного обеспечения в системе. Это возможно, так как записные книжки в настоящее время работает с правами привилегированного пользователя в CTP-версии 2.5.
 
 После установки библиотеки графического Процессора NVIDIA и TensorFlow для графического Процессора, записные книжки список доступных устройств GPU. Затем они помещаются и оценить модель TensorFlow для распознавания рукописных цифр, с помощью набора данных MNIST. После проверки доступного пространства на диске, они скачайте и запустите пример классификации изображений CIFAR 10 из [ https://github.com/tensorflow/models.git ](https://github.com/tensorflow/models.git). Выполнив пример CIFAR 10 на кластерах со разных GPU, можно наблюдать за увеличения скорости, предлагаемых каждого поколения GPU, доступных в Azure.
 
@@ -206,7 +168,7 @@ ms.locfileid: "63473306"
 
 Чтобы удалить кластер больших данных, используйте следующую команду:
 
-```
+```bash
 mssqlctl cluster delete --name gpubigdatacluster
 ```
 

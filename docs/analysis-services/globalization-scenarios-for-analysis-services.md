@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f9af9e0eaf06fca60da515a16e7e6830dcb8462d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5d708a2e3daca372bc336e91886889b79909627a
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62659699"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65357403"
 ---
 # <a name="globalization-scenarios-for-analysis-services"></a>Сценарии глобализации для служб Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "62659699"
 |**Capability**|**Табличный**|**Multidimensional**|  
 |[Языки и параметры сортировки (службы Analysis Services)](../analysis-services/languages-and-collations-analysis-services.md)|Наследуется от операционной системы|Наследуется, но с возможностью переопределять язык и параметры сортировки для основных объектов в иерархии модели.|  
 |Поддержка области преобразования|Заголовки и описания|Преобразования можно создавать для имен объектов, заголовков, идентификаторов и описания. Они также могут быть в любом сценарии и языке Юникода. Это верно даже в том случае, когда средства и среда используют другой язык. Например, в среде разработки, использующей английский язык и латинские параметры сортировки во всем стеке, можно включить в модель объект, в имени которого используются символы кириллицы.|  
-|Реализация поддержки преобразования|Используйте [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , чтобы создать файлы преобразования, которые сначала заполняются, а затем импортируются в модель.<br /><br /> Дополнительные сведения см. в разделе [Переводы в табличных моделях (службы Analysis Services)](../analysis-services/tabular-models/translations-in-tabular-models-analysis-services.md).|Используйте[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , чтобы определить преобразования для заголовков, описаний и типов учетных записей для кубов, а также мер, измерений и атрибутов.<br /><br /> Дополнительные сведения см. в разделе [Переводы в многомерных моделях (службы Analysis Services)](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md). Урок по использованию этой функции можно найти в [занятие 9: Определение перспектив и переводов](../analysis-services/lesson-9-defining-perspectives-and-translations.md) из [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] руководства.|  
+|Реализация поддержки преобразования|Используйте [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , чтобы создать файлы преобразования, которые сначала заполняются, а затем импортируются в модель.<br /><br /> Дополнительные сведения см. в разделе [Переводы в табличных моделях (службы Analysis Services)](../analysis-services/tabular-models/translations-in-tabular-models-analysis-services.md).|Используйте[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , чтобы определить преобразования для заголовков, описаний и типов учетных записей для кубов, а также мер, измерений и атрибутов.<br /><br /> Дополнительные сведения см. в разделе [Переводы в многомерных моделях (службы Analysis Services)](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md). |  
 |Преобразование валюты|Недоступно.|Преобразование валюты выполняется с помощью специальных сценариев многомерных выражений, которые преобразуют меры, содержащие данные валюты. Вы можете создать скрипт многомерных выражений, использующий комбинацию данных и метаданных из измерений, атрибутов и групп мер для конвертации мер, содержащих данные в валюте, с помощью мастера бизнес-аналитики в [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] . См. раздел [Преобразования валюты (службы Analysis Services)](../analysis-services/currency-conversions-analysis-services.md).|  
   
 ## <a name="see-also"></a>См. также  
