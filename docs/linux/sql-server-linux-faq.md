@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: e0f1b8a425e3b21ac1e36e0f301f3b380d791d1a
-ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
+ms.openlocfilehash: eafc21d079561b6024d23b3e90bd24dbf7b369fc
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58566583"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64774743"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>SQL Server в Linux, часто задаваемые вопросы (FAQ)
 
@@ -152,7 +152,7 @@ ms.locfileid: "58566583"
 
 1. **Можно ли перенести данные из Oracle и других ядер СУБД SQL Server в Linux?**
 
-   Да. SSMA поддерживается миграция из нескольких типов компонентов database Engine: Microsoft Access, DB2, MySQL, Oracle и SAP ASE (прежнее название — SAP Sybase ASE). Пример использования SSMA, см. в разделе [перенос схемы Oracle для SQL Server в Linux с помощью SQL Server Migration Assistant](../ssma/oracle/sql-server-linux-convert-from-oracle.md?toc=%2fsql%2flinux%2ftoc.json).
+   Да. SSMA поддерживается миграция из нескольких типов компонентов database Engine: Microsoft Access, DB2, MySQL, Oracle и SAP ASE (прежнее название — SAP Sybase ASE). Пример использования SSMA, см. в разделе [перенос схемы Oracle для SQL Server в Linux с помощью SQL Server Migration Assistant](../ssma/oracle/sql-server-linux-convert-from-oracle.md?toc=/sql/toc/toc.json).
 
 1. **Разрешениях, необходимых для файлов SQL Server?**
 

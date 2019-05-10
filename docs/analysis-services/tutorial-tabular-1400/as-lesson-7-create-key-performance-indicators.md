@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 348a012b5915c6b02f04481673fc33128001ff73
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 5f3b3de71cb60a27613482255556bfbff6bcc8cf
+ms.sourcegitcommit: 6193aa9b4967302424270d67c27dbc601ca6849a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685411"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64877622"
 ---
 # <a name="create-key-performance-indicators"></a>Создание ключевых показателей эффективности
 
@@ -23,11 +23,11 @@ ms.locfileid: "57685411"
 
 В этом занятии вы создадите ключевые показатели эффективности (KPI). Ключевые показатели эффективности используются для оценки производительности значения, определенного *базы* измерения, от *целевой* значения, также определенного мерой или абсолютным значением. В клиентских приложения создания отчетов показатели KPI предоставляют бизнесменам быстрый и легкий способ получения обзорных сведений о развитии бизнеса или определении тенденций. Дополнительные сведения см. в разделе [ключевые показатели эффективности](../tabular-models/kpis-ssas-tabular.md)
   
-Предполагаемое время выполнения данного занятия: **15 минут**  
+Предполагаемое время для выполнения этого занятия: **15 минут**  
   
 ## <a name="prerequisites"></a>предварительные требования  
 
-Эта статья входит в учебник по табличному моделированию, который следует изучать в порядке. Прежде чем выполнять задания в этом занятии, необходимо завершить предыдущее занятие: [Занятие 6. Создание мер](../tutorial-tabular-1400/as-lesson-6-create-measures.md).   
+Эта статья входит в учебник по табличному моделированию, который следует изучать в порядке. Перед выполнением задач на этом занятии, необходимо завершить предыдущее занятие: [Занятие 6. Создание мер](../tutorial-tabular-1400/as-lesson-6-create-measures.md).   
   
 ## <a name="create-key-performance-indicators"></a>Создание ключевых показателей эффективности  
   
@@ -40,7 +40,7 @@ ms.locfileid: "57685411"
 3.  В строке формул над таблицей введите следующую формулу: 
  
     ```  
-    InternetCurrentQuarterSalesPerformance :=DIVIDE([InternetCurrentQuarterSales]/[InternetPreviousQuarterSalesProportionToQTD],BLANK())  
+    InternetCurrentQuarterSalesPerformance :=IF([InternetPreviousQuarterSalesProportionToQTD]<>0,([InternetCurrentQuarterSales]-[InternetPreviousQuarterSalesProportionToQTD])/[InternetPreviousQuarterSalesProportionToQTD],BLANK()) 
     ```
 
     Эта мера служит базовой мерой для ключевого показателя Эффективности.  
