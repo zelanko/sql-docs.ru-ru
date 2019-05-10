@@ -18,12 +18,12 @@ ms.assetid: 1dfaebe2-c7cf-4041-a586-5d04faf2e25e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 703b6464d035d06583193aedaa330257fc38fe34
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 25eccb27b75028fdebafaa7a855137946465676b
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530376"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65450110"
 ---
 # <a name="spoamethod-transact-sql"></a>sp_OAMethod (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_OAMethod objecttoken , methodname
   
  Если метод возвращает одиночное значение, либо указать локальную переменную для *returnvalue*, который возвращает метод, возвращаемое значение в локальной переменной, либо не указывайте *returnvalue*, который возвращает метод возвращать значение клиенту в виде одного столбца и одной строки результирующего набора.  
   
- Если возвращаемое значение метода является OLE-объект *returnvalue* должен быть локальной переменной типа данных **int**. Токен объекта сохранен в локальной переменной. Этот токен может использоваться другими хранимыми процедурами OLE-автоматизации.  
+ Если возвращаемое значение метода является OLE-объект *returnvalue* должен быть локальной переменной типа данных **int**. Токен объекта хранится в локальной переменной, и этот токен можно использовать с другими процедурами OLE-автоматизации хранятся.  
   
  Если возвращаемое значение метода является массивом, если *returnvalue* указан, ему присваивается значение NULL.  
   
@@ -93,7 +93,7 @@ sp_OAMethod objecttoken , methodname
   
  Если все значения данных в столбце имеют один и тот же тип данных, этот тип используется для всего столбца. Если значения данных в столбце имеют различные типы данных, тип данных всего столбца определяется по следующей схеме.  
   
-||ssNoversion|FLOAT|money|DATETIME|varchar|NVARCHAR|  
+||ssNoversion|FLOAT|money|datetime|varchar|nvarchar|  
 |------|---------|-----------|-----------|--------------|-------------|--------------|  
 |**int**|**int**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**float**|**float**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
@@ -106,7 +106,7 @@ sp_OAMethod objecttoken , methodname
  Можно также использовать **sp_OAMethod** для получения значения свойства.  
   
 ## <a name="permissions"></a>Разрешения  
- Необходимо членство в предопределенной роли сервера **sysadmin** .  
+ Требуется членство в **sysadmin** предопределенной роли сервера или разрешение на выполнение непосредственно в этой хранимой процедуры. `Ole Automation Procedures` Конфигурация должна быть **включена** для использования любой системной процедуры, связанные с OLE-автоматизации.  
   
 ## <a name="examples"></a>Примеры  
   

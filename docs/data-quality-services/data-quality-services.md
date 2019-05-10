@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 9c6b996c-e768-4bf5-837f-5436ed9cea1d
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 7d65dee84a2636508af997a4aac2c851e7bd9e72
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: 53e92a9e6af2111fabb911b81eede5473341b2b4
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017205"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65480255"
 ---
 # <a name="data-quality-services"></a>Data Quality Services
 
@@ -47,7 +47,7 @@ ms.locfileid: "56017205"
   
  ![Маленький значок папки с файлами](../analysis-services/media/filefolder-small.png "Маленький значок папки с файлами") [Безопасность DQS](../data-quality-services/dqs-security.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Общие сведения о службах Data Quality Services](../data-quality-services/introduction-to-data-quality-services.md)   
  [Основные понятия служб Data Quality Services](../data-quality-services/data-quality-services-concepts.md)   
  [Ресурсы DQS](https://technet.microsoft.com/sqlserver/hh780961)   

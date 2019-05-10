@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 647c924a-9b91-4294-8d96-e81416e4e90e
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 53dde66e84dd7304f81c4b6fd7de8dbe939d22d4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: dea74f8fc22bea5a0903a3dae17f6c969849181c
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63250145"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65485053"
 ---
 # <a name="task-3-cleansing-data-against-the-suppliers-knowledge-base"></a>Задача 3. Очистка данных в базе знаний о поставщиках
   В этой задаче вы выполняете автоматизированную очистку данных. Службы DQS используют мощные алгоритмы и степени достоверности на основе пороговых значений, позволяющие анализировать данные по выбранной базе знаний, затем выполнять очистку. Дополнительные сведения см. в разделе [Очистка данных с использованием набора знаний служб DQS (внутренних)](https://msdn.microsoft.com/library/hh213061.aspx) .  

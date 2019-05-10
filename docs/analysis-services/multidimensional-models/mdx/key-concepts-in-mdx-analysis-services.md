@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b00478a739796d27b44899aa72099583b1d9a113
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a402c385be8c89f71824e5312ffc57fd6c1b0a2c
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62799976"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65357331"
 ---
 # <a name="key-concepts-in-mdx-analysis-services"></a>Основные понятия многомерных выражений (службы Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -136,7 +136,7 @@ ms.locfileid: "62799976"
   
 -   [Базовый скрипт многомерных выражений (многомерные выражения)](../../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)  
   
--   [Многомерное моделирование (учебник по Adventure Works)](../../../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+-   [Многомерное моделирование (учебник по Adventure Works)](../../../analysis-services/multidimensional-tutorial/multidimensional-modeling-adventure-works-tutorial.md)  
   
 ## <a name="see-also"></a>См. также  
  [Cube Space](../../../analysis-services/multidimensional-models/mdx/cube-space.md)   

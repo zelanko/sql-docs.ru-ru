@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8822a85e39efde36a04b92e8a926adca6839cf58
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 44be6e7ab0bb3598b2478f1a5f94e64fee48d05a
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62930330"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65449983"
 ---
 # <a name="analysis-services-developer-documentation"></a>Документация для разработчика служб Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "62930330"
 - Хотя это можно выполнить сборку решения, основанные на стандартах open XML для Аналитики и многомерных Выражений, это крайне редко, чтобы сделать это. Документация отсутствует, отличные от XML для Аналитики и справочник по многомерных Выражений, чтобы помочь вам и большинство сообщества и форум поддержки выводит из работы с помощью .NET или собственными технологиями (MSOLAP).
 
 ## <a name="programming-in-analysis-services"></a>Программирование в службах Analysis Services
-[Программирование интеллектуального анализа данных](../analysis-services/data-mining-programming.md) описывает методы построения решений, которые включают объекты интеллектуального анализа данных.
+[Программирование интеллектуального анализа данных](../analysis-services/data-mining/data-mining-programming.md) описывает методы построения решений, которые включают объекты интеллектуального анализа данных.
 
 [Программирование многомерной модели](../analysis-services/multidimensional-models/multidimensional-model-programming.md) описывает задачи разработки и способы интеграции объектов многомерной модели в пользовательском решении.
 

@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Domains
 ms.assetid: 5350214c-7333-41d0-ae83-1b7d8454ebec
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 0cdd72c352246c89983b560e40428c1f9f7fb7b8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3c5898910a5280e797080c99fde978bb3da1c3c6
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62792494"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65484215"
 ---
 # <a name="introduction-to-data-quality-services"></a>Общие сведения о службах Data Quality Services
   Решение по обеспечению качества данных, предоставляемое [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS), позволяет диспетчеру данных или ИТ-специалисту поддерживать качество данных и обеспечивать их пригодность к бизнес-использованию. DQS — это решение на основе знаний, которое обеспечивает автоматизированные и интерактивные способы управления целостностью и качеством источников данных. DQS позволяет обнаруживать знания о данных, строить наборы знаний и управлять ими. Затем эти знания вы можете использовать для выполнения очистки, сопоставления и профилирования данных. Также вы можете использовать облачные службы поставщиков эталонных данных в проекте качества данных DQS.  

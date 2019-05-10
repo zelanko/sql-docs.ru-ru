@@ -3,7 +3,7 @@ title: Расширение SQL Server 2019 (Предварительная ве
 titleSuffix: Azure Data Studio
 description: Расширение 2019 г. версия SQL Server для данных в студии
 ms.custom: seodec18
-ms.date: 04/19/2019
+ms.date: 05/09/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -11,16 +11,16 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: fe3c7fa2a383ea7d8b969ed149a2a762531e0a84
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
-ms.translationtype: HT
+ms.openlocfilehash: 045152d472029c1ff3fe50230b20b69a851d9dcb
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63472188"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65450098"
 ---
 # <a name="sql-server-2019-extension-preview"></a>Расширение SQL Server 2019 (Предварительная версия)
 
-Расширение SQL Server 2019 (Предварительная версия) обеспечивает поддержку предварительной версии новых функциях и средствах доставки поддержки [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. Сюда входит поддержка предварительной версии [кластеров SQL Server 2019 больших данных](../big-data-cluster/big-data-cluster-overview.md), интегрированное [записная книжка](../big-data-cluster/notebooks-guidance.md)и PolyBase [мастера Create External Table](../relational-databases/polybase/data-virtualization.md?toc=%2fsql%2fbig-data-cluster%2ftoc.json).
+Расширение SQL Server 2019 (Предварительная версия) обеспечивает поддержку предварительной версии новых функциях и средствах доставки поддержки [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. Сюда входит поддержка предварительной версии [кластеров SQL Server 2019 больших данных](../big-data-cluster/big-data-cluster-overview.md), интегрированное [записная книжка](../big-data-cluster/notebooks-guidance.md)и PolyBase [мастера Create External Table](../relational-databases/polybase/data-virtualization.md?toc=/sql/toc/toc.json).
 
 ## <a name="install-the-sql-server-2019-extension-preview"></a>Установите расширение SQL Server 2019 (Предварительная версия)
 
@@ -30,9 +30,9 @@ ms.locfileid: "63472188"
 
    |Платформа|Загрузить|Дата выпуска|Версия
    |:---|:---|:---|:---|
-   |Windows|[.VSIX](https://go.microsoft.com/fwlink/?linkid=2087443)|18 апреля 2019 г. |0.12.1
-   |macOS|[.VSIX](https://go.microsoft.com/fwlink/?linkid=2087442)|18 апреля 2019 г. |0.12.1
-   |Linux|[.VSIX](https://go.microsoft.com/fwlink/?linkid=2087441)|18 апреля 2019 г. |0.12.1
+   |Windows|[.VSIX](https://go.microsoft.com/fwlink/?linkid=2092118)|8 мая 2019 г. |0.13.0
+   |macOS|[.VSIX](https://go.microsoft.com/fwlink/?linkid=2092117)|8 мая 2019 г. |0.13.0
+   |Linux|[.VSIX](https://go.microsoft.com/fwlink/?linkid=2092116)|8 мая 2019 г. |0.13.0
 
 1. В Azure Data Studio выберите **установить расширения из пакета VSIX** из **файл** меню и выберите загруженный VSIX-файл.
 

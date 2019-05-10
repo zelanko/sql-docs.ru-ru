@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: 21ee0544a91199648f2d96a631c567dd9788bc2f
-ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
+ms.openlocfilehash: e13ee9f8046eb53db8e59ee33b3039757bbc4aa4
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59671410"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64776184"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Заметки о выпуске для SQL Server 2017 в Linux
 
@@ -46,7 +46,7 @@ ms.locfileid: "59671410"
 
 В следующей таблице перечислены История выпусков для [!INCLUDE[ssSQL17](../includes/sssql17-md.md)].
 
-| Выпуск               | Версия       | Дата выпуска |
+| Выпуск               | Version       | Дата выпуска |
 |-----------------------|---------------|--------------|
 | [CU14](#CU14)         | 14.0.3076.1   | 2019-03-25   |
 | [CU13](#CU13)         | 14.0.3048.4   | 2018-12-18   |
@@ -383,7 +383,7 @@ sudo systemctl start mssql-server
 | &nbsp; | Проверка подлинности AD для связанных серверов | 
 | &nbsp; | Проверка подлинности AD для групп доступности (группы доступности) | 
 | &nbsp; | инструменты сторонних AD (Centrify, Vintela, Powerbroker) | 
-| **службы** | Обозреватель SQL Server |
+| **Службы** | Обозреватель SQL Server |
 | &nbsp; | SQL Server R services |
 | &nbsp; | StreamInsight |
 | &nbsp; | Службы Analysis Services |
@@ -539,7 +539,7 @@ sudo systemctl start mssql-server
 - [Установка на SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
 - [Установка в Ubuntu](quickstart-install-connect-ubuntu.md)
 - [Запустить в Docker](quickstart-install-connect-ubuntu.md)
-- [Подготовка виртуальной машины SQL в Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
+- [Подготовка виртуальной машины SQL в Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json)
 - [Запуск и подключение — облако](quickstart-install-connect-clouds.md)
 
 Ответы на часто задаваемые вопросы см. в разделе [SQL Server на Linux часто задаваемые вопросы о](sql-server-linux-faq.md).

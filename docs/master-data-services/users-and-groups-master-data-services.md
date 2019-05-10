@@ -13,15 +13,15 @@ helpviewer_keywords:
 - users [Master Data Services], about users
 - groups [Master Data Services], about groups
 ms.assetid: ed08dd2d-248e-4b68-91d4-e9961cb50eed
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 00c51ad3a3b3d428a9a89ef5aafed54c26db76cf
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: bba9009365a4353a6fc5610fe97b6c859ea8910f
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781786"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65484949"
 ---
 # <a name="users-and-groups-master-data-services"></a>Пользователи и группы (службы Master Data Services)
 
@@ -45,7 +45,7 @@ ms.locfileid: "52781786"
   
  Не присваивайте отдельным пользователям дополнительные разрешения и не включайте пользователей в несколько групп, имеющих доступ к службам [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]. Кроме того, не используйте разрешения для элементов иерархии, за исключением случаев, когда группе необходим был ограниченный доступ к определенным элементам.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Добавление пользователя (службы Master Data Services)](../master-data-services/add-a-user-master-data-services.md)   
  [Добавление группы (службы Master Data Services)](../master-data-services/add-a-group-master-data-services.md)   
  [Удаление пользователей или групп (службы Master Data Services)](../master-data-services/delete-users-or-groups-master-data-services.md)   

@@ -1,5 +1,5 @@
 ---
-title: Упражнение 1. Создание проекта качества данных | Документация Майкрософт
+title: Задача 1. Создание проекта качества данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: dc7ef6bc-c03a-4dd1-9ca4-43c62f8761fe
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 41d6248743ceadf23a3a351a6599497dd8e5172b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 14f45ed2a07ddbc6f4fe7c227e29f34f6ea272ce
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62735812"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65484907"
 ---
-# <a name="task-1-creating-a-data-quality-project"></a>Упражнение 1. Создание проекта качества данных
+# <a name="task-1-creating-a-data-quality-project"></a>Задача 1. Создание проекта качества данных
   В этой задаче будет создан проект служб DQS для очистки данных о поставщиках в файле Excel с использованием базы знаний Suppliers, созданной ранее в этом учебнике.  
   
 1.  В **проект служб DQS** области на главной странице выберите **создать проект качества данных**.  
