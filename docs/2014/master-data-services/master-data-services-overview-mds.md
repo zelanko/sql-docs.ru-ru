@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Master Data Services, overview
 - Master Data Services
 ms.assetid: 8a4c28b1-6061-4850-80b6-132438b8c156
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 782a0e87c481aacbe6dc145b79aec41aba26039f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 359010e0fd86d350cc081b7f07b2b12fe7d6ef5a
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62764963"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65479038"
 ---
 # <a name="master-data-services-overview"></a>Общие сведения о службах Master Data Services
   В [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]модель является наивысшим уровнем контейнера в структуре основных данных. Можно создать модель для управления группами сходных данных, например для управления данными продуктов в сети. В модели содержится одна или несколько сущностей, а сущности содержат элементы, которые являются записями данных.  

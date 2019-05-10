@@ -2,26 +2,26 @@
 title: Запуск записных книжек в Azure Data Studio
 titleSuffix: SQL Server big data clusters
 description: В этой статье объясняется, как запускать записные книжки Jupyter в студии данных Azure, подключенные к кластеру больших данных SQL Server 2019.
-author: rothja
+author: achatter
 ms.author: jroth
 manager: craigg
-ms.date: 03/27/2019
+ms.date: 05/08/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: a220b78fe93b286837e0e235b881ffd1a612e512
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 6cc491ee2592ad68ff334e0c1b7287b5754220dc
+ms.sourcegitcommit: c1cc44c3b5ad030d8726be8819594341fc3d9f91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58859975"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65462053"
 ---
 # <a name="how-to-use-notebooks-in-sql-server-2019-preview"></a>Как использовать записные книжки в предварительной версии SQL Server 2019
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-В этой статье описывается, как запускать записные книжки в студии данных Azure и как начать создание собственных записных книжек. Также демонстрируется запись всех записных книжек, с помощью разных ядер.
+В этой статье описана процедура запуска записная книжка в последнем выпуске [**Azure Data Studio**](../azure-data-studio/download.md) и как начать создание собственных записных книжек. Также демонстрируется запись всех записных книжек, с помощью разных ядер.
 
 ## <a name="connect-to-sql-server"></a>Подключение к SQL Server
 
@@ -48,7 +48,7 @@ ms.locfileid: "58859975"
 
 Установка записной книжки в Azure Data Studio изначально поддерживает ядра SQL. Если вы являетесь разработчиком SQL и хотели бы использовать записные книжки, то это будет выбранного ядра. 
 
-Ядро SQL также может использоваться для подключения к экземплярам сервера PostgreSQL. Если вы являетесь разработчиком PostgreSQL и хотите подключиться к серверу PostgreSQL, загрузите [ **расширения PostgreSQL** ](../azure-data-studio/postgres-extension.md) в marketplace с расширениями Studio данных Azure.
+Ядро SQL также может использоваться для подключения к экземплярам сервера PostgreSQL. Если вы являетесь разработчиком PostgreSQL и хотите подключиться к серверу PostgreSQL записных книжек, загрузите [ **расширения PostgreSQL** ](../azure-data-studio/postgres-extension.md) в marketplace с расширениями Studio данных Azure и затем Запустите **новой записной книжки** для открытия экземпляра записной книжки для подключения к серверу PostgreSQL.
 
 ![Подключения PostgreSQL](media/notebooks-guidance/sql-kernel-dropdown.png)
 
@@ -73,6 +73,19 @@ ms.locfileid: "58859975"
 Результаты запроса
 
 ![Результаты запроса](media/notebooks-guidance/pgsql-cell-results.png)
+
+Если вы хотите добавить текст ячейки в имеющейся записной книжки подключенные ядра SQL, щелкните **+ текст** команды на панели инструментов.
+
+![Панель инструментов записной книжки](media/notebooks-guidance/notebook-toolbar.png)
+
+Изменения ячейки в режим редактирования и теперь введите markdown и вы увидите предварительной версии, в то же время
+
+![Ячейка markdown](media/notebooks-guidance/notebook-markdown-cell.png)
+
+Щелкнув за пределами ячейки, текст будет показывать текст markdown.
+
+![Текст с разметкой markdown](media/notebooks-guidance/notebook-markdown-preview.png)
+
 
 ### <a name="configure-python-for-notebooks"></a>Настройка Python для записных книжек
 
@@ -119,9 +132,27 @@ ms.locfileid: "58859975"
 
 Если открыть записную книжку из другого источника, он будет открываться в **не доверенный** режиме, а затем сделать его **надежные**.
 
+### <a name="run-cells"></a>Выполнять ячейки
+Если вы хотите выполнять все ячейки в записной книжке, а затем щелкните **запуска ячеек** кнопку на панели инструментов.
+
+![Текст с разметкой markdown](media/notebooks-guidance/run-cell.png)
+
+
+### <a name="clear-results"></a>Очистить результаты
+
+Если вы хотите очистить результаты всех выполненных ячейки в записной книжке, то можно щелкнуть **Очистить результаты** кнопку на панели инструментов.
+
+![Текст с разметкой markdown](media/notebooks-guidance/clear-results.png)
+
 ### <a name="save"></a>Сохранять
 
-Можно сохранить записную книжку, **Ctrl + S** или щелкнув **сохранения файла**, **файл "команды" Сохранить как...**  и **файл сохранить все** команды из меню "файл" и **файла: Сохранить** команд, введенных в палитре команд.
+Чтобы сохранить записную книжку выполните одно из следующих.
+
+- Выберите клавиши Ctrl + S
+- Нажмите кнопку **файл** > **сохранить**
+- Нажмите кнопку **файл** > **Сохранить как...**
+- Нажмите кнопку **файл** > **сохранить все** 
+- В палитре команд введите **файла: Сохранить** 
 
 ### <a name="pyspark3pyspark-kernel"></a>Ядро Pyspark3/PySpark
 

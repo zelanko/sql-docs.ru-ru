@@ -2,21 +2,21 @@
 title: Загрузите и установите
 titleSuffix: Azure Data Studio
 description: Загрузка и установка Azure данных Studio для Windows, macOS или Linux
-ms.custom: seodec18
-ms.date: 04/19/2019
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
 ms.topic: conceptual
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f352e47f95d6c530eea062505860fdab10cb25af
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.custom: seodec18
+ms.date: 04/19/2019
+ms.reviewer: alayu; sstein
+ms.openlocfilehash: 06f6dbd9184b13768e25f1ea652ed41b4fe245a1
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63180528"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65104869"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Скачайте и установите Studio данных Azure
 
@@ -158,11 +158,12 @@ ms.locfileid: "63180528"
 
 ## <a name="recommended-system-requirements"></a>Рекомендуемые требования к системе
 Для оптимальной производительности используйте рекомендованным системным требованиям.
+[Требуется обновление здесь возможность измерить памяти]
 
 |             | Число ядер ЦП | Памяти и оперативной памяти |
-|:-----------:|:---------:|:----------:|
-| Рекомендуемая |     4     |      8     |
-|   Минимальные   |     2     |      4     |
+|:-----------|:---------|:----------|
+| Рекомендуемая |     4     |      8 ГБ    |
+|   Минимальные   |     2     |      4 ГБ     |
 |             |           |            |
 
 ## <a name="check-for-updates"></a>Проверка обновлений

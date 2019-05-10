@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - administrators [Master Data Services], creating
 ms.assetid: dae17afc-3b39-490e-b51f-2d8da26d429e
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6220e8670de28afaf2545638d5153726b1d34219
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 44bede292cb49ddcfd791b3e7d65605e1aa2399c
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52769696"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65487495"
 ---
 # <a name="create-a-model-administrator-master-data-services"></a>Создание администратора модели (службы Master Data Services)
 
@@ -58,7 +58,7 @@ ms.locfileid: "52769696"
   
 10. Нажмите кнопку **Сохранить**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Администраторы (службы Master Data Services)](../master-data-services/administrators-master-data-services.md)   
  [Назначение разрешения для объекта модели (службы Master Data Services)](../master-data-services/assign-model-object-permissions-master-data-services.md)   
  [Назначение разрешений для элемента иерархии (службы Master Data Services)](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   

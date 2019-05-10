@@ -11,12 +11,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3ce8d425aeb1c1b66f198efb4b222dc94c6e24ff
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b39b71f65dfe9c41c3e2ea7282729691e78a5986
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62627990"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65484527"
 ---
 # <a name="sql-server-native-client"></a>собственный клиент SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -24,12 +24,12 @@ ms.locfileid: "62627990"
 
 SNAC или собственный клиент SQL Server, — это термин, использовался как взаимозаменяемые обращайтесь к драйверы ODBC и OLE DB для SQL Server.
 
-**ПРИМЕЧАНИЕ.**  Не рекомендуется использовать именно этот драйвер для разработки новых приложений. Новый поставщик OLE DB называется [драйвера Microsoft OLE DB для SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) которого будет дополняться последние функции сервера, в дальнейшем.
+> [!IMPORTANT] 
+> SQL Server Native Client (SQLNCLI) остается не рекомендуется и не рекомендуется для использования при разработке новых приложений. Вместо этого использовать новый [драйвера Microsoft OLE DB для SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) которого обновляется с помощью последних компонентов сервера.
 
-
-**Дополнительные сведения и загрузить SNAC или драйверы ODBC, посетите [жизненного цикла SNAC описано](https://blogs.msdn.microsoft.com/sqlreleaseservices/snac-lifecycle-explained/).**
-
-Дополнительные сведения о драйвере ODBC для SQL Server, см. в разделе [Microsoft ODBC Driver for SQL Server на Windows](https://msdn.microsoft.com/library/jj730314(v=sql.110).aspx).  Кроме того, см. в разделе [вводные сведения о драйверах Microsoft ODBC Driver для SQL Server](https://blogs.msdn.microsoft.com/sqlnativeclient/2013/01/23/introducing-the-new-microsoft-odbc-drivers-for-sql-server/), и [ODBC Driver 13.1 for SQL Server выпуска](https://blogs.technet.microsoft.com/dataplatforminsider/2016/08/03/odbc-driver-13-1-for-sql-server-released/).  
+> [!NOTE]
+> Дополнительные сведения и загрузить SNAC или драйверы ODBC, см. в разделе [жизненного цикла SNAC описано в блоге](https://blogs.msdn.microsoft.com/sqlreleaseservices/snac-lifecycle-explained/).
+> Дополнительные сведения о драйвере ODBC для SQL Server, см. в разделе [Microsoft ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md).  
 
  Сведения о [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] функции собственного клиента выпущен вместе с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], последней доступной версии собственного клиента SQL Server:
 

@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: cf95978f-a2c5-4325-8606-dbd4e88741b8
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6054870d92e3fc3ce9f8c1c4a236bcb58c630b52
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: a3d4af19da0c5d1a6724a0e7beb87fa4b5c8661b
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628121"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65477149"
 ---
 # <a name="merge-conflicts-mds-add-in-for-excel"></a>Слияние конфликтов (надстройка MDS для Excel)
 
@@ -51,7 +51,7 @@ ms.locfileid: "47628121"
   
 4.  Нажав кнопку **Применить**, можно внести дополнительные изменения и опубликовать данные снова. Можно также нажать кнопку **Отменить** , чтобы отменить обновление и повторно загрузить последнюю версию с сервера.  
   
-## <a name="see-also"></a>См. также:  
- [Обзор импорта данных из Excel (надстройка MDS для Excel)](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
+## <a name="see-also"></a>См. также  
+ [Обзор: Импорт данных из Excel &#40;надстройка MDS для Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
   

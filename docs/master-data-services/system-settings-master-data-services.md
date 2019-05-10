@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Master Data Services, system settings
 - system settings [Master Data Services]
 ms.assetid: 83075cdf-f059-4646-8ba2-19be8202f130
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4a76d8d657f2451c52aea74c99576ffd89b30c8c
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
-ms.translationtype: HT
+ms.openlocfilehash: 327b0bdc83588ef988a716ba44e859aa5d3f8659
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044490"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65487993"
 ---
 # <a name="system-settings-master-data-services"></a>Системные параметры (службы Master Data Services)
 

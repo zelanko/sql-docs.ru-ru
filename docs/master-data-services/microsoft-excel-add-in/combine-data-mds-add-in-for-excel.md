@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: a867dc15-5a0d-457c-8304-ac323bcf9377
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 366f1f60f078334f1d0e6f25c8ad6b65443238d0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: d81fdef23f1d35997aaddce8d6e61e5ce51f76dc
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640799"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488889"
 ---
 # <a name="combine-data-mds-add-in-for-excel"></a>Объединение данных (надстройка MDS для Excel)
 
@@ -46,12 +46,12 @@ ms.locfileid: "47640799"
   
 7.  Нажмите кнопку **Объединить**. Появится столбец **SOURCE** , указывающий, берутся ли данные из MDS или внешнего источника.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Следующие шаги  
   
 -   Сведения об определении подобия между данными, управляемыми MDS, и внешними данными см. в разделе [Сопоставление схожих данных (надстройка MDS для Excel)](../../master-data-services/microsoft-excel-add-in/match-similar-data-mds-add-in-for-excel.md).  
   
-## <a name="see-also"></a>См. также:  
- [Обзор экспорта данных в Excel (надстройка MDS для Excel)](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)   
+## <a name="see-also"></a>См. также  
+ [Обзор: Экспорт данных в Excel &#40;надстройка MDS для Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)   
  [Сопоставление качества данных в надстройке MDS для Excel](../../master-data-services/microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md)  
   
   

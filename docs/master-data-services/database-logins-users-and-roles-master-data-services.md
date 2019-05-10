@@ -15,15 +15,15 @@ helpviewer_keywords:
 - database [Master Data Services], logins
 - security [Master Data Services], database logins
 ms.assetid: 72ee383e-a619-461b-9f9d-1cac162ab0c5
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8780bd1545793f08e51e2e0804d03d8a3e98178e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: dcf080146f8eee0e03d0c7b22c391fd1ace54e85
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760176"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65487735"
 ---
 # <a name="database-logins-users-and-roles-master-data-services"></a>Имена входа, пользователи и роли базы данных (службы Master Data Services)
 
@@ -40,14 +40,14 @@ ms.locfileid: "52760176"
   
 ## <a name="msdb-users"></a>Пользователи msdb  
   
-|Пользователь|Описание|  
+|Пользовательская|Описание|  
 |----------|-----------------|  
 |**mds_clr_user**|Не используется. Сопоставляется с mds_dlp_login.|  
 |**mds_email_user**|Используется для уведомлений.<br /><br /> — Сопоставляется с mds_email_login.<br /><br /> — Является членом следующей роли: DatabaseMailUserRole.|  
   
 ## <a name="master-data-services-database-users"></a>Пользователи базы данных Master Data Services  
   
-|Пользователь|Описание|  
+|Пользовательская|Описание|  
 |----------|-----------------|  
 |**mds_email_user**|Используется для уведомлений.<br /><br /> — Имеет разрешение SELECT для схемы mdm.<br /><br /> — Имеет разрешение EXECUTE для определяемого пользователем табличного типа mdm.MemberGetCriteria.<br /><br /> — Имеет разрешение EXECUTE для хранимой процедуры mdm.udpNotificationQueueActivate.|  
 |**mds_schema_user**|Владеет схемами mdm и mdq. Схема по умолчанию — mdm.<br /><br /> Не имеет сопоставленного имени входа.|  
@@ -67,7 +67,7 @@ ms.locfileid: "52760176"
 |**mdq**|Содержит функции базы данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , относящиеся к фильтрации результирующих элементов на основе регулярных выражений или подобия, а также для форматирования уведомлений по электронной почте.|  
 |**stg**|Содержит таблицы базы данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , хранимые процедуры и представления, связанные с промежуточным процессом. Запрещается удалять любые из этих объектов. Дополнительные сведения о промежуточном процессе см. в разделе [Обзор: импорт данных из таблиц (службы Master Data Services)](../master-data-services/overview-importing-data-from-tables-master-data-services.md).|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Защита объектов базы данных (службы Master Data Services)](../master-data-services/database-object-security-master-data-services.md)  
   
   

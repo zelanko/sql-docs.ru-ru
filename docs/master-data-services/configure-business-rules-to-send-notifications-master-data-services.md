@@ -12,15 +12,15 @@ helpviewer_keywords:
 - e-mail [Master Data Services], configuring business rules
 - notifications [Master Data Services], configuring business rules
 ms.assetid: b24f7b11-ab53-4642-999c-e17b543b3558
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 25de38d04af8b98b600422a843c6b6fb6260d514
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 56c7203db3e7c32383b59a85d2bc7cb16cba4d0a
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783466"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65484390"
 ---
 # <a name="configure-business-rules-to-send-notifications-master-data-services"></a>Настройка в бизнес-правилах отправки уведомлений (службы Master Data Services)
 
@@ -63,7 +63,7 @@ ms.locfileid: "52783466"
   
 10. В диалоговом окне подтверждения нажмите кнопку **ОК**. Значение в столбце **Business Rule State** изменится на **Активно** , а в столбце **Уведомление** отобразится пользователь или группа, выбранные для отправки уведомлений.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Следующие шаги  
   
 -   Примените бизнес-правила к данным с помощью одной из следующих процедур:  
   
@@ -75,7 +75,7 @@ ms.locfileid: "52783466"
   
     -   [Настройка уведомления электронной почты (службы Master Data Services)](../master-data-services/configure-email-notifications-master-data-services.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Уведомления (службы Master Data Services)](../master-data-services/notifications-master-data-services.md)   
  [Настройка уведомления электронной почты (службы Master Data Services)](../master-data-services/configure-email-notifications-master-data-services.md)  
   

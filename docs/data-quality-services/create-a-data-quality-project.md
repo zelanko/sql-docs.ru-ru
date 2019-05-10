@@ -13,15 +13,15 @@ helpviewer_keywords:
 - create,data quality project
 - data quality project,create
 ms.assetid: 19c52d2b-d28e-4449-ab59-5fe0dc326cd9
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: c63f6407548f3e46bb64a3b7dddffa741426d3a0
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: fb7b3f6a0932df1490eade1e3745182b05071da9
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036465"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65486343"
 ---
 # <a name="create-a-data-quality-project"></a>Создание проекта служб DQS
 
@@ -34,7 +34,7 @@ ms.locfileid: "56036465"
 ###  <a name="Prerequisites"></a> Предварительные требования  
  Необходимо иметь соответствующие базы знаний для использования в проекте качества данных для выполнения очистки или сопоставления данных.  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
 ####  <a name="Permissions"></a> Permissions  
  Для создания проекта служб DQS необходимо иметь роль dqs_kb_editor или dqs_kb_operator в базе данных DQS_MAIN.  
@@ -57,11 +57,11 @@ ms.locfileid: "56036465"
   
         -   **Очистка**. Выберите это действие для очистки источника данных.  
   
-        -   **Сопоставление**. Выберите это действие, чтобы выполнить сопоставление. Это действие доступно только в том случае, если база знаний, выбранная для проекта служб DQS, содержит политику сопоставления.  
+        -   **Сопоставление**. Выберите это действие для выполнения сопоставления. Это действие доступно только в том случае, если база знаний, выбранная для проекта служб DQS, содержит политику сопоставления.  
   
 4.  Нажмите **Создать** , чтобы создать проект служб DQS.  
   
-##  <a name="FollowUp"></a> Дальнейшие действия. После создания проекта служб DQS  
+##  <a name="FollowUp"></a> Дальнейшие действия. После создания проекта качества данных  
  После того как проект качества данных создан, откроется мастер для выполнения выбранного действия: очистки или сопоставления. Дополнительные сведения о действиях по очистке и сопоставлению см. в разделах [Очистка данных](../data-quality-services/data-cleansing.md) и [Сопоставление данных](../data-quality-services/data-matching.md).  
   
   

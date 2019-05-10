@@ -15,17 +15,18 @@ ms.assetid: 99bc40c4-9181-4ca1-a06f-9a1a914a0b7b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f8b5759c0ede8ea6579da11563849df191ad84b1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 17146ee01a2e4b99dbe50b1d81aedaf0ad7e0b94
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62678672"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095880"
 ---
 # <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>Поставщик Microsoft OLE DB для Обзор SQL Server
 Поставщик Microsoft OLE DB для SQL Server, SQLOLEDB, позволяет ADO для доступа к Microsoft SQL Server.
 
-**ПРИМЕЧАНИЕ.**  Не рекомендуется использовать именно этот драйвер для разработки новых приложений. Новый поставщик OLE DB называется [драйвера Microsoft OLE DB для SQL Server](../../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) которого будет дополняться последние функции сервера, в дальнейшем.
+> [!IMPORTANT]
+> Поставщик Microsoft OLE DB для SQL Server (SQLOLEDB) остается не рекомендуется и не рекомендуется для использования при разработке новых приложений. Вместо этого использовать новый [драйвера Microsoft OLE DB для SQL Server](../../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) которого обновляется с помощью последних компонентов сервера.
 
 ## <a name="connection-string-parameters"></a>Параметры строки соединения
  Чтобы подключиться к этим поставщиком, задайте *поставщика* аргумент [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) свойства:
