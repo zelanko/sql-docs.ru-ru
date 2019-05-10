@@ -153,8 +153,6 @@
       href: ../report-data/dataset-properties-dialog-box-parameters.md
     - name: Диалоговое окно «Свойства набора данных» — «Запрос»
       href: ../dataset-properties-dialog-box-query.md
-    - name: Диалоговое окно «Определение параметров запроса»
-      href: define-query-parameters-dialog-box.md
     - name: Диалоговое окно «Ввод учетных данных для источника данных»
       href: ../enter-data-source-credentials-dialog-box.md
     - name: Диалоговое окно «Свойства общего источника данных» — «Учетные данные»

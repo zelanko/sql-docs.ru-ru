@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 3094bd57-5cf4-4860-bf51-fadd1b309f94
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: e2b5fc47b6823a91dd4bb7f74d3ea65fca13bce9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 71b050e49440764d355d4658607600c135741f50
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63222562"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65476753"
 ---
 # <a name="task-11-adding-conditional-split-transform-to-filter-duplicates"></a>Задача 11. Добавление преобразования "Условное разбиение" для фильтрации повторов
   В этой задаче в поток данных добавляется преобразование «Условное разбиение». Это преобразование позволяет фильтровать повторения из входящего набора записей. Преобразование «Нечеткое группирование» группирует записи, которые оно распознает как совпадающие, и выбирает одну из записей в качестве сводной записи. Все записи в группе имеют одинаковое значение _key_out. Сводная запись имеет то же значение _key_in, что и значение _key_out. Другие записи в группе имеют различные значения _key_in и _key_out. Поэтому при фильтрации с помощью условия _key_in==_key_out будет получена только сводная строка в группе.  

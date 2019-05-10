@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f24376d93f09066d68610e7ac5463945a6db7abd
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: f8bc4571d212f2722050818e8e591e48b63df06e
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147799"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65449632"
 ---
 # <a name="multidimensional-model-programming"></a>Программирование многомерной модели
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -37,6 +37,6 @@ ms.locfileid: "50147799"
   
 ## <a name="see-also"></a>См. также  
  [Программирование табличных моделей для совместимости уровни 1050 по 1103](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)   
- [Программирование интеллектуального анализа данных](../../analysis-services/data-mining-programming.md)  
+ [Программирование интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-programming.md)  
   
   

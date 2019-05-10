@@ -3,7 +3,6 @@ title: sys.remote_data_archive_tables (Transact-SQL) | Документация 
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: stored-procedures
 ms.topic: language-reference
 f1_keywords:
@@ -16,15 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.remote_data_archive_tables catalog view
 ms.assetid: 765069b7-60fd-414c-875f-3455460b75cd
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
-ms.openlocfilehash: 3633612e6aa674a5cd7513c6a84ce1d77ca46a4d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 93dfc97acab31b5078bcba569b52c64f773c775b
+ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689194"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "64945671"
 ---
 # <a name="stretch-database-catalog-views---sysremotedataarchivetables"></a>Stretch Database представления каталога - sys.remote_data_archive_tables
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "47689194"
 |**is_reconciled**|**bit**| Указывает, синхронизированы ли удаленной таблицы и таблицы SQL Server.<br/><br/>Если значение **is_reconciled** -1 (true), в удаленной таблице и таблице SQL Server находятся в синхронизированном и вы можете выполнять запросы, включающие удаленные данные.<br/><br/>Если значение **is_reconciled** равно 0 (false), в удаленной таблице и таблице SQL Server не синхронизированы. Недавно перенесенных строк требуется переносить еще раз. Это происходит при восстановлении удаленной базы данных Azure, или если вручную удалить строки из удаленной таблицы. Пока выверить таблицы нельзя запускать запросы, включающие удаленные данные. Чтобы согласовать в таблицах, запустите [sys.sp_rda_reconcile_batch](../../relational-databases/system-stored-procedures/sys-sp-rda-reconcile-batch-transact-sql.md). |  
   
 ## <a name="see-also"></a>См. также  
- [Stretch Database](../../sql-server/stretch-database/stretch-database.md)  
+ [База данных Stretch](../../sql-server/stretch-database/stretch-database.md)  
   
   
 

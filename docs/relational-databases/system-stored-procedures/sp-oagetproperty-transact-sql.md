@@ -18,12 +18,12 @@ ms.assetid: 240eeeb9-6d8b-4930-b912-1d273ca0ab38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0a8c87eb8ed41b1669cf423aaccb8b06ee8b0e54
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6611998b8aa22242693ec5d44bf842671a777c98
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690012"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65449723"
 ---
 # <a name="spoagetproperty-transact-sql"></a>sp_OAGetProperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ sp_OAGetProperty objecttoken , propertyname
  *propertyvalue* **выходных данных**  
  Значение возвращаемого свойства. Если значение указано, оно должно быть локальной переменной соответствующего типа данных.  
   
- Если свойство возвращает объект OLE, *propertyvalue* должен быть локальной переменной типа данных **int**. Токен объекта сохранен в локальной переменной. Этот токен может использоваться другими хранимыми процедурами OLE-автоматизации.  
+ Если свойство возвращает объект OLE, *propertyvalue* должен быть локальной переменной типа данных **int**. Токен объекта хранится в локальной переменной, и этот токен можно использовать с другими процедурами OLE-автоматизации хранятся.  
   
  Если свойство возвращает одно значение, либо указать локальную переменную для *propertyvalue*, который возвращает свойство, значение в локальной переменной, либо не указывайте *propertyvalue*, который возвращает значение свойства клиенту в виде результирующего набора с одним столбцом и одной строки.  
   
@@ -83,7 +83,7 @@ sp_OAGetProperty objecttoken , propertyname
   
  Если все значения данных в столбце имеют один и тот же тип данных, этот тип используется для всего столбца. Если значения данных в столбце имеют различные типы данных, тип данных всего столбца определяется по следующей схеме.  
   
-||ssNoversion|FLOAT|money|DATETIME|varchar|NVARCHAR|  
+||ssNoversion|FLOAT|money|datetime|varchar|nvarchar|  
 |------|---------|-----------|-----------|--------------|-------------|--------------|  
 |**int**|**int**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**float**|**float**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
@@ -96,7 +96,7 @@ sp_OAGetProperty objecttoken , propertyname
  Можно также использовать **sp_OAMethod** для получения значения свойства.  
   
 ## <a name="permissions"></a>Разрешения  
- Необходимо членство в предопределенной роли сервера **sysadmin** .  
+ Требуется членство в **sysadmin** предопределенной роли сервера или разрешение на выполнение непосредственно в этой хранимой процедуры. `Ole Automation Procedures` Конфигурация должна быть **включена** для использования любой системной процедуры, связанные с OLE-автоматизации.  
   
 ## <a name="examples"></a>Примеры  
   

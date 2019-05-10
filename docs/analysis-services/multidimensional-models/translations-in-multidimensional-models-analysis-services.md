@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b8511efe6b567fad82ab45f7f5a53188b0f13643
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: f25023f6a0191cb645134d327f40ea84ba64932f
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147079"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65357315"
 ---
 # <a name="translations-in-multidimensional-models-analysis-services"></a>Переводы в многомерных моделях (службы Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -36,8 +36,6 @@ ms.locfileid: "50147079"
 4.  Щелкните правой кнопкой мыши любое поле и выберите **Просмотр данных**. Вы увидите английский, испанский и французский переводы для каждого элемента.  
   
  Форматы даты, времени и валюты не реализуются с помощью переводов. Для динамического предоставления определенных форматов на основе языкового стандарта клиента используйте мастер преобразования валюты и свойство **FormatString** . Дополнительные сведения см. в разделах [Конвертация валюты (службы Analysis Services)](../../analysis-services/currency-conversions-analysis-services.md) и [Элемент FormatString (ASSL)](https://docs.microsoft.com/bi-reference/assl/properties/formatstring-element-assl).  
-  
- В разделе[Lesson 9: Defining Perspectives and Translations](../../analysis-services/lesson-9-defining-perspectives-and-translations.md) в учебнике по службам Analysis Services описывается создание и тестирование переводов.  
   
 ## <a name="defining-translations"></a>Определение переводов  
   

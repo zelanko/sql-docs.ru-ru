@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
-ms.openlocfilehash: 1edc63d4dc29e05a914bbfbd891df06a4b3a7255
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
-ms.translationtype: HT
+ms.openlocfilehash: fde3465c26d2e148d99976b81e0a01c9fb3395ff
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63455084"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775512"
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Руководство по установке для SQL Server в Linux
 
@@ -82,7 +82,7 @@ SQL Server 2017 имеет следующие требования к систе
 - [Установка на SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
 - [Установка в Ubuntu](quickstart-install-connect-ubuntu.md)
 - [Запустить в Docker](quickstart-install-connect-docker.md)
-- [Подготовка виртуальной машины SQL в Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
+- [Подготовка виртуальной машины SQL в Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json)
 
 ## <a id="sqlvnext"></a> Установите предварительную версию SQL Server 2019
 

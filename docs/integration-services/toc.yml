@@ -801,7 +801,7 @@
       href: ../integration-services/expressions/greater-than-or-equal-to-ssis-expression.md
     - name: <= (меньше или равно) (выражение служб SSIS)
       href: ../integration-services/expressions/less-than-or-equal-to-ssis-expression.md
-    - name: '? : (условный оператор) (выражение служб SSIS)'
+    - name: '? , перечислены ниже. (условный оператор) (выражение служб SSIS)'
       href: ../integration-services/expressions/conditional-ssis-expression.md
 - name: Функции (выражение служб SSIS)
   href: ../integration-services/expressions/functions-ssis-expression.md
