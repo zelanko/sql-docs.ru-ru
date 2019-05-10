@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 6569d512-637d-4f7b-82e1-1e8582278b37
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 322c5a5afcd7c5d82982a86cb9398e66bb248c5d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0e9a6a1a96d208077e70c0cf1835cff6e34650dd
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63277252"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489112"
 ---
 # <a name="task-5-setting-term-based-relationships"></a>Задача 5. Задание связей на основе термина
   В этой задаче вы определите несколько связей на основе терма для значений **Supplier Name** домена. Связь на основе терма позволяет исправить терм, являющийся частью значения в домене. Это позволяет считать идентичными синонимами несколько значений, идентичных по написанию во всем, кроме отдельных частей. Например **Inc.** возможность исправления **Incorporated**. Службы DQS используют эти связи при обнаружении знаний, очистке и сопоставлении. См. в разделе [создания связей на основе терма](https://msdn.microsoft.com/library/hh510404.aspx) для получения дополнительных сведений.  

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - versions [Master Data Services], deleting
 - deleting versions [Master Data Services]
 ms.assetid: 2a4eeffe-8379-4744-ad44-c27d8c8ac9a8
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d3a09499693d69e97a0354606f1ab1b0d7fcf0d8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 29a4c0bb160a291dc4fd5d015f676f1d3c84b2f7
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753506"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65478601"
 ---
 # <a name="delete-a-version-master-data-services"></a>Удаление версии (службы Master Data Services)
 
@@ -56,7 +56,7 @@ ms.locfileid: "52753506"
     > [!NOTE]  
     >  Возможно, придется подождать несколько минут, чтобы изменение отобразилось в веб-приложении.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Версии (службы Master Data Services)](../master-data-services/versions-master-data-services.md)   
  [Копирование версии (службы Master Data Services)](../master-data-services/copy-a-version-master-data-services.md)  
   

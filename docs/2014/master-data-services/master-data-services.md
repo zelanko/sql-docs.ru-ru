@@ -8,15 +8,15 @@ ms.technology:
 - master-data-services
 ms.topic: conceptual
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 841f2383b47a40ffd4b8a5d5357b08a9504a30c2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 79a6d9c2d3010043daddab14dcaae51e58914fbb
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62764938"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65482769"
 ---
 # <a name="master-data-services"></a>Службы Master Data Services
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] (MDS) — это решение [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] по управлению основными данными. Управление основными данными (master data management, MDM) включает в себя действия, предпринимаемые организацией для нахождения и определения нетранзакционных списков данных с целью компиляции управляемых главных списков. Проект MDM в основном предусматривает оценку и реструктуризацию внутренних бизнес-процессов, наряду с реализацией технологии MDM. Результатом успешно реализованного решения MDM становится получение надежных, централизованных данных, доступных для анализа, что влечет за собой принятие лучших бизнес-решений.  

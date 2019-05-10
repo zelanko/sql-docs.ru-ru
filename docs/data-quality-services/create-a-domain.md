@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.kb.createdomain.f1
 ms.assetid: 5c4828f5-bd51-4c29-b3de-87b7d2f2d3e5
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f7bcb622370b691ae48161d65dbc56d922c735fa
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: 8522ece96543fa9ca5ae743079f955524e5967c2
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036394"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65480589"
 ---
 # <a name="create-a-domain"></a>Создание домена
 
@@ -33,7 +33,7 @@ ms.locfileid: "56036394"
 ###  <a name="Prerequisites"></a> Предварительные требования  
  Чтобы создать домен, необходимо создать и открыть базу знаний.  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
 ####  <a name="Permissions"></a> Permissions  
  Для создания домена необходимо иметь в базе данных DQS_MAIN роль dqs_administrator или dqs_kb_editor.  

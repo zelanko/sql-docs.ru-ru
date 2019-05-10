@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Domains
 ms.assetid: 5350214c-7333-41d0-ae83-1b7d8454ebec
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ccf8b81bb7393f8268584bc78115cf6051f0901f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: 72b0432b03640fed5051b8381c02da19db7c525f
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038635"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65487417"
 ---
 # <a name="introduction-to-data-quality-services"></a>Общие сведения о службах Data Quality Services
 
@@ -48,7 +48,7 @@ ms.locfileid: "56038635"
   
 -   **Мониторинг:** отслеживание и определение состояния операций по обеспечению качества данных. Мониторинг позволяет убедиться, что решение по обеспечению качества данных работает надлежащим образом. Дополнительные сведения см. в статье [DQS Administration](../data-quality-services/dqs-administration.md).  
   
--   **База знаний:** службы Data Quality Services — это решение, которое анализирует данные на основе набора знаний, построенного с помощью DQS. Это позволяет создавать процессы по обеспечению качества данных, которые постоянно совершенствуют знания о данных и при этом постоянно повышают их качество.  
+-   **База знаний:** Службы Data Quality Services является знаниях решение, которое анализирует данные на основе набора знаний, построенного с помощью DQS. Это позволяет создавать процессы по обеспечению качества данных, которые постоянно совершенствуют знания о данных и при этом постоянно повышают их качество.  
   
  На следующем рисунке показан процесс DQS.  
   

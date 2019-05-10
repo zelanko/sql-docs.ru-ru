@@ -30,16 +30,16 @@ helpviewer_keywords:
 - rankings [full-text search]
 - less precise (fuzzy) searches [full-text search]
 ms.assetid: e580c210-cf57-419d-9544-7f650f2ab814
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b2a987309091ada65c036d518d948c21c521bded
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 534d1457f984c496b416edae421ab0f52c619eeb
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524452"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65097292"
 ---
 # <a name="containstable-transact-sql"></a>CONTAINSTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -142,7 +142,7 @@ CONTAINSTABLE
  *top_n_by_rank*  
  Указывает, что только *n* возвращаются первых ранжированных совпадений, в порядке убывания. Применяется, только если целочисленное значение, *n*, указан. Если параметр *top_n_by_rank* скомбинирован с другими параметрами, то запрос может вернуть меньше строк, чем фактически соответствует всем предикатам. *top_n_by_rank* позволяет повысить производительность запросов, выбирать только наиболее важные попадания.  
   
- <contains_search_condition>  
+ < contains_search_condition >  
  Текст, который необходимо найти в столбце *column_name*, и условия соответствия. Сведения об условиях поиска см. в разделе [CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md).  
   
 ## <a name="remarks"></a>Примечания  

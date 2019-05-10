@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 07cbc624-2c6b-4568-96e4-f18663a05d80
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 1a2826bb0c9b542837e05b7f600c9ce7d934fd4e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f7e88065ff66ea953d0a91ed080fc3d7159ab794
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63143090"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489108"
 ---
 # <a name="task-5-creating-a-domain-based-attribute-from-excel"></a>Задача 5. Создание атрибута на основе домена в Excel
   В этой задаче вы преобразовать **состояние** атрибут **поставщика** сущность как **атрибут на основе домена**. После настройки атрибут ее на основе домена и его публикации в MDS, новую сущность с именем **состояние** будет создана на сервере MDS со всеми значениями в столбце и **состояние** атрибут **Поставщика** сущности будет заполнена значениями из **состояние** сущности. Теперь **поставщики** модель должна иметь две сущности: **Поставщик** и **состояние** где **состояние** атрибут **поставщика** сущность является атрибутом на основе домена, зависящий от **состояние** сущности.  

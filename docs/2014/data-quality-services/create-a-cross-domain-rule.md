@@ -10,15 +10,15 @@ f1_keywords:
 - sql12.dqs.dm.testcdrule.f1
 - sql12.dqs.dm.cdrules.f1
 ms.assetid: 0f3f5ba4-cc47-4d66-866e-371a042d1f21
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b50eb916b114387f9d80202cf0993e830e79aecd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9478564d6fde6596fe6f407bb9a9a2b389b2a1d2
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62793195"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65480990"
 ---
 # <a name="create-a-cross-domain-rule"></a>Создание междоменного правила
   В этом разделе описано, как создать междоменное правило для составного домена в базе знаний служб [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Междоменное правило проверяет связь между значениями в отдельных доменах, включенных в составной домен. Междоменное правило должно выполняться в составном домене, чтобы значения в домене были точными и соответствовали требованиям бизнеса. Междоменное правило используется для проверки, исправления и стандартизации значений в домене.  

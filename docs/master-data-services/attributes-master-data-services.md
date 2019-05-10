@@ -15,15 +15,15 @@ helpviewer_keywords:
 - attributes [Master Data Services], free-form attributes
 - attributes [Master Data Services]
 ms.assetid: 95ecb75f-c559-41c3-933c-40ae60a4c2fd
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d782a7863d8e6ed029a201b4b309817d2e2a12c8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 91284aea68f6eccbd3a109ad0db44bd3f110b71e
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813366"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65484423"
 ---
 # <a name="attributes-master-data-services"></a>Атрибуты (службы Master Data Services)
 
@@ -62,7 +62,7 @@ ms.locfileid: "52813366"
 -   Значение может не допускать *обратного преобразования* , если представлено числом с плавающей запятой. Значение называется обратимым, если после некоторой операции, преобразующей исходное число с плавающей запятой в другой вид, и применения обратной операции, которая возвращает полученный результат обратно к числу с плавающей запятой, получившееся число равно исходному числу с плавающей запятой. Обратимость может нарушаться, если в результате преобразования теряются или меняются одна или несколько менее значащих цифр.  
   
 ## <a name="attribute-examples"></a>Примеры атрибутов  
- В следующем примере сущность имеет атрибуты: Name, Code, Subcategory, StandardCost, ListPrice и FilePhoto. Эти атрибуты описывают элементы. Каждый элемент представлен отдельной строкой значений атрибута.  
+ В следующем примере сущность имеет атрибуты: Имя, Code, Subcategory, StandardCost, ListPrice и FilePhoto. Эти атрибуты описывают элементы. Каждый элемент представлен отдельной строкой значений атрибута.  
   
  ![Таблица продукта "Велосипед"](../master-data-services/media/mds-conc-entity-table-w-data.gif "Таблица продукта \"Велосипед\"")  
   

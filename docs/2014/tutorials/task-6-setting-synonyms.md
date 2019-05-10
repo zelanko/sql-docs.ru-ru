@@ -1,5 +1,5 @@
 ---
-title: Задача 6. Задание синонимов | Документация Майкрософт
+title: Задача 6. Задание синонимов | Документация Майкрософт
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: b7d35ee9-d1c9-41d9-bbc5-0ca7db93e54d
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: a81a538e2cd15dd38a6c32993395cac20079b6f2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 41c11138d00b4aea7332dac9984cbd609eba05e3
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62866346"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489085"
 ---
-# <a name="task-6-setting-synonyms"></a>Задача 6. Задание синонимов
+# <a name="task-6-setting-synonyms"></a>Задача 6. Задание синонимов
   В этой задаче вы зададите два значения, **USA** и **United States**, домена **Страна** как синонимы, при этом **United States** будет начальным значением. Поскольку параметр **Использовать начальные значения** был выбран при создании домена **Страна** , все значения **USA** для домена **Страна** будут выводиться как **United States** (при этом «United States» — начальное значение). Дополнительные сведения см. в разделе [Изменение значений домена](https://msdn.microsoft.com/library/hh510408.aspx) .  
   
 1.  Выберите **Страна** в списке доменов.  

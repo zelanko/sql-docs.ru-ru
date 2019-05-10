@@ -10,15 +10,15 @@ f1_keywords:
 - sql12.dqs.dm.rules.f1
 - sql12.dqs.dm.testdomainrule.f1
 ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 750773c728b2cbe026aac404f90a13928802a4bc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0e9f04742bbfabcfa0e351f25e9475a8022689e6
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62793107"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65481032"
 ---
 # <a name="create-a-domain-rule"></a>Создание правила домена
   В этом разделе описывается, как создать правило домена в [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Правило домена — это условие, которое используется для проверки, исправления и стандартизации значений домена. Правило домена должно выполняться в домене, чтобы значения домена были точными и соответствовали требованиям бизнеса. Правила домена могут включать правила проверки, которые используются для проверки значений домена, а не для исправления данных в проектах служб DQS. Правила включают также правила стандартизации, которые применяются в отношении допустимых данных и служат для исправления данных.  

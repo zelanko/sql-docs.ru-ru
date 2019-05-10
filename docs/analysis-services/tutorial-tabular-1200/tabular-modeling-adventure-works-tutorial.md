@@ -1,6 +1,6 @@
 ---
-title: Табличное моделирование (с уровнем совместимости 1200) служб Analysis Services | Документация Майкрософт
-ms.date: 05/07/2019
+title: Учебник по службам Analysis Services продажи через Интернет (при уровне совместимости 1200) | Документация Майкрософт
+ms.date: 05/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7ae9dd208d151dc3b8fb8117ba6e672ada2aecdd
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
-ms.translationtype: HT
+ms.openlocfilehash: 06b3aace2320882d209e6a7ab0f67a16a6f8a6df
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65403356"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503620"
 ---
-# <a name="tabular-modeling-1200-compatibility-level"></a>Табличное моделирование (с уровнем совместимости 1200)
+# <a name="adventure-works-internet-sales-tutorial-1200"></a>Учебник по Adventure Works Internet Sales (1200)
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 Этом учебнике содержатся занятия по созданию табличной модели служб Analysis Services в [уровне совместимости 1200](../tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md) с помощью [SQL Server Data Tools (SSDT)](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)и развертывание модели служб Analysis Services на локальном сервере или в Azure.  
@@ -98,7 +98,7 @@ ms.locfileid: "65403356"
 |[Настройка свойств отчетов для отчетов Power View](supplemental-lesson-configure-reporting-properties-for-power-view-reports.md)|30 минут| 
 
   
-## <a name="next-step"></a>Следующий шаг  
+## <a name="next-steps"></a>Следующие шаги  
 Чтобы приступить к изучению учебника, перейдите к первому занятию: [Занятие 1. Создание нового проекта табличной модели](lesson-1-create-a-new-tabular-model-project.md).  
   
   

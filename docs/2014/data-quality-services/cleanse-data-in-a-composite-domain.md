@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 7d1076e0-7710-469a-9107-e293e4bd80ac
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3129be8603d31a26978a1789be59f4d649da1b06
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7fb9e3cc9d500184e637284c4cfb8c65c48b43c1
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62755850"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65481139"
 ---
 # <a name="cleanse-data-in-a-composite-domain"></a>Очистка данных в составном домене
   В этом разделе описывается очистка составных доменов в службах [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Составной домен состоит из нескольких отдельных доменов и соответствует полю данных, которое включает несколько связанных терминов. Отдельные домены в составном домене должны иметь общие области набора знаний. Дополнительные сведения о составных доменах см. в разделе [Managing a Composite Domain](../../2014/data-quality-services/managing-a-composite-domain.md).  

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - models [Master Data Services], creating models
 - creating models [Master Data Services]
 ms.assetid: 9bb3b3b3-bde8-44aa-ad62-eaae21188141
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f08318c5dbd42137b7c818e5bb4b0a3d1e34fae8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 5c55db7072020f715882912b46cac0e9219cbbf9
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748836"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65477055"
 ---
 # <a name="create-a-model-master-data-services"></a>Создание модели (службы Master Data Services)
 
@@ -72,7 +72,7 @@ ms.locfileid: "52748836"
   
 -   **Дата и время обновления**: дата и время последнего обновления модели.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Следующие шаги  
   
 -   [Создание сущности (службы Master Data Services)](../master-data-services/create-an-entity-master-data-services.md)  
   

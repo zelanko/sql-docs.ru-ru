@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 56bc41ea-de28-4184-aa7e-99111ae55af5
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 13678d9b3d522e65ff1f9e895020bb0fde020bef
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: c36f1850a5ab6aff1537d8000872d157dbe2eb41
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52751917"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488131"
 ---
 # <a name="security-master-data-services"></a>Безопасность (службы Master Data Services)
 
@@ -63,7 +63,7 @@ ms.locfileid: "52751917"
 |Назначение разрешения для значений атрибутов путем назначения разрешения для объектов модели.|[Назначение разрешения для объекта модели (службы Master Data Services)](../master-data-services/assign-model-object-permissions-master-data-services.md)|  
 |Назначение разрешения для значений элементов путем назначения разрешений для узлов иерархии.|[Назначение разрешений для элемента иерархии (службы Master Data Services)](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Администраторы (службы Master Data Services)](../master-data-services/administrators-master-data-services.md)   
  [Пользователи и группы (службы Master Data Services)](../master-data-services/users-and-groups-master-data-services.md)   
  [Разрешения функциональной области (службы Master Data Services)](../master-data-services/functional-area-permissions-master-data-services.md)   

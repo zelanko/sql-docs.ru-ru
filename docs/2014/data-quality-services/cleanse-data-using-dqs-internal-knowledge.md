@@ -12,15 +12,15 @@ f1_keywords:
 - sql12.dqs.dqproject.correction.f1
 - sql12.dqs.dqproject.interactivecleansing.f1
 ms.assetid: c96b13ad-02a6-4646-bcc7-b4a8d490f5cc
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: aa900fc136729eace74af6ceaf8d6f26b7900f99
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 26e4c7394f1af445534e32f9a960cb71480f72c9
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62755802"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65481130"
 ---
 # <a name="cleanse-data-using-dqs-internal-knowledge"></a>Очистка данных с использованием набора знаний служб DQS (внутренних)
   В этом разделе описывается очистка данных с использованием проекта служб DQS в [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Очистка данных выполняется для исходных данных с использованием базы знаний, построенной в DQS по набору высококачественных данных. Дополнительные сведения см. в статье [Построение базы знаний](../../2014/data-quality-services/building-a-knowledge-base.md).  

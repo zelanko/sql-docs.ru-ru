@@ -18,12 +18,12 @@ ms.assetid: ceecea08-456f-4819-85d9-ecc9647d7187
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7819e14ccfea387a83e88f7aff8c81541968e89a
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 2f4ab09693234d72890524628f4def5afcf447ef
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589128"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65450083"
 ---
 # <a name="spoageterrorinfo-transact-sql"></a>sp_OAGetErrorInfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -91,12 +91,12 @@ sp_OAGetErrorInfo [ objecttoken ]
 |**Выполнение сервера закончено неудачей (0x80080005)**|Заданный объект OLE зарегистрирован как локальный сервер OLE (файл EXE), но файл EXE не был найден или запущен.|  
 |**Указанный модуль не найден (0x8007007e)**|Заданный объект OLE зарегистрирован как внутрипроцессный сервер OLE (файл DLLl), но файл DLL не мог быть найден или загружен.|  
 |**Несоответствие типов (данных 0x80020005)**|Тип данных локальной переменной [!INCLUDE[tsql](../../includes/tsql-md.md)], используемой для хранения возвращаемого значения свойства или возвращаемого значения метода, не соответствует типу данных [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] возвращаемого значения свойства или метода. Либо возвращаемое значение свойства или метода было запрошено, но значение не было возвращено.|  
-|**Тип данных или значение параметра «контекст» sp_OACreate недопустимы. (0x8004275B)**|Параметр контекста должен принимать одно из следующих значений: 1, 4 или 5.|  
+|**Тип данных или значение параметра «контекст» sp_OACreate недопустимы. (0x8004275B)**|Значение параметра контекста должно быть одно из значений: 1, 4 или 5.|  
   
  Дополнительные сведения об обработке возвращаемых кодов HRESULT см. в разделе [OLE Automation коды возврата и сведения об ошибках](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
   
 ## <a name="permissions"></a>Разрешения  
- Необходимо членство в предопределенной роли сервера **sysadmin** .  
+ Требуется членство в **sysadmin** предопределенной роли сервера или разрешение на выполнение непосредственно в этой хранимой процедуры. `Ole Automation Procedures` Конфигурация должна быть **включена** для использования любой системной процедуры, связанные с OLE-автоматизации.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере отображаются сведения об ошибке OLE-автоматизации.  
