@@ -11,15 +11,15 @@ helpviewer_keywords:
 - business rules [Master Data Services], creating
 - creating business rules [Master Data Services]
 ms.assetid: 6961d636-4d69-468e-81f7-8d0be6a4a039
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 401dc7a80db0a1499943802671866ebef0eef901
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 1ad1a0935c084aab515d6e91181695af55860773
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777346"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489618"
 ---
 # <a name="create-and-publish-a-business-rule-master-data-services"></a>Создание и публикация бизнес-правила (службы Master Data Services)
 
@@ -112,7 +112,7 @@ ms.locfileid: "52777346"
 |Исключена.|Указывает, исключено ли бизнес-правило.|  
 |Уведомление|Указывает выбранного пользователя или группу, которым необходимо отправлять уведомление.|  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Следующие шаги  
   
 -   Примените бизнес-правила к данным с помощью одной из следующих процедур:  
   
@@ -120,7 +120,7 @@ ms.locfileid: "52777346"
   
     -   [Подтверждение исправления проблемы, обнаруженной при проверке на соответствие бизнес-правилам (службы Master Data Services)](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Настройка в бизнес-правилах отправки уведомлений (службы Master Data Services)](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)   
  [Изменение имени бизнес-правила (службы Master Data Services)](../master-data-services/change-a-business-rule-name-master-data-services.md)   
  [Добавление нескольких условий к бизнес-правилу (службы Master Data Services)](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)  

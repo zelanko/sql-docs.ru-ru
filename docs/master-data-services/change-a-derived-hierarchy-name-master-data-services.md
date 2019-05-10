@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - derived hierarchies, changing name
 ms.assetid: 5765e710-d273-4675-aee2-5718273bfdc4
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f04ba82fe1352a7b04c03fe5bdcf757564271035
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 3583e737644b4555a25ffd74db6f297953fe09f8
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52790186"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65485399"
 ---
 # <a name="change-a-derived-hierarchy-name-master-data-services"></a>Изменение имени производной иерархии (службы Master Data Services)
 
@@ -51,7 +51,7 @@ ms.locfileid: "52790186"
   
 8.  Нажмите кнопку **Сохранить производную иерархию**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Производные иерархии (службы Master Data Services)](../master-data-services/derived-hierarchies-master-data-services.md)   
  [Создание производной иерархии (службы Master Data Services)](../master-data-services/create-a-derived-hierarchy-master-data-services.md)   
  [Удаление производной иерархии (службы Master Data Services)](../master-data-services/delete-a-derived-hierarchy-master-data-services.md)  

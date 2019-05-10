@@ -15,12 +15,12 @@ ms.assetid: cc5bf181-18a0-44d5-8bd7-8060d227c927
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 946b447b974be9c24403957681f26df627094084
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5f96f82919b9f4a130ce8a533e6ffcf31e765f5f
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63249652"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65092044"
 ---
 # <a name="partitioned-tables-and-indexes"></a>Partitioned Tables and Indexes
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает секционирование таблиц и индексов. Данные секционированных таблиц и индексов подразделяются на блоки, которые могут быть распределены по нескольким файловым группам в базе данных. Данные секционируются горизонтально, поэтому группы строк сопоставляются с отдельными секциями. Все секции одного индекса или таблицы должны находиться в одной и той же базе данных. Таблица или индекс рассматриваются как единая логическая сущность при выполнении над данными запросов или обновлений. Секционированные таблицы и индексы доступны не в каждом выпуске [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Перечень функций, поддерживаемых в разных выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в разделе [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
@@ -114,8 +114,6 @@ ms.locfileid: "63249652"
 -   [How to Implement an Automatic Sliding Window in a Partitioned Table on SQL Server 2005](https://msdn.microsoft.com/library/aa964122\(SQL.90\).aspx)  
   
 -   [Массовая загрузка в секционированную таблицу](https://msdn.microsoft.com/library/cc966380.aspx)  
-  
--   [Проект REAL. Жизненный цикл данных — секционирование](https://www.microsoft.com/downloads/en/details.aspx?FamilyID=a4139d84-ad2d-4cd5-a463-239c6b7d88c9&DisplayLang=en)  
   
 -   [Улучшенные возможности обработки запросов для секционированных таблиц и индексов](https://msdn.microsoft.com/library/ms345599.aspx)  
   

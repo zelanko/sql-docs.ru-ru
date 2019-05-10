@@ -15,15 +15,15 @@ helpviewer_keywords:
 - logging,severity levels
 - configure severity levels
 ms.assetid: 66ffcdec-4bf7-4dd5-a221-fd9baefeeef4
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: c7b6476b9875b52f6961df20b750e68e5df0858c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4aeffaf9098e2476db4a0faf95811f3ea5204aaa
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62793205"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65480927"
 ---
 # <a name="configure-severity-levels-for-dqs-log-files"></a>Настройка степеней серьезности для файлов журнала DQS
   В данном разделе описывается, как настраивать степени серьезности для различных операций и модулей в службе [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) при помощи [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. Степени серьезности определяют интенсивность событий, которые происходят в DQS. События DQS имеют следующие степени серьезности, в порядке убывания серьезности:  

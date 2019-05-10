@@ -1,5 +1,5 @@
 ---
-title: Задача 17. Обзор DQS очистки проекта, созданного пакетом служб SSIS | Документация Майкрософт
+title: Задача 17. Обзор DQS очистки проекта, созданного пакетом служб SSIS | Документация Майкрософт
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: fc6cc258-72f5-4593-8edb-9f5bc66de9db
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4653ce040e19b82b9e70daa7ebfc02047d71b194
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 285eae7ea20d5919fa73bd0d514c755fe73d9de0
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63057854"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65484713"
 ---
-# <a name="task-17-reviewing-dqs-cleansing-project-created-by-the-ssis-package"></a>Задача 17. Обзор DQS очистки проекта, созданного пакетом служб SSIS
+# <a name="task-17-reviewing-dqs-cleansing-project-created-by-the-ssis-package"></a>Задача 17. Проверка проекта очистки DQS, созданного пакетом SSIS
   В этой задаче вы откроете проект служб DQS, созданный пакетом служб SSIS в клиенте DQS, просмотрите результаты очистки и при желании выполните интерактивную очистку и экспортируете результаты.  
   
 1.  Запустите **Data Quality Client**.  

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 9455d3cf-c1b7-4d48-8aff-7dc636ed5dc3
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 22a181aec3eaeeb50f1958f9de1380de7a8a85f7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 15b394c836cb24229944f4e0775dfccad847a32b
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62765206"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65482887"
 ---
 # <a name="web-application-requirements-master-data-services"></a>Требования веб-приложений (службы Master Data Services)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] — это веб-приложение, размещенное в службах IIS. [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] работает только в Internet Explorer (IE) 7 или более поздней версии. Internet Explorer 7 и более ранние версии, а также Microsoft Edge и Chrome не поддерживаются.  

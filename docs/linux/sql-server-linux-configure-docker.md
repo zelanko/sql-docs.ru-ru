@@ -11,12 +11,12 @@ ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: sql-linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 8b7f256aec6fc01500f5c98709086a69815fd6ef
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 7261d8b5b72b835c726a268477c44e4d0663f131
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59516520"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65376846"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>Настройка образов контейнеров SQL Server в Docker
 
@@ -83,11 +83,11 @@ docker run --name sqlenterprise `
       -d "store/microsoft/mssql-server-linux:2017-latest"
  ```
 
-      > [!IMPORTANT]
-      > By passing the value **Y** to the environment variable **ACCEPT_EULA** and an edition value to **MSSQL_PID**, you are expressing that you have a valid and existing license for the edition and version of SQL Server that you intend to use. You also agree that your use of SQL Server software running in a Docker container image will be governed by the terms of your SQL Server license.
+> [!IMPORTANT]
+> Путем передачи значения **Y** в переменную среды **ACCEPT_EULA** и значение edition **MSSQL_PID**, вы выражаете наличие допустимым и существующие лицензии выпуск и версия SQL Server, который вы собираетесь использовать. Кроме того, вы соглашаетесь, что использование программного обеспечения SQL Server, работающих в образ контейнера Docker, подпадают под условия лицензии SQL Server.
 
-      > [!NOTE]
-      > For a full list of possible values for **MSSQL_PID**, see [Configure SQL Server settings with environment variables on Linux](sql-server-linux-configure-environment-variables.md).
+> [!NOTE]
+> Полный список возможных значений для **MSSQL_PID**, см. в разделе [параметры SQL Server можно настроить с помощью переменных среды в Linux](sql-server-linux-configure-environment-variables.md).
 
 ::: moniker-end
 

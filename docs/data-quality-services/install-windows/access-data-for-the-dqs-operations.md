@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 88dfb9ea-6321-4eaf-b9e4-45d36ef048f6
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b94f615ddcc2f1b3eb0c577130ee375cc0672848
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: 3481d9f8460182d58e11c0910c1c86bd10563459
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024595"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65487566"
 ---
 # <a name="access-data-for-the-dqs-operations"></a>Предоставление доступа к данным для операций со службами DQS
 
@@ -46,18 +46,18 @@ ms.locfileid: "56024595"
   
 5.  На правой панели установите флажок в столбце **Сопоставление** для базы данных **DQS_STAGING_DATA**, а затем на панели **Членство в роли базы данных для: DQS_STAGING_DATA** выберите следующие роли.  
   
-    -   **db_datareader**: чтение данных из таблиц и представлений  
+    -   **db_datareader**: Чтение данных из таблиц и представлений.  
   
-    -   **db_datawriter**: добавление, удаление и изменение данных в таблицах.  
+    -   **db_datawriter**: Добавление, удаление или изменение данных в таблицах.  
   
-    -   **db_ddladmin**: создание, изменение или удаление таблиц и представлений.  
+    -   **db_ddladmin**: Создание, изменение или удаление таблиц и представлений.  
   
 6.  В диалоговом окне **Свойства имени входа** нажмите кнопку **ОК** , чтобы применить изменения.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Следующие шаги  
  Проверьте работоспособность операций служб DQS, использующих эту базу данных в качестве источника данных, а затем экспортирующих в нее обработанные данные.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Установка служб Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)  
   
   
