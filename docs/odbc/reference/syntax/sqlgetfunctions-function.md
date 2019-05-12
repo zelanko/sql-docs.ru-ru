@@ -20,12 +20,12 @@ ms.assetid: 0451d2f9-0f4f-46ba-b252-670956a52183
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7ac3d24b1213096be20658fb48dbfe9a6d39df8f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e0a44320072f11a56b735502be3f1776f29cc1c0
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63240240"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65538022"
 ---
 # <a name="sqlgetfunctions-function"></a>SQLGetFunctions, функция
 **Соответствие стандартам**  
@@ -36,7 +36,7 @@ ms.locfileid: "63240240"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
   
 SQLRETURN SQLGetFunctions(  
      SQLHDBC           ConnectionHandle,  
@@ -148,7 +148,7 @@ SQLRETURN SQLGetFunctions(
 ## <a name="code-example"></a>Пример кода  
  В следующих трех примерах показано, как приложение использует **SQLGetFunctions** чтобы определить, поддерживает ли драйвер **SQLTables**, **SQLColumns**, и  **SQLStatistics**. Если драйвер не поддерживает эти функции, приложение отключается от драйвера. В первом примере вызывается **SQLGetFunctions** один раз для каждой функции.  
   
-```  
+```cpp  
 SQLUSMALLINT TablesExists, ColumnsExists, StatisticsExists;  
 RETCODE retcodeTables, retcodeColumns, retcodeStatistics  
   
@@ -171,7 +171,7 @@ SQLDisconnect(hdbc);
   
  Во втором примере, вызывает в приложении ODBC 3.x **SQLGetFunctions** и передает массив в котором **SQLGetFunctions** возвращает сведения обо всех ODBC 3.x и более ранних функции.  
   
-```  
+```cpp  
 RETCODE retcodeTables, retcodeColumns, retcodeStatistics  
 SQLUSMALLINT fExists[SQL_API_ODBC3_ALL_FUNCTIONS_SIZE];  
   
@@ -193,7 +193,7 @@ SQLDisconnect(hdbc);
   
  Третий пример является вызывает в приложении ODBC 2.x **SQLGetFunctions** и передает его массив из 100 элементов, в котором **SQLGetFunctions** возвращает сведения обо всех ODBC 2.x и более ранних функции.  
   
-```  
+```cpp  
 #define FUNCTIONS 100  
   
 RETCODE retcodeTables, retcodeColumns, retcodeStatistics  

@@ -20,12 +20,12 @@ ms.assetid: d5450895-3824-44c4-8aa4-d4f9752a9602
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e91febb4b5b94b5a7f9df62347b4db5edcecf975
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 601c0cdab47c338b903514f2e2e47547551ef678
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63259282"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65537730"
 ---
 # <a name="sqlcopydesc-function"></a>Функция SQLCopyDesc
 **Соответствие стандартам**  
@@ -36,7 +36,7 @@ ms.locfileid: "63259282"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
   
 SQLRETURN SQLCopyDesc(  
      SQLHDESC     SourceDescHandle,  
@@ -106,7 +106,7 @@ SQLRETURN SQLCopyDesc(
 ### <a name="code-example"></a>Пример кода  
  В следующем примере дескриптор операции используются для копирования поля PartsSource таблицы в таблицу PartsCopy. Содержимое таблицы PartsSource извлекаются в буферы строк в *hstmt0*. Эти значения используются в качестве параметров инструкции INSERT на *hstmt1* для заполнения столбцов таблицы PartsCopy. Чтобы сделать это, полях IRD из *hstmt0* копируются к полям IPD из *hstmt1*и полям элемента Отменить из *hstmt0* копируются в поля APD *hstmt1*. Используйте **SQLSetDescField** задать атрибут SQL_DESC_PARAMETER_TYPE в IPD SQL_PARAM_INPUT, при копировании полях IRD инструкции с выходными параметрами в полях IPD, которые должны быть входными параметрами.  
   
-```  
+```cpp  
 #define ROWS 100  
 #define DESC_LEN 50  
 #define SQL_SUCCEEDED(rc) (rc == SQL_SUCCESS || rc == SQL_SUCCESS_WITH_INFO)  

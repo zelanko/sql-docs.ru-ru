@@ -20,12 +20,12 @@ ms.assetid: 80190ee7-ae3b-45e5-92a9-693eb558f322
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e769949c8c57bbec56055c58c9002494fc6d37be
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 86386460c3abc9ab7b6463b01ee4388e9186ad2b
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62982398"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65536321"
 ---
 # <a name="sqlsetpos-function"></a>Функция SQLSetPos
 **Соответствие стандартам**  
@@ -36,7 +36,7 @@ ms.locfileid: "62982398"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```cpp  
   
 SQLRETURN SQLSetPos(  
       SQLHSTMT        StatementHandle,  
@@ -315,7 +315,7 @@ SQLRETURN SQLSetPos(
 ## <a name="code-example"></a>Пример кода  
  В следующем примере приложение позволяет пользователю для просмотра в таблице ORDERS и обновить состояние заказа. Курсор курсоры с размером набора строк, 20 и использует управление оптимистичным параллелизмом, сравнение версий строк. После каждого набора строк извлекается, приложение выводит ее и позволяет пользователю выбрать и обновить состояние заказа. Приложение использует **SQLSetPos** для позиционирования курсора на выбранной строки и выполняет позиционированного обновления строки. (Обработка ошибок опущена для ясности).  
   
-```  
+```cpp  
 #define ROWS 20  
 #define STATUS_LEN 6  
   
