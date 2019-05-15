@@ -5,27 +5,34 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 552a6883f1d17b54e5163368bdce6d426907e0ba
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: d0d991e088a9bd06c322c3d0c8839b0c9c29fc52
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298482"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65502948"
 ---
 # <a name="install-report-builder"></a>Install Report Builder
   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] является автономным приложением и устанавливается на компьютере пользователем или администратором. Вы можете установить приложение из центра загрузки Майкрософт, с сервера отчетов [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] или с сайта SharePoint, интегрированного с [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+
+> [!NOTE]
+> Интеграция служб Reporting Services с SharePoint больше не доступна после выхода SQL Server 2016.
   
  Обычно администратор устанавливает и настраивает службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], предоставляет разрешение на скачивание [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] с веб-портала и управляет папками и разрешениями для отчетов, элементов отчетов и общих наборов данных, сохраняемых на сервере отчетов. Дополнительные сведения об администрировании [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] см. в разделе [Сервер отчетов служб Reporting Services (собственный режим)](../../reporting-services/report-server/reporting-services-report-server-native-mode.md).  
   
 ## <a name="install-includessrbnoversionincludesssrbnoversionmd-from--a--web-portal-or-sharepoint-library"></a>Установка [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] из веб-портала или библиотеки SharePoint 
   
  Вы можете запустить [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] на веб-портале [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] или сайте SharePoint, интегрированном с [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Сведения см. в разделе [Запуск построителя отчетов](../../reporting-services/report-builder/start-report-builder.md).  
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
 ### <a name="sharepoint-site-integrated-with-includessrsnoversionincludesssrsnoversion-mdmd"></a>Сайт SharePoint, интегрированный с [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]
   
  На сайте SharePoint, интегрированном с [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], если меню **Создать документ** не содержит пункты **Отчет построителя отчетов**, **Модель построителя отчетов**и **Источник данных отчета**, необходимо добавить типы их содержимого в библиотеку SharePoint. Дополнительные сведения см. в разделе [Добавление типов содержимого служб Reporting Services в библиотеку SharePoint](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md).  
+
+::: moniker-end
  
 ## <a name="install-includessrbnoversionincludesssrbnoversionmd-with-system-center-configuration-manager"></a>Установка [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] с System Center Configuration Manager 
   
@@ -67,7 +74,7 @@ ms.locfileid: "56298482"
   
 ## <a name="to-install-includessrbnoversionincludesssrbnoversionmd-from-the-command-line"></a>Установка [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] из командной строки 
 
- Кроме того, можно установить [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] из командной строки, задав аргументы для настройки установки. Кроме стандартных внутренних параметров MSI можно использовать пользовательские параметры, предоставляемые [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]: RBINSTALLDIR и REPORTSERVERURL. RBINSTALLDIR указывает корневой каталог установки для [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. REPORTSERVERURL указывает сервер отчетов по умолчанию, используемый [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] для сохранения отчетов на сервере.  
+ Кроме того, можно установить [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] из командной строки, задав аргументы для настройки установки. Кроме стандартных внутренних параметров MSI, вы можете использовать пользовательские параметры, предоставляемые [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]: RBINSTALLDIR и REPORTSERVERURL. RBINSTALLDIR указывает корневой каталог установки для [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. REPORTSERVERURL указывает сервер отчетов по умолчанию, используемый [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] для сохранения отчетов на сервере.  
   
  Если необходимо произвести установку в полностью автоматическом режиме, без какого-либо взаимодействия с пользовательским интерфейсом, укажите параметр **/quiet** . Флаг параметра подавляет сообщения об ошибках установки. В связи с этим при использовании автоматической установки рекомендуется включить параметр **/l** , указывающий необходимость ведения журнала.   
   
@@ -85,7 +92,7 @@ ms.locfileid: "56298482"
   
      `msiexec/i ReportBuilder3.msi /option [value] [/option [value]]`  
   
-     У установки [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] имеется два параметра: RBINSTALLDIR и REPORTSERVERURL. Вам не обязательно включать эти аргументы в командную строку. Ниже приведена базовая команда:  
+     Для установки [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] нужны два параметра: RBINSTALLDIR и REPORTSERVERURL. Вам не обязательно включать эти аргументы в командную строку. Ниже приведена базовая команда:  
   
      `msiexec /i ReportBuilder3_x86.msi /quiet`  
   

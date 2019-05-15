@@ -60,12 +60,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a312663c26142bfd532adbcaba80d2a6ee30d6db
-ms.sourcegitcommit: 3c4bb35163286da70c2d669a3f84fb6a8145022c
+ms.openlocfilehash: 6222daffd3f008486f8c2be59f74a8c605caa2f7
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57683684"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65502864"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
@@ -90,7 +90,7 @@ ms.locfileid: "57683684"
 ## <a name="syntax-for-disk-based-tables"></a>Синтаксис для таблиц на диске
 
 ```
-ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
+ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
 {
     ALTER COLUMN column_name
     {
@@ -249,7 +249,7 @@ ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
 ## <a name="syntax-for-memory-optimized-tables"></a>Синтаксис для таблиц, оптимизированных для памяти
 
 ```
-ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
+ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
 {
     ALTER COLUMN column_name
     {
@@ -380,7 +380,7 @@ ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
 
 -- Syntax for Azure SQL Data Warehouse and Analytics Platform System
 
-ALTER TABLE [ database_name . [schema_name ] . | schema_name. ] source_table_name
+ALTER TABLE { database_name.schema_name.source_table_name | schema_name.source_table_name | source_table_name }
 {
     ALTER COLUMN column_name
         {
@@ -848,7 +848,7 @@ SET ( FILETABLE_DIRECTORY = *directory_name* ) — **применяется к*
 - Чтобы отключить базу данных Stretch для таблицы и скопировать удаленные данные из Azure обратно в SQL Server, запустите следующую команду. Эту команду нельзя отменить.
 
     ```sql
-    ALTER TABLE \<table name>
+    ALTER TABLE <table_name>
        SET ( REMOTE_DATA_ARCHIVE ( MIGRATION_STATE = INBOUND ) ) ;
     ```
 
@@ -859,7 +859,7 @@ SET ( FILETABLE_DIRECTORY = *directory_name* ) — **применяется к*
 - Чтобы отключить растяжение для таблицы и отказаться от удаленных данных, выполните следующую команду.
 
     ```sql
-    ALTER TABLE \<table_name>
+    ALTER TABLE <table_name>
        SET ( REMOTE_DATA_ARCHIVE = OFF_WITHOUT_DATA_RECOVERY ( MIGRATION_STATE = PAUSED ) ) ;
     ```
 
@@ -1304,7 +1304,7 @@ GO
 -- The keyword CONSTRAINT is optional. The keyword COLUMN is required.
 ALTER TABLE dbo.doc_exc
 
-    DROP CONSTRAINT CONSTRAINT my_constraint, my_pk_constraint, COLUMN column_b ;
+    DROP CONSTRAINT my_constraint, my_pk_constraint, COLUMN column_b ;
 GO
 ```
 

@@ -2,8 +2,8 @@
 title: Краткое руководство. Подключение и запрос к базе данных Azure SQL
 titleSuffix: Azure Data Studio
 description: В этом кратком руководстве показано, как использовать Studio данных Azure для подключения к базе данных SQL и выполнить запрос
-ms.custom: seodec18
-ms.date: 12/21/2018
+ms.custom: seodec18, sqlfreshmay19
+ms.date: 05/14/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,12 +11,12 @@ ms.topic: quickstart
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: d368f38589530f27db98c3c61b9cec4610818ae4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a961cd08baab13b87241492df4adef52d5846daf
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63255974"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65620361"
 ---
 # <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-azure-sql-database"></a>Краткое руководство. Используйте [!INCLUDE[name-sos](../includes/name-sos-short.md)] подключение и запрос базы данных Azure SQL
 
@@ -39,7 +39,7 @@ ms.locfileid: "63255974"
 
 Используйте [!INCLUDE[name-sos](../includes/name-sos-short.md)] установить подключение к серверу базы данных SQL Azure.
 
-1. При первом запуске [!INCLUDE[name-sos](../includes/name-sos-short.md)] **подключения** должна открыться страница. Если вы не видите **подключения** выберите **добавить подключение**, или **новое подключение** значок в **СЕРВЕРЫ** боковой панели:
+1. При первом запуске [!INCLUDE[name-sos](../includes/name-sos-short.md)] **приветствия** должна открыться страница. Если вы не видите **приветствия** выберите **помочь** > **приветствия**. Выберите **новое подключение** открыть **подключения** области:
    
    ![Значок "Создать подключение"](media/quickstart-sql-database/new-connection-icon.png)
 

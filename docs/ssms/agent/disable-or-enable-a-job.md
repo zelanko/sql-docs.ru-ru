@@ -13,16 +13,16 @@ helpviewer_keywords:
 - SQL Server Agent jobs, disabling
 - jobs [SQL Server Agent], disabling
 ms.assetid: 5041261f-0c32-4d4a-8bee-59a6c16200dd
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 93f2593aaff1aa3979c4b325b33404ff94d3a0c8
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 6d3137b019319163e24a32a2037e9ab7bcbd002f
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697632"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65096552"
 ---
 # <a name="disable-or-enable-a-job"></a>Disable or Enable a Job
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "51697632"
 ## <a name="BeforeYouBegin"></a>Перед началом  
   
 ### <a name="Security"></a>безопасность  
-Дополнительные сведения см. в разделе [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md).  
+Дополнительные сведения см. в разделе [Обеспечение безопасности агента SQL Server](../../ssms/agent/implement-sql-server-agent-security.md).  
   
 ## <a name="SSMS"></a>Использование среды SQL Server Management Studio  
   

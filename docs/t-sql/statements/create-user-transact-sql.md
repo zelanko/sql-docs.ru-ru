@@ -1,7 +1,7 @@
 ---
 title: CREATE USER (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 12/03/2018
+ms.date: 05/09/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -30,12 +30,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: af33c0234ba1b8e6b92b5f1fee7f17f4d12dc667
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: ae453fa3cc9d51fae7402469989c3a25fc782e1c
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59042174"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488317"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "59042174"
   
 -   Пользователь, соответствующий пользователю Windows без имени входа. `CREATE USER [Contoso\Fritz];`    
 -   Пользователь, соответствующий группе Windows без имени входа. `CREATE USER [Contoso\Sales];`  
--   Пользователь в [!INCLUDE[ssSDS](../../includes/sssds-md.md)] или [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] на основе пользователя Azure Active Directory. `CREATE USER [Contoso\Fritz] FROM EXTERNAL PROVIDER;`     
+-   Пользователь в [!INCLUDE[ssSDS](../../includes/sssds-md.md)] или [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] на основе пользователя Azure Active Directory. `CREATE USER [Fritz@contoso.com] FROM EXTERNAL PROVIDER;`     
 
 -   Пользователь автономной базы данных с паролем. (Недоступно в [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].) `CREATE USER Mary WITH PASSWORD = '********';`   
   

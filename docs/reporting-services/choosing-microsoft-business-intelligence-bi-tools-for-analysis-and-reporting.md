@@ -1,7 +1,7 @@
 ---
 title: Средства Microsoft Business Intelligence (BI) для анализа и отчетности
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.reviewer: ''
 ms.prod: reporting-services, sql-server
@@ -9,12 +9,12 @@ ms.prod_service: reporting-services-native, reporting-services-sharepoint
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: 3acb11029c767efb3be21274d27ab271a5140793
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: 7916d3b2afe514d576ba7ec99cd1a7edab244278
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658078"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503903"
 ---
 # <a name="analysis-and-reporting-with-microsoft-business-intelligence-bi-tools"></a>Средства Microsoft Business Intelligence (BI) для анализа и отчетности
 
@@ -23,6 +23,9 @@ ms.locfileid: "58658078"
 В следующей таблице показано сопоставление рабочих нагрузок для анализа и отчетов со средствами бизнес-аналитики Майкрософт, которые лучше всего подходят для этих рабочих нагрузок. Дополнительные сведения о продукте, щелкните приведенную в таблице ссылку на продукт.  
   
  Чтобы ознакомиться с кратким описанием этих средств и решить, какие из них подходят для вас, см. раздел [Общие сведения о средствах бизнес-аналитики Майкрософт](https://download.microsoft.com/download/D/2/0/D20E1C5F-72EA-4505-9F26-FEF9550EFD44/Introducing_Microsoft_BI_Tools.docx).
+
+> [!NOTE]
+> Интеграция служб Reporting Services с SharePoint больше не доступна после выхода SQL Server 2016.
   
 |Рабочие нагрузки|Пользователь|||Средства бизнес-аналитики|||  
 |---------------|----------|-|-|--------------|-|-|  

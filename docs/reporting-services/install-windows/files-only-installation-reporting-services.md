@@ -8,14 +8,14 @@ helpviewer_keywords:
 - files-only installation [Reporting Services]
 - installation options [Reporting Services]
 ms.assetid: bdc74a8f-046c-4aa0-bfbd-4f1711dfb9ce
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 9bb08af2be944093346f3769ef5cc533592ad86f
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 8874115765a659b76e5d187df7414bedb3548ed9
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711235"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65502945"
 ---
 # <a name="files-only-installation-reporting-services"></a>Установка в режиме «только файлы» (службы Reporting Services)
   Режим установки*только файлы* означает установку [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , при которой программа установки создает структуру папок для программных файлов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , копирует файлы на диск, регистрирует на локальном компьютере службу сервера отчетов, настраивает учетную запись службы, предоставляет ей разрешения на доступ к файлам и регистрирует поставщик WMI [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -59,7 +59,13 @@ setup /q /ACTION=install /FEATURES=RS /InstanceName=MSSQLSERVER /RSSVCACCOUNT="N
  [Настройка учетной записи службы сервера отчетов (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [Настройка URL-адресов сервера отчетов (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
  [Настройка подключения к базе данных сервера отчетов (диспетчер конфигураций служб Reporting Services)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+
  [Установка режима интеграции с SharePoint для служб Reporting Services](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)   
+
+::: moniker-end
+
  [Установка сервера отчетов служб Reporting Services в собственном режиме](~/reporting-services/install-windows/install-reporting-services-native-mode-report-server.md)   
  [Инструментальные средства служб Reporting Services](../../reporting-services/tools/reporting-services-tools.md)  
   

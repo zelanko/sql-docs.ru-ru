@@ -33,74 +33,78 @@
   items:
     - name: Общие сведения о службах Analysis Services
       href: ../analysis-services/analysis-services-tutorials-ssas.md
-    - name: "Табличное моделирование (с уровнем совместимости\_1400)"
-      href: ../analysis-services/tutorial-tabular-1400/as-adventure-works-tutorial.md
+    - name: Табличное моделирование
       items:
-        - name: 1. Создание проекта табличной модели
-          href: ../analysis-services/tutorial-tabular-1400/as-lesson-1-create-a-new-tabular-model-project.md
-        - name: 2. Получение данных
-          href: ../analysis-services/tutorial-tabular-1400/as-lesson-2-get-data.md
-        - name: 3. Отметка в качестве таблицы дат
-          href: ../analysis-services/tutorial-tabular-1400/as-lesson-3-mark-as-date-table.md
-        - name: 4. Создание связей
-          href: ../analysis-services/tutorial-tabular-1400/as-lesson-4-create-relationships.md
-        - name: 5. Создание вычисляемых столбцов
-          href: ../analysis-services/tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md
-        - name: 6. Создание мер
-          href: ../analysis-services/tutorial-tabular-1400/as-lesson-6-create-measures.md
-        - name: 7. Создание ключевых показателей эффективности
-          href: ../analysis-services/tutorial-tabular-1400/as-lesson-7-create-key-performance-indicators.md
-        - name: 8. Создание перспектив
-          href: ../analysis-services/tutorial-tabular-1400/as-lesson-8-create-perspectives.md
-        - name: 9. Создание иерархий
-          href: ../analysis-services/tutorial-tabular-1400/as-lesson-9-create-hierarchies.md
-        - name: 10. Создание секций
-          href: ../analysis-services/tutorial-tabular-1400/as-lesson-10-create-partitions.md
-        - name: 11. Создание ролей
-          href: ../analysis-services/tutorial-tabular-1400/as-lesson-11-create-roles.md
-        - name: "12. Анализ в\_Excel"
-          href: ../analysis-services/tutorial-tabular-1400/as-lesson-12-analyze-in-excel.md
-        - name: 13. Развертывание
-          href: ../analysis-services/tutorial-tabular-1400/as-lesson-13-deploy.md
-        - name: Дополнительный урок. Строки детализации
-          href: ../analysis-services/tutorial-tabular-1400/as-supplemental-lesson-detail-rows.md
-        - name: Дополнительный урок. Динамическая безопасность
-          href: ../analysis-services/tutorial-tabular-1400/as-supplemental-lesson-dynamic-security.md
-        - name: Дополнительный урок. Неоднородные иерархии
-          href: ../analysis-services/tutorial-tabular-1400/as-supplemental-lesson-ragged-hierarchies.md
-    - name: "Табличное моделирование (с уровнем совместимости\_1200)"
-      href: ../analysis-services/tutorial-tabular-1200/tabular-modeling-adventure-works-tutorial.md
-      items:
-        - name: 1. Создание проекта табличной модели
-          href: ../analysis-services/tutorial-tabular-1200/lesson-1-create-a-new-tabular-model-project.md
-        - name: 2. Добавление данных
-          href: ../analysis-services/tutorial-tabular-1200/lesson-2-add-data.md
-        - name: 3. Отметка в качестве таблицы дат
-          href: ../analysis-services/tutorial-tabular-1200/lesson-3-mark-as-date-table.md
-        - name: 4. Создание связей
-          href: ../analysis-services/tutorial-tabular-1200/lesson-4-create-relationships.md
-        - name: 5. Создание вычисляемых столбцов
-          href: ../analysis-services/tutorial-tabular-1200/lesson-5-create-calculated-columns.md
-        - name: 6. Создание мер
-          href: ../analysis-services/tutorial-tabular-1200/lesson-6-create-measures.md
-        - name: 7. Создание ключевых показателей эффективности
-          href: ../analysis-services/tutorial-tabular-1200/lesson-7-create-key-performance-indicators.md
-        - name: 8. Создание перспектив
-          href: ../analysis-services/tutorial-tabular-1200/lesson-8-create-perspectives.md
-        - name: 9. Создание иерархий
-          href: ../analysis-services/tutorial-tabular-1200/lesson-9-create-hierarchies.md
-        - name: 10. Создание секций
-          href: ../analysis-services/tutorial-tabular-1200/lesson-10-create-partitions.md
-        - name: 11. Создание ролей
-          href: ../analysis-services/tutorial-tabular-1200/lesson-11-create-roles.md
-        - name: "12. Анализ в\_Excel"
-          href: ../analysis-services/tutorial-tabular-1200/lesson-12-analyze-in-excel.md
-        - name: 13. Развертывание
-          href: ../analysis-services/tutorial-tabular-1200/lesson-13-deploy.md
-        - name: Дополнительный урок. Реализация динамической безопасности с помощью строковых фильтров
-          href: ../analysis-services/tutorial-tabular-1200/supplemental-lesson-implement-dynamic-security-by-using-row-filters.md
-        - name: "Дополнительный урок. Настройка свойств отчетов Power\_View"
-          href: ../analysis-services/tutorial-tabular-1200/supplemental-lesson-configure-reporting-properties-for-power-view-reports.md
+        - name: Руководство по продажам в Интернете (1400)
+          items:
+            - name: Обзор руководства по продажам в Интернете (1400)
+              href: ../analysis-services/tutorial-tabular-1400/as-adventure-works-tutorial.md
+            - name: 1. Создание проекта табличной модели
+              href: ../analysis-services/tutorial-tabular-1400/as-lesson-1-create-a-new-tabular-model-project.md
+            - name: 2. Получение данных
+              href: ../analysis-services/tutorial-tabular-1400/as-lesson-2-get-data.md
+            - name: 3. Отметка в качестве таблицы дат
+              href: ../analysis-services/tutorial-tabular-1400/as-lesson-3-mark-as-date-table.md
+            - name: 4. Создание связей
+              href: ../analysis-services/tutorial-tabular-1400/as-lesson-4-create-relationships.md
+            - name: 5. Создание вычисляемых столбцов
+              href: ../analysis-services/tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md
+            - name: 6. Создание мер
+              href: ../analysis-services/tutorial-tabular-1400/as-lesson-6-create-measures.md
+            - name: 7. Создание ключевых показателей эффективности
+              href: ../analysis-services/tutorial-tabular-1400/as-lesson-7-create-key-performance-indicators.md
+            - name: 8. Создание перспектив
+              href: ../analysis-services/tutorial-tabular-1400/as-lesson-8-create-perspectives.md
+            - name: 9. Создание иерархий
+              href: ../analysis-services/tutorial-tabular-1400/as-lesson-9-create-hierarchies.md
+            - name: 10. Создание секций
+              href: ../analysis-services/tutorial-tabular-1400/as-lesson-10-create-partitions.md
+            - name: 11. Создание ролей
+              href: ../analysis-services/tutorial-tabular-1400/as-lesson-11-create-roles.md
+            - name: "12. Анализ в\_Excel"
+              href: ../analysis-services/tutorial-tabular-1400/as-lesson-12-analyze-in-excel.md
+            - name: 13. Развертывание
+              href: ../analysis-services/tutorial-tabular-1400/as-lesson-13-deploy.md
+            - name: Дополнительный урок. Строки детализации
+              href: ../analysis-services/tutorial-tabular-1400/as-supplemental-lesson-detail-rows.md
+            - name: Дополнительный урок. Динамическая безопасность
+              href: ../analysis-services/tutorial-tabular-1400/as-supplemental-lesson-dynamic-security.md
+            - name: Дополнительный урок. Неоднородные иерархии
+              href: ../analysis-services/tutorial-tabular-1400/as-supplemental-lesson-ragged-hierarchies.md
+        - name: Руководство по продажам в Интернете (1200)
+          items:
+            - name: Обзор руководства по продажам в Интернете (1200)
+              href: ../analysis-services/tutorial-tabular-1200/tabular-modeling-adventure-works-tutorial.md
+            - name: 1. Создание проекта табличной модели
+              href: ../analysis-services/tutorial-tabular-1200/lesson-1-create-a-new-tabular-model-project.md
+            - name: 2. Добавление данных
+              href: ../analysis-services/tutorial-tabular-1200/lesson-2-add-data.md
+            - name: 3. Отметка в качестве таблицы дат
+              href: ../analysis-services/tutorial-tabular-1200/lesson-3-mark-as-date-table.md
+            - name: 4. Создание связей
+              href: ../analysis-services/tutorial-tabular-1200/lesson-4-create-relationships.md
+            - name: 5. Создание вычисляемых столбцов
+              href: ../analysis-services/tutorial-tabular-1200/lesson-5-create-calculated-columns.md
+            - name: 6. Создание мер
+              href: ../analysis-services/tutorial-tabular-1200/lesson-6-create-measures.md
+            - name: 7. Создание ключевых показателей эффективности
+              href: ../analysis-services/tutorial-tabular-1200/lesson-7-create-key-performance-indicators.md
+            - name: 8. Создание перспектив
+              href: ../analysis-services/tutorial-tabular-1200/lesson-8-create-perspectives.md
+            - name: 9. Создание иерархий
+              href: ../analysis-services/tutorial-tabular-1200/lesson-9-create-hierarchies.md
+            - name: 10. Создание секций
+              href: ../analysis-services/tutorial-tabular-1200/lesson-10-create-partitions.md
+            - name: 11. Создание ролей
+              href: ../analysis-services/tutorial-tabular-1200/lesson-11-create-roles.md
+            - name: "12. Анализ в\_Excel"
+              href: ../analysis-services/tutorial-tabular-1200/lesson-12-analyze-in-excel.md
+            - name: 13. Развертывание
+              href: ../analysis-services/tutorial-tabular-1200/lesson-13-deploy.md
+            - name: Дополнительный урок. Реализация динамической безопасности с помощью строковых фильтров
+              href: ../analysis-services/tutorial-tabular-1200/supplemental-lesson-implement-dynamic-security-by-using-row-filters.md
+            - name: "Дополнительный урок. Настройка свойств отчетов Power\_View"
+              href: ../analysis-services/tutorial-tabular-1200/supplemental-lesson-configure-reporting-properties-for-power-view-reports.md
     - name: Многомерное моделирование
       href: ../analysis-services/multidimensional-tutorial/multidimensional-modeling-adventure-works-tutorial.md
       items:
@@ -1414,7 +1418,7 @@
           href: ../analysis-services/instances/disconnect-users-and-sessions-on-analysis-services-server.md
 - name: Разработчик
   items:
-    - name: Документация для разработчика служб Analysis Services
+    - name: Обзор документации по разработке
       href: ../analysis-services/analysis-services-developer-documentation.md
     - name: Табличные модели
       items:
@@ -1475,10 +1479,11 @@
           href: ../analysis-services/multidimensional-models/multidimensional-model-programming.md
         - name: "Объекты AMO\_+"
           href: /bi-reference/amo/developing-with-analysis-management-objects-amo
-        - name: Разработка на языке ASSL (язык ASSL)
-          href: ../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md
+        - name: Язык ASSL
           items:
-            - name: "Справочник по языку скриптов Analysis\_Services (ASSL для\_XMLA)\_+"
+            - name: Разработка на языке ASSL (язык ASSL)
+              href: ../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md
+            - name: "Справочник по языку скриптов Analysis\_Services (ASSL для\_XMLA)"
               href: /bi-reference/assl/analysis-services-scripting-language-assl-for-xmla
             - name: Объекты ASSL и характеристики объектов
               href: ../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md
@@ -1518,222 +1523,233 @@
               href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/updating-cells-xmla.md
             - name: Обозначения в XML языка ASSL
               href: ../analysis-services/multidimensional-models/scripting-language-assl/assl-xml-conventions.md
-        - name: "XML\_для аналитики\_(XMLA)\_+"
+        - name: "Справочник по XML\_для аналитики\_(XMLA) +"
           href: /bi-reference/xmla/xml-for-analysis-xmla-reference
-        - name: Программирование сервера ADOMD.NET
-          href: ../analysis-services/multidimensional-models-adomd-net-server/adomd-net-server-programming.md
+        - name: ADOMD.NET
           items:
+            - name: Справочник по ADOMD.NET +
+              href: /bi-reference/adomd/developing-with-adomd-net
+            - name: Программирование сервера ADOMD.NET
+              href: ../analysis-services/multidimensional-models-adomd-net-server/adomd-net-server-programming.md
             - name: Функциональные возможности сервера ADOMD.NET
               href: ../analysis-services/multidimensional-models-adomd-net-server/adomd-net-server-functionality.md
             - name: Архитектура серверных объектов ADOMD.NET
               href: ../analysis-services/multidimensional-models-adomd-net-server/adomd-net-server-object-architecture.md
             - name: Определяемые пользователем функции и хранимые процедуры
               href: ../analysis-services/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures.md
-            - name: "Справочник по ADOMD.NET\_+"
-              href: /bi-reference/adomd/developing-with-adomd-net
-        - name: Объекты баз данных (службы Analysis Services — многомерные данные)
-          href: ../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md
-        - name: можно изменить расположение фигур на вкладке
-          href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md
-        - name: Атрибуты и иерархии атрибутов
-          href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md
-        - name: "Свойства измерений базы данных\_— типы"
-          href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md
-        - name: Свойства измерений базы данных
-          href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/database-dimension-properties.md
-        - name: Объекты измерений (службы Analysis Services — многомерные данные)
-          href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimension-objects-analysis-services-multidimensional-data.md
-        - name: Переводы измерений
-          href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimension-translations.md
-        - name: Знакомство с измерениями
-          href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-introduction.md
-        - name: "Измерения\_— хранение"
-          href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md
-        - name: Измерения (службы Analysis Services — многомерные данные)
-          href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md
-        - name: Упреждающее кэширование (измерения)
-          href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/proactive-caching-dimensions.md
-        - name: "Пользовательские иерархии\_— свойства уровня"
-          href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies-level-properties.md
-        - name: "Пользовательские иерархии\_— свойства"
-          href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md
-        - name: Пользовательские иерархии
-          href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md
-        - name: 'Измерения, доступные для записи'
-          href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md
-        - name: Aggregations and Aggregation Designs
-          href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md
-        - name: Вычисления
-          href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md
-        - name: Ячейки куба (службы Analysis Services — многомерные данные)
-          href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-cells-analysis-services-multidimensional-data.md
-        - name: Объекты куба (службы Analysis Services — многомерные данные)
-          href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md
-        - name: "Свойства куба\_— программирование многомерной модели"
-          href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-properties-multidimensional-model-programming.md
-        - name: Хранилище кубов (службы Analysis Services — многомерные данные)
-          href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-storage-analysis-services-multidimensional-data.md
-        - name: Переводы куба
-          href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-translations.md
-        - name: Связи измерений
-          href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md
-        - name: "Секции\_— режимы хранения и обработка секций"
-          href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md
-        - name: "Секции\_— упреждающее кэширование"
-          href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md
-        - name: "Секции\_— удаленные секции"
-          href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md
-        - name: "Секции\_— секции, доступные для записи"
-          href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md
-        - name: Секции (службы Analysis Services — многомерные данные)
-          href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md
-        - name: перспективами
-          href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/perspectives.md
-        - name: Обзор логической архитектуры (службы Analysis Services — многомерные данные)
-          href: ../analysis-services/multidimensional-models/olap-logical/logical-architecture-overview-analysis-services-multidimensional-data.md
-        - name: Роли безопасности (службы Analysis Services — многомерные данные)
-          href: ../analysis-services/multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md
-        - name: Объекты сервера (службы Analysis Services — многомерные данные)
-          href: ../analysis-services/multidimensional-models/olap-logical/server-objects-analysis-services-multidimensional-data.md
-        - name: Основные сведения о логической архитектуре Microsoft OLAP
-          href: ../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md
-        - name: Требования к архитектуре клиента для разработки служб Analysis Services
-          href: ../analysis-services/multidimensional-models/olap-physical/client-architecture-requirements-for-analysis-services-development.md
-        - name: Типы данных в службах Analysis Services
-          href: ../analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services.md
-        - name: Локальные кубы (службы Analysis Services — многомерные данные)
-          href: ../analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data.md
-        - name: Спецификации максимальной емкости (службы Analysis Services)
-          href: ../analysis-services/multidimensional-models/olap-physical/maximum-capacity-specifications-analysis-services.md
-        - name: Правила именования объектов (службы Analysis Services)
-          href: ../analysis-services/multidimensional-models/olap-physical/object-naming-rules-analysis-services.md
-        - name: Серверные компоненты ядра OLAP
-          href: ../analysis-services/multidimensional-models/olap-physical/olap-engine-server-components.md
-        - name: Основные сведения об архитектуре Microsoft OLAP
-          href: ../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-architecture.md
-        - name: Основные сведения о физической архитектуре Microsoft OLAP
-          href: ../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-physical-architecture.md
-        - name: Модули персонализации служб Analysis Services
-          href: ../analysis-services/multidimensional-models/extending-olap/analysis-services-personalization-extensions.md
-        - name: Доступ к контексту запросов в хранимых процедурах
-          href: ../analysis-services/multidimensional-models-extending-olap-stored-procedures/accessing-query-context-in-stored-procedures.md
-        - name: Вызов хранимых процедур
-          href: ../analysis-services/multidimensional-models-extending-olap-stored-procedures/calling-stored-procedures.md
-        - name: Создание хранимых процедур
-          href: ../analysis-services/multidimensional-models-extending-olap-stored-procedures/creating-stored-procedures.md
-        - name: Отладка хранимых процедур
-          href: ../analysis-services/multidimensional-models-extending-olap-stored-procedures/debugging-stored-procedures.md
-        - name: Определение хранимых процедур
-          href: ../analysis-services/multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md
-        - name: Конструирование хранимых процедур
-          href: ../analysis-services/multidimensional-models-extending-olap-stored-procedures/designing-stored-procedures.md
-        - name: Настройка безопасности хранимых процедур
-          href: ../analysis-services/multidimensional-models-extending-olap-stored-procedures/setting-security-for-stored-procedures.md
-        - name: Расширение функциональных возможностей OLAP
-          href: ../analysis-services/multidimensional-models/extending-olap/extending-olap-functionality.md
-        - name: Расширение OLAP через личные настройки
-          href: ../analysis-services/multidimensional-models/extending-olap/extending-olap-through-personalizations.md
-        - name: Доступ к данным с помощью многомерных выражений
-          href: ../analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md
-        - name: Запрос многомерных данных с помощью многомерных выражений
-          href: ../analysis-services/multidimensional-models/mdx/querying-multidimensional-data-with-mdx.md
-        - name: Основные понятия многомерных выражений
-          href: ../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md
+        - name: OLAP
           items:
-            - name: автоматическая проверка существования
-              href: ../analysis-services/multidimensional-models/mdx/autoexists.md
-            - name: Контекст вычисления
-              href: ../analysis-services/multidimensional-models/mdx/calculation-context.md
-            - name: Вычисляемые элементы в подзапросах выборки и вложенных кубах
-              href: ../analysis-services/multidimensional-models/mdx/calculated-members-in-subselects-and-subcubes.md
-            - name: Пространство куба
-              href: ../analysis-services/multidimensional-models/mdx/cube-space.md
-            - name: Подзапросы выборки в запросах
-              href: ../analysis-services/multidimensional-models/mdx/subselects-in-queries.md
-            - name: Кортежи
-              href: ../analysis-services/multidimensional-models/mdx/tuples.md
-            - name: Визуальные и невизуальные итоги
-              href: ../analysis-services/multidimensional-models/mdx/visual-totals-and-non-visual-totals.md
-            - name: 'Работа с элементами, кортежами и наборами (многомерные выражения)'
-              href: ../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md
-        - name: Основные принципы запросов многомерных выражений
-          href: ../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md
+            - name: "Логическая архитектура\_OLAP"
+              items:
+                - name: Объекты баз данных (службы Analysis Services — многомерные данные)
+                  href: ../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md
+                - name: можно изменить расположение фигур на вкладке
+                  href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md
+                - name: Атрибуты и иерархии атрибутов
+                  href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md
+                - name: "Свойства измерений базы данных\_— типы"
+                  href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md
+                - name: Свойства измерений базы данных
+                  href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/database-dimension-properties.md
+                - name: Объекты измерений (службы Analysis Services — многомерные данные)
+                  href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimension-objects-analysis-services-multidimensional-data.md
+                - name: Переводы измерений
+                  href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimension-translations.md
+                - name: Знакомство с измерениями
+                  href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-introduction.md
+                - name: "Измерения\_— хранение"
+                  href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md
+                - name: Измерения (службы Analysis Services — многомерные данные)
+                  href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md
+                - name: Упреждающее кэширование (измерения)
+                  href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/proactive-caching-dimensions.md
+                - name: "Пользовательские иерархии\_— свойства уровня"
+                  href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies-level-properties.md
+                - name: "Пользовательские иерархии\_— свойства"
+                  href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md
+                - name: Пользовательские иерархии
+                  href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md
+                - name: 'Измерения, доступные для записи'
+                  href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md
+                - name: Aggregations and Aggregation Designs
+                  href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md
+                - name: Вычисления
+                  href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md
+                - name: Ячейки куба (службы Analysis Services — многомерные данные)
+                  href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-cells-analysis-services-multidimensional-data.md
+                - name: Объекты куба (службы Analysis Services — многомерные данные)
+                  href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md
+                - name: "Свойства куба\_— программирование многомерной модели"
+                  href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-properties-multidimensional-model-programming.md
+                - name: Хранилище кубов (службы Analysis Services — многомерные данные)
+                  href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-storage-analysis-services-multidimensional-data.md
+                - name: Переводы куба
+                  href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-translations.md
+                - name: Связи измерений
+                  href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md
+                - name: "Секции\_— режимы хранения и обработка секций"
+                  href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md
+                - name: "Секции\_— упреждающее кэширование"
+                  href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md
+                - name: "Секции\_— удаленные секции"
+                  href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md
+                - name: "Секции\_— секции, доступные для записи"
+                  href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md
+                - name: Секции (службы Analysis Services — многомерные данные)
+                  href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md
+                - name: перспективами
+                  href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/perspectives.md
+                - name: Обзор логической архитектуры (службы Analysis Services — многомерные данные)
+                  href: ../analysis-services/multidimensional-models/olap-logical/logical-architecture-overview-analysis-services-multidimensional-data.md
+                - name: Роли безопасности (службы Analysis Services — многомерные данные)
+                  href: ../analysis-services/multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md
+                - name: Объекты сервера (службы Analysis Services — многомерные данные)
+                  href: ../analysis-services/multidimensional-models/olap-logical/server-objects-analysis-services-multidimensional-data.md
+                - name: Основные сведения о логической архитектуре Microsoft OLAP
+                  href: ../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md
+            - name: "Физическая архитектура\_OLAP"
+              items:
+                - name: Требования к архитектуре клиента для разработки служб Analysis Services
+                  href: ../analysis-services/multidimensional-models/olap-physical/client-architecture-requirements-for-analysis-services-development.md
+                - name: Типы данных в службах Analysis Services
+                  href: ../analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services.md
+                - name: Локальные кубы (службы Analysis Services — многомерные данные)
+                  href: ../analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data.md
+                - name: Спецификации максимальной емкости (службы Analysis Services)
+                  href: ../analysis-services/multidimensional-models/olap-physical/maximum-capacity-specifications-analysis-services.md
+                - name: Правила именования объектов (службы Analysis Services)
+                  href: ../analysis-services/multidimensional-models/olap-physical/object-naming-rules-analysis-services.md
+                - name: Серверные компоненты ядра OLAP
+                  href: ../analysis-services/multidimensional-models/olap-physical/olap-engine-server-components.md
+                - name: Основные сведения об архитектуре Microsoft OLAP
+                  href: ../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-architecture.md
+                - name: Основные сведения о физической архитектуре Microsoft OLAP
+                  href: ../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-physical-architecture.md
+            - name: Расширение OLAP
+              items:
+                - name: Расширение функциональных возможностей OLAP
+                  href: ../analysis-services/multidimensional-models/extending-olap/extending-olap-functionality.md
+                - name: Расширение OLAP через личные настройки
+                  href: ../analysis-services/multidimensional-models/extending-olap/extending-olap-through-personalizations.md
+                - name: Модули персонализации служб Analysis Services
+                  href: ../analysis-services/multidimensional-models/extending-olap/analysis-services-personalization-extensions.md
+                - name: Доступ к контексту запросов в хранимых процедурах
+                  href: ../analysis-services/multidimensional-models-extending-olap-stored-procedures/accessing-query-context-in-stored-procedures.md
+                - name: Вызов хранимых процедур
+                  href: ../analysis-services/multidimensional-models-extending-olap-stored-procedures/calling-stored-procedures.md
+                - name: Создание хранимых процедур
+                  href: ../analysis-services/multidimensional-models-extending-olap-stored-procedures/creating-stored-procedures.md
+                - name: Отладка хранимых процедур
+                  href: ../analysis-services/multidimensional-models-extending-olap-stored-procedures/debugging-stored-procedures.md
+                - name: Определение хранимых процедур
+                  href: ../analysis-services/multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md
+                - name: Конструирование хранимых процедур
+                  href: ../analysis-services/multidimensional-models-extending-olap-stored-procedures/designing-stored-procedures.md
+                - name: Настройка безопасности хранимых процедур
+                  href: ../analysis-services/multidimensional-models-extending-olap-stored-procedures/setting-security-for-stored-procedures.md
+        - name: Многомерные выражения данных (MDX)
           items:
-            - name: "Запрос многомерных выражений\_— базовый запрос"
-              href: ../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md
-            - name: "Запрос многомерных выражений\_— ключевое слово Existing"
-              href: ../analysis-services/multidimensional-models/mdx/mdx-query-existing-keyword.md
-            - name: "Запрос многомерных выражений и ось среза\_— ограничение запроса"
-              href: ../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-restricting-the-query.md
-            - name: "Запрос многомерных выражений и ось среза\_— указание содержимого оси запроса"
-              href: ../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md
-            - name: "Запрос многомерных выражений и ось среза\_— указание содержимого оси среза"
-              href: ../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md
-            - name: "Запрос многомерных выражений и ось среза\_— использование оси в простом примере"
-              href: ../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-using-axes-in-a-simple-example.md
-            - name: Определение контекста куба в запросе
-              href: ../analysis-services/multidimensional-models/mdx/establishing-cube-context-in-a-query-mdx.md
-            - name: Построение вложенных кубов в многомерных выражениях
-              href: ../analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx.md
-            - name: "Именованные наборы многомерных выражений\_— построение"
-              href: ../analysis-services/multidimensional-models/mdx/mdx-named-sets-building-named-sets.md
-            - name: "Именованные наборы многомерных выражений\_— создание наборов с областью действия запроса"
-              href: ../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets.md
-            - name: "Именованные наборы многомерных выражений\_— создание наборов с областью действия сеанса"
-              href: ../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-session-scoped-named-sets.md
-            - name: "Вычисляемые элементы многомерных выражений\_— создание вычисляемых элементов"
-              href: ../analysis-services/multidimensional-models/mdx/mdx-calculated-members-building-calculated-members.md
-            - name: "Вычисляемые элементы многомерных выражений\_— с областью действия запроса"
-              href: ../analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members.md
-            - name: "Вычисляемые элементы многомерных выражений\_— с областью действия сеанса"
-              href: ../analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members.md
-            - name: "Вычисления ячеек многомерных выражений\_— сборка"
-              href: ../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-build-cell-calculations.md
-            - name: "Вычисления ячеек многомерных выражений\_— с областью действия запроса"
-              href: ../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-query-scoped-cell-calculations.md
-            - name: "Вычисления ячеек многомерных выражений\_— с областью действия сеанса"
-              href: ../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-session-scoped-calculated-cells.md
-            - name: Меры построения многомерных выражений
-              href: ../analysis-services/multidimensional-models/mdx/mdx-building-measures.md
-            - name: Свойства элементов многомерных выражений
-              href: ../analysis-services/multidimensional-models/mdx/mdx-member-properties.md
-            - name: "Свойства элементов многомерных выражений\_— внутренние"
-              href: ../analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties.md
-            - name: "Свойства элементов многомерных выражений\_— пользовательские"
-              href: ../analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties.md
-            - name: "Свойства ячеек многомерных выражений\_— использование"
-              href: ../analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md
-            - name: "Свойства ячеек многомерных выражений\_— содержимое FORMAT_STRING"
-              href: ../analysis-services/multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md
-            - name: "Свойства ячеек многомерных выражений\_— содержимое FORE_COLOR и BACK_COLOR"
-              href: ../analysis-services/multidimensional-models/mdx/mdx-cell-properties-fore-color-and-back-color-contents.md
-            - name: "Свойства ячеек многомерных выражений\_— FORMATTED_VALUE"
-              href: ../analysis-services/multidimensional-models/mdx/mdx-cell-properties-formatted-value-property.md
-            - name: Обработка данных многомерных выражений
-              href: ../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md
-            - name: "Обработка данных многомерных выражений\_— извлечение источника данных с помощью DRILLTHROUGH"
-              href: ../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-retrieve-source-data-using-drillthrough.md
-            - name: "Обработка данных многомерных выражений\_— функция RollupChildren"
-              href: ../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-rollupchildren-function.md
-            - name: "Обработка данных многомерных выражений\_— общие сведения о порядке передачи и вычисления"
-              href: ../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-understanding-pass-order-and-solve-order.md
-            - name: Изменение данных многомерных выражений
-              href: ../analysis-services/multidimensional-models/mdx/mdx-data-modification-modifying-data.md
-            - name: "Изменение данных многомерных выражений\_— использование обратной записи кубов"
-              href: ../analysis-services/multidimensional-models/mdx/mdx-data-modification-using-cube-writebacks.md
-            - name: Переменные и параметры
-              href: ../analysis-services/multidimensional-models/mdx/using-variables-and-parameters-mdx.md
-        - name: Основные понятия о сценариях многомерных выражений
-          href: ../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md
-          items:
-            - name: Базовый скрипт многомерных выражений
-              href: ../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md
-            - name: Управление областью и контекстом
-              href: ../analysis-services/multidimensional-models/mdx/managing-scope-and-context-mdx.md
-            - name: Обработка ошибок
-              href: ../analysis-services/multidimensional-models/mdx/error-handling-mdx.md
-            - name: Поддержка многомерных выражений
-              href: ../analysis-services/multidimensional-models/mdx/supported-mdx-mdx.md
+            - name: Доступ к данным с помощью многомерных выражений
+              href: ../analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md
+            - name: Запрос многомерных данных с помощью многомерных выражений
+              href: ../analysis-services/multidimensional-models/mdx/querying-multidimensional-data-with-mdx.md
+            - name: Основные понятия многомерных выражений
+              href: ../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md
+              items:
+                - name: автоматическая проверка существования
+                  href: ../analysis-services/multidimensional-models/mdx/autoexists.md
+                - name: Контекст вычисления
+                  href: ../analysis-services/multidimensional-models/mdx/calculation-context.md
+                - name: Вычисляемые элементы в подзапросах выборки и вложенных кубах
+                  href: ../analysis-services/multidimensional-models/mdx/calculated-members-in-subselects-and-subcubes.md
+                - name: Пространство куба
+                  href: ../analysis-services/multidimensional-models/mdx/cube-space.md
+                - name: Подзапросы выборки в запросах
+                  href: ../analysis-services/multidimensional-models/mdx/subselects-in-queries.md
+                - name: Кортежи
+                  href: ../analysis-services/multidimensional-models/mdx/tuples.md
+                - name: Визуальные и невизуальные итоги
+                  href: ../analysis-services/multidimensional-models/mdx/visual-totals-and-non-visual-totals.md
+                - name: 'Работа с элементами, кортежами и наборами (многомерные выражения)'
+                  href: ../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md
+            - name: Основные принципы запросов многомерных выражений
+              href: ../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md
+              items:
+                - name: "Запрос многомерных выражений\_— базовый запрос"
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md
+                - name: "Запрос многомерных выражений\_— ключевое слово Existing"
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-query-existing-keyword.md
+                - name: "Запрос многомерных выражений и ось среза\_— ограничение запроса"
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-restricting-the-query.md
+                - name: "Запрос многомерных выражений и ось среза\_— указание содержимого оси запроса"
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md
+                - name: "Запрос многомерных выражений и ось среза\_— указание содержимого оси среза"
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md
+                - name: "Запрос многомерных выражений и ось среза\_— использование оси в простом примере"
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-using-axes-in-a-simple-example.md
+                - name: Определение контекста куба в запросе
+                  href: ../analysis-services/multidimensional-models/mdx/establishing-cube-context-in-a-query-mdx.md
+                - name: Построение вложенных кубов в многомерных выражениях
+                  href: ../analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx.md
+                - name: "Именованные наборы многомерных выражений\_— построение"
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-named-sets-building-named-sets.md
+                - name: "Именованные наборы многомерных выражений\_— создание наборов с областью действия запроса"
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets.md
+                - name: "Именованные наборы многомерных выражений\_— создание наборов с областью действия сеанса"
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-session-scoped-named-sets.md
+                - name: "Вычисляемые элементы многомерных выражений\_— создание вычисляемых элементов"
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-calculated-members-building-calculated-members.md
+                - name: "Вычисляемые элементы многомерных выражений\_— с областью действия запроса"
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members.md
+                - name: "Вычисляемые элементы многомерных выражений\_— с областью действия сеанса"
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members.md
+                - name: "Вычисления ячеек многомерных выражений\_— сборка"
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-build-cell-calculations.md
+                - name: "Вычисления ячеек многомерных выражений\_— с областью действия запроса"
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-query-scoped-cell-calculations.md
+                - name: "Вычисления ячеек многомерных выражений\_— с областью действия сеанса"
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-session-scoped-calculated-cells.md
+                - name: Меры построения многомерных выражений
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-building-measures.md
+                - name: Свойства элементов многомерных выражений
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-member-properties.md
+                - name: "Свойства элементов многомерных выражений\_— внутренние"
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties.md
+                - name: "Свойства элементов многомерных выражений\_— пользовательские"
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties.md
+                - name: "Свойства ячеек многомерных выражений\_— использование"
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md
+                - name: "Свойства ячеек многомерных выражений\_— содержимое FORMAT_STRING"
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md
+                - name: "Свойства ячеек многомерных выражений\_— содержимое FORE_COLOR и BACK_COLOR"
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-cell-properties-fore-color-and-back-color-contents.md
+                - name: "Свойства ячеек многомерных выражений\_— FORMATTED_VALUE"
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-cell-properties-formatted-value-property.md
+                - name: Обработка данных многомерных выражений
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md
+                - name: "Обработка данных многомерных выражений\_— извлечение источника данных с помощью DRILLTHROUGH"
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-retrieve-source-data-using-drillthrough.md
+                - name: "Обработка данных многомерных выражений\_— функция RollupChildren"
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-rollupchildren-function.md
+                - name: "Обработка данных многомерных выражений\_— общие сведения о порядке передачи и вычисления"
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-understanding-pass-order-and-solve-order.md
+                - name: Изменение данных многомерных выражений
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-data-modification-modifying-data.md
+                - name: "Изменение данных многомерных выражений\_— использование обратной записи кубов"
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-data-modification-using-cube-writebacks.md
+                - name: Переменные и параметры
+                  href: ../analysis-services/multidimensional-models/mdx/using-variables-and-parameters-mdx.md
+            - name: Основные понятия о сценариях многомерных выражений
+              href: ../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md
+              items:
+                - name: Базовый скрипт многомерных выражений
+                  href: ../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md
+                - name: Управление областью и контекстом
+                  href: ../analysis-services/multidimensional-models/mdx/managing-scope-and-context-mdx.md
+                - name: Обработка ошибок
+                  href: ../analysis-services/multidimensional-models/mdx/error-handling-mdx.md
+                - name: Поддержка многомерных выражений
+                  href: ../analysis-services/multidimensional-models/mdx/supported-mdx-mdx.md
     - name: Интеллектуальный анализ данных
       items:
         - name: Программирование интеллектуального анализа данных

@@ -12,17 +12,22 @@ helpviewer_keywords:
 - report servers [Reporting Services], verifying installations
 - Setup [Reporting Services], verifying installations
 ms.assetid: 82a51a99-66f0-4b0c-b05b-07d22387adb0
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 3c3f3bb02022fe4bbb8090c2160fa3cf75cfefa7
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 5c1c2bb116f08dca2df111b6cccd9d6f0bf28160
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814057"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503293"
 ---
 # <a name="verify-a-reporting-services-installation"></a>Verify a Reporting Services Installation
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] можно установить в один из двух режимов — в собственном режиме или в режиме интеграции с SharePoint. Шаги, которые необходимо выполнить для проверки установки, зависят от выбранного режима сервера отчетов.  
+
+> [!NOTE]
+> Интеграция служб Reporting Services с SharePoint больше не доступна после выхода SQL Server 2016.
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
 ##  <a name="bkmk_sharepointmode"></a> Проверка установки в режиме SharePoint  
   
@@ -71,6 +76,8 @@ ms.locfileid: "51814057"
 1.  Выполните один из учебников по службам Reporting Services Дополнительные сведения см. в статье [Учебники по службам Reporting Services (SSRS)](../../reporting-services/reporting-services-tutorials-ssrs.md).  
   
 2.  Загрузите образец базы данных Adventure Works и образцы отчетов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с сайта GitHub. Дополнительные сведения см. в разделе [Образцы баз данных AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases).  
+
+::: moniker-end
   
 ##  <a name="bkmk_nativemode"></a> Проверка установки в собственном режиме  
  Если сервер отчетов устанавливается в собственном режиме в конфигурации по умолчанию, то программа установки проводит установку и развертывание сервера. Можно проверить, развернула ли программа установки сервер отчетов, выполнив несколько простых тестов. Для выполнения этих шагов необходимо быть локальным администратором. Чтобы тестирование могли выполнить другие пользователи, необходимо сконфигурировать доступ к серверу отчетов для этих пользователей.  

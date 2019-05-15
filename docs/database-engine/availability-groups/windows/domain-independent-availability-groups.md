@@ -13,12 +13,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b332dbf2fe0876e324ff7c892588a0121a6b4e7c
-ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
+ms.openlocfilehash: c11900048bf7f32e39f993cb8369162a468be13d
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56744564"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090255"
 ---
 # <a name="create-a-domain-independent-availability-group"></a>Создание группы доступности, независимой от домена
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "56744564"
 
 На данный момент создать группу доступности, независимую от домена, используя только SQL Server Management Studio, нельзя. Несмотря на то, что создание группы доступности, независимой от домена, практически не отличается от создания обычной группы доступности, некоторые действия (например, создание сертификатов) можно выполнить только с помощью Transact-SQL. Приведенный ниже пример предполагает конфигурацию группы доступности с двумя репликами — одной первичной и одной вторичной. 
 
-1. [С помощью инструкций, указанных по этой ссылке](https://blogs.msdn.microsoft.com/clustering/2015/08/17/workgroup-and-multi-domain-clusters-in-windows-server-2016/), разверните кластер рабочей группы, состоящий из всех серверов, которые будут участвовать в группе доступности. Перед настройкой кластера рабочей группы убедитесь, что общий DNS-суффикс уже настроен.
+1. [С помощью инструкций, указанных по этой ссылке](https://techcommunity.microsoft.com/t5/Failover-Clustering/Workgroup-and-Multi-domain-clusters-in-Windows-Server-2016/ba-p/372059), разверните кластер рабочей группы, состоящий из всех серверов, которые будут участвовать в группе доступности. Перед настройкой кластера рабочей группы убедитесь, что общий DNS-суффикс уже настроен.
 2. [Включите функцию "Группы доступности AlwaysOn"](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server) на каждом экземпляре, который будет участвовать в группе доступности. Для этого каждый экземпляр SQL Server нужно будет перезапустить.
 3. Каждому экземпляру, где будет размещаться первичная реплика, требуется главный ключ базы данных. Если главный ключ еще не существует, выполните следующую команду:
 

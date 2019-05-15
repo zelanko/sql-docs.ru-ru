@@ -9,14 +9,14 @@ helpviewer_keywords:
 - deploying [Reporting Services], scale-out deployment model
 - scale-out deployments [Reporting Services]
 ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: a0e990b52a9433f959288dcf2e3518f85b8a6f67
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 1b1ca1f19741002cee1ca9025582c6436f1522a5
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52710645"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503043"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment"></a>Настройка масштабного развертывания сервера отчетов, работающего в собственном режиме
 
@@ -27,6 +27,9 @@ ms.locfileid: "52710645"
 Для оптимизации производительности любой масштабируемой среды на сервере отчетов Power BI необходимо настроить сходство клиента (иногда называемое прикрепленными сеансами) в подсистеме балансировки нагрузки.  
   
 В случае служб SQL Server 2016 Reporting Services и более ранних версий серверы отчетов в режиме интеграции с SharePoint для масштабного развертывания используют инфраструктуру продуктов SharePoint. Масштабное развертывание в режиме интеграции с SharePoint выполняется за счет добавления новых серверов отчетов в режиме интеграции с SharePoint в ферму SharePoint. Сведения о масштабном развертывании в режиме интеграции с SharePoint см. в статье [Добавление дополнительного сервера отчетов в ферму (горизонтально масштабируемые службы SSRS)](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).  
+
+> [!NOTE]
+> Интеграция служб Reporting Services с SharePoint больше не доступна после выхода SQL Server 2016.
  
   *Масштабное развертывание* используется в следующих ситуациях:  
   

@@ -1,5 +1,5 @@
 - name: Добро пожаловать
-  href: ../sql-server/sql-server-technical-documentation.md?toc=..%2ftoc%2ftoc.json
+  href: ../sql-server/sql-server-technical-documentation.md?toc=../toc/toc.json
 - name: Обзор
   items:
     - name: "Новые возможности SQL\_Server"
@@ -28,7 +28,7 @@
         - name: "SQL\_Server\_2019"
           href: ../sql-server/sql-server-ver15-release-notes.md
         - name: "SQL Server\_2017"
-          href: ../sql-server/sql-server-2017-release-notes.md?toc=..%2ftoc%2ftoc.json
+          href: ../sql-server/sql-server-2017-release-notes.md?toc=../toc/toc.json
         - name: "SQL Server\_2016"
           href: ../sql-server/sql-server-2016-release-notes.md
         - name: SQL Server 2014
@@ -61,20 +61,30 @@
               href: ../big-data-cluster/deploy-big-data-tools.md
             - name: Установка mssqlctl
               href: ../big-data-cluster/deploy-install-mssqlctl.md
-        - name: Скрипты развертывания
-          items:
-            - name: Служба Azure Kubernetes
-              href: ../big-data-cluster/quickstart-big-data-cluster-deploy.md
-        - name: Руководства по развертыванию
+        - name: Развертывание
           items:
             - name: Руководства по развертыванию
               href: ../big-data-cluster/deployment-guidance.md
-            - name: Служба Azure Kubernetes
-              href: ../big-data-cluster/deploy-on-aks.md
-            - name: Kubeadm
-              href: ../big-data-cluster/deploy-with-kubeadm.md
-            - name: Minikube
-              href: ../big-data-cluster/deploy-on-minikube.md
+            - name: Обновление до нового выпуска
+              href: ../big-data-cluster/deployment-upgrade.md
+            - name: Настройка развертываний
+              href: ../big-data-cluster/deployment-custom-configuration.md
+            - name: Настройка хранилища
+              href: ../big-data-cluster/concept-data-persistence.md
+            - name: Автономное развертывание
+              href: ../big-data-cluster/deploy-offline.md
+            - name: Цели развертывания
+              items:
+                - name: Служба Azure Kubernetes
+                  href: ../big-data-cluster/deploy-on-aks.md
+                - name: Kubeadm
+                  href: ../big-data-cluster/deploy-with-kubeadm.md
+                - name: Minikube
+                  href: ../big-data-cluster/deploy-on-minikube.md
+            - name: Скрипты развертывания
+              items:
+                - name: Служба Azure Kubernetes
+                  href: ../big-data-cluster/quickstart-big-data-cluster-deploy.md
     - name: Основные понятия
       items:
         - name: Развертывание приложения
@@ -89,8 +99,6 @@
           href: ../big-data-cluster/concept-storage-pool.md
         - name: Вычислительный пул
           href: ../big-data-cluster/concept-compute-pool.md
-        - name: Сохраняемость данных
-          href: ../big-data-cluster/concept-data-persistence.md
         - name: безопасность
           href: ../big-data-cluster/concept-security.md
     - name: Практические руководства
@@ -111,6 +119,10 @@
                   href: ../big-data-cluster/tutorial-query-hdfs-storage-pool.md
                 - name: Распределение по уровням HDFS
                   href: ../big-data-cluster/hdfs-tiering.md
+                - name: Подключение Azure Data Lake Storage 2-го поколения для распределения по уровням HDFS
+                  href: ../big-data-cluster/hdfs-tiering-mount-adlsgen2.md
+                - name: Подключение S3 для распределения по уровням HDFS
+                  href: ../big-data-cluster/hdfs-tiering-mount-s3.md
         - name: Прием данных
           items:
             - name: Загрузка данных с помощью cURL
@@ -141,6 +153,8 @@
               href: ../big-data-cluster/sparklyr-from-RStudio.md
             - name: "Поддержка GPU и\_TensorFlow"
               href: ../big-data-cluster/spark-gpu-tensorflow.md
+            - name: Интеграция Spark с SQL Server
+              href: ../big-data-cluster/spark-mssql-connector.md
         - name: "Управление кластером больших данных SQL\_Server"
           items:
             - name: Подключение к кластеру больших данных
@@ -167,6 +181,10 @@
               href: ../big-data-cluster/spark-history-server.md
     - name: Справочник
       items:
+        - name: Справочник по развертыванию
+          items:
+            - name: Файл конфигурации развертывания
+              href: ../big-data-cluster/reference-deployment-config.md
         - name: Справочник по mssqlctl
           items:
             - name: mssqlctl
@@ -183,6 +201,8 @@
                   href: ../big-data-cluster/reference-mssqlctl-cluster.md
                 - name: Конфигурация кластера mssqlctl
                   href: ../big-data-cluster/reference-mssqlctl-cluster-config.md
+                - name: Раздел конфигурации кластера mssqlctl
+                  href: ../big-data-cluster/reference-mssqlctl-cluster-config-section.md
                 - name: Отладка кластера mssqlctl
                   href: ../big-data-cluster/reference-mssqlctl-cluster-debug.md
             - name: Память
@@ -6957,181 +6977,174 @@
                       href: ../relational-databases/performance/compare-execution-plans.md
                     - name: Анализ фактического плана выполнения
                       href: ../relational-databases/performance/analyze-an-actual-execution-plan.md
-        - name: "Выполняющаяся в памяти\_OLTP"
-          href: ../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md
+        - name: Выполняющаяся в памяти OLTP
           items:
-            - name: Примеры
-              items:
-                - name: Примеры кода In-Memory OLTP
-                  href: ../relational-databases/in-memory-oltp/in-memory-oltp-code-samples.md
-                  items:
-                    - name: Демонстрация. Повышение производительности In-Memory OLTP
-                      href: ../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md
-                    - name: 'Создание таблиц, оптимизированных для памяти, и хранимых процедур, скомпилированных в собственном коде'
-                      href: ../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md
-                    - name: Секционирование уровня приложения
-                      href: ../relational-databases/in-memory-oltp/application-level-partitioning.md
-                    - name: Пример базы данных для выполняющейся в памяти OLTP
-                      href: ../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md
             - name: Основные понятия
               items:
-                - name: Сценарии использования
+                - name: Обзор In-Memory
                   href: ../relational-databases/in-memory-oltp/overview-and-usage-scenarios.md
-                - name: Планирование освоения возможностей
-                  href: ../relational-databases/in-memory-oltp/plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md
-                - name: Требования
-                  href: ../relational-databases/in-memory-oltp/requirements-for-using-memory-optimized-tables.md
-                - name: Скалярные определяемые пользователем функции для выполняющейся в памяти OLTP
-                  href: ../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md
-                - name: Индексы
-                  href: ../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md
-                - name: 'Таблицы, оптимизированные для памяти'
-                  href: ../relational-databases/in-memory-oltp/memory-optimized-tables.md
                   items:
-                    - name: Обзор
+                    - name: 'Таблицы, оптимизированные для памяти'
                       href: ../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md
-                    - name: Компиляция в машинный код
+                    - name: Быстрый опрос
+                      href: ../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md
+                    - name: 'Видео, примеры, ресурсы'
+                      href: ../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md
+                - name: Планирование для In-Memory
+                  href: ../relational-databases/in-memory-oltp/plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md
+                  items:
+                    - name: Требования
+                      href: ../relational-databases/in-memory-oltp/requirements-for-using-memory-optimized-tables.md
+                    - name: Оценка преимуществ
+                      href: ../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md
+                    - name: Оценка с помощью PowerShell
+                      href: ../relational-databases/in-memory-oltp/powershell-cmdlet-for-migration-evaluation.md
+                    - name: Помощник по оптимизации памяти
+                      href: ../relational-databases/in-memory-oltp/memory-optimization-advisor.md
+                    - name: Помощник по компиляции в машинный код
+                      href: ../relational-databases/in-memory-oltp/native-compilation-advisor.md
+                    - name: Размеры таблиц и строк
+                      href: ../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md
+                    - name: Оценка памяти
+                      href: ../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md
+                    - name: Настройка хранилища
+                      href: ../relational-databases/in-memory-oltp/configuring-storage-for-memory-optimized-tables.md
+                    - name: Миграция триггеров
+                      href: ../relational-databases/in-memory-oltp/migrating-triggers.md
+                - name: Скомпилированные в собственном коде
+                  href: ../relational-databases/in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables.md
+                  items:
+                    - name: Таблицы и хранимые процедуры
                       href: ../relational-databases/in-memory-oltp/native-compilation-of-tables-and-stored-procedures.md
-                    - name: Изменение таблиц
-                      href: ../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md
+                    - name: Атомарные блоки
+                      href: ../relational-databases/in-memory-oltp/atomic-blocks-in-native-procedures.md
+                    - name: 'Скалярные функции, определяемые пользователем'
+                      href: ../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md
+                    - name: Рекомендации
+                      href: ../relational-databases/in-memory-oltp/best-practices-for-calling-natively-compiled-stored-procedures.md
+                    - name: Интерпретируемый доступ таблиц In-Memory
+                      href: ../relational-databases/in-memory-oltp/accessing-memory-optimized-tables-using-interpreted-transact-sql.md
+                - name: Производительность In-Memory
+                  href: ../relational-databases/in-memory-oltp/natively-compiled-stored-procedures-and-execution-set-options.md
+                  items:
+                    - name: Оборудование для In-Memory
+                      href: ../relational-databases/in-memory-oltp/blog-hardware-in-memory-oltp.md
+                    - name: In-Memory для базы данных Azure SQL
+                      href: /azure/sql-database/sql-database-in-memory
+                - name: Администрирование In-Memory
+                  href: ../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md
+                  items:
+                    - name: Восстановление
+                      href: ../relational-databases/in-memory-oltp/restore-and-recovery-of-memory-optimized-tables.md
+                    - name: Резервное копирование
+                      href: ../relational-databases/in-memory-oltp/backing-up-a-database-with-memory-optimized-tables.md
+                    - name: Контрольная точка
+                      href: ../relational-databases/in-memory-oltp/checkpoint-operation-for-memory-optimized-tables.md
+                    - name: Высокий уровень доступности
+                      href: ../relational-databases/in-memory-oltp/high-availability-support-for-in-memory-oltp-databases.md
+                    - name: Масштабируемость
+                      href: ../relational-databases/in-memory-oltp/scalability.md
+                    - name: Реализация IDENTITY
+                      href: ../relational-databases/in-memory-oltp/implementing-identity-in-a-memory-optimized-table.md
+                - name: Архитектура In-Memory
+                  href: ../relational-databases/in-memory-oltp/sql-server-in-memory-oltp-internals-for-sql-server-2016.md
+                  items:
+                    - name: Память
+                      href: ../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md
+                    - name: Сравнение режимов хранения
+                      href: ../relational-databases/in-memory-oltp/comparing-disk-based-table-storage-to-memory-optimized-table-storage.md
+                    - name: Длительность
+                      href: ../relational-databases/in-memory-oltp/durability-for-memory-optimized-tables.md
+                    - name: Сборка мусора
+                      href: ../relational-databases/in-memory-oltp/in-memory-oltp-garbage-collection.md
+                - name: T-SQL для In-Memory
+                  href: ../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md
+                  items:
+                    - name: Поддерживаемый T-SQL
+                      href: ../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md
+                    - name: Неподдерживаемый T-SQL
+                      href: ../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md
+                    - name: Неподдерживаемые функции
+                      href: ../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md
+                    - name: Язык DDL для скомпилированных в собственном коде
+                      href: ../relational-databases/in-memory-oltp/supported-ddl-for-natively-compiled-t-sql-modules.md
+                    - name: Определение устойчивости
+                      href: ../relational-databases/in-memory-oltp/defining-durability-for-memory-optimized-objects.md
+                    - name: Типы данных
+                      href: ../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md
+                    - name: Индексы для In-Memory
+                      href: ../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md
+                - name: SSIS для In-Memory
+                  href: ../relational-databases/in-memory-oltp/sql-server-integration-services-support-for-in-memory-oltp.md
+            - name: Учебники
+              items:
+                - name: 'Создание таблицы и процесса, оптимизированных для памяти'
+                  href: ../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md
+                - name: Секционирование приложения по горячей дате
+                  href: ../relational-databases/in-memory-oltp/application-level-partitioning.md
+                - name: Демонстрация производительности
+                  href: ../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md
+                - name: Мониторинг и устранение неполадок
+                  href: ../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md
+            - name: Примеры
+              items:
+                - name: Пример базы данных для In-Memory
+                  href: ../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md
+                - name: 'Вызов процедуры, скомпилированной в собственном коде'
+                  href: ../relational-databases/in-memory-oltp/calling-natively-compiled-stored-procedures-from-data-access-applications.md
+                - name: Шаблон для секционирования таблицы
+                  href: ../relational-databases/in-memory-oltp/application-pattern-for-partitioning-memory-optimized-tables.md
+                - name: 'MERGE в процедурах, скомпилированных в собственном коде'
+                  href: ../relational-databases/in-memory-oltp/implementing-merge-functionality-in-a-natively-compiled-stored-procedure.md
+                - name: 'SMO C# для In-Memory'
+                  href: ../relational-databases/in-memory-oltp/sql-server-management-objects-support-for-in-memory-oltp.md
+            - name: Практические руководства
+              items:
+                - name: 'Таблицы, оптимизированные для памяти'
+                  href: ../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md
+                  items:
+                    - name: Хэш-индексы
+                      href: ../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md
+                - name: 'Модули, скомпилированные в собственном коде'
+                  href: ../relational-databases/in-memory-oltp/creating-natively-compiled-stored-procedures.md
+                  items:
+                    - name: 'Модули ALTER, скомпилированные в собственном коде'
+                      href: ../relational-databases/in-memory-oltp/altering-natively-compiled-t-sql-modules.md
+                - name: Обходные решения T-SQL
+                  href: ../relational-databases/in-memory-oltp/implementing-update-with-from-or-subqueries.md
+                  items:
+                    - name: Доступ к таблицам базы данных tempdb
+                      href: ../relational-databases/in-memory-oltp/create-and-access-tables-in-tempdb-from-stored-procedures.md
+                    - name: Запрос между базами данных
+                      href: ../relational-databases/in-memory-oltp/cross-database-queries.md
+                    - name: Симуляция IF WHILE EXISTS
+                      href: ../relational-databases/in-memory-oltp/simulating-an-if-while-exists-statement-in-a-natively-compiled-module.md
+                    - name: 'CASE, выражение'
+                      href: ../relational-databases/in-memory-oltp/implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md
+                    - name: Столбец типа sql_variant
+                      href: ../relational-databases/in-memory-oltp/implementing-sql-variant-in-a-memory-optimized-table.md
+                    - name: "Вычисляемый столбец в SQL\_2016"
+                      href: ../relational-databases/in-memory-oltp/migrating-computed-columns.md
                     - name: Transactions
                       href: ../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md
-                    - name: Модель приложения для секционирования
-                      href: ../relational-databases/in-memory-oltp/application-pattern-for-partitioning-memory-optimized-tables.md
-                    - name: Статистика
-                      href: ../relational-databases/in-memory-oltp/statistics-for-memory-optimized-tables.md
-                    - name: Размер таблиц и строк
-                      href: ../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md
-                    - name: Руководство по обработке запросов
-                      href: ../relational-databases/in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables.md
-                    - name: скомпилированные в собственном коде хранимые процедуры
-                      href: ../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md
-                      items:
-                        - name: 'Создание хранимых процедур, скомпилированных в собственном коде'
-                          href: ../relational-databases/in-memory-oltp/creating-natively-compiled-stored-procedures.md
-                        - name: Изменение скомпилированных в собственном коде модулей T-SQL
-                          href: ../relational-databases/in-memory-oltp/altering-natively-compiled-t-sql-modules.md
-                        - name: Блоки ATOMIC
-                          href: ../relational-databases/in-memory-oltp/atomic-blocks-in-native-procedures.md
-                        - name: Скомпилированные в машинном коде хранимые процедуры и параметры SET выполнения
-                          href: ../relational-databases/in-memory-oltp/natively-compiled-stored-procedures-and-execution-set-options.md
-                        - name: 'Рекомендации по вызову хранимых процедур, скомпилированных в собственном коде'
-                          href: ../relational-databases/in-memory-oltp/best-practices-for-calling-natively-compiled-stored-procedures.md
-                        - name: Отслеживание производительности скомпилированных в собственном коде хранимых процедур
-                          href: ../relational-databases/in-memory-oltp/monitoring-performance-of-natively-compiled-stored-procedures.md
-                        - name: 'Вызов хранимых процедур, скомпилированных в собственном коде, из приложений для доступа к данным'
-                          href: ../relational-databases/in-memory-oltp/calling-natively-compiled-stored-procedures-from-data-access-applications.md
-                    - name: Оценка требований к объему памяти
-                      href: ../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md
-                      items:
-                        - name: Привязка базы данных к пулу ресурсов
-                          href: ../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md
-                        - name: Мониторинг и устранение неполадок с использованием памяти
-                          href: ../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md
-                        - name: Устранение проблем нехватки памяти
-                          href: ../relational-databases/in-memory-oltp/resolve-out-of-memory-issues.md
-                        - name: Восстановление базы данных и ее привязка к пулу ресурсов
-                          href: ../relational-databases/in-memory-oltp/restore-a-database-and-bind-it-to-a-resource-pool.md
-                        - name: Сборка мусора
-                          href: ../relational-databases/in-memory-oltp/in-memory-oltp-garbage-collection.md
-                    - name: Создание хранилища и управление им
-                      href: ../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md
-                      items:
-                        - name: Настройка хранилища
-                          href: ../relational-databases/in-memory-oltp/configuring-storage-for-memory-optimized-tables.md
-                        - name: Оптимизированная для памяти файловая группа
-                          href: ../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md
-                        - name: Длительность
-                          href: ../relational-databases/in-memory-oltp/durability-for-memory-optimized-tables.md
-                        - name: Функционирование контрольной точки
-                          href: ../relational-databases/in-memory-oltp/checkpoint-operation-for-memory-optimized-tables.md
-                        - name: Определение устойчивости
-                          href: ../relational-databases/in-memory-oltp/defining-durability-for-memory-optimized-objects.md
-                        - name: 'Сравнение хранилища таблиц на диске с хранилищем таблиц, оптимизированных для памяти'
-                          href: ../relational-databases/in-memory-oltp/comparing-disk-based-table-storage-to-memory-optimized-table-storage.md
-                        - name: Масштабируемость
-                          href: ../relational-databases/in-memory-oltp/scalability.md
-                    - name: Резервное копирование базы данных
-                      href: ../relational-databases/in-memory-oltp/backing-up-a-database-with-memory-optimized-tables.md
-                      items:
-                        - name: Поэтапное восстановление
-                          href: ../relational-databases/in-memory-oltp/piecemeal-restore-of-databases-with-memory-optimized-tables.md
-                        - name: Восстановление
-                          href: ../relational-databases/in-memory-oltp/restore-and-recovery-of-memory-optimized-tables.md
-                    - name: Поддержка SQL Server
-                      href: ../relational-databases/in-memory-oltp/sql-server-support-for-in-memory-oltp.md
-                      items:
-                        - name: Неподдерживаемые функции
-                          href: ../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md
-                        - name: Объекты управления
-                          href: ../relational-databases/in-memory-oltp/sql-server-management-objects-support-for-in-memory-oltp.md
-                        - name: Службы SQL Server Integration Services
-                          href: ../relational-databases/in-memory-oltp/sql-server-integration-services-support-for-in-memory-oltp.md
-                        - name: SQL Server Management Studio
-                          href: ../relational-databases/in-memory-oltp/sql-server-management-studio-support-for-in-memory-oltp.md
-                        - name: Высокий уровень доступности
-                          href: ../relational-databases/in-memory-oltp/high-availability-support-for-in-memory-oltp-databases.md
-                        - name: Поддержка T-SQL
-                          href: ../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md
-                          items:
-                            - name: Типы данных
-                              href: ../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md
-                            - name: 'Доступ к таблицам, оптимизированным для памяти, с помощью интерпретируемых инструкций T-SQL'
-                              href: ../relational-databases/in-memory-oltp/accessing-memory-optimized-tables-using-interpreted-transact-sql.md
-                            - name: 'Поддерживаемые функции для модулей, скомпилированных в собственном коде T-SQL'
-                              href: ../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md
-                            - name: 'Поддерживаемые конструкции DDL для модулей, скомпилированных в собственном коде T-SQL'
-                              href: ../relational-databases/in-memory-oltp/supported-ddl-for-natively-compiled-t-sql-modules.md
-                            - name: 'Конструкции T-SQL, не поддерживаемые в выполняющейся в памяти OLTP'
-                              href: ../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md
-                    - name: Миграция в In-Memory OLTP
-                      href: ../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md
-                      items:
-                        - name: 'Определение, должна ли таблица или хранимая процедура быть перенесена в In-Memory OLTP'
-                          href: ../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md
-                        - name: Помощник по оптимизации памяти
-                          href: ../relational-databases/in-memory-oltp/memory-optimization-advisor.md
-                        - name: Помощник по собственной компиляции
-                          href: ../relational-databases/in-memory-oltp/native-compilation-advisor.md
-                        - name: Командлет PowerShell для оценки миграции
-                          href: ../relational-databases/in-memory-oltp/powershell-cmdlet-for-migration-evaluation.md
-                        - name: 'Реализация SQL_VARIANT в таблице, оптимизированной для памяти'
-                          href: ../relational-databases/in-memory-oltp/implementing-sql-variant-in-a-memory-optimized-table.md
-                        - name: Перенос вычисляемых столбцов
-                          href: ../relational-databases/in-memory-oltp/migrating-computed-columns.md
-                        - name: Перенос триггеров
-                          href: ../relational-databases/in-memory-oltp/migrating-triggers.md
-                        - name: Межбазовые запросы
-                          href: ../relational-databases/in-memory-oltp/cross-database-queries.md
-                        - name: 'Реализация IDENTITY в таблице, оптимизированной для памяти'
-                          href: ../relational-databases/in-memory-oltp/implementing-identity-in-a-memory-optimized-table.md
-                        - name: 'Проблемы миграции, связанные с хранимыми процедурами, скомпилированными в собственном коде'
-                          href: ../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md
-                          items:
-                            - name: Создание таблиц в базе данных TempDB и обращение к ним из скомпилированных в машинном коде хранимых процедур
-                              href: ../relational-databases/in-memory-oltp/create-and-access-tables-in-tempdb-from-stored-procedures.md
-                            - name: 'Имитация инструкции IF-WHILE EXISTS в модуле, скомпилированном в собственном коде'
-                              href: ../relational-databases/in-memory-oltp/simulating-an-if-while-exists-statement-in-a-natively-compiled-module.md
-                            - name: Реализация функциональности MERGE в скомпилированной в собственном коде хранимой процедуре
-                              href: ../relational-databases/in-memory-oltp/implementing-merge-functionality-in-a-natively-compiled-stored-procedure.md
-                            - name: Реализация выражения CASE в скомпилированной в собственном коде хранимой процедуре
-                              href: ../relational-databases/in-memory-oltp/implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md
-                            - name: Реализация инструкции UPDATE с предложением FROM или вложенными запросами
-                              href: ../relational-databases/in-memory-oltp/implementing-update-with-from-or-subqueries.md
-                            - name: Создание внешнего соединения
-                              href: ../relational-databases/in-memory-oltp/implementing-an-outer-join.md
-            - name: Практическое руководство
-              items:
-                - name: Перечень технологий для повышения производительности
-                  href: ../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md
-                - name: Улучшение производительности временной таблицы и табличной переменной с помощью оптимизации памяти
-                  href: ../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md
-                - name: 'Устранение неполадок, связанных с хэш-индексами'
-                  href: ../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md
-            - name: Ссылки
-              items:
-                - name: Техническая документация по внутренним компонентам для SQL Server 2016
-                  href: ../relational-databases/in-memory-oltp/sql-server-in-memory-oltp-internals-for-sql-server-2016.md
+                - name: 'Администрирование, в том числе при недостатке памяти'
+                  href: ../relational-databases/in-memory-oltp/resolve-out-of-memory-issues.md
+                  items:
+                    - name: Пул ресурсов
+                      href: ../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md
+                    - name: Восстановление базы данных в пул
+                      href: ../relational-databases/in-memory-oltp/restore-a-database-and-bind-it-to-a-resource-pool.md
+                    - name: Восстановление по этапам
+                      href: ../relational-databases/in-memory-oltp/piecemeal-restore-of-databases-with-memory-optimized-tables.md
+                - name: 'Производительность, в том числе статистика'
+                  href: ../relational-databases/in-memory-oltp/statistics-for-memory-optimized-tables.md
+                  items:
+                    - name: Мониторинг производительности
+                      href: ../relational-databases/in-memory-oltp/monitoring-performance-of-natively-compiled-stored-procedures.md
+                    - name: Улучшение производительности временных таблиц
+                      href: ../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md
+                - name: SSMS для оптимизированных для памяти
+                  href: ../relational-databases/in-memory-oltp/sql-server-management-studio-support-for-in-memory-oltp.md
         - name: Секции
           href: ../relational-databases/partitions/partitioned-tables-and-indexes.md
           items:
@@ -7247,6 +7260,8 @@
               items:
                 - name: "Установка в\_Windows"
                   href: ../relational-databases/polybase/polybase-installation.md
+                - name: Установка в Linux
+                  href: ../relational-databases/polybase/polybase-linux-setup.md
                 - name: Возможности и ограничения
                   href: ../relational-databases/polybase/polybase-versioned-feature-summary.md
             - name: Настройка внешних источников данных
@@ -7291,6 +7306,8 @@
           items:
             - name: Справочник по T-SQL
               href: ../relational-databases/polybase/polybase-t-sql-objects.md
+            - name: Сопоставление типов
+              href: ../relational-databases/polybase/polybase-type-mapping.md
         - name: Ресурсы
           items:
             - name: "Stack\_Exchange\_DBA\_+"
@@ -7891,6 +7908,8 @@
           items:
             - name: Выбор алгоритма
               href: ../relational-databases/security/encryption/choose-an-encryption-algorithm.md
+            - name: Устранение неполадок TDE
+              href: ../relational-databases/security/encryption/troubleshoot-tde.md
             - name: Настройка Always Encrypted с безопасными анклавами
               href: ../relational-databases/security/encryption/configure-always-encrypted-enclaves.md
               items:
@@ -7996,6 +8015,8 @@
               href: ../relational-databases/security/permissions-database-engine.md
             - name: Иерархия разрешений
               href: ../relational-databases/security/permissions-hierarchy-database-engine.md
+            - name: Использование идентификаторов безопасности для предоставления разрешений службам в SQL Server
+              href: ../relational-databases/security/using-service-sids-to-grant-permissions-to-services-in-sql-server.md
         - name: Шифрование
           href: ../relational-databases/security/encryption/sql-server-encryption.md
           items:
@@ -10104,8 +10125,10 @@
               href: ../linux/sql-server-linux-manage-ssms.md
             - name: Использование Azure Data Studio для управления
               href: ../azure-data-studio/quickstart-sql-server.md
-            - name: "Использование для управления\_PowerShell"
+            - name: Использование Windows PowerShell
               href: ../linux/sql-server-linux-manage-powershell.md
+            - name: Использование PowerShell Core
+              href: ../linux/sql-server-linux-manage-powershell-core.md
             - name: Использование доставки журналов
               href: ../linux/sql-server-linux-use-log-shipping.md
             - name: "Использование DB\_Mail и оповещений по почте"
