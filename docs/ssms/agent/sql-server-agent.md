@@ -11,18 +11,18 @@ helpviewer_keywords:
 - SQL Server Agent, about SQL Server Agent
 - automatic administration steps
 ms.assetid: 8d1dc600-aabb-416f-b3af-fbc9fccfd0ec
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a5de816958beb6943ed102931e2e700528e0b140
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6788b27f4260905c18487866d22fe9434f34b5ff
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614890"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65097552"
 ---
-# <a name="sql-server-agent"></a>Агент SQL Server
+# <a name="sql-server-agent"></a>Агент SQL Server
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
@@ -70,7 +70,7 @@ ms.locfileid: "47614890"
 ### <a name="schedules"></a>Расписания  
 *Расписание* определяет время выполнения задания. Сразу несколько заданий могут выполняться по одному и тому же расписанию, а несколько расписаний могут применяться к одному и тому же заданию. Расписание может определить следующие условия для времени выполнения задания:  
   
--   при каждом запуске агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)];  
+-   При каждом запуске агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   каждый раз, когда использование ЦП компьютера будет достигать уровня, который определен как уровень простоя;  
   

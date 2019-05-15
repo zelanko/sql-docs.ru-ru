@@ -13,16 +13,16 @@ helpviewer_keywords:
 - failed jobs [SQL Server]
 - jobs [SQL Server Agent], action flow logic
 ms.assetid: 23041ccf-8a07-41d3-85b9-c449a54b7e1e
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a3f2da19f628722202a139f81e60affd04c11728
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: c14f10c9bba7dbdd40c1e2554fb590cd6f814043
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698269"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105990"
 ---
 # <a name="set-job-step-success-or-failure-flow"></a>Настройка потока действий системы при успешном или неуспешном выполнении шага задания
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "51698269"
   
     [безопасность](#Security)  
   
--   **Для настройки действий системы при успешном или неуспешном выполнении шага задания используется:**  
+-   **Для настройки потока действий системы при успешном или неуспешном выполнении шага задания используется:**  
   
     [Среда SQL Server Management Studio](#SSMS)  
   
@@ -47,7 +47,7 @@ ms.locfileid: "51698269"
 ## <a name="before-you-begin"></a>Перед началом  
   
 ### <a name="Security"></a>безопасность  
-Дополнительные сведения см. в разделе [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md).  
+Дополнительные сведения см. в разделе [Обеспечение безопасности агента SQL Server](../../ssms/agent/implement-sql-server-agent-security.md).  
   
 ## <a name="SSMS"></a>Использование среды SQL Server Management Studio  
   
@@ -102,7 +102,7 @@ ms.locfileid: "51698269"
 Дополнительные сведения см. в разделе [sp_add_jobstep (Transact-SQL)](https://msdn.microsoft.com/97900032-523d-49d6-9865-2734fba1c755).  
   
 ## <a name="SMO"></a>Использование управляющих объектов SQL Server  
-**Настройка действий системы при успешном или неуспешном выполнении шага задания**  
+**Настройка потока действий системы при успешном или неуспешном выполнении шага задания**  
   
 Воспользуйтесь классом **JobStep** на любом языке программирования, таком как Visual Basic, Visual C# или PowerShell. Дополнительные сведения см. в статье [Управляющие объекты SQL Server (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  
   

@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 213b91ab-03e9-431a-80f0-17eed8335abe
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 128e1feeb3b344a21dbb682d4d41d402060ab1ff
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 6e58a1f5e36ea4c8f9412c06ad08729716d02eef
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256949"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65101971"
 ---
 # <a name="using-msdeploy-with-dbsqlpackage-provider"></a>Использование MSDeploy с поставщиком dbSqlPackage
 **DbSqlPackage** — это поставщик **MSDeploy**, который обеспечивает взаимодействие с базами данных SQL Server и SQL Azure. **DbSqlPackage** поддерживает следующие действия:  
@@ -55,7 +55,7 @@ MSDeploy -verb: MSDeploy-verb -source:dbSqlPackage="Input"[,dbSqlPackage-source-
   
 |Ввод|По умолчанию|Описание|  
 |---------|-----------|---------------|  
-|**-source:dbSqlPackage=**{*input*}|**Н/Д**|*input* содержит допустимую строку подключения к SQL Server или SQL Azure либо путь к DACPAC-файлу на диске.<br /><br />**Примечание.** Если в качестве источника входных данных используется строка подключения, в ней поддерживаются только следующие свойства: *InitialCatalog, DataSource, UserID, Password, IntegratedSecurity, Encrypt, TrustServerCertificate* и *ConnectionTimeout*.|  
+|**-source:dbSqlPackage=**{*input*}|**Н/Д**|*input* содержит допустимую строку подключения к SQL Server или SQL Azure либо путь к DACPAC-файлу на диске.<br /><br />**ПРИМЕЧАНИЕ.** Если в качестве источника входных данных используется строка подключения, в ней поддерживаются только следующие свойства: *InitialCatalog, DataSource, UserID, Password, IntegratedSecurity, Encrypt, TrustServerCertificate* и *ConnectionTimeout*.|  
   
 Если источником входных данных является строка подключения к активной базе данных SQL Server или SQL Azure, **dbSqlPackage** извлекает моментальный снимок базы данных в виде DACPAC-файла из активной базы данных SQL Server или SQL Azure.  
   
