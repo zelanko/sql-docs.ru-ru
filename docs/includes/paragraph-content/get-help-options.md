@@ -1,14 +1,13 @@
 ---
-ms.openlocfilehash: 7b33204158993340927d4f40fdf83853b3fd757d
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: e0ef092d2227f380c9da1f982d954b8b5d310aaf
+ms.sourcegitcommit: 6193aa9b4967302424270d67c27dbc601ca6849a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419549"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64877745"
 ---
 ##  <a name="infotipmediainfo-tippng-get-help"></a>![info_tip](../media/info-tip.png) Справка
 
-- [Способы обратной связи](https://docs.microsoft.com/sql/sql-server/sql-server-get-help)
 - [UserVoice — предложения по улучшению SQL Server](https://feedback.azure.com/forums/908035-sql-server)
 - [Установка и обновление — форум MSDN](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsetupandupgrade&filter=alltypes&sort=lastpostdesc)
 - [SQL Server Data Tools — форум MSDN](https://social.msdn.microsoft.com/Forums/en-US/home?forum=ssdt&filter=alltypes&sort=lastpostdesc)
@@ -20,6 +19,4 @@ ms.locfileid: "49419549"
 - [Условия лицензии и информация о Microsoft SQL Server](https://www.microsoft.com/download/details.aspx?id=39299)
 - [Варианты поддержки для бизнес-пользователей](https://support.microsoft.com/gp/support-options-for-business)
 - [Обратиться в Майкрософт](https://support.microsoft.com/gp/contactus81?Audience=Commercial)
-- [Внести изменения в документацию по SQL](https://aka.ms/editsqldocs)
-- [Оставить отзыв о документации по SQL](https://aka.ms/sqldocsfeedback)
-- [Пройти опрос, посвященный документации по SQL](https://aka.ms/sqldocsurvey)
+- [Способы обратной связи](https://docs.microsoft.com/sql/sql-server/sql-server-get-help)

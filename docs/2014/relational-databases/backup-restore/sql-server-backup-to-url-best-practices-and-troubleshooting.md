@@ -10,12 +10,12 @@ ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f54ae14c13d58c75da0ddd6eb69a9d9d7527991f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7f652d512f27b935b158a71a80b61c43ac6b7183
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62877096"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65619589"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>Резервное копирование SQL Server на URL-адрес — рекомендации и устранение неполадок
   В этом разделе рассматриваются рекомендации и советы по устранению неполадок SQL Server при создании резервных копий и восстановлении с помощью службы хранилища больших двоичных объектов Windows Azure.  
@@ -125,7 +125,7 @@ ms.locfileid: "62877096"
   
      Процесс BACKUP DATABASE завершается аварийно.  
   
--   BackupIoRequest::ReportIoError: Ошибка записи на устройстве резервного копирования http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak". Ошибка операционной системы. Процесс резервного копирования на URL-адрес получил исключение от удаленной конечной точки. Сообщение об исключении: Не удалось прочитать данные из транспортного соединения: Соединение было закрыто.  
+-   BackupIoRequest::ReportIoError: Ошибка записи на устройстве резервного копирования "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak". Ошибка операционной системы. Процесс резервного копирования на URL-адрес получил исключение от удаленной конечной точки. Сообщение об исключении: Не удалось прочитать данные из транспортного соединения: Соединение было закрыто.  
   
  Если включить подробный уровень ведения журнала с помощью флага трассировки 3051, то в журналы также может быть занесено следующее сообщение.  
   
