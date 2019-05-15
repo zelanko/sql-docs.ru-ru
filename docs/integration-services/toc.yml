@@ -1,4 +1,4 @@
-- name: "SQL Server\_++"
+- name: SQL Server >>
   href: ../sql-server/sql-server-technical-documentation.md?toc=../toc/toc.json
 - name: Службы SQL Server Integration Services
   href: ../integration-services/sql-server-integration-services.md
@@ -1784,11 +1784,11 @@
               href: ../integration-services/lesson-3-3-testing-the-deployed-packages.md
 - name: Ресурсы
   items:
-    - name: "Получить справку на форуме SSIS\_+"
+    - name: "Получить справку на форуме SSIS\_>"
       href: 'https://social.msdn.microsoft.com/Forums/en-US/home'
-    - name: "Получить справку на сайте Stack Overflow\_+"
+    - name: "Получить справку на сайте Stack Overflow\_>"
       href: 'https://stackoverflow.com/questions/tagged/ssis'
-    - name: "Читать блог группы разработки служб SSIS\_+"
+    - name: "Читать блог группы разработки служб SSIS\_>"
       href: 'https://blogs.msdn.microsoft.com/ssis/'
-    - name: "Сообщить о проблемах или запросить новые функции\_+"
+    - name: "Сообщить о проблемах или запросить новые функции\_>"
       href: 'https://feedback.azure.com/forums/908035-sql-server'

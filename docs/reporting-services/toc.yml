@@ -1,4 +1,4 @@
-- name: "SQL Server\_++"
+- name: SQL Server >>
   href: ../sql-server/sql-server-technical-documentation.md?toc=../toc/toc.json
 - name: Что такое службы SQL Server Reporting Services (SSRS)?
   href: ../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md
@@ -1592,7 +1592,7 @@
   items:
     - name: REST API
       href: ../reporting-services/developer/rest-api.md
-    - name: "Примеры REST\_API\_+"
+    - name: "Примеры REST\_API\_>"
       href: 'https://github.com/Microsoft/Reporting-Services'
     - name: Интеграция служб Reporting Services в приложения
       href: ../reporting-services/application-integration/integrating-reporting-services-into-applications.md
@@ -1909,7 +1909,7 @@
         - name: "Урок\_9. Сборка и запуск приложения"
           href: ../reporting-services/lesson-9-build-and-run-the-application.md
     - name: Учебники по построителю отчетов
-      href: ../reporting-services/tools/tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md
+      href: ../reporting-services/report-builder-tutorials.md
       items:
         - name: Предварительные условия для использования учебников
           href: ../reporting-services/prerequisites-for-tutorials-report-builder.md

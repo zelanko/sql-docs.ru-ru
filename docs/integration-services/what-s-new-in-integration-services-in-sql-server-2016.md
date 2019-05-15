@@ -15,15 +15,14 @@ ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5a747f7dea48d8c8d733e256473609f37764850a
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 2dea9e83bcfeff2c3b5c208cc947f48f21b9f4a7
+ms.sourcegitcommit: 6193aa9b4967302424270d67c27dbc601ca6849a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290640"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64877717"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>Новые возможности служб Integration Services в SQL Server 2016
-[!INCLUDE[feedback-stackoverflow-msdn-connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
 В этой статье описаны функции, которые были добавлены или обновлены в SQL Server 2016 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. К ним также относятся функции, добавленные или обновленные в [пакете дополнительных компонентов Azure для служб Integration Services &#40;SSIS&#41;](../integration-services/azure-feature-pack-for-integration-services-ssis.md) в течение жизненного цикла SQL Server 2016.  
 
@@ -367,10 +366,10 @@ ms.locfileid: "58290640"
   
  В[!INCLUDE[ssIS](../includes/ssis-md.md)] появилось свойство **ValidationDetails** в пакете обновления 2 (SP2) для [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] . В то время о новом свойстве не было никакой информации. Кроме того, свойство **ValidationDetails** доступно в [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] и [!INCLUDE[ssSQL15](../includes/sssql15-md.md)].   
 
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
+
 ## <a name="see-also"></a>См. также:  
  [Что нового в SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)   
  [Возможности, поддерживаемые различными выпусками SQL Server 2016](../sql-server/editions-and-supported-features-for-sql-server-2016.md)
-  
-  
-[!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
-
