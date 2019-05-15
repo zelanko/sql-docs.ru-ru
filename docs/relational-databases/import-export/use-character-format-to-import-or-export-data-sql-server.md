@@ -11,16 +11,16 @@ helpviewer_keywords:
 - data formats [SQL Server], character
 - character formats [SQL Server]
 ms.assetid: d925e66a-1a73-43cd-bc06-1cbdf8174a4d
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ba67a9831318851ef035cf84ac31bbd2e43b3194
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d129c6d0efb5659c0e10aa1c131b6e99a930896d
+ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625662"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "64946405"
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>Использование символьного формата для импорта и экспорта данных (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47625662"
 ## Замечания по использованию символьного формата<a name="considerations"></a>
 При использовании символьного формата имейте в виду следующее.  
   
--   По умолчанию [программа bcp](../../tools/bcp-utility.md) разделяет символьные поля данных символом табуляции, а записи — символом перевода строки.  Сведения о том, как указать другой признак конца поля, см. в статье [Определение признаков конца поля и строки (SQL Server)](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).  
+-   По умолчанию [программа bcp](../../tools/bcp-utility.md) разделяет символьные поля данных символом табуляции, а записи — символом перевода строки.  Сведения о том, как указать другой признак конца поля, см. в статье [Определение признаков конца поля и строки (SQL Server)](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).  
   
 -   По умолчанию перед выполнением массового импорта или экспорта символьных данных выполняются следующие преобразования.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "47625662"
  \** Чтобы загрузить символьные (**-c**) данные в формате, совместимом с клиентами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предыдущих версий, используйте параметр **-V** . Дополнительные сведения см. в разделе [Импорт данных в собственном и символьном формате из предыдущих версий SQL Server](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md).  
    
 > [!NOTE]
->  Также в файле форматирования можно указать форматирование для каждого поля. Дополнительные сведения см. в статье [Файлы форматирования для импорта или экспорта данных (SQL Server)](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md).
+>  Также в файле форматирования можно указать форматирование для каждого поля. Дополнительные сведения см в разделе [Файлы форматирования для импорта или экспорта данных (SQL Server)](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md).
 
 ## Пример условий теста<a name="etc"></a>  
 Примеры в этой статье основаны на таблице и файле форматирования, которые определены ниже.

@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 76d3ac86-650c-46fe-8086-8b3edcea3882
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: a32bb1fef21b41fae6ef30dd011b5b7260203c94
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: ccd9e4edc5a1238ba9c68f97de1d7f53fb899a74
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56285992"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775545"
 ---
 # <a name="expressions-report-builder-and-ssrs"></a>Выражения (построитель отчетов и службы SSRS)
   Выражения часто используются в отчетах с разбивкой на страницы [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] для получения, вычисления, отображения, группирования, сортировки, параметризации и форматирования данных. 
@@ -56,13 +56,9 @@ ms.locfileid: "56285992"
   
  Дополнительные сведения см. в разделе [Форматирование текста и заполнителей &#40;построитель отчетов и службы SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md).  
   
-### <a name="report-model-formulas"></a>Формулы моделей отчетов  
- При создании запроса для получения набора данных, в котором в качестве источника данных используется модель отчета, можно создать *формулы*. Формулы — это вычисления, производимые над значениями в отчете, основанные на данных модели отчета.  
-  
- Дополнительные сведения см. в разделе [Формулы в запросах модели отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formulas-in-report-model-queries-report-builder-and-ssrs.md).  
-   
-##  <a name="DisplayText"></a> Основные сведения о символах префиксов в простых выражениях  
- В простых выражениях используются символы, чтобы указать, ссылается ли оно на поле, параметр, встроенную коллекцию или коллекцию ReportItems. В следующей таблице показаны примеры отображаемого текста и текста выражения.  
+## <a name="DisplayText"></a> Основные сведения о символах префиксов в простых выражениях  
+
+В простых выражениях используются символы, чтобы указать, ссылается ли оно на поле, параметр, встроенную коллекцию или коллекцию ReportItems. В следующей таблице показаны примеры отображаемого текста и текста выражения.  
   
 |Элемент|Пример отображаемого текста|Пример текста выражения|  
 |----------|--------------------------|-----------------------------|  

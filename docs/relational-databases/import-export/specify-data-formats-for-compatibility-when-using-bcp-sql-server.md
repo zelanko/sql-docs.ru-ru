@@ -14,16 +14,16 @@ helpviewer_keywords:
 - data formats [SQL Server], compatibility
 - bcp utility [SQL Server], compatibility
 ms.assetid: cd5fc8c8-eab1-4165-9468-384f31e53f0a
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cfb476dacf1b0dfc725d0b51316a731b82f00a7f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 929a6a40b7203147ed59e045bb359c464c248850
+ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620149"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "64946162"
 ---
 # <a name="specify-data-formats-for-compatibility-when-using-bcp-sql-server"></a>Указание форматов данных для совместимости с помощью программы bcp (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -92,7 +92,7 @@ bcp AdventureWorks.HumanResources.myTeam out myTeam.txt -T
  После указания всех столбцов таблицы команда **bcp** предлагает сформировать файл форматирования в формате, отличном от XML, в который будут записаны предоставленные сведения о полях данных (см. предыдущий пример). Создать файл форматирования можно как при экспорте данных из этой таблицы, так и при импорте данных схожей структуры в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
->  Файл форматирования можно использовать для массового импорта данных из файла данных в экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или для массового экспорта данных из таблицы, чтобы не указывать формат повторно. Дополнительные сведения см. в статье [Файлы форматирования для импорта или экспорта данных (SQL Server)](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md).  
+>  Файл форматирования можно использовать для массового импорта данных из файла данных в экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или для массового экспорта данных из таблицы, чтобы не указывать формат повторно. Дополнительные сведения см в разделе [Файлы форматирования для импорта или экспорта данных (SQL Server)](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md).  
   
  В следующем примере создается файл форматирования в формате,`myFormatFile.fmt` отличном от XML:  
   
@@ -122,7 +122,7 @@ bcp AdventureWorks.HumanResources.myTeam out myTeam.txt -T
 ## <a name="see-also"></a>См. также:  
  [Массовый импорт и экспорт данных (SQL Server)](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)   
  [Форматы данных для массового экспорта или импорта (SQL Server)](../../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md)   
- [Программа bcp](../../tools/bcp-utility.md)   
+ [bcp Utility](../../tools/bcp-utility.md)   
  [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)  
   
   

@@ -21,16 +21,15 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: '>= sql-server-linux-2017  || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 523b1cc852c7098f6c18828efdb789fa2fcafcdf
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 0cdd3d2a7a64ddc701a73a3b6c978bd9f0264e20
+ms.sourcegitcommit: 6193aa9b4967302424270d67c27dbc601ca6849a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801748"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64877593"
 ---
 # <a name="sql-server-documentation"></a>Документация по SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-
 
 ::: moniker range=">= sql-server-linux-2017 || >= sql-server-2017  || = sqlallproducts-allversions"
 SQL Server является центральной частью платформы обработки данных Майкрософт. SQL Server — это ведущее отраслевое решение среди систем управления рабочими базами данных (ODBMS). Приведенные в этой документации сведения будут полезны при установке, настройке и использовании SQL Server в Windows и Linux. Материалы включают в себя комплексные примеры, примеры кода и видеоролики. Разделы о языке SQL Server см. в [справочнике по языку](../t-sql/language-reference.md).
@@ -46,7 +45,7 @@ SQL Server является центральной частью платформ
 
 ::: moniker range="= sqlallproducts-allversions"
 
-|новые возможности  | Заметки о выпуске  |
+|Новые возможности  | Заметки о выпуске  |
 |---------|---------|
 |[Новые возможности в SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md)     | [Заметки о выпуске SQL Server 2019](../sql-server/sql-server-ver15-release-notes.md)        |
 |[Новые возможности в SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)     | [Заметки о выпуске SQL Server 2017](../sql-server/sql-server-2017-release-notes.md)        |
@@ -57,7 +56,7 @@ SQL Server является центральной частью платформ
 
 ::: moniker range="= sql-server-ver15"
 
-|новые возможности  | Заметки о выпуске  |
+|Новые возможности  | Заметки о выпуске  |
 |---------|---------|
 |[Новые возможности в SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md)     | [Заметки о выпуске SQL Server 2019](../sql-server/sql-server-ver15-release-notes.md)        |
 
@@ -65,7 +64,7 @@ SQL Server является центральной частью платформ
 
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-|новые возможности  | Заметки о выпуске  |
+|Новые возможности  | Заметки о выпуске  |
 |---------|---------|
 |[Новые возможности в SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)     | [Заметки о выпуске SQL Server 2017](../sql-server/sql-server-2017-release-notes.md)        |
 
@@ -75,7 +74,7 @@ SQL Server является центральной частью платформ
 
 ::: moniker range="=sql-server-2016"
 
-|новые возможности  | Заметки о выпуске  |
+|Новые возможности  | Заметки о выпуске  |
 |---------|---------|
 |[Что нового в SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)     | [Заметки о выпуске для SQL Server 2016](../sql-server/sql-server-2016-release-notes.md)        |
 
@@ -84,8 +83,6 @@ SQL Server является центральной частью платформ
 ::: moniker range="= sql-server-2016 || = sqlallproducts-allversions"
 **Оцените SQL Server 2016!**
 - [![Скачать из Evaluation Center](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=829477) [Скачать SQL Server для Windows](https://go.microsoft.com/fwlink/?LinkID=829477)
-- [![Скачать из Evaluation Center](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) [Скачать SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
-- [![Скачать из Evaluation Center](../includes/media/download2.png)](../ssdt/download-sql-server-data-tools-ssdt.md) [Скачать SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
 - [![Создать виртуальную машину](../includes/media/azure-vm.png)](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [Развернуть виртуальную машину с SQL Server](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
 ::: moniker-end
 
@@ -93,10 +90,10 @@ SQL Server является центральной частью платформ
 **Оцените SQL Server!**
 - [![Скачать из Evaluation Center](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=829477) [Скачать SQL Server для Windows](https://go.microsoft.com/fwlink/?LinkID=829477)
 - [![Установить SQL Server в Linux](../includes/media/download2.png)](../linux/sql-server-linux-setup.md) [Установить SQL Server в Linux](../linux/sql-server-linux-setup.md)
-- [![Скачать из Evaluation Center](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) [Скачать SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
-- [![Скачать из Evaluation Center](../includes/media/download2.png)](../ssdt/download-sql-server-data-tools-ssdt.md) [Скачать SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
 - [![Создать виртуальную машину](../includes/media/azure-vm.png)](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [Развернуть виртуальную машину с SQL Server](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
 ::: moniker-end
+
+[!INCLUDE[get-sql-tools](../includes/paragraph-content/get-sql-tools.md)]
 
 ## <a name="sql-server-technologies"></a>Технологии SQL Server
 
