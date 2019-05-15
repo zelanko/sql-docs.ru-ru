@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 022113a9cabe678e3136d50beb3a87cd29fa07d4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 740dcc22d53ff6cd60bbc491fb6bb7b7f44947a8
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62628161"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65578000"
 ---
 # <a name="sysdmosthreads-transact-sql"></a>sys.dm_os_threads (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -70,6 +70,10 @@ ms.locfileid: "62628161"
 
 На [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], требуется `VIEW SERVER STATE` разрешение.   
 На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], требуется `VIEW DATABASE STATE` разрешение в базе данных.   
+
+## <a name="notes-on-linux-version"></a>Заметки о версии Linux
+
+Из-за как ядро SQL работает в Linux некоторые из этих сведений не соответствует Linux диагностических данных. Например `os_thread_id` не совпадают с результатом средств, таких как `ps`,`top` или procfs (/proc/`pid`).  Это происходит из-за платформы абстракцию слоя (SQLPAL), слой между компонентами SQL Server и операционной системы.
 
 ## <a name="examples"></a>Примеры  
  При запуске сервера запускаются потоки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], с которыми затем связываются рабочие процессы. Однако внешние компоненты, например расширенные хранимые процедуры, могут запускать потоки в процессе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сам [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не управляет этими потоками. sys.dm_os_threads может предоставить сведения о неуправляемых потоках, потребляющих ресурсы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] процесса.  

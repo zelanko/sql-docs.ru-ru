@@ -10,14 +10,14 @@ helpviewer_keywords:
 - encryption keys [Reporting Services]
 - symmetric keys [Reporting Services]
 ms.assetid: 6773d5df-03ef-4781-beb7-9f6825bac979
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 13f213f9914245de11257c7fad17a30d1a24388e
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 3a1066e06ca5a526cbfa4cb6f7d54014e4ef520d
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58306162"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65502853"
 ---
 # <a name="ssrs-encryption-keys---back-up-and-restore-encryption-keys"></a>Ключи шифрования служб SSRS — резервное копирование и восстановление ключей шифрования
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -25,6 +25,9 @@ ms.locfileid: "58306162"
   Одним из важных аспектов конфигурирования сервера отчетов является создание резервной копии симметричного ключа, используемого для шифрования конфиденциальных данных. Резервная копия ключа требуется для выполнения многих распространенных операций и позволяет повторно использовать базу данных существующего сервера отчетов в новом сервере.  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Собственный режим | [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Режим SharePoint  
+
+> [!NOTE]
+> Интеграция служб Reporting Services с SharePoint больше не доступна после выхода SQL Server 2016.
   
  Восстанавливать резервную копию ключа шифрования нужно в ответ на любое из следующих событий:  
   
@@ -44,11 +47,15 @@ ms.locfileid: "58306162"
  Созданием резервной копии симметричного ключа называют процесс, в ходе которого ключ записывается в указанный файл, после чего шифруется с использованием заданного пароля. Симметричный ключ не может быть сохранен в незашифрованном состоянии, поэтому при его сохранении на диске необходимо указать пароль для шифрования ключа. После создания файла необходимо сохранить его в безопасном месте **и запомнить пароль** , служащий для разблокирования файла. Для создания резервной копии симметричного ключа можно использовать следующие средства:  
   
  **Основной режим.** Диспетчер конфигурации служб Reporting Services или программа **rskeymgmt** .  
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
  **Режим SharePoint.** Страницы центра администрирования SharePoint или PowerShell.  
   
 ##  <a name="bkmk_backup_sharepoint"></a> Резервное копирование серверов отчетов в режиме интеграции с SharePoint  
  Для серверов отчетов, работающих в режиме интеграции с SharePoint, можно использовать команды PowerShell или страницы управления для приложений служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Дополнительные сведения см. в разделе "Управление ключами" статьи [Управление служебным приложением SharePoint службы Reporting Services](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md).  
+
+::: moniker-end
   
 ##  <a name="bkmk_backup_configuration_manager"></a> Резервное копирование ключей шифрования — диспетчер служб Reporting Services (собственный режим)  
   

@@ -1,19 +1,19 @@
 ---
 title: Создание базы данных сервера отчетов (диспетчер конфигурации служб SSRS) | Документация Майкрософт
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/15/2018
-ms.openlocfilehash: 9fee8b60cff2b0c8bdfa2e38576cfed036f09584
-ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
-ms.translationtype: HT
+ms.openlocfilehash: 7f04bff24ca1472b35b71c5e8f04d017714ddf0f
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54184990"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65502655"
 ---
 # <a name="create-a-report-server-database"></a>Создание базы данных сервера отчетов 
 
@@ -25,7 +25,12 @@ ms.locfileid: "54184990"
 
 Эти базы данных создаются одновременно и связываются по именам. В экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию базы данных именуются **reportserver** и **reportservertempdb**. В совокупности эти две базы данных называются **базой данных сервера отчетов** или **каталогом сервера отчетов**.
 
-В режиме **интеграции с SharePoint** SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] добавляет третью базу данных для метаданных предупреждений об изменении данных. Эти три базы данных создаются отдельно для каждого приложения службы SSRS. Имена баз данных по умолчанию содержат идентификатор GUID, который соответствует приложению службы. Далее приводятся примеры имен этих трех баз данных, используемых в режиме интеграции с SharePoint.
+В режиме **интеграции с SharePoint** SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] добавляет третью базу данных для метаданных предупреждений об изменении данных. Эти три базы данных создаются отдельно для каждого приложения службы SSRS. Имена баз данных по умолчанию содержат идентификатор GUID, который соответствует приложению службы. 
+
+> [!NOTE]
+> Интеграция служб Reporting Services с SharePoint больше не доступна после выхода SQL Server 2016.
+
+Далее приводятся примеры имен этих трех баз данных, используемых в режиме интеграции с SharePoint.
 
 - ReportingService_90a9f37075544f22953c4a62e4a9f370  
   
@@ -46,6 +51,8 @@ ms.locfileid: "54184990"
 - **Автоматически**. Если вы выбрали установку с конфигурацией по умолчанию, используйте мастер установки SQL Server. В мастере установки SQL Server этот вариант назван **Установка и настройка** и размещен на странице **Report Server Installation Options** (Параметры установки сервера отчетов). Если вы выберете вариант **Install only** (Только установка), то для создания базы данных необходимо воспользоваться диспетчером конфигурации служб SQL Server Reporting Services.  
   
 - **Вручную**. Используйте диспетчер конфигурации SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Базу данных сервера отчетов следует создавать вручную, если вы используете для хранения базы данных удаленный [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Дополнительные сведения см. в разделе [Создание базы данных сервера отчетов, работающего в собственном режиме](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
 ### <a name="sharepoint-mode"></a>Режим интеграции с SharePoint 
 На странице **Report Server Installation Options** (Параметры установки сервера отчетов) есть только один вариант для режима интеграции с SharePoint: **Install Only** (Только установка). Это действие устанавливает все файлы SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и общую службу SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. После этого следует создать по крайней мере одно приложение службы SSRS одним из следующих способов.  
@@ -53,6 +60,8 @@ ms.locfileid: "54184990"
 - Откройте центр администрирования на сервере SharePoint и создайте приложение службы SSRS. Для получения дополнительных сведений см. раздел [о создании приложения службы](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication) в статье **Установка первого сервера отчетов в режиме интеграции с SharePoint**.  
   
 - Создайте приложение службы и базы данных сервера отчетов с помощью командлетов PowerShell для SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Дополнительные сведения см. в примере создания приложений службы из статьи [Командлеты PowerShell для режима интеграции служб Reporting Services с SharePoint](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
+
+::: moniker-end
   
 ## <a name="database-server-version-requirements"></a>Требования к версии сервера баз данных
 
