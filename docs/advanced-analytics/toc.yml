@@ -1,4 +1,4 @@
-- name: "SQL Server\_++"
+- name: SQL Server >>
   href: ../sql-server/sql-server-technical-documentation.md?toc=../toc/toc.json
 - name: Документация по программным расширениям и Службе машинного обучения SQL Server
   href: ../advanced-analytics/home-advanced-analytics-r-machine-learning-sql-server.md
@@ -168,7 +168,7 @@
               href: ../advanced-analytics/tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md
             - name: 4. Прогнозы
               href: ../advanced-analytics/tutorials/sqldev-py6-operationalize-the-model.md
-- name: Примеры +
+- name: Примеры >
   href: 'https://github.com/Microsoft/sql-server-samples'
 - name: Решения
   href: ../advanced-analytics/tutorials/data-science-scenarios-and-solution-templates.md
@@ -305,7 +305,7 @@
           href: ../advanced-analytics/python/ref-py-microsoftml.md
 - name: Ресурсы
   items:
-    - name: "Заметки о выпуске\_+"
+    - name: Заметки о выпуске >>
       href: ../sql-server/sql-server-2017-release-notes.md?toc=../toc/toc.json
     - name: Устранение неполадок
       href: ../advanced-analytics/machine-learning-troubleshooting-faq.md

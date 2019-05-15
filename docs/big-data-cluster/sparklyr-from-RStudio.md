@@ -9,12 +9,12 @@ ms.date: 04/08/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 148e4942babafb35af2efe33eb427f9462f0a47e
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.openlocfilehash: cd3e38cbcd927de25f4e072b8bdb1ac09331f739
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59969880"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65620321"
 ---
 # <a name="use-sparklyr-in-sql-server-big-data-cluster"></a>Использовать sparklyr в кластере SQL Server больших данных
 
@@ -36,17 +36,20 @@ Sparklyr интерфейс R для Apache Spark. Sparklyr — это попу�
 
 1. После завершения установки выполните следующие команды в RStudio Desktop, чтобы установить необходимые пакеты:
 
-   '' "Install.packages RStudio Desktop (репозиториев" DBI"="https://cran.microsoft.com/snapshot/2019-01-01") install.packages (репозиториев" dplyr"="https://cran.microsoft.com/snapshot/2019-01-01") install.packages (репозиториев" sparklyr"="https://cran.microsoft.com/snapshot/2019-01-01")
+   ```RStudioDesktop
+   install.packages("DBI", repos = "https://cran.microsoft.com/snapshot/2019-01-01")
+   install.packages("dplyr", repos = "https://cran.microsoft.com/snapshot/2019-01-01")
+   install.packages("sparklyr", repos = "https://cran.microsoft.com/snapshot/2019-01-01")
    ```
 
-## Connect to Spark in a big data cluster
+## <a name="connect-to-spark-in-a-big-data-cluster"></a>Подключение к Spark в кластере больших данных
 
-You can use sparklyr to connect from a client to the big data cluster using Livy and the HDFS/Spark gateway. 
+Sparklyr можно использовать для подключения от клиента к кластеру больших данных с помощью Livy и шлюзом HDFS или Spark. 
 
-In RStudio, create an R script and connect to Spark as in the following example:
+В RStudio создайте скрипт R и подключение к Spark, как показано в следующем примере:
 
 > [!TIP]
-> For the `<USERNAME>` and `<PASSWORD>` values, use the username (such as root) and password you set during the big data cluster deployment. For the `<IP>` and `<PORT>` values, see the documentation on the [HDFS/Spark gateway](connect-to-big-data-cluster.md#hdfs).
+> Для `<USERNAME>` и `<PASSWORD>` значения, используйте имя пользователя (например, root) и пароль, указанные во время развертывания кластера больших данных. Для `<IP>` и `<PORT>` значения, см. в документации на [HDFS/Spark шлюза](connect-to-big-data-cluster.md#hdfs).
 
 ```r
 library(sparklyr)

@@ -17,12 +17,12 @@ ms.assetid: b97acc43-fcd2-4ae5-b218-e183bab916f9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 83afb8016d2887af305ed61089a05a6e85150fa4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6ec1bbc16f12424c1be539e9b82f56224822646b
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855072"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65450066"
 ---
 # <a name="sql-server-powershell-provider"></a>SQL Server PowerShell, поставщик
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,22 +45,22 @@ ms.locfileid: "47855072"
   
 |Папка|Пространство имен объектной модели SQL Server|Объекты|  
 |------------|---------------------------------------|-------------|  
-|SQLSERVER:\SQL|<xref:Microsoft.SqlServer.Management.Smo><br /><br /> <xref:Microsoft.SqlServer.Management.Smo.Agent><br /><br /> <xref:Microsoft.SqlServer.Management.Smo.Broker><br /><br /> <xref:Microsoft.SqlServer.Management.Smo.Mail>|Объекты базы данных, такие как таблицы, представления и хранимые процедуры.|  
-|SQLSERVER:\SQLPolicy|<xref:Microsoft.SqlServer.Management.Dmf><br /><br /> <xref:Microsoft.SqlServer.Management.Facets>|Объекты управления на основе политик, такие как политики и аспекты.|  
-|SQLSERVER:\SQLRegistration|<xref:Microsoft.SqlServer.Management.RegisteredServers><br /><br /> <xref:Microsoft.SqlServer.Management.Smo.RegSvrEnum>|Зарегистрированные объекты серверов, такие как группы серверов и зарегистрированные серверы.|  
-|SQLSERVER:\Utility|<xref:Microsoft.SqlServer.Management.Utility>|Вспомогательные объекты, такие как управляемые экземпляры компонента [!INCLUDE[ssDE](../includes/ssde-md.md)].|  
-|SQLSERVER:\DAC|<xref:Microsoft.SqlServer.Management.DAC>|Объекты приложения уровня данных, такие как пакеты DAC, и операции, такие как развертывание DAC.|  
-|SQLSERVER:\DataCollection|<xref:Microsoft.SqlServer.Management.Collector>|Объекты сборщика данных, такие как наборы элементов сбора и хранилища конфигураций.|  
-|SQLSERVER:\IntegrationServices|<xref:Microsoft.SqlServer.Management.IntegrationServices>|[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , как проекты, пакеты и среды.|  
-|SQLSERVER:\SQLAS|<xref:Microsoft.AnalysisServices>|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , такие как кубы, агрегаты и измерения.|  
+|`SQLSERVER:\SQL`|<xref:Microsoft.SqlServer.Management.Smo><br /><br /> <xref:Microsoft.SqlServer.Management.Smo.Agent><br /><br /> <xref:Microsoft.SqlServer.Management.Smo.Broker><br /><br /> <xref:Microsoft.SqlServer.Management.Smo.Mail>|Объекты базы данных, такие как таблицы, представления и хранимые процедуры.|  
+|`SQLSERVER:\SQLPolicy`|<xref:Microsoft.SqlServer.Management.Dmf><br /><br /> <xref:Microsoft.SqlServer.Management.Facets>|Объекты управления на основе политик, такие как политики и аспекты.|  
+|`SQLSERVER:\SQLRegistration`|<xref:Microsoft.SqlServer.Management.RegisteredServers><br /><br /> <xref:Microsoft.SqlServer.Management.Smo.RegSvrEnum>|Зарегистрированные объекты серверов, такие как группы серверов и зарегистрированные серверы.|  
+|`SQLSERVER:\Utility`|<xref:Microsoft.SqlServer.Management.Utility>|Вспомогательные объекты, такие как управляемые экземпляры компонента [!INCLUDE[ssDE](../includes/ssde-md.md)].|  
+|`SQLSERVER:\DAC`|<xref:Microsoft.SqlServer.Management.DAC>|Объекты приложения уровня данных, такие как пакеты DAC, и операции, такие как развертывание DAC.|  
+|`SQLSERVER:\DataCollection`|<xref:Microsoft.SqlServer.Management.Collector>|Объекты сборщика данных, такие как наборы элементов сбора и хранилища конфигураций.|  
+|`SQLSERVER:\SSIS`|<xref:Microsoft.SqlServer.Management.IntegrationServices>|[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , как проекты, пакеты и среды.|  
+|`SQLSERVER:\SQLAS`|<xref:Microsoft.AnalysisServices>|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , такие как кубы, агрегаты и измерения.|  
   
  Например, папку SQLSERVER:\SQL можно использовать, чтобы начинать пути, которые могут представлять любой объект, поддерживаемый объектной моделью SMO. Начальная область пути SQLSERVER:\SQL — SQLSERVER:\SQL\\*ComputerName*\\*InstanceName*. Узлы после имени экземпляра поочередно указывают коллекции объектов (такие как *Базы данных* или *Представления*) и имена объектов (наподобие AdventureWorks2012). Схемы не представляются в качестве классов объектов. Если указывается узел для объекта верхнего уровня в схеме, такого как таблица или представление, необходимо указать имя объекта в формате *ИмяСхемы.ИмяОбъекта*.  
   
  В следующем примере показан путь к таблице "Vendor" в схеме "Purchasing" базы данных AdventureWorks2012 на экземпляре по умолчанию компонента [!INCLUDE[ssDE](../includes/ssde-md.md)] на локальном компьютере.  
   
-```  
+```powershell
 SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012\Tables\Purchasing.Vendor  
-```  
+```
   
  Дополнительные сведения об иерархии модели объектов SMO см. в разделе [SMO Object Model Diagram](../relational-databases/server-management-objects-smo/smo-object-model-diagram.md).  
   
@@ -68,8 +68,8 @@ SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012\Tables\Purchasing.
   
 |Путь|Класс SMO|  
 |----------|---------------|  
-|SQLSERVER:\SQL\МойКомпьютер\DEFAULT\Databases|<xref:Microsoft.SqlServer.Management.Smo.DatabaseCollection>|  
-|SQLSERVER:\SQL\MyComputer\DEFAULT\Databases\AdventureWorks2012|<xref:Microsoft.SqlServer.Management.Smo.Database>|  
+|`SQLSERVER:\SQL\MyComputer\DEFAULT\Databases`|<xref:Microsoft.SqlServer.Management.Smo.DatabaseCollection>|  
+|`SQLSERVER:\SQL\MyComputer\DEFAULT\Databases\AdventureWorks2012`|<xref:Microsoft.SqlServer.Management.Smo.Database>|  
   
 ## <a name="sql-server-provider-tasks"></a>Задачи поставщика SQL Server  
   
@@ -78,7 +78,7 @@ SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012\Tables\Purchasing.
 |Описано, как использовать командлеты Windows PowerShell для перехода по узлам пути и получения в каждом узле списка объектов этого узла.|[Перемещение путей SQL Server PowerShell](navigate-sql-server-powershell-paths.md)|  
 |Описано, как использовать методы и свойства объектов SMO для получения отчета и выполнения работы над объектом, представленным узлом пути. Кроме того, описано, как получить список методов и свойств объектов SMO для этого узла.|[Работа с  путями SQL Server PowerShell](work-with-sql-server-powershell-paths.md)|  
 |Описывает, как преобразовать универсальное имя ресурса объекта SMO в путь поставщика SQL Server.|[Преобразование универсальных имен ресурса в пути поставщика SQL Server](https://docs.microsoft.com/powershell/module/sqlserver/Convert-UrnToPath)|  
-|Описано, как открывать соединения проверки подлинности SQL Server с использованием поставщика [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . По умолчанию поставщик использует соединения проверки подлинности Windows, установленные с помощью учетных данных той учетной записи Windows, которая используется в сеансе Windows PowerShell.|[Управление проверкой подлинности в PowerShell ядра СУБД ](manage-authentication-in-database-engine-powershell.md)|  
+|Описано, как открывать соединения проверки подлинности SQL Server с использованием поставщика [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . По умолчанию поставщик использует соединения проверки подлинности Windows, установленные с помощью учетных данных той учетной записи Windows, которая используется в сеансе Windows PowerShell.|[Управление проверкой подлинности в компонент Database Engine PowerShell](manage-authentication-in-database-engine-powershell.md)|  
   
 ## <a name="see-also"></a>См. также:  
  [SQL Server PowerShell](sql-server-powershell.md)  

@@ -2,8 +2,8 @@
 title: Краткое руководство. Подключение и запрос SQL Server
 titleSuffix: Azure Data Studio
 description: В этом кратком руководстве показано, как использовать Studio данных Azure для подключения к SQL Server и выполнить запрос
-ms.custom: seodec18
-ms.date: 09/24/2018
+ms.custom: seodec18, sqlfreshmay19
+ms.date: 05/14/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,12 +11,12 @@ ms.topic: quickstart
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 4dfe47c44a6bc5e706db3123d167802bfd74dddc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f62d315991910fa89513425e5e41700e4effd059
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63142430"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65620393"
 ---
 # <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>Краткое руководство. Подключение и запрос SQL Server с помощью [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 В этом кратком руководстве показано, как использовать [!INCLUDE[name-sos](../includes/name-sos-short.md)] для подключения к SQL Server, а затем с помощью инструкций Transact-SQL (T-SQL) для создания *TutorialDB* используется в [!INCLUDE[name-sos](../includes/name-sos-short.md)] учебники.
@@ -37,7 +37,7 @@ ms.locfileid: "63142430"
 
    
 1. Запуск **[!INCLUDE[name-sos](../includes/name-sos-short.md)]**.
-1. При первом запуске *[!INCLUDE[name-sos](../includes/name-sos-short.md)]* **подключения** откроется диалоговое окно. Если **подключения** диалоговое окно не открывается, щелкните **новое подключение** значок в **СЕРВЕРЫ** страницы:
+1. При первом запуске [!INCLUDE[name-sos](../includes/name-sos-short.md)] **приветствия** должна открыться страница. Если вы не видите **приветствия** выберите **помочь** > **приветствия**. Выберите **новое подключение** открыть **подключения** области:
    
    ![Значок "Создать подключение"](media/quickstart-sql-server/new-connection-icon.png)
 

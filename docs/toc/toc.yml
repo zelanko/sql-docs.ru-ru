@@ -491,7 +491,7 @@
                   href: ../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md
                 - name: PowerShell
                   href: ../database-engine/availability-groups/windows/create-an-availability-group-sql-server-powershell.md
-                - name: "Виртуальные машины Azure\_+"
+                - name: "Виртуальные машины Azure\_>"
                   href: /azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-availability-group-overview
         - name: Практическое руководство
           href: ../database-engine/availability-groups/windows/administration-of-an-availability-group-sql-server.md
@@ -1946,9 +1946,9 @@
               href: ../relational-databases/xml/use-the-value-and-nodes-methods-with-openxml.md
 - name: Разработка
   items:
-    - name: Программирование для взаимодействия
+    - name: Кодирование клиентской программы >>
+      displayName: 'ADO, ADO.NET, connect, C#, C++, Java, Node.js, ODBC, OLE DB, PHP, Python, Ruby'
       href: ../connect/index.md
-      displayName: 'Connectivity, Connect, Connection'
     - name: Приложения уровня данных
       href: ../relational-databases/data-tier-applications/data-tier-applications.md
       items:
@@ -4432,12 +4432,12 @@
               href: ../database-engine/configure-windows/server-properties-advanced-page.md
 - name: Перенос и загрузка данных
   items:
-    - name: "SQL Server Integration Services (SSIS)\_++"
+    - name: Службы SQL Server Integration Services (SSIS) >>
       href: ../integration-services/index.md
     - name: Программа массового копирования (bcp)
       href: ../tools/bcp-utility.md
-    - name: "Службы миграции Azure\_+"
-      displayName: 'DMS, Data Migration Service'
+    - name: "Службы миграции Azure\_>"
+      displayName: 'DMS, Data Migration Service, Azure Data Migration Service'
       href: /azure/dms/dms-overview
     - name: Службы Data Quality Services (DQS)
       items:
@@ -4965,7 +4965,7 @@
               items:
                 - name: 'Подписчики таблиц, оптимизированных для памяти'
                   href: ../relational-databases/replication/replication-to-memory-optimized-table-subscribers.md
-                - name: "Репликация в базу данных SQL\_+"
+                - name: "Репликация в базу данных SQL\_>"
                   href: /azure/sql-database/replication-to-sql-database
                 - name: Повторная публикация данных
                   href: ../relational-databases/replication/republish-data.md
@@ -5315,7 +5315,7 @@
                     - name: Подписки на публикацию слиянием
                       href: ../relational-databases/replication/subscription-validation-options-merge-subscriptions.md
                 - name: Повторная инициализация подписок
-                  itmes:
+                  items:
                     - name: Все подписки
                       href: ../relational-databases/replication/reinitialize-subscription-s-all-subscriptions.md
                     - name: Одна подписка
@@ -5593,13 +5593,13 @@
                   href: ../sql-server/stretch-database/extended-events-for-stretch-database.md
         - name: Ресурсы
           items:
-            - name: "Цены\_+"
+            - name: "Цены\_>"
               href: 'https://azure.microsoft.com/pricing/details/sql-server-stretch-database/'
-            - name: "Блог\_+"
+            - name: Блог >
               href: 'https://blogs.technet.microsoft.com/dataplatforminsider/tag/stretch-database/'
-            - name: "Обновления служб\_+"
+            - name: "Обновления служб\_>"
               href: 'https://azure.microsoft.com/updates/?product=sql-server-stretch-database'
-            - name: "Видео\_+"
+            - name: Видео >
               href: 'https://azure.microsoft.com/documentation/videos/index/?services=sql-server-stretch-database'
     - name: Database Experimentation Assistant
       href: ../dea/database-experimentation-assistant-overview.md
@@ -7310,15 +7310,15 @@
               href: ../relational-databases/polybase/polybase-type-mapping.md
         - name: Ресурсы
           items:
-            - name: "Stack\_Exchange\_DBA\_+"
+            - name: "Stack\_Exchange\_DBA\_>"
               href: 'https://dba.stackexchange.com/questions/tagged/sql-server'
-            - name: "Stack\_Overflow\_+"
+            - name: Stack Overflow >
               href: 'https://stackoverflow.com/questions/tagged/sql-server'
-            - name: "Форумы MSDN\_+"
+            - name: "Форумы MSDN\_>"
               href: 'https://social.msdn.microsoft.com/Forums/home?category=sqlserver'
-            - name: "Отправить отзыв\_+"
+            - name: "Отправить отзыв\_>"
               href: 'https://feedback.azure.com/forums/908035-sql-server'
-            - name: "Reddit\_+"
+            - name: "Reddit\_>"
               href: 'https://www.reddit.com/r/SQLServer'
     - name: Связанные серверы
       href: ../relational-databases/linked-servers/linked-servers-database-engine.md
@@ -7414,16 +7414,17 @@
           href: ../relational-databases/synonyms/create-synonyms.md
 - name: Отчеты и аналитика
   items:
-    - name: "Расширенная аналитика и машинное обучение\_++"
+    - name: "Расширенная аналитика и машинное обучение\_>"
       href: ../advanced-analytics/index.md
-    - name: "Система платформы аналитики\_++"
+    - name: "Система платформы аналитики\_>>"
       displayName: 'APS, PDW, Parallel Data Warehouse'
       href: ../analytics-platform-system/index.md
-    - name: "Службы SQL\_Server Analysis\_Services\_(SSAS)\_++"
+    - name: "Службы SQL\_Server Analysis\_Services\_(SSAS)\_>>"
       href: ../analysis-services/index.md
-    - name: "Службы SQL\_Server Reporting\_Services\_(SSRS)\_++"
+    - name: "Службы SQL\_Server Reporting\_Services\_(SSRS)\_>>"
       href: ../reporting-services/index.md
     - name: Службы Master Data Services
+      displayName: MDS
       href: ../master-data-services/master-data-services-overview-mds.md
       items:
         - name: Начало работы
@@ -7951,11 +7952,11 @@
           items:
             - name: "Соединитель SQL\_Server с шифрованием"
               href: ../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md
-            - name: "Создание собственных ключей\_+"
+            - name: "Создание собственных ключей\_>"
               href: /azure/sql-database/transparent-data-encryption-byok-azure-sql-configure
-            - name: "Смена ключей\_BYOK\_TDE\_+"
+            - name: "Смена ключей\_BYOK\_TDE\_>"
               href: /azure/sql-database/transparent-data-encryption-byok-azure-sql-key-rotation
-            - name: "Удаление предохранителя\_TDE\_+"
+            - name: "Удаление предохранителя\_TDE\_>"
               href: /azure/sql-database/transparent-data-encryption-byok-azure-sql-remove-tde-protector
             - name: "Расширенное управление ключами с Azure Key\_Vault"
               href: ../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md
@@ -8024,10 +8025,10 @@
               href: ../relational-databases/security/encryption/encryption-hierarchy.md
             - name: Прозрачное шифрование данных (TDE)
               href: ../relational-databases/security/encryption/transparent-data-encryption.md
-            - name: "Прозрачное шифрование для базы данных\_SQL\_Azure\_+"
+            - name: "Прозрачное шифрование для базы данных\_SQL\_Azure\_>"
               href: /azure/sql-database/transparent-data-encryption-azure-sql
               items:
-                - name: "Создание собственных ключей\_+"
+                - name: "Создание собственных ключей\_>"
                   href: /azure/sql-database/transparent-data-encryption-byok-azure-sql
             - name: Always Encrypted
               href: ../relational-databases/security/encryption/always-encrypted-database-engine.md
@@ -8153,13 +8154,13 @@
               href: ../azure-data-studio/extensibility-apis.md
         - name: Ресурсы
           items:
-            - name: "Репозиторий GitHub Azure\_Data\_Studio\_+"
+            - name: "Репозиторий GitHub Azure\_Data\_Studio\_>"
               href: 'https://www.github.com/Microsoft/azuredatastudio'
-            - name: "Блог по SQL\_Server\_+"
+            - name: "Блог по SQL\_Server\_>"
               href: 'https://blogs.technet.microsoft.com/dataplatforminsider/'
             - name: ВОПРОСЫ И ОТВЕТЫ
               href: ../azure-data-studio/faq.md
-            - name: "Сообщить о проблемах и внести предложения\_+"
+            - name: "Сообщить о проблемах и внести предложения\_>"
               href: 'https://github.com/microsoft/azuredatastudio/issues'
     - name: Программы командной строки
       href: ../tools/command-prompt-utility-reference-database-engine.md
@@ -9045,8 +9046,8 @@
                       href: ../ssms/agent/job-categories-manage-job-categories.md
                     - name: Создание категории заданий
                       href: ../ssms/agent/job-categories-properties-new-job-category.md
-                    - name: Свойства задания
-                      items: null
+                - name: Свойства задания
+                  items:
                     - name: 'Задания, содержащие ссылки на расписание'
                       href: ../ssms/agent/jobs-that-reference-a-schedule.md
                     - name: Страница "Предупреждения"
@@ -10040,7 +10041,7 @@
           href: ../linux/quickstart-install-connect-ubuntu.md
         - name: "Запуск и подключение\_— Docker"
           href: ../linux/quickstart-install-connect-docker.md
-        - name: "Подготовка виртуальной машины\_SQL в\_Azure\_+"
+        - name: "Подготовка виртуальной машины\_SQL в\_Azure\_>"
           href: /azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine
         - name: "Запуск и подключение\_— облако"
           href: ../linux/quickstart-install-connect-clouds.md
@@ -10254,63 +10255,63 @@
       items:
         - name: Диагностика
           href: ../linux/sql-server-linux-troubleshooting-guide.md
-        - name: Как лицензировать продукт
+        - name: Как лицензировать продукт >
           href: 'https://www.microsoft.com/sql-server/sql-server-2017-pricing'
-        - name: "Stack\_Exchange\_DBA\_+"
+        - name: "Stack\_Exchange\_DBA\_>"
           href: 'https://dba.stackexchange.com/questions/tagged/sql-server'
-        - name: "Stack\_Overflow\_+"
+        - name: Stack Overflow >
           href: 'https://stackoverflow.com/questions/tagged/sql-server'
-        - name: "Форумы MSDN\_+"
+        - name: "Форумы MSDN\_>"
           href: 'https://social.msdn.microsoft.com/Forums/home'
-        - name: "Отправить отзыв\_+"
+        - name: "Отправить отзыв\_>"
           href: 'https://feedback.azure.com/forums/908035-sql-server'
-        - name: "Reddit\_+"
+        - name: "Reddit\_>"
           href: 'https://www.reddit.com/r/SQLServer'
 - name: SQL в Azure
   items:
-    - name: "База данных SQL\_Azure\_+"
+    - name: База данных SQL Azure >
       href: /azure/sql-database/
-    - name: "Хранилище данных SQL\_Azure\_+"
+    - name: "Хранилище данных SQL\_Azure\_>"
       href: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is
-    - name: "SQL\_Server на виртуальной машине Azure\_+"
+    - name: "SQL\_Server на виртуальной машине Azure\_>"
       href: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
 - name: Ресурсы
   items:
     - name: Обучение
       items:
-        - name: "Microsoft Virtual\_Academy\_+"
+        - name: "Microsoft Virtual\_Academy\_>"
           href: 'https://mva.microsoft.com/product-training/sql-server'
-        - name: "SQL на Channel\_9 +"
+        - name: "SQL на Channel\_9 >"
           href: 'https://channel9.msdn.com/Search'
     - name: Блоги
       items:
-        - name: "SQL\_Server\_+"
+        - name: SQL Server >
           href: 'https://blogs.technet.microsoft.com/dataplatforminsider/'
-        - name: "Ядро СУБД SQL\_Server\_+"
+        - name: Ядро СУБД SQL Server >
           href: 'https://blogs.msdn.microsoft.com/sqlserverstorageengine/'
-        - name: "Безопасность SQL\_Server\_+"
+        - name: Безопасность SQL Server >
           href: 'https://blogs.msdn.microsoft.com/sqlsecurity/'
-        - name: "SQL\_Server Data\_Tools\_+"
+        - name: SQL Server Data Tools >
           href: 'https://blogs.msdn.microsoft.com/ssdt/'
     - name: Отзывы и справка
       items:
         - name: Получить справку
           href: ../sql-server/sql-server-get-help.md
-        - name: "Отправка отзыва о документации по SQL\_+"
+        - name: "Отправка отзыва о документации по SQL\_>"
           href: 'https://aka.ms/sqldocsfeedback'
-        - name: "Отправка отзыва об SQL\_Server (UserVoice)\_+"
+        - name: "Отправка отзыва об SQL\_Server (UserVoice)\_>"
           href: 'https://feedback.azure.com/forums/908035-sql-server'
-        - name: "Опрос, посвященный документации по SQL\_+"
+        - name: "Опрос, посвященный документации по SQL\_>"
           href: 'https://aka.ms/sqldocsurvey'
         - name: Примите участие в разработке документации по SQL!
           href: ../sql-server/sql-server-docs-contribute.md
-        - name: "Stack\_Exchange\_DBA\_+"
+        - name: "Stack\_Exchange\_DBA\_>"
           href: 'https://dba.stackexchange.com/questions/tagged/sql-server'
-        - name: "Stack\_Overflow\_+"
+        - name: Stack Overflow >
           href: 'https://stackoverflow.com/questions/tagged/sql-server'
-        - name: "Форумы MSDN\_+"
+        - name: "Форумы MSDN\_>"
           href: 'https://social.msdn.microsoft.com/Forums/home'
-        - name: "Reddit\_+"
+        - name: "Reddit\_>"
           href: 'https://www.reddit.com/r/SQLServer'
     - name: Участники
       items:
@@ -10328,14 +10329,14 @@
   items:
     - name: Файлы документации по SQL
       href: ../sql-server/applies-to-includes.md
-    - name: "Архивные материалы (SQL 2005–2012)\_+"
-      displayName: '2005, 2008, 2008 r2, 2012'
+    - name: "Архивные материалы (SQL 2005–2012)\_>"
+      displayName: '2005, 2008, 2008 r2, 2012, previous-versions'
       href: 'https://docs.microsoft.com/previous-versions/sql/'
     - name: Примеры баз данных
       items:
         - name: Обзор примеров
           href: ../samples/sql-samples-where-are.md
-        - name: Все примеры с Github +
+        - name: Все примеры с Github >
           href: 'https://github.com/Microsoft/sql-server-samples/tree/master/samples'
         - name: AdventureWorks
           items:
@@ -17118,6 +17119,8 @@
                   href: ../t-sql/statements/set-quoted-identifier-transact-sql.md
                 - name: REMOTE_PROC_TRANSACTIONS
                   href: ../t-sql/statements/set-remote-proc-transactions-transact-sql.md
+                - name: Кэширование результирующего набора
+                  href: ../t-sql/statements/set-result-set-caching-transact-sql.md
                 - name: ROWCOUNT
                   href: ../t-sql/statements/set-rowcount-transact-sql.md
                 - name: SHOWPLAN_ALL

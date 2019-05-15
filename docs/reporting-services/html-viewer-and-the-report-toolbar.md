@@ -2,21 +2,21 @@
 title: Средство просмотра HTML-страниц и панель инструментов отчета | Документы Майкрософт
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 helpviewer_keywords:
 - HTML Viewer [Reporting Services]
 - report toolbar [Reporting Services]
 ms.assetid: cd86b319-babd-45af-a6a4-f659fdcc40c3
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 27c419320b1116194044cd6228246eef0c5d9fbb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 948abaaae630de34f4340370fd2f6f0f4e0a1d34
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668342"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503067"
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>Средство просмотра HTML-страниц и панель инструментов отчета
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] есть средство просмотра HTML-страниц, которое предназначено для отображения отчетов по запросу в том виде, в каком они запрашиваются с сервера отчетов. Средство просмотра HTML-страниц обеспечивает платформу для просмотра отчетов в формате HTML. Она включает в себя панель инструментов отчета, раздел параметров, раздел учетных данных и схему документа. Панель инструментов отчета в средстве просмотра HTML-страниц предлагает функции, которые можно использовать для работы с отчетом, включая параметры экспорта, поэтому можно просмотреть отчет в форматах, отличных от HTML. Раздел параметров и схема документа появляются только тогда, когда открываются отчеты, настроенные для использования параметров и управления схемой документа.  

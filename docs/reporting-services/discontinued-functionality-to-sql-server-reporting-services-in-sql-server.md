@@ -1,21 +1,21 @@
 ---
 title: Неподдерживаемая функциональность
-author: markingmyname
-ms.author: maghan
-manager: kfile
-ms.reviewer: ''
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.reviewer: ''
 ms.custom: seodec18
-ms.date: 12/14/2018
-ms.openlocfilehash: a40674afa51e52d3e84731711fc9edc013f69a46
-ms.sourcegitcommit: 2f5773f4bc02bfff4f2924226ac5651eb0c00924
-ms.translationtype: HT
+ms.date: 04/26/2019
+ms.openlocfilehash: 4ccadf456472b98a1ffc37f1d2988a161f86e375
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53552936"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503980"
 ---
 # <a name="discontinued-functionality-in-sql-server-reporting-services-ssrs"></a>Неподдерживаемая функциональность в службах SQL Server Reporting Services (SSRS)
 
@@ -29,14 +29,12 @@ ms.locfileid: "53552936"
 
 |Компонент|Замена или решение|
 |-|-|
-|Отправка моделей отчетов через веб-портал|Это все еще можно сделать с помощью SOAP API.|
-|Управление моделями отчетов через веб-портал|Это все еще можно сделать с помощью SOAP API.|
 |Настройка таблицы стилей для средства просмотра HTML-страниц и диспетчера отчетов|Можно выполнить [брендовое оформление веб-портала](branding-the-web-portal.md).|
 
 ## <a name="next-steps"></a>Следующие шаги
 
-[Новые возможности служб Reporting Services](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
-[Изменения в работе служб SQL Server Reporting Services в SQL Server 2016](../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)  
-[Нерекомендуемые функции SQL Server Reporting Services в SQL Server 2016](../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)  
+* [Новые возможности служб Reporting Services](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
+* [Изменения в работе служб SQL Server Reporting Services в SQL Server 2016](../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)  
+* [Нерекомендуемые функции SQL Server Reporting Services в SQL Server 2016](../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)  
 
 Остались вопросы? [Посетите форум служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

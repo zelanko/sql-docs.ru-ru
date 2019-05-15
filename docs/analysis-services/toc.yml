@@ -1,4 +1,4 @@
-- name: "SQL Server\_++"
+- name: SQL Server >>
   href: ../sql-server/sql-server-technical-documentation.md?toc=../toc/toc.json
 - name: "Сведения о SQL\_Server Analysis\_Services"
   href: ../analysis-services/analysis-services.md
@@ -823,13 +823,13 @@
               href: ../analysis-services/multidimensional-models/create-a-report-data-source.md
             - name: Создание отчета Power View
               href: ../analysis-services/multidimensional-models/create-a-power-view-report-with-a-multidimensional-data-source.md
-            - name: "Функциональные возможности сервера ADOMD.NET\_+"
+            - name: Функциональные возможности сервера ADOMD.NET >
               href: /bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-functionality
-            - name: "Архитектура объектов сервера ADOMD.NET\_+"
+            - name: Архитектура серверных объектов ADOMD.NET >
               href: /bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-object-architecture
-            - name: "Программирование сервера ADOMD.NET\_+"
+            - name: Программирование сервера ADOMD.NET >
               href: /bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-programming
-            - name: "Определяемые пользователем функции и хранимые процедуры\_+"
+            - name: Определяемые пользователем функции и хранимые процедуры >
               href: /bi-reference/adomd/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures
         - name: Управление сборками
           href: ../analysis-services/multidimensional-models/multidimensional-model-assemblies-management.md
@@ -1378,7 +1378,7 @@
               href: ../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md
             - name: Счетчики производительности
               href: ../analysis-services/instances/performance-counters-ssas.md
-            - name: "События трассировки\_+"
+            - name: "События трассировки\_>"
               href: /bi-reference/trace-events/analysis-services-trace-events
             - name: Внесение операций в журнал
               href: ../analysis-services/instances/log-operations-in-analysis-services.md
@@ -1426,11 +1426,11 @@
           items:
             - name: Программирование табличных моделей с уровнем совместимости 1200 и выше
               href: ../analysis-services/tabular-model-programming-compatibility-level-1200/tabular-model-programming-for-compatibility-level-1200.md
-            - name: "Язык сценариев табличной модели\_(TMSL)\_+"
+            - name: "Язык сценариев табличной модели\_(TMSL)\_>"
               href: /bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference
-            - name: "Табличная модель объектов (TOM)\_+"
+            - name: "Табличная модель объектов (TOM)\_>"
               href: /bi-reference/tom/introduction-to-the-tabular-object-model-tom-in-analysis-services-amo
-            - name: "Объекты AMO\_+"
+            - name: "Объекты AMO\_>"
               href: /bi-reference/amo/amo-classes-introduction
         - name: "Табличные\_— 1103 и ниже"
           items:
@@ -1443,7 +1443,7 @@
                   href: ../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdlbi-attributes-for-report-design.md
                 - name: Основные понятия CSDLBI
                   href: ../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdlbi-concepts.md
-                - name: "Справочник по языку CSDL\_+"
+                - name: "Справочник по языку CSDL\_>"
                   href: /bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi
             - name: Представление
               items:
@@ -1477,13 +1477,13 @@
       items:
         - name: Программирование многомерной модели
           href: ../analysis-services/multidimensional-models/multidimensional-model-programming.md
-        - name: "Объекты AMO\_+"
+        - name: "Объекты AMO\_>"
           href: /bi-reference/amo/developing-with-analysis-management-objects-amo
         - name: Язык ASSL
           items:
             - name: Разработка на языке ASSL (язык ASSL)
               href: ../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md
-            - name: "Справочник по языку скриптов Analysis\_Services (ASSL для\_XMLA)"
+            - name: "Справочник по языку скриптов Analysis\_Services (ASSL для\_XMLA) >"
               href: /bi-reference/assl/analysis-services-scripting-language-assl-for-xmla
             - name: Объекты ASSL и характеристики объектов
               href: ../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md
@@ -1523,11 +1523,11 @@
               href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/updating-cells-xmla.md
             - name: Обозначения в XML языка ASSL
               href: ../analysis-services/multidimensional-models/scripting-language-assl/assl-xml-conventions.md
-        - name: "Справочник по XML\_для аналитики\_(XMLA) +"
+        - name: "Справочник по XML\_для аналитики\_(XMLA) >"
           href: /bi-reference/xmla/xml-for-analysis-xmla-reference
         - name: ADOMD.NET
           items:
-            - name: Справочник по ADOMD.NET +
+            - name: Справочник по ADOMD.NET >
               href: /bi-reference/adomd/developing-with-adomd-net
             - name: Программирование сервера ADOMD.NET
               href: ../analysis-services/multidimensional-models-adomd-net-server/adomd-net-server-programming.md
@@ -1754,11 +1754,11 @@
       items:
         - name: Программирование интеллектуального анализа данных
           href: ../analysis-services/data-mining/data-mining-programming.md
-        - name: "Объекты AMO\_+"
+        - name: "Объекты AMO\_>"
           href: /bi-reference/amo/amo-classes-introduction
-        - name: "ADOMD.NET\_+"
+        - name: ADOMD.NET >
           href: /bi-reference/adomd/developing-with-adomd-net
-        - name: "XML\_для аналитики\_(XMLA)\_+"
+        - name: "XML\_для аналитики\_(XMLA)\_>"
           href: /bi-reference/xmla/xml-for-analysis-xmla-reference
         - name: OLE DB для интеллектуального анализа данных
           href: ../analysis-services/data-mining/data-mining-programming-ole-db.md
@@ -1772,27 +1772,27 @@
       href: ../analysis-services/powershell/analysis-services-powershell-reference.md
     - name: PowerShell для Power Pivot для SharePoint
       href: ../analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint.md
-    - name: выражения анализа данных (DAX)
+    - name: Выражения анализа данных (DAX) >
       href: /dax/data-analysis-expressions-dax-reference
-    - name: "Power Query\_M"
+    - name: "Power Query\_M\_>"
       href: /powerquery-m/power-query-m-reference
-    - name: "Язык сценариев табличной модели\_(TMSL)"
+    - name: "Язык сценариев табличной модели\_(TMSL)\_>"
       href: /bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference
-    - name: Табличная модель объектов (TOM)
+    - name: "Табличная модель объектов (TOM)\_>"
       href: /bi-reference/tom/introduction-to-the-tabular-object-model-tom-in-analysis-services-amo
-    - name: Объекты AMO
+    - name: "Объекты AMO\_>"
       href: /bi-reference/amo/developing-with-analysis-management-objects-amo
-    - name: "Язык\_CSDL"
+    - name: "Язык\_CSDL\_>"
       href: /bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi
-    - name: XML для аналитики (XMLA)
+    - name: "XML\_для аналитики\_(XMLA)\_>"
       href: /bi-reference/xmla/xml-for-analysis-xmla-reference
-    - name: ADOMD.NET
+    - name: ADOMD.NET >
       href: /bi-reference/adomd/developing-with-adomd-net
-    - name: "Язык сценариев Analysis\_Services (ASSL для\_XMLA)"
+    - name: "Язык сценариев Analysis\_Services (ASSL для\_XMLA)\_>"
       href: /bi-reference/assl/analysis-services-scripting-language-assl-for-xmla
-    - name: Наборы строк схемы
+    - name: Наборы строк схемы >
       href: /bi-reference/schema-rowsets/analysis-services-schema-rowsets
-    - name: События трассировки
+    - name: "События трассировки\_>"
       href: /bi-reference/trace-events/analysis-services-trace-events
     - name: Справочник по расширениям интеллектуального анализа данных
       href: ../dmx/data-mining-extensions-dmx-reference.md
@@ -2162,7 +2162,7 @@
                       href: ../mdx/comment-mdx-double-slash.md
                     - name: ', перечислены ниже. (Range)'
                       href: ../mdx/range-mdx.md
-                    - name: + (сложение)"
+                    - name: + (сложение)
                       href: ../mdx/add-mdx.md
                     - name: + (положительное значение)
                       href: ../mdx/positive-mdx.md

@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b656e0119e99f37c62a19df2ec2b1f053f414323
-ms.sourcegitcommit: d92ad400799d8b74d5c601170167b86221f68afb
-ms.translationtype: HT
+ms.openlocfilehash: 26be52ca8c8b1b004038923a9a7fe835eba52216
+ms.sourcegitcommit: ccea98fa0768d01076cb6ffef0b4bdb221b2f9d5
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58080374"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65560134"
 ---
 # <a name="sysdatabases-transact-sql"></a>sys.databases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -117,7 +117,7 @@ ms.locfileid: "58080374"
 |**is_temporal_retention_enabled**|**bit**|Указывает, включена ли задача очистки времени хранения политики.<br /> **Область применения**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**catalog_collation_type**|**int**|Параметр сортировки каталога:<br />0 = DATABASE_DEFAULT<br />2 = SQL_Latin_1_General_CP1_CI_AS<br /> **Область применения**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**catalog_collation_type_desc**|**nvarchar(60)**|Параметр сортировки каталога:<br />DATABASE_DEFAULT<br />SQL_Latin_1_General_CP1_CI_AS<br /> **Область применения**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
-|**Is_result_set_caching**|**int**|Зарезервировано для внутреннего использования</br>**Область применения**: Хранилище данных SQL Azure
+|**is_result_set_caching_on**|**int**|1 = is_result_set_caching_on is on</br>0 = отключено is_result_set_caching_on</br>**Область применения**: Gen2 хранилище данных Azure SQL
   
 ## <a name="permissions"></a>Разрешения  
  Если вызывающий объект `sys.databases` не является владельцем базы данных и база данных не `master` или `tempdb`, минимально необходимыми разрешениями для просмотра соответствующей строки являются `ALTER ANY DATABASE` или `VIEW ANY DATABASE` разрешение уровня сервера или `CREATE DATABASE` разрешение в `master` базы данных. Всегда можно просматривать базы данных, к которой подключен участник в `sys.databases`.  
