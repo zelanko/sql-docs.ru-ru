@@ -223,7 +223,6 @@
               href: ../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md
             - name: хранилище BLOB-объектов Azure.
               href: ../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md
-            - name: Взаимодействие и совместная работа
         - name: Практическое руководство
           items:
             - name: Резервное копирование в Azure
@@ -353,6 +352,9 @@
                 - name: Удаление уничтоженных файловых групп
                   href: ../relational-databases/backup-restore/remove-defunct-filegroups-sql-server.md
                 - name: Управление таблицей suspect_pages
+                  href: ../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md
+                - name: Взаимодействие и совместная работа
+                  href: ../relational-databases/backup-restore/backup-and-restore-interoperability-and-coexistence-sql-server.md
         - name: Основные понятия
           items:
             - name: Azure
