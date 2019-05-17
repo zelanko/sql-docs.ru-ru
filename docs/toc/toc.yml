@@ -8692,7 +8692,7 @@
               href: ../ssms/install-other-languages.md
             - name: Политика поддержки SSMS
               href: ../ssms/support-policy.md
-        - name: Руководства. SQL Server Management Studio
+        - name: SQL Server Management Studio
           href: ../ssms/tutorials/tutorial-sql-server-management-studio.md
           items:
             - name: "Подключение и отправка запроса к SQL\_Server с помощью SQL Server Management Studio"
@@ -9274,6 +9274,10 @@
                           items:
                             - name: 'Объекты, поддерживаемые мастером создания скриптов'
                               href: ../ssms/scripting/objects-supported-by-the-generate-scripts-wizard.md
+        - name: Диагностика
+          items:
+            - name: Создать полный дамп памяти
+              href: ../ssms/troubleshoot/get-full-memory-dump.md
         - name: Ссылки
           items:
             - name: Среда SSMS
