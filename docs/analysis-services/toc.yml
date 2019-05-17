@@ -33,7 +33,7 @@
   items:
     - name: Общие сведения о службах Analysis Services
       href: ../analysis-services/analysis-services-tutorials-ssas.md
-    - name: Табличное моделирование
+    - name: Табличные модели
       items:
         - name: Руководство по продажам в Интернете (1400)
           items:
@@ -105,14 +105,15 @@
               href: ../analysis-services/tutorial-tabular-1200/supplemental-lesson-implement-dynamic-security-by-using-row-filters.md
             - name: "Дополнительный урок. Настройка свойств отчетов Power\_View"
               href: ../analysis-services/tutorial-tabular-1200/supplemental-lesson-configure-reporting-properties-for-power-view-reports.md
-    - name: Многомерное моделирование
-      href: ../analysis-services/multidimensional-tutorial/multidimensional-modeling-adventure-works-tutorial.md
+    - name: Многомерные модели
       items:
+        - name: Руководство по Adventure Works
+          href: ../analysis-services/multidimensional-tutorial/multidimensional-modeling-adventure-works-tutorial.md
         - name: Учебный сценарий
           href: ../analysis-services/multidimensional-tutorial/analysis-services-tutorial-scenario.md
         - name: "Установка образцов проектов и данных для учебника по многомерному моделированию Analysis\_Services"
           href: ../analysis-services/multidimensional-tutorial/install-sample-data-and-projects.md
-        - name: "Урок 1. Определение представления источников данных в проекте Analysis\_Services"
+        - name: "Урок\_1. Определение представления источников данных в проекте Analysis\_Services"
           href: ../analysis-services/multidimensional-tutorial/lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md
           items:
             - name: "Урок\_1–1. Создание проекта Analysis\_Services"
@@ -123,7 +124,7 @@
               href: ../analysis-services/multidimensional-tutorial/lesson-1-3-defining-a-data-source-view.md
             - name: "Урок\_1–4. Изменение имен таблиц по умолчанию"
               href: ../analysis-services/multidimensional-tutorial/lesson-1-4-modifying-default-table-names.md
-        - name: Урок 2. Определение и развертывание куба
+        - name: "Урок\_2. Определение и развертывание куба"
           href: ../analysis-services/multidimensional-tutorial/lesson-2-defining-and-deploying-a-cube.md
           items:
             - name: "Урок\_2–1. Определение измерения"
@@ -138,7 +139,7 @@
               href: ../analysis-services/multidimensional-tutorial/lesson-2-5-deploying-an-analysis-services-project.md
             - name: "Урок\_2–6. Просмотр данных куба"
               href: ../analysis-services/multidimensional-tutorial/lesson-2-6-browsing-the-cube.md
-        - name: 'Урок 3. Изменение мер, атрибутов и иерархий'
+        - name: "Урок\_3. Изменение мер, атрибутов и иерархий"
           href: ../analysis-services/multidimensional-tutorial/lesson-3-modifying-measures-attributes-and-hierarchies.md
           items:
             - name: "Урок\_3–1. Изменение мер"
@@ -151,7 +152,7 @@
               href: ../analysis-services/multidimensional-tutorial/lesson-3-4-modifying-the-date-dimension.md
             - name: "Урок\_3–5. Просмотр данных развернутого куба"
               href: ../analysis-services/multidimensional-tutorial/lesson-3-5-browsing-the-deployed-cube.md
-        - name: 'Занятие 4: Определение расширенных свойств атрибутов и измерений'
+        - name: "Урок\_4. Определение расширенных свойств атрибутов и измерений"
           href: ../analysis-services/multidimensional-tutorial/lesson-4-defining-advanced-attribute-and-dimension-properties.md
           items:
             - name: "Урок\_4–1. Использование измененной версии учебного проекта Analysis\_Services"
@@ -168,7 +169,7 @@
               href: ../analysis-services/multidimensional-tutorial/lesson-4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md
             - name: "Урок\_4–7. Определение свойств неизвестного элемента и обработки значений\_NULL"
               href: ../analysis-services/multidimensional-tutorial/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md
-        - name: "Занятие\_5.: Определение связей между измерениями и группами мер"
+        - name: "Урок\_5. Определение связей между измерениями и группами мер"
           href: ../analysis-services/multidimensional-tutorial/lesson-5-defining-relationships-between-dimensions-and-measure-groups.md
           items:
             - name: "Урок\_5–1. Определение отношения ссылки"
@@ -179,14 +180,14 @@
               href: ../analysis-services/multidimensional-tutorial/lesson-5-3-defining-a-many-to-many-relationship.md
             - name: "Урок\_5–4. Определение степени детализации измерения в группе мер"
               href: ../analysis-services/multidimensional-tutorial/lesson-5-4-defining-dimension-granularity-within-a-measure-group.md
-        - name: 'Занятие 6: Определение вычислений'
+        - name: "Урок\_6. Определение вычислений"
           href: ../analysis-services/multidimensional-tutorial/lesson-6-defining-calculations.md
           items:
             - name: "Урок\_6–1. Определение вычисляемых элементов"
               href: ../analysis-services/multidimensional-tutorial/lesson-6-1-defining-calculated-members.md
             - name: "Урок\_6–2. Определение именованных наборов"
               href: ../analysis-services/multidimensional-tutorial/lesson-6-2-defining-named-sets.md
-        - name: 'Занятие 7: Определение ключевых показателей эффективности'
+        - name: "Урок\_7. Определение ключевых показателей эффективности\_(КПЭ)"
           href: ../analysis-services/multidimensional-tutorial/lesson-7-defining-key-performance-indicators-kpis.md
           items:
             - name: "Урок\_7–1. Определение и просмотр\_КПЭ"
@@ -219,7 +220,7 @@
         - name: Установка служб Analysis Services в режиме Power Pivot
           href: ../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md
           items:
-            - name: Проверка установки PowerPivot для SharePoint
+            - name: Проверка установки Power Pivot для SharePoint
               href: ../analysis-services/instances/install-windows/verify-a-power-pivot-for-sharepoint-installation.md
             - name: Пример конфигурации PowerPivot для SharePoint 2016 с минимальными правами
               href: ../analysis-services/instances/install-windows/power-pivot-minimum-privilege-example-sharepoint-2016.md
