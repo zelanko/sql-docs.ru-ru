@@ -38,7 +38,7 @@ ms.locfileid: "63295422"
   
 -   Для работы служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме интеграции SharePoint требуется сервер SharePoint. Дополнительные сведения о требованиях и конфигурациях SharePoint см. в следующих разделах:  
   
-    -   [Требования к оборудованию и программному обеспечению (SharePoint 2013)](https://go.microsoft.com/fwlink/p/?LinkId=256365) ()https://go.microsoft.com/fwlink/p/?LinkId=256365)  
+    -   [Требования к оборудованию и программному обеспечению (SharePoint 2013)](https://go.microsoft.com/fwlink/p/?LinkId=256365) (https://go.microsoft.com/fwlink/p/?LinkId=256365)  
   
     -   [Управление емкостью и изменение размеров в SharePoint Server 2013](https://technet.microsoft.com/library/cc261700.aspx)  
   
