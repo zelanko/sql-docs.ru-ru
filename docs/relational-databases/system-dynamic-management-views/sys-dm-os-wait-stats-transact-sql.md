@@ -1,7 +1,7 @@
 ---
 title: sys.dm_os_wait_stats (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
-ms.date: 12/04/2018
+ms.date: 05/16/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d271d8e7a0601353439df8a5848978f2a89af3e2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ed6edb74cea3c96ae8791c28b23510222aa69ecc
+ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62690788"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65805172"
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -778,6 +778,10 @@ GO
 |QUERY_TASK_ENQUEUE_MUTEX |TBD <br /> **Применимо к**: с [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |QUERY_TRACEOUT |Указано только в ознакомительных целях. Не поддерживается. Совместимость с будущими версиями не гарантируется.| 
 |RBIO_WAIT_VLF |TBD <br /> **Применимо к**: с [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
+|RBIO_RG_STORAGE |Происходит, когда из-за отложенной журналов потребления на странице серверов регулируется вычислительного узла Гипермасштабируемого базы данных. <br /> **Область применения**: Гипермасштабируемый базы данных Azure SQL.|
+|RBIO_RG_DESTAGE |Происходит, когда регулируется вычислительного узла Гипермасштабируемого базы данных из-за отложенной журналов потребления за хранилища журналов долгосрочной перспективе. <br /> **Область применения**: Гипермасштабируемый базы данных Azure SQL.|
+|RBIO_RG_REPLICA |Происходит, когда Гипермасштабируемую регулируется вычислительный узел базы данных, из-за использования журнала задержан к узлам для чтения вторичную реплику. <br /> **Область применения**: Гипермасштабируемый базы данных Azure SQL.|
+|RBIO_RG_LOCALDESTAGE |Происходит, когда регулируется вычислительного узла Гипермасштабируемого базы данных из-за отложенной журналов потребления службой журнала. <br /> **Область применения**: Гипермасштабируемый базы данных Azure SQL.|
 |RECOVER_CHANGEDB |Имеет место в процессе синхронизации состояния базы данных в режиме «горячего» резервирования.| 
 |RECOVERY_MGR_LOCK |TBD <br /> **Применимо к**: с [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |REDO_THREAD_PENDING_WORK |TBD <br /> **Применимо к**: с [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
