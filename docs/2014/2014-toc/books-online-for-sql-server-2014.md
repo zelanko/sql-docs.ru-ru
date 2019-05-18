@@ -19,17 +19,19 @@ ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 991cbedc74567688aaae8e196ef4fb3356406517
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f8c8ac11c1dada747783a1edaac3d3b1c8b5c795
+ms.sourcegitcommit: 622bcdaa0b21258248b259f003f38e9d6f73e05a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62470470"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65836208"
 ---
 # <a name="books-online-for-sql-server-2014"></a>Электронная документация по SQL Server 2014
 
   Добро пожаловать на страницу электронной документации [!INCLUDE[msCoName](../includes/msconame-md.md)]® для [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]®. В электронной документации приведено описание задач, а также справочная документация, где описано управление данными и работа бизнес-аналитики с помощью [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
-  
+
+SQL Server 2016 и более поздних версиях описаны [здесь](https://docs.microsoft.com/sql/sql-server/index). SQL Server 2012 и в более старых версиях описаны [здесь](#previous-versions-gm2014). <!-- ?view= defaults to the latest GA version, to resolve the https '/index' address ambiguity. So '2014' will always be too old to be the default. -->
+
  **Попробуйте продукт:**  
  ![Маленький значок виртуальной машины Azure](../sql-server/media/what-s-new-in-sql-server-2016/azure-virtual-machine-small.png) Есть ли учетная запись Azure?  Затем перейдите **[здесь](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2016RTMEnterpriseWindowsServer2012R2)** запустить виртуальную машину с SQL Server 2014 с пакетом обновления 1 (SP1) уже установлен. Дополнительные сведения о SQL Server 2014 (SP1), см. в разделе [сведения о выпуске пакета обновления 1 для SQL Server 2014](https://support.microsoft.com/en-us/kb/3058865). 
   
@@ -64,7 +66,11 @@ ms.locfileid: "62470470"
 -   [Центр разработчиков для платформы данных](https://go.microsoft.com/fwlink/?LinkId=17386)  
   
 -   [Центр разработчиков XML](https://go.microsoft.com/fwlink/?LinkId=42458)  
-  
+
+## <a name="previous-versions-gm2014"></a> SQL Server 2005, 2008, 2012, 2016 +
+
+[!INCLUDE[???](../includes/paragraph-content/previous-versions-archive-documentation-sql-server.md)]
+
 ## <a name="see-also"></a>См. также  
 
  [Справка диспетчера конфигурации SQL Server](../tools/configuration-manager/sql-server-configuration-manager-help.md)  
