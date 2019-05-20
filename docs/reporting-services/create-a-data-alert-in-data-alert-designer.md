@@ -2,19 +2,19 @@
 title: Создание предупреждения данных в конструкторе предупреждений | Документы Майкрософт
 ms.date: 08/17/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2c588a25b95e5625fa3ecd6d6b2765194a41be5a
-ms.sourcegitcommit: 019b6f355a69aa409e6601de8977a8c307f793cb
-ms.translationtype: HT
+ms.openlocfilehash: 5be6c645caadfc2b619e3fbd6d8f6b2a78ad2ff0
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56331514"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65571579"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>Создание предупреждения данных в конструкторе предупреждений данных
 
@@ -69,7 +69,7 @@ ms.locfileid: "56331514"
   
      В зависимости от типа данных выбранного столбца отображаются различные операторы сравнения. Если столбец имеет тип данных date, рядом с пороговым значением для данного правила отображается значок календаря. Можно задать дату путем выбора ее в календаре или ввода значения даты.  
   
-     Конструктор предупреждений об изменении данных предусматривает два режима сравнения: **Режим ввода значения** и **Режим выбора поля**. По умолчанию используется **режим ввода значений**. Предложения OR можно добавлять только в **режиме ввода значений** при использовании сравнения **is** .  
+     В конструкторе предупреждений об изменении данных доступны два режима сравнения: **режим ввода значений** и **режим выбора поля**. По умолчанию используется **режим ввода значений**. Предложения OR можно добавлять только в **режиме ввода значений** при использовании сравнения **is** .  
   
 9. Чтобы добавить предложение OR, щелкните стрелку вниз и выберите **режим ввода значений**.  
   

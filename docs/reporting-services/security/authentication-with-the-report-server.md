@@ -2,7 +2,7 @@
 title: Проверка подлинности с использованием сервера отчетов | Документы Майкрософт
 ms.date: 05/30/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - authentication [Reporting Services]
 - Forms authentication
 ms.assetid: 753c2542-0e97-4d8f-a5dd-4b07a5cd10ab
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 6b559815c7e1bb74dcf5c8b3b6dceb4e14265d11
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: d3246b38461c1445f3335f42944480732ab583a0
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030223"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65570897"
 ---
 # <a name="authentication-with-the-report-server"></a>Проверка подлинности с использованием сервера отчетов
 
@@ -73,7 +73,7 @@ ms.locfileid: "50030223"
 |Задайте встроенную проверку подлинности Windows.|[Настройка аутентификации Windows на сервере отчетов](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)|  
 |Задайте обычную проверку подлинности.|[Настройка обычной проверки подлинности на сервере отчетов](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md)|  
 |Задайте проверку подлинности с помощью форм или другой нестандартный тип проверки.|[Настройка нестандартной аутентификации или аутентификации с помощью форм на сервере отчетов](../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)|  
-|Включите [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] для обработки сценария пользовательской проверки подлинности.|[Настройка передачи файлов cookie для пользовательской аутентификации на веб-портале](configure-the-web-portal-to-pass-custom-authentication-cookies.md)|  
+|Включите [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] для обработки сценария пользовательской проверки подлинности.|[Настройка передачи файлов cookie для пользовательской проверки подлинности на веб-портале](configure-the-web-portal-to-pass-custom-authentication-cookies.md)|  
 
 ## <a name="next-steps"></a>Следующие шаги
 

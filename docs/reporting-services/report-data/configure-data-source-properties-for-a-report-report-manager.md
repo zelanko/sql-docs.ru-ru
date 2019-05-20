@@ -2,20 +2,20 @@
 title: Настройка свойств источника данных для отчета с разбивкой на страницы — службы SSRS | Документы Майкрософт
 ms.date: 05/24/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 helpviewer_keywords:
 - data sources [Reporting Services], embedded
 ms.assetid: 27af5195-c845-40e0-9a9c-efe569424022
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 7e50917bd524e8ce8c68bc904e100b673419d684
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 5e134c81fd697d4aa6fc7e5b620c1a71ff462b73
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843942"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65573197"
 ---
 # <a name="configure-data-source-properties-for-a-paginated-report"></a>Настройка свойств источника данных для отчета с разбивкой на страницы
   При запуске отчета с разбивкой на страницы сервер отчетов получает сведения о свойствах для определения способа подключения к источнику данных. На странице свойств «Источник данных» опубликованного отчета указываются тип источника данных, строка соединения и сведения об учетных данных. Можно установить эти свойства, чтобы они отличались от исходных значений, заданных при создании отчета.  

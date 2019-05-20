@@ -2,18 +2,18 @@
 title: Решение проблем с ограничениями для строк в Excel 2003 | Документы Майкрософт
 ms.date: 03/16/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: a4c8700b-bef5-4440-a99c-bba5dcc46bfd
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 3ba814e194af423d18ecdd5ab9e94bf0fa6d3c2c
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 3898e4202d958c1d20d5436a143e80bb45c7490f
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287042"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65577784"
 ---
 # <a name="work-around-the-excel-2003-row-limitation"></a>Work Around the Excel 2003 Row Limitation
   В этом разделе объясняется, как обойти ограничения строк Excel 2003 при экспорте отчетов с разбиением на страницы в Excel. Это решение подходит для отчета, который содержит только таблицу.  

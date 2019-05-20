@@ -2,20 +2,20 @@
 title: Службы Reporting Services в среде SQL Server Data Tools (SSDT) | Документы Майкрософт
 ms.date: 05/30/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 helpviewer_keywords:
 - Business Intelligence Development Studio, Reporting Services in
 ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b57f42345b487867b5362e24963790e5f525f973
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: f9e9884a8875d63ba9defcee5fa20dc121d595ca
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292332"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581349"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>Службы Reporting Services в SQL Server Data Tools (SSDT)
 
@@ -43,7 +43,7 @@ ms.locfileid: "56292332"
   
   
 ##  <a name="bkmk_ReportDesignerWindowsandPanes"></a> Окна и панели конструктора отчетов  
- Конструктор отчетов поддерживает два представления: **Конструктор**, в котором задаются данные и макет отчета, и **Просмотр**, позволяющее просмотреть подготовленный отчет. В каждом представлении можно вывести несколько окон для удобства конструирования или просмотра отчета.  
+ Конструктор отчетов поддерживает два представления: **Конструктор**, в котором задаются данные и макет отчета, и **Предварительный просмотр**, позволяющее просмотреть подготовленный отчет. В каждом представлении можно вывести несколько окон для удобства конструирования или просмотра отчета.  
   
 ###  <a name="bkmk_ReportDataPane"></a> Область данных отчета  
  В области данных отчета отображаются встроенные поля, источники данных, наборы данных, коллекции полей, параметры отчетов и изображения.  
@@ -175,7 +175,7 @@ ms.locfileid: "56292332"
   
 -   **Свойства отчета** . Открытие диалогового окна **Свойства отчета** . В этом диалоговом окне задаются общие свойства отчета, например имя автора, размер шага сетки, а также такие свойства макета отчета, как число столбцов и размеры страниц. Можно также указать пользовательский код, ссылки на сборки и классы, имена выходных элементов, преобразований и схем данных.  
   
--   **Вид**. Переключение между двумя вкладками конструктора отчетов: режимом конструктора и предварительного просмотра.  
+-   **Вид** . Переключение между двумя вкладками конструктора отчетов: "Конструктор" и "Предварительный просмотр"  
   
 -   **Верхний колонтитул страницы** . Добавление или удаление верхнего колонтитула страницы. При удалении верхнего колонтитула страницы удаляются также все его элементы.  
   

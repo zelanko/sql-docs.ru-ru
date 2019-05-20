@@ -2,21 +2,21 @@
 title: Настройка доступной памяти для приложений сервера отчетов | Документы Майкрософт
 ms.date: 03/20/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 helpviewer_keywords:
 - memory [Reporting Services]
 - memory thresholds [Reporting Services]
 ms.assetid: ac7ab037-300c-499d-89d4-756f8d8e99f6
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ab39c1de4741906559002281dacf9b255274f9f4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 4727cff529db944205f46be291f65ebb653eb9bc
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722713"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580391"
 ---
 # <a name="configure-available-memory-for-report-server-applications"></a>Настройка доступной памяти для приложений сервера отчетов
   Хотя службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] могут использовать всю доступную память, можно переопределить поведение по умолчанию, настроив верхний предел ресурсов памяти, выделяемых серверным приложениям служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Можно также задать пороговые значения, которые изменяют способ назначения приоритета и обработки запросов сервером отчетов в зависимости от дефицита свободной памяти. При малом дефиците свободной памяти сервер отчетов назначает чуть более высокий приоритет интерактивной обработке отчетов или обработке отчетов по запросу. При серьезном дефиците свободной памяти сервер отчетов использует многочисленные приемы, чтобы сохранить работоспособность в условиях ограниченных доступных ресурсов.  
@@ -72,7 +72,7 @@ ms.locfileid: "47722713"
 |**MemorySafetyMargin**|Задает процент **WorkingSetMaximum** , определяющий границу между средним и низким уровнями потребления памяти. Это значение представляет собой процент доступной памяти, которая будет зарезервирована для системы и не сможет быть использована для работы сервера отчетов. Значение по умолчанию равно 80.|  
   
 > [!NOTE]  
->  Параметры**MemoryLimit** и **MaximumMemoryLimit** в [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версиях. Если обновить существующую установку или использовать файл RSReportServer.config с этими значениями, то сервер отчетов не будет их считывать.  
+>  Параметры**MemoryLimit** и **MaximumMemoryLimit** в [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и later versions. Если обновить существующую установку или использовать файл RSReportServer.config с этими значениями, то сервер отчетов не будет их считывать.  
   
 #### <a name="example-of-memory-configuration-settings"></a>Пример параметров конфигурации памяти  
  Следующий пример показывает параметры конфигурации для компьютера серверов отчетов, в котором используются пользовательские значения конфигурации памяти. Чтобы добавить параметр **WorkingSetMaximum** или **WorkingSetMinimum**, необходимо вставить соответствующие элементы и значения в файл RSReportServer.config. Оба значения представляют собой целые числа, указывающие объем ОЗУ в килобайтах, выделяемый для серверных приложений. В следующем примере указывается, что общая память, выделенная для приложений сервера отчетов, не может превышать 4 гигабайт. Если значение параметра **WorkingSetMinimum** по умолчанию (60 % от значения **WorkingSetMaximum**) приемлемо, его можно опустить и задать в файле RSReportServer.config только параметр **WorkingSetMaximum** . Пример содержит параметр **WorkingSetMinimum** , чтобы показать, как выглядит этот параметр, если понадобится его добавить:  
@@ -91,6 +91,6 @@ ms.locfileid: "47722713"
  [Файл конфигурации RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Файл конфигурации RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Изменение файла конфигурации служб Reporting Services (RSreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
- [Домены приложений для приложений сервера отчетов](../../reporting-services/report-server/application-domains-for-report-server-applications.md)  
+ [Application Domains for Report Server Applications](../../reporting-services/report-server/application-domains-for-report-server-applications.md)  
   
   

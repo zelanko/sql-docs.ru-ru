@@ -2,21 +2,21 @@
 title: Связь параметра запроса с параметром отчета (построитель отчетов и службы SSRS) | Документы Майкрософт
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 helpviewer_keywords:
 - queries [Reporting Services], parameters
 - parameters [Reporting Services], queries
 ms.assetid: 6d297e1a-ff71-472a-addc-349e863092b5
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: d449a26e17fbc32ff4d96efbd67f9dfa3f7fd010
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 45161e43e405586bb441088b89fc24494eb928df
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809612"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65573240"
 ---
 # <a name="associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs"></a>Связь параметра запроса с параметром отчета (построитель отчетов и службы SSRS)
   При определении запроса к набору данных, содержащего переменную запроса, команда запроса анализируется. Для каждой переменной запроса создается соответствующий параметр набора данных и параметр отчета. Параметр набора данных указывает на параметр отчета. Это позволяет пользователю вводить значение, которое передается непосредственно запросу. Каждый раз при изменении команды запроса происходит тот же процесс.  

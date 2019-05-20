@@ -2,20 +2,20 @@
 title: Импорт HTML в отчет (построитель отчетов и службы SSRS) | Документы Майкрософт
 ms.date: 12/06/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 description: Текстовое поле можно использовать для вставки в отчет текста в формате HTML, выбранного из поля набора данных.
 ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: dd0410ea-8839-4e8c-9944-8cdfe5465591
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ff0e5bffdc0704894029a223c5d3c47d18d8ac80
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 54bd3d5acaf487909a4965c1f73a2e8c00aef82a
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289482"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580223"
 ---
 # <a name="importing-html-into-a-report-report-builder-and-ssrs"></a>Импорт HTML в отчет (построитель отчетов и службы SSRS)
   Текстовое поле можно использовать для вставки в отчет текста в формате HTML, выбранного из поля набора данных. Этот текст может исходить из любого простого или сложного выражения, обработка которого приводит к получению правильно отформатированного кода HTML. Отформатированный текст может быть подготовлен к просмотру в любом поддерживаемом формате вывода, включая PDF.  
@@ -27,7 +27,7 @@ ms.locfileid: "56289482"
 > [!NOTE]  
 >  При импорте текста, содержащего разметку HTML, полученные данные всегда должны быть вначале подвергнуты синтаксическому анализу с помощью текстового поля. Поддерживаются не все теги HTML, поэтому код HTML, отображаемый в готовом для просмотра отчете, может отличаться от исходного кода HTML.  
   
- Чтобы быстро приступить к работе, см. раздел [Учебник. Форматирование текста (построитель отчетов)](../../reporting-services/tutorial-format-text-report-builder.md)  
+ Чтобы быстро приступить к работе, см. раздел [Учебник. Форматирование текста (построитель отчета)](../../reporting-services/tutorial-format-text-report-builder.md).  
   
 ## <a name="supported-html-tags"></a>Поддерживаемые теги HTML  
  Ниже приведен полный список тегов, которые подготавливаются к просмотру в формате HTML, если они определены в качестве текста заполнителя.  
@@ -40,7 +40,7 @@ ms.locfileid: "56289482"
   
 -   Форматирование текста: \<B>, \<I>, \<U>, \<S>  
   
--   Работа со списком: \<OL>, \<UL>, \<LI>  
+-   Работа со списками: \<OL>, \<UL>, \<LI>  
   
  Все прочие теги разметки HTML во время обработки отчета пропускаются. Если код HTML, представленный с помощью выражения в тексте заполнителя, не имеет правильного формата, то заполнитель подготавливается к просмотру в виде обычного текста. Все теги HTML рассматриваются без учета регистра.  
   

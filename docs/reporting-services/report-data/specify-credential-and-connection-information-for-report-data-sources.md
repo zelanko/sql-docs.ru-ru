@@ -2,7 +2,7 @@
 title: Задание учетных данных и сведений о соединении для источников данных отчета | Документы Майкрософт
 ms.date: 08/17/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 helpviewer_keywords:
@@ -24,14 +24,14 @@ helpviewer_keywords:
 - security [Reporting Services], data sources
 - Windows integrated security [Reporting Services]
 ms.assetid: fee1a663-a313-424a-aed2-5082bfd114b3
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: fa8731c0f7438c1272e7a0cee3119d81b5c57c0e
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: d6b5041b07551ba8bbd23cc3f737fc0c09d72ff1
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031603"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65575349"
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>Задание учетных данных и сведениях о соединении для источников данных отчета
   Сервер отчетов использует учетные данные для подключения к внешним источникам данных, предоставляющих содержимое для отчетов или сведения о получателе для подписок, управляемых данными. Можно задать учетные данные, использующие проверку подлинности Windows, проверку подлинности базы данных, нестандартную проверку подлинности, или учетные данные, не использующие проверку подлинности. При отправке по сети запроса на соединение сервер отчетов олицетворяет или учетную запись пользователя, или учетную запись автоматического выполнения. Дополнительные сведения о контексте безопасности, в котором выполняется запрос соединения, см. в подразделе [Настройка источника данных и сетевые подключения](#DataSourceConfigurationConnections) далее в этом разделе.  

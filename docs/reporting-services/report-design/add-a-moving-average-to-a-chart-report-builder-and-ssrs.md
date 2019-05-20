@@ -2,18 +2,18 @@
 title: Добавление скользящего среднего в диаграмму (построитель отчетов и службы SSRS) | Документы Майкрософт
 ms.date: 03/03/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 166cf9c1-0750-4866-8381-542e4fbfe65a
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 7131bbd8f325deea3ef34c0f7e45bebfb7f3688a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 58dae055e89d2c1be50c7bbc515298cfadf9fd60
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298391"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65574995"
 ---
 # <a name="add-a-moving-average-to-a-chart-report-builder-and-ssrs"></a>Добавление скользящего среднего в диаграмму (построитель отчетов и службы SSRS)
 Скользящее среднее — это среднее по данным в ряде, вычисленное за определенный период времени. В отчетах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с разбивкой на страницы скользящее среднее можно отобразить в диаграмме для определения важных трендов.  
@@ -22,7 +22,7 @@ ms.locfileid: "56298391"
   
  Формула скользящего среднего является наиболее популярным признаком цены, используемым в техническом анализе. Многие другие формулы, включая среднее, медиану и стандартное отклонение также могут быть производными от ряда на диаграмме. При указании скользящего среднего каждая формула может иметь один или более параметров, которые необходимо указать.  
  
- Чтобы попробовать сделать это с образцами данных, см. [Учебник. Добавление гистограммы к отчету (построитель отчетов)](Tutorial:%20Add%20a%20Column%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md), где приводятся пошаговые инструкции по добавлению скользящего среднего в диаграмму.
+ Чтобы попробовать сделать это с образцами данных, см. раздел [Учебник. Добавление гистограммы к отчету (построитель отчетов)](Tutorial:%20Add%20a%20Column%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md), где приводятся пошаговые инструкции по добавлению скользящего среднего в диаграмму.
   
  Когда формула скользящего среднего добавляется в режиме конструктора, добавляемый ряд линий является только видимым заполнителем. Диаграмма вычислит точки данных каждой формулы во время обработки отчета.  
   

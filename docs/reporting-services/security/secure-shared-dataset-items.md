@@ -2,18 +2,18 @@
 title: Защита элементов общего набора данных | Документы Майкрософт
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: security
 ms.topic: conceptual
 ms.assetid: 08e6d8b5-d88c-4ed2-9c05-55c757e00014
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 830955375dec473f7587ef33c1e7f6927df530b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: a51e261d06933a30bf1c59adffa6963c9826f360
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725562"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65570672"
 ---
 # <a name="secure-shared-dataset-items"></a>Защита элементов общего набора данных
   На сервере отчетов элементы общего набора данных могут использоваться в нескольких отчетах. В целях управления уровнем доступа, предоставляемого пользователям, общие наборы данных можно защитить. По умолчанию только пользователи, являющиеся членами встроенной группы **Администраторы** , могут просматривать общие наборы данных, изменять свойства, включать кэширование, создавать планы обновления кэша и удалять элементы. Остальные пользователи должны иметь созданные для них назначения ролей, предоставляющие доступ к общему набору данных.  
@@ -48,7 +48,7 @@ ms.locfileid: "47725562"
   
 ## <a name="see-also"></a>См. также:  
  [Управление общими наборами данных](../../reporting-services/report-data/manage-shared-datasets.md)   
- [Защита папок](../../reporting-services/security/secure-folders.md)   
+ [Обеспечение защиты папок](../../reporting-services/security/secure-folders.md)   
  [Защищенные отчеты и ресурсы](../../reporting-services/security/secure-reports-and-resources.md)   
  [Предоставление разрешений на сервер отчетов в собственном режиме](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [Предоставление разрешений на сервер отчетов в собственном режиме](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  

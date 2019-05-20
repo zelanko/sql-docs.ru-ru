@@ -2,7 +2,7 @@
 title: Пользовательский код и ссылки на сборки в выражениях в конструкторе отчетов (службы SSRS) | Документы Майкрософт
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - data manipulation [Reporting Services]
 - SQL Server Reporting Services, expressions
 ms.assetid: ae8a0166-2ccc-45f4-8d28-c150da7b73de
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: eda4e064412a6607838e65d15ab27a0c6e238ba0
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 1a440ba648fd7ca0c377cc09b8bf67ac799e2e9a
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030413"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581492"
 ---
 # <a name="custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs"></a>Пользовательский код и ссылок на сборки в выражениях в конструкторе отчетов (службы SSRS)
   Можно добавлять ссылки на пользовательский код, внедренный в отчет, или пользовательские сборки, построенные и сохраненные на компьютере и развернутые на сервере отчетов. Используйте внедренный код для пользовательских констант, сложных функций или функций, которые используются в одном отчете несколько раз. Сборки с пользовательским кодом используйте для сохранения кода в одном месте и его общего использования в нескольких отчетах. Пользовательский код может включать новые пользовательские константы, переменные, функции или подпрограммы. Можно включать ссылки, доступные только для чтения, во встроенные коллекции, например коллекцию Parameters. Однако эти наборы значений данных отчета невозможно передать пользовательским функциям (в частности, не поддерживаются пользовательские статистические вычисления).  

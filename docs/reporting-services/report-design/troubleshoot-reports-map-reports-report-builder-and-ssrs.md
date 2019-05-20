@@ -1,21 +1,21 @@
 ---
-title: Устранение неполадок в отчетах. Отчеты-карты (построитель отчетов и службы SSRS) | Документация Майкрософт
+title: 'Устранение неполадок в отчетах: отчеты-карты (построитель отчетов и службы SSRS) | Документы Майкрософт'
 ms.date: 01/17/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: a690aec2-056b-40bc-8cab-c694bd2d6d62
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 7688e1c082c250933054a9c510c8f8ecf7be3423
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 03b34022547d8bd054817a389fa02a0ca03871c9
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56297287"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65574478"
 ---
-# <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>Устранение неполадок в отчетах. Отчеты-карты (построитель отчетов и службы SSRS)
+# <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>Устранение неполадок в отчетах: отчеты-карты (построитель отчетов и службы SSRS)
   Проблемы с картами могут возникнуть при добавлении карты или слоя карты в отчет с разбиением на страницы [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , при настройке существующей карты или слоя карты в отчете, при предварительном просмотре карты в отчете или при публикации отчета с картой. Этот раздел помогает устранять эти проблемы.  
     
    ## <a name="need-more-help"></a>Требуется дополнительная помощь?  

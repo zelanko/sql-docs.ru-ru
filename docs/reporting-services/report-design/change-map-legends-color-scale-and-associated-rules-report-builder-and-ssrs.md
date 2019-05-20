@@ -2,7 +2,7 @@
 title: Изменение условных обозначений карты, цветовой шкалы и связанных правил в построителе отчетов и службах SSRS | Документация Майкрософт
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 f1_keywords:
@@ -29,14 +29,14 @@ f1_keywords:
 - "10540"
 - "10517"
 ms.assetid: a1d691b2-c5ae-420f-af60-b7c54a7385a4
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 7aeaf47c587577ccdc6b78403a003a7c1c1c4a91
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 2d8df41eb7c0a0463648898c08091dd8f8c01f29
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56293552"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581732"
 ---
 # <a name="change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs"></a>Изменение условных обозначений карты, цветовой шкалы и связанных правил (построитель отчетов и службы SSRS)
   В отчете [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] с разбиением на страницы карта может содержать условные обозначения, цветовую шкалу и шкалу расстояний. Эти части карты помогают пользователям понять визуализацию данных на карте.  

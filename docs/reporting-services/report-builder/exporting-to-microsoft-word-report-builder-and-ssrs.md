@@ -2,20 +2,20 @@
 title: Экспорт в Microsoft Word (построитель отчетов и службы SSRS) | Документы Майкрософт
 ms.date: 12/06/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 description: Модуль подготовки отчетов Word подготавливает отчеты с разбиением на страницы в формате  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] (DOCX). Используется формат Office Open XML.
 ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 0ed7b5a6081171f7f7271573cd83f029ad672a34
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: b02a4b2776e39d7130bc47a42050b0f7be9af4d3
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296602"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581225"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Экспорт в Microsoft Word (построитель отчетов и службы SSRS)
 
@@ -72,9 +72,9 @@ ms.locfileid: "56296602"
   
  Это происходит потому, что модуль подготовки отчетов Word анализирует отчет для определения наличия таких полей, относящихся к разбиению на страницы, как **PageNumber** и **TotalPages** , и обрабатывает только простые ссылки, а не вызовы функций. В данном случае в выражении вызывается функция **ToString** . Следующие два выражения являются эквивалентными, и оба обеспечивают правильную подготовку к просмотру при предварительном просмотре отчета в построителе отчетов или конструкторе отчетов либо при подготовке к просмотру опубликованного отчета на веб-портале [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] или в библиотеке SharePoint. Но модуль подготовки отчетов Word успешно выполняет синтаксический анализ только второго выражения и правильно подготавливает к просмотру номера страниц.  
   
--   **Сложное выражение**:  выражением является `="Average Sales " & Avg(Fields!YTDPurchase.Value, "Sales") & " Page Number " & Globals!PageNumber`  
+-   **Сложное выражение:**  выражением является `="Average Sales " & Avg(Fields!YTDPurchase.Value, "Sales") & " Page Number " & Globals!PageNumber`  
   
--   **Выражение с отрезками текста**: текст **Средний объем продаж**, выражение `=Avg(Fields!YTDPurchase.Value, "Sales)`, текст **Номер страницы**, выражение `=Globals!PageNumber`  
+-   **Выражение с отрезками текста** : текст **Средний объем продаж**, выражение  `=Avg(Fields!YTDPurchase.Value, "Sales)`, текст **Номер страницы**, выражение `=Globals!PageNumber`  
   
  Чтобы избежать этой проблемы, при включении выражений в колонтитулы используйте несколько отрезков текста вместо одного сложного выражения. Следующие два выражения эквивалентны. Первое выражение является сложным, а второй использует отрезки текста. Модуль подготовки отчетов Word успешно выполняет синтаксический анализ только второго выражения.  
   

@@ -2,18 +2,18 @@
 title: Ссылки на коллекцию полей набора данных (построитель отчетов и службы SSRS) | Документы Майкрософт
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 006c6bd3-d776-4c20-9092-32e40688ac49
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 888f5e89b86d8fec157bf2f4c8c1893875ca048e
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 91550f60a7fe056a3df68ba9c4006e8359ff2c73
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56285512"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581819"
 ---
 # <a name="built-in-collections---dataset-fields-collection-references-report-builder"></a>Встроенные коллекции — ссылки на коллекцию полей набора данных (построитель отчетов)
   В каждом наборе данных отчета содержится одна коллекция Fields. Коллекция Fields представляет собой набор полей, заданных запросом набора данных, и все созданные дополнительные вычисляемые поля. После создания набора данных коллекция полей появляется в области **Данные отчета** .  

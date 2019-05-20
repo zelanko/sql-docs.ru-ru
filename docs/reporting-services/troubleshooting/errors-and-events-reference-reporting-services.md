@@ -1,34 +1,33 @@
 ---
 title: Справочник по ошибкам и событиям (службы Reporting Services) | Документы Майкрософт
-ms.date: 03/18/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: troubleshooting
 ms.topic: conceptual
-helpviewer_keywords:
-- messages [Reporting Services]
-- errors [Reporting Services]
-- Reporting Services, errors and events
-- troubleshooting [Reporting Services], errors
-- events [Reporting Services]
-ms.assetid: 818b4cc1-e65d-4f1a-bf7d-fe269e6dd739
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ec1e9fc7ec041794b92b5372799678a22483b39e
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 04/26/2019
+ms.openlocfilehash: dc3b07d150e7992338a356030c2dd36d1edeff0c
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021788"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65574007"
 ---
 # <a name="errors-and-events-reference-reporting-services"></a>Справочник по ошибкам и событиям (службы Reporting Services)
-  Этот раздел содержит сведения об ошибках и событиях служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Файлы журналов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] также содержат сведения об ошибках. Дополнительные сведения о доступных типах файлов журналов и способах просмотра журналов см. в разделе [Файлы и источники журналов служб Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
-  
+
+Этот раздел содержит сведения об ошибках и событиях служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Файлы журналов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] также содержат сведения об ошибках. Дополнительные сведения о доступных типах файлов журналов и способах просмотра журналов см. в разделе [Файлы и источники журналов служб Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
+
 ## <a name="cause-and-resolution-for-reporting-services-error-messages"></a>Причины сообщений об ошибках служб Reporting Services и способы их устранения  
- Сведения о причинах возникновения ошибок и способах их устранения доступны для ошибок, информацию о которых наиболее часто ищут на веб-сайтах [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Дополнительные сведения см. в разделе [Причины ошибок служб Reporting Services и способы их устранения](../../reporting-services/troubleshooting/cause-and-resolution-of-reporting-services-errors.md).  
+
+Сведения о причинах возникновения ошибок и способах их устранения доступны для ошибок, информацию о которых наиболее часто ищут на веб-сайтах [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Дополнительные сведения см. в разделе [Причины ошибок служб Reporting Services и способы их устранения](../../reporting-services/troubleshooting/cause-and-resolution-of-reporting-services-errors.md).  
   
-## <a name="report-server-events"></a>События сервера отчетов  
- Следующие события сервера отчетов записываются в журнал приложений [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
+## <a name="report-server-events"></a>События сервера отчетов
+
+Следующие события сервера отчетов записываются в журнал приложений [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
 |Идентификатор события|Тип|Категория|Source|Описание|  
 |--------------|----------|--------------|------------|-----------------|  
@@ -62,9 +61,7 @@ ms.locfileid: "50021788"
 |133|Ошибка|Управление|Сервер отчетов<br /><br /> Диспетчер отчетов<br /><br /> обработчик планирования и доставки|Не удалось загрузить файл конфигурации. Возможная причина ошибки заключается в неправильных XML-данных.|  
 |134|Ошибка|Управление|Сервер отчетов|Серверу отчетов не удалось зашифровать значения настройки из файла конфигурации.|  
   
-## <a name="see-also"></a>См. также:  
- [Отслеживание подписок служб Reporting Services](../../reporting-services/subscriptions/monitor-reporting-services-subscriptions.md)   
- [Файлы и источники журналов служб Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)  
-  
-  
-[!INCLUDE[feedback_stackoverflow_msdn_connect_md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
+## <a name="see-also"></a>См. также раздел
+
+- [Отслеживание подписок служб Reporting Services](../../reporting-services/subscriptions/monitor-reporting-services-subscriptions.md)
+- [Файлы и источники журналов Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)

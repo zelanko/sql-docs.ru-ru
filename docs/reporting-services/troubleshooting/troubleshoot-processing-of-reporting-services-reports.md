@@ -2,18 +2,18 @@
 title: Устранение неполадок с обработкой отчетов служб Reporting Services | Документы Майкрософт
 ms.date: 08/26/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: troubleshooting
 ms.topic: conceptual
 ms.assetid: bb309231-68be-4d68-a44c-c098999c67a2
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 02d4f890c3e2d5f74c49100c14e88fcb6a683a92
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 85486e929683abaf99216a4d4b03c19a146f230c
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47813602"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65573853"
 ---
 # <a name="troubleshoot-processing-of-reporting-services-reports"></a>Устранение неполадок при обработке отчетов служб Reporting Services
 После получения данных отчета обработчик отчетов объединяет данные и сведения о макете. Свойство каждого элемента отчета, имеющее выражение, вычисляется в контексте объединенных данных и макета. Этот раздел помогает устранять эти проблемы.   

@@ -2,18 +2,18 @@
 title: Основные понятия служб Reporting Services (SSRS) | Документы Майкрософт
 ms.date: 10/25/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 7bad528f4c644ee4de7339eacdd1e0a0e74c9abc
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 126819d9adb85fa4cf17af0c6308d56696136988
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814307"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65570852"
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Основные понятия служб Reporting Services (SSRS)
   Этот раздел содержит краткий обзор основных понятий служб [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
@@ -205,7 +205,7 @@ ms.locfileid: "51814307"
  Полностью обработанный отчет отправляется в модуль подготовки отчетов, чтобы объединить данные и макет на каждой странице целевого формата. Модули подготовки отчетов можно настраивать и расширять. HTML 4.0 является форматом подготовки к просмотру отчета по умолчанию. Дополнительные сведения см. в разделах [Макет страницы и отрисовка (построитель отчетов и службы SSRS)](../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md) и [Модули (SSRS)](../reporting-services/extensions-ssrs.md).  
   
 ### <a name="exported-report"></a>Экспортированный отчет
- Экспортированный отчет представляет собой полностью разбитый на страницы отчет в определенном файловом формате. Формат экспорта зависит от установленных модулей подготовки к просмотру и может задаваться пользователем. По умолчанию форматы экспорта включают Excel, Word, XML, PDF, TIFF и CSV. Дополнительные сведения см. в разделе [Экспорт отчетов (построитель отчетов и службы SSRS)](../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
+ Экспортированный отчет представляет собой полностью разбитый на страницы отчет в определенном файловом формате. Формат экспорта зависит от установленных модулей подготовки к просмотру и может задаваться пользователем. По умолчанию форматы экспорта включают Excel, Word, XML, PDF, TIFF и CSV. Дополнительные сведения см. в разделах [Экспорт отчетов (построитель отчетов и службы SSRS)](../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
   
   
 ## <a name="see-also"></a>См. также:  

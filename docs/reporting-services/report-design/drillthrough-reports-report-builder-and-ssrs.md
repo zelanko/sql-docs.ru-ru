@@ -2,18 +2,18 @@
 title: Детализированные отчеты (построитель отчетов и службы SSRS) | Документы Майкрософт
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 938a6450-67c1-4eef-80b4-8fdaefeed584
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c44196f8a61208e378936ad9cb40bf75ad28e36f
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: ccc5c2950baf10cad0e7f9495b446286576b27bc
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290282"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65579347"
 ---
 # <a name="drillthrough-reports-report-builder-and-ssrs"></a>Детализированные отчеты (построитель отчетов и службы SSRS)
   Детализированный отчет — это отчет, открываемый пользователем щелчком по ссылке в другом отчете. Обычно детализированный отчет содержит подробности об элементе, содержащемся в исходном сводном отчете. Например, на этом рисунке в сводном отчете по продажам содержатся заказы на продажу и итоговые данные. Когда пользователь щелкает номер заказа в сводном списке, открывается другой отчет, содержащий подробности о заказе.  
@@ -25,7 +25,7 @@ ms.locfileid: "56290282"
 > [!NOTE]  
 >  Во время работы в построителе отчетов необходимо подключение к серверу отчетов для просмотра детализированного отчета, открывающегося при щелчке ссылки детализации в основном отчете.  
   
- Чтобы быстро приступить к работе с детализированными отчетами, см. [Учебник. Создание детализированных и главных отчетов (построитель отчетов)](../../reporting-services/tutorial-creating-drillthrough-and-main-reports-report-builder.md). 
+ Информацию, помогающую быстро приступить к работе с детализированными отчетами, см. в разделе [Учебник. Создание детализированных и главных отчетов (построитель отчетов)](../../reporting-services/tutorial-creating-drillthrough-and-main-reports-report-builder.md). 
    
 ## <a name="parameters-in-drillthrough-reports"></a>Параметры детализированных отчетов  
  Детализированный отчет обычно содержит параметры, передаваемые ему сводным отчетом. В примере со сводным отчетом по продажам сводка по отчету содержит поле [OrderNumber] в текстовом поле в ячейке таблицы. Детализированный отчет содержит параметр, принимающий в качестве значения номер заказа. При установке ссылки детализированного отчета на это текстовое поле для поля [OrderNumber] также следует установить параметр целевого отчета для поля [OrderNumber]. Если пользователь щелкнет номер заказа в сводном отчете, откроется целевой детализированный отчет, в котором отобразятся сведения об этом номере заказа. Инструкции по созданию детализированных отчетов, изменяемых на основе значений параметров, см. в разделах [Параметры отчета (построитель отчетов и конструктор отчетов)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md) и [Функция InScope (построитель отчетов и службы SSRS)](../../reporting-services/report-design/report-builder-functions-inscope-function.md).  
