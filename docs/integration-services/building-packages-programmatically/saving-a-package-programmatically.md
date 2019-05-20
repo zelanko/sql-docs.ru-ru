@@ -14,14 +14,18 @@ ms.assetid: 4204f817-d5df-475a-9338-d7f01305d566
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 993c9bcaeb92f7ec4eabc11beaf444e97622821f
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 07c926a292c657eecceb13ca1cdc1d3f8dcc5a71
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271173"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729263"
 ---
 # <a name="saving-a-package-programmatically"></a>Сохранение пакета программным образом
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   После программного построения нового или изменения существующего пакета обычно необходимо сохранить изменения.  
   
  Все методы, используемые в данном разделе для сохранения пакетов, требуют наличия ссылки на сборку **Microsoft.SqlServer.ManagedDTS** . После добавления ссылки в новый проект импортируйте пространство имен <xref:Microsoft.SqlServer.Dts.Runtime> с помощью инструкции **using** или **Imports**.  

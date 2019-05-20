@@ -11,14 +11,18 @@ ms.assetid: 47759ddc-358d-405b-acb9-189ada76ea6d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 34f86e859bb09e6b3e62d9819c13ba1bf7abec26
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: c033a631425a051fae411acbd5ff589302eb7344
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276080"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728482"
 ---
 # <a name="the-oracle-cdc-service"></a>Служба CDC Oracle
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Служба CDC Oracle — это служба Windows, благодаря которой запускается программа xdbcdcsvc.exe. Служба Oracle CDC может настраиваться для запуска нескольких служб Windows на одном компьютере, каждая из которых должна иметь другое имя службы Windows. Создание нескольких служб Windows для Oracle CDC на одном компьютере обычно выполняется для достижения лучшего их разделения или в случае, если каждой из них требуется работать с другим экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Служба Oracle CDC создается при помощи консоли конфигурации службы Oracle CDC или определяется при помощи интерфейса командной строки, встроенного в программу xdbcdcsvc.exe. В обоих случаях каждый создаваемый экземпляр службы Oracle CDC привязывается к отдельному экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (который может быть кластеризованным или зеркально отображаться в конфигурации **AlwaysOn** ), а сведения о соединении (строка подключения и учетные данные) являются частью конфигурации службы.  

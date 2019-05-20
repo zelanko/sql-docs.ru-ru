@@ -15,14 +15,18 @@ ms.assetid: d4122dcf-f16f-47a0-93a2-ffa3d0d4f9cf
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 18d4e70daf68267675678803134b3f04c0c48f24
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ea9c422f19554c1e88852eaad1cfa91c00db5f5c
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277213"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65718100"
 ---
 # <a name="events-logged-by-the-integration-services-service"></a>Cобытия, зарегистрированные службами Integration Services
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Служба [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] регистрирует различные сообщения в журнале событий приложений Windows. Служба записывает эти события в журнал при своем запуске, остановке и при возникновении некоторых проблем.  
   
  В этом разделе представлены сведения о самых распространенных сообщениях о событиях, которые регистрирует служба в журнале событий приложений. Служба [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] регистрирует все сообщения, описанные в этом разделе, вместе с источником событий SQLISService.  

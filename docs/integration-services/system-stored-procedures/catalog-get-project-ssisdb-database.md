@@ -11,14 +11,18 @@ ms.assetid: f263c9e4-a7db-4888-a458-70ae99b1f729
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 28fe8cd113404d2a5672daa249c80f3b3d91620c
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 79756562767943d89efd199007941cf9bf29b702
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275019"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65716175"
 ---
 # <a name="cataloggetproject-ssisdb-database"></a>catalog.get_project (база данных SSISDB)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Получает двоичный поток проекта, развернутого на сервере [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  

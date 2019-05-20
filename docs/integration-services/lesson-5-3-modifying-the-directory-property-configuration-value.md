@@ -11,14 +11,18 @@ ms.assetid: ba2a091f-361c-4331-afe2-53b465164c36
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2b685268f1a4b76adf1d8947dde53c251190ee3d
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 09d4279501110d15eab2ca339e33ddb9ab0cee3f
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274833"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65721206"
 ---
 # <a name="lesson-5-3-modify-the-directory-property-configuration-value"></a>Занятие 5-3. Изменение значения конфигурации свойства "Каталог"
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 В этой задаче предстоит изменить хранимый в файле **SSISTutorial.dtsConfig** параметр конфигурации для задания свойства **Значение** переменной уровня пакета `User::varFolderName`. Эта переменная обновляет свойство **Каталог** контейнера "Цикл ForEach". Измененное значение будет указывать на папку **Новый образец данных**, созданную в предыдущей задаче. После изменения параметра конфигурации и выполнения пакета свойство **Каталог** будет обновляться из переменной файла конфигурации. До этого значение свойства **Каталог** определялось в пакете.  
   

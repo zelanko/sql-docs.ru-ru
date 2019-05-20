@@ -11,15 +11,17 @@ ms.assetid: 96bc8255-a037-4907-aec4-1a9c30814651
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-ms.openlocfilehash: 15d32c3f97791c6c87b95e431f02e4d75bf8da6f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
+ms.openlocfilehash: 8c12a2213c39a8a464a29697e5621a382b6daf69
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026525"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65577458"
 ---
 # <a name="jsonmodify-transact-sql"></a>JSON_MODIFY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Обновляет значение свойства в строке JSON и возвращает обновленную строку JSON.  
   
@@ -31,7 +33,8 @@ ms.locfileid: "56026525"
 JSON_MODIFY ( expression , path , newValue )  
 ```  
   
-## <a name="arguments"></a>Аргументы  
+## <a name="arguments"></a>Аргументы
+
  *expression*  
  Выражение. Обычно имя переменной или столбца, содержащего текст JSON.  
   
@@ -44,16 +47,16 @@ JSON_MODIFY ( expression , path , newValue )
   
  `[append] [ lax | strict ] $.<json path>`  
   
--   *append*  
+- *append*  
     Необязательный модификатор, который указывает, что новое значение следует добавить в массив, на который ссылается *\<путь_json>*.  
   
--   *lax*  
+- *lax*  
     Указывает, что свойство, на которое ссылается *\<путь_json>*, должно существовать. Если свойство не существует, JSON_MODIFY пытается вставить новое значение по указанному пути. Если свойство не может быть вставлено в путь, вставка может завершиться ошибкой. Если *строгий* или *нестрогий* режим не указан, по умолчанию используется *нестрогий* режим (lax).  
   
--   *строгий_режим*  
+- *строгий_режим*  
     Указывает, что свойство, на которое ссылается *\<путь_json>*, должно быть в выражении JSON. Если свойство не существует, JSON_MODIFY возвращает ошибку.  
   
--   *\<путь_json>*  
+- *\<путь_json>*  
     Указывает путь до обновляемого свойства. Дополнительные сведения см. в статье [Выражения пути JSON (SQL Server)](../../relational-databases/json/json-path-expressions-sql-server.md).  
   
 В [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] и [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)] можно указать переменную в качестве значения *пути*.
@@ -67,10 +70,12 @@ JSON_MODIFY ( expression , path , newValue )
   
 JSON_MODIFY экранирует все специальные символы в новом значении, если значение имеет тип NVARCHAR или VARCHAR. Текстовое значение не экранируется, если оно имеет допустимый формат JSON и создано с помощью функций FOR JSON, JSON_QUERY или JSON_MODIFY.  
   
-## <a name="return-value"></a>Возвращаемое значение  
+## <a name="return-value"></a>Возвращаемое значение
+
  Возвращает измененное значение *выражения* в виде текста JSON в допустимом формате.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Remarks
+
  Функция JSON_MODIFY позволяет изменить значение существующего свойства, вставить новую пару ключ-значение или удалить ключ на основе сочетания режимов и предоставленных значений.  
   
  В следующей таблице сравнивается поведение **JSON_MODIFY** в нестрогом и в строгом режиме. Дополнительные сведения о необязательном режиме пути (строгий или нестрогий) см. в статье [Выражения пути JSON (SQL Server)](../../relational-databases/json/json-path-expressions-sql-server.md).  
@@ -86,10 +91,11 @@ JSON_MODIFY экранирует все специальные символы в
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="example---basic-operations"></a>Пример. Основные операции  
+### <a name="example---basic-operations"></a>Пример. Основные операции
+
  В следующем примере показаны основные операции, которые можно выполнить с текстом JSON.  
   
- **Запрос**  
+ **Запрос**
   
 ```sql  
 
@@ -122,7 +128,7 @@ SET @info=JSON_MODIFY(@info,'append $.skills','Azure')
 PRINT @info
 ```  
   
- **Результаты**  
+ **Результаты**
   
 ```json  
 {
@@ -144,10 +150,11 @@ PRINT @info
 }
 ```  
   
-### <a name="example---multiple-updates"></a>Пример. Множественные обновления  
+### <a name="example---multiple-updates"></a>Пример. Множественные обновления
+
  С помощью JSON_MODIFY можно обновить только одно свойство. Если необходимо выполнить несколько операций обновления, можно использовать несколько вызовов JSON_MODIFY.  
   
- **Запрос**  
+ **Запрос**
   
 ```sql  
 DECLARE @info NVARCHAR(100)='{"name":"John","skills":["C#","SQL"]}'
@@ -161,7 +168,7 @@ SET @info=JSON_MODIFY(JSON_MODIFY(JSON_MODIFY(@info,'$.name','Mike'),'$.surname'
 PRINT @info
 ```  
   
- **Результаты**  
+ **Результаты**
   
 ```json  
 {
@@ -177,7 +184,7 @@ PRINT @info
 ### <a name="example---rename-a-key"></a>Пример. Переименование ключа  
  В приведенном ниже примере показано, как переименовать свойство в тексте JSON с помощью функции JSON_MODIFY. Сначала можно взять значение существующего свойства и вставить его как новую пару ключ-значение. Затем можно удалить старый ключ, установив значение старого свойства в NULL.  
   
- **Запрос**  
+ **Запрос**
   
 ```sql  
 DECLARE @product NVARCHAR(100)='{"price":49.99}'
@@ -196,7 +203,7 @@ SET @product=
 PRINT @product
 ```  
   
- **Результаты**  
+ **Результаты**
   
 ```json  
 {
@@ -208,10 +215,11 @@ PRINT @product
   
  Если не привести новое значение к числовому типу, функция JSON_MODIFY воспринимает его как текст и заключает в двойные кавычки.  
   
-### <a name="example---increment-a-value"></a>Пример. Увеличение значения на единицу  
+### <a name="example---increment-a-value"></a>Пример. Увеличение значения на единицу
+
  В приведенном ниже примере показано, как увеличить значение свойства в тексте JSON на единицу с помощью функции JSON_MODIFY. Сначала можно взять значение существующего свойства и вставить его как новую пару ключ-значение. Затем можно удалить старый ключ, установив значение старого свойства в NULL.  
   
- **Запрос**  
+ **Запрос**
   
 ```sql  
 DECLARE @stats NVARCHAR(100)='{"click_count": 173}'
@@ -226,7 +234,7 @@ SET @stats=JSON_MODIFY(@stats,'$.click_count',
 PRINT @stats
 ```  
   
- **Результаты**  
+ **Результаты**
   
 ```json  
 {
@@ -236,7 +244,8 @@ PRINT @stats
 }
 ```  
   
-### <a name="example---modify-a-json-object"></a>Пример. Изменение объекта JSON  
+### <a name="example---modify-a-json-object"></a>Пример. Изменение объекта JSON
+
  JSON_MODIFY рассматривает аргумент *newValue* как чистый текст, даже если он содержит текст JSON в допустимом формате. В результате выходные данные JSON в функции заключаются в двойные кавычки, и все специальные символы экранируются, как показано в следующем примере.  
   
  **Запрос**  
@@ -253,7 +262,7 @@ SET @info=JSON_MODIFY(@info,'$.skills','["C#","T-SQL","Azure"]')
 PRINT @info
 ```  
   
- **Результаты**  
+ **Результаты**
   
 ```json  
 {
@@ -281,7 +290,7 @@ SET @info=JSON_MODIFY(@info,'$.skills',JSON_QUERY('["C#","T-SQL","Azure"]'))
 PRINT @info
 ```  
   
- **Результаты**  
+ **Результаты**
   
 ```json  
 {
@@ -293,7 +302,8 @@ PRINT @info
 }
 ```  
   
-### <a name="example---update-a-json-column"></a>Пример. Обновление столбца JSON  
+### <a name="example---update-a-json-column"></a>Пример. Обновление столбца JSON
+
  В следующем примере показано, как изменить значение свойства в столбце таблицы, который содержит данные в формате JSON.  
   
 ```sql  
@@ -303,8 +313,8 @@ WHERE EmployeeID=17
  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также:
+
  [Выражения пути JSON (SQL Server)](../../relational-databases/json/json-path-expressions-sql-server.md)   
  [Данные JSON (SQL Server)](../../relational-databases/json/json-data-sql-server.md)  
-  
   

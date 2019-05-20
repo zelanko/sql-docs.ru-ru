@@ -23,14 +23,18 @@ ms.assetid: c4b76a3d-94ca-4a8e-bb45-cb8bd0ea3ec1
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d46d8b70e22422b821190db5717b0c22062ea75d
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 13543306533afaf22bbfd12a283d6a6a3e8bdef1
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58278053"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729251"
 ---
 # <a name="working-with-variables-programmatically"></a>Программная работа с переменными
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   С помощью переменных можно динамически задавать значения и управлять процессами в пакетах, контейнерах, задачах и обработчиках событий. Переменные могут также использоваться элементами управления очередностью для управления направлением потока данных к различным задачам. С помощью переменных можно:  
   
 -   Обновлять свойства пакета во время выполнения.  

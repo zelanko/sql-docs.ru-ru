@@ -12,14 +12,18 @@ ms.assetid: 0625c4f9-b8ff-4593-b884-39398b9d43af
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d5805f1c9f7455423bf4fab43c6092e880e62448
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 8af55ff084a0f6202bf830a006b01460748d8b4e
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281528"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723770"
 ---
 # <a name="review-data-type-mapping-sql-server-import-and-export-wizard"></a>Просмотр сопоставления типов данных (мастер импорта и экспорта SQL Server)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 Если заданное сопоставление типов данных не добавится в список **Сопоставления** диалогового окна **Сопоставления столбцов** , в мастере импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] откроется страница **Просмотр сопоставления типов данных** . На этой странице еще раз просмотрите подробные сведения о преобразованиях типов данных, которые пришлось выполнить мастеру, чтобы сделать данные источника совместимыми с назначением. Эти сведения включают в себя визуальные отличия преобразований типов данных, для которых ожидается успешное выполнение, от преобразований, которые могут вызвать ошибки или усечения. Для каждого преобразования можно указать, принимать ли предлагаемое мастером преобразование, а также способ обработки возможных ошибок.   
   
 > [!TIP]

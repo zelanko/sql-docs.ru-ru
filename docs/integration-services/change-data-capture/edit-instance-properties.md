@@ -11,14 +11,18 @@ ms.assetid: e7d6b164-b14a-4c2b-b8ad-0d4fe1f329f4
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 70b018f595f5db67e2674dd0488a81798306c080
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 5efde857036053b6ff31499a2ea6d889e34dfb25
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272726"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728914"
 ---
 # <a name="edit-instance-properties"></a>Изменение свойств экземпляра
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Редактор свойств используется для внесения изменений в экземпляр CDC после создания начальной конфигурации. В редакторе свойств можно выполнять следующие операции.  
   
 -   [Изменение свойств базы данных Oracle](../../integration-services/change-data-capture/edit-the-oracle-database-properties.md)  

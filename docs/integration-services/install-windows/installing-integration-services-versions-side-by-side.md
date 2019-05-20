@@ -14,14 +14,18 @@ ms.assetid: edfbcd56-012f-462e-a542-95491394fda9
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a4cc990067381cacc14275b5f7948c63284b216a
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: fea06da23752c75d56f22419a458f0719264283c
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275544"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723711"
 ---
 # <a name="installing-integration-services-versions-side-by-side"></a>Установка нескольких версий служб Integration Services в одной среде
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Можно установить   
       [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Integration Services (SSIS) в одной среде с более ранними версиями служб SSIS. В этом разделе описываются некоторые ограничения подобной установки.  
   

@@ -18,15 +18,17 @@ ms.assetid: 1ab0d90f-19b6-4988-ab4f-22fdf28b7c79
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-ms.openlocfilehash: 6c9c5d1a9b1e61bfd6cb93ea57ad6eafabbe9636
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
+ms.openlocfilehash: ba0fdffbc354e87419da9d349841d63c38ab794b
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038465"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65577427"
 ---
 # <a name="jsonquery-transact-sql"></a>JSON_QUERY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
  Извлекает объект или массив из строки JSON.  
   
@@ -40,7 +42,8 @@ ms.locfileid: "56038465"
 JSON_QUERY ( expression [ , path ] )  
 ```  
   
-## <a name="arguments"></a>Аргументы  
+## <a name="arguments"></a>Аргументы
+
  *expression*  
  Выражение. Обычно имя переменной или столбца, содержащего текст JSON.  
   
@@ -57,14 +60,15 @@ JSON_QUERY ( expression [ , path ] )
 
 Если *путь* имеет недопустимый формат, **JSON_QUERY** возвращает ошибку.  
   
-## <a name="return-value"></a>Возвращаемое значение  
+## <a name="return-value"></a>Возвращаемое значение
+
  Возвращает фрагмент JSON типа nvarchar(max). Параметры сортировки для возвращаемого значения совпадают с параметрами сортировки входного выражения.  
   
  Если значение не является объектом или массивом:  
   
--   В нестрогом режиме **JSON_QUERY** возвращает значение NULL.  
+- В нестрогом режиме **JSON_QUERY** возвращает значение NULL.  
   
--   В строгом режиме **JSON_QUERY** возвращает сообщение об ошибке.  
+- В строгом режиме **JSON_QUERY** возвращает сообщение об ошибке.  
   
 ## <a name="remarks"></a>Remarks  
 
@@ -107,7 +111,8 @@ JSON_QUERY ( expression [ , path ] )
 
 ## <a name="examples"></a>Примеры  
   
-### <a name="example-1"></a>Пример 1  
+### <a name="example-1"></a>Пример 1
+
  В следующем примере показано, как можно вернуть фрагмент JSON из столбца `CustomFields` в результатах запроса.  
   
 ```sql  
@@ -116,7 +121,8 @@ SELECT PersonID,FullName,
 FROM Application.People
 ```  
   
-### <a name="example-2"></a>Пример 2  
+### <a name="example-2"></a>Пример 2
+
 В следующем примере показано, как включить фрагменты JSON в выходные данные предложения FOR JSON.  
   
 ```sql  
@@ -127,6 +133,7 @@ FROM Warehouse.StockItems
 FOR JSON PATH
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также раздел
+
  [Выражения пути JSON (SQL Server)](../../relational-databases/json/json-path-expressions-sql-server.md)   
  [Данные JSON (SQL Server)](../../relational-databases/json/json-data-sql-server.md)  

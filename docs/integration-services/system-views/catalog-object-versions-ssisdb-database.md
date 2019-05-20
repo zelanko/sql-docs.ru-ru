@@ -11,14 +11,18 @@ ms.assetid: 2fd8c020-1c77-4702-8e6b-efa6a348daab
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 44f3d605e9110271fc104842a58df992ede0eeb0
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: b68fcc0cffada1ac895548a0c6858f0bde76fe6c
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276015"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65714490"
 ---
 # <a name="catalogobjectversions-ssisdb-database"></a>catalog.object_versions (база данных SSISDB)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Отображает версии объектов в каталоге служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. В этом выпуске в данном представлении поддерживаются только версии проектов.  

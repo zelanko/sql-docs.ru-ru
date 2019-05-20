@@ -11,14 +11,18 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 6be7f71593fba0347438a953ffa0732d3f499ae4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 12f67e7a17ba253ab49b1e61fe3de33a45e0cb55
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764472"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65718731"
 ---
 # <a name="manage-certificates-for-sql-server-integration-services-scale-out"></a>Управление сертификатами для SQL Server Integration Services Scale Out
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Для защиты обмена данными между мастером Scale Out и рабочими ролями Scale Out в SSIS Scale Out используются два сертификата: один для мастера, а другой для рабочих ролей. 
 

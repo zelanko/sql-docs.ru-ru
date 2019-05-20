@@ -11,17 +11,22 @@ author: aliceku
 ms.author: aliceku
 manager: ajayj
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 91b0fde06d400b2c519e9e6c86854197a2aecd13
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 1cf3b95ec5836ac86770bd0cd9784f0617b91846
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59516470"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580981"
 ---
 # <a name="static-data-masking"></a>Статическое маскирование данных
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-Функция "Статическое маскирование данных" выпущена как компонент предварительной версии 5 [SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md) 18.0 и более поздних версий. Мы пришли к выводу, что наш текущий прототип не соответствуют требованиям клиентов. Поэтому эта возможность не будет переноситься в дальнейшие версии. Мы сообщим вам, если будем планировать ее замену.
+Функция "Статическое маскирование данных" выпущена как компонент предварительной версии 5 [SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md) 18.0 и более поздних версий. 
+> [!IMPORTANT]
+> Мы пришли к выводу, что наш текущий прототип не соответствуют требованиям клиентов. Поэтому эта возможность не будет переноситься в дальнейшие версии. Мы сообщим вам, если будем планировать ее замену.
+>
+
+
 
 ![Статическое маскирование данных](../../relational-databases/security/media/sql-static-data-masking/static_data_masking_intro_image.PNG)
 

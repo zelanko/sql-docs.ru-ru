@@ -11,14 +11,18 @@ ms.assetid: 459e3995-2116-4f15-aaa2-32f26113869c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bf1179c8415b7db67e6552ceb0d9db24c4d585a5
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: eed92adad122587a031a3126322e4156a05bde58
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58278928"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722550"
 ---
 # <a name="lesson-2-3-modify-the-flat-file-connection-manager"></a>Занятие 2-3. Изменение диспетчера подключений с неструктурированными файлами
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 В этом задании требуется модифицировать диспетчер подключений из занятия 1. Этот диспетчер подключений с неструктурированными файлами настроен для статической загрузки отдельного файла. Чтобы диспетчер подключений с неструктурированными файлами мог последовательно загружать файлы, нужно изменить свойство ConnectionString диспетчера подключений таким образом, чтобы он использовал пользовательскую переменную `User::varFileName`, содержащую путь к файлу, который должен быть загружен в процессе выполнения.  
   

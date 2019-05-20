@@ -11,14 +11,18 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: b9a699ba1764af5728f7731626dc94400dc4d246
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: bb649888638ec4e194d64679b73fc69806664fc3
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57578814"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65718461"
 ---
 # <a name="integration-services-ssis-scale-out-worker"></a>Рабочая роль масштабного развертывания служб Integration Services (SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Рабочая роль Scale Out запускает службу рабочей роли Scale Out для получения задач выполнения из мастера Scale Out. Затем рабочая роль выполняет пакеты локально с помощью `ISServerExec.exe`.
 

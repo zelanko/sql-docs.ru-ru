@@ -11,14 +11,18 @@ ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5e1b4aef64ef4b7f0d99d7b5f44e88ca26d063c0
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 3cc37fe2dce76dd59baf776238e141a685c94cb3
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281668"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722569"
 ---
 # <a name="lesson-1-create-a-project-and-basic-package-with-ssis"></a>Урок 1. Создание проекта и простого пакета с помощью служб SSIS
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 На этом занятии вы создадите простой пакет для извлечения, преобразования и загрузки, который будет извлекать данные из отдельного источника неструктурированных файлов, преобразовывать их с помощью двух преобразований типа "уточняющий запрос", а затем записывать преобразованные данные в копию таблицы фактов **FactCurrencyRate**, находящуюся в образце базы данных **AdventureWorksDW2012**. На этом занятии вы узнаете, как создавать пакеты, добавлять и настраивать подключения к источникам данных и назначениям, а также работать с новыми компонентами потока управления и потока данных.  
   

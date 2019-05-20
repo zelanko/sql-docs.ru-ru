@@ -11,14 +11,18 @@ ms.assetid: f151c3e8-3811-457d-a3d3-6158ca65a646
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 701fbe45a5f6e7f1d0056aa4d549b1ba32246459
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 38c0854947ee9b853d8638593aea1e60d40941ca
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58279288"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726941"
 ---
 # <a name="datareader-destination-custom-properties"></a>Пользовательские свойства назначения «Модуль чтения данных»
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Назначение «Модуль чтения данных» обладает как пользовательскими свойствами, так и свойствами, общими для всех компонентов потока данных.  
   
  В следующей таблице описаны пользовательские свойства назначения «Модуль чтения данных». Все свойства, за исключением **DataReader** , доступны для чтения и записи.  

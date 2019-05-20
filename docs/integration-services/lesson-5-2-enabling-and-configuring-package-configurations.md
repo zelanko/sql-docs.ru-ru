@@ -1,5 +1,5 @@
 ---
-title: Этап 2. Активация и настройка конфигураций пакетов | Документация Майкрософт
+title: Шаг 2. Активация и настройка конфигураций пакетов | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/08/2019
 ms.prod: sql
@@ -11,14 +11,18 @@ ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b65e44de58e2aeea21485b1a2875fa7f00349dc5
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ee2c54b072cf9cd219bed10b0ade7f59fa8bc354
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271691"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65721522"
 ---
 # <a name="lesson-5-2-enable-and-configure-package-configurations"></a>Занятие 5-2. Активация и настройка конфигураций пакетов
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 В этой задаче вы преобразуете проект в модель развертывания пакета и включите конфигурации пакетов с помощью мастера настройки пакета. Этот мастер будет использоваться для создания XML-файла конфигурации, который содержит параметры конфигурации для свойства **Каталог** контейнера "Цикл ForEach". Значение свойства **Каталог** содержится в новой переменной уровня пакета, обновлять которую можно в ходе выполнения. Кроме того, вы заполните новую папку с образцами данных в целях тестирования.  
   

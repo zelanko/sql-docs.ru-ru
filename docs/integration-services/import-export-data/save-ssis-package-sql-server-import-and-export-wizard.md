@@ -12,14 +12,18 @@ ms.assetid: 7bf8ac6a-5599-43ab-bf5c-e072c11b85a0
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 33bde1142408b160317c74f23cb7636783e44390
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 163cdb0de7c41961e0646e38a5a208ec842f11b9
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58279888"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723760"
 ---
 # <a name="save-ssis-package-sql-server-import-and-export-wizard"></a>Сохранение пакета служб SSIS (мастер экспорта и импорта SQL Server)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Если на странице **Сохранение и запуск пакета** вы указали, что хотите сохранить параметры в виде пакета служб SQL Server Integration Services (SSIS), мастер импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выводит окно **Сохранение пакета служб SSIS**. На этой странице можно указать дополнительные параметры для сохранения пакета, создаваемого мастером.  
 
 Параметры, которые вы видите на странице **Сохранение пакета служб SSIS** , зависят от выбора, сделанного ранее на странице **Сохранение и запуск пакета** и касающегося сохранения пакета в SQL Server или в файловой системе. Чтобы ознакомиться с описанием страницы **Сохранение и запуск пакета** , см. раздел [Сохранение и запуск пакета](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md).

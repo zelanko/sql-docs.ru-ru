@@ -13,14 +13,18 @@ ms.assetid: 292f9572-362a-45c1-879a-d81d31496ca7
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 314e6895b4a4888970ae09fb29851446b3d6859c
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 04992a3c70342d60d5c64e251081a32672d65812
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273219"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65720060"
 ---
 # <a name="microsoft-connector-for-sap-bw-f1-help"></a>Справка F1 по Microsoft Connector для SAP BW
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   В этом разделе содержатся подразделы справки F1 для трех компонентов [!INCLUDE[msCoName](../includes/msconame-md.md)] Microsoft Connector 1.1 для SAP BW. Эти разделы доступны также из пользовательского интерфейса, если нажать клавишу F1 или щелкнуть меню «Справка» на страницах мастеров или в диалоговых окнах.  
 
 > [!IMPORTANT]

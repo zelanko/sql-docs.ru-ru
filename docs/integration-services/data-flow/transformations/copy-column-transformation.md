@@ -18,14 +18,18 @@ ms.assetid: 1c72a313-9026-46bc-a57f-c6b3f47346f8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6023db6e91b7d689afe621b23b6b0654ff70d985
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 7ff2de68a43fff15b452579c6ecf681ea586772c
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290430"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726201"
 ---
 # <a name="copy-column-transformation"></a>преобразование «Копирование столбца»
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Преобразование «Копирование столбца» позволяет создавать новые столбцы путем копирования входных столбцов и добавления новых к выходу преобразования. На более поздних этапах потока данных к копиям столбцов могут применяться различные преобразования. Например, преобразование «Копирование столбца» можно использовать для создания копии столбца и дальнейшего перевода символов скопированных данных в верхний регистр с помощью преобразования «Таблица символов» или для статистической обработки нового столбца с помощью преобразования «Агрегатная обработка».  
   
 ## <a name="configuration-of-the-copy-column-transformation"></a>Настройка преобразования «Копирование столбца»  

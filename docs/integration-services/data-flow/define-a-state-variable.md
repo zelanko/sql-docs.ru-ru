@@ -11,14 +11,18 @@ ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0561da6cd6877d9129a6581d2d415b3675c467a6
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 6d689ee12759b6d894a068bf5a9f9437a0631ef0
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281818"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726974"
 ---
 # <a name="define-a-state-variable"></a>Определение переменной состояния
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Эта процедура описывает, как определить переменную пакета, в которой хранится информация состояния CDC.  
   
  Переменная состояния CDC загружается, инициализируется и обновляется с помощью задачи «Управление CDC» и используется компонентом потока данных «Источник CDC» в целях определения текущего диапазона обработки для записей с данными об изменениях. Переменная состояния CDC может быть определена в контейнере, который является общим для задачи «Управление CDC» и источника CDC. Такое определение может быть сделано на уровне пакета, а также в других контейнерах, таких как контейнер цикла.  

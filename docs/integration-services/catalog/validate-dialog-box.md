@@ -14,14 +14,18 @@ ms.assetid: 134e14ce-4f8d-4a20-889a-918014c841d8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9af217f8a866438774a4345b2fd799609ef5e360
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 26390931bce4a2b26a4b9e2c234368b02a1e0442
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282804"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729146"
 ---
 # <a name="validate-dialog-box"></a>Проверка диалогового окна
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Воспользуйтесь диалоговым окном **Проверка** для поиска типичных проблем в проекте или пакете служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
  При обнаружении проблемы в верхней части диалогового окна отображается сообщение. В противном случае в верхней части диалогового окна отображается сообщение «Готово».  

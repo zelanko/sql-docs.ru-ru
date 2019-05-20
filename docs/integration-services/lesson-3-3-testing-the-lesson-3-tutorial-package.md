@@ -11,14 +11,18 @@ ms.assetid: 1096a476-93cf-4474-86f5-27d6357eb380
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c7e644744a53318ed1359bc0cdb47c3c896ed5ff
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 5884506c83dfc0f3cbee6119ad9047807c35fbfe
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274850"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722093"
 ---
 # <a name="lesson-3-3-test-the-lesson-3-tutorial-package"></a>Занятие 3-3. Тестирование учебного пакета занятия 3
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 В этой задаче вы выполните пакет **Lesson 3.dtsx**. После запуска пакета в окне **Журнал событий** отображаются записи, которые SSIS заносит в файл журнала с помощью регистратора. После завершения выполнения пакета можно просмотреть содержимое файла журнала.  
   

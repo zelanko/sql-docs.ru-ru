@@ -11,14 +11,18 @@ ms.assetid: b613cef7-7993-4d89-a429-a8251d74d435
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fc16bdad7012738fde65fbd695dae019d9d41f2c
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d4c843fa7af8e3390e820714886b7988edab878d
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277073"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65720825"
 ---
 # <a name="lesson-6-4-deploy-the-lesson-6-package"></a>Занятие 6-4. Развертывание пакета занятия 6
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Развертывание пакета предполагает его добавление в каталог SSISDB служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] в экземпляре SQL Server. На этом занятии вы добавите пакет занятия 6 в каталог SSISDB, зададите новый параметр и выполните пакет. На этом занятии будет использоваться SQL Server Management Studio для добавления пакета занятия 6 в каталог SSISDB и развертывания пакета. После развертывания пакета вы измените параметр, указав новое расположение, а затем выполните пакет.   
 Вы научитесь выполнять следующие действия:  

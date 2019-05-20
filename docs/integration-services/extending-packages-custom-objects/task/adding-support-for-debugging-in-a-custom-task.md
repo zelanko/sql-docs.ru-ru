@@ -22,14 +22,18 @@ ms.assetid: 7f06e49b-0b60-4e81-97da-d32dc248264a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: eea4ee60abf1f3bda30a464f506c5ffed23f4091
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: abb30ee26f5063c4a119b13c6891b53518d63b9e
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282388"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724495"
 ---
 # <a name="adding-support-for-debugging-in-a-custom-task"></a>Добавление поддержки отладки в пользовательскую задачу
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Обработчик среды выполнения служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] дает возможность приостанавливать пакеты, задачи и другие типы контейнеров во время выполнения при помощи точек останова. Использование точек останова позволяет просматривать и исправлять ошибки, мешающие правильной работе приложения или задач. Архитектура точек останова позволяет оценивать во время выполнения значения объектов в пакете в определенных точках выполнения при приостановке обработки задачи.  
   
  Разработчики пользовательских задач могут использовать эту архитектуру для создания целевых объектов пользовательских точек останова с помощью интерфейса <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> и его родительского интерфейса <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend>. Интерфейс <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> определяет взаимодействие между обработчиком среды выполнения и задачей для создания сайтов или целевых объектов пользовательских точек останова и управления этими сайтами и объектами. Интерфейс <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend> предоставляет методы и свойства, вызываемые обработчиком среды выполнения для уведомления задачи о приостановке или возобновлении ее обработки.  

@@ -1,5 +1,5 @@
 ---
-title: Шаг 1. Копирование пакета развертывания | Документация Майкрософт
+title: Шаг 1. Копирование пакета развертывания | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,14 +11,18 @@ ms.assetid: b6ef1e56-d278-4a24-afd3-68d8e0595cbb
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9fbe3f30d37bab783424deeefb5517cd6fa553a2
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 153975d4b2a418c694188ca30c0ddb9fc19b0fc8
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58279468"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722390"
 ---
 # <a name="lesson-3-1---copying-the-deployment-bundle"></a>Занятие 3–1. Копирование пакета развертывания
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 В этой задаче требуется скопировать пакет развертывания на целевой компьютер.  
   
 Самый простой способ скопировать пакет развертывания на целевой компьютер включает создание общей папки на целевом компьютере, сопоставление соответствующего сетевого диска и копирование комплекта развертывания в эту общую папку. Если сведения о создании и настройке общих папок или сопоставлении сетевых дисков отсутствуют, обратитесь к документации по операционной системе Windows.  

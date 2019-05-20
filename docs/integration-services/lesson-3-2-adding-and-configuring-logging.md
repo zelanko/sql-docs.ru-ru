@@ -1,5 +1,5 @@
 ---
-title: Этап 2. Добавление и настройка ведения журнала | Документация Майкрософт
+title: Шаг 2. Добавление и настройка ведения журнала | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/04/2019
 ms.prod: sql
@@ -11,14 +11,18 @@ ms.assetid: 56105f3f-e500-4669-8c8e-acf434527727
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a6ba2488aff0efdb6ed0d1c4ae03ec46ba6a6a25
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 80d2eb1ec30b4729deb4891c451fc5967bec9d54
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277913"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722072"
 ---
 # <a name="lesson-3-2-add-and-configure-logging"></a>Занятие 3-2. Добавление и настройка ведения журнала
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 В этой задаче включается ведение журнала потоков данных для пакета "Урок 3.dtsx". Затем нужно настроить регистратор для текстовых файлов, чтобы записать в журнал события PipelineExecutionPlan и PipelineExecuteTrees. Регистратор текстовых файлов создает журналы, которые легко просматривать и пересылать. Простота этих файлов журнала делает их удобными во время базового тестирования пакета. Для просмотра записей журнала можно использовать окно **События журнала** конструктора служб [!INCLUDE[ssIS](../includes/ssis-md.md)].  
   

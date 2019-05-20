@@ -10,14 +10,18 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 53235c3c95c6c943ac340aecfaa8a62ff347a753
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c384881ffdc02af219de417434d882d41d34c1ef
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659762"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65718756"
 ---
 # <a name="integration-services-scale-out-manager"></a>Диспетчер Integration Services Scale Out
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Диспетчер Scale Out — это средство, которое обеспечивает централизованное управление всей топологией SSIS Scale Out. Оно избавляет от необходимости выполнять задачи управления и команды Transact-SQL на нескольких компьютерах.
 

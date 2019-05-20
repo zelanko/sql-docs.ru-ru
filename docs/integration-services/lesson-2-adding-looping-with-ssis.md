@@ -1,5 +1,5 @@
 ---
-title: Занятие 2. Добавление циклов с помощью служб SSIS | Документация Майкрософт
+title: Урок 2. Добавление циклов с помощью служб SSIS | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/03/2019
 ms.prod: sql
@@ -11,14 +11,18 @@ ms.assetid: 01f2ed61-1e5a-4ec6-b6a6-2bd070c64077
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 188735b5a02150ba801154e338090ce75dc23060
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: e8903517affd4d0a8e395a17cb97e27ddd5a67d5
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274184"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722454"
 ---
-# <a name="lesson-2-add-looping-with-ssis"></a>Занятие 2. Добавление циклов с помощью служб SSIS
+# <a name="lesson-2-add-looping-with-ssis"></a>Урок 2. Добавление циклов с помощью служб SSIS
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 В разделе [Занятие 1. Создание проекта и простого пакета с помощью служб SSIS](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md) вы создали пакет, извлекающий данные из отдельного источника неструктурированных файлов. Затем эти данные преобразовывались с помощью преобразований "Уточняющий запрос". Наконец, пакет загружал данные в копию таблицы фактов **FactCurrencyRate** в образце базы данных **AdventureWorksDW2012**.  
   

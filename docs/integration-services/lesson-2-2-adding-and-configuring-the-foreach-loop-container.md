@@ -1,5 +1,5 @@
 ---
-title: Этап 2. Добавление и настройка контейнера "Цикл по каждому элементу" | Документация Майкрософт
+title: Шаг 2. Добавление и настройка контейнера "Цикл по каждому элементу" | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/03/2019
 ms.prod: sql
@@ -11,14 +11,18 @@ ms.assetid: 88a973cc-0f23-4ecf-adb6-5b06279c2df6
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4db32185da7c27d94b0afb52230aa89ff71abf95
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 0c865c00eb1020aa6128cdd7a40d61a191bad2a3
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280168"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722744"
 ---
 # <a name="lesson-2-2-add-and-configure-the-foreach-loop-container"></a>Урок 2-2. Добавление и настройка контейнера "Цикл по каждому элементу"
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 В этой задаче вы добавите функцию, которая циклически обрабатывает папку неструктурированных файлов и применяет к каждому из этих файлов преобразование потока данных, созданное в уроке 1. Это будет выполнено путем добавления в поток управления и настройки контейнера «цикл по каждому элементу».  
   

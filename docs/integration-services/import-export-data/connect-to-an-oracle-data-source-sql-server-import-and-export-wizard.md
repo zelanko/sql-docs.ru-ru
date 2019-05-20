@@ -10,14 +10,18 @@ ms.assetid: b0bd1f5a-34dd-4be3-9ac8-f9f87727781b
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 106318f35e6cf4ee730b4cd2a6b0cb1831151041
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: 04a7354fac044a835ab5d5649d56c01e72e6e995
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58221938"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723881"
 ---
 # <a name="connect-to-an-oracle-data-source-sql-server-import-and-export-wizard"></a>Подключение к источнику данных Oracle (мастер импорта и экспорта SQL Server)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 В этом разделе показано, как подключаться к источникам данных **Oracle** со страницы **Выбор источника данных** или **Выбор назначения** в мастере импорта и экспорта SQL Server. Для подключения к Oracle можно использовать ряд поставщиков данных.
 
 > [!IMPORTANT]

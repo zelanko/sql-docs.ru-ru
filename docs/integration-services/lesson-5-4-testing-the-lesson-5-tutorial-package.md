@@ -11,14 +11,18 @@ ms.assetid: 5215b77d-c2ec-4b25-a3de-ca49ea197d74
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f97121a1916362d415eef3de717ad091fbac7958
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: fc67c0a145b1ec32dc14cae8d56e538f14c2808e
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272294"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65721536"
 ---
 # <a name="lesson-5-4-test-the-lesson-5-package"></a>Занятие 5-4. Тестирование пакета занятия 5
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Во время выполнения пакету присваивается значение свойства **Каталог** из переменной конфигурации, а не имя каталога, которое было указано при создании пакета. Значение этой переменной берется из XML-файла **SSISTutorial.dtsConfig**.  
   

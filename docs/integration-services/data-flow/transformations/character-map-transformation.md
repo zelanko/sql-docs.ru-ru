@@ -19,14 +19,18 @@ ms.assetid: e0f50eb6-b893-400f-bb8c-fb3072cc2620
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cb26cf898282273ea94b07c7d3b6c618d476a35b
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 0e5ebfb5edbcbb0cc6ec47b063ffb11d87b01c55
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273001"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726244"
 ---
 # <a name="character-map-transformation"></a>Преобразование «Таблица символов»
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Преобразование «Таблица символов» применяет строковые функции, такие как преобразование из нижнего регистра в верхний, к символьным данным. Это преобразование работает только со столбцами данных строкового типа данных.  
   
  Преобразование «Таблица символов» может обновить данные столбца преобразованными значениями или поместить преобразованные данные в новый столбец выхода преобразования. Можно применять различные наборы операторов сопоставления к одному входному столбцу и помещать результаты в разные столбцы. Например, можно преобразовать данные одного и того же столбца в верхний и нижний регистр и поместить результаты в два различных столбца.  

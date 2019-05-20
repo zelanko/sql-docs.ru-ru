@@ -18,14 +18,18 @@ ms.assetid: 10bdc56e-c5cd-4ddb-b2f7-375fe57fe8b2
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 012cbb7f850d638e8934dd59d344eb7efadebfd8
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: fb4be4efb5c9cce7273bb9024b7b2b3a5565af16
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275273"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728165"
 ---
 # <a name="multiple-files-connection-manager"></a>диспетчер соединений с несколькими файлами
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Диспетчер соединений с несколькими файлами позволяет пакету обращаться к существующим файлам и папкам или создавать файлы и папки во время выполнения.  
   
 > [!NOTE]  

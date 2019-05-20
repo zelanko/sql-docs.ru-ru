@@ -10,14 +10,18 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.reviewer: ''
-ms.openlocfilehash: b64cddbe6c786e488c1ba9b9d289e9e48f786cf3
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: c605d2f0e42f34a8f1b4c7a01ea7ffce43d23f9e
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58221967"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723184"
 ---
 # <a name="lesson-1-6-add-and-configure-the-lookup-transformations"></a>Занятие 1-6. Добавление и настройка преобразований "Уточняющий запрос"
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 После того как источник неструктурированных файлов настроен для извлечения данных из исходного файла, следует определить преобразования "Уточняющий запрос", необходимые для получения значений **CurrencyKey** и **DateKey**. Преобразование «Уточняющий запрос» выполняет поиск, соединяя данные указанного входного столбца со столбцом эталонного набора данных. Эталонным набором данных может быть таблица или представление, новая таблица или результат инструкции SQL. В этом учебнике преобразование "Уточняющий запрос" использует диспетчер подключений OLE DB, чтобы подключиться к базе данных с исходными данными эталонного набора данных.  
   

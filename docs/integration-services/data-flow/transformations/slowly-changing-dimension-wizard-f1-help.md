@@ -13,14 +13,18 @@ ms.assetid: e4d62b73-77c5-4b26-9b6d-d5f245768fc8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fad4e5066b86870405ac27cae9bdc835137b206b
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 0f08fdd63b68d2591911d99b02fb0cf67a1f7548
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281808"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725849"
 ---
 # <a name="slowly-changing-dimension-wizard-f1-help"></a>Справка F1 мастера медленно меняющихся измерений
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   **Мастер медленно изменяющихся измерений** используется для настройки загрузки данных в различные типы медленно изменяющихся измерений. Данный подраздел содержит справку F1 для страниц **мастера медленно изменяющихся измерений**. В следующей таблице описаны подразделы, содержащиеся в этом разделе.  
   
  Дополнительные сведения о работе этого мастера см. в разделе [Slowly Changing Dimension Transformation](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md).  

@@ -11,14 +11,18 @@ ms.date: 08/20/2018
 ms.author: janinez
 author: janinezhang
 manager: craigg
-ms.openlocfilehash: dcbd6f7c70bebd84b7435d4371b38ee9cc8ef3d6
-ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
+ms.openlocfilehash: 73b77182cc8ed447f8540aed5010aeee704c0e97
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59671270"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65720573"
 ---
 # <a name="load-data-into-sql-server-or-azure-sql-database-with-sql-server-integration-services-ssis"></a>Загрузка данных в SQL Server или базу данных SQL Azure с помощью SQL Server Integration Services (SSIS)
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Вы можете создать пакет служб SQL Server Integration Services (SSIS) для загрузки данных в SQL Server или [базу данных SQL Azure](/azure/sql-database/). При необходимости можно реструктуризировать, преобразовать и очистить данные по мере их прохождения через поток данных SSIS.
 

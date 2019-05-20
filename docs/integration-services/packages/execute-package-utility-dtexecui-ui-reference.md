@@ -24,14 +24,18 @@ ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 38745dc80686129b73d087a2977231558c3904b7
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 195291c878f0529d24fe05a1b806974f61fa6df9
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272576"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65719896"
 ---
 # <a name="execute-package-utility-dtexecui"></a>Служебная программа для запуска пакетов (dtexecui)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   **Программа выполнения пакетов** используется для запуска пакетов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Служебная программа запускает пакеты, которые хранятся в одном из трех расположений: в базе данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , хранилище пакетов [!INCLUDE[ssIS](../../includes/ssis-md.md)] и файловой системе. Этот пользовательский интерфейс, который можно открыть из [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или с помощью команды **dtexecui** в командной строке, представляет альтернативу запуску пакетов с использованием программы командной строки **DTExec** .  
   
  Пакеты выполняются в том же процессе, что и служебная программа **dtexecui.exe** . Так как эта служебная программа является 32-разрядной, пакеты, запускаемые с помощью **dtexecui.exe** в 64-разрядной среде, выполняются в режиме WOW (Windows на платформе Win32). Занимаясь разработкой и отладкой команд на 64-разрядном компьютере с использованием программы dtexecui.exe, необходимо проверять эти команды в 64-разрядном режиме с помощью 64-разрядной версии программы **dtexec.exe** , прежде чем развертывать эти команды или включать их в расписание на рабочем сервере.  

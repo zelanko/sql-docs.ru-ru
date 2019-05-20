@@ -11,14 +11,18 @@ ms.assetid: e04a5321-63d5-4ec5-85b9-cb4eaf6c87f6
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 95469ad21694b0b086731986bfb27fc524f02b26
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 64c54d20ce6274ae0bb8bbf194cf12324e344d2f
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282438"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723040"
 ---
 # <a name="lesson-1-4---adding-package-configurations"></a>Занятие 1–4. Добавление конфигураций пакетов
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 В этой задаче необходимо добавить конфигурацию каждому пакету. Конфигурации позволяют обновлять значения свойств и объектов пакетов во время выполнения.  
   
 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] предоставляют различные типы конфигурации. Конфигурации можно сохранять в переменных среды, в записях реестра, пользовательских переменных, таблицах [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и XML-файлах. Чтобы обеспечить дополнительную гибкость, службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] поддерживают косвенную конфигурацию. Это подразумевает использование переменной среды для указания расположения конфигурации, которая, в свою очередь, указывает фактические значения. Для пакетов проекта из учебника по развертыванию используется сочетание XML-файлов конфигурации и косвенная конфигурация. В XML-файле конфигурации могут содержаться параметры конфигурации для различных свойств, а когда возможно, и для различных пакетов. В данном учебнике для каждого пакета используется отдельный файл конфигурации.  

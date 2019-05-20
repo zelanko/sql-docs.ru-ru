@@ -11,14 +11,18 @@ ms.assetid: 96af3073-8f11-4444-b934-fe8613a2d084
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8ba4cadf966bdeec08cee922d091a3b01820e082
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d0572019dabc6d62a634022ebeac2cdcb295a9e1
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277673"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723333"
 ---
 # <a name="lesson-1-4-add-a-data-flow-task-to-the-package"></a>Урок 1-4. Добавление задачи потока данных к пакету
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 После того, как вы создали диспетчеры подключений для исходных и целевых данных, следует добавить в пакет задачу потока данных. Задача потока данных определяет подсистему обработки потока данных, которая осуществляет передачу данных между источниками и назначениями, а также преобразует, очищает и изменяет данные при их перемещении. В задаче потока данных сосредоточена большая часть работы в процессе извлечения, преобразования и загрузки.  
   

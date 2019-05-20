@@ -1,5 +1,5 @@
 ---
-title: Шаг 1. Копирование пакета, созданного на занятии 5 | Документация Майкрософт
+title: Шаг 1. Копирование пакета, созданного на занятии 5 | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/11/2019
 ms.prod: sql
@@ -11,14 +11,18 @@ ms.assetid: a25fcc13-987e-4f3d-8f0c-76f7e6e59920
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 566c3db45d64f0ce013ed538691bd8ce6af60f0f
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ca91b9a6e432346e4ecb6e43e333a80e7cded22f
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275203"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65721247"
 ---
 # <a name="lesson-6-1-copy-the-lesson-5-package"></a>Занятие 6-1. Копирование пакета занятия 5
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 В этой задаче будет создана копия пакета **Lesson 5.dtsx**, созданного на занятии 5. Если вы не прошли занятие 5, можно добавить готовый пакет занятия 5, прилагаемый к учебнику по проекту, скопировать его и работать с копией. Полученная копия будет использоваться на протяжении всего занятия 6. 
 

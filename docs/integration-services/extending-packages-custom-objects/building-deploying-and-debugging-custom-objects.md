@@ -13,14 +13,18 @@ ms.assetid: b03685bc-5398-4c3f-901a-1219c1098fbe
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7ed254b6dd9b9bca5216962f769a55db99823dff
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: a6f96e795b44e936c4088e4ded571e76c33d4863
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271331"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724796"
 ---
 # <a name="building-deploying-and-debugging-custom-objects"></a>Построение, развертывание и отладка пользовательских объектов
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   После написания кода пользовательского объекта для служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] необходимо построить сборку, развернуть ее и интегрировать в конструктор служб [!INCLUDE[ssIS](../../includes/ssis-md.md)], чтобы сделать ее доступной для использования в пакетах, а затем протестировать и выполнить ее отладку.  
   
 ##  <a name="top"></a> Шаги построения, развертывания и отладки пользовательского объекта для служб Integration Services  

@@ -12,14 +12,18 @@ ms.assetid: eadc54a6-f936-4ffc-91d7-fbfd2bdcab93
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 852e150955371d78fe8170a2f4fc3be037d35ccd
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: 5f7b30970020963e83fa101971d6c30d9e76397a
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58222098"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723952"
 ---
 # <a name="column-mappings-sql-server-import-and-export-wizard"></a>Сопоставления столбцов (мастер импорта и экспорта SQL Server)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Если выбрав существующие таблицы и представления, которые нужно скопировать, или просмотрев свой запрос, вы нажмете **Изменить сопоставления**, в мастере импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] откроется диалоговое окно **Сопоставления столбцов** . На этой странице можно указать и настроить конечные столбцы, в которые будут отправляться данные, копируемые из исходных столбцов. Зачастую на этой странице не нужно ничего менять.
   
 Если нужно копировать не все столбцы в выбранной таблице, на этой странице можно исключить лишние столбцы. Для столбцов, которые следует пропустить, выберите пункт **игнорировать** в столбце **Назначение** списка **Сопоставления**.

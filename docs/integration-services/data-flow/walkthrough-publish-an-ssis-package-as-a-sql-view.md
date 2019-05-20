@@ -13,14 +13,18 @@ ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0096e6ff64267e6568abd22729f250a4c76adc03
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 8614217f7b8b081d43468d25707aa394c917b1ff
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281868"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725762"
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>Пошаговое руководство. Публикация пакета служб SSIS в качестве представления SQL
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   В этом пошаговом руководстве приводятся подробные инструкции для публикации пакета служб SSIS в качестве представления SQL в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="prerequisites"></a>предварительные требования  
@@ -30,7 +34,7 @@ ms.locfileid: "58281868"
   
 2.  [SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md).  
   
-## <a name="step-1-build-and-deploy-ssis-project-to-the-ssis-catalog"></a>Шаг 1. Создание и развертывание проекта SSIS в каталоге SSIS  
+## <a name="step-1-build-and-deploy-ssis-project-to-the-ssis-catalog"></a>Шаг 1. Создание и развертывание проекта SSIS в каталоге SSIS  
  На этом шаге создается пакет служб SSIS, который извлекает данные из поддерживаемого источника данных SSIS (в данном примере будет использоваться база данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ) и выводит данные с помощью компонента назначения потоковой передачи данных. Затем будет выполнено построение и развертывание проекта служб SSIS в каталоге служб SSIS.  
   
 1.  Запустите **SQL Server Data Tools**. В меню **Пуск** последовательно укажите пункты **Все программы**, **Microsoft SQL Server**и выберите **SQL Server Data Tools**.  
@@ -82,7 +86,7 @@ ms.locfileid: "58281868"
   
     2.  В соответствии с инструкциями мастера разверните проект в каталоге служб SSIS на локальном сервере базы данных. В следующем примере используется **Power BI** в качестве имени папки и **SSISPackagePublishing** в качестве имени проекта в каталоге служб SSIS.  
   
-## <a name="step-2-use-the-ssis-data-feed-publishing-wizard-to-publish-ssis-package-as-a-sql-view"></a>Этап 2. Публикация пакета SSIS в виде представления SQL с помощью мастера публикации веб-канала данных SSIS  
+## <a name="step-2-use-the-ssis-data-feed-publishing-wizard-to-publish-ssis-package-as-a-sql-view"></a>Шаг 2. Публикация пакета SSIS в виде представления SQL с помощью мастера публикации веб-канала данных SSIS  
  На этом шаге используется мастер публикации веб-канала данных служб SQL Server Integration Services (SSIS) для публикации пакета служб SSIS в виде представления в базе данных SQL Server. Выходные данные пакета могут быть востребованы посредством запроса этого представления.  
   
  Мастер публикации веб-канала данных служб SSIS создает связанный сервер с помощью поставщика OLE DB для служб SSIS (SSISOLEDB), а затем создает представление SQL, состоящее из запроса на связанном сервере. Этот запрос содержит имя папки, имя проекта и имя пакета в каталоге служб SSIS.  

@@ -11,14 +11,18 @@ ms.assetid: a7e6ec9c-d31d-4613-9525-8947a7b358f7
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2eb654217e05004dab02c97941171e0725af5715
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 76c9fe5325f976d849f18314c54be3e9ffeaf626
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58288780"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723489"
 ---
 # <a name="lesson-1-3---adding-packages-and-other-files"></a>Занятие 1–3. Добавление пакетов и других файлов
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 В этой задаче к проекту, созданному в предыдущей задаче учебника по развертыванию, добавляются существующие пакеты, вспомогательные файлы для поддержки отдельных пакетов, а также файл сведений. Например, будет добавлен файл XML-данных, содержащий данные для пакета, и текстовый файл Readme с данными о всех пакетах проекта.  
   
 При развертывании пакетов в тестовой или рабочей среде файлы данных обычно не включаются в развертывание. Вместо этого источники данных настраиваются таким образом, чтобы обновлять соответствующие пути доступа к тестовым или рабочим версиям файлов или баз банных. В данном учебнике файлы данных включены в пакет развертывания для учебных целей.  

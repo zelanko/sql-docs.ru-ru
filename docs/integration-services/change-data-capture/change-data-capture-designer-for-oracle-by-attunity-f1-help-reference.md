@@ -13,14 +13,18 @@ ms.assetid: aa2ec095-6a32-44a8-9069-41759d087162
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6737c03525d82c123b9c1b77bfad7ecdfb5c44ce
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 70fdb66a6d9b9e14d5f308532d07ddc16264614b
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58278073"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729080"
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity-f1-help-reference"></a>Справка F1 конструктора системы отслеживания измененных данных для Oracle компании Attunity
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Конструктор системы отслеживания измененных данных для Oracle от Attunity используется для создания экземпляра Oracle CDC и управления им. В темах этого раздела описывается выполнение различных задач в консоли конструктора CDC.  
   
 ## <a name="what-do-you-want-to-do"></a>Выбор действия  

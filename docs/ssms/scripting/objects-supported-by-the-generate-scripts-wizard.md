@@ -7,16 +7,16 @@ ms.technology: scripting
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 071eb2cb-f073-41ca-9f4d-11d3b8803495
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 35882207de5528147883ed3ebe408344cbd3f7fc
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 9161815d886594c21a69739aee88c1893bda7007
+ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51644000"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65821346"
 ---
 # <a name="objects-supported-by-the-generate-scripts-wizard"></a>Объекты, поддерживаемые мастером создания скриптов
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "51644000"
   
 ||||||  
 |-|-|-|-|-|  
-|роль приложения;|Роль базы данных|Схема|Определяемое пользователем статистическое выражение|Представление*|  
+|Роль приложения|Роль базы данных|схема|Определяемое пользователем статистическое выражение|Представление*|  
 |Сборка|Ограничение DEFAULT|Хранимая процедура*|Определяемый пользователем тип данных|Коллекция схем XML|  
 |Ограничение CHECK|Полнотекстовый каталог|Синоним|Определяемая пользователем функция||  
 |Хранимая процедура среды CLR*|Указатель|Таблица|Определяемая пользователем таблица||  

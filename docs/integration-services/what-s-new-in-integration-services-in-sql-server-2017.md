@@ -11,14 +11,18 @@ ms.assetid: e26d7884-e772-46fa-bfdc-38567fe976a1
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 75efe6688c1bc2efc000a5021ce97503a09b0306
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 6d8660aa65699e6abd22c73e13c3673903ff6bfb
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290810"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65713533"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2017"></a>Новые возможности служб Integration Services в SQL Server 2017
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 В этой статье описаны функции, которые были добавлены или обновлены в [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].
 
 > [!NOTE]
