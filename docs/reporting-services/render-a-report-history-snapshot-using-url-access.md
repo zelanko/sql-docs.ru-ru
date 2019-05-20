@@ -2,7 +2,7 @@
 title: Обработка моментального снимка журнала отчета с использованием доступа по URL-адресу | Документы Майкрософт
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - snapshots [Reporting Services], URL access
 - snapshots [Reporting Services], rendering report history
 ms.assetid: 3f87f82d-0e61-4492-9c4b-f5238c39e8cd
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 054f885cc970060b042532ea91ff561853000d1b
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 2caf9def46440aa87f8b4e143cc9e3163e408ba5
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812857"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580805"
 ---
 # <a name="render-a-report-history-snapshot-using-url-access"></a>Обработка моментального снимка журнала отчета с использованием доступа по URL-адресу
   Подготовить отчет к просмотру можно с помощью моментального снимка журнала отчета. Для этого необходимо указать параметр *rs:Snapshot* и присвоить ему значение допустимого идентификатора моментального снимка. Значение параметра должно указываться в формате ГГГГ-ММ-ДДТЧЧ:ММ:СС согласно стандарту Международной организации по стандартизации (ISO) 8601.  

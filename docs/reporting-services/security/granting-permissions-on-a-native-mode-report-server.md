@@ -2,7 +2,7 @@
 title: Предоставление разрешений на сервер отчетов в собственном режиме | Документы Майкрософт
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - role-based security [Reporting Services], about role-based security
 - security [Reporting Services], role-based
 ms.assetid: 260dc2e9-546c-4f04-9fa1-977e23c9d68c
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: d5208bdb0924be66e392b0559547b0f65ed5bfa2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: d38bcdb965bc08aa4eb7cad1401bd9d77f42b4ed
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620242"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65579823"
 ---
 # <a name="granting-permissions-on-a-native-mode-report-server"></a>Предоставление разрешений на сервер отчетов в собственном режиме
   Службы SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] используют авторизацию, основанную на ролях, и подсистему проверки подлинности для определения того, кто может выполнять операции и обращаться к элементам на сервере отчетов. Основанная на ролях авторизация разбивает на категории (роли) множество действий, которые может выполнять отдельный пользователь или группа. Проверка подлинности основывается на встроенной проверке подлинности Windows либо в пользовательском модуле проверки подлинности, предоставленном пользователем. Можно использовать стандартные или настраиваемые роли с любым типом проверки подлинности.  
@@ -74,6 +74,6 @@ ms.locfileid: "47620242"
  [Проверка подлинности с использованием сервера отчетов](../../reporting-services/security/authentication-with-the-report-server.md)   
  [Создание назначений ролей и управление ими](../../reporting-services/security/create-and-manage-role-assignments.md)   
  [Защита и обеспечение безопасности служб Reporting Services](../../reporting-services/security/reporting-services-security-and-protection.md)   
- [Управление содержимым сервера отчетов (службы Reporting Services в собственном режиме)](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)  
+ [Управление содержимым сервера отчетов (службы Reporting Services в основном режиме)](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)  
   
   

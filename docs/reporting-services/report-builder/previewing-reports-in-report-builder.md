@@ -2,18 +2,18 @@
 title: Предварительный просмотр отчетов в построителе отчетов | Документы Майкрософт
 ms.date: 01/09/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: ba6b5bdd-d8c6-4aa8-ba32-3a10b11969d4
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 6fe16659ce288a664d684eced0de22ce4382f3a7
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 36c1c3172e4d37963340fdbebce85eff9b5086b9
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56288292"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580716"
 ---
 # <a name="previewing-reports-in-report-builder"></a>Предварительный просмотр отчетов в построителе отчетов
   При создании отчета [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с разбиением на страницы полезно часто осуществлять предварительный просмотр, чтобы убедиться, что отчет отображает то, что нужно. Нажмите кнопку **Выполнить**для предварительного просмотра отчета. Отчет подготавливается к просмотру в режиме предварительного просмотра.  

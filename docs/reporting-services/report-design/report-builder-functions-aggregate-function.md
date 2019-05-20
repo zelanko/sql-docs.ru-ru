@@ -2,18 +2,18 @@
 title: Агрегатная функция (построитель отчетов и службы SSRS) | Документы Майкрософт
 ms.date: 03/15/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 16ce643f-bbb3-40a5-ba78-7aed73156f3e
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: a24554d0317c17edf9c532611c588ea7c38d1926
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: aa6d1892c8aceb4640207bce9bc2321541137b6f
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59367232"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65576387"
 ---
 # <a name="report-builder-functions---aggregate-function"></a>Функции построителя отчетов — агрегатная функция
   Возвращает пользовательские статистические данные заданного выражения в соответствии с определением поставщика данных.  

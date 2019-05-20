@@ -2,20 +2,20 @@
 title: Закрепление области данных отчета в конструкторе отчетов (службы SSRS) | Документы Майкрософт
 ms.date: 05/31/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Data pane, docking
 ms.assetid: 8b87bb59-6083-44cb-ab34-493855b41585
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 230f7bbfcab1587f4934a5548d99cf11f3c94d55
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: c9720a4d5e975f6bf46c17d2008252e05cf7171f
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678892"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65577856"
 ---
 # <a name="dock-the-report-data-pane-in-report-designer-ssrs"></a>Закрепление области данных отчета в конструкторе отчетов (службы SSRS)
   Панель данных отчета конструктора отчетов среды [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]отображает иерархическую структуру объектов данных, которые можно использовать в отчете, в том числе источники данных, наборы данных, поля, параметры и изображения. Источники данных, показанные в этом представлении, могут быть внедренными, а также представлять собой ссылки на общие источники данных, выводимые в обозревателе решений.  

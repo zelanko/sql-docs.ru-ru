@@ -2,18 +2,18 @@
 title: Добавление, перемещение или удаление таблицы, матрицы или списка (построитель отчетов и службы SSRS) | Документы Майкрософт
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 4b97c470-cde0-4bb1-a46e-5f5f5553feaa
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 4911bd9df522331c19388300d45557be35e9facd
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 7239efa5a2d64b3751fde34d7cd1e676ea905dd4
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56297182"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582001"
 ---
 # <a name="add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs"></a>Добавление, перемещение или удаление таблицы, матрицы или списка (построитель отчетов и службы SSRS)
   В отчете [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] с разбиением на страницы область данных содержит данные из набора данных отчета. Области данных включают таблицу, матрицу, список, диаграмму и датчик. Чтобы вложить одну область данных в другую, добавьте каждую область данных по отдельности, а затем перетащите дочернюю область данных на родительскую.  
