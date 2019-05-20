@@ -1,5 +1,5 @@
 ---
-title: Шаг 8. Добавление заметок и форматирование пакета занятия 1 | Документация Майкрософт
+title: Шаг 8. Добавление заметок и форматирование пакета занятия 1 | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/03/2019
 ms.prod: sql
@@ -11,14 +11,18 @@ ms.assetid: e3751e53-77c7-47d0-8fe8-73ed1a53413a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2b145bff827dfa60d6d5d232af8fb26816ebd873
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f830393b516ac583a6c0ae72332bef8ac8177714
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58283128"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722840"
 ---
 # <a name="lesson-1-8-annotate-and-format-the-lesson-1-package"></a>Занятие 1-8. Добавление заметок и форматирование пакета занятия 1 
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 После завершения настройки пакета, созданного на занятии 1, можно приступить к приведению его макета в порядок. Если фигуры в макетах элементов управления и потока данных имеют разные размеры или распределены неравномерно, то структуру пакета может быть трудно понять.  
   

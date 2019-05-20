@@ -9,14 +9,18 @@ ms.technology: integration-services
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3ab178c2f5a3cd8aaeb5a341275956e6bf87dd93
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: b7e2f45d7204790d9d6db2ce58d94ddc7a4bfacc
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281708"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65717354"
 ---
 # <a name="run-an-ssis-package-from-visual-studio-code-with-transact-sql"></a>Выполнение пакета служб SSIS из Visual Studio Code с помощью Transact-SQL
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 В этом кратком руководстве демонстрируется использование Visual Studio Code для подключения к базе данных каталога SSIS и последующее использование инструкций Transact-SQL для запуска пакета служб SSIS, хранящегося в каталоге SSIS.
 
 Visual Studio Code — это редактор кода для Windows, macOS и Linux, который поддерживает расширения, в том числе расширение `mssql` для подключения к Microsoft SQL Server, базе данных SQL Azure или хранилищу данных SQL Azure. Дополнительные сведения о Visual Studio Code см. на странице [Visual Studio Code](https://code.visualstudio.com/).

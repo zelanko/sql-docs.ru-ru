@@ -22,14 +22,18 @@ ms.assetid: 1a7d5925-b387-4e31-af7f-c7f3c5151040
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2c74c19a2127daad9ab43c8a40903cbf1c5ee64f
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 03c0d26ae97be2ca22b341c40b01cf0e5c558399
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282975"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724645"
 ---
 # <a name="validating-a-data-flow-component"></a>Проверка компонента потока данных
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Метод <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.Validate%2A> базового класса <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent> предназначен для того, чтобы не допустить исполнения неправильно настроенного компонента. С помощью этого метода можно убедиться, что у компонента есть нужное число входных и выходных объектов, его пользовательские свойства имеют допустимые значения и что любые нужные соединения заданы. Этот метод также используется для проверки правильности типов данных во входной и выходной коллекциях столбцов и что свойство <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSUsageType> всех столбцов настроено в соответствии с типом компонента. Реализация метода в базовом классе участвует в проверке: она проверяет коллекцию входных столбцов компонента, гарантируя, что каждый столбец этой коллекции ссылается на столбец коллекции <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputCollection100> вышестоящего компонента.  
   
 ## <a name="validate-method"></a>Метод Validate  

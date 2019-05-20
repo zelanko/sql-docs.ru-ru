@@ -12,14 +12,18 @@ ms.assetid: 87d9d3e5-477f-4117-a37f-bff53ea3e14d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d5e0afe01fea1855dde6e174a12d6a9971e78b83
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: e98140e69ce5ba617f1ee048648e73dbc54437b1
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58222168"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723838"
 ---
 # <a name="convert-types-without-conversion-checking-sql-server-import-and-export-wizard"></a>Преобразование типов без проверки (мастер импорта и экспорта SQL Server)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   После выбора существующих таблиц и представлений, которые нужно скопировать, или после просмотра своего запроса в мастере импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может открыться страница **Преобразование типов без проверки**. Эта страница отображается, если мастеру не удается найти требуемые файлы преобразования и сопоставления типов данных между источником и назначением. На странице содержатся сведения, которые помогут понять, чего не хватает.
   
  Нажмите кнопку **Далее** , чтобы продолжить, не зная о результате преобразований типов данных. В противном случае нажмите кнопку **Назад** , чтобы изменить настройки, или нажмите кнопку **Отмена** , чтобы выйти из мастера.

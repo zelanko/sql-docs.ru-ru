@@ -21,14 +21,18 @@ helpviewer_keywords:
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f11fac0a7f875c019f4371144f38c3882d4c013c
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: c3c7c128cc74e43877e481f405d8b7df30ce6b5f
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271498"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65717905"
 ---
 # <a name="sql-server-integration-services"></a>Службы SQL Server Integration Services
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] от [!INCLUDE[msCoName](../includes/msconame-md.md)] — это платформа для построения решений по интеграции и преобразованию данных уровня предприятия. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] можно использовать при решении сложных бизнес-задач путем копирования и загрузки файлов, загрузки хранилищ данных, очистки и интеллектуального анализа данных, а также управления объектами и данными [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 

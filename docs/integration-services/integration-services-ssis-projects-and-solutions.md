@@ -19,14 +19,18 @@ ms.assetid: 28ea8120-0a79-4029-93f0-07d521b32bee
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 607c095af9539fb40d33e27350ab1f287183062c
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 39401de76578ede9bb9ec1d30bc16f1fb933ce57
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272861"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723559"
 ---
 # <a name="integration-services-ssis-projects-and-solutions"></a>Проекты и решения служб Integration Services (SSIS)
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] включает среду [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , предназначенную для разработки пакетов [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
 Пакеты [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] находятся в проектах. Для создания проектов служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] и работы с ними необходимо установить среду [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] . Дополнительные сведения см. в статье [Установка служб Integration Services](../integration-services/install-windows/install-integration-services.md).  

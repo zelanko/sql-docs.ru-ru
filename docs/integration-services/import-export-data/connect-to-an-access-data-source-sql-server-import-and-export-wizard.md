@@ -10,14 +10,18 @@ ms.assetid: b44c159a-c33d-4f3c-bdb8-9832f35317c8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b211885f68be72dbcb03f959aaa1f79307658805
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: 790ffc531244e3a1b757b8809e7ca09e737e87b4
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58221928"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723868"
 ---
 # <a name="connect-to-an-access-data-source-sql-server-import-and-export-wizard"></a>Подключение к источнику данных Access (мастер импорта и экспорта SQL Server)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 В этом разделе показано, как подключаться к источникам данных **Microsoft Access** со страницы **Выбор источника данных** или **Выбор назначения** в мастере импорта и экспорта SQL Server.
 
 На следующем снимке экрана показан пример подключения к базе данных Microsoft Access. В этом примере вам не нужно вводить имя пользователя и пароль, так как целевая база данных не использует файл сведений рабочей группы.
