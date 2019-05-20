@@ -9,14 +9,18 @@ ms.technology: integration-services
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 146b484e96dc35a48ffa5bfe22b0564262bce9e9
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.openlocfilehash: 78a74a6199bfa1db229451a323d417d623bfe1e4
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65376878"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65717619"
 ---
 # <a name="deploy-an-ssis-project-with-powershell"></a>Развертывание проекта служб SSIS с помощью PowerShell
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 Это краткое руководство описывает применение скрипта PowerShell для подключения к серверу базы данных и развертывания проекта служб SSIS в каталоге SSIS.
 
 ## <a name="prerequisites"></a>предварительные требования
