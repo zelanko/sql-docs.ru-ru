@@ -1,7 +1,7 @@
 ---
 title: Поддержка параметров сортировки и Юникода | Документация Майкрософт
 ms.custom: ''
-ms.date: 10/24/2017
+ms.date: 04/23/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ''
@@ -28,12 +28,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 89b07e80d9bb9c0a04fe3dd1829ab4b7180f1718
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 97e66c1c276131876a8a74ab49627f43374cb78f
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206443"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775026"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -147,15 +147,20 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
     
     -   Параметры сортировки версии 100    
     
-    -   Параметры сортировки версии 140    
+    -   Параметры сортировки версии 140   
+    
+    -   Параметры двоичной сортировки BIN2<sup>1</sup>
     
 -   Флаг UTF8 не может применяться к следующим параметрам сортировки:    
     
     -   Параметры сортировки версии 90, которые не поддерживают дополнительные символы (\_SC) или с учетом знаков выбора варианта (\_VSS).    
     
-    -   Параметры двоичной сортировки BIN и BIN2    
+    -   Параметры двоичной сортировки BIN и BIN2<sup>2</sup>    
     
-    -   Параметры сортировки SQL\*       
+    -   Параметры сортировки SQL\*  
+    
+<sup>1</sup> Начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3     
+<sup>2</sup> Начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3
     
 Чтобы получить представление о трудностях, связанных с применением типов данных в Юникоде или не в Юникоде, протестируйте свой сценарий, измерив разницу производительности для этих двух вариантов в вашей среде. Рекомендуется стандартизировать системные параметры сортировки, которые используются в организации, а там, где это возможно, — развертывать серверы и клиенты с поддержкой Юникода.    
     
@@ -245,7 +250,17 @@ WHERE Name LIKE 'Japanese_Bushu_Kakusu_140%' OR Name LIKE 'Japanese_XJIS_140%'
 Все новые параметры сортировки имеют встроенную поддержку дополнительных символов, поэтому ни у одного нового параметра сортировки нет флага SC.
 
 Эти параметры сортировки поддерживаются в индексах ядра СУБД, оптимизированных для памяти таблицах, индексах columnstore и модулях, скомпилированных в собственном коде.
-    
+
+<a name="ctp23"></a>
+
+## <a name="utf-8-support"></a>Поддержка UTF-8.
+
+[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] обеспечивает полную поддержку широко используемой кодировки символов UTF-8 как кодировки импорта или экспорта или как параметров сортировки на уровне столбцов и базы данных для текстовых данных. Кодировка символов UTF-8 допускается в типах данных `CHAR` и `VARCHAR`. Она активируется при создании параметров сортировки с суффиксом `UTF8` или изменении существующих параметров на такие. 
+
+Например, `LATIN1_GENERAL_100_CI_AS_SC` меняется на `LATIN1_GENERAL_100_CI_AS_SC_UTF8`. UTF-8 доступна только для параметров сортировки Windows, которые поддерживают дополнительные символы, представленные в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. `NCHAR` и `NVARCHAR` допускают только кодирование UTF-16 и остаются неизменными.
+
+Эта функция может обеспечить значительную экономию места в хранилище в зависимости от используемой кодировки. Например, изменение имеющегося типа данных столбца со строками в кодировке ASCII (латинская) с `NCHAR(10)` на `CHAR(10)` с использованием параметров сортировки для UTF-8 на 50 % снижает требования к хранению. Это снижение связано с тем, что `NCHAR(10)` требует для хранения 20 байт, тогда как `CHAR(10)` требует 10 байт для той же строки Юникод.
+
 ##  <a name="Related_Tasks"></a> Связанные задачи    
     
 |Задача|Раздел|    
@@ -260,6 +275,7 @@ WHERE Name LIKE 'Japanese_Bushu_Kakusu_140%' OR Name LIKE 'Japanese_XJIS_140%'
 ##  <a name="Related_Content"></a> См. также    
 [Рекомендованные изменения параметров сортировки SQL Server](https://go.microsoft.com/fwlink/?LinkId=113891)    
 [Использование символьного формата Юникод для импорта и экспорта данных (SQL Server)](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)        
+[Написание инструкций Transact-SQL, адаптированных к международному использованию](../../relational-databases/collations/write-international-transact-sql-statements.md)     
 [Рекомендации по миграции SQL Server на Юникод](https://go.microsoft.com/fwlink/?LinkId=113890) — больше не поддерживаются   
 [Веб-сайт консорциума Юникод](https://go.microsoft.com/fwlink/?LinkId=48619)    
     

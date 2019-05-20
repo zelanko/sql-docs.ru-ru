@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 03/27/2019
+ms.date: 04/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,12 +22,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ccc25df3c3567907b50e37164d9090ca63fc58b6
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: 31750fffc81fba1b22377578bddc09e1994e9b29
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582957"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64568342"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -49,6 +49,7 @@ ms.locfileid: "59582957"
 - Включение или отключение функции [интеллектуальной обработки запросов](../../relational-databases/performance/intelligent-query-processing.md).
 - Включение или отключение [упрощенной инфраструктуры профилирования запросов](../../relational-databases/performance/query-profiling-infrastructure.md).
 - включить или отключить новое сообщение об ошибке `String or binary data would be truncated`.
+- Включает или отключает запись последнего действительного плана выполнения в [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md).
 
 ![Значок ссылки](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -85,6 +86,7 @@ ALTER DATABASE SCOPED CONFIGURATION
     | GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
     | LIGHTWEIGHT_QUERY_PROFILING = { ON | OFF }
     | VERBOSE_TRUNCATION_WARNINGS = { ON | OFF }
+    | LAST_QUERY_PLAN_STATS = { ON | OFF }
 }
 ```
 
@@ -154,16 +156,16 @@ PRIMARY
 
 Это значение допустимо только для баз данных-получателей, пока база данных находится на сервере-источнике; оно указывает, что значение этого параметра для всех баз данных-получателей будет равно значению, заданному для сервера-источника. Если конфигурация для сервера-источника изменится, значение в базах данных-получателях изменится соответственно, задавать значение базы данных-получателя явным образом не требуется. PRIMARY — это параметр по умолчанию для баз данных-получателей.
 
-IDENTITY_CACHE **=** { **ON** | OFF }
+IDENTITY_CACHE **=** { **ON** | OFF }      
 
-**Применимо к**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Включает и выключает кэширование идентификации на уровне базы данных. Значение по умолчанию — **ON**. Кэширование идентификаторов используется для повышения производительности инструкции INSERT в таблицах со столбцами идентификаторов. Во избежание пропусков значений столбца идентификаторов в случаях, когда сервер неожиданно перезапускается или выполняет обработку отказа на сервер-получатель, отключите параметр IDENTITY_CACHE. Этот параметр похож на существующий [флаг трассировки 272](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) с той разницей, что его можно задать на уровне базы данных, а не только на уровне сервера.
 
 > [!NOTE]
 > Этот параметр можно задать только для сервера-источника. Дополнительные сведения см. в статье [Столбцы идентификаторов](create-table-transact-sql-identity-property.md).
 
-INTERLEAVED_EXECUTION_TVF **=** { **ON** | OFF }
+INTERLEAVED_EXECUTION_TVF **=** { **ON** | OFF }   
 
 **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
@@ -172,18 +174,18 @@ INTERLEAVED_EXECUTION_TVF **=** { **ON** | OFF }
 > [!NOTE]
 > Для уровня совместимости базы данных 130 или более низкого эта конфигурация области баз данных не оказывает влияния.
 
-BATCH_MODE_MEMORY_GRANT_FEEDBACK **=** { **ON** | OFF}
+BATCH_MODE_MEMORY_GRANT_FEEDBACK **=** { **ON** | OFF}    
 
-**Применимо к**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Позволяет включить или отключить обратную связь по временно предоставляемому буферу памяти в пакетном режиме в области базы данных, сохранив уровень совместимости базы данных 140 или выше. Обратная связь по временно предоставляемому буферу памяти в пакетном режиме — одна из возможностей [интеллектуальной обработки запросов](../../relational-databases/performance/intelligent-query-processing.md), представленная в [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].
 
 > [!NOTE]
 > Для уровня совместимости базы данных 130 или более низкого эта конфигурация области баз данных не оказывает влияния.
 
-BATCH_MODE_ADAPTIVE_JOINS **=** { **ON** | OFF}
+BATCH_MODE_ADAPTIVE_JOINS **=** { **ON** | OFF}   
 
-**Применимо к**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Позволяет включить или отключить адаптивные соединения в пакетном режиме в области базы данных, сохранив уровень совместимости базы данных 140 или выше. Адаптивные соединения в пакетном режиме — одна из возможностей [интеллектуальной обработки запросов](../../relational-databases/performance/intelligent-query-processing.md), представленная в [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].
 
@@ -192,7 +194,7 @@ BATCH_MODE_ADAPTIVE_JOINS **=** { **ON** | OFF}
 
 TSQL_SCALAR_UDF_INLINING **=** { **ON** | OFF }
 
-**Применимо к**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] (компонент в общедоступной предварительной версии)
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (функция на этапе общедоступной предварительной версии)
 
 Позволяет включить или отключить встраивание скалярных определяемых пользователем функций для T-SQL в области базы данных, сохранив уровень совместимости базы данных 150 или выше. Встраивание скалярных определяемых пользователем функций для T-SQL — одна из возможностей семейства функций [интеллектуальной обработки запросов](../../relational-databases/performance/intelligent-query-processing.md).
 
@@ -218,7 +220,7 @@ WHEN_SUPPORTED
 
 ELEVATE_RESUMABLE= { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
 
-**Применимо к**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] и [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] (компонент в общедоступной предварительной версии)
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (функция на этапе общедоступной предварительной версии)
 
 Позволяет выбирать параметры, предписывающие ядру автоматически переводить поддерживаемые операции в возобновляемый режим. Значение по умолчанию — OFF. Оно означает, что операции не будут переводиться в возобновляемый режим, если это явно не указано в инструкции. В представлении [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) указывается текущее значение ELEVATE_RESUMABLE. Эти параметры применяются только к операциям, которые поддерживают возобновление.
 
@@ -259,7 +261,7 @@ XTP_QUERY_EXECUTION_STATISTICS **=** { ON | **OFF** }
 
 ROW_MODE_MEMORY_GRANT_FEEDBACK **=** { **ON** | OFF}
 
-**Применимо к**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] (компонент в общедоступной предварительной версии)
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (функция на этапе общедоступной предварительной версии)
 
 Позволяет включить или отключить обратную связь по временно предоставляемому буферу памяти в построчном режиме в области базы данных, сохранив уровень совместимости базы данных 150 или выше. Обратная связь по временно предоставляемому буферу памяти в режиме строк — одна из возможностей [интеллектуальной обработки запросов](../../relational-databases/performance/intelligent-query-processing.md), представленная в [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] (режим строк поддерживается в [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]).
 
@@ -268,7 +270,7 @@ ROW_MODE_MEMORY_GRANT_FEEDBACK **=** { **ON** | OFF}
 
 BATCH_MODE_ON_ROWSTORE **=** { **ON** | OFF}
 
-**Применимо к**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] (компонент в общедоступной предварительной версии)
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (функция на этапе общедоступной предварительной версии)
 
 Позволяет включить или отключить пакетный режим для данных rowstore в области базы данных, сохранив уровень совместимости базы данных 150 или выше. Пакетный режим для данных rowstore — одна из возможностей семейства функций [адаптивной обработки запросов](../../relational-databases/performance/intelligent-query-processing.md).
 
@@ -277,7 +279,7 @@ BATCH_MODE_ON_ROWSTORE **=** { **ON** | OFF}
 
 DEFERRED_COMPILATION_TV **=** { **ON** | OFF}
 
-**Применимо к**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] (компонент в общедоступной предварительной версии)
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (функция на этапе общедоступной предварительной версии)
 
 Позволяет включить или отключить отложенную компиляцию табличных переменных в области базы данных, сохранив уровень совместимости базы данных 150 или выше. Отложенная компиляция табличных переменных — одна из возможностей семейства функций [адаптивной обработки запросов](../../relational-databases/performance/intelligent-query-processing.md).
 
@@ -295,13 +297,15 @@ GLOBAL_TEMPORARY_TABLE_AUTODROP **=** { **ON** | OFF }
 
 LIGHTWEIGHT_QUERY_PROFILING **=** { **ON** | OFF}
 
-**Применимо к**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Делает возможным включение или отключение [упрощенной инфраструктуры профилирования запросов](../../relational-databases/performance/query-profiling-infrastructure.md). Упрощенная инфраструктура профилирования запросов (LWP) предоставляет более эффективные данные производительности запросов по сравнению со стандартными механизмами профилирования. По умолчанию она включена.
 
+<a name="verbose-truncation"></a>
+
 VERBOSE_TRUNCATION_WARNINGS **=** { **ON** | OFF}
 
-**Применимо к**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
 
 Позволяет включить или отключить новое сообщение об ошибке `String or binary data would be truncated`. В [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] добавлено новое, более конкретное сообщение об ошибке (2628) для подобного сценария:  
 
@@ -312,6 +316,12 @@ VERBOSE_TRUNCATION_WARNINGS **=** { **ON** | OFF}
 Если задано значение OFF при уровне совместимости базы данных 150, для ошибок усечения выдается прежнее сообщение об ошибке 8152.
 
 Для уровня совместимости базы данных 140 или более низкого сообщение об ошибке 2628 активируется явным образом и требует включения [флага трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 460, поэтому эта конфигурация области баз данных не оказывает влияния.
+
+LAST_QUERY_PLAN_STATS **=** { ON | **OFF**}
+
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) (функция на этапе общедоступной предварительной версии)
+
+Позволяет включить или отключить сбор статистики плана последнего запроса (эквивалент фактического плана выполнения) в [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md).
 
 ## <a name="Permissions"></a> Permissions
 
@@ -474,6 +484,8 @@ ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE = WHEN_SUPPORTED ;
 ```
 
 ### <a name="k-clear-a-query-plan-from-the-plan-cache"></a>Л. Очистка плана запроса из кэша планов
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+
 В этом примере конкретный план удаляется из кэша процедур 
 
 ```sql

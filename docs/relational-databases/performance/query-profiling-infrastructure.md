@@ -1,7 +1,7 @@
 ---
 title: Инфраструктура профилирования запросов | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/26/2018
+ms.date: 04/23/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
@@ -17,12 +17,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 221021641787564bb064f1f825da43cff4b27a32
-ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
+ms.openlocfilehash: dbf81f0cb1100fdc5663a8c2ff46343d8d9671c1
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58645566"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64568269"
 ---
 # <a name="query-profiling-infrastructure"></a>Инфраструктура профилирования запросов
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,8 @@ ms.locfileid: "58645566"
 - [Динамическая статистика запросов](../../relational-databases/performance/live-query-statistics.md)
 
 > [!NOTE]
-> Для динамической статистики запросов в [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] используется стандартная инфраструктура профилирования.    
-> В более поздних версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при включении [упрощенной инфраструктуры профилирования](#lwp) вместо стандартного профилирования используется динамическая статистика запросов.
+> Режим *Включить динамическую статистику запросов* в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] использует стандартную инфраструктуру профилирования.    
+> В более поздних версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], если включена [упрощенная инфраструктура профилирования](#lwp), именно она используется для динамической статистики запросов вместо обычного профилирования при просмотре через [Монитор активности](../../relational-databases/performance-monitor/activity-monitor.md) или прямые запросы [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md) динамического административного представления. 
 
 Следующие методы сбора сведений о плане выполнения глобально для **всех сеансов** используют стандартную инфраструктуру профилирования:
 
@@ -121,11 +121,11 @@ WITH (MAX_MEMORY=4096 KB,
 
 **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
 
-[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] включает в себя заново переработанную версию упрощенного профилирования, собирающего данные о количестве строк для всех выполнений. В [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] упрощенное профилирование включено по умолчанию, и флаг трассировки 7412 не оказывает влияния.
+[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] включает в себя заново переработанную версию упрощенного профилирования, собирающего данные о количестве строк для всех выполнений. В [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] упрощенное профилирование включено по умолчанию, и флаг трассировки 7412 не оказывает влияния. Упрощенное профилирование можно отключить на уровне базы данных с помощью конфигурации уровня базы данных [LIGHTWEIGHT_QUERY_PROFILING](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md): `ALTER DATABASE SCOPED CONFIGURATION SET LIGHTWEIGHT_QUERY_PROFILING = OFF;`.
 
-Появилась новая функция динамического управления [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md), которая возвращает эквивалент последнего известного действительного плана выполнения для большинства запросов. Новое расширенное событие *query_post_execution_plan_profile* служит для сбора эквивалента действительного плана выполнения на основе упрощенного, а не стандартного профилирования, как в случае с событием *query_post_execution_showplan*. 
+Появилась новая функция динамического управления [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md), которая возвращает эквивалент последнего известного действительного плана выполнения для большинства запросов и называется *статистика плана последнего запроса*. Ее можно включить на уровне базы данных с помощью конфигурации уровня базы данных [LAST_QUERY_PLAN_STATS](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md): `ALTER DATABASE SCOPED CONFIGURATION SET LAST_QUERY_PLAN_STATS = ON;`.
 
-Пример сеанса с расширенным событием *query_post_execution_plan_profile* можно настроить, как показано ниже.
+Новое расширенное событие *query_post_execution_plan_profile* служит для сбора эквивалента действительного плана выполнения на основе упрощенного, а не стандартного профилирования, как в случае с событием *query_post_execution_showplan*. Пример сеанса с расширенным событием *query_post_execution_plan_profile* можно настроить, как показано ниже.
 
 ```sql
 CREATE EVENT SESSION [PerfStats_LWP_All_Plans] ON SERVER
@@ -142,6 +142,34 @@ WITH (MAX_MEMORY=4096 KB,
   MEMORY_PARTITION_MODE=NONE,
   TRACK_CAUSALITY=OFF,
   STARTUP_STATE=OFF);
+```
+
+#### <a name="example-1---extended-event-session-using-standard-profiling"></a>Пример 1. Сеанс расширенных событий на основе стандартного профилирования
+
+```sql
+CREATE EVENT SESSION [QueryPlanOld] ON SERVER 
+ADD EVENT sqlserver.query_post_execution_showplan(
+    ACTION(sqlos.task_time, sqlserver.database_id, 
+    sqlserver.database_name, sqlserver.query_hash_signed, 
+    sqlserver.query_plan_hash_signed, sqlserver.sql_text))
+ADD TARGET package0.event_file(SET filename = N'C:\Temp\QueryPlanStd.xel')
+WITH (MAX_MEMORY=4096 KB, EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS, 
+    MAX_DISPATCH_LATENCY=30 SECONDS, MAX_EVENT_SIZE=0 KB, 
+    MEMORY_PARTITION_MODE=NONE, TRACK_CAUSALITY=OFF, STARTUP_STATE=OFF);
+```
+
+#### <a name="example-2---extended-event-session-using-lightweight-profiling"></a>Пример 2. Сеанс расширенных событий на основе упрощенного профилирования
+
+```sql
+CREATE EVENT SESSION [QueryPlanLWP] ON SERVER 
+ADD EVENT sqlserver.query_post_execution_plan_profile(
+    ACTION(sqlos.task_time, sqlserver.database_id, 
+    sqlserver.database_name, sqlserver.query_hash_signed, 
+    sqlserver.query_plan_hash_signed, sqlserver.sql_text))
+ADD TARGET package0.event_file(SET filename=N'C:\Temp\QueryPlanLWP.xel')
+WITH (MAX_MEMORY=4096 KB, EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS, 
+    MAX_DISPATCH_LATENCY=30 SECONDS, MAX_EVENT_SIZE=0 KB, 
+    MEMORY_PARTITION_MODE=NONE, TRACK_CAUSALITY=OFF, STARTUP_STATE=OFF);
 ```
 
 ## <a name="remarks"></a>Remarks

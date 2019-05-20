@@ -1,7 +1,7 @@
 ---
 title: Классификатор DROP WORKLOAD (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
-ms.date: 03/13/2019
+ms.date: 05/01/2019
 ms.prod: sql
 ms.prod_service: sql-data-warehouse
 ms.reviewer: jrasnick
@@ -21,17 +21,14 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: a9ef53323d77f1439df5daf0fedc669fe380cb3f
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: 67909db180af056add12324622cfd6094d8729fe
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59581518"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105831"
 ---
-# <a name="drop-workload-classifier-transact-sql-preview"></a>Классификатор DROP WORKLOAD (Transact-SQL) (Предварительная версия)
-
-> [!Note]
-> Классификация рабочих нагрузок доступна в предварительной версии в Хранилище данных SQL 2-го поколения. Предварительные версии таких функций, как управленческая классификация рабочих нагрузок и приоритет рабочих нагрузок доступны в сборках, выпущенных после 9 апреля 2019 г.  Чтобы протестировать функцию управления рабочими нагрузками, следует использовать сборки, выпущенные после этой даты.  Чтобы узнать номер своей версии Хранилища данных SQL, выполните команду SELECT @@version при подключении к экземпляру Хранилища данных SQL.
+# <a name="drop-workload-classifier-transact-sql"></a>Классификатор DROP WORKLOAD (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 

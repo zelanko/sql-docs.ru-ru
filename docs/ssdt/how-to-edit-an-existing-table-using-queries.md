@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Изменение существующих таблиц с помощью запросов | Документация Майкрософт
+title: Руководство. Изменение существующих таблиц с помощью запросов | Документация Майкрософт
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -8,17 +8,17 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 58f4de8e-97b4-4bcb-953f-f3d428432491
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: b9687226caec47161fb42038994be279a89becc4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2c988efd63982b2dc5ebd8e73f2291a19b3b9b76
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659582"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090235"
 ---
-# <a name="how-to-edit-an-existing-table-using-queries"></a>Как изменять существующие таблицы с помощью запросов
+# <a name="how-to-edit-an-existing-table-using-queries"></a>Руководство. изменить существующую таблицу с помощью запросов
 Вы можете вносить изменения в определение таблицы или ее данные, написав запрос Transact\-SQL. Для просмотра или ввода данных в таблицу с помощью пользовательского интерфейса служит редактор данных, как описано в руководстве по [разработке подключенной базы данных](../ssdt/connected-database-development.md).  
   
 > [!WARNING]  
@@ -32,7 +32,7 @@ ms.locfileid: "47659582"
   
 3.  Установите флажок **Разрешить значения NULL** для столбца **Адрес**. Обратите внимание, что соответствующий код в области скриптов немедленно изменится на `NULL`.  
   
-4.  [Обновите подключенную базу данных с помощью Power Buffer](../ssdt/how-to-update-a-connected-database-with-power-buffer.md).  
+4.  Обновите базу данных, выполнив шаги, приведенные в разделе [Как обновить подключенную базу данных с помощью Power Buffer](../ssdt/how-to-update-a-connected-database-with-power-buffer.md).  
   
 ### <a name="to-populate-data-in-new-tables-using-a-transact-sql-query"></a>Заполнение данными новых таблиц с использованием запроса Transact\-SQL  
   

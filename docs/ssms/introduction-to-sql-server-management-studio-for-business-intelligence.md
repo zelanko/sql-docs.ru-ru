@@ -12,15 +12,15 @@ helpviewer_keywords:
 - SQL Server Management Studio for Reporting Services
 - SQL Server Management Studio for Analysis Services
 ms.assetid: ffaa77b7-03d0-4d7a-aa42-c5091a4f2ceb
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 4e928be305f701c8493e03fea504c8d275226966
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 5964ee98e91db9cd6547f9292ce1f58ef37a18c0
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215380"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65097225"
 ---
 # <a name="introduction-to-sql-server-management-studio-for-business-intelligence"></a>Введение в среду SQL Server Management Studio для решения задач бизнес-аналитики
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,13 +48,13 @@ ms.locfileid: "53215380"
   
 -   [Администрирование баз данных сервера отчетов](../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)  
   
--   [Как Создание роли RSExecRole](../reporting-services/security/create-the-rsexecrole.md)  
+-   [Руководство. Создание роли RSExecRole](../reporting-services/security/create-the-rsexecrole.md)  
   
 Позволяет включать и настраивать различные функции, задавать для сервера значения по умолчанию, управлять ролями и заданиями. Дополнительные сведения об этих задачах см. в следующих разделах:  
   
--   [Как Установка свойств сервера отчетов (среда Management Studio)](https://msdn.microsoft.com/1ed0f84b-b12a-4e49-b65c-a11a99f9093f)  
+-   [Руководство. Установка свойств сервера отчетов (среда Management Studio)](https://msdn.microsoft.com/1ed0f84b-b12a-4e49-b65c-a11a99f9093f)  
   
--   [Как Создание, удаление и изменение ролей (среда Management Studio)](https://msdn.microsoft.com/3d1d56e6-a283-44a7-8417-36cb4d2c74d1)  
+-   [Руководство. Создание, удаление и изменение ролей (среда Management Studio)](https://msdn.microsoft.com/3d1d56e6-a283-44a7-8417-36cb4d2c74d1)  
   
 -   [Разрешение и запрет печати на стороне клиента для служб Reporting Services](https://msdn.microsoft.com/0e709c96-7517-4547-8ef6-5632f8118524)  
   

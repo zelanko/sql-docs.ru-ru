@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ms.openlocfilehash: 24dd1bce8d7433f55ba64eecb1e7a08396b9e548
 ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 12/06/2018
 ms.locfileid: "52984105"
@@ -153,7 +153,7 @@ ORDER BY TABLE_NAME ASC
 |[DISCOVER_ENUMERATORS](https://msdn.microsoft.com/library/ee302012)|Возвращает список имен, типов данных и значений перечисления, поддерживаемых поставщиком XMLA для конкретного источника данных.|  
 |[DISCOVER_INSTANCES](https://msdn.microsoft.com/library/ee320541)|Описывает экземпляры на сервере.|  
 |[DISCOVER_JOBS](https://msdn.microsoft.com/library/ee320363)|Предоставляет сведения о текущих заданиях, выполняющихся на сервере. Задание представляет собой часть команды, которая осуществляет конкретную задачу в целях выполнения команды.|  
-|[DISCOVER_KEYWORDS &AMP;#40;XML ДЛЯ АНАЛИТИКИ&AMP;#41;](https://msdn.microsoft.com/library/ee301719)|Возвращает сведения о ключевых словах, зарезервированных сервером XML для Аналитики.|  
+|[DISCOVER_KEYWORDS &#40;XMLA&#41;](https://msdn.microsoft.com/library/ee301719)|Возвращает сведения о ключевых словах, зарезервированных сервером XML для Аналитики.|  
 |[DISCOVER_LITERALS](https://msdn.microsoft.com/library/ee301320)|Возвращает сведения о литералах, поддерживаемых сервером.|  
 |[DISCOVER_LOCATIONS](https://msdn.microsoft.com/library/ee302024)|Возвращает сведения о содержимом файла резервной копии. |
 |[DISCOVER_LOCKS](https://msdn.microsoft.com/library/ee320398)|Предоставляет сведения о текущих установленных блокировках на сервере.|  

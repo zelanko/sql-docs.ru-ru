@@ -11,12 +11,13 @@ helpviewer_keywords:
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6783112203e5c63aae41749f942da6240265eea3
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
+ms.openlocfilehash: b3e6a0fc14137ca13e3539a7046edf576b4719ed
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58872304"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775053"
 ---
 # <a name="install-polybase-on-windows"></a>Установка PolyBase на компьютере по управлением Windows
 
@@ -40,15 +41,16 @@ ms.locfileid: "58872304"
    
 - Для корректной работы PolyBase должен быть включен протокол TCP/IP. TCP/IP включен по умолчанию во всех выпусках SQL Server, кроме Developer и Express. Для корректной работы PolyBase в выпусках Developer и Express нужно включить подключение по TCP/IP. См. раздел [Включение или отключение сетевого протокола сервера](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).
 
-- MSVC++ 2012. 
 
-> [!NOTE]
-> 
+>[!NOTE] 
 > PolyBase можно установить только на одном экземпляре SQL Server на компьютере.
-> 
-> [!IMPORTANT]
-> 
-> Чтобы использовать функцию передачи вычислений в Hadoop, в целевом кластере Hadoop должны быть базовые компоненты HDFS, YARN и MapReduce с включенным сервером журнала заданий. PolyBase отправляет запрос на передачу через MapReduce и получает сведения о состоянии c сервера журнала заданий. Без любого из этих компонентов запрос завершится сбоем.
+
+
+>[!NOTE]
+>Чтобы использовать PolyBase, необходимо иметь роль системного администратора или разрешения на управление сервером базы данных.
+
+>[!IMPORTANT]
+>Чтобы использовать функцию передачи вычислений в Hadoop, в целевом кластере Hadoop должны быть базовые компоненты HDFS, YARN и MapReduce с включенным сервером журнала заданий. PolyBase отправляет запрос на передачу через MapReduce и получает сведения о состоянии c сервера журнала заданий. Без любого из этих компонентов запрос завершится сбоем.
   
 ## <a name="single-node-or-polybase-scale-out-group"></a>Один узел или масштабируемая группа PolyBase
 
@@ -74,11 +76,10 @@ ms.locfileid: "58872304"
    ![Службы PolyBase](../../relational-databases/polybase/media/install-wizard.png "Службы PolyBase")  
    
 4. На странице конфигурации сервера настройте **службу SQL Server PolyBase Engine** и **службу перемещения данных SQL Server PolyBase** на запуск под одной и той же учетной записью домена.  
-   
-   > [!IMPORTANT] 
-   >
+
+   >[!IMPORTANT]
    >В масштабируемой группе PolyBase служба PolyBase Engine и служба перемещения данных PolyBase должны работать на всех узлах под одной учетной записью домена. См. раздел [Масштабируемые группы PolyBase](#enable).
-   
+
 5. На странице конфигурации PolyBase выберите один из двух вариантов. Дополнительные сведения: [Масштабируемые группы PolyBase](../../relational-databases/polybase/polybase-scale-out-groups.md).  
    
    - Использование экземпляра SQL Server в качестве автономного экземпляра с поддержкой PolyBase.  
@@ -91,8 +92,7 @@ ms.locfileid: "58872304"
    
 6. На странице конфигурации PolyBase укажите диапазон портов (не менее шести). Программа установки SQL Server выделяет первые шесть доступных портов из указанного диапазона.  
 
-   > [!IMPORTANT]
-   >
+   >[!IMPORTANT]
    > После установки необходимо [включить компонент PolyBase](#enable).
 
 

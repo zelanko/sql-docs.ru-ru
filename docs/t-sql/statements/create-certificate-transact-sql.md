@@ -1,7 +1,7 @@
 ---
 title: CREATE CERTIFICATE (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 09/07/2018
+ms.date: 04/22/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -28,12 +28,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 42a486a50e49e2d64024355617e77a84833edba9
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: aede830ed407fcd7dddba4d2d9446b6510e84c8a
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326545"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64774939"
 ---
 # <a name="create-certificate-transact-sql"></a>Инструкция CREATE CERTIFICATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -126,17 +126,18 @@ CREATE CERTIFICATE certificate_name
 > [!IMPORTANT]
 > База данных SQL Azure не поддерживает создание сертификата на основе файла или с использованием файлов закрытых ключей.
   
+ BINARY =*сертификат в asn*  
+ Биты закодированного в ASN сертификата, указанного в качестве двоичной константы.  
+ **Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  
  WITH PRIVATE KEY  
- Указывает, что закрытый ключ сертификата загружен в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Это предложение действительно лишь в случае, когда сертификат создается из файла. Для загрузки закрытого ключа сборки следует использовать команду [ALTER CERTIFICATE](../../t-sql/statements/alter-certificate-transact-sql.md).  
+ Указывает, что закрытый ключ сертификата загружен в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Это предложение действительно лишь в случае, когда сертификат создается из сборки. Для загрузки закрытого ключа сертификата, созданного из сборки, следует использовать команду [ALTER CERTIFICATE](../../t-sql/statements/alter-certificate-transact-sql.md).  
   
  FILE ='*path_to_private_key*'  
  Указывает полный путь к закрытому ключу, включая имя файла. *path_to_private_key* может быть локальным путем или UNC-путем к расположению в сети. Доступ к файлу осуществляется в контексте безопасности учетной записи службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Эта учетная запись должна иметь соответствующие разрешения на доступ в файловой системе.  
   
 > [!IMPORTANT]  
 >  Этот параметр недоступен в автономной базе данных или в Базе данных SQL Azure.  
-  
- asn_encoded_certificate  
- Биты закодированного сертификата ASN, указанного в качестве двоичной константы.  
   
  BINARY =*private_key_bits*  
  **Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -162,7 +163,7 @@ CREATE CERTIFICATE certificate_name
  Делает сертификат доступным для инициатора диалога с компонентом [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Значение по умолчанию — ON.  
   
 ## <a name="remarks"></a>Remarks  
- Сертификат — это защищаемый объект уровня базы данных, соответствующий стандарту X.509 и поддерживающий поля X.509 V1. Инструкция CREATE CERTIFICATE может загрузить сертификат из файла или сборки. Она также может создать пару ключей и самостоятельно подписанный сертификат.  
+ Сертификат — это защищаемый объект уровня базы данных, соответствующий стандарту X.509 и поддерживающий поля X.509 V1. Инструкция CREATE CERTIFICATE может загрузить сертификат из файла, двоичной константы или сборки. Она также может создать пару ключей и самостоятельно подписанный сертификат.  
   
  Закрытый ключ должен быть \<= 2500 байт в зашифрованном формате. Закрытые ключи, созданные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], имеют длину 1024 бит до [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], и 2048 бит, начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Закрытые ключи, импортированные из внешнего источника, имеют минимальную длину в 384 бит и максимальную длину в 4 096 бит. Длина импортируемого закрытого ключа должна быть кратной 64 бит. Для сертификатов, используемых для прозрачного шифрования данных, размер закрытого ключа ограничен 3456 битами.  
   
@@ -233,7 +234,10 @@ GO
 ```  
 > [!IMPORTANT]
 > База данных SQL Azure не поддерживает создание сертификата на основе файла.
-   
+
+> [!IMPORTANT]
+> Начиная с версии [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] параметр конфигурации сервера [CLR strict security](../../database-engine/configure-windows/clr-strict-security.md) запрещает загрузку сборок без предварительной настройки безопасности для них. Загрузить сертификат, создайте имя входа из него, предоставьте `UNSAFE ASSEMBLY` для этого имени входа и затем загрузите сборку.
+
 ### <a name="d-creating-a-self-signed-certificate"></a>Г. Создание самозаверяющего сертификата  
  В следующем примере создается сертификат `Shipping04` без указания пароля шифрования. Этот пример можно использовать с [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
   
@@ -251,6 +255,8 @@ GO
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)   
  [CERTENCODED (Transact-SQL)](../../t-sql/functions/certencoded-transact-sql.md)   
  [CERTPRIVATEKEY (Transact-SQL)](../../t-sql/functions/certprivatekey-transact-sql.md)  
+ [CERT_ID (Transact-SQL)](../../t-sql/functions/cert-id-transact-sql.md)  
+ [CERTPROPERTY (Transact-SQL)](../../t-sql/functions/certproperty-transact-sql.md)  
   
   
 

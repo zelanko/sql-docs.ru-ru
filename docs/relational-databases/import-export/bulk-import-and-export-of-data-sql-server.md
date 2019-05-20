@@ -22,16 +22,16 @@ helpviewer_keywords:
 - bulk importing [SQL Server]
 - importing data
 ms.assetid: 19049021-c048-44a2-b38d-186d9f9e4a65
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4a1a8a8beb6f39db8aa7f3b72189870e26762dca
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 598cfebd686bdd271b283e5a3bbde26233720c78
+ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533539"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "64946596"
 ---
 # <a name="bulk-import-and-export-of-data-sql-server"></a>Массовый импорт и экспорт данных (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "52533539"
   
  Файлы форматирования обеспечивают гибкость при интерпретации данных, существующих в файле данных, в процессе импорта и при форматировании данных в файле данных в процессе экспорта. Эта гибкость исключает необходимость записи специализированного кода для интерпретации данных или изменения формата данных для особых нужд в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или внешних приложениях. Таким образом, например, если экспортируются данные для загрузки в приложение, файлу данных потребуются значения с разделительными-запятыми. Для вставки запятых в качестве признаков конца полей можно использовать файл форматирования.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает два вида файлов форматирования: XML-файлы форматирования и файлы форматирования в формате, отличном от XML.  
+ В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживаются файлы форматирования двух видов: XML-файл форматирования и файл форматирования в формате, отличном от XML.  
   
  Программа [bcp](../../tools/bcp-utility.md) — это единственное средство, позволяющее создать файл форматирования. Дополнительные сведения см. в разделе [Создание файла форматирования (SQL Server)](../../relational-databases/import-export/create-a-format-file-sql-server.md). Дополнительные сведения об использовании файлов форматирования см. в разделе [Файлы форматирования для импорта или экспорта данных (SQL Server )](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md).  
   

@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Использование переименования и рефакторинга для внесения изменений в объекты базы данных | Документация Майкрософт
+title: Руководство. Использование переименования и рефакторинга для внесения изменений в объекты базы данных | Документация Майкрософт
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -14,17 +14,17 @@ f1_keywords:
 - sql.data.tools.dbrefactoring.moveschemadialog
 - sql.data.tools.dbrefactoring.renameserverdatabasedialog
 ms.assetid: f35520e6-8e6e-47b1-87a3-22c0cf2cabdb
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 971df125a63ecdd1e46b6b884198886cccbcc378
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a9da86a5e15f1b683a0e7c040cd4e6d906d54f47
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737672"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090097"
 ---
-# <a name="how-to-use-rename-and-refactoring-to-make-changes-to-your-database-objects"></a>Как использовать переименование и рефакторинг для внесения изменений в объекты базы данных
+# <a name="how-to-use-rename-and-refactoring-to-make-changes-to-your-database-objects"></a>Руководство. использовать переименование и рефакторинг для внесения изменений в объекты базы данных
 В контекстном меню "Рефакторинг" в редакторе Transact\-SQL можно переименовать объект или переместить его в другую схему, а также просмотреть все затрагиваемые области, прежде чем фиксировать изменение. Кроме того, с помощью меню "Рефакторинг" можно полностью указывать все ссылки на объекты базы данных либо развертывать подстановочные знаки в инструкциях `SELECT` проекта базы данных.  
   
 > [!NOTE]  

@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Просмотр объектов из проекта базы данных SQL Server | Документация Майкрософт
+title: Руководство. Просмотр объектов из проекта базы данных SQL Server | Документация Майкрософт
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -8,17 +8,17 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 5a6443c6-857e-4756-8d87-ae520953335b
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: bb91033c6853926dd3eb0a88197801875bda8a1a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 948749635ebec1106d6b950a65c9f6429d01888a
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657198"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65103236"
 ---
-# <a name="how-to-browse-objects-in-a-sql-server-database-project"></a>Практическое руководство. Просмотр объектов из проекта базы данных SQL Server
+# <a name="how-to-browse-objects-in-a-sql-server-database-project"></a>Руководство. просмотреть объекты из проекта базы данных SQL Server
 В обозревателе объектов SQL Server в Visual Studio теперь добавлен отдельный узел "Проекты". В нем сгруппированы все содержащиеся в решении проекты базы данных SQL Server так, как это делается в SQL Server Management Studio.  
   
 ## <a name="to-browse-objects-in-a-project-instance"></a>Поиск объектов в экземпляре проекта  

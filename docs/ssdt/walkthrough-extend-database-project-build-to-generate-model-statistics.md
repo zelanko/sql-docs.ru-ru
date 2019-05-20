@@ -1,5 +1,5 @@
 ---
-title: Пошаговое руководство. Расширение сборки проекта базы данных для создания статистики модели | Документация Майкрософт
+title: Пошаговое руководство. Расширение сборки проекта базы данных для создания статистики модели | Документация Майкрософт
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: d44935ce-63bf-46df-976a-5a54866c8119
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9841763f003b0a177913da72cf6dd3efd0c4d3d3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e90952527e5510d4a49fa7b7a72843c059686b96
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523425"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65102041"
 ---
 # <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>Пошаговое руководство. Расширение сборки проекта базы данных для формирования статистики модели
 Можно создать участников сборки для выполнения специализированных действий при сборке проекта базы данных. В ходе выполнения данного пошагового руководства будет создан участник сборки ModelStatistics, который будет выводить статистику из базы данных SQL при сборке проекта базы данных. Поскольку данный участник сборки при запуске принимает параметры, необходимо выполнить некоторые дополнительные действия.  
@@ -525,7 +525,7 @@ ms.locfileid: "52523425"
   
 1.  В Visual Studio щелкните правой кнопкой мыши свой проект и выберите "Построить повторно". Проект будет перестроен, и откроется сформированная статистика модели, которая будет включена в вывод сборки и записана в файл ModelStatistics.xml. Заметьте, что в обозревателе решений может потребоваться перейти на вкладку "Показать все файлы", чтобы увидеть XML-файл.  
   
-2.  Откройте командную строку. Для этого в меню **Пуск** щелкните **Все программы**, **Microsoft Visual Studio<Visual Studio Version>**, **Средства Visual Studio**, затем **Командная строка Visual Studio(<Visual Studio Version>)**.  
+2.  Откройте командную строку Visual Studio. В меню **Пуск** щелкните **Все программы**, **Microsoft Visual Studio<Visual Studio Version>**, **Средства Visual Studio**, затем **Командная строка Visual Studio(<Visual Studio Version>)**.  
   
 3.  Используя командную строку, перейдите в каталог, содержащий проект SQL.  
   

@@ -1,7 +1,7 @@
 ---
 title: Обзор процессов восстановления (SQL Server) | Документация Майкрософт
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 04/23/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 013458c80692f4b7f31ba1302028585496a0cd25
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 6a358aacd5bbfe165b908a3c737d4809cf1555f0
+ms.sourcegitcommit: c1cc44c3b5ad030d8726be8819594341fc3d9f91
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242045"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65461819"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>Обзор процессов восстановления (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -155,7 +155,22 @@ ms.locfileid: "54242045"
 -   [Помощник по восстановлению: общие сведения](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-an-introduction.aspx)  
   
 -   [Помощник по восстановлению: использование среды SSMS для создания и восстановления раздельных резервных копий](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-using-ssms-to-create-restore-split-backups.aspx)  
-  
+
+## <a name="adr"></a> Ускоренное восстановление баз данных.
+
+Предварительная версия SQL Server 2019 CTP 2.3 предоставляет [ускорение восстановления баз данных](/azure/sql-database/sql-database-accelerated-database-recovery/) для SQL Server на локальном компьютере. Ускорение восстановления баз данных значительно повышает доступность баз данных, особенно при наличии продолжительных транзакций, за счет перепроектирования процесса восстановления ядра базы данных SQL Server. [Восстановление базы данных](../../relational-databases/logs/the-transaction-log-sql-server.md?#recovery-of-all-incomplete-transactions-when--is-started) — это процесс, который SQL Server использует в каждой базе данных для ее запуска в транзакционно-согласованном (чистом) состоянии. Базы данных при включении ускоренного восстановления значительно быстрее восстанавливаются после отработки отказа или других вариантов завершения работы в "грязном" состоянии. 
+
+С [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP-версии 2.3 можно включить ускоренное восстановление для каждой базы данных отдельно с помощью следующего синтаксиса:
+
+```sql
+ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
+```
+
+> [!NOTE]
+> Этот синтаксис не требуется, чтобы пользоваться преимуществами этой функции в базе данных SQL Azure, где она включена по умолчанию.
+
+При наличии важных баз данных, в которых могут происходить большие транзакции, поэкспериментируйте с этой функцией на этапе предварительной версии. Отправьте отзыв [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] разработчикам](<https://aka.ms/sqlfeedback>).
+
 ##  <a name="RelatedContent"></a> См. также  
  Нет.  
   

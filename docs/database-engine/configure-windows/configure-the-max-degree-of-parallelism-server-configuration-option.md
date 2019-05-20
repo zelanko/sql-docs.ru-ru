@@ -17,12 +17,12 @@ ms.assetid: 86b65bf1-a6a1-4670-afc0-cdfad1558032
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cf274779c038f6cb2111a1b01ca8315cbd0002e4
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 5e2261b8bf307d7d735957d52006b5b0f75ae0cc
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606424"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65570802"
 ---
 # <a name="configure-the-max-degree-of-parallelism-server-configuration-option"></a>Настройка параметра конфигурации сервера max degree of parallelism
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,22 @@ ms.locfileid: "51606424"
 -   Помимо запросов и операций с индексами, этот параметр также управляет степенью параллелизма при выполнении инструкций DBCC CHECKTABLE, DBCC CHECKDB и DBCC CHECKFILEGROUP. Планы параллельного выполнения для этих инструкций можно отключить с помощью флага трассировки 2528. Дополнительные сведения см. в разделе [Флаги трассировки (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
 
 ###  <a name="Guidelines"></a> Рекомендации  
-При настройке значения параметра **max degree of parallelism** конфигурации сервера следуйте приведенным ниже рекомендациям.
+Начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] по умолчанию система [!INCLUDE[ssde_md](../../includes/ssde_md.md)] автоматически создает узлы архитектуры Soft-NUMA, если во время запуска обнаруживает более восьми физических ядер на один сокет или узел NUMA. [!INCLUDE[ssde_md](../../includes/ssde_md.md)] помещает логические процессоры одного и того же физического ядра в разных узлах программной архитектуры NUMA. Рекомендации, приведенные в следующей таблице, нацелены на сохранение рабочих потоков параллельного запроса на одном узле программной архитектуры NUMA. Это улучшит производительность запросов и распределение рабочих потоков между узлами NUMA для рабочей нагрузки. Дополнительные сведения см. в разделе [Программная архитектура NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md).
+
+Начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] при настройке значения параметра **max degree of parallelism** в конфигурации сервера следуйте приведенным ниже рекомендациям.
+
+||||
+|----------------|-----------------|-----------------|
+|Сервер с одним узлом NUMA|Менее 16 логических процессоров|Значение параметра MAXDOP не должно превышать количество логических процессоров|
+|Сервер с одним узлом NUMA|Больше 16 логических процессоров|Значение MAXDOP должно быть равно половине количества логических процессоров со значением MAX, равным 16|
+|Сервер с несколькими узлами NUMA|Менее 16 логических процессоров на каждый узел NUMA|Значение параметра MAXDOP не должно превышать количество логических процессоров на каждый узел NUMA|
+|Сервер с несколькими узлами NUMA|Больше 16 логических процессоров на каждый узел NUMA|Значение MAXDOP должно быть равно половине количества логических процессоров на узел NUMA со значением MAX, равным 16|
+  
+> [!NOTE]
+> Под узлами NUMA в приведенной выше таблице понимаются узлы программной архитектуры NUMA, автоматически создаваемые в [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и более поздних версиях.   
+>  Эти же правила используются в том случае, если значение max degree of parallelism задано для групп рабочей нагрузки регулятора ресурсов. Дополнительные сведения см. в разделе [CREATE WORKLOAD GROUP (Transact-SQL)](../../t-sql/statements/create-workload-group-transact-sql.md).
+  
+В версиях с [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] по [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] при настройке значения параметра **max degree of parallelism** в конфигурации сервера следуйте приведенным ниже рекомендациям.
 
 ||||
 |----------------|-----------------|-----------------|
@@ -89,7 +104,7 @@ EXEC sp_configure 'show advanced options', 1;
 GO  
 RECONFIGURE WITH OVERRIDE;  
 GO  
-EXEC sp_configure 'max degree of parallelism', 8;  
+EXEC sp_configure 'max degree of parallelism', 16;  
 GO  
 RECONFIGURE WITH OVERRIDE;  
 GO  
@@ -97,7 +112,7 @@ GO
   
  Дополнительные сведения см. в разделе [Параметры конфигурации сервера (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
-##  <a name="FollowUp"></a> Продолжение: после настройки параметра max degree of parallelism  
+##  <a name="FollowUp"></a> Дальнейшие действия. После настройки параметра max degree of parallelism  
  Параметр вступает в силу немедленно, без перезапуска сервера.  
   
 ## <a name="see-also"></a>См. также:  

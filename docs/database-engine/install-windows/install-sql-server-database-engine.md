@@ -13,12 +13,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 83fb5aa641537e99f7562f6c4fd7981b8e2233b5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 30d657ed93a0ff272370f340dbba59c9e72c0079
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532766"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65484343"
 ---
 # <a name="install-sql-server-database-engine"></a>Установка ядра СУБД SQL
 
@@ -37,7 +37,7 @@ ms.locfileid: "52532766"
   
 -   [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
--   Репликация ― это необязательный компонент  
+-   [Репликация SQL Server](../../relational-databases/replication/sql-server-replication.md) ― это необязательный компонент  
 
 -   [Службы машинного обучения (в базе данных) с использованием R и Python](../../advanced-analytics/install/sql-machine-learning-services-windows-install.md) — это необязательный компонент
 
@@ -47,6 +47,9 @@ ms.locfileid: "52532766"
   
     > [!NOTE]  
     >  В этом выпуске установка флажка **Службы Data Quality Services** в программе установки не приводит к установке сервера служб Data Quality Services (DQS). Для установки сервера DQS необходимо выполнить дополнительные шаги после завершения установки. Дополнительные сведения см. в разделе [Install Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md).  
+    
+- [Служба запросов Polybase для внешних данных](../../relational-databases/polybase/polybase-guide.md) — это необязательный компонент 
+
   
  Следующие дополнительные возможности могут применяться во многих типичных пользовательских сценариях.  
   

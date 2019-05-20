@@ -1,25 +1,25 @@
 ---
 title: Настройка PolyBase для доступа к внешним данным в SQL Server | Документация Майкрософт
 ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 04/23/2019
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: polybase
 ms.topic: conceptual
 author: Abiola
 ms.author: aboke
+ms.reviewer: jroth
 manager: craigg
-monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: babfa67f96f9514d748e6d87c0230e154468eff4
-ms.sourcegitcommit: 1f10e9df1c523571a8ccaf3e3cb36a26ea59a232
+monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
+ms.openlocfilehash: fe5fd6f1842e02d85f6dcd9ee53884ff4cd289e2
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "51858599"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64776083"
 ---
 # <a name="configure-polybase-to-access-external-data-in-sql-server"></a>Настройка PolyBase для доступа к внешним данным в SQL Server
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Эта статья описывает, как с помощью PolyBase в экземпляре SQL Server запросить внешние данные другого экземпляра SQL Server.
 
@@ -27,86 +27,54 @@ ms.locfileid: "51858599"
 
 Если вы не установили PolyBase, см. раздел [Установка PolyBase](polybase-installation.md). Необходимые условия описываются в статье, посвященной установке.
 
-## <a name="configure-an-external-table"></a>Настройка внешней таблицы
+[Главный ключ](../../t-sql/statements/create-master-key-transact-sql.md) необходимо создать перед созданием учетных данных для базы данных. 
+
+## <a name="configure-a-sql-server-external-data-source"></a>Настройка внешнего источника данных SQL Server
 
 Чтобы запросить данные из источника данных SQL Server, необходимо создать внешние таблицы, чтобы ссылаться на внешние данные. Этот раздел содержит пример кода для создания таких внешних таблиц. 
  
 Чтобы обеспечить оптимальную производительность запросов, создайте статистику столбцов внешней таблицы, особенно тех, которые используются для объединения, фильтров и статистических выражений.
 
-В этом разделе будут созданы следующие объекты:
+В рамках этого раздела используются следующие команды Transact-SQL:
 
-- CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL) 
-- CREATE EXTERNAL DATA SOURCE (Transact-SQL) 
-- CREATE EXTERNAL TABLE (Transact-SQL) 
-- CREATE STATISTICS (Transact-SQL)
+- [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)
+- [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md) 
+- [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)
 
-1. Создайте главный ключ в базе данных. Он необходим для шифрования секрета учетных данных.
+1.  Создайте учетные данные в области базы данных для доступа к источнику MongoDB.
 
-     ```sql
-      CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
-     ```
+    ```sql
+    /*  specify credentials to external data source
+    *  IDENTITY: user name for external source.  
+    *  SECRET: password for external source.
+    */
+    CREATE DATABASE SCOPED CREDENTIAL SqlServerCredentials   
+    WITH IDENTITY = 'username', Secret = 'password';
+    ```
 
-1. Создайте учетные данные на уровне базы данных.
+1. Создайте внешний источник данных с помощью инструкции [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
-     ```sql
-     /*  specify credentials to external data source
-     *  IDENTITY: user name for external source.  
-     *  SECRET: password for external source.
-     */
-     CREATE DATABASE SCOPED CREDENTIAL SqlServerCredentials   
-     WITH IDENTITY = 'username', Secret = 'password';
-     ```
-
-1. Создайте внешний источник данных с помощью инструкции [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md). Укажите расположение внешнего источника данных и учетные данные для SQL Server.
-
-     ```sql
+    ```sql
     /*  LOCATION: Location string should be of format '<vendor>://<server>[:<port>]'.
     *  PUSHDOWN: specify whether computation should be pushed down to the source. ON by default.
     *  CREDENTIAL: the database scoped credential, created above.
-    */  
+    */
     CREATE EXTERNAL DATA SOURCE SQLServerInstance
-    WITH ( 
-    LOCATION = 'sqlserver://SqlServer',
+    WITH ( LOCATION = 'sqlserver://SqlServer',
     -- PUSHDOWN = ON | OFF,
-      CREDENTIAL = SQLServerCredentials
-    );
+    CREDENTIAL = SQLServerCredentials);
+    ```
 
-     ```
+1. **Необязательно**. Создайте статистику внешней таблицы.
 
-1. Создайте схемы для внешних данных.
+    Чтобы обеспечить оптимальную производительность запросов, мы советуем создать статистику столбцов внешней таблицы, особенно тех, которые используются для объединения, применения фильтров и статистических выражений.
 
-     ```sql
-     CREATE SCHEMA sqlserver;
-     GO
-     ```
+    ```sql
+    CREATE STATISTICS statistics_name ON customer (C_CUSTKEY) WITH FULLSCAN;
+    ```
 
-1.  Создайте внешние таблицы для представления данных, хранимых во внешнем экземпляре SQL Server, с помощью инструкции [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md).
- 
-     ```sql
-     /*  LOCATION: sql server table/view in 'database_name.schema_name.object_name' format
-     *  DATA_SOURCE: the external data source, created above.
-     */
-     CREATE EXTERNAL TABLE sqlserver.customer(
-     C_CUSTKEY INT NOT NULL,
-     C_NAME VARCHAR(25) NOT NULL,
-     C_ADDRESS VARCHAR(40) NOT NULL,
-     C_NATIONKEY INT NOT NULL,
-     C_PHONE CHAR(15) NOT NULL,
-     C_ACCTBAL DECIMAL(15,2) NOT NULL,
-     C_MKTSEGMENT CHAR(10) NOT NULL,
-     C_COMMENT VARCHAR(117) NOT NULL
-      )
-      WITH (
-      LOCATION='tpch_10.dbo.customer',
-      DATA_SOURCE=SqlServerInstance
-     );
-      ```
-
-1. Создайте статистику внешней таблицы.
-
-     ```sql
-      CREATE STATISTICS CustomerCustKeyStatistics ON sqlserver.customer (C_CUSTKEY) WITH FULLSCAN; 
-     ```
+>[!IMPORTANT] 
+>После создания внешнего источника данных можно использовать команду [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md), чтобы создать таблицу с поддержкой запросов по этому источнику.
 
 ## <a name="sql-server-connector-compatible-types"></a>Совместимые типы соединителей SQL Server
 

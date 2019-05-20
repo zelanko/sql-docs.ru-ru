@@ -11,12 +11,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b2d02e13ea7ad1d74274f4412b6ab2bf476f452c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3a20544fb4f19611071f28b7cfc5f16fd7e462ce
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665429"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775949"
 ---
 # <a name="polybase-features-and-limitations"></a>Возможности и ограничения PolyBase
 
@@ -61,6 +61,8 @@ ms.locfileid: "51665429"
 ## <a name="known-limitations"></a>Известные ограничения
 
 PolyBase имеет следующие ограничения.
+
+- Чтобы использовать PolyBase, необходимо иметь роль системного администратора или разрешения на управление сервером базы данных.
 
 - Максимальный размер строки, включая полную длину столбцов переменной длины, не может превышать 32 КБ в SQL Server или 1 МБ в хранилище данных SQL Azure.
 

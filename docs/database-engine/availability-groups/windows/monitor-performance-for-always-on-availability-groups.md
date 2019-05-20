@@ -11,33 +11,17 @@ ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 04ccb88fd3df348b21f61b0a01d4e49ce944c81c
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: b2157846fe2102a35412c82b0da24638298aafd2
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58872324"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65104924"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>Мониторинг производительности для групп доступности Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Аспект производительности групп доступности AlwaysOn играет важную роль с точки зрения соблюдения соглашения об уровне обслуживания (SLA) для критически важных баз данных. Понимание того, как группы доступности поставляют журналы вторичным репликам, может помочь оценить цель времени восстановления (RTO) и целевую точку восстановления (RPO) для вашей реализации доступности, а также выявить узкие места в малоэффективных репликах группах доступности. Эта статья описывает процесс синхронизации, показывает, как вычислить некоторые основные метрики, а также содержит ссылки на некоторые распространенные сценарии по устранению неполадок с производительностью.  
-  
- Рассмотрены следующие вопросы:  
-  
--   [Процесс синхронизации данных](#data-synchronization-process)  
-  
--   [Шлюзы управления потоком](#flow-control-gates)  
-  
--   [Оценка времени перехода на другой ресурс (RTO)](#estimating-failover-time-rto)  
-  
--   [Оценка возможной потери данных (RPO)](#estimating-potential-data-loss-rpo)  
-  
--   [Отслеживание RTO и RPO](#monitoring-for-rto-and-rpo)  
-  
--   [Сценарии устранения неполадок с производительностью](#BKMK_SCENARIOS)  
-  
--   [Полезные расширенные события](#BKMK_XEVENTS)  
-  
+   
 ##  <a name="data-synchronization-process"></a>Процесс синхронизации данных  
  Чтобы оценить время полной синхронизации и выявить узкое место, вам нужно понять процесс синхронизации. Узкое место производительности может находиться в любом месте процесса, и его обнаружение может помочь вам лучше разобраться связанных с ним проблемах. Приведенные ниже рисунок и таблица иллюстрируют процесс синхронизации данных:  
   
@@ -48,7 +32,7 @@ ms.locfileid: "58872324"
 |**Последовательность**|**Описание шага**|**Комментарии**|**Полезные метрики**|  
 |1|Создание журнала|Данные журнала записываются на диск. Этот журнал должен реплицироваться на вторичные реплики. Записи журнала попадают в очередь отправки.|[SQL Server: База данных > Сброшено байтов журнала в секунду](~/relational-databases/performance-monitor/sql-server-databases-object.md)|  
 |2|Сбор|Журналы для каждой базы данных собираются и отправляются в соответствующую очередь партнера (по одной для каждой пары из базы данных и реплики). Этот процесс сбора выполняется непрерывно, пока реплика доступности подключена, а перемещение данных не приостановлено по какой-либо причине. При этом пара из базы данных и реплики отображается как выполняющая синхронизацию или синхронизированная. Если процессу сбора не удается достаточно быстро сканировать сообщения и ставить их в очередь, очередь отправки журнала разрастается.|[SQL Server: Реплика доступности > Отправлено в реплику, байт/с](~/relational-databases/performance-monitor/sql-server-availability-replica.md), который является агрегатом суммы всех сообщений баз данных, помещенных в очередь для этой реплики доступности.<br /><br /> [log_send_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (КБ) и [log_bytes_send_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (КБ/с) на первичной реплике.|  
-|3|Send|Сообщения в каждой очереди базы данных и реплики удаляются из очереди и через проводную сеть передаются в соответствующую вторичную реплику.|[SQL Server: Реплика доступности > Отправлено в транспорт, байт/с](~/relational-databases/performance-monitor/sql-server-availability-replica.md) и [SQL Server: Реплика доступности > Message Acknowledgement Time](~/relational-databases/performance-monitor/sql-server-availability-replica.md) (Время подтверждения сообщения, мс)|  
+|3|Send|Сообщения в каждой очереди базы данных и реплики удаляются из очереди и через проводную сеть передаются в соответствующую вторичную реплику.|[SQL Server: реплика доступности > отправлено в транспорт, байт/с](~/relational-databases/performance-monitor/sql-server-availability-replica.md)|  
 |4|Получение и кэширование|Каждая вторичная реплика получает и кэширует сообщение.|Счетчик производительности [SQL Server: Реплика доступности > Получено из журнала, байт/с](~/relational-databases/performance-monitor/sql-server-availability-replica.md)|  
 |5|Сохранение|Журнал записывается во вторичную реплику для сохранения. После записи журнала обратно в первичную реплику отправляется подтверждение.<br /><br /> После сохранения журнала потеря данных исключается.|Счетчик производительности [SQL Server: База данных > Сброшено байтов журнала в секунду](~/relational-databases/performance-monitor/sql-server-databases-object.md)<br /><br /> Тип ожидания [HADR_LOGCAPTURE_SYNC](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)|  
 |6|Повторить|Повторная обработка записанных страниц на вторичной реплике. Страницы хранятся в очереди повтора, так как ожидают повторной обработки.|[SQL Server: Реплика базы данных > Повторено байтов в секунду](~/relational-databases/performance-monitor/sql-server-database-replica.md)<br /><br /> [redo_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (КБ) и [redo_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md).<br /><br /> Тип ожидания [REDO_SYNC](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)|  

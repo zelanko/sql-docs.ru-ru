@@ -1,7 +1,7 @@
 ---
 title: BACKUP CERTIFICATE (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 10/04/2018
+ms.date: 04/23/2019
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw, sql-database
 ms.reviewer: ''
@@ -29,12 +29,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: bc908bd4186035bb1c9089139532c9fa413c8a8a
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 192eb9d6fb313f689081c590f2881f028fd54ced
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327425"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64774900"
 ---
 # <a name="backup-certificate-transact-sql"></a>BACKUP CERTIFICATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -70,24 +70,33 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *path_to_file*  
- Указывает полный путь, включая имя файла, для файла, в котором должен быть сохранен сертификат. Это может быть локальный путь или UNC-путь к расположению в сети. По умолчанию задается путь к папке DATA [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
- *path_to_private_key_file*  
- Указывает полный путь, включая имя файла, для файла, в котором должен быть сохранен закрытый ключ. Это может быть локальный путь или UNC-путь к расположению в сети. По умолчанию задается путь к папке DATA [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ *certname*  
+ Имя копируемого сертификата.
 
- *encryption_password*  
+ TO FILE = '*путь к файлу*'  
+ Указывает полный путь, включая имя файла, для файла, в котором должен быть сохранен сертификат. Это может быть локальный путь или UNC-путь к расположению в сети. Если указано только имя файла, файл будет сохранен в папке данных пользователя по умолчанию для экземпляра (это может быть, а может и не быть папка данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]). В SQL Server Express LocalDB папкой данных пользователя по умолчанию для экземпляра является путь, указанный в переменной среды `%USERPROFILE%` учетной записи, создавшей этот экземпляр.  
+
+ WITH PRIVATE KEY указывает, что закрытый ключ сертификата следует сохранить в файл. Это предложение является необязательным.
+
+ FILE = '*путь к файлу закрытого ключа*'  
+ Указывает полный путь, включая имя файла, для файла, в котором должен быть сохранен закрытый ключ. Это может быть локальный путь или UNC-путь к расположению в сети. Если указано только имя файла, файл будет сохранен в папке данных пользователя по умолчанию для экземпляра (это может быть, а может и не быть папка данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]). В SQL Server Express LocalDB папкой данных пользователя по умолчанию для экземпляра является путь, указанный в переменной среды `%USERPROFILE%` учетной записи, создавшей этот экземпляр.  
+
+ ENCRYPTION BY PASSWORD = '*пароль шифрования*'  
  Пароль, используемый для шифрования закрытого ключа перед записью ключа в файл резервной копии. Пароль проходит проверку сложности.  
   
- *decryption_password*  
+ DECRYPTION BY PASSWORD = '*пароль шифрования*'  
  Пароль, используемый для дешифрования закрытого ключа перед созданием резервной копии ключа. Этот аргумент не является обязательным, если сертификат зашифрован главным ключом. 
   
 ## <a name="remarks"></a>Remarks  
  Если закрытый ключ зашифрован с паролем в базе данных, необходимо указать пароль для дешифрования.  
   
- При создании резервной копии закрытого ключа в файле шифрование является необходимым. Пароль, используемый для защиты сертификата, не является тем же ключом, который применялся для шифрования закрытого ключа сертификата.  
-  
- Чтобы восстановить сертификат из резервной копии, используйте инструкцию [CREATE CERTIFICATE](../../t-sql/statements/create-certificate-transact-sql.md).
+ При создании резервной копии закрытого ключа в файле шифрование является необходимым. Пароль, используемый для защиты закрытого ключа в файле, не является тем же ключом, который применялся для шифрования закрытого ключа сертификата в базе данных.  
+
+ Закрытые ключи сохраняются в формате PVK.
+
+ Чтобы восстановить резервную копию сертификата без закрытого ключа или с ним, используйте инструкцию [CREATE CERTIFICATE](../../t-sql/statements/create-certificate-transact-sql.md).
+ 
+ Чтобы восстановить закрытый ключ в существующем сертификате в базе данных, используйте инструкцию [ALTER CERTIFICATE](../../t-sql/statements/alter-certificate-transact-sql.md).
  
  При резервном копировании файлы будут перечислены в учетной записи службы экземпляра SQL Server. Если вам нужно восстановить сертификат сервера, работающего в другой учетной записи, настройте разрешения для файлов, чтобы они считывались новой учетной записью. 
   
@@ -129,6 +138,10 @@ GO
  [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)   
  [ALTER CERTIFICATE (Transact-SQL)](../../t-sql/statements/alter-certificate-transact-sql.md)   
  [DROP CERTIFICATE (Transact-SQL)](../../t-sql/statements/drop-certificate-transact-sql.md)  
+ [CERTENCODED (Transact-SQL)](../../t-sql/functions/certencoded-transact-sql.md)  
+ [CERTPRIVATEKEY (Transact-SQL)](../../t-sql/functions/certprivatekey-transact-sql.md)  
+ [CERT_ID (Transact-SQL)](../../t-sql/functions/cert-id-transact-sql.md)  
+ [CERTPROPERTY (Transact-SQL)](../../t-sql/functions/certproperty-transact-sql.md)  
   
   
 

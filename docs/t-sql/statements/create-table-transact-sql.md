@@ -47,12 +47,12 @@ ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: e33e1602f98094c6085d179982a252aa6abc840b
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: f5cda166fdd343392f85f5537877cbc7da3e05ae
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58478289"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503727"
 ---
 # <a name="create-table-transact-sql"></a>Инструкция CREATE TABLE (Transact-SQL)
 
@@ -70,7 +70,7 @@ ms.locfileid: "58478289"
 ```
 --Simple CREATE TABLE Syntax (common if not using options)
 CREATE TABLE
-    [ database_name . [ schema_name ] . | schema_name . ] table_name
+    { database_name.schema_name.table_name. | schema_name.table_name | table_name }
     ( { <column_definition> } [ ,...n ] )
 [ ; ]
 ```
@@ -80,7 +80,7 @@ CREATE TABLE
 ```
 --Disk-Based CREATE TABLE Syntax
 CREATE TABLE
-    [ database_name . [ schema_name ] . | schema_name . ] table_name
+    { database_name.schema_name.table_name | schema_name.table_name | table_name }
     [ AS FileTable ]
     ( {   <column_definition>
         | <computed_column_definition>
@@ -265,10 +265,9 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
 ```
 
 ```
---Memory optimized
-LE Syntax
+--Memory optimized CREATE TABLE Syntax
 CREATE TABLE
-    [database_name . [schema_name ] . | schema_name . ] table_name
+    { database_name.schema_name.table_name | schema_name.table_name | table_name }
     ( { <column_definition>
     | [ <table_constraint> ] [ ,... n ]
     | [ <table_index> ]
@@ -724,7 +723,7 @@ COMPRESSION_DELAY
 Рекомендации по использованию `COMPRESSION_DELAY` см. в статье [Начало работы с Columnstore для получения операционной аналитики в реальном времени](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md).
 
 \< table_option> ::=    
-Указывает один или более параметров таблицы.
+Указывает один параметр таблицы или несколько.
 
 DATA_COMPRESSION     
 Задает режим сжатия данных для указанной таблицы, номера секции или диапазона секций. Существуют следующие варианты выбора.
@@ -1087,7 +1086,7 @@ Test1Col
 Получить отчет о таблице и ее столбцах можно с помощью процедуры `sp_help` или `sp_helpconstraint`. Для переименования таблицы используется процедура `sp_rename`. Чтобы получить сведения о представлениях и хранимых процедурах, зависящих от таблицы, используйте функции [sys.dm_sql_referenced_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md) и [sys.dm_sql_referencing_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md).
 
 ## <a name="nullability-rules-within-a-table-definition"></a>Правила допустимости значения NULL в рамках определения таблицы
-Допустимость значения NULL для столбца зависит от того, разрешено ли значение NULL в качестве допустимого значения данных этого столбца. Значение NULL не равнозначно нулю или пустой строке: значение NULL указывает, что запись не была произведена или было явно указано значение NULL; обычно оно означает, что значение неизвестно либо неприменимо.
+Допустимость значения NULL для столбца зависит от того, разрешено ли значение NULL в качестве допустимого значения данных этого столбца. Значение NULL не равнозначно нулю или пустой строке: оно указывает, что запись не была произведена или было явно указано значение NULL; обычно оно означает, что значение неизвестно либо неприменимо.
 
 При создании или изменении таблицы с помощью инструкции `CREATE TABLE` или `ALTER TABLE` параметры базы данных и сеанса влияют на допустимость значений NULL для типа данных, указанного в определении столбца, и могут переопределять ее. Рекомендуется всегда явно определять столбец как NULL или NOT NULL для невычисляемых столбцов или, если используется пользовательский тип данных, разрешать, чтобы для столбца применялась возможность, установленная для этого типа по умолчанию. Для разреженных столбцов всегда должно быть разрешено значение NULL.
 

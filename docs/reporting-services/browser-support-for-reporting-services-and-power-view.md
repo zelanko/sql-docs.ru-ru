@@ -2,7 +2,7 @@
 title: Поддержка браузера для служб Reporting Services и Power View | Документы Майкрософт
 ms.date: 07/02/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - components [Reporting Services], browsers
 - Web browsers [Reporting Services]
 ms.assetid: 48a75bbb-0029-4c43-891d-dc8f4fc0ebe1
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 7282fd5627bc46d9f392a449c4707c75c867dd92
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 161b69416fcdcda57487f0ce2762807835dbd368
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021223"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65504102"
 ---
 # <a name="browser-support-for-reporting-services-and-power-view"></a>Поддержка браузера для служб Reporting Services и Power View
 
@@ -82,7 +82,11 @@ ms.locfileid: "50021223"
 
  **(+)** Последняя выпущенная версия
 
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+
  При использовании продукта SharePoint, интегрированного со службами [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], ознакомьтесь с разделом  [Планирование поддержки браузеров в SharePoint 2016](https://technet.microsoft.com//library/cc263526\(v=office.16\).aspx).
+
+::: moniker-end
 
 ### <a name="authentication-requirements"></a>Требования к проверке подлинности
 
@@ -104,7 +108,7 @@ ms.locfileid: "50021223"
 
  Если поддержка скриптов отключена, появится сообщение об ошибке, похожее на следующее при открытии отчета:
 
-- **Браузер не поддерживает выполнение скриптов, или выполнение скриптов запрещено в его настройках. Щелкните здесь для просмотра отчета без выполнения сценариев**.
+- **Браузер не поддерживает выполнение скриптов или выполнение скриптов запрещено в его настройках. Щелкните здесь для просмотра отчета без выполнения сценариев**.
 
  При просмотре отчета без поддержки выполнения скриптов отчет готовится к просмотру в формате HTML без таких средств просмотра отчетов, как панель инструментов отчета и схема документа.
 
@@ -142,7 +146,11 @@ ms.locfileid: "50021223"
 
  **(+)** Последняя выпущенная версия
 
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+
  Дополнительные сведения о поддержке браузеров в SharePoint 2016 см. в разделе [Планирование поддержки браузеров в SharePoint 2013](https://technet.microsoft.com//library/cc263526\(v=office.16\).aspx).
+
+::: moniker-end
 
 ## <a name="next-steps"></a>Следующие шаги
 

@@ -9,14 +9,18 @@ ms.technology: integration-services
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 101c0656aa8720743906e1f9e71075764942b7f3
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 0703c95824224f8200a43a38ad5990971c6b7911
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282538"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65717565"
 ---
 # <a name="run-an-ssis-package-with-powershell"></a>Выполнение пакета служб SSIS с помощью PowerShell
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 В этом кратком руководстве описывается применение скрипта PowerShell для подключения к серверу базы данных и запуска пакета служб SSIS.
 
 ## <a name="prerequisites"></a>предварительные требования
@@ -43,6 +47,16 @@ ms.locfileid: "58282538"
 4. Если вы забыли учетные данные входа на сервер базы данных SQL Azure, перейдите на страницу этого сервера, чтобы узнать имя его администратора. При необходимости вы можете сбросить пароль.
 5. Щелкните **Показать строки подключения к базам данных**.
 6. Просмотрите полную строку подключения **ADO.NET**.
+
+## <a name="ssis-powershell-provider"></a>Поставщик SSIS PowerShell
+Поставщик PowerShell служб SSIS можно использовать для подключения к каталогу служб SSIS и выполнения пакетов в нем.
+
+Ниже приведен простой пример того, как выполнить пакет служб SSIS в каталоге пакетов с помощью поставщика PowerShell для служб SSIS.
+
+```powershell
+(Get-ChildItem SQLSERVER:\SSIS\localhost\Default\Catalogs\SSISDB\Folders\Project1Folder\Projects\'Integration Services Project1'\Packages\ |
+WHERE { $_.Name -eq 'Package.dtsx' }).Execute("false", $null)
+```
 
 ## <a name="powershell-script"></a>Скрипт PowerShell
 Предоставьте соответствующие значения для переменных в начале следующего скрипта, а затем выполните скрипт, чтобы запустить пакет служб SSIS.

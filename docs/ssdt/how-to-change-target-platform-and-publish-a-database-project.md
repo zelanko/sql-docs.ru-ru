@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Изменение целевой платформы и публикация проекта базы данных | Документация Майкрософт
+title: Руководство. Изменение целевой платформы и публикация проекта базы данных | Документация Майкрософт
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -11,17 +11,17 @@ f1_keywords:
 - sql.data.tools.publish.dialog
 - sql.data.tools.publishdacproject
 ms.assetid: 6012e120-5f72-4f4f-ae6e-f9a57ae1dea7
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 5dc61811562a8c9fb121d170d89b0b28806b29f4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3a95768fd863c7584c98a5135dccef826fabbc56
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516698"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090105"
 ---
-# <a name="how-to-change-target-platform-and-publish-a-database-project"></a>Как изменить целевую платформу и опубликовать проект базы данных
+# <a name="how-to-change-target-platform-and-publish-a-database-project"></a>Руководство. изменить целевую платформу и опубликовать проект базы данных
 В качестве целевой версии SQL Server для проекта базы данных SQL Server Data Tools (SSDT) можно указать любой поддерживаемый экземпляр SQL Server (SQL Server 2005, 2008, 2008 R2, Microsoft SQL Server 2012 или SQL Azure). Это позволяет сосредоточить разработку базы данных в одном проекте, но при необходимости публиковать ее в нескольких экземплярах SQL Server.  
   
 Кроме того, SSDT упрощает эту задачу, учитывая сведения о целевой платформе и автоматически обнаруживая любые ошибки в коде (например, если используются неподдерживаемые функциональные средства в проекте, который должен быть опубликован в SQL Azure).  
@@ -41,7 +41,7 @@ ms.locfileid: "52516698"
   
 2.  Добавьте `ON [PRIMARY]` в конец инструкции `CREATE TABLE` .  
   
-3.  Обратите внимание, что на панели **Список ошибок** появляется ошибка SQL70015: "Filegroup reference and partitioning scheme" is not supported in SQL Azure (SQL70015: "Ссылка на файловую группу и схема секционирования" не поддерживается в SQL Azure).  
+3.  Обратите внимание, что отображается следующая ошибка в области **Список ошибок**:  SQL70015: "Ссылка на файловую группу и схема секционирования" не поддерживается в SQL Azure.  
   
     SSDT автоматически проверяет скрипт с учетом целевой платформы. В этом случае SSDT возвращает ошибку, поскольку файловая группа не поддерживается в SQL Azure. Список неподдерживаемых инструкций Transact\-SQL в SQL Azure см. в статье [Partially Supported Transact-SQL Statements (Microsoft Azure SQL Database)](https://msdn.microsoft.com/library/ee336267.aspx) (Частично поддерживаемые инструкции Transact-SQL в Базе данных SQL Microsoft Azure).  
   

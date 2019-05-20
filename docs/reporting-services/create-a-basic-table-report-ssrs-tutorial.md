@@ -1,6 +1,6 @@
 ---
 title: Создание простого табличного отчета (учебник по службам SSRS) | Документы Майкрософт
-ms.date: 11/07/2017
+ms.date: 04/16/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -10,51 +10,57 @@ helpviewer_keywords:
 - tutorials [Reporting Services]
 - reports [Reporting Services], creating
 ms.assetid: 3b539b4b-26f2-4c0b-b506-80f175679a46
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 2e16d18fd811e60b490842c309ac6260bfc5ad96
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: af41da75d553794019f1d01c8b8f5bb6aba80622
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289042"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65103305"
 ---
 # <a name="create-a-basic-table-report-ssrs-tutorial"></a>Создание простого табличного отчета (учебник по службам SSRS)
 
-В этом учебнике используется конструктор отчетов в составе SQL Server Data Tools для создания простого отчета [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] с разбивкой на страницы, содержащего таблицу, на основе базы данных **[!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)]**. Отчеты [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] с разбивкой на страницы можно также создавать с помощью построителя отчетов. 
+В этом руководстве описано, как использовать средство *Конструктор отчетов* в Visual Studio и SQL Server Data Tools (SSDT). Вы создадите отчет SQL Server Reporting Services (SSRS) с разбивкой на страницы. Отчет содержит таблицу запросов, созданную на основе данных в базе данных AdventureWorks2016.
 
-В процессе работы с этим учебником вы создадите проект отчета, укажите сведения о соединении, определите запрос, добавите область данных таблицы, сгруппируете и просуммируете ряд полей, а также выполните предварительный просмотр отчета.  
+По мере работы с этим руководством вы сделаете следующее:
   
-## <a name="requirements"></a>Требования  
-Для работы с этим учебником в системе должны быть установлены следующие компоненты:  
-  
--   [!INCLUDE[msCoName](../includes/msconame-md.md)] Ядро СУБД SQL Server  
-  
--   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] в основном режиме.  
-  
--   База данных [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] .  Дополнительные сведения см. в разделе [Образцы баз данных Adventure Works 2014](https://github.com/Microsoft/sql-server-samples/releases).  
-  
- -   [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md) с установленными компонентами "SQL Server Reporting Services", в состав которых входит конструктор отчетов.    
-  
-Для получения данных из базы данных [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] необходимо иметь разрешения только на чтение.
+- создадите проект отчетов;
+- настроите подключение к данным;
+- определите запрос;
+- добавите табличную область данных;
+- отформатируете отчет;
+- сгруппируете поля;
+- просмотрите отчет;
+- при необходимости опубликуете отчет.
 
-**Предполагаемое время для выполнения заданий учебника**: 30 минут.
+## <a name="requirements"></a>Требования
+
+Для работы с этим руководством должны быть установлены следующие компоненты:
+
+- [!INCLUDE[msconame-md](../includes/msconame-md.md)] Ядро СУБД SQL Server  
+- SQL Server 2016 Reporting Services (SSRS) и более поздние версии.
+- База данных AdventureWorks2016.  См. подробнее о [примере баз данных AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases).
+- [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md) для Visual Studio вместе с установленным расширением Reporting Services для обеспечения доступа к *конструктору отчетов*.
   
-## <a name="tasks"></a>Задания  
-[Занятие 1. Создание проекта сервера отчетов (службы Reporting Services)](../reporting-services/lesson-1-creating-a-report-server-project-reporting-services.md)  
-  
-[Занятие 2. Задание информации о соединении (службы Reporting Services)](../reporting-services/lesson-2-specifying-connection-information-reporting-services.md)  
-  
-[Занятие 3. Определение набора данных для табличного отчета (службы Reporting Services)](../reporting-services/lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md)  
-  
-[Занятие 4. Добавление таблицы в отчет (службы Reporting Services)](../reporting-services/lesson-4-adding-a-table-to-the-report-reporting-services.md)  
-  
-[Занятие 5. Форматирование отчета (службы Reporting Services)](../reporting-services/lesson-5-formatting-a-report-reporting-services.md)  
-  
-[Занятие 6. Добавление группирования и итогов (службы Reporting Services)](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md)  
+Также необходимо иметь разрешения только на чтение для получения данных из базы данных AdventureWorks2016.
+
+**Предполагаемое время для выполнения заданий учебника:** 30 минут.
 
 ## <a name="next-steps"></a>Следующие шаги
 
-[Учебники по службам Reporting Services](../reporting-services/reporting-services-tutorials-ssrs.md)  
+[Занятие 1. Создание проекта сервера отчетов (службы Reporting Services)](lesson-1-creating-a-report-server-project-reporting-services.md)
 
-Остались вопросы? [Посетите форум служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).
+[Занятие 2. Задание информации о соединении (службы Reporting Services)](lesson-2-specifying-connection-information-reporting-services.md)
+
+[Занятие 3. Определение набора данных для табличного отчета (службы Reporting Services)](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md)
+
+[Занятие 4. Добавление таблицы в отчет (службы Reporting Services)](lesson-4-adding-a-table-to-the-report-reporting-services.md)
+
+[Занятие 5. Форматирование отчета (Reporting Services)](lesson-5-formatting-a-report-reporting-services.md)
+
+[Занятие 6. Добавление группирования и итогов (службы Reporting Services)](lesson-6-adding-grouping-and-totals-reporting-services.md)
+
+## <a name="see-also"></a>См. также раздел
+
+[Руководства по Reporting Services](reporting-services-tutorials-ssrs.md) (дополнительные вопросы) [Посетите форум служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

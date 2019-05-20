@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Выполнение частичного запроса | Документация Майкрософт
+title: Руководство. Выполнение частичного запроса | Документация Майкрософт
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -8,17 +8,17 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: af04ab37-6cbb-4185-9382-e5922fa5b1df
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a1c10ec2282e5e7870ec05de356b0d2f1461e95f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0dff2087286035b078f59ac1673a733fb3cc8358
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677322"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090178"
 ---
-# <a name="how-to-execute-a-partial-query"></a>Как выполнить частичный запрос
+# <a name="how-to-execute-a-partial-query"></a>Руководство. выполнить частичный запрос
 Редактор Transact\-SQL позволяет выделять определенный фрагмент скрипта и выполнять его как отдельный запрос. Это упрощает отладку фрагментов сложных запросов.  
   
 > [!WARNING]  

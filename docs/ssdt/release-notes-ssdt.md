@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 44229bbe0bd0a4df65e9dfbfe213c6a14cee0f42
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 80836cb5ab67f221ff3f9965d1980bcbc9c8378d
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241909"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65101911"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>Заметки о выпуске SQL Server Data Tools (SSDT)
 
@@ -46,6 +46,36 @@ GeneMi , 2019/03/22.
 
 P.S.  There is no need to keep this large HTML comment indefinitely.
 -->
+## <a name="1591nbsp-ssdt-for-vs-2017"></a>15.9.1,&nbsp;SSDT для Visual Studio 2017
+
+_Выпущено_: &nbsp; 27 апреля 2019 г.  
+_Номер сборки_: &nbsp; 14.0.16191.0  
+_SSDT для Visual Studio 2017_.
+
+### <a name="whats-new"></a>Новые возможности
+
+#### <a name="ssis"></a>Службы SSIS
+
+| Изменения | Сведения |
+| :------- | :------ |
+| Устранена проблема, при которой части пакета не могут быть сохранены правильно из-за выбора предыдущей целевой версии SQL Server | &nbsp; |
+| Устранена проблема, при которой использование части пакета не позволяет добавить выражения в ограничение очередности | &nbsp; |
+| Устранена проблема, при которой кнопка "Справка" диспетчера источников и соединений Power Query не ссылается на нужный документ | &nbsp; |
+| Устранена проблема, при которой версия сборки служб SSIS не отображается в окне справки VS | &nbsp; |
+| Добавлено свойство ConnectByProxy для диспетчера соединений Ole DB и неструктурированных файлов, которое позволяет включить локальный доступ к данным с локальной IR в Azure-SSIS IR | &nbsp; |
+| Устранена проблема, при которой компоненты ODBC неправильно связывали тип данных DT_DBDATE | &nbsp; |
+| Добавлено свойство ConnectUsingManagedIdentity для диспетчера соединений ADO.NET и OLE DB, которое поддерживает проверку подлинности по управляемому удостоверению для подключения к источнику данных в Azure-SSIS IR | &nbsp; |
+
+### <a name="known-issues"></a>Известные проблемы
+
+| Известная проблема | Сведения |
+| :---------- | :------ |
+| Задача запуска пакетов в службах SSIS не поддерживает отладку, если параметр ExecuteOutOfProcess имеет значение True. | Эта проблема относится только к отладке. Она не влияет на сохранение, развертывание и запуск с использованием DTExec.exe или каталога SSIS. |
+| SSDT для Visual Studio 2017 версии позднее 15.8 не поддерживает разработку пакетов, содержащих источники или назначения Teradata. | Использование SSDT для Visual Studio 2017 (15.8). |
+| Источник Power Query может не поддерживать протокол OData версии 4, если службы SQL Server Integration Services и SQL Server Analysis Services установлены в одном экземпляре Visual Studio. | &nbsp; |
+| Источник Power Query может не поддерживать подключение к Oracle с помощью ODBC, если службы SQL Server Integration Services и SQL Server Analysis Services установлены в одном экземпляре Visual Studio. | &nbsp; |
+| Источник Power Query Source не локализован. | &nbsp; |
+| &nbsp; | &nbsp; |
 
 ## <a name="1590nbsp-ssdt-for-vs-2017"></a>15.9.0,&nbsp;SSDT для Visual Studio 2017
 

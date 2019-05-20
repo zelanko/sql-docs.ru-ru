@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 96d743b0-b69a-45bb-ae0e-62103dca76e2
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 23b3057a23737eb43206f9615ce2f83bad6f5610
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 567855c53848a354ec03c8de7fea1bb37c1c2a21
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745112"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105810"
 ---
 # <a name="compare-and-synchronize-data-in-one-or-more-tables-with-data-in-a-reference-database"></a>Сравнение и синхронизация данных из одной или нескольких таблиц с данными из эталонной базы данных
 Вы можете сравнивать данные в *исходной* и *целевой* базах данных и указывать, какие таблицы подлежат сравнению. Можно просматривать данные и решать, какие изменения должны быть синхронизированы. Затем можно обновить целевую базу данных для синхронизации баз данных или экспортировать скрипт обновления в редактор Transact\-SQL или в файл.  
@@ -27,9 +27,9 @@ ms.locfileid: "47745112"
   
 В этом разделе рассматриваются следующие вопросы.  
   
--   [Практическое руководство. Сравнение и синхронизация данных из двух баз данных](../ssdt/how-to-compare-and-synchronize-the-data-of-two-databases.md)  
+-   [Как Как сравнить и синхронизировать данные из двух баз данных](../ssdt/how-to-compare-and-synchronize-the-data-of-two-databases.md).  
   
--   [Практическое руководство. Просмотр различий между данными](../ssdt/how-to-view-data-differences.md)  
+-   [Как Как просмотреть различия данных](../ssdt/how-to-view-data-differences.md)  
   
 ## <a name="requirements"></a>Требования  
 Если речь идет о сравнении данных в таблице или представлении, то таблица или представление в базе данных-источнике должна иметь несколько общих атрибутов с таблицей или представлением в целевой базе данных. Таблицы и представления, которые не соответствуют следующим условиям, не подлежат сравнению и не появляются на второй странице мастера **Создание сравнения данных**:  

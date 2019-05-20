@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Настройка выполнения модульного теста SQL Server | Документация Майкрософт
+title: Руководство. Настройка выполнения модульного теста SQL Server | Документация Майкрософт
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -8,17 +8,17 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: e0179429-13ce-4d23-ae27-e6419de0a575
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 45c7429dfc8824859b06ef16616b0b999a3f6fd0
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a1c1d288b79d9058a9aff7609290d2381c715575
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666763"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090186"
 ---
-# <a name="how-to-configure-sql-server-unit-test-execution"></a>Практическое руководство. Настройка запуска модульного теста SQL Server
+# <a name="how-to-configure-sql-server-unit-test-execution"></a>Руководство. настроить выполнение модульного теста SQL Server
 При настройке тестового проекта можно задать несколько параметров, управляющих аспектами выполнения модульных тестов SQL Server. Эти параметры конфигурации хранятся в файле app.config проекта тестов. При непосредственном изменении этого файла новые значения отображаются в диалоговом окне конфигурации проекта.  
   
 Решение может содержать несколько проектов тестов. Каждый проект тестов содержит один файл app.config (то есть один набор параметров конфигурации). В результате решение может содержать различные наборы модульных тестов (по одному набору на каждый проект тестов), настроенных для выполнения различным образом.  

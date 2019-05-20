@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Отладка хранимых процедур | Документация Майкрософт
+title: Руководство. Отладка хранимых процедур | Документация Майкрософт
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -10,17 +10,17 @@ ms.topic: conceptual
 f1_keywords:
 - SQL.DATA.TOOLS.EXECUTESTOREDPROCEDURE.DIALOG
 ms.assetid: e3c8707f-0f6b-4265-8a5a-81f079330b52
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8b0aafe7ed2eddd189f57929b9d4ed971540dc57
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 727117a31fd1a2fc5f5a807de824a8ff61ebb5bd
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533425"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090200"
 ---
-# <a name="how-to-debug-stored-procedures"></a>Как выполнять отладку хранимых процедур
+# <a name="how-to-debug-stored-procedures"></a>Руководство. выполнить отладку хранимой процедуры
 Отладчик Transact\-SQL позволяет в интерактивном режиме отлаживать хранимые процедуры, отображая стек вызовов SQL, локальные переменные и параметры хранимой процедуры SQL. Как и в других языках программирования, при отладке скриптов Transact\-SQL вы можете просматривать и изменять локальные переменные и параметры, просматривать глобальные переменные, а также управлять точками останова.  
   
 В этом примере показаны пошаговое создание и отладка хранимой процедуры Transact\-SQL.  

@@ -1,5 +1,5 @@
 ---
-title: Пошаговое руководство. Использование пользовательского условия теста для проверки результатов выполнения хранимой процедуры | Документация Майкрософт
+title: Пошаговое руководство. Использование пользовательского условия теста для проверки результатов выполнения хранимой процедуры | Документация Майкрософт
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 4c33b494-a85e-4dd2-97b6-c88ee858a99c
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f109fd19d6c74fc60746fdccd5560b8aa482eb02
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9a262107294988e0d624e4b423147b5e5183a629
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833002"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65097440"
 ---
-# <a name="walkthrough-using-a-custom-test-condition-to-verify-the-results-of-a-stored-procedure"></a>Пошаговое руководство. Использование пользовательского условия теста для проверки результатов выполнения хранимой процедуры
-В этом пошаговом руководстве по расширению компонента описано, как создать условие теста и проверить его работоспособность, создав модульный тест SQL Server. Частью этого процесса является создание проекта библиотеки классов для условия теста, а также его подписание и установка. Если у вас уже есть условие теста и вы хотите обновить его, воспользуйтесь документом [Практическое руководство. Обновление пользовательского условия теста Visual Studio 2010 с предыдущего выпуска до SQL Server Data Tools](../ssdt/how-to-upgrade-visual-studio-2010-custom-test-condition-to-ssdt.md).  
+# <a name="walkthrough-using-a-custom-test-condition-to-verify-the-results-of-a-stored-procedure"></a>Пошаговое руководство. использовать пользовательское условие теста для проверки результатов выполнения хранимой процедуры
+В этом пошаговом руководстве по расширению компонента описано, как создать условие теста и проверить его работоспособность, создав модульный тест SQL Server. Частью этого процесса является создание проекта библиотеки классов для условия теста, а также его подписание и установка. Если у вас уже есть условие теста, которое требуется обновить, см. раздел [Как обновить пользовательское условие теста Visual Studio 2010 с предыдущего выпуска до SQL Server Data Tools](../ssdt/how-to-upgrade-visual-studio-2010-custom-test-condition-to-ssdt.md).  
   
 В этом пошаговом руководстве описаны следующие задачи:  
   
@@ -121,7 +121,7 @@ ms.locfileid: "47833002"
     public class ResultSetColumnCountCondition : TestCondition  
     ```  
   
-5.  Добавьте [ExportTestConditionAttribute](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.exporttestconditionattribute(v=vs.103).aspx). В статье [Практическое руководство. Создание условия теста для конструктора модульных тестов SQL Server](../ssdt/how-to-create-test-conditions-for-the-sql-server-unit-test-designer.md) вы найдете дополнительные сведения об атрибуте UnitTesting.Conditions.ExportTestConditionAttribute.  
+5.  Добавьте [ExportTestConditionAttribute](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.exporttestconditionattribute(v=vs.103).aspx). В разделе [Руководство. Создание условия теста для конструктора модульных тестов SQL Server](../ssdt/how-to-create-test-conditions-for-the-sql-server-unit-test-designer.md) вы найдете дополнительные сведения об атрибуте UnitTesting.Conditions.ExportTestConditionAttribute.  
   
     ```  
     [ExportTestCondition("ResultSet Column Count", typeof(ResultSetColumnCountCondition))]  
@@ -381,7 +381,7 @@ namespace ColumnCountCondition
   
 6.  Чтобы создать модульный тест, не настраивая в тестовом проекте подключение к базе данных, нажмите кнопку **Отмена**. Пустой тест откроется в конструкторе модульных тестов SQL Server. В проект тестов будет добавлен файл с исходным кодом на Visual C\#.  
   
-    Сведения о создании и настройке подключений к базе данных в модульных тестах баз данных см. в статье [Практическое руководство. Создание пустого модульного теста SQL Server](../ssdt/how-to-create-an-empty-sql-server-unit-test.md).  
+    Сведения о создании и настройке подключений к базе данных в модульных тестах баз данных см. в разделе [Как создать пустой модульный тест SQL Server](../ssdt/how-to-create-an-empty-sql-server-unit-test.md).  
   
 7.  Щелкните **Щелкните здесь, чтобы создать** и завершите создание модульного теста. Новое условие теста будет отображено в проекте SQL Server.  
   
@@ -400,7 +400,7 @@ namespace ColumnCountCondition
   
 5.  В окне **Свойства** задайте значения для свойств Count, Enabled и ResultSet.  
   
-    Дополнительные сведения см. в статье [Практическое руководство. Добавление условий теста в модульные тесты SQL Server](../ssdt/how-to-add-test-conditions-to-sql-server-unit-tests.md).  
+    Дополнительные сведения см. в разделе [Как добавить условия теста в модульные тесты SQL Server](../ssdt/how-to-add-test-conditions-to-sql-server-unit-tests.md).  
   
 ## <a name="see-also"></a>См. также:  
 [Пользовательские условия теста для модульных тестов SQL Server](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md)  

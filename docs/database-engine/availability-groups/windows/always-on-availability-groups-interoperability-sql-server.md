@@ -14,12 +14,12 @@ ms.assetid: daf87f90-2623-42ca-912c-b8f07d210510
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 34d019792a898290c65371e32f83b49911cb27a3
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 9600287fb847dcea4f24c565a843e9757e364c5e
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973841"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105235"
 ---
 # <a name="always-on-availability-groups-interoperability-sql-server"></a>Группы доступности Always On: взаимодействие (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,6 +52,7 @@ ms.locfileid: "57973841"
 Следующие функции взаимодействуют с [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] с определенными ограничениями. Дополнительные сведения см. в статьях по ссылкам.
 
 - Межбазовые транзакции и распределенные транзакции ([!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] и Windows Server 2016). Дополнительные сведения см. в статье [Транзакции между базами данных и распределенные транзакции для групп доступности AlwaysOn и зеркального отображения базы данных (SQL Server)](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md).
+- [Сборщик данных системы статистики запроса](../../../relational-databases/data-collection/system-data-collection-set-reports.md#Query) не может надежно работать в среде с недоступными для чтения вторичными базами данных. Чтобы использовать сборщик данных системы статистики запросов, разрешите [доступ на чтение](configure-read-only-access-on-an-availability-replica-sql-server.md) всех вторичных реплик группы доступности. 
 
 ## <a name="NoInterop"></a> Функции, несовместимые с группами доступности AlwaysOn
 

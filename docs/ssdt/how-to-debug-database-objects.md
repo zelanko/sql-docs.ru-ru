@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Отладка объектов базы данных | Документация Майкрософт
+title: Руководство. Отладка объектов базы данных | Документация Майкрософт
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -8,22 +8,22 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: f5d4584f-e85f-4558-b056-83681c365978
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6df3fa6dc005aab43e86d847ba76ce5e87678459
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 9c087ed280233cadc67abc8cf0160b1c36664bc0
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674143"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090192"
 ---
-# <a name="how-to-debug-database-objects"></a>Практическое руководство. Отладка объектов базы данных
+# <a name="how-to-debug-database-objects"></a>Руководство. выполнить отладку объектов базы данных
 Модульный тест SQL Server содержит следующие элементы.  
   
 -   Код модульного теста на языке Visual Basic или Visual C\#. Этот код, который формируется конструктором модульных тестов SQL Server, отвечает за передачу скрипта Transact\-SQL, составляющего основу теста.  
   
--   Одно или несколько условий теста, написанных на Visual C\# или Visual Basic. Для отладки условий теста следуйте процедуре, описанной в практических руководствах по отладке при выполнении теста [для Visual Studio 2010](https://msdn.microsoft.com/library/ms182484(VS.100).aspx) или [для Visual Studio 2012](https://msdn.microsoft.com/library/ms182484.aspx).  
+-   Одно или несколько условий теста, написанных на Visual C\# или Visual Basic. Для отладки условий теста следуйте процедуре по отладке тестирования модулей, описанной в разделе [Руководство. Отладка во время выполнения теста (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182484(VS.100).aspx) или [Руководство. Отладка во время выполнения теста (Visual Studio 2012)](https://msdn.microsoft.com/library/ms182484.aspx).  
   
 -   Один или несколько скриптов Transact\-SQL, которые работают с объектами в тестируемой базе данных. Вы не можете выполнить отладку этих скриптов Transact\-SQL.  
   

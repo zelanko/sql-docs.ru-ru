@@ -9,12 +9,12 @@ ms.technology: integration-services
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 39d1986d599233b9578fca32ff993ea6cfed4492
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 146b484e96dc35a48ffa5bfe22b0564262bce9e9
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282708"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65376878"
 ---
 # <a name="deploy-an-ssis-project-with-powershell"></a>Развертывание проекта служб SSIS с помощью PowerShell
 Это краткое руководство описывает применение скрипта PowerShell для подключения к серверу базы данных и развертывания проекта служб SSIS в каталоге SSIS.
@@ -43,6 +43,36 @@ ms.locfileid: "58282708"
 4. Если вы забыли учетные данные входа на сервер базы данных SQL Azure, перейдите на страницу этого сервера, чтобы узнать имя его администратора. При необходимости вы можете сбросить пароль.
 5. Щелкните **Показать строки подключения к базам данных**.
 6. Просмотрите полную строку подключения **ADO.NET**.
+
+## <a name="ssis-powershell-provider"></a>Поставщик SSIS PowerShell
+Предоставьте соответствующие значения для переменных в начале следующего скрипта, а затем выполните скрипт, чтобы развернуть проект служб SSIS.
+
+> [!NOTE]
+> В следующем примере для развертывания в SQL Server на локальном компьютере используется проверка подлинности Windows. Используйте командлет `New-PSDive`, чтобы установить соединение с использованием проверки подлинности SQL Server. Если вы подключаетесь к серверу базы данных SQL Azure, вы не можете использовать проверку подлинности Windows.
+
+```powershell
+# Variables
+$TargetInstanceName = "localhost\default"
+$TargetFolderName = "Project1Folder"
+$ProjectFilePath = "C:\Projects\Integration Services Project1\Integration Services Project1\bin\Development\Integration Services Project1.ispac"
+$ProjectName = "Integration Services Project1"
+
+# Get the Integration Services catalog
+$catalog = Get-Item SQLSERVER:\SSIS\$TargetInstanceName\Catalogs\SSISDB\
+
+# Create the target folder
+New-Object "Microsoft.SqlServer.Management.IntegrationServices.CatalogFolder" ($catalog, 
+$TargetFolderName,"Folder description") -OutVariable folder
+$folder.Create()
+
+# Read the project file and deploy it
+[byte[]] $projectFile = [System.IO.File]::ReadAllBytes($ProjectFilePath)
+$folder.DeployProject($ProjectName, $projectFile)
+
+# Verify packages were deployed.
+dir "$($catalog.PSPath)\Folders\$TargetFolderName\Projects\$ProjectName\Packages" | 
+SELECT Name, DisplayName, PackageId
+```
 
 ## <a name="powershell-script"></a>Скрипт PowerShell
 Предоставьте соответствующие значения для переменных в начале следующего скрипта, а затем выполните скрипт, чтобы развернуть проект служб SSIS.

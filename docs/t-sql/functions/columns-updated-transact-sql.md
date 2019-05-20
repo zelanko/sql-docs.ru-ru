@@ -21,12 +21,12 @@ ms.assetid: 765fde44-1f95-4015-80a4-45388f18a42c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c1a252e56d7e625632fdb2d8cb929056daa14815
-ms.sourcegitcommit: 0510e1eb5bcb994125cbc8b60f8a38ff0d2e2781
+ms.openlocfilehash: 0459812874f77493520c2c1f3ac794836147a2f0
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57736772"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775022"
 ---
 # <a name="columnsupdated-transact-sql"></a>COLUMNS_UPDATED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,6 +62,8 @@ SELECT TABLE_NAME, COLUMN_NAME,
 FROM AdventureWorks2012.INFORMATION_SCHEMA.COLUMNS  
 WHERE TABLE_NAME = 'Person';  
 ```  
+
+Если триггер применяется к столбцу, значение `COLUMNS_UPDATED` будет возвращаться в виде `true` или `1`, даже если значение столбца остается неизменным. Это нормальное поведение, и триггер должен реализовывать бизнес-логику, которая определяет, допустимы ли операции вставки, обновления и удаления. 
   
 ## <a name="column-sets"></a>Наборы столбцов
 Если в таблице определен набор столбцов, функция `COLUMNS_UPDATED` действует следующими способами.

@@ -1,18 +1,18 @@
 ---
 title: Перенос установки служб Reporting Services (собственный режим) | Документация Майкрософт
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.date: 11/06/2018
-ms.openlocfilehash: 2e7c5d6ecaebcdad5b3e2d9d23b4660f12e0bad7
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: 96b55cafe46994f44f496679f2d66f887baf4dce
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712425"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503606"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>Перенос установки служб Reporting Services (собственный режим)
 
@@ -38,9 +38,10 @@ ms.locfileid: "52712425"
 * [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]  
   
 * [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]
-::: moniker-end
 
 Сведения о переносе установки в режиме интеграции с [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint см. в статье [Перенос установки служб Reporting Services (режим интеграции с SharePoint)](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md).  
+
+::: moniker-end
   
  Миграция определяется как перемещение файлов данных приложений на новый экземпляр SQL Server. Ниже приведены обычные причины, по которым может потребоваться перенести установку.  
   
@@ -89,7 +90,7 @@ ms.locfileid: "52712425"
   
 * Запишите код, который вызывает поставщика инструментария WMI, чтобы копировать данные между базами данных. Дополнительные сведения об этом подходе см. в статье [Доступ к поставщику WMI для служб Reporting Services](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md).  
   
-* Если число элементов невелико, можно переиздать отчеты, модели отчетов и общие источники данных из конструктора отчетов, конструктора моделей и построителя отчетов на новом сервере отчетов. Повторно создайте назначения ролей, подписки, общие расписания, расписания моментальных снимков отчета, пользовательские свойства, установленные для отчетов или других элементов, безопасность элементов модели и свойства, назначенные на сервере отчетов. Будьте готовы к тому, что будут потеряны журнал отчетов и данные журнала выполнения отчета.
+* Если количество элементов невелико, можно переиздать отчеты и общие источники данных из конструктора отчетов, конструктора моделей и построителя отчетов на новом сервере отчетов. Повторно создайте назначения ролей, подписки, общие расписания, расписания моментальных снимков отчета, пользовательские свойства, установленные для отчетов или других элементов, безопасность элементов модели и свойства, назначенные на сервере отчетов. Будьте готовы к тому, что будут потеряны журнал отчетов и данные журнала выполнения отчета.
   
 ## <a name="bkmk_before_you_start"></a> Перед началом работы
 

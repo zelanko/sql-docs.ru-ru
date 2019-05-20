@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 1c43d9e4-6fb1-4d15-a5fb-cd572daf2951
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0e1efe0db32b167214521e1af3b9a1e941480d2d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c7a0271ff900ced1331308db67fc23d488a83caa
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764262"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65096935"
 ---
 # <a name="extending-the-database-features"></a>Расширение функций баз данных
 Вы можете создавать расширения функций, которые позволяют расширить функциональные возможности, такие как модульное тестирование и анализ кода базы данных. Дополнительные сведения см. в следующих разделах:  
@@ -27,7 +27,7 @@ ms.locfileid: "47764262"
   
 -   [Общие сведения о расширяемости для правил анализа кода базы данных](../ssdt/overview-of-extensibility-for-database-code-analysis-rules.md)  
   
--   [Практическое руководство. Установка и администрирование расширений компонентов](../ssdt/how-to-install-and-manage-feature-extensions.md)  
+-   [Руководство. Как установить расширения компонентов и управлять ими](../ssdt/how-to-install-and-manage-feature-extensions.md)  
   
 ## <a name="see-also"></a>См. также:  
 [SQL Server Data Tools](../ssdt/sql-server-data-tools.md)  

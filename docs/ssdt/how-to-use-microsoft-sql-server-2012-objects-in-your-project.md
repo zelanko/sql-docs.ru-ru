@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Использование объектов Microsoft SQL Server 2012 в проекте | Документация Майкрософт
+title: Руководство. Использование объектов Microsoft SQL Server 2012 в проекте | Документация Майкрософт
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -8,17 +8,17 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 9baf122f-cf22-4860-98db-ef782cd972fc
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2ead75f8b71227b1bd3831b650cc036a66b5b325
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: e3175f523a0cc6b91fd1d5bd955e6872a5cf0064
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52397096"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098405"
 ---
-# <a name="how-to-use-microsoft-sql-server-2012-objects-in-your-project"></a>Как использовать объекты Microsoft SQL Server 2012 в своем проекте
+# <a name="how-to-use-microsoft-sql-server-2012-objects-in-your-project"></a>Руководство. использовать объекты Microsoft SQL Server 2012 в своем проекте
 В этом примере мы добавим в проект базы данных объект последовательности, ориентированный на Microsoft SQL Server 2012.  
   
 Последовательности добавляются в Microsoft SQL Server 2012. Последовательность представляет собой определяемый пользователем объект, привязанный к схеме, который формирует последовательность числовых значений в соответствии со спецификацией, с которой эта последовательность создавалась. Последовательность числовых значений формируется в возрастающем или убывающем порядке с определенным интервалом и может повторяться запрошенным образом.  Дополнительные сведения об объектах последовательности см. в статье [Sequence Numbers](htttp://msdn.microsoft.com/library/ff878058(SQL.110).aspx) (Порядковые номера). Дополнительные сведения о новых возможностях в Microsoft SQL Server 2012 см. в разделе [Новые возможности SQL Server 2012](https://msdn.microsoft.com/library/bb500435(SQL.110).aspx).  
@@ -44,9 +44,9 @@ ms.locfileid: "52397096"
     CACHE 10  
     ```  
   
-4.  Если для целевой платформы проекта вместо Microsoft SQL Server 2012 указано другое значение, то в **Списке ошибок** отобразится сообщение о синтаксической ошибке для инструкции `CREATE SEQUENCE`. В разделе [How to: Change Target Platform and Publish a Database Project](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md) (Краткое руководство. Изменение целевой платформы и публикация проекта базы данных) рассказывается, как исправить эту ошибку и изменить целевую платформу соответствующим образом.  
+4.  Если для целевой платформы проекта вместо Microsoft SQL Server 2012 указано другое значение, то в **Списке ошибок** отобразится сообщение о синтаксической ошибке для инструкции `CREATE SEQUENCE`. Чтобы исправить эту ошибку, см. раздел [Руководство. Изменение целевой платформы и публикация проекта базы данных](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md); здесь рассказывается, как изменить целевую платформу соответствующим образом.  
   
-5.  Следуйте инструкциям в статье [Как изменить целевую платформу и опубликовать проект базы данных](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md), чтобы опубликовать проект в базе данных на подключенном сервере Microsoft SQL Server 2012.  
+5.  Следуйте указаниям раздела [Как изменить целевую платформу и опубликовать проект базы данных](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md), чтобы опубликовать проект в базе данных на подключенном сервере Microsoft SQL Server 2012.  
   
 ### <a name="to-use-the-new-sequence-object"></a>Использование нового объекта последовательности  
   

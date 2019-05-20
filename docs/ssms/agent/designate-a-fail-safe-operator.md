@@ -13,16 +13,16 @@ helpviewer_keywords:
 - jobs [SQL Server Agent], operators
 - notifications [SQL Server], job status
 ms.assetid: 0f4eb513-5c0a-4523-974e-e85c1deeb57f
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2f79ccd9b759275f3811ed0de2cb84114ce0609f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5ea7a499e2d0577b8ac0d57cbb0f530958af9ff8
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52501979"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65096524"
 ---
 # <a name="designate-a-fail-safe-operator"></a>Назначение резервного оператора
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "52501979"
   
 5.  В списке **Оператор** выберите оператор, который необходимо сделать резервным.  
   
-6.  Установите некоторые или все указанные флажки для выбора способа уведомления оператора: **Электронная почта**, **Пейджер**или **Net send**.  
+6.  Установите флажки в любых полях для выбора способа уведомления оператора: **Электронная почта**, **Пейджер** или **Net send**.  
   
 7.  После завершения нажмите кнопку **ОК**.  
   

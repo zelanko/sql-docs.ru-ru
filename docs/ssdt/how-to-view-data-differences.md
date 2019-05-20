@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Просмотр различий между данными | Документация Майкрософт
+title: Руководство. Просмотр различий между данными | Документация Майкрософт
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -10,17 +10,17 @@ ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.datacompare.f1
 ms.assetid: f88d3350-2eaf-44cc-96a8-84008b6cd071
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6c913ffa52c07091e4eec45f6013a3540edfe810
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 935a2671c2496cb6cbb996d25cddc123bc4d782d
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614277"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095927"
 ---
-# <a name="how-to-view-data-differences"></a>Практическое руководство. Просмотр различий данных
+# <a name="how-to-view-data-differences"></a>Руководство. просмотреть различия данных
 Сравнив данные в двух базах данных, вы увидите все сравниваемые *объекты базы данных* и их состояние. Можно также просматривать результаты, относящиеся к записям в каждом объекте, сгруппированные по состояниям.  
   
 После просмотра различий можно обновить *целевую* бауы данных для согласования с *исходной* базой данных применительно к некоторым или всем объектам или записям, которые являются различающимися, недостающими или новыми.  

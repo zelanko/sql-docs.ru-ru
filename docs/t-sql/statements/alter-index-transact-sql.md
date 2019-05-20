@@ -47,12 +47,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5e7779ffa5875e50040a0e066097b7eed852a97d
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: a103a0a8681d5128b021783a5e5509c46c9fad32
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980420"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65502866"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -83,8 +83,7 @@ ALTER INDEX { index_name | ALL } ON <object>
   
 <object> ::=   
 {  
-    [ database_name. [ schema_name ] . | schema_name. ]   
-    table_or_view_name  
+    { database_name.schema_name.table_or_view_name | schema_name.table_or_view_name | table_or_view_name }  
 }  
   
 <rebuild_index_option > ::=  
@@ -184,12 +183,12 @@ ALTER INDEX { index_name | ALL }
   
 |Использование ключевого слова ALL с этой операцией|Отказывает, если в таблице имеется один или несколько|  
 |----------------------------------------|----------------------------------------|  
-|REBUILD WITH ONLINE = ON|XML-индекс<br /><br /> Пространственный индекс<br /><br /> Индекс columnstore **Применимо к:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) и [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|  
+|REBUILD WITH ONLINE = ON|XML-индекс<br /><br /> Пространственный индекс<br /><br /> Индекс columnstore: **Применимо к:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) и [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|  
 |REBUILD PARTITION = *partition_number*|Несекционированный, пространственный, отключенный индекс или XML-индекс|  
 |REORGANIZE|Индексы с параметром ALLOW_PAGE_LOCKS, равным OFF|  
 |REORGANIZE PARTITION = *partition_number*|Несекционированный, пространственный, отключенный индекс или XML-индекс|  
-|IGNORE_DUP_KEY = ON|XML-индекс<br /><br /> Пространственный индекс<br /><br /> Индекс columnstore **Применимо к:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) и [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|  
-|ONLINE = ON|XML-индекс<br /><br /> Пространственный индекс<br /><br /> Индекс columnstore **Применимо к:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) и [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|
+|IGNORE_DUP_KEY = ON|XML-индекс<br /><br /> Пространственный индекс<br /><br /> Индекс columnstore: **Применимо к:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) и [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|  
+|ONLINE = ON|XML-индекс<br /><br /> Пространственный индекс<br /><br /> Индекс columnstore: **Применимо к:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) и [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|
 |RESUMABLE = ON  | Возобновляемые индексы не поддерживаются с ключевым словом **All**. <br /><br /> **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) и [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. |   
   
 > [!WARNING]
@@ -540,7 +539,7 @@ ALLOW_PAGE_LOCKS **=** { **ON** | OFF }
   
 -   Указав номера нескольких секций, разделив их запятыми, например ON PARTITIONS (1, 5).  
   
--   Предоставляет как диапазоны секций, так и отдельные секции, например ON PARTITIONS (2, 4, 6 TO 8).  
+-   Указав как диапазоны секций, так и отдельные секции, например ON PARTITIONS (2, 4, 6 TO 8).  
   
  \<range> можно указать номерами секций, разделенными ключевым словом TO, например: ON PARTITIONS (6 TO 8).  
   
@@ -735,8 +734,7 @@ ABORT
    -    ALTER TABLE с командой DDL для перестроения индекса  
    -    Команду DDL с параметром "RESUMABLE=ON" невозможно выполнить внутри явной транзакции (она не может быть частью блока BEGIN TRAN ... COMMIT)
    -    Перестроение индекса, который содержит вычисляемые столбцы или столбцы TIMESTAMP в качестве ключевых столбцов.
--   Если базовая таблица содержит столбцы LOB, для возобновляемого перестроения кластеризованных индексов требуется Sch-M-блокировка в начале этой операции.
-   -    Параметр SORT_IN_TEMPDB = ON не поддерживается для возобновляемых индексов. 
+-   Если базовая таблица содержит столбцы LOB, для возобновляемого перестроения кластеризованных индексов требуется Sch-M-блокировка в начале этой операции. 
 
 > [!NOTE]
 > Команда DDL выполняется вплоть до завершения, приостанавливается или завершается ошибкой. Если команда приостанавливается, возникнет ошибка, указывающая на приостановку операции и невозможность завершения создания индекса. Дополнительные сведения о текущем состоянии индекса можно получить из [sys.index_resumable_operations](../../relational-databases/system-catalog-views/sys-index-resumable-operations.md). Как и в случае выше, при сбое также будет выведено сообщение об ошибке. 

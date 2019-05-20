@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 55d8be9c-9282-47d3-be7f-e2c26f00c95e
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 34cea0d4a251266d21218cefaee2d5f122e574ff
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0b6949adf3c92d14d081ef07d8e30605a22fe9d8
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543903"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65102010"
 ---
 # <a name="using-transact-sql-assertions-in-sql-server-unit-tests"></a>Использование проверочных утверждений Transact-SQL в модульных тестах SQL Server
 При выполнении модульного теста SQL Server запускается тестовый скрипт Transact\-SQL и возвращается его результат. Иногда результаты возвращаются в виде результирующего набора. Результаты можно проверить с помощью условий теста. Например, по тестовому условию можно проверить число возвращенных строк в результирующем наборе. Можно также проверить время, которое заняло выполнение конкретного теста. Дополнительные сведения об условиях теста см. в статье [Использование условий теста в модульных тестах SQL Server](../ssdt/using-test-conditions-in-sql-server-unit-tests.md).  
@@ -57,7 +57,7 @@ ms.locfileid: "52543903"
   
 Любые неуказанные параметры не используются. Эти параметры передаются инструкции RAISERROR в коде базы данных. Если указано MatchFirstError = true, то атрибут будет в исключении соответствовать любой из SqlErrors. По умолчанию (MatchFirstError = true) сопоставление происходит только с первой возникшей ошибкой.  
   
-Пример использования ожидаемых исключений и отрицательного модульного теста SQL Server см. в статье [Пошаговое руководство. Создание и запуск модульного теста SQL Server](../ssdt/walkthrough-creating-and-running-a-sql-server-unit-test.md).  
+Пример использования ожидаемых исключений и отрицательного модульного теста SQL Server см. в разделе [Пошаговое руководство. Создание и запуск модульного теста SQL Server](../ssdt/walkthrough-creating-and-running-a-sql-server-unit-test.md).  
   
 ## <a name="the-raiserror-statement"></a>Инструкция RAISERROR  
   
@@ -79,11 +79,11 @@ ms.locfileid: "52543903"
   
 @ErrorState — произвольное целое число в диапазоне от 1 до 127. Оно служит для различения повторений одной и той же ошибки, возникшей в разных местах кода.  
   
-Дополнительные сведения см. в разделе справки [RAISERROR (Transact-SQL)](https://msdn.microsoft.com/library/ms178592.aspx). Пример использования RAISERROR в модульном тесте SQL Server приведен в статье [Практическое руководство. Написание модульного теста SQL Server, который выполняется в области действия одной транзакции](../ssdt/how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md).  
+Дополнительные сведения см. в разделе справки [RAISERROR (Transact-SQL)](https://msdn.microsoft.com/library/ms178592.aspx). Пример использования RAISERROR в модульном тесте SQL Server приведен в разделе [Как написать модульный тест SQL Server, который выполняется в области действия одной транзакции](../ssdt/how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md).  
   
 ## <a name="see-also"></a>См. также:  
 [Создание и определение модульных тестов SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
 [Использование условий теста в модульных тестах SQL Server](../ssdt/using-test-conditions-in-sql-server-unit-tests.md)  
 [Проверка кода базы данных с помощью модульных тестов SQL Server](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
-[Практическое руководство. Открытие модульного теста SQL Server для изменения](../ssdt/how-to-open-a-sql-server-unit-test-to-edit.md)  
+[Как открыть модульный тест SQL Server для изменения](../ssdt/how-to-open-a-sql-server-unit-test-to-edit.md)  
   

@@ -16,12 +16,12 @@ ms.assetid: 4da0e793-1ee4-4f69-a80b-45c6732a238d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9bbdc659100477b7a4d5edae427ba74c76365ea3
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 8c43cd13760808822b2c0332584799383eab5e39
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135984"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64776260"
 ---
 # <a name="identity-and-access-control-replication"></a>Идентификатор и управление доступом (репликация)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,6 +50,8 @@ ms.locfileid: "54135984"
 
 ## <a name="manage-logins-and-passwords-in-replication"></a>Управление именами входа и паролями в репликации
 При настройке репликации укажите имена входа и пароли для агентов репликации. После настройки репликации можно изменить имена входа и пароли. Дополнительные сведения см. в статье [View and Modify Replication Security Settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md). Если вы измените пароль для учетной записи, которая используется агентом репликации, выполните процедуру [sp_changereplicationserverpasswords &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changereplicationserverpasswords-transact-sql.md).  
+
+Поддержка использования групповых управляемых учетных записей служб (gMSA) впервые появилась в SQL Server 2014. Дополнительные сведения см. в записи блога [Управляемые учетные записи служб для групп и репликации](https://repltalk.com/2019/03/26/replication-and-group-managed-service-accounts/)
   
 ## <a name="see-also"></a>См. также:  
  [Предотвращение угроз и устранение уязвимостей (репликация)](../../../relational-databases/replication/security/threat-and-vulnerability-mitigation-replication.md) [Модель безопасности агента репликации](../../../relational-databases/replication/security/replication-agent-security-model.md)   

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - FileTables [SQL Server], bulk loading
 - FileTables [SQL Server], loading files
 ms.assetid: dc842a10-0586-4b0f-9775-5ca0ecc761d9
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 75f0c0b036a261c7262934f1ac03c4a0edf4e2f5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c36a1b7235b1a323bbace94762411aa2c71df15b
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526712"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65094259"
 ---
 # <a name="load-files-into-filetables"></a>выполнить загрузку файлов в таблицу FileTables
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,9 +32,9 @@ ms.locfileid: "52526712"
 |Текущее местоположение файлов|Параметры для переноса|  
 |-------------------------------|---------------------------|  
 |Файлы в настоящее время хранятся в файловой системе.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не имеет сведений о файлах.|Поскольку таблица FileTable в файловой системе Windows отображается в виде папки, можно легко загрузить файлы в новую таблицу FileTable любым из доступных способов перемещения или копирования файлов. Это может быть проводник, параметры командной строки, включая xcopy и robocopy, и пользовательские скрипты или приложения.<br /><br /> Существующую папку невозможно преобразовать в таблицу FileTable.|  
-|Файлы в настоящее время хранятся в файловой системе.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] содержит таблицу метаданных, в которой находятся указатели на файлы.|Сначала нужно переместить или скопировать файлы одним из способов, описанных выше.<br /><br /> Затем нужно обновить существующую таблицу метаданных, чтобы они указывали на новое расположение файлов.<br /><br /> Дополнительные сведения см. в разделе [Пример. Перенос файлов из файловой системы в таблицу FileTable](#HowToMigrateFiles) этой статьи.|  
+|Файлы в настоящее время хранятся в файловой системе.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] содержит таблицу метаданных, в которой находятся указатели на файлы.|Сначала нужно переместить или скопировать файлы одним из способов, описанных выше.<br /><br /> Затем нужно обновить существующую таблицу метаданных, чтобы они указывали на новое расположение файлов.<br /><br /> Дополнительные сведения см. в разделе [Пример. Перенос файлов из файловой системы в таблицу FileTable](#HowToMigrateFiles) в этом разделе.|  
   
-###  <a name="HowToLoadNew"></a> Практическое руководство. Загрузка файлов в таблицу FileTable  
+###  <a name="HowToLoadNew"></a> Как выполнить загрузку файлов в таблицу FileTable  
 Ниже перечислены методы, которые можно использовать для загрузки файлов в таблицу FileTable.  
   
 -   Перетаскивание файлов из исходной папки в новую папку FileTable в проводнике Windows.  
@@ -99,7 +99,7 @@ UPDATE PhotoMetadata
   
     -   INSERT INTO ... SELECT * FROM OPENROWSET(BULK ...) с предложением IGNORE_CONSTRAINTS.  
   
-###  <a name="HowToBulkLoad"></a> Практическое руководство. Массовая загрузка файлов в таблицу FileTable  
+###  <a name="HowToBulkLoad"></a> Как выполнить массовую загрузку файлов в таблицу FileTable  
  Для массовой загрузки файлов в таблицу FileTable можно использовать различные способы.  
   
 -   **bcp**  
@@ -122,7 +122,7 @@ UPDATE PhotoMetadata
   
  Сведения об отключении ограничений FileTable см. в разделе [Управление таблицами FileTable](../../relational-databases/blob/manage-filetables.md).  
   
-###  <a name="disabling"></a> Практическое руководство. Отключение ограничений FileTable для массовой загрузки  
+###  <a name="disabling"></a> Как отключить ограничения FileTable для массовой загрузки  
  Для массовой загрузки файлов в таблицу FileTable без издержек по применению определенных в системе ограничений, можно временно отключить ограничения. Дополнительные сведения см. в статье [Управление таблицами FileTable](../../relational-databases/blob/manage-filetables.md).  
   
 ## <a name="see-also"></a>См. также:  

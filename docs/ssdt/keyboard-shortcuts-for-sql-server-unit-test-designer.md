@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: b1c61454-242f-4948-a9ca-e2cd5df26102
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a6d6621f14b8294e93110311ca5ea210652bb868
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 757eebf28764c3332b54143424d525a0f2de9ae8
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659584"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65088914"
 ---
 # <a name="keyboard-shortcuts-for-sql-server-unit-test-designer"></a>Сочетания клавиш для конструктора модульных тестов SQL Server
 Для навигации в конструкторе модульных тестов SQL Server используются следующие сочетания клавиш.  
@@ -27,7 +27,7 @@ ms.locfileid: "51659584"
 |Переход из редактора Transact\-SQL к панели навигации.|CTRL + F2|  
 |Перемещение вперед по элементам панели навигации.|TAB|  
 |Перемещение назад по элементам панели навигации.|SHIFT + TAB|  
-|Переключение между различными панелями конструктора модульных тестов базы данных.<br /><br />**Примечание**. Это сочетание клавиш не будет работать, если при первом открытии Visual Studio для профиля разработки выбран язык C#.|F6 / SHIFT + F6|  
+|Переключение между различными панелями конструктора модульных тестов базы данных.<br /><br />**ПРИМЕЧАНИЕ.** Это сочетание клавиш не будет работать, если при первом открытии Visual Studio для профиля разработки выбран язык C#.|F6 / SHIFT + F6|  
   
 ## <a name="see-also"></a>См. также:  
 [Создание и определение модульных тестов SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  

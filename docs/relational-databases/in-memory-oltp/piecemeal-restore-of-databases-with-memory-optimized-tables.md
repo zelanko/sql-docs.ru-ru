@@ -12,14 +12,15 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d6c92421a2c29964683489c93b59e98a398d9262
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c9f4f22990a4fb1fa3fdb78241cf2989027e7106
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661253"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65106267"
 ---
 # <a name="piecemeal-restore-of-databases-with-memory-optimized-tables"></a>Поэтапное восстановление баз данных с таблицами, оптимизированными для памяти
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Поэтапное восстановление поддерживается в базах данных с таблицами, оптимизированными для памяти, за исключением одного случая, описанного ниже. Дополнительные сведения о поэтапном резервном копировании и восстановлении см. в разделах [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md) и [Поэтапное восстановление (SQL Server)](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md).  
   
@@ -27,7 +28,7 @@ ms.locfileid: "51661253"
   
 -   При резервном копировании (или восстановлении) первичной файловой группы необходимо указать оптимизированную для памяти файловую группу.  
   
--   При резервном копировании (или восстановлении) файловой группы, оптимизированной для памяти, необходимо указать первичную файловую группу.  
+-   При резервном копировании (или восстановлении) оптимизированной для памяти файловой группы необходимо указать первичную файловую группу.  
   
  Основные сценарии для поэтапного резервного копирования и восстановления.  
   
@@ -46,59 +47,107 @@ ms.locfileid: "51661253"
 ## <a name="samples"></a>Примеры  
  В примерах используется следующая схема:  
   
-```  
-CREATE DATABASE imoltp  
-ON PRIMARY (name = imoltp_primary1, filename = 'c:\data\imoltp_data1.mdf')  
-LOG ON (name = imoltp_log, filename = 'c:\data\imoltp_log.ldf')  
+```sql
+CREATE DATABASE imoltp
+    ON PRIMARY (
+        name = imoltp_primary1,
+        filename = 'c:\data\imoltp_data1.mdf')
+    LOG ON (
+        name = imoltp_log,
+        filename = 'c:\data\imoltp_log.ldf');
+    GO  
+  
+ALTER DATABASE imoltp
+    ADD FILE (
+        name = imoltp_primary2,
+        filename = 'c:\data\imoltp_data2.ndf');
 GO  
   
-ALTER DATABASE imoltp ADD FILE (name = imoltp_primary2, filename = 'c:\data\imoltp_data2.ndf')  
+ALTER DATABASE imoltp
+    ADD FILEGROUP imoltp_secondary;
+
+ALTER DATABASE imoltp
+    ADD FILE (
+        name = imoltp_secondary,
+        filename = 'c:\data\imoltp_secondary.ndf')
+            TO FILEGROUP imoltp_secondary;
 GO  
   
-ALTER DATABASE imoltp ADD FILEGROUP imoltp_secondary  
-ALTER DATABASE imoltp ADD FILE (name = imoltp_secondary, filename = 'c:\data\imoltp_secondary.ndf') TO FILEGROUP imoltp_secondary  
-GO  
-  
-ALTER DATABASE imoltp ADD FILEGROUP imoltp_mod CONTAINS MEMORY_OPTIMIZED_DATA   
-ALTER DATABASE imoltp ADD FILE (name='imoltp_mod1', filename='c:\data\imoltp_mod1') TO FILEGROUP imoltp_mod   
-ALTER DATABASE imoltp ADD FILE (name='imoltp_mod2', filename='c:\data\imoltp_mod2') TO FILEGROUP imoltp_mod   
+ALTER DATABASE imoltp
+    ADD FILEGROUP imoltp_mod
+    CONTAINS MEMORY_OPTIMIZED_DATA;
+
+ALTER DATABASE imoltp
+    ADD FILE (
+        name = 'imoltp_mod1',
+        filename = 'c:\data\imoltp_mod1')
+            TO FILEGROUP imoltp_mod;
+
+ALTER DATABASE imoltp
+    ADD FILE (
+        name = 'imoltp_mod2',
+        filename = 'c:\data\imoltp_mod2')
+            TO FILEGROUP imoltp_mod;
 GO  
 ```  
   
 ### <a name="backup"></a>Резервное копирование  
  Этот пример показывает, как создать резервную копию первичной файловой группы и группы, оптимизированной для памяти. Следует совместно указать и оптимизированную для памяти группу, и первичную файловую группу.  
   
-```  
-backup database imoltp filegroup='primary', filegroup='imoltp_mod' to disk='c:\data\imoltp.dmp' with init  
-```  
+```sql
+BACKUP database imoltp
+    filegroup = 'primary',
+    filegroup = 'imoltp_mod'
+    to disk = 'c:\data\imoltp.dmp'
+    with init;
+```
   
  Следующий пример показывает, что резервное копирование файловой группы (или групп), отличной от первичной и оптимизированной для памяти файловой группы, выполняется так же, как и для баз данных без таблиц, оптимизированных для памяти. Следующая команда делает резервную копию вторичной файловой группы  
   
-```  
-backup database imoltp filegroup='imoltp_secondary' to disk='c:\data\imoltp_secondary.dmp' with init  
-```  
+```sql
+BACKUP database imoltp
+    filegroup = 'imoltp_secondary'
+    to disk = 'c:\data\imoltp_secondary.dmp'
+    with init;
+```
   
 ### <a name="restore"></a>Восстановить  
  В следующем примере показано, как совместно восстановить первичную файловую группу и группу, оптимизированную для памяти.  
-  
-```  
-restore database imoltp filegroup = 'primary', filegroup = 'imoltp_mod'   
-from disk='c:\data\imoltp.dmp' with partial, norecovery  
-  
---restore the transaction log  
- RESTORE LOG [imoltp] FROM DISK = N'c:\data\imoltp_log.dmp' WITH  FILE = 1,  NOUNLOAD,  STATS = 10  
-GO  
-```  
+
+```sql
+RESTORE database imoltp
+    filegroup = 'primary',
+    filegroup = 'imoltp_mod'
+    from disk = 'c:\data\imoltp.dmp'
+    with
+        partial,
+        norecovery;
+
+-- Restore the transaction log.
+
+RESTORE LOG [imoltp]
+    FROM DISK = N'c:\data\imoltp_log.dmp'
+    WITH
+        FILE = 1,
+        NOUNLOAD,
+        STATS = 10;
+GO
+```
   
  Следующий пример показывает, что восстановление файловой группы (или групп), отличной от первичной и оптимизированной для памяти файловой группы, выполняется так же, как и для баз данных без таблиц, оптимизированных для памяти.  
   
-```  
-RESTORE DATABASE [imoltp] FILE = N'imoltp_secondary'   
-FROM  DISK = N'c:\data\imoltp_secondary.dmp' WITH  FILE = 1,  RECOVERY,  NOUNLOAD,  STATS = 10  
-GO  
-```  
-  
+```sql
+RESTORE DATABASE [imoltp]
+    FILE = N'imoltp_secondary'
+    FROM DISK = N'c:\data\imoltp_secondary.dmp'
+    WITH
+        FILE = 1,
+        RECOVERY,
+        NOUNLOAD,
+        STATS = 10;
+GO
+```
+
 ## <a name="see-also"></a>См. также:  
  [Резервное копирование и восстановление оптимизированных для памяти таблиц](https://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
-  
-  
+

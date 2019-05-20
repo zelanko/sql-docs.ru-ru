@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Использование сравнения схем для сопоставления разных определений баз данных | Документация Майкрософт
+title: Руководство. Использование сравнения схем для сопоставления разных определений баз данных | Документация Майкрософт
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -14,17 +14,17 @@ f1_keywords:
 - sql.data.tools.schemacompare.connectiondialog.f1
 - sql.data.tools.schemacompare.connectiondialog.error.f1
 ms.assetid: 7f0905a4-081c-46e2-bd7d-325b63e5c675
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2f8c03ebbb1b49258ae6a7f8744042f763fc7282
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cd48c91bee175e3cc2bdb0031d70a9d8e68d95c4
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668552"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095934"
 ---
-# <a name="how-to-use-schema-compare-to-compare-different-database-definitions"></a>Как использовать сравнение схем для сопоставления различных определений баз данных
+# <a name="how-to-use-schema-compare-to-compare-different-database-definitions"></a>Руководство. использовать сравнение схем для сопоставления различных определений баз данных
 В SQL Server Data Tools (SSDT) входит программа сравнения схем, которая позволяет сравнивать два определения базы данных.  Источником и целью сравнения может быть любое сочетание подключенной базы данных, проекта базы данных SQL Server, файла моментального снимка и файла DACPAC.  Результаты сравнения выводятся в виде набора действий, которые необходимо выполнить с целевой базой, чтобы сделать ее идентичной исходной базе.  После завершения сравнения вы можете обновить целевую базу непосредственно (если это проект или база данных) или создать скрипт обновления, выполняющий те же действия.  
   
 Различия между источником и целью представляются в виде сетки для удобства просмотра.  Для каждого различия поддерживается детализация в сетке результатов или в форме скрипта.  Затем вы можете выборочно исключить отдельные различия.  

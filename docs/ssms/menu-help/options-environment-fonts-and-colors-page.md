@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: ea3aa222-538d-485f-99dc-01eb02cdcfea
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: edb990e57f3f02db207959a4511d3b23069b0db4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 755cc08f8e431e062ce9fdf3049d99453d724be6
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507763"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098375"
 ---
 # <a name="options-environment---fonts-and-colors-page"></a>Параметры ("Среда" — страница "Шрифты и цвета")
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,9 +57,9 @@ ms.locfileid: "52507763"
   
 Некоторые отображаемые элементы включают.  
   
--   В левой части редактора кода есть поле, в котором отображаются значки точек останова и закладок.  
+-   Поле индикаторов. В левой части редактора кода есть поле, в котором отображаются значки точек останова и закладок.  
   
--   Блок текста или кода, который может быть свернут или развернут в редакторе кода (только для XML-файлов).  
+-   Свертываемый текст. Блок текста или кода, который может быть свернут или развернут в редакторе кода (только для XML-файлов).  
   
 **Основной цвет элемента**  
 Содержит цвета, которые можно использовать в качестве основного цвета для элемента, выбранного в списке **Отображаемые элементы**. Так как некоторые элементы связаны с другими, необходимо поддерживать согласованную схему отображения. Например, изменения цвета переднего плана текста также приведут к изменению цвета переднего плана таких элементов, как «Строка».  

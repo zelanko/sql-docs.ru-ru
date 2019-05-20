@@ -13,16 +13,16 @@ helpviewer_keywords:
 - SQL Server Agent jobs, history
 - historical information [SQL Server], jobs
 ms.assetid: 018e5c49-d3a0-4504-851a-f70996a34bb7
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e413fec31f27231ef52957aff03bbacb082fb782
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d6d18a4654fc14aa5c0997734184ec700fad3162
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659372"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095514"
 ---
 # <a name="set-up-the-job-history-log"></a>Set Up the Job History Log
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -32,14 +32,14 @@ ms.locfileid: "47659372"
 
 В этом подразделе описывается настройка журнала заданий агента [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   **Перед началом работы:**  [безопасность](#Security)  
+-   **Перед началом работы**  [Безопасность](#Security)  
   
--   **Для настройки журнала заданий используется:** [Среда SQL Server Management Studio](#SSMS)  
+-   **Для настройки журнала заданий используется:** [SQL Server Management Studio](#SSMS)  
   
 ## <a name="BeforeYouBegin"></a>Перед началом  
   
 ### <a name="Security"></a>безопасность  
-Дополнительные сведения см. в разделе [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md).  
+Дополнительные сведения см. в разделе [Обеспечение безопасности агента SQL Server](../../ssms/agent/implement-sql-server-agent-security.md).  
   
 ## <a name="SSMS"></a>Использование среды SQL Server Management Studio  
 **Настройка журнала заданий**  

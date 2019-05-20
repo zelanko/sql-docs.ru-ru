@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Определение скриптов, выполняемых до или после развертывания | Документация Майкрософт
+title: Руководство. Определение скриптов, выполняемых до или после развертывания | Документация Майкрософт
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -8,17 +8,17 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 7f78f517-f13d-4f4b-84b9-e804cb490b2c
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 05a0fa6029a1995c8d6e8104e4638d4b41100f35
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: be518cfacfefa76f380eefab1e45348e037cc0c1
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731252"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098473"
 ---
-# <a name="how-to-specify-predeployment-or-postdeployment-scripts"></a>Как указать скрипты, выполняемые до или после развертывания
+# <a name="how-to-specify-predeployment-or-postdeployment-scripts"></a>Руководство. задать скрипты, выполняемые до или после развертывания
 Скрипты, выполняемые перед развертыванием и после него, выполняют инструкции Transact\-SQL до и после работы основного скрипта развертывания, который формируется на основе проекта базы данных. В проекте может быть только один скрипт, выполняемый до развертывания, и один скрипт, выполняемый после развертывания. Эти скрипты можно использовать для разных целей. Пример:  
   
 -   Скрипт, выполняемый перед развертыванием, может копировать данные из изменяемой таблицы во временную таблицу до выполнения переформатирования и применения данных к измененной таблице в рамках скрипта, выполняемого после развертывания.  

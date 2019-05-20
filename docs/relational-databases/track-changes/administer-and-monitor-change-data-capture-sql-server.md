@@ -14,12 +14,12 @@ ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6d460fcffef089e77825feb19b13602b3a118d20
-ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
+ms.openlocfilehash: 807f347bb176f6d8b3191f9f10c8f30448ce9b1f
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53991907"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099972"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>Администрирование и наблюдение за отслеживанием измененных данных (SQL Server)
 
@@ -176,6 +176,11 @@ SELECT command_count/duration AS [Throughput] FROM sys.dm_cdc_log_scan_sessions 
   
 4. В хранилище данных, которое было настроено в шаге 1, найдите таблицу custom_snapshots.cdc_log_scan_data. В данной таблице предоставлен архивный моментальный снимок данных из сеансов просмотра журнала. Эти данные могут быть использованы для анализа задержки, пропускной способности и других показателей производительности во времени.  
   
+## <a name="ScriptUpgrade"></a> Режим обновления скрипта
+
+При установке накопительных обновлений или пакетов обновления для экземпляра при перезагрузке экземпляр может войти в режим обновления скрипта. В этом режиме SQL Server может выполнить шаг для анализа и обновления внутренних таблиц CDC, что может привести к повторному созданию таких объектов, как индексы на таблицах записи. В зависимости от объема тестовых данных этот шаг может занять некоторое время или вызвать использование журнала транзакций для базы данных с поддержкой CDC.
+
+
 ## <a name="see-also"></a>См. также:
 
 - [Отслеживание измененных данных (SQL Server)](../../relational-databases/track-changes/track-data-changes-sql-server.md)

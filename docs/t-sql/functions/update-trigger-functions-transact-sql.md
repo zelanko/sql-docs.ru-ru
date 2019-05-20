@@ -26,12 +26,12 @@ ms.assetid: 8e3be25b-2e3b-4d1f-a610-dcbbd8d72084
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9677ef3717fb83bdaf6ea108279b98a6598adced
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: ae555bf3eaef4d7befd89a572ab926d189183e4e
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980350"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64776000"
 ---
 # <a name="update---trigger-functions-transact-sql"></a>Функции триггера — UPDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -65,6 +65,8 @@ UPDATE ( column )
 >  Функции предложения IF UPDATE(*column*) аналогичны предложениям IF, IF...ELSE или WHILE и могут использовать блок BEGIN...END. Дополнительные сведения см. в разделе [Язык управления потоком (Transact-SQL)](~/t-sql/language-elements/control-of-flow.md).  
   
  UPDATE(*column*) может применяться в любой части текста триггера [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+ 
+Если триггер применяется к столбцу, значение `UPDATED` будет возвращаться в виде `true` или `1`, даже если значение столбца остается неизменным. Это нормальное поведение, и триггер должен реализовывать бизнес-логику, которая определяет, допустимы ли операции вставки, обновления и удаления. 
   
 ## <a name="examples"></a>Примеры  
  Следующий пример создает триггер, который выдает сообщение клиенту при попытке обновить столбец `StateProvinceID` или `PostalCode` в таблице `Address`.  

@@ -1,5 +1,5 @@
 ---
-title: Настройка сбора данных об использовании и данных диагностики для SQL Server | Документация Майкрософт
+title: Настройка сбора данных об использовании и данных диагностики для SQL Server (CEIP) | Документация Майкрософт
 ms.custom: ''
 ms.date: 10/21/2016
 ms.prod: sql
@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6c60eb8cac357fba523196385e72a1b05a2c36f4
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: b089fd59814e8439bee929fdbc4f01fbc0340f75
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59243518"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65376854"
 ---
-# <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-tools"></a>Настройка сбора данных об использовании и данных диагностики для средств SQL Server
+# <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-tools-ceip"></a>Настройка сбора данных об использовании и данных диагностики для средств SQL Server (CEIP)
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
@@ -29,7 +29,7 @@ ms.locfileid: "59243518"
   
 ## <a name="opting-in-and-out-of-ceip-for-sql-server-data-tools"></a>Согласие на участие в программе улучшения качества SQL Server Data Tools и отказ от него  
 
- Программа улучшения качества программного обеспечения разработана, чтобы помочь корпорации Майкрософт улучшать свои продукты. Эта программа собирает сведения об аппаратном обеспечении и способах использования продукта людьми, не вмешиваясь в ход выполнения пользовательских задач на компьютере. Собранные сведения помогают корпорации Майкрософт определить, что нужно доработать. В этом документе мы расскажем, как согласиться на участие в программе улучшения качества программного обеспечения SQL Server Data Tools (SSDT) для Visual Studio 2017, Visual Studio 2015 и Visual Studio 2013.  
+ Программа улучшения качества программного обеспечения разработана, чтобы помочь корпорации Майкрософт улучшать свои продукты. Эта программа собирает сведения об аппаратном обеспечении и способах использования продукта людьми, не вмешиваясь в ход выполнения пользовательских задач на компьютере. Собранные сведения помогают корпорации Майкрософт определить, что нужно доработать. В этом документе мы расскажем, как согласиться на участие в программе улучшения качества программного обеспечения SQL Server Data Tools (SSDT) для Visual Studio 2017, Visual Studio 2015 и Visual Studio 2013.  Сведения об отказе от программы улучшения качества ПО для SQL Server см. в разделе [Отключение локального аудита для SQL Server](usage-and-diagnostic-data-in-local-audit.md#turning-local-audit-on-or-off).
 
 ### <a name="choice-and-control-over--ceip-and-sql-server-data-tools-for-visual-studio-2017"></a>Выбор и контроль участия в программе улучшения качества программного обеспечения (CEIP) и SQL Server Data Tools для Visual Studio 2017
 

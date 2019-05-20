@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Написание модульного теста SQL Server, который выполняется в области действия одной транзакции | Документация Майкрософт
+title: Руководство. Написание модульного теста SQL Server, который выполняется в области действия одной транзакции | Документация Майкрософт
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -8,17 +8,17 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: cb241e94-d81c-40e9-a7ae-127762a6b855
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: b96ff3e9775e38a7eb61449d6a2ed5e9bc4d6db4
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ded1e5f6aeace66f4be991b192e601c455871c26
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681292"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099560"
 ---
-# <a name="how-to-write-a-sql-server-unit-test-that-runs-within-the-scope-of-a-single-transaction"></a>Практическое руководство. Написание модульного теста SQL Server, который выполняется в области действия одной транзакции
+# <a name="how-to-write-a-sql-server-unit-test-that-runs-within-the-scope-of-a-single-transaction"></a>Руководство. написать модульный тест SQL Server, который выполняется в области действия одной транзакции
 Можно изменить модульные тесты для запуска в области действия одной транзакции. При использовании этого подхода после завершения теста реализованные им изменения можно будет отменить. Приведенные ниже инструкции показывают, как выполнить следующие задачи.  
   
 -   Создайте транзакцию в тестовом скрипте Transact\-SQL с инструкциями **BEGIN TRANSACTION** и **ROLLBACK TRANSACTION**.  
@@ -156,7 +156,7 @@ ms.locfileid: "51681292"
     ```  
   
 ## <a name="to-start-the-distributed-transaction-coordinator-service"></a>Запуск службы координатора распределенных транзакций  
-В некоторых процедурах, описанных в данном разделе, используются типы из сборки System.Transactions. При запуске модульных тестов, прежде чем выполнять эти процедуры, необходимо убедиться в том, что служба координатора распределенных транзакций запущена на компьютере. В противном случае тесты будут завершаться следующей ошибкой: "Метод теста *имя_проекта*.*имя_теста*.*имя_метода* вызвал исключение: System.Data.SqlClient.SqlException: MSDTC на сервере "*имя_компьютера*" недоступен".  
+В некоторых процедурах, описанных в данном разделе, используются типы из сборки System.Transactions. При запуске модульных тестов, прежде чем выполнять эти процедуры, необходимо убедиться в том, что служба координатора распределенных транзакций запущена на компьютере. В противном случае тесты будут завершаться, и появится следующее сообщение об ошибке: "Метод теста *имя проекта*.*имя теста*.*имя метода* породил исключение: System.Data.SqlClient.SqlException: Координатор MSDTC на сервере *имя компьютера* недоступен".  
   
 #### <a name="to-start-the-distributed-transaction-coordinator-service"></a>Запуск службы координатора распределенных транзакций  
   

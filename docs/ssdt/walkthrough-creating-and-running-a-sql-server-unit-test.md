@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 992c1d8e-3729-438b-9ef4-cd103e28f145
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: fde8f649921ebd1410b8b19d8f4883502e56f640
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.openlocfilehash: f49d7d43e136adaadb2bda5b37fa6f7e8b63f4e7
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58305962"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65101942"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>Пошаговое руководство. Создание и запуск модульного теста SQL Server
 С помощью этого пошагового руководства вы создадите модульный тест создать, который проверяет работу нескольких хранимых процедур. Модульные тесты SQL Server создаются для выявления ошибок кода, которые могут вызвать неверную работу приложения. Модульные тесты SQL Server и тесты приложений можно запускать в одном автоматизированном наборе тестов.  
@@ -723,7 +723,7 @@ ms.locfileid: "58305962"
     |--------|-------------------|  
     |Sales_uspPlaceNewOrderTest|Успех|  
     |Sales_uspShowOrderDetailsTest|Успех|  
-    |Sales_uspFillOrderTest|Сбой со следующей ошибкой: «Сбой условия ScalarValueCondition (scalarValueCondition2): Результирующий набор 1 Строка 1 Столбец 1: значения не соответствуют, действительное значение: "–100", ожидаемое значение: "100".» Эта ошибка возникает, потому что определение хранимой процедуры содержит незначительную ошибку.|  
+    |Sales_uspFillOrderTest|Сбой со следующей ошибкой: "Сбой условия ScalarValueCondition (scalarValueCondition2): Результирующий набор 1 Строка 1 Столбец 1: значения не соответствуют, действительное значение: –100, ожидаемое значение: 100". Эта ошибка возникает, потому что определение хранимой процедуры содержит незначительную ошибку.|  
   
     На следующем этапе ошибка будет исправлена и тест будет выполнен повторно.  
   

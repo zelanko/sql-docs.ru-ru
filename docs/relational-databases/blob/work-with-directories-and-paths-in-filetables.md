@@ -10,21 +10,21 @@ ms.topic: conceptual
 helpviewer_keywords:
 - FileTables [SQL Server], directories
 ms.assetid: f1e45900-bea0-4f6f-924e-c11e1f98ab62
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c13eb6089e9be42733782c54d757a0e3035fe6f7
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c8f458f0405feec07a33a2355d117752c3b10e80
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418455"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65094173"
 ---
 # <a name="work-with-directories-and-paths-in-filetables"></a>Работа с каталогами и путями в таблицах FileTable
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Описывает структуру каталогов, в которой файлы хранятся в таблицах FileTable.  
   
-##  <a name="HowToDirectories"></a> Практическое руководство. Работа с каталогами и путями в таблицах FileTable  
+##  <a name="HowToDirectories"></a> Руководство. Работа с каталогами и путями в таблицах FileTable  
  Следующие 3 функции можно использовать для работы с каталогами FileTable в [!INCLUDE[tsql](../../includes/tsql-md.md)]:  
   
 |Чтобы получить этот результат, выполните следующее.|Воспользуйтесь этой функцией|  
@@ -33,7 +33,7 @@ ms.locfileid: "52418455"
 |Получите абсолютный или относительный путь UNC к файлу или каталогу в таблице FileTable.|[GetFileNamespacePath (Transact-SQL)](../../relational-databases/system-functions/getfilenamespacepath-transact-sql.md)|  
 |Получите значение идентификатора path_locator для заданного файла или каталога в таблице FileTable, указав путь к нему.|[GetPathLocator (Transact-SQL)](../../relational-databases/system-functions/getpathlocator-transact-sql.md)|  
   
-##  <a name="BestPracticeRelativePaths"></a> Практическое руководство. Использование относительных путей для переносимого кода  
+##  <a name="BestPracticeRelativePaths"></a> Руководство. Как использовать относительные пути для переносимого кода  
  Чтобы код и приложения были независимы от текущего компьютера и базы данных, следует избегать создания кода с использованием абсолютных путей. Вместо этого рекомендуется получать полный путь к файлу во время выполнения с помощью функций [FileTableRootPath (Transact-SQL)](../../relational-databases/system-functions/filetablerootpath-transact-sql.md) и [GetFileNamespacePath (Transact-SQL)](../../relational-databases/system-functions/getfilenamespacepath-transact-sql.md), как показано в приведенном ниже примере. По умолчанию функция **GetFileNamespacePath** возвращает относительный путь к файлу, находящемуся внутри корневого пути к базе данных.  
   
 ```sql  

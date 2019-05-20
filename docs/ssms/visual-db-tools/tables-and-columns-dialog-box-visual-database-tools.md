@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.tablesandcolumns
 ms.assetid: 8cf27be1-e66d-4735-a428-9ab4b33af4f5
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ce7a90a76547d579324fa61246b5b126be8f4b72
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 380c605e4b1504b943c5e0312b29b287b95158ec
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528009"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098491"
 ---
 # <a name="tables-and-columns-dialog-box-visual-database-tools"></a>Диалоговое окно «Таблицы и столбцы» (визуальные инструменты для баз данных)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,5 +47,5 @@ ms.locfileid: "52528009"
 > Столбцы, выбранные для внешнего ключа, должны иметь одинаковый тип данных с первичными столбцами, которым они соответствуют. Каждый ключ должен включать одинаковое число столбцов. Например, если первичный ключ на первичной стороне связи состоит из двух столбцов, необходимо сопоставить каждому из этих столбцов столбец таблицы на стороне внешнего ключа связи.  
   
 ## <a name="see-also"></a>См. также:  
-[Практическое руководство. Создание связи между таблицами (визуальные инструменты для баз данных)](https://msdn.microsoft.com/867a54b8-5be4-46e6-9702-49ae6dabf67c)  
+[Руководство. Как создать связь между таблицами (визуальные инструменты для баз данных)](https://msdn.microsoft.com/867a54b8-5be4-46e6-9702-49ae6dabf67c)  
   

@@ -1,7 +1,7 @@
 ---
 title: Написание инструкций Transact-SQL, адаптированных к международному использованию | Документация Майкрософт
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 04/24/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ''
@@ -19,20 +19,28 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fece5fabc394ff01175273378a2fb7c23ef483cf
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 8983d2dc82da8d923eb5b29b0626b20aae0eb853
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256569"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64776110"
 ---
 # <a name="write-international-transact-sql-statements"></a>Написание инструкций Transact-SQL, адаптированных к международному использованию
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   В базах данных и использующих их приложениях, в которых применяются инструкции языка [!INCLUDE[tsql](../../includes/tsql-md.md)] , можно обеспечить большую степень языковой переносимости или поддержку нескольких языков при условии соблюдения следующих требований.  
+
+-   Начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] следует использовать:
+    -   типы данных **char**, **varchar** и **varchar(max)** с [параметрами сортировки с поддержкой UTF-8](../../relational-databases/collations/collation-and-unicode-support.md#utf-8-support);
+    -   типы данных **char**, **varchar** и **varchar(max)** с любыми параметрами сортировки.      
+
+    Это позволяет избежать проблемы преобразования кодовых страниц. Дополнительные сведения см. в статье [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
+
+-   Вплоть до [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] все элементы с типами данных **char**, **varchar** и **text** замените элементами с типами данных **nchar**, **nvarchar** и **nvarchar(max)**. Это позволяет избежать проблемы преобразования кодовых страниц. Дополнительные сведения см. в статье [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md). 
+    > [!IMPORTANT]
+    > Тип данных **text** является устаревшим, и его не следует использовать в новых разработках. Запланируйте преобразование данных типа **text** в **varchar(max)**.
   
--   Все элементы с типами данных **char**, **varchar**и **text** замените элементами с типами данных **nchar**, **nvarchar**и **nvarchar(max)**. Такая замена устраняет возможные проблемы с преобразованием кодовых страниц. Дополнительные сведения см. в статье [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
-  
--   При выполнении сравнения и других операций со значениями месяцев и дней недели следует использовать числовые эквиваленты вместо строковых имен. При различных языковых настройках возвращаются различные названия месяцев и дней недели. Например, функция DATENAME(MONTH,GETDATE()) при выбранном английском (США) языке возвращает значение «May», при немецком — «Mai», а при французском — «mai». Вместо нее следует использовать функцию DATEPART(), в которой вместо названия месяца используется его номер. При выводе результирующих наборов пользователю лучше использовать названия из функции DATEPART(), так как они зачастую более информативны, чем числовое представление даты. Однако не следует кодировать какую-либо логику, зависящую от отображаемых названий на том или ином языке.  
+-   При выполнении сравнения и других операций со значениями месяцев и дней недели следует использовать числовые эквиваленты вместо строковых имен. При различных языковых настройках возвращаются различные названия месяцев и дней недели. Например, `DATENAME(MONTH,GETDATE())` возвращает `May` при языковой настройке "Английский (США)", возвращает `Mai` для немецкого и `mai` — для французского. Вместо нее следует использовать функцию наподобие [DATEPART](../../t-sql/functions/datepart-transact-sql.md), в которой вместо названия месяца используется его номер. При выводе результирующих наборов пользователю лучше использовать названия из функции DATEPART(), так как они зачастую более информативны, чем числовое представление даты. Однако не следует кодировать какую-либо логику, зависящую от отображаемых названий на том или ином языке.  
   
 -   При указании дат для сравнения либо ввода с помощью инструкций INSERT или UPDATE следует использовать константы, интерпретируемые одним и тем же образом для всех языковых настроек.  
   
@@ -46,14 +54,15 @@ ms.locfileid: "54256569"
   
     -   В приложениях с использованием других прикладных программных API-интерфейсов, а также в скриптах языка [!INCLUDE[tsql](../../includes/tsql-md.md)] , хранимых процедурах и триггерах следует использовать числовые строки без разделителей. Например, *yyyymmdd* в виде 19980924.  
   
-    -   В приложениях с использованием других программных интерфейсов API, а также в скриптах языка [!INCLUDE[tsql](../../includes/tsql-md.md)] , хранимых процедурах и триггерах следует использовать инструкцию CONVERT с явно заданным параметром стиля для всех преобразований между типами данных **time**, **date**, **smalldate**, **datetime**, **datetime2**и **datetimeoffset** , а также строковыми типами данных. Например, следующая инструкция интерпретируется одинаково для любых настроек языка и формата даты в соединении:  
+    -   В приложениях с использованием других программных интерфейсов API, а также в скриптах языка [!INCLUDE[tsql](../../includes/tsql-md.md)], хранимых процедурах и триггерах следует использовать инструкцию [CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md) с явно заданным параметром стиля для всех преобразований между типами данных **time**, **date**, **smalldate**, **datetime**, **datetime2** и **datetimeoffset**, а также строковыми типами данных. Например, следующая инструкция интерпретируется одинаково для любых настроек языка и формата даты в соединении:  
   
-        ```  
+        ```sql  
         SELECT *  
         FROM AdventureWorks2012.Sales.SalesOrderHeader  
         WHERE OrderDate = CONVERT(DATETIME, '20060719', 101)  
         ```  
   
-         Дополнительные сведения см. в разделе [Функции CAST и CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md).  
-  
-  
+## <a name="see-also"></a>См. также раздел
+[Функции CAST и CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)     
+[DATEPART (Transact-SQL)](../../t-sql/functions/datepart-transact-sql.md)        
+[Поддержка параметров сортировки и Юникода](../../relational-databases/collations/collation-and-unicode-support.md)      

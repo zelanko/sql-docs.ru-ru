@@ -1,7 +1,7 @@
 ---
 title: DBCC CLONEDATABASE (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 05/01/2018
+ms.date: 04/23/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -37,12 +37,12 @@ ms.assetid: ''
 author: bluefooted
 ms.author: pamela
 manager: amitban
-ms.openlocfilehash: c21fb619391701d3506c3c73f9acf699f4c5d54f
-ms.sourcegitcommit: 2663063e29f2868ee6b6d596df4b2af2d22ade6f
+ms.openlocfilehash: 5e8cc30ef8ce51a08ce12ed28b7c03bec0fc124d
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305342"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64774836"
 ---
 # <a name="dbcc-clonedatabase-transact-sql"></a>DBCC CLONEDATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -115,9 +115,15 @@ Cannot insert duplicate key row in object <system table> with unique index 'inde
 ```
 
 > [!IMPORTANT]
-> Если у вас есть индексы columnstore, см. запись блога [Настройка запросов с индексами columnstore в клонированных базах данных](https://blogs.msdn.microsoft.com/sql_server_team/considerations-when-tuning-your-queries-with-columnstore-indexes-on-clone-databases/), чтобы узнать, как обновить статистику индексов columnstore перед выполнением команды **DBCC CLONEDATABASE**.  Начиная с SQL Server 2019 вручную выполнять действия, описанные в этой статье, не нужно, так как команда **DBCC CLONEDATABASE** собирает эти сведения автоматически.
+> Если у вас есть индексы columnstore, см. запись блога [Настройка запросов с индексами columnstore в клонированных базах данных](https://techcommunity.microsoft.com/t5/SQL-Server/Considerations-when-tuning-your-queries-with-columnstore-indexes/ba-p/385294), чтобы узнать, как обновить статистику индексов columnstore перед выполнением команды **DBCC CLONEDATABASE**.  Начиная с SQL Server 2019 вручную выполнять действия, описанные в этой статье, не нужно, так как команда **DBCC CLONEDATABASE** собирает эти сведения автоматически.
 
-Сведения о безопасности данных в клонированных базах данных см. в записи блога [Сведения о безопасности данных в клонированных базах данных](https://blogs.msdn.microsoft.com/sql_server_team/understanding-data-security-in-cloned-databases-created-using-dbcc-clonedatabase/).
+<a name="ctp23"></a>
+
+## <a name="stats-blob-for-columnstore-indexes"></a>BLOB-объект статистики для индексов columnstore
+
+[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], `DBCC CLONEDATABASE` автоматически собирает большие двоичные объекты статистики индексов columnstore, что позволяет не выполнять дополнительные действия вручную.`DBCC CLONEDATABASE` позволяет создать копию только схемы базы данных, содержащую все элементы, необходимые для устранения проблем с производительностью запросов без копирования данных. В предыдущих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] эта команда не копировала данные статистики, необходимые для точного устранения неполадок с запросами индекса columnstore, и для получения этих сведений требовалось выполнять некоторые действия вручную.
+
+Сведения о безопасности данных в клонированных базах данных см. в записи блога [Сведения о безопасности данных в клонированных базах данных](https://techcommunity.microsoft.com/t5/SQL-Server/Understanding-data-security-in-cloned-databases-created-using/ba-p/385287).
 
 ## <a name="internal-database-snapshot"></a>Моментальный снимок внутренней базы данных
 Инструкция DBCC CLONEDATABASE использует внутренний моментальный снимок базы данных-источника с целью обеспечения согласованности транзакций, необходимой для выполнения копирования. Тем самым предотвращаются проблемы блокировки и параллелизма при выполнении этих команд. Если создать моментальный снимок невозможно, команда DBCC CLONEDATABASE завершается сбоем. 

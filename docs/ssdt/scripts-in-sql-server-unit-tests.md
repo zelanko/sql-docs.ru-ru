@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 80c5cf62-a9c9-4e9d-8c6f-8eed50a595a7
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 226c4760b0e8461b9183345c9e727f288edd32dd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2c0d94a0b49e9fd02803d07270ba6f890eb4c311
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751632"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65101899"
 ---
 # <a name="scripts-in-sql-server-unit-tests"></a>Скрипты в модульных тестах SQL Server
 Каждый модульный тест SQL Server содержит одно действие, выполняемое перед тестом, тестовое действие и действие, выполняемое после теста. В свою очередь каждое из этих действий содержит следующие элементы:  
@@ -49,7 +49,7 @@ ms.locfileid: "47751632"
 ![Два модульных теста базы данных](../ssdt/media/twodatabaseunittests.png "Two Database Unit Tests")  
   
 > [!NOTE]  
-> Если настроено развертывание проекта базы данных SQL Server, оно выполняется при запуске теста из строки подключения с привилегированным контекстом. Дополнительные сведения см. в статье [Практическое руководство. Настройка запуска модульного теста SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md).  
+> Если настроено развертывание проекта базы данных SQL Server, оно выполняется при запуске теста из строки подключения с привилегированным контекстом. Дополнительные сведения см. в разделе [Как настроить выполнение модульного теста SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md).  
   
 ## <a name="initialization-and-cleanup-scripts"></a>Скрипты инициализации и очистки  
 В конструкторе модульных тестов SQL Server скрипты TestInitialize и TestCleanup называются общими скриптами. В приведенном примере предполагается, что эти два модульных теста принадлежат к одному классу тестов. В результате чего в них используются одинаковые скрипты TestInitialize и TestCleanup. Так всегда происходит во всех модульных тестах из одного класса тестов. Однако если в рамках сеанса тестирования выполняются модульные тесты из разных классов тестов, то до и после проведения модульного теста запускаются общие скрипты для соответствующего класса тестов.  

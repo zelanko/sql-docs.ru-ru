@@ -2,7 +2,7 @@
 title: 'Группы доступности: решение для обеспечения высокой доступности и аварийного восстановления'
 description: Группы доступности Always On — это решение SQL Server для высокой доступности и аварийного восстановления, являющееся более полнофункциональной альтернативой зеркальному отображению баз данных на уровне предприятия. Изучите основные сведения и функциональные возможности этой функции.
 ms.custom: seodec18
-ms.date: 05/17/2016
+ms.date: 04/23/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -17,12 +17,12 @@ ms.assetid: aa427606-8422-4656-b205-c9e665ddc8c1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 54c5cf218021b2a585ff50afb22ac7594ab4b2d6
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: b369247fccdac3407670b5edc63c0f5490fac23e
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974283"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775550"
 ---
 # <a name="always-on-availability-groups-a-high-availability-and-disaster-recovery-solution"></a>Группы доступности Always On: решение для обеспечения высокой доступности и аварийного восстановления
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,9 @@ ms.locfileid: "57974283"
   
     -   *Режим синхронной фиксации*. Этот режим доступности отдает предпочтение высокому уровню доступности и защите данных перед производительностью за счет повышения задержки транзакций. Отдельно взятая группа доступности может поддерживать до трех реплик доступности с синхронной фиксацией, в том числе текущую первичную реплику.  
   
-     Дополнительные сведения см. в разделе [Режимы доступности (группы доступности AlwaysOn)](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md).  
+     Дополнительные сведения см. в разделе [Режимы доступности (группы доступности AlwaysOn)](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md). 
+
+     В [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] максимальное количество синхронных реплик увеличено до пяти, по сравнению с тремя в [!INCLUDE[ssSQL17](../../../includes/sssql17-md.md)]. Вы можете настроить эту группу из пяти реплик для автоматического перехода на другой ресурс в пределах группы. Предоставляется одна первичная реплика и четыре синхронные вторичные реплики.
   
 -   Поддерживает различные формы отработки отказа другой группы доступности: автоматический переход на другой ресурс, запланированный переход на другой ресурс вручную (обычно называемый "переходом на другой ресурс вручную") и принудительный переход на другой ресурс вручную (который обычно называется "принудительной отработкой отказа"). Дополнительные сведения см. далее в подразделе [Отработка отказа и режимы отработки отказа (группы доступности AlwaysOn)](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md).  
   

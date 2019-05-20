@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Создание тестового проекта для модульного тестирования базы данных SQL Server | Документация Майкрософт
+title: Руководство. Создание тестового проекта для модульного тестирования базы данных SQL Server | Документация Майкрософт
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -8,17 +8,17 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 4b3e7ba8-b565-4689-af1a-34cc255b7c60
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ec74cb8ed16fa7e49f5a941a903341a514d13932
-ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
+ms.openlocfilehash: e28464059101f6385380ced0a307a61f1e76ba53
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49336103"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098063"
 ---
-# <a name="how-to-create-a-test-project-for-sql-server-database-unit-testing"></a>Практическое руководство. Создание проекта тестов для модульного тестирования базы данных SQL Server
+# <a name="how-to-create-a-test-project-for-sql-server-database-unit-testing"></a>Руководство. создать тестовый проект для модульного тестирования базы данных SQL Server
 Перед тем как приступить к написанию модульных тестов для проверки объектов базы данных, сначала следует создать проект тестов. Этот проект содержит модульные тесты SQL Server, но может содержать и другие типы тестов.  
   
 Вы можете разместить в одном тестовом проекте все модульные тесты SQL Server для определенного проекта базы данных. Изучите следующие вопросы и ответьте на них, чтобы понять, нужно ли вам создавать дополнительные проекты тестов.  
@@ -29,7 +29,7 @@ ms.locfileid: "49336103"
 |Нужны ли разным модульным тестам SQL Server разные подключения к базам данных для выполнения и проверки теста?|Если да, то вам потребуется несколько проектов тестов. Для выполнения теста можно указать только одно подключение к базе данных. Однако для проверки теста можно указать другое подключение к базе данных.|  
 |Нужно ли развертывать разные проекты базы данных для разных модульных тестов?|Если да, то вам потребуется несколько проектов тестов. Проект тестов может развертывать только один проект базы данных.|  
   
-Дополнительные сведения о каждом из этих вопросов см. в статье [Практическое руководство. Настройка запуска модульного теста SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md). Чтобы не создавать несколько тестовых проектов, можно создать собственную реализацию [DatabaseTestService](https://msdn.microsoft.com/library/microsoft.data.schema.unittesting.databasetestservice.aspx) Microsoft.Data.Schema.UnitTesting.DatabaseTestService.  
+Дополнительные сведения о каждом из этих вопросов см. в разделе [Как настроить выполнение модульного теста SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md). Чтобы не создавать несколько тестовых проектов, можно создать собственную реализацию [DatabaseTestService](https://msdn.microsoft.com/library/microsoft.data.schema.unittesting.databasetestservice.aspx) Microsoft.Data.Schema.UnitTesting.DatabaseTestService.  
   
 Есть три варианта добавления проекта теста к решению, которое содержит проект базы данных.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "49336103"
   
 ### <a name="to-create-a-test-project-with-a-sql-server-unit-test-class"></a>Создание тестового проекта с классом модульного теста SQL Server  
   
--   Выполните процедуру, описанную в статье [Практическое руководство. Создание пустого модульного теста SQL Server](../ssdt/how-to-create-an-empty-sql-server-unit-test.md) или [Практическое руководство. Создание модульных тестов SQL Server для функций, триггеров и хранимых процедур](../ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md).  
+-   Следуйте процедуре, описанной в разделе [Практическое руководство. Создание пустого модульного теста SQL Server](../ssdt/how-to-create-an-empty-sql-server-unit-test.md) или [Как создать модульные тесты SQL Server для функций, триггеров и хранимых процедур](../ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md).  
   
 ## <a name="see-also"></a>См. также:  
 [Создание и определение модульных тестов SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  

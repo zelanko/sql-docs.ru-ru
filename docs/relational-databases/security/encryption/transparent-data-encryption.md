@@ -1,7 +1,7 @@
 ---
 title: Прозрачное шифрование данных (TDE) | Документация Майкрософт
 ms.custom: ''
-ms.date: 01/08/2019
+ms.date: 05/09/2019
 ms.prod: sql
 ms.technology: security
 ms.topic: conceptual
@@ -19,12 +19,12 @@ ms.author: aliceku
 ms.reviewer: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bb61a9c18c8e0f2b164c8df01a8b84cebd5c8ab8
-ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
+ms.openlocfilehash: d944c2192e73fd0cb887d0491ecba707a90ff7b5
+ms.sourcegitcommit: 6ab60b426fc6ec7bb9e727323f520c0b05a20d06
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54185130"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65527353"
 ---
 # <a name="transparent-data-encryption-tde"></a>Прозрачное шифрование данных (TDE)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "54185130"
   
  На рисунке ниже показана архитектура прозрачного шифрования данных. При использовании прозрачного шифрования данных в [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]пользователь может настраивать только элементы уровня базы данных (ключ шифрования базы данных и фрагменты ALTER DATABASE).  
   
- ![Отображает иерархию, описанную в разделе. ](../../../relational-databases/security/encryption/media/tde-architecture.gif "Отображает иерархию, описанную в разделе.")  
+ ![Отображает иерархию, описанную в разделе. ](../../../relational-databases/security/encryption/media/tde-architecture.png "Отображает иерархию, описанную в разделе.")  
   
 ## <a name="using-transparent-data-encryption"></a>Использование прозрачного шифрования данных  
  Чтобы использовать прозрачное шифрование данных, выполните следующие действия.  
@@ -226,9 +226,29 @@ GO
   
 ### <a name="transparent-data-encryption-and-filestream-data"></a>Прозрачное шифрование данных и данные FILESTREAM  
  Данные FILESTREAM не шифруются, даже если включено прозрачное шифрование данных.  
+
+<a name="scan-suspend-resume"></a>
+
+## <a name="transparent-data-encryption-tde-scan"></a>Сканирование — прозрачное шифрование данных (TDE)
+
+Чтобы включить прозрачное шифрование данных (TDE) для базы данных, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] должен выполнить сканирование шифрования. При этом каждая страница считывается из файлов данных в буферный пул, после чего зашифрованные страницы записываются обратно на диск. Для предоставления пользователю большего контроля над сканированием шифрования в [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] появился синтаксис приостановки и возобновления сканирования TDE. Он позволяет приостанавливать сканирование, когда система сильно загружена, или в критически важные периоды времени, а затем возобновлять сканирование.
+
+Чтобы приостановить сканирование шифрования TDE, используйте следующий синтаксис:
+
+```sql
+ALTER DATABASE <db_name> SET ENCRYPTION SUSPEND;
+```
+
+Чтобы возобновить сканирование шифрования TDE, используйте следующий синтаксис:
+
+```sql
+ALTER DATABASE <db_name> SET ENCRYPTION RESUME;
+```
+
+Для определения текущего состояния сканирования шифрования в динамическое административное представление `sys.dm_database_encryption_keys` добавлен столбец `encryption_scan_state`. Кроме того, появился столбец `encryption_scan_modify_date`, который содержит дату и время последнего изменения состояния сканирования шифрования. Кроме того, обратите внимание на то, что если экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] перезапускается, когда сканирование шифрования приостановлено, при запуске в журнал ошибок записывается сообщение о том, что имеется приостановленное сканирование.
   
 ## <a name="transparent-data-encryption-and-buffer-pool-extension"></a>Прозрачное шифрование и расширение буферного пула  
- Файлы, касающиеся расширения буферного пула, не шифруются, если база данных зашифрована с помощью прозрачного шифрования данных. Необходимо использовать средства шифрования на уровне файловой системы, такие как Bitlocker или файловая система EFS для файлов с расширением BPE.  
+ Файлы, касающиеся расширения буферного пула, не шифруются, если база данных зашифрована с помощью прозрачного шифрования данных. Необходимо использовать средства шифрования на уровне файловой системы, такие как BitLocker или файловая система EFS для файлов с расширением BPE.  
   
 ## <a name="transparent-data-encryption-and-in-memory-oltp"></a>Прозрачное шифрование данных и In-Memory OLTP  
  Прозрачное шифрование данных можно включить в базе данных, которая содержит объекты OLTP в памяти. В [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] и [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] записи журнала выполняющейся в памяти OLTP шифруются, если включено TDE. В [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] записи журнала выполняющейся в памяти OLTP шифруются, если включено TDE, однако файлы в файловой группе MEMORY_OPTIMIZED_DATA не шифруются.  

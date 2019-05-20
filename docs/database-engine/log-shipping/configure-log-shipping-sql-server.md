@@ -13,12 +13,12 @@ ms.assetid: c42aa04a-4945-4417-b4c7-50589d727e9c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 20fc1e12f4aa3647016b4f39734eb0fa05cd7105
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d19670ec51172fc704d0387664f0c484315c7be7
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703812"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105975"
 ---
 # <a name="configure-log-shipping-sql-server"></a>Настройка доставки журналов (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "47703812"
   
 5.  В поле **Сетевой путь к папке резервного копирования** введите сетевой путь к общему ресурсу, который создан для папки резервного копирования журнала транзакций.  
   
-6.  Если папка резервного копирования расположена на сервере-источнике, введите локальный путь к папке резервного копирования в поле **Если папка резервного копирования находится на сервере-источнике, укажите локальный путь к папке** . (Если папка резервного копирования находится не на сервере-источнике, можно оставить это поле пустым.)  
+6.  Поле **Если папка резервного копирования находится на сервере-источнике, укажите локальный путь к папке**. (Если папка резервного копирования находится не на сервере-источнике, можно оставить это поле пустым.)  
   
     > [!IMPORTANT]  
     >  Если учетная запись служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на сервере-источнике выполняется с правами учетной записи «Локальная система», надо создать папку резервного копирования на сервере-источнике и указать локальный путь к ней.  
@@ -79,7 +79,7 @@ ms.locfileid: "47703812"
   
 8.  Обратите внимание на расписание в поле **Расписание** в разделе **Задание резервного копирования**. Если нужно изменить расписание, нажмите кнопку **Расписание** и задайте расписание для агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по своему усмотрению.  
   
-9. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] поддерживает [сжатие резервных копий](../../relational-databases/backup-restore/backup-compression-sql-server.md). При создании конфигурации доставки журналов можно управлять поведением сжатия резервных копий журналов, выбрав один из следующих параметров: **Использовать параметр сервера по умолчанию**, **Сжимать резервные копии**или **Не сжимать резервные копии**. Дополнительные сведения см. в статье [Log Shipping Transaction Log Backup Settings](../../relational-databases/databases/log-shipping-transaction-log-backup-settings.md).  
+9. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] поддерживает [сжатие резервных копий](../../relational-databases/backup-restore/backup-compression-sql-server.md). При создании конфигурации доставки журналов можно управлять поведением сжатия резервных копий журналов, выбрав один из следующих параметров. **Использовать параметр сервера по умолчанию**, **Сжимать резервные копии** и **Не сжимать резервные копии**. Дополнительные сведения см. в статье [Log Shipping Transaction Log Backup Settings](../../relational-databases/databases/log-shipping-transaction-log-backup-settings.md).  
   
 10. Нажмите кнопку **ОК**.  
   

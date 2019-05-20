@@ -33,12 +33,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3e151639595e181fb434e5144daa64cc84128892
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 60d44f92bc039914ed2fd983c65d53f9d7865fb6
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132454"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503459"
 ---
 # <a name="drop-index-transact-sql"></a>DROP INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -70,10 +70,7 @@ DROP INDEX [ IF EXISTS ]
     [ owner_name. ] table_or_view_name.index_name  
   
 <object> ::=  
-{  
-    [ database_name. [ schema_name ] . | schema_name. ]   
-    table_or_view_name  
-}  
+{ database_name.schema_name.table_or_view_name | schema_name.table_or_view_name | table_or_view_name }  
   
 <drop_clustered_index_option> ::=  
 {  
@@ -100,16 +97,13 @@ DROP INDEX
     index_name ON <object>  
   
 <object> ::=   
-{  
-    [ database_name. [ schema_name ] . | schema_name. ]   
-    table_or_view_name  
-}  
+{ database_name.schema_name.table_or_view_name | schema_name.table_or_view_name | table_or_view_name }  
 ```  
   
 ```  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
-DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] table_name  
+DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.table_name | table_name }  
 [;]  
 ```  
   
@@ -256,7 +250,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
   
 1.  Удалить кластеризованный индекс.  
   
-2.  Изменить таблицу с помощью инструкции ALTER TABLE ... Параметр REBUILD ..., определяющий параметр сжатия.  
+2.  Изменить таблицу с помощью инструкции ALTER TABLE ... и параметра REBUILD ..., определяющего степень сжатия.  
   
 При удалении кластеризованного индекса в режиме не в сети удаляются только верхние уровни кластеризованных индексов, следовательно, операция выполняется довольно быстро. При удалении кластеризованного индекса в режиме ONLINE [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] перестраивает кучу два раза: один для первого шага, один для второго. Дополнительную информацию о сжатии данных см. в разделе [Сжатие данных](../../relational-databases/data-compression/data-compression.md).  
   

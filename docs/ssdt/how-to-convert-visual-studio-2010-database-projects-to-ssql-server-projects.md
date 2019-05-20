@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Преобразование проектов базы данных Visual Studio 2010 в проекты Базы данных SQL Server с изменением целевой платформы | Документация Майкрософт
+title: Руководство. Преобразование проектов базы данных Visual Studio 2010 в проекты базы данных SQL Server с изменением целевой платформы | Документация Майкрософт
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -11,17 +11,17 @@ f1_keywords:
 - sql.data.tools.projectconversion.dialog
 - sql.data.tools.ImportDAC
 ms.assetid: 7e5acf94-5c46-44c7-9ff5-ca7926f5332a
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 5853dcc142dbee73846617fc3c32e876978f6609
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 93c4e141dc48c87214fc6de764d0b2ff33ebe9b9
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398577"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098239"
 ---
-# <a name="how-to-convert-a-visual-studio-2010-database-projects-to-sql-server-database-projects-and-retarget-to-a-different-platform"></a>Как преобразовать проекты базы данных Visual Studio 2010 в проекты базы данных SQL Server с изменением целевой платформы
+# <a name="how-to-convert-a-visual-studio-2010-database-projects-to-sql-server-database-projects-and-retarget-to-a-different-platform"></a>Руководство. преобразовать проекты базы данных Visual Studio 2010 в проекты базы данных SQL Server с изменением целевой платформы
 В SQL Server Data Tools (SSDT) можно преобразовать существующие проекты Базы данных SQL Server, CLR и приложений уровня данных, созданные в Visual Studio 2010, в новый проект Базы данных SQL Server. При этом можно воспользоваться такими преимуществами нового интерфейса разработки базы данных, предоставляемого в SSDT, как обновленный интерфейс редактирования Transact\-SQL и возможность переназначения проекта на платформы Microsoft SQL Server 2012 и SQL Azure с проверкой кода. В процессе преобразования выполняется преобразование объектов (таблиц, представлений, хранимых процедур, файлов свойств или скриптов), для которых предусмотрены эквивалентные типы в SSDT, включая их разрешения и файлы политик DAC. Артефакты, которые нельзя преобразовать, выделяются в отчете журнала преобразований.  
   
 В следующей таблице перечислены все артефакты проекта, которые могут или не могут быть преобразованы в SSDT.  
@@ -51,5 +51,5 @@ ms.locfileid: "52398577"
 2.  В раскрывающемся списке **Целевая платформа** выберите любую платформу, поддерживаемую в SSDT.  
   
 ## <a name="see-also"></a>См. также:  
-[How to: Change Target Platform and Publish a Database Project](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md) (Практическое руководство. Изменение целевой платформы и публикация проекта базы данных)  
+[Как изменить целевую платформу и опубликовать проект базы данных](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md)  
   

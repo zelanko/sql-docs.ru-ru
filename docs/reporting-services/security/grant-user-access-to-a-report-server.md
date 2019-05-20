@@ -1,8 +1,8 @@
 ---
 title: Предоставление пользователям доступа к серверу отчетов | Документы Майкрософт
-ms.date: 05/15/2017
+ms.date: 05/6/2019
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - modifying role assignments
 - deleting role assignments
 ms.assetid: 2144c020-3253-4b47-8cda-e14c928bb471
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 2baff221e28428daaf57deb8aaec7e8eb6d0d267
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: d255d798bc73d446c22dff112606165a1def8ea4
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021858"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65449686"
 ---
 # <a name="grant-user-access-to-a-report-server"></a>Предоставление пользователям доступа к серверу отчетов
 
@@ -29,7 +29,7 @@ ms.locfileid: "50021858"
 
  **Серверы отчетов в режиме интеграции с SharePoint.** Для сервера отчетов, настроенного для работы в режиме интеграции с SharePoint, доступ к веб-сайту SharePoint настраивается с помощью разрешений SharePoint. Уровни разрешений на сайте SharePoint определяют доступ к содержимому и операциям сервера отчетов. Для предоставления разрешений на веб-сайте SharePoint необходимо быть администратором веб-сайта. Дополнительные сведения см. в разделе [Предоставление разрешений для элементов сервера отчетов на сайте SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md).
 
- **Серверы отчетов в собственном режиме**. Эта статья посвящена серверу отчетов, настроенному для работы в собственном режиме, и назначению ролей пользователям с помощью веб-портала. Существует два типа ролей.
+ **Серверы отчетов в собственном режиме**. В этой статье описывается сервер отчетов, настроенный для работы в собственном режиме, а также показано, как использовать веб-портал для назначения ролей пользователям. Существует два типа ролей.
 
 - Роли на уровне элементов используются для просмотра, добавления и управления содержимым сервера отчетов, подписками, обработкой отчетов и журналами отчетов. Роли на уровне элементов определяются в корневом узле (корневой папке) или в заданных папках или последующих элементах иерархии.
 
@@ -61,7 +61,7 @@ ms.locfileid: "50021858"
 
 5. Нажмите кнопку **Добавить группу или пользователя**.
 
-6. В поле **Группа или пользователь** введите учетную запись пользователя или группы домена Windows в следующем формате: \<домен>\\<учетная_запись\>. 
+6. В поле **Группа или пользователь** введите учетную запись пользователя или группы домена Windows в следующем формате: \<домен>\\<учетная_запись\>.
 
     > [!NOTE]
     > Если используется проверка подлинности с помощью форм или пользовательский модуль безопасности, задайте учетную запись пользователя или группы в формате, допустимом для развертывания.
@@ -95,10 +95,8 @@ ms.locfileid: "50021858"
 
 ## <a name="next-steps"></a>Следующие шаги
 
-[Создание назначений ролей и управление ими](../../reporting-services/security/create-and-manage-role-assignments.md)   
-[Страница "Создание назначения ролей": "Изменение назначения ролей" (диспетчер отчетов)](https://msdn.microsoft.com/library/3319ced0-4b86-42af-b18d-da41a625113c)   
-[Страница "Свойства безопасности", элементы (диспетчер отчетов)](https://msdn.microsoft.com/library/351b8503-354f-4b1b-a7ac-f1245d978da0)   
-[Назначения ролей](../../reporting-services/security/role-assignments.md)   
+[Создание назначений ролей и управление ими](../../reporting-services/security/create-and-manage-role-assignments.md)  
+[Назначения ролей](../../reporting-services/security/role-assignments.md)  
 [Определение ролей](../../reporting-services/security/role-definitions.md)  
 
 Остались вопросы? [Посетите форум служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

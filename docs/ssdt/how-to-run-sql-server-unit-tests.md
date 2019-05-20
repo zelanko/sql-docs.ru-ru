@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Выполнение модульных тестов SQL Server | Документация Майкрософт
+title: Руководство. Выполнение модульных тестов SQL Server | Документация Майкрософт
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -8,17 +8,17 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 34fe2d1e-d47b-4808-af56-8cc0fdae6518
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 5b5d26b38b4fef4f108a67194e4af775154d32a9
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b838503365dde968f938efb46c940f3a66ce4357
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677883"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098459"
 ---
-# <a name="how-to-run-sql-server-unit-tests"></a>Практическое руководство. Выполнение модульных тестов SQL Server
+# <a name="how-to-run-sql-server-unit-tests"></a>Руководство. выполнить модульные тесты SQL Server
 Модульный тест SQL Server можно запустить несколькими способами, например из разных окон или из окна командной строки.  
   
 > [!NOTE]  
@@ -58,7 +58,7 @@ ms.locfileid: "51677883"
   
 ## <a name="see-also"></a>См. также:  
 [Выполнение модульных тестов SQL Server](../ssdt/running-sql-server-unit-tests.md)  
-[Практическое руководство. Запуск автоматических тестов из Microsoft Visual Studio](https://msdn.microsoft.com/library/ms182470(VS.100).aspx)  
+[Как запускать автоматические тесты из Microsoft Visual Studio 2010](https://msdn.microsoft.com/library/ms182470(VS.100).aspx)  
 [Запуск автоматических тестов из командной строки](https://msdn.microsoft.com/library/ms182486(VS.100).aspx)  
 [Testing the Application (Visual Studio 2012)](https://msdn.microsoft.com/library/ms182409.aspx) (Тестирование приложения (Visual Studio 2012))  
   

@@ -1,7 +1,7 @@
 ---
 title: ALTER CERTIFICATE (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 06/18/2018
+ms.date: 04/22/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -24,17 +24,17 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bba8adc043d5fa98f1d9c1773952f6366518823b
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 9533f5764dd7613454e89696e61b353b8bdccda3
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326705"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64774817"
 ---
 # <a name="alter-certificate-transact-sql"></a>ALTER CERTIFICATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
 
-  Изменяет закрытый ключ, используемый для шифрования сертификата, или добавляет закрытый ключ, если он не существует. Изменяет доступность сертификата для компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)].  
+  Изменяет пароль, используемый для шифрования закрытого ключа сертификата, удаляет закрытый ключ или импортирует закрытый ключ, если он не существует. Изменяет доступность сертификата для компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)].  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,13 +45,20 @@ ms.locfileid: "54326705"
   
 ALTER CERTIFICATE certificate_name   
       REMOVE PRIVATE KEY  
-    | WITH PRIVATE KEY ( <private_key_spec> [ ,... ] )  
-    | WITH ACTIVE FOR BEGIN_DIALOG = [ ON | OFF ]  
+    | WITH PRIVATE KEY ( <private_key_spec> )  
+    | WITH ACTIVE FOR BEGIN_DIALOG = { ON | OFF }  
   
 <private_key_spec> ::=   
-      FILE = 'path_to_private_key'   
-    | DECRYPTION BY PASSWORD = 'key_password'   
-    | ENCRYPTION BY PASSWORD = 'password'   
+      {   
+        { FILE = 'path_to_private_key' | BINARY = private_key_bits }  
+         [ , DECRYPTION BY PASSWORD = 'current_password' ]  
+         [ , ENCRYPTION BY PASSWORD = 'new_password' ]  
+      }  
+    |  
+      {  
+         [ DECRYPTION BY PASSWORD = 'current_password' ]  
+         [ [ , ] ENCRYPTION BY PASSWORD = 'new_password' ]  
+      }  
 ```  
   
 ```  
@@ -70,17 +77,26 @@ ALTER CERTIFICATE certificate_name
  *certificate_name*  
  Уникальное имя, под которым сертификат известен в базе данных.  
   
- FILE **='**_path\_to\_private\_key_**'**  
- Указывает полный путь к закрытому ключу, включая имя файла. Этот аргумент может быть локальным путем или UNC-путем к точке в сети. Доступ к файлу осуществляется в контексте безопасности учетной записи службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Используя этот аргумент, необходимо убедиться в том, что учетная запись службы имеет доступ к указанному файлу.  
-  
- DECRYPTION BY PASSWORD **='**_key\_password_**'**  
- Указывает пароль, необходимый для расшифровки закрытого ключа.  
-  
- ENCRYPTION BY PASSWORD **='**_password_**'**  
- Задает пароль, который используется для шифрования закрытого ключа сертификата в базе данных. *password* должен соответствовать требованиям политики паролей Windows применительно к компьютеру, на котором запущен экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [Политика паролей](../../relational-databases/security/password-policy.md).  
-  
  REMOVE PRIVATE KEY  
  Указывает, что закрытый ключ больше не нужно хранить в базе данных.  
+  
+ WITH PRIVATE KEY указывает, что закрытый ключ сертификата следует загрузить в SQL Server.
+
+ FILE ='*path_to_private_key*'  
+ Указывает полный путь к закрытому ключу, включая имя файла. Этот аргумент может быть локальным путем или UNC-путем к точке в сети. Доступ к файлу осуществляется в контексте безопасности учетной записи службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Используя этот аргумент, необходимо убедиться в том, что учетная запись службы имеет доступ к указанному файлу.
+ 
+ Если указано только имя файла, файл сохраняется в папке данных пользователя по умолчанию для экземпляра. Это может быть, а может и не быть папка данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В SQL Server Express LocalDB папкой данных пользователя по умолчанию для экземпляра является путь, указанный в переменной среды `%USERPROFILE%` учетной записи, создавшей этот экземпляр.  
+  
+ BINARY ='*биты закрытого ключа*'  
+ **Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  
+ Биты закрытого ключа, указанного в качестве двоичной константы. Биты могут находиться в зашифрованном виде. Если они зашифрованы, пользователь должен предоставить пароль для расшифровки. Проверка политики паролей для данного пароля не выполняется. Биты закрытого ключа должны быть в формате файла PVK.  
+  
+ DECRYPTION BY PASSWORD ='*текущий пароль*'  
+ Указывает пароль, необходимый для расшифровки закрытого ключа.  
+  
+ ENCRYPTION BY PASSWORD ='*новый пароль*'  
+ Задает пароль, который используется для шифрования закрытого ключа сертификата в базе данных. *Новый пароль* должен соответствовать требованиям политики паролей Windows применительно к компьютеру, на котором запущен экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [Политика паролей](../../relational-databases/security/password-policy.md).  
   
  ACTIVE FOR BEGIN_DIALOG **=** { ON | OFF }  
  Делает сертификат доступным для инициатора диалога с компонентом [!INCLUDE[ssSB](../../includes/sssb-md.md)].  
@@ -90,14 +106,16 @@ ALTER CERTIFICATE certificate_name
   
  Предложение DECRYPTION BY PASSWORD может быть опущено, если пароль в файле защищен паролем, равным NULL.  
   
- Если закрытый ключ сертификата, уже существующий в базе данных, импортируется из файла, закрытый ключ будет автоматически защищен главным ключом базы данных. Чтобы защитить закрытый ключ паролем, используйте предложение ENCRYPTION BY PASSWORD.  
+ Если импортируется закрытый ключ сертификата, уже существующий в базе данных, закрытый ключ будет автоматически защищен главным ключом базы данных. Чтобы защитить закрытый ключ паролем, используйте предложение ENCRYPTION BY PASSWORD.  
   
- Параметр REMOVE PRIVATE KEY удалит закрытый ключ сертификата из базы данных. Это можно сделать, если сертификат будет использоваться для проверки подписей или в сценариях компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)], не требующих закрытого ключа. Не удаляйте закрытый ключ сертификата, который защищает симметричный ключ.  
+ Параметр REMOVE PRIVATE KEY удалит закрытый ключ сертификата из базы данных. Это можно сделать, если сертификат будет использоваться для проверки подписей или в сценариях компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)], не требующих закрытого ключа. Не удаляйте закрытый ключ сертификата, который защищает симметричный ключ. Закрытый ключ необходимо восстановить для регистрации любых дополнительных модулей или строк, которые необходимо проверить с помощью сертификата, или для расшифровки значений, которые были зашифрованы с помощью сертификата.   
   
  Указывать пароль расшифровки не нужно, если закрытый ключ зашифрован с помощью главного ключа базы данных.  
+ 
+ Чтобы изменить пароль, используемый для шифрования закрытого ключа, не указывайте предложения FILE или BINARY.
   
 > [!IMPORTANT]  
->  Всегда создавайте архивную копию закрытого ключа, прежде чем удалять его из базы данных. Дополнительные сведения см. в разделе [BACKUP CERTIFICATE (Transact-SQL)](../../t-sql/statements/backup-certificate-transact-sql.md).  
+>  Всегда создавайте архивную копию закрытого ключа, прежде чем удалять его из базы данных. Дополнительные сведения см. в разделе [BACKUP CERTIFICATE (Transact-SQL)](../../t-sql/statements/backup-certificate-transact-sql.md) и [CERTPRIVATEKEY (Transact-SQL)](../../t-sql/functions/certprivatekey-transact-sql.md).  
   
  Параметр WITH PRIVATE KEY недоступен в автономной базе данных.  
   
@@ -106,12 +124,11 @@ ALTER CERTIFICATE certificate_name
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="a-changing-the-password-of-a-certificate"></a>A. Изменение пароля сертификата  
+### <a name="a-removing-the-private-key-of-a-certificate"></a>A. Удаление закрытого ключа сертификата  
   
 ```  
 ALTER CERTIFICATE Shipping04   
-    WITH PRIVATE KEY (DECRYPTION BY PASSWORD = 'pGF$5DGvbd2439587y',  
-    ENCRYPTION BY PASSWORD = '4-329578thlkajdshglXCSgf');  
+    REMOVE PRIVATE KEY;  
 GO  
 ```  
   
@@ -119,8 +136,8 @@ GO
   
 ```  
 ALTER CERTIFICATE Shipping11   
-    WITH PRIVATE KEY (ENCRYPTION BY PASSWORD = '34958tosdgfkh##38',  
-    DECRYPTION BY PASSWORD = '95hkjdskghFDGGG4%');  
+    WITH PRIVATE KEY (DECRYPTION BY PASSWORD = '95hkjdskghFDGGG4%',  
+    ENCRYPTION BY PASSWORD = '34958tosdgfkh##38');  
 GO  
 ```  
   
@@ -128,7 +145,7 @@ GO
   
 ```  
 ALTER CERTIFICATE Shipping13   
-    WITH PRIVATE KEY (FILE = 'c:\\importedkeys\Shipping13',  
+    WITH PRIVATE KEY (FILE = 'c:\importedkeys\Shipping13',  
     DECRYPTION BY PASSWORD = 'GDFLKl8^^GGG4000%');  
 GO  
 ```  
@@ -141,12 +158,16 @@ ALTER CERTIFICATE Shipping15
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)   
- [DROP CERTIFICATE (Transact-SQL)](../../t-sql/statements/drop-certificate-transact-sql.md)   
- [BACKUP CERTIFICATE (Transact-SQL)](../../t-sql/statements/backup-certificate-transact-sql.md)   
- [Иерархия средств шифрования](../../relational-databases/security/encryption/encryption-hierarchy.md)   
+## <a name="see-also"></a>См. также:  
+ [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)  
+ [DROP CERTIFICATE (Transact-SQL)](../../t-sql/statements/drop-certificate-transact-sql.md)  
+ [BACKUP CERTIFICATE (Transact-SQL)](../../t-sql/statements/backup-certificate-transact-sql.md)  
+ [Иерархия средств шифрования](../../relational-databases/security/encryption/encryption-hierarchy.md)  
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)  
+ [CERTENCODED (Transact-SQL)](../../t-sql/functions/certencoded-transact-sql.md)  
+ [CERTPRIVATEKEY (Transact-SQL)](../../t-sql/functions/certprivatekey-transact-sql.md)  
+ [CERT_ID (Transact-SQL)](../../t-sql/functions/cert-id-transact-sql.md)  
+ [CERTPROPERTY (Transact-SQL)](../../t-sql/functions/certproperty-transact-sql.md)  
   
   
 

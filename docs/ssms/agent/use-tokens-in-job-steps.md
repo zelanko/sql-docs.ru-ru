@@ -14,16 +14,16 @@ helpviewer_keywords:
 - tokens [SQL Server]
 - escape macros [SQL Server Agent]
 ms.assetid: 105bbb66-0ade-4b46-b8e4-f849e5fc4d43
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 05e88dd8ce75875b44248916cd7bdb238f621e13
-ms.sourcegitcommit: 1a182443e4f70f4632617cfef4efa56d898e64e9
+ms.openlocfilehash: c6a48d0eb6abae94ba6e3c54e0aa5b0b6b874371
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58342877"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65089444"
 ---
 # <a name="use-tokens-in-job-steps"></a>Использование токенов в шагах задания
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "58342877"
 >   
 > Если необходимо использовать эти токены, убедитесь, что только члены доверенных групп безопасности Windows, таких как группа «Администраторы», обладают разрешением на работу с журналом событий компьютера, на котором находится [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Затем, чтобы включить эти токены, щелкните правой кнопкой мыши элемент **Агент SQL Server** в обозревателе объектов, выберите пункт меню **Свойства**и на странице **Система предупреждений** установите флажок **Заменить токены всех ответов заданий на предупреждения** .  
   
-Замена токенов агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проста и эффективна: Агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] заменяет токен точной символьной строкой. Все токены обрабатываются с учетом регистра. Шаги заданий должны это учитывать для учетной записи и правильно заключать в кавычки применяемые токены или преобразовывать замещающие строки к верному типу данных.  
+Замена токенов агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проста и эффективна: агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] заменяет токен точной символьной строкой. Все токены обрабатываются с учетом регистра. Шаги заданий должны это учитывать для учетной записи и правильно заключать в кавычки применяемые токены или преобразовывать замещающие строки к верному типу данных.  
   
 Например, чтобы напечатать имя базы данных в шаге задания, можно использовать следующую инструкцию:  
   
@@ -78,7 +78,7 @@ ms.locfileid: "58342877"
 |**(MSSA)**|Имя главной службы SQLServerAgent.|  
 |**(OSCMD)**|Префикс для программы, используемой для запуска шагов задания **CmdExec** .|  
 |**(SQLDIR)**|Каталог, в котором установлен [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Значение по умолчанию — «C:\Program Files\Microsoft SQL Server\MSSQL».|  
-|**(SQLLOGDIR)**|Токен замены для пути к папке журнала ошибок SQL Server, например $(ESCAPE_SQUOTE(SQLLOGDIR)).|  
+|**(SQLLOGDIR)**|Токен замены для пути к папке журнала ошибок SQL Server, например $(ESCAPE_SQUOTE(SQLLOGDIR)). Этот токен доступен только в SQL Server 2014 и более поздних версиях.|  
 |**(STEPCT)**|Количество выполнений этого шага (кроме повторных попыток). Может применяться командой шага для принудительного прекращения цикла из нескольких шагов.|  
 |**(STEPID)**|Идентификатор шага.|  
 |**(SRVR)**|Имя компьютера, на котором выполняется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В случае именованного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имя компьютера включается в имя экземпляра.|  

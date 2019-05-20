@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Создание моментального снимка проекта | Документация Майкрософт
+title: Руководство. Создание моментального снимка проекта | Документация Майкрософт
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -11,17 +11,17 @@ f1_keywords:
 - sql.data.tools.SqlProjectImportSnapshotSummaryDialog.dialog
 - sql.data.tools.SqlProjectImportSnapshotDialog.dialog
 ms.assetid: bed670a3-13bd-4d88-91a1-58d5b9524a97
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: c564788a1d77d9af83de28a2b4dbea022ea28ec1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4093d18cfce9e7a5632039cf819955762c84adc1
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530783"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098079"
 ---
-# <a name="how-to-create-a-snapshot-of-a-project"></a>Как создавать моментальный снимок проекта
+# <a name="how-to-create-a-snapshot-of-a-project"></a>Руководство. создать моментальный снимок проекта
 **Файл приложения уровня данных** представляет в доступном только для чтения виде схему базы данных на момент ее создания. Фактически он обрабатывается как схема базы данных, из которой можно импортировать объекты схемы обратно в проект. Можно также ее сравнить со схемой базы данных или проекта и обновить базу данных или проект в соответствии со схемой, определенной в моментальном снимке.  
   
 В случае если пользователь допустит ошибку в исходном проекте базы данных, можно вернуть исходный проект в состояние, в котором он был на момент создания моментального снимка. Кроме того, можно создавать моментальные снимки на различных этапах разработки для создания контрольного плана.  

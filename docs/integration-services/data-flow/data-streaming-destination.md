@@ -13,14 +13,18 @@ ms.assetid: 640e6a19-49ae-4ee8-ac07-008370158f0e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f84f4e0e0e5b0529f3b79cd64cd9bb605737adf5
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.openlocfilehash: 504c05882d1e7c690b8ddbd46c331073f63bbb7c
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59242502"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727001"
 ---
 # <a name="data-streaming-destination"></a>Назначение потоковой передачи данных
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
    **Назначение потоковой передачи данных** — это компонент назначения служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS), который позволяет **поставщику OLE DB для служб SSIS** использовать выходные данные пакета служб SSIS в качестве табличного результирующего набора. Можно создать связанный сервер, использующий поставщик OLE DB для служб SSIS, а затем выполнить SQL-запрос к связанному серверу, чтобы просмотреть данные, возвращаемые пакетом служб SSIS.  
   
  В приведенном ниже примере следующий запрос возвращает выходные данные из пакета Package.dtsx в проекте SSISPackagePublishing в папке Power BI каталога служб SSIS. Этот запрос использует связанный сервер с именем [Default Linked Server for Integration Services], который, в свою очередь, использует новый поставщик OLE DB для служб SSIS. Запрос содержит имя папки, имя проекта и имя пакета в каталоге служб SSIS. Поставщик OLE DB для служб SSIS запускает пакет, указанный в запросе, и возвращает табличный результирующий набор.  
