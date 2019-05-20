@@ -15,14 +15,18 @@ ms.assetid: 552ff592-eeef-46e8-b4a2-9b2384c869aa
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f1ae0a9f644234a7e887758cf56ebcbc89593ee4
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: db042dd5722b2b1bc034364878ebf3cfb550e27c
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289640"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65717282"
 ---
 # <a name="ssis-toolbox"></a>Область элементов служб SSIS
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Все компоненты, установленные на локальном компьютере, автоматически отображаются на **панели элементов служб SSIS**. При установке дополнительных компонентов щелкните правой кнопкой мыши на панели элементов и выберите **Обновить панель элементов** для добавления этих компонентов.  
  
  При создании проекта служб SSIS или открытии существующего проекта автоматически отображается **панель элементов служб SSIS**. Также панель элементов можно открыть, нажав кнопку "Область элементов" в верхнем правом углу области конструктора пакетов либо выбрав "Вид" -> "Другие окна" -> "Панель элементов служб SSIS".

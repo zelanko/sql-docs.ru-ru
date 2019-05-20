@@ -15,14 +15,18 @@ ms.assetid: 756840e3-aa09-45cd-9951-1a17af4b5925
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6a340ece64bc69b012919bb57afd1b80690f3a59
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 6301066549a8008512bef934f9d887349a6b765b
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273052"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727774"
 ---
 # <a name="data-profiling-task-and-viewer"></a>Задачи профилирования и просмотра данных
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Задача «Профилирование данных» обеспечивает профилирование данных внутри процесса извлечения, преобразования и загрузки данных. Использование задачи «Профилирование данных» может дать следующие преимущества.  
   
 -   Более эффективный анализ исходных данных  

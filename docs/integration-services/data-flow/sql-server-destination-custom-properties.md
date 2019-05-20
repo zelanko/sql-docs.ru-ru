@@ -11,14 +11,18 @@ ms.assetid: b736aa6d-c154-44a0-be08-f25733fca1d9
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e7b71c3d1e92f755227903f9a02a7e37f28a0307
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 13b88630ed7f8280bc57282f9f6681de29080a47
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272024"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726316"
 ---
 # <a name="sql-server-destination-custom-properties"></a>Пользовательские свойства назначения «SQL Server»
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Назначение [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обладает как пользовательскими свойствами, так и свойствами, общими для всех компонентов потока данных.  
   
  В следующей таблице описаны пользовательские свойства назначения « [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ». Все свойства доступны для чтения и записи.  

@@ -12,14 +12,18 @@ ms.assetid: 318e8da0-37d3-46cd-943a-fc5d66aad93a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 23acf4037b9e759fe60847c4d3791528770f89b9
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: e8e7090865428be5da4e917b9894c940ef5975b2
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58222038"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723959"
 ---
 # <a name="configure-flat-file-destination-sql-server-import-and-export-wizard"></a>Настройка назначения «Неструктурированный файл» (мастер импорта и экспорта SQL Server)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Если вы выбрали назначение "Неструктурированный файл", то после того как вы укажете, хотите ли вы скопировать таблицу или подать запрос, в мастере импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] откроется страница **Настройка назначения "Неструктурированный файл"**. На этой странице можно задать параметры форматирования для назначения "Неструктурированный файл". При необходимости проверьте сопоставления отдельных столбцов и просмотрите образец данных.  
   
 ## <a name="screen-shot-of-the-configure-flat-file-destination-page"></a>Снимок экрана: страница "Настройка назначения" Неструктурированный файл""  

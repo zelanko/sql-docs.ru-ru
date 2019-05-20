@@ -13,14 +13,18 @@ ms.assetid: 73000ef6-52a2-4dec-8320-0e79acf0c2c5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cc77716e8df17175c0951645eb1034b6ecb9e183
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: e2dcaff5b7b8ad834eb12277c587b222b8f782d4
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282668"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726385"
 ---
 # <a name="set-the-properties-of-a-data-flow-component"></a>Установление свойств компонента потока данных
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Чтобы задать свойства компонентов потока данных, которые включают источники, целевые объекты и преобразования, можно использовать следующие компоненты.  
   
 -   Редакторы компонентов, предоставляемые службами [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . В редакторы компонентов включены только пользовательские свойства каждого компонента потока данных.  

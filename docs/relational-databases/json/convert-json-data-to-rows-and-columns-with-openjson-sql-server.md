@@ -14,16 +14,16 @@ ms.assetid: 0c139901-01e2-49ef-9d62-57e08e32c68e
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e56a64564d3b546f6bd6c45c36bdb7b4b1484b87
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+monikerRange: =azuresqldb-current||= azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 9260a04673ecdf4de8090bf6582fa9c674d9cf2c
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033245"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65570986"
 ---
 # <a name="parse-and-transform-json-data-with-openjson-sql-server"></a>Анализ и преобразование данных JSON с помощью OPENJSON (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
 Функция набора строк **OPENJSON** позволяет преобразовать текст JSON в набор строк и столбцов. После того как коллекция данных JSON будет преобразована в набор строк с помощью **OPENJSON**, вы сможете выполнять любые SQL-запросы к полученным данным или вставлять эти данные в таблицу SQL Server. 
   
@@ -42,9 +42,10 @@ ms.locfileid: "56033245"
 **OPENJSON** возвращает каждое свойство объекта JSON или каждый элемент массива в виде отдельной строки.  
 
 Ниже приведен краткий пример, в котором **OPENJSON** используется со схемой по умолчанию (т. е. без дополнительного предложения **WITH**) и возвращает одну строку для каждого свойства JSON-объекта.  
- 
+
 **Пример**
-```sql  
+
+```sql
 DECLARE @json NVARCHAR(MAX)
 
 SET @json='{"name":"John","surname":"Doe","age":45,"skills":["SQL","C#","MVC"]}';
@@ -53,7 +54,7 @@ SELECT *
 FROM OPENJSON(@json);
 ```  
   
-**Результаты**  
+**Результаты**
   
 |ключ|value|type|  
 |---------|-----------|----------|  
@@ -68,8 +69,8 @@ FROM OPENJSON(@json);
 
 Сведения о синтаксисе и использовании см. в статье [OPENJSON (Transact-SQL)](../../t-sql/functions/openjson-transact-sql.md). 
 
-    
 ## <a name="option-2---openjson-output-with-an-explicit-structure"></a>Вариант 2. Выходные данные OPENJSON с явной структурой
+
 Если указана схема результатов (с помощью предложения **WITH** функции **OPENJSON**), функция возвращает таблицу только со столбцами, заданными в предложении **WITH**. В дополнительном предложении **WITH** вы можете указать набор выходных столбцов, их типы и пути исходных свойств JSON для каждого выходного значения. **OPENJSON** перебирает массив объектов JSON, считывает значение по указанному пути для каждого столбца и конвертирует его в заданный тип.  
 
 Ниже представлен краткий пример использования **OPENJSON** с явно заданной схемой выходных данных в предложении **WITH**.  
@@ -114,7 +115,7 @@ WITH (
  ) 
 ```  
   
-**Результаты**  
+**Результаты**
   
 |Количество|Дата|Customer|количество|  
 |------------|----------|--------------|--------------|  
@@ -128,11 +129,13 @@ WITH (
 -   Для каждого столбца, указанного с помощью синтаксиса `colName type json_path`, **OPENJSON** преобразует значение, найденное в каждом элементе массива по указанному пути, в указанный тип. В этом примере значения для столбца `Date` берутся из каждого элемента в пути `$.Order.Date` и преобразуются в значения даты и времени.  
   
 ### <a name="more-info-about-openjson-with-an-explicit-schema"></a>Дополнительные сведения об OPENJSON с явной схемой
+
 Дополнительные сведения и примеры см. в статье [Использование функции OPENJSON с явной схемой (SQL Server)](../../relational-databases/json/use-openjson-with-an-explicit-schema-sql-server.md).
 
 Сведения о синтаксисе и использовании см. в статье [OPENJSON (Transact-SQL)](../../t-sql/functions/openjson-transact-sql.md).
 
 ## <a name="openjson-requires-compatibility-level-130"></a>OPENJSON необходим уровень совместимости 130.
+
 Функция **OPENJSON** доступна только при **уровне совместимости 130**. Если уровень совместимости вашей базы данных меньше 130, SQL Server не сможет найти и выполнить функцию **OPENJSON** . Другие встроенные функции JSON доступны на всех уровнях совместимости.
 
 Проверить уровень совместимости можно в представлении `sys.databases` или в свойствах базы данных.
@@ -146,13 +149,12 @@ WITH (
 
 Наглядные инструкции по встроенной поддержке JSON в SQL Server и базе данных SQL Azure см. в следующих видео.
 
--   [SQL Server 2016 and JSON Support](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support) (SQL Server 2016 и поддержка JSON)
+- [SQL Server 2016 and JSON Support](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support) (SQL Server 2016 и поддержка JSON)
 
--   [Using JSON in SQL Server 2016 and Azure SQL Database](https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database) (Использование JSON в SQL Server 2016 и базе данных SQL Azure)
+- [Using JSON in SQL Server 2016 and Azure SQL Database](https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database) (Использование JSON в SQL Server 2016 и базе данных SQL Azure)
 
--   [JSON as a bridge between NoSQL and relational worlds](https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds) (JSON как мост между NoSQL и реляционными решениями)
+- [JSON as a bridge between NoSQL and relational worlds](https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds) (JSON как мост между NoSQL и реляционными решениями)
   
 ## <a name="see-also"></a>См. также:  
  [OPENJSON (Transact-SQL)](../../t-sql/functions/openjson-transact-sql.md)  
-  
   

@@ -13,14 +13,18 @@ ms.assetid: b12b6778-1f01-4a7d-984d-73f2f7630aa5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 48d18edc37d5073ab4346ec58cbb6a341d8870fe
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 4f03fa46643f062aa03cac60dbf3dcbe7b31f22c
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282418"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724764"
 ---
 # <a name="coding-a-custom-connection-manager"></a>Написание кода пользовательского диспетчера соединений
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   После создания класса, наследующего от базового класса <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase>, и применения к нему атрибута <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute>, необходимо переопределить реализацию свойств и методов базового класса, чтобы обеспечить пользовательские функциональные возможности.  
   
  Примеры пользовательских диспетчеров соединений см. в разделе [Разработка пользовательского интерфейса для пользовательского диспетчера соединений](../../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-user-interface-for-a-custom-connection-manager.md). Примеры кода, приведенные в этом разделе, взяты из образца пользовательского диспетчера соединений SQL Server.  

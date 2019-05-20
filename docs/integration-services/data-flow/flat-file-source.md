@@ -21,14 +21,18 @@ ms.assetid: 4a64f7f3-f25d-4db0-93b3-a29496030e58
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b1a7e2f0320790959df4f29bfd586f70acec9de7
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 3d325033d1e315ce7b9175f812ae992316fa2f44
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271047"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726804"
 ---
 # <a name="flat-file-source"></a>источник «Неструктурированный файл»
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Источник «Неструктурированный файл» считывает данные из текстового файла. Текстовый файл может иметь разделители, фиксированную ширину полей или смешанный формат.  
   
 -   В формате с разделителями для выделения столбцов и строк используются разделители столбцов и строк.  

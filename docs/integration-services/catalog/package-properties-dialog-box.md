@@ -14,14 +14,18 @@ ms.assetid: a70acbf4-5f5c-4606-8ce4-8eb3684233de
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8e392e406ce9c17cc24f57a22cef03de2c363a21
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 5079a0fbfd3a870875043b40be3c406c72730fbd
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289057"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729333"
 ---
 # <a name="package-properties-dialog-box"></a>диалоговое окно «Свойства пакета»
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Используйте диалоговое окно **Свойства пакета** для просмотра свойств пакетов, хранящихся на сервере служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
  Дополнительные сведения см. в разделе [Службы Integration Services (сервер служб SSIS)](../integration-services-ssis-packages.md).  

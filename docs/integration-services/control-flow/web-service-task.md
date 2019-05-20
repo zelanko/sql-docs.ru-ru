@@ -18,14 +18,18 @@ ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c59a55f8ccb713024394ecf611299f71a5cf733c
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 2aa9ecc0364accdd9050cae303afb545faf394ba
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271966"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727327"
 ---
 # <a name="web-service-task"></a>Задача «Веб-служба»
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Задача «Веб-служба» выполняет метод веб-службы. Возможно использование задачи «Веб-служба» в следующих целях:  
   
 -   Запись в переменную значений, возвращаемых методом веб-службы. Например, можно получить самую высокую температуру дня из метода веб-службы с последующим использованием ее значения для обновления переменной, которая используется в выражении, задающем значение столбца.  

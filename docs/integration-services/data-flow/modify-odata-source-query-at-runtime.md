@@ -11,14 +11,18 @@ ms.assetid: bcbba7f4-6e5d-46e6-a73a-3f17d3ff376a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4835193453b1f58f7aa6dec5c81cd3c349bc6a04
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 4a29245c790f97d92529ff2bf1e100675b3c9530
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275428"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726686"
 ---
 # <a name="provide-an-odata-source-query-at-runtime"></a>Указание запроса источника OData во время выполнения
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
  Можно изменить запрос источника OData во время выполнения, добавив *выражение* в свойство **[OData Source].[Query]** задачи потока данных.  
   
  Должны возвращаться те же столбцы, которые возвращались во время разработки, иначе при выполнении пакета произойдет ошибка. Обязательно укажите те же столбцы (в том же порядке) при использовании параметра $select запроса. Более безопасная альтернатива применению параметра $select состоит в том, чтобы отменить выбор ненужных столбцов непосредственно в пользовательском интерфейсе исходного компонента.  

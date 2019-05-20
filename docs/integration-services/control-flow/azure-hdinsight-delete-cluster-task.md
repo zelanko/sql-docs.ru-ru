@@ -14,14 +14,18 @@ ms.assetid: e298776e-d18a-4393-a8e6-65ee3d555749
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a64cf0fecb7313ebd8947a1acd3ef54ccb34636f
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d9f33fa68288f216f0b4cbac61f1ef75086feb21
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272351"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727970"
 ---
 # <a name="azure-hdinsight-delete-cluster-task"></a>Задача удаления кластера Azure HDInsight
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 **Задача удаления кластера Azure HDInsight** позволяет пакету служб SSIS удалить кластер Azure HDInsight в указанной подписке и группе ресурсов Azure.
   
 **Задача удаления кластера Azure HDInsight** входит в состав [пакета дополнительных компонентов SQL Server Integration Services (SSIS) для Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).

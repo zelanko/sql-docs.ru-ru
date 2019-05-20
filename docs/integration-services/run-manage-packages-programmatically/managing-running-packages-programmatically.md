@@ -14,14 +14,18 @@ ms.assetid: 0e91f4ac-6f29-40d7-8c28-9b82e4802c35
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5c06c5d4431da3a459ecf4e66391153096e08c5a
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 56e09491833cf96c83651b4e6a8038c1ad7a3bc6
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270537"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65719042"
 ---
 # <a name="managing-running-packages-programmatically"></a>Программное управление запуском пакетов
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   При программном способе работы с пакетами служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] может потребоваться определить, какие пакеты уже запущены в настоящее время. Класс <xref:Microsoft.SqlServer.Dts.Runtime.Application> пространства имен <xref:Microsoft.SqlServer.Dts.Runtime> предоставляет необходимые для этого методы и классы.  
   
  Дополнительные сведения о мониторинге пакетов см. в разделе [Управление пакетами (службы SSIS)](../../integration-services/service/package-management-ssis-service.md).  

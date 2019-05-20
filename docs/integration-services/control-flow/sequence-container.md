@@ -18,14 +18,18 @@ ms.assetid: 7731f91e-b8b3-4d96-a0d9-73f568547cb3
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 526ecbfaf5b445ccf116675b60d6560790bfb88c
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f4e9157dc3e3fb7bffe8365290ef6e4be1878f81
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273500"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727465"
 ---
 # <a name="sequence-container"></a>контейнер последовательности
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Контейнер последовательности определяет поток управления, являющийся подмножеством потока управления пакета. Контейнер последовательности группирует пакет в несколько отдельных потоков управления, каждый из которых содержит одну или более задач и контейнеров, выполняющихся в общем потоке управления.  
   
  Помимо других контейнеров, контейнер последовательности может включать несколько задач. Добавление задач и контейнеров к контейнеру последовательности аналогично их добавлению к пакету, за исключением случаев, когда вместо контейнера пакетов задачи и контейнеры перетаскиваются в контейнер последовательности. Если контейнер последовательности включает более одной задачи или контейнера, то их можно соединить с помощью управлений очередностью так же, как и в пакете. Дополнительные сведения см. в разделе [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md).  

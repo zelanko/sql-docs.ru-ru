@@ -11,14 +11,18 @@ ms.assetid: 7474b1f4-7607-4f28-a6fd-67f7db1dd3f8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 02f4c2f408b8ab920b970a29917595841b1183fe
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d76b84ec492203474f0da8839bfdfb0aa6be6a54
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273779"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729347"
 ---
 # <a name="building-packages-programmatically"></a>Программное построение пакетов
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Если необходимо динамическое создание пакетов или управление и выполнение пакетов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] вне среды разработки, то можно управлять пакетами программно. Этот подход предлагает следующий набор вариантов.  
   
 -   Загрузка и выполнение существующего пакета без изменения.  

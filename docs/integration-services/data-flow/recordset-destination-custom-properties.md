@@ -11,14 +11,18 @@ ms.assetid: 1568ed6a-022c-4839-b73e-4eb49558bbc2
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6cb31139e542344f3b7fd8354c250452783ba5bc
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: fcd7c0cf972a6744cf35ace20fb21dcbf7deb7f0
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282816"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726494"
 ---
 # <a name="recordset-destination-custom-properties"></a>Пользовательские свойства назначения «Набор записей»
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Назначение «Набор записей» обладает как пользовательскими свойствами, так и свойствами, общими для всех компонентов потока данных.  
   
  В следующей таблице описаны пользовательские свойства назначения «Набор записей». Все свойства доступны для чтения и записи.  

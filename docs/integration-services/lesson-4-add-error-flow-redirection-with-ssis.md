@@ -1,5 +1,5 @@
 ---
-title: Урок 4. Добавление перенаправления потока ошибок с помощью служб SSIS | Документация Майкрософт
+title: 'Занятие 4: Добавление перенаправления потока ошибок с помощью служб SSIS | Документация Майкрософт'
 ms.custom: ''
 ms.date: 01/07/2019
 ms.prod: sql
@@ -11,14 +11,18 @@ ms.assetid: 0c8dbda2-75e3-4278-9b4e-dcd220c92522
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 64982c47b9089bcaf878e9846714ed93b49eb7ad
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 0c52d5115539b35f769ce74a35887e0538526deb
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275632"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65721767"
 ---
-# <a name="lesson-4-add-error-flow-redirection-with-ssis"></a>Урок 4. Добавление перенаправления потока ошибок с помощью служб SSIS
+# <a name="lesson-4-add-error-flow-redirection-with-ssis"></a>Занятие 4: Добавление перенаправления потока ошибок с помощью служб SSIS
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Для обработки ошибок, которые могут возникать в процессе преобразования, службы [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] позволяют указать, как следует обрабатывать данные отдельных компонентов и столбцов, которые [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] не могут преобразовать. Можно проигнорировать ошибки в определенных столбцах, перенаправить всю строку с ошибкой или завершить работу компонента с ошибкой. По умолчанию для компонентов в службах [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] указано завершение работы при возникновении ошибки. Завершение работы компонента с ошибкой, в свою очередь, приводит к сбою в работе пакета и остановке обработки.  
   

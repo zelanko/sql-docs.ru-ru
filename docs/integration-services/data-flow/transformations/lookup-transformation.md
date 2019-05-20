@@ -24,14 +24,18 @@ ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4e3de21943f0bdd50e05cb30a1d9b1774f41ab37
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: a866d6224417898b9ed442cb656b9c62f4071297
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273293"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726001"
 ---
 # <a name="lookup-transformation"></a>Преобразование «Уточняющий запрос»
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Преобразование «Уточняющий запрос» выполняет уточняющие запросы, объединяя данные во входных столбцах со столбцами в ссылочном наборе данных. Уточняющие запросы используются для доступа к дополнительной информации в связанной таблице, основанной на значениях в общих столбцах.  
   
  Эталонным набором данных может быть файл кэша, существующая таблица или представление, новая таблица или результат SQL-запроса. Преобразование «Уточняющий запрос» использует для подключения к эталонному набору данных диспетчер соединений OLE DB или диспетчер соединений с кэшем. Дополнительные сведения см. в разделах [OLE DB Connection Manager](../../../integration-services/connection-manager/ole-db-connection-manager.md) и [Cache Connection Manager](../../../integration-services/data-flow/transformations/cache-connection-manager.md).  

@@ -1,5 +1,5 @@
 ---
-title: Учебник. Использование источника OData | Документация Майкрософт
+title: Руководство. Использование источника OData | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,14 +11,18 @@ ms.assetid: 2c64cf8b-5edb-48df-8ffe-697096258f71
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 91b03ca49059ea12898420eea2abff6326fa7d0e
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 795d4d31c3b26d2ef1f587e6b96d158d5d304789
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272770"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725688"
 ---
-# <a name="tutorial-using-the-odata-source"></a>Учебник. Использование источника OData
+# <a name="tutorial-using-the-odata-source"></a>Руководство. Использование источника OData
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Этот учебник содержит процедуру извлечения коллекции **Employees** из образца **Northwind** службы OData (https://services.odata.org/V3/Northwind/Northwind.svc/)) и последующей ее загрузки в неструктурированный файл.  
   
 ## <a name="1-create-an-integration-services-project"></a>1. Создание проекта служб Integration Services  

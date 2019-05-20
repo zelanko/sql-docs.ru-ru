@@ -14,14 +14,18 @@ ms.assetid: 224fc025-c21f-4d43-aa9d-5ffac337f9b0
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 64b7c86748fe670e2b5bb9a2cb21f0381a5888c8
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 099f6347fa90d034d4517d828bc7e3c095017ade
+ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272000"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65801423"
 ---
 # <a name="validate-xml-with-the-xml-task"></a>Validate XML with the XML Task
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Активировав в задаче XML свойство **ValidationDetails** , вы сможете получить подробные результаты проверки XML-документа.  
   
  На следующем снимке экрана показано окно **редактора задачи XML** с необходимыми параметрами для проверки XML, позволяющими настроить вывод подробных сведений об ошибках.  

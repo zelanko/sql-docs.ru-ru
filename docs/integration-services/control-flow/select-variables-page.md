@@ -16,14 +16,18 @@ ms.assetid: e62083ec-d127-48ea-aaa4-cca6017a29cb
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7e28a0043cef8fc26dc5b98c255d516c5dd523b0
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 993cf560f8bd3c07b5930219ca041ebe5c411ea1
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270459"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727447"
 ---
 # <a name="select-variables-page"></a>Страница «Выбор переменных»
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   При помощи диалогового окна **Выбор переменных** во время настройки задачи «Скрипт» или компонента скрипта можно выбрать одну или несколько переменных для свойств **ReadOnlyVariables** и **ReadWriteVariables** .  
   
  Чтобы открыть диалоговое окно **Выбор переменных**, на странице **Скрипт** диалогового окна **Редактор преобразований "Скрипт"** в поле **Пользовательские свойства** найдите свойство **ReadOnlyVariables** или **ReadWriteVariables**, а затем нажмите кнопку с многоточием (…), связанную с ним.  

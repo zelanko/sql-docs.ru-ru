@@ -11,14 +11,18 @@ ms.assetid: db9404d8-4c42-45e5-a100-c7a84b056109
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 046ec13269181eedda2d9fcfd891e7dd823db372
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 960c172b5634ba081fdcec404f13d0314e512f91
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282238"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726713"
 ---
 # <a name="look-up-rfc-destination"></a>Поиск назначения RFC
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Используйте диалоговое окно **Поиск назначения RFC** для поиска назначения RFC, определенного в системе SAP Netweaver BW. После открытия списка доступных назначений RFC выберите необходимое назначение и компонент заполнит связанные параметры необходимыми значениями.  
   
  Источник и назначение SAP BW используют диалоговое окно **Поиск назначения RFC** . Дополнительные сведения об этих компонентах [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 для SAP BW см. в разделах [Источник SAP BW](../../integration-services/data-flow/sap-bw-source.md) и [Назначение SAP BW](../../integration-services/data-flow/sap-bw-destination.md).  

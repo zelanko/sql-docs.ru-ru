@@ -21,14 +21,18 @@ ms.assetid: 56af984d-88b4-4db8-b6a2-6b07315a699e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8c8203ae3b9b9abf1b45a332ca6c5706a1156125
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: bd586c0ca3fa2cca354a2f394d9008761d744d41
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277187"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725367"
 ---
 # <a name="identifiers-ssis"></a>Идентификаторы (службы SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   В выражениях идентификаторы обозначают столбцы и переменные, значения которых могут быть использованы в операциях. Выражения могут использовать обычные и сложные идентификаторы.  
   
 ## <a name="regular-identifiers"></a>Обычные идентификаторы  

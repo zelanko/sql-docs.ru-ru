@@ -14,14 +14,18 @@ f1_keywords:
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 20421d29832aab8fdeb9532c335c689a1314ad2e
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 2026e33a9e31f437615e8270c61681ec95b287b2
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276201"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728110"
 ---
 # <a name="odata-connection-manager"></a>Диспетчер соединений OData
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
  Диспетчер подключений OData позволяет подключаться к источнику данных OData. Компонент источника OData подключается к источнику OData с помощью диспетчера подключений OData и использует данные из этой службы. Дополнительные сведения см. в разделе [OData Source](../../integration-services/data-flow/odata-source.md).  
   
 ## <a name="adding-an-odata-connection-manager-to-an-ssis-package"></a>Добавление диспетчера соединений OData в пакет SSIS  

@@ -17,14 +17,18 @@ ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2512be2c3fcac33c3bb87700f8925a0f4743a8a4
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: dfe740bfa0ec25d577565f310ebeb3ea5e5d9274
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275089"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727758"
 ---
 # <a name="data-profiling-task"></a>Задача «Профилирование данных»
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Задача «Профилирование данных» вычисляет различные профили, помогающие ознакомиться с источниками данных и определить ошибки в данных, требующие исправления.  
   
  Задачу «Профилирование данных» можно использовать внутри пакета служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] для профилирования данных, которые хранятся в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , а также для выявления потенциальных ошибок, связанных с качеством данных.  

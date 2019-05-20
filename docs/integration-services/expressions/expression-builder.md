@@ -15,14 +15,18 @@ ms.assetid: 4717ce33-bd4e-44bc-81e0-002de075b4d1
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 199c6a433523fed4a4cb164669529b2426df37f7
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 04457acc8bd47f3802ba7ad68797d1745117871d
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275194"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725420"
 ---
 # <a name="expression-builder"></a>Построитель выражений
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Диалоговое окно **Построитель выражений** используется для создания и редактирования выражения свойства или написания выражения, определяющего значение переменной, с помощью графического интерфейса, содержащего список переменных и встроенные ссылки на функции, приведения типов и операторы, включенные в язык выражений служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
  Выражение свойства представляет собой выражение, которое присваивается свойству. При вычислении выражения свойство динамически обновляется для использования результатов вычисления выражения. Аналогичным образом, выражение, которое используется в переменной, позволяет присваивать переменной результаты вычисления выражения в качестве нового значения.  

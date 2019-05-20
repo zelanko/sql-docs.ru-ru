@@ -19,14 +19,18 @@ ms.assetid: 404ecab7-7698-447b-93d6-dd256beb11ff
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 95ffb58c54bd2cf23a4eddb11890d55f83e5bc22
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 69bf16c82c3a7ee13f75de4f954f35bb11979c08
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273683"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729341"
 ---
 # <a name="connecting-data-flow-components-programmatically"></a>Программное соединение компонентов потока данных
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   После добавления компонентов в задачу потока данных их следует соединить, чтобы создать дерево выполнения, представляющее поток данных из источников через преобразования в назначения. Объекты <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100> используются для соединения компонентов в потоке данных.  
   
 ## <a name="creating-a-path"></a>Создание пути  

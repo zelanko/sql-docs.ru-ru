@@ -14,14 +14,18 @@ ms.assetid: 55a0951a-46f3-4f0f-9972-74cec9cc26b7
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a3c679aa51da959d0b24af2247f563446ac283a0
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 6f258f39bac4f26546f9283bce9cfcff5b5420f4
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281538"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65719619"
 ---
 # <a name="events-logged-by-an-integration-services-package"></a>Регистрация событий в пакете служб Integration Services
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Пакет служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] записывает различные сообщения о событиях в журнал событий приложений Windows. Пакет записывает эти сообщения при запуске пакета при остановке пакета и возникновении определенных неполадок.  
   
  В этом разделе содержатся сведения о часто встречающихся сообщениях о событиях, записываемых пакетом в журнал событий приложений. По умолчанию пакет записывает некоторые из этих сообщений, даже если режим записи в журнал для пакета не включен. Однако существуют другие сообщения, которые пакет записывает, только если для пакета включен режим записи в журнал. Независимо от того, записывает ли пакет эти сообщения в журнал по умолчанию или потому что запись была разрешена, источником событий для сообщений в пакете является SQLISPackage.  

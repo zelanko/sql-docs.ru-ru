@@ -12,14 +12,18 @@ ms.assetid: 56a8a79f-086c-4bdc-8888-0045bb4b0cbf
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c3a81b45e3d744573b99d270ae7983a599e8fabf
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: 3b051e5f2dc951eb07d4a23a5a22e15f1b2cc071
+ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58222018"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65805128"
 ---
 # <a name="create-database-sql-server-import-and-export-wizard"></a>Создание базы данных (мастер импорта и экспорта SQL Server)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 Если на странице **Выбор назначения** выбрать вариант **Создать** для создания целевой базы данных SQL Server, мастер импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отображает диалоговое окно **Создание базы данных** . На этой странице можно указать имя новой базы данных. При необходимости можно также изменить параметры для начального размера и автоматического увеличения новой базы данных и ее файла журнала. 
 
 Диалоговое окно **Создание базы данных** в мастере содержит лишь базовые параметры, доступные для создания базы данных SQL Server. Чтобы просмотреть и настроить все параметры для новой базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], используйте [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] для создания базы данных или ее настройки после создания мастером. 

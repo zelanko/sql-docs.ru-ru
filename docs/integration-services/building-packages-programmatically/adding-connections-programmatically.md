@@ -25,14 +25,18 @@ ms.assetid: d90716d1-4c65-466c-b82c-4aabbee1e3e5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bcc954457c38f8c9bcd8e038ce3461bb94335eb0
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: eeddd2924722cbcf152c4c55c33c126a19a0679a
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274900"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729400"
 ---
 # <a name="adding-connections-programmatically"></a>Добавление соединений программным образом
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Класс <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> представляет физические соединения с внешними источниками данных. Класс <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> изолирует данные о реализации соединения от среды выполнения. Это обеспечивает согласованное и прогнозируемое взаимодействие среды выполнения с каждым диспетчером соединений. Диспетчеры соединений содержат набор основных свойств, общих для всех соединений, например, <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Name%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ID%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Description%2A> и <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ConnectionString%2A>. Однако, как правило, только свойства <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ConnectionString%2A> и <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Name%2A> требуются для настройки диспетчера соединений. Обычно классами подключения используются такие методы, как **Open** или **Connect** для установления физического соединения с источником данных, однако подсистема среды выполнения управляет всеми подключениями пакета во время его выполнения.  
   
  Класс <xref:Microsoft.SqlServer.Dts.Runtime.Connections> представляет собой коллекцию диспетчеров соединений, добавленных в этот пакет и доступных для использования во время выполнения. Можно добавить в коллекцию дополнительные диспетчеры соединений, используя метод <xref:Microsoft.SqlServer.Dts.Runtime.Connections.Add%2A> коллекции и указав строку, определяющую тип диспетчера соединений. Метод <xref:Microsoft.SqlServer.Dts.Runtime.Connections.Add%2A> возвращает экземпляр <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>, который был добавлен в пакет.  

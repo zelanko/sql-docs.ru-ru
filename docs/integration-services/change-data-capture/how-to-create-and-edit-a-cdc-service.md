@@ -11,14 +11,18 @@ ms.assetid: 1b3d47a5-dc89-482d-bbc7-fff04f194c43
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 47d4d2a3e987dada26fddff10c863fa0e3ba3ee8
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 96e3ff941d431deb423cdd474d36846e8596798b
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270831"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728812"
 ---
 # <a name="how-to-create-and-edit-a-cdc-service"></a>Создание и изменение службы CDC
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   В этих процедурах описываются способы создания и изменения службы Oracle CDC Service при помощи консоли конфигурации службы CDC.  
   
  Эту процедуру может выполнять пользователь Windows с правами администратора на компьютере, где настроена служба Oracle CDC.  

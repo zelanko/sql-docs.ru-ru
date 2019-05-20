@@ -13,14 +13,18 @@ ms.assetid: ae0b33dd-f44b-42df-b6f6-69861770ce10
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5133ad3b28927004f81f94e1db7255fdb5eb7cf3
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: b6826f7114d2e9b901fb0f17f604ed426286555f
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270804"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726259"
 ---
 # <a name="balanced-data-distributor-transformation"></a>Преобразование распространителя сбалансированных данных
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   В процессе преобразования распространителя сбалансированных данных (BDD) используются возможности параллельной обработки современных процессоров. Оно равномерно распределяет буферы входящих строк по отдельным потокам. С помощью отдельных потоков пути для каждого пути вывода компонент BDD улучшает производительность пакета служб SSIS на многоядерных и мультипроцессорных компьютерах.  
   
  На следующей диаграмме показан простой пример использования преобразования BDD. В этом примере преобразование BDD выбирает один буфер конвейера из входных данных неструктурированного файла и отправляет его в один из трех путей вывода в ходе циклического перебора. В SQL Server Data Tools можно проверить значения параметров <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipeClass.DefaultBufferSize%2A>(размер буфера конвейера по умолчанию) и <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipeClass.DefaultBufferMaxRows%2A>(максимальное количество строк в буфере конвейера по умолчанию) в окне **Свойства** задачи потока данных.  

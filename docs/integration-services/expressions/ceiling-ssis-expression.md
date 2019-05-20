@@ -14,14 +14,18 @@ ms.assetid: c35bd4ee-1ab6-46ab-89a7-cf771527faa2
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c69ce4ea1890048af41ccd081ea9d2204a6ac637
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: b0b9c9c7ab5ed0067d86b3beaa69461ab6e90672
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275111"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725566"
 ---
 # <a name="ceiling-ssis-expression"></a>CEILING (выражение служб SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Возвращает наименьшее целое число, большее или равное данному числовому выражению.  
   
 ## <a name="syntax"></a>Синтаксис  

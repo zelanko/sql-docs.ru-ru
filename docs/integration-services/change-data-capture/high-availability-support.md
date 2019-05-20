@@ -11,14 +11,18 @@ ms.assetid: 2e0f6d3f-0536-46d9-8630-835e199515bf
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0dc24825795c3066ed92759597388e563a9eb4ce
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 610da7f6b7ef6fed5e3be6cb5ae2e7be53bf31fc
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273401"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728840"
 ---
 # <a name="high-availability-support"></a>Поддержка высокого уровня доступности
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Служба CDC для Oracle разработана с учетом требований высокого уровня доступности. Следующие функции составляют часть функций поддержки высокого уровня доступности:  
   
 -   Служба CDC для Oracle не использует никаких файлов ресурсов (локальных или сетевых). Все состояние сохраняется в целевом экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Это позволяет без труда запустить службу на другом компьютере, использующем тот же экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , если в компьютере, на котором запущена служба, произойдет сбой. Чтобы сократить время восстановления, длительные транзакции Oracle хранятся в промежуточной таблице целевого экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], благодаря чему устраняется необходимость повторного сканирования множества журналов транзакций сразу после сбоя (или перезапуска службы).  

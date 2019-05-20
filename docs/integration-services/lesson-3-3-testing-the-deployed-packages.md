@@ -11,14 +11,18 @@ ms.assetid: 9159da3f-c9ca-4015-9e85-3bf4373a1349
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 751480be76b38ff10f0c71fbde12bcc6765e6ef6
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 5d6b035f0ca428f6c31492f940a9964982f04f66
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277261"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722339"
 ---
 # <a name="lesson-3-3---testing-the-deployed-packages"></a>Занятие 3–3. Тестирование развернутых пакетов
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 В этой задаче вы проверите пакеты, развернутые на экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 В других учебниках по [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] вы выполняли пакеты в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], среде разработки для [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]при помощи параметра **Запустить отладку** в меню **Отладка** . В этот раз пакет будет выполнен по-другому.  

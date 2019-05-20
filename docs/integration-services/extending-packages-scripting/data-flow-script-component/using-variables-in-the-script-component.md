@@ -13,14 +13,18 @@ ms.assetid: 92d1881a-1ef1-43ae-b1ca-48d0536bdbc2
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c267518f15bb87dddfd1139e80c3c7922bdf37c1
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 0860c983b6d00f1ec1199f716cae73140e5b84d5
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58278063"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724173"
 ---
 # <a name="using-variables-in-the-script-component"></a>Использование переменных в компоненте скрипта
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Переменные хранят значения, которые пакет и его контейнеры, задачи и обработчики событий могут использовать во время выполнения. Дополнительные сведения см. в разделе [Переменные служб Integration Services (SSIS)](../../../integration-services/integration-services-ssis-variables.md).  
   
  Существующие переменные можно сделать доступными только для чтения или чтения и записи с помощью пользовательского скрипта, введя список значений, разделенных запятыми, в поля **ReadOnlyVariables** и **ReadWriteVariables** на странице **Скрипт** в окне **Редактор преобразования "Скрипт"**. Помните, что в именах переменных учитывается регистр. Используйте свойство **Value**, чтобы считывать значения отдельных переменных и записывать значения в них. Компонент скрипта обрабатывает любые необходимые блокировки в фоновом режиме, пока скрипт во время выполнения обрабатывает переменные.  
