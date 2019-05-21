@@ -17,16 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_fts_memory_buffers dynamic management view
 ms.assetid: 56895fe5-e8df-4d75-9adc-c1f7757cdef8
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 26f63826244bacc32377a2b7e3315f9b4696fdd9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 254ba42c828bbe719d5ddce0502d0a9063755fe3
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624032"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65947268"
 ---
 # <a name="sysdmftsmemorybuffers-transact-sql"></a>sys.dm_fts_memory_buffers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47624032"
 |Столбец|Data type|Описание|  
 |------------|---------------|-----------------|  
 |**pool_id**|**int**|Идентификатор выделенного пула памяти.<br /><br /> 0 = небольшие буферы<br /><br /> 1 = большие буферы|  
-|**адрес_памяти**|**varbinary(8)**|Адрес выделенного буфера памяти.|  
+|**memory_address**|**varbinary(8)**|Адрес выделенного буфера памяти.|  
 |**name**|**nvarchar(4000)**|Имя общего буфера памяти, для которого было произведено данное выделение.|  
 |**is_free**|**bit**|Текущее состояние буфера памяти.<br /><br /> 0 = свободен<br /><br /> 1 = занят|  
 |**row_count**|**int**|Число строк, обрабатываемое в данный момент буфером.|  

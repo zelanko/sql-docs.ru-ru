@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 26be52ca8c8b1b004038923a9a7fe835eba52216
-ms.sourcegitcommit: ccea98fa0768d01076cb6ffef0b4bdb221b2f9d5
+ms.openlocfilehash: 01e767e1b49c0b901809c2699ce5c6fa94168673
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65560134"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65949105"
 ---
 # <a name="sysdatabases-transact-sql"></a>sys.databases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -117,7 +117,7 @@ ms.locfileid: "65560134"
 |**is_temporal_retention_enabled**|**bit**|Указывает, включена ли задача очистки времени хранения политики.<br /> **Область применения**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**catalog_collation_type**|**int**|Параметр сортировки каталога:<br />0 = DATABASE_DEFAULT<br />2 = SQL_Latin_1_General_CP1_CI_AS<br /> **Область применения**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**catalog_collation_type_desc**|**nvarchar(60)**|Параметр сортировки каталога:<br />DATABASE_DEFAULT<br />SQL_Latin_1_General_CP1_CI_AS<br /> **Область применения**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
-|**is_result_set_caching_on**|**int**|1 = is_result_set_caching_on is on</br>0 = отключено is_result_set_caching_on</br>**Область применения**: Gen2 хранилище данных Azure SQL
+|**is_result_set_caching_on**|**int**|1 = is_result_set_caching_on is on</br>0 = отключено is_result_set_caching_on</br>**Область применения**: Gen2 хранилище данных Azure SQL. Хотя в этой функции разворачивается во все регионы, проверьте версии, развернутой для своего экземпляра и последнюю версию [заметки о выпуске хранилища данных SQL Azure](/azure/sql-data-warehouse/release-notes-10-0-10106-0) для доступности функций.|
   
 ## <a name="permissions"></a>Разрешения  
  Если вызывающий объект `sys.databases` не является владельцем базы данных и база данных не `master` или `tempdb`, минимально необходимыми разрешениями для просмотра соответствующей строки являются `ALTER ANY DATABASE` или `VIEW ANY DATABASE` разрешение уровня сервера или `CREATE DATABASE` разрешение в `master` базы данных. Всегда можно просматривать базы данных, к которой подключен участник в `sys.databases`.  
