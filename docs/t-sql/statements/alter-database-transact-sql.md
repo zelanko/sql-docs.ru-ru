@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: fb07dfb65055ff622e0142381743a15a8d29ad9d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9f26a39ab9264fa41ff4e558970a459987bf27ae
+ms.sourcegitcommit: ccea98fa0768d01076cb6ffef0b4bdb221b2f9d5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63203054"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65560152"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -725,13 +725,12 @@ ALTER DATABASE { database_name | CURRENT }
 }  
 
 ```
+
 ## <a name="arguments"></a>Аргументы
 
-*database_name*      
-Имя изменяемой базы данных.
+*database_name* — имя изменяемой базы данных.
 
-CURRENT     
-Определяет, что должна быть изменена текущая используемая база данных.
+CURRENT определяет, что должна быть изменена текущая используемая база данных.
 
 ## <a name="remarks"></a>Remarks
 Чтобы удалить базу данных, используйте инструкцию [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md).
@@ -791,16 +790,23 @@ ALTER DATABASE WideWorldImporters
 
 ## <a name="overview-azure-sql-data-warehouse"></a>Общие сведения. Хранилище данных SQL Azure
 
-Изменяет имя, максимальный размер или цель обслуживания для базы данных.
+В Хранилище данных SQL Azure "ALTER DATABASE" изменяет имя, максимальный размер или цель обслуживания для базы данных.
+
+Так как синтаксис ALTER DATABASE имеет значительную длину, мы разделили его описание на несколько статей.
+
+[Параметры ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md). Синтаксис для изменения атрибутов базы данных с помощью параметров SET команды ALTER DATABASE, а также дополнительная информацию об этом.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
-ALTER DATABASE database_name
-
+```console
+ALTER DATABASE { database_name | CURRENT }
+{
   MODIFY NAME = new_database_name
 | MODIFY ( <edition_option> [, ... n] )
-  
+| SET <option_spec> [ ,...n ] [ WITH <termination> ]
+}
+[;]
+
 <edition_option> ::=
       MAXSIZE = {
             250 | 500 | 750 | 1024 | 5120 | 10240 | 20480
@@ -818,14 +824,11 @@ ALTER DATABASE database_name
 
 ## <a name="arguments"></a>Аргументы
 
-*database_name*     
-Задает имя изменяемой базы данных.
+*database_name* — задает имя изменяемой базы данных.
 
-MODIFY NAME = *new_database_name*    
-Присваивает базе данных имя, указанное в аргументе *новое_имя_базы_данных*.
+MODIFY NAME = *new_database_name* — присваивает базе данных имя, указанное в аргументе *new_database_name*.
 
-MAXSIZE    
-Значение по умолчанию — 245 760 ГБ (240 ТБ).
+MAXSIZE — значение по умолчанию: 245 760 ГБ (240 ТБ).
 
 **Применимо к:** Оптимизировано для поколения вычислительных ресурсов 1
 
@@ -835,8 +838,7 @@ MAXSIZE
 
 Максимально допустимый размер данных rowstore в базе данных. Размер данных, хранящихся в таблицах rowstore, разностном хранилище индекса columnstore или некластеризованном индексе на базе кластеризованного индекса columnstore, не может превышать MAXSIZE. Данные, сжатые в формат columnstore, не имеют ограничений на размер и не ограничивается значением MAXSIZE.
 
-SERVICE_OBJECTIVE      
-Определяет уровень производительности. Подробные сведения о целях служб для Хранилища данных SQL см. в статье о [единицах использования хранилища данных (DWU)](https://docs.microsoft.com/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu).
+SERVICE_OBJECTIVE — определяет уровень производительности. Подробные сведения о целях служб для Хранилища данных SQL см. в статье о [единицах использования хранилища данных (DWU)](https://docs.microsoft.com/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu).
 
 ## <a name="permissions"></a>Разрешения
 

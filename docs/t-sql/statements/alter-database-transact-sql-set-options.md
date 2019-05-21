@@ -29,17 +29,17 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b93af690fb15c7ab62084d7175612508b5a22445
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
+ms.openlocfilehash: 9fe393ecdbef5a515d0850b7d859c1c2a7e670a2
+ms.sourcegitcommit: ccea98fa0768d01076cb6ffef0b4bdb221b2f9d5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63202465"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65560180"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Параметры ALTER DATABASE SET (Transact-SQL)
 
-Инструкция позволяет задать параметры баз данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и Базе данных SQL Azure. См. дополнительные сведения о [других параметрах ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md).
+Инструкция позволяет задать параметры баз данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Базе данных SQL Azure и Хранилище данных SQL Azure. См. дополнительные сведения о [других параметрах ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md).
 
 Щелкните одну из следующих вкладок, чтобы просмотреть синтаксис, аргументы, примечания, разрешения и примеры для используемой вами версии SQL.
 
@@ -51,9 +51,9 @@ ms.locfileid: "63202465"
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
-> |||
-> |---|---|
-> |**_\* SQL Server \*_** &nbsp;|[Отдельная база данных/эластичный пул Базы данных SQL<br />](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[Управляемый экземпляр Базы данных SQL<br />](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|||
+> |||||
+> |---|---|---|---|
+> |**_\* SQL Server \*_** &nbsp;|[Отдельная база данных/эластичный пул Базы данных SQL<br />](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[Управляемый экземпляр Базы данных SQL<br />](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|[Хранилище данных<br />SQL](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)|||
 
 &nbsp;
 
@@ -1148,9 +1148,9 @@ SET QUERY_STORE = ON
 ::: moniker-end
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
 
-> |||
-> |---|---|
-> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|**_\* Отдельная база данных/эластичный пул Базы данных SQL<br /> \*_** &nbsp;|[Управляемый экземпляр Базы данных SQL<br />](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|
+> ||||
+> |---|---|---|
+> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|**_\* Отдельная база данных/эластичный пул Базы данных SQL<br /> \*_** &nbsp;|[Управляемый экземпляр Базы данных SQL<br />](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)||[Хранилище данных<br />SQL](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)||||
 
 &nbsp;
 
@@ -1834,9 +1834,9 @@ SET QUERY_STORE = ON
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 
-> |||
-> |---|---|
-> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|[Отдельная база данных/эластичный пул Базы данных SQL<br />](alter-database-transact-sql-set-options.md?view=azuresqldb-current) |**_\* Управляемый экземпляр Базы данных SQL<br /> \*_** &nbsp;|
+> ||||
+> |---|---|---|
+> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|[Отдельная база данных/эластичный пул Базы данных SQL<br />](alter-database-transact-sql-set-options.md?view=azuresqldb-current) |**_\* Управляемый экземпляр Базы данных SQL<br /> \*_** &nbsp;||[Хранилище данных<br />SQL](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)||||
 
 &nbsp;
 
@@ -2442,5 +2442,137 @@ SET QUERY_STORE = ON
 - [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)
 - [sys.data_spaces](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)
 - [Рекомендации по хранилищу запросов](../../relational-databases/performance/best-practice-with-the-query-store.md)
+
+::: moniker-end
+::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
+
+> ||||
+> |---|---|---|
+> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|[Отдельная база данных/эластичный пул Базы данных SQL<br />](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[Управляемый экземпляр Базы данных SQL<br />](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|**_\* Хранилище данных<br />SQL \*_** &nbsp;||||
+
+&nbsp;
+
+## <a name="azure-sql-data-warehouse"></a>Хранилище данных SQL Azure
+
+> [!NOTE]
+> Многие параметры инструкции DATABASE SET можно настроить только для текущего сеанса с помощью [инструкций SET](../../t-sql/statements/set-statements-transact-sql.md). Они часто задаются приложениями при подключении. Параметры инструкции SET уровня сеанса переопределяют значения **ALTER DATABASE SET**. Описанные далее параметры базы данных являются значениями, которые можно задавать для сеансов, не предоставляющих явно другие значения параметра SET.
+
+## <a name="syntax"></a>Синтаксис
+
+```
+ALTER DATABASE { database_name | Current }
+SET
+{
+    <optionspec> [ ,...n ]
+}
+;
+
+<auto_option> ::=
+{}
+RESULT_SET_CACHING { ON | OFF}
+}
+```
+
+## <a name="arguments"></a>Аргументы
+
+*database_name* — имя изменяемой базы данных.
+
+**\<auto_option> ::=**
+
+Управляет автоматическими параметрами.
+
+**Разрешения**: Требуются следующие разрешения:
+
+- имя входа субъекта серверного уровня, созданное процессом подготовки, или
+- член роли базы данных dbmanager.
+
+Владелец базы данных не может изменять базу данных, если он не является членом роли dbmanager.
+
+<a name="result_set_caching"></a> RESULT_SET_CACHING {ON | OFF} (Предварительная версия для 2-го поколения). Эта команда должна выполняться при подключении к базе данных master.  Изменение данного параметра базы данных вступает в силу немедленно.  Затраты на хранилище начисляются путем кэширования результирующих наборов запроса. После отключения кэширования результатов для базы данных ранее сохраненный кэш результатов немедленно удаляется из Хранилища данных SQL Azure. В sys.databases появился новый столбец с именем is_result_set_caching_on. В нем отображаются параметры кэширования результатов для базы данных.  
+
+ON указывает, что результирующие наборы запроса, возвращаемые из этой базы данных, будут кэшироваться в Хранилище данных SQL Azure.
+
+OFF указывает, что результирующие наборы запроса, возвращаемые из этой базы данных, не будут кэшироваться в Хранилище данных SQL Azure.
+Пользователи могут определить, был ли запрос результатов выполнен с попаданием в кэше или промахом кэша, запросив sys.pdw_request_steps с конкретным идентификатором запроса request_id.   Если имеет место попадание в кэше, результат запроса будет содержать один шаг со следующими сведениями:
+
+|**Имя столбца** |**Оператор** |**Значение** |
+|----|----|----|
+| operation_type|=|ReturnOperation|
+|step_index|=|0|
+|location_type|=|Control|
+command|Похоже|%DWResultCacheDb%|
+| | |
+
+## <a name="examples"></a>Примеры
+
+### <a name="enable-result-set-caching-for-a-database"></a>Включение кэширования результирующих наборов для базы данных
+
+```sql
+ALTER DATABASE myTestDW  
+SET RESULT_SET_CACHING ON;
+```
+
+### <a name="disable-result-set-caching-for-a-database"></a>Выключение кэширования результирующих наборов для базы данных
+
+```sql
+ALTER DATABASE myTestDW  
+SET RESULT_SET_CACHING OFF;
+```
+
+### <a name="check-result-set-caching-setting-for-a-database"></a>Проверка кэширования результирующих наборов для базы данных
+
+```sql
+SELECT name, is_result_set_caching  
+FROM sys.databases;
+```
+
+### <a name="check-for-number-of-queries-with-result-set-cache-hit-and-cache-miss"></a>Проверка количества запросов результирующих наборов с попаданием в кэше и промахом кэша
+
+```sql
+SELECT  
+Queries=CacheHits+CacheMisses,
+CacheHits,
+CacheMisses 
+CacheHitPct=CacheHits*1.0/(CacheHits+CacheMisses)
+FROM  
+(SELECT  
+CacheHits=count(distinct case when s.command like '%DWResultCacheDb%' and
+r.resource_class IS NULL and s.operation_type = 'ReturnOperation' and  
+s.step_index = 0 then s.request_id else null end) , 
+CacheMisses=count(distinct case when r.resource_class IS NOT NULL then  
+s.request_id else null end) 
+     FROM sys.dm_pdw_request_steps s  
+     JOIN sys.dm_pdw_exec_requests r  
+     ON s.request_id = r.request_id) A;
+```
+
+### <a name="check-for-result-set-cache-hit-or-cache-miss-for-a-query"></a>Проверка попадания в кэше и промаха кэша результирующих наборов для запроса
+
+```sql
+If
+(SELECT step_index  
+FROM sys.dm_pdw_request_steps  
+WHERE request_id = 'QID58286' and operation_type = 'ReturnOperation' and command like '%DWResultCacheDb%') = 0
+SELECT 1 as is_cache_hit  
+ELSE 
+SELECT 0 as is_cache_hit;
+```
+
+### <a name="check-for-all-queries-with-result-set-cache-hits"></a>Проверка всех запросов с попаданием в кэше результирующих наборов
+
+```sql
+SELECT *  
+FROM sys.dm_pdw_request_steps  
+WHERE command like '%DWResultCacheDb%' and step_index = 0;
+```
+
+## <a name="see-also"></a>См. также:
+
+- [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)
+- [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)
+- [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)
+- [Рекомендации по использованию Хранилища данных SQL Azure](/azure/sql-data-warehouse/sql-data-warehouse-best-practices#maintain-statistics)
+- [Разработка таблиц в Хранилище данных SQL Azure](/azure/sql-data-warehouse/sql-data-warehouse-tables-overview#statistics)
+- [Элементы языка для Хранилища данных SQL](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-language-elements)
 
 ::: moniker-end
