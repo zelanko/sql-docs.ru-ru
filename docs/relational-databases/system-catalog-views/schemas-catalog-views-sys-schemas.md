@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9a676eb3e9bf67d14e45ebc9973f5be7998e19cf
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 8519dc4846f148b1b4d1bc83589baf0cc6a81e12
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665793"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65983147"
 ---
 # <a name="schemas-catalog-views---sysschemas"></a>Схемы каталога представления — sys.schemas
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -43,14 +43,20 @@ ms.locfileid: "51665793"
 |**principal_id**|**int**|Идентификатор участника, владеющего этой схемой.|  
   
 ## <a name="remarks"></a>Примечания  
- Схемы базы данных действуют как пространства имен или контейнеры для объектов, таких как таблицы, представления, процедуры и функции, которые могут находиться в **sys.objects** представления каталога.  
+Схемы базы данных действуют как пространства имен или контейнеры для объектов, таких как таблицы, представления, процедуры и функции, которые могут находиться в **sys.objects** представления каталога.  
+
+Каждая схема имеет владельца. Владельцем является безопасности [участника](../../relational-databases/security/authentication-access/principals-database-engine.md).
   
 ## <a name="permissions"></a>Разрешения  
  Необходимо быть членом роли **public**. Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>См. также  
- [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Представления каталога схем &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/c516fb1c-b6ed-48ae-99c7-a78bc4336c8e)   
- [sys.objects (Transact-SQL)](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
+[Субъекты](../../relational-databases/security/authentication-access/principals-database-engine.md)
+
+[Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+
+[Представления каталога схем &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/c516fb1c-b6ed-48ae-99c7-a78bc4336c8e)   
+
+[sys.objects (Transact-SQL)](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
   
   

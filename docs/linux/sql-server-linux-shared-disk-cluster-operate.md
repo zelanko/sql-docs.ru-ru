@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: d3db11a8ace49a206ffaff106814e87b64948cce
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fa7d516484f7950c63c9455cae81ed31fa981f75
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62634001"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982814"
 ---
 # <a name="operate-failover-cluster-instance---sql-server-on-linux"></a>Работа экземпляра отказоустойчивого кластера — SQL Server на Linux
 
@@ -34,7 +34,7 @@ ms.locfileid: "62634001"
 - [RHEL или Ubuntu](#-manual-failover-rhel-or-ubuntu)
 - [SLES](#-manual-failover-sles)
 
-## <a name = "#rhelFailover"></a> На другой ресурс вручную (RHEL или Ubuntu)
+## <a name = "#-manual-failover-rhel-or-ubuntu"></a> На другой ресурс вручную (RHEL или Ubuntu)
 
 Чтобы выполнить отработку отказа вручную, обновите Red Hat Enterprise Linux (RHEL) или на серверах Ubuntu выполните следующие действия.
 1.  Выполните следующую команду: 
@@ -55,7 +55,7 @@ ms.locfileid: "62634001"
 
 \<FCIResourceName > — имя ресурса для экземпляра отказоустойчивого Кластера Pacemaker. 
 
-## <a name = "#slesFailover"></a> На другой ресурс вручную (SLES)
+## <a name = "#-manual-failover-sles"></a> На другой ресурс вручную (SLES)
 
 
 В Suse Linux Enterprise Server (SLES), используйте `migrate` команду, чтобы вручную выполните отработку отказа экземпляра отказоустойчивого Кластера SQL Server. Пример:

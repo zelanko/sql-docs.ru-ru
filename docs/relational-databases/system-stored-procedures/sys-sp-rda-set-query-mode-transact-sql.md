@@ -14,15 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_set_query_mode stored procedure
 ms.assetid: 65a0b390-cf87-4db7-972a-1fdf13456c88
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c6b2fd8fd64bd8d7df6429a21c3f27266657964e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aa168f3bbac37e34730d5ee0ab348f5fd7d1743d
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740552"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982883"
 ---
 # <a name="syssprdasetquerymode-transact-sql"></a>sys.sp_rda_set_query_mode (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_rda_set_query_mode [ @mode = ] @mode
  Является необязательным бита, можно установить в значение 1, если вы хотите изменить режим запросов без проверки.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 (успешное завершение) или >0 (неуспешное завершение)  
+ 0 (успешное завершение) или > 0 (неуспешное завершение)  
   
 ## <a name="permissions"></a>Разрешения  
  Требуются права db_owner.  
@@ -75,6 +75,6 @@ sp_rda_set_query_mode [ @mode = ] @mode
   
 ## <a name="see-also"></a>См. также  
  [sys.sp_rda_deauthorize_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md)   
- [Stretch Database](../../sql-server/stretch-database/stretch-database.md)  
+ [База данных Stretch](../../sql-server/stretch-database/stretch-database.md)  
   
   

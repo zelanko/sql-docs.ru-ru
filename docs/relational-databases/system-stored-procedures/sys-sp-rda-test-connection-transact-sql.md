@@ -14,15 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_test_connection stored procedure
 ms.assetid: e2ba050c-d7e3-4f33-8281-c9b525b4edb4
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ef50b770019450f99ede55369c1bdaa654cd52b5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cdf171c66c19d87ea4919eeb55dca65f14b89ebd
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843732"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982871"
 ---
 # <a name="syssprdatestconnection-transact-sql"></a>sys.sp_rda_test_connection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ EXECUTE sys.sp_rda_test_connection
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- @database_name = N "*db_name*"  
+ @database_name = N'*db_name*'  
  Имя базы данных SQL Server с поддержкой Stretch. Этот параметр является необязательным.  
   
  @server_address = N'*azure_server_fully_qualified_address*'  
@@ -56,7 +56,7 @@ EXECUTE sys.sp_rda_test_connection
  @azure_username = N "*azure_username*  
  Имя пользователя для удаленного сервера Azure.  
   
- @azure_password = N "*azure_password*"  
+ @azure_password = N'*azure_password*'  
  Пароль для удаленным сервером Azure.  
   
  @credential_name = N "*credential_name*"  
@@ -72,7 +72,7 @@ EXECUTE sys.sp_rda_test_connection
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |link_state|ssNoversion|Одно из следующих значений, которые соответствуют значениям **link_state_desc**.<br /><br /> -   0<br />-   1<br />-   2<br />-   3<br />-   4|  
-|link_state_desc|varchar(32)|Одно из следующих значений, которые соответствуют предыдущему значений в параметре **link_state**.<br /><br /> — РАБОТОСПОСОБНОСТЬ<br />     SQL Server и Azure удаленный сервер находится в работоспособном состоянии.<br />-ERROR_AZURE_FIREWALL<br />     Брандмауэр Azure блокирует связь между SQL Server и удаленным сервером Azure.<br />-ERROR_NO_CONNECTION<br />     SQL Server не удается установить подключение к удаленным сервером Azure.<br />-ERROR_AUTH_FAILURE<br />     Ошибка проверки подлинности блокирует связь между SQL Server и удаленным сервером Azure.<br />-ОШИБКА<br />     Ошибка, которая не имеет проблемы с проверкой подлинности, разрыв подключения или проблемы с брандмауэром блокирует связь между SQL Server и удаленным сервером Azure.|  
+|link_state_desc|varchar(32)|Одно из следующих значений, которые соответствуют предыдущему значений в параметре **link_state**.<br /><br /> — РАБОТОСПОСОБНОСТЬ<br />     SQL Server и Azure удаленный сервер находится в работоспособном состоянии.<br />-ERROR_AZURE_FIREWALL<br />     Брандмауэр Azure блокирует связь между SQL Server и удаленным сервером Azure.<br />-ERROR_NO_CONNECTION<br />     SQL Server не удается установить подключение к удаленным сервером Azure.<br />-   ERROR_AUTH_FAILURE<br />     Ошибка проверки подлинности блокирует связь между SQL Server и удаленным сервером Azure.<br />-ОШИБКА<br />     Ошибка, которая не имеет проблемы с проверкой подлинности, разрыв подключения или проблемы с брандмауэром блокирует связь между SQL Server и удаленным сервером Azure.|  
 |error_number|ssNoversion|Номер ошибки. Если отсутствуют ошибки, это поле имеет значение NULL.|  
 |error_message|nvarchar(1024)|Сообщение об ошибке. Если отсутствуют ошибки, это поле имеет значение NULL.|  
   

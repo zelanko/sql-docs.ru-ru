@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
 ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
@@ -20,15 +19,16 @@ helpviewer_keywords:
 - recursive joins [SQLXML]
 ms.assetid: 0ffdd57d-dc30-44d9-a8a0-f21cadedb327
 author: MightyPen
-ms.author: douglasl
+ms.author: genemi
+ms.reviewer: ''
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fa36c8cc75aecfbff8bba1b2d04c7f296da88147
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 84011f13a222ee66fdbfe5bf57d3ef74dd41a052
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030725"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65980751"
 ---
 # <a name="specifying-depth-in-recursive-relationships-by-using-sqlmax-depth"></a>Задание глубины рекурсивных связей с использованием sql:max-depth
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -99,7 +99,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
  Поскольку связь рекурсивная, необходимо каким-то образом указать глубину рекурсии в схеме. В противном случае результатом будет бесконечная рекурсия (служащий, подчиненный служащему, подчиненному служащему, и т. д.). **SQL: max-depth** заметки позволяет указать максимальную глубину рекурсии. В данном конкретном примере, чтобы указать значение для **SQL: max-depth**, необходимо знать глубину иерархии менеджмента в компании.  
   
 > [!NOTE]  
->  Схема указывает **SQL: Limit-поле** заметки, но не указывает **SQL: Limit-значение** заметки. Это ограничивает верхний узел в результирующей иерархии только служащими, которые не подчиняются никому. (ReportsTo имеет значение NULL.) Указание **SQL: Limit-поле** , не указывая **SQL: Limit-значение** (которое по умолчанию равно NULL) примечания выполняет эту задачу. Если нужно, чтобы результирующий XML включал каждые возможных reporting дерева (дерево подчиненности для каждого служащего в таблице), удалите **SQL: Limit-поле** заметки из схемы.  
+>  Схема указывает **SQL: Limit-поле** заметки, но не указывает **SQL: Limit-значение** заметки. Это ограничивает верхний узел в результирующей иерархии только служащими, которые не подчиняются никому. (ReportsTo имеет значение NULL). Указание **SQL: Limit-поле** , не указывая **SQL: Limit-значение** (которое по умолчанию равно NULL) примечания выполняет эту задачу. Если нужно, чтобы результирующий XML включал каждые возможных reporting дерева (дерево подчиненности для каждого служащего в таблице), удалите **SQL: Limit-поле** заметки из схемы.  
   
 > [!NOTE]  
 >  В следующей процедуре используется база данных tempdb.  

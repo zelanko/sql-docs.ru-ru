@@ -12,12 +12,12 @@ ms.assetid: b338a60d-4802-4b68-862a-6dc6a3f75e48
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dce01d84be7f2850f916b21ccb02fb7cd24a6cdc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 64e04754fd4bc4a404854eb5260daddf543e3c2c
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62698929"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65979963"
 ---
 # <a name="object-naming-rules-analysis-services"></a>Правила именования объектов (службы Analysis Services)
   В этом разделе описаны соглашения об именах объектов, а также зарезервированные слова и символы, которые нельзя использовать в именах объектов, в коде или в скриптах служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
@@ -70,9 +70,9 @@ ms.locfileid: "62698929"
 |------------|------------------------|  
 |`Server`|При именовании серверных объектов следуйте соглашению об именах для сервера Windows. Дополнительные сведения см. в разделе [Соглашения об именах (Windows)](/windows/desktop/DNS/naming-conventions) .|  
 |`DataSource`|`: / \ * | ? " () [] {} <>`|  
-|`Level` либо `Attribute`|```. , ; ' ` : / \ * &| ? " & % $ ! + = [] {} \< >```|  
-|`Dimension` либо `Hierarchy`|```. , ; ' ` : / \ * | ? " & % $ ! + = () [] {} \<,>```|  
-|Все прочие объекты|```. , ; ' ` : / \ * | ? " & % $ ! + = () [] {} \< >```|  
+|`Level` либо `Attribute`|````. , ; ' ` : / \ * &| ? " & % $ ! + = [] {} \< >````|  
+|`Dimension` либо `Hierarchy`|````. , ; ' ` : / \ * | ? " & % $ ! + = () [] {} \<,>````|  
+|Все прочие объекты|````. , ; ' ` : / \ * | ? " & % $ ! + = () [] {} \< >````|  
   
  **Исключения. Когда зарезервированные символы разрешены**  
   

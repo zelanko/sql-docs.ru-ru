@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bb8ac0d8af4c6180bb9851df793285d3bc17340c
-ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
+ms.openlocfilehash: 9df0a31b6a15bfedd02e281b6e9bc5367144e9a9
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59542254"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65980057"
 ---
 # <a name="sysquerystoreruntimestats-transact-sql"></a>sys.query_store_runtime_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -41,8 +41,8 @@ ms.locfileid: "59542254"
 |**runtime_stats_interval_id**|**bigint**|Внешний ключ. Присоединяет к [sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md).|  
 |**execution_type**|**tinyint**|Определяет тип выполнения запроса.<br /><br /> 0 — обычное выполнение (успешно завершено)<br /><br /> 3 - клиент прервал выполнение<br /><br /> 4 - исключение прервал выполнение|  
 |**execution_type_desc**|**nvarchar(128)**|Текстовое описание выполнения тип поля:<br /><br /> 0 — обычный<br /><br /> 3 — прервано<br /><br /> 4 - исключение|  
-|**first_execution_time**|**datetimeoffset**|Время первого выполнения для плана запроса в пределах интервала статистической обработки.|  
-|**last_execution_time**|**datetimeoffset**|Время последнего выполнения запроса план в пределах интервала статистической обработки.|  
+|**first_execution_time**|**datetimeoffset**|Время первого выполнения для плана запроса в пределах интервала статистической обработки. Это время окончания выполнения запроса.|  
+|**last_execution_time**|**datetimeoffset**|Время последнего выполнения запроса план в пределах интервала статистической обработки. Это время окончания выполнения запроса.|  
 |**count_executions**|**bigint**|Общее число выполнений для плана запроса в пределах интервала статистической обработки.|  
 |**avg_duration**|**float**|Средняя длительность для плана запроса в течение интервала статистической обработки (указывается в микросекундах).|  
 |**last_duration**|**bigint**|Последняя длительность запроса план в пределах интервала статистической обработки (указывается в микросекундах).|  

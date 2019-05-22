@@ -1,5 +1,5 @@
 ---
-title: Модель интеллектуального анализа данных для моделей кластеризации последовательностей | Документы Microsoft
+title: Модель интеллектуального анализа данных для моделей кластеризации последовательностей | Документация Майкрософт
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4f0498fd93a6ed613078b4339e36e3d71e929b8f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019291"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65961369"
 ---
 # <a name="mining-model-content-for-sequence-clustering-models"></a>Содержимое моделей интеллектуального анализа данных для моделей кластеризации последовательностей
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "34019291"
 ## <a name="understanding-the-structure-of-a-sequence-clustering-model"></a>Основные сведения о структуре модели кластеризации последовательностей  
  Модель кластеризации последовательностей содержит один родительский узел (NODE_TYPE = 1), представляющий модель и ее метаданные. С родительским узлом, помеченным **(Все)**, связан узел последовательности (NODE_TYPE = 13), в котором перечислены все переходы, обнаруженные в обучающих данных.  
   
- ![Структура модели кластеризации последовательностей](../../analysis-services/data-mining/media/modelcontent-seqclust.gif "структуру модели кластеризации последовательностей")  
+ ![Структура модели кластеризации последовательностей](../../analysis-services/data-mining/media/modelcontent-seqclust.gif "структура модели кластеризации последовательностей")  
   
  Алгоритм также создает несколько кластеров на основе переходов, обнаруженных в данных, и любых других входных атрибутов, включенных во время создания модели, таких как демографические данные клиентов и т. д. Каждый кластер (NODE_TYPE = 5) содержит собственный узел последовательности (NODE_TYPE = 13), где приведены только переходы, использованные для создания этого кластера. Можно выполнить детализацию углублением от узла последовательности, чтобы просмотреть данные отдельных переходов между состояниями (NODE_TYPE = 14).  
   
@@ -258,8 +258,8 @@ ORDER BY Count(*) DESC
  Сведения о том, как получить список наблюдаемых путей с помощью запроса содержимого модели, а также другие примеры запросов, основанных на модели кластеризации последовательностей, см. в разделе [Примеры запросов к модели кластеризации последовательностей](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md).  
   
 ## <a name="see-also"></a>См. также  
- [Содержимое модели интеллектуального анализа данных & #40; Службы Analysis Services — Интеллектуальный анализ данных & #41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
- [Алгоритм кластеризации последовательностей (Майкрософт)](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
+ [Содержимое модели интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [Microsoft Sequence Clustering Algorithm](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
  [Примеры запросов к модели кластеризации последовательностей](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)  
   
   

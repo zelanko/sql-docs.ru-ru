@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
 ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
@@ -18,22 +17,23 @@ helpviewer_keywords:
 - sql:use-cdata
 ms.assetid: 26d2b9dc-f857-44ff-bcd4-aaf64ff809d0
 author: MightyPen
-ms.author: douglasl
+ms.author: genemi
+ms.reviewer: ''
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e9b7cac79155e89217a64fbbc309082322853f80
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 2b7f6ff5e7f16012d33f805227e6dda997cfc60d
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041595"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65981064"
 ---
 # <a name="creating-cdata-sections-using-sqluse-cdata-sqlxml-40"></a>Создание разделов CDATA с использованием sql:use-cdata (SQLXML 4.0)
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   В XML разделы CDATA используются для экранирования блоков текста, содержащих символы, которые в противном случае распознаются как символы разметки.  
   
- Иногда в базе данных в Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] могут содержаться символы, которые в средстве синтаксического анализа XML рассматриваются как символы разметки. Например, символами разметки считаются угловые скобки (< и >), символ меньше или равно (<=), а также амперсанд (&). Но специальные символы такого типа можно заключить в раздел CDATA во избежание их обработки в качестве символов разметки. Текст в разделе CDATA обрабатывается средством синтаксического анализа XML как простой текст.  
+ Базы данных в Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] иногда могут содержать символы, которые рассматриваются как символы разметки средством синтаксического анализа XML; например, угловые скобки (< и >), символ меньше чем или равен (< =), и являются амперсанд (&), рассматривается как символы разметки. Но специальные символы такого типа можно заключить в раздел CDATA во избежание их обработки в качестве символов разметки. Текст в разделе CDATA обрабатывается средством синтаксического анализа XML как простой текст.  
   
  **SQL: USE-cdata** заметка используется для указания данных, возвращаемых методом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должно заключаться в раздел CDATA (то есть он указывает, является ли значение из столбца, заданные **SQL: field** должно быть заключено в раздел CDATA). **SQL: USE-cdata** заметки можно указать только на элементы, сопоставляемые со столбцом базы данных.  
   

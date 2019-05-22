@@ -11,15 +11,15 @@ dev_langs:
 helpviewer_keywords:
 - Stretch Database, stored procedures
 ms.assetid: bda29952-4b8b-4295-ab78-f24dcb0b03c6
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cf276d4abc28edc6f6d8d99f351752fb0c71856b
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 5acbd4a14de04df412d71fb4ec8fd7d40e8fb7a8
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905747"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65979986"
 ---
 # <a name="stretch-database-extended-stored-procedures-transact-sql"></a>Stretch Database, расширенные хранимые процедуры (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -47,6 +47,6 @@ ms.locfileid: "48905747"
  [sys.sp_rda_test_connection](../../relational-databases/system-stored-procedures/sys-sp-rda-test-connection-transact-sql.md) проверяет соединение с SQL Server с удаленным сервером Azure и сообщает о проблемах, которые могут помешать миграции данных.
  
 ## <a name="see-also"></a>См. также  
- [Stretch Database](../../sql-server/stretch-database/stretch-database.md)  
+ [База данных Stretch](../../sql-server/stretch-database/stretch-database.md)  
   
   
