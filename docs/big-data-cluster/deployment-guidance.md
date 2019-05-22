@@ -5,17 +5,17 @@ description: Дополнительные сведения о развертыв
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 99e9c837250c6020bb91c376a6ec34c5e5847f2b
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.openlocfilehash: 924d026c61275d5bc957ce1157e30381f27ef2d0
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65099484"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993985"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Развертывание кластеров больших данных SQL Server в Kubernetes
 
@@ -137,11 +137,8 @@ mssqlctl cluster create
 
 | Переменная среды | Описание |
 |---|---|---|---|
-| **DOCKER_REGISTRY** | Частный реестр, где хранятся образы, используемые для развертывания кластера. Используйте *private repo.microsoft.com* для ducration условная общедоступная Предварительная версия.|
-| **DOCKER_REPOSITORY** | Частный репозиторий в реестре выше, где хранятся образы. Используйте *mssql закрытой предварительной версии* в течение условная общедоступная Предварительная версия.|
 | **DOCKER_USERNAME** | Имя пользователя для доступа к образы контейнеров, в случае, если они хранятся в частный репозиторий. |
 | **DOCKER_PASSWORD** | Пароль для доступа к выше частный репозиторий. |
-| **DOCKER_IMAGE_TAG** | Метка, используемая для добавлять теги к изображениям. По умолчанию используется **последнюю**, но мы рекомендуем использовать тег, соответствующий выпуск во избежание проблем с совместимостью версии. |
 | **CONTROLLER_USERNAME** | Имя пользователя администратора кластера. |
 | **CONTROLLER_PASSWORD** | Пароль администратора кластера. |
 | **KNOX_PASSWORD** | Пароль для пользователя Knox. |
@@ -156,11 +153,8 @@ export CONTROLLER_USERNAME=admin
 export CONTROLLER_PASSWORD=<password>
 export MSSQL_SA_PASSWORD=<password>
 export KNOX_PASSWORD=<password>
-export DOCKER_REGISTRY=private-repo.microsoft.com
-export DOCKER_REPOSITORY=mssql-private-preview
 export DOCKER_USERNAME=<docker-username>
 export DOCKER_PASSWORD=<docker-password>
-export DOCKER_IMAGE_TAG=ctp2.5
 ```
 
 ```PowerShell
@@ -168,11 +162,8 @@ SET CONTROLLER_USERNAME=admin
 SET CONTROLLER_PASSWORD=<password>
 SET MSSQL_SA_PASSWORD=<password>
 SET KNOX_PASSWORD=<password>
-SET DOCKER_REGISTRY=private-repo.microsoft.com
-SET DOCKER_REPOSITORY=mssql-private-preview
 SET DOCKER_USERNAME=<docker-username>
 SET DOCKER_PASSWORD=<docker-password>
-SET DOCKER_IMAGE_TAG=ctp2.5
 ```
 
 После настройки переменных среды, необходимо запустить `mssqlctl cluster create` для инициации развертывания. В этом примере используется файл конфигурации кластера, созданный выше:
@@ -186,7 +177,6 @@ mssqlctl cluster create --config-file custom.json --accept-eula yes
 - В настоящее время учетные данные для частного реестра Docker будет предоставляться вам после рассмотрения вашего [программе раннего освоения регистрации](https://aka.ms/eapsignup). Для тестовых кластеров больших данных в SQL Server требуется раннего внедрения программы регистрации.
 - Убедитесь, что перенос паролей в двойные кавычки, если он содержит специальные символы. Можно задать **MSSQL_SA_PASSWORD** на все, что вы, например, но убедитесь, что пароль недостаточно сложен и не используйте `!`, `&` или `'` символов. Обратите внимание, что двойные кавычки-разделители работают только в команды bash.
 - **SA** имя входа является системным администратором на основной экземпляр SQL Server, который создается во время установки. После создания контейнера SQL Server, **MSSQL_SA_PASSWORD** переменной среды, которые вы указали может быть обнаружен, выполнив echo MSSQL_SA_PASSWORD $ в контейнере. В целях безопасности смените пароль SA в соответствии с практическими рекомендациями, описанными [здесь](../linux/quickstart-install-connect-docker.md#sapassword).
-- **DOCKER_IMAGE_TAG** в этом примере при установке элементов управления, которые вы отпустите. В этом примере это в выпуске CTP-версии 2.5.
 
 ## <a id="unattended"></a> Автоматическая установка
 
@@ -227,37 +217,44 @@ mssqlctl cluster create --config-file custom.json --accept-eula yes
 
 После успешного выполнения сценария развертывания, можно получить IP-адреса внешних конечных точек для больших данных кластера, выполнив следующие действия.
 
-1. Выходные данные развертывания, скопируйте **конечной точки портала** и удалить `/portal/` в конце. Это URL-адрес прокси-сервера управления (например, `https://<ip-address>:30777`).
-
-   > [!TIP]
-   > Если у вас нет выходных данных развертывания, можно получить IP-адрес прокси-сервера управления, просмотрев следующие выходные данные EXTERNAL-IP **kubectl** команды:
-   >
-   > ```bash
-   > kubectl get svc mgmtproxy-svc-external -n <your-cluster-name>
-   > ```
-
-1. Войдите кластер больших данных с **mssqlctl входа**. Задайте **--конечной точки** параметр прокси-сервер управления.
+1. После развертывания, найти IP-адрес конечной точки контроллера на внешний IP-данными, полученными следующей **kubectl** команды:
 
    ```bash
-   mssqlctl login --endpoint https://<ip-address>:30777
+   kubectl get svc controller-svc-external -n <your-cluster-name>
+   ```
+
+1. Войдите кластер больших данных с **mssqlctl входа**. Задайте **--конечной точки контроллера** параметр внешний IP-адрес конечной точки контроллера.
+
+   ```bash
+   mssqlctl login --controller-endpoint https://<ip-address-of-controller-svc-external>:30080 --controller-username <user-name>
    ```
 
    Укажите имя пользователя и пароль, настроенный для контроллера (CONTROLLER_USERNAME и CONTROLLER_PASSWORD) во время развертывания.
 
-1. Запустите **список конечных точек кластера mssqlctl** для получения списка с описанием каждой конечной точки и соответствующих IP адрес и порт. Например в следующем примере отображаются выходные данные для конечной точки портал управления:
+1. Запустите **списка конечных точек кластера mssqlctl** для получения списка с описанием каждой конечной точки и соответствующих IP адрес и порт. 
 
-   ```output
-   {
-     "description": "Management Portal",
-     "endpoint": "https://<ip-address>:30777/portal",
-     "ip": "<ip-address>",
-     "name": "portal",
-     "port": 30777,
-     "protocol": "https"
-   },
+   ```bash
+   mssqlctl cluster endpoint list
    ```
 
-1. Кроме того, здесь все конечные точки кластера в **конечные точки службы** на портале администрирования кластера. Доступны на портале с помощью портала управления конечной точки на предыдущем шаге (например, `https://<ip-address>:30777/portal`). Учетные данные для доступа к порталу администрирования — это значения для контроллера имя пользователя и пароль, указанный во время развертывания. На портале администрирования кластера также можно отслеживать развертывание.
+   В следующем списке приведены пример выходных данных этой команды:
+
+   ```output
+   Name               Description                                             Endpoint                                                   Ip              Port    Protocol
+   -----------------  ------------------------------------------------------  ---------------------------------------------------------  --------------  ------  ----------
+   gateway            Gateway to access HDFS files, Spark                     https://11.111.111.111:30443                               11.111.111.111  30443   https
+   spark-history      Spark Jobs Management and Monitoring Dashboard          https://11.111.111.111:30443/gateway/default/sparkhistory  11.111.111.111  30443   https
+   yarn-ui            Spark Diagnostics and Monitoring Dashboard              https://11.111.111.111:30443/gateway/default/yarn          11.111.111.111  30443   https
+   app-proxy          Application Proxy                                       https://11.111.111.111:30778                               11.111.111.111  30778   https
+   management-proxy   Management Proxy                                        https://11.111.111.111:30777                               11.111.111.111  30777   https
+   portal             Management Portal                                       https://11.111.111.111:30777/portal                        11.111.111.111  30777   https
+   log-search-ui      Log Search Dashboard                                    https://11.111.111.111:30777/kibana                        11.111.111.111  30777   https
+   metrics-ui         Metrics Dashboard                                       https://11.111.111.111:30777/grafana                       11.111.111.111  30777   https
+   controller         Cluster Management Service                              https://11.111.111.111:30080                               11.111.111.111  30080   https
+   sql-server-master  SQL Server Master Instance Front-End                    11.111.111.111,31433                                       11.111.111.111  31433   tcp
+   webhdfs            HDFS File System Proxy                                  https://11.111.111.111:30443/gateway/default/webhdfs/v1    11.111.111.111  30443   https
+   livy               Proxy for running Spark statements, jobs, applications  https://11.111.111.111:30443/gateway/default/livy/v1       11.111.111.111  30443   https
+   ```
 
 ### <a name="minikube"></a>Minikube
 

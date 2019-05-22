@@ -5,30 +5,22 @@ description: Узнайте, как подключаться к основной
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 8291f2a192868544fb34da95d537f7a8a6b0f004
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: 3305990935c5d4c6077caa062184b0150aa83d6b
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64774665"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994055"
 ---
 # <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>Подключение к кластеру больших данных SQL Server с помощью Azure Data Studio
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-В этой статье описывается подключение к кластеру больших данных SQL Server 2019 (Предварительная версия) из среды Studio данных Azure. Существует два основных конечных точек, используемых для взаимодействия с кластером больших данных:
-
-| Конечная точка | Описание |
-|---|---|
-| Экземпляр SQL Server Master | Основной экземпляр SQL Server в кластер, содержащий реляционных баз данных SQL Server. |
-| Шлюз HDFS и Spark | Доступ к хранилищу HDFS в кластере и возможность выполнения заданий Spark. |
-
-> [!TIP]
-> С выпуском февраля 2019 Studio данных Azure подключении к основной экземпляр SQL Server автоматически предоставляет доступ к пользовательскому Интерфейсу в шлюз HDFS или Spark.
+В этой статье описывается подключение к кластеру больших данных SQL Server 2019 (Предварительная версия) из среды Studio данных Azure.
 
 ## <a name="prerequisites"></a>предварительные требования
 
@@ -72,37 +64,6 @@ ms.locfileid: "64774665"
 - **Панель мониторинга сервера** для соединения также содержит вкладки для **кластера больших данных в SQL Server** и **2019 SQL Server (Предварительная версия)** при установке расширения.
 
    ![Узел службы данных Studio данных Azure](./media/connect-to-big-data-cluster/connect-data-services-node.png)
-
-> [!IMPORTANT]
-> Если вы видите **Неизвестная ошибка** в пользовательском Интерфейсе, может потребоваться [напрямую подключаться к шлюзу HDFS/Spark](#hdfs). Одна из причин этой ошибки — разные пароли для главного экземпляра SQL Server и шлюза HDFS или Spark. Azure Data Studio предполагается, что для обоих используется тот же пароль.
-  
-## <a id="hdfs"></a> Подключения к шлюзу HDFS и Spark
-
-В большинстве случаев подключения к основной экземпляр SQL Server предоставляет вам доступ HDFS и Spark также до **Data Services** узла. Но по-прежнему можете создать выделенное подключение к **HDFS/Spark шлюза** при необходимости. Следующие шаги описывают способ подключения с помощью Azure Data Studio.
-
-1. Из командной строки найти IP-адрес шлюза HDFS/Spark с помощью одного из следующих команд.
-
-   ```
-   kubectl get svc gateway-svc-external -n <your-cluster-name>
-   ```
- 
-1. В Azure данных Studio нажмите клавишу **F1** > **новое подключение**.
-
-1. В **тип подключения**выберите **кластера больших данных в SQL Server**.
-
-   > [!TIP]
-   > Если вы не видите **кластера больших данных в SQL Server** подключения введите, убедитесь, что вы установили [расширение SQL Server 2019](../azure-data-studio/sql-server-2019-extension.md) и перезагрузка студии данных после завершения расширения Установка.
-
-1. Введите IP-адрес кластера больших данных в **имя_сервера** (не указать порт).
-
-1. Введите `root` для **пользователя** и укажите **пароль** к кластеру больших данных.
-
-   ![Подключение к шлюзу HDFS и Spark](./media/connect-to-big-data-cluster/connect-to-cluster-hdfs-spark.png)
-
-   > [!TIP]
-   > По умолчанию является имя пользователя **корневой** и соответствующий пароль **KNOX_PASSWORD** переменной среды, используемый во время развертывания.
-
-1. Нажмите клавишу **Connect**и **панель мониторинга сервера** должен отображаться.
 
 ## <a name="next-steps"></a>Следующие шаги
 

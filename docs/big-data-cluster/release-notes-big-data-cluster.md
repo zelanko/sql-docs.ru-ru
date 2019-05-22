@@ -5,17 +5,17 @@ description: В этой статье описываются последние 
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 7bdd39fc4b66c0485b453a6541e1f4c22abb5242
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: ca3448efc180a82363023106baf33f973e666fb6
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64775067"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993361"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>Заметки о выпуске для кластеров больших данных в SQL Server
 
@@ -25,18 +25,116 @@ ms.locfileid: "64775067"
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
+## <a id="ctp30"></a> CTP-версии 3.0 (май)
+
+Новые возможности и известные проблемы с кластерами больших данных в SQL Server 2019 CTP-версии 3.0 в следующих разделах.
+
+### <a name="whats-new"></a>What's New
+
+| Новые функции или обновления | Сведения |
+|:---|:---|
+| **mssqlctl** обновлений | Несколько **mssqlctl** [команд и параметров обновления](../big-data-cluster/reference-mssqlctl.md). Это включает в себя обновление **mssqlctl входа** команду, которая теперь предназначен контроллера имя пользователя и конечной точки. |
+| Улучшения хранилища данных | Поддержка для разных конфигураций хранилища для журналов и данных. Кроме того было уменьшено количество утверждения постоянного тома для больших данных кластера. |
+| Несколько экземпляров пула вычислений | Поддержка нескольких экземпляров пула вычислений. |
+| Новое поведение пула и возможности | Пул вычислительных теперь используется по умолчанию для хранилища пул операции и данных в пул в **ROUND_ROBIN** только распространения. Пул данных теперь можно использовать новый new **РЕПЛИЦИРОВАННЫЙ** тип распределения, это означает, что те же данные присутствует во всех экземплярах пула данных. |
+
+### <a name="known-issues"></a>Известные проблемы
+
+Известные проблемы и ограничения в выпуске в следующих разделах.
+
+#### <a name="hdfs"></a>HDFS
+
+- Azure Data Studio возвращает ошибку при попытке создать новую папку в файловой системе HDFS. Чтобы включить эту функцию, установите сборки программы предварительной оценки студии данных Azure:
+  
+   - [Установщик Windows для пользователя - **сборки программы предварительной оценки**](https://azuredatastudio-update.azurewebsites.net/latest/win32-x64-user/insider)
+   - [Установщик Windows System - **сборки программы предварительной оценки**](https://azuredatastudio-update.azurewebsites.net/latest/win32-x64/insider)
+   - [Windows ZIP - **сборки программы предварительной оценки**](https://azuredatastudio-update.azurewebsites.net/latest/win32-x64-archive/insider)
+   - [macOS ZIP - **сборки программы предварительной оценки**](https://azuredatastudio-update.azurewebsites.net/latest/darwin/insider)
+   - [Linux tar-ФАЙЛ. GZ - **сборки программы предварительной оценки**](https://azuredatastudio-update.azurewebsites.net/latest/linux-x64/insider)
+
+- Если щелкнуть правой кнопкой мыши файл в файловой системе HDFS, чтобы сделать это, может появиться следующая ошибка:
+
+   `Error previewing file: File exceeds max size of 30MB`
+
+   В настоящее время нет способа для предварительного просмотра файлов, размер которых превышает 30 МБ студии данных Azure.
+
+- Изменения конфигурации HDFS, влечет за собой изменения hdfs-site.xml не поддерживаются.
+
+#### <a name="deployment"></a>Развертывание
+
+- Предыдущие процедуры развертывания для кластеров с поддержкой GPU больших данных не поддерживаются в версии CTP 3.0. В настоящее время исследуется процедуру альтернативный развертывания. Пока статьи «Развертывание больших данных, кластер с поддержкой GPU и запустите TensorFlow» был временно неопубликованным во избежание путаницы.
+
+- Обновление данных кластерам больших данных с предыдущего выпуска не поддерживается.
+
+   > [!IMPORTANT]
+   > Необходимо создать резервную копию данных и удалите существующего кластера больших данных (с помощью предыдущей версии **mssqlctl**) перед развертыванием в последнем выпуске. Дополнительные сведения см. в разделе [обновление до нового выпуска](deployment-upgrade.md).
+
+- После развертывания в AKS, могут появиться следующие два события-предупреждения из развертывания. Оба эти события перечислены известные проблемы, но они не препятствуют успешному развертыванию кластера больших данных в AKS.
+
+   `Warning  FailedMount: Unable to mount volumes for pod "mssql-storage-pool-default-1_sqlarisaksclus(c83eae70-c81b-11e8-930f-f6b6baeb7348)": timeout expired waiting for volumes to attach or mount for pod "sqlarisaksclus"/"mssql-storage-pool-default-1". list of unmounted volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs]. list of unattached volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs storage-pool-java-storage secrets default-token-q9mlx]`
+
+   `Warning  Unhealthy: Readiness probe failed: cat: /tmp/provisioner.done: No such file or directory`
+
+- Если происходит сбой развертывания кластера больших данных, связанное пространство имен не удаляется. В итоге потерянные пространством имен в кластере. Обойти это можно вручную удалить пространство имен перед развертыванием кластера с тем же именем.
+
+#### <a name="external-tables"></a>Внешние таблицы
+
+- Развертывание кластера больших данных больше не создает **SqlDataPool** и **SqlStoragePool** внешних источников данных. Можно создать эти источники данных вручную для поддержки виртуализации данных к пулу данных и пула носителей.
+
+   > [!NOTE]
+   > URI для создания этих внешних источников данных отличается от CTP-версии. См. в разделе команд Transact-SQL см. в разделе об их создании 
+
+   ```sql
+   -- Create default data sources for SQL Big Data Cluster
+   IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
+       CREATE EXTERNAL DATA SOURCE SqlDataPool
+       WITH (LOCATION = 'sqldatapool://controller-svc:8080/datapools/default');
+ 
+   IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
+       CREATE EXTERNAL DATA SOURCE SqlStoragePool
+       WITH (LOCATION = 'sqlhdfs://controller-svc:8080/default');
+   ```
+
+- Это позволяет создать внешнюю таблицу пула данных для таблицы, которая имеет неподдерживаемые типы столбцов. При выполнении запроса внешней таблицы, вы получите сообщение следующего вида:
+
+   `Msg 7320, Level 16, State 110, Line 44 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 105079; Columns with large object types are not supported for external generic tables.`
+
+- Если базовый файл копируется в HDFS в то же время при выполнении запроса внешней таблицы пула хранения, может появиться ошибка.
+
+   `Msg 7320, Level 16, State 110, Line 157 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 110806;A distributed query failed: One or more errors occurred.`
+
+- При создании внешней таблицы к базе данных Oracle, использовать символьные типы данных, мастер виртуализации Azure Data Studio интерпретирует эти столбцы как VARCHAR в определении внешней таблицы. В результате сбоя в язык DDL внешней таблицы. Измените схемы Oracle для NVARCHAR2 на типе, или вручную создайте инструкций ВНЕШНЕЙ таблицы, укажите NVARCHAR, а не с помощью мастера.
+
+#### <a name="application-deployment"></a>Развертывание приложения
+
+- При вызове приложения R, Python или MLeap из RESTful API, вызов истечет время ожидания в течение 5 минут.
+
+#### <a name="spark-and-notebooks"></a>Spark и записные книжки
+
+- IP-адресом МОДУЛЯ адреса могут измениться в среде Kubernetes, время перезагрузки модулей POD. В сценарии, где перезапускает master-pod, сеанс Spark может произойти сбой с `NoRoteToHostException`. Это связано с виртуальной машины Java кэшей, не обновляется с помощью нового IP-адреса адреса.
+
+- Если у вас есть Jupyter уже установлен и отдельные Python в Windows, записные книжки Spark может завершиться ошибкой. Чтобы обойти эту проблему, обновите Jupyter до последней версии.
+
+- В записной книжке, если щелкнуть **добавить текст** команды ячейку текст добавляется в режиме предварительного просмотра, а не в режиме редактирования. Можно щелкнуть значок предварительного просмотра, чтобы переключиться в режим правки и изменять ячейки.
+
+#### <a name="security"></a>безопасность
+
+- SA_PASSWORD является частью среды и доступными (например, в файл дампа кабель). После развертывания, необходимо сбросить SA_PASSWORD на основной экземпляр. Это не ошибка, но шаг по обеспечению безопасности. Дополнительные сведения о способах изменения SA_PASSWORD в контейнере Linux, см. в разделе [Смена пароля Администратора](../linux/quickstart-install-connect-docker.md#sapassword).
+
+- AKS журналы могут содержать пароль системного Администратора для развертывания кластера больших данных.
+
 ## <a id="ctp25"></a> CTP-версии 2.5 (апрель)
 
 Новые возможности и известные проблемы с кластерами больших данных в SQL Server 2019 CTP-версии 2.5 в следующих разделах.
 
 ### <a name="whats-new"></a>What's New
 
-| Новые средства или обновления | Сведения |
+| Новые функции или обновления | Сведения |
 |:---|:---|
-| Профили развертывания | Использовать значение по умолчанию и настроить [JSON-файлов конфигурации развертывания](deployment-guidance.md#configfile) для развертывания кластера больших данных вместо переменных среды. |
-| Запрашиваемые развертываний | `mssqlctl cluster create` Теперь запрашивает все необходимые параметры для развертывания по умолчанию. |
+| Профили развертывания | Используйте стандартные и настраиваемые [JSON-файлы конфигурации развертывания](deployment-guidance.md#configfile) для развертывания кластера больших данных вместо переменных среды. |
+| Развертывания с подсказками | `mssqlctl cluster create` теперь запрашивает все необходимые параметры для развертывания по умолчанию. |
 | Изменение имен конечной точки службы и pod | Следующие внешние конечные точки были изменены имена:<br/>&nbsp;&nbsp;&nbsp;- **endpoint-master-pool** => **master-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **Конечная точка контроллера** => **контроллера svc-external**<br/>&nbsp;&nbsp;&nbsp;- **Конечная точка службы прокси-сервера** => **mgmtproxy-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-security** => **gateway-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-app-service-proxy** => **appproxy-svc-external**|
-| **mssqlctl** улучшения | Используйте **mssqlctl** для [список внешних конечных точек](deployment-guidance.md#endpoints) и проверьте версию **mssqlctl** с `--version` параметра. |
+| Улучшения **mssqlctl** | Используйте **mssqlctl** для [перечисления внешних конечных точек](deployment-guidance.md#endpoints) и проверяйте версию **mssqlctl** с помощью параметра `--version`. |
 | Автономная установка | Руководство для развертывания кластера вне сети больших данных. |
 | Усовершенствования распределения по уровням HDFS | Распределение по уровням S3, кэширование подключения и OAuth поддержка ADLS Gen2. |
 | Новый `mssql` соединителя Spark SQL Server | |
@@ -60,24 +158,19 @@ ms.locfileid: "64775067"
 
 - Если происходит сбой развертывания кластера больших данных, связанное пространство имен не удаляется. В итоге потерянные пространством имен в кластере. Обойти это можно вручную удалить пространство имен перед развертыванием кластера с тем же именем.
 
-
-
-#### <a id="externaltablesctp24"></a> Внешние таблицы
+#### <a name="external-tables"></a>Внешние таблицы
 
 - Развертывание кластера больших данных больше не создает **SqlDataPool** и **SqlStoragePool** внешних источников данных. Можно создать эти источники данных вручную для поддержки виртуализации данных к пулу данных и пула носителей.
 
    ```sql
-   -- Create the SqlDataPool data source:
+   -- Create default data sources for SQL Big Data Cluster
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
-     CREATE EXTERNAL DATA SOURCE SqlDataPool
-     WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
-
-   -- Create the SqlStoragePool data source:
+       CREATE EXTERNAL DATA SOURCE SqlDataPool
+       WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
+ 
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
-   BEGIN
-     CREATE EXTERNAL DATA SOURCE SqlStoragePool
-     WITH (LOCATION = 'sqlhdfs://nmnode-0-svc:50070');
-   END
+       CREATE EXTERNAL DATA SOURCE SqlStoragePool
+       WITH (LOCATION = 'sqlhdfs://nmnode-0-svc:50070');
    ```
 
 - Это позволяет создать внешнюю таблицу пула данных для таблицы, которая имеет неподдерживаемые типы столбцов. При выполнении запроса внешней таблицы, вы получите сообщение следующего вида:
@@ -124,13 +217,13 @@ ms.locfileid: "64775067"
 
 ### <a name="whats-new"></a>What's New
 
-| Новые средства или обновления | Сведения |
+| Новые функции или обновления | Сведения |
 |:---|:---|
-| Руководство по использованию GPU для выполнения глубокого обучения с помощью библиотеки TensorFlow в Spark. | [Развертывание кластера больших данных с поддержкой GPU и запустите TensorFlow](spark-gpu-tensorflow.md). |
-| **SqlDataPool** и **SqlStoragePool** источники данных больше не создаются по умолчанию. | Создайте их вручную, при необходимости. См. в разделе [известные проблемы](#externaltablesctp24). |
-| Поддержка `INSERT INTO SELECT` для пула данных. | Например, см. в разделе [руководства: Прием данных в пул данных SQL Server с помощью Transact-SQL](tutorial-data-pool-ingest-sql.md). |
-| `FORCE SCALEOUTEXECUTION` и `DISABLE SCALEOUTEXECUTION` параметр. | Принудительно или отключает использование вычислительных ресурсов пула для запросов во внешних таблицах. Например, `SELECT TOP(100) * FROM web_clickstreams_hdfs_book_clicks OPTION(FORCE SCALEOUTEXECUTION)`. |
-| Обновленные рекомендации по развертыванию AKS. | В ходе анализа больших данных кластеров в AKS, теперь рекомендуется использовать один узел размера **Standard_L8s**. |
+| Руководство по использованию GPU для выполнения глубокого обучения с помощью библиотеки TensorFlow в Spark. | [Развертывание кластера больших данных с поддержкой GPU и запуск TensorFlow](spark-gpu-tensorflow.md). |
+| Источники данных **SqlDataPool** и **SqlStoragePool** больше не создаются по умолчанию. | Создайте их вручную при необходимости. Ознакомьтесь с [известными проблемами](#externaltablesctp24). |
+| Поддержка `INSERT INTO SELECT` для пула данных. | Пример см. в разделе [Учебник. Прием данных в пул данных SQL Server с помощью Transact-SQL](tutorial-data-pool-ingest-sql.md). |
+| Параметры `FORCE SCALEOUTEXECUTION` и `DISABLE SCALEOUTEXECUTION`. | Принудительно или отключает использование вычислительных ресурсов пула для запросов во внешних таблицах. Например, `SELECT TOP(100) * FROM web_clickstreams_hdfs_book_clicks OPTION(FORCE SCALEOUTEXECUTION)`. |
+| Обновленные рекомендации по развертыванию AKS. | При анализе кластеров больших данных в AKS теперь рекомендуется использовать один узел размера **Standard_L8s**. |
 | Обновление среды выполнения Spark до версии Spark 2.4. | |
 
 ### <a name="known-issues"></a>Известные проблемы
@@ -201,21 +294,14 @@ make: *** [deploy-clean] Error 2
 - Развертывание кластера больших данных больше не создает **SqlDataPool** и **SqlStoragePool** внешних источников данных. Можно создать эти источники данных вручную для поддержки виртуализации данных к пулу данных и пула носителей.
 
    ```sql
-   -- Create the SqlDataPool data source:
+   -- Create default data sources for SQL Big Data Cluster
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
-     CREATE EXTERNAL DATA SOURCE SqlDataPool
-     WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
-
-   -- Create the SqlStoragePool data source:
+       CREATE EXTERNAL DATA SOURCE SqlDataPool
+       WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
+ 
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
-   BEGIN
-     IF SERVERPROPERTY('ProductLevel') = 'CTP2.3'
-       CREATE EXTERNAL DATA SOURCE SqlStoragePool
-       WITH (LOCATION = 'sqlhdfs://service-mssql-controller:8080');
-     ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP2.4'
        CREATE EXTERNAL DATA SOURCE SqlStoragePool
        WITH (LOCATION = 'sqlhdfs://service-master-pool:50070');
-   END
    ```
 
 - Это позволяет создать внешнюю таблицу пула данных для таблицы, которая имеет неподдерживаемые типы столбцов. При выполнении запроса внешней таблицы, вы получите сообщение следующего вида:
@@ -262,19 +348,19 @@ make: *** [deploy-clean] Error 2
 
 ### <a name="whats-new"></a>What's New
 
-| Новые средства или обновления | Сведения |
+| Новые функции или обновления | Сведения |
 | :---------- | :------ |
-| Отправка заданий Spark в кластерах больших данных в IntelliJ. | [Отправка заданий Spark в кластерах больших данных SQL Server в IntelliJ](spark-submit-job-intellij-tool-plugin.md) |
-| Общий интерфейс командной строки для приложения развертывания и управления кластерами. | [Развертывание приложения в кластере SQL Server 2019 больших данных (Предварительная версия)](big-data-cluster-create-apps.md) |
-| Расширение VS Code для развертывания приложений в кластер больших данных. | [Как использовать VS Code для развертывания приложений к кластерам больших данных в SQL Server](app-deployment-extension.md) |
-| Изменения в **mssqlctl** средство об использовании команды. | Дополнительные сведения см. [известные проблемы для mssqlctl](#mssqlctlctp23). |
-| Использовать Sparklyr в кластере больших данных | [Использовать Sparklyr в кластере SQL Server 2019 больших данных](sparklyr-from-RStudio.md) |
-| Подключение внешнего HDFS-совместимого хранилища к кластеру больших данных с **распределением HDFS по уровням**. | См. в разделе [распределение по уровням HDFS](hdfs-tiering.md). |
-| Новые возможности единой подключения для главного экземпляра SQL Server и шлюза HDFS или Spark. | См. в разделе [главного экземпляра SQL Server и шлюза HDFS/Spark](connect-to-big-data-cluster.md). |
-| При удалении кластера с **удаления кластера mssqlctl** теперь удаляет только объекты в пространстве имен, которые были частью кластера больших данных. | Пространство имен не удаляется. Однако в более ранних выпусках эта команда был удален всего пространства имен. |
-| _Безопасность_ имена конечных точек была изменена и консолидации. | **службы безопасности балансировки нагрузки** и **службы безопасности nodeport** были объединены в **безопасности конечных точек** конечной точки. |
-| _Прокси-сервера_ имена конечных точек была изменена и консолидации. | **Служба прокси-сервер балансировки нагрузки** и **службы, прокси-сервера, nodeport** были объединены в **конечная точка службы прокси-сервера** конечной точки. |
-| _Контроллер_ имена конечных точек была изменена и консолидации. | **Служба mssql контроллера lb** и **служба mssql контроллера nodeport** были объединены в **конечной точки контроллера** конечную точку. |
+| Отправка заданий Spark в кластерах больших данных в IntelliJ. | [Отправка заданий Spark в кластерах больших данных SQL Server 2019 в IntelliJ](spark-submit-job-intellij-tool-plugin.md) |
+| Общий интерфейс командной строки для развертывания приложений и управления кластерами. | [Развертывание приложения в кластере больших данных SQL Server 2019 (предварительная версия)](big-data-cluster-create-apps.md) |
+| Расширение VS Code для развертывания приложений в кластере больших данных. | [Как использовать VS Code для развертывания приложений в кластерах больших данных SQL Server](app-deployment-extension.md) |
+| Изменения в использовании команды **mssqlctl**. | Дополнительные сведения см. в разделе [Известные проблемы mssqlctl](#mssqlctlctp23). |
+| Использовать Sparklyr в кластере больших данных | [Использование Sparklyr в кластерах больших данных SQL Server 2019](sparklyr-from-RStudio.md) |
+| Подключение внешнего HDFS-совместимого хранилища к кластеру больших данных с **распределением HDFS по уровням**. | См. раздел [Распределение по уровням HDFS](hdfs-tiering.md). |
+| Новые возможности единого подключения для главного экземпляра SQ Server и шлюза HDFS или Spark. | См. раздел [Главный экземпляр SQL Server и шлюз HDFS или Spark](connect-to-big-data-cluster.md). |
+| При удалении кластера с помощью команды **mssqlctl cluster delete** теперь удаляются только объекты в пространстве имен, которые были частью кластера больших данных. | Пространство имен не удаляется. Однако в более ранних выпусках эта команда удаляла все пространство имен. |
+| Имена конечных точек _безопасности_ были изменены и консолидированы. | Точки **service-security-lb** и **service-security-nodeport** были объединены в конечной точке **endpoint-security**. |
+| Имена конечных точек _прокси_ были изменены и консолидированы. | Точки **service-proxy-lb** и **service-proxy-nodeport** были объединены в конечной точке **endpoint-service-proxy**. |
+| Имена конечных точек _контроллера_ были изменены и консолидированы. | Точки **service-mssql-controller-lb** и **service-mssql-controller-nodeport** были объединены в конечную точку **endpoint-controller**. |
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issues"></a>Известные проблемы

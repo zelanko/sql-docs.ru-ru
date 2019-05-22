@@ -5,16 +5,16 @@ description: Справочная статья по команды отладк�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5099a9ac611602e0c4c8d7f0103421e34b7fa8a2
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: c309817841bb0b3aeaacc613c327f9d446ccc8c2
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64774857"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993654"
 ---
 # <a name="mssqlctl-cluster-debug"></a>Отладка кластера mssqlctl
 
@@ -28,7 +28,7 @@ ms.locfileid: "64774857"
 [Копировать журналы mssqlctl отладки кластера](#mssqlctl-cluster-debug-copy-logs) | Копировать журналы.
 [файлы дампа отладки mssqlctl кластера](#mssqlctl-cluster-debug-dump) | Триггер дампа ведения журнала.
 ## <a name="mssqlctl-cluster-debug-copy-logs"></a>mssqlctl cluster debug copy-logs
-Копировать журналы отладки из кластера.
+Копировать журналы отладки из кластера — конфигурации kube необходим в вашей системе.
 ```bash
 mssqlctl cluster debug copy-logs --namespace -n 
                                  [--container -c]  
@@ -60,7 +60,7 @@ mssqlctl cluster debug copy-logs --namespace -n
 #### `--verbose`
 Увеличьте уровень подробного ведения журнала. Используйте параметр--debug, чтобы получить полные журналы отладки.
 ## <a name="mssqlctl-cluster-debug-dump"></a>файлы дампа отладки mssqlctl кластера
-Активировать ведение журнала дампа и скопируйте его из контейнера.
+Активировать ведение журнала дампа и скопируйте его из контейнера - kube config необходим в вашей системе.
 ```bash
 mssqlctl cluster debug dump --namespace -n 
                             --container -c  

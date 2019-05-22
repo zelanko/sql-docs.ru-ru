@@ -5,16 +5,16 @@ description: Узнайте, как выполнение автономного 
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: afd7c0e3b8fcf92721e95231175cb33d81c6775e
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.openlocfilehash: 49c96300792adfefa32152ec73911ba32fac47ee
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63759151"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994018"
 ---
 # <a name="perform-an-offline-deployment-of-a-sql-server-big-data-cluster"></a>Выполнение автономного развертывания кластера больших данных SQL Server
 
@@ -42,7 +42,7 @@ ms.locfileid: "63759151"
    > [!TIP]
    > Эти команды используют PowerShell в качестве примера, но их можно запускать из командной строки, bash или любой командной оболочки, который можно запустить docker. В Linux, добавление `sudo` для каждой команды.
 
-1. Получайте образы контейнеров кластера больших данных, повторив следующую команду. Замените `<SOURCE_IMAGE_NAME>` с каждым [имя образа](#images). Замените `<SOURCE_DOCKER_TAG>` с тегом для больших объемов данных кластера выпуска, такие как **ctp2.5**.  
+1. Получайте образы контейнеров кластера больших данных, повторив следующую команду. Замените `<SOURCE_IMAGE_NAME>` с каждым [имя образа](#images). Замените `<SOURCE_DOCKER_TAG>` с тегом для больших объемов данных кластера выпуска, такие как **ctp3.0**.  
 
    ```PowerShell
    docker pull private-repo.microsoft.com/mssql-private-preview/<SOURCE_IMAGE_NAME>:<SOURCE_DOCKER_TAG>
@@ -174,16 +174,17 @@ ms.locfileid: "63759151"
 
 1. Скопируйте папку на целевом компьютере.
 
-## <a name="deploy-with-from-repository"></a>Развертывание с помощью из репозитория
+## <a name="deploy-from-private-repository"></a>Развертывание из закрытого репозитория
 
-Чтобы развернуть из закрытого репозитория, выполните действия, описанные в [руководство по развертыванию](deployment-guidance.md), но настроить следующие переменные среды в соответствии с вашей частный репозиторий Docker.
+Чтобы развернуть из закрытого репозитория, выполните действия, описанные в [руководство по развертыванию](deployment-guidance.md), но использовать файл конфигурации развертывания, который указывает личных сведений репозитория Docker. Следующие **mssqlctl** командах показано, как изменение параметров Docker в файле конфигурации развертывания, с именем **custom.json**:
 
-- **DOCKER_REGISTRY**  
-- **DOCKER_REPOSITORY**
-- **DOCKER_USERNAME**
-- **DOCKER_PASSWORD**  
-- **DOCKER_EMAIL**
-- **DOCKER_IMAGE_TAG**
+```bash
+mssqlctl cluster config section set -c custom.json -j "$.spec.controlPlane.spec.docker.repository=<your-docker-repository>"
+mssqlctl cluster config section set -c custom.json -j "$.spec.controlPlane.spec.docker.registry=<your-docker-registry>"
+mssqlctl cluster config section set -c custom.json -j "$.spec.controlPlane.spec.docker.imageTag=<your-docker-image-tag>"
+```
+
+Развертывание запрашивает имя пользователя docker и пароль, или можно указать их в **DOCKER_USERNAME** и **DOCKER_PASSWORD** переменных среды.
 
 ## <a name="next-steps"></a>Следующие шаги
 

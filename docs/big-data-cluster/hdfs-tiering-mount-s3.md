@@ -1,27 +1,27 @@
 ---
-title: S3 подключения для распределения по уровням HDFS
+title: Подключение S3 для распределения по уровням HDFS
 titleSuffix: SQL Server big data clusters
 description: В этой статье описывается настройка HDFS, распределение по уровням для монтажа внешней системы S3 файл в HDFS в кластере SQL Server 2019 больших данных (Предварительная версия).
 author: nelgson
 ms.author: negust
 ms.reviewer: jroth
 manager: craigg
-ms.date: 04/15/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 79c09d5bcff26c9f5867e5b0fb38bd019b681b5c
-ms.sourcegitcommit: 89abd4cd4323ae5ee284571cd69a9fe07d869664
+ms.openlocfilehash: 4254c1c47e64013533574345c14518fdc2afcb7c
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64330599"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993959"
 ---
 # <a name="how-to-mount-s3-for-hdfs-tiering-in-a-big-data-cluster"></a>Как S3 подключения для HDFS, распределение по уровням в кластере больших данных
 
 Следующие разделы содержат пример того, как настроить распределение по уровням с источником данных S3 хранилища HDFS.
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 
 - [Развернутые больших данных кластера](deployment-guidance.md)
 - [Средства работы с большими данными](deploy-big-data-tools.md)
@@ -30,7 +30,7 @@ ms.locfileid: "64330599"
 - Создание и передача данных в контейнер S3 
   - Отправить CSV-ФАЙЛ или файлы для контейнера S3 Parquet. Это внешние данные HDFS, который будет подключен к HDFS в кластере больших данных.
 
-## <a name="access-keys"></a>Клавиши доступа
+## <a name="access-keys"></a>Ключи доступа
 
 1. Откройте командную строку на клиентском компьютере с доступом к кластеру больших данных.
 
@@ -48,22 +48,22 @@ ms.locfileid: "64330599"
 
 Теперь, когда вы подготовили файл учетных данных с помощью ключей доступа, можно начать подключение. Следующие действия подключить внешнее хранилище HDFS в S3 в локальном хранилище HDFS кластера больших данных.
 
-1. Используйте **kubectl** найти IP-адрес для **mgmtproxy-svc-external** службы в кластере больших данных. Найдите **внешний IP-**.
+1. Используйте **kubectl** найти IP-адрес для конечной точки **контроллера svc-external** службы в кластере больших данных. Найдите **внешний IP-**.
 
    ```bash
-   kubectl get svc mgmtproxy-svc-external -n <your-cluster-name>
+   kubectl get svc controller-svc-external -n <your-cluster-name>
    ```
 
-1. Входа в систему **mssqlctl** с помощью внешний IP-адрес конечной точки прокси-сервера управления с помощью имени пользователя кластера и пароль:
+1. Входа в систему **mssqlctl** с помощью внешний IP-адрес конечной точки контроллера с помощью имени пользователя кластера и пароль:
 
    ```bash
-   mssqlctl login -e https://<IP-of-mgmtproxy-svc-external>:30777/ -u <username> -p <password>
+   mssqlctl login -e https://<IP-of-controller-svc-external>:30080/
    ```
 
-1. Подключение удаленного хранилища HDFS в Azure с помощью **создать подключения хранилища mssqlctl**. Замените значения заполнителей перед выполнением следующей команды:
+1. Подключение удаленного хранилища HDFS в Azure с помощью **создать монтирования пул носителей кластера mssqlctl**. Замените значения заполнителей перед выполнением следующей команды:
 
    ```bash
-   mssqlctl storage mount create --remote-uri s3a://<S3 bucket name> --mount-path /mounts/<mount-name> --credential-file <path-to-s3-credentials>/file.creds
+   mssqlctl cluster storage-pool mount create --remote-uri s3a://<S3 bucket name> --mount-path /mounts/<mount-name> --credential-file <path-to-s3-credentials>/file.creds
    ```
 
    > [!NOTE]
@@ -76,21 +76,21 @@ ms.locfileid: "64330599"
 Чтобы получить список состояние всех подключение кластера больших данных, используйте следующую команду:
 
 ```bash
-mssqlctl storage mount status
+mssqlctl cluster storage-pool mount status
 ```
 
 Чтобы получить список состояние подключения в указанную папку в файловой системе HDFS, используйте следующую команду:
 
 ```bash
-mssqlctl storage mount status --mount-path <mount-path-in-hdfs>
+mssqlctl cluster storage-pool mount status --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a id="delete"></a> Удаление подключения
 
-Чтобы удалить подключение, используйте **удаления подключения хранилища mssqlctl** команды и укажите путь подключения в HDFS:
+Чтобы удалить подключение, используйте **удаления подключения пул носителей кластера mssqlctl** команды и укажите путь подключения в HDFS:
 
 ```bash
-mssqlctl storage mount delete --mount-path <mount-path-in-hdfs>
+mssqlctl cluster storage-pool mount delete --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a name="next-steps"></a>Следующие шаги

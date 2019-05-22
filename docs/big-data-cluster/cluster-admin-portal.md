@@ -6,17 +6,17 @@ author: yualan
 ms.author: alayu
 ms.reviewer: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 3e0f3c939f4d20e65262453e23ac127b02c6d212
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
-ms.translationtype: HT
+ms.openlocfilehash: d54e74bb5956b569adb605a94a56dfeb00b040cd
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63472137"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994101"
 ---
 # <a name="how-to-use-the-cluster-administration-portal-to-monitor-a-sql-server-big-data-cluster"></a>Как использовать портал администрирования кластера для мониторинга кластера больших данных SQL Server
 
@@ -38,7 +38,7 @@ ms.locfileid: "63472137"
 После запуска модуль контроллера на портале администрирования кластера можно использовать для мониторинга развертывания. Доступны на портале с помощью внешних IP-адрес и порт номер для `mgmtproxy-svc-external` (например: **https://\<ip адрес\>: 30777: портал**). Учетные данные для доступа к порталу администрирования являются значениями `CONTROLLER_USERNAME` и `CONTROLLER_PASSWORD` переменные среды, приведенные выше.
 
 > [!NOTE]
-> Для CTP-версии 2.5 отображается предупреждение безопасности при доступе к веб-страницы, поскольку оно использует SSL-сертификатов, автоматически созданный.
+> Для CTP 3.0 имеется предупреждение безопасности при доступе к веб-страницы, поскольку оно использует SSL-сертификатов, автоматически созданный.
 
 ## <a name="overview"></a>Обзор
 

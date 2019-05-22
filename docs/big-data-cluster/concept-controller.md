@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 3084d9ecc80dcd8f283a52ca5559783626a7ca4e
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: 874648daaccdb3d16f54d7b976bac1ef2543bafe
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64775587"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994075"
 ---
 # <a name="what-is-the-controller-on-a-sql-server-big-data-cluster"></a>Что такое контроллер в кластере SQL Server больших данных?
 
@@ -38,11 +38,7 @@ ms.locfileid: "64775587"
 
 ## <a name="deploying-the-controller-service"></a>Развертывание службы контроллера
 
-Контроллер развернут и размещенной в том же пространстве имен Kubernetes, где клиент хочет создать кластерам больших данных. Эта служба устанавливается администратором Kubernetes во время начальной загрузки кластера, с помощью служебной программы командной строки mssqlctl:
-
-```bash
-mssqlctl cluster create --name <name of your cluster>
-```
+Контроллер развернут и размещенной в том же пространстве имен Kubernetes, где клиент хочет создать кластерам больших данных. Эта служба устанавливается администратором Kubernetes во время начальной загрузки, с помощью кластера **mssqlctl** программы командной строки. Дополнительные сведения см. в разделе [приступить к работе с кластерами больших данных в SQL Server](deploy-get-started.md).
 
 Рабочий процесс занимались будет макета на основе Kubernetes полнофункциональные кластера больших данных SQL Server, включающий все компоненты, описанные в [Обзор](big-data-cluster-overview.md) статьи. Рабочего процесса начальной загрузки сначала создает службу контроллера, и после развертывания это служба контроллера будет координировать установку и настройку остальной части служб пулов master, вычислений, данных и хранилища.
 

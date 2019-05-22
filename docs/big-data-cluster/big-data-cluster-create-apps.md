@@ -6,17 +6,17 @@ author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 5953b5b36639438d80805bfb3dacc850d8c67dce
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: 462bff09e37f293f39109e9c129fcbb0ca4d2111
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64775370"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994103"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-big-data-cluster-preview"></a>Развертывание приложения в кластере SQL Server больших данных (Предварительная версия)
 
@@ -45,7 +45,7 @@ ms.locfileid: "64775370"
 
 ## <a name="capabilities"></a>Возможности
 
-В SQL Server 2019 CTP-версии 2.5 (Предварительная версия) можно создавать, удалять, описания, инициализации список, выполнять и обновлять приложения. В следующей таблице описаны команды развертывания приложения, которые можно использовать с **mssqlctl**.
+В SQL Server 2019 г. (Предварительная версия) CTP 3.0 можно создавать, удалять, описания, инициализации список, выполнять и обновлять приложения. В следующей таблице описаны команды развертывания приложения, которые можно использовать с **mssqlctl**.
 
 |Command |Описание |
 |:---|:---|
@@ -68,10 +68,10 @@ mssqlctl app create --help
 
 ## <a name="sign-in"></a>Вход
 
-Перед развертыванием или взаимодействия с приложениями, сначала войдите в кластер для обработки больших данных с использованием SQL Server `mssqlctl login` команды. Укажите внешний IP-адрес `mgmtproxy-svc-external` службы (например: `https://ip-address:30777`), а также имя пользователя и пароль для кластера.
+Перед развертыванием или взаимодействия с приложениями, сначала войдите в кластер для обработки больших данных с использованием SQL Server `mssqlctl login` команды. Укажите внешний IP-адрес `controller-svc-external` службы (например: `https://ip-address:30080`), а также имя пользователя и пароль для кластера.
 
 ```bash
-mssqlctl login -e https://<ip-address-of-mgmtproxy-svc-external>:30777 -u <user-name> -p <password>
+mssqlctl login --controller-endpoint https://<ip-address-of-controller-svc-external>:30080 --controller-username <user-name>
 ```
 
 ## <a name="aks"></a>AKS

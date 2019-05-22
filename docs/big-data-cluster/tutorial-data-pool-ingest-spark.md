@@ -5,17 +5,17 @@ description: Этом руководстве показано, как прием
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/27/2019
+ms.date: 05/22/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 9d49cb6af93880fe1cec391e4464b813777f7109
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: dcdbee449f15e070920660d5470135f4f8ae93a0
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582757"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994168"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>Учебник. Прием данных в пул данных SQL Server с помощью заданий Spark
 
@@ -56,7 +56,7 @@ ms.locfileid: "59582757"
    ```sql
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
      CREATE EXTERNAL DATA SOURCE SqlDataPool
-     WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
+     WITH (LOCATION = 'sqldatapool://controller-svc:8080/datapools/default');
    ```
 
 1. Создайте внешнюю таблицу с именем **web_clickstreams_spark_results** пула данных.
@@ -74,13 +74,13 @@ ms.locfileid: "59582757"
       );
    ```
   
-1. В CTP-версии 2.4 Создание данных пула является асинхронным, но нет способа определить, когда сеть будет еще. Подождите 2 минуты, чтобы убедиться в том, что при создании пула данных, прежде чем продолжить.
+1. В версии CTP 3.0 Создание данных пула является асинхронным, но нет способа определить, когда сеть будет еще. Подождите 2 минуты, чтобы убедиться в том, что при создании пула данных, прежде чем продолжить.
 
 ## <a name="start-a-spark-streaming-job"></a>Запустить задание потоковой передачи Spark
 
 Следующим шагом является создание Spark streaming задание, которое загружает веб-маршрута перемещения данных из пула носителей (HDFS) в внешнюю таблицу, которую вы создали в пуле данных.
 
-1. В Azure Data Studio, подключитесь к **HDFS/Spark шлюза** кластера больших данных. Дополнительные сведения см. в разделе [подключиться к шлюзу HDFS/Spark](connect-to-big-data-cluster.md#hdfs).
+1. В Azure Data Studio подключитесь к основной экземпляр кластера больших данных. Дополнительные сведения см. в разделе [подключение к кластеру больших данных](connect-to-big-data-cluster.md).
 
 1. Дважды щелкните подключение шлюза HDFS или Spark в **серверы** окна. Затем выберите **новое задание Spark**.
 

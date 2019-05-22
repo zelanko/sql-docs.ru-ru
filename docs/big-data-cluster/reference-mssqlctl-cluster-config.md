@@ -5,16 +5,16 @@ description: Справочная статья по mssqlctl команды кл
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 3a4693c5ffb68ad555d97d02f983fadf4e6bbd9a
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: 984a3c50ac691df3759edc161baabc533bd9456f
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64774668"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993335"
 ---
 # <a name="mssqlctl-cluster-config"></a>Конфигурация кластера mssqlctl
 
@@ -25,22 +25,26 @@ ms.locfileid: "64774668"
 ## <a name="commands"></a>Команды
 |     |     |
 | --- | --- |
-[Получение конфигурации кластера mssqlctl](#mssqlctl-cluster-config-get) | Получить конфигурацию кластера - kube конфигурации необходим в вашей системе.
-[init config mssqlctl кластера](#mssqlctl-cluster-config-init) | Инициализирует конфигурацию кластера.
+[show config mssqlctl кластера](#mssqlctl-cluster-config-show) | Получает текущую конфигурацию SQL Server больших данных кластера.
+[init config mssqlctl кластера](#mssqlctl-cluster-config-init) | Инициализирует Создание профиля конфигурации кластера, который может использоваться с кластером.
 [Список config mssqlctl кластеров](#mssqlctl-cluster-config-list) | Приведен список вариантов файла конфигурации.
-[раздел конфигурации кластера mssqlctl](reference-mssqlctl-cluster-config-section.md) | Команды для работы с использованием отдельных разделов файла конфигурации.
-## <a name="mssqlctl-cluster-config-get"></a>mssqlctl cluster config get
-Получает текущий файл конфигурации SQL Server больших данных кластера.
+[раздел конфигурации кластера mssqlctl](reference-mssqlctl-cluster-config-section.md) | Команды для работы с отдельных разделов файла конфигурации кластера.
+## <a name="mssqlctl-cluster-config-show"></a>mssqlctl cluster config show
+Возвращает текущего файла конфигурации SQL Server больших данных кластера и выводит его в целевой файл или довольно выводит на консоль.
 ```bash
-mssqlctl cluster config get --name -n 
-                            [--output-file -f]
+mssqlctl cluster config show [--target -t] 
+                             [--force -f]
 ```
-### <a name="required-parameters"></a>Обязательные параметры
-#### `--name -n`
-Имя кластера, используемые для пространств имен kubernetes.
+### <a name="examples"></a>Примеры
+Показать конфигурации кластера в консоли
+```bash
+mssqlctl cluster config show
+```
 ### <a name="optional-parameters"></a>Необязательные параметры
-#### `--output-file -f`
+#### `--target -t`
 Сохраните результат в выходной файл. Значение по умолчанию — направляются в stdout.
+#### `--force -f`
+Принудительная перезапись целевого файла.
 ### <a name="global-arguments"></a>Глобальные аргументы
 #### `--debug`
 Увеличьте уровень подробного ведения журнала для отображения всех журналов отладки.
@@ -53,16 +57,28 @@ mssqlctl cluster config get --name -n
 #### `--verbose`
 Увеличьте уровень подробного ведения журнала. Используйте параметр--debug, чтобы получить полные журналы отладки.
 ## <a name="mssqlctl-cluster-config-init"></a>init config mssqlctl кластера
-Инициализирует файла конфигурации кластера для пользователя, в зависимости от типа указанное значение по умолчанию.
+Инициализирует Создание профиля конфигурации кластера, который может использоваться с кластером. Конкретный источник конфигурации профиля можно указать аргументы из 3 вариантов.
 ```bash
 mssqlctl cluster config init [--target -t] 
-                             [--src -s]
+                             [--src -s]  
+                             [--force -f]
+```
+### <a name="examples"></a>Примеры
+Пошаговое руководство init конфигурации кластера - будет получать запросы на необходимые значения.
+```bash
+mssqlctl cluster config init
+```
+Кластер init конфигурации с аргументами, создает профиль конфигурации aks разработки и тестирования в. / custom.json.
+```bash
+mssqlctl cluster config init --src aks-dev-test.json --target custom.json
 ```
 ### <a name="optional-parameters"></a>Необязательные параметры
 #### `--target -t`
-Путь к файлу местоположение файла конфигурации размещены, значение по умолчанию — cwd с custom-config.json.
+Путь к файлу место config профиль установлен, значение по умолчанию — cwd с custom-config.json.
 #### `--src -s`
-Источник конфигурации: ["aks-dev-test.json", "kubeadm-dev-test.json", "minikube-dev-test.json"]
+Источник конфигурации профиля: ["aks-dev-test.json", "kubeadm-dev-test.json", "minikube-dev-test.json"]
+#### `--force -f`
+Принудительная перезапись целевого файла.
 ### <a name="global-arguments"></a>Глобальные аргументы
 #### `--debug`
 Увеличьте уровень подробного ведения журнала для отображения всех журналов отладки.
@@ -77,11 +93,20 @@ mssqlctl cluster config init [--target -t]
 ## <a name="mssqlctl-cluster-config-list"></a>mssqlctl cluster config list
 Приведен список вариантов файл конфигурации, доступные для использования при инициализации конфигурации кластера
 ```bash
-mssqlctl cluster config list [--config-file -f] 
+mssqlctl cluster config list [--config-file -c] 
                              
 ```
+### <a name="examples"></a>Примеры
+Показывает все имена профилей конфигурации.
+```bash
+mssqlctl cluster config list
+```
+Показано json профиля конфигурации.
+```bash
+mssqlctl cluster config list --config-file aks-dev-test.json
+```
 ### <a name="optional-parameters"></a>Необязательные параметры
-#### `--config-file -f`
+#### `--config-file -c`
 Файла конфигурации по умолчанию: ["aks-dev-test.json", "kubeadm-dev-test.json", "minikube-dev-test.json"]
 ### <a name="global-arguments"></a>Глобальные аргументы
 #### `--debug`

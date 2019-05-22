@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 51e6f11460e7a7c1f650b68624cc09d7cea76399
-ms.sourcegitcommit: 6193aa9b4967302424270d67c27dbc601ca6849a
+ms.openlocfilehash: 3914bc088ab8974c92a24131d69590b4353f068e
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64877665"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994084"
 ---
 # <a name="monitoring-and-troubleshoot-sql-server-big-data-clusters"></a>Мониторинг и устранение неполадок с кластерами больших данных SQL Server
 
@@ -121,7 +121,7 @@ kubectl get svc -n mssql-cluster
 | **appproxy-svc-external** | Поддерживает сценарии развертывания приложения. |
 
 > [!TIP]
-> Это способ просмотра службы, **kubectl**, но можно также использовать `mssqlctl cluster endpoints list` команду, чтобы просмотреть эти конечные точки. Дополнительные сведения см. в разделе [получить конечные точки кластера больших данных](deployment-guidance.md#endpoints).
+> Это способ просмотра службы, **kubectl**, но можно также использовать `mssqlctl cluster endpoint list` команду, чтобы просмотреть эти конечные точки. Дополнительные сведения см. в разделе [получить конечные точки кластера больших данных](deployment-guidance.md#endpoints).
 
 ## <a name="get-service-details"></a>Получение сведений о службе
 

@@ -6,16 +6,16 @@ author: nelgson
 ms.author: negust
 ms.reviewer: jroth
 manager: craigg
-ms.date: 04/18/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9d9e01e31f0f9e68c5b41b92da773dca8aab54c4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9f5d1ce4724f95b511272bb4df8d41ee0df75d90
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63317133"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993963"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>Как Gen2 ADLS подключения для HDFS, распределение по уровням в кластере больших данных
 
@@ -100,22 +100,22 @@ ms.locfileid: "63317133"
 
 Теперь, когда вы подготовили файл учетных данных с помощью клавиши доступа, или с помощью OAuth, можно начать подключение. Следующие действия подключить внешнее хранилище HDFS в Azure Data Lake в локальном хранилище HDFS кластера больших данных.
 
-1. Используйте **kubectl** найти IP-адрес для конечной точки **mgmtproxy-svc-external** службы в кластере больших данных. Найдите **внешний IP-**.
+1. Используйте **kubectl** найти IP-адрес для конечной точки **контроллера svc-external** службы в кластере больших данных. Найдите **внешний IP-**.
 
    ```bash
-   kubectl get svc mgmtproxy-svc-external -n <your-cluster-name>
+   kubectl get svc controller-svc-external -n <your-cluster-name>
    ```
 
-1. Входа в систему **mssqlctl** с помощью внешний IP-адрес конечной точки прокси-сервера управления с помощью имени пользователя кластера и пароль:
+1. Входа в систему **mssqlctl** с помощью внешний IP-адрес конечной точки контроллера с помощью имени пользователя кластера и пароль:
 
    ```bash
-   mssqlctl login -e https://<IP-of-mgmtproxy-svc-external>:30777/ -u <username> -p <password>
+   mssqlctl login -e https://<IP-of-controller-svc-external>:30080/
    ```
 
-1. Подключение удаленного хранилища HDFS в Azure с помощью **создать подключения хранилища mssqlctl**. Замените значения заполнителей перед выполнением следующей команды:
+1. Подключение удаленного хранилища HDFS в Azure с помощью **создать монтирования пул носителей кластера mssqlctl**. Замените значения заполнителей перед выполнением следующей команды:
 
    ```bash
-   mssqlctl storage mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --mount-path /mounts/<mount-name> --credential-file <path-to-adls-credentials>/file.creds
+   mssqlctl cluster storage-pool mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --mount-path /mounts/<mount-name> --credential-file <path-to-adls-credentials>/file.creds
    ```
 
    > [!NOTE]
@@ -128,21 +128,21 @@ ms.locfileid: "63317133"
 Чтобы получить список состояние всех подключение кластера больших данных, используйте следующую команду:
 
 ```bash
-mssqlctl storage mount status
+mssqlctl cluster storage-pool mount status
 ```
 
 Чтобы получить список состояние подключения в указанную папку в файловой системе HDFS, используйте следующую команду:
 
 ```bash
-mssqlctl storage mount status --mount-path <mount-path-in-hdfs>
+mssqlctl cluster storage-pool mount status --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a id="delete"></a> Удаление подключения
 
-Чтобы удалить подключение, используйте **удаления подключения хранилища mssqlctl** команды и укажите путь подключения в HDFS:
+Чтобы удалить подключение, используйте **удаления подключения пул носителей кластера mssqlctl** команды и укажите путь подключения в HDFS:
 
 ```bash
-mssqlctl storage mount delete --mount-path <mount-path-in-hdfs>
+mssqlctl cluster storage-pool mount delete --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a name="next-steps"></a>Следующие шаги

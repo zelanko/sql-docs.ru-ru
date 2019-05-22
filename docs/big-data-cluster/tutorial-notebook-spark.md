@@ -10,12 +10,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 2452651fde63b08483e238d900ec82f3a93c146e
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.openlocfilehash: ed1516c14a8a49269ea0768a2ddafb9e255c24a9
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65945156"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994145"
 ---
 # <a name="tutorial-run-a-sample-notebook-on-a-sql-server-big-data-cluster"></a>Учебник. Запуск записной книжки пример работы с большими данными в кластере SQL Server
 
@@ -52,7 +52,7 @@ ms.locfileid: "65945156"
 
 Ниже показано, как открыть файл записной книжки в Azure Data Studio:
 
-1. В студии данных Azure подключения к шлюзу HDFS/Spark кластера больших данных. Дополнительные сведения см. в разделе [подключиться к шлюзу HDFS/Spark](connect-to-big-data-cluster.md#hdfs).
+1. В Azure Data Studio подключитесь к основной экземпляр кластера больших данных. Дополнительные сведения см. в разделе [подключение к кластеру больших данных](connect-to-big-data-cluster.md).
 
 1. Дважды щелкните подключение шлюза HDFS или Spark в **серверы** окна. Затем выберите **открыть записную книжку**.
 

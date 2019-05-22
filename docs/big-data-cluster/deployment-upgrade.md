@@ -5,16 +5,16 @@ description: Сведения об обновлении кластеров SQL S
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 604947f1616509f7267450fb3d3ba94f8ce21a97
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.openlocfilehash: 1f8291eeb292226b3dfcb2bd1a89816926c53d88
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63759161"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993975"
 ---
 # <a name="how-to-upgrade-sql-server-big-data-clusters"></a>Обновление кластеров больших данных в SQL Server
 
@@ -51,7 +51,7 @@ ms.locfileid: "63759161"
    pip3 uninstall -r  https://private-repo.microsoft.com/python/ctp-2.4/mssqlctl/requirements.txt
    ```
 
-1. Установите последнюю версию **mssqlctl**. Следующие команды устанавливают **mssqlctl** для CTP-версии 2.5:
+1. Установите последнюю версию **mssqlctl**. Следующие команды устанавливают **mssqlctl** для CTP-версии 3.0:
 
    **Windows:**
 

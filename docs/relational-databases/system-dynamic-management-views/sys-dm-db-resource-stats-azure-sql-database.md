@@ -1,7 +1,7 @@
 ---
 title: sys.dm_db_resource_stats (база данных SQL Azure) | Документация Майкрософт
 ms.custom: ''
-ms.date: 03/21/2019
+ms.date: 05/21/2019
 ms.service: sql-database
 ms.reviewer: ''
 ms.topic: language-reference
@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: f3b8defbb43cd07afe38915c6a0c14cb226fbf2c
-ms.sourcegitcommit: 1c1ed8d6aa2fb9fceb6a00c39597578442f7f4e9
+ms.openlocfilehash: 3ca0aa09718d8310ccb6ba304d8cc5595d8c5299
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58325507"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993890"
 ---
 # <a name="sysdmdbresourcestats-azure-sql-database"></a>sys.dm_db_resource_stats (база данных SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -44,6 +44,10 @@ ms.locfileid: "58325507"
 |max_session_percent|**Decimal (5,2)**|Максимальное число одновременных сеансов в процентах от предела для уровня службы базы данных.|  
 |dtu_limit|**int**|Max настройки текущей базы данных DTU для этой базы данных во время этого интервала. Для баз данных с помощью модели на основе виртуальных ядер этот столбец равен NULL.|
 |cpu_limit|**Decimal (5,2)**|Количество виртуальных ядер для этой базы данных во время этого интервала. Для баз данных с помощью модели на основе DTU этот столбец равен NULL.|
+|avg_instance_cpu_percent|**Decimal (5,2)**|Среднее использование ЦП в процентах от базы данных.|
+|avg_instance_memory_percent|**Decimal (5,2)**|Среднее использование памяти базой данных в процентах.|
+|avg_login_rate_percent|**Decimal (5,2)**|Указано только в ознакомительных целях. Не поддерживается. Совместимость с будущими версиями не гарантируется.|
+|replica_role|**int**|Представляет роль текущая реплика с 0 в качестве основной, 1 как вторичная реплика и 2 в качестве сервера пересылки (geo дополнительного основного). Вы увидите «1», при подключении с намерением только для чтения для чтения баз данных-получателей. Если подключение является geo-secondary без указания намерение только для чтения, вы увидите «2» (для соединения с сервером пересылки).|
 |||
   
 > [!TIP]  

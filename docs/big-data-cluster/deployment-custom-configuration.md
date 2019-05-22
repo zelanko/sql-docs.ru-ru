@@ -5,16 +5,16 @@ description: Дополнительные сведения о настройке
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7dd774d390587d0c2c0248ab9b419ad40f8f212b
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.openlocfilehash: ed86e7d293ba72eb178c65b53865b62ca419a6d2
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63759171"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993999"
 ---
 # <a name="configure-deployment-settings-for-big-data-clusters"></a>Настройка параметров развертывания для больших данных кластеров
 
@@ -46,7 +46,7 @@ ms.locfileid: "63759171"
 Следующая команда отправляет пару "ключ значение" для **--json-значения** параметр, чтобы изменить имя кластера больших данных, чтобы **тестового кластера**:
 
 ```bash
-mssqlctl cluster config section set -f custom.json -j ".metadata.name=test-cluster"
+mssqlctl cluster config section set -c custom.json -j ".metadata.name=test-cluster"
 ```
 
 > [!IMPORTANT]
@@ -84,7 +84,7 @@ mssqlctl cluster config section set -f custom.json -j ".metadata.name=test-clust
 В следующем примере используется встроенный JSON, чтобы изменить порт для **контроллера** конечной точки:
 
 ```bash
-mssqlctl cluster config section set -f custom.json -j "$.spec.controlPlane.spec.endpoints[?(@.name==""Controller"")].port=30000"
+mssqlctl cluster config section set -c custom.json -j "$.spec.controlPlane.spec.endpoints[?(@.name==""Controller"")].port=30000"
 ```
 
 ## <a id="replicas"></a> Настройка пула реплик
@@ -102,11 +102,17 @@ mssqlctl cluster config section set -f custom.json -j "$.spec.controlPlane.spec.
             "type": "Storage",
             "replicas": 2,
             "storage": {
-                "usePersistentVolume": true,
-                "className": "managed-premium",
-                "accessMode": "ReadWriteOnce",
-                "size": "10Gi"
-            }
+               "data": {
+                  "className": "default",
+                  "accessMode": "ReadWriteOnce",
+                  "size": "15Gi"
+               },
+               "logs": {
+                  "className": "default",
+                  "accessMode": "ReadWriteOnce",
+                  "size": "10Gi"
+               }
+           },
         }
     }
 ]
@@ -115,31 +121,17 @@ mssqlctl cluster config section set -f custom.json -j "$.spec.controlPlane.spec.
 Число экземпляров в пуле можно настроить, изменив **реплик** значение для каждого пула. В следующем примере используется встроенный JSON, чтобы изменить эти значения для хранения данных и пулов для `10` и `4` соответственно:
 
 ```bash
-mssqlctl cluster config section set -f custom.json -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.replicas=10"
-mssqlctl cluster config section set -f custom.json -j "$.spec.pools[?(@.spec.type == ""Data"")].spec.replicas=4'
+mssqlctl cluster config section set -c custom.json -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.replicas=10"
+mssqlctl cluster config section set -c custom.json -j "$.spec.pools[?(@.spec.type == ""Data"")].spec.replicas=4'
 ```
-
-> [!IMPORTANT]
-> В этом выпуске нельзя изменить количество экземпляров в пуле вычислительных.
 
 ## <a id="storage"></a> Настройка хранилища
 
-Можно также изменить класс хранения и характеристики, используемые для каждого пула. В следующем примере присваивается класс пользовательского хранилища в пул носителей:
+Можно также изменить класс хранения и характеристики, используемые для каждого пула. В следующем примере назначает класс пользовательского хранилища в пул носителей и обновляет размер утверждение постоянного тома для хранения данных до 100 ГБ. В этом разделе необходимо иметь в файле конфигурации, чтобы обновить параметры с помощью *набор параметров конфигурации кластера mssqlctl* команды, см. в разделе ниже, как использовать файл исправления для добавления в этом разделе:
 
 ```bash
-mssqlctl cluster config section set -f custom.json -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec={""replicas"": 2,""storage"": {""className"": ""newStorageClass"",""size"": ""20Gi"",""accessMode"": ""ReadWriteOnce"",""usePersistentVolume"": true},""type"": ""Storage""}"
-```
-
-В следующем примере обновляется только размер пула в `32Gi`:
-
-```bash
-mssqlctl cluster config section set -f custom.json -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.storage.size=32Gi"
-```
-
-В следующем примере обновляется размер всех пулов `32Gi`:
-
-```bash
-mssqlctl cluster config section set -f custom.json -j "$.spec.pools[?(@.spec.type[*])].spec.storage.size=32Gi"
+mssqlctl cluster config section set -c custom.json -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.storage.data.className=storage-pool-class"
+mssqlctl cluster config section set -c custom.json -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.storage.data.size=32Gi"
 ```
 
 > [!NOTE]
@@ -170,7 +162,7 @@ mssqlctl cluster config section set -f custom.json -j "$.spec.pools[?(@.spec.typ
 ```
 
 ```bash
-mssqlctl cluster config section set -f custom.json -p ./patch.json
+mssqlctl cluster config section set -c custom.json -p ./patch.json
 ```
 
 ## <a id="jsonpatch"></a> Файлы исправления JSON
@@ -181,10 +173,10 @@ mssqlctl cluster config section set -f custom.json -p ./patch.json
 
 - Обновляет порт одной конечной точки.
 - Обновляет все конечные точки (**порт** и **serviceType**).
-- Обновляет хранилище плоскости управления.
+- Обновляет хранилище плоскости управления. Эти параметры применимы для всех компонентов кластера, если это не переопределено на уровне пула.
 - Обновляет имя класса хранения в хранилище плоскости управления.
-- Обновления пула хранения, включая реплики (пул носителей).
-- Обновляет параметры Spark для конкретного пула (пул носителей).
+- Обновляет параметры пула хранилища для пула носителей.
+- Обновляет параметры Spark для пула носителей.
 
 ```json
 {
@@ -222,30 +214,39 @@ mssqlctl cluster config section set -f custom.json -p ./patch.json
     },
     {
       "op": "replace",
-      "path": "spec.controlPlane.spec.storage",
+      "path": "spec.controlPlane.spec.controlPlane",
       "value": {
-        "usePersistentVolume":true,
-        "accessMode":"ReadWriteMany",
-        "className":"managed-premium",
-        "size":"10Gi"
-      }
+          "data": {
+            "className": "managed-premium",
+            "accessMode": "ReadWriteOnce",
+            "size": "100Gi"
+          },
+          "logs": {
+            "className": "managed-premium",
+            "accessMode": "ReadWriteOnce",
+            "size": "32Gi"
+          }
+        }
     },
     {
       "op": "replace",
-      "path": "spec.controlPlane.spec.storage.className",
-      "value": "default"
+      "path": "spec.controlPlane.spec.storage.data.className",
+      "value": "managed-premium"
     },
     {
-      "op": "replace",
-      "path": "$.spec.pools[?(@.spec.type == 'Storage')].spec",
+      "op": "add",
+      "path": "$.spec.pools[?(@.spec.type == 'Storage')].spec.storage",
       "value": {
-        "replicas": 2,
-        "type": "Storage",
-        "storage": {
-          "usePersistentVolume": true,
-          "accessMode": "ReadWriteOnce",
-          "className": "managed-premium",
-          "size": "10Gi"
+          "data": {
+            "className": "managed-premium",
+            "accessMode": "ReadWriteOnce",
+            "size": "100Gi"
+          },
+          "logs": {
+            "className": "managed-premium",
+            "accessMode": "ReadWriteOnce",
+            "size": "32Gi"
+          }
         }
       }
     },
@@ -270,7 +271,7 @@ mssqlctl cluster config section set -f custom.json -p ./patch.json
 Используйте **набор раздел конфигурации кластера mssqlctl** для применения изменений в файл исправления JSON. В следующем примере применяется **patch.json** файл в файл конфигурации развертывания целевой **custom.json**.
 
 ```bash
-mssqlctl cluster config section set -f custom.json -p ./patch.json
+mssqlctl cluster config section set -c custom.json -p ./patch.json
 ```
 
 ## <a name="next-steps"></a>Следующие шаги
