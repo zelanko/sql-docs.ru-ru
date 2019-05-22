@@ -2,7 +2,7 @@
 title: Изменение часовых поясов и параметров часов на сервере отчетов | Документы Майкрософт
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: subscriptions
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,18 +11,18 @@ helpviewer_keywords:
 - schedules [Reporting Services], clock settings
 - schedules [Reporting Services], time zones
 ms.assetid: 69a19468-baa1-40f6-b158-8afdab0f8968
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: bb822890e3a54be5c221c41a0c1489a4e2b252b5
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 5c1e3a2b4fe468f3565dbf7ad47295ab8836315b
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973483"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65578366"
 ---
 # <a name="change-time-zones-and-clock-settings-on-a-report-server"></a>Изменение часовых поясов и настроек часов на сервере отчетов
   Сервер отчетов всегда использует локальное время компьютера, на котором он установлен. Задать для сервера отчетов другой часовой пояс нельзя. Если клиентское приложение обращается к серверу отчетов, работающему в другом часовом поясе, запланированная операция выполняется в соответствии с часовым поясом сервера отчетов. На страницах управления диспетчером отчетов и службами SharePoint часовой пояс указывается на каждой странице расписания, чтобы пользователь точно знал, когда будет выполнена запланированная операция. Например, на странице для создания пользовательского расписания будет указано "Время выражено в (UTC-08:00) по тихоокеанскому времени (США и Канада)".
-Сервер отчетов создает задание агента SQL Server, которое используется для запуска расписания. Если сервер отчетов и агент SQL Server находятся на отдельных серверах, часовой пояс должны совпадать на всех серверах.
+Сервер отчетов создает задание агента SQL Server, которое используется для запуска расписания. Если сервер отчетов и агент SQL Server расположены на разных серверах, часовой пояс на всех серверах должен совпадать.
   
 ## <a name="changing-the-time-zone-native-mode"></a>Изменение часового пояса (собственный режим)  
  Изменения часового пояса на компьютере, на котором размещен сервер отчетов, вступают в силу только после перезапуска службы сервера отчетов.  

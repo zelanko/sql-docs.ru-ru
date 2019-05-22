@@ -1,8 +1,8 @@
 ---
 title: Построитель отчетов в SQL Server | Документация Майкрософт
-ms.date: 11/29/2018
+ms.date: 05/10/2019
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 f1_keywords:
@@ -11,17 +11,20 @@ helpviewer_keywords:
 - overview of Report Builder
 - getting started
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: f37319c07856f0e31abcb2afb047bdea2904063a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: d77b35851144967c9cfed408617fe5551debf37f
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290302"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65620608"
 ---
 # <a name="report-builder-in-sql-server"></a>Построитель отчетов в SQL Server
-  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] — это инструмент создания отчетов с разбиением на страницы, предназначенный для корпоративных пользователей, которые предпочитают работать в автономной среде вместо использования конструктора отчетов в Visual Studio.  Во время проектирования отчета с разбиением на страницы вы создаете определение отчета, в котором указано, откуда и какие брать данные, а также как их отображать. При запуске отчета обработчик получает заданное определение отчета, извлекает данные и объединяет их с макетом отчета, чтобы создать отчет. Отчет можно предварительно просмотреть в [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. После этого отчет можно опубликовать в собственном режиме или в режиме интеграции с SharePoint на сервере отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (2016 и более ранние версии). Можно также опубликовать отчет с разбивкой на страницы в службе Power BI. Узнайте больше об [отчетах с разбивкой на страницы в Power BI Premium](https://docs.microsoft.com/power-bi/paginated-reports-report-builder-power-bi) (предварительная версия).
+
+ [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] — это инструмент создания отчетов с разбиением на страницы, предназначенный для корпоративных пользователей, которые предпочитают работать в автономной среде вместо использования конструктора отчетов в Visual Studio/SSDT.  При проектировании отчета с разбиением на страницы вы создаете определение отчета, в котором указано, откуда и какие брать данные, а также как их отображать. При запуске отчета обработчик получает заданное определение отчета, извлекает данные и объединяет их с макетом отчета, чтобы создать отчет. Отчет можно предварительно просмотреть в [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. После этого отчет можно опубликовать в собственном режиме или в режиме интеграции с SharePoint на сервере отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (2016 и более ранние версии). 
+
+Можно также опубликовать отчет с разбивкой на страницы в службе Power BI. Узнайте больше об [отчетах с разбивкой на страницы в Power BI Premium](https://docs.microsoft.com/power-bi/paginated-reports-report-builder-power-bi) (предварительная версия).
   
  ![rs_GettingStartedReport](../../reporting-services/report-builder/media/rs-gettingstartedreport.png "rs_GettingStartedReport")  
   
@@ -46,7 +49,6 @@ ms.locfileid: "56290302"
 -   **Изменение существующих отчетов.** С помощью [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]можно настроить и обновить отчеты, созданные в конструкторе отчетов [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 -   **Изменение данных** путем фильтрации, группирования и сортировки либо путем добавления формул и выражений.  
-  
 -   **Добавление диаграмм, датчиков, инфокривых и индикаторов** позволяет наглядно отобразить сводные данные и представлять большие объемы статистической информации в легко доступном виде.  
   
 -   **Добавление интерактивных функций** , например схем документов, кнопок отображения и скрытия, а также ссылок для детализации вложенных отчетов и детализированных отчетов. С помощью параметров и фильтров можно отфильтровать данные для пользовательских представлений.  
@@ -73,7 +75,7 @@ ms.locfileid: "56290302"
 
   [Новые возможности служб Reporting Services и построителя отчетов для SQL Server](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
   Описываются новые функции этой версии [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] и [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)].   
-  [Учебник. Создание стандартного отчета с диаграммой в автономном режиме](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
+  [Учебник. Создание стандартного отчета с диаграммой в режиме «вне сети»](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
  Содержатся общие сведения о [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] и мастерах, которые могут помочь в создании отчетов. Учебник содержит набор данных для работы, поэтому соединяться с источником данных не нужно.  
   
  [Планирование отчета (построитель отчетов)](../../reporting-services/report-design/planning-a-report-report-builder.md)  

@@ -2,7 +2,7 @@
 title: Карты (построитель отчетов и службы SSRS) | Документы Майкрософт
 ms.date: 08/17/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 f1_keywords:
@@ -13,14 +13,14 @@ f1_keywords:
 - "10500"
 - sql13.rtp.rptdesigner.maptitleproperties.general.f1
 ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: a5026ba1558d0796f715ea8f61e6e90ed628c2e9
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 28faf7047d9ba66116e15b4aa41307d90beacd2f
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290193"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580101"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>Карты (построитель отчетов и службы SSRS)
   Для визуализации бизнес-данных в географическом контексте можно добавить в отчет с разбиением на страницы [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] карту. Выбранный тип карты будет зависеть от того, какую информацию следует взять из отчета. Можно добавить карту, которая отображает только местоположения, или пузырьковую карту, которая изменяет размер пузырьков в зависимости от количества домов в области, или карту с отметками, которая изменяет стиль маркера в зависимости от наиболее доходного продукта в каждом магазине, или линейную карту, которая отображает маршруты между магазинами.  
@@ -29,7 +29,7 @@ ms.locfileid: "56290193"
   
  ![rs_MapElements](../../reporting-services/report-design/media/rs-mapelements.gif "rs_MapElements")  
   
- Для быстрого начала работы с картами см. [Учебник. Отчет-карта (построитель отчетов)](../../reporting-services/tutorial-map-report-report-builder.md) или статью с [образцами отчетов (построитель отчетов и службы SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283).  
+ Дополнительные сведения об использовании карты см. в разделах [Учебник. Отчет-карта (построитель отчетов)](../../reporting-services/tutorial-map-report-report-builder.md) или [Образцы отчетов (построитель отчетов и службы SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283).  
   
 > [!NOTE]  
 >  Карты можно сохранять отдельно от отчета как элементы отчета. Узнайте больше об [элементах отчета](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
@@ -73,7 +73,7 @@ ms.locfileid: "56290193"
 -   **Отчеты галереи карт.** Пространственные данные внедряются в отчеты, находящиеся в коллекции карт. По умолчанию коллекция карт устанавливается в папку *\<диск>*:\Program Files\Microsoft SQL Server\Report Builder\MapGallery.  
   
     > [!NOTE]  
-    >  Службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] используют данные из файлов фигур TIGER/Line, поставляемых с разрешения Бюро переписи населения США переписи населения США ([https://www.census.gov/](https://www.census.gov/)). Файлы фигур TIGER/Line содержат выборочную географическую и картографическую информацию из базы данных Census MAF/TIGER. Файлы фигур TIGER/Line бесплатно распространяются Бюро переписи населения США. Дополнительные сведения о файлах фигуры TIGER/Line см. на странице [https://www.census.gov/geo/www/tiger](https://www.census.gov/geo/www/tiger). Информация о границах в шейп-файлах TIGER/Line может использоваться только для сбора и табулирования статистических данных. Их описание и использование в статистических целях не может повлечь изменения юридических полномочий или прав собственности. Они не являются законными описаниями земель. Census TIGER и TIGER/Line являются охраняемыми товарными знаками Бюро переписи населения США.  
+    >  Службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] используют данные из файлов фигур TIGER/Line, поставляемых с разрешения Бюро переписи населения США переписи населения США ([https://www.census.gov/](https://www.census.gov/)). Файлы фигур TIGER/Line содержат выборочную географическую и картографическую информацию из базы данных Census MAF/TIGER. Файлы фигур TIGER/Line бесплатно распространяются Бюро переписи населения США. Дополнительные сведения о файлах фигуры TIGER/Line см. на странице [https://www.census.gov/geo/www/tiger](https://www.census.gov/geo/www/tiger). Информация о границах в шейп-файлах TIGER/Line может использоваться только для сбора и табулирования статистических данных. Их описание и использование в статистических целях не может повлечь изменения юридических полномочий или прав собственности. Они не являются законными описаниями земель. TIGER и TIGER/Line являются охраняемыми товарными знаками Бюро переписи населения США.  
   
 -   **Шейп-файлы ESRI.** Шейп-файлы ESRI содержат данные, соответствующие формату хранения пространственных данных Института исследования окружающей среды. (Environmental Systems Research Institute, ESRI). Шейп-файлы ESRI представляют собой набор файлов. Данные в SHP-файле указывают на географические или геометрические фигуры. Данные в DBF-файле содержат в себе атрибуты фигур. Чтобы просмотреть карту в режиме конструктора или выполнить ее на сервере отчетов, оба файла должны находиться в одной и той же папке. При добавлении пространственных данных из локального SHP-файла пространственные данные внедряются в отчет. Чтобы пространственные данные извлекались динамически во время выполнения, передайте шейп-файлы ESRI на сервер отчетов и укажите их в качестве источника пространственных данных. Дополнительные сведения см. в разделе [Поиск шейп-файлов ESRI для карты](https://go.microsoft.com/fwlink/?linkid=178814).  
   
@@ -224,7 +224,7 @@ ms.locfileid: "56290193"
   
  Если при просмотре отчета-карты результат не соответствует ожиданиям, причины могут быть различными. Чтобы выделить и разрешить отдельные проблемы, полезно работать с каждым слоем в отдельности. Используйте панель «Карта», чтобы выбрать слой и легко изменить его видимость.  
   
- Дополнительные сведения о проблемах, связанных с отчетами-картами, см. статью [Устранение неполадок в отчетах: отчеты-карты (построитель отчетов и службы SSRS)](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md).  
+ Дополнительные сведения о проблемах, связанных с отчетами-картами, см. в разделе [Устранение неполадок в отчетах: отчеты-карты (построитель отчетов и службы SSRS)](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
 ##  <a name="HowTo"></a> Инструкции  
  В данном разделе содержатся пошаговые инструкции, описывающие, как работать с картами и слоями карт в отчетах.  
@@ -250,6 +250,6 @@ ms.locfileid: "56290193"
   
  [Добавление на карту пользовательских местоположений (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
   
- [Устранение неполадок в отчетах: отчеты-карты (построитель отчетов и службы SSRS)](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md).  
+ [Устранение неполадок в отчетах: отчеты-карты (построитель отчетов и службы SSRS)](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

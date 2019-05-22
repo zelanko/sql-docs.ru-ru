@@ -2,21 +2,21 @@
 title: Журнал выполнения сервера отчетов и представление ExecutionLog3 | Документы Майкрософт
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [Reporting Services], execution
 - execution logs [Reporting Services]
 ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 17819ebf76409602108fe6eaa656a44190a12ab0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: ef54bf0cdc471b814a09ad0638f81655c7c02c61
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52414102"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65619689"
 ---
 # <a name="report-server-executionlog-and-the-executionlog3-view"></a>Журнал выполнения сервера отчетов и представление ExecutionLog3
   Журнал выполнения для сервера отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]содержит сведения об отчетах, которые создаются на одном или нескольких серверах в масштабном развертывании в собственном режиме или в ферме SharePoint. Журнал выполнения отчетов можно использовать для изучения частоты, с которой запрашивается отчет, частоты использования различных форматов вывода и времени обработки в миллисекундах, занимаемого каждой фазой обработки. Журнал содержит сведения о продолжительности времени, затраченного на выполнение запроса набора данных отчета, и времени, затраченного на обработку данных. Администраторы сервера отчетов могут просматривать информацию журнала, выявлять задачи, выполняющиеся продолжительное время, и вносить предложения для разработчиков отчетов в тех областях организации отчета (набор данных или обработка), в которых они могут проводить улучшения.  
@@ -260,8 +260,6 @@ select * from ExecutionLog3 order by TimeStart DESC
   
 -   **ExternalImages**  
   
-     Добавлено в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
-  
      Значение указывается в миллисекундах. Эти данные могут использоваться для диагностики проблем производительности. Время, необходимое для получения изображений от внешнего веб-сервера, может замедлить выполнение отчета в целом.  
   
     ```  
@@ -273,8 +271,6 @@ select * from ExecutionLog3 order by TimeStart DESC
     ```  
   
 -   **Соединения**  
-  
-     Добавлено в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
   
      Многоуровневая структура  
   
@@ -322,9 +318,9 @@ select * from ExecutionLog2 order by TimeStart DESC
  В следующей таблице описаны данные, которые перехватываются в журнале выполнения отчетов  
   
 |Столбец|Описание|  
-|------------|-----------------|  
+|------------|------------------------------------------------------------|  
 |InstanceName|Имя экземпляра сервера отчетов, обработавшего запрос.|  
-|ReportPath|Структура пути к отчету.  Например, отчет с именем test, который находится в корневом каталоге в диспетчере отчетов, будет иметь значение ReportPath, равное "/test".<br /><br /> Отчет с именем test, который сохранен в папке samples в диспетчере отчетов, будет иметь значение ReportPath, равное "/Samples/test/".|  
+|ReportPath|Структура пути к отчету. Отчет, сохраняемый в корневой папке под именем "test", будет иметь путь ReportPath вида "/test".<br /><br /> Отчет с именем "test", сохраняемый в папке "samples", будет иметь ReportPath "/Samples/test/".|  
 |UserName|Идентификатор пользователя.|  
 |ExecutionID||  
 |RequestType|Тип запроса (пользовательский или системный).|  

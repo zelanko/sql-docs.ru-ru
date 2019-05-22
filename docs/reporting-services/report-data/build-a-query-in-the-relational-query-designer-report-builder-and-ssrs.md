@@ -1,28 +1,31 @@
 ---
-title: Построение запроса в конструкторе реляционных запросов (построитель отчетов и службы SSRS) | Документация Майкрософт
-ms.date: 03/01/2017
+title: Создание запроса в построителе реляционных запросов (построитель отчетов и SSRS)
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
-ms.assetid: 28b25861-f3b4-4c3e-a9b0-03d6e4cfea26
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 9c2e626cb890343f42095a1702942a5aefc37a75
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 04/25/2019
+ms.openlocfilehash: 67b64a85a8f36fc7c370129ce8524e131a91f6a1
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021668"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65573246"
 ---
 # <a name="build-a-query-in-the-relational-query-designer-report-builder-and-ssrs"></a>Построение запроса в конструкторе реляционных запросов (построитель отчетов и службы SSRS)
-  С помощью конструктора запросов можно указывать, какие данные должны быть получены для набора данных отчета из внешнего источника данных. Конструктор запросов используется при построении запроса с помощью мастера или создании запроса набора данных.  
+
+С помощью конструктора запросов можно указывать, какие данные должны быть получены для набора данных отчета из внешнего источника данных. Конструктор запросов используется при построении запроса с помощью мастера или создании запроса набора данных.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+> [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
- Набор данных основан на источнике данных. От типа источника данных и среды создания отчетов зависит, какой конструктор запросов открывается при определении запроса набора данных. Функции конструктора запросов различаются в зависимости от базового источника данных. Дополнительные сведения о слоях данных см. в разделе [Подключения к данным, источники данных и строки подключения в построителе отчетов](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34) или [Подключения к данным, источники данных и строки подключения &#40;построитель отчетов и службы SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
-  
+ Набор данных основан на источнике данных. От типа источника данных и среды создания отчетов зависит, какой конструктор запросов открывается при определении запроса набора данных. Функции конструктора запросов различаются в зависимости от базового источника данных. Дополнительные сведения об уровнях данных см. в разделе [Подключения к данным, источники данных и строки подключения в построителе отчетов](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).
+
  Конструктор запросов можно использовать для выполнения следующих задач:  
   
 -   Просмотр метаданных нескольких схем из внешнего источника данных.  

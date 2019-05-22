@@ -1,22 +1,22 @@
 ---
 title: Справочник по параметрам доступа по URL-адресу | Документы Майкрософт
-ms.date: 09/09/2015
+ms.date: 05/10/2019
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], display options
 - URL access [Reporting Services], report display parameters
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: e0848c1574a5ca46c1db922be72b0dceedf091ed
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 4e5627b752099438ad19f3ba31792f08666abdfe
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52515123"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65620594"
 ---
 # <a name="url-access-parameter-reference"></a>Ссылка на параметр доступа по URL-адресу
   Чтобы настроить внешний вид отчетов служб [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)], можно использовать приведенные здесь параметры как часть URL-адреса. В этом разделе перечислены основные параметры. Параметры не учитывают регистр символов и начинаются с префикса параметра *rs:* , если направлены на сервер отчетов, и с префикса параметра *rc:* , если направлены в средство просмотра HTML-страниц. Также можно указать конкретные параметры устройств или модулей подготовки отчетов. Дополнительные сведения о параметрах, определяемых устройством, см. в разделе [Указание настройки сведений об устройстве в URL-адресе](../reporting-services/specify-device-information-settings-in-a-url.md).  
@@ -35,7 +35,7 @@ ms.locfileid: "52515123"
 -   [Команды веб-части средства просмотра отчетов (rv:)](#bkmk_webpart)  
   
 ##  <a name="bkmk_htmlviewer"></a> Команды средства просмотра HTML-страниц (rc:)  
- Команды средства просмотра HTML-страниц используются для взаимодействия с этим средством (например, из диспетчера отчетов). Они имеют префикс *rc:*.  
+ - Команды средства просмотра HTML-страниц используются для взаимодействия с этим средством и имеют префикс *rc:*.
   
 -   *Панель инструментов* :  
                   Показывает или скрывает панель инструментов. Если этот параметр имеет значение **false**, остальные параметры не учитываются. Если этот параметр опустить, панель инструментов отображается автоматически для тех форматов подготовки к просмотру, которые ее поддерживают. По умолчанию этот параметр имеет значение **true**.  

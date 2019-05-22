@@ -2,21 +2,21 @@
 title: Предварительная загрузка кэша (диспетчер отчетов) | Документы Майкрософт
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 helpviewer_keywords:
 - cache [Reporting Services]
 - preloading cache
 ms.assetid: 152a1051-8aa5-4c01-bc85-f8be8971b0cd
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 0ebb6fe63178870a5b76383523fc04c9472a4659
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 9c92612f58461f1fc94551396b364087cb3c05c3
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021879"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581459"
 ---
 # <a name="preload-the-cache-report-manager"></a>выполнить предварительную загрузку кэша (диспетчер отчетов)
   Можно предварительно загрузить кэш для общего набора данных путем создания плана обновления кэша для общего набора данных.  
@@ -111,7 +111,7 @@ ms.locfileid: "50021879"
   
 17. Выберите один из следующих двух режимов кэша и настройте время истечения следующим образом:  
   
-    -   Чтобы срок действия кэшированной копии истек через определенное время, выберите **Кэшировать временную копию отчета. Срок действия копии отчета заканчивается через несколько минут.** Введите срок действия отчета (в минутах).  
+    -   Чтобы срок действия кэшированной копии истекал через определенный период времени, щелкните **Кэшировать временную копию отчета. Срок действия копии отчета заканчивается через несколько минут.** Введите срок действия отчета (в минутах).  
   
     -   Чтобы срок действия кэшированной копии истек в соответствии с расписанием, выберите **Кэшировать временную копию отчета. Срок действия копии отчета истекает в соответствии со следующим расписанием.** Нажмите кнопку **Настроить**или выберите общее расписание для настройки истечения срока действия отчета.  
   

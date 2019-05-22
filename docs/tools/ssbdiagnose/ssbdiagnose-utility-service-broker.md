@@ -1,5 +1,5 @@
 ---
-title: (компонент Service Broker) программа ssbdiagnose | Документация Майкрософт
+title: Программа ssbdiagnose (Service Broker) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -26,17 +26,21 @@ ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cc67193013c0ea546f69aaa87fb1fb0aa0ad7cac
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: bae9ec6ddd1d3098c04dc1afaaebc189ae079959
+ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590548"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65821094"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>Программа ssbdiagnose (компонент Service Broker)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Программа **ssbdiagnose** сообщает о проблемах в диалогах [!INCLUDE[ssSB](../../includes/sssb-md.md)] или в конфигурации службы [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Проверка конфигурации может быть выполнена для одной или для двух служб. Сведения о неполадках могут выводиться в окне командной строки в виде удобочитаемого текста или в формате XML, который может быть перенаправлен в файл или в другую программу.  
-  
+  Программа **ssbdiagnose** сообщает о проблемах в диалогах [!INCLUDE[ssSB](../../includes/sssb-md.md)] или в конфигурации службы [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Проверка конфигурации может быть выполнена для одной или для двух служб. Сведения о неполадках могут выводиться в окне командной строки в виде удобочитаемого текста или в формате XML, который может быть перенаправлен в файл или в другую программу.
+
+> [!NOTE]
+> Программа ssbdiagnose больше не устанавливается с последней версией SQL Server Management Studio (SSMS) 18.0. Для использования последней версии ssbdiagnose установите [SSMS 17.9.1](../../ssms/release-notes-ssms.md#download-ssms-1791).
+> Необходимость установки предыдущего выпуска SSMS для получения новейшей версии ssbdiagnose будет устранена в будущем выпуске. SSMS 18.x можно использовать параллельно с версией 17.x, установив их на одном компьютере.
+
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
@@ -118,7 +122,7 @@ ssbdiagnose
  **-IGNORE** _error_id_  
  Указывает, что ошибки и сообщения, имеющие заданное значение *error_id* , не будут включены в отчет. Параметр **-IGNORE** можно указать несколько раз, чтобы запретить вывод сообщений с различными идентификаторами.  
   
- **\<baseconnectionoptions >**  
+ **\<baseconnectionoptions>**  
  Задает основные сведения о соединении, которые используются программой **ssbdiagnose** , если параметры соединения не включены в определенное предложение. Сведения о соединении, заданные в специальном предложении, переопределяют сведения **baseconnectionoption** . Приоритеты учитываются по каждому параметру отдельно. Например, если в **baseconnetionoptions** указываются оба параметра **-S** и **-d**, а в **toconnetionoptions** указывается только **-d**, то **ssbdiagnose** использует -S из **baseconnetionoptions** и -d из **toconnetionoptions**.  
   
  **CONFIGURATION**  
@@ -127,7 +131,7 @@ ssbdiagnose
  **FROM SERVICE** _service_name_  
  Указывает службу, которая является инициатором диалога.  
   
- **\<fromconnectionoptions >**  
+ **\<fromconnectionoptions>**  
  Задает сведения, необходимые для соединения с базой данных, в которой находится вызывающая служба. Если параметры **fromconnectionoptions** не указаны, то **ssbdiagnose** использует для подключения к базе данных инициатора сведения о соединении из **baseconnectionoptions** . Если параметры **fromconnectionoptions** задаются, то в них должна быть указана база данных, содержащая службу инициатора. Если параметры **fromconnectionoptions** не указываются, в **baseconnectionoptions** необходимо указать базу данных инициатора.  
   
  **TO SERVICE** _service_name_[, *broker_id* ]  
@@ -143,13 +147,13 @@ FROM sys.databases
 WHERE database_id = DB_ID();  
 ```  
   
- **\<toconnectionoptions >**  
+ **\<toconnectionoptions>**  
  Задает сведения, необходимые для соединения с базой данных, где размещается целевая служба. Если параметры **toconnectionoptions** не указаны, то **ssbdiagnose** использует для подключения к целевой базе данных сведения о соединении из **baseconnectionoptions** .  
   
  **MIRROR**  
  Указывает, что связанная служба [!INCLUDE[ssSB](../../includes/sssb-md.md)] размещается в зеркальной базе данных. Программа**ssbdiagnose** проверяет, является ли маршрут к службе зеркальным маршрутом, где в инструкции CREATE ROUTE был указан параметр MIRROR_ADDRESS.  
   
- **\<mirrorconnectionoptions >**  
+ **\<mirrorconnectionoptions>**  
  Позволяет задать сведения, необходимые для соединения с зеркальной базой данных. Если параметры **mirrorconnectionoptions** не указаны, то **ssbdiagnose** использует для подключения к зеркальной базе данных сведения о соединении из **baseconnectionoptions** .  
   
  **ON CONTRACT** _contract_name_  
@@ -204,7 +208,7 @@ WHERE database_id = DB_ID();
  **-TIMEOUT** _timeout_interval_  
  Задает время выполнения отчета **RUNTIME** в секундах. Если параметр **-TIMEOUT** не задан, то отчет может выполняться бесконечно долго. Параметр **-TIMEOUT** используется только для отчетов **RUNTIME**, а не для отчетов **CONFIGURATION**. Работу программы **ssbdiagnose** можно завершить нажатием клавиш CTRL+C, если параметр **-TIMEOUT** не указан, а также если нужно завершить отчет до истечения времени ожидания. Параметр*timeout_interval* должен быть числом от 1 до 2 147 483 647.  
   
- **\<runtimeconnectionoptions >**  
+ **\<runtimeconnectionoptions>**  
  Задает сведения для соединения с базой данных, где содержатся службы, связанные с отслеживаемыми элементами диалога. Если все службы расположены в одной базе данных, нужно указать только одно предложение **CONNECT TO** . Если службы находятся в разных базах данных, то предложение **CONNECT TO** необходимо указать для каждой базы данных. Если параметры **runtimeconnectionoptions** не указаны, то **ssbdiagnose** использует сведения о подключении из **baseconnectionoptions**.  
   
  **-E**  
