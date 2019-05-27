@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 01bd2ad7-09b7-49ae-ad80-83f25da301aa
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f7fdd611d1757712baa13e58ba31d78a2081f3d7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ef207028ab1b4f6bc084f3f4e515ae37630b771d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62728110"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66078429"
 ---
 # <a name="lesson-7-create-measures"></a>Занятие 7: Создание мер
   На этом занятии мы создадим меры, которые можно будет добавить в модель. Как и вычисляемые столбцы, созданные на предыдущем занятии, мера — это вычисление, создаваемое с помощью DAX-формулы. Однако в отличие от вычисляемых столбцов меры вычисляются на основе выбранного пользователем *фильтра*, например на основе выбора пользователя, определенного столбца или среза, добавленного в поле «Метки строк» в сводной таблице.   Значение для каждой ячейки в фильтре вычисляется с помощью меры. Меры — это мощные гибкие вычисления, которые могут быть включены практически во все табличные модели для выполнения динамических вычислений с числовыми данными. Дополнительные сведения см. в разделе [Меры (табличные службы SSAS)](tabular-models/measures-ssas-tabular.md).  

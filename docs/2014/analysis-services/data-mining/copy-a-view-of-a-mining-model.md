@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - clipboards [data mining]
@@ -15,12 +14,12 @@ ms.assetid: 768372db-e5b4-4990-b459-03d854fd9a6d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 62d699d068832e1b3e264a9346d03553b9a05d80
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 84abbb855673183910099f0a34d70702d34da7fd
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62715271"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66085602"
 ---
 # <a name="copy-a-view-of-a-mining-model"></a>Копирование представления модели интеллектуального анализа данных
   Вкладка **Средство просмотра моделей интеллектуального анализа данных** в конструкторе интеллектуального анализа данных в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] использует отдельное средство просмотра для каждого типа модели интеллектуального анализа данных. Некоторые средства просмотра имеют компоненты, из которых можно скопировать содержимое в буфер обмена, а затем вставить это содержимое в документ или в программу обработки изображений. Такой функциональностью обладают следующие компоненты.  

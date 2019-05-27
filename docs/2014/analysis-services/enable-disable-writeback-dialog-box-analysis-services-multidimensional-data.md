@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.partitiondesigner.writebackenabledisable.f1
@@ -13,12 +12,12 @@ ms.assetid: 2d254393-3f0d-4b70-8b98-87159f9f3639
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b6682d8ced6b80e12aea783857da548498641ddd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 498d1af6f96791b9ee3912c09a3667e139f30ff0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62731506"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66081288"
 ---
 # <a name="enable-disable-writeback-dialog-box-analysis-services---multidimensional-data"></a>Включение и отключение обратной записи диалоговое окно (службы Analysis Services — многомерные данные)
   Диалоговое окно **Включение или отключение обратной записи** включает или отключает обратную запись для группы мер в кубе. Включение обратной записи в группе мер определяет секцию обратной записи и создает таблицу обратной записи для этой группы мер. Отключение обратной записи в группе мер удаляет секцию обратной записи, но сохраняет таблицу обратной записи, чтобы избежать непредвиденной потери данных. Диалоговое окно **Включение/отключение обратной записи** отображается следующими способами:  

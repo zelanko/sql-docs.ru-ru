@@ -10,15 +10,15 @@ helpviewer_keywords:
 - full-text search [SQL Server], FDHOST Launcher (MSSQLFDLauncher) service account
 - FDHOST Launcher (MSSQLFDLauncher) [SQL Server]
 ms.assetid: 3ab1d101-7ae0-488f-9b57-468e2517b737
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d702e1dcf8bc710324e7593ebe469317d9f43e68
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8f327cefbb916bf83f695db40a1d3c3025b7a5d2
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63237908"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66010938"
 ---
 # <a name="set-the-service-account-for-the-full-text-filter-daemon-launcher"></a>Настройка учетной записи службы средства запуска управляющей программы полнотекстовой фильтрации
   В этом разделе объясняется, как задать учетную запись службы для службы запуска управляющей программы полнотекстовой фильтрации SQL Server (MSSQLFDLauncher) при использовании диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Служба запуска управляющей программы полнотекстовой фильтрации SQL используется в полнотекстовом поиске ssNoVersion для запуска хост-процесса управляющей программы полнотекстовой фильтрации, которая выполняет фильтрацию полнотекстового поиска и разбивку по словам. Для использования полнотекстового поиска эта служба должна быть запущена.  

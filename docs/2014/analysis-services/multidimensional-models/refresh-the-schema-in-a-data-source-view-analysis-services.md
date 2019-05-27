@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - data source views [Analysis Services], schema updates
@@ -15,12 +14,12 @@ ms.assetid: 634b0504-1437-43e7-8ac7-3248ac7989a3
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ad3d6233ef9678933aa9492ccc81f306186592b3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 32c9db875afff68125fcc14ef1587c7c4f80302e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62737098"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66073244"
 ---
 # <a name="refresh-the-schema-in-a-data-source-view-analysis-services"></a>Обновление схемы в представлении источника данных (службы Analysis Services)
   После определения представления источников данных в проекте или базе данных [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] можно изменить схему базового источника данных. Эти изменения не определяются и не обновляются автоматически в проекте разработки. Более того, при развертывании проекта на сервере будут возникать ошибки обработки, если службы Analysis Services не смогут подключиться к внешнему источнику данных.  

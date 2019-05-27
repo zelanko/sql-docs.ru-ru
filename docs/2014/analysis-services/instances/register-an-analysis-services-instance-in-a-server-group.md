@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 5fd3826b-8f75-48eb-910c-bf784163e53b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9552bd8fac2012ead7359f38776d368b85e0dbd2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 29ecf740948d9e02d258a5daa03859d3867eb463
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62730110"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66079649"
 ---
 # <a name="register-an-analysis-services-instance-in-a-server-group"></a>Регистрация экземпляра служб Analysis Services в группе серверов
   При наличии большого числа экземпляров сервера служб Analysis Services можно создавать группы серверов в среде Management Studio и тем самым упростить администрирование сервера. Группа серверов должна обеспечить близость связанных серверов внутри рабочей области администрирования. Предположим, нужно управлять десятью отдельными экземплярами служб Analysis Services. Группирование по режиму сервера, времени работы или отделу или региону может упростить просмотр и подключение к экземплярам с одинаковыми характеристиками. Вы можете также добавить описательную информацию, которая поможет вспомнить, каким образом используется сервер.  

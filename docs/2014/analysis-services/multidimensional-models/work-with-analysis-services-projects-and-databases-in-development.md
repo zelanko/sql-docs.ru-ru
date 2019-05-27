@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services, projects
@@ -13,12 +12,12 @@ ms.assetid: 39cf9166-fa92-40fe-9962-210a52461257
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 05ec77f2a7c4224b06e764997b6c01ee18ac0579
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3ab225433ca4ab08d7a7c013fa30dd37c05b9143
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62740808"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66072454"
 ---
 # <a name="working-with-analysis-services-projects-and-databases-during-the-development-phase"></a>Работа с проектами и базами данных служб Analysis Services на этапе разработки
   База данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] может быть разработана в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] в режиме проекта или в режиме в сети.  

@@ -1,24 +1,23 @@
 ---
-title: Занятие 13. Анализ в Excel | Документация Майкрософт
+title: Урок 13. Анализ в Excel | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: ce717071-193b-4c99-9654-c7a613e16327
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8175fee7c1bf1f6472c8e302cf13c418295b9380
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6a1564a2b190703e011624162ad4bc25fd5de794
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62729450"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66079192"
 ---
-# <a name="lesson-13-analyze-in-excel"></a>Занятие 13. Анализ в Excel
+# <a name="lesson-13-analyze-in-excel"></a>Урок 13. Анализ в Excel
   В этом занятии описан порядок использования функции «Анализ в Excel» в среде [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] для открытия Excel, автоматического создания соединения с источником данных, которым служит рабочая область модели, и автоматического добавления сводной таблицы на рабочий лист. Функция анализа в Excel предназначена для обеспечения быстрого и легкого способа проверки эффективности модели до ее развертывания. На этом занятии вы не будете заниматься анализом данных. Цель этого занятия — ознакомить создателя модели со средствами проверки архитектуры разрабатываемых моделей. В отличие от компонента «Анализ в Excel», предназначенного для разработчиков моделей, конечные пользователи будут использовать клиентские приложения для работы с отчетами, например Excel или [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] для подключения и просмотра данных в развернутых моделях.  
   
  Чтобы выполнить это занятие, необходимо, чтобы Excel был установлен на том же компьютере, что и [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. Дополнительные сведения см. в разделе [Анализ в Excel (табличные службы SSAS)](tabular-models/analyze-in-excel-ssas-tabular.md).  

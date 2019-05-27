@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.accuracychart.columnmapping.f1
@@ -13,12 +12,12 @@ ms.assetid: f8b1193c-5c86-4c7e-8e35-158d293184fa
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c1027310bdf012f00e7b70981521088d69d08598
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3fb4771c7345eb270e91a377d2755a25606f9a93
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62729891"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66080414"
 ---
 # <a name="input-selection-tab-mining-accuracy-chart-view"></a>Вкладка «Выбор входа» (представление диаграммы точности интеллектуального анализа данных)
   Вкладка **Выбор входа** конструктора **Диаграмма точности интеллектуального анализа данных** позволяет указать источник данных, используемых для проверки модели и построения диаграммы точности.  

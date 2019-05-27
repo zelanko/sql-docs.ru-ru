@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Tree Viewer [Analysis Services]
@@ -24,12 +23,12 @@ ms.assetid: 0c96d518-ed20-40b7-8d62-b26ad6244287
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2f7b0d8a4c5e3403e326cd88d2a7eafa5726addb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5f7ac483e0883386f620a654d6257a49fa8baf52
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62689422"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66085939"
 ---
 # <a name="browse-a-model-using-the-microsoft-tree-viewer"></a>Просмотр модели с помощью средства просмотра деревьев (Майкрософт)
   Средство просмотра деревьев [!INCLUDE[msCoName](../../includes/msconame-md.md)] в службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] отображает деревья принятия решений, построенные с помощью алгоритма дерева принятия решений [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Алгоритм дерева принятия решений [!INCLUDE[msCoName](../../includes/msconame-md.md)] — это гибридный алгоритм дерева принятия решений, который поддерживает и классификацию, и регрессию. Поэтому это средство просмотра можно использовать для просмотра моделей, основанных на алгоритме линейной регрессии [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Алгоритм дерева принятия решений [!INCLUDE[msCoName](../../includes/msconame-md.md)] используется для прогнозирующего моделирования дискретных и непрерывных атрибутов. Дополнительные сведения об этом алгоритме см. в разделе [Microsoft Decision Trees Algorithm](microsoft-decision-trees-algorithm.md).  

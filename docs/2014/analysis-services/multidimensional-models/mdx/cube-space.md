@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: c3a012b4-9ca0-4fb8-9c26-5ecc0e2e2b2b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 029492a13a3b332ba05ff7f0b84ea06a4d2a0fd5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b663f86b16576360083050c5709433eed7d4dc4a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62725589"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66074712"
 ---
 # <a name="cube-space"></a>Пространство куба
   Пространство куба — это совокупность элементов иерархий атрибутов куба с мерами куба. Поэтому пространство куба определяется комбинаторным сочетанием всех элементов иерархии атрибута в кубе и мер куба и определяет максимальный размер куба. Важно иметь ввиду, что это пространство включает все возможные сочетания элементов иерархии атрибута, даже сочетания, которые могут показаться невозможными в реальном мире, например сочетания, где городом является Париж, а странами — Англия, Испания, Япония или Индия, и т. д.  

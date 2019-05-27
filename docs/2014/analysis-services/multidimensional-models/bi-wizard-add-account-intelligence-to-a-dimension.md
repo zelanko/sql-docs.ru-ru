@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], Business Intelligence enhancements
@@ -15,12 +14,12 @@ ms.assetid: 36f454ae-a9f2-4a59-b19d-40310af9f901
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 069611d1466f2810b958a7ad825f5abb0895f63f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 111948911c0fe7bdc0e7ce260a15b8efee50e9db
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62701379"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66076902"
 ---
 # <a name="add-account-intelligence-to-a-dimension"></a>Добавление логики операций со счетами к измерению
   Добавьте расширение интеллектуальной обработки счетов к кубу или измерению, чтобы присвоить стандартные классификации счетов, например «доходы» и «расходы», элементам атрибута «счет». Это расширение также идентифицирует типы счетов (такие как «Актив» и «Долг») и назначает соответствующую статистическую обработку каждому типу счета. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] может использовать классификации для выполнения статистического вычисления во времени.  

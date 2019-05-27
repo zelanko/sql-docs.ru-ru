@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], validating
@@ -19,12 +18,12 @@ ms.assetid: 5c12f202-2ed9-41fa-bee2-0f7ab3ff058a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7949729f3ebee87d06e5e591c46513c111b70016
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 22f8733c816014bbdd29b44c4ed85d5fc3d2127d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62718181"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66085791"
 ---
 # <a name="classification-matrix-analysis-services---data-mining"></a>Матрица классификации (службы Analysis Services — интеллектуальный анализ данных)
   *Матрица классификации* сортирует все варианты из модели по категориям, определяя, соответствовало ли прогнозируемое значение действительному. Затем все варианты в каждой категории пересчитываются, и полученные количества выводятся в виде матрицы. Матрица классификации — это стандартный инструмент для оценки статистических моделей, иногда ее называют *матрицей противоречий*.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - time dimensions [Analysis Services]
@@ -18,12 +17,12 @@ ms.assetid: 6d692856-4b01-4dca-a650-f97ac220c114
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3eec8ddf87193eddbafc5a56e8e397c83f142a91
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 76b5027f19eade18aa07187c1673f6ad27079391
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62726685"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66075941"
 ---
 # <a name="create-a-date-type-dimension"></a>Создание измерения типа Date
   В службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]измерение времени является типом измерения, атрибуты которого отражают временные периоды, например годы, семестры, кварталы, месяцы и дни. Периоды в измерении времени обеспечивают временные уровни гранулярности для анализа и создания отчетов. Атрибуты организуются в иерархии, при этом гранулярность измерения времени преимущественно определяется требованиями, предъявляемыми коммерческой деятельностью и отчетностью к данным с предысторией. Например, в приложениях бизнес-аналитики большая часть финансовых данных и данных о продажах использует помесячную или поквартальную гранулярность.  

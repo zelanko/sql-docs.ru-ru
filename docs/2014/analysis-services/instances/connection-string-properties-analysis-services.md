@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 29a00a41-5b0d-44b2-8a86-1b16fe507768
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ee2c99e0e5a58bda4b3bc7cb090e3705b7d9cc5c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 83ead8522e506fcf4ab81d2e904c354424cdb6fd
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62703795"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66080159"
 ---
 # <a name="connection-string-properties-analysis-services"></a>Свойства строки подключения (службы Analysis Services)
   В этом разделе описываются свойства строки подключения, которые можно задать в конструкторе или одном из средств управления. Также эти свойства есть в строках подключения, созданных клиентскими приложениями, которые подключаются и запрашивают данные служб Analysis Services. Описывается только подмножество доступных свойств. Полный список содержит множество свойств сервера и базы данных, позволяющих настроить соединение для конкретного приложения независимо от того, как экземпляр или база данных настроены на сервере.  

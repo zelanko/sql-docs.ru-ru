@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - modifying named calculations
@@ -15,12 +14,12 @@ ms.assetid: 729e7b12-6185-4b73-8bcb-cfe459b15355
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c67d7becd2fae8557a734424f9f767e17b3ba7ea
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a69d5194c6eea3bc81676e8c0c3b1cac1d06270c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62726464"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66075567"
 ---
 # <a name="define-named-calculations-in-a-data-source-view-analysis-services"></a>Определение именованных вычислений в представлении источника данных (службы Analysis Services)
   Именованное вычисление является выражением SQL, представленным в виде вычисляемого столбца. Данное выражение выглядит и работает как столбец таблицы. Именованное вычисление позволяет расширить реляционную схему таблиц или представлений, существующих в представлении источника данных, не изменяя таблицы или представления в базовом источнике данных. Рассмотрим следующие примеры:  

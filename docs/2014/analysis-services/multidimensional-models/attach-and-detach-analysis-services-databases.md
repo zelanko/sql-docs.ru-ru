@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.ssms.detachdatabase.f1
@@ -19,12 +18,12 @@ ms.assetid: 41887413-2d47-49b8-8614-553cb799fb18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c73417ea9d74588c55177527abdbb42a33c4496e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4447f58baaa5ea88a48c67a9a32fcda77681d8d4
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62727089"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66077487"
 ---
 # <a name="attach-and-detach-analysis-services-databases"></a>Подключение и отключение баз данных служб Analysis Services
   Часто администратору базы данных (dba) служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] необходимо на некоторое время перевести базу данных в режим "вне сети", а затем перевести ее в режим "в сети" на том же или на другом экземпляре сервера. Такие ситуации часто обусловлены потребностями предприятия, например необходимостью переместить базу данных на другой диск для повышения производительности, освободить место для увеличения размера базы данных или при обновлении какого-либо продукта. Для всех этих и других случаях `Attach` и `Detach` команды включают [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] переводить базу данных перевести в автономный режим и его обратно через Интернет с минимальными усилиями.  

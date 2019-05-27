@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: fd1ea582-29a1-4154-8de2-47bab3539b4d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c0f3d10776e661eaa15ed39a141fe06608d8dbde
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ccdf0285dc110cde89e08778f6badf56f586a5ab
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62722636"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66085147"
 ---
 # <a name="cross-validation-formulas"></a>Формулы перекрестной проверки
   Если создается отчет перекрестной проверки, он содержит меры точности для каждой модели, которые зависят от типа модели интеллектуального анализа данных (т. е. алгоритма, который использовался для ее создания), типа данных прогнозируемого атрибута и значения прогнозируемого атрибута (если есть).  

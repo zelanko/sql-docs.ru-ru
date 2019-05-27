@@ -14,15 +14,15 @@ helpviewer_keywords:
 - sql:limit-value
 - filtering [SQLXML]
 ms.assetid: 402c21cf-9566-463f-a928-f94270c11db3
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 608b14de16b338225be7e500a77cb612b5ee9312
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c5d49a8159601236d280aed809fa41287cd4ab22
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62717797"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66013566"
 ---
 # <a name="sqllimit-field-and-sqllimit-value-sqlxml-40"></a>Заметки sql:limit-field и sql:limit-value (SQLXML 4.0)
   Массовая загрузка XML обрабатывает заметки `sql:limit-field` и `sql:limit-value` в соответствии с их определением. Дополнительные сведения см. в разделе [фильтрация значений при помощи SQL: Limit-поля и SQL: Limit-значение &#40;SQLXML 4.0&#41;](annotation-interpretation-sql-limit-field-and-sql-limit-value.md).  

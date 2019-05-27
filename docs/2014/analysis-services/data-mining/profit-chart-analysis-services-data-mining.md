@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - accuracy, charting
@@ -17,12 +16,12 @@ ms.assetid: 760ee051-6fd8-48e3-8d2e-82db3ab45e45
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b9a094303b62bf134d750ed1b94c9cd0126e188d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1a64eacb1219e239ad894d9922db5a5032ed525b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62732951"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66083093"
 ---
 # <a name="profit-chart-analysis-services---data-mining"></a>Диаграмма роста прибыли (службы Analysis Services — интеллектуальный анализ данных)
   В диаграмме роста прибыли отображается теоретический прирост прибыли, связанный с использованием модели интеллектуального анализа данных. Например предположим, что модель прогнозирует, с какими заказчиками компании следует связаться в бизнес-сценария. В этом случае следует добавить в диаграмму роста прибыли данные о стоимости проведения кампании целевой рассылки. И тогда в готовой диаграмме вы увидите сравнение прибыли при правильном выборе целевых клиентов и при обращении к клиентам случайным образом.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - default members
@@ -16,12 +15,12 @@ ms.assetid: db487856-ee21-49c3-aa08-d9136e193374
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 49120d810eac622d75a8d3691654b65b78d0d570
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 959645223eacec6c000ddbfa23615b7949d10d5a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62703779"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66077421"
 ---
 # <a name="define-a-default-member"></a>Определение элемента по умолчанию
   Элемент по умолчанию иерархии атрибута предназначен для вычисления выражений в том случае, если иерархия атрибутов не включена в запрос. Этот элемент не обрабатывается, если запрос содержит иерархию атрибута или пользовательскую иерархию, в которых присутствует атрибут, являющийся источником иерархии атрибута. В этом случае используется элемент, указанный в запросе.  

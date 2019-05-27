@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 0d2eb34d-78c8-41ff-b92d-49b62c16b2ac
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7d7ab0a864d99e3cade96b7715adf7d307ca355c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fb9ca011cdbbe32ebd6c71cb9ca64967cfbccb9e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62729481"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66079311"
 ---
 # <a name="lesson-1-create-a-new-tabular-model-project"></a>Урок 1. Создание нового проекта табличной модели
   На этом занятии будет создан новый пустой проект табличной модели в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. После создания нового проекта можно начать добавлять данные с помощью мастера импорта таблиц. Помимо создания нового проекта, это занятие также содержит краткий обзор среды создания табличных моделей в [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)].  

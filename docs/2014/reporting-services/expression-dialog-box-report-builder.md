@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10040"
@@ -15,12 +14,12 @@ ms.assetid: e89c4d97-5d41-4b55-8695-79329edac15d
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 119ed4044fa3613e0544f0c9ee60189342bd0a63
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c6f12a39c1456c179187654445947de9ee7d87a9
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63164391"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109148"
 ---
 # <a name="expression-dialog-box-report-builder"></a>Диалоговое окно «Выражение» (построитель отчетов)
   Используйте **выражение** диалоговое окно, чтобы написать [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] свойств элемента выражения для отчетов. Выражения можно использовать для задания многих свойств, в том числе цвета, шрифта, границ. Во время выполнения обработчик отчета вычисляет выражения и заменяет их результатами значения свойств.  

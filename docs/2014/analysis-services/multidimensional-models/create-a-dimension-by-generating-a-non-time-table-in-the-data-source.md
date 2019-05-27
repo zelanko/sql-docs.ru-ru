@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - data sources [Analysis Services], dimensions without data source
@@ -16,12 +15,12 @@ ms.assetid: a37f7a46-7451-4582-ba19-2595196d97bc
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3c3a3bdf67c23669f4d8f80ad03c122f1e987164
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 962df497e804011e69e2a350c24ce41f4c273b6d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62702073"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66076441"
 ---
 # <a name="create-a-dimension-by-generating-a-non-time-table-in-the-data-source"></a>Создание измерения путем формирования в источнике данных таблицы, отличной от таблицы времени
   Для создания измерений в службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]без использования существующего источника данных можно использовать мастер измерений среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] . Для этого на странице мастера **Выберите метод создания** следует выбрать параметр **Создать в источнике данных таблицу, отличную от таблицы времени** . Для создания новой таблицы измерения в базовом источнике данных нужно иметь разрешение на создание объектов в базовом источнике данных. Определение измерения без стандартного представления источников данных можно выполнить с нуля или с помощью шаблона измерения.  

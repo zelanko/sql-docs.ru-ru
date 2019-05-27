@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - decision tree algorithms [Analysis Services]
@@ -15,12 +14,12 @@ ms.assetid: ceaf1370-9dd1-4d1a-a143-7f89a723ef80
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1627a0058336be654dbd18c52e27cdbae614c686
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 009e8d203d9262ee14702b99ad7d0e31d8a16dbb
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62722536"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66084758"
 ---
 # <a name="decision-trees-model-query-examples"></a>Примеры запросов к модели дерева принятия решений
   К модели интеллектуального анализа данных можно создать два вида запросов: запросы содержимого, возвращающие подробные сведения о закономерностях, обнаруженных при анализе, и прогнозирующие запросы, использующие закономерности, содержащиеся в модели, для прогнозирования новых данных. Например, запрос содержимого для модели дерева принятия решений может возвратить статистику относительно числа вариантов на каждом уровне дерева или относительно правил, используемых для выявления разницы между вариантами. Прогнозирующий запрос сопоставляет модель с новыми данными для формирования рекомендаций, классификаций и т. д. Запрос также позволяет получить метаданные, описывающие модель.  

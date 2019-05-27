@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 28f07c70-7132-4d15-9505-4fdf31dc9cc0
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 524fcaea873128ea4bde6ccdc213a29ec31cc77d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2f91cd8a93571b62f57933ff7556004f8c7b42a9
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62657674"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108034"
 ---
 # <a name="processing-options-properties-page-report-manager"></a>Страница «Свойства параметров обработки» (диспетчер отчетов)
   Используйте страницу «Свойства параметров обработки» для задания свойств выполнения выбранного отчета. Эти параметры определяют время обработки данных для отчетов. Их можно настроить таким образом, чтобы данные для отчета извлекались в часы наименьшей нагрузки. Если доступ к отчету осуществляется часто, можно временно кэшировать его копии, чтобы избежать ожидания в случаях, когда несколько пользователей обращаются к одному отчету практически одновременно.  

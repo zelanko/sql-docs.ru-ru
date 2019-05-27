@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - metadata [Analysis Services]
@@ -15,12 +14,12 @@ ms.assetid: c857e48e-64b0-4ffe-900d-a0a3ddafcefb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dca06ce28f496c2ac85417c9ca4326d2ff66cf7b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e03e55451c2340b5f0773e2873127c3551a82aab
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62725898"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66074898"
 ---
 # <a name="grant-read-definition-permissions-on-object-metadata-analysis-services"></a>Предоставление разрешений на чтение описания метаданным объекта (службы Analysis Services)
   Разрешение на чтение описания объекта или метаданных на выбранных объектах позволяет администратору предоставлять разрешение на просмотр информации об объекте без дополнительного предоставления разрешения на изменение описания объекта, изменение структуры объекта или просмотр фактических данных объекта. `Read Definition` разрешения могут быть предоставлены на базы данных, источник данных, измерения, структуры интеллектуального анализа данных и уровни модели интеллектуального анализа данных. Если вам требуется `Read Definition` разрешения для куба, необходимо включить `Read Definition` для базы данных. Помните, что разрешения являются аддитивными. Например, одна роль предоставляет разрешение кубу на чтение метаданных, в то время как вторая роль предоставляет этому же пользователю разрешение измерению на чтение метаданных. Разрешения от двух разных ролей соединяются для предоставления пользователю разрешения как на чтение метаданных для куба, так и метаданных для измерения в рамках этой базы данных.  

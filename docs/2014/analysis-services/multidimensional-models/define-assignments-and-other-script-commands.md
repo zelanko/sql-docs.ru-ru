@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - empty scripts [Analysis Services]
@@ -16,12 +15,12 @@ ms.assetid: f28b9b22-3dc7-4a45-b4eb-2d023f2c94b8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e95dff588932bc7885d2501e3d24cc643ae10272
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: caa3b6f49ce778b78f066abf687a3a51b61cc487
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62699936"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66075823"
 ---
 # <a name="define-assignments-and-other-script-commands"></a>Определение назначений и других команд скриптов
   На вкладке **Вычисления** конструктора кубов щелкните значок **Создать команду скрипта** на панели инструментов для создания пустого скрипта. После создания новый скрипт отображается с пустым именем на панели **Организатор скриптов** на вкладке «Вычисления». Символы, вводимые на панели «Выражения вычисления», отображаются как имя элемента на панели **Организатор скриптов**. Следовательно, можно в первую строку ввести имя с комментарием для упрощения определения скрипта на панели **Организатор скриптов** . Дополнительные сведения см. в разделе [Введение в сценарии многомерных выражений в Microsoft SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=81892). Дополнительные сведения о проблемах производительности, связанных с запросами и вычислениями MDX см в разделе «Написание эффективных многомерных Выражений» [2005 Analysis Services производительности руководство по SQL Server](https://docsbay.net/Microsoft-SQL-Server-2005-Analysis-Services-Performance-Guide).  

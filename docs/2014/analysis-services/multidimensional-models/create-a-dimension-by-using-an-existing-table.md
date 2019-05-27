@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - hierarchies [Analysis Services], dimensions
@@ -16,12 +15,12 @@ ms.assetid: edd96fbe-1b1c-445a-95d6-7a025e0ee868
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e71f45689554a8f45f492eb974815935d112e0e4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5e65c2b8d543455a168bddc1be5ae5594c2ba8c3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62702146"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66076422"
 ---
 # <a name="create-a-dimension-by-using-an-existing-table"></a>Создание измерения с помощью существующей таблицы
   Для создания измерения на основе существующей таблицы в службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]можно использовать мастер измерений среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] . Для этого на странице **Выберите метод создания** мастера измерений необходимо выбрать параметр **Использовать существующую таблицу** . Если выбран этот параметр, мастер сформирует структуру измерения на основе таблиц измерения, их столбцов и всех связей между этими столбцами в существующем представлении источника данных. Мастер делает выборку данных из исходной таблицы и связанных с ней таблиц. На основе этих данных он определяет столбцы атрибутов, основанные на столбцах таблиц измерения, а также иерархии атрибутов (называемые *пользовательскими* иерархиями). Создав измерение с помощью мастера измерений, можно использовать конструктор измерений для добавления, удаления и настройки атрибутов и иерархий в измерении.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], characteristics
@@ -14,12 +13,12 @@ ms.assetid: 9314e749-0918-4862-abaf-a21692188122
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dd00dda1628cd3934d3658ff5b29d9beb5bdb0d2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ecf47eff045aa379a8e67332a82b2045a8569a2a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62702079"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66075692"
 ---
 # <a name="define-cube-dimension-properties"></a>Определение свойств измерения куба
   Измерение куба представляет собой экземпляр измерения базы данных в пределах куба. Измерение базы данных может быть использовано в нескольких кубах, а измерения нескольких кубов могут быть основаны на одном измерении базы данных. В следующей таблице описаны свойства измерения куба.  

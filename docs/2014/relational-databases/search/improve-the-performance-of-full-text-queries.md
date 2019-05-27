@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 ms.assetid: 0658dc74-25eb-4486-bbd6-e85c1f92c272
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7ff22023f9f6f8bcbe1d2a1d0f57557676cea1cc
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 96a37b1b59043079f52ca922f1ab3e7dfc9cc0ba
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353009"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011267"
 ---
 # <a name="improve-the-performance-of-full-text-queries"></a>Улучшение производительности полнотекстовых запросов
   Далее приведен список рекомендаций по повышению производительности обработки полнотекстовых запросов.  
@@ -48,7 +48,7 @@ ms.locfileid: "53353009"
 -   В приложениях, в которых используются предикаты с селективной связью, наилучшей производительности запросов с использованием избирательных реляционных предикатов и неизбирательных полнотекстовых предикатов можно добиться, настроив их на использование оптимизатора запросов. Это позволит оптимизатору запросов определить, может ли он использовать предикат или диапазон для создания эффективного плана запроса. Данный подход более прост и часто более эффективен, чем индексирование реляционных данных в качестве полнотекстовых данных.  
   
 ## <a name="related-resources"></a>Связанные ресурсы  
- [SQL Server 2008 Full-Text Search: Возможности и улучшения](https://go.microsoft.com/fwlink/?LinkId=129544)  
+ [Средство полнотекстового поиска SQL Server 2008: возможности и улучшения](https://go.microsoft.com/fwlink/?LinkId=129544)  
   
 ## <a name="see-also"></a>См. также  
  [sys.dm_fts_memory_buffers (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql)   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - clustering [Data Mining]
@@ -24,12 +23,12 @@ ms.assetid: ec40868a-6dc7-4dfa-aadc-dedf69e555eb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3bf6919230c1621d2b81eb41cd715fc1878a90c5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d48dd57d71d04611947e0ec6158b29c97a6b7646
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62721893"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66084033"
 ---
 # <a name="microsoft-clustering-algorithm-technical-reference"></a>Технический справочник по алгоритму кластеризации (Майкрософт)
   Этот раздел посвящен алгоритму кластеризации [!INCLUDE[msCoName](../../includes/msconame-md.md)] , в том числе параметрам, с помощью которых можно управлять поведением моделей кластеризации. В разделе также содержатся советы по ускорению создания и обработки моделей кластеризации.  

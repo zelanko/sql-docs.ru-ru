@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 81401eac-c619-4fad-ad3e-599e7a6f8493
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 51cc5f71c3a3e7515238aef08e97316e549c0e70
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 894e7d4fb5a0234643cf237e767a8ae999e67496
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62680566"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66087419"
 ---
 # <a name="configure-the-powerpivot-unattended-data-refresh-account-powerpivot-for-sharepoint"></a>Настройка учетной записи автоматического обновления данных PowerPivot (PowerPivot для SharePoint)
   Учетная запись автоматического обновления данных PowerPivot специально предназначена для выполнения заданий по обновлению данных PowerPivot на ферме SharePoint. Настроив его, как разрешить **использовать для обновления данных учетную запись, настроенную администратором** странице расписания обновления данных (см. ниже). Авторы книг, планирующие обновление данных, могут выбрать этот параметр, если желают использовать учетную запись автоматического обновления данных PowerPivot для выполнения задания по обновлению данных. Дополнительные сведения о том, как просматривать параметры учетных данных в расписании обновления данных см. в разделе [Планирование обновления данных &#40;PowerPivot для SharePoint&#41;](schedule-a-data-refresh-powerpivot-for-sharepoint.md).  

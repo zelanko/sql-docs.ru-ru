@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.cubeproperties.errorconfiguration.f1
@@ -15,12 +14,12 @@ ms.assetid: 3f442645-790d-4dc8-b60a-709c98022aae
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0ec0d1acbe1714159d6777f6cb91056e4e14b356
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e8d81a1df5e574c2ae4821176634e439f4ab6b07
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62726039"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66075102"
 ---
 # <a name="error-configuration-for-cube-partition-and-dimension-processing-ssas---multidimensional"></a>Конфигурация ошибок при обработке кубов, секций и измерений (службы SSAS — многомерные данные)
   Свойства конфигурации ошибок для кубов, секций и объектов измерения определяют реакцию сервера на возникновение ошибок целостности данных во время обработки. Обычно такие ошибки вызваны повторяющимися или отсутствующими ключами и значения NULL в ключевом столбце. Хоть запись с ошибкой и не будет добавлена в базу данных, можно задать свойства, которые определят дальнейшую реакцию на ошибку. По умолчанию обработка останавливается. Однако во время разработки куба желательно продолжить обработку при возникновении ошибки для тестирования поведения куба с импортированным данными, даже если они не будут полными.  

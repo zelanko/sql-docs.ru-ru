@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - AUTO_DETECT_PERIODICITY parameter
@@ -15,12 +14,12 @@ ms.assetid: 7807b5ff-8e0d-418d-a05b-b1a9644536d2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3a4bd34c0ce6a84ca4f9050f4c4b428123c379dd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: db8b36fbccc4139071f54ddf9f73f876e9517799
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62721906"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66084060"
 ---
 # <a name="microsoft-linear-regression-algorithm-technical-reference"></a>Технический справочник по алгоритму линейной регрессии (Майкрософт)
   Алгоритм линейной регрессии [!INCLUDE[msCoName](../../includes/msconame-md.md)] — это частный случай алгоритма дерева принятия решений (Майкрософт), оптимизированный для моделирования пар непрерывных атрибутов. В данном разделе описывается реализация алгоритма и настройка его поведения. Приводятся также ссылки на дополнительную информацию о запросах к моделям.  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 9fb2cda3-a122-4a4c-82e0-3454865eef04
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 029d4bdb21adfccbae5ad692669ab5d42964bfc4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c521a3faf0c11cfab7bab337226de647e27cd060
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62729188"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66078644"
 ---
 # <a name="automatically-grouping-attribute-members"></a>Автоматическое группирование элементов атрибута
   При просмотре куба обычно выполняется распределение по измерениям элементов одной иерархии атрибута на основе элементов другой иерархии атрибута. Например, можно сгруппировать продажи по таким признакам, как город, приобретенный товар или пол. Однако при работе с некоторыми типами атрибутов лучше группировать их элементы автоматически с использованием служб [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , основываясь на распределении элементов в рамках иерархии атрибута. Например, с помощью служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] можно объединить заказчиков в группы на основе их годового дохода. При этом пользователь, просматривающий иерархию атрибута, будет видеть названия и значения групп вместо самих элементов групп. Данный подход ограничивает количество отображаемых уровней, что упрощает анализ данных.  

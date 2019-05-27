@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.datasourceviewwizard.namematchingcriteria.f1
@@ -13,12 +12,12 @@ ms.assetid: 7f811e02-0fe6-45c9-a7b7-29c61032d96b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4b3d122ba2c23202e44db7b0677062135ab7ba5e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 866bdea710033a0cfa3bdadb34282c96c810d730
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62743647"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66072396"
 ---
 # <a name="name-matching-data-source-view-wizard-analysis-services"></a>Совпадение имен (мастер представлений источников данных) (службы Analysis Services)
   Страница **Совпадение имен** используется для выбора критерия для определения возможных связей между таблицами, выбранными для представления источников данных, и другими таблицами схемы. Если между этими таблицами не существует никаких связей внешних ключей, этот критерий помогает идентифицировать и добавить все связанные таблицы в представление источника данных. Логические связи, идентифицируемые совпадением имен, также добавляются в представление источника данных.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.roledesignerdialog.membership.f1
@@ -20,12 +19,12 @@ ms.assetid: af28524e-5eca-4dce-a050-da4f406ee1c7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5e19a2faf3bba980ff7329084c073cabb1f696c9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d6962452b5615b9b2607007ed86c09eed495f6f1
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62727006"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66077014"
 ---
 # <a name="authorizing-access-to-objects-and-operations-analysis-services"></a>Предоставление доступа к объектам и операциям (Analysis Services)
   Доступ неадминистративных пользователей к кубам, измерениям и моделям интеллектуального анализа данных внутри базы данных [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] предоставляется посредством включения пользователя в одну или несколько ролей базы данных. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Администраторы создают указанные роли базы данных, предоставляют разрешения на чтение или чтение и запись объектов служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , а затем добавляют к каждой роли пользователей и группы Windows [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - displaying attributes
@@ -15,12 +14,12 @@ ms.assetid: 855bef07-b72d-4ce3-bf02-de77abeee71a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3e7e5ea7af394905d9f5efcb27dce4d102fb5d3c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ec86d5e7a910b7fb17397b1601fcc912b46c4d7f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62727535"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66077131"
 ---
 # <a name="view-attributes-in-dimension-designer"></a>Просмотр атрибутов в конструкторе измерений
   Атрибуты создаются на объектах измерений. Просматривать и настраивать атрибуты можно с помощью конструктора измерений в службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Панель **Атрибуты** на вкладке **Структура измерения** конструктора измерений содержит список атрибутов в измерении. Эта панель используется для добавления, удаления или настройки атрибутов. Можно также выбрать атрибуты и использовать их как уровень в новой иерархии или добавить как уровень в существующую иерархию.  

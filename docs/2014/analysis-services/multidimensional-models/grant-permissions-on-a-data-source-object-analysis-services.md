@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.roledesignerdialog.datasources.f1
@@ -19,12 +18,12 @@ ms.assetid: b4e302d3-c93b-4383-aa4a-37d15c129830
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 124795b07c79d0b2478bb91121d37783a48a1782
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4a869d2033adaa57be0ace522787332c03a69bcb
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62725858"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66075001"
 ---
 # <a name="grant-permissions-on-a-data-source-object-analysis-services"></a>Предоставление разрешений объекту источника данных (службы Analysis Services
   Обычно, большинству пользователей службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] нет необходимости в доступе к источникам данных, которые обуславливают проект службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . обычно пользователи лишь запрашивают данные в рамках базы данных службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Однако в контексте интеллектуального анализа данных, например выполнения прогнозов, основанных на модели интеллектуального анализа данных, пользователю необходимо соединить обучающие данные, полученные моделью интеллектуального анализа данных, с данными, предоставленными пользователем. Для подключения источника данных, содержащего предоставленные пользователем данные, пользователь использует запрос расширений интеллектуального анализа данных, в котором содержится либо предложение [OPENQUERY (DMX)](/sql/dmx/source-data-query-openquery), либо предложение [OPENROWSET (DMX)](/sql/dmx/source-data-query-openrowset).  

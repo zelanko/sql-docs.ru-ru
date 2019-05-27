@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - intrinsic member properties [MDX]
@@ -13,12 +12,12 @@ ms.assetid: 84e6fe64-9b37-4e79-bedf-ae02e80bfce8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d5359d5e40737a9989925e952ce674fe6d14114c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 65688b553aab7bf35313a45e9c945f6d3031d127
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62699834"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66074205"
 ---
 # <a name="intrinsic-member-properties-mdx"></a>Внутренние свойства элементов (многомерные выражения)
   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] предоставляет внутренние свойства элементов измерения, которые можно включить в запрос для возвращения дополнительных данных или метаданных для использования в пользовательском приложении или при исследовании в модели или структуре. Если используются клиентские средства SQL Server, внутренние свойства можно просматривать в среде SQL Server Management Studio (SSMS).  

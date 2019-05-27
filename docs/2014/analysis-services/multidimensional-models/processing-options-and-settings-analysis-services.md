@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - process data option [Analysis Services]
@@ -22,12 +21,12 @@ ms.assetid: 2e858c74-ad3e-45f1-8745-efe2c0c3a7fa
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b832da95e823966af1c8d259087721119eed85e0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fe4851712f56acd5d23e8762584968b1cecad03c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62736963"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66073222"
 ---
 # <a name="processing-options-and-settings-analysis-services"></a>Обработка параметров и настроек (службы Analysis Services)
   При обработке объектов в службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]можно задать параметр, определяющий тип обработки для каждого объекта. Типы обработки могут быть различными в зависимости от объекта, а также от изменений, которые произошли с объектом с момента последней обработки. Если включить в службах [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] автоматический выбор типа обработки, будет использоваться метод, возвращающий объект в полностью обработанном состоянии за минимальное время.  

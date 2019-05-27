@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.localdbfilesdialog.f1
@@ -13,12 +12,12 @@ ms.assetid: b38aa670-b8a4-4abb-8b32-c29dc52362f5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bf59757e72b8892e0b32202d9e7f5dc9a3d66be3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1a013ed1ca80e17f89baba65b89c460b6ee68691
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62728185"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66078032"
 ---
 # <a name="locate-database-files-dialog-box-analysis-services---multidimensional-data"></a>Диалоговое окно «Расположение файлов базы данных» (службы Analysis Services — многомерные данные)
   Диалоговое окно **Расположение файлов базы данных** отображает список доступных файлов в папках журналов и данных, определенных для экземпляра служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Можно выбрать файл из списка или, при необходимости, указать другую папку и файл. Способы вызова диалогового окна **Расположение файлов базы данных** :  

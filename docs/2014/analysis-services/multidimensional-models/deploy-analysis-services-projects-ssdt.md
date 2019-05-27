@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - deploy [Analysis Services]
@@ -15,12 +14,12 @@ ms.assetid: 29490a5b-1573-4a35-9277-10c6a6e4ef0e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 25bacf8c94e9393943948a3a7816f192818e8058
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5b6c79c2ea4355e9d889e235c8185a2460c0ed8c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62726238"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66075391"
 ---
 # <a name="deploy-analysis-services-projects-ssdt"></a>Развертывание проектов служб Analysis Services (среда SSDT)
   В процессе разработки проекта служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]проект часто развертывается на сервере разработки для создания базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , определенной проектом. Это необходимо для тестирования проекта; например для обзора ячеек в кубе, обзора элементов измерения или проверки формул ключевых показателей эффективности.  

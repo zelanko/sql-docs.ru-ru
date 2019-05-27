@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeldesigner.modifyconnections.f1
@@ -13,12 +12,12 @@ ms.assetid: a99f5330-efe0-47c7-8393-8dfd9bb2d490
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 81a5b8439de7ac3af004846448767d5ca5cfe9ac
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a4a4a6362d76afc39234acccc6366c7169244663
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62703189"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66077674"
 ---
 # <a name="modify-mapping-dialog-box-mining-accuracy-chart"></a>Диалоговое окно «Изменение сопоставления» (диаграмма точности интеллектуального анализа данных)
   Диалоговое окно **Изменение сопоставления** позволяет изменить способ присоединения входных столбцов к столбцам модели интеллектуального анализа данных. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] сопоставит столбцы автоматически на основании столбца имя и тип данных, но можно использовать это диалоговое окно для изменения сопоставления столбцов. При внесении изменений необходимо убедиться, что тип данных и тип содержимого в столбцах внешнего источника данных соответствует столбцам в проверяемой модели интеллектуального анализа данных.  

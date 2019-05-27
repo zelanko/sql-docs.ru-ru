@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 7bd48810-15ce-45ff-862b-372d08606995
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 101a6d829955bff1e0314acf673cbc01a0d8033d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 663ef21dc9c4d0f3698ae468637fe0a8fd55a16e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62729270"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66078899"
 ---
 # <a name="modifying-measures"></a>Изменение мер
   Свойство **FormatString** позволяет определить параметры форматирования, управляющие способом отображения мер для пользователей. В этой задаче предстоит указать свойства форматирования мер валюты и процентов в кубе учебника по службам [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  

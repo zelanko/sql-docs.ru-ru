@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - parameters [MDX]
@@ -16,12 +15,12 @@ ms.assetid: a4754d16-d9c4-49f6-9be0-392180b912e4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fc4ca51b182ca528c6bab05804da4396fbde4dff
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: eeb258266c489056994d8f78f80a6856602a174a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62699494"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66073713"
 ---
 # <a name="using-variables-and-parameters-mdx"></a>Переменные и параметры (многомерные выражения)
   Службы [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]позволяют задавать параметры для инструкций многомерных выражений. Благодаря параметризации можно создавать универсальные инструкции, настраиваемые во время выполнения.  

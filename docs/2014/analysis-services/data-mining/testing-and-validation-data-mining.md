@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - testing data mining models
@@ -29,12 +28,12 @@ ms.assetid: 197144f5-21ed-4009-b448-fe412fb3916c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9d6b41901176a57ca65f72efe90cb1644a272e5b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 159760722a62969b79ce738e7928739ff2bb15ca
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62732912"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66082801"
 ---
 # <a name="testing-and-validation-data-mining"></a>Тестирование и проверка (интеллектуальный анализ данных)
   Проверка представляет собой процесс оценки соответствия моделей интеллектуального анализа данных фактическим данным. Важно выяснить качество и характеристики моделей интеллектуального анализа данных до их развертывания в рабочей среде.  

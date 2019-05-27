@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: ea9d02f2-a668-4547-ade5-e3d077a2e1bd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fc4d831d2c6b42a591dff5fc3c8424a55ac91062
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3f110b54d1a8a057f16b5e5682adc3beb04c54f6
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62725142"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66073732"
 ---
 # <a name="visual-totals-and-non-visual-totals"></a>Визуальные и невизуальные итоги
   Visual Totals — это итоги в конце столбца или строки, которые представляют собой сумму всех элементов, видимых в столбце или строке. Это поведение применяется по умолчанию при отображении большинства таблиц. Но иногда нужно, чтобы в таблице отображались только определенные столбцы, а итоги выводились для всей строки, в том числе для неотображаемых столбцов. Такие итоги принято называть `Non Visual Totals`, поскольку они складываются из видимых и невидимых значений.  

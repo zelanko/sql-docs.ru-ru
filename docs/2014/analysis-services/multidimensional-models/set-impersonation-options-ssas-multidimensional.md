@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.impersonationinfo.f1
@@ -15,12 +14,12 @@ ms.assetid: 8e127f72-ef23-44ad-81e6-3dd58981770e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 273cc75fdd09db548b8083c20a322e9ba9172c70
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a3bd6de297f4b5b677db10861e594afc36f74bb5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62740940"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66072960"
 ---
 # <a name="set-impersonation-options-ssas---multidimensional"></a>Задание параметров олицетворения (службы SSAS — многомерные)
   При создании объекта `data source` в модели служб Analysis Services одним из параметров, которые необходимо настроить, является параметр олицетворения. Этот параметр определяет, действуют ли службы Analysis Services под удостоверением определенной учетной записи пользователя Windows при выполнении локальных операций, связанных с соединением, например загрузки поставщика данных OLE DB или разрешения данных профиля пользователя в средах, поддерживающих перемещаемые профили.  

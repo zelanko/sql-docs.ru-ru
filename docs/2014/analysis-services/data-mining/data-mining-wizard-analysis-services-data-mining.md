@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], data mining
@@ -16,12 +15,12 @@ ms.assetid: d5fea90f-5f38-4639-8851-7707f6606a12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 205c6a3e70e5edfa354681ce70b8a01d93476892
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: eb853898d91533a61ae220ff2d73c032f2c65330
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62722769"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66084741"
 ---
 # <a name="data-mining-wizard-analysis-services---data-mining"></a>Мастер интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)
   Мастер интеллектуального анализа данных в службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] запускается каждый раз, когда к проекту интеллектуального анализа данных добавляется новая структура интеллектуального анализа данных. Мастер помогает выбрать источник данных и создать представление источника данных, которое определяет данные, используемые для анализа, а также создать начальную модель.  

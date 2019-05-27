@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Source Wizard
@@ -13,12 +12,12 @@ ms.assetid: 0ed3caf1-249d-4307-b588-d8a0ef315faa
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f8ed248a0ef05dbff3f0cc906adc946d6dd58e2f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5b0e292589a669155e8dc51da942cf1eca012537
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62732817"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66082446"
 ---
 # <a name="data-source-wizard-f1-help-analysis-services"></a>Справка F1 мастера источников данных (службы Analysis Services)
   С помощью мастера источников данных можно создать источник данных для использования в следующих проектах бизнес-аналитики в [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  

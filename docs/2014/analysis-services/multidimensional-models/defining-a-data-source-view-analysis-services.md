@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - names [Analysis Services], data source views
@@ -16,12 +15,12 @@ ms.assetid: 0bae4ee4-1742-40e9-bebe-17c788854484
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a19c663fe646c50a977b23e219580e3d7e280945
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0d80a58d33cd6475940afaf08de2d251c5646bec
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62726405"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66075402"
 ---
 # <a name="defining-a-data-source-view-analysis-services"></a>Определение представления источников данных (службы Analysis Services)
   Представление источника данных содержится логическая модель схемы, используется [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] объектов, а именно: кубы многомерной базы данных, измерений и структур интеллектуального анализа данных. Представление источника данных — это определение метаданных, хранящееся в формате XML, для элементов схемы, используемых в унифицированной многомерной модели (UDM) и структурах интеллектуального анализа данных. Представление источника данных:  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - queries [MDX], SELECT statement
@@ -17,12 +16,12 @@ ms.assetid: 4fa5a95a-fec9-4584-875c-dbf030c53e82
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 785a03a5d9fffe3adf072a32f578b0ba936ae6f1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bcd55827377b72040dd142ed1f2fd094c9bd2651
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62725238"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66073879"
 ---
 # <a name="the-basic-mdx-query-mdx"></a>Базовый запрос многомерных выражений (многомерные выражения)
   Базовый запрос многомерных выражений (MDX) — это запрос SELECT инструкция наиболее часто используемые в многомерных Выражениях. Чтобы получить основательные знания о применении многомерных выражений для запроса многомерных данных, необходимо понять, как в инструкции многомерных выражений SELECT определяется результирующий набор, синтаксис инструкции SELECT и как с ее помощью создавать простые запросы.  

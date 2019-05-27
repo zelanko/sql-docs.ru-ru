@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 7d3ffabd-78ae-4204-8323-29949d030c16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a34938d97b26691dad0f1c4800b98af48434d7f4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 08d4d24f9049c2fd68e827664ecb07393262d8bf
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62729605"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66079211"
 ---
-# <a name="lesson-1-defining-a-data-source-view-within-an-analysis-services-project"></a>Урок 1. Определение представления источника данных в Analysis Services Project
+# <a name="lesson-1-defining-a-data-source-view-within-an-analysis-services-project"></a>Урок 1. Определение представления источника данных в проекте Analysis Services
   Разработка приложения бизнес-аналитики в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] начинается с создания проекта служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. В этом проекте будут определены все элементы решения, начиная с представления источников данных.  
   
  Это занятие содержит следующие задачи.  

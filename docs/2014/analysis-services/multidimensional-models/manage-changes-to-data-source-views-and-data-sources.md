@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - modifying data sources
@@ -16,12 +15,12 @@ ms.assetid: 928c9f63-365a-43fd-9bbd-78828cc7e54d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9c89db0ae37b4021f2c0a9fdd77036c1815c3552
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ac551a708433e973ada499f0e7504bc75516e756
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62725521"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66074766"
 ---
 # <a name="manage-changes-to-data-source-views-and-data-sources"></a>Управление изменениями в источниках данных и представлениях источников данных
   При повторном запуске мастера формирования схем он повторно использует тот же источник данных и представление источника данных, которые он использовал при первоначальном формировании. При добавлении источника данных или представления источников данных мастер не использует их. При удалении оригинального источника данных или представления источников данных после первоначального формирования мастер необходимо запустить с самого начала. Все предыдущие настройки мастера также удаляются. Любые существующие объекты в основной базе данных, связанные с удаленным источником данных или представлением источника данных, при следующем запуске мастера формирования схем воспринимаются как объекты, созданные пользователем.  
