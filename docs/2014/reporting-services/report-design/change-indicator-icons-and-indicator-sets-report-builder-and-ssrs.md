@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 8a056adf-4473-473d-9b0c-314675af7bfd
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: eadd265cc4d3e9cda3678e6269c4ec998b7ace20
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 37f3b93019a837ac5521c52e9ceb5f58f3e39b5d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63021089"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66106364"
 ---
 # <a name="change-indicator-icons-and-indicator-sets-report-builder-and-ssrs"></a>Изменение значков индикаторов и наборов индикаторов (построитель отчетов и службы SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предоставляет стандартные наборы индикаторов, которые могут не всегда эффективно отображать конкретные данные и хорошо работать в поставляемом отчете. В этом разделе рассматриваются процедуры изменения внешнего вида значков индикатора и изменения наборов индикаторов — с включением других значков индикаторов, представленных в большем или меньшем количестве.  

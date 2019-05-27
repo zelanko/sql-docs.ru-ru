@@ -1,24 +1,23 @@
 ---
-title: Занятие 11. Создание секций | Документация Майкрософт
+title: Урок 11. Создание секций | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 92eb21a8-5fc4-4999-ad37-1332ce26431d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c0817db540c9db8f17fbc71da68f43cc68645190
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 06ffe60802e52bd0ae141435628fc3812dc2c7c6
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62729490"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66079202"
 ---
-# <a name="lesson-11-create-partitions"></a>Занятие 11. Создание секций
+# <a name="lesson-11-create-partitions"></a>Урок 11. Создание секций
   На этом занятии мы создадим секции для разделения таблицы интернет-продаж на более мелкие логические части, которые могут быть обработаны (обновлены) независимо от других секций. По умолчанию каждая таблица, включенная в модель имеет одну секцию, которая включает все столбцы и строки таблицы. Для таблицы Интернет-продаж нам необходимо разделить данные по годам; одной секции на каждые пять лет таблицы.  После этого каждую секцию можно обработать независимо. Дополнительные сведения см. в разделе [Секции (табличные службы SSAS)](tabular-models/partitions-ssas-tabular.md).  
   
  Предполагаемое время для выполнения этого занятия: **15 минут**  

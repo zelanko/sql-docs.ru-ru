@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint integration [Reporting Services], viewing reports
@@ -16,12 +15,12 @@ ms.assetid: b6341a73-172f-4632-a9e9-cc79fed3f36b
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1b63b7d6591e7296b5b45349351620595c2b5d02
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ba8b23c800718d289b2a7a633d5244261b5ab8a8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63255494"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66103052"
 ---
 # <a name="report-viewer-web-part-on-a-sharepoint-site"></a>Веб-часть средства просмотра отчетов на сайте SharePoint
   Средство просмотра отчетов — это специальная веб-часть, устанавливаемая в составе надстройки служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] для технологий SharePoint. Она позволяет просматривать, печатать и экспортировать отчеты с сервера отчетов, настроенного для работы в режиме интеграции с SharePoint. Веб-часть "Средство просмотра отчетов" связана с расширением файлов определения отчетов (RDL), которые обрабатываются сервером отчетов служб [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Ее нельзя использовать с отчетами, созданными с помощью других программных продуктов.  

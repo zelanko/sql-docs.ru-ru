@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - segmentation algorithms [Analysis Services]
@@ -22,12 +21,12 @@ ms.assetid: ed1fc83b-b98c-437e-bf53-4ff001b92d64
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 490857f9a8c95853d3f89bc8b0cfb85a165f1fd1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 082241af377c8817c3adbc394a46f1ebc7d6a4e3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62722827"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66085139"
 ---
 # <a name="data-mining-algorithms-analysis-services---data-mining"></a>Алгоритмы интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)
   Объект *алгоритм интеллектуального анализа данных* — это набор эвристики и вычислений, создающий модель интеллектуального анализа данных на основе данных. Чтобы создать модель, алгоритм сначала анализирует предоставленные данные, осуществляя поиск определенных закономерностей и тенденций. Алгоритм использует результаты этого анализа для выбора оптимальных параметров создания модели интеллектуального анализа данных. Затем эти параметры применяются ко всему набору данных, чтобы выявить пригодные к использованию закономерности и получить подробную статистику.  

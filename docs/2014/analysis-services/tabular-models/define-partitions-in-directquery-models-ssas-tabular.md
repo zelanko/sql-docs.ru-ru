@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 5f179ba9-6efb-46ae-90e5-945bbfddb719
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f445b32e0c580cde10f38a22b3d26270d927c5a1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1fe22de3cc0718647de84345260017a4dd4e477e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62757319"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66067311"
 ---
 # <a name="partitions-and-directquery-mode-ssas-tabular"></a>Секции и режим DirectQuery (табличные службы SSAS)
   В этом разделе объясняется использование секций в моделях DirectQuery. Дополнительные общие сведения о секциях в табличных моделях см. в разделе [Секции (табличные службы SSAS)](partitions-ssas-tabular.md).  

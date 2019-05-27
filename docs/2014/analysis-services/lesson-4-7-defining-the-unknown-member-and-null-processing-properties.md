@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: d9abb09c-9bfa-4e32-b530-8590e4383566
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5982bd49a5b7847cb8c09a7e46ca077bbe0e2d2b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1d14aeb7b261959ab0c95bda6a2ef4435a5b68e5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62729256"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66078611"
 ---
 # <a name="defining-the-unknown-member-and-null-processing-properties"></a>Определение свойств Unknown Member и Null Processing
   В процессе обработки измерения службами [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] его атрибуты заполняются всеми уникальными значениями, полученными из базовых столбцов представлений и таблиц в представлении источника данных. Если при обработке службы [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] обнаруживают значение NULL, по умолчанию оно преобразуется в нулевое значение для числовых столбцов или в пустую строку — для строковых. Можно изменить значения по умолчанию или преобразовывать значения NULL в процессе извлечения, преобразования или загрузки данных (если они выполняются) из базового реляционного хранилища данных. Кроме того, службы [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] можно настроить для преобразования значения NULL в указанное значение настройкой трех свойств: **UnknownMember** и **UnknownMemberName** для измерения и **NullProcessing** для ключевого атрибута измерения.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.sendmailtask.mail.f1
@@ -15,12 +14,12 @@ ms.assetid: adb385d5-ef24-4d18-b9ea-b39e00a7075e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 57b0cfee4c9197a721e132a672e11364e8cd29c7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d80ca8e475bf9c2b56c11118a44e5282573f280d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62889048"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66055830"
 ---
 # <a name="send-mail-task-editor-mail-page"></a>Редактор задачи «Отправка почты» (страница «Почта»)
   Страница **Почта** диалогового окна **Редактор задачи «Отправка почты»** служит для определения получателей, типа и приоритета сообщения. К сообщению можно также прикрепить файлы. Текстом сообщения может быть введенная строка, соединение с файлом, содержащим текст, или имя переменной, содержащей текст.  

@@ -17,20 +17,20 @@ helpviewer_keywords:
 - seed values [SQL Server]
 - IDENT_SEED function
 ms.assetid: e4cb8eb8-affb-4810-a8a9-0110af3c247a
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: ef3bfdbb21839bd7f4f60ba1a731e39ec1f42c1f
-ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
+ms.openlocfilehash: 002d4632dbe988fa29e25eb775afe5bd90ffdeea
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56079310"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65946398"
 ---
 # <a name="identseed-transact-sql"></a>IDENT_SEED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Возвращает исходное начальное значение (вида **numeric**(**@@** MAXPRECISION,0)), указанное при создании столбца идентификаторов в таблице или представлении. Изменение текущего значения столбца идентификаторов с помощью инструкции DBCC CHECKIDENT не изменяет значение, возвращаемое этой функцией.  
+  Возвращает исходное начальное значение (вида **numeric**( **@@** MAXPRECISION,0)), указанное при создании столбца идентификаторов в таблице или представлении. Изменение текущего значения столбца идентификаторов с помощью инструкции DBCC CHECKIDENT не изменяет значение, возвращаемое этой функцией.  
   
  ![Значок ссылки на статью](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на статью") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

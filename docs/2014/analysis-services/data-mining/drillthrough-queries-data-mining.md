@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - AllowDrillThrough property
@@ -15,12 +14,12 @@ ms.assetid: 246c784b-1b0c-4f0b-96f7-3af265e67051
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 89900ccb182c58041af7b428af336ddab217d245
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ca74fe9ec36262130e01a58280f9d966c35c3485
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62722476"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66084549"
 ---
 # <a name="drillthrough-queries-data-mining"></a>Запросы детализации (интеллектуальный анализ данных)
   *Запрос детализации* позволяет извлекать сведения из базовых вариантов или данных структуры, отсылая запрос в модель интеллектуального анализа данных. Детализация применяется в том случае, если нужно просмотреть варианты, использованные для обучения модели, в отличие от вариантов, которые используются для ее проверки, либо чтобы просмотреть дополнительных сведения из данных варианта.  

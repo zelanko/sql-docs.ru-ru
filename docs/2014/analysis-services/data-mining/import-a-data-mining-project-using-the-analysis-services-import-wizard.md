@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 62bc9fc5-c6ff-4517-b598-d92df76743a2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c34694012a69285ee92fa90c58f293654c961890
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e4d9b0eaa65eada55fec398b058d8e17aaa53a03
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62722356"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66084372"
 ---
 # <a name="import-a-data-mining-project-using-the-analysis-services-import-wizard"></a>Импорт проекта интеллектуального анализа данных с помощью мастера импорта служб Analysis Services
   В этом разделе описано, как создать новый проект интеллектуального анализа данных путем импорта метаданных из существующего проекта интеллектуального анализа данных на другом сервере, используя шаблон **Импорт с сервера (многомерные данные и интеллектуальный анализ данных)**, в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - sqlcmd utility, Database Engine connections
@@ -19,12 +18,12 @@ ms.assetid: 74b0fb71-7f8e-4171-9431-d07528532524
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1458e1e7fa43b69d771bfcadcc1c0fa039a97c09
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.openlocfilehash: 441a2ebc1f147e71a0bfa3bce20daf9fd67d09f3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63462316"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66090101"
 ---
 # <a name="connect-to-the-database-engine-with-sqlcmd"></a>Подключение к компоненту Database Engine при помощи программы sqlcmd
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает клиентское подключение при помощи сетевого протокола TCP/IP (по умолчанию) и протокола именованных каналов. Может также использоваться протокол общей памяти, если клиент устанавливает соединение с экземпляром компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] на том же компьютере. Существуют три наиболее часто используемых способа для выбора протокола. Протокол, используемый служебной программой **sqlcmd** , определяется в следующем порядке:  

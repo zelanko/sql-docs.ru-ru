@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - updating resources
@@ -14,12 +13,12 @@ ms.assetid: d21f7493-bcf7-4e9e-9886-55ebdc1f1037
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3ebebc5d32ca19ecb781430bbb82b6b17112cb54
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: be4fd9dc72a32c65465e3d226850eb18a494e783
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63273294"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66103056"
 ---
 # <a name="update-a-resource-report-manager"></a>обновить ресурс (диспетчер отчетов)
   Ресурс можно обновить, заменив его более новой версией. Ресурсы представляют собой хранящиеся на сервере отчетов элементы, по содержимому аналогичные переданным файлам. Можно заменить существующий ресурс, импортировав в существующий ресурс обновленное или совершенно другое содержимое файла. Обновление ресурса позволяет заменить только содержимое ресурса, сохраняя его существующие свойства и настройки безопасности.  

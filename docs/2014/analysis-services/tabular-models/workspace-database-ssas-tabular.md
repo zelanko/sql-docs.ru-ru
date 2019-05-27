@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 662daf08-a514-44a7-8675-44644aa454a2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d70cf1724eb67dbf8f1a75989df5f4021b5512d6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8708bd3f4375179638ce5e86a0619a1e1ccf4d77
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62794614"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66066258"
 ---
 # <a name="workspace-database-ssas-tabular"></a>База данных рабочей области (табличные службы SSAS)
   База данных рабочей области табличной модели, используемая во время создания модели, формируется при создании нового проекта табличной модели в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. База данных рабочей области находится в памяти на экземпляре [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], запущенном в табличном режиме, как правило, на том же компьютере, что и [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  

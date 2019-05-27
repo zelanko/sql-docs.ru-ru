@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: c7d95245-4709-4d04-acb4-59bf71e60d97
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0aa360b52f6928db53a473712c38bbfc2d05de78
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8530a13af0e0ae6f1b769adcaa7cb6e9a3fbc0ae
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63135495"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66106037"
 ---
 # <a name="display-page-numbers-or-other-report-properties-report-builder-and-ssrs"></a>Отображение номеров страниц или других свойств отчета (построитель отчетов и службы SSRS)
   К верхним или нижним колонтитулам страниц в отчете легко добавить номера страниц, заголовок отчета, имя файла и другие свойства отчета. Эти свойства хранятся в виде полей в папке «Встроенные поля» в области данных отчета.  

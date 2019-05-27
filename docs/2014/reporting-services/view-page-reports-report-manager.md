@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4874ba29-429b-4dd4-a8cb-d4f087237dc2
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d36a9e8b5e4b46283b78f07c27834a79993faeab
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c8731c1d0f79d99919c4a087521565a6ec590278
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62647684"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66098742"
 ---
 # <a name="view-page-reports-report-manager"></a>Страница «Вид», отчеты (диспетчер отчетов)
   Просмотреть отчет можно на странице «Просмотр». При первом открытии в диспетчере отчетов отчет имеет формат HTML. В верхней части HTML-отчета содержится панель инструментов, позволяющая перемещаться по страницам отчета, выполнять поиск или экспортировать отчет в другой формат. На следующей диаграмме представлена панель инструментов «Отчеты».  

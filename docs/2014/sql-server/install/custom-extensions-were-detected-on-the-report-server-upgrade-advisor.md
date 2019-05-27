@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - rendering extensions [Reporting Services], custom extensions
@@ -17,12 +16,12 @@ ms.assetid: fa184bd7-11d6-4ea3-9249-bc1b13db49e5
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 86c0aa75e73c59980e8de6456556087201d949d3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 69df18da28672f05099f22821240fdf28e1fb880
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153104"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66095969"
 ---
 # <a name="custom-extensions-were-detected-on-the-report-server-upgrade-advisor"></a>На сервере отчетов обнаружены пользовательские расширения (советник по переходу)
   Помощник по обновлению обнаружил параметры пользовательских модулей в файлах конфигурации, что свидетельствует о наличии в установке одного или нескольких пользовательских модулей для обработки данных, доставки, подготовки к просмотру, безопасности или проверки подлинности. Во время обновления настройки конфигурации модулей будут перемещены вместе с обновленным сервером отчетов. Однако если пользовательские модули установлены в существующую папку установки сервера отчетов, то файлы сборки для этих пользовательских модулей не будут перемещены в новую папку установки в ходе процесса обновления. После завершения обновления необходимо вручную поместить файлы сборки в новую папку установки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - OLAP [Analysis Services], dimensions
@@ -15,12 +14,12 @@ ms.assetid: 2b62b05c-00fd-4e60-b77f-f707ba83a19b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ffa8ddeeb208be956fc072d45f10edacf97b52be
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 520d6f11e5a472d5337a3747cc73c1d3656171c2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62726648"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66075177"
 ---
 # <a name="dimensions-in-multidimensional-models"></a>Измерения в многомерных моделях
   Измерение базы данных является коллекцией объектов, называемых атрибутами, которые используются для предоставления сведений о данных фактов в одном или нескольких кубах. Например, типичным атрибутом измерения «Продукт» может быть название, категория, размер, цена продукта или линия товаров. Эти объекты привязаны к одному или нескольким столбцам в одной или нескольких таблицах в представлении источника данных. По умолчанию эти атрибуты отображаются как иерархии атрибутов и позволяют понять смысл данных фактов в кубе. Атрибуты могут быть организованы в пользовательские иерархии, которые обеспечивают различные пути доступа к данным и помогают пользователям при просмотре данных в кубе.  

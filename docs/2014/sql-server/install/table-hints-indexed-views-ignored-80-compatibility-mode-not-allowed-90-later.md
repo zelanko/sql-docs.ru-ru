@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - query hints [SQL Server]
@@ -14,15 +13,15 @@ ms.assetid: 405dfcff-a3a6-4e6d-a53a-ed77bbacdd13
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8eb4dfaf6649b80bd430992d5e7ff1d35fc5d7ed
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: 69a6bae06b1cb5d7a727ff2582f10bccf1e21ca8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582977"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66091809"
 ---
 # <a name="table-hints-in-indexed-view-definitions-are-ignored-in-80-compatibility-mode-and-are-not-allowed-in-90-mode-or-later"></a>Табличные указания в определении индексированных представлений в режиме совместимости 80 не учитываются, а в режиме совместимости 90 недопустимы
-  Табличные указания в определении индексированных представлений не разрешены в режиме совместимости 90 и выше. Дополнительные сведения см. в следующих разделах электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: «Конструирование индексированных представлений», «Создание индексированных представлений» и «Указание запроса ([!INCLUDE[tsql](../../includes/tsql-md.md)])».  
+  Табличные указания в определении индексированных представлений не разрешены в режиме совместимости 90 и выше. Дополнительные сведения см. в следующих разделах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] документации: «Конструирование индексированных представлений», «Создание индексированных представлений» и «указание запроса ([!INCLUDE[tsql](../../includes/tsql-md.md)]).»  
   
 ## <a name="component"></a>Компонент  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  

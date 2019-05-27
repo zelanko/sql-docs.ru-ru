@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - write-enabled partitions [Analysis Services]
@@ -16,12 +15,12 @@ ms.assetid: 38bb09cc-2652-4971-8373-0cf468cdc7a6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 54e2a0f5de93ee9f0d760adfd5a95551d19cc782
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3359e26ace467bbf8446aac6b68a0ef2716d09a4
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62741386"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66072894"
 ---
 # <a name="set-partition-writeback"></a>Настройка обратной записи секции
   При включении возможности записи в группе мер пользователи смогут вносить изменения в данные куба при их просмотре. При этом сделанные изменения сохраняются не в данных куба или исходных данных, а в отдельной таблице, которая называется таблицей обратной записи. Конечные пользователи, просматривающие секцию, доступную для записи, видят суммарный результат всех изменений в таблице обратной записи для секции.  

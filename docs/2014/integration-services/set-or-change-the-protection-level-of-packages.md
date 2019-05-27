@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - passwords [Integration Services]
@@ -16,12 +15,12 @@ ms.assetid: 904a5580-82ba-4a26-b0c5-d1c989975f61
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e700eed316e9dce3e5d87f6014913505376f535f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ee8ee5b2113d6fda6aaac72b407c899a610960bd
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62889284"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66055844"
 ---
 # <a name="set-or-change-the-protection-level-of-packages"></a>Установка и изменение уровня защиты пакетов
   Для управления доступом к содержимому пакетов и конфиденциальным данным в них, таким как пароли, необходимо задать значение свойства `ProtectionLevel`. Пакеты, которые содержатся в проекте, должны обладать тем же уровнем защиты, что и сам проект. Это необходимо для создания проекта. При изменении настройки свойства `ProtectionLevel` в проекте потребуется вручную обновить настройку свойства для пакетов.  

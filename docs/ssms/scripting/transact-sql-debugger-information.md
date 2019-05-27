@@ -14,16 +14,16 @@ helpviewer_keywords:
 - Transact-SQL debugger, QuickWatch
 - Transact-SQL debugger, viewing information
 ms.assetid: b99819cc-f388-41a1-b304-36e78ce24147
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 051d63bf71870766a0bf74364eee7545970d4393
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: fced8436279b5daa2751b0b4708a62b449d0bcd7
+ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51643851"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65821830"
 ---
 # <a name="transact-sql-debugger---information"></a>Сведения отладчика Transact-SQL
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "51643851"
 -   На панели инструментов **Отладка** нажать кнопку **Точки останова**, а затем выбрать требуемое окно.  
   
 ## <a name="transact-sql-expressions"></a>Выражение языка Transact-SQL  
- Выражения — это предложения [!INCLUDE[tsql](../../includes/tsql-md.md)] , значением которых является отдельное скалярное значение, например переменная или параметр. В левом окне отладчика могут отображаться значения данных, назначенные на текущий момент выражениям, в максимум пяти вкладках или окнах: **Локальные переменные, Контрольное значение1**, **Контрольное значение2**, **Контрольное значение3**и **Контрольное значение4**.  
+ Выражения — это предложения [!INCLUDE[tsql](../../includes/tsql-md.md)] , значением которых является отдельное скалярное значение, например переменная или параметр. В левом окне отладчика могут отображаться значения данных, назначенные на текущий момент выражениям, в максимум пяти вкладках или окнах: **Locals, Watch1** (Локальные значения, контрольное значение 1), **Watch2** (Контрольное значение 2), **Watch3** (Контрольное значение 3) и **Watch4** (Контрольное значение 4).  
   
  В окне **Локальные значения** отображаются сведения о локальных переменных в текущей области отладчика [!INCLUDE[tsql](../../includes/tsql-md.md)] . Набор выражений, которые показаны в окне **Локальные значения** , изменяется по мере прохождения отладчиком разных частей кода.  
   

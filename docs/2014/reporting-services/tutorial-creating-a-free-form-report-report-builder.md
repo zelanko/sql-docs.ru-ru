@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9e1246a32f890c5842a1d1a9c8ad0202c160a171
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 332c67f47c8096cbeb5a94c4e2a288cd532038cf
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62648629"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66098950"
 ---
 # <a name="tutorial-creating-a-free-form-report-report-builder"></a>Учебник. Создание отчета в свободной форме (построитель отчетов)
   В этом учебнике объясняется, как создать отчет SQL Server Reporting Services произвольной формы в виде стандартного письма. Вы можете упорядочить элементы отчета, чтобы создать форму с текстовыми полями, изображениями и другими областями данных.  

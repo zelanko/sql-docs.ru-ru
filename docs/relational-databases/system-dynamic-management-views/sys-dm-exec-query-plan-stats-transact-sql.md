@@ -17,12 +17,12 @@ ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfacb
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 92e5aaf103c1c8d08b8527bf859415686fd5f4f8
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: c4d4f58161885519767e299683fe32b5197a045f
+ms.sourcegitcommit: 209fa6dafe324f606c60dda3bb8df93bcf7af167
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65993628"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66198219"
 ---
 # <a name="sysdmexecqueryplanstats-transact-sql"></a>sys.dm_exec_query_plan_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-asdb-xxxx-xxx.md)]
@@ -37,7 +37,7 @@ sys.dm_exec_query_plan_stats(plan_handle)
 
 ## <a name="arguments"></a>Аргументы 
 *plan_handle*  
-— Это маркер, который уникально идентифицирует план выполнения запроса для запущенного пакета, и ее план находится в кэше планов, или в данный момент. *plan_handle* — **varbinary(64)**.   
+— Это маркер, который уникально идентифицирует план выполнения запроса для запущенного пакета, и ее план находится в кэше планов, или в данный момент. *plan_handle* — **varbinary(64)** .   
 
 *Plan_handle* можно получить из следующих объектов DMO:  
   
@@ -64,7 +64,7 @@ sys.dm_exec_query_plan_stats(plan_handle)
 ## <a name="remarks"></a>Примечания
 Этой системной функции доступен, начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.4.
 
-Эта функция активируется явным образом и требует включения [флага трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451. Начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP-версии 2.5 и в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], для выполнения этой задачи на уровне базы данных, см. в описании параметра LAST_QUERY_PLAN_STATS в [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
+Эта функция активируется явным образом и требует включения [флага трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451. Начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP-версии 2.5, для выполнения этой задачи на уровне базы данных, см. в описании параметра LAST_QUERY_PLAN_STATS в [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
 
 Эта функция системы, работает под **упрощенных** инфраструктуру профилирования статистики выполнения запросов. Дополнительные сведения см. в разделе [Инфраструктура профилирования запросов](../../relational-databases/performance/query-profiling-infrastructure.md).  
 

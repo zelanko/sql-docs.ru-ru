@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.reportservervirtualdirectory.F1
@@ -15,12 +14,12 @@ ms.assetid: 9d210b5d-2a08-4e56-a4f5-c16715b00d79
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 5371060acadc0def9a8105616b36d8687eb5a87e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2ab81c33b3aea946fe85c94139acc891aa05a083
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63131181"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66090988"
 ---
 # <a name="web-service-url-ssrs-native-mode"></a>URL-адрес веб-службы (службы Reporting Services в собственном режиме)
   Страница URL-адреса веб-службы позволяет настроить или изменить URL-адрес, используемый для доступа к серверу отчетов. На основе указанного URL-адреса будет создано *резервирование URL-адреса* . Резервирование URL-адреса определяет синтаксис и правила всех URL-адресов, которые могут быть впоследствии использованы для доступа к веб-службе сервера отчетов. Здесь указывается префикс, узел, номер порта и виртуальный каталог веб-службы сервера отчетов. В зависимости от способа задания узла для одного резервирования может быть возможно использование нескольких URL-адресов. По умолчанию в качестве значения узла указывается строгий шаблон, позволяющий указать в URL-адресе любое имя узла, которое может привести к компьютеру, на котором находится сервер отчетов. Дополнительные сведения о настройке URL-адрес и резервировании, см. в разделе [задан URL-адрес &#40;диспетчер конфигурации служб SSRS&#41; ](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md) и [Настройка сервера URL-адреса отчетов &#40;диспетчер конфигурации служб SSRS&#41; ](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md).  

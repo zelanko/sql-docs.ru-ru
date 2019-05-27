@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], feature selections
@@ -22,12 +21,12 @@ ms.assetid: b044e785-4875-45ab-8ae4-cd3b4e3033bb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6618a4a0818519ba4c3f0bbd63a46e02b4217296
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a1d79bb3810a56e8a1769845131312eab306f223
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62722396"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66084415"
 ---
 # <a name="feature-selection-data-mining"></a>Выбор компонентов (интеллектуальный анализ данных)
   *Выбор компонентов* — это термин, обычно используется в интеллектуальном анализе данных для описания средств и методик, доступных для сокращения входных данных, позволяя управлять для обработки и анализа. Выбор компонентов предполагает не только *сокращения количества элементов*, означающее наложения произвольного или определенного уменьшения на количество атрибутов, учитываемых при построении модели, но также и Выбор атрибутов, то есть что либо аналитик, либо средство моделирования активно выбирает или отбрасывает атрибуты в зависимости от их полезности для анализа.  

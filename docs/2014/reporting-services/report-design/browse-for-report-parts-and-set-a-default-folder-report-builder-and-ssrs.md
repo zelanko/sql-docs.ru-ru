@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 5cf38068-65d1-4fe8-81f3-a404d8fbc663
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ae8fddf7e008c1c97c30c18deb2d8aec60b77415
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2dd881c13b2398f3a1783f53190097653d04d78a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63185742"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66106463"
 ---
 # <a name="browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs"></a>Просмотр элементов отчета и назначение папки по умолчанию (построитель отчетов и службы SSRS)
   Самым простым способом создания отчетов является добавление существующих элементов отчета, таких как таблицы и диаграммы, к отчету из галереи элементов отчетов. При добавлении элемента отчета к отчету добавляется также все, что необходимо для его выполнения. Например, все элементы отчета, используемые для отображения данных, зависят от набора данных, т. е. запроса и соединения с источником данных. После добавления элемента отчета к отчету ее можно изменить в соответствии с требованиями.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - removing role assignments
@@ -17,12 +16,12 @@ ms.assetid: 2144c020-3253-4b47-8cda-e14c928bb471
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ebb42ac44d26e9ad8a091795eb3f8ab7283f6bcb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 31c5fa6b3ca1f42ea87fc1514f55ce325f8a021a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63242872"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66101990"
 ---
 # <a name="grant-user-access-to-a-report-server-report-manager"></a>Предоставление пользователям доступа к серверу отчетов (диспетчер отчетов)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для предоставления пользователям доступа к серверу отчетов используют безопасность на основе ролей. При новой установке сервера отчетов только пользователи, являющиеся членами локальной группы администраторов, имеют разрешения на доступ с содержимому и операциям сервера отчетов. Чтобы сделать сервер отчетов доступным для других пользователей, необходимо создать назначения ролей, которые будут сопоставлять учетную запись пользователя или группы с конкретной стандартной ролью, определяющей некоторый набор задач.  

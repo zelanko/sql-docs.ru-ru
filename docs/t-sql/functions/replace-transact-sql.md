@@ -19,16 +19,16 @@ helpviewer_keywords:
 - second string expressions [SQL Server]
 - REPLACE function
 ms.assetid: 8a7aaaf2-62e3-46c0-8e44-fa22290dd86b
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e9f7c1cd947befda6674a7b75a50509919848e1f
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: fad23cc2ecd044b300ee80366f06d2f5c54b80ae
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802778"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948791"
 ---
 # <a name="replace-transact-sql"></a>REPLACE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -58,12 +58,12 @@ REPLACE ( string_expression , string_pattern , string_replacement )
   
  Возвращает NULL, если какой-либо из аргументов имеет значение NULL.  
   
- Если *string_expression* не относится к типу **varchar(max)** или **nvarchar(max)**, функция REPLACE усекает возвращаемое значение до 8000 байт. Для возврата значений, превышающих 8000 байт, аргумент *string_expression* должен быть явно приведен к типу данных с большими значениями.  
+ Если *string_expression* не относится к типу **varchar(max)** или **nvarchar(max)** , функция REPLACE усекает возвращаемое значение до 8000 байт. Для возврата значений, превышающих 8000 байт, аргумент *string_expression* должен быть явно приведен к типу данных с большими значениями.  
   
 ## <a name="remarks"></a>Remarks  
  REPLACE производит сравнение, основанное на параметрах сортировки входных данных. Для выполнения сравнения в указанных параметрах сортировки можно воспользоваться функцией [COLLATE](~/t-sql/statements/collations.md), чтобы явно указать параметры сортировки для входных данных.  
   
- Символ 0x0000 (**char(0)**) не определен в параметрах сортировки Windows, и его нельзя включать в REPLACE.  
+ Символ 0x0000 (**char(0)** ) не определен в параметрах сортировки Windows, и его нельзя включать в REPLACE.  
   
 ## <a name="examples"></a>Примеры  
  На следующем примере показано, как строка `cde` в строке `abcdefghi` заменяется на `xxx`.  

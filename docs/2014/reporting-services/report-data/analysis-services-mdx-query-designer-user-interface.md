@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10012"
@@ -17,12 +16,12 @@ ms.assetid: d9c7c0b3-fce4-4a65-b679-408273e6a925
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 624b18425a631f54b3de0aef85b48b8c6ec36a3d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b6872ae2fe52e9ea9d30a41fe663a75b5bfe7d4c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62698347"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107478"
 ---
 # <a name="analysis-services-mdx-query-designer-user-interface"></a>Пользовательский интерфейс конструктора запросов многомерных выражений служб Analysis Services
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] предоставляют графические конструкторы запросов для построения запросов многомерных выражений и запросов расширений интеллектуального анализа данных для источника данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Данный раздел посвящен конструктору запросов многомерных выражений. Дополнительные сведения о конструкторе запросов многомерных выражений см. в разделе [Тип соединения служб Analysis Services для расширений интеллектуального анализа данных (службы SSRS)](analysis-services-connection-type-for-dmx-ssrs.md).  

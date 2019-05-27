@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.browsecube.metadatapane.f1
@@ -13,12 +12,12 @@ ms.assetid: a1ace545-488d-4645-8330-56408a5e8abd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 31c14a039d22238450023c4a7f9b7b099e9a2a53
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3e4aade575cdcb8260865d4a1fe9ab6f4b7941fe
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62727950"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66077845"
 ---
 # <a name="metadata-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>Метаданные (вкладка «Браузер», конструктор кубов) (службы Analysis Services — многомерные данные)
   Панель **Метаданные** на вкладке **Браузер** в конструкторе кубов предназначена для просмотра структур куба и связанных мер, а также для просмотра и создания измерений. В ней можно выполнять детализацию углублением иерархий, просматривать список доступных мер и ключевых показателей эффективности, а также копировать полные имена объектов.  

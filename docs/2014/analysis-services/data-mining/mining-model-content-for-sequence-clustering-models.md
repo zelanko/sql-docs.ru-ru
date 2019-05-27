@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining model content, sequence clustering models
@@ -14,12 +13,12 @@ ms.assetid: 68e1934a-e147-4d53-b122-fa15e3fd5485
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 94224bbc5c254b01fab49c850b554427757b714b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 12aad369e9a8614041bccaa08ee507d723c6c51f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62733437"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66083564"
 ---
 # <a name="mining-model-content-for-sequence-clustering-models-analysis-services---data-mining"></a>Содержимое моделей интеллектуального анализа данных для моделей кластеризации последовательностей (службы Analysis Services — интеллектуальный анализ данных)
   В этом разделе приведено описание содержимого модели интеллектуального анализа данных, характерного для моделей, в которых используется алгоритм кластеризации последовательностей (Майкрософт). Описание общей и статистической терминологии, связанной с содержимым модели интеллектуального анализа данных, областью применения которого являются модели всех типов, см. в статье [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  

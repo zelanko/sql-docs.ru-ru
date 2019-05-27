@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: d8d875bc-7823-46b7-a939-867cefd4de12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cf954178516cef633dbe34c1b8b01579c8f3e4ea
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b4851c8054434713e69d8bf63b046484a01f0398
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62749051"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66071158"
 ---
 # <a name="schedule-data-refresh-and-data-sources-that-do-not-support-windows-authentication-powerpivot-for-sharepoint"></a>Планирование обновления данных и источники данных, которые не поддерживают проверку подлинности Windows (PowerPivot для SharePoint)
   В этом разделе рассматривается рабочий процесс планирования обновления данных PowerPivot для SharePoint, в котором могут использоваться источники данных, **НЕ** поддерживающие проверку подлинности Windows. В качестве примера можно назвать источники данных Oracle или IDM DB2. На рисунках и в процедурах, которые приведены в этом разделе, речь идет об источниках данных Oracle, но тот же рабочий процесс применим к другим источникам данных.  

@@ -21,12 +21,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: '>= sql-server-linux-2017  || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0cdd3d2a7a64ddc701a73a3b6c978bd9f0264e20
-ms.sourcegitcommit: 6193aa9b4967302424270d67c27dbc601ca6849a
+ms.openlocfilehash: 6b17e6b799bf3ff35b441286fd1205ca5382b207
+ms.sourcegitcommit: 622bcdaa0b21258248b259f003f38e9d6f73e05a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64877593"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65836173"
 ---
 # <a name="sql-server-documentation"></a>Документация по SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,6 +38,8 @@ SQL Server является центральной частью платформ
 ::: moniker range="= sql-server-2016"
 SQL Server является центральной частью платформы обработки данных Майкрософт. SQL Server — это ведущее отраслевое решение среди систем управления рабочими базами данных (ODBMS). Приведенные здесь сведения будут полезны при установке, настройке и использовании SQL Server в Windows. Материалы включают в себя комплексные примеры, примеры кода и видеоролики. Разделы о языке SQL Server см. в [справочнике по языку](../t-sql/language-reference.md).
 ::: moniker-end
+
+Документация по SQL Server 2014 и предыдущим версиям, включая SQL Server 2005, доступна [здесь](#previous-versions-gm66).
 
 <!-- Moniker assignments nicely designed so that exactly 1 of these next 3 little WhatsNew tables will be displayed
  at any one time, regardless of user's moniker choice.
@@ -137,6 +139,10 @@ SQL Server является центральной частью платформ
 - [Образец базы данных Wide World Importers](https://docs.microsoft.com/sql/samples/wide-world-importers-what-is)
 - [Образцы баз данных AdventureWorks и скрипты для SQL Server 2016](https://docs.microsoft.com/sql/samples/sql-samples-where-are) 
 - [Образцы SQL Server на GitHub](https://github.com/Microsoft/sql-server-samples)
+
+## <a name="previous-versions-gm66"></a> SQL Server 2014, 2012, 2008, 2005
+
+[!INCLUDE[previous-versions](../includes/paragraph-content/previous-versions-archive-documentation-sql-server.md)]
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - query designers
@@ -13,12 +12,12 @@ ms.assetid: 553f0d4e-8b1d-4148-9321-8b41a1e8e1b9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3cfaca7dcd5e72eb5ca540debac6c6723246354d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 58a7e1a9d5ae71d659cfd214b46f3a004ea71101
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62657451"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108013"
 ---
 # <a name="query-designers-report-builder"></a>Конструкторы запросов (построитель отчетов)
   Построитель отчетов включает графический и текстовый конструкторы запросов, помогающие формировать запросы для отчета. С каждым типом источника данных связан определенный конструктор запросов. Некоторые источники данных поддерживают графические конструкторы запросов, которые позволяют формировать запросы в интерактивном режиме. Для других источников данных используется текстовый конструктор запросов. Источник данных SQL Server поддерживает и графический и текстовый конструкторы запросов.  

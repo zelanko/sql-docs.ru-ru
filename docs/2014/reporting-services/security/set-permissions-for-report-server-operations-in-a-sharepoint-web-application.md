@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], SharePoint integrated mode
@@ -18,12 +17,12 @@ ms.assetid: 9ea71f1a-ee9e-4337-95ff-d7cef79946e7
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: fc3faf212a1777938194927b364c29750113196d
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.openlocfilehash: cb19f95d2dc5de8f461285d84776b80e3f9fb778
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63460997"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66101550"
 ---
 # <a name="set-permissions-for-report-server-operations-in-a-sharepoint-web-application"></a>Задание разрешений для работы сервера отчетов в веб-приложении SharePoint
   Для сервера отчетов, работающего в режиме интеграции с SharePoint, настройки безопасности, определенные на сайте SharePoint, определяют также, каким образом производится просмотр и управление отчетами, моделями отчетов и общими источниками данных. Если используются группы SharePoint, уровни разрешений и назначения разрешений по умолчанию, то работать с отчетами и другими документами можно с использованием текущих настроек безопасности.  

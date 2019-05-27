@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4dcfb311-e9c3-4c5d-b2e0-018d79f37d2e
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 80d69d377948ebb85c907edb195807abf26ee33b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 59c022a0e6c57a85d83b25be3fe9dbe0c9dfeeb1
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63165112"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109329"
 ---
 # <a name="dependent-items-page-report-manager"></a>Страница «Зависимые элементы» (диспетчер отчетов)
   Страница «Зависимые элементы» позволяет просмотреть список отчетов и моделей, ссылающихся на общий источник данных. Значок типа элемента показывает, отчет это или модель. Данную страницу можно просматривать в режиме списка или подробных сведений. Режим подробных сведений позволяет отображать больше данных об элементе. Также в нем доступны дополнительные параметры страницы. Для помощи в управлении общим источником данных на этой странице содержатся ссылки на отчеты и модели, использующие источник данных, данные о последнем запуске или последних изменениях отчета или модели, а также кнопки «Удалить» и «Переместить», которые позволяют удалить неиспользуемые отчеты и модели либо переместить их в другое расположение на время, пока определяется потребность в них.  

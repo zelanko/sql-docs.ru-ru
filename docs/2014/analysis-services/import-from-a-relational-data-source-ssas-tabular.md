@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 043201cc-fbef-4ed0-bde8-dc5e3a3e8bea
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 44c4f0a5fbdaa64f2145113bf5135dad9acbddbb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 61fb30ea21ea810eab8d30a3a040fac4a1bd2128
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62730733"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66080525"
 ---
 # <a name="import-from-a-relational-data-source-ssas-tabular"></a>Импорт из реляционного источника данных (табличные службы SSAS)
   С помощью мастера импорта таблиц можно импортировать данные из разных реляционных баз данных: Этот мастер доступен в меню **Модель** [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Для соединения с источником данных на компьютере должен быть установлен соответствующий поставщик. Дополнительные сведения о поддерживаемых источниках данных и поставщиках см. в разделе [Data Sources Supported &#40;SSAS Tabular&#41;](tabular-models/data-sources-supported-ssas-tabular.md).  

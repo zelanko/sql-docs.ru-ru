@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.customfilterdb.f1
@@ -15,12 +14,12 @@ ms.assetid: 3223059d-f525-4835-bf88-ebc195d9dbdc
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d33148543677c58a353253a86bbdf99f1c892326
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 869185e56db9a4ffb07282d3ce51ced191a6bac8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62757211"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66067132"
 ---
 # <a name="filter-data-in-a-table-ssas-tabular"></a>Фильтрация данных в таблице (табличные службы SSAS)
   Чтобы ограничить число строк, загружаемых в таблицу во время импорта данных, можно применить фильтры. После выполнения импорта данных отдельные строки удалить нельзя. Можно применить пользовательские фильтры для отображения строк. Строки, не соответствующие условиям сортировки, скрыты. Фильтрацию можно выполнять по одному или нескольким столбцам. Фильтры добавляются друг к другу, что означает, что каждый дополнительный фильтр основывается на текущем фильтре и еще более ограничивает подмножество данных.  

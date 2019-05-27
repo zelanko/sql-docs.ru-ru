@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: c7e9db15-89f2-4d4d-8860-1e64c5821c4d
 author: heidisteen
 ms.author: heidist
 manager: craigg
-ms.openlocfilehash: 33cc1b337666e1d628ae285a7df0ba43cc4fe140
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: b1cf8c6f8442fc69669c10106f671040733e48ef
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352847"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66092224"
 ---
 # <a name="setup-role"></a>Роль установки
   На этой странице можно указать, будет страница «Выбор компонентов» использоваться для выбора отдельных функций или для установки с использованием роли установки.  
@@ -32,7 +31,7 @@ ms.locfileid: "53352847"
   
  Дополнительно в установку можно включить экземпляр ядра СУБД для реляционных баз данных, если он необходим для размещения баз данных в ферме SharePoint. Если ферма уже настроена, этот шаг можно пропустить.  
   
- По завершении процедуры установки необходимо настроить программное обеспечение с помощью одного из следующих средств: средство настройки PowerPivot, командлеты PowerShell или центр администрирования SharePoint 2010. В отличие от предыдущих выпусков, программа установки больше не выполняет какие-либо задачи по настройке установки PowerPivot.  
+ После завершения установки необходимо настроить программное обеспечение, с помощью одного из следующих подходов: Средство настройки PowerPivot, командлеты PowerShell или Центр администрирования SharePoint 2010. В отличие от предыдущих выпусков, программа установки больше не выполняет какие-либо задачи по настройке установки PowerPivot.  
   
  Установка на основе роли не включает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerPivot для клиентского приложения Excel. Клиентское приложение устанавливается отдельно.  
   

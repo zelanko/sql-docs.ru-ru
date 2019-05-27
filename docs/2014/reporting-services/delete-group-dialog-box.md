@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.deletegroup.f1
@@ -16,12 +15,12 @@ ms.assetid: bc1c0f27-41cb-49ad-8bef-634a4c23586f
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 8532661c57901cd720e10b5d42047aa8f1071414
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 85b9387b5e60cdcdfd7af17bc3268f5ee475b739
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63165461"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109319"
 ---
 # <a name="delete-group-dialog-box"></a>Диалоговое окно «Удаление группы»
   Чтобы удалить группу из области данных таблицы, матрицы или списка, используйте диалоговое окно **Удаление группы** . Если с группой связаны строки или столбцы, эти структуры также могут быть удалены.  

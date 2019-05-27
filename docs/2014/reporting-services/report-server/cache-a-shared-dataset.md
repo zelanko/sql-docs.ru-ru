@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: c2d8c81a-da1e-4a8a-9845-fff9a0903d24
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d1d495f8da0d05286a80ff8bdcf2e1c10da9b909
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c759eaf0fd18709e09eb64da6bfeb2d66a69f595
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63016891"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66104260"
 ---
 # <a name="cache-a-shared-dataset"></a>кэшировать общий набор данных
   Один из способов повышения производительности состоит в настройке свойств кэширования общего набора данных. При кэшировании общего набора данных копия результатов запроса сохраняется на указанный период времени. Первый пользователь, запрашивающий отчет, в котором используется общий набор данных, должен будет дождаться получения результатов запроса и завершения всех процессов обработки до просмотра отчета. Производительность работы последующих пользователей, запрашивающих тот же отчет в пределах времени кэширования, будет значительно повышена, поскольку запрос и обработка уже выполнены. Также можно указать расписание обновления кэша для выполнения запроса и кэширования результатов до истечения указанного периода кэширования.  

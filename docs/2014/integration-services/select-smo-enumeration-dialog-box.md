@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.selectsmoenumeration.f1
@@ -15,12 +14,12 @@ ms.assetid: 64ada1fe-21a2-4675-98fc-d5c803aa32f0
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 274a56641ae4f452b8eda8bca00663b1a9e83380
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3b9166e26129710a342411ab1da71b1c44c76239
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62889296"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66055950"
 ---
 # <a name="select-smo-enumeration-dialog-box"></a>Диалоговое окно «Выбор перечисления SMO»
   Диалоговое окно **Выбор перечисления SMO** позволяет указать в заданном экземпляре [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] управляющий объект [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (SMO) для перечисления, а также выбрать тип перечисления.  

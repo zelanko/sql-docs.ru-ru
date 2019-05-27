@@ -17,15 +17,15 @@ helpviewer_keywords:
 - passwords [SQL Server], blank
 - PWDCOMPARE function [Transact-SQL]
 ms.assetid: 5f84ff9e-c1ec-46aa-8501-50f854ebcc3a
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 2e45ede3ad5a61d0d701cf2bab35967111e3e143
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 65d4e1418dcf8f74cd994034097bc3ae0495e910
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782372"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65943273"
 ---
 # <a name="pwdcompare-transact-sql"></a>PWDCOMPARE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,10 +45,10 @@ PWDCOMPARE ( 'clear_text_password'
   
 ## <a name="arguments"></a>Аргументы  
  **'** *clear_text_password* **'**  
- Незашифрованный пароль. Аргумент *clear_text_password* имеет тип **sysname** (**nvarchar(128)**).  
+ Незашифрованный пароль. Аргумент *clear_text_password* имеет тип **sysname** (**nvarchar(128)** ).  
   
  *password_hash*  
- Хэш шифрования пароля. Аргумент *password_hash* имеет тип **varbinary(128)**.  
+ Хэш шифрования пароля. Аргумент *password_hash* имеет тип **varbinary(128)** .  
   
  *version*  
  Устаревший параметр, который может быть установлен в значение 1, если *password_hash* представляет значение для имени входа из версии ранее [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], которое было перенесено в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] или более позднюю версию, но так и не было преобразовано в систему [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. Аргумент *version* имеет тип **int**.  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: d6226b0c-0398-4185-8565-96099876fc21
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d0933593220b73b8d57d76645ebea05d733e5661
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f447d05501949df0fd0860ed7799fca2932714fa
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63215596"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105389"
 ---
 # <a name="rectangles-and-lines-report-builder-and-ssrs"></a>Прямоугольники и линии (построитель отчетов и службы SSRS)
   Для создания визуальных эффектов в отчете можно использовать прямоугольники и линии. Свойства отображения этих элементов отчета можно задать в разделе «Граница» вкладки «Главная», а другие свойства — с помощью панели «Свойства». Для прямоугольника можно добавлять такие характеристики, как цвет фона, изображение, подсказка или закладка.  

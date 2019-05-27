@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 7412ce68-aece-41c0-8c37-76a0e54b6b53
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 32bd106320c8969813dbae107a7569af8560aba4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 432b41216418cd1ad1bae70557c95a589f5e78dc
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62513326"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66101141"
 ---
 # <a name="specify-credentials-in-report-builder"></a>Указание учетных данных в построителе отчетов
   Учетные данные удостоверяют подлинность пользователя, который пытается получить данные из источника данных. Владелец источника данных определяет тип учетных данных, которые необходимо использовать. Например, администратор базы данных может указать, что пользователь должен предоставить имя и пароль пользователя Windows.  

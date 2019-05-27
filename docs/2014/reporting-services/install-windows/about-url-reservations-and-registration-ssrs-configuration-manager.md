@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - URL reservations
@@ -15,12 +14,12 @@ ms.assetid: c2c460c3-e749-4efd-aa02-0f8a98ddbc76
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f81ac60dbd6ea315bab70d2f65e4953b456f3034
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6b72d0a263010cc82abab38ea2d6149d3492ed7b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63225406"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108934"
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>Сведения о резервировании и регистрации URL-адресов (диспетчер конфигурации служб SSRS)
   URL-адреса для приложений служб Reporting Services определяются в качестве резервирований URL-адресов в компоненте HTTP.SYS. Резервирование URL-адресов определяет синтаксис конечной точки URL-адреса к веб-приложению. При настройке приложений на сервере отчетов резервирование URL-адресов задается как для веб-службы сервера отчетов, так и для диспетчера отчетов. Резервирование URL-адресов создается автоматически при настройке URL-адресов в программе установке или программе настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -61,7 +60,7 @@ ms.locfileid: "63225406"
   
  Несколько простых примеров проиллюстрируют основные понятия о резервировании URL-адресов и его связь с URL-адресами, используемыми в приложениях служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Главное, на что следует обратить внимание, — это отличия синтаксиса резервирования URL-адресов от синтаксиса URL-адресов для доступа к приложениям.  
   
-|Резервирование URL-адресов в компоненте HTTP.SYS|URL-адрес|Объяснение|  
+|Резервирование URL-адресов в компоненте HTTP.SYS|URL|Объяснение|  
 |---------------------------------|---------|-----------------|  
 |http://+:80/reportserver|http://\<имя_компьютера > / reportserver<br /><br /> http://\<IPAddress>/reportserver<br /><br /> http://localhost/reportserver|Для резервирования URL-адресов указывается шаблон (+) и номер порта 80. Этот запрос помещает в очередь сервера запросов все входящие запросы по порту 80, предназначенные любому узлу, который соответствует компьютеру сервера отчетов. Обратите внимание, что при таком резервировании URL-адресов для доступа к серверу отчетов может быть использовано любое число URL-адресов.<br /><br /> Это резервирование URL-адресов действует по умолчанию для служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в большинстве операционных систем.|  
 |http://123.45.67.0:80/reportserver|http://123.45.67.0/reportserver|Такое резервирование URL-адресов точно задает IP-адрес и поэтому является значительно более ограниченным, чем резервирование URL-адресов по шаблону. Только URL-адреса, включающие данный IP-адрес, могут подключаться к серверу отчетов. При таком резервировании URL-адрес адресов, запрос на сервер отчетов по адресу http://\<имя_компьютера > / reportserver или http://localhost/reportserver завершится сбоем.|  

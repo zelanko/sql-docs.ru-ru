@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10058"
@@ -16,12 +15,12 @@ ms.assetid: 70eef636-6d8c-495e-83fc-dc0fe9771658
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f55324123716289fec88b9d9bc531dccb22848d3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f372bd5bcc538d861ddd556b3bb420c181d59717
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62720431"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66104650"
 ---
 # <a name="tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs"></a>Ячейки, строки и столбцы области данных табликса (построитель отчетов и службы SSRS)
   Чтобы эффективнее управлять процессом отображения данных в строках и столбцах области данных табликса в отчете, необходимо уметь определять метки, итоги, строки и столбцы для подробных данных и групп. Во многих случаях для отображения данных можно пользоваться структурами по умолчанию для таблиц, матриц и списков. Дополнительные сведения см. в разделе [таблиц &#40;построитель отчетов и службы SSRS&#41;](tables-report-builder-and-ssrs.md), [матрицы &#40;построитель отчетов и службы SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md), или [перечислены &#40;построитель отчетов и SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  

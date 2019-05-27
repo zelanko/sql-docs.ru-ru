@@ -9,15 +9,15 @@ helpviewer_keywords:
 - geometry subtypes [SQL Server]
 - Polygon geometry subtype [SQL Server]
 ms.assetid: b6a21c3c-fdb8-4187-8229-1c488454fdfb
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 6ef33d1331621b248295327a6e6fd266b8dd6242
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 15a9ea69771699cf2b845d8018dfad1d1af511d5
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63044040"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66014080"
 ---
 # <a name="polygon"></a>Polygon
   `Polygon` представляет собой двухмерную поверхность, хранимую в виде последовательности точек, определяющих внешнее ограничивающее кольцо, и внутренних колец (последние могут отсутствовать).  

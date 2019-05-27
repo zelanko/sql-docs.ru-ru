@@ -1,5 +1,5 @@
 ---
-title: Шаг 9. Проверка учебного пакета, созданного на занятии 1 | Документация Майкрософт
+title: Шаг 9. Проверка учебного пакета, созданного на занятии 1 | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/03/2019
 ms.prod: sql
@@ -11,14 +11,18 @@ ms.assetid: 9aee7acf-797b-46f2-830d-80ab64a9f0b6
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a16deda0b17a15d6eae3c1e2b22e35b3fa8a9a7a
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 74099a8611c9c81b54619e1fc071b63a5d22777a
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289770"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722903"
 ---
 # <a name="lesson-1-9-test-the-lesson-1-package"></a>Занятие 1-9. Тестирование пакета занятия 1
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 В этом учебнике были выполнены следующие задачи:  
   

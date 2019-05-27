@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/11/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 60bb9610-7229-42eb-a95f-a377268a8720
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cec716534e6cffa7cc44aafb96ec0541e49d6e48
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e3c8eda71783e7211011bd6f67d9acf638c8946a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62643549"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66062522"
 ---
 # <a name="analysis-services-powershell"></a>Analysis Services PowerShell
   В службах [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] имеется поставщик Analysis Services PowerShell (SQLAS) и командлеты, позволяющие использовать Windows PowerShell для навигации, администрирования и выполнения запросов к объектам служб Analysis Services.  

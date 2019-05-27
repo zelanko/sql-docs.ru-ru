@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], data
@@ -18,12 +17,12 @@ ms.assetid: d92add64-e93c-4598-8508-55d1bc46acf6
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 345b508f230fa6d566ae05919af2d4f43105dc8b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 208b1363de6b1c6892ba8f265365b1d304b6ceab
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63219262"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107161"
 ---
 # <a name="register-a-standard-net-framework-data-provider-ssrs"></a>Регистрация стандартного поставщика данных .NET Framework (службы SSRS)
   Чтобы набор данных отчета служб [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] получал данные с помощью поставщика данных [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] сторонней разработки, необходимо развернуть и зарегистрировать сборку поставщика данных [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] в двух местах: на клиенте, используемом для разработки отчета, и на сервере отчетов. На клиенте поставщик данных должен быть зарегистрирован в качестве типа источника данных и связан с конструктором запросов. После этого этот поставщик может быть выбран в качестве типа источника данных при создании набора данных для отчета. При этом откроется связанный конструктор запросов, помогающий создавать запросы для этого типа источников данных. На сервере отчетов поставщик данных необходимо зарегистрировать в качестве типа источника данных. После этого может производиться обработка опубликованных отчетов, которые в качестве источника данных используют этот поставщик.  

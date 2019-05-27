@@ -1,23 +1,23 @@
 ---
 title: Просмотр схемы куба | Документация Майкрософт
-ms.date: 05/02/2018
-ms.prod: sql
+ms.custom: ''
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
 ms.technology: analysis-services
-ms.custom: multidimensional-models
 ms.topic: conceptual
-ms.author: owend
-ms.reviewer: owend
+ms.assetid: 82fc715c-e08e-447d-8fc8-9c9005f145f0
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 93898e6ed8dc26e3b06fd6a583bfa4084dd4c5f2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: b094e27a8b7c51afec21fcc4807d3ee6e8b22c37
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62740694"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66072506"
 ---
 # <a name="view-the-cube-schema"></a>Просмотр схемы куба
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Панель **Представление источника данных** вкладки **Структура куба** в **Конструкторе кубов** отображает схему куба. Схема представляет собой набор таблиц, на основе которых созданы меры и измерения для куба. Каждая схема куба состоит из одной или более таблиц фактов и одной или более таблиц измерений, на которых основаны меры и измерения в кубе.  
   
  Панель **Представление источника данных** вкладки **Структура куба** отображает диаграмму представления источников данных, на которой основан куб. Эта диаграмма представляет собой подмножество главной диаграммы представления источников данных. Можно скрыть и показать таблицы на панели **Представление источника данных** и просмотреть любые существующие диаграммы. Однако нельзя изменить базовую схему (например, добавить новые связи или именованные запросы). Для изменения схемы используйте конструктор представления источников данных.  

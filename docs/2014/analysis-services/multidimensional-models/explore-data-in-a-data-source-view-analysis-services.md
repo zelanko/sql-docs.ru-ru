@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - exploring data [Analysis Services]
@@ -15,12 +14,12 @@ ms.assetid: 2c922c35-fbcb-45b2-96b1-c7a846d8b419
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f02ffda65cfd981f84a41f62ed310a06b8dfbd63
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: debf1257667ea3aa3380117bbbc4c31399283252
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62725978"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66075132"
 ---
 # <a name="explore-data-in-a-data-source-view-analysis-services"></a>Просмотр данных в представлении источника данных (службы Analysis Services)
   Диалоговое окно **Просмотр данных** конструктора представлений источников данных в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] служит для просмотра данных таблицы, представления или именованного запроса в представлении источника данных. При просмотре данных в конструкторе представлений источника данных можно видеть содержимое каждого столбца данных в выбранной таблице, представлении или именованном запросе. Просмотр содержимого помогает определить, все ли столбцы нужны (если именованные вычисления требуются для повышения удобства для пользователя) и возвращают ли существующие именованные вычисления и именованные запросы ожидаемые результаты.  

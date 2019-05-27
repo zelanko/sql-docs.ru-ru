@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 245b236d-1d55-4744-b752-80bd133502aa
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f8970e77cf6ab77dc5dd4cc0544237d6a1269db2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0c914c31f760021a10c4f26a85bcd1d995f3ef07
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63185837"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66106474"
 ---
 # <a name="area-charts-report-builder-and-ssrs"></a>Диаграммы с областями (построитель отчетов и службы SSRS)
   В диаграммах с областями данные выводятся в виде точек, соединенных линией, с закрашенными ниже этой линии областями. Дополнительные сведения о добавлении данных в диаграммы с областями см. в разделе [Диаграммы (построитель отчетов и службы SSRS)](charts-report-builder-and-ssrs.md).  

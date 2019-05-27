@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Query Editor [SQL Server Management Studio], color coding
@@ -14,12 +13,12 @@ ms.assetid: 802882dc-c997-4e3f-8a01-994bb43169ae
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4145c76666b1f0da2b50f3a48ae5553a21ba2748
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e939270edd53189f9d8ba77411b8916e94a5ba8f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63209655"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66064172"
 ---
 # <a name="color-coding-in-query-editors"></a>Выделение цветом в редакторах запросов
   Тексту, который вводится в редакторах кода, присваивается категория. Каждая категория идентифицируется по цвету. Цвета помогают быстро находить текст в коде. Например, комментарии выделены темно-зеленым. В следующей таблице приведены наиболее часто применяемые цвета. Чтобы просмотреть полный список цветов и их категорий, а также настроить пользовательскую цветовую схему, в меню **Сервис**выберите пункт **Параметры** . Дополнительные сведения об изменении цветов по умолчанию см. в разделе [Change Font Color, Size, and Style](change-font-color-size-and-style.md).  

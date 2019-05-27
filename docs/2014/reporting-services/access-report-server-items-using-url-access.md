@@ -1,11 +1,10 @@
 ---
-title: Доступ к элементам сервера отчетов с использованием URL-адрес | Документация Майкрософт
+title: Доступ к элементам сервера отчетов с использованием URL-адресов | Документы Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - referencing URL items for report server access
@@ -14,45 +13,45 @@ ms.assetid: a58b4ca6-129d-45e9-95c7-e9169fe5bba4
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3a345cd609c4cfd79f9e93a2b63e71bbddde36ee
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bb841d8014bd1a66d533c10c4740c016bb13e737
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63233570"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66110098"
 ---
-# <a name="access-report-server-items-using-url-access"></a>Доступ к элементам сервера отчетов с помощью URL-адресов
-  В этом разделе описываются методы доступа к элементам каталога различных типов в отчете данные сервера или на сайте SharePoint с помощью *rs: Command*=*значение*.  
+# <a name="access-report-server-items-using-url-access"></a>Доступ к элементам сервера отчетов с использованием URL-адреса
+  В этом разделе описываются методы доступа к элементам каталога различных типов в базе данных сервера отчетов или на сайте SharePoint с использованием строки *rs:Command*=*Value*.  
   
- Необязательно указывать эту строку параметра. Если он пропущен, сервер отчетов оценивает тип элемента и автоматически выбирает подходящее значение параметра. Тем не менее, с помощью *rs: Command*=*значение* строку в URL-АДРЕСЕ улучшает производительность сервера отчетов.  
+ Указывать эту строку параметра не обязательно. Если она не указана, сервер отчетов оценивает тип элемента и выбирает подходящее значение параметра автоматически. Однако использование строки *rs:Command*=*Value* в URL-адресе улучшает производительность сервера отчетов.  
   
- Примечание `_vti_bin` синтаксис прокси, в приведенных ниже примерах. Дополнительные сведения об использовании этого синтаксиса см. в разделе [URL Access Parameter Reference](url-access-parameter-reference.md).  
+ Обратите внимание на синтаксис прокси `_vti_bin` в приведенных далее примерах. Дополнительные сведения об использовании этого синтаксиса см. в разделе [URL Access Parameter Reference](url-access-parameter-reference.md).  
   
 ## <a name="access-a-report"></a>Доступ к отчету  
- Чтобы просмотреть отчет в браузере, используйте *rs: Command*=*визуализации* параметра. Пример:  
+ Чтобы открыть отчет в браузере, следует использовать параметр *rs:Command*=*Render* . Пример:  
   
  `Native` `http://myrshost/reportserver?/Sales/YearlySalesByCategory&rs:Command=Render`  
   
- `SharePoint` `http://myspsite/subsite/_vti_bin/reportserver? http://myspsite/subsite/Sales/YearlySalesByCategory&rs:Command=Render`  
+ `SharePoint` `http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales/YearlySalesByCategory&rs:Command=Render`  
   
 > [!TIP]  
->  Очень важно включить URL-адрес `_vti_bin` синтаксис прокси для отправки запроса с помощью центра администрирования SharePoint и [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] прокси-сервер HTTP. Прокси-сервер добавляет некоторый контекст HTTP-запроса, контекст, необходимый для обеспечения правильного выполнения отчета для серверов отчетов в режиме SharePoint.  
+>  Важно, чтобы URL-адрес содержал синтаксис прокси `_vti_bin` для отправки запроса с помощью центра администрирования SharePoint и прокси-сервера HTTP [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Прокси-сервер добавляет в HTTP-запрос контекст, необходимый для обеспечения правильного выполнения отчета для серверов отчетов в режиме интеграции с SharePoint.  
   
 ## <a name="access-a-resource"></a>Доступ к ресурсу  
- Чтобы получить доступ к ресурсу, используйте *rs: Command*=*GetResourceContents* параметра. Если ресурс совместим с браузером, такие как изображения, он открывается в браузере. В противном случае вам предложено открыть или сохранить файл или ресурс на диск.  
+ Для доступа к ресурсу следует использовать параметр *rs:Command*=*GetResourceContents* . Если ресурс совместим с браузером (например, если это изображение), то он открывается в браузере. В противном случае будет предложено открыть или сохранить файл или ресурс на диск.  
   
  `Native` `http://myrshost/reportserver?/Sales/StorePicture&rs:Command=GetResourceContents`  
   
- `SharePoint` `http://myspsite/subsite/_vti_bin/reportserver? http://myspsite/subsite/Sales/StorePicture.jpg&rs:Command=GetResourceContents`  
+ `SharePoint` `http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales/StorePicture.jpg&rs:Command=GetResourceContents`  
   
 ## <a name="access-a-data-source"></a>Доступ к источнику данных  
- Чтобы получить доступ к источнику данных, используйте *rs: Command*=*GetDataSourceContents* параметра. Если браузер поддерживает XML, то определение источника данных отображается в случае пользователь прошел проверку `Read Contents` разрешение в источнике данных. Пример:  
+ Для доступа к источнику данных следует использовать параметр *rs:Command*=*GetDataSourceContents* . Если браузер поддерживает XML, то определение источника данных отображается при условии, что текущий пользователь прошел проверку подлинности и обладает разрешением `Read Contents` для источника данных. Пример:  
   
  `Native` `http://myrshost/reportserver?/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents`  
   
- `SharePoint` `http://myspsite/subsite/_vti_bin/reportserver? http://myspsite/subsite/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents`  
+ `SharePoint` `http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents`  
   
- Структура XML может выглядеть следующим образом:  
+ XML-структура может иметь вид, аналогичный следующему примеру:  
   
 ```  
 <DataSourceDefinition>  
@@ -66,19 +65,19 @@ ms.locfileid: "63233570"
 </DataSourceDefinition>  
 ```  
   
- Строка соединения возвращается в зависимости от **SecureConnectionLevel** Установка сервера отчетов. Дополнительные сведения о **SecureConnectionLevel** настройки, см. в разделе [Using Secure Web Service Methods](report-server-web-service/net-framework/using-secure-web-service-methods.md).  
+ Строка соединения возвращается в зависимости от параметра **SecureConnectionLevel** для сервера отчетов. Дополнительные сведения о параметре **SecureConnectionLevel** см. в разделе [Using Secure Web Service Methods](report-server-web-service/net-framework/using-secure-web-service-methods.md).  
   
 ## <a name="access-the-contents-of-a-folder"></a>Доступ к содержимому папки  
- Чтобы получить доступ к содержимому папки, используйте *rs: Command*=*GetChildren* параметра. Возвращаемая страница универсального перемещение по папкам, содержащий ссылки на вложенные папки, отчеты, источники данных и ресурсы запрошенной папки. Пример:  
+ Для доступа к содержимому папки следует использовать параметр *rs:Command*=*GetChildren* . Будет возвращена универсальная страница для переходов по папкам, содержащая вложенные папки, отчеты, источники данных и ресурсы запрошенной папки. Пример:  
   
  `Native` `http://myrshost/reportserver?/Sales&rs:Command=GetChildren`  
   
- `SharePoint` `http://myspsite/subsite/_vti_bin/reportserver? http://myspsite/subsite/Sales&rs:Command=GetChildren`  
+ `SharePoint` `http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales&rs:Command=GetChildren`  
   
- Пользовательский интерфейс, вы увидите похож на режим просмотра каталогов [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Information Server (IIS). Номер версии, включая номер сборки сервера отчетов, также отображается под списком папок.  
+ Отображаемый пользовательский интерфейс аналогичен режиму просмотра каталогов, используемому на сервере [!INCLUDE[msCoName](../includes/msconame-md.md)] IIS. Номер версии сервера отчетов, включая номер построения, также выводится под списком папок.  
   
 ## <a name="see-also"></a>См. также  
- [URL-адресов &#40;SSRS&#41;](url-access-ssrs.md)   
- [URL Access Parameter Reference](url-access-parameter-reference.md)  
+ [Доступ по URL-адресу (службы SSRS)](url-access-ssrs.md)   
+ [Ссылка на параметр доступа по URL-адресу](url-access-parameter-reference.md)  
   
   

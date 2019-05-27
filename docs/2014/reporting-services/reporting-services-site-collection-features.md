@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: e05ae162-a4b2-489d-9853-d6b09414e632
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 43b45b7e1bd2d8a4ba10870cc442e73aecbbc618
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9475ee323222b800a9c4b9a86e737fdd161e7a60
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63283593"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66102760"
 ---
 # <a name="reporting-services-site-collection-features"></a>Компоненты семейства веб-сайтов служб Reporting Services
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint предоставляют три компонента коллекции сайтов SharePoint. Эти компоненты поддерживают среду создания отчетов служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint — [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)], компонент надстройки служб [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] для [!INCLUDE[SPS2010](../includes/sps2010-md.md)] Enterprise Edition и операции управления для служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в центре администрирования SharePoint.  

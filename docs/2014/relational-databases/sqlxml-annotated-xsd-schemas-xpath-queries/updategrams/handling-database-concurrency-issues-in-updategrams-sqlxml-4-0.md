@@ -17,15 +17,15 @@ helpviewer_keywords:
 - concurrency [SQLXML]
 - intermediate concurrency protection [SQLXML]
 ms.assetid: d4b908d1-b25b-4ad9-8478-9cd882e8c44e
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 639071b9526c70477fd081bd94d61380a79beb2d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b561de7d655001e2c62f7c85e57cc7eb098af12d
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63060243"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66014752"
 ---
 # <a name="handling-database-concurrency-issues-in-updategrams-sqlxml-40"></a>Решение проблем с параллелизмом обработки в базе данных в диаграммах обновления (SQLXML 4.0)
   Как и другие механизмы обновления базы данных, диаграммы обновления должны иметь дело с одновременными обновлениями данных в многопользовательской среде. В диаграммах обновления используется оптимистическое управление параллелизмом, которое использует сравнение данных в выбранных полях как моментальных снимков, чтобы данные, которые нужно обновить, не были изменены другим пользовательским приложением после чтения из базы данных. Диаграммы обновления включают эти значения моментальных снимков в  **\<перед >** блок диаграмм обновления. Перед обновлением базы данных, диаграмма обновления сопоставляет значения, заданные в  **\<перед >** блок с текущими значениями в базе данных, чтобы убедиться, что обновление является допустимым.  

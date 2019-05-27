@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 685aa217-de1b-4df2-bf22-095228c40775
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 763b1170ad0201c737e06e19c3dac8d58c6712ee
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 43ec549444fd108dbee9e53518a4e996b281b46b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62729120"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66078805"
 ---
 # <a name="using-a-modified-version-of-the-analysis-services-tutorial-project"></a>Использование измененной версии проекта Analysis Services Tutorial
   Оставшиеся занятия этого учебника основаны на улучшенной версии проекта служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial, с которым велась работа на первых трех занятиях. В представление источника данных **Adventure Works DW 2012** были добавлены некоторые таблицы и именованные вычисления, в проект были добавлены дополнительные измерения, которые также были добавлены в куб учебника по службам [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Кроме того, была добавлена вторая группа мер, которая содержит меры из второй таблицы фактов. Улучшенная версия проекта позволит продолжить изучение добавления новых функций в приложение бизнес-аналитики без необходимости повторного применения полученных навыков.  

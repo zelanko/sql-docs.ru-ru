@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.connoracledb.f1
@@ -13,12 +12,12 @@ ms.assetid: 9bd177fb-8539-46cd-bf96-189ade52c2a1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 79808c965828844a467fc232a5432d1207b25c34
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8bc5a08d96dbef0bae412b75c9592e4893e12a0f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62680195"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66087019"
 ---
 # <a name="connect-to-an-oracle-database-ssas"></a>Соединение с базой данных Oracle (SSAS)
   Эта страница **мастера импорта таблиц** используется для задания параметров для соединения с базой данных Oracle. Для доступа к мастеру из [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]выберите пункт **Импорт из источника данных** в меню **Модель**.  

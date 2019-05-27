@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - vs.debug.quickwatch
@@ -15,12 +14,12 @@ ms.assetid: d6bbb373-1452-41f2-bdc5-86ae689c3dc0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 00f54c136441050a5e6e460e7578789f41a569d7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9fcb20846ba21876044d50c80856600214eed354
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162714"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66063388"
 ---
 # <a name="quickwatch-dialog-box"></a>Диалоговое окно «Быстрая проверка»
   Используйте диалоговое окно **Быстрая проверка** , чтобы быстро просмотреть тип данных и значение одного из выражений [!INCLUDE[tsql](../../includes/tsql-md.md)] , такого как переменная или параметр, при отладке кода [!INCLUDE[tsql](../../includes/tsql-md.md)] . Чтобы просмотреть несколько выражений, можно также добавить выражение в окне **Контрольные значения** .  
@@ -42,7 +41,7 @@ ms.locfileid: "48162714"
   
     -   Выражения, построенные путем применения операторов к одной или нескольким переменным, параметрам или системным функциям, например @IntegerCounter+1 или FirstName+LastName.  
   
-    -   Инструкции Transact-SQL, возвращающие единственное значение, например SELECT CharacterCol FROM MyTable WHERE PrimaryKey = 1.  
+    -   Инструкции Transact-SQL, возвращающие одно значение, например: SELECT CharacterCol FROM MyTable WHERE PrimaryKey = 1.  
   
 2.  Нажмите кнопку **Пересчет**.  
   
@@ -61,10 +60,10 @@ ms.locfileid: "48162714"
  **Сетка значений**  
  Отображаются свойства выражения, которое просматривается в настоящее время.  
   
- **Название**  
+ **Name**  
  Является просматриваемым выражением [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
- **Value**  
+ **Значение**  
  Отображается значение, которое в настоящее время присвоено выражению. Если в настоящее время выражение не имеет значения, отображается пустое поле.  
   
  Если длина выражения больше ширины столбца **Значение** , полное значение отображается в подсказке при перемещении указателя на ячейку **Значение** для этого выражения.  

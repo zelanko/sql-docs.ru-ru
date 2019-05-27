@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.structure.addacolumn.f1
@@ -15,12 +14,12 @@ ms.assetid: 6f73a7dc-5401-40c3-8f1d-b41fc1dd91c2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: de9045d445142428810679fc5452e7627760145b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7ee69724fbcacad78c6053c1bbdf9c3465482665
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62747756"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66069918"
 ---
 # <a name="select-a-column-dialog-box-mining-structure-view"></a>Диалоговое окно «Выбор столбца» (представление структуры интеллектуального анализа данных)
   Используйте диалоговое окно **Выбор столбца** , чтобы добавить столбцы к структуре интеллектуального анализа данных. Диалоговое окно содержит различные параметры в зависимости от того, работает ли пользователь с моделью интеллектуального анализа данных OLAP или с реляционной моделью интеллектуального анализа данных.  

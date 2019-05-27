@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 67f243e3ab09809c263a3aff6554aaf5364271e6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1939e3b1f09e6afbc63ba0565e244e66a7cff26f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63190862"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66103231"
 ---
 # <a name="rsreportserver-configuration-file"></a>RSReportServer Configuration File
   В файле **RsReportServer.config** хранятся параметры, которые используются диспетчером отчетов, веб-службами сервера отчетов и приложением фоновой обработки. Все приложения служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] работают в одном процессе, который считывает параметры конфигурации, хранящиеся в файле RSReportServer.config. Серверы отчетов, работающие в собственном режиме и в режиме интеграции с SharePoint, используют файл RSReportServer.config, однако в этих режимах используются разные параметры из этого файла конфигурации. Версия файла для режима интеграции с SharePoint имеет меньший размер, поскольку многие параметры для этого режима хранятся не в файле, а в базах данных конфигурации SharePoint. В этом разделе описывается файл конфигурации по умолчанию, который устанавливается для собственного режима и для режима интеграции с SharePoint, а также некоторые важные параметры и варианты работы, которые управляются файлом конфигурации.  
@@ -423,7 +422,7 @@ ms.locfileid: "63190862"
 |**MaxConnections**|Задает максимальное количество соединений с веб-службами Bing maps.|  
 |**Timeout**|Укажите время ожидания отклика в секундах от веб-служб Bing maps.|  
 |**AppID**|Указывает идентификатор приложения (AppID) для использования при работе с веб-службами Bing maps. `(Default)` указывает AppID служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], заданный по умолчанию.<br /><br /> Дополнительные сведения об использовании в отчете мозаичных элементов Bing Map см. в разделах [Дополнительные условия использования](https://go.microsoft.com/fwlink/?LinkId=151371) и [Заявление о конфиденциальности](https://go.microsoft.com/fwlink/?LinkId=151372).<br /><br /> Не изменяйте это значение, если не указан пользовательский идентификатор AppID для собственного лицензионного соглашения по работе с веб-службами Bing Maps. При изменении идентификатора AppID не нужно перезапускать службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , чтобы изменения вступили в силу.|  
-|**CacheLevel**|Указывает значение из «Перечисления HttpRequestCacheLevel» System.Net.Cache. Значение по умолчанию — `Default`. Дополнительные сведения см. в разделе [Перечисление HttpRequestCacheLevel](https://go.microsoft.com/fwlink/?LinkId=153353).|  
+|**CacheLevel**|Указывает значение из «Перечисления HttpRequestCacheLevel» System.Net.Cache. Значение по умолчанию — `Default`. Дополнительные сведения см. в разделе [Перечисление HttpRequestCacheLevel](https://go.microsoft.com/fwlink/?LinkId=153353).|  
   
 ##  <a name="bkmk_nativedefaultfile"></a> Файл конфигурации по умолчанию для сервера отчетов, работающего в собственном режиме  
  Файл rsreportserver.config по умолчанию устанавливается в следующее местоположение:  

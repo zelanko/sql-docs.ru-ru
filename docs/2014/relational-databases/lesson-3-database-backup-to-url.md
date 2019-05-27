@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: a9ae1501-b614-49d3-b975-6569da8350b2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 465928e8d7fc48785c5774a6bd50f457b0df58b8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7361cb5d0e68cfa3f45f46d7f99d68c88c1a556b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63182001"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66090821"
 ---
-# <a name="lesson-4-create-a-database-in-windows-azure-storage"></a>Занятие 4: Создание базы данных в хранилище Windows Azure
+# <a name="lesson-4-create-a-database-in-windows-azure-storage"></a>Занятие 4: Создание базы данных в службе хранилища Microsoft Azure
   На этом занятии вы узнаете, как создать базу данных с использованием компонента SQL Server Data Files в Windows Azure. Обратите внимание, что перед началом этого занятия необходимо завершить занятия 1, 2 и 3. Занятие 3 — это очень важный этап, поскольку перед началом занятия 4 вам необходимо сохранить сведения о контейнере хранилища Windows Azure, а также связанные имя политики и ключ SAS в учетных данных SQL Server.  
   
  Для каждого контейнера хранилища, используемого файлом данных или журнала, необходимо создать учетные данные SQL Server, имя которых соответствует пути контейнера. Затем можно будет создать новую базу данных в хранилище Windows Azure.  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 54405a3a-d7fa-4d95-8963-9aa224e5901e
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: cd0c7e3bc9ece2a6eafa9de1623bfa2b641e5e64
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 69d7ad1e3a65f49aa850e016e5e5bd609039ccf3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63064118"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108522"
 ---
 # <a name="lesson-2-specifying-connection-information-reporting-services"></a>Урок 2. Задание информации о соединении (службы Reporting Services)
   После добавления отчета к проекту Tutorial следует задать *источник данных*, который представляет собой сведения о соединении, используемые отчетом для доступа к данным, которые располагаются в реляционной базе данных, многомерной базе данных или ином ресурсе.  

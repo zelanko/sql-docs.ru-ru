@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - MDX [Analysis Services], calculated members
@@ -16,12 +15,12 @@ ms.assetid: 9322e8b8-43e1-4e02-a7d1-e41a586a5bb8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ea31ff7c14baff6a102ad9aa11c227e9c333da60
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0275a071c5548de7086844e48cec7eff3bb72d31
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62725538"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66074540"
 ---
 # <a name="building-calculated-members-in-mdx-mdx"></a>Создание вычисляемых элементов в многомерных выражениях (многомерные выражения)
   В многомерных выражениях вычисляемым называется элемент, разрешаемый путем вычисления многомерного выражения, возвращающего значение. В этом определении кроется огромный потенциал. Возможность создания и использования вычисляемых элементов в многомерных запросах дает широкие возможности для манипулирования данными.  

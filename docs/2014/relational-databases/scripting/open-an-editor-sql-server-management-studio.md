@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 5d654a60-d205-49d2-a831-b3d986d60024
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: abfaedbc8eb415d00b1947fe36bef0a51716f536
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a6ba0d74b07c21234d7e0f20cb7d9664ee7157f2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63144776"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66090294"
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>Открытие редактора (среда SQL Server Management Studio)
   В этом разделе описывается, как открыть редактор запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] , редактор многомерных выражений, редактор расширений интеллектуального анализа данных или редактор XML/A в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. После открытия каждое окно редактора отображается в виде вкладки на центральной панели среды [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
@@ -30,7 +29,7 @@ ms.locfileid: "63144776"
 ### <a name="permissions"></a>Разрешения  
  Операции, выполняемые в редакторе кода, контролируются разрешениями, предоставленными учетной записи проверки подлинности, которая использовалась для входа. Например, если открыть окно редактора запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] , используя проверку подлинности Windows, то будет невозможно выполнять инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] , ссылающиеся на объекты, для которых у учетной записи входа Windows нет разрешений на доступ.  
   
-## <a name="how-to-open-editors"></a>Практическое руководство. Открыть редакторы  
+## <a name="how-to-open-editors"></a>Практическое руководство. Открытие редакторов  
  В этом разделе объясняется, как открыть различные редакторы в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ### <a name="using-the-filenew-menu"></a>С помощью меню «Файл/Создать»  

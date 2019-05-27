@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Query Editor [SQL Server Management Studio]
@@ -26,12 +25,12 @@ ms.assetid: 062051e4-4b77-4969-98ae-d2547c24ce3e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e2f2e0f35f1d910e31bd8f3f93201660fca51c0b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 39476a5bc6c1f115595c529e56090f7dda31aba2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62867163"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66063881"
 ---
 # <a name="query-and-text-editors-sql-server-management-studio"></a>Редакторы запросов и текста (среда SQL Server Management Studio)
   Для интерактивного изменения и проверки скриптов [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , многомерных выражений, расширений интеллектуального анализа данных или XML/A либо изменения простого текстового файла или XML-файла можно использовать один из редакторов среды [!INCLUDE[tsql](../../includes/tsql-md.md)]. В каждом редакторе поддерживается выделение цветом ключевых слов и проверка ошибок синтаксиса и применения для конкретного языка. В редакторе запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] есть отладчик [!INCLUDE[tsql](../../includes/tsql-md.md)] , с помощью которого можно находить и исправлять ошибки в коде [!INCLUDE[tsql](../../includes/tsql-md.md)] .  

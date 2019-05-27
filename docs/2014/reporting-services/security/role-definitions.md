@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - roles [Reporting Services], creating
@@ -16,12 +15,12 @@ ms.assetid: d1b8dbf0-4462-402e-92dd-0e4835002b6e
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ac879ad519b08ae272c8ac30dd37021123570cca
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.openlocfilehash: 6518a46c44a97fbb386b4479454e89a0eccb1a39
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59950850"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66101752"
 ---
 # <a name="role-definitions"></a>Определение ролей
   В службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] *определение**роли* — это именованная коллекция задач, которая включает операции, доступные на сервере отчетов. Определение ролей содержит правила, которые сервер отчетов использует для обеспечения безопасности. Когда пользователь пытается выполнить задачу, например опубликовать отчет, сервер отчетов, сверяясь с назначением ролей этого пользователя, определяет, включена ли данная задача в определение роли пользователя. Запрос выполняется только в том случае, если задача включена в определение роли.  

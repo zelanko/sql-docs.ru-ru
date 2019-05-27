@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.ffileconnection.general.f1
@@ -15,12 +14,12 @@ ms.assetid: 77296024-5c1a-4f6a-9665-0b50d45d744c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8282cf7060f106798f2fa482f474bc5e364492ee
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b378d7257ddd57e97407d82feb817aa70965f598
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62768320"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66058744"
 ---
 # <a name="flat-file-connection-manager-editor-general-page"></a>Редактор диспетчера соединений с неструктурированными файлами (страница «Общие»)
   Используйте страницу **Общие** диалогового окна **Редактор диспетчера соединений с неструктурированными файлами** , чтобы выбрать файл и формат данных. Соединение с неструктурированным файлом дает пакету возможность установить соединение с текстовым файлом.  

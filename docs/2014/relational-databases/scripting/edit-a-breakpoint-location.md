@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoint location
@@ -13,12 +12,12 @@ ms.assetid: 5c28e411-0377-4210-a7ce-2a5c13dcdf74
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 36833c6eb5fc588edb2d12716ba439140b8a1cbe
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: ade5926b8a63c3e5b5bf54dcb02c95260942264b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53327335"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66090470"
 ---
 # <a name="edit-a-breakpoint-location"></a>Изменение положения точки останова
   Положение точки останова задает строку и символ, где находится точка останова в файле скрипта [!INCLUDE[tsql](../../includes/tsql-md.md)] . Положение точки останова можно изменить и перенести точку останова в другое место в скрипте или в другой скрипт.  

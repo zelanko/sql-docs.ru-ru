@@ -17,16 +17,16 @@ helpviewer_keywords:
 - indexes [SQL Server], viewing
 - indexes [SQL Server], properties
 ms.assetid: 998d5788-4871-44a8-8125-0d9390868b84
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0b604dfaf700acf82b49934017121aa5749578ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 813b88f56d6017a9e20d8bce72925f9ee7ab552b
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830102"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65944471"
 ---
 # <a name="indexproperty-transact-sql"></a>INDEXPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,7 +46,7 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
  Выражение, которое содержит идентификационный номер объекта таблицы или индексированного представления, для которого предоставляются сведения о свойстве индекса. Аргумент *object_ID* имеет тип **int**.  
   
  *index_or_statistics_name*  
- Выражение, которое содержит имя индекса или статистики, для которой возвращаются сведения о свойстве. Аргумент *index_or_statistics_name* имеет тип **nvarchar(128)**.  
+ Выражение, которое содержит имя индекса или статистики, для которой возвращаются сведения о свойстве. Аргумент *index_or_statistics_name* имеет тип **nvarchar(128)** .  
   
  *property*  
  Выражение, которое содержит имя возвращаемого свойства базы данных. Аргумент *property* имеет тип **varchar(128)** и может принимать одно из указанных ниже значений.  

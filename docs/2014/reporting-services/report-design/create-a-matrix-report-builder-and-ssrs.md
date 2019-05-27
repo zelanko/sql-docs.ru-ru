@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 493e63b9-ecd0-4054-97ec-92d84e9b8182
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1cf085763acdde040abd8e91760ac954d3a4fb8e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7750cc62d570cc0f7278196cef45ce088823901c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63206550"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66106155"
 ---
 # <a name="matrices-report-builder-and-ssrs"></a>Матрицы (построитель отчетов и службы SSRS)
   Матрица используется для отображения сгруппированных данных и сводной информации. Данные можно группировать по нескольким полям либо выражениям в группах строк и столбцов. Матрицы обеспечивают функциональность, подобную перекрестным и сводным таблицам. Во время выполнения, по мере объединения данных отчета и областей данных матрица растет на странице в горизонтальном и вертикальном направлении. Значения в ячейках матрицы отображают статистические значения пересечения групп строк и столбцов, которым принадлежит ячейка. Строки и столбцы можно форматировать, чтобы выделить нужные данные. Можно также включить переключатели детализации, которые по умолчанию скрывают подробные данные, чтобы пользователи могли по желанию отобразить подробные сведения.  

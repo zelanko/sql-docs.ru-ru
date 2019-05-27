@@ -19,14 +19,18 @@ ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a06b74d65cdc33429ce694d04753863d711c5cae
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: c0759d5da7af3cfd50ff32b500050b90affa70c5
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290680"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65720052"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Развертывание проектов и пакетов служб Integration Services (SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] поддерживают две модели развертывания: модель развертывания проектов и устаревшую модель развертывания пакетов. Модель развертывания проектов позволяет развертывать проекты на сервере служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
 Дополнительные сведения об устаревшей модели развертывания пакетов см. в разделе [Устаревшее развертывание пакетов (службы SSIS)](../../integration-services/packages/legacy-package-deployment-ssis.md).  
@@ -102,7 +106,7 @@ ms.locfileid: "58290680"
   
 1.  Создайте каталог SSISDB, если он еще не создан. Дополнительные сведения см. в разделе [Каталог служб SSIS](../../integration-services/catalog/ssis-catalog.md).  
   
-2.  **Мастер преобразования проекта служб Integration Services** преобразует проект в модель развертывания проекта. Дополнительные сведения см. в инструкциях ниже. [Преобразование проекта в модель развертывания проекта](#convert)  
+2.  **Мастер преобразования проекта служб Integration Services** преобразует проект в модель развертывания проекта. Дополнительные сведения см. в следующих инструкциях: [Преобразование проекта в модель развертывания проекта](#convert)  
   
     -   При создании проекта в службах [!INCLUDE[ssISversion12](../../includes/ssisversion12-md.md)] или более поздней версии по умолчанию используется модель развертывания проекта.  
   
@@ -123,7 +127,7 @@ ms.locfileid: "58290680"
   
      Дополнительные сведения об обновлении пакетов см. в разделах [Обновление пакетов служб Integration Services](../../integration-services/install-windows/upgrade-integration-services-packages.md) и [Обновление пакетов служб Integration Services с помощью мастера обновления пакетов служб SSIS](../../integration-services/install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md).  
   
-3.  Разверните проект на сервере служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Дополнительные сведения см. в инструкциях ниже. [Развертывание проекта на сервере служб Integration Services](#deploy)  
+3.  Разверните проект на сервере служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Дополнительные сведения см. в следующих инструкциях: [Развертывание проекта на сервере служб Integration Services](#deploy)  
   
 4.  (Необязательно.) Создайте среду для развернутого проекта. 
   

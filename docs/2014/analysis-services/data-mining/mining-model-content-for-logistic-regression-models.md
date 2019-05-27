@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - logistic regression [Analysis Services]
@@ -15,12 +14,12 @@ ms.assetid: 69cc0b86-e8bc-4d6c-903e-85724f5c0396
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 56bd850ac5da9353073d2cf4d75fd1980bb8a38b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b463035cc83fafd2b283d85a577616fa962fcd1c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62733518"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66083616"
 ---
 # <a name="mining-model-content-for-logistic-regression-models-analysis-services---data-mining"></a>Содержимое моделей интеллектуального анализа данных для моделей логистической регрессии (службы Analysis Services — интеллектуальный анализ данных)
   В этом разделе приведено описание содержимого модели интеллектуального анализа данных, характерного для моделей, в которых используется алгоритм логистической регрессии (Майкрософт). Объяснение способов интерпретации статистики и описание структуры, общей для всех типов моделей, а также общие определения терминов, связанных с содержимым моделей интеллектуального анализа данных, см. в разделе [Содержимое модели интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](mining-model-content-analysis-services-data-mining.md).  

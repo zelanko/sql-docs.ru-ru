@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], creating
@@ -15,12 +14,12 @@ ms.assetid: 44be7ee2-33ce-46e4-9d1a-a20aaf43a227
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 4d28613857573b2793937a20b94d637d4f36b084
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b167aaadfbef817608a2b0dc14954ad7f29f9b97
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62510824"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66101011"
 ---
 # <a name="create-and-manage-subscriptions-for-sharepoint-mode-report-servers"></a>Создание подписок для серверов отчетов, работающих в режиме интеграции с SharePoint, и управление этими подписками
   Вы можете создать подписки [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] на доставку отчетов из веб-приложения SharePoint, работающим в режиме интеграции с SharePoint. Подписки могут доставлять отчеты в библиотеку документов, папку с файлами или по электронной почте. В этой статье приведена сводка по требованиям и шагам для создания подписки [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
