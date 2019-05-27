@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: a59d3448-8619-4044-923b-8effba926dfa
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 934ad51c8855b5b4aadd49af628ee8348bf960d9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: cbaf5c82f386330fc632c55aab3cd3ec5a3d07b9
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62794602"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66066707"
 ---
 # <a name="properties-ssas-tabular"></a>Свойства (табличные службы SSAS)
   Проекты табличной модели в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] имеют различные свойства, которые определяют поведение проекта, модели, отчетов и развертывания. Параметры свойств сохраняются в формате XML в файле Model.bim, однако все свойства, описанные в этом разделе, можно настроить в окнах **Свойства** в среде [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - Me.Value references
@@ -15,12 +14,12 @@ ms.assetid: 39c7aafd-dcb9-4317-b8f7-d15828eb4f9a
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e779a88940db2883846168535e7823c1723f4b4e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0d86c9bb07a52aba0cd93b006fc33edf4d1aa885
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63266716"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109928"
 ---
 # <a name="breaking-changes-in-sql-server-reporting-services-in-sql-server-2014"></a>Критические изменения в службах SQL Server Reporting Services в выпуске SQL Server «2014»
   В этом разделе описаны критические изменения в службах [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Эти изменения могут нарушать работу приложений, скриптов или механизмов, основанных на более ранних версиях [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Такие проблемы могут возникать при обновлении либо в пользовательских скриптах или отчетах. Дополнительные сведения см. в разделе [Использование помощника по обновлению для подготовки к обновлениям](../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  
@@ -48,7 +47,7 @@ ms.locfileid: "63266716"
  `http://<Server Name>/sites/videos/_vti_bin/ReportServer`  
   
 ### <a name="changes-to-sharepoint-mode-command-line-installation"></a>Изменения в процессе установки режима интеграции с SharePoint из командной строки  
- Входной параметр **/RSINSTALLMODE** работает только при установке в собственном режиме и не работает при установке в режиме интеграции с SharePoint. Например, следующее не поддерживается в [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]: **/RSINSTALLMODE = «DefaultSharePointMode»**. Указывайте вместо этого входного параметра **/RSSHPINSTALLMODE="DefaultSharePointMode"**.  
+ Входной параметр **/RSINSTALLMODE** работает только при установке в собственном режиме и не работает при установке в режиме интеграции с SharePoint. Например, следующее не поддерживается в [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]: **/RSINSTALLMODE = «DefaultSharePointMode»** . Указывайте вместо этого входного параметра **/RSSHPINSTALLMODE="DefaultSharePointMode"** .  
   
  Приведенная ниже инструкция представляет пример завершения команд и параметров для установки: **setup/Action = install/Features = SQL, RS/instancename = Denali_INST1 … / rsshpinstallmode = «DefaultSharePointMode»**  
   
@@ -63,7 +62,7 @@ ms.locfileid: "63266716"
   
 -   Диспетчер конфигурации служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , rskeymgmt.exe и rsconfig.exe. Вместо использования данных программ для настройки режима интеграции [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] с SharePoint применяйте центр администрирования SharePoint и PowerShell.  
   
--   Среда SQL Server Management Studio: Клиенты не могут ссылаться на сервер с помощью такого синтаксиса, как <machine_name>/<instance_name>. Начиная с выпуска [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] рекомендуемым методом было использование URL-адреса сайта SharePoint. Например **http://<sharepoint_server>/<sharePoint_site>**. Начиная с [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]URL-адрес сайта SharePoint является единственным поддерживаемым синтаксисом.  
+-   Среда SQL Server Management Studio: Клиенты не могут ссылаться на сервер с помощью такого синтаксиса, как <machine_name>/<instance_name>. Начиная с выпуска [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] рекомендуемым методом было использование URL-адреса сайта SharePoint. Например **http://<sharepoint_server>/<sharePoint_site>** . Начиная с [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]URL-адрес сайта SharePoint является единственным поддерживаемым синтаксисом.  
   
 ### <a name="report-model-designer-is-not-available-in-sql-server-data-tools"></a>Конструктор моделей отчетов отсутствует в SQL Server Data Tools  
  Среда [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] больше не поддерживает проекты моделей отчетов. В службах [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]нет конструктора моделей отчетов. В среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] больше нельзя ни создать новый, ни открыть существующий проект модели отчета, создание и обновление моделей отчетов также не поддерживается. Для работы с моделями отчетов можно воспользоваться службами [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] или средствами предыдущих версий. Можно продолжать пользоваться моделями отчетов в качестве источников данных в отчетах, созданных такими средствами служб [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] , как построитель отчетов или конструктор отчетов. Конструктор запросов, с помощью которого создаются запросы для получения данных отчета из модели отчета, будут по-прежнему работать в службах [!INCLUDE[ssSQL11](../includes/sssql11-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  

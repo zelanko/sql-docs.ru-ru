@@ -12,56 +12,61 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 52628b3742574bc4e3079750526a5424d65012fe
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: 4a048347773b5bf9cba7288e482ed08ea3f4757c
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579675"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65574891"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (хранилище данных SQL Azure)
+
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Создает новую таблицу в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
- 
+
 Сведения о таблицах и об использовании таблиц см. в разделе [Таблицы в хранилище данных SQL](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-overview/).
 
-Примечание. Обсуждение хранилища данных SQL в этой статье применяется как к хранилищу данных SQL, так и к Parallel Data Warehouse, если не указано иное. 
- 
+> [!NOTE]
+>  Обсуждение хранилища данных SQL в этой статье применяется как к хранилищу данных SQL, так и к Parallel Data Warehouse, если не указано иное.
+
  ![Значок ссылки на статью](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на статью") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
-<a name="Syntax"></a>   
-## <a name="syntax"></a>Синтаксис  
+<a name="Syntax"></a>
+
+## <a name="syntax"></a>Синтаксис
   
 ```  
--- Create a new table. 
-CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name   
+-- Create a new table.
+CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
     ( 
-      { column_name <data_type>  [ <column_options> ] } [ ,...n ]   
+      { column_name <data_type>  [ <column_options> ] } [ ,...n ]
     )  
     [ WITH ( <table_option> [ ,...n ] ) ]  
 [;]  
-   
+
 <column_options> ::=
     [ COLLATE Windows_collation_name ]  
     [ NULL | NOT NULL ] -- default is NULL  
     [ [ CONSTRAINT constraint_name ] DEFAULT constant_expression  ]
   
-<table_option> ::= 
-    {   
-        CLUSTERED COLUMNSTORE INDEX --default for SQL Data Warehouse 
-      | HEAP --default for Parallel Data Warehouse   
-      | CLUSTERED INDEX ( { index_column_name [ ASC | DESC ] } [ ,...n ] ) -- default is ASC 
+<table_option> ::=
+    {
+        <cci_option> --default for Azure SQL Data Warehouse
+      | HEAP --default for Parallel Data Warehouse
+      | CLUSTERED INDEX ( { index_column_name [ ASC | DESC ] } [ ,...n ] ) -- default is ASC
     }  
-    { 
-        DISTRIBUTION = HASH ( distribution_column_name ) 
+    {
+        DISTRIBUTION = HASH ( distribution_column_name )
       | DISTRIBUTION = ROUND_ROBIN -- default for SQL Data Warehouse
       | DISTRIBUTION = REPLICATE -- default for Parallel Data Warehouse
-    }   
+    }
     | PARTITION ( partition_column_name RANGE [ LEFT | RIGHT ] -- default is LEFT  
-        FOR VALUES ( [ boundary_value [,...n] ] ) )  
+        FOR VALUES ( [ boundary_value [,...n] ] ) )
+
+<cci_option> ::= [CLUSTERED COLUMNSTORE INDEX] [ORDER (column [,…n])]
   
-<data type> ::=   
+<data type> ::=
       datetimeoffset [ ( n ) ]  
     | datetime2 [ ( n ) ]  
     | datetime  
@@ -88,8 +93,9 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
     | uniqueidentifier  
 ```  
 
-<a name="Arguments"></a>   
-## <a name="arguments"></a>Аргументы  
+<a name="Arguments"></a>
+## <a name="arguments"></a>Аргументы
+
  *database_name*  
  Имя базы данных, которая будет содержать новую таблицу. Значение по умолчанию — текущая база данных.  
   
@@ -98,10 +104,10 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
   
  *table_name*  
  Имя новой таблицы. Чтобы создать локальную временную таблицу, укажите # перед именем таблицы.  Пояснения и рекомендации для временных таблиц см. в разделе [Временные таблицы в хранилище данных SQL Azure](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-temporary/). 
- 
+
  *column_name*  
  Имя столбца таблицы.
-   
+
 ### <a name="ColumnOptions"></a> Параметры столбца
 
  `COLLATE` *параметры_сортировки_Windows*  
@@ -118,53 +124,71 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
  | *constraint_name* | Необязательное имя ограничения. Имя ограничения уникально в пределах базы данных. Имя можно использовать повторно в других базах данных. |
  | *constant_expression* | Значение по умолчанию для столбца. Выражение должно быть литералом или константой. Например, могут использоваться следующие константные выражения: `'CA'`, `4`. Следующие константные выражения не могут использоваться: `2+3`, `CURRENT_TIMESTAMP`. |
   
-
 ### <a name="TableOptions"></a> Параметры структуры таблицы
+
 Рекомендации по выбору типа таблицы см. в разделе [Индексирование таблиц в хранилище данных SQL Azure](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-tables-index/).
   
- `CLUSTERED COLUMNSTORE INDEX`  
-Сохраняет таблицу как кластеризованный индекс columnstore. Кластеризованный индекс columnstore применяется ко всем данным таблицы. Это поведение является стандартным для [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].   
+ `CLUSTERED COLUMNSTORE INDEX` 
  
- `HEAP`   
-  Сохраняет таблицу в виде кучи. Это поведение является стандартным для [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+Сохраняет таблицу как кластеризованный индекс columnstore. Кластеризованный индекс columnstore применяется ко всем данным таблицы. Это поведение является стандартным для [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].
+ 
+ `HEAP` Сохраняет таблицу в виде кучи. Это поведение является стандартным для [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
  `CLUSTERED INDEX` ( *index_column_name* [ ,...*n* ] )  
  Сохраняет таблицу в виде кластеризованного индекса с одним или несколькими ключевыми столбцами. Данные сохраняются по записям. Используйте *имя_индексного_столбца* для указания имен одного или нескольких ключевых столбцов в индексе.  Дополнительные сведения см. в подразделе "Таблицы rowstore" в разделе "Общие замечания".
  
- `LOCATION = USER_DB`   
- Этот параметр является устаревшим. Он является допустимым с точки зрения синтаксиса, но больше не требуется и не влияет на поведение.   
+ `LOCATION = USER_DB` Этот параметр не рекомендуется использовать. Он является допустимым с точки зрения синтаксиса, но больше не требуется и не влияет на поведение.   
   
 ### <a name="TableDistributionOptions"></a> Параметры распределения таблицы
+
 Сведения о выборе наилучшего метода распределения и использовании таблиц распределения см. в разделе [Распределение таблиц в хранилище данных SQL Azure](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-distribute/).
 
-`DISTRIBUTION = HASH` ( *имя_столбца_распределения* )   
-Назначает каждую строку одному распределению путем хэширования значения, которое хранится в столбце распределения с указанным *именем_столбца_распределения*. Алгоритм является детерминированным, то есть одному и тому же значению всегда соответствует одно и то же распределение.  Столбец распределения должен быть определен как NOT NULL, так как все записи, имеющие значение NULL, назначены одному и тому же распределению.
+`DISTRIBUTION = HASH` ( *имя_столбца_распределения* ) Назначает каждую строку одному распределению путем хэширования значения, которое хранится в столбце распределения с указанным *именем_столбца_распределения*. Алгоритм является детерминированным, то есть одному и тому же значению всегда соответствует одно и то же распределение.  Столбец распределения должен быть определен как NOT NULL, так как все записи, имеющие значение NULL, назначены одному и тому же распределению.
 
-`DISTRIBUTION = ROUND_ROBIN`   
-Равномерно распределяет строки по всем распределениям циклическим способом. Это поведение является стандартным для [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].
+`DISTRIBUTION = ROUND_ROBIN` Равномерно распределяет строки между всеми распределениями циклическим способом. Это поведение является стандартным для [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].
 
-`DISTRIBUTION = REPLICATE`    
-Сохраняет по одной копии таблицы на каждом вычислительном узле. Для [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] таблица хранится в базе данных распространителя на каждом вычислительном узле. Для [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] таблица хранится в файловой группе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которая охватывает вычислительный узел. Это поведение является стандартным для [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
+`DISTRIBUTION = REPLICATE` Сохраняет по одной копии таблицы на каждом вычислительном узле. Для [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] таблица хранится в базе данных распространителя на каждом вычислительном узле. Для [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] таблица хранится в файловой группе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которая охватывает вычислительный узел. Это поведение является стандартным для [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
   
 ### <a name="TablePartitionOptions"></a> Параметры секционирования таблицы
 Рекомендации по использованию секций таблицы см. в разделе [Секционирование таблиц в хранилище данных SQL](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/).
 
  `PARTITION` ( *partition_column_name* `RANGE` [ `LEFT` | `RIGHT` ] `FOR VALUES` ( [ *boundary_value* [,...*n*] ] ))   
 Создает одну или несколько секций таблицы. Эти секции представляют собой горизонтальные срезы таблицы, которые позволяют применять операции к подмножествам записей независимо от того, хранится ли таблица в виде кучи, кластеризованного индекса или кластерного индекса columnstore. В отличие от столбца распределения секции таблицы не определяют распределений, в которых хранятся записи. Вместо этого секции таблицы определяют группирование и хранение строк в каждом распределении.  
- 
+
 | Аргумент | Объяснение |
 | -------- | ----------- |
 |*имя_столбца_секции*| Указывает столбец, который [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] будет использовать для секционирования строк. Столбец может иметь любой тип данных. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] сортирует значения столбцов секционирования по возрастанию. Порядок от низкого к высокому следует от `LEFT` до `RIGHT` в спецификации `RANGE`. |  
 | `RANGE LEFT` | Указывает граничное значение, принадлежащее секции слева (меньшие значения). Значение по умолчанию — LEFT. |
 | `RANGE RIGHT` | Указывает граничное значение, принадлежащее секции справа (большие значения). | 
 | `FOR VALUES` ( *boundary_value* [,...*n*] ) | Указывает граничные значения для секции. *граничное_значение* является константным выражением. Оно не может быть NULL. Оно должно иметь тип данных *столбца_секции* или неявно преобразовываться в этот тип. Это значение не может быть усечено во время неявного преобразования, так чтобы размер и масштаб значения не соответствовали типу данных *столбца_секции*<br></br><br></br>Если вы указали предложение `PARTITION`, но не указали граничное значение, [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] создаст секционированную таблицу с одной секцией. Если это допустимо, вы можете разделить таблицу на две секции в дальнейшем.<br></br><br></br>При указании одного граничного значения в результирующей таблице будет две секции; одна для значений меньше граничного значения и вторая для значения больше граничного значения. При перемещении секции в несекционированную таблицу эта таблица получит данные, но в метаданных этой таблицы будут отсутствовать границы секций.| 
- 
+
  См. раздел [Создание секционированной таблицы](#PartitionedTable) в разделе "Примеры".
 
-### <a name="DataTypes"></a> Типы данных
+### <a name="ordered-clustered-columnstore-index-option-preview"></a>Вариант упорядоченного кластеризованного индекса columnstore (предварительная версия)
+
+Кластеризованный индекс columnstore включен по умолчанию для создания таблиц в Хранилище данных SQL Azure.  Спецификация ORDER связана с ключами COMPOUND по умолчанию.  Сортировка будет всегда выполняться по возрастанию. Если предложение ORDER не указано, индекс columnstore не будет отсортирован.
+
+На этапе предварительной версии можно выполнить следующий запрос для проверки столбцов с включенной спецификацией ORDER.  Представление каталога станет доступным позже для предоставления этой информации и порядковых номеров столбцов, если в спецификации ORDER указано несколько столбцов.
+
+```sql
+SELECT o.name, c.name, s.min_data_id, s.max_data_id, s.max_data_id-s.min_data_id as difference,  s.* 
+FROM sys.objects o 
+INNER JOIN sys.columns c ON o.object_id = c.object_id 
+INNER JOIN sys.partitions p ON o.object_id = p.object_id   
+INNER JOIN sys.column_store_segments s 
+    ON p.hobt_id = s.hobt_id AND s.column_id = c.column_id  
+WHERE o.name = 't1' and c.name = 'col1' 
+ORDER BY c.name, s.min_data_id, s.segment_id;
+```
+
+### <a name="DataTypes"></a> Тип данных
+
 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] поддерживает наиболее часто используемые типы данных. Ниже приведен список поддерживаемых типов данных, сведения о них и размер при хранении в байтах. Чтобы лучше разобраться в типах данных и способах их использования, обратитесь к разделу [Типы данных таблиц в Хранилище данных SQL](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-data-types).
 
 Таблица преобразования типов данных приведена в разделе "Неявные преобразования" статьи [CAST и CONVERT (Transact-SQL)](https://msdn.microsoft.com/library/ms187928/).
+
+>[!NOTE]
+>См. подробнее о [типах данных и функциях даты и времени (Transact-SQL)](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql).
 
 `datetimeoffset` [ ( *n* ) ]  
  Значение по умолчанию для *n* равно 7.  
@@ -292,11 +316,12 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
 
 Рекомендуется использовать меньшее число секций таблицы, чтобы в каждом индексе columnstore было достаточное количество строк для использования всех преимуществ индексов columnstore. Дополнительные сведения см. в статье [Секционирование таблиц в хранилище данных SQL](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/) и в разделе об индексировании таблиц в Хранилище данных SQL на странице о [начале работы с Azure](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-index/).  
 
-  
- ### <a name="rowstore-table-heap-or-clustered-index"></a>Таблица rowstore (куча или кластеризованный индекс)  
- Таблица rowstore — это таблица, которая хранится в порядке по строкам. Это куча или кластеризованный индекс. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] создает все таблицы rowstore с включенным сжатием страниц. Это поведение не настраивается пользователем.   
- 
- ### <a name="columnstore-table-columnstore-index"></a>Таблица columnstore (индекс columnstore)
+### <a name="rowstore-table-heap-or-clustered-index"></a>Таблица rowstore (куча или кластеризованный индекс)
+
+Таблица rowstore — это таблица, которая хранится в порядке по строкам. Это куча или кластеризованный индекс. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] создает все таблицы rowstore с включенным сжатием страниц. Это поведение не настраивается пользователем.
+
+### <a name="columnstore-table-columnstore-index"></a>Таблица columnstore (индекс columnstore)
+
 Таблица columnstore — это таблица, которая хранится в порядке по столбцам. Индекс columnstore — это технология, которая управляет данными, хранящимися в таблице columnstore.  Кластеризованный индекс columnstore не влияет на способ распределения данных, а влияет на способ хранения данных в пределах каждого распределения.
 
 Чтобы преобразовать таблицу rowstore в таблицу columnstore, удалите все существующие индексы таблицы и создайте кластеризованный индекс columnstore. Пример см. в разделе [CREATE COLUMNSTORE INDEX (Transact-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md).
@@ -305,20 +330,22 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
 - [Сводка функций индексов columnstore по версиям](https://msdn.microsoft.com/library/dn934994/)
 - [Индексирование таблиц в хранилище данных SQL](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-index/)
 - [Руководство по индексам columnstore](~/relational-databases/indexes/columnstore-indexes-overview.md) 
- 
+
 <a name="LimitationsRestrictions"></a>  
 ## <a name="limitations-and-restrictions"></a>Ограничения  
  Вы не можете определить ограничение DEFAULT для столбца распределения.  
   
- ### <a name="partitions"></a>Секции
- При использовании секций в столбце секции не могут использоваться параметры сортировки только для Юникода. Например следующая инструкция завершится с ошибкой.  
+### <a name="partitions"></a>Секции
+При использовании секций в столбце секции не могут использоваться параметры сортировки только для Юникода. Например следующая инструкция завершится с ошибкой.  
   
- `CREATE TABLE t1 ( c1 varchar(20) COLLATE Divehi_90_CI_AS_KS_WS) WITH (PARTITION (c1 RANGE FOR VALUES (N'')))`  
+ ```sql
+CREATE TABLE t1 ( c1 varchar(20) COLLATE Divehi_90_CI_AS_KS_WS) WITH (PARTITION (c1 RANGE FOR VALUES (N'')))
+```  
  
  Если *граничное_значение* представляет собой литеральное значение, которое должно быть неявно преобразовано в тип данных *столбца_секции*, возникнет несоответствие. Литеральное значение отображается с помощью системных представлений [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], но преобразованное значение используется для операций [!INCLUDE[tsql](../../includes/tsql-md.md)]. 
- 
-  
- ### <a name="temporary-tables"></a>Временные таблицы
+
+### <a name="temporary-tables"></a>Временные таблицы
+
  Глобальные временные таблицы, которые начинаются с ##, не поддерживаются.  
   
  На локальные временные таблицы распространяются следующие ограничения:  
@@ -341,38 +368,48 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
 ### <a name="ColumnCollation"></a> A. Указание параметров сортировки столбца 
  В следующем примере создается таблица `MyTable` с двумя различными параметрами сортировки столбцов. По умолчанию столбец `mycolumn1` имеет параметры сортировки по умолчанию Latin1_General_100_CI_AS_KS_WS. Столбец `mycolumn2` имеет параметры сортировки Frisian_100_CS_AS.  
   
-```  
+```sql
 CREATE TABLE MyTable   
   (  
     mycolumnnn1 nvarchar,  
     mycolumn2 nvarchar COLLATE Frisian_100_CS_AS )  
 WITH ( CLUSTERED COLUMNSTORE INDEX )  
 ;  
-  
 ```  
   
-### <a name="DefaultConstraint"></a> Б. Указания ограничения DEFAULT для столбца  
+### <a name="DefaultConstraint"></a> Б. Указания ограничения DEFAULT для столбца
+
  В следующем примере показан синтаксис для указания значения по умолчанию для столбца. Столбец colA имеет ограничение по умолчанию constraint_colA и значение по умолчанию 0.  
   
-```  
-  
-CREATE TABLE MyTable   
+```sql
+CREATE TABLE MyTable
   (  
     colA int CONSTRAINT constraint_colA DEFAULT 0,  
-    colB nvarchar COLLATE Frisian_100_CS_AS   
+    colB nvarchar COLLATE Frisian_100_CS_AS
   )  
 WITH ( CLUSTERED COLUMNSTORE INDEX )  
 ;  
-```  
+```
+
+### <a name="OrderedClusteredColumnstoreIndex"></a> В. Создание упорядоченного кластеризованного индекса columnstore
+
+В следующем примере показано, как создать упорядоченный кластеризованный индекс columnstore. Индекс упорядочен по SHIPDATE.
+
+```sql
+CREATE TABLE Lineitem  
+WITH (DISTRIBUTION = ROUND_ROBIN, CLUSTERED COLUMNSTORE INDEX ORDER(SHIPDATE))  
+AS  
+SELECT * FROM ext_Lineitem
+```
 
 <a name="ExamplesTemporaryTables"></a> 
 ## <a name="examples-for-temporary-tables"></a>Примеры для временных таблиц
 
 ### <a name="TemporaryTable"></a> В. Создание локальной временной таблицы  
- В следующем примере создается локальная временная таблица с именем #myTable. Имя таблицы состоит из трех частей и начинается с #.   
+ В следующем примере создается локальная временная таблица с именем #myTable. Имя таблицы состоит из трех частей и начинается с #.
   
-```  
-CREATE TABLE AdventureWorks.dbo.#myTable   
+```sql
+CREATE TABLE AdventureWorks.dbo.#myTable
   (  
    id int NOT NULL,  
    lastName varchar(20),  
@@ -381,7 +418,7 @@ CREATE TABLE AdventureWorks.dbo.#myTable
 WITH  
   (   
     DISTRIBUTION = HASH (id),  
-    CLUSTERED COLUMNSTORE INDEX   
+    CLUSTERED COLUMNSTORE INDEX
   )  
 ;  
 ```
@@ -394,17 +431,16 @@ WITH
   
  Кластеризованный индекс columnstore не влияет на способ распределения данных; данные всегда распределены по строкам. Кластеризованный индекс влияет на способ хранения данных в пределах каждого распределения.  
   
-```  
-  
-CREATE TABLE MyTable   
+```sql
+  CREATE TABLE MyTable
   (  
     colA int CONSTRAINT constraint_colA DEFAULT 0,  
-    colB nvarchar COLLATE Frisian_100_CS_AS   
+    colB nvarchar COLLATE Frisian_100_CS_AS
   )  
 WITH   
   (   
     DISTRIBUTION = HASH ( colB ),  
-    CLUSTERED COLUMNSTORE INDEX   
+    CLUSTERED COLUMNSTORE INDEX
   )  
 ;  
 ```  
@@ -415,8 +451,8 @@ WITH
 ### <a name="RoundRobin"></a> Д. Создание таблицы ROUND_ROBIN  
  В следующем примере создается таблица ROUND_ROBIN с тремя столбцами и без секций. Данные распространяются между всеми распределениями. Создается таблица с кластеризованным индексом columnstore, который обладает лучшей производительностью и характеристиками сжатия данных по сравнению с кучей или кластеризованным индексом rowstore.  
   
-```  
-CREATE TABLE myTable   
+```sql
+CREATE TABLE myTable
   (  
     id int NOT NULL,  
     lastName varchar(20),  
@@ -425,11 +461,12 @@ CREATE TABLE myTable
 WITH ( CLUSTERED COLUMNSTORE INDEX );  
 ```  
   
-### <a name="HashDistributed"></a> Е. Создание таблицы с распределением хэша  
+### <a name="HashDistributed"></a> Е. Создание таблицы с распределением хэша
+
  В следующем примере создается точно такая же таблица, как в предыдущем примере. Тем не менее для этой таблицы строки распределены (по столбцу `id`) вместо случайного распределения, как в таблице ROUND_ROBIN. Создается таблица с кластеризованным индексом columnstore, который обладает лучшей производительностью и характеристиками сжатия данных по сравнению с кучей или кластеризованным индексом rowstore.  
   
-```  
-CREATE TABLE myTable   
+```sql
+CREATE TABLE myTable
   (  
     id int NOT NULL,  
     lastName varchar(20),  
@@ -445,8 +482,8 @@ WITH
 ### <a name="Replicated"></a> G. Создание реплицированной таблицы  
  В следующем примере создается реплицированная таблица, как и в предыдущем примере. Реплицированные таблицы копируются в полном объеме на каждый вычислительный узел. Благодаря наличию копии на каждом вычислительном узле уменьшается объем перемещаемых данных для запросов. В этом примере таблица создается с использованием кластеризованного индекса, который обеспечивает лучшее сжатие данных, чем куча. Куча может не содержать достаточно записей для достижения хорошего сжатия с использованием кластеризованного индекса columnstore.  
   
-```  
-CREATE TABLE myTable   
+```sql
+CREATE TABLE myTable
   (  
     id int NOT NULL,  
     lastName varchar(20),  
@@ -454,7 +491,7 @@ CREATE TABLE myTable
   )  
 WITH  
   (   
-    DISTRIBUTION = REPLICATE,   
+    DISTRIBUTION = REPLICATE,
     CLUSTERED INDEX (lastName)  
   );  
 ```  
@@ -462,65 +499,68 @@ WITH
 <a name="ExTablePartitions"></a> 
 ## <a name="examples-for-table-partitions"></a>Примеры секций таблиц
 
-###  <a name="PartitionedTable"></a> H. Создание секционированной таблицы  
+###  <a name="PartitionedTable"></a> H. Создание секционированной таблицы
+
  В следующем примере создается такая же таблица, как в примере A, с добавлением секционирования RANGE LEFT для столбца `id`. В нем указаны четыре граничных значения секций, таким образом, общее количество секций равно пяти.  
   
-```  
-CREATE TABLE myTable   
+```sql
+CREATE TABLE myTable
   (  
     id int NOT NULL,  
     lastName varchar(20),  
     zipCode int)  
-WITH   
-  (   
+WITH
+  (
   
     PARTITION ( id RANGE LEFT FOR VALUES (10, 20, 30, 40 )),  
-    CLUSTERED COLUMNSTORE INDEX      
+    CLUSTERED COLUMNSTORE INDEX
   )  
 ;  
 ```  
   
  В этом примере данные будут отсортированы в следующих секциях:  
   
--   Секция 1: столбцы до 10-го включительно   
--   Секция 2: столбцы с 11-го по 20-й   
--   Секция 3: столбцы с 21-го по 30-й   
--   Секция 4: столбцы с 31-го по 40-й   
--   Секция 5: столбцы с 41-го и далее  
+- Секция 1: столбцы до 10-го включительно
+- Секция 2: столбцы с 11-го по 20-й
+- Секция 3: столбцы с 21-го по 30-й
+- Секция 4: столбцы с 31-го по 40-й
+- Секция 5: столбцы с 41-го и далее  
   
  Если эта же таблица была секционирована с использованием RANGE RIGHT вместо RANGE LEFT (по умолчанию), данные будут отсортированы в следующих секциях:  
   
--   Секция 1: столбцы до 10-го  
--   Секция 2: столбцы с 10-го по 19-й   
--   Секция 3: столбцы с 20-го по 29-й    
--   Секция 4: столбцы с 30-го по 39-й   
--   Секция 5: столбцы с 40-го и далее  
+- Секция 1: столбцы до 10-го  
+- Секция 2: столбцы с 10-го по 19-й
+- Секция 3: столбцы с 20-го по 29-й
+- Секция 4: столбцы с 30-го по 39-й
+- Секция 5: столбцы с 40-го и далее  
   
-### <a name="OnePartition"></a> I. Создание секционированной таблицы с одной секцией  
+### <a name="OnePartition"></a> I. Создание секционированной таблицы с одной секцией
+
  В следующем примере создается секционированная таблица с одной секцией. В нем не указаны граничные значения, поэтому создается одна секция.  
   
-```  
+```sql
 CREATE TABLE myTable (  
     id int NOT NULL,  
     lastName varchar(20),  
     zipCode int)  
-WITH   
-    (   
+WITH
+    (
       PARTITION ( id RANGE LEFT FOR VALUES ( )),  
       CLUSTERED COLUMNSTORE INDEX  
     )  
 ;  
 ```  
   
-### <a name="DatePartition"></a> J. Создание таблицы с секционированием даты  
+### <a name="DatePartition"></a> J. Создание таблицы с секционированием даты
+
  В следующем примере создается новая таблица с именем `myTable` с секционированием по столбцу `date`. При использовании RANGE RIGHT и дат в качестве граничных значений в каждой секции будут находиться данные для одного месяца.  
   
-```  
+```sql
 CREATE TABLE myTable (  
-    l_orderkey      bigint,       
-    l_partkey       bigint,                                             
-    l_suppkey       bigint,                                           
-    l_linenumber    bigint,        
+    l_orderkey      bigint,
+    l_partkey       bigint,
+    l_suppkey       bigint,
+    l_linenumber    bigint,
     l_quantity      decimal(15,2),  
     l_extendedprice decimal(15,2),  
     l_discount      decimal(15,2),  
@@ -533,11 +573,11 @@ CREATE TABLE myTable (
     l_shipinstruct  char(25),  
     l_shipmode      char(10),  
     l_comment       varchar(44))  
-WITH   
-  (   
+WITH
+  (
     DISTRIBUTION = HASH (l_orderkey),  
     CLUSTERED COLUMNSTORE INDEX,  
-    PARTITION ( l_shipdate  RANGE RIGHT FOR VALUES   
+    PARTITION ( l_shipdate  RANGE RIGHT FOR VALUES
       (  
         '1992-01-01','1992-02-01','1992-03-01','1992-04-01','1992-05-01',
         '1992-06-01','1992-07-01','1992-08-01','1992-09-01','1992-10-01',
@@ -551,8 +591,8 @@ WITH
   );  
 ```  
   
-<a name="SeeAlso"></a>    
-## <a name="see-also"></a>См. также раздел 
+<a name="SeeAlso"></a>
+## <a name="see-also"></a>См. также раздел
  
  [CREATE TABLE AS SELECT (хранилище данных SQL Azure)](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)   
  [DROP TABLE (Transact-SQL)](../../t-sql/statements/drop-table-transact-sql.md)   

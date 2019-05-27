@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.depservconfig.f1
@@ -14,12 +13,12 @@ ms.assetid: 333c1fc0-361c-415a-bd68-4e057f67bcb7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 31a335797ad7a40fda7002b910127bb139af3f1b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a050c8eecadec138341ffe2f64a791eb198beebf
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62756791"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66066743"
 ---
 # <a name="project-properties-ssas-tabular"></a>Свойства проекта (табличные службы SSAS)
   В этом разделе описаны свойства проекта табличной модели. Каждый проект табличной модели имеет параметры развертывания и свойства сервера развертывания, которые указывают порядок развертывания проекта и модели. Например, сервер, на котором будет развернута модель, и имя базы данных развернутой модели. Эти параметры отличаются от свойств модели, которые влияют на базу данных рабочей области модели. Описанные здесь свойства проекта находятся в модальном диалоговом окне «Свойства», которое отличается от окна свойств, используемого для отображения других типов свойств. Для отображения модальных свойств проекта в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]в **обозревателе решений**щелкните правой кнопкой мыши проект и выберите пункт **Свойства**.  
