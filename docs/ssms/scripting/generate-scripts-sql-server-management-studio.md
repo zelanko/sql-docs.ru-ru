@@ -8,22 +8,22 @@ ms.technology: scripting
 ms.reviewer: mathoma
 ms.topic: conceptual
 ms.assetid: 9711c617-3c68-4e5a-aea3-befc64d51524
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 242e0e0c39ce381a492e1072dcb6934cf5f3e29f
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 63c772e9957a180b76949ecc95a95661a4632aff
+ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51643955"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65820879"
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>Формирование скриптов (среда SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] предоставляет два механизма формирования скриптов [!INCLUDE[tsql](../../includes/tsql-md.md)] . Создать скрипты для нескольких объектов можно с помощью **мастера формирования и публикации скриптов**. Можно также создать скрипты для отдельных или нескольких объектов с помощью меню **Сформировать скрипт как** в **обозревателе объектов**.  
 
-Подробный учебник по созданию скриптов для различных объектов с использованием SQL Server Management Studio (SSMS) см. в разделе [Учебник. Создание скриптов SSMS](https://docs.microsoft.com/sql/ssms/tutorials/scripting-ssms).
+Подробное руководство по созданию скриптов для различных объектов с использованием SQL Server Management Studio (SSMS) см. в статье [Учебник. Создание скриптов для объектов в среде SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/tutorials/scripting-ssms).
 
   
 ## <a name="before-you-begin"></a>Перед началом  

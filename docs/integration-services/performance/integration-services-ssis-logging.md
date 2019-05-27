@@ -30,14 +30,18 @@ ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6ce4c2955896be6fc90063c220d2a33bd78901ee
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: eca7e157593ff4ea9d40528b592f71227cc8cb0d
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277513"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65719595"
 ---
 # <a name="integration-services-ssis-logging"></a>Ведение журналов в службах Integration Services (SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] содержат регистраторы, которые могут использоваться для реализации ведения журналов в пакетах, контейнерах и задачах. При ведении журнала можно записать текущие сведения о пакете, что поможет при каждом выполнении пакета проводить его аудит и устранять неисправности. Например, журнал может записать имя оператора, запускающего пакет, и время, в которое пакет был начат или завершен.  
   
  Вы можете настроить область ведения журнала на время выполнения пакета на сервере [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Дополнительные сведения см. в разделе [Включение ведения журналов при выполнении пакета на сервере служб SSIS](#server_logging).  
@@ -311,7 +315,7 @@ ms.locfileid: "58277513"
  **Configuration**  
  Выберите диспетчер подключений из списка или щелкните \<**Создать соединение...**>, чтобы создать его. В зависимости от типа регистратора можно настраивать диспетчер соединений OLE DB или диспетчер соединений файлов. Регистратору журнала событий [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows не требуется соединение.  
   
- См. также: подробные сведения о [диспетчере подключений OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md) и о [диспетчере файловых подключений](../../integration-services/connection-manager/file-connection-manager.md).  
+ См. также подробные сведения о [диспетчере подключений OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md) и о [диспетчере файловых подключений](../../integration-services/connection-manager/file-connection-manager.md).  
   
  **Удаление**  
  Выберите регистратор и нажмите **Удалить**.  

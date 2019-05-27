@@ -14,12 +14,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1e83756e4520cf191f0e15750308ef58e3aa38dd
-ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
+ms.openlocfilehash: 84a69542e43f108b1a1aa91bde8fb168ecb6a362
+ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59542244"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65779254"
 ---
 # <a name="best-practice-with-the-query-store"></a>Рекомендации по хранилищу запросов
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -247,7 +247,7 @@ FROM sys.database_query_store_options;
   
  Если проблема сохраняется, это означает повреждение данных в хранилище запросов, сохраненных на диске.
  
- Хранилище запросов можно освободить, выполнив хранимую процедуру **sp_query_store_consistency_check** в соответствующей базе данных.
+ В SQL версии 2017 и выше хранилище запросов можно освободить, выполнив хранимую процедуру **sp_query_store_consistency_check** в соответствующей базе данных. В версии 2016 необходимо очистить данные в хранилище запросов, как показано ниже.
  
  Если это не помогло, можно попробовать очистить хранилище запросов перед запросом режима чтения и записи.  
   

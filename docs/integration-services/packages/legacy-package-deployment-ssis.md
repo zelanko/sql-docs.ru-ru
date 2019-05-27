@@ -32,14 +32,18 @@ ms.assetid: 0f5fc7be-e37e-4ecd-ba99-697c8ae3436f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 21cdac79f4c610bf2fe6ebe483650dc1a16a24db
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: e5a9b49b743ed95766bfbd8d310bba40c6bfe396
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276760"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65719973"
 ---
 # <a name="legacy-package-deployment-ssis"></a>Устаревшее развертывание пакетов (службы SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] включают в себя средства и мастера, которые упрощают развертывание пакетов с компьютера разработчика на рабочий сервер или другие компьютеры.  
   
  Процесс развертывания пакетов состоит из четырех шагов.  
@@ -682,7 +686,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  Чтобы выбрать папку в диалоговом окне **Пакет служб SSIS** , нажмите кнопку Обзор (...). Однако в диалоговом окне отсутствует возможность задать папку по умолчанию. Если необходимо использовать папку по умолчанию, то следует ввести в текстовое поле «/».  
   
 > [!NOTE]  
->  Если не ввести допустимый путь пакета, то появится следующее сообщение об ошибке: «Аргументы заданы неправильно».  
+>  Если не ввести допустимый путь пакета, появится следующее сообщение об ошибке: "Один или несколько аргументов являются недопустимыми".  
   
  **Шифрование обеспечивается хранением на сервере**  
  Выберите, чтобы использовать средства безопасности компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] для защиты пакетов.  

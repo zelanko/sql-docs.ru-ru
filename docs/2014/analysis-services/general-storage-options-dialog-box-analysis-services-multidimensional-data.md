@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.partitiondesigner.partitionstoragesettings.setstorageoptions.storage.f1
@@ -13,12 +12,12 @@ ms.assetid: ee1fac79-ae15-4c3c-9a98-33db04388817
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 251ecccbd7e28b4f15709d060ead8cbb61309fea
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3c7ddd5311232ae12b3eb9f66adc0cd1f5714b32
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62731885"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66081010"
 ---
 # <a name="general-storage-options-dialog-box-analysis-services---multidimensional-data"></a>Общие (диалоговое окно «Параметры хранилища») (службы Analysis Services — многомерные данные)
   Воспользуйтесь вкладкой **Общие** диалогового окна **Параметры хранилища** в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] для установки режима хранения и настроек упреждающего кэширования измерения, куба, группы мер или секции.  

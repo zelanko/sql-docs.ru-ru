@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10054"
@@ -14,12 +13,12 @@ ms.assetid: 144a5da4-a3c3-4856-942e-7b7c60e2f6fa
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 450d800a474d00cf2ac5692d9994fce5d73861f2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7fb80bffc3160b171cbffd40b80d5c8c0f9bb137
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63260648"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108993"
 ---
 # <a name="image-properties-dialog-box-size-report-builder-and-ssrs"></a>Диалоговое окно «Свойства изображения» — «Размер» (построитель отчетов и SSRS)
   Выберите вкладку **Размер** в диалоговом окне **Свойства изображения** , чтобы отформатировать размер изображений, отображаемых в поле или в области конструирования, либо откорректировать величину дополнительного пространства между границей ячейки или текстового поля и рисунком или значением, содержащимися в ячейке или текстовом поле.  

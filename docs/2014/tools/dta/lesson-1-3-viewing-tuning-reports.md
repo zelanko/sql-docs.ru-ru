@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - tuning reports [SQL Server]
@@ -13,12 +12,12 @@ ms.assetid: daee6143-269f-428b-8458-9a3e726d586c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 94222a351343c4558614098dd2a317fdbb9a5396
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4963a309f6c54998ece968f8a5393e818fd30d07
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173644"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66110144"
 ---
 # <a name="viewing-tuning-reports"></a>Просмотр отчетов настройки
   В предыдущей практической работе этого учебника были рассмотрены скрипты [!INCLUDE[tsql](../../includes/tsql-md.md)] , которые создают или сбрасывают объекты базы данных в рекомендациях помощника по настройке ядра СУБД, которые были созданы в сеансе настройки MySession. Сеанс настройки MySession был создан в разделе [Tuning a Workload](lesson-1-1-tuning-a-workload.md).  
@@ -47,6 +46,6 @@ ms.locfileid: "48173644"
  Изучена вкладка **Отчеты** графического интерфейса помощника по настройке ядра СУБД для сеанса настройки MySession. Выполните эти шаги, чтобы ознакомиться с отчетами, созданными для сеанса настройки EvaluateMySession. Дважды щелкните сеанс **EvaluateMySession** на панели **Монитор сеансов** .  
   
 ## <a name="next-lesson"></a>Следующее занятие  
- [Урок 3. Использование служебной программы dta для командной строки](lesson-3-using-the-dta-command-prompt-utility.md)  
+ [Занятие 3. Использование программы командной строки dta](lesson-3-using-the-dta-command-prompt-utility.md)  
   
   

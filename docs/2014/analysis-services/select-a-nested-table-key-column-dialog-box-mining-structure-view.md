@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.structure.addnestedtable.f1
@@ -15,12 +14,12 @@ ms.assetid: f68b89a7-17df-45f8-ba7f-b458cd9b1ec3
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f7eaccd916ee401ad1b6b82a155e50688b2ff57a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8edfea95968bee0dc1103f8069ecfe9e0d08e3ed
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62747716"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66069771"
 ---
 # <a name="select-a-nested-table-key-column-dialog-box-mining-structure-view"></a>Диалоговое окно «Выбор ключевого столбца вложенной таблицы» (представление структуры интеллектуального анализа данных)
   С помощью диалогового окна **Выбор ключевого столбца вложенной таблицы** можно назначить столбец, который будет ключевым для новой вложенной таблицы. При выходе из диалогового окна в структуру интеллектуального анализа данных, содержащую назначенный ключевой столбец, добавляется новая таблица. Во вложенную таблицу можно добавить дополнительные столбцы, щелкнув структуру правой кнопкой мыши и выбрав команду **Добавить столбец**. Диалоговое окно предлагает несколько параметров в зависимости от того, работаете ли вы с моделью интеллектуального анализа данных OLAP или реляционной моделью интеллектуального анализа данных.  

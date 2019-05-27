@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 3b57dd3f-7820-4ba8-b233-01dc68908273
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a3ee6babe5048398f62cd335e0a121f32f4734ff
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 45ef593e13643ac38184f8b88cbe4cdf38f0126c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62743370"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66071893"
 ---
 # <a name="configuration-setting-reference-powerpivot-for-sharepoint"></a>Справочник по параметрам конфигурации (PowerPivot для SharePoint)
   В этом разделе содержатся сведения о параметрах настройки, используемых приложениями служб PowerPivot на ферме SharePoint. В этом разделе можно найти подробные сведения об использовании скриптов PowerShell для настройки сервера, а также обо всех параметрах.  

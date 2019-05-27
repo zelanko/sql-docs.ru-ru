@@ -11,15 +11,15 @@ helpviewer_keywords:
 - format files [SQL Server], non-XML format files
 - bulk importing [SQL Server], format files
 ms.assetid: f566db3e-0a3b-4a61-9c84-49f8d42f5760
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5640a50f50d113e21e276acdf09955a2cddedb57
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6554691ce8debb96d4b0ee350ef98d2bfc57f02c
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63064055"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011877"
 ---
 # <a name="non-xml-format-files-sql-server"></a>Файлы формата, отличные от XML (SQL Server)
   В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]поддерживаются два типа файлов форматирования для массового экспорта и импорта: *файлы формата, отличного от XML* , и *XML-файлы форматирования*.  
@@ -58,7 +58,7 @@ ms.locfileid: "63064055"
   
 |Поле файла форматирования|Описание|  
 |------------------------|-----------------|  
-|Version|Номер версии распознается по программе **bcp**, а не по [!INCLUDE[tsql](../../includes/tsql-md.md)]. Номер версии программы **bcp** :<br /><br /> 9.0 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 10.0 = [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]<br /><br /> 11.0 = [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]<br /><br /> 12.0 = [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]<br /><br /> Примечание. Версия **bcp** программа (Bcp.exe), используемый для чтения файла форматирования должен быть в той же или более поздней версии, который использовался для создания файла форматирования. Например, служебная программа [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]**bcp** может считать файл форматирования версии 10.0, созданный служебной программой [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]**bcp**, но служебная программа [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]**bcp** не может считать файл форматирования версии 12.0, созданный служебной программой [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]**bcp**.|  
+|Version|Номер версии распознается по программе **bcp**, а не по [!INCLUDE[tsql](../../includes/tsql-md.md)]. Номер версии программы **bcp** :<br /><br /> 9.0 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 10.0 = [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]<br /><br /> 11.0 = [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]<br /><br /> 12.0 = [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]<br /><br /> Примечание. Версия служебной программы **bcp** (Bcp.exe), используемая для считывания файла форматирования, должна быть той же или более поздней по сравнению с программой, с помощью которой создавался файл форматирования. Например, служебная программа [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]**bcp** может считать файл форматирования версии 10.0, созданный служебной программой [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]**bcp**, но служебная программа [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]**bcp** не может считать файл форматирования версии 12.0, созданный служебной программой [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]**bcp**.|  
 |Number of columns|Число полей в файле данных. Это значение должно быть одинаковым во всех строках.|  
   
  Другие поля файла форматирования описывают поля данных, массовый импорт и экспорт которых должен быть произведен. Для каждого поля данных необходима отдельная строка файла форматирования. Каждая строка файла форматирования содержит значения полей файла форматирования, описание которых находится в следующей таблице.  

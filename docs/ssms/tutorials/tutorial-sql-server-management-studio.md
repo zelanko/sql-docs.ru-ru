@@ -1,7 +1,7 @@
 ---
-title: Учебник. SQL Server Management Studio (SSMS) | Документация Майкрософт
-ms.custom: ''
-ms.date: 08/30/2017
+title: Руководство. SQL Server Management Studio (SSMS) | Документация Майкрософт
+ms.custom: sqlfreshmay19
+ms.date: 05/14/2019
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: sstein
@@ -23,17 +23,17 @@ ms.assetid: d2bade70-07cf-4d94-b5d2-88aecb538ed1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9d262e2d2a4c79a44f0b5a5245991f32b3676487
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: bf2776df77af8f4ba5fec9595d6ba9cddf927f7a
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56800978"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65620511"
 ---
 # <a name="tutorials-for-sql-server-management-studio-ssms"></a>Учебники по SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-Учебник по SQL Server Management Studio (SSMS) познакомит вас с этой интегрированной средой для управления инфраструктурой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] представляет собой графический интерфейс для настройки экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], наблюдения за ними и управления ими. Среда также позволяет развертывать, отслеживать и обновлять компоненты уровня данных, используемые приложениями, например базами данных. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] также предоставляет редакторы [!INCLUDE[tsql](../../includes/tsql-md.md)], языка многомерных выражений, расширений интеллектуального анализа данных и XML для изменения и отладки скриптов.  
+В руководстве по SQL Server Management Studio (SSMS) описана интегрированная среда для управления инфраструктурой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] представляет собой графический интерфейс для настройки, отслеживания и администрирования Базы данных Azure SQL, Управляемого экземпляра Базы данных Azure SQL, Хранилища данных SQL Azure и экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Среда также позволяет развертывать, отслеживать и обновлять компоненты уровня данных, используемые приложениями, например базами данных. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] также предоставляет редакторы [!INCLUDE[tsql](../../includes/tsql-md.md)], языка многомерных выражений, расширений интеллектуального анализа данных и XML для изменения и отладки скриптов.  
   
 ## <a name="what-you-will-learn"></a>Обзор учебника  
 
@@ -41,9 +41,9 @@ ms.locfileid: "56800978"
   
 Лучший способ познакомиться с SSMS — это поработать в среде самостоятельно. В этих учебниках вы ознакомитесь с различными функциями, доступными в среде SSMS.  С их помощью вы научитесь работать с компонентами SSMS и легко находить регулярно используемые функции.  
 
-В учебниках рассматриваются следующие темы: 
+В учебниках рассматриваются следующие темы:
 
-  
+
 - [Учебник. Подключение и отправка запроса к SQL Server с помощью SQL Server Management Studio](connect-query-sql-server.md)
 
     Из этого учебника вы узнаете, как подключиться к экземпляру SQL Server. Вы также ознакомитесь с некоторыми основными командами Transact-SQL (T-SQL) для создания базы данных и выполнения запросов к ней. 
@@ -63,7 +63,7 @@ ms.locfileid: "56800978"
 
 - [Учебник. Дополнительные советы и рекомендации по использованию SSMS](ssms-tricks.md)
 
-    Из этого учебника вы получите дополнительные советы и рекомендации по использованию среды SSMS. Учебник включает следующее:
+    В этом руководстве представлены дополнительные советы и рекомендации по использованию среды SSMS. Учебник включает следующее:
     - закомментирование и раскомментирование текста;
     - добавление отступов в тексте;
     - фильтрация объектов в обозревателе объектов;

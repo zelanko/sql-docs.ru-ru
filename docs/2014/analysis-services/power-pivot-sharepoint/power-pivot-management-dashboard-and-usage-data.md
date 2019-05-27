@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 541c8b1f-c6c2-423d-a97d-65c379967e0c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cf132a6cd6e15002b36ba7ecdced512e3686e433
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ece3d8a1e9a66ecc6ad05508c975e617c523a9c8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748900"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66071121"
 ---
 # <a name="powerpivot-management-dashboard-and-usage-data"></a>Панель мониторинга управления PowerPivot и данные об использовании
   Панель мониторинга управления PowerPivot представляет собой набор стандартных отчетов и веб-частей в центре администрирования SharePoint, предназначенный для администрирования развертывания SQL Server PowerPivot для SharePoint. Панель мониторинга управления предоставляет сведения о работоспособности серверов, действиях с книгой и обновлении данных. Панель мониторинга управления использует данные, полученные в процессе сбора данных об использовании SharePoint.  

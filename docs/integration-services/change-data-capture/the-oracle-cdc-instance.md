@@ -11,14 +11,18 @@ ms.assetid: ed71e8c4-e013-4bf2-8b6c-1e833ff2a41d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1b4deab77c9ff3aec771b77ae9a9f6b7c7668fb3
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 1dcaf8e01a1ebb0f2ed0d7f33988de2aec6327cc
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276679"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728493"
 ---
 # <a name="the-oracle-cdc-instance"></a>Экземпляр CDC Oracle
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Экземпляр Oracle CDC — это процесс, создаваемый службой Oracle CDC Service для обработки изменений, отслеживаемых в одной базе данных-источнике Oracle. Экземпляр Oracle CDC получает свою конфигурацию из таблицы **cdc.xdbcdc_config** и передает данные о своем состоянии в таблицу **cdc.xdbcdc_state** . Эти таблицы являются частью базы данных CDC, которая определяет экземпляр Oracle CDC. Дополнительные сведения о базе данных и таблицах xdbcdc см. в разделе [The CDC Databases](../../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md#BKMK_CDCdatabase).  
   
  Далее описываются задачи, выполняемые экземпляром Oracle CDC.  
@@ -27,9 +31,9 @@ ms.locfileid: "58276679"
   
 -   **Подготовка к отслеживанию изменений**: Если проверка прошла успешно, экземпляр CDC просматривает все существующие экземпляры отслеживания, подготавливает запросы средства интеллектуального анализа журнала Oracle и другие вспомогательные структуры, необходимые для отслеживания изменений. Кроме того, экземпляр Oracle заново загружает внутреннее состояние отслеживания изменений, сохраненное в последний раз, когда выполнялся этот экземпляр Oracle CDC.  
   
--   **Отслеживание изменений из Oracle**: Экземпляр Oracle CDC группирует изменения, поступающие из Oracle, с помощью средства интеллектуального анализа журнала Oracle, сортирует их по времени фиксации транзакции, а затем изменяет время транзакции и записывает изменения в таблицы изменений [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в базе данных CDC.  
+-   **Отслеживание изменений из Oracle**: Экземпляр Oracle CDC Instance группирует изменения, поступающие из Oracle, с помощью средства интеллектуального анализа журнала Oracle, сортирует их по времени фиксации транзакции, а затем изменяет время транзакции и записывает изменения в таблицы изменений [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в базе данных CDC.  
   
--   **Обработка завершения работы службы**: Жизненным циклом экземпляра Oracle CDC управляет служба Oracle CDC. Получив команду завершения работы, экземпляр CDC Oracle выполняет следующие задачи:  
+-   **Обработка завершения работы службы**: Жизненным циклом экземпляра Oracle CDC Instance управляет служба Oracle CDC Service. Получив команду завершения работы, экземпляр CDC Oracle выполняет следующие задачи:  
   
     -   прекращает чтение журнала транзакций Oracle;  
   

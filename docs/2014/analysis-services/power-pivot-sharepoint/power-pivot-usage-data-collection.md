@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 9057cb89-fb17-466e-a1ce-192c8ca20692
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f9acdc193b608d42b21c69c380fb21db23ec3b89
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 46504906b13323ac4881ca2289e87e31f1cea72f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748916"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66071090"
 ---
 # <a name="powerpivot-usage-data-collection"></a>Сбор данных об использовании PowerPivot
   Сбор данных об использовании — это функция SharePoint на уровне фермы. PowerPivot для SharePoint использует и дополняет эту систему для создания встроенных отчетов на панели мониторинга PowerPivot, которые показывают, как используются данные и службы PowerPivot. В зависимости от способа установки SharePoint сбор данных об использовании для фермы может быть отключен. Администратор фермы должен включить ведение журнала использования для создания данных об использовании, которые будут отображаться на панели мониторинга PowerPivot. Дополнительные сведения о том, как включить и настроить сбор данных об использовании для PowerPivot событий см. в разделе [Настройка сбора данных об использовании &#40;PowerPivot для SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  

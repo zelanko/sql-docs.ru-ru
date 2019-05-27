@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.processprogress.f1
@@ -13,12 +12,12 @@ ms.assetid: f3bd5278-3a83-4fd9-9903-e81bdd4b6892
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 056e29133faf174cadc790f71d999417e1eb4d84
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f4720d361fdd9a7d93d91f5e8fe873473816c2ef
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748816"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070677"
 ---
 # <a name="process-progress-dialog-box-analysis-services---multidimensional-data"></a>Диалоговое окно «Ход обработки» (службы Analysis Services — многомерные данные)
   Используйте диалоговое окно **Развитие процесса** в средах [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] и [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] для отслеживания состояния обработки в службах [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Диалоговое окно **Ход обработки** появляется при начале обработки объекта служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  

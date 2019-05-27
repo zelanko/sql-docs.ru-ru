@@ -24,14 +24,18 @@ ms.assetid: 74aeb7ab-51b2-4b9f-84ee-0b46a7908ab9
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: dee6d377d6b099a89dcbc2b12e93dc4aa7d86874
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 43b91f4afcedf7348919758fa2ce691b6a457d72
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270586"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724217"
 ---
 # <a name="working-with-images-with-the-script-task"></a>Работа с изображениями в задаче «Скрипт»
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   База данных продуктов или пользователи часто содержат изображения в дополнение к тексту и числовым данным. Пространство имен **System.Drawing** платформы Microsoft .NET Framework предоставляет классы для управления изображениями.  
   
  [Пример 1. Преобразование изображений в формат JPEG](#example1)  
@@ -150,7 +154,7 @@ End Function
   
 ```  
   
-##  <a name="example2"></a> Описание примера 2. Создание и сохранение уменьшенных представлений изображений  
+##  <a name="example2"></a> Описание примера 2. Создание и сохранение эскизов изображений  
  В следующем примере открывается файл изображения, заданный переменной, создается уменьшенное представление изображения с сохранением постоянной пропорции и сохраняется уменьшенное представление с измененным именем файла. Код для вычисления высоты и ширины уменьшенного представления с сохранением постоянной пропорции инкапсулирован в закрытой подпрограмме.  
   
 #### <a name="to-configure-this-script-task-example-for-use-with-a-single-image-file"></a>Настройка этого примера задачи «Скрипт» для работы с одним файлом изображения  

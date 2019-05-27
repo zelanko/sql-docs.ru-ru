@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - UnaryOperatorColumn property
@@ -15,12 +14,12 @@ ms.assetid: b8ef549c-5458-458a-bf1a-fd743a1417fd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e3ecd203bfce80ffe4c64dcf0ca274f7e50f6ff1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 25c1acf7a1fadbc79b7781488143ce57881c81fc
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62736943"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66073448"
 ---
 # <a name="unary-operators-in-parent-child-dimensions"></a>Унарные операторы в измерениях типа «родители-потомки»
   В измерении, содержащем связь типа "родитель-потомок" в службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], нужно указывать столбец унарного оператора (или пользовательской свертки), который определяет пользовательскую свертку для всех невычисляемых элементов родительского атрибута. Унарный оператор применяется к элементам каждый раз, когда оцениваются значения родительских элементов. Свойство **UnaryOperatorColumn** в родительском атрибуте (**Использование**=Родитель) задает столбец таблицы в представлении источника данных, в которой содержатся унарные операторы. Значения для операторов пользовательской свертки, хранящихся в данном столбце, применяются к каждому элементу атрибута.  

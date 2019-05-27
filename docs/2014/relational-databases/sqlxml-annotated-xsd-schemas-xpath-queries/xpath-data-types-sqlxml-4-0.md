@@ -24,15 +24,15 @@ helpviewer_keywords:
 - XPath data types [SQLXML]
 - operators [SQLXML]
 ms.assetid: a90374bf-406f-4384-ba81-59478017db68
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b490a0f4876f911923ed0429f33d332b96768792
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3e4a0c3d8b7a01f43b03d3f94b48d5bba800b64f
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63131345"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66014558"
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>Типы данных XPath (SQLXML 4.0)
   Набор типов данных в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], XPath и XML Schema (XSD) сильно отличается. Например, в XPath отсутствуют целочисленные типы данных и тип данных для обозначения даты, а в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и XSD таких типов множество. Типы данных XSD определяют время с точностью до наносекунды, а [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] только до одной трехсотой доли секунды. Поэтому не всегда возможно сопоставить один тип другому. Дополнительные сведения о сопоставлении [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типы данных с типами данных XSD, см. в разделе [приведение типов данных и заметка SQL: DataType &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md).  
@@ -88,7 +88,7 @@ ms.locfileid: "63131345"
 |Тип данных XDR|Эквивалентный<br /><br /> тип данных XPath|Использованное преобразование SQL Server|  
 |-------------------|------------------------------------|--------------------------------|  
 |Nonebin.base64bin.hex|Н/Д|NoneEmployeeID|  
-|boolean|boolean|CONVERT(bit, EmployeeID)|  
+|Логическое|Логическое|CONVERT(bit, EmployeeID)|  
 |number, int, float,i1, i2, i4, i8,r4, r8ui1, ui2, ui4, ui8|number|CONVERT(float(53), EmployeeID)|  
 |id, idref, idrefsentity, entities, enumerationnotation, nmtoken, nmtokens, chardate, Timedate, Time.tz, string, uri, uuid|строка|CONVERT(nvarchar(4000), EmployeeID, 126)|  
 |fixed14.4|н/д (в XPath нет типа данных, эквивалентного типу fixed14.4 XDR)|CONVERT(money, EmployeeID)|  

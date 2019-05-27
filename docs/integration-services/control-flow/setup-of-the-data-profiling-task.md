@@ -13,14 +13,18 @@ ms.assetid: fe050ca4-fe45-43d7-afa9-99478041f9a8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: abe1a05a159c7cadb9407ae20cd696ccd9bb9c4c
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 5032c7f48bdafdab0430357c01698f5672b2f830
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277433"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727502"
 ---
 # <a name="setup-of-the-data-profiling-task"></a>Установка задачи «Профилирование данных»
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Перед просмотром профиля исходных данных необходимо сначала настроить и выполнить задачу «Профилирование данных». Эта задача создается в пакете служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Задача «Профилирование данных» настраивается с помощью редактора задачи «Профилирование данных». Этот редактор позволяет выбрать расположение, в которое будут выводиться профили, в том числе профили, требуемые для вычисления. После настройки задачи запускается пакет, вычисляющий профили данных.  
   
 ## <a name="requirements-and-limitations"></a>Требования и ограничения  

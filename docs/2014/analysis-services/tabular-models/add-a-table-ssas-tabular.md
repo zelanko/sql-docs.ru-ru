@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: d713c432-db99-4983-acc1-52b0fdd58bd6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 065cec0c70d0b98131dc4cdc5b477b11115091f8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 81c1d3d2f0a0098fea271a782af10fbd26245a28
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62757650"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66067789"
 ---
 # <a name="add-a-table-ssas-tabular"></a>Добавление таблицы (табличные службы SSAS)
   В этом разделе описывается добавление таблицы из источника данных, из которого ранее выполнялся импорт данных в модель. Чтобы добавить таблицу из того же источника данных, можно использовать существующее соединение с источником данных. Рекомендуется всегда использовать одно соединение для импорта любого количества таблиц из одного источника данных.  

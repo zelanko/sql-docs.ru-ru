@@ -1,7 +1,7 @@
 ---
 title: Просмотр или изменение модели восстановления для базы данных (SQL Server) | Документация Майкрософт
 ms.custom: ''
-ms.date: 08/05/2016
+ms.date: 05/10/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -19,12 +19,12 @@ ms.assetid: 94918d1d-7c10-4be7-bf9f-27e00b003a0f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 06c2ec7c039da5cf439649069a9fef1724114bce
-ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
+ms.openlocfilehash: 033c14d1e144811f350f8f29ae18c052cd2ea380
+ms.sourcegitcommit: ccea98fa0768d01076cb6ffef0b4bdb221b2f9d5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50753520"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65560070"
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>Просмотр или изменение модели восстановления базы данных (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "50753520"
   
   *Модель восстановления* — это свойство базы данных, которое управляет процессом регистрации транзакций, определяет, требуется ли для журнала транзакций резервное копирование, а также определяет, какие типы операций восстановления доступны. Существует три модели восстановления: простая модель восстановления, модель полного восстановления и модель восстановления с неполным протоколированием. Обычно в базе данных используется модель полного восстановления или простая модель восстановления. Базу данных можно в любой момент переключить на использование другой модели восстановления. База данных **model** задает модель восстановления по умолчанию для новых баз данных.  
   
-  Более подробное описание [моделей восстановления](recovery-models-sql-server.md)см. в статье [Модели восстановления SQL Server](https://www.mssqltips.com/sqlservertutorial/2/sql-server-recovery-models/) , составленной ребятами из [MSSQLTips!](https://www.mssqltips.com/)
+  Более подробное объяснение см. в статье о [моделях восстановления](recovery-models-sql-server.md).
   
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
@@ -103,7 +103,7 @@ USE [master] ;
 ALTER DATABASE [model] SET RECOVERY FULL ;  
 ```  
   
-##  <a name="FollowUp"></a> Рекомендуемые действия. После изменения модели восстановления  
+##  <a name="FollowUp"></a> Рекомендуемые действия после изменения модели восстановления  
   
 -   **После переключения с модели полного восстановления на модель восстановления с неполным протоколированием**  
   

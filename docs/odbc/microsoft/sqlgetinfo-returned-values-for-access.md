@@ -17,12 +17,12 @@ ms.assetid: c551e07f-30c4-41a2-8991-6010a3511d76
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a79e97721f246d47f8fab413be8074836f753cbe
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0035e5105f877d27114ded02f0cce5beb92c5881
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63135312"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66009843"
 ---
 # <a name="sqlgetinfo-returned-values-for-access"></a>Возвращаемые значения SQLGetInfo для Access
 В следующей таблице перечислены языка C# defines для *fInfoType* аргумент и соответствующие значения, возвращаемые методом **SQLGetInfo**. Эти сведения можно получить, передав перечисленных языка C# defines **SQLGetInfo** в *fInfoType* аргумент. Дополнительные сведения о значениях, возвращаемых **SQLGetInfo**, см. в разделе *Справочник по программированию ODBC*.  
@@ -112,7 +112,7 @@ ms.locfileid: "63135312"
 |SQL_GETDATA_EXTENSIONS|Несколько значений|  
 |SQL_GROUP_BY|SQL_GB_GROUP_BY_CONTAINS_SELECT|  
 |SQL_IDENTIFIER_CASE|SQL_IC_MIXED|  
-|SQL_IDENTIFIER_QUOTE_CHAR|«"» (Обратная кавычка)|  
+|SQL_IDENTIFIER_QUOTE_CHAR|"\`" (Обратная кавычка)|  
 |SQL_KEYWORDS|Несколько значений|  
 |SQL_LIKE_ESCAPE_CLAUSE|"N"|  
 |SQL_MAX_BINARY_LITERAL_LEN|255|  
@@ -157,7 +157,7 @@ ms.locfileid: "63135312"
 |SQL_SCROLL_OPTIONS|Несколько значений|  
 |SQL_SEARCH_PATTERN_ESCAPE|"\\"|  
 |SQL_SERVER_NAME|«ДОСТУП»|  
-|SQL_SPECIAL_CHARACTERS|"~`@#$%^&*_-+=\\}{"';:?/><,.!'[]&#124;"|  
+|SQL_SPECIAL_CHARACTERS|"~\`@#$%^&\*\_-+=\\}{"\';:?/><,.!\'[]&#124;"|  
 |SQL_STRING_FUNCTIONS|Несколько значений|  
 |SQL_SUBQUERIES|Несколько значений|  
 |SQL_SYSTEM_FUNCTIONS|0|  

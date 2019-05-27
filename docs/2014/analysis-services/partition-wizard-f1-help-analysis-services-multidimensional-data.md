@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Partition Wizard
@@ -13,12 +12,12 @@ ms.assetid: 3b6d7053-aeef-4d9e-af70-f5b40256e859
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 037e3a720e7c3ab2a6563d65a33e84e818de3428
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 86976ac183fc592deab50ebdf5599ef3e7231c28
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62743600"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66072124"
 ---
 # <a name="partition-wizard-f1-help-analysis-services---multidimensional-data"></a>Справка F1 мастера секционирования (службы Analysis Services — многомерные данные)
   Мастер секционирования можно использовать для определения секций для группы мер в кубе. По умолчанию для каждой группы мер в кубе определяется одна секция. Для крупных секций, однако, могут снизиться меры доступа и производительности обработки. Создавая несколько секций, каждая из которых содержит часть данных для группы мер, можно улучшить показатели доступа и производительности обработки для данной группы мер.  

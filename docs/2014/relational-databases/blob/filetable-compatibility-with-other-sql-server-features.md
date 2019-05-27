@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - FileTables [SQL Server], using with other features
 ms.assetid: f12a17e4-bd3d-42b0-b253-efc36876db37
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8ab7963d83937c3572363ea921724cefb8b4adff
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c8ea6a5fcfe99926c264fc2116a637f8d30c05df
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62920804"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66010144"
 ---
 # <a name="filetable-compatibility-with-other-sql-server-features"></a>Совместимость FileTable с другими компонентами SQL Server
   Описывает, как FileTable работает с другими функциями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10013"
@@ -16,12 +15,12 @@ ms.assetid: d89a6773-dbe5-48e5-bda9-db0e67100696
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 098d44191563ee78cd80a1b2d6d1c7ee216eee73
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a4960524f7723f91a96790b579b588be73425502
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63064782"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108996"
 ---
 # <a name="hyperion-essbase-query-designer-user-interface-report-builder"></a>Пользовательский интерфейс конструктора запросов Hyperion Essbase (построитель отчетов)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] включают графический конструктор запросов, предназначенный для создания запросов многомерных выражений к источнику данных [!INCLUDE[extEssbase](../includes/extessbase-md.md)] . Конструктор графический конструктор запросов многомерных Выражений имеет два режима: Режим конструктора и режим запросов. В каждом режиме есть панель «Метаданные», из которой можно перетаскивать элементы куба, определенного в источнике данных, для построения запроса многомерных выражений, получающего данные при обработке отчета.  

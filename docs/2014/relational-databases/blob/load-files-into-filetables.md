@@ -11,15 +11,15 @@ helpviewer_keywords:
 - FileTables [SQL Server], bulk loading
 - FileTables [SQL Server], loading files
 ms.assetid: dc842a10-0586-4b0f-9775-5ca0ecc761d9
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 04f32e1f1d0bc67e567a2a4d30779f13af6c68a6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 43e5a9a6adcca7504aa90825ecd10e53e669c7e2
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62874742"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66010012"
 ---
 # <a name="load-files-into-filetables"></a>выполнить загрузку файлов в таблицу FileTables
   Описывает процедуру загрузки или переноса файлов в таблицы FileTable.  
@@ -30,9 +30,9 @@ ms.locfileid: "62874742"
 |Текущее местоположение файлов|Параметры для переноса|  
 |-------------------------------|---------------------------|  
 |Файлы в настоящее время хранятся в файловой системе.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не имеет сведений о файлах.|Поскольку таблица FileTable в файловой системе Windows отображается в виде папки, можно легко загрузить файлы в новую таблицу FileTable любым из доступных способов перемещения или копирования файлов. Это может быть проводник Windows, программы командной строки, включая xcopy и robocopy, и пользовательские скрипты или приложения.<br /><br /> Существующую папку невозможно преобразовать в таблицу FileTable.|  
-|Файлы в настоящее время хранятся в файловой системе.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] содержит таблицу метаданных, в которой находятся указатели на файлы.|Сначала нужно переместить или скопировать файлы одним из способов, описанных выше.<br /><br /> Затем нужно обновить существующую таблицу метаданных, чтобы они указывали на новое расположение файлов.<br /><br /> Дополнительные сведения см. в разделе [пример: Перенос файлов из файловой системы в таблицу FileTable](#HowToMigrateFiles) в этом разделе.|  
+|Файлы в настоящее время хранятся в файловой системе.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] содержит таблицу метаданных, в которой находятся указатели на файлы.|Сначала нужно переместить или скопировать файлы одним из способов, описанных выше.<br /><br /> Затем нужно обновить существующую таблицу метаданных, чтобы они указывали на новое расположение файлов.<br /><br /> Дополнительные сведения см. в разделе [Пример. Перенос файлов из файловой системы в таблицу FileTable](#HowToMigrateFiles) в этом разделе.|  
   
-###  <a name="HowToLoadNew"></a> Инструкции: Загрузка файлов в таблицу FileTable  
+###  <a name="HowToLoadNew"></a> Как выполнить загрузку файлов в таблицу FileTable  
  Ниже перечислены методы, которые можно использовать для загрузки файлов в таблицу FileTable.  
   
 -   Перетаскивание файлов из исходной папки в новую папку FileTable в проводнике Windows.  
@@ -97,7 +97,7 @@ UPDATE PhotoMetadata
   
     -   INSERT INTO ... SELECT * FROM OPENROWSET(BULK ...) с предложением IGNORE_CONSTRAINTS.  
   
-###  <a name="HowToBulkLoad"></a> Инструкции: Выполнить массовую загрузку файлов в таблицу FileTable  
+###  <a name="HowToBulkLoad"></a> Как выполнить массовую загрузку файлов в таблицу FileTable  
  Для массовой загрузки файлов в таблицу FileTable можно использовать различные способы.  
   
 -   **bcp**  
@@ -120,7 +120,7 @@ UPDATE PhotoMetadata
   
  Сведения об отключении ограничений FileTable см. в разделе [Управление таблицами FileTable](manage-filetables.md).  
   
-###  <a name="disabling"></a> Инструкции: Отключение ограничений FileTable для массовой загрузки  
+###  <a name="disabling"></a> Как отключить ограничения FileTable для массовой загрузки  
  Для массовой загрузки файлов в таблицу FileTable без издержек по применению определенных в системе ограничений, можно временно отключить ограничения. Дополнительные сведения см. в статье [Управление таблицами FileTable](manage-filetables.md).  
   
 ## <a name="see-also"></a>См. также:  

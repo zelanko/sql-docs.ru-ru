@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint integration [Reporting Services], viewing reports
@@ -15,12 +14,12 @@ ms.assetid: 086d6546-7299-41bc-bca9-083a15a53679
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b9bbccd4abf5636cb777d69b64268ffea6632e65
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 73fd65c8770d6e0c25232d727d56529910edc6cd
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63264832"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109540"
 ---
 # <a name="customize-the-report-viewer-web-part"></a>Настройка веб-части средства просмотра отчетов
   Веб-часть средства просмотра отчетов можно использовать для просмотра отчетов, запущенных на сервере отчетов, настроенном для работы в режиме интеграции с SharePoint. Отчеты, которые можно отобразить, включают файлы определений отчета (файлы с расширением RDL) и отчеты построителя отчетов. Отчеты автоматически открываются в веб-части средства просмотра отчетов на отдельной странице, но веб-часть средства просмотра отчетов можно добавить и на существующую веб-страницу или сайт, если на данной странице необходимо постоянно отображать определенный отчет.  

@@ -1,5 +1,5 @@
 ---
-title: Шаг 1. Создание программы развертывания | Документация Майкрософт
+title: Шаг 1. Создание программы развертывания | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,14 +11,18 @@ ms.assetid: 1ff4dcff-89b3-4b99-a725-5f7963e98abf
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6655e4fcf33b66e4bef4025f69c91ec3c13bc79e
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 2272183b648d22db604d63326974c1b3c4686c0a
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280898"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722426"
 ---
 # <a name="lesson-2-1---building-the-deployment-utility"></a>Занятие 2–1. Построение программы развертывания
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 В этой задаче будет настроена и построена программа развертывания для проекта «Учебник по развертыванию».  
   
 Прежде, чем можно будет создать программу развертывания, следует изменить свойства проекта «Учебник по развертыванию». Для настройки этих свойств будет использоваться диалоговое окно **Страницы свойств учебника по развертыванию** . В нем нужно включить возможность обновления конфигураций во время развертывания и указать, что процесс построения создает программу развертывания. После настройки свойств будет построен проект.  
@@ -49,7 +53,7 @@ ms.locfileid: "58280898"
   
 4.  В окне «Вывод» проверьте следующее.  
   
-    Запущено построение проекта «Службы SQL Integration Services». Добавочное ...  
+    Запущено построение: Проект служб Integration Services: Добавочное...  
   
     Создание программы развертывания...  
   

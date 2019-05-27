@@ -16,12 +16,12 @@ ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7f765607b179b9a53a32be356f1b4863c0f35988
-ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
+ms.openlocfilehash: 4529593459248b6cf0777019147ced855fc1c4fa
+ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59671330"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65801371"
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>Создание полной резервной копии базы данных (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "59671330"
   
 -   Резервные копии, созданные более поздними версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , не могут быть восстановлены в более ранних версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   Чтобы получить обзорные и более подробные сведения о понятиях и задачах, связанных с резервным копированием, перед началом работы изучите раздел [Общие сведения о резервном копировании (SQL Server)](../../relational-databases/backup-restore/backup-overview-sql-server.md) .  
+-   Основные и дополнительные сведения о понятиях и задачах, связанных с резервным копированием см. в [этой статье](../../relational-databases/backup-restore/backup-overview-sql-server.md).  
   
 ###  <a name="Recommendations"></a> Рекомендации  
   

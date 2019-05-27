@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: f202a2b7-34e0-43aa-90d5-c9a085a37c32
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: af3b98aab31aeaa3a01b1026eca8b3098ce97bef
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6b568790f9a61c01054d4a7225e4a2dbf9a39887
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62749250"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66071508"
 ---
 # <a name="deploy-powerpivot-solutions-to-sharepoint"></a>Развертывание решений PowerPivot в SharePoint
   Используйте следующие инструкции для выполнения вручную развертывания двух пакетов решений, добавляющих функции PowerPivot в среде SharePoint Server 2010. Развертывание решений — это обязательный шаг настройки PowerPivot для SharePoint на сервере SharePoint 2010. Чтобы просмотреть полный список обязательных шагов, см. в разделе [Настройка и администрирование сервера PowerPivot в центре администрирования](power-pivot-server-administration-and-configuration-in-central-administration.md).  

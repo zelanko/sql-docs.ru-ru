@@ -10,22 +10,22 @@ helpviewer_keywords:
 - semantic search [SQL Server], installing
 - semantic search [SQL Server], configuring
 ms.assetid: 2cdd0568-7799-474b-82fb-65d79df3057c
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 80a7b0dd13688dca542587fbebd20c5b1818972a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c7ac7238d643165bc093a8a1cabd5d1dac662dfc
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63273501"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011142"
 ---
 # <a name="install-and-configure-semantic-search"></a>Установка и настройка семантического поиска
   Описывает компоненты, необходимые для статистического семантического поиска, и способы их установки и проверки.  
   
 ## <a name="installing-semantic-search"></a>Установка семантического поиска  
   
-###  <a name="HowToCheckInstalled"></a> Инструкции: Проверьте, установлен ли семантический поиск  
+###  <a name="HowToCheckInstalled"></a> Как Проверьте, установлен ли семантический поиск  
  Отправьте запрос к свойству **IsFullTextInstalled** функции метаданных [SERVERPROPERTY (Transact-SQL)](/sql/t-sql/functions/serverproperty-transact-sql).  
   
  Возвращаемое значение 1 указывает, что установлен компонент Full-Text Search и семантический поиск. Возвращаемое значение 0 указывает, что они не установлены.  
@@ -35,7 +35,7 @@ SELECT SERVERPROPERTY('IsFullTextInstalled');
 GO  
 ```  
   
-###  <a name="BasicsSemanticSearch"></a> Инструкции: установить семантический поиск  
+###  <a name="BasicsSemanticSearch"></a> Как установить семантический поиск  
  Чтобы установить семантический поиск, выберите пункт **Полнотекстовые и семантические извлечения для поиска** на странице **Устанавливаемые средства** во время установки.  
   
  Статистический семантический поиск зависит от полнотекстового поиска. Эти два дополнительных компонента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] устанавливаются совместно.  
@@ -43,7 +43,7 @@ GO
 ## <a name="installing-or-removing-the-semantic-language-statistics-database"></a>Установка или удаление базы данных семантической статистики языка  
  Средства семантического поиска имеют дополнительную внешнюю зависимость; речь идет о базе данных семантической статистики языка. Эта база данных содержит статистические языковые модели, необходимые для семантического поиска. Каждая база данных статистики семантики языка содержит языковые модели для всех языков, поддерживаемых семантическим индексированием.  
   
-###  <a name="HowToCheckDatabase"></a> Инструкции: Проверьте, установлена ли база данных статистики семантики языка  
+###  <a name="HowToCheckDatabase"></a> Как Проверьте, установлена ли база данных статистики семантики языка  
  Отправьте запрос в представление каталога [sys.fulltext_semantic_language_statistics_database (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql).  
   
  Если для экземпляра установлена и зарегистрирована база данных семантической статистики языка, то результаты запроса содержат единственную строку сведений о базе данных.  
@@ -53,7 +53,7 @@ SELECT * FROM sys.fulltext_semantic_language_statistics_database;
 GO  
 ```  
   
-###  <a name="HowToInstallModel"></a> Инструкции: Установить, присоединить и зарегистрировать базу данных статистики семантики языка  
+###  <a name="HowToInstallModel"></a> Как Установить, присоединить и зарегистрировать базу данных статистики семантики языка  
  База данных семантической статистики языка не устанавливается программой установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Чтобы установить базу данных семантической статистики языка как необходимый компонент для семантического индексирования, выполните следующие задачи:  
   
  **1. Установите базу данных семантической статистики языка.**  
@@ -97,7 +97,7 @@ EXEC sp_fulltext_semantic_register_language_statistics_db @dbname = N'semanticsd
 GO  
 ```  
   
-###  <a name="HowToUnregister"></a> Инструкции: Отменить регистрацию, отсоединить и удалить базу данных статистики семантики языка  
+###  <a name="HowToUnregister"></a> Как Отменить регистрацию, отсоединить и удалить базу данных статистики семантики языка  
  **Отменить регистрацию базы данных статистики семантики языка.**  
  Вызовите хранимую процедуру [sp_fulltext_semantic_unregister_language_statistics_db (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-fulltext-semantic-unregister-language-statistics-db-transact-sql). Необходимость предоставлять имя базы данных отсутствует, поскольку экземпляр может иметь только одну базу данных семантической статистики языка.  
   
@@ -134,7 +134,7 @@ GO
   
 ## <a name="installing-optional-support-for-newer-document-types"></a>Установка дополнительной поддержки для новых типов документов  
   
-###  <a name="office"></a> Инструкции: Установка последних фильтров для Microsoft Office и других типов документов Майкрософт  
+###  <a name="office"></a> Как Установка последних фильтров для Microsoft Office и других типов документов Майкрософт  
  Этот выпуск [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] устанавливает самые последние средства разбиения по словам и парадигматические модули [!INCLUDE[msCoName](../../../includes/msconame-md.md)] , но не устанавливает последние фильтры для документов [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office и других типов документов [!INCLUDE[msCoName](../../../includes/msconame-md.md)] . Эти фильтры необходимы для индексирования документов, созданных в последних версиях программ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office и других приложениях [!INCLUDE[msCoName](../../../includes/msconame-md.md)] . Чтобы загрузить последние фильтры, см. раздел [Пакеты фильтров Microsoft Office 2010](https://go.microsoft.com/fwlink/?LinkId=218293).  
   
   

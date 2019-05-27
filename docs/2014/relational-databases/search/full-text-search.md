@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server]
 ms.assetid: a0ce315d-f96d-4e5d-b4eb-ff76811cab75
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 560761383a06bf9e3b319546011d58c7c1bdecb4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6d56a6e32818296343b711769ad594bf7cadce57
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62473627"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011240"
 ---
 # <a name="full-text-search"></a>Компонент Full-text Search
   Полнотекстовый поиск в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] позволяет пользователям и приложениям выполнять полнотекстовые запросы к символьным данным в таблицах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Перед выполнением полнотекстовых запросов на данной таблице администратор базы данных должен создать в таблице полнотекстовый индекс. В полнотекстовый индекс включается один или несколько символьных столбцов в таблице. Эти столбцы могут содержать любой из следующих типов данных: `char`, `varchar`, `nchar`, `nvarchar`, `text`, `ntext`, `image`, `xml` или `varbinary(max)` и FILESTREAM. Каждый полнотекстовый индекс индексирует один или несколько столбцов таблицы, а каждому столбцу может соответствовать определенный язык.  

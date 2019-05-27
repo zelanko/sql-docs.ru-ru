@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 ms.assetid: 6b5d2177-db98-47f5-b32e-4b80a2f74ffe
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 66515d57cada938abe9241d89116cb16beaf431e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f0067b0e13e724948e53a2eb291c9a1da6315011
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192270"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66012748"
 ---
 # <a name="change-the-word-breaker-used-for-us-english-and-uk-english"></a>Change the Word Breaker Used for US English and UK English
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] устанавливает новую версию (версию 14.0.4999.1038) средства разбиения по словам и парадигматического модуля для английского языка, заменяя предыдущую версию этих компонентов (версию 12.0.6828.0). Дополнительные сведения об изменениях в поведении новых компонентов см. в статье [Изменения в функциях полнотекстового поиска](full-text-search.md). В этом разделе описывается способ переключения из новой версии этих компонентов в предыдущую версию или обратно из предыдущей версии в новую версию. При работе с кластерными установками эти изменения необходимо вносить на всех основных и пассивных узлах.  
@@ -35,7 +35,7 @@ ms.locfileid: "48192270"
   
 #### <a name="to-switch-from-the-current-version-of-the-us-english-word-breaker-to-the-previous-version"></a>Переход от текущей версии средства разбиения по словам для английского языка (США) к предыдущей версии  
   
-1.  Перейдите к следующему разделу реестра: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
+1.  В реестре перейдите к следующему узлу: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
   
 2.  Чтобы добавить новые разделы для идентификаторов классов COM предыдущей версии интерфейсов средства разбиения по словам для английского языка (США) и парадигматического модуля для идентификатора LCID 1033, выполните следующие действия.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "48192270"
   
     4.  Обновите данные (по умолчанию) значения этого раздела до **infosoft.dll**.  
   
-3.  Перейдите к следующему узлу: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<корень_экземпляра\>\MSSearch\Language\enu**.  
+3.  В реестре перейдите к следующему узлу: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\enu**.  
   
 4.  Обновите значение раздела **WBreakerClass** до **{188D6CC5-CB03-4C01-912E-47D21295D77E}**.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "48192270"
   
 #### <a name="to-switch-from-the-current-version-of-the-uk-english-word-breaker-to-the-previous-version"></a>Переход от текущей версии средства разбиения по словам для английского языка (Соединенное Королевство) к предыдущей версии  
   
-1.  Перейдите к следующему разделу реестра: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
+1.  В реестре перейдите к следующему узлу: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
   
 2.  Чтобы добавить новый раздел для идентификаторов классов COM для предыдущей версии интерфейсов средства разбиения по словам для английского языка (Соединенное Королевство) и парадигматического модуля для идентификатора LCID 2057, выполните следующие действия.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "48192270"
   
     4.  Обновите данные (по умолчанию) значения этого раздела до **infosoft.dll**.  
   
-3.  Перейдите к следующему узлу: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<корень_экземпляра\>\MSSearch\Language\eng**.  
+3.  В реестре перейдите к следующему узлу: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\eng**.  
   
 4.  Обновите значение раздела **WBreakerClass** до **{173C97E2-AEBE-437C-9445-01B237ABF2F6}**.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "48192270"
   
 #### <a name="to-switch-back-from-the-previous-version-of-the-us-english-word-breaker-to-the-current-version"></a>Переход обратно от предыдущей версии средства разбиения по словам для английского языка (США) к текущей версии  
   
-1.  Перейдите к следующему разделу реестра: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
+1.  В реестре перейдите к следующему узлу: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
   
 2.  Если следующие разделы реестра не существуют, выполните следующие действия, чтобы добавить новый раздел для идентификаторов классов COM для текущей версии интерфейсов средства разбиения по словам для английского языка (США) и парадигматического модуля для идентификатора LCID 1033.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "48192270"
   
     4.  Обновите данные (по умолчанию) значения этого раздела до **MsWb7.dll**.  
   
-3.  Перейдите к следующему узлу: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<корень_экземпляра\>\MSSearch\Language\eng**.  
+3.  В реестре перейдите к следующему узлу: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\eng**.  
   
 4.  Обновите значение раздела **WBreakerClass** до **{9faed859-0b30-4434-ae65-412e14a16fb8}**.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "48192270"
   
 #### <a name="to-switch-back-from-the-previous-version-of-the-uk-english-word-breaker-to-the-current-version"></a>Переход обратно от предыдущей версии средства разбиения по словам для английского языка (Соединенное Королевство) к текущей версии  
   
-1.  Перейдите к следующему разделу реестра: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
+1.  В реестре перейдите к следующему узлу: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
   
 2.  Если следующие разделы реестра не существуют, выполните следующие действия, чтобы добавить новый раздел для идентификаторов классов COM для текущей версии интерфейсов средства разбиения по словам для английского языка (Соединенное Королевство) и парадигматического модуля для идентификатора LCID 2057.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "48192270"
   
     4.  Обновите данные (по умолчанию) значения этого раздела до **MsWb7.dll**.  
   
-3.  Перейдите к следующему узлу: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<корень_экземпляра\>\MSSearch\Language\eng**.  
+3.  В реестре перейдите к следующему узлу: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\eng**.  
   
 4.  Обновите значение раздела **WBreakerClass** до **{9faed859-0b30-4434-ae65-412e14a16fb8}**.  
   

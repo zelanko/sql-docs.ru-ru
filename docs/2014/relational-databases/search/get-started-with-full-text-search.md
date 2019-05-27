@@ -12,15 +12,15 @@ helpviewer_keywords:
 - full-text search [SQL Server], about
 - full-text search [SQL Server], setting up
 ms.assetid: 1fa628ba-0ee4-4d8f-b086-c4e52962ca4a
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b6dc03709ea16fb718ff93ed60f75ad4d1515eaf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fd5ced641ee8fc17f0be7d7b6e19aff17dcb69bd
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63273214"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011285"
 ---
 # <a name="get-started-with-full-text-search"></a>Приступая к работе с компонентом Full-Text Search
   Базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживают полнотекстовую индексацию по умолчанию. Однако для использования полнотекстового индекса в таблице надо настроить полнотекстовое индексирование для столбцов таблиц, к которым планируется обращение при использовании средства полнотекстового поиска.  

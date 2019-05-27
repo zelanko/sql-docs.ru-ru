@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 4f079485-9eb4-405c-9a20-81258298b810
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e1d7b619cb711938f07ae7902dc1b9544adc5890
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 46d69f2bcc82ba1ff4ae49e9bfa5e3aa7a61ad2a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62728875"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66078458"
 ---
 # <a name="defining-dimension-granularity-within-a-measure-group"></a>Определение степени гранулярности измерения в группе мер
   Для разных целей пользователям может понадобиться измерять данные фактов с разной степенью гранулярности или точности. Например, сведения о продажах через посредников или о продажах через Интернет могут записываться каждый день, в то время как данные о квотах продаж могут существовать только для уровня месяца или квартала. В таких случаях пользователям требуется, чтобы измерение времени обладало разной степенью гранулярности для каждой из этих разных таблиц фактов. Определить новое измерение базы данных как измерение времени с другой степенью гранулярности проще всего с помощью служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  

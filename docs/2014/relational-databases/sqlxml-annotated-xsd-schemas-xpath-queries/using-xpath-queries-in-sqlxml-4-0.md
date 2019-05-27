@@ -12,15 +12,15 @@ helpviewer_keywords:
 - queries [SQLXML], XPath
 - XML views [SQLXML]
 ms.assetid: 7814d099-81ec-4fb8-894a-729cdbb5015a
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 35ae7fec6e2a5800ec82e815b2b7bc3cdc4f8926
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 962d79dbee61fa498a6338c864366ec40ea7c759
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63131297"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66014564"
 ---
 # <a name="using-xpath-queries-in-sqlxml-40"></a>Использование запросов XPath в SQLXML 4.0
   Поддержка Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] аннотированных схем XSD позволяет создавать XML-представления реляционных данных, хранящихся в базе данных. Можно использовать подмножество языка XPath для запроса XML-представлений, созданных аннотированными схемами XSD.  

@@ -11,14 +11,18 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: c1afc1a2fbb8777df0c4bf5a488cde951fd4e32c
-ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
+ms.openlocfilehash: 8de649eb8f6311270c64969981e78315cee29450
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54206330"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65718280"
 ---
 # <a name="troubleshoot-scale-out"></a>Устранение неполадок Scale Out
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Работа SSIS Scale Out строится на взаимодействии между базой данных каталога SSIS (`SSISDB`), службой мастера Scale Out и службой рабочей роли Scale Out. В некоторых случаях это взаимодействие может быть нарушено из-за ошибок конфигурации, нехватки разрешений на доступ или по другим причинам. В этой статье приводятся рекомендации по устранению неполадок с конфигурацией Scale Out.
 

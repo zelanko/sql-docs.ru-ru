@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.shared.action.f1
@@ -34,12 +33,12 @@ ms.assetid: 2c5d915b-4f97-42cf-b8f1-49ca3ff3d0f9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 125b40193edca5dc60fa86fe5818f7722f5af91c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3d6069d5720121b02c627528ec772cb61ddb0a10
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63231184"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66110081"
 ---
 # <a name="action-properties-dialog-box-report-builder-and-ssrs"></a>Диалоговое окно «Свойства действия» (построитель отчетов и службы SSRS)
   С помощью диалогового окна **Действие** можно включить параметры гиперссылок для диаграммы, датчика и элементов карты, поддерживающих ссылки. Определите действие, чтобы дать пользователю возможность щелкнуть отчет и перейти по URL-адресу к другому отчету на том же сервере отчетов или на сайте SharePoint, интегрированном с сервером отчетов, или к другому расположению в текущем отчете.  

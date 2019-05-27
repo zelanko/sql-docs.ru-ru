@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 983d0c8a-77da-4c6e-8638-283bcb14f143
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a0f278f5d0d036bac02e53263acc023dcae7d808
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6f73a8e9e79a08c3f4a1f1e2b40ff5f83a0e39b7
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62757619"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66067661"
 ---
 # <a name="connect-to-a-tabular-model-database-ssas"></a>Соединение с табличным шаблоном баз данных (SSAS)
   После создания табличной модели и развертывания ее на сервере служб Analysis Services в табличном режиме необходимо задать разрешения, которые сделают ее доступной для клиентских приложений. В этом разделе приводятся объяснения по поводу разрешений и того, как подключаться к базе данных из клиентских приложений.  

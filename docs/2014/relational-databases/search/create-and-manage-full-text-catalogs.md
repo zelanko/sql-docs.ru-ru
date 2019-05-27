@@ -10,15 +10,15 @@ helpviewer_keywords:
 - full-text catalogs [SQL Server], creating
 - full-text search [SQL Server], using SQL Server Management Studio
 ms.assetid: 824b7131-44a6-4815-89e6-62b7bab060e3
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d2347c97b41852b44ec651ee10300e607755757f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d90ba7f8e183beeeeefe25ea20834b07d7a1bf80
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146001"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011472"
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>Создание и управление полнотекстовыми каталогами
   Полнотекстовый каталог теперь является виртуальным объектом, не принадлежащим ни к одной файловой группе. Он является логическим понятием, ссылающимся на группу полнотекстовых индексов.  
@@ -43,7 +43,7 @@ ms.locfileid: "48146001"
   
   
 ##  <a name="props"></a> Просмотр свойств полнотекстового каталога  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] функции, такие как FULLTEXTCATALOGPROPERTY может использоваться для получения значений различных свойств полнотекстового индексирования. Эти сведения полезны для администрирования и устранения нарушений в работе средств полнотекстового поиска.  
+ Для получения значений различных свойств полнотекстового индексирования можно использовать некоторые функции [!INCLUDE[tsql](../../includes/tsql-md.md)], например FULLTEXTCATALOGPROPERTY. Эти сведения полезны для администрирования и устранения нарушений в работе средств полнотекстового поиска.  
   
  В следующей таблице перечислены свойства, о которых сообщается в полнотекстовых каталогах.  
   

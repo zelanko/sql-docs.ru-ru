@@ -12,15 +12,15 @@ helpviewer_keywords:
 - annotated XDR schemas
 - schemas [SQLXML]
 ms.assetid: 874c6dca-8a0c-4a2e-891c-ba6e326154d2
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6d45a3859938b25b2ed9f71f654ff7e9877f35b6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b19deb48073462ce26c86afdd586e2b9e5426ecb
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63131265"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66014616"
 ---
 # <a name="annotated-xdr-schemas-deprecated-in-sqlxml-40"></a>Схемы XDR с заметками (устарели в SQLXML 4.0)
   Схемы XDR с заметками устарели. Дальнейшая разработка этой функции проводиться не будет. Рекомендуется избегать использования данной функции в новых разработках. Вместо этого используйте аннотированные схемы XSD. Можно преобразовать существующие схемы XDR с заметками в схемы XSD. Дополнительные сведения см. в разделе [преобразование аннотированные схемы XDR в эквивалентные схемы XSD &#40;SQLXML 4.0&#41;](converting-annotated-xdr-schemas-to-equivalent-xsd-schemas-sqlxml-4-0.md). Сведения об устаревших схемах XDR см. в разделе [документации по SQL Server 2008](https://go.microsoft.com/fwlink/?LinkId=202011).  

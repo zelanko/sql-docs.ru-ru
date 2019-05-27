@@ -11,14 +11,18 @@ ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7fdf13c7a0a2d318846b1140b26c6e56c2290024
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: b4648f66c9bc73a3de8bcf1bad68a9ad748718bc
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271182"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727214"
 ---
 # <a name="cdc-flow-components"></a>Компоненты потока CDC
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Компоненты отслеживания измененных данных Attunity для служб Microsoft [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] позволяют разработчикам служб SSIS работать с CDC и уменьшают сложность пакетов CDC.  
   
  Компоненты CDC служб SSIS предназначены для работы с функцией [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC, когда исходные таблицы находятся в одной базе данных [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] или базе данных Oracle (если используется служба Oracle CDC для [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]). Поддерживаются секционированные таблицы.  

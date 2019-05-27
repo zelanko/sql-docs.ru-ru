@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dsvdesigner.replacetable.f1
@@ -15,12 +14,12 @@ ms.assetid: 7ca304bf-a01f-43db-bbbc-0572976425b2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 17f87d063fd23ecc9ead9bfe097f21e74e011953
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b1ab26f596a669a5a0d13b6bb0c283a55851bd58
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748306"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070269"
 ---
 # <a name="replace-table-with-other-table-dialog-box"></a>Диалоговое окно «Замена таблицы другой таблицей»
   Используйте диалоговое окно **Замена таблицы другой таблицей** в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] для замены существующей таблицы в представлении источника данных на таблицу базового источника данных, еще не включенную в представление источника данных. Диалоговое окно **Замена таблицы другой таблицей** отображается после щелчка правой кнопкой мыши по имени таблицы на панели **Диаграмма** или **Таблицы** окна **Конструктор представлений источников данных** и выбора пункта **Другой таблицей** в меню **Заменить таблицу**.  

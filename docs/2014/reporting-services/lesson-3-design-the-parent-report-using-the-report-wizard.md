@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 2f69dcd3-cd6d-45a9-a62a-ba6f5f3179d8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 8fe60270cd3737e3c372fbf92ccb906beb8d06cb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 282c5753b0e1e966d1041944e936d341ed46a30f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63182917"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108485"
 ---
-# <a name="lesson-3-design-the-parent-report-using-the-report-wizard"></a>Урок 3. Проектирование родительского отчета с помощью мастера отчетов
+# <a name="lesson-3-design-the-parent-report-using-the-report-wizard"></a>Урок 3. Проектирование родительского отчета с использованием мастера отчетов
   После создания подключения к данным и таблицы данных для родительского отчета следующий шаг состоит в проектировании родительского отчета в конструкторе отчетов с помощью мастера отчетов. Дополнительные сведения о конструкторе отчетов см. в разделе [Разработка отчетов с использованием конструктора отчетов (SSRS)](tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md).  
   
 ### <a name="to-design-the-parent-report-using-the-report-wizard"></a>Проектирование родительского отчета с использованием мастера отчетов  

@@ -13,14 +13,18 @@ ms.assetid: 55dd0946-bd67-4490-9971-12dfb5b9de94
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 49c4e75641056db17faabcc937ee1ec76fd470d5
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 7890ea871365188918a2b45105848b748f5aa670
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280338"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728980"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>Создание функции для получения информации об изменениях
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   После завершения потока управления для пакета служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , выполняющего добавочную загрузку информации об изменениях, нужно выполнить следующую задачу: создать функцию с табличным значением, которая получает измененные данные. Создавать эту функцию необходимо только один раз — перед первой добавочной загрузкой.  
   
 > [!NOTE]  

@@ -14,14 +14,18 @@ ms.assetid: eef82c89-228a-4dc7-9bd0-ea00f57692f5
 author: Lingxi-Li
 ms.author: lingxl
 manager: craigg
-ms.openlocfilehash: c2073da82b19cc9e8d9d1fdbc87beb9b2ef89595
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 96be54415e3a2892da2ec892a0e90c02c5365e90
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710622"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727931"
 ---
 # <a name="azure-sql-dw-upload-task"></a>Задача отправки информации в хранилище данных SQL Azure
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 **Задача отправки информации в хранилище данных SQL Azure** позволяет пакету служб SSIS копировать табличные данные в хранилище данных SQL Azure из файловой системы или хранилища BLOB-объектов Azure.
 Для повышения производительности в задаче используется подход PolyBase, описанный в статье [Azure SQL Data Warehouse Loading Patterns and Strategies](https://blogs.msdn.microsoft.com/sqlcat/2017/05/17/azure-sql-data-warehouse-loading-patterns-and-strategies/)(Стратегии и шаблоны загрузки хранилища данных SQL Azure).

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - attributes [data mining]
@@ -17,12 +16,12 @@ ms.assetid: 0f29c19c-4be3-4bc7-ab60-f4130a10d59c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 213768938a4fb9497fcbebad15f1dc4b84e1dba9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 44e60d60764396361122ed16a4e34f76fc3a6ab6
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62722426"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66084430"
 ---
 # <a name="filters-for-mining-models-analysis-services---data-mining"></a>Фильтры для моделей интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)
   Фильтрация моделей на основе данных помогает создавать модели интеллектуального анализа, использующие подмножества данных в структуре интеллектуального анализа данных. Фильтрация обеспечивает гибкость при проектировании структур интеллектуального анализа и источников данных, поскольку это позволяет создать одну структуру интеллектуального анализа на основе всеобъемлющего представления источников данных. Затем можно создать фильтры для использования части данных для обучения и проверки различных моделей, а не строить отдельную структуру и связанную с ней модель для каждого подмножества данных.  

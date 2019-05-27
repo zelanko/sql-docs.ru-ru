@@ -30,19 +30,19 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 829459fadb58ff24093d422c365089639e7b76b9
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.openlocfilehash: 7a6414ca219cbc2ca871a1100c4ff82570409873
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65503825"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580640"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
 Преобразование таблицы rowstore в кластеризованный индекс columnstore или создание некластеризованного индекса columnstore. Используйте индекс columnstore для эффективного выполнения операционной аналитики в реальном времени в рабочей нагрузке OLTP или повышения производительности сжатия данных и запросов для рабочих нагрузок хранилищ данных.  
   
-> [!NOTE]  
+> [!NOTE]
 > Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] таблицы можно создавать как кластеризованный индекс columnstore.   Больше не нужно сначала создавать таблицу rowstore, а затем преобразовывать ее в кластеризованный индекс columnstore.  
 
 > [!TIP]
@@ -64,14 +64,15 @@ ms.locfileid: "65503825"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```
 -- Syntax for SQL Server and Azure SQL Database  
   
 -- Create a clustered columnstore index on disk-based table.  
 CREATE CLUSTERED COLUMNSTORE INDEX index_name  
     ON { database_name.schema_name.table_name | schema_name.table_name | table_name }  
     [ WITH ( < with_option> [ ,...n ] ) ]  
-    [ ON <on_option> ]  
+    [ ON <on_option> ] 
+    [ORDER (column [,…n])]  --(Preview) 
 [ ; ]  
   
 --Create a non-clustered columnstore index on a disk-based table.  
@@ -80,7 +81,7 @@ CREATE [NONCLUSTERED]  COLUMNSTORE INDEX index_name
         ( column  [ ,...n ] )  
     [ WHERE <filter_expression> [ AND <filter_expression> ] ]
     [ WITH ( < with_option> [ ,...n ] ) ]  
-    [ ON <on_option> ]   
+    [ ON <on_option> ]
 [ ; ]  
   
 <with_option> ::=  
@@ -92,9 +93,9 @@ CREATE [NONCLUSTERED]  COLUMNSTORE INDEX index_name
       [ ON PARTITIONS ( { partition_number_expression | range } [ ,...n ] ) ]  
   
 <on_option>::=  
-      partition_scheme_name ( column_name )   
-    | filegroup_name   
-    | "default"   
+      partition_scheme_name ( column_name )
+    | filegroup_name
+    | "default"
   
 <filter_expression> ::=  
       column_name IN ( constant [ ,...n ]  
@@ -102,14 +103,14 @@ CREATE [NONCLUSTERED]  COLUMNSTORE INDEX index_name
   
 ```  
   
-```  
+```
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 CREATE CLUSTERED COLUMNSTORE INDEX index_name   
     ON { database_name.schema_name.table_name | schema_name.table_name | table_name }  
     [ WITH ( DROP_EXISTING = { ON | OFF } ) ] --default is OFF  
 [;]  
-```  
+```
   
 ## <a name="arguments"></a>Аргументы  
 
@@ -124,7 +125,8 @@ CREATE CLUSTERED COLUMNSTORE INDEX index_name
 
 Все параметры доступны в Базе данных SQL Azure.
 
-### <a name="create-clustered-columnstore-index"></a>СОЗДАНИЕ КЛАСТЕРИЗОВАННОГО ИНДЕКСА COLUMNSTORE  
+### <a name="create-clustered-columnstore-index"></a>СОЗДАНИЕ КЛАСТЕРИЗОВАННОГО ИНДЕКСА COLUMNSTORE
+
 Создание кластеризованного индекса columnstore, в котором все данные сжаты и сохранены по столбцам. Индекс включает все столбцы в таблице и сохраняет всю таблицу. Если существующая таблица является кучей или кластеризованным индексом, она преобразуется в кластеризованный индекс columnstore. Если таблица уже хранится в виде кластеризованного индекса columnstore, то существующий индекс будет удален и перестроен.  
   
 *index_name*  
@@ -132,11 +134,14 @@ CREATE CLUSTERED COLUMNSTORE INDEX index_name
   
 Если таблица уже является кластеризованным индексом columnstore, вы можете указать то же имя, что у существующего индекса, или задать новое имя с помощью параметра DROP EXISTING.  
   
-ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*  
-   Задает одно-, двух- или трехкомпонентное имя таблицы, которая должна быть сохранена как кластеризованный индекс columnstore. Если таблица является кучей или кластеризованным индексом, она преобразуется из rowstore в columnstore. Если таблица уже columnstore, эта инструкция перестраивает кластеризованный индекс columnstore.  
+ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*
+
+Задает одно-, двух- или трехкомпонентное имя таблицы, которая должна быть сохранена как кластеризованный индекс columnstore. Если таблица является кучей или кластеризованным индексом, она преобразуется из rowstore в columnstore. Если таблица уже columnstore, эта инструкция перестраивает кластеризованный индекс columnstore. Для преобразования в упорядоченный кластеризованный индекс columnstore существующий индекс должен быть кластеризованным индексом columnstore.
   
-#### <a name="with-options"></a>Параметры WITH  
-##### <a name="dropexisting--off--on"></a>DROP_EXISTING = [OFF] | ON  
+#### <a name="with-options"></a>Параметры WITH
+
+##### <a name="dropexisting--off--on"></a>DROP_EXISTING = [OFF] | ON
+
    `DROP_EXISTING = ON` удаляет существующий индекс и создает индекс columnstore.  
 ```sql
 CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
@@ -156,6 +161,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
 CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
        WITH (MAXDOP = 2);
 ```
+
    Дополнительные сведения см. в статьях [Настройка параметра конфигурации сервера max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) и [Настройка параллельных операций с индексами](../../relational-databases/indexes/configure-parallel-index-operations.md).  
  
 ###### <a name="compressiondelay--0--delay--minutes-"></a>COMPRESSION_DELAY = **0** | *delay* [ Minutes ]  
@@ -742,3 +748,11 @@ WITH ( DROP_EXISTING = ON);
 DROP INDEX cci_xdimProduct ON xdimProduct;  
 ```  
 
+### <a name="f-create-an-ordered-clustered-columnstore-index"></a>Е. Создание упорядоченного кластеризованного индекса columnstore
+
+Создайте упорядоченный кластеризованный индекс columnstore в SHIPDATE.
+
+```sql 
+CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
+ORDER ( SHIPDATE );
+```

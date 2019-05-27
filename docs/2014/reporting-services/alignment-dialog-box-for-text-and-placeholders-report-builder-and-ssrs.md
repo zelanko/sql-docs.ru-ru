@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10136"
@@ -16,12 +15,12 @@ ms.assetid: ea2bbcec-03d8-42e7-8f8e-3cccd9548586
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0663bfce435187be66889858316b5ced0573f149
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9ef4f2f59698f45f4d0882117abbf2ffc8ae5930
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63233456"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66110041"
 ---
 # <a name="alignment-dialog-box-for-text-and-placeholders-report-builder-and-ssrs"></a>Диалоговое окно «Выравнивание» для текста и заполнителей (построитель отчетов и службы SSRS)
   Выберите вкладку **Выравнивание** , чтобы изменить расположение значений в выбранной ячейке или области данных. В текстовом поле для отдельного фрагмента текста можно форматировать только выравнивание по горизонтали. Для задания значений заполнения текстового поля и выравнивания текста по вертикали используются свойства соответствующего текстового поля. Дополнительные сведения см. в разделе [текстовое поле свойства, выравнивания &#40;построитель отчетов и службы SSRS&#41;](../../2014/reporting-services/text-box-properties-dialog-box-alignment-report-builder-and-ssrs.md).  

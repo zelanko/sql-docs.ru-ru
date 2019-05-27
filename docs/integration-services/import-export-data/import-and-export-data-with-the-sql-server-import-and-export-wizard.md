@@ -23,14 +23,18 @@ ms.assetid: c0e4d867-b2a9-4b2a-844b-2fe45be88f81
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8159be3478fbf4d3e83de6a066a07104997c4ade
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: c540acdbda08d79f89b6bba3a016314609e6607f
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58222088"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723808"
 ---
 # <a name="import-and-export-data-with-the-sql-server-import-and-export-wizard"></a>Импорт и экспорт данных с помощью мастера импорта и экспорта SQL Server
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
  Мастер импорта и экспорта[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет простой способ копирования данных из источника в целевой объект. В этой статье описываются источники данных, которые мастер может использовать в качестве источников и назначений, а также необходимые для запуска мастера разрешения.
 

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 0ffc5f44-17d3-42d4-bc2c-baf3b4485e2d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 011ca5ed5066113a467082e0fe05c6d0f831f25b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 812c205c1e612604c0c39a5effb3b9da50308d7a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62757965"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66067961"
 ---
 # <a name="configure-reporting-properties-for-power-view-reports"></a>Настройка свойств отчетов для отчетов Power View
   На этом дополнительном занятии мы рассмотрим задание свойств отчетов для проекта модели интернет-продаж Adventure Works. Свойства отчетов упрощают пользователям выбор и отображение данных модели в Power View. Можно также задать свойства, позволяющие скрывать некоторые столбцы и таблицы, а также создавать новые данные для использования в диаграммах.  

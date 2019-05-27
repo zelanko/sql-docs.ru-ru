@@ -11,15 +11,15 @@ helpviewer_keywords:
 - bulk importing [SQL Server], format files
 - XML format files [SQL Server]
 ms.assetid: 69024aad-eeea-4187-8fea-b49bc2359849
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 29da5204dc5bd88ed2c92b93347358b9860fc5c4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7e323d686d739f832a6ae70707e4393a22a78b27
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63065803"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011559"
 ---
 # <a name="xml-format-files-sql-server"></a>XML-файлы форматирования (SQL Server)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] предоставляет схему XML, которая определяет синтаксис для написания *XML-файлов форматирования* в целях использования при массовом импорте данных в таблицу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . XML-файлы форматирования должны придерживаться этой схемы, которая определена при помощи языка XML Schema Definition Language (XSDL). XML-файлы форматирования поддерживаются только при установке средств [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] вместе с собственным клиентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -249,7 +249,7 @@ ms.locfileid: "63065803"
 |Строка символов|`SQLCHAR`, `SQLVARYCHAR`, `SQLNCHAR` и `SQLNVARCHAR`|Нет.|NULLABLE, LENGTH|  
   
 > [!IMPORTANT]  
->  Для массового экспорта или импорта данных SQLXML используется один из следующих типов данных в файле форматирования. SQLCHAR или SQLVARYCHAR (данные отправляются в кодовой странице клиента или в кодовой странице, предполагаемой параметрами сортировки), SQLNCHAR или SQLNVARCHAR (данные отправляются в Юникоде), и SQLBINARY или SQLVARYBIN (данные отправляются без преобразования).  
+>  Для массового экспорта или импорта данных SQLXML используется один из следующих типов данных в файле форматирования. SQLCHAR или SQLVARYCHAR (данные посылаются в кодовой странице клиента или в кодовой странице, предполагаемой параметрами сортировки), SQLNCHAR или SQLNVARCHAR (данные посылаются в формате Юникод) и SQLBINARY или SQLVARYBIN (данные посылаются без преобразования).  
   
  Дополнительные сведения о типах значений [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в разделе [Типы данных (Transact-SQL)](/sql/t-sql/data-types/data-types-transact-sql).  
   
@@ -308,7 +308,7 @@ for(int i=0;i<ColumnList.Count;i++)
 ###  <a name="OrderCharFieldsSameAsCols"></a> A. упорядочивание полей с символьными данными по столбцам таблицы;  
  В следующем примере представлен XML-файл форматирования, описывающий файл данных, в котором содержатся три поля символьных данных. Файл форматирования сопоставляет файл данных с таблицей, содержащей три столбца. Поля данных соответствуют «один к одному» столбцам таблицы.  
   
- **Таблица (строка):** Person (Age int, FirstName varchar(20), LastName varchar(30)) программы  
+ **Таблица (строка):** Person (Age int, FirstName varchar(20), LastName varchar(30))  
   
  **Файл данных (запись):** Age\<tab>Firstname\<tab>Lastname\<return>  
   
@@ -346,7 +346,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ###  <a name="OrderFieldsAndColsDifferently"></a> Б. упорядочивание полей данных в порядке, отличающемся от порядка столбцов таблицы;  
  В следующем примере представлен XML-файл форматирования, описывающий файл данных, в котором содержатся три поля символьных данных. Файл форматирования сопоставляет файл данных с таблицей, содержащей три столбца, порядок следования которых отличается от порядка следования полей файла данных.  
   
- **Таблица (строка):** Person (Age int, FirstName varchar(20), LastName varchar(30)) программы  
+ **Таблица (строка):** Person (Age int, FirstName varchar(20), LastName varchar(30))  
   
  **Файл данных** (запись): Age\<tab>Lastname\<tab>Firstname\<return>  
   

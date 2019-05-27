@@ -10,12 +10,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 8500bbb9946289eca10d126e1d06e1510ef738a8
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: 1cc9093bb6d266bd70fe8f53d96b249bc6680324
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65994159"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66014949"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>Учебник. Прием данных в пул данных SQL Server с помощью Transact-SQL
 
@@ -85,7 +85,7 @@ ms.locfileid: "65994159"
 
 Следующие действия приема пример веб-маршрута перемещения данных в пул данных с помощью внешней таблицы, созданной на предыдущих шагах.
 
-1. Определите переменные для запроса, который вы хотите использовать для вставки данных в пул данных. Для CTP-версия 2.3 или более ранней версии **модели... sp_data_pool_table_insert_data** необходим хранимой процедуры. CTP-версии 2.4 и более поздних версий, можно использовать `INSERT INTO` инструкцию, чтобы вставлять результаты запроса в пуле данных ( **web_clickstream_clicks_data_pool** внешней таблицы).
+1. Используйте `INSERT INTO` инструкцию, чтобы вставлять результаты запроса в пуле данных ( **web_clickstream_clicks_data_pool** внешней таблицы).
 
    ```sql
    INSERT INTO web_clickstream_clicks_data_pool

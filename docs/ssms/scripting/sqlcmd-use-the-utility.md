@@ -14,16 +14,16 @@ helpviewer_keywords:
 - statements [SQL Server], executing
 - sqlcmd utility, about sqlcmd utility
 ms.assetid: 3ec89119-7314-43ef-9e91-12e72bb63d62
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0730dc681a4faa61425803f98dc091a0fb745b1e
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 4a237f0b4d4f1d65e471be065cf13fa985de4cff
+ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617882"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65821874"
 ---
 # <a name="sqlcmd---use-the-utility"></a>Использование программы sqlcmd
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "52617882"
     sqlcmd -S <ComputerName>  
     ```  
   
-    > **ПРИМЕЧАНИЕ.** В предыдущем примере параметр **-E** не указывается, так как он используется по умолчанию, и программа **sqlcmd** подключается к экземпляру по умолчанию, используя проверку подлинности Windows.  
+    > **ПРИМЕЧАНИЕ.** В предыдущем примере ключ **-E** не указывается, так как он является ключом, используемым по умолчанию, и программа **sqlcmd** подключается к экземпляру по умолчанию, используя проверку подлинности Windows.  
   
 -   Соединение с именованным экземпляром с использованием проверки подлинности Windows для запуска инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] в интерактивном режиме:  
   

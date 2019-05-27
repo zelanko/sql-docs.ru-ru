@@ -4,18 +4,18 @@ description: В этой статье содержатся заметки о в�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/18/2018
+ms.date: 03/25/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: e13ee9f8046eb53db8e59ee33b3039757bbc4aa4
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: e272187ae3e634246f9f32323438d81d633c3fbc
+ms.sourcegitcommit: 8aa51bc0bc54b266145c96f6451b59f369822160
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64776184"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66036908"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Заметки о выпуске для SQL Server 2017 в Linux
 
@@ -383,7 +383,7 @@ sudo systemctl start mssql-server
 | &nbsp; | Проверка подлинности AD для связанных серверов | 
 | &nbsp; | Проверка подлинности AD для групп доступности (группы доступности) | 
 | &nbsp; | инструменты сторонних AD (Centrify, Vintela, Powerbroker) | 
-| **Службы** | Обозреватель SQL Server |
+| **службы** | Обозреватель SQL Server |
 | &nbsp; | SQL Server R services |
 | &nbsp; | StreamInsight |
 | &nbsp; | Службы Analysis Services |

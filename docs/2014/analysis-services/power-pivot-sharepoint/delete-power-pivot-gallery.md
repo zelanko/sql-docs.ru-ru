@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: b7222318-7307-4afb-b585-9358426103a0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bfba4b1432f22c176c2504a771be81f2f6e053bb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0019aa93459f2e46646cbbfb115b501fbf7eaff5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62749467"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66071461"
 ---
 # <a name="delete-powerpivot-gallery"></a>Удаление галереи PowerPivot
   При удалении галереи [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] удаляются также и все ее элементы, в том числе журнал и расписание обновления данных в книгах [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  

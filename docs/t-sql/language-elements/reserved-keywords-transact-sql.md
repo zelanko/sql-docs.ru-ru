@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4eec630d490ee4bbd31b77b294e18cae1e72f530
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 11ed3624f1a8ac74f650bd1468750452580fb911
+ms.sourcegitcommit: 856e28a4f540f851b988ca311846eac9ede6d492
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853575"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65626679"
 ---
 # <a name="reserved-keywords-transact-sql"></a>Зарезервированные ключевые слова (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -98,11 +98,11 @@ ms.locfileid: "47853575"
 |EXISTS|PRINT|WRITETEXT|  
 |EXIT|PROC||
   
-Следующая таблица содержит список зарезервированных слов для **Хранилища данных SQL**.
+Следующая таблица содержит список зарезервированных слов, предназначенный исключительно для **Хранилища данных SQL Azure**.
 
 |||
 |-|-|
-|**Метка**||
+|**LABEL**||
   
  Кроме того, стандартом ISO определяется список зарезервированных ключевых слов. Избегайте применения зарезервированных ключевых слов ISO в качестве имен и идентификаторов объектов. Список зарезервированных ключевых слов ODBC, приведенный в следующей таблице, совпадает со списком зарезервированных ключевых слов ISO.  
   
@@ -249,7 +249,7 @@ ms.locfileid: "47853575"
 |CUBE|NCLOB|TIME|  
 |CUME_DIST|NEW|timestamp|  
 |CURRENT_CATALOG|NEXT|TIMEZONE_HOUR|  
-|CURRENT_DEFAULT_TRANSFORM_GROUP|Нет|TIMEZONE_MINUTE|  
+|CURRENT_DEFAULT_TRANSFORM_GROUP|NO|TIMEZONE_MINUTE|  
 |CURRENT_PATH|None|TRAILING|  
 |CURRENT_ROLE|NORMALIZE|TRANSLATE_REGEX|  
 |CURRENT_SCHEMA|NUMERIC|TRANSLATION|  

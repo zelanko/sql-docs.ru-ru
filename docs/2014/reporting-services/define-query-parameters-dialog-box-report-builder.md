@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10026"
@@ -13,12 +12,12 @@ ms.assetid: 07ccca3f-86ed-4f7e-99bd-0a5e1c64a733
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d6e0cf91fe697458854a57e1d57099c7cb1bf6a3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2a66d262efe80c027daf94247482e3bb2826e92a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63164756"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109363"
 ---
 # <a name="define-query-parameters-dialog-box-report-builder"></a>Диалоговое окно «Определение параметров запроса» (построитель отчетов)
   В диалоговом окне **Определение параметров запроса** можно указать значения параметров, используемые при запуске запроса в конструкторе запросов во время разработки для просмотра образца данных. Параметры запроса фильтруют данные в источнике данных и позволяют ограничивать объем данных, обрабатываемых отчетом. Эти значения не сохраняются вместе с определением отчета.  

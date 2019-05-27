@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - data sources [Reporting Services], creating
@@ -13,12 +12,12 @@ ms.assetid: b111a8d0-a60d-4c8b-b00a-51644b19c34b
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e464af6b057465aec03a611ac741549c10de0638
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 088889518d88c5fd45f988fe03185e22f041b627
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63266183"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109655"
 ---
 # <a name="create-an-embedded-or-shared-data-source-ssrs"></a>создать внедренный или общий источник данных (службы SSRS)
   Источник данных отчета задает имя и информацию для соединения. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] поддерживает два типа источников данных: внедренные и Общие. Внедренный источник данных определяется в определении отчета и используется только этим отчетом. Общий источник данных определяется как отдельный элемент и может использоваться несколькими отчетами. Дополнительные сведения см. в разделе [внедренные и общие подключения к данным или источники данных &#40;построитель отчетов и службы SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md).  

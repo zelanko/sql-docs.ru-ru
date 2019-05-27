@@ -25,20 +25,20 @@ helpviewer_keywords:
 - match whole word [SQL Server]
 - searches [SQL Server Management Studio], replacing
 ms.assetid: 3641c7b3-3e3e-4ddd-af82-c15b50004f94
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d84304f1ba307a55273ddd24aa11686cbd9743e1
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 869262f20b50e23a8e59f4a318fd70d73c339db9
+ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51643683"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65821956"
 ---
 # <a name="search-and-replace"></a>Поиск и замена
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  Существует несколько способов поиска и замены текста. В меню **Правка** пункт **Найти и заменить** содержит четыре команды: **Быстрый поиск**, **Быстрая замена**, **Найти в файлах**или **Заменить в файлах**. Каждая из этих команд открывает диалоговое окно **Найти и заменить** . Можно выполнить поиск и без диалогового окна с помощью сочетаний клавиш добавочного поиска. Эти методы позволяют управлять областью поиска и замены, а также выбирать способ просмотра совпадений при поиске и замене.  
+  Существует несколько способов поиска и замены текста. Пункт **Найти и заменить** из меню **Правка** содержит четыре команды: **Быстрый поиск**, **Быстрая замена**, **Найти в файлах** и **Заменить в файлах**. Каждая из этих команд открывает диалоговое окно **Найти и заменить** . Можно выполнить поиск и без диалогового окна с помощью сочетаний клавиш добавочного поиска. Эти методы позволяют управлять областью поиска и замены, а также выбирать способ просмотра совпадений при поиске и замене.  
   
  Выполняя поиск и замену текста, необходимо учитывать следующее.  
   

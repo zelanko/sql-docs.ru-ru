@@ -11,18 +11,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3d2881dfbb1e8b764c28e0ee9e5cd35ab6ba2087
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.openlocfilehash: 42358e9e43e12a13c5b9e03b58df349b8f7a4231
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58306052"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729453"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>Новые возможности в SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 SQL Server 2017 — это важный шаг к созданию универсальной платформы SQL Server, которая позволит вам свободно выбирать языки разработки, типы данных, локальные или облачные среды и операционные системы, обеспечивая совместимость с Linux, контейнерами Docker на базе Linux и с Windows. Этот раздел содержит сводку о новых возможностях в отдельных функциональных областях, а также ссылки на дополнительные сведения. Дополнительные сведения о SQL Server в Linux см. в [документации по SQL Server в Linux](https://docs.microsoft.com/sql/linux/).
 
-[![Скачать в центре оценки ПО](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=829477) **Попробуйте:** [Скачайте выпуск SQL Server 2017, октябрь 2017 г.:](https://go.microsoft.com/fwlink/?LinkID=829477).
+[![Скачать в центре оценки ПО](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=829477) **Попробуйте:** [Скачать выпуск SQL Server 2017 за октябрь 2017 г.](https://go.microsoft.com/fwlink/?LinkID=829477)
 
 > [!NOTE]
 > Помимо приведенных ниже изменений следует отметить накопительные обновления, которые регулярно выпускаются после выхода общедоступной версии. Эти накопительные обновления содержат много усовершенствований и исправлений. Сведения о последнем выпуске накопительного обновления см в разделе [Накопительные обновления SQL Server 2017](https://aka.ms/sql2017cu).

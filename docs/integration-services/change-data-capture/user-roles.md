@@ -11,14 +11,18 @@ ms.assetid: be0ec384-e03b-4483-96ca-02b289804d6a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1d4e6174317c2588a0c12b4ef6f1f2d0b1d09e44
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 358f85dfd404aecc712f44aae46dad84cf2713b1
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290850"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728447"
 ---
 # <a name="user-roles"></a>Роли пользователя
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   В этом разделе описываются роли пользователей для службы системы отслеживания измененных данных для Oracle компании Attunity. Описываемые роли — это роли базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , роли Windows или роли базы данных Oracle.  
   
 ## <a name="windows-user-roles"></a>Роли пользователей Windows  

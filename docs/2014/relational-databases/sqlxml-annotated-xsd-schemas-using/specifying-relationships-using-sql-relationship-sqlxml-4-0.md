@@ -25,15 +25,15 @@ helpviewer_keywords:
 - hierarchical relationships [SQLXML]
 - named relationships [SQLXML]
 ms.assetid: 98820afa-74e1-4e62-b336-6111a3dede4c
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1ae1037a8b04ad1a16b8d42485105927015359a1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f27b47ae8216fa64b537d4c8b22b612c535a1869
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62717911"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66013668"
 ---
 # <a name="specifying-relationships-using-sqlrelationship-sqlxml-40"></a>Указание связей при помощи sql:relationship (SQLXML 4.0)
   Элементы в XML-документе могут участвовать в связях. Элементы могут иметь иерархическую вложенность, и между ними могут быть заданы связи ID, IDREF или IDREFS.  
@@ -384,7 +384,7 @@ ms.locfileid: "62717911"
 ### <a name="d-specifying-sqlrelationship-on-multiple-elements"></a>Г. Задание sql:relationship для нескольких элементов  
  В этом примере Аннотированная схема XSD содержит  **\<клиента >**,  **\<порядок >**, и  **\<OrderDetail >** элементы.  
   
- **\<Порядок >** элемент является дочерним элементом элемента **\<клиента >** элемент. **\<SQL: Relationship >** заметка указывается для  **\<порядок >** дочерний атрибут; таким образом, принадлежащие заказчику заказы отображаются как дочерние элементы элемента  **\<клиента >**.   
+ **\<Порядок >** элемент является дочерним элементом элемента **\<клиента >** элемент. **\<SQL: Relationship >** заметка указывается для  **\<порядок >** дочерний атрибут; таким образом, принадлежащие заказчику заказы отображаются как дочерние элементы элемента  **\<клиента >**.  
   
  **\<Порядок >** элемент включает **\<OrderDetail >** дочерний элемент. **\<SQL: Relationship >** заметка указывается для **\<OrderDetail >** дочерний элемент, поэтому подробности заказа отображаются как дочерние элементы элемента, **\<Order >** элемент.  
   

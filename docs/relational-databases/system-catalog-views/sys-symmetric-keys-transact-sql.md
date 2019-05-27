@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 57e5bc6d2959e14c7af7e5ccefddc14e9bb630ee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 07b60dacedec35460fd0e23e1d28769dcc5674fc
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47672952"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175616"
 ---
 # <a name="syssymmetrickeys-transact-sql"></a>sys.symmetric_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47672952"
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|Имя ключа. Уникально в пределах базы данных c4database.|  
+|**name**|**sysname**|Имя ключа. Уникально в пределах базы данных.|  
 |**principal_id**|**int**|Идентификатор участника базы данных, который владеет ключом.|  
 |**symmetric_key_id**|**int**|Идентификатор ключа. Уникально в пределах базы данных.|  
 |**key_length**|**int**|Длина ключа в битах.|  

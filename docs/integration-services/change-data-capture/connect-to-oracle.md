@@ -13,14 +13,18 @@ ms.assetid: 711ac7ff-5d3d-4533-80ca-d1fecdb3048f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fcea03fa8a1493fbbe233810765a9853988f6c1e
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 3b02eb586db5bc18ffa96c8a24037d48fbe4695a
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272298"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728920"
 ---
 # <a name="connect-to-oracle"></a>Соединение с Oracle
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   При первом добавлении или изменении таблиц, используемых на экземпляре CDC, программа может попросить установить соединение с базой данных Oracle. Необходимо ввести учетные данные пользователя Oracle, который имеет доступ к схеме отслеживаемых таблиц. Введите в этом диалоговом окне следующие данные:  
   
  **Проверка подлинности**  

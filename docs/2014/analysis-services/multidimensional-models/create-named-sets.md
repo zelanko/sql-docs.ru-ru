@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - calculations [Analysis Services], named sets
@@ -15,12 +14,12 @@ ms.assetid: 03cf97a4-1a18-45f3-acb0-35123bd619be
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dc94dc4a23e952a81e33d98a1ba0c2cf2c5f9022
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c1fc4ab5d778535fdc4e2186c5bc88741b4367f5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62700142"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66076140"
 ---
 # <a name="create-named-sets"></a>Создание именованных наборов
   Именованный набор — это набор элементов измерения или выражение набора, которые создаются для многократного использования, например в запросах на языке многомерных выражений. Для создания именованных наборов может использоваться сочетание данных куба, арифметических операторов, чисел и функций. Например, можно создать именованный набор с именем Top Ten Factories, содержащий десять элементов измерения Factories с наибольшими значениями показателя Production. Затем набор Top Ten Factories можно использовать в запросах конечных пользователей. Например, конечный пользователь помещает набор Top Ten Factories на одну ось, а измерение меры, включая Production, — на другую ось. Дополнительные сведения см. в разделах [Вычисления в многомерных моделях](calculations-in-multidimensional-models.md) и [Построение именованных наборов в многомерных выражениях](mdx/mdx-named-sets-building-named-sets.md).  

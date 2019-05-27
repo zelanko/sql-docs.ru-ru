@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 67dacf68-9ab7-4524-8698-844d0f6e6c6d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f199238c09be6409f9d8fe9266acd547738a0076
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f7424a92ce4d8e4f6b0ca4c55238ede33d982933
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62728630"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66078701"
 ---
 # <a name="sorting-attribute-members-based-on-a-secondary-attribute"></a>Сортировка элементов атрибута по вторичному атрибуту
   На третьем занятии рассматривалась сортировка элементов атрибута по имени или значению ключа. Кроме того, было показано, как изменять элементы атрибута и порядок сортировки с помощью составных ключей элементов. Дополнительные сведения см. в разделе [Изменение измерения Date](../analysis-services/lesson-3-4-modifying-the-date-dimension.md). Однако, если ни имя, ни значение ключа первичного атрибута не обеспечивают требуемого порядка сортировки, можно использовать вторичный атрибут. Посредством определения связи между атрибутами можно использовать второй атрибут для сортировки элементов первого атрибута.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.prediction.result.f1
@@ -13,12 +12,12 @@ ms.assetid: d154477d-3e4b-4e9b-a306-8166a0d83d21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 30393fd4233e0e6b1707de36fb881e97b626d1f9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 41579af945bcf546eb2c32b5a337ba10bd59510a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748216"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070182"
 ---
 # <a name="result-pane-mining-model-prediction-view"></a>Панель «Результаты» (представление прогнозирования модели интеллектуального анализа данных)
   Панель **Результаты** отображает результаты прогнозирующего запроса интеллектуального анализа данных, созданного в представлении **Проектирование** построителя прогнозирующих запросов. Можно скопировать выбранный элемент сетки или всю таблицу результатов в буфер обмена.  

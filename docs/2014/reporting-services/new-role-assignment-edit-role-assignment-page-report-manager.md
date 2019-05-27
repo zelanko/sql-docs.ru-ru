@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 3319ced0-4b86-42af-b18d-da41a625113c
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: fc4dd805faffb9fcf172f372f48d497a037fd16c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a9480b0729e7c08117ba5633c6934eca1903a61b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63188396"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108155"
 ---
 # <a name="new-role-assignment-edit-role-assignment-page-report-manager"></a>Создание назначения ролей: Страница «Изменение» назначения ролей (диспетчер отчетов)
   Страницы «Создание назначения ролей» или «Изменение назначения ролей» позволяют предоставлять разрешения для элементов и операций сервера отчетов. У каждого пользователя, которому необходим доступ к серверу отчетов, должно быть назначение ролей, определяющее уровень доступа. Назначения ролей можно выполнить на уровне корневого узла либо для конкретного отчета, модели, папки, ресурса или общего источника данных. Безопасность служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] достигается посредством назначения ролей элементам. Назначение роли сопоставляет группу или пользователя определению роли, где каждое определение роли определяет задачи, которые могут выполнять группы или пользователи в отношении конкретного элемента.  

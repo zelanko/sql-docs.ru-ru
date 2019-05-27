@@ -11,15 +11,15 @@ helpviewer_keywords:
 - thesaurus [full-text search], configuring
 - thesaurus [full-text search]
 ms.assetid: 3ef96a63-8a52-45be-9a1f-265bff400e54
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5089aaa229f77c6f0012f4ceae0d5d1b17a9c11a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e52399dc77fce220bf33939b7c7921e32cd2438c
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52792268"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011478"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>Настройка и управление файлами тезауруса для полнотекстового поиска
   В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] полнотекстовые запросы могут выполнять поиск синонимов для заданных пользователем терминов с помощью тезауруса. *Тезаурус* в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определяет набор синонимов для указанного языка. Системные администраторы могут определить две формы синонимов: расширяющие наборы и заменяющие наборы. Подготовив тезаурус, ориентированный на пользовательские полнотекстовые данные, можно эффективно расширить область полнотекстовых запросов к этим данным. Сопоставление с тезаурусом выполняется для всех запросов [FREETEXT](/sql/t-sql/queries/freetext-transact-sql) и [FREETEXTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) и для любых запросов [CONTAINS](/sql/t-sql/queries/contains-transact-sql) и [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) , которые указывают предложение FORMSOF THESAURUS.  
@@ -77,7 +77,7 @@ ms.locfileid: "52792268"
 ##  <a name="location"></a> Местоположение файлов тезауруса  
  Местоположение файлов тезауруса по умолчанию:  
   
- *< SQL_Server_data_files_path >* \MSSQL12. MSSQLSERVER\MSSQL\FTDATA\  
+ *<SQL_Server_data_files_path>* \MSSQL12.MSSQLSERVER\MSSQL\FTDATA\  
   
  В местоположении по умолчанию содержатся следующие файлы.  
   

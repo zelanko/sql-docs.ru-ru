@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 9c69792d-d7c4-453b-ae2f-6d2d071d8606
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ae7f72240148291504654fffa304ebda252178ba
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 27942be9c32d4537f729adbd69df1c64a9c9ff6f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63266073"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109855"
 ---
 # <a name="check-for-updates-or-turn-updates-off-report-builder-and-ssrs"></a>Проверка наличия обновлений или отключение обновлений (построитель отчетов и службы SSRS)
   При каждом открытии отчета построитель отчетов проверяет, не вносились ли на сервере или на сайте SharePoint, объединенном с сервером отчетов, изменения в опубликованные экземпляры элементов отчета в данном отчете. Построитель отчетов также проверяет элементы, зависящие от элементов отчетов, например наборы данных и параметры. При обновлении элементов отчетов или их зависимостей на сайте или сервере в информационной панели отчета отображается количество обновленных элементов. Можно просмотреть и принять или отклонить изменения или отключить информационную панель.  

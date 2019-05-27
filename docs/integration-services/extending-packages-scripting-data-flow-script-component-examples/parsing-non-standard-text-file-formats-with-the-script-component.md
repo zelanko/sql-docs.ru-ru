@@ -16,14 +16,18 @@ ms.assetid: 1fda034d-09e4-4647-9a9f-e8d508c2cc8f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3b97d6051c46ab7c898e953c78704c99b6370d57
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 28bfe8de3327702c0d56e762a560732c3b9812a4
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277813"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724425"
 ---
 # <a name="parsing-non-standard-text-file-formats-with-the-script-component"></a>Синтаксический анализ текстовых файлов нестандартного формата в компоненте скрипта
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Если исходные данные организованы в нестандартном формате, может оказаться удобнее объединить всю логику синтаксического анализа в единый скрипт вместо создания цепочки преобразований служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], приводящих к тому же результату.  
   
  [Пример 1. Синтаксический анализ записей, разделенных на строки](#example1)  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine [SQL Server], tutorials
@@ -13,12 +12,12 @@ ms.assetid: f34a5acf-1f3b-4484-a770-6470cb925ab0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dcd89e7473ba2fb2a27b827da26f3654ea9d9b87
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: cf882bc731c8e435de808092e990b35ad23ce57e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63048971"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66110158"
 ---
 # <a name="starting-the-dta-command-prompt-utility-and-tuning-a-workload"></a>Начало работы с программой командной строки dta и настройка рабочей нагрузки
   Эта задача помогает запустить программу **dta**, просмотреть ее справку, а затем использовать эту программу для настройки рабочей нагрузки из командной строки. Программа использует рабочую нагрузку MyScript.sql, созданную в ходе выполнения практической работы по использованию графического пользовательского интерфейса помощника по настройке ядра СУБД [Настройка рабочей нагрузки](lesson-1-1-tuning-a-workload.md).  
@@ -54,7 +53,7 @@ ms.locfileid: "63048971"
 3.  Закончив настройку рабочей нагрузки, помощник по настройке ядра СУБД выведет сообщение, свидетельствующее об успешном завершении сеанса настройки. Можно просмотреть результаты настройки, используя среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , чтобы открыть файлы MySession2OutputScript.sql и MySession2Output.xml. Кроме того, сеанс настройки MySession2 можно открыть в графическом интерфейсе помощника по настройке ядра СУБД и просмотреть его рекомендации и отчеты, что рассматривалось в разделах [Просмотр рекомендаций по настройке](lesson-1-2-viewing-tuning-recommendations.md) и [Просмотр отчетов настройки](lesson-1-3-viewing-tuning-reports.md).  
   
 ## <a name="summary"></a>Сводка  
- Завершена настройка простой рабочей нагрузки в командной строке с помощью программы **dta** . Это средство предоставляет также множество других возможностей настройки. Дополнительные сведения см. в справке средства (**dta -?**) и в разделе справки [dta, программа](dta-utility.md) .  
+ Завершена настройка простой рабочей нагрузки в командной строке с помощью программы **dta** . Это средство предоставляет также множество других возможностей настройки. Дополнительные сведения см. в справке средства (**dta -?** ) и в разделе справки [dta, программа](dta-utility.md) .  
   
 ## <a name="after-you-finish-this-tutorial"></a>После завершения работы с этим учебником  
  Выполнив задания этого учебника, изучите следующие разделы, чтобы получить дополнительные сведения о помощнике по настройке ядра СУБД:  

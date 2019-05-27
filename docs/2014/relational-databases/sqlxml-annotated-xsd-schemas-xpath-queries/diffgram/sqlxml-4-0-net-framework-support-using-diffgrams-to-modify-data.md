@@ -22,15 +22,15 @@ helpviewer_keywords:
 - record updates [SQLXML]
 - record deletions [SQLXML]
 ms.assetid: 48b8a8f9-f3af-404f-8c84-f4c3703364d9
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 81828ba434bbfeae72083859725701518a8950f6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9e704688537684c367bf4d8f2eec95db2affcc0e
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63127737"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66012700"
 ---
 # <a name="using-diffgrams-to-modify-data-in-sqlxml-40"></a>Использование дельт для изменения данных в SQLXML 4.0
   Формат DiffGram впервые появился в **набора данных** компонент [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework. На платформе .NET Framework можно создать дельты и использовать их для изменения данных в таблицах в базах данных Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  

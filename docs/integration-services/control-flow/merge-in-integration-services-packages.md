@@ -13,14 +13,18 @@ ms.assetid: 7e44a5c2-e6d6-4fe2-a079-4f95ccdb147b
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 95a771a7eb5f8f77f7ee7e869c0a434b1b604d26
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 124d7c0aec844b1a600f051473835e0be667824f
+ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282398"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65805176"
 ---
 # <a name="merge-in-integration-services-packages"></a>Предложение MERGE в пакетах служб Integration Services
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Для текущего выпуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]инструкция SQL в задаче "Выполнить SQL" может содержать инструкцию MERGE. Эта инструкция MERGE позволяет выполнять несколько операций INSERT, UPDATE и DELETE в единой инструкции.  
   
  Для использования в пакете инструкции MERGE выполните следующее.  
@@ -56,7 +60,7 @@ ms.locfileid: "58282398"
  Еженедельно база данных создает таблицу WeeklyChanges, в которой содержатся изменения цен за неделю и новые книги, добавленные за эту неделю. С помощью единственной инструкции MERGE можно перенести изменения таблицы WeeklyChanges в таблицу DimBook. Инструкция MERGE добавляет новые строки для вновь добавленных книг и изменяет столбец IsCurrent на 0 для строк существующих книг, у которых изменились цены. Инструкция MERGE также добавляет новые строки для книг, у которых изменились цены, и устанавливает для столбца IsCurrent этих строк значение 1.  
   
 ### <a name="merge-a-table-with-new-data-against-the-old-table"></a>Слияние таблицы новых данных со старой таблицей  
- База данных моделирует свойства объекта, используя "открытую схему". Это значит, что таблица содержит пары имя-значение для каждого свойства. У таблицы Properties три столбца: EntityID, PropertyID и Value. Таблица NewProperties представляет собой обновленную версию таблицы, которую следует синхронизировать с таблицей Properties. Для синхронизации этих двух таблиц можно с помощью инструкции MERGE выполнить следующие операции:  
+ База данных моделирует свойства объекта, используя "открытую схему". Это значит, что таблица содержит пары имя-значение для каждого свойства. В таблице Properties три столбца: EntityID, PropertyID и Value. Таблица NewProperties представляет собой обновленную версию таблицы, которую следует синхронизировать с таблицей Properties. Для синхронизации этих двух таблиц можно с помощью инструкции MERGE выполнить следующие операции:  
   
 -   удалить свойства из таблицы Properties, если их нет в таблице NewProperties;  
   

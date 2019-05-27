@@ -11,14 +11,18 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: bd2d91d38c964bc2795294a1ca4a4617fe2a0a48
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4c9c881cbbefc5fa8fb9f0810a5c8ea26f375a56
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47829681"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65721466"
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>Перенос рабочих нагрузок SQL Server Integration Services в облако
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 Проекты, пакеты и рабочие нагрузки служб SQL Server Integration Services (SSIS) теперь можно переносить в облако Azure. Для управления, развертывания и выполнения проектов и пакетов SSI и в каталоге SSI (SSISDB), размещенном в службе "База данных SQL Azure" или Управляемом экземпляре базы данных SQL, вы можете использовать привычные вам инструменты, например SQL Server Management Studio (SSMS).
 
 ## <a name="benefits"></a>Преимущества
@@ -34,7 +38,7 @@ ms.locfileid: "47829681"
 
 | Местоположение | Память | Параметры выполнения | Масштабируемость |
 |---|---|---|---|
-| В локальной среде | SQL Server | Среда выполнения служб SSIS размещается в SQL Server | SSIS Scale Out (в SQL Server 2017 и более поздних версиях)<br/><br/>Пользовательские решения (в предыдущих версиях SQL Server) |
+| В локальной среде | SQL Server | Среда выполнения служб SSIS размещается в SQL Server | SSIS Scale Out (в SQL Server 2017 и более поздних версиях)<br/><br/>Пользовательские решения (в предыдущих версиях SQL Server) |
 | В Azure | Служба "База данных SQL" или Управляемый экземпляр базы данных SQL | Azure-SSIS Integration Runtime, компонент фабрики данных Azure | Параметры масштабирования для Azure-SSIS Integration Runtime |
 | | | | |
 
@@ -42,9 +46,9 @@ ms.locfileid: "47829681"
 
 **Подготовка**. Перед тем как развертывать и выполнять пакеты SSIS в Azure, необходимо подготовить каталог SSIS (SSISDB) и среду Azure-SSIS Integration Runtime.
 
--   См. дополнительные сведения о [подготовке Integration Runtime Azure – SSI в Фабрике данных Azure](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure). 
+-   Чтобы подготовить SSIS в Azure на портале Azure, выполните инструкции из этой статьи: [Подготовка Azure-SSIS Integration Runtime в Фабрике данных Azure](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure). 
 
--   См. дополнительные сведения о [подготовке Integration Runtime Azure — SSIS в Фабрике данных Azure с помощью PowerShell](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure-powershell).
+-   Чтобы подготовить SSIS в Azure с помощью PowerShell, выполните инструкции из этой статьи: [Подготовка Azure-SSIS Integration Runtime в Фабрике данных Azure с помощью PowerShell](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure-powershell).
 
 Azure-SSIS IR достаточно подготовить только один раз. После этого можно использовать знакомые средства, такие как SQL Server Data Tools (SSDT) и SQL Server Management Studio (SSMS) для развертывания, настройки, запуска, мониторинга, планирования пакетов и управления ими.
 
@@ -88,7 +92,7 @@ Azure-SSIS IR достаточно подготовить только один 
 
 ## <a name="deploy-and-run-packages"></a>Развертывание и запуск пакетов
 
-Начало работы описано в руководстве по [развертыванию и выполнению пакета служб SQL Server Integration Services (SSI) в Azure](ssis-azure-deploy-run-monitor-tutorial.md).
+Чтобы быстро приступить к работе, см. руководство по [ развертыванию и запуску пакета служб SQL Server Integration Services (SSI) в Azure](ssis-azure-deploy-run-monitor-tutorial.md).
 
 ### <a name="prerequisites"></a>предварительные требования
 
@@ -112,7 +116,7 @@ Azure-SSIS IR достаточно подготовить только один 
 
 В процессе развертывания проверяется возможность выполнения пакета в среде Azure-SSIS Integration Runtime. Подробнее см. в статье [Проверка пакетов служб SQL Server Integration Services (SSI) в Azure](ssis-azure-validate-packages.md).
 
-См. дополнительные сведения о [развертывании и выполнении пакета SQL Server Integration Services (SSI) с использованием SSMS и мастера развертывания Integration Services в Azure](ssis-azure-deploy-run-monitor-tutorial.md).
+Пример развертывания с использованием служб SSMS и мастера развертывания служб Integration Services см. в руководстве по [ развертыванию и запуску пакета служб SQL Server Integration Services (SSI) в Azure](ssis-azure-deploy-run-monitor-tutorial.md).
 
 ### <a name="version-support"></a>Поддерживаемые версии
 
@@ -141,5 +145,5 @@ Azure-SSIS IR достаточно подготовить только один 
 
 ## <a name="next-steps"></a>Следующие шаги
 Чтобы приступить к работе с рабочими нагрузками служб SSIS в Azure, ознакомьтесь со следующими статьями:
--   [Руководство. Развертывание и выполнение пакета служб SQL Server Integration Services (SSI) в Azure](ssis-azure-deploy-run-monitor-tutorial.md)
+-   [Учебник. Развертывание и выполнение пакета служб SQL Server Integration Services (SSI) в Azure](ssis-azure-deploy-run-monitor-tutorial.md)
 -   [Подготовка Integration Runtime Azure – SSI в Фабрике данных Azure](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure)

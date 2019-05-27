@@ -13,14 +13,18 @@ ms.assetid: 10cd612e-d8f1-4af2-97d3-a0c22e1e2326
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d7b7db8c28670c4ac411bb2e618f7051d9639fc1
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d5d690eeaa3d6af5efa06f1e3e439aa4ba7692a6
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270383"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728936"
 ---
 # <a name="create-and-edit-an-oracle-cdc-service"></a>Создание и изменение службы CDC Oracle
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Новые службы Windows для Oracle CDC создаются и изменяются из консоли конфигурации службы CDC.  
   
  Чтобы создать новую службу Windows для Oracle CDC, на панели слева выберите **Локальные службы CDC** , а затем щелкните **Создать службу** на панели **Действия** . Можно также щелкнуть правой кнопкой **Локальные службы CDC** и выбрать **Создать службу**. Откроется диалоговое окно создания службы Windows для Oracle CDC.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.levelnamingtemplatedialog.f1
@@ -15,12 +14,12 @@ ms.assetid: 96cad715-213e-4eac-9003-130a2f5fc985
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 37afa05887059607edc257c3957495a8db335d3c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: febaae6051e8428d3fed2bb6533ce2c4d972950f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62728150"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66078062"
 ---
 # <a name="level-naming-template-dialog-box-analysis-services---multidimensional-data"></a>Диалоговое окно «Шаблон именования уровней» (службы Analysis Services — многомерные данные)
   Используйте диалоговое окно **Шаблон именования уровней** в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] для создания шаблона именования уровней родительского атрибута измерения. Дополнительные сведения о шаблонах именования уровней см. в разделе [Элемент NamingTemplate (ASSL)](https://docs.microsoft.com/bi-reference/assl/properties/namingtemplate-element-assl). Можно отобразить **шаблон именования уровней** диалоговое окно, нажав кнопку с многоточием (**...** ) на `NamingTemplate` значении перевода для атрибута в **сведения о переводе** панели **переводы** вкладке **конструктор измерений**.  
