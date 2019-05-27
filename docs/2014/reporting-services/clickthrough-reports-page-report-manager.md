@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.modelproperties.drilthroughreports.f1
@@ -13,12 +12,12 @@ ms.assetid: e96cdeba-452b-45a8-9bcf-b75d76261e31
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7f76a4c0d2e9cc3bd2d5591a704491a4bed0ebfb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d996463baaed3095b6866fa2da88ed811745878d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63266140"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109798"
 ---
 # <a name="clickthrough-reports-page-report-manager"></a>Страница «Отчеты с дополнительной информацией» (диспетчер отчетов)
   Отчет с дополнительной информацией отображает таблицу взаимосвязанных данных, если щелкнуть интерактивные данные, содержащиеся в отчете. Такие отчеты формируются сервером отчетов на основе сведений, содержащихся в модели, с помощью которой был создан этот отчет. Если использовать отчеты с дополнительной информацией, которые формирует сервер отчетов, неудобно, можно создать пользовательские отчеты, опубликовать их на сервере отчетов и сопоставить с интерактивными точками данных, определенными в модели. Пользовательские отчеты должны создаваться в построителе отчетов из одной и той же модели, а затем публиковаться на сервере отчетов. Для сопоставления пользовательских отчетов с элементами модели используется страница «Отчеты с дополнительной информацией» в диспетчере отчетов.  

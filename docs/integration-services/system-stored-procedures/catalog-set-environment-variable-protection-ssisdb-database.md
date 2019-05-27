@@ -11,12 +11,12 @@ ms.assetid: 005b6b2f-a5d9-4ea4-8d4e-beed6ab33c0d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6ca421c3d1cdd2be5cbfbc57a867339c2ce2a228
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.openlocfilehash: 015c0f51b728ba3f601722d1d44c1e3b2f173973
+ms.sourcegitcommit: 209fa6dafe324f606c60dda3bb8df93bcf7af167
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65715915"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66198180"
 ---
 # <a name="catalogsetenvironmentvariableprotection-ssisdb-database"></a>catalog.set_environment_variable_protection (база данных SSISDB)
 
@@ -33,18 +33,18 @@ ms.locfileid: "65715915"
 catalog.set_environment_variable_protection [ @folder_name = ] folder_name  
     , [ @environment_name = ] environment_name  
     , [ @variable_name = ] variable_name  
-    , [ @is_sensitive = ] is_sensitive  
+    , [ @sensitive = ] sensitive  
 ```  
   
 ## <a name="arguments"></a>Аргументы  
  [ @folder_name = ] *folder_name*  
- Имя папки, которая содержит среду. Параметр *folder_name* имеет тип **nvarchar(128)**.  
+ Имя папки, которая содержит среду. Параметр *folder_name* имеет тип **nvarchar(128)** .  
   
  [ @environment_name = ] *environment_name*  
- Имя среды. Параметр *environment_name* имеет тип **nvarchar(128)**.  
+ Имя среды. Параметр *environment_name* имеет тип **nvarchar(128)** .  
   
  [ @variable_name = ] *variable_name*  
- Имя переменной среды. Параметр *variable_name* имеет тип **nvarchar(128)**.  
+ Имя переменной среды. Параметр *variable_name* имеет тип **nvarchar(128)** .  
   
  [ @sensitive = ] *sensitive*  
  Указывает, содержит переменная конфиденциальное значение или нет. Значение `1` указывает, что значение переменной среды является конфиденциальным, а значение `0` — что оно таковым не является. Конфиденциальное значение шифруется при его сохранении. Значение, которое не является конфиденциальным, сохраняется в формате открытого текста. Параметр *sensitive* имеет тип **bit**.  

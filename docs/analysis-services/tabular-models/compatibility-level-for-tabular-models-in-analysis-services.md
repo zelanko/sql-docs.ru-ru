@@ -1,6 +1,6 @@
 ---
 title: Уровень совместимости табличных моделей в службах Analysis Services | Документация Майкрософт
-ms.date: 05/14/2019
+ms.date: 05/23/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 45ea2e048a7ea7ae7d041614d62a280ee3698131
-ms.sourcegitcommit: 4cb96c291529e9bdf0a95fb3610b350583eb36d1
+ms.openlocfilehash: d2176b88f01808e1b84f409cb1f1c117774a220c
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65709126"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175132"
 ---
 # <a name="compatibility-level-for-analysis-services-tabular-models"></a>Уровень совместимости табличных моделей служб Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -60,8 +60,11 @@ ms.locfileid: "65709126"
   
 ## <a name="check-supported-compatibility-level-for-a-server-in-ssms"></a>Проверка поддерживаемого уровня совместимости для сервера в среде SSMS  
  В среде SSMS щелкните правой кнопкой мыши имя сервера и в контекстном меню выберите **Свойства** > **Поддерживаемый уровень совместимости**.  
-  
- Это свойство указывает наивысший уровень совместимости базы данных, которая будет выполняться на сервере. Поддерживаемый уровень совместимости доступен только для чтения. Его нельзя изменить.  
+
+ Это свойство указывает наивысший уровень совместимости базы данных, которая будет выполняться на сервере. Поддерживаемый уровень совместимости доступен только для чтения. Его нельзя изменить.
+ 
+> [!NOTE]  
+>  В SSMS при подключении к серверу SQL Server Analysis Services, сервер Azure Analysis Services или рабочей области Power BI Premium, свойство поддерживаемый уровень совместимости будет показано 1200. Это известная проблема и будет устранена в предстоящем SSMS обновления. При разрешении, это свойство будет показывать наивысший уровень совместимости, поддерживаемых. 
   
 ## <a name="see-also"></a>См. также  
  [Уровень совместимости многомерной базы данных](../../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md)   

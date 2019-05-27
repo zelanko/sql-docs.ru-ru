@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.axisproperties.axisoptions.f1
@@ -14,12 +13,12 @@ ms.assetid: b276e210-7a12-48ae-971b-7dabae51df11
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 553d1d4e2be366cc56ed37caad6a9db20850e856
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ff9f3281e47cf6dfdf8a189c653d0e061f4a761d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63239348"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109962"
 ---
 # <a name="axis-properties-dialog-box-axis-options-report-builder-and-ssrs"></a>Диалоговое окно «Свойства оси» — «Параметры оси» (построитель отчетов и службы SSRS)
   Выберите **параметры оси** на **горизонтальной** или **свойства вертикальной оси** диалоговое окно, чтобы задать внешний вид указанной оси диаграммы. В предыдущих версиях служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]на горизонтальной оси диаграммы по умолчанию отображались все метки. Однако в службах [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 2008 метки на диаграмме опускаются, чтобы изображение было понятнее, а метки не пересекались. Дополнительные сведения см. в разделе [Форматирование меток оси на диаграмме (построитель отчетов и службы SSRS)](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md).  

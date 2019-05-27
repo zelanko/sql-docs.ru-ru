@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4a53a1a8-d1e1-47ef-b1fc-63352ece7d3c
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1833989b2dd5fed0616a7587252ac97a09cb75f2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8fd750b8c83816caf775fd508d892ff2511ce67f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63266236"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109901"
 ---
 # <a name="choose-item-location-page-report-manager"></a>Страница «Выбор расположения элементов» (диспетчер отчетов)
   Страница «Выбор расположения элемента» позволяет выбрать папку для нового связанного отчета или новой модели. При создании связанного отчета или модели для определенной группы пользователей может потребоваться переместить элемент в папку с другими отчетами и моделями этой группы пользователей. Необходимо выбрать существующую папку, для которой имеется разрешение на добавление данных.  
