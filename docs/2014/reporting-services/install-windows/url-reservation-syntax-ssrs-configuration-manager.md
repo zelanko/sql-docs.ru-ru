@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - URL reservations
@@ -13,12 +12,12 @@ ms.assetid: 30e4be2e-e65d-462c-895a-5a0a636d042f
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 885e8ffb9eaa02aae02db590c8d042dadb1f2ab0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e5b8cc62556749a310f8c11a5efcae32eafbd8ee
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63224921"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108610"
 ---
 # <a name="url-reservation-syntax--ssrs-configuration-manager"></a>Синтаксис резервирования URL-адресов (диспетчер конфигурации служб SSRS)
   В этом разделе описываются компоненты URL-адресов веб-службы сервера отчетов и диспетчера отчетов. Хранимое внутреннее представление URL-адреса имеет структуру, отличную от URL-адресов, вводимых в поле адреса окна браузера. Строка резервирования URL-адресов отображается в окне «Результаты» программы настройки служб Reporting Services и в файле конфигурации RSReportServer.config при настройке URL-адресов. Знание структуры определения URL-адреса может оказаться полезным при диагностике резервирования URL-адресов или при просмотре внутреннего резервирования URL-адресов сервера по запросу компонента HTTP.SYS.  

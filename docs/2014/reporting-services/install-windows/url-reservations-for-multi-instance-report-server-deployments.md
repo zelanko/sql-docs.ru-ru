@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - URL reservations
@@ -13,12 +12,12 @@ ms.assetid: f67c83c0-1f74-42bb-bfc1-e50c38152d3d
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ac6232b85990bb065d8188ede372e2b44cdd20c5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f49a13fa50254e4c485a228d506b49e14d190959
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63143261"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108621"
 ---
 # <a name="url-reservations-for-multi-instance-report-server-deployments--ssrs-configuration-manager"></a>Резервирование URL-адресов при развертывании сервера отчетов на нескольких экземплярах (диспетчер конфигурации служб SSRS)
   При установке нескольких экземпляров служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] на одном компьютере необходимо учесть необходимость резервирования URL-адресов для каждого экземпляра. Для каждого экземпляра веб-службе сервера отчетов и диспетчеру отчетов необходимо, по крайней мере, по одному зарезервированному URL-адресу. Все зарезервированные адреса должны быть уникальны в рамках HTTP.SYS.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - templates [Analysis Services]
@@ -18,12 +17,12 @@ ms.assetid: d00913b0-cd6d-4de0-a1e7-4ce86fcc078d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ccf355df8a26136a72b48c4b81a1953d84d90186
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 313fdd08234e9dd784d45c65d7ee23cd0a0a308c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62702244"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66076241"
 ---
 # <a name="create-an-analysis-services-project-ssdt"></a>Создание проекта служб Analysis Services (среда SSDT)
   Проект служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] можно определить либо с помощью шаблона проекта служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , либо с помощью мастера импорта баз данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , считывающего содержимое базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Если в настоящий момент в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]не загружено ни одно решение, при создании нового проекта служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] будет автоматически создано новое решение. В противном случае новый проект [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] будет добавлен в существующее решение. При разработке решений рекомендуется создавать отдельные проекты для разных типов данных приложений и использовать одно решение в том случае, если проекты взаимосвязаны. Например, можно создать одно решение с различными проектами для пакетов служб Integration Services, баз данных служб Analysis Services и отчетов служб Reporting Services, используемых одним и тем же бизнес-приложением.  

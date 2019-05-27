@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: d5619e9f-ec5b-4376-9b34-1f74de6fade7
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c4bbf82d1bea70659b839405141dc7194d99951e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ebc5ee51dd32cb999f0e6551bb87c36eda8865c7
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63164873"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109225"
 ---
 # <a name="enable-and-disable-rdl-sandboxing"></a>Включение и отключение «песочницы» для языка определения отчетов
   Функция «песочницы» для языка определения отчетов позволяет обнаруживать и ограничивать использование определенных типов ресурсов отдельными пользователями в среде с многочисленными пользователями, которые используют единственную веб-ферму серверов отчетов. Примером этого является сценарий услуг хост-сервера, в котором может поддерживаться единственная веб-ферма серверов отчетов, применяемая несколькими пользователями, а также, возможно, другими компаниями. Администратор сервера отчетов может включить эту функцию для выполнения следующих задач.  

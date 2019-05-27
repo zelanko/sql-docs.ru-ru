@@ -1,7 +1,7 @@
 ---
 title: Столбцы с именем | Документация Майкрософт
-ms.custom: ''
-ms.date: 03/01/2017
+ms.custom: fresh2019may
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -13,16 +13,18 @@ ms.assetid: c994e089-4cfc-4e9b-b7fc-e74f6014b51a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bb286cf87f2e0534a1e7df9d988e001fec8a5ee2
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: bb5e1789416ee134ce59fbc3ef107f1165ce76ad
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510021"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175700"
 ---
 # <a name="columns-with-a-name"></a>Столбцы с именем
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  Ниже приведены условия, при которых столбцы наборов строк с соответствующим именем сопоставляются с итоговым XML-документом с учетом регистра:  
+
+Ниже приведены условия, при которых столбцы наборов строк с соответствующим именем сопоставляются с итоговым XML-документом с учетом регистра:  
   
 -   имя столбца начинается с символа \@;  
   
@@ -37,20 +39,17 @@ ms.locfileid: "58510021"
 ## <a name="column-name-starts-with-an-at-sign-"></a>Имя столбца начинается с символа \@  
  Если имя столбца начинается с символа \@ и не содержит косую черту (/), создается атрибут элемента `row` с соответствующим значением столбца. Например, следующий запрос возвращает набор строк с двумя столбцами (\@PmId, Name). В итоговом XML-документе атрибут **PmId** добавляется к соответствующему элементу `row`, и ему присваивается значение столбца ProductModelID.  
   
-```  
-  
+```sql
 SELECT ProductModelID as "@PmId",  
        Name  
 FROM Production.ProductModel  
 WHERE ProductModelID=7  
-FOR XML PATH   
-go  
-  
+FOR XML PATH;
 ```  
   
  Результат:  
   
-```  
+```xml
 <row PmId="7">  
   <Name>HL Touring Frame</Name>  
 </row>  
@@ -58,13 +57,12 @@ go
   
  Обратите внимание, что на одном уровне атрибуты должны располагаться перед любыми другими типами узлов, например, перед узлами элементов и текстовыми узлами. Следующий запрос возвращает ошибку:  
   
-```  
+```sql
 SELECT Name,  
        ProductModelID as "@PmId"  
 FROM Production.ProductModel  
 WHERE ProductModelID=7  
-FOR XML PATH   
-go  
+FOR XML PATH;
 ```  
   
 ## <a name="column-name-does-not-start-with-an-at-sign-"></a>Имя столбца не начинается с символа \@  
@@ -72,14 +70,14 @@ go
   
  В результате следующего запроса указывается имя столбца. Дочерний элемент `result` добавляется к элементу `row`.  
   
-```  
+```sql
 SELECT 2+2 as result  
-for xml PATH  
+for xml PATH;
 ```  
   
  Результат:  
   
-```  
+```xml
 <row>  
   <result>4</result>  
 </row>  
@@ -87,22 +85,22 @@ for xml PATH
   
  Следующий запрос указывает имя столбца ManuWorkCenterInformation для XML-данных, возвращенных запросом XQuery, указанным по отношению к столбцу Instructions типа **xml** . Элемент `ManuWorkCenterInformation` добавляется в качестве дочернего к элементу `row`.  
   
-```  
-SELECT   
-       ProductModelID,  
-       Name,  
-       Instructions.query('declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
-                /MI:root/MI:Location   
-              ') as ManuWorkCenterInformation  
+```sql
+SELECT
+  ProductModelID,  
+  Name,  
+  Instructions.query(
+    'declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";
+     /MI:root/MI:Location
+    ') as ManuWorkCenterInformation  
 FROM Production.ProductModel  
 WHERE ProductModelID=7  
-FOR XML PATH   
-go  
+FOR XML PATH;
 ```  
   
  Результат:  
   
-```  
+```xml
 <row>  
   <ProductModelID>7</ProductModelID>  
   <Name>HL Touring Frame</Name>  
@@ -119,20 +117,20 @@ go
   
  Например, следующий запрос возвращает идентификатор работника и имя, представленное сложным элементом EmpName, который включает в себя имя, отчество и фамилию работника.  
   
-```  
+```sql
 SELECT EmployeeID "@EmpID",   
        FirstName  "EmpName/First",   
        MiddleName "EmpName/Middle",   
        LastName   "EmpName/Last"  
 FROM   HumanResources.Employee E, Person.Contact C  
-WHERE  E.EmployeeID = C.ContactID  
-AND    E.EmployeeID=1  
-FOR XML PATH  
+WHERE  E.EmployeeID = C.ContactID  AND
+       E.EmployeeID=1  
+FOR XML PATH;
 ```  
   
  Имена столбцов используются в качестве пути при построении XML-документа в режиме PATH. Имя столбца, содержащего значения идентификатора работника, начинается с символа \@. Поэтому атрибут **EmpID** добавляется к элементу `row`. Имена всех других столбцов содержат символ косой черты (/), являющийся признаком иерархии. В итоговом XML-документе будет присутствовать дочерний элемент `EmpName` внутри элемента `row`, а элемент `EmpName` будет, в свою очередь, содержать дочерние элементы `First`, `Middle` и `Last`.  
   
-```  
+```xml
 <row EmpID="1">  
   <EmpName>  
     <First>Gustavo</First>  
@@ -143,21 +141,21 @@ FOR XML PATH
   
  Отчество работника имеет значение NULL, которое по умолчанию сопоставляется с отсутствием элемента или атрибута. Если необходимо сформировать элементы для значений NULL, укажите директиву ELEMENTS с ключевым словом XSINIL, как показано в данном запросе.  
   
-```  
+```sql
 SELECT EmployeeID "@EmpID",   
        FirstName  "EmpName/First",   
        MiddleName "EmpName/Middle",   
        LastName   "EmpName/Last"  
 FROM   HumanResources.Employee E, Person.Contact C  
-WHERE  E.EmployeeID = C.ContactID  
-AND    E.EmployeeID=1  
-FOR XML PATH, ELEMENTS XSINIL  
+WHERE  E.EmployeeID = C.ContactID  AND
+       E.EmployeeID=1  
+FOR XML PATH, ELEMENTS XSINIL;
 ```  
   
  Результат:  
   
-```  
-<row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"   
+```xml
+<row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       EmpID="1">  
   <EmpName>  
     <First>Gustavo</First>  
@@ -171,7 +169,7 @@ FOR XML PATH, ELEMENTS XSINIL
   
  Следующий запрос кроме идентификатора и имени возвращает еще и адрес работника. В соответствии с путем, указанным в именах столбцов адресов, дочерний элемент `Address` добавляется к элементу `row`, а подробные сведения об адресе добавляются в качестве дочерних элементов к элементу `Address`.  
   
-```  
+```sql
 SELECT EmployeeID   "@EmpID",   
        FirstName    "EmpName/First",   
        MiddleName   "EmpName/Middle",   
@@ -179,16 +177,18 @@ SELECT EmployeeID   "@EmpID",
        AddressLine1 "Address/AddrLine1",  
        AddressLine2 "Address/AddrLIne2",  
        City         "Address/City"  
-FROM   HumanResources.Employee E, Person.Contact C, Person.Address A  
+FROM   HumanResources.Employee E,
+       Person.Contact C,
+       Person.Address A  
 WHERE  E.EmployeeID = C.ContactID  
 AND    E.AddressID = A.AddressID  
 AND    E.EmployeeID=1  
-FOR XML PATH  
+FOR XML PATH;
 ```  
   
  Результат:  
   
-```  
+```xml
 <row EmpID="1">  
   <EmpName>  
     <First>Gustavo</First>  
@@ -207,7 +207,7 @@ FOR XML PATH
 ## <a name="one-column-has-a-different-name"></a>Один из столбцов имеет другое имя  
  Если между столбцами встречается столбец с другим именем, группирование будет нарушено, как это показано в следующем измененном запросе. Добавляя столбцы с адресом между столбцами FirstName и MiddleName, данный запрос нарушает группирование столбцов FirstName, MiddleName и LastName, указанное в предыдущем запросе.  
   
-```  
+```sql
 SELECT EmployeeID "@EmpID",   
        FirstName "EmpName/First",   
        AddressLine1 "Address/AddrLine1",  
@@ -215,18 +215,20 @@ SELECT EmployeeID "@EmpID",
        City "Address/City",  
        MiddleName "EmpName/Middle",   
        LastName "EmpName/Last"  
-FROM   HumanResources.EmployeeAddress E, Person.Contact C, Person.Address A  
+FROM   HumanResources.EmployeeAddress E,
+       Person.Contact C,
+       Person.Address A  
 WHERE  E.EmployeeID = C.ContactID  
 AND    E.AddressID = A.AddressID  
 AND    E.EmployeeID=1  
-FOR XML PATH  
+FOR XML PATH;
 ```  
   
  В результате запрос создает два элемента `EmpName`. Первый элемент `EmpName` имеет дочерний элемент `FirstName`, а второй элемент `EmpName` имеет дочерние элементы `MiddleName` и `LastName`.  
   
  Результат:  
   
-```  
+```xml
 <row EmpID="1">  
   <EmpName>  
     <First>Gustavo</First>  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql11.asvs.ssmsimbi.RestoreFromPP.f1
@@ -13,12 +12,12 @@ ms.assetid: 232ac8ed-77fe-47d8-acd3-59bc2fdfdf48
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 21b3c477c87861d224d72a52dcce89ceacf7bb3a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f90ea08269e79e57c623af41fc2f0fbc09e2fb42
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62756566"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66066638"
 ---
 # <a name="restore-from-powerpivot"></a>Восстановление из PowerPivot
   Можно использовать функцию «Восстановление из PowerPivot» в SQL Server Management Studio для создания новой базы данных на основе табличной модели на экземпляре служб Analysis Services (выполняемых в табличном режиме) или восстановления в существующую базу данных из книги PowerPivot (XLSX).  

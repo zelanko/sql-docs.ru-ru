@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dsvdesigner.tablespane.f1
@@ -20,12 +19,12 @@ ms.assetid: 98307d04-6548-4d7d-9244-2371dd165249
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dc78ad1f8a1f49d1a42c5b2ded45a913cdd7e669
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: da7169cc95b768324e18f1ab5fd7b0a33615f99a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62701876"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66077470"
 ---
 # <a name="adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services"></a>Добавление или удаление таблиц или представлений в представлении источника данных (службы Analysis Services)
   После создания представления источников данных (DSV) в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]можно изменить его в конструкторе представлений источников данных, добавляя или удаляя таблицы и столбцы, в том числе из других источников данных.  

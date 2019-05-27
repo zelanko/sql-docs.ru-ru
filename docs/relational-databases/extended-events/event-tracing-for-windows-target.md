@@ -1,7 +1,7 @@
 ---
 title: Цель "Средство трассировки событий для Windows" | Документация Майкрософт
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -16,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d12e2afd2e2cf7e7558b832d97a986ad9c8ad943
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: 660244f23151be405bdcf47914c85730e6c5b823
+ms.sourcegitcommit: 209fa6dafe324f606c60dda3bb8df93bcf7af167
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58478119"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66198311"
 ---
 # <a name="event-tracing-for-windows-target"></a>Цель «Средство трассировки событий для Windows»
 
@@ -60,7 +60,8 @@ ms.locfileid: "58478119"
 |default_etw_session_logfile_size_mb|Любое целое число без знака. Это значение является необязательным.|Размер файла журнала для сеанса расширенных событий (в мегабайтах, МБ). По умолчанию установлено значение 20 МБ.|  
 |default_etw_session_buffer_size_kb|Любое целое число без знака. Это значение является необязательным.|Размер буфера в памяти (в килобайтах) для сеанса расширенных событий. Значение по умолчанию — 128 КБ.|  
 |retries|Любое целое число без знака.|Число попыток публикации события в подсистеме ETW до удаления события. Значение по умолчанию равно 0.|  
-  
+| &nbsp; | &nbsp; | &nbsp; |
+
  Конфигурация указанных параметров не обязательна. Цель ETW использует для них параметры по умолчанию.  
   
  Цель ETW отвечает за следующие действия.  
@@ -80,19 +81,22 @@ ms.locfileid: "58478119"
     > [!IMPORTANT]  
     >  После начала первого сеанса путь к файлу изменить нельзя.  
   
--   MOF-файлы находятся в папке: *\<ваш путь установки>* \Microsoft SQL Server\Shared. Дополнительные сведения см. в разделе [Формат управляющих объектов](https://go.microsoft.com/fwlink/?LinkId=92851) библиотеки MSDN.  
-  
+-   MOF-файлы находятся в папке: *\<ваш путь установки>* \Microsoft SQL Server\Shared. Дополнительные сведения см. в разделе [Формат управляющих объектов](https://go.microsoft.com/fwlink/?LinkId=92851) библиотеки MSDN.
+
+<!-- ?LinkId=92851  ==  https://docs.microsoft.com/windows/desktop/WmiSdk/managed-object-format--mof-
+-->
+
 ## <a name="adding-the-target-to-a-session"></a>Добавление цели к сеансу  
  Для добавления назначения счетчика событий в сеанс расширенных событий следует использовать одну из следующих инструкций при создании или изменении сеанса события:  
   
-```  
+```sql
 ADD TARGET package0.etw_classic_sync_target  
 ```  
   
  Дополнительные сведения о полном примере, который показывает, как использовать назначение трассировки событий, включая просмотр данных, см. в разделе [отслеживать активность системы с помощью расширенных событий](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Цели расширенных событий SQL Server](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)   
+ [Цели расширенных событий SQL Server](targets-for-extended-events-in-sql-server.md)   
  [sys.dm_xe_session_targets (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql.md)   
  [CREATE EVENT SESSION (Transact-SQL)](../../t-sql/statements/create-event-session-transact-sql.md)   
  [ALTER EVENT SESSION (Transact-SQL)](../../t-sql/statements/alter-event-session-transact-sql.md)  

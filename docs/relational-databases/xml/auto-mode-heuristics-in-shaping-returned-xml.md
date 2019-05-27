@@ -1,7 +1,7 @@
 ---
 title: Эвристические методы режима AUTO, используемые при формировании возвращаемого XML-кода | Документация Майкрософт
-ms.custom: ''
-ms.date: 03/01/2017
+ms.custom: fresh2019may
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -13,25 +13,28 @@ ms.assetid: 6c5cb6c1-2921-4ba1-8100-0bf8074f9103
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ed0035473bf90e2457aa0384b06da5569e2964db
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions
+ms.openlocfilehash: b0b366e4b154daa8d1422e25c6abb170323bfb58
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58512981"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175377"
 ---
 # <a name="auto-mode-heuristics-in-shaping-returned-xml"></a>Эвристические методы режима AUTO, используемые при формировании возвращаемого XML-кода
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  Режим AUTO определяет основанную на запросе структуру возвращаемого XML. При определении схемы вложения элементов применяемые в режиме AUTO эвристические процедуры сравнивают значения столбцов в соседних строках. Сравниваются столбцы всех типов, за исключением **ntext**, **text**, **image**и **xml**. Проводится также сравнение столбцов **(n)varchar(max)** и **varbinary(max)** .  
+
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+
+Режим AUTO определяет основанную на запросе структуру возвращаемого XML. При определении схемы вложения элементов применяемые в режиме AUTO эвристические процедуры сравнивают значения столбцов в соседних строках. Сравниваются столбцы всех типов, за исключением **ntext**, **text**, **image**и **xml**. Проводится также сравнение столбцов **(n)varchar(max)** и **varbinary(max)** .  
   
  В следующем примере иллюстрируются эвристики режима AUTO, определяющие структуру результирующего XML:  
   
-```  
+```sql
 SELECT T1.Id, T2.Id, T1.Name  
 FROM   T1, T2  
 WHERE ...  
-FOR XML AUTO  
-ORDER BY T1.Id  
+ORDER BY T1.Id
+FOR XML AUTO;
 ```  
   
  Для определения начала нового элемента <`T1`> сравниваются все значения столбцов таблицы T1, за исключением столбцов типов данных **ntext**, **text**, **image** и **xml**, если ключ таблицы Т1 не задан. Далее предположим, что столбец **Name** имеет тип данных **nvarchar(40)** и инструкция SELECT возвращает следующий набор строк:  
@@ -48,7 +51,7 @@ T1.Id  T1.Name  T2.Id
   
  Далее показан возвращенный XML:  
   
-```  
+```xml
 <T1 Id="1" Name="Andrew">  
     <T2 Id="2" />  
     <T2 Id="3" />  
@@ -60,7 +63,7 @@ T1.Id  T1.Name  T2.Id
   
  Теперь предположим, что столбец Name имеет тип данных **text** . Эвристики режима AUTO не выполняют сравнения для этого типа. Вместо этого в них предполагается, что значения различны. Это приводит к формированию приведенного ниже XML:  
   
-```  
+```xml
 <T1 Id="1" Name="Andrew" >  
   <T2 Id="2" />  
 </T1>  
