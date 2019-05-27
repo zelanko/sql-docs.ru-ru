@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: a1c6272d-e514-456b-9995-b73fec0112a2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 050be457b1b7915e4354e8a0edf2fe79fabf8d67
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fe356d15c0602f33ec9c59ee463a69783686899b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62756819"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66066150"
 ---
 # <a name="toolbar-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>Панель инструментов (вкладка «Браузер», конструктор кубов) (службы Analysis Services — многомерные данные)
   Используйте функции **панели инструментов** в конструкторе кубов для выполнения основных операций при конструировании и просмотре кубов и их объектов, а также при создании запросов многомерных выражений. Операции, доступные и во время разработки, и при просмотре запроса, включают установку пользовательского контекста, обработку объектов и выбор языка по умолчанию.  

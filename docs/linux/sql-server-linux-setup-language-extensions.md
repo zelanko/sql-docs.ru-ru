@@ -1,5 +1,5 @@
 ---
-title: Установка расширения машинного обучения (Java) для SQL Server в Linux | Документация Майкрософт
+title: Установка расширения языка (Java) для SQL Server в Linux | Документация Майкрософт
 description: Сведения об установке расширения языка (Java) для SQL Server в Red Hat, Ubuntu и SUSE.
 author: dphansen
 ms.author: davidph
@@ -10,20 +10,20 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6d25739fb4f2ef104ba86c8e9124162e67fd8553
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: b694cde8784a1607c85ed9ab7dfcc4d770a6d938
+ms.sourcegitcommit: 3b266dc0fdf1431fdca6b2ad34ae5fd38abe9f69
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65995082"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66186803"
 ---
 # <a name="install-sql-server-2019-language-extensions-java-on-linux"></a>Установка расширения языка SQL Server 2019 г. (Java) в Linux
 
-[Службы машинного обучения SQL Server](../advanced-analytics/what-is-sql-server-machine-learning.md) работает в операционных системах Linux, начиная с этого выпуска предварительной версии SQL Server 2019. Выполните действия, описанные в этой статье, чтобы установить расширение языка Java. 
-
 Расширения языка являются надстройку к компоненту database engine. Несмотря на то, что вы можете [одновременно установить компонент database engine и расширения языка](#install-all), это лучший способ сначала установите и настройте компонент SQL Server database engine, устранить все проблемы перед добавлением дополнительные компоненты. 
 
-Расположение пакета расширения Java доступны в репозитории исходного SQL Server Linux. Если вы уже настроили репозиториях для установки ядра базы данных, вы можете запустить **mssql-server расширяемости java** упаковать команды установки, используя регистрацию репозитория.
+Выполните действия, описанные в этой статье, чтобы установить расширение языка Java.
+
+Пакет расширений Java находится в репозитории исходного SQL Server Linux. Если вы уже настроили репозиториях для установки ядра базы данных, вы можете запустить **mssql-server расширяемости java** упаковать команды установки, используя регистрацию репозитория.
 
 Расширения языка также поддерживается в контейнерах Linux. Мы не предоставляем готовые контейнеры с помощью расширений языка, но можно создать один из контейнеров SQL Server, с помощью [пример шаблона доступен на сайте GitHub](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices).
 
@@ -185,6 +185,8 @@ sudo zypper install mssql-server-extensibility-java
 
 6. Перезапустите `mssql-launchpadd` службы снова.
 
+7. Для каждой базы данных, необходимо использовать расширения языка в, необходимо зарегистрировать внешний язык [создать внешний язык](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql).
+
 ## <a name="verify-installation"></a>Проверка установки
 
 Функция интеграции Java не поддерживает библиотеки, но можно запускать `grep -r JRE_HOME /etc` чтобы подтвердить создание переменной среды JAVA_HOME.
@@ -195,7 +197,7 @@ sudo zypper install mssql-server-extensibility-java
 
 ## <a name="full-install-of-sql-server-and-language-extensions"></a>Полная установка SQL Server и расширения языка
 
-Можно установить и настроить компонент database engine и служб машинного обучения в одну процедуру, добавив Java пакеты и параметры в команду, которая устанавливает ядро СУБД.
+Можно установить и настроить компонент database engine и расширения языка в одну процедуру путем добавления пакетов Java и параметров в команду, которая устанавливает ядро СУБД.
 
 1. Укажите командную строку, которая включает в себя компонент database engine, а также возможности расширения языка.
 
@@ -235,7 +237,7 @@ sudo zypper install mssql-server-extensibility-java
 
 #### <a name="download-site"></a>Сайт загрузки
 
-Вы можете скачать пакеты из [ https://packages.microsoft.com/ ](https://packages.microsoft.com/). Все пакеты для Java размещены совместно с пакет ядра СУБД. 
+Вы можете скачать пакеты из [ https://packages.microsoft.com/ ](https://packages.microsoft.com/). Все пакеты для Java, являющийся пакет ядра СУБД. 
 
 #### <a name="redhat7-paths"></a>Пути RedHat/7
 

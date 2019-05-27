@@ -13,20 +13,20 @@ ms.assetid: bbcb6f9e-a51b-4775-9795-947c9d6d758f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ba689d2135ce7ff2db2ad484f55ec0eb2035aafd
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 2d2accfbc2c2ca34150ffe0db503dc7f4bf35b72
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510871"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175406"
 ---
-# <a name="example-specifying-the-elementxsinil-directive"></a>Пример Задание директивы ELEMENTXSINIL
+# <a name="example-specifying-the-elementxsinil-directive"></a>Пример Определение директивы ELEMENTXSINIL
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   При указании директивы ELEMENT для извлечения элементного XML, если столбец имеет значение NULL, соответствующий элемент не будет сформирован при режиме EXPLICIT. Можно указать директиву ELEMENTXSINIL, чтобы создать элементы со значениями NULL для элементов, у которых атрибут **xsi:nil** установлен в значение TRUE.  
   
  Следующий запрос создает XML, включающий адрес работника. Для столбцов `AddressLine2` и `City` в именах столбцов указана директива `ELEMENTXSINIL` . Это позволяет создать элемент для значений NULL в столбцах `AddressLine2` и `City` набора строк.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT 1    as Tag,  
@@ -60,24 +60,19 @@ FOR XML EXPLICIT;
 ```  
   
  Частичный результат:  
-  
- `<Employee xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"`  
-  
- `EmpID="1" AddressID="249">`  
-  
- `<Address AddressID="249">`  
-  
- `<AddressLine1>4350 Minute Dr.</AddressLine1>`  
-  
- `<AddressLine2 xsi:nil="true" />`  
-  
- `<City>Minneapolis</City>`  
-  
- `</Address>`  
-  
- `</Employee>`  
-  
- `...`  
+
+```xml
+<Employee xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          EmpID="1"
+          AddressID="249">
+  <Address AddressID="249">
+    <AddressLine1>4350 Minute Dr.</AddressLine1>
+    <AddressLine2 xsi:nil="true" />
+    <City>Minneapolis</City>
+  </Address>
+</Employee>
+...
+```
   
 ## <a name="see-also"></a>См. также:  
  [Использование режима EXPLICIT совместно с предложением FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)  
