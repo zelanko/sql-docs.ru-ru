@@ -14,14 +14,18 @@ ms.assetid: 2e22efa3-eeb1-4984-a95c-9bccdcf98892
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 67f493fc040e090294afa9671123613f5acac50a
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 2c6253baf56d869eb5748f07a9648a7e8e57ccb8
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274078"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725342"
 ---
 # <a name="gt-greater-than-ssis-expression"></a>&gt; (больше) (выражение служб SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Выполняет сравнение с целью определения, является ли первое выражение больше второго. Перед проведением сравнения средство оценки выражений автоматически преобразует большинство типов данных.  
   
 > [!NOTE]  

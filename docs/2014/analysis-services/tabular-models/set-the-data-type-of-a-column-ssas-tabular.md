@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 34e2d508-7b64-4503-a4f0-c6c6ad5f8a44
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 82b2d4a687c490ed1909a27fc55fdece9cc3662c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f9240218b05af2c642ff374cb7e14d2a6c5dd616
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62794366"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66066612"
 ---
 # <a name="set-the-data-type-of-a-column-ssas-tabular"></a>Выбор типа данных столбца (табличные службы SSAS)
   При импорте данных или вставке данных в модель конструктор модели автоматически обнаруживает и применяет типы данных. После добавления данных в модель можно вручную изменить тип данных столбца, чтобы изменить способ хранения данных. Если необходимо только изменить формат отображения данных, не изменяя способ их хранения, так и сделайте.  
@@ -51,7 +50,7 @@ ms.locfileid: "62794366"
   
 |Типы данных модели|  
 |----------------------|  
-|Текст<br /><br /> Десятичное число<br /><br /> Whole Number<br /><br /> CURRENCY<br /><br /> TRUE/FALSE<br /><br /> Дата|  
+|Текст<br /><br /> Десятичное число<br /><br /> Whole Number<br /><br /> Currency<br /><br /> TRUE/FALSE<br /><br /> Дата|  
   
  Если оказывается, что данные имеют неправильный тип данных или нужен другой тип данных, существует несколько возможностей.  
   

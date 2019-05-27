@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - PARSE function
 ms.assetid: 6a2dbf10-f692-471b-9458-24d246963049
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fd5affbbd6a7cee83e1b14ae1e0b42952e8f2965
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ec595bfcbaa0472c1f8b51c9ca8fd07119041024
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824588"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65943507"
 ---
 # <a name="parse-transact-sql"></a>PARSE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -75,9 +75,9 @@ PARSE ( string_value AS data_type [ USING culture ] )
   
 |Категория|Тип|Тип .NET Framework|Используемые стили|  
 |--------------|----------|-------------------------|-----------------|  
-|Числовой|bigint|Int64|NumberStyles.Number|  
+|Числовой|BIGINT|Int64|NumberStyles.Number|  
 |Числовой|ssNoversion|Int32|NumberStyles.Number|  
-|Числовой|SMALLINT|Int16|NumberStyles.Number|  
+|Числовой|smallint|Int16|NumberStyles.Number|  
 |Числовой|TINYINT|Byte|NumberStyles.Number|  
 |Числовой|Decimal|Decimal|NumberStyles.Number|  
 |Числовой|NUMERIC|Decimal|NumberStyles.Number|  
@@ -99,7 +99,7 @@ PARSE ( string_value AS data_type [ USING culture ] )
 |Полное имя|Псевдоним|LCID|Конкретная культура|  
 |---------------|-----------|----------|----------------------|  
 |us_english|Английский|1033|en-US|  
-|Deutsch|German|1031|de-DE|  
+|Deutsch|Немецкий|1031|de-DE|  
 |Français|Французский|1036|fr-FR|  
 |日本語|Японский|1041|ja-JP|  
 |Dansk|Danish|1030|da-DK|  

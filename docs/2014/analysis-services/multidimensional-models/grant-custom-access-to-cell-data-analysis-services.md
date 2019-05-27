@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.roledesignerdialog.celldata.f1
@@ -20,12 +19,12 @@ ms.assetid: 3b13a4ae-f3df-4523-bd30-b3fdf71e95cf
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fc9d003fc4c1f3b3cd32e8f23fe635d56e48555e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5db12886384089afe87ffb5fa659c34b09a9fe23
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62726725"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66074981"
 ---
 # <a name="grant-custom-access-to-cell-data-analysis-services"></a>Предоставление настраиваемого доступа к данным ячейки (службы Analysis Services)
   Настройка безопасности ячеек используется для предоставления доступа или отказа в доступе с целью распределения данных в кубе. Следующая иллюстрация демонстрирует комбинацию разрешенных и запрещенных мер в Сводной Таблице при подключении в качестве пользователя, роль которого предоставляет доступ только к определенным мерам. В этом примере используемой роли доступны только меры **Объем продаж торгового посредника** и **Совокупная стоимость продуктов торгового посредника** . Все остальные меры безоговорочно запрещены (шаги, используемые для достижения данного результата, приведены ниже в следующем разделе, Предоставление доступа к специальным мерам).  

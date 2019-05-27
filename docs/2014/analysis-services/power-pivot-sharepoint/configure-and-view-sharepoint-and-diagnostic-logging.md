@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 85f62d29-cdc6-45b3-be1f-ff1182939858
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6196466246529521f356c193c3e8cc0ee688c197
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2f05edb30344b63781a89540ade8de4743bb715e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62743380"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66071847"
 ---
 # <a name="configure-and-view-sharepoint-log-files--and-diagnostic-logging-powerpivot-for-sharepoint"></a>Настройка и просмотр файлов журнала SharePoint и журнала диагностики (PowerPivot для SharePoint)
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] регистрируются в файлах журнала SharePoint. Сведения, приведенные в этом разделе, помогут настроить уровни ведения журнала и просмотреть данные файла журнала. Можно выбирать, какие события сервера [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] заносятся в файл журнала. а также определять степень серьезности регистрируемых сообщений. Дополнительные сведения см. в разделе [Настройка сбора данных об использовании &#40;PowerPivot для SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
@@ -117,7 +116,7 @@ ms.locfileid: "62743380"
 #### <a name="entries-for-powerpivot-services"></a>Записи для служб PowerPivot  
  В следующей таблице описываются записи для операций сервера [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , которые, скорее всего, будут находиться в файле журнала SharePoint.  
   
-|Процесс|Область|Категория|Level|Сообщение|Сведения|  
+|Процесс|Область|Категория|Level|`Message`|Сведения|  
 |-------------|----------|--------------|-----------|-------------|-------------|  
 |w3wp.exe|Служба PowerPivot|Использование|Подробный|Отсутствует статистика по текущему запросу, данные не заносятся в журнал.|Отчеты службы с заранее определенными интервалами запрашивают статистику ответов в виде события использования, отправляемого в систему сбора данных об использовании. Данное сообщение показывает, что отсутствует статистика запросов для передачи.|  
 |w3wp.exe|Служба PowerPivot|Клиентский веб-интерфейс|Подробный|Начинается поиск сервера приложений для источника данных =\<*путь*>|Когда служба [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] получает запрос на соединение, она определяет доступный [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] для обработки запроса. Если в ферму входит только один сервер, то локальный сервер принимает запрос во всех случаях.|  

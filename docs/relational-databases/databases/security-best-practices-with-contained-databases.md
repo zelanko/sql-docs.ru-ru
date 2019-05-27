@@ -4,20 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - contained database, threats
 ms.assetid: 026ca5fc-95da-46b6-b882-fa20f765b51d
+author: VanMSFT
 ms.author: vanto
+ms.reviewer: aliceku
 manager: craigg
-ms.openlocfilehash: 0ec072bae284fad63cea677830bad307d9961f4b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0a26cf3fa31d7e228b7d74f3c6a68bc5925fc02a
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512243"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938186"
 ---
 # <a name="security-best-practices-with-contained-databases"></a>Рекомендации по обеспечению безопасности автономных баз данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +57,7 @@ ALTER DATABASE DB1 SET TRUSTWORTHY ON;
 ### <a name="creating-a-user-that-duplicates-a-login"></a>Создание пользователя с повторяющимся именем входа  
  Если при создании пользователя автономной базы данных с паролем в качестве имени пользователя было использовано имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и пользователь с именем входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в запросе на подключение указывает автономную базу данных в качестве исходного каталога, то пользователь с именем входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подключиться не сможет. Соединение будет оцениваться как пользователь (участник) автономной базы данных с паролем автономной базы данных, а не пользователь на основе имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Это может вызвать намеренный или случайный отказ в обслуживании для имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   Согласно рекомендациям, члены предопределенной роли сервера **sysadmin** должны всегда рассматривать соединение без использования параметра исходного каталога. Это вызывает подключение имени входа к базе данных master и предотвращает попытки владельца базы данных неправильно использовать попытку входа. Затем администратор может выполнить переключение на автономную базу данных с помощью инструкции **USE**_\<база данных>_. Можно также установить в качестве базы данных по умолчанию автономную базу данных, которая выполняет вход в базу данных **master**, а затем переносит вход на автономную базу данных.  
+-   Согласно рекомендациям, члены предопределенной роли сервера **sysadmin** должны всегда рассматривать соединение без использования параметра исходного каталога. Это вызывает подключение имени входа к базе данных master и предотвращает попытки владельца базы данных неправильно использовать попытку входа. Затем администратор может выполнить переключение на автономную базу данных с помощью инструкции **USE** _\<база данных>_ . Можно также установить в качестве базы данных по умолчанию автономную базу данных, которая выполняет вход в базу данных **master**, а затем переносит вход на автономную базу данных.  
   
 -   Рекомендуется не создавать пользователей автономной базы данных с паролями, имена которых совпадают с именами входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   

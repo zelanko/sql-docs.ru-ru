@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.advancedrestoresettings.f1
@@ -13,12 +12,12 @@ ms.assetid: a03bb7e1-efaf-47c8-b0ee-f3e4438311cb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7677776bb1adf21d3234f770a9e2941edfa70ed0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1ca3f12ff53c4291d8bbe7c8eb97ce8e47172ea3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748346"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070383"
 ---
 # <a name="remote-partitions---advanced-settings-dialog-box-analysis-services---multidimensional-data"></a>Удаленные секции — диалоговое окно «Дополнительные параметры» (службы Analysis Services — многомерные данные)
   Используйте диалоговое окно **Удаленные секции — дополнительные настройки** в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], чтобы изменить дополнительные параметры, такие как строка соединения источника данных, представляющего удаленную базу данных служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], обслуживающую удаленные секции, при восстановлении удаленных секций из удаленных файлов резервных копий на базе данных служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] с помощью диалогового окна **Восстановление базы данных**. Диалоговое окно **Удаленные секции — дополнительные параметры** можно открыть на странице **Секции** диалогового окна **Восстановление базы данных** , нажав кнопку с многоточием (**...**) после выбора параметра **Восстановить удаленные секции** .  

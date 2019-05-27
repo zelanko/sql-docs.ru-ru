@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - PriorityRatio property
@@ -18,12 +17,12 @@ ms.assetid: e2697bb6-6d3f-4621-b9fd-575ac39c2185
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 384d1cd437947e23f571cf30b6ec7fad84704942
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1fe324da14460d69d6930bf9d398a50e816f676f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62746946"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66068838"
 ---
 # <a name="thread-pool-properties"></a>Свойства пула потоков
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] использует многопоточность во многих операциях, повышая общую производительность сервера за счет параллельного выполнения нескольких заданий. Чтобы эффективнее управлять потоками, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] использует пулы потоков для предварительного выделения ресурсов и обеспечения доступности потоков для последующих заданий.  

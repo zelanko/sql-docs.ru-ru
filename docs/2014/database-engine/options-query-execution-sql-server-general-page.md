@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryExecution.SqlServer.SqlExecutionGeneral
@@ -13,12 +12,12 @@ ms.assetid: 3f8d59bc-3f97-4e5d-8b86-5ac670d20780
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 947412d7a4d0fe27af7975919bddb3107007e801
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 83c0d1ad4d63d361754c5e2183081c30c7c51f2b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62851439"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66089984"
 ---
 # <a name="options-query-execution-sql-server-general-page"></a>Параметры (запроса выполнения SQL Server — "Общие")
   Используйте эту страницу, чтобы задать параметры для запросов служб [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Изменения этих параметров применяются только к новым запросам [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Для изменения параметров текущего запроса выберите пункт **Параметры запроса** в меню **Запрос** или щелкните правой кнопкой мыши в окне запроса [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и выберите пункт **Параметры запроса**.  

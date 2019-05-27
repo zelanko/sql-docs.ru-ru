@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - sql12.ins.instwizard.reportserverinstoptions.f1
@@ -17,12 +16,12 @@ ms.assetid: e4561f6c-bc7f-467e-821a-cde8e5cd7391
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 1819fe94f3fac39d1697f2d4ee08738020e57d17
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 67c1cf99f536b7cc6de0cef3633af19ae88014a5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63058140"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66092588"
 ---
 # <a name="reporting-services-configuration-options-ssrs"></a>параметры конфигурации служб Reporting Services (SSRS)
   Для задания параметров, определяющих способ установки и настройки сервера отчетов, служит страница **Настройка служб Reporting Services** мастера установки [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Доступность того или иного параметра установки зависит от того, какие параметры были выбраны на странице **Выбор компонентов** , а также от того, устанавливается ли одновременно с сервером отчетов также и локальный экземпляр компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] .  

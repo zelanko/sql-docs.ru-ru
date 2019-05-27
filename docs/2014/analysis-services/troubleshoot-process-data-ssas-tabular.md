@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 678f523c-e181-4456-9a54-7b7bf044b8d2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e07f6674df80b16abad45a6fece9aad582ec585d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f76d67d5e44fc700d4b889840ef2dcc07a0bfde0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62756269"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66065770"
 ---
 # <a name="troubleshoot-process-data-ssas-tabular"></a>Устранение неполадок в данных процесса (табличные службы SSAS)
   В этом разделе содержатся сведения об обработке (обновлении) данных модели при создании модели с помощью [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. В этом разделе не представлены сведения об обработке данных в моделях, развернутых на экземпляре сервера служб Analysis Services. Дополнительные сведения см. в статье [Создание скриптов для административных задач в службах Analysis Services](script-administrative-tasks-in-analysis-services.md).  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], continuous columns
@@ -19,12 +18,12 @@ ms.assetid: a77c16cd-1cd0-4fc5-afeb-d1dab30d1e25
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b05aec565feb655f9c66df928656ecef4bc675f1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 85767ce54991950e75b39bf909d6d0ff3cb2cd8c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62689479"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66085981"
 ---
 # <a name="browse-a-model-using-the-microsoft-time-series-viewer"></a>Просмотр модели с помощью средства просмотра временных рядов (Майкрософт)
   В средстве просмотра временных рядов [!INCLUDE[msCoName](../../includes/msconame-md.md)] в службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] отображаются модели интеллектуального анализа данных, построенные с помощью алгоритма временных рядов [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Алгоритм временных рядов [!INCLUDE[msCoName](../../includes/msconame-md.md)] представляет собой алгоритм регрессии, который создает модели интеллектуального анализа данных для прогнозирования столбцов с непрерывными данными, таких, как данные о продажах продукта, в сценарии прогнозирования. Эти модели временных рядов могут включать информацию, основанную на других алгоритмах:  

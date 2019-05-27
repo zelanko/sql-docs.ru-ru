@@ -31,14 +31,18 @@ ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 981d659d05517b1e1b54244cbea22d52ccf964f2
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 79afc8387a98df72ca2e60d1f97703097fba90e5
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271317"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727710"
 ---
 # <a name="foreach-loop-container"></a>Контейнер «цикл по каждому элементу»
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Контейнер «цикл по каждому элементу» определяет повторяющийся поток управления в пакете. Реализация цикла схожа с циклической структурой **Foreach** в языках программирования. Организация цикла в пакете происходит с помощью перечислителя Foreach.  Контейнер «цикл по каждому элементу» повторяет операции потока управления для каждого члена заданного перечислителя.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] доступны следующие типы перечислителей:  
@@ -416,7 +420,7 @@ ms.locfileid: "58271317"
  **Соединение**  
  Выберите существующий диспетчер подключения файлов ADO.NET или нажмите кнопку \<**Создать соединение...**>, чтобы создать его.  
   
- См. также: подробные сведения о [диспетчере подключений ADO.NET](../../integration-services/connection-manager/ado-net-connection-manager.md) и о [настройке диспетчера подключений ADO.NET](../../integration-services/connection-manager/configure-ado-net-connection-manager.md).  
+ См. также подробные сведения о [диспетчере подключений ADO.NET](../../integration-services/connection-manager/ado-net-connection-manager.md) и о [настройке диспетчера подключений ADO.NET](../../integration-services/connection-manager/configure-ado-net-connection-manager.md).  
   
  **Перечислить**  
  Укажите объект SMO для перечисления.  
@@ -458,7 +462,7 @@ ms.locfileid: "58271317"
  **Диспетчер подключений службы хранилища Azure**  
  Выберите существующий диспетчер подключений службы хранилища Azure или создайте новый, который ссылается на учетную запись хранения Azure.  
   
- См. также: подробные сведения о [диспетчере подключений службы хранилища Azure](../../integration-services/connection-manager/azure-storage-connection-manager.md).  
+ См. также подробные сведения о [диспетчере подключений службы хранилища Azure](../../integration-services/connection-manager/azure-storage-connection-manager.md).  
   
  **Имя контейнера больших двоичных объектов**  
  Укажите имя контейнера больших двоичных объектов, который содержит перечисляемые файлы больших двоичных объектов.

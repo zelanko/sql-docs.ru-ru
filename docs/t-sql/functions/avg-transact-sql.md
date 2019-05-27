@@ -19,16 +19,16 @@ helpviewer_keywords:
 - values [SQL Server], average
 - average values
 ms.assetid: 4534b705-d946-441b-9b5d-5fbe561c9131
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aed42e4ace43066db77670e94c4ec37457634f0d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9df4e39b1d0689294c597053f3cdbfac55f76b75
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735482"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65945876"
 ---
 # <a name="avg-transact-sql"></a>AVG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,7 +54,7 @@ DISTINCT
 *expression*  
 [Выражение](../../t-sql/language-elements/expressions-transact-sql.md) категории точного числового или приблизительного числового типа данных, за исключением типа данных **bit**. Агрегатные функции и вложенные запросы не допускаются.
   
-OVER **(** [ *partition_by_clause* ] _order\_by\_clause_**)**  
+OVER **(** [ *partition_by_clause* ] _order\_by\_clause_ **)**  
 *partition_by_clause* делит результирующий набор, полученный с помощью предложения FROM, на секции, к которым применяется функция. Если этот параметр не указан, функция обрабатывает все строки результирующего набора запроса как отдельные группы. *order_by_clause* определяет логический порядок, в котором выполняется операция. Аргумент *order_by_clause* является обязательным. Дополнительные сведения см. в статье [Предложение OVER (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md).
   
 ## <a name="return-types"></a>Типы возвращаемых данных
@@ -66,7 +66,7 @@ OVER **(** [ *partition_by_clause* ] _order\_by\_clause_**)**
 |**smallint**|**int**|  
 |**ssNoversion**|**int**|  
 |**bigint**|**bigint**|  
-|Категория **decimal** (p, s)|**decimal(38, s)**, деленное на **decimal(10, 0)**|  
+|Категория **decimal** (p, s)|**decimal(38, s)** , деленное на **decimal(10, 0)**|  
 |Категории **money** и **smallmoney**|**money**|  
 |Категории **float** и **real**|**float**|  
   

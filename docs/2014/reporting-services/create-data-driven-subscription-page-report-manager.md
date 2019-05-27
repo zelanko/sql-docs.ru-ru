@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 814b4653-572a-48c7-847f-b310ba0f3046
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 625afedabdb376f913d3353e2bda343bba66e3e1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 130027d60f5458b451d4f853a79228510c5e7d66
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63265952"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109617"
 ---
 # <a name="create-data-driven-subscription-page-report-manager"></a>Страница «Создание управляемой данными подписки» (диспетчер отчетов)
   Страницы «Создание управляемой данными подписки» позволяют создавать и изменять подписки, при каждом запуске которых сведения о подписке запрашиваются в базе данных подписчика. В управляемых данными подписках результаты запросов используются для определения получателей подписки, параметров доставки и значений параметров отчета. Во время выполнения сервер отчетов запускает запрос для получения значений, используемых в настройках подписки. При помощи страниц «Создание управляемой данными подписки» можно определить запрос и назначить параметрам подписки значения из запросов. Значения и параметры, указываемые для управляемой данными подписки, разделены между несколькими страницами, подобно мастеру. Всего имеется семь страниц.  

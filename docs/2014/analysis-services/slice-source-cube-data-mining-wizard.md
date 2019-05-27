@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.slicesourcecube.f1
@@ -13,12 +12,12 @@ ms.assetid: 16485608-d3b9-49ee-8baa-948038cdd7ec
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c68ec29c2461cb7ffddfdbd2792e1a1a191076b2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bcb156d5c0a3c1332e748878ddebda1772b80696
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62746467"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66068598"
 ---
 # <a name="slice-source-cube-data-mining-wizard"></a>Срез исходного куба (мастер интеллектуального анализа данных)
   Можно использовать диалоговое окно **Срез исходного куба** для ограничения данных, используемых при обучении модели. Обычно куб содержит данные, относящиеся к разным измерениям и атрибутам, такие как все магазины, все регионы и все товары. Не имеет смысла обучать модель на неограниченных сочетаниях атрибутов, поэтому следует использовать это диалоговое окно в целях выбора конкретного набора для использования в обучении модели.  

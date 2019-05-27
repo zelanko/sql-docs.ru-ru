@@ -20,16 +20,16 @@ helpviewer_keywords:
 - OLE DB data sources [SQL Server]
 - ad hoc connection information
 ms.assetid: 5510b846-9cde-4687-8798-be9a273aad31
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 6a8daefea37ba33264ca6fa4498f89201abeb0d0
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: df3ae48887370bc7b0339b86e32c31b9ce6d360b
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51571393"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65944886"
 ---
 # <a name="opendatasource-transact-sql"></a>OPENDATASOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ OPENDATASOURCE ( provider_name, init_string )
  Имя, зарегистрированное как PROGID имя поставщика OLE DB, используемое для доступа к источнику данных. Аргумент *provider_name* имеет тип данных **char** и не имеет значения по умолчанию.  
   
  *init_string*  
- Строка подключения, передаваемая в интерфейс IDataInitialize поставщика назначения. Синтаксис строки поставщика основан на парах "ключевое слово — значение", разделенных точкой с запятой, например: **"**_ключевое_слово1_=_значение_ **;** _ключевое_слово2_=_значение_**"**.  
+ Строка подключения, передаваемая в интерфейс IDataInitialize поставщика назначения. Синтаксис строки поставщика основан на парах "ключевое слово — значение", разделенных точкой с запятой, например: **"** _ключевое_слово1_=_значение_ **;** _ключевое_слово2_=_значение_ **"** .  
   
  Описание конкретных пар «ключевое_слово-значение», поддерживаемых поставщиком, см. в пакете [!INCLUDE[msCoName](../../includes/msconame-md.md)] Data Access SDK. Данная документация определяет основной синтаксис. В приведенной ниже таблице представлены наиболее часто используемые ключевые слова в аргументе *init_string*.  
   

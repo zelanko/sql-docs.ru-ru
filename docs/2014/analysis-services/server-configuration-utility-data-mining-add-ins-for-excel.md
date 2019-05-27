@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 28435f86-5cec-4a1e-9b7d-b2069c1ddddb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8e7a40b0cbcab787b6aa29abaa828aedcce8f5c6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bdc8434673d9220f22d31f1736bd67012653dc88
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62746806"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66069072"
 ---
 # <a name="server-configuration-utility-data-mining-add-ins-for-excel"></a>Средство настройки сервера (надстройки интеллектуального анализа данных для Excel)
   При установке надстроек интеллектуального анализа данных для Excel средство настройки сервера также устанавливается и будут выполнены при первом открытии надстроек. В этом разделе описывается использование служебной программы для подключения к экземпляру [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] и настройка базы данных для работы с моделями интеллектуального анализа данных.  

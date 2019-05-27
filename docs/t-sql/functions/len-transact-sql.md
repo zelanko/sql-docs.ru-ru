@@ -17,16 +17,16 @@ helpviewer_keywords:
 - characters [SQL Server], number of
 - number of characters
 ms.assetid: fa20fee4-884d-4301-891a-c03e901345ae
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3a49f657808878dabbb737112c0e45e04a464365
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3c3a4b7c9685b11517ce97ebcce64d25f069f1a9
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666812"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948662"
 ---
 # <a name="len-transact-sql"></a>LEN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,7 +49,7 @@ LEN ( string_expression )
  Оцениваемое строковое [выражение](../../t-sql/language-elements/expressions-transact-sql.md). Аргумент *string_expression* может быть константой, переменной или столбцом символьных или двоичных данных.  
   
 ## <a name="return-types"></a>Типы возвращаемых данных  
- **bigint**, если *expression* имеет тип данных **varchar(max)**, **nvarchar(max)** или **varbinary(max)**; в противном случае **int**.  
+ **bigint**, если *expression* имеет тип данных **varchar(max)** , **nvarchar(max)** или **varbinary(max)** ; в противном случае **int**.  
   
  Если используются параметры сортировки SC, то возвращаемое целое значение рассматривает суррогатные пары Юникода UTF-16 как один символ. Дополнительные сведения см. в статье [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
   

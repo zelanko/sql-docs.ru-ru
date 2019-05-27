@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - testing mining models
@@ -16,12 +15,12 @@ ms.assetid: 5798fa48-ef3c-4e97-a17c-38274970fccd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6e4cf182d303d2fc671b5b6003483781e2d3a4aa
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 34aefc2895057c499e54c572340ca63dc28ed68f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62733479"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66082736"
 ---
 # <a name="training-and-testing-data-sets"></a>Обучающие и проверочные наборы данных
   Разделение данных на обучающие и проверочные наборы является важной частью оценки моделей интеллектуального анализа данных. Обычно при разделении набора данных на обучающий и проверочный наборы большая часть данных используется для обучения, а меньшая — для проверки. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] выполняют случайную выборку данных, чтобы убедиться в том, что проверочный и обучающий наборы похожи. Использование одинаковых данных для обучения и проверки позволяет свести к минимуму влияние несоответствия данных и лучше понять характеристики модели.  

@@ -11,14 +11,18 @@ ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 13978fee9b5dca8c7e946d4b7b01f52db37612e0
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 72bdab9edf0dc920ed5e8b5801cbdec4868a047a
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282988"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65720136"
 ---
 # <a name="dtexec-utility"></a>Программа dtexec
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Программа командной строки **dtexec** используется для настройки и выполнения пакетов служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Служебная программа **dtexec** обеспечивает доступ ко всем функциям настройки и выполнения пакетов, таким как параметры, подключения, свойства, переменные, средства ведения журналов и индикаторы выполнения. Служебная программа **dtexec** позволяет загружать пакеты из следующих источников: сервер [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , ISPAC-файл проекта, база данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , хранилище пакетов [!INCLUDE[ssIS](../../includes/ssis-md.md)] и файловая система.  
   
 > **ПРИМЕЧАНИЕ.** При использовании текущей версии служебной программы **dtexec** для выполнения пакета, созданного в более ранней версии [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], программа временно обновляет пакет до текущего формата. Однако программа **dtexec** не позволяет сохранить обновленный пакет. Дополнительные сведения об окончательном обновлении пакета до текущей версии см. в разделе [Upgrade Integration Services Packages](../../integration-services/install-windows/upgrade-integration-services-packages.md).  
@@ -85,7 +89,7 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
 ##  <a name="phases"></a> Этапы выполнения  
  Программа во время выполнения проходит четыре стадии. Они перечислены далее.  
   
-1.  Стадия разбора команды: командная строка производит чтение списка указанных параметров и аргументов. В случае обнаружения параметра **/?** все последующие стадии пропускаются. Или обнаруживается параметр **/HELP** .  
+1.  Стадия обработки команды: командная строка считывает список указанных параметров и аргументов. В случае обнаружения параметра **/?** все последующие стадии пропускаются. Или обнаруживается параметр **/HELP** .  
   
 2.  Стадия загрузки пакета: происходит загрузка пакета, указанного параметрами **/SQL**, **/FILE**или **/DTS**.  
   
@@ -250,7 +254,7 @@ dtexec /option [value] [/option [value]]...
   
      Дополнительные сведения об отладочных файлах дампа см. в разделе [Generating Dump Files for Package Execution](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md).  
   
--   **/DumpOnError**: (Необязательно) Создает отладочные файлы дампа MDMP и TMP, если во время работы пакета происходит любая ошибка.  
+-   **/DumpOnError**: (Необязательно.) Создаются отладочные файлы дампа MDMP и TMP, если во время работы пакета происходит ошибка.  
   
      По умолчанию службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] сохраняют отладочные файлы дампа в папке *\<диск>*:\Program Files\Microsoft SQL Server\110\Shared\ErrorDumps.  
   
@@ -299,31 +303,31 @@ dtexec /option [value] [/option [value]]...
   
     -   Текстовый файл:  
   
-        -   идентификатор ProgID: DTS.LogProviderTextFile.1;  
+        -   ProgID: DTS.LogProviderTextFile.1  
   
         -   ClassID: {59B2C6A5-663F-4C20-8863-C83F9B72E2EB}  
   
-    -   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
+    -   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]:  
   
-        -   идентификатор ProgID: DTS.LogProviderSQLProfiler.1;  
+        -   ProgID: DTS.LogProviderSQLProfiler.1  
   
         -   ClassID: {5C0B8D21-E9AA-462E-BA34-30FF5F7A42A1}  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
-        -   идентификатор ProgID: DTS.LogProviderSQLServer.1;  
+        -   ProgID: DTS.LogProviderSQLServer.1  
   
         -   ClassID: {6AA833A1-E4B2-4431-831B-DE695049DC61}  
   
     -   Журнал событий Windows:  
   
-        -   идентификатор ProgID: DTS.LogProviderEventLog.1;  
+        -   ProgID: DTS.LogProviderEventLog.1  
   
         -   ClassID: {97634F75-1DC7-4F1F-8A4C-DAF0E13AAA22}  
   
     -   XML-файл:  
   
-        -   идентификатор ProgID: DTS.LogProviderXMLFile.1  
+        -   ProgID: DTS.LogProviderXMLFile.1  
   
         -   ClassID: {AFED6884-619C-484F-9A09-F42D56E1A7EA}  
   
@@ -535,7 +539,7 @@ dtexec /sq pkgOne /verifyv {c200e360-38c5-11c5-11ce-ae62-08002b2b79ef}
 dtexec /f "c:\pkgOne.dtsx" /conf "c:\pkgOneConfig.cfg"  
 ```  
   
-> **ПРИМЕЧАНИЕ.** Аргументы package_path и *filespec* параметров /SQL, /DTS и /FILE должны быть заключены в кавычки, если путь или имя файла содержит пробел. Если аргумент не заключен в кавычки, он не может содержать пробелы.  
+> **ПРИМЕЧАНИЕ.** Аргументы *package_path* и *filespec* параметров /SQL, /DTS и /FILE должны быть заключены в кавычки, если путь или имя файла содержит пробел. Если аргумент не заключен в кавычки, он не может содержать пробелы.  
   
  **Параметр ведения журнала**  
   

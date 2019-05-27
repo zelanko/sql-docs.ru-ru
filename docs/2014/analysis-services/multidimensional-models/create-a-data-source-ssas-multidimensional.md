@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.datasourcedesigner.f1
@@ -19,12 +18,12 @@ ms.assetid: 9fab8298-10dc-45a9-9a91-0c8e6d947468
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 54971b2b71d37ec4b246d982429fac3d6abf5b9a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: db9a94bf47071692b4ecf85e6bdb850132b8a417
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62702157"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66076521"
 ---
 # <a name="create-a-data-source-ssas-multidimensional"></a>Создание источника данных (многомерные службы SSAS)
   В многомерной модели служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] объект источника данных представляет собой соединение с источником данных, данные из которого обрабатываются или импортируются. Многомерная модель должна содержать по меньшей мере один объект источника данных, но можно добавить несколько таких объектов, чтобы объединить данные из нескольких хранилищ данных. Для создания объекта источника данных модели воспользуйтесь инструкциями, приведенными в этом разделе. Дополнительные сведения о настройке свойств этого объекта см. в разделе [Задание свойств источника данных (многомерная база данных SSAS)](set-data-source-properties-ssas-multidimensional.md).  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - MinimumProbability property
@@ -31,12 +30,12 @@ ms.assetid: 8b6b8247-62f9-4f6f-b1af-d01dab290e4c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4ce0fdddd09dd3145949d56727ae4c3e8b853602
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6a799f5a8aef79dec7cb951e95e6f252b3be2626
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62722112"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66084071"
 ---
 # <a name="microsoft-association-algorithm"></a>Алгоритм взаимосвязей (Майкрософт)
   Алгоритм взаимосвязей [!INCLUDE[msCoName](../../includes/msconame-md.md)] является алгоритмом взаимосвязей, предоставляемым службами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Этот алгоритм полезен для механизмов выработки рекомендаций. Ядро рекомендаций рекомендует программы пользователям на основе элементов, которые они уже купили, или к которым проявили интерес. Алгоритм взаимосвязей [!INCLUDE[msCoName](../../includes/msconame-md.md)] удобно использовать для анализа потребительской корзины. Пример анализа потребительской корзины, см. в разделе [занятия 3: Построение сценария потребительской корзины &#40;средний уровень учебник по интеллектуальному анализу данных&#41; ](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md) в учебник по интеллектуальному анализу данных.  

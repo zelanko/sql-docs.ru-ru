@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - OLAP objects [Analysis Services], cubes
@@ -16,12 +15,12 @@ ms.assetid: e0f7acf3-4b07-41fc-a5fc-ac30b4a56c54
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: adb21e802d437f7cd1e2d805f90c4525d6f9e8ef
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c7ce00bc87ca17c97996023d7cb9a4745b9882f3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62700130"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66076109"
 ---
 # <a name="cubes-in-multidimensional-models"></a>Кубы в многомерных моделях
   Куб является многомерной структурой, содержащей сведения для анализа. Главными составными элементами куба являются измерения и меры. Измерения определяют структуру куба, используемую для срезов данных, а меры предоставляют статистически вычисленные числовые значения, представляющие интерес для конечного пользователя. В качестве логической структуры куб позволяет клиентскому приложению получать значения мер в виде ячеек куба, определенных для всех возможных суммарных значений. Ячейка куба определяется пересечением элементов измерения и содержит статистически вычисляемые значения мер в этом конкретном пересечении.  

@@ -32,16 +32,16 @@ helpviewer_keywords:
 - time zones [SQL Server]
 - roundtrip conversions
 ms.assetid: a87d0850-c670-4720-9ad5-6f5a22343ea8
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5020bfd6f7a17538130d5f701c7b2bbbe8ff766e
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: f1ff55b99e722a1132114c400688cbc184b1bb04
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801838"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65942901"
 ---
 # <a name="cast-and-convert-transact-sql"></a>Функции CAST и CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,15 +52,16 @@ ms.locfileid: "56801838"
 
 **Cast**
 ```sql  
-SELECT 9.5 AS Original, CAST(9.5 AS int) AS int, 
-    CAST(9.5 AS decimal(6,4)) AS decimal;
+SELECT 9.5 AS Original,
+       CAST(9.5 AS INT) AS [int],
+       CAST(9.5 AS DECIMAL(6, 4)) AS [decimal];
 
 ```  
 **Преобразовать**
 ```sql  
-
-SELECT 9.5 AS Original, CONVERT(int, 9.5) AS int, 
-    CONVERT(decimal(6,4), 9.5) AS decimal;
+SELECT 9.5 AS Original,
+       CONVERT(INT, 9.5) AS [int],
+       CONVERT(DECIMAL(6, 4), 9.5) AS [decimal];
 ```  
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
 
@@ -176,12 +177,12 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
 |Значение|Вывод|  
 |---|---|
 |**0** (по умолчанию)|Использовать синтаксический разбор по умолчанию, при котором незначащие пробельные символы удаляются, а внутренние подмножества DTD не разрешены.<br /><br />**Примечание.** При преобразовании в тип данных **xml** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обрабатывает незначащие пробелы не так, как это описано в стандарте XML 1.0. Дополнительные сведения см. в статье [Создание экземпляров XML-данных](../../relational-databases/xml/create-instances-of-xml-data.md).|  
-|**1**|Сохранять незначащие пробельные символы. Этот параметр стиля задает обработку **xml:space** по умолчанию в соответствии с поведением **xml:space="preserve"**.|  
+|**1**|Сохранять незначащие пробельные символы. Этот параметр стиля задает обработку **xml:space** по умолчанию в соответствии с поведением **xml:space="preserve"** .|  
 |**2**|Использовать ограниченную обработку внутреннего подмножества DTD.<br /><br /> При этом для выполнения операций синтаксического анализа без проверки действительности сервер может пользоваться следующей информацией, предоставляемой внутренним подмножеством DTD.<br /><br />   — Применяются атрибуты по умолчанию.<br />   — Ссылки на внутренние сущности разрешаются и раскрываются.<br />   — Проверяется синтаксическая правильность модели содержимого DTD.<br /><br /> Синтаксический анализатор пропускает внешние подмножества DTD. Также не выполняется оценка объявления XML, чтобы определить, имеет ли атрибут **standalone** значение **yes** или **no**. Вместо этого выполняется анализ экземпляра XML как отдельного документа.|  
 |**3**|Сохранять незначащие пробельные символы и использовать ограниченную обработку внутреннего подмножества DTD.|  
   
 ## <a name="binary-styles"></a>Стили двоичных данных
-Если аргумент *expression* принадлежит к типу данных **binary(n)**, **char(n)**, **varbinary(n)** или **varchar(n)**, аргумент *style* может иметь одно из значений, приведенных в таблице ниже. При использовании значений стиля, отсутствующих в этой таблице, возвращается ошибка.
+Если аргумент *expression* принадлежит к типу данных **binary(n)** , **char(n)** , **varbinary(n)** или **varchar(n)** , аргумент *style* может иметь одно из значений, приведенных в таблице ниже. При использовании значений стиля, отсутствующих в этой таблице, возвращается ошибка.
   
 |Значение|Вывод|  
 |---|---|
@@ -204,8 +205,8 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
   
 ## <a name="large-value-data-types"></a>Типы данных больших значений
 Типы данных большого объема демонстрируют то же поведение при явных и неявных преобразованиях, что и их аналоги меньшего объема, а именно типы данных **nvarchar**, **varbinary** и **varchar**. Тем не менее необходимо учитывать следующие правила:
--   Преобразование из **image** в **varbinary(max)** и обратно неявное, как и преобразования между **text** и **varchar(max)**, а также **ntext** и **nvarchar(max)**.  
--   Преобразование из типов данных большого объема, например **varchar(max)**, в аналогичный тип данных меньшего объема, например **varchar**, неявное, но если объем данных слишком велик, будет произведено усечение данных до указанной длины конкретного типа данных меньшего объема.  
+-   Преобразование из **image** в **varbinary(max)** и обратно неявное, как и преобразования между **text** и **varchar(max)** , а также **ntext** и **nvarchar(max)** .  
+-   Преобразование из типов данных большого объема, например **varchar(max)** , в аналогичный тип данных меньшего объема, например **varchar**, неявное, но если объем данных слишком велик, будет произведено усечение данных до указанной длины конкретного типа данных меньшего объема.  
 -   Преобразование из **nvarchar**, **varbinary** или **varchar** в соответствующие им типы данных большого объема выполняется неявно.  
 -   Преобразование из типа данных **sql_variant** в типы данных большого объема выполняется явно.  
 -   Типы данных большого объема не могут быть преобразованы в тип данных **sql_variant**.  
@@ -421,7 +422,7 @@ The list price is 364.09
 ```  
   
 ### <a name="d-using-cast-to-produce-more-readable-text"></a>Г. Использование функции CAST для получения удобочитаемого текста  
-В этом примере функция CAST используется в списке SELECT для преобразования значений столбца `Name` к значениям типа **char(10)**. В этом примере используется база данных AdventureWorksDW.
+В этом примере функция CAST используется в списке SELECT для преобразования значений столбца `Name` к значениям типа **char(10)** . В этом примере используется база данных AdventureWorksDW.
   
 ```sql
 SELECT DISTINCT CAST(EnglishProductName AS char(10)) AS Name, ListPrice  

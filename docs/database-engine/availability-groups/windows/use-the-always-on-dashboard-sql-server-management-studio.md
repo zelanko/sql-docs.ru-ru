@@ -15,12 +15,12 @@ ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2d70825317f2dbc7a59857bebf533d4b617b97e0
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: f1a82b21716db66c4eb2676ed51160519f99afd7
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120201"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982789"
 ---
 # <a name="use-the-always-on-availability-group-dashboard-sql-server-management-studio"></a>Использование панели мониторинга групп доступности AlwaysOn (среда SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,12 @@ ms.locfileid: "49120201"
 -   Режим и состояние синхронизации    
 -   Время на восстановление журнала  
   
-##  <a name="before-you-begin"></a>Перед началом  
   
-### <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>предварительные требования  
  Необходимо подключение к экземпляру сервера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , на котором размещена первичная либо вторичная реплика группы доступности.  
   
-### <a name="security"></a>безопасность  
-  
-#### <a name="permissions"></a>Разрешения  
+ 
+### <a name="permissions"></a>Разрешения  
  Требуются разрешения CONNECT, VIEW SERVER STATE и VIEW ANY DEFINITION.  
   
 ##  <a name="to-start-the-always-on-dashboard"></a>Запуск панели мониторинга AlwaysOn  
@@ -56,7 +54,7 @@ ms.locfileid: "49120201"
   
 2.  Разверните узел **Высокий уровень доступности AlwaysOn** , правой кнопкой мыши щелкните узел **Группы доступности** , затем пункт **Показать панель мониторинга**.  
   
-###  <a name="change-always-on-dashboard-options"></a>Изменение параметров панели мониторинга AlwaysOn  
+##  <a name="change-always-on-dashboard-options"></a>Изменение параметров панели мониторинга AlwaysOn  
  Для настройки поведения панели мониторинга [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]**AlwaysOn для выполнения автоматического обновления и включения самостоятельно определяемой политики AlwaysOn можно использовать диалоговое окно** Параметры [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 1.  В меню **Сервис** щелкните пункт **Параметры**.  
@@ -216,8 +214,7 @@ ms.locfileid: "49120201"
     -   Для базы данных-получателя указывает, что на базе данных не запущена синхронизация журнала из-за проблем с соединением, синхронизация приостановлена или же база данных находится в переходных состояниях во время запуска или переключения ролей.  
   
 -   **Синхронизация**:
--   
-     На первичной реплике:   
+- На первичной реплике:   
     - Для базы данных-источника указывает, что эта база данных готова принимать запросы на просмотр от базы данных-получателя.  
     - На вторичной реплике указывает, что для этой базы данных-получателя происходит активное перемещение данных. 
   

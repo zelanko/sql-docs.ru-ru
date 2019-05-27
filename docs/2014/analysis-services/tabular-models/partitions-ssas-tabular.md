@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 708b9bdf-8c0b-4476-809a-8f616be23a58
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8126278319caff77a3d4ff6a334ed985c190288e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f5dd80a1f6645e7d1c766e88de653fa1e8f1f4cc
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62795501"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66066903"
 ---
 # <a name="partitions-ssas-tabular"></a>Секции (табличные службы SSAS)
   Секции разделяют таблицу на логические части. Каждая секция затем может обрабатываться (обновляться) независимо от других секций. Секции, созданные с помощью диалогового окна «Секции» в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] во время создания модели, применяются к базе данных рабочей области модели. При развертывании модели секции, определенные для базы данных рабочей области модели, дублируются в развернутом шаблоне базы данных. После этого можно создавать секции и управлять ими для развернутой модели базы данных с помощью диалогового окна «Секции» [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  Приведенные в этом разделе сведения касаются секций, сформированных во время создания модели с помощью диалогового окна «Диспетчер секций» в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Для получения дополнительных сведений о создании секций и управлении ими для развернутой модели см. [Создание секций табличной модели и управление ими (табличные службы SSAS)](create-and-manage-tabular-model-partitions-ssas-tabular.md).  
