@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - hierarchies [Analysis Services], parent-child
@@ -21,12 +20,12 @@ ms.assetid: 4657f5dc-d88e-48d2-a448-08f79bc89546
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: be08164b3e96f5995c5ed1b64edc83699c7d8b40
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d0eac17d30d8a8870d03a0b5b81610fad1344333
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62736802"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66073388"
 ---
 # <a name="parent-child-hierarchy"></a>«Родители потомки»
   Иерархия типа «родители-потомки» представляет собой стандартное измерение, содержащее родительский атрибут. Родительский атрибут описывает *связь, ссылающуюся на себя*(или *самосоединение*) в пределах главной таблицы измерения. Иерархии типа «родители-потомки» создаются из одного родительского атрибута. Иерархии типа «родители-потомки» присваивается только один уровень, поскольку присутствующие в ней уровни наследуют связи типа «родители-потомки» между элементами, связанными с родительским атрибутом. Положение элемента в пределах иерархии типа «родители-потомки» определяется свойствами `KeyColumns` и `RootMemberIf` родительского атрибута, в то время как положение элемента в пределах уровня определяется свойством `OrderBy` родительского атрибута. Дополнительные сведения о свойствах атрибутов см. в статье [Атрибуты и иерархии атрибутов](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md).  

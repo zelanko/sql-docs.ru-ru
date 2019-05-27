@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 2d847adf-4b3d-4949-a195-ef43de275077
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 171bb649f5e4f91df947ed2a0a3113786755efe4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a1938f2389f64d7a869ae924690b8b22fa209f82
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62828651"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66059908"
 ---
 # <a name="data-flow-taps"></a>Вкладки «Поток данных»
   В [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] представлена новая функция, которая позволяет добавить отвод данных в путь потока данных пакета во время выполнения и перенаправить отвод данных во внешний файл. Для использования этой функции следует развернуть проект служб SSIS на сервере служб SSIS с помощью модели развертывания проекта. После развертывания пакета на сервере до выполнения пакета следует выполнить T-SQL скрипты на базе данных SSISDB, чтобы добавить отводы данных. Пример сценария.  
@@ -68,7 +67,7 @@ EXEC [SSISDB].[catalog].remove_data_tap @tap_id
 ```  
   
 ## <a name="listing-all-data-taps"></a>Перечисление всех отводов данных  
- С помощью представления add_data_tap можно перечислить все отводы данных. Следующий пример извлекает отводы данных для экземпляра выполнения спецификации (ID: 54).  
+ С помощью представления add_data_tap можно перечислить все отводы данных. В следующем примере показано, как извлечь отводы данных для экземпляра выполнения спецификации (ID: 54).  
   
 ```  
 select * from [SSISDB].[catalog].execution_data_taps where execution_id=@execid  

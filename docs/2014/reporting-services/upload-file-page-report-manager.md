@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 7bb3166f-9374-4449-b66a-ffb77298507d
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 271c97f635db61c0e66b7a22608272fde145387c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1100baa3cd72a04d208b2076d91ca4efed7d38e6
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62649287"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66098868"
 ---
 # <a name="upload-file-page-report-manager"></a>Страница «Выгрузка файла» (диспетчер отчетов)
   Используйте страницу «Передача файла», чтобы опубликовать файл из файловой системы в базе данных сервера отчетов. Переданные файлы представлены как элементы иерархии папок сервера отчетов.  

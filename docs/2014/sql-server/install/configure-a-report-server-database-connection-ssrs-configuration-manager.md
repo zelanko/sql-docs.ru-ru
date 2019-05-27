@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - connections [Reporting Services], configuring
@@ -18,12 +17,12 @@ ms.assetid: 9759a9fb-35e9-4215-969b-a9f1fea18487
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9e7f4785eb5b5d52d5271397e0be927180e53aea
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6258ecd22d45195ad00c617e53c7ce9f9416315c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62762021"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66096191"
 ---
 # <a name="configure-a-report-server-database-connection--ssrs-configuration-manager"></a>Настройка подключения к базе данных сервера отчетов (диспетчер конфигурации служб Reporting Services)
   Для функционирования каждого экземпляра сервера отчетов необходимо соединение с базой данных сервера отчетов, в которой хранятся отчеты, модели отчетов, общие источники данных, ресурсы, а также метаданные, управляемые сервером. Исходное соединение может быть создано во время установки сервера отчетов, если производится установка конфигурации по умолчанию. В большинстве случаев после завершения установки настройка соединения осуществляется при помощи программы настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Такие параметры соединения, как тип учетной записи и учетные данные, можно изменять в любое время. Пошаговые инструкции по созданию базы данных и настройке соединения см. в разделе [Создание базы данных сервера отчетов, работающего в собственном режиме (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  

@@ -9,14 +9,14 @@ ms.custom: ''
 ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
-ms.reviewer: douglasl
+ms.reviewer: maghan
 manager: craigg
-ms.openlocfilehash: 1c5c97eca9553f209e559ddacd25af2618e84f71
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.openlocfilehash: 2e832343dfd54dd08a71c2724eed4cb7b156c758
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65720856"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66010508"
 ---
 # <a name="tutorial-deploy-and-run-a-sql-server-integration-services-ssis-package-in-azure"></a>Руководство. Развертывание и выполнение пакета служб SQL Server Integration Services (SSI) в Azure
 
@@ -106,11 +106,11 @@ ms.locfileid: "65720856"
     -   Щелкните **Развернуть**, чтобы начать развертывание.
 
     > [!NOTE]
-    > Если появляется сообщение об ошибке **Нет активного агента рабочей роли (поставщик данных .Net SqlClient)**, убедитесь, что запущена среда выполнения интеграции Azure и служб SSIS. Эта ошибка возникает при попытке выполнить развертывание, когда среда выполнения интеграции Azure и служб SSIS остановлена.
+    > Если появляется сообщение об ошибке **Нет активного агента рабочей роли (поставщик данных .Net SqlClient)** , убедитесь, что запущена среда выполнения интеграции Azure и служб SSIS. Эта ошибка возникает при попытке выполнить развертывание, когда среда выполнения интеграции Azure и служб SSIS остановлена.
 
 5.  После завершения развертывания появится страница **Результаты**. На ней отображается состояние выполнения каждого действия.
     -   Если действие не выполнено, нажмите кнопку **Ошибка** в столбце **Результат** для отображения описания ошибки.
-    -   Чтобы сохранить результаты в XML-файл при необходимости, нажмите кнопку **Сохранить отчет...**.
+    -   Чтобы сохранить результаты в XML-файл при необходимости, нажмите кнопку **Сохранить отчет...** .
     -   Нажмите кнопку **Закрыть**, чтобы выйти из мастера.
 
 ## <a name="deploy-a-project-with-powershell"></a>Развертывание проекта с помощью PowerShell

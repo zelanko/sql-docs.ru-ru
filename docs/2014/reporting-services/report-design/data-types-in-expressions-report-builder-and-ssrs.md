@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5b0af16c21cb9fdf2c8ab41a931f955b46c29352
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.openlocfilehash: 5db09273a26bd8dd596a6ae576b2f8f0cc414190
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59956110"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66106067"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>Типы данных в выражениях (построитель отчетов и службы SSRS)
   Типы данных представляют разные виды данных, чтобы их можно было эффективно хранить и обрабатывать. Стандартные типы данных включают текст (строки), числа с десятичными разрядами или без них, даты и время, а также изображения. Значения в отчете должны быть представлены с помощью типов данных языка определения отчетов. При отображении значения в отчете его можно отформатировать в соответствии с конкретными предпочтениями. Например, поле, представляющее валюту, может храниться в определении отчета как число с плавающей запятой, но отображаться в различных форматах в зависимости от выбранного свойства формата.  
@@ -34,9 +33,9 @@ ms.locfileid: "59956110"
 |String|По умолчанию: String<br /><br /> Chart, GUID, Timespan|  
 |Логическое значение|По умолчанию: Логическое значение|  
 |Целочисленный|По умолчанию: Int64<br /><br /> Int16, Int32, Uint16, Uint64, Byte, Sbyte|  
-|Datetime|По умолчанию: Datetime<br /><br /> DateTimeOffset|  
+|DateTime|По умолчанию: DateTime<br /><br /> DateTimeOffset|  
 |float|По умолчанию: Double<br /><br /> Single, Decimal|  
-|Бинарный|По умолчанию: Byte]|  
+|Бинарный|По умолчанию: Byte[]|  
 |Variant|Любое из вышеприведенного, кроме Byte[]|  
 |VariantArray|Массив данных типа Variant|  
 |Упорядочиваемый уровень изоляции|Значение типа Variant или типов, отмеченных свойством Serializable или реализующих интерфейс ISerializable.|  

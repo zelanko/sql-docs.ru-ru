@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 64479cdc-661a-4e32-a381-8f8b5a238337
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3f83e13aa6ed85293bf20b006ad6c5c8e9a9a62f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b5b2b43d899041d501039ade4d0493a7fdbf0164
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545382"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66094628"
 ---
 # <a name="install-distributed-replay-setup"></a>Установка распределенного воспроизведения (программа установки)
   Установите компоненты распределенного воспроизведения [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью мастера установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . При планировании расположения установленных компонентов примите во внимание следующее.  
@@ -59,7 +58,7 @@ ms.locfileid: "52545382"
   
 -   64-разрядные системы:  
   
-     C:\Program Files\\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (x86) \120\Tools  
+     C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (x86) \120\Tools  
   
      \- OR -  
   
@@ -87,7 +86,7 @@ ms.locfileid: "52545382"
   
     -   Чтобы установить службу клиента, выберите **Клиент распределенного воспроизведения**.  
   
-     **Важные**: При настройке контроллера распределенного воспроизведения можно указать одну или несколько учетных записей, которые будут использоваться для запуска служб клиента распределенного воспроизведения. Далее представлен список поддерживаемых учетных записей.  
+     **Важные**: При настройке контроллера распределенного воспроизведения можно указать один или несколько учетных записей пользователей, которые будут использоваться для запуска служб клиента распределенного воспроизведения. Далее представлен список поддерживаемых учетных записей.  
   
     -   Доменная учетная запись пользователя  
   

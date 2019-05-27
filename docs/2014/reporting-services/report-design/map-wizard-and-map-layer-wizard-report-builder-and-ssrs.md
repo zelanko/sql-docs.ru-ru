@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapandlayerwizard.f1
@@ -15,12 +14,12 @@ ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: aa0ccc9d3b2ca01e1b2279f71ef2815c81e060e3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: dab4c978bc9309564d8d2f32410ae798becc4d8d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63210330"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105540"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>Мастер карт и мастер слоев карт (построитель отчетов и службы SSRS)
   Мастер карт и мастер слоев карт автоматизируют задачи создания карты, добавления слоя карты или изменения параметров слоя карты применительно к существующему слою.  
@@ -125,7 +124,7 @@ ms.locfileid: "63210330"
  Галерея карт содержит карты из отчетов. Они расположены в папке галереи карт среды создания отчетов. Карты из этой галереи позволяют быстро добавить карту в отчет. Стандартные карты в галерее предоставлены поставщиком карт.  
   
 > [!NOTE]  
->  Службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] используют данные из файлов фигур TIGER/Line, поставляемых с разрешения Бюро переписи населения США переписи населения США ([http://www.census.gov/](http://www.census.gov/)). Файлы фигур TIGER/Line содержат выборочную географическую и картографическую информацию из базы данных Census MAF/TIGER. Файлы фигур TIGER/Line бесплатно распространяются из США. Census Bureau. Дополнительные сведения о файлах фигуры TIGER/Line см. на странице [http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger). Информация о границах в шейп-файлах TIGER/Line может использоваться только для сбора и табулирования статистических данных. Их описание и использование в статистических целях не может повлечь изменения юридических полномочий или прав собственности. Они не являются законными описаниями земель. Census TIGER и TIGER/Line являются охраняемыми товарными знаками в США переписи населения США.  
+>  Службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] используют данные из файлов фигур TIGER/Line, поставляемых с разрешения Бюро переписи населения США переписи населения США ([http://www.census.gov/](http://www.census.gov/)). Файлы фигур TIGER/Line содержат выборочную географическую и картографическую информацию из базы данных Census MAF/TIGER. Файлы фигур TIGER/Line бесплатно распространяются Бюро переписи населения США. Дополнительные сведения о файлах фигуры TIGER/Line см. на странице [http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger). Информация о границах в шейп-файлах TIGER/Line может использоваться только для сбора и табулирования статистических данных. Их описание и использование в статистических целях не может повлечь изменения юридических полномочий или прав собственности. Они не являются законными описаниями земель. TIGER и TIGER/Line являются охраняемыми товарными знаками Бюро переписи населения США.  
   
  Для расширения галереи карт можно добавлять или удалять отчеты из каталога галереи карт, а также добавлять папки для структуризации карт. Дополнительные сведения см. в разделе [Карты (построитель отчетов и службы SSRS)](maps-report-builder-and-ssrs.md).  
   
