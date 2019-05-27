@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - result sets [Integration Services]
@@ -15,12 +14,12 @@ ms.assetid: f76738b6-dc75-4ff9-a3dd-8b083d8e410e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4c6114fac83862198b37647f6350d657df878ca5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 995afe55c1cd1b7d925c9267ba5dfa3aed038358
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62767276"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66057760"
 ---
 # <a name="map-result-sets-to-variables-in-an-execute-sql-task"></a>Сопоставление результирующих наборов с переменными в задаче "Выполнение SQL"
   В этом разделе описывается создание сопоставления между результирующими наборами и переменной в задаче «Выполнение SQL». Сопоставление между результирующим набором и переменной делает результирующий набор доступным для других элементов пакета. Например, скрипт в задаче «Скрипт» может считать переменную, а потом использовать значения из результирующего набора, или источник XML может использовать результирующий набор, сохраненный в переменной. Если результирующий набор создан родительским пакетом, его можно сделать доступным дочернему пакету, вызываемому задачей «Выполнение пакета», сопоставив результирующий набор с переменной в родительском пакете, а затем для хранения значения родительской переменной создав конфигурацию переменных родительского пакета в дочернем пакете.  

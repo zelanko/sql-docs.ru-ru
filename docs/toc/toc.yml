@@ -8715,306 +8715,117 @@
             - name: Совместимость с платформой приложения уровня данных
               href: ../ssdt/dac-framework-compatibility.md
     - name: SQL Server Management Studio (SSMS)
-      href: ../ssms/sql-server-management-studio-ssms.md
       items:
-        - name: Скачать SSMS
+        - name: Загрузить
           href: ../ssms/download-sql-server-management-studio-ssms.md
+        - name: Заметки о выпуске
+          href: ../ssms/release-notes-ssms.md
+        - name: Обзор
           items:
-            - name: "Заметки о выпуске и предыдущие выпуски\_SSMS"
-              href: ../ssms/release-notes-ssms.md
-            - name: Скачать связанные заметки о выпуске
-              href: '../ssms/download-sql-server-management-studio-ssms.md#release-notes'
-            - name: Установка SSMS не на английском языке
-              href: ../ssms/install-other-languages.md
-            - name: Политика поддержки SSMS
-              href: ../ssms/support-policy.md
-        - name: SQL Server Management Studio
-          href: ../ssms/tutorials/tutorial-sql-server-management-studio.md
+            - name: SSMS
+              items:
+                - name: SQL Server Management Studio (SSMS)
+                  href: ../ssms/sql-server-management-studio-ssms.md
+                - name: Основные сведения об SSMS для бизнес-аналитики
+                  href: ../ssms/introduction-to-sql-server-management-studio-for-business-intelligence.md
+                - name: Установка SSMS не на английском языке
+                  href: ../ssms/install-other-languages.md
+            - name: "Агент SQL\_Server"
+              items:
+                - name: "Агент SQL\_Server"
+                  href: ../ssms/agent/sql-server-agent.md
+                - name: Публиковать инструкции загрузки
+                  href: ../ssms/agent/post-download-instructions.md
+                - name: Монитор активности заданий
+                  href: ../ssms/agent/job-activity-monitor.md
+            - name: Регистрация серверов
+              items:
+                - name: Регистрация серверов
+                  href: ../ssms/register-servers/register-servers.md
+            - name: Написание скриптов
+              items:
+                - name: Написание скриптов
+                  href: ../ssms/scripting/database-engine-scripting.md
+                - name: Редакторы запросов и текста
+                  href: ../ssms/scripting/query-and-text-editors-sql-server-management-studio.md
+                - name: Редактор запросов компонента Database Engine
+                  href: ../ssms/scripting/database-engine-query-editor-sql-server-management-studio.md
+                - name: Редактор XML
+                  href: ../ssms/scripting/xml-editor-sql-server-management-studio.md
+                - name: Настройка редакторов
+                  href: ../ssms/scripting/configure-editors-sql-server-management-studio.md
+                - name: Связывание расширения файла с редактором кода
+                  href: ../ssms/scripting/associate-file-extensions-to-a-code-editor.md
+                - name: 'Изменение цвета, размера и стиля шрифта'
+                  href: ../ssms/scripting/change-font-color-size-and-style.md
+                - name: Использование окна «Свойства» в среде Management Studio
+                  href: ../ssms/scripting/use-the-properties-window-in-management-studio.md
+                - name: Открытие редактора
+                  href: ../ssms/scripting/open-an-editor-sql-server-management-studio.md
+                - name: Управление режимами редактирования и просмотра
+                  href: ../ssms/scripting/manage-the-editor-and-view-mode.md
+                - name: управлять форматированием кода
+                  href: ../ssms/scripting/manage-code-formatting.md
+                - name: Перемещение по коду и тексту
+                  href: ../ssms/scripting/navigate-code-and-text.md
+                - name: Выделение цветом в редакторах запросов
+                  href: ../ssms/scripting/color-coding-in-query-editors.md
+        - name: Краткие руководства
           items:
-            - name: "Подключение и отправка запроса к SQL\_Server с помощью SQL Server Management Studio"
-              href: ../ssms/tutorials/connect-query-sql-server.md
-            - name: "Написание скриптов для объектов в\_SSMS"
-              href: ../ssms/tutorials/scripting-ssms.md
-            - name: "Использование шаблонов в\_SSMS"
-              href: ../ssms/tutorials/templates-ssms.md
-            - name: "Конфигурация\_SSMS"
-              href: ../ssms/tutorials/ssms-configuration.md
-            - name: "Советы и рекомендации по использованию\_SSMS"
-              href: ../ssms/tutorials/ssms-tricks.md
-        - name: Общее управление
+            - name: SSMS
+              items:
+                - name: Подключение и отправка запроса к SQL Server
+                  href: ../ssms/tutorials/connect-query-sql-server.md
+            - name: Регистрация серверов
+              items:
+                - name: Создание зарегистрированного сервера
+                  href: ../ssms/register-servers/create-a-new-registered-server-sql-server-management-studio.md
+        - name: Учебники
           items:
-            - name: Основные сведения об SSMS для бизнес-аналитики
-              href: ../ssms/introduction-to-sql-server-management-studio-for-business-intelligence.md
-            - name: Настройка меню и сочетаний клавиш
-              href: ../ssms/customize-menus-and-shortcut-keys.md
-            - name: Окна инструментов SSMS
-              href: ../ssms/tool-windows-in-sql-server-management-studio.md
-            - name: Создание проектов баз данных с помощью среды SSMS
-              href: ../ssms/build-database-projects-by-using-sql-server-management-studio.md
-            - name: Управление окнами SSMS
-              href: ../ssms/understand-sql-server-management-studio-windows-management.md
-            - name: Администрирование серверов с помощью SSMS
-              href: ../ssms/administer-servers-with-sql-server-management-studio.md
-            - name: Настройка инструментария WMI для отображения состояния сервера в инструментальных средствах SQL Server
-              href: ../ssms/configure-wmi-to-show-server-status-in-sql-server-tools.md
-            - name: Аргументы для внешних средств
-              href: ../ssms/use-of-sql-server-features-and-capabilities-wwi-oltp.md
-            - name: Добавление внешнего инструмента в меню "Инструменты"
-              href: ../ssms/add-an-external-tool-to-the-tools-menu-sql-server-management-studio.md
-            - name: Настройка аудита входа
-              href: ../ssms/configure-login-auditing-sql-server-management-studio.md
-            - name: Служебная программа SSMS
-              href: ../ssms/ssms-utility.md
-            - name: Сочетания клавиш SSMS
-              href: ../ssms/sql-server-management-studio-keyboard-shortcuts.md
-        - name: "Агент SQL\_Server"
-          href: ../ssms/agent/sql-server-agent.md
+            - name: SSMS
+              items:
+                - name: SQL Server Management Studio
+                  href: ../ssms/tutorials/tutorial-sql-server-management-studio.md
+                - name: Подключение и отправка запроса к SQL Server
+                  href: ../ssms/tutorials/connect-query-sql-server.md
+                - name: Объекты скриптов
+                  href: ../ssms/tutorials/scripting-ssms.md
+                - name: Использование шаблонов в SSMS
+                  href: ../ssms/tutorials/templates-ssms.md
+                - name: "Конфигурация\_SSMS"
+                  href: ../ssms/tutorials/ssms-configuration.md
+            - name: Регистрация серверов
+              items:
+                - name: Регистрация подключенного сервера
+                  href: ../ssms/register-servers/register-a-connected-server-sql-server-management-studio.md
+                - name: Создание центрального сервера управления и группы серверов
+                  href: ../ssms/register-servers/create-a-central-management-server-and-server-group.md
+                - name: Выполнение инструкций на нескольких серверах одновременно
+                  href: ../ssms/register-servers/execute-statements-against-multiple-servers-simultaneously.md
+        - name: Основные понятия
           items:
-            - name: Публиковать инструкции загрузки
-              href: ../ssms/agent/post-download-instructions.md
-            - name: Configure
-              href: ../ssms/agent/configure-sql-server-agent.md
+            - name: SSMS
               items:
-                - name: Назначение задания в категорию заданий
-                  href: ../ssms/agent/assign-a-job-to-a-job-category.md
-                - name: Assign Alerts to an Operator
-                  href: ../ssms/agent/assign-alerts-to-an-operator.md
-                - name: Автоматическое удаление задания
-                  href: ../ssms/agent/automatically-delete-a-job.md
-                - name: Автозапуск агента SQL Server
-                  href: ../ssms/agent/autostart-sql-server-agent-sql-server-management-studio.md
-                - name: Изменение доступности оператора
-                  href: ../ssms/agent/change-an-operator-s-availability.md
-                - name: Change the Membership of a Job Category
-                  href: ../ssms/agent/change-the-membership-of-a-job-category.md
-                - name: Выбор правильной учетной записи службы агента SQL Server для многосерверных сред
-                  href: ../ssms/agent/choose-the-right-sql-server-agent-service-account-for-multiserver-environments.md
-                - name: Clear the Job History Log
-                  href: ../ssms/agent/clear-the-job-history-log.md
-                - name: "Настройка пользователя для создания заданий агента SQL\_Server и управления ими"
-                  href: ../ssms/agent/configure-a-user-to-create-and-manage-sql-server-agent-jobs.md
-                - name: Прикрепление целевого сервера к главному
-                  href: ../ssms/agent/enlist-a-target-server-to-a-master-server.md
-                - name: Force a Target Server to Poll the Master Server
-                  href: ../ssms/agent/force-a-target-server-to-poll-the-master-server.md
-                - name: Format Pager Addresses for Alerts
-                  href: ../ssms/agent/format-pager-addresses-for-alerts.md
-                - name: Give Others Ownership of a Job
-                  href: ../ssms/agent/give-others-ownership-of-a-job.md
-                - name: Обработка множественных шагов задания
-                  href: ../ssms/agent/handle-multiple-job-steps.md
-                - name: Просмотр сведений о категории задания
-                  href: ../ssms/agent/list-job-category-information.md
-                - name: Make a Master Server
-                  href: ../ssms/agent/make-a-master-server.md
-                - name: Создание целевого сервера
-                  href: ../ssms/agent/make-a-target-server.md
-                - name: Управление событиями
-                  href: ../ssms/agent/manage-events.md
-                - name: Управление шагами задания
-                  href: ../ssms/agent/manage-job-steps.md
-                - name: Управление заданиями в масштабе предприятия
-                  href: ../ssms/agent/manage-jobs-across-an-enterprise.md
-                - name: Управление расписаниями
-                  href: ../ssms/agent/manage-schedules.md
-                - name: Изменение задания
-                  href: ../ssms/agent/modify-a-job.md
-                - name: Изменение задания агента главного сервера SQL Server
-                  href: ../ssms/agent/modify-a-sql-server-agent-master-job.md
-                - name: Modify a SQL Server Agent Proxy
-                  href: ../ssms/agent/modify-a-sql-server-agent-proxy.md
-                - name: 'Изменение целевых серверов, связанных с главным заданием агента SQL Server'
-                  href: ../ssms/agent/modify-the-target-server-s-associated-with-a-sql-server-agent-master-job.md
-                - name: Modify the Target Servers for a Job
-                  href: ../ssms/agent/modify-the-target-servers-for-a-job.md
-                - name: Наблюдение за активностью заданий
-                  href: ../ssms/agent/monitor-job-activity.md
-                - name: Создание расписания задания — свойства расписания задания
-                  href: ../ssms/agent/new-job-schedule-job-schedule-properties.md
-                - name: Notify an Operator of Job Status
-                  href: ../ssms/agent/notify-an-operator-of-job-status.md
-                - name: Операторы
-                  href: ../ssms/agent/operators.md
-                - name: упорядочивание заданий
-                  href: ../ssms/agent/organize-jobs.md
-                - name: Выбор расписания для задания
-                  href: ../ssms/agent/pick-schedule-for-job.md
-                - name: Опрос серверов
-                  href: ../ssms/agent/poll-servers.md
-                - name: Редактор учетной записи-посредника — добавление участника
-                  href: ../ssms/agent/proxy-editor-add-principal.md
-                - name: Remove Steps from a SQL Server Agent Master Job
-                  href: ../ssms/agent/remove-steps-from-a-sql-server-agent-master-job.md
-                - name: Resize the Job History Log
-                  href: ../ssms/agent/resize-the-job-history-log.md
-                - name: Запуск заданий
-                  href: ../ssms/agent/run-jobs.md
-                - name: Schedule a Job
-                  href: ../ssms/agent/schedule-a-job.md
-                - name: Выбор учетной записи для службы агента SQL Server
-                  href: ../ssms/agent/select-an-account-for-the-sql-server-agent-service.md
-                - name: Send SQL Server Agent Error Messages
-                  href: ../ssms/agent/send-sql-server-agent-error-messages.md
-                - name: Указание расположения целевого сервера (SSMS)
-                  href: ../ssms/agent/specify-a-target-server-s-location-sql-server-management-studio.md
-                - name: Определение ответов заданий
-                  href: ../ssms/agent/specify-job-responses.md
-                - name: Предопределенные роли базы данных агента SQL Server
-                  href: ../ssms/agent/sql-server-agent-fixed-database-roles.md
-                - name: Синхронизация часов целевых серверов (SSMS)
-                  href: ../ssms/agent/synchronize-target-server-clocks-sql-server-management-studio.md
-                - name: 'Устранение неполадок, связанных с многосерверными заданиями, использующими учетные записи-посредники'
-                  href: ../ssms/agent/troubleshoot-multiserver-jobs-that-use-proxies.md
-                - name: Настройка автоматизированного администрирования в организации
-                  href: ../ssms/agent/tune-automated-administration-across-an-enterprise.md
-                - name: Использование объектов производительности
-                  href: ../ssms/agent/use-performance-objects.md
-                - name: Использование токенов в шагах задания
-                  href: ../ssms/agent/use-tokens-in-job-steps.md
-                - name: Запись данных о состоянии задания в журнал приложений Windows
-                  href: ../ssms/agent/write-the-job-status-to-the-windows-application-log.md
-            - name: Создание
+                - name: Окна инструментов SSMS
+                  href: ../ssms/tool-windows-in-sql-server-management-studio.md
+                - name: Создание проектов баз данных с помощью среды SSMS
+                  href: ../ssms/build-database-projects-by-using-sql-server-management-studio.md
+                - name: Управление окнами SSMS
+                  href: ../ssms/understand-sql-server-management-studio-windows-management.md
+                - name: Администрирование серверов с помощью SSMS
+                  href: ../ssms/administer-servers-with-sql-server-management-studio.md
+                - name: Аргументы для внешних средств
+                  href: ../ssms/use-of-sql-server-features-and-capabilities-wwi-oltp.md
+                - name: Добавление внешнего инструмента в меню "Инструменты"
+                  href: ../ssms/add-an-external-tool-to-the-tools-menu-sql-server-management-studio.md
+                - name: Служебная программа SSMS
+                  href: ../ssms/ssms-utility.md
+                - name: Сочетания клавиш SSMS
+                  href: ../ssms/sql-server-management-studio-keyboard-shortcuts.md
+            - name: "Агент SQL\_Server"
               items:
-                - name: Шаг задания CmdExec
-                  href: ../ssms/agent/create-a-cmdexec-job-step.md
-                - name: Категория задания
-                  href: ../ssms/agent/create-a-job-category.md
-                - name: Задание
-                  href: ../ssms/agent/create-a-job.md
-                - name: Многосерверная среда
-                  href: ../ssms/agent/create-a-multiserver-environment.md
-                - name: Шаг задания скрипта PowerShell
-                  href: ../ssms/agent/create-a-powershell-script-job-step.md
-                - name: Расписание
-                  href: ../ssms/agent/create-a-schedule.md
-                - name: "Главное задание агента SQL\_Server"
-                  href: ../ssms/agent/create-a-sql-server-agent-master-job.md
-                - name: "Прокси-агент SQL\_Server"
-                  href: ../ssms/agent/create-a-sql-server-agent-proxy.md
-                - name: Шаг задания T-SQL
-                  href: ../ssms/agent/create-a-transact-sql-job-step.md
-                - name: Пользовательское событие
-                  href: ../ssms/agent/create-a-user-defined-event.md
-                - name: Предупреждение о событии инструментария WMI
-                  href: ../ssms/agent/create-a-wmi-event-alert.md
-                - name: Шаг задания скрипта ActiveX
-                  href: ../ssms/agent/create-an-activex-script-job-step.md
-                - name: Предупреждение по номеру ошибки
-                  href: ../ssms/agent/create-an-alert-using-an-error-number.md
-                - name: Предупреждение с указанием степени серьезности
-                  href: ../ssms/agent/create-an-alert-using-severity-level.md
-                - name: Шаг задания служб Analysis Services
-                  href: ../ssms/agent/create-an-analysis-services-job-step.md
-                - name: Оператор
-                  href: ../ssms/agent/create-an-operator.md
-                - name: Создание и присоединение расписаний к заданиям
-                  href: ../ssms/agent/create-and-attach-schedules-to-jobs.md
-                - name: Задания
-                  href: ../ssms/agent/create-jobs.md
-            - name: Отключение
-              items:
-                - name: целевого сервера от главного сервера
-                  href: ../ssms/agent/defect-a-target-server-from-a-master-server.md
-                - name: нескольких целевых серверов от главного
-                  href: ../ssms/agent/defect-multiple-target-servers-from-a-master-server.md
-            - name: Определение
-              items:
-                - name: Ответ на предупреждение (SSMS)
-                  href: ../ssms/agent/define-the-response-to-an-alert-sql-server-management-studio.md
-                - name: Параметры шага задания T-SQL
-                  href: ../ssms/agent/define-transact-sql-job-step-options.md
-            - name: DELETE
-              items:
-                - name: Категория задания
-                  href: ../ssms/agent/delete-a-job-category.md
-                - name: Журнал шага задания
-                  href: ../ssms/agent/delete-a-job-step-log.md
-                - name: "Прокси-агент SQL\_Server"
-                  href: ../ssms/agent/delete-a-sql-server-agent-proxy.md
-                - name: Предупреждение
-                  href: ../ssms/agent/delete-an-alert.md
-                - name: Оператор
-                  href: ../ssms/agent/delete-an-operator.md
-                - name: Задания
-                  href: ../ssms/agent/delete-jobs.md
-                - name: Одно задание или несколько
-                  href: ../ssms/agent/delete-one-or-more-jobs.md
-                - name: Оператор
-                  href: ../ssms/agent/delete-operator.md
-            - name: Назначение
-              items:
-                - name: Резервный оператор
-                  href: ../ssms/agent/designate-a-fail-safe-operator.md
-                - name: Сервер пересылки событий (SSMS)
-                  href: ../ssms/agent/designate-an-events-forwarding-server-sql-server-management-studio.md
-            - name: Отключить
-              items:
-                - name: Disable or Enable a Job
-                  href: ../ssms/agent/disable-or-enable-a-job.md
-                - name: Disable or Reactivate an Alert
-                  href: ../ssms/agent/disable-or-reactivate-an-alert.md
-            - name: Изменить
-              items:
-                - name: Изменение предупреждения
-                  href: ../ssms/agent/edit-an-alert.md
-                - name: Изменение оператора
-                  href: ../ssms/agent/edit-an-operator.md
-            - name: Присвойте параметру
-              items:
-                - name: "Псевдоним для службы агента SQL\_Server"
-                  href: ../ssms/agent/set-sql-server-alias-for-sql-server-agent-service-ssms.md
-                - name: Время и продолжительность простоя ЦП (SSMS)
-                  href: ../ssms/agent/set-cpu-idle-time-and-duration-sql-server-management-studio.md
-                - name: Параметры шифрования на целевых серверах
-                  href: ../ssms/agent/set-encryption-options-on-target-servers.md
-                - name: Завершение выполнения задания (SSMS)
-                  href: ../ssms/agent/set-job-execution-shutdown-sql-server-management-studio.md
-                - name: Поток действий системы при успешном или неуспешном выполнении шага задания
-                  href: ../ssms/agent/set-job-step-success-or-failure-flow.md
-                - name: Интервал опроса на целевых серверах
-                  href: ../ssms/agent/set-the-polling-interval-for-target-servers.md
-                - name: "Учетная запись запуска службы для агента SQL\_Server"
-                  href: ../ssms/agent/set-service-startup-account-sql-server-agent-sql-server-configuration-manager.md
-                - name: "Подключение к SQL\_Server для службы агента"
-                  href: ../ssms/agent/set-sql-server-connection-for-sql-server-agent-service-ssms.md
-                - name: Журнал заданий
-                  href: ../ssms/agent/set-up-the-job-history-log.md
-            - name: Запуск и остановка
-              items:
-                - name: Запуск задания
-                  href: ../ssms/agent/start-a-job.md
-                - name: 'Start, Stop, or Pause the SQL Server Agent Service'
-                  href: ../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md
-                - name: Остановка задания
-                  href: ../ssms/agent/stop-a-job.md
-            - name: Представление
-              items:
-                - name: Задание
-                  href: ../ssms/agent/view-a-job.md
-                - name: Сведения о предупреждении
-                  href: ../ssms/agent/view-information-about-an-alert.md
-                - name: Сведения об операторе
-                  href: ../ssms/agent/view-information-about-an-operator.md
-                - name: Активность заданий
-                  href: ../ssms/agent/view-job-activity.md
-                - name: Сведения о шаге задания
-                  href: ../ssms/agent/view-job-step-information.md
-                - name: Просмотр или изменение заданий
-                  href: ../ssms/agent/view-or-modify-jobs.md
-                - name: Журнал заданий
-                  href: ../ssms/agent/view-the-job-history.md
-            - name: Журнал ошибок
-              href: ../ssms/agent/sql-server-agent-error-log.md
-              items:
-                - name: "Просмотр журнала ошибок агента SQL\_Server"
-                  href: ../ssms/agent/view-sql-server-agent-error-log-sql-server-management-studio.md
-                - name: Переименование журнала ошибок агента SQL Server (SSMS)
-                  href: ../ssms/agent/rename-a-sql-server-agent-error-log-sql-server-management-studio.md
-                - name: Запись сообщений трассировки выполнения в журнал ошибок агента SQL Server (SSMS)
-                  href: ../ssms/agent/write-execution-trace-messages-to-sql-server-agent-log-ssms.md
-            - name: Задачи автоматизированного администрирования
-              href: ../ssms/agent/automated-administration-tasks-sql-server-agent.md
-              items:
+                - name: Задачи автоматизированного администрирования
+                  href: ../ssms/agent/automated-administration-tasks-sql-server-agent.md
                 - name: Обеспечение безопасности агента
                   href: ../ssms/agent/implement-sql-server-agent-security.md
                 - name: Реализация заданий
@@ -9023,15 +8834,10 @@
                   href: ../ssms/agent/monitor-and-respond-to-events.md
                 - name: Автоматизация администрирования в масштабах предприятия
                   href: ../ssms/agent/automated-administration-across-an-enterprise.md
-                  items:
-                    - name: Change Steps of a SQL Server Agent Master Job
-                      href: ../ssms/agent/change-steps-of-a-sql-server-agent-master-job.md
-                    - name: Изменение параметров расписания для главного задания
-                      href: ../ssms/agent/change-the-scheduling-details-for-a-sql-server-agent-master-job.md
-            - name: Справочник
-              items:
-                - name: Монитор активности заданий
-                  href: ../ssms/agent/job-activity-monitor.md
+                - name: Change Steps of a SQL Server Agent Master Job
+                  href: ../ssms/agent/change-steps-of-a-sql-server-agent-master-job.md
+                - name: Изменение параметров расписания для главного задания
+                  href: ../ssms/agent/change-the-scheduling-details-for-a-sql-server-agent-master-job.md
                 - name: справка F1
                   href: ../ssms/agent/sql-server-agent-f1-help.md
                   items:
@@ -9122,60 +8928,436 @@
                       href: ../ssms/agent/proxy-account-properties-new-proxy-account-general-page.md
                     - name: Создание учетной записи-посредника (страница "Участники")
                       href: ../ssms/agent/proxy-account-properties-new-proxy-account-principals-tab.md
-        - name: Регистрация серверов
-          href: ../ssms/register-servers/register-servers.md
-          items:
-            - name: Регистрация подключенного сервера
-              href: ../ssms/register-servers/register-a-connected-server-sql-server-management-studio.md
-            - name: Создание зарегистрированного сервера
-              href: ../ssms/register-servers/create-a-new-registered-server-sql-server-management-studio.md
-            - name: Просмотр зарегистрированных серверов в среде SQL Server Management Studio
-              href: ../ssms/register-servers/view-registered-servers-in-sql-server-management-studio.md
-            - name: Удаление зарегистрированного сервера
-              href: ../ssms/register-servers/remove-a-registered-server-sql-server-management-studio.md
-            - name: Изменение регистрации сервера
-              href: ../ssms/register-servers/change-a-server-s-registration-sql-server-management-studio.md
-            - name: Подключение к зарегистрированному серверу
-              href: ../ssms/register-servers/connect-to-a-registered-server-sql-server-management-studio.md
-            - name: Отключение от зарегистрированного сервера
-              href: ../ssms/register-servers/disconnect-from-a-registered-server-sql-server-management-studio.md
-            - name: Перемещение зарегистрированного сервера или зарегистрированной группы серверов
-              href: ../ssms/register-servers/move-a-registered-server-or-registered-server-group.md
-            - name: Изменение имени зарегистрированного сервера или зарегистрированной группы серверов
-              href: ../ssms/register-servers/change-the-name-of-registered-server-or-registered-server-group.md
-            - name: Создание или изменение группы серверов
-              href: ../ssms/register-servers/create-or-edit-a-server-group-sql-server-management-studio.md
-            - name: Удаление группы серверов
-              href: ../ssms/register-servers/remove-a-server-group-sql-server-management-studio.md
-            - name: Экспорт сведений о зарегистрированном сервере
-              href: ../ssms/register-servers/export-registered-server-information-sql-server-management-studio.md
-            - name: Импорт сведений о зарегистрированном сервере
-              href: ../ssms/register-servers/import-registered-server-information-sql-server-management-studio.md
-            - name: Создание центрального сервера управления и группы серверов
-              href: ../ssms/register-servers/create-a-central-management-server-and-server-group.md
-            - name: Выполнение инструкций на нескольких серверах одновременно
-              href: ../ssms/register-servers/execute-statements-against-multiple-servers-simultaneously.md
-            - name: Справка F1 по зарегистрированным серверам
-              href: ../ssms/register-servers/registered-servers-f1-help.md
-        - name: Написание скриптов
-          href: ../ssms/scripting/database-engine-scripting.md
-          items:
-            - name: Редакторы запросов и текста
-              href: ../ssms/scripting/query-and-text-editors-sql-server-management-studio.md
+            - name: Регистрация серверов
               items:
-                - name: Редактор запросов компонента Database Engine
-                  href: ../ssms/scripting/database-engine-query-editor-sql-server-management-studio.md
-                - name: Редактор XML
-                  href: ../ssms/scripting/xml-editor-sql-server-management-studio.md
+                - name: Справка F1 по зарегистрированным серверам
+                  href: ../ssms/register-servers/registered-servers-f1-help.md
+            - name: Написание скриптов
+              items:
+                - name: Редакторы запросов и текста
+                  items:
+                    - name: Редакторы запросов и текста
+                      href: ../ssms/scripting/query-and-text-editors-sql-server-management-studio.md
+                    - name: Редактор запросов компонента Database Engine
+                      href: ../ssms/scripting/database-engine-query-editor-sql-server-management-studio.md
+                    - name: Редактор XML
+                      href: ../ssms/scripting/xml-editor-sql-server-management-studio.md
+                    - name: Выделение цветом в редакторах запросов
+                      href: ../ssms/scripting/color-coding-in-query-editors.md
+                - name: Структурирование кода
+                  href: ../ssms/scripting/code-outlining.md
+                - name: Перетаскивание текста
+                  href: ../ssms/scripting/drag-and-drop-text.md
+                - name: Поиск и замена
+                  href: ../ssms/scripting/search-and-replace.md
+                  items:
+                    - name: Выполнение добавочного поиска в активном документе
+                      href: ../ssms/scripting/search-an-active-document-incrementally.md
+                    - name: осуществлять поиск в документах в интерактивном режиме
+                      href: ../ssms/scripting/search-documents-interactively.md
+                    - name: Поиск документов с помощью списков результатов
+                      href: ../ssms/scripting/search-documents-using-results-lists.md
+                    - name: Поиск текста с символами-шаблонами
+                      href: ../ssms/scripting/search-text-with-wildcards.md
+                    - name: Поиск текста с помощью регулярных выражений
+                      href: ../ssms/scripting/search-text-with-regular-expressions.md
+                    - name: Поиск и замена
+                      href: ../ssms/scripting/find-and-replace.md
+                    - name: Найти в файлах
+                      href: ../ssms/scripting/find-in-files.md
+                    - name: Окна «Результаты поиска»
+                      href: ../ssms/scripting/find-results-windows.md
+                    - name: Замена в файлах
+                      href: ../ssms/scripting/replace-in-files.md
+                - name: Управление закладками
+                  href: ../ssms/scripting/manage-bookmarks.md
+                  items:
+                    - name: Справка F1 по закладкам
+                      href: ../ssms/scripting/bookmarks-f1-help.md
+                - name: Печать кода и результаты
+                  href: ../ssms/scripting/print-code-and-results.md
+                - name: технология IntelliSense
+                  href: ../ssms/scripting/intellisense-sql-server-management-studio.md
+                  items:
+                    - name: Настройка технологии IntelliSense
+                      href: ../ssms/scripting/configure-intellisense-sql-server-management-studio.md
+                    - name: Сведения о параметре (технология IntelliSense)
+                      href: ../ssms/scripting/parameter-info-intellisense.md
+                    - name: Краткие сведения (технология IntelliSense)
+                      href: ../ssms/scripting/quick-info-intellisense.md
+                    - name: Автоматическое завершение слов (технология IntelliSense)
+                      href: ../ssms/scripting/complete-word-intellisense.md
+                    - name: Автоматическое сопоставление синтаксических пар
+                      href: ../ssms/scripting/automatic-matching-of-syntax-pairs.md
+                    - name: Устранение неполадок (технология IntelliSense)
+                      href: ../ssms/scripting/troubleshooting-intellisense.md
+                    - name: Синтаксис T-SQL с поддержкой технологии IntelliSense
+                      href: ../ssms/scripting/transact-sql-syntax-supported-by-intellisense.md
+                - name: Фрагменты кода T-SQL
+                  href: ../ssms/scripting/transact-sql-code-snippets.md
+                  items:
+                    - name: Вставка фрагментов кода T-SQL
+                      href: ../ssms/scripting/insert-transact-sql-snippets.md
+                    - name: Вставка фрагментов кода окружения T-SQL
+                      href: ../ssms/scripting/insert-surround-with-transact-sql-snippets.md
+                    - name: Завершение фрагментов кода T-SQL
+                      href: ../ssms/scripting/complete-transact-sql-snippets.md
+                    - name: Добавление фрагментов кода T-SQL
+                      href: ../ssms/scripting/add-transact-sql-snippets.md
+                - name: Отладчик T-SQL.
+                  href: ../ssms/scripting/transact-sql-debugger.md
+                  items:
+                    - name: Настройка правил брандмауэра перед запуском отладчика T-SQL
+                      href: ../ssms/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md
+                    - name: Запуск отладчика T-SQL
+                      href: ../ssms/scripting/run-the-transact-sql-debugger.md
+                    - name: Пошаговая отладка кода T-SQL
+                      href: ../ssms/scripting/step-through-transact-sql-code.md
+                    - name: Точки останова T-SQL
+                      href: ../ssms/scripting/transact-sql-breakpoints.md
+                      items:
+                        - name: Переключение точки останова
+                          href: ../ssms/scripting/toggle-a-breakpoint.md
+                        - name: 'Включение, отключение и удаление точек останова'
+                          href: ../ssms/scripting/enable-disable-and-delete-breakpoints.md
+                        - name: Задание условия точки останова
+                          href: ../ssms/scripting/specify-a-breakpoint-condition.md
+                        - name: Настройка счетчика числа попаданий
+                          href: ../ssms/scripting/specify-a-hit-count.md
+                        - name: Задание фильтра точек останова
+                          href: ../ssms/scripting/specify-a-breakpoint-filter.md
+                        - name: Задание действия в точке останова
+                          href: ../ssms/scripting/specify-a-breakpoint-action.md
+                        - name: Изменение положения точки останова
+                          href: ../ssms/scripting/edit-a-breakpoint-location.md
+                    - name: Отладчик T-SQL. Сведения
+                      href: ../ssms/scripting/transact-sql-debugger-information.md
+                      items:
+                        - name: Отладчик T-SQL. Окно списка ошибок
+                          href: ../ssms/scripting/transact-sql-debugger-error-list-window.md
+                        - name: Отладчик T-SQL. Точки останова
+                          href: ../ssms/scripting/transact-sql-debugger-breakpoints-window.md
+                        - name: Отладчик T-SQL. Окно стека вызовов
+                          href: ../ssms/scripting/transact-sql-debugger-call-stack-window.md
+                        - name: Отладчик T-SQL. Окно локальных переменных
+                          href: ../ssms/scripting/transact-sql-debugger-locals-window.md
+                        - name: Отладчик T-SQL. Окно цепочек
+                          href: ../ssms/scripting/transact-sql-debugger-threads-window.md
+                        - name: Отладчик T-SQL. Окно командной строки
+                          href: ../ssms/scripting/transact-sql-debugger-command-window.md
+                        - name: Отладчик T-SQL. Окно вывода
+                          href: ../ssms/scripting/transact-sql-debugger-output-window.md
+                        - name: Отладчик T-SQL. Окно контрольных значений
+                          href: ../ssms/scripting/transact-sql-debugger-watch-window.md
+                        - name: Отладчик T-SQL. Диалоговое окно быстрой проверки
+                          href: ../ssms/scripting/transact-sql-debugger-quickwatch-dialog-box.md
+                    - name: Строка состояния (редактор запросов к ядру СУБД)
+                      href: ../ssms/scripting/status-bar-database-engine-query-editor.md
+                    - name: Просмотр пространственных данных в обозревателе объектов
+                      href: ../ssms/scripting/view-spatial-data-in-object-explorer.md
+                      items:
+                        - name: Окно «Пространственные результаты»
+                          href: ../ssms/scripting/spatial-results-window.md
+                        - name: Создание скриптов
+                          href: ../ssms/scripting/generate-scripts-sql-server-management-studio.md
+                          items:
+                            - name: Мастер формирования и публикации скриптов
+                              href: ../ssms/scripting/generate-and-publish-scripts-wizard.md
+                              items:
+                                - name: 'Объекты, поддерживаемые мастером создания скриптов'
+                                  href: ../ssms/scripting/objects-supported-by-the-generate-scripts-wizard.md
+        - name: Практические руководства
+          items:
+            - name: SSMS
+              items:
+                - name: Настройка меню и сочетаний клавиш
+                  href: ../ssms/customize-menus-and-shortcut-keys.md
+                - name: Настройка инструментария WMI для отображения состояния сервера в инструментальных средствах SQL Server
+                  href: ../ssms/configure-wmi-to-show-server-status-in-sql-server-tools.md
+                - name: Настройка аудита входа
+                  href: ../ssms/configure-login-auditing-sql-server-management-studio.md
+                - name: Диагностика
+                  items:
+                    - name: Создать полный дамп памяти
+                      href: ../ssms/troubleshoot/get-full-memory-dump.md
+            - name: "Агент SQL\_Server"
+              items:
+                - name: Configure
+                  items:
+                    - name: Configure
+                      href: ../ssms/agent/configure-sql-server-agent.md
+                    - name: Назначение задания в категорию заданий
+                      href: ../ssms/agent/assign-a-job-to-a-job-category.md
+                    - name: Assign Alerts to an Operator
+                      href: ../ssms/agent/assign-alerts-to-an-operator.md
+                    - name: Автоматическое удаление задания
+                      href: ../ssms/agent/automatically-delete-a-job.md
+                    - name: Автозапуск агента SQL Server
+                      href: ../ssms/agent/autostart-sql-server-agent-sql-server-management-studio.md
+                    - name: Изменение доступности оператора
+                      href: ../ssms/agent/change-an-operator-s-availability.md
+                    - name: Change the Membership of a Job Category
+                      href: ../ssms/agent/change-the-membership-of-a-job-category.md
+                    - name: Выбор правильной учетной записи службы агента SQL Server для многосерверных сред
+                      href: ../ssms/agent/choose-the-right-sql-server-agent-service-account-for-multiserver-environments.md
+                    - name: Clear the Job History Log
+                      href: ../ssms/agent/clear-the-job-history-log.md
+                    - name: "Настройка пользователя для создания заданий агента SQL\_Server и управления ими"
+                      href: ../ssms/agent/configure-a-user-to-create-and-manage-sql-server-agent-jobs.md
+                    - name: Прикрепление целевого сервера к главному
+                      href: ../ssms/agent/enlist-a-target-server-to-a-master-server.md
+                    - name: Force a Target Server to Poll the Master Server
+                      href: ../ssms/agent/force-a-target-server-to-poll-the-master-server.md
+                    - name: Format Pager Addresses for Alerts
+                      href: ../ssms/agent/format-pager-addresses-for-alerts.md
+                    - name: Give Others Ownership of a Job
+                      href: ../ssms/agent/give-others-ownership-of-a-job.md
+                    - name: Обработка множественных шагов задания
+                      href: ../ssms/agent/handle-multiple-job-steps.md
+                    - name: Просмотр сведений о категории задания
+                      href: ../ssms/agent/list-job-category-information.md
+                    - name: Make a Master Server
+                      href: ../ssms/agent/make-a-master-server.md
+                    - name: Создание целевого сервера
+                      href: ../ssms/agent/make-a-target-server.md
+                    - name: Управление событиями
+                      href: ../ssms/agent/manage-events.md
+                    - name: Управление шагами задания
+                      href: ../ssms/agent/manage-job-steps.md
+                    - name: Управление заданиями в масштабе предприятия
+                      href: ../ssms/agent/manage-jobs-across-an-enterprise.md
+                    - name: Управление расписаниями
+                      href: ../ssms/agent/manage-schedules.md
+                    - name: Изменение задания
+                      href: ../ssms/agent/modify-a-job.md
+                    - name: Изменение задания агента главного сервера SQL Server
+                      href: ../ssms/agent/modify-a-sql-server-agent-master-job.md
+                    - name: Modify a SQL Server Agent Proxy
+                      href: ../ssms/agent/modify-a-sql-server-agent-proxy.md
+                    - name: 'Изменение целевых серверов, связанных с главным заданием агента SQL Server'
+                      href: ../ssms/agent/modify-the-target-server-s-associated-with-a-sql-server-agent-master-job.md
+                    - name: Modify the Target Servers for a Job
+                      href: ../ssms/agent/modify-the-target-servers-for-a-job.md
+                    - name: Наблюдение за активностью заданий
+                      href: ../ssms/agent/monitor-job-activity.md
+                    - name: Создание расписания задания — свойства расписания задания
+                      href: ../ssms/agent/new-job-schedule-job-schedule-properties.md
+                    - name: Notify an Operator of Job Status
+                      href: ../ssms/agent/notify-an-operator-of-job-status.md
+                    - name: Операторы
+                      href: ../ssms/agent/operators.md
+                    - name: упорядочивание заданий
+                      href: ../ssms/agent/organize-jobs.md
+                    - name: Выбор расписания для задания
+                      href: ../ssms/agent/pick-schedule-for-job.md
+                    - name: Опрос серверов
+                      href: ../ssms/agent/poll-servers.md
+                    - name: Редактор учетной записи-посредника — добавление участника
+                      href: ../ssms/agent/proxy-editor-add-principal.md
+                    - name: Remove Steps from a SQL Server Agent Master Job
+                      href: ../ssms/agent/remove-steps-from-a-sql-server-agent-master-job.md
+                    - name: Resize the Job History Log
+                      href: ../ssms/agent/resize-the-job-history-log.md
+                    - name: Запуск заданий
+                      href: ../ssms/agent/run-jobs.md
+                    - name: Schedule a Job
+                      href: ../ssms/agent/schedule-a-job.md
+                    - name: Выбор учетной записи для службы агента SQL Server
+                      href: ../ssms/agent/select-an-account-for-the-sql-server-agent-service.md
+                    - name: Send SQL Server Agent Error Messages
+                      href: ../ssms/agent/send-sql-server-agent-error-messages.md
+                    - name: Указание расположения целевого сервера (SSMS)
+                      href: ../ssms/agent/specify-a-target-server-s-location-sql-server-management-studio.md
+                    - name: Определение ответов заданий
+                      href: ../ssms/agent/specify-job-responses.md
+                    - name: Предопределенные роли базы данных агента SQL Server
+                      href: ../ssms/agent/sql-server-agent-fixed-database-roles.md
+                    - name: Синхронизация часов целевых серверов (SSMS)
+                      href: ../ssms/agent/synchronize-target-server-clocks-sql-server-management-studio.md
+                    - name: 'Устранение неполадок, связанных с многосерверными заданиями, использующими учетные записи-посредники'
+                      href: ../ssms/agent/troubleshoot-multiserver-jobs-that-use-proxies.md
+                    - name: Настройка автоматизированного администрирования в организации
+                      href: ../ssms/agent/tune-automated-administration-across-an-enterprise.md
+                    - name: Использование объектов производительности
+                      href: ../ssms/agent/use-performance-objects.md
+                    - name: Использование токенов в шагах задания
+                      href: ../ssms/agent/use-tokens-in-job-steps.md
+                    - name: Запись данных о состоянии задания в журнал приложений Windows
+                      href: ../ssms/agent/write-the-job-status-to-the-windows-application-log.md
+                - name: Создание
+                  items:
+                    - name: Шаг задания CmdExec
+                      href: ../ssms/agent/create-a-cmdexec-job-step.md
+                    - name: Категория задания
+                      href: ../ssms/agent/create-a-job-category.md
+                    - name: Задание
+                      href: ../ssms/agent/create-a-job.md
+                    - name: Многосерверная среда
+                      href: ../ssms/agent/create-a-multiserver-environment.md
+                    - name: Шаг задания скрипта PowerShell
+                      href: ../ssms/agent/create-a-powershell-script-job-step.md
+                    - name: Расписание
+                      href: ../ssms/agent/create-a-schedule.md
+                    - name: "Главное задание агента SQL\_Server"
+                      href: ../ssms/agent/create-a-sql-server-agent-master-job.md
+                    - name: "Прокси-агент SQL\_Server"
+                      href: ../ssms/agent/create-a-sql-server-agent-proxy.md
+                    - name: Шаг задания T-SQL
+                      href: ../ssms/agent/create-a-transact-sql-job-step.md
+                    - name: Пользовательское событие
+                      href: ../ssms/agent/create-a-user-defined-event.md
+                    - name: Предупреждение о событии инструментария WMI
+                      href: ../ssms/agent/create-a-wmi-event-alert.md
+                    - name: Шаг задания скрипта ActiveX
+                      href: ../ssms/agent/create-an-activex-script-job-step.md
+                    - name: Предупреждение по номеру ошибки
+                      href: ../ssms/agent/create-an-alert-using-an-error-number.md
+                    - name: Предупреждение с указанием степени серьезности
+                      href: ../ssms/agent/create-an-alert-using-severity-level.md
+                    - name: Шаг задания служб Analysis Services
+                      href: ../ssms/agent/create-an-analysis-services-job-step.md
+                    - name: Оператор
+                      href: ../ssms/agent/create-an-operator.md
+                    - name: Создание и присоединение расписаний к заданиям
+                      href: ../ssms/agent/create-and-attach-schedules-to-jobs.md
+                    - name: Задания
+                      href: ../ssms/agent/create-jobs.md
+                - name: Отключение
+                  items:
+                    - name: целевого сервера от главного сервера
+                      href: ../ssms/agent/defect-a-target-server-from-a-master-server.md
+                    - name: нескольких целевых серверов от главного
+                      href: ../ssms/agent/defect-multiple-target-servers-from-a-master-server.md
+                - name: Определение
+                  items:
+                    - name: Ответ на предупреждение (SSMS)
+                      href: ../ssms/agent/define-the-response-to-an-alert-sql-server-management-studio.md
+                    - name: Параметры шага задания T-SQL
+                      href: ../ssms/agent/define-transact-sql-job-step-options.md
+                - name: DELETE
+                  items:
+                    - name: Категория задания
+                      href: ../ssms/agent/delete-a-job-category.md
+                    - name: Журнал шага задания
+                      href: ../ssms/agent/delete-a-job-step-log.md
+                    - name: "Прокси-агент SQL\_Server"
+                      href: ../ssms/agent/delete-a-sql-server-agent-proxy.md
+                    - name: Предупреждение
+                      href: ../ssms/agent/delete-an-alert.md
+                    - name: Оператор
+                      href: ../ssms/agent/delete-an-operator.md
+                    - name: Задания
+                      href: ../ssms/agent/delete-jobs.md
+                    - name: Одно задание или несколько
+                      href: ../ssms/agent/delete-one-or-more-jobs.md
+                    - name: Оператор
+                      href: ../ssms/agent/delete-operator.md
+                - name: Назначение
+                  items:
+                    - name: Резервный оператор
+                      href: ../ssms/agent/designate-a-fail-safe-operator.md
+                    - name: Сервер пересылки событий (SSMS)
+                      href: ../ssms/agent/designate-an-events-forwarding-server-sql-server-management-studio.md
+                - name: Отключить
+                  items:
+                    - name: Disable or Enable a Job
+                      href: ../ssms/agent/disable-or-enable-a-job.md
+                    - name: Disable or Reactivate an Alert
+                      href: ../ssms/agent/disable-or-reactivate-an-alert.md
+                - name: Изменить
+                  items:
+                    - name: Изменение предупреждения
+                      href: ../ssms/agent/edit-an-alert.md
+                    - name: Изменение оператора
+                      href: ../ssms/agent/edit-an-operator.md
+                - name: Присвойте параметру
+                  items:
+                    - name: "Псевдоним для службы агента SQL\_Server"
+                      href: ../ssms/agent/set-sql-server-alias-for-sql-server-agent-service-ssms.md
+                    - name: Время и продолжительность простоя ЦП (SSMS)
+                      href: ../ssms/agent/set-cpu-idle-time-and-duration-sql-server-management-studio.md
+                    - name: Параметры шифрования на целевых серверах
+                      href: ../ssms/agent/set-encryption-options-on-target-servers.md
+                    - name: Завершение выполнения задания (SSMS)
+                      href: ../ssms/agent/set-job-execution-shutdown-sql-server-management-studio.md
+                    - name: Поток действий системы при успешном или неуспешном выполнении шага задания
+                      href: ../ssms/agent/set-job-step-success-or-failure-flow.md
+                    - name: Интервал опроса на целевых серверах
+                      href: ../ssms/agent/set-the-polling-interval-for-target-servers.md
+                    - name: "Учетная запись запуска службы для агента SQL\_Server"
+                      href: ../ssms/agent/set-service-startup-account-sql-server-agent-sql-server-configuration-manager.md
+                    - name: "Подключение к SQL\_Server для службы агента"
+                      href: ../ssms/agent/set-sql-server-connection-for-sql-server-agent-service-ssms.md
+                    - name: Журнал заданий
+                      href: ../ssms/agent/set-up-the-job-history-log.md
+                - name: Запуск и остановка
+                  items:
+                    - name: Запуск задания
+                      href: ../ssms/agent/start-a-job.md
+                    - name: 'Start, Stop, or Pause the SQL Server Agent Service'
+                      href: ../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md
+                    - name: Остановка задания
+                      href: ../ssms/agent/stop-a-job.md
+                - name: Представление
+                  items:
+                    - name: Задание
+                      href: ../ssms/agent/view-a-job.md
+                    - name: Сведения о предупреждении
+                      href: ../ssms/agent/view-information-about-an-alert.md
+                    - name: Сведения об операторе
+                      href: ../ssms/agent/view-information-about-an-operator.md
+                    - name: Активность заданий
+                      href: ../ssms/agent/view-job-activity.md
+                    - name: Сведения о шаге задания
+                      href: ../ssms/agent/view-job-step-information.md
+                    - name: Просмотр или изменение заданий
+                      href: ../ssms/agent/view-or-modify-jobs.md
+                    - name: Журнал заданий
+                      href: ../ssms/agent/view-the-job-history.md
+                - name: Журнал ошибок
+                  items:
+                    - name: Журнал ошибок
+                      href: ../ssms/agent/sql-server-agent-error-log.md
+                    - name: "Просмотр журнала ошибок агента SQL\_Server"
+                      href: ../ssms/agent/view-sql-server-agent-error-log-sql-server-management-studio.md
+                    - name: Переименование журнала ошибок агента SQL Server (SSMS)
+                      href: ../ssms/agent/rename-a-sql-server-agent-error-log-sql-server-management-studio.md
+                    - name: Запись сообщений трассировки выполнения в журнал ошибок агента SQL Server (SSMS)
+                      href: ../ssms/agent/write-execution-trace-messages-to-sql-server-agent-log-ssms.md
+            - name: Регистрация серверов
+              items:
+                - name: Просмотр зарегистрированных серверов в среде SQL Server Management Studio
+                  href: ../ssms/register-servers/view-registered-servers-in-sql-server-management-studio.md
+                - name: Удаление зарегистрированного сервера
+                  href: ../ssms/register-servers/remove-a-registered-server-sql-server-management-studio.md
+                - name: Изменение регистрации сервера
+                  href: ../ssms/register-servers/change-a-server-s-registration-sql-server-management-studio.md
+                - name: Подключение к зарегистрированному серверу
+                  href: ../ssms/register-servers/connect-to-a-registered-server-sql-server-management-studio.md
+                - name: Отключение от зарегистрированного сервера
+                  href: ../ssms/register-servers/disconnect-from-a-registered-server-sql-server-management-studio.md
+                - name: Перемещение зарегистрированного сервера или зарегистрированной группы серверов
+                  href: ../ssms/register-servers/move-a-registered-server-or-registered-server-group.md
+                - name: Изменение имени зарегистрированного сервера или зарегистрированной группы серверов
+                  href: ../ssms/register-servers/change-the-name-of-registered-server-or-registered-server-group.md
+                - name: Создание или изменение группы серверов
+                  href: ../ssms/register-servers/create-or-edit-a-server-group-sql-server-management-studio.md
+                - name: Удаление группы серверов
+                  href: ../ssms/register-servers/remove-a-server-group-sql-server-management-studio.md
+                - name: Экспорт сведений о зарегистрированном сервере
+                  href: ../ssms/register-servers/export-registered-server-information-sql-server-management-studio.md
+                - name: Импорт сведений о зарегистрированном сервере
+                  href: ../ssms/register-servers/import-registered-server-information-sql-server-management-studio.md
+            - name: Написание скриптов
+              items:
                 - name: Настройка редакторов
                   href: ../ssms/scripting/configure-editors-sql-server-management-studio.md
-                  items:
-                    - name: Связывание расширения файла с редактором кода
-                      href: ../ssms/scripting/associate-file-extensions-to-a-code-editor.md
-                    - name: 'Изменение цвета, размера и стиля шрифта'
-                      href: ../ssms/scripting/change-font-color-size-and-style.md
-                    - name: Использование окна «Свойства» в среде Management Studio
-                      href: ../ssms/scripting/use-the-properties-window-in-management-studio.md
+                - name: Связывание расширения файла с редактором кода
+                  href: ../ssms/scripting/associate-file-extensions-to-a-code-editor.md
+                - name: 'Изменение цвета, размера и стиля шрифта'
+                  href: ../ssms/scripting/change-font-color-size-and-style.md
+                - name: Использование окна «Свойства» в среде Management Studio
+                  href: ../ssms/scripting/use-the-properties-window-in-management-studio.md
                 - name: Открытие редактора
                   href: ../ssms/scripting/open-an-editor-sql-server-management-studio.md
                 - name: Управление режимами редактирования и просмотра
@@ -9184,141 +9366,20 @@
                   href: ../ssms/scripting/manage-code-formatting.md
                 - name: Перемещение по коду и тексту
                   href: ../ssms/scripting/navigate-code-and-text.md
-                - name: Выделение цветом в редакторах запросов
-                  href: ../ssms/scripting/color-coding-in-query-editors.md
-            - name: Структурирование кода
-              href: ../ssms/scripting/code-outlining.md
-            - name: Перетаскивание текста
-              href: ../ssms/scripting/drag-and-drop-text.md
-            - name: Поиск и замена
-              href: ../ssms/scripting/search-and-replace.md
-              items:
-                - name: Выполнение добавочного поиска в активном документе
-                  href: ../ssms/scripting/search-an-active-document-incrementally.md
-                - name: осуществлять поиск в документах в интерактивном режиме
-                  href: ../ssms/scripting/search-documents-interactively.md
-                - name: Поиск документов с помощью списков результатов
-                  href: ../ssms/scripting/search-documents-using-results-lists.md
-                - name: Поиск текста с символами-шаблонами
-                  href: ../ssms/scripting/search-text-with-wildcards.md
-                - name: Поиск текста с помощью регулярных выражений
-                  href: ../ssms/scripting/search-text-with-regular-expressions.md
-                - name: Поиск и замена
-                  href: ../ssms/scripting/find-and-replace.md
-                - name: Найти в файлах
-                  href: ../ssms/scripting/find-in-files.md
-                - name: Окна «Результаты поиска»
-                  href: ../ssms/scripting/find-results-windows.md
-                - name: Замена в файлах
-                  href: ../ssms/scripting/replace-in-files.md
-            - name: Управление закладками
-              href: ../ssms/scripting/manage-bookmarks.md
-              items:
-                - name: Справка F1 по закладкам
-                  href: ../ssms/scripting/bookmarks-f1-help.md
-            - name: Печать кода и результаты
-              href: ../ssms/scripting/print-code-and-results.md
-            - name: Изменение скриптов SQLCMD при помощи редактора запросов
-              href: ../ssms/scripting/edit-sqlcmd-scripts-with-query-editor.md
-            - name: технология IntelliSense
-              href: ../ssms/scripting/intellisense-sql-server-management-studio.md
-              items:
-                - name: Настройка технологии IntelliSense
-                  href: ../ssms/scripting/configure-intellisense-sql-server-management-studio.md
-                - name: Сведения о параметре (технология IntelliSense)
-                  href: ../ssms/scripting/parameter-info-intellisense.md
-                - name: Краткие сведения (технология IntelliSense)
-                  href: ../ssms/scripting/quick-info-intellisense.md
-                - name: Автоматическое завершение слов (технология IntelliSense)
-                  href: ../ssms/scripting/complete-word-intellisense.md
-                - name: Автоматическое сопоставление синтаксических пар
-                  href: ../ssms/scripting/automatic-matching-of-syntax-pairs.md
-                - name: Устранение неполадок (технология IntelliSense)
-                  href: ../ssms/scripting/troubleshooting-intellisense.md
-                - name: Синтаксис T-SQL с поддержкой технологии IntelliSense
-                  href: ../ssms/scripting/transact-sql-syntax-supported-by-intellisense.md
-            - name: Фрагменты кода T-SQL
-              href: ../ssms/scripting/transact-sql-code-snippets.md
-              items:
-                - name: Вставка фрагментов кода T-SQL
-                  href: ../ssms/scripting/insert-transact-sql-snippets.md
-                - name: Вставка фрагментов кода окружения T-SQL
-                  href: ../ssms/scripting/insert-surround-with-transact-sql-snippets.md
-                - name: Завершение фрагментов кода T-SQL
-                  href: ../ssms/scripting/complete-transact-sql-snippets.md
-                - name: Добавление фрагментов кода T-SQL
-                  href: ../ssms/scripting/add-transact-sql-snippets.md
-            - name: Отладчик T-SQL.
-              href: ../ssms/scripting/transact-sql-debugger.md
-              items:
-                - name: Настройка правил брандмауэра перед запуском отладчика T-SQL
-                  href: ../ssms/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md
-                - name: Запуск отладчика T-SQL
-                  href: ../ssms/scripting/run-the-transact-sql-debugger.md
-                - name: Пошаговая отладка кода T-SQL
-                  href: ../ssms/scripting/step-through-transact-sql-code.md
-                - name: Точки останова T-SQL
-                  href: ../ssms/scripting/transact-sql-breakpoints.md
-                  items:
-                    - name: Переключение точки останова
-                      href: ../ssms/scripting/toggle-a-breakpoint.md
-                    - name: 'Включение, отключение и удаление точек останова'
-                      href: ../ssms/scripting/enable-disable-and-delete-breakpoints.md
-                    - name: Задание условия точки останова
-                      href: ../ssms/scripting/specify-a-breakpoint-condition.md
-                    - name: Настройка счетчика числа попаданий
-                      href: ../ssms/scripting/specify-a-hit-count.md
-                    - name: Задание фильтра точек останова
-                      href: ../ssms/scripting/specify-a-breakpoint-filter.md
-                    - name: Задание действия в точке останова
-                      href: ../ssms/scripting/specify-a-breakpoint-action.md
-                    - name: Изменение положения точки останова
-                      href: ../ssms/scripting/edit-a-breakpoint-location.md
-                - name: Отладчик T-SQL. Сведения
-                  href: ../ssms/scripting/transact-sql-debugger-information.md
-                  items:
-                    - name: Отладчик T-SQL. Окно списка ошибок
-                      href: ../ssms/scripting/transact-sql-debugger-error-list-window.md
-                    - name: Отладчик T-SQL. Точки останова
-                      href: ../ssms/scripting/transact-sql-debugger-breakpoints-window.md
-                    - name: Отладчик T-SQL. Окно стека вызовов
-                      href: ../ssms/scripting/transact-sql-debugger-call-stack-window.md
-                    - name: Отладчик T-SQL. Окно локальных переменных
-                      href: ../ssms/scripting/transact-sql-debugger-locals-window.md
-                    - name: Отладчик T-SQL. Окно цепочек
-                      href: ../ssms/scripting/transact-sql-debugger-threads-window.md
-                    - name: Отладчик T-SQL. Окно командной строки
-                      href: ../ssms/scripting/transact-sql-debugger-command-window.md
-                    - name: Отладчик T-SQL. Окно вывода
-                      href: ../ssms/scripting/transact-sql-debugger-output-window.md
-                    - name: Отладчик T-SQL. Окно контрольных значений
-                      href: ../ssms/scripting/transact-sql-debugger-watch-window.md
-                    - name: Отладчик T-SQL. Диалоговое окно быстрой проверки
-                      href: ../ssms/scripting/transact-sql-debugger-quickwatch-dialog-box.md
-                - name: Строка состояния (редактор запросов к ядру СУБД)
-                  href: ../ssms/scripting/status-bar-database-engine-query-editor.md
-                - name: Просмотр пространственных данных в обозревателе объектов
-                  href: ../ssms/scripting/view-spatial-data-in-object-explorer.md
-                  items:
-                    - name: Окно «Пространственные результаты»
-                      href: ../ssms/scripting/spatial-results-window.md
-                    - name: Создание скриптов
-                      href: ../ssms/scripting/generate-scripts-sql-server-management-studio.md
-                      items:
-                        - name: Мастер формирования и публикации скриптов
-                          href: ../ssms/scripting/generate-and-publish-scripts-wizard.md
-                          items:
-                            - name: 'Объекты, поддерживаемые мастером создания скриптов'
-                              href: ../ssms/scripting/objects-supported-by-the-generate-scripts-wizard.md
-        - name: Диагностика
-          items:
-            - name: Создать полный дамп памяти
-              href: ../ssms/troubleshoot/get-full-memory-dump.md
+                - name: Изменение скриптов SQLCMD при помощи редактора запросов
+                  href: ../ssms/scripting/edit-sqlcmd-scripts-with-query-editor.md
         - name: Ссылки
           items:
+            - name: SQL Server PowerShell
+              href: ../powershell/sql-server-powershell.md
+            - name: Управляющие объекты SQL Server (SMO)
+              href: ../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md
+            - name: Справочник по Transact-SQL (компонент Database Engine)
+              href: ../t-sql/language-reference.md
             - name: Среда SSMS
-              href: ../ssms/the-sql-server-management-studio-environment.md
               items:
+                - name: Среда SSMS
+                  href: ../ssms/the-sql-server-management-studio-environment.md
                 - name: Общие элементы пользовательского интерфейса
                   href: ../ssms/general-user-interface-elements.md
                 - name: диалоговое окно «Аргументы»
@@ -9337,9 +9398,10 @@
                   href: ../ssms/output-window.md
                 - name: Использование панели элементов
                   href: ../ssms/use-the-toolbox.md
-            - name: Справка F1 по подключению к серверу (SSMS)
-              href: ../ssms/f1-help/f1-help-for-server-connections-sql-server-management-studio.md
+            - name: Справка F1
               items:
+                - name: Справка F1 по подключению к серверу (SSMS)
+                  href: ../ssms/f1-help/f1-help-for-server-connections-sql-server-management-studio.md
                 - name: Подключение к службе хранилища Microsoft Azure
                   href: ../ssms/f1-help/connect-to-microsoft-azure-storage.md
                 - name: Подключение к любому компоненту сервера SQL Server из среды SQL Server Management Studio
@@ -9430,9 +9492,10 @@
                   href: ../ssms/object/object-explorer.md
                 - name: Add Steps to a SQL Server Agent Master Job
                   href: ../ssms/object/add-steps-to-a-sql-server-agent-master-job.md
-            - name: Управление объектами с помощью обозревателя объектов
-              href: ../ssms/object/manage-objects-by-using-object-explorer.md
+            - name: Управление объектами
               items:
+                - name: Управление объектами с помощью обозревателя объектов
+                  href: ../ssms/object/manage-objects-by-using-object-explorer.md
                 - name: Использование пользовательских отчетов совместно со свойствами узлов обозревателя объектов
                   href: ../ssms/object/use-custom-reports-with-object-explorer-node-properties.md
                 - name: Зависимости между объектами
@@ -9470,8 +9533,9 @@
                 - name: Отмена подавления предупреждений для пользовательских отчетов
                   href: ../ssms/object/unsuppress-run-custom-report-warnings.md
             - name: Обозреватель решений
-              href: ../ssms/solution/solution-explorer.md
               items:
+                - name: Обозреватель решений
+                  href: ../ssms/solution/solution-explorer.md
                 - name: Копирование элементов в решении
                   href: ../ssms/solution/copy-items-in-a-solution.md
                 - name: Файлы для управления решениями и проектами
@@ -9516,16 +9580,18 @@
                   href: ../ssms/solution/add-existing-items-to-a-project.md
                 - name: Создание нового решения
                   href: ../ssms/solution/create-a-new-solution.md
-            - name: Template Explorer
-              href: ../ssms/template/template-explorer.md
+            - name: Обозреватель шаблонов
               items:
+                - name: Template Explorer
+                  href: ../ssms/template/template-explorer.md
                 - name: Открытие шаблона
                   href: ../ssms/template/open-a-template.md
                 - name: Замена параметров шаблона
                   href: ../ssms/template/replace-template-parameters.md
-            - name: Visual Database Tools
-              href: ../ssms/visual-db-tools/visual-database-tools.md
+            - name: Визуальные инструменты базы данных
               items:
+                - name: Visual Database Tools
+                  href: ../ssms/visual-db-tools/visual-database-tools.md
                 - name: Диалоговое окно "Добавление таблицы" (конструкторы запросов и представлений)
                   href: ../ssms/visual-db-tools/add-table-dialog-box-query-and-view-designers-visual-database-tools.md
                 - name: Диалоговое окно "Сохранить скрипт изменений"
@@ -9818,7 +9884,7 @@
                   href: ../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md
                 - name: Размещение таблиц в диаграммах
                   href: ../ssms/visual-db-tools/arrange-tables-in-diagrams-visual-database-tools.md
-                - name: Пошаговое руководство. Добавление и изменение диаграммы базы данных
+                - name: Добавление и изменение диаграммы базы данных
                   href: ../ssms/visual-db-tools/walkthrough-adding-and-changing-a-database-diagram.md
                 - name: Свойства табличного объекта (столбца)
                   href: ../ssms/visual-db-tools/table-valued-object-column-properties-visual-database-tools.md
@@ -9886,6 +9952,26 @@
                   href: ../ssms/visual-db-tools/print-query-results-visual-database-tools.md
         - name: Ресурсы
           items:
+            - name: SQL Server Management Studio
+              href: ../ssms/tutorials/tutorial-sql-server-management-studio.md
+            - name: Политика поддержки SSMS
+              href: ../ssms/support-policy.md
+            - name: Варианты поддержки для бизнес-пользователей
+              href: 'https://support.microsoft.com/gp/support-options-for-business'
+            - name: Обратиться в Майкрософт
+              href: 'https://support.microsoft.com/gp/contactus81?Audience=Commercial'
+            - name: Способы обратной связи
+              href: 'https://docs.microsoft.com/sql/sql-server/sql-server-get-help'
+            - name: "UserVoice\_— предложения по улучшению SQL Server"
+              href: 'https://feedback.azure.com/forums/908035-sql-server'
+            - name: "Установка и обновление\_— форумы MSDN"
+              href: 'https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsetupandupgrade&filter=alltypes&sort=lastpostdesc'
+            - name: "Transact-SQL\_— форумы MSDN"
+              href: 'https://social.msdn.microsoft.com/Forums/en-US/home?forum=transactsql'
+            - name: "Stack\_Overflow"
+              href: 'https://stackoverflow.com/questions/tagged/sql-server'
+            - name: Условия лицензии и информация по Microsoft® SQL Server
+              href: 'https://www.microsoft.com/download/details.aspx?id=39299'
             - name: Справка и поддержка пользователей в SSMS
               href: ../ssms/user-assistance-in-sql-server-management-studio.md
             - name: Анонимные данные об использовании
@@ -12278,8 +12364,6 @@
               href: ../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md
             - name: sys.dm_db_log_stats
               href: ../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md
-            - name: sys.dm_db_objects_impacted_on_version_change (база данных SQL Azure)
-              href: ../relational-databases/system-dynamic-management-views/sys-dm-db-objects-impacted-on-version-change-azure-sql-database.md
             - name: sys.dm_db_page_info
               href: ../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md
             - name: sys.dm_db_partition_stats
@@ -12292,14 +12376,20 @@
               href: ../relational-databases/system-dynamic-management-views/sys-dm-db-task-space-usage-transact-sql.md
             - name: sys.dm_db_uncontained_entities
               href: ../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md
+            - name: sys.dm_database_copies (база данных SQL Azure)
+              href: ../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md
+            - name: sys.dm_database_replica_states (база данных SQL Azure)
+              href: ../relational-databases/system-dynamic-management-views/sys-dm-database-replica-states-azure-sql-database.md
+            - name: sys.dm_db_objects_impacted_on_version_change (база данных SQL Azure)
+              href: ../relational-databases/system-dynamic-management-views/sys-dm-db-objects-impacted-on-version-change-azure-sql-database.md
+            - name: sys.dm_db_resource_stats (база данных SQL Azure)
+              href: ../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md
             - name: sys.dm_db_wait_stats (база данных SQL Azure)
               href: ../relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database.md
             - name: sys.dm_operation_status (база данных SQL Azure)
               href: ../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md
-            - name: sys.dm_database_copies (база данных SQL Azure)
-              href: ../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md
-            - name: sys.dm_db_resource_stats (база данных SQL Azure)
-              href: ../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md
+            - name: sys.dm_resource_governor_workload_groups_history_ex (база данных SQL Azure)
+              href: ../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-history-ex-azure-sql-database.md
         - name: Зеркальное отображение базы данных
           items:
             - name: sys.dm_db_mirroring_auto_page_repair

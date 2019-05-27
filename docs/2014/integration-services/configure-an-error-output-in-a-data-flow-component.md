@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - errors [Integration Services], data flow components
@@ -15,12 +14,12 @@ ms.assetid: 53d7eeea-927d-4b45-8ea9-084e65ad5390
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6e06ee3d9bdd3f987fb03701e56fdb5db133d0bc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fa9df7d84a793c6825ba82b22c3b0cf567f42c3b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62835170"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66060817"
 ---
 # <a name="configure-an-error-output-in-a-data-flow-component"></a>Настройка вывода ошибок в компоненте потока данных
   Многие компоненты потока данных поддерживают вывод ошибок. Основываясь на компоненте, конструктор [!INCLUDE[ssIS](../includes/ssis-md.md)] предлагает различные пути настройки вывода ошибок. Кроме настройки вывода ошибок, можно также настроить его столбцы. Сюда входит настройка столбцов **ErrorCode** и **ErrorColumn** , добавляемых этим компонентом.  

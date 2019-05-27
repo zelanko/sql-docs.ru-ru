@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.wmidatareadertask.general.f1
@@ -15,12 +14,12 @@ ms.assetid: 1ee4fd97-defc-4a63-adfe-5f2df548e62a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 214a633d438f4097ec08d7afdf53f62f48b6600f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d25a77fd9a3fce701f65eca580647b193a6c0276
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62766027"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66054407"
 ---
 # <a name="wmi-data-reader-task-editor-general-page"></a>Редактор задачи «Модуль чтения данных WMI» (страница «Общие»)
   Страница **Общие** диалогового окна **Редактор задачи «Модуль чтения данных WMI»** позволяет дать имя и описание задаче «Модуль чтения данных WMI».  

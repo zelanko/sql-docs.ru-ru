@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - feature selection, Setup
@@ -16,12 +15,12 @@ ms.assetid: 73182088-153b-4634-a060-d14d1fd23b70
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d20a8ea8a4e05b455a4c69a867504e82bdce014a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0b516d76c1c814cb70215bfe37f3cddb60e614d5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63165374"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66095214"
 ---
 # <a name="feature-selection"></a>Выбор компонентов
   С помощью флажков на странице **Выбор компонентов** мастера установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выберите компоненты для текущей установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -41,7 +40,7 @@ ms.locfileid: "63165374"
   
 |Компоненты|Описание|  
 |--------------|-----------------|  
-|Службы[!INCLUDE[ssDE](../../includes/ssde-md.md)] |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] включает в себя [!INCLUDE[ssDE](../../includes/ssde-md.md)], основная служба для хранения, обработки и защиты данных, репликации, полнотекстового поиска, средств управления реляционными и XML-данных и [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] сервера (DQS). Ниже перечислены функции ядра СУБД:<br /><br /> [!INCLUDE[ssDE](../../includes/ssde-md.md)] — основная служба для хранения, обработки и защиты данных.<br /><br /> Репликация. Необязательно: Репликация представляет собой набор технологий копирования и распространения данных и объектов баз данных между базами данных, а также синхронизации баз данных для поддержания согласованности.<br /><br /> Компонент Full-Text Search: Необязательно: Компонент Full-Text Search позволяет выполнять полнотекстовые запросы в таблицах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для произвольных символьных данных.<br /><br /> [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]. Необязательно: [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) — это решение очистки данных, в который дает возможность обнаруживать несогласованные и неверные данные в источнике данных и предоставляет компьютеризированные и интерактивные методы очистки данных. Выберите этот флажок, чтобы установить сервер DQS. После завершения установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] необходимо запустить файл DQSInstaller.exe, чтобы *завершить* установку сервера DQS. Если вы установили экземпляр по умолчанию SQL server, этот файл находится в C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12. MSSQLSERVER\MSSQL\Binn.<br /><br /> <br /><br /> **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Отказоустойчивые кластеры.** Требуется и автоматически выбираются программой установки для компонентов репликации и Full-Text Search [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установок отказоустойчивой кластеризации при выборе служб компонента Database Engine.|  
+|Службы[!INCLUDE[ssDE](../../includes/ssde-md.md)] |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] включает в себя [!INCLUDE[ssDE](../../includes/ssde-md.md)], основная служба для хранения, обработки и защиты данных, репликации, полнотекстового поиска, средств управления реляционными и XML-данных и [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] сервера (DQS). Ниже перечислены функции ядра СУБД:<br /><br /> [!INCLUDE[ssDE](../../includes/ssde-md.md)] — основная служба для хранения, обработки и защиты данных.<br /><br /> Репликация. Необязательное действие: Репликация представляет собой набор технологий копирования и распространения данных и объектов баз данных между базами данных, а также синхронизации баз данных для поддержания согласованности.<br /><br /> Компонент Full-Text Search: Необязательное действие: Компонент Full-Text Search позволяет выполнять полнотекстовые запросы в таблицах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для произвольных символьных данных.<br /><br /> [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]. Необязательное действие: [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) — это решение очистки данных, в который дает возможность обнаруживать несогласованные и неверные данные в источнике данных и предоставляет компьютеризированные и интерактивные методы очистки данных. Выберите этот флажок, чтобы установить сервер DQS. После завершения установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] необходимо запустить файл DQSInstaller.exe, чтобы *завершить* установку сервера DQS. Если вы установили экземпляр по умолчанию SQL server, этот файл находится в C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12. MSSQLSERVER\MSSQL\Binn.<br /><br /> <br /><br /> **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Отказоустойчивые кластеры.** Требуется и автоматически выбираются программой установки для компонентов репликации и Full-Text Search [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установок отказоустойчивой кластеризации при выборе служб компонента Database Engine.|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] содержит средства создания приложений оперативной аналитической обработки (OLAP) и приложений интеллектуального анализа данных, а также средства управления ими.|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] — Собственное|Собственный режим служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] использует серверные и клиентские компоненты для создания и развертывания табличных, матричных и графических отчетов и отчетов в свободной форме, а также управления ими. Службы[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] являются расширяемой платформой, которую можно использовать для разработки приложений отчетов.|  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - MAXIMUM_STATES
@@ -48,12 +47,12 @@ ms.assetid: fcdc3f85-813d-4279-90b0-16e26edd008d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 555a92bf4131ee821fa70065cf02cada87f671ab
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e902272c58f1e841a3108199e53d51ac12f8ae4a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62635505"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66062598"
 ---
 # <a name="algorithm-parameters-sql-server-data-mining-add-ins"></a>Параметры алгоритма (надстройки интеллектуального анализа данных SQL Server)
   Если интеллектуальный анализ данных выполняется с использованием средств анализа таблиц для Excel, нет необходимости настраивать алгоритм интеллектуального анализа данных или параметры. Каждое средство анализирует предоставленные данные и автоматически выбирает оптимальные параметры. Однако если потребуется изменить модель или создать модель интеллектуального анализа данных с нуля, то клиент интеллектуального анализа данных для Excel предоставляет несколько параметров для настройки.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.audittransformation.f1
@@ -15,12 +14,12 @@ ms.assetid: 32786a34-5870-4fde-83c7-ec74d62404b8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 29d9d3f4cd9e6c4d1e652e52ea464df58eac279d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9d31f297b9544c75e416fe798facd6a1c328ff0d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62771980"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66061419"
 ---
 # <a name="audit-transformation-editor"></a>редактор преобразования «Аудит»
   Преобразование «Аудит» позволяет включать поток данных в пакет для передачи данных о среде, в которой запускается этот пакет. Например, в поток данных можно добавлять имя пакета, компьютера и оператора. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] предусмотрены системные переменные, предоставляющие эти сведения.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.configwizard.selectobjects.f1
@@ -16,12 +15,12 @@ ms.assetid: adca6938-6d5a-40ec-950e-dceb79d044fe
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 042f1146295d0a8358a7f89a38929a77e6f761a1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 72909e812418d26d9f9f2905b41e686c36f6b670
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62767136"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66056935"
 ---
 # <a name="package-configuration-wizard-ui-reference"></a>Мастер конфигурации пакетов справочника по пользовательскому интерфейсу
   **Мастер настройки пакета** используется для создания конфигураций, обновляющих свойства пакета служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] и его объекты во время выполнения. Мастер запускается при добавлении новой конфигурации или изменении существующей в диалоговом окне **Организатор конфигураций пакетов** . Для открытия диалогового окна **Организатор конфигураций пакетов** выберите пункт **Конфигурации пакета** в меню **службы SSIS** в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Дополнительные сведения см. в разделе [Создание конфигурации пакетов](../../2014/integration-services/create-package-configurations.md).  

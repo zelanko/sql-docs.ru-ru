@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.flatfiledestadapter.connection.f1
@@ -15,12 +14,12 @@ ms.assetid: b01571fa-bc19-4742-8eed-ac163172a919
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6b8deec4f9049d7d677ff809e900e4d5f9d4fa61
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 429ba1f8a12a4bd574a8304d18311a6e6e4efc79
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62768300"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66058698"
 ---
 # <a name="flat-file-destination-editor-connection-manager-page"></a>Редактор назначения «Неструктурированный файл» (страница «Диспетчер соединений»)
   Страница **Диспетчер соединений** диалогового окна **Редактор назначения «Неструктурированный файл»** используется для выбора соединения с неструктурированными файлами для назначения, а также для указания, следует ли переписывать существующий целевой файл или добавлять данные в его конец. С помощью назначения «Неструктурированный файл» данные записываются в текстовый файл. Текстовый файл может иметь формат с разделителями, формат фиксированной ширины, фиксированной ширины с разделителями строк или формат без выключки вправо.  

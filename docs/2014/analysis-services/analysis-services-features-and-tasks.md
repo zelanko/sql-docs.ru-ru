@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 02bcccd0-99e1-4a08-9401-f1f1147d184b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e009c9e498c28ee0b7f0efbd4571d9e50cb061a2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9c0e42f289c5d5aa0aebf546e1adeb0a31683d82
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62640216"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66062535"
 ---
 # <a name="analysis-services-features-and-tasks"></a>Функции и задачи служб Analysis Services
   Основная документация по службам Analysis Services организована по разделам, соответствующим типу модели и режиму сервера, что позволяет сосредоточиться на средствах, задачах и функциях, доступных в установленном режиме. Задачи администрирования сервера, которые относятся к нескольким режимам, находятся в разделе «Экземпляры сервера».  

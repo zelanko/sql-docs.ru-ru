@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 436b4c3d-3f2f-464a-be7e-5c051d9ffb8f
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 27e6b4a1fb9726496ac4ae99a08b2e47a9136562
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 66c366bfe8dbf79d2f392627ad018747357e7da4
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63195206"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66095683"
 ---
 # <a name="deployment-checklist-install-reporting-services-into-an-existing-sharepoint-farm"></a>Контрольный список развертывания: установка служб Reporting Services в существующей ферме SharePoint
   Серверы отчетов SharePoint служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] можно установить в новой или существующей ферме SharePoint. В этом разделе описаны возможные сценарии и рекомендации по установке служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в новой и существующей ферме SharePoint.  

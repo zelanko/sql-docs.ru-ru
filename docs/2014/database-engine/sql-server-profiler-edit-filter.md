@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - sql12.pro.editfilter.f1
@@ -13,12 +12,12 @@ ms.assetid: a589eff5-6ec6-4f6e-94b8-831658257f14
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f21abbe6ce79db149104b13399b819a811558c43
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2828316739e53a94b248a8fffcf020ed16692241
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62844363"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66089782"
 ---
 # <a name="sql-server-profiler---edit-filter"></a>SQL Server Profiler - Edit Filter
   Диалоговое окно **Изменить фильтр** используется для создания и изменения фильтров столбцов данных в трассировке. Нажмите имя столбца данных в списке, и в соседней панели будут отображены критерии фильтра, доступные для этого столбца. Введите критерии фильтра и нажмите кнопку **ОК** для применения их к выделенному столбцу данных. Если слева от имени столбца данных в списке выводится значок фильтра, то для этого столбца уже имеется сконфигурированный фильтр.  

@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 2dbddcc7-427a-4537-a8e2-56d99b9d967d
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 7bef5104038dad251927c6afff613f248f4a6a47
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 300337a2cd4d3275a4fe6b9d8ebfc7a133a3a224
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63025700"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66095562"
 ---
-# <a name="deployment-checklist-scale-out-by-adding-powerpivot-servers-to-a-sharepoint-2010-farm"></a>Контрольный список развертывания: Масштабное развертывание путем добавления серверов PowerPivot в ферме SharePoint 2010
+# <a name="deployment-checklist-scale-out-by-adding-powerpivot-servers-to-a-sharepoint-2010-farm"></a>Контрольный список развертывания: горизонтальное масштабирование путем добавления серверов PowerPivot в ферму SharePoint 2010
   Если на ферме SharePoint предполагается обработка большого числа запросов обработки данных PowerPivot, можно добавить еще один экземпляр PowerPivot для SharePoint, что позволит прозрачно обеспечить дополнительную поддержку обработки запросов.  
   
  После установки нового экземпляра потребуются дополнительные мощности для обработки запросов данных PowerPivot и выполнения заданий обновления данных PowerPivot. Можно также настроить каждый сервер на обработку одного типа запросов: запросов или обновлений данных.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services, about Analysis Services - Multidimensional Data
@@ -19,12 +18,12 @@ ms.assetid: 49d186f4-4b4d-4a5a-bb1a-e2699c64a731
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b18efaacb7ab891402e84b851735870c4c47e883
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 241bb57ffd0ce05f1daa289cc7ae78c365a27cc9
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62638805"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66062342"
 ---
 # <a name="analysis-services"></a>Службы Analysis Services
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] — подсистема аналитики данных в Интернете, которая используется в решениях для бизнес-аналитики (BI) и поддержки принятия решений. Эта подсистема предоставляет аналитические данные, которые применяются в бизнес-отчетах и клиентских приложениях, таких как Excel, отчеты служб Reporting Services, а также других сторонних средствах бизнес-аналитики. Типовой рабочий процесс для [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] включает построение модели на основе OLAP или табличных данных, развертывание модели в виде базы данных на экземпляре [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], обработку базы данных для загрузки в нее данных и присваивание разрешений на доступ к данным. После подготовки доступ к этой многоцелевой модели данных может осуществляться любым клиентским приложением, поддерживающим [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] в качестве источника данных.  

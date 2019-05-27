@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.lookuptransformation.referencetable.f1
@@ -15,12 +14,12 @@ ms.assetid: e90d6b69-5a26-43c5-8433-5c3c9588e08c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f5c2971b1d4da669cadc57f0a557b32bf2b1adde
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7985f713093e839d258a0c9b80bb5d4e6e58f37f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62767326"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66057950"
 ---
 # <a name="lookup-transformation-editor-connection-page"></a>Редактор преобразования «Уточняющий запрос» (страница «Соединение»)
   Используйте страницу **Соединение** диалогового окна **Редактор преобразования «Уточняющий запрос»** для выбора диспетчера соединения. При выборе диспетчера соединений OLE DB также выбирается и запрос, таблица или представление для формирования эталонного набора данных.  

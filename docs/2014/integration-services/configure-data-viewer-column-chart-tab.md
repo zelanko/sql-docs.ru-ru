@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.configuredataviewer.columnchart.f1
@@ -15,12 +14,12 @@ ms.assetid: 2e232566-1c3d-4134-adfc-bfd9db210e6d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9a06c6b71be6e889cc223aa72338ae70f0ea82e3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bd32f9e2bfdac3655acb9d12c8fd0c070aa599fd
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62834379"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66060730"
 ---
 # <a name="configure-data-viewer-column-chart-tab"></a>Настройка средства просмотра данных (вкладка «Столбчатая диаграмма»)
   Используйте вкладку **Гистограмма** диалогового окна **Настройка средства просмотра данных** для задания столбца, выводимого в виде полос в диаграмме. Количество полос отражает количество дискретных значений данных в столбце, а высота полосы иллюстрирует количество экземпляров каждого значения. Диаграмма отображает содержимое только одного буфера.  

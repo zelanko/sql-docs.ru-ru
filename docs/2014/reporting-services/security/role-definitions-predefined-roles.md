@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 10/22/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - security [Reporting Services], defaults
@@ -15,12 +14,12 @@ ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d4f02a2b393cbc4b67ef36a2730a5f1eea162109
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.openlocfilehash: f9f6eff58d5d9c536dd6c6c9f40d389bab1532e3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59945111"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66101789"
 ---
 # <a name="predefined-roles"></a>Стандартные роли
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] устанавливаются с набором стандартных ролей, которые можно использовать для предоставления доступа к операциям сервера отчетов. Каждой стандартной ролью описывается набор взаимосвязанных задач. Можно назначить учетные записи групп и пользователей для стандартных ролей, чтобы обеспечить немедленный доступ к операциям сервера отчетов.  

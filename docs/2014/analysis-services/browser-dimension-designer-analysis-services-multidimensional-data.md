@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.browsedim.view.f1
@@ -15,12 +14,12 @@ ms.assetid: c7772d73-31c9-4b22-a899-bac424d603bb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9672408d1a63729f21395184644ca6a92d091e46
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1b3448891baed6fe91bb0339030f74569a096377
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62640513"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66064630"
 ---
 # <a name="browser-dimension-designer-analysis-services---multidimensional-data"></a>Браузер (конструктор измерений) (службы Analysis Services — многомерные данные)
   На вкладке **Браузер** конструктора измерения можно просмотреть данные измерения и метаданные для измерения. Если для выбранного измерения разрешена обратная запись измерения, то в данном режиме можно изменить элемент данных для измерения.  

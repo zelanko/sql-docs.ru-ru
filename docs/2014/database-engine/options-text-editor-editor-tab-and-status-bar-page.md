@@ -1,11 +1,10 @@
 ---
-title: 'Параметры (текстовый редактор: Вкладка редактора и строка состояния на странице) | Документация Майкрософт'
+title: Параметры (страница "Текстовый редактор" — Вкладка редактора и строка состояния на странице) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.sqleditors.editorcontextsettings
@@ -14,14 +13,14 @@ ms.assetid: e4815678-7885-4631-878f-c6a2b857ee05
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 241a74861a7f634389324276daf9b03a8590e64d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 01098f2181085f17788429608afb7bdda15fb504
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62844276"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66089239"
 ---
-# <a name="options-text-editor-editor-tab-and-status-bar-page"></a>Параметры (текстовый редактор: Вкладка редактора и строка состояния на странице)
+# <a name="options-text-editor-editor-tab-and-status-bar-page"></a>Параметры (страница "Текстовый редактор" — "Вкладка редактора и строка состояния")
   На странице **Вкладка редактора и строка состояния** можно настроить сведения, которые показываются в редакторах запросов [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] . Можно указать уровень сведений, отображаемых на вкладке и в строке состояния редактора запросов, а также место расположения строки состояния: вверху или внизу окна редактора.  
   
 ## <a name="option-settings-by-editor"></a>Параметры, задаваемые с помощью редактора  

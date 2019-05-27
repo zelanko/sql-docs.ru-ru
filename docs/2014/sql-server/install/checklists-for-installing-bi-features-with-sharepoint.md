@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 1c220dcc-4014-4bfd-b997-6685902e6f67
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a677729f5c0f7a5ee1b6d10bbb3491937255b555
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a5056eda52064120164a25b270a5292951f71fa0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63190609"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66096504"
 ---
 # <a name="checklists-for-installing-bi-features-with-sharepoint"></a>Контрольные списки для установки компонентов бизнес-аналитики в SharePoint
   В этом разделе приведены контрольные списки для установки компонентов SQL Server BI в различных сочетаниях или в топологиях масштабного развертывания. После ознакомления с тем, как запускать программу установки для установки компонента BI, контрольный список становится следующим этапом в изучении рекомендуемой последовательности установки, а также того, требуются ли дополнительные изменения в конфигурации для обеспечения интеграции.  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 59ddc4b8-9517-4d3f-9c88-a07e9907cecb
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 01fcf6ef333a9b7c8a5c99630e6e9573f70d8059
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e21b1c9e48dcccf8b72a60fbd381aac3d878c0dc
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63155322"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107632"
 ---
 # <a name="saving-reports-report-builder"></a>Сохранение отчетов (построитель отчетов)
   В построителе отчетов отчеты могут быть сохранены на сервере отчетов, в библиотеке SharePoint, в общей папке файлов, для которой имеются разрешения на запись или на компьютере. Отчет можно сохранить в том же расположении, из которого он был открыт, в другом местоположении или с новым именем в том же или другом местоположении. По умолчанию отчет повторно сохраняется в местоположении, откуда он был открыт. При сохранении отчета фактически выполняется сохранение определения отчета, в котором описывается макет отчета. Данные не сохраняются. При каждом запуске отчета данные отчета обновляются, и, вероятнее всего, они будут отличаться от данных отчета, открывавшегося ранее.  

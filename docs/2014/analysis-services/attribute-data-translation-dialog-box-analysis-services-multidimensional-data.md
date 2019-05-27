@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.dimensionstoragesettings.f1
@@ -15,12 +14,12 @@ ms.assetid: bed286de-1e9b-49de-b09e-3cd076aba152
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 32832a354342b822ac0e6b2853c18c11ed3eb004
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2304f664178ab1f5d3718cccdcb4b1775a72948e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62650665"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66063069"
 ---
 # <a name="attribute-data-translation-dialog-box-analysis-services---multidimensional-data"></a>Диалоговое окно «Перевод данных атрибута» (службы Analysis Services — многомерные данные)
   Диалоговое окно **Перевод данных атрибута** используется для задания столбца, содержащего данные заголовка перевода, а также значения параметров сортировки и порядка сортировки, которые должны быть применены к переведенным данным. Диалоговое окно **Перевод данных атрибута** может отображаться следующим образом.  
@@ -64,7 +63,7 @@ ms.locfileid: "62650665"
  Если этот параметр не выбран, службы [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] рассматривают символы с диакритическими знаками и без них как одинаковые.  
   
  **Кана**  
- Выберите этот параметр для сортировки и сравнения данных в зависимости от словарных правил для соответствующего языка или алфавита, а также для различия двух типов японской азбуки: Хирагана и катакана.  
+ Выберите этот параметр для сортировки и сравнения данных в зависимости от словарных правил для соответствующего языка или алфавита, а также для различия двух типов японской азбуки: хирагана и катакана.  
   
  Если этот параметр не выбран, службы [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] рассматривают символы этих азбук как одинаковые.  
   
