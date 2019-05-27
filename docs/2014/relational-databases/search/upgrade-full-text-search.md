@@ -13,15 +13,15 @@ helpviewer_keywords:
 - installing Full-Text Search
 - full-text search [SQL Server], upgrading
 ms.assetid: 2fee4691-f2b5-472f-8ccc-fa625b654520
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ceeb9a6d964dadd35c725a7ae4cd9e6db7c8d090
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 43ef487dc2049d3ca95f4cddff72a005c98a5d19
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363646"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66010962"
 ---
 # <a name="upgrade-full-text-search"></a>Обновление полнотекстового поиска
   Обновление полнотекстового поиска с переходом к версии [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] выполняется во время установки, а также во время присоединения, восстановления или копирования файлов баз данных или полнотекстовых каталогов из более ранней версии до [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью мастера копирования баз данных.  
@@ -135,9 +135,9 @@ ms.locfileid: "53363646"
   
  **Изменение поведения полнотекстового обновления на экземпляре сервера**  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)]. Используйте **обновление\_параметр** действие [sp\_fulltext\_службы](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql)  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)]. Используйте действие **upgrade\_option** хранимой процедуры [sp\_fulltext\_service](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql).  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **:** Используйте **режим обновления полнотекстового поиска** из **свойства сервера** диалоговое окно. Дополнительные сведения см. в разделе [Управление и наблюдение за полнотекстовым поиском для экземпляра сервера](manage-and-monitor-full-text-search-for-a-server-instance.md).  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **:** Используйте параметр **Режим обновления полнотекстового каталога** в диалоговом окне **Свойства сервера**. Дополнительные сведения см. в разделе [Управление и наблюдение за полнотекстовым поиском для экземпляра сервера](manage-and-monitor-full-text-search-for-a-server-instance.md).  
   
 ##  <a name="Considerations_for_Restore"></a> Замечания по восстановлению полнотекстового каталога [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  Одним из методов обновления полнотекстовых данных базы данных [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] до версии [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] является восстановление полной резервной копии базы данных до версии [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  

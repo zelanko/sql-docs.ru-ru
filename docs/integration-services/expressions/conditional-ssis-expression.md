@@ -14,14 +14,18 @@ ms.assetid: d38e6890-7338-4ce0-a837-2dbb41823a37
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 43ba631d4b93e3f748afa0c64ff95d42609bd545
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: e7b89ac833f428a098671cbf5eceaab0b338e2e4
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272101"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725539"
 ---
-# <a name="--conditional-ssis-expression"></a>? , перечислены ниже. (условный) (выражение служб SSIS)
+# <a name="--conditional-ssis-expression"></a>? , перечислены ниже. (условный оператор) (выражение служб SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Возвращает одно из двух выражений на основе вычисления логического выражения. Если логическое выражение принимает значение TRUE, то возвращается результат вычисления первого выражения. Если логическое выражение принимает значение FALSE, возвращается результат вычисления второго выражения.  
   
 ## <a name="syntax"></a>Синтаксис  

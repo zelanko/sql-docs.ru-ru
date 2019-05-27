@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - MDX [Analysis Services], scripts
@@ -15,12 +14,12 @@ ms.assetid: aa54b8cc-ff3b-4ef6-a64e-11b9e9d7fa11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c2691573c6a3ca0ae860339177780f707c5277b1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6451e2a02bbaf7ef8a58b63c75838023433ff563
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62726999"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66076211"
 ---
 # <a name="create-and-run-an-mdx-script-in-sql-server-data-tools"></a>Создание и выполнение скрипта многомерных выражений SQL Server Data Tools
   Чтобы создать и запустить скрипт многомерных выражений в службах  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], необходимо находиться в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] с уже созданным и готовым к редактированию кубом.  

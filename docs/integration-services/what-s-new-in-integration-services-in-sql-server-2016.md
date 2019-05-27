@@ -15,14 +15,18 @@ ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2dea9e83bcfeff2c3b5c208cc947f48f21b9f4a7
-ms.sourcegitcommit: 6193aa9b4967302424270d67c27dbc601ca6849a
+ms.openlocfilehash: 659059130d63dd2f320dcbd9ec0364b249f0889b
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64877717"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65713859"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>Новые возможности служб Integration Services в SQL Server 2016
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 В этой статье описаны функции, которые были добавлены или обновлены в SQL Server 2016 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. К ним также относятся функции, добавленные или обновленные в [пакете дополнительных компонентов Azure для служб Integration Services &#40;SSIS&#41;](../integration-services/azure-feature-pack-for-integration-services-ssis.md) в течение жизненного цикла SQL Server 2016.  
 
@@ -284,7 +288,7 @@ ms.locfileid: "64877717"
  Диспетчер подключений, источник и назначение Excel теперь явным образом поддерживают источники данных Excel 2016.  
 
 ####  <a name="SAPBW"></a> Выпуск соединителя для SAP BW для SQL Server 2016  
- Соединитель с SAP BW (Microsoft®) для Microsoft SQL Server® 2016 выпущен в составе пакета дополнительных компонентов SQL Server 2016. Скачать эти компоненты можно здесь: [Пакет дополнительных компонентов для Microsoft® SQL Server® 2016](https://go.microsoft.com/fwlink/?LinkID=746297).
+ Соединитель с SAP BW (Microsoft®) для Microsoft SQL Server® 2016 выпущен в составе пакета дополнительных компонентов SQL Server 2016. Скачать эти компоненты можно здесь: [Пакет дополнительных компонентов для Microsoft® SQL Server® 2016](https://go.microsoft.com/fwlink/?LinkID=746297).
  
 #### <a name="oracleteradata"></a> Выпуск соединителей версии 4.0 для Oracle и Teradata
 Были выпущены соединители Майкрософт версии&4;.0 для Oracle и Teradata. Скачать их можно здесь: [соединители Microsoft версии 4.0 для Oracle и Teradata](https://www.microsoft.com/download/details.aspx?id=52950).
@@ -345,7 +349,7 @@ ms.locfileid: "64877717"
  Мастер импорта и экспорта SQL Server теперь может импортировать данные из хранилища BLOB-объектов и сохранять их там. Дополнительные сведения см. в разделах [Выбор источника данных (мастер импорта и экспорта SQL Server)](../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md) и [Выбор назначения (мастер импорта и экспорта SQL Server)](../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md). 
 
 ####  <a name="CDCOracle"></a> Выпуск конструктора и службы системы отслеживания измененных данных для Oracle для Microsoft SQL Server 2016  
- Конструктор и служба системы отслеживания измененных данных Microsoft® для Oracle от Attunity для Microsoft SQL Server® 2016 выпущены в составе пакета дополнительных компонентов SQL Server 2016.  Эти компоненты теперь поддерживают Oracle 12c в классической установке. (Мультитенантная установка не поддерживается.) Чтобы скачать компоненты пакета дополнительных компонентов, см. страницу [Microsoft® SQL Server® 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=746297)(Пакет дополнительных компонентов Microsoft® SQL Server® 2016).  
+ Конструктор и служба системы отслеживания измененных данных Microsoft® для Oracle от Attunity для Microsoft SQL Server® 2016 выпущены в составе пакета дополнительных компонентов SQL Server 2016.  Эти компоненты теперь поддерживают Oracle 12c в классической установке. (Мультитенантная установка не поддерживается.) Скачать компоненты пакета дополнительных компонентов можно здесь: [Пакет дополнительных компонентов Microsoft® SQL Server® 2016](https://go.microsoft.com/fwlink/?LinkID=746297).  
   
 ####  <a name="cdc2016"></a> Обновление компонентов CDC для SQL Server 2016  
  Компоненты задачи по проверке CDC (отслеживание измененных данных), источника и преобразования разделителя были обновлены для обеспечения полной совместимости с SQL Server 2016. Какие -либо новые функции и изменения в поведении отсутствуют.  

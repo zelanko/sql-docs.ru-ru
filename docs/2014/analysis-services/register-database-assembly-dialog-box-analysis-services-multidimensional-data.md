@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidevstudio.assembly.registerassembly.f1
@@ -13,12 +12,12 @@ ms.assetid: 0c07cc87-fc94-456f-b878-7b23e39772b9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: aad57083bdcd8337e9320e81a662bef12888011e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 06647219ca5768495620bb1db60cf34910844f25
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748518"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070473"
 ---
 # <a name="register-database-assembly-dialog-box-analysis-services---multidimensional-data"></a>Диалоговое окно «Регистрация сборки базы данных» (службы Analysis Services — многомерные данные)
   Используйте диалоговое окно **Регистрация серверной сборки**в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] для установки свойств ссылки на сборку в базе данных служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Диалоговое окно **Регистрация серверной сборки** вызывается, если щелкнуть правой кнопкой мыши папку "Сборки" экземпляра или базы данных служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] в **обозревателе объектов** и выбрать пункт **Создать сборку**.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - NameColumn property
@@ -23,12 +22,12 @@ ms.assetid: 5cf2f407-accc-4baf-b54f-7703af338325
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8f7ff454dd4464fab5173c4d0022bd94543c1dad
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3cc874831f9f96c2540d58f2ffe3b89f8c4dc7aa
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62701748"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66077268"
 ---
 # <a name="group-attribute-members-discretization"></a>Группирование элементов атрибутов (дискретизация)
   Группа элементов является созданным системой набором последовательных элементов измерения. В службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]элементы атрибута могут группироваться в различные группы элементов в ходе процесса, называемого дискретизацией. Уровень в иерархии содержит либо группы элементов, либо элементы, но не то и другое сразу. Когда пользователи выполняют обзор уровня, содержащего группы элементов, они видят имена и значения ячеек групп элементов. Элементы, формируемые службами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для поддержания групп членов, называются элементами группирования и выглядят как обычные элементы.  

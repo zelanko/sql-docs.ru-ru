@@ -16,15 +16,15 @@ helpviewer_keywords:
 - GROUP BY clause, GROUPING_ID
 - GROUPING_ID function
 ms.assetid: c1050658-b19f-42ee-9a05-ecd6a73b896c
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 91161ebc6e9f39f3b937b55961a2d8439f44a788
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cbfbed6239d48cf01e65411250b163797d13333c
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836832"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65943081"
 ---
 # <a name="groupingid-transact-sql"></a>GROUPING_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ GROUPING_ID ( <column_expression>[ ,...n ] )
  Аргумент \<column_expression> функции GROUPING_ID должен точно соответствовать выражению в списке GROUP BY. Например, если группирование осуществляется с помощью функции DATEPART (yyyy, \<*имя столбца*>), то следует использовать функцию GROUPING_ID (DATEPART (yyyy, \<*имя столбца*>)), а если для группирования служит аргумент \<*имя столбца*>, следует использовать функцию GROUPING_ID (\<*имя столбца*>).  
   
 ## <a name="comparing-groupingid--to-grouping-"></a>Сравнение функций GROUPING_ID () и GROUPING ()  
- GROUPING_ID (\<column_expression> [ **,**...*n* ]) вводит эквивалент возвращаемого значения GROUPING (\<column_expression>) для каждого столбца в списке столбцов в каждой строке вывода как строку единиц и нулей. Функция GROUPING_ID интерпретирует эту строку как двоичное число и выполняет возврат эквивалентного целого числа. Рассмотрим, например, следующую инструкцию: `SELECT a, b, c, SUM(d),``GROUPING_ID(a,b,c)``FROM T GROUP BY <group by list>`. В следующей таблице показаны входные и выходные значения функции GROUPING_ID ().  
+ GROUPING_ID (\<column_expression> [ **,** ...*n* ]) вводит эквивалент возвращаемого значения GROUPING (\<column_expression>) для каждого столбца в списке столбцов в каждой строке вывода как строку единиц и нулей. Функция GROUPING_ID интерпретирует эту строку как двоичное число и выполняет возврат эквивалентного целого числа. Рассмотрим, например, следующую инструкцию: `SELECT a, b, c, SUM(d),``GROUPING_ID(a,b,c)``FROM T GROUP BY <group by list>`. В следующей таблице показаны входные и выходные значения функции GROUPING_ID ().  
   
 |Статистически обработанные столбцы|Входные данные GROUPING_ID (a, b, c) = GROUPING(a) + GROUPING(b) + GROUPING(c)|Выходные данные GROUPING_ID ()|  
 |------------------------|---------------------------------------------------------------------------------------|------------------------------|  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models, browsing
@@ -18,12 +17,12 @@ ms.assetid: 6b3dd1ae-caff-41c3-817b-802dc020ff88
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 257d193c84420a0c70ea99ef2a8cadfa9e11eec5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 17b3a2765781813c832b0b654e4a02475b3ab623
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62468757"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66064671"
 ---
 # <a name="browsing-a-decision-trees-model"></a>Просмотр модели дерева принятия решений
   При открытии модели классификации с помощью **Обзор**, модель отображается в интерактивных средство просмотра дерева решений, аналогичную [!INCLUDE[msCoName](../includes/msconame-md.md)] средство просмотра дерева принятия решений в [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. В средстве просмотра отображаются результаты классификации в виде диаграммы, разработанной для выделения условий, которые отличают одну группу данных от другой. Также можно выполнить детализацию до отдельных подмножеств дерева и получить базовые данные.  

@@ -13,14 +13,18 @@ ms.assetid: 58dc99f1-ee6b-4508-bb66-2bc589611ff7
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fd8979186639a840c3fa7721d8f94ed98b35ca39
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: e6ebbdd1f4df148d146393865039102af26b2984
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280118"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728905"
 ---
 # <a name="edit-the-oracle-database-properties"></a>Изменение свойств базы данных Oracle
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   На вкладке Oracle в редакторе свойств можно изменить описание, которое было введено на странице создания базы данных CDC мастера создания экземпляра, а также изменить данные для подключения к базе данных интеллектуального анализа журналов Oracle.  
   
  Ниже описаны данные, отображаемые на вкладке **Oracle** .  
