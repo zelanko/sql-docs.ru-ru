@@ -13,14 +13,18 @@ ms.assetid: 2e295dc8-999d-4c4d-96cc-1519674b47a4
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 232837ed4d42fe7c61036bcb5e4b2a80ec688b64
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 09a47653441bf4ac0ac7491a80aa9a92baa6f27b
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273300"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728544"
 ---
 # <a name="select-oracle-tables-for-capturing-changes"></a>Выбор таблиц Oracle для отслеживания изменений
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   В этом диалоговом окне можно выбрать таблицы, включенные в экземпляр CDC. Выбранные таблицы добавляются в список на странице **Выбор таблиц и столбцов** мастера создания экземпляра. Это диалоговое окно предназначено для следующих целей.  
   
  По умолчанию список таблиц в этом диалоговом окне пуст. Можно установить флажок в верхней части столбца с флажками, чтобы выбрать все таблицы, а также выполнить поиск определенных таблиц.  

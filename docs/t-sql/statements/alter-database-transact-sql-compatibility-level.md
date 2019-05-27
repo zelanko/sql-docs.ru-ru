@@ -1,7 +1,7 @@
 ---
 title: Уровень совместимости инструкции ALTER DATABASE (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 04/15/2019
+ms.date: 05/14/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -25,12 +25,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg'
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d535d50bde7c05629d23be85c2c64083dd455965
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: baa6f443215d5d1f221462e1d20d4bf1498ca899
+ms.sourcegitcommit: 856e28a4f540f851b988ca311846eac9ede6d492
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583377"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65626689"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>Уровень совместимости инструкции ALTER DATABASE (Transact-SQL)
 
@@ -237,9 +237,9 @@ SELECT name, compatibility_level FROM sys.databases;
 |Если выбрано частичное включение базы данных, проверка поля `$action` в предложении `OUTPUT` инструкции `MERGE` может вернуть ошибку параметров сортировки.|Параметры сортировки значений, возвращаемых предложением `$action` инструкции `MERGE`, — это параметры сортировки базы данных, а не сервера. Ошибка конфликтующих параметров сортировки сервера не возвращается.|
 |Инструкция `SELECT INTO` всегда создает однопоточную операцию вставки.|Инструкция `SELECT INTO` может создать параллельную операцию вставки. При вставке большого числа строк параллельная операция может увеличить производительность.|
 
-## <a name="differences-between-lower-compatibility-levels-and-levels-110-and-120"></a>Различия между более низкими уровнями совместимости и уровнями 110 и 120
+## <a name="differences-between-lower-compatibility-levels-and-levels-100-and-110"></a>Различия между более низкими уровнями совместимости и уровнями 100 и 110
 
-В этом разделе описываются новые особенности поведения, обусловленные появлением уровня совместимости 110. Этот раздел относится также к уровню 120.
+В этом разделе описываются новые особенности поведения, обусловленные появлением уровня совместимости 110. Этот раздел также относится к уровням совместимости выше 110.
 
 |Уровень совместимости 100 и ниже|Установка уровня совместимости, по меньшей мере равного 110|
 |--------------------------------------------------|--------------------------------------------------|

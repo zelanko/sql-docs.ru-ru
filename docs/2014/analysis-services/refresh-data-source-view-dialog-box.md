@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dsvdesigner.refreshdsv.f1
@@ -15,12 +14,12 @@ ms.assetid: 56bac170-6777-472a-8a09-549b2ee0d909
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 722c2ae62376d30076b5cf5cf582ff80be311e50
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5ac09961db83c8c0f8906f2bd04ea20638e39b22
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748488"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070508"
 ---
 # <a name="refresh-data-source-view-dialog-box"></a>Диалоговое окно «Обновление представления источников данных»
   Используйте диалоговое окно **Обновление представления источников данных** в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] для подтверждения или отмены изменений, которые произойдут в результате обновления представления источников данных. Это диалоговое окно отображает изменения, которые произойдут в представлении источника данных в результате изменений, произошедших в источнике данных. Нажмите кнопку **ОК** чтобы принять изменения и обновить представления источников данных, или кнопку **Отмена** чтобы проигнорировать изменения и не менять представление источника данных. Диалоговое окно **Обновление представления источников данных** можно отобразить следующим образом:  

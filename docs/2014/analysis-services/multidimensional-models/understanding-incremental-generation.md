@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - incremental generation [Analysis Services]
@@ -15,12 +14,12 @@ ms.assetid: 3ca0aa63-3eb5-4fe9-934f-8e96dee84eaa
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fb2c032fc95738550aa92cc8905ebee7279dcc2f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 003b56fe3dbfae3f442be6b966f3cdc3008909b4
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62740955"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66072681"
 ---
 # <a name="understanding-incremental-generation"></a>Основные сведения о добавочном создании
   После первоначального формирования схемы при помощи среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]можно изменить определения куба и измерений, а затем вновь запустить мастер формирования схем. Мастер обновляет схему в базе данных предметной области и в соответствующем представлении источника данных для отражения изменений при сохранении данных, присутствующих в текущий момент в таблицах, подлежащих повторному формированию. При изменении таблиц после первоначального формирования мастер формирования схем по возможности сохраняет эти изменения, используя следующие правила.  

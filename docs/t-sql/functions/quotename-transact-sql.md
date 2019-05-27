@@ -19,16 +19,16 @@ helpviewer_keywords:
 - QUOTENAME function
 - valid identifiers [SQL Server]
 ms.assetid: 34d47f1e-2ac7-4890-8c9c-5f60f115e076
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 87f14c6784f35f918c63af490ca6a5f8c1ddf3f8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 57be9c0aabc429e1c9a6d3e148ab5a11461f2d32
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745099"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65943246"
 ---
 # <a name="quotename-transact-sql"></a>QUOTENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,7 +48,7 @@ QUOTENAME ( 'character_string' [ , 'quote_character' ] )
  Строка символьных данных в Юникоде. Аргумент *character_string* имеет тип **sysname**, а его длина ограничена 128 символами. Если ввести более 128 символов, будет возвращено значение NULL.  
   
  '*quote_character*'  
- Односимвольная строка, используемая в качестве разделителя. Может быть одинарной кавычкой (**'**), левой или правой квадратной скобкой (**[]**), двойной кавычкой (**"**), левой или правой круглой скобкой (**()**), знаком больше или меньше (**><**), левой или правой фигурной скобкой (**{}**) либо обратным апострофом (**\`**). Если указан недопустимый символ, возвращается значение NULL. Если значение аргумента *quote_character* не задано, то используются скобки.  
+ Односимвольная строка, используемая в качестве разделителя. Может быть одинарной кавычкой ( **'** ), левой или правой квадратной скобкой ( **[]** ), двойной кавычкой ( **"** ), левой или правой круглой скобкой ( **()** ), знаком больше или меньше ( **><** ), левой или правой фигурной скобкой ( **{}** ) либо обратным апострофом ( **\`**). Если указан недопустимый символ, возвращается значение NULL. Если значение аргумента *quote_character* не задано, то используются скобки.  
   
 ## <a name="return-types"></a>Типы возвращаемых данных  
  **nvarchar(258)**  

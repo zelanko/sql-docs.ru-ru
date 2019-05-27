@@ -13,14 +13,18 @@ ms.assetid: ad260e19-c021-4035-9311-c02fc96ceaea
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1e2b709c9e6de54b24da2b99668e85ed72a17651
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 505699164f49511adb95465e0b74e9e90c8f7dc6
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273655"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729125"
 ---
 # <a name="add-tables-to-a-cdc-instance"></a>Добавление таблиц в экземпляр CDC
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Диалоговое окно «Выбор таблицы» используется для добавления дополнительных таблиц из источника Oracle в экземпляр CDC. Выбранные таблицы добавляются в список на вкладке **Таблицы** редактора свойств.  
   
  По умолчанию список таблиц в этом диалоговом окне пуст. Вы можете установить флажок **(Выделить все)** или выполнить поиск определенных таблиц.  

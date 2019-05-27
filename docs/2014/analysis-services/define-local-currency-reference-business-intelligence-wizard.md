@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.currencyconversion.localcurrency.f1
@@ -13,12 +12,12 @@ ms.assetid: 74993b0d-dfca-476b-acba-d66c593680a5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6d6616f5f09ce39682a24c74808ca90084ee775f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 558e2c7d62edcb9fb314b49d41fd7bd15413218d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62732832"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66082178"
 ---
 # <a name="define-local-currency-reference-business-intelligence-wizard"></a>Определение ссылки на местную валюту (мастер бизнес-аналитики)
   Используйте страницу **Определение ссылки на местную валюту** , чтобы определить местные валюты для функции конвертации валют, которая обеспечивает типы конвертации "Многие ко многим" и "Многие к одному", указанные на странице **Выбор типа конвертации валют** . Местная валюта — это валюта, в формате которой хранятся транзакции для мер, выбранных на странице **Выбор мер** .  

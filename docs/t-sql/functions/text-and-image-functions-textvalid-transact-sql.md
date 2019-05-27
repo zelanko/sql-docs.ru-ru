@@ -20,15 +20,15 @@ helpviewer_keywords:
 - text-pointer values
 - verifying text pointers
 ms.assetid: 9411c349-b59b-4740-a270-92f91d81ad23
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 840b1ae9924e2b582ee726f917e31a2922d84c18
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 1ad4bc199c923c488e968740324c5f4d47766b96
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702572"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948433"
 ---
 # <a name="text-and-image-functions---textvalid-transact-sql"></a>Функции для работы с изображениями и текстом — TEXTVALID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,8 +67,8 @@ TEXTVALID ( 'table.column' ,text_ ptr )
   
 |Функция или инструкция|Описание|  
 |---------------------------|-----------------|  
-|PATINDEX **(**'_%pattern%_'**,** _expression_**)**|Возвращает позицию символа указанной символьной строки в столбцах **text** и **ntext**.|  
-|DATALENGTH **(**_expression_**)**|Возвращает длину данных в столбцах **text**, **ntext** и **image**.|  
+|PATINDEX **(** ' _%pattern%_ ' **,** _expression_ **)**|Возвращает позицию символа указанной символьной строки в столбцах **text** и **ntext**.|  
+|DATALENGTH **(** _expression_ **)**|Возвращает длину данных в столбцах **text**, **ntext** и **image**.|  
 |SET TEXTSIZE|Возвращает предельный размер (в байтах) для данных типа **text**, **ntext** или **image**, возвращаемых инструкцией SELECT.|  
   
 ## <a name="examples"></a>Примеры  

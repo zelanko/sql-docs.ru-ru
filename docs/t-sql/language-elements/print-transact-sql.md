@@ -20,16 +20,16 @@ helpviewer_keywords:
 - viewing user-defined messages
 - conditionally returning messages [SQL Server]
 ms.assetid: 32ba0729-c4b5-4cfb-a5aa-e8b9402be028
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b713866cc1300f86ed3cdf0786991739e9b002a7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 549e5cf693aa72f891fa286fc2ba24ee3c952577
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705802"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65980427"
 ---
 # <a name="print-transact-sql"></a>PRINT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,13 +49,13 @@ PRINT msg_str | @local_variable | string_expr
  Символьная строка или строковая константа Юникода. Дополнительные сведения см. в статье [Константы (Transact-SQL)](../../t-sql/data-types/constants-transact-sql.md).  
   
  **@** *local_variable*  
- Переменная любого допустимого символьного типа данных. Аргумент **@**_local\_variable_ должен иметь тип **char**, **nchar**, **varchar** или **nvarchar** либо должен неявно преобразовываться в эти типы данных.  
+ Переменная любого допустимого символьного типа данных. Аргумент **@** _local\_variable_ должен иметь тип **char**, **nchar**, **varchar** или **nvarchar** либо должен неявно преобразовываться в эти типы данных.  
   
  *string_expr*  
  Выражение, возвращающее строку. Может содержать объединенные буквенные значения, функции и переменные. Дополнительные сведения см. в разделе [Выражения (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md).  
   
 ## <a name="remarks"></a>Remarks  
- Строка сообщения может иметь длину до 8 000 символов для строки, отличной от Юникода, и 4 000 символов для строки в Юникоде. Более длинные строки усекаются. Типы данных **varchar(max)** и **nvarchar(max)** усекаются до типов данных, которые не длиннее **varchar(8000)** и **nvarchar(4000)**.  
+ Строка сообщения может иметь длину до 8 000 символов для строки, отличной от Юникода, и 4 000 символов для строки в Юникоде. Более длинные строки усекаются. Типы данных **varchar(max)** и **nvarchar(max)** усекаются до типов данных, которые не длиннее **varchar(8000)** и **nvarchar(4000)** .  
   
  Для возвращения сообщений можно также использовать функцию RAISERROR. Преимущества функции RAISERROR перед функцией PRINT:  
   

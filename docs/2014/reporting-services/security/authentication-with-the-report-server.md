@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - connections [Reporting Services], configuring
@@ -17,12 +16,12 @@ ms.assetid: 753c2542-0e97-4d8f-a5dd-4b07a5cd10ab
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 687193b79cdf0bee179062bb40bd49b23ada60d1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: decf2cbed48af0dcc00867a5f4d68b5d7c8958de
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63025879"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66102192"
 ---
 # <a name="authentication-with-the-report-server"></a>Проверка подлинности с использованием сервера отчетов
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) предлагает несколько настраиваемых параметров для проверки подлинности клиентов и клиентских приложений для сервера отчетов. По умолчанию сервер отчетов использует встроенную проверку подлинности Windows и предполагает доверительные связи, когда клиент и сетевые источники находятся в одном и том же домене или в надежном домене. В зависимости от топологии сети и потребностей организации можно задать протокол проверки подлинности, который применяется для встроенного средства проверки подлинности Windows, использовать обычную проверку подлинности или модуль проверки подлинности на основе пользовательских форм. Каждый способ проверки подлинности можно включать и отключать отдельно. Можно включить одновременно несколько типов проверки подлинности, если сервер отчетов должен принимать запросы разных типов.  

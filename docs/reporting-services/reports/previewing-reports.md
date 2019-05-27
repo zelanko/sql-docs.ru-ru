@@ -1,28 +1,28 @@
 ---
 title: Предварительный просмотр отчетов
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.reviewer: ''
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reports
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: 4b7f822e9bc6d3a875f0b0049c68a6d3ee010327
-ms.sourcegitcommit: 2f5773f4bc02bfff4f2924226ac5651eb0c00924
-ms.translationtype: HT
+ms.openlocfilehash: 6bd9a273347aa2010cf670ea3a87622e92d69f82
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53553006"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65935888"
 ---
 # <a name="preview-reports-in-sql-server-reporting-services-ssrs"></a>Предварительный просмотр отчетов в службах SQL Server Reporting Services (SSRS)
 
   При проектировании отчета [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] может понадобиться просмотреть его до публикации в рабочей среде. Это можно сделать несколькими способами: воспользовавшись вкладкой «Предварительный просмотр» конструктора отчетов, при помощи окна предварительного просмотра в конструкторе отчетов, а также опубликовав отчет на сервере отчетов в тестовом режиме.  
   
 > [!NOTE]  
-> При осуществлении предварительного просмотра отчета данные для отчета кэшируются в файл на локальном компьютере. При повторном просмотре того же отчета (с использованием того же запроса, параметров и учетных данных) конструктор отчетов получает кэшированную копию вместо того, чтобы заново выполнять запрос. Файл данных сохраняется под именем *\<имя_отчета>*.rdl.data в том же каталоге, что и файл определения отчета. Этот файл не удаляется, когда конструктор отчетов закрывается.  
+> При осуществлении предварительного просмотра отчета данные для отчета кэшируются в файл на локальном компьютере. При повторном просмотре того же отчета (с использованием того же запроса, параметров и учетных данных) конструктор отчетов получает кэшированную копию вместо того, чтобы заново выполнять запрос. Файл данных сохраняется под именем *\<имя_отчета>* .rdl.data в том же каталоге, что и файл определения отчета. Этот файл не удаляется, когда конструктор отчетов закрывается.  
   
 ## <a name="preview-mode"></a>Режим предварительного просмотра
 

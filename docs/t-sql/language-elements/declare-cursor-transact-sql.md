@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Transact-SQL cursors, attributes
 - global cursors [SQL Server]
 ms.assetid: 5a3a27aa-03e8-4c98-a27e-809282379b21
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b12e453dcabb88363cf78e86a33bc4773b3c9a52
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 46623d2a2a92c719b783241f8bbafdbdff8b4bba
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801638"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982536"
 ---
 # <a name="declare-cursor-transact-sql"></a>DECLARE CURSOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ DECLARE cursor_name CURSOR [ LOCAL | GLOBAL ]
  READ ONLY  
  Предотвращает изменения, сделанные через этот курсор. На курсов нельзя ссылаться в приложении `WHERE CURRENT OF` в инструкции `UPDATE` или `DELETE`. Этот параметр имеет преимущество над установленной по умолчанию возможностью обновления курсора.  
   
- UPDATE [OF *column_name* [**,**...*n*]]  
+ UPDATE [OF *column_name* [ **,** ...*n*]]  
  Определяет обновляемые столбцы в курсоре. Если OF <column_name> [, <... n>] указан, вносить изменения можно только в перечисленные столбцы. Если инструкция `UPDATE` используется без списка столбцов, то обновление возможно для всех столбцов.  
   
 *cursor_name*  
@@ -135,7 +135,7 @@ OPTIMISTIC
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] неявным образом преобразует курсор в другой тип, если предложения в аргументе *select_statement* вызывают конфликт с функциями курсора запрошенного типа. Дополнительные сведения см. в разделе "Неявные преобразования курсора".  
   
-FOR UPDATE [OF *column_name* [**,**...*n*]]  
+FOR UPDATE [OF *column_name* [ **,** ...*n*]]  
 Определяет обновляемые столбцы в курсоре. Если `OF <column_name> [, <... n>]` определено, только перечисленные столбцы позволяют вносить изменения. Если инструкция `UPDATE` используется без списка столбцов, то обновление возможно для всех столбцов, за исключением случая, когда был указан параметр параллелизма `READ_ONLY`.  
   
 ## <a name="remarks"></a>Remarks  

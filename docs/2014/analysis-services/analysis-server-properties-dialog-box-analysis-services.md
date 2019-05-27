@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - SQL12.ASVS.SSMSIMBI.SERVERPROPERTIES.F1
@@ -16,12 +15,12 @@ ms.assetid: b01ec658-c191-49c9-a6cb-549b21a368ab
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e9bcb19e10417c24b30b5ee6346d6d6a19d4bbcb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b32b0fa678df98494f91c1026adebe701d807342
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62636783"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66062615"
 ---
 # <a name="analysis-server-properties-dialog-box-analysis-services"></a>Диалоговое окно «Свойства сервера анализа данных» (службы Analysis Services)
   Используйте диалоговое окно **Свойства сервера анализа данных** в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] для задания общих свойств, языка или параметров сортировки и безопасности экземпляра служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Чтобы открыть диалоговое окно **Свойства сервера анализа данных**, щелкните правой кнопкой мыши экземпляр служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] в **обозревателе объектов** и выберите в контекстном меню пункт **Свойства**. Диалоговое окно **Свойства сервера анализа данных** содержит следующие свойства.  
@@ -84,7 +83,7 @@ ms.locfileid: "62636783"
   
      Если этот параметр не выбран, то службы [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] рассматривают символы с диакритическими знаками и без них как равнозначные.  
   
--   **С учетом типа японской** служит для и сравнения данных на основе словаря правил для соответствующего языка или алфавита, а также для различия двух типов японской азбуки: Хирагана и катакана.  
+-   **С учетом типа японской** служит для и сравнения данных на основе словаря правил для соответствующего языка или алфавита, а также для различия двух типов японской азбуки: хирагана и катакана.  
   
      Если этот параметр не выбран, то службы [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] рассматривают символы этих азбук как равнозначные.  
   

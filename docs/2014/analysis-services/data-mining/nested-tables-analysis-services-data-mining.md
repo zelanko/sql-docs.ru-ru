@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], nested tables
@@ -15,12 +14,12 @@ ms.assetid: cb192aa2-597e-4d4f-ac34-3556d037fed4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 278244f5cf8f7a25f497ece40490920c7a8a9c8b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 865eea502ecc7e807533b75501634fb6d3356583
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62733267"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66083251"
 ---
 # <a name="nested-tables-analysis-services---data-mining"></a>Вложенные таблицы (службы Analysis Services — интеллектуальный анализ данных)
   В службах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]данные должны подаваться на вход алгоритма интеллектуального анализа данных в виде последовательности вариантов, содержащихся в таблице вариантов. Но не все варианты можно описать одной строкой данных. Например, некоторый вариант может быть выведен на основании двух таблиц: таблицы, содержащей данные о заказчике, и таблицы, содержащей сведения о покупках заказчика. Одному заказчику из таблицы заказчиков может соответствовать несколько элементов в таблице покупок, что усложняет описание данных в одной строке. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] предоставляют уникальный метод обработки таких случаев с помощью *вложенных таблиц*. Понятие вложенной таблицы демонстрируется на следующей схеме.  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 71e884a9-7ec4-4459-a4c4-87f6c796d478
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 87d3273367196d2c0c60780a3f1fa125c0b3bf8e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 554c7c0f375d63710c86e37666ee98c6dac6daf6
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62731333"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66081164"
 ---
 # <a name="filter-dialog-box-mining-accuracy-chart"></a>Диалоговое окно «Фильтр» (диаграмма точности интеллектуального анализа данных)
   Диалоговое окно **Фильтр** помогает создать условия, которые можно применить к набору данных. Набор данных может быть внешним набором данных, используемых для проверки, или данными варианта, используемых для обучения модели интеллектуального анализа данных. Это диалоговое окно позволяет создавать критерии, которые можно сохранять как часть более сложных условий фильтра в диалоговых окнах **Фильтр набора данных** и **Фильтр модели** .  

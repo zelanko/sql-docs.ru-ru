@@ -23,14 +23,18 @@ ms.assetid: 7830f80d-af32-4e8f-a6fc-f03af6bc1946
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: af7d7dfb72ade1121151feddaeaded0fa9f06fe5
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 2cf3156597035241398e354e8c80bfebb9c16d67
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274384"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728274"
 ---
 # <a name="flat-file-connection-manager"></a>Диспетчер соединений с неструктурированными файлами
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Диспетчер соединений с неструктурированными файлами дает возможность пакету получить доступ к данным неструктурированного файла. Например, исходные и целевые неструктурированные файлы могут использоваться диспетчерами соединений с неструктурированными файлами для извлечения и загрузки данных.  
   
  Диспетчер соединений с неструктурированными файлами получает доступ только к одному файлу. Чтобы ссылаться на несколько файлов, воспользуйтесь диспетчером соединений с несколькими неструктурированными файлами вместо обычного диспетчера соединений с неструктурированными файлами. Дополнительные сведения см. в разделе [Multiple Flat Files Connection Manager](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md).  

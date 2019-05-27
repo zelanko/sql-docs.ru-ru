@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - precedence executables [Integration Services]
@@ -18,12 +17,12 @@ ms.assetid: 5574d89a-a68e-4b84-80ea-da93305e5ca1
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f06bd12161065c6961581a2a29a2c02af6e27dcb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 68455f23f5d05895af8f0cfb4d7b1e12e3d65b16
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62837322"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66061894"
 ---
 # <a name="add-expressions-to-precedence-constraints"></a>Добавление выражений к элементам управления очередностью
   Элементы управления очередностью могут использовать выражение для определения зависимости между двумя исполняемыми объектами: приоритетным исполняемым объектом и исполняемым объектом с ограничением. Исполняемыми объектами могут быть задачи или контейнеры. Выражение может быть использовано само по себе или в сочетании с результатом выполнения приоритетного исполняемого объекта. Выполнение любого исполняемого объекта может закончиться успешно или со сбоем. При настройке результата выполнения управления очередностью доступны варианты `Success`, `Failure` или `Completion`. Для варианта `Success` требуется успешное выполнение ограничивающего исполняемого объекта, для `Failure` — его неудачное выполнение, а `Completion` означает, что ограничивающий исполняемый объект должен запускаться независимо от успешности выполнения приоритетной задачи. Дополнительные сведения см. в статье [Precedence Constraints](control-flow/precedence-constraints.md).  

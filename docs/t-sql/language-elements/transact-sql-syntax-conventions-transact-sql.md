@@ -25,16 +25,16 @@ helpviewer_keywords:
 - naming conventions [SQL Server]
 - syntax [SQL Server], Transact-SQL
 ms.assetid: 35fbcf7f-8b55-46cd-a957-9b8c7b311241
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0580ed82ca6ab5d94b1411ba70ce1b0d2f3ff770
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.openlocfilehash: edc4bd43b27235a35b6c8ed213e2925523015fde
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154729"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65981454"
 ---
 # <a name="transact-sql-syntax-conventions-transact-sql"></a>Синтаксические обозначения в Transact-SQL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "56154729"
 |&#124; (вертикальная черта)|Разделяет элементы синтаксиса внутри квадратных или фигурных скобок. Может быть использован только один из этих элементов.|  
 |`[ ]` (квадратные скобки)|Необязательные элементы синтаксиса. Квадратные скобки не вводятся.|  
 |{ } (фигурные скобки)|Обязательные элементы синтаксиса. Фигурные скобки не вводятся.|  
-|[**,**..._n_]|Указывает на то, что предшествующий элемент можно повторить _n_ раз. Вхождения элемента разделяются запятыми.|  
+|[ **,** ..._n_]|Указывает на то, что предшествующий элемент можно повторить _n_ раз. Вхождения элемента разделяются запятыми.|  
 |[..._n_]|Указывает на то, что предшествующий элемент можно повторить _n_ раз. Отдельные вхождения элемента разделяются пробелами.|  
 |;|Признак конца инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)]. Хотя точка с запятой не требуется для большинства инструкций в этой версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], этот символ станет обязательным в будущей версии.|  
 |\<label> ::=|Имя синтаксического блока. Используйте это соглашение для группирования и маркировки сегментов с длинным синтаксисом или элемента синтаксиса, который может использоваться в нескольких расположениях в пределах одной инструкции. Каждое расположение, в котором может быть использован синтаксический блок, обозначается меткой, заключенной в шевроны: \<label>.<br /><br /> Набор представляет собой коллекцию выражений, например \<grouping set>; а список — коллекцию наборов, например \<composite element list>.|  

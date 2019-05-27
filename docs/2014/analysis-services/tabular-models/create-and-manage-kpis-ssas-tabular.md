@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.kpi.f1
@@ -13,12 +12,12 @@ ms.assetid: c96026c2-4394-4c3c-986b-4c95a4421900
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dde3d1c12dd4f5b037d24030ae9ec96ae9f97dd0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fc0bd941392c208ad693be21a391d7b9e3f587a1
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62757390"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66067510"
 ---
 # <a name="create-and-manage-kpis-ssas-tabular"></a>Создание ключевых показателей эффективности и управление ими (табличные службы SSAS)
   В этом разделе описывается создание, изменение и удаление ключевого показателя эффективности (KPI) в табличной модели. Чтобы создать ключевой показатель Эффективности, выберите меру, результатом которого является значение базового ключевого показателя Эффективности. Затем в диалоговом окне «Ключевой показатель эффективности» необходимо выбрать вторую меру или абсолютное значение, на основании которого будет вычисляться целевое значение. Затем можно определить пороговые значения состояний, которые определяют эффективность между базовой и целевой мерами.  

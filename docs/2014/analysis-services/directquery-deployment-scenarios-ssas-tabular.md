@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 2aaf5cb8-294b-4031-94b3-fe605d7fc4c7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 679658c7ffdc00a90cb485bb9f1892ddffde7775
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a62a05c8908391b9ce925ecfe08ae30540b8fa29
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62731680"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66081648"
 ---
 # <a name="directquery-deployment-scenarios-ssas-tabular"></a>Сценарии развертывания DirectQuery (табличные службы SSAS)
   В этом разделе содержится пошаговое руководство по структурной организации и процедуре развертывания моделей DirectQuery. Модель DirectQuery можно настроить либо на использование только реляционных данных (только DirectQuery), либо на переключение между использованием только закэшированных и только реляционных данных (гибридный режим). Этот раздел описывает процесс реализации обоих режимов, а также возможные различия в результатах запросов, выполняемых в разных режимах и конфигурациях безопасности.  

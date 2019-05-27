@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - content type [data mining]
@@ -21,12 +20,12 @@ ms.assetid: 7c72d80e-913c-4bbe-b258-444294a78838
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4a9c7a8152896aa3bd9f75cf483aaf29429a5638
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9bec249e483c5736ee7cf0e66f4aff0af98e08c7
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62681191"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66088026"
 ---
 # <a name="choosing-data-for-data-mining"></a>Выбор данных для интеллектуального анализа данных
   Перед началом интеллектуального анализа данных, вы можете задать вопрос «сколько данных требуется?» или «Существуют ли специальные требования, которые мне нужно знать при очистке или форматировании данных?»  

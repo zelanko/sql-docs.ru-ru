@@ -18,15 +18,17 @@ ms.assetid: 233d0877-046b-4dcc-b5da-adeb22f78531
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-ms.openlocfilehash: a9088b3502a010ce6b46f29516eefee5aa8934d1
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
+ms.openlocfilehash: 53739518c40221b752d63016faf369b9e3e71587
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012046"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65576320"
 ---
 # <a name="openjson-transact-sql"></a>OPENJSON (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
 **OPENJSON** — функция с табличным значением, которая выполняет синтаксический анализ текста JSON и возвращает объекты и свойства из входных данных JSON в виде строк и столбцов. Другими словами, **OPENJSON** предоставляет документ JSON в виде набора строк. Вы можете явно указать столбцы в наборе строк и пути к свойствам JSON, используемые для заполнения столбцов. Поскольку **OPENJSON** возвращает набор строк, вы можете использовать **OPENJSON** в предложении `FROM` инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] точно так же, как и в любой другой таблице, представлении или в функции с табличным значением.  
   
@@ -38,14 +40,14 @@ ms.locfileid: "56012046"
 > Проверить уровень совместимости можно в представлении `sys.databases` или в свойствах базы данных. Изменить уровень совместимости базы данных можно с помощью следующей команды:  
 > 
 > `ALTER DATABASE DatabaseName SET COMPATIBILITY_LEVEL = 130`
->   
+>
 > Уровень совместимости 120 может использоваться по умолчанию даже в новой базе данных SQL Azure.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел")[Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```
 OPENJSON( jsonExpression [ , path ] )  [ <with_clause> ]
 
 <with_clause> ::= WITH ( { colName type [ column_path ] [ AS JSON ] } [ ,...n ] )
@@ -65,8 +67,10 @@ OPENJSON( jsonExpression [ , path ] )  [ <with_clause> ]
 
 *предложение_with* содержит список столбцов с их типами, которые должна вернуть функция **OPENJSON**. По умолчанию **OPENJSON** сравнивает ключи в *jsonExpression* с именами столбцов в *предложении_with* (сравнение выполняется с учетом регистра). Если имя столбца не соответствует имени ключа, можно указать необязательный параметр *путь_столбца*, который является [выражением пути JSON](../../relational-databases/json/json-path-expressions-sql-server.md), ссылающимся на ключ в *jsonExpression*. 
 
-## <a name="arguments"></a>Аргументы  
-### <a name="jsonexpression"></a>*jsonExpression*  
+## <a name="arguments"></a>Аргументы
+
+### <a name="jsonexpression"></a>*jsonExpression*
+
 Символьное выражение Юникода, содержащее текст JSON.  
   
 OPENJSON выполняет итерацию по элементам массива или свойствам объекта в выражении JSON и возвращает одну строку для каждого элемента или свойства. В следующем примере возвращаются все свойства объекта *jsonExpression*:  
@@ -86,7 +90,7 @@ SELECT *
 FROM OPENJSON(@json)
 ```  
   
-**Результаты**  
+**Результаты**
   
 |ключ|value|type|  
 |---------|-----------|----------|  
@@ -98,7 +102,8 @@ FROM OPENJSON(@json)
 |ArrayValue|["a","r","r","a","y"]|4|  
 |ObjectValue|{"obj":"ect"}|5|  
 
-### <a name="path"></a>*путь*  
+### <a name="path"></a>*путь*
+
 Необязательное выражение пути JSON, которое ссылается на объект или массив в *jsonExpression*. **OPENJSON** обращается к тексту JSON в указанной позиции и анализирует только заданный фрагмент текста. Дополнительные сведения см. в статье [Выражения пути JSON (SQL Server)](../../relational-databases/json/json-path-expressions-sql-server.md).
 
 В [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] и [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)] можно указать переменную в качестве значения *пути*.
@@ -127,12 +132,13 @@ FROM OPENJSON(@json,'$.path.to."sub-object"')
 |2|de-AT|  
 |3|es-AR|  
 |4|sr-Cyrl|  
- 
+
 Когда функция **OPENJSON** анализирует массив JSON, она возвращает индексы элементов в тексте JSON в виде ключей.
 
 Сравнение, используемое для сопоставления шагов пути со свойствами выражения JSON, выполняется с учетом регистра и без учета параметров сортировки (сравнение BIN2). 
 
 ### <a name="withclause"></a>*предложение_with*
+
 Явным образом определяет выходные данные схемы, возвращаемые функцией **OPENJSON**. Необязательное *предложение_with* может содержать следующие элементы:
 
 *colName* — имя выходного столбца.  
@@ -157,9 +163,9 @@ FROM OPENJSON(@json,'$.path.to."sub-object"')
 *AS JSON*  
 Используйте параметр **AS JSON** в определении столбца, чтобы указать, что указанное свойство содержит внутренний объект JSON или массив. При указании параметра **AS JSON** необходимо использовать тип столбца NVARCHAR(MAX).
 
--   Если не указать параметр **AS JSON** для столбца, функция возвращает скалярное значение (например, целочисленное значение, строковое значение, true, false) для заданного свойства JSON по указанному пути. Если путь представляет объект или массив и по указанному пути не удается найти свойство, функция возвращает NULL в нестрогом режиме или сообщение об ошибке в строгом режиме. Это поведение похоже на поведение функции **JSON_VALUE**.  
+- Если не указать параметр **AS JSON** для столбца, функция возвращает скалярное значение (например, целочисленное значение, строковое значение, true, false) для заданного свойства JSON по указанному пути. Если путь представляет объект или массив и по указанному пути не удается найти свойство, функция возвращает NULL в нестрогом режиме или сообщение об ошибке в строгом режиме. Это поведение похоже на поведение функции **JSON_VALUE**.  
   
--   Если указать параметр **AS JSON** для столбца, функция возвращает фрагмент JSON для заданного свойства JSON по указанному пути. Если путь представляет скалярное значение и по указанному пути не удается найти свойство, функция возвращает NULL в нестрогом режиме или сообщение об ошибке в строгом режиме. Это поведение похоже на поведение функции **JSON_QUERY**.  
+- Если указать параметр **AS JSON** для столбца, функция возвращает фрагмент JSON для заданного свойства JSON по указанному пути. Если путь представляет скалярное значение и по указанному пути не удается найти свойство, функция возвращает NULL в нестрогом режиме или сообщение об ошибке в строгом режиме. Это поведение похоже на поведение функции **JSON_QUERY**.  
   
 > [!NOTE]  
 > Если вы хотите возвратить вложенный фрагмент JSON из свойства JSON, необходимо указать флаг **AS JSON**. Если этот параметр не указан и свойство не удается найти, OPENJSON возвращает значение NULL вместо указанного объекта или массива JSON или массива или возвращает ошибку времени выполнения в строгом режиме.  
@@ -203,15 +209,14 @@ WITH (
  )
 ```  
   
-**Результаты**  
+**Результаты**
   
 |Количество|Дата|Customer|количество|Порядок|  
 |------------|----------|--------------|--------------|-----------|  
 |SO43659|2011-05-31T00:00:00|AW29825|1|{"Number":"SO43659","Date":"2011-05-31T00:00:00"}|  
 |SO43661|2011-06-01T00:00:00|AW73565|3|{"Number":"SO43661","Date":"2011-06-01T00:00:00"}|  
   
-
-## <a name="return-value"></a>Возвращаемое значение  
+## <a name="return-value"></a>Возвращаемое значение
 Столбцы, которые возвращает функция OPENJSON, зависят от параметра WITH.  
   
 1. При вызове OPENJSON со схемой по умолчанию (то есть без указания явной схемы в предложении WITH) функция возвращает таблицу со следующими столбцами:  
@@ -236,8 +241,8 @@ WITH (
 
 Параметр *путь_json*, который используется в качестве второго аргумента инструкции **OPENJSON** или в *предложении_with*, может начинаться с ключевого слова **lax** или **strict**.
 
--   В **нестрогом** режиме **OPENJSON** не выдает ошибку, если не удалось найти объект или значение по указанному пути. Если не удается найти путь, **OPENJSON** возвращает пустой результирующий набор или значение NULL.
--   В **строгом** режиме **OPENJSON** возвращает ошибку, если путь не найден.
+- В **нестрогом** режиме **OPENJSON** не выдает ошибку, если не удалось найти объект или значение по указанному пути. Если не удается найти путь, **OPENJSON** возвращает пустой результирующий набор или значение NULL.
+- В **строгом** режиме **OPENJSON** возвращает ошибку, если путь не найден.
 
 В некоторых примерах на этой странице явно указывается режим пути: нестрогий или строгий режим. Режим пути является необязательным. Если режим пути не указан явно, по умолчанию используется нестрогий режим. Дополнительные сведения о режиме пути и выражениях пути см. в разделе [Выражения пути JSON (SQL Server)](../../relational-databases/json/json-path-expressions-sql-server.md).    
 
@@ -257,7 +262,8 @@ WITH (
 
 ## <a name="examples"></a>Примеры  
   
-### <a name="example-1---convert-a-json-array-to-a-temporary-table"></a>Пример 1. Преобразование массива JSON во временную таблицу  
+### <a name="example-1---convert-a-json-array-to-a-temporary-table"></a>Пример 1. Преобразование массива JSON во временную таблицу
+
 В следующем примере список идентификаторов представлен как массив чисел JSON. Запрос преобразует массив JSON в таблицу идентификаторов и выбирает все продукты с указанными идентификаторами.  
   
 ```sql  
@@ -277,7 +283,8 @@ FROM products
 WHERE product.productTypeID IN (1,2,3,4)
 ```  
   
-### <a name="example-2---merge-properties-from-two-json-objects"></a>Пример 2. Слияние свойств из двух объектов JSON  
+### <a name="example-2---merge-properties-from-two-json-objects"></a>Пример 2. Слияние свойств из двух объектов JSON
+
 В следующем примере возвращается объединение всех свойств для двух объектов JSON. У двух объектов есть одинаковое свойство *name*. В примере используется значение ключа, чтобы исключить повторяющиеся строки из результатов.  
   
 ```sql  
@@ -295,7 +302,8 @@ FROM OPENJSON(@json2)
 WHERE [key] NOT IN (SELECT [key] FROM OPENJSON(@json1))
 ```  
   
-### <a name="example-3---join-rows-with-json-data-stored-in-table-cells-using-cross-apply"></a>Пример 3. Соединение строк с данными JSON, хранящимися в ячейках таблицы, с помощью CROSS APPLY  
+### <a name="example-3---join-rows-with-json-data-stored-in-table-cells-using-cross-apply"></a>Пример 3. Соединение строк с данными JSON, хранящимися в ячейках таблицы, с помощью CROSS APPLY
+
 В следующем примере в таблице `SalesOrderHeader` есть текстовый столбец `SalesReason`, содержащий массив `SalesOrderReasons` в формате JSON. У объектов `SalesOrderReasons` есть такие свойства, как *Quality* и *Manufacturer*. В примере создается отчет, который соединяет каждую строку заказа на продажу с соответствующими причинами покупки. Оператор OPENJSON разворачивает массив JSON причин покупки, как если бы причины хранились в отдельной дочерней таблице. Затем оператор CROSS APPLY соединяет каждую строку заказа на продажу со строками, возвращенными функцией с табличным значением OPENJSON.  
   
 ```sql  
@@ -317,7 +325,8 @@ FROM Sales.SalesOrderHeader
   
 В этом примере путь `$` ссылается на каждый элемент в массиве. Если необходимо явно привести возвращаемое значение, можно использовать этот тип запроса.  
   
-### <a name="example-4---combine-relational-rows-and-json-elements-with-cross-apply"></a>Пример 4. Объединение реляционных строк и элементов JSON с помощью CROSS APPLY  
+### <a name="example-4---combine-relational-rows-and-json-elements-with-cross-apply"></a>Пример 4. Объединение реляционных строк и элементов JSON с помощью CROSS APPLY
+
 Следующий запрос объединяет реляционные строки и элементы JSON в результаты, показанные в следующей таблице.  
   
 ```sql  
@@ -329,14 +338,15 @@ CROSS APPLY OPENJSON(store.jsonCol, 'lax $.location')
      AS location
 ```  
   
-**Результаты**  
+**Результаты**
   
 |title|street|postcode|lon|lat|  
 |-----------|------------|--------------|---------|---------|  
 |Whole Food Markets|17991 Redmond Way|WA  98052|47.666124|-122.10155|  
 |Sears|148th Ave NE|WA 98052|47.63024|-122.141246,17|  
   
-### <a name="example-5---import-json-data-into-sql-server"></a>Пример 5. Импорт данных JSON в SQL Server  
+### <a name="example-5---import-json-data-into-sql-server"></a>Пример 5. Импорт данных JSON в SQL Server
+
 В следующем примере весь объект JSON загружается в таблицу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ```sql  
@@ -353,16 +363,16 @@ DECLARE @json NVARCHAR(max)  = N'{
   INSERT INTO Person  
   SELECT *   
   FROM OPENJSON(@json)  
-  WITH (id int,  
+  WITH id int,  
         firstName nvarchar(50), lastName nvarchar(50),   
         isAlive bit, age int,  
         dateOfBirth datetime2, spouse nvarchar(50))
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также раздел
+
  [Выражения пути JSON (SQL Server)](../../relational-databases/json/json-path-expressions-sql-server.md)   
  [Преобразование данных JSON в строки и столбцы с помощью функции OPENJSON (SQL Server)](../../relational-databases/json/convert-json-data-to-rows-and-columns-with-openjson-sql-server.md)   
  [Использование OPENJSON со схемой по умолчанию (SQL Server)](../../relational-databases/json/use-openjson-with-the-default-schema-sql-server.md)   
  [Использование OPENJSON с явной схемой (SQL Server)](../../relational-databases/json/use-openjson-with-an-explicit-schema-sql-server.md)  
-  
   

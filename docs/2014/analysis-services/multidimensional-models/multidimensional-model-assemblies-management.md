@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Analysis Services], assemblies
@@ -22,12 +21,12 @@ ms.assetid: b2645d10-6d17-444e-9289-f111ec48bbfb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4f5109e604c65d8a525e5c65127ca287c8e3b049
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6c4f57e12754fc8e32fba8f483a2dfc360d7edc0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62725248"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66073530"
 ---
 # <a name="multidimensional-model-assemblies-management"></a>Управление сборками многомерной модели
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] предоставляют значительное количество встроенных функций для использования с языками многомерных выражений и расширений интеллектуального анализа данных, предназначенных для выполнения любых задач, от стандартных статистических вычислений до обхода по элементам в иерархии. Однако, как и с любым другим сложным и надежным продуктом, существует необходимость в дальнейшем расширении функциональности такого продукта.  

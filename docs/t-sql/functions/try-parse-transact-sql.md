@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - TRY_PARSE function
 ms.assetid: 292bac1d-edd8-468c-8ff1-8c7de625bc55
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9968c95f42d2256054d472b53d5c9039c26c1865
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 50c1c88525c096e5b573236c569b9e15d703a60f
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785562"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65946884"
 ---
 # <a name="tryparse-transact-sql"></a>TRY_PARSE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
   
 ## <a name="arguments"></a>Аргументы  
  *string_value*  
- Значение **nvarchar(4000)**, представляющее форматированное значение для преобразования в указанный тип данных.  
+ Значение **nvarchar(4000)** , представляющее форматированное значение для преобразования в указанный тип данных.  
   
  *string_value* должно быть допустимым представлением требуемого типа данных, или инструкция TRY_PARSE возвратит значение NULL.  
   
@@ -69,9 +69,9 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
   
 |Категория|Тип|Тип .NET|Используемые стили|  
 |--------------|----------|---------------|-----------------|  
-|Числовой|bigint|Int64|NumberStyles.Number|  
+|Числовой|BIGINT|Int64|NumberStyles.Number|  
 |Числовой|ssNoversion|Int32|NumberStyles.Number|  
-|Числовой|SMALLINT|Int16|NumberStyles.Number|  
+|Числовой|smallint|Int16|NumberStyles.Number|  
 |Числовой|TINYINT|Byte|NumberStyles.Number|  
 |Числовой|Decimal|Decimal|NumberStyles.Number|  
 |Числовой|NUMERIC|Decimal|NumberStyles.Number|  
@@ -93,7 +93,7 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
 |Полное имя|Псевдоним|LCID|Конкретная культура|  
 |---------------|-----------|----------|----------------------|  
 |us_english|Английский|1033|en-US|  
-|Deutsch|German|1031|de-DE|  
+|Deutsch|Немецкий|1031|de-DE|  
 |Français|Французский|1036|fr-FR|  
 |日本語|Японский|1041|ja-JP|  
 |Dansk|Danish|1030|da-DK|  

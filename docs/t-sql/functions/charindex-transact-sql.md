@@ -18,16 +18,16 @@ helpviewer_keywords:
 - pattern searching [SQL Server]
 - starting point of expression in character string
 ms.assetid: 78c10341-8373-4b30-b404-3db20e1a3ac4
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 88f57c22df5b6a621b5133f56f79a16ede550d77
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: adfc98d7502f41b2408117ff0482e208d27834a8
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802291"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65947076"
 ---
 # <a name="charindex-transact-sql"></a>CHARINDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,7 +53,7 @@ CHARINDEX ( expressionToFind , expressionToSearch [ , start_location ] )
 Выражение типа **integer** или **bigint**, с которого начинается поиск. Если аргумент *start_location* не указан, имеет отрицательное значение или равен нулю (0), то поиск начинается с начала выражения *expressionToSearch*.
   
 ## <a name="return-types"></a>Типы возвращаемых данных
-**bigint**, если *expressionToSearch* имеет тип данных **nvarchar(max)**, **varbinary(max)** или **varchar(max)**; в противном случае **int**.
+**bigint**, если *expressionToSearch* имеет тип данных **nvarchar(max)** , **varbinary(max)** или **varchar(max)** ; в противном случае **int**.
   
 ## <a name="remarks"></a>Remarks  
 Если выражение *expressionToFind* или  *expressionToSearch* имеет тип данных Юникода (**nchar** или **nvarchar**), а второе выражение — нет, функция CHARINDEX преобразует такое другое выражение в тип данных Юникода. Функция CHARINDEX не поддерживает типы данных **image**, **ntext** и **text**.
@@ -66,7 +66,7 @@ CHARINDEX ( expressionToFind , expressionToSearch [ , start_location ] )
   
 Начальная возвращенная позиция начинается с 1, а не с 0.
   
-Символ 0x0000 (**char(0)**) не определен в параметрах сортировки Windows, и его нельзя включать в CHARINDEX.
+Символ 0x0000 (**char(0)** ) не определен в параметрах сортировки Windows, и его нельзя включать в CHARINDEX.
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>Дополнительные символы (суррогатные пары)  
 Если используются параметры сортировки SC, и в *start_location*, и в возвращаемом значении суррогатные пары учитываются как один символ, а не как два. Дополнительные сведения см. в статье [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubewizard.datasourcebrowse.f1
@@ -16,12 +15,12 @@ ms.assetid: 16f077bd-9366-4964-8778-92ea0eddb8bb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 14fcc55e8e50892ce2aa54326f9f82a195aa66e4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 49a98b2710cf1af3a936ba7fa7fe244bb7675bd9
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62640161"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66064462"
 ---
 # <a name="browse-data-source-view-dialog-box-analysis-services---multidimensional-data"></a>Диалоговое окно «Обзор представления источников данных» (службы Analysis Services — многомерные данные)
   Диалоговое окно «Просмотр представления источников данных» отображает простую графическую диаграмму выбранного представления источников данных. Кроме того, имя этого представления источников данных выводится в качестве заголовка данного диалогового окна.  

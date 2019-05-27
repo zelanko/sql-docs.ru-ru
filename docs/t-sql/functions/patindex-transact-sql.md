@@ -19,16 +19,16 @@ helpviewer_keywords:
 - pattern searching [SQL Server]
 - PATINDEX function
 ms.assetid: c0dfb17f-2230-4e36-98da-a9b630bab656
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9dc713f54c9383b240a392304c5c938cdea210b1
-ms.sourcegitcommit: 179ab0e55f918f58a18c43af076130f4ac3decd6
+ms.openlocfilehash: 05612e0b32a336b64614d6072169471fe0450d1b
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65875222"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65943493"
 ---
 # <a name="patindex-transact-sql"></a>PATINDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,7 +51,7 @@ PATINDEX ( '%pattern%' , expression )
  [Выражение](../../t-sql/language-elements/expressions-transact-sql.md), обычно столбец, в котором производится поиск по указанному шаблону. *expression* представляет собой выражение из категории типа данных "символьная строка".  
   
 ## <a name="return-types"></a>Типы возвращаемых данных  
- **bigint**, если *expression* имеет тип данных **varchar(max)** или **nvarchar(max)**; в противном случае **int**.  
+ **bigint**, если *expression* имеет тип данных **varchar(max)** или **nvarchar(max)** ; в противном случае **int**.  
   
 ## <a name="remarks"></a>Remarks  
  Если аргумент *pattern* или *expression* имеет значение NULL, функция PATINDEX возвращает значение NULL.  
@@ -63,7 +63,7 @@ PATINDEX ( '%pattern%' , expression )
 ## <a name="supplementary-characters-surrogate-pairs"></a>Дополнительные символы (суррогатные пары)  
  При использовании параметров сортировки SC возвращаемое значение рассматривает любые суррогатные пары UTF-16 в параметре *expression* как один символ. Дополнительные сведения см. в статье [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
   
- Символ 0x0000 (**char(0)**) не определен в параметрах сортировки Windows, и его нельзя включать в PATINDEX.  
+ Символ 0x0000 (**char(0)** ) не определен в параметрах сортировки Windows, и его нельзя включать в PATINDEX.  
   
 ## <a name="examples"></a>Примеры  
   

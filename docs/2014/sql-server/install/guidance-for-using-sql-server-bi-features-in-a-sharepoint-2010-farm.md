@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 5f9a94c4-854b-4577-a8b1-7142f19904e3
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9470cc5f4a0567d211e0678b32aec05d12b5b239
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: ae552c12c3d4773d6a05a6d61c7644eb245b68ed
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374846"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66094998"
 ---
 # <a name="guidance-for-using-sql-server-bi-features-in-a-sharepoint-2010-farm"></a>Указания по использованию функций бизнес-аналитики SQL Server в ферме SharePoint 2010
   В этом разделе содержатся сведения о доступности компонентов в зависимости от версии и выпуска используемого ПО. Здесь также описываются требования по установке SharePoint 2010 для использования определенных компонентов SQL Server. Сведения, относящиеся к SharePoint 2013, см. в разделе [топологии развертывания для компонентов бизнес-Аналитики SQL Server в SharePoint](deployment-topologies-for-sql-server-bi-features-in-sharepoint.md).  
@@ -66,9 +65,9 @@ ms.locfileid: "53374846"
 > [!NOTE]  
 >  В существующей ферме, необходимо использовать одно из следующих **дополнительных** обновление действия, чтобы завершить SharePoint с пакетом обновления 1. Дополнительные сведения см. в разделе [известные проблемы при установке пакета обновления 1 для Office 2010 и SharePoint 2010 с пакетом обновления 1](https://support.microsoft.com/kb/2532126) и [описание из SharePoint Server 2010 с пакетом обновления 1](https://support.microsoft.com/kb/2460045):  
   
--   **Мастер настройки продуктов SharePoint:** запустите мастер, чтобы завершить обновление до версии с пакетом обновления 1 (SP1) и настройку.  
+-   **Мастер настройки продуктов SharePoint:** Запустите мастер для завершения обновления SP1 и конфигурации.  
   
--   **Завершение обновления с помощью psconfig:** запустите команду `psconfig -upgrade`, чтобы завершить обновление до версии с пакетом обновления 1 (SP1).  
+-   **Завершение обновления с помощью psconfig:** Выполните команду `psconfig -upgrade` для завершения обновления SP1  
   
  Дополнительные сведения см. в разделе «обновление» [(SharePoint Server 2010)](https://technet.microsoft.com/library/cc263093.aspx) и [Центр ресурсов: Обновления для продуктов SharePoint 2010](https://technet.microsoft.com/sharepoint/ff800847.aspx)  
   

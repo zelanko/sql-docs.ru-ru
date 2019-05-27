@@ -1,11 +1,10 @@
 ---
-title: Как Запустить мастер анализа помощника по обновлению | Документация Майкрософт
+title: Практическое руководство. Запустить мастер анализа помощника по обновлению | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Upgrade Advisor Analysis Wizard
@@ -13,14 +12,14 @@ ms.assetid: d7d2a1e2-1179-4c05-9b0f-555b04dd1199
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 49c8cd84ada68d4ac00b13567528abff72d13847
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 1464b55724e4305f2833ddce34e27170c7afd484
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207653"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66094828"
 ---
-# <a name="how-to-run-the-upgrade-advisor-analysis-wizard"></a>Как запустить мастер анализа помощника по обновлению
+# <a name="how-to-run-the-upgrade-advisor-analysis-wizard"></a>Практическое руководство. Запуск мастера анализа помощника по обновлению
   Мастер анализа помощника по обновлению запускается с начальной страницы помощника по обновлению. В этом разделе описывается запуск мастера анализа помощника по обновлению.  
   
 > [!IMPORTANT]

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.suggestrelatedcolumns.f1
@@ -13,12 +12,12 @@ ms.assetid: 02bac877-2376-48ff-a585-5b197263c85e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: aef22dfdc18304591b8d556fd323ba6b851778eb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 054707856c017877b868c1ad754fbaa3520a8c59
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62757822"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66068017"
 ---
 # <a name="suggest-related-columns-data-mining-wizard"></a>Предложение связанных столбцов (мастер интеллектуального анализа данных)
   Страница **Предложение связанных столбцов** позволяет просматривать рекомендации функции **Предложить** , выбранной на предыдущей странице данного мастера. Входные столбцы будут предварительно отобраны на основании их связи с выбранным столбцом **Прогнозируемый** . Если принять изменения в этом диалоговом окне, они будут отражены на странице **Определение обучающих данных** .  

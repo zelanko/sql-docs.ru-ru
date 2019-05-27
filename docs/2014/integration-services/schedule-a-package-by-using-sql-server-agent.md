@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 3d389cce-05af-4e1d-b684-7bbff413c806
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f2e9e395ec0c8703edaf7c398e22b352251302c4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 55b872b46b5e0007d0651e190f6698ff0cfb50ec
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62766886"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66056228"
 ---
 # <a name="schedule-a-package-by-using-sql-server-agent"></a>Планирование пакета с помощью агента SQL Server
   Следующая процедура описывает шаги для автоматизации выполнения пакета с помощью шага задания агента [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] для выполнения пакета.  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 41c3022d-ab13-443e-ac64-ba1d64584f79
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 82cf55e1fa3fa9bda5a625ef89335a9f81ed5505
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8beb6998d78ad9a113ce18323133de7ed39ead56
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63057549"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66090640"
 ---
 # <a name="configure-a-server-to-run-the-off-by-default-policy"></a>Настройка сервера для выполнения политики «Отключено по умолчанию»
   Теперь есть политика с именем «Отключено по умолчанию». В этой задаче производится проверка сервера на соответствие требованиям политики «Отключено по умолчанию».  

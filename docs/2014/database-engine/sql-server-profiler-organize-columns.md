@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - sql12.pro.organize.columns.f1
@@ -13,12 +12,12 @@ ms.assetid: bf5674f4-da5e-43f9-aeb2-76ca37993790
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7cf6f979058fd1003440e17fb5c479e136413bcf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f0ad3d1204e8c27d91ecb3b586d56a27d45eeb4e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62773448"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66089759"
 ---
 # <a name="sql-server-profiler---organize-columns"></a>Приложение SQL Server Profiler — организация столбцов
   Диалоговое окно **Упорядочение столбцов** используется для выбора столбцов данных для событий группирования и статистической обработки, которые отображаются в трассировке. Это позволяет упростить просмотр и анализ больших файлов и таблиц трассировки.  

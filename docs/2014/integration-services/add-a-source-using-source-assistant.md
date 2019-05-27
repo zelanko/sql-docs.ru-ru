@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5e850b7c-4b89-42ad-b0a6-d63ac7cc9568
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bc051fc23e9efb25ae84b49697398a0b8cc1171a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b162ebfa6d888460b49f0877d634c88bba47464a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62772208"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66062138"
 ---
 # <a name="add-a-source-using-source-assistant"></a>Добавление источника с помощью помощника по источнику
   В этом разделе приведены шаги по добавлению нового источника с помощью помощника по источнику, а также список параметров, доступных в диалоговом окне **Добавление нового источника**, которое отображается при перетаскивании помощника по источнику в конструктор служб SSIS.  
