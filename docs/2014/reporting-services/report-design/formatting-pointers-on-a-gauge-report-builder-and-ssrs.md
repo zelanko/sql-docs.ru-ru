@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 2fdf670a-5237-48fe-813d-97657c5c77d2
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3254f7bbe4cfdd826b24c003b5b472535534dd54
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 294586f0d48ca96ca12d3e9eac70f5d2d288654f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62654471"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105827"
 ---
 # <a name="formatting-pointers-on-a-gauge-report-builder-and-ssrs"></a>Форматирование указателей на датчике (построитель отчетов и службы SSRS)
   Указатель датчика показывает текущее значение датчика. По умолчанию при добавлении поля все содержащиеся в поле значения суммируются в одно значение, которое и показывает указатель датчика. Для датчика можно задать несколько указателей, которые будут указывать несколько значений на одной шкале, либо задать несколько шкал с отдельным указателем для каждой из них. Чтобы определить контекст значения указателя, после добавления поля к датчику необходимо задать минимальное и максимальное значения на соответствующей шкале. Существует также возможность задать минимальное и максимальное значения диапазона, определяющие границы критической области шкалы.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Manager [Reporting Services], configuring
@@ -13,12 +12,12 @@ ms.assetid: e918986c-af15-48f6-8178-256aed829c6a
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 8bea75455bca695baa949d70bcef3909ac729cb7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: aff33ad5722ad4b08c1429b795607d1217b95e39
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63011429"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66103938"
 ---
 # <a name="configure-report-manager-native-mode"></a>Настройка диспетчера отчетов (собственный режим)
   Диспетчер отчетов — клиентский веб-интерфейс, используемый для просмотра отчетов, управления содержимым сервера отчетов и для предоставления пользователям доступа к серверу отчетов в собственном режиме. Диспетчер отчетов устанавливается вместе с веб-службой сервера отчетов внутри того же экземпляра сервера отчетов и при необходимости настраивается, если в программе установки пользователь выбирает параметр **Установить конфигурацию по умолчанию для работы в собственном режиме** . Кроме того, диспетчер отчетов можно настроить как задачу, которая будет выполняться после установки. В этом разделе содержатся сведения о следующих сценариях настройки диспетчера отчетов.  

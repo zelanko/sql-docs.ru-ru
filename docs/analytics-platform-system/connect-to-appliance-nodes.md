@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: e8c61bebd6265d25e2c3fe0a14516e986f3ee414
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 873ce3cf5ad2707979d66068b3930d6f59f7057c
+ms.sourcegitcommit: 3b266dc0fdf1431fdca6b2ad34ae5fd38abe9f69
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63134406"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66186795"
 ---
 # <a name="connect-to-appliance-nodes-in-analytics-platform-system"></a>Подключение к узлам устройства в Analytics Platform System
 В этой статье рассматриваются различные способы для подключения к каждому узлу в Analytics Platform System appliance.  
@@ -26,6 +26,9 @@ ms.locfileid: "63134406"
 Каждый из узлов устройства осуществляется напрямую только в определенные сценарии использования и определенных пользователем типов. Ниже перечислены каждый узел устройства и сценарии, при которых пользователи будут подключаться непосредственно к этому узлу.  
   
 <!-- MISSING LINKS For information on the purpose of each node, see [Understanding SQL Server PDW &#40;SQL Server PDW&#41;](../sqlpdw/understanding-sql-server-pdw-sql-server-pdw.md).  -->  
+
+> [!WARNING]  
+> Изменение параметров базы данных или таблицы на элемент управления или вычислительные узлы без явного согласия группы продукта или группы поддержки клиентов APS разворачивалась устройства APS не поддерживается.
   
 |||  
 |-|-|  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql11.rtp.rptdesigner.placeholderproperties.font.f1
@@ -18,12 +17,12 @@ ms.assetid: 26a4baf2-7bc5-4634-b136-552687ffa477
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 12daff3490a0ca11fefa5c120952b30499118a4d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fc3cd0e7213426568a415e8b5f1b28475f0177e1
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62654306"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105762"
 ---
 # <a name="formatting-text-and-placeholders-report-builder-and-ssrs"></a>Форматирование текста и заполнителей (построитель отчетов и службы SSRS)
   Текстовое поле может представлять собой элемент отчета или отдельную ячейку в области данных, которая содержит текст, вычисляемое поле, указатель на поле в базе данных или сочетание всех этих трех элементов. Предусмотрена возможность смешивать шрифты и цвета, добавлять полужирный и курсивный стили и использовать такие стили абзаца, как выравнивание и выступы. Можно форматировать все текстовое поле или конкретный текст, числа, выражения или поля в текстовом поле.  

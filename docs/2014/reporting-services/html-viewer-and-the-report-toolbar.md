@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - HTML Viewer [Reporting Services]
@@ -14,12 +13,12 @@ ms.assetid: cd86b319-babd-45af-a6a4-f659fdcc40c3
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 86ac5b6da861477bfd5b8e92feac97068ca5adc9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b8043bb8f95ea67dbc3dceedc9cfd0154b033d51
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63261189"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109051"
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>Средство просмотра HTML-страниц и панель инструментов отчета
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] есть средство просмотра HTML-страниц, которое предназначено для отображения отчетов по запросу в том виде, в каком они запрашиваются с сервера отчетов. Средство просмотра HTML-страниц обеспечивает платформу для просмотра отчетов в формате HTML. Она включает в себя панель инструментов отчета, раздел параметров, раздел учетных данных и схему документа. Панель инструментов отчета в средстве просмотра HTML-страниц предлагает функции, которые можно использовать для работы с отчетом, включая параметры экспорта, поэтому можно просмотреть отчет в форматах, отличных от HTML. Раздел параметров и схема документа появляются только тогда, когда открываются отчеты, настроенные для использования параметров и управления схемой документа.  

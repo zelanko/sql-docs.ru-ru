@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: f6c13407-2887-4287-9396-a58dba619d9b
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 21b92fe6ab723b9e519b8828f9adcd4e67dad2e4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0f3fb342593e24ce97a550186065a22ec3ee2498
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62720270"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66104716"
 ---
 # <a name="tablix-data-region-areas-report-builder-and-ssrs"></a>Области данных табликса (построитель отчетов и службы SSRS)
   Область данных табликса имеет четыре области, которые содержат ячейки табликса: угол, область группы строк, область группы столбцов и текст. Ячейки в каждой области имеют различное назначение. Можно добавить ячейки в область текста табликса, чтобы отобразить подробные данные и сгруппированные данные. Построитель отчетов и конструктор отчетов добавляют ячейки к области группы строк или группы столбцов при создании группы для отображения значений экземпляра группы. В построителе и конструкторе отчетов создаются угловые ячейки табликса, если существуют и группы строк, и группы столбцов.  

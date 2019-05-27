@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: a15a96c3-7d2c-433e-a440-4ea051e967a9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9dcd848643f942006b6e837a5a4670cf7c7b90d8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7d29a18d8d194928389ca78fbd854ccb021871c2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63215657"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105012"
 ---
 # <a name="set-and-configure-measurement-units-report-builder-and-ssrs"></a>Задание и настройка единиц измерения (построитель отчетов и службы SSRS)
   Индикаторы могут иметь два вида единиц измерения: процентные и числовые. По умолчанию в качестве единиц измерения у индикаторов настроены процентные показатели. Таким образом, значения индикаторов, назначаемые для каждого значка в наборе индикаторов, определяются процентным диапазоном. Диапазоны в процентах равномерно разделяются по значкам в наборе индикаторов. Каждый значок отображает состояние индикатора. Процентные показатели для каждого значка в наборе индикаторов можно изменять, задавая различные начальные и конечные процентные значения. Индикаторы могут также автоматически определять минимальное и максимальное значения данных.  
