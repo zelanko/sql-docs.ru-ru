@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - pairing target [SQL Server extended events]
@@ -15,12 +14,12 @@ ms.assetid: 3c87dcfb-543a-4bd8-a73d-1390bdf4ffa3
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7907ec8b5fa2e450a1a9e3e73c82bf8511da64ca
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 39e444077c3dbe27ae243e4292b7a047e21de2b9
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62780415"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66064848"
 ---
 # <a name="event-pairing-target"></a>Цель «Попарное разбиение событий»
   Цель «Попарное разбиение событий» устанавливает соответствие между двумя событиями с помощью одного или нескольких столбцов данных, присутствующих в каждом событии. Многие события возникают попарно, например получение и снятие блокировки. После выделения пары событий оба эти события отбрасываются. Исключение парных наборов позволяет легко обнаруживать наличие не снятых блокировок.  

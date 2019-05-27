@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: d126766a-5699-4e9f-8213-8c7eea0fc14e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: adc7b7bf3335c8c9c7530d18f4d553492cfe9e1b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 58ba761f3e32f13ddcf81dc9875057195298c705
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62728655"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66078560"
 ---
 # <a name="lesson-6-create-calculated-columns"></a>Занятие 6: Создание вычисляемых столбцов
   На этом занятии мы создадим новые данные в модели путем добавления вычисляемых столбцов. Вычисляемый столбец основывается на данных, которые уже существуют в модели. Дополнительные сведения см. в разделе [Вычисляемые столбцы (табличные службы SSAS)](tabular-models/ssas-calculated-columns.md).  
