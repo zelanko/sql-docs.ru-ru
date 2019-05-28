@@ -10,12 +10,12 @@ manager: kfile
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 05/08/2019
-ms.openlocfilehash: d92275ebbccd90cc3a066ec58726c1db3c61c34b
-ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.openlocfilehash: 37c3c8b874534f3a8a649d438b26b0ee133cb371
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65620581"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993852"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>Новые возможности служб SQL Server Reporting Services (SSRS)
 
@@ -29,13 +29,13 @@ ms.locfileid: "65620581"
 
 **Загрузка** ![download](../analysis-services/media/download.png "download")
 
-Чтобы скачать службы SQL Server 2017 Reporting Services, перейдите в **[Центр загрузки Майкрософт](https://www.microsoft.com/download/details.aspx?id=55252)**.
+Чтобы скачать службы SQL Server 2017 Reporting Services, перейдите в **[Центр загрузки Майкрософт](https://www.microsoft.com/download/details.aspx?id=55252)** .
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 
 ## <a name="sql-server-2019-preview-reporting-services"></a>Предварительная версия SQL Server 2019 Reporting Services
 
-Службы [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Reporting Services недоступны для версии CTP 2.3. Установите текущую версию [SQL Server 2017 Reporting Services](install-windows/install-reporting-services.md).
+Службы [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Reporting Services недоступны для версии CTP 3.0. Установите текущую версию [SQL Server 2017 Reporting Services](install-windows/install-reporting-services.md).
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
@@ -152,7 +152,7 @@ ms.locfileid: "65620581"
 
 **Современные отчеты с разбиением на страницы:** новейшие стили для диаграмм, датчиков, карт и других средств визуального представления данных позволяют создавать удобные актуальные отчеты с разбивкой на страницы.
 
-**Диаграммы типа "дерево" и "солнечные лучи"**: улучшайте отчеты с помощью диаграмм "дерево" ![ssrs_treemap_icon](../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon") и "солнечные лучи" ![ssrs_sunburst_icon](../reporting-services/media/ssrs-sunburst-icon.png "ssrs_sunburst_icon") для удобной визуализации иерархических данных. Дополнительные сведения см. в разделе [Tree Map and Sunburst Charts in Reporting Services](../reporting-services/report-design/tree-map-and-sunburst-charts-in-reporting-services.md).  
+**Диаграммы типа "дерево" и "солнечные лучи"** : улучшайте отчеты с помощью диаграмм "дерево" ![ssrs_treemap_icon](../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon") и "солнечные лучи" ![ssrs_sunburst_icon](../reporting-services/media/ssrs-sunburst-icon.png "ssrs_sunburst_icon") для удобной визуализации иерархических данных. Дополнительные сведения см. в разделе [Tree Map and Sunburst Charts in Reporting Services](../reporting-services/report-design/tree-map-and-sunburst-charts-in-reporting-services.md).  
 
 **Внедрение отчетов:** с помощью iframe и параметров URL-адреса вы можете внедрять мобильные отчеты и отчеты с разбиением по страницам в другие веб-страницы и приложения.  
 

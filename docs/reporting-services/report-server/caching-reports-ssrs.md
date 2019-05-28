@@ -1,6 +1,6 @@
 ---
 title: Кэширование отчетов (службы SSRS) | Документы Майкрософт
-ms.date: 03/01/2017
+ms.date: 05/14/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 146542c3-8efd-4b89-a8d8-77d22896630e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1c1e6ec452c20aea2df0eb99e4bf0123331d7192
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: ba54a5c29245a178fb1b50139d64f1e05bfd92f1
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65580442"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175591"
 ---
 # <a name="caching-reports-ssrs"></a>Кэширование отчетов (службы SSRS)
   Сервер отчетов может кэшировать копию обработанного отчета и вернуть эту копию при открытии отчета пользователем. Единственным свидетельством того, что отчет является копией сохраненного в кэш отчета, являются дата и время выполнения отчета. Если дата или время не являются текущими, и отчет представляет собой моментальный снимок, то отчет был извлечен из кэша.  
@@ -67,13 +67,12 @@ ms.locfileid: "65580442"
   
  Если отчет не может быть по какой-то причине передан для обработки из экземпляра, хранящегося в кэше (например, если значения параметра отличаются от используемых для создания кэшированного отчета), то сервер отчетов повторно запускает отчет.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также раздел  
  [Установка параметров обработки (службы Reporting Services в режиме интеграции с SharePoint)](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [Установка свойств обработки отчетов](../../reporting-services/report-server/set-report-processing-properties.md)   
  [Основные понятия служб Reporting Services (SSRS)](../../reporting-services/reporting-services-concepts-ssrs.md)   
- [Предварительная загрузка кэша (диспетчер отчетов)](../../reporting-services/report-server/preload-the-cache-report-manager.md)   
+ [Предварительная загрузка кэша](../../reporting-services/report-server/preload-the-cache-report-manager.md)   
  [Расписания](../../reporting-services/subscriptions/schedules.md)   
  [Общие наборы данных в кэше (службы SSRS)](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)   
- [Параметры обновления кэша (диспетчер отчетов)](https://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6)  
   
   
