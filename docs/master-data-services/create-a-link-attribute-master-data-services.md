@@ -14,21 +14,21 @@ ms.assetid: e6658e9c-5b08-4b8d-b556-17ec2dd041d2
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 050256d488646425cd35580796e0fcfc771bea6d
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.openlocfilehash: 7d39dcfa1d3351434a6e35b1b74f7551648f2281
+ms.sourcegitcommit: 36c5f28d9fc8d2ddd02deb237937c9968d971926
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65487300"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66354366"
 ---
 # <a name="create-a-link-attribute-master-data-services"></a>Создание атрибута ссылки (службы Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] атрибут ссылки создается, если нужно, чтобы пользователи вводили в качестве значения атрибута гиперссылку, такую как https://www.contoso.com.  
+  В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] атрибут ссылки создается, если нужно, чтобы пользователи вводили в качестве значения атрибута гиперссылку, такую как `https://www.contoso.com`.  
   
 > [!NOTE]  
->  Когда пользователи вводят значение для атрибута ссылки, строка должна начинаться с **https://**. В противном случае отобразится ошибка.  
+>  Когда пользователи вводят значение для атрибута ссылки, строка должна начинаться с **https://** . В противном случае отобразится ошибка.  
   
 ## <a name="prerequisites"></a>предварительные требования  
  Для выполнения этой процедуры:  

@@ -5,18 +5,18 @@ description: В этом кратком руководстве показано,
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 07/16/2018
+ms.date: 05/28/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux, seodec18
+ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: 5d1294c9219fd14d5e1de363069e25a9bc144a6b
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 93b02908a1341af18044c1c8a86dfd2e6024f8f3
+ms.sourcegitcommit: 02df4e7965b2a858030bb508eaf8daa9bc10b00b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56803099"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66265364"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>Краткое руководство. Установка SQL Server и создать базу данных в Ubuntu
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
@@ -36,13 +36,13 @@ ms.locfileid: "56803099"
 ::: moniker-end
 
 > [!TIP]
-> Этого учебника требуется ввод данных пользователем и подключение к Интернету. Если вы заинтересованы в [автоматической](sql-server-linux-setup.md#unattended) или [автономной](sql-server-linux-setup.md#offline) процедуры установки см. в разделе [руководство по установке для SQL Server в Linux](sql-server-linux-setup.md).
+> Этого учебника требуется ввод данных пользователем и подключение к Интернету. Если вы заинтересованы в процедуры автоматической или автономной установки, см. в разделе [руководство по установке для SQL Server в Linux](sql-server-linux-setup.md).
 
 ## <a name="prerequisites"></a>предварительные требования
 
 Необходимо иметь компьютер Ubuntu 16.04 с **по крайней мере 2 ГБ** памяти.
 
-Чтобы установить Ubuntu на своем локальном компьютере, перейдите к [ https://www.ubuntu.com/download/server ](https://www.ubuntu.com/download/server). Также можно создать виртуальные машины Ubuntu в Azure. См. в разделе [Создание и управление виртуальными машинами Linux с помощью Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm).
+Чтобы установить Ubuntu 16.04 на своем локальном компьютере, перейдите к [ http://releases.ubuntu.com/xenial/ ](http://releases.ubuntu.com/xenial/). Также можно создать виртуальные машины Ubuntu в Azure. См. в разделе [Создание и управление виртуальными машинами Linux с помощью Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm).
 
 > [!NOTE]
 > В настоящее время [подсистема Windows для Linux](https://msdn.microsoft.com/commandline/wsl/about) для Windows 10 не поддерживается в качестве целевого объекта установки.
@@ -97,7 +97,7 @@ ms.locfileid: "56803099"
 5. После завершения конфигурации, убедитесь, что служба запущена:
 
    ```bash
-   systemctl status mssql-server
+   systemctl status mssql-server --no-pager
    ```
 
 6. Если вы планируете удаленное подключение, также может потребоваться открыть порт SQL Server TCP (по умолчанию 1433) в брандмауэре.
@@ -143,7 +143,7 @@ ms.locfileid: "56803099"
 5. После завершения конфигурации, убедитесь, что служба запущена:
 
    ```bash
-   systemctl status mssql-server
+   systemctl status mssql-server --no-pager
    ```
 
 6. Если вы планируете удаленное подключение, также может потребоваться открыть порт SQL Server TCP (по умолчанию 1433) в брандмауэре.

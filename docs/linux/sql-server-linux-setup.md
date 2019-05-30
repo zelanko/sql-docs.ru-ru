@@ -1,21 +1,22 @@
 ---
-title: Руководство по установке для SQL Server в Linux | Документация Майкрософт
+title: Руководство по установке для SQL Server в Linux
+titleSuffix: SQL Server
 description: Установка, обновление и удаление SQL Server в Linux. В этой статье описаны online, вне сети и автоматического сценария.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/07/2018
+ms.date: 05/28/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
-ms.openlocfilehash: fde3465c26d2e148d99976b81e0a01c9fb3395ff
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: 4cccab2331a564737112d9fb3efc42e5a6b81ed8
+ms.sourcegitcommit: 02df4e7965b2a858030bb508eaf8daa9bc10b00b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64775512"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66265397"
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Руководство по установке для SQL Server в Linux
 
@@ -40,8 +41,8 @@ SQL Server 2017 поддерживается в Red Hat Enterprise Linux (RHEL),
 |-----|-----|-----
 | **Red Hat Enterprise Linux** | 7.3, 7.4, 7.5, 7.6 | [Получить RHEL 7.6](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
 | **SUSE Linux Enterprise Server** | v12 SP2 | [Получить SLES версии 12 с пакетом обновления 2](https://www.suse.com/products/server)
-| **Ubuntu** | 16.04 | [Получить Ubuntu 16.04](https://www.ubuntu.com/download/server)
-| **Подсистема docker** | 1.8+ | [Получить Docker](https://www.docker.com/products/overview)
+| **Ubuntu** | 16.04 | [Получить Ubuntu 16.04](http://releases.ubuntu.com/xenial/)
+| **Подсистема docker** | 1.8+ | [Получить Docker](https://www.docker.com/get-started)
 
 Корпорация Майкрософт также поддерживает развертывание и управление ими контейнеры SQL Server с помощью OpenShift и Kubernetes.
 
@@ -71,9 +72,6 @@ SQL Server 2017 имеет следующие требования к систе
 
 При установке или обновлении SQL Server, вы получите последнюю версию SQL Server из настроенного репозитория Microsoft. Краткие руководства используйте накопительное обновление SQL Server 2017 **CU** репозитория. Но вместо этого можно настроить **GDR** репозитория или **предварительной версии (vNext)** репозитория. Дополнительные сведения о репозитории и их настройке см. в разделе [Настройка репозиториев для SQL Server в Linux](sql-server-linux-change-repo.md).
 
-> [!IMPORTANT]
-> Если вы ранее установили CTP-ВЕРСИЮ или версию-КАНДИДАТ SQL Server 2017, необходимо удалить репозиторий предварительной версии и зарегистрировать Общая доступность (GA) один. Дополнительные сведения см. в разделе [Настройка репозиториев для SQL Server в Linux](sql-server-linux-change-repo.md).
-
 ## <a id="platforms"></a> Установка SQL Server 2017
 
 Можно установить SQL Server 2017 на платформе Linux из командной строки. Пошаговые инструкции см. в одном из следующих кратких руководств:
@@ -84,11 +82,11 @@ SQL Server 2017 имеет следующие требования к систе
 - [Запустить в Docker](quickstart-install-connect-docker.md)
 - [Подготовка виртуальной машины SQL в Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json)
 
+После установки, попробуйте сделать дополнительные изменения в конфигурацию для обеспечения оптимальной производительности. Дополнительные сведения см. в разделе [рекомендации по производительности и рекомендации по конфигурации для SQL Server в Linux](sql-server-linux-performance-best-practices.md).
+
 ## <a id="sqlvnext"></a> Установите предварительную версию SQL Server 2019
 
 Вы можете установить preview SQL Server 2019 в Linux, используя те же ссылки быстрого запуска в предыдущем разделе. Тем не менее, необходимо зарегистрировать **предварительной версии (vNext)** репозитория, а не **CU** репозитория. Краткие руководства содержат инструкции о том, как это сделать.  
-
-После установки, попробуйте сделать дополнительные изменения в конфигурацию для обеспечения оптимальной производительности. Дополнительные сведения см. в разделе [рекомендации по производительности и рекомендации по конфигурации для SQL Server в Linux](sql-server-linux-performance-best-practices.md).
 
 ## <a id="upgrade"></a> Обновите SQL Server
 
@@ -220,6 +218,7 @@ SQL Server лицензируется одинаково для Linux и Windows
 - [Программы командной строки SQL Server](sql-server-linux-setup-tools.md)
 - [Агент SQL Server](sql-server-linux-setup-sql-agent.md)
 - [Полнотекстовый поиск SQL Server](sql-server-linux-setup-full-text-search.md)
+- [Службы (R, Python) машинного обучения](sql-server-linux-setup-machine-learning.md)
 - [SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 
 [!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]

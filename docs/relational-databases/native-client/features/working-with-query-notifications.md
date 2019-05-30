@@ -1,7 +1,7 @@
 ---
 title: Работа с уведомлениями о запросах | Документация Майкрософт
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 05/24/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: native-client
@@ -21,16 +21,16 @@ ms.assetid: 2f906fff-5ed9-4527-9fd3-9c0d27c3dff7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 889f791f74d7f28496b763eb942907ab8227ef4d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 23aadd055049052e3302e61e1303ccc5fa4cc62f
+ms.sourcegitcommit: 02df4e7965b2a858030bb508eaf8daa9bc10b00b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670743"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66265453"
 ---
 # <a name="working-with-query-notifications"></a>Работа с уведомлениями запросов
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   Уведомления о запросах появились в [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] и в собственном клиенте [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. С помощью уведомлений о запросах, построенных на основе инфраструктуры компонента Service Broker, представленной в [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], приложения могут получать извещения об изменениях данных. Эта функция особенно полезна для приложений, которые предоставляют кэш данных из базы данных (например, для веб-приложений), и которым требуются уведомления об изменении исходных данных.  
@@ -135,7 +135,7 @@ RECEIVE * FROM MyQueue
   
  Если запрос на подписку сделан для пакета или хранимой процедуры, для каждой инструкции, выполняемой в пакете или хранимой процедуре, будет сделан отдельный запрос на подписку. Инструкция EXECUTE не регистрирует уведомление, но направляет требование об уведомлении выполняемой команде. Если это пакет, к выполняемым инструкциям будет применен контекст и правила, описанные выше.  
   
- При подаче запроса на уведомление от того же пользователя в том же контексте базы данных, имеющего такой же шаблон, такие же значения параметров, такой же идентификатор уведомления и такое же расположение доставки, как у существующей активной подписки, существующая подписка будет обновлена с установкой вновь заданного времени ожидания. Это значит, что, если уведомление затребовано для одинаковых запросов, будет отправлено только одно уведомление. Данные условия применяются к запросам, повторяющимся в пакетах, или к запросам, которые вызываются несколько раз в хранимой процедуре.  
+ Отправка запроса уведомления, которое было отправлено тем же пользователем, в том же контексте базы данных и имеет того же шаблона, такие же значения параметров, же идентификатор уведомления и такое же расположение доставки существующей активной подписки, продлевается существующий подписки, сброс нового указанного времени ожидания. Это означает, что если уведомление затребовано для одинаковых запросов, будет отправлено только одно уведомление. Данные условия применяются к запросам, повторяющимся в пакетах, или к запросам, которые вызываются несколько раз в хранимой процедуре.  
   
 ## <a name="see-also"></a>См. также  
  [Компоненты SQL Server Native Client](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  

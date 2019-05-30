@@ -1,7 +1,7 @@
 ---
 title: sys.dm_sql_referenced_entities (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/09/2017
+ms.date: 05/01/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -21,17 +21,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7494577b9af11f8000fd2676dd56ee3b8c960756
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: e4ed017d1b3571405127177bdb45857be7ccbf1b
+ms.sourcegitcommit: 36c5f28d9fc8d2ddd02deb237937c9968d971926
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213463"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66354400"
 ---
 # <a name="sysdmsqlreferencedentities-transact-sql"></a>Функция динамического управления sys.dm_sql_referenced_entities (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Возвращает по одной строке для каждой определяемой сущности, на которую ссылается по имени определение указанной ссылающейся сущности в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Зависимость между двумя сущностями создается в том случае, когда некоторой пользовательской сущности, называемой *упоминаемая сущность*, отображается именем в материализованном выражении SQL из другой пользовательской сущности, называемой *ссылающейся сущности* . Например, если в качестве ссылающейся сущности выступает хранимая процедура, то данная функция выводит список всех определяемых пользователем сущностей, упоминаемых в данной хранимой процедуре. К упоминаемым определяемым пользователем сущностям относятся: таблицы, представления, определяемые пользователем типы (UDT), а также другие хранимые процедуры.  
+Возвращает по одной строке для каждой пользовательской сущности, на который ссылается имени определение указанной ссылающейся сущности в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Зависимость между двумя сущностями создается в том случае, когда некоторой пользовательской сущности, называемой *упоминаемая сущность*, отображается именем в материализованном выражении SQL из другой пользовательской сущности, называемой *ссылающейся сущности* . Например, если в качестве ссылающейся сущности выступает хранимая процедура, то данная функция выводит список всех определяемых пользователем сущностей, упоминаемых в данной хранимой процедуре. К упоминаемым определяемым пользователем сущностям относятся: таблицы, представления, определяемые пользователем типы (UDT), а также другие хранимые процедуры.  
   
  Данная функция динамического управления может быть использована для отображения списка сущностей, упоминаемых заданной ссылающейся сущностью и имеющих следующие типы:  
   
@@ -48,14 +49,13 @@ ms.locfileid: "53213463"
 -   коллекции XML-схем  
   
 -   функции секционирования  
-  
-**Применяется к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
-  
+
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
 sys.dm_sql_referenced_entities (  
-    ' [ schema_name. ] referencing_entity_name ' , ' <referencing_class> ' )  
+    ' [ schema_name. ] referencing_entity_name ' ,
+    ' <referencing_class> ' )  
   
 <referencing_class> ::=  
 {  
@@ -69,12 +69,12 @@ sys.dm_sql_referenced_entities (
  [ *schema_name*. ] *referencing_entity_name*  
  Имя ссылающейся сущности. *schema_name* является обязательным, если ссылающийся класс — OBJECT.  
   
- *schema_name.referencing_entity_name* — **nvarchar(517)**.  
+ *schema_name.referencing_entity_name* — **nvarchar(517)** .  
   
- *< Referencing_class >* :: = {объект | DATABASE_DDL_TRIGGER | SERVER_DDL_TRIGGER}  
+ *<referencing_class>* ::=  { OBJECT | DATABASE_DDL_TRIGGER   | SERVER_DDL_TRIGGER }  
  Класс заданной ссылающейся сущности. В одной инструкции может быть указан только один класс.  
   
- *< referencing_class >* — **nvarchar(60)**.  
+ *< referencing_class >* — **nvarchar(60)** .  
   
 ## <a name="table-returned"></a>Возвращаемая таблица  
   
@@ -92,13 +92,14 @@ sys.dm_sql_referenced_entities (
 |referenced_class_desc|**nvarchar(60)**|Описание класса упоминаемой сущности.<br /><br /> OBJECT_OR_COLUMN<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> PARTITION_FUNCTION|  
 |is_caller_dependent|**bit**|Отображает привязку к схеме для упоминаемой сущности, полученную во время выполнения (так как идентификатор сущности зависит от схемы вызывающего объекта). Данная ситуация возможна только для хранимой процедуры, расширенной хранимой процедуры или определяемой пользователем функции, выполняемых в инструкции EXECUTE.<br /><br /> 1 = упоминаемая сущность зависит от вызывающего объекта и определяется во время выполнения. В этом случае параметр referenced_id принимает значение NULL.<br /><br /> 0 = идентификатор упоминаемой сущности не зависит от вызывающего объекта. Всегда имеет значение 0 для привязанных к схеме ссылок, а также для межбазовых и межсерверных ссылок, которые явно указывают имя схемы. Например, ссылка на сущность в формате `EXEC MyDatabase.MySchema.MyProc` не зависит от вызывающего объекта. При этом ссылка в формате `EXEC MyDatabase..MyProc` зависит от вызывающего объекта.|  
 |is_ambiguous|**bit**|Указывает, является неоднозначным его разрешается во время выполнения определяемой пользователем функции, определяемого пользователем типа (UDT) или ссылке xquery на столбец типа **xml**. Например, предположим, что инструкция `SELECT Sales.GetOrder() FROM Sales.MySales` определяется в хранимой процедуре. До выполнения хранимой процедуры неизвестно, является ли `Sales.GetOrder()` определяемой пользователем функцией в схеме `Sales` или столбцом `Sales` определяемого пользователем типа с методом `GetOrder()`.<br /><br /> 1 = ссылка на определяемую пользователем функцию или на метод определяемого пользователем типа (UDT) столбца неоднозначна.<br /><br /> 0 = ссылка определена однозначно, либо сущность при вызове функции может быть привязана.<br /><br /> Для привязанных к схеме ссылок всегда принимает значение 0.|  
-|is_selected|**bit**|**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = объект или столбец выбран.|  
-|is_updated|**bit**|**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = объект или столбец изменен.|  
-|is_select_all|**bit**|**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = объект используется в предложении SELECT* (только на уровне объектов).|  
-|is_all_columns_found|**bit**|**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = все зависимости столбца для объекта удалось обнаружить.<br /><br /> 0 = зависимости столбца для объекта не удалось обнаружить.|
-|is_insert_all|**bit**|**Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = объект используется в инструкции INSERT без списка столбцов (только уровень объектов).|  
-|is_incomplete|**bit**|**Область применения**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] С пакетом обновления 2 через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = объект или столбец имеет ошибку привязки и является неполной.|
-  
+|is_selected|**bit**|1 = объект или столбец выбран.|  
+|is_updated|**bit**|1 = объект или столбец изменен.|  
+|is_select_all|**bit**|1 = объект используется в предложении SELECT* (только на уровне объектов).|  
+|is_all_columns_found|**bit**|1 = все зависимости столбца для объекта удалось обнаружить.<br /><br /> 0 = зависимости столбца для объекта не удалось обнаружить.|
+|is_insert_all|**bit**|1 = объект используется в инструкции INSERT без списка столбцов (только уровень объектов).<br /><br />Этот столбец был добавлен в SQL Server 2016.|  
+|is_incomplete|**bit**|1 = объект или столбец имеет ошибку привязки и является неполной.<br /><br />Этот столбец был добавлен в SQL Server 2016 с пакетом обновления 2.|
+| &nbsp; | &nbsp; | &nbsp; |
+
 ## <a name="exceptions"></a>Исключения  
  Возвращает пустой результирующий набор, если выполняется любое из следующих условий.  
   
@@ -137,7 +138,8 @@ sys.dm_sql_referenced_entities (
 |Тип (псевдоним и определяемый пользователем тип данных CLR)|Нет|Да|  
 |Коллекция схем XML|Нет|Да|  
 |Функция секционирования|Нет|Да|  
-  
+| &nbsp; | &nbsp; | &nbsp; |
+
  \* Таблица отслеживается как ссылающаяся сущность, только в том случае, если оно ссылается на [!INCLUDE[tsql](../../includes/tsql-md.md)] модуля, определяемый пользователем тип или коллекцию схем XML в определении вычисляемого столбца, ограничения CHECK или ограничении DEFAULT.  
   
  ** Пронумерованные хранимые процедуры с целочисленным значением больше 1 не отслеживаются в качестве ссылающихся или упоминаемых сущностей.  
@@ -147,43 +149,65 @@ sys.dm_sql_referenced_entities (
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="a-returning-entities-that-are-referenced-by-a-database-level-ddl-trigger"></a>A. Возврат списка сущностей, на которые ссылается триггер DDL уровня базы данных  
+### <a name="a-return-entities-that-are-referenced-by-a-database-level-ddl-trigger"></a>A. Возвращает сущности, на которые ссылается триггер DDL уровня базы данных  
  В ходе выполнения следующего примера производится отображение списка сущностей (таблиц и столбцов), упоминаемых триггером DDL уровня базы данных `ddlDatabaseTriggerLog`.  
   
 ```sql  
 USE AdventureWorks2012;  
 GO  
-SELECT referenced_schema_name, referenced_entity_name, referenced_minor_name,   
-    referenced_minor_id, referenced_class_desc  
-FROM sys.dm_sql_referenced_entities ('ddlDatabaseTriggerLog', 'DATABASE_DDL_TRIGGER');  
+SELECT
+        referenced_schema_name,
+        referenced_entity_name,
+        referenced_minor_name,
+        referenced_minor_id,
+        referenced_class_desc
+    FROM
+        sys.dm_sql_referenced_entities (
+            'ddlDatabaseTriggerLog',
+            'DATABASE_DDL_TRIGGER')
+;
 GO  
 ```  
   
-### <a name="b-returning-entities-that-are-referenced-by-an-object"></a>Б. Возврат списка сущностей, упоминаемых объектом  
+### <a name="b-return-entities-that-are-referenced-by-an-object"></a>Б. Возвращает сущности, на которые ссылается объект  
  В ходе выполнения следующего примера производится отображение списка сущностей, упоминаемых в определяемой пользователем функции `dbo.ufnGetContactInformation`.  
   
 ```sql  
 USE AdventureWorks2012;  
 GO  
-SELECT referenced_schema_name, referenced_entity_name, referenced_minor_name,   
-    referenced_minor_id, referenced_class_desc, is_caller_dependent, is_ambiguous  
-FROM sys.dm_sql_referenced_entities ('dbo.ufnGetContactInformation', 'OBJECT');  
+SELECT
+        referenced_schema_name,
+        referenced_entity_name,
+        referenced_minor_name,
+        referenced_minor_id,
+        referenced_class_desc,
+        is_caller_dependent,
+        is_ambiguous
+    FROM
+        sys.dm_sql_referenced_entities (
+            'dbo.ufnGetContactInformation',
+            'OBJECT')
+;
 GO  
 ```  
   
-### <a name="c-returning-column-dependencies"></a>В. Возврат списка зависимостей столбцов  
+### <a name="c-return-column-dependencies"></a>В. Возвращает зависимости столбцов  
  В ходе выполнения представленного ниже примера осуществляется создание таблицы `Table1`, в которой содержится вычисляемый столбец `c`, определяемый как сумма столбцов `a` и `b`. Затем производится вызов представления `sys.dm_sql_referenced_entities`. Представление содержит две строки, по одной для каждого столбца, определенного в вычисляемом столбце.  
   
 ```sql  
-USE AdventureWorks2012;  
-GO  
 CREATE TABLE dbo.Table1 (a int, b int, c AS a + b);  
 GO  
-SELECT referenced_schema_name AS schema_name,  
-    referenced_entity_name AS table_name,  
-    referenced_minor_name AS referenced_column,  
-    COALESCE(COL_NAME(OBJECT_ID(N'dbo.Table1'),referencing_minor_id), 'N/A') AS referencing_column_name  
-FROM sys.dm_sql_referenced_entities ('dbo.Table1', 'OBJECT');  
+SELECT
+        referenced_schema_name AS schema_name,  
+        referenced_entity_name AS table_name,  
+        referenced_minor_name  AS referenced_column,  
+        COALESCE(
+            COL_NAME(OBJECT_ID(N'dbo.Table1'),
+            referencing_minor_id),
+            'N/A') AS referencing_column_name  
+    FROM
+        sys.dm_sql_referenced_entities ('dbo.Table1', 'OBJECT')
+;
 GO
 
 -- Remove the table.  
@@ -193,7 +217,7 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- ```
+ ```console
  schema_name table_name referenced_column referencing_column  
  ----------- ---------- ----------------- ------------------  
  dbo         Table1     a                 c  
@@ -204,10 +228,7 @@ GO
  В ходе выполнения представленного ниже примера выполняется удаление таблицы `Table1`, а также создание таблицы `Table2` и хранимой процедуры `Proc1`. Процедура ссылается на таблицу `Table2` и на несуществующую таблицу `Table1`. Представление `sys.dm_sql_referenced_entities` запускается с помощью хранимой процедуры, которая указана в качестве ссылающейся сущности. В результирующем наборе показана одна строка для таблицы `Table1` и 3 строки для таблицы `Table2`. Поскольку таблица `Table1` не существует, то не удается разрешить зависимости столбца и возвращается ошибка 2020. Столбец `is_all_columns_found` возвращает 0 для таблицы `Table1`, указывая, что существуют столбцы, которые не удалось обнаружить.  
   
 ```sql  
-USE AdventureWorks2012;  
-GO  
-IF OBJECT_ID ( 'dbo.Table1', 'U' ) IS NOT NULL   
-    DROP TABLE dbo.Table1;  
+DROP TABLE IF EXISTS dbo.Table1;
 GO  
 CREATE TABLE dbo.Table2 (c1 int, c2 int);  
 GO  
@@ -215,15 +236,19 @@ CREATE PROCEDURE dbo.Proc1 AS
     SELECT a, b, c FROM Table1;  
     SELECT c1, c2 FROM Table2;  
 GO  
-SELECT referenced_id, referenced_entity_name AS table_name, referenced_minor_name AS referenced_column_name, is_all_columns_found  
-FROM sys.dm_sql_referenced_entities ('dbo.Proc1', 'OBJECT');  
+SELECT
+        referenced_id,
+        referenced_entity_name AS table_name,
+        referenced_minor_name  AS referenced_column_name,
+        is_all_columns_found
+    FROM
+        sys.dm_sql_referenced_entities ('dbo.Proc1', 'OBJECT');
 GO  
-  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- ```
+ ```console
  referenced_id table_name   referenced_column_name  is_all_columns_found  
  ------------- ------------ ----------------------- --------------------  
  935674381     Table2       NULL                    1  
@@ -231,29 +256,43 @@ GO
  935674381     Table2       C2                      1  
  NULL          Table1       NULL                    0  
 
- Msg 2020, Level 16, State 1, Line 1The dependencies reported for entity "dbo.Proc1" might not include references to all columns. This is either because the entity references an object that does not exist or because of an error in one or more statements in the entity.  Before rerunning the query, ensure that there are no errors in the entity and that all objects referenced by the entity exist.
+Msg 2020, Level 16, State 1, Line 1
+The dependencies reported for entity "dbo.Proc1" might not include
+  references to all columns. This is either because the entity
+  references an object that does not exist or because of an error
+  in one or more statements in the entity.  Before rerunning the
+  query, ensure that there are no errors in the entity and that
+  all objects referenced by the entity exist.
  ```
   
 ### <a name="e-demonstrating-dynamic-dependency-maintenance"></a>Д. Отображение параметров обслуживания динамических зависимостей  
- Следующий пример является продолжением примера Г и предназначен для отображения динамических зависимостей. В примере сначала производится повторное создание таблицы `Table1`, которая была удалена в примере Г. Затем снова запускается инструкция `sys.dm_sql_referenced_entities`, в которой в качестве ссылающейся сущности указана хранимая процедура. Результирующий набор содержит обе таблицы и их соответствующие столбцы, определенные в хранимой процедуре. Кроме того, столбец `is_all_columns_found` возвращает значение 1 для всех объектов и столбцов.  
-  
+
+Этот пример E предполагается, что примере D был выполнен. Пример Д показывает, что динамических зависимостей. В примере выполняются следующие действия:
+
+1. Повторно создает `Table1`, которая была удалена в примере г.
+2. Затем запустите `sys.dm_sql_referenced_entities` снова выполняется с помощью хранимой процедуры, указанной в качестве ссылающейся сущности.
+
+Результирующий набор показывает, что возвращаются таблицы и их соответствующие столбцы, определенные в хранимой процедуре. Кроме того, столбец `is_all_columns_found` возвращает значение 1 для всех объектов и столбцов.
+
 ```sql  
-USE AdventureWorks2012;  
-GO  
 CREATE TABLE Table1 (a int, b int, c AS a + b);  
 GO   
-SELECT referenced_id, referenced_entity_name AS table_name, referenced_minor_name as column_name, is_all_columns_found  
-FROM sys.dm_sql_referenced_entities ('dbo.Proc1', 'OBJECT');  
+SELECT
+        referenced_id,
+        referenced_entity_name AS table_name,
+        referenced_minor_name  AS column_name,
+        is_all_columns_found
+    FROM
+        sys.dm_sql_referenced_entities ('dbo.Proc1', 'OBJECT');
 GO  
 DROP TABLE Table1, Table2;  
 DROP PROC Proc1;  
 GO  
-  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- ```
+ ```console
  referenced_id table_name   referenced_column_name  is_all_columns_found  
  ------------- ------------ ----------------------- --------------------  
  935674381     Table2       NULL                    1 
@@ -267,18 +306,24 @@ GO
  
 ### <a name="f-returning-object-or-column-usage"></a>Е. Использование возвращения объекта или столбца  
  В следующем примере возвращаются зависимости объекта и столбца хранимой процедуры `HumanResources.uspUpdateEmployeePersonalInfo`. Эта процедура обновляет столбцы `NationalIDNumber`, `BirthDate,``MaritalStatus`, и `Gender` из `Employee` таблицы на основе указанного `BusinessEntityID` значение. Другой хранимой процедуры, `upsLogError` определяется в блок TRY... CATCH для регистрировать ошибки выполнения. Столбцы `is_selected`, `is_updated` и `is_select_all` возвращают сведения о способе использования этих объектов и столбцов в рамках ссылающегося объекта. Измененная таблица и столбцы в обновленном столбце помечаются единицей. Единственный выбранный столбец — `BusinessEntityID`, а хранимая процедура `uspLogError` не выбрана и не изменена.  
-  
-**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
-  
+
 ```sql  
-SELECT referenced_entity_name AS table_name, referenced_minor_name as column_name, is_selected, is_updated, is_select_all  
-FROM sys.dm_sql_referenced_entities ('HumanResources.uspUpdateEmployeePersonalInfo', 'OBJECT');  
-  
+USE AdventureWorks2012;
+GO
+SELECT
+        referenced_entity_name AS table_name,
+        referenced_minor_name  AS column_name,
+        is_selected,  is_updated,  is_select_all
+    FROM
+        sys.dm_sql_referenced_entities(
+            'HumanResources.uspUpdateEmployeePersonalInfo',
+            'OBJECT')
+;
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- ```
+ ```console
  table_name    column_name         is_selected is_updated is_select_all  
  ------------- ------------------- ----------- ---------- -------------  
  uspLogError   NULL                0           0          0  

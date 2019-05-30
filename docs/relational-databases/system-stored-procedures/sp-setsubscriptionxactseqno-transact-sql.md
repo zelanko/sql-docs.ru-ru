@@ -16,17 +16,17 @@ ms.assetid: cdb4e0ba-5370-4905-b03f-0b0c6f080ca6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bfc49e712e75a862c9c43ce99cc35b56c014cebc
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: d9b6f9426d4381f33d529e1efefa8afd6a1fc44b
+ms.sourcegitcommit: 9388dcccd6b89826dde47b4c05db71274cfb439a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534656"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66270157"
 ---
 # <a name="spsetsubscriptionxactseqno-transact-sql"></a>sp_setsubscriptionxactseqno (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Используется во время диагностики для задания регистрационного номера следующей транзакции в журнале, подлежащей применению агентом распространителя на подписчике, что позволяет агенту пропустить транзакцию, вызвавшую сбой. Эта хранимая процедура выполняется на подписчике в базе данных подписки. Не поддерживается для подписчиков, отличных от подписчика SQL Server.  
+  Используется во время устранения неполадок для указания последней доставленной транзакции с помощью последовательности номер транзакции в журнале (LSN), что агент распространителя начать предоставления в следующей транзакции. При перезапуске, агент распространителя возвращает транзакций больше водяного знака (LSN) из кэша базы данных распространителя (msrepl_commands). Эта хранимая процедура выполняется на подписчике в базе данных подписки. Не поддерживается для подписчиков, отличных от подписчика SQL Server.  
   
 > [!CAUTION]  
 >  Неверное использование этой хранимой процедуры или задание неправильного номера LSN может привести к тому, что агент распространителя отменит изменения, уже примененные на подписчике, или пропустит все оставшиеся изменения.  
@@ -79,4 +79,6 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
 ## <a name="permissions"></a>Разрешения  
  Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять процедуру **sp_setsubscriptionxactseqno**.  
   
-  
+## <a name="see-more"></a>Подробнее
+
+[Блог: Пропуск транзакции](https://repltalk.com/2019/05/28/how-to-skip-a-transaction/)  
