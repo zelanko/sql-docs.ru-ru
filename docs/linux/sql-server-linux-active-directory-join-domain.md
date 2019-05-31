@@ -10,12 +10,12 @@ manager: craigg
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 6ccc94acb42fa7043912099c4888834cf4ff3e71
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 758915364784f34b638af0e874873a417662d710
+ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59243588"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66413339"
 ---
 # <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>Присоединяйтесь к SQL Server на узле Linux к домену Active Directory
 
@@ -139,7 +139,7 @@ ping contoso.com
 
 Для присоединения узла SQL Server к домену Active Directory, следуйте инструкциям ниже:
 
-1. Используйте [realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join.md) для присоединения к домену AD хост-компьютере. Сначала необходимо установить оба **realmd** и пакеты клиента Kerberos на хост-компьютере SQL Server, с помощью диспетчера пакетов дистрибутива Linux:
+1. Используйте [realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join) для присоединения к домену AD хост-компьютере. Сначала необходимо установить оба **realmd** и пакеты клиента Kerberos на хост-компьютере SQL Server, с помощью диспетчера пакетов дистрибутива Linux:
 
    **RHEL:**
 
@@ -179,7 +179,7 @@ ping contoso.com
 
    SQL Server использует SSSD и NSS для сопоставления учетных записей пользователей и групп идентификаторы безопасности (SID). SSSD должна быть настроена и запущена для SQL Server для создания имен входа AD успешно. **realmd** обычно делает это автоматически в процессе присоединения к домену, но в некоторых случаях, необходимо сделать это отдельно.
 
-   Дополнительные сведения см. в разделе Практическое [вручную настроить SSSD](https://access.redhat.com/articles/3023951), и [Настройка NSS для работы с SSSD](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options).
+   Дополнительные сведения см. в разделе Практическое [вручную настроить SSSD](https://access.redhat.com/articles/3023951), и [Настройка NSS для работы с SSSD](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options).
 
 1. Убедитесь, что теперь можно собрать сведения о пользователе из домена и что вы можете получить билет Kerberos от имени этого пользователя. В следующем примере используется **идентификатор**, [kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html), и [klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html) команд для этого.
 

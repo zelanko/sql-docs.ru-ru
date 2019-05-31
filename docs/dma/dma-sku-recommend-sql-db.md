@@ -15,12 +15,12 @@ ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
 manager: craigg
-ms.openlocfilehash: 1ea0afb015bb457b067f1011bd3b602bf4142e09
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.openlocfilehash: c67eca111ecd0a51bc8e70d747cb7b713fe54ca8
+ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65106085"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66413633"
 ---
 # <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>Определить справа базы данных или управляемого экземпляра Azure SQL SKU для локальной базы данных
 
@@ -41,7 +41,7 @@ ms.locfileid: "65106085"
 
 ## <a name="prerequisites"></a>предварительные требования
 
-- Скачайте и установите последнюю версию [DMA](https://aka.sm/get-dma). Если вы уже более ранней версии средства, откройте его, и вам будет предложено обновить DMA.
+- Скачайте и установите последнюю версию [DMA](https://aka.ms/get-dma). Если вы уже более ранней версии средства, откройте его, и вам будет предложено обновить DMA.
 - Убедитесь, что на компьютере установлены [PowerShell версии 5.1](https://www.microsoft.com/download/details.aspx?id=54616) или более поздней версии, который необходим для всех сценариев. Сведения о findoug, какие версии PowerShell установлена на компьютере, см. в статье [скачайте и установите Windows PowerShell 5.1](https://docs.microsoft.com/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1).
 - Убедитесь, что на компьютере установлены установлен модуль Azure Powershell. Дополнительные сведения см. в статье [установить модуль Azure PowerShell](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.8.0).
 - Убедитесь, что файл PowerShell **SkuRecommendationDataCollectionScript.ps1**, которая необходима для сбора данных счетчиков производительности, устанавливается в папке DMA.
