@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STMPointFromWKB (geometry Data Type)
 ms.assetid: 01d4117f-01a0-4bc3-8762-7382a1cdbd6c
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 9b14ba9d9110add0e9ffd6c9ba3ecb64239b1c4c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a5446bbd0857fb60ca0523a873c2d7abc03914a2
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626937"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938576"
 ---
 # <a name="stmpointfromwkb-geometry-data-type"></a>STMPointFromWKB (тип данных geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ STMPointFromWKB ( 'WKB_multipoint' , SRID )
   
 ## <a name="arguments"></a>Аргументы  
  *WKB_multipoint*  
- WKB-представление возвращаемого экземпляра **geometryMultiPoint**. *WKB_multipoint* — это выражение типа **varbinary(max)**.  
+ WKB-представление возвращаемого экземпляра **geometryMultiPoint**. *WKB_multipoint* — это выражение типа **varbinary(max)** .  
   
  *SRID*  
  Выражение типа **int**, представляющее идентификатор пространственной ссылки (SRID) возвращаемого экземпляра **geometryMultiPoint**.  
@@ -47,7 +47,7 @@ STMPointFromWKB ( 'WKB_multipoint' , SRID )
 ## <a name="return-types"></a>Типы возвращаемых данных  
  Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Тип возвращаемых данных CLR: **SqlGeometry**  
+ Тип возвращаемого значения CLR: **SqlGeometry**  
   
  Тип OGC: **MultiPoint**  
   

@@ -1,7 +1,7 @@
 ---
 title: ALTER SERVER CONFIGURATION (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 05/01/2017
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: aad389a5b54918a65b7eedab225c35425e404bf8
-ms.sourcegitcommit: 7c052fc969d0f2c99ad574f99076dc1200d118c3
+ms.openlocfilehash: 2de44a8eec9b2cf4428cb40db79f0c08f9a1afbf
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55570797"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993468"
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,6 +50,7 @@ SET <optionspec>
    | <hadr_cluster_context>  
    | <buffer_pool_extension>  
    | <soft_numa>  
+   | <memory_optimized>
 }  
   
 <process_affinity> ::=   
@@ -98,8 +99,17 @@ SET <optionspec>
         { size [ KB | MB | GB ] }  
   
 <soft_numa> ::=  
-    SET SOFTNUMA  
+    SOFTNUMA  
     { ON | OFF }  
+
+<memory-optimized> ::=   
+   MEMORY_OPTIMIZED   
+   {   
+     ON 
+   | OFF
+   | [ TEMPDB_METADATA = { ON [(RESOURCE_POOL='resource_pool_name')] | OFF }
+   | [ HYBRID_BUFFER_POOL = { ON | OFF }
+   }  
 ```  
   
 ## <a name="arguments"></a>Аргументы  
@@ -186,7 +196,7 @@ HEALTHCHECKTIMEOUT = { 'health_check_time-out' | DEFAULT }
   
 **Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-HADR CLUSTER CONTEXT **=** { **'**_remote\_windows\_cluster_**'** | LOCAL }  
+HADR CLUSTER CONTEXT **=** { **'** _remote\_windows\_cluster_ **'** | LOCAL }  
 Переключает контекст кластера HADR экземпляра сервера на указанный отказоустойчивый кластер Windows Server (WSFC). *Контекст кластера HADR* определяет кластер WSFC, который управляет метаданными для реплик доступности, размещенных в экземпляре сервера. Используйте параметр SET HADR CLUSTER CONTEXT только во время миграции с кластера [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] на экземпляр [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] или более новой версии в новом кластере WSFC.  
   
 Переключать контекст кластера HADR можно только с локального WSFC на удаленный. Затем вы можете переключиться обратно с удаленного WSFC на локальный WSFC. Контекст кластера HADR можно переключить на удаленный кластер, только если на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не размещено ни одной реплики доступности.  
@@ -245,7 +255,28 @@ OFF
 > 4) Запустите экземпляр агента SQL Server.  
   
 **Дополнительные сведения:** Если вы выполняете инструкцию ALTER SERVER CONFIGURATION с командой SET SOFTNUMA до перезапуска службы SQL Server, то при остановке службы агента SQL Server будет выполнена команда T-SQL RECONFIGURE, которая вернет для параметра SOFTNUMA значение, заданное до выполнения ALTER SERVER CONFIGURATION. 
-  
+
+**\<memory_optimized> ::=**
+
+**Область применения**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] и более поздних версий
+
+ON <br>
+Включает все функции уровня экземпляра, которые являются частью семейства функций [выполняющейся в памяти базы данных](../../relational-databases/in-memory-database.md). Сейчас к ним относятся [оптимизированные для памяти метаданные tempdb](../../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata) и [гибридный буферный пул](../../database-engine/configure-windows/hybrid-buffer-pool.md). Для вступления в силу требуется перезагрузка.
+
+OFF <br>
+Отключает все функции уровня экземпляра, которые являются частью семейства функций выполняющейся в памяти базы данных. Для вступления в силу требуется перезагрузка.
+
+TEMPDB_METADATA = ON | OFF <br>
+Включает или отключает только оптимизированные для памяти метаданные tempdb. Для вступления в силу требуется перезагрузка. 
+
+RESOURCE_POOL='имя_пула_ресурсов' <br>
+В сочетании с TEMPDB_METADATA = ON задает пользовательский пул ресурсов, который нужно использовать для tempdb. Если значение не указано, используется пул по умолчанию. Этот пул должен уже существовать. Если пул недоступен при перезапуске службы, tempdb будет использовать пул по умолчанию.
+
+
+HYBRID_BUFFER_POOL = ON | OFF <br>
+Включает или отключает гибридный буферный пул на уровне экземпляра. Для вступления в силу требуется перезагрузка.
+
+
 ## <a name="general-remarks"></a>Общие замечания  
 Для этой инструкции не требуется перезапуск [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], если явно не указано обратное. Если это экземпляр отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], перезапуск ресурса кластера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не требуется.  
   
@@ -267,7 +298,9 @@ OFF
 |[Настройка параметров журнала диагностики](#Diagnostic)|ON • OFF • PATH • MAX_SIZE|  
 |[Установка свойств отказоустойчивого кластера](#Failover)|HealthCheckTimeout|  
 |[Изменение контекста кластера для реплики доступности](#ChangeClusterContextExample)|**'** *windows_cluster* **'**|  
-|[Установка расширения буферного пула](#BufferPoolExtension)|РАСШИРЕНИЕ БУФЕРНОГО ПУЛА|  
+|[Установка расширения буферного пула](#BufferPoolExtension)|РАСШИРЕНИЕ БУФЕРНОГО ПУЛА| 
+|[Настройка параметров выполняющейся в памяти базы данных](#MemoryOptimized)|MEMORY_OPTIMIZED|
+
   
 ###  <a name="Affinity"></a> Установка соответствия процессов  
 В примерах этого раздела показано соответствие процессов центральным процессорам (ЦП) и узлам NUMA. Сервер в этих примерах состоит из 256 процессоров, организованных в четыре группы по 16 узлов NUMA в каждой. Потоки не назначаются какому-либо узлу NUMA или ЦП.  
@@ -404,7 +437,37 @@ SET BUFFER POOL EXTENSION ON
 GO  
   
 ```  
-  
+
+### <a name="MemoryOptimized"></a> Настройка параметров выполняющейся в памяти базы данных
+
+**Область применения**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] и более поздних версий
+
+#### <a name="a-enable-all-in-memory-database-features-with-default-options"></a>A. Включение всех функций выполняющейся в памяти базы данных с параметрами по умолчанию
+
+```
+ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED ON;
+GO
+```
+
+#### <a name="b-enable-memory-optimized-tempdb-metadata-using-the-default-resource-pool"></a>Б. Включение оптимизированных для памяти метаданных tempdb с использованием пула ресурсов по умолчанию
+```
+ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON;
+GO
+```
+
+#### <a name="c-enable-memory-optimized-tempdb-metadata-with-a-user-defined-resource-pool"></a>В. Включение оптимизированных для памяти метаданных tempdb с пользовательским пулом ресурсов
+```
+ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON (RESOURCE_POOL = 'pool_name');
+GO
+```
+
+#### <a name="d-enable-hybrid-buffer-pool"></a>Г. Включение гибридного буферного пула
+```
+ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED HYBRID_BUFFER_POOL = ON;
+GO
+```
+
+
 ## <a name="see-also"></a>См. также:  
 [Soft-NUMA (SQL Server)](../../database-engine/configure-windows/soft-numa-sql-server.md)   
 [Смена контекста кластера HADR экземпляра сервера (SQL Server)](../../database-engine/availability-groups/windows/change-the-hadr-cluster-context-of-server-instance-sql-server.md)   

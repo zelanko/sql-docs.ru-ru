@@ -17,16 +17,16 @@ helpviewer_keywords:
 - RIGHT function
 - character strings [SQL Server], RIGHT
 ms.assetid: 43f1fe1f-aa18-47e3-ba20-e03e32254a6d
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 071cca59b0c0decd9dddceb26c7c1bf8ee944489
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 045f9af1cd88c83f4591e4c02f476712eebf234e
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670242"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65944713"
 ---
 # <a name="right-transact-sql"></a>RIGHT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,7 +46,7 @@ RIGHT ( character_expression , integer_expression )
  [Выражение](../../t-sql/language-elements/expressions-transact-sql.md) символьных или двоичных данных. *character_expression* может быть константой, переменной или столбцом. *character_expression* может иметь любой тип данных, который может быть неявно преобразован в **varchar** или **nvarchar**, кроме **text** или **ntext**. В противном случае используйте функцию [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) для явного преобразования типа аргумента *character_expression*.  
   
  *integer_expression*  
- Положительное целое число, указывающее количество символов выражения *character_expression*, которое будет возвращено. Если аргумент *integer_expression* отрицателен, возвращается ошибка. Если аргумент *integer_expression* имеет тип **bigint** и содержит большое значение, аргумент *character_expression* должен иметь длинный тип данных, например **varchar(max)**.  
+ Положительное целое число, указывающее количество символов выражения *character_expression*, которое будет возвращено. Если аргумент *integer_expression* отрицателен, возвращается ошибка. Если аргумент *integer_expression* имеет тип **bigint** и содержит большое значение, аргумент *character_expression* должен иметь длинный тип данных, например **varchar(max)** .  
   
 ## <a name="return-types"></a>Типы возвращаемых данных  
  Возвращает значение типа **varchar**, если *character_expression* имеет символьный тип данных, отличный от Юникода.  
@@ -58,7 +58,7 @@ RIGHT ( character_expression , integer_expression )
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="a-using-right-with-a-column"></a>А. Применение функции RIGHT со столбцом  
+### <a name="a-using-right-with-a-column"></a>A. Применение функции RIGHT со столбцом  
  В следующем примере возвращаются пять правых символов от имени каждого из людей в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```  

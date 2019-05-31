@@ -1,6 +1,6 @@
 ---
 title: Заметки о выпуске SQL Server 2019 | Документация Майкрософт
-ms.date: 03/27/2019
+ms.date: 05/22/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: release-landing
@@ -10,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 3362a03fe1437b15985fdc557fac6536db5fd2f7
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: 8f44927fb59e6d1b613b2a67e26aed980b3a080a
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582878"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993946"
 ---
 # <a name="sql-server-2019-preview-release-notes"></a>Заметки о выпуске предварительной версии SQL Server 2019
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -23,41 +23,25 @@ ms.locfileid: "59582878"
 В этой статье описываются ограничения и известные проблемы ознакомительной версии для сообщества (CTP) [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]. Дополнительные сведения см. в следующих статьях:
 - [Новые возможности в SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md)
 
-> [!NOTE]
-> Предварительные версии выпуска [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] публикуются для того, чтобы вы смогли опробовать возможности предстоящего выпуска. Они не являются поддерживаемыми или лицензированными для использования в рабочей среде. Явно не поддерживаются следующие сценарии.
->
-> - Параллельная установка с другими версиями [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
-> - Обновление существующего экземпляра SQL Server с любой версии
+## <a name="ctp-30"></a>CTP 3.0
 
-**Попробуйте [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)].**
-- [![Скачайте из Центра оценки](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=862101) [Скачайте [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] для установки на компьютерах с Windows](https://go.microsoft.com/fwlink/?LinkID=862101).
-- Установите на компьютерах с Linux для [Red Hat Enterprise Server](../linux/quickstart-install-connect-red-hat.md), [SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md) и [Ubuntu](../linux/quickstart-install-connect-ubuntu.md).
-- [Работайте с SQL Server 2019 в Docker](../linux/quickstart-install-connect-docker.md).
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.0 — последний общедоступный выпуск [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)].
 
-## <a name="ctp-24"></a>CTP 2.4
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.4 — последний общедоступный выпуск [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)].
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.0 доступен только в виде Evaluation Edition. Другие выпуски недоступны. 
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]Версия CTP 2.4 доступна только в виде Evaluation Edition. Другие выпуски недоступны. Поддержка выпусков CTP описана в файле `license_Eval.rtf` на установочном носителе.
+Подробные сведения о поддержке и лицензировании выпусков CTP приведены в файле `license_Eval.rtf` на установочном носителе.
 
-Ограниченную поддержку можно найти в следующих ресурсах:
+[!INCLUDE[ctp-support-exclusion](../includes/ctp-support-exclusion.md)]
 
-- Форумы
-  - [Отзывы о SQL Server](https://aka.ms/sqlfeedback).
-  - [Начало работы с SQL Server](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=sqlgetstarted).
-  - [Transact-SQL](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=transactsql)
-  - [Документация по SQL Server](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=sqldocumentation)
+## <a name="documentation"></a>Документация
 
-- Или опубликуйте твит [@SQLServer](https://twitter.com/SQLServer) с [#sqlhelp](https://twitter.com/search?q=%23sqlhelp).
-
-### <a name="documentation-ctp-24"></a>Документация (CTP 2.4)
-
-- **Проблема и последствия для клиентов**: Документация для SQL Server 2019 (15.x) ограничена, и материалы включены в набор документации по [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. Содержимое статей, относящееся к SQL Server 2019 (15.x), отмечено с помощью раздела **Область применения**.
+- **Проблема и последствия для клиентов**: Документация для SQL Server 2019 (15.x) ограничена, и материалы включены в набор документации по [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. Содержимое статей, относящееся к SQL Server 2019 (15.x), отмечено с помощью раздела **Область применения**.
 
 - **Проблема и последствия для клиентов.** Документация для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] может быть отфильтрована по версии. Используйте элемент управления в верхней левой части каждой страницы документации для фильтрации в соответствии с вашими требованиями.
 
 - **Проблема и последствия для клиентов**: Локальные материалы для SQL Server 2019 (15.x) отсутствуют.
 
-### <a name="hardware-and-software-requirements-ctp-24"></a>Требования к оборудованию и программному обеспечению (CTP 2.4)
+## <a name="hardware-and-software-requirements"></a>Требования к оборудованию и программному обеспечению
 
 - **Проблема и последствия для клиентов**: Требования к оборудованию и программному обеспечению по-прежнему проверяются и не являются окончательными для выпуска продукта.
 
@@ -69,51 +53,57 @@ ms.locfileid: "59582878"
     - Платформа Microsoft .NET Framework 4.6.2. Доступна в [Центре загрузки](https://www.microsoft.com/download/details.aspx?id=53344).
     - Для Linux обратитесь к разделу [поддерживаемых платформ](../linux/sql-server-linux-setup.md#supportedplatforms).
 
-### <a name="updated-compiler"></a>Обновленный компилятор
+## <a name = "release-notes"></a>Функции, исключенные из программы поддержки
 
-- **Проблема и последствия для клиентов**: сборка [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] выполнена с помощью обновленного компилятора. В CTP 2.1 была известная проблема, при которой результаты для чисел с плавающей точкой и результаты других сценариев преобразования могли отличаться от результатов таких же операций в прошлых версиях из-за использования обновленного компилятора. В CTP 2.2 была проведена дополнительная работа, чтобы убедиться, что сценарии, на которые распространяется эта проблема, возвращают те же результаты, что и в предыдущих версиях [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. На момент выхода CTP 2.3 эта проблема была полностью устранена. Если вы обнаружите какие-либо различия в результатах по сравнению с [!INCLUDE[ss2017](../includes/sssqlv14-md.md)], незамедлительно сообщите о них [команде разработчиков [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]](http://aka.ms/sqlfeedback).
+- **Проблема и последствия для клиентов**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] исключает из программы поддержки следующие компоненты, функции и сценарии:
+  - SQL Sever Analysis Services
+  - службы SQL Server Reporting Services
+  - Группы доступности Always On в Kubernetes
+  - Ускоренное восстановление баз данных.
+  - Оптимизированные для памяти метаданные tempdb
+
+- **Обходной путь**: Нет. Исключение применяется для всех клиентов, включая участников программы ранних последователей SQL.
+
+- **Область применения**: CTP 3.0
+
+## <a name="updated-compiler"></a>Обновленный компилятор
+
+- **Проблема и последствия для клиентов**: сборка [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] выполнена с помощью обновленного компилятора. В CTP 2.1 была известная проблема, при которой результаты для чисел с плавающей точкой и результаты других сценариев преобразования могли отличаться от результатов таких же операций в прошлых версиях из-за использования обновленного компилятора. В CTP 2.2 была проведена дополнительная работа, чтобы убедиться, что сценарии, на которые распространяется эта проблема, возвращают те же результаты, что и в предыдущих версиях [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. На момент выхода CTP 3.0 эта проблема была полностью устранена. Если вы обнаружите какие-либо различия в результатах по сравнению с [!INCLUDE[ss2017](../includes/sssqlv14-md.md)], незамедлительно сообщите о них [команде разработчиков [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]](http://aka.ms/sqlfeedback).
 
 - **Обходной путь**: Недоступно
 
-- **Область применения**: SQL Server 2019 CTP 2.4, CTP 2.3, CTP 2.2, CTP 2.1
+- **Область применения**: SQL Server 2019 CTP 3.0, CTP 2.5,CTP 2.4, CTP 2.3, CTP 2.2, CTP 2.1
 
-### <a name="utf-8-collations"></a>Параметры сортировки UTF-8
+## <a name="installation-wizard-may-wait-between-eula-pages"></a>Мастер установки может ожидать между страницами лицензионного соглашения
+
+- **Проблема и последствия для клиентов**: При установке с помощью мастера установки процесс может слишком долго ожидать между лицензионным соглашением (EULA) для служб R Services и для Python.
+
+- **Обходной путь**: Подождите, пока мастер установки продолжит работу. Время ожидания может превышать 30 минут.
+
+- **Область применения**: SQL Server 2019 CTP 3.0
+
+## <a name="utf-8-collations"></a>Параметры сортировки UTF-8
 
 - **Проблема и последствия для клиентов**: Параметры сортировки с поддержкой UTF-8 не могут использоваться с некоторыми другими компонентами [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. UTF-8 не поддерживается при использовании следующих компонентов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:
 
-  - Linked Server
   - Выполняющаяся в памяти OLTP
   - Внешняя таблица для PolyBase.
   - Always Encrypted
 
   > [!Note]
-  > В настоящее время в пользовательском интерфейсе нет возможности выбрать параметры сортировки с поддержкой UTF-8 в Azure Data Studio или SQL Server Data Tools (SSDT). Последняя версия [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) поддерживает выбор параметров сортировки UTF-8 в пользовательском интерфейсе.
+  > В настоящее время в пользовательском интерфейсе нет возможности выбрать параметры сортировки с поддержкой UTF-8 в Azure Data Studio или SQL Server Data Tools (SSDT). Последняя версия [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) 18 поддерживает выбор параметров сортировки UTF-8 в пользовательском интерфейсе.
  
 - **Обходной путь**: для CTP [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] — отсутствует.
 
-- **Область применения**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.4, CTP 2.3, CTP 2.2, CTP 2.1, CTP 2.0.
+- **Область применения**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.0, CTP 2.5, CTP 2.4, CTP 2.3, CTP 2.2, CTP 2.1, CTP 2.0.
 
-### <a name="sql-graph"></a>Граф SQL
-
-- **Проблема и последствия для клиентов**: Средства, у которых есть зависимость от DacFx, например, средства импорта и экспорта, не будут работать с новыми функциями работы с графами, такими как ограничения ребер или синтаксис слияния языка DML. Написание скриптов в [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] может не работать.
-
-- **Обходной путь**: Написание скриптов [!INCLUDE[tsql](../includes/tsql-md.md)] и их выполнение на сервере с помощью [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] или SQLCMD будет работать. Операции экспорта или импорта объектов базы данных, которые создают ограничения ребер, имеют новый синтаксис слияния языка DML или создают производные таблицы и представления для объектов графа, не будут работать. Пользователям придется вручную создавать такие объекты в своей базе данных с помощью скриптов [!INCLUDE[tsql](../includes/tsql-md.md)]. 
-
-- **Область применения**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.4, CTP 2.3, CTP 2.2, CTP 2.1, 2.0.
-
-### <a name="always-encrypted-with-secure-enclaves"></a>Always Encrypted с безопасными анклавами.
+## <a name="always-encrypted-with-secure-enclaves"></a>Always Encrypted с безопасными анклавами.
 
 - **Проблема и последствия для клиентов**: Для полнофункциональных вычислений будут выпущены несколько оптимизаций производительности, включая ограниченную функциональность (отсутствие индексирования и т. д.). Сейчас они отключены по умолчанию.
 
 - **Обходной путь**: Чтобы включить полнофункциональные вычисления, выполните команду `DBCC traceon(127,-1)`. Дополнительные сведения см. в разделе [Настройка безопасного анклава](../relational-databases/security/encryption/configure-always-encrypted-enclaves.md#configure-a-secure-enclave).
 
-- **Область применения**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.4, CTP 2.3, 2.2, CTP 2.1, 2.0.
-
-### <a name="system-dynamic-management-views"></a>Системные динамические административные представления
-
-- **Проблема и последствия для клиентов**: Возвращающая табличные значения функция системы [sys.dm_db_objects_disabled_on_compatibility_level_change](../relational-databases/system-dynamic-management-views/spatial-data-sys-dm-db-objects-disabled-on-compatibility-level-change.md) возвращает случайные значения в столбце `dependency`.
-
-- **Область применения**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.4, CTP 2.3.
+- **Область применения**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.0, CTP 2.5, CTP 2.4, CTP 2.3, 2.2, CTP 2.1, 2.0.
 
 [!INCLUDE[get-help-options-msft-only](../includes/paragraph-content/get-help-options.md)]
 

@@ -19,16 +19,16 @@ helpviewer_keywords:
 - schema-scoped objects [SQL Server]
 - objects [SQL Server], schema-scoped
 ms.assetid: 27569888-f8b5-4cec-a79f-6ea6d692b4ae
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 157d307187333cdde730bfb6657ae9927db060c1
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.openlocfilehash: 763ca67ef43b9e154f7a595c7b2b4c8bfcbe5ece
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100899"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948958"
 ---
 # <a name="objectproperty-transact-sql"></a>OBJECTPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -115,9 +115,9 @@ OBJECTPROPERTY ( id , property )
 |IsUniqueCnst|Любой объект области схемы|Ограничение UNIQUE.<br /><br /> 1 = True<br /><br /> 0 = False.|  
 |IsUserTable|Таблица|Пользовательская таблица.<br /><br /> 1 = True<br /><br /> 0 = False.|  
 |IsView|Представление|Представление.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|OwnerId|Любой объект области схемы|Владелец объекта.<br /><br /> **Примечание.**  Владелец схемы не обязательно является владельцем объекта. Например, дочерние объекты (такие, у которых аргумент *parent_object_id* не равен NULL) всегда возвращают в качестве родителя один и тот же идентификатор владельца.<br /><br /> Nonnull = идентификатор пользователя базы данных владельца объекта.|  
+|OwnerId|Любой объект области схемы|Владелец объекта.<br /><br /> **Примечание.**  Владелец схемы необязательно является владельцем объекта. Например, дочерние объекты (такие, у которых аргумент *parent_object_id* не равен NULL) всегда возвращают в качестве родителя один и тот же идентификатор владельца.<br /><br /> Nonnull = идентификатор пользователя базы данных владельца объекта.|  
 |TableDeleteTrigger|Таблица|У таблицы есть триггер DELETE.<br /><br /> >1 = идентификатор первого триггера указанного типа.|  
-|TableDeleteTriggerCount|Таблица|В таблице имеется указанное число триггеров DELETE.<br /><br /> >0 = количество триггеров DELETE.|  
+|TableDeleteTriggerCount|Таблица|В таблице имеется указанное число триггеров DELETE.<br /><br /> > 0 = количество триггеров DELETE.|  
 |TableFullTextMergeStatus|Таблица|**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Определяет, участвует ли в настоящий момент полнотекстовый индекс для таблицы в процессе слияния.<br /><br /> 0 = для таблицы отсутствует полнотекстовый индекс, либо индекс не находится в процессе слияния.<br /><br /> 1 = полнотекстовый индекс находится в процессе слияния.|  
 |TableFullTextBackgroundUpdateIndexOn|Таблица|**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> В таблице имеется включенный полнотекстовый индекс фонового обновления (отслеживание автозамен).<br /><br /> 1 = TRUE<br /><br /> 0 = FALSE|  
 |TableFulltextCatalogId|Таблица|**Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Идентификатор полнотекстового каталога, в котором находятся данные полнотекстового индекса для таблицы.<br /><br /> Не 0 = идентификатор полнотекстового каталога, связанный с уникальным индексом, идентифицирующим строки в полнотекстовой индексированной таблице.<br /><br /> 0 = таблица не имеет полнотекстового индекса.|  
@@ -147,14 +147,14 @@ OBJECTPROPERTY ( id , property )
 |TableHasUpdateTrigger|Таблица|Объект содержит триггер UPDATE.<br /><br /> 1 = True<br /><br /> 0 = False.|  
 |TableHasVarDecimalStorageFormat|Таблица|Для таблицы включен формат хранения **vardecimal**.<br /><br /> 1 = True<br /><br /> 0 = False.|  
 |TableInsertTrigger|Таблица|Таблица содержит триггер INSERT.<br /><br /> >1 = идентификатор первого триггера указанного типа.|  
-|TableInsertTriggerCount|Таблица|В таблице имеется указанное число триггеров INSERT.<br /><br /> >0 = количество триггеров INSERT.|  
+|TableInsertTriggerCount|Таблица|В таблице имеется указанное число триггеров INSERT.<br /><br /> > 0 = количество триггеров INSERT.|  
 |TableIsFake|Таблица|Таблица реально не существует. Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] материализует ее внутренним образом по запросу.<br /><br /> 1 = True<br /><br /> 0 = False.|  
 |TableIsLockedOnBulkLoad|Таблица|Таблица заблокирована в связи с **bcp** или заданием BULK INSERT.<br /><br /> 1 = True<br /><br /> 0 = False.|  
 |TableIsMemoryOptimized|Таблица|**Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Таблица, оптимизированная для памяти<br /><br /> 1 = True<br /><br /> 0 = False.<br /><br /> Базовый тип данных: **int**<br /><br /> Дополнительные сведения см. в разделе [In-Memory OLTP (оптимизация в памяти)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).|  
 |TableIsPinned|Таблица|Таблица закреплена для хранения в кэше данных.<br /><br /> 0 = False.<br /><br /> Эта функция не поддерживается в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и в более поздних версиях.|  
 |TableTextInRowLimit|Таблица|Максимальное количество байтов, допустимое для текста в строке.<br /><br /> 0, если не установлен параметр текст в строке.|  
 |TableUpdateTrigger|Таблица|Таблица содержит триггер UPDATE.<br /><br /> > 1 = идентификатор первого триггера указанного типа.|  
-|TableUpdateTriggerCount|Таблица|В таблице имеется указанное число триггеров UPDATE.<br /><br /> >0 = количество триггеров UPDATE.|  
+|TableUpdateTriggerCount|Таблица|В таблице имеется указанное число триггеров UPDATE.<br /><br /> > 0 = количество триггеров UPDATE.|  
 |TableHasColumnSet|Таблица|Таблица содержит набор столбцов.<br /><br /> 0 = False.<br /><br /> 1 = True<br /><br /> Дополнительные сведения см. в статье [Использование наборов столбцов](../../relational-databases/tables/use-column-sets.md).|  
 |TableTemporalType|Таблица|**Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Задает тип таблицы:<br /><br /> 0 = нетемпоральная таблица;<br /><br /> 1 = таблица журнала для таблицы с управлением версиями;<br /><br /> 2 = темпоральная таблица с управлением версиями.|  
   

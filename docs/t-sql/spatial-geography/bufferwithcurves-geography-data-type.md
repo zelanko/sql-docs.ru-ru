@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - BufferWithCurves method (geography)
 ms.assetid: abf0a11c-c99c-4faa-bf80-3ae8e04d7bfb
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: afcd0b1256b42f6f89d979de1e2178d566981a7a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 81222e73df527d5d51a592dd2cabe62384b5f936
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695802"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65937318"
 ---
 # <a name="bufferwithcurves-geography-data-type"></a>BufferWithCurves (тип данных geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47695802"
 ## <a name="return-types"></a>Типы возвращаемых данных  
  Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Тип возвращаемых данных CLR: **SqlGeography**  
+ Тип возвращаемого значения CLR: **SqlGeography**  
   
 ## <a name="exceptions"></a>Исключения  
  Следующие критерии вызовут исключение **ArgumentException**.  
@@ -80,7 +80,7 @@ ms.locfileid: "47695802"
  SELECT @g.BufferWithCurves(-1).ToString();
 ``` 
   
-### <a name="b-calling-bufferwithcurves-with-a-parameter-value--0-on-a-two-dimensional-geography-instance"></a>Б. Вызов метода BufferWithCurves() со значением параметра < 0 для экземпляра двухмерного географического объекта  
+### <a name="b-calling-bufferwithcurves-with-a-parameter-value--0-on-a-two-dimensional-geography-instance"></a>Б. Вызов метода BufferWithCurves() со значением параметра < 0 для экземпляра двумерного географического объекта  
  В следующем примере возвращается экземпляр `CurvePolygon` с отрицательным буфером:  
   
  ```sql

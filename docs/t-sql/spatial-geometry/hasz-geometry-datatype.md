@@ -12,15 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - HasZ geometry
 ms.assetid: aa378943-252a-4079-848b-6c59344fcfce
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 6ca656d9e1d041864c80328dcad2b9fa19de27c5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d29a99be39779283b0f6841ac51598491141938d
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839502"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65937947"
 ---
 # <a name="hasz-geometry-datatype"></a>HasZ (тип данных geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -37,9 +37,9 @@ ms.locfileid: "47839502"
 ## <a name="return-types"></a>Типы возвращаемых данных  
  Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
- Тип возвращаемых данных CLR: **Boolean**  
+ Тип возвращаемого значения CLR: **Boolean**  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="examples"></a>Примеры  
   

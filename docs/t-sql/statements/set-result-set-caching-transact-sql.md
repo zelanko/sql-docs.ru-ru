@@ -15,12 +15,12 @@ author: XiaoyuL-Preview
 ms.author: xiaoyul
 manager: craigg
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: cd0141a6fbd21c11f7401fa2c45dae0cc75b983d
-ms.sourcegitcommit: ccea98fa0768d01076cb6ffef0b4bdb221b2f9d5
+ms.openlocfilehash: 0b932c1fa3aa8575f8f12ef5f164841788f74c1a
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65561497"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948748"
 ---
 # <a name="set-result-set-caching-transact-sql"></a>SET RESULT SET CACHING (Transact-SQL)
 
@@ -37,9 +37,11 @@ SET RESULT_SET_CACHING { ON | OFF };
 ```  
   
 ## <a name="remarks"></a>Remarks  
+
+> [!Note]
+> Хотя эта функция развертывается во всех регионах, проверьте, какая версия развернута в вашем экземпляре, а также изучите актуальные [заметки о выпуске Хранилища данных SQL Azure](/azure/sql-data-warehouse/release-notes-10-0-10106-0), чтобы узнать о доступности функции.
   
-Эта команда должна выполняться при подключении к базе данных master.  Изменение данного параметра базы данных применяется немедленно.  Затраты на хранение связаны с кэшированием результирующих наборов запроса. После отключения кэширования результатов для базы данных ранее сохраненный кэш результатов немедленно удаляется из Хранилища данных SQL Azure. В [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql?view=azure-sqldw-latest
-) появился новый столбец с именем is_result_set_caching_on. В нем отображаются параметры кэширования результатов для базы данных.  
+Эта команда должна выполняться при подключении к базе данных master.  Изменение данного параметра базы данных применяется немедленно.  Затраты на хранение связаны с кэшированием результирующих наборов запроса. После отключения кэширования результатов для базы данных ранее сохраненный кэш результатов немедленно удаляется из Хранилища данных SQL Azure. В [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql?view=azure-sqldw-latest) появился новый столбец с именем is_result_set_caching_on. В нем отображаются параметры кэширования результатов для базы данных.  
 
 **ON** указывает, что результирующие наборы запросов, возвращаемые из этой базы данных, будут кэшироваться в Хранилище данных SQL Azure.
 

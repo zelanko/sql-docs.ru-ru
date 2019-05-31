@@ -11,12 +11,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9dfc5e2cf7bab164d650f2da1767b2a0e7c399aa
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: 377c2d95564e7348bdfb5de9480c7c7f5004c7f7
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711185"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938157"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>Always Encrypted с безопасными анклавами
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -55,7 +55,7 @@ Always Encrypted использует безопасные анклавы, ка�
 > [!IMPORTANT]
 > В [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] для полнофункциональных вычислений будут выпущены несколько оптимизаций производительности, включая ограниченную функциональность (отсутствие индексирования и т. д.). Сейчас они отключены по умолчанию. Сведения о включении полнофункциональных вычислений см. в разделе [Настройка безопасного анклава](configure-always-encrypted-enclaves.md#configure-a-secure-enclave).
 
-В [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] Always Encrypted с безопасными анклавами использует безопасные анклавы памяти [безопасности на основе виртуализации (VBS)](https://cloudblogs.microsoft.com/microsoftsecure/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) (это также называется виртуальным безопасным режимом или анклавами VSM) в Windows.
+В [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] Always Encrypted с безопасными анклавами использует безопасные анклавы памяти [безопасности на основе виртуализации (VBS)](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) (это также называется виртуальным безопасным режимом или анклавами VSM) в Windows.
 
 ## <a name="secure-enclave-attestation"></a>Аттестация безопасного анклава
 
@@ -143,4 +143,4 @@ Always Encrypted использует безопасные анклавы, ка�
 
 ## <a name="next-steps"></a>Next Steps
 
-- Сведения о том, как настроить тестовую среду и протестировать функциональные возможности Always Encrypted с безопасными анклавами в SSMS, см. в статье [Руководство по началу работы с Always Encrypted с безопасными анклавами в SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md).
+- Вы можете настроить тестовую среду и протестировать функциональные возможности Always Encrypted с безопасными анклавами в SSMS, см. статью [Руководство. Начало работы с Always Encrypted с безопасными анклавами с использованием SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md).

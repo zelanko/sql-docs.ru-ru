@@ -1,7 +1,7 @@
 ---
 title: Имена столбцов с путем, указанным как data() | Документация Майкрософт
-ms.custom: ''
-ms.date: 03/01/2017
+ms.custom: fresh2019may
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -13,18 +13,20 @@ ms.assetid: 0b738e44-6108-4417-a9a4-abeb7680d899
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 64f7044ff5ab003b31296a3293a0f146ac0a26c8
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 77913ea6358f9a5d1b88de7426144b730b5c74e9
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511441"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175368"
 ---
 # <a name="column-names-with-the-path-specified-as-data"></a>Имена столбцов с путем, указанным как data()
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  Если путь для имени столбца указан как «data()», то в сформированном XML-документе его значение обрабатывается как атомарное. Если следующий элемент последовательности также является элементарным значением, в XML-документ добавляется символ пробела. Это может пригодиться при создании списка типизированных элементов и значений атрибутов. Следующий запрос извлекает код модели продукции, ее имя и список продуктов этой модели.  
+
+Если путь для имени столбца указан как «data()», то в сформированном XML-документе его значение обрабатывается как атомарное. Если следующий элемент последовательности также является элементарным значением, в XML-документ добавляется символ пробела. Это может пригодиться при создании списка типизированных элементов и значений атрибутов. Следующий запрос извлекает код модели продукции, ее имя и список продуктов этой модели.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT ProductModelID       AS "@ProductModelID",  
@@ -39,14 +41,16 @@ WHERE ProductModelID= 7
 FOR XML PATH('ProductModelData');  
 ```  
   
- Вложенная инструкция SELECT извлекает список кодов продуктов. Имя столбца для кодов продуктов в нем указано как «data()». Поскольку режим PATH указывает для имени элемента строки пустую строку, формирования элемента строки не происходит. Вместо этого возвращаются значения, назначенные атрибуту ProductIDs элемента строки <`ProductModelData`> в родительской инструкции SELECT. Результат:  
-  
- `<ProductModelData ProductModelID="7"`  
-  
- `ProductModelName="HL Touring Frame"`  
-  
- `ProductIDs="885 887 888 889 890 891 892 893" />`  
-  
+ Вложенная инструкция SELECT извлекает список кодов продуктов. Имя столбца для кодов продуктов в нем указано как «data()». Поскольку режим PATH указывает для имени элемента строки пустую строку, формирования элемента строки не происходит. Вместо этого возвращаются значения, назначенные атрибуту ProductIDs элемента строки `<ProductModelData>` в родительской инструкции SELECT. Результат:  
+
+```sql
+<ProductModelData
+  ProductModelID="7"
+  ProductModelName="HL Touring Frame"
+  ProductIDs="885 887 888 889 890 891 892 893"
+/>
+```
+
 ## <a name="see-also"></a>См. также:  
  [Использование режима PATH совместно с FOR XML](../../relational-databases/xml/use-path-mode-with-for-xml.md)  
   

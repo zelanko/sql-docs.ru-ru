@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STPointFromWKB (geometry Data Type)
 ms.assetid: 1157c172-2dc7-4393-bae6-b85406171a34
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 3cef65b2d51cba199b3a908ee8f71880663aee53
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 623e39aed2471f765755bd46f737967c43f4c1cb
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600442"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938390"
 ---
 # <a name="stpointfromwkb-geometry-data-type"></a>STPointFromWKB (тип данных geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ STPointFromWKB ( 'WKB_point' , SRID )
   
 ## <a name="arguments"></a>Аргументы  
  *WKB_point*  
- Представление в формате WKB возвращаемого экземпляра **geometryPoint**. *WKB_point* — это выражение типа **varbinary(max)**.  
+ Представление в формате WKB возвращаемого экземпляра **geometryPoint**. *WKB_point* — это выражение типа **varbinary(max)** .  
   
  *SRID*  
  Выражение типа **int**, представляющее идентификатор пространственной ссылки (SRID) возвращаемого экземпляра **geometryPoint**.  
@@ -47,7 +47,7 @@ STPointFromWKB ( 'WKB_point' , SRID )
 ## <a name="return-types"></a>Типы возвращаемых данных  
  Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Тип возвращаемых данных CLR: **SqlGeometry**  
+ Тип возвращаемого значения CLR: **SqlGeometry**  
   
  Тип OGC: **Point**  
   

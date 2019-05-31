@@ -20,16 +20,16 @@ helpviewer_keywords:
 - RESTORE HEADERONLY statement
 - backup header information [SQL Server]
 ms.assetid: 4b88e98c-49c4-4388-ab0e-476cc956977c
-author: mashamsft
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 818bd4150965f0a1e36c942f21d9446759c4ec04
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: c8296ca538f9daac6b0e05aae6f8124bfe2abb62
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242247"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65947060"
 ---
 # <a name="restore-statements---headeronly-transact-sql"></a>Инструкции RESTORE — HEADERONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -150,7 +150,7 @@ FROM <backup_device>
 |**EncryptorType**|**nvarchar(32)**|**Применимо к**: с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (накопительное обновление 1) до текущей версии.<br /><br /> Тип используемого шифратора: сертификат или асимметричный ключ. Если резервная копия не зашифрована, это значение равно NULL.|  
   
 > [!NOTE]  
->  Если для резервных наборов данных назначены пароли, то инструкция RESTORE HEADERONLY показывает полные сведения только о резервном наборе данных, пароль которого совпадает с указанным в команде для аргумента PASSWORD. Инструкция RESTORE HEADERONLY также показывает полные сведения для незащищенных резервных наборов данных. В столбце **BackupName** для других защищенных паролем резервных наборов данных на носителе будет указано значение "**_Password Protected_**, а все остальные столбцы будут иметь значение NULL.  
+>  Если для резервных наборов данных назначены пароли, то инструкция RESTORE HEADERONLY показывает полные сведения только о резервном наборе данных, пароль которого совпадает с указанным в команде для аргумента PASSWORD. Инструкция RESTORE HEADERONLY также показывает полные сведения для незащищенных резервных наборов данных. В столбце **BackupName** для других защищенных паролем резервных наборов данных на носителе будет указано значение " **_Password Protected_** , а все остальные столбцы будут иметь значение NULL.  
   
 ## <a name="general-remarks"></a>Общие замечания  
  С помощью инструкции RESTORE HEADERONLY клиент может получить все данные из заголовка резервной копии на конкретном устройстве резервного копирования. Для каждой резервной копии на устройстве резервного копирования сервер передает данные заголовка в виде строки.  

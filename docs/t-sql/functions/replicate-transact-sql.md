@@ -17,16 +17,16 @@ helpviewer_keywords:
 - REPLICATE function
 - repeating character expressions
 ms.assetid: 0cd467fb-3f22-471a-892c-0039d9f7fa1a
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a074e7ad5f443a4aaac722b3c15383b6c0078e6e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 558d1a1f3d5d0cbb204c5dfd80833ce82a02d0c0
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756952"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65945837"
 ---
 # <a name="replicate-transact-sql"></a>REPLICATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,7 +46,7 @@ REPLICATE ( string_expression ,integer_expression )
  Выражение символьной строки или типа данных binary. *string_expression* может содержать либо символьные, либо двоичные данные.  
   
 > [!NOTE]  
->  Если *string_expression* не относится к типу **varchar(max)** или **nvarchar(max)**, функция REPLICATE усекает возвращаемое значение до 8000 байт. Для возврата значений, превышающих 8000 байт, аргумент *string_expression* должен быть явно приведен к соответствующему типу данных с большими значениями.  
+>  Если *string_expression* не относится к типу **varchar(max)** или **nvarchar(max)** , функция REPLICATE усекает возвращаемое значение до 8000 байт. Для возврата значений, превышающих 8000 байт, аргумент *string_expression* должен быть явно приведен к соответствующему типу данных с большими значениями.  
   
  *integer_expression*  
  Выражение любого целочисленного типа, включая тип **bigint**. Если аргумент *integer_expression* отрицателен, то возвращается значение NULL.  

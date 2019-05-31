@@ -17,16 +17,16 @@ helpviewer_keywords:
 - STDEV function [Transact-SQL]
 - statistical standard deviation
 ms.assetid: ff41b4fc-4f71-4f18-bf78-96614ea908cc
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c42df7bdfca5356059f85452d914af2a0e93e951
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 687eced9434fa57f2cc7a8449de9e2346afeb16c
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755812"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65947632"
 ---
 # <a name="stdev-transact-sql"></a>STDEV (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -55,7 +55,7 @@ STDEV ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
  *expression*  
  Числовое [выражение](../../t-sql/language-elements/expressions-transact-sql.md). Агрегатные функции и вложенные запросы не допускаются. *expression* — выражение категории точного числового или приблизительного числового типа данных, за исключением типа данных **bit**.  
   
- OVER **(** [ *partition_by_clause* ] _order\_by\_clause_**)**  
+ OVER **(** [ *partition_by_clause* ] _order\_by\_clause_ **)**  
  _partition\_by\_clause_ делит результирующий набор, полученный с помощью предложения FROM, на секции, к которым применяется функция. Если этот параметр не указан, функция обрабатывает все строки результирующего набора запроса как отдельные группы. _order\_by\_clause_ определяет логический порядок, в котором выполняется операция. _order\_by\_clause_ — это обязательный элемент. Дополнительные сведения см. в статье [Предложение OVER (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## <a name="return-types"></a>Типы возвращаемых данных  
@@ -68,7 +68,7 @@ STDEV ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="a-using-stdev"></a>А. Использование функции STDEV  
+### <a name="a-using-stdev"></a>A. Использование функции STDEV  
  Следующий пример возвращает стандартное отклонение для всех дополнительных значений в таблице `SalesPerson` в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```  

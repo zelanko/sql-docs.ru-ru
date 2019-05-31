@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STGeometryType method
 ms.assetid: 3e169ead-a98e-44af-8d33-fd59a955cae4
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: d4f721d552f40fcbb1fe2ae8daac8031c437d35c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: de7d1e6034cad64d70ec129fd6adf2ba98d8e578
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765382"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65936879"
 ---
 # <a name="stgeometrytype-geography-data-type"></a>STGeometryType (тип данных geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47765382"
 ## <a name="return-types"></a>Типы возвращаемых данных  
  Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **nvarchar(4000)**  
   
- Тип возвращаемых данных CLR: **SqlString**  
+ Тип возвращаемого значения CLR: **SqlString**  
   
 ## <a name="remarks"></a>Remarks  
  Имена типов OGC, которые могут быть возвращены `STGeometryType()`: **Point**, **LineString**, **CircularString**, **CompoundCurve**, **Polygon**, **CurvePolygon**, **GeometryCollection**, **MultiPoint**, **MultiLineString**, **MultiPolygon** и **FullGlobe**.  

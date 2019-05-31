@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STDimension method
 ms.assetid: 4368b0f6-0678-4ade-87dc-b43d8b2e8d92
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 20103774beb936ede7ab6a3b56201230b18cbd3e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f2fd921d384e8c79220a435eb8b43d01eccda566
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801102"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65937066"
 ---
 # <a name="stdimension-geography-data-type"></a>Метод STDimension (тип данных geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47801102"
 ## <a name="return-types"></a>Типы возвращаемых данных  
  Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **int**  
   
- Тип возвращаемых данных CLR: **SqlInt32**  
+ Тип возвращаемого значения CLR: **SqlInt32**  
   
 ## <a name="remarks"></a>Remarks  
  STDimension() возвращает значение –1, если экземпляр **geography** пуст.  

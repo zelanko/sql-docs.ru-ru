@@ -1,7 +1,7 @@
 ---
 title: Установка ядра СУБД SQL Server | Документы Майкрософт
 ms.custom: ''
-ms.date: 09/05/2017
+ms.date: 05/22/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -13,26 +13,26 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 30d657ed93a0ff272370f340dbba59c9e72c0079
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.openlocfilehash: 80de284e9ac06e7481848325db7c1557524dc166
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65484343"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994198"
 ---
 # <a name="install-sql-server-database-engine"></a>Установка ядра СУБД SQL
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
+## <a name="overview"></a>Обзор
 Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] входит в состав [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и является основной службой, предназначенной для хранения, обработки и обеспечения безопасности данных. Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] обеспечивает управляемый доступ к ресурсам и быструю обработку транзакций, что позволяет использовать его даже с самыми требовательными приложениями по обработке данных на предприятии.  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает до 50 экземпляров компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] на одном компьютере. Инструкции по созданию типовой установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в статье [Установка SQL Server с помощью мастера установки (программа установки)](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md).  
   
 >[!IMPORTANT]
 >Для локальных установок необходимо запускать программу установки с правами администратора. При установке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из удаленной общей папки необходимо использовать учетную запись домена с разрешениями на чтение и выполнение для удаленной общей папки.  
-  
-## <a name="related-features"></a>Связанные функции
 
+## <a name="features"></a>Компоненты
 Если на странице «Компоненты для установки» мастера установки **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выбран компонент** Database Engine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , то будут установлены следующие компоненты:  
   
 -   [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
@@ -48,27 +48,23 @@ ms.locfileid: "65484343"
     > [!NOTE]  
     >  В этом выпуске установка флажка **Службы Data Quality Services** в программе установки не приводит к установке сервера служб Data Quality Services (DQS). Для установки сервера DQS необходимо выполнить дополнительные шаги после завершения установки. Дополнительные сведения см. в разделе [Install Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md).  
     
-- [Служба запросов Polybase для внешних данных](../../relational-databases/polybase/polybase-guide.md) — это необязательный компонент 
+- [Служба запросов Polybase для внешних данных](../../relational-databases/polybase/polybase-guide.md) — это необязательный компонент. Начиная с SQL Server 2019 также доступен соединитель Java для источников данных HDFS.
 
   
  Следующие дополнительные возможности могут применяться во многих типичных пользовательских сценариях.  
   
--   Клиент Data Quality  
-  
--   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  
-  
--   Компоненты соединения  
-  
--   Модели программирования  
-  
--   Средства управления  
-  
--   [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]  
-  
+-   Клиент Data Quality
+-   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]
+-   Компоненты соединения
+-   Модели программирования
+-   Средства управления
+-   [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]
 -   Компоненты документации  
   
+
 > [!NOTE]  
 >  По умолчанию при установке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] образцы баз данных и образцы кода не устанавливаются. Дополнительные сведения об установке примеров баз данных и примеров кода см. в разделе [Образцы Microsoft SQL Server](../../sample/microsoft-sql-server-samples.md). Более старые примеры см. на [CodePlex](https://go.microsoft.com/fwlink/?LinkId=87843).  
+
   
 ## <a name="see-also"></a>См. также раздел  
  [Выпуски и поддерживаемые функции SQL Server 2017](~/sql-server/editions-and-components-of-sql-server-2017.md)   

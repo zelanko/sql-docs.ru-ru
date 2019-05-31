@@ -19,15 +19,15 @@ helpviewer_keywords:
 - messages [SQL Server], formats
 - errors [SQL Server], formats
 ms.assetid: 83f18102-2035-4a87-acd0-8d96d03efad5
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e727fa9d1042fc40b70872b948f1723c7eaaddcf
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 29c669ec831ffefe3aebe463fa7819e4e16d276a
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212373"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948993"
 ---
 # <a name="formatmessage-transact-sql"></a>FORMATMESSAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,9 +60,9 @@ FORMATMESSAGE ( { msg_number  | ' msg_string ' } , [ param_value [ ,...n ] ] )
 ## <a name="remarks"></a>Remarks  
  Как и инструкция RAISERROR, функция FORMATMESSAGE производит формирование сообщения, подставляя указанные значения параметров вместо заполнителей. Дополнительные сведения о заполнителях, которые допускаются в сообщениях об ошибках, а также о процессе их изменения см. в статье [RAISERROR (Transact-SQL)](../../t-sql/language-elements/raiserror-transact-sql.md).  
   
- Она находит сообщение для текущего языка, установленного для пользователя. Если локализованная версия сообщения отсутствует, то берется версия сообщения для языка «Английский (США)».  
+ Она находит сообщение для текущего языка, установленного для пользователя. Если локализованная версия сообщения отсутствует, то берется версия сообщения для языка "Английский (США)".  
   
- Для локализованных сообщений указанные параметры должны соответствовать заполнителям в версиях для языка «Английский (США)». Таким образом, параметр 1 в локализованной версии должен соответствовать параметру 1 в версии для языка «Английский (США)», параметр 2 — параметру 2 и т. д.  
+ Для локализованных сообщений указанные параметры должны соответствовать заполнителям в версиях для языка "Английский (США)". Таким образом, параметр 1 в локализованной версии должен соответствовать параметру 1 в версии для языка "Английский (США)", параметр 2 — параметру 2 и т. д.  
   
 ## <a name="examples"></a>Примеры  
   

@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STUnion method
 ms.assetid: 9bf87691-efd8-4c53-bd2f-eefe0acd19ca
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 3e5021b710d780c5f6f35221099f41fc993c492c
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: d47e5a70a784ba7946b7f6548dee1e8a6ccfff26
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979760"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65935763"
 ---
 # <a name="stunion-geography-data-type"></a>STUnion (тип данных geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "53979760"
 ## <a name="return-types"></a>Типы возвращаемых данных  
  Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Возвращаемый тип CLR: **SqlGeography**  
+ Тип возвращаемого значения CLR: **SqlGeography**  
   
 ## <a name="exceptions"></a>Исключения  
  Этот метод вызывает исключение **ArgumentException**, если экземпляр содержит противоположную границу.  

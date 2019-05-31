@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - EnvelopeCenter method
 ms.assetid: dee9d807-faad-45b8-b3f3-7e8aa7d07147
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 9b81d00f3cb8e208cd2fa34792a2d61943ff1bca
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.openlocfilehash: 03187cc9deebd78a87638a9ce7bb7c7e8f9b296f
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154939"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65937850"
 ---
 # <a name="envelopecenter-geography-data-type"></a>EnvelopeCenter (тип данных geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ EnvelopeCenter( )
 ## <a name="return-types"></a>Типы возвращаемых данных  
 Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
-Возвращаемый тип CLR: **SqlGeography**  
+Тип возвращаемого значения CLR: **SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
 Этот метод возвращает **point**. При использовании с функцией `EnvelopeAngle()` `EnvelopeCenter()` возвращает ограничивающую окружность экземпляра **geography**.  

@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STCrosses (geometry Data Type)
 ms.assetid: 3e3fc065-555a-4bee-8b71-e92f3dc62a4f
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 54f96265aabdbdd491cf2a0b49a0c8a67df999ac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7588d3a335785dd80a5b41cd17734b207852faae
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741782"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65939036"
 ---
 # <a name="stcrosses-geometry-data-type"></a>STCrosses (тип данных geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47741782"
 ## <a name="return-types"></a>Типы возвращаемых данных  
  Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
- Тип возвращаемых данных CLR: **SqlBoolean**  
+ Тип возвращаемого значения CLR: **SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
  Два экземпляра **geometry** пересекаются, если выполняются два указанных ниже условия.  

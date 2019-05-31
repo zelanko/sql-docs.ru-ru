@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STEnvelope (geometry Data Type)
 ms.assetid: 781d22e9-38df-4c23-836f-6dd0bdef49c5
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 9abd3e8e48e38916da9b5cb7cc3293b27ad66659
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: beb560d41f2fdd58382afbd6374da9869225ddb2
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663152"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938979"
 ---
 # <a name="stenvelope-geometry-data-type"></a>STEnvelope (тип данных geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ STEnvelope ( )
 ## <a name="return-types"></a>Типы возвращаемых данных  
  Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Тип возвращаемых данных CLR: **SqlGeometry**  
+ Тип возвращаемого значения CLR: **SqlGeometry**  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере с помощью метода `STGeomFromText()` создается экземпляр `LineString` с координатами от (0,0) до (2,3), а метод `STEnvelope()` возвращает ограничивающий прямоугольник для экземпляра `LineString`.  

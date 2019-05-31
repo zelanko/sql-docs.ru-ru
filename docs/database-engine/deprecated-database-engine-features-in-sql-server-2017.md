@@ -16,12 +16,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: a1cc685ac2851acb52eaedff7507bd0b7997add8
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 2308cc29c0cbbee8b72177e573d51239c9f8f5de
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59480330"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65981168"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>Нерекомендуемые функции ядра СУБД в SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,8 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Резервное копирование и восстановление|Инструкция RESTORE { DATABASE &#124; LOG } WITH [MEDIA]PASSWORD остается устаревшей. Поддержка инструкций BACKUP { DATABASE &#124; LOG } WITH PASSWORD и BACKUP { DATABASE &#124; LOG } WITH MEDIAPASSWORD прекращена.|Нет.|BACKUP DATABASE или LOG WITH PASSWORD<br /><br /> BACKUP DATABASE или LOG WITH MEDIAPASSWORD|104<br /><br /> 103|  
 |Уровни совместимости|Обновление с версии 100 ([!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] и [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]).|Когда [поддержка](https://aka.ms/sqllifecycle) версии [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] завершается, соответствующий уровень совместимости базы данных помечается как нерекомендуемый. Однако мы будем как можно дольше поддерживать приложения, сертифицированные для работы на любом соответствующем уровне совместимости, чтобы упростить обновление. Дополнительные сведения об уровнях совместимости см. в разделе [Уровень совместимости ALTER DATABASE (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|Уровень совместимости базы данных 100|108|  
 |Объекты базы данных|Возможность возвращать результирующие наборы из триггеров.|None|Возврат результатов из триггера|12|  
-|Шифрование|Шифрование с использованием алгоритмов RC4 и RC4_128 является устаревшим. В следующей версии запланировано удаление его поддержки. Расшифровка с использованием алгоритмов RC4 и RC4_128 не является устаревшей.|Используйте другой алгоритм шифрования, например AES.|Устаревший алгоритм шифрования|253|  
+|Шифрование|Шифрование с использованием алгоритмов RC4 и RC4_128 является устаревшим. В следующей версии запланировано удаление его поддержки. Расшифровка с использованием алгоритмов RC4 и RC4_128 не является устаревшей.|Используйте другой алгоритм шифрования, например AES.|Устаревший алгоритм шифрования|253|    
+|Алгоритмы хэширования|Использовать MD2, MD4, MD5, SHA и SHA1 не рекомендуется.|Вместо этого используйте алгоритмы SHA2_256 или SHA2_512. Старые алгоритмы по-прежнему будут работать, но будут вызывать событие нерекомендуемого алгоритма.|Нерекомендуемый хэш-алгоритм|None|  
 |Удаленные серверы|sp_addremotelogin<br /><br /> sp_addserver, хранимая процедура<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> хранимая процедура sp_remoteoption|Замените удаленные серверы связанными серверами. Процедуру sp_addserver можно использовать только с параметром local.|sp_addremotelogin<br /><br /> sp_addserver, хранимая процедура<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> хранимая процедура sp_remoteoption|70<br /><br /> 69<br /><br /> 71<br /><br /> 72<br /><br /> 73|  
 |Удаленные серверы|\@\@remserver|Замените удаленные серверы связанными серверами.|None|None|  
 |Удаленные серверы|SET REMOTE_PROC_TRANSACTIONS|Замените удаленные серверы связанными серверами.|SET REMOTE_PROC_TRANSACTIONS|110|  
@@ -78,8 +79,8 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Типы данных|sp_addtype<br /><br /> хранимая процедура sp_droptype|CREATE TYPE<br /><br /> DROP TYPE|sp_addtype<br /><br /> хранимая процедура sp_droptype|62<br /><br /> 63|  
 |Типы данных|Синтаксис**timestamp** для типа данных **rowversion** .|Синтаксис типа данных**rowversion** .|timestamp|158|  
 |Типы данных|Возможность вставлять значения NULL в столбцы типа **timestamp** .|Используйте вместо этого DEFAULT.|INSERT NULL в столбцах TIMESTAMP.|179|  
-|Типы данных|Параметр таблицы «text in row».|Используйте типы данных **varchar(max)**, **nvarchar(max)** и **varbinary(max)**. Дополнительные сведения см. в разделе [sp_tableoption (Transact-SQL)](../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md).|Параметр таблицы «text in row»|9|  
-|Типы данных|Типы данных:<br /><br /> **text**<br /><br /> **ntext**<br /><br /> **image**|Используйте типы данных **varchar(max)**, **nvarchar(max)** и **varbinary(max)** .|Типы данных: **text**, **ntext** или **image**|4|  
+|Типы данных|Параметр таблицы «text in row».|Используйте типы данных **varchar(max)** , **nvarchar(max)** и **varbinary(max)** . Дополнительные сведения см. в разделе [sp_tableoption (Transact-SQL)](../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md).|Параметр таблицы «text in row»|9|  
+|Типы данных|Типы данных:<br /><br /> **text**<br /><br /> **ntext**<br /><br /> **image**|Используйте типы данных **varchar(max)** , **nvarchar(max)** и **varbinary(max)** .|Типы данных: **text**, **ntext** или **image**|4|  
 |Управление базами данных|sp_attach_db<br /><br /> sp_attach_single_file_db|Инструкция CREATE DATABASE с параметром FOR ATTACH. Чтобы перестроить несколько файлов журнала, если один или более файлов изменили расположение, используйте параметр FOR ATTACH_REBUILD_LOG.|sp_attach_db<br /><br /> sp_attach_single_file_db|81<br /><br /> 82|  
 |Объекты базы данных|CREATE DEFAULT<br /><br /> DROP DEFAULT<br /><br /> sp_bindefault<br /><br /> хранимая процедура sp_unbindefault|Ключевое слово DEFAULT в инструкциях CREATE TABLE и ALTER TABLE.|CREATE_DROP_DEFAULT<br /><br /> sp_bindefault<br /><br /> хранимая процедура sp_unbindefault|162<br /><br /> 64<br /><br /> 65|  
 |Объекты базы данных.|CREATE RULE<br /><br /> DROP RULE<br /><br /> sp_bindrule<br /><br /> sp_unbindrule|Ключевое слово CHECK в инструкциях CREATE TABLE и ALTER TABLE.|CREATE_DROP_RULE<br /><br /> sp_bindrule<br /><br /> sp_unbindrule|161<br /><br /> 66<br /><br /> 67|  
@@ -99,7 +100,6 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Программирование расширенных хранимых процедур|sp_addextendedproc<br /><br /> sp_dropextendedproc<br /><br /> sp_helpextendedproc|Используйте вместо этого интеграцию со средой CLR.|sp_addextendedproc<br /><br /> sp_dropextendedproc<br /><br /> sp_helpextendedproc|94<br /><br /> 95<br /><br /> 96|  
 |Расширенные хранимые процедуры|xp_grantlogin<br /><br /> xp_revokelogin<br /><br /> xp_loginConfig|Используйте инструкцию CREATE LOGIN.<br /><br /> Используйте аргумент DROP LOGIN IsIntegratedSecurityOnly в SERVERPROPERTY.|xp_grantlogin<br /><br /> xp_revokelogin<br /><br /> xp_loginConfig|44<br /><br /> 45<br /><br /> 59|  
 |Функции|fn_get_sql|sys.dm_exec_sql_text|fn_get_sql|151|  
-|Алгоритмы хэширования|Алгоритмы MD2, MD4, MD5, SHA и SHA1. Их не следует использовать.|Используйте алгоритмы SHA2_256 или SHA2_512.|Устаревший хэш-алгоритм||  
 |Высокий уровень доступности|зеркальное отображение базы данных|[!INCLUDE[ssHADR](../includes/sshadr-md.md)]<br /><br /> Если используемый выпуск [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] не поддерживает [!INCLUDE[ssHADR](../includes/sshadr-md.md)], следует использовать доставку журналов.|DATABASE_MIRRORING|267|  
 |Параметры индекса|sp_indexoption|ALTER INDEX|sp_indexoption|78|  
 |Параметры индекса|Синтаксис CREATE TABLE, ALTER TABLE или CREATE INDEX без заключения параметров в скобки.|Перепишите инструкции для использования текущего синтаксиса.|INDEX_OPTION|33|  
@@ -171,7 +171,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Хранимые процедуры, функции и представления каталогов трассировки SQL|хранимая процедура sp_trace_create<br /><br /> sp_trace_setevent, хранимая процедура<br /><br /> sp_trace_setfilter, хранимая процедура<br /><br /> sp_trace_setstatus<br /><br /> fn_trace_geteventinfo<br /><br /> fn_trace_getfilterinfo<br /><br /> fn_trace_getinfo<br /><br /> fn_trace_gettable<br /><br /> sys.traces<br /><br /> sys.trace_events<br /><br /> sys.trace_event_bindings<br /><br /> sys.trace_categories<br /><br /> sys.trace_columns<br /><br /> sys.trace_subclass_values|[Расширенные события](../relational-databases/extended-events/extended-events.md)|хранимая процедура sp_trace_create<br /><br /> sp_trace_setevent, хранимая процедура<br /><br /> sp_trace_setfilter, хранимая процедура<br /><br /> sp_trace_setstatus<br /><br /> fn_trace_geteventinfo<br /><br /> fn_trace_getfilterinfo<br /><br /> fn_trace_getinfo<br /><br /> fn_trace_gettable<br /><br /> sys.traces<br /><br /> sys.trace_events<br /><br /> sys.trace_event_bindings<br /><br /> sys.trace_categories<br /><br /> sys.trace_columns<br /><br /> sys.trace_subclass_values|258<br /><br /> 260<br /><br /> 261<br /><br /> 259<br /><br /> 256<br /><br /> 257|  
   
 > [!NOTE]  
-> Параметр **OUTPUT** куки-файла для инструкции **sp_setapprole** в настоящее время описан в документации как **varbinary(8000)** , что верно определяет его максимальную длину. Однако текущая реализация возвращает параметр **varbinary(50)**. Если разработчик выделил значение **varbinary(50)** , может потребоваться внести изменения в приложения на случай изменения размера возвращаемых куки-файлов в будущих выпусках. Хотя эта проблема не связана с устареванием, она описана в данном разделе, так как требует внесения аналогичных изменений в приложения. Дополнительные сведения см. в разделе [sp_setapprole (Transact-SQL)](../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md).  
+> Параметр **OUTPUT** куки-файла для инструкции **sp_setapprole** в настоящее время описан в документации как **varbinary(8000)** , что верно определяет его максимальную длину. Однако текущая реализация возвращает параметр **varbinary(50)** . Если разработчик выделил значение **varbinary(50)** , может потребоваться внести изменения в приложения на случай изменения размера возвращаемых куки-файлов в будущих выпусках. Хотя эта проблема не связана с устареванием, она описана в данном разделе, так как требует внесения аналогичных изменений в приложения. Дополнительные сведения см. в разделе [sp_setapprole (Transact-SQL)](../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Неподдерживаемые функции ядра СУБД в SQL Server 2016](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)  

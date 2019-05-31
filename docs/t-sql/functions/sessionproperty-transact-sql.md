@@ -17,15 +17,15 @@ helpviewer_keywords:
 - SESSIONPROPERTY function
 - sessions [SQL Server], SET options settings
 ms.assetid: 1f3730b4-1495-4d3a-af43-e57952812df9
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 36fb5844c7255aff7b8527ff5cc462ec5a573977
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ba08b2273102d43eed26d7b383a285d6568a63d2
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642912"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65942882"
 ---
 # <a name="sessionproperty-transact-sql"></a>SESSIONPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ SESSIONPROPERTY (option)
   
 |Параметр|Описание|  
 |------------|-----------------|  
-|ANSI_NULLS|Позволяет задать поведение по стандарту ISO оператора сравнения «равно» (=) и «не равно» (<>) при использовании со значениями NULL.<br /><br /> 1 = включен;<br /><br /> 0 = выключен.|  
+|ANSI_NULLS|Позволяет задать поведение по стандарту ISO оператора сравнения "равно" (=) и "не равно" (<>) при использовании со значениями NULL.<br /><br /> 1 = включен;<br /><br /> 0 = выключен.|  
 |ANSI_PADDING|Определяет, как в столбце сохраняются более короткие значения, чем заданный размер столбца, а также символьные и двоичные значения с завершающими пробелами.<br /><br /> 1 = включен;<br /><br /> 0 = выключен.|  
 |ANSI_WARNINGS|Определяет, будет ли при возникновении ряда ситуаций, включая деление на нуль и арифметическое переполнение, применяться совместимое со стандартом ISO правило выведения сообщений об ошибках или предупреждений.<br /><br /> 1 = включен;<br /><br /> 0 = выключен.|  
 |ARITHABORT|Определяет, завершен ли запрос, если во время его выполнения возникает ошибка переполнения или деления на нуль.<br /><br /> 1 = включен;<br /><br /> 0 = выключен.|  

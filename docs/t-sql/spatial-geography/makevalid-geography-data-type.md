@@ -12,15 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - MakeValid method (geography)
 ms.assetid: f67038e3-4f62-4465-994e-e95ac27d8ada
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: b97058d2c023d07d0c7375beae6fc1c7fe47e229
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b4d60632de0ccc60d2c07f501334a64d31692fed
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783532"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65937643"
 ---
 # <a name="makevalid-geography-data-type"></a>MakeValid (тип данных geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "47783532"
 ## <a name="return-types"></a>Типы возвращаемых данных  
  Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Тип возвращаемых данных CLR: **SqlGeography**  
+ Тип возвращаемого значения CLR: **SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
  Применение этого метода может изменить тип экземпляра **geography**. Кроме того, оно может привести к небольшому сдвигу точек в экземпляре **geography**. Результаты выполнения некоторых методов, например NumPoint(), могут изменяться.  

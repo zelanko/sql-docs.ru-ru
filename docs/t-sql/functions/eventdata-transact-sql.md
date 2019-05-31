@@ -22,15 +22,15 @@ helpviewer_keywords:
 - status information [SQL Server], events
 - DDL triggers, returning event data
 ms.assetid: 03a80e63-6f37-4b49-bf13-dc35cfe46c44
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0ec1c2d952c334b1ccb394f5abb36ea91d5f1a87
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: aed9a65000724b1b3ac7750fde45dddebbe3682d
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979850"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65946121"
 ---
 # <a name="eventdata-transact-sql"></a>EVENTDATA (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -112,7 +112,7 @@ GO
 ```  
   
 > [!NOTE]  
->  Чтобы получить данные о событии используйте метод XQuery **value()**, а не **query()**. Метод **query()** возвращает XML-данные, содержащие символы возврата каретки и переноса строки (CR/LF), экранированные амперсандом, а метод **value()** не отображает эти символы.  
+>  Чтобы получить данные о событии используйте метод XQuery **value()** , а не **query()** . Метод **query()** возвращает XML-данные, содержащие символы возврата каретки и переноса строки (CR/LF), экранированные амперсандом, а метод **value()** не отображает эти символы.  
   
 ### <a name="b-creating-a-log-table-with-event-data-in-a-ddl-trigger"></a>Б. Создание таблицы журнала с данными о событии в триггере DDL  
 В этом примере для хранения сведений обо всех событиях уровня базы данных создается таблица, которая заполняется триггером DDL. Примените запрос XQuery к XML-данным, сформированным функцией `EVENTDATA`, чтобы получить тип события и инструкцию [!INCLUDE[tsql](../../includes/tsql-md.md)].  

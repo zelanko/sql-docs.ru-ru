@@ -15,16 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - STLineFromWKB (geometry Data Type)
 ms.assetid: e674c8c4-c67f-4fc1-9873-d9c2ed46c659
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: abf2f040a75a014dce3ab85291277171bca6554d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 33ef95759817ac7a6e32907a1afad837282bf7cf
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815142"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938648"
 ---
 # <a name="stlinefromwkb-geometry-data-type"></a>STLineFromWKB (тип данных geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -40,7 +40,7 @@ STLineFromWKB ( 'WKB_linestring' , SRID )
   
 ## <a name="arguments"></a>Аргументы  
  *WKB_linestring*  
- Представление в формате WKB возвращаемого экземпляра **geometryLineString**. *WKB_linestring* — это выражение типа **varbinary(max)**.  
+ Представление в формате WKB возвращаемого экземпляра **geometryLineString**. *WKB_linestring* — это выражение типа **varbinary(max)** .  
   
  *SRID*  
  Выражение типа **int**, представляющее идентификатор пространственной ссылки (SRID) возвращаемого экземпляра **geometryLineString**.  
@@ -48,7 +48,7 @@ STLineFromWKB ( 'WKB_linestring' , SRID )
 ## <a name="return-types"></a>Типы возвращаемых данных  
  Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Тип возвращаемых данных CLR: **SqlGeometry**  
+ Тип возвращаемого значения CLR: **SqlGeometry**  
   
  Тип OGC: **LineString**  
   

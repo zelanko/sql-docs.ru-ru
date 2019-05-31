@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STLength (geometry Data Type)
 ms.assetid: e34dc620-2a65-4248-b099-fff91830ab98
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 309b74e21d131b47e94f4890ace0072f0b85e64e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f48007f8a782731b5a4348a3c9bae470e23588f3
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678123"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938732"
 ---
 # <a name="stlength-geometry-data-type"></a>STLength (тип данных geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,9 +40,9 @@ ms.locfileid: "47678123"
 ## <a name="return-types"></a>Типы возвращаемых данных  
  Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **float**  
   
- Тип возвращаемых данных CLR: **SqlDouble**  
+ Тип возвращаемого значения CLR: **SqlDouble**  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Если экземпляр **geometry** замкнут, его длина вычисляется как общая длина пути обхода экземпляра; длина любого многоугольника есть его периметр, а длина точки — 0. Размер любого типа **geometrycollection** находится путем вычисления суммы размеров всех содержащихся в нем экземпляров **geometry**.  
   
  STLength() работает и с допустимыми и с недопустимыми объектами LineString. Обычно LineString является недопустимым вследствие перекрывающихся сегментов, которые могут быть вызваны аномалиями, например неточными трассировками GPS. STLength() не удаляет перекрывающиеся или недопустимые сегменты. Он включает перекрывающиеся и недопустимые сегменты в возвращаемое значение длины. Метод MakeValid() может удалять перекрывающиеся сегменты из LineString.  

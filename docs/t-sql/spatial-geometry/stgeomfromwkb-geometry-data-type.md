@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STGeomFromWKB (geometry Data Type)
 ms.assetid: 6546ddb0-4a5f-46e5-ba04-8007486c95ec
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 2b5b18e6b28da5d905c5a8cafa4ac766f8c0f8b5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dfd85de28fd8f757c7c8b389fe5e5e5934162751
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716852"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938867"
 ---
 # <a name="stgeomfromwkb-geometry-data-type"></a>STGeomFromWKB (тип данных geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ STGeomFromWKB ( 'WKB_geometry' , SRID )
   
 ## <a name="arguments"></a>Аргументы  
  *WKB_geometry*  
- WKB-представление возвращаемого экземпляра **geometry**. *WKB_geometry* — это выражение типа **varbinary(max)**.  
+ WKB-представление возвращаемого экземпляра **geometry**. *WKB_geometry* — это выражение типа **varbinary(max)** .  
   
  *SRID*  
  Выражение типа **int**, представляющее идентификатор пространственной ссылки (SRID) возвращаемого экземпляра **geometry**.  
@@ -47,7 +47,7 @@ STGeomFromWKB ( 'WKB_geometry' , SRID )
 ## <a name="return-types"></a>Типы возвращаемых данных  
  Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Тип возвращаемых данных CLR: **SqlGeometry**  
+ Тип возвращаемого значения CLR: **SqlGeometry**  
   
 ## <a name="remarks"></a>Remarks  
  Тип OGC экземпляра **geometry**, возвращаемый методом `STGeomFromText()`, получает значение в зависимости от соответствующих входных данных WKB.  

@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - RingN method
 ms.assetid: 30f47275-2727-4d22-bbec-c0c54bcb3ac2
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: b1f115c4a0e9d210c1f668434986d903c65f70b4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 14a29f7bfd5d55a634c5ab8be89a1f5e14dd2ccd
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837382"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65936310"
 ---
 # <a name="ringn-geography-data-type"></a>RingN (тип данных geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47837382"
 ## <a name="return-value"></a>Возвращаемое значение  
  Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Тип возвращаемых данных CLR: **SqlGeography**  
+ Тип возвращаемого значения CLR: **SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
  Если значение индекса кольца **n** меньше 1, этот метод создает исключение **ArgumentOutOfRangeException.** Значение индекса кольца должно быть больше или равно 1 и меньше или равно значению, возвращенному методом `NumRings()`.  

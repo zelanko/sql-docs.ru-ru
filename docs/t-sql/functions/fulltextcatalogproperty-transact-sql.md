@@ -17,15 +17,15 @@ helpviewer_keywords:
 - FULLTEXTCATALOGPROPERTY function
 - status information [SQL Server], full-text catalogs
 ms.assetid: f841dc79-2044-4863-aff0-56b8bb61f250
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e9b590e2a1ba1c3362b86b195c4b1a5fcb7d63bd
-ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
+ms.openlocfilehash: d337e1eb7d67da892d3588d6ffafd28205565b19
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56662798"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948981"
 ---
 # <a name="fulltextcatalogproperty-transact-sql"></a>FULLTEXTCATALOGPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ _property_
 |**AccentSensitivity**|Настройка учета диакритических знаков:<br /><br /> 0 = без учета диакритических знаков;<br /><br /> 1 = с учетом диакритических знаков.|  
 |**IndexSize**|Логический размер полнотекстового каталога в мегабайтах (МБ). Включает размер индексов семантических ключевых фраз и индексов подобия документов.<br /><br /> Дополнительные сведения см. в подразделе «Примечания» далее в этом разделе.|  
 |**ItemCount**|Число проиндексированных элементов, включая все полнотекстовые индексы, индексы ключевых фраз и индексы сходства документов, содержащихся в каталоге|  
-|**LogSize**|Поддерживается только для обеспечения обратной совместимости. Всегда возвращает значение 0.<br /><br /> Размер в байтах связанного набора журналов ошибок, связанных с полнотекстовым каталогом [!INCLUDE[msCoName](../../includes/msconame-md.md)] Search Service.|  
+|**LogSize**|Поддерживается только для обеспечения обратной совместимости. Всегда возвращает 0.<br /><br /> Размер в байтах связанного набора журналов ошибок, связанных с полнотекстовым каталогом [!INCLUDE[msCoName](../../includes/msconame-md.md)] Search Service.|  
 |**MergeStatus**|Указывает, выполняется ли слияние в единый файл.<br /><br /> 0 = слияние в единый файл не выполняется.<br /><br /> 1 = слияние в единый файл выполняется.|  
 |**PopulateCompletionAge**|Разница в секундах между завершением последнего заполнения полнотекстового индекса и 01/01/1990 00:00:00.<br /><br /> Обновляется только для полного и последовательного сканирования. Возвращает значение 0, если заполнение не выполнялось.|  
 |**PopulateStatus**|0 = бездействие<br /><br /> 1 = идет полное заполнение<br /><br /> 2 = пауза<br /><br /> 3 = ограниченный режим<br /><br /> 4 = восстановление<br /><br /> 5 = выключение<br /><br /> 6 = идет добавочное заполнение<br /><br /> 7 = построение индекса<br /><br /> 8 = диск заполнен. приостановлено<br /><br /> 9 = отслеживание изменений.|  

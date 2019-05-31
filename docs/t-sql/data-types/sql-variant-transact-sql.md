@@ -21,12 +21,12 @@ ms.assetid: 01229779-8bc1-4c7d-890a-8246d4899250
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4baff479bdd7145cc2fd65f07fd2c476a20311a5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d809a311458cb1fbd3a92243f5daeabd34ebc99b
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013505"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982069"
 ---
 # <a name="sqlvariant-transact-sql"></a>sql_variant (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -93,7 +93,7 @@ sql_variant
 К сравнениям типов **sql_variant** применяются указанные ниже правила.
 -   При сравнении значений **sql_variant** различных базовых типов данных, находящихся в разных семействах типов данных, большим из двух значений считается то, семейство типа данных которого находится выше в иерархии.  
 -   При сравнении значений **sql_variant** различных базовых типов данных, находящихся в одном семействе типов данных, значение, базовый тип данных которого находится ниже в иерархии, неявно приводится к другому типу данных, после чего производится сравнение.  
--   При сравнении значений **sql_variant** с типами данных **char**, **varchar**, **nchar** или **nvarchar** их параметры сортировки сначала сравниваются на основе следующих критериев: код языка, версия кода языка, флаги сравнения и идентификаторы сортировки. Каждый из этих критериев сравнивается как целочисленное значение в приведенном порядке. Если все эти критерии равны, то сами строковые значения сравниваются в соответствии с параметрами сортировки.  
+-   При сравнении значений **sql_variant** с типами данных **char**, **varchar**, **nchar** или **nvarchar** их параметры сортировки сначала сравниваются на основе следующих критериев: код языка, версия кода языка, флаги сравнения и идентификатор сортировки. Каждый из этих критериев сравнивается как целочисленное значение в приведенном порядке. Если все эти критерии равны, то сами строковые значения сравниваются в соответствии с параметрами сортировки.  
   
 ## <a name="converting-sqlvariant-data"></a>Преобразование данных типа sql_variant  
 При обработке типа **sql_variant** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает неявное преобразование объектов других типов данных в тип **sql_variant**. Однако [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не поддерживает неявные преобразования типа **sql_variant** в объекты с другим типом данных.
@@ -109,7 +109,9 @@ sql_variant
 |**image**|**rowversion** (**timestamp**)|  
 |**sql_variant**|**geography**|  
 |**hierarchyid**|**geometry**|  
-|Определяемые пользователем типы|**datetimeoffset**|  
+|Определяемые пользователем типы|**datetimeoffset**<sup>1</sup>| 
+
+<sup>1</sup> SQL Server 2012 и более поздней версии не ограничивает **datetimeoffset**.
 
 ## <a name="examples"></a>Примеры  
 

@@ -20,15 +20,15 @@ helpviewer_keywords:
 - rewinding backup devices
 - RESTORE REWINDONLY statement
 ms.assetid: 7f825b40-2264-4608-9809-590d0f09d882
-author: mashamsft
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: df4a8ef1624d1f4244d96192bf4cb8486c92dd3d
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: ffcb2612d84a7cd29044062ab264d6b40e3dfd64
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242217"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65943703"
 ---
 # <a name="restore-statements---rewindonly-transact-sql"></a>Инструкции RESTORE — REWINDONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,11 +61,11 @@ FROM <backup_device> [ ,...n ]
   
  Логическое или физическое устройство резервного копирования.  
   
- { *logical_backup_device_name* | **@**_logical\_backup\_device\_name\_var_ }  
- Логическое имя устройства резервного копирования, из которого восстанавливается база данных. Это имя создается с помощью процедуры **sp_addumpdevice** и должно соответствовать правилам наименования идентификаторов. Если аргумент задается в виде переменной (**@**_logical\_backup\_device\_name\_var_), имя устройства резервного копирования можно указать как строковую константу (**@**_logical\_backup\_device\_name\_var_ = _logical\_backup\_device\_name_) или как переменную любого строкового типа данных, за исключением типов данных **ntext** или **text**.  
+ { *logical_backup_device_name* |  **@** _logical\_backup\_device\_name\_var_ }  
+ Логическое имя устройства резервного копирования, из которого восстанавливается база данных. Это имя создается с помощью процедуры **sp_addumpdevice** и должно соответствовать правилам наименования идентификаторов. Если аргумент задается в виде переменной ( **@** _logical\_backup\_device\_name\_var_), имя устройства резервного копирования можно указать как строковую константу ( **@** _logical\_backup\_device\_name\_var_ = _logical\_backup\_device\_name_) или как переменную любого строкового типа данных, за исключением типов данных **ntext** или **text**.  
   
- {DISK | TAPE } **=** { **'**_physical\_backup\_device\_name_**'** | **@**_physical\_backup\_device\_name\_var_ }  
- Разрешает сохранение резервных копий с названного диска или ленточного устройства хранения данных. Типы дисковых и магнитных устройств должны быть заданы с реальным именем устройства (например полный путь и имя файла): DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL\BACKUP\Mybackup.bak' or TAPE = '\\\\.\TAPE0'. Если аргумент задается в виде переменной (**@**_physical\_backup\_device\_name\_var_), имя устройства можно указать как строковую константу (**@**_physical\_backup\_device\_name\_var_ = '*physical_backup_device_name*') или как другую переменную строкового типа данных, за исключением типов данных **ntext** или **text**.  
+ {DISK | TAPE } **=** { **'** _physical\_backup\_device\_name_ **'**  |  **@** _physical\_backup\_device\_name\_var_ }  
+ Разрешает сохранение резервных копий с названного диска или ленточного устройства хранения данных. Для дисковых и ленточных устройств нужно указать фактическое имя устройства (например, полный путь и имя файла): DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL\BACKUP\Mybackup.bak' or TAPE = '\\\\.\TAPE0'. Если аргумент задается в виде переменной ( **@** _physical\_backup\_device\_name\_var_), имя устройства можно указать как строковую константу ( **@** _physical\_backup\_device\_name\_var_ = '*physical_backup_device_name*') или как другую переменную строкового типа данных, за исключением типов данных **ntext** или **text**.  
   
  Укажите тип дискового устройства с помощью сетевого сервера с именем UNC (которое должно содержать имя компьютера). Дополнительные сведения об именах UNC см. в разделе [Устройства резервного копирования (SQL Server)](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   

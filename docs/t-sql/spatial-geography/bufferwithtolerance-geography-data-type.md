@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - BefferWithTolerance method
 ms.assetid: f1783e6b-0f17-464f-b1c7-1c3f7d8aa042
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 9d82d7a24c032be93ebdd4d9cef1239f3d1b511b
-ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
+ms.openlocfilehash: 2e3208d3a70c0970e34e84723c5a95e85c55e859
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56662718"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65937274"
 ---
 # <a name="bufferwithtolerance-geography-data-type"></a>BufferWithTolerance (тип данных geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ _relative_
 ## <a name="return-types"></a>Типы возвращаемых данных  
 Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
-Возвращаемый тип CLR: **SqlGeography**  
+Тип возвращаемого значения CLR: **SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
 Этот метод выдает исключение **ArgumentException**, если _distance_ не является числом (NAN) или если _distance_ равно плюс/минус бесконечности.  Этот метод также выдает исключение **ArgumentException**, если _tolerance_ равно нулю (0), не является числом (NAN), отрицательное число или равно плюс/минус бесконечности.  

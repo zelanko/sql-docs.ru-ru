@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STOverlaps (geometry Data Type)
 ms.assetid: 1813cba1-5780-456a-9489-6b40a79569b3
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 933678972b7680955eac826caba6e8dedd2095e6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fcd5789d84a37a6de9f42048f5eaea59be0a3315
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670650"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938443"
 ---
 # <a name="stoverlaps-geometry-data-type"></a>STOverlaps (тип данных geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47670650"
 ## <a name="return-types"></a>Типы возвращаемых данных  
  Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
- Тип возвращаемых данных CLR: **SqlBoolean**  
+ Тип возвращаемого значения CLR: **SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
  Два экземпляра **geometry** перекрываются, если область, представляющая их пересечение, имеет ту же размерность, что и экземпляры, а область не равна ни одному из экземпляров.  

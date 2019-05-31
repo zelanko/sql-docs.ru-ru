@@ -18,16 +18,16 @@ helpviewer_keywords:
 - simple expressions [SQL Server]
 - complex expressions [SQL Server]
 ms.assetid: ee53c5c8-e36c-40f9-8cd1-d933791b98fa
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 55e3dda77a2b623ef50fe64ad82824b84a934f44
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 241da55ac2e4a0f0bf144bd0360767265f3258fd
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124104"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982330"
 ---
 # <a name="expressions-transact-sql"></a>Выражения (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -86,7 +86,7 @@ ms.locfileid: "54124104"
 |----------|----------------|  
 |*constant*|Символ, представляющий одно конкретное значение данных. Дополнительные сведения см. в статье [Константы (Transact-SQL)](../../t-sql/data-types/constants-transact-sql.md).|  
 |*scalar_function*|Единица синтаксиса [!INCLUDE[tsql](../../includes/tsql-md.md)], который предоставляет определенную службу и возвращает одиночное значение. *scalar_function* может быть встроенной скалярной функцией, такой как SUM, GETDATE или CAST, либо определяемыми пользователем скалярными функциями.|  
-|[ _table_name_**.** ]|Имя или псевдоним таблицы.|  
+|[ _table_name_ **.** ]|Имя или псевдоним таблицы.|  
 |*column*|Имя столбца. Только имя столбца используется в выражении.|  
 |*variable*|Имя переменной или параметр. Дополнительные сведения см. в статье [DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md).|  
 |**(** _expression_  **)**|Любое допустимое выражение из определенных в этом разделе. Скобки являются операторами группировки, гарантирующими, что все операторы выражения внутри скобок будут выполнены, прежде чем результирующее выражение будет объединено с другим.|  

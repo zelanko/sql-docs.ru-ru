@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STPointOnSurface (geometry Data Type)
 ms.assetid: 23b2b8eb-4176-49fb-ace0-92398928d60e
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: cb68991bddc792fa487a9c5ad380d9b029b6186a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 116b321fd2be08cf1a432507f53f2a50da21e45a
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47823672"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938317"
 ---
 # <a name="stpointonsurface-geometry-data-type"></a>STPointOnSurface (тип данных geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,9 +40,9 @@ ms.locfileid: "47823672"
 ## <a name="return-types"></a>Типы возвращаемых данных  
  Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Тип возвращаемых данных CLR: **SqlGeometry**  
+ Тип возвращаемого значения CLR: **SqlGeometry**  
   
- Тип открытого геопространственного консорциума (OGC): **Point**  
+ Тип OGC (открытый геопространственный консорциум): **Point**  
   
 ## <a name="remarks"></a>Remarks  
  Этот метод возвращает значение NULL, если экземпляр пуст.  

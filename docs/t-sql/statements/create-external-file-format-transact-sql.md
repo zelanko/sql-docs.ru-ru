@@ -21,12 +21,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f9759e2d623e2d9eca94ba7b5d17b7990c96366b
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 4018857b93a828e5ed756a80ba23f425a26790c8
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58161650"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175026"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -244,7 +244,7 @@ PolyBase использует пользовательский формат да
  Сохраните все отсутствующие значения как NULL. Любые значения NULL, сохраненные с использованием слова NULL в текстовом файле с разделителями, импортируются в качестве строки NULL.
   
    Encoding = {'UTF8' | 'UTF16'}  
- В хранилище данных SQL Azure PolyBase может читать текстовые файлы с разделителями в кодировке UTF8 или UTF16-LE. В SQL Server и PDW PolyBase не поддерживает чтение файлов в кодировке UTF16.
+ В Хранилище данных SQL Azure и PDW (APS CU7.4) PolyBase может читать текстовые файлы с разделителями в кодировке UTF8 и UTF16-LE. В SQL Server PolyBase не поддерживает чтение файлов в кодировке UTF16.
   
  DATA_COMPRESSION = *data_compression_method*  
  Задает метод сжатия данных для внешних данных. Если параметр DATA_COMPRESSION не задан, по умолчанию используются несжатые данные.

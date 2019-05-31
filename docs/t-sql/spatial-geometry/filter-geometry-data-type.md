@@ -16,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - Filter method
 ms.assetid: 3d629a39-157e-4159-a3ca-a3c2e0ed4160
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: b38318d9ca38f5774f15cdac66b9407f2ce4a968
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 24b145ec8bda61645521fcf69e6a40bba1659e54
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832611"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938068"
 ---
 # <a name="filter-geometry-data-type"></a>Filter (тип данных geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47832611"
   
 Возвращает значение 1, если экземпляр **geometry** потенциально пересекается с другим экземпляром **geometry**. В результате этого метода может появиться ложный положительный результат, а точный результат может зависеть от плана. Возвращает точное значение 0 (истинный отрицательный результат), если пересечение экземпляров **geometry** не обнаружено.
   
-Если индекс недоступен или не используется, этот метод возвращает те же значения, что и метод **STIntersects()**, при вызове с одинаковыми параметрами.
+Если индекс недоступен или не используется, этот метод возвращает те же значения, что и метод **STIntersects()** , при вызове с одинаковыми параметрами.
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -49,7 +49,7 @@ ms.locfileid: "47832611"
 ## <a name="return-types"></a>Типы возвращаемых данных  
  Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
- Тип возвращаемых данных CLR: **SqlBoolean**  
+ Тип возвращаемого значения CLR: **SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
  Этот метод не является детерминированным или точным.  

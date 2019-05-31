@@ -14,15 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - ToString method
 ms.assetid: 045c12fa-8fc6-441a-9500-7021cb4ff13e
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 4c02e0b4e92ad8b8811ff05607b06aaf239eb676
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 92ffac8a5ff50302378a66d78e362b27ee3b8da6
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773972"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65939199"
 ---
 # <a name="tostring-geography-data-type"></a>ToString (тип данных geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "47773972"
 ## <a name="return-types"></a>Типы возвращаемых данных  
  Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **nvarchar(max)**  
   
- Тип возвращаемых данных CLR: **SqlString**  
+ Тип возвращаемого значения CLR: **SqlString**  
   
 ## <a name="remarks"></a>Remarks  
  Метод возвращает строку NULL при вызове на экземплярах NULL. В [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] набор возможных результатов на сервере был пополнен экземплярами **FullGlobe**. Этот метод возвратит такое же значение, что и функция `AsTextZM()`.  

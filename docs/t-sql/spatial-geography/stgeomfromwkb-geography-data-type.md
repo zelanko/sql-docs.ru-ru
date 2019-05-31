@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STGeomFromWKB method
 ms.assetid: 79d39d88-5440-49a7-9247-190eafce3f4f
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 71ad47204df46702f63de27d0f30ad6978023073
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d0ca85d39df85fc48a9aad779414db1dcc1b4de6
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676412"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65936910"
 ---
 # <a name="stgeomfromwkb-geography-data-type"></a>STGeomFromWKB (географический тип данных)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ STGeomFromWKB ( 'WKB_geography' , SRID )
   
 ## <a name="arguments"></a>Аргументы  
  *WKB_geography*  
- WKB-представление возвращаемого экземпляра **geography**. *WKB_geography* — это выражение типа **varbinary(max)**.  
+ WKB-представление возвращаемого экземпляра **geography**. *WKB_geography* — это выражение типа **varbinary(max)** .  
   
  *SRID*  
  Выражение типа **int**, представляющее идентификатор пространственной ссылки (SRID) возвращаемого экземпляра **geography**.  
@@ -49,7 +49,7 @@ STGeomFromWKB ( 'WKB_geography' , SRID )
 ## <a name="return-types"></a>Типы возвращаемых данных  
  Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Тип возвращаемых данных CLR: **SqlGeography**  
+ Тип возвращаемого значения CLR: **SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
  Тип OGC экземпляра **geography**, возвращаемого методом `STGeomFromText()`, задается в зависимости от соответствующих входных данных WKB.  

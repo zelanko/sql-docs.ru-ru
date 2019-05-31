@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STDifference (geometry Data Type)
 ms.assetid: 737f39bb-8750-4ffb-8594-23febc2f1075
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 61ec54be92e833efc133a75f8ad3d83a69b30e51
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f817c09333e895650760441f14d7967d0db120df
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796102"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65939000"
 ---
 # <a name="stdifference-geometry-data-type"></a>STDifference (тип данных geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47796102"
 ## <a name="return-types"></a>Типы возвращаемых данных  
  Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Тип возвращаемых данных CLR: **SqlGeometry**  
+ Тип возвращаемого значения CLR: **SqlGeometry**  
   
 ## <a name="remarks"></a>Remarks  
  Этот метод всегда возвращает значение NULL, если у экземпляров **geometry** не совпадают идентификаторы пространственных ссылок (SRID).   Результат может содержать сегменты дуги, только если во входном экземпляре содержатся сегменты дуги.  

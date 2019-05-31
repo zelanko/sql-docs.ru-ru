@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - Reduce method
 ms.assetid: c5dfa8c1-6764-41d8-9150-f3cb30633d3e
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 4862760d8061ad21ac12ad2e2968b5bfde5ad706
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b89d42d050c32f10bac8c8796a4bfa4dd9355ba0
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612852"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65935794"
 ---
 # <a name="reduce-geography-data-type-"></a>Reduce (тип данных geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "47612852"
 ## <a name="return-types"></a>Типы возвращаемых данных  
  Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Тип возвращаемых данных CLR: **SqlGeography**  
+ Тип возвращаемого значения CLR: **SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
  Для типов коллекции этот алгоритм работает независимо для каждого экземпляра **geography**, содержащегося в экземпляре. Этот алгоритм не изменяет экземпляры **Point**.  

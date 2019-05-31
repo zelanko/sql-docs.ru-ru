@@ -20,15 +20,15 @@ helpviewer_keywords:
 - testing permissions
 - HAS_PERMS_BY_NAME function
 ms.assetid: eaf8cc82-1047-4144-9e77-0e1095df6143
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 0227ad3719b7b3ca02fa8595ed8cccf6ff8705f6
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: e1bc60e0d3f171e57eeb202c022378b4b7f7bde1
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169214"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65947955"
 ---
 # <a name="haspermsbyname-transact-sql"></a>HAS_PERMS_BY_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,9 +50,9 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
  Имя защищаемого объекта. Если защищаемым объектом является сам сервер или база данных, этому аргументу должно быть присвоено значение NULL. Аргумент *securable* является скалярным выражением типа **sysname**. Значение по умолчанию отсутствует.  
   
  *securable_class*  
- Имя класса защищаемого объекта, для которого проверяется разрешение. Аргумент *securable_class* является скалярным выражением типа **nvarchar(60)**.  
+ Имя класса защищаемого объекта, для которого проверяется разрешение. Аргумент *securable_class* является скалярным выражением типа **nvarchar(60)** .  
   
- В [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] аргумент securable_class должен быть установлен в одно из следующих значений: **DATABASE**, **OBJECT**, **ROLE**, **SCHEMA** или **USER**.  
+ В [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] для аргумента securable_class должно быть задано одно из следующих значений: **DATABASE**, **OBJECT**, **ROLE**, **SCHEMA** или **USER**.  
   
  *permission*  
  Скалярное выражение типа **sysname**, отличное от NULL, представляющее проверяемое разрешение. Значение по умолчанию отсутствует. Имя разрешения ANY является шаблоном для подстановки.  
@@ -61,10 +61,10 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
  Необязательное скалярное выражение типа **sysname**, представляющее имя защищаемой вложенной сущности, у которой проверяется разрешение. Значение по умолчанию — NULL.  
   
 > [!NOTE]  
->  В версиях от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] во вложенных защищаемых объектах не могут использоваться скобки в форме **'[**_вложенное имя_**]'**. Используйте вместо этого форму **'**_вложенное имя_**'**.  
+>  В версиях от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] во вложенных защищаемых объектах не могут использоваться скобки в форме **'[** _вложенное имя_ **]'** . Используйте вместо этого форму **'** _вложенное имя_ **'** .  
   
  *sub-securable_class*  
- Необязательное скалярное выражение типа **nvarchar(60)**, представляющее класс защищаемой вложенной сущности, для которой проверяется разрешение. Значение по умолчанию — NULL.  
+ Необязательное скалярное выражение типа **nvarchar(60)** , представляющее класс защищаемой вложенной сущности, для которой проверяется разрешение. Значение по умолчанию — NULL.  
   
  В [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] аргумент sub-securable_class является допустимым, только если аргумент securable_class имеет значение **OBJECT**. Если аргумент securable_class задан равным **OBJECT**, то аргумент sub-securable_class должен быть задан равным **COLUMN**.  
   
@@ -96,9 +96,9 @@ SELECT class_desc FROM sys.fn_builtin_permissions(default);
   
  Используются следующие параметры сортировки.  
   
--   Параметры сортировки текущей базы данных: защищаемые объекты на уровне базы данных, куда относятся защищаемые объекты, не входящие в схему; одно- или двухкомпонентные защищаемые объекты схемы; целевая база данных (если используется трехкомпонентное имя).  
+-   Параметры сортировки текущей базы данных. Защищаемые объекты на уровне базы данных, к которым относятся защищаемые объекты, не входящие в схему; одно- или двухчастные защищаемые объекты схемы, а также целевая база данных (если используется трехкомпонентное имя).  
   
--   Параметры сортировки базы данных master: защищаемые объекты на уровне сервера.  
+-   Параметры сортировки базы данных master. Защищаемые объекты на уровне сервера.  
   
 -   ANY не поддерживается в проверке уровня столбца. Необходимо указать соответствующие разрешения.  
   
@@ -185,6 +185,6 @@ SELECT name AS column_name,
  [Securables](../../relational-databases/security/securables.md)   
  [Иерархия разрешений (ядро СУБД)](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
  [sys.fn_builtin_permissions (Transact-SQL)](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
- [Представления каталога безопасности &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)  
+ [Представления каталога безопасности (Transact-SQL)](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)  
   
   

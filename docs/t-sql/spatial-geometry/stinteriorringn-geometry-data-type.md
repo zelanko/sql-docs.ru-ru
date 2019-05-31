@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STInteriorRingN (geometry Data Type)
 ms.assetid: 47310f9f-2cdb-41e0-a6da-7c3cfbf139ac
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: c1e78bb2f5959045dd47f32bb91d057a09fa8f0d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8e6908f612018978e234dd50074ae8eaf1998ed5
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741142"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938884"
 ---
 # <a name="stinteriorringn-geometry-data-type"></a>STInteriorRingN (тип данных geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,9 +44,9 @@ ms.locfileid: "47741142"
 ## <a name="return-types"></a>Типы возвращаемых данных  
  Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Тип возвращаемых данных CLR: **SqlGeometry**  
+ Тип возвращаемого значения CLR: **SqlGeometry**  
   
- Тип открытого геопространственного консорциума (OGC): **LineString**  
+ Тип OGC (открытый геопространственный консорциум): **LineString**  
   
 ## <a name="remarks"></a>Remarks  
  Этот метод возвращает значение **NULL**, если экземпляр **geometry** не является многоугольником. Этот метод также вызывает исключение **ArgumentOutOfRangeException**, если значение выражения больше количества колец. Количество колец можно получить с помощью метода `STNumInteriorRing``()`.  

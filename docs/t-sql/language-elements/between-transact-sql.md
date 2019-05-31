@@ -20,16 +20,16 @@ helpviewer_keywords:
 - BETWEEN operator
 - range to test [SQL Server]
 ms.assetid: a5d5b050-203e-4355-ac85-e08ef5ca7823
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6e384d2835bcb28487757384543298d5a20144cf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6ff89056c2e96a815312314e84b5118b7b48726f
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47768482"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65980081"
 ---
 # <a name="between-transact-sql"></a>Оператор BETWEEN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -69,7 +69,7 @@ test_expression [ NOT ] BETWEEN begin_expression AND end_expression
  Оператор NOT BETWEEN возвращает значение **TRUE**, если значение аргумента *test_expression* меньше значения аргумента *begin_expression* или больше значения аргумента *end_expression*.  
   
 ## <a name="remarks"></a>Remarks  
- Для задания исключающего диапазона используйте операторы «больше» (>) и «меньше» (<). Если любой параметр предиката BETWEEN или NOT BETWEEN имеет значение NULL, результат не определен (UNKNOWN).  
+ Для задания исключающего диапазона используйте операторы "больше" (>) и "меньше" (<). Если любой параметр предиката BETWEEN или NOT BETWEEN имеет значение NULL, результат не определен (UNKNOWN).  
   
 ## <a name="examples"></a>Примеры  
   

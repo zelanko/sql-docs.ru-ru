@@ -26,12 +26,12 @@ ms.assetid: 7033aac9-a944-4156-9ff4-6ef65717a28b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f734607cffa14f9714a7c165add067600cfa3447
-ms.sourcegitcommit: 5ef24b3229b4659ede891b0af2125ef22bd94b96
+ms.openlocfilehash: f530f609c4c5ebc83d74d2e8ea376efe978dea89
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55760127"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65983086"
 ---
 # <a name="set-statistics-io-transact-sql"></a>SET STATISTICS IO (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,15 +61,15 @@ SET STATISTICS IO { ON | OFF }
 |**логические операции чтения**|Число страниц, считанных из кэша данных.|  
 |**физические операции чтения**|Число страниц, считанных с диска.|  
 |**операции упреждающего чтения**|Число страниц, помещенных в кэш для запроса.|  
-|**lob логических чтений**|Число страниц типа **text**, **ntext**, **image** или с большими значениями (**varchar(max)**, **nvarchar(max)**, **varbinary(max)**), считанных из кэша данных.|  
-|**физические операции чтения lob**|Число считанных с диска страниц с данными типа **text**, **ntext**, **image** или типами больших значений.|  
-|**lob упреждающих чтений**|Число страниц, помещенных в кэш для запроса, с данными типа **text**, **ntext**, **image** или типами больших значений.|  
-  
- Параметр настройки SET STATISTICS IO устанавливается во время запуска или выполнения, но не во время синтаксического анализа.  
-  
+|**lob логических чтений**|Число страниц, считанных из кэша данных. Включает **text**, **ntext**, **image**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** или страницы индекса columnstore.|  
+|**физические операции чтения lob**|Число страниц, считанных с диска. Включает **text**, **ntext**, **image**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** или страницы индекса columnstore.|  
+|**lob упреждающих чтений**|Число страниц, помещенных в кэш для запроса. Включает **text**, **ntext**, **image**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** или страницы индекса columnstore.|
+
+ Параметр настройки SET STATISTICS IO устанавливается во время запуска или выполнения, но не во время синтаксического анализа.
+
 > [!NOTE]  
->  При получении столбцов больших объектов (LOB) инструкциями языка Transact-SQL для некоторых операций получения может потребоваться многократный обход дерева LOB. При этом инструкция SET STATISTICS IO может выдавать значения логических считываний выше ожидаемых.  
-  
+> При получении столбцов больших объектов (LOB) инструкциями языка Transact-SQL для некоторых операций получения может потребоваться многократный обход дерева LOB. При этом инструкция SET STATISTICS IO может выдавать значения логических считываний выше ожидаемых.
+
 ## <a name="permissions"></a>Разрешения  
  Для использования инструкции SET STATISTICS IO пользователи должны обладать соответствующими разрешениями на выполнение инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)]. Разрешение SHOWPLAN не требуется.  
   

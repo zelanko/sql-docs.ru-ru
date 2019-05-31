@@ -12,16 +12,16 @@ helpviewer_keywords:
 - planar spatial data [SQL Server], geometry data type
 - spatial data types [SQL Server]
 ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9fea754e936831833fd81ff9a50079c31b5938f6
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 57d0a1467495dc20c0508adbba6f44a6164193da
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979610"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65939218"
 ---
 # <a name="spatial-data-types-overview"></a>Основные сведения о типах пространственных данных
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "53979610"
 
 ![geom_hierarchy](../../relational-databases/spatial/media/geom-hierarchy.gif) 
 
-Как показано на рисунке, десятью материализуемыми типами **geometry** и **geography** являются **Point**, **MultiPoint**, **LineString**, **CircularString**, **MultiLineString**, **CompoundCurve**, **Polygon**, **CurvePolygon**, **MultiPolygon**и **GeometryCollection**. Есть один дополнительный материализуемый тип для типа данных geography: **FullGlobe**. Типы данных **geometry** и **geography** могут распознавать определенный экземпляр, если он имеет правильный формат, даже в том случае, если он не был определен явно. Например, если определить экземпляр **Point** явно с помощью метода STPointFromText(), то типы данных **geometry** и **geography** будут распознавать экземпляр как **Point**, если входные данные метода имели правильный формат. Если определить такой же экземпляр с помощью метода `STGeomFromText()` , то оба типа данных **geometry** и **geography** будут распознавать экземпляр как **Point**.  
+Как показано на рисунке, десятью материализуемыми типами **geometry** и **geography** являются **Point**, **MultiPoint**, **LineString**, **CircularString**, **MultiLineString**, **CompoundCurve**, **Polygon**, **CurvePolygon**, **MultiPolygon**и **GeometryCollection**. Есть один дополнительный тип, допускающий создание экземпляров, для типа данных geography: **FullGlobe**. Типы данных **geometry** и **geography** могут распознавать определенный экземпляр, если он имеет правильный формат, даже в том случае, если он не был определен явно. Например, если определить экземпляр **Point** явно с помощью метода STPointFromText(), то типы данных **geometry** и **geography** будут распознавать экземпляр как **Point**, если входные данные метода имели правильный формат. Если определить такой же экземпляр с помощью метода `STGeomFromText()` , то оба типа данных **geometry** и **geography** будут распознавать экземпляр как **Point**.  
 
 Подтипы для типов geometry и geography делятся на простые типы и типы-коллекции.  Некоторые методы, например `STNumCurves()` , работают только с простыми типами.  
 
@@ -88,7 +88,7 @@ ms.locfileid: "53979610"
 -   [Спецификации OGC, простой доступ к функциям, часть 2 — параметры SQL](https://go.microsoft.com/fwlink/?LinkId=93628)  
 
 ##  <a name="circular"></a> Сегменты дуги  
-Три материализуемых типа могут принимать сегменты дуги: **CircularString**, **CompoundCurve** и **CurvePolygon**.  Сегмент дуги определяется тремя точками на двумерной плоскости, при этом третья точка не может совпадать с первой.  
+Три допускающих создание экземпляров типа могут принимать сегменты дуги: **CircularString**, **CompoundCurve** и **CurvePolygon**.  Сегмент дуги определяется тремя точками на двумерной плоскости, при этом третья точка не может совпадать с первой.  
 
 Фигуры A и B являются типичными сегментами дуги. Обратите внимание, что каждая из трех точек лежит на периметре круга.  
 

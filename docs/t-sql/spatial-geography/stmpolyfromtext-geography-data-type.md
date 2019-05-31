@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STMPolyFromText method
 ms.assetid: 15356c0f-5144-418d-aa96-3e7ea5fecea3
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: fa121faac168a2d3729145eb9b87d5e4e4416fa2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 318f58fb2bde2d60c1937191a54fec49caabf4c6
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845082"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65936570"
 ---
 # <a name="stmpolyfromtext-geography-data-type"></a>STMPolyFromText (географический тип данных)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ STMPolyFromText ( 'multipolygon_tagged_text' , SRID )
   
 ## <a name="arguments"></a>Аргументы  
  *multipolygon_tagged_text*  
- Представление в формате WKT возвращаемого экземпляра **geographyMultiPolygon**. *multipolygon_tagged_text* является выражением типа **nvarchar(max)**.  
+ Представление в формате WKT возвращаемого экземпляра **geographyMultiPolygon**. *multipolygon_tagged_text* является выражением типа **nvarchar(max)** .  
   
  *SRID*  
  Выражение типа **int**, представляющее идентификатор пространственной ссылки (SRID) возвращаемого экземпляра **geographyMultiPolygon**.  
@@ -47,7 +47,7 @@ STMPolyFromText ( 'multipolygon_tagged_text' , SRID )
 ## <a name="return-types"></a>Типы возвращаемых данных  
  Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Тип возвращаемых данных CLR: **Sql Geography**  
+ Тип возвращаемого значения CLR: **Sql Geography**  
   
  Тип OGC: **MultiPolygon**  
   

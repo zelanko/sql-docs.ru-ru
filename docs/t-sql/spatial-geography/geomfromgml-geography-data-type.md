@@ -16,22 +16,22 @@ helpviewer_keywords:
 - GeomFromGML (geography Data Type)
 - GeomFromGML method
 ms.assetid: 470d0997-3cb0-4d34-9a45-b332fe432b14
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: e38185e537747c951ad7fb236a3b06837240617a
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 1d5542501325fb84b31c0133aaa04aa0097c077b
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698389"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65937831"
 ---
 # <a name="geomfromgml-geography-data-type"></a>GeomFromGML (тип данных geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Создает экземпляр **geography** по заданному представлению в используемом в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подмножестве языка GML.
   
-Дополнительные сведения о языке GML см. в следующих документах открытого геопространственного консорциума (OGC): [Спецификации OGC, язык GML](https://go.microsoft.com/fwlink/?LinkId=93629)
+Дополнительные сведения о языке GML см. в следующей спецификации консорциума OGC: [Спецификации OGC, язык GML](https://go.microsoft.com/fwlink/?LinkId=93629)
   
 Этот метод типа данных **geography** поддерживает экземпляры **FullGlobe** или пространственные экземпляры, размер которых больше полушария.
   
@@ -52,7 +52,7 @@ GeomFromGml ( GML_input, SRID )
 ## <a name="return-types"></a>Типы возвращаемых данных  
  Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
- Тип возвращаемых данных CLR: **SqlGeography**  
+ Тип возвращаемого значения CLR: **SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
  Если входные данные имеют неверный формат, метод вызовет исключение **FormatException**.  

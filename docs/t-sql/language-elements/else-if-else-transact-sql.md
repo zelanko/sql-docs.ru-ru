@@ -17,16 +17,16 @@ helpviewer_keywords:
 - ELSE keyword
 - IF keyword
 ms.assetid: 6f2b4278-0dea-4603-bbd3-7cbad602a645
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3d6e241d73040a30fcca5de3114110089259ab8b
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 63d64ba7c5f762ee39bf0dec3abf099f1ec8690e
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801728"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982425"
 ---
 # <a name="else-ifelse-transact-sql"></a>ELSE (IF...ELSE) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -137,7 +137,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="e-using-a-query-as-part-of-a-boolean-expression"></a>E. Использование запроса как части логического выражения  
+### <a name="e-using-a-query-as-part-of-a-boolean-expression"></a>Д. Использование запроса как части логического выражения  
  В следующем примере используется `IF...ELSE` для определения того, какой из двух ответов показать пользователю, на основе веса элемента в таблице `DimProduct`.  
   
 ```  

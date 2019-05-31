@@ -12,15 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - STCurveToLine method (geometry)
 ms.assetid: abc80b32-4152-4e10-b816-798b901e0ac5
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: d657869e71b93d5cb5d915ab15b2751c88e6eacf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b60bdcb684fdb79fa15febb71d88def7573e04cd
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689422"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65939034"
 ---
 # <a name="stcurvetoline-geometry-data-type"></a>STCurveToLine (тип данных geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47689422"
 ## <a name="return-types"></a>Типы возвращаемых данных  
  Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
- Тип возвращаемых данных CLR: **SqlGeometry**  
+ Тип возвращаемого значения CLR: **SqlGeometry**  
   
 ## <a name="remarks"></a>Remarks  
  Возвращает пустой экземпляр **GeometryCollection** для пустых переменных экземпляра **geometry** и возвращает значение **NULL** для неинициализированных переменных **geometry**.  

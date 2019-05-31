@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - HasZ geography
 ms.assetid: 4c5e1669-a987-4dda-9ebf-f573ce615c34
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 54d74f96eee99b7c05ab9d26bf9733d4b457bbc5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8d4a1365424adcf8601fdccb6cd59dc5d94b7f2f
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625114"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65937733"
 ---
 # <a name="hasz-geography-data-type"></a>HasZ (тип данных geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -40,9 +40,9 @@ ms.locfileid: "47625114"
 ## <a name="return-types"></a>Типы возвращаемых данных  
  Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
- Тип возвращаемых данных CLR: **Boolean**  
+ Тип возвращаемого значения CLR: **Boolean**  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="examples"></a>Примеры  
   
