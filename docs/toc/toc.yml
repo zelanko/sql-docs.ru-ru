@@ -2473,7 +2473,7 @@
               href: ../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md
             - name: Определяемые пользователем типы
               href: ../relational-databases/native-client/features/using-user-defined-types.md
-            - name: 'Типы данных XML '
+            - name: Типы данных XML
               href: ../relational-databases/native-client/features/using-xml-data-types.md
             - name: Поддержка UTF-16 в собственном клиенте SQL Server версии 11.0
               href: ../relational-databases/native-client/features/utf-16-support-in-sql-server-native-client-11-0.md
@@ -12565,7 +12565,7 @@
               href: ../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md
             - name: sys.dm_continuous_copy_status (база данных SQL Azure)
               href: ../relational-databases/system-dynamic-management-views/sys-dm-continuous-copy-status-azure-sql-database.md
-        - name: 'Индекс '
+        - name: Индекс
           href: ../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md
           items:
             - name: sys.dm_column_store_object_pool
