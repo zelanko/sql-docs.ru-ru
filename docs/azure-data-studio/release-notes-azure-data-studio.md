@@ -11,18 +11,18 @@ manager: craigg
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 05/08/2019
-ms.openlocfilehash: ee445dcf1a427adc23c38c40430965712c52d4e9
-ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
+ms.openlocfilehash: d3451fcc6ca506e038ab614183007aad81880231
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65450024"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454734"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Заметки о выпуске для Azure Data Studio
 
 **[Скачайте и установите последний выпуск!](download.md)**
 
-## <a name="may-2019"></a>Мая 2019 г.
+## <a name="may-2019"></a>Май 2019 г.
 
 8 мая 2019 &nbsp;  /  &nbsp; версии: 1.7.0 
 
@@ -101,7 +101,7 @@ ms.locfileid: "65450024"
 
 | Изменить | Сведения |
 | :----- | :------ |
-| Добавлен **пакет администрирования для SQL Server** пакет расширений. | Это упрощает для установки SQL Server связанных расширений. В том числе:<br/>&bull; &nbsp; [Агент SQL Server](sql-server-agent-extension.md?view=sql-server-2017)<br/>&bull; &nbsp; [SQL Server Profiler](https://docs.microsoft.com/sql/azure-data-studio/sql-server-profiler-extension.md?view=sql-server-2017)<br/>&bull; &nbsp; [Импорта SQL Server](sql-server-import-extension.md?view=sql-server-2017) |
+| Добавлен **пакет администрирования для SQL Server** пакет расширений. | Это упрощает для установки SQL Server связанных расширений. В том числе:<br/>&bull; &nbsp; [Агент SQL Server](sql-server-agent-extension.md?view=sql-server-2017)<br/>&bull; &nbsp; [SQL Server Profiler](https://docs.microsoft.com/sql/azure-data-studio/sql-server-profiler-extension)<br/>&bull; &nbsp; [Импорта SQL Server](sql-server-import-extension.md?view=sql-server-2017) |
 | Добавлена фильтрация расширенных событий в расширении Profiler. | &nbsp; |
 | Added Сохранить как XML-компонент, который можно сохранить результаты T-SQL в виде XML. | &nbsp; |
 | Добавлены усовершенствования Data-Tier Application Wizard. | &bull; &nbsp; Создать скрипт кнопки<br/>&bull; &nbsp; Добавлено представление для предоставления предупреждения о возможной потере данных во время развертывания. |
@@ -281,7 +281,7 @@ _0.32.8 содержит исправления для несколько рег
 - [Выдача #2371](https://github.com/Microsoft/azuredatastudio/issues/2371) Сохранить как только сохраняет первую строку данных Excel
 - [Выдача #2150](https://github.com/Microsoft/azuredatastudio/issues/2150): Не удалось подключиться на Ubuntu 16.04 to SQL в контейнере
 
-## <a name="july-2018"></a>Июль 2018  г.
+## <a name="july-2018"></a>Июля 2018 г.
 
 19 июля 2018 г. &nbsp;  /  &nbsp; версии: 0.31.4 &nbsp;  /  &nbsp; общедоступной предварительной версии
 

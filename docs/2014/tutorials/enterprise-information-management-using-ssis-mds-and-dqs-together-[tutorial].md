@@ -10,12 +10,12 @@ ms.assetid: ba09b504-3007-4cb7-8ef8-f01adbf51646
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8a9b7c9f241bdf63679db85d7408e696c6f55599
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.openlocfilehash: 61773674412a8b4bdd8b5fa2f8b207de66254dcc
+ms.sourcegitcommit: 5905c29b5531cef407b119ebf5a120316ad7b713
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65489725"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66429032"
 ---
 # <a name="enterprise-information-management-using-ssis-mds-and-dqs-together-tutorial"></a>Информационный менеджмент предприятия совместным использованием SSIS, MDS и DQS [учебник]
   Для управления информацией на предприятии, как правило, требуется интеграция данных со всего предприятия и из-за его пределов, очистка данных, проверка данных на наличие повторений, стандартизация данных, обогащение данных, согласование данных с юридическими и нормативными требованиями и последующее сохранение данных в централизованном расположении со всеми необходимыми параметрами безопасности.  
@@ -62,9 +62,9 @@ ms.locfileid: "65489725"
   
 5.  Установка **надстройки служб Master Data Services для Excel** (32-разрядная или 64-разрядной на основе версии Excel, у вас есть на вашем компьютере) из [здесь](https://www.microsoft.com/download/details.aspx?id=29064). Чтобы узнать версию Excel, установленной на компьютере, выполните команду **Excel**, нажмите кнопку **файл** в строке меню щелкните **помочь** для просмотра версии на правой панели. Обратите внимание на то, что необходимо установить Visual Studio 2010 Tools for Office Runtime перед установкой надстройки Excel.  
   
-6.  (Необязательно) Создание учетной записи с [Windows Azure Marketplace](https://datamarket.azure.com/). Одна из задач в этом руководстве требуется наличие **Azure Marketplace** (начинались **Data Market**) учетной записи. Эту задачу можно пропустить, если необходимо, и перейти к следующей задаче.  
+6.  (Необязательно) Создание учетной записи с [Windows Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/). Одна из задач в этом руководстве требуется наличие **Azure Marketplace** (начинались **Data Market**) учетной записи. Эту задачу можно пропустить, если необходимо, и перейти к следующей задаче.  
   
-7.  Загрузите файл Suppliers.xls из [центра загрузки Майкрософт](https://go.microsoft.com/fwlink/?LinkId=271504).  
+7.  Загрузите файл Suppliers.xls из [центра загрузки Майкрософт](https://www.microsoft.com/download/details.aspx?id=50426).  
   
 8.  DQS не позволяют экспортировать результаты очистки или сопоставления в файл Excel при использовании **64-разрядной версии Excel**. Это известная проблема. Чтобы обойти ее, выполните следующие действия.  
   

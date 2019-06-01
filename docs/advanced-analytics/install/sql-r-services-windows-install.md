@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 52935abf74fcf3ad7a4f7c8d78faa6b9b21d47e5
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.openlocfilehash: bc9762470b6e2a836c29f53ebfc3ffeadbcc381f
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65095946"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454693"
 ---
 # <a name="install-sql-server-2016-r-services"></a>Установка служб SQL Server 2016 R Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "65095946"
 3. На **Выбор компонентов** выберите следующие параметры:
 
    - Выберите **службы компонента Database Engine**. Ядро базы данных требуется в каждом экземпляре, который использует машинное обучение.
-   - Выберите **службы R (в базе данных)**. Устанавливает поддержку для использования в базе данных R.
+   - Выберите **службы R (в базе данных)** . Устанавливает поддержку для использования в базе данных R.
     
      ![Выбор компонентов служб R](media/2016setup-rsvcs-features.png "выберите эти компоненты для R Services в базе данных")
 
@@ -216,7 +216,7 @@ ms.locfileid: "65095946"
 В базе данных могут потребоваться следующие обновления конфигурации.
 
 * [Предоставление пользователям разрешения на службы машинного обучения SQL Server](../../advanced-analytics/security/user-permission.md)
-* [Добавление SQLRUserGroup в качестве пользователя базы данных](../../advanced-analytics/security/add-sqlrusergroup-to-database.md)
+* [Добавление SQLRUserGroup в качестве пользователя базы данных](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md)
 
 > [!NOTE]
 > Требуются не все перечисленные изменения и не могут быть необходимы. Требования зависят от схемы безопасности, где установлен SQL Server, а также как ожидается, что пользователи для подключения к базе данных и выполнения внешних скриптов. Дополнительные советы по устранению неполадок можно найти здесь: [Часто задаваемые вопросы по обновлению и установке](../r/upgrade-and-installation-faq-sql-server-r-services.md)

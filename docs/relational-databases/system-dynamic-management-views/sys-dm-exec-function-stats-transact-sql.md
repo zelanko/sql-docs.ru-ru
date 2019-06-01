@@ -1,7 +1,7 @@
 ---
 title: sys.dm_exec_function_stats (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 05/30/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse
 ms.reviewer: ''
@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6c0064e35be2ab514e93b9119f7994849cf50cc4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4f8305dbb894ff679d26702ddd877add9eeb4f76
+ms.sourcegitcommit: 5905c29b5531cef407b119ebf5a120316ad7b713
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63013205"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66428952"
 ---
 # <a name="sysdmexecfunctionstats-transact-sql"></a>sys.dm_exec_function_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -68,6 +68,10 @@ ms.locfileid: "63013205"
 |**last_elapsed_time**|**bigint**|Затраченное время в микросекундах, последнее выполнение этой функции.|  
 |**min_elapsed_time**|**bigint**|Минимальное время, в микросекундах завершил выполнение этой функции.|  
 |**max_elapsed_time**|**bigint**|Максимальное время, в микросекундах завершил выполнение этой функции.|  
+|**total_page_server_reads**|**bigint**|Общее число удаленных страницы сервера операций считывания при выполнении этой функции с момента его компиляции.<br /><br /> **Область применения:** Гипермасштабируемый базы данных Azure SQL.|  
+|**last_physical_reads**|**bigint**|Количество операций считывания страницы удаленного сервера выполнена время последнего выполнения функции.<br /><br /> **Область применения:** Гипермасштабируемый базы данных Azure SQL.|  
+|**min_physical_reads**|**bigint**|Минимальное число сервера удаленной странице считывает, что эта функция когда-либо выполнил за одно выполнение.<br /><br /> **Область применения:** Гипермасштабируемый базы данных Azure SQL.|  
+|**max_physical_reads**|**bigint**|Максимальное количество серверов удаленной странице считывает, что эта функция когда-либо выполнил за одно выполнение.<br /><br /> **Область применения:** Гипермасштабируемый базы данных Azure SQL.|
   
 ## <a name="permissions"></a>Разрешения  
 

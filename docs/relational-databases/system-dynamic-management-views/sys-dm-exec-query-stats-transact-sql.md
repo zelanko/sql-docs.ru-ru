@@ -1,7 +1,7 @@
 ---
 title: sys.dm_exec_query_stats (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
-ms.date: 12/18/2018
+ms.date: 05/30/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 04d221372a0d91ed45ba339c1077ea1be68542df
-ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
+ms.openlocfilehash: 821eaa4b7c54d8d2f449b2b071582480ac806378
+ms.sourcegitcommit: 5905c29b5531cef407b119ebf5a120316ad7b713
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58072358"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66429024"
 ---
 # <a name="sysdmexecquerystats-transact-sql"></a>sys.dm_exec_query_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -118,7 +118,10 @@ ms.locfileid: "58072358"
 |**min_spills**|**bigint**|Минимальное число страниц, которые когда-либо этот запрос вытеснены за одно выполнение.<br /><br /> **Область применения**: Начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**max_spills**|**bigint**|Максимальное число страниц, которые когда-либо этот запрос вытеснены за одно выполнение.<br /><br /> **Область применения**: Начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**pdw_node_id**|**int**|Идентификатор для узла, это распределение является на.<br /><br /> **Применяется к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]| 
-
+|**total_page_server_reads**|**bigint**|Общее число удаленных страницы сервера операций считывания при выполнении плана с момента его компиляции.<br /><br /> **Применимо к:** Гипермасштабируемый базы данных Azure SQL |  
+|**last_page_server_reads**|**bigint**|Количество операций считывания страницы удаленного сервера выполнять последнего выполнения плана.<br /><br /> **Область применения:** Гипермасштабируемый базы данных Azure SQL |  
+|**min_page_server_reads**|**bigint**|Минимальное число сервера удаленной странице считывает, что этот план операций за одно выполнение.<br /><br /> **Область применения:** Гипермасштабируемый базы данных Azure SQL |  
+|**max_page_server_reads**|**bigint**|Максимальное количество серверов удаленной странице считывает, что этот план операций за одно выполнение.<br /><br /> **Область применения:** Гипермасштабируемый базы данных Azure SQL |  
 > [!NOTE]
 > <sup>1</sup> для скомпилированных хранимых процедур при включении сбора статистики накопленное время рабочей роли собираются в миллисекундах. Если запрос выполняется в менее одной миллисекунды, значение будет равно 0.  
   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: c88d4929d40af2dc0e61d5d7261fddb3bac2e74d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 65c6afcf3f74e320237c1f345ad643752fde6ae0
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62506036"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454762"
 ---
 # <a name="install-sql-server-machine-learning-services-with-r-and-python-on-an-azure-virtual-machine"></a>Установите службы машинного обучения SQL Server с R и Python на виртуальной машине Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "62506036"
 
 Если предполагается, что клиенты, осуществляющие вызов сервера будет необходимо отправлять запросы ODBC как часть своих решений машинного обучения, необходимо убедиться, что панель запуска может выполнять вызовы ODBC от имени удаленного клиента. 
 
-Для этого необходимо разрешить вход в экземпляр рабочим учетным записям SQL, которые используются панелью запуска. Дополнительные сведения см. в разделе [Добавление SQLRUserGroup в качестве пользователя базы данных](../security/add-sqlrusergroup-to-database.md).
+Для этого необходимо разрешить вход в экземпляр рабочим учетным записям SQL, которые используются панелью запуска. Дополнительные сведения см. в разделе [Добавление SQLRUserGroup в качестве пользователя базы данных](../security/create-a-login-for-sqlrusergroup.md).
 
 <a name="network"></a>
 

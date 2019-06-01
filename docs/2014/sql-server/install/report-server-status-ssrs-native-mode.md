@@ -12,12 +12,12 @@ ms.assetid: 2f63ad1c-1bc2-449d-b451-fb39a0060838
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0d9f59bde50c325f0694cc6cdd9441d80ea61f02
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.openlocfilehash: 52291c866e00100280c63253ef36b31bd8763948
+ms.sourcegitcommit: 5905c29b5531cef407b119ebf5a120316ad7b713
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66092701"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66428985"
 ---
 # <a name="report-server-status-ssrs-native-mode"></a>Состояние сервера отчетов (службы Reporting Services в собственном режиме)
   Эта страница позволяет просмотреть сведения о состоянии экземпляра сервера отчетов, с которым в настоящий момент установлено соединение. Данная страница является начальной для настройки сервера отчетов. Доступны также дополнительные страницы, предназначенные для настройки URL-адресов, учетной записи службы, базы данных сервера отчетов, доставки электронной почты сервера отчетов, параметров масштабного развертывания и ключей шифрования.  
@@ -72,7 +72,7 @@ ms.locfileid: "66092701"
   
 ## <a name="see-also"></a>См. также  
  [Разделы справки F1 диспетчера конфигурации служб Reporting Services &#40;собственный режим служб SSRS&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
- [Диспетчер конфигурации служб Reporting Services &#40;del&#41;](/sql/2014/sql-server/install/reporting-services-configuration-manager-native-mode)   
+ [Диспетчер конфигурации служб Reporting Services &#40;del&#41;](/sql/sql-server/install/reporting-services-configuration-manager-native-mode)   
  [Инициализация сервера отчетов (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)  
   
   

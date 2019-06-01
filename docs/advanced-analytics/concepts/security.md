@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 5fd8850271ab4ebf7ac69ff32cfa0877394f1d89
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 1f19e3322b8aee78fdb5a76a29a719148cc6a0c7
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596575"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454536"
 ---
 # <a name="security-overview-for-the-extensibility-framework-in-sql-server-machine-learning-services"></a>Общие сведения о безопасности для инфраструктуры расширяемости в службах машинного обучения SQL Server
 
@@ -71,7 +71,7 @@ ms.locfileid: "53596575"
 
 ## <a name="services-used-in-external-processing-launchpad"></a>Службы, используемые в звукозапись обрабатывалась (Launchpad)
 
-Инфраструктура расширяемости добавляет одну новую службу NT для [список служб](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Service_Details) в установке SQL Server: [**Панель запуска SQL Server (MSSSQLSERVER)**](extensibility-framework.md#launchpad).
+Инфраструктура расширяемости добавляет одну новую службу NT для [список служб](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Service_Details) в установке SQL Server: [**Панель запуска SQL Server (MSSSQLSERVER)** ](extensibility-framework.md#launchpad).
 
 Ядро СУБД использует службу панели запуска SQL Server для создания экземпляра в сеансе R или Python, как отдельный процесс. Процесс выполняется под учетной записью с низким уровнем прав; отличается от SQL Server, панель запуска самого и удостоверения пользователя, под которой был выполнен запрос хранимой процедуры или узла. Выполнение сценария в отдельном процессе, от имени учетной записи с низким уровнем прав, лежит в основе модели безопасности и изоляции для R и Python в SQL Server.
 
@@ -111,7 +111,7 @@ ms.locfileid: "53596575"
 
 Чтобы защитить конфиденциальные ресурсы на сервере SQL Server, при необходимости можно определить список управления доступом (ACL), которое запрещает доступ к **SQLRUserGroup**. И наоборот можно также предоставить разрешения для локальных данных ресурсов, которые существуют на главном компьютере, помимо SQL Server. 
 
-По своей структуре **SQLRUserGroup** не имеет имени входа базы данных или разрешений на любые данные. В некоторых случаях может потребоваться создать имя входа для подключений на задней цикл, особенно если удостоверение Windows вызывающего пользователя. Эта функция называется [ *неявной проверки подлинности*](#implied-authentication). Дополнительные сведения см. в разделе [Добавление SQLRUserGroup в качестве пользователя базы данных](../../advanced-analytics/security/add-sqlrusergroup-to-database.md).
+По своей структуре **SQLRUserGroup** не имеет имени входа базы данных или разрешений на любые данные. В некоторых случаях может потребоваться создать имя входа для подключений на задней цикл, особенно если удостоверение Windows вызывающего пользователя. Эта функция называется [ *неявной проверки подлинности*](#implied-authentication). Дополнительные сведения см. в разделе [Добавление SQLRUserGroup в качестве пользователя базы данных](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md).
 
 ## <a name="identity-mapping"></a>Сопоставления удостоверений
 
@@ -127,7 +127,7 @@ ms.locfileid: "53596575"
 
 Доверенные соединения поддающейся из сценария R и Python, но только с помощью дополнительной настройки. В архитектуру расширяемости, R и Python процессы выполняются в группе рабочих учетных записей, наследование разрешений от родительского **SQLRUserGroup**. Если в строке соединения указывается `Trusted_Connection=True`, удостоверение учетной записи рабочего представлен на запрос на соединение и неизвестном по умолчанию для SQL Server.
 
-Для успешного доверенные соединения, необходимо создать имя входа базы данных для **SQLRUserGroup**. После этого любой доверенное_соединение из любой член **SQLRUserGroup** есть права входа на SQL Server. Пошаговые инструкции см. в разделе [Добавление SQLRUserGroup для входа в базу данных](../../advanced-analytics/security/add-sqlrusergroup-to-database.md).
+Для успешного доверенные соединения, необходимо создать имя входа базы данных для **SQLRUserGroup**. После этого любой доверенное_соединение из любой член **SQLRUserGroup** есть права входа на SQL Server. Пошаговые инструкции см. в разделе [Добавление SQLRUserGroup для входа в базу данных](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md).
 
 Доверенные соединения не являются наиболее широко используемых формулировку запроса на подключение. Когда скрипт R или Python указывает соединение, бывает чаще всего используется имя входа SQL, или пользователь полностью указанное имя и пароль, если подключение к источнику данных ODBC.
 
@@ -153,4 +153,4 @@ ms.locfileid: "53596575"
 
 В этой статье вы узнали, компоненты и модель взаимодействия архитектуры безопасности встроены в [extensibility framework](../../advanced-analytics/concepts/extensibility-framework.md). Ключевые моменты, описанные в этой статье включают назначение панели запуска, SQLRUserGroup и рабочие учетные записи, изоляция процессов R и Python и сопоставление удостоверений пользователей рабочих учетных записей. 
 
-На следующем шаге, ознакомьтесь с инструкциями для [предоставление разрешений](../../advanced-analytics/security/user-permission.md). Для серверов, использующих проверку подлинности Windows, следует также просмотреть [Добавление SQLRUserGroup для входа в базу данных](../../advanced-analytics/security/add-sqlrusergroup-to-database.md) чтобы узнать, когда необходима дополнительная настройка.
+На следующем шаге, ознакомьтесь с инструкциями для [предоставление разрешений](../../advanced-analytics/security/user-permission.md). Для серверов, использующих проверку подлинности Windows, следует также просмотреть [Добавление SQLRUserGroup для входа в базу данных](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md) чтобы узнать, когда необходима дополнительная настройка.

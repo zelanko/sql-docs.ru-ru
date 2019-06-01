@@ -12,12 +12,12 @@ ms.assetid: 2c9a5814-17bf-4947-8fb3-6269e7caa416
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 084d90ad20dbd1955894f20524e6f040231f5ae9
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.openlocfilehash: d35f6c7d77a43fe35ba78a88824309ffd72a5a44
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66108946"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454596"
 ---
 # <a name="install-uninstall-and-report-builder-support"></a>Установка, удаление и поддержка построителя отчетов
   Построитель отчетов представляет собой средство разработки отчетов, позволяющее создавать, обновлять и совместно использовать отчеты, элементы отчетов и общие наборы данных. Построитель отчетов доступен в двух вариантах: как изолированная версия и как версия [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]. Изолированная версия устанавливается на компьютере пользователем или администратором. Версия [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] устанавливается автоматически вместе со службами [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] и загружается на компьютер из диспетчера отчетов или с сайта SharePoint, интегрированного со службами [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
@@ -152,7 +152,7 @@ ms.locfileid: "66108946"
   
  Однако с помощью дополнительной настройки сервер отчетов становится доступным для пользователей построителя отчетов. Можно добавить URL-адреса служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в список надежных сайтов. По умолчанию в Windows Vista, Windows Server 2008 и Windows 7 Internet Explorer 7.0 или более поздние версии запускаются в защищенном режиме. Защищенный режим — это функция, которая изолирует запросы браузера от процессов высокого уровня, выполняющихся на том же компьютере. Защищенный режим для приложений сервера отчетов можно отключить, добавив их в список «Надежные сайты». Для внесения этого изменения необходимо иметь разрешения администратора.  
   
- Дополнительные сведения о настройке [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], см. в разделе [диспетчер конфигурации служб Reporting Services &#40;del&#41; ](/sql/2014/sql-server/install/reporting-services-configuration-manager-native-mode) в [документации по службам Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) на сайте msdn.microsoft.com.  
+ Дополнительные сведения о настройке [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], см. в разделе [диспетчер конфигурации служб Reporting Services &#40;del&#41; ](https://docs.microsoft.com/sql/sql-server/install/reporting-services-configuration-manager-native-mode) в [документации по службам Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) на сайте msdn.microsoft.com.  
   
   
 ##  <a name="SampleDatabases"></a> Образцы баз данных SQL Server  

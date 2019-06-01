@@ -14,12 +14,12 @@ ms.assetid: 8a3a6ffe-4001-46be-8548-94532550f6a5
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 066f5607ed159b382b156f0d679382881444e9c8
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.openlocfilehash: e6a5c6544acae62a5a9ed7d2fbafe05bbd0f9f2e
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66095908"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454668"
 ---
 # <a name="create-a-report-server-database--ssrs-configuration-manager"></a>Создание базы данных сервера отчетов (диспетчер конфигурации служб SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **основном режиме** , используют две реляционные базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для хранения метаданных и объектов сервера отчетов. Одна база данных используется как основное хранилище, а вторая — для хранения временных данных. Эти базы данных создаются одновременно и связываются по именам. В экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию базы данных именуются `reportserver` и `reportservertempdb`. В совокупности эти две базы данных называются «базой данных сервера отчетов» или «каталогом сервера отчетов».  
@@ -72,6 +72,6 @@ ms.locfileid: "66095908"
  При создании базы данных сервера отчетов убедитесь в том, что данный выпуск [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может быть использован для ее хранения. Дополнительные сведения см. в разделе «Сервера базы данных сервера требования к выпуску отчетов» из [функции, поддерживаемые различными выпусками SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 ## <a name="see-also"></a>См. также  
- [Диспетчер конфигурации служб Reporting Services &#40;del&#41;](/sql/2014/sql-server/install/reporting-services-configuration-manager-native-mode)  
+ [Диспетчер конфигурации служб Reporting Services &#40;del&#41;](https://docs.microsoft.com/sql/sql-server/install/reporting-services-configuration-manager-native-mode)  
   
   

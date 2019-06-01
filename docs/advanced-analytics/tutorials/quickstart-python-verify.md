@@ -8,12 +8,12 @@ ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 25bf5a7e7d18810c782d1ce2f4986fc433421395
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: 09b96f6934fec9e24ca4a254a1d14c23327ebe5b
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57577934"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454705"
 ---
 # <a name="quickstart-verify-python-exists-in-sql-server"></a>Краткое руководство. Проверка наличия Python в SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -62,7 +62,7 @@ SQL Server включает поддержку языка Python для обра
 
 Во-первых исключить любые проблемы установки. После установки настроек не требуется, чтобы включить использование библиотек внешнего кода. См. в разделе [установить SQL Server 2017 службы машинного обучения](../install/sql-machine-learning-services-windows-install.md). Аналогичным образом Убедитесь, что запущена служба панели запуска.
 
-Также необходимо добавить группу пользователей Windows `SQLRUserGroup` как имя для входа на экземпляре, чтобы убедиться, что панель запуска могут обеспечивать взаимодействие между кодом Python и SQL Server. (Той же группе используется для обоих R и выполнение кода Python). Дополнительные сведения см. в разделе [неявная проверка подлинности включена](../security/add-sqlrusergroup-to-database.md).
+Также необходимо добавить группу пользователей Windows `SQLRUserGroup` как имя для входа на экземпляре, чтобы убедиться, что панель запуска могут обеспечивать взаимодействие между кодом Python и SQL Server. (Той же группе используется для обоих R и выполнение кода Python). Дополнительные сведения см. в разделе [создать имя входа для SQLRUserGroup](../security/create-a-login-for-sqlrusergroup.md).
 
 Кроме того может потребоваться включить сетевые протоколы, которые были отключены, или открыть брандмауэр SQL Server мог обмениваться данными с внешними клиентами. Дополнительные сведения см. в разделе [Устранение неполадок при установке](../common-issues-external-script-execution.md).
 

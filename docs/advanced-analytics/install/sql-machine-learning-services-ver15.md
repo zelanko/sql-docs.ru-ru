@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3d549bdc96e09ed0b9b0235ada51274201f1b91a
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: 43d427129cae773fc17a0d73f57a26144b7cd09f
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65994225"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454515"
 ---
 # <a name="differences-in-sql-server-machine-learning-services-installation-in-sql-server-2019"></a>Различия в установке служб машинного обучения SQL Server в SQL Server 2019  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "65994225"
 
 ## <a name="implied-authentication"></a>Неявная проверка подлинности
 
-Как и раньше, необходима дополнительная настройка по-прежнему для *неявной проверки подлинности* в случаях, когда скрипт или код для подключения к SQL Server с помощью доверенная проверка подлинности для получения данных или ресурсов. Дополнительная настройка включает в себя создание входа в базу данных для **SQLRUserGroup**, единственный элемент которых теперь является одной учетной записи службы панели запуска SQL Server вместо нескольких рабочих учетных записей. Дополнительные сведения об этой задаче см. в разделе [Добавление SQLRUserGroup в качестве пользователя базы данных](../security/add-sqlrusergroup-to-database.md).
+Как и раньше, необходима дополнительная настройка по-прежнему для *неявной проверки подлинности* в случаях, когда скрипт или код для подключения к SQL Server с помощью доверенная проверка подлинности для получения данных или ресурсов. Дополнительная настройка включает в себя создание входа в базу данных для **SQLRUserGroup**, единственный элемент которых теперь является одной учетной записи службы панели запуска SQL Server вместо нескольких рабочих учетных записей. Дополнительные сведения об этой задаче см. в разделе [Добавление SQLRUserGroup в качестве пользователя базы данных](../security/create-a-login-for-sqlrusergroup.md).
 
 
 ## <a name="symbolic-link-created-by-setup"></a>Символьную ссылку, созданный программой установки
