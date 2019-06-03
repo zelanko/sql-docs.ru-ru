@@ -1,18 +1,18 @@
 ---
 title: Служба Claims to Windows Token Service (c2WTS) и службы Reporting Services | Документы Майкрософт
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
 ms.topic: conceptual
 ms.date: 09/15/2017
-ms.openlocfilehash: d5a771bc28d4c6a6f248925d329fa708c4135f8d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+ms.openlocfilehash: 8d53445544c360250ed35c322e2fc4078559bbbe
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52397158"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454571"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>Служба Claims to Windows Token Service (C2WTS) и службы Reporting Services
 
@@ -50,7 +50,7 @@ ms.locfileid: "52397158"
 
     **Рекомендуется запускать C2WTS с использованием собственного удостоверения домена.**
 
-    * Создайте учетную запись Active Directory и зарегистрируйте ее как управляемую учетную запись на сервере SharePoint. Дополнительные сведения об управляемых учетных записях SharePoint см. в [этой статье](https://blogs.technet.microsoft.com/wbaer/2010/04/11/managed-accounts-in-sharepoint-2010/).
+    * Создайте учетную запись Active Directory и зарегистрируйте ее как управляемую учетную запись на сервере SharePoint. Дополнительные сведения об управляемых учетных записях SharePoint см. в [этой статье](https://blog.wbaer.net/2010/04/11/managed-accounts-in-sharepoint-2010/).
    
     * Настройте службу C2WTS для использования управляемой учетной записи, выбрав "Центр администрирования SharePoint > Безопасность > Configure Service Accounts (Настройка учетных записей служб) > Windows Service - Claims to Windows Token Service (Служба Windows — утверждения для службы маркеров Windows)".
 
@@ -84,7 +84,7 @@ ms.locfileid: "52397158"
     * Выберите **Пользователи или компьютеры...&#42;** и введите учетную запись, в которой размещена служба. Например, если SQL Server выполняется под учетной записью с именем *sqlservice*, введите `sqlservice`. 
       Для **веб-части средства просмотра отчетов** это будет учетная запись службы для экземпляра Reporting Services (собственный режим).
 
-    * Выберите список служб. Отобразятся имена участников-служб, которые доступны в этой учетной записи. Если вы не видите в списке службу для соответствующей учетной записи, возможно, она отсутствует или размещена в другой учетной записи. Для настройки имен SPN можно использовать служебную программу SetSPN. Для **веб-части средства просмотра отчетов** отобразится имя участника-службы HTTP, настроенное в разделе [Настройка веб-части средства просмотра отчетов](https://docs.microsoft.com/sql/reporting-services/install-windows/claims-to-windows-token-service-c2wts-and-reporting-services?view=sql-server-2017#report-viewer-web-part-configuration).
+    * Выберите список служб. Отобразятся имена участников-служб, которые доступны в этой учетной записи. Если вы не видите в списке службу для соответствующей учетной записи, возможно, она отсутствует или размещена в другой учетной записи. Для настройки имен SPN можно использовать служебную программу SetSPN. Для **веб-части средства просмотра отчетов** отобразится имя участника-службы HTTP, настроенное в разделе [Настройка веб-части средства просмотра отчетов](https://docs.microsoft.com/sql/reporting-services/install-windows/claims-to-windows-token-service-c2wts-and-reporting-services?view=sql-server-2017#report-viewer-native-mode-web-part-configuration).
 
     * Нажмите кнопку ОК, чтобы закрыть все диалоговые окна.
 

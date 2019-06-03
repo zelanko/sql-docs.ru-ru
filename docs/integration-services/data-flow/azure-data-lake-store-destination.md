@@ -1,7 +1,7 @@
 ---
 title: Цель Azure Data Lake Store | Документы Майкрософт
 ms.custom: ''
-ms.date: 01/10/2019
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: 4c4f504f-dd2b-42c5-8a20-1a8ad9a5d632
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: da23e2b0bdda3c99babe18d500edace9d18f9ca4
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.openlocfilehash: d934cafef262f5c07b5eeac95d65abd776d8bb35
+ms.sourcegitcommit: fc0eb955b41c9c508a1fe550eb5421c05fbf11b4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65727197"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66403037"
 ---
 # <a name="azure-data-lake-store-destination"></a>Цель Azure Data Lake Store
 
@@ -47,3 +47,27 @@ ms.locfileid: "65727197"
        Если файла имеет формат ORC, необходимо установить среду выполнения Java (JRE) для целевой платформы.
   
 3.  После указания сведений о соединении переключитесь на страницу **Столбцы** , чтобы сопоставить столбцы источника со столбцами назначения для потока данных служб SSIS.  
+
+## <a name="prerequisite-for-orc-file-format"></a>Необходимое условие для использования формата файла ORC
+Для использования формата файла ORC требуется Java.
+Архитектура сборки Java (32- или 64-разрядная) должна соответствовать архитектуре используемой среды выполнения SSIS.
+Были протестированы следующие сборки Java:
+
+- [Zulu OpenJDK 8u192](https://www.azul.com/downloads/zulu/zulu-windows/)
+- [Среда выполнения Oracle Java SE 8u192](https://www.oracle.com/technetwork/java/javase/downloads/java-archive-javase8-2177648.html)
+
+### <a name="set-up-zulus-openjdk"></a>Настройка Zulu OpenJDK
+1. Скачайте и извлеките ZIP-пакет установки.
+2. Запустите `sysdm.cpl` из командной строки.
+3. На вкладке **Дополнительно** выберите **Переменные среды**.
+4. В разделе **Системные переменные** выберите **Создать**.
+5. Введите `JAVA_HOME` в поле **Имя переменной**.
+6. Выберите **Обзор каталога**, перейдите к извлеченной папке и выберите вложенную папку `jre`.
+   Затем нажмите кнопку **ОК**. **Значение переменной** заполняется автоматически.
+7. Нажмите кнопку **ОК**, чтобы закрыть диалоговое окно **Создание системной переменной**.
+8. Нажмите кнопку **ОК**, чтобы закрыть диалоговое окно **Переменные среды**.
+9. Нажмите кнопку **ОК**, чтобы закрыть диалоговое окно **Свойства системы**.
+
+### <a name="set-up-oracles-java-se-runtime-environment"></a>Настройка среды выполнения Oracle Java SE
+1. Скачайте и запустите EXE-установщик.
+2. Следуйте указаниям установщика, чтобы завершить настройку.

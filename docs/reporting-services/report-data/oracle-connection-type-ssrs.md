@@ -8,19 +8,19 @@ ms.topic: conceptual
 ms.assetid: 9db86dd2-beda-42d8-8af7-2629d58a8e3d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f3dd35c6630c825e5341246170f6e96d61a47de4
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 1cf0134d4c71111537a9d7c020c03f77d9377fd1
+ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65577892"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66413433"
 ---
 # <a name="oracle-connection-type-ssrs"></a>Тип соединения Oracle (службы SSRS)
 Чтобы использовать в отчете данные из базы данных Oracle, необходимо иметь набор данных, основанный на источнике данных Oracle. Этот встроенный тип источника данных напрямую использует поставщик .NET Framework для Oracle и требует наличия клиентского программного обеспечения Oracle.
 
 Чтобы установить инструменты клиента Oracle, можно выполнить указанные ниже действия.
  
-1.  Перейдите на [сайт загрузки Oracle](https://www.oracle.com/us/products/tools/index-090165.html).
+1.  Перейдите на [сайт загрузки Oracle](https://www.oracle.com/downloads/).
 2.  Скачайте ODAC 12c 4 выпуска (12.1.0.2.4) для Windows (64-разрядная версия для сервера, 32-разрядная версия для инструментов).
 3.  Установите поставщик данных Oracle для .NET 4.
   

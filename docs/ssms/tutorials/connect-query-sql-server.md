@@ -1,5 +1,5 @@
 ---
-Title: 'Tutorial: Connect to and query a SQL Server instance by using SQL Server Management Studio'
+Title: Руководство. Подключение к экземпляру SQL Server и выполнение запросов с помощью SQL Server Management Studio
 description: Руководство по подключению к экземпляру SQL Server с помощью SQL Server Management Studio и выполнению базовых запросов T-SQL.
 keywords: SQL Server, SSMS, SQL Server Management Studio
 author: MashaMSFT
@@ -11,14 +11,14 @@ ms.reviewer: sstein
 manager: craigg
 ms.prod: sql
 ms.technology: ssms
-ms.openlocfilehash: 21f6d4c689a30dc60fc103f7e881ae5499baafa8
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 034e0663065003a47245ad71b602ec8bfb256df3
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802500"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454456"
 ---
-# <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio"></a>Учебник. Подключение к экземпляру SQL Server и выполнение запросов с помощью SQL Server Management Studio
+# <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio"></a>Руководство. Подключение к экземпляру SQL Server и выполнение запросов с помощью SQL Server Management Studio
 
 Это руководство научит вас подключаться к экземпляру SQL Server с использованием SQL Server Management Studio (SSMS) и выполнять некоторые базовые команды Transact-SQL (T-SQL). В статье показано, как выполнять следующие задачи.
 
@@ -68,7 +68,7 @@ ms.locfileid: "56802500"
 - Подключение к базе данных SQL Azure — msftestserver.database.windows.net: ![Подключение к базе данных SQL Azure](media/connect-query-sql-server/connect-sql-azure.png)
 
   >[!NOTE]
-  > Ранее в этом учебнике вы подключились к локальному серверу SQL Server с помощью *проверки подлинности Windows*, но для базы данных SQL Azure этот способ не поддерживается. На этом рисунке показано подключение к базе данных SQL Azure с помощью проверки подлинности SQL. Дополнительные сведения см. в разделах, посвященных [локальной проверке подлинности SQL](../../relational-databases/security/choose-an-authentication-mode.md) и [проверке подлинности SQL в Azure](https://docs.microsoft.com/azure/sql-database/sql-database-security-overview#control-access). 
+  > Ранее в этом учебнике вы подключились к локальному серверу SQL Server с помощью *проверки подлинности Windows*, но для базы данных SQL Azure этот способ не поддерживается. На этом рисунке показано подключение к базе данных SQL Azure с помощью проверки подлинности SQL. Дополнительные сведения см. в разделах, посвященных [локальной проверке подлинности SQL](../../relational-databases/security/choose-an-authentication-mode.md) и [проверке подлинности SQL в Azure](https://docs.microsoft.com/azure/sql-database/sql-database-security-overview#access-management). 
 
 ## <a name="create-a-database"></a>Создание базы данных
 Сделайте следующее, чтобы создать базу данных с именем TutorialDB. 

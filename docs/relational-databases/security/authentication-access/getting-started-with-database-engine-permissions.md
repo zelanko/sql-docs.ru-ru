@@ -14,12 +14,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 23ed71d50fc84c743f5574a3e3e96852b2e9bd21
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 14e32081c9cbe03d7336f4ee973b02737f1cda1d
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202663"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454594"
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>Приступая к работе с разрешениями Database Engine
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -229,7 +229,9 @@ JOIN sys.database_principals AS dRole
 ## <a name="next-steps"></a>Next Steps  
  Другие разделы, посвященные началу работы:  
   
--   [Учебник. Приступая к работе с компонентом Database Engine](../../../relational-databases/tutorial-getting-started-with-the-database-engine.md) [Создание базы данных (учебник)](../../../t-sql/lesson-1-creating-database-objects.md#)  
+-   [Учебник. Начало работы с ядром СУБД](../../../relational-databases/tutorial-getting-started-with-the-database-engine.md) 
+
+-   [Создание базы данных (учебник)](../../../t-sql/lesson-1-creating-database-objects.md)  
   
 -   [Учебник. SQL Server Management Studio](../../../tools/sql-server-management-studio/tutorial-sql-server-management-studio.md)  
   

@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 24768e1b230631009d94a1c449f08164157ed481
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.openlocfilehash: 72f31c6f27590a9b44c0766c5379e90f9666d1a0
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65718419"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454582"
 ---
 # <a name="scale-out-support-for-high-availability"></a>Поддержка высокого уровня доступности в Scale Out
 
@@ -68,11 +68,11 @@ ms.locfileid: "65718419"
 Кроме того, необходимо создать прослушиватель группы доступности для группы доступности, в которую добавляется SSISDB. См. раздел [Создание или настройка прослушивателя группы доступности](../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).
 
 ## <a name="5-update-the-scale-out-master-service-configuration-file"></a>5. Обновление файла конфигурации для службы мастера Scale Out
-Обновите файл конфигурации для службы мастера Scale Out (`\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config`) в основном и вторичном узлах. Присвойте атрибуту **SqlServerName** значение *[имя DNS прослушивателя группы доступности],[порт]*.
+Обновите файл конфигурации для службы мастера Scale Out (`\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config`) в основном и вторичном узлах. Присвойте атрибуту **SqlServerName** значение *[имя DNS прослушивателя группы доступности],[порт]* .
 
 ## <a name="6-enable-package-execution-logging"></a>6. Включение ведения журнала выполнения пакетов
 
-Ведение журналов в SSISDB реализуется посредством имени входа **##MS_SSISLogDBWorkerAgentLogin##**, пароль для которого формируется автоматически. Чтобы настроить ведение журналов для всех реплик SSISDB, выполните указанные ниже действия.
+Ведение журналов в SSISDB реализуется посредством имени входа **##MS_SSISLogDBWorkerAgentLogin##** , пароль для которого формируется автоматически. Чтобы настроить ведение журналов для всех реплик SSISDB, выполните указанные ниже действия.
 
 ### <a name="61-change-the-password-of-msssislogdbworkeragentlogin-on-the-primary-sql-server"></a>6.1. Смените пароль для **##MS_SSISLogDBWorkerAgentLogin##** в основном экземпляре SQL Server.
 
@@ -99,7 +99,7 @@ ms.locfileid: "65718419"
 
 Для этого шага на виртуальных машинах Azure нужны дополнительные действия. Полное описание этих основных понятий и шагов выходит за рамки данной статьи.
 
-1.  Необходимо настроить домен Azure. Для работы отказоустойчивой кластеризации Windows Server нужно, чтобы все компьютеры в кластере входили в состав одного домена. Дополнительные сведения см. в статье [Включение доменных служб Azure Active Directory с помощью портала Azure](https://docs.microsoft.com/azure/active-directory-domain-services/active-directory-ds-getting-started).
+1.  Необходимо настроить домен Azure. Для работы отказоустойчивой кластеризации Windows Server нужно, чтобы все компьютеры в кластере входили в состав одного домена. Дополнительные сведения см. в статье [Включение доменных служб Azure Active Directory с помощью портала Azure](https://docs.microsoft.com/en-us/azure/active-directory-domain-services/create-instance).
 
 2. Необходимо настроить балансировщик нагрузки Azure. Это требование для прослушивателя группы доступности. Дополнительные сведения см. в статье [Руководство по балансировке нагрузки внутреннего трафика на виртуальных машинах с помощью балансировщика нагрузки уровня "Базовый" на портале Azure](https://docs.microsoft.com/azure/load-balancer/tutorial-load-balancer-basic-internal-portal).
 

@@ -44,18 +44,18 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 70a528bcf2e6f714b4ded8128d3a0757f3016607
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.openlocfilehash: 2d6226b6b5c21f1c233c41157ac85b8cfb48c690
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65820801"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454766"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>Мастер формирования и публикации скриптов
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   С помощью **мастера формирования и публикации скриптов** можно создавать скрипты для переноса баз данных между экземплярами [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] или [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. Скрипты для базы данных вы можете создавать на экземпляре компонента ядра СУБД в локальной сети или из [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Сформированные скрипты могут выполняться на другом экземпляре компонента ядра СУБД или [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. С помощью мастера также можно публиковать содержимое базы данных непосредственно в веб-службе, созданной с помощью проекта служб Database Publishing Services. Создать скрипты можно как для всей базы данных, так и ограничить их определенными данными или объектами.  
 
-См. подробнее в руководстве по [ использованию мастера создания скриптов](https://docs.microsoft.com/sql/ssms/tutorials/scripting-ssms#script-database-using-generate-scripts-option).
+См. подробнее в руководстве по [ использованию мастера создания скриптов](https://docs.microsoft.com/sql/ssms/tutorials/scripting-ssms#script-databases).
 
 
   
@@ -126,7 +126,7 @@ ms.locfileid: "65820801"
 
   ![Сохранять](media/generate-and-publish-scripts-wizard/save.png)   
   
--   **Сохранить в файл** — сохранение скрипта в одном или нескольких SQL-файлах. Нажмите кнопку обзора (**...**), чтобы задать имя и выбрать местоположение файла. Установите флажок **Перезаписать существующий файл** , чтобы заменить существующий файл с тем же именем. Нажмите кнопку **Один файл** или **Один файл на объект** , чтобы определить, каким образом должны формироваться скрипты. Выберите **Текст в Юникоде** или **Текст ANSI** , чтобы указать тип текста, который должен использоваться в скрипте.  
+-   **Сохранить в файл** — сохранение скрипта в одном или нескольких SQL-файлах. Нажмите кнопку обзора ( **...** ), чтобы задать имя и выбрать местоположение файла. Установите флажок **Перезаписать существующий файл** , чтобы заменить существующий файл с тем же именем. Нажмите кнопку **Один файл** или **Один файл на объект** , чтобы определить, каким образом должны формироваться скрипты. Выберите **Текст в Юникоде** или **Текст ANSI** , чтобы указать тип текста, который должен использоваться в скрипте.  
   
 -   **Сохранить в буфер обмена** — сохранение скрипта Transact-SQL в буфере обмена.  
   

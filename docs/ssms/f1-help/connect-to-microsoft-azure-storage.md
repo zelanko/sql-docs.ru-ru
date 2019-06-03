@@ -14,12 +14,12 @@ ms.assetid: ''
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2bcacf7ab799ef36ab0f28bcc78ad27be2afe67c
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.openlocfilehash: 2c4381ddbbe0a218b6fc53d8e054017b66068b59
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65102705"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454551"
 ---
 # <a name="connect-to-microsoft-azure-storage"></a>Подключение к службе хранилища Microsoft Azure
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "65102705"
 1.  **Учетная запись хранения** — укажите имя учетной записи хранения.
 
    >[!NOTE]
-   > Вы можете подключаться только к [учетным записям хранения общего назначения](https://docs.microsoft.com/azure/storage/storage-introduction#introducing-the-azure-storage-services). Подключение к другим типам учетных записей хранилища может привести к такой ошибке:
+   > Вы можете подключаться только к [учетным записям хранения общего назначения](https://docs.microsoft.com/azure/storage/storage-introduction#azure-storage-services). Подключение к другим типам учетных записей хранилища может привести к такой ошибке:
    >
    >  Значение одного из заголовков HTTP имеет неправильный формат. (Microsoft.SqlServer.StorageClient).
    >

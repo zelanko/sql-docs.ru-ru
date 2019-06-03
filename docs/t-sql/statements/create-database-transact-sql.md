@@ -38,12 +38,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: dcf9d83589b94846778e65392dd2483593f5d3ad
-ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
+ms.openlocfilehash: 95aa89336e4dcd6decc4434d4afaf77073dd45e0
+ms.sourcegitcommit: 5905c29b5531cef407b119ebf5a120316ad7b713
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65771472"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66428962"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -61,7 +61,7 @@ ms.locfileid: "65771472"
 
 |||||
 |-|-|-|-|
-|**_\* SQL Server \*_** &nbsp;| [Отдельная база данных/эластичный пул Базы данных SQL<br />](create-database-transact-sql.md?view=azuresqldb-current) | [Управляемый экземпляр Базы данных SQL<br />](create-database-transact-sql.md?view=azuresqldb-mi-current) | [Хранилище данных<br />SQL](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
+|** _\* SQL Server \*_ ** &nbsp;| [Отдельная база данных/эластичный пул Базы данных SQL<br />](create-database-transact-sql.md?view=azuresqldb-current) | [Управляемый экземпляр Базы данных SQL<br />](create-database-transact-sql.md?view=azuresqldb-mi-current) | [Хранилище данных<br />SQL](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
 |||||
 
 &nbsp;
@@ -326,7 +326,7 @@ ERROR_BROKER_CONVERSATIONS
 > Параметры **TRUSTWORTHY** и **DB_CHAINING** не оказывают влияния при присоединении базы данных.
 
 FOR ATTACH_REBUILD_LOG     
-Указывает, что база данных создана путем присоединения существующего набора файлов операционной системы. Этот параметр применяется только в базах данных, доступных для чтения и записи. Должна существовать запись *\<filespec>*, указывающая первичный файл. Если один или несколько файлов журналов транзакций отсутствуют, то файл журнала перестраивается. Параметр ATTACH_REBUILD_LOG автоматически создает новый файл журнала с размером 1 МБ. Этот файл помещается в местоположение для журнала по умолчанию. См. дополнительные сведения об [этом расположении](../../database-engine/configure-windows/view-or-change-the-default-locations-for-data-and-log-files.md).
+Указывает, что база данных создана путем присоединения существующего набора файлов операционной системы. Этот параметр применяется только в базах данных, доступных для чтения и записи. Должна существовать запись *\<filespec>* , указывающая первичный файл. Если один или несколько файлов журналов транзакций отсутствуют, то файл журнала перестраивается. Параметр ATTACH_REBUILD_LOG автоматически создает новый файл журнала с размером 1 МБ. Этот файл помещается в местоположение для журнала по умолчанию. См. дополнительные сведения об [этом расположении](../../database-engine/configure-windows/view-or-change-the-default-locations-for-data-and-log-files.md).
 
 > [!NOTE]
 > Если файлы журналов доступны, компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] использует их, не перестраивая файлы журнала.
@@ -354,10 +354,10 @@ NAME *logical_file_name*
 *logical_file_name*     
 Логическое имя, используемое в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при обращении к файлу. Аргумент *logical_file_name* должен быть уникальным в базе данных и соответствовать правилам для [идентификаторов](../../relational-databases/databases/database-identifiers.md). Имя может быть символом или константой Юникода, а также обычным идентификатором или идентификатором с разделителями.
 
-FILENAME { **'**_os\_file\_name_**'** | **'**_filestream\_path_**'** }      
+FILENAME { **'** _os\_file\_name_ **'**  |  **'** _filestream\_path_ **'** }      
 Задает имя файла в операционной системе (физическое имя).
 
-**'** *os_file_name* **'**     
+**'** *os_file_name* **'**      
 Путь и имя файла, используемые операционной системой при создании файла. Файл должен находиться на одном из следующих устройств: на локальном сервере, где установлен [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], в сети хранения данных [SAN] или в сети на основе iSCSI. Указанный путь должен существовать до выполнения инструкции CREATE DATABASE. Дополнительные сведения см. в подразделе "Файлы и файловые группы базы данных" раздела "Примечания".
 
 Параметры SIZE, MAXSIZE и FILEGROWTH доступны, если путь к файлу указан в формате UNC.
@@ -366,7 +366,7 @@ FILENAME { **'**_os\_file\_name_**'** | **'**_filestream\_path_**'** }
 
 Файлы данных не следует размещать в файловых системах со сжатием, за исключением случаев, когда файлы являются вторичными и доступны только для чтения или вся база данных доступна только для чтения. Файлы журналов ни в коем случае не должны размещаться в сжатых файловых системах.
 
-**'** *filestream_path* **'**      
+**'** *filestream_path* **'**       
 Для файловой группы FILESTREAM параметр FILENAME указывает путь, где будут храниться данные FILESTREAM. Должен существовать путь вплоть до последнего каталога, но последний каталог существовать не должен. Например, если указать путь "C:\MyFiles\MyFilestreamData", папка "C:\MyFiles" должна существовать до запуска инструкции ALTER DATABASE, а папка "MyFilestreamData" — не должна.
 
 Файловую группу и файл (`<filespec>`) необходимо создавать в одной инструкции.
@@ -439,7 +439,7 @@ DEFAULT
 *database_snapshot_name*    
 Имя нового моментального снимка базы данных. Имена моментальных снимков баз данных должны быть уникальны внутри экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и соответствовать правилам для идентификаторов. *database_snapshot_name* не может превышать 128 символов.
 
-ON **(** NAME **=**_logical\_file\_name_**,** FILENAME **='**_os\_file\_name_**')** [ **,**... *n* ]    
+ON **(** NAME **=** _logical\_file\_name_ **,** FILENAME **='** _os\_file\_name_ **')** [ **,** ... *n* ]    
 При создании моментального снимка базы данных указывает список файлов в базе данных-источнике. Для работы моментального снимка все файлы данных должны задаваться отдельно. Однако не разрешается указывать файлы журналов для моментальных снимков базы данных. В моментальных снимках базы данных не поддерживаются файловые группы FILESTREAM. Если файл данных FILESTREAM задействован в предложении CREATE DATABASE ON, выполнение этой инструкции завершится сбоем и приведет к возникновению ошибки.
 
 Описания параметров NAME и FILENAME и их значений см. в описаниях соответствующих значений \<filespec>.
@@ -865,7 +865,7 @@ GO
 
 > |||||
 > |-|-|-|-|
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| **_\* Отдельная база данных/эластичный пул Базы данных SQL<br /> \*_** | [Управляемый экземпляр Базы данных SQL<br />](create-database-transact-sql.md?view=azuresqldb-mi-current) | [Хранилище данных<br />SQL](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| ** _\* Отдельная база данных/эластичный пул Базы данных SQL<br /> \*_ ** | [Управляемый экземпляр Базы данных SQL<br />](create-database-transact-sql.md?view=azuresqldb-mi-current) | [Хранилище данных<br />SQL](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
@@ -892,18 +892,18 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
   MAXSIZE = { 100 MB | 250 MB | 500 MB | 1 ... 1024 ... 4096 GB }
   | ( EDITION = { 'basic' | 'standard' | 'premium' | 'GeneralPurpose' | 'BusinessCritical' | 'Hyperscale' }
   | SERVICE_OBJECTIVE =
-    { 'basic' | 'S0' | 'S1' | 'S2' | 'S3' | 'S4'| 'S6'| 'S7'| 'S9'| 'S12' |
+    { 'basic' | 'S0' | 'S1' | 'S2' | 'S3' | 'S4'| 'S6'| 'S7'| 'S9'| 'S12'
       | 'P1' | 'P2' | 'P4'| 'P6' | 'P11' | 'P15'
-      | 'GP_GEN4_1' | 'GP_GEN4_2' | 'GP_GEN4_3' | 'GP_GEN4_4' | 'GP_GEN4_5' | 'GP_GEN4_6' |
-      | 'GP_Gen4_7' | 'GP_Gen4_8' | 'GP_Gen4_9' | 'GP_Gen4_10' | 'GP_Gen4_16' | 'GP_Gen4_24' |
-      | 'GP_Gen5_2' | 'GP_Gen5_4' | 'GP_Gen5_6' | 'GP_Gen5_8' | 'GP_Gen5_10' | 'GP_Gen5_12' | 'GP_Gen5_14' |
-      | 'GP_Gen5_16' | 'GP_Gen5_18' | 'GP_Gen5_20' | 'GP_Gen5_24' | 'GP_Gen5_32' | 'GP_Gen5_40' | 'GP_Gen5_80' |
-      | 'BC_Gen4_1' | 'BC_Gen4_2' | 'BC_Gen4_3' | 'BC_Gen4_4' | 'BC_Gen4_5' | 'BC_Gen4_6' |
-      | 'BC_Gen4_7' | 'BC_Gen4_8' | 'BC_Gen4_9' | 'BC_Gen4_10' | 'BC_Gen4_16' | 'BC_Gen4_24' |
-      | 'BC_Gen5_2' | 'BC_Gen5_4' | 'BC_Gen5_6' | 'BC_Gen5_8' | 'BC_Gen5_10' | 'BC_Gen5_12' | 'BC_Gen5_14' |
-      | 'BC_Gen5_16' | 'BC_Gen5_18' | 'BC_Gen5_20' | 'BC_Gen5_24' | 'BC_Gen5_32' | 'BC_Gen5_40' | 'BC_Gen5_80' |
-      | 'HS_GEN4_1' | 'HS_GEN4_2' | 'HS_GEN4_4' | 'HS_GEN4_8' | 'HS_GEN4_16' | 'HS_GEN4_24' |
-      | 'HS_GEN5_2' | 'HS_GEN5_4' | 'HS_GEN5_8' | 'HS_GEN5_16' | 'HS_GEN5_24' | 'HS_GEN5_32' | 'HS_GEN5_48' | 'HS_GEN5_80' |
+      | 'GP_GEN4_1' | 'GP_GEN4_2' | 'GP_GEN4_3' | 'GP_GEN4_4' | 'GP_GEN4_5' | 'GP_GEN4_6'
+      | 'GP_Gen4_7' | 'GP_Gen4_8' | 'GP_Gen4_9' | 'GP_Gen4_10' | 'GP_Gen4_16' | 'GP_Gen4_24'
+      | 'GP_Gen5_2' | 'GP_Gen5_4' | 'GP_Gen5_6' | 'GP_Gen5_8' | 'GP_Gen5_10' | 'GP_Gen5_12' | 'GP_Gen5_14'
+      | 'GP_Gen5_16' | 'GP_Gen5_18' | 'GP_Gen5_20' | 'GP_Gen5_24' | 'GP_Gen5_32' | 'GP_Gen5_40' | 'GP_Gen5_80'
+      | 'BC_Gen4_1' | 'BC_Gen4_2' | 'BC_Gen4_3' | 'BC_Gen4_4' | 'BC_Gen4_5' | 'BC_Gen4_6'
+      | 'BC_Gen4_7' | 'BC_Gen4_8' | 'BC_Gen4_9' | 'BC_Gen4_10' | 'BC_Gen4_16' | 'BC_Gen4_24'
+      | 'BC_Gen5_2' | 'BC_Gen5_4' | 'BC_Gen5_6' | 'BC_Gen5_8' | 'BC_Gen5_10' | 'BC_Gen5_12' | 'BC_Gen5_14'
+      | 'BC_Gen5_16' | 'BC_Gen5_18' | 'BC_Gen5_20' | 'BC_Gen5_24' | 'BC_Gen5_32' | 'BC_Gen5_40' | 'BC_Gen5_80'
+      | 'HS_GEN4_1' | 'HS_GEN4_2' | 'HS_GEN4_4' | 'HS_GEN4_8' | 'HS_GEN4_16' | 'HS_GEN4_24'
+      | 'HS_GEN5_2' | 'HS_GEN5_4' | 'HS_GEN5_8' | 'HS_GEN5_16' | 'HS_GEN5_24' | 'HS_GEN5_32' | 'HS_GEN5_48' | 'HS_GEN5_80'
       | { ELASTIC_POOL(name = <elastic_pool_name>) } })
 }
 ```
@@ -913,18 +913,18 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 CREATE DATABASE database_name
     AS COPY OF [source_server_name.] source_database_name
     [ ( SERVICE_OBJECTIVE =
-      { 'basic' |'S0' | 'S1' | 'S2' | 'S3'| 'S4'| 'S6'| 'S7'| 'S9'| 'S12' |
+      { 'basic' |'S0' | 'S1' | 'S2' | 'S3'| 'S4'| 'S6'| 'S7'| 'S9'| 'S12'
       | 'P1' | 'P2' | 'P4'| 'P6' | 'P11' | 'P15'
-      | 'GP_GEN4_1' | 'GP_GEN4_2' | 'GP_GEN4_3' | 'GP_GEN4_4' | 'GP_GEN4_5' | 'GP_GEN4_6' |
-      | 'GP_Gen4_7' | 'GP_Gen4_8' | 'GP_Gen4_9' | 'GP_Gen4_10' | 'GP_Gen4_16' | 'GP_Gen4_24' |
-      | 'GP_Gen5_2' | 'GP_Gen5_4' | 'GP_Gen5_6' | 'GP_Gen5_8' | 'GP_Gen5_10' | 'GP_Gen5_12' | 'GP_Gen5_14' |
-      | 'GP_Gen5_16' | 'GP_Gen5_18' | 'GP_Gen5_20' | 'GP_Gen5_24' | 'GP_Gen5_32' | 'GP_Gen5_40' | 'GP_Gen5_80' |
-      | 'BC_Gen4_1' | 'BC_Gen4_2' | 'BC_Gen4_3' | 'BC_Gen4_4' | 'BC_Gen4_5' | 'BC_Gen4_6' |
-      | 'BC_Gen4_7' | 'BC_Gen4_8' | 'BC_Gen4_9' | 'BC_Gen4_10' | 'BC_Gen4_16' | 'BC_Gen4_24' |
-      | 'BC_Gen5_2' | 'BC_Gen5_4' | 'BC_Gen5_6' | 'BC_Gen5_8' | 'BC_Gen5_10' | 'BC_Gen5_12' | 'BC_Gen5_14' |
-      | 'BC_Gen5_16' | 'BC_Gen5_18' | 'BC_Gen5_20' | 'BC_Gen5_24' | 'BC_Gen5_32' | 'BC_Gen5_40' | 'BC_Gen5_80' |
-      | 'HS_GEN4_1' | 'HS_GEN4_2' | 'HS_GEN4_4' | 'HS_GEN4_8' | 'HS_GEN4_16' | 'HS_GEN4_24' |
-      | 'HS_GEN5_2' | 'HS_GEN5_4' | 'HS_GEN5_8' | 'HS_GEN5_16' | 'HS_GEN5_24' | 'HS_GEN5_32' | 'HS_GEN5_48' | 'HS_GEN5_80' |
+      | 'GP_GEN4_1' | 'GP_GEN4_2' | 'GP_GEN4_3' | 'GP_GEN4_4' | 'GP_GEN4_5' | 'GP_GEN4_6'
+      | 'GP_Gen4_7' | 'GP_Gen4_8' | 'GP_Gen4_9' | 'GP_Gen4_10' | 'GP_Gen4_16' | 'GP_Gen4_24'
+      | 'GP_Gen5_2' | 'GP_Gen5_4' | 'GP_Gen5_6' | 'GP_Gen5_8' | 'GP_Gen5_10' | 'GP_Gen5_12' | 'GP_Gen5_14'
+      | 'GP_Gen5_16' | 'GP_Gen5_18' | 'GP_Gen5_20' | 'GP_Gen5_24' | 'GP_Gen5_32' | 'GP_Gen5_40' | 'GP_Gen5_80'
+      | 'BC_Gen4_1' | 'BC_Gen4_2' | 'BC_Gen4_3' | 'BC_Gen4_4' | 'BC_Gen4_5' | 'BC_Gen4_6'
+      | 'BC_Gen4_7' | 'BC_Gen4_8' | 'BC_Gen4_9' | 'BC_Gen4_10' | 'BC_Gen4_16' | 'BC_Gen4_24'
+      | 'BC_Gen5_2' | 'BC_Gen5_4' | 'BC_Gen5_6' | 'BC_Gen5_8' | 'BC_Gen5_10' | 'BC_Gen5_12' | 'BC_Gen5_14'
+      | 'BC_Gen5_16' | 'BC_Gen5_18' | 'BC_Gen5_20' | 'BC_Gen5_24' | 'BC_Gen5_32' | 'BC_Gen5_40' | 'BC_Gen5_80'
+      | 'HS_GEN4_1' | 'HS_GEN4_2' | 'HS_GEN4_4' | 'HS_GEN4_8' | 'HS_GEN4_16' | 'HS_GEN4_24'
+      | 'HS_GEN5_2' | 'HS_GEN5_4' | 'HS_GEN5_8' | 'HS_GEN5_16' | 'HS_GEN5_24' | 'HS_GEN5_32' | 'HS_GEN5_48' | 'HS_GEN5_80'
       | { ELASTIC_POOL(name = <elastic_pool_name>) } )
    ]
 [;]
@@ -1194,7 +1194,7 @@ CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140 (MAXSIZE = 100 MB, EDITION = '
 
 > |||||
 > |-|-|-|-|
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [Отдельная база данных/эластичный пул Базы данных SQL<br />](create-database-transact-sql.md?view=azuresqldb-current)| **_\* Управляемый экземпляр Базы данных SQL<br /> \*_** | [Хранилище данных<br />SQL](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [Отдельная база данных/эластичный пул Базы данных SQL<br />](create-database-transact-sql.md?view=azuresqldb-current)| ** _\* Управляемый экземпляр Базы данных SQL<br /> \*_ ** | [Хранилище данных<br />SQL](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
@@ -1261,7 +1261,7 @@ CREATE DATABASE TestDB1;
 
 > |||||
 > |-|-|-|-|
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [Отдельная база данных/эластичный пул Базы данных SQL<br />](create-database-transact-sql.md?view=azuresqldb-current)| [Управляемый экземпляр Базы данных SQL<br />](create-database-transact-sql.md?view=azuresqldb-mi-current)| **_\* Хранилище данных<br />SQL \*_**| [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [Отдельная база данных/эластичный пул Базы данных SQL<br />](create-database-transact-sql.md?view=azuresqldb-current)| [Управляемый экземпляр Базы данных SQL<br />](create-database-transact-sql.md?view=azuresqldb-mi-current)| ** _\* Хранилище данных<br />SQL \*_ **| [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
@@ -1373,7 +1373,7 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
 
 > |||||
 > |-|-|-|-|
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [Отдельная база данных/эластичный пул Базы данных SQL<br />](create-database-transact-sql.md?view=azuresqldb-current)| [Управляемый экземпляр Базы данных SQL<br />](create-database-transact-sql.md?view=azuresqldb-mi-current)|[Хранилище данных<br />SQL](create-database-transact-sql.md?view=azure-sqldw-latest)|**_\* Analytics Platform<br />System (PDW) \*_** |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [Отдельная база данных/эластичный пул Базы данных SQL<br />](create-database-transact-sql.md?view=azuresqldb-current)| [Управляемый экземпляр Базы данных SQL<br />](create-database-transact-sql.md?view=azuresqldb-mi-current)|[Хранилище данных<br />SQL](create-database-transact-sql.md?view=azure-sqldw-latest)|** _\* Analytics Platform<br />System (PDW) \*_ ** |
 
 &nbsp;
 

@@ -10,12 +10,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: c5127fd5aec582db4f8e574f29cab5cec3809252
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 7a39657a1bc1bfd9909a4c31a028ce4fa7816553
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58072218"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454748"
 ---
 # <a name="install-sql-server-using-a-configuration-file"></a>Установка SQL Server с помощью файла конфигурации
 
@@ -23,7 +23,7 @@ ms.locfileid: "58072218"
  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Программа установки предоставляет возможность создать файл конфигурации на основе системных значений по умолчанию и значений, вводимых во время выполнения. Файл конфигурации может быть использован для развертывания [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на всем предприятии с одной и той же конфигурацией. Стандартизировать установки в ручном режиме на территории предприятия также можно, создав пакетный файл, запускающий файл Setup.exe. 
  
-Эта статья поддерживается для SQL Server 2016 и более поздних версий. Сведения о более ранних версиях SQL Server см. в разделе [Установка SQL Server 2014 с помощью файла конфигурации](/../../2014/database-engine/install-windows/install-sql-server-using-a-configuration-file.md).
+Эта статья поддерживается для SQL Server 2016 и более поздних версий. Сведения о более ранних версиях SQL Server см. в разделе [Установка SQL Server 2014 с помощью файла конфигурации](https://docs.microsoft.com/sql/database-engine/install-windows/install-sql-server-using-a-configuration-file?view=sql-server-2014).
  
 Программа установки поддерживает использование файлов конфигурации только через командную строку. Порядок обработки параметров при использовании файла конфигурации описывается ниже.  
   
