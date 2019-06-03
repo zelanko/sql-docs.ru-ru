@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b02a4b2776e39d7130bc47a42050b0f7be9af4d3
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 9efad50aeb778c4cae01145fb39dd10a71c42ca0
+ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65581225"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66413566"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Экспорт в Microsoft Word (построитель отчетов и службы SSRS)
 
@@ -151,7 +151,7 @@ ms.locfileid: "65581225"
 > [!IMPORTANT]  
 >  Модуль подготовки отчетов [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 (DOC) устарел. Дополнительные сведения см. в разделе [Нерекомендуемые функции служб SQL Server Reporting Services в SQL Server 2016](~/reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md).  
   
- Модуль подготовки отчетов Word является совместимым с [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003, а также с установленным пакетом совместимости [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office для Word, Excel и PowerPoint. Дополнительные сведения см. в разделе [Пакет совместимости Microsoft Office для Word, Excel и PowerPoint](https://go.microsoft.com/fwlink/?LinkID=205622).  
+ Модуль подготовки отчетов Word является совместимым с [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003, а также с установленным пакетом совместимости [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office для Word, Excel и PowerPoint. Дополнительные сведения см. в разделе [Пакет совместимости Microsoft Office для Word, Excel и PowerPoint](https://www.microsoft.com/download/details.aspx?id=12439).  
   
  Предыдущая версия модуля подготовки отчетов Word, совместимая с [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003, переименована в Word 2003. По умолчанию доступен только модуль подготовки отчетов Word. Чтобы получить доступ к модулю подготовки отчетов Word 2003, необходимо обновить файлы конфигурации служб Reporting Services. Модуль подготовки Word 2003 создает содержимое файлов типа **application/vnd.ms-word** , имена файлов имеют расширение DOC.  
   
