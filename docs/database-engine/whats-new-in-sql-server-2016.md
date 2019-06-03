@@ -14,12 +14,12 @@ ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ad8f8aca9577023d3170fc0c1b6e7e4099129a90
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 850f0bac65f0c8955c50514145fb0d2998d6139a
+ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58872314"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66413611"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>Новые возможности в ядре СУБД SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "58872314"
 
 #### <a name="try-it-out"></a>Попробуйте продукт
 
-- Чтобы скачать [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], перейдите на сайт **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**![скачать](../analysis-services/media/download.png "скачать").
+- Чтобы скачать [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], перейдите на сайт **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** ![скачать](../analysis-services/media/download.png "скачать").
 
 - Есть учетная запись Azure?  Затем перейдите **[сюда](https://azure.microsoft.com/services/virtual-machines/sql-server/)** , чтобы запустить виртуальную машину с уже установленным [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] .
 
@@ -444,7 +444,7 @@ AlwaysOn теперь поддерживает зашифрованные баз
 ### <a name="upgrade-advisor"></a>Советник по переходу
 SQL Server 2016 Upgrade Advisor Preview — это автономное средство, которое позволяет пользователям предыдущих версий применять набор правил обновления для базы данных SQL Server, чтобы выявить сбои, изменения поведения и нерекомендуемые функции, а также получить справку по внедрению новых функций, таких как Stretch Database.
 
- Вы можете скачать Upgrade Advisor Preview [здесь](https://www.microsoft.com/download/details.aspx?id=48119) или установить его с помощью установщика веб-платформы.
+ Вы можете скачать Upgrade Advisor Preview [здесь](https://docs.microsoft.com/sql/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades#how-to-install-and-run-upgrade-advisor) или установить его с помощью установщика веб-платформы.
 
 ## <a name="see-also"></a>См. также:
 [Что нового в SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)
