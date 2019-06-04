@@ -17,7 +17,7 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3fc62dc5f0e716273df257aba7fdc137391d3055
 ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 01/09/2019
 ms.locfileid: "54124594"
@@ -74,7 +74,7 @@ ms.locfileid: "54124594"
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   
-3.  В следующем примере столбец `SalesTerritory` в таблице `SalesTerr` переименовывается в `Sales` . Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**.  
+3.  В следующем примере в схеме `Sales` таблица `SalesTerritory` переименовывается в `SalesTerr`. Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**.  
   
     ```  
     USE AdventureWorks2012;   
