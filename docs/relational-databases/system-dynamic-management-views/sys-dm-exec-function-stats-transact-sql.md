@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4f8305dbb894ff679d26702ddd877add9eeb4f76
-ms.sourcegitcommit: 5905c29b5531cef407b119ebf5a120316ad7b713
+ms.openlocfilehash: 935b63a38cbef585c33d2241652f4951189b61b4
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66428952"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462545"
 ---
 # <a name="sysdmexecfunctionstats-transact-sql"></a>sys.dm_exec_function_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -68,10 +68,10 @@ ms.locfileid: "66428952"
 |**last_elapsed_time**|**bigint**|Затраченное время в микросекундах, последнее выполнение этой функции.|  
 |**min_elapsed_time**|**bigint**|Минимальное время, в микросекундах завершил выполнение этой функции.|  
 |**max_elapsed_time**|**bigint**|Максимальное время, в микросекундах завершил выполнение этой функции.|  
-|**total_page_server_reads**|**bigint**|Общее число удаленных страницы сервера операций считывания при выполнении этой функции с момента его компиляции.<br /><br /> **Область применения:** Гипермасштабируемый базы данных Azure SQL.|  
-|**last_physical_reads**|**bigint**|Количество операций считывания страницы удаленного сервера выполнена время последнего выполнения функции.<br /><br /> **Область применения:** Гипермасштабируемый базы данных Azure SQL.|  
-|**min_physical_reads**|**bigint**|Минимальное число сервера удаленной странице считывает, что эта функция когда-либо выполнил за одно выполнение.<br /><br /> **Область применения:** Гипермасштабируемый базы данных Azure SQL.|  
-|**max_physical_reads**|**bigint**|Максимальное количество серверов удаленной странице считывает, что эта функция когда-либо выполнил за одно выполнение.<br /><br /> **Область применения:** Гипермасштабируемый базы данных Azure SQL.|
+|**total_page_server_reads**|**bigint**|Общее число страниц сервера операций считывания при выполнении этой функции с момента его компиляции.<br /><br /> **Область применения:** Гипермасштабируемый базы данных Azure SQL.|  
+|**last_page_server_reads**|**bigint**|Число операций чтения страниц сервера выполнена время последнего выполнения функции.<br /><br /> **Область применения:** Гипермасштабируемый базы данных Azure SQL.|  
+|**min_page_server_reads**|**bigint**|Минимальное число server страница считывает, что эта функция когда-либо выполнил за одно выполнение.<br /><br /> **Область применения:** Гипермасштабируемый базы данных Azure SQL.|  
+|**max_page_server_reads**|**bigint**|Максимальное число страниц сервера считывает, что эта функция когда-либо выполнил за одно выполнение.<br /><br /> **Область применения:** Гипермасштабируемый базы данных Azure SQL.|
   
 ## <a name="permissions"></a>Разрешения  
 

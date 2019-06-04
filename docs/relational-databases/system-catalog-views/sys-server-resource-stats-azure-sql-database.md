@@ -20,12 +20,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: 2a0a1f82685cb107902c8065f2f696f615ad3930
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1f3d69d8fdfffaa6573f4813392509d0ca71c684
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62744076"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462776"
 ---
 # <a name="sysserverresourcestats-azure-sql-database"></a>sys.server_resource_stats (база данных SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "62744076"
 
  
 > [!TIP]  
->  Дополнительные сведения об этих ограничениях и уровней обслуживания см. в разделах [уровни служб управляемого экземпляра](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-service-tier).  
+>  Дополнительные сведения об этих ограничениях и уровней обслуживания см. в разделах [уровни служб управляемого экземпляра](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-service-tiers).  
     
 ## <a name="permissions"></a>Разрешения  
  Это представление доступно для всех ролей пользователей с разрешениями на подключение к **master** базы данных.  
@@ -79,4 +79,4 @@ HAVING AVG(avg_cpu_percent) >= 80
 ```  
     
 ## <a name="see-also"></a>См. также  
- [Управляемый экземпляр уровней служб](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-service-tier)
+ [Управляемый экземпляр уровней служб](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-service-tiers)

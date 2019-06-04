@@ -1,7 +1,7 @@
 ---
 title: sys.dm_db_partition_stats (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
-ms.date: 03/15/2017
+ms.date: 05/31/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0221361bb3b2bb33748b20353c71931e07568f3a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 74e3de1c32cb1ca1833121b4de1cef4db66f9e49
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63025122"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462654"
 ---
 # <a name="sysdmdbpartitionstats-transact-sql"></a>sys.dm_db_partition_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -34,19 +34,19 @@ ms.locfileid: "63025122"
   Возвращает страницу и сведения о количестве строк для всех секций текущей базы данных.  
   
 > [!NOTE]  
->  Вызывать его из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], используйте имя **sys.dm_pdw_nodes_db_partition_stats**.  
+>  Вызывать его из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], используйте имя **sys.dm_pdw_nodes_db_partition_stats**. Partition_id в sys.dm_pdw_nodes_db_partition_stats отличается от partition_id в представлении каталога sys.partitions для хранилища данных SQL Azure.
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**partition_id**|**bigint**|Идентификатор секции. Является уникальным в пределах базы данных. Это то же значение, что **partition_id** в **sys.partitions** представление каталога|  
+|**partition_id**|**bigint**|Идентификатор секции. Является уникальным в пределах базы данных. Это то же значение, что **partition_id** в **sys.partitions** каталога представление, за исключением хранилище данных SQL Azure.|  
 |**object_id**|**int**|Идентификатор таблицы или индексированного представления, в которое входит данная секция.|  
 |**index_id**|**int**|Идентификатор кучи или индекса, в который входит данная секция.<br /><br /> 0 = куча;<br /><br /> 1 = Кластеризованный индекс.<br /><br /> > 1 = некластеризованный индекс|  
 |**partition_number**|**int**|Номер секции внутри индекса или кучи (нумерация начинается с 1).|  
 |**in_row_data_page_count**|**bigint**|Количество страниц, используемых для хранения данных, содержащихся в строках данной секции. Если секция является частью кучи, то данное значение отображает количество страниц данных в куче. Если секция является частью индекса, то данное значение отображает количество страниц на конечном уровне. (Неконечные страницы сбалансированного дерева не включаются в счетчик.) (Карты распределения индекса) IAM-страницы не включаются в любом случае. Всегда 0 для оптимизированного для памяти xVelocity индекса columnstore.|  
 |**in_row_used_page_count**|**bigint**|Количество страниц, используемых для хранения и управления данными, содержащимися в строках данной секции. Данный счетчик учитывает страницы неконечные сбалансированного дерева, IAM-страниц и все страницы, включенные в **in_row_data_page_count** столбца. Всегда равно 0 для индекса columnstore.|  
 |**in_row_reserved_page_count**|**bigint**|Общее количество страниц, зарезервированных для хранения и управления данными в данной секции (учитываются как используемые, так и не используемые страницы). Всегда равно 0 для индекса columnstore.|  
-|**lob_used_page_count**|**bigint**|Количество страниц, используемых для хранения и управления out of row **текст**, **ntext**, **изображение**, **varchar(max)**, **nvarchar (max)** , **varbinary(max)**, и **xml** столбцов в пределах секции. IAM-страницы учитываются.<br /><br /> Количество больших объектов (LOB), используемых для хранения и управления данными индекса columnstore в секции.|  
-|**lob_reserved_page_count**|**bigint**|Общее число страниц, зарезервированных для хранения и управления ими out of row **текст**, **ntext**, **изображение**, **varchar(max)**,  **nvarchar(max)**, **varbinary(max)**, и **xml** столбцов в пределах секции, учитываются ли используемые страницы используется или нет. IAM-страницы учитываются.<br /><br /> Общее количество больших объектов (LOB), зарезервированных для хранения и управления индексом columnstore в секции.|  
+|**lob_used_page_count**|**bigint**|Количество страниц, используемых для хранения и управления out of row **текст**, **ntext**, **изображение**, **varchar(max)** , **nvarchar (max)** , **varbinary(max)** , и **xml** столбцов в пределах секции. IAM-страницы учитываются.<br /><br /> Количество больших объектов (LOB), используемых для хранения и управления данными индекса columnstore в секции.|  
+|**lob_reserved_page_count**|**bigint**|Общее число страниц, зарезервированных для хранения и управления ими out of row **текст**, **ntext**, **изображение**, **varchar(max)** ,  **nvarchar(max)** , **varbinary(max)** , и **xml** столбцов в пределах секции, учитываются ли используемые страницы используется или нет. IAM-страницы учитываются.<br /><br /> Общее количество больших объектов (LOB), зарезервированных для хранения и управления индексом columnstore в секции.|  
 |**row_overflow_used_page_count**|**bigint**|Количество страниц, используемых для хранения и управления строки, превышающие **varchar**, **nvarchar**, **varbinary**, и **sql_variant** столбцы в разделе. IAM-страницы учитываются.<br /><br /> Всегда равно 0 для индекса columnstore.|  
 |**row_overflow_reserved_page_count**|**bigint**|Общее число страниц, зарезервированных для хранения и управления ими строки, превышающие **varchar**, **nvarchar**, **varbinary**, и **sql_variant** столбцы в пределах секции, учитываются ли используемые страницы используется или нет. IAM-страницы учитываются.<br /><br /> Всегда равно 0 для индекса columnstore.|  
 |**used_page_count**|**bigint**|Общее число страниц, используемых в секции. Вычисляется как **in_row_used_page_count** + **lob_used_page_count** + **row_overflow_used_page_count**.|  

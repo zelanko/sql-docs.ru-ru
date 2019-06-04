@@ -1,7 +1,7 @@
 ---
 title: sys.dm_exec_trigger_stats, (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
-ms.date: 01/10/2018
+ms.date: 06/03/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cfd6485955cbdee7bece7ae8ab18c5138a5529f3
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 42fc6848b89c57e6bfab40f1af96013fc73271f6
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403539"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462703"
 ---
 # <a name="sysdmexectriggerstats-transact-sql"></a>sys.dm_exec_trigger_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -68,6 +68,11 @@ ms.locfileid: "52403539"
 |**last_spills**|**bigint**|Число страниц, сброшенных последнего выполнения триггера.<br /><br /> **Область применения**: Начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**min_spills**|**bigint**|Минимальное число страниц, которые этот триггер когда-нибудь вытеснены за одно выполнение.<br /><br /> **Область применения**: Начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**max_spills**|**bigint**|Максимальное число страниц, которые этот триггер когда-нибудь вытеснены за одно выполнение.<br /><br /> **Область применения**: Начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**total_page_server_reads**|**bigint**|Общее число страниц сервера операций считывания при выполнении триггера с момента его компиляции.<br /><br /> **Область применения**: Гипермасштабируемый базы данных Azure SQL|  
+|**last_page_server_reads**|**bigint**|Количество операций чтения страниц сервера операций последнего выполнения триггера.<br /><br /> **Область применения**: Гипермасштабируемый базы данных Azure SQL|  
+|**min_page_server_reads**|**bigint**|Минимальное число server страница считывает, что этот триггер когда-либо выполнил за одно выполнение.<br /><br /> **Область применения**: Гипермасштабируемый базы данных Azure SQL|  
+|**max_page_server_reads**|**bigint**|Максимальное число страниц сервера считывает, что этот триггер когда-либо выполнил за одно выполнение.<br /><br /> **Область применения**: Гипермасштабируемый базы данных Azure SQL|  
+
   
 ## <a name="remarks"></a>Примечания  
  Динамические административные представления в среде [!INCLUDE[ssSDS](../../includes/sssds-md.md)] не могут предоставлять информацию, которая может повлиять на автономность базы данных, или информацию о других базах данных, к которым имеет доступ пользователь. Чтобы избежать раскрытия этих сведений, все строки, содержащие данные, не принадлежащие к подключенному клиенту, фильтруются.  

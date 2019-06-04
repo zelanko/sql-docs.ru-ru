@@ -1,7 +1,7 @@
 ---
 title: sys.dm_exec_requests (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
-ms.date: 12/17/2018
+ms.date: 06/03/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 87be8cba02cac7f0ff6b1cd0fa966241745e5483
-ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
+ms.openlocfilehash: 03ca95fad4f6e88c22edb612441a9eb4ea986bbb
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58072238"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462526"
 ---
 # <a name="sysdmexecrequests-transact-sql"></a>sys.dm_exec_requests (Transact-SQL)
 
@@ -95,7 +95,8 @@ ms.locfileid: "58072238"
 |parallel_worker_count |**int** |**Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Количество зарезервированных параллельных рабочих процессов в случае параллельных запросов.  |  
 |external_script_request_id |**uniqueidentifier** |**Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Идентификатор запроса внешнего скрипта, связанного с текущим запросом. |  
 |is_resumable |**bit** |**Применимо к**: с [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Указывает, является ли запрос возобновляемой операции с индексами. |  
-|page_resource |**binary(8)** |**Область применения**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> 8-байтное шестнадцатеричное представление ресурса страницы Если `wait_resource` столбец содержит страницу отчета. |
+|page_resource |**binary(8)** |**Область применения**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> 8-байтное шестнадцатеричное представление ресурса страницы Если `wait_resource` столбец содержит страницу отчета. |  
+|page_server_reads|**bigint**|**Область применения**: Гипермасштабируемый базы данных Azure SQL<br /><br /> Число операций чтения страниц сервера, выполненных данным запросом. Не допускает значение NULL.|  
 
 ## <a name="remarks"></a>Примечания 
 Чтобы выполнить код, внешний по отношению к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (например, расширенную хранимую процедуру или распределенный запрос), поток должен выйти из-под управления планировщика, работающего в режиме без вытеснения. Для этого исполнитель переходит в режим с вытеснением. Значения времени, возвращаемые этим динамическим административным представлением, не включают время, затраченное в режиме с вытеснением.
