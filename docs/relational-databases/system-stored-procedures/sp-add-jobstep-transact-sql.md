@@ -1,7 +1,7 @@
 ---
 title: sp_add_jobstep (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -18,15 +18,16 @@ ms.assetid: 97900032-523d-49d6-9865-2734fba1c755
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: afa9128537cf699277385de3b7dce6aabd900191
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 112afe8f7a8eaea87c860264c820c874788cbc7f
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494416"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66500359"
 ---
 # <a name="spaddjobstep-transact-sql"></a>sp_add_jobstep (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Добавляет этап (операцию) к заданию.  
   
@@ -34,8 +35,7 @@ ms.locfileid: "58494416"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
-  
+```
 sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'   
      [ , [ @step_id = ] step_id ]   
      { , [ @step_name = ] 'step_name' }   
@@ -67,11 +67,11 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 > [!NOTE]  
 >  Либо *job_id* или *имя_задания* должен быть указан, но не оба аргумента одновременно.  
   
-`[ @step_id = ] step_id` Код порядковый номер для шага задания. Идентификационные номера этапа начинаются в **1** и увеличиваются без разрывов. Если этап вставляется в существующую последовательность, порядковые номера меняются автоматически. Если задано значение *step_id* не указан. *step_id*— **int**, значение по умолчанию NULL.  
+`[ @step_id = ] step_id` Код порядковый номер для шага задания. Идентификационные номера этапа начинаются в **1** и увеличиваются без разрывов. Если этап вставляется в существующую последовательность, порядковые номера меняются автоматически. Если задано значение *step_id* не указан. *step_id* — **int**, значение по умолчанию NULL.  
   
-`[ @step_name = ] 'step_name'` Имя шага. *step_name*— **sysname**, не имеет значения по умолчанию.  
+`[ @step_name = ] 'step_name'` Имя шага. *step_name* — **sysname**, не имеет значения по умолчанию.  
   
-`[ @subsystem = ] 'subsystem'` Подсистема, используемая [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] службу агента для выполнения *команда*. *Подсистема* — **nvarchar(40)**, и может принимать одно из следующих значений.  
+`[ @subsystem = ] 'subsystem'` Подсистема, используемая [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] службу агента для выполнения *команда*. *Подсистема* — **nvarchar(40)** , и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -88,7 +88,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |"**PowerShell**"|Скрипт PowerShell|  
 |"**TSQL**" (по умолчанию)|инструкция [!INCLUDE[tsql](../../includes/tsql-md.md)]|  
   
-`[ @command = ] 'command'` Команды для выполнения **SQLServerAgent** через *подсистемы*. *команда* — **nvarchar(max)**, значение по умолчанию NULL. Агент SQL Server выполняет замену токенов, что обеспечивает такую же гибкость, что и переменные при написании программ.  
+`[ @command = ] 'command'` Команды для выполнения **SQLServerAgent** через *подсистемы*. *команда* — **nvarchar(max)** , значение по умолчанию NULL. Агент SQL Server выполняет замену токенов, что обеспечивает такую же гибкость, что и переменные при написании программ.  
   
 > [!IMPORTANT]  
 >  Все токены, используемые в шагах заданий, теперь должны сопровождаться экранирующим макросом, в противном случае они вызовут ошибку. Кроме того, теперь имена токенов нужно заключать в круглые скобки и помещать в начале синтаксиса токена знак доллара (`$`). Пример:  
@@ -98,15 +98,15 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  Дополнительные сведения о токенах и обновлении шагов заданий для использования нового синтаксиса токенов см. в разделе [использование токенов в шагах заданий](../../ssms/agent/use-tokens-in-job-steps.md).  
   
 > [!IMPORTANT]  
->  Все пользователи Windows с разрешением на запись в журнал событий Windows могут получить доступ к шагам заданий, которые активированы предупреждениями агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или инструментария WMI. Чтобы избежать этого нарушения безопасности, в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] токены агента, которые могут использоваться в заданиях, активированных предупреждениями, по умолчанию отключены. Такими токенами являются **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG** и **WMI(**_property_**)**. Обратите внимание, что в этом выпуске использование токенов распространяется на все оповещения.  
+>  Все пользователи Windows с разрешением на запись в журнал событий Windows могут получить доступ к шагам заданий, которые активированы предупреждениями агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или инструментария WMI. Чтобы избежать этого нарушения безопасности, в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] токены агента, которые могут использоваться в заданиях, активированных предупреждениями, по умолчанию отключены. Такими токенами являются **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG** и **WMI(** _property_ **)** . Обратите внимание, что в этом выпуске использование токенов распространяется на все оповещения.  
 >   
 >  Если необходимо использовать эти токены, убедитесь, что только члены доверенных групп безопасности Windows, таких как группа «Администраторы», обладают разрешением на работу с журналом событий компьютера, на котором находится [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Затем, чтобы включить эти токены, щелкните правой кнопкой мыши элемент **Агент SQL Server** в обозревателе объектов, выберите пункт меню **Свойства**и на странице **Система предупреждений** установите флажок **Заменить токены всех ответов заданий на предупреждения** .  
   
 `[ @additional_parameters = ] 'parameters'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *Параметры* — **ntext**, значение по умолчанию NULL.  
   
-`[ @cmdexec_success_code = ] code` Значение, возвращенное **CmdExec** командой подсистемы, чтобы указать, что *команда* выполнена успешно. *код*— **int**, значение по умолчанию **0**.  
+`[ @cmdexec_success_code = ] code` Значение, возвращенное **CmdExec** командой подсистемы, чтобы указать, что *команда* выполнена успешно. *код* — **int**, значение по умолчанию **0**.  
   
-`[ @on_success_action = ] success_action` Действие, выполняемое, если шаг завершился успешно. *success_action*— **tinyint**, и может принимать одно из следующих значений.  
+`[ @on_success_action = ] success_action` Действие, выполняемое, если шаг завершился успешно. *success_action* — **tinyint**, и может принимать одно из следующих значений.  
   
 |Значение|Описание (действие)|  
 |-----------|----------------------------|  
@@ -115,9 +115,9 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |**3**|Перейти к следующему шагу.|  
 |**4**|Перейдите к шагу *on_success_step_id*|  
   
-`[ @on_success_step_id = ] success_step_id` Идентификатор этапа в этом задании для выполнения, если шаг завершился успешно и *success_action*— **4**. *success_step_id*— **int**, значение по умолчанию **0**.  
+`[ @on_success_step_id = ] success_step_id` Идентификатор этапа в этом задании для выполнения, если шаг завершился успешно и *success_action* — **4**. *success_step_id* — **int**, значение по умолчанию **0**.  
   
-`[ @on_fail_action = ] fail_action` Действие, выполняемое, если шаг завершился с ошибкой. *fail_action*— **tinyint**, и может принимать одно из следующих значений.  
+`[ @on_fail_action = ] fail_action` Действие, выполняемое, если шаг завершился с ошибкой. *fail_action* — **tinyint**, и может принимать одно из следующих значений.  
   
 |Значение|Описание (действие)|  
 |-----------|----------------------------|  
@@ -126,21 +126,21 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |**3**|Перейти к следующему шагу.|  
 |**4**|Перейдите к шагу *on_fail_step_id*|  
   
-`[ @on_fail_step_id = ] fail_step_id` Идентификатор этапа в этом задании для выполнения, если шаг завершился с ошибкой и *fail_action*— **4**. *fail_step_id*— **int**, значение по умолчанию **0**.  
+`[ @on_fail_step_id = ] fail_step_id` Идентификатор этапа в этом задании для выполнения, если шаг завершился с ошибкой и *fail_action* — **4**. *fail_step_id* — **int**, значение по умолчанию **0**.  
   
-`[ @server = ] 'server'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *сервер*— **nvarchar(30)**, значение по умолчанию NULL.  
+`[ @server = ] 'server'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *сервер* — **nvarchar(30)** , значение по умолчанию NULL.  
   
 `[ @database_name = ] 'database'` Имя базы данных, в которой выполняется [!INCLUDE[tsql](../../includes/tsql-md.md)] шаг. *База данных* — **sysname**, значение по умолчанию NULL, в противном случае **master** используется база данных. Символы, заключенные в квадратные скобки ([ ]), являются недопустимыми. Для шага задания ActiveX *базы данных* имя языка скриптов, который используется в этапе.  
   
 `[ @database_user_name = ] 'user'` Имя учетной записи пользователя, которая используется при выполнении [!INCLUDE[tsql](../../includes/tsql-md.md)] шаг. *пользователь* — **sysname**, значение по умолчанию NULL. Когда *пользователя* имеет значение NULL, этап выполняется в контексте пользователя владельца задания на *базы данных*.  Агент SQL Server включит этот параметр только в случае, если владелец задания — член роли SQL Server sysadmin. Если это так, то данный шаг Transact-SQL будет выполнен в контексте данного имени пользователя SQL Server. Если владелец задания не системного администратора SQL Server, то шаг Transact-SQL всегда будет выполняться в контексте имени входа, которому принадлежит это задание и @database_user_name параметр будет пропущен.  
   
-`[ @retry_attempts = ] retry_attempts` Число повторных попыток для использования, если этот шаг завершается ошибкой. *retry_attempts*— **int**, значение по умолчанию **0**, который указывает на отсутствие повторных попыток.  
+`[ @retry_attempts = ] retry_attempts` Число повторных попыток для использования, если этот шаг завершается ошибкой. *retry_attempts* — **int**, значение по умолчанию **0**, который указывает на отсутствие повторных попыток.  
   
-`[ @retry_interval = ] retry_interval` Количество времени в минутах между попытками повтора. *интервал_повтора*— **int**, значение по умолчанию **0**, которое указывает **0**-минутный интервал.  
+`[ @retry_interval = ] retry_interval` Количество времени в минутах между попытками повтора. *интервал_повтора* — **int**, значение по умолчанию **0**, которое указывает **0**-минутный интервал.  
   
 `[ @os_run_priority = ] run_priority` Зарезервировано.  
   
-`[ @output_file_name = ] 'file_name'` Имя файла, в котором будет сохранен выход данного шага. *File_name*— **nvarchar(200)**, значение по умолчанию NULL. *File_name*может включать один или несколько токенов, перечисленных в разделе *команда*. Этот параметр допустим только с командами, выполняемыми в [!INCLUDE[tsql](../../includes/tsql-md.md)], **CmdExec**, **PowerShell**, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], или [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] подсистем.  
+`[ @output_file_name = ] 'file_name'` Имя файла, в котором будет сохранен выход данного шага. *File_name* — **nvarchar(200)** , значение по умолчанию NULL. *File_name* может включать один или несколько токенов, перечисленных в разделе *команда*. Этот параметр допустим только с командами, выполняемыми в [!INCLUDE[tsql](../../includes/tsql-md.md)], **CmdExec**, **PowerShell**, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], или [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] подсистем.  
   
 `[ @flags = ] flags` — Это параметр, контролирующий поведение. *флаги* — **int**, и может принимать одно из следующих значений.  
   
@@ -192,14 +192,14 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 > [!NOTE]  
 >  В этом примере предполагается, что задание `Weekly Sales Data Backup` уже существует.  
   
-```  
+```sql
 USE msdb;  
 GO  
 EXEC sp_add_jobstep  
     @job_name = N'Weekly Sales Data Backup',  
     @step_name = N'Set database to read only',  
     @subsystem = N'TSQL',  
-    @command = N'ALTER DATABASE SALES SET READ_ONLY',   
+    @command = N'ALTER DATABASE SALES SET READ_ONLY',
     @retry_attempts = 5,  
     @retry_interval = 5 ;  
 GO  
