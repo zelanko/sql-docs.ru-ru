@@ -18,23 +18,23 @@ helpviewer_keywords:
 ms.assetid: 23b9fea8-4f76-4a51-95ce-1a6ce4560b34
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5cd13809703c14022b6e2a1e7dbb87716c4778c9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 4bdb60a6d174ab82df7529b6e26d8d5b2c031107
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63184001"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66703960"
 ---
 # <a name="columns-collection-adox"></a>Коллекция Columns (ADOX)
 Содержит все [столбец](../../../ado/reference/adox-api/column-object-adox.md) объекты, таблицы, индекса или ключа.  
   
 ## <a name="remarks"></a>Примечания  
- [Append](../../../ado/reference/adox-api/append-method-adox-columns.md) метод **столбцы** является уникальным для ADOX. Можно выполнить следующие действия:   
+ [Append](../../../ado/reference/adox-api/append-method-adox-columns.md) метод **столбцы** является уникальным для ADOX. Можно выполнить следующие действия:  
   
 -   Добавить новый столбец в коллекцию с **Append** метод.  
   
- Остальные свойства и методы являются стандартными для коллекции ADO. Можно выполнить следующие действия:   
+ Остальные свойства и методы являются стандартными для коллекции ADO. Можно выполнить следующие действия:  
   
 -   Доступ к столбцу в коллекции с [элемент](../../../ado/reference/ado-api/item-property-ado.md) свойство.  
   

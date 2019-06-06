@@ -382,6 +382,8 @@
               items:
                 - name: Создание мер и управление ими
                   href: ../analysis-services/tabular-models/create-and-manage-measures-ssas-tabular.md
+            - name: Группы вычисления
+              href: ../analysis-services/tabular-models/calculation-groups.md
             - name: Ключевые показатели эффективности
               href: ../analysis-services/tabular-models/kpis-ssas-tabular.md
               items:
@@ -803,7 +805,7 @@
               href: ../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md
             - name: Разрешения доступа
               href: ../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md
-            - name: 'Разрешения на Чтение Описания '
+            - name: Разрешения на Чтение Описания
               href: ../analysis-services/multidimensional-models/grant-read-definition-permissions-on-object-metadata-analysis-services.md
             - name: Разрешения измерения
               href: ../analysis-services/multidimensional-models/grant-permissions-on-a-dimension-analysis-services.md
@@ -2222,7 +2224,7 @@
                       href: ../mdx/calculationcurrentpass-mdx.md
                     - name: CalculationPassValue
                       href: ../mdx/calculationpassvalue-mdx.md
-                    - name: 'Инструкция CASE '
+                    - name: Инструкция CASE
                       href: ../mdx/case-statement-mdx.md
                     - name: Дети
                       href: ../mdx/children-mdx.md
@@ -2378,7 +2380,7 @@
                       href: ../mdx/measuregroupmeasures-mdx.md
                     - name: Медиана
                       href: ../mdx/median-mdx.md
-                    - name: 'Members (набор) '
+                    - name: Members (набор)
                       href: ../mdx/members-set-mdx.md
                     - name: Members (строка)
                       href: ../mdx/members-string-mdx.md
