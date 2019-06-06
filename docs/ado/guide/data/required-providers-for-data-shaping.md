@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: d49d48d2-ac2d-4c11-895c-5a149b444620
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7edd3b3cacd097380b5d14ad55ed115ff93cf072
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: b95d6e42174cbce4357562ac3b866f49f0b58fef
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63280499"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701794"
 ---
 # <a name="required-providers-for-data-shaping"></a>Обязательные поставщики для формирования данных
 Обычно для формирования данных требуется два поставщика. Поставщик услуг [службы Data Shaping Service для OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md), предоставляет формирования функции и поставщика данных, таких как поставщик OLE DB для SQL Server данных, передает строки данных, чтобы заполнить форму [набора записей ](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
  В качестве значения можно указать имя поставщика услуг (MSDataShape) [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объект [поставщика](../../../ado/reference/ado-api/provider-property-ado.md) свойство или ключевое слово строки подключения «поставщик = MSDataShape;».  
   
- Можно указать имя поставщика данных для параметра **поставщик данных** динамическое свойство, добавляемое к **подключения** объект [свойства](../../../ado/reference/ado-api/properties-collection-ado.md) коллекции с помощью службы Data Shaping Service для OLE DB или ключевое слово строки подключения "**поставщик данных =**_поставщика_«.  
+ Можно указать имя поставщика данных для параметра **поставщик данных** динамическое свойство, добавляемое к **подключения** объект [свойства](../../../ado/reference/ado-api/properties-collection-ado.md) коллекции с помощью службы Data Shaping Service для OLE DB или ключевое слово строки подключения "**поставщик данных =** _поставщика_«.  
   
  Поставщик данных не является обязательным, если **записей** не заполняется (например, в которое **записей** где столбцы создаются с помощью ключевого слова NEW). В этом случае указывается "**поставщик данных =** none;».  
   

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 9666fdcc-0544-4ed7-a97b-c415f2a56d7e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b150fe1c0c7260960140558eeff74b54c0798d80
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 251c35977421d63027fbc9d6042e193125da854d
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63308619"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66695634"
 ---
 # <a name="createparameter-method-ado"></a>Метод CreateParameter (ADO)
 Создает новый [параметр](../../../ado/reference/ado-api/parameter-object.md) объект с указанными свойствами.  
@@ -39,19 +39,19 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
   
 #### <a name="parameters"></a>Параметры  
  *Name*  
- Необязательный. Объект **строка** значение, содержащее имя **параметр** объекта.  
+ Необязательный параметр. Объект **строка** значение, содержащее имя **параметр** объекта.  
   
  *Тип*  
- Необязательный. Объект [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) значение, указывающее тип данных **параметр** объекта.  
+ Необязательный параметр. Объект [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) значение, указывающее тип данных **параметр** объекта.  
   
  *Направление*  
- Необязательный параметр. Объект [ParameterDirectionEnum](../../../ado/reference/ado-api/parameterdirectionenum.md) значение, указывающее тип **параметр** объекта.  
+ Необязательный. Объект [ParameterDirectionEnum](../../../ado/reference/ado-api/parameterdirectionenum.md) значение, указывающее тип **параметр** объекта.  
   
  *Размер*  
- Необязательный параметр. Объект **Long** значение, которое указывает максимальную длину для значения параметра в символах или байтах.  
+ Необязательный. Объект **Long** значение, которое указывает максимальную длину для значения параметра в символах или байтах.  
   
  *Значение*  
- Необязательный параметр. Объект **Variant** , указывающее значение для **параметр** объекта.  
+ Необязательный. Объект **Variant** , указывающее значение для **параметр** объекта.  
   
 ## <a name="remarks"></a>Примечания  
  Используйте **CreateParameter** метод для создания нового **параметр** объект с указанным именем, типом, направление, размер и значением. Все значения, указываемые в аргументах записываются в соответствующий **параметр** свойства.  

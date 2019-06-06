@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 84387746-aa3e-44fd-ad6c-a8214a6966dc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a284254c058eae0362fe23860e1b406a97f0bf49
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: afe8ff8c788a740ca98eca385146ecc71b6e1e95
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63222503"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704397"
 ---
 # <a name="working-with-multidimensional-data"></a>Работа с многомерными данными
 Объект *набора ячеек* является результатом запроса многомерных данных. Он состоит из коллекции осей, обычно не более четырех осей и обычно только два или три. *Оси* — это коллекция элементов из одного или нескольких измерений, который используется для поиска или фильтрации определенных значений в кубе.  

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 1cd30769-c8af-43e7-be27-12ed0434daa1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d6268c1eb31565a781929b235fd72f4c27091476
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: ddcc576731091596b8efa00c9473a7d167c9ee99
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63184125"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66707918"
 ---
 # <a name="clustered-property-example-vb"></a>Пример свойства Clustered (Visual Basic)
 В этом примере показано [Clustered](../../../ado/reference/adox-api/clustered-property-adox.md) свойство [индекс](../../../ado/reference/adox-api/index-object-adox.md). Обратите внимание, что базы данных Microsoft Jet не поддерживают кластеризованные индексы, поэтому этот пример возвращает **False** для **Clustered** свойства во всех индексах в **Northwind** База данных.  

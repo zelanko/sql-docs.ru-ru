@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 4909e413-f3b0-4183-8ad3-67b1434df742
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5d8f96b28a15258df4b7d093ce14f227f28ad9b0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 56d41b8c8fddff4d49cdb213834f45eac7fd5462
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63161746"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66700758"
 ---
 # <a name="error-handling"></a>Обработка ошибок
 ADO использует несколько различных методов для оповещения приложения, возникающих ошибок. В этом разделе рассматриваются типы ошибок, которые могут возникнуть при использовании ADO и способ уведомления приложения. Он приводит рекомендации о том, как обрабатывать эти ошибки.  

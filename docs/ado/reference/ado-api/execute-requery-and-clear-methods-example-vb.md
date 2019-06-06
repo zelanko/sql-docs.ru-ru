@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: ed5e1b60-3769-4b26-a253-1d721e37941d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 11fe5ef40e06772c38390096363903113a28bd46
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: bda27b7941244ac77de08e81baeb1307c14c60cc
+ms.sourcegitcommit: fc341b2e08937fdd07ea5f4d74a90677fcdac354
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63071814"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66719250"
 ---
 # <a name="execute-requery-and-clear-methods-example-vb"></a>EXECUTE, Requery и Clear методы (Visual Basic)
 В этом примере показано **Execute** метод, при запуске из обоих [команда](../../../ado/reference/ado-api/command-object-ado.md) объекта и [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекта. Он также использует [Requery](../../../ado/reference/ado-api/requery-method.md) метод для извлечения текущих данных в [записей](../../../ado/reference/ado-api/recordset-object-ado.md)и [снимите](../../../ado/reference/ado-api/clear-method-ado.md) метод, чтобы удалить содержимое [ошибки](../../../ado/reference/ado-api/errors-collection-ado.md)коллекции. ( **Ошибки** коллекции осуществляется через **подключения** объект [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) свойство [записей](../../../ado/reference/ado-api/recordset-object-ado.md).) ExecuteCommand и PrintOutput процедуры необходимы для выполнения этой процедуры.  

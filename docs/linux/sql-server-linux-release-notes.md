@@ -4,18 +4,17 @@ description: В этой статье содержатся заметки о в�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/25/2019
+ms.date: 06/25/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: e272187ae3e634246f9f32323438d81d633c3fbc
-ms.sourcegitcommit: 8aa51bc0bc54b266145c96f6451b59f369822160
+ms.openlocfilehash: da7d92fd1fa15deb83dbca9a1710b967d660b99f
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66036908"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705143"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Заметки о выпуске для SQL Server 2017 в Linux
 
@@ -48,6 +47,7 @@ ms.locfileid: "66036908"
 
 | Выпуск               | Version       | Дата выпуска |
 |-----------------------|---------------|--------------|
+| [CU15](#CU15)         | 14.0.3162.1   | 2019-05-23   |
 | [CU14](#CU14)         | 14.0.3076.1   | 2019-03-25   |
 | [CU13](#CU13)         | 14.0.3048.4   | 2018-12-18   |
 | [CU12](#CU12)         | 14.0.3045.24  | 2018-10-24   |
@@ -77,6 +77,20 @@ ms.locfileid: "66036908"
 - [Установите пакет Full-text Search](sql-server-linux-setup-full-text-search.md)
 - [Установка служб SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 - [Включить агент SQL Server](sql-server-linux-setup-sql-agent.md)
+
+## <a id="CU15"></a> CU15 (мая 2018 г.)
+
+Это накопительное обновление 15 (CU15) версия [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] Версия для этого выпуска — 14.0.3162.1. Сведения о исправления и улучшения в этом выпуске, см. в разделе [ https://support.microsoft.com/en-us/help/4498951 ](https://support.microsoft.com/en-us/help/4498951).
+
+### <a name="package-details"></a>Сведения о пакете
+
+Для установки пакетов вручную или автономном режиме вы можете скачать пакеты RPM и Debian с информацией в следующей таблице:
+
+| Пакет | Версия пакета | Файлы для загрузки |
+|-----|-----|-----|
+| Пакет Red Hat RPM | 14.0.3162.1-1 | [Пакет RPM ядра](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3162.1-1.x86_64.rpm)</br>[Высокий уровень доступности RPM пакета](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3162.1-1.x86_64.rpm)</br>[Пакет RPM поиска полнотекстового поиска](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3162.1-1.x86_64.rpm)</br>[Пакет служб SSIS](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
+| Пакет SLES RPM | 14.0.3162.1-1 | [пакет RPM ядра MSSQL-server](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3162.1-1.x86_64.rpm)</br>[Высокий уровень доступности RPM пакета](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3162.1-1.x86_64.rpm)</br>[Пакет RPM поиска полнотекстового поиска](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3162.1-1.x86_64.rpm) | 
+| Пакет Debian Ubuntu 16.04 | 14.0.3162.1-1 | [Пакет Debian ядра](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3162.1-1_amd64.deb)</br>[Высокий уровень доступности Debian пакета](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3162.1-1_amd64.deb)</br>[Пакет Debian полнотекстового поиска](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3162.1-1_amd64.deb)<br/>[Пакет служб SSIS](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
 ## <a id="CU14"></a> CU14 (марта 2018 г.)
 

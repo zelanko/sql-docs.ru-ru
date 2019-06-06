@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 3236749c-4b71-4235-89e2-ccdfaaa9319d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c2b02ac3d8e95bb583515dfa780f473402ea798f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 9aee9b4f6054b5cbfca41db35f34a27000a7ac01
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63241102"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66719217"
 ---
 # <a name="open-method-ado-recordset"></a>Метод Open (объект Recordset ADO)
 Открывает курсор на [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта.  
@@ -39,16 +39,16 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
  Необязательный параметр. Объект **Variant** , результатом которого является допустимым является [команда](../../../ado/reference/ado-api/command-object-ado.md) объекта, инструкции SQL, имя таблицы, вызов хранимой процедуры, URL-адрес или имя файла или [Stream](../../../ado/reference/ado-api/stream-object-ado.md) объект, содержащий постоянно храниться [записей](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
  *ActiveConnection*  
- Необязательный. Либо **Variant** , результатом которого является допустимым является [подключения](../../../ado/reference/ado-api/connection-object-ado.md) переменная с именем объекта или **строка** , содержащий [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) параметры.  
+ Необязательный параметр. Либо **Variant** , результатом которого является допустимым является [подключения](../../../ado/reference/ado-api/connection-object-ado.md) переменная с именем объекта или **строка** , содержащий [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) параметры.  
   
  *Примеры CursorType*  
- Необязательный. Объект [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md) значение, определяющее тип курсора, поставщик следует использовать при открытии **записей**. Значение по умолчанию — **adOpenForwardOnly**.  
+ Необязательный параметр. Объект [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md) значение, определяющее тип курсора, поставщик следует использовать при открытии **записей**. Значение по умолчанию — **adOpenForwardOnly**.  
   
  *LockType*  
  Необязательный параметр. Объект [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) значение, которое определяет, какой тип блокировки (параллелизм) поставщик следует использовать при открытии **записей**. Значение по умолчанию — **adLockReadOnly**.  
   
  *Параметры*  
- Необязательный параметр. Объект **Long** значение, указывающее, каким образом следует оценить, поставщик *источника* аргумент, если что-то отличное от **команда** объекта или, **Записей** должен быть восстановлен из файла, где он был ранее сохранен. Может быть один или несколько [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) или [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) значения, которые могут быть объединены с помощью побитового оператора OR.  
+ Необязательный. Объект **Long** значение, указывающее, каким образом следует оценить, поставщик *источника* аргумент, если что-то отличное от **команда** объекта или, **Записей** должен быть восстановлен из файла, где он был ранее сохранен. Может быть один или несколько [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) или [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) значения, которые могут быть объединены с помощью побитового оператора OR.  
   
 > [!NOTE]
 >  При открытии **записей** из **Stream** содержащий материализованный **записей**, с использованием [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) значение **adAsyncFetchNonBlocking** не окажет никакого воздействия; выборка будет иметь синхронной и блокировки.  

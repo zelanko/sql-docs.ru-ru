@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 518905a9-6044-4194-af6c-84952d95939d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 30f7f4f4165b608070fafa5464e64c9c238651c7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 64388f36f93857c9c6b2b5c036d3c96ddda9152d
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63184172"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66707964"
 ---
 # <a name="catalog-activeconnection-property-example-vc"></a>Пример свойства ActiveConnection объекта Catalog (Visual C++)
 Установка [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) присвоено допустимое соединение, откройте «открывает» каталог. Из открытых каталога можно получить доступ к схеме объектов, содержащихся в каталоге.  

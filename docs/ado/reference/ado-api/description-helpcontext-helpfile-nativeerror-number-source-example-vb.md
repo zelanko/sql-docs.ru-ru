@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 5c728458-d85c-497c-afcf-2cfa36c3342a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 139ffaee3210709dd82f328eca88bb3ae2973bbe
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 87aee91ea6a293afe95ceb9fd22237d689e1200f
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63140416"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66719322"
 ---
 # <a name="description-helpcontext-helpfile-nativeerror-number-source-and-sqlstate-properties-example-vb"></a>Description, HelpContext, HelpFile, NativeError, номер, источника и SQLState свойства пример (Visual Basic)
 Этот пример вызывает ошибку, он перехватывает и отображает [описание](../../../ado/reference/ado-api/description-property.md), [HelpContext](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md), [HelpFile](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md), [NativeError](../../../ado/reference/ado-api/nativeerror-property-ado.md), [ Номер](../../../ado/reference/ado-api/number-property-ado.md), [источника](../../../ado/reference/ado-api/source-property-ado-error.md), и [SQLState](../../../ado/reference/ado-api/sqlstate-property.md) свойства результирующего [ошибка](../../../ado/reference/ado-api/error-object.md) объекта.  

@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 663defab-5545-4973-9036-24d5882c9737
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 008ff3dacaa4bf3256429984973608c10a73d43e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 01d18e643dd769daa22309bb6c3df6407ab9043f
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63217670"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66719169"
 ---
 # <a name="open-method-ado-connection"></a>Метод Open (объект Connection ADO)
 Открывает подключение к источнику данных.  
@@ -37,10 +37,10 @@ connection.Open ConnectionString, UserID, Password, Options
   
 #### <a name="parameters"></a>Параметры  
  *connectionString*  
- Необязательный параметр. Объект **строка** значение, содержащее сведения о соединении. См. в разделе [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) свойство Дополнительные сведения о допустимых параметров.  
+ Необязательный. Объект **строка** значение, содержащее сведения о соединении. См. в разделе [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) свойство Дополнительные сведения о допустимых параметров.  
   
  *UserID*  
- Необязательный. Объект **строка** значение, содержащее имя пользователя для использования при установке соединения.  
+ Необязательный параметр. Объект **строка** значение, содержащее имя пользователя для использования при установке соединения.  
   
  *Пароль*  
  Необязательный параметр. Объект **строка** значение, содержащее пароль для использования при установке соединения.  

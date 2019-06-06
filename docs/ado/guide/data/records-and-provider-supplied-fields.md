@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 77f95e0a-0cf2-411a-a792-593f77330fbd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6c64555e0035de8a06d3bb9227262f4202f73f9a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 2b7ce62ebedbd5d0622c8b69720f7153d7711a48
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62910468"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66700444"
 ---
 # <a name="records-and-provider-supplied-fields"></a>Записи и предоставляемые поставщиком поля
 При [записи](../../../ado/reference/ado-api/record-object-ado.md) объект открыт, ее источник может быть текущей строки открытого [записей](../../../ado/reference/ado-api/recordset-object-ado.md), абсолютный URL-адрес или относительный URL-адрес в сочетании с открытым подключением [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекта .  

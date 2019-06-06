@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 7e103574-59ad-4790-b5f9-fa8d715e711e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c4f13a77a9f03aa76fccc41a1fa19878dd935db0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: ef5f6cc4a262cecc81a8dd72f2d3e3f6a7e2fded
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63187800"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66700421"
 ---
 # <a name="recordset-related-error-information"></a>Сведения о связанных с наборами записей ошибках
 Во время пакетной обработки, **состояние** свойство **записей** объект предоставляет сведения об отдельных записей в **записей**. До выполнения пакетного обновления, **состояние** свойство **записей** отражает сведения о записях, которые нужно добавить, изменен или удален. После **UpdateBatch** был вызван, **состояние** свойство указывающее на успешное или неуспешное выполнение операции. При переходе от записи к записи **записей**, значение **состояние** изменения свойств для описания состояния текущей записи.

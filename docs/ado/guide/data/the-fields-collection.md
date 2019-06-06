@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 574cf36e-e5f5-403b-983c-749ef93c108f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4bd852423ed285165b4d699b391807b9a748f9b2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 1969ef21c3c30c46a891fa84acfcd58d460b07c8
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62472233"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66700349"
 ---
 # <a name="the-fields-collection"></a>Коллекция Fields
 **Поля** коллекции является одним из встроенных коллекций ADO. Коллекция — это упорядоченный набор элементов, которые можно ссылаться как единое целое. Дополнительные сведения о коллекции ADO см. в разделе [это модель объекта ADO](../../../ado/guide/data/ado-objects-and-collections.md).  

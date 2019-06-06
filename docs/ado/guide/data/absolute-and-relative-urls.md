@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 802838b50a663d98441512a8548bf9b2e883cc4c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: c67a58b1299a002428c3a72b9df23892c76cd81c
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62802939"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702652"
 ---
 # <a name="absolute-and-relative-urls"></a>Абсолютные и относительные URL-адреса
-URL-адрес указывает расположение целевого объекта, хранящиеся на локальном или сетевом компьютере. Целевой объект может быть файл, каталог, HTML-страницы, изображения, программы и т. д.*.*  
+URL-адрес указывает расположение целевого объекта, хранящиеся на локальном или сетевом компьютере. Целевой объект может быть файл, каталог, HTML-страницы, изображения, программы и т. д. *.*  
   
  *Абсолютный URL-адрес* содержит все сведения, необходимые для размещения ресурсов.  
   
@@ -53,7 +53,7 @@ URL-адрес указывает расположение целевого об
   
  С помощью ADO 2.7 или более поздней версии абсолютный URL-адрес можно также определить контекст. Например, если [записи](../../../ado/reference/ado-api/record-object-ado.md) объект открыт с абсолютным URL-адресом, **подключения** неявно создается объект для представления ресурса, указанного URL-адрес.  
   
- Абсолютный URL-адрес, который определяет контекст может быть указано в *ActiveConnection* параметр **записи** объект [откройте](../../../ado/reference/ado-api/open-method-ado-record.md) метод. Абсолютный URL-адрес также можно задать для параметра «URL-адрес**=**"ключевое слово в **подключения** объект [откройте](../../../ado/reference/ado-api/open-method-ado-connection.md) метод  *ConnectionString* параметра и [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объект [откройте](../../../ado/reference/ado-api/open-method-ado-recordset.md) метод *ActiveConnection* параметра.  
+ Абсолютный URL-адрес, который определяет контекст может быть указано в *ActiveConnection* параметр **записи** объект [откройте](../../../ado/reference/ado-api/open-method-ado-record.md) метод. Абсолютный URL-адрес также можно задать для параметра «URL-адрес **=** "ключевое слово в **подключения** объект [откройте](../../../ado/reference/ado-api/open-method-ado-connection.md) метод  *ConnectionString* параметра и [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объект [откройте](../../../ado/reference/ado-api/open-method-ado-recordset.md) метод *ActiveConnection* параметра.  
   
  Контекст можно также определить, открыв **записи** или **записей** объект, который представляет каталог, так как эти объекты уже имеется неявно или явно объявленных **подключения**  , указывающий контекст.  
   
@@ -86,7 +86,7 @@ recordset.Open "", "URL=https://YourServer/Winnt/",,,adCmdTableDirect
 ## <a name="ole-db-provider-supplied-url-schemes"></a>Схемы URL-адреса, предоставляемые поставщиком OLE DB  
  Начальной частью полного URL-адрес является *схему* , используемый для доступа к ресурсу, определяемому оставшуюся часть URL-адрес. Например, HTTP (Hypertext Transfer Protocol) и FTP (File Transfer Protocol).  
   
- ADO поддерживает поставщиков OLE DB, которые распознают собственные схемы URL-адрес. Например [поставщик Microsoft OLE DB для публикаций в Интернете](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)*,* которая обращается к «опубликованные» файлы Windows 2000, распознает существующие схемы HTTP.  
+ ADO поддерживает поставщиков OLE DB, которые распознают собственные схемы URL-адрес. Например [поставщик Microsoft OLE DB для публикаций в Интернете](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md) *,* которая обращается к «опубликованные» файлы Windows 2000, распознает существующие схемы HTTP.  
   
 ## <a name="see-also"></a>См. также  
  [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   

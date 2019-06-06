@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 2cb4a304-f40a-4897-8b93-82c2d8e93500
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6c77629975b495d43e21f5d985264ed12f42dd56
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 915be581cf6f75d4909b586d368cb12749358e2c
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63308759"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66695545"
 ---
 # <a name="cursortype-locktype-and-editmode-properties-example-vb"></a>Примеры CursorType, LockType и EditMode по свойства (Visual Basic)
 Пример задания [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) и [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) свойства перед открытием [записей](../../../ado/reference/ado-api/recordset-object-ado.md). Также показано, что значение [EditMode](../../../ado/reference/ado-api/editmode-property.md) свойство в различных условиях. Функция EditModeOutput является обязательным для выполнения этой процедуры.  

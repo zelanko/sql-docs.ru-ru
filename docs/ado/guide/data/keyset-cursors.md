@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 14b51b17-6fd9-4146-af45-ca4b0fe6d48a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a2ff246d01254ceb2b526b5118553d72cc499046
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: b349838788a3c442ea9c32fc5b8a7ebbd0240e37
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63161648"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702085"
 ---
 # <a name="keyset-cursors"></a>Курсоры ключевого набора
 Курсор набора ключей предоставляет функциональные возможности, между статический и динамический курсор в его способность обнаруживать изменения. Так же как статический курсор, он не всегда обнаруживает изменения, внесенные в членство и порядок элементов результирующего набора. Так же как динамический курсор, он обнаруживает изменения, внесенные в значения строк результирующего набора.  

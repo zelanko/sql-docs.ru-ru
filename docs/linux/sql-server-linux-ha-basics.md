@@ -7,14 +7,13 @@ manager: craigg
 ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: b93e48c20645da68ed53d98775a4cc57760abc77
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: 4e42088227e22f6368426b9c4e8dc8134dbb49d7
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658411"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66719369"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Основные сведения о доступности SQL Server для Linux развертываний
 
@@ -164,7 +163,7 @@ Ubuntu имеет структуру для доступности.
 #### <a name="node"></a>Узел
 Узел — это сервер, участвующих в кластере. Кластер Pacemaker изначально поддерживает до 16 узлов. Это число может быть превышено, если Corosync не запущена на дополнительных узлах, но требуется для Corosync [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. Таким образом, максимальное количество узлов, кластер может иметь для любого [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-на основе конфигурации — 16; это ограничение Pacemaker и не имеет ничего общего с максимальные ограничения для групп доступности или экземпляры отказоустойчивого кластера, накладываемые [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. 
 
-#### <a name="resource"></a>Ресурс
+#### <a name="resource"></a>Resource
 WSFC и Pacemaker кластера существует понятие ресурса. Ресурс — определенные функции, который выполняется в контексте кластера, например диск или IP-адресом. Например в разделе Pacemaker можно создаются ресурсы отказоустойчивого Кластера и группы Доступности. Это не аспектах что происходит в кластере WSFC, где встречается [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] ресурсов либо экземпляра отказоустойчивого кластера или ресурс группы Доступности, при настройке группы Доступности, но будет отличаться из-за базовых различий в том, как [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] интегрируется с Pacemaker.
 
 Pacemaker имеет ресурсы "стандартный" и клона. Ресурсы клон — это приложения, выполняемых одновременно на всех узлах. Примером может служить IP-адресом, который выполняется на нескольких узлах для балансировки нагрузки. Любой ресурс, который создается для FCI использует стандартный ресурс, так, как только один узел может содержать экземпляр отказоустойчивого Кластера в любой момент времени.

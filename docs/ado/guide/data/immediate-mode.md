@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 31fc53d0-97de-4315-a87b-3bf5cdd1f432
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2ff8782287f5a6cbeb3f22ca58eaa3bd061c6c89
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 37ad4cbc60ad4c08b65ff7f0db9b5c70245a96e3
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63161509"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66700590"
 ---
 # <a name="immediate-mode"></a>Режим интерпретации
 Режим интерпретации действует при **LockType** свойству **adLockOptimistic** или **adLockPessimistic**. В режиме интерпретации распространения изменений, внесенных записи в источник данных сразу же объявляется работу над строкой завершения путем вызова **обновления** метод.  

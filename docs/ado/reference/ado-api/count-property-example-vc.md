@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 54dfb1dd-636c-4560-8a3f-32b1f6aa07d7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c4dcaa288df7b6e232c187ae50dac3e4ac51d8be
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 08ef2f2f9989f9b8dc8dc33b94c73f6ab579eab5
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63308578"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66695523"
 ---
 # <a name="count-property-example-vc"></a>Пример свойства Count (Visual C++)
 В этом примере показано [число](../../../ado/reference/ado-api/count-property-ado.md) свойство с коллекциями в ***сотрудника*** базы данных. Свойство получает число объектов в каждой коллекции и задает верхнюю границу для циклов, которые перечисляют этих коллекций.  

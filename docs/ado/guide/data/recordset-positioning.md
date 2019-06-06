@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: c8f6fbcb-6675-4133-b37e-430de43949c1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f37f69b64e4a1a7fd55fb24a0c85d515971d4e72
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: c01d24a5f92b4bca1e5b41a0cbece980237fd961
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62910454"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701680"
 ---
 # <a name="recordset-positioning"></a>Позиционирование в наборе записей
 Используйте **примеры AbsolutePosition** значение, чтобы перейти к записи в зависимости от его порядковый номер в **записей** объекта, или чтобы определить порядковый номер текущей записи. Поставщик должен поддерживать соответствующие функциональные возможности для этого свойства доступен.  

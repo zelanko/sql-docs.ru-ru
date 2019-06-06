@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: ca1c3422-b6a4-4ba6-af55-54f975b698b1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1c29fb18431d1f02d82db76605a8a53752ea0357
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: d0b6a1b83b09d504f8f3394a32ee10d556fcd18c
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63184907"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66699737"
 ---
 # <a name="using-cachesize"></a>Using CacheSize
 Используйте **CacheSize** свойства для управления, сколько записей следует извлечь за один раз в локальную память от поставщика. Например если **CacheSize** — 10, после первого открытия **записей** объекта, поставщик извлекает первые 10 записей в локальной памяти. По мере продвижения по **записей** объекта, поставщик возвращает данные из локальной памяти буфера. После перемещения за последней записью в кэше, поставщик извлекает следующие 10 записей из источника данных в кэш.  

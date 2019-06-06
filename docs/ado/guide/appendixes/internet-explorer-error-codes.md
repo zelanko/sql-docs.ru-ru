@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 71aed2a5-4c8a-41db-a869-37db4d07a5a9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ddbb675214f537054e608e10854cedf74e0f39be
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 75f2784c9d144cdb33bb4062d08c3a855413e0ad
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62719866"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701466"
 ---
 # <a name="internet-explorer-error-codes-for-remote-data-service"></a>Коды ошибок Internet Explorer для удаленной службы данных
 Ниже перечислены коды ошибок Microsoft® Internet Explorer, связанные с использованием удаленной службы данных. Положительное десятичное преобразование низкой два байта, показаны отрицательное десятичное преобразование кода ошибку переполнения и шестнадцатеричные значения.
 
-|Ошибки Internet Explorer (Wininet)|Количество|Описание|
+|Ошибки Internet Explorer (Wininet)|Number|Описание|
 |------------------------------------------|------------|-----------------|
 |**IDS_WinInet_CantConnect**|8195 -2146820093 0x800A2003|Ошибка клиента Интернета: Не удается подключиться к серверу.|
 |**IDS_WinInet_ ConnectionReset**|12031 -2146816257 0x800A2EFF|Ошибка клиента Интернета: Сброс подключения.|

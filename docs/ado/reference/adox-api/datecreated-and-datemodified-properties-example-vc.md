@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: b964beee-83c7-4f91-8255-3ba864c9adfd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b95a22661ef66b80b9b0007aee6087e1bb49a1b0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 77a048ce7785d9efb6748961c8caea51baedb93d
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63281843"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704856"
 ---
 # <a name="datecreated-and-datemodified-properties-example-vc"></a>Примеры свойств DateCreated и DateModified (Visual C++)
 В этом примере показано [DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md) и [DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md) свойства, добавив новое [столбец](../../../ado/reference/adox-api/column-object-adox.md) к существующему [таблицы](../../../ado/reference/adox-api/table-object-adox.md) и по Создание нового **таблицы**. Процедура DateOutput является обязательным для выполнения этого примера.  

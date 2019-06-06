@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 31bc3743-32d3-4bc7-ac61-ee6ed0fdec70
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e2ab1fd1fc3bdac98cc8fc23e710ee4067bc46f0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 13f769ae3d2b8ddcc720df33596093ff9562af99
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63161392"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66700644"
 ---
 # <a name="handling-errors-in-vbscript"></a>Обработка ошибок в VBScript
 Есть небольшая разница в методы, используемые в Visual Basic и тех, которые используются с VBScript. Основное различие заключается в том, что VBScript не поддерживает концепцию обработку ошибок, выполнение продолжается на метки. Другими словами, нельзя использовать `On Error GoTo` в VBScript. Вместо этого используйте `On Error Resume Next` и затем выберите оба варианта **Err.Number** и **число** свойство **ошибки** коллекции, как показано в следующем примере:  

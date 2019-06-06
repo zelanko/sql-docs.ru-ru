@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 877b9f25-60c4-4ab6-8052-2c28a3849e89
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3c3b8a4ac0da80303a63bd62f7b4d6f51faab1fb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 30d1e1515ed3e84640fe1ca004cb7cbf4383ce97
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62472571"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718717"
 ---
 # <a name="data-providers"></a>Поставщики данных
 Поставщики данных представляют различных источников данных, таких как базы данных SQL, индексированных последовательных файлов, электронных таблиц, хранилищ документов и почтовых файлов. Поставщики предоставляют данные равномерно через общие абстракция, которая называется набор строк.  

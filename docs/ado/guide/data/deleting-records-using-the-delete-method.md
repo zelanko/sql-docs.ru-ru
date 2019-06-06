@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: bfed5cfa-7f57-463b-9da2-0c612a079d30
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1a099b033422e7c10214371772edd090f0cc15fd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: b4798e2658bf23edaf7cd04fb819e26de2a55cc9
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62472386"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66700830"
 ---
 # <a name="deleting-records-using-the-delete-method"></a>Удаление записей с помощью метода Delete
 С помощью **удалить** метод помечает текущую запись или группу записей в **записей** объект для удаления. Если **записей** объекта не допускает удаление записей, возникает ошибка. Если вы находитесь в режим немедленного обновления, удаления происходит в базе данных немедленно. Если запись не удалось успешно (из-за нарушений целостности базы данных, например), запись будет оставаться в режиме редактирования после вызова **обновления.** Это означает, что необходимо отменить обновление с использованием [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) перед перемещением текущей записи (например, с помощью [закрыть](../../../ado/reference/ado-api/close-method-ado.md), [переместить](../../../ado/reference/ado-api/move-method-ado.md), или [ NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)).  

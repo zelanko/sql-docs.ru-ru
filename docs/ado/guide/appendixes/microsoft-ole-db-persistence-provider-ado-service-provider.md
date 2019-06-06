@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: e75ef0dc-2016-4fcc-8918-23311c0d4e02
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2550e36f977be13e10865d4bd238c8508c542091
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: d1ae4f8cba9235700edf410904862d39ed4f7f64
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63128511"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702995"
 ---
 # <a name="microsoft-ole-db-persistence-provider-overview"></a>Общие сведения о поставщике Microsoft OLE DB сохраняемости
 Поставщик сохраняемости Microsoft OLE DB позволяет сохранить [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта в файл и последующее восстановление, **записей** объекта из файла. Сведения о схеме, данных, а отложенные изменения сохраняются.

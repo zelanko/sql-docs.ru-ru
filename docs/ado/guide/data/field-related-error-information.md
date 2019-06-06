@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 5e7b1af4-996b-47c5-9161-c5575ad4fec9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2ba956d2e442c914ddc50f2f023f225252fb1295
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: e18698d7fba50ce6a63938df574408367b8b20cf
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63161565"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702002"
 ---
 # <a name="field-related-error-information"></a>Сведения о связанных с полями ошибках
 Если ошибка связана непосредственно к полю - например, если отсутствуют данные, или если он имеет неверный тип поля — можно получить дополнительные сведения о причине проблемы путем проверки **поле** объекта **состояния**  свойство. Это свойство была улучшена для предоставления конкретной информации о проблеме. Так, например, когда вызов **UpdateBatch** завершается ошибкой, причину проблемы можно определить с помощью проверки **состояние** свойство **поля** в каждом из затронутых записи. Это свойство будет содержать одно из значений в **FieldStatusEnum** константы. В следующей таблице содержатся те значения, которые представляют интерес при возникновении ошибки.  

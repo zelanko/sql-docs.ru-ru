@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: f8a9bbed-ba9c-4698-945d-317ad22d2e92
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5e03e29d5c9696efb55ef5ce6ec47fcf28fc0467
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 987b7d7006ff448a92eee1926a2c60c3b7ae039e
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63249031"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66696677"
 ---
 # <a name="append-method-ado"></a>Метод Append (ADO)
 Добавляет объект в коллекцию. Если коллекция [поля](../../../ado/reference/ado-api/fields-collection-ado.md), новый [поле](../../../ado/reference/ado-api/field-object.md) объект может быть создан, прежде чем он будет добавлен к коллекции.  
@@ -51,7 +51,7 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
  Объект [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) значение, значение которого по умолчанию равно **adEmpty**, указывающий тип данных нового поля. Следующие типы данных не поддерживаются ADO, а также следует не быть используется при добавлении новых полей в [объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md): **adIDispatch**, **adIUnknown**, **adVariant**.  
   
  *DefinedSize*  
- Необязательный параметр. Объект **Long** значение, представляющее заданный размер, в символах или байтах нового поля. Значение по умолчанию для этого параметра является производным от *тип*. Поля, *DefinedSize* длиной более 255 байт, обрабатываются как столбцы переменной длины. По умолчанию для *DefinedSize* не определен.  
+ Необязательный. Объект **Long** значение, представляющее заданный размер, в символах или байтах нового поля. Значение по умолчанию для этого параметра является производным от *тип*. Поля, *DefinedSize* длиной более 255 байт, обрабатываются как столбцы переменной длины. По умолчанию для *DefinedSize* не определен.  
   
  *Attrib*  
  Необязательный. Объект [FieldAttributeEnum](../../../ado/reference/ado-api/fieldattributeenum.md) значение, значение которого по умолчанию равно **adFldDefault**, который задает атрибуты для нового поля. Если это значение не указано, будет содержать поле атрибутов, производных от *тип*.  

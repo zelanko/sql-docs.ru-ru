@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 33c559c4-4db7-4850-9309-2743a7ae5521
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cf72b40a6a1e4caf5f630298dd57cc4055fe41f5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 9f14056ed4dac8ae8e8fa1f489dd1a7cbfd6a507
+ms.sourcegitcommit: fc341b2e08937fdd07ea5f4d74a90677fcdac354
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63217693"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718895"
 ---
 # <a name="indexes-append-method-example-vc"></a>Пример метода Append коллекции (Visual C++)
 Следующий код демонстрирует создание нового индекса. Он расположен в два столбца в таблице.  

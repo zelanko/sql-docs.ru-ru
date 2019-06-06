@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: de4bcd56-dac2-45e6-95ab-9fd7f25878fc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ed92b3f83e865d2b8d4f3e3a3a3cb95e291d771e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 97957adf53cfea64693530b79920dd54d6d0a1bf
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63162095"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66700636"
 ---
 # <a name="hellodata-a-simple-ado-application"></a>HelloData: простое приложение ADO
 Это простое приложение пошаговые инструкции по каждой из четырех основных операций ADO: получение, анализ, редактирование и обновление данных. Эти операции выполняются в образце базы данных "Борей", в состав Microsoft® SQL Server. Чтобы сосредоточиться на основ ADO и предотвратить перегруженность кода, обработка ошибок в примере сводится к минимуму.  

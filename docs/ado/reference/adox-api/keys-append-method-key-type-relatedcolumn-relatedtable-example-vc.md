@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 28495b8f-18dc-482c-995d-a120f6ae2006
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5e90a0bfa98a17a4b9330997cb3f59ef57778403
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: c3138140502c995e1c018f33e49d90180d9b42df
+ms.sourcegitcommit: fc341b2e08937fdd07ea5f4d74a90677fcdac354
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63281642"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718857"
 ---
 # <a name="keys-append-method-key-type-relatedcolumn-relatedtable-and-updaterule-properties-example-vc"></a>Примеры метода Append коллекции Keys, свойства Type объекта Key, а также примеры свойств RelatedColumn, RelatedTable и UpdateRule (Visual C++)
 Следующий код демонстрирует создание нового внешнего ключа. Предполагается, что существует две таблицы (Customers и Orders).  

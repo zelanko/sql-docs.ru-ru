@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 1582e411-55ac-40f0-bd3d-9a10654e4b67
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a274985583d2b0d4403a567f57c3bf1a8eb3f144
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 0299d3ca7ab96b8e054a6fd8ddc99d9ce4ed0139
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62719781"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702814"
 ---
 # <a name="appendix-d-ado-samples-in-the-windows-sdk"></a>Приложение Г. Примеры ADO в Windows SDK
 Пакет Windows SDK содержит несколько примеров приложений, которые демонстрируют использование кода ADO и служб удаленных рабочих СТОЛОВ. Эти образцы помогут вам понять, как использовать ADO и RDS, но не предназначены для развертывания на производственных серверах.

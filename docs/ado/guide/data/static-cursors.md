@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: cce93ace-c4ed-4c6c-940c-28a50ff2fd12
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e8815522ee4f9a4221887696a23a201910d7cfad
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: e8337a6e93aba36e8b5838dcbf6d2e084fe022f1
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63062840"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66700335"
 ---
 # <a name="static-cursors"></a>Статические курсоры
 Статический курсор всегда отображает результирующий набор, который был сначала открытия курсора. В зависимости от реализации, статические курсоры доступны только для чтения или чтения и записи и предоставить прямой и обратной прокрутки. Статический курсор обычно не обнаруживает изменения, внесенные в членство, порядок или значения результирующего набора, после открытия курсора. Статические курсоры могут обнаруживать результаты собственных инструкций обновления, удаления и вставки, хотя это и не обязательно.  
