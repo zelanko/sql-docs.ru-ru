@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 6bd8eb0b-593d-467e-87ea-ab1c4dbcd1ea
-ms.custom: sql-linux
-ms.openlocfilehash: d20799a6a6c9872d56bebd6a3c38d76916fb7ba9
-ms.sourcegitcommit: 8dccf20d48e8db8fe136c4de6b0a0b408191586b
+ms.openlocfilehash: f1f949db84689fae7e362f81cb686824f249c564
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48874300"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705222"
 ---
 # <a name="choose-the-right-tool-to-manage-sql-server-on-linux"></a>Выбор подходящего средства для управления SQL Server в Linux
 
@@ -23,7 +22,7 @@ ms.locfileid: "48874300"
 
 Существует несколько способов управления SQL Server в Linux. Следующий раздел содержит краткий обзор управления различных инструментов и методов с указателями на дополнительные ресурсы.
 
-## <a name="mssql-conf"></a>MSSQL-conf 
+## <a name="mssql-conf"></a>mssql-conf 
 
 **Mssql-conf** средство настраивает SQL Server в Linux. Дополнительные сведения см. в разделе [Настройка SQL Server в Linux с помощью mssql-conf](sql-server-linux-configure-mssql-conf.md).
 
@@ -31,7 +30,7 @@ ms.locfileid: "48874300"
 
 Почти все, что можно сделать в клиентском средстве также может быть выполнено с помощью инструкций Transact-SQL. SQL Server предоставляет [динамические административные представления (DMV)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) , запрос состояния и конфигурации SQL Server. Существуют также [команд Transact-SQL](../t-sql/language-reference.md) для задач управления базами данных. Эти команды можно запустить в любой клиентский инструмент, который поддерживает подключение к SQL Server и выполнение запросов Transact-SQL, например [sqlcmd](sql-server-linux-setup-tools.md) или [Visual Studio Code](sql-server-linux-develop-use-vscode.md).
 
-## <a name="azure-data-studio"></a>Azure Data Studio.
+## <a name="azure-data-studio"></a>Azure Data Studio
 
 Новый Studio данных Azure — это кросс платформенного средства управления SQL Server. Дополнительные сведения см. в разделе [Azure Data Studio](../azure-data-studio/what-is.md).
 

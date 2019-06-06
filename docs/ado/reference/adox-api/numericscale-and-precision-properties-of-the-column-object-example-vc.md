@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 69653366-ebd7-4ff6-a654-761772223b0c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 71ecb8c981bafad0bcbc2c53b27140adad9281ac
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 9728a5c0ea70e4b5a3da1e5c10a35dc0d29bd23d
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62710379"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66706358"
 ---
 # <a name="numericscale-and-precision-properties-of-the-column-object-example-vc"></a>Примеры свойств NumericScale и Precision для объекта Column (Visual C++)
 В этом примере показано [NumericScale](../../../ado/reference/adox-api/numericscale-property-adox.md) и [точности](../../../ado/reference/adox-api/precision-property-adox.md) свойства [столбец](../../../ado/reference/adox-api/column-object-adox.md) объекта. Этот код отображает их значение для **Order Details** таблицы *Northwind* базы данных.  

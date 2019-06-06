@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: a14bbc36-87ec-409d-97b3-393b66b1b8e3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ce86f56f1436d3442cd974f77ed7b3047d6d23a7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 62a652321bf98cbddb2f07cf65baa5317b45447c
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63249122"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718529"
 ---
 # <a name="ado---wfc-syntax-index"></a>ADO — индекс синтаксиса WFC
 Справочник по языку ADO использует Microsoft Visual Basic язык программирования для иллюстрации синтаксиса методов и свойств ADO. Этот индекс является перекрестной ссылки на Справочник по языку ADO статей в зависимости от ADO ввода для Windows Foundation Classes (ADO и WFC). При возникновении отличий в синтаксисе, используйте сигнатур функций в этот индекс, в отличие от синтаксиса вхождения в раздел справочника по языку.  

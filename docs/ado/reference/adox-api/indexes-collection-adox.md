@@ -16,23 +16,23 @@ helpviewer_keywords:
 ms.assetid: 184cf536-455c-42be-bf1c-a5c25bade961
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e1ef6a456a6a1903364c996e87c54cebee1fedb2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 6898c7fbf326209e7b2071b4bdedf383cefc0642
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63280653"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66706619"
 ---
 # <a name="indexes-collection-adox"></a>Коллекция Indexes (ADOX)
 Содержит все [индекс](../../../ado/reference/adox-api/index-object-adox.md) объекты таблицы.  
   
 ## <a name="remarks"></a>Примечания  
- [Append](../../../ado/reference/adox-api/append-method-adox-indexes.md) метод **индексы** является уникальным для ADOX. Можно выполнить следующие действия:   
+ [Append](../../../ado/reference/adox-api/append-method-adox-indexes.md) метод **индексы** является уникальным для ADOX. Можно выполнить следующие действия:  
   
 -   Добавить новый индекс в коллекцию с **Append** метод.  
   
- Остальные свойства и методы являются стандартными для коллекции ADO. Можно выполнить следующие действия:   
+ Остальные свойства и методы являются стандартными для коллекции ADO. Можно выполнить следующие действия:  
   
 -   Доступ к индекса в коллекции с [элемент](../../../ado/reference/ado-api/item-property-ado.md) свойство.  
   

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 7a1def31-2b6f-4542-aac3-ec35b54c89ef
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b980b698bd8a6abb9c49fb669e821be07a5aab36
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: b238aa8f58c3c657cf94a749060b933b659ae696
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63298077"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66712188"
 ---
 # <a name="deleterule-property-example-vc"></a>Пример свойства DeleteRule (Visual C++)
 В этом примере показано [DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md) свойство [ключ](../../../ado/reference/adox-api/key-object-adox.md) объекта. Код добавляет новый [таблицы](../../../ado/reference/adox-api/table-object-adox.md) и затем определяет новый первичный ключ, параметр **DeleteRule** для **adRICascade**.  

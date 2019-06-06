@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 329c3a71-ba88-4009-b04f-2f52195a5957
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ef18eb3d6251bc07ae25ef8cbc3445a87b8390b4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 5c7e6aab3e3b33d02adcb067fff46b49973191b0
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63180281"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66698233"
 ---
 # <a name="dialect-property"></a>Свойство Dialect
 Указывает диалект [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) или [CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md) свойства. Диалект определяет синтаксис и общих правил, которые поставщик использует для синтаксического анализа в строку или поток.  

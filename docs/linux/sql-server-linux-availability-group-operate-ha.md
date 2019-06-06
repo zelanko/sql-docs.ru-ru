@@ -7,15 +7,14 @@ manager: craigg
 ms.date: 03/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: a33c18175a03b589f7b431655ff4704356f5eeaf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 98493c945f4f43e45b1f314f1500eb50a04c8e5a
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796002"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66713419"
 ---
 # <a name="operate-always-on-availability-groups-on-linux"></a>Всегда работают с группами доступности в Linux
 
@@ -77,13 +76,13 @@ ms.locfileid: "47796002"
 
    Если тип кластера группы доступности `NONE`вручную выполнить отработку отказа. Последовательно выполните следующие шаги.
 
-      A. Следующая команда задает первичной реплики в дополнительный регион. Замените `AG1` с именем группы доступности. Выполните команду Transact-SQL на экземпляре SQL Server, на котором размещена первичная реплика.
+      1. Следующая команда задает первичной реплики в дополнительный регион. Замените `AG1` с именем группы доступности. Выполните команду Transact-SQL на экземпляре SQL Server, на котором размещена первичная реплика.
 
       ```transact-sql
       ALTER AVAILABILITY GROUP [ag1] SET (ROLE = SECONDARY);
       ```
 
-      Б. Следующая команда задает синхронной вторичной реплики до первичной. Выполните следующую команду Transact-SQL на целевом экземпляре SQL Server - экземпляр, на котором размещается синхронная вторичная реплика.
+      2. Следующая команда задает синхронной вторичной реплики до первичной. Выполните следующую команду Transact-SQL на целевом экземпляре SQL Server - экземпляр, на котором размещается синхронная вторичная реплика.
 
       ```transact-sql
       ALTER AVAILABILITY GROUP [ag1] FAILOVER;

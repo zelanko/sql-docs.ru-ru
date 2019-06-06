@@ -7,15 +7,14 @@ manager: craigg
 ms.date: 01/30/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 7b93d0d7-7946-4b78-b33a-57d6307cdfa9
-ms.openlocfilehash: 506d98acd28b38d0ce8867f96229632a306ae680
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bda200cccdaadb4db30b95289c2e16982a4e1f4b
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812156"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66713133"
 ---
 # <a name="bulk-copy-data-with-bcp-to-sql-server-on-linux"></a>Массовое копирование данных с помощью программы bcp для SQL Server в Linux
 
@@ -81,7 +80,7 @@ cat ~/test_data.txt
 ```
 
 ### <a name="import-data-from-the-source-data-file"></a>Импорт данных из файла источника данных
-Скопируйте и вставьте следующие команды в окне терминала. Эта команда использует `bcp` для подключения к локальному экземпляру SQL Server (**localhost**) и импортировать данные из файла данных (**~/test_data.txt**) в таблицу (**TestEmployees** ) в базе данных (**BcpSampleDB**). Не забудьте заменить имя пользователя и `<your_password>` при необходимости перед выполнением следующих команд.
+Скопируйте и вставьте следующие команды в окне терминала. Эта команда использует `bcp` для подключения к локальному экземпляру SQL Server (**localhost**) и импортировать данные из файла данных ( **~/test_data.txt**) в таблицу (**TestEmployees** ) в базе данных (**BcpSampleDB**). Не забудьте заменить имя пользователя и `<your_password>` при необходимости перед выполнением следующих команд.
 
 ```bash 
 bcp TestEmployees in ~/test_data.txt -S localhost -U sa -P <your_password> -d BcpSampleDB -c -t  ','
@@ -140,4 +139,4 @@ cat ~/test_export.txt
 - [bcp, программа](../tools/bcp-utility.md)
 - [Форматы данных для совместимости с помощью программы bcp](../relational-databases/import-export/specify-data-formats-for-compatibility-when-using-bcp-sql-server.md)
 - [Массовый импорт данных с помощью инструкции BULK INSERT](../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)
-- [Инструкции BULK INSERT (Transact-SQL)](../t-sql/statements/bulk-insert-transact-sql.md)
+- [BULK INSERT (Transact-SQL)](../t-sql/statements/bulk-insert-transact-sql.md)

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 129293d2-19d3-4940-bf64-483ee72fb4a1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 89b82d6efe87cec6643d68837447ed64a6f69059
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 21cb7f8773c0663d584f62bcaaaeab15c7eac108
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63314708"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66711430"
 ---
 # <a name="seek-method"></a>Метод Seek
 Выполняет поиск индекса [записей](../../../ado/reference/ado-api/recordset-object-ado.md) можно быстро найти строку, соответствующем заданным значениям и изменяется текущая позиция строки для этой строки.  
@@ -42,7 +42,7 @@ recordset.Seek KeyValues, SeekOption
  Объект [SeekEnum](../../../ado/reference/ado-api/seekenum.md) значение, которое указывает тип сравнения между столбцами индекса и соответствующий *KeyValues*.  
   
 ## <a name="remarks"></a>Примечания  
- Используйте **Seek** в сочетании с [индекс](../../../ado/reference/ado-api/index-property.md) свойства, если базовый поставщик поддерживает индексы на **записей** объекта. Используйте [поддерживает](../../../ado/reference/ado-api/supports-method.md)**(adSeek)** метод, чтобы определить, поддерживает ли базовый поставщик **Seek**и **Supports(adIndex)** метод, чтобы определить, поддерживает ли поставщик индексов. (Например, [поставщик OLE DB для Jet (Майкрософт)](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) поддерживает **Seek** и **индекс**.)  
+ Используйте **Seek** в сочетании с [индекс](../../../ado/reference/ado-api/index-property.md) свойства, если базовый поставщик поддерживает индексы на **записей** объекта. Используйте [поддерживает](../../../ado/reference/ado-api/supports-method.md) **(adSeek)** метод, чтобы определить, поддерживает ли базовый поставщик **Seek**и **Supports(adIndex)** метод, чтобы определить, поддерживает ли поставщик индексов. (Например, [поставщик OLE DB для Jet (Майкрософт)](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) поддерживает **Seek** и **индекс**.)  
   
  Если **Seek** может не найти нужную строку, ошибка не происходит, а эта строка находится в конце **записей**. Задайте **индекс** свойства для заданного индекса до выполнения этого метода.  
   

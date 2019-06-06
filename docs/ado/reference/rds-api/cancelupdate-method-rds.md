@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 76d8a6e9-bc6c-4ea0-8e7a-2bae5ed06650
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 76e4a4efeeb8ca71b4591bdaaa3e06dcab71d144
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 2bdc214708b2558f0b54fcd3b978eab81cd74f45
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63281152"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66707011"
 ---
 # <a name="cancelupdate-method-rds"></a>Метод CancelUpdate (служба удаленных рабочих столов)
 Отменяет все изменения, внесенные в текущей или новой строки [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта.  

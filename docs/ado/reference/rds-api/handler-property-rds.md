@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: fdc34362-6d47-4727-b171-8d033159408e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 642addb5ff03e17b5b36e7baa01ef87661a00b35
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 6b538767f62a3d80b9cf2cd9b558f14c5de91549
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63276451"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66712469"
 ---
 # <a name="handler-property-rds"></a>Свойство Handler (служба удаленных рабочих столов)
 Указывает имя программы Настройка на сервере (обработчик), который расширяет функциональность [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)и любые параметры, используемые объектом *обработчик*.  
@@ -50,7 +50,7 @@ DataControl.Handler = String
   
  Имя обработчика по умолчанию — **MSDFMAP. Обработчик**, и его параметр по умолчанию является файл настройки с именем **MSDFMAP. INI**. Это свойство используется для вызова альтернативный настройки файлы, созданные администратором сервера.  
   
- Альтернатива параметра **обработчик** будет указать обработчик и параметры в свойство [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) свойство; т. е "**обработчик =** _handlerName параметр1, параметр2,...;_".  
+ Альтернатива параметра **обработчик** будет указать обработчик и параметры в свойство [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) свойство; т. е "**обработчик =** _handlerName параметр1, параметр2,...;_ ".  
   
 ## <a name="applies-to"></a>Объект применения  
  [Объект DataControl (служба удаленных рабочих столов)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  

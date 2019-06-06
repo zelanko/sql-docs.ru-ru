@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 1c79e271-21ec-41a8-8163-c5e89f0001a7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4194cf7bea9d2a7cb52ea255ee7a858cdf4de6e5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 21f8ec6ea0ed9cd1af8257dcd10b18f59903c929
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63027963"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66694793"
 ---
 # <a name="index-property"></a>Свойство Index
 Указывает имя индекса в настоящее время действует для [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта.  
@@ -46,7 +46,7 @@ ms.locfileid: "63027963"
   
  Если индекс может быть задано и [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) свойство **adLockPessimistic** или **adLockOptimistic**, затем неявным [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) выполняется операция. Это освобождает текущие и затронутых групп. Любой существующий фильтр освобождается, и текущая позиция строки изменяется на первую строку переупорядоченных **записей**.  
   
- **Индекс** свойство используется в сочетании с [Seek](../../../ado/reference/ado-api/seek-method.md) метод. Если базовый поставщик не поддерживает **индекс** свойство и, следовательно, **Seek** метод, рассмотрите возможность использования [найти](../../../ado/reference/ado-api/find-method-ado.md) метод вместо этого. Определить ли **записей** объект поддерживает индексы с [поддерживает](../../../ado/reference/ado-api/supports-method.md)**(adIndex)** метод.  
+ **Индекс** свойство используется в сочетании с [Seek](../../../ado/reference/ado-api/seek-method.md) метод. Если базовый поставщик не поддерживает **индекс** свойство и, следовательно, **Seek** метод, рассмотрите возможность использования [найти](../../../ado/reference/ado-api/find-method-ado.md) метод вместо этого. Определить ли **записей** объект поддерживает индексы с [поддерживает](../../../ado/reference/ado-api/supports-method.md) **(adIndex)** метод.  
   
  Встроенная **индекс** свойство не относится к динамической [оптимизировать](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) свойство, несмотря на то, что оба они работают с индексами.  
   

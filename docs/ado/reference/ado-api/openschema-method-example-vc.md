@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 6f3da460-0f49-41e0-999d-a754ec1d887e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c529e6d4d03ad8ac476894a7442589c06c772b95
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 506862694a725e19ecfc893b0ed88d4ad7ca89b0
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63239561"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66707233"
 ---
 # <a name="openschema-method-example-vc"></a>Пример метода OpenSchema (Visual C++)
 В этом примере используется [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) метод, чтобы отобразить имя и тип для всех таблиц в ***Pubs*** базы данных.  

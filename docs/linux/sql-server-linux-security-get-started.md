@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
-ms.custom: sql-linux
-ms.openlocfilehash: c3d3c4a6ac5d5d49e880fc2af1546bdcf9a73779
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 655aebb0c07c812a7aa6c81e7c7033d85e8b7ce2
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211743"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705203"
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>Пошаговое руководство для реализации функций безопасности SQL Server в Linux
 
@@ -148,12 +147,12 @@ WITH (STATE = ON);
 Execute the following to query the `SalesOrderHeader` table as each user. Verify that `SalesPerson280` only sees the 95 rows from their own sales and that the `Manager` can see all the rows in the table.  
 
 ```    
-ВЫПОЛНЕНИЕ от ИМЕНИ пользователя = «SalesPerson280»;   
-ВЫБЕРИТЕ * из Sales.SalesOrderHeader;    
+EXECUTE AS USER = 'SalesPerson280';   
+SELECT * FROM Sales.SalesOrderHeader;    
 ОТМЕНИТЬ; 
  
-ВЫПОЛНЕНИЕ от ИМЕНИ пользователя = «Manager»;   
-ВЫБЕРИТЕ * из Sales.SalesOrderHeader;   
+EXECUTE AS USER = 'Manager';   
+SELECT * FROM Sales.SalesOrderHeader;   
 ОТМЕНИТЬ;   
 ```
  
@@ -172,17 +171,17 @@ ALTER SalesFilter ПОЛИТИКИ безопасности
 Use an `ALTER TABLE` statement to add a masking function to the `EmailAddress` column in the `Person.EmailAddress` table: 
  
 ```
-ИСПОЛЬЗОВАТЬ AdventureWorks2014; Таблица Person.EmailAddress ПЕРЕЙДИТЕ ALTER     EmailAddress столбец ALTER    
-Добавить СКРЫТЫЙ с (ФУНКЦИЯ = "email()');
+USE AdventureWorks2014; GO ALTER TABLE Person.EmailAddress     ALTER COLUMN EmailAddress    
+ADD MASKED WITH (FUNCTION = 'email()');
 ``` 
  
 Create a new user `TestUser` with `SELECT` permission on the table, then execute a query as `TestUser` to view the masked data:   
 
 ```  
 Создание пользователя TestUser без входа в СИСТЕМУ;   
-GRANT SELECT ON Person.EmailAddress для TestUser;    
+GRANT SELECT ON Person.EmailAddress TO TestUser;    
  
-ВЫПОЛНЕНИЕ от ИМЕНИ пользователя = «TestUser»;   
+EXECUTE AS USER = 'TestUser';   
 ВЫБЕРИТЕ EmailAddressID, EmailAddress из Person.EmailAddress;       
 ОТМЕНИТЬ;    
 ```
@@ -230,14 +229,14 @@ GO
 Создание сертификата MyServerCert с ТЕМОЙ = 'Мои базы данных сертификат ключа шифрования';  
 GO  
 
-ИСПОЛЬЗОВАТЬ AdventureWorks2014;   GO
+USE AdventureWorks2014;   GO
   
 CREATE DATABASE ENCRYPTION KEY  
 С ПОМОЩЬЮ АЛГОРИТМА = AES_256  
 ENCRYPTION BY SERVER MyServerCert сертификата;  
 GO
   
-ALTER базы данных AdventureWorks2014  
+ALTER DATABASE AdventureWorks2014  
 ЗАДАТЬ ШИФРОВАНИЕ   
 ```
 

@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 09aa7b0a-69d5-4564-80a7-20ad8189670f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e6b8aea077af67c882830220da9ce24b802e25e5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 5e0fe23c41f6a22a05e6a4c1d61f94a357f3c28c
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63288303"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66706677"
 ---
 # <a name="groups-collection-adox"></a>Коллекция Groups (ADOX)
 Содержит все хранящиеся [группы](../../../ado/reference/adox-api/group-object-adox.md) объекты каталога или пользователя.  
@@ -31,11 +31,11 @@ ms.locfileid: "63288303"
 ## <a name="remarks"></a>Примечания  
  **Группы** коллекцию [каталога](../../../ado/reference/adox-api/catalog-object-adox.md) представляет все учетные записи группы каталога. **Группы** коллекции для [пользователя](../../../ado/reference/adox-api/user-object-adox.md) представляет только группы, к которой принадлежит пользователь.  
   
- [Append](../../../ado/reference/adox-api/append-method-adox-groups.md) метод **группы** является уникальным для ADOX. Можно выполнить следующие действия:   
+ [Append](../../../ado/reference/adox-api/append-method-adox-groups.md) метод **группы** является уникальным для ADOX. Можно выполнить следующие действия:  
   
 -   Добавить новую группу безопасности в коллекцию с **Append** метод.  
   
- Остальные свойства и методы являются стандартными для коллекции ADO. Можно выполнить следующие действия:   
+ Остальные свойства и методы являются стандартными для коллекции ADO. Можно выполнить следующие действия:  
   
 -   Доступ к группе в коллекции с [элемент](../../../ado/reference/ado-api/item-property-ado.md) свойство.  
   

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: f5f2aa4b-d790-458f-9e70-1643e3e203b2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 176105cafaccafab2fc2a85a716db6dee958d31e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: c61765f473874a7e5469a52ba87b813dfa09655a
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63297499"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66712135"
 ---
 # <a name="getobjectowner-and-setobjectowner-methods-example-vc"></a>Примеры методов GetObjectOwner и SetObjectOwner (Visual C++)
 В этом примере показано [GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md) и [SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md) методы. Этот код предполагается существование группы Accounting (см. в разделе [группы и добавление пользователей, а также пример метода ChangePassword (Visual C++)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vc.md) чтобы узнать, как добавить эту группу в систему). Владелец таблицы Categories будет присвоено учета.  

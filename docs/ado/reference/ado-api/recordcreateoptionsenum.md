@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 6d746670-0850-4065-9cd4-168dea1d3ea9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8574da628c4bc1af800635ed9228e074817adae9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: d57f1bc241e5e27618a9598895ea7be089ce20dd
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63239974"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66712015"
 ---
 # <a name="recordcreateoptionsenum"></a>RecordCreateOptionsEnum
 Указывает ли существующий **записи** должен быть открыт или новый **записи** для [записи](../../../ado/reference/ado-api/record-object-ado.md) объект [откройте](../../../ado/reference/ado-api/open-method-ado-record.md) метод. Значения могут объединяться с помощью оператора.  

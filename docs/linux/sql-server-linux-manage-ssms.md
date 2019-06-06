@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: b2fcf858-21c3-462a-8d49-50c85647d092
-ms.custom: sql-linux
-ms.openlocfilehash: 5de8172a38cfb547315c2cf65c470b019b7227eb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 38f0f3a03e6de4cec622ffe03f9dbdc47a7ccb73
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723202"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66713154"
 ---
 # <a name="use-sql-server-management-studio-on-windows-to-manage-sql-server-on-linux"></a>Использовать SQL Server Management Studio в Windows для управления SQL Server в Linux
 
@@ -57,15 +56,15 @@ SSMS предоставляет широкий набор возможносте
 
 1. В **соединение с сервером** окно, введите следующие сведения (если SSMS уже выполняется, щелкните **Connect > компонент Database Engine** открыть **соединение с сервером** окно):
 
-   | Настройка | Описание |
+   | Параметр | Описание |
    |-----|-----|
    | **Тип сервера** | Значение по умолчанию — ядро СУБД; не изменяйте это значение. |
    | **Имя сервера** | Введите имя целевого компьютера Linux SQL Server или его IP-адрес. |
-   | **Проверка подлинности** | Для SQL Server в Linux, используйте **проверки подлинности SQL Server**. |
+   | **Authentication** | Для SQL Server в Linux, используйте **проверки подлинности SQL Server**. |
    | **Имя входа** | Введите имя пользователя, имеющего доступ к базе данных на сервере (например, значение по умолчанию **SA** учетной записи, созданной во время установки). |
    | **Пароль** | Введите пароль для указанного пользователя (для **SA** учетной записи, вы создали это во время установки). |
 
-    ![SQL Server Management Studio: Подключение к базе данных SQL server](./media/sql-server-linux-manage-ssms/connect.png)
+    ![Среда SQL Server Management Studio: Подключение к базе данных SQL server](./media/sql-server-linux-manage-ssms/connect.png)
 
 1. Нажмите кнопку **Соединить**.
 
@@ -93,7 +92,7 @@ SSMS предоставляет широкий набор возможносте
 
 1. Нажмите кнопку **Execute** кнопку, чтобы выполнить запрос и просмотреть результаты.
 
-   ![Успешно. Подключение к базе данных SQL server: SQL Server Management Studio](./media/sql-server-linux-manage-ssms/execute-query.png)
+   ![Успешно. Подключитесь к базе данных SQL server: SQL Server Management Studio](./media/sql-server-linux-manage-ssms/execute-query.png)
 
 Несмотря на то, что это можно сделать практически любые задачи управления с запросами Transact-SQL, SSMS — это графическое средство, которое делает является проще управлять SQL Server. В следующих разделах некоторые примеры использования графического пользовательского интерфейса.
 
@@ -145,6 +144,6 @@ SSMS предоставляет широкий набор возможносте
 ## <a name="see-also"></a>См. также
 - [Что такое SSMS?](../ssms/sql-server-management-studio-ssms.md)
 - [Экспорт и импорт базы данных с помощью SSMS](sql-server-linux-migrate-ssms.md)
-- [Руководство: SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)
+- [Учебник. SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)
 - [Учебник. Составление инструкций Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md)
 - [Мониторинг производительности и действий сервера](../relational-databases/performance/server-performance-and-activity-monitoring.md)

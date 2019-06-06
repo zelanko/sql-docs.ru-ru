@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 86d77985-a0d0-405a-8587-c85a20540a0e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 31434e08443bc533c7e2ae14ed70d6962aea04cf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 52cb60fc8d0c214bbc3d827617cf088a89b2aa83
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63214770"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704301"
 ---
 # <a name="datafactory-customization"></a>Настройка DataFactory
 Службы удаленных данных (RDS) позволяет легко осуществлять доступ к данным в системе трехуровневой клиент сервер. Параметры строки подключения и команды для выполнения запроса на удаленный источник данных или строка подключения указывает элементу управления данных клиента и [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объект параметров, чтобы выполнить обновление.  

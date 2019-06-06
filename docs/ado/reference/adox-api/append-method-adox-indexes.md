@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 6695769f-275b-4b70-81bd-1a5f7d74926c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 18e9162c3c9a1b79c28ca6e0ae94f8680db0ac80
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 7190fa68b8204e6b1cfea68a6571e07fd78a9bbc
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63206268"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718959"
 ---
 # <a name="append-method-adox-indexes"></a>Метод Append (коллекция Indexes ADOX)
 Добавляет новый [индекс](../../../ado/reference/adox-api/index-object-adox.md) объект [индексы](../../../ado/reference/adox-api/indexes-collection-adox.md) коллекции.  
@@ -38,7 +38,7 @@ Indexes.Append Index [,Columns]
  **Индекс** добавляемый объект или имя индекса для создания и добавления.  
   
  *Столбцы*  
- Необязательный параметр. Объект **Variant** значение, указывающее имена столбцов для индексирования. *Столбцы* параметр соответствует параметру значения [имя](../../../ado/reference/adox-api/name-property-adox.md) свойство [столбец](../../../ado/reference/adox-api/column-object-adox.md) объекта или объектов.  
+ Необязательный. Объект **Variant** значение, указывающее имена столбцов для индексирования. *Столбцы* параметр соответствует параметру значения [имя](../../../ado/reference/adox-api/name-property-adox.md) свойство [столбец](../../../ado/reference/adox-api/column-object-adox.md) объекта или объектов.  
   
 ## <a name="remarks"></a>Примечания  
  *Столбцы* параметр может принимать либо имя столбца, либо массив имен столбцов.  

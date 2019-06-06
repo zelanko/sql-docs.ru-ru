@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 834f0121-394a-44d4-ad7d-999b43a6fe63
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fa6f29c480244919de71d06cf3d56e672f00c47f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 2b492476eadfde4c0c2666096714a8cd0f634db1
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63240062"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66712030"
 ---
 # <a name="recordcount-property-ado"></a>Свойство RecordCount (ADO)
 
@@ -47,7 +47,7 @@ ms.locfileid: "63240062"
 - **adApproxPosition** относится к Приблизительное расположение.
 
 > [!NOTE]
-> В версиях ADO 2.8 и более ранних версий поставщика SQLOLEDB извлекает все записи при использовании серверного курсора, несмотря на тот факт, что он возвращает **True** для обоих **(adApproxPosition) поддерживает** и **Поддерживает (adBookmark)**.
+> В версиях ADO 2.8 и более ранних версий поставщика SQLOLEDB извлекает все записи при использовании серверного курсора, несмотря на тот факт, что он возвращает **True** для обоих **(adApproxPosition) поддерживает** и **Поддерживает (adBookmark)** .
   
 Тип курсора **записей** ли количество записей, можно определить, влияет на объект. **RecordCount** свойство возвратит значение -1 для однонаправленного курсора; фактическое число для статического или курсор набора ключей; и либо значение -1 или фактическое число к динамическому курсору, в зависимости от источника данных.
   

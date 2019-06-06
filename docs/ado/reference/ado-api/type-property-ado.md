@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 8a4c079f-9f4f-4545-801d-85983b8db71e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 02c5b9193b89c131095ccfec6ef185d5ff39f4d5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 56e8e1eca3e57eba19f2dc17e3b1ec0eaa815594
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62910853"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66719025"
 ---
 # <a name="type-property-ado"></a>Свойство Type (ADO)
 Тип рабочей типа или данных [параметр](../../../ado/reference/ado-api/parameter-object.md), [поле](../../../ado/reference/ado-api/field-object.md), или [свойство](../../../ado/reference/ado-api/property-object-ado.md) объекта.  

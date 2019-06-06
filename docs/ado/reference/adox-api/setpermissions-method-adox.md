@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: b7f925d7-b05c-4376-bb49-f8d2c17b8b24
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8d3ff679af7a577433a8191d3beca10eed1d22cf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: fcc44037ac746621c044bca755fd9b957356dc38
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63281899"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705797"
 ---
 # <a name="setpermissions-method-adox"></a>Метод SetPermissions (ADOX)
 Определяет разрешения для [группы](../../../ado/reference/adox-api/group-object-adox.md) или [пользователя](../../../ado/reference/adox-api/user-object-adox.md) объекта.  
@@ -50,7 +50,7 @@ GroupOrUser.SetPermissions Name, ObjectType, Action, Rights [, Inherit] [, Objec
  Объект **Long** значение, которое может быть битовой маской, из одного или нескольких из [RightsEnum](../../../ado/reference/adox-api/rightsenum.md) констант, указывающих права на установку.  
   
  *Наследовать*  
- Необязательный параметр. Объект **Long** значение, которое может быть одним из [InheritTypeEnum](../../../ado/reference/adox-api/inherittypeenum.md) констант, определяющих, как объекты наследуют эти разрешения. Значение по умолчанию — **adInheritNone**.  
+ Необязательный. Объект **Long** значение, которое может быть одним из [InheritTypeEnum](../../../ado/reference/adox-api/inherittypeenum.md) констант, определяющих, как объекты наследуют эти разрешения. Значение по умолчанию — **adInheritNone**.  
   
  *ObjectTypeId*  
  Необязательный. Объект **Variant** значение, которое указывает идентификатор GUID для типа объекта поставщика, который не определен в спецификации OLE DB. Этот параметр является обязательным, если *ObjectType* присваивается **adPermObjProviderSpecific**; в противном случае он не используется.  

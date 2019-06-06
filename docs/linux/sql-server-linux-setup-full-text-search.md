@@ -1,21 +1,20 @@
 ---
 title: Установка SQL Server Full-Text Search в Linux | Документация Майкрософт
-description: В этой статье описывается установка SQL Server Full-Text Search в Linux.
+description: В этой статье описывается установка SQL Server Full-Text Search в Linux.
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
-ms.openlocfilehash: d16a399ceb6a2c22599d7a95396d49f21e378eef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 40b2e50932994644ce5e49237adbef08b825b513
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809742"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705044"
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>Установка SQL Server Full-Text Search в Linux
 
@@ -47,7 +46,7 @@ sudo yum check-update
 sudo yum update mssql-server-fts
 ```
 
-Если вам нужна автономной установки, найдите то загрузка пакета Full-text Search в [заметки о выпуске](sql-server-linux-release-notes.md). Затем выполните те же действия автономной установки, описанные в статье [Установка SQL Server](sql-server-linux-setup.md#offline).
+Если вам нужна автономной установки, найдите то загрузка пакета Full-text Search в [заметки о выпуске](sql-server-linux-release-notes.md). Затем выполните действия по автономной установке, описанные в статье [Установка SQL Server](sql-server-linux-setup.md#offline).
 
 ## <a name="ubuntu">Установка в Ubuntu</a>
 
@@ -65,9 +64,9 @@ sudo apt-get update
 sudo apt-get install -y mssql-server-fts 
 ```
 
-Если вам нужна автономной установки, найдите то загрузка пакета Full-text Search в [заметки о выпуске](sql-server-linux-release-notes.md). Затем выполните те же действия автономной установки, описанные в статье [Установка SQL Server](sql-server-linux-setup.md#offline).
+Если вам нужна автономной установки, найдите то загрузка пакета Full-text Search в [заметки о выпуске](sql-server-linux-release-notes.md). Затем выполните действия по автономной установке, описанные в статье [Установка SQL Server](sql-server-linux-setup.md#offline).
 
-## <a name="SLES">Установите на SLES</a>
+## <a name="SLES">Установка в SLES</a>
 
 Используйте следующие команды для установки **mssql-server-fts** в SUSE Linux Enterprise Server. 
 
@@ -82,7 +81,7 @@ sudo zypper refresh
 sudo zypper update mssql-server-fts
 ```
 
-Если вам нужна автономной установки, найдите то загрузка пакета Full-text Search в [заметки о выпуске](sql-server-linux-release-notes.md). Затем выполните те же действия автономной установки, описанные в статье [Установка SQL Server](sql-server-linux-setup.md#offline).
+Если вам нужна автономной установки, найдите то загрузка пакета Full-text Search в [заметки о выпуске](sql-server-linux-release-notes.md). Затем выполните действия по автономной установке, описанные в статье [Установка SQL Server](sql-server-linux-setup.md#offline).
 
 ## <a name="supported-languages"></a>Поддерживаемые языки
 
@@ -99,18 +98,18 @@ sudo zypper update mssql-server-fts
 | Болгарский | 1026 |
 | Каталонский | 1027 |
 | Китайский (Гонконг, КНР) | 3076 |
-| Китайский (Макао SAR) | 5124 |
-| Китайский (Сингапур) | 4100 |
+| Chinese (Macao SAR) | 5124 |
+| Chinese (Singapore) | 4100 |
 | Хорватский | 1050 |
-| Чешский | 1029 |
+| Czech | 1029 |
 | Danish | 1030 |
 | Нидерландский | 1043 |
 | Английский | 1033 |
 | Французский | 1036 |
-| German | 1031 |
+| Немецкий | 1031 |
 | Greek | 1032 |
 | Гуджарати | 1095 |
-| Hebrew | 1037 |
+| Иврит | 1037 |
 | Hindi | 1081 |
 | Исландский | 1039 |
 | Индонезийский | 1057 |
@@ -128,7 +127,7 @@ sudo zypper update mssql-server-fts
 | Панджабский | 1094 |
 | Румынский | 1048 |
 | Русский | 1049 |
-| Сербский (кириллица) | 3098 |
+| Serbian (Cyrillic) | 3098 |
 | Serbian (Latin) | 2074 |
 | Китайский (упрощенный) | 2052 |
 | Словацкий | 1051 |
@@ -148,9 +147,9 @@ sudo zypper update mssql-server-fts
 
 Компонент Full-Text Search также работает с текста, хранящегося в двоичные файлы. Но в этом случае для обработки файла требуется установленный фильтр. Дополнительные сведения о фильтрах см. в разделе [Настройка и управление фильтрами для поиска](../relational-databases/search/configure-and-manage-filters-for-search.md).
 
-Можно просмотреть список установленных фильтров, вызвав **sp_help_fulltext_system_components «фильтр»**. Для SQL Server устанавливаются следующие фильтры:
+Можно просмотреть список установленных фильтров, вызвав **sp_help_fulltext_system_components «фильтр»** . Для SQL Server устанавливаются следующие фильтры:
 
-| Название компонента | Идентификатор класса | Версия |
+| Название компонента | Идентификатор класса | Version |
 |---|---|---|
 |.a | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.ANS | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
@@ -170,11 +169,11 @@ sudo zypper update mssql-server-fts
 |.cpp | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.cs | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.CSA | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.CSS | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
+|.css | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
 |CSV-файл | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.cxx | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.DBS | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.DEF | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+|.def | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.dic | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.DOS | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.DSP | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
@@ -191,12 +190,12 @@ sudo zypper update mssql-server-fts
 |.htt | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
 |формата HTW | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
 |.htx | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
-|.hXX | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+|.hxx | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.i | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.ibq | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.ICS | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.IDL | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|.Idq | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.idq | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.Inc | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.inf | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |INI-файле | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
@@ -214,7 +213,7 @@ sudo zypper update mssql-server-fts
 |.MK | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |ODC | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
 |.odh | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.ODL | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.odl | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.pkgdef | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.pkgundef | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.PL | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
@@ -224,7 +223,7 @@ sudo zypper update mssql-server-fts
 |.rct | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |файл с расширением REG | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.RGS | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.RTF | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+|.rtf | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.rul | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.s | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |файлы | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
@@ -236,12 +235,12 @@ sudo zypper update mssql-server-fts
 |.srf | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
 |.stm | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
 |вкладке | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.TDL | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.tdl | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |TLH-файлы | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.TLI | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.TRG | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.txt | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|.UDF | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.udf | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.UDT | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.URL | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.usr | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
@@ -254,7 +253,7 @@ sudo zypper update mssql-server-fts
 |.vsscc | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.vssscc | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.wri | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|.WTX | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+|.wtx | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |XML | 41B9BE05-B3AF-460C-BF0B-2CDD44A093B1 | 12.0.9735.0 |
 
 ## <a name="semantic-search"></a>Семантический поиск

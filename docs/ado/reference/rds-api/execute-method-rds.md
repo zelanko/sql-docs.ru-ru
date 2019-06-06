@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 2d9c30e9-ab5b-4920-91b8-48454c2fb5d8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 618c02f2b63746c0b8e5dfe00f4a231db3dc66f5
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 5c0fa79bdf5acc89b7d884afa604ab08e926d9e1
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606244"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66707708"
 ---
 # <a name="execute-method-rds"></a>Метод Execute (служба удаленных рабочих столов)
 Выполняет запрос и создает набор записей ADO для использования в ADO, 2.5 и более поздних версий.  
@@ -41,7 +41,7 @@ object.Execute(ConnectionString As String, HandlerString As String, QueryString 
  *HandlerString*  
  Двойная строка, определяющая обработчик для использования с этого выполнения. Строка состоит из двух частей. Первая часть содержит имя (ProgID) обработчика для использования. Вторая часть содержит аргументы, передаваемые обработчику. Сведения о способ интерпретации строки аргументы относятся только к каждому обработчику. Эти две части разделяются первого вхождения запятой в строку. Строка аргументов может содержать дополнительные запятые. Аргументы являются необязательными.  
   
- *Переменная строки запроса*  
+ *QueryString*  
  Команды в командный язык, поддерживаемые поставщиком OLE DB, указанную в строке подключения. Для поставщиков на основе SQL *QueryString* может содержать инструкцию команды Transact-SQL, но для отличных от SQL поставщиков (например, MSDataShape) это может оказаться [!INCLUDE[tsql](../../../includes/tsql-md.md)] оператора запроса.  
   
  Если используется обработчик, обработчик можно изменить или заменить значение, указанное здесь. Например, обычно заменяет обработчик *QueryString* со строкой запроса из его INI-файла. По умолчанию используется файл Msdfmap.ini.  

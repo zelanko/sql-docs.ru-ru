@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: d447712a-e123-47b5-a3a4-5d366cfe8d72
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: daddb9057775e1f098754dd2a331c1dc77194d10
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 58a380336d3b1abc99e00f1f4052cd24a8cc5988
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63155912"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66699411"
 ---
 # <a name="writing-your-own-customized-handler"></a>Создание собственного настраиваемого обработчика
 Вы можете написать собственный обработчик, если вы являетесь администратором сервера IIS, желающего поддерживать служб удаленных рабочих СТОЛОВ, значение по умолчанию, но больший контроль над запросами пользователей и права доступа.  
@@ -32,7 +32,7 @@ ms.locfileid: "63155912"
 ## <a name="idatafactoryhandler-interface"></a>Интерфейс IDataFactoryHandler  
  Этот интерфейс содержит два метода **GetRecordset** и **повторное соединение**. Оба метода требуют [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) свойства задать значение **adUseClient**.  
   
- Оба метода используют аргументы, которые отображаются после первой запятой в "**обработчик =**" ключевое слово. Например `"Handler=progid,arg1,arg2;"` будет передана строка аргумента из `"arg1,arg2"`, и `"Handler=progid"` передаст аргументом null.  
+ Оба метода используют аргументы, которые отображаются после первой запятой в "**обработчик =** " ключевое слово. Например `"Handler=progid,arg1,arg2;"` будет передана строка аргумента из `"arg1,arg2"`, и `"Handler=progid"` передаст аргументом null.  
   
 ## <a name="getrecordset-method"></a>Метод GetRecordset  
  Этот метод отправляет запросы к источнику данных и создает новый [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объект по указанным аргументам. **Записей** должен открываться с **adLockBatchOptimistic** и не должен быть открыт асинхронно.  

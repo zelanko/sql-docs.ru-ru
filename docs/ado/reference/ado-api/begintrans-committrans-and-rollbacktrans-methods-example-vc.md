@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 4ac19647-73e7-4edf-9913-25c8fd927e36
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cffd1524ce12d53be41ea5a060c04ff32f43542e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 2f9f19cc552209d2ecb35c1339d209cc04feb874
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62509826"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66696474"
 ---
 # <a name="begintrans-committrans-and-rollbacktrans-methods-example-vc"></a>Примеры BeginTrans, CommitTrans и Rollbacktrans методы (Visual C++)
 В этом примере изменяется тип книги все книги по психологии в ***заголовки*** таблицы в базе данных. После [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) метод запускает транзакцию, которая изолирует все изменения, внесенные ***заголовки*** таблицы, [CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) метод сохраняет изменения. Можно использовать [отката](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) метод, чтобы отменить изменения, которые были сохранены с помощью [обновления](../../../ado/reference/ado-api/update-method.md) метод.  

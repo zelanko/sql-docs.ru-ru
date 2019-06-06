@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: c0ed8195-09af-42c8-99c7-038ecc8a5c9f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 010093a600b5432ae7ff7454cacba914d5bb8442
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 36dd327ec4c35ed1d3c846b4052741dcfc21a21b
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63184199"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66708068"
 ---
 # <a name="attributes-property-example-vb"></a>Пример свойства Attributes (Visual Basic)
 В этом примере показано [атрибуты](../../../ado/reference/adox-api/attributes-property-adox.md) свойство [столбец](../../../ado/reference/adox-api/column-object-adox.md). Задание значения **adColNullable** позволяет пользователю задать значение [записей](../../../ado/reference/ado-api/recordset-object-ado.md) [поле](../../../ado/reference/ado-api/field-object.md) пустую строку. В этом случае пользователь может различать записи, где данные неизвестны и записи, где данные не применяются.  

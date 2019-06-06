@@ -8,14 +8,13 @@ manager: craigg
 ms.date: 06/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: c2e26f7a5a239a4fa25d2e2a7deb71677ac856cb
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.openlocfilehash: fdf6542f64549233dd5d4ef15dc39a53fefa49a3
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66014971"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66712839"
 ---
 # <a name="limitations-and-known-issues-for-ssis-on-linux"></a>Ограничения и известные проблемы для служб SSIS в Linux
 
@@ -59,7 +58,7 @@ ms.locfileid: "66014971"
 |------------|---|
 | Задача «Выполнение процесса» | Поддерживает только режим. |
 | Задача «Файловая система» | *Перемещения каталога* и *задавать атрибуты файлов* действия не поддерживаются. |
-| задача «Скрипт»  | Поддерживает только стандартные API-интерфейсы .NET Framework. |
+| задача «Скрипт» | Поддерживает только стандартные API-интерфейсы .NET Framework. |
 | Задача «Отправка почты» | Поддерживает только режим анонимного пользователя. |
 | Задача Передача базы данных | Пути в формате UNC не поддерживаются. |
 | | |

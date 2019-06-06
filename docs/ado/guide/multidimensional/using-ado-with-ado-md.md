@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: cfae435e-2ac3-4312-8c1e-9ca4a74cd875
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 69707e5026497a1f98ab168d71b4e6b286520fbe
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 2fd684e35c9cebf4a91a0b396e2c8b572e1ecf8c
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63194898"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66699860"
 ---
 # <a name="using-ado-with-ado-md"></a>Использование ADO с объектами данных ActiveX (MD)
 ADO и ADO MD, связанных, но отдельных объектные модели. ADO предоставляет объекты для соединения с источниками данных, выполнения команд, получение табличных данных и схемы метаданных в табличном формате и просматривать сведения об ошибке поставщика. Многомерные Объекты ADO предоставляет объекты для получения многомерных данных и просмотр метаданных многомерной схемой.  

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: d399fce4-b70b-418f-8110-3deb3448863c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d779204046b9bca2591fbdc9459d7c6b53061ff4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: ac7922dda2d486f4783d1230296dc89b81cb4fe3
+ms.sourcegitcommit: fc341b2e08937fdd07ea5f4d74a90677fcdac354
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63184965"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718606"
 ---
 # <a name="using-ado-for-internet-publishing"></a>Использование ADO для публикации в Интернете
 [Поставщик OLE DB для публикаций в Интернете](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md) показано содержится конкретный пример, доступ к разнородных данных с помощью ADO. Несмотря на то, что в примерах этого раздела будет специально для использования поставщика Интернет-публикаций, демонстрируются принципы должен выглядеть при использовании ADO с другими поставщиками для разнородных данных, таких как поставщик в хранилище по электронной почте.  

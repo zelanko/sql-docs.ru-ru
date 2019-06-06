@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 0a30fa74-6f10-4410-bd70-882e7c43cd46
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8dc465261748c1efd340e78ddc2f3e12d601e931
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: bbf05e0b177cc61ed9de757db46f8950aaa7dccd
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63281621"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705626"
 ---
 # <a name="users-collection-adox"></a>Коллекция Users (ADOX)
 Содержит все хранящиеся [пользователя](../../../ado/reference/adox-api/user-object-adox.md) объектов [каталога](../../../ado/reference/adox-api/catalog-object-adox.md) или [группы](../../../ado/reference/adox-api/group-object-adox.md).  
@@ -31,11 +31,11 @@ ms.locfileid: "63281621"
 ## <a name="remarks"></a>Примечания  
  **Пользователей** коллекцию [каталога](../../../ado/reference/adox-api/catalog-object-adox.md) представляет пользователей каталога. **Пользователей** коллекции для [группы](../../../ado/reference/adox-api/group-object-adox.md) представляет только пользователи, имеющие членства в определенной группе.  
   
- [Append](../../../ado/reference/adox-api/append-method-adox-users.md) метод **пользователей** является уникальным для ADOX. Можно выполнить следующие действия:   
+ [Append](../../../ado/reference/adox-api/append-method-adox-users.md) метод **пользователей** является уникальным для ADOX. Можно выполнить следующие действия:  
   
 -   Добавить нового пользователя в коллекцию с помощью **Append** метод.  
   
- Остальные свойства и методы являются стандартными для коллекции ADO. Можно выполнить следующие действия:   
+ Остальные свойства и методы являются стандартными для коллекции ADO. Можно выполнить следующие действия:  
   
 -   Права пользователя в коллекции с [элемент](../../../ado/reference/ado-api/item-property-ado.md) свойство.  
   

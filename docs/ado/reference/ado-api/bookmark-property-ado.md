@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 481dcc93-487b-490e-ac58-a1e9b2ebfd43
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 61fa4619bd70b170f13dbc879748364f019f8bdd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: bb835a84d83730e291afcfdf83910f9b520daea6
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62821168"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66696301"
 ---
 # <a name="bookmark-property-ado"></a>Свойство Bookmark (ADO)
 Указывает закладка, которая однозначно определяет текущую запись в [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта или задает текущую запись **записей** объект для записи, определяемой закладкой допустимым.  

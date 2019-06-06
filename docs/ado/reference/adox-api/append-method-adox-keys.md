@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 215a5391-f422-42ec-99ea-4e6fbb5d3d64
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1c0bc0e9b9c565c0c6d72fab4f87ab0a9fd0091a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: ea4e06fa790e8a360cfb1254b3064b3b540e7842
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63206243"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66708345"
 ---
 # <a name="append-method-adox-keys"></a>Метод Append (коллекция Keys ADOX)
 Добавляет новый [ключ](../../../ado/reference/adox-api/key-object-adox.md) объект [ключи](../../../ado/reference/adox-api/keys-collection-adox.md) коллекции.  
@@ -42,7 +42,7 @@ Keys.Append Key [,KeyType] [,Column] [,RelatedTable] [,RelatedColumn]
  Необязательный параметр. Объект **Long** значение, указывающее тип ключа. *Ключ* параметр соответствует параметру [тип](../../../ado/reference/adox-api/type-property-key-adox.md) свойство **ключ** объекта.  
   
  *Столбец*  
- Необязательный. Объект **строка** значение, указывающее имя столбца для индексирования. *Столбцы* параметр соответствует параметру значение [имя](../../../ado/reference/adox-api/name-property-adox.md) свойство [столбец](../../../ado/reference/adox-api/column-object-adox.md) объекта.  
+ Необязательный параметр. Объект **строка** значение, указывающее имя столбца для индексирования. *Столбцы* параметр соответствует параметру значение [имя](../../../ado/reference/adox-api/name-property-adox.md) свойство [столбец](../../../ado/reference/adox-api/column-object-adox.md) объекта.  
   
  *RelatedTable*  
  Необязательный параметр. Объект **строка** значение, указывающее имя связанной таблицы. *RelatedTable* параметр соответствует параметру значение **имя** свойство [таблицы](../../../ado/reference/adox-api/table-object-adox.md) объекта.  

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: e37b4d46-380d-4615-b4bb-e1a7b0851771
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: db2b2aa3eb59b32894b7ca6bfcf0a8a519bf3903
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: e27770715acf30d909e83d57814e04f1aa70a485
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63027581"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66719040"
 ---
 # <a name="status-property-example-recordset-vb"></a>Пример свойства Status (объект Recordset) (Visual Basic)
 В этом примере используется [состояние](../../../ado/reference/ado-api/status-property-ado-recordset.md) свойство для отображения записи, которые были изменены в пакетной операции перед произошла пакетного обновления.  

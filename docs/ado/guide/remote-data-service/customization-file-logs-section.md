@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: a368e264-865c-41ee-be00-d9097255c2ea
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 71a9130c385032acfad7c0c1040b293486bff525
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: d5d64dc151fbd54da17a65e2178b7f38eb6b2834
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63214905"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66699656"
 ---
 # <a name="customization-file-logs-section"></a>Настройка раздела журналов файла
 **Журналы** раздел содержит запись файла журнала, который указывает имя файла, в который записываются ошибки во время работы **DataFactory**.  

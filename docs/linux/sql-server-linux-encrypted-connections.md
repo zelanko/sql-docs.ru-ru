@@ -7,17 +7,16 @@ ms.author: vinsonyu
 manager: craigg
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
 helpviewer_keywords:
 - Linux, encrypted connections
-ms.openlocfilehash: 9506c8c27e17f59c95a1cfeff5cd3885d1657b79
-ms.sourcegitcommit: 753364d8ac569c9f363d2eb6b1b8214948d2ed8c
+ms.openlocfilehash: 97714d09839c873c96684579e70e3269f96b0e31
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52826089"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705666"
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>Шифрование подключений к SQL Server в Linux
 

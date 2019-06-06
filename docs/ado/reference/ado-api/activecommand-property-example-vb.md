@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 23b06499-62df-4f46-88eb-6da392f9b456
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a45eafed2c0e673820a5b93eaa13438ac7898988
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 75c75540433e077cc5d96bb9b2f0c88c05a62bd6
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63156430"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704035"
 ---
 # <a name="activecommand-property-example-vb"></a>Пример свойства ActiveCommand (Visual Basic)
 В этом примере показано [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md) свойство.  
@@ -93,7 +93,7 @@ End Sub
   
  **ActiveCommandXprint** процедуры предоставляется только **записей** объекта, но его необходимо распечатать, текст команды и параметр, который создан **записей**. Это можно сделать, поскольку **записей** объекта **ActiveCommand** свойство возвращает связанный [команда](../../../ado/reference/ado-api/command-object-ado.md) объекта.  
   
- **Команда** объекта [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) свойство вызывает параметризованную команду, которая создана **записей**. **Команда** объекта [параметры](../../../ado/reference/ado-api/parameters-collection-ado.md) коллекции дает значение, которое было заменителями заполнителя параметра команды ("**?**").  
+ **Команда** объекта [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) свойство вызывает параметризованную команду, которая создана **записей**. **Команда** объекта [параметры](../../../ado/reference/ado-api/parameters-collection-ado.md) коллекции дает значение, которое было заменителями заполнителя параметра команды (" **?** ").  
   
  Наконец выводятся сообщения об ошибке или автора имя и идентификатор.  
   

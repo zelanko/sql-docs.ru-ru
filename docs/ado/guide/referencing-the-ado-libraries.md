@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 573f8f27-babd-4e2f-bf9a-270ee7024975
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e22b5fa8d21ca693f0ea332714f2f594f8bd997c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 90783d893d4765957361356895907f6659c08d9d
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63239851"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704364"
 ---
 # <a name="referencing-the-ado-libraries"></a>Ссылки на библиотеки ADO
 Последнюю версию ADO входит в состав *msado15.dll*. Последние версии многомерные Объекты ADO и ADOX упаковываются в виде *msadom.dll* и *msadox.dll*, соответственно. Эти библиотеки устанавливаются по умолчанию в *$installDir*, где *$installDir* — это путь к каталогу, в котором в библиотеке ADO установленной на компьютере. Чтобы использовать библиотеки ADO в приложении, вы должны ссылаться на них явным образом в проекте приложения.  

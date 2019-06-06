@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 9f7c78bb-7bb8-4c4f-8e5a-4d3bfc8a208f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 815fb6268fd55566ede8d7f6722f66d9be912a97
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 715ad0a98adf1e3c219712699a6b31f2ba1467d2
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63027940"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66694848"
 ---
 # <a name="getrows-method-example-vb"></a>Пример метода GetRows (Visual Basic)
 В этом примере используется [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) метод для получения указанного числа строк из [записей](../../../ado/reference/ado-api/recordset-object-ado.md) и заполняют массив полученные данные. **GetRows** метод возвратит меньше, чем требуемое число строк в двух случаях: либо если [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) был достигнут, или если **GetRows** попытка получить запись, которая была удалена другим пользователем. Функция возвращает **False** только в том случае, если происходит второй вариант. Функция GetRowsOK является обязательным для выполнения этой процедуры.  

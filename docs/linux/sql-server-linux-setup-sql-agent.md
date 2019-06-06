@@ -7,15 +7,14 @@ manager: craigg
 ms.date: 02/20/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 77f16adc-e6cb-4a57-82f3-7b9780369868
-ms.openlocfilehash: 72a4242373af16ffcdc8f749b899747801d2002c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1cb2a630dab67875db8a9731fe98895599f3290a
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819529"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705061"
 ---
 # <a name="install-sql-server-agent-on-linux"></a>Установка агента SQL Server в Linux
 
@@ -67,7 +66,7 @@ sudo yum update mssql-server-agent
 sudo systemctl restart mssql-server
 ```
 
-Если вам нужна автономной установки, найдите то загрузка пакета агента SQL Server в [заметки о выпуске](sql-server-linux-release-notes.md). Затем выполните те же действия автономной установки, описанные в статье [Установка SQL Server](sql-server-linux-setup.md#offline).
+Если вам нужна автономной установки, найдите то загрузка пакета агента SQL Server в [заметки о выпуске](sql-server-linux-release-notes.md). Затем выполните действия по автономной установке, описанные в статье [Установка SQL Server](sql-server-linux-setup.md#offline).
 
 ### <a name="ubuntu">Установка в Ubuntu</a>
 
@@ -87,9 +86,9 @@ sudo apt-get install mssql-server-agent
 sudo systemctl restart mssql-server
 ```
 
-Если вам нужна автономной установки, найдите то загрузка пакета агента SQL Server в [заметки о выпуске](sql-server-linux-release-notes.md). Затем выполните те же действия автономной установки, описанные в статье [Установка SQL Server](sql-server-linux-setup.md#offline).
+Если вам нужна автономной установки, найдите то загрузка пакета агента SQL Server в [заметки о выпуске](sql-server-linux-release-notes.md). Затем выполните действия по автономной установке, описанные в статье [Установка SQL Server](sql-server-linux-setup.md#offline).
 
-### <a name="SLES">Установите на SLES</a>
+### <a name="SLES">Установка в SLES</a>
 
 Выполните следующие действия для установки **mssql-server-agent** в SUSE Linux Enterprise Server. 
 
@@ -108,7 +107,7 @@ sudo zypper update mssql-server-agent
 sudo systemctl restart mssql-server
 ```
 
-Если вам нужна автономной установки, найдите то загрузка пакета агента SQL Server в [заметки о выпуске](sql-server-linux-release-notes.md). Затем выполните те же действия автономной установки, описанные в статье [Установка SQL Server](sql-server-linux-setup.md#offline).
+Если вам нужна автономной установки, найдите то загрузка пакета агента SQL Server в [заметки о выпуске](sql-server-linux-release-notes.md). Затем выполните действия по автономной установке, описанные в статье [Установка SQL Server](sql-server-linux-setup.md#offline).
 
 ## <a name="next-steps"></a>Следующие шаги
 Дополнительные сведения о том, как использовать для создания, планирования и запуска заданий агента SQL Server см. в разделе [выполнение задания агента SQL Server в Linux](sql-server-linux-run-sql-server-agent-job.md).

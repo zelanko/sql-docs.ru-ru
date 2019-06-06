@@ -1,6 +1,5 @@
 ---
 title: Выпуски и поддерживаемые функции SQL Server 2017 ~ Linux | Документация Майкрософт
-ms.custom: sql-linux
 ms.date: 09/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -27,14 +26,14 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 07aae4f4e619e38d41cd16a08e1e8f7267f5ed29
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 21e709b20df80fdecc7aff80ff983b0f33bbf101
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533563"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66713175"
 ---
-# <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Выпуски и поддерживаемые функции SQL Server 2017 в Linux
+# <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Выпуски и поддерживаемые функции SQL Server 2017 в Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -55,7 +54,7 @@ ms.locfileid: "52533563"
 ## <a name="includessnoversionincludesssnoversion-mdmd-editions"></a>[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] , выпуски  
  Эти выпуски [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]описаны в следующей таблице. 
   
-|Выпуск[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] |Определение|  
+|Выпуск[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Определение|  
 |---------------------------------------|----------------|  
 |Enterprise|Предложение уровня "премиум", [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Enterprise edition предоставляет возможности комплексное высшего класса центра обработки данных с молниеносно производительность, позволяя более высокого уровня обслуживания для критически важных рабочих нагрузок.|  
 |Standard|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Standard edition предоставляет основные функции управления данными для отделах и небольших организациях для выполнения их приложений и поддерживаются распространенные средства разработки для локальных и облачных - Включение эффективное управление базами данных с минимальными затратами ИТ-ресурсов.|  

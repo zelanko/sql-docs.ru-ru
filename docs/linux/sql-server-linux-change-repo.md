@@ -7,26 +7,25 @@ manager: craigg
 ms.date: 02/11/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 zone_pivot_groups: ld2-linux-distribution
-ms.openlocfilehash: 65147a78fe616f83854b155f903d346aa52d69d5
-ms.sourcegitcommit: c0e1db7cd1081e94a3a526136a5e166df646c9ba
+ms.openlocfilehash: 5e21110eb8a24c736b08833d10b509b5494adc48
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56444239"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66713334"
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>Настройка репозиториев для установки и обновления SQL Server в Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 ::: zone pivot="ld2-rhel"
-В этой статье описываются способы настройки на правильный репозиторий для SQL Server 2017 и SQL Server 2019 установок и обновлений на платформе Linux. В верхней, находится выбранная **Red Hat (RHEL)**.
+В этой статье описываются способы настройки на правильный репозиторий для SQL Server 2017 и SQL Server 2019 установок и обновлений на платформе Linux. В верхней, находится выбранная **Red Hat (RHEL)** .
 ::: zone-end
 
 ::: zone pivot="ld2-sles"
-В этой статье описываются способы настройки на правильный репозиторий для SQL Server 2017 и SQL Server 2019 установок и обновлений на платформе Linux. В верхней, находится выбранная **SUSE (SLES)**.
+В этой статье описываются способы настройки на правильный репозиторий для SQL Server 2017 и SQL Server 2019 установок и обновлений на платформе Linux. В верхней, находится выбранная **SUSE (SLES)** .
 ::: zone-end
 
 ::: zone pivot="ld2-ubuntu"
@@ -51,7 +50,7 @@ ms.locfileid: "56444239"
 
 Важно отметить, что два основных типа хранилища для каждого распределения:
 
-- **Накопительные пакеты обновления (CU)**: Накопительное обновление (CU) хранилища содержит пакеты для базового выпуска SQL Server и исправления или улучшения с момента выхода этого выпуска. Накопительные пакеты обновления применяются к окончательной версии, такие как SQL Server 2017. Они выпускаются регулярно выпускать.
+- **Накопительные пакеты обновления (CU)** : Накопительное обновление (CU) хранилища содержит пакеты для базового выпуска SQL Server и исправления или улучшения с момента выхода этого выпуска. Накопительные пакеты обновления применяются к окончательной версии, такие как SQL Server 2017. Они выпускаются регулярно выпускать.
 
 - **GDR**: GDR репозитория содержит пакеты базовый выпуск SQL Server и только критические исправления и обновления для системы безопасности с момента выхода этого выпуска. Эти обновления также добавляются в следующий выпуск CU.
 
@@ -172,7 +171,7 @@ sudo rm -rf /etc/yum.repos.d/mssql-server.repo
 ::: zone pivot="ld2-rhel"
 Настройте новый репозиторий для установки SQL Server и обновления. Используйте один из следующих команд по настройке репозитория по своему усмотрению.
 
-| Хранилище | Версия | Command |
+| Хранилище | Version | Command |
 |---|---|---|
 | **Предварительная версия (2019 г.)** | 2019 г. | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-preview.repo` |
 | **CU** | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
@@ -184,7 +183,7 @@ sudo rm -rf /etc/yum.repos.d/mssql-server.repo
 ::: zone pivot="ld2-sles"
 Настройте новый репозиторий для установки SQL Server и обновления. Используйте один из следующих команд по настройке репозитория по своему усмотрению.
 
-| Хранилище | Версия | Command |
+| Хранилище | Version | Command |
 |---|---|---|
 | **Предварительная версия (2019 г.)** | 2019 г. | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-preview.repo` |
 | **CU** | 2017 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo` |
@@ -204,7 +203,7 @@ sudo rm -rf /etc/yum.repos.d/mssql-server.repo
 
 2. Используйте один из следующих команд по настройке репозитория по своему усмотрению.
 
-   | Хранилище | Версия | Command |
+   | Хранилище | Version | Command |
    |---|---|---|
    | **Предварительная версия (2019 г.)** | 2019 г. | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-preview.list)"` |
    | **CU** | 2017 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"` |

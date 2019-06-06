@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: a576bf81-8f3c-4ba1-817b-87e89a8da684
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2b51bdbb489c3ddb1c00663dc70d05841dd6fb36
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 75638344b249274e8e4a7b637330c1c6806b0c86
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63161475"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702158"
 ---
 # <a name="intervening-shape-compute-clauses"></a>Предложения COMPUTE для промежуточного формирования данных
 Он является допустимым для внедрения одного или нескольких предложений COMPUTE между родительским и дочерним в команде параметризованные фигуры, как показано в следующем примере:  

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 080c1925-d453-4b89-92ac-c93591490518
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: da63965c867c56572956ca5400a4b9dcc1281abf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 31efe56dcb5ae926d5da08aa00a1005597b17b91
+ms.sourcegitcommit: fc341b2e08937fdd07ea5f4d74a90677fcdac354
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63214833"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718617"
 ---
 # <a name="address-book-data-binding-object"></a>Объект привязки данных адресной книги
 В приложении адресной книги используется [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) объекта для привязки данных из базы данных SQL Server для визуального объекта (в данном случае таблице DHTML) на странице приложения клиента HTML. Использует управляемую событиями логику программы VBScript [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) для:  

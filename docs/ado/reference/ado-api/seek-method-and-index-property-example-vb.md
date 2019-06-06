@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 337c9eda-9ddf-49ac-94d3-b33114ba6224
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8f53fb3258e7eebc54aa0adfad60ff81e83e41bf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: db5be65f007a667d23f7d94b3a7ae17eb6d2f36c
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63315677"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66719100"
 ---
 # <a name="seek-method-and-index-property-example-vb"></a>Примеры метода Seek и свойства Index (Visual Basic)
 В этом примере используется [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта [Seek](../../../ado/reference/ado-api/seek-method.md) метод и [индекс](../../../ado/reference/ado-api/index-property.md) свойство в сочетании с заданной ***идентификатор сотрудника***, чтобы найти Имя сотрудника в ***сотрудников*** таблицы в базе данных Nwind.mdb.  

@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 299c37bd-19ff-4261-8571-b9665687e075
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9930e76c902080cb7df22bf2a28afc1ae18b3cfd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 97a55923043d26c0eb672d7a698d5bf9224f1187
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62472376"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718736"
 ---
 # <a name="dealing-with-failed-updates"></a>Работа с ошибками обновлений
 Если обновление завершается с ошибками, как устранить ошибки зависит от характера и серьезность ошибки и логику приложения. Тем не менее если базы данных используется совместно с другими пользователями, обычно возникает ошибка что кто-то другой поле изменяется перед выполнением. Ошибки такого типа называется конфликт. ADO обнаруживает подобную ситуацию и сообщает об ошибке.  

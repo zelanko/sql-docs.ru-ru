@@ -1,21 +1,20 @@
 ---
 title: Экземпляр отказоустойчивого кластера — SQL Server в Linux работать | Документация Майкрософт
-description: ''
+description: В этой статье объясняется, как для работы SQL Server экземпляра отказоустойчивого кластера (FCI) в Linux.
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: fa7d516484f7950c63c9455cae81ed31fa981f75
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.openlocfilehash: 86ba2672ee1ddb7d7c801556c817d93e6d2e0ceb
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65982814"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66712921"
 ---
 # <a name="operate-failover-cluster-instance---sql-server-on-linux"></a>Работа экземпляра отказоустойчивого кластера — SQL Server на Linux
 

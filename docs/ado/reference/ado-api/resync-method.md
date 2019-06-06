@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 73b355d4-a4c0-434b-bfc4-039b1c76b32e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 68ca8ac6d223100f437a7ba0ca8bf7776953d40a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 251c2f67861dd996ac78efc9a8e599d7ec191072
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63062272"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66711557"
 ---
 # <a name="resync-method"></a>Метод Resync
 Обновляет данные в текущем [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта, или [поля](../../../ado/reference/ado-api/fields-collection-ado.md) коллекцию [записи](../../../ado/reference/ado-api/record-object-ado.md) объекта из базы данных.  
@@ -41,7 +41,7 @@ Recordset.Resync AffectRecords, ResyncValues Record.Fields.Resync ResyncValues
  Необязательный параметр. [AffectEnum](../../../ado/reference/ado-api/affectenum.md) значение, которое определяет, сколько записей **Resync** повлияет на метод. Значение по умолчанию — **adAffectAll**. Это значение не входит в состав **Resync** метод **поля** коллекцию **записи** объекта.  
   
  *ResyncValues*  
- Необязательный параметр. Объект [ResyncEnum](../../../ado/reference/ado-api/resyncenum.md) значение, которое указывает, перезаписываются ли базового значения. Значение по умолчанию — **adResyncAllValues**.  
+ Необязательный. Объект [ResyncEnum](../../../ado/reference/ado-api/resyncenum.md) значение, которое указывает, перезаписываются ли базового значения. Значение по умолчанию — **adResyncAllValues**.  
   
 ## <a name="remarks"></a>Примечания  
   

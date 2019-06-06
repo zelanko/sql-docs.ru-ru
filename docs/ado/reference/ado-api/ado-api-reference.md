@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: bfd96a4b-c913-45aa-9e4c-ec86ac364f3a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2b2f91a0b2ded038e89be6dfee29bea344ed010f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 6436ca3b67587751757ae01b4248c1ce8b35722d
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63065192"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66697284"
 ---
 # <a name="ado-api-reference"></a>Справочник по API ADO
 В этом разделе документации по объектам ADO разделы для каждого ADO объекта, коллекции, свойство, динамического свойства, метода, событий и перечисления. Кроме того он содержит список индексы синтаксиса ADO для использования с Microsoft Visual C++ и классов Windows Foundation (WFC).  
