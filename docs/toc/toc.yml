@@ -2475,7 +2475,7 @@
               href: ../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md
             - name: Определяемые пользователем типы
               href: ../relational-databases/native-client/features/using-user-defined-types.md
-            - name: 'Типы данных XML '
+            - name: Типы данных XML
               href: ../relational-databases/native-client/features/using-xml-data-types.md
             - name: Поддержка UTF-16 в собственном клиенте SQL Server версии 11.0
               href: ../relational-databases/native-client/features/utf-16-support-in-sql-server-native-client-11-0.md
@@ -6374,6 +6374,15 @@
                   href: ../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md
                 - name: 'Проверка состояния сообщений электронной почты, отправленных при помощи компонента Database Mail'
                   href: ../relational-databases/database-mail/check-the-status-of-e-mail-messages-sent-with-database-mail.md
+            - name: Устранение неполадок
+              href: ../relational-databases/database-mail/database-mail-general-troubleshooting.md
+              items:
+                - name: Отправка тестового письма
+                  href: ../relational-databases/database-mail/database-mail-sending-test-email.md
+                - name: Распространенные ошибки
+                  href: ../relational-databases/database-mail/database-mail-common-errors.md
+                - name: Письмо в очереди не доставлено
+                  href: ../relational-databases/database-mail/database-mail-mail-queued-not-delivered.md
         - name: Сжатие данных
           href: ../relational-databases/data-compression/data-compression.md
           items:
@@ -8023,6 +8032,8 @@
           items:
             - name: атака SQL Injection
               href: ../relational-databases/security/sql-injection.md
+            - name: Ограничения функций
+              href: ../relational-databases/security/feature-restrictions.md
             - name: 'TRUSTWORTHY, свойство базы данных'
               href: ../relational-databases/security/trustworthy-database-property.md
             - name: Политика паролей
@@ -8724,20 +8735,42 @@
               href: ../ssdt/dac-framework-compatibility.md
     - name: SQL Server Management Studio (SSMS)
       items:
-        - name: Загрузить
+        - name: Скачать SSMS
           href: ../ssms/download-sql-server-management-studio-ssms.md
         - name: Заметки о выпуске
           href: ../ssms/release-notes-ssms.md
         - name: Обзор
           items:
-            - name: SSMS
-              items:
-                - name: SQL Server Management Studio (SSMS)
-                  href: ../ssms/sql-server-management-studio-ssms.md
-                - name: Основные сведения об SSMS для бизнес-аналитики
-                  href: ../ssms/introduction-to-sql-server-management-studio-for-business-intelligence.md
-                - name: Установка SSMS не на английском языке
-                  href: ../ssms/install-other-languages.md
+            - name: SQL Server Management Studio (SSMS)
+              href: ../ssms/sql-server-management-studio-ssms.md
+        - name: Краткие руководства
+          items:
+            - name: Подключение и отправка запроса к SQL Server
+              href: ../ssms/tutorials/connect-query-sql-server.md
+        - name: Учебники
+          items:
+            - name: Объекты скриптов
+              href: ../ssms/tutorials/scripting-ssms.md
+            - name: "Конфигурация\_SSMS"
+              href: ../ssms/tutorials/ssms-configuration.md
+        - name: Основные понятия
+          items:
+            - name: Окна инструментов SSMS
+              href: ../ssms/tool-windows-in-sql-server-management-studio.md
+            - name: Создание проектов баз данных с помощью среды SSMS
+              href: ../ssms/build-database-projects-by-using-sql-server-management-studio.md
+            - name: Управление окнами SSMS
+              href: ../ssms/understand-sql-server-management-studio-windows-management.md
+            - name: Администрирование серверов с помощью SSMS
+              href: ../ssms/administer-servers-with-sql-server-management-studio.md
+            - name: Аргументы для внешних средств
+              href: ../ssms/use-of-sql-server-features-and-capabilities-wwi-oltp.md
+            - name: Добавление внешнего инструмента в меню "Инструменты"
+              href: ../ssms/add-an-external-tool-to-the-tools-menu-sql-server-management-studio.md
+            - name: Служебная программа SSMS
+              href: ../ssms/ssms-utility.md
+            - name: Сочетания клавиш SSMS
+              href: ../ssms/sql-server-management-studio-keyboard-shortcuts.md
             - name: "Агент SQL\_Server"
               items:
                 - name: "Агент SQL\_Server"
@@ -8746,92 +8779,6 @@
                   href: ../ssms/agent/post-download-instructions.md
                 - name: Монитор активности заданий
                   href: ../ssms/agent/job-activity-monitor.md
-            - name: Регистрация серверов
-              items:
-                - name: Регистрация серверов
-                  href: ../ssms/register-servers/register-servers.md
-            - name: Написание скриптов
-              items:
-                - name: Написание скриптов
-                  href: ../ssms/scripting/database-engine-scripting.md
-                - name: Редакторы запросов и текста
-                  href: ../ssms/scripting/query-and-text-editors-sql-server-management-studio.md
-                - name: Редактор запросов компонента Database Engine
-                  href: ../ssms/scripting/database-engine-query-editor-sql-server-management-studio.md
-                - name: Редактор XML
-                  href: ../ssms/scripting/xml-editor-sql-server-management-studio.md
-                - name: Настройка редакторов
-                  href: ../ssms/scripting/configure-editors-sql-server-management-studio.md
-                - name: Связывание расширения файла с редактором кода
-                  href: ../ssms/scripting/associate-file-extensions-to-a-code-editor.md
-                - name: 'Изменение цвета, размера и стиля шрифта'
-                  href: ../ssms/scripting/change-font-color-size-and-style.md
-                - name: Использование окна «Свойства» в среде Management Studio
-                  href: ../ssms/scripting/use-the-properties-window-in-management-studio.md
-                - name: Открытие редактора
-                  href: ../ssms/scripting/open-an-editor-sql-server-management-studio.md
-                - name: Управление режимами редактирования и просмотра
-                  href: ../ssms/scripting/manage-the-editor-and-view-mode.md
-                - name: управлять форматированием кода
-                  href: ../ssms/scripting/manage-code-formatting.md
-                - name: Перемещение по коду и тексту
-                  href: ../ssms/scripting/navigate-code-and-text.md
-                - name: Выделение цветом в редакторах запросов
-                  href: ../ssms/scripting/color-coding-in-query-editors.md
-        - name: Краткие руководства
-          items:
-            - name: SSMS
-              items:
-                - name: Подключение и отправка запроса к SQL Server
-                  href: ../ssms/tutorials/connect-query-sql-server.md
-            - name: Регистрация серверов
-              items:
-                - name: Создание зарегистрированного сервера
-                  href: ../ssms/register-servers/create-a-new-registered-server-sql-server-management-studio.md
-        - name: Учебники
-          items:
-            - name: SSMS
-              items:
-                - name: SQL Server Management Studio
-                  href: ../ssms/tutorials/tutorial-sql-server-management-studio.md
-                - name: Подключение и отправка запроса к SQL Server
-                  href: ../ssms/tutorials/connect-query-sql-server.md
-                - name: Объекты скриптов
-                  href: ../ssms/tutorials/scripting-ssms.md
-                - name: Использование шаблонов в SSMS
-                  href: ../ssms/tutorials/templates-ssms.md
-                - name: "Конфигурация\_SSMS"
-                  href: ../ssms/tutorials/ssms-configuration.md
-            - name: Регистрация серверов
-              items:
-                - name: Регистрация подключенного сервера
-                  href: ../ssms/register-servers/register-a-connected-server-sql-server-management-studio.md
-                - name: Создание центрального сервера управления и группы серверов
-                  href: ../ssms/register-servers/create-a-central-management-server-and-server-group.md
-                - name: Выполнение инструкций на нескольких серверах одновременно
-                  href: ../ssms/register-servers/execute-statements-against-multiple-servers-simultaneously.md
-        - name: Основные понятия
-          items:
-            - name: SSMS
-              items:
-                - name: Окна инструментов SSMS
-                  href: ../ssms/tool-windows-in-sql-server-management-studio.md
-                - name: Создание проектов баз данных с помощью среды SSMS
-                  href: ../ssms/build-database-projects-by-using-sql-server-management-studio.md
-                - name: Управление окнами SSMS
-                  href: ../ssms/understand-sql-server-management-studio-windows-management.md
-                - name: Администрирование серверов с помощью SSMS
-                  href: ../ssms/administer-servers-with-sql-server-management-studio.md
-                - name: Аргументы для внешних средств
-                  href: ../ssms/use-of-sql-server-features-and-capabilities-wwi-oltp.md
-                - name: Добавление внешнего инструмента в меню "Инструменты"
-                  href: ../ssms/add-an-external-tool-to-the-tools-menu-sql-server-management-studio.md
-                - name: Служебная программа SSMS
-                  href: ../ssms/ssms-utility.md
-                - name: Сочетания клавиш SSMS
-                  href: ../ssms/sql-server-management-studio-keyboard-shortcuts.md
-            - name: "Агент SQL\_Server"
-              items:
                 - name: Задачи автоматизированного администрирования
                   href: ../ssms/agent/automated-administration-tasks-sql-server-agent.md
                 - name: Обеспечение безопасности агента
@@ -8938,6 +8885,8 @@
                       href: ../ssms/agent/proxy-account-properties-new-proxy-account-principals-tab.md
             - name: Регистрация серверов
               items:
+                - name: Регистрация серверов
+                  href: ../ssms/register-servers/register-servers.md
                 - name: Справка F1 по зарегистрированным серверам
                   href: ../ssms/register-servers/registered-servers-f1-help.md
             - name: Написание скриптов
@@ -9074,20 +9023,22 @@
                               items:
                                 - name: 'Объекты, поддерживаемые мастером создания скриптов'
                                   href: ../ssms/scripting/objects-supported-by-the-generate-scripts-wizard.md
-        - name: Практические руководства
+        - name: Практическое руководство
           items:
-            - name: SSMS
+            - name: Установка SSMS не на английском языке
+              href: ../ssms/install-other-languages.md
+            - name: "Использование шаблонов в\_SSMS"
+              href: ../ssms/tutorials/templates-ssms.md
+            - name: Настройка меню и сочетаний клавиш
+              href: ../ssms/customize-menus-and-shortcut-keys.md
+            - name: Настройка инструментария WMI для отображения состояния сервера в инструментальных средствах SQL Server
+              href: ../ssms/configure-wmi-to-show-server-status-in-sql-server-tools.md
+            - name: Настройка аудита входа
+              href: ../ssms/configure-login-auditing-sql-server-management-studio.md
+            - name: Диагностика
               items:
-                - name: Настройка меню и сочетаний клавиш
-                  href: ../ssms/customize-menus-and-shortcut-keys.md
-                - name: Настройка инструментария WMI для отображения состояния сервера в инструментальных средствах SQL Server
-                  href: ../ssms/configure-wmi-to-show-server-status-in-sql-server-tools.md
-                - name: Настройка аудита входа
-                  href: ../ssms/configure-login-auditing-sql-server-management-studio.md
-                - name: Диагностика
-                  items:
-                    - name: Создать полный дамп памяти
-                      href: ../ssms/troubleshoot/get-full-memory-dump.md
+                - name: Создать полный дамп памяти
+                  href: ../ssms/troubleshoot/get-full-memory-dump.md
             - name: "Агент SQL\_Server"
               items:
                 - name: Configure
@@ -9334,6 +9285,14 @@
                       href: ../ssms/agent/write-execution-trace-messages-to-sql-server-agent-log-ssms.md
             - name: Регистрация серверов
               items:
+                - name: Создание зарегистрированного сервера
+                  href: ../ssms/register-servers/create-a-new-registered-server-sql-server-management-studio.md
+                - name: Регистрация подключенного сервера
+                  href: ../ssms/register-servers/register-a-connected-server-sql-server-management-studio.md
+                - name: Создание центрального сервера управления и группы серверов
+                  href: ../ssms/register-servers/create-a-central-management-server-and-server-group.md
+                - name: Выполнение инструкций на нескольких серверах одновременно
+                  href: ../ssms/register-servers/execute-statements-against-multiple-servers-simultaneously.md
                 - name: Просмотр зарегистрированных серверов в среде SQL Server Management Studio
                   href: ../ssms/register-servers/view-registered-servers-in-sql-server-management-studio.md
                 - name: Удаление зарегистрированного сервера
@@ -9358,6 +9317,32 @@
                   href: ../ssms/register-servers/import-registered-server-information-sql-server-management-studio.md
             - name: Написание скриптов
               items:
+                - name: Написание скриптов
+                  href: ../ssms/scripting/database-engine-scripting.md
+                - name: Редакторы запросов и текста
+                  href: ../ssms/scripting/query-and-text-editors-sql-server-management-studio.md
+                - name: Редактор запросов компонента Database Engine
+                  href: ../ssms/scripting/database-engine-query-editor-sql-server-management-studio.md
+                - name: Редактор XML
+                  href: ../ssms/scripting/xml-editor-sql-server-management-studio.md
+                - name: Настройка редакторов
+                  href: ../ssms/scripting/configure-editors-sql-server-management-studio.md
+                - name: Связывание расширения файла с редактором кода
+                  href: ../ssms/scripting/associate-file-extensions-to-a-code-editor.md
+                - name: 'Изменение цвета, размера и стиля шрифта'
+                  href: ../ssms/scripting/change-font-color-size-and-style.md
+                - name: Использование окна «Свойства» в среде Management Studio
+                  href: ../ssms/scripting/use-the-properties-window-in-management-studio.md
+                - name: Открытие редактора
+                  href: ../ssms/scripting/open-an-editor-sql-server-management-studio.md
+                - name: Управление режимами редактирования и просмотра
+                  href: ../ssms/scripting/manage-the-editor-and-view-mode.md
+                - name: управлять форматированием кода
+                  href: ../ssms/scripting/manage-code-formatting.md
+                - name: Перемещение по коду и тексту
+                  href: ../ssms/scripting/navigate-code-and-text.md
+                - name: Выделение цветом в редакторах запросов
+                  href: ../ssms/scripting/color-coding-in-query-editors.md
                 - name: Настройка редакторов
                   href: ../ssms/scripting/configure-editors-sql-server-management-studio.md
                 - name: Связывание расширения файла с редактором кода
@@ -12070,6 +12055,8 @@
               href: ../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md
             - name: sys.server_role_members
               href: ../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md
+            - name: sys.sql_feature_restrictions
+              href: ../relational-databases/system-catalog-views/sys-sql-feature-restrictions.md
             - name: sys.sql_logins
               href: ../relational-databases/system-catalog-views/sys-sql-logins-transact-sql.md
             - name: sys.symmetric_keys
@@ -12567,7 +12554,7 @@
               href: ../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md
             - name: sys.dm_continuous_copy_status (база данных SQL Azure)
               href: ../relational-databases/system-dynamic-management-views/sys-dm-continuous-copy-status-azure-sql-database.md
-        - name: 'Индекс '
+        - name: Индекс
           href: ../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md
           items:
             - name: sys.dm_column_store_object_pool
@@ -15923,8 +15910,6 @@
                   href: ../t-sql/functions/col-name-transact-sql.md
                 - name: COLUMNPROPERTY
                   href: ../t-sql/functions/columnproperty-transact-sql.md
-                - name: DATABASE_PRINCIPAL_ID
-                  href: ../t-sql/functions/database-principal-id-transact-sql.md
                 - name: DATABASEPROPERTYEX
                   href: ../t-sql/functions/databasepropertyex-transact-sql.md
                 - name: DB_ID
@@ -16028,6 +16013,8 @@
                   href: ../t-sql/functions/certprivatekey-transact-sql.md
                 - name: CURRENT_USER
                   href: ../t-sql/functions/current-user-transact-sql.md
+                - name: DATABASE_PRINCIPAL_ID
+                  href: ../t-sql/functions/database-principal-id-transact-sql.md
                 - name: HAS_DBACCESS
                   href: ../t-sql/functions/has-dbaccess-transact-sql.md
                 - name: HAS_PERMS_BY_NAME

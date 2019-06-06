@@ -22,7 +22,7 @@ manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a3a0ad02f508aea78faa8f3da80e68f8ea6b3c7b
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47658092"
@@ -99,7 +99,7 @@ CHANGETABLE (
 |-----------------|---------------|-----------------|  
 |SYS_CHANGE_VERSION|**bigint**|Значение версии, связанное с последним изменением в строке|  
 |SYS_CHANGE_CREATION_VERSION|**bigint**|Значения версии, связанные с последней операцией вставки.|  
-|SYS_CHANGE_OPERATION|**nchar(1)**|Задает тип изменения:<br /><br /> **U** = блокировка обновления<br /><br /> **Я** = Вставка<br /><br /> **D** = Delete|  
+|SYS_CHANGE_OPERATION|**nchar(1)**|Задает тип изменения:<br /><br /> **U** = блокировка обновления<br /><br /> **І** = вставка<br /><br /> **D** = Delete|  
 |SYS_CHANGE_COLUMNS|**varbinary(4100)**|Содержит список столбцов, измененных после last_sync_version (базовой версии). Обратите внимание на то, что вычисляемые столбцы никогда не указаны как измененный.<br /><br /> Принимает значение NULL, если выполняется любое из следующих условий.<br /><br /> Отслеживание изменений столбцов не включено.<br /><br /> Операция представляет собой операцию вставки или удаления.<br /><br /> Все ключевые столбцы, не являющиеся первичными, были обновлены одной операцией. Это двоичное значение не следует интерпретировать непосредственно. Используйте для его интерпретации [CHANGE_TRACKING_IS_COLUMN_IN_MASK()](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md).|  
 |SYS_CHANGE_CONTEXT|**varbinary(128)**|Измените контекст, который при необходимости можно указать с помощью [WITH](../../relational-databases/system-functions/with-change-tracking-context-transact-sql.md) предложение как часть инструкции INSERT, UPDATE или DELETE.|  
 |\<значение первичного ключевого столбца >|Такие же, как столбцы таблицы пользователя|Значения первичного ключа для отслеживаемой таблицы. Эти значения уникально идентифицируют каждую строку в таблице пользователя.|  
