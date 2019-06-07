@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 924d026c61275d5bc957ce1157e30381f27ef2d0
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: 34290ebdb92468687ae5f252c0ebdfef05dd11ff
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65993985"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66743933"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Развертывание кластеров больших данных SQL Server в Kubernetes
 
@@ -92,8 +92,10 @@ kubectl config view
 mssqlctl cluster create
 ```
 
-> [!TIP]
-> В этом примере будут запрошены все параметры, которые не являются частью конфигурации по умолчанию, такие как пароли. Обратите внимание, что данные Docker предоставляется вам корпорацией Майкрософт как часть 2019 сервера SQL [программе раннего освоения](https://aka.ms/eapsignup).
+В этом случае будут запрошены все параметры, которые не являются частью конфигурации по умолчанию, такие как пароли. Обратите внимание, что данные Docker предоставляется вам корпорацией Майкрософт как часть 2019 сервера SQL [программе раннего освоения](https://aka.ms/eapsignup).
+
+> [!IMPORTANT]
+> Имя по умолчанию кластера больших данных — **mssql-cluster**. Это важно знать, чтобы запустить любой из **kubectl** команд, укажите пространство имен Kubernetes с `-n` параметра.
 
 ## <a id="customconfig"></a> Пользовательские конфигурации
 
@@ -220,8 +222,11 @@ mssqlctl cluster create --config-file custom.json --accept-eula yes
 1. После развертывания, найти IP-адрес конечной точки контроллера на внешний IP-данными, полученными следующей **kubectl** команды:
 
    ```bash
-   kubectl get svc controller-svc-external -n <your-cluster-name>
+   kubectl get svc controller-svc-external -n <your-big-data-cluster-name>
    ```
+
+   > [!TIP]
+   > Если вы не изменяли имя по умолчанию во время развертывания, используйте `-n mssql-cluster` в предыдущей команде. **MSSQL-cluster** является именем по умолчанию для кластера больших данных.
 
 1. Войдите кластер больших данных с **mssqlctl входа**. Задайте **--конечной точки контроллера** параметр внешний IP-адрес конечной точки контроллера.
 
@@ -267,7 +272,7 @@ minikube ip
 Независимо от платформы запуске кластера Kubernetes, чтобы получить все конечные точки служб, развернутых для кластера, выполните следующую команду:
 
 ```bash
-kubectl get svc -n <your-cluster-name>
+kubectl get svc -n <your-big-data-cluster-name>
 ```
 
 ## <a id="connect"></a> Подключитесь к кластеру

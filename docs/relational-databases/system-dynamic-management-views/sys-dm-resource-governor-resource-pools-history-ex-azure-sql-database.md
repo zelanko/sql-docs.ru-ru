@@ -21,12 +21,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: 1bc5c5d8377b93a3e0101f1160444a207b5881cd
-ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
+ms.openlocfilehash: d585f1f1245457aa9051f25bca696cf4495d93ed
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58618121"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66743926"
 ---
 # <a name="sysdmresourcegovernorresourcepoolshistoryex-transact-sql"></a>sys.dm_resource_governor_resource_pools_history_ex (Transact-SQL)
 
@@ -95,14 +95,14 @@ ms.locfileid: "58618121"
 |**avg_data_io_percent**|Decimal(5,2)|Среднее использование ввода-вывода в процентах от предела пула.|
 |**avg_log_write_percent**|Decimal(5,2)|Среднее использование ресурсов записи в процентах от предела пула.|
 |**avg_storage_percent**|Decimal(5,2)|Среднее использование хранилища в процентах от предела пула.|
-|**avg_allocated_storage_percent**|Decimal(5,2)|Процент пространства данных, выделенной с помощью всех баз данных в эластичном пуле. Это отношение данных пространства, выделенного для данных максимальный размер для эластичного пула. Дополнительные сведения см. в разделе Управление файлами места в базе данных SQL|
+|**avg_allocated_storage_percent**|Decimal(5,2)|Процент пространства данных, выделенной с помощью всех баз данных в эластичном пуле. Это отношение данных пространства, выделенного для данных максимальный размер для эластичного пула. Дополнительные сведения см.: Управление файлами места в базе данных SQL|
 |**max_worker_percent**|Decimal(5,2)|Максимальное количество одновременных рабочих ролей (запросов) в процентах от предела пула.|
 |**max_session_percent**|Decimal(5,2)|Максимальное число одновременных сеансов в процентах от предела пула.|
 |||
 
 ## <a name="permissions"></a>Разрешения
 
-Для этого представления необходимо разрешение VIEW DATABASE STATE.
+В этом представлении требуется разрешение VIEW SERVER STATE.
 
 ## <a name="remarks"></a>Примечания
 

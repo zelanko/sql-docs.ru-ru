@@ -10,12 +10,12 @@ ms.topic: quickstart
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 5725b00d3925a9b2589884e1e2bf8e7200844e1d
-ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
+ms.openlocfilehash: a385a2691d37bf31186a3530e91bdf937ac4dc05
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/03/2019
-ms.locfileid: "66462792"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66744198"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Краткое руководство. Развертывание кластера больших данных SQL Server в службе Azure Kubernetes (AKS)
 
@@ -82,7 +82,7 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
    | **Регион Azure** | Регион Azure для нового кластера AKS (по умолчанию **westus**). |
    | **Размер машины** | [Размер машины](https://docs.microsoft.com/azure/virtual-machines/windows/sizes) для узлов в кластере AKS (по умолчанию **Standard_L8s**). |
    | **Рабочие узлы** | Количество рабочих узлов в кластере AKS (по умолчанию **1**). |
-   | **Имя кластера** | Имя кластера AKS и кластера больших данных. Имя кластера должно быть только буквенно цифровых символов нижнего регистра и без пробелов. (по умолчанию **sqlbigdata**). |
+   | **Имя кластера** | Имя кластера AKS и кластера больших данных. Имя кластера больших данных должен быть только буквенно цифровых символов нижнего регистра и без пробелов. (по умолчанию **sqlbigdata**). |
    | **Пароль** | Пароль для контроллера, HDFS/Spark шлюза и главный экземпляр (по умолчанию **MySQLBigData2019**). |
    | **Контроллер для пользователя** | Имя пользователя-контроллер (по умолчанию: **администратора**). |
 
@@ -118,7 +118,7 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
 
 ## <a name="inspect-the-cluster"></a>Проверка кластера
 
-В любое время, во время развертывания можно использовать kubectl или портала администрирования кластера для проверки состояния и сведений о кластере работает больших данных.
+В любое время, во время развертывания, можно использовать **kubectl** или **mssqlctl** для проверки состояния и сведений о кластере работает больших данных.
 
 ### <a name="use-kubectl"></a>Используйте команду kubectl
 
@@ -127,42 +127,32 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
 1. Выполните следующую команду, чтобы получить сводку состояния всего кластера:
 
    ```
-   kubectl get all -n <your-cluster-name>
+   kubectl get all -n <your-big-data-cluster-name>
    ```
+
+   > [!TIP]
+   > Если вы не изменяли имя кластера больших данных, скрипт по умолчанию **sqlbigdata**.
 
 1. Изучение служб kubernetes и их внутренние и внешние конечные точки следующим **kubectl** команды:
 
    ```
-   kubectl get svc -n <your-cluster-name>
+   kubectl get svc -n <your-big-data-cluster-name>
    ```
 
 1. Вы также можете проверить состояние различных POD kubernetes с помощью следующей команды:
 
    ```
-   kubectl get pods -n <your-cluster-name>
+   kubectl get pods -n <your-big-data-cluster-name>
    ```
 
 1. Получить дополнительные сведения о конкретных pod с помощью следующей команды:
 
    ```
-   kubectl describe pod <pod name> -n <your-cluster-name>
+   kubectl describe pod <pod name> -n <your-big-data-cluster-name>
    ```
 
 > [!TIP]
 > Дополнительные сведения о том, как мониторинг и устранение неполадок развертывания см. в разделе [мониторинг и устранение неполадок с кластерами больших данных SQL Server](cluster-troubleshooting-commands.md).
-
-### <a name="use-the-cluster-administration-portal"></a>С помощью портала администрирования кластера
-
-После запуска контроллера pod, также можно на портале администрирования кластера для мониторинга развертывания. Доступны на портале с помощью внешних IP-адрес и порт номер для `mgmtproxy-svc-external` (например: **https://\<ip адрес\>: 30777: портал**). Учетные данные для входа на портал соответствуют значениям для **пользователя контроллера** и **пароль** , указанный в скрипте развертывания.
-
-Можно получить IP-адрес **mgmtproxy-svc-external** службу, выполнив следующую команду в окне bash или cmd:
-
-```bash
-kubectl get svc mgmtproxy-svc-external -n <your-cluster-name>
-```
-
-> [!NOTE]
-> В версии CTP 3.0 вы увидите предупреждение системы безопасности при доступе к веб-страницы, так как кластеры больших данных в настоящее время использует SSL-сертификатов, автоматически созданный.
 
 ## <a name="connect-to-the-cluster"></a>Подключитесь к кластеру
 

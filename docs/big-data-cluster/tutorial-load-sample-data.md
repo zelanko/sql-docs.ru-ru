@@ -10,12 +10,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: a270274d252a657d5eac8935b6f5d1b2e8b7f71e
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
-ms.translationtype: HT
+ms.openlocfilehash: e84b43b4aeeaff97d5b625eed0f4e30a0e6907f0
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63473515"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66743830"
 ---
 # <a name="tutorial-load-sample-data-into-a-sql-server-big-data-cluster"></a>Учебник. Загрузка образца данных в кластер SQL Server больших данных
 
@@ -71,7 +71,7 @@ ms.locfileid: "63473515"
    | <KNOX_PASSWORD> | Пароль для шлюза HDFS или Spark. |
 
    > [!TIP]
-   > Используйте [kubectl](cluster-troubleshooting-commands.md) найти IP-адреса для главного экземпляра SQL Server и Knox. Запустите `kubectl get svc -n <your-cluster-name>` и посмотрите на внешний IP-адреса основной экземпляр (**master-svc-external**) и Knox (**шлюз svc-external**).
+   > Используйте [kubectl](cluster-troubleshooting-commands.md) найти IP-адреса для главного экземпляра SQL Server и Knox. Запустите `kubectl get svc -n <your-big-data-cluster-name>` и посмотрите на внешний IP-адреса основной экземпляр (**master-svc-external**) и Knox (**шлюз svc-external**). Имя по умолчанию кластера — **mssql-cluster**.
 
 1. Скрипт начальной загрузки.
 
@@ -107,7 +107,7 @@ ms.locfileid: "63473515"
    | <KNOX_PASSWORD> | Пароль для шлюза HDFS или Spark. |
 
    > [!TIP]
-   > Используйте [kubectl](cluster-troubleshooting-commands.md) найти IP-адреса для главного экземпляра SQL Server и Knox. Запустите `kubectl get svc -n <your-cluster-name>` и посмотрите на внешний IP-адреса основной экземпляр (**master-svc-external**) и Knox (**шлюз svc-external**).
+   > Используйте [kubectl](cluster-troubleshooting-commands.md) найти IP-адреса для главного экземпляра SQL Server и Knox. Запустите `kubectl get svc -n <your-big-data-cluster-name>` и посмотрите на внешний IP-адреса основной экземпляр (**master-svc-external**) и Knox (**шлюз svc-external**). Имя по умолчанию кластера — **mssql-cluster**.
 
 1. Скрипт начальной загрузки.
 

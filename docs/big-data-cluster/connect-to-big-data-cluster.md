@@ -9,12 +9,12 @@ ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 3305990935c5d4c6077caa062184b0150aa83d6b
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: d247d50b40129d47600de6fb2d943d7e1e1ac777
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65994055"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66743997"
 ---
 # <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>Подключение к кластеру больших данных SQL Server с помощью Azure Data Studio
 
@@ -37,8 +37,11 @@ ms.locfileid: "65994055"
 1. Из командной строки найти IP-адрес главного экземпляра с помощью следующей команды:
 
    ```
-   kubectl get svc master-svc-external -n <your-cluster-name>
+   kubectl get svc master-svc-external -n <your-big-data-cluster-name>
    ```
+
+   > [!TIP]
+   > По умолчанию используется имя кластера больших данных **mssql-cluster** Если имя было изменено, в файле конфигурации развертывания. Дополнительные сведения см. в разделе [настроить параметры развертывания для больших данных кластеров](deployment-custom-configuration.md#clustername).
 
 1. В Azure данных Studio нажмите клавишу **F1** > **новое подключение**.
 

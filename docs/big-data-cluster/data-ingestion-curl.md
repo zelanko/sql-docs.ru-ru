@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: d40123d97b0a2305494a0cfe23dd2221993d14d3
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: c4c6cb2032949131277d5baa126f2895255fd18b
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65994047"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66743954"
 ---
 # <a name="use-curl-to-load-data-into-hdfs-on-sql-server-big-data-clusters"></a>Используйте curl для загрузки данных в HDFS в кластерах больших данных в SQL Server
 
@@ -25,14 +25,14 @@ ms.locfileid: "65994047"
 
 ## <a name="obtain-the-service-external-ip"></a>Получить внешний IP-адрес службы
 
-WebHDFS запускается после завершения развертывания, и доступ к нему осуществляется через Knox. Конечная точка Knox предоставляется через службу Kubernetes, именуемую **шлюз svc-external**.  Чтобы создать необходимые WebHDFS URL-адрес для отправки или скачивания файлов, вам понадобится **шлюз svc-external** службы внешний IP-адрес и имя кластера. Вы можете получить **шлюз svc-external** службы внешний IP-адрес, выполнив следующую команду:
+WebHDFS запускается после завершения развертывания, и доступ к нему осуществляется через Knox. Конечная точка Knox предоставляется через службу Kubernetes, именуемую **шлюз svc-external**.  Чтобы создать необходимые WebHDFS URL-адрес для отправки или скачивания файлов, вам понадобится **шлюз svc-external** службы внешний IP-адрес и имя кластера больших данных. Вы можете получить **шлюз svc-external** службы внешний IP-адрес, выполнив следующую команду:
 
 ```bash
-kubectl get service gateway-svc-external -n <cluster name> -o json | jq -r .status.loadBalancer.ingress[0].ip
+kubectl get service gateway-svc-external -n <big data cluster name> -o json | jq -r .status.loadBalancer.ingress[0].ip
 ```
 
 > [!NOTE]
-> `<cluster name>` Здесь — имя кластера, который указан в файле конфигурации развертывания. Имя по умолчанию — `mssql-cluster`.
+> `<big data cluster name>` Здесь — имя кластера, который указан в файле конфигурации развертывания. Имя по умолчанию — `mssql-cluster`.
 
 ## <a name="construct-the-url-to-access-webhdfs"></a>Создать URL-адрес для доступа к WebHDFS
 
