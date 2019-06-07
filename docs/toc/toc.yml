@@ -8189,16 +8189,20 @@
               href: ../azure-data-studio/sql-server-2019-extension.md
             - name: Агент SQL Server (предварительная версия)
               href: ../azure-data-studio/sql-server-agent-extension.md
+            - name: "Расширение Центральных серверов управления SQL\_Server (предварительная версия)"
+              href: ../azure-data-studio/sql-server-cms-extension.md
             - name: "Расширение DACPAC-файлов SQL\_Server (предварительная версия)"
               href: ../azure-data-studio/sql-server-dacpac-extension.md
             - name: Импорт SQL Server (предварительная версия)
               href: ../azure-data-studio/sql-server-import-extension.md
             - name: SQL Server Profiler (предварительная версия)
               href: ../azure-data-studio/sql-server-profiler-extension.md
-            - name: Расширение SandDance (предварительная версия)
-              href: ../azure-data-studio/sanddance-extension.md
+            - name: Расширение Сравнения схем (предварительная версия)
+              href: ../azure-data-studio/schema-compare-extension.md
             - name: Расширение PowerShell
               href: ../azure-data-studio/powershell-extension.md
+            - name: Расширение SandDance (предварительная версия)
+              href: ../azure-data-studio/sanddance-extension.md
         - name: Разработка расширений
           items:
             - name: Обзор расширяемости
@@ -9367,8 +9371,6 @@
               href: ../powershell/sql-server-powershell.md
             - name: Управляющие объекты SQL Server (SMO)
               href: ../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md
-            - name: Справочник по Transact-SQL (компонент Database Engine)
-              href: ../t-sql/language-reference.md
             - name: Среда SSMS
               items:
                 - name: Среда SSMS
@@ -15006,7 +15008,7 @@
           href: ../relational-databases/system-views/syssubscriptions-system-view-transact-sql.md
         - name: systranschemas (T-SQL)
           href: ../relational-databases/system-views/systranschemas-transact-sql.md
-    - name: Transact-SQL (T-SQL)
+    - name: Справочник по Transact-SQL (T-SQL)
       displayName: tsql
       href: ../t-sql/language-reference.md
       items:
