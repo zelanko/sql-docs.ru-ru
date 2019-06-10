@@ -4,17 +4,17 @@ titleSuffix: SQL Server big data clusters
 description: Узнайте, как подключаться к основной экземпляр SQL Server и шлюза HDFS или Spark для кластера SQL Server 2019 больших данных (Предварительная версия).
 author: rothja
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d247d50b40129d47600de6fb2d943d7e1e1ac777
-ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
+ms.openlocfilehash: 245e88034194a01908b69d545deb9fa717c19a4a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66743997"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66782982"
 ---
 # <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>Подключение к кластеру больших данных SQL Server с помощью Azure Data Studio
 
