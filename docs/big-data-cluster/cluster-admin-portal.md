@@ -5,18 +5,18 @@ description: Узнайте, как использовать портал адм
 author: yualan
 ms.author: alayu
 ms.reviewer: jroth
-manager: craigg
+manager: jroth
 ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: d54e74bb5956b569adb605a94a56dfeb00b040cd
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: 3317df82b78854c2e36fa4d985927dc6b94b04b3
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65994101"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801875"
 ---
 # <a name="how-to-use-the-cluster-administration-portal-to-monitor-a-sql-server-big-data-cluster"></a>Как использовать портал администрирования кластера для мониторинга кластера больших данных SQL Server
 

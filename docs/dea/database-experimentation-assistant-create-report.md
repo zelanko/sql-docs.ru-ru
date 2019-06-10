@@ -12,13 +12,13 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
 ms.reviewer: mathoma
-manager: craigg
-ms.openlocfilehash: 2d0e07e069754e961b290b33d77cb30b522c367f
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+manager: jroth
+ms.openlocfilehash: ff0a31fc4d825966fefafc11d8780862634f1937
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66015151"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794479"
 ---
 # <a name="create-analysis-reports-in-database-experimentation-assistant"></a>Создавать отчеты с анализом в помощнике по базе данных службы "Экспериментирование"
 
@@ -36,7 +36,7 @@ ms.locfileid: "66015151"
 
 Введите или выберите следующие сведения:
 
-- **Имя отчета**: Введите имя для отчета. Имя отчета используется для A и B баз данных. Пример *A (или B)* + *имя отчета* + *уникальный идентификатор*. 
+- **Имя отчета**: Введите имя для отчета. Имя отчета используется для A и B баз данных. Пример *A (или B)*  + *имя отчета* + *уникальный идентификатор*. 
 - **Имя сервера**: Введите имя компьютера сервера, необходимо включить в A, B, баз данных и анализа.
 - **Имя экземпляра SQL Server**: Введите имя экземпляра SQL Server для использования для отчета.
 - **Трассировка для исходного сервера**: Введите файл трассировки (TRC в качестве) первого SQL Server (2008 R2).
