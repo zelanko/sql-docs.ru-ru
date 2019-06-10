@@ -9,14 +9,14 @@ helpviewer_keywords:
 - URL registration
 - Report Server service, URL reservations
 ms.assetid: c2c460c3-e749-4efd-aa02-0f8a98ddbc76
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 0e835d14bfb2684685f95f65dd1a16e7e4edb55e
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 640407e68b146e399dc478b17a91c351b23fe306
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814117"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454507"
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>Сведения о резервировании и регистрации URL-адресов (диспетчер конфигурации служб SSRS)
   URL-адреса для приложений служб Reporting Services определяются в качестве резервирований URL-адресов в компоненте HTTP.SYS. Резервирование URL-адресов определяет синтаксис конечной точки URL-адреса к веб-приложению. При настройке приложений на сервере отчетов резервирование URL-адресов задается как для веб-службы сервера отчетов, так и для диспетчера отчетов. Резервирование URL-адресов создается автоматически при настройке URL-адресов в программе установке или программе настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -64,7 +64,7 @@ ms.locfileid: "51814117"
  При установке служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в конфигурации по умолчанию программа установки резервирует URL-адреса для веб-службы сервера отчетов и [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. При определении резервирования URL-адресов в программе настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] можно также принять значения по умолчанию. URL-адреса по умолчанию включают имя экземпляра, если устанавливается выпуск [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] либо если службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] устанавливаются как именованный экземпляр.  
   
 > [!IMPORTANT]  
->  Символом экземпляра является символ подчеркивания (**_**).  
+>  Символом экземпляра является символ подчеркивания ( **_** ).  
   
  Резервирование URL-адресов включает номер порта. Следующие операционные системы допускают работу нескольких веб-приложений через один и тот же порт:  
   
@@ -90,10 +90,9 @@ ms.locfileid: "51814117"
 |SQL Server Express|Веб-портал|`https://<servername>/reports_SQLExpress`|`https://<servername>:80/reports_SQLExpress`|  
   
 ##  <a name="URLPermissionsAccounts"></a> Проверка подлинности и удостоверение службы для URL-адресов служб Reporting Services  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] указывается учетная запись службы для службы сервера отчетов. Учетная запись, под которой запускается служба, используется для всех URL-адресов, созданных для приложений служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , запускаемых в одном экземпляре. Удостоверение службы экземпляра сервера отчетов сохраняется в файле конфигурации RSReportServer.config.  
+ Для резервирования URL-адресов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] отображается учетная запись резервирования URL-адресов. Учетная запись виртуальной службы используется для всех URL-адресов, созданных для приложений служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], запускаемых в одном экземпляре.
   
- Учетная запись службы не имеет значения по умолчанию. Однако ее указание во время установки обязательно и сохраняется в параметре **URLReservation** файла RSReportServer.config даже в том случае, если установка производится в режиме "только файлы". В качестве учетной записи службы можно указать учетную запись пользователя домена, **LocalSystem**или **NetworkService**.  
-  
+ 
  Анонимный доступ отключен, поскольку по умолчанию действует уровень безопасности **RSWindowsNegotiate**. Для доступа через интрасеть в URL-адресах сервера отчетов используются сетевые имена компьютеров. Настройка служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для работы через Интернет выполняется иначе. Дополнительные сведения о проверке подлинности RSWindowsNTLM и RSWindowsBasic см. в разделе [Проверка подлинности с использованием сервера отчетов](../../reporting-services/security/authentication-with-the-report-server.md) электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ##  <a name="URLlocalAdmin"></a> URL-адреса для локального администрирования  
