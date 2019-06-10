@@ -14,13 +14,13 @@ f1_keywords:
 ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 5badf157aa97f107663793ac129462f177e5c312
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: e7eb9b10ce427d1da46a225f532fba9cdaa8fa6c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65487848"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801431"
 ---
 # <a name="run-a-matching-project"></a>Запуск проекта сопоставления
 
@@ -66,7 +66,7 @@ ms.locfileid: "65487848"
     > [!NOTE]  
     >  Сопоставить исходные данные с доменом служб DQS возможно, только если исходный тип данных поддерживается службами DQS и совпадает с типом данных домена DQS. Сведения о поддерживаемых службами DQS типах данных см. в разделе [Типы данных SQL Server и службы SSIS, поддерживаемые для доменов DQS](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
   
-4.  Для добавления строки в таблицу "Сопоставления" щелкните значок **плюс (+)**, а для удаления строки — значок **минус (–)**.  
+4.  Для добавления строки в таблицу "Сопоставления" щелкните значок **плюс (+)** , а для удаления строки — значок **минус (–)** .  
   
 5.  Щелкните значок **Предварительный просмотр источника данных** для просмотра данных в таблице SQL Server, в выбранных представлениях или в выбранных листах Excel.  
   

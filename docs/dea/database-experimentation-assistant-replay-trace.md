@@ -12,13 +12,13 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
 ms.reviewer: mathoma
-manager: craigg
-ms.openlocfilehash: 4430352babb69c58930755cf4ddae0e70b9d5a02
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+manager: jroth
+ms.openlocfilehash: 7db0e6a83997a3be7b204f780f3c0a7ad856b0d8
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66015121"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794445"
 ---
 # <a name="replay-a-trace-in-database-experimentation-assistant"></a>Воспроизведение трассировки в помощнике по базе данных службы "Экспериментирование"
 
@@ -65,7 +65,7 @@ ms.locfileid: "66015121"
 ### <a name="replay-a-trace"></a>Воспроизведение трассировки
 
 1.  **Имя файла трассировки**: Введите имя файла трассировки.
-1.  **Максимальный размер файла (МБ)**: Введите значение размера файл продолжения трассировки. Значение по умолчанию — 200 МБ. Можно ввести пользовательское значение.
+1.  **Максимальный размер файла (МБ)** : Введите значение размера файл продолжения трассировки. Значение по умолчанию — 200 МБ. Можно ввести пользовательское значение.
 1.  **Путь для сохранения выходных данных трассировки для воспроизведения**: Введите путь, .trc выходного файла.
 1.  **Имя экземпляра SQL Server**:  Введите имя экземпляра SQL Server, на котором для воспроизведения трассировки.
 1.  Выберите **запустить**.

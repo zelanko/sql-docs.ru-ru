@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 7a8c96e0-1328-4f35-97fc-b6d9cb808bae
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: f16d39d738149d10a58dde8c01d8b447393ef9c6
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: 34218bbe7e8ac2e94acbb55ceb8bd64008e67c1e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65487534"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66776335"
 ---
 # <a name="run-dqsinstallerexe-to-complete-data-quality-server-installation"></a>Запуск файла DQSInstaller.exe для завершения установки сервера служб DQS
 
@@ -38,7 +38,7 @@ ms.locfileid: "65487534"
   
     -   **Начальный экран**. На **начальном экране** щелкните **Установщик сервера служб Data Quality**.  
   
-    -   **Меню "Пуск"**. На панели задач нажмите кнопку **Пуск**, выберите **Все программы** и щелкните [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]. В разделе [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]щелкните **Data Quality Services**и выберите **Программа установки Data Quality Server.**  
+    -   **Меню "Пуск"** . На панели задач нажмите кнопку **Пуск**, выберите **Все программы** и щелкните [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]. В разделе [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]щелкните **Data Quality Services**и выберите **Программа установки Data Quality Server.**  
   
     -   **Проводник**. Найдите файл DQSInstaller.exe. Если был установлен экземпляр SQL Server по умолчанию, файл DQSInstaller.exe будет помещен в папку C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn. Дважды щелкните файл DQSInstaller.exe.  
   
