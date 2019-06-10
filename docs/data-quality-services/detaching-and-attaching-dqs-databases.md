@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 830e33bc-dd15-4f8e-a4ac-d8634b78fe45
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 9067825db57574385e925d28e1b7badf049831df
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: c4f56ac8334be617e800c388158074f801f4aa98
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65480226"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66777704"
 ---
 # <a name="detaching-and-attaching-dqs-databases"></a>Присоединение и отсоединение баз данных DQS
 
@@ -46,7 +46,7 @@ ms.locfileid: "65480226"
 -   Для завершения любых выполняемых операций или остановки каких-либо процессов в службах DQS необходимо быть членом роли dqs_administrator в базе данных DQS_MAIN.  
   
 ##  <a name="Detach"></a> Отсоединение баз данных DQS  
- При отсоединении базы данных DQS с помощью среды SQL Server Management Studio отсоединенные файлы остаются на компьютере, их можно повторно присоединить к этому же экземпляру SQL Server либо они могу быть перемещены на другой сервер и присоединены там. Файлы баз данных DQS обычно находятся в следующем расположении на компьютере служб Data Quality Services: C:\Program Files\Microsoft SQL Server\MSSQL13.*<Имя_экземпляра>* \MSSQL\DATA.  
+ При отсоединении базы данных DQS с помощью среды SQL Server Management Studio отсоединенные файлы остаются на компьютере, их можно повторно присоединить к этому же экземпляру SQL Server либо они могу быть перемещены на другой сервер и присоединены там. Файлы баз данных DQS обычно находятся в следующем расположении на компьютере служб Data Quality Services: C:\Program Files\Microsoft SQL Server\MSSQL13. *<Имя_экземпляра>* \MSSQL\DATA.  
   
 1.  Запустите среду Microsoft SQL Server Management Studio и подключитесь к соответствующему экземпляру SQL Server.  
   
