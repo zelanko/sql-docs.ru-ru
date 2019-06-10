@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: 486e4216-a946-4c6e-828c-61bc905f7ec1
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 6834e3dd223f8b27a8c038e58f0e4121a670b9c3
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: f709a2a58b6dd6f18c992a79c94ad63bdd8f0ef6
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65487428"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66776464"
 ---
 # <a name="install-data-quality-services"></a>Установка служб Data Quality Services
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  [!INCLUDE[ssDQSnoversionLong](../../includes/ssdqsnoversionlong-md.md)] (DQS) содержит два компонента: **[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]** и **[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]**.  
+  [!INCLUDE[ssDQSnoversionLong](../../includes/ssdqsnoversionlong-md.md)] (DQS) содержит два компонента: **[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]** и **[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]** .  
   
 |Компонент DQS|Описание|  
 |-------------------|-----------------|  
@@ -85,7 +85,7 @@ ms.locfileid: "65487428"
   
     -   В базе данных master создается хранимая процедура DQInitDQS_MAIN.  
   
-    -   Файл журнала DQS_install.log обычно создается в папке C:\Program Files\Microsoft SQL Server\MSSQL13.*(имя_экземпляра)* \MSSQL\Log. Этот файл содержит сведения о действиях, выполненных после запуска файла DQSInstaller.exe.  
+    -   Файл журнала DQS_install.log обычно создается в папке C:\Program Files\Microsoft SQL Server\MSSQL13. *(имя_экземпляра)* \MSSQL\Log. Этот файл содержит сведения о действиях, выполненных после запуска файла DQSInstaller.exe.  
   
     -   Если база данных служб Master Data Services находится на том же экземпляре SQL Server, что и [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)], создается пользователь, сопоставленный с именем входа служб Master Data Services, которому предоставляется роль dqs_administrator в базе данных DQS_MAIN.  
   

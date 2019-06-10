@@ -4,18 +4,18 @@ titleSuffix: Azure Data Studio
 description: В этой статье описывается использование сочетаний клавиш кода PROSE студии данных Azure для автоматического создания кода для распространенные задачи по структурированию данных.
 author: rothja
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 705d3b5230faf69ca9eb9de2f7f0cc21b42a8955
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.openlocfilehash: f5406ce0e67322a8f7148fc83b83d0789f27e1ae
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59935346"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66770779"
 ---
 # <a name="data-wrangling-using-prose-code-accelerator"></a>С помощью ускорителя кода PROSE Wrangling данных
 

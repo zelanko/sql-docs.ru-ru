@@ -4,18 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: Этом руководстве показано, как прием данных в пул данных с помощью заданий Spark в Azure Data Studio кластера больших данных SQL Server 2019 (Предварительная версия).
 author: rothja
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 05/22/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: dcdbee449f15e070920660d5470135f4f8ae93a0
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: aa38de6e488c71109758d26481a8487f574f6451
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65994168"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66770890"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>Учебник. Прием данных в пул данных SQL Server с помощью заданий Spark
 
@@ -108,7 +108,7 @@ ms.locfileid: "65994168"
    |---|---|
    | имя сервера | Использование SQL Server для чтения схемы таблицы |
    | Номер порта | Порт SQL Server прослушивает (по умолчанию 1433) |
-   | username | Имя пользователя для входа SQL Server |
+   | username пользователя | Имя пользователя для входа SQL Server |
    | password | Пароль для входа в SQL Server |
    | Имя базы данных | Целевая база данных |
    | Имя внешней таблицы | Таблица, используемая для результатов |
