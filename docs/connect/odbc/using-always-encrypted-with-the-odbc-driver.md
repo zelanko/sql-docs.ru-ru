@@ -7,14 +7,14 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
-manager: craigg
+manager: jroth
 author: MightyPen
-ms.openlocfilehash: ab53bcc4885ab91c3c9d022ffc3ba3bd72e2c5be
-ms.sourcegitcommit: 1d66761e54490267be4d0a94efc0ad6790051ef2
+ms.openlocfilehash: aff69606c81a1ee93a01a8467299ba2155da770d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65198039"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801735"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Использование функции Always Encrypted с драйвером ODBC для SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -557,7 +557,7 @@ SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 
 |`ColumnEncryption`|Направление массового копирования|Описание|
 |----------------|-------------|-----------|
-|`Disabled`|Исходящее (к клиенту)|Получение зашифрованного текста. Данные предоставляются в формате **varbinary(max)**.|
+|`Disabled`|Исходящее (к клиенту)|Получение зашифрованного текста. Данные предоставляются в формате **varbinary(max)** .|
 |`Enabled`|Исходящее (к клиенту)|Получение открытого текста. Драйвер расшифрует данные столбца.|
 |`Disabled`|Входящее (к серверу)|Вставка зашифрованного текста Предназначено для непрозрачного перемещения зашифрованных данных, которые не нужно расшифровывать. Операция завершится ошибкой, если для пользователя не установлен параметр `ALLOW_ENCRYPTED_VALUE_MODIFICATIONS` или для дескриптора соединения не указан атрибут BCPMODIFYENCRYPTED. Дополнительную информацию см. ниже.|
 |`Enabled`|Входящее (к серверу)|Вставка обычного текста. Драйвер зашифрует данные столбца.|

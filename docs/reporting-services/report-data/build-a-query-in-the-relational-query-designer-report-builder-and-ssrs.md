@@ -10,12 +10,12 @@ manager: kfile
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/25/2019
-ms.openlocfilehash: 67b64a85a8f36fc7c370129ce8524e131a91f6a1
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 400e96771d54e090e9e3b2bc03967d26b50a6590
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65573246"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66500487"
 ---
 # <a name="build-a-query-in-the-relational-query-designer-report-builder-and-ssrs"></a>Построение запроса в конструкторе реляционных запросов (построитель отчетов и службы SSRS)
 
@@ -84,17 +84,17 @@ ms.locfileid: "65573246"
   
 ### <a name="to-view-a-query-result-set"></a>Просмотр результирующего набора запроса  
   
-1.  На панели инструментов конструктора запросов нажмите кнопку **Выполнить запрос (!)**.  
+1.  На панели инструментов конструктора запросов нажмите кнопку **Выполнить запрос (!)** .  
   
     > [!NOTE]  
-    >  В конструкторе запросов для выполнения запроса и получения результирующего набора используются учетные данные времени разработки. Дополнительные сведения см. в разделе [Указание учетных данных в построителе отчетов](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
+    >  В конструкторе запросов для выполнения запроса и получения результирующего набора используются учетные данные времени разработки. Дополнительные сведения см. в статье [Задание учетных данных и сведениях о соединении для источников данных отчета](specify-credential-and-connection-information-for-report-data-sources.md).  
   
  Будет выполнен запрос к источнику данных, и в панели результатов запроса будут возвращены данные примера.  
   
 ## <a name="see-also"></a>См. также:  
  [Наборы данных отчетов (службы SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [Добавление данных из внешних источников данных &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md)   
- [Конструкторы запросов (построитель отчетов)](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)   
+ [Средства проектирования запросов (службы SSRS)](query-design-tools-ssrs.md)   
  [Создание общего или внедренного набора данных (построитель отчетов и службы SSRS)](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
  [Представление конструктора отчетов (построитель отчетов)](../../reporting-services/report-builder/report-design-view-report-builder.md)   
  [Представление конструктора общих наборов данных (построитель отчетов)](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md)   

@@ -6,20 +6,20 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 9b8346a6-f4f4-4ad3-bc98-8f2be342ef2d
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 9584e07c3669548418a641eae4e3e92281a397f9
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 450a490e5c4f54f9fec2e88c1c73bfbf8502869a
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296392"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66499991"
 ---
 # <a name="prerequisites-for-tutorials-report-builder"></a>Предварительные условия для использования учебников (построитель отчетов)
 
 При прохождении учебников по построителю отчетов требуется возможность просмотра и сохранения отчетов [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] с разбивкой на страницы на сервере отчетов или сайте SharePoint, интегрированном с сервером отчетов. Во всех учебниках для данных используются запросы, которые необходимо обработать с помощью экземпляра SQL Server.  
   
-Если нет доступа к серверу отчетов, сайту или источнику данных, изучить работу с построителем отчетов можно путем построения отчета вне сети. См. [Учебник. Учебник. Создание стандартного отчета с диаграммой в режиме "вне сети" (построитель отчетов)](../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md).  
+Если нет доступа к серверу отчетов, сайту или источнику данных, изучить работу с построителем отчетов можно путем построения отчета вне сети. См. раздел [Учебник. Создание стандартного отчета с диаграммой в режиме "вне сети" (построитель отчетов)](../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md).  
 
 ## <a name="requirements"></a>Требования
 
@@ -35,11 +35,11 @@ ms.locfileid: "56296392"
   
 -   Имя экземпляра SQL Server и учетные данные, необходимые для доступа только для чтения к базе данных. Запросы набора данных в учебниках используют статические данные, но все запросы должны обрабатываться экземпляром SQL Server для возвращения метаданных, необходимых для набора данных отчета. Например, следующая строка подключения определяет только сервер: `data source=<servername>`. У вас должны быть права на доступ к базе данных по умолчанию, назначенной вам системным администратором, который предоставляет разрешения на доступ к серверу. Также можно указать базу данных, как показано в следующей строке подключения: `data source=<servername>;initial catalog=<database>`.  
   
--   Для работы с статьей [Учебник. Отчет-карта (построитель отчетов)](Tutorial:%20Map%20Report%20\(Report%20Builder\).md) сервер отчетов необходимо настроить для поддержки карт Bing в качестве фона. Дополнительные сведения см. в разделе [План поддержки отчетов-карт](https://msdn.microsoft.com/5ddc97a7-7ee5-475d-bc49-3b814dce7e19).   
+-   Для работы с [учебником по отчету-карте (построитель отчетов)](Tutorial:%20Map%20Report%20\(Report%20Builder\).md) сервер отчетов необходимо настроить для поддержки карт Bing в качестве фона. Дополнительные сведения см. в разделе [План поддержки отчетов-карт](https://msdn.microsoft.com/5ddc97a7-7ee5-475d-bc49-3b814dce7e19).   
 
--   Для работы с статьей [Учебник. Создание детализированных и главных отчетов (построитель отчетов)](Tutorial:%20Creating%20Drillthrough%20and%20Main%20Reports%20\(Report%20Builder\).md) требуется доступ к кубу Contoso Sales. Дополнительные сведения см. в учебнике. 
+-   В рамках учебника [Создание детализированных и главных отчетов (построитель отчетов)](Tutorial:%20Creating%20Drillthrough%20and%20Main%20Reports%20\(Report%20Builder\).md) требуется доступ к кубу Contoso Sales. Дополнительные сведения см. в учебнике. 
   
-Администратор сервера отчетов может предоставить необходимые разрешения на сервере отчетов, настроить папки для служб [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] , а также параметры по умолчанию для построителя отчетов. Дополнительные сведения см. в разделе [Установка и удаление построителя отчетов](https://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416).  
+Администратор сервера отчетов может предоставить необходимые разрешения на сервере отчетов, настроить папки для служб [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] , а также параметры по умолчанию для построителя отчетов. Дополнительные сведения см. в разделе [Install Report Builder](install-windows/install-report-builder.md).  
 
 ## <a name="next-steps"></a>Следующие шаги
 
