@@ -10,13 +10,13 @@ ms.reviewer: alayu; sstein
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
-manager: craigg
-ms.openlocfilehash: f62d315991910fa89513425e5e41700e4effd059
-ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+manager: jroth
+ms.openlocfilehash: af00a85aa1515ae5d43e6842fede00880bf9a573
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65620393"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800758"
 ---
 # <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>Краткое руководство. Подключение и запрос SQL Server с помощью [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 В этом кратком руководстве показано, как использовать [!INCLUDE[name-sos](../includes/name-sos-short.md)] для подключения к SQL Server, а затем с помощью инструкций Transact-SQL (T-SQL) для создания *TutorialDB* используется в [!INCLUDE[name-sos](../includes/name-sos-short.md)] учебники.
@@ -36,7 +36,7 @@ ms.locfileid: "65620393"
 ## <a name="connect-to-a-sql-server"></a>Подключение к SQL Server
 
    
-1. Запуск **[!INCLUDE[name-sos](../includes/name-sos-short.md)]**.
+1. Запуск **[!INCLUDE[name-sos](../includes/name-sos-short.md)]** .
 1. При первом запуске [!INCLUDE[name-sos](../includes/name-sos-short.md)] **приветствия** должна открыться страница. Если вы не видите **приветствия** выберите **помочь** > **приветствия**. Выберите **новое подключение** открыть **подключения** области:
    
    ![Значок "Создать подключение"](media/quickstart-sql-server/new-connection-icon.png)

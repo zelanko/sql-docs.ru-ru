@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
-manager: craigg
-ms.openlocfilehash: 672473c4e4cfaf5314f53ae7d3a351cb82a93e6d
-ms.sourcegitcommit: 179ab0e55f918f58a18c43af076130f4ac3decd6
+manager: jroth
+ms.openlocfilehash: f424e8e799c7550ff426a7b4c2a2022fe4b0c4bb
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65875181"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794366"
 ---
 # <a name="upgrade-on-premises-sql-server-to-sql-server-or-sql-server-on-azure-vms-using-the-data-migration-assistant"></a>Обновление на локальном сервере SQL Server до SQL Server или SQL Server на виртуальных машинах Azure с помощью Data Migration Assistant
 

@@ -4,18 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: В этой статье показано, как восстановить базу данных на основной экземпляр кластера SQL Server 2019 больших данных (Предварительная версия).
 author: rothja
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 541aa292453b80eb92691061de3f2f9be2c7fd6a
-ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
+ms.openlocfilehash: d69476548d405ff9b04a010c76241c1f15934778
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66744007"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797951"
 ---
 # <a name="restore-a-database-into-the-sql-server-big-data-cluster-master-instance"></a>Восстановление базы данных в основной экземпляр кластера SQL Server больших данных
 
