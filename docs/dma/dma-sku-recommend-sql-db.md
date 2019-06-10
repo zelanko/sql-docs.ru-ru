@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
-manager: craigg
-ms.openlocfilehash: c67eca111ecd0a51bc8e70d747cb7b713fe54ca8
-ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
+manager: jroth
+ms.openlocfilehash: 5effd31d37af5fbe119f1ad23781b994fa89c240
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66413633"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794316"
 ---
 # <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>Определить справа базы данных или управляемого экземпляра Azure SQL SKU для локальной базы данных
 
