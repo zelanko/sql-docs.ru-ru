@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 87d3801b-dc52-419e-9316-8b1f1490946c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 714481541ee0060759aff3533add80d04ceebc8b
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+manager: jroth
+ms.openlocfilehash: 1655124738d88ecfd154d934bceef9c1b0236dcf
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54257189"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795121"
 ---
 # <a name="troubleshoot-database-mirroring-configuration-sql-server"></a>Диагностика конфигурации зеркального отображения базы данных (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "54257189"
 |[Сетевой доступ](#NetworkAccess)|Документирует требования, согласно которым каждому экземпляру сервера разрешается доступ к портам других экземпляров сервера по протоколу TCP.|  
 |[Подготовка зеркальной базы данных](#MirrorDbPrep)|Обобщаются требования к подготовке зеркальной базы данных для включения зеркального отображения.|  
 |[Ошибка операции по созданию файла](#FailedCreateFileOp)|Описывается обработка сбоев при выполнении операции создания файла.|  
-|[Запуск зеркального отображения (язык Transact-SQL)](#StartDbm)|Описывается, в каком порядке должны выполняться инструкции ALTER DATABASE *имя_базы_данных* SET PARTNER **='**_сервер_участник_**'** .|  
+|[Запуск зеркального отображения (язык Transact-SQL)](#StartDbm)|Описывается, в каком порядке должны выполняться инструкции ALTER DATABASE *имя_базы_данных* SET PARTNER **='** _сервер_участник_ **'** .|  
 |[Межбазовые транзакции](#CrossDbTxns)|Автоматический переход на другой ресурс может привести к автоматическому и, возможно, неверному разрешению проблемных транзакций. По этой причине зеркальное отображение базы данных не поддерживает транзакции между базами данных.|  
   
 ##  <a name="Accounts"></a> Измерение счетов  
@@ -144,7 +144,7 @@ ms.locfileid: "54257189"
  Дополнительные сведения см. в разделе [Удаление зеркального отображения базы данных (SQL Server)](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md), [Подготовка зеркальной базы данных к зеркальному отображению (SQL Server)](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md), [Создание сеанса зеркального отображения базы данных с использованием проверки подлинности Windows (Transact-SQL)](../../database-engine/database-mirroring/database-mirroring-establish-session-windows-authentication.md), [Использование сертификатов для конечной точки зеркального отображения базы данных (Transact-SQL)](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md) или [Создание сеанса зеркального отображения базы данных с использованием проверки подлинности Windows (среда SQL Server Management Studio)](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md).  
   
 ##  <a name="StartDbm"></a> Запуск зеркального отображения (язык Transact-SQL)  
- Порядок выполнения инструкций ALTER DATABASE *имя_базы_данных* SET PARTNER **='**_сервер_участник_**'** очень важен.  
+ Порядок выполнения инструкций ALTER DATABASE *имя_базы_данных* SET PARTNER **='** _сервер_участник_ **'** очень важен.  
   
 1.  Первая инструкция должна выполняться на зеркальном сервере. В этот момент зеркальный сервер не пытается соединиться с каким бы то ни было другим экземпляром сервера. Вместо этого он предписывает своей базе данных ждать, пока основной сервер не свяжется с зеркальным сервером.  
   

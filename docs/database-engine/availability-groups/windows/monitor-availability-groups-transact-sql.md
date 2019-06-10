@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 881a34de-8461-4811-8c62-322bf7226bed
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d14cb0b60074ce7cd2c11c80817ec5f0043651a0
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 12d36899d27e73d2176e0ad3c5c40c80119406ab
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209433"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66779167"
 ---
 # <a name="monitor-availability-groups-transact-sql"></a>Отслеживание групп доступности (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,25 +32,6 @@ ms.locfileid: "53209433"
 > [!TIP]  
 >  Многие из этих представлений можно объединять с помощью их столбцов ID, что позволяет возвращать сведения из нескольких представлений в одном запросе.  
   
- **В этом разделе:**  
-  
--   [Разрешения](#Permissions)  
-  
--   **Мониторинг с помощью Transact-SQL:**  
-  
-     [Функция групп доступности AlwaysOn в экземпляре сервера](#AoAgFeatureOnSI)  
-  
-     [Группы доступности на кластере WSFC](#WSFC)  
-  
-     [Группы доступности](#AvGroups)  
-  
-     [Реплики доступности](#AvReplicas)  
-  
-     [Базы данных доступности](#AvDbs)  
-  
-     [Прослушиватели групп доступности](#AGlisteners)  
-  
--   [Связанные задачи](#RelatedTasks)  
   
 ##  <a name="Permissions"></a> Permissions  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] требуется разрешение VIEW ANY DEFINITION на экземпляре сервера. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] необходимо разрешение VIEW SERVER STATE на сервере.  
@@ -189,7 +170,7 @@ ms.locfileid: "53209433"
 >  Расположение первичной реплики — авторитетный источник для группы доступности.  
   
 > [!NOTE]  
->  Сведения о счетчиках производительности [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] для баз данных доступности (объект производительности **SQLServer:Database Replica** ) см. в разделе [SQL Server, реплика базы данных](../../../relational-databases/performance-monitor/sql-server-database-replica.md). Для мониторинга активности журнала транзакций для баз данных доступности пользуйтесь следующими счетчиками объекта производительности **SQLServer:Databases**: **Время записи журнала на диск (мс)**, **Записей журнала на диск/с**, **Неудачных обращений к кэшу пула журнала/с**, **Операций чтения диска пула журнала/с** и **Запросов пула журнала/с**. Дополнительные сведения см. в статье [SQL Server, Databases Object](../../../relational-databases/performance-monitor/sql-server-databases-object.md).  
+>  Сведения о счетчиках производительности [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] для баз данных доступности (объект производительности **SQLServer:Database Replica** ) см. в разделе [SQL Server, реплика базы данных](../../../relational-databases/performance-monitor/sql-server-database-replica.md). Для мониторинга активности журнала транзакций для баз данных доступности пользуйтесь следующими счетчиками объекта производительности **SQLServer:Databases**: **Время записи журнала на диск (мс)** , **Записей журнала на диск/с**, **Неудачных обращений к кэшу пула журнала/с**, **Операций чтения диска пула журнала/с** и **Запросов пула журнала/с**. Дополнительные сведения см. в статье [SQL Server, Databases Object](../../../relational-databases/performance-monitor/sql-server-databases-object.md).  
   
 ##  <a name="AGlisteners"></a> Мониторинг прослушивателей группы доступности  
  Для мониторинга прослушивателей группы доступности в подсети кластера WSFC используйте следующие представления:  

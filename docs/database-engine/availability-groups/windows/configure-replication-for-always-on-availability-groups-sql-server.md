@@ -13,36 +13,20 @@ helpviewer_keywords:
 ms.assetid: 4e001426-5ae0-4876-85ef-088d6e3fb61c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
+manager: jroth
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: bbbc8122105df6a9911357734a00c7c633e63687
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: d191a506f688b1c1f79751f4aa652a719000a564
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59367242"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66793621"
 ---
 # <a name="configure-replication-with-always-on-availability-groups"></a>Настройка репликации в группах доступности Always On
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
   Настройка репликации [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и групп доступности AlwaysOn включает в себя семь шагов. Каждый шаг более подробно описывается в следующих разделах.  
-  
-1.  [Настройка публикаций и подписок баз данных.](#step1)  
-  
-2.  [Настройка группы доступности AlwaysOn.](#step2)  
-  
-3.  [Проверка настройки всех узлов вторичных реплик для репликации.](#step3)  
-  
-4.  [Настройка узлов вторичных реплик в качестве издателей репликации.](#step4)  
-  
-5.  [Перенаправление первоначального издателя на имя прослушивателя группы доступности.](#step5)  
-  
-6.  [Запуск хранимой процедуры проверки для проверки конфигурации.](#step6)  
-  
-7.  [Добавление первоначального издателя в монитор репликации.](#step7)  
-  
- Шаги 1 и 2 могут выполняться в любом порядке.  
   
 ##  <a name="step1"></a> 1. Настройка публикаций и подписок баз данных  
  **Настройка распространителя**  

@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: ec5ccb69-61c9-4576-8843-014b976fd46e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d41ee42e17dc8f501749599e56ab31e01ba6f85d
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+manager: jroth
+ms.openlocfilehash: 55b104222d746e3d10641ecf61b7059e519f0717
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591738"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803246"
 ---
 # <a name="enable-or-disable-a-server-network-protocol"></a>Включение или отключение сетевого протокола сервера
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,13 +52,13 @@ ms.locfileid: "53591738"
   
 1.  В диспетчере конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на панели консоли раскройте **Сетевая конфигурация SQL Server**.  
   
-2.  В области консоли щелкните **Протоколы для** _\<имя_экземпляра>_.  
+2.  В области консоли щелкните **Протоколы для** _\<имя_экземпляра>_ .  
   
 3.  В области сведений щелкните правой кнопкой мыши протокол, который необходимо переключить, затем выберите **Включить** или **Отключить**.  
   
 4.  В области консоли выберите **Службы SQL Server**.  
   
-5.  В области сведений щелкните правой кнопкой мыши **SQL Server (**_\<имя экземпляра>_**)**, а затем нажмите кнопку **Перезапустить**, чтобы остановить и перезагрузить службу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+5.  В области сведений щелкните правой кнопкой мыши **SQL Server (** _\<имя экземпляра>_ **)** , а затем нажмите кнопку **Перезапустить**, чтобы остановить и перезагрузить службу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ##  <a name="PowerShellProcedure"></a> Использование SQL Server PowerShell  
   
@@ -68,7 +68,7 @@ ms.locfileid: "53591738"
   
 2.  Запустите Windows PowerShell из панели задач или нажмите кнопку "Пуск", а затем последовательно выберите "Все программы", "Стандартные", "Windows PowerShell" и "Windows PowerShell".  
   
-3.  Импортируйте модуль **sqlps**, введя команду **Import-Module "sqlps"**.  
+3.  Импортируйте модуль **sqlps**, введя команду **Import-Module "sqlps"** .  
   
 4.  Выполните следующие инструкции, чтобы включить протокол TCP и протокол именованных каналов. Замените `<computer_name>` именем компьютера, на котором работает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если настраивается именованный экземпляр, замените `MSSQLSERVER` именем экземпляра.  
   

@@ -1,8 +1,6 @@
 ---
 title: Установка локализованных версий SQL Server Management Studio (SSMS) | Документация Майкрософт
 description: Установка локализованных версий SQL Server Management Studio (SSMS)
-ms.custom: ''
-ms.date: 04/25/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ssms
@@ -10,14 +8,16 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6bcc4080d3ee25f22f0bd574258f3be26c331c11
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.custom: ''
+ms.date: 04/25/2019
+ms.openlocfilehash: 43b7135881d6c4b7917725771426a1180e5ab7e1
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65093761"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66500267"
 ---
-# <a name="install-non-english-language-versions-of-sql-server-management-studio-ssms"></a>Установка локализованных версий SQL Server Management Studio (SSMS) 
+# <a name="install-non-english-language-versions-of-sql-server-management-studio-ssms"></a>Установка локализованных версий SQL Server Management Studio (SSMS)
 
 Среда SSMS доступна на нескольких языках, но установщик SSMS блокирует установку на компьютерах, если языковой стандарт операционной системы не соответствует языку SSMS.
 

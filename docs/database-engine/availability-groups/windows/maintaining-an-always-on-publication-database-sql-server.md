@@ -13,26 +13,18 @@ helpviewer_keywords:
 ms.assetid: 55b345fe-2eb9-4b04-a900-63d858eec360
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 00de66d272688a7b61b4847e38a41f4738457d92
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+manager: jroth
+ms.openlocfilehash: 557bd9828979a4f2e0913e827b05f3805e9b4ef9
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300151"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799266"
 ---
 # <a name="manage-a-replicated-publisher-database-as-part-of-an-always-on-availability-group"></a>Управление реплицированной базой данных издателя в рамках группы доступности Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   В этом разделе рассматриваются специальные рекомендации в отношении обслуживания базы данных публикации при использовании групп доступности AlwaysOn.  
-  
- **В этом разделе:**  
-  
--   [Обслуживание опубликованной базы данных в группе доступности](#MaintainPublDb)  
-  
--   [Удаление опубликованной базы данных из группы доступности](#RemovePublDb)  
-  
--   [Связанные задачи](#RelatedTasks)  
   
 ##  <a name="MaintainPublDb"></a> Обслуживание опубликованной базы данных в группе доступности  
  Обслуживание опубликованной базы данных AlwaysOn существенно не отличается от обслуживания стандартной базы данных публикации со следующими оговорками.  
@@ -122,7 +114,7 @@ ms.locfileid: "54300151"
 ## <a name="see-also"></a>См. также:  
  [Предварительные требования, ограничения и рекомендации для групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
  [Обзор групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Группы доступности Always On: взаимодействие (SQL Server)](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
+ [Группы доступности AlwaysOn: взаимодействие (SQL Server)](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
  [Репликация SQL Server](../../../relational-databases/replication/sql-server-replication.md)  
   
   

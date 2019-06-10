@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 20e9147b-e985-4caa-910e-fc4b38dbf9a1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 608106f70ab12353efd0f5315e4edd0951df7273
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 5304bd107c5aa41a2c0be30d7576f4f782d19820
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642522"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66777782"
 ---
 # <a name="resume-an-availability-database-sql-server"></a>Возобновление базы данных доступности (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,38 +31,19 @@ ms.locfileid: "47642522"
 > [!NOTE]  
 >  Приостановка и возобновление базы данных-получателя AlwaysOn непосредственно не влияет на доступность базы данных-источника. Но приостановка базы данных-получателя может повлиять на избыточность и возможности отработки отказа для базы данных-источника, эти возможности снижены до тех пор, пока не будет возобновлена база данных-получатель. Этим она отличается от зеркального отображения базы данных, где состояние зеркального отображения приостанавливается как в зеркальной базе данных, так и в основной базе данных, до тех пор пока не возобновится зеркальное отображение. Приостановка базы данных-источника AlwaysOn приостанавливает перемещение данных для всех соответствующих баз данных-получателей, а функции избыточности и отработки отказа для этой базы данных не работают до тех пор, пока работа базы данных-источника не будет возобновлена.  
   
--   **Перед началом работы**  
   
-     [Предварительные требования](#Prerequisites)  
   
-     [безопасность](#Security)  
-  
--   **Возобновление базы данных-получателя с помощью:**  
-  
-     [Среда SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
--   [Связанные задачи](#RelatedTasks)  
-  
-##  <a name="BeforeYouBegin"></a> Перед началом  
-  
-### <a name="limitations-and-restrictions"></a>Ограничения  
+## <a name="limitations-and-restrictions"></a>Ограничения  
  Команда RESUME возвращается сразу после принятия репликой, в которой размещена целевая база данных, но фактическое возобновление базы данных происходит асинхронно.  
   
-###  <a name="Prerequisites"></a> Предварительные требования  
+##  <a name="Prerequisites"></a> Предварительные требования  
   
--   Необходимо подключиться к экземпляру сервера, на котором расположена возобновляемая база данных.  
-  
--   Группа доступности должна быть в сети.  
-  
+-   Необходимо подключиться к экземпляру сервера, на котором расположена возобновляемая база данных.    
+-   Группа доступности должна быть в сети.    
 -   База данных-источник должна быть в сети и доступна.  
   
-###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Permissions  
  Необходимо разрешение ALTER на базу данных.  
   
  Необходимо разрешение ALTER AVAILABILITY GROUP для группы доступности, разрешение CONTROL AVAILABILITY GROUP, разрешение ALTER ANY AVAILABILITY GROUP или разрешение CONTROL SERVER.  

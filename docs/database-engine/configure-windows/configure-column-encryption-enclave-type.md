@@ -9,14 +9,14 @@ ms.technology: configuration
 ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
+manager: jroth
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 961cf4a634f134f3bd41858a8157db0e8f6cb45f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1031bdfa3aa6c728d3e33b500fe942d5e52c5fdc
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782392"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799470"
 ---
 # <a name="column-encryption-enclave-type-server-configuration-option"></a>Параметр конфигурации сервера "column encryption enclave type"
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "47782392"
 |Значение|Описание|  
 |-------------------|-----------------|  
 |0|**Без безопасного анклава**. [!INCLUDE[ssDE](../../includes/ssde-md.md)] не удается инициализировать безопасный анклав для Always Encrypted. Таким образом, функция Always Encrypted с безопасными анклавами недоступна.|  
-|1|**Безопасность на базе виртуализации (VBS)**. [!INCLUDE[ssDE](../../includes/ssde-md.md)] будет инициализировать безопасный анклав (безопасный анклав памяти VBS) для Always Encrypted.|    
+|1|**Безопасность на базе виртуализации (VBS)** . [!INCLUDE[ssDE](../../includes/ssde-md.md)] будет инициализировать безопасный анклав (безопасный анклав памяти VBS) для Always Encrypted.|    
 
 > [!IMPORTANT]
 > Изменения в параметре **column encryption enclave type** вступают в силу после перезапуска экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].

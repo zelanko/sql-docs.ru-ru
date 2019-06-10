@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: a782d60d-0373-4386-bd77-9ec192553700
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: affc717019c031445fc19b429ba0c96186088e59
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 4fd4e32c928ed046f449392a078af0158efed283
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612892"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795262"
 ---
 # <a name="role-switching-during-a-database-mirroring-session-sql-server"></a>Переключение ролей во время сеанса зеркального отображения базы данных (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "47612892"
 |Отработка отказа вручную|нет|Да|Да|  
 |Принудительное обслуживание|Да|Да|нет|  
   
- После переключения ролей определенные метаданные должны существовать на обоих участниках, чтобы гарантировать, что все пользователи базы данных смогут получить доступ к новой основной базе данных. Кроме того, задания резервирования должны быть созданы на новом основном сервере, чтобы гарантировать, что сохраняется возможность резервирования базы данных по регулярному расписанию. Дополнительные сведения см. в разделе [Управление именами входа и заданиями после переключения ролей (SQL Server)](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md).  
+ После переключения ролей определенные метаданные должны существовать на обоих участниках, чтобы гарантировать, что все пользователи базы данных смогут получить доступ к новой основной базе данных. Кроме того, задания резервирования должны быть созданы на новом основном сервере, чтобы гарантировать, что сохраняется возможность резервирования базы данных по регулярному расписанию. Дополнительные сведения см. в статье [Управление именами входа и заданиями после переключения ролей (SQL Server)](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md).  
   
  При переключении ролей время недоступности зеркального отображения базы данных зависит от типа переключения ролей и типа причины переключения. Дополнительные сведения см. в статье [Оценка прерывания обслуживания во время переключения ролей (зеркальное отображение базы данных)](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md).  
   
@@ -159,7 +159,7 @@ ms.locfileid: "47612892"
 -   Основной сервер потерял соединение с остальной частью конфигурации зеркального отображения базы данных, в то время как зеркальная база данных и следящий сервер удерживают кворум. Однако если утрачивается связь со всеми экземплярами серверов, а позднее следящий и зеркальный серверы восстанавливают связь, автоматическая отработка отказа не выполняется.  
   
     > [!NOTE]  
-    >  Дополнительные сведения см. в разделе [Кворум: как следящий сервер влияет на доступность базы данных (зеркальное отображение базы данных)](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+    >  Дополнительные сведения см. в статье [Кворум. Как следящий сервер влияет на доступность базы данных &#40;зеркальное отображение базы данных&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
 -   Зеркальный сервер обнаружил потерю основного сервера.  
   
@@ -314,7 +314,7 @@ ms.locfileid: "47612892"
   
 ## <a name="see-also"></a>См. также:  
  [Оценка прерывания обслуживания во время переключения ролей (зеркальное отображение базы данных)](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)   
- [Возможные неполадки при зеркальном отображении базы данных](../../database-engine/database-mirroring/possible-failures-during-database-mirroring.md)   
+ [Possible Failures During Database Mirroring](../../database-engine/database-mirroring/possible-failures-during-database-mirroring.md)   
  [Подключение клиентов к сеансу зеркального отображения базы данных (SQL Server)](../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)   
  [Следящий сервер зеркального отображения базы данных](../../database-engine/database-mirroring/database-mirroring-witness.md)   
  [Выполнение полного восстановления базы данных (модель полного восстановления)](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)   

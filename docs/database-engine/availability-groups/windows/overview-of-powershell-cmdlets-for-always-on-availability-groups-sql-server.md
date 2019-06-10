@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: b3fef0d5-b6d7-4386-a0f0-d06c165ad4de
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b4f60098f7410b847e2a420ef899e4abc8b2ef94
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 87e18202c821ee56c403150af246dfbc21ef207d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203773"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798220"
 ---
 # <a name="overview-of-powershell-cmdlets-for-always-on-availability-groups"></a>Обзор командлетов PowerShell для групп доступности AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,22 +29,6 @@ ms.locfileid: "53203773"
   
 > [!NOTE]  
 >  Командлет PowerShell может завершиться после успешного инициирования действия. Это не означает, что предписанное действие, например отработка отказа для группы доступности, завершено. При создании скрипта для некой последовательности действий может оказаться необходимым проверить состояние действий и подождать из завершения.  
-  
- В этой теме описаны командлеты для следующих наборов задач.  
-  
--   [Настройка экземпляра сервера для групп доступности AlwaysOn](#ConfiguringServerInstance)  
-  
--   [Резервное копирование и восстановление баз данных и журналов транзакций](#BnRcmdlets)  
-  
--   [Создание групп доступности и управление ими](#DeployManageAGs)  
-  
--   [Создание прослушивателя групп доступности и управление им](#AGlisteners)  
-  
--   [Создание реплики доступности и управление ею](#DeployManageARs)  
-  
--   [Добавление базы данных доступности и управление ею](#DeployManageDbs)  
-  
--   [Отслеживание работоспособности групп доступности](#MonitorTblshtAGs)  
   
 > [!NOTE]  
 >  Список разделов электронной документации по [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] , в которых описано использование командлетов для выполнения задач [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , приведен в подразделе "Связанные задачи" в разделе [Обзор групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  

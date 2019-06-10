@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 53e98134-e274-4dfd-8b72-0cc0fd5c800e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 63215e0746f5f2cea679213ba275d40d6102c930
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: ef39e9a8b86d348383537ec6786c08361b60df59
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623692"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66774776"
 ---
 # <a name="database-mirroring-and-log-shipping-sql-server"></a>Зеркальное отображение баз данных и доставка журналов (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "47623692"
 ## <a name="setting-up-mirroring-and-log-shipping-together"></a>Совместная настройка зеркального отображения и доставки журналов  
  Чтобы совместно настроить зеркальное отображение и доставку журналов, выполните следующие шаги:  
   
-1.  Восстановите резервные копии основной базы данных-источника с параметром NORECOVERY на другой экземпляр сервера, который затем будет использоваться как зеркальная база данных основной базы данных-источника. Дополнительные сведения см. в разделе [Подготовка зеркальной базы данных к зеркальному отображению (SQL Server)](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
+1.  Восстановите резервные копии основной базы данных-источника с параметром NORECOVERY на другой экземпляр сервера, который затем будет использоваться как зеркальная база данных основной базы данных-источника. Дополнительные сведения см. в статье [Prepare a Mirror Database for Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
   
 2.  Настройте зеркальное отображение базы данных. Дополнительные сведения см. в статьях [Создание сеанса зеркального отображения базы данных с использованием проверки подлинности Windows (среда SQL Server Management Studio)](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md) и [Настройка зеркального отображения базы данных (SQL Server)](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).  
   

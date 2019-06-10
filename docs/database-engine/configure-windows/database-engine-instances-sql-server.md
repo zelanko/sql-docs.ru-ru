@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: af9ae643-9866-4014-b36f-11ab556a773e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 8e983bc2bbf7efe42d479dea90e8cf1f212adc15
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: bc07937bb9e554d2e052fd12cf0c157519c02368
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807942"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799079"
 ---
 # <a name="database-engine-instances-sql-server"></a>Экземпляры компонента Database Engine (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "47807942"
 |Описывает, как использовать профилировщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для перехвата трассировки запросов приложений, поступающих в экземпляр компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Эти данные трассировки могут затем воспроизводиться для выполнения таких действий, как тестирование производительности или диагностика проблем.|[Приложение SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)|  
 |Описывает функции отслеживания измененных данных (CDC) и отслеживания изменений, а также описывает использование этих функций для отслеживания вносимых в данные изменений в базе данных.|[Отслеживание измененных данных (SQL Server)](../../relational-databases/track-changes/track-data-changes-sql-server.md)|  
 |Описывает использование средства просмотра журнала для поиска и просмотра ошибок и сообщений [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в таких журналах, как журнал заданий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , журналы SQL Server и журналы событий Windows.|[Средство просмотра файлов журнала](../../relational-databases/logs/log-file-viewer.md)|  
-|Описывает, как использовать помощник по настройке компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] для анализа работы баз данных и подготовки рекомендаций по устранению потенциальных проблем производительности.|[помощник по настройке ядра СУБД](../../relational-databases/performance/database-engine-tuning-advisor.md)|  
+|Описывает, как использовать помощник по настройке компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] для анализа работы баз данных и подготовки рекомендаций по устранению потенциальных проблем производительности.|[Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)|  
 |Описывает, как администраторы рабочей базы данных могут устанавливать диагностическое соединение с экземплярами, если запросы на стандартное подключение не принимаются.|[Диагностическое соединение для администраторов баз данных](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)|  
 |Описывает, как использовать устаревшую функцию удаленных серверов, чтобы обеспечить доступ из одного экземпляра компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] в другой. Для этих функций лучше всего использовать связанный сервер.|[Удаленные серверы](../../database-engine/configure-windows/remote-servers.md)|  
 |Описывает возможности компонента Service Broker для обмена сообщениями и очередей приложений и предоставляет ссылки на документацию по компоненту Service Broker.|[Компонент Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)|  

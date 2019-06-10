@@ -10,13 +10,13 @@ ms.assetid: 1dd294cc-5b69-4d0c-9005-3e307b75678b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: c8cc018a1c9fddd35c80f73ce4f141b0b526ad4f
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+manager: jroth
+ms.openlocfilehash: 3eb1ff10fbf0af49cd698537af915378cc1ddb87
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58306222"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794933"
 ---
 # <a name="install-sql-server-on-server-core"></a>Установка SQL Server в Server Core
 
@@ -42,8 +42,8 @@ ms.locfileid: "58306222"
   
 |Компонент|Поддерживается|Дополнительные сведения|  
 |-------------|---------------|----------------------------|  
-|Службы[!INCLUDE[ssDE](../../includes/ssde-md.md)] |Да||  
-|Репликация[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] |Да||  
+|Службы[!INCLUDE[ssDE](../../includes/ssde-md.md)]|Да||  
+|Репликация[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Да||  
 |Полнотекстовый поиск|Да||  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|Да||  
 |[!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)]|Да||  
@@ -53,7 +53,7 @@ ms.locfileid: "58306222"
 |Сервер служб Integration Services|Да||  
 |Обратная совместимость клиентских средств|нет||  
 |Пакет SDK клиентских средств|нет||  
-|Электронная документация по[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] |нет||  
+|Электронная документация по[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|нет||  
 |Основные средства управления|Только удаленные|Установка этих компонентов на Server Core не поддерживается. Эти компоненты могут быть установлены на сервере, отличном от Server Core, и подключены к службам [!INCLUDE[ssDE](../../includes/ssde-md.md)], установленным в Server Core.|  
 |Средства управления — полный набор|Только удаленные|Установка этих компонентов на Server Core не поддерживается. Эти компоненты могут быть установлены на сервере, отличном от Server Core, и подключены к службам [!INCLUDE[ssDE](../../includes/ssde-md.md)], установленным в Server Core.|  
 |Контроллер распределенного воспроизведения|нет||  

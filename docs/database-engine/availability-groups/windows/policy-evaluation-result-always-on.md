@@ -13,25 +13,19 @@ f1_keywords:
 ms.assetid: 703e947f-d345-4506-be21-34bfbfa7bca6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 907be803cc448a5b8424adf4e968cb4520c52cd3
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 23c32528e590b0484082cd74429cdf472907fba1
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201933"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798198"
 ---
 # <a name="policy-evaluation-result-page-always-on-dashboard"></a>Страница "Результат вычисления политики" (панель мониторинга Always On)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Для просмотра всех текущих проблем с политикой используйте страницу **Результат оценки политики** панели мониторинга AlwaysOn.  
-  
- **В этом разделе:**  
-  
--   [Параметры диалогового окна](#Options)  
-  
--   [Связанные задачи](#RelatedTasks)  
-  
+    
 ##  <a name="Options"></a> Параметры диалогового окна  
  **Обнаруженная неполадка**  
  Отображает одну строку для каждой обнаруженной неполадки. Значок, связанный с неполадкой, содержит визуальный индикатор, предназначенный для отображения серьезности неполадки следующим образом:  

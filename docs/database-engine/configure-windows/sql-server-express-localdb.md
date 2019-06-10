@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 53b55ce0449dfd4eb415ee49ac29ac3cb493e111
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+manager: jroth
+ms.openlocfilehash: 562119dd258c996b070cdd2c16fd60ca27ffc424
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59779520"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794105"
 ---
 # <a name="sql-server-express-localdb"></a>SQL Server Express LocalDB
 
@@ -34,7 +34,7 @@ LocalDB в Microsoft SQL Server Express — это компонент [SQL Serv
 
 ## <a name="try-it-out"></a>Попробуйте! 
 
-- Чтобы скачать и установить SQL Server Express LocalDB, перейдите на страницу **[скачивания SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads)**. LocalDB — это компонент, выбираемый и доступный только при скачивании мультимедиа. Если вы скачиваете мультимедиа, выберите **Express Advanced** или пакет LocalDB. В **Visual Studio Installer** можно установить SQL Server Express LocalDB как часть рабочей нагрузки **Разработка классических приложений .NET** или в качестве отдельного компонента.
+- Чтобы скачать и установить SQL Server Express LocalDB, перейдите на страницу **[скачивания SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads)** . LocalDB — это компонент, выбираемый и доступный только при скачивании мультимедиа. Если вы скачиваете мультимедиа, выберите **Express Advanced** или пакет LocalDB. В **Visual Studio Installer** можно установить SQL Server Express LocalDB как часть рабочей нагрузки **Разработка классических приложений .NET** или в качестве отдельного компонента.
 
  >[!TIP]
  > LocalDB можно также установить как часть Visual Studio. Во время установки Visual Studio выберите рабочую нагрузку **Разработка классических приложений .NET**, которая включает SQL Server Express LocalDB.
@@ -123,7 +123,7 @@ REM Gather information about the instance of LocalDB
 |Имя канала экземпляра|np:\\\\.\pipe\LOCALDB#F365A78E\tsql\query|
 
 >[!NOTE]
->Если приложение использует версию .NET, предшествующую 4.0.2, необходимо устанавливать подключение непосредственно с именованным каналом LocalDB. Значение "Имя канала экземпляра" — это именованный канал, который прослушивает экземпляр LocalDB. Часть имени канала экземпляра, следующая после LOCALDB#, будет изменяться при каждом запуске экземпляра LocalDB. Для подключения к экземпляру LocalDB с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] введите имя канала экземпляра в поле **Имя сервера** диалогового окна **Соединение с [!INCLUDE[ssDE](../../includes/ssde-md.md)]**. Можно установить соединение с экземпляром LocalDB из пользовательской программы с использованием строки подключения, аналогичной `SqlConnection conn = new SqlConnection(@"Server=np:\\.\pipe\LOCALDB#F365A78E\tsql\query");`.
+>Если приложение использует версию .NET, предшествующую 4.0.2, необходимо устанавливать подключение непосредственно с именованным каналом LocalDB. Значение "Имя канала экземпляра" — это именованный канал, который прослушивает экземпляр LocalDB. Часть имени канала экземпляра, следующая после LOCALDB#, будет изменяться при каждом запуске экземпляра LocalDB. Для подключения к экземпляру LocalDB с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] введите имя канала экземпляра в поле **Имя сервера** диалогового окна **Соединение с [!INCLUDE[ssDE](../../includes/ssde-md.md)]** . Можно установить соединение с экземпляром LocalDB из пользовательской программы с использованием строки подключения, аналогичной `SqlConnection conn = new SqlConnection(@"Server=np:\\.\pipe\LOCALDB#F365A78E\tsql\query");`.
 
 ### <a name="connect-to-a-shared-instance-of-localdb"></a>Подключение к общему экземпляру LocalDB
 

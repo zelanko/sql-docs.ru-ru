@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: dec0b9aa3c92cdefa82e3031546ea8200f70bb6e
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+manager: jroth
+ms.openlocfilehash: 9dfc37d9dfb4cac8c30debf29890e2369cd8785b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59042443"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798151"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>Предварительные требования, ограничения и рекомендации для групп доступности Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "59042443"
 > [!IMPORTANT]  
 >  Кроме того, убедитесь, что среда правильно настроена для соединения с группой доступности. Дополнительные сведения см. в разделе [Подключение клиента AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md).  
   
-###  <a name="ComputerRecommendations"></a> Рекомендации для компьютеров, на которых размещены реплики доступности (ОС Windows)  
+##  <a name="ComputerRecommendations"></a> Рекомендации для компьютеров, на которых размещены реплики доступности (ОС Windows)  
   
 -   **Сопоставимые системы**.  Для одной группы доступности все реплики доступности должны работать в сопоставимых системах, способных выдержать примерно одинаковую рабочую нагрузку.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "59042443"
   
 3.  С помощью командлета **Get-ClusterResource** найдите ресурс сетевого имени, а затем с помощью командлета **Set-ClusterParameter** задайте значение **HostRecordTTL** следующим образом:  
   
-     Get-ClusterResource "*\<имя_сетевого_ресурса>*" | Set-ClusterParameter HostRecordTTL *\<время_в_секундах>*  
+     Get-ClusterResource " *\<имя_сетевого_ресурса>* " | Set-ClusterParameter HostRecordTTL *\<время_в_секундах>*  
   
      В следующем примере для PowerShell задается значение HostRecordTTL в 300 секунд для сетевого ресурса сетевого имени `SQL Network Name (SQL35)`.  
   

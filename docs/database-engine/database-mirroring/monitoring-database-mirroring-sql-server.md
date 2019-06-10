@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: a7b1b9b0-7c19-4acc-9de3-3a7c5e70694d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b2bafd110b358e3dc1c2d639e4a1b5251c89bb9b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: 5bb5ffaab7bf391a50dbfb28be14852a05e83582
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52517499"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795344"
 ---
 # <a name="monitoring-database-mirroring-sql-server"></a>Наблюдение за зеркальным отображением базы данных (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -295,11 +295,11 @@ ms.locfileid: "52517499"
   
  При зеркальном отображении базы данных доступны следующие события.  
   
--   Класс событий**Database Mirroring State Change**   
+-   Класс событий**Database Mirroring State Change**  
   
      Указывает, что состояние зеркального отображения зеркальной базы данных изменилось. Дополнительные сведения см. в статье [Database Mirroring State Change Event Class](../../relational-databases/event-classes/database-mirroring-state-change-event-class.md).  
   
--   Класс событий**Audit Database Mirroring Login**   
+-   Класс событий**Audit Database Mirroring Login**  
   
      Содержит сведения о сообщениях аудита, связанных с безопасностью транспорта зеркального отображения базы данных. Дополнительные сведения см. в статье [Audit Database Mirroring Login Event Class](../../relational-databases/event-classes/audit-database-mirroring-login-event-class.md).  
   

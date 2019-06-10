@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: cc5e65c2-448e-4f37-9ad4-2dfb1cc84ebe
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d7ae58695fabc363a432f21d91a70ccc3a3f4dc6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: c11918f1f6c0d57b799e78cf2d653c9c445673fa
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619512"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66771777"
 ---
 # <a name="server-properties---advanced-page"></a>Свойства сервера (страница "Дополнительно")
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -92,7 +92,7 @@ ms.locfileid: "47619512"
  После присоединения, восстановления или копирования базы данных [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]эта база данных сразу становится доступной, после чего автоматически обновляется. Если база данных содержит полнотекстовые индексы, то в процессе обновления будет произведен их импорт, сброс или перестроение в зависимости от установленного значения свойства сервера **Режим обновления полнотекстового каталога** . Если при обновлении выбран режим **Импортировать** или **Перестроить**, то полнотекстовые индексы во время обновления будут недоступны. В зависимости от объема индексируемых данных процесс импорта может занять несколько часов, а перестроение — в несколько (до десяти) раз больше. Обратите внимание, что если при обновлении выбран режим **Импортировать**, а полнотекстовый каталог недоступен, то связанные с ним полнотекстовые индексы будут перестроены. Сведения о просмотре и изменении параметра **Режим обновления полнотекстового поиска** см. в статье [Наблюдение за полнотекстовым поиском для экземпляра сервера и управление им](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
   
  **Максимальный размер репликации текста**  
- Задает максимальный размер (в байтах) типов данных **text**, **ntext**, **varchar(max)**, **nvarchar(max)**, **xml**и **image** , которые могут добавляться к реплицируемому или отслеживаемому столбцу в инструкции INSERT, UPDATE, WRITETEXT или UPDATETEXT. Изменение этой настройки вступает в силу немедленно. Дополнительные сведения см. в статье [Настройка параметра конфигурации сервера max text repl size](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md).  
+ Задает максимальный размер (в байтах) типов данных **text**, **ntext**, **varchar(max)** , **nvarchar(max)** , **xml**и **image** , которые могут добавляться к реплицируемому или отслеживаемому столбцу в инструкции INSERT, UPDATE, WRITETEXT или UPDATETEXT. Изменение этой настройки вступает в силу немедленно. Дополнительные сведения см. в статье [Настройка параметра конфигурации сервера max text repl size](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md).  
   
  **Просмотр процедур, выполняемых при запуске**  
  Указывает на то, что [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен просматривать хранимые процедуры для автоматического выполнения при запуске. Если этому параметру присвоено значение **True**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] осуществляет поиск и выполняет все автоматически выполняемые хранимые процедуры, определенные на сервере. Если этому параметру присвоено значение **False** (по умолчанию), поиск не осуществляется. Дополнительные сведения см. в статье [Настройка параметра конфигураци и сервера scan for startup procs](../../database-engine/configure-windows/configure-the-scan-for-startup-procs-server-configuration-option.md).  
