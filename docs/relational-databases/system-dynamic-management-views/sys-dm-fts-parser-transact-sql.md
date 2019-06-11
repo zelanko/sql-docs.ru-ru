@@ -16,18 +16,19 @@ helpviewer_keywords:
 - sys.dm_fts_parser dynamic management function
 - troubleshooting [SQL Server], full-text search
 ms.assetid: 2736d376-fb9d-4b28-93ef-472b7a27623a
-auauthor: pmasl
+author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
-ms.openlocfilehash: 3e20fc07e286fb4fd22596f32f0abd90e5533979
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.openlocfilehash: 16df7ce483209be058d44448e9071406f897b41a
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65944240"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822366"
 ---
 # <a name="sysdmftsparser-transact-sql"></a>sys.dm_fts_parser (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Возвращает последний итогового результата разметки после применения заданного [разбиения по словам](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md), [тезауруса](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md), и [списка стоп-слов](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md) сочетания для входной строки запроса. Результат разметки эквивалентен выходным данным службы полнотекстового поиска для указанной строки запроса.  
@@ -37,7 +38,6 @@ ms.locfileid: "65944240"
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)  
 ```  
   
@@ -136,7 +136,7 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
   
  Диакритические знаки не учитываются.  
   
-```  
+```sql
 SELECT * FROM sys.dm_fts_parser (' "The Microsoft business analysis" ', 1033, 0, 0);  
 ```  
   
@@ -147,7 +147,7 @@ SELECT * FROM sys.dm_fts_parser (' "The Microsoft business analysis" ', 1033, 0,
   
  Диакритические знаки не учитываются.  
   
-```  
+```sql
 SELECT * FROM sys.dm_fts_parser (' "The Microsoft business analysis"  OR " MS revenue" ', 1033, 77, 0);  
 ```  
   
@@ -158,7 +158,7 @@ SELECT * FROM sys.dm_fts_parser (' "The Microsoft business analysis"  OR " MS re
   
  В этом примере указывается код языка для французского языка, `1036`, и идентификатор стоп-слов, определенных пользователем, `5`. Диакритические знаки учитываются.  
   
-```  
+```sql
 SELECT * FROM sys.dm_fts_parser(N'français', 1036, 5, 1);  
 ```  
   

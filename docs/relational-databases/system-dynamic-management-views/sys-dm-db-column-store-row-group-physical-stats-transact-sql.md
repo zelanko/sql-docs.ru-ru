@@ -1,7 +1,7 @@
 ---
 title: sys.dm_db_column_store_row_group_physical_stats (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
-ms.date: 05/04/2017
+ms.date: 05/05/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -21,14 +21,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f725ca776fcc65828c7f72b4e3c2b042d0203b71
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1460ef53098a9cdd7cf8bb1672c45cfd27adff57
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62742050"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822734"
 ---
 # <a name="sysdmdbcolumnstorerowgroupphysicalstats-transact-sql"></a>sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Предоставляет последнюю информацию на уровне группы строк обо всех индексов columnstore в текущей базе данных.  
@@ -55,7 +56,8 @@ ms.locfileid: "62742050"
 |**Создание**|BIGINT|Строки группы поколение, связанное с этой группой строк.|  
 |**created_time**|datetime2|Время для создания этой группы строк.<br /><br /> NULL — для индекса columnstore в таблице в памяти.|  
 |**closed_time**|datetime2|Время для закрытия этой группы строк.<br /><br /> NULL — для индекса columnstore в таблице в памяти.|  
-  
+| &nbsp; | &nbsp; | &nbsp; |
+
 ## <a name="results"></a>Результаты  
  Возвращает одну строку для каждой группы строк в текущей базе данных.  
   
@@ -80,7 +82,7 @@ SELECT i.object_id,
     i.index_id,   
     i.type_desc,   
     CSRowGroups.*,  
-    100*(ISNULL(deleted_rows,0))/total_rows AS 'Fragmentation'  
+    100*(ISNULL(deleted_rows,0))/NULLIF(total_rows,0) AS 'Fragmentation'
 FROM sys.indexes AS i  
 JOIN sys.dm_db_column_store_row_group_physical_stats AS CSRowGroups  
     ON i.object_id = CSRowGroups.object_id AND i.index_id = CSRowGroups.index_id   

@@ -9,14 +9,14 @@ ms.topic: conceptual
 ms.custom: ''
 ms.date: 07/13/2017
 ms.author: genemi
-authors: MightyPen
+author: MightyPen
 manager: craigg
-ms.openlocfilehash: 256a8f87445dd7bcc581e1bc0e5d55e9b5700ffb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b743b1b02a911c9132eab4a90c1f35b781895df2
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62629521"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822975"
 ---
 # <a name="retrieve-numeric-data-with-sqlnumericstruct"></a>Получение числовых данных с помощью SQL\_ЧИСЛОВЫХ\_СТРУКТУРЫ
 
@@ -35,7 +35,7 @@ ms.locfileid: "62629521"
 SQL\_ЧИСЛОВЫХ\_СТРУКТУРА определяется в файле заголовка sqltypes.h следующим образом:
 
 
-``` C
+```c
 #define SQL_MAX_NUMERIC_LEN    16
 typedef struct tagSQL_NUMERIC_STRUCT
 {
@@ -64,7 +64,7 @@ typedef struct tagSQL_NUMERIC_STRUCT
 >
 > Корпорация Майкрософт предоставляет эти примеры кода «как есть» без каких-либо гарантий, явных или подразумеваемых, включая, но не ограничиваясь подразумеваемые гарантии товарной пригодности или пригодности для определенной цели.
 
-``` C
+```c
 #include <stdio.h>
 #include <string.h>
 #include <conio.h>
@@ -217,7 +217,7 @@ while((retcode =SQLFetch(hstmt1)) != SQL_NO_DATA)
 ### <a name="interim-results"></a>Промежуточные результаты:
 
 
-```
+```console
 //  C  ==> 12 * 1    =     12
 //  7  ==> 07 * 16   =    112
 //  2  ==> 02 * 256  =    512
@@ -240,7 +240,7 @@ while((retcode =SQLFetch(hstmt1)) != SQL_NO_DATA)
 Код, который реализует преобразование с прямым порядком байтов режим масштабированное значение типа integer. Это определяется разработчиком приложения, чтобы реализовать эту функциональность. В следующем примере кода — лишь один из многих возможных способов.
 
 
-``` C
+```c
 long strtohextoval()
 {
     long val=0,value=0;
@@ -283,7 +283,7 @@ long strtohextoval()
 Драйвер ODBC, используемого для запуска этой программы должна поддерживать функции ODBC 3.0.
 
 
-``` C
+```c
 #include <windows.h>
 #include <sql.h>
 #include <sqlext.h>

@@ -3,7 +3,7 @@ title: Учебник. Использовать проверку подлинн�
 titleSuffix: SQL Server
 description: Этот учебник действия по настройке проверки подлинности AD для SQL Server в Linux.
 author: Dylan-MSFT
-ms.author: Dylan.Gray
+ms.author: dygray
 ms.reviewer: rothja
 ms.date: 04/01/2019
 manager: craigg
@@ -13,12 +13,12 @@ ms.custom: seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 3ab6fd05b0cf9486ded5b0e550101a374669be11
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.openlocfilehash: 5e9d7ee2c086f188041fbf6c42448d21953b008d
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65097237"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822788"
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>Учебник. Использование проверки подлинности Active Directory с SQL Server в Linux
 
@@ -361,4 +361,4 @@ CONTOSO.COM = {
 Затем изучите другие сценарии безопасности для SQL Server в Linux.
 
 > [!div class="nextstepaction"]
->[Шифрование подключений к SQL Server в Linux](sql-server-linux-encrypted-connections.md)
+> [Шифрование подключений к SQL Server в Linux](sql-server-linux-encrypted-connections.md)

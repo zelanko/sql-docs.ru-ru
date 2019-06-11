@@ -7,14 +7,17 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 13adf4e0-216a-4992-b13d-b7b1e1629e77
-ms.openlocfilehash: 1dc31f9b3df500e862236d4125fb1de99bc93eda
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.author: lle
+author: lrtoyou1223
+ms.openlocfilehash: 50b313f63ae434a96d6c0e38f3c8b600914c806d
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63191846"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822992"
 ---
 # <a name="task-15-building-and-running-the-ssis-project"></a>Задача 15. Сборка и запуск проекта SSIS
+
   В этой задаче вы создадите и выполните проект служб SSIS. При наличии 64-разрядной версии Excel 2010, установленной на компьютере, следует задать значение **Run64BitRuntime** для **False** для источника "Excel" для работы.  
   
 1.  В **обозревателе решений** окно, нажмите кнопку **проекта** на меню и выберите **свойства CleanseAndCurateSuppliers**.  

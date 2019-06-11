@@ -16,15 +16,17 @@ helpviewer_keywords:
 - sp_enum_proxy_for_subsystems
 ms.assetid: 580cc3be-1068-4a96-8d15-78ca3a5bb719
 ms.author: vanto
+author: VanMSFT
 manager: craigg
-ms.openlocfilehash: 5beab3dc255e5679191dd6ea5d05bfdd98bef6ba
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d521a16fa7c18e67e1929cb0e38aecf862d6c18a
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62723830"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822641"
 ---
 # <a name="spenumproxyforsubsystem-transact-sql"></a>sp_enum_proxy_for_subsystem (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Выдает список разрешений для учетных записей-посредников агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на доступ к подсистемам.  
@@ -34,7 +36,6 @@ ms.locfileid: "62723830"
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 sp_enum_proxy_for_subsystem  
     [ @proxy_id = ] proxy_id,  
     [ @proxy_name = ] 'proxy_name',  
@@ -62,6 +63,7 @@ sp_enum_proxy_for_subsystem
 |**subsystem_name**|**sysname**|Имя подсистемы.|  
 |**proxy_id**|**int**|Идентификационный номер учетной записи-посредника.|  
 |**proxy_name**|**sysname**|Имя учетной записи-посредника.|  
+| &nbsp; | &nbsp; | &nbsp; |
   
 ## <a name="remarks"></a>Примечания  
  Если параметры не указаны, **sp_enum_proxy_for_subsystem** выводит сведения о всех учетных записях-посредниках для всех подсистем экземпляра.  
@@ -80,7 +82,7 @@ sp_enum_proxy_for_subsystem
 ### <a name="a-listing-all-associations"></a>A. Вывод всех ассоциаций  
  При выполнении следующего примера выводится список всех разрешений, установленных между учетными записями-посредниками и подсистемами в данном экземпляре.  
   
-```  
+```sql
 USE msdb ;  
 GO  
   
@@ -91,7 +93,7 @@ GO
 ### <a name="b-determining-if-a-proxy-has-access-to-a-specific-subsystem"></a>Б. Определение наличия доступа к указанной подсистеме у учетной записи-посредника  
  В следующем примере при наличии у учетной записи-посредника `Catalog application proxy` доступа к подсистеме `ActiveScripting` возвращается строка. В противном случае возвращается пустой результирующий набор.  
   
-```  
+```sql
 USE msdb ;  
 GO  
   

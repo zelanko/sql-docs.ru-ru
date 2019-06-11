@@ -16,15 +16,17 @@ helpviewer_keywords:
 - sp_grant_login_to_proxy
 ms.assetid: 90e1a6d5-a692-4462-a163-4b0709d83150
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 8dfacac19be656187925e8646a60fc3014f94d42
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+author: VanMSFT
+manager: jrothj
+ms.openlocfilehash: 81aeb41fdf7c8c17d5035347d384e7175bbd891b
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62656809"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822668"
 ---
 # <a name="spgrantlogintoproxy-transact-sql"></a>sp_grant_login_to_proxy (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Предоставляет субъекту безопасности доступ к учетной записи-посреднику.  
@@ -35,7 +37,6 @@ ms.locfileid: "62656809"
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 sp_grant_login_to_proxy   
      { [ @login_name = ] 'login_name'   
      | [ @fixed_server_role = ] 'fixed_server_role'   
@@ -44,15 +45,15 @@ sp_grant_login_to_proxy
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @login_name = ] 'login_name'` Имя входа для предоставления доступа к. *Login_name* — **nvarchar(256)**, значение по умолчанию NULL. Один из **@login_name**, **@fixed_server_role**, или **@msdb_role** должен быть указан, или хранимая процедура завершается ошибкой.  
+`[ @login_name = ] 'login_name'` Имя входа для предоставления доступа к. *Login_name* — **nvarchar(256)** , значение по умолчанию NULL. Один из **@login_name** , **@fixed_server_role** , или **@msdb_role** должен быть указан, или хранимая процедура завершается ошибкой.  
   
-`[ @fixed_server_role = ] 'fixed_server_role'` Чтобы предоставить доступ к фиксированной серверной роли. *Fixed_server_role* — **nvarchar(256)**, значение по умолчанию NULL. Один из **@login_name**, **@fixed_server_role**, или **@msdb_role** должен быть указан, или хранимая процедура завершается ошибкой.  
+`[ @fixed_server_role = ] 'fixed_server_role'` Чтобы предоставить доступ к фиксированной серверной роли. *Fixed_server_role* — **nvarchar(256)** , значение по умолчанию NULL. Один из **@login_name** , **@fixed_server_role** , или **@msdb_role** должен быть указан, или хранимая процедура завершается ошибкой.  
   
-`[ @msdb_role = ] 'msdb_role'` Роль базы данных в **msdb** базы данных для предоставления доступа к. *Msdb_role* — **nvarchar(256)**, значение по умолчанию NULL. Один из **@login_name**, **@fixed_server_role**, или **@msdb_role** должен быть указан, или хранимая процедура завершается ошибкой.  
+`[ @msdb_role = ] 'msdb_role'` Роль базы данных в **msdb** базы данных для предоставления доступа к. *Msdb_role* — **nvarchar(256)** , значение по умолчанию NULL. Один из **@login_name** , **@fixed_server_role** , или **@msdb_role** должен быть указан, или хранимая процедура завершается ошибкой.  
   
 `[ @proxy_id = ] id` Идентификатор для прокси-сервера, к которой предоставляется доступ. *Идентификатор* — **int**, значение по умолчанию NULL. Один из **@proxy_id** или **@proxy_name** должен быть указан, или хранимая процедура завершается ошибкой.  
   
-`[ @proxy_name = ] 'proxy_name'` Имя прокси-сервера, к которой предоставляется доступ. *Proxy_name* — **nvarchar(256)**, значение по умолчанию NULL. Один из **@proxy_id** или **@proxy_name** должен быть указан, или хранимая процедура завершается ошибкой.  
+`[ @proxy_name = ] 'proxy_name'` Имя прокси-сервера, к которой предоставляется доступ. *Proxy_name* — **nvarchar(256)** , значение по умолчанию NULL. Один из **@proxy_id** или **@proxy_name** должен быть указан, или хранимая процедура завершается ошибкой.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
@@ -66,7 +67,7 @@ sp_grant_login_to_proxy
 ## <a name="examples"></a>Примеры  
  Следующий пример разрешает имени входа `adventure-works\terrid` для использования прокси-сервер `Catalog application proxy`.  
   
-```  
+```sql
 USE msdb ;  
 GO  
   

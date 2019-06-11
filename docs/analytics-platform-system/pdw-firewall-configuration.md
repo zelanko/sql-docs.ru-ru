@@ -1,7 +1,7 @@
 ---
 title: Конфигурация брандмауэра PDW - Analytics Platform System | Документация Майкрософт
 description: Страница брандмауэра SQL Server PDW Configuration Manager позволяет включить или отключить правила брандмауэра, разрешить или запретить доступ к определенные порты на устройстве, Analytics Platform System.
-aauthor: mzaman1
+author: mzaman1
 manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
@@ -9,14 +9,15 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 3195007b4346c6010b416fae833643f3a80136fb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d92d92752b4de105857f5611fbe95262476a4e13
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62639529"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822431"
 ---
 # <a name="parallel-data-warehouse-firewall-configuration-in-analytics-platform-system"></a>Параллельные хранилища данных в брандмауэре в Analytics Platform System
+
 **Брандмауэра** страница SQL Server PDW Configuration Manager позволяет включить или отключить правила брандмауэра, разрешить или запретить доступ к определенные порты на устройстве, Analytics Platform System.  
   
 ## <a name="to-manage-ports-and-firewall-rules-for-appliance-nodes"></a>Для управления портами и правила брандмауэра для узлов устройства  
@@ -45,6 +46,7 @@ ms.locfileid: "62639529"
 |Поток управления нагрузки PDW сервера SQL - учетные данные Windows|8002|СПИСОК ДОВЕРИЯ СЕРТИФИКАТОВ|  
 |_Kerberos|88|AD01 и AD02,|  
 |_ldap|389|AD01 и AD02|  
+| &nbsp; | &nbsp; | &nbsp; |
   
 ## <a name="internal-ports"></a>Внутренние порты  
 Следующие порты используются PDW для внутренней связи, но не открыт для подключений, поступающих от за пределами PDW appliance.  
@@ -58,10 +60,12 @@ ms.locfileid: "62639529"
 |Состояние отработки отказа (ядра)|15001|КОМПАНИЯ CMP|  
 |Диапазон динамических портов (временного)|20000-65535|CTL, CMP|  
 |Диапазоны портов SQL Server (TDS)|1433, 1500-1508|CTL, CMP|  
+| &nbsp; | &nbsp; | &nbsp; |
   
 > [!NOTE]  
 > Создание внешних таблиц или внешние источники данных использует TCP-порт 8020 по умолчанию. Эти инструкции можно настроить для использования вместо других портов. Порт по умолчанию Hortonworks JOB_TRACKER_LOCATION — 50300. Интеграция с другими системами и средства может потребоваться дополнительные порты.  
   
 <!-- MISSING LINKS ## See Also  
-[HDInsight Firewall Configuration &#40;Analytics Platform System&#41;](hdinsight-firewall-configuration.md)  -->  
+[HDInsight Firewall Configuration &#40;Analytics Platform System&#41;](hdinsight-firewall-configuration.md)
+-->
   

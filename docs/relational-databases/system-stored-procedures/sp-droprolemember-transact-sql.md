@@ -16,16 +16,18 @@ helpviewer_keywords:
 - sp_droprolemember
 ms.assetid: c2f19ab1-e742-4d56-ba8e-8ffd40cf4925
 ms.author: vanto
-manager: craigg
+author: VanMSFT
+manager: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d01ad425d42c45b1e265fe25345b2d34ca8b4d7f
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: c235c23ac0be8dcaf6dc57dae14be9732f5c09f8
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526116"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822440"
 ---
 # <a name="spdroprolemember-transact-sql"></a>sp_droprolemember (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Удаляет в текущей базе данных учетную запись безопасности из роли [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -36,17 +38,17 @@ ms.locfileid: "58526116"
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Синтаксис  
-  
+
+### <a name="syntax-for-both-sql-server-and-azure-sql-database"></a>Синтаксис для SQL Server и база данных Azure SQL
+
 ```  
--- Syntax for SQL Server and Azure SQL Database  
-  
 sp_droprolemember [ @rolename = ] 'role' ,   
      [ @membername = ] 'security_account'  
 ```  
-  
+
+### <a name="syntax-for-both-azure-sql-data-warehouse-and-parallel-data-warehouse"></a>Синтаксис для хранилища данных Azure SQL и Parallel Data Warehouse
+
 ```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
 sp_droprolemember 'role' ,  
      'security_account'  
 ```  
@@ -72,14 +74,14 @@ sp_droprolemember 'role' ,
 ## <a name="examples"></a>Примеры  
  В следующем примере производится удаление пользователя `JonB` из роли `Sales`.  
   
-```  
+```sql
 EXEC sp_droprolemember 'Sales', 'Jonb';  
 ```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  В следующем примере производится удаление пользователя `JonB` из роли `Sales`.  
   
-```  
+```sql
 EXEC sp_droprolemember 'Sales', 'JonB'  
 ```  
   
