@@ -16,12 +16,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 90bdc946a136a9888d5cbf4e8ec86daf1531acc3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2fa294214b85e84f03f6867e50bc1fdba80731f8
+ms.sourcegitcommit: 02df4e7965b2a858030bb508eaf8daa9bc10b00b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794992"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66265429"
 ---
 # <a name="initialize-a-subscription-manually"></a>Инициализация подписки вручную
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "47794992"
   
 1.  Убедитесь, что схема и данные существуют в базе данных подписки. Дополнительные сведения см. в статье [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
   
-2.  На издателе в базе данных публикации выполните хранимую процедуру [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Задайте параметры **@publication**, **@subscriber**, укажите имя базы данных подписчика, содержащей публикуемые данные, в параметре **@destination_db**, значение **pull** в параметре **@subscription_type**, а также значение **replication support only** в параметре **@sync_type**. Дополнительные сведения см. в статье [Создание подписки по запросу](../../relational-databases/replication/create-a-pull-subscription.md).  
+2.  На издателе в базе данных публикации выполните хранимую процедуру [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Задайте параметры **\@publication**, **\@subscriber**, укажите имя базы данных подписчика, содержащей публикуемые данные, в параметре **\@destination_db**, значение **pull** в параметре **\@subscription_type**, а также значение **replication support only** в параметре **\@sync_type**. Дополнительные сведения см. в статье [Создание подписки по запросу](../../relational-databases/replication/create-a-pull-subscription.md).  
   
 3.  Выполните процедуру [sp_addpullsubscription](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)на подписчике. Сведения об обновлении подписок см. в разделе [Создание обновляемых подписок для публикаций транзакций](https://technet.microsoft.com/library/ms152769(v=sql.130).aspx).  
   
@@ -64,7 +64,7 @@ ms.locfileid: "47794992"
   
 1.  Убедитесь, что схема и данные существуют в базе данных подписки. Дополнительные сведения см. в статье [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
   
-2.  На издателе в базе данных публикации выполните хранимую процедуру [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Укажите имя базы данных подписчика, содержащей публикуемые данные, в параметре **@destination_db**, значение **push** в параметре **@subscription_type**, а также значение **replication support only** в параметре **@sync_type**. Сведения об обновлении подписок см. в разделе [Создание обновляемых подписок для публикаций транзакций](https://technet.microsoft.com/library/ms152769(v=sql.130).aspx).  
+2.  На издателе в базе данных публикации выполните хранимую процедуру [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Укажите имя базы данных подписчика, содержащей публикуемые данные, в параметре **\@destination_db**, значение **push** в параметре **\@subscription_type** и значение **replication support only** в параметре **\@sync_type**. Сведения об обновлении подписок см. в разделе [Создание обновляемых подписок для публикаций транзакций](https://technet.microsoft.com/library/ms152769(v=sql.130).aspx).  
   
 3.  На издателе в базе данных публикации выполните хранимую процедуру [sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Дополнительные сведения см. в статье [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md).  
   
@@ -74,9 +74,9 @@ ms.locfileid: "47794992"
   
 1.  Убедитесь, что схема и данные существуют в базе данных подписки. Это можно сделать путем восстановления резервной копии базы данных публикации на подписчике.  
   
-2.  Выполните процедуру [sp_addmergesubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)на издателе. Задайте параметры **@publication**, **@subscriber**, **@subscriber_db**, а также значение **pull** в параметре **@subscription_type**. После этого подписка по запросу будет зарегистрирована.  
+2.  Выполните процедуру [sp_addmergesubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)на издателе. Укажите значения параметров **\@publication**, **\@subscriber**, **\@subscriber_db** и значение **pull** в параметре **\@subscription_type**. После этого подписка по запросу будет зарегистрирована.  
   
-3.  На подписчике в базе данных, содержащей публикуемые данные, выполните хранимую процедуру [sp_addmergepullsubscription](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md). В параметре **@sync_type** в параметре **@sync_type**.  
+3.  На подписчике в базе данных, содержащей публикуемые данные, выполните хранимую процедуру [sp_addmergepullsubscription](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md). В параметре **\@sync_type** укажите значение **none**.  
   
 4.  Выполните процедуру [sp_addmergepullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)на подписчике. Дополнительные сведения см. в статье [Создание подписки по запросу](../../relational-databases/replication/create-a-pull-subscription.md).  
   
@@ -86,7 +86,7 @@ ms.locfileid: "47794992"
   
 1.  Убедитесь, что схема и данные существуют в базе данных подписки. Это можно сделать путем восстановления резервной копии базы данных публикации на подписчике.  
   
-2.  В базе данных публикации на издателе выполните процедуру [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md). Укажите имя базы данных подписчика, содержащей публикуемые данные, в параметре **@subscriber_db**, значение **push** в параметре **@subscription_type**, а также значение **@sync_type** в параметре **@sync_type**.  
+2.  В базе данных публикации на издателе выполните процедуру [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md). Укажите имя базы данных на подписчике, содержащей публикуемые данные, в параметре **\@subscriber_db**, значение **push** в параметре **\@subscription_type** и значение **none** в параметре **\@sync_type**.  
   
 3.  На издателе в базе данных публикации выполните хранимую процедуру [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md). Дополнительные сведения см. в статье [Создание принудительной подписки](../../relational-databases/replication/create-a-push-subscription.md).  
   
@@ -94,7 +94,7 @@ ms.locfileid: "47794992"
   
 ## <a name="see-also"></a>См. также:  
  [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)   
- [Создание резервных копий реплицируемых баз данных и восстановление из них](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)   
+ [Создание резервной копии и восстановление из копий реплицируемых баз данных](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)   
  [Рекомендации по защите репликации](../../relational-databases/replication/security/replication-security-best-practices.md)  
   
   

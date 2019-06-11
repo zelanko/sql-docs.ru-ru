@@ -1,7 +1,7 @@
 ---
 title: CREATE ASYMMETRIC KEY (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 08/07/2017
+ms.date: 05/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -24,12 +24,12 @@ ms.assetid: 141bc976-7631-49f6-82bd-a235028645b1
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: fa20850f0784b734173f46ceee4235694c15b9cd
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: 1198567d07035413463a35accbd58c17127118bb
+ms.sourcegitcommit: 9388dcccd6b89826dde47b4c05db71274cfb439a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361554"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66270190"
 ---
 # <a name="create-asymmetric-key-transact-sql"></a>CREATE ASYMMETRIC KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,18 +43,18 @@ ms.locfileid: "54361554"
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-CREATE ASYMMETRIC KEY Asym_Key_Name   
+CREATE ASYMMETRIC KEY asym_key_name   
    [ AUTHORIZATION database_principal_name ]  
-   [ FROM <Asym_Key_Source> ]  
+   [ FROM <asym_key_source> ]  
    [ WITH <key_option> ] 
    [ ENCRYPTION BY <encrypting_mechanism> ] 
    [ ; ]
   
-<Asym_Key_Source>::=  
+<asym_key_source>::=  
      FILE = 'path_to_strong-name_file'  
    | EXECUTABLE FILE = 'path_to_executable_file'  
-   | ASSEMBLY Assembly_Name  
-   | PROVIDER Provider_Name  
+   | ASSEMBLY assembly_name  
+   | PROVIDER provider_name  
   
 <key_option> ::=  
    ALGORITHM = <algorithm>  
@@ -71,50 +71,54 @@ CREATE ASYMMETRIC KEY Asym_Key_Name
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- FROM *Asym_Key_Source*  
- Задает источник, из которого нужно загрузить пару асимметричных ключей.  
-  
+ *asym_key_name*  
+ Имя асимметричного ключа в базе данных. Имена ключей должны соответствовать требованиям, предъявляемым к [идентификаторам](../../relational-databases/databases/database-identifiers.md), и должны быть уникальными в базе данных.  
+
  AUTHORIZATION *database_principal_name*  
  Задает владельца асимметричного ключа. Владелец не может быть ролью или группой. Если этот параметр опущен, владельцем будет текущий пользователь.  
   
- FILE ='*path_to_strong-name_file*'  
- Указывает путь надежного имени файла, из которого будет загружена пара ключей.  
+ FROM *источник_асимметричных_ключей*  
+ Задает источник, из которого нужно загрузить пару асимметричных ключей.  
+  
+ FILE = '*путь_к_файлу_надежного_имени*'  
+ Указывает путь надежного имени файла, из которого будет загружена пара ключей. Ограничен 260 символами MAX_PATH из API интерфейса Windows.  
   
 > [!NOTE]  
 >  Этот параметр недоступен в автономной базе данных.  
   
- EXECUTABLE FILE ='*path_to_executable_file*'  
- Указывает файл сборки, из которого будет загружен открытый ключ. Ограничен 260 символами MAX_PATH из API интерфейса Windows.  
+ EXECUTABLE FILE = '*путь_к_исполняемому_файлу*'  
+ Указывает путь к файлу сборки, из которого будет загружен открытый ключ. Ограничен 260 символами MAX_PATH из API интерфейса Windows.  
   
 > [!NOTE]  
 >  Этот параметр недоступен в автономной базе данных.  
   
- ASSEMBLY *Assembly_Name*  
- Указывает имя сборки, из которой будет загружен открытый ключ.  
+ ASSEMBLY *assembly_name*  
+ Задает имя используемой подписанной сборки, которая уже была загружена в базу данных и из которой следует загрузить открытый ключ.  
   
-ENCRYPTION BY *\<key_name_in_provider>* Указывает способ шифрования ключа. Это может быть сертификат, пароль или асимметричный ключ.  
-  
- KEY_NAME ='*key_name_in_provider*'  
- Указывает имя ключа из внешнего поставщика. Дополнительные сведения о расширенном управлении ключами см. в разделе [Расширенное управление ключами (EKM)](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
-  
- CREATION_DISPOSITION = CREATE_NEW  
- Создает новый ключ на устройстве расширенного управления ключами. Свойство PROV_KEY_NAME должно использоваться для указания имени ключа на устройстве. Если ключ уже существует в устройстве, оператор завершается с ошибкой.  
-  
- CREATION_DISPOSITION = OPEN_EXISTING  
- Сопоставляет асимметричный ключ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с существующим ключом системы расширенного управления ключами. Свойство PROV_KEY_NAME должно использоваться для указания имени ключа на устройстве. Если выражение CREATION_DISPOSITION = OPEN_EXISTING не предусмотрено, значением по умолчанию является CREATE_NEW.  
+ PROVIDER *имя_поставщика*  
+ Указывает имя поставщика расширенного управления ключами. Поставщик должен быть сначала определен с использованием инструкции CREATE PROVIDER. Дополнительные сведения о расширенном управлении ключами см. в разделе [Расширенное управление ключами (EKM)](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
   
  ALGORITHM = \<algorithm>  
  Доступны пять алгоритмов: RSA_4096, RSA_3072, RSA_2048, RSA_1024 и RSA_512.  
   
  RSA_1024 и RSA_512 являются устаревшими. Чтобы использовать алгоритмы RSA_1024 или RSA_512 (что не рекомендуется), необходимо установить уровень совместимости базы данных 120 или ниже.  
   
- PASSWORD = '*password*'  
+ PROVIDER_KEY_NAME = '*имя_ключа_у_поставщика*'  
+ Указывает имя ключа из внешнего поставщика.  
+  
+ CREATION_DISPOSITION = CREATE_NEW  
+ Создает новый ключ на устройстве расширенного управления ключами. Свойство PROVIDER_KEY_NAME должно использоваться для указания имени ключа на устройстве. Если ключ уже существует в устройстве, оператор завершается с ошибкой.  
+  
+ CREATION_DISPOSITION = OPEN_EXISTING  
+ Сопоставляет асимметричный ключ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с существующим ключом системы расширенного управления ключами. Свойство PROVIDER_KEY_NAME должно использоваться для указания имени ключа на устройстве. Если выражение CREATION_DISPOSITION = OPEN_EXISTING не предусмотрено, значением по умолчанию является CREATE_NEW.  
+  
+ ENCRYPTION BY PASSWORD = '*пароль*'  
  Указывает пароль для шифрования закрытого ключа. Если это предложение отсутствует, закрытый ключ будет зашифрован с использованием главного ключа базы данных. *password* имеет максимальную длину 128 символов. *password* должен соответствовать требованиям политики паролей Windows применительно к компьютеру, на котором запущен экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="remarks"></a>Remarks  
- *Асимметричный ключ* является защищаемой сущностью на уровне базы данных. В его форме по умолчанию эта сущность содержит как открытый, так и закрытый ключ. CREATE ASYMMETRIC KEY при выполнении без предложения FROM формирует новую пару ключей. CREATE ASYMMETRIC KEY при выполнении с предложением FROM импортирует пару ключей из файла или открытый ключ из сборки.  
+ *Асимметричный ключ* является защищаемой сущностью на уровне базы данных. В его форме по умолчанию эта сущность содержит как открытый, так и закрытый ключ. CREATE ASYMMETRIC KEY при выполнении без предложения FROM формирует новую пару ключей. CREATE ASYMMETRIC KEY при выполнении с предложением FROM импортирует пару ключей из файла или открытый ключ из сборки или библиотеки DLL.  
   
- По умолчанию закрытый ключ защищается с помощью главного ключа базы данных. Для защиты закрытого ключа необходим пароль, если не был создан главный ключ базы данных. Если главный ключ базы данных существует, пароль необязателен.  
+ По умолчанию закрытый ключ защищается с помощью главного ключа базы данных. Для защиты закрытого ключа необходим пароль, если не был создан главный ключ базы данных.  
   
  Закрытый ключ может быть длинной 512, 1024 или 2048 бит.  
   
@@ -134,17 +138,17 @@ GO
 ```  
   
 ### <a name="b-creating-an-asymmetric-key-from-a-file-giving-authorization-to-a-user"></a>Б. Создание асимметричного ключа из файла с предоставлением авторизации пользователю  
- Следующий пример создает асимметричный ключ `PacificSales19` из пары ключей, сохраненных в файле, и затем авторизует пользователя `Christina` для использования асимметричного ключа.  
+ Следующий пример создает асимметричный ключ `PacificSales19` из пары ключей, сохраненных в файле, и затем назначает владение асимметричным ключом пользователю `Christina`. Закрытый ключ защищен главным ключом базы данных, который должен быть создан до создания асимметричного ключа.  
   
 ```  
-CREATE ASYMMETRIC KEY PacificSales19 AUTHORIZATION Christina   
-    FROM FILE = 'c:\PacSales\Managers\ChristinaCerts.tmp'    
-    ENCRYPTION BY PASSWORD = '<enterStrongPasswordHere>';  
+CREATE ASYMMETRIC KEY PacificSales19  
+    AUTHORIZATION Christina  
+    FROM FILE = 'c:\PacSales\Managers\ChristinaCerts.tmp';  
 GO  
 ```  
   
 ### <a name="c-creating-an-asymmetric-key-from-an-ekm-provider"></a>В. Создание асимметричного ключа из поставщика расширенного управления ключами  
- В следующем примере создается асимметричный ключ `EKM_askey1` из пары ключей, сохраненной в файле. Затем выполняется шифрование этого ключа с использованием поставщика расширенного управления ключами с именем `EKMProvider1` и ключа на этом поставщике с именем `key10_user1`.  
+ В следующем примере создается асимметричный ключ `EKM_askey1` из пары ключей, сохраненной в поставщике расширенного управления ключами с именем `EKM_Provider1`, и ключ с именем `key10_user1` в этом же поставщике.  
   
 ```  
 CREATE ASYMMETRIC KEY EKM_askey1   
@@ -157,10 +161,12 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Выбор алгоритма шифрования](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
- [ALTER ASYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/alter-asymmetric-key-transact-sql.md)   
- [DROP ASYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/drop-asymmetric-key-transact-sql.md)   
- [Иерархия средств шифрования](../../relational-databases/security/encryption/encryption-hierarchy.md)   
+ [ALTER ASYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/alter-asymmetric-key-transact-sql.md)  
+ [DROP ASYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/drop-asymmetric-key-transact-sql.md)  
+ [ASYMKEYPROPERTY (Transact-SQL)](../../t-sql/functions/asymkeyproperty-transact-sql.md)  
+ [ASYMKEY_ID (Transact-SQL)](../../t-sql/functions/asymkey-id-transact-sql.md)  
+ [Выбор алгоритма шифрования](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)  
+ [Иерархия средств шифрования](../../relational-databases/security/encryption/encryption-hierarchy.md)  
  [Расширенное управление ключами с помощью хранилища ключей Azure (SQL Server)](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  
   
   

@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0ae91678807351dfa53b92a63c9dcd1514974de3
-ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
+ms.openlocfilehash: 864c7b2da5b6b04f1c017997c3d1ecba31375b43
+ms.sourcegitcommit: 02df4e7965b2a858030bb508eaf8daa9bc10b00b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/11/2019
-ms.locfileid: "65536252"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66265167"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -70,20 +70,20 @@ WITH
 
 Предоставляет протокол и путь подключения к внешнему источнику данных.
 
-| Внешний источник данных        | Префикс расположения | Путь к расположению                                         | Поддерживаемые расположения по продукту или службе    |
-| --------------------------- | --------------- | ----------------------------------------------------- | ------------------------------------------- |
-| Cloudera или Hortonworks     | `hdfs`          | `<Namenode>[:port]`                                   | SQL Server (2016+), PDW                     |
-| хранилище BLOB-объектов Azure          | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` | SQL Server (2016+), PDW, SQL DW             |
-| Azure Data Lake Store Gen 1 | `adl`           | `<storage_account>.azuredatalake.net`                 | SQL DW                                      |
-| Azure Data Lake Store Gen 2 | `abfss`          | `<container>@<storage_account>.dfs.core.windows.net`  | SQL DW                                      |
-| SQL Server                  | `sqlserver`     | `<server_name>[\<instance_name>][:port]`              | SQL Server (2019+)                          |
-| Oracle;                      | `oracle`        | `<server_name>[:port]`                                | SQL Server (2019+)                          |
-| Teradata                    | `teradata`      | `<server_name>[:port]`                                | SQL Server (2019+)                          |
-| MongoDB или CosmosDB         | `mongodb`       | `<server_name>[:port]`                                | SQL Server (2019+)                          |
-| интерфейс ODBC                        | `odbc`          | `<server_name>{:port]`                                | SQL Server (2019 +): только для Windows           |
-| массовые операции             | `https`         | `<storage_account>.blob.core.windows.net/<container>` | SQL Server (2017+), SQL DB                  |
-| Эластичный запрос (сегмент)       | Не требуется    | `<shard_map_server_name>.database.windows.net`        | SQL DB                                      |
-| Эластичный запрос (удаленный)      | Не требуется    | `<remote_server_name>.database.windows.net`           | SQL DB                                      |
+| Внешний источник данных        | Префикс расположения | Путь к расположению                                         | Поддерживаемые расположения по продукту или службе |
+| --------------------------- | --------------- | ----------------------------------------------------- | ---------------------------------------- |
+| Cloudera или Hortonworks     | `hdfs`          | `<Namenode>[:port]`                                   | SQL Server (2016+), PDW                  |
+| хранилище BLOB-объектов Azure          | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` | SQL Server (2016+), PDW, SQL DW          |
+| Azure Data Lake Store Gen 1 | `adl`           | `<storage_account>.azuredatalake.net`                 | SQL DW                                   |
+| Azure Data Lake Store Gen 2 | `abfss`         | `<container>@<storage_account>.dfs.core.windows.net`  | SQL DW                                   |
+| SQL Server                  | `sqlserver`     | `<server_name>[\<instance_name>][:port]`              | SQL Server (2019+)                       |
+| Oracle;                      | `oracle`        | `<server_name>[:port]`                                | SQL Server (2019+)                       |
+| Teradata                    | `teradata`      | `<server_name>[:port]`                                | SQL Server (2019+)                       |
+| MongoDB или CosmosDB         | `mongodb`       | `<server_name>[:port]`                                | SQL Server (2019+)                       |
+| интерфейс ODBC                        | `odbc`          | `<server_name>{:port]`                                | SQL Server (2019 +): только для Windows        |
+| массовые операции             | `https`         | `<storage_account>.blob.core.windows.net/<container>` | SQL Server (2017+), SQL DB               |
+| Эластичный запрос (сегмент)       | Не требуется    | `<shard_map_server_name>.database.windows.net`        | SQL DB                                   |
+| Эластичный запрос (удаленный)      | Не требуется    | `<remote_server_name>.database.windows.net`           | SQL DB                                   |
 
 Путь к расположению:
 
@@ -134,7 +134,7 @@ WITH
   - Задайте по меньшей мере разрешение на чтение для файла, который требуется загрузить (например, `srt=o&sp=r`)
   - Используйте допустимый срок действия (все даты указываются в формате UTC).
 
-Пример использования `CREDENTIAL` с `SHARED ACCESS SIGNATURE` и `TYPE` = `BLOB_STORAGE` см. в разделе [Создание внешнего источника данных для выполнения массовых операций и извлечения данных из хранилища BLOB-объектов Azure в базу данных SQL](#j-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage).
+Пример использования `CREDENTIAL` с `SHARED ACCESS SIGNATURE` и `TYPE` = `BLOB_STORAGE` см. в разделе [Создание внешнего источника данных для выполнения массовых операций и извлечения данных из хранилища BLOB-объектов Azure в базу данных SQL](#k-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage).
 
 Сведения о создании учетных данных уровня базы данных см. в разделе [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc].
 
@@ -173,7 +173,7 @@ WITH
 | 7                   | 8050                          |
 
 Полный список поддерживаемых версий Hadoop см. в разделе [Конфигурация подключений PolyBase (Transact-SQL)][connectivity_pb].
-  
+
 > [!IMPORTANT]  
 > Значение RESOURCE_MANAGER_LOCATION не проверяется при создании внешнего источника данных. Указание неверного значения может вызвать сбой запроса во время выполнения каждый раз, когда выполняется попытка принудительной передачи, так как переданное значение невозможно разрешить.
 
@@ -183,10 +183,10 @@ WITH
 
 Настройте этот аргумент, если `TYPE` задан как `RDBMS` или `SHARD_MAP_MANAGER`.
 
-| TYPE              | Значение DATABASE_NAME                                                  |
-| ----------------- | ----------------------------------------------------------------------- |
+| TYPE              | Значение DATABASE_NAME                                       |
+| ----------------- | ------------------------------------------------------------ |
 | СУРБД             | Имя удаленной базы данных на сервере, заданном с помощью `LOCATION` |
-| SHARD_MAP_MANAGER | Имя базы данных, работающей в качестве диспетчера карты сегментов                 |
+| SHARD_MAP_MANAGER | Имя базы данных, работающей в качестве диспетчера карты сегментов      |
 
 Пример, демонстрирующий создание внешнего источника данных с `TYPE` = `RDBMS`, см. в разделе [Создание внешнего источника данных в реляционной СУБД](#g-create-an-rdbms-external-data-source).
 
@@ -248,7 +248,7 @@ WITH
 ### <a name="b-create-external-data-source-to-reference-hadoop"></a>Б. Создание внешнего источника данных для ссылки на Hadoop
 
 Чтобы создать внешний источник данных для ссылки на кластер Hadoop Hortonworks или Cloudera Hadoop, укажите имя компьютера или IP-адрес `Namenode` и порта Hadoop. <!-- Provide the Nameservice ID as the `LOCATION` for highly available configurations. -->
-  
+
 ```sql  
 CREATE EXTERNAL DATA SOURCE MyHadoopCluster
 WITH
@@ -261,7 +261,7 @@ WITH
 ### <a name="c-create-external-data-source-to-reference-hadoop-with-push-down-enabled"></a>В. Создание внешнего источника данных для ссылки на Hadoop с включенной отправкой
 
 Укажите параметр `RESOURCE_MANAGER_LOCATION`, чтобы включить принудительную передачу вычислений в Hadoop для запросов PolyBase. После включения PolyBase принимает решение на основе затрат для определения того, должны ли вычисления запроса быть переданы в Hadoop.
-  
+
 ```sql  
 CREATE EXTERNAL DATA SOURCE MyHadoopCluster
 WITH
@@ -275,7 +275,7 @@ WITH
 ### <a name="d-create-external-data-source-to-reference-kerberos-secured-hadoop"></a>Г. Создание внешнего источника данных для ссылки на Hadoop с защитой Kerberos
 
 Чтобы проверить, защищен ли кластер Hadoop протоколом Kerberos, проверьте значение свойства hadoop.security.authentication в файле Hadoop core-site.xml. Чтобы сослаться на кластер Hadoop с защитой Kerberos, необходимо указать учетные данные с областью действия "база данных", которые содержат ваше имя пользователя и пароль Kerberos. Главный ключ базы данных используется для шифрования секрета учетных данных с областью действия "база данных".
-  
+
 ```sql  
 -- Create a database master key if one does not already exist, using your own password. This key is used to encrypt the credential secret in next step.
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo'
@@ -439,12 +439,36 @@ WITH
 [;]
 ```
 
+### <a name="j-create-external-data-source-to-reference-azure-data-lake-store-adls-gen-2-or-azure-blob-storage-with-managed-identities"></a>К. Создание внешнего источника данных для ссылки на хранилище Azure Data Lake Store (ADLS) 2-го поколения или хранилище BLOB-объектов Azure с управляемыми удостоверениями
+
+Следуйте [инструкциям](https://docs.microsoft.com/azure/sql-data-warehouse/load-data-from-azure-blob-storage-using-polybase#authenticate-using-managed-identities-to-load-optional) по регистрации и настройке доступа RBAC к серверу SQL Server перед созданием учетных данных для базы данных.  
+
+```sql
+-- If you do not have a Master Key on your DW you will need to create one.
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>'
+;
+
+-- There is no need to specify SECRET because this mechanism uses Managed Identity under the covers.
+CREATE DATABASE SCOPED CREDENTIAL ADLS_credential
+WITH
+     IDENTITY   = 'Managed Service Identity'
+;
+
+CREATE EXTERNAL DATA SOURCE <data_source_name>
+WITH
+(    LOCATION   = 'abfss://2013@newyorktaxidataset.dfs.core.windows.net'
+,    CREDENTIAL = ADLS_credential
+,    TYPE       = HADOOP
+)
+[;]
+```
+
 ## <a name="examples-bulk-operations"></a>Примеры: массовые операции
 
 > [!NOTE]
-> Не следует помещать **/**, имя файла или параметры подписи общего доступа в конце URL-адреса `LOCATION` при настройке внешнего источника данных для массовых операций.
+> Не следует помещать **/** , имя файла или параметры подписи общего доступа в конце URL-адреса `LOCATION` при настройке внешнего источника данных для массовых операций.
 
-### <a name="j-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>К. Создание внешнего источника данных для массовых операций, извлекающих данные из хранилища BLOB-объектов Azure
+### <a name="k-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>Л. Создание внешнего источника данных для массовых операций, извлекающих данные из хранилища BLOB-объектов Azure
 
 **Применимо к:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
 Используйте следующий источник данных для массовых операций, выполняемых с использованием инструкций [BULK INSERT][bulk_insert] или [OPENROWSET][openrowset]. Используемые учетные данные должны задавать `SHARED ACCESS SIGNATURE` в качестве идентификатора, не должны иметь `?` в начале маркера SAS, должны иметь по крайней мере разрешение на чтение загружаемого файла (например, `srt=o&sp=r`), и иметь допустимый срок действия (все даты должны быть указаны в формате UTC). Дополнительные сведения о подписанных URL-адресах см. в статье [Использование подписанных URL-адресов][sas_token].

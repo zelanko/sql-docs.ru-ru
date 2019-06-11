@@ -56,12 +56,12 @@ ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 5be56de82834133127700b945440ffb0e013fa4c
-ms.sourcegitcommit: 134a91ed1a59b9d57cb1e98eb1eae24f118da51e
+ms.openlocfilehash: f5e268e821713e52a48b31bf7afa9553e2dc9712
+ms.sourcegitcommit: 5905c29b5531cef407b119ebf5a120316ad7b713
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57556153"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66429012"
 ---
 # <a name="hints-transact-sql---query"></a>Указания (Transact-SQL) — запросы
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -153,7 +153,7 @@ EXPAND VIEWS
   
 Это указание запроса виртуально запрещает прямое использование индексированных представлений и индексов для индексированных представлений в плане запроса.  
   
-Индексированное представление сохраняет сокращенный вид, если на это представление есть прямая ссылка в части SELECT запроса. Представление также останется сокращенным, если указаны предложения WITH (NOEXPAND) или WITH (NOEXPAND, INDEX(index\_value_ [ **,**_...n_ ] ) ). Дополнительные сведения об указании запроса NOEXPAND см. в разделе [Использование NOEXPAND](../../t-sql/queries/hints-transact-sql-table.md#using-noexpand).  
+Индексированное представление сохраняет сокращенный вид, если на это представление есть прямая ссылка в части SELECT запроса. Представление также останется сокращенным, если указаны предложения WITH (NOEXPAND) или WITH (NOEXPAND, INDEX(index\_value_ [ **,** _...n_ ] ) ). Дополнительные сведения об указании запроса NOEXPAND см. в разделе [Использование NOEXPAND](../../t-sql/queries/hints-transact-sql-table.md#using-noexpand).  
   
 Это указание действует только на представления в части SELECT инструкции, в том числе в инструкциях INSERT, UPDATE, MERGE и DELETE.  
   
@@ -228,7 +228,7 @@ _@variable\_name_
 _UNKNOWN_  
 Указывает, что оптимизатор запросов использует статистические данные вместо начального значения, чтобы определить значение локальной переменной при оптимизации запросов.  
   
-_literal\_constant_   
+_literal\_constant_  
 Значению литеральной константы присваивается имя _@variable\_name_ для использования в указании запроса OPTIMIZE FOR. _literal\_constant_ используется только в процессе оптимизации запроса, а не как значение _@variable\_name_ во время выполнения запроса. _literal\_constant_ может иметь любой системный тип данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], который может быть выражен как литеральная константа. Тип данных значения _literal\_constant_ должен неявно преобразовываться в тип данных, на который ссылается аргумент _@variable\_name_ в запросе.  
   
 Указание OPTIMIZE FOR может изменить поведение оптимизатора по обнаружению параметра по умолчанию. При создании структур плана также используйте OPTIMIZE FOR. Дополнительные сведения см. в разделе [Перекомпиляция хранимой процедуры](../../relational-databases/stored-procedures/recompile-a-stored-procedure.md).  
@@ -257,27 +257,27 @@ ROBUST PLAN
   
 Если такой план невозможен, оптимизатор запросов возвращает ошибку сразу, не откладывая обнаружение ошибок на момент выполнения запроса. Строки могут содержать столбцы переменной длины; компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] позволяет указать для строк максимальный потенциальный размер, при превышении которого компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] может не суметь обработать их. В основном, несмотря на максимальный потенциальный размер, приложение сохраняет строки, имеющие актуальные размеры с ограничениями, которые компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] может обработать. Если компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] встречает слишком длинную строку, возвращается ошибка выполнения.  
  
-<a name="use_hint"></a> USE HINT ( **'**_hint\_name_**'** )    
- **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 1 (SP1)) и [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
+<a name="use_hint"></a> USE HINT ( **'** _hint\_name_ **'** )    
+ **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 1 (SP1)) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
  
 Предоставляет обработчику запросов одно или несколько дополнительных указаний. Дополнительные указания определяются именем указания **в одинарных кавычках**.   
 
 Поддерживаются следующие имена подсказок:    
  
 *  'ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS' <a name="use_hint_join_containment"></a>       
-   Побуждает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создать план запроса с допущением простого вложения вместо допущения базового вложения по умолчанию для соединений в модели [оценки кратности](../../relational-databases/performance/cardinality-estimation-sql-server.md) оптимизатора запросов версии [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] или более поздних. Указание с этим именем эквивалентно [флагу трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9476. 
+   Побуждает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создать план запроса с допущением простого вложения вместо допущения базового вложения по умолчанию для соединений в модели [оценки кратности](../../relational-databases/performance/cardinality-estimation-sql-server.md) оптимизатора запросов версии [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] или более поздних. Это указание эквивалентно [флагу трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9476. 
 *  'ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES' <a name="use_hint_correlation"></a>      
-   Заставляет [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создавать план с минимальной избирательностью при оценке предикатов AND для фильтров в случае корреляции. Указание с этим именем эквивалентно [флагу трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4137 при использовании с моделью оценки кратности в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более ранних версиях. Такой же эффект дает [флаг трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9471 при использовании с моделью оценки кратности в [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] или более поздних версиях.
+   Заставляет [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создавать план с минимальной избирательностью при оценке предикатов AND для фильтров в случае корреляции. Это указание эквивалентно [флагу трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4137 при использовании модели оценки кратности в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более ранних версиях и имеет тот же эффект, что и при использовании [флага трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9471 с моделью оценки кратности в [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] или более поздних версиях.
 *  "DISABLE_BATCH_MODE_ADAPTIVE_JOINS"       
-   Отключает адаптивные соединения в пакетном режиме. Дополнительные сведения: [Адаптивные соединения в пакетном режиме](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-adaptive-joins).
+   Отключает адаптивные соединения в пакетном режиме. Дополнительные сведения: [Адаптивные соединения в пакетном режиме](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-adaptive-joins). **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
 *  "DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK"       
-   Отключает обратную связь по временно предоставляемому буферу памяти в пакетном режиме. Дополнительные сведения см. в разделе [Обратная связь по временно предоставляемому буферу памяти в пакетном режиме](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-memory-grant-feedback).   
+   Отключает обратную связь по временно предоставляемому буферу памяти в пакетном режиме. Дополнительные сведения см. в разделе [Обратная связь по временно предоставляемому буферу памяти в пакетном режиме](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-memory-grant-feedback). **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
 * "DISABLE_DEFERRED_COMPILATION_TV"    
-  Отключает отложенную компиляцию табличных переменных. См. дополнительные сведения об [отложенной компиляции табличных переменных](../../t-sql/data-types/table-transact-sql.md#table-variable-deferred-compilation).
+  Отключает отложенную компиляцию табличных переменных. См. дополнительные сведения об [отложенной компиляции табличных переменных](../../t-sql/data-types/table-transact-sql.md#table-variable-deferred-compilation). **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
 *  "DISABLE_INTERLEAVED_EXECUTION_TVF"      
-   Отключает выполнение с чередованием для функций с табличным значением с несколькими инструкциями. Дополнительные сведения см. в разделе о [выполнении с чередованием для функций с табличным значением с несколькими инструкциями](../../relational-databases/performance/intelligent-query-processing.md#interleaved-execution-for-mstvfs).
+   Отключает выполнение с чередованием для функций с табличным значением с несколькими инструкциями. Дополнительные сведения см. в разделе о [выполнении с чередованием для функций с табличным значением с несколькими инструкциями](../../relational-databases/performance/intelligent-query-processing.md#interleaved-execution-for-mstvfs). **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
 *  'DISABLE_OPTIMIZED_NESTED_LOOP'      
-   Заставляет обработчик запросов не использовать операцию сортировки (сортировки пакетов) для оптимизации соединений вложенного цикла при формировании плана запроса. Указание с этим именем эквивалентно [флагу трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2340.
+   Заставляет обработчик запросов не использовать операцию сортировки (сортировки пакетов) для оптимизации соединений вложенного цикла при формировании плана запроса. Это указание эквивалентно [флагу трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2340.
 *  'DISABLE_OPTIMIZER_ROWGOAL' <a name="use_hint_rowgoal"></a>      
    Указывает, что SQL Server должен создать план без использования изменений целей строк с запросами, содержащими следующие ключевые слова: 
    
@@ -286,23 +286,23 @@ ROBUST PLAN
    * IN
    * EXISTS
    
-   Указание с этим именем эквивалентно [флагу трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4138.
+   Это указание эквивалентно [флагу трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4138.
 *  'DISABLE_PARAMETER_SNIFFING'      
-   Указывает, что оптимизатор запросов должен использовать среднее распределение данных при компиляции запроса с одним или несколькими параметрами. Эта инструкция делает план запроса независимым от значения параметра, которое было использовано при первой компиляции запроса. Указание с этим именем эквивалентно [флагу трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4136 или параметру PARAMETER_SNIFFING=OFF в [конфигурации области базы данных](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
+   Указывает, что оптимизатор запросов должен использовать среднее распределение данных при компиляции запроса с одним или несколькими параметрами. Эта инструкция делает план запроса независимым от значения параметра, которое было использовано при первой компиляции запроса. Это указание эквивалентно [флагу трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4136 или параметру [конфигурации области баз данных](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) `PARAMETER_SNIFFING = OFF`.
 * "DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK"    
-  Отключает обратную связь по временно предоставляемому буферу памяти в строковом режиме. Дополнительные сведения см. в разделе [Обратная связь по временно предоставляемому буферу памяти в строковом режиме](../../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback).
+  Отключает обратную связь по временно предоставляемому буферу памяти в строковом режиме. Дополнительные сведения см. в разделе [Обратная связь по временно предоставляемому буферу памяти в строковом режиме](../../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback). **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].     
 * "DISABLE_TSQL_SCALAR_UDF_INLINING"    
-  Отключает встраивание скалярных пользовательских функций. Дополнительные сведения: [Встраивание скалярной функции, определяемой пользователем](../../relational-databases/user-defined-functions/scalar-udf-inlining.md).
+  Отключает встраивание скалярных пользовательских функций. Дополнительные сведения: [Встраивание скалярной функции, определяемой пользователем](../../relational-databases/user-defined-functions/scalar-udf-inlining.md). **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]).    
 * "DISALLOW_BATCH_MODE"    
-  Отключает выполнение в пакетном режиме. Дополнительные сведения см. в разделе [Режимы выполнения](../../relational-databases/query-processing-architecture-guide.md#execution-modes).
+  Отключает выполнение в пакетном режиме. Дополнительные сведения см. в разделе [Режимы выполнения](../../relational-databases/query-processing-architecture-guide.md#execution-modes). **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].     
 *  'ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS'      
-   Позволяет использовать автоматически созданную быструю статистику (поправку к гистограмме) для любого начального столбца индекса, для которого требуется оценить кратность. Гистограмма, используемая для оценки кратности, будет так откорректирована во время компиляции запроса, чтобы учитывать фактическое максимальное или минимальное значение этого столбца. Указание с этим именем эквивалентно [флагу трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4139. 
+   Позволяет использовать автоматически созданную быструю статистику (поправку к гистограмме) для любого начального столбца индекса, для которого требуется оценить кратность. Гистограмма, используемая для оценки кратности, будет так откорректирована во время компиляции запроса, чтобы учитывать фактическое максимальное или минимальное значение этого столбца. Это указание эквивалентно [флагу трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4139. 
 *  'ENABLE_QUERY_OPTIMIZER_HOTFIXES'     
-   Включает исправления в оптимизаторе запросов, выпущенные в накопительных пакетах обновления и пакетах обновления SQL Server. Указание с этим именем эквивалентно [флагу трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4199 или параметру QUERY_OPTIMIZER_HOTFIXES=ON в [конфигурации области базы данных](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
+   Включает исправления в оптимизаторе запросов, выпущенные в накопительных пакетах обновления и пакетах обновления SQL Server. Это указание эквивалентно [флагу трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4199 или параметру [конфигурации области баз данных](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) `QUERY_OPTIMIZER_HOTFIXES = ON`.
 *  'FORCE_DEFAULT_CARDINALITY_ESTIMATION'      
-   Заставляет оптимизатор запросов использовать модель [оценки кратности](../../relational-databases/performance/cardinality-estimation-sql-server.md), которая соответствует текущему уровню совместимости базы данных. Используйте это указание для переопределения параметра [Конфигурация области баз данных](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) LEGACY_CARDINALITY_ESTIMATION=ON или [флаг трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481.
+   Заставляет оптимизатор запросов использовать модель [оценки кратности](../../relational-databases/performance/cardinality-estimation-sql-server.md), которая соответствует текущему уровню совместимости базы данных. Используйте это указание для переопределения параметра [конфигурации области баз данных](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) `LEGACY_CARDINALITY_ESTIMATION = ON` или [флага трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481.
 *  'FORCE_LEGACY_CARDINALITY_ESTIMATION' <a name="use_hint_ce70"></a>      
-   Заставляет оптимизатор запросов использовать модель [оценки кратности](../../relational-databases/performance/cardinality-estimation-sql-server.md) для [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более ранних версий. Указание с этим именем эквивалентно [флагу трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481 или параметру LEGACY_CARDINALITY_ESTIMATION=ON в [конфигурации области базы данных](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
+   Заставляет оптимизатор запросов использовать модель [оценки кратности](../../relational-databases/performance/cardinality-estimation-sql-server.md) для [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более ранних версий. Это указание эквивалентно [флагу трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481 или параметру [конфигурации области баз данных](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) `LEGACY_CARDINALITY_ESTIMATION = ON`.
 *  'QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n'          
  Принудительно изменяет поведение оптимизатора запросов на уровне запроса. Оптимизация выполняется так, как если бы запрос компилировался с уровнем совместимости базы данных _n_, где _n_— максимальный поддерживаемый уровень совместимости базы данных. Список значений, поддерживаемых сейчас для _n_, см. здесь: [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md). **Применимо к** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] с накопительным пакетом обновления CU10).    
 
@@ -328,10 +328,10 @@ ROBUST PLAN
 > [!IMPORTANT] 
 > Некоторые указания USE HINT могут конфликтовать с флагами трассировки, включенными на глобальном уровне или уровне сеанса, или параметрами конфигурации области баз данных. В этом случае приоритет всегда имеет указание уровня запроса (USE HINT). Если USE HINT конфликтует с другим указанием запроса или флагом трассировки, включенным на уровне запроса (например, с помощью QUERYTRACEON), при попытке выполнить запрос [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выведет ошибку. 
 
- USE PLAN N **'**_xml\_plan_**'**     
- Указывает оптимизатору запросов использовать существующий план запроса для запроса, определенного параметром **'**_xml\_plan_**'**. Указание USE PLAN нельзя использовать в инструкциях INSERT, UPDATE, MERGE и DELETE.  
+ USE PLAN N **'** _xml\_plan_ **'**      
+ Указывает оптимизатору запросов использовать существующий план запроса для запроса, определенного параметром **'** _xml\_plan_ **'** . Указание USE PLAN нельзя использовать в инструкциях INSERT, UPDATE, MERGE и DELETE.  
   
-TABLE HINT **(**_exposed\_object\_name_ [ **,** \<table_hint> [ [**,** ]..._n_ ] ] **)** Применяет заданное табличное указание к таблице или представлению, которые соответствуют имени _exposed\_object\_name_. Табличные указания рекомендуется использовать в качестве подсказок в запросах только в контексте [структуры плана](../../relational-databases/performance/plan-guides.md).  
+TABLE HINT **(** _exposed\_object\_name_ [ **,** \<table_hint> [ [ **,** ]..._n_ ] ] **)** Применяет заданное табличное указание к таблице или представлению, которые соответствуют имени _exposed\_object\_name_. Табличные указания рекомендуется использовать в качестве подсказок в запросах только в контексте [структуры плана](../../relational-databases/performance/plan-guides.md).  
   
  Аргумент _exposed\_object\_name_ может представлять одну из следующих ссылок:  
   
@@ -341,7 +341,7 @@ TABLE HINT **(**_exposed\_object\_name_ [ **,** \<table_hint> [ [**,** ]..._n_ ]
   
  Если вы укажете _exposed\_object\_name_ без табличного указания, любые индексы, которые указаны в составе табличного указания для этого объекта в запросе, будут игнорироваться. Затем оптимизатор запросов определяет использование индексов. Эта методика позволяет устранить влияние табличного указания INDEX, если нет возможности изменить первоначальный запрос. См. пример К.  
   
-**\<table_hint> ::=** { [ NOEXPAND ] { INDEX ( _index\_value_ [ ,..._n_ ] ) | INDEX = ( _index\_value_ ) | FORCESEEK [**(**_index\_value_**(**_index\_column\_name_ [**,**... ] **))** ]| FORCESCAN | HOLDLOCK | NOLOCK | NOWAIT | PAGLOCK | READCOMMITTED | READCOMMITTEDLOCK | READPAST | READUNCOMMITTED | REPEATABLEREAD | ROWLOCK | SERIALIZABLE | SNAPSHOT | SPATIAL_WINDOW_MAX_CELLS | TABLOCK | TABLOCKX | UPDLOCK | XLOCK } Это табличное указание применяется в качестве указания запроса к таблице или представлению, которые соответствуют значению *exposed_object_name*. Описание этих указаний см. в разделе [Табличные указания (Transact-SQL)](../../t-sql/queries/hints-transact-sql-table.md).  
+**\<table_hint> ::=** { [ NOEXPAND ] { INDEX ( _index\_value_ [ ,..._n_ ] ) | INDEX = ( _index\_value_ ) | FORCESEEK [ **(** _index\_value_ **(** _index\_column\_name_ [ **,** ... ] **))** ]| FORCESCAN | HOLDLOCK | NOLOCK | NOWAIT | PAGLOCK | READCOMMITTED | READCOMMITTEDLOCK | READPAST | READUNCOMMITTED | REPEATABLEREAD | ROWLOCK | SERIALIZABLE | SNAPSHOT | SPATIAL_WINDOW_MAX_CELLS | TABLOCK | TABLOCKX | UPDLOCK | XLOCK } Это табличное указание применяется в качестве указания запроса к таблице или представлению, которые соответствуют значению *exposed_object_name*. Описание этих указаний см. в разделе [Табличные указания (Transact-SQL)](../../t-sql/queries/hints-transact-sql-table.md).  
   
  Табличные указания, за исключением INDEX, FORCESCAN и FORCESEEK, не могут использоваться как указания запроса, кроме тех случаев, когда в запросе уже содержится предложение WITH, задающее табличное указание. Дополнительные сведения см. в подразделе "Примечания".  
   
@@ -547,7 +547,7 @@ GO
 ```  
   
 ### <a name="k-specifying-semantics-affecting-table-hints"></a>Л. Определение табличных указаний, влияющих на семантику  
-В следующем примере в запросе содержатся две подсказки таблицы: NOLOCK, которая изменяет семантику, и INDEX, которая не изменяет семантику. Чтобы сохранить семантику запроса, указание NOLOCK задается в предложении OPTIONS структуры плана. Наряду с указанием NOLOCK задайте указания INDEX и FORCESEEK, а также замените не влияющее на семантику указание INDEX в запросе при компиляции и оптимизации инструкции. В этом примере используется база данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+В следующем примере в запросе содержатся два указания таблицы: NOLOCK, которое изменяет семантику, и INDEX, которое не изменяет семантику. Чтобы сохранить семантику запроса, указание NOLOCK задается в предложении OPTIONS структуры плана. Наряду с указанием NOLOCK задайте указания INDEX и FORCESEEK, а также замените не влияющее на семантику указание INDEX в запросе при компиляции и оптимизации инструкции. В этом примере используется база данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
 ```sql  
 EXEC sp_create_plan_guide   

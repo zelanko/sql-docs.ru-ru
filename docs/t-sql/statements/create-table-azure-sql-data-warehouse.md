@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4a048347773b5bf9cba7288e482ed08ea3f4757c
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 328a0aaeed34bd03e33f480ea0b0ea6afc7e940d
+ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65574891"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66413331"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (хранилище данных SQL Azure)
 
@@ -36,7 +36,7 @@ ms.locfileid: "65574891"
 
 ## <a name="syntax"></a>Синтаксис
   
-```  
+```
 -- Create a new table.
 CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
     ( 
@@ -166,12 +166,12 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 
 ### <a name="ordered-clustered-columnstore-index-option-preview"></a>Вариант упорядоченного кластеризованного индекса columnstore (предварительная версия)
 
-Кластеризованный индекс columnstore включен по умолчанию для создания таблиц в Хранилище данных SQL Azure.  Спецификация ORDER связана с ключами COMPOUND по умолчанию.  Сортировка будет всегда выполняться по возрастанию. Если предложение ORDER не указано, индекс columnstore не будет отсортирован.
+Кластеризованный индекс columnstore включен по умолчанию для создания таблиц в Хранилище данных SQL Azure.  Спецификация ORDER связана с ключами COMPOUND по умолчанию.  Сортировка будет всегда выполняться по возрастанию. Если предложение ORDER не указано, индекс columnstore не будет отсортирован. Из-за упорядочения в таблице, содержащей упорядоченный кластеризованный индекс columnstore, время загрузки данных может быть увеличено по сравнению с неупорядоченными кластеризованными индексами columnstore. Если вам необходимо больше места в базе данных tempdb при загрузке данных, можно уменьшить объем данных в одной инструкции insert.
 
 На этапе предварительной версии можно выполнить следующий запрос для проверки столбцов с включенной спецификацией ORDER.  Представление каталога станет доступным позже для предоставления этой информации и порядковых номеров столбцов, если в спецификации ORDER указано несколько столбцов.
 
 ```sql
-SELECT o.name, c.name, s.min_data_id, s.max_data_id, s.max_data_id-s.min_data_id as difference,  s.* 
+SELECT o.name, c.name, s.min_data_id, s.max_data_id, s.max_data_id-s.min_data_id as difference,  s.*
 FROM sys.objects o 
 INNER JOIN sys.columns c ON o.object_id = c.object_id 
 INNER JOIN sys.partitions p ON o.object_id = p.object_id   

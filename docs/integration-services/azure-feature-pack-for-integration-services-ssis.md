@@ -1,7 +1,7 @@
 ---
 title: Пакет дополнительных компонентов Azure для служб Integration Services (SSIS) | Документы Майкрософт
 ms.custom: ''
-ms.date: 07/09/2018
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 003cfeefbea35d635264793555d771c5fddcead0
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.openlocfilehash: 29e30a8a7da41bcb7c75c61ef5ed78d0e3096536
+ms.sourcegitcommit: fc0eb955b41c9c508a1fe550eb5421c05fbf11b4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65729414"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66403172"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>Пакет дополнительных компонентов Azure для служб Integration Services (SSIS)
 
@@ -72,6 +72,8 @@ ms.locfileid: "65729414"
 
     -   [Задача отправки в хранилище данных Azure SQL](../integration-services/control-flow/azure-sql-dw-upload-task.md)
 
+    -   [Задача "Гибкая работа с файлами"](../integration-services/control-flow/flexible-file-task.md)
+
 -   Компоненты потока данных
 
     -   [Компонент Azure Blob Source](../integration-services/data-flow/azure-blob-source.md)
@@ -82,7 +84,11 @@ ms.locfileid: "65729414"
     
     -   [Цель Azure Data Lake Store](../integration-services/data-flow/azure-data-lake-store-destination.md)
 
--   Перечислитель файлов больших двоичных объектов и Azure Data Lake Store. См. раздел [Контейнер "цикл по каждому элементу"](https://msdn.microsoft.com/library/95a19dde-61ca-4d9b-aa3d-131fa4264296).
+    -   [Источник "Гибкая работа с файлами"](../integration-services/data-flow/flexible-file-source.md)
+
+    -   [Назначение "Гибкая работа с файлами"](../integration-services/data-flow/flexible-file-destination.md)
+
+-   BLOB-объект Azure, Azure Data Lake Store и перечислитель файлов Data Lake Storage 2-го поколения. См. раздел [Контейнер "цикл по каждому элементу"](../integration-services/control-flow/foreach-loop-container.md).
 
 ## <a name="scenario-processing-big-data"></a>Сценарий: обработка больших данных
  Используйте соединитель Azure для выполнения следующих задач по обработке больших данных:

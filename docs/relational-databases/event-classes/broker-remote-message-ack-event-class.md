@@ -1,7 +1,7 @@
 ---
 title: Класс событий Broker:Remote Message Ack | Документация Майкрософт
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 05/24/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
@@ -12,17 +12,19 @@ ms.assetid: 3d67efe1-74b4-4633-b029-c6e05b19f4dc
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 400de29cec4be8fc882860c777d6dcd5fa765243
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 7eb9cc127650d2fb6faacabcd30ce0ecb2ae3588
+ms.sourcegitcommit: 02df4e7965b2a858030bb508eaf8daa9bc10b00b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748792"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66265486"
 ---
 # <a name="brokerremote-message-ack-event-class"></a>Broker:Remote Message Ack, класс событий
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] формирует событие **Broker:Remote Message Ack** , когда компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] отправляет или получает подтверждение сообщения.  
+
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] формирует событие **Broker:Remote Message Ack** , когда компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] отправляет или получает подтверждение сообщения.  
   
 ## <a name="brokerremote-message-ack-event-class-data-columns"></a>Столбцы данных класса событий Broker:Remote Message Ack  
   
@@ -37,7 +39,7 @@ ms.locfileid: "47748792"
 |**EventSequence**|**int**|Порядковый номер этого события.|51|нет|  
 |**EventSubClass**|**nvarchar**|Тип подкласса события, предоставляющий дополнительные сведения о каждом классе событий. Этот столбец может содержать следующие значения.<br /><br /> **Message With Acknowledgement Sent**:<br />                    [!INCLUDE[ssSB](../../includes/sssb-md.md)] отправил подтверждение как часть обычного последовательного сообщения.<br /><br /> **Acknowledgement Sent**:<br />                    [!INCLUDE[ssSB](../../includes/sssb-md.md)] отправил подтверждение вне обычного последовательного сообщения.<br /><br /> **Message With Acknowledgement Received**:<br />                  [!INCLUDE[ssSB](../../includes/sssb-md.md)] получил подтверждение как часть обычного последовательного сообщения.<br /><br /> **Acknowledgement Received**:<br />                  [!INCLUDE[ssSB](../../includes/sssb-md.md)] получил подтверждение вне обычного последовательного сообщения.|21|Да|  
 |**GUID**|**uniqueidentifier**|Идентификатор диалога. Этот идентификатор передается в составе сообщения и является общим для обоих участников диалога.|54|нет|  
-|**HonorBrokerPriority**|**Int**|Текущее значение параметра базы данных HONOR_BROKER_PRIORITY: 0 — отключено, 1 — включено.|32|Да|  
+|**HonorBrokerPriority**|**Int**|Текущее значение параметра базы данных HONOR_BROKER_PRIORITY: 0 = отключен, 1 = включен.|32|Да|  
 |**HostName**|**nvarchar**|Имя компьютера, на котором выполняется клиентская программа. Заполнение этого столбца данных производится в том случае, если клиент предоставляет имя узла. Чтобы определить имя узла, используйте функцию HOST_NAME.|8|Да|  
 |**IntegerData**|**int**|Номер фрагмента сообщения, содержащего подтверждение.|25|нет|  
 |**IntegerData2**|**int**|Номер фрагмента подтверждаемого сообщения.|55|нет|  
@@ -50,7 +52,7 @@ ms.locfileid: "47748792"
 |**ServerName**|**nvarchar**|Имя отслеживаемого экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|26|нет|  
 |**SPID**|**int**|Идентификатор процесса сервера, который [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] присвоил процессу, связанному с клиентом.|12|Да|  
 |**StartTime**|**datetime**|Время начала события, если доступно.|14|Да|  
-|**StarvationElevation**|**int**|Сообщение было отправлено с более высоким приоритетом, чем приоритет, настроенный для диалога: 0 — нет, 1 — да.|33|Да|  
+|**StarvationElevation**|**int**|Сообщение было отправлено с более высоким приоритетом, чем приоритет, настроенный для диалога: 0 = false, 1 = true.|33|Да|  
 |**TransactionID**|**bigint**|Назначенный системой идентификатор транзакции.|4|нет|  
   
   

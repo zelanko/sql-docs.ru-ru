@@ -1,7 +1,7 @@
 ---
 title: Класс событий Broker:Message Classify | Документация Майкрософт
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 05/24/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
@@ -13,16 +13,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5e6c3eb4997cd89bae19a231e808cb4699528e97
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf9029a72ab1d02f02c5d1e7f51ffb85b76d93e3
+ms.sourcegitcommit: 02df4e7965b2a858030bb508eaf8daa9bc10b00b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632442"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66265502"
 ---
 # <a name="brokermessage-classify-event-class"></a>класс событий Broker:Message Classify
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создает событие класса **Broker:Message Classify** , когда компонент Service Broker определяет маршрут для сообщения.  
+
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создает событие класса **Broker:Message Classify** , когда компонент Service Broker определяет маршрут для сообщения.  
   
 ## <a name="brokermessage-classify-event-class-data-columns"></a>Столбцы данных класса событий Broker:Message Classify  
   
@@ -33,7 +35,7 @@ ms.locfileid: "47632442"
 |**DatabaseID**|**int**|Идентификатор базы данных, указанной в инструкции USE *database* , или базы данных по умолчанию, если для данного экземпляра инструкция USE *database* не выполнялась. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] отображает имя базы данных, если столбец данных **ServerName** захвачен при трассировке и сервер доступен. Определите значение для базы данных, используя функцию DB_ID.|3|Да|  
 |**EventClass**|**int**|Тип захваченного класса событий. Для **Broker:Message Classify** всегда равен **141**.|27|нет|  
 |**EventSequence**|**int**|Порядковый номер этого события.|51|нет|  
-|**EventSubClass**|**nvarchar**|Тип подкласса событий, предоставляющий дополнительные сведения о каждом классе события. Этот столбец может содержать следующие значения.<br /><br /> **Local**: выбранный маршрут имеет адрес LOCAL.<br /><br /> **Remote**: выбранный маршрут имеет адрес, отличный от LOCAL.<br /><br /> **Delayed**: сообщение отложено либо из-за того, что переадресация выключена, либо из-за отсутствия подходящего маршрута.|21|Да|  
+|**EventSubClass**|**nvarchar**|Тип подкласса событий, предоставляющий дополнительные сведения о каждом классе события. Этот столбец может содержать следующие значения.<br /><br /> **Local**. Выбранный маршрут имеет адрес LOCAL.<br /><br /> **Remote**.                 Выбранный маршрут имеет адрес, отличный от LOCAL.<br /><br /> **Delayed**.                 Сообщение отложено либо из-за того, что пересылка выключена, либо из-за отсутствия подходящего маршрута.|21|Да|  
 |**FileName**|**nvarchar**|Имя службы, которой направлено сообщение.|36|нет|  
 |**GUID**|**uniqueidentifier**|Идентификатор диалога. Этот идентификатор передается в составе сообщения и является общим для обоих участников диалога.|54|нет|  
 |**HostName**|**nvarchar**|Имя компьютера, на котором выполняется клиентская программа. Заполнение этого столбца данных производится в том случае, если клиент предоставляет имя узла. Чтобы определить имя узла, используйте функцию HOST_NAME.|8|Да|  

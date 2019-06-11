@@ -1,7 +1,7 @@
 ---
 title: Класс событий Broker:Corrupted Message | Документация Майкрософт
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 05/24/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
@@ -12,17 +12,19 @@ ms.assetid: 084bf198-2138-438e-bdc7-4ff1e04300f7
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0ef3eaafc0d9eb5953db7d26c594020466c1e488
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 73b12fb1e6d2b008bbde9f7863ce0d7eaa620a1f
+ms.sourcegitcommit: 02df4e7965b2a858030bb508eaf8daa9bc10b00b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745992"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66265557"
 ---
 # <a name="brokercorrupted-message-event-class"></a>Broker:Corrupted Message, класс событий
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создает событие **Broker:Corrupted Message** , когда компонент Service Broker получает поврежденное сообщение.  
+
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создает событие **Broker:Corrupted Message** , когда компонент Service Broker получает поврежденное сообщение.  
   
 ## <a name="brokercorrupted-message-event-class-data-columns"></a>Столбцы данных класса событий Broker:Corrupted Message  
   
@@ -45,7 +47,7 @@ ms.locfileid: "47745992"
 |**NTDomainName**|**nvarchar**|Домен Windows, к которому принадлежит пользователь.|7|Да|  
 |**NTUserName**|**nvarchar**|Имя пользователя, которому принадлежит соединение, создавшее это событие.|6|Да|  
 |**ObjectName**|**nvarchar**|Имя службы другой стороны диалога и строка соединения, используемая удаленной базой данных для установки соединения с этой базой данных.|34|нет|  
-|**RoleName**|**nvarchar**|Роль конечной точки, получающей это сообщение. Одно из следующих значений.<br /><br /> **initiator**: получающая конечная точка является инициатором диалога.<br /><br /> **target**: получающая конечная точка является адресатом диалога.|38|нет|  
+|**RoleName**|**nvarchar**|Роль конечной точки, получающей это сообщение. Одно из следующих значений.<br /><br /> **initiator**: Получающая конечная точка является инициатором диалога.<br /><br /> **target**:                 Получающая конечная точка является адресатом диалога.|38|нет|  
 |**ServerName**|**nvarchar**|Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , подвергаемого трассировке.|26|нет|  
 |**Severity**|**int**|Если ошибка стала причиной, по которой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] удалил сообщение — серьезность этой ошибки.|29|нет|  
 |**SPID**|**int**|Идентификатор процесса сервера, который [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] присвоил процессу, связанному с клиентом.|12|Да|  
