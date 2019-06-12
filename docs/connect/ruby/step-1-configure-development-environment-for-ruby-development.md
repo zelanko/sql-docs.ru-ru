@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 8cdbadeb-f640-406c-977c-d2d44b7b5368
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a298a7c7f65a198e5bfb0922f2b061fd44079739
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: ff03ce6ec79aede2e056f0154836e77970af9c50
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604704"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800829"
 ---
 # <a name="step-1-configure-development-environment-for-ruby-development"></a>Шаг 1. Настройка среды разработки для разработки на языке Ruby
 Необходимо будет настроить среду разработки с предварительными требованиями, чтобы разрабатывать приложения, используя драйвер Ruby для SQL Server.    
@@ -58,7 +58,7 @@ A. Дважды щелкните файл. Вам нужно будет where д
 > gem inst tiny_tds
 ```  
   
-## <a name="ubuntu-linux"></a>Ubuntu Linux  
+## <a name="ubuntu-linux"></a>Ubuntu Linux 18.04  
   
 1. **Открыть терминал**  
   

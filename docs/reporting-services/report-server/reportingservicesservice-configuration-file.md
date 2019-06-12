@@ -1,6 +1,6 @@
 ---
 title: Файл конфигурации ReportingServicesService | Документы Майкрософт
-ms.date: 03/15/2017
+ms.date: 05/30/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 40f4a401-cb61-4c42-b1ec-01acdacdacd1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c78156832d2e66d95e4a9868bef2336c4769d9bc
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: dfb0f48bb35e6341e2b2a9a72007ef4eb09c2b9b
+ms.sourcegitcommit: 561cee96844b82ade6cf543a228028ad5c310768
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65581331"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66506635"
 ---
 # <a name="reportingservicesservice-configuration-file"></a>ReportingServicesService, файл конфигурации
 
@@ -26,8 +26,13 @@ ms.locfileid: "65581331"
 Файл ReportingServicesService.exe.config содержит параметры, позволяющие настраивать трассировку.  
   
 ## <a name="file-location"></a>Размещение файла  
- Этот файл находится в папке \Reporting Services\Report Server\Bin.  
-  
+Этот файл может находиться в одном из путей ниже:  
+
+``` Paths  
+\Reporting Services\Report Server\Bin  
+\Program Files\Microsoft SQL Server Reporting Services\SSRS\ReportServer\bin  
+```  
+ 
 ## <a name="editing-guidelines"></a>Рекомендации по изменению  
  В этом файле можно переименовать файл журнала, а также увеличить (или уменьшить) уровень трассировки. Другие параметры изменять не следует. Инструкции см. в разделе [Изменение файла конфигурации служб Reporting Services (RSreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md). Дополнительные сведения о журналах трассировки см. в разделе [Журнал трассировки службы сервера отчетов](../../reporting-services/report-server/report-server-service-trace-log.md).  
   
@@ -85,8 +90,7 @@ ms.locfileid: "65581331"
 |**Components**|Задает компоненты, для которых создаются журналы трассировки. Значение по умолчанию — **all**. Другими допустимыми значениями этого параметра являются названия внутренних компонентов. Не изменяйте это значение.|  
 |**Параметры выполнения**|Задает параметры конфигурации, обеспечивающие обратную совместимость с предыдущей версией. Параметры среды выполнения используются для перенаправления запросов, обращающихся к предыдущей версии пространства имен Microsoft.ReportingServices.Interfaces, в пространство имен новой версии.<br /><br /> Все параметры конфигурации этого раздела описаны в документации по платформе [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Дополнительные сведения можно получить, выполнив поиск по строке «Runtime Schema Settings» на веб-сайте MSDN или в документации по платформе [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .|  
   
-## <a name="see-also"></a>См. также:  
- [Файлы конфигурации служб Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md)   
- [Журнал трассировки службы сервера отчетов](../../reporting-services/report-server/report-server-service-trace-log.md)  
-  
+## <a name="see-also"></a>См. также раздел  
+[Файлы конфигурации служб Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md)  
+[Журнал трассировки службы сервера отчетов](../../reporting-services/report-server/report-server-service-trace-log.md)  
   

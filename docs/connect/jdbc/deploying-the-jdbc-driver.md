@@ -1,5 +1,5 @@
 ---
-title: Развертывание драйвера JDBC | Документация Майкрософт
+title: Использование драйвера JDBC | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 3ad3508d-d9b1-47fb-a63b-21cdc3ed44e0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c677cd46b4d3366b997e4d1effe5c056ec62a158
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: b688e5b014915578df5c56ec5e6af2fc8fe26b16
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529595"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66781982"
 ---
 # <a name="deploying-the-jdbc-driver"></a>Развертывание драйвера JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "52529595"
 >  При использовании параметра `/auto` установка не будет полностью автоматической, так как на экране пользователя все же будет отображаться диалоговое окно WinZip. Однако оно не требует выполнения каких-либо действий пользователя и закрывается после выполнения операции распаковки.  
   
 ## <a name="deploying-the-driver-on-unix-systems"></a>Развертывание драйвера в системах UNIX  
- При развертывании драйвера JDBC в операционных системах UNIX необходимо использовать исполняемый файл в формате gzip пакета установки, который обычно называется `sqljdbc_<version>_<language>.tar.gz`.  
+ При развертывании драйвера JDBC в операционных системах UNIX необходимо использовать исполняемый файл в формате GZIP пакета установки, который обычно называется `sqljdbc_<version>_<language>.tar.gz`.  
   
  До установки драйвера JDBC необходимо убедиться в том, что в системе пользователя установлены программы gzip и tar, и что папки, содержащие исполняемые файлы обеих программ, добавлены к переменной среды PATH.  
   
