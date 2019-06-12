@@ -12,13 +12,13 @@ helpviewer_keywords:
 - large CLR user-defined types [OLE DB]
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: b5c071a36cebacc8ce0dea5c1633bf3f92b28599
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: jroth
+ms.openlocfilehash: 2af61fea9909597736769eb3d28fda43753a800b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409611"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795977"
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>Большие определяемые пользователем типы данных CLR (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "52409611"
 |Тип параметра|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags* флаг DBPARAMFLAGS_ISLONG|  
 |--------------------|-------------|-------------------|------------------|--------------|------------------------------------|  
 |DBTYPE_UDT<br /><br /> (длина не более 8 000 байт)|"DBTYPE_UDT"|*n*|неопределенный|неопределенный|сброшен|  
-|DBTYPE_UDT<br /><br /> (длина более 8 000 байт)|"DBTYPE_UDT"|~ 0|неопределенный|неопределенный|набора|  
+|DBTYPE_UDT<br /><br /> (длина более 8 000 байт)|"DBTYPE_UDT"|~0|неопределенный|неопределенный|набора|  
   
 ## <a name="icommandwithparameterssetparameterinfo"></a>ICommandWithParameters::SetParameterInfo  
  Сведения, предоставленные в структуре DBPARAMBINDINFO, должны соответствовать следующим требованиям.  
@@ -67,7 +67,7 @@ ms.locfileid: "52409611"
 |Тип параметра|*pwszDataSourceType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags* флаг DBPARAMFLAGS_ISLONG|  
 |--------------------|--------------------------|-------------------|------------------|--------------|------------------------------------|  
 |DBTYPE_UDT<br /><br /> (длина не более 8 000 байт)|DBTYPE_UDT|*n*|не учитывается|не учитывается|Должен быть задан, если параметр передается с помощью DBTYPE_IUNKNOWN.|  
-|DBTYPE_UDT<br /><br /> (длина более 8 000 байт)|DBTYPE_UDT|~ 0|не учитывается|не учитывается|не учитывается|  
+|DBTYPE_UDT<br /><br /> (длина более 8 000 байт)|DBTYPE_UDT|~0|не учитывается|не учитывается|не учитывается|  
   
 ## <a name="isscommandwithparameters"></a>ISSCommandWithParameters  
  Чтобы вернуть и задать свойства параметров, определенные в разделе "Свойства параметров", приложения используют интерфейс **ISSCommandWithParameters**.  
@@ -78,7 +78,7 @@ ms.locfileid: "52409611"
 |Тип столбца|DBCOLUMN_TYPE|DBCOLUMN_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE|DBCOLUMN_FLAGS_ISLONG|DBCOLUMNS_ISSEARCHABLE|DBCOLUMN_OCTETLENGTH|  
 |-----------------|--------------------|--------------------------|-------------------------|---------------------|-----------------------------|-----------------------------|---------------------------|  
 |DBTYPE_UDT<br /><br /> (длина не более 8 000 байт)|DBTYPE_UDT|*n*|NULL|NULL|Clear|DB_ALL_EXCEPT_LIKE|n|  
-|DBTYPE_UDT<br /><br /> (длина более 8 000 байт)|DBTYPE_UDT|~ 0|NULL|NULL|Присвойте параметру|DB_ALL_EXCEPT_LIKE|0|  
+|DBTYPE_UDT<br /><br /> (длина более 8 000 байт)|DBTYPE_UDT|~0|NULL|NULL|Присвойте параметру|DB_ALL_EXCEPT_LIKE|0|  
   
  Для определяемых пользователем типов определяются также следующие столбцы.  
   
@@ -94,8 +94,8 @@ ms.locfileid: "52409611"
   
 |Тип параметра|*wType*|*ulColumnSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBCOLUMNFLAGS_ISLONG|  
 |--------------------|-------------|--------------------|------------------|--------------|-----------------------------------------|  
-|DBTYPE_UDT<br /><br /> (длина не более 8 000 байт)|DBTYPE_UDT|*n*|~ 0|~ 0|Clear|  
-|DBTYPE_UDT<br /><br /> (длина более 8 000 байт)|DBTYPE_UDT|~ 0|~ 0|~ 0|Присвойте параметру|  
+|DBTYPE_UDT<br /><br /> (длина не более 8 000 байт)|DBTYPE_UDT|*n*|~0|~0|Clear|  
+|DBTYPE_UDT<br /><br /> (длина более 8 000 байт)|DBTYPE_UDT|~0|~0|~0|Присвойте параметру|  
   
 ## <a name="columns-rowset-schema-rowsets"></a>Набор строк COLUMNS (наборы строк схемы)  
  Для определяемых пользователем типов возвращаются значения следующих столбцов.  

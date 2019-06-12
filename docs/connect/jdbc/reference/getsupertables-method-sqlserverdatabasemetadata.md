@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 085461de-367b-4832-88aa-010813d2bc41
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e74009881013dd539120cf31d6d8b7598e3023a7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: d60c23e3adc2ec3395281ba18d8f5cb0262ed34e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711732"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66787355"
 ---
 # <a name="getsupertables-method-sqlserverdatabasemetadata"></a>Метод getSuperTables (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -60,7 +60,7 @@ public java.sql.ResultSet getSuperTables(java.lang.String catalog,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getSuperTables указывается с помощью метода getSuperTables в интерфейсе java.sql.DatabaseMetaData.  
+ Этот метод getTables определен с помощью метода getTables в интерфейсе java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>См. также:  
  [Методы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

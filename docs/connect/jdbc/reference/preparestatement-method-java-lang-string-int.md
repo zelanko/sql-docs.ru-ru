@@ -1,5 +1,5 @@
 ---
-title: Метод prepareStatement (java.lang.String) | Документация Майкрософт
+title: Метод prepareStatement (java.lang.String, int[]) | Документация Майкрософт
 ms.custom: ''
 ms.date: 02/07/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: e825765c-eb55-4800-951b-f3495da36641
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dbe43cf2af208d6547a1dc3dcd83d7d37947308e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 4fd42fccc0e6e3e15feb3d866ccb8d40531a1d4f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788172"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796694"
 ---
 # <a name="preparestatement-method-javalangstring"></a>Метод prepareStatement (java.lang.String)
 

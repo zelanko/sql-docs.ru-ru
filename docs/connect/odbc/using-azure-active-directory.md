@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 52205f03-ff29-4254-bfa8-07cced155c86
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 789046b7df230b88ca1761d1d89cc147074e12a9
-ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
+manager: jroth
+ms.openlocfilehash: adf71b7f701d96ddf56f5070475fb853f89042ff
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56663120"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801733"
 ---
 # <a name="using-azure-active-directory-with-the-odbc-driver"></a>Использование Azure Active Directory с драйвером ODBC
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "56663120"
 
 |Имя|Значения|По умолчанию|Описание|
 |-|-|-|-|
-|`Authentication`|(не задано), (пустая строка), `SqlPassword`, `ActiveDirectoryPassword`, `ActiveDirectoryIntegrated`, `ActiveDirectoryInteractive`, `ActiveDirectoryMsi` |(не задано)|Контролирует режим проверки подлинности.<table><tr><th>Значение<th>Описание<tr><td>(не задано)<td>Режим проверки подлинности определяется другими ключевыми словами (существующие параметры подключения прежних версий).<tr><td>(пустая строка)<td>Строкой подключения является: "{0}" Переопределение и удаление `Authentication` заданное в имени DSN.<tr><td>`SqlPassword`<td>Проверку подлинности непосредственно в экземпляр SQL Server, используя имя пользователя и пароль.<tr><td>`ActiveDirectoryPassword`<td>Проверка подлинности с помощью удостоверения Azure Active Directory, используя имя пользователя и пароль.<tr><td>`ActiveDirectoryIntegrated`<td>_Только драйвер Windows_. Проверка подлинности с помощью удостоверения Azure Active Directory, используя встроенную проверку подлинности.<tr><td>`ActiveDirectoryInteractive`<td>_Только драйвер Windows_. Проверка подлинности с помощью удостоверения Azure Active Directory с помощью интерактивной проверки подлинности.<tr><td>`ActiveDirectoryMsi`<td>Проверка подлинности с помощью удостоверения Azure Active Directory, с использованием проверки подлинности удостоверения управляемой службы. Для назначаемого пользователем удостоверения UID присваивается идентификатор объекта пользователя удостоверений.</table>|
+|`Authentication`|(не задано), (пустая строка), `SqlPassword`, `ActiveDirectoryPassword`, `ActiveDirectoryIntegrated`, `ActiveDirectoryInteractive`, `ActiveDirectoryMsi` |(не задано)|Контролирует режим проверки подлинности.<table><tr><th>Значение<th>Описание<tr><td>(не задано)<td>Режим проверки подлинности определяется другими ключевыми словами (существующие параметры подключения прежних версий).<tr><td>(пустая строка)<td>Строка подключения Переопределение и удаление `Authentication` заданное в имени DSN.<tr><td>`SqlPassword`<td>Проверку подлинности непосредственно в экземпляр SQL Server, используя имя пользователя и пароль.<tr><td>`ActiveDirectoryPassword`<td>Проверка подлинности с помощью удостоверения Azure Active Directory, используя имя пользователя и пароль.<tr><td>`ActiveDirectoryIntegrated`<td>_Только драйвер Windows_. Проверка подлинности с помощью удостоверения Azure Active Directory, используя встроенную проверку подлинности.<tr><td>`ActiveDirectoryInteractive`<td>_Только драйвер Windows_. Проверка подлинности с помощью удостоверения Azure Active Directory с помощью интерактивной проверки подлинности.<tr><td>`ActiveDirectoryMsi`<td>Проверка подлинности с помощью удостоверения Azure Active Directory, с использованием проверки подлинности удостоверения управляемой службы. Для назначенного пользователем удостоверения в качестве идентификатора пользователя задается идентификатор объекта удостоверения пользователя.</table>|
 |`Encrypt`|(не задано), `Yes`, `No`|(см. описание)|Управляет шифрованием соединения. Если значение атрибута предварительного `Authentication` параметр не _none_ DSN или строки подключения, по умолчанию используется `Yes`. В противном случае значение по умолчанию — `No`. Если атрибут `SQL_COPT_SS_AUTHENTICATION` переопределяет значение атрибута предварительного `Authentication`, явным образом задать значение шифрования в DSN или строки подключения или атрибут соединения. Значение атрибута предварительного шифрования `Yes` Если присвоено значение `Yes` в строке подключения или имя DSN.|
 
 ## <a name="new-andor-modified-connection-attributes"></a>Атрибуты соединения новых или измененных
@@ -105,7 +105,7 @@ ms.locfileid: "56663120"
 
 ![WindowsAzureAuth.png](windows/WindowsAzureAuth.png)
 
-8. Проверка подлинности удостоверений службы управляемых AAD использует назначенное системой или назначаемого пользователем удостоверения для проверки подлинности для настройки подключения. Для назначаемого пользователем удостоверения UID присваивается идентификатор объекта удостоверения пользователя.<br>
+8. Проверка подлинности удостоверений службы управляемых AAD использует назначенное системой или назначаемого пользователем удостоверения для проверки подлинности для настройки подключения. Для назначенного пользователем удостоверения в качестве идентификатора пользователя задается идентификатор объекта удостоверения пользователя.<br>
 Для назначенного системой удостоверения:<br>
 `server=Server;database=Database;Authentication=ActiveDirectoryMsi;`<br>
 Назначаемое пользователем удостоверение с Идентификатором объекта равно для myObjectId,<br>
@@ -168,7 +168,7 @@ typedef struct AccessToken
 ~~~
 SQLCHAR connString[] = "Driver={ODBC Driver 17 for SQL Server};Server={server};UID=myuser;Authentication=ActiveDirectoryInteractive"
 ~~~
-Ниже приведен пример строки подключения для использования с помощью аутентификации Azure Active Directory управляемые службы удостоверений. Обратите внимание, что UID присваивается идентификатор объекта пользователя удостоверения для назначаемого пользователем удостоверения.
+Ниже приведен пример строки подключения для использования с помощью аутентификации Azure Active Directory управляемые службы удостоверений. Для назначенного пользователем удостоверения в качестве идентификатора пользователя задается идентификатор объекта удостоверения пользователя.
 ~~~
 // For system-assigned identity,
 SQLCHAR connString[] = "Driver={ODBC Driver 17 for SQL Server};Server={server};Authentication=ActiveDirectoryMsi"

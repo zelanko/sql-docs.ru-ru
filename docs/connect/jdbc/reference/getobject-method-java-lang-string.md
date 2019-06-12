@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: a1e955ce-13db-4828-ad59-d9b6a8b2c6cc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 26c09cca4f63f80cdbbb80386304ed7c4cdceda9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 56fc766c22751ea0a1465f9d1a447653b096b8f8
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724402"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66787464"
 ---
 # <a name="getobject-method-javalangstring"></a>Метод getObject (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

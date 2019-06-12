@@ -12,13 +12,13 @@ helpviewer_keywords:
 - IRow interface
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: deab7936f6ba3eacb455cc19622d4232ed8617e5
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: cbc97de598e05d6045a5f7f142a67b39dcb9dd05
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600084"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66791558"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>Выбор столбцов при помощи метода IRow::GetColumns (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "51600084"
   
 -   Как получить группу столбцов (последовательно).  
   
--   Как дважды получить доступ к столбцу. В первый раз узнается фактическая ширина столбца, а затем осуществляется доступ к данным. Если в структуре DBCOLUMNACCESS **pData** имеет значение NULL, а **cbMaxLen** = 0, вызов **IRow**-**>GetColumns()** возвращает только фактическую длину столбца. В этом случае **IRow->GetColumns()** можно вызвать снова для того же столбца, чтобы получить данные.  
+-   Как дважды получить доступ к столбцу. В первый раз узнается фактическая ширина столбца, а затем осуществляется доступ к данным. Если в структуре DBCOLUMNACCESS **pData** имеет значение NULL, а **cbMaxLen** = 0, вызов **IRow**- **>GetColumns()** возвращает только фактическую длину столбца. В этом случае **IRow->GetColumns()** можно вызвать снова для того же столбца, чтобы получить данные.  
   
 > [!IMPORTANT]  
 >  По возможности используйте аутентификацию Windows. Если проверка подлинности Windows недоступна, запросите у пользователя ввод учетных данных во время выполнения. Избегайте хранения учетных данных в файле. Если необходимо сохранить учетные данные, зашифруйте их с помощью [API-интерфейса шифрования Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  

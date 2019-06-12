@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 72b5c4a5-1382-4b2c-80a0-47c97c5f52d3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1bec0d56782a7e9cacd236011c79aba2ab2c806a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 11ff6a1b5c919f44bfc9cfd56e1e94ac57b673e3
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814492"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802652"
 ---
 # <a name="preparestatement-method-javalangstring-int"></a>Метод prepareStatement (java.lang.String, int[])
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

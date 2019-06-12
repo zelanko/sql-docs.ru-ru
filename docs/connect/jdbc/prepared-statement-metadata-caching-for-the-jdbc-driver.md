@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 72ef56833f8f6a6ed4cc66a91dcb7a9e4576c7f5
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: jroth
+ms.openlocfilehash: 58ebcb2560e3b03703d7a419b28c6c04e41c19f1
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395837"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794084"
 ---
 # <a name="prepared-statement-metadata-caching-for-the-jdbc-driver"></a>Кэширование метаданных подготовленной инструкции для JDBC Driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -73,18 +73,18 @@ ms.locfileid: "52395837"
 |Новый метод|Описание|  
 |-----------|-----------------|  
 |void setDisableStatementPooling(boolean value)|Задает значение true или false пулы инструкций.|
-|Логическое getDisableStatementPooling()|Возвращает значение true, если пулы инструкций отключено.|
+|boolean getDisableStatementPooling()|Возвращает значение true, если пулы инструкций отключено.|
 |void setStatementPoolingCacheSize(int value)|Указывает размер кэша подготовленных инструкций для этого подключения. Значение меньше 1 означает, что без кэширования.|
 |int getStatementPoolingCacheSize()|Возвращает размер кэша подготовленных инструкций для этого подключения. Значение меньше 1 означает, что без кэширования.|
 |int getStatementHandleCacheEntryCount()|Возвращает текущее число дескрипторов в составе пула подготовленной инструкции.|
-|Логическое isPreparedStatementCachingEnabled()|Отвечает за включение пулы инструкций или не для этого подключения.|
+|boolean isPreparedStatementCachingEnabled()|Отвечает за включение пулы инструкций или не для этого подключения.|
 
  **SQLServerDataSource**
  
 |Новый метод|Описание|  
 |-----------|-----------------|  
 |void setDisableStatementPooling(boolean disableStatementPooling)|Задает пулов инструкций, значение true или false|
-|Логическое getDisableStatementPooling()|Возвращает значение true, если пулы инструкций отключено.|
+|boolean getDisableStatementPooling()|Возвращает значение true, если пулы инструкций отключено.|
 |void setStatementPoolingCacheSize(int statementPoolingCacheSize)|Указывает размер кэша подготовленных инструкций для этого подключения. Значение меньше 1 означает, что без кэширования.|
 |int getStatementPoolingCacheSize()|Возвращает размер кэша подготовленных инструкций для этого подключения. Значение меньше 1 означает, что без кэширования.|
 

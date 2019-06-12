@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: fc746413-bdbf-4109-aee0-385a1270c847
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f568c4139dd1301bf510502183044dbd7e93ba2b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 7ba829563b81584e14d713be0ca91d4d48124ce2
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598811"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798478"
 ---
 # <a name="updatencharacterstream-method-int-javaioreader"></a>Метод updateNCharacterStream (int, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,7 +46,7 @@ public void updateNCharacterStream(int columnIndex,
 ## <a name="remarks"></a>Remarks  
  Этот метод updateNCharacterStream указывается с помощью метода updateNCharacterStream в интерфейсе java.sql.ResultSet.  
   
- Этот метод передает символы в Юникоде из объекта чтения в выбранные **nchar**, **nvarchar(max)**, **ntext** и **xml** столбцов. Использование этого метода при работе со столбцами других типов данных приведет к возникновению исключения.  
+ Этот метод передает символы в Юникоде из объекта чтения в выбранные **nchar**, **nvarchar(max)** , **ntext** и **xml** столбцов. Использование этого метода при работе со столбцами других типов данных приведет к возникновению исключения.  
   
 ## <a name="see-also"></a>См. также:  
  [Метод updateNCharacterStream &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatencharacterstream-method-sqlserverresultset.md)   

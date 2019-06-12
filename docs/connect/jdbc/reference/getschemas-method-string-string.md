@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 672171ac-976f-4605-9bee-2a5e141d92cb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 76c5831547178b33854465d38cfe97dc87684d15
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: b4129ebee2be0ca043be349dc57ca8612ab7d0b5
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684612"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66792186"
 ---
 # <a name="getschemas-method-string-string"></a>Метод getSchemas (String, String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,7 +1,7 @@
 ---
 title: Метод deletesAreDetected (SQLServerDatabaseMetaData) | Документация Майкрософт
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 01/20/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -15,23 +15,23 @@ apitype: Assembly
 ms.assetid: 73f3d994-bbd7-43d2-8b64-50057e278983
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 20007b2918d8e0b8675c082edc5040c092973579
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: d6e0fc0bad10ad67c549a3ab3d505af899f67c45
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806102"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66786370"
 ---
 # <a name="deletesaredetected-method-sqlserverdatabasemetadata"></a>Метод deletesAreDetected (SQLServerDatabaseMetaData)
+
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
   Возвращает значение, определяющее, обнаруживается ли удаление видимой строки вызовом метода [rowDeleted](../../../connect/jdbc/reference/rowdeleted-method-sqlserverresultset.md) класса [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
-  
+```cpp
 public boolean deletesAreDetected(int type)  
 ```  
   
@@ -59,7 +59,7 @@ public boolean deletesAreDetected(int type)
  TYPE_SS_SCROLL_DYNAMIC  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- **значение true,** при удалении строка заменяется пустую. **false** при удалении строка полностью удаляется.  
+ **значение true,** Если разрыв заменяет удаленную строку. **false** при удалении строка полностью удаляется.  
   
  При использовании [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] с базой данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] этот метод возвращает значение **true** для курсоров TYPE_SS_SCROLL_KEYSET и значение **false** для всех других типов результирующего набора.  
   
