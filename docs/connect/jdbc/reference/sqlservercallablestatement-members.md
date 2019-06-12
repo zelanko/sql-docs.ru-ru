@@ -11,13 +11,13 @@ apitype: Assembly
 ms.assetid: 5ebdc186-e50f-4d14-bbf4-95af5051e4a4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6dc7a5a5e19f7baa335055d1f6c2038b4660f721
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 9c6f0ab616be75d9ccd71bd5b191fde3c76098d1
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642812"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66772968"
 ---
 # <a name="sqlservercallablestatement-members"></a>Члены SQLServerCallableStatement
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47642812"
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[addBatch](../../../connect/jdbc/reference/addbatch-method-sqlserverpreparedstatement.md)|(Наследуется от SQLServerPreparedStatement.) Добавляет набор параметров в пакет команд для данного объекта CallableStatement.|  
+|[addBatch](../../../connect/jdbc/reference/addbatch-method-sqlserverpreparedstatement.md)|(Наследуется от [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) Добавляет набор параметров к пакету команд для этого объекта инструкции.|  
 |[cancel](../../../connect/jdbc/reference/cancel-method-sqlserverstatement.md)|(Наследуется от [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Отменяет инструкцию SQL, выполняемую в настоящее время объектом CallableStatement.|  
 |[clearBatch](../../../connect/jdbc/reference/clearbatch-method-sqlserverpreparedstatement.md)|(Наследуется от [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) Обнуляет текущий список команд SQL для данного объекта CallableStatement.|  
 |[clearParameters](../../../connect/jdbc/reference/clearparameters-method-sqlserverpreparedstatement.md)|(Наследуется от [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) Немедленно удаляет текущие значения параметров.|  
@@ -58,7 +58,7 @@ ms.locfileid: "47642812"
 |[getMaxFieldSize](../../../connect/jdbc/reference/getmaxfieldsize-method-sqlserverstatement.md)|(Наследуется от [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Извлекает максимальное число байтов, которое может возвращаться для значений символьных и двоичных столбцов в объекте [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md), созданном этим объектом CallableStatement.|  
 |[getMaxRows](../../../connect/jdbc/reference/getmaxrows-method-sqlserverstatement.md)|(Наследуется от [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Извлекает максимальное количество строк, которое может содержаться в объекте [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md), созданном этим объектом CallableStatement.|  
 |[getMetaData](../../../connect/jdbc/reference/getmetadata-method-sqlserverpreparedstatement.md)|(Наследуется от [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) Извлекает объект [класса SQLServerResultSetMetaData](../../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md), содержащий сведения о столбцах объекта [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md), который возвращается при выполнении этого объекта CallableStatement.|  
-|[getMoreResults](../../../connect/jdbc/reference/getmoreresults-method-sqlserverstatement.md)|(Наследуется от SQLServerStatement.) Переходит к следующему результату этого объекта CallableStatement.|  
+|[getMoreResults](../../../connect/jdbc/reference/getmoreresults-method-sqlserverstatement.md)|(Наследуется от [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Переходит к следующему результату этого объекта CallableStatement.|  
 |[getParameterMetaData](../../../connect/jdbc/reference/getparametermetadata-method-sqlserverpreparedstatement.md)|(Наследуется от [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) Извлекает количество, типы и свойства параметров этого объекта CallableStatement.|  
 |[getArray](../../../connect/jdbc/reference/getarray-method-sqlservercallablestatement.md)|Извлекает значение указанного параметра в виде объекта Array.|  
 |[getAsciiStream](../../../connect/jdbc/reference/getasciistream-method-sqlservercallablestatement.md)|Извлекает значение указанного параметра в виде потока символов **ASCII**.|  
@@ -75,7 +75,7 @@ ms.locfileid: "47642812"
 |[getDouble](../../../connect/jdbc/reference/getdouble-method-sqlservercallablestatement.md)|Извлекает значение указанного параметра в виде **double** на языке программирования Java.|  
 |[getFloat](../../../connect/jdbc/reference/getfloat-method-sqlservercallablestatement.md)|Извлекает значение указанного параметра в виде значения **float** на языке программирования Java.|  
 |[getInt](../../../connect/jdbc/reference/getint-method-sqlservercallablestatement.md)|Извлекает значение указанного параметра в виде значения **int** на языке программирования Java.|  
-|[getLong](../../../connect/jdbc/reference/getlong-method-sqlservercallablestatement.md)|Извлекает значение указанного параметра в виде значения **long** на языке программирования Java.|  
+|[getLong](../../../connect/jdbc/reference/getlong-method-sqlservercallablestatement.md)|Извлекает значение указанного параметра в виде значения типа **long** на языке программирования Java.|  
 |[getNCharacterStream](../../../connect/jdbc/reference/getncharacterstream-method-sqlservercallablestatement.md)|Извлекает значение указанного параметра в виде объекта Reader.|  
 |[getNClob](../../../connect/jdbc/reference/getnclob-method-sqlservercallablestatement.md)|Извлекает значение указанного параметра JDBC **NCLOB** в виде объекта **NClob** на языке программирования Java.|  
 |[getNString](../../../connect/jdbc/reference/getnstring-method-sqlservercallablestatement.md)|Получает значение заданного **NCHAR**, **NVARCHAR** или **LONGNVARCHAR** параметра в виде строки на Java языка программирования.|  

@@ -1,13 +1,11 @@
 ---
-title: Метод updateCharacterStream (java.io.Reader, int) | Документация Майкрософт
+title: Метод updateCharacterStream (java.io.Reader) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerResultSet.updateCharacterStream (int, java.io.Reader, int)
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: b692c372-f6d7-4528-9c5d-cd8421bdb12e
-caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7ac7e0876d0474f95732db550c37fa43d4ef05ad
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+manager: jroth
+ms.openlocfilehash: af5965d55fd48ad884da5ca1ff02e447b2ff5764
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38019892"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66784136"
 ---
 # <a name="updatecharacterstream-method-int-javaioreader-int"></a>Метод updateCharacterStream (int, java.io.Reader, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -59,7 +56,7 @@ public void updateCharacterStream(int columnIndex,
 ## <a name="remarks"></a>Remarks  
  Этот метод updateCharacterStream указывается с помощью метода updateCharacterStream в интерфейсе java.sql.ResultSet.  
   
- Этот метод передает символы Юникода от объекта средства чтения выбранным текстовым и двоичным столбцам. Сюда входят все текстовые и **двоичные** столбцы, а также столбцы **varbinary**, **varbinary(max)**, **image** и **xml**, но не входят столбцы **определяемых пользователем типов данных**.  
+ Этот метод передает символы Юникода от объекта средства чтения выбранным текстовым и двоичным столбцам. Сюда входят все текстовые и **двоичные** столбцы, а также столбцы **varbinary**, **varbinary(max)** , **image** и **xml**, но не входят столбцы **определяемых пользователем типов данных**.  
   
  Если длина потока отличается от указанной в параметре *length*, драйвер JDBC выдаст исключение при обновлении или вставке строки.  
   

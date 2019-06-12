@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 069c68ff-442d-4104-917f-3445a3ad264a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3676612dbb690939a5bcf01b60ca29b20ba8aede
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 2ee07768e1d92cf39f7dc773b68b118406742f8f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47829952"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66765690"
 ---
 # <a name="getbyte-method-javalangstring-sqlserverresultset"></a>Метод getByte (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +47,7 @@ public byte getByte(java.lang.String columnName)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getByte указывается с помощью метода getByte в интерфейсе java.sql.ResultSet.  
+ Этот метод getDate определен с помощью метода getDate в интерфейсе java.sql.ResultSet.  
   
  Этот метод поддерживается только для типов данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], таких как tinyint и bit, которые могут безопасно возвращать байтовое значение. Для любых других типов данных будет вызываться исключение.  
   

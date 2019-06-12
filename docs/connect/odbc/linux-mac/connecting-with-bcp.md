@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 3eca5717-e50f-40db-be16-a1cebbdfee70
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 903106b5dfc17b98aae0614bd7b168d9b3acdf11
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: d4eaf16d364927b8439bcf98e7ac6655d4a2f7bc
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527526"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66789868"
 ---
 # <a name="connecting-with-bcp"></a>Соединение с помощью bcp
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -47,7 +47,7 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 ## <a name="available-options"></a>Доступные параметры
 В текущем выпуске доступны следующие параметры и элементы синтаксиса:  
 
-[_базы данных_**.**] _схемы_**.** _таблицы_ **в** _данных\_файл_ | **out** _данных\_файла_
+[_базы данных_ **.** ] _схемы_ **.** _таблицы_ **в** _данных\_файл_ | **out** _данных\_файла_
 
 - -a *packet_size*  
 Указывает число байтов в каждом сетевом пакете, отправляемом от сервера и к серверу.  

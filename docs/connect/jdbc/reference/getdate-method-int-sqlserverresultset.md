@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: e6b6cfe2-b7c4-4d41-8e09-c68b5086a503
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f434b15a49b607ad204b0d70c50381177b7743a0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 7218830d14db7b5c6532c6091aa974c55ed0e69c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725152"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66785654"
 ---
 # <a name="getdate-method-int-sqlserverresultset"></a>Метод getDate (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -52,7 +52,7 @@ public java.sql.Date getDate(int columnIndex)
  Этот метод возвращает допустимую часть даты для типа данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] datetime или smalldatetime, а часть времени имеет начальное значение времени Java — 00:00 (полночь).  
   
 ## <a name="see-also"></a>См. также:  
- [Метод getDate &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getdate-method-sqlserverresultset.md)   
+ [Метод getByte (SQLServerResultSet)](../../../connect/jdbc/reference/getdate-method-sqlserverresultset.md)   
  [Элементы SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Класс SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

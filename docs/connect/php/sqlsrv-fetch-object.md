@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 4ce2df2c-083a-4a4d-a1e2-e866e63707d5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 40a2cdd68017ff4b3e232fba1d6b63e46a3aa103
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: a82dec9fe68eb4220710d773d700c43751b7f18d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770872"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802266"
 ---
 # <a name="sqlsrvfetchobject"></a>sqlsrv_fetch_object
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -90,7 +90,7 @@ SELECT SCOPE_IDENTITY()</pre>
 `SELECT SCOPE_IDENTITY() AS PictureID`  
   
 ## <a name="example"></a>Пример  
-Следующий пример извлекает каждую строку результирующего набора в виде объекта PHP. В примере предполагается, что SQL Server и база данных [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) установлены на локальном компьютере. При выполнении примера из командной строки все выходные данные выводятся в консоль.  
+Следующий пример извлекает каждую строку результирующего набора в виде объекта PHP. В примере предполагается, что SQL Server и базы данных [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) установлены на локальном компьютере. При выполнении примера из командной строки все выходные данные выводятся в консоль.  
   
 ```  
 <?php  

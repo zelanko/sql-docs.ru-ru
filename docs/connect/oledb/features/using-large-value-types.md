@@ -16,20 +16,20 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, large value data types
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: e81c2b9b369877c28e13aa011c665bb8268c005e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: jroth
+ms.openlocfilehash: a8dafb5c74322c1232f71a7fe2f00b38005a536c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393827"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802876"
 ---
 # <a name="using-large-value-types"></a>Использование типов больших значений
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  До выхода [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] работа с типами данных больших значений требовала особой обработки. Типы данных больших значений — это типы, размер которых превышает максимальный размер строки в 8 КБ. В [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] введен описатель **max** для типов данных **varchar**, **nvarchar** и **varbinary**, который обеспечивает хранение значений размером до 2^31 –1 байт. Столбцы таблицы и переменные [!INCLUDE[tsql](../../../includes/tsql-md.md)] могут указывать типы данных **varchar(max)**, **nvarchar(max)** и **varbinary(max)**.  
+  До выхода [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] работа с типами данных больших значений требовала особой обработки. Типы данных больших значений — это типы, размер которых превышает максимальный размер строки в 8 КБ. В [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] введен описатель **max** для типов данных **varchar**, **nvarchar** и **varbinary**, который обеспечивает хранение значений размером до 2^31 –1 байт. Столбцы таблицы и переменные [!INCLUDE[tsql](../../../includes/tsql-md.md)] могут указывать типы данных **varchar(max)** , **nvarchar(max)** и **varbinary(max)** .  
   
 > [!NOTE]  
 >  Типы больших значений могут иметь максимальный размер от 1 до 8 КБ или они могут быть указаны как неограниченные.  
@@ -37,21 +37,21 @@ ms.locfileid: "52393827"
  Ранее только типы данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **text**, **ntext** и **image** могли достигать такой длины. Описатель **max** для типов данных **varchar**, **nvarchar** и **varbinary** сделали эти типы данных избыточными. Однако поскольку типы данных большой длины до сих пор доступны, большинство интерфейсов к компонентам доступа к данным OLE DB остаются теми же. Для обеспечения обратной совместимости с использованием предыдущих версий флаг DBCOLUMNFLAGS_ISLONG в драйвере OLE DB для SQL Server продолжает использоваться. Поставщики и драйверы, предназначенные для [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] и более поздних версий, продолжают использовать эти термины для новых типов при задании неограниченной максимальной длины.  
   
 > [!NOTE]  
->  Типы данных **varchar(max)**, **nvarchar(max)** и **varbinary(max)** можно также указывать в качестве типов входных и выходных параметров хранимых процедур, типов возвращаемых значений функций или в функциях [CAST и CONVERT](../../../t-sql/functions/cast-and-convert-transact-sql.md).  
+>  Типы данных **varchar(max)** , **nvarchar(max)** и **varbinary(max)** можно также указывать в качестве типов входных и выходных параметров хранимых процедур, типов возвращаемых значений функций или в функциях [CAST и CONVERT](../../../t-sql/functions/cast-and-convert-transact-sql.md).  
   
 > [!NOTE]  
 >  При репликации данных может потребоваться установить параметр конфигурации сервера [max text repl size](../../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md) в значение –1.  
   
 ## <a name="ole-db-driver-for-sql-server"></a>Драйвер OLE DB для SQL Server 
- Драйвер OLE DB для SQL Server представляет типы данных **varchar(max)**, **varbinary(max)** и **nvarchar(max)** как DBTYPE_STR, DBTYPE_BYTES и DBTYPE_WSTR соответственно.  
+ Драйвер OLE DB для SQL Server представляет типы данных **varchar(max)** , **varbinary(max)** и **nvarchar(max)** как DBTYPE_STR, DBTYPE_BYTES и DBTYPE_WSTR соответственно.  
   
- Типы данных **varchar(max)**, **varbinary(max)** и **nvarchar(max)** в столбцах с размером **max**, установленным в неограниченное значение, представляются как ISLONG через основные наборы строк схемы OLE DB и интерфейсы, возвращающие типы столбцов.  
+ Типы данных **varchar(max)** , **varbinary(max)** и **nvarchar(max)** в столбцах с размером **max**, установленным в неограниченное значение, представляются как ISLONG через основные наборы строк схемы OLE DB и интерфейсы, возвращающие типы столбцов.  
   
- Реализация интерфейса **IAccessor** объекта команды была изменена, чтобы разрешить привязку типа DBTYPE_IUNKNOWN. Если потребитель указывает DBTYPE_IUNKNOWN и задает для *pObject* значение NULL, то поставщик возвратит потребителю интерфейс **ISequentialStream**, чтобы потребитель мог направить данные **varchar(max)**, **nvarchar(max)** или **varbinary(max)** из выходных переменных.  
+ Реализация интерфейса **IAccessor** объекта команды была изменена, чтобы разрешить привязку типа DBTYPE_IUNKNOWN. Если потребитель указывает DBTYPE_IUNKNOWN и задает для *pObject* значение NULL, то поставщик возвратит потребителю интерфейс **ISequentialStream**, чтобы потребитель мог направить данные **varchar(max)** , **nvarchar(max)** или **varbinary(max)** из выходных переменных.  
   
  Поток значений выходных параметров возвращается после любых результирующих строк. Если приложение пытается перейти к следующему результирующему набору, вызывая метод **IMultipleResults::GetResult** и не используя все возвращаемые значения выходных параметров, то возвращается DB_E_OBJECTOPEN.  
   
- Чтобы поддерживать потоковую передачу, драйвер OLE DB для SQL Server требует, чтобы доступ к параметрам переменной длины осуществлялся последовательно. Это означает, что для свойства DBPROP_ACCESSORDER необходимо задавать либо значение DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS, либо значение DBPROPVAL_AO_SEQUENTIAL каждый раз, когда столбцы **varchar(max)**, **nvarchchar(max)** или **varbinary(max)** либо выходные параметры привязываются к типу DBTYPE_IUNKNOWN. Если не следовать этому ограничению на порядок доступа, то вызов метода **IRowset::GetData** завершится с ошибкой DBSTATUS_E_UNAVAILABLE. Это ограничение не применяется, если нет выходных привязок с использованием типа DBTYPE_IUNKNOWN.  
+ Чтобы поддерживать потоковую передачу, драйвер OLE DB для SQL Server требует, чтобы доступ к параметрам переменной длины осуществлялся последовательно. Это означает, что для свойства DBPROP_ACCESSORDER необходимо задавать либо значение DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS, либо значение DBPROPVAL_AO_SEQUENTIAL каждый раз, когда столбцы **varchar(max)** , **nvarchchar(max)** или **varbinary(max)** либо выходные параметры привязываются к типу DBTYPE_IUNKNOWN. Если не следовать этому ограничению на порядок доступа, то вызов метода **IRowset::GetData** завершится с ошибкой DBSTATUS_E_UNAVAILABLE. Это ограничение не применяется, если нет выходных привязок с использованием типа DBTYPE_IUNKNOWN.  
   
  Драйвер OLE DB для SQL Server также поддерживает привязку выходных параметров как DBTYPE_IUNKNOWN для типов больших значений, чтобы облегчить сценарии, в которых хранимая процедура возвращает типы больших значений, представляемые клиенту как тип DBTYPE_IUNKNOWN.  
   
@@ -65,11 +65,11 @@ ms.locfileid: "52393827"
   
  Когда сообщает максимальный размер столбца, получит драйвера OLE DB для SQL Server.  
   
--   заданный максимальный размер, например 2000 для столбца **varchar(** 2000 **)**; или  
+-   заданный максимальный размер, например 2000 для столбца **varchar(** 2000 **)** ; или  
   
 -   значение "unlimited", если столбец **varchar(max)** равен ~0. Это значение устанавливается для свойства метаданных DBCOLUMN_COLUMNSIZE.  
   
- К столбцу **varchar(max)** будут применены стандартные правила преобразования. Это значит, что любое преобразование, допустимое для столбца **varchar(** 2000 **)**, также допустимо для столбца **varchar(max)**. То же относится к столбцам **nvarchar(max)** и **varbinary(max)**.  
+ К столбцу **varchar(max)** будут применены стандартные правила преобразования. Это значит, что любое преобразование, допустимое для столбца **varchar(** 2000 **)** , также допустимо для столбца **varchar(max)** . То же относится к столбцам **nvarchar(max)** и **varbinary(max)** .  
   
  При получении типов больших значений наиболее эффективным подходом является привязка как типа DBTYPE_IUNKNOWN и задание для свойства DBPROP_ACCESSORDER набора строк значения DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS. Это вызовет передачу значения в потоке напрямую из сети без промежуточной буферизации, как показано в следующем примере:  
   

@@ -1,5 +1,5 @@
 ---
-title: Типы курсоров (драйвер SQLSRV) | Документация Майкрософт
+title: Типы курсоров (драйвер PDO_SQLSRV) | Документация Майкрософт
 ms.custom: ''
 ms.date: 02/11/2019
 ms.prod: sql
@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 8472d839-8124-4a62-a83c-7e771b0d4962
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0f435b3f2308557654259395e296c07956a2c337
-ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
+manager: jroth
+ms.openlocfilehash: 6452fc506814cdfdeee4f61085ec9a1ee0cededa
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676142"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801489"
 ---
 # <a name="cursor-types-sqlsrv-driver"></a>Типы курсоров (драйвер SQLSRV)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -122,9 +122,9 @@ sqlsrv_close( $conn );
 ## <a name="client-side-cursors-and-the-sqlsrv-driver"></a>Клиентские курсоры и драйвера SQLSRV  
 Клиентские курсоры — это функция, добавленные в версии 3.0 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] , позволяет кэшировать весь результирующий набор в памяти. Число строк доступно после выполнения запроса при использовании клиентского курсора.  
   
-Клиентские курсоры следует использовать для малых средних результирующих наборов. Использование серверных курсоров для больших результирующих наборов.  
+Курсоры на стороне клиента следует использовать только для малых и средних результирующих наборов. Использование серверных курсоров для больших результирующих наборов.  
   
-Запрос будет возвращать значение false, если буфер недостаточно велик для хранения весь результирующий набор. Можно увеличить размер буфера, вплоть до предела памяти PHP.  
+Запрос будет возвращать значение false, если буфер недостаточно велик для хранения весь результирующий набор. Вы можете увеличить размер этого буфера вплоть до максимального объема памяти PHP.  
   
 С помощью драйвера SQLSRV, можно настроить размер буфера, который содержит результирующий набор с параметром ClientBufferMaxKBSize для [sqlsrv_configure](../../connect/php/sqlsrv-configure.md). [sqlsrv_get_config](../../connect/php/sqlsrv-get-config.md) возвращает значение ClientBufferMaxKBSize. Можно также задать максимальный размер буфера в файле php.ini с sqlsrv. ClientBufferMaxKBSize (например, sqlsrv. ClientBufferMaxKBSize = 1024).  
   

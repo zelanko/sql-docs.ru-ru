@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: e0efc0b3-4da4-45fc-9e8d-5edd9da7a42d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6b70f122de7d13982b00b227a2cbe9b7e9d0e14c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: cd481b231c60c6bf9bba49ad039ece294d14a11a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696984"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66778833"
 ---
 # <a name="gettime-method-javalangstring-sqlserverresultset"></a>Метод getTime (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -52,7 +52,7 @@ public java.sql.Time getTime(java.lang.String columnName)
  Этот метод возвращает допустимую часть типа данных datetime или smalldatetime [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с частью даты, заданной в виде базовой даты Java, — 1 января 1970 г.  
   
 ## <a name="see-also"></a>См. также:  
- [Метод getTime &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/gettime-method-sqlserverresultset.md)   
+ [Метод getByte (SQLServerResultSet)](../../../connect/jdbc/reference/gettime-method-sqlserverresultset.md)   
  [Элементы SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Класс SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

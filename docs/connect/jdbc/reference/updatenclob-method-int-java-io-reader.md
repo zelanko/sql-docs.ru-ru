@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: 17adafd4-3ac3-4ff0-af9d-f087cc5ef936
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d5bf40ccd10d1c97728feadbb8a3d1c5512df070
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 0e56d72efac1965887a4e6b75f7d6915dd2b6a65
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612122"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798421"
 ---
 # <a name="updatenclob-method-int-javaioreader"></a>Метод updateNClob (int, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Обновляет указанный столбец заданным объектом **Reader**.  
+  Обновляет указанный столбец с помощью заданного объекта **Reader**.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,9 +44,9 @@ public void updateNClob(int columnIndex,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод updateNClob указывается с помощью метода updateNClob в интерфейсе java.sql.ResultSet.  
+ Этот метод getNClob определен с помощью метода getNClob в интерфейсе java.sql.ResultSet.  
   
- Этот метод поддерживается только в **nvarchar(max)**, **ntext**, и **xml** столбцов. Использование этого метода при работе со столбцами других типов данных приведет к возникновению исключения.  
+ Этот метод поддерживается только в **nvarchar(max)** , **ntext**, и **xml** столбцов. Использование этого метода при работе со столбцами других типов данных приведет к возникновению исключения.  
   
 ## <a name="see-also"></a>См. также:  
  [Метод updateNClob &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatenclob-method-sqlserverresultset.md)   

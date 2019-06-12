@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: bbb74a1d-9278-401f-9530-7b5f45aa79de
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 45ad47f53b36a54843aacb985e3d9c3db3d55d01
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: jroth
+ms.openlocfilehash: b555568ae93936c1f8659b52ba6bb731e8398e0f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398337"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66781655"
 ---
 # <a name="international-features-of-the-jdbc-driver"></a>Функции поддержки различных языков драйвера JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Функции интернационализации [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] включают в себя следующее.  
+  Функции интернационализации [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] включают в себя следующее:  
   
 -   Поддержка полной локализации на тех же языках, что и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

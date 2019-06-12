@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: c2e80566-fa41-4918-8521-cf2e05374cbd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4622c75f7185fae2ad03f64a898e6625af680329
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 6f9f14911589b45a1b27cd5ad3d8f46867ebe253
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605014"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799195"
 ---
 # <a name="pdostatementexecute"></a>PDOStatement::execute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -74,7 +74,7 @@ while ( $row = $stmt->fetch( PDO::FETCH_ASSOC ) ){
 ```  
   
 > [!NOTE]
-> Рекомендуется использовать строки в качестве входных данных при привязке значения [столбца decimal или numeric](../../t-sql/data-types/decimal-and-numeric-transact-sql.md) чтобы обеспечить точность и правильность, как PHP имеет ограниченную точность для [чисел с плавающей запятой](https://php.net/manual/en/language.types.float.php). То же применимо к столбцами bigint, особенно в том случае, если значения вне диапазона [целое число](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md).
+> Рекомендуется использовать строки в качестве входных данных при привязке значений к [десятичным или числовым столбцам](../../t-sql/data-types/decimal-and-numeric-transact-sql.md), чтобы обеспечить точность и правильность, поскольку PHP имеет ограниченную точность для [чисел с плавающей запятой](https://php.net/manual/en/language.types.float.php). То же касается и столбцов bigint, особенно в том случае, если значения выходят за пределы диапазона [целых чисел](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md).
 
 ## <a name="see-also"></a>См. также:  
 [Класс PDOStatement](../../connect/php/pdostatement-class.md)

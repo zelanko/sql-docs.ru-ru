@@ -15,13 +15,13 @@ helpviewer_keywords:
 - OLE DB rowsets, properties
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 8c78c56d08535b5d9947b5bd215afaf2f8e23e44
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: c3bb95de560e0e4ec6b5e01fda8623858a73aaf4
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754832"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803811"
 ---
 # <a name="rowset-properties-and-behaviors"></a>Свойства и поведение наборов строк
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -71,8 +71,8 @@ ms.locfileid: "47754832"
 |DBPROP_MAYWRITECOLUMN|Это свойство набора строк не реализуется драйвером OLE DB для SQL Server. При попытке считать или записать значение свойства возникает ошибка.|  
 |DBPROP_MEMORYUSAGE|Это свойство набора строк не реализуется драйвером OLE DB для SQL Server. При попытке считать или записать значение свойства возникает ошибка.|  
 |DBPROP_NOTIFICATIONGRANULARITY|Это свойство набора строк не реализуется драйвером OLE DB для SQL Server. При попытке считать или записать значение свойства возникает ошибка.|  
-|DBPROP_NOTIFICATIONPHASES|И запись: только для чтения<br /><br /> Значение по умолчанию — DBPROPVAL_NP_OKTODO &#124; DBPROPVAL_NP_ABOUTTODO &#124; DBPROPVAL_NP_SYNCHAFTER &#124; DBPROPVAL_NP_FAILEDTODO &#124; dbpropval_np_didevent.<br /><br /> Описание: Драйвер OLE DB для SQL Server поддерживает все этапы уведомлений.|  
-|DBPROP_NOTIFYCOLUMNSET DBPROP_NOTIFYROWDELETE DBPROP_NOTIFYROWFIRSTCHANGE DBPROP_NOTIFYROWINSERT DBPROP_NOTIFYROWRESYNCH DBPROP_NOTIFYROWSETRELEASE DBPROP_NOTIFYROWSETFETCH-POSITIONCHANGE DBPROP_NOTIFYROWUNDOCHANGE DBPROP_NOTIFYROWUNDODELETE DBPROP_NOTIFYROWUNDOINSERT DBPROP_NOTIFYROWUPDATE|И запись: только для чтения<br /><br /> Значение по умолчанию — DBPROPVAL_NP_OKTODO &#124; dbpropval_np_abouttodo.<br /><br /> Описание: Драйвера OLE DB для SQL Server этапы уведомлений могут быть отменены, прежде чем будет предпринята попытка выполнить показано изменение набора строк. Драйвер OLE DB для SQL Server не поддерживает отмену этапа после завершения попытки.|  
+|DBPROP_NOTIFICATIONPHASES|И запись: только для чтения<br /><br /> Default: DBPROPVAL_NP_OKTODO &#124; DBPROPVAL_NP_ABOUTTODO &#124;  DBPROPVAL_NP_SYNCHAFTER &#124; DBPROPVAL_NP_FAILEDTODO &#124;  DBPROPVAL_NP_DIDEVENT<br /><br /> Описание: Драйвер OLE DB для SQL Server поддерживает все этапы уведомлений.|  
+|DBPROP_NOTIFYCOLUMNSET DBPROP_NOTIFYROWDELETE DBPROP_NOTIFYROWFIRSTCHANGE DBPROP_NOTIFYROWINSERT DBPROP_NOTIFYROWRESYNCH DBPROP_NOTIFYROWSETRELEASE DBPROP_NOTIFYROWSETFETCH-POSITIONCHANGE DBPROP_NOTIFYROWUNDOCHANGE DBPROP_NOTIFYROWUNDODELETE DBPROP_NOTIFYROWUNDOINSERT DBPROP_NOTIFYROWUPDATE|И запись: только для чтения<br /><br /> Default: DBPROPVAL_NP_OKTODO &#124;  DBPROPVAL_NP_ABOUTTODO<br /><br /> Описание: Драйвера OLE DB для SQL Server этапы уведомлений могут быть отменены, прежде чем будет предпринята попытка выполнить показано изменение набора строк. Драйвер OLE DB для SQL Server не поддерживает отмену этапа после завершения попытки.|  
 |DBPROP_ORDEREDBOOKMARKS|Это свойство набора строк не реализуется драйвером OLE DB для SQL Server. При попытке считать или записать значение свойства возникает ошибка.|  
 |DBPROP_OTHERINSERT DBPROP_OTHERUPDATEDELETE DBPROP_OWNINSERT DBPROP_OWNUPDATEDELETE|И запись: чтение и запись<br /><br /> По умолчанию: VARIANT_FALSE<br /><br /> Описание: Задание свойств видимости изменений вызывает драйвер OLE DB для SQL Server для использования [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] курсоры для поддержки набора строк. Дополнительные сведения см. в статье [Наборы строк и курсоры SQL Server](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md).|  
 |DBPROP_QUICKRESTART|И запись: чтение и запись<br /><br /> По умолчанию: VARIANT_FALSE<br /><br /> Описание: Если задано значение VARIANT_TRUE, драйвер OLE DB для SQL Server пытается использовать серверный курсор для набора строк.|  
@@ -94,7 +94,7 @@ ms.locfileid: "47754832"
   
 |Идентификатор свойства|Описание|  
 |-----------------|-----------------|  
-|SSPROP_COLUMN_ID|Столбец: ColumnID<br /><br /> И запись: только для чтения<br /><br /> Тип: VT_U12 &#124; VT_ARRAY<br /><br /> По умолчанию: VT_EMPTY<br /><br /> Описание: целочисленный массив значений, представляющих порядковые номера (начиная с 1) результирующего столбца предложения COMPUTE в текущей инструкции [!INCLUDE[tsql](../../../includes/tsql-md.md)] SELECT. Это драйвер OLE DB для SQL Server эквивалент атрибута ODBC SQL_CA_SS_COLUMN_ID.|  
+|SSPROP_COLUMN_ID|Столбец: ColumnID<br /><br /> И запись: только для чтения<br /><br /> Type: VT_U12 &#124; VT_ARRAY<br /><br /> По умолчанию: VT_EMPTY<br /><br /> Описание: целочисленный массив значений, представляющих порядковые номера (начиная с 1) результирующего столбца предложения COMPUTE в текущей инструкции [!INCLUDE[tsql](../../../includes/tsql-md.md)] SELECT. Это драйвер OLE DB для SQL Server эквивалент атрибута ODBC SQL_CA_SS_COLUMN_ID.|  
 |SSPROP_DEFERPREPARE|Столбец: нет<br /><br /> И запись: чтение и запись<br /><br /> Тип: VT_BOOL<br /><br /> По умолчанию: значение VARIANT_TRUE<br /><br /> Описание. VARIANT_TRUE: при выполнении с подготовкой подготовка команды откладывается до вызова метода **ICommand::Execute** или выполнения операции метасвойства. Если свойство имеет значение<br /><br /> VARIANT_FALSE: подготовка инструкции производится при вызове метода **ICommandPrepare::Prepare**.|  
 |SSPROP_IRowsetFastLoad|Столбец: нет<br /><br /> И запись: чтение и запись<br /><br /> Тип: VT_BOOL<br /><br /> По умолчанию: VARIANT_FALSE<br /><br /> Описание: чтобы открыть набор строк быстрой загрузки с помощью метода **IOpenRowset::OpenRowset**, присвойте этому свойству значение VARIANT_TRUE. Это свойство не может быть установлено в методе **ICommandProperties::SetProperties**.|  
 |SSPROP_ISSAsynchStatus|Столбец: "Нет".<br /><br /> И запись: чтение и запись<br /><br /> Тип: VT_BOOL<br /><br /> По умолчанию: VARIANT_FALSE<br /><br /> Описание: чтобы задействовать асинхронные операции через интерфейс [ISSAsynchStatus](../../oledb/ole-db-interfaces/issasynchstatus-ole-db.md), присвойте этому свойству значение VARIANT_TRUE.|  

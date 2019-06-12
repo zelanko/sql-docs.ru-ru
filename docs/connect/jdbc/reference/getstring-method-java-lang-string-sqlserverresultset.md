@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 8a98c8a8-61d0-40c9-9335-25a87b732dc3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1a153811c723875da51e747a4d9cff24a57ace75
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 13dd4f2bd18ef3bde6b920be0e5e562dc9aef956
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642892"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66773813"
 ---
 # <a name="getstring-method-javalangstring-sqlserverresultset"></a>Метод getString (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +47,7 @@ public java.lang.String getString(java.lang.String columnName)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getString указывается с помощью метода getString в интерфейсе java.sql.ResultSet.  
+ Этот метод getLong определен с помощью метода getLong в интерфейсе java.sql.ResultSet.  
   
  Все столбцы в SQL Server можно возвращать как тип String. Это значит, что можно возвращать представление **String** всех числовых и символьных типов, а также шестнадцатеричное представление двоичных столбцов, таких как binary, varbinary, varbinary(max), image, timestamp и uniqueidentifier.  
   
