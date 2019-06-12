@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 747b0308-1ce6-4eba-bdfc-af29c21c18cf
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: adb666267abc9596fa568706d603d6b14a608026
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: a9fbb5f5c74a549a84e54980d585b7b5c30f61a5
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52536356"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798933"
 ---
 # <a name="updateasciistream-method-javalangstring-javaioinputstream"></a>Метод updateAsciiStream (java.lang.String, java.io.InputStream)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

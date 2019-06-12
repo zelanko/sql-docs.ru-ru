@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 4dc784ed-4699-4197-9af5-6e03da80d14c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8e129702dea18ee9866aba2595ea357a739388b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: fcd33cbb39286c03b5b809b847a8d8a2b8b609f5
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754752"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799956"
 ---
 # <a name="getattributes-method-sqlserverdatabasemetadata"></a>Метод getAttributes (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

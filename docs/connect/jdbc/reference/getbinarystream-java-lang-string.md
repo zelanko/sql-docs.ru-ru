@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 17f1ea5d-47f8-4a66-a0fc-d6554b8e3866
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 28b16fcc931b20e61b35ce6d3923b0f04644064a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 8a34e90ff9765bc72e17ee091e0ff6b9901dd495
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692352"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799814"
 ---
 # <a name="getbinarystream-javalangstring"></a>getBinaryStream (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +47,7 @@ public final java.io.InputStream getBinaryStream(java.lang.String paramName)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="see-also"></a>См. также:  
- [Метод getBinaryStream (SQLServerCallableStatement)](../../../connect/jdbc/reference/getbinarystream-method-sqlservercallablestatement.md)   
+ [Метод getBinaryStream (SQLServerResultSet)](../../../connect/jdbc/reference/getbinarystream-method-sqlservercallablestatement.md)   
  [Элементы SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [Класс SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

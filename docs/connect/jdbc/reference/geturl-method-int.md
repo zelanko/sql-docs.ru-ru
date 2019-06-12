@@ -15,18 +15,18 @@ apitype: Assembly
 ms.assetid: 75d03ced-3614-4997-9abd-24642b1d1aae
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e6e9fa2476ac61f5f5de026aa9d629518e9041e6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: d1ad967d9f3923b886e3713829830be39412620e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837772"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66769675"
 ---
 # <a name="geturl-method-int"></a>Метод getURL (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Извлекает значение назначенного параметра в виде URL-объекта на языке программирования Java по заданному индексу параметра.  
+  Извлекает значение назначенного параметра в виде объекта URL на языке программирования Java по заданному индексу параметра.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -47,7 +47,7 @@ public java.net.URL getURL(int n)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getURL указывается методом getURL в интерфейсе java.sql.CallableStatement.  
+ Этот метод getURL определен с помощью метода getURL в интерфейсе java.sql.CallableStatement.  
   
 ## <a name="see-also"></a>См. также:  
  [Метод getURL (SQLServerCallableStatement)](../../../connect/jdbc/reference/geturl-method-sqlservercallablestatement.md)   

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: c02f6942-0484-4567-a78e-fe8aa2053536
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c030a6a3d2ba5caad755abfd92a5cf1adb01cc25
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 5a582a95223fd47863a6e42b8426ccfb13fcda59
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748512"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796075"
 ---
 # <a name="sqlsrvfieldmetadata"></a>sqlsrv_field_metadata
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -65,7 +65,7 @@ sqlsrv_field_metadata( resource $stmt)
 |datetimeoffset|SQL_SS_TIMESTAMPOFFSET (-155)|26/34|0/7||  
 |Decimal|SQL_DECIMAL (3)|1/38|0/значение точности||  
 |FLOAT|SQL_FLOAT (6)|4/8|||  
-|image|SQL_LONGVARBINARY (-4)|||2 GB|  
+|image|SQL_LONGVARBINARY (-4)|||2 ГБ|  
 |ssNoversion|SQL_INTEGER (4)||||  
 |money|SQL_DECIMAL (3)|19/19|4/4||  
 |NCHAR|SQL_WCHAR (-8)|||0 < *n* < 4000 <sup>1</sup>|  
@@ -74,12 +74,12 @@ sqlsrv_field_metadata( resource $stmt)
 |NVARCHAR|SQL_WVARCHAR (-9)|||0 < *n* < 4000 <sup>1</sup>|  
 |REAL|SQL_REAL (7)|4/4|||  
 |smalldatetime|SQL_TYPE_TIMESTAMP (93)|16/16|0/0||  
-|SMALLINT|SQL_SMALLINT (5)|||2 байта|  
+|smallint|SQL_SMALLINT (5)|||2 байта|  
 |Smallmoney|SQL_DECIMAL (3)|10/10|4/4||  
-|text|SQL_LONGVARCHAR (-1)|||2 GB|  
+|text|SQL_LONGVARCHAR (-1)|||2 ГБ|  
 |time|SQL_SS_TIME2 (-154)|8/16|0/7||  
 |TIMESTAMP|SQL_BINARY (-2)|||8 байт|  
-|tinyint|SQL_TINYINT (-6)|||1 байт|  
+|TINYINT|SQL_TINYINT (-6)|||1 байт|  
 |определяемый пользователем тип|SQL_SS_UDT (-151)|||переменная|  
 |UNIQUEIDENTIFIER|SQL_GUID (-11)|||16|  
 |varbinary|SQL_VARBINARY (-3)|||0 < *n* < 8000 <sup>1</sup>|  

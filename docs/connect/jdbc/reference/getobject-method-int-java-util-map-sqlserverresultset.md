@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: df85a514-ab43-4bf6-98dd-f7f37fad1850
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5cbed2006e259b25d484e98b77b68b33f383de2d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: f1c909b174a0f5750bf55c8a80193865746bd737
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726912"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66787736"
 ---
 # <a name="getobject-method-int-javautilmap-sqlserverresultset"></a>Метод getObject (int, java.util.Map) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -55,7 +55,7 @@ public java.lang.Object getObject(int i,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getObject указывается с помощью метода getObject в интерфейсе java.sql.ResultSet.  
+ Этот метод getObject определен с помощью метода getObject в интерфейсе java.sql.CallableStatement.  
   
  Этот метод вернет значение данного столбца в виде объекта Java. Объект Java будет иметь заданный по умолчанию тип, соответствующий типу SQL Server столбца и сопоставленный встроенным типам, указанным в спецификации JDBC. Если значение SQL NULL, то драйвер вернет значение Java NULL.  
   

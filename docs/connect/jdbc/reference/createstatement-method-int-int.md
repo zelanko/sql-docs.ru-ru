@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 90dbf639-c3d8-4519-9300-5447c79aec17
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 58390bfd2310b1cae9ce7427106c88a8e38915df
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: df361da2387a053b9550c4b4e25dc94cced6579b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645372"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800638"
 ---
 # <a name="createstatement-method-int-int"></a>Метод createStatement (int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

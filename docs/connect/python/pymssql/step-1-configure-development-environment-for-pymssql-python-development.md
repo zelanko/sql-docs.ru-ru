@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 6d392a5e-b08e-4b35-9e99-61260888fc41
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 623b4bf9a88031cf891e88f75c30b06716bb27ff
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 9d74e3ce2f7db91aca295dcb7507431a82e49c8c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605024"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803867"
 ---
 # <a name="step-1-configure-development-environment-for-pymssql-python-development"></a>Шаг 1. Настройка среды разработки для разработки на Python в pymssql
 Необходимо будет настроить среду разработки с предварительными требованиями, чтобы разрабатывать приложения, используя драйвер Python для SQL Server.    
@@ -43,7 +43,7 @@ A. Перейдите к [python.org](https://www.python.org/downloads/)
 > pip install pymssql‑2.1.1‑cp27‑none‑win_amd64.whl  
 ```  
   
-## <a name="ubuntu-linux"></a>Ubuntu Linux  
+## <a name="ubuntu-linux"></a>Ubuntu Linux 18.04  
   
 1. **Установите среду выполнения Python и диспетчер пакетов pip** Python поставляется предварительно установленным в большинстве дистрибутивов Ubuntu.  Если компьютер не установили python, вы можете получить скачайте tar с источником из [python.org](https://www.python.org/downloads/) и хотите создать локально, или можно использовать диспетчер пакетов:  
 ```  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: d255208f-d486-4ad3-8080-61c6e0261825
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 767e3e17b67a36bca93bd8a85704d50338fdfd58
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 94c7f34ebf66f4bf33acf51e44397a74de2367e0
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610762"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801719"
 ---
 # <a name="using-transparent-network-ip-resolution"></a>Использование разрешения IP-адресов прозрачной сети
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -27,7 +27,7 @@ TransparentNetworkIPResolution является редакцией MultiSubnetFa
 * 1: все IP-адреса попытки подключения выполняются в параллельном режиме
 * 2: все IP-адреса попытки подключения выполняются один за другим
 
-|transparentNetworkIPResolution|MultiSubnetFailover|Поведение|
+|TransparentNetworkIPResolution|MultiSubnetFailover|Поведение|
 |:-:|:-:|:-:|
 |(по умолчанию).|(по умолчанию).|0|
 |(по умолчанию).|Активировано|1|
@@ -47,9 +47,9 @@ TransparentNetworkIPResolution является редакцией MultiSubnetFa
 
 `SQL_COPT_SS_TNIR` Атрибута предварительного соединения позволяет приложению для управления, этот параметр, программным способом:
 
-Атрибут подключения|   Размера и типа|  По умолчанию| Значение| Описание
+Атрибут подключения|   Размер и тип|  По умолчанию| Значение| Описание
 -|-|-|-|-
-`SQL_COPT_SS_TNIR` (1249)| `SQL_IS_INTEGER` или `SQL_IS_UINTEGER`| `SQL_IS_ON`(1), `SQL_IS_OFF`(0)|`SQL_IS_ON`|Включает или отключает TNIR.
+`SQL_COPT_SS_TNIR` (1249)| `SQL_IS_INTEGER` либо `SQL_IS_UINTEGER`| `SQL_IS_ON`(1), `SQL_IS_OFF`(0)|`SQL_IS_ON`|Включает или отключает TNIR.
 
 <a name="for-more-information-about-multisubnetfailover-see-odbc-driver-on-linux-and-macos---high-availability-and-disaster-recoveryconnectodbclinux-macodbc-driver-on-linux-support-for-high-availability-disaster-recoverymd"></a>Дополнительные сведения о MultiSubnetFailover, см. в разделе [драйвер ODBC для Linux и macOS — высокий уровень доступности и аварийного восстановления](../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)
 --------------------------------------------------

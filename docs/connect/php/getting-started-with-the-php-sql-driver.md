@@ -1,5 +1,5 @@
 ---
-title: Приступая к работе с драйверами Майкрософт для PHP для SQL Server | Документация Майкрософт
+title: Getting Started with the Microsoft Drivers for PHP for SQL Server (Начало работы с драйверами Майкрософт для PHP для SQL Server)
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 66b042c6-479f-4a89-92c8-8c5dce67643f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1ebbae6e07f6d302122d46321538a3af35947fe0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 0c09cd551932eb9297112a7436111cdab18232f9
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629092"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796169"
 ---
-# <a name="getting-started-with-the-microsoft-drivers-for-php-for-sql-server"></a>Приступая к работе с драйверами Майкрософт для PHP для SQL Server
+# <a name="getting-started-with-the-microsoft-drivers-for-php-for-sql-server"></a>Getting Started with the Microsoft Drivers for PHP for SQL Server (Начало работы с драйверами Майкрософт для PHP для SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Этот раздел содержит сведения о требованиях к системе для использования [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], а также для загрузки драйвера в пространство процесса PHP.  

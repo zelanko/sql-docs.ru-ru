@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: a8c1a570-9204-454f-b94c-ba34f54d487c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 501eb13a137b82adad1190f990d29760c43119b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 50c0d6bf2b9c413e6085451383f2ae4a6791442a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622362"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797063"
 ---
 # <a name="security-considerations-for-the-microsoft-drivers-for-php-for-sql-server"></a>Вопросы безопасности для драйверов Майкрософт для PHP для SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47622362"
   
 Сведения о том, как подключиться к серверу с использованием проверки подлинности Windows, см. в статье [Практическое руководство. Подключение с использованием проверки подлинности Windows](../../connect/php/how-to-connect-using-windows-authentication.md).  
   
-При подключении с использованием проверки подлинности Windows рекомендуется настроить среду таким образом, чтобы SQL Server мог использовать протокол проверки подлинности Kerberos. Дополнительные сведения см. в статье [Подтверждение использования проверки подлинности Kerberos при создании удаленного подключения к экземпляру SQL Server 2005](https://support.microsoft.com/en-ca/help/909801/how-to-make-sure-that-you-are-using-kerberos-authentication-when-you-c) или [SQL Server и проверка подлинности по протоколу Kerberos](https://msdn.microsoft.com/library/cc280744.aspx).  
+При подключении с использованием проверки подлинности Windows рекомендуется настроить среду таким образом, чтобы SQL Server мог использовать протокол проверки подлинности Kerberos. Дополнительные сведения см. в статье [Подтверждение использования проверки подлинности Kerberos при создании удаленного подключения к экземпляру SQL Server 2005](https://support.microsoft.com/en-ca/help/909801/how-to-make-sure-that-you-are-using-kerberos-authentication-when-you-c) или [SQL Server и проверка подлинности по протоколу Kerberos](https://msdn.microsoft.com/library/cc280744.aspx).  
   
 ## <a name="use-encrypted-connections-when-transferring-sensitive-data"></a>Использование зашифрованных соединений при передаче конфиденциальных данных  
 Зашифрованные соединения следует использовать всякий раз, когда конфиденциальные данные отправляются в SQL Server или извлекаются оттуда. Дополнительные сведения о том, как включить зашифрованные соединения, см. в статье [Практическое руководство. Включение шифрования соединений в ядре СУБД (диспетчер конфигурации SQL Server)](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md). Чтобы установить безопасное соединение с [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], используйте атрибут соединения Encrypt при подключении к серверу. Дополнительные сведения об атрибутах соединения см. в статье [Connection Options](../../connect/php/connection-options.md).  

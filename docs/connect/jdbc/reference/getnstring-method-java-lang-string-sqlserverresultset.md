@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 546d77e2-723a-42ac-ba3f-fabf2395d376
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2fc3df07bcdb342b5796b6472d7e8b96ba1674b9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 9681ddf0946627306a64c099d2df1c242d95bcbe
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826992"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66762809"
 ---
 # <a name="getnstring-method-javalangstring-sqlserverresultset"></a>Метод getNString (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,9 +42,9 @@ public java.lang.String getNString(java.lang.String columnLabel)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getNString указывается с помощью метода getNString в интерфейсе java.sql.SQLServerResultSet.  
+ Этот метод getString определен с помощью метода getString в интерфейсе java.sql.CallableStatement.  
   
- Этот метод можно использовать для извлечения значения **nvarchar**, **nchar**, **nvarchar(max)**, **ntext**, или **xml** столбца в текущей строке этого [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекта. При попытке использования этого метода для получения значений других типов данных возникнет исключение.  
+ Этот метод можно использовать для извлечения значения **nvarchar**, **nchar**, **nvarchar(max)** , **ntext**, или **xml** столбца в текущей строке этого [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекта. При попытке использования этого метода для получения значений других типов данных возникнет исключение.  
   
 ## <a name="see-also"></a>См. также:  
  [Метод getNString (SQLServerResultSet)](../../../connect/jdbc/reference/getnstring-method-sqlserverresultset.md)   

@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 4610cbaf-5638-4a66-bd83-70aefca40e58
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: eefc1d5c3f71618fc448b27c5c91cdb82b12e7b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 24bb9e5831e3eb79bc5d9fa451ca4e73fcd56fef
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778386"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800067"
 ---
 # <a name="getarray-method-javalangstring"></a>Метод getArray (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +41,7 @@ public java.sql.Array getArray(java.lang.String sCol)
  Значение типа **String**, содержащее имя параметра.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Объект массива.  
+ Объекты массива.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

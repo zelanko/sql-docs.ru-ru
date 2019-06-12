@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ab8fa00f-cb16-47e2-94b8-3a76f56c2b84
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 546dc71fad06fc69d816d16c1d6c2d67f59f968b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 8dcffcb15493c5f7587999a41fc2bdf545b377cd
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773212"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801946"
 ---
 # <a name="understanding-data-type-differences"></a>Общие сведения о различиях типов данных
 
@@ -42,7 +42,7 @@ ms.locfileid: "47773212"
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Фиксированная длина    | [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Двоичных** введите прямо сопоставляется с JDBC **ДВОИЧНЫХ** типа. Это тип фиксированной длины с заполнением, предоставляемым сервером в случае, если для столбца установлено значение SET ANSI_PADDING ON. Если на сервере заполнение для столбцов символьных типов не предусмотрено, то заполнение добавляет драйвер JDBC.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Timestamp** измеряется JDBC **ДВОИЧНЫХ** тип с постоянной длиной 8 байт. |
 | Переменная длина | [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Varbinary** тип сопоставляется JDBC **VARBINARY** типа.<br /><br /> **Определяемого пользователем типа** введите [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сопоставляется с JDBC как **VARBINARY** типа.                                                                                                                                                                                                                                 |
-| Long            | [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Изображение** тип сопоставляется JDBC **LONGVARBINARY** типа. Этот тип является устаревшим начиная с версии [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], и вместо него следует использовать тип больших значений **varbinary(max)**.                                                                                                                                                                                           |
+| Long            | [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Изображение** тип сопоставляется JDBC **LONGVARBINARY** типа. Этот тип является устаревшим начиная с версии [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], и вместо него следует использовать тип больших значений **varbinary(max)** .                                                                                                                                                                                           |
   
 ## <a name="exact-numeric-types"></a>Точные числовые типы
 

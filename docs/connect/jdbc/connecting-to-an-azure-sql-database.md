@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e120762a84929ed58d163efb26faa6f28eb50dc3
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+manager: jroth
+ms.openlocfilehash: 2eef48c472ee9b23d941be88ae76cb0349067739
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58306132"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66789328"
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>Подключение к базе данных SQL Azure
 
@@ -47,9 +47,9 @@ ms.locfileid: "58306132"
   
 |Параметр реестра|Рекомендуемое значение|  
 |----------------------|-----------------------|  
-|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ Parameters \ KeepAliveTime|30 000|  
-|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ Parameters \ KeepAliveInterval|1000|  
-|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ Parameters \ TcpMaxDataRetransmissions|10|  
+|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ служб \ Tcpip \ параметры \ KeepAliveTime|30 000|  
+|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ служб \ Tcpip \ параметры \ KeepAliveInterval|1000|  
+|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ служб \ Tcpip \ параметры \ TcpMaxDataRetransmissions|10|  
   
 Перезагрузите компьютер, чтобы новые параметры вступили в силу.  
 
@@ -81,7 +81,7 @@ shutdown /r /t 1
 
 ## <a name="using-encryption-requires-setting-hostnameincertificate"></a>Для использования шифрования необходимо задать hostNameInCertificate
 
-До версии 7.2 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], при подключении к [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], следует указать **hostNameInCertificate** при указании **encrypt=true** (если имя сервера в соединении Строка является *shortName*. *domainName*, задайте **hostNameInCertificate** свойства \*. *domainName*.). Это свойство является необязательным, начиная с версии 7.2 драйвера.
+До версии 7.2 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], при подключении к [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], следует указать **hostNameInCertificate** при указании **шифрования = true** (если имя сервера в соединении Строка является *shortName*. *domainName*, задайте **hostNameInCertificate** свойства \*. *domainName*.). Это свойство является необязательным, начиная с версии 7.2 драйвера.
 
 Пример:
 

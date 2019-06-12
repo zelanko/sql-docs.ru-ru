@@ -1,5 +1,5 @@
 ---
-title: Хранимые процедуры | Документация Майкрософт
+title: Отладка хранимых процедур | Документация Майкрософт
 description: Хранимые процедуры
 ms.custom: ''
 ms.date: 06/12/2018
@@ -15,13 +15,13 @@ helpviewer_keywords:
 - stored procedures [OLE DB], about OLE DB stored procedures
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 7d9a26049a09f45ff7588324d8c0421c4287db2b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 64654f5ba2f4356a4bb6efad5455ca4610689f3b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767202"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795889"
 ---
 # <a name="stored-procedures"></a>Хранимые процедуры
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

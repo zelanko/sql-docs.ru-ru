@@ -17,13 +17,13 @@ helpviewer_keywords:
 - MARS [SQL Server]
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: d8f59034d6826bd1af3f1c48c81674dfc039b85e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: 37a2a695e93d8783e6fd0c88319fed9eda55d8cd
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545480"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802872"
 ---
 # <a name="using-multiple-active-result-sets-mars"></a>Использование режима MARS
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "52545480"
   
  Пример использования режима MARS в ADO, см. в разделе [использование объектов ADO с драйвер OLE DB для SQL Server](../../oledb/applications/using-ado-with-oledb-driver-for-sql-server.md).  
   
-## <a name="in-memory-oltp"></a>In-Memory OLTP  
+## <a name="in-memory-oltp"></a>Выполняющаяся в памяти OLTP  
  OLTP в памяти поддерживает режим MARS, с помощью запросов и скомпилированной хранимой процедуры. Режим MARS дает возможность запрашивает данные из нескольких запросов без необходимости полностью получения каждого результирующего набора перед отправкой запроса для получения строк из нового результирующего набора. Чтобы прочитать из нескольких открытых результирующих наборов, необходимо использовать соединение включенным режимом MARS.  
   
  Режим MARS отключен по умолчанию, поэтому необходимо явно включить его, добавив `MultipleActiveResultSets=True` на строку подключения. Следующий пример демонстрирует, как соединиться с экземпляром SQL Server и указать, что включен режим MARS:  

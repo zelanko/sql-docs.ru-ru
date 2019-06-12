@@ -1,8 +1,8 @@
 ---
 title: Тип подключения к SQL Azure (службы SSRS) | Документы Майкрософт
 description: Модуль обработки данных подключения SQL Azure поддерживает многозначные параметры, серверные статистические вычисления и учетные данные, управляемые отдельно с помощью строки подключения.
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
@@ -10,12 +10,12 @@ ms.technology: report-data
 ms.topic: conceptual
 ms.date: 02/15/2019
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8c096ce1edd6069cfa27185ee3146444a6a9872b
-ms.sourcegitcommit: 019b6f355a69aa409e6601de8977a8c307f793cb
-ms.translationtype: HT
+ms.openlocfilehash: 02c3f95e00243a78fe2db70c587625e5a14d570d
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56331524"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66500180"
 ---
 # <a name="sql-azure-connection-type-ssrs"></a>Тип соединения с SQL Azure (SSRS)
 
@@ -44,7 +44,7 @@ Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True;
   
 Кроме того, в этом диалоговом окне **Свойства источника данных** предоставляются учетные данные, например имя пользователя и пароль. Параметры `User Id` и `Password` добавляются к строке подключения автоматически, их не нужно вводить в нее вручную.  
   
-Дополнительные сведения см. в разделе [Подключения к данным, источники данных и строки подключения в построителе отчетов](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  
+Дополнительные сведения см. в разделе [Подключения к данным, источники данных и строки подключения в построителе отчетов](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
 ## <a name="Credentials"></a> Учетные данные
 
@@ -58,7 +58,7 @@ Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True;
   
 - Учетные данные не требуются. Чтобы использовать этот параметр, необходима учетная запись автоматического выполнения, настроенная на сервере отчетов. Дополнительные сведения см. в разделе [Настройка учетной записи автоматического выполнения (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) в [документации по службам Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) на сайте msdn.microsoft.com.  
   
-Дополнительные сведения см. в разделах [Подключения к данным, источники данных и строки подключения (построитель отчетов и службы SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) и [Указание учетных данных в построителе отчетов](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
+Дополнительные сведения см. в разделе [подключения к данным, источники данных и строки подключения &#40;построитель отчетов и службы SSRS&#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) или [задание учетных данных и сведений о соединении для источников данных отчета](specify-credential-and-connection-information-for-report-data-sources.md).  
   
 ## <a name="Query"></a> Запросы
 
@@ -99,7 +99,7 @@ FROM
 WHERE HumanResources.Employee.JobTitle = 'Marketing Assistant'   
 ```
 
-Нажмите кнопку **Выполнить** (**!**) на панели инструментов, чтобы выполнить запрос и отобразить результирующий набор.  
+Нажмите кнопку **Выполнить** ( **!** ) на панели инструментов, чтобы выполнить запрос и отобразить результирующий набор.  
   
 Для параметризации этого запроса добавьте в него параметр. Например, измените предложение WHERE следующим образом:  
 
@@ -185,7 +185,7 @@ WHERE EmployeeID = (@EmpID)
 [Наборы данных отчетов (службы SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)  
 Предоставляет общие сведения о доступе к данным отчета.  
   
-[Подключения к данным, источники данных и строки подключения в построителе отчетов](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
+[Подключения к данным, источники данных и строки подключения в построителе отчетов](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
 Предоставляет сведения о подключениях к данным и источникам данных.  
   
 [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

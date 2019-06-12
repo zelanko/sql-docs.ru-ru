@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 5db4b75f-c605-4785-9560-399a533c0fc9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d53a3233d2e2af6aa9806cdea06b2a203e31bf89
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+manager: jroth
+ms.openlocfilehash: 0cea4c62c7976e1f6d84dc046abc1046179ef125
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658418"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803905"
 ---
 # <a name="system-requirements-for-the-microsoft-drivers-for-php-for-sql-server"></a>Системные требования драйверов Майкрософт для PHP для SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "58658418"
 
 При загрузке Windows версию драйвера на 64-разрядной версии Windows ODBC 64-разрядный установщик устанавливает 32-разрядных и 64-разрядные драйверы ODBC. Если вы используете в 32-разрядной версии Windows, использующие ODBC x86 установщика. На платформах, отличных от Windows доступны только в 64-разрядные версии драйвера.
 
-|PHP для SQL Server версии драйвера&#8594;<br />&#8595;Версия драйвера ODBC|5.6|5.3|5.2|4.3|4.0|3.2|3.1|
+|PHP для SQL Server версии драйвера&#8594;<br />Версия драйвера JDBC|5.6|5.3|5.2|4.3|4.0|3.2|3.1|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |Драйвер ODBC 17+ |Да|Да|Да| | | | |
 |Драйвер ODBC 13.1|Да|Да|Да|Да|Да| | |
@@ -276,7 +276,7 @@ ms.locfileid: "58658418"
 |php_sqlsrv_55_ts.dll<br />php_pdo_sqlsrv_55_ts.dll|5.5|да|php5ts.dll|  
 
 ## <a name="see-also"></a>См. также:  
-[Приступая к работе с драйверами Майкрософт для PHP для SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
+[Getting Started with the Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md) (Начало работы с драйверами Майкрософт для PHP для SQL Server)
 
 [Руководство по программированию для драйвера Microsoft для PHP для SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
 

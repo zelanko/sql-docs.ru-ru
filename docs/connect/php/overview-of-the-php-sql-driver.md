@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 66559249-34c0-409d-b919-9b5bf0c4c9ec
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f2129745a8732fba882da6da1caf22e80df11f47
-ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
+manager: jroth
+ms.openlocfilehash: 45cb553dc1f83e42afee5d54951e598fc6df8d1a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58645486"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66768108"
 ---
 # <a name="overview-of-the-microsoft-drivers-for-php-for-sql-server"></a>Обзор драйверов Майкрософт для PHP для SQL Server
 
@@ -44,7 +44,7 @@ ms.locfileid: "58645486"
 
 ## <a name="see-also"></a>См. также:
 
-[Приступая к работе с драйверами Майкрософт для PHP для SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
+[Getting Started with the Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md) (Начало работы с драйверами Майкрософт для PHP для SQL Server)
 
 [Руководство по программированию для драйвера Microsoft для PHP для SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
 

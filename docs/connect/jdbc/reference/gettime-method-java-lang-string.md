@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: ca0a3b29-30d1-4d20-bc8d-d3d9ed19ff50
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bd885dd500a6608772a4e91e731e2d1db5b57ef3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 6fe0152d23bcf71e371ad778a961dedb9c6ee739
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637152"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66778806"
 ---
 # <a name="gettime-method-javalangstring"></a>Метод getTime (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

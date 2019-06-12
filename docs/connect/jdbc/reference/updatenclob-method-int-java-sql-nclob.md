@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 6e9bca18-f64e-46a4-8541-2c9c39b393b5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bd3bf43488ee033969d2d74e66960b729440eed6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 15c64b062cd0da35a8f1c870da60062620b9e30a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811242"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798411"
 ---
 # <a name="updatenclob-method-int-javasqlnclob"></a>Метод updateNClob (int, java.sql.NClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,9 +44,9 @@ public void updateNClob(int columnIndex,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод updateNClob указывается с помощью метода updateNClob в интерфейсе java.sql.ResultSet.  
+ Этот метод getNClob определен с помощью метода getNClob в интерфейсе java.sql.ResultSet.  
   
- Этот метод поддерживается только в **nvarchar(max)**, **ntext**, и **xml** столбцов. Использование этого метода при работе со столбцами других типов данных приведет к возникновению исключения.  
+ Этот метод поддерживается только в **nvarchar(max)** , **ntext**, и **xml** столбцов. Использование этого метода при работе со столбцами других типов данных приведет к возникновению исключения.  
   
 ## <a name="see-also"></a>См. также:  
  [Метод updateNClob &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatenclob-method-sqlserverresultset.md)   

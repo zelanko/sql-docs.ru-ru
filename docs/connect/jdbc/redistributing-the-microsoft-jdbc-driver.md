@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 625d64d3-6e7c-41c2-912a-38fdf6695922
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c9bd82cc6b6de3fed5acfe9fd496e457f2cef381
-ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
+manager: jroth
+ms.openlocfilehash: af922c074a303f73b157cd8fb744e5b0ca315393
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55736865"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66772450"
 ---
 # <a name="redistributing-the-microsoft-jdbc-driver"></a>Повторное распространение драйвера Microsoft JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "55736865"
   
  [Лицензия на повторное распространение драйвера Microsoft JDBC Driver 4.0 для SQL Server](https://msdn.microsoft.com/sqlserver/jj589698)  
   
- Примечание. Корпорация Майкрософт использует учетную запись Майкрософт для безопасной проверки подлинности и регистрации. При регистрации прав на повторное распространение JDBC Driver для SQL Server с использованием учетной записи Майкрософт потребуется ввести сведения, которые будут добавлены в ваш защищенный профиль.  
+ Примечание: Корпорация Майкрософт использует учетную запись Майкрософт для безопасной проверки подлинности и регистрации. При регистрации прав на повторное распространение JDBC Driver для SQL Server с использованием учетной записи Майкрософт потребуется ввести сведения, которые будут добавлены в ваш защищенный профиль.  
   
  Если у вас один уже, вы можете получить [учетной записи Майкрософт](https://signup.live.com/)  
   

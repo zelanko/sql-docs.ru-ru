@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 455ab165-8e4d-4df9-a1d7-2b532bfd55d6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 56cb2a6a28e60aa34a2bb74d9d7c506f7d3b9523
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: jroth
+ms.openlocfilehash: d920d15bb633828dd2ad614c6789f397e229f0b5
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403179"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797803"
 ---
 # <a name="driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server"></a>Организация пулов соединений с учетом драйвера в ODBC Driver для SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]

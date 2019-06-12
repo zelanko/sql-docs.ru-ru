@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 2c41e23a-da6c-4650-b5fc-b5fe53ba65c3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9341004225f619f4b15aabb1a641a8a39a2329b5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 432da51055d0a9f250c342338770103fbe8fe4b0
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764862"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800170"
 ---
 # <a name="understanding-isolation-levels"></a>Основные сведения об уровнях изоляции
 
@@ -51,7 +51,7 @@ ms.locfileid: "47764862"
 | Уровень изоляции read uncommitted | Да        | Да                 | Да     |
 | Уровень изоляции read committed   | нет         | Да                 | Да     |
 | Уровень изоляции repeatable read  | нет         | нет                  | Да     |
-| Snapshot         | нет         | нет                  | нет      |
+| Моментальный снимок         | нет         | нет                  | нет      |
 | Упорядочиваемый уровень изоляции     | нет         | нет                  | нет      |
   
 Транзакции могут быть запущены, начиная с уровня изоляции операции чтения с возможностью повторения, что позволит предотвратить потери обновления, которые могут произойти при извлечении одной строки двумя транзакциями, и дальнейшего обновления строки с использованием исходных извлеченных значений. Если две транзакции обновляют строки с использованием одной инструкции UPDATE и не используют при обновлении полученные ранее значения, то на уровне изоляции read committed, который задан по умолчанию, возможны потери обновлений.  

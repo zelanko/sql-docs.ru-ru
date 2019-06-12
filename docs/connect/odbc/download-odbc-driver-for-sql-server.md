@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 53b09784-bb9d-4fd4-99d3-0492b3308ac4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1fa6c6e18620c0e80576e864eca246c524eb0c5d
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 8aea7a5a74ae85563234c1f40f5faae1213e75de
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601044"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66789946"
 ---
 # <a name="download-odbc-driver-for-sql-server"></a>Скачивание драйвера ODBC Driver for SQL Server
 
@@ -28,7 +28,7 @@ ms.locfileid: "51601044"
 
 ### <a name="linux-and-macos"></a>Linux и macOS
 
-#### <a name="debian"></a>Debian
+#### <a name="debian"></a>Debian:
 - [Debian 9 .deb пакетов](https://packages.microsoft.com/debian/9/prod/pool/main/m/msodbcsql17/)
 - [Debian 8 .deb пакетов](https://packages.microsoft.com/debian/8/prod/pool/main/m/msodbcsql17/)
 
@@ -60,7 +60,7 @@ ms.locfileid: "51601044"
 
 ### <a name="linux-and-macos"></a>Linux и macOS
 
-#### <a name="debian"></a>Debian
+#### <a name="debian"></a>Debian:
 - [Debian 8 .deb пакетов](https://packages.microsoft.com/debian/8/prod/pool/main/m/msodbcsql/)
 
 #### <a name="redhat"></a>RedHat
@@ -102,6 +102,6 @@ ms.locfileid: "51601044"
 
 ### <a name="linux"></a>Linux
 
-- **Red Hat Enterprise Linux 5 и 6 (64-разрядные версии)** - [Скачать Microsoft ODBC Driver 11 for SQL Server — Red Hat Linux](https://go.microsoft.com/fwlink/?LinkId=267321)
+- **Red Hat Enterprise Linux 5 и 6 (64-разрядные версии)**  - [Скачать Microsoft ODBC Driver 11 for SQL Server — Red Hat Linux](https://go.microsoft.com/fwlink/?LinkId=267321)
 
-- **SUSE Linux Enterprise 11 с пакетом обновления 2 (64-разрядная версия)** - [Скачать Microsoft ODBC Driver 11 Preview for SQL Server — SUSE Linux](https://go.microsoft.com/fwlink/?LinkId=264916)
+- **SUSE Linux Enterprise 11 с пакетом обновления 2 (64-разрядная версия)**  - [Скачать Microsoft ODBC Driver 11 Preview for SQL Server — SUSE Linux](https://go.microsoft.com/fwlink/?LinkId=264916)

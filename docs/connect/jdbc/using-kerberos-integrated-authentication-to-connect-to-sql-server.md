@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 687802dc-042a-4363-89aa-741685d165b3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d67a368c1c33d9f3c85e36d15ad2b77fe7837c88
-ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
+manager: jroth
+ms.openlocfilehash: 89c87ecb551e3e75397bc431bdefc47fad18f8d2
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55736995"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798603"
 ---
 # <a name="using-kerberos-integrated-authentication-to-connect-to-sql-server"></a>Использование встроенной проверки подлинности Kerberos для подключения к SQL Server
 
@@ -68,7 +68,7 @@ ms.locfileid: "55736995"
 
 Вы можете указать имя субъекта-службы с помощью свойства соединения **serverSpn** или просто разрешить драйверу сформировать его (по умолчанию). Это свойство имеет вид "MSSQLSvc/fqdn:port\@REALM", где fqdn — это полное доменное имя, port — номер порта, а REALM — это область Kerberos SQL Server в верхнем регистре. Область из этого свойства является необязательной, если область конфигурации Kerberos по умолчанию совпадает с областью сервера и по умолчанию не включена. Если вы хотите поддерживать сценарии проверки подлинности между областями, в которых область по умолчанию в конфигурации Kerberos отличается от области сервера, необходимо задать имя субъекта-службы с помощью свойства serverSpn.
 
-Например, имя субъекта-службы может выглядеть так: «MSSQLSvc/some-server.zzz.corp.contoso.com:1433\@ZZZZ. CORP. CONTOSO.COM»
+Например, может выглядеть ваши имя участника-службы: «MSSQLSvc/some-server.zzz.corp.contoso.com:1433\@ZZZZ. CORP. CONTOSO.COM»
 
 Дополнительные сведения об именах субъектов-служб (SPN) см. в разделах:
 
@@ -195,7 +195,7 @@ jdbc:sqlserver://servername=server_name;integratedSecurity=true;authenticationSc
 
 ## <a name="using-kerberos-authentication-from-unix-machines-on-the-same-domain"></a>Использование проверки подлинности Kerberos с компьютеров Unix на том же домене
 
-В этом руководстве предполагается, что рабочая Установка Kerberos уже существует. Выполните следующий код на компьютере Windows с работа проверки подлинности Kerberos для проверки, если упомянутой выше имеет значение true. Код выведет «схема проверки подлинности: KERBEROS» в консоль при успешном выполнении. За пределами, представленные требуются дополнительные флаги времени выполнения, зависимости ни параметры драйвера. Одинаковые блоки кода можно запускать на платформе Linux для проверки успешного подключения.
+В этом руководстве предполагается, что рабочая Установка Kerberos уже существует. Выполните следующий код на компьютере Windows с работа проверки подлинности Kerberos для проверки, если упомянутой выше имеет значение true. Код выведет «KERBEROS: схема проверки подлинности» в консоль при успешном выполнении. За пределами, представленные требуются дополнительные флаги времени выполнения, зависимости ни параметры драйвера. Одинаковые блоки кода можно запускать на платформе Linux для проверки успешного подключения.
 
 ```java
 SQLServerDataSource ds = new SQLServerDataSource();

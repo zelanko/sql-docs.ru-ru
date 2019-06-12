@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 0aa5d372-16aa-4790-a8f6-f8b742798f8f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 69559cff156c66d7ebbb0bf3675c3c3a455b2e0b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 9a99453f869167a3804643baac750cf91dd82266
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811632"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796785"
 ---
 # <a name="getcatalogterm-method-sqlserverdatabasemetadata"></a>Метод getCatalogTerm (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +42,7 @@ public java.lang.String getCatalogTerm()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getCatalogTerm указывается с помощью метода getCatalogTerm в интерфейсе java.sql.DatabaseMetaData.  
+ Этот метод getCatalogs определяется методом getCatalogs в интерфейсе java.sql.DatabaseMetaData.  
   
  При использовании [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] с базой данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] этот метод всегда будет возвращать термин "database".  
   

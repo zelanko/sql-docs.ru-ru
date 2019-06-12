@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: ab6b95d6-b6e6-4bd7-a18c-50f2918f7532
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 289647915666437cbb0aed8bff7dd2bba2ba89a9
-ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
+manager: jroth
+ms.openlocfilehash: 73b30ff0ed4f4173f13fff518b6578e3d041f3b1
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57227146"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66780725"
 ---
 # <a name="how-to-send-data-as-a-stream"></a>Практическое руководство. Отправка данных в виде потока
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "57227146"
 Третий пример показывает, как отправить потоковые данные на сервер с помощью драйвера PDO_SQLSRV.  
   
 ## <a name="example-sending-stream-data-at-execution"></a>Пример: Отправка данных Stream во время выполнения
-Следующий пример вставляет строку в таблицу *Production.ProductReview* базы данных AdventureWorks. Комментарии клиента (*$comments*) открываются в виде потока с помощью функции PHP [fopen](https://php.net/manual/en/function.fopen.php), а затем передаются в потоковом режиме на сервер при выполнении запроса.  
+Следующий пример вставляет строку в таблицу *Production.ProductReview* базы данных AdventureWorks. Комментарии клиента ( *$comments*) открываются в виде потока с помощью функции PHP [fopen](https://php.net/manual/en/function.fopen.php), а затем передаются в потоковом режиме на сервер при выполнении запроса.  
   
 В примере предполагается, что SQL Server и базы данных [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) установлены на локальном компьютере. Все выходные данные выводятся в консоль.  
   

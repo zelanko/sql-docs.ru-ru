@@ -1,5 +1,5 @@
 ---
-title: Метод getCharacterStream (SQLServerResultSet) | Документация Майкрософт
+title: Метод getNCharacterStream (int) (SQLServerResultSet) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: c70e210f-0288-47cc-9268-a29c45979729
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 85d467c535ce9462bf23c62003e2c0495dc7fedc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 88f13fee66e60ee73c2742672239de375ab6e9cd
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612022"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803049"
 ---
 # <a name="getcharacterstream-method-sqlserverresultset"></a>Метод getCharacterStream (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

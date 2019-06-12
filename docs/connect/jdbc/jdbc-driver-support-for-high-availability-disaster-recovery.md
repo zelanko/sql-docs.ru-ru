@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 62de4be6-b027-427d-a7e5-352960e42877
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8e2df0607162f5f2cb90ff6b0525fdc530b7be66
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 6e760523026251463f80d7f7e3e14b7e52b36ab2
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211824"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66781534"
 ---
 # <a name="jdbc-driver-support-for-high-availability-disaster-recovery"></a>Поддержка высокой доступности и аварийного восстановления в драйвере JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "53211824"
   
 -   При установлении соединения с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], настроенным на работу с более чем 64 IP-адресами, будет возникать ошибка соединения.  
   
--   Поведение приложения, использующего свойство подключения **multiSubnetFailover**, не зависит от типа аутентификации: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Kerberos или Windows.  
+-   Режим работы приложения, использующего свойство подключения **multiSubnetFailover**, не зависит от типа проверки подлинности — [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Kerberos или Windows.  
   
 -   Значение **loginTimeout** можно увеличить с учетом времени отработки отказа и для уменьшения количества попыток приложения повторно установить подключение.  
   

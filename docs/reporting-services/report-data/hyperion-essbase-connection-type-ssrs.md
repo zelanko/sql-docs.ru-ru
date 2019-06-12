@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 108a00b6-799f-4066-b796-da59e95c09fd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bd2395d063b8e4b5f9f237d49f5011e8630124d9
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 1906db6af5e73905b26d5e62394221ce790ec47b
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65572316"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66500425"
 ---
 # <a name="hyperion-essbase-connection-type-ssrs"></a>Тип соединения Hyperion Essbase (службы SSRS)
   Чтобы включить данные из внешнего источника данных [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] в отчет, пользователь должен иметь набор данных, основанный на источнике данных отчета типа [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]. Этот встроенный тип источника данных основан на модуле обработки данных для [!INCLUDE[extEssbase](../../includes/extessbase-md.md)], позволяющего извлекать многомерные данные из внешнего источника данных [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] .  
@@ -27,7 +27,7 @@ ms.locfileid: "65572316"
 Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample  
 ```  
   
- Дополнительные сведения о примерах строки подключения см. в разделе [Подключения к данным, источники данных и строки подключения в построителе отчетов](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  
+ Дополнительные сведения о примерах строки подключения см. в разделе [Подключения к данным, источники данных и строки подключения в построителе отчетов](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
   
 ##  <a name="Credentials"></a> Учетные данные  
@@ -35,7 +35,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
  После публикации отчета может понадобиться изменить учетные данные источника данных, чтобы разрешения, необходимые для получения данных при запуске отчета на сервере отчетов, были допустимыми.  
   
- Дополнительные сведения см. в разделах [Подключения к данным, источники данных и строки подключения (построитель отчетов и службы SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) и [Указание учетных данных в построителе отчетов](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
+ Дополнительные сведения см. в разделе [подключения к данным, источники данных и строки подключения &#40;построитель отчетов и службы SSRS&#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) или [задание учетных данных и сведений о соединении для источников данных отчета](specify-credential-and-connection-information-for-report-data-sources.md).  
   
   
 ##  <a name="Query"></a> Запросы  
@@ -73,7 +73,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
   
 ### <a name="predefined-field-properties"></a>Стандартные свойства полей  
- Стандартные свойства поля поддерживаются большинством поставщиков данных и указываются в запросах многомерных выражений к набору данных для отчета. Например, свойство измерения MEMBER_UNIQUE_NAME многомерного выражения сопоставлено со стандартным свойством **UniqueName**поля набора данных для отчета. Для включения в текстовое поле уникального имени используется следующее выражение: `=Fields!`*\<имя_поля>*`.UniqueName`.  
+ Стандартные свойства поля поддерживаются большинством поставщиков данных и указываются в запросах многомерных выражений к набору данных для отчета. Например, свойство измерения MEMBER_UNIQUE_NAME многомерного выражения сопоставлено со стандартным свойством **UniqueName**поля набора данных для отчета. Для включения в текстовое поле уникального имени используется следующее выражение: `=Fields!` *\<имя_поля>* `.UniqueName`.  
   
  В следующей таблице представлен список стандартных свойств поля, которые можно использовать для источника данных [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] .  
   
@@ -90,7 +90,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
   
 ### <a name="custom-properties"></a>Пользовательские свойства  
- Пользовательские свойства полей поддерживаются поставщиками данных и могут быть указаны в базовом запросе многомерных выражений для набора данных отчета, однако не отражаются на панели наборов данных отчета в виде полей. Например, **Long Names** — это свойство элемента, определенное для уровня измерения. Для включения в текстовое поле этого значения используйте выражение `=Fields!`*\<имя_поля>*`("Long Names")`. Имена полей в выражении учитывают регистр символов.  
+ Пользовательские свойства полей поддерживаются поставщиками данных и могут быть указаны в базовом запросе многомерных выражений для набора данных отчета, однако не отражаются на панели наборов данных отчета в виде полей. Например, **Long Names** — это свойство элемента, определенное для уровня измерения. Для включения в текстовое поле этого значения используйте выражение `=Fields!` *\<имя_поля>* `("Long Names")`. Имена полей в выражении учитывают регистр символов.  
   
  Для обращения к пользовательским расширенным свойствам в выражении применяется следующий синтаксис:  
   
@@ -125,7 +125,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
  [Наборы данных отчетов (службы SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)  
  Предоставляет общие сведения о доступе к данным отчета.  
   
- [Подключения к данным, источники данных и строки подключения в построителе отчетов](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
+ [Подключения к данным, источники данных и строки подключения в построителе отчетов](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
  Предоставляет сведения о подключениях к данным и источникам данных.  
   
  [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

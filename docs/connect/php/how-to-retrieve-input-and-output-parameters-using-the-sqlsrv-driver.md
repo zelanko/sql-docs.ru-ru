@@ -1,5 +1,5 @@
 ---
-title: 'Практическое: извлечение параметров ввода-вывода, с помощью драйвера SQLSRV | Документация Майкрософт'
+title: Практическое руководство. Извлечение параметров вывода с помощью драйвера SQLSRV | Документация Майкрософт
 ms.custom: ''
 ms.date: 04/12/2018
 ms.prod: sql
@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 9a7c5f60-67f9-4968-a3a8-c256ee481da2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c865207156703d87ae827a3274e788b7b8bda270
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: c27dc3cddc8dac57edc4afdcc2f4191934e243f8
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629932"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799315"
 ---
 # <a name="how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver"></a>Практическое руководство. Извлечение параметров ввода и вывода с помощью драйвера SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 0b543c92-feb8-46a4-8477-9b5f94f1cdc7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 06c132bf4300f6ee696c18604c973191d8d86a08
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: bd66bf9996ce01435c8243a13c86c65d11072fee
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622572"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66791882"
 ---
 # <a name="getshort-method-int-sqlserverresultset"></a>Метод getShort (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +47,7 @@ public short getShort(int columnIndex)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getShort указывается с помощью метода getShort в интерфейсе java.sql.ResultSet.  
+ Этот метод getInt определен с помощью метода getInt в интерфейсе java.sql.ResultSet.  
   
  Этот метод поддерживается только для типов данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], таких как smallint, tinyint и bit, которые могут безопасно возвращать целочисленное значение. Использование этого метода при работе со столбцами других типов данных приведет к возникновению исключения.  
   

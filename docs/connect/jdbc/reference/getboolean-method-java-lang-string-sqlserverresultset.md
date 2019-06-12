@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: ba98a27b-722d-4904-ac65-0f082fde1fe6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b6da577181e6602ac988d0e2adcb1d00cbf677ea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 6d10e44472d5a40007d7ead9f464af89e5cf8734
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839832"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66777468"
 ---
 # <a name="getboolean-method-javalangstring-sqlserverresultset"></a>Метод getBoolean (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,12 +47,12 @@ public boolean getBoolean(java.lang.String columnName)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getBoolean указывается с помощью метода getBoolean в интерфейсе java.sql.ResultSet.  
+ Этот метод getBoolean определен с помощью метода getBoolean в интерфейсе java.sql.CallableStatement.  
   
  Этот метод поддерживается только для числовых и символьных типов данных. Он преобразует значения «1», 1, и "**true**" для **true**и значения «0», 0, и "**false**" для **false**. Для всех остальных значений поведение не определено.  
   
 ## <a name="see-also"></a>См. также:  
- [Метод getBoolean &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getboolean-method-sqlserverresultset.md)   
+ [Метод updateBoolean (SQLServerResultSet)](../../../connect/jdbc/reference/getboolean-method-sqlserverresultset.md)   
  [Элементы SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Класс SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

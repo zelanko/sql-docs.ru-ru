@@ -15,18 +15,18 @@ apitype: Assembly
 ms.assetid: 05bdb61f-26e8-480f-a1c1-1e46a8ed4b70
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 590fca2fcf97929755faa3633b257849b3fd7030
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 1f1f42623344ddd4659df3d6163a9e8b89d6ae7b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687430"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66763199"
 ---
 # <a name="getconnection-method-sqlserverpooledconnection"></a>Метод getConnection (SQLServerPooledConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Создает маркер объекта для физического подключения, представляемого этим объектом [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md).  
+  Создает дескриптор объекта для физического соединения, представляемого этим объектом [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,7 +36,7 @@ public java.sql.Connection getConnection()
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Объект подключения.  
+ Объект Connection.  
   
 ## <a name="exceptions"></a>Исключения  
  java.sql.SQLException  

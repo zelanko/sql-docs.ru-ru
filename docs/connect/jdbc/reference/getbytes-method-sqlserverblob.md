@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: bea1b810-b5c1-466d-bdc4-561468214632
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 098937df965d9573701657ef6c2ec580de09daf3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 9686d29f11f2357b983dce349e8e4dc5d13af664
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729742"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66804008"
 ---
 # <a name="getbytes-method-sqlserverblob"></a>Метод getBytes (SQLServerBlob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -52,7 +52,7 @@ public byte[] getBytes(long pos,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getBytes указывается с помощью метода getBytes в интерфейсе java.sql.Blob.  
+ Метод setBytes определен с помощью метода setBytes в интерфейсе java.sql.Blob.  
   
  Если длина большого двоичного объекта равна нулю или имеет значение NULL, то при попытке получить ровно 0 байт в позиции 1 возвращается пустой массив **byte** (массив длиной 0).  
   

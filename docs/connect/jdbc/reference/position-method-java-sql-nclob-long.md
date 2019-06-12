@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f2354278-d128-4cf4-a170-22c05fcb763b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bf58493fcf9e4f8a5f55baecc2b38114dc6a5a31
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 35d8a3903cc18ce371b2d6c333747710ac6efc7e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611622"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802419"
 ---
 # <a name="position-method-javasqlnclob-long"></a>Метод position (java.sql.NClob, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

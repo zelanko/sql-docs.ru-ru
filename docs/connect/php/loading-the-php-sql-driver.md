@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: e5c114c5-8204-49c2-94eb-62ca63f5d3ec
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e62fc14eff52fa64e9e9f9dc041cc3c8601230e5
-ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
+manager: jroth
+ms.openlocfilehash: 4b2f02fc81b969f8633a5a951483745c1d2635b0
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56744614"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799637"
 ---
 # <a name="loading-the-microsoft-drivers-for-php-for-sql-server"></a>Загрузка драйверов Майкрософт для PHP для SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -84,7 +84,7 @@ extension_dir = "c:\PHP\ext"
 Дополнительные сведения о директивах **php.ini** см. в статье [Описание встроенных директив php.ini](https://php.net/manual/en/ini.core.php).  
   
 ## <a name="see-also"></a>См. также:  
-[Приступая к работе с драйверами Майкрософт для PHP для SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
+[Getting Started with the Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md) (Начало работы с драйверами Майкрософт для PHP для SQL Server)
 
 [Системные требования драйверов Майкрософт для PHP для SQL Server](../../connect/php/system-requirements-for-the-php-sql-driver.md)
 

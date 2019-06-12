@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: d2a5e9cb-2631-4f6e-a90c-4bee58e2f7b8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: adc082cfca814b8f10630fe7b4436b87da13ffc8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 6baa005d3567eed12ac2e2682012497129437058
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596723"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798696"
 ---
 # <a name="updateclob-method-int-javasqlclob"></a>Метод updateClob (int, java.sql.Clob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,7 +49,7 @@ public void updateClob(int columnIndex,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод updateClob указывается с помощью метода updateClob в интерфейсе java.sql.ResultSet.  
+ Этот метод getNClob определен с помощью метода getNClob в интерфейсе java.sql.ResultSet.  
   
 ## <a name="see-also"></a>См. также:  
  [Метод updateClob (SQLServerResultSet)](../../../connect/jdbc/reference/updateclob-method-sqlserverresultset.md)   

@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 64ac78b8-d5b3-4134-9b72-d2b0c52168a2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b303a9002194f05d1ceb2c3c9f154ed26f6524d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 95683f46799802410669ac97035f6a0f03379a37
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797892"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801646"
 ---
 # <a name="execute-method-javalangstring-sqlserverstatement"></a>Метод execute (java.lang.String) (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +47,7 @@ public boolean execute(java.lang.String sql)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод execute указывается с помощью метода execute в интерфейсе java.sql.Statement.  
+ Этот метод execute определен с помощью метода execute в интерфейсе java.sql.PreparedStatement.  
   
 ## <a name="see-also"></a>См. также:  
  [Метод Execute &#40;SQLServerStatement&#41;](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md)   

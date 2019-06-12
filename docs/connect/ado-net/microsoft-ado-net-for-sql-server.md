@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: 5e467fce-7237-4678-bafa-a16f32323d0c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a15fc702c5f7b3907441a237f5765b19ea41a14d
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 82125679283a67006ed93bcd0d8355e2aaaf3d07
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602284"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66770660"
 ---
 # <a name="microsoft-adonet-for-sql-server"></a>Microsoft ADO.NET для SQL Server
 
-![Загрузки стрелка вниз обведены](../../ssdt/media/download.png)[загрузить ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![Стрелка скачивания в круге](../../ssdt/media/download.png)[Скачать драйвер ODBC](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-ADO.NET — это базовая технология доступа к данным для языков .NET. Для доступа к SQL Server используется пространство имен System.Data.SqlClient, а для доступа к хранилищам других производителей — соответствующие поставщики. Для доступа к данным из языков .NET с помощью других технологий доступа к данным используется System.Data.Odbc или System.Data.Oledb. Если в клиентских приложениях нужен автономный кэш данных, используется System.Data.Dataset. Кроме того, данная технология позволяет сохранять данные локально, а также предоставляет возможности по работе с XML, которые можно использовать в веб-службах.  
+ADO.NET — это базовая технология доступа к данным для языков .NET. Для доступа к SQL Server используется пространство имен System.Data.SqlClient, а для доступа к хранилищам других производителей — соответствующие поставщики. Для доступа к данным из языков .NET с помощью других технологий доступа к данным используется System.Data.Odbc или System.Data.Oledb. Если в клиентских приложениях нужен автономный кэш данных, используется System.Data.Dataset. Кроме того, данная технология позволяет сохранять данные локально, а также предоставляет возможности по работе с XML, которые можно использовать в веб-службах.  
   
 ## <a name="getting-started"></a>Приступая к работе  
 * [Шаг 1. Настройка среды разработки для разработки в ADO.NET](step-1-configure-development-environment-for-ado-net-development.md)  

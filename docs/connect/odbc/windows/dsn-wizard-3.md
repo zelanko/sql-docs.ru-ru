@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5261e3bd3c114961533b60431b6d0e1b9a313fc5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: d8220eebb82a5c0e513e14fc9b582b10183d293f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615252"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797779"
 ---
 # <a name="data-source-wizard-screen-3"></a>Экран 3 мастера источников данных
 
@@ -72,7 +72,7 @@ WHERE "LastName" = 'O''Brien'
 
 ### <a name="transparent-network-ip-resolution"></a>Разрешение IP-адресов прозрачной сети.
 
-Изменяет поведение **многоподсетевой отработки отказа** позволяет ускорить восстановление соединения во время отработки отказа. См. в разделе [с помощью прозрачного разрешение IP-адресов сети](../../../connect/odbc/using-transparent-network-ip-resolution.md) Дополнительные сведения.
+Изменяет поведение **многоподсетевой отработки отказа** позволяет ускорить восстановление соединения во время отработки отказа. Дополнительные сведения см. в статье [Использование разрешения IP-адресов прозрачной сети](../../../connect/odbc/using-transparent-network-ip-resolution.md).
 
 ### <a name="column-encryption"></a>Шифрование столбцов.
 

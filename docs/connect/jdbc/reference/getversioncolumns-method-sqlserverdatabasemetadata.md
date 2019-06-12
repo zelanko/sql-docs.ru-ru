@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 6dd275d3-d9b2-4db7-938a-d4406c940a7a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 938cf980a4035684b2e77435d5ab4df9522b4407
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 8c098106fc3961e0248d638356df70527739203b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604012"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66780003"
 ---
 # <a name="getversioncolumns-method-sqlserverdatabasemetadata"></a>Метод getVersionColumns (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -57,7 +57,7 @@ public java.sql.ResultSet getVersionColumns(java.lang.String catalog,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getVersionColumns указывается с помощью метода getVersionColumns в интерфейсе java.sql.DatabaseMetaData.  
+ Этот метод getColumns определен с помощью метода getColumns в интерфейсе java.sql.DatabaseMetaData.  
   
  Результирующий набор, возвращаемый методом getVersionColumns, включает следующие данные:  
   

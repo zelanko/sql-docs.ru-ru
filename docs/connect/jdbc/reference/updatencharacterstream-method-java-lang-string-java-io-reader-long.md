@@ -1,5 +1,5 @@
 ---
-title: updateNCharacterStream метод - "Читатель" — длинная строка) | Документация Майкрософт
+title: Метод updateNCharacterStream (int, java.io.Reader, long) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: db0a96a8-248f-4664-9c13-f480f309ab91
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1ca23d9813cbcdeb73aa67b1036b6dcc4aabe82a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 7285f091a933ebbcfa4796da338e34c6795105fc
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687768"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798470"
 ---
 # <a name="updatencharacterstream-method-javalangstring-javaioreader-long"></a>Метод updateNCharacterStream (java.lang.String, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -51,7 +51,7 @@ public void updateNCharacterStream(java.lang.String columnLabel,
 ## <a name="remarks"></a>Remarks  
  Этот метод updateNCharacterStream указывается с помощью метода updateNCharacterStream в интерфейсе java.sql.ResultSet.  
   
- Этот метод передает символы в Юникоде из объекта чтения в выбранные **nchar**, **nvarchar(max)**, **ntext**, и **xml** столбцов. Использование этого метода при работе со столбцами других типов данных приведет к возникновению исключения.  
+ Этот метод передает символы в Юникоде из объекта чтения в выбранные **nchar**, **nvarchar(max)** , **ntext**, и **xml** столбцов. Использование этого метода при работе со столбцами других типов данных приведет к возникновению исключения.  
   
  Если длина потока отличается от указанной в параметре *length*, драйвер JDBC выдаст исключение при обновлении или вставке строки.  
   

@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: dc73d1c3-e756-43af-b1fc-ac438cbd0965
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bf42996fac6ac5f48a41311aa072866ebd79f8b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: d4ae744a27156a59c926f2181ca9aec1146e8cd7
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667482"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801656"
 ---
 # <a name="execute-method-javalangstring-int"></a>Метод execute (java.lang.String, int[])
 
@@ -51,7 +51,7 @@ public final boolean execute(
 [SQLServerException](./sqlserverexception-class.md)
 
 ## <a name="remarks"></a>Remarks
-Этот метод execute указывается с помощью метода execute в интерфейсе java.sql.Statement.
+Этот метод execute определен с помощью метода execute в интерфейсе java.sql.PreparedStatement.
 
 ## <a name="see-also"></a>См. также:
 

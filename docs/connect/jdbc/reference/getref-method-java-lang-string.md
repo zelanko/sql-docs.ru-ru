@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: a8ff2dd5-923b-4a2f-ab33-665574b2dfda
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 67e95e898a6e2baa28f59550bfaa9c57637a2449
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 657c933a06e9b29e69ca138345f68b95fd807db9
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637092"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800199"
 ---
 # <a name="getref-method-javalangstring"></a>Метод getRef (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

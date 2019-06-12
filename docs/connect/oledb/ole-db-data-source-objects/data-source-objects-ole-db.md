@@ -18,13 +18,13 @@ helpviewer_keywords:
 - CLSID
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 8c838857b09d0eb0279b2732e86602b0938a7fd4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 45a09a47f3ee1b633ccde0276977db56e0ead711
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726902"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66768602"
 ---
 # <a name="data-source-objects-ole-db"></a>Объекты источников данных (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47726902"
 
   Драйвер OLE DB для SQL Server использует термин "источник данных" для обозначения набора интерфейсов OLE DB, дающих возможность устанавливать соединения с хранилищем данных, например с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Создание экземпляра объекта источника данных поставщика — первая задача драйвера OLE DB для SQL Server потребителя.  
   
- Каждый поставщик OLE DB объявляет свой идентификатор класса (CLSID). Идентификатор CLSID для драйвера OLE DB для SQL Server является CLSID_MSOLEDBSQL GUID C/C++ (символ MSOLEDBSQL_CLSID будет разрешен в правильный идентификатор progid в файле msoledbsql.h, который вы ссылаетесь). Используя CLSID, потребитель может вызвать функцию OLE **CoCreateInstance** для создания экземпляра объекта источника данных.  
+ Каждый поставщик OLE DB объявляет свой идентификатор класса (CLSID). Идентификатор CLSID для драйвера OLE DB для SQL Server является C /C++ GUID CLSID_MSOLEDBSQL (символ MSOLEDBSQL_CLSID будет разрешен в правильный идентификатор progid в файле msoledbsql.h, который вы ссылаетесь). Используя CLSID, потребитель может вызвать функцию OLE **CoCreateInstance** для создания экземпляра объекта источника данных.  
   
  Драйвер OLE DB для SQL Server — это внутрипроцессный сервер. Экземпляры объектов драйвера OLE DB для SQL Server создаются с помощью макроса CLSCTX_INPROC_SERVER для указания на исполняемый контекст.  
   

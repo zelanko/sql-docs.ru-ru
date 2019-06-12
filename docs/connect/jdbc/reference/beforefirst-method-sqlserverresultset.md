@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 04eebd6a-016f-4462-82f5-ab34b945eec4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c8cf3a01cc6e697d326c03c4bbe153f214acfcfa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: df145a1d0aa6666346136e8b7997a3e65a1137f6
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767982"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803656"
 ---
 # <a name="beforefirst-method-sqlserverresultset"></a>Метод beforeFirst (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +39,7 @@ public void beforeFirst()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод beforeFirst указывается с помощью метода beforeFirst в интерфейсе java.sql.ResultSet.  
+ Метод first определен с помощью метода first в интерфейсе java.sql.ResultSet.  
   
 ## <a name="see-also"></a>См. также:  
  [Элементы SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

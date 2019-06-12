@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 21b727f60c0c60495c50e2e583b4cd776fd2e997
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: adf098f6a855a3db241f33b81b060c654ae47d6d
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65571286"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66499604"
 ---
 # <a name="power-pivot-connection-type-ssrs"></a>Тип соединения PowerPivot (SSRS)
   Для извлечения данных из книги [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , опубликованной в коллекции [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] на сайте SharePoint, можно использовать модуль обработки данных служб SQL Server Analysis Services.  
@@ -32,7 +32,7 @@ ms.locfileid: "65571286"
  Строкой подключения является URL-адрес для книги [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], опубликованной на сайте SharePoint в коллекции [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] или другой библиотеке, например `https://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsx`.  
   
 ## <a name="credentials"></a>Учетные данные  
- Укажите учетные данные, необходимые для доступа к книге [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] и сайту SharePoint, например данные для проверки подлинности Windows (встроенная безопасность). Дополнительные сведения см. в разделах [Подключения к данным, источники данных и строки подключения (построитель отчетов и службы SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) и [Указание учетных данных в построителе отчетов](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
+ Укажите учетные данные, необходимые для доступа к книге [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] и сайту SharePoint, например данные для проверки подлинности Windows (встроенная безопасность). Дополнительные сведения см. в разделе [подключения к данным, источники данных и строки подключения &#40;построитель отчетов и службы SSRS&#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) или [задание учетных данных и сведений о соединении для источников данных отчета](specify-credential-and-connection-information-for-report-data-sources.md).  
   
 ## <a name="queries"></a>Запросы  
  После подключения к источнику данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] используйте графический конструктор запросов многомерных выражений для формирования запроса путем просмотра и выбора из базовых структур данных. После создания запроса запустите его, чтобы просмотреть выбранный образец данные на панели результатов.  

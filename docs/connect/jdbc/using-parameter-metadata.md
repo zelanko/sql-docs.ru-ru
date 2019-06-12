@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: db2c1957-91c6-4989-a07b-9f8be6d2033a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 54afa3bf0df1c0c4df3865ab28e7b085bb032919
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: e2c0e9f7589f58a1ef3c1cc5ee4026dd9eea5076
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623652"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798564"
 ---
 # <a name="using-parameter-metadata"></a>Использование метаданных о параметрах
 
@@ -33,7 +33,7 @@ ms.locfileid: "47623652"
 > [!NOTE]  
 > При использовании класса SQLServerParameterMetaData с подготовленными инструкциями действуют некоторые ограничения.
 >
-> **Для Microsoft JDBC Driver for SQL Server 6.0 (или более поздней версии)**: при использовании SQL Server 2008 или 2008 R2 драйвер JDBC поддерживает инструкции SELECT, DELETE, INSERT и UPDATE при условии, что они не содержат вложенные запросы или соединения.
+> **Для Microsoft JDBC Driver for SQL Server 6.0 (или более поздней версии)** : при использовании SQL Server 2008 или 2008 R2 драйвер JDBC поддерживает инструкции SELECT, DELETE, INSERT и UPDATE при условии, что они не содержат вложенные запросы или соединения.
 
 Запросы MERGE также не поддерживаются для класса SQLServerParameterMetaData при использовании SQL Server 2008 или 2008 R2. Для SQL Server 2012 и более поздних версий поддерживаются метаданные параметров со сложными запросами.
 

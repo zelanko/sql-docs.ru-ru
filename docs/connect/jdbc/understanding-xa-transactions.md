@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5d88840ef429258ad425e867efc4b744f6a5d3c5
-ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
+manager: jroth
+ms.openlocfilehash: e61d9fbb562bda9ea400024598b1c7107ce5542e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55736945"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66788430"
 ---
 # <a name="understanding-xa-transactions"></a>Основные сведения о транзакциях XA
 
@@ -160,7 +160,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL<version>.<insta
 > [!IMPORTANT]  
 > Файл sqljdbc_xa.dll следует обновлять во время планового обслуживания либо в случае, если не выполняется ни одной транзакции MS DTC.
   
-1. Выгрузите файл sqljdbc_xa.dll с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)] команда **sqljdbc_xa DBCC (FREE)**.  
+1. Выгрузите файл sqljdbc_xa.dll с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)] команда **sqljdbc_xa DBCC (FREE)** .  
   
 2. Скопируйте новый файл sqljdbc_xa.dll из каталога установки драйвера JDBC в каталог Binn на каждом компьютере [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], который будет участвовать в распределенных транзакциях.  
   

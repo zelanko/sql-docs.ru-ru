@@ -18,13 +18,13 @@ helpviewer_keywords:
 - OLE DB, data types
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 4101c458b066ec34f010a5733510fb21e25e6840
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 5dcd4b33121d5459120572b2b31de413106aeeda
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834192"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66775599"
 ---
 # <a name="data-type-mapping-in-itabledefinition"></a>Сопоставление типов данных в интерфейсе ITableDefinition
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47834192"
   
  При использовании элемента *wType* структуры DBCOLUMNDESC для указания новых типов данных столбца с использованием типов данных OLE DB драйвер OLE DB для SQL Server сопоставляет типы данных OLE DB указанным ниже образом.  
   
-|Тип данных OLE DB|SQL Server<br /><br /> тип данных|Дополнительные сведения|  
+|Тип данных OLE DB|SQL Server<br /><br /> тип данных|Дополнительные сведения|  
 |----------------------|------------------------------|----------------------------|  
 |DBTYPE_BOOL|**bit**||  
 |DBTYPE_BYTES|**binary**, **varbinary**, **image** или **varbinary(max)**|Драйвер OLE DB для SQL Server проверяет *ulColumnSize* структуры DBCOLUMNDESC. На основе значения и версии [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] экземпляра, драйвер OLE DB для SQL Server выполняется сопоставление типа к **изображение**.<br /><br /> Если значение *ulColumnSize* меньше максимальной длины столбца типа **binary**, то драйвер OLE DB для SQL Server проверяет элемент *rgPropertySets* структуры DBCOLUMNDESC. Если значение DBPROP_COL_FIXEDLENGTH равно VARIANT_FALSE, драйвер OLE DB для SQL Server сопоставляет тип с типом для **двоичных**. Если значение свойства равно VARIANT_FALSE, драйвер OLE DB для SQL Server сопоставляет тип с типом для **varbinary**. В любом случае элемент *ulColumnSize* структуры DBCOLUMNDESC определяет ширину создаваемого столбца SQL Server.|  

@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 9be246a7-85fa-49fc-ad79-aabe97f5b280
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 41b3c59bdec9a2cbeb9c2dc3ce777e455ade2beb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: a03a2ff79af2472af5d0bed31be3ad6d35f525bd
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804964"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798835"
 ---
 # <a name="updatebinarystream-method-javalangstring-javaioinputstream-int"></a>Метод updateBinaryStream (java.lang.String, java.io.InputStream, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

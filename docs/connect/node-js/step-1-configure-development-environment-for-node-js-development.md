@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 2dad01f1-fadf-4ac9-9b4d-26be3d301886
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 823177f8fef91dda8cf879f6be84ef6706224fad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 49522e397789c5193ed8f218a5fdf776ba62f001
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600242"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799358"
 ---
 # <a name="step-1--configure-development-environment-for-nodejs-development"></a>Шаг 1. Настройка среды разработки для разработки на Node.js
 Необходимо будет настроить среду разработки с предварительные требования для разработки приложения с помощью драйвера Node.js для SQL Server.  Наиболее распространенный метод является использование диспетчера пакетов node (npm), чтобы установить модуль утомительно, но вы можете скачать модуль утомительно непосредственно на [Github](https://github.com/pekim/tedious) при желании.  
@@ -47,7 +47,7 @@ A. Перейдите к [Node.js](https://nodejs.org/en/download/)
 > npm install tedious  
 ```  
   
-## <a name="ubuntu-linux"></a>Ubuntu Linux  
+## <a name="ubuntu-linux"></a>Ubuntu Linux 18.04  
   
 1.  **Открыть терминал**  
   

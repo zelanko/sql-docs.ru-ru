@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 37587981-2979-49a3-a6ab-df4bfb9b8748
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 912bd276e9b80911e7dec71d7edbb68cd30676af
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 445e420deaa95354ab9d80105d3510927054d61d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818604"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802759"
 ---
 # <a name="sqlserverresultsetmetadata-members"></a>Элементы SQLServerResultSetMetaData
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -55,8 +55,8 @@ ms.locfileid: "47818604"
 |[IsCaseSensitive](../../../connect/jdbc/reference/iscasesensitive-method-sqlserverresultsetmetadata.md)|Указывает, учитывается ли регистр символов для столбца.|  
 |[isCurrency](../../../connect/jdbc/reference/iscurrency-method-sqlserverresultsetmetadata.md)|Указывает, содержит ли указанный столбец значения денежных сумм.|  
 |[isDefinitelyWritable](../../../connect/jdbc/reference/isdefinitelywritable-method-sqlserverresultsetmetadata.md)|Указывает, будет ли запись в указанный столбец наверняка успешной.|  
-|[IsNullable](../../../connect/jdbc/reference/isnullable-method-sqlserverresultsetmetadata.md)|Указывает допустимость значений NULL для указанного столбца.|  
-|[IsReadOnly](../../../connect/jdbc/reference/isreadonly-method-sqlserverresultsetmetadata.md)|Указывает, является ли указанный столбец наверняка недоступным для чтения.|  
+|[isNullable](../../../connect/jdbc/reference/isnullable-method-sqlserverresultsetmetadata.md)|Указывает допустимость значений NULL для указанного столбца.|  
+|[isReadOnly](../../../connect/jdbc/reference/isreadonly-method-sqlserverresultsetmetadata.md)|Указывает, является ли указанный столбец наверняка недоступным для чтения.|  
 |[isSearchable](../../../connect/jdbc/reference/issearchable-method-sqlserverresultsetmetadata.md)|Указывает, может ли указанный столбец использоваться в предложении SQL WHERE.|  
 |[isSigned](../../../connect/jdbc/reference/issigned-method-sqlserverresultsetmetadata.md)|Указывает, являются ли значения в указанном столбце числами со знаком.|  
 |[isSparseColumnSet](../../../connect/jdbc/reference/issparsecolumnset-method-sqlserverresultsetmetadata.md)|Указывает, является ли столбец из результирующего набора набором разреженных столбцов.|  

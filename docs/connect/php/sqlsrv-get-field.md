@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: fa17cc56-fb38-433b-a40d-65642f04dc23
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2a5f94566cf965cfe135a17eed216cf8ee4b42b7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 7854d52116b9092a069043f8e3c1ca9a23fbbce5
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618682"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802229"
 ---
 # <a name="sqlsrvgetfield"></a>sqlsrv_get_field
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -41,7 +41,7 @@ sqlsrv_get_field( resource $stmt, int $fieldIndex [, int $getAsType])
   
 *$fieldIndex*: Индекс поля для извлечения. Индексы отсчитываются с нуля.  
   
-*$getAsType* [необязательный]: константа **SQLSRV** (**SQLSRV_PHPTYPE_&#x2a;**), определяющая тип данных PHP для возвращаемых данных. Сведения о поддерживаемых типах данных см. в статье [Константы (драйверы Майкрософт для PHP для SQL Server)](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md). Если тип возвращаемого значения не указан, возвращается тип PHP по умолчанию. Дополнительные сведения о типах PHP см. в статье [Default PHP Data Types](../../connect/php/default-php-data-types.md). Дополнительные сведения об указании типов данных PHP см. в статье [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md).  
+*$getAsType* [необязательный]: константа **SQLSRV** (**SQLSRV_PHPTYPE_&#x2a;** ), определяющая тип данных PHP для возвращаемых данных. Сведения о поддерживаемых типах данных см. в статье [Константы (драйверы Майкрософт для PHP для SQL Server)](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md). Если тип возвращаемого значения не указан, возвращается тип PHP по умолчанию. Дополнительные сведения о типах PHP см. в статье [Default PHP Data Types](../../connect/php/default-php-data-types.md). Дополнительные сведения об указании типов данных PHP см. в статье [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md).  
   
 ## <a name="return-value"></a>Возвращаемое значение  
 Данные поля. Можно указать тип данных PHP для возвращаемых данных с помощью параметра *$getAsType* . Если тип возвращаемых данных не указан, возвращается тип данных PHP по умолчанию. Дополнительные сведения о типах PHP см. в статье [Default PHP Data Types](../../connect/php/default-php-data-types.md). Дополнительные сведения об указании типов данных PHP см. в статье [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md).  

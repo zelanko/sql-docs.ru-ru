@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: b66c301d-3d20-45b8-a112-225d8f01c0bd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2b2677e5614fd8e50c34084624dda19c3ced54d6
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 01f611e0c11d6a2f3671c8911d41b4c0cfeef83c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600334"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801482"
 ---
 # <a name="default-php-data-types"></a>типы данных PHP по умолчанию;
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "51600334"
 |ntext<sup>6</sup>|Поток<sup>2</sup>|8-битовый символ<sup>1</sup>|  
 |REAL|float|8-битовый символ<sup>1</sup>|  
 |smalldatetime|DATETIME|8-битовый символ<sup>1</sup>|  
-|SMALLINT|Целочисленный|8-битовый символ<sup>1</sup>|  
+|smallint|Целочисленный|8-битовый символ<sup>1</sup>|  
 |SMALLMONEY|String|8-битовый символ<sup>1</sup>|  
 |sql_variant<sup>7</sup>|String|8-битовый символ<sup>1</sup>|  
 |текст<sup>8</sup>|Поток<sup>2</sup>|8-битовый символ<sup>1</sup>|  
@@ -90,7 +90,7 @@ ms.locfileid: "51600334"
   
 9.  Идентификаторы UNIQUEIDENTIFIER — это идентификаторы GUID, представленные следующим регулярным выражением:  
   
-    [0-9a-fA-F] {8}-[0-9a-fA-F]{4}-[0-9a-fA-f]{4}-[0-9a-fA-f]{4}-[0-9a-fA-F]{12}  
+    [0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-f]{4}-[0-9a-fA-f]{4}-[0-9a-fA-F]{12}  
  
  
 ## <a name="other-new-sql-server-2008-data-types-and-features"></a>Другие новые типы данных и функции SQL Server 2008  

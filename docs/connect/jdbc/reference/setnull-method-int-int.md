@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 7e7f08e9-278a-495a-8ce3-ca173d055021
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 48fd2baf752af1182f575f5daeab63c1a87bbefe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 977ca2ec68888bfc53ca1256da97f1bf427c33f6
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646972"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800320"
 ---
 # <a name="setnull-method-int-int"></a>Метод setNull (int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: ff617165-47f8-41c1-9c51-37ffc7714923
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b8ac216e31755a8d60989699dec248ba17f4dde3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 6ad7f9ee6fc5250ac2bc349ccadb8909fc0e3cbe
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841432"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66804030"
 ---
 # <a name="getbytes-method-javalangstring-sqlserverresultset"></a>Метод getBytes (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +47,7 @@ public byte[] getBytes(java.lang.String columnName)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getBytes указывается с помощью метода getBytes в интерфейсе java.sql.ResultSet.  
+ Этот метод getBytes определен с помощью метода getBytes в интерфейсе java.sql.CallableStatement.  
   
  Этот метод поддерживает получение всех столбцов путем прямого считывания байтов с сервера. Он возвращает массив байтов непосредственно с сервера в формате, который хранится на сервере.  
   

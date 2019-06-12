@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 137416fe-a580-424e-be79-fe946eba9e6e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9fb6172a5ce5601a7af547771850424a74d1bfc0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: e10e06460ee04abeace42af47c84270901fa1a17
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846912"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799238"
 ---
 # <a name="setlong-method-sqlservercallablestatement"></a>Метод setLong (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

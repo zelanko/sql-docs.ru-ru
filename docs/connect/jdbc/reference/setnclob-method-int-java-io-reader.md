@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 9fc9938c-b821-41c7-8df7-e21cb83a46d4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a25a3d95086d6368d7375920dab79059c690576d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 34888d11cfdf88936b65aedc210d49e1a049bbc6
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637162"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800428"
 ---
 # <a name="setnclob-method-int-javaioreader"></a>Метод setNClob (int, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

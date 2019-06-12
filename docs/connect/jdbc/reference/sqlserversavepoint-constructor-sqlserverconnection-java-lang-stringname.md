@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: fb77db6b-ebf8-4b12-8153-2c4bdb8d72f7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 97119b0f89ae0fc3851a20c04aec3a5de6dfddc7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 41675553cfb5993f9eab95b427488f5ef8b213ca
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655252"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802728"
 ---
 # <a name="sqlserversavepoint-constructor-sqlserverconnection-javalangstringname"></a>Конструктор SQLServerSavepoint (SQLServerConnection, java.lang.StringName)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

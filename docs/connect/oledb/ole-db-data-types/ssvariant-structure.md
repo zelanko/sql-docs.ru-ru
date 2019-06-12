@@ -14,13 +14,13 @@ helpviewer_keywords:
 - SSVARIANT struct
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: cf9141d77b1dc510a6653e94166c4b6f3c1ccfe4
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+manager: jroth
+ms.openlocfilehash: d956aab8a82dc0387317578964b1796a685f24c2
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617684"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66769525"
 ---
 # <a name="ssvariant-structure"></a>Структура SSVARIANT
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -75,9 +75,9 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
 |Time2Val|DBTYPE_DBTIME2|**DBTIME2**|**VT_SS_TIME2**|Поддерживает **время** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] тип данных.<br /><br /> Содержит следующие элементы:<br /><br /> *tTime2Val* (**DBTIME2**)<br /><br /> *bScale* (**БАЙТОВ**) Задает масштаб для *tTime2Val* значение.|  
 |DateTimeVal|DBTYPE_DBTIMESTAMP|**DBTIMESTAMP**|**VT_SS_DATETIME2**|Поддерживает **datetime2** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] тип данных.<br /><br /> Содержит следующие элементы:<br /><br /> *tsDataTimeVal* (DBTIMESTAMP)<br /><br /> *bScale* (**БАЙТОВ**) Задает масштаб для *tsDataTimeVal* значение.|  
 |DateTimeOffsetVal|DBTYPE_DBTIMESTAMPOFSET|**DBTIMESTAMPOFFSET**|**VT_SS_DATETIMEOFFSET**|Поддерживает **datetimeoffset** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] тип данных.<br /><br /> Содержит следующие элементы:<br /><br /> *tsoDateTimeOffsetVal* (**DBTIMESTAMPOFFSET**)<br /><br /> *bScale* (**БАЙТОВ**) Задает масштаб для *tsoDateTimeOffsetVal* значение.|  
-|NCharVal|Отсутствует соответствующий индикатор типа OLE DB.|**Структура _NCharVal**|**VT_SS_WVARSTRING,**<br /><br /> **VT_SS_WSTRING**|Поддерживает **nchar** и **nvarchar** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] типов данных.<br /><br /> Содержит следующие элементы:<br /><br /> *sActualLength* (**КОРОТКИЕ**) указывает фактическую длину строки, на которую *pwchNCharVal* точек. Не содержит завершающего нуля.<br /><br /> *sMaxLength* (**КОРОТКИЕ**) указывает максимальную длину для строки, на которую *pwchNCharVal* точек.<br /><br /> *pwchNCharVal* (**WCHAR** \*) указатель на строку.<br /><br /> Неиспользуемые элементы: *rgbReserved*, *dwReserved*, и *pwchReserved*.|  
-|CharVal|Отсутствует соответствующий индикатор типа OLE DB.|**Структура _CharVal**|**VT_SS_STRING,**<br /><br /> **VT_SS_VARSTRING**|Поддерживает **char** и **varchar** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] типов данных.<br /><br /> Содержит следующие элементы:<br /><br /> *sActualLength* (**КОРОТКИЕ**) указывает фактическую длину строки, на которую *pchCharVal* точек. Не содержит завершающего нуля.<br /><br /> *sMaxLength* (**КОРОТКИЕ**) указывает максимальную длину для строки, на которую *pchCharVal* точек.<br /><br /> *pchCharVal* (**CHAR** \*) указатель на строку.<br /><br /> Неиспользуемые элементы:<br /><br /> *rgbReserved*, *dwReserved*, и *pwchReserved*.|  
-|BinaryVal|Отсутствует соответствующий индикатор типа OLE DB.|**Структура _BinaryVal**|**VT_SS_VARBINARY,**<br /><br /> **VT_SS_BINARY**|Поддерживает **двоичных** и **varbinary** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] типов данных.<br /><br /> Содержит следующие элементы:<br /><br /> *sActualLength* (**КОРОТКИЕ**) указывает фактическую длину данных, на которые *prgbBinaryVal* точек.<br /><br /> *sMaxLength* (**КОРОТКИЕ**) указывает максимальную длину данных, на которые *prgbBinaryVal* точек.<br /><br /> *prgbBinaryVal* (**БАЙТОВ** \*) указатель на двоичные данные.<br /><br /> Неиспользуемый элемент: *dwReserved*.|  
+|NCharVal|Отсутствует соответствующий индикатор типа OLE DB.|**struct _NCharVal**|**VT_SS_WVARSTRING,**<br /><br /> **VT_SS_WSTRING**|Поддерживает **nchar** и **nvarchar** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] типов данных.<br /><br /> Содержит следующие элементы:<br /><br /> *sActualLength* (**КОРОТКИЕ**) указывает фактическую длину строки, на которую *pwchNCharVal* точек. Не содержит завершающего нуля.<br /><br /> *sMaxLength* (**КОРОТКИЕ**) указывает максимальную длину для строки, на которую *pwchNCharVal* точек.<br /><br /> *pwchNCharVal* (**WCHAR** \*) указатель на строку.<br /><br /> Неиспользуемые элементы: *rgbReserved*, *dwReserved*, и *pwchReserved*.|  
+|CharVal|Отсутствует соответствующий индикатор типа OLE DB.|**struct _CharVal**|**VT_SS_STRING,**<br /><br /> **VT_SS_VARSTRING**|Поддерживает **char** и **varchar** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] типов данных.<br /><br /> Содержит следующие элементы:<br /><br /> *sActualLength* (**КОРОТКИЕ**) указывает фактическую длину строки, на которую *pchCharVal* точек. Не содержит завершающего нуля.<br /><br /> *sMaxLength* (**КОРОТКИЕ**) указывает максимальную длину для строки, на которую *pchCharVal* точек.<br /><br /> *pchCharVal* (**CHAR** \*) указатель на строку.<br /><br /> Неиспользуемые элементы:<br /><br /> *rgbReserved*, *dwReserved*, и *pwchReserved*.|  
+|BinaryVal|Отсутствует соответствующий индикатор типа OLE DB.|**struct _BinaryVal**|**VT_SS_VARBINARY,**<br /><br /> **VT_SS_BINARY**|Поддерживает **двоичных** и **varbinary** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] типов данных.<br /><br /> Содержит следующие элементы:<br /><br /> *sActualLength* (**КОРОТКИЕ**) указывает фактическую длину данных, на которые *prgbBinaryVal* точек.<br /><br /> *sMaxLength* (**КОРОТКИЕ**) указывает максимальную длину данных, на которые *prgbBinaryVal* точек.<br /><br /> *prgbBinaryVal* (**БАЙТОВ** \*) указатель на двоичные данные.<br /><br /> Неиспользуемый элемент: *dwReserved*.|  
 |UnknownType|НЕ ИСПОЛЬЗУЕТСЯ|НЕ ИСПОЛЬЗУЕТСЯ|НЕ ИСПОЛЬЗУЕТСЯ|НЕ ИСПОЛЬЗУЕТСЯ|  
 |BLOBType|НЕ ИСПОЛЬЗУЕТСЯ|НЕ ИСПОЛЬЗУЕТСЯ|НЕ ИСПОЛЬЗУЕТСЯ|НЕ ИСПОЛЬЗУЕТСЯ|  
   

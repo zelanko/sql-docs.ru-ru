@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: 0b55da26-ddeb-4e89-872a-91e0aba57103
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 87b04db9a25df8ddf7329ef3d2f0142875296c63
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 0c763cf3a1822548b1e107ecc7d619d8ef44d0a6
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601214"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803918"
 ---
 # <a name="sqlsrv-driver-api-reference"></a>Справочник по API для драйвера SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-API для драйвера SQLSRV в [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] имеет имя **sqlsrv**. Все функции **sqlsrv** начинаются с элемента **sqlsrv_**, после которого следует глагол или существительное. Функции с глаголом выполняют определенное действие, а функции с существительным возвращают определенные виды метаданных.  
+API для драйвера SQLSRV в [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] имеет имя **sqlsrv**. Все функции **sqlsrv** начинаются с элемента **sqlsrv_** , после которого следует глагол или существительное. Функции с глаголом выполняют определенное действие, а функции с существительным возвращают определенные виды метаданных.  
   
 ## <a name="in-this-section"></a>в этом разделе  
 Драйвер SQLSRV содержит следующие функции:  
@@ -65,5 +65,5 @@ API для драйвера SQLSRV в [!INCLUDE[ssDriverPHP](../../includes/ssdr
 
 [Руководство по программированию для драйвера Microsoft для PHP для SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
 
-[Приступая к работе с драйверами Майкрософт для PHP для SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
+[Getting Started with the Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md) (Начало работы с драйверами Майкрософт для PHP для SQL Server)
   

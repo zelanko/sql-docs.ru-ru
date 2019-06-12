@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 8e3ec950-3ac1-4c28-9e97-ddce3bd46578
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f0dbdeca7077eda9c824ac43e0bf9f3e83e8e2a2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 213b3007a968d148cd3e51aa1c10476389683196
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47683532"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795605"
 ---
 # <a name="unwrap-method-sqlserverpreparedstatement"></a>Метод unwrap (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: b39461d3-48d6-4048-8300-1a886c00756d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ddef588be6f7e15c8a3f7f8e981a44cfcb5c9076
-ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
+manager: jroth
+ms.openlocfilehash: 2682d5fe31bcd2f22eb92960ab16f70458687b55
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55736825"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66790356"
 ---
 # <a name="using-advanced-data-types"></a>Использование расширенных типов данных
 
@@ -48,11 +48,11 @@ ms.locfileid: "55736825"
 Драйвер JDBC реализует все методы интерфейсов java.sql.Blob, java.sql.Clob и java.sql.NClob.  
   
 > [!NOTE]  
-> Значения CLOB могут использоваться с типами данных больших значений [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версий. В частности, типы CLOB могут использоваться с **varchar(max)** и **nvarchar(max)** типы данных типов больших двоичных ОБЪЕКТОВ может использоваться с **varbinary(max)** и **изображения**  типы данных, а типы NCLOB могут использоваться с **ntext** и **nvarchar(max)**.  
+> Значения CLOB могут использоваться с типами данных больших значений [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версий. В частности, типы CLOB могут использоваться с **varchar(max)** и **nvarchar(max)** типы данных типов больших двоичных ОБЪЕКТОВ может использоваться с **varbinary(max)** и **изображения**  типы данных, а типы NCLOB могут использоваться с **ntext** и **nvarchar(max)** .  
 
 ## <a name="large-value-data-types"></a>Типы данных большого объема
 
-В ранних версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] работа с типами данных большого объема требовала особого подхода. Типы данных больших значений — это типы, размер которых превышает максимальный размер строки в 8 КБ. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] введен описатель max для типов данных **varchar**, **nvarchar** и **varbinary**, который обеспечивает хранение значений размером до 2^31 байт. Столбцы таблицы и переменные [!INCLUDE[tsql](../../includes/tsql-md.md)] могут указывать типы данных **varchar(max)**, **nvarchar(max)** и **varbinary(max)**.  
+В ранних версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] работа с типами данных большого объема требовала особого подхода. Типы данных больших значений — это типы, размер которых превышает максимальный размер строки в 8 КБ. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] введен описатель max для типов данных **varchar**, **nvarchar** и **varbinary**, который обеспечивает хранение значений размером до 2^31 байт. Столбцы таблицы и переменные [!INCLUDE[tsql](../../includes/tsql-md.md)] могут указывать типы данных **varchar(max)** , **nvarchar(max)** и **varbinary(max)** .  
 
 В большинстве случаев работа с типами данных большого объема предполагает их извлечение из базы данных или добавление в базу данных. В следующих разделах описываются различные способы выполнения этих задач.  
 

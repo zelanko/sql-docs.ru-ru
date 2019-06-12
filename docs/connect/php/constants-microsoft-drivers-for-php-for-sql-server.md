@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 9727c944-b645-48d6-9012-18dbde35ee3c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 172b96b63f65b5ee8b576ba6ee9c18aad18e3531
-ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
+manager: jroth
+ms.openlocfilehash: 82fa4ef2f47143afe8f2331469a1eb07fd9b2522
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56744454"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796224"
 ---
 # <a name="constants-microsoft-drivers-for-php-for-sql-server"></a>Константы (драйверы Майкрософт для PHP для SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -68,11 +68,11 @@ ms.locfileid: "56744454"
 ### <a name="handling-numeric-fetches"></a>Обработка числовых выборки
 Атрибут PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE можно использовать для обработки числовых операций выборки из столбцов с числовыми типами SQL (бит, целое число, smallint, tinyint, float и real). Когда PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE имеет значение true, результаты из целочисленного столбца отображаются в виде целых чисел, расположенном SQL и reals представляются в виде числа с плавающей запятой. Этот атрибут можно задать с помощью [PDOStatement::setAttribute](../../connect/php/pdostatement-setattribute.md). 
 
-Вы можете изменить поведение по умолчанию десятичное форматирования с PDO::SQLSRV_ATTR_FORMAT_DECIMALS и PDO::SQLSRV_ATTR_DECIMAL_PLACES атрибутами. Поведение этих атрибутов идентична соответствующие параметры на стороне SQLSRV (**FormatDecimals** и **DecimalPlaces**), за исключением того, что выходные данные параметры не поддерживаются для форматирования. Эти атрибуты могут быть установлены на уровне инструкции или соединения с [PDO::setAttribute](../../connect/php/pdo-setattribute.md) или [PDOStatement::setAttribute](../../connect/php/pdostatement-setattribute.md), но переопределяет любой атрибут инструкции соответствующего атрибут соединения. Дополнительные сведения см. в разделе [форматирование десятичных строк и денежные значения (драйвер PDO_SQLSRV)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md).
+Вы можете изменить поведение по умолчанию десятичное форматирования с PDO::SQLSRV_ATTR_FORMAT_DECIMALS и PDO::SQLSRV_ATTR_DECIMAL_PLACES атрибутами. Поведение этих атрибутов идентична соответствующие параметры на стороне SQLSRV (**FormatDecimals** и **DecimalPlaces**), за исключением того, что выходные данные параметры не поддерживаются для форматирования. Эти атрибуты могут быть установлены на уровне инструкции или соединения с [PDO::setAttribute](../../connect/php/pdo-setattribute.md) или [PDOStatement::setAttribute](../../connect/php/pdostatement-setattribute.md), но переопределяет любой атрибут инструкции соответствующего атрибут соединения. См. подробнее о [форматировании десятичных строк и денежных значений (драйвер PDO_SQLSRV)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md).
 
 ### <a name="handling-date-and-time-fetches"></a>Обработка выборок значений даты и времени
 
-PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE указывает, следует ли получить типы даты и времени как [PHP DateTime](http://php.net/manual/en/class.datetime.php) объектов. Если оставить это значение false, поведение по умолчанию — вернуть их в виде строки. Этот атрибут может задаваться на уровне инструкции или соединения с [PDO::setAttribute](../../connect/php/pdo-setattribute.md) или [PDOStatement::setAttribute](../../connect/php/pdostatement-setattribute.md), но переопределяет соответствующий атрибут инструкции атрибут соединения. Дополнительные сведения см. в разделе [как: получить дату и время типы как объектов DateTime PHP с помощью драйвера PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md).
+PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE указывает, следует ли получить типы даты и времени как [PHP DateTime](http://php.net/manual/en/class.datetime.php) объектов. Если оставить значение false, по умолчанию они будут возвращаться как строки. Этот атрибут может задаваться на уровне инструкции или соединения с [PDO::setAttribute](../../connect/php/pdo-setattribute.md) или [PDOStatement::setAttribute](../../connect/php/pdostatement-setattribute.md), но переопределяет соответствующий атрибут инструкции атрибут соединения. См. подробнее об [извлечении типов даты и времени в виде объектов PHP DateTime с помощью драйвера PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md).
 
 ## <a name="sqlsrv-driver-constants"></a>SQLSRV  
 Следующие разделы содержат константы, используемые драйвером SQLSRV.  

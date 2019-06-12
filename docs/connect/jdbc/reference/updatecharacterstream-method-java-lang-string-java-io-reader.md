@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: a8ec22a9-4bbd-4759-9f21-957304ef3a5e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0e0111b401f43771a15e3e7ae001931039a2ab5f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 4a44d8a6ea91697c45588c93dfdaf109ac548d75
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732412"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66784081"
 ---
 # <a name="updatecharacterstream-method-javalangstring-javaioreader"></a>Метод updateCharacterStream (java.lang.String, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,7 +46,7 @@ public void updateCharacterStream(java.lang.String columnLabel,
 ## <a name="remarks"></a>Remarks  
  Этот метод updateCharacterStream указывается с помощью метода updateCharacterStream в интерфейсе java.sql.ResultSet.  
   
- Этот метод передает символы Юникода от объекта средства чтения выбранным текстовым и двоичным столбцам. Сюда входят все текстовые и **двоичные** столбцы, а также столбцы **varbinary**, **varbinary(max)**, **image** и **xml**, но не входят столбцы **определяемых пользователем типов данных**.  
+ Этот метод передает символы Юникода от объекта средства чтения выбранным текстовым и двоичным столбцам. Сюда входят все текстовые и **двоичные** столбцы, а также столбцы **varbinary**, **varbinary(max)** , **image** и **xml**, но не входят столбцы **определяемых пользователем типов данных**.  
   
  Использование этого метода **изображение**, **текст**, и **ntext** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] типов данных может повлиять на производительность.  
   
