@@ -1,7 +1,7 @@
 ---
 title: sp_migrate_user_to_contained (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 06/11/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -18,19 +18,20 @@ ms.assetid: b3a49ff6-46ad-4ee7-b6fe-7e54213dc33e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7761a5602e1700949b8ae072342cd65927a24b9b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9bdab8cd50a16913f37115f0d38c00c5c699bc0f
+ms.sourcegitcommit: 113fa84148d6d475c7c1475666ea08ac6965e71c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843982"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66836298"
 ---
 # <a name="spmigrateusertocontained-transact-sql"></a>sp_migrate_user_to_contained (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Преобразует пользователя базы данных, сопоставленного с именем входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], в пользователя автономной базы данных с паролем. В автономной базе данных эта процедура позволяет удалить зависимости от экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], на котором установлена база данных. **Хранимая процедура sp_migrate_user_to_contained** отделяет пользователя от первоначальной [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имени входа, таким образом, чтобы параметры языком по умолчанию и пароль может осуществляться отдельно для автономной базы данных. **Хранимая процедура sp_migrate_user_to_contained** можно применить перед переносом автономной базы данных другой экземпляр [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] Чтобы устранить зависимости от текущего [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] экземпляра имена входа.  
   
- **Примечание** Эта процедура используется только в автономной базе данных. Дополнительные сведения см. в разделе [Contained Databases](../../relational-databases/databases/contained-databases.md).  
+> [!NOTE]
+> Будьте внимательны при использовании **sp_migrate_user_to_contained**, как вы не сможете отменить. Эта процедура используется только в автономной базе данных. Дополнительные сведения см. в разделе [Contained Databases](../../relational-databases/databases/contained-databases.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,10 +46,10 @@ sp_migrate_user_to_contained [ @username = ] N'user' ,
  [ **@username =** ] **N "***пользователя***"**  
  Имя пользователя в текущей автономной базе данных, сопоставленное с именем входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], прошедшим проверку подлинности. Значение равно **sysname**, значение по умолчанию **NULL**.  
   
- [ **@rename =** ] **N "***copy_login_name***"** | **N "***keep_name***"**  
+ [ **@rename =** ] **N "***copy_login_name***"**  | **N "***keep_name***"**  
  Если с именем входа пользователя базы данных имеет другое имя пользователя от имени входа, используйте *keep_name* для сохранения имени пользователя базы данных во время миграции. Используйте *copy_login_name* для создания нового пользователя автономной базы данных с именем входа в систему, а не пользователя. Если пользователь базы данных, созданный на основе имени входа, имеет имя, совпадающее с именем входа, то в обоих вариантах будет создан пользователь автономной базы данных без изменения имени.  
   
- [ **@disablelogin =** ] **N "***disable_login***"** | **N "***do_not_disable_login***"**  
+ [ **@disablelogin =** ] **N'***disable_login***'**  | **N'***do_not_disable_login***'**  
  *disable_login* отключает имя входа в базе данных master. Для подключения, если имя входа отключено, необходимо указать имя автономной базы данных как **исходный каталог** как часть строки подключения.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -80,7 +81,7 @@ sp_migrate_user_to_contained [ @username = ] N'user' ,
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-migrating-a-single-user"></a>A. Перенос одного пользователя  
- В следующем примере производится миграция имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `Barry` в пользователя автономной базы данных с паролем. В этом примере не изменяется имя пользователя и имя входа остается активным (включенным).  
+ В следующем примере производится миграция имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `Barry` в пользователя автономной базы данных с паролем. В примере изменяется имя пользователя и имя входа остается активным включена.  
   
 ```sql  
 sp_migrate_user_to_contained   

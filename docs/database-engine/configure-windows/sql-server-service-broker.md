@@ -22,22 +22,69 @@ helpviewer_keywords:
 ms.assetid: 8b8b3b57-fd46-44de-9a4e-e3a8e3999c1e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+manager: jroth
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 70487916496caa4cb2fba5a472262d22c7c123bd
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.openlocfilehash: ebad80ec47c9d66e4079c76c1ca06e805ca259ec
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154659"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66775412"
 ---
-# <a name="sql-server-service-broker"></a>SQL Server Service Broker
+# <a name="service-broker"></a>Компонент Service Broker
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSB](../../includes/sssb-md.md)] обеспечивает собственную поддержку приложений обмена сообщениями и приложений с очередями сообщений в компоненте [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Это облегчает разработчикам создание сложных приложений, использующих компоненты [!INCLUDE[ssDE](../../includes/ssde-md.md)] для связи между разнородными базами данных. Разработчики могут использовать компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] для облегчения создания распределенных и надежных приложений.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSB](../../includes/sssb-md.md)] предоставляют встроенную поддержку для обмена сообщениями и очередей в [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] и [управляемом экземпляре Базы данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index). Это облегчает разработчикам создание сложных, надежных распределенных приложений, использующих компоненты [!INCLUDE[ssDE](../../includes/ssde-md.md)] для связи между разнородными базами данных.  
   
- Разработчики приложений, использующие компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] , могут распределять рабочую нагрузку между несколькими базами данных без программирования сложного взаимодействия и создания внутреннего обмена сообщениями. Это сокращает разработку и проверочную работу, потому что компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] обеспечивает взаимодействие в контексте диалога. Кроме того, это повышает производительность. Например, сервер, обслуживающий клиентские запросы базы данных, поддерживающие веб-сайты, может записывать информацию и отправлять ресурсоемкие задачи в очереди серверных баз данных. [!INCLUDE[ssSB](../../includes/sssb-md.md)] гарантирует, что управление всеми задачами ведется в контексте транзакций, чтобы обеспечить надежность и техническое единообразие.  
+## <a name="when-to-use-service-broker"></a>Когда следует использовать компонент Service Broker
+
+ Используйте компонент Service Broker для реализации собственных функций обработки асинхронных сообщений в базе данных. Разработчики приложений, использующие компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] , могут распределять рабочую нагрузку между несколькими базами данных без программирования сложного взаимодействия и создания внутреннего обмена сообщениями. Service Broker сокращает разработку и проверочную работу, потому что компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] обеспечивает взаимодействие в контексте диалога. Кроме того, это повышает производительность. Например, сервер, обслуживающий клиентские запросы базы данных, поддерживающие веб-сайты, может записывать информацию и отправлять ресурсоемкие задачи в очереди серверных баз данных. [!INCLUDE[ssSB](../../includes/sssb-md.md)] гарантирует, что управление всеми задачами ведется в контексте транзакций, чтобы обеспечить надежность и техническое единообразие.  
   
+## <a name="overview"></a>Обзор
+
+  Компонент Service Broker — это инфраструктура доставки сообщений, дающая возможность создания ориентированных на службы приложений в базе данных. В отличие от функциональных возможностей классической обработки, которые требуют постоянно считывать данные из таблиц и обрабатывать их во время жизненного цикла запроса, в ориентированных на службы приложениях имеются службы базы данных, которые позволяют обмениваться сообщениями. Каждая служба имеет очередь, куда помещаются сообщения до их обработки.
+  
+![Service Broker](media/service-broker.png)
+  
+  Сообщения в очередях можно извлечь с помощью команды Transact-SQL `RECEIVE` или процедуры активации, которая будет вызываться всякий раз, когда сообщение поступает в очередь.
+  
+### <a name="creating-services"></a>Создание служб
+ 
+  Службы базы данных создаются с помощью инструкции Transact SQL [CREATE SERVICE](../../t-sql/statements/create-service-transact-sql.md). Службы могут быть связаны с очередью сообщений, созданной с помощью инструкции [CREATE QUEUE](../../t-sql/statements/create-queue-transact-sql.md):
+  
+```sql
+CREATE QUEUE dbo.ExpenseQueue;
+GO
+CREATE SERVICE ExpensesService
+    ON QUEUE dbo.ExpenseQueue; 
+```
+
+### <a name="sending-messages"></a>Отправка сообщений
+  
+  Сообщения отправляются во время диалога между службами с помощью инструкции Transact-SQL [SEND](../../t-sql/statements/send-transact-sql.md). Диалог — канал связи, который устанавливается между службами с помощью инструкции Transact-SQL `BEGIN DIALOG`. 
+  
+```sql
+DECLARE @dialog_handle UNIQUEIDENTIFIER;
+
+BEGIN DIALOG @dialog_handle  
+FROM SERVICE ExpensesClient  
+TO SERVICE 'ExpensesService';  
+  
+SEND ON CONVERSATION @dialog_handle (@Message) ;  
+```
+   Сообщение будет отправлено в `ExpenssesService` и помещено в `dbo.ExpenseQueue`. Так как процедуры активации, связанной с этой очередью, нет, сообщение будет оставаться в очереди, пока кто-то не считает его.
+
+### <a name="processing-messages"></a>Обработка сообщений
+
+   Сообщения, помещенные в очередь, можно выбрать с помощью стандартного запроса `SELECT`. Инструкция `SELECT` не изменяет очередь и не удаляет сообщения. Для чтения и извлечения сообщений из очереди можно использовать инструкции Transact-SQL [RECEIVE](../../t-sql/statements/receive-transact-sql.md).
+
+```sql
+RECEIVE conversation_handle, message_type_name, message_body  
+FROM ExpenseQueue; 
+```
+
+  После обработки всех сообщений из очереди необходимо закрыть диалог с помощью инструкции Transact-SQL [END CONVERSATION](../../t-sql/statements/end-conversation-transact-sql.md).
+
 ## <a name="where-is-the-documentation-for-service-broker"></a>Где найти документацию по компоненту Service Broker?  
  Справочная документация по компоненту [!INCLUDE[ssSB](../../includes/sssb-md.md)] входит в документацию по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . В эту справочную документацию входят следующие разделы:  
   

@@ -84,13 +84,13 @@ ms.assetid: df40c888-691c-4962-a420-78a57852364d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 26c2c1c06da727a063d25520497c4b352ea3837e
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+manager: jroth
+ms.openlocfilehash: 8c8dd90ae08cae3f62be07443af5bdae68cfee2b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65993693"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794958"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>Установка SQL Server из командной строки
 
@@ -213,7 +213,7 @@ ms.locfileid: "65993693"
 |PolyBase|/PBDMSSVCPASSWORD<br /><br /> **Необязательно**|Задает пароль для учетной записи службы ядра.|  
 |PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **Необязательно**|Задает режим запуска для службы PolyBase Engine: Automatic (Автоматически, используется по умолчанию), Disabled (Отключено) или Manual (Вручную).|  
 |PolyBase|/PBPORTRANGE<br /><br /> **Необязательно**|Указывает диапазон портов для служб PolyBase, включающий не менее 6 портов. Пример<br /><br /> `/PBPORTRANGE=16450-16460`|  
-|PolyBase|/PBSCALEOUT<br /><br /> **Необязательно**|Указывает, будет ли этот экземпляр [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] использоваться в составе вычислительной масштабируемой группы PolyBase. Поддерживаемые значения: **True**, **False**|  
+|PolyBase|/PBSCALEOUT<br /><br /> **Необязательно**|Указывает, будет ли этот экземпляр [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] использоваться в составе вычислительной масштабируемой группы PolyBase. Используйте этот параметр, если вы настраиваете вычислительную группу горизонтального масштабирования PolyBase, включая головной узел. Поддерживаемые значения: **True**, **False**|  
 |Управление программой установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/PID<br /><br /> **Необязательно**|Указывает ключ продукта для выпуска SQL Server. Если этот параметр не указан, то используется выпуск Evaluation.|  
 |Управление программой установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/Q или /QUIET<br /><br /> **Необязательно**|Указывает, что программа установки работает в тихом режиме (без пользовательского интерфейса). Этот параметр предназначен для автоматической установки. Параметр /Q переопределяет входные данные параметра /QS.|  
 |Управление программой установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/QS или /QUIETSIMPLE <br /><br /> **Необязательно**|Указывает, что программа установки запускается и отображает в пользовательском интерфейсе ход выполнения, но не принимает вводимые значения и не выводит сообщения об ошибке.|  
@@ -276,7 +276,7 @@ ms.locfileid: "65993693"
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [Обязательно](#Accounts)|Указывает пароль стартовой учетной записи для службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCStartupType<br /><br /> **Необязательно**|Указывает режим [запуска](#Accounts) для службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
 |Python или службы машинного обучения (в базе данных)|MPYCACHEDIRECTORY|Зарезервировано для последующего использования. Используйте %TEMP% для сохранения CAB-файлов Python для установки на компьютере, где нет подключения к Интернету. |  
-|R или службы машинного обучения (в базе данных)|MRCACHEDIRECTORY|Используйте этот параметр, чтобы указать каталог кэша для поддержки Microsoft R Open, служб R в SQL Server 2016, SQL Server 2016 R Server (изолированного) или для компонентов R в службах машинного обучения и на сервере Machine Learning Server (изолированном) SQL Server 2017. Этот параметр обычно используется при установке компонентов R из [командной строки на компьютере без доступа к Интернету](https://docs.microsoft.com/sql/advanced-analytics/r-services/installing-r-components-without-internet-access).|  
+|R или службы машинного обучения (в базе данных)|MRCACHEDIRECTORY|Используйте этот параметр, чтобы указать каталог кэша для поддержки Microsoft R Open, служб R в SQL Server 2016, SQL Server 2016 R Server (изолированного) или для компонентов R в службах машинного обучения и на сервере Machine Learning Server (изолированном) SQL Server 2017. Этот параметр обычно используется при установке компонентов R из [командной строки на компьютере без доступа к Интернету](https://docs.microsoft.com/sql/advanced-analytics/install/sql-ml-component-install-without-internet-access).|  
   
 ###### <a name="sample-syntax"></a>Образец синтаксиса  
  Установка нового изолированного экземпляра с компонентами [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], Full-Text Search и поддержкой репликации и включение мгновенной инициализации файлов для [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. 
