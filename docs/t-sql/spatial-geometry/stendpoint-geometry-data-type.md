@@ -1,5 +1,5 @@
 ---
-title: STEndpoint (тип данных geometry) | Документы Майкрософт
+title: STEndPoint (тип данных geometry) | Документы Майкрософт
 ms.custom: ''
 ms.date: 08/03/2017
 ms.prod: sql
