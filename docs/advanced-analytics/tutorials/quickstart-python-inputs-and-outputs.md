@@ -8,12 +8,12 @@ ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: a778c4a65b9e3f4cbf4ed77cff46e9061d4b6a8a
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: fe60197671e40317f56a62ad98ea364a238df174
+ms.sourcegitcommit: c3de32efeee3095fcea0d3faebb8f2ff1b56d229
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583227"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67033382"
 ---
 # <a name="quickstart-handle-inputs-and-outputs-using-python-in-sql-server"></a>Краткое руководство. Обрабатывать входные и выходные данные с помощью Python в SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -56,9 +56,9 @@ SELECT * FROM PythonTestData
 
 Давайте взглянем на значение по умолчанию входных и выходных переменных sp_execute_external_script: `InputDataSet` и `OutputDataSet`.
 
-1. Могут получать данные из таблицы в качестве входных данных для R-скриптов. Выполните приведенную ниже инструкцию. Он получает данные из таблицы, циклическом прохождении через среду выполнения R и возвращает значения с именем столбца *NewColName*.
+1. Могут получать данные из таблицы в качестве входных данных для скрипта Python. Выполните приведенную ниже инструкцию. Он получает данные из таблицы, циклическом прохождении через среду выполнения Python и возвращает значения с именем столбца *NewColName*.
 
-    Данные, возвращаемые в запросе передается в среду выполнения R, которая возвращает данные в базу данных SQL в формате кадра данных. В предложении WITH RESULT SETS определяет схему таблицы возвращаемых данных для базы данных SQL.
+    Данные, возвращаемые в запросе передается в среду выполнения Python, который возвращает данные в базу данных SQL как кадр данных pandas. В предложении WITH RESULT SETS определяет схему таблицы возвращаемых данных для базы данных SQL.
 
     ```sql
     EXECUTE sp_execute_external_script
@@ -72,7 +72,7 @@ SELECT * FROM PythonTestData
 
     ![Выходные данные сценария Python, который возвращает данные из таблицы](./media/python-output-pythontestdata.png)
 
-2. Давайте изменим имя входных или выходных переменных. Приведенный выше сценарий по умолчанию входные данные и данные имени переменной, _InputDataSet_ и _OutputDataSet_. Чтобы определить входные данные, связанные с _InputDatSet_, использовании *@input_data_1* переменной.
+2. Давайте изменим имя входных или выходных переменных. Приведенный выше сценарий по умолчанию входные данные и данные имени переменной, _InputDataSet_ и _OutputDataSet_. Чтобы определить входные данные, связанные с _InputDataSet_, использовании *@input_data_1* переменной.
 
     В этом скрипте, чтобы были изменены имена входных и выходных переменных для хранимой процедуры *SQL_out* и *SQL_in*:
 
