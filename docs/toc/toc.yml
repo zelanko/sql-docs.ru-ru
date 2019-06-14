@@ -9367,8 +9367,6 @@
                   href: ../ssms/scripting/edit-sqlcmd-scripts-with-query-editor.md
         - name: Ссылки
           items:
-            - name: SQL Server PowerShell
-              href: ../powershell/sql-server-powershell.md
             - name: Управляющие объекты SQL Server (SMO)
               href: ../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md
             - name: Среда SSMS
