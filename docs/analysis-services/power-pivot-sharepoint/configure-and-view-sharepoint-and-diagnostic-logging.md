@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e2df09cb9bf167c0af28c240ff69f8666cce01a6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62988641"
 ---
 # <a name="configure-and-view-sharepoint-and-diagnostic-logging"></a>Настройка и просмотр SharePoint и ведение журналов диагностики
@@ -46,7 +46,7 @@ ms.locfileid: "62988641"
   
 2.  Щелкните **Настройка журнала диагностики**.  
   
-3.  Перейдите к элементу **Служба [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]**.  
+3.  Перейдите к элементу **Служба [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]** .  
   
 4.  Разверните категорию и выберите отдельные категории.  
   
@@ -116,13 +116,13 @@ ms.locfileid: "62988641"
 #### <a name="entries-for-power-pivot-services"></a>Записи для служб PowerPivot  
  В следующей таблице описываются записи для операций сервера [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] , которые, скорее всего, будут находиться в файле журнала SharePoint.  
   
-|Процесс|Область|Категория|Level|Сообщение|Сведения|  
+|Процесс|Область|Категория|Level|`Message`|Сведения|  
 |-------------|----------|--------------|-----------|-------------|-------------|  
-|w3wp.exe|Служба[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] |Использование|Подробный|Отсутствует статистика по текущему запросу, данные не заносятся в журнал.|Отчеты службы с заранее определенными интервалами запрашивают статистику ответов в виде события использования, отправляемого в систему сбора данных об использовании. Данное сообщение показывает, что отсутствует статистика запросов для передачи.|  
+|w3wp.exe|Служба[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]|Использование|Подробный|Отсутствует статистика по текущему запросу, данные не заносятся в журнал.|Отчеты службы с заранее определенными интервалами запрашивают статистику ответов в виде события использования, отправляемого в систему сбора данных об использовании. Данное сообщение показывает, что отсутствует статистика запросов для передачи.|  
 |w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Служба|Клиентский веб-интерфейс|Подробный|Начинается поиск сервера приложений для источника данных =\<*путь*>|Когда служба [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] получает запрос на соединение, она определяет доступный [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)] для обработки запроса. Если в ферму входит только один сервер, то локальный сервер принимает запрос во всех случаях.|  
 |w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Служба|Клиентский веб-интерфейс|Подробный|Сервер приложений определен успешно.|Запрос передан в приложение службы [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] .|  
 |w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Служба|Клиентский веб-интерфейс|Подробный|Перенаправление запроса для \< *источник PowerPivotdata*> для [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)].|Запрос перенаправлен на [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)].|  
-|w3wp.exe|Служба[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] |Обработка запросов|Подробный|Перенаправление запроса для UserName\<*пользователя SharePoint*> в базу данных|От имени пользователя SharePoint создано соединение с источником данных [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] путем олицетворения.|  
+|w3wp.exe|Служба[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]|Обработка запросов|Подробный|Перенаправление запроса для UserName\<*пользователя SharePoint*> в базу данных|От имени пользователя SharePoint создано соединение с источником данных [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] путем олицетворения.|  
   
 ## <a name="see-also"></a>См. также  
  [Сбор данных об использовании Power Pivot](../../analysis-services/power-pivot-sharepoint/power-pivot-usage-data-collection.md)   

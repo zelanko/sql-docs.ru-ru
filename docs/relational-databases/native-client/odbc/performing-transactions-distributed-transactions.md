@@ -19,10 +19,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8ea6c4886a3c5397777b7a65afe96ab7e1b422bd
-ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65620541"
 ---
 # <a name="create-a-distributed-transaction"></a>Создание распределенной транзакции
@@ -53,7 +53,7 @@ MSDTC вызывается драйвером собственного клие�
 3. Приложение обновляет некоторые данные на сервере SQL на компьютере B.
     - При сбое обновления на сервере SQL, откатываются все незафиксированные обновления на обоих экземплярах SQL Server
 
-4. Наконец приложение завершает транзакцию путем вызова [SQLEndTran _(1)_](../../../relational-databases/native-client-odbc-api/sqlendtran.md), с параметром SQL_COMMIT или SQL_ROLLBACK.
+4. Наконец приложение завершает транзакцию путем вызова [SQLEndTran _(1)_ ](../../../relational-databases/native-client-odbc-api/sqlendtran.md), с параметром SQL_COMMIT или SQL_ROLLBACK.
 
 _(1)_  MSDTC можно вызывать, не ODBC. В этом случае MSDTC становится диспетчером транзакций, а приложение больше не использует **SQLEndTran**.
 

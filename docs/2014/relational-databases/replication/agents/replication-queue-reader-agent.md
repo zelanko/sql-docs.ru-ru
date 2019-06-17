@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d92a15ae855c5521319abd252b1f5a7efc2bf300
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63191661"
 ---
 # <a name="replication-queue-reader-agent"></a>Агент чтения очереди репликации
@@ -62,7 +62,7 @@ ms.locfileid: "63191661"
  **-DefinitionFile** _путь_и_имя_файла_определения_  
  Путь к файлу определения агента. Файл определения агента содержит параметры командной строки для агента. Содержимое файла анализируется как для исполняемого файла. Для указания значений параметров, содержащих произвольные символы, используются двойные кавычки (").  
   
- **-Distributor** _server_name_[**\\**_instance_name_]  
+ **-Distributor** _server_name_[ **\\** _instance_name_]  
  Имя распространителя. Укажите *имя_сервера* для экземпляра служб [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию на этом сервере. Укажите *имя_сервера*\\*имя_экземпляра* для именованного экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию на этом сервере. Если же этот параметр не указан, то используется имя экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию на локальном компьютере.  
   
  **-DistributionDB** _база_данных_распространителя_  
@@ -113,7 +113,7 @@ ms.locfileid: "63191661"
  **-PollingInterval** _интервал_опроса_  
  Относится только к обновлению подписок, использующих очереди на основе [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Указывает частоту (в секундах) опроса очереди [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на наличие незавершенных транзакций. Значение может находиться в диапазоне от 0 до 240 секунд. Значение по умолчанию — 5 секунд.  
   
- **-PublisherFailoverPartner** _имя_сервера_[**\\**_имя_экземпляра_]  
+ **-PublisherFailoverPartner** _имя_сервера_[ **\\** _имя_экземпляра_]  
  Указывает партнера по обеспечению отработки отказа служб [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , участвующего в сеансе зеркального отображения базы данных с базой данных публикации. Дополнительные сведения см. в статье [Database Mirroring and Replication &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md).  
   
  **-ProfileName** _имя_профиля_агента_  

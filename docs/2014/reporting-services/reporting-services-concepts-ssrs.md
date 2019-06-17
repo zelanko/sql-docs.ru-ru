@@ -10,12 +10,12 @@ ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2df295b62ca76dfb46e767ed206180a52493255a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.openlocfilehash: 5030feecab11ed0c7727424ae49bde788c1f55f8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66102973"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67046742"
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Основные понятия служб Reporting Services (SSRS)
   Этот раздел содержит краткий обзор основных понятий служб [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
@@ -76,7 +76,7 @@ ms.locfileid: "66102973"
  **Отчеты и определения отчетов**  
  **ЯЗЫК ОПРЕДЕЛЕНИЯ ОТЧЕТОВ.** Определение отчета представляет собой XML-файл, соответствующий грамматике XML, называемой языком определения отчетов (RDL). В службах [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]определения отчетов создаются с помощью такого средства, как построитель отчетов или конструктор отчетов. Содержит элементы, которые определяют соединения с источниками данных, запросы, используемые для получения данных, выражения, параметры, изображения, текстовые поля, таблицы и любые другие элементы макета времени разработки. Дополнительные сведения см. в разделе [Язык определения отчетов (службы SSRS)](reports/report-definition-language-ssrs.md).  
   
- **RDLX.** Определение отчета в формате RDLX представляет собой RDL-файл с внутренними расширениями, включающими интерфейс визуализации [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] . Дополнительные сведения см. в разделе [Общие сведения о Power View](https://blogs.msdn.com/b/microsoft_business_intelligence1/archive/2012/02/07/power-view-overview.aspx).  
+ **RDLX.** Определение отчета в формате RDLX представляет собой RDL-файл с внутренними расширениями, включающими интерфейс визуализации [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] . Дополнительные сведения см. в разделе [Общие сведения о Power View](https://support.office.com/article/power-view-explore-visualize-and-present-your-data-98268d31-97e2-42aa-a52b-a68cf460472e#__toc328127684).  
   
  **RDLC.** Конструктор отчетов среды Visual Studio создает клиентские RDLC-файлы определений отчетов в формате XML для использования с элементом управления ReportViewer.  
   

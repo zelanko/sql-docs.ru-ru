@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b6e43196f5bc318630a52073e22969dc58a0e64a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66079229"
 ---
 # <a name="modifying-default-table-names"></a>Изменение имен таблиц по умолчанию
@@ -33,11 +33,11 @@ ms.locfileid: "66079229"
   
      Когда окно свойств открыто, проще изменять свойства каждой таблицы в представлении источника данных. Если окно не закреплено в открытом состоянии с помощью кнопки **Автоматически скрывать** , оно будет закрыто, как только будет выбран другой объект на панели **Диаграмма** .  
   
-3.  Изменение **FriendlyName** свойство для **FactInternetSales** объект *`InternetSales`*.  
+3.  Изменение **FriendlyName** свойство для **FactInternetSales** объект *`InternetSales`* .  
   
      Изменение будет применено, если щелкнуть вне ячейки свойства **FriendlyName** . На следующем занятии будет рассмотрено определение группы мер на основе этой таблицы фактов. Из-за сделанных на этом занятии изменений она будет называться не FactInternetSales, а InternetSales.  
   
-4.  На панели **Таблицы** выберите таблицу **DimProduct** . В окне «Свойства» измените **FriendlyName** свойства *`Product`*.  
+4.  На панели **Таблицы** выберите таблицу **DimProduct** . В окне «Свойства» измените **FriendlyName** свойства *`Product`* .  
   
 5.  Точно таким же образом измените значения свойства **FriendlyName** для всех оставшихся таблиц в представлении источника данных, удалив префикс**Dim**.  
   

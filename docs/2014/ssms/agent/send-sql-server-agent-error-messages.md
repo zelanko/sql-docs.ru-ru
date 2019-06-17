@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c1aa0faafc6fb1cca693fe58665c7344db84c9f1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62666791"
 ---
 # <a name="send-sql-server-agent-error-messages"></a>Send SQL Server Agent Error Messages
@@ -66,7 +66,7 @@ ms.locfileid: "62666791"
   
 2.  Щелкните правой кнопкой мыши элемент **Агент SQL Server** и выберите пункт **Свойства**.  
   
-3.  В **свойства агента SQL Server -**_имя_сервера_ диалогового **журнал ошибок** на **Общие** странице, введите имя пользователя или Имя компьютера, к которому вы хотите ошибка при отправке сообщений в **получатель Net send** поле.  
+3.  В **свойства агента SQL Server -** _имя_сервера_ диалогового **журнал ошибок** на **Общие** странице, введите имя пользователя или Имя компьютера, к которому вы хотите ошибка при отправке сообщений в **получатель Net send** поле.  
   
 4.  Нажмите кнопку **ОК**.  
   

@@ -16,10 +16,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ab3a864d9f93700fdb9aa646bba0d244d1ea17c5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63014616"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
@@ -42,7 +42,7 @@ ms.locfileid: "63014616"
 |Имя столбца|Описание|  
 |-----------------|-----------------|  
 |DATA_TYPE|Возвращает значение SQL_VARCHAR, SQL_VARBINARY или SQL_WVARCHAR для **varchar(max)** типов данных.|  
-|TYPE_NAME|Возвращает «varchar», «varbinary» или «nvarchar» для **varchar(max)**, **varbinary(max)**, и **nvarchar(max)** типов данных.|  
+|TYPE_NAME|Возвращает «varchar», «varbinary» или «nvarchar» для **varchar(max)** , **varbinary(max)** , и **nvarchar(max)** типов данных.|  
 |COLUMN_SIZE|Возвращает значение SQL_SS_LENGTH_UNLIMITED для **varchar(max)** данных типа, указывающее, что размер столбца не ограничен.|  
 |BUFFER_LENGTH|Возвращает значение SQL_SS_LENGTH_UNLIMITED для **varchar(max)** данных типа, указывающее, что размер буфера не ограничен.|  
 |SQL_DATA_TYPE|Возвращает значение SQL_VARCHAR, SQL_VARBINARY или SQL_WVARCHAR для **varchar(max)** типов данных.|  

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cc2b6d2ba25ee487053a7f9f711c499356a5ec59
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62662348"
 ---
 # <a name="hash-warning-event-class"></a>Hash Warning, класс событий
@@ -61,7 +61,7 @@ ms.locfileid: "62662348"
 |HostName|`nvarchar`|Имя компьютера, на котором выполняется клиентская программа. Этот столбец данных заполняется, если клиент предоставляет имя узла. Чтобы определить имя узла, используйте функцию HOST_NAME.|8|Да|  
 |IntegerData|`int`|Уровень рекурсии (только рекурсия хэширования).|25|Да|  
 |IsSystem|`int`|Указывает, произошло событие в системном или в пользовательском процессе. 1 = системный, 0 = пользовательский.|60|Да|  
-|LoginName|`nvarchar`|Имя пользователя (либо защищенное имя для входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], либо учетные данные Windows в формате *\<домен>\\имя_пользователя\>*).|11|Да|  
+|LoginName|`nvarchar`|Имя пользователя (либо защищенное имя для входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], либо учетные данные Windows в формате *\<домен>\\имя_пользователя\>* ).|11|Да|  
 |LoginSid|`image`|Идентификатор безопасности вошедшего в систему пользователя. Эти сведения можно найти в представлении каталога sys.server_principals. Значение идентификатора безопасности уникально для каждого имени входа на сервере.|41|Да|  
 |NTDomainName|`nvarchar`|Домен Windows, к которому принадлежит пользователь.|7|Да|  
 |NTUserName|`nvarchar`|Имя пользователя Windows.|6|Да|  

@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 55b872b46b5e0007d0651e190f6698ff0cfb50ec
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66056228"
 ---
 # <a name="schedule-a-package-by-using-sql-server-agent"></a>Планирование пакета с помощью агента SQL Server
@@ -55,7 +55,7 @@ ms.locfileid: "66056228"
     |--------------------|-----------------|  
     |**Каталог служб SSIS**|Пакеты, хранимые в базе данных SSISDB. Пакеты хранятся в проектах [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , развернутых на сервере [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .|  
     |**SQL Server**|Пакеты, хранимые в базе данных MSDB. Для управления этими пакетами используется служба [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .|  
-    |**Хранилище пакетов служб SSIS**|Пакеты, хранимые в папке по умолчанию на локальном компьютере. Папка по умолчанию — *\<диск>*:\Program Files\Microsoft SQL Server\110\DTS\Packages. Для управления этими пакетами используется служба [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .<br /><br /> Примечание. Можно указать другую папку или указать дополнительные папки в файловой системе осуществляется посредством [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] службу, изменив файл конфигурации для [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Дополнительные сведения см. в разделе [Настройка служб Integration Services (службы SSIS)](service/integration-services-service-ssis-service.md).|  
+    |**Хранилище пакетов служб SSIS**|Пакеты, хранимые в папке по умолчанию на локальном компьютере. Папка по умолчанию — *\<диск>* :\Program Files\Microsoft SQL Server\110\DTS\Packages. Для управления этими пакетами используется служба [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .<br /><br /> Примечание. Можно указать другую папку или дополнительные папки из файловой системы, которые будут управляться службой [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], изменив файл конфигурации для служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Дополнительные сведения см. в разделе [Настройка служб Integration Services (службы SSIS)](service/integration-services-service-ssis-service.md).|  
     |**Файловая система**|Пакеты, хранимые в любой папке на локальном компьютере.|  
   
      **В следующих таблицах описаны параметры конфигурации, доступные для шага задания в зависимости от выбранного источника пакета.**  
@@ -76,7 +76,7 @@ ms.locfileid: "66056228"
     ||**Дамп при ошибках**: Указывает, создаются ли отладочные файлы дампа при возникновении любой ошибки в ходе выполнения пакета.<br /><br /> Файлы содержат сведения о выполнении пакета, которые могут быть полезны при диагностике неполадок.<br /><br /> Если выбран этот параметр и во время выполнения возникает ошибка, службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] создадут MDMP-файл (двоичный) и TMP-файл (текстовый). По умолчанию службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] хранят эти файлы в папке *\<диск>:* \Program Files\Microsoft SQL Server\110\Shared\ErrorDumps.|  
     ||**32-разрядная среда выполнения** Указывает, запускать ли пакет с использованием 32-разрядной версии программы dtexec на 64-разрядном компьютере, на котором установлены 64-разрядные версии [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и агента [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .<br /><br /> Выполнить пакет с помощью 32-разрядной версии программы dtexec может потребоваться, например, если пакет использует собственный поставщик данных OLE DB, недоступный в 64-разрядной версии. Дополнительные сведения см. в разделе [Особенности работы служб Integration Services в 64-разрядной среде](https://msdn.microsoft.com/library/ms141766\(SQL.105\).aspx).<br /><br /> По умолчанию при выборе типа шага задания **Пакет служб SQL Server Integration Services** агент [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] выполняет пакет с помощью программы dtexec той версии, которая автоматически вызывается системой. Система вызывает 32-разрядную или 64-разрядную версию программы в зависимости от процессора компьютера и версий [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и агента [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , выполняющихся на компьютере.|  
   
-     **Источник пакета**:  SQL Server, Store пакета служб SSIS или файловая система  
+     **Источник пакета**:  SQL Server, хранилище пакетов служб SSIS или файловая система  
   
      Большинство параметров, которые можно задать для пакетов, хранящихся в SQL Server, хранилище пакетов служб SSIS и файловой системе, соответствуют параметрам командной строки для программы командной строки `dtexec`. Дополнительные сведения о программе и параметрах командной строки см. в разделе [Программа dtexec](packages/dtexec-utility.md).  
   

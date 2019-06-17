@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4d31293e6e6b562e8ccfbb624a9ea9e226205ef2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62714191"
 ---
 # <a name="sysarticlecolumns-transact-sql"></a>sysarticlecolumns (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "62714191"
 |**идентификатора столбца**|**smallint**|Идентифицирует столбец в статье.|  
 |**is_udt**|**bit**|Указывает, принадлежит ли столбец к пользовательскому типу данных (UDT). Значение **1** означает столбец определяемого пользователем ТИПА.|  
 |**is_xml**|**bit**|Указывает, является ли столбец **xml** столбца. Значение **1** указывает XML-столбец.|  
-|**is_max**|**bit**|Указывает, является ли столбец столбцом типа данных больших значений **varchar(max)**, **nvarchar(max)**, и **varbinary(max)**. Значение **1** означает столбец больших значений.|  
+|**is_max**|**bit**|Указывает, является ли столбец столбцом типа данных больших значений **varchar(max)** , **nvarchar(max)** , и **varbinary(max)** . Значение **1** означает столбец больших значений.|  
   
 ## <a name="see-also"></a>См. также  
  [Таблицы репликации &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

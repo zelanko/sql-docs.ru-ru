@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3dc7c4b9b32ee872ec48e78ecb05a713f2cf8a12
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62651493"
 ---
 # <a name="create-nonclustered-indexes"></a>Создание некластеризованных индексов
@@ -96,7 +96,7 @@ ms.locfileid: "62651493"
   
 5.  В диалоговом окне **Создание индекса** на странице **Общие** введите имя нового индекса в поле **Имя индекса** .  
   
-6.  В разделе **Ключевые столбцы индекса** щелкните **Добавить…**.  
+6.  В разделе **Ключевые столбцы индекса** щелкните **Добавить…** .  
   
 7.  В диалоговом окне **Выбор столбцов из**_имя_таблицы_ установите флажки для столбцов таблицы, добавляемых к некластеризованному индексу.  
   

@@ -3,17 +3,17 @@ title: Использовать T-SQL (CREATE EXTERNAL LIBRARY), чтобы ус
 description: Добавление новых пакетов R в SQL Server 2016 R Services или служб SQL Server 2017 машинного обучения (в базе данных).
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/30/2018
+ms.date: 06/12/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: b59f15ace1dc96af537486336e76a209f1c85da7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b18b5cf4a7255a206162bd002004767b7e3ab1fa
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62507036"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140663"
 ---
 # <a name="use-t-sql-create-external-library-to-install-r-packages-on-sql-server"></a>Использование T-SQL (CREATE EXTERNAL LIBRARY) для установки пакетов R на SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -68,6 +68,5 @@ EXEC sp_execute_external_script
 
 ## <a name="see-also"></a>См. также
 
-+ [Получение сведений о пакете](determine-which-packages-are-installed-on-sql-server.md)
++ [Получение сведений о пакете](../package-management/installed-package-information.md)
 + [Учебники по R](../tutorials/sql-server-r-tutorials.md)
-+ [Практические руководства](sql-server-machine-learning-tasks.md)
