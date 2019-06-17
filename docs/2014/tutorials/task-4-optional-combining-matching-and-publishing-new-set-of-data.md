@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2d27a5bcd87ffd84b33de229d955dc9494846a72
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65489272"
 ---
 # <a name="task-4-optional-combining-matching-and-publishing-new-set-of-data"></a>Задача 4 (необязательно). Объединение, сопоставление и публикация нового набора данных
@@ -94,7 +94,7 @@ ms.locfileid: "65489272"
   
      ![Excel — результаты сопоставления](../../2014/tutorials/media/et-combinematchandpublishnewsod-08.jpg "Excel — результаты сопоставления")  
   
-27. Выберите **повторяющуюся строку (оранжевый)**, щелкните правой кнопкой мыши и нажмите кнопку **удалить** для удаления строки.  
+27. Выберите **повторяющуюся строку (оранжевый)** , щелкните правой кнопкой мыши и нажмите кнопку **удалить** для удаления строки.  
   
 28. Удалить **CLUSTER_ID** столбец, так как вы оно больше не требуется.  
   
