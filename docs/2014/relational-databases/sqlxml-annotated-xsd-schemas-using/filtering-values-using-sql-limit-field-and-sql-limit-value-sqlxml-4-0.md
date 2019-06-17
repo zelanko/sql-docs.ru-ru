@@ -19,16 +19,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f93a60e7b6c1dfa2a0c7577aafbbb68d5068c629
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66013810"
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>Фильтрация значений при помощи sql:limit-field и sql:limit-value (SQLXML 4.0)
   Количество строк, возвращаемых запросом к базе данных, можно ограничить на основе какого-либо значения. Для указания столбца базы данных, содержащего ограничивающие значения, и задания конкретного ограничивающего значения, которое будет использовано для фильтрации возвращенных данных, используются заметки `sql:limit-field` и `sql:limit-value`.  
   
- Заметка `sql:limit-field` указывает столбец, содержащий ограничивающее значение; эту заметку можно использовать для любого сопоставленного элемента или атрибута.   
+ Заметка `sql:limit-field` указывает столбец, содержащий ограничивающее значение; эту заметку можно использовать для любого сопоставленного элемента или атрибута.  
   
  Заметка `sql:limit-value` используется для задания ограничивающего значения в столбце, заданном заметкой `sql:limit-field`. Заметка `sql:limit-value` является необязательной. Если заметка `sql:limit-value` не указана, предполагается значение NULL.  
   

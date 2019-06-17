@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6a1f8893351ceb68ebd7c42e3ac82c876c01c10b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63198755"
 ---
 # <a name="managing-data-sources"></a>Управление источниками данных
@@ -30,7 +30,7 @@ ms.locfileid: "63198755"
 > [!NOTE]  
 >  Для управления источником данных, который подключается к 32-разрядный драйвер, в 64-разрядной платформе, используйте c:\windows\sysWOW64\odbcad32.exe. Для управления источником данных, который подключается к 64-разрядный драйвер, используйте c:\windows\system32\odbcad32.exe. В **Администрирование** в 64-разрядной операционной системе Windows 8, существуют значков для 32-разрядных и 64-разрядных **администратор источников данных ODBC** диалоговое окно.  
   
- При использовании 64-разрядных odbcad32.exe настроить или удалить имя DSN, которое подключается к 32-разрядный драйвер, например, **драйвера выполните Microsoft Access (\*.mdb)**, вы получите следующее сообщение об ошибке:  
+ При использовании 64-разрядных odbcad32.exe настроить или удалить имя DSN, которое подключается к 32-разрядный драйвер, например, **драйвера выполните Microsoft Access (\*.mdb)** , вы получите следующее сообщение об ошибке:  
   
 ```  
 The specified DSN contains an architecture mismatch between the Driver and Application  

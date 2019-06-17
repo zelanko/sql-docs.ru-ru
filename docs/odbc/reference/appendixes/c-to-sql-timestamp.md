@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a738712a8fb1b032ef8244f579b10fdcc22becee
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63241429"
 ---
 # <a name="c-to-sql-timestamp"></a>C в SQL: Отметка времени
@@ -41,6 +41,6 @@ ms.locfileid: "63241429"
   
  Сведения о том, какие значения являются допустимыми в структуре SQL_C_TIMESTAMP, см. в разделе [типы данных C](../../../odbc/reference/appendixes/c-data-types.md)ранее в этом приложении.  
   
- При преобразовании в символьные данные SQL данных отметки времени C полученные данные символ находится в "*гггг*-*мм*-*дд* *hh*:*мм*:*ss*[.*f...*]» формат.  
+ При преобразовании в символьные данные SQL данных отметки времени C полученные данные символ находится в "*гггг*-*мм*-*дд* *hh*:*мм*:*ss*[.*f...* ]» формат.  
   
  Драйвер не учитывает значение длины и индикатора, при преобразовании данных из типа данных timestamp C и предполагается, что размер буфера данных размер типа данных timestamp C. Значение длины и индикатора, переданное в *StrLen_or_Ind* аргумента в **SQLPutData** и в указанный буфер с *StrLen_or_IndPtr* аргумента в **SQLBindParameter**. Буфер данных указывается с помощью *DataPtr* аргумента в **SQLPutData** и *ParameterValuePtr* аргумента в **SQLBindParameter**.

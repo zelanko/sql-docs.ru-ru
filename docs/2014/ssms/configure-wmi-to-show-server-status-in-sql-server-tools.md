@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c0b0b8236187698917dddd3ca98830add6c3fde9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63245670"
 ---
 # <a name="configure-wmi-to-show-server-status-in-sql-server-tools"></a>Настройка инструментария WMI для отображения состояния сервера в инструментальных средствах SQL Server
@@ -37,7 +37,7 @@ ms.locfileid: "63245670"
   
 6.  Добавьте группу или пользователя в поле **Имена групп или пользователей** и выберите их.  
   
-7.  В **разрешения для**_\<группы или пользователя >_ выберите **Разрешить** столбец, для **включить удаленно** разрешение , для пользователей, которым требуется удаленно определить состояние службы.  
+7.  В **разрешения для** _\<группы или пользователя >_ выберите **Разрешить** столбец, для **включить удаленно** разрешение , для пользователей, которым требуется удаленно определить состояние службы.  
   
 ## <a name="see-also"></a>См. также  
  [Запуск, остановка или приостановка службы агента SQL Server](agent/start-stop-or-pause-the-sql-server-agent-service.md)  

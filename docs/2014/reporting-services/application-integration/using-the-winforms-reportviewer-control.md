@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 456b9df06540f3708ea231b872a929007b5af329
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63239032"
 ---
 # <a name="using-the-winforms-reportviewer-control"></a>Использование элемента управления WinForms ReportViewer
@@ -171,7 +171,7 @@ End Class
   
      ![Настройка параметра "Копировать в выходной каталог"](../../../2014/reporting-services/media/windowsapp-copytooutputsetting.png "Настройка параметра \"Копировать в выходной каталог\"")  
   
-     Если окно **Свойства** не отображается, можно открыть его из меню **Вид**, выбрав **Окно "Свойства"**.  
+     Если окно **Свойства** не отображается, можно открыть его из меню **Вид**, выбрав **Окно "Свойства"** .  
   
  В следующем примере кода создается набор данных для данных о заказе на продажу, а затем подготавливается к просмотру отчет «Сведения о заказе на продажу» в локальном режиме.  
   

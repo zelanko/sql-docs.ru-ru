@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: a446fd4ce116ee19aa8b38d1ae6d8213e35c16e1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63273017"
 ---
 # <a name="project-settings-conversion-db2tosql"></a>Параметры проекта (преобразование) (DB2ToSQL)
@@ -260,7 +260,7 @@ SSMA можно преобразовать DB2 TO_CHAR(date, format) в проц
   
 -   При выборе **TO_CHAR_DATE с помощью функции**, SSMA преобразует TO_CHAR (даты, формат) в TO_CHAR_DATE функцию с помощью английского языка для преобразования.  
   
--   При выборе **TO_CHAR_DATE_LS с помощью функции (NLS осторожностью)**, SSMA преобразует TO_CHAR (даты, формат) в TO_CHAR_DATE_LS функцию с помощью языка сеанса для преобразования  
+-   При выборе **TO_CHAR_DATE_LS с помощью функции (NLS осторожностью)** , SSMA преобразует TO_CHAR (даты, формат) в TO_CHAR_DATE_LS функцию с помощью языка сеанса для преобразования  
   
 Если выбран режим преобразования в **режим** », вкладка «SSMA применяется следующий параметр:  
   

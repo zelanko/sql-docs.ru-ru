@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a2e91899172dfc6d640df0c33c77e32de3c1c21c
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66011660"
 ---
 # <a name="use-native-format-to-import-or-export-data-sql-server"></a>Использование собственного формата для импорта или экспорта данных
@@ -80,7 +80,7 @@ ms.locfileid: "66011660"
 |**bcp**|**-n**|Вызывает **bcp** служебной программы для использования собственных типов данных.<sup> 1</sup>|  
 |BULK INSERT|DATAFILETYPE **='** native **'**|Использует собственный тип данных или расширенный собственный тип данных. Учтите, что параметр DATAFILETYPE не нужен, если типы данных указываются в файле форматирования.|  
   
- <sup>1</sup> Чтобы загрузить собственные (**- n**) данные в формате, совместимом с более ранними версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] клиентов необходимо использовать **-V** переключения. Дополнительные сведения см. в разделе [Импорт данных в собственном и символьном формате из предыдущих версий SQL Server](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md).  
+ <sup>1</sup> Чтобы загрузить собственные ( **- n**) данные в формате, совместимом с более ранними версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] клиентов необходимо использовать **-V** переключения. Дополнительные сведения см. в разделе [Импорт данных в собственном и символьном формате из предыдущих версий SQL Server](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md).  
   
  Дополнительные сведения см. в статьях [Программа bcp](../../tools/bcp-utility.md), [BULK INSERT (Transact-SQL)](/sql/t-sql/statements/bulk-insert-transact-sql) и [OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql).  
   
