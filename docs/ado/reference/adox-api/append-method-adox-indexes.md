@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 7190fa68b8204e6b1cfea68a6571e07fd78a9bbc
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66718959"
 ---
 # <a name="append-method-adox-indexes"></a>Метод Append (коллекция Indexes ADOX)
@@ -38,7 +38,7 @@ Indexes.Append Index [,Columns]
  **Индекс** добавляемый объект или имя индекса для создания и добавления.  
   
  *Столбцы*  
- Необязательный. Объект **Variant** значение, указывающее имена столбцов для индексирования. *Столбцы* параметр соответствует параметру значения [имя](../../../ado/reference/adox-api/name-property-adox.md) свойство [столбец](../../../ado/reference/adox-api/column-object-adox.md) объекта или объектов.  
+ Необязательный параметр. Объект **Variant** значение, указывающее имена столбцов для индексирования. *Столбцы* параметр соответствует параметру значения [имя](../../../ado/reference/adox-api/name-property-adox.md) свойство [столбец](../../../ado/reference/adox-api/column-object-adox.md) объекта или объектов.  
   
 ## <a name="remarks"></a>Примечания  
  *Столбцы* параметр может принимать либо имя столбца, либо массив имен столбцов.  

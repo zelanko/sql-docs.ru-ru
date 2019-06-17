@@ -13,10 +13,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 6e390430115daf394c5e94267dad30a87851375d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63128699"
 ---
 # <a name="sql-server-express-localdb-header-and-version-information"></a>Заголовок и сведения о версии SQL Server Express LocalDB
@@ -44,7 +44,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12E.LOCALDB\ MSS
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server Local DB\Installed Versions]  
 ```  
   
- Этот ключ содержит список ключей, по одному для каждой из установленных на компьютере версий LocalDB. Каждый из этих разделов с помощью номера версии LocalDB в формате  *\<основной номер версии >*. *\<номер_дополнительной_версии >* (например, ключ для [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] имеет имя 12.0). В каждом из ключей версий содержится пара «имя-значение» `InstanceAPIPath`, определяющая полный путь к установленному в составе соответствующей версии файлу SQLUserInstance.dll. В следующем примере показаны записи реестра на компьютере, на котором установлены версии 11.0 и 12.0 LocalDB.  
+ Этот ключ содержит список ключей, по одному для каждой из установленных на компьютере версий LocalDB. Каждый из этих разделов с помощью номера версии LocalDB в формате  *\<основной номер версии >* . *\<номер_дополнительной_версии >* (например, ключ для [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] имеет имя 12.0). В каждом из ключей версий содержится пара «имя-значение» `InstanceAPIPath`, определяющая полный путь к установленному в составе соответствующей версии файлу SQLUserInstance.dll. В следующем примере показаны записи реестра на компьютере, на котором установлены версии 11.0 и 12.0 LocalDB.  
   
 ```  
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server Local DB\Installed Versions\12.0]  

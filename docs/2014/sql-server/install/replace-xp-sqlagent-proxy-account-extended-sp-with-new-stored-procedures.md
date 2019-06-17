@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4faff8420e318f7250cfc67dda173197d8028f0b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66092761"
 ---
 # <a name="replace-usage-of-the-xpsqlagentproxyaccount-extended-stored-procedure-with-new-stored-procedures"></a>Замена вызовов расширенной хранимой процедуры xp_sqlagent_proxy_account на вызовы новых хранимых процедур
@@ -48,7 +48,7 @@ ms.locfileid: "66092761"
 >  После обновления до [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], все инструкции, использующие **xp_sqlagent_proxy_account** расширенной хранимой процедуры не будет работать. Используйте **sp_xp_cmdshell_proxy_account** вместо **xp_sqlagent_proxy_account** задать прокси-сервер для **xp_cmdshell**.  
   
 ## <a name="component"></a>Компонент  
- Агент[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]   
+ Агент[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Проблемы обновления агента SQL Server](../../../2014/sql-server/install/sql-server-agent-upgrade-issues.md)  

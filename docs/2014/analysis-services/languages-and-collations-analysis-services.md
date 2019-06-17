@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 62956774e203b1438de1ea07708940d0711053ac
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66079381"
 ---
 # <a name="languages-and-collations-analysis-services"></a>Языки и параметры сортировки (службы Analysis Services)
@@ -91,7 +91,7 @@ ms.locfileid: "66079381"
   
 -   0x0407 или 1031 — **немецкий (Германия)**  
   
--   0x0416 или 1046 — **португальский (Бразилия)**.  
+-   0x0416 или 1046 — **португальский (Бразилия)** .  
   
  Более полный список см. в разделе [Идендификаторы языковых стандартов, назначаемые в Майкрософт](https://msdn.microsoft.com/goglobal/bb964664.aspx). Дополнительные сведения см. в разделе [кодовые страницы](/windows/desktop/Intl/code-pages).  
   

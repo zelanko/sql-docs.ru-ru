@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2513bc3837dd224f6561eb0015ced538ea3add8c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62678452"
 ---
-# <a name="lesson-1-creating-a-time-series-mining-model-and-mining-structure"></a>Урок 1. Создание модели интеллектуального анализа данных и структура интеллектуального анализа данных временных рядов
+# <a name="lesson-1-creating-a-time-series-mining-model-and-mining-structure"></a>Урок 1. Создание модели и структуры интеллектуального анализа данных на основе временных рядов
   На этом занятии будет создана модель интеллектуального анализа данных, с помощью которой можно спрогнозировать значения во времени на основании исторических данных. После создания модели автоматически будет создана базовая структура, которую можно использовать в качестве основы для дополнительных моделей интеллектуального анализа данных.  
   
  На этом занятии предполагается, что вы знакомы с моделями прогнозирования и требованиями алгоритма временных рядов (Майкрософт). Дополнительные сведения см. в статье [Microsoft Time Series Algorithm](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md).  

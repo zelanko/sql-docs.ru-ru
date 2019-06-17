@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a1ff35cfc7d5e8611c06981b2e3a9fe9dd6e82fd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62769000"
 ---
 # <a name="upgrade-integration-services-packages"></a>Обновление пакетов служб Integration Services
@@ -81,14 +81,14 @@ ms.locfileid: "62769000"
   
 -   DTExecUI.exe.config  
   
- Чтобы использовать [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] для проектирования пакетов, которые включают [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] настраиваемые компоненты, необходимо изменить файл devenv.exe.config, который находится в каталоге  *\<диска >*: \Program Files\ Microsoft Visual Studio 10.0\Common7\IDE.  
+ Чтобы использовать [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] для проектирования пакетов, которые включают [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] настраиваемые компоненты, необходимо изменить файл devenv.exe.config, который находится в каталоге  *\<диска >* : \Program Files\ Microsoft Visual Studio 10.0\Common7\IDE.  
   
  Чтобы эти пакеты работали с клиентскими приложениями, созданными для среды выполнения [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], включите правила переадресации в разделе файла *.exe.config для исполняемого файла. Правила перенаправляют сборки среды выполнения на версию 11.0.0.0 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]). Подробнее о перенаправлении версии сборки см. в разделе [Элемент \<assemblyBinding> для \<runtime>](https://msdn.microsoft.com/library/twy1dw1e.aspx).  
   
 ### <a name="locating-the-assemblies"></a>Нахождение сборок  
- В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]сборки служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] были обновлены до .NET 4.0. Существует отдельный глобальный кэш сборок для .NET 4, который находится в следующем расположении: *\<диск>*:\Windows\Microsoft.NET\assembly. Там вы можете найти все сборки [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , обычно в папке GAC_MSIL.  
+ В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]сборки служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] были обновлены до .NET 4.0. Существует отдельный глобальный кэш сборок для .NET 4, который находится в следующем расположении: *\<диск>* :\Windows\Microsoft.NET\assembly. Там вы можете найти все сборки [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , обычно в папке GAC_MSIL.  
   
- Как и в предыдущих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], путь к основным DLL-файлам расширения [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] имеет вид: *\<диск>*:\Program Files\Microsoft SQL Server\100\SDK\Assemblies.  
+ Как и в предыдущих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], путь к основным DLL-файлам расширения [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] имеет вид: *\<диск>* :\Program Files\Microsoft SQL Server\100\SDK\Assemblies.  
   
 ## <a name="understanding-sql-server-package-upgrade-results"></a>Основные сведения о результатах обновления пакетов SQL Server  
  В процессе обновления пакетов большинство компонентов и функций в пакетах [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] успешно преобразуются в соответствующие объекты из текущего выпуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Однако существует несколько компонентов и функций, которые не будут обновлены или на результаты обновления которых следует обратить внимание. В следующей таблице приведены эти компоненты и функции.  

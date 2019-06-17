@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0079ca11eb6400b2bce524fd909acbaafd112323
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66064708"
 ---
 # <a name="invoke-sqlcmd-cmdlet"></a>Invoke-Sqlcmd, командлет
@@ -91,7 +91,7 @@ Invoke-Sqlcmd "SELECT DB_NAME() AS DatabaseName;"
 ## <a name="comparing-invoke-sqlcmd-and-the-sqlcmd-utility"></a>Сравнение командлета Invoke-Sqlcmd и программы sqlcmd  
  Командлет**Invoke-Sqlcmd** может использоваться для запуска многих сценариев, которые могут быть также выполнены с помощью служебной программы **sqlcmd** . Но командлет **Invoke-Sqlcmd** функционирует в среде Windows PowerShell, отличной от среды командной строки, в которой работает **sqlcmd** . Поведение **Invoke-Sqlcmd** было изменено в целях обеспечения работы в среде Windows PowerShell.  
   
- Тем не менее в командлете **Invoke-Sqlcmd** реализованы не все команды **sqlcmd**. Нереализованные команды включают следующее: **:!!**, **:connect**, **:error**, **:out**, **:ed**, **:list**, **:listvar**, **:reset**, **:perftrace**и **:serverlist**.  
+ Тем не менее в командлете **Invoke-Sqlcmd** реализованы не все команды **sqlcmd**. Нереализованные команды включают следующее: **:!!** , **:connect**, **:error**, **:out**, **:ed**, **:list**, **:listvar**, **:reset**, **:perftrace**и **:serverlist**.  
   
  Командлет**Invoke-Sqlcmd** не инициализирует среду **sqlcmd** или переменные сценария, такие как SQLCMDDBNAME или SQLCMDWORKSTATION.  
   

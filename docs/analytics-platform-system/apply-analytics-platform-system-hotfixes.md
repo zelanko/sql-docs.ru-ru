@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: b4b72017bb23ae44da9c5884f0ebf2a8b099fd3e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63019049"
 ---
 # <a name="apply-analytics-platform-system-hotfixes"></a>Применение исправлений Analytics Platform System
@@ -32,7 +32,7 @@ ms.locfileid: "63019049"
   
 -   Система Analytics Platform System имя входа с разрешениями для доступа к консоли администрирования, чтобы отслеживать состояние устройства. <!-- MISSING LINKS See [Grant Permissions to Use the Admin Console &#40;SQL Server PDW&#41;](../sqlpdw/grant-permissions-to-use-the-admin-console-sql-server-pdw.md).  -->  
   
--   Знания для подключения к учетной записи администратора домена Fabric _< имя_домена >_**-HST01** узла.  
+-   Знания для подключения к учетной записи администратора домена Fabric _< имя_домена >_ **-HST01** узла.  
   
 ## <a name="HowToInstallPDW"></a>Для применения исправлений Analytics Platform System  
 В отличие от обновлений Майкрософт исправления для программного обеспечения Analytics Platform System не обрабатываются с помощью WSUS. Они имеют другой рабочий процесс и устанавливаются, запустив пакет исправлений.  
