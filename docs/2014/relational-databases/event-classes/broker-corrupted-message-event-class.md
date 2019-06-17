@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a49f10826496e9e8fea46b1846b74535a173f821
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62664089"
 ---
 # <a name="brokercorrupted-message-event-class"></a>Broker:Corrupted Message, класс событий
@@ -45,7 +45,7 @@ ms.locfileid: "62664089"
 |**NTDomainName**|**nvarchar**|Домен Windows, к которому принадлежит пользователь.|7|Да|  
 |**NTUserName**|**nvarchar**|Имя пользователя, которому принадлежит соединение, создавшее это событие.|6|Да|  
 |**ObjectName**|**nvarchar**|Имя службы другой стороны диалога и строка соединения, используемая удаленной базой данных для установки соединения с этой базой данных.|34|Нет|  
-|**RoleName**|**nvarchar**|Роль конечной точки, получающей это сообщение. Одно из следующих значений.<br /><br /> **инициатор**:<br />                  Получающая конечная точка является инициатором диалога.<br /><br /> **целевой объект**:<br />                  Получающая конечная точка является адресатом диалога.|38|Нет|  
+|**RoleName**|**nvarchar**|Роль конечной точки, получающей это сообщение. Одно из следующих значений.<br /><br /> **initiator**:<br />                  Получающая конечная точка является инициатором диалога.<br /><br /> **target**:<br />                  Получающая конечная точка является адресатом диалога.|38|Нет|  
 |**ServerName**|**nvarchar**|Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , подвергаемого трассировке.|26|Нет|  
 |**Severity**|**int**|Если ошибка стала причиной, по которой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] удалил сообщение — серьезность этой ошибки.|29|Нет|  
 |**SPID**|**int**|Идентификатор процесса сервера, который [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] присвоил процессу, связанному с клиентом.|12|Да|  

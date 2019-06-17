@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 769e4cb9298ce2a92f7200d9e04743d6b16f842d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62523887"
 ---
 # <a name="define-transact-sql-job-step-options"></a>Определение параметров для шагов заданий Transact-SQL
@@ -49,7 +49,7 @@ ms.locfileid: "62523887"
   
 2.  Щелкните страницу **Шаги** , шаг задания, а затем — **Изменить**.  
   
-3.  Проверьте, что в диалоговом окне **Свойства шага задания** задан тип задания **Скрипт Transact-SQL (TSQL)**, и выберите страницу **Дополнительно** .  
+3.  Проверьте, что в диалоговом окне **Свойства шага задания** задан тип задания **Скрипт Transact-SQL (TSQL)** , и выберите страницу **Дополнительно** .  
   
 4.  Выберите из списка **Действие при успехе** действие, которое будет инициироваться при успешном выполнении задания.  
   

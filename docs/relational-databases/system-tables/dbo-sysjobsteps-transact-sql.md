@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a9264ed33ffeea224f69b8a880e235753ead1467
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62470749"
 ---
 # <a name="dbosysjobsteps-transact-sql"></a>dbo.sysjobsteps (Transact-SQL)
@@ -52,7 +52,7 @@ ms.locfileid: "62470749"
 |**retry_attempts**|**int**|Число попыток повтора при неуспешном завершении шага.|  
 |**retry_interval**|**int**|Время ожидания между попытками повтора.|  
 |**os_run_priority**|**int**|Зарезервировано.|  
-|**output_file_name**|**nvarchar(200)**|Имя файла, в котором выходные данные этапа, сохраняется **подсистемы** является TSQL, PowerShell, или **CmdExec**_._|  
+|**output_file_name**|**nvarchar(200)**|Имя файла, в котором выходные данные этапа, сохраняется **подсистемы** является TSQL, PowerShell, или **CmdExec** _._|  
 |**last_run_outcome**|**int**|Результат предыдущего выполнения шага задания.<br /><br /> **0** = ошибка<br /><br /> **1** = выполнено успешно<br /><br /> **2** = повторение<br /><br /> **3** = отменено<br /><br /> **5** = неизвестно|  
 |**last_run_duration**|**int**|Продолжительность (ччммсс) шага в секундах при последнем запуске.|  
 |**last_run_retries**|**int**|Число попыток повтора в ходе последнего выполнения шага задания.|  

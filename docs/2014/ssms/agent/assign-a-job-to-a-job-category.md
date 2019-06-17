@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ab7695b6a80772ddcd01996e783fffd806447c59
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62473205"
 ---
 # <a name="assign-a-job-to-a-job-category"></a>Назначение задания в категорию заданий
@@ -49,7 +49,7 @@ ms.locfileid: "62473205"
   
 4.  Щелкните правой кнопкой мыши задание, которое необходимо изменить, и выберите **Свойства**.  
   
-5.  В диалоговом окне **Свойства задания —**_имя_задания_ в списке **Категория** выберите категорию задания, которую нужно назначить заданию.  
+5.  В диалоговом окне **Свойства задания —** _имя_задания_ в списке **Категория** выберите категорию задания, которую нужно назначить заданию.  
   
 6.  Нажмите кнопку **ОК**.  
   

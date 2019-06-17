@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bcc0a95028b1f107f15752692d3dcad090fbe8b1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62659587"
 ---
 # <a name="recommendation-element-dta"></a>Элемент Recommendation (DTA)
@@ -43,7 +43,7 @@ ms.locfileid: "62659587"
 |--------------------|-----------------|  
 |**Тип данных и длина**|Нет.|  
 |**Значение по умолчанию**|Нет.|  
-|**Наличие**|Необязательный параметр. Может использоваться один раз для каждого элемента `Table`.|  
+|**Наличие**|Необязательный. Может использоваться один раз для каждого элемента `Table`.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   

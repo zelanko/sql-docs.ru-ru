@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f09f33f4f153f21cfe7a3c8c538c2f272b3df77b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62507351"
 ---
 # <a name="spcursorprepexec-transact-sql"></a>sp_cursorprepexec (Transact-SQL)
@@ -86,7 +86,7 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
 |0x80000|STATIC_ACCEPTABLE|  
 |0x100000|FAST_FORWARD_ACCEPTABLE|  
   
- Поскольку существует возможность, что запрошенный параметр не будет соответствовать курсору, заданному по  *\<stmt >*, этот параметр используется как входные и выходные данные. В таких случаях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] назначает соответствующий тип и изменяет это значение.  
+ Поскольку существует возможность, что запрошенный параметр не будет соответствовать курсору, заданному по  *\<stmt >* , этот параметр используется как входные и выходные данные. В таких случаях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] назначает соответствующий тип и изменяет это значение.  
   
  *ccopt*  
  Параметр управления параллелизмом. *ccopt* является необязательным параметром требует одного из следующих **int** входных значений.  

@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: f4a57f89a89ed8d5cbf81cc3d63fc1f19b42e51a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62641066"
 ---
 #  <a name="iris-demo-data-for-python-and-r-tutorials-in-sql-server"></a>Демонстрационных данных IRIS учебники Python и R в SQL Server 
@@ -60,7 +60,7 @@ ms.locfileid: "62641066"
     > [!TIP] 
     > Если вы не знакомы с T-SQL, имеет смысл запоминать `DROP...IF` инструкции. При попытке создать таблицу, уже существует, SQL Server возвращает ошибку: «Уже существует объект с именем «iris_data» в базе данных.» Чтобы избежать подобных ошибок рекомендуется удалить все имеющиеся таблицы или другие объекты как часть вашего кода.
 
-4. Запустите следующий код, чтобы создать таблицу, используемую для хранения обученной модели. Для сохранения моделей (R или Python) в SQL Server, они должно быть сериализовано и хранятся в столбце типа **varbinary(max)**. 
+4. Запустите следующий код, чтобы создать таблицу, используемую для хранения обученной модели. Для сохранения моделей (R или Python) в SQL Server, они должно быть сериализовано и хранятся в столбце типа **varbinary(max)** . 
 
     ```sql
     DROP TABLE IF EXISTS iris_models;

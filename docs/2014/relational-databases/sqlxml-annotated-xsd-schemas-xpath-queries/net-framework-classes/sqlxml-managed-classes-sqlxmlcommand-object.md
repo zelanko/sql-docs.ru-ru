@@ -31,10 +31,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d002208a83b58a4c8547bc6ce85db073ced70974
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66010738"
 ---
 # <a name="sqlxmlcommand-object-sqlxml-managed-classes"></a>Объект SqlXmlCommand (управляемые классы SQLXML)
@@ -101,7 +101,7 @@ public SqlXmlCommand(string cnString)
  Текст команды. Это свойство используется для задания текста команды, которую нужно выполнить. Работающий пример см. в разделе [выполнение запросов SQL &#40;управляемых классов SQLXML&#41;](sqlxml-4-0-net-framework-support-managed-classes.md).  
   
  CommandStream  
- Командный поток. Это свойство служит для выполнения команды из файла (например, XML-шаблона). При использовании CommandStream, только **«Шаблон»**, **«UpdateGram»** и **CommandType «DiffGram»** значения поддерживаются. Работающий пример см. в разделе [выполнение файлов шаблонов с помощью свойства CommandStream](executing-template-files-by-using-the-commandstream-property.md).  
+ Командный поток. Это свойство служит для выполнения команды из файла (например, XML-шаблона). При использовании CommandStream, только **«Шаблон»** , **«UpdateGram»** и **CommandType «DiffGram»** значения поддерживаются. Работающий пример см. в разделе [выполнение файлов шаблонов с помощью свойства CommandStream](executing-template-files-by-using-the-commandstream-property.md).  
   
  CommandType  
  Идентифицирует тип команды. Это свойство используется для задания типа команды, которую нужно выполнить. Значения в следующей таблице задают тип команды. Работающий пример см. в разделе [доступ к функциональным возможностям SQLXML в среде .NET](accessing-sqlxml-functionality-in-the-net-environment.md).  

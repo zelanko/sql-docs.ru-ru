@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 001b90eafd26c90f730e5647f0dc62d756ca9d1b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62503769"
 ---
 # <a name="how-to-generate-forecasts-and-predictions-using-machine-learning-models-in-sql-server"></a>Как создавать прогнозы и прогнозы с помощью моделей машинного обучения в SQL Server
@@ -84,7 +84,7 @@ _Оценки_ представляет собой двухэтапный про
 
 **С помощью SQL**
 
-Из кода SQL, вы можете обучить модель с помощью [sp_execute_external_script](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)и непосредственно вставлять обученных моделей в таблицу, в столбец типа **varbinary(max)**. Простой пример, см. в разделе [создания preditive модели в R](../tutorials/rtsql-create-a-predictive-model-r.md)
+Из кода SQL, вы можете обучить модель с помощью [sp_execute_external_script](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)и непосредственно вставлять обученных моделей в таблицу, в столбец типа **varbinary(max)** . Простой пример, см. в разделе [создания preditive модели в R](../tutorials/rtsql-create-a-predictive-model-r.md)
 
 **С помощью языка R**
 

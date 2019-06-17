@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 1b640d9d27e9ad624dab83fdb97a301b3a54b1e2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62468200"
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>Поддержка среды SQL Server Management Studio для In-Memory OLTP
@@ -136,7 +136,7 @@ ms.locfileid: "62468200"
   
         -   Копирование баз данных. Для баз данных с оптимизированными для памяти объектами в рамках транзакции база данных не будет создана на целевом сервере, а данные не будут переданы.  
   
-        -   Импорт и экспорт данных. Используйте параметр **"Скопировать данные из одной или нескольких таблиц или представлений" мастера импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**. Если целевая таблица оптимизирована для памяти, которая не существует в целевой базе данных:  
+        -   Импорт и экспорт данных. Используйте параметр **"Скопировать данные из одной или нескольких таблиц или представлений" мастера импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** . Если целевая таблица оптимизирована для памяти, которая не существует в целевой базе данных:  
   
             1.  В **мастере импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** в окне **Выбор копирования таблицы или запроса** выберите параметр **Скопировать данные из одной или нескольких таблиц или представлений**. Затем нажмите кнопку **Далее**.  
   

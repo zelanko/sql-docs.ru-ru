@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8a99a98fd0d471e8cb0f8ab880ae1a6c55e1b121
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62655509"
 ---
 # <a name="regenerate-custom-transactional-procedures-to-reflect-schema-changes"></a>Повторное создание пользовательских процедур транзакций для отражения изменений схем
@@ -30,7 +30,7 @@ ms.locfileid: "62655509"
   
     1.  При выполнении процедуры [sp_addarticle (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) бит **@schema_option** 0x02 должен иметь значение **true**.  
   
-    2.  Выполните процедуру [sp_register_custom_scripting &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql), указав значение 'insert', 'update' или 'delete' для параметра **@type**, а также имя пользовательской процедуры скрипта в качестве значения для параметра **@value**.  
+    2.  Выполните процедуру [sp_register_custom_scripting &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql), указав значение 'insert', 'update' или 'delete' для параметра **@type** , а также имя пользовательской процедуры скрипта в качестве значения для параметра **@value** .  
   
      При следующем изменении схемы репликация вызывает эту хранимую процедуру, чтобы создать скрипт определения для новой пользовательской хранимой процедуры, а затем передает ее всем подписчикам.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "62655509"
   
     1.  При выполнении процедуры [sp_addarticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) установите бит **@schema_option** в значение **false**, чтобы репликация не формировала пользовательские процедуры на стороне подписчика автоматически.  
   
-    2.  Перед каждым изменением схемы создавайте новый файл скрипта и регистрируйте скрипт в репликации, выполняя процедуру [sp_register_custom_scripting &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql). Укажите значение custom_script для параметра **@type** и путь к этому скрипту у издателя для параметра **@value**.  
+    2.  Перед каждым изменением схемы создавайте новый файл скрипта и регистрируйте скрипт в репликации, выполняя процедуру [sp_register_custom_scripting &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql). Укажите значение custom_script для параметра **@type** и путь к этому скрипту у издателя для параметра **@value** .  
   
      При следующем изменении соответствующей схемы этот скрипт выполняется у каждого подписчика в той же транзакции, что и команда DDL. После завершения изменений схемы регистрация скрипта отменяется. Чтобы этот скрипт выполнялся при последующем изменении схемы, его необходимо повторно зарегистрировать.  
   

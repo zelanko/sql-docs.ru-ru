@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 56d8ade3b270f1e81cb2ac0455a245bd78cacd70
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62659010"
 ---
 # <a name="predictstdev-dmx"></a>PredictStdev (расширения интеллектуального анализа данных)
@@ -32,7 +32,7 @@ PredictStdev(<scalar column reference>)
  Скалярный столбец.  
   
 ## <a name="return-type"></a>Тип возвращаемых данных  
- Скалярное значение типа, который задается параметром  *\<ссылка на скалярный столбец >*.  
+ Скалярное значение типа, который задается параметром  *\<ссылка на скалярный столбец >* .  
   
 ## <a name="remarks"></a>Примечания  
  Если ссылка на столбец является дискретной, **PredictStdev** возвращает 0, так как невозможно вычислить среднеквадратичное отклонение по дискретным значениям.  
