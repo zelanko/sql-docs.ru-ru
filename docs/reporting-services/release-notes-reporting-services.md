@@ -1,20 +1,20 @@
 ---
 title: Заметки о выпуске для (SSRS) 2017 и более поздних версий | Документация Майкрософт
-ms.date: 09/01/2018
+ms.date: 02/18/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
-ms.reviewer: maghan
+ms.reviewer: maggies
 author: casualoak
-ms.author: RhysSchmidtke
+ms.author: rhys
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: c85d3811fc467d94dc1841b871964e3bb594e2df
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: cd2f9dec39075b332b2ae38c622f3970faf8d331
+ms.sourcegitcommit: c40f663d4486e574fd749f2c8e84c98d41970352
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58283301"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67037852"
 ---
 # <a name="release-notes-for-sql-server-reporting-services-ssrs-2017-and-later"></a>Заметки о выпуске SQL Server Reporting Services (SSRS) 2017 и более поздних версий
 
@@ -86,7 +86,7 @@ GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 | Размер текста не масштабируется, если значение pageHeight менее 1,25 см. | &nbsp; |
 | Взаимоблокировка возникает в базе данных каталога SSRS, когда используется в сочетании с CRM. | &nbsp; |
 | Заголовки столбцов, выровненные по вертикали, неправильно отображаются при прокрутке отчета. | &nbsp; |
-| Пользователям, которым назначена роль оператора отчетов SCOM, заблокирован доступ к веб-порталу служб SSRS. | &nbsp; |
+| Пользователи, добавленные в роль отчетов System Center Operations Manager имеют доступ к заблокирован SSRS веб-портал. | &nbsp; |
 | Тайские символ не является корректно экспортированы в PDF-ФАЙЛ. | &nbsp; |
 | Изменение поведения роли браузера. | &nbsp; |
 | Параметр rc:Toolbar=false не работает в выпуске Express. | &nbsp; |

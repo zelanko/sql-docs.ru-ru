@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ff882caf0ce5d9ef7d2e9f059daed89ed4b50d82
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63126107"
 ---
 # <a name="delete-a-data-source-odbc"></a>Удаление источника данных (ODBC)
@@ -24,7 +24,7 @@ ms.locfileid: "63126107"
   
 ### <a name="to-delete-a-data-source-by-using-odbc-administrator"></a>Удаление источника данных с помощью администратора ODBC  
   
-1.  В **панели управления**откройте **Администрирование**, а затем дважды щелкните **источники данных (ODBC)**. Либо можно запустить файл odbcad32.exe из командной строки.  
+1.  В **панели управления**откройте **Администрирование**, а затем дважды щелкните **источники данных (ODBC)** . Либо можно запустить файл odbcad32.exe из командной строки.  
   
 2.  Нажмите кнопку **DSN пользователя**, **системный DSN**, или **файловый DSN** вкладки.  
   

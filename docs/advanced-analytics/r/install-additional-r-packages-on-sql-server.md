@@ -3,17 +3,17 @@ title: Установка новых пакетов языка R - служб м
 description: Добавление новых пакетов R в SQL Server 2016 R Services или служб SQL Server 2017 машинного обучения (в базе данных)
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/22/2019
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: b8c935400188ae6905a9915907fb097d02100ad2
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: fb8e5512a9b623a3e97d80289b928d66314f9d72
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65994210"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140587"
 ---
 # <a name="install-new-r-packages-on-sql-server"></a>Установка новых пакетов R в SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -88,8 +88,7 @@ R разработчики привыкли к созданию библиоте
 
 Если вы установили SQL Server 2017 Microsoft Machine Learning Server (изолированный) или SQL Server 2016 R Server (изолированную версию) в дополнение к аналитики в базе данных (службы машинного обучения SQL Server 2017 и SQL Server 2016 R Services), на компьютере установлены отдельные установки R для каждого из них дубликатов всех средств R и библиотеки.
 
-Пакеты, которые установлены в библиотеке R_SERVER, используются только на отдельном сервере и может быть недоступна для экземпляра SQL Server (в базе данных). Всегда используйте `R_SERVICES` библиотеки при установке пакетов, которые вы хотите использовать в базе данных на сервере SQL Server. Дополнительные сведения о путях см. в разделе [расположение библиотеки пакета](installing-and-managing-r-packages.md#package-library-location).
-
+Пакеты, которые установлены в библиотеке R_SERVER, используются только на отдельном сервере и может быть недоступна для экземпляра SQL Server (в базе данных). Всегда используйте `R_SERVICES` библиотеки при установке пакетов, которые вы хотите использовать в базе данных на сервере SQL Server. Дополнительные сведения о путях см. в разделе [расположение библиотеки пакета](../package-management/default-packages.md).
 
 ## <a name="see-also"></a>См. также
 

@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6ca4142ca78d0842b535036e99464b9a1b7dc2c9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62997126"
 ---
 # <a name="spchangemergepublication-transact-sql"></a>sp_changemergepublication (Transact-SQL)
@@ -46,7 +46,7 @@ sp_changemergepublication [ @publication= ] 'publication'
   
 `[ @property = ] 'property'` Свойство, изменяемое для данной публикации. *Свойство* — **sysname**, и может принимать одно из значений, перечисленных в следующей таблице.  
   
-`[ @value = ] 'value'` Новое значение для указанного свойства. *значение* — **nvarchar(255)**, и может принимать одно из значений, перечисленных в следующей таблице.  
+`[ @value = ] 'value'` Новое значение для указанного свойства. *значение* — **nvarchar(255)** , и может принимать одно из значений, перечисленных в следующей таблице.  
   
  В данной таблице описаны свойства публикации, доступные для изменения, а также ограничения на значения этих свойств.  
   

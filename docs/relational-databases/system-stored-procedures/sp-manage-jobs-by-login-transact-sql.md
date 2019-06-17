@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e0cd3573c108cdd5a57bbb2cf6d542415710f24c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62957159"
 ---
 # <a name="spmanagejobsbylogin-transact-sql"></a>sp_manage_jobs_by_login (Transact-SQL)
@@ -43,7 +43,7 @@ sp_manage_jobs_by_login
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @action = ] 'action'` Действие, выполняемое для указанного имени входа. *Действие* — **varchar(10)**, не имеет значения по умолчанию. Когда *действие*— **удалить**, **sp_manage_jobs_by_login** удаляет все задания, принадлежащие *current_owner_login_name*. Когда *действие* — **ПЕРЕНАЗНАЧИТЬ**, все задания назначаются *new_owner_login_name*.  
+`[ @action = ] 'action'` Действие, выполняемое для указанного имени входа. *Действие* — **varchar(10)** , не имеет значения по умолчанию. Когда *действие*— **удалить**, **sp_manage_jobs_by_login** удаляет все задания, принадлежащие *current_owner_login_name*. Когда *действие* — **ПЕРЕНАЗНАЧИТЬ**, все задания назначаются *new_owner_login_name*.  
   
 `[ @current_owner_login_name = ] 'current_owner_login_name'` Имя входа текущего владельца задания. *current_owner_login_name* — **sysname**, не имеет значения по умолчанию.  
   

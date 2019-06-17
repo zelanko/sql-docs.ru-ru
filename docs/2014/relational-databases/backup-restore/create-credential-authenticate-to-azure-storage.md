@@ -1,27 +1,25 @@
 ---
 title: Создание учетных данных — аутентификация в хранилище Azure | Документация Майкрософт
 ms.custom: ''
-ms.date: 03/01/2017
-ms.prod: sql
-ms.prod_service: backup-restore
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: backup-restore
 ms.topic: conceptual
 f1_keywords:
-- sql13.swb.backuptourl.createcred.f1
+- sql12.swb.backuptourl.createcred.f1
 ms.assetid: 0622619d-27c5-4ff0-83e5-cde31648c27a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2c5428611c67315407ed31478fbb60ccca1b6dd2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62921874"
 ---
 # <a name="create-credential---authenticate-to-azure-storage"></a>Создание учетных данных — проверка подлинности в хранилище Azure
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Чтобы создать учетные данные SQL, воспользуйтесь диалоговым окном **Резервное копирование по URL-адресу — создать учетные данные**.  
   
  При создании учетных данных с помощью этого диалогового окна необходимо предоставить сертификат управления Windows Azure, добавленный в локальное хранилище сертификатов, или профиль публикации, загруженный на компьютер для проверки подписки и сведений об учетной записи хранения.  

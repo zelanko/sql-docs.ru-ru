@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2b41519ee6a6d31be33d92c8fbdf2ab503c93ec1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63265082"
 ---
 # <a name="how-to-deploy-a-custom-report-item"></a>Практическое руководство. Развертывание пользовательского элемента отчета
@@ -24,7 +24,7 @@ ms.locfileid: "63265082"
   
 ### <a name="to-deploy-a-custom-report-item"></a>Развертывание пользовательского элемента отчета  
   
-1.  Произведите редактирование файла Rsreportdesigner.config, настроив компоненты времени разработки и компоненты времени выполнения, принадлежащие пользовательскому элементу отчета, для использования в конструкторе.  Следует заметить, что запись `ReportItemName` должна соответствовать атрибуту `CustomReportItemAttribute`, используемому в классе `CustomReportItemDesigner`. Пример:  
+1.  Произведите редактирование файла Rsreportdesigner.config, настроив компоненты времени разработки и компоненты времени выполнения, принадлежащие пользовательскому элементу отчета, для использования в конструкторе. Следует заметить, что запись `ReportItemName` должна соответствовать атрибуту `CustomReportItemAttribute`, используемому в классе `CustomReportItemDesigner`. Пример:  
   
     ```  
     <ReportItems>  

@@ -16,7 +16,7 @@
           href: behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md
 - name: Основные понятия служб Reporting Services (SSRS)
   href: reporting-services-concepts-ssrs.md
-- name: 'Выбор средств анализа и создания отчетов корпорации Майкрософт '
+- name: Выбор средств анализа и создания отчетов корпорации Майкрософт
   href: choosing-microsoft-business-intelligence-bi-tools-for-analysis-and-reporting.md
 - name: Планирование
   href: planning-for-reporting-services.md
