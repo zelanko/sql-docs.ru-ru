@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 746d547b680817868de33759983dc908e9806bb6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63128766"
 ---
 # <a name="permissions-database-engine"></a>Разрешения (ядро СУБД)
@@ -102,15 +102,15 @@ ms.locfileid: "63128766"
 |SELECT|Синонимы<br /><br /> Таблицы и столбцы<br /><br /> Функции [!INCLUDE[tsql](../../includes/tsql-md.md)] с табличным значением и среды CLR, а также столбцы<br /><br /> Представления и столбцы|  
 |VIEW CHANGE TRACKING|Таблицы<br /><br /> Схемы|  
 |UPDATE|Синонимы<br /><br /> Таблицы и столбцы<br /><br /> Представления и столбцы<br /><br /> Объекты последовательности|  
-|REFERENCES|Скалярные и агрегатные функции (языка[!INCLUDE[tsql](../../includes/tsql-md.md)] и среды CLR)<br /><br /> Очереди[!INCLUDE[ssSB](../../includes/sssb-md.md)] <br /><br /> Таблицы и столбцы<br /><br /> Функции с табличным значением ([!INCLUDE[tsql](../../includes/tsql-md.md)] и CLR) и столбцы<br /><br /> Типы<br /><br /> Представления и столбцы<br /><br /> Объекты последовательности|  
+|REFERENCES|Скалярные и агрегатные функции (языка[!INCLUDE[tsql](../../includes/tsql-md.md)] и среды CLR)<br /><br /> Очереди[!INCLUDE[ssSB](../../includes/sssb-md.md)]<br /><br /> Таблицы и столбцы<br /><br /> Функции с табличным значением ([!INCLUDE[tsql](../../includes/tsql-md.md)] и CLR) и столбцы<br /><br /> Типы<br /><br /> Представления и столбцы<br /><br /> Объекты последовательности|  
 |INSERT|Синонимы<br /><br /> Таблицы и столбцы<br /><br /> Представления и столбцы|  
 |DELETE|Синонимы<br /><br /> Таблицы и столбцы<br /><br /> Представления и столбцы|  
 |EXECUTE|Процедуры (языка[!INCLUDE[tsql](../../includes/tsql-md.md)] и среды CLR)<br /><br /> Скалярные и агрегатные функции (языка[!INCLUDE[tsql](../../includes/tsql-md.md)] и среды CLR)<br /><br /> Синонимы<br /><br /> Типы CLR|  
-|RECEIVE|Очереди[!INCLUDE[ssSB](../../includes/sssb-md.md)] |  
-|VIEW DEFINITION|Группы доступности<br /><br /> Процедуры (языка[!INCLUDE[tsql](../../includes/tsql-md.md)] и среды CLR)<br /><br /> Очереди[!INCLUDE[ssSB](../../includes/sssb-md.md)] <br /><br /> Скалярные и агрегатные функции (языка[!INCLUDE[tsql](../../includes/tsql-md.md)] и среды CLR)<br /><br /> Имена входа, пользователи и роли<br /><br /> Синонимы<br /><br /> Таблицы<br /><br /> Функции с табличным значением ([!INCLUDE[tsql](../../includes/tsql-md.md)] и CLR)<br /><br /> Представления<br /><br /> Объекты последовательности|  
-|ALTER|Группы доступности<br /><br /> Процедуры (языка[!INCLUDE[tsql](../../includes/tsql-md.md)] и среды CLR)<br /><br /> Скалярные и агрегатные функции (языка[!INCLUDE[tsql](../../includes/tsql-md.md)] и среды CLR)<br /><br /> Объекты последовательности<br /><br /> Имена входа, пользователи и роли<br /><br /> Очереди[!INCLUDE[ssSB](../../includes/sssb-md.md)] <br /><br /> Таблицы<br /><br /> Функции с табличным значением ([!INCLUDE[tsql](../../includes/tsql-md.md)] и CLR)<br /><br /> Представления|  
+|RECEIVE|Очереди[!INCLUDE[ssSB](../../includes/sssb-md.md)]|  
+|VIEW DEFINITION|Группы доступности<br /><br /> Процедуры (языка[!INCLUDE[tsql](../../includes/tsql-md.md)] и среды CLR)<br /><br /> Очереди[!INCLUDE[ssSB](../../includes/sssb-md.md)]<br /><br /> Скалярные и агрегатные функции (языка[!INCLUDE[tsql](../../includes/tsql-md.md)] и среды CLR)<br /><br /> Имена входа, пользователи и роли<br /><br /> Синонимы<br /><br /> Таблицы<br /><br /> Функции с табличным значением ([!INCLUDE[tsql](../../includes/tsql-md.md)] и CLR)<br /><br /> Представления<br /><br /> Объекты последовательности|  
+|ALTER|Группы доступности<br /><br /> Процедуры (языка[!INCLUDE[tsql](../../includes/tsql-md.md)] и среды CLR)<br /><br /> Скалярные и агрегатные функции (языка[!INCLUDE[tsql](../../includes/tsql-md.md)] и среды CLR)<br /><br /> Объекты последовательности<br /><br /> Имена входа, пользователи и роли<br /><br /> Очереди[!INCLUDE[ssSB](../../includes/sssb-md.md)]<br /><br /> Таблицы<br /><br /> Функции с табличным значением ([!INCLUDE[tsql](../../includes/tsql-md.md)] и CLR)<br /><br /> Представления|  
 |TAKE OWNERSHIP|Группы доступности<br /><br /> Роли<br /><br /> Процедуры (языка[!INCLUDE[tsql](../../includes/tsql-md.md)] и среды CLR)<br /><br /> Скалярные и агрегатные функции (языка[!INCLUDE[tsql](../../includes/tsql-md.md)] и среды CLR)<br /><br /> роли сервера;<br /><br /> Синонимы<br /><br /> Таблицы<br /><br /> Функции с табличным значением ([!INCLUDE[tsql](../../includes/tsql-md.md)] и CLR)<br /><br /> Представления<br /><br /> Объекты последовательности|  
-|CONTROL|Группы доступности<br /><br /> Процедуры (языка[!INCLUDE[tsql](../../includes/tsql-md.md)] и среды CLR)<br /><br /> Скалярные и агрегатные функции (языка[!INCLUDE[tsql](../../includes/tsql-md.md)] и среды CLR)<br /><br /> Имена входа, пользователи и роли<br /><br /> Очереди[!INCLUDE[ssSB](../../includes/sssb-md.md)] <br /><br /> Синонимы<br /><br /> Таблицы<br /><br /> Функции с табличным значением ([!INCLUDE[tsql](../../includes/tsql-md.md)] и CLR)<br /><br /> Представления<br /><br /> Объекты последовательности|  
+|CONTROL|Группы доступности<br /><br /> Процедуры (языка[!INCLUDE[tsql](../../includes/tsql-md.md)] и среды CLR)<br /><br /> Скалярные и агрегатные функции (языка[!INCLUDE[tsql](../../includes/tsql-md.md)] и среды CLR)<br /><br /> Имена входа, пользователи и роли<br /><br /> Очереди[!INCLUDE[ssSB](../../includes/sssb-md.md)]<br /><br /> Синонимы<br /><br /> Таблицы<br /><br /> Функции с табличным значением ([!INCLUDE[tsql](../../includes/tsql-md.md)] и CLR)<br /><br /> Представления<br /><br /> Объекты последовательности|  
 |IMPERSONATE|Имена входа и пользователи|  
   
 > [!CAUTION]  

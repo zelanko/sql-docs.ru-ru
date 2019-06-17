@@ -1,24 +1,20 @@
 ---
 title: Настройка таблицы стилей для просмотра HTML-СТРАНИЦ и диспетчера отчетов | Документация Майкрософт
-ms.custom: ''
-ms.date: 03/06/2017
 ms.prod: sql-server-2014
-ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
-helpviewer_keywords:
-- style sheets [Reporting Services]
-ms.assetid: df805cff-b1de-4062-b2ac-423f37390fbd
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d9c4a57413db37c8f93b1a311542398417bfeff0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
-ms.translationtype: HT
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 04/26/2019
+ms.openlocfilehash: 7c7745d69e234f81c2a331d214789e93e9fd4014
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63264857"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "64568264"
 ---
 # <a name="customize-style-sheets-for-html-viewer-and-report-manager"></a>Настройка таблицы стилей для средства просмотра HTML-страниц и диспетчера отчетов
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] предоставляют файлы по умолчанию каскадных таблиц стилей (CSS), определяющие стили на **отчетов** панели инструментов в средстве просмотра HTML и для диспетчера отчетов. Веб-разработчик или пользователь, имеющий опыт создания каскадных таблиц стилей, может (на свой страх и риск) модифицировать таблицы стилей по умолчанию, чтобы изменить цвета, шрифты и макет панели инструментов или диспетчер отчетов. В этой версии не документированы ни таблицы стилей по умолчанию, ни инструкции по изменению таблиц стилей.  
@@ -37,9 +33,6 @@ ms.locfileid: "63264857"
 |-----------------|-----------------|  
 |Htmlviewer.css|Образец таблицы стилей, который можно использовать в качестве шаблона для создания собственных таблиц стилей для панели инструментов **Отчет** в средстве просмотра HTML-страниц.<br /><br /> Стили по умолчанию, используемые в средстве просмотра HTML-страниц, внедрены в сервер отчетов. Их образец и содержится в файле Htmlviewer.css.|  
 |ReportingServices.css|Определяет стили диспетчера отчетов.|  
-  
-> [!NOTE]  
->  Следующие таблицы стилей используются в интерактивной документации диспетчера отчетов и не подлежат изменению: SQL.CSS и Mailto.css. Другие таблицы стилей определяют стили отчетов и диспетчера отчетов, которые открываются в веб-частях SharePoint. Эти таблицы стилей включают Rswebparts.css, Sp_full.css и Sp_small.css. Менять таблицы стилей SharePoint не рекомендуется. Дополнительные сведения об использовании веб-частей см. в разделе [Просмотр и изучение собственном режиме отчеты с помощью веб-части SharePoint &#40;SSRS&#41;](reports/view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs.md).  
   
 ## <a name="configuring-reporting-services-to-use-a-custom-style-sheet"></a>Настройка служб Reporting Services для использования пользовательской таблицы стилей  
  Таблица стилей должна представлять собой файл допустимой каскадной таблицы стилей (CSS), расположенный в папке Styles. По умолчанию папка Styles находится в \< *диск*>: \Program Files\Microsoft SQL Server\MSSQL. *n*\Reporting Services\ReportServer\Styles.  

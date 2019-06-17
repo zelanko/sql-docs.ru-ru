@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0cc753f16ca9b70523fe6cb858fd167ef044087b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66098734"
 ---
 # <a name="url-access-ssrs"></a>Доступ по URL-адресу (SSRS)
@@ -93,7 +93,7 @@ http://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl
  Используется для разделения пар имен и значений в параметрах URL-адреса.  
   
  **prefix**  
- Необязательный. Префикс для параметра доступа по URL-адресу (например, `rs:` или `rc:`), обращающийся к определенному процессу, который выполняется на сервере отчетов.  
+ Необязательный параметр. Префикс для параметра доступа по URL-адресу (например, `rs:` или `rc:`), обращающийся к определенному процессу, который выполняется на сервере отчетов.  
   
 > [!NOTE]  
 >  Если префикс параметра доступа по URL-адресу не указан, то параметр обрабатывается сервером отчетов как параметр отчета. В параметрах отчета не используется префикс параметров и учитывается регистр.  

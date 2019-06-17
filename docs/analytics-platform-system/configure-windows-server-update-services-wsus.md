@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 776859eb291004431a7e4e2743f1c008a7b752dd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63134956"
 ---
 # <a name="configure-windows-server-update-services-wsus-in-analytics-platform-system"></a>Настройка Windows Server Update Services (WSUS) в Analytics Platform System
@@ -55,7 +55,7 @@ ms.locfileid: "63134956"
   
     1.  В **панели мониторинга диспетчера серверов**на **средства** меню, щелкните **Windows Server Update Services**.  
   
-    2.  В левой части **Update Services** окно, щелкните, чтобы развернуть сервер, на узел управления виртуальными машинами (**_appliance_domain_- VMM**), а затем нажмите кнопку **Параметры**.  
+    2.  В левой части **Update Services** окно, щелкните, чтобы развернуть сервер, на узел управления виртуальными машинами ( **_appliance_domain_- VMM**), а затем нажмите кнопку **Параметры**.  
   
     3.  В **параметры** панели щелкните **мастер настройки сервера WSUS** для запуска мастера настройки.  
   

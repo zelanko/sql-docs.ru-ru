@@ -2510,7 +2510,7 @@
           items:
             - name: Использование инструкций в SQL
               href: ../connect/jdbc/using-statements-with-sql.md
-            - name: 'Использование инструкции SQL для изменения объектов баз данных '
+            - name: Использование инструкции SQL для изменения объектов баз данных
               href: ../connect/jdbc/using-an-sql-statement-to-modify-database-objects.md
             - name: Задание свойств источника данных
               href: ../connect/jdbc/setting-the-data-source-properties.md

@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8245c048d4c1a1314835ad70fc7305c7afabd3f1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63284465"
 ---
 # <a name="save-queries-visual-database-tools"></a>Сохранение запросов (визуальные инструменты для баз данных)
@@ -27,7 +27,7 @@ ms.locfileid: "63284465"
   
 1.  Создайте запрос.  
   
-2.  В меню **Файл** выберите пункт **Сохранить <имя_запроса>**.  
+2.  В меню **Файл** выберите пункт **Сохранить <имя_запроса>** .  
   
     > [!NOTE]  
     >  Вновь созданному запросу присваивается системное имя. Чтобы изменить имя запроса, выберите **Сохранить <имя_запроса> как**.  

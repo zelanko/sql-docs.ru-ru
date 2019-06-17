@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 25eccb27b75028fdebafaa7a855137946465676b
-ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65450110"
 ---
 # <a name="spoamethod-transact-sql"></a>sp_OAMethod (Transact-SQL)
@@ -69,7 +69,7 @@ sp_OAMethod objecttoken , methodname
   
  Чтобы получить возвращаемое значение выходного параметра, *параметр* должен быть локальной переменной соответствующего типа данных, и **ВЫВОДА** должен быть указан. Если задан параметр-константа или **ВЫВОДА** не указан, любое возвращаемое выходным параметром значение игнорируется.  
   
- Если указано, *parametername* должно быть имя [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] именованного параметра. Обратите внимание, что **@**_parametername_is не [!INCLUDE[tsql](../../includes/tsql-md.md)] локальной переменной. Знак (**@**) удаляется, и *parametername*передается на объект OLE, что имя параметра. Все именованные параметры должны указываться после указания всех позиционных параметров.  
+ Если указано, *parametername* должно быть имя [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] именованного параметра. Обратите внимание, что **@** _parametername_is не [!INCLUDE[tsql](../../includes/tsql-md.md)] локальной переменной. Знак ( **@** ) удаляется, и *parametername*передается на объект OLE, что имя параметра. Все именованные параметры должны указываться после указания всех позиционных параметров.  
   
  *n*  
  Заполнитель, указывающий на возможность указания нескольких параметров.  
@@ -93,7 +93,7 @@ sp_OAMethod objecttoken , methodname
   
  Если все значения данных в столбце имеют один и тот же тип данных, этот тип используется для всего столбца. Если значения данных в столбце имеют различные типы данных, тип данных всего столбца определяется по следующей схеме.  
   
-||ssNoversion|FLOAT|money|datetime|varchar|nvarchar|  
+||ssNoversion|float|money|datetime|varchar|nvarchar|  
 |------|---------|-----------|-----------|--------------|-------------|--------------|  
 |**int**|**int**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**float**|**float**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
