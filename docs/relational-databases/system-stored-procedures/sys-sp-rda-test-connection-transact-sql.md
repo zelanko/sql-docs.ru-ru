@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cdf171c66c19d87ea4919eeb55dca65f14b89ebd
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65982871"
 ---
 # <a name="syssprdatestconnection-transact-sql"></a>sys.sp_rda_test_connection (Transact-SQL)
@@ -49,9 +49,9 @@ EXECUTE sys.sp_rda_test_connection
  @server_address = N'*azure_server_fully_qualified_address*'  
  Полный адрес сервера Azure.  
   
--   Если указать значение для **@database_name**, но указанная база данных не включена поддержка Stretch, то вы должны предоставить значение для **@server_address**.  
+-   Если указать значение для **@database_name** , но указанная база данных не включена поддержка Stretch, то вы должны предоставить значение для **@server_address** .  
   
--   Если указать значение для **@database_name**и указанной базы данных, совместимых со Stretch, то не нужно предоставлять значение для **@server_address**. Если указать значение для **@server_address**, хранимая процедура пропускает его и использует уже существующий сервер Azure, связанные с поддержкой растяжения базы данных.  
+-   Если указать значение для **@database_name** и указанной базы данных, совместимых со Stretch, то не нужно предоставлять значение для **@server_address** . Если указать значение для **@server_address** , хранимая процедура пропускает его и использует уже существующий сервер Azure, связанные с поддержкой растяжения базы данных.  
   
  @azure_username = N "*azure_username*  
  Имя пользователя для удаленного сервера Azure.  

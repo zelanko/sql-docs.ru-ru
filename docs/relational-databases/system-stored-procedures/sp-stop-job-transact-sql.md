@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: eda439b53c72e41154d4891495470fc271028aee
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63004266"
 ---
 # <a name="spstopjob-transact-sql"></a>sp_stop_job (Transact-SQL)
@@ -49,12 +49,12 @@ sp_stop_job
   
 `[ @job_id = ] job_id` Идентификационный номер останавливаемого задания. *job_id* — **uniqueidentifier**, значение по умолчанию NULL.  
   
-`[ @originating_server = ] 'master_server'` Имя главного сервера. Если указано, останавливаются все многосерверные задания. *master_server* — **nvarchar(128)**, значение по умолчанию NULL. Указывайте этот параметр только при вызове **sp_stop_job** на целевой сервер.  
+`[ @originating_server = ] 'master_server'` Имя главного сервера. Если указано, останавливаются все многосерверные задания. *master_server* — **nvarchar(128)** , значение по умолчанию NULL. Указывайте этот параметр только при вызове **sp_stop_job** на целевой сервер.  
   
 > [!NOTE]  
 >  Может быть задан только один из первых трех аргументов.  
   
-`[ @server_name = ] 'target_server'` Имя конкретного целевого сервера, на котором следует остановить многосерверное задание. *target_server* — **nvarchar(128)**, значение по умолчанию NULL. Указывайте этот параметр только при вызове **sp_stop_job** на главном сервере для многосерверного задания.  
+`[ @server_name = ] 'target_server'` Имя конкретного целевого сервера, на котором следует остановить многосерверное задание. *target_server* — **nvarchar(128)** , значение по умолчанию NULL. Указывайте этот параметр только при вызове **sp_stop_job** на главном сервере для многосерверного задания.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  

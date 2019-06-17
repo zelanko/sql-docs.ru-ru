@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 170cbfffde1b28d60617f0e0166ca9f8e31f5fb6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63200184"
 ---
 # <a name="data-type-usage"></a>Использование типов данных
@@ -42,7 +42,7 @@ ms.locfileid: "63200184"
 |**tinyint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Tinyint** тип данных не имеет знака. Объект **tinyint** столбец привязан к переменной типа данных SQL_C_UTINYINT по умолчанию.|  
 |Псевдонимы типов данных|При подключении к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 4.2*x*, драйвер ODBC добавляет значение NULL в определение столбца, допустимость значений NULL столбца явно не объявлен. Поэтому допустимость значений NULL, помещенная в определение псевдонима типа данных, не учитывается.<br /><br /> При подключении к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 4.2*x*, столбцы с типом данных псевдонима с базовых данных тип **char** или **двоичных** и для которого не допустимость значений NULL объявленные создаются как тип данных **varchar** или **varbinary**. [SQLColAttribute](../native-client-odbc-api/sqlcolattribute.md), [SQLColumns](../native-client-odbc-api/sqlcolumns.md), и [SQLDescribeCol](../native-client-odbc-api/sqldescribecol.md) возвращают SQL_VARCHAR и SQL_VARBINARY в качестве данных типа для этих столбцов. Данные, полученные из этих столбцов, не заполнены. **Примечание.**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Драйвер ODBC собственного клиента поддерживают подключение к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 6.5 и более ранних версий.|  
 |Типы данных большой длины|*данные времени выполнения* параметров ограничены для SQL_LONGVARBINARY и SQL_LONGVARCHAR типы данных.|  
-|Типы больших значений|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Драйвер ODBC собственного клиента будет предоставлять **varchar(max)**, **varbinary(max)**, и **nvarchar(max)** типы как SQL_VARCHAR, SQL_VARBINARY и SQL_ WVARCHAR (соответственно), в API, которые принимают или возвращают типы данных ODBC SQL.|  
+|Типы больших значений|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Драйвер ODBC собственного клиента будет предоставлять **varchar(max)** , **varbinary(max)** , и **nvarchar(max)** типы как SQL_VARCHAR, SQL_VARBINARY и SQL_ WVARCHAR (соответственно), в API, которые принимают или возвращают типы данных ODBC SQL.|  
 |Определяемый пользователем тип|Столбцы определяемого пользователем типа преобразуются в тип данных SQL_SS_UDT. Если столбец определяемого пользователем типа явно сопоставлен с другим типом в инструкции SQL с помощью методов ToString() или ToXMLString() определяемого пользователем типа или с помощью функций CAST/CONVERT, то тип столбца в результирующем наборе будет отражать реальный тип, к которому столбец был преобразован.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Драйвер ODBC собственного клиента может только привязать столбец определяемого пользователем ТИПА как двоичный файл. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает преобразование только между типами данных SQL_SS_UDT и SQL_C_BINARY.|  
 |XML|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] автоматически преобразует XML в текст Юникода. Тип XML преобразуется в SQL_SS_XML.|  
   

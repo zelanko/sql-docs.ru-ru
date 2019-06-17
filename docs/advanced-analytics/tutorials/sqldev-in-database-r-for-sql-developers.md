@@ -3,24 +3,24 @@ title: Руководство для аналитики в базе данных
 description: Узнайте, как внедрить R, программный код языка в хранимых процедурах SQL Server и функций T-SQL.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 12/18/2018
+ms.date: 06/13/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: a631339980eae7640617f14b161e024a2f27a769
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 4f0930e3f7f9d037ebb3033cc947f243657a1480
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511221"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140759"
 ---
 # <a name="tutorial-r-data-analytics-for-sql-developers"></a>Учебник. Анализ данных R для разработчиков SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 В этом руководстве для программистов SQL, узнайте об интеграции R путем создания и развертывания на основе R в машинном обучении решения с помощью [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) базы данных на сервере SQL Server. Вы будете использовать T-SQL, SQL Server Management Studio и экземпляр ядра СУБД с [служб машинного обучения] ([служб машинного обучения](../install/sql-machine-learning-services-windows-install.md) и поддержка языка R
 
-В этом руководстве описываются функций R, используемых в данных, моделирование рабочего процесса. Шаги включают Просмотр данных, построения и обучения модели двоичной классификации и развертыванию модели. Модель, которую вы создадите прогнозирует, является ли поездку может привести tip, на основе времени дня, пройденное расстояние и место посадки. 
+В этом руководстве описываются функций R, используемых в данных, моделирование рабочего процесса. Шаги включают Просмотр данных, построения и обучения модели двоичной классификации и развертыванию модели. Модель, которую вы создадите прогнозирует, является ли поездку может привести tip, на основе времени дня, расстояние и место посадки. 
 
 Весь код R, используемый в этом руководстве упаковывается в хранимых процедурах, создания и выполнения в среде Management Studio.
 
@@ -55,7 +55,7 @@ ms.locfileid: "58511221"
 
 + [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md#verify-installation) или [служб SQL Server 2017 машинного обучения с поддержкой R](../install/sql-machine-learning-services-windows-install.md#verify-installation)
 
-+ [Библиотеки R](../r/determine-which-packages-are-installed-on-sql-server.md#get-the-r-library-location)
++ [Библиотеки R](../package-management/installed-package-information.md)
 
 + [Разрешения](../security/user-permission.md)
 

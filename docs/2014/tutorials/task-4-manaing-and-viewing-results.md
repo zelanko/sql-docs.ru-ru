@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2df7517a8043269efe40d21b112100edaf9e847f
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65489458"
 ---
 # <a name="task-4-manaing-and-viewing-results"></a>Задача 4. Управление и просмотр результатов
@@ -72,7 +72,7 @@ ms.locfileid: "65489458"
   
 20. Переключиться в режим **исправлено** вкладки.  
   
-21. Обратите внимание, что **состояние** для записи, которая имеет **Город** как **Лос-Анджелес** присваивается **ЦС** теперь. Обратите внимание, что в **Причина** поля является то, что **исправлено правилом «City-State Rule»**.  
+21. Обратите внимание, что **состояние** для записи, которая имеет **Город** как **Лос-Анджелес** присваивается **ЦС** теперь. Обратите внимание, что в **Причина** поля является то, что **исправлено правилом «City-State Rule»** .  
   
      ![Исправление правила city-State](../../2014/tutorials/media/et-managingandviewingresults-04.jpg "City-State правило коррекции")  
   

@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 49e86c8b47a3a0de48a0138d96cec22d585901c6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62711449"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>Задание максимальной вместимости SQL Server
@@ -116,7 +116,7 @@ ms.locfileid: "62711449"
 |Файлов журналов на одну базу данных|1|1|  
 |Томов на компьютер|3|3|  
   
- * Максимальное число управляемых экземпляров [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] поддерживаемых [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] может меняться в зависимости от конфигурации оборудования сервера. Дополнительные сведения о начале работы см. в разделе [Функции и задачи служебной программы SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md). Точка управления служебной программой [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] доступна не во всех выпусках [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Перечень функций, поддерживаемых в разных выпусках [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], см. в разделе [Features Supported by the Editions of SQL Server 2014](../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+ \* Максимальное число управляемых экземпляров [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] поддерживаемых [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] может меняться в зависимости от конфигурации оборудования сервера. Дополнительные сведения о начале работы см. в разделе [Функции и задачи служебной программы SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md). Точка управления служебной программой [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] доступна не во всех выпусках [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Перечень функций, поддерживаемых в разных выпусках [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], см. в разделе [Features Supported by the Editions of SQL Server 2014](../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 ##  <a name="DAC"></a> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Объекты приложений уровня данных  
  В следующей таблице указаны максимальные размеры и количество различных объектов, которые были протестированы в приложениях уровня данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  

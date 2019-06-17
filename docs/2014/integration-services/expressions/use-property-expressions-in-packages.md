@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dd78d7fb5f80b766dc7c51ae077d2a241c34d59c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62768859"
 ---
 # <a name="use-property-expressions-in-packages"></a>Использование выражений свойств в пакетах
@@ -125,7 +125,7 @@ ms.locfileid: "62768859"
   
  Если имя пакета — EmailRowCountPP и он был выполнен 4.03.2005, а время выполнения равно 9 секундам, то выражение вернет приведенную ниже строку.  
   
- PExpression--> пакета: (EmailRowCountPP) К работе: 3/4/2005 11:06:18 AM продолжительность: 9 секунд.  
+ PExpression-->Package: (EmailRowCountPP) Started:3/4/2005 11:06:18 AM Duration:9 seconds.  
   
 ### <a name="property-expression-for-the-message-of-an-e-mail-message"></a>Выражения свойства для содержимого сообщения электронной почты  
  Приведенное далее выражение свойства может быть использовано, чтобы установить свойство MessageSource задачи "Отправка почты". Выражение использует сочетание строковых литералов, пользовательских переменных и оператора объединения (+). Переменные, определенные пользователем, имеют имена `nasdaqrawrows`, `nyserawrows`и `amexrawrows`. Строка «\n» обозначает возврат каретки.  

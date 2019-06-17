@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a4b503c63706135b326490ccefc3f0d8ca6ceccb
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66078264"
 ---
 # <a name="defining-and-using-a-drillthrough-action"></a>Определение и использование действия детализации
@@ -106,9 +106,9 @@ ms.locfileid: "66078264"
   
 6.  Изменение **имя** свойство для **ключ даты заказа** атрибут `Order Date` , нажмите кнопку обзора для **столбец имени** свойство и в **Столбец имени** выберите **даты** как исходной таблицы и выберите SimpleDate, совпадающего с исходным столбцом. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-7.  Изменить **имя** свойство для **ключ срока заказа** атрибут `Due Date`и затем, используя один и тот же метод как **ключ даты заказа** , задайте  **Имя столбца** свойство для этого атрибута к **Date.SimpleDate (WChar)**.  
+7.  Изменить **имя** свойство для **ключ срока заказа** атрибут `Due Date`и затем, используя один и тот же метод как **ключ даты заказа** , задайте  **Имя столбца** свойство для этого атрибута к **Date.SimpleDate (WChar)** .  
   
-8.  Изменить **имя** свойство для **ключ даты отгрузки** атрибут `Ship Date`и затем измените **столбец имени** свойство для этого атрибута к  **Date.SimpleDate (WChar)**.  
+8.  Изменить **имя** свойство для **ключ даты отгрузки** атрибут `Ship Date`и затем измените **столбец имени** свойство для этого атрибута к  **Date.SimpleDate (WChar)** .  
   
 9. Перейдите на вкладку **Действия** конструктора кубов для куба "Учебник по [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ".  
   

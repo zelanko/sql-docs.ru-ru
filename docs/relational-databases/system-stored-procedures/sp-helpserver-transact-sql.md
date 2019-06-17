@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 31caafde6ea3cdd93355910f244ed5872b6990ff
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62635891"
 ---
 # <a name="sphelpserver-transact-sql"></a>sp_helpserver (Transact-SQL)
@@ -44,7 +44,7 @@ sp_helpserver [ [ @server = ] 'server' ]
 ## <a name="arguments"></a>Аргументы  
 `[ @server = ] 'server'` — Это сервер, о которой сообщается информация. Когда *server* не указан, обо всех серверах в **master.sys.servers**. *сервер* — **sysname**, значение по умолчанию NULL.  
   
-`[ @optname = ] 'option'` Параметр, описывающий сервер. *параметр* — **varchar (** 35 **)**, значение по умолчанию NULL, и должен иметь одно из следующих значений.  
+`[ @optname = ] 'option'` Параметр, описывающий сервер. *параметр* — **varchar (** 35 **)** , значение по умолчанию NULL, и должен иметь одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -60,7 +60,7 @@ sp_helpserver [ [ @server = ] 'server' ]
 |**Системы**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**использовать удаленные параметры сортировки**|Применение параметров сортировки удаленного столбца вместо параметров сортировки локального сервера.|  
   
-`[ @show_topology = ] 'show_topology'` — Это связь указанного сервера на другие серверы. *значение аргумента show_topology* — **varchar (** 1 **)**, значение по умолчанию NULL. Если *значение аргумента show_topology* не равно **t** или имеет значение NULL, **sp_helpserver** возвращает столбцы, перечисленные в разделе «результирующие наборы». Если *значение аргумента show_topology* равен **t**, помимо столбцов, перечисленных в результирующих наборах, **sp_helpserver** также возвращает **topx** и **topy** сведения.  
+`[ @show_topology = ] 'show_topology'` — Это связь указанного сервера на другие серверы. *значение аргумента show_topology* — **varchar (** 1 **)** , значение по умолчанию NULL. Если *значение аргумента show_topology* не равно **t** или имеет значение NULL, **sp_helpserver** возвращает столбцы, перечисленные в разделе «результирующие наборы». Если *значение аргумента show_topology* равен **t**, помимо столбцов, перечисленных в результирующих наборах, **sp_helpserver** также возвращает **topx** и **topy** сведения.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
