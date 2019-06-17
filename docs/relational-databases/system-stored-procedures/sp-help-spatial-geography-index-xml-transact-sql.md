@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: ed44f70a49c1cf221a9ef74b19030512273b1480
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63017980"
 ---
 # <a name="sphelpspatialgeographyindexxml-transact-sql"></a>sp_help_spatial_geography_index_xml (Transact-SQL)
@@ -58,7 +58,7 @@ sp_help_spatial_geography_index_xml [ @tabname =] 'tabname'
  Свойства, которые содержат значения NULL, не включаются в набор возвращаемых значений.  
   
 ## <a name="example"></a>Пример  
- В следующем примере используется `sp_help_spatial_geography_index_xml` для анализа пространственного индекса **SIndx_SpatialTable_geography_col2** определен в таблице **geography_col** для определенного образца запроса в  **@qs**. В этом примере основные свойства указанного индекса возвращаются в XML-фрагменте, в котором отображаются имя и значение выбранных свойств.  
+ В следующем примере используется `sp_help_spatial_geography_index_xml` для анализа пространственного индекса **SIndx_SpatialTable_geography_col2** определен в таблице **geography_col** для определенного образца запроса в  **@qs** . В этом примере основные свойства указанного индекса возвращаются в XML-фрагменте, в котором отображаются имя и значение выбранных свойств.  
   
  [XQuery](../../xquery/xquery-basics.md) затем в результирующем наборе, возвращается определенное свойство будет запущено.  
   

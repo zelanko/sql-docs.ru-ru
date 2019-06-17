@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: e0a11a0b49589c3763b5af67623c9e819038c217
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63231821"
 ---
 # <a name="project-settings-type-mapping-mysqltosql"></a>Параметры проекта (сопоставление типов) (MySQLToSQL)
@@ -97,7 +97,7 @@ ms.locfileid: "63231821"
 |double [*.. 255] [\*.. 30]|числовые [*] [\*]|  
 |исправлена|NUMERIC|  
 |исправлена [*.. 65] [\*.. 30]|числовые [*] [\*]|  
-|FLOAT|число с плавающей запятой [24]|  
+|float|число с плавающей запятой [24]|  
 |число с плавающей запятой [*.. 255] [\*.. 30]|числовые [*] [\*]|  
 |число с плавающей запятой [*.. 53]|число с плавающей запятой [53]|  
 |ssNoversion|ssNoversion|  

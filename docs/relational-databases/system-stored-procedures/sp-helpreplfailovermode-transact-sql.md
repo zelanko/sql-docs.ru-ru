@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f733740b062983f14379f71a48b77f73392aceae
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62865286"
 ---
 # <a name="sphelpreplfailovermode-transact-sql"></a>Хранимая процедура sp_helpreplfailovermode (Transact-SQL)
@@ -50,7 +50,7 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
   
 `[ @failover_mode_id = ] 'failover_mode_id' OUTPUT` Возвращает целочисленное значение режима отработки отказа и является **ВЫВОДА** параметра. *failover_mode_id* — **tinyint** значение по умолчанию **0**. Он возвращает **0** для немедленного обновления и **1** обновления посредством очередей.  
   
- [**@failover_mode=**] **'***failover_mode***'OUTPUT**  
+ [ **@failover_mode=** ] **'***failover_mode***'OUTPUT**  
  Возвращает режим, в котором выполняются изменения данных на подписчике. *failover_mode* — **nvarchar(10)** значение по умолчанию NULL. — **ВЫВОДА** параметра.  
   
 |Значение|Описание|  

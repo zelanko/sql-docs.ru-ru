@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9a9d0559a0421d8badd5e939a85947a53e0f6e8b
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65403956"
 ---
 # <a name="lesson-3-1---modifying-measures"></a>Урок 3 – 1-изменение мер
@@ -29,7 +29,7 @@ ms.locfileid: "65403956"
   
     Если окно свойств остается постоянно открытым, изменять свойства нескольких элементов куба проще.  
   
-3.  В окне свойств щелкните список **FormatString** и введите **#,#**.  
+3.  В окне свойств щелкните список **FormatString** и введите **#,#** .  
   
 4.  На панели инструментов вкладки **Структура куба** нажмите значок **Показывать сетку мер** слева.  
   

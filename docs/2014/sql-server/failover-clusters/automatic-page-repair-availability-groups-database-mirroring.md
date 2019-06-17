@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f4f39024817d3d0aa35c015ed815eb8f412f1c8e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63137514"
 ---
 # <a name="automatic-page-repair-for-availability-groups-and-database-mirroring"></a>Автоматическое восстановление страниц (для групп доступности и зеркального отображения баз данных)
@@ -88,7 +88,7 @@ ms.locfileid: "63137514"
   
 
   
-##  <a name="ViewAPRattempts"></a> Инструкции: Просмотреть попытки автоматического восстановления страницы  
+##  <a name="ViewAPRattempts"></a> Как Просмотреть попытки автоматического восстановления страницы  
  В следующих динамических административных представлениях возвращаются строки, связанные с последними попытками автоматического восстановления страниц в определенной зеркальной базе данных, при этом количество строк на каждую базу данных не может превышать 100.  
   
 -   **Группы доступности AlwaysOn:**  

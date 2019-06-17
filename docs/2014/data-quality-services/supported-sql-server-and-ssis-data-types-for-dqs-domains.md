@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 06e593c676c206f863bdb110be5c93e5003b4e13
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65484091"
 ---
 # <a name="supported-sql-server-and-ssis-data-types-for-dqs-domains"></a>Типы данных SQL Server и службы SSIS, поддерживаемые для доменов DQS
@@ -29,7 +29,7 @@ ms.locfileid: "65484091"
 |Тип данных доменов DQS|Поддерживаемый тип данных SQL Server|  
 |--------------------------|------------------------------------|  
 |Дата|Дата|  
-|Decimal|Decimal<br /><br /> FLOAT<br /><br /> money<br /><br /> NUMERIC<br /><br /> real<br /><br /> smallmoney|  
+|Decimal|Decimal<br /><br /> float<br /><br /> money<br /><br /> NUMERIC<br /><br /> real<br /><br /> smallmoney|  
 |Целочисленный|BIGINT<br /><br /> ssNoversion<br /><br /> smallint<br /><br /> tinyint|  
 |String|char<br /><br /> nchar<br /><br /> nvarchar<br /><br /> varchar|  
   

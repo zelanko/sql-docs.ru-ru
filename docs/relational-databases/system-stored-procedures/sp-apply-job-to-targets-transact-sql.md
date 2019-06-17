@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f293e906d647d318bca5d730d0164b75cc88fc6f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62998028"
 ---
 # <a name="spapplyjobtotargets-transact-sql"></a>sp_apply_job_to_targets (Transact-SQL)
@@ -50,11 +50,11 @@ sp_apply_job_to_targets { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 > [!NOTE]  
 >  Либо *job_id* или *имя_задания* должен быть указан, но не оба аргумента одновременно.  
   
-`[ @target_server_groups = ] 'target_server_groups'` Список разделенных запятыми групп целевых серверов, на которые имеет указанное задание, для применения. *target_server_groups* — **nvarchar(2048)**, значение по умолчанию NULL.  
+`[ @target_server_groups = ] 'target_server_groups'` Список разделенных запятыми групп целевых серверов, на которые имеет указанное задание, для применения. *target_server_groups* — **nvarchar(2048)** , значение по умолчанию NULL.  
   
-`[ @target_servers = ] 'target_servers'` Разделенный запятыми список целевых серверов, на которые имеет указанное задание, для применения. *target_servers*— **nvarchar(2048)**, значение по умолчанию NULL.  
+`[ @target_servers = ] 'target_servers'` Разделенный запятыми список целевых серверов, на которые имеет указанное задание, для применения. *target_servers*— **nvarchar(2048)** , значение по умолчанию NULL.  
   
-`[ @operation = ] 'operation'` Является ли указанное задание следует применить к или удалено с указанных целевых серверов или групп целевых серверов. *Операция*— **varchar(7)**, значение по умолчанию APPLY. Допустимы следующие операции: **применить** и **удалить**.  
+`[ @operation = ] 'operation'` Является ли указанное задание следует применить к или удалено с указанных целевых серверов или групп целевых серверов. *Операция*— **varchar(7)** , значение по умолчанию APPLY. Допустимы следующие операции: **применить** и **удалить**.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  

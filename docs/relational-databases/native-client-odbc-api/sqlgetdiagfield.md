@@ -16,10 +16,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6f0d131422aa9d901e6a92cb5c9e573a076b1e71
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63014430"
 ---
 # <a name="sqlgetdiagfield"></a>SQLGetDiagField
@@ -40,7 +40,7 @@ ms.locfileid: "63014430"
   
  Драйвер ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сообщает следующие дополнительные коды динамических функций, содержащие последнюю попытку выполнения инструкции [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Код динамической функции возвращается в заголовке (запись 0) диагностического набора записей и доступен при каждом выполнении (успешном или нет).  
   
-|Код динамической функции|Source|  
+|Код динамической функции|`Source`|  
 |---------------------------|------------|  
 |SQL_DIAG_DFC_SS_ALTER_DATABASE|ALTER DATABASE, инструкция|  
 |SQL_DIAG_DFC_SS_CHECKPOINT|CHECKPOINT, инструкция|  

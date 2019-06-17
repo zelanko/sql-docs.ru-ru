@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3d6fe74ecf361392da9000286427679194e15de9
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65404046"
 ---
 # <a name="lesson-2-5---deploying-an-analysis-services-project"></a>Занятие 2 – 5-развертывание проекта служб Analysis Services
@@ -36,7 +36,7 @@ ms.locfileid: "65404046"
     Просмотрите свойства развертывания проекта. По умолчанию шаблон проекта служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] настроен таким образом, что выполняется последовательное развертывание всех проектов служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для указанного по умолчанию экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] на локальном компьютере, создается база данных [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] с именем проекта, а также выполняется обработка объектов с параметрами по умолчанию после завершения развертывания. Дополнительные сведения см. в разделах [Настройка свойств проекта служб Analysis Services (среда SSDT)](../multidimensional-models/configure-analysis-services-project-properties-ssdt.md)создаются определенные объекты.  
   
     > [!NOTE]  
-    > Если вы хотите развернуть проект в именованном экземпляре [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] на локальном компьютере или к экземпляру на удаленном сервере, изменить **Server** имя свойства, к соответствующему экземпляру, такие как \<  *ServerName**>\\<** InstanceName ** >*.  
+    > Если вы хотите развернуть проект в именованном экземпляре [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] на локальном компьютере или к экземпляру на удаленном сервере, изменить **Server** имя свойства, к соответствующему экземпляру, такие как \<  *ServerName **>\\<** InstanceName ** >* .  
   
 3.  Нажмите кнопку **ОК**.  
   

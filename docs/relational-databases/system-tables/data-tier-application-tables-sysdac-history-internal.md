@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 40696085bc8eb9980d1150feade91a9edd627be0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62471143"
 ---
 # <a name="data-tier-application-tables---sysdachistoryinternal"></a>Таблицы приложений уровня данных — sysdac_history_internal
@@ -58,9 +58,9 @@ ms.locfileid: "62471143"
 |||||  
 |-|-|-|-|  
 |**action_id**|**sequence_id**|**action_type_name**|**dac_object_type_name**|  
-|12|0|создание|пакет DAC|  
-|12|1|создание|login|  
-|12|2|создание|База данных|  
+|12|0|create|пакет DAC|  
+|12|1|create|login|  
+|12|2|create|База данных|  
 |12|3|переименовать|База данных|  
   
  Операции приложения уровня данных, таких как delete, не удаляют строки из **sysdac_history_internal**. Можно выполнить следующий запрос, чтобы вручную удалить строки для тех DAC, которые больше не развернуты в экземпляре компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]:  
