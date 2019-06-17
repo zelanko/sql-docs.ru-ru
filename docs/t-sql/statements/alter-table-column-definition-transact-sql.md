@@ -23,11 +23,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f18a3d809be2302732fa4e4aaeaa1b1e19cbb2dd
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130394"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63025153"
 ---
 # <a name="alter-table-columndefinition-transact-sql"></a>ALTER TABLE column_definition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -85,7 +85,7 @@ column_name <data_type>
  *column_name*  
  Имя столбца, который требуется изменить, добавить или удалить. *column_name* может иметь длину от 1 до 128 символов. Для новых столбцов, созданных с типом данных timestamp, аргумент *column_name* можно пропустить. Если для столбца типа **timestamp** не указан аргумент *column_name*, используется имя **timestamp**.  
   
- [ _type_schema_name_**.** ] *type_name*  
+ [ _type_schema_name_ **.** ] *type_name*  
  Тип данных добавленного столбца и схема, которой он принадлежит.  
   
  *type_name* может быть:  
@@ -125,7 +125,7 @@ DOCUMENT
  Применим только к типу данных **xml** для коллекции схем XML, связанной с этим типом. Перед помещением столбца **xml** в схему она должна быть создана в базе данных при помощи инструкции [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md).  
   
 FILESTREAM  
- При необходимости указывает атрибут хранилища FILESTREAM для столбца, в котором параметр *type_name* имеет тип данных **varbinary(max)**.  
+ При необходимости указывает атрибут хранилища FILESTREAM для столбца, в котором параметр *type_name* имеет тип данных **varbinary(max)** .  
   
  Если для столбца указан атрибут FILESTREAM, то в таблице также должен быть столбец типа данных **uniqueidentifier** с атрибутом ROWGUIDCOL. Этот столбец не должен допускать значений NULL и должен иметь относящееся к одному столбцу ограничение UNIQUE или PRIMARY KEY. Значение идентификатора GUID для столбца должно быть предоставлено приложением во время вставки данных или ограничением DEFAULT, в котором используется функция NEWID ().  
   
@@ -163,7 +163,7 @@ WITH VALUES
 IDENTITY  
  Указывает, что новый столбец является столбцом идентификаторов. Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] присваивает столбцу уникальное возрастающее значение. Когда добавляются столбцы идентификаторов к существующим таблицам, к существующим строкам таблицы добавляются номера идентификаторов с этим начальным значением и приращением. Порядок, в котором выполняется обновление строк, не гарантирован. Номера идентификаторов также формируются для всех новых строк, которые добавляются.  
   
- Столбцы идентификаторов наиболее часто используются в сочетании с ограничениями PRIMARY KEY для выполнения функции уникального идентификатора строки таблицы. Свойство IDENTITY может назначаться для столбцов типа **tinyint**, **smallint**, **int**, **bigint**, **decimal(p,0)** или **numeric(p,0)**. Для каждой таблицы можно создать только один столбец идентификаторов. Ключевое слово DEFAULT и значения по умолчанию не могут применяться к столбцам идентификаторов. Начальное значение и шаг приращения для столбца идентификаторов должны быть либо заданы вместе, либо не заданы вообще. Если ничего не указано, применяется значение по умолчанию (1,1).  
+ Столбцы идентификаторов наиболее часто используются в сочетании с ограничениями PRIMARY KEY для выполнения функции уникального идентификатора строки таблицы. Свойство IDENTITY может назначаться для столбцов типа **tinyint**, **smallint**, **int**, **bigint**, **decimal(p,0)** или **numeric(p,0)** . Для каждой таблицы можно создать только один столбец идентификаторов. Ключевое слово DEFAULT и значения по умолчанию не могут применяться к столбцам идентификаторов. Начальное значение и шаг приращения для столбца идентификаторов должны быть либо заданы вместе, либо не заданы вообще. Если ничего не указано, применяется значение по умолчанию (1,1).  
   
 > [!NOTE]  
 >  Нельзя изменить существующий столбец таблицы, добавив в него свойство IDENTITY.  
@@ -215,7 +215,7 @@ ENCRYPTION_TYPE = { DETERMINISTIC | RANDOMIZED }
   
 ALGORITHM  
 **Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
-Должно быть **'AEAD_AES_256_CBC_HMAC_SHA_256'**.  
+Должно быть **'AEAD_AES_256_CBC_HMAC_SHA_256'** .  
   
  Дополнительные сведения, в том числе об ограничениях функции, см. в разделе [Постоянное шифрование (компонент Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md).  
   

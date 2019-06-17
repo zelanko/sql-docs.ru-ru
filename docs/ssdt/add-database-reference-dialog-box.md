@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: SSDT
 ms.date: 02/09/2017
 ms.openlocfilehash: b8ce668d62cc26c6d5e6a62cb43a3c02e4b660fa
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65097426"
 ---
 # <a name="add-database-reference-dialog-box"></a>Диалоговое окно «Добавление ссылки на базу данных»
@@ -36,7 +36,7 @@ ms.locfileid: "65097426"
   
 Выберите **Системная база данных**, чтобы добавить ссылку на одну из системных баз данных.  
   
-Выберите **Приложение уровня данных (DACPAC)**, чтобы добавить ссылку на базу данных из DACPAC-файла, и перейдите в каталог, в котором находится DACPAC-файл.  
+Выберите **Приложение уровня данных (DACPAC)** , чтобы добавить ссылку на базу данных из DACPAC-файла, и перейдите в каталог, в котором находится DACPAC-файл.  
   
 ## <a name="selecting-the-databases-relative-location"></a>Выбор относительного расположения базы данных  
 После выбора базы данных, на которую будет установлена ссылка, можно указать ожидаемое расположение объекта базы данных в соответствии с проектом, на который установлена ссылка.  

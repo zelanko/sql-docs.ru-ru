@@ -18,11 +18,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6d0c686bcc52732f1fa25a4e4b4b83b776bb8633
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124334"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63026731"
 ---
 # <a name="manage-logins-in-the-publication-access-list"></a>Управление именами входа в списке доступа к публикации
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "54124334"
 -   Перед добавлением имени входа [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в список доступа к публикации необходимо связать его с пользователем базы данных публикации.  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
- Управление именами для входа в списке доступа к публикации (PAL) осуществляется на странице **Список доступа к публикации** диалогового окна **Свойства публикации — \<публикация>**. Дополнительные сведения о доступе к этому диалоговому окну см. в статье [Просмотр и изменение свойств публикации](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+ Управление именами для входа в списке доступа к публикации (PAL) осуществляется на странице **Список доступа к публикации** диалогового окна **Свойства публикации — \<публикация>** . Дополнительные сведения о доступе к этому диалоговому окну см. в статье [Просмотр и изменение свойств публикации](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
 #### <a name="to-manage-logins-in-the-pal"></a>Управление именами входа в списке доступа к публикации (PAL)  
   
@@ -62,15 +62,15 @@ ms.locfileid: "54124334"
   
 #### <a name="to-view-groups-and-logins-that-belong-to-the-pal"></a>Просмотр групп и имен входа из списка доступа к публикации  
   
-1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_help_publication_access](../../../relational-databases/system-stored-procedures/sp-help-publication-access-transact-sql.md). Для параметра **@publication**укажите имя публикации. Будут отображены сведения о группах и именах входа из списка доступа к публикации.  
+1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_help_publication_access](../../../relational-databases/system-stored-procedures/sp-help-publication-access-transact-sql.md). Для параметра **@publication** укажите имя публикации. Будут отображены сведения о группах и именах входа из списка доступа к публикации.  
   
 #### <a name="to-add-groups-and-logins-to-the-pal"></a>Добавление групп и имен входа в список доступа к публикации  
   
-1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_grant_publication_access](../../../relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql.md). Для параметра **@publication**укажите имя публикации, а в параметре **@login**— имя входа или имя группы, которое нужно добавить.  
+1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_grant_publication_access](../../../relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql.md). Для параметра **@publication** укажите имя публикации, а в параметре **@login** — имя входа или имя группы, которое нужно добавить.  
   
 #### <a name="to-remove-groups-and-logins-from-the-pal"></a>Удаление групп и имен входа из списка доступа к публикации  
   
-1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_revoke_publication_access](../../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md). Для параметра **@publication**укажите имя публикации, а в параметре **@login**укажите имя входа или имя группы, которое нужно удалить.  
+1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_revoke_publication_access](../../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md). Для параметра **@publication** укажите имя публикации, а в параметре **@login** укажите имя входа или имя группы, которое нужно удалить.  
   
 ## <a name="see-also"></a>См. также:  
  [Управление именами входа в списке доступа к публикации](../../../relational-databases/replication/security/manage-logins-in-the-publication-access-list.md)   

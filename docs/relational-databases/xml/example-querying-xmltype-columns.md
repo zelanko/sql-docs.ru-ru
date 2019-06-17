@@ -14,13 +14,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bf6238ae842b07309e8404e4a12537c9245f56f9
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58512151"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62635881"
 ---
-# <a name="example-querying-xmltype-columns"></a>Пример запросы к столбцам XMLType
+# <a name="example-querying-xmltype-columns"></a>Пример Запросы к столбцам XMLType
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   В следующий запрос включены столбцы типа **xml** . Запрос возвращает идентификатор модели продукта, имя и шаги производства в первом месте из столбца `Instructions` типа **xml** .  
   

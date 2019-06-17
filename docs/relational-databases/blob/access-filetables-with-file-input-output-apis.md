@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3005ff6aa1311b22eea25e2daa14c1d4110da32c
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65089033"
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>Доступ к таблицам FileTable с помощью API-интерфейсов ввода-вывода файлов
@@ -94,7 +94,7 @@ ms.locfileid: "65089033"
   
 -   Эти изменения нельзя откатить.  
   
- Однако к столбцу FILESTREAM в таблице FileTable также можно получить транзакционный доступ FILESTREAM путем вызова **OpenSqlFileStream()**. Этот вид доступа может быть полностью транзакционным и будет поддерживать все уровни транзакционной согласованности, предлагаемые в настоящий момент.  
+ Однако к столбцу FILESTREAM в таблице FileTable также можно получить транзакционный доступ FILESTREAM путем вызова **OpenSqlFileStream()** . Этот вид доступа может быть полностью транзакционным и будет поддерживать все уровни транзакционной согласованности, предлагаемые в настоящий момент.  
   
 ###  <a name="concurrency"></a> Управление параллелизмом  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обеспечивает управление параллелизмом при доступе к таблице FileTable со стороны приложений файловой системы, а также между приложениями файловой системы и приложениями [!INCLUDE[tsql](../../includes/tsql-md.md)] . Такое управление параллелизмом обеспечивается путем создания соответствующих блокировок для строк FileTable.  

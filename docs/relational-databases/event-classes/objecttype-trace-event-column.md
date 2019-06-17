@@ -17,11 +17,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b8694a7b02ffc55cfebbac6466b2ff46d9d9f973
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618242"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62645066"
 ---
 # <a name="objecttype-trace-event-column"></a>Столбец события ObjectType Trace
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "47618242"
 |16975|Объект|  
 |17222|Полнотекстовый каталог|  
 |17232|Хранимая процедура CLR|  
-|17235|Схема|  
+|17235|схема|  
 |17475|Учетные данные|  
 |17491|Событие DDL|  
 |17741|Событие управления|  
@@ -98,7 +98,7 @@ ms.locfileid: "47618242"
 |21587|Статистика|  
 |21825<br /><br /> 21827<br /><br /> 21831<br /><br /> 21843<br /><br /> 21847|Пользователь|  
 |22099|Служба компонента Service Broker|  
-|22601|Индекс |  
+|22601|Индекс|  
 |22604|Имя входа сертификата|  
 |22611|XML-схема|  
 |22868|Тип|  

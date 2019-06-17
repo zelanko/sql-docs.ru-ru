@@ -10,10 +10,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8344f9377cfe1850c7eefbf379667dba664aedfa
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65717602"
 ---
 # <a name="run-an-ssis-package-with-c-code-in-a-net-app"></a>Выполнение пакета служб SSIS с кодом C# в приложении .NET
@@ -45,7 +45,7 @@ ms.locfileid: "65717602"
 ## <a name="create-a-new-visual-studio-project"></a>Создание проекта Visual Studio
 
 1. В Visual Studio выберите **Файл**, **Создать**, **Проект**. 
-2. В диалоговом окне **Создание проекта** разверните узел **Visual C#**.
+2. В диалоговом окне **Создание проекта** разверните узел **Visual C#** .
 3. Выберите **Консольное приложение** и введите *run_ssis_project* в качестве имени проекта.
 4. Нажмите кнопку **ОК**, чтобы создать и открыть проект в Visual Studio.
 

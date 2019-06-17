@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a1a41df41528d3b9e76fd55404ae8ab544646a5d
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65715891"
 ---
 # <a name="catalogsetexecutionparametervalue-ssisdb-database"></a>catalog.set_execution_parameter_value (база данных SSISDB)
@@ -66,7 +66,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
  Параметр *object_type* имеет тип **smallint**.  
   
  [ @parameter_name = ] *parameter_name*  
- Имя параметра. Параметр *parameter_name* имеет тип **nvarchar(128)**.  
+ Имя параметра. Параметр *parameter_name* имеет тип **nvarchar(128)** .  
   
  [ @parameter_value = ] *parameter_value*  
  Значение параметра. Параметр *parameter_value* имеет тип **sql_variant**.  

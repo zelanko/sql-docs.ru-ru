@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 534daee6995cd5429878cfb3fca4ac5aea33e2fe
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65721966"
 ---
 # <a name="lesson-3-2---running-the-package-installation-wizard"></a>Занятие 3–2. Запуск мастера установки пакета
@@ -51,7 +51,7 @@ ms.locfileid: "65721966"
   
 9. На странице "Выбор папки для установки" нажмите кнопку **Обзор**.  
   
-10. В диалоговом окне **Выбор папки** разверните **Мой компьютер** и щелкните **Локальный диск (C:)**.  
+10. В диалоговом окне **Выбор папки** разверните **Мой компьютер** и щелкните **Локальный диск (C:)** .  
   
 11. Щелкните **Создать папку** и замените имя по умолчанию для новой папки ( **Новая папка**) на **DeploymentTutorialInstall**.  
   

@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 70df13e2f61b5514e100163bafe9ae2b76fdacf5
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65099952"
 ---
 # <a name="show-diagram-properties-visual-database-tools"></a>Просмотр свойств диаграммы (визуальные инструменты для баз данных)
@@ -31,7 +31,7 @@ ms.locfileid: "65099952"
   
 2.  Убедитесь, что в конструкторе диаграмм баз данных не выбраны никакие объекты, щелкнув любую область окна конструктора, за исключением объекта.  
   
-3.  В меню **Вид** выберите **Окно "Свойства"**.  
+3.  В меню **Вид** выберите **Окно "Свойства"** .  
   
 Свойства диаграммы отображаются в окне **Свойства** .  
   

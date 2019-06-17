@@ -12,10 +12,10 @@ author: haoqian
 ms.author: haoqian
 manager: craigg
 ms.openlocfilehash: 8de649eb8f6311270c64969981e78315cee29450
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65718280"
 ---
 # <a name="troubleshoot-scale-out"></a>Устранение неполадок Scale Out
@@ -66,7 +66,7 @@ ms.locfileid: "65718280"
 
 ### <a name="symptoms"></a>Симптомы
 
-*"System.ServiceModel.EndpointNotFoundException: Прослушивание на https://*[имя_компьютера]:[порт]*/ClusterManagement/ не выполняла ни одна конечная точка, которая могла бы принять сообщение".*
+*"System.ServiceModel.EndpointNotFoundException: Прослушивание на https://* [имя_компьютера]:[порт] */ClusterManagement/ не выполняла ни одна конечная точка, которая могла бы принять сообщение".*
 
 ### <a name="solution"></a>Решение
 
@@ -214,7 +214,7 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {
 ### <a name="solution"></a>Решение
 Дополнительные журналы выполнения можно найти в папке `TasksRootFolder`, настроенной в файле `WorkerSettings.config`. По умолчанию это папка `\<drive\>:\Users\\[account]\AppData\Local\SSIS\ScaleOut\Tasks`. Здесь *[учетная_запись]*  — это учетная запись, с которой выполняется служба рабочей роли Scale Out (по умолчанию `SSISScaleOutWorker140`).
 
-Чтобы найти журнал выполнения пакета с идентификатором *[ИД_выполнения]*, выполните приведенную ниже команду Transact-SQL и получите *[ИД_задачи]*. Затем найдите вложенную папку с именем *[ИД_задачи]* в папке `TasksRootFolder`.
+Чтобы найти журнал выполнения пакета с идентификатором *[ИД_выполнения]* , выполните приведенную ниже команду Transact-SQL и получите *[ИД_задачи]* . Затем найдите вложенную папку с именем *[ИД_задачи]* в папке `TasksRootFolder`.
 
 ```sql
 SELECT [TaskId]

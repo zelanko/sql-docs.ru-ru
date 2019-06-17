@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 935a2671c2496cb6cbb996d25cddc123bc4d782d
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65095927"
 ---
 # <a name="how-to-view-data-differences"></a>Руководство. просмотреть различия данных
@@ -36,5 +36,5 @@ ms.locfileid: "65095927"
     -   Чтобы просмотреть результаты, относящихся к записям определенного объекта, щелкните объект в основной области результатов, затем откройте вкладку на панели "Просмотр записей". На каждой вкладке отображаются все записи данного объекта, имеющие определенное состояние: «различающиеся», «только в базе данных-источнике», «только в целевой базе данных» и «идентичные». Данные отображаются по записям и столбцам.  
   
 ## <a name="see-also"></a>См. также:  
-[Как использовать сравнение схем для сопоставления различных определений баз данных](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
+[Руководство. использовать сравнение схем для сопоставления различных определений баз данных](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
   

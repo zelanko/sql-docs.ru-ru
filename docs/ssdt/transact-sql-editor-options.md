@@ -29,10 +29,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 3d95c52bc55df0a7693ee698cc5f01252c05949f
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65102061"
 ---
 # <a name="transact-sql-editor-options"></a>Параметры редактора Transact-SQL
@@ -68,7 +68,7 @@ ms.locfileid: "65102061"
 |**SET CURSOR_CLOSE_ON_COMMIT**|Управляет тем, закрывается ли курсор при фиксации транзакции. Дополнительные сведения см. в описании [SET CURSOR_CLOSE_ON_COMMIT](https://go.microsoft.com/fwlink/?LinkId=238754).|  
 |**SET ANSI_PADDING**|Управляет способом хранения в столбце значений короче, чем определенный размер столбца, и способом хранения в столбце значений, имеющих замыкающие пробелы, в данных **char**, **varchar**, **binary**и **varbinary** . Дополнительные сведения см. в описании [SET ANSI_PADDING](https://go.microsoft.com/fwlink/?LinkId=238755).|  
 |**SET ANSI_WARNINGS**|Указывает поведение стандарта SQL-92 при некоторых ошибках. Дополнительные сведения см. в разделе [SET ANSI_WARNINGS (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=238758).|  
-|**SET ANSI_NULLS**|Задает совместимое со стандартом SQL-92 поведение операторов сравнения "равно" (**=**) и "не равно" (**<>**) при использовании со значениями NULL. Дополнительные сведения см. в разделе [SET ANSI_NULLS (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=238759).|  
+|**SET ANSI_NULLS**|Задает совместимое со стандартом SQL-92 поведение операторов сравнения "равно" ( **=** ) и "не равно" ( **<>** ) при использовании со значениями NULL. Дополнительные сведения см. в разделе [SET ANSI_NULLS (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=238759).|  
   
 ## <a name="QueryResults"></a>Результаты запроса  
   

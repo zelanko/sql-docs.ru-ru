@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: db6522f15d520a1171665b96b928ae6b3c548939
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684552"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62661036"
 ---
 # <a name="define-a-logical-record-relationship-between-merge-table-articles"></a>Определение связи логических записей между статьями таблиц слияния
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "47684552"
 -   Если добавление, изменение или удаление логической записи выполняется после инициализации подписок на публикацию, следует создать новый моментальный снимок и повторно инициализировать все подписки после внесения изменений. Дополнительные сведения о требованиях к изменениям свойств см. в статье [Изменение свойств публикации и статьи](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
- Определите логические записи в диалоговом окне **Добавить соединение**, которое доступно в мастере создания публикаций и диалоговом окне **Свойства публикации — \<публикация>**. Дополнительные сведения об использовании мастера и доступе к этому диалоговому окну см. в статьях [Создание публикации](../../../relational-databases/replication/publish/create-a-publication.md) и [Просмотр и изменение свойств публикации](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+ Определите логические записи в диалоговом окне **Добавить соединение**, которое доступно в мастере создания публикаций и диалоговом окне **Свойства публикации — \<публикация>** . Дополнительные сведения об использовании мастера и доступе к этому диалоговому окну см. в статьях [Создание публикации](../../../relational-databases/replication/publish/create-a-publication.md) и [Просмотр и изменение свойств публикации](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
  Логические записи могут определяться в диалоговом окне **Добавление соединения** , только если они применяются к фильтру соединения в публикации слиянием и если публикация соответствует требованиям для использования предварительно вычисляемых секций. Чтобы определить логические записи, которые не применяются к фильтрам соединения, и чтобы установить обнаружение и разрешение конфликтов на уровне логических записей, следует использовать хранимые процедуры.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "47684552"
   
 3.  Определите фильтр соединения в диалоговом окне **Добавление соединения** , а затем установите флажок **Логическая запись**.  
   
-4.  Если вы находитесь в диалоговом окне **Свойства публикации — \<публикация>**, нажмите кнопку **ОК**, чтобы сохранить изменения и закрыть диалоговое окно.  
+4.  Если вы находитесь в диалоговом окне **Свойства публикации — \<публикация>** , нажмите кнопку **ОК**, чтобы сохранить изменения и закрыть диалоговое окно.  
   
 #### <a name="to-delete-a-logical-record-relationship"></a>Удаление связи логических записей  
   
@@ -93,7 +93,7 @@ ms.locfileid: "47684552"
   
     -   Если значение равно **1**, то предварительно вычисляемые секции уже используются.  
   
-    -   Если значение равно **0**, выполните хранимую процедуру [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) на издателе в базе данных публикации. Задайте **use_partition_groups** в качестве значения параметра **@property** и **true** в качестве значения параметра **@value**.  
+    -   Если значение равно **0**, выполните хранимую процедуру [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) на издателе в базе данных публикации. Задайте **use_partition_groups** в качестве значения параметра **@property** и **true** в качестве значения параметра **@value** .  
   
         > [!NOTE]  
         >  Если публикация не поддерживает предварительно вычисляемые секции, то логические записи использовать нельзя. Дополнительные сведения см. в статье [Оптимизация производительности параметризованного фильтра с помощью предварительно вычисляемых секций](../../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
@@ -102,13 +102,13 @@ ms.locfileid: "47684552"
   
 2.  Если статьи, входящие в логическую запись, не существуют, выполните хранимую процедуру [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) на издателе в базе данных публикации. Укажите один из приведенных ниже параметров определения и распознавания конфликтов в логической записи.  
   
-    -   Для распознавания и разрешения конфликтов, возникающих в связанных строках логической записи, присвойте значение **true** в качестве значения параметра **@logical_record_level_conflict_detection** и **@logical_record_level_conflict_resolution**.  
+    -   Для распознавания и разрешения конфликтов, возникающих в связанных строках логической записи, присвойте значение **true** в качестве значения параметра **@logical_record_level_conflict_detection** и **@logical_record_level_conflict_resolution** .  
   
-    -   Для использования стандартного определения и разрешения конфликтов уровня строки и столбца присвойте значение **false** в качестве значения параметра **@logical_record_level_conflict_detection** и **@logical_record_level_conflict_resolution**(они имеют это значение по умолчанию).  
+    -   Для использования стандартного определения и разрешения конфликтов уровня строки и столбца присвойте значение **false** в качестве значения параметра **@logical_record_level_conflict_detection** и **@logical_record_level_conflict_resolution** (они имеют это значение по умолчанию).  
   
 3.  Повторите шаг 2 для каждой статьи, которая содержит логическую запись. Необходимо использовать в каждой статье логической записи одинаковые параметры определения и разрешения конфликтов. Дополнительные сведения см. в статье [Detecting and Resolving Conflicts in Logical Records](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-resolving-in-logical-record.md).  
   
-4.  На издателе в базе данных публикации выполните хранимую процедуру [sp_addmergefilter](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md). Укажите **@publication**, имя одной статьи связи в качестве значения параметра **@article**, имя второй статьи в качестве значения параметра **@join_articlename**, имя связи в качестве значения параметра **@filtername**, предложение, определяющее связь между двумя статьями в качестве значения параметра **@join_filterclause**, тип соединения в качестве значения параметра **@join_unique_key** , а также одно из следующих значений параметра **@filter_type**:  
+4.  На издателе в базе данных публикации выполните хранимую процедуру [sp_addmergefilter](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md). Укажите **@publication** , имя одной статьи связи в качестве значения параметра **@article** , имя второй статьи в качестве значения параметра **@join_articlename** , имя связи в качестве значения параметра **@filtername** , предложение, определяющее связь между двумя статьями в качестве значения параметра **@join_filterclause** , тип соединения в качестве значения параметра **@join_unique_key** , а также одно из следующих значений параметра **@filter_type** :  
   
     -   **2** — определяет логическую связь;  
   
@@ -123,15 +123,15 @@ ms.locfileid: "47684552"
   
 1.  Для определения и разрешения конфликтов, возникающих в связанных строках логической записи, выполните следующие действия.  
   
-    -   В базе данных публикации на издателе выполните процедуру [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Задайте **@property** в качестве значения параметра **@property** и **true** в качестве значения параметра **@value**. Задайте **1** в качестве значения параметра **@force_invalidate_snapshot** и **@force_reinit_subscription**.  
+    -   В базе данных публикации на издателе выполните процедуру [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Задайте **@property** в качестве значения параметра **@property** и **true** в качестве значения параметра **@value** . Задайте **1** в качестве значения параметра **@force_invalidate_snapshot** и **@force_reinit_subscription** .  
   
-    -   В базе данных публикации на издателе выполните процедуру [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Задайте **@property** в качестве значения параметра **@property** и **true** в качестве значения параметра **@value**. Задайте **1** в качестве значения параметра **@force_invalidate_snapshot** и **@force_reinit_subscription**.  
+    -   В базе данных публикации на издателе выполните процедуру [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Задайте **@property** в качестве значения параметра **@property** и **true** в качестве значения параметра **@value** . Задайте **1** в качестве значения параметра **@force_invalidate_snapshot** и **@force_reinit_subscription** .  
   
 2.  Для использования стандартного метода определения и разрешения конфликтов уровня строки и столбца выполните следующие действия.  
   
-    -   В базе данных публикации на издателе выполните процедуру [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Задайте **@property** в качестве значения параметра **@property** и **false** в качестве значения параметра **@value**. Задайте **1** в качестве значения параметра **@force_invalidate_snapshot** и **@force_reinit_subscription**.  
+    -   В базе данных публикации на издателе выполните процедуру [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Задайте **@property** в качестве значения параметра **@property** и **false** в качестве значения параметра **@value** . Задайте **1** в качестве значения параметра **@force_invalidate_snapshot** и **@force_reinit_subscription** .  
   
-    -   В базе данных публикации на издателе выполните процедуру [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Задайте **@property** в качестве значения параметра **@property** и **false** в качестве значения параметра **@value**. Задайте **1** в качестве значения параметра **@force_invalidate_snapshot** и **@force_reinit_subscription**.  
+    -   В базе данных публикации на издателе выполните процедуру [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Задайте **@property** в качестве значения параметра **@property** и **false** в качестве значения параметра **@value** . Задайте **1** в качестве значения параметра **@force_invalidate_snapshot** и **@force_reinit_subscription** .  
   
 #### <a name="to-remove-a-logical-record-relationship"></a>Удаление связи логических записей  
   
@@ -144,7 +144,7 @@ ms.locfileid: "47684552"
     > [!NOTE]  
     >  Этот запрос возвращает те же сведения, что и системная хранимая процедура [sp_helpmergefilter](../../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md), однако системная хранимая процедура возвращает только сведения по тем связям логических записей, которые являются также фильтрами соединения.  
   
-2.  На издателе в базе данных публикации выполните хранимую процедуру [sp_dropmergefilter](../../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md). Укажите **@publication**, имя одной из статей в связи в качестве значения параметра **@article**, а также имя связи из шага 1 в качестве значения параметра **@filtername**.  
+2.  На издателе в базе данных публикации выполните хранимую процедуру [sp_dropmergefilter](../../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md). Укажите **@publication** , имя одной из статей в связи в качестве значения параметра **@article** , а также имя связи из шага 1 в качестве значения параметра **@filtername** .  
   
 ###  <a name="TsqlExample"></a> Примеры (Transact-SQL)  
  В этом примере разрешается использование предварительно вычисляемых секций в существующей публикации и создается логическая запись, в которую входят две новые статьи для таблиц `SalesOrderHeader` и `SalesOrderDetail` .  

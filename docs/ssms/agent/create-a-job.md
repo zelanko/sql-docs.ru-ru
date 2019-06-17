@@ -16,10 +16,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 993debfc18e7722e517e07b42e335aa7f4f29457
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65095599"
 ---
 # <a name="create-a-job"></a>Создание задания
@@ -76,7 +76,7 @@ ms.locfileid: "65095599"
   
 2.  Щелкните знак "плюс", чтобы развернуть **Агент SQL Server**.  
   
-3.  Щелкните правой кнопкой мыши папку **Задания** и выберите пункт **Создать задание…**.  
+3.  Щелкните правой кнопкой мыши папку **Задания** и выберите пункт **Создать задание…** .  
   
 4.  На странице **Общие** в диалоговом окне **Создание задания** измените общие свойства задания. Дополнительные сведения о параметрах, доступных на этой странице, см. в разделе [Свойства задания — создание задания (страница "Общие")](../../ssms/agent/job-properties-new-job-general-page.md)  
   

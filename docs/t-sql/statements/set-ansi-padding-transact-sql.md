@@ -26,11 +26,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ed0dd384b3ca1a90b1a40bbb23d63feabf2ae85d
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143294"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62638425"
 ---
 # <a name="set-ansipadding-transact-sql"></a>SET ANSI_PADDING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -65,7 +65,7 @@ SET ANSI_PADDING ON
   
 |Настройка|char(*n*) NOT NULL или binary(*n*) NOT NULL|char(*n*) NULL или binary(*n*) NULL|varchar(*n*) или varbinary(*n*)|  
 |-------------|----------------------------------------------------|--------------------------------------------|----------------------------------------|  
-|ON|Заполнение исходного значения (с замыкающими пробелами для столбцов **char** и с замыкающими нулями для столбцов **binary**) до длины столбца.|Следует тем же правилам, что и для **char(**_n_**)** или **binary(**_n_**)** NOT NULL, когда для параметра SET ANSI_PADDING установлено значение ON.|Замыкающие пробелы в символьных значениях, вставляемых в столбцы **varchar**, не усекаются. Замыкающие нули в двоичных значениях, вставляемых в столбцы **varbinary**, не усекаются. Значения не подгоняются под длину столбца.|  
+|ON|Заполнение исходного значения (с замыкающими пробелами для столбцов **char** и с замыкающими нулями для столбцов **binary**) до длины столбца.|Следует тем же правилам, что и для **char(** _n_ **)** или **binary(** _n_ **)** NOT NULL, когда для параметра SET ANSI_PADDING установлено значение ON.|Замыкающие пробелы в символьных значениях, вставляемых в столбцы **varchar**, не усекаются. Замыкающие нули в двоичных значениях, вставляемых в столбцы **varbinary**, не усекаются. Значения не подгоняются под длину столбца.|  
 |OFF|Заполнение исходного значения (с замыкающими пробелами для столбцов **char** и с замыкающими нулями для столбцов **binary**) до длины столбца.|Следует тем же правилам, что и для **varchar** или **varbinary**, когда для параметра SET ANSI_PADDING установлено значение OFF.|Замыкающие пробелы в символьных значениях, вставляемых в столбец **varchar**, усекаются. Замыкающие нули в двоичных значениях, вставляемых в столбец **varbinary**, усекаются.|  
   
 > [!NOTE]  
@@ -75,7 +75,7 @@ SET ANSI_PADDING ON
   
 По умолчанию значение параметра SET ANSI_PADDING равно ON. Драйвер ODBC для Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и поставщик OLE DB для Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] автоматически устанавливает параметр ANSI_PADDING в значение ON при соединении. Это может быть настроено в источниках данных ODBC, в атрибутах соединения ODBC или свойствах соединения OLE DB, определенных в приложении перед установкой соединения. Значением по умолчанию для параметра инструкции SET ANSI_PADDING является OFF при соединениях из приложений DB-Library.  
   
- Параметр SET ANSI_PADDING не влияет на типы данных **nchar**, **nvarchar**, **ntext**, **text**, **image**, **varbinary(max)**, **varchar(max)** и **nvarchar(max)**. Они всегда демонстрируют поведение, соответствующее установленному для параметра инструкции SET ANSI_PADDING значению ON. Это означает, что конечные пробелы и нули не вырезаются.  
+ Параметр SET ANSI_PADDING не влияет на типы данных **nchar**, **nvarchar**, **ntext**, **text**, **image**, **varbinary(max)** , **varchar(max)** и **nvarchar(max)** . Они всегда демонстрируют поведение, соответствующее установленному для параметра инструкции SET ANSI_PADDING значению ON. Это означает, что конечные пробелы и нули не вырезаются.  
   
 Когда для ANSI_DEFAULTS установлено значение ON, параметр ANSI_PADDING включен.  
   

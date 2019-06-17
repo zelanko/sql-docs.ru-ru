@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 795d4d31c3b26d2ef1f587e6b96d158d5d304789
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65725688"
 ---
 # <a name="tutorial-using-the-odata-source"></a>Руководство. Использование источника OData
@@ -23,7 +23,7 @@ ms.locfileid: "65725688"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  Этот учебник содержит процедуру извлечения коллекции **Employees** из образца **Northwind** службы OData (https://services.odata.org/V3/Northwind/Northwind.svc/)) и последующей ее загрузки в неструктурированный файл.  
+  Этот учебник содержит процедуру извлечения коллекции **Employees** из образца **Northwind** службы OData (https://services.odata.org/V3/Northwind/Northwind.svc/) ) и последующей ее загрузки в неструктурированный файл.  
   
 ## <a name="1-create-an-integration-services-project"></a>1. Создание проекта служб Integration Services  
   
@@ -47,7 +47,7 @@ ms.locfileid: "65725688"
   
 4.  Дважды щелкните компонент **Источник OData**, чтобы открыть диалоговое окно **Редактор источника OData**.  
   
-5.  Щелкните **Создать…**, чтобы добавить новый диспетчера соединений OData.  
+5.  Щелкните **Создать…** , чтобы добавить новый диспетчера соединений OData.  
   
 6.  Введите URL-адрес службы OData в поле **Расположение сервисного документа**. Это может быть URL-адрес сервисного документа либо определенный веб-канал или сущность. В целях этого учебника введите URL-адрес сервисного документа: [https://services.odata.org/V3/Northwind/Northwind.svc/](https://services.odata.org/V3/Northwind/Northwind.svc/).  
   
@@ -75,7 +75,7 @@ ms.locfileid: "65725688"
   
 2.  Подключите компонент **Источник OData** к компоненту **Назначение «Неструктурированный файл»** с помощью синей стрелки.  
   
-3.  Дважды щелкните **Назначение "Неструктурированный файл"**. Отобразится диалоговое окно **Редактор назначения «Неструктурированный файл»** .  
+3.  Дважды щелкните **Назначение "Неструктурированный файл"** . Отобразится диалоговое окно **Редактор назначения «Неструктурированный файл»** .  
   
 4.  В диалоговом окне **Редактор назначения «Неструктурированный файл»** щелкните **Создать** , чтобы создать новый диспетчер соединений с неструктурированными файлами.  
   

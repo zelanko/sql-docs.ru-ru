@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 427af0f98682975e040452f1e2fd009526bd067d
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65715943"
 ---
 # <a name="catalogsetenvironmentproperty-ssisdb-database"></a>catalog.set_environment_property (база данных SSISDB)
@@ -38,16 +38,16 @@ catalog.set_environment_property [ @folder_name = ] folder_name
   
 ## <a name="arguments"></a>Аргументы  
  [ @folder_name = ] *folder_name*  
- Имя папки, которая содержит среду. Параметр *folder_name* имеет тип **nvarchar(128)**.  
+ Имя папки, которая содержит среду. Параметр *folder_name* имеет тип **nvarchar(128)** .  
   
  [ @environment_name = ] *environment_name*  
- Имя среды. Параметр *environment_name* имеет тип **nvarchar(128)**.  
+ Имя среды. Параметр *environment_name* имеет тип **nvarchar(128)** .  
   
  [ @property_name = ] *property_name*  
- Имя свойства среды. Параметр *property_name* имеет тип **nvarchar(128)**.  
+ Имя свойства среды. Параметр *property_name* имеет тип **nvarchar(128)** .  
   
  [ @property_value = ] *property_value*  
- Значение свойства среды. Параметр *property_value* имеет тип **nvarchar(1024)**.  
+ Значение свойства среды. Параметр *property_value* имеет тип **nvarchar(1024)** .  
   
 ## <a name="return-code-value"></a>Значения кодов возврата  
  0 (успешное завершение)  

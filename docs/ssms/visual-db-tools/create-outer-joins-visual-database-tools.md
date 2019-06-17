@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 07f168c018c33d5078dd47b0f8a38d07ddfdcdf5
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65095652"
 ---
 # <a name="create-outer-joins-visual-database-tools"></a>Создание внешних соединений (визуальные инструменты для баз данных)
@@ -31,7 +31,7 @@ ms.locfileid: "65095652"
   
 1.  Создайте соединение автоматически или вручную. Дополнительные сведения см. в статье [Автоматическое соединение таблиц (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/join-tables-automatically-visual-database-tools.md) или [Соединение таблиц вручную (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/join-tables-manually-visual-database-tools.md).  
   
-2.  Выберите линию соединения на панели диаграммы, а затем в меню **Конструктор запросов** выберите **Выбрать все строки из <tablename>**, указав команду, включающую таблицу, дополнительные строки которой необходимо включить.  
+2.  Выберите линию соединения на панели диаграммы, а затем в меню **Конструктор запросов** выберите **Выбрать все строки из <tablename>** , указав команду, включающую таблицу, дополнительные строки которой необходимо включить.  
   
     -   Выберите первую таблицу для создания левого внешнего соединения.  
   

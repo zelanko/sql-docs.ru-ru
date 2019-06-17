@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: cbe062925826b40c6f7612f6becf1af0986461a4
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65105172"
 ---
 # <a name="create-a-new-registered-server-sql-server-management-studio"></a>Создание нового зарегистрированного сервера (среда SQL Server Management Studio)
@@ -54,7 +54,7 @@ ms.locfileid: "65105172"
      При регистрации сервера из окна "Зарегистрированные серверы" поле **Тип сервера** доступно только для чтения и соответствует типу сервера, который выводится на панели "Зарегистрированные серверы". Для регистрации сервера другого типа выберите **ядро СУБД**, **службу Analysis Server**, **службы Reporting Services**или **службы Integration Services** на панели инструментов **Зарегистрированные серверы** перед регистрацией нового сервера.  
   
      **Имя сервера**  
-     Выберите экземпляр сервера для регистрации в формате: *\<имя_сервера>*[\\*\<имя_экземпляра*].  
+     Выберите экземпляр сервера для регистрации в формате: *\<имя_сервера>* [\\ *\<имя_экземпляра*].  
   
      **Проверка подлинности**  
      При соединении с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]доступны два режима проверки подлинности.  

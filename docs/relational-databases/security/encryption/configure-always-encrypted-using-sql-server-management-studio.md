@@ -18,11 +18,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a6cc6dcb53bb7c535db570bbaa68db0673a83879
-ms.sourcegitcommit: 85fd3e1751de97a16399575397ab72ebd977c8e9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/17/2018
-ms.locfileid: "53531119"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62521668"
 ---
 # <a name="configure-always-encrypted-using-sql-server-management-studio"></a>Configure Always Encrypted using SQL Server Management Studio (Настройка постоянного шифрования с помощью среды SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -223,7 +223,7 @@ WHERE [SSN] = @SSN;
 В диалоговом окне **Новый главный ключ столбца** можно создать главный ключ столбца или выбрать существующий ключ в хранилище ключей, а также создать метаданные главного ключа столбца для сгенерированного или выбранного ключа в базе данных.
 
 1.  С помощью **обозревателя объектов** перейдите к папке **Безопасность > Ключи постоянного шифрования** в базе данных.
-2.  Щелкните правой кнопкой мыши папку **Главные ключи столбцов** и выберите **Создать главный ключ столбца…**. 
+2.  Щелкните правой кнопкой мыши папку **Главные ключи столбцов** и выберите **Создать главный ключ столбца…** . 
 3.  В диалоговом окне **Новый главный ключ столбца** введите имя объекта метаданных главного ключа столбца.
 4.  Выберите хранилище ключей.
     - **Хранилище сертификатов — текущий пользователь** — указывает расположение хранилища сертификатов текущего пользователя в хранилище сертификатов Windows, которое является личным хранилищем. 

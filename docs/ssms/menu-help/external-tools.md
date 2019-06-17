@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 26ff0aa2920072d8c6fd4ef97d9945bf1b365970
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65104841"
 ---
 # <a name="external-tools"></a>Внешние инструменты
@@ -74,7 +74,7 @@ ms.locfileid: "65104841"
   
 3.  В поле **Команда** введите путь к исполняемому файлу консоли управления [!INCLUDE[msCoName](../../includes/msconame_md.md)] , например **C:\WINNT\system32\mmc.exe**.  
   
-4.  В поле **Аргументы** введите путь к MSC-файлу, например **"C:\WINNT\system32\SQLServerManager.msc"**.  
+4.  В поле **Аргументы** введите путь к MSC-файлу, например **"C:\WINNT\system32\SQLServerManager.msc"** .  
   
 > [!NOTE]  
 > Чтобы проверить расположение соответствующих файлов на компьютере, просмотрите свойства ярлыка среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] в меню **Пуск** .  

@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 82420ce073f65483043d44670fc538849a447d90
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723316"
 ---
 # <a name="lesson-1-1-create-a-new-integration-services-project"></a>Урок 1-1. Создание нового проекта служб Integration Services
@@ -26,7 +26,7 @@ ms.locfileid: "65723316"
 
 Первым шагом создания пакета в службах [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] будет создание проекта служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Этот пример проекта содержит шаблоны для источников данных, представлений источников данных и пакетов, которые составляют решение для преобразования данных.  
   
-Пакеты, которые вы создадите в этом учебнике по службам [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], преобразуют значения данных, зависящих от языковых стандартов. Если компьютер не настроен на использование регионального параметра **Английский (США)**, необходимо настроить в пакете дополнительные свойства. 
+Пакеты, которые вы создадите в этом учебнике по службам [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], преобразуют значения данных, зависящих от языковых стандартов. Если компьютер не настроен на использование регионального параметра **Английский (США)** , необходимо настроить в пакете дополнительные свойства. 
 
 Для уроков со 2-го по 6-й применяются копии того пакета, который вы создадите в этом занятии.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "65723316"
 
 ## <a name="create-a-new-integration-services-project"></a>Создание нового проекта служб Integration Services  
   
-1.  В меню **Пуск** Windows найдите и выберите элемент **Visual Studio (SSDT)**.  
+1.  В меню **Пуск** Windows найдите и выберите элемент **Visual Studio (SSDT)** .  
   
 2.  В Visual Studio последовательно выберите **Файл** > **Новый** > **Проект**, чтобы создать новый проект [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   

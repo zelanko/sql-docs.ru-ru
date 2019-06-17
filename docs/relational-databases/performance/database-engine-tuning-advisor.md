@@ -13,11 +13,11 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 ms.openlocfilehash: c2f2cf71f30848c60a000eaaeefcc1447f2a5a6d
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328791"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62653074"
 ---
 # <a name="database-engine-tuning-advisor"></a>Database Engine Tuning Advisor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "53328791"
  **Графический пользовательский интерфейс помощника по настройке ядра СУБД**  
  Простой в использовании интерфейс, в котором можно указать рабочую нагрузку и выбрать различные параметры настройки.  
   
- Служебная программа**dta**   
+ Служебная программа**dta**  
  Версия помощника по настройке ядра СУБД для командной строки. Программа **dta** предназначена для использования функций помощника по настройке ядра СУБД в приложениях и скриптах.  
   
  **Рабочая нагрузка**  

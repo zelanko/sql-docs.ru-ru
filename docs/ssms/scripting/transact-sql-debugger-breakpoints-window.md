@@ -14,10 +14,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: af1a6dcbd241daa2d7edf0bb14f17e84d32bf2d6
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/17/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65821758"
 ---
 # <a name="transact-sql-debugger---breakpoints-window"></a>Отладчик Transact-SQL, окно точек останова
@@ -36,7 +36,7 @@ ms.locfileid: "65821758"
  Отображается имя точки останова. Имена точек останова предоставляются отладчиком. Это имя включает имя окна редактора запросов компонента Database Engine, которое содержит точку останова, и номер строки в редакторе запросов, на которой задана точка останова.  
   
  **Условие**  
- Отображает **(нет условия)**. Отладчик [!INCLUDE[tsql](../../includes/tsql-md.md)] не поддерживает задание условий точки останова.  
+ Отображает **(нет условия)** . Отладчик [!INCLUDE[tsql](../../includes/tsql-md.md)] не поддерживает задание условий точки останова.  
   
  **Число попаданий**  
  Отображает**всегда выполнять останов**.  
@@ -44,7 +44,7 @@ ms.locfileid: "65821758"
  Можно добавлять и удалять следующие столбцы, выбирая их в списке **Столбцы** .  
   
  **Filter**  
- Отображает **(нет)**. Отладчик [!INCLUDE[tsql](../../includes/tsql-md.md)] не поддерживает задание фильтров для точек останова.  
+ Отображает **(нет)** . Отладчик [!INCLUDE[tsql](../../includes/tsql-md.md)] не поддерживает задание фильтров для точек останова.  
   
  **При попадании**  
  Отображает **Останов**.  

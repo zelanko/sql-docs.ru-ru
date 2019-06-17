@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a5115d9c66dd7baf091635b06ff413aa8c4ca736
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65716896"
 ---
 # <a name="catalogcreatefolder-ssisdb-database"></a>catalog.create_folder (база данных SSISDB)
@@ -35,7 +35,7 @@ catalog.create_folder [@folder_name =] folder_name, [@folder_id =] folder_id OUT
   
 ## <a name="arguments"></a>Аргументы  
  [@folder_name =] *folder_name*  
- Имя новой папки. Параметр *folder_name* имеет тип **nvarchar(128)**.  
+ Имя новой папки. Параметр *folder_name* имеет тип **nvarchar(128)** .  
   
  [@folder_name =] *folder_id*  
  Уникальный идентификатор папки. Параметр *folder_id* имеет тип **bigint**.  

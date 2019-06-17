@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cce0b8606b398d1c72b70c161bb8ccdf0d779167
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728063"
 ---
 # <a name="analysis-services-execute-ddl-task"></a>Задача «Выполнение инструкции DDL служб Analysis Services»
@@ -254,7 +254,7 @@ ms.locfileid: "65728063"
   
 ### <a name="static-options"></a>Статические параметры  
  **Соединение**  
- Выберите проект [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] или диспетчер соединений [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] из списка или нажмите кнопку \<**Новое соединение...**> и создайте новое соединение с помощью диалогового окна **Добавление диспетчера соединений со службами Analysis Services**.  
+ Выберите проект [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] или диспетчер соединений [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] из списка или нажмите кнопку \<**Новое соединение...** > и создайте новое соединение с помощью диалогового окна **Добавление диспетчера соединений со службами Analysis Services**.  
   
  **См. также:** [Диалоговое окно "Добавление диспетчера соединений со службами Analysis Services" в справочнике по пользовательскому интерфейсу](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md), [Диспетчер соединений служб Analysis Services](../../integration-services/connection-manager/analysis-services-connection-manager.md)  
   
@@ -275,13 +275,13 @@ ms.locfileid: "65728063"
   
 #### <a name="sourcetype--file-connection"></a>SourceType = Подключение файла  
  **Source**  
- Выберите "Соединение с файлом" из списка или нажмите кнопку \<**Новое соединение...**> и создайте новое соединение с помощью диалогового окна **Диспетчер соединения файлов**.  
+ Выберите "Соединение с файлом" из списка или нажмите кнопку \<**Новое соединение...** > и создайте новое соединение с помощью диалогового окна **Диспетчер соединения файлов**.  
   
  **См. также:** [Диспетчер соединения файлов](../../integration-services/connection-manager/file-connection-manager.md)  
   
 #### <a name="sourcetype--variable"></a>SourceType = Переменная  
  **Source**  
- Выберите переменную из списка или нажмите \<**Новая переменная...**> и создайте новую переменную с помощью диалогового окна **Добавление переменной**.  
+ Выберите переменную из списка или нажмите \<**Новая переменная...** > и создайте новую переменную с помощью диалогового окна **Добавление переменной**.  
   
  **См. также:** [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md)  
   
