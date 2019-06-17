@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2148c5145ab9d28c698d04253871677560fea9d9
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65980205"
 ---
 # <a name="sphelpfulltexttables-transact-sql"></a>sp_help_fulltext_tables (Transact-SQL)
@@ -46,7 +46,7 @@ sp_help_fulltext_tables [ [ @fulltext_catalog_name = ] 'fulltext_catalog_name' ]
 ## <a name="arguments"></a>Аргументы  
 `[ @fulltext_catalog_name = ] 'fulltext_catalog_name'` — Имя полнотекстового каталога. *fulltext_catalog_name* — **sysname**, значение по умолчанию NULL. Если *fulltext_catalog_name* опущен или имеет значение NULL, возвращаются все таблицы индексированных полнотекстового поиска, связанный с базой данных. Если *fulltext_catalog_name* указан, но *table_name* опущен или имеет значение NULL, данные полнотекстового индекса извлекаются для каждой таблицы индексом полнотекстового поиска, связанный с этим каталогом. Если оба *fulltext_catalog_name* и *table_name* указаны, строка возвращается в том случае, если *table_name* связан с *fulltext_catalog_name*; в противном случае возникает ошибка.  
   
-`[ @table_name = ] 'table_name'` — Это одно - или двухкомпонентное имя таблицы, для которой запрашиваются полнотекстовые метаданные. *TABLE_NAME* — **nvarchar(517)**, со значением по умолчанию NULL. Если только *table_name* указано, только строка, соответствующая аргументу *table_name* возвращается.  
+`[ @table_name = ] 'table_name'` — Это одно - или двухкомпонентное имя таблицы, для которой запрашиваются полнотекстовые метаданные. *TABLE_NAME* — **nvarchar(517)** , со значением по умолчанию NULL. Если только *table_name* указано, только строка, соответствующая аргументу *table_name* возвращается.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  

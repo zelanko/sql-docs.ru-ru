@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b05d670e7873cab5b44c1bce0c62c716809af476
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107291"
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Расширенные свойства поля для базы данных служб Analysis Services (службы SSRS)
@@ -46,7 +46,7 @@ ms.locfileid: "66107291"
 |------------------|--------------|---------------------------------------|  
 |`Value`|`Object`|Указывает значение данных поля.|  
 |`IsMissing`|`Boolean`|Указывает, найдено ли поле в результирующем наборе данных.|  
-|`UniqueName`|`String`|Возвращает полное имя уровня. Например `UniqueName` значение для сотрудника может быть *[Сотрудник]. [ Отдел сотрудника]. [Подразделение]. & [продажи]. & [Северной Америки Продавец]. & [272]*.|  
+|`UniqueName`|`String`|Возвращает полное имя уровня. Например `UniqueName` значение для сотрудника может быть *[Сотрудник]. [ Отдел сотрудника]. [Подразделение]. & [продажи]. & [Северной Америки Продавец]. & [272]* .|  
 |`BackgroundColor`|`String`|Возвращает цвет фона, заданный в базе данных для этого поля.|  
 |`Color`|`String`|Возвращает цвет переднего плана, заданный в базе данных для этого элемента.|  
 |`FontFamily`|`String`|Возвращает название шрифта, определенного в базе данных для элемента.|  

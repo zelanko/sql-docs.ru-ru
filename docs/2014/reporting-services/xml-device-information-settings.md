@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e642034d445e52485874c71df110bff81b9c1aaf
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66096938"
 ---
 # <a name="xml-device-information-settings"></a>Настройки сведений об устройстве XML
@@ -33,7 +33,7 @@ ms.locfileid: "66096938"
 |`OmitSchema`|Показывает, нужно ли исключать расположение схемы из XML. Расположение атрибута SchemaLocation. Значение по умолчанию для OmitSchema зависит от значения OmitNamespace:<br /><br /> если OmitNamespace = False, то по умолчанию OmitSchema = `False`. Пользователь может переопределить значение по умолчанию, установив OmitSchema = True.<br /><br /> Если OmitNamespace = true, то OmitSchema будет функционировать как `True` независимо от значения явно заданного для OmitShema.|  
 |**Кодировка**|Определенное комитетом по цифровым адресам в Интернете (IANA) название кодировки символов, поддерживаемой платформой .NET Framework. Значение по умолчанию — `UTF-8`. В качестве примеров других значений можно привести ASCII, UTF-7 и UTF-16.|  
 |**FileExtension**|Расширение, используемое для создаваемого файла.|  
-|**Схема**|Показывает, выводится ли в XML-код схема XSD или фактические XML-данные. Значение `true` показывает, что выводится схема XML. Значение по умолчанию — `false`.|  
+|**Схема**|Показывает, выводится ли в XML-код схема XSD или фактические XML-данные. Значение `true` показывает, что выводится схема XML. Значение по умолчанию — `false`.|  
   
 ## <a name="see-also"></a>См. также  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   

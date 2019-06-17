@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1cc957af5596acbf2478d55645b1386283970e33
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66102529"
 ---
 # <a name="publish-a-report-to-a-sharepoint-library"></a>опубликовать отчет в библиотеке SharePoint
@@ -30,19 +30,19 @@ ms.locfileid: "66102529"
   
 1.  В среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]откройте существующий или новый проект сервера отчетов.  
   
-2.  В меню **Проект** выберите пункт **Свойства**. Откроется диалоговое окно _Страницы свойств_**\<проекта>**.  
+2.  В меню **Проект** выберите пункт **Свойства**. Откроется диалоговое окно _Страницы свойств_ **\<проекта>** .  
   
-3.  В списке **Конфигурация** выберите имя конфигурации сборки решения, предназначенной для формирования и публикации отчета. Текущая конфигурация представлена в списке как **Активная**(*\<конфигурация>*).  
+3.  В списке **Конфигурация** выберите имя конфигурации сборки решения, предназначенной для формирования и публикации отчета. Текущая конфигурация представлена в списке как **Активная**( *\<конфигурация>* ).  
   
 4.  Если в проекте публикуются общие источники данных и перезаписываются ранее опубликованные общие источники данных, присвойте свойству **OverwriteDataSources** значение **True**.  
   
-5.  (Необязательно) Для **TargetDataSourceFolder**, введите URL-адрес библиотеки SharePoint или папки библиотеки (например, *http://TestServer/TestSite/Documents/DataSources)*.  
+5.  (Необязательно) Для **TargetDataSourceFolder**, введите URL-адрес библиотеки SharePoint или папки библиотеки (например, *http://TestServer/TestSite/Documents/DataSources)* .  
   
      Если значение не указано, то будет использовано значение свойства **TargetReportFolder** .  
   
-6.  Для **TargetReportFolder**, введите URL-адрес библиотеки или папки библиотеки (например, *http://TestServer/TestSite/Documents/Reports)*.  
+6.  Для **TargetReportFolder**, введите URL-адрес библиотеки или папки библиотеки (например, *http://TestServer/TestSite/Documents/Reports)* .  
   
-7.  В поле **TargetServerURL**введите URL-адрес сайта SharePoint верхнего уровня или дочернего сайта. Если сайт не указан, используется сайт верхнего уровня по умолчанию (например, *http://servername*, *http://servername/site*, или *http://servername/site/subsite*).  
+7.  В поле **TargetServerURL**введите URL-адрес сайта SharePoint верхнего уровня или дочернего сайта. Если сайт не указан, используется сайт верхнего уровня по умолчанию (например, *http://servername* , *http://servername/site* , или *http://servername/site/subsite* ).  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

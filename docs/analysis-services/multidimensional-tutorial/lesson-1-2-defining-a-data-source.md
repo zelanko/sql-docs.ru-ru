@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6e52d6b6ef2a98089f17fe83a55d50b7693dbbc1
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65404016"
 ---
 # <a name="lesson-1-2---defining-a-data-source"></a>Занятие 1 – 2-Определение источника данных
@@ -37,7 +37,7 @@ ms.locfileid: "65404016"
   
 5.  В текстовом поле **Имя сервера** введите **localhost**.  
   
-    Чтобы подключиться к именованному экземпляру на локальном компьютере, введите **localhost\\<instance name>**. Чтобы подключиться к конкретному компьютеру вместо локального, введите имя компьютера или его IP-адрес.  
+    Чтобы подключиться к именованному экземпляру на локальном компьютере, введите **localhost\\<instance name>** . Чтобы подключиться к конкретному компьютеру вместо локального, введите имя компьютера или его IP-адрес.  
   
 6.  Убедитесь в том, что выбран параметр **Использовать проверку подлинности Windows** . В поле списка **Выберите или введите имя базы данных** выберите **AdventureWorksDW2012**.  
   

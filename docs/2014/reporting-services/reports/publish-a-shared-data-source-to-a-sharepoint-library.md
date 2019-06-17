@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2866b0b8a72e48dbb6c93b37b2a1a83e20e12821
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66102541"
 ---
 # <a name="publish-a-shared-data-source-to-a-sharepoint-library"></a>опубликовать общий источник данных в библиотеке SharePoint
@@ -30,17 +30,17 @@ ms.locfileid: "66102541"
   
 1.  В среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]откройте существующий или создайте новый проект сервера отчетов.  
   
-2.  В меню **Проект** выберите **Свойства**. Откроется диалоговое окно _Страницы свойств_**\<проекта>**.  
+2.  В меню **Проект** выберите **Свойства**. Откроется диалоговое окно _Страницы свойств_ **\<проекта>** .  
   
 3.  Выберите **Конфигурацию** для публикации на сайте SharePoint,  
   
 4.  Если в проекте публикуются общие источники данных и перезаписываются ранее опубликованные общие источники данных, присвойте свойству **OverwriteDataSources** значение **True**.  
   
-5.  Для значения свойства **TargetDataSourceFolder**введите URL-адрес библиотеки SharePoint или папки библиотеки (необязательно). Например *http://TestServer/TestSite/Documents/DataSources*.  
+5.  Для значения свойства **TargetDataSourceFolder**введите URL-адрес библиотеки SharePoint или папки библиотеки (необязательно). Например *http://TestServer/TestSite/Documents/DataSources* .  
   
      Если значение не указано, то будет использовано значение свойства **TargetReportFolder** .  
   
-6.  В качестве значения свойства **TargetReportFolder**введите URL-адрес библиотеки или папки библиотеки. Например, http:*//TestServer/TestSite/Documents/Reports*.  
+6.  В качестве значения свойства **TargetReportFolder**введите URL-адрес библиотеки или папки библиотеки. Например, http: *//TestServer/TestSite/Documents/Reports*.  
   
 7.  В поле **TargetServerURL**введите URL-адрес сайта SharePoint верхнего уровня или дочернего сайта. Если сайт не указан, то используется сайт верхнего уровня по умолчанию. Например: http://*имя_сервера*, http://*имя_сервера*/*сайт*или http://*имя_сервера*/*сайт*/*подсайт*.  
   
