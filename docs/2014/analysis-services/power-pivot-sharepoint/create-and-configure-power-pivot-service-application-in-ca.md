@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 64997cb3db784ea78a72a7c812c8f88034c2358d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66071574"
 ---
 # <a name="create-and-configure-a-powerpivot-service-application-in-central-administration"></a>Создание и настройка приложения службы PowerPivot в центре администрирования
@@ -137,9 +137,9 @@ ms.locfileid: "66071574"
   
 3.  Нажмите **Соединения службы**.  
   
-4.  В поле **Изменить следующую группу взаимосвязей**выберите **default** или **[custom]**.  
+4.  В поле **Изменить следующую группу взаимосвязей**выберите **default** или **[custom]** .  
   
-5.  Если выбран пункт **[custom]**, установите флажок для всех соединений приложений служб, которые будут использоваться. Если есть несколько приложений службы PowerPivot (обозначены типом `PowerPivot Service Application Proxy`), то должно быть выбрано только одно.  
+5.  Если выбран пункт **[custom]** , установите флажок для всех соединений приложений служб, которые будут использоваться. Если есть несколько приложений службы PowerPivot (обозначены типом `PowerPivot Service Application Proxy`), то должно быть выбрано только одно.  
   
 6.  Нажмите кнопку **ОК**.  
   

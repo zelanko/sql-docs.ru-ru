@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ab658be26dc8ccbdd4e760d0b1bc835ace3b2c38
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66011669"
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>Использование символьного формата для импорта и экспорта данных (SQL Server)
@@ -56,7 +56,7 @@ ms.locfileid: "66011669"
 |**bcp**|**-c**|Вызывает **bcp** использовать символьные данные.<sup> 1</sup>|  
 |BULK INSERT|DATAFILETYPE **='char'**|Использует символьный формат при массовом импорте данных.|  
   
- <sup>1</sup> Чтобы загрузить символьные (**- c**) данные в формате, совместимом с более ранними версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] клиентов необходимо использовать **-V** переключения. Дополнительные сведения см. в разделе [Импорт данных в собственном и символьном формате из предыдущих версий SQL Server](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md).  
+ <sup>1</sup> Чтобы загрузить символьные ( **- c**) данные в формате, совместимом с более ранними версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] клиентов необходимо использовать **-V** переключения. Дополнительные сведения см. в разделе [Импорт данных в собственном и символьном формате из предыдущих версий SQL Server](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md).  
   
  Дополнительные сведения см. в статьях [Программа bcp](../../tools/bcp-utility.md), [BULK INSERT (Transact-SQL)](/sql/t-sql/statements/bulk-insert-transact-sql) и [OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql).  
   

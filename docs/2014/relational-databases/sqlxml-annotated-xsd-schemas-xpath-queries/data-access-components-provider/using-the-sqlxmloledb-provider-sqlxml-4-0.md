@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 67a5486816f5af652e111372c9cb492ba3cdb3c4
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66012953"
 ---
 # <a name="using-the-sqlxmloledb-provider-sqlxml-40"></a>Использование поставщика SQLXMLOLEDB (SQLXML 4.0)
@@ -31,7 +31,7 @@ ms.locfileid: "66012953"
   
     -   Microsoft ActiveX Data Objects 2,6 библиотеки  
   
-    -   2.7 библиотеки объектов данных ActiveX  
+    -   2\.7 библиотеки объектов данных ActiveX  
   
     -   Библиотека объектов Microsoft ADO 2.8  
   

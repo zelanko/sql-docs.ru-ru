@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8293bb8d1f0465d09b296cbd18702b569f073766
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66078230"
 ---
 # <a name="lesson-8-defining-actions"></a>Урок 8. Определение действий
@@ -35,7 +35,7 @@ ms.locfileid: "66078230"
 |Отчет|Направляет серверу отчетов параметризованный запрос на основе URL-адресов и возвращает клиентскому приложению отчет.|  
 |Набор строк|Возвращает клиентскому приложению набор строк.|  
 |.|Выполняет команду OLE DB.|  
-|URL-адрес|Отображает динамическую веб-страницу в браузереБраузер Интернета.|  
+|URL|Отображает динамическую веб-страницу в браузереБраузер Интернета.|  
   
  Действия позволяют пользователям запускать приложение или выполнять другие шаги в контексте выбранного элемента. Дополнительные сведения см. в разделе [Действия (службы Analysis Services — многомерные данные)](multidimensional-models/actions-analysis-services-multidimensional-data.md), [Действия в многомерных моделях](multidimensional-models/actions-in-multidimensional-models.md).  
   

@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 580ac26d2478de1f42800d6f8d6704f26bc6fff4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62660805"
 ---
 # <a name="sphelpmergepublication-transact-sql"></a>sp_helpmergepublication (Transact-SQL)
@@ -43,29 +43,29 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @publication **=** ] **"**_публикации_**"**  
- Имя публикации. *Публикация*— **sysname**, значение по умолчанию **%**, котором возвращаются сведения обо всех публикациях слиянием в текущей базе данных.  
+ [ @publication **=** ] **"** _публикации_ **"**  
+ Имя публикации. *Публикация*— **sysname**, значение по умолчанию **%** , котором возвращаются сведения обо всех публикациях слиянием в текущей базе данных.  
   
  [ @found **=** ] **"***найти***"** выходных данных  
  Флаг для указания возвращаемых строк. *найти*— **int** и ВЫХОДНОЙ параметр, значение по умолчанию NULL. **1** указывает, что публикация найдена. **0** указывает, что публикация не найдена.  
   
- [ @publication_id **=**] **"***publication_id***"** выходных данных  
+ [ @publication_id **=** ] **"***publication_id***"** выходных данных  
  Идентификационный номер публикации. *publication_id* — **uniqueidentifier** и ВЫХОДНОЙ параметр, значение по умолчанию NULL.  
   
- [ @reserved **=**] **"***зарезервированные***"**  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *зарезервированные* — **nvarchar(20)**, значение по умолчанию NULL.  
+ [ @reserved **=** ] **"***зарезервированные***"**  
+ [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *зарезервированные* — **nvarchar(20)** , значение по умолчанию NULL.  
   
  [ @publisher **=** ] **"***издателя***"**  
  Имя издателя. *издатель* — **sysname**, значение по умолчанию NULL.  
   
- [@publisher_db**=** ] **'***publisher_db***'**  
+ [@publisher_db **=** ] **'***publisher_db***'**  
  Имя базы данных публикации. *publisher_db* — **sysname**, значение по умолчанию NULL.  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|идентификатор|**int**|Порядковый номер публикации в списке результирующего набора.|  
+|id|**int**|Порядковый номер публикации в списке результирующего набора.|  
 |name|**sysname**|Имя публикации.|  
 |description|**nvarchar(255)**|Описание публикации.|  
 |status|**tinyint**|Указывает, когда доступны данные публикации.|  

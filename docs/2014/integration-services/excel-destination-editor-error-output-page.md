@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7eb1fa72d3ee607405a3ddc1dadafdac5d3e0088
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66059200"
 ---
 # <a name="excel-destination-editor-error-output-page"></a>Редактор назначения «Excel» (страница «Вывод ошибок»)
@@ -31,7 +31,7 @@ ms.locfileid: "66059200"
  Просмотр имени источника данных.  
   
  **Столбец**  
- Просмотрите внешние (исходные) столбцы, выбранные в разделе **Диспетчер соединений** диалогового окна **Редактор источника "Excel"**.  
+ Просмотрите внешние (исходные) столбцы, выбранные в разделе **Диспетчер соединений** диалогового окна **Редактор источника "Excel"** .  
   
  **Ошибка**  
  Задайте действие, которое необходимо выполнить при возникновении ошибки: пропустить ошибку, перенаправить строку или вызвать сбой компонента.  

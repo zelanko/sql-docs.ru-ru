@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8efb049292caecf21f38ef5bc5a7392138bdcf5a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66056431"
 ---
 # <a name="result-sets-in-the-execute-sql-task"></a>Результирующие наборы в задаче "Выполнение SQL"
@@ -74,7 +74,7 @@ ms.locfileid: "66056431"
   
  При сопоставлении переменной с результирующим набором типа **Единственная строка** нестроковые значения, возвращенные инструкцией SQL, могут быть преобразованы в строки при выполнении следующих условий:  
   
--   Свойство **TypeConversionMode** имеет значение «true». Значение свойства задается в окне «Свойства» или с помощью **редактора задачи «Выполнение SQL»**.  
+-   Свойство **TypeConversionMode** имеет значение «true». Значение свойства задается в окне «Свойства» или с помощью **редактора задачи «Выполнение SQL»** .  
   
 -   Преобразование не приведет к усечению данных.  
   
