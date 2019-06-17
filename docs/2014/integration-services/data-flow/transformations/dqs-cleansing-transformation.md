@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0c06abe4d6adb3916028b3501c16b68d2491af47
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62900401"
 ---
 # <a name="dqs-cleansing-transformation"></a>Преобразование «Очистка DQS»
@@ -31,7 +31,7 @@ ms.locfileid: "62900401"
   
 -   Столбец сопоставлен с доменом, имеющим совместимый тип данных.  
   
- Преобразование также включает вывод ошибок, настроенный пользователем для обработки ошибок на уровне строк. Чтобы настроить вывод ошибок, запустите **Редактор преобразования «Очистка DQS»**.  
+ Преобразование также включает вывод ошибок, настроенный пользователем для обработки ошибок на уровне строк. Чтобы настроить вывод ошибок, запустите **Редактор преобразования «Очистка DQS»** .  
   
  В поток данных можно включить [Fuzzy Grouping Transformation](fuzzy-grouping-transformation.md) для определения строк данных, которые, вероятнее всего, будут повторяться.  
   

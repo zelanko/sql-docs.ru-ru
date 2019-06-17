@@ -28,10 +28,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5eae331b064d83510d657f6f09a819955e6259a0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62762420"
 ---
 # <a name="database-detach-and-attach-sql-server"></a>Присоединение и отсоединение базы данных (SQL Server)
@@ -92,7 +92,7 @@ ms.locfileid: "62762420"
 > [!NOTE]  
 >  Если присоединяемый первичный файл данных доступен только для чтения, компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] предполагает, что и база данных доступна только для чтения.  
   
- Когда зашифрованная база данных впервые присоединяется к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], владелец базы данных должен открыть главный ключ базы данных, выполнив следующую инструкцию: OPEN MASTER KEY РАСШИФРОВКИ ПАРОЛЯ = **"*`password`*"**. Рекомендуется включить автоматическую расшифровку главного ключа, выполнив следующую инструкцию: ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. Дополнительные сведения см. в разделах [CREATE MASTER KEY (Transact-SQL)](/sql/t-sql/statements/create-master-key-transact-sql) и [ALTER MASTER KEY (Transact-SQL)](/sql/t-sql/statements/alter-master-key-transact-sql).  
+ Когда зашифрованная база данных впервые присоединяется к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], владелец базы данных должен открыть главный ключ базы данных, выполнив следующую инструкцию: OPEN MASTER KEY РАСШИФРОВКИ ПАРОЛЯ = **" *`password`* "** . Рекомендуется включить автоматическую расшифровку главного ключа, выполнив следующую инструкцию: ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. Дополнительные сведения см. в разделах [CREATE MASTER KEY (Transact-SQL)](/sql/t-sql/statements/create-master-key-transact-sql) и [ALTER MASTER KEY (Transact-SQL)](/sql/t-sql/statements/alter-master-key-transact-sql).  
   
  Требования для присоединения файлов журналов частично зависят от того, доступна база данных для записи и чтения или только для чтения.  
   
