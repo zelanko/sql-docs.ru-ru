@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5e8022dd9a7bd4f301ca55f60614e1b13369b804
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62810425"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>Диагностическое соединение для администраторов баз данных
@@ -43,7 +43,7 @@ ms.locfileid: "62810425"
   
  Только члены роли [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sysadmin могут подключаться с использованием выделенного административного соединения.  
   
- Выделенное административное соединение доступно и поддерживается через программу командной строки **sqlcmd** со специальным административным параметром (**-A**). Дополнительные сведения об использовании **sqlcmd** см. в разделе [Использование программы sqlcmd с переменными скрипта](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md). Можно также подключиться, подставив префикс `admin:`к имени экземпляра в формате **sqlcmd - Sadmin:**_< имя_экземпляра >._ Можно также запустить приложения уровня данных из [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] редактора запросов, подключившись к `admin:` \< *имя_экземпляра*>.  
+ Выделенное административное соединение доступно и поддерживается через программу командной строки **sqlcmd** со специальным административным параметром ( **-A**). Дополнительные сведения об использовании **sqlcmd** см. в разделе [Использование программы sqlcmd с переменными скрипта](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md). Можно также подключиться, подставив префикс `admin:`к имени экземпляра в формате **sqlcmd - Sadmin:** _< имя_экземпляра >._ Можно также запустить приложения уровня данных из [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] редактора запросов, подключившись к `admin:` \< *имя_экземпляра*>.  
   
 ## <a name="restrictions"></a>Ограничения  
  Так как выделенное административное соединение существует только для диагностики проблем на сервере в редких обстоятельствах, у подключения есть некоторые ограничения.  
@@ -76,7 +76,7 @@ ms.locfileid: "62810425"
   
 -   Основные команды DBCC, например DBCC FREEPROCCACHE, DBCC FREESYSTEMCACHE, DBCC DROPCLEANBUFFERS`,` а также DBCC SQLPERF. Не выполняйте такие ресурсоемкие команды, как **DBCC** CHECKDB, DBCC DBREINDEX или DBCC SHRINKDATABASE.  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)] Команда KILL*\<spid>*. В зависимости от состояния [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]команда KILL не всегда выполняется успешно. В этом случае единственным выходом остается перезапуск [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Рассмотрим несколько общих правил.  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] Команда KILL *\<spid>* . В зависимости от состояния [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]команда KILL не всегда выполняется успешно. В этом случае единственным выходом остается перезапуск [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Рассмотрим несколько общих правил.  
   
     -   С помощью запроса `SELECT * FROM sys.dm_exec_sessions WHERE session_id = <spid>`убедитесь, что SPID был действительно отключен. Если строки не возвращаются, значит, сеанс был остановлен.  
   

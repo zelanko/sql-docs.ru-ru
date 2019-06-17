@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 506f074a8693e54bdc51882ab08b19e9ea3e1994
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62876614"
 ---
 # <a name="connect-to-windows-azure-storage-restore"></a>Соединение с хранилищем Windows Azure (восстановление)
@@ -29,10 +29,10 @@ ms.locfileid: "62876614"
  **Ключ учетной записи**  
  Укажите ключ доступа к учетной записи хранения Windows Azure.  
   
- Флажок**Использовать защищенные конечные точки (HTTPS)**   
+ Флажок**Использовать защищенные конечные точки (HTTPS)**  
  Установите этот флажок, чтобы установить безопасное соединение с хранилищем Windows Azure — рекомендуется.  
   
- Флажок**Сохранить мой ключ учетной записи**   
+ Флажок**Сохранить мой ключ учетной записи**  
  Установите этот флажок, чтобы SQL Server запоминал ключ доступа для этой учетной записи хранения.  
   
 ### <a name="sql-credential"></a>Учетные данные SQL  

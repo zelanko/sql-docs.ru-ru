@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f37f2ce9ec367d136eb853ce3bffe81f22b2dc4e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62869599"
 ---
 # <a name="mssqlserver18456"></a>MSSQLSERVER_18456
@@ -88,7 +88,7 @@ ms.locfileid: "62869599"
 ## <a name="examples"></a>Примеры  
  В этом примере состояние ошибки проверки подлинности равно 8. Это означает, что пароль неверный.  
   
-|Дата|Source|Сообщение|  
+|Дата|`Source`|Сообщение|  
 |----------|------------|-------------|  
 |2007-12-05 20:12:56.34|Вход в систему|Ошибка: 18456, уровень серьезности: 14, состояние: 8.|  
 |2007-12-05 20:12:56.34|Вход в систему|"Ошибка входа пользователя <имя_пользователя>". [Клиент: \<IP-адрес >]|  

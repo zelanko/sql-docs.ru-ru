@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 2e7e9622fdd45362da9782798c7af82ff9112745
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63000786"
 ---
 # <a name="spsyspolicypurgehealthstate-transact-sql"></a>sp_syspolicy_purge_health_state (Transact-SQL)
@@ -40,7 +40,7 @@ sp_syspolicy_purge_health_state [ @target_tree_root_with_id = ] 'target_tree_roo
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @target_tree_root_with_id = ] 'target_tree_root_with_id'` Представляет узел в обозревателе объектов, где вы хотите очистить состояние работоспособности. *target_tree_root_with_id* — **nvarchar(400)**, значение по умолчанию NULL.  
+`[ @target_tree_root_with_id = ] 'target_tree_root_with_id'` Представляет узел в обозревателе объектов, где вы хотите очистить состояние работоспособности. *target_tree_root_with_id* — **nvarchar(400)** , значение по умолчанию NULL.  
   
  Можно указывать значения из столбца target_query_expression_with_id системного представления msdb.dbo.syspolicy_system_health_state.  
   

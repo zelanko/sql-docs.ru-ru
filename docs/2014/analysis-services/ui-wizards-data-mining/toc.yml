@@ -2,7 +2,7 @@
   href: ui-wizards-data-mining.md
 - name: Мастера интеллектуального анализа данных
   href: ../data-mining-wizards.md
-- name: 'Справка F1 по мастеру интеллектуального анализа данных '
+- name: Справка F1 по мастеру интеллектуального анализа данных
   href: ../data-mining-wizard-f1-help-analysis-services-data-mining.md
   items:
     - name: Выбор метода определения (мастер интеллектуального анализа данных)

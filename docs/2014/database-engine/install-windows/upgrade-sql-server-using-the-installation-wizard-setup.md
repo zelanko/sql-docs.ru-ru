@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8330702d8c886cc9197dcd944878c3f794780205
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62775424"
 ---
 # <a name="upgrade-to-sql-server-2014-using-the-installation-wizard-setup"></a>Обновление до версии SQL Server 2014 с помощью мастера установки (программа установки)
@@ -62,7 +62,7 @@ ms.locfileid: "62775424"
   
 1.  Вставьте установочный носитель [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , перейдите в корневую папку и дважды щелкните файл Setup.exe. Чтобы выполнить установку из общего сетевого ресурса, перейдите в его корневой каталог и дважды щелкните файл Setup.exe.  
   
-2.  Мастер установки запускает центр установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Чтобы обновить существующий экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], щелкните **Установка** в области навигации слева, затем выберите **Обновление с [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] или [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]**.  
+2.  Мастер установки запускает центр установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Чтобы обновить существующий экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], щелкните **Установка** в области навигации слева, затем выберите **Обновление с [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] или [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]** .  
   
 3.  На странице «Ключ продукта» выберите вариант, чтобы указать, производится ли обновление до бесплатного выпуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], или имеется ключ PID для рабочей версии этого продукта. Дополнительные сведения см. в разделе [выпуски и компоненты SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md) и [Supported Version and Edition Upgrades](supported-version-and-edition-upgrades.md).  
   
@@ -72,7 +72,7 @@ ms.locfileid: "62775424"
   
 6.  Затем появится страница обновления [!INCLUDE[msCoName](../../includes/msconame-md.md)] , если не установлен флажок обновления [!INCLUDE[msCoName](../../includes/msconame-md.md)] в параметрах «Панели управления\Все элементы панели управления\Обновление Windows\Изменения». Установка флажка на странице обновления [!INCLUDE[msCoName](../../includes/msconame-md.md)] изменит параметры компьютера так, чтобы применялись последние обновления при просмотре в центре обновления Windows.  
   
-7.  На странице «Обновление продукта» приведены последние обновления продукта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если устанавливать обновления не требуется, снимите флажок **Включить обновления продукта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**. Если обновлений продукта не обнаружено, программа установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не выводит на экран эту страницу и сразу переходит на страницу **Установка файлов** .  
+7.  На странице «Обновление продукта» приведены последние обновления продукта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если устанавливать обновления не требуется, снимите флажок **Включить обновления продукта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** . Если обновлений продукта не обнаружено, программа установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не выводит на экран эту страницу и сразу переходит на страницу **Установка файлов** .  
   
 8.  На странице «Установка установочных файлов» программа установки отображает индикаторы хода загрузки, извлечения и установки установочных файлов. При обнаружении обновления программы установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] оно также будет установлено, если указано, что его следует использовать.  
   

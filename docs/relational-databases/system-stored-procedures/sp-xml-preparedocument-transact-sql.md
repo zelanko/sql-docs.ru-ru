@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 50235db46a664d1507823c057dc0cb61eda90974
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65980046"
 ---
 # <a name="spxmlpreparedocument-transact-sql"></a>sp_xml_preparedocument (Transact-SQL)
@@ -72,7 +72,7 @@ OUTPUT
  [ *xpath_namespaces* ]  
  Указывает объявления пространств имен, которые используются в выражениях XPath строк и столбцов в OPENXML. *xpath_namespaces* является текстовым параметром: **char**, **nchar**, **varchar**, **nvarchar**, **текст**, **ntext** или **xml**.  
   
- Значение по умолчанию —  **\<корневой xmlns:mp = "urn: schemas-microsoft-com: XML-metaprop" >**. *xpath_namespaces* предоставляет URI пространств имен для префиксов, используемых в выражениях XPath в OPENXML посредством XML документа правильного формата. *xpath_namespaces* объявляет префикс, который должен использоваться для обращения к пространству имен **urn: schemas-microsoft-com: XML-metaprop**; таким образом предоставляются метаданные о проанализированных элементах XML. Хотя с помощью данного приема можно переопределить префикс пространства имен для пространства имен метасвойства, это пространство имен не будет потеряно. Префикс **mp** все еще действителен для **urn: schemas-microsoft-com: XML-metaprop** даже в том случае, если *xpath_namespaces* не содержит такого объявления.  
+ Значение по умолчанию —  **\<корневой xmlns:mp = "urn: schemas-microsoft-com: XML-metaprop" >** . *xpath_namespaces* предоставляет URI пространств имен для префиксов, используемых в выражениях XPath в OPENXML посредством XML документа правильного формата. *xpath_namespaces* объявляет префикс, который должен использоваться для обращения к пространству имен **urn: schemas-microsoft-com: XML-metaprop**; таким образом предоставляются метаданные о проанализированных элементах XML. Хотя с помощью данного приема можно переопределить префикс пространства имен для пространства имен метасвойства, это пространство имен не будет потеряно. Префикс **mp** все еще действителен для **urn: schemas-microsoft-com: XML-metaprop** даже в том случае, если *xpath_namespaces* не содержит такого объявления.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или > 0 (неуспешное завершение)  

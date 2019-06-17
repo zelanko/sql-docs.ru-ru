@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3b28a0543208ab28414fb93def15adf904e2c078
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63261727"
 ---
 # <a name="publishers"></a>Издатели
@@ -26,7 +26,7 @@ ms.locfileid: "63261727"
   
 ## <a name="options"></a>Параметры  
  **Издатели**  
- Выберите серверы, которым разрешено использование данного распространителя. Нажмите кнопку свойств (**...**) рядом с издателем для просмотра и задания дополнительных свойств.  
+ Выберите серверы, которым разрешено использование данного распространителя. Нажмите кнопку свойств ( **...** ) рядом с издателем для просмотра и задания дополнительных свойств.  
   
  **Добавить**  
  Если нужный сервер не представлен в списке, нажмите кнопку **Добавить** , чтобы добавить издателей [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или Oracle к списку доступных издателей.  

@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 90269bc6fab7cd496561b9dfe5cae6bf0ff36bbe
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62875044"
 ---
 # <a name="restore-files-and-filegroups-over-existing-files-sql-server"></a>Восстановление файлов и файловых групп поверх существующих файлов (SQL Server)
@@ -101,7 +101,7 @@ ms.locfileid: "62875044"
   
 6.  На панели **Выбор страницы** щелкните **Параметры** .  
   
-7.  На панели **Параметры восстановления** выберите пункт **Перезаписать существующую базу данных (WITH REPLACE)**. Операция восстановления перезаписывает все существующие базы данных и связанные с ними файлы, даже если база данных или файл с указанным именем уже существуют.  
+7.  На панели **Параметры восстановления** выберите пункт **Перезаписать существующую базу данных (WITH REPLACE)** . Операция восстановления перезаписывает все существующие базы данных и связанные с ними файлы, даже если база данных или файл с указанным именем уже существуют.  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

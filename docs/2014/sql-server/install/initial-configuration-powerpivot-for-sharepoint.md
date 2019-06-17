@@ -11,10 +11,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: adf5d9682ad1b2b9002a69884a183b30b3454c61
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66094688"
 ---
 # <a name="initial-configuration-powerpivot-for-sharepoint"></a>Первоначальная конфигурация (PowerPivot для SharePoint)
@@ -73,7 +73,7 @@ ms.locfileid: "66094688"
   
 4.  Нажмите кнопку **развертывание решения.**  
   
-5.  В **развертывание в?**, выберите веб-приложение SharePoint, к которому вы хотите добавить поддержку функции PowerPivot.  
+5.  В **развертывание в?** , выберите веб-приложение SharePoint, к которому вы хотите добавить поддержку функции PowerPivot.  
   
 6.  Нажмите кнопку **ОК**.  
   
@@ -158,7 +158,7 @@ ms.locfileid: "66094688"
   
  Если служба безопасного хранилища в списке не представлена, выполните следующие шаги, чтобы включить ее. При включенной службе безопасного хранения авторы книг и владельцы документов имеют доступ к более широкому диапазону параметров соединения с источниками данных при планировании обновления данных для опубликованных ими книг.  
   
-##### <a name="part-1-enable-secure-store-service"></a>Часть 1. Включение службы безопасного Store  
+##### <a name="part-1-enable-secure-store-service"></a>Часть 1. Включение службы безопасного Store  
   
 1.  В разделе «Управление приложениями» центра администрирования выберите пункт **Управление приложениями служб**.  
   
@@ -180,7 +180,7 @@ ms.locfileid: "66094688"
   
 10. Примите остальные значения по умолчанию и нажмите кнопку **ОК.** Приложение службы появится рядом с другими управляемыми службами в списке приложений служб фермы.  
   
-##### <a name="part-2-generate-the-master-key"></a>Часть 2. Создание главного ключа  
+##### <a name="part-2-generate-the-master-key"></a>Часть 2. Создание главного ключа  
   
 1.  Щелкните приложение службы Secure Store в списке.  
   
@@ -192,7 +192,7 @@ ms.locfileid: "66094688"
   
 5.  Нажмите кнопку **ОК**.  
   
-##### <a name="part-3-configure-the-unattended-powerpivot-data-refresh-account"></a>Часть 3. Настройка PowerPivot записи автоматического обновления данных  
+##### <a name="part-3-configure-the-unattended-powerpivot-data-refresh-account"></a>Часть 3. Настройка PowerPivot записи автоматического обновления данных  
  Создание учетной записи автоматического обновления данных для доступа к данным PowerPivot часто требуется для внешнего источника данных во время обновления данных. Например, если Kerberos не включен, необходимо создать учетную запись автоматического выполнения, которую служба PowerPivot может использовать для подключения к внешним источникам данных.  
   
  Инструкции о том, как создать данные PowerPivot автоматического обновления учетной записи или других сохраненных учетных данных, которые используются в обновлении данных, см. в разделе [Настройка PowerPivot данные учетной записи автоматического обновления &#40;PowerPivot для SharePoint&#41; ](../../analysis-services/configure-unattended-data-refresh-account-powerpivot-sharepoint.md) и [Настройка сохраненных учетных данных для обновления данных PowerPivot &#40;PowerPivot для SharePoint&#41;](../../../2014/analysis-services/configure-stored-credentials-data-refresh-powerpivot-sharepoint.md).  

@@ -28,10 +28,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 645aee1374f7dbf3c290500bb35ca47115983670
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62809572"
 ---
 # <a name="server-configuration-options-sql-server"></a>Параметры конфигурации сервера (SQL Server)
@@ -105,7 +105,7 @@ ms.locfileid: "62809572"
     |[max full-text crawl range](max-full-text-crawl-range-server-configuration-option.md) (A)|0|256|4|  
     |[max server memory](server-memory-server-configuration-options.md) (A, SC)|16|2147483647|2147483647|  
     |[max text repl size](configure-the-max-text-repl-size-server-configuration-option.md)|0|2147483647|65536|  
-    |[max worker threads](configure-the-max-worker-threads-server-configuration-option.md) (A)|128|32767<br /><br /> (1024 является максимальным значением, рекомендуемым для 32-разрядных операционных систем [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 2048 — для 64-разрядных систем [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].)|0<br /><br /> При нулевом значении максимальное число рабочих потоков исполнителя настраивается автоматически в зависимости от количества процессоров по формуле (256 + (*\<процессоры>* - 4) * 8) для 32-разрядных систем [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и в два раза больше для 64-разрядных систем [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+    |[max worker threads](configure-the-max-worker-threads-server-configuration-option.md) (A)|128|32767<br /><br /> (1024 является максимальным значением, рекомендуемым для 32-разрядных операционных систем [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 2048 — для 64-разрядных систем [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].)|0<br /><br /> При нулевом значении максимальное число рабочих потоков исполнителя настраивается автоматически в зависимости от количества процессоров по формуле (256 + ( *\<процессоры>* - 4) * 8) для 32-разрядных систем [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и в два раза больше для 64-разрядных систем [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
     |[media retention](configure-the-media-retention-server-configuration-option.md) (A, RR)|0|365|0|  
     |[min memory per query](configure-the-min-memory-per-query-server-configuration-option.md) (A)|512|2147483647|1024|  
     |[min server memory](server-memory-server-configuration-options.md) (A, SC)|0|2147483647|0|  

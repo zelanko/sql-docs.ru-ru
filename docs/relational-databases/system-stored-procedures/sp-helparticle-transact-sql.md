@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 43eada100fb1de531c0d16082bdf0977e479ccfb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63017805"
 ---
 # <a name="sphelparticle-transact-sql"></a>sp_helparticle (Transact-SQL)
@@ -44,7 +44,7 @@ sp_helparticle [ @publication = ] 'publication'
 ## <a name="arguments"></a>Аргументы  
 `[ @publication = ] 'publication'` — Имя публикации. *Публикация* — **sysname**, не имеет значения по умолчанию.  
   
-`[ @article = ] 'article'` — Имя статьи в публикации. *статья* — **sysname**, значение по умолчанию **%**. Если *статье* является не указан, возвращаются данные по всем статьям публикации.  
+`[ @article = ] 'article'` — Имя статьи в публикации. *статья* — **sysname**, значение по умолчанию **%** . Если *статье* является не указан, возвращаются данные по всем статьям публикации.  
   
 `[ @returnfilter = ] returnfilter` Указывает, должны ли возвращаться предложение фильтра. *returnfilter* — **бит**, значение по умолчанию **1**, котором предложение фильтра возвращается.  
   
@@ -84,8 +84,8 @@ sp_helparticle [ @publication = ] 'publication'
 |**filter_owner**|**sysname**|Владелец фильтра.|  
 |**unqua_filter**|**sysname**|Имя фильтра без учета имени его владельца.|  
 |**auto_identity_range**|**int**|Флаг, показывающий включение автоматической обработки диапазонов идентификаторов для публикации при ее создании. **1** означает, что включен автоматический диапазон идентификаторов; **0** означает, что она отключена.|  
-|**publisher_identity_range**|**int**|Диапазон размер диапазона идентификаторов на издателе, если содержатся в статье *identityrangemanagementoption* присвоено **автоматически** или **auto_identity_range** присвоено  **значение true,**.|  
-|**Аргумент identity_range**|**bigint**|Диапазон размер диапазона идентификаторов на подписчике, если содержатся в статье *identityrangemanagementoption* присвоено **автоматически** или **auto_identity_range** присвоено  **значение true,**.|  
+|**publisher_identity_range**|**int**|Диапазон размер диапазона идентификаторов на издателе, если содержатся в статье *identityrangemanagementoption* присвоено **автоматически** или **auto_identity_range** присвоено  **значение true,** .|  
+|**Аргумент identity_range**|**bigint**|Диапазон размер диапазона идентификаторов на подписчике, если содержатся в статье *identityrangemanagementoption* присвоено **автоматически** или **auto_identity_range** присвоено  **значение true,** .|  
 |**Пороговое значение**|**bigint**|Процентное значение, показывающее момент, когда агент распространителя выделяет новый диапазон идентификаторов.|  
 |**identityrangemanagementoption**|**int**|Указывает способ управления диапазоном идентификаторов для статьи.|  
 |**fire_triggers_on_snapshot**|**bit**|Используется в случае, когда реплицированные пользовательские триггеры срабатывают при применении исходного моментального снимка:<br /><br /> **1** = триггеры выполняются.<br /><br /> **0** = триггеры не выполняются.|  

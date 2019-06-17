@@ -23,10 +23,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9e55ec7d8ed06914299f56b3d613186d8c612a05
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63025560"
 ---
 # <a name="specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-40"></a>Определение схемы с заметками сопоставления в диаграмме обновления (SQLXML 4.0)
@@ -39,9 +39,9 @@ ms.locfileid: "63025560"
 >  Настоящая документация предназначена для тех, кто знаком с шаблонами и поддержкой схем сопоставления в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [введение в схемы XSD с заметками &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). Для приложений прежних версий, которые используют XDR, см. в разделе [аннотированные схемы XDR &#40;в SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
   
 ## <a name="dealing-with-data-types"></a>Работа с типами данных  
- Если схема указывает **изображение**, **двоичных**, или **varbinary** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] тип данных (с помощью **SQL: DataType**) и не делает Укажите тип данных XML, диаграмма обновления предполагает, что тип данных XML **двоичных base-64**. Если данные **bin.base** типа, необходимо явно указать тип (**dt:type=bin.base** или **тип = «XSD: hexBinary»**).  
+ Если схема указывает **изображение**, **двоичных**, или **varbinary** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] тип данных (с помощью **SQL: DataType**) и не делает Укажите тип данных XML, диаграмма обновления предполагает, что тип данных XML **двоичных base-64**. Если данные **bin.base** типа, необходимо явно указать тип (**dt:type=bin.base** или **тип = «XSD: hexBinary»** ).  
   
- Если схема указывает **dateTime**, **даты**, или **время** тип данных XSD, необходимо также указать соответствующий [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] тип данных с помощью  **SQL: DataType = «dateTime»**.  
+ Если схема указывает **dateTime**, **даты**, или **время** тип данных XSD, необходимо также указать соответствующий [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] тип данных с помощью  **SQL: DataType = «dateTime»** .  
   
  При обработке параметров типа [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **деньги** типа, необходимо явно указать **SQL: DataType = «деньги»** для соответствующего узла в схеме сопоставления.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "63025560"
 </xsd:schema>  
 ```  
   
- Следующая диаграмма обновления вставляет запись в таблицу Sales.Customer и использует предыдущую схему сопоставления для сопоставления этих данных с таблицей. Обратите внимание на то, что диаграмма обновления использует то же имя элемента,  **\<клиента >**, как определено в схеме. Это является обязательным, поскольку диаграмма обновления указывает конкретную схему.  
+ Следующая диаграмма обновления вставляет запись в таблицу Sales.Customer и использует предыдущую схему сопоставления для сопоставления этих данных с таблицей. Обратите внимание на то, что диаграмма обновления использует то же имя элемента,  **\<клиента >** , как определено в схеме. Это является обязательным, поскольку диаграмма обновления указывает конкретную схему.  
   
 ##### <a name="to-test-the-updategram"></a>Тестирование диаграммы обновления  
   
@@ -118,7 +118,7 @@ ms.locfileid: "63025560"
 ### <a name="b-inserting-a-record-by-using-the-parent-child-relationship-specified-in-the-mapping-schema"></a>Б. Вставка записи с помощью связи «родители-потомки», указанной в схеме сопоставления  
  Между элементами схемы можно устанавливать связь. **\<SQL: Relationship >** элемент указывает связь «родители потомки» между элементами схемы. Эти данные используются для обновления соответствующих таблиц, между которыми установлена связь «первичный-внешний ключ».  
   
- Следующая схема сопоставления (SampleSchema.xml) состоит из двух элементов,  **\<порядок >** и  **\<OD >**:  
+ Следующая схема сопоставления (SampleSchema.xml) состоит из двух элементов,  **\<порядок >** и  **\<OD >** :  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

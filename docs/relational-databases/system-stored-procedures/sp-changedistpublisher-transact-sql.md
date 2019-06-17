@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 06a0e5e2edb793a94e8d8542ca17734f23824121
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62997822"
 ---
 # <a name="spchangedistpublisher-transact-sql"></a>sp_changedistpublisher (Transact-SQL)
@@ -45,7 +45,7 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
   
 `[ @property = ] 'property'` — Это свойство, изменяемое для данного издателя. *Свойство* — **sysname** и может принимать одно из следующих значений.  
   
-`[ @value = ] 'value'` Значение для данного свойства. *значение* — **nvarchar(255)**, значение по умолчанию NULL.  
+`[ @value = ] 'value'` Значение для данного свойства. *значение* — **nvarchar(255)** , значение по умолчанию NULL.  
   
 `[ @storage_connection_string = ] 'storage_connection_string'` Является обязательным для базы данных SQL управляемого экземпляра, должно соответствовать ключу доступа для объема хранилища базы данных SQL Azure. 
 

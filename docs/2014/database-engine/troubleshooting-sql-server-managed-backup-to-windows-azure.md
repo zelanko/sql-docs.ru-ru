@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fd68f6f8bcb83bfbc980be0809e12141403e4012
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62842581"
 ---
 # <a name="troubleshooting-sql-server-managed--backup-to-windows-azure"></a>Устранение неполадок управляемого резервного копирования SQL Server в Microsoft Azure
@@ -105,8 +105,8 @@ ms.locfileid: "62842581"
   
      Если SQL Server прекращает отвечать, события записываются в канал администратора.  Пример журнала событий.  
   
-     *Ошибка SQL (модуль не отвечает или возвращает sqlException: SqlException:*   
-     *код ошибки, сообщение и трассировка стека будет отображаться в канале администратора xevent, вместе с некоторыми дополнительными сведениями, например:*   
+     *Ошибка SQL (модуль не отвечает или возвращает sqlException: SqlException:*    
+     *код ошибки, сообщение и трассировка стека будет отображаться в канале администратора xevent, вместе с некоторыми дополнительными сведениями, например:*    
     *«Вероятные проблемы с подключением с SQL Server. Пропуск базы данных в текущей итерации»*  
   
 -   **Агент SQL перестает отвечать на запросы или останавливает работу, когда [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] выполняется:**  

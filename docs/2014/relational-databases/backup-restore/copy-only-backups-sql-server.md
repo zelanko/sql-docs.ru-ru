@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cba784ed6e81152e91b8320ac5e441187c07df9c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62922135"
 ---
 # <a name="copy-only-backups-sql-server"></a>Резервные копии только для копирования (SQL Server)
@@ -52,14 +52,14 @@ ms.locfileid: "62922135"
   
 -   Для полных резервных копий только для копирования:  
   
-     BACKUP DATABASE *имя_базы_данных* TO \<устройство_резервного_копирования*>* ... WITH COPY_ONLY …  
+     BACKUP DATABASE *имя_базы_данных* TO \<устройство_резервного_копирования *>* ... WITH COPY_ONLY …  
   
     > [!NOTE]  
     >  Если параметр COPY_ONLY указан одновременно с параметром DIFFERENTIAL, он не имеет эффекта.  
   
 -   Для резервных копий журнала только для копирования:  
   
-     BACKUP LOG *имя_базы_данных* TO *\<* устройство_резервного_копирования*>* ... WITH COPY_ONLY …  
+     BACKUP LOG *имя_базы_данных* TO *\<* устройство_резервного_копирования *>* ... WITH COPY_ONLY …  
   
 ###  <a name="PowerShellProcedure"></a> Использование PowerShell  
   

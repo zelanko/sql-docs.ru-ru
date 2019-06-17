@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d4447d7df594e9542982d6ba05de05f42b0628a7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62810068"
 ---
 # <a name="server-memory-server-configuration-options"></a>Параметры конфигурации сервера «Server Memory»
@@ -134,7 +134,7 @@ ms.locfileid: "62810068"
 |-|-------------|-------------|  
 |Обычная память|Не более ограничения виртуального адресного пространства процесса во всех выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:<br /><br /> 2 ГБ<br /><br /> 3 ГБ с **/3 gb** загрузки параметра *<br /><br /> 4 ГБ на WOW64\*\*|Не более ограничения виртуального адресного пространства процесса во всех выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:<br /><br /> 8 ТБ для архитектуры x64|  
   
- ***/3gb** — параметр загрузки операционной системы. Дополнительные сведения см. в [библиотеке MSDN](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409).  
+ * **/3gb** — параметр загрузки операционной системы. Дополнительные сведения см. в [библиотеке MSDN](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409).  
   
  ** WOW64 (Windows on Windows 64) — режим, в котором 32-разрядная версия [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняется в 64-разрядной операционной системе. Дополнительные сведения см. в [библиотеке MSDN](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409).  
   
