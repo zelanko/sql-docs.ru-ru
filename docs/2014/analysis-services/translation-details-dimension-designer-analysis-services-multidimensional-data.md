@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9f8debb50a798ba46457942e0e79a9d45ab392c1
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66065846"
 ---
 # <a name="translation-details-translations-tab-dimension-designer-analysis-services---multidimensional-data"></a>Сведения о переводе (вкладка «Переводы», конструктор измерений) (службы Analysis Services — многомерные данные)
@@ -55,7 +55,7 @@ ms.locfileid: "66065846"
      Свойство `Caption`  
   
  **\<Язык >**  
- Введите или выберите значение свойства данного объекта измерения на выбранном языке. Нажав кнопку с многоточием (**...**) можно открыть дополнительные диалоговые окна, в зависимости от изменяемого свойства.  
+ Введите или выберите значение свойства данного объекта измерения на выбранном языке. Нажав кнопку с многоточием ( **...** ) можно открыть дополнительные диалоговые окна, в зависимости от изменяемого свойства.  
   
 -   Свойство `NamingTemplate`  
   

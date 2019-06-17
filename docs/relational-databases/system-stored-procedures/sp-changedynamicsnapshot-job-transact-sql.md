@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8ab11ccb8853c00439583162f33e76d0e14622a1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62994313"
 ---
 # <a name="spchangedynamicsnapshotjob-transact-sql"></a>sp_changedynamicsnapshot_job (Transact-SQL)
@@ -121,9 +121,9 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
   
 `[ @active_end_time_of_day = ] active_end_time_of_day` Время остановки агента слияния, в формате ЧЧММСС. *active_end_time_of_day* — **int**, значение по умолчанию NULL.  
   
-`[ @job_login = ] 'job_login'` Является [!INCLUDE[msCoName](../../includes/msconame-md.md)] учетной записи Windows, под которой работает агент моментальных снимков при формировании снимка для подписки с помощью параметризованного фильтра строк. *job_login* — **nvarchar(257)**, со значением по умолчанию NULL.  
+`[ @job_login = ] 'job_login'` Является [!INCLUDE[msCoName](../../includes/msconame-md.md)] учетной записи Windows, под которой работает агент моментальных снимков при формировании снимка для подписки с помощью параметризованного фильтра строк. *job_login* — **nvarchar(257)** , со значением по умолчанию NULL.  
   
-`[ @job_password = ] 'job_password'` Пароль для учетной записи Windows, под которой работает агент моментальных снимков при формировании снимка для подписки с помощью параметризованного фильтра строк. *job_password* — **nvarchar(257)**, со значением по умолчанию NULL.  
+`[ @job_password = ] 'job_password'` Пароль для учетной записи Windows, под которой работает агент моментальных снимков при формировании снимка для подписки с помощью параметризованного фильтра строк. *job_password* — **nvarchar(257)** , со значением по умолчанию NULL.  
   
 > [!IMPORTANT]  
 >  По возможности предлагайте пользователям вводить учетные данные системы безопасности во время выполнения приложения. В случае необходимости хранения учетных данных в файле скрипта этот файл следует защищать во избежание несанкционированного доступа.  

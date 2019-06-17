@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fc091885b01821aaf8d2d12b9a321c6949d1523c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62959758"
 ---
 # <a name="security-architecture-for-web-synchronization"></a>Архитектура безопасности для веб-синхронизации
@@ -34,7 +34,7 @@ ms.locfileid: "62959758"
 |Тип учетной записи|Где задана учетная запись|  
 |---------------------|------------------------------------|  
 |Пользователь Windows|[!INCLUDE[tsql](../../../includes/tsql-md.md)]: параметры **@job_login** и **@job_password** процедуры [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql).<br /><br /> Объекты RMO: свойства <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> и <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> для <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>.|  
-|Учетная запись службы Windows для агента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Диспетчер конфигурации[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] |  
+|Учетная запись службы Windows для агента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Диспетчер конфигурации[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|  
 |Изолированное приложение|Агент слияния выполняется в контексте пользователя Windows, который выполняет это приложение|  
   
 ## <a name="b-connection-to-the-subscriber"></a>Б. Соединение с подписчиком  
@@ -63,7 +63,7 @@ ms.locfileid: "62959758"
 |Используется обычная проверка подлинности, если задано одно из следующих значений:<br /><br /> [!INCLUDE[tsql](../../../includes/tsql-md.md)]: значение **0** для **@internet_security_mode** параметр [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql).<br /><br /> Объекты RMO: значение <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> для свойства <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetSecurityMode%2A>.<br /><br /> Командная строка агента слияния: значение **0** для **- InternetSecurityMode**.|[!INCLUDE[tsql](../../../includes/tsql-md.md)]: параметры **@internet_login** и **@internet_password** процедуры [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql).<br /><br /> Объекты RMO: <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetLogin%2A> и <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetPassword%2A>.<br /><br /> Командная строка агента слияния: **-InternetLogin** и **-InternetPassword**.|  
 |Встроенная проверка подлинности\* используется, если задано одно из следующих:<br /><br /> [!INCLUDE[tsql](../../../includes/tsql-md.md)]: значение **1** для **@internet_security_mode** параметр [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql).<br /><br /> Объекты RMO: значение <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> для свойства <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetSecurityMode%2A>.<br /><br /> Командная строка агента слияния: значение **1** для **- InternetSecurityMode**.|Агент слияния устанавливает соединение в контексте пользователя Windows, заданного для агента слияния (А)|  
   
- * Встроенной проверки подлинности может использоваться только в том случае, если все компьютеры находятся в одном домене или к нескольким доменам, имеющим доверительные связи друг с другом.  
+ \* Встроенной проверки подлинности может использоваться только в том случае, если все компьютеры находятся в одном домене или к нескольким доменам, имеющим доверительные связи друг с другом.  
   
 > [!NOTE]  
 >  При использовании встроенной проверки подлинности требуется делегирование. Для соединений от подписчика к серверу IIS рекомендуется использовать обычную проверку подлинности и протокол SSL.  

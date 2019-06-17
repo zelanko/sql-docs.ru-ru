@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0571271f347c2aebcc2a0e0e25f2fff09b98fa89
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66070344"
 ---
 # <a name="relational-objects-dialog-box-analysis-services---multidimensional-data"></a>Диалоговое окно «Реляционные объекты» (службы Analysis Services — многомерные данные)
-  Используйте диалоговое окно **Реляционные объекты** в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] для выбора таблиц, представлений и других объектов источника данных, для которых необходимо включить упреждающее кэширование. Чтобы открыть это окно в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , нажмите кнопку с многоточием (**...**) рядом с любым из параметров **Указать таблицы отслеживания** на вкладке **Уведомления** диалогового окна **Параметры хранилища** .  
+  Используйте диалоговое окно **Реляционные объекты** в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] для выбора таблиц, представлений и других объектов источника данных, для которых необходимо включить упреждающее кэширование. Чтобы открыть это окно в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , нажмите кнопку с многоточием ( **...** ) рядом с любым из параметров **Указать таблицы отслеживания** на вкладке **Уведомления** диалогового окна **Параметры хранилища** .  
   
 ## <a name="options"></a>Параметры  
  **Выберите реляционных объекты, для которых необходимо установить упреждающее кэширование**  

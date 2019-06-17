@@ -34,7 +34,7 @@
       href: ../add-reporting-services-content-types-to-a-sharepoint-library.md
     - name: 'Локальный режим и отчеты, созданные в локальном и подключенном режиме в средстве просмотра отчетов'
       href: ../local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md
-    - name: 'передать документы в библиотеку SharePoint '
+    - name: передать документы в библиотеку SharePoint
       href: ../upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md
     - name: задать параметры обработки
       href: ../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md

@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 10813b7bc0a97f0ba8a81f3f48447142659cd596
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66091331"
 ---
 # <a name="user-defined-functions-are-not-allowed-in-systemfunctionschema"></a>В схеме system_function_schema запрещены определяемые пользователем функции
@@ -54,7 +54,7 @@ ms.locfileid: "66091331"
   
 4.  Замените ссылки на **system_function_schema** с **dbo** во всех скриптах, содержащих инструкции DDL в определяемых пользователем функциях.  
   
-5.  Измените скрипты, вызывающие эти функции для использования dbo двухкомпонентное имя **.**_имя_функции_, или трехкомпонентное имя _имя_базы_данных_**.** dbo. *имя_функции*.  
+5.  Измените скрипты, вызывающие эти функции для использования dbo двухкомпонентное имя **.** _имя_функции_, или трехкомпонентное имя _имя_базы_данных_ **.** dbo. *имя_функции*.  
   
  Дополнительные сведения см. в следующих разделах электронной документации по SQL Server.  
   

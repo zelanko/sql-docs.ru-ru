@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 96d211defa789888a3fd7b513b4dff60fa795cb6
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66058991"
 ---
 # <a name="execute-sql-task-editor-general-page"></a>Редактор задачи «Выполнение SQL» (страница «Общие»)
@@ -57,7 +57,7 @@ ms.locfileid: "66058991"
  **См. также:** подробные сведения о [диспетчере подключений OLE DB](connection-manager/ole-db-connection-manager.md), [диспетчере подключений ODBC](connection-manager/odbc-connection-manager.md), [диспетчере подключений ADO](connection-manager/ado-connection-manager.md), [диспетчере подключений ADO.NET](connection-manager/ado-net-connection-manager.md), [диспетчере подключений SQL Server Compact Edition](connection-manager/sql-server-compact-edition-connection-manager.md).  
   
  **Соединение**  
- Выберите соединение из списка определенных диспетчеров соединений. Для создания соединения выберите \<**Создать соединение...**>.  
+ Выберите соединение из списка определенных диспетчеров соединений. Для создания соединения выберите \<**Создать соединение...** >.  
   
  **SQLSourceType**  
  Выберите тип источника для инструкции SQL, выполняемой этой задачей.  
@@ -101,13 +101,13 @@ ms.locfileid: "66058991"
   
 ### <a name="sqlsourcetype--file-connection"></a>WQLQuerySource = Подключение файла  
  **FileConnection**  
- Выберите существующий диспетчер подключений файлов или нажмите кнопку \<**Создать подключение...**>, чтобы создать новый диспетчер подключений.  
+ Выберите существующий диспетчер подключений файлов или нажмите кнопку \<**Создать подключение...** >, чтобы создать новый диспетчер подключений.  
   
  **См. также:** подробные сведения о [диспетчере файловых подключений](connection-manager/file-connection-manager.md) и о [редакторе диспетчера файловых подключений](../../2014/integration-services/file-connection-manager-editor.md).  
   
 ### <a name="sqlsourcetype--variable"></a>SQLSourceType = Переменная  
  **SourceVariable**  
- Выберите существующую переменную или щелкните \<**Создать переменную...**>, чтобы создать ее.  
+ Выберите существующую переменную или щелкните \<**Создать переменную...** >, чтобы создать ее.  
   
  **См. также:** подробные сведения о [переменных в службах Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md) и о [добавлении переменной](../../2014/integration-services/add-variable.md).  
   

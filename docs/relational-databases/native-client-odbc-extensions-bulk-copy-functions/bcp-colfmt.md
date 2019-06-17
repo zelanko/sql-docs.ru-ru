@@ -20,10 +20,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4013dbd3de9b0866aff0dd8d1256be0839299235
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62738840"
 ---
 # <a name="bcpcolfmt"></a>bcp_colfmt
@@ -128,7 +128,7 @@ RETCODE bcp_colfmt (
   
 -   длина дополнительной последовательности байт, служащей признаком конца.  
   
- Каждый вызов **bcp_colfmt** указывает формат для одного столбца пользовательского файла. Например, чтобы изменить параметры по умолчанию для трех столбцов в файле данных пользователя с пятью столбцами, сначала вызовите [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)**(5)**, а затем вызвать **bcp_colfmt** пять раз в три из этих вызовов задайте нужный формат. Для оставшихся двух вызовов необходимо установить *eUserDataType* 0, а также набор *cbIndicator*, *cbUserData*, и *cbUserDataTerm* 0, SQL_VARLEN _DATA и 0 соответственно. Эта процедура копирует все пять столбцов. Для трех применяется заданный измененный формат, а для двух оставшихся — формат по умолчанию.  
+ Каждый вызов **bcp_colfmt** указывает формат для одного столбца пользовательского файла. Например, чтобы изменить параметры по умолчанию для трех столбцов в файле данных пользователя с пятью столбцами, сначала вызовите [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) **(5)** , а затем вызвать **bcp_colfmt** пять раз в три из этих вызовов задайте нужный формат. Для оставшихся двух вызовов необходимо установить *eUserDataType* 0, а также набор *cbIndicator*, *cbUserData*, и *cbUserDataTerm* 0, SQL_VARLEN _DATA и 0 соответственно. Эта процедура копирует все пять столбцов. Для трех применяется заданный измененный формат, а для двух оставшихся — формат по умолчанию.  
   
  Для *cbIndicator*, значение 8, чтобы указать тип больших значений теперь является допустимым. Если для поля, которому соответствует столбец с новым типом max, указан префикс, его значение можно установить только в 8. Дополнительные сведения см. в разделе [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md).  
   

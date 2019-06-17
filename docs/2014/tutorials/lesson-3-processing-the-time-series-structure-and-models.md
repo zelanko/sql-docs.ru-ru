@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 493d27c9836eb765c655eba5bbb004e4d48cde40
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63042880"
 ---
-# <a name="lesson-3-processing-the-time-series-structure-and-models"></a>Урок 3. Обработка временных рядов структуры и моделей
+# <a name="lesson-3-processing-the-time-series-structure-and-models"></a>Урок 3. Обработка структуры и моделей временных рядов
   На этом занятии вы воспользуетесь [INSERT INTO &#40;расширений интеллектуального анализа данных&#41; ](/sql/dmx/insert-into-dmx) инструкции для обработки структуры интеллектуального анализа данных и созданные модели интеллектуального анализа данных временных рядов.  
   
  При обработке структуры интеллектуального анализа данных службы [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] считывают исходные данные и создают структуры, поддерживающие модели интеллектуального анализа данных. Всегда необходимо выполнять обработку модели интеллектуального анализа данных и структуры при первом создании. Если задана структура интеллектуального анализа данных при использовании инструкции INSERT INTO, инструкция обрабатывает эту структуру и все связанные с ней модели интеллектуального анализа данных.  

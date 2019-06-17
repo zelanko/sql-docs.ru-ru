@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 613c0ccae7be912bd3bec63905b838b7f07b59b0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63033585"
 ---
 # <a name="set-up-the-job-history-log"></a>Set Up the Job History Log
@@ -27,7 +27,7 @@ ms.locfileid: "63033585"
   
 -   **Перед началом:**  [Безопасность](#Security)  
   
--   **Для настройки журнала заданий используется:**  [Среда SQL Server Management Studio](#SSMS)  
+-   **Для настройки журнала заданий используется:**  [SQL Server Management Studio](#SSMS)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   

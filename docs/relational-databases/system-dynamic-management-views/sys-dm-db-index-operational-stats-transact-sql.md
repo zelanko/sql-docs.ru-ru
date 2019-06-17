@@ -22,10 +22,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3d52fb28dd1093b81d8a46ec6a8d2dd3cce49807
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62684296"
 ---
 # <a name="sysdmdbindexoperationalstats-transact-sql"></a>sys.dm_db_index_operational_stats (Transact-SQL)
@@ -102,11 +102,11 @@ sys.dm_db_index_operational_stats (
 |**range_scan_count**|**bigint**|Совокупное количество просмотров диапазонов и таблиц, запущенных на индексе или куче.|    
 |**singleton_lookup_count**|**bigint**|Совокупное количество извлечений одиночных строк из индекса или кучи.|    
 |**forwarded_fetch_count**|**bigint**|Число строк, выбранных через перенаправляющую запись.<br /><br /> 0 = индексы|    
-|**lob_fetch_in_pages**|**bigint**|Совокупное количество страниц больших объектов (LOB), извлеченных из единицы распределения LOB_DATA. Эти страницы содержат данные, хранящиеся в столбцах типа **текст**, **ntext**, **изображение**, **varchar(max)**, **nvarchar () max)**, **varbinary(max)**, и **xml**. Дополнительные сведения см. в разделе [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md).|    
+|**lob_fetch_in_pages**|**bigint**|Совокупное количество страниц больших объектов (LOB), извлеченных из единицы распределения LOB_DATA. Эти страницы содержат данные, хранящиеся в столбцах типа **текст**, **ntext**, **изображение**, **varchar(max)** , **nvarchar () max)** , **varbinary(max)** , и **xml**. Дополнительные сведения см. в разделе [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md).|    
 |**lob_fetch_in_bytes**|**bigint**|Совокупное количество извлеченных байтов данных LOB.|    
 |**lob_orphan_create_count**|**bigint**|Совокупное количество потерянных значений LOB, созданных для массовых операций.<br /><br /> 0 = некластеризованный индекс|    
 |**lob_orphan_insert_count**|**bigint**|Совокупное количество потерянных значений LOB, вставленных во время массовых операций.<br /><br /> 0 = некластеризованный индекс|    
-|**row_overflow_fetch_in_pages**|**bigint**|Совокупное количество превышающих размер страницы данные строки, извлеченных из единицы распределения ROW_OVERFLOW_DATA.<br /><br /> Эти страницы содержат данные, хранящиеся в столбцах типа **varchar(n)**, **nvarchar(n)**, **varbinary(n)**, и **sql_variant** , которая была внестрочными данными.|    
+|**row_overflow_fetch_in_pages**|**bigint**|Совокупное количество превышающих размер страницы данные строки, извлеченных из единицы распределения ROW_OVERFLOW_DATA.<br /><br /> Эти страницы содержат данные, хранящиеся в столбцах типа **varchar(n)** , **nvarchar(n)** , **varbinary(n)** , и **sql_variant** , которая была внестрочными данными.|    
 |**row_overflow_fetch_in_bytes**|**bigint**|Совокупное количество извлеченных байтов, превышающих размер страницы данные строки.|    
 |**column_value_push_off_row_count**|**bigint**|Совокупное количество значений столбца для данных LOB и превышающих размер страницы данные строки, которые вытесняются из строки, чтобы вместить на странице вставленную или обновленную строку.|    
 |**column_value_pull_in_row_count**|**bigint**|Совокупное количество значений столбцов для данных LOB и превышающих размер страницы данные строки, которые помещаются в строку. Это происходит, когда операция обновления освобождает пространство в записи и предоставляет возможность поместить одно или несколько выходящих за пределы строки значений из единиц распределения LOB_DATA или ROW_OVERFLOW_DATA в единицу распределения IN_ROW_DATA.|    

@@ -1,5 +1,5 @@
 ---
-title: 'Свойства предупреждения: Создание предупреждения (страница «Параметры») | Документация Майкрософт'
+title: 'Свойства оповещения: Создание предупреждения (страница «Параметры») | Документация Майкрософт'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 69f467af1c797b9bf1cfa55c7def8456ad4a32bd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63061281"
 ---
-# <a name="alert-properties-new-alert-options-page"></a>Свойства предупреждения: Создание предупреждения (страница «Параметры»)
+# <a name="alert-properties-new-alert-options-page"></a>Свойства оповещения: создание оповещения (страница "Параметры")
   Используйте эту страницу, чтобы просмотреть и изменить параметры предупреждений агента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="options"></a>Параметры  
