@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 88718c492702018b77e89597faec8897aa8f51f1
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66697923"
 ---
 # <a name="execute-method-ado-command"></a>Метод Execute (объект Command ADO)
@@ -39,13 +39,13 @@ Set recordset = command.Execute( RecordsAffected, Parameters, Options )
   
 #### <a name="parameters"></a>Параметры  
  *RecordsAffected*  
- Необязательный. Объект **Long** переменной, в которой поставщик возвращает количество записей, затронутых операцией. *RecordsAffected* параметр применяется только для запросов или хранимых процедур. *RecordsAffected* не возвращает число записей, возвращенных в возвращающих результат запроса или хранимой процедуры. Чтобы получить эти сведения, используйте [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) свойство. **Execute** метод не возвращает правильные данные при использовании с **adAsyncExecute**, просто потому, что при выполнении команды асинхронно, количество обработанных записей еще неизвестна во время выполнения метода.  
+ Необязательный параметр. Объект **Long** переменной, в которой поставщик возвращает количество записей, затронутых операцией. *RecordsAffected* параметр применяется только для запросов или хранимых процедур. *RecordsAffected* не возвращает число записей, возвращенных в возвращающих результат запроса или хранимой процедуры. Чтобы получить эти сведения, используйте [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) свойство. **Execute** метод не возвращает правильные данные при использовании с **adAsyncExecute**, просто потому, что при выполнении команды асинхронно, количество обработанных записей еще неизвестна во время выполнения метода.  
   
  *Параметры*  
  Необязательный. Объект **Variant** массив значений параметров, используется в сочетании с входную строку или поток, указанный в **CommandText** или **CommandStream**. (Выходные параметры не вернет правильные значения при передаче в этом аргументе.)  
   
  *Параметры*  
- Необязательный параметр. Объект **Long** значение, указывающее, каким образом следует оценить, поставщик [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) или [CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md) свойство [команда](../../../ado/reference/ado-api/command-object-ado.md) объект. Может представлять собой значение битовой маски, выполненные с помощью [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) и/или [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) значения. Например, можно использовать **adCmdText** и **adExecuteNoRecords** в сочетании, если требуется, чтобы оценить значение ADO **CommandText** свойство как текст, и Укажите, что команда должна отменить и не возвратит никаких записей, которые могут возникнуть при выполнении текст команды.  
+ Необязательный. Объект **Long** значение, указывающее, каким образом следует оценить, поставщик [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) или [CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md) свойство [команда](../../../ado/reference/ado-api/command-object-ado.md) объект. Может представлять собой значение битовой маски, выполненные с помощью [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) и/или [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) значения. Например, можно использовать **adCmdText** и **adExecuteNoRecords** в сочетании, если требуется, чтобы оценить значение ADO **CommandText** свойство как текст, и Укажите, что команда должна отменить и не возвратит никаких записей, которые могут возникнуть при выполнении текст команды.  
   
 > [!NOTE]
 >  Используйте **ExecuteOptionEnum** значение **adExecuteNoRecords** для повышения производительности, сводя к минимуму внутренней обработки. Если **adExecuteStream** был указан, параметры **adAsyncFetch** и **adAsynchFetchNonBlocking** игнорируются. Не используйте **CommandTypeEnum** значения **adCmdFile** или **adCmdTableDirect** с **Execute**. Эти значения могут использоваться только как параметры с [откройте](../../../ado/reference/ado-api/open-method-ado-recordset.md) и [Requery](../../../ado/reference/ado-api/requery-method.md) методы **записей**.  

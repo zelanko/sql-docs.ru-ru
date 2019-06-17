@@ -268,7 +268,7 @@
           href: lesson-3-2-adding-and-configuring-logging.md
         - name: "Шаг 3. Тестирование учебного пакета урока\_3"
           href: lesson-3-3-testing-the-lesson-3-tutorial-package.md
-    - name: "Урок\_4. Перенаправление потока ошибок"
+    - name: 'Занятие 4: Перенаправление потока ошибок'
       href: lesson-4-add-error-flow-redirection-with-ssis.md
       items:
         - name: "Шаг\_1. Копирование пакета из урока\_3"
@@ -281,7 +281,7 @@
           href: lesson-4-4-adding-a-flat-file-destination.md
         - name: "Шаг 5. Тестирование учебного пакета урока\_4"
           href: lesson-4-5-testing-the-lesson-4-tutorial-package.md
-    - name: "Урок\_5. Добавление конфигураций пакетов в модель развертывания пакета"
+    - name: "Занятие\_5.: Добавление конфигураций пакетов в модель развертывания пакета"
       href: lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md
       items:
         - name: "Шаг\_1. Копирование пакета из урока\_4"
@@ -292,7 +292,7 @@
           href: lesson-5-3-modifying-the-directory-property-configuration-value.md
         - name: "Шаг 4. Тестирование учебного пакета урока\_5"
           href: lesson-5-4-testing-the-lesson-5-tutorial-package.md
-    - name: "Урок\_6. Использование параметров в модели развертывания проекта"
+    - name: 'Занятие 6: Использование параметров в модели развертывания проекта'
       href: lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md
       items:
         - name: "Шаг\_1. Копирование пакета из урока\_5"

@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e3e973c30ea178a544b9da3501d88f43cf9b1ddb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63054819"
 ---
 # <a name="install-analysis-services-in-power-pivot-mode"></a>Установка служб Analysis Services в режиме Power Pivot
@@ -262,7 +262,7 @@ ms.locfileid: "63054819"
  Шаги, необходимые для обновления книг, созданных в предыдущих версиях [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] , зависят от того, в какой версии [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] создана книга. Дополнительные сведения см. в статье [Обновление книг и запланированное обновление данных (SharePoint 2013 )](../../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
   
 ##  <a name="bkmk_multiple_servers"></a> После установки одного сервера — Power Pivot для Microsoft SharePoint  
- **Веб-интерфейс (WFE)** или **среднего уровня:**: Чтобы использовать [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] сервера в режиме интеграции с SharePoint в более крупной ферме SharePoint и установить дополнительные [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] компоненты в ферме запустите пакет установщика **spPowerPivot16.msi (SharePoint 2016) или spPowerPivot.msi (SharePoint 2013 г.),** на каждом из серверов SharePoint. Пакет spPowerPivot16.msi или spPowerPivot.msi устанавливает необходимые поставщики данных и средство настройки служб [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для SharePoint 2016 или 2013.  
+ **Веб-интерфейс (WFE)** или **среднего уровня:** : Чтобы использовать [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] сервера в режиме интеграции с SharePoint в более крупной ферме SharePoint и установить дополнительные [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] компоненты в ферме запустите пакет установщика **spPowerPivot16.msi (SharePoint 2016) или spPowerPivot.msi (SharePoint 2013 г.),** на каждом из серверов SharePoint. Пакет spPowerPivot16.msi или spPowerPivot.msi устанавливает необходимые поставщики данных и средство настройки служб [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для SharePoint 2016 или 2013.  
   
  Дополнительные сведения об установке и настройке среднего уровня см. в следующем документе:  
   

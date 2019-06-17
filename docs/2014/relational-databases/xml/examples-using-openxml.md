@@ -27,10 +27,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9887a9af6735b54a78dd72ed3a90aeff70c7990f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63205104"
 ---
 # <a name="examples-using-openxml"></a>Примеры: Использование OPENXML
@@ -95,7 +95,7 @@ LILAS      Carlos Gonzlez
   
  Поскольку элементы <`Customer`> не имеют подэлементов, то выполнение той же самой инструкции SELECT с параметром *flags* со значением **2**, которое указывает на сопоставление с использованием элементов, возвращает значения NULL столбцов **CustomerID** и **ContactName** для обоих пользователей.  
   
- Аргумент @xmlDocument может также иметь тип **xml** или **(n)varchar(max)**.  
+ Аргумент @xmlDocument может также иметь тип **xml** или **(n)varchar(max)** .  
   
  Если <`CustomerID`> и <`ContactName`> в XML-документе являются подэлементами, то сопоставление с использованием элементов возвращает значения:  
   
@@ -474,7 +474,7 @@ EXEC sp_xml_removedocument @docHandle
   
  В элементе *SchemaDeclaration* предложения WITH параметр *ColPattern* также задан с параметрами *ColName* и *ColType* . Необязательный параметр *ColPattern* является заданным шаблоном XPath и указывает следующее:  
   
--   шаблон XPath (**.**), указанный в виде параметра *ColPattern* для столбца **ProdID** в наборе строк, определяет контекстный узел — текущий узел. Согласно заданному шаблону *rowpattern*, он является атрибутом **ProductID** элемента <`OrderDetail`>;  
+-   шаблон XPath ( **.** ), указанный в виде параметра *ColPattern* для столбца **ProdID** в наборе строк, определяет контекстный узел — текущий узел. Согласно заданному шаблону *rowpattern*, он является атрибутом **ProductID** элемента <`OrderDetail`>;  
   
 -   шаблон *ColPattern*, **../\@Quantity**, заданный для столбца **Qty** в наборе строк, определяет атрибут **Quantity** родительского элемента, <`OrderDetail`>, узла контекстного узла \<ProductID>.  
   
@@ -523,7 +523,7 @@ ProdID      Qty         OID
 ```  
   
 ### <a name="h-specifying-an-xml-document-that-has-multiple-text-nodes"></a>З. Задание XML-документа, имеющего несколько текстовых узлов  
- При наличии нескольких текстовых узлов в XML-документе инструкция SELECT с параметром *ColPattern*, **text()**, возвращает только первый текстовый узел, а не все. Пример:  
+ При наличии нескольких текстовых узлов в XML-документе инструкция SELECT с параметром *ColPattern*, **text()** , возвращает только первый текстовый узел, а не все. Пример:  
   
 ```  
 DECLARE @h int  
@@ -576,7 +576,7 @@ FROM   OPENXML (@h, '/Root/row', 10)
 EXEC sp_xml_removedocument @h  
 ```  
   
- А именно, переменная (\@x) типа **xml** передается функции **sp_xml_preparedocument()**.  
+ А именно, переменная (\@x) типа **xml** передается функции **sp_xml_preparedocument()** .  
   
  Это результат:  
   

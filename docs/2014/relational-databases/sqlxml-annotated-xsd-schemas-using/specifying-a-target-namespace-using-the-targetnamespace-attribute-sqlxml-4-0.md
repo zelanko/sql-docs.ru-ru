@@ -20,10 +20,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fd97b67974f248d002255c1977feebe4551e691f
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66013683"
 ---
 # <a name="specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-40"></a>Задание целевого пространства имен с помощью атрибута targetNamespace (SQLXML 4.0)
@@ -35,7 +35,7 @@ ms.locfileid: "66013683"
  Чтобы создать рабочие образцы на основе следующих примеров, необходимо выполнить определенные требования. Дополнительные сведения см. в разделе [требования для запуска примеров SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-a-target-namespace"></a>A. Указание целевого пространства имен  
- Следующая схема XSD указывает целевое пространство имен с помощью **xsd: targetNamespace** атрибута. Эта схема также выставляет **elementFormDefault** и **attributeFormDefault** значения для атрибутов **«unqualified»** (значение по умолчанию для этих атрибутов). Это глобальное объявление, влияет на все локальные элементы (**\<порядок >** в схеме) и атрибуты (**CustomerID**, **ContactName**и  **OrderID** в схеме).  
+ Следующая схема XSD указывает целевое пространство имен с помощью **xsd: targetNamespace** атрибута. Эта схема также выставляет **elementFormDefault** и **attributeFormDefault** значения для атрибутов **«unqualified»** (значение по умолчанию для этих атрибутов). Это глобальное объявление, влияет на все локальные элементы ( **\<порядок >** в схеме) и атрибуты (**CustomerID**, **ContactName**и  **OrderID** в схеме).  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -129,7 +129,7 @@ ms.locfileid: "66013683"
   
      Дополнительные сведения см. в разделе [использование объектов ADO для выполнения запросов SQLXML](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
- Если схема указывает **elementFormDefault** и **attributeFormDefault** атрибуты со значением **«qualified»**, документ будет содержать все локальной элементы и атрибуты обработаны квалификатором. Можно изменить предыдущую схему, чтобы включить эти атрибуты в  **\<xsd: schema >** элемента и выполняла шаблон еще раз. Так как атрибуты в экземпляре теперь также имеют квалификатор, XPath-запрос изменится так, чтобы включать префикс пространства имен.  
+ Если схема указывает **elementFormDefault** и **attributeFormDefault** атрибуты со значением **«qualified»** , документ будет содержать все локальной элементы и атрибуты обработаны квалификатором. Можно изменить предыдущую схему, чтобы включить эти атрибуты в  **\<xsd: schema >** элемента и выполняла шаблон еще раз. Так как атрибуты в экземпляре теперь также имеют квалификатор, XPath-запрос изменится так, чтобы включать префикс пространства имен.  
   
  Измененный XPath-запрос:  
   

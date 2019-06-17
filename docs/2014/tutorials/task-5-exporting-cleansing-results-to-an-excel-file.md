@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3c690becefb71b71c154131b6957c1063872b540
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65489128"
 ---
 # <a name="task-5-exporting-cleansing-results-to-an-excel-file"></a>Задача 5. Экспорт результатов очистки в файл Excel
@@ -42,7 +42,7 @@ ms.locfileid: "65489128"
   
     3.  Поиск **Лос-Анджелес** и увидеть, что **состояние** присваивается **ЦС**.  
   
-    4.  Убедитесь, что условия не **Co.**, **Corp.**, и **Inc.**.  
+    4.  Убедитесь, что условия не **Co.** , **Corp.** , и **Inc.** .  
   
     5.  Удалить **проверка адреса** столбца из электронной таблицы и сохраните файл excel. Этот дополнительный столбец соответствует составному домену проверки адреса.  
   

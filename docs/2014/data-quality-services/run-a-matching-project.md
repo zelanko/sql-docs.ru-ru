@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7c17f478c8c7735aca0100a2fd99d6315d923bad
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65481090"
 ---
 # <a name="run-a-matching-project"></a>Запуск проекта сопоставления
@@ -62,7 +62,7 @@ ms.locfileid: "65481090"
     > [!NOTE]  
     >  Сопоставить исходные данные с доменом служб DQS возможно, только если исходный тип данных поддерживается службами DQS и совпадает с типом данных домена DQS. Сведения о поддерживаемых службами DQS типах данных см. в разделе [Типы данных SQL Server и службы SSIS, поддерживаемые для доменов DQS](../../2014/data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
   
-4.  Для добавления строки в таблицу "Сопоставления" щелкните значок **плюс (+)**, а для удаления строки — значок **минус (–)**.  
+4.  Для добавления строки в таблицу "Сопоставления" щелкните значок **плюс (+)** , а для удаления строки — значок **минус (–)** .  
   
 5.  Щелкните значок **Предварительный просмотр источника данных** для просмотра данных в таблице SQL Server, в выбранных представлениях или в выбранных листах Excel.  
   

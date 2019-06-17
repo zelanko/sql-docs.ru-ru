@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 659bba7156ccc1c3a60bef38a51fd983554e4ead
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721202"
 ---
 # <a name="implement-a-business-logic-handler-for-a-merge-article"></a>Реализация обработчика бизнес-логики для статьи публикации слиянием
@@ -99,18 +99,18 @@ ms.locfileid: "62721202"
   
 1.  Чтобы убедиться, что сборка не была зарегистрирована ранее как обработчик бизнес-логики, выполните на издателе процедуру [sp_enumcustomresolvers (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql).  
   
-2.  Выполните на распространителе, [sp_registercustomresolver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql), указав понятное имя обработчика бизнес-логики для **@article_resolver**, значение `true`для **@is_dotnet_assembly**, имя сборки для **@dotnet_assembly_name**и полное имя класса, переопределяющего <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> для  **@dotnet_class_name**.  
+2.  Выполните на распространителе, [sp_registercustomresolver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql), указав понятное имя обработчика бизнес-логики для **@article_resolver** , значение `true`для **@is_dotnet_assembly** , имя сборки для **@dotnet_assembly_name** и полное имя класса, переопределяющего <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> для  **@dotnet_class_name** .  
   
     > [!NOTE]  
-    >  Если сборка не найдена ни в том же каталоге, что и исполняемый файл агента слияния, ни в папке приложения, производящего синхронный запуск агента слияния, ни в глобальном кэше сборок (GAC), то в параметре **@dotnet_assembly_name**. При проведении сеанса веб-синхронизации необходимо указать местоположение сборки на веб-сервере.  
+    >  Если сборка не найдена ни в том же каталоге, что и исполняемый файл агента слияния, ни в папке приложения, производящего синхронный запуск агента слияния, ни в глобальном кэше сборок (GAC), то в параметре **@dotnet_assembly_name** . При проведении сеанса веб-синхронизации необходимо указать местоположение сборки на веб-сервере.  
   
 #### <a name="to-use-a-business-logic-handler-with-a-new-table-article"></a>Использование обработчика бизнес-логики со статьей в новой таблице  
   
-1.  Чтобы определить статью, запустите хранимую процедуру [sp_addmergearticle (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql), указав понятное имя обработчика бизнес-логики в параметре **@article_resolver**. Дополнительные сведения см. в статье [определить статью](publish/define-an-article.md).  
+1.  Чтобы определить статью, запустите хранимую процедуру [sp_addmergearticle (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql), указав понятное имя обработчика бизнес-логики в параметре **@article_resolver** . Дополнительные сведения см. в статье [определить статью](publish/define-an-article.md).  
   
 #### <a name="to-use-a-business-logic-handler-with-an-existing-table-article"></a>Использование обработчика бизнес-логики со статьей в существующей таблице  
   
-1.  Выполните хранимую процедуру [sp_changemergearticle (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql), указав параметры **@publication**, **@article**, значение **article_resolver** в параметре **@property** и понятное имя обработчика бизнес-логики в параметре **@value**.  
+1.  Выполните хранимую процедуру [sp_changemergearticle (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql), указав параметры **@publication** , **@article** , значение **article_resolver** в параметре **@property** и понятное имя обработчика бизнес-логики в параметре **@value** .  
   
 ###  <a name="TsqlExample"></a> Примеры (программирование репликации)  
  В следующем примере представлен обработчик бизнес-логики, осуществляющий запись в журнал аудита.  

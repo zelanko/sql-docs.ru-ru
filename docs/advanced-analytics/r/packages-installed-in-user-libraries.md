@@ -2,17 +2,17 @@
 title: Советы по использованию пакетов R, установленные в библиотеках пользователей - службы машинного обучения SQL Server
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/30/2018
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: ee5dc9dc8b1730f26bada915d739f164a884801d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bb354e1a0a7f7f22a39b690fdd0c0f4ae7778b8f
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62642283"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140504"
 ---
 # <a name="tips-for-using-r-packages-in-sql-server"></a>Советы по использованию пакетов R в SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "62642283"
 
 Если вы ранее изменяли среду R на компьютере, прежде чем устанавливать ничего, убедитесь, что переменная среды R `.libPath` использует только один путь.
 
-Этот путь должен указывать на папку R_SERVICES экземпляра. Дополнительные сведения, включая как определить, какие пакеты уже установлены, см. в разделе [пакетов по умолчанию R и Python в SQL Server](installing-and-managing-r-packages.md).
+Этот путь должен указывать на папку R_SERVICES экземпляра. Дополнительные сведения, включая как определить, какие пакеты уже установлены, см. в разделе [пакетов по умолчанию R и Python в SQL Server](../package-management/default-packages.md).
 
 ## <a name="new-to-sql-server"></a>В SQL Server
 
@@ -73,7 +73,7 @@ library("c:/Users/<username>/R/win-library/packagename")
 
 + Обновите код, чтобы удалить прямые ссылки на пути к пакетов R или R библиотек. 
 
-+ Знаете, какую библиотеку пакет связан с экземпляром. Дополнительные сведения см. в разделе [пакетов по умолчанию R и Python в SQL Server](installing-and-managing-r-packages.md).
++ Знаете, какую библиотеку пакет связан с экземпляром. Дополнительные сведения см. в разделе [пакетов по умолчанию R и Python в SQL Server](../package-management/default-packages.md).
 
 ## <a name="see-also"></a>См. также
 

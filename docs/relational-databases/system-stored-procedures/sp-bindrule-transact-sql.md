@@ -20,10 +20,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ebec67611b043d59eb73e9946b9fef020197fc3d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62995674"
 ---
 # <a name="spbindrule-transact-sql"></a>sp_bindrule (Transact-SQL)
@@ -46,9 +46,9 @@ sp_bindrule [ @rulename = ] 'rule' ,
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @rulename = ] 'rule'` — Имя правила, созданного инструкцией CREATE RULE. *правило* — **nvarchar(776)**, не имеет значения по умолчанию.  
+`[ @rulename = ] 'rule'` — Имя правила, созданного инструкцией CREATE RULE. *правило* — **nvarchar(776)** , не имеет значения по умолчанию.  
   
-`[ @objname = ] 'object_name'` — Это таблицы и столбца или псевдонима типа данных, к которому — правило для привязки. Правило не может быть привязано к **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, определяемому пользователем типу CLR или столбцу **timestamp**. Правило не может быть привязано к вычисляемому столбцу.  
+`[ @objname = ] 'object_name'` — Это таблицы и столбца или псевдонима типа данных, к которому — правило для привязки. Правило не может быть привязано к **text**, **ntext**, **image**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , **xml**, определяемому пользователем типу CLR или столбцу **timestamp**. Правило не может быть привязано к вычисляемому столбцу.  
   
  *object_name* — **nvarchar(776)** не имеет значения по умолчанию. Если *object_name* — это имя одной части, оно рассматривается как псевдоним типа данных. Если имя двух- или трехкомпонентное, оно рассматривается как таблица и столбец; в случае неудачи разрешения имя рассматривается как псевдоним типа данных. По умолчанию существующие столбцы типа данных псевдонима наследуют *правило* Если правило привязано непосредственно к столбцу.  
   
