@@ -11,17 +11,18 @@ dev_langs:
 - TSQL
 ms.assetid: 5ff02a32-e8d3-479c-ae8b-07581e41f5f8
 author: VanMSFT
-ms.author: vanto"
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8d5017005cba460f04bd82dcbfd721d26e5f0b7d
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: 97c7a7f45408fa4e6ea314bd04a0d35d127af660
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334591"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66822459"
 ---
 # <a name="queries"></a>Запросы
+
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Язык обработки данных DML представляет словарь, используемый для получения данных и работы с ними в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и базе данных SQL. Большая часть инструкций также работает с хранилищем данных SQL и PDW (подробные сведения см. в описании каждой отдельной инструкции). Эти инструкции предназначены для добавления данных, изменения данных, запроса данных и удаления данных из базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -35,8 +36,9 @@ ms.locfileid: "57334591"
 |[DELETE (Transact-SQL)](../../t-sql/statements/delete-transact-sql.md)|[UPDATE (Transact-SQL)](../../t-sql/queries/update-transact-sql.md)|  
 |[INSERT (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)|[UPDATETEXT (Transact-SQL)](../../t-sql/queries/updatetext-transact-sql.md)|  
 |[MERGE (Transact-SQL)](../../t-sql/statements/merge-transact-sql.md)|[WRITETEXT (Transact-SQL)](../../t-sql/queries/writetext-transact-sql.md)|  
-|[READTEXT (Transact-SQL)](../../t-sql/queries/readtext-transact-sql.md)||  
-  
+|[READTEXT (Transact-SQL)](../../t-sql/queries/readtext-transact-sql.md)| &nbsp; |  
+| &nbsp; | &nbsp; |
+
  В следующей таблице перечислены предложения, используемые в нескольких инструкциях или предложениях DML.  
   
 |Предложение|Может использоваться в следующих инструкциях|  
@@ -50,5 +52,4 @@ ms.locfileid: "57334591"
 |[TOP (Transact-SQL)](../../t-sql/queries/top-transact-sql.md)|DELETE, INSERT, MERGE, SELECT, UPDATE|  
 |[WHERE (Transact-SQL)](../../t-sql/queries/where-transact-sql.md)|DELETE, SELECT, UPDATE, MATCH|  
 |[WITH common_table_expression (Transact-SQL)](../../t-sql/queries/with-common-table-expression-transact-sql.md)|DELETE, INSERT, MERGE, SELECT, UPDATE|  
-  
-  
+| &nbsp; | &nbsp; |

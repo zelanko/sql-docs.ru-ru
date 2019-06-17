@@ -18,11 +18,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 015d1259430d2da67bb91ae4dd6ed26e0a421766
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326485"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62666190"
 ---
 # <a name="deny-assembly-permissions-transact-sql"></a>Запрещение (DENY) разрешений на сборки (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ DENY { permission [ ,...n ] } ON ASSEMBLY :: assembly_name
  *permission*  
  Указывает разрешение на сборку, которое запрещается. Перечислены ниже.  
   
- ON ASSEMBLY **::**_assembly_name_  
+ ON ASSEMBLY **::** _assembly_name_  
  Указывает сборку, на которую запрещается разрешение. Квалификатор области "::" является обязательным.  
   
  *database_principal*  

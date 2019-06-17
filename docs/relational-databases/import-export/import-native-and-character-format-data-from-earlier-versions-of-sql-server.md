@@ -18,10 +18,10 @@ ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1970f103825d95e77edffd5d2f6c58e405c9469d
-ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/30/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64946600"
 ---
 # <a name="import-native-and-character-format-data-from-earlier-versions-of-sql-server"></a>Импорт данных в собственном и символьном формате из предыдущих версий SQL Server
@@ -55,10 +55,10 @@ ms.locfileid: "64946600"
  **UDT обозначает определяемый пользователем тип.  
   
 ## <a name="exporting-using--v-80"></a>Экспорт с ключом -V 80  
- При массовом экспорте данных ключом **-V80** данные типов **nvarchar(max)**, **varchar(max)**, **varbinary(max)**, XML и определяемый пользователем тип в собственном режиме хранятся с 4-байтовым префиксом, как данные **text**, **image** и **ntext**, вместо 8-байтового префикса, используемого по умолчанию в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версиях.  
+ При массовом экспорте данных ключом **-V80** данные типов **nvarchar(max)** , **varchar(max)** , **varbinary(max)** , XML и определяемый пользователем тип в собственном режиме хранятся с 4-байтовым префиксом, как данные **text**, **image** и **ntext**, вместо 8-байтового префикса, используемого по умолчанию в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версиях.  
   
 ## <a name="copying-date-values"></a>Копирование значений данных  
- Программа**bcp** использует API-интерфейс массового копирования ODBC. Таким образом, для импорта значений дат в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]программа **bcp** использует формат данных ODBC (*гггг-мм-дд чч:мм:сс*[*.f...*]).  
+ Программа**bcp** использует API-интерфейс массового копирования ODBC. Таким образом, для импорта значений дат в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]программа **bcp** использует формат данных ODBC (*гггг-мм-дд чч:мм:сс*[ *.f...* ]).  
   
  Команда **bcp** экспортирует файлы данных в символьном формате с помощью формата ODBC по умолчанию для значений **datetime** и **smalldatetime** . Например, столбец типа **datetime** , содержащий дату `12 Aug 1998` , копируется с помощью массового копирования в файл данных в качестве строки символов `1998-08-12 00:00:00.000`.  
   
