@@ -1,5 +1,5 @@
 ---
-title: 'Категории заданий: Управление категориями заданий | Документация Майкрософт'
+title: 'Категории задания: Управление категориями заданий | Документация Майкрософт'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,13 +15,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c9a9c5f01bd682e68e44a7a974cbbaeade8008d1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62937021"
 ---
-# <a name="job-categories-manage-job-categories"></a>Категории заданий: Управление категориями заданий
+# <a name="job-categories-manage-job-categories"></a>Категории задания: Управление категориями заданий
   Диалоговое окно **Категории заданий** используется для добавления или удаления категорий заданий. Встроенные категории заданий удалить невозможно.  
   
 ## <a name="options"></a>Параметры  

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4076e27a800f9c9653e8a191c1fd53467cba9f75
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66071226"
 ---
 # <a name="powerpivot-data-refresh-with-sharepoint-2013"></a>Обновление данных PowerPivot с SharePoint 2013
@@ -149,7 +149,7 @@ ms.locfileid: "66071226"
   
 -   См. порядок действий на иллюстрации.  
   
-1.  В библиотеке документов SharePoint нажмите кнопку **Меню открытия** (**…**) для книги PowerPivot.  
+1.  В библиотеке документов SharePoint нажмите кнопку **Меню открытия** ( **…** ) для книги PowerPivot.  
   
 2.  Нажмите вторую кнопку **Меню открытия** и выберите **Управление обновлением данных PowerPivot**.  
   

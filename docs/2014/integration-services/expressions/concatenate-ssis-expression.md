@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 288e4aedc6112640aa511712ad90912b1d41b2fa
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62769374"
 ---
 # <a name="-concatenate-ssis-expression"></a>+ (объединение) (выражение служб SSIS)
@@ -48,7 +48,7 @@ character_expression1 + character_expression2
   
  Оба выражения должны состоять из одного типа данных, или должна быть возможность преобразовать тип данных одного выражения в тип данных другого выражения. Например, если строка «Дата заказа: » и столбец **OrderDate** объединены, значения в **OrderDate** будут преобразованы в строковый тип данных. Для объединения двух числовых значений оба числовых значения должны быть приведены к строковому типу данных.  
   
- Объединение может использовать только один тип данных BLOB-ОБЪЕКТОВ: DT_TEXT, DT_NTEXT, or DT_IMAGE.  
+ Объединение может использовать только один тип данных BLOB: DT_TEXT, DT_NTEXT, or DT_IMAGE.  
   
  Если любой из элементов равен NULL, результат будет NULL.  
   

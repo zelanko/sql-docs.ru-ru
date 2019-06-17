@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 668233ad7ee79617caa60933a9eef33c5a810164
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62502805"
 ---
 # <a name="sphelpmergefilter-transact-sql"></a>Хранимая процедура sp_helpmergefilter (Transact-SQL)
@@ -42,9 +42,9 @@ sp_helpmergefilter [ @publication= ] 'publication'
 ## <a name="arguments"></a>Аргументы  
 `[ @publication = ] 'publication'` — Имя публикации. *Публикация* — **sysname**, не имеет значения по умолчанию.  
   
-`[ @article = ] 'article'` — Имя статьи. *статья* — **sysname**, значение по умолчанию **%**, которое возвращает имена всех статей.  
+`[ @article = ] 'article'` — Имя статьи. *статья* — **sysname**, значение по умолчанию **%** , которое возвращает имена всех статей.  
   
-`[ @filtername = ] 'filtername'` — Имя фильтра, для которого возвращаются сведения. *FilterName* — **sysname**, значение по умолчанию **%**, которое возвращает сведения обо всех фильтрах, определенных для статьи или публикации.  
+`[ @filtername = ] 'filtername'` — Имя фильтра, для которого возвращаются сведения. *FilterName* — **sysname**, значение по умолчанию **%** , которое возвращает сведения обо всех фильтрах, определенных для статьи или публикации.  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
