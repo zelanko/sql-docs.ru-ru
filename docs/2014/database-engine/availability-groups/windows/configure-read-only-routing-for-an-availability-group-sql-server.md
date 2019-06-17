@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a129386b5c88939d68f5d7f23a5fe2b4d8ce7cca
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62789526"
 ---
 # <a name="configure-read-only-routing-for-an-availability-group-sql-server"></a>Настройка маршрутизации только для чтения в группе доступности (SQL Server)
@@ -82,7 +82,7 @@ ms.locfileid: "62789526"
   
     -   Чтобы настроить маршрутизацию только для чтения для вторичной роли, укажите в предложении ADD REPLICA или MODIFY REPLICA WITH параметр SECONDARY_ROLE следующим образом:  
   
-         SECONDARY_ROLE **(** READ_ONLY_ROUTING_URL **= "** TCP **://*`system-address`*:*`port`*")**  
+         SECONDARY_ROLE **(** READ_ONLY_ROUTING_URL **= "** TCP **:// *`system-address`* : *`port`* ")**  
   
          Существуют следующие параметры URL-адреса маршрутизации только для чтения.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "62789526"
   
     -   Чтобы настроить маршрутизацию только для чтения для первичной роли, в предложении ADD REPLICA или MODIFY REPLICA WITH укажите параметр PRIMARY_ROLE следующим образом:  
   
-         PRIMARY_ROLE **(** READ_ONLY_ROUTING_LIST **= ("*`server`*"** [ **,**... *n* ] **))**  
+         PRIMARY_ROLE **(** READ_ONLY_ROUTING_LIST **= (" *`server`* "** [ **,** ... *n* ] **))**  
   
          Здесь *server* идентифицирует экземпляр сервера, на котором размещена вторичная реплика только для чтения в группе доступности.  
   
@@ -154,13 +154,13 @@ GO
   
 2.  При добавлении реплики доступности в группу доступности воспользуйтесь командлетом `New-SqlAvailabilityReplica`. При изменении существующей реплики доступности воспользуйтесь командлетом `Set-SqlAvailabilityReplica`. Соответствующие параметры:  
   
-    -   Чтобы настроить маршрутизацию только для чтения для вторичной роли, укажите **ReadonlyRoutingConnectionUrl»*`url`*"** параметра.  
+    -   Чтобы настроить маршрутизацию только для чтения для вторичной роли, укажите **ReadonlyRoutingConnectionUrl» *`url`* "** параметра.  
   
          Здесь *url* — это полное доменное имя и порт, которые используются для маршрутизации к реплике соединений только для чтения. Например:  `-ReadonlyRoutingConnectionUrl "TCP://DBSERVER8.manufacturing.Adventure-Works.com:7024"`  
   
          Дополнительные сведения см. в разделе [Вычисления для AlwaysOn](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-alwayson.aspx).  
   
-    -   Чтобы настроить доступ соединения для первичной роли, укажите **ReadonlyRoutingList»*`server`*"** [ **,**... *n* ], где *server* обозначает экземпляр сервера, на котором размещена вторичная реплика только для чтения в группе доступности. Например:  `-ReadOnlyRoutingList "SecondaryServer","PrimaryServer"`  
+    -   Чтобы настроить доступ соединения для первичной роли, укажите **ReadonlyRoutingList» *`server`* "** [ **,** ... *n* ], где *server* обозначает экземпляр сервера, на котором размещена вторичная реплика только для чтения в группе доступности. Например:  `-ReadOnlyRoutingList "SecondaryServer","PrimaryServer"`  
   
         > [!NOTE]  
         >  Необходимо настроить URL-адрес маршрутизации только для чтения для реплики перед тем, как перейти к настройке ее списка маршрутизации.  

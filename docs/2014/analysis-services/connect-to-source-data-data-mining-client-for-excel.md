@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 468686314bb2446415a6883c6233708f9cbd1d2b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66087102"
 ---
 # <a name="connect-to-source-data-data-mining-client-for-excel"></a>Подключение к источнику данных (клиент интеллектуального анализа данных для Excel)
@@ -60,7 +60,7 @@ ms.locfileid: "66087102"
   
 4.  Выберите метод проверки подлинности.  
   
-5.  Выберите базу данных из **имя каталога** стрелку раскрывающегося списка. Если база данных не существует на экземпляре, выберите **(по умолчанию)**.  
+5.  Выберите базу данных из **имя каталога** стрелку раскрывающегося списка. Если база данных не существует на экземпляре, выберите **(по умолчанию)** .  
   
 6.  Введите понятное имя для соединения.  
   

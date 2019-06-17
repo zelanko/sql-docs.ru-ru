@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5815e4f3a0cdd0defb16c613f3d6e9444fdfaac7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63067733"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
@@ -38,7 +38,7 @@ ms.locfileid: "63067733"
 |Имя столбца|Описание|  
 |-----------------|-----------------|  
 |DATA_TYPE|Возвращает значение SQL_VARCHAR, SQL_VARBINARY или SQL_WVARCHAR для **varchar(max)** типов данных.|  
-|TYPE_NAME|Возвращает «varchar», «varbinary» или «nvarchar» для **varchar(max)**, **varbinary(max)**, и **nvarchar(max)** типов данных.|  
+|TYPE_NAME|Возвращает «varchar», «varbinary» или «nvarchar» для **varchar(max)** , **varbinary(max)** , и **nvarchar(max)** типов данных.|  
 |COLUMN_SIZE|Возвращает значение SQL_SS_LENGTH_UNLIMITED для **varchar(max)** данных типа, указывающее, что размер столбца не ограничен.|  
 |BUFFER_LENGTH|Возвращает значение SQL_SS_LENGTH_UNLIMITED для **varchar(max)** данных типа, указывающее, что размер буфера не ограничен.|  
 |SQL_DATA_TYPE|Возвращает значение SQL_VARCHAR, SQL_VARBINARY или SQL_WVARCHAR для **varchar(max)** типов данных.|  

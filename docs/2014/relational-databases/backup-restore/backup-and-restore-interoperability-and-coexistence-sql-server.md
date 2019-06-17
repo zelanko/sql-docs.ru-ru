@@ -1,5 +1,5 @@
 ---
-title: 'Резервное копирование и восстановление: Взаимодействие и сосуществование (SQL Server) | Документация Майкрософт'
+title: Резервное копирование и восстановление. Взаимодействие и сосуществование (SQL Server) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,13 +17,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 96fd1b081ec9d990014dc61db7938f745cffa041
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62922439"
 ---
-# <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>Резервное копирование и восстановление: Взаимодействие и сосуществование (SQL Server)
+# <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>Резервное копирование и восстановление. Взаимодействие и сосуществование (SQL Server)
   В этом разделе описываются вопросы резервного копирования и восстановления для нескольких функций [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Это восстановление файлов и запуск базы данных, оперативное восстановление и отключенные индексы, зеркальное отображение базы данных, поэтапное восстановление и полнотекстовые индексы.  
   
  **В этом разделе.**  
@@ -48,7 +48,7 @@ ms.locfileid: "62922439"
   
  Если во время запуска базы данных возникает проблема, восстановление завершается ошибкой, а база данных помечается как подозрительная (SUSPECT). Если проблема касается только отдельных файлов, администратор базы данных может перевести их в режим «вне сети»и попытаться перезапустить базу данных. Для перевода файла в режим «вне сети» можно выполнить следующую инструкцию [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) :  
   
- ALTER DATABASE *имя_базы_данных* MODIFY FILE (имя **= "*`filename`*"**, OFFLINE)  
+ ALTER DATABASE *имя_базы_данных* MODIFY FILE (имя **= " *`filename`* "** , OFFLINE)  
   
  Если запуск пройдет успешно, то любая файловая группа, содержащая файлы в режиме «вне сети», также будет находиться в режиме «вне сети».  
   

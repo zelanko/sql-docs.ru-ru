@@ -14,10 +14,10 @@ ms.author: ajaykar
 ms.reviewer: mathoma
 manager: jroth
 ms.openlocfilehash: c4603bf5fec8f1df8ae1e7fe0e711bf7b6e8f1e9
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66794427"
 ---
 # <a name="run-database-experimentation-assistant-at-a-command-prompt"></a>Запустить помощник базы данных службы "Экспериментирование" в командной строке
@@ -43,9 +43,9 @@ ms.locfileid: "66794427"
 
 3.  Запуск записи трассировки на целевом компьютере под управлением SQL Server с помощью StartReplayCaptureTrace.sql.
        
-    1.  В SQL Server Management Studio (SSMS), откройте < Dea_InstallPath\>\Scripts\StartReplayCaptureTrace.sql.
+    1\.  В SQL Server Management Studio (SSMS), откройте < Dea_InstallPath\>\Scripts\StartReplayCaptureTrace.sql.
     
-    2.  Запустите `Set @durationInMins=0` , чтобы запись данных трассировки не останавливается автоматически после указанного времени.
+    2\.  Запустите `Set @durationInMins=0` , чтобы запись данных трассировки не останавливается автоматически после указанного времени.
     
     В.  Чтобы задать максимальный размер файла для файла трассировки, выполните `Set @maxfilesize`. Рекомендуемый размер — 200 (в МБ).
     
@@ -56,9 +56,9 @@ ms.locfileid: "66794427"
 
     `DReplay replay -m "dreplaycontroller" -d "<Folder Path on Dreplay Controller>\IrfFolder" -o -s "SQL2016Target" -w "dreplaychild1,dreplaychild2,dreplaycild3,dreplaychild4"`
         
-    1.  Для проверки состояния, откройте окно командной строки и выполните `DReplay status -f 1`.
+    1\.  Для проверки состояния, откройте окно командной строки и выполните `DReplay status -f 1`.
         
-    2.  Чтобы остановить воспроизведение, такие как, если вы увидите, что pass % ниже, чем ожидается, откройте окно командной строки и запустите `DReplay cancel`.
+    2\.  Чтобы остановить воспроизведение, такие как, если вы увидите, что pass % ниже, чем ожидается, откройте окно командной строки и запустите `DReplay cancel`.
 
 5.  Остановите запись трассировки на целевом экземпляре SQL Server.
 6.  Откройте `<Dea_InstallPath>\Scripts\StopCaptureTrace.sql`.

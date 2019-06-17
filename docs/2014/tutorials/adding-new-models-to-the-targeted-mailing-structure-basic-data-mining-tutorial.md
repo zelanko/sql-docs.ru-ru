@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 285ee82110ffdef521d75fb43343f4889663e981
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62822647"
 ---
 # <a name="adding-new-models-to-the-targeted-mailing-structure-basic-data-mining-tutorial"></a>Добавление новых моделей в структуру целевой рассылки (учебник по интеллектуальному анализу данных — начальный уровень)
@@ -30,7 +30,7 @@ ms.locfileid: "62822647"
   
 3.  В **новой модели интеллектуального анализа данных** отображаемое в диалоговом окне **имя_модели**, тип `TM_Clustering`.  
   
-4.  В **имя алгоритма**выберите **кластеризации (Майкрософт)**.  
+4.  В **имя алгоритма**выберите **кластеризации (Майкрософт)** .  
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -42,7 +42,7 @@ ms.locfileid: "62822647"
   
 2.  В **новой модели интеллектуального анализа данных** диалогового **имя_модели**, тип `TM_NaiveBayes`.  
   
-3.  В **имя алгоритма**выберите **Байеса (Майкрософт)**, затем нажмите кнопку **ОК**.  
+3.  В **имя алгоритма**выберите **Байеса (Майкрософт)** , затем нажмите кнопку **ОК**.  
   
      Появится сообщение о том, что [!INCLUDE[msCoName](../includes/msconame-md.md)] упрощенный алгоритм Байеса не поддерживает **возраст** и **Yearly Income** столбцы, которые являются непрерывными.  
   
