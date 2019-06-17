@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ed653b16fe524f364ba89f13e00715b725080033
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62824401"
 ---
 # <a name="unsuppress-run-custom-report-warnings"></a>Отмена подавления предупреждений для пользовательских отчетов
@@ -32,7 +32,7 @@ ms.locfileid: "62824401"
   
 2.  Щелкните правой кнопкой мыши `reports.xml`, а затем нажмите кнопку **изменить**.  
   
-3.  Изменение**\<SuppressWarning > значение true,\</SuppressWarning > для \<SuppressWarning > false\</SuppressWarning >**.  
+3.  Изменение **\<SuppressWarning > значение true,\</SuppressWarning > для \<SuppressWarning > false\</SuppressWarning >** .  
   
 4.  Перезапустите [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
@@ -42,7 +42,7 @@ ms.locfileid: "62824401"
   
 2.  Щелкните правой кнопкой мыши `reports.xml`и нажмите кнопку **изменить**.  
   
-3.  Изменение  **\<SuppressDrillthroughWarning > значение true,\</SuppressDrillthroughWarning > для \<SuppressDrillthroughWarning > false\</SuppressDrillthroughWarning >**.  
+3.  Изменение  **\<SuppressDrillthroughWarning > значение true,\</SuppressDrillthroughWarning > для \<SuppressDrillthroughWarning > false\</SuppressDrillthroughWarning >** .  
   
 4.  Перезапустите [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   

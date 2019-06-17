@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4b97d62e7dede1cbbe4229f824407946f2fe43ba
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62789823"
 ---
 # <a name="monitor-availability-groups-transact-sql"></a>Отслеживание групп доступности (Transact-SQL)
@@ -169,7 +169,7 @@ ms.locfileid: "62789823"
 >  Расположение первичной реплики — авторитетный источник для группы доступности.  
   
 > [!NOTE]  
->  Сведения о счетчиках производительности [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] для баз данных доступности (объект производительности **SQLServer:Database Replica** ) см. в разделе [SQL Server, реплика базы данных](../../../relational-databases/performance-monitor/sql-server-database-replica.md). Для мониторинга активности журнала транзакций для баз данных доступности пользуйтесь следующими счетчиками объекта производительности **SQLServer:Databases**: **Время записи журнала на диск (мс)**, **Записей журнала на диск/с**, **Неудачных обращений к кэшу пула журнала/с**, **Операций чтения диска пула журнала/с** и **Запросов пула журнала/с**. Дополнительные сведения см. в статье [SQL Server, Databases Object](../../../relational-databases/performance-monitor/sql-server-databases-object.md).  
+>  Сведения о счетчиках производительности [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] для баз данных доступности (объект производительности **SQLServer:Database Replica** ) см. в разделе [SQL Server, реплика базы данных](../../../relational-databases/performance-monitor/sql-server-database-replica.md). Для мониторинга активности журнала транзакций для баз данных доступности пользуйтесь следующими счетчиками объекта производительности **SQLServer:Databases**: **Время записи журнала на диск (мс)** , **Записей журнала на диск/с**, **Неудачных обращений к кэшу пула журнала/с**, **Операций чтения диска пула журнала/с** и **Запросов пула журнала/с**. Дополнительные сведения см. в статье [SQL Server, Databases Object](../../../relational-databases/performance-monitor/sql-server-databases-object.md).  
   
 ##  <a name="AGlisteners"></a> Мониторинг прослушивателей группы доступности  
  Для мониторинга прослушивателей группы доступности в подсети кластера WSFC используйте следующие представления:  

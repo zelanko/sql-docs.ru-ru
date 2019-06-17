@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f47529726445cf52d280df78a6a96f18889fcd2b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63272814"
 ---
 # <a name="publishing-stored-procedure-execution-in-transactional-replication"></a>Публикация выполнения хранимых процедур в репликации транзакций
@@ -52,7 +52,7 @@ EXEC give_raise
   
 -   Среда SQL Server Management Studio: [Публикация выполнения хранимой процедуры в публикации транзакций (среда SQL Server Management Studio)](../publish/publish-execution-of-stored-procedure-in-transactional-publication.md)  
   
--   Программирование репликации на языке Transact-SQL: выполните хранимую процедуру [sp_addarticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) и укажите значение "serializable proc exec" (рекомендуется) или "proc exec" для параметра **@type**. Дополнительные сведения об определении статей см. в [этой статье](../publish/define-an-article.md).  
+-   Программирование репликации на языке Transact-SQL: выполните хранимую процедуру [sp_addarticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) и укажите значение "serializable proc exec" (рекомендуется) или "proc exec" для параметра **@type** . Дополнительные сведения об определении статей см. в [этой статье](../publish/define-an-article.md).  
   
 ## <a name="modifying-the-procedure-at-the-subscriber"></a>Изменение процедуры на подписчике  
  По умолчанию определение хранимой процедуры на издателе отправляется каждому подписчику. Тем не менее хранимую процедуру можно также изменить на подписчике. Эта возможность используется, когда требуется разная логика для выполнения процедуры на подписчике и на издателе. В качестве примера рассмотрим **sp_big_delete**, хранимую процедуру на издателе, которая выполняет две функции: процедура удаляет 1 000 000 строк из реплицируемой таблицы **big_table1** и обновляет нереплицируемую таблицу **big_table2**. Чтобы уменьшить необходимый объем сетевых ресурсов, следует передать удаление 1 миллиона строк в виде хранимой процедуры посредством публикации **sp_big_delete**. На подписчике можно изменить хранимую процедуру **sp_big_delete** , чтобы удалить только 1 миллион строк, но не выполнять последующее обновление таблицы **big_table2**.  

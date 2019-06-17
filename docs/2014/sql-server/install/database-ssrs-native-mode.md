@@ -13,10 +13,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 577145b2a844a95480d8e250a87cce0a15877e20
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66095720"
 ---
 # <a name="database-ssrs-native-mode"></a>База данных (службы Reporting Services в собственном режиме)
@@ -47,7 +47,7 @@ ms.locfileid: "66095720"
  Позволяет задать учетные данные, используемые сервером отчетов для соединения со своей базой данных. Возможно задать следующие типы учетных данных: учетная запись службы, пользователь домена Windows, локальный пользователь Windows или имя входа базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения о выборе учетных данных см. в разделе [Настройка подключения к базе данных сервера отчетов &#40;диспетчер конфигурации служб SSRS&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
  **Имя пользователя**  
- Позволяет задать учетную запись пользователя домена (в случае использования учетных данных Windows) или имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (в случае использования учетных данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ). Если вы используете учетные данные Windows, укажите их в следующем формате:  *\<домена >\\< учетная запись\>*.  
+ Позволяет задать учетную запись пользователя домена (в случае использования учетных данных Windows) или имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (в случае использования учетных данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ). Если вы используете учетные данные Windows, укажите их в следующем формате:  *\<домена >\\< учетная запись\>* .  
   
  **Пароль**  
  Позволяет задать пароль для учетной записи.  

@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b99fd70e0119aa01d384066aaa2f3b91eed152b4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63026874"
 ---
 # <a name="microsoft-access-data-types"></a>Типы данных Microsoft Access
@@ -41,7 +41,7 @@ ms.locfileid: "63026874"
 |ДЛИННЫЙ ТЕКСТ|LONGTEXT|SQL_WLONGVARCHAR SQL_LONGVARCHAR [2] [3]|  
 |MEMO|LONGTEXT|SQL_WLONGVARCHAR SQL_LONGVARCHAR [2] [3]|  
 |НОМЕР (FieldSize = один)|ЕДИНЫЙ|SQL_REAL|  
-|НОМЕР (FieldSize = DOUBLE)|DOUBLE|SQL_DOUBLE|  
+|НОМЕР (FieldSize = DOUBLE)|Double|SQL_DOUBLE|  
 |НОМЕР (FieldSize = БАЙТ)|БАЙТ БЕЗ ЗНАКА|SQL_TINYINT|  
 |НОМЕР (FieldSize = INTEGER)|КОРОТКИЙ|SQL_SMALLINT|  
 |НОМЕР (FieldSize = ДЛИННОЕ целое число)|LONG|SQL_INTEGER|  

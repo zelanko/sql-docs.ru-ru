@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4c8af52dfe8c95b80f5b9550b41a14e1f70c7a6e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66080166"
 ---
 # <a name="configure-http-access-to-analysis-services-on-internet-information-services-iis-80"></a>Настройка HTTP-доступа к службам Analysis Services в службах Internet Information Services (IIS) 8.0
@@ -84,7 +84,7 @@ ms.locfileid: "66080166"
   
 -   **Разработка приложений** | **Расширения ISAPI**  
   
- Чтобы проверить или добавить эти компоненты, последовательно выберите **Диспетчер сервера** | **Управление** | **Добавить роли и компоненты**. Выполните все шаги мастера, пока не дойдете до страницы **Роли сервера**. Прокрутите вниз, чтобы найти пункт **Веб-сервер (IIS)**.  
+ Чтобы проверить или добавить эти компоненты, последовательно выберите **Диспетчер сервера** | **Управление** | **Добавить роли и компоненты**. Выполните все шаги мастера, пока не дойдете до страницы **Роли сервера**. Прокрутите вниз, чтобы найти пункт **Веб-сервер (IIS)** .  
   
 1.  Откройте узел **Веб-сервер** | **Безопасность** и выберите методы проверки подлинности.  
   

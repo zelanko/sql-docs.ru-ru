@@ -20,10 +20,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: fcc44037ac746621c044bca755fd9b957356dc38
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66705797"
 ---
 # <a name="setpermissions-method-adox"></a>Метод SetPermissions (ADOX)
@@ -50,10 +50,10 @@ GroupOrUser.SetPermissions Name, ObjectType, Action, Rights [, Inherit] [, Objec
  Объект **Long** значение, которое может быть битовой маской, из одного или нескольких из [RightsEnum](../../../ado/reference/adox-api/rightsenum.md) констант, указывающих права на установку.  
   
  *Наследовать*  
- Необязательный. Объект **Long** значение, которое может быть одним из [InheritTypeEnum](../../../ado/reference/adox-api/inherittypeenum.md) констант, определяющих, как объекты наследуют эти разрешения. Значение по умолчанию — **adInheritNone**.  
+ Необязательный параметр. Объект **Long** значение, которое может быть одним из [InheritTypeEnum](../../../ado/reference/adox-api/inherittypeenum.md) констант, определяющих, как объекты наследуют эти разрешения. Значение по умолчанию — **adInheritNone**.  
   
  *ObjectTypeId*  
- Необязательный. Объект **Variant** значение, которое указывает идентификатор GUID для типа объекта поставщика, который не определен в спецификации OLE DB. Этот параметр является обязательным, если *ObjectType* присваивается **adPermObjProviderSpecific**; в противном случае он не используется.  
+ Необязательный параметр. Объект **Variant** значение, которое указывает идентификатор GUID для типа объекта поставщика, который не определен в спецификации OLE DB. Этот параметр является обязательным, если *ObjectType* присваивается **adPermObjProviderSpecific**; в противном случае он не используется.  
   
 ## <a name="remarks"></a>Примечания  
  Если поставщик не поддерживает параметр права доступа для групп или пользователей, произойдет ошибка.  

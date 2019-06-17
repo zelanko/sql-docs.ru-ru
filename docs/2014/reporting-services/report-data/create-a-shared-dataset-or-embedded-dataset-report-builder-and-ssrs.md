@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 208c5608037d99b9dc02f1ab7fefd151cd4bdecf
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107429"
 ---
 # <a name="create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs"></a>Создание общего или внедренного набора данных (построитель отчетов и службы SSRS)
@@ -56,7 +56,7 @@ ms.locfileid: "66107429"
   
 4.  В конструкторе запросов укажите поля, которые необходимо включить в набор данных.  
   
-5.  Чтобы запустить запрос, нажмите кнопку **Выполнить** (**!**).  
+5.  Чтобы запустить запрос, нажмите кнопку **Выполнить** ( **!** ).  
   
 6.  На кнопке **Построитель отчетов** выберите **Сохранить** или **Сохранить как** , чтобы сохранить общий набор данных на сервере отчетов.  
   

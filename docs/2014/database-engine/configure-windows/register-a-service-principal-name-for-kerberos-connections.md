@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5acd507be99d7ff36245e723d20aebc36f42a917
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62781999"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>Регистрация имени участника-службы для соединений Kerberos
@@ -71,7 +71,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
   
  **Именованный экземпляр**  
   
--   *MSSQLSvc/FQDN*:[_port_**|**_instancename_], где:  
+-   *MSSQLSvc/FQDN*:[_port_ **|** _instancename_], где:  
   
     -   *MSSQLSvc* — регистрируемая служба;  
   
@@ -83,7 +83,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
   
  **Экземпляр по умолчанию**  
   
--   *MSSQLSvc/FQDN*:_port_**|**_MSSQLSvc/FQDN_, где:  
+-   *MSSQLSvc/FQDN*:_port_ **|** _MSSQLSvc/FQDN_, где:  
   
     -   *MSSQLSvc* — регистрируемая служба;  
   
@@ -103,9 +103,9 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
 |MSSQLSvc/*fqdn:InstanceName*|Сформированное поставщиком имя участника-службы (по умолчанию) для именованного экземпляра, когда используется протокол, отличный от TCP. *InstanceName* — имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
 ##  <a name="Auto"></a> Автоматическая регистрация имени участника-службы  
- Когда запускается экземпляр компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пытается зарегистрировать имя участника-службы (SPN) для службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Когда экземпляр остановлен, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пытается отменить регистрацию имени участника-службы (SPN). Для соединений TCP/IP имя участника-службы регистрируется в формате *MSSQLSvc/\<FQDN>*:*\<tcpport>*. Оба именованных экземпляра и экземпляр по умолчанию регистрируются как служба *MSSQLSvc*, используя значение *\<tcpport>*, чтобы различить экземпляры.  
+ Когда запускается экземпляр компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пытается зарегистрировать имя участника-службы (SPN) для службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Когда экземпляр остановлен, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пытается отменить регистрацию имени участника-службы (SPN). Для соединений TCP/IP имя участника-службы регистрируется в формате *MSSQLSvc/\<FQDN>* : *\<tcpport>* . Оба именованных экземпляра и экземпляр по умолчанию регистрируются как служба *MSSQLSvc*, используя значение *\<tcpport>* , чтобы различить экземпляры.  
   
- Для других соединений, поддерживающих протокол Kerberos имя участника-службы регистрируется в формате *MSSQLSvc /\<полное доменное имя >*:*\<instancename >* для именованного экземпляра. Форматом регистрации экземпляра по умолчанию является *MSSQLSvc/\<FQDN>*.  
+ Для других соединений, поддерживающих протокол Kerberos имя участника-службы регистрируется в формате *MSSQLSvc /\<полное доменное имя >* : *\<instancename >* для именованного экземпляра. Форматом регистрации экземпляра по умолчанию является *MSSQLSvc/\<FQDN>* .  
   
  Если учетная запись службы не обладает разрешениями на регистрацию и отмену регистрации имени участника-службы, возможно, эти действия придется выполнить вручную.  
   

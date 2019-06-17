@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 5e7f9a484ecb873a141f9b91a88c64f65ff25336
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66712203"
 ---
 # <a name="readtext-method"></a>Метод ReadText
@@ -36,7 +36,7 @@ String = Stream.ReadText ( NumChars)
   
 #### <a name="parameters"></a>Параметры  
  *число символов*  
- Необязательный параметр. Объект **Long** значение, указывающее количество символов для чтения из файла, или [StreamReadEnum](../../../ado/reference/ado-api/streamreadenum.md) значение. Значение по умолчанию — **adReadAll**.  
+ Необязательный. Объект **Long** значение, указывающее количество символов для чтения из файла, или [StreamReadEnum](../../../ado/reference/ado-api/streamreadenum.md) значение. Значение по умолчанию — **adReadAll**.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  **ReadText** метод считывает указанное число символов, всю строку или весь поток, из **Stream** объекта и возвращает результирующую строку.  

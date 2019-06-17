@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2dfc75b2af19165931dc50e76f04bc7362b59ea8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62873055"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>Развертывание базы данных с помощью приложения уровня данных
@@ -66,7 +66,7 @@ ms.locfileid: "62873055"
   
 3.  Разверните узел **Базы данных** .  
   
-4.  Щелкните правой кнопкой мыши базу данных, которую необходимо развернуть, выберите **Задачи**, а затем **Развертывание базы данных в SQL Azure…**.  
+4.  Щелкните правой кнопкой мыши базу данных, которую необходимо развернуть, выберите **Задачи**, а затем **Развертывание базы данных в SQL Azure…** .  
   
 5.  Выполните шаги в диалоговых окнах мастера.  
   
