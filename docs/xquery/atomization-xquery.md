@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: bddb70c6c79ab983d1931bb17c741ff0dd531857
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63047598"
 ---
 # <a name="atomization-xquery"></a>Атомизация (XQuery)
@@ -50,7 +50,7 @@ SELECT @x.query('sum(data(ROOT/Location/@LaborHours))')
   
 -   При конструировании атрибута OrignialLaborHours атомизация неявно применяется к одноэлементной последовательности, которую возвращает (`$WC/@LaborHours`). Типизированное значение атрибута LaborHours присваивается атрибуту OriginalLaborHours.  
   
--   При конструировании атрибута UpdatedLaborHoursV1 арифметический оператор требует атомарных значений. Таким образом **data()** неявно применяется к атрибуту LaborHours, который возвращается методом (`$WC/@LaborHours`). Затем к нему добавляется атомарное значение 1. Конструирование атрибута UpdatedLaborHoursV2 показывает явное применение **data()**, но не является обязательным.  
+-   При конструировании атрибута UpdatedLaborHoursV1 арифметический оператор требует атомарных значений. Таким образом **data()** неявно применяется к атрибуту LaborHours, который возвращается методом (`$WC/@LaborHours`). Затем к нему добавляется атомарное значение 1. Конструирование атрибута UpdatedLaborHoursV2 показывает явное применение **data()** , но не является обязательным.  
   
 ```  
 SELECT Instructions.query('  

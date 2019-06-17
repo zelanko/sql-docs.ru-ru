@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ac7570550cd256a5c65c82c9585b2baf7713c878
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66080269"
 ---
 # <a name="configure-the-windows-firewall-to-allow-analysis-services-access"></a>Настройка брандмауэра Windows на разрешение доступа к службам Analysis Services
@@ -78,7 +78,7 @@ ms.locfileid: "66080269"
 ##  <a name="bkmk_default"></a> Настройка брандмауэра Windows для экземпляра по умолчанию служб Analysis Services  
  Экземпляр служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] по умолчанию прослушивает TCP-порт 2383. Если установлен экземпляр по умолчанию и требуется использовать этот порт, то необходимо лишь разблокировать входящий доступ к TCP-порту 2383 в брандмауэре Windows, чтобы разрешить удаленный доступ к экземпляру по умолчанию служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Если установлен экземпляр по умолчанию и необходимо настроить службу для прослушивания фиксированного порта, см. подраздел [Использовать фиксированный порт для именованного экземпляра или экземпляра по умолчанию служб Analysis Services](#bkmk_fixed) в данном разделе.  
   
- Чтобы определить, выполняется ли служба как экземпляр по умолчанию (MSSQLServerOLAPService), проверьте имя службы в диспетчере конфигурации SQL Server. Экземпляр служб Analysis Services по умолчанию всегда указывается как **Службы SQL Server Analysis Services (MSSQLSERVER)**.  
+ Чтобы определить, выполняется ли служба как экземпляр по умолчанию (MSSQLServerOLAPService), проверьте имя службы в диспетчере конфигурации SQL Server. Экземпляр служб Analysis Services по умолчанию всегда указывается как **Службы SQL Server Analysis Services (MSSQLSERVER)** .  
   
 > [!NOTE]  
 >  В различных операционных системах Windows имеются различные средства для настройки брандмауэра Windows. В большинстве из этих средств можно выбирать между открытием определенного порта или исполняемого файла программы. Если нет особой причины указать исполняемый файл программы, рекомендуется указать порт.  

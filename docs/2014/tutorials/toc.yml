@@ -33,7 +33,7 @@
               href: adding-new-models-to-the-targeted-mailing-structure-basic-data-mining-tutorial.md
             - name: Обработка моделей в структуре интеллектуального анализа данных прямой почтовой рассылки
               href: processing-models-in-the-targeted-mailing-structure-basic-data-mining-tutorial.md
-        - name: "Урок\_4. Изучение моделей индивидуальной рассылки"
+        - name: 'Занятие 4: Изучение моделей индивидуальной рассылки'
           href: lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md
           items:
             - name: Изучение модели дерева принятия решений
@@ -42,14 +42,14 @@
               href: exploring-the-clustering-model-basic-data-mining-tutorial.md
             - name: Изучение модели упрощенного алгоритма Байеса
               href: exploring-the-naive-bayes-model-basic-data-mining-tutorial.md
-        - name: "Урок\_5. Тестирование моделей"
+        - name: "Занятие\_5.: Тестирование моделей"
           href: lesson-5-testing-models-basic-data-mining-tutorial.md
           items:
             - name: Проверка точности при помощи диаграмм точности прогнозов
               href: testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md
             - name: Проверка модели с фильтром
               href: testing-a-filtered-model-basic-data-mining-tutorial.md
-        - name: "Урок\_6. Создание прогнозов и работа с ними"
+        - name: 'Занятие 6: Создание прогнозов и работа с ними'
           href: lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md
           items:
             - name: Создание прогнозов
@@ -105,7 +105,7 @@
               href: filtering-a-nested-table-in-a-mining-model-intermediate-data-mining-tutorial.md
             - name: Прогноз взаимосвязей
               href: predicting-associations-intermediate-data-mining-tutorial.md
-        - name: "Урок\_4. Создание сценария кластеризации последовательностей"
+        - name: 'Занятие 4: Создание сценария кластеризации последовательностей'
           href: lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md
           items:
             - name: Создание структуры модели интеллектуального анализа данных кластеризации последовательностей
@@ -118,7 +118,7 @@
               href: creating-a-related-sequence-clustering-model-intermediate-data-mining-tutorial.md
             - name: Создание прогнозов для модели кластеризации последовательностей
               href: create-predictions-on-model-intermediate-data-mining-tutorial.md
-        - name: "Урок\_5. Создание моделей нейронной сети и логистической регрессии"
+        - name: "Занятие\_5.: Создание моделей нейронной сети и логистической регрессии"
           href: lesson-5-build-models-intermediate-data-mining-tutorial.md
           items:
             - name: Добавление представления источников данных для данных Call Center
@@ -131,7 +131,7 @@
               href: add-logistic-regression-model-to-call-center-intermediate-data-mining.md
             - name: Создание прогнозов для моделей Call Center (учебник по интеллектуальному анализу данных — средний уровень)
               href: create-predictions-call-center-models-intermediate-data-mining-tutorial.md
-    - name: 'Создание моделей и выполнение к ним запросов с помощью расширений интеллектуального анализа данных: учебники'
+    - name: 'Создание моделей и выполнение к ним запросов с помощью расширений интеллектуального анализа данных: Учебники'
       href: create-query-data-mining-models-dmx-tutorials.md
       items:
         - name: Учебник по расширениям интеллектуального анализа данных «Покупатель велосипеда»
@@ -143,9 +143,9 @@
               href: lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md
             - name: Урок 3. Обработка структуры интеллектуального анализа данных "Покупатель велосипеда"
               href: lesson-3-processing-the-bike-buyer-mining-structure.md
-            - name: "Урок\_4. Просмотр моделей интеллектуального анализа данных \"Покупатель велосипеда\""
+            - name: 'Занятие 4: Просмотр моделей интеллектуального анализа данных "Покупатель велосипеда"'
               href: lesson-4-browsing-the-bike-buyer-mining-models.md
-            - name: "Урок\_5. Выполнение запросов прогнозирования"
+            - name: "Занятие\_5.: Выполнение запросов прогнозирования"
               href: lesson-5-executing-prediction-queries.md
         - name: Учебник по расширениям интеллектуального анализа данных потребительской корзины
           href: market-basket-dmx-tutorial.md
@@ -154,9 +154,9 @@
               href: lesson-1-creating-the-market-basket-mining-structure.md
             - name: Урок 2. Добавление моделей к структуре интеллектуального анализа данных покупательского поведения
               href: lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md
-            - name: Урок 3. Обработка структуры интеллектуального анализа данных "Покупательское поведение"
+            - name: Урок 3. Обработка структуры интеллектуального анализа данных «Потребительская корзина»
               href: lesson-3-processing-the-market-basket-mining-structure.md
-            - name: "Урок\_4. Прогнозирование покупательского поведения"
+            - name: 'Занятие 4: Прогнозирование покупательского поведения'
               href: lesson-4-executing-market-basket-predictions.md
         - name: Учебник по расширениям интеллектуального анализа данных для прогнозирования временных рядов
           href: time-series-prediction-dmx-tutorial.md
@@ -167,9 +167,9 @@
               href: lesson-2-adding-mining-models-to-the-time-series-mining-structure.md
             - name: Урок 3. Обработка структуры и моделей временных рядов
               href: lesson-3-processing-the-time-series-structure-and-models.md
-            - name: "Урок\_4. Создание прогнозов на основе временных рядов с помощью расширений интеллектуального анализа данных"
+            - name: 'Занятие 4: Создание прогнозов на основе временных рядов с помощью расширений интеллектуального анализа данных'
               href: lesson-4-creating-time-series-predictions-using-dmx.md
-            - name: "Урок\_5. Расширение модели временных рядов"
+            - name: "Занятие\_5.: Расширение модели временных рядов"
               href: lesson-5-extending-the-time-series-model.md
 - name: Учебники по службам Reporting Services
   href: ../reporting-services/reporting-services-tutorials-ssrs.md
@@ -183,11 +183,11 @@
           href: ../reporting-services/lesson-2-specifying-connection-information-reporting-services.md
         - name: Урок 3. Определение набора данных для табличного отчета
           href: ../reporting-services/lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md
-        - name: "Урок\_4. Добавление таблицы в отчет"
+        - name: 'Занятие 4: Добавление таблицы в отчет'
           href: ../reporting-services/lesson-4-adding-a-table-to-the-report-reporting-services.md
-        - name: "Урок\_5. Форматирование отчета"
+        - name: "Занятие\_5.: Форматирование отчета"
           href: ../reporting-services/lesson-5-formatting-a-report-reporting-services.md
-        - name: "Урок\_6. Добавление группирования и итогов"
+        - name: 'Занятие 6: Добавление группирования и итогов'
           href: ../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md
     - name: Создание управляемой данными подписки (учебник по службам SSRS)
       href: ../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md
@@ -207,13 +207,13 @@
           href: ../reporting-services/lesson-2-define-a-data-connection-and-data-table-for-parent-report.md
         - name: Урок 3. Проектирование родительского отчета с использованием мастера отчетов
           href: ../reporting-services/lesson-3-design-the-parent-report-using-the-report-wizard.md
-        - name: "Урок\_4. Определение подключения к данным и таблицы данных для дочернего отчета"
+        - name: 'Занятие 4: Определение подключения к данным и таблицы данных для дочернего отчета'
           href: ../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md
-        - name: "Урок\_5. Проектирование дочернего отчета с использованием мастера отчетов"
+        - name: "Занятие\_5.: Проектирование дочернего отчета с использованием мастера отчетов"
           href: ../reporting-services/lesson-5-design-the-child-report-using-the-report-wizard.md
-        - name: "Урок\_6. Добавление в приложение элемента управления ReportViewer"
+        - name: 'Занятие 6: Добавление в приложение элемента управления ReportViewer'
           href: ../reporting-services/lesson-6-add-a-reportviewer-control-to-the-application.md
-        - name: "Урок\_7. Добавление действия детализации к родительскому отчету"
+        - name: 'Занятие 7: Добавление действия детализации к родительскому отчету'
           href: ../reporting-services/lesson-7-add-drillthrough-action-on-parent-report.md
         - name: "Урок\_8. Создание фильтра данных"
           href: ../reporting-services/lesson-8-create-a-data-filter.md
@@ -228,7 +228,7 @@
           href: lesson-2-adding-a-web-reference.md
         - name: Урок 3. Доступ к веб-службе
           href: lesson-3-accessing-the-web-service.md
-        - name: "Урок\_4. Запуск приложения (VB/VC#)"
+        - name: 'Занятие 4: Запуск приложения (VB/VC#)'
           href: lesson-4-running-the-application-vb-vcsharp.md
     - name: 'Обновление отчетов с помощью классов, созданных из схемы языка определения отчетов (учебник по службам SSRS)'
       href: updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md
@@ -239,11 +239,11 @@
           href: lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md
         - name: Урок 3. Загрузка определения отчета с сервера отчетов
           href: lesson-3-load-a-report-definition-from-the-report-server.md
-        - name: "Урок\_4. Обновление определения отчета программным способом"
+        - name: 'Занятие 4: Обновление определения отчета программным способом'
           href: lesson-4-update-the-report-definition-programmatically.md
-        - name: "Урок\_5. Публикация определения отчета на сервере отчетов"
+        - name: "Занятие\_5.: Публикация определения отчета на сервере отчетов"
           href: lesson-5-publish-the-report-definition-to-the-report-server.md
-        - name: "Урок\_6. Запуск приложения схемы языка определения отчетов (VB/C#)"
+        - name: 'Занятие 6: Запуск приложения схемы языка определения отчетов (VB/C#)'
           href: lesson-6-run-the-rdl-schema-application-vb-csharp.md
     - name: Учебники (построитель отчетов)
       href: ../reporting-services/report-builder-tutorials.md
@@ -337,7 +337,7 @@
               href: task-3-creating-and-running-a-data-quality-project-for-matching.md
             - name: "Задача\_4. Экспорт результатов сопоставления в файл\_Excel"
               href: task-4-exporting-the-results-from-matching-activity-to-an-excel-file.md
-        - name: "Урок\_4. Хранение данных поставщика в\_MDS"
+        - name: "Занятие 4: Хранение данных поставщика в\_MDS"
           href: lesson-4-storing-supplier-data-in-mds.md
           items:
             - name: "Задача\_1. Создание модели поставщиков с помощью диспетчера основных данных"
@@ -358,7 +358,7 @@
               href: task-8-adding-a-new-value-for-state-entity-in-excel.md
             - name: "Задача\_9. Создание производной иерархии с помощью диспетчера основных данных"
               href: task-9-creating-a-derived-hierarchy-using-master-data-manager.md
-        - name: "Урок\_5. Автоматизация очистки и сопоставления с помощью\_SSIS"
+        - name: "Занятие\_5.: Автоматизация очистки и сопоставления с помощью\_SSIS"
           href: lesson-5-automating-the-cleansing-and-matching-using-ssis.md
           items:
             - name: "Задача\_1 (предварительное требование). Удаление данных о поставщиках в\_MDS"

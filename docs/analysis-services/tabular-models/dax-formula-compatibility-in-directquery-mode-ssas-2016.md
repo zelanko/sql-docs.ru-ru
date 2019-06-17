@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8e3a9a9f8043a3251e928b7b13e706b407097894
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63019236"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode"></a>Совместимость формул в режиме DirectQuery 
@@ -107,7 +107,7 @@ ms.locfileid: "63019236"
 -   Логические значения при сравнениях или с операторами EXACT, AND, OR, &amp;&amp;или || всегда обрабатываются как логические значения.  
   
 **Приведение строковых данных в логические**  
-В выполняющейся в памяти и в моделях DirectQuery приведения разрешены в логические значения только из следующих строк: **«»** (пустая строка), **«true»**, **«false»**; где пустая строка приведение к значению false.  
+В выполняющейся в памяти и в моделях DirectQuery приведения разрешены в логические значения только из следующих строк: **«»** (пустая строка), **«true»** , **«false»** ; где пустая строка приведение к значению false.  
   
 Приведение к логическому типу данных любой другой строки приводит к ошибке.  
   

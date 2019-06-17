@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b03dd7f886cee5816d591034d1be63ece45d8d1d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63021340"
 ---
 # <a name="configure-snapshot-properties-replication-transact-sql-programming"></a>настроить свойства моментального снимка (программирование репликации на языке Transact-SQL)
@@ -26,7 +26,7 @@ ms.locfileid: "63021340"
   
 ### <a name="to-configure-snapshot-properties-when-creating-a-snapshot-or-transactional-publication"></a>Настройка свойств моментального снимка при создании снимка публикации транзакций  
   
-1.  Выполните процедуру [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)на издателе. Укажите имя публикации в параметре **@publication**, значение **snapshot** или **continuous** в параметре **@repl_freq**, а также один или несколько следующих параметров, связанных с моментальными снимками.  
+1.  Выполните процедуру [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)на издателе. Укажите имя публикации в параметре **@publication** , значение **snapshot** или **continuous** в параметре **@repl_freq** , а также один или несколько следующих параметров, связанных с моментальными снимками.  
   
     -   **@alt_snapshot_folder** — определяет путь, где хранится моментальный снимок для этой публикации, если он отличается от папки хранения мгновенных снимков по умолчанию.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "63021340"
   
 ### <a name="to-configure-snapshot-properties-when-creating-a-merge-publication"></a>Настройка свойств моментального снимка при создании снимка публикации слиянием  
   
-1.  Выполните процедуру [sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)на издателе. Укажите имя публикации в параметре **@publication**, значение **snapshot** или **continuous** в параметре **@repl_freq**, а также один или несколько следующих параметров, связанных с моментальными снимками.  
+1.  Выполните процедуру [sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)на издателе. Укажите имя публикации в параметре **@publication** , значение **snapshot** или **continuous** в параметре **@repl_freq** , а также один или несколько следующих параметров, связанных с моментальными снимками.  
   
     -   **@alt_snapshot_folder** — определяет путь, где хранится моментальный снимок для этой публикации, если он отличается от папки хранения мгновенных снимков по умолчанию.  
   
@@ -58,9 +58,9 @@ ms.locfileid: "63021340"
   
 ### <a name="to-modify-snapshot-properties-of-an-existing-snapshot-or-transactional-publication"></a>Изменение свойств существующего моментального снимка публикации транзакций  
   
-1.  На издателе в базе данных публикации выполните процедуру [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql). Задайте значение **1** в параметре **@force_invalidate_snapshot** и одно из следующих значений в параметре **@property**.  
+1.  На издателе в базе данных публикации выполните процедуру [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql). Задайте значение **1** в параметре **@force_invalidate_snapshot** и одно из следующих значений в параметре **@property** .  
   
-    -   **alt_snapshot_folder** — также укажите новый путь к альтернативной папке моментальных снимков в параметре **@value**на издателе.  
+    -   **alt_snapshot_folder** — также укажите новый путь к альтернативной папке моментальных снимков в параметре **@value** на издателе.  
   
     -   **compress_snapshot** — также укажите значение **true** или **false** в параметре **@value** чтобы указать, сжаты ли файлы моментальных снимков, находящихся в альтернативной папке, в формате CAB.  
   
@@ -79,9 +79,9 @@ ms.locfileid: "63021340"
   
 ### <a name="to-modify-snapshot-properties-of-an-existing-merge-publication"></a>Изменение свойств существующего моментального снимка публикации слиянием  
   
-1.  В базе данных публикации на издателе выполните процедуру [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql). Задайте значение **1** в параметре **@force_invalidate_snapshot** и одно из следующих значений в параметре **@property**.  
+1.  В базе данных публикации на издателе выполните процедуру [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql). Задайте значение **1** в параметре **@force_invalidate_snapshot** и одно из следующих значений в параметре **@property** .  
   
-    -   **alt_snapshot_folder** — также укажите новый путь к альтернативной папке моментальных снимков в параметре **@value**на издателе.  
+    -   **alt_snapshot_folder** — также укажите новый путь к альтернативной папке моментальных снимков в параметре **@value** на издателе.  
   
     -   **compress_snapshot** — также укажите значение **true** или **false** в параметре **@value** чтобы указать, сжаты ли файлы моментальных снимков, находящихся в альтернативной папке, в формате CAB.  
   
