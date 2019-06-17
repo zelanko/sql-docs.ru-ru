@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f1fac598789c53f460ed5239f304de2a39acff81
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62901191"
 ---
 # <a name="modify-odata-source-query-at-runtime"></a>Изменение запроса источника OData во время выполнения
@@ -27,7 +27,7 @@ ms.locfileid: "62901191"
 ## <a name="exposing-the-query-as-a-parameter"></a>Предоставление запроса в качестве параметра  
  Следующая процедура позволяет предоставить пакету доступ к запросу, используемому компонентом источника OData, в качестве параметра.  
   
-1.  Щелкните правой кнопкой мыши **Задача потока данных** и выберите пункт **Параметризация…**.  
+1.  Щелкните правой кнопкой мыши **Задача потока данных** и выберите пункт **Параметризация…** .  
   
 2.  В диалоговом окне **Параметризация** выберите **[\<имя исходного компонента OData>].[Query]** для параметра **Свойство**.  
   
