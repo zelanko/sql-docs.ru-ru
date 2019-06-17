@@ -3,17 +3,17 @@ title: Установка предварительно обученных мод
 description: Добавьте предварительно обученных моделей для тональности Добавление признаков анализа и образ SQL Server 2017 служб машинного обучения (R или Python) или SQL Server 2016 R Services.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 03/29/2019
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: fe0cfc855f1a231654c3e31ec3924d9754ef4970
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 002713c8c3eb92a33cbb1461eaacb8a0d63a5c3f
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62745415"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140744"
 ---
 # <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>Установка предварительно обученных моделей машинного обучения в SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "62745415"
 
 + [SQL Server 2017 службы машинного обучения](sql-machine-learning-services-windows-install.md) включает в себя обе версии языка библиотеки машинного обучения, поэтому это предварительное условие удовлетворяется с никаких дополнительных действий со стороны пользователя. Так как имеются библиотеки, можно использовать скрипт PowerShell, описанный в этой статье для добавления предварительно обученных моделей для этих библиотек.
 
-+ [SQL Server 2016 R Services](sql-r-services-windows-install.md), являющийся R, не включает [пакет MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) без дополнительной настройки. Чтобы добавить MicrosoftML, необходимо выполнить [обновления компонента](../r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md). Одним из преимуществ обновления компонента является, можно одновременно добавить предварительно обученных моделей, что делает сценария PowerShell ненужные. Однако если вы уже обновлены, но пропустили Добавление предварительно обученных моделей с первого раза, можно запустить сценарий PowerShell, как описано в этой статье. Он работает для обеих версий SQL Server. Перед выполнением, убедитесь, что библиотека MicrosoftML существует в C:\Program Files\Microsoft SQL Server\MSSQL13. MSSQLSERVER\R_SERVICES\library.
++ [SQL Server 2016 R Services](sql-r-services-windows-install.md), являющийся R, не включает [пакет MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) без дополнительной настройки. Чтобы добавить MicrosoftML, необходимо выполнить [обновления компонента](../install/upgrade-r-and-python.md). Одним из преимуществ обновления компонента является, можно одновременно добавить предварительно обученных моделей, что делает сценария PowerShell ненужные. Однако если вы уже обновлены, но пропустили Добавление предварительно обученных моделей с первого раза, можно запустить сценарий PowerShell, как описано в этой статье. Он работает для обеих версий SQL Server. Перед выполнением, убедитесь, что библиотека MicrosoftML существует в C:\Program Files\Microsoft SQL Server\MSSQL13. MSSQLSERVER\R_SERVICES\library.
 
 
 <a name="file-location"></a>
@@ -209,6 +209,6 @@ ms.locfileid: "62745415"
 
 + [SQL Server 2016 R Services](sql-r-services-windows-install.md)
 + [SQL Server 2017 службы машинного обучения](sql-machine-learning-services-windows-install.md)
-+ [Обновление компонентов R и Python в экземплярах SQL Server](../r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
++ [Обновление компонентов R и Python в экземплярах SQL Server](../install/upgrade-r-and-python.md)
 + [Пакет MicrosoftML для R](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)
 + [пакет microsoftml для Python](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)

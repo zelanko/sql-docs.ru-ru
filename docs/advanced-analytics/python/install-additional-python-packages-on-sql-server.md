@@ -3,24 +3,24 @@ title: Установка новых пакетов языка Python - маши
 description: Добавление новых пакетов Python для служб SQL Server 2017 машинного обучения (в базе данных) и сервер машинного обучения (автономный).
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/10/2018
+ms.date: 06/16/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: cc83ed8500e93147163e3166b895c7333b4222cd
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 0c6c4384dd6c02e35fe77a6fb2bfc4017a445b1b
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510301"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140722"
 ---
 # <a name="install-new-python-packages-on-sql-server"></a>Установка новых пакетов Python в SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 В этой статье описывается установка новых пакетов Python в экземпляре служб SQL Server 2017 машинного обучения. Как правило процесс установки новых пакетов аналогична в стандартную среду Python. Тем не менее некоторые дополнительные действия требуются, если сервер имеет подключение к Интернету.
 
-Дополнительные сведения о пути расположения и установки пакета, см. в разделе [получить R или Python данные пакетов](../r/determine-which-packages-are-installed-on-sql-server.md).
+Дополнительные сведения о пути расположения и установки пакета, см. в разделе [получить R или Python данные пакетов](../package-management/installed-package-information.md).
 
 ## <a name="prerequisites"></a>предварительные требования
 

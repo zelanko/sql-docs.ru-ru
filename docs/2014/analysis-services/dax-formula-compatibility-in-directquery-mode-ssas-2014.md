@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6da2326c22d0581f59c2307abf018a54915857a5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62732476"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode-ssas-2014"></a>Совместимость формул DAX в режиме DirectQuery (SSAS 2014)
@@ -78,7 +78,7 @@ ms.locfileid: "62732476"
 -   Логические значения при сравнениях или с операторами EXACT, AND, OR, &amp;&amp;или || всегда обрабатываются как логические значения.  
   
 **Приведение строковых данных в логические**  
-В выполняющейся в памяти и в моделях DirectQuery приведения разрешены в логические значения только из следующих строк: **«»** (пустая строка), **«true»**, **«false»**; где пустая строка приведение к значению false.  
+В выполняющейся в памяти и в моделях DirectQuery приведения разрешены в логические значения только из следующих строк: **«»** (пустая строка), **«true»** , **«false»** ; где пустая строка приведение к значению false.  
   
 Приведение к логическому типу данных любой другой строки приводит к ошибке.  
   

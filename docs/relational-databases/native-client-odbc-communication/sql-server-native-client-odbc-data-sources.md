@@ -21,10 +21,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 318ff6f9abf54e4c8e15e623bde7d5007a747eef
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63013866"
 ---
 # <a name="sql-server-native-client-odbc-data-sources"></a>Источники данных ODBC собственного клиента SQL Server
@@ -33,7 +33,7 @@ ms.locfileid: "63013866"
 
   Имя источника данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (data source name, DSN) указывает источник данных ODBC, содержащий всю информацию, нужную ODBC-приложению для соединения с базой данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на конкретном сервере. Задать имя источника данных ODBC можно двумя способами.  
   
--   На клиентском компьютере, откройте окно Администрирование в панели управления и дважды щелкните **источники данных (ODBC)**. Откроется окно администратора источника данных ODBC, с помощью которого создается DSN.  
+-   На клиентском компьютере, откройте окно Администрирование в панели управления и дважды щелкните **источники данных (ODBC)** . Откроется окно администратора источника данных ODBC, с помощью которого создается DSN.  
   
 -   В приложении ODBC вызовите [SQLConfigDataSource](../../relational-databases/native-client-odbc-api/sqlconfigdatasource.md).  
   

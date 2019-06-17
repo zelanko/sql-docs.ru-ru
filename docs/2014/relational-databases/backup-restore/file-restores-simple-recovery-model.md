@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5157fcfeb54e22c404dcba29655771a1c2034e2c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62921831"
 ---
 # <a name="file-restores-simple-recovery-model"></a>Восстановления файлов (простая модель восстановления)
@@ -62,13 +62,13 @@ ms.locfileid: "62921831"
   
  Последовательность восстановления содержит только две инструкции [!INCLUDE[tsql](../../../includes/tsql-md.md)] . Первая инструкция восстанавливает вторичный файл `A`, который восстанавливается с параметром WITH NORECOVERY. Вторая операция восстанавливает файлы `B` и `C` , которые восстанавливаются с другого устройства резервного копирования с параметром WITH RECOVERY:  
   
-1.  RESTORE DATABASE *база_данных* FILE **=**_имя_файла_A_  
+1.  RESTORE DATABASE *база_данных* FILE **=** _имя_файла_A_  
   
      FROM *резервная_копия_файла_A*  
   
      WITH NORECOVERY **;**  
   
-2.  RESTORE DATABASE *база_данных* FILE **=**_имя_файла_Б_**,**_имя_файла_В_  
+2.  RESTORE DATABASE *база_данных* FILE **=** _имя_файла_Б_ **,** _имя_файла_В_  
   
      FROM *резервная_копия_файлов_Б_и_В*  
   

@@ -2,24 +2,24 @@
 title: Как использовать функции RevoScaleR для поиска или установки пакетов R - служб машинного обучения SQL Server
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/31/2018
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 7eed38e54b0c4e77af8f7b3ede0af2d98b9c58b2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0d5ba43e913f91ab93f80249cae3d0c8cf8e1740
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62642337"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140410"
 ---
 # <a name="how-to-use-revoscaler-functions-to-find-or-install-r-packages-on-sql-server"></a>Как использовать функции RevoScaleR для поиска или установки пакетов R на сервере SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 RevoScaleR 9.0.1 и более поздней версии включает функции для управления пакетами R контекста вычислений SQL Server. Эти функции могут использоваться с удаленными, пользователям без прав администратора для установки пакетов на SQL Server, не имеющие прямого доступа к серверу.
 
-Службы машинного обучения SQL Server 2017 уже включает в себя более новая версия RevoScaleR. Клиенты SQL Server 2016 R Services необходимо выполнить [обновления компонента](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md) для получения функций управления пакета RevoScaleR. Инструкции о том, как для получения пакетов, версии и содержимым, см. в разделе [получить сведения о пакете](determine-which-packages-are-installed-on-sql-server.md).
+Службы машинного обучения SQL Server 2017 уже включает в себя более новая версия RevoScaleR. Клиенты SQL Server 2016 R Services необходимо выполнить [обновления компонента](../install/upgrade-r-and-python.md) для получения функций управления пакета RevoScaleR. Инструкции о том, как для получения пакетов, версии и содержимым, см. в разделе [получить сведения о пакете](../package-management/installed-package-information.md).
 
 ## <a name="revoscaler-functions-for-package-management"></a>Функции RevoScaleR для управления пакетами
 
@@ -38,7 +38,7 @@ RevoScaleR 9.0.1 и более поздней версии включает фу
 
 + [Включение удаленного управления пакетами R на сервере SQL Server](r-package-how-to-enable-or-disable.md)
 
-+ RevoScaleR версии должен быть одинаковым на клиентские и серверные среды. Дополнительные сведения см. в разделе [получить сведения о пакете](determine-which-packages-are-installed-on-sql-server.md).
++ RevoScaleR версии должен быть одинаковым на клиентские и серверные среды. Дополнительные сведения см. в разделе [получить сведения о пакете](../package-management/installed-package-information.md).
 
 + Разрешение на подключение к серверу и базе данных и выполнять команды R. Необходимо быть членом роли базы данных, позволяющий установить пакеты на указанном экземпляре и базе данных.
 
@@ -212,4 +212,4 @@ exec sp_execute_external_script
 + [Включение удаленного управления пакетами R](r-package-how-to-enable-or-disable.md)
 + [Синхронизация пакетов R](package-install-uninstall-and-sync.md)
 + [Советы по установке пакетов R](packages-installed-in-user-libraries.md)
-+ [Пакеты по умолчанию](installing-and-managing-r-packages.md)
++ [Пакеты по умолчанию](../package-management/default-packages.md)

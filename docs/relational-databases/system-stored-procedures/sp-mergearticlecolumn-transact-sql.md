@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d2cb929ffc3506d6dcb4a0745c53b47a45fdb469
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62627821"
 ---
 # <a name="spmergearticlecolumn-transact-sql"></a>sp_mergearticlecolumn (Transact-SQL)
@@ -50,9 +50,9 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
   
 `[ @column = ] 'column'` Указывает столбцы, в которой создается вертикальная секция. *столбец* — **sysname**, значение по умолчанию NULL. Если значение равно NULL и `@operation = N'add'`, все столбцы исходной таблицы по умолчанию добавятся к статье. *столбец* не может иметь значение NULL, если *операции* присваивается **drop**. Чтобы исключить столбцы из статьи, выполните **sp_mergearticlecolumn** и укажите *столбец* и `@operation = N'drop'` для каждого столбца, удаляемый из указанного *статье*.  
   
-`[ @operation = ] 'operation'` — Состояние репликации. *Операция* — **nvarchar(4)**, значение по умолчанию ADD. **Добавление** столбец для репликации. **DROP** очищает столбец.  
+`[ @operation = ] 'operation'` — Состояние репликации. *Операция* — **nvarchar(4)** , значение по умолчанию ADD. **Добавление** столбец для репликации. **DROP** очищает столбец.  
   
-`[ @schema_replication = ] 'schema_replication'` Указывает, что изменения схемы будут распространяться при запуске агента слияния. *schema_replication* — **nvarchar(5)**, значение по умолчанию FALSE.  
+`[ @schema_replication = ] 'schema_replication'` Указывает, что изменения схемы будут распространяться при запуске агента слияния. *schema_replication* — **nvarchar(5)** , значение по умолчанию FALSE.  
   
 > [!NOTE]  
 >  Только **FALSE** поддерживается для *schema_replication*.  

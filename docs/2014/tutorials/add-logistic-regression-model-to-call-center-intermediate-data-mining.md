@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 32e66a84dea20964c11c7de0aa568530aa8c28c5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62823281"
 ---
 # <a name="adding-a-logistic-regression-model-to-the-call-center-structure-intermediate-data-mining-tutorial"></a>Добавление модели логистической регрессии к структуре Call Center (учебник по интеллектуальному анализу данных — средний уровень)
@@ -34,7 +34,7 @@ ms.locfileid: "62823281"
   
 3.  Нажмите кнопку **Создание соответствующей модели интеллектуального анализа**.  
   
-4.  В **новой модели интеллектуального анализа данных** диалоговом окне для **имя_модели**, тип `Call Center - LR`.  Для **имя алгоритма**выберите **логистической регрессии (Майкрософт)**.  
+4.  В **новой модели интеллектуального анализа данных** диалоговом окне для **имя_модели**, тип `Call Center - LR`.  Для **имя алгоритма**выберите **логистической регрессии (Майкрософт)** .  
   
 5.  Нажмите кнопку **ОК**.  
   

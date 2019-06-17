@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 96dc11ebc246e42fb4b01b777b430c6aa9230b5e
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65099960"
 ---
 # <a name="xplogininfo-transact-sql"></a>xp_logininfo (Transact-SQL)
@@ -44,10 +44,10 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
 ## <a name="arguments"></a>Аргументы  
 `[ @acctname = ] 'account_name'` Имя пользователя Windows или группы, к предоставлен [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *account_name* — **sysname**, значение по умолчанию NULL. Если *account_name* не указан, все группы Windows и пользователей Windows, которым было явно предоставлено разрешение на вход выводятся. *account_name* должно быть полным. Например, 'ADVWKS4\macraes' или 'BUILTIN\Administrators'.  
   
- **«all»** | **«members»**  
- Указывает, следует ли доставлять данные обо всех путях разрешений для данной учетной записи или только сведения о членах группы Windows. **@option** — **varchar(10)**, значение по умолчанию NULL. Если не **все** указано, отображается только путь для первого разрешения.  
+ **«all»**  |  **«members»**  
+ Указывает, следует ли доставлять данные обо всех путях разрешений для данной учетной записи или только сведения о членах группы Windows. **@option** — **varchar(10)** , значение по умолчанию NULL. Если не **все** указано, отображается только путь для первого разрешения.  
   
-`[ @privilege = ] variable_name` Является выходным параметром, возвращающий уровень прав доступа для указанной учетной записи Windows. *имя_переменной* — **varchar(10)**, значение по умолчанию «Not wanted». Возвращаемый уровень прав доступа **пользователя**, **администратора**, или **null**.  
+`[ @privilege = ] variable_name` Является выходным параметром, возвращающий уровень прав доступа для указанной учетной записи Windows. *имя_переменной* — **varchar(10)** , значение по умолчанию «Not wanted». Возвращаемый уровень прав доступа **пользователя**, **администратора**, или **null**.  
   
  OUTPUT  
  Если указано, то *имя_переменной* в выходном параметре.  

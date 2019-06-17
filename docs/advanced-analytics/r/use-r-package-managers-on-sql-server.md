@@ -3,17 +3,17 @@ title: Использовать диспетчеры пакетов R - служ
 description: Используйте стандартные команды R, например install.packages Добавление новых пакетов R в SQL Server 2016 R Services или служб SQL Server 2017 машинного обучения (в базе данных).
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/29/2018
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 6012fb1a3376c00a64239e0fbf10115b8a4367d8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2582d519893fac3a49ce997674980d2d58d5cf32
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62642271"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140779"
 ---
 # <a name="use-r-package-managers-to-install-r-packages-on-sql-server"></a>Использование R диспетчеров пакетов для установки пакетов R на SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "62642271"
 
 ## <a name="install-a-package-using-rgui"></a>Установка пакета с помощью RGui
 
-1. [Определить расположение библиотеки экземпляра](installing-and-managing-r-packages.md). Перейдите в папку, где установлены средства R. Например путь по умолчанию для экземпляра SQL Server 2017 по умолчанию выглядит следующим образом: `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
+1. [Определить расположение библиотеки экземпляра](../package-management/default-packages.md). Перейдите в папку, где установлены средства R. Например путь по умолчанию для экземпляра SQL Server 2017 по умолчанию выглядит следующим образом: `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
 
 1. Щелкните правой кнопкой мыши RGui.exe и выберите **Запуск от имени администратора**. Если у вас нет необходимых разрешений, обратитесь к администратору базы данных и укажите список необходимых пакетов.
 

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a4420aaf7b11eccecf0b04bb67a55386215f1fc9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62917092"
 ---
 # <a name="database-properties-options-page"></a>Свойства базы данных (страница «Параметры»)
@@ -30,7 +30,7 @@ ms.locfileid: "62917092"
  Укажите одно из следующих моделей для восстановления базы данных. **Полная**, **С неполным протоколированием** или **Простая**. Дополнительные сведения о моделях восстановления см. в разделе [Модели восстановления (SQL Server)](../backup-restore/recovery-models-sql-server.md).  
   
  **Уровень совместимости**  
- Укажите последнюю версию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которую поддерживает база данных. Возможные значения:  **SQL Server 2014 (120)**,  **SQL Server 2012 (110)** и **SQL Server 2008 (100)**. При обновлении базы данных SQL Server 2005 до версии SQL Server 2014 уровень совместимости для этой базы данных изменяется от 90 до 100.  Уровень совместимости 90 не поддерживается в SQL Server 2014. Дополнительные сведения см. в разделе [Уровень совместимости инструкции ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level).  
+ Укажите последнюю версию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которую поддерживает база данных. Возможные значения:  **SQL Server 2014 (120)** ,  **SQL Server 2012 (110)** и **SQL Server 2008 (100)** . При обновлении базы данных SQL Server 2005 до версии SQL Server 2014 уровень совместимости для этой базы данных изменяется от 90 до 100.  Уровень совместимости 90 не поддерживается в SQL Server 2014. Дополнительные сведения см. в разделе [Уровень совместимости инструкции ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level).  
   
  **Тип включения**  
  Указывайте «none» или «partial», чтобы обозначить, что это автономная база данных. Дополнительные сведения об автономных базах данных см. в разделе [Contained Databases](contained-databases.md). Свойство сервера **Разрешить автономные базы данных** должно иметь значение **TRUE** , прежде чем базу данных можно будет настроить как автономную.  

@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0f6c6afc1822e2f56189aace2836a15486d1b73b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62922022"
 ---
 # <a name="manage-the-suspectpages-table-sql-server"></a>Управление таблицей suspect_pages (SQL Server)
@@ -66,7 +66,7 @@ ms.locfileid: "62922022"
   
      Таблица **suspect_pages** содержит по одной строке на каждую страницу, в которой обнаружена ошибка с номером 824, но не более 1000 строк. В следующей таблице приводятся ошибки, занесенные в столбец **event_type** таблицы **suspect_pages** .  
   
-    |Описание ошибки|Значение**event_type** |  
+    |Описание ошибки|Значение**event_type**|  
     |-----------------------|---------------------------|  
     |Ошибка 823, вызванная ошибкой CRC операционной системы, или ошибка 824, не относящаяся к неверной контрольной сумме или обрыву страницы (например, неверный идентификатор страницы).|1|  
     |Неверная контрольная сумма|2|  

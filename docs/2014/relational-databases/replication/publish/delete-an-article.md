@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ce51b3fc6730b984c36aa44e87d3983233a3b006
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62960873"
 ---
 # <a name="delete-an-article"></a>Удаление статьи
@@ -35,13 +35,13 @@ ms.locfileid: "62960873"
   
 #### <a name="to-delete-an-article-from-a-snapshot-or-transactional-publication"></a>Удаление статьи из публикации моментальных снимков или публикации транзакций  
   
-1.  Чтобы удалить статью, указанную в **@article**, из публикации, указанной в **@publication**, выполните процедуру [sp_droparticle (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-droparticle-transact-sql). Укажите значение **1** в параметре **@force_invalidate_snapshot**.  
+1.  Чтобы удалить статью, указанную в **@article** , из публикации, указанной в **@publication** , выполните процедуру [sp_droparticle (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-droparticle-transact-sql). Укажите значение **1** в параметре **@force_invalidate_snapshot** .  
   
 2.  (Необязательно) Чтобы полностью удалить опубликованный объект из базы данных, выполните команду `DROP <objectname>` на издателе для базы данных публикации.  
   
 #### <a name="to-delete-an-article-from-a-merge-publication"></a>Удаление статьи из публикации слиянием  
   
-1.  Чтобы удалить статью, указанную в **@article**, из публикации, указанной в **@publication**, выполните процедуру [sp_dropmergearticle (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql). При необходимости укажите значение **1** в параметре **@force_invalidate_snapshot** и значение **1** в параметре **@force_reinit_subscription**.  
+1.  Чтобы удалить статью, указанную в **@article** , из публикации, указанной в **@publication** , выполните процедуру [sp_dropmergearticle (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql). При необходимости укажите значение **1** в параметре **@force_invalidate_snapshot** и значение **1** в параметре **@force_reinit_subscription** .  
   
 2.  (Необязательно) Чтобы полностью удалить опубликованный объект из базы данных, выполните команду `DROP <objectname>` на издателе для базы данных публикации.  
   

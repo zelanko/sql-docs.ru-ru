@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2d746550-f8cc-4e97-8a06-d0f03cffc18d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1ef12745bf1fb99a4f7371167d435427f74a1ce6
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 640cd9bfd39b272e7829cc25b51ee50a82176a65
+ms.sourcegitcommit: c40f663d4486e574fd749f2c8e84c98d41970352
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65576675"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67037873"
 ---
 # <a name="reports-report-parts-and-report-definitions-report-builder-and-ssrs"></a>Отчеты, элементы отчетов и определения отчетов (построитель отчетов и службы SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] использует различные термины, описывающие отчеты с разбиением на страницы в разных состояниях, применяемые в том числе для отчета во время начального определения, для опубликованного отчета и отчета, просматриваемого пользователем.  
@@ -63,8 +63,7 @@ ms.locfileid: "65576675"
  Подпишитесь на отчет, который доставляется в папку «Входящие» электронной почты или в указанную общую папку в выбранном формате. HTML 4.0 является форматом подготовки к просмотру отчета по умолчанию. Помимо HTML, отчеты можно подготавливать к просмотру и во многих других форматах, например в форматах Excel, Word, XML, PDF, TIFF и CSV. Как и опубликованные отчеты, отчеты, готовые для просмотра, нельзя отредактировать и снова сохранить на сервере отчетов. Дополнительные сведения см. в разделах [Экспорт отчетов (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Основные понятия разработки отчетов (построитель отчетов и службы SSRS)](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
- [Построитель отчетов в SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
+ [Для служб Reporting Services (SSRS) понятия](../reporting-services-concepts-ssrs.md) [построитель отчетов в SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
  [Поиск, просмотр отчетов и управление ими (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Экспорт отчетов (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
   
