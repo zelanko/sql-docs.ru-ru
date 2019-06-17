@@ -20,10 +20,10 @@ ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 5127dacf628231199c5ce5ac49fdb2377c82f270
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62631636"
 ---
 # <a name="sysfirewallrules-azure-sql-database"></a>sys.firewall_rules (база данных SQL Azure)
@@ -35,7 +35,7 @@ ms.locfileid: "62631636"
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|идентификатор|**INT**|Идентификатор параметра брандмауэра на уровне сервера.|  
+|id|**INT**|Идентификатор параметра брандмауэра на уровне сервера.|  
 |name|**NVARCHAR(128)**|Имя, выбранное для описания и определения параметров брандмауэра на уровне сервера.|  
 |start_ip_address|**VARCHAR(45)**|Наименьший IP-адрес в диапазоне параметра брандмауэра на уровне сервера. IP-адреса, которые больше этого адреса или равны ему, могут попытаться подключиться к серверу [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Наименьший возможный IP-адрес: `0.0.0.0`.|  
 |end_ip_address|**VARCHAR(45)**|Наибольший IP-адрес в диапазоне параметра брандмауэра на уровне сервера. IP-адреса, которые меньше этого адреса или равны ему, могут попытаться подключиться к серверу [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Наибольший возможный IP-адрес: `255.255.255.255`.<br /><br /> Примечание. Попытки подключения Windows Azure разрешены, если это поле и **start_ip_address** поле equals `0.0.0.0`.|  

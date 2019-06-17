@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d93e6cfa3ce6e958b31c1156cd4fc5fa046ad5ee
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62872339"
 ---
 # <a name="create-a-database"></a>Создание базы данных
@@ -77,7 +77,7 @@ ms.locfileid: "62872339"
   
 4.  Чтобы создать базу данных, приняв все значения по умолчанию, нажмите кнопку **ОК**; иначе продолжайте выполнение следующих дополнительных шагов.  
   
-5.  Чтобы изменить имя владельца, нажмите (**…**) и выберите другого владельца.  
+5.  Чтобы изменить имя владельца, нажмите ( **…** ) и выберите другого владельца.  
   
     > [!NOTE]  
     >  Параметр **Использовать полнотекстовое индексирование** всегда установлен и недоступен (т. к. начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]все пользовательские базы данных поддерживают полнотекстовый поиск).  

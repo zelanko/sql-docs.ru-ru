@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 449f1ecc2fbcc2f9e18ea24cb5bd42323bbf5ddc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62625888"
 ---
 # <a name="project-settings-type-mapping-oracletosql"></a>Параметры проекта (сопоставление типов) (OracleToSQL)
@@ -64,7 +64,7 @@ ms.locfileid: "62625888"
 |binary_float|число с плавающей запятой [53]|  
 |binary_integer|ssNoversion|  
 |большой двоичный объект|varbinary(max)|  
-|boolean|bit|  
+|Логическое|bit|  
 |char|varchar(max)|  
 |char varying|varchar(max)|  
 |character|varchar(max)|  
@@ -74,7 +74,7 @@ ms.locfileid: "62625888"
 |dec|dec[38][0]|  
 |Decimal|число с плавающей запятой [53]|  
 |двойной точности|число с плавающей запятой [53]|  
-|FLOAT|число с плавающей запятой [53]|  
+|float|число с плавающей запятой [53]|  
 |ssNoversion|ssNoversion|  
 |integer|ssNoversion|  
 |long|varchar(max)|  
@@ -134,7 +134,7 @@ ms.locfileid: "62625888"
 |Decimal [*.. \*]|Decimal [*] [0]|  
 |Decimal [*.. \*][\*.. \*]|Decimal [*] [\*]|  
 |двойной точности|число с плавающей запятой [53]|  
-|FLOAT|число с плавающей запятой [53]|  
+|float|число с плавающей запятой [53]|  
 |число с плавающей запятой [*.. 53]|в число с плавающей запятой [*]|  
 |число с плавающей запятой [54.. *]|число с плавающей запятой [53]|  
 |ssNoversion|ssNoversion|  
@@ -187,7 +187,7 @@ ms.locfileid: "62625888"
 |binary_double|число с плавающей запятой [53]|  
 |binary_float|число с плавающей запятой [53]|  
 |binary_interger|ssNoversion|  
-|Большие двоичные объекты|varbinary(max)|  
+|Blob|varbinary(max)|  
 |Логическое значение|bit|  
 |CHAR|char|  
 |char varying [*.. 8000]|varchar [*]|  
@@ -234,7 +234,7 @@ ms.locfileid: "62625888"
 |nchar varying [*.. 4000]|nvarchar [*]|  
 |nchar varying [4001.. *]|nvarchar(max)|  
 |NCLOB|nvarchar(max)|  
-|Количество|число с плавающей запятой [53]|  
+|Number|число с плавающей запятой [53]|  
 |Номер [*.. \*]|числовые [*]|  
 |Номер [*.. \*][\*.. \*]|числовые [*] [\*]|  
 |Numeric|numeric[38][0]|  

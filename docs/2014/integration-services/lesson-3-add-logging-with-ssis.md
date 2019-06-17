@@ -10,12 +10,12 @@ ms.assetid: 64cd24cc-ba8e-4bd7-b10b-6b80d8b04af6
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1a3a32b35503ff6dae2e103f46e45a28359b948d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e716b808d5d9ada8aeaf50d92006cc6453c6e47d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62767545"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67046762"
 ---
 # <a name="lesson-3-adding-logging"></a>Урок 3. Добавление журнала
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] возможно ведение журналов, что позволяет отслеживать и устранять неполадки при выполнении пакетов, обеспечивая трассировку задач и событий контейнеров. Эти возможности очень гибки. Они могут активироваться как на уровне пакетов, так и на уровне отдельных задач или контейнеров в пакете. Можно выбрать события, которые будут заноситься в журнал, а также создать несколько журналов для одного пакета.  
@@ -35,7 +35,7 @@ ms.locfileid: "62767545"
  На этом занятии вы создадите копию пакета, созданного на [занятии 2: Добавление циклов](lesson-2-adding-looping-with-ssis.md). При работе с новым пакетом будет добавлено и настроено ведение журнала, позволяющее отслеживать отдельные события при выполнении пакета. Если вы не выполняли ни одно из предыдущих занятий, можно воспользоваться копией пакета из занятия 2, которая включена в учебник.  
   
 > [!IMPORTANT]  
->  Для выполнения упражнений этого учебника потребуется образец базы данных **AdventureWorksDW2012** . Дополнительные сведения об установке и развертывании **AdventureWorksDW2012**см. в разделе [Образцы продуктов службы Reporting Services на сайте CodePlex](https://go.microsoft.com/fwlink/p/?LinkID=52691).  
+>  Для выполнения упражнений этого учебника потребуется образец базы данных **AdventureWorksDW2012** . Дополнительные сведения о том, как установить и развернуть **AdventureWorksDW2012**, [Reporting Services Product Samples на сайте GitHub](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks).  
   
 ## <a name="lesson-tasks"></a>Задачи занятия  
  Это занятие содержит следующие задачи.  

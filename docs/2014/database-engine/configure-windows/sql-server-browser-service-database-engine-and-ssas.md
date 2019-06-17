@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 258ec0640a5281152fcce6faa771272c3f94de64
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62809362"
 ---
 # <a name="sql-server-browser-service-database-engine-and-ssas"></a>Служба обозревателя SQL Server (компонент Database Engine и SSAS)
@@ -117,7 +117,7 @@ ms.locfileid: "62809362"
   
 -   Любая учетная запись **домен\локальная** .  
   
--   Учетная запись **локальной службы**   
+-   Учетная запись **локальной службы**  
   
 -   Учетная запись **локальной системы** (не рекомендуется за избыточностью прав доступа).  
   

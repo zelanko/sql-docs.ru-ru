@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 594b87b3e2d58ffe60bd3c31324811a66038c82b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66058806"
 ---
 # <a name="file-system-task-editor-general-page"></a>Редактор задачи «Файловая система» (страница «Общие»)
@@ -85,13 +85,13 @@ ms.locfileid: "66058806"
   
 ### <a name="isdestinationpathvariable--true"></a>IsDestinationPathVariable = True  
  **DestinationVariable**  
- Выберите имя переменной в списке или щелкните \<**Создать переменную...**> для создания переменной.  
+ Выберите имя переменной в списке или щелкните \<**Создать переменную...** > для создания переменной.  
   
  **См. также:** подробные сведения о [переменных в службах Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md) и о [добавлении переменной](../../2014/integration-services/add-variable.md).  
   
 ### <a name="isdestinationpathvariable--false"></a>IsDestinationPathVariable = False  
  `DestinationConnection`  
- Выберите диспетчер подключений файлов в списке или щелкните \<**Создать соединение...**>, чтобы создать его.  
+ Выберите диспетчер подключений файлов в списке или щелкните \<**Создать соединение...** >, чтобы создать его.  
   
  **См. также:** подробные сведения о [диспетчере файловых подключений](connection-manager/file-connection-manager.md) и о [редакторе диспетчера файловых подключений](../../2014/integration-services/file-connection-manager-editor.md).  
   
@@ -99,13 +99,13 @@ ms.locfileid: "66058806"
   
 ### <a name="issourcepathvariable--true"></a>IsSourcePathVariable = True  
  **SourceVariable**  
- Выберите имя переменной в списке или щелкните \<**Создать переменную...**> для создания переменной.  
+ Выберите имя переменной в списке или щелкните \<**Создать переменную...** > для создания переменной.  
   
  **См. также:** подробные сведения о [переменных в службах Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md) и о [добавлении переменной](../../2014/integration-services/add-variable.md).  
   
 ### <a name="issourcepathvariable--false"></a>IsSourcePathVariable = False  
  `SourceConnection`  
- Выберите диспетчер подключений файлов в списке или щелкните \<**Создать соединение...**>, чтобы создать его.  
+ Выберите диспетчер подключений файлов в списке или щелкните \<**Создать соединение...** >, чтобы создать его.  
   
  **См. также:** подробные сведения о [диспетчере файловых подключений](connection-manager/file-connection-manager.md) и о [редакторе диспетчера файловых подключений](../../2014/integration-services/file-connection-manager-editor.md).  
   

@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1bd36b58fc3a98e0c123e37a3b98c18077ac19ec
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63004698"
 ---
 # <a name="syshttpendpoints-transact-sql"></a>sys.http_endpoints (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "63004698"
 |-----------------|---------------|-----------------|  
 |**< наследуемые столбцы >**||Наследует столбцы из [sys.endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md).|  
 |**Сайт**|**nvarchar(128)**|Имя сервера для веб-сайта, заданное в параметре SITE.|  
-|**url_path**|**nvarchar(4000)**|Часть URL-адреса, содержащая только путь к данной конечной точке HTTP, как указано в параметре PATH. |  
+|**url_path**|**nvarchar(4000)**|Часть URL-адреса, содержащая только путь к данной конечной точке HTTP, как указано в параметре PATH.|  
 |**is_clear_port_enabled**|**bit**|1 = очистка порта разрешена с помощью параметра PORT = CLEAR.|  
 |**clear_port**|**int**|Номер порта, указанный в параметре CLEAR PORT.<br /><br /> NULL = номер не указан.|  
 |**is_ssl_port_enabled**|**bit**|1 = порт SSL разрешен с помощью параметра PORT = SSL.|  

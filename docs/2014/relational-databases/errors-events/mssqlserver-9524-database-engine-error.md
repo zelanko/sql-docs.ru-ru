@@ -1,11 +1,11 @@
 ---
 title: MSSQLSERVER_9524 | Документация Майкрософт
 ms.custom: ''
-ms.date: 04/04/2017
-ms.prod: sql
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: language-reference
+ms.topic: conceptual
 helpviewer_keywords:
 - 9524 (Database Engine error)
 ms.assetid: 12da7931-e124-4466-889c-046f1b7b7bfd
@@ -13,15 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 16f5876211a987dff593721310ee31667d428b81
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62761669"
 ---
 # <a name="mssqlserver9524"></a>MSSQLSERVER_9524
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  
+    
 ## <a name="details"></a>Сведения  
   
 |||  
@@ -34,12 +33,13 @@ ms.locfileid: "62761669"
 |Текст сообщения|Переданное XML-содержимое не соответствует установленному формату XML для наборов разреженных столбцов.|  
   
 ## <a name="explanation"></a>Объяснение  
-Была предпринята попытка изменить набор столбцов. XML-содержимое набора столбцов должно соответствовать ограничениям формата для набора столбцов. Стандартный формат набора столбцов выглядит следующим образом:  
+ Была предпринята попытка изменить набор столбцов. XML-содержимое набора столбцов должно соответствовать ограничениям формата для набора столбцов. Стандартный формат набора столбцов выглядит следующим образом:  
   
-`<column_name_1>value1</column_name_1><column_name_2>value2</column_name_2>...`  
+ `<column_name_1>value1</column_name_1><column_name_2>value2</column_name_2>...`  
   
-Дополнительные сведения о наборах столбцов см. в разделе «Использование наборов столбцов» электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Дополнительные сведения о наборах столбцов см. в разделе «Использование наборов столбцов» электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="user-action"></a>Действие пользователя  
-Исправьте формат XML для набора столбцов в инструкции.  
+ Исправьте формат XML для набора столбцов в инструкции.  
+  
   

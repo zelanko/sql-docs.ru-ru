@@ -10,12 +10,12 @@ ms.assetid: ac742a01-2a95-42c7-b65e-ad565020dc49
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d224572ce81bf260134682d86f6f0f2ce4946f55
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.openlocfilehash: e2fecf8a71854d7f8df160ba3ff63912086a34e5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66088747"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67131791"
 ---
 # <a name="view-event-session-data"></a>Просмотр данных о сеансе событий
   В этом разделе описывается использование пользовательского интерфейса для просмотра и анализа данных расширенных событий.  
@@ -44,23 +44,27 @@ ms.locfileid: "66088747"
   
 -   Для целевого объекта event_file XEL-файл с данными можно просматривать одним из следующих методов.  
   
-    -   Используйте файл -> Открыть в [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
-  
-    -   Перетащить файл в среду [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
-  
+    -   Используйте файл -> Открыть в [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].
+    
+    -   Перетащите файл в [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. 
+    
     -   Дважды щелкнуть XEL-файл.  
-  
-    -   В среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]щелкните правой кнопкой мыши работающий сеанс расширенных событий и выберите пункт «Просмотр целевых данных».  
-  
-    -   [fn_xe_file_target_read_file](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql)  
-  
-    -   Вы можете просмотреть более одного. Xel-файл, выбрав **слияние файлов расширенных событий** из файла "->" Открыть меню.  
-  
+    
+    -   В среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]щелкните правой кнопкой мыши работающий сеанс расширенных событий и выберите пункт «Просмотр целевых данных». 
+    
+    -   [fn_xe_file_target_read_file](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql).
+    
+    -   Используйте Powershell чтения-SQLXevent в [SQLServer.XEvent модуль](https://www.powershellgallery.com/packages/SqlServer.XEvent).
+    
+    -   Программно использовать XEvents с помощью [XELite NuGet](https://www.nuget.org/packages/Microsoft.SqlServer.XEvent.XELite).
+    
+    -   Вы можете просмотреть более одного. Xel-файл, выбрав **слияние файлов расширенных событий** из файла "->" Открыть меню.
+
 ### <a name="watching-live-data"></a>Просмотр данных, передаваемых в режиме реального времени  
  Можно просматривать данные, передаваемые в режиме реального времени, в ходе их записи.  
   
 -   В обозревателе объектов разверните узлы **Управление**, **Расширенные события**и **Сеансы** .  
-  
+
 -   Щелкните правой кнопкой мыши имя сеанса, а затем выберите пункт **Просмотр данных, передаваемых в режиме реального времени** для начала отображения данных трассировки.  
   
      По умолчанию отображаются столбцы **Имя события** и **Отметка времени**.  
@@ -68,7 +72,9 @@ ms.locfileid: "66088747"
      Для добавления дополнительных столбцов к окну трассировки нажмите кнопку **Выбрать столбцы** на панели инструментов «Расширенные события». На вкладке **Сведения** отображаются все сведения о событии для выбранного события.  
   
      Обычно события отображаются приблизительно через 30 секунд. Если требуется изменить период задержки, то можно изменить параметр **Максимальная задержка диспетчера** на странице **Расширенные** в диалоговом окне **Новый сеанс** .  
-  
+     
+-    Динамические данные могут передаваться по [модуль SqlServer.XEvent PowerShell](https://www.powershellgallery.com/packages/SqlServer.XEvent).
+     
 ### <a name="to-refresh-target-data"></a>Обновление целевых данных  
  Обновление целевых данных не поддерживается для объектов event_files.  
   

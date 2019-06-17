@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 03/06/2017
 ms.openlocfilehash: 00eb4dc7d90226f7d5c944ea3b878aefb4c8a105
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109754"
 ---
 # <a name="compare-business-intelligence-capabilities-in-different-microsoft-environments"></a>Сравнение возможностей бизнес-аналитики в разных средах Microsoft
@@ -39,11 +39,11 @@ ms.locfileid: "66109754"
 |Отслеживание использования|Да|Нет|Да|  
 |Использование безопасности на основе строк кубов [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]|Да|Нет|Нет|  
   
- **<sup>1</sup>**[основные сведения о роли управляющих данными в управлении данными](https://support.office.com/Article/Understanding-the-Role-of-Data-Stewards-in-Data-Management-ae3352f3-4389-45e8-a682-7fd6edb92524?ui=en-US&rs=en-US&ad=US) и [видео: Power BI управлении информацией и администраторе данных](https://www.youtube.com/watch?v=8dHOj68ts7c).  
+ **<sup>1</sup>** [основные сведения о роли управляющих данными в управлении данными](https://support.office.com/Article/Understanding-the-Role-of-Data-Stewards-in-Data-Management-ae3352f3-4389-45e8-a682-7fd6edb92524?ui=en-US&rs=en-US&ad=US) и [видео: Power BI управлении информацией и администраторе данных](https://www.youtube.com/watch?v=8dHOj68ts7c).  
   
- **<sup>2</sup>**[power BI Q & A: Оптимизация рабочей книги Power BI (Облачное моделирование)](https://powerbi.microsoft.com/nl-nl/blog/new-in-power-bi-cloud-modeling-for-q-and-a/).  
+ **<sup>2</sup>** [power BI Q & A: Оптимизация рабочей книги Power BI (Облачное моделирование)](https://powerbi.microsoft.com/nl-nl/blog/new-in-power-bi-cloud-modeling-for-q-and-a/).  
   
- **<sup>3</sup>**[Знакомство с новыми возможностями прогнозирования в Power View для Office 365](https://blogs.msdn.com/b/powerbi/archive/2014/05/08/introducing-new-forecasting-capabilities-in-power-view-for-office-365.aspx).  
+ **<sup>3</sup>** [Знакомство с новыми возможностями прогнозирования в Power View для Office 365](https://blogs.msdn.com/b/powerbi/archive/2014/05/08/introducing-new-forecasting-capabilities-in-power-view-for-office-365.aspx).  
   
 ## <a name="view-and-browse-bi-data-reports-and-dashboards"></a>Просмотр и обзор данных, отчетов и панелей мониторинга бизнес-аналитики  
   
@@ -55,11 +55,11 @@ ms.locfileid: "66109754"
 |Книга Excel с [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] в качестве источника данных **<sup>2</sup>**|Да|Нет|Нет|  
 |Возможность использования функций в различных браузерах и версиях|Да, для визуализации не в Power View **<sup>3</sup>**|Да, для файлов рабочей книги с размером меньше 10 МБ **<sup>3</sup>**|Да **<sup>3</sup>**|  
   
- **<sup>1</sup>**[Microsoft Power BI](http://apps.microsoft.com/windows/app/microsoft-power-bi/b7e7c94d-2ea3-4fa6-a277-9d19a1f697ba).  
+ **<sup>1</sup>** [Microsoft Power BI](http://apps.microsoft.com/windows/app/microsoft-power-bi/b7e7c94d-2ea3-4fa6-a277-9d19a1f697ba).  
   
  **<sup>2</sup>**  [Рабочие книги PowerPivot как источник данных](http://blogs.technet.com/b/excel_services__powerpivot_for_sharepoint_support_blog/archive/2013/02/15/powerpivot-workbook-as-a-data-source.aspx)  
   
- **<sup>3</sup>**[поддержка мобильных устройств через средства бизнес-аналитики (BI)](https://msdn.microsoft.com/library/dn151146\(v=sql.110\).aspx) и [планирование служб Reporting Services и поддержки Power View в браузере (Reporting Services 2014)](https://msdn.microsoft.com/library/ms156511.aspx).  
+ **<sup>3</sup>** [поддержка мобильных устройств через средства бизнес-аналитики (BI)](https://msdn.microsoft.com/library/dn151146\(v=sql.110\).aspx) и [планирование служб Reporting Services и поддержки Power View в браузере (Reporting Services 2014)](https://msdn.microsoft.com/library/ms156511.aspx).  
   
 ## <a name="more-information"></a>Дополнительные сведения  
   

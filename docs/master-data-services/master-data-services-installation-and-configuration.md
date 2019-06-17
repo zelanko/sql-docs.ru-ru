@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2d1cd12ff92b45c78eaf3dbe17a08c4e83d0f3b1
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65994115"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Установка и настройка Master Data Services
@@ -35,7 +35,7 @@ ms.locfileid: "65994115"
 Ссылки на видео и другие обучающие ресурсы, которые помогут ознакомиться с [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], см. в разделе [Изучение служб Master Data Services](../master-data-services/learn-sql-server-master-data-services.md). 
   
 > **Загрузить**  
-> -   Чтобы скачать [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], перейдите на сайт  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)**.  
+> -   Чтобы скачать [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], перейдите на сайт  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)** .  
 > -   Есть учетная запись Azure?  Тогда перейдите **[сюда](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)** , чтобы запустить виртуальную машину с уже установленным SQL Server.  
 > 
 > **Не удается создать веб-сайт MDS?**
@@ -44,7 +44,7 @@ ms.locfileid: "65994115"
 
 ## <a name="internet-explorer-and-silverlight"></a>Internet Explorer и Silverlight
 - При установке [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] на компьютер под управлением ОС Windows Server 2012 может понадобиться настроить улучшенную безопасность в Internet Explorer, чтобы разрешить использование скриптов на сайте веб-приложения. Без этого просмотр сайта на серверном компьютере работать не будет.
-- Для работы в веб-приложении на клиентском компьютере необходимо установить Silverlight 5. Если требуемая версия Silverlight отсутствует, то при переходе к той части веб-приложения, которая использует Silverlight, программа предложит установить Silverlight. Вы можете установить Silverlight 5 **[с этой веб-страницы](https://www.microsoft.com/silverlight/)**.
+- Для работы в веб-приложении на клиентском компьютере необходимо установить Silverlight 5. Если требуемая версия Silverlight отсутствует, то при переходе к той части веб-приложения, которая использует Silverlight, программа предложит установить Silverlight. Вы можете установить Silverlight 5 **[с этой веб-страницы](https://www.microsoft.com/silverlight/)** .
 
 ## <a name="includessmdsshortmdincludesssmdsshort-mdmd-on-an-azure-virtual-machine"></a>[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] на виртуальной машине Azure
 По умолчанию при запуске виртуальной машины Azure с уже установленным [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] также устанавливаются [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]. 
@@ -94,7 +94,7 @@ ms.locfileid: "65994115"
     |--------------|--------------|  
     |![mds_AddRolesFeaturesWizard_FeaturesPage](../master-data-services/media/mds-addrolesfeatureswizard-featurespage.png)|![mds_AddRolesFeaturesWizard_FeaturesPage_WindowsProcActive](../master-data-services/media/mds-addrolesfeatureswizard-featurespage-windowsprocactive.png)|  
 
-10. В левой панели щелкните **Роль веб-сервера (IIS)**, а затем щелкните **Службы ролей**.
+10. В левой панели щелкните **Роль веб-сервера (IIS)** , а затем щелкните **Службы ролей**.
 11. На странице **Службы ролей** выберите следующие службы и нажмите кнопку **Далее**. Они требуются для [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] в [!INCLUDE[winblue_server_2](../includes/winblue-server-2-md.md)].
 
     > [!WARNING]  

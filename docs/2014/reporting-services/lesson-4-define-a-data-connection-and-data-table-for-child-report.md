@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c1008202519f1d9bcbf48dfdc4cd4ef3a3cbbe20
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108465"
 ---
 # <a name="lesson-4-define-a-data-connection-and-data-table-for-child-report"></a>Занятие 4: Определение подключения к данным и таблицы данных для дочернего отчета
@@ -58,7 +58,7 @@ ms.locfileid: "66108465"
   
      Можно также создать запрос, нажав кнопку **построитель запросов**, а затем проверить запрос, нажав кнопку **выполнить запрос** кнопки. Если запрос не возвращает ожидаемые данные, возможно, используется более ранняя версия AdventureWorks. Дополнительные сведения об установке **AdventureWorks2008** версия AdventureWorks, см. в разделе [Пошаговое руководство: Установка базы данных AdventureWorks](https://msdn.microsoft.com/library/aa992075\(v=vs.100\).aspx).  
   
-10. На **Выбор методов для создания** странице, снимите флажок **создать методы для отправки обновлений непосредственно в базу данных (GenerateDBDirectMethods)**, а затем нажмите кнопку **Готово**.  
+10. На **Выбор методов для создания** странице, снимите флажок **создать методы для отправки обновлений непосредственно в базу данных (GenerateDBDirectMethods)** , а затем нажмите кнопку **Готово**.  
   
      Завершена настройка объекта ADO.NET [DataTable](https://msdn.microsoft.com/library/system.data.datatable\(v=vs.100\).aspx) как источник данных для отчета. На странице конструктора набора данных в Visual Studio появится добавленный объект **DataTable** со списком столбцов, указанных в запросе. Набор данных DataSet2 содержит данные таблицы PurhcaseOrderDetail, указанные в запросе.  
   

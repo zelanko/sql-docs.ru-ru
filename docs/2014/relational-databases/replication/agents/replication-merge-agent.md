@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ec21ff98d49cff26bde48452a30fd347c23782fe
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63215999"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
@@ -109,8 +109,8 @@ ms.locfileid: "63215999"
  **-?**  
  Выводит список всех доступных параметров.  
   
- **-Publisher** _server_name_[**\\**_instance_name_]  
- Имя издателя. Укажите *server_name* , чтобы использовать экземпляр сервера [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию. Укажите _имя_сервера_**\\**_имя_экземпляра_ для именованного экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на этом сервере.  
+ **-Publisher** _server_name_[ **\\** _instance_name_]  
+ Имя издателя. Укажите *server_name* , чтобы использовать экземпляр сервера [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию. Укажите _имя_сервера_ **\\** _имя_экземпляра_ для именованного экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на этом сервере.  
   
  **-PublisherDB** _publisher_database_  
  Имя базы данных издателя.  
@@ -118,8 +118,8 @@ ms.locfileid: "63215999"
  **-Publication** _publication_  
  Имя публикации. Этот параметр допустим только в том случае, если в данной публикации моментальный снимок всегда доступен для новых или повторно инициализированных подписок.  
   
- **-Subscriber** _server_name_[**\\**_instance_name_]  
- Имя подписчика. Укажите *server_name* , чтобы использовать экземпляр сервера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию. Укажите _имя_сервера_**\\**_имя_экземпляра_ для именованного экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на этом сервере.  
+ **-Subscriber** _server_name_[ **\\** _instance_name_]  
+ Имя подписчика. Укажите *server_name* , чтобы использовать экземпляр сервера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию. Укажите _имя_сервера_ **\\** _имя_экземпляра_ для именованного экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на этом сервере.  
   
  **-SubscriberDB** _subscriber_database_  
  Имя базы данных подписчика.  
@@ -136,8 +136,8 @@ ms.locfileid: "63215999"
  **-DefinitionFile** _def_path_and_file_name_  
  Путь к файлу определения агента. Файл определения агента содержит параметры командной строки для агента. Содержимое файла анализируется как для исполняемого файла. Для указания значений параметров, содержащих произвольные символы, используются двойные кавычки (").  
   
- **-Distributor** _server_name_[**\\**_instance_name_]  
- Имя распространителя. Укажите *server_name* , чтобы использовать экземпляр сервера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию. Укажите _server_name_**\\**_instance_name_ , чтобы обратиться к именованному экземпляру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию. При распространении (принудительном) с помощью распространителя по умолчанию используется имя применяемого по умолчанию экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на локальном компьютере.  
+ **-Distributor** _server_name_[ **\\** _instance_name_]  
+ Имя распространителя. Укажите *server_name* , чтобы использовать экземпляр сервера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию. Укажите _server_name_ **\\** _instance_name_ , чтобы обратиться к именованному экземпляру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию. При распространении (принудительном) с помощью распространителя по умолчанию используется имя применяемого по умолчанию экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на локальном компьютере.  
   
  **-DistributorLogin** _имя_входа_распространителя_  
  Имя входа распространителя.  
@@ -298,7 +298,7 @@ ms.locfileid: "63215999"
  **-ProfileName** _profile_name_  
  Указывает профиль агента, из которого берутся параметры агента. Если **ProfileName** имеет значение NULL, профиль агента отключен. Если значение **ProfileName** не указано, используется профиль по умолчанию для агентов этого типа. Дополнительные сведения см. в статье [Профили агента репликации](replication-agent-profiles.md).  
   
- **-PublisherFailoverPartner** _server_name_[**\\**_instance_name_]  
+ **-PublisherFailoverPartner** _server_name_[ **\\** _instance_name_]  
  Указывает партнера по обеспечению отработки отказа служб [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , участвующего в сеансе зеркального отображения базы данных с базой данных публикации. Дополнительные сведения см. в статье [Зеркальное отображение и репликация баз данных (SQL Server)](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md).  
   
  **-PublisherLogin** _имя_входа_на_издателе_  

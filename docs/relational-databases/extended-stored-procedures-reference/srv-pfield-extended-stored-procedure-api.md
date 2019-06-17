@@ -1,17 +1,17 @@
 ---
 title: srv_pfield (интерфейс API расширенных хранимых процедур) | Документы Майкрософт
 ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: sql-server-2014
+ms.date: 03/14/2017
+ms.prod: sql
+ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: stored-procedures
 ms.topic: reference
-api_name:
+apiname:
 - srv_pfield
-api_location:
+apilocation:
 - opends60.dll
-topic_type:
-- apiref
+apitype: DLLExport
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,13 +21,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 822e8608939d7fb3dbef6872ec92da37e7621865
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62936816"
 ---
 # <a name="srvpfield-extended-stored-procedure-api"></a>srv_pfield (API-интерфейс расширенных хранимых процедур)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Используйте вместо этого интеграцию со средой CLR.  
@@ -48,7 +49,6 @@ field
 int *  
 len  
 );  
-  
 ```  
   
 ## <a name="arguments"></a>Аргументы  
@@ -87,6 +87,6 @@ len
  Указатель на оканчивающуюся нулевым байтом строку, содержащую текущее значение указанного поля в процедуре SRV_PROC. Если поле пусто, то возвращается допустимый указатель на пустую строку, а *len* содержит 0. Если поле неизвестно, то возвращается значение NULL, а *len* содержит значение –1.  
   
 > [!IMPORTANT]  
->  Необходимо тщательно просмотреть исходный код расширенных хранимых процедур и проверить скомпилированные библиотеки DLL перед их установкой на рабочий сервер. Дополнительные сведения об исследовании и проверке безопасности см. в [Центре разработчиков безопасности](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
+>  Необходимо тщательно просмотреть исходный код расширенных хранимых процедур и проверить скомпилированные библиотеки DLL перед их установкой на рабочий сервер. Дополнительные сведения об исследовании и проверке безопасности см. в [Центре разработчиков безопасности](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409 https://msdn.microsoft.com/security/).  
   
   

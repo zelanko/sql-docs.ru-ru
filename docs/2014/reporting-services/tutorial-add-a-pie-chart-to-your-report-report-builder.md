@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f004241f078a9fb23acbca392f687a9b7c20ae84
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66099050"
 ---
 # <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>Учебник. Добавление круговой диаграммы в отчет (построитель отчетов)
@@ -92,7 +92,7 @@ ms.locfileid: "66099050"
     UNION SELECT 'Full Frame Digital Camera' AS Product, CAST(247250.85 AS money) AS Sales  
     ```  
   
-8.  Нажмите кнопку "Выполнить" (**!**), чтобы просмотреть данные, на основе которых будет создана диаграмма (необязательно).  
+8.  Нажмите кнопку "Выполнить" ( **!** ), чтобы просмотреть данные, на основе которых будет создана диаграмма (необязательно).  
   
 9. Нажмите кнопку **Далее**.  
   

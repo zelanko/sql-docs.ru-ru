@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6f9f9db58c48e74a91ec85972befb206ed3fb07f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62773555"
 ---
 # <a name="sql-server-managed-backup-to-windows-azure---retention-and-storage-settings"></a>Управляемое резервное копирование SQL Server в Windows Azure — настройки периода хранения и хранилища
@@ -94,7 +94,7 @@ ms.locfileid: "62773555"
   
 -   **С помощью Transact-SQL:**  
   
-     Если вы включаете [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] в первый раз, — обязательные параметры: *@database_name*, *@credential_name*, *@encryption_algorithm*, *@enable_backup* *@storage_url* Параметр является необязательным. Если вы не укажете значение для @storage_url параметр, значением является производным, используя данные учетной записи хранения из учетных данных SQL. При предоставлении URL-адреса хранилища следует предоставлять только корневой URL-адрес для учетной записи хранения, который должен соответствовать предоставленным учетным данным SQL.  
+     Если вы включаете [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] в первый раз, — обязательные параметры: *@database_name* , *@credential_name* , *@encryption_algorithm* , *@enable_backup* *@storage_url* Параметр является необязательным. Если вы не укажете значение для @storage_url параметр, значением является производным, используя данные учетной записи хранения из учетных данных SQL. При предоставлении URL-адреса хранилища следует предоставлять только корневой URL-адрес для учетной записи хранения, который должен соответствовать предоставленным учетным данным SQL.  
   
     1.  Установите соединение с компонентом [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
@@ -135,7 +135,7 @@ ms.locfileid: "62773555"
 ##  <a name="InstanceConfigure"></a> Включение и настройка по умолчанию [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] параметров для экземпляра  
  Можно включить и настроить по умолчанию [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] параметры на уровне экземпляра, двумя способами:  С помощью системной хранимой процедуры `smart_backup.set_instance_backup` или **SQL Server Management Studio**. Далее описаны два этих способа.  
   
- **smart_backup.set_instance_backup:**. Путем указания значения **1** для *@enable_backup* параметр, можно включить резервное копирование и задать настройки по умолчанию. После применения параметров по умолчанию на уровне экземпляра они применяются к новой базе данных, добавляемой к этому экземпляру.  При первом включении компонента [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] необходимо, помимо включения [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] в экземпляре, указать следующие сведения:  
+ **smart_backup.set_instance_backup:** . Путем указания значения **1** для *@enable_backup* параметр, можно включить резервное копирование и задать настройки по умолчанию. После применения параметров по умолчанию на уровне экземпляра они применяются к новой базе данных, добавляемой к этому экземпляру.  При первом включении компонента [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] необходимо, помимо включения [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] в экземпляре, указать следующие сведения:  
   
 -   Срок хранения.  
   

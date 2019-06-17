@@ -17,10 +17,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c0ae231e380530f11d4c97a917927ed62e99fb47
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66094794"
 ---
 # <a name="how-to-view-an-upgrade-advisor-report"></a>Практическое руководство. Просмотр отчета помощника по обновлению
@@ -31,7 +31,7 @@ ms.locfileid: "66094794"
   
 ### <a name="to-view-a-report"></a>Просмотр отчета  
   
-1.  Нажмите кнопку **запустить**, нажмите кнопку **все программы**, нажмите кнопку **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]**, а затем нажмите кнопку  **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] помощник по обновлению**.  
+1.  Нажмите кнопку **запустить**, нажмите кнопку **все программы**, нажмите кнопку **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** , а затем нажмите кнопку  **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] помощник по обновлению**.  
   
 2.  На начальной странице помощника по обновлению, нажмите кнопку **запуска просмотра помощника по обновлению отчета**.  
   

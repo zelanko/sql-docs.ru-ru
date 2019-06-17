@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fd21f4b08bf53d4715f2b99eefed523f3853c033
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63245452"
 ---
 # <a name="write-execution-trace-messages-to-the-sql-server-agent-error-log-sql-server-management-studio"></a>Запись сообщений трассировки выполнения в журнал ошибок агента SQL Server (среда SQL Server Management Studio)
@@ -66,7 +66,7 @@ ms.locfileid: "63245452"
   
 2.  Щелкните правой кнопкой мыши элемент **Агент SQL Server** и выберите пункт **Свойства**.  
   
-3.  В **свойства агента SQL Server -**_имя_сервера_ диалогового **журнал ошибок** на **Общие** выберите **Включить трассировочные сообщения** "флажок".  
+3.  В **свойства агента SQL Server -** _имя_сервера_ диалогового **журнал ошибок** на **Общие** выберите **Включить трассировочные сообщения** "флажок".  
   
 4.  Нажмите кнопку **ОК**.  
   

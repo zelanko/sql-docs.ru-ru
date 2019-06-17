@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 79113505-1ce8-4f8c-9260-d861838f7813
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1e67d710530da43216873728ff5f1159ce8fa50f
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 9c65d1db987f5d317b0719ff101012b4db0a5873
+ms.sourcegitcommit: c40f663d4486e574fd749f2c8e84c98d41970352
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65581477"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67038030"
 ---
 # <a name="planning-a-report-report-builder"></a>Планирование отчета (построитель отчетов)
   Построитель отчетов позволяет создавать отчеты с разбиением на страницы нескольких видов. Например, можно создавать отчеты, которые отображают сводку подробных данных о продажах, тенденции в маркетинге и продажах, рабочие отчеты или панели мониторинга. Можно также создавать отчеты, в которых используются преимущества текста со сложным форматированием, например заказы на продажу, каталоги продукции или стандартные письма. Все эти отчеты создаются с использованием различных сочетаний одних и тех же строительных блоков в построителе отчетов. Чтобы создать полезный, легкочитаемый отчет, рекомендуется сначала составить план. Перед началом работы полезно рассмотреть следующие вопросы.  
@@ -51,7 +51,6 @@ ms.locfileid: "65581477"
   
 ## <a name="see-also"></a>См. также:  
  [Построитель отчетов в SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
- [Основные понятия разработки отчетов (построитель отчетов и службы SSRS)](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
- [Учебники по построителю отчетов](../../reporting-services/report-builder-tutorials.md)  
+ [Для служб Reporting Services (SSRS) понятия](../reporting-services-concepts-ssrs.md) [учебники по построителю отчетов](../../reporting-services/report-builder-tutorials.md)  
   
   

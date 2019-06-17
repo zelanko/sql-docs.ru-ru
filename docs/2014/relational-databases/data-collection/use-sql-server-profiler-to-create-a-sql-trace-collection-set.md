@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a9e37fd917dc2716967623648a62057e45df73dc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62873348"
 ---
 # <a name="use-sql-server-profiler-to-create-a-sql-trace-collection-set-sql-server-management-studio"></a>Использование приложения SQL Server Profiler для создания набора элементов сбора трассировки SQL (среда SQL Server Management Studio)
@@ -70,7 +70,7 @@ ms.locfileid: "62873348"
   
 8.  В правом нижнем углу щелкните **Фильтры столбцов** . Откроется диалоговое окно **Изменение фильтра** . В окне **Изменение фильтра** выполните следующие действия.  
   
-    1.  В списке фильтров выберите **Продолжительность:**.  
+    1.  В списке фильтров выберите **Продолжительность:** .  
   
     2.  В окне логического оператора разверните **больше или равно** узла, тип `80` как значение, а затем нажмите кнопку **ОК**.  
   

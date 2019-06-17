@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cf8e7552faf9567dab25ee3dc5b7b293034faef0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62632774"
 ---
 # <a name="time-and-date-functions-visual-foxpro-odbc-driver"></a>Функции даты и времени (драйвер ODBC для Visual FoxPro)
@@ -61,7 +61,7 @@ ms.locfileid: "62632774"
 --(*vendor(Microsoft),product(ODBC) ts ''value' *)-  
 ```  
   
- В этом синтаксисе **d** указывает, что *значение* является датой в *гггг мм дд* формат и **служб терминалов** указывает, что *значение*  представляет собой метку времени в *гггг мм дд чч: мм:*[.*f...*] формат. Сокращенный синтаксис для данных date и timestamp выглядит следующим образом:  
+ В этом синтаксисе **d** указывает, что *значение* является датой в *гггг мм дд* формат и **служб терминалов** указывает, что *значение*  представляет собой метку времени в *гггг мм дд чч: мм:* [.*f...* ] формат. Сокращенный синтаксис для данных date и timestamp выглядит следующим образом:  
   
 ```  
 {d 'value'}  

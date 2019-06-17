@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: 82de3d69201a26980936172b2b08dcda9900b7a9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63214520"
 ---
 # <a name="sql-server-migration-assistant-for-sybase-sybasetosql"></a>SQL Server Migration Assistant для Sybase (SybaseToSQL)
@@ -24,7 +24,7 @@ ms.locfileid: "63214520"
   
 ## <a name="contents"></a>Содержание  
   
-|Раздел|Описание|  
+|`Section`|Описание|  
 |-----------|---------------|  
 |[Новые возможности в SSMA для Sybase &#40;SybaseToSQL&#41;](../../ssma/sybase/what-s-new-in-ssma-for-sybase-sybasetosql.md)|Список всех изменений к выпускам SSMA.|  
 |[Установка SSMA для Sybase &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-for-sybase-sybasetosql.md)|Содержит разделы, содержащие предварительные требования и инструкции по установке SSMA для Sybase клиента и необходимых компонентов на компьютере, на котором выполняется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] экземпляра.|  

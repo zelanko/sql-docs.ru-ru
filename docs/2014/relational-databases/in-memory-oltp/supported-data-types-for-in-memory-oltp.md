@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: de5f805a9d722974adf7975f713436bc7b1ca4d0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63155158"
 ---
 # <a name="supported-data-types"></a>Поддерживаемые типы данных
@@ -30,7 +30,7 @@ ms.locfileid: "63155158"
 |tinyint|[int, bigint, smallint и tinyint (Transact-SQL)](/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql)|  
 |Decimal|[decimal и numeric (Transact-SQL)](/sql/t-sql/data-types/decimal-and-numeric-transact-sql)|  
 |NUMERIC|[decimal и numeric (Transact-SQL)](/sql/t-sql/data-types/decimal-and-numeric-transact-sql)|  
-|FLOAT|[Типы данных float и real (Transact-SQL)](/sql/t-sql/data-types/float-and-real-transact-sql)|  
+|float|[Типы данных float и real (Transact-SQL)](/sql/t-sql/data-types/float-and-real-transact-sql)|  
 |real|[Типы данных float и real (Transact-SQL)](/sql/t-sql/data-types/float-and-real-transact-sql)|  
 |money|[Типы money и smallmoney (Transact-SQL)](/sql/t-sql/data-types/money-and-smallmoney-transact-sql)|  
 |smallmoney|[Типы money и smallmoney (Transact-SQL)](/sql/t-sql/data-types/money-and-smallmoney-transact-sql)|  

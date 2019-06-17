@@ -2,17 +2,17 @@
 title: Распространенные проблемы со службой панели запуска и выполнения внешнего скрипта - службы машинного обучения SQL Server
 ms.prod: sql
 ms.technology: ''
-ms.date: 05/31/2018
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: bddc2d2e4021ee0df196078b47e3ecbba96833b6
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: a6943a850a2955a36723d14c0226bd5c503f23ec
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58509701"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140204"
 ---
 # <a name="common-issues-with-launchpad-service-and-external-script-execution-in-sql-server"></a>Распространенные проблемы со службой панели запуска и выполнения внешних скриптов в SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -127,9 +127,9 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT TO <username>
 
 4. Перезапуск службы обычно решает проблему, чтобы обеспечить возможность выполнения сценариев. Если перезапуск не устранит проблему, обратите внимание, путь и аргументы в **путь к двоичным файлам** свойства и выполните следующее:
 
-    1. Просмотрите средство запуска config-файл и проверьте правильность рабочего каталога.
+    1\. Просмотрите средство запуска config-файл и проверьте правильность рабочего каталога.
 
-    2. Убедитесь, что группа Windows, которая используется панелью запуска может подключиться к экземпляру SQL Server.
+    2\. Убедитесь, что группа Windows, которая используется панелью запуска может подключиться к экземпляру SQL Server.
 
     В. При изменении каких-либо свойств службы, перезапустите службу панели запуска.
 
@@ -185,7 +185,7 @@ EXEC sp_execute_external_script @language = N'R',
 Чтобы устранить проблему, необходимо переустановить пакет в библиотеку экземпляра SQL Server.
 
 >[!NOTE]
->При обновлении экземпляра SQL Server 2016, чтобы использовать последнюю версию Microsoft R, расположения библиотеки по умолчанию отличается. Дополнительные сведения см. в разделе [об использовании программы SqlBindR для обновления экземпляра служб R](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
+>При обновлении экземпляра SQL Server 2016, чтобы использовать последнюю версию Microsoft R, расположения библиотеки по умолчанию отличается. Дополнительные сведения см. в разделе [об использовании программы SqlBindR для обновления экземпляра служб R](install/upgrade-r-and-python.md).
 
 ## <a name="launchpad-shuts-down-due-to-mismatched-dlls"></a>Панель запуска завершает работу из-за несоответствия библиотек DLL
 

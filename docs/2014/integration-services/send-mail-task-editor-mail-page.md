@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d80ca8e475bf9c2b56c11118a44e5282573f280d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66055830"
 ---
 # <a name="send-mail-task-editor-mail-page"></a>Редактор задачи «Отправка почты» (страница «Почта»)
@@ -28,7 +28,7 @@ ms.locfileid: "66055830"
   
 ## <a name="options"></a>Параметры  
  **SMTPConnection**  
- Выберите диспетчер подключений SMTP из списка или щелкните **\<Создать соединение…>**, чтобы создать его.  
+ Выберите диспетчер подключений SMTP из списка или щелкните **\<Создать соединение…>** , чтобы создать его.  
   
 > [!IMPORTANT]  
 >  Диспетчер SMTP-соединений поддерживает только анонимную проверку подлинности и проверку подлинности Windows. Обычная проверка подлинности не поддерживается.  
@@ -76,13 +76,13 @@ ms.locfileid: "66055830"
   
 ### <a name="messagesourcetype--file-connection"></a>MessageSourceType = Соединение с файлом  
  **MessageSource**  
- Выберите диспетчер подключений файлов в списке или щелкните \<**Создать соединение...**>, чтобы создать его.  
+ Выберите диспетчер подключений файлов в списке или щелкните \<**Создать соединение...** >, чтобы создать его.  
   
  **См. также:** подробные сведения о [диспетчере файловых подключений](connection-manager/file-connection-manager.md) и о [редакторе диспетчера файловых подключений](../../2014/integration-services/file-connection-manager-editor.md).  
   
 ### <a name="messagesourcetype--variable"></a>MessageSourceType = Переменная  
  **MessageSource**  
- Выберите переменную в списке или щелкните \<**Создать переменную...**>, чтобы создать ее.  
+ Выберите переменную в списке или щелкните \<**Создать переменную...** >, чтобы создать ее.  
   
  **См. также:** подробные сведения о [переменных в службах Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md) и о [добавлении переменной](../../2014/integration-services/add-variable.md).  
   

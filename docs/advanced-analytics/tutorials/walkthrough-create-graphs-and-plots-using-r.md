@@ -3,17 +3,17 @@ title: Создание диаграмм и графиков с помощью S
 description: Учебник, в котором показано, как создание диаграмм и графиков с помощью функций языка R на SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 11/26/2018
+ms.date: 06/13/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 0ed226a4c11c002d048572f58a75c0c04bdf936c
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: b988105733d8e3a9ee2edae344947cbf9d377e5d
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58513171"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140389"
 ---
 # <a name="create-graphs-and-plots-using-sql-and-r-walkthrough"></a>Создание диаграмм и графиков с помощью SQL и R (Пошаговое руководство)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -101,7 +101,7 @@ ms.locfileid: "58513171"
     + Если строка, начинающаяся с `plot` запусков, готовый для просмотра данных сериализуется в локальную среду R, и вы сможете просматривать в клиентском приложении R.
 
     > [!NOTE]
-    > Если вы используете SQL Server на виртуальной машине Azure, на этом этапе может возникнуть ошибка. Когда правило брандмауэра по умолчанию в Azure блокирует доступ к сети, кодом R, возникает ошибка. Дополнительные сведения о том, как устранить эту ошибку, см. в разделе [установке машинного обучения (R) службы на виртуальной Машине Azure](../r/installing-sql-server-r-services-on-an-azure-virtual-machine.md).
+    > Если вы используете SQL Server на виртуальной машине Azure, на этом этапе может возникнуть ошибка. Когда правило брандмауэра по умолчанию в Azure блокирует доступ к сети, кодом R, возникает ошибка. Дополнительные сведения о том, как устранить эту ошибку, см. в разделе [установке машинного обучения (R) службы на виртуальной Машине Azure](../install/sql-machine-learning-azure-virtual-machine.md).
 
 4. На следующем рисунке показана итоговая диаграмма. Места посадки обозначены на карте красными точками. Образ может выглядеть иначе, в зависимости от какого количества расположений, в источнике данных, которая использовалась.
 

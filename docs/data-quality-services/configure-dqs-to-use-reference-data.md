@@ -16,10 +16,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: jroth
 ms.openlocfilehash: ad70828c8b25a9329d5069db204de360900dcb0f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66802151"
 ---
 # <a name="configure-dqs-to-use-reference-data"></a>Настройка служб DQS для использования справочных данных
@@ -34,7 +34,7 @@ ms.locfileid: "66802151"
 ## <a name="before-you-begin"></a>Перед началом  
   
 ###  <a name="Prerequisites"></a> Предварительные требования  
- Чтобы использовать ссылочные данные из Marketplace, необходим действительный ключ учетной записи Marketplace. Дополнительные сведения о создании ключа учетной записи Marketplace см. в статье [Создание учетной записи](https://go.microsoft.com/fwlink/?LinkId=212936) (https://go.microsoft.com/fwlink/?LinkId=212936)). Ключ учетной записи Marketplace также можно создать с помощью [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , выбрав команду **Настройка** в разделе **Администрирование** главной страницы [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , а затем нажав кнопку **Создать идентификатор учетной записи DataMarket** на вкладке **Ссылочные данные** .  
+ Чтобы использовать ссылочные данные из Marketplace, необходим действительный ключ учетной записи Marketplace. Дополнительные сведения о создании ключа учетной записи Marketplace см. в статье [Создание учетной записи](https://go.microsoft.com/fwlink/?LinkId=212936) (https://go.microsoft.com/fwlink/?LinkId=212936) ). Ключ учетной записи Marketplace также можно создать с помощью [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , выбрав команду **Настройка** в разделе **Администрирование** главной страницы [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , а затем нажав кнопку **Создать идентификатор учетной записи DataMarket** на вкладке **Ссылочные данные** .  
   
 ###  <a name="Security"></a> безопасность  
   

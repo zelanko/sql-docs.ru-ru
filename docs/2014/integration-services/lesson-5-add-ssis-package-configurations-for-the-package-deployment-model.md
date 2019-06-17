@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 25922725e202bc7b38e2c6141a097df1af119ed2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62767426"
 ---
-# <a name="lesson-5-adding-package-configurations-for-the-package-deployment-model"></a>Занятие 5.: Добавление конфигураций пакетов в модель развертывания пакетов
+# <a name="lesson-5-adding-package-configurations-for-the-package-deployment-model"></a>Занятие 5.: Добавление конфигураций пакетов в модель развертывания пакета
   С помощью конфигураций пакета можно задавать исполняемые свойства и переменные вне среды разработки. Конфигурации дают возможность разрабатывать пакеты, обладающие гибкостью и простотой распространения и развертывания. [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] предусмотрены следующие типы конфигурации:  
   
 -   XML-файл конфигурации  
