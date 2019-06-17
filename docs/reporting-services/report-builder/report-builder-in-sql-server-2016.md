@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d77b35851144967c9cfed408617fe5551debf37f
-ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.openlocfilehash: aa1dd3517002405a93185ea55adcdc5ecd808e6f
+ms.sourcegitcommit: c40f663d4486e574fd749f2c8e84c98d41970352
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65620608"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67037843"
 ---
 # <a name="report-builder-in-sql-server"></a>Построитель отчетов в SQL Server
 
@@ -81,7 +81,7 @@ ms.locfileid: "65620608"
  [Планирование отчета (построитель отчетов)](../../reporting-services/report-design/planning-a-report-report-builder.md)  
  Содержит сведения о некоторых соображениях, которые важно учесть перед началом создания отчета.  
   
- [Основные понятия разработки отчетов (построитель отчетов и службы SSRS)](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
+ [Основные понятия служб Reporting Services (SSRS)](../reporting-services-concepts-ssrs.md)  
  Определены основные понятия, используемые в документации по [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] .  
   
  [Представление конструктора отчетов (построитель отчетов)](../../reporting-services/report-builder/report-design-view-report-builder.md)  

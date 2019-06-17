@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f7533eb253ba32dd8ef2d57c3182096b36a6e47b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62774588"
 ---
 # <a name="configure-log-shipping-sql-server"></a>Настройка доставки журналов (SQL Server)
@@ -78,7 +78,7 @@ ms.locfileid: "62774588"
   
 8.  Обратите внимание на расписание в поле **Расписание** в разделе **Задание резервного копирования**. Если нужно изменить расписание, нажмите кнопку **Расписание** и задайте расписание для агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по своему усмотрению.  
   
-9. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] поддерживает [сжатие резервных копий](../../relational-databases/backup-restore/backup-compression-sql-server.md). При создании конфигурации доставки журналов, можно управлять поведением сжатия резервных копий журналов, выбрав один из следующих вариантов: **Использовать параметр сервера по умолчанию**, **сжатие резервных копий**, или **не сжимать резервные копии**. Дополнительные сведения см. в статье [Log Shipping Transaction Log Backup Settings](../../relational-databases/databases/log-shipping-transaction-log-backup-settings.md).  
+9. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] поддерживает [сжатие резервных копий](../../relational-databases/backup-restore/backup-compression-sql-server.md). При создании конфигурации доставки журналов можно управлять поведением сжатия резервных копий журналов, выбрав один из следующих параметров. **Использовать параметр сервера по умолчанию**, **Сжимать резервные копии** и **Не сжимать резервные копии**. Дополнительные сведения см. в статье [Log Shipping Transaction Log Backup Settings](../../relational-databases/databases/log-shipping-transaction-log-backup-settings.md).  
   
 10. Нажмите кнопку **ОК**.  
   

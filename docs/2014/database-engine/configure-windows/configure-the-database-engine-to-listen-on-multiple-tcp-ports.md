@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c5f3c354a36f5a3a62120ecc40a815420393648c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62811548"
 ---
 # <a name="configure-the-database-engine-to-listen-on-multiple-tcp-ports"></a>Настройка компонента Database Engine на прослушивание нескольких портов TCP
@@ -74,9 +74,9 @@ ms.locfileid: "62811548"
   
 #### <a name="to-configure-the-sql-server-database-engine-to-listen-on-an-additional-tcp-port"></a>Настройка компонента SQL Server Database Engine на прослушивание дополнительного порта TCP  
   
-1.  В диспетчере конфигурации SQL Server разверните узел **Сетевая конфигурация SQL Server** и щелкните элемент **Протоколы для**_<имя_экземпляра>_.  
+1.  В диспетчере конфигурации SQL Server разверните узел **Сетевая конфигурация SQL Server** и щелкните элемент **Протоколы для** _<имя_экземпляра>_ .  
   
-2.  Разверните узел **Протоколы для**_<имя_экземпляра>_ и щелкните **TCP/IP**.  
+2.  Разверните узел **Протоколы для** _<имя_экземпляра>_ и щелкните **TCP/IP**.  
   
 3.  В правой панели щелкните правой кнопкой мыши отключенный IP-адрес, который необходимо включить, и выберите **Включить**.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "62811548"
   
 6.  На левой панели щелкните **Службы SQL Server**.  
   
-7.  На правой панели щелкните правой кнопкой мыши **SQL Server**_<имя_экземпляра>_ и выберите **Перезагрузка**.  
+7.  На правой панели щелкните правой кнопкой мыши **SQL Server** _<имя_экземпляра>_ и выберите **Перезагрузка**.  
   
      После перезагрузки компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] журнал ошибок будет содержать список портов, прослушиваемых [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

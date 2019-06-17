@@ -3,17 +3,17 @@ title: Библиотека функций MicrosoftML R - служб машин
 description: Общие сведения о библиотеке функции MicrosoftML в SQL Server 2016 R Services и служб SQL Server 2017 машинного обучения с помощью языка R.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 12/04/2018
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 73d9dcf56c0eb5e69704adf169946f6aa28a432c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0266f6288e0b28ebd56c2aff634dc27a1ec72b06
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62641822"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140488"
 ---
 # <a name="microsoftml-r-library-in-sql-server"></a>MicrosoftML (библиотека R в SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -140,7 +140,7 @@ ms.locfileid: "62641822"
 
 Функции в **MicrosoftML** можно вызывать в коде R инкапсулируются в хранимых процедурах. Большинство разработчиков создавать **MicrosoftML** решения локально, и затем перенести готовый код R в хранимые процедуры с действий развертывания.
 
-**MicrosoftML** пакетом для R — это установленных «out-of--box» в SQL Server 2017. Оно доступно для использования с SQL Server 2016 при обновлении компонентов R для экземпляра: [Обновить экземпляр SQL Server с помощью привязки](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
+**MicrosoftML** пакетом для R — это установленных «out-of--box» в SQL Server 2017. Оно доступно для использования с SQL Server 2016 при обновлении компонентов R для экземпляра: [Обновить экземпляр SQL Server с помощью привязки](../install/upgrade-r-and-python.md)
 
 Пакет не загружается по умолчанию. В качестве первого шага, загрузить **MicrosoftML** пакета, а затем загрузите **RevoScaleR** необходимость использовать контексты удаленных вычислений или связанные объекты источника данных или подключения. Затем ссылаться на отдельные функции, которые вам нужны.
 

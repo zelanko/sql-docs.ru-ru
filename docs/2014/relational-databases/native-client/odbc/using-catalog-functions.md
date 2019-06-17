@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 263df9986df0297c8bf1afdb35d70841835cef4d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62667382"
 ---
 # <a name="using-catalog-functions"></a>Использование функций каталога
@@ -43,7 +43,7 @@ ms.locfileid: "62667382"
   
      Возвращает список каталогов, содержащихся на связанном сервере.  
   
- После имени связанного сервера и имя каталога, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] драйвер ODBC собственного клиента поддерживает получение сведений из каталога, используя двухкомпонентное имя _имя_связанного_сервера_**.** _каталога_ для *CatalogName* на ODBC следующие функции работы с каталогами:  
+ После имени связанного сервера и имя каталога, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] драйвер ODBC собственного клиента поддерживает получение сведений из каталога, используя двухкомпонентное имя _имя_связанного_сервера_ **.** _каталога_ для *CatalogName* на ODBC следующие функции работы с каталогами:  
   
 -   **SQLColumnPrivileges**  
   
@@ -57,7 +57,7 @@ ms.locfileid: "62667382"
   
 -   **SQLTables**  
   
- В два этапа _имя_связанного_сервера_**.** _каталога_ также поддерживается для *FKCatalogName* и *PKCatalogName* на [SQLForeignKeys](../../native-client-odbc-api/sqlforeignkeys.md).  
+ В два этапа _имя_связанного_сервера_ **.** _каталога_ также поддерживается для *FKCatalogName* и *PKCatalogName* на [SQLForeignKeys](../../native-client-odbc-api/sqlforeignkeys.md).  
   
  Использование SQLLinkedServers и SQLLinkedCatalogs требует следующих файлов.  
   

@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ef4f5d42ae3451d4199e84480a5672e437d7ca5f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62892440"
 ---
-# <a name="step-2-adding-and-configuring-logging"></a>Шаг 2. Добавление и настройка ведения журнала
+# <a name="step-2-adding-and-configuring-logging"></a>Шаг 2. Добавление и настройка журнала
   В этой задаче будет включена запись в журнал потоков данных для пакета «Урок 3.dtsx». Затем предстоит настроить регистратор для текстовых файлов, чтобы записать в журнал события PipelineExecutionPlan и PipelineExecuteTrees. Регистратор текстовых файлов создает журналы, которые легко просматривать и пересылать. Простота этих файлов журнала делает их особенно полезными во время базового тестирования пакета. Для просмотра журнала приложений можно использовать окно «Регистрация событий» конструктора служб [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
   
 ### <a name="to-add-logging-to-the-package"></a>Добавление ведения журнала в пакет  
