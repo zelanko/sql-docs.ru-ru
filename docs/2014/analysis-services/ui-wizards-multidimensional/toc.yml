@@ -28,7 +28,7 @@
       href: ../define-account-intelligence-dimension-business-intelligence-wizard.md
     - name: Настройка атрибутов измерения (мастер бизнес-аналитики)
       href: ../configure-dimension-attributes-business-intelligence-wizard.md
-    - name: 'Определение логики операций со счетами (мастер бизнес-аналитики) '
+    - name: Определение логики операций со счетами (мастер бизнес-аналитики)
       href: ../define-account-intelligence-business-intelligence-wizard.md
     - name: Параметры логики операций с измерениями (мастер бизнес-аналитики)
       href: ../set-dimension-intelligence-options-business-intelligence-wizard.md
@@ -44,7 +44,7 @@
       href: ../create-a-custom-member-formula-business-intelligence-wizard.md
     - name: Определение порядка атрибутов (измерение) (мастер интеллектуальных ресурсов предприятия)
       href: ../specify-attribute-ordering-dimension-business-intelligence-wizard.md
-    - name: 'Задание порядка атрибутов (мастер бизнес-аналитики) '
+    - name: Задание порядка атрибутов (мастер бизнес-аналитики)
       href: ../specify-attribute-ordering-business-intelligence-wizard.md
     - name: Включение обратной записи в измерения (измерение) (мастер бизнес-аналитики)
       href: ../enable-dimension-writeback-dimension-business-intelligence-wizard.md

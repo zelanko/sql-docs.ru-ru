@@ -293,9 +293,9 @@
 - name: Диалоговое окно «Параметры хранилища»
   href: ../storage-options-dialog-box-analysis-services-multidimensional-data.md
   items:
-    - name: 'Общие (диалоговое окно «Параметры хранилища») '
+    - name: Общие (диалоговое окно «Параметры хранилища»)
       href: ../general-storage-options-dialog-box-analysis-services-multidimensional-data.md
-    - name: 'Уведомления (диалоговое окно «Параметры хранилища») '
+    - name: Уведомления (диалоговое окно «Параметры хранилища»)
       href: ../notifications-storage-options-dialog-analysis-services-multidimensional-data.md
 - name: Диалоговое окно «Настройки хранилища»
   href: ../storage-settings-dialog-box-analysis-services-multidimensional-data.md

@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2cbc3571aa26728fa94957bb0c2f207ff769f4c4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721796"
 ---
 # <a name="replication-management-objects-concepts"></a>Replication Management Objects Concepts
@@ -65,7 +65,7 @@ ms.locfileid: "62721796"
   
 2.  В меню **Файл** выберите пункт **Создать проект**. Откроется диалоговое окно **Создание проекта** .  
   
-3.  В диалоговом окне **Типы проектов** выберите **Проекты Visual C#**. На панели **Шаблоны** выберите пункт **Приложение Windows**.  
+3.  В диалоговом окне **Типы проектов** выберите **Проекты Visual C#** . На панели **Шаблоны** выберите пункт **Приложение Windows**.  
   
 4.  В поле **Имя** введите имя нового приложения (необязательно).  
   

@@ -319,7 +319,7 @@
       href: grant-cube-or-model-permissions-analysis-services.md
     - name: Разрешения доступа
       href: grant-process-permissions-analysis-services.md
-    - name: 'Разрешения на Чтение Описания '
+    - name: Разрешения на Чтение Описания
       href: grant-read-definition-permissions-on-object-metadata-analysis-services.md
     - name: Разрешения измерения
       href: grant-permissions-on-a-dimension-analysis-services.md

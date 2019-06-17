@@ -1,5 +1,5 @@
 ---
-title: Шаг 8. Облегчение пакета занятия 1 | Документация Майкрософт
+title: Шаг 8. Облегчение пакета занятия 1 | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 390fb10287ff88ec5f7a0220dea6dd677e8e36cd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62767596"
 ---
-# <a name="step-8-making-the-lesson-1-package-easier-to-understand"></a>Шаг 8. Облегчение пакета занятия 1
+# <a name="step-8-making-the-lesson-1-package-easier-to-understand"></a>Шаг 8. Оптимизация структуры пакета урока 1
   После завершения настройки пакета, созданного на занятии 1, можно приступить к приведению его макета в порядок. Если фигуры в макетах элементов управления и потока данных имеют случайные размеры или если эти элементы не упорядочены или не сгруппированы, то функциональность пакета трудно понять.  
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools предоставляет средства, которые облегчают и ускоряют форматирование макета пакета. К функциям форматирования относится возможность создавать элементы одного размера, выравнивать их, а также управлять горизонтальным и вертикальным пространством между элементами.  

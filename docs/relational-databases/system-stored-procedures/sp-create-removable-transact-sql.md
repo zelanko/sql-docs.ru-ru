@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9c2e25b51998d863809a57654b245b1cb63027b5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62724069"
 ---
 # <a name="spcreateremovable-transact-sql"></a>sp_create_removable (Transact-SQL)
@@ -60,13 +60,13 @@ sp_create_removable
   
 `[ @syslogical = ] 'syslogical'` — Это логическое имя файла, содержащего таблицы системных каталогов. *syslogical* — **sysname**.  
   
-`[ @sysphysical = ] 'sysphysical'` Это физическое имя. Включает в себя полный путь к файлу, содержащему таблицы системных каталогов. *sysphysical* — **nvarchar(260)**.  
+`[ @sysphysical = ] 'sysphysical'` Это физическое имя. Включает в себя полный путь к файлу, содержащему таблицы системных каталогов. *sysphysical* — **nvarchar(260)** .  
   
 `[ @syssize = ] syssize` — Это размер в мегабайтах, файла, содержащему системных таблицах каталога. *syssize* — **int**. Минимальное *syssize* -1.  
   
 `[ @loglogical = ] 'loglogical'` — Это логическое имя файла, содержащего журнал транзакций. *loglogical* — **sysname**.  
   
-`[ @logphysical = ] 'logphysical'` Это физическое имя. Включает в себя полный путь к файлу, содержащему журнал транзакций. *logphysical* — **nvarchar(260)**.  
+`[ @logphysical = ] 'logphysical'` Это физическое имя. Включает в себя полный путь к файлу, содержащему журнал транзакций. *logphysical* — **nvarchar(260)** .  
   
 `[ @logsize = ] logsize` — Это размер в мегабайтах, файла, содержащего журнал транзакций. *logsize* — **int**. Минимальное *logsize* -1.  
   
@@ -74,7 +74,7 @@ sp_create_removable
   
  Можно создать от 1 до 16 файлов данных. Обычно создание более одного файла данных требуется для больших баз данных, распространяемых на нескольких дисках.  
   
-`[ @dataphysical1 = ] 'dataphysical'` Это физическое имя. Включает в себя полный путь к файлу, содержащему таблицы данных. *dataphysical* — **nvarchar(260)**.  
+`[ @dataphysical1 = ] 'dataphysical'` Это физическое имя. Включает в себя полный путь к файлу, содержащему таблицы данных. *dataphysical* — **nvarchar(260)** .  
   
 `[ @datasize1 = ] 'datasize'` — Это размер в мегабайтах, файла, содержащего таблицы данных. *DataSize* — **int**. Минимальное *datasize* -1.  
   

@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 987b7d7006ff448a92eee1926a2c60c3b7ae039e
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66696677"
 ---
 # <a name="append-method-ado"></a>Метод Append (ADO)
@@ -51,7 +51,7 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
  Объект [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) значение, значение которого по умолчанию равно **adEmpty**, указывающий тип данных нового поля. Следующие типы данных не поддерживаются ADO, а также следует не быть используется при добавлении новых полей в [объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md): **adIDispatch**, **adIUnknown**, **adVariant**.  
   
  *DefinedSize*  
- Необязательный. Объект **Long** значение, представляющее заданный размер, в символах или байтах нового поля. Значение по умолчанию для этого параметра является производным от *тип*. Поля, *DefinedSize* длиной более 255 байт, обрабатываются как столбцы переменной длины. По умолчанию для *DefinedSize* не определен.  
+ Необязательный параметр. Объект **Long** значение, представляющее заданный размер, в символах или байтах нового поля. Значение по умолчанию для этого параметра является производным от *тип*. Поля, *DefinedSize* длиной более 255 байт, обрабатываются как столбцы переменной длины. По умолчанию для *DefinedSize* не определен.  
   
  *Attrib*  
  Необязательный. Объект [FieldAttributeEnum](../../../ado/reference/ado-api/fieldattributeenum.md) значение, значение которого по умолчанию равно **adFldDefault**, который задает атрибуты для нового поля. Если это значение не указано, будет содержать поле атрибутов, производных от *тип*.  

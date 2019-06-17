@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9e8f03d12d3ac1695d4f6d000c8eab89a42004fd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62667392"
 ---
 # <a name="allow-non-administrators-to-use-replication-monitor"></a>Предоставление пользователям без прав администратора разрешения на использование монитора репликации
@@ -57,7 +57,7 @@ ms.locfileid: "62667392"
   
 2.  Последовательно раскройте **Базы данных**, **Системные базы данных**и раскройте базу данных распространителя (по умолчанию называемую **distribution** ).  
   
-3.  Раскройте **Безопасность**, щелкните правой кнопкой **Пользователь**, а затем выберите **Создать пользователя...**.  
+3.  Раскройте **Безопасность**, щелкните правой кнопкой **Пользователь**, а затем выберите **Создать пользователя...** .  
   
 4.  Введите имя пользователя и имя входа.  
   
@@ -75,12 +75,12 @@ ms.locfileid: "62667392"
   
 2.  Выполните на распространителе в базе данных распространителя, [sp_helprolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helprolemember-transact-sql), указав значение `replmonitor` для **@rolename** параметра. Если пользователь указан в `MemberName` в результирующем наборе, он уже принадлежит этой роли.  
   
-3.  Если пользователь не принадлежит `replmonitor` роль, выполните [sp_addrolemember &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql) на распространителе в базе данных распространителя. Укажите значение `replmonitor` для **@rolename** и имя пользователя базы данных или [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows login being added для **@membername**.  
+3.  Если пользователь не принадлежит `replmonitor` роль, выполните [sp_addrolemember &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql) на распространителе в базе данных распространителя. Укажите значение `replmonitor` для **@rolename** и имя пользователя базы данных или [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows login being added для **@membername** .  
   
 #### <a name="to-remove-a-user-from-the-replmonitor-fixed-database-role"></a>Удаление пользователя из предопределенной роли «replmonitor» базы данных  
   
-1.  Чтобы убедиться, что пользователь принадлежит к `replmonitor` роль, выполните [sp_helprolemember &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-helprolemember-transact-sql) на распространителе в базе данных распространителя и укажите значение `replmonitor` для **@rolename**. Если пользователь не указан в поле `MemberName` результирующего набора, в данный момент он не принадлежит этой роли.  
+1.  Чтобы убедиться, что пользователь принадлежит к `replmonitor` роль, выполните [sp_helprolemember &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-helprolemember-transact-sql) на распространителе в базе данных распространителя и укажите значение `replmonitor` для **@rolename** . Если пользователь не указан в поле `MemberName` результирующего набора, в данный момент он не принадлежит этой роли.  
   
-2.  Если пользователь принадлежит к `replmonitor` роль, выполните [sp_droprolemember &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-droprolemember-transact-sql) на распространителе в базе данных распространителя. Укажите значение `replmonitor` для **@rolename** и имя пользователя базы данных или имя входа Windows, подлежащее удалению, для **@membername**.  
+2.  Если пользователь принадлежит к `replmonitor` роль, выполните [sp_droprolemember &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-droprolemember-transact-sql) на распространителе в базе данных распространителя. Укажите значение `replmonitor` для **@rolename** и имя пользователя базы данных или имя входа Windows, подлежащее удалению, для **@membername** .  
   
   

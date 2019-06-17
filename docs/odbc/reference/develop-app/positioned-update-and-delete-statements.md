@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3cf60ccc0e220850f7a83ed2c25db3795c1e7796
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63312488"
 ---
 # <a name="positioned-update-and-delete-statements"></a>Инструкции позиционированного обновления и удаления
@@ -34,7 +34,7 @@ ms.locfileid: "63312488"
   
  [**ГДЕ** *условие поиска*]  
   
- **ДЛЯ обновления из** [*имя_столбца* [**,** *имя_столбца*]...]  
+ **ДЛЯ обновления из** [*имя_столбца* [ **,** *имя_столбца*]...]  
   
  Затем приложение помещает курсор на строке, чтобы обновить или удалить. Его можно сделать, вызвав **SQLFetchScroll** для извлечения набора строк, содержащий необходимые строки и вызова **SQLSetPos** для позиционирования курсора набора строк в этой строке. Затем приложение выполняет позиционированного обновления или инструкции delete на различные инструкции, а не инструкции, используется результирующий набор. Используется следующий синтаксис этих операторов:  
   
@@ -42,7 +42,7 @@ ms.locfileid: "63312488"
   
  **SET** *column-identifier* **=** {*expression* &#124; **NULL**}  
   
- [**,** *column-identifier* **=** {*expression* &#124; **NULL**}]...  
+ [ **,** *column-identifier* **=** {*expression* &#124; **NULL**}]...  
   
  **WHERE CURRENT OF** *имя курсора*  
   

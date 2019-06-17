@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: eb18bc37f63b74981fcccbcb889bd80dcb816d12
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63273155"
 ---
 # <a name="creating-a-data-source-basic-data-mining-tutorial"></a>Создание источника данных (учебник по интеллектуальному анализу данных — начальный уровень)
@@ -46,7 +46,7 @@ ms.locfileid: "63273155"
   
 8.  Нажмите кнопку **Далее**.  
   
-9. На **сведения об олицетворении** щелкните **учетной записи службы,**, а затем нажмите кнопку **Далее**.  
+9. На **сведения об олицетворении** щелкните **учетной записи службы,** , а затем нажмите кнопку **Далее**.  
   
      На **завершение работы мастера** странице, обратите внимание, что, по умолчанию источник данных называется Adventure Works DW 2012.  
   
