@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ca1882faa9c61536d1ef025058322f141beedafd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63316327"
 ---
 # <a name="analyze-deadlocks-with-sql-server-profiler"></a>Анализ взаимоблокировок в приложении SQL Server Profiler
@@ -31,7 +31,7 @@ ms.locfileid: "63316327"
   
  Для трассировки событий взаимоблокировки добавьте в трассировку класс событий **Deadlock graph** . Этот класс событий заполняет столбец данных **TextData** в трассировке с данными XML о процессе и объектах, которые участвуют во взаимоблокировке. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] может извлечь XML-документ в XML-файл взаимоблокировки (с расширением XDL), который в дальнейшем становится доступным для просмотра в среде SQL Server Management Studio. Приложение [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] можно настроить на извлечение событий **Deadlock graph** в единый файл, содержащий все события класса **Deadlock graph** , или в отдельные файлы. Это извлечение можно выполнить одним из следующих способов.  
   
--   При настройке трассировки на вкладке **Настройки извлечения событий** . Обратите внимание на то, что эта вкладка не отображается до тех пор, пока не будет выбрано событие Deadlock graph на вкладке **Выбор событий** .  
+-   При настройке трассировки на вкладке **Настройки извлечения событий** . Обратите внимание на то, что эта вкладка не отображается до тех пор, пока не будет выбрано событие **Deadlock graph** на вкладке **Выбор событий** .  
   
 -   С помощью параметра **Извлечь события SQL Server** в меню **Файл** .  
   
