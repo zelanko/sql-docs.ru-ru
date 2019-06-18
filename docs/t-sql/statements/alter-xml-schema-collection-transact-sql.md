@@ -30,11 +30,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9c828a7db7a15e9a25073a5c6246a5c354934400
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016475"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62664595"
 ---
 # <a name="alter-xml-schema-collection-transact-sql"></a>ALTER XML SCHEMA COLLECTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ ALTER XML SCHEMA COLLECTION MyColl ADD '
   
  Инструкция `ALTER XML SCHEMA` добавляет элемент `<anotherElement>` к ранее определенному пространству имен `https://MySchema/test_xml_schema`.  
   
- Обратите внимание на то, что если некоторые компоненты, добавляемые в коллекцию, ссылаются на уже существующие в данной коллекции компоненты, необходимо использовать команду `<import namespace="referenced_component_namespace" />`.  Однако в команде `<xsd:import>` не допускается использование пространств имен текущей схемы и, следовательно, компонентов из одного и того же целевого пространства имен, поскольку пространство имен текущей схемы импортируется автоматически.  
+ Обратите внимание на то, что если некоторые компоненты, добавляемые в коллекцию, ссылаются на уже существующие в данной коллекции компоненты, необходимо использовать команду `<import namespace="referenced_component_namespace" />`. Однако в команде `<xsd:import>` не допускается использование пространств имен текущей схемы и, следовательно, компонентов из одного и того же целевого пространства имен, поскольку пространство имен текущей схемы импортируется автоматически.  
   
  Чтобы удалить коллекции, используйте [DROP XML SCHEMA COLLECTION (Transact-SQL)](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md).  
   

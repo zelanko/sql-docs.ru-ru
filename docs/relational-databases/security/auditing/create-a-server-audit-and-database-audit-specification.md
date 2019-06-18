@@ -17,11 +17,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: a2213a6f87aa11db9201dc052efa5a5513e185a7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539157"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62716121"
 ---
 # <a name="create-a-server-audit-and-database-audit-specification"></a>Создание спецификация аудита для сервера и базы данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "52539157"
   
 1.  В обозревателе объектов раскройте папку **Безопасность** .  
   
-2.  Щелкните правой кнопкой мыши папку **Аудиты** и выберите пункт **Создать аудит...**. Дополнительные сведения см. в статье [Создание аудита сервера и спецификации аудита сервера](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md).  
+2.  Щелкните правой кнопкой мыши папку **Аудиты** и выберите пункт **Создать аудит...** . Дополнительные сведения см. в статье [Создание аудита сервера и спецификации аудита сервера](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md).  
   
 3.  После завершения выбора параметров нажмите кнопку **ОК**.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "52539157"
   
 2.  Разверните папку **Безопасность** .  
   
-3.  Щелкните правой кнопкой мыши папку **Спецификации аудита базы данных** и выберите пункт **Создать спецификацию аудита базы данных...**.  
+3.  Щелкните правой кнопкой мыши папку **Спецификации аудита базы данных** и выберите пункт **Создать спецификацию аудита базы данных...** .  
   
      В диалоговом окне **Создание спецификации аудита базы данных** доступны следующие параметры.  
   

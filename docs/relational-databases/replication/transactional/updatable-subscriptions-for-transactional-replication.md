@@ -19,11 +19,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a8d607e528164e71d1e771d497ff7660cb7ecf66
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132994"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62669669"
 ---
 # <a name="updatable-subscriptions---for-transactional-replication"></a>Обновляемые подписки для репликации транзакций
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ ms.locfileid: "54132994"
   
 -   Подписчики не могут обновлять или вставлять значения **text**, **ntext** или **image** , поскольку невозможно выполнить считывание из вставленных или удаленных таблиц внутри триггеров, отслеживающих изменения репликации. Аналогично подписчики не могут обновлять или вставлять значения **text** или **image** с помощью **WRITETEXT** или **UPDATETEXT** , поскольку данные перезаписываются издателем. Вместо этого можно секционировать столбцы **text** и **image** в отдельную таблицу и изменить две таблицы в пределах транзакции.  
   
-     Чтобы обновить большие объекты на подписчике, используйте типы данных **varchar(max)**, **nvarchar(max)** и **varbinary(max)** вместо типов данных **text**, **ntext**и **image** соответственно.  
+     Чтобы обновить большие объекты на подписчике, используйте типы данных **varchar(max)** , **nvarchar(max)** и **varbinary(max)** вместо типов данных **text**, **ntext**и **image** соответственно.  
   
 -   Обновления уникальных ключей (включая первичные ключи), создающие дубликаты (например, обновление вида `UPDATE <column> SET <column> =<column>+1` ), не допускаются и будут отклонены из-за нарушения уникальности. Это связано с тем, что SET-обновления, выполненные на подписчике, распространяются репликацией в виде отдельных инструкций **UPDATE** для каждой затронутой строки.  
   

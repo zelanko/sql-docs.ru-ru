@@ -13,13 +13,13 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 940b33cda3158e98c9fee519ea12f1193e615bca
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62642587"
 ---
-# <a name="lesson-2-configuring-permissions-on-database-objects"></a>Урок 2. Настройка разрешений на объекты базы данных
+# <a name="lesson-2-configuring-permissions-on-database-objects"></a>Урок 2. Настройка разрешений для объектов базы данных
   Предоставление пользователю доступа к базе данных включает три шага. Вначале создается имя входа. Имя входа дает пользователю возможность подключиться к компоненту [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]. Затем имя входа настраивается как пользователь в заданной базе данных. Наконец, предоставляются пользовательские разрешения на объекты базы данных. В этом занятии показаны все три шага, а также создание представления и хранимой процедуры в виде объекта.  
   
  Это занятие содержит следующие разделы:  

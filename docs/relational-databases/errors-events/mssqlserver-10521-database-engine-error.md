@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5e7e54dbf0728f3cc2705153f1bd9c56e9b000c1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646102"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63048323"
 ---
 # <a name="mssqlserver10521"></a>MSSQLSERVER_10521
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47646102"
 |Текст сообщения|Не удалось создать структуру плана "%.\*ls", поскольку значение **@type** указано как "%ls", а параметр "%ls" имеет значение NULL. Этот тип должен иметь значение, отличное от NULL, для этого параметра. Укажите для этого параметра значение, отличное от NULL, либо измените его тип таким образом, чтобы он допускал значение NULL.|  
   
 ## <a name="explanation"></a>Объяснение  
-Для типа, указанного в **@type**, требуется значение, отличное от NULL, но предоставлено значение NULL.  
+Для типа, указанного в **@type** , требуется значение, отличное от NULL, но предоставлено значение NULL.  
   
 ## <a name="user-action"></a>Действие пользователя  
 Укажите для этого параметра значение, отличное от NULL, либо измените его тип таким образом, чтобы он допускал значение NULL.  

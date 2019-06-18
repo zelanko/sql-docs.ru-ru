@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 85759d21668cc0eb5bc5b6f85f946da96de58442
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299904"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62724650"
 ---
 # <a name="replication-programming-concepts"></a>Основные понятия программирования репликации
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -111,8 +111,8 @@ ms.locfileid: "54299904"
 |[Основные понятия объектов RMO](../../../relational-databases/replication/concepts/replication-management-objects-concepts.md)|Управляемый код|Администрирование, текущее наблюдение и синхронизация.|  
 |<xref:Microsoft.SqlServer.Replication>|Управляемый код|Синхронизация.|  
 |<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>|Управляемый код|Создание обработчиков бизнес-логики для интеграции пользовательской логики с процессом синхронизации слиянием.|  
-|[Хранимые процедуры репликации (Transact-SQL)](../../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)|Создание скриптов|Администрирование и текущее наблюдение.|  
-|[Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)|Создание скриптов|Синхронизация.|  
+|[Хранимые процедуры репликации (Transact-SQL)](../../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)|Написание скриптов|Администрирование и текущее наблюдение.|  
+|[Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)|Написание скриптов|Синхронизация.|  
   
 ## <a name="example"></a>Пример  
  В [!INCLUDE[ssSampleDBCoShort](../../../includes/sssampledbcoshort-md.md)] должна обеспечиваться публикация данных для 200 торговых представителей во всем мире. Торговые представители часто находятся в командировках и вынуждены использовать переносные компьютеры или карманные компьютеры для обмена данными с заказчиком и добавления новых заказов. Затем изменения в данных должны быть синхронизированы с издателем, после подключения торговым представителем своего переносного компьютера к сети.  

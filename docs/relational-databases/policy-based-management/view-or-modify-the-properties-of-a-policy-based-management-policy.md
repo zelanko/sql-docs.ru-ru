@@ -15,11 +15,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: cf3bb62c4008b870c50c230a6140fff2a6b8b802
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254520"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62658796"
 ---
 # <a name="view-or-modify-the-properties-of-a-policy-based-management-policy"></a>Просмотр или изменение свойств политики управления на основе политик
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "54254520"
   
 #### <a name="to-view-the-properties-of-all-policies-on-an-object"></a>Просмотр свойств всех политик в объекте  
   
-1.  В обозревателе объектов щелкните правой кнопкой мыши сервер, базу данных или объект базы данных, укажите пункт **Политики** и выберите пункт **Просмотреть**. Дополнительные сведения о параметрах, доступных в диалоговом окне **Просмотр политик —**_имя_объекта_, см. в статье [Диалоговое окно "Просмотр политик"](../../relational-databases/policy-based-management/view-policies-dialog-box.md).  
+1.  В обозревателе объектов щелкните правой кнопкой мыши сервер, базу данных или объект базы данных, укажите пункт **Политики** и выберите пункт **Просмотреть**. Дополнительные сведения о параметрах, доступных в диалоговом окне **Просмотр политик —** _имя_объекта_, см. в статье [Диалоговое окно "Просмотр политик"](../../relational-databases/policy-based-management/view-policies-dialog-box.md).  
   
 2.  После завершения нажмите кнопку **Закрыть**.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "54254520"
   
 4.  Щелкните знак «плюс», чтобы развернуть папку **Политики** .  
   
-5.  Щелкните правой кнопкой политику, свойства которой необходимо просмотреть или изменить, и выберите пункт **Свойства**. Дополнительные сведения о параметрах, доступных в диалоговом окне **Открытие политики —**_имя_политики_, см. в статьях [Диалоговое окно "Создание новой политики" или "Открытие политики", страница "Общее"](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-general-page.md) и [Диалоговое окно "Создание новой политики" или "Открытие политики", страница "Описание"](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-description-page.md).  
+5.  Щелкните правой кнопкой политику, свойства которой необходимо просмотреть или изменить, и выберите пункт **Свойства**. Дополнительные сведения о параметрах, доступных в диалоговом окне **Открытие политики —** _имя_политики_, см. в статьях [Диалоговое окно "Создание новой политики" или "Открытие политики", страница "Общее"](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-general-page.md) и [Диалоговое окно "Создание новой политики" или "Открытие политики", страница "Описание"](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-description-page.md).  
   
 6.  После завершения нажмите кнопку **ОК**.  
   

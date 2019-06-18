@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 994b0f94448b7fb7901734b2ae737e26be23900f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62678632"
 ---
 # <a name="power-the-appliance-on-or-off-for-analytics-platform-system"></a>Power устройства, включить или отключить для Analytics Platform System
@@ -39,7 +39,7 @@ ms.locfileid: "62678632"
 > [!WARNING]  
 > Все действия должны выполняться в порядок, и каждый шаг необходимо выполнить, прежде чем будет выполнен следующий шаг, если не указано иное. Выполнив действия, не по порядку или без ожидания завершения выполнения каждого шага может вызывать ошибки при модуль включен в дальнейшем.  
   
-1.  Подключитесь к узлу управления PDW (**_PDW_region_-CTL01** ) и войдите, используя учетную запись администратора домена Analytics Platform System appliance.  
+1.  Подключитесь к узлу управления PDW ( **_PDW_region_-CTL01** ) и войдите, используя учетную запись администратора домена Analytics Platform System appliance.  
   
 2.  Запустите `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwconfig.exe` открыть **Configuration Manager**.  
   

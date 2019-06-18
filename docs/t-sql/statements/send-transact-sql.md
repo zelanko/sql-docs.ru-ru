@@ -26,11 +26,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 3ead09886af3ec64c00af06e3919941effd7b234
-ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56590299"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62638692"
 ---
 # <a name="send-transact-sql"></a>SEND (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ MESSAGE TYPE *message_type_name*
 Указывает тип отправляемого сообщения. Этот тип сообщений должен входить в контракты служб, используемых этими диалогами. Эти контракты должны позволять отправить сообщение данного типа с этой стороны диалога. Например, целевые службы диалогов могут отправлять только сообщения, отмеченные в контракте как SENT BY TARGET или SENT BY ANY. Если это предложение пропущено, то сообщение принадлежит к типу сообщений DEFAULT.  
   
 *message_body_expression*  
-Содержит выражение, представляющее тело сообщения. Выражение *message_body_expression* является необязательным. Однако если аргумент *message_body_expression* указан, то выражение должно иметь тип, преобразуемый в тип **varbinary(max)**. Выражение не может иметь значение NULL. Если это предложение не указано, то тело сообщения пустое.  
+Содержит выражение, представляющее тело сообщения. Выражение *message_body_expression* является необязательным. Однако если аргумент *message_body_expression* указан, то выражение должно иметь тип, преобразуемый в тип **varbinary(max)** . Выражение не может иметь значение NULL. Если это предложение не указано, то тело сообщения пустое.  
   
 ## <a name="remarks"></a>Remarks  
   
@@ -97,7 +97,7 @@ SEND — это атомарная инструкция. Если с помощ
 Для отправки сообщения у текущего пользователя должно быть разрешение RECEIVE для очереди в каждой из служб, которые отправляют сообщение.  
   
 ## <a name="examples"></a>Примеры  
-В этом примере инициируется диалог и отправляется XML-сообщение. Чтобы отправить сообщение, в примере выполняется преобразование XML-объекта в тип **varbinary(max)**.  
+В этом примере инициируется диалог и отправляется XML-сообщение. Чтобы отправить сообщение, в примере выполняется преобразование XML-объекта в тип **varbinary(max)** .  
   
 ```sql
 DECLARE @dialog_handle UNIQUEIDENTIFIER,  

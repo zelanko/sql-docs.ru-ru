@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 38e4aa10089bcd96f0285d2e18cf763f31f45d7b
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582908"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "64478771"
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>Руководство. Использование службы хранилища BLOB-объектов Azure с SQL Server 2016
 
@@ -45,7 +45,7 @@ ms.locfileid: "59582908"
 
 [!INCLUDE[Freshness](../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
-## <a name="1---create-stored-access-policy-and-shared-access-storage"></a>1. Создание хранимой политики доступа и хранилища с общим доступом
+## <a name="1---create-stored-access-policy-and-shared-access-storage"></a>1\. Создание хранимой политики доступа и хранилища с общим доступом
 
 В этом разделе вы примените скрипт [Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/), чтобы создать подписанный URL-адрес для контейнера BLOB-объектов Azure с помощью хранимой политики доступа.  
   
@@ -133,7 +133,7 @@ ms.locfileid: "59582908"
 3.  По завершении выполнения скрипта инструкция CREATE CREDENTIAL будет находиться в буфере обмена для использования в следующем разделе.  
 
 
-## <a name="2---create-a-sql-server-credential-using-a-shared-access-signature"></a>2. Создание учетных данных SQL Server с помощью подписанного URL-адреса
+## <a name="2---create-a-sql-server-credential-using-a-shared-access-signature"></a>2\. Создание учетных данных SQL Server с помощью подписанного URL-адреса
 
 В этом разделе вы создадите учетные данные для хранения сведений о безопасности, которые SQL Server будет использовать для записи в контейнер Azure, созданный на предыдущем шаге, и чтения из этого контейнера.  
   
@@ -178,7 +178,7 @@ ms.locfileid: "59582908"
   
 7.  Повторите шаги 5 и 6 для дополнительных экземпляров SQL Server, которые должны иметь доступ к контейнеру Azure.  
 
-## <a name="3---database-backup-to-url"></a>3. Резервное копирование базы данных по URL-адресу
+## <a name="3---database-backup-to-url"></a>3\. Резервное копирование базы данных по URL-адресу
 
 В этом разделе вы выполните резервное копирование базы данных AdventureWorks2016, размещенной в локальном экземпляре SQL Server 2016, в контейнер Azure, созданный в [разделе 1](#1---create-stored-access-policy-and-shared-access-storage).
   
@@ -210,7 +210,7 @@ ms.locfileid: "59582908"
    ![Подключение к учетной записи хранения Azure](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/connect-to-azure-storage.png)
 
 
-## <a name="4----restore-database-to-virtual-machine-from-url"></a>4. Восстановление базы данных на виртуальной машине по URL-адресу
+## <a name="4----restore-database-to-virtual-machine-from-url"></a>4\. Восстановление базы данных на виртуальной машине по URL-адресу
 
 В этом разделе вы восстановите базу данных AdventureWorks2016 в экземпляр SQL Server 2016 на виртуальной машине Azure.
   
@@ -247,7 +247,7 @@ ms.locfileid: "59582908"
   
    ![Файлы данных в контейнере Azure](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/data-files-in-container.png)
 
-## <a name="5---backup-database-using-file-snapshot-backup"></a>5. Резервное копирование базы данных с помощью резервного копирования моментальных снимков файлов
+## <a name="5---backup-database-using-file-snapshot-backup"></a>5\. Резервное копирование базы данных с помощью резервного копирования моментальных снимков файлов
 
 В этом разделе вы выполните резервное копирование базы данных AdventureWorks2016 с виртуальной машины Azure с помощью резервной копии моментального снимка файлов. Такой способ позволяет выполнять почти мгновенное резервное копирование с использованием моментальных снимков Azure. Дополнительные сведения о резервных копиях моментальных снимков файлов см. в разделе [Резервные копии моментальных снимков файлов для файлов базы данных в Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
   
@@ -287,7 +287,7 @@ ms.locfileid: "59582908"
   
     ![Резервная копия моментального снимка в Azure](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/snapshot-backup-on-azure.PNG)
 
-## <a name="6----generate-activity-and-backup-log-using-file-snapshot-backup"></a>6. Создание действия и журнала резервного копирования с помощью резервного копирования моментальных снимков файлов
+## <a name="6----generate-activity-and-backup-log-using-file-snapshot-backup"></a>6\. Создание действия и журнала резервного копирования с помощью резервного копирования моментальных снимков файлов
 
 В этом разделе вы создадите действие в базе данных AdventureWorks2016 и будете периодически создавать резервные копии журналов транзакций с помощью резервного копирования моментальных снимков файлов. Дополнительные сведения об использовании резервных копий моментальных снимков файлов см. в разделе [Резервные копии моментальных снимков файлов для файлов базы данных в Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
   
@@ -353,7 +353,7 @@ ms.locfileid: "59582908"
   
     ![Несколько моментальных снимков в контейнере Azure](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/tutorial-snapshots-in-container.png)
 
-## <a name="7---restore-a-database-to-a-point-in-time"></a>7. Восстановление базы данных на момент времени
+## <a name="7---restore-a-database-to-a-point-in-time"></a>7\. Восстановление базы данных на момент времени
 
 В этом разделе вы восстановите базу данных AdventureWorks2016 на определенный момент времени между двумя резервными копиями журнала транзакций.  
   
@@ -392,7 +392,7 @@ ms.locfileid: "59582908"
   
     ![18-thousand-rows.JPG](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/18-thousand-rows.png)
 
-## <a name="8----restore-as-new-database-from-log-backup"></a>8. Восстановление новой базы данных из резервной копии журнала
+## <a name="8----restore-as-new-database-from-log-backup"></a>8\. Восстановление новой базы данных из резервной копии журнала
 
 В этом разделе вы восстановите базу данных AdventureWorks2016 в виде новой базы данных из резервной копии журнала транзакций на основе моментального снимка файлов.  
   
@@ -426,7 +426,7 @@ ms.locfileid: "59582908"
   
     ![Контейнер Azure с файлами данных и журналов для новой базы данных](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/new-db-in-azure-container.png)
 
-## <a name="9---manage-backup-sets-and-file-snapshot-backups"></a>9. Управление резервными наборами данных и резервными копиями моментальных снимков файлов
+## <a name="9---manage-backup-sets-and-file-snapshot-backups"></a>9\. Управление резервными наборами данных и резервными копиями моментальных снимков файлов
 
 В этом разделе вы удалите резервный набор данных с помощью системной хранимой процедуры [sp_delete_backup (Transact-SQL)](../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md). Эта процедура удаляет файл резервной копии и моментальный снимок файла для каждого файла базы данных, связанного с резервным набором данных.  
   

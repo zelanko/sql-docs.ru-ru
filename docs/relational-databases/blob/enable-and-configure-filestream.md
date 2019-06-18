@@ -9,15 +9,18 @@ ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server], enabling
 ms.assetid: 78737e19-c65b-48d9-8fa9-aa6f1e1bce73
-manager: craigg
-ms.openlocfilehash: 6c01393866ae90c800afbbc7f55e5cb63bfb7554
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jroth
+ms.openlocfilehash: 9c2b248e89b3aa822de79dd26970931fea4aaebd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65094298"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66822812"
 ---
 # <a name="enable-and-configure-filestream"></a>Включение и настройка FILESTREAM
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Перед началом использования хранилища FILESTREAM его необходимо включить в экземпляре компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. В этом разделе описано, как включить FILESTREAM с помощью диспетчера конфигурации SQL Server.  
   
@@ -80,6 +83,7 @@ ms.locfileid: "65094298"
 |RAID 5|Нормальный|Нормальный|Высокая|Производительность лучше, чем у диска или JBOD, но хуже, чем у RAID 0 или RAID 5 с чередованием.|  
 |RAID 0|Высокая|Высокая|None||  
 |RAID 5 + чередование|Высокая|Высокая|Высокая|Самый дорогостоящий вариант.|  
+| &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
   
   
 ###  <a name="database"></a> Физическая структура базы данных  

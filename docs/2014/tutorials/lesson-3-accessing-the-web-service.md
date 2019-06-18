@@ -11,13 +11,13 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 09671f8880f9f7745359961d9c6c126a893d26a7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62653787"
 ---
-# <a name="lesson-3-accessing-the-web-service"></a>Урок 3. Доступ к веб-службы
+# <a name="lesson-3-accessing-the-web-service"></a>Урок 3. Доступ к веб-службе
   После добавления в проект ссылки на веб-службу сервера отчетов будет создан экземпляр класса-посредника этой веб-службы. Теперь можно получить доступ к методам веб-службы путем вызова методов класса-посредника. Когда приложение вызывает эти методы, код класса-посредника, сформированный средой [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , обеспечивает соединения между приложением и веб-службой.  
   
  Вначале нужно создать экземпляр класса-посредника веб-службы <xref:ReportService2010.ReportingService2010>. Затем с помощью класса-посредника нужно вызвать метод веб-службы <xref:ReportService2010.ReportingService2010.GetProperties%2A>. Вызов будет использован для получения имени и описания одного из образцов отчетов под названием Company Sales.  

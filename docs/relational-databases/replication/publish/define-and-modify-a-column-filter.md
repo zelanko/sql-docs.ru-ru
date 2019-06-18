@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b7998e54b8aecf99519dea2edb977279c6bb0005
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654262"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62508263"
 ---
 # <a name="define-and-modify-a-column-filter"></a>Определение или изменение фильтра столбцов
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "47654262"
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
  Определение фильтров столбцов выполняется на странице **Статьи** мастера создания публикации. Дополнительные сведения об использовании мастера создания публикации см. в статье [Создание публикации](../../../relational-databases/replication/publish/create-a-publication.md).  
   
- Определите и измените фильтры столбцов на странице **Статьи** диалогового окна **Свойства публикации — \<публикация>**. Дополнительные сведения об изменении свойств публикаций и статей см. в [этой статье](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+ Определите и измените фильтры столбцов на странице **Статьи** диалогового окна **Свойства публикации — \<публикация>** . Дополнительные сведения об изменении свойств публикаций и статей см. в [этой статье](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
 #### <a name="to-define-a-column-filter"></a>Определение фильтра столбцов  
   
@@ -58,7 +58,7 @@ ms.locfileid: "47654262"
   
 #### <a name="to-modify-column-filtering"></a>Изменение параметров фильтрации столбцов  
   
-1.  На странице **Статьи** диалогового окна **Свойства публикации — \<публикация>**, на панели **Объекты для публикации** разверните таблицу, которую хотите отфильтровать.  
+1.  На странице **Статьи** диалогового окна **Свойства публикации — \<публикация>** , на панели **Объекты для публикации** разверните таблицу, которую хотите отфильтровать.  
   
 2.  Снимите флажки рядом со столбцами, которые необходимо отфильтровать, и проверьте, чтобы были установлены флажки для столбцов, которые должны быть включены в статью.  
   
@@ -76,17 +76,17 @@ ms.locfileid: "47654262"
   
 2.  На издателе в базе данных публикации выполните хранимую процедуру [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md). Столбцы для включения в статью или удаления из нее будут определены.  
   
-    -   При публикации нескольких столбцов из таблицы с большим числом столбцов выполните хранимую процедуру [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) один раз для каждого добавляемого столбца. Укажите имя столбца в параметре **@column** и значение **add** в параметре **@operation**.  
+    -   При публикации нескольких столбцов из таблицы с большим числом столбцов выполните хранимую процедуру [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) один раз для каждого добавляемого столбца. Укажите имя столбца в параметре **@column** и значение **add** в параметре **@operation** .  
   
-    -   При публикации большинства столбцов таблицы с большим числом столбцов выполните хранимую процедуру [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md), указав значение **NULL** в параметре **@column** и значение **add** в параметре **@operation** , чтобы добавить все столбцы. Затем выполните хранимую процедуру [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)один раз для каждого исключаемого столбца, указав значение **drop** в параметре **@operation** и имя исключаемого столбца в параметре **@column**.  
+    -   При публикации большинства столбцов таблицы с большим числом столбцов выполните хранимую процедуру [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md), указав значение **NULL** в параметре **@column** и значение **add** в параметре **@operation** , чтобы добавить все столбцы. Затем выполните хранимую процедуру [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)один раз для каждого исключаемого столбца, указав значение **drop** в параметре **@operation** и имя исключаемого столбца в параметре **@column** .  
   
-3.  В базе данных публикации на издателе выполните процедуру [sp_articleview](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md). Укажите имя публикации в параметре **@publication** , а имя отфильтрованной статьи — в параметре **@article**. Будут созданы объекты синхронизации для отфильтрованной статьи.  
+3.  В базе данных публикации на издателе выполните процедуру [sp_articleview](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md). Укажите имя публикации в параметре **@publication** , а имя отфильтрованной статьи — в параметре **@article** . Будут созданы объекты синхронизации для отфильтрованной статьи.  
   
 #### <a name="to-change-a-column-filter-to-include-additional-columns-for-an-article-published-in-a-snapshot-or-transactional-publication"></a>Изменение фильтра столбца с целью включения дополнительных столбцов в статью, опубликованную в публикации моментальных снимков или публикации транзакций  
   
-1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) один раз для каждого добавляемого столбца. Укажите имя столбца в параметре **@column** и значение **add** в параметре **@operation**.  
+1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) один раз для каждого добавляемого столбца. Укажите имя столбца в параметре **@column** и значение **add** в параметре **@operation** .  
   
-2.  В базе данных публикации на издателе выполните процедуру [sp_articleview](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md). Укажите имя публикации в параметре **@publication** , а имя отфильтрованной статьи — в параметре **@article**. Если у публикации есть существующие подписки, укажите в параметре **@change_active** в параметре **@change_active**. Объекты синхронизации для отфильтрованной статьи при этом будут повторно созданы.  
+2.  В базе данных публикации на издателе выполните процедуру [sp_articleview](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md). Укажите имя публикации в параметре **@publication** , а имя отфильтрованной статьи — в параметре **@article** . Если у публикации есть существующие подписки, укажите в параметре **@change_active** в параметре **@change_active** . Объекты синхронизации для отфильтрованной статьи при этом будут повторно созданы.  
   
 3.  Чтобы сформировать обновленный моментальный снимок, перезапустите задание агента моментальных снимков для публикации.  
   
@@ -94,9 +94,9 @@ ms.locfileid: "47654262"
   
 #### <a name="to-change-a-column-filter-to-remove-columns-for-an-article-published-in-a-snapshot-or-transactional-publication"></a>Изменение фильтра столбца с целью удаления столбцов из статьи, опубликованной в публикации моментальных снимков или публикации транзакций  
   
-1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) один раз для каждого удаляемого столбца. Укажите имя столбца в параметре **@column** и значение **drop** в параметре **@operation**.  
+1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) один раз для каждого удаляемого столбца. Укажите имя столбца в параметре **@column** и значение **drop** в параметре **@operation** .  
   
-2.  В базе данных публикации на издателе выполните процедуру [sp_articleview](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md). Укажите имя публикации в параметре **@publication** , а имя отфильтрованной статьи — в параметре **@article**. Если у публикации есть существующие подписки, укажите в параметре **@change_active** в параметре **@change_active**. Объекты синхронизации для отфильтрованной статьи при этом будут повторно созданы.  
+2.  В базе данных публикации на издателе выполните процедуру [sp_articleview](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md). Укажите имя публикации в параметре **@publication** , а имя отфильтрованной статьи — в параметре **@article** . Если у публикации есть существующие подписки, укажите в параметре **@change_active** в параметре **@change_active** . Объекты синхронизации для отфильтрованной статьи при этом будут повторно созданы.  
   
 3.  Чтобы сформировать обновленный моментальный снимок, перезапустите задание агента моментальных снимков для публикации.  
   
@@ -108,13 +108,13 @@ ms.locfileid: "47654262"
   
 2.  На издателе в базе данных публикации выполните хранимую процедуру [sp_mergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md). Столбцы для включения в статью или удаления из нее будут определены.  
   
-    -   При публикации нескольких столбцов таблицы с большим числом столбцов выполните хранимую процедуру [sp_mergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) один раз для каждого добавляемого столбца. Укажите имя столбца в параметре **@column** и значение **add** в параметре **@operation**.  
+    -   При публикации нескольких столбцов таблицы с большим числом столбцов выполните хранимую процедуру [sp_mergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) один раз для каждого добавляемого столбца. Укажите имя столбца в параметре **@column** и значение **add** в параметре **@operation** .  
   
-    -   При публикации большинства столбцов таблицы с большим числом столбцов выполните хранимую процедуру [sp_mergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md), указав значение **NULL** в параметре **@column** и значение **add** в параметре **@operation** , чтобы добавить все столбцы. Затем выполните хранимую процедуру [sp_mergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md)один раз для каждого исключаемого столбца, указав значение **drop** в параметре **@operation** и имя исключаемого столбца в параметре **@column**.  
+    -   При публикации большинства столбцов таблицы с большим числом столбцов выполните хранимую процедуру [sp_mergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md), указав значение **NULL** в параметре **@column** и значение **add** в параметре **@operation** , чтобы добавить все столбцы. Затем выполните хранимую процедуру [sp_mergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md)один раз для каждого исключаемого столбца, указав значение **drop** в параметре **@operation** и имя исключаемого столбца в параметре **@column** .  
   
 #### <a name="to-change-a-column-filter-to-include-additional-columns-for-an-article-published-in-a-merge-publication"></a>Изменение фильтра столбца с целью включения дополнительных столбцов в статью, опубликованную в публикации слиянием  
   
-1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_mergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) один раз для каждого добавляемого столбца. Укажите имя столбца в параметре **@column**, значение **add** в параметре **@operation** и значение **@change_active** как в параметре **@force_invalidate_snapshot** , так и в параметре **@force_reinit_subscription**.  
+1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_mergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) один раз для каждого добавляемого столбца. Укажите имя столбца в параметре **@column** , значение **add** в параметре **@operation** и значение **@change_active** как в параметре **@force_invalidate_snapshot** , так и в параметре **@force_reinit_subscription** .  
   
 2.  Чтобы сформировать обновленный моментальный снимок, перезапустите задание агента моментальных снимков для публикации.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "47654262"
   
 #### <a name="to-change-a-column-filter-to-remove-columns-for-an-article-published-in-a-merge-publication"></a>Изменение фильтра столбца с целью удаления столбцов из статьи, опубликованной в публикации слиянием  
   
-1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_mergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) один раз для каждого удаляемого столбца. Укажите имя столбца в параметре **@column**, значение **drop** в параметре **@operation** и значение **@change_active** как в параметре **@force_invalidate_snapshot** , так и в параметре **@force_reinit_subscription**.  
+1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_mergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) один раз для каждого удаляемого столбца. Укажите имя столбца в параметре **@column** , значение **drop** в параметре **@operation** и значение **@change_active** как в параметре **@force_invalidate_snapshot** , так и в параметре **@force_reinit_subscription** .  
   
 2.  Чтобы сформировать обновленный моментальный снимок, перезапустите задание агента моментальных снимков для публикации.  
   

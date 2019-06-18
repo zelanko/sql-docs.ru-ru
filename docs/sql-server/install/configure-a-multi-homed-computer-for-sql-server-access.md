@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3e20ed69a9fdff95914dd0d5086e3c0774421d44
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599952"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62671740"
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>Настройка многосетевого компьютера для доступа к SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -68,9 +68,9 @@ ms.locfileid: "47599952"
   
 #### <a name="to-determine-the-ip-addresses-and-ports-used-by-includessnoversionincludesssnoversion-mdmd"></a>Определение IP-адресов и портов, используемых [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
-1.  Нажмите кнопку **Пуск**, последовательно наведите указатель на пункты **Все программы**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Средства настройки** и выберите пункт **Диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**.  
+1.  Нажмите кнопку **Пуск**, последовательно наведите указатель на пункты **Все программы**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Средства настройки** и выберите пункт **Диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** .  
   
-2.  В области консоли **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Диспетчер конфигурации** разверните узел **Сетевая конфигурация[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**, затем **Протоколы для \<имя экземпляра>**, и дважды щелкните **TCP/IP**.  
+2.  В области консоли **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Диспетчер конфигурации** разверните узел **Сетевая конфигурация[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** , затем **Протоколы для \<имя экземпляра>** , и дважды щелкните **TCP/IP**.  
   
 3.  В диалоговом окне **Свойства TCP/IP** на вкладке **IP-адреса** появится несколько IP-адресов в формате **IP1**, **IP2**до **IPAll**. Одним из приведенных IP-адресов является адрес адаптера заглушки 127.0.0.1. Для каждого IP-адреса, настроенного на компьютере, появятся дополнительные IP-адреса.  
   

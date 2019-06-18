@@ -15,11 +15,11 @@ ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0f19be799e47d734b2d645bdf5885a234fd6feb3
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973803"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62716263"
 ---
 # <a name="set-the-service-account-for-the-full-text-filter-daemon-launcher"></a>Настройка учетной записи службы средства запуска управляющей программы полнотекстовой фильтрации
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "57973803"
   
 1.  В меню **Пуск** наведите указатель мыши на пункт **Все программы**, разверните [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], а затем щелкните **Диспетчер конфигурации SQL Server 2016**.  
   
-2.  В окне **Диспетчер конфигурации SQL Server**щелкните **Службы SQL Server**, щелкните правой кнопкой мыши элемент **Программа запуска управляющей программы полнотекстовой фильтрации (SQL) (**_имя экземпляра_**)**, а затем выберите пункт **Свойства**.  
+2.  В окне **Диспетчер конфигурации SQL Server**щелкните **Службы SQL Server**, щелкните правой кнопкой мыши элемент **Программа запуска управляющей программы полнотекстовой фильтрации (SQL) (** _имя экземпляра_ **)** , а затем выберите пункт **Свойства**.  
   
 3.  Перейдите на вкладку **Вход** диалогового окна, а затем выберите или введите учетную запись для процессов, которые запускаются службой запуска управляющей программы полнотекстовой фильтрации SQL.  
   
