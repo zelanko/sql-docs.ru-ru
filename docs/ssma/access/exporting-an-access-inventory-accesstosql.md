@@ -20,10 +20,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: f35ae03cb6588bc7828349dd4a4beafcc5a7b2f3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62760830"
 ---
 # <a name="exporting-an-access-inventory-accesstosql"></a>Экспорт инвентаризации Access (AccessToSQL)
@@ -103,7 +103,7 @@ SSMA экспортирует метаданные о доступа баз да
   
 2.  В диалоговом окне подключения введите или выберите имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-    -   Если вы подключаетесь к экземпляру по умолчанию на локальном компьютере, можно ввести **localhost** или точку (**.**).  
+    -   Если вы подключаетесь к экземпляру по умолчанию на локальном компьютере, можно ввести **localhost** или точку ( **.** ).  
   
     -   Если вы подключаетесь к экземпляру по умолчанию на другом компьютере, введите имя компьютера.  
   

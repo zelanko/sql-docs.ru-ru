@@ -15,19 +15,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e5a43918612c24a6c2d7a0b39c89dacc3edc4ed6
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58509641"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62704273"
 ---
 # <a name="wildcard-components-and-content-validation"></a>Компоненты-шаблоны и проверка достоверности содержимого
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   Компоненты-шаблоны используются для увеличения гибкости в том, в чем это разрешено для модели содержимого. Эти компоненты поддерживаются в языке XSD следующими способами.  
   
--   Компоненты-шаблоны элемента. Они представлены элементом **\<<xsd:any>**.  
+-   Компоненты-шаблоны элемента. Они представлены элементом **\<<xsd:any>** .  
   
--   Компоненты-шаблоны атрибута. Они представлены элементом **\<<xsd:anyAttribute>**.  
+-   Компоненты-шаблоны атрибута. Они представлены элементом **\<<xsd:anyAttribute>** .  
   
  Оба элемента-шаблона — **\<xsd:any>** и **\<xsd:anyAttribute>**  — поддерживают использование атрибута **processContents**. Это позволяет задать значение, указывающее, как приложения XML обрабатывают проверку правильности содержимого документа, связанную с этими элементами символа-шаблона. Они являются различными значениями, и их действие заключается в следующем.  
   

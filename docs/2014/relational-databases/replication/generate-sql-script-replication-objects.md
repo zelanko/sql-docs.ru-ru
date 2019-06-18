@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2585452ee31c911ea6e288effc3e5e91fff88a64
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721267"
 ---
 # <a name="generate-sql-script-replication-objects"></a>Диалоговое окно «Формирование скрипта SQL» (объекты репликации)
@@ -26,7 +26,7 @@ ms.locfileid: "62721267"
   
 -   **Формирование скрипта SQL**, доступ к которому осуществляется из контекстного меню папки **Репликация** и всех ее вложенных папок в среде [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. С помощью этого диалогового окна в скрипт можно помещать все объекты репликации экземпляра [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   **Формирование скрипта SQL \<имя_объекта>**, доступ к которому осуществляется из контекстного меню публикаций и подписок. С помощью этого диалогового окна в скрипт можно помещать отдельные объекты.  
+-   **Формирование скрипта SQL \<имя_объекта>** , доступ к которому осуществляется из контекстного меню публикаций и подписок. С помощью этого диалогового окна в скрипт можно помещать отдельные объекты.  
   
  Эти диалоговые окна позволяют формировать скрипты с объектами на одном экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], не осуществляют соединения с другими экземплярами для использования в скриптах связанных объектов.  
   

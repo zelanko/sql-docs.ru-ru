@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f078caae791e4009a309e7cc70d7af333ca4c90f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62919558"
 ---
 # <a name="disallowed-types-and-members-in-systemcoredll"></a>Недопустимые типы и элементы в библиотеке System.Core.dll
@@ -115,7 +115,7 @@ ms.locfileid: "62919558"
 |System.Diagnostics.PerformanceData.CounterSetInstanceCounterDataSet|MayLeakOnAbort|  
 |System.Diagnostics.PerformanceData.CounterSet|MayLeakOnAbort|  
 |System.Diagnostics.PerformanceData.CounterSetInstance|MayLeakOnAbort|  
-|System.Collections.Generic.HashSet'1| MayLeakOnAbort|  
+|System.Collections.Generic.HashSet`1|MayLeakOnAbort|  
 |System.IO.Pipes.PipeStream|MayLeakOnAbort|  
 |System.IO.Pipes.AnonymousPipeServerStream|MayLeakOnAbort|  
 |System.IO.Pipes.AnonymousPipeClientStream|MayLeakOnAbort|  

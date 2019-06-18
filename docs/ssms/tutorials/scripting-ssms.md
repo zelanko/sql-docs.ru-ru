@@ -1,5 +1,5 @@
 ---
-Title: 'Tutorial: Script objects in SQL Server Management Studio'
+title: Руководство. Создание скриптов для объектов в среде SQL Server Management Studio
 description: Учебник по созданию скриптов для объектов в SSMS
 keywords: SQL Server, SSMS, SQL Server Management Studio, скрипты, написание скриптов
 author: MashaMSFT
@@ -20,14 +20,15 @@ helpviewer_keywords:
 - solutions [SQL Server Management Studio], tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.openlocfilehash: ce0ffdaa26e0ca48eef710f8368b8cb2b0c92191
-ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
+ms.openlocfilehash: b3a9bdd7735d7a1573567ca06076f83d400775c4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56662828"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67140619"
 ---
-# <a name="tutorial-script-objects-in-sql-server-management-studio"></a>Учебник. Создание скриптов для объектов в среде SQL Server Management Studio
+# <a name="tutorial-script-objects-in-sql-server-management-studio"></a>Руководство. Создание скриптов для объектов в среде SQL Server Management Studio
+
 В этом учебнике вы научитесь создавать скрипты Transact-SQL (T-SQL) для различных объектов, доступных в SQL Server Management Studio (SSMS). В нем приводятся примеры создания скриптов для следующих объектов:
 
 > [!div class="checklist"]
@@ -197,6 +198,6 @@ ms.locfileid: "56662828"
 
 Дополнительные сведения см. в следующей статье:
 > [!div class="nextstepaction"]
-> [Следующие шаги](templates-ssms.md)
+> [Следующие шаги](ssms-configuration.md)
 
 

@@ -25,11 +25,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2197039cd6517e27fef9711e56607418add0003e
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58512351"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62935881"
 ---
 # <a name="openxml-sql-server"></a>Инструкция OPENXML (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -166,11 +166,11 @@ EXEC sp_xml_removedocument @docHandle;
   
  Сопоставление может быть указано двумя способами, в том числе и обоими сразу:  
   
--   Используя аргумент *flags*   
+-   Используя аргумент *flags*  
   
      Указание сопоставления посредством аргумента *flags* предполагает соответствие имен, в котором узлы XML сопоставляются с соответствующими столбцами набора строк, имеющими то же имя.  
   
--   Используя аргумент *ColPattern*   
+-   Используя аргумент *ColPattern*  
   
      *ColPattern*, выражение XPath, указывается как часть *SchemaDeclaration* в предложении WITH. Сопоставлением, указанным в *ColPattern* , перекрывается сопоставление, указанное аргументом *flags* .  
   

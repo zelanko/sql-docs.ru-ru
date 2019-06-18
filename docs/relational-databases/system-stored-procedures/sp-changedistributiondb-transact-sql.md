@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2966a784f647d402b849d5899b76b0614122b932
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62997053"
 ---
 # <a name="spchangedistributiondb-transact-sql"></a>sp_changedistributiondb (Transact-SQL)
@@ -51,7 +51,7 @@ sp_changedistributiondb [ @database= ] 'database'
 |**min_distretention**|Минимальный срок хранения распространения.|  
 |NULL (по умолчанию)|Все доступные *свойство* выводятся значения.|  
   
-`[ @value = ] 'value'` — Это новое значение для указанного свойства. *значение* — **nvarchar(255)**, значение по умолчанию NULL.  
+`[ @value = ] 'value'` — Это новое значение для указанного свойства. *значение* — **nvarchar(255)** , значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
