@@ -9,14 +9,14 @@ helpviewer_keywords:
 - formats [Reporting Services], rendering extensions
 - rendering extensions [Reporting Services], about extensions
 ms.assetid: 909356a0-4709-43e5-b597-33bd9bb22882
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b727b8ff0bdfcca2af46cf1df56b5080c0a56215
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: c411048c247224f0d1af95329480f24d9b6ccdad
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50027953"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63193882"
 ---
 # <a name="rendering-extensions-overview"></a>Общие сведения о модулях подготовки отчетов
   Модуль подготовки отчетов – это компонент или модуль сервера отчетов, преобразующий данные отчета и сведения о макете в формат, определяемый устройством отображения. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] включает в себя семь модулей подготовки отчетов: HTML, Excel, Word, CSV или текст, XML, изображения и PDF. Можно создать дополнительные модули подготовки для создания отчетов в других форматах.  
@@ -31,7 +31,7 @@ ms.locfileid: "50027953"
 |**XML**|Отчет подготавливается в формате XML. Отчет будет открываться в веб-браузере. Применение дополнительных преобразований к данному выходному формату XML может быть эффективнее разработки собственного модуля подготовки отчетов.|  
 |**CSV**|Отчет подготавливается в формате с разделителями-запятыми. Отчет открывается в средстве просмотра, связанном с файлами CSV.|  
 |**IMAGE**|Отчет подготавливается в формате для печати. В раскрывающемся списке "Экспорт" панели инструментов отчета формат представлен как **TIFF**.|  
-|**PDF**|Отчет подготавливается в формате Adobe Acrobat Reader. В раскрывающемся списке "Экспорт" панели инструментов отчета формат представлен как **Файл Acrobat (PDF)**.|  
+|**PDF**|Отчет подготавливается в формате Adobe Acrobat Reader. В раскрывающемся списке "Экспорт" панели инструментов отчета формат представлен как **Файл Acrobat (PDF)** .|  
 |**EXCEL**|Отчет подготавливается в формате [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)].|  
 |**WORD**|Отчет подготавливается в формате [!INCLUDE[ofprword](../../../includes/ofprword-md.md)].|  
 |**HTML 4.0** (часть модуля подготовки отчетов в формате HTML)|Формат HTML применяется для первоначальной подготовки отчета. Если браузер поддерживает стандарт HTML 4.0, то используется этот формат. В противном случае используется стандарт HTML 3.2.|  

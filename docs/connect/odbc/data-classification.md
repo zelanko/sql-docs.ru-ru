@@ -14,11 +14,11 @@ author: v-makouz
 ms.author: v-makouz
 manager: kenvh
 ms.openlocfilehash: 0d010bcfc74011cb0e7e2864aeff97e65bf16203
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211493"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62637452"
 ---
 # <a name="data-classification"></a>Классификация данных
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "53211493"
 
 Дополнительные сведения о том, как назначить классификации со столбцами, см. в разделе [SQL данных обнаружения и классификации](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-2017).
 
-17.2 драйвера Microsoft ODBC позволяет извлекать эти метаданные с помощью функции SQLGetDescField, с помощью параметров идентификатор поля SQL_CA_SS_DATA_CLASSIFICATION.
+17\.2 драйвера Microsoft ODBC позволяет извлекать эти метаданные с помощью функции SQLGetDescField, с помощью параметров идентификатор поля SQL_CA_SS_DATA_CLASSIFICATION.
 
 ## <a name="format"></a>Формат
 SQLGetDescField имеет следующий синтаксис:
@@ -79,7 +79,7 @@ SQLRETURN SQLGetDescField(
 
  `nn nn [n sensitivityprops]`
 
-Для каждого столбца *(c)*, *n* 4-байтовое *`sensitivityprops`* присутствуют:
+Для каждого столбца *(c)* , *n* 4-байтовое *`sensitivityprops`* присутствуют:
 
  `ss ss tt tt`
 

@@ -15,10 +15,10 @@ ms.assetid: 2144c020-3253-4b47-8cda-e14c928bb471
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 1622da633dca63eb5ddf8bef0dc46e71e3db850b
-ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65619612"
 ---
 # <a name="grant-user-access-to-a-report-server"></a>Предоставление пользователям доступа к серверу отчетов
@@ -76,7 +76,7 @@ ms.locfileid: "65619612"
 
 1. Откройте **веб-портал** и найдите элемент отчета, для которого необходимо добавить пользователя или группу.
 
-2. Щелкните многоточие (**...**) на элементе.
+2. Щелкните многоточие ( **...** ) на элементе.
 
 3. В раскрывающемся меню выберите пункт **Управление**.
 

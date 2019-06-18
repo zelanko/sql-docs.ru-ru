@@ -8,14 +8,14 @@ ms.topic: reference
 helpviewer_keywords:
 - ReportViewer controls
 ms.assetid: 4c200f36-4012-4108-8095-370b426ccf8d
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: dcd5aab378463274c8856241a948360c9ec2f72e
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: eb7c8687d1fa873c3439288a138f2d8af3778eee
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813037"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63194790"
 ---
 # <a name="using-the-webforms-reportviewer-control"></a>Использование элемента управления WebForms ReportViewer
   Для просмотра отчетов, развернутых на сервере отчетов, и отчетов, существующих в локальной файловой системе, можно использовать элемент управления WebForms ReportViewer для подготовки отчетов к просмотру в веб-приложении.  

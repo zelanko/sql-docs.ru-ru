@@ -8,10 +8,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 1fb9daa74abd547f23bc78e76b8c0840e9c54af5
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64775774"
 ---
 # <a name="install-the-first-report-server-in-sharepoint-mode"></a>Установка первого сервера отчетов в режиме интеграции с SharePoint
@@ -116,7 +116,7 @@ ms.locfileid: "64775774"
   
      Выберите **Далее**.  
 
-5.  Рекомендуется выбрать параметр **Использовать Центр обновления Майкрософт для проверки наличия обновлений (рекомендуется)**. Водить описание не обязательно.
+5.  Рекомендуется выбрать параметр **Использовать Центр обновления Майкрософт для проверки наличия обновлений (рекомендуется)** . Водить описание не обязательно.
   
      Выберите **Далее**.   
   

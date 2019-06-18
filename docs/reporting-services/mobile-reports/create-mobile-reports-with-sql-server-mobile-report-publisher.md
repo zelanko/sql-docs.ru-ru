@@ -8,14 +8,14 @@ ms.technology: mobile-reports
 ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: a5a8dbf6-4c3a-435d-8188-d6656c32f229
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ce369a5652e2fe45335a49b6df3d3fc48dd9caf0
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 51708fc41bb154fcf67ac3a21bd6680c69e2f2c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295052"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63200533"
 ---
 # <a name="create-mobile-reports-with-sql-server-mobile-report-publisher"></a>Создание мобильных отчетов с помощью издателя мобильных отчетов SQL Server
 Ознакомьтесь со сведениями о мобильных отчетах [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , оптимизированных для мобильных устройств, подключенных к локальным данным и содержащих различные визуализации данных. 
@@ -36,10 +36,10 @@ ms.locfileid: "56295052"
 Эти статьи помогут вам приступить к работе.
 -  Загрузить [издатель мобильных отчетов SQL Server](https://go.microsoft.com/fwlink/?LinkID=733527)  
 -  [Создание мобильных отчетов Reporting Services](../../reporting-services/mobile-reports/create-a-reporting-services-mobile-report.md)  
--  [Пошаговое руководство. Создание мобильных отчетов и определение ключевых показателей эффективности в SQL Server Reporting Services](https://christopherfinlan.com/2015/12/21/how-to-create-mobile-reports-and-kpis-in-sql-server-reporting-services-2016-an-end-to-end-walkthrough/) (статья в блоге Кристофера Финлана (Christopher Finlan))  
-- [Использование подхода "сначала конструирование" или "сначала данные"](../../reporting-services/mobile-reports/design-first-or-data-first-when-creating-in-reporting-services-mobile-reports.md): Вы можете выбрать, на основе каких данных будет спроектирован ваш отчет: смоделированных или собственных.  
-- [Данные для мобильных отчетов Reporting Services](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md). Используйте данные из общих наборов данных или подготавливайте данные из книг Excel для включения в мобильные отчеты.
-- [How data refresh works in mobile reports and KPIs in Reporting Services](https://christopherfinlan.com/2016/02/10/so-refreshinghow-data-refresh-works-with-mobile-reports-and-kpis-in-reporting-services/) (Как происходит обновление данных мобильных отчетов и ключевых показателей эффективности в службах Reporting Services) (статья в блоге Кристофера Финлана (Christopher Finlan)): читайте о настройке кэширования для общих наборов данных, а также о том, как указать, как часто данные обновляются, и повысить производительность отчетов.
+-  [Пошаговое руководство. Создание мобильных отчетов и определение ключевых показателей эффективности в SQL Server Reporting Services](https://christopherfinlan.com/2015/12/21/how-to-create-mobile-reports-and-kpis-in-sql-server-reporting-services-2016-an-end-to-end-walkthrough/) (Статья блога Кристофера Финлана (Christopher Finlan))  
+- [Design first, or data first](../../reporting-services/mobile-reports/design-first-or-data-first-when-creating-in-reporting-services-mobile-reports.md)(Проектирование отчетов на основе смоделированных или собственных данных). Вы можете выбрать, на основе каких данных будет спроектирован ваш отчет: смоделированных или собственных.  
+- [Data for Reporting Services mobile reports](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)(Данные для мобильных отчетов служб Reporting Services). Используйте данные из общих наборов данных или подготавливайте данные из книг Excel для включения в мобильные отчеты.
+- [How data refresh works in mobile reports and KPIs in Reporting Services](https://christopherfinlan.com/2016/02/10/so-refreshinghow-data-refresh-works-with-mobile-reports-and-kpis-in-reporting-services/) (Как происходит обновление данных мобильных отчетов и ключевых показателей эффективности в службах Reporting Services). Запись блога Кристофера Финлана (Christopher Finlan).
 - [Добавление визуализаций в мобильные отчеты](../../reporting-services/mobile-reports/add-visualizations-to-reporting-services-mobile-reports.md)
 - [Датчики в мобильных отчетах](../../reporting-services/mobile-reports/add-gauges-to-mobile-reports-reporting-services.md)
 - [Карты в мобильных отчетах](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)

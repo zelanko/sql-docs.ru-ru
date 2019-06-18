@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: 30d0a3fd-5588-417e-b25d-cc5b7624cdb1
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 9bf66cdaad2f0ad85ff0213bb0711723e6ed3d05
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 4b702c79ad5c80254595ef5c4ff440919a8482e1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291962"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63280725"
 ---
 # <a name="add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls"></a>Добавление детализации из мобильного отчета в другие мобильные отчеты или URL-адреса
 Детализацию по любому датчику, графику или сетке данных в мобильном отчете [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] можно добавить в любой другой мобильный отчет или пользовательский URL-адрес. 
@@ -26,7 +26,7 @@ ms.locfileid: "56291962"
 
 ![mobile-report-gauge-drill-through](../../reporting-services/mobile-reports/media/mobile-report-gauge-drill-through.png) 
 
->**Совет**. Для начала создайте целевой отчет и сохраните его на веб-портале [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]. Если вы планируете передавать параметры из исходного отчета, добавьте параметры и в целевой отчет. После этого вы сможете настроить детализацию из исходного отчета в целевой. [Добавьте параметры в мобильный отчет](../../reporting-services/mobile-reports/add-parameters-to-a-mobile-report-reporting-services.md).
+>**Совет**. Для начала создайте целевой отчет и сохраните его на веб-портале [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . Если вы планируете передавать параметры из исходного отчета, добавьте параметры и в целевой отчет. После этого вы сможете настроить детализацию из исходного отчета в целевой. [Добавьте параметры в мобильный отчет](../../reporting-services/mobile-reports/add-parameters-to-a-mobile-report-reporting-services.md).
  
 ## <a name="set-up-drillthrough-to-a-mobile-report"></a>Настройка детализации в мобильный отчет  
 

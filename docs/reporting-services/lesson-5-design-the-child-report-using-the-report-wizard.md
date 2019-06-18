@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 19a3f927-ea97-4f40-a5f8-cd5f2598e4da
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 579870246535bfdb01577b1f74f1c53f6f46685f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: da9f07cf60a2ec42e23416b52cbfebab78802247
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52404228"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62512648"
 ---
 # <a name="lesson-5-design-the-child-report-using-the-report-wizard"></a>Занятие 5. Проектирование родительского отчета с использованием мастера отчетов
 После создания подключения к данным и таблицы данных для дочернего отчета следующий шаг состоит в проектировании дочернего отчета в конструкторе отчетов с помощью мастера отчетов. Дополнительные сведения о конструкторе отчетов см. в разделе [Разработка отчетов с использованием конструктора отчетов (SSRS)](../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md).  
@@ -38,7 +38,7 @@ ms.locfileid: "52404228"
   
     1.  Перетащите элементы **ProductID**, **PurchaseOrderID**, **PurchaseOrderDetailID**, **OrderQty**, **ReceivedQty**, **RejectedQty**и **StockedQty** из области **Доступные поля** в поле **Значения** .  
   
-    2.  Щелкните стрелку рядом с элементами **Sum(ProductID)**, **Sum(PurchaseOrderID)**, **Sum(PurchaseOrderDetailID)**, **Sum(OrderQty)**, **Sum(ReceivedQty)**, **Sum(RejectedQty)** и **Sum(StockedQty)** и снимите выделение с **Sum** .  
+    2.  Щелкните стрелку рядом с элементами **Sum(ProductID)** , **Sum(PurchaseOrderID)** , **Sum(PurchaseOrderDetailID)** , **Sum(OrderQty)** , **Sum(ReceivedQty)** , **Sum(RejectedQty)** и **Sum(StockedQty)** и снимите выделение с **Sum** .  
   
 7.  Дважды нажмите кнопку **Далее** , а затем нажмите кнопку **Готово** , чтобы закрыть окно **Мастер отчетов**.  
   

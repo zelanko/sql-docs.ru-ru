@@ -24,10 +24,10 @@ ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 888d46c7c03b9665c64e54ddffed9d29c67afcad
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65579143"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>Примеры выражений (построитель отчетов и службы SSRS)
@@ -208,7 +208,7 @@ ms.locfileid: "65579143"
   
      Если текстовое поле содержит только дату или число, чтобы применить форматирование, лучше использовать свойство текстового поля Format, а не вызывать функцию **Format** в текстовом поле.  
   
--   Функции **Right**, **Len**и **InStr** полезны для извлечения подстроки, например имени пользователя из строк вида *ДОМЕН*\\*имя пользователя* . Следующее выражение возвращает часть строки параметра\\User *, расположенную справа от символа обратной косой черты (*).  
+-   Функции **Right**, **Len**и **InStr** полезны для извлечения подстроки, например имени пользователя из строк вида *ДОМЕН*\\*имя пользователя* . Следующее выражение возвращает часть строки параметра\\User *, расположенную справа от символа обратной косой черты (* ).  
   
     ```  
     =Right(Parameters!User.Value, Len(Parameters!User.Value) - InStr(Parameters!User.Value, "\"))  

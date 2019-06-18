@@ -12,10 +12,10 @@ ms.assetid: 05819637-729b-4cf6-82de-91a99f184ec6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2b2cb0ecbaf608a1dd7b11d610321fbc7e943334
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65582011"
 ---
 # <a name="add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs"></a>Добавление интерактивной сортировки в таблицу или матрицу (построитель отчетов и службы SSRS)
@@ -207,7 +207,7 @@ ms.locfileid: "65582011"
   
 16. В раскрывающемся списке **Группы**выберите имя нужной группы. Выражение этой группы автоматически принимает значение поля **Сортировать по** .  
   
-17. Выберите **Также применять эту сортировку к другим группам и областям данных в:**. Введите в текстовое поле имя набора данных, например «SalesData».  
+17. Выберите **Также применять эту сортировку к другим группам и областям данных в:** . Введите в текстовое поле имя набора данных, например «SalesData».  
   
 18. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

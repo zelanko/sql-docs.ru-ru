@@ -10,11 +10,11 @@ author: pensivebrian
 ms.author: broneill
 manager: craigg
 ms.openlocfilehash: 1204b3a4aabf4a170901154c656b5f84d05fda82
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527596"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63269919"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -36,7 +36,7 @@ ms.locfileid: "58527596"
   
 Программа командной строки **SqlPackage.exe** позволяет указывать эти действия вместе с соответствующими параметрами и свойствами.  
 
-**[Скачать последнюю версию](sqlpackage-download.md)**. Дополнительные сведения о последнем выпуске см. в разделе [заметки о выпуске](release-notes-sqlpackage.md).
+**[Скачать последнюю версию](sqlpackage-download.md)** . Подробнее см. в [заметках о выпуске](release-notes-sqlpackage.md).
   
 ## <a name="command-line-syntax"></a>Синтаксис командной строки
 

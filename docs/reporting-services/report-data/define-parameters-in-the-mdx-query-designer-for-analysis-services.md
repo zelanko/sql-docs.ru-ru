@@ -15,10 +15,10 @@ ms.assetid: 4ad1e5bc-f510-4752-b4f6-589e55317a90
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 02b9884d4f1f9d7928db80091c68678dbc55fa10
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65573656"
 ---
 # <a name="define-parameters-in-the-mdx-query-designer-for-analysis-services"></a>Определение параметров в конструкторе запросов многомерных выражений для служб Analysis Services
@@ -59,7 +59,7 @@ ms.locfileid: "65573656"
   
 3.  На панели инструментов в конструкторе запросов многомерных выражений нажмите кнопку **Параметры запроса** (![Значок диалогового окна "Параметры запроса"](../../reporting-services/report-data/media/iconqueryparameter.gif "Значок диалогового окно \"Параметры запроса\"")). Откроется диалоговое окно «Параметры запроса».  
   
-4.  В столбце **Параметр** щелкните **\<Введите параметр>**, а затем введите имя параметра.  
+4.  В столбце **Параметр** щелкните **\<Введите параметр>** , а затем введите имя параметра.  
   
 5.  В столбце **Измерение** выберите значение в раскрывающемся списке.  
   

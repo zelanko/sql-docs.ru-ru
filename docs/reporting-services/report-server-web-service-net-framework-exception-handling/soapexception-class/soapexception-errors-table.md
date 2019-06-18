@@ -8,14 +8,14 @@ ms.topic: reference
 helpviewer_keywords:
 - SoapException class
 ms.assetid: 3dbf1b5a-bd2a-4385-925d-5d095d72014c
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 2aec981adb3f0c1c71130dd1c60769ef89d3c6be
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 95427ddaa6d220afe3397a138f9b5baa085f324d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741412"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62991544"
 ---
 # <a name="soapexception-errors-table"></a>Таблица ошибок SoapException
   Сервер отчетов формирует ошибки и сообщения об ошибках в исключении SOAP на базе ошибок, которые возникают в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. В приведенной ниже таблице показаны ошибки, доступ к которым можно получить из методов с помощью исключения **SoapException** в веб-службе сервера отчетов. Таблица отсортирована по методам, активизирующим конкретное исключение.  

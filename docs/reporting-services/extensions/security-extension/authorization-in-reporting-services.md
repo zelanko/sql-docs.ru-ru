@@ -8,14 +8,14 @@ ms.topic: reference
 helpviewer_keywords:
 - authorization [Reporting Services]
 ms.assetid: 15fc1c7b-560c-4737-b126-e0d428a1b530
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: d1c0ea21bad3c3b34e6250ad1974a81848392e95
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 2210d5eb5997ec66e707a90cdc52dc24328e6f6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608912"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63193354"
 ---
 # <a name="authorization-in-reporting-services"></a>Авторизация в службах Reporting Services
   Авторизация является процессом определения, должен ли быть предоставлен идентификатору запрошенный тип доступа к конкретному ресурсу в базе данных сервера отчетов. Службы [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] используют архитектуру авторизации на основе ролей, которая предоставляет пользователю доступ к конкретному ресурсу на основании назначенной этому пользователю роли в данном приложении. Модули безопасности для служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] содержат реализацию компонента авторизации, который используется для предоставления доступа пользователям после прохождения ими проверки подлинности на сервере отчетов. Авторизация вызывается, когда пользователь пытается выполнить операцию в системе или на элементе сервера через API-интерфейс SOAP, либо посредством доступа по URL-адресу. Это стало возможным благодаря интерфейсу модуля безопасности **IAuthorizationExtension2**. Как указывалось выше, все развертываемые модули наследуют от базового интерфейса **IExtension** . Интерфейсы**IExtension** и **IAuthorizationExtension2** являются членами пространства имен **Microsoft.ReportingServices.Interfaces**.  
@@ -66,7 +66,7 @@ public bool CheckAccess(
  Дескрипторы безопасности создаются при помощи методов <xref:ReportService2010.ReportingService2010.SetPolicies%2A> и <xref:ReportService2010.ReportingService2010.SetSystemPolicies%2A> веб-службы.  
   
 ### <a name="authorization-flow"></a>Поток авторизации  
- Авторизация служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] управляется модулем безопасности, настроенным в настоящее время для выполнения на сервере. Авторизация основана на ролях и ограничена разрешениями и операциями, предоставляемыми архитектурой безопасности служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. На следующей диаграмме показан процесс авторизации пользователей для работы с элементами в базе данных сервера отчетов.  
+ Авторизация служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] управляется модулем безопасности, настроенным в настоящее время для выполнения на сервере. Авторизация основана на ролях и ограничена разрешениями и операциями, предоставляемыми архитектурой безопасности служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . На следующей диаграмме показан процесс авторизации пользователей для работы с элементами в базе данных сервера отчетов.  
   
  ![Поток авторизации служб Reporting Services](../../../reporting-services/extensions/security-extension/media/rosettasecurityextensionauthorizationflow.gif "Поток авторизации служб Reporting Services")  
   

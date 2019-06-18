@@ -11,10 +11,10 @@ ms.assetid: 27af5195-c845-40e0-9a9c-efe569424022
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5e134c81fd697d4aa6fc7e5b620c1a71ff462b73
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65573197"
 ---
 # <a name="configure-data-source-properties-for-a-paginated-report"></a>Настройка свойств источника данных для отчета с разбивкой на страницы
@@ -26,7 +26,7 @@ ms.locfileid: "65573197"
   
 1.  На веб-портале перейдите к отчету, для которого нужно настроить источник данных, связанный с отчетом.  
   
-3.  В правом верхнем углу нажмите кнопку с многоточием (**...** ) и выберите **Управление**.  
+3.  В правом верхнем углу нажмите кнопку с многоточием ( **...** ) и выберите **Управление**.  
   
 4.  Перейдите на вкладку **Источники данных** . Откроется страница свойств «Источник данных» отчета.  
   

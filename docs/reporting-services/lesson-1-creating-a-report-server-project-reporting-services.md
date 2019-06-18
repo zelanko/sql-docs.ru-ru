@@ -9,10 +9,10 @@ ms.assetid: 675671ca-e6c9-48a2-82e9-386778f3a49f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c3a32b6b27a8919d729c95bfe29f50c2bda81db8
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65095855"
 ---
 # <a name="lesson-1-creating-a-report-server-project-reporting-services"></a>Занятие 1. Создание проекта сервера отчетов (службы Reporting Services)
@@ -35,7 +35,7 @@ ms.locfileid: "65095855"
     ![select-report-server-project-template](../reporting-services/media/lesson-1-creating-a-report-server-project-reporting-services/select-report-server-project-template.png)
 
     > [!IMPORTANT]
-    > Если вы работаете в Visual Studio и не видите служб Reporting Services в левом столбце, добавьте конструктор отчетов, установив рабочую нагрузку SSDT. Из меню **Средства** выберите **Получить средства и компоненты...**, а затем в отображаемых рабочих нагрузках выберите **SQL Server Data Tools**. Если вы не видите объекты служб Reporting Services в центральном столбце, добавьте расширения служб Reporting Services. Откройте меню **Средства** и выберите **Расширения и обновления** > **В сети**. В центральном столбце выберите **Проекты Microsoft Reporting Services** > **Скачать** из отображаемого списка расширений. Сведения об SQL Server Data Tools (SSDT) см. [в этой статье](../ssdt/download-sql-server-data-tools-ssdt.md).
+    > Если вы работаете в Visual Studio и не видите служб Reporting Services в левом столбце, добавьте конструктор отчетов, установив рабочую нагрузку SSDT. Из меню **Средства** выберите **Получить средства и компоненты...** , а затем в отображаемых рабочих нагрузках выберите **SQL Server Data Tools**. Если вы не видите объекты служб Reporting Services в центральном столбце, добавьте расширения служб Reporting Services. Откройте меню **Средства** и выберите **Расширения и обновления** > **В сети**. В центральном столбце выберите **Проекты Microsoft Reporting Services** > **Скачать** из отображаемого списка расширений. Сведения об SQL Server Data Tools (SSDT) см. [в этой статье](../ssdt/download-sql-server-data-tools-ssdt.md).
 
 3. Выберите значок **Проект сервера отчетов** &nbsp;&nbsp;![ssrs_ssdt_report_server_project](media/ssrs-ssdt-report-server-project.png) &nbsp;&nbsp;в центральном столбце диалогового окна **Новый проект**.
 

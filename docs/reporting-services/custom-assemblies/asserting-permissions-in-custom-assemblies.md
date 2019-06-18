@@ -14,14 +14,14 @@ helpviewer_keywords:
 - limited permission sets
 - security configuration files [Reporting Services]
 ms.assetid: 3afb9631-f15e-405e-990b-ee102828f298
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ce5e4cf2928b166d100ba287d856e638b8272698
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: dabfe56423a08c6624adc6da322cf442e5a63b7d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785312"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63194323"
 ---
 # <a name="asserting-permissions-in-custom-assemblies"></a>Проверка предположений о наличии разрешений в пользовательских сборках
   По умолчанию код пользовательской сборки выполняется с ограниченным набором разрешений **Execution**. В некоторых случаях требуется реализация пользовательских сборок, выполняющих безопасные вызовы к защищенным ресурсам внутри системы безопасности (например, к файлу или реестру). Для этого необходимо выполнить следующие действия.  

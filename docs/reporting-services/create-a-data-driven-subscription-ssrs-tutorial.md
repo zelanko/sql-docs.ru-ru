@@ -10,14 +10,14 @@ helpviewer_keywords:
 - walkthroughs [Reporting Services]
 - data-driven subscriptions
 ms.assetid: 79ab0572-43e9-4dc4-9b5a-cd8b627b8274
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 32e4ca675330278d69994faa81b7bb3e4a13b4b6
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: baff01bd8bc02af409a37c5cc1ce193e69663387
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291422"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63194836"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>Создание управляемой данными подписки (учебник по службам SSRS)
 В этом учебнике по [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] рассматриваются концепции управляемых данными подписок на основе простого примера, в котором создается управляемая данными подписка для создания и сохранения отфильтрованных выходных данных отчета в общую папку. 
@@ -33,9 +33,9 @@ ms.locfileid: "56291422"
 
 | Занятие | Комментарии |
 | ------ | -------- |
-| [Урок 1. Создание образца базы данных подписчика](../reporting-services/lesson-1-creating-a-sample-subscriber-database.md) | На этом занятии создается локальная табличная база данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , в которой содержатся сведения о подписчике. Сведения о номерах заказов, используемые для фильтрации и вывода форматов файлов. |
+| [Занятие 1. Создание образца базы данных подписчика](../reporting-services/lesson-1-creating-a-sample-subscriber-database.md) | На этом занятии создается локальная табличная база данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , в которой содержатся сведения о подписчике. Сведения о номерах заказов, используемые для фильтрации и вывода форматов файлов. |
 | [Занятие 2. Настройка свойств источника данных отчета](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md) | На этом занятии настраивается источник данных отчета для обеспечения автоматического выполнения отчета по расписанию. Для обеспечения автоматического выполнения необходимы сохраненные учетные данные. Вы также измените набор данных отчета, включив в него параметр, значение которого берется из данных подписчика. Этот параметр используется для фильтрации данных отчета на основе номера заказа. |
-| [Урок 3. Определение управляемой данными подписки](../reporting-services/lesson-3-defining-a-data-driven-subscription.md) | На этом занятии создается управляемая данными подписка. На этом занятии будет подробно разобрана каждая страница в мастере управляемой данными подписки. |
+| [Занятие 3. Определение управляемой данными подписки](../reporting-services/lesson-3-defining-a-data-driven-subscription.md) | На этом занятии создается управляемая данными подписка. На этом занятии будет подробно разобрана каждая страница в мастере управляемой данными подписки. |
 
 На приведенной ниже схеме иллюстрируется базовый рабочей процесс, описываемый в учебнике.
 

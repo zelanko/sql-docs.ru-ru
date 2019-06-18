@@ -12,14 +12,14 @@ helpviewer_keywords:
 - encryption [Reporting Services]
 - databases [Reporting Services], encryption
 ms.assetid: ac0f4d4d-fc4b-4c62-a693-b86e712e75f2
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 3eb58910390765607514239a43c6059ebcd5c220
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: a83f5812347dfc827795de747f9c8119e3ba6245
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815372"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62513296"
 ---
 # <a name="ssrs-encryption-keys---store-encrypted-report-server-data"></a>Ключи шифрования служб SSRS — хранение зашифрованных данных сервера отчетов
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] хранят зашифрованные значения в базе данных сервера отчетов и в файлах конфигурации. Зашифрованные значения — это главным образом учетные данные, используемые при подключении к внешним источникам данных, содержащим данные для отчетов. В данном разделе содержатся сведения о шифруемых значениях, о возможностях шифрования в службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]и о других важных типах конфиденциальных данных.  
@@ -59,7 +59,7 @@ ms.locfileid: "47815372"
  Сервер отчетов сохраняет и другие незашифрованные данные, среди которых могут находиться важные данные, которые желательно защищать от несанкционированного доступа. Среди этих данных — моментальные снимки журналов отчетов и снимки состояния выполнения отчетов, содержащие результаты запросов, в которых могут находиться данные, предназначенные исключительно для авторизованных пользователей. Если используются возможности создания моментальных снимков для отчетов, содержащих конфиденциальные данные, следует учесть, что пользователи, способные открывать таблицы в базе данных сервера отчетов, могут получить доступ к части хранимого отчета, изучая содержимое таблицы.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] не поддерживает кэширование или журналы отчетов для отчетов, использующих параметры с проверкой подлинности пользователя.  
+>  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] не поддерживают кэширование или журналы отчетов для отчетов, использующих параметры с проверкой подлинности пользователя.  
   
 ## <a name="see-also"></a>См. также:  
  [Настройка ключей шифрования и управление ими (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  

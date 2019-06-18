@@ -1,5 +1,5 @@
 ---
-title: 'Мобильный отчет SQL Server: подробные пошаговые инструкции'
+title: 'Мобильные отчеты SQL Server: руководство по использованию'
 description: Используйте пошаговые инструкции по созданию мобильных отчетов для экрана любого размера с помощью издателя мобильных отчетов SQL Server на портале Reporting Services и по просмотру отчетов в мобильных приложениях Power BI.
 ms.date: 12/07/2018
 ms.prod: reporting-services
@@ -8,16 +8,16 @@ ms.technology: mobile-reports
 ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c4c1735d7f6e896ecb3a0c29b6266cddc48dffae
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: db6f8c664dff6f7234e43a3e3f11f6cc01e2eac4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286962"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62502426"
 ---
-# <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>Мобильный отчет SQL Server: подробные пошаговые инструкции
+# <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>Мобильные отчеты SQL Server: руководство по использованию
 Используйте пошаговые инструкции по созданию мобильных отчетов для экрана любого размера с помощью [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] на веб-портале [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] и по просмотру отчетов в мобильных приложениях Power BI.
 
 Мобильные отчеты можно создавать в области конструктора с настраиваемыми строками и столбцами сетки, а также гибкими элементами мобильных отчетов. Подключайтесь к различным локальным источникам данных или передавайте книги Excel для создания мобильных отчетов. Затем сохраняйте отчеты на веб-портале [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] и просматривайте их в браузере или мобильных приложениях Power BI.  
@@ -36,7 +36,7 @@ ms.locfileid: "56286962"
 * Для создания общих наборов данных нужно [установить построитель отчетов](../install-windows/install-report-builder.md).  
 * Для создания мобильных отчетов [установите издатель мобильных отчетов для Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkId=717766).  
 * [Образцы баз данных AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases).  
-*  или Образец базы данных World Wide Importers, доступный на странице [Образцы Microsoft SQL Server](../../sample/microsoft-sql-server-samples.md).
+*  ИЛИ образец базы данных World Wide Importers, доступный на странице [Образцы Microsoft SQL Server](../../sample/microsoft-sql-server-samples.md).
 * Для просмотра результата: 
   *   [зарегистрируйтесь в службе Power BI](https://go.microsoft.com/fwlink/?LinkID=513879) и
   *  [скачайте мобильное приложение Power BI](https://docs.microsoft.com/en-us/power-bi/consumer/mobile/mobile-apps-for-mobile-devices) на устройство под управлением iOS, Windows 10 или телефон с Android.  
@@ -105,7 +105,7 @@ ms.locfileid: "56286962"
    
    ![PBI_SSMRP_KPI_DatasetField](../../reporting-services/mobile-reports/media/pbi-ssmrp-kpi-datasetfield.png)  
    
-3. Нажмите кнопку с многоточием (**...**) в поле **Выберите поле набора данных** и выберите набор данных, как указано в описании предыдущего шага.  
+3. Нажмите кнопку с многоточием ( **...** ) в поле **Выберите поле набора данных** и выберите набор данных, как указано в описании предыдущего шага.  
    
    ![PBI_SSMRP_KPIPickDataset](../../reporting-services/mobile-reports/media/pbi-ssmrp-kpipickdataset.png)  
    
@@ -121,7 +121,7 @@ ms.locfileid: "56286962"
 
 7. В поле **Набор трендов** щелкните **Тренд набора данных**.  
   
-6. В поле **Выберите тренд набора данных** нажмите кнопку с многоточием (**...**).  
+6. В поле **Выберите тренд набора данных** нажмите кнопку с многоточием ( **...** ).  
    
 7. Выберите поле и нажмите кнопку **ОК**.  
 

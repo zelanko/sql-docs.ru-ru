@@ -1,19 +1,19 @@
 ---
-title: Учебник. Добавление спарклайна в отчет (построитель отчетов) | Документация Майкрософт
+title: Учебник. Добавление спарклайна в отчет (построитель отчетов) | Документация Майкрософт
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: a4ea0601aff712034a58f73953718bcd70514351
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 4dbe5d5afdf507f3edfd68135aa8ee14aee5ae08
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298612"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63043180"
 ---
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Учебник. Добавление спарклайна в отчет (построитель отчетов)
 
@@ -118,7 +118,7 @@ ms.locfileid: "56298612"
        'Slim Digital' as Product, CAST(26576.00 AS money) AS Sales, 88 as Quantity  
     ```  
   
-4.  На панели инструментов конструктора запросов нажмите кнопку "Выполнить" (**!**).  
+4.  На панели инструментов конструктора запросов нажмите кнопку "Выполнить" ( **!** ).  
   
     Запрос выполняется и отображает результирующий набор для полей **SalesDate**, **Subcategory**, **Product**, **Sales**и **Quantity**.  
   
@@ -173,7 +173,7 @@ ms.locfileid: "56298612"
 
     ![report-builder-placeholder-currency](../reporting-services/media/report-builder-placeholder-currency.png)
   
-    Если в качестве региональных настроек компьютера выбран "Английский (США)", текстом по умолчанию образца будет [**$12,345.00**]. Если значение валюты не отображается, в группе **Числа** щелкните **Стили заполнителя** > **Образцы значений**.  
+    Если в качестве региональных настроек компьютера выбран "Английский (США)", текстом по умолчанию образца будет [ **$12,345.00**]. Если значение валюты не отображается, в группе **Числа** щелкните **Стили заполнителя** > **Образцы значений**.  
     
     ![report-builder-placeholder-value-button](../reporting-services/media/report-builder-placeholder-value-button.png)
    
@@ -184,7 +184,7 @@ ms.locfileid: "56298612"
   
 3.  На вкладке **Главная** в группе **Число** нажмите кнопку **Дата**.  
   
-    В ячейке будет содержаться пример даты **[1/31/2000]**.
+    В ячейке будет содержаться пример даты **[1/31/2000]** .
      
 4.  Нажмите кнопку **Выполнить** для предварительного просмотра отчета.  
   

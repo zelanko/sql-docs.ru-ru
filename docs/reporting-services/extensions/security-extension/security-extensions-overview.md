@@ -8,19 +8,19 @@ ms.topic: reference
 helpviewer_keywords:
 - security [Reporting Services], extensions
 ms.assetid: 24ccd795-6506-457c-93ac-6a9dd6bb9a46
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b6ed33ec1aac9b875a4c26b3aa3b209faf118267
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: c066c893833e1c8588be2460959ed298d6cf1b4e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636672"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63225874"
 ---
 # <a name="security-extensions-overview---reporting-services-ssrs"></a>Общие сведения о модулях безопасности — службы Reporting Services (SSRS)
   Модуль безопасности служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] позволяет проводить проверку подлинности и авторизацию пользователей и групп, то есть этот модуль позволяет пользователям входить на сервер отчетов и в соответствии с их удостоверениями выполнять различные задачи и операции. По умолчанию службы [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] используют модуль проверки подлинности Windows, который в свою очередь использует протоколы учетных записей Windows для проверки удостоверений пользователей, которые заявляют, что имеют учетные записи в системе. Службы [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] используют систему безопасности на основе ролей для авторизации пользователей. Модель безопасности служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] на основе ролей похожа на модели безопасности на основе ролей других технологий.  
   
- Поскольку модули безопасности основываются на открытом и дополняемом API-интерфейсе, в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] можно создавать новые модули проверки подлинности и авторизации. Ниже проводится пример реализации типичного модуля безопасности, использующего проверку подлинности и авторизацию на основе форм:  
+ Поскольку модули безопасности основываются на открытом и дополняемом API-интерфейсе, в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]можно создавать новые модули проверки подлинности и авторизации. Ниже проводится пример реализации типичного модуля безопасности, использующего проверку подлинности и авторизацию на основе форм:  
   
  ![Процесс расширения безопасности служб Reporting Services](../../../reporting-services/extensions/security-extension/media/rosettasecurityextensionflow.gif "Процесс расширения безопасности служб Reporting Services")  
   

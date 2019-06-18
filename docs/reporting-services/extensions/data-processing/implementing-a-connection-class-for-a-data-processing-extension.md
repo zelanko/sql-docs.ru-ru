@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Connection class
 - data processing extensions [Reporting Services], connections
 ms.assetid: 7047d29e-a2c9-4e6f-ad02-635851a38ed7
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 1fa0709d4bfde776221c5c5f234c1a3acb502406
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 32d38fd943628b25ab8fd9ce47b779b75c05e211
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031813"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63193932"
 ---
 # <a name="implementing-a-connection-class-for-a-data-processing-extension"></a>Реализация класса Connection для модуля обработки данных
   Объект **Connection** представляет подключение к базе данных или аналогичному ресурсу. Он является начальной точкой для пользователей модуля обработки данных служб [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Он представляет собой соединения с серверами баз данных, хотя, в принципе, любая сущность с похожим поведением может быть представлена как **Connection**.  

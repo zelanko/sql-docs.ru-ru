@@ -11,14 +11,14 @@ helpviewer_keywords:
 - custom printing [Reporting Services]
 - client-side printing
 ms.assetid: 8c0bdd18-8905-4e22-9774-a240fc81a8a7
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: a12d08348a88529efdd84fd1ae5dab3c64d7d1c1
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: b0da6d086754b63a2d796c4f7ff8e1b7fd2d2cad
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814187"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63249812"
 ---
 # <a name="using-the-rsclientprint-control-in-custom-applications"></a>Использование элемента управления RSClientPrint в пользовательских приложениях
   Элемент управления [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ActiveX **RSPrintClient** обеспечивает работу функций печати отчетов в средстве просмотра HTML-страниц на стороне клиента. Он отображает диалоговое окно **Печать**, в котором просматривается отчет, указываются номера и изменяются поля печатаемых страниц, а также запускается задание на печать. При выполнении операции печати на стороне клиента сервер отчетов подготавливает отчет с помощью модуля подготовки отчетов в графическом формате (EMF), создает задание на печать и отправляет его на принтер с помощью средств операционной системы.  

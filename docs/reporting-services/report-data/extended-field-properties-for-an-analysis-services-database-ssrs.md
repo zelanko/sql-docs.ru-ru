@@ -9,10 +9,10 @@ ms.assetid: 1d7d87e2-bf0d-4ebb-a287-80b5a967a3f2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d315aa1c5037e27d5c48e1ee03addef35cbc22df
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65573312"
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Расширенные свойства поля для базы данных служб Analysis Services (службы SSRS)
@@ -44,7 +44,7 @@ ms.locfileid: "65573312"
 |------------------|--------------|---------------------------------------|  
 |**Value**|**Объект**|Указывает значение данных поля.|  
 |**IsMissing**|**Boolean**|Указывает, найдено ли поле в результирующем наборе данных.|  
-|**UniqueName**|**String**|Возвращает полное имя уровня. Например, значение **UniqueName** для сотрудника может иметь вид *[Сотрудник].[Отдел сотрудника].[Подразделение].&[Продажи].&[Менеджер продаж в Северной Америке].&[272]*.|  
+|**UniqueName**|**String**|Возвращает полное имя уровня. Например, значение **UniqueName** для сотрудника может иметь вид *[Сотрудник].[Отдел сотрудника].[Подразделение].&[Продажи].&[Менеджер продаж в Северной Америке].&[272]* .|  
 |**BackgroundColor**|**String**|Возвращает цвет фона, заданный в базе данных для этого поля.|  
 |**Color**|**String**|Возвращает цвет переднего плана, заданный в базе данных для этого элемента.|  
 |**FontFamily**|**String**|Возвращает название шрифта, определенного в базе данных для элемента.|  

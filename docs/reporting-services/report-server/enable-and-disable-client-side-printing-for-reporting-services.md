@@ -14,10 +14,10 @@ ms.assetid: 0e709c96-7517-4547-8ef6-5632f8118524
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ae8d963b599191970497d841a6caa1f73fd920b3
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65580342"
 ---
 # <a name="enable-and-disable-client-side-printing-for-reporting-services"></a>Включение и отключение печати на стороне клиента для служб Reporting Services
@@ -52,7 +52,7 @@ ms.locfileid: "65580342"
 ##  <a name="bkmk_enable"></a> Включение и отключение печати на стороне клиента  
  Администраторы сервера отчетов могут отключать функцию удаленной печати. Для этого нужно установить значение **false** для системного свойства **EnableClientPrinting**сервера отчетов. Это отключает клиентскую печать всех отчетов, управляемых этим сервером. По умолчанию **EnableClientPrinting** установлено как **true**. Вы можете запретить печать на стороне клиента следующими способами.  
   
--   Для **сервера отчетов в собственном режиме**   
+-   Для **сервера отчетов в собственном режиме**  
   
     1.  Запустите [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] с правами администратора.  
   

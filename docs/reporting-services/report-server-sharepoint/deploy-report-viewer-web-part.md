@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3dc42904701ce69e762a203e09cb320cc797c15c
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65579986"
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>Развертывание веб-части "Средство просмотра отчетов" служб SQL Server Reporting Services на сайте SharePoint
@@ -80,11 +80,11 @@ ms.locfileid: "65579986"
 
     ![Параметры сайта в меню со значком шестеренки.](media/sharepoint-site-settings.png)
 
-    По умолчанию доступ к веб-приложениям SharePoint осуществляется через порт 80. Это означает, что часто к сайту SharePoint можно получить доступ, введя *https://<computer name>*, чтобы открыть корневое семейство веб-сайтов.
+    По умолчанию доступ к веб-приложениям SharePoint осуществляется через порт 80. Это означает, что часто к сайту SharePoint можно получить доступ, введя *https://<computer name>* , чтобы открыть корневое семейство веб-сайтов.
 
 3. В области **Администрирование семейства веб-сайтов** щелкните ссылку **Возможности семейства веб-сайтов**.
 
-4. Прокрутите страницу вниз до компонента **Веб-часть "Средство просмотра отчетов"**.
+4. Прокрутите страницу вниз до компонента **Веб-часть "Средство просмотра отчетов"** .
 
 5. Выберите **Активировать**.
 
@@ -120,7 +120,7 @@ Get-SPWebApplication "<web application url>" | Get-SPSite -Limit ALL |
 
     ![Параметры сайта в меню со значком шестеренки.](media/sharepoint-site-settings.png)
 
-    По умолчанию доступ к веб-приложениям SharePoint осуществляется через порт 80. Это означает, что часто к сайту SharePoint можно получить доступ, введя *https://<computer name>*, чтобы открыть корневое семейство веб-сайтов.
+    По умолчанию доступ к веб-приложениям SharePoint осуществляется через порт 80. Это означает, что часто к сайту SharePoint можно получить доступ, введя *https://<computer name>* , чтобы открыть корневое семейство веб-сайтов.
 
 2. В разделе **Коллекции веб-дизайнера** выберите **веб-части**.
 

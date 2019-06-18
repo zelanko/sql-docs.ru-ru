@@ -9,16 +9,16 @@ ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 126819d9adb85fa4cf17af0c6308d56696136988
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65570852"
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Основные понятия служб Reporting Services (SSRS)
   Этот раздел содержит краткий обзор основных понятий служб [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
   
- **[!INCLUDE[applies](../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] | режим SharePoint [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]    
+ **[!INCLUDE[applies](../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] | режим SharePoint [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]   
   
 ##  <a name="bkmk_ReportServerConcepts"></a> Основные понятия сервера отчетов  
  Сервером отчетов является компьютер, на котором установлен экземпляр служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . На сервере отчетов хранятся такие элементы, как отчеты с разбивкой на страницы и мобильные отчеты, а также связанные с отчетами элементы и ресурсы, расписания и подписки. Сервер отчетов может быть настроен в виде одиночного сервера или масштабируемой фермы, а также он может быть интегрирован с SharePoint Server. Взаимодействие с элементами сервера отчетов происходит с помощью веб-службы [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , поставщика WMI, доступа по URL-адресу или программными методами с помощью скриптов. Способ взаимодействия с сервером отчетов зависит от топологии развертывания и конфигурации.  

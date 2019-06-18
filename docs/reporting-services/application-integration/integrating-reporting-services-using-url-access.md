@@ -9,14 +9,14 @@ helpviewer_keywords:
 - URL access [Reporting Services], about URL access
 - integrating reports [Reporting Services]
 ms.assetid: f1014f7d-fafa-4aa8-8bd2-5bdba835d9b6
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 802708b1b630a42fe23860a906335e540e6c70f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: c9609802daff2f5040974deaa5793e7bceb8fcbc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752602"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62660519"
 ---
 # <a name="integrating-reporting-services-using-url-access"></a>Интеграция служб Reporting Services с помощью доступа по URL-адресу
   Доступ по URL-адресу позволяет получать доступ к отчетам с помощью URL-адреса сервера отчетов. Запрос по URL-адресу позволяет получить доступ к выбранному серверу отчетов, а также к отчетам, ресурсам и другим элементам в базе данных сервера отчетов. Также можно настроить параметры просмотра отчетов и функции навигации для пользователей. Строка запроса URL-адреса содержит настройки сведений об устройстве, а также параметры отчета и выбранный формат подготовки к просмотру. Способ обработки запросов по URL-адресу на сервере отчетов зависит от параметров, префиксов параметров и типа элемента, к которому выполняется доступ по URL-адресу.  

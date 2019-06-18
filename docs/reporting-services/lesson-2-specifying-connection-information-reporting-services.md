@@ -9,10 +9,10 @@ ms.assetid: 54405a3a-d7fa-4d95-8963-9aa224e5901e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0a0c21b2662fc14977c4ac57687754d15d544994
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65106060"
 ---
 # <a name="lesson-2-specifying-connection-information-reporting-services"></a>Занятие 2. Задание информации о соединении (службы Reporting Services)
@@ -52,7 +52,7 @@ ms.locfileid: "65106060"
     >
     > Дополнительные сведения о строках подключения вы можете найти в разделе `See also` ниже.
 
-6. Выберите вкладку **Учетные данные**, а затем в разделе **Change the credentials used to connect to the data source** (Изменить учетные данные, используемые для подключения к источнику данных) установите переключатель **Использовать проверку подлинности Windows (встроенная безопасность)**.
+6. Выберите вкладку **Учетные данные**, а затем в разделе **Change the credentials used to connect to the data source** (Изменить учетные данные, используемые для подключения к источнику данных) установите переключатель **Использовать проверку подлинности Windows (встроенная безопасность)** .
 
 7. Чтобы завершить процесс, нажмите кнопку **ОК**.
 

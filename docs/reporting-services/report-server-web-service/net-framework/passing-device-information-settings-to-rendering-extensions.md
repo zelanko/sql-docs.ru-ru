@@ -17,14 +17,14 @@ helpviewer_keywords:
 - device information settings [Reporting Services], about device information settings
 - extensions [Reporting Services], device information settings
 ms.assetid: fe718939-7efe-4c7f-87cb-5f5b09caeff4
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: a394ad6eccf86b3c6aff6168f09fd990651288f7
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 4171fcbc01b7dfd36003bef6c4fa5d90c74600d3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812787"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63128882"
 ---
 # <a name="passing-device-information-settings-to-rendering-extensions"></a>Передача настроек сведений об устройстве модулям подготовки отчетов к просмотру
   В службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]настройки сведений об устройстве используются для передачи параметров подготовки к просмотру модуля подготовки отчетов. Настройки веб-службы сервера отчетов передаются как XML-элемент **DeviceInfo** и обрабатываются сервером отчетов. Поскольку у настроек сведений об устройстве есть значения по умолчанию, в процессе подготовки к просмотру эти аргументы являются необязательными. Однако настройки сведений об устройстве можно использовать для настройки процесса подготовки к просмотру и переопределения значений по умолчанию, передаваемых сервером.  
@@ -32,7 +32,7 @@ ms.locfileid: "51812787"
  Настройки сведений об устройстве можно задавать различными способами. Для задания программным путем можно использовать метод Render. Если доступ к отчету осуществляется по URL-адресу, сведения об устройстве можно задать как параметры URL-адреса. Можно также редактировать настройки сведений об устройстве в файлах конфигурации служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] , чтобы задать глобальные значения параметров подготовки к просмотру. Дополнительные сведения об указании глобальных параметров подготовки отчетов см. в разделе [Настройка параметров модулей подготовки отчетов в RSReportServer.Config](../../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md).  
   
 ## <a name="passing-device-information-using-the-render-method"></a>Передача сведений об устройстве с помощью метода Render  
- Для передачи параметров сведений об устройстве в модуль подготовки отчетов используйте метод **M:Microsoft.WSSUX.ReportingServicesWebService.RSExecutionService2005.ReportExecutionService.Render(System.String,System.String,System.String@,System.String@,System.String@,Microsoft.WSSUX.ReportingServicesWebService.RSExecutionService2005.Warning[]@,System.String[]@)**. Например, при подготовке к просмотру в формате HTML методу <xref:ReportExecution2005.ReportExecutionService.Render%2A> можно передать следующую строку в формате XML для создания фрагмента HTML:  
+ Для передачи параметров сведений об устройстве в модуль подготовки отчетов используйте метод **M:Microsoft.WSSUX.ReportingServicesWebService.RSExecutionService2005.ReportExecutionService.Render(System.String,System.String,System.String@,System.String@,System.String@,Microsoft.WSSUX.ReportingServicesWebService.RSExecutionService2005.Warning[]@,System.String[]@)** . Например, при подготовке к просмотру в формате HTML методу <xref:ReportExecution2005.ReportExecutionService.Render%2A> можно передать следующую строку в формате XML для создания фрагмента HTML:  
   
 ```  
 <DeviceInfo>  
