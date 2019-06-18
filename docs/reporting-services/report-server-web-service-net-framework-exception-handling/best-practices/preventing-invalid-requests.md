@@ -10,14 +10,14 @@ helpviewer_keywords:
 - exceptions [Reporting Services], invalid requests
 - valid requests [Reporting Services]
 ms.assetid: 4a4a2d97-4c10-43a9-8298-ef5a820ea549
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 2b132a3c5c2883bf6418c1243f7eb8ef409f9e0c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 219fc1883f395e56f1fd73af32e95ea066df28b7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595838"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62992217"
 ---
 # <a name="preventing-invalid-requests"></a>Предотвращение недопустимых запросов
   Возникновение некоторых типов исключений можно предотвратить, проведя анализ потока работы приложения и убедившись в том, что все запросы, направляемые на сервер отчетов, являются допустимыми. Например, в приложениях, предоставляющих пользователям возможность добавить или обновить имя отчета, источник данных или другие параметры сервера отчетов, необходимо проверять текст, вводимый пользователем. Перед отправкой запроса на сервер отчетов следует всегда проверять, нет ли в нем зарезервированных символов. Чтобы предупредить пользователя о том, что он не выполнил необходимых условий для отправки запросов на сервер отчетов, используйте в коде условные операторы **if** или другие логические конструкции.  

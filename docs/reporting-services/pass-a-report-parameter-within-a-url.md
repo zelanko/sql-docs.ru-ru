@@ -12,10 +12,10 @@ ms.assetid: f93a94cc-27b5-435a-aa85-69e6ec6459ad
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 551fc19b3d39ef6cf12c5fdd4e77196b0abbb9fe
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65580838"
 ---
 # <a name="pass-a-report-parameter-within-a-url"></a>Pass a Report Parameter Within a URL
@@ -27,7 +27,7 @@ ms.locfileid: "65580838"
 > [!IMPORTANT]  
 >  Важно, чтобы URL-адрес содержал синтаксис прокси `_vti_bin` для отправки запроса с помощью центра администрирования SharePoint и прокси-сервера HTTP [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Прокси-сервер добавляет в HTTP-запрос контекст, необходимый для обеспечения правильного выполнения отчета для серверов отчетов в режиме интеграции с SharePoint.  
 >   
->  Если не указывать синтаксис прокси, то нужно добавить к параметру префикс *rp:*.  
+>  Если не указывать синтаксис прокси, то нужно добавить к параметру префикс *rp:* .  
   
  Все параметры запроса могут иметь соответствующие параметры отчета. Параметр запроса можно передать в отчет. Дополнительные сведения см. в статье [Построение запроса в конструкторе реляционных запросов (построитель отчетов и службы SSRS)](../reporting-services/report-data/build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md).  
   

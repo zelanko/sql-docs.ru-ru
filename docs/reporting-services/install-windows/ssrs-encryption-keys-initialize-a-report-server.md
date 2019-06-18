@@ -12,14 +12,14 @@ helpviewer_keywords:
 - initializing report servers [Reporting Services]
 - verifying report server initializations
 ms.assetid: 861d4ec4-1085-412c-9a82-68869a77bd55
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ec32fcd9a05fe0123e25570d47f1d613a6c00502
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: a1bf17d6635870a171ed1a20a1c659c190077d8e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813328"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62513306"
 ---
 # <a name="ssrs-encryption-keys---initialize-a-report-server"></a>Ключи шифрования служб SSRS — инициализация сервера отчетов
   В службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]инициализированный сервер — это сервер, способный шифровать и дешифровать данные в базе данных сервера отчетов. Инициализация является необходимым условием функционирования сервера отчетов. Инициализация происходит, когда служба сервера отчетов запускается впервые. Она также происходит, когда сервер отчетов соединяется с уже развернутой системой или когда вручную повторно создаются ключи как часть процесса восстановления. Дополнительные сведения о том, как и почему использовать ключи шифрования, см. в разделах [Настройка ключей шифрования и управление ими (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md) и [Хранение зашифрованных данных сервера отчетов (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md).  

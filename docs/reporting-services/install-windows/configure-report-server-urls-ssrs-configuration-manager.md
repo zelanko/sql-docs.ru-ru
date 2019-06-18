@@ -9,14 +9,14 @@ helpviewer_keywords:
 - report servers [Reporting Services], virtual directories
 - virtual directories [Reporting Services]
 ms.assetid: a0134ef0-086c-443e-93b9-7213a3d76393
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 0aa67d80d18b6f93393cfccac146765a8df536ed
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 25c24bae55bb6d4defb2ef9330b80ddf875723e4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813347"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62514423"
 ---
 # <a name="configure-report-server-urls--ssrs-configuration-manager"></a>Настройка URL-адресов сервера отчетов (диспетчер конфигурации служб SSRS)
   В [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]URL-адреса используются для доступа к веб-службам сервера отчетов и [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. Прежде чем использовать любое приложение, необходимо настроить по крайней мере по одному URL-адресу для веб-службы и [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для URL-адресов обоих приложений предоставляет значения по умолчанию, которые подходят для большинства сценариев развертывания, в том числе развертывания параллельно с другими веб-службами и приложениями.  

@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: f02dee0c-85ad-45d4-b707-10e9e8541db9
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c2daa3e5ab74a49e5d0e66bfd972cc4b4eff1663
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: e8bcfe976a8094c6faa22d8aab3db8a4a833d8cd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657798"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62651602"
 ---
 # <a name="lesson-2-define-a-data-connection-and-data-table-for-parent-report"></a>Занятие 2. Определение подключения к данным и таблицы данных для родительского отчета
 После создания нового проекта веб-сайта с использованием шаблона веб-сайта ASP.NET для Visual C# далее необходимо создать подключение к данным и таблицу данных для родительского отчета. В этом учебнике в качестве источника подключения к данным используется база данных AdventureWorks2014.  
@@ -58,10 +58,10 @@ ms.locfileid: "58657798"
   
     Для создания запроса также можно щелкнуть **Построитель запросов**, а затем проверить запрос, нажав кнопку **Выполнить запрос**. Если запрос не возвращает ожидаемые данные, возможно, используется более ранняя версия AdventureWorks. Дополнительные сведения о получении образца базы данных **AdventureWorks2014** см. на странице [Образцы баз данных AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases).  
   
-11. На странице **Выбор методов для автоматического создания** снимите флажок **Создать методы для отправки обновлений непосредственно в базу данных (GenerateDBDirectMethods)**, а затем нажмите кнопку **Готово**.  
+11. На странице **Выбор методов для автоматического создания** снимите флажок **Создать методы для отправки обновлений непосредственно в базу данных (GenerateDBDirectMethods)** , а затем нажмите кнопку **Готово**.  
   
     > [!WARNING]  
-    > Обязательно снимите флажок **Создать методы для отправки обновлений непосредственно в базу данных (GenerateDBDirectMethods)**.  
+    > Обязательно снимите флажок **Создать методы для отправки обновлений непосредственно в базу данных (GenerateDBDirectMethods)** .  
   
     На этом настройка объекта DataTable ADO.NET в качестве источника данных для отчета завершена. На странице конструктора набора данных в Visual Studio появится добавленный объект DataTable со списком столбцов, указанных в запросе. Набор данных DataSet1 содержит данные таблицы Product, полученные с помощью запроса.  
   

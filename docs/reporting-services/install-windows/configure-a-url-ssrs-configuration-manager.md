@@ -7,14 +7,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - URL access [Reporting Services], syntax
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 912f0473db120c9874e231334d1d393e18518c71
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: afd535a09578ae4e6141a87e486f77a26dd54818
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202493"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62447371"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>Настройка URL-адреса (диспетчер конфигурации служб SSRS)
   Приступать к использованию [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] или веб-службы сервера отчетов можно лишь после настройки как минимум одного URL-адреса для каждого приложения. Настройка URL-адресов является обязательной в случае установки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме "только файлы" (иначе говоря, если на странице "Параметры установки" сервера отчетов в мастере установки выбран параметр **Установить, но не настраивать сервер** ). При установке служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в конфигурации по умолчанию URL-адреса настраиваются автоматически для каждого приложения.  

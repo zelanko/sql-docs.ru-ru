@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 998e0e4b400815767135ee81442c4e210aa3ba47
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65580619"
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>Командлеты PowerShell для режима интеграции служб Reporting Services с SharePoint
@@ -34,7 +34,7 @@ ms.locfileid: "65580619"
 
 ## <a name="cmdlet-summary"></a>Обзор командлетов
 
- Для выполнения командлетов необходимо открыть консоль управления SharePoint. Можно также использовать редактор графического пользовательского интерфейса, который включен в Microsoft Windows, **интегрированная среда скриптов Windows PowerShell (ISE)**. Дополнительные сведения см. в разделе [Запуск Windows PowerShell на Windows Server](https://docs.microsoft.com/powershell/scripting/getting-started/starting-windows-powershell). В следующих сводках по командлетам упоминания "баз данных" приложения службы относятся ко всем базам данных, созданным и используемым приложением службы Reporting Services. Это включает базы данных конфигурации, предупреждений и временные базы данных.  
+ Для выполнения командлетов необходимо открыть консоль управления SharePoint. Можно также использовать редактор графического пользовательского интерфейса, который включен в Microsoft Windows, **интегрированная среда скриптов Windows PowerShell (ISE)** . Дополнительные сведения см. в разделе [Запуск Windows PowerShell на Windows Server](https://docs.microsoft.com/powershell/scripting/getting-started/starting-windows-powershell). В следующих сводках по командлетам упоминания "баз данных" приложения службы относятся ко всем базам данных, созданным и используемым приложением службы Reporting Services. Это включает базы данных конфигурации, предупреждений и временные базы данных.  
   
  Если при вводе примеров PowerShell отображается сообщение об ошибке следующего вида:  
   
@@ -109,7 +109,7 @@ ms.locfileid: "65580619"
 |New-SPRSExtension|Регистрирует новый модуль для работы с приложением службы Reporting Services.|  
 |Set-SPRSExtension|Задает свойства существующего модуля служб Reporting Services.|  
 |Remove-SPRSExtension|Удаляет модуль из приложения службы Reporting Services.|  
-|Get-SPRSExtension|Возвращает один или несколько модулей Reporting Services для приложения службы Reporting Services.<br /><br /> Допустимые значения:<br /><br /> <br /><br /> Доставка<br /><br /> DeliveryUI<br /><br /> Render<br /><br /> Данные <br /><br /> безопасность<br /><br /> Проверка подлинности<br /><br /> EventProcessing<br /><br /> ReportItems<br /><br /> Конструктор<br /><br /> ReportItemDesigner<br /><br /> ReportItemConverter<br /><br /> ReportDefinitionCustomization|  
+|Get-SPRSExtension|Возвращает один или несколько модулей Reporting Services для приложения службы Reporting Services.<br /><br /> Допустимые значения:<br /><br /> <br /><br /> Доставка<br /><br /> DeliveryUI<br /><br /> Render<br /><br /> Данные<br /><br /> безопасность<br /><br /> Проверка подлинности<br /><br /> EventProcessing<br /><br /> ReportItems<br /><br /> Конструктор<br /><br /> ReportItemDesigner<br /><br /> ReportItemConverter<br /><br /> ReportDefinitionCustomization|  
 |Get-SPRSSite|Возвращает сайты SharePoint с учетом того, включена ли на них функция «ReportingService». По умолчанию возвращаются сайты, на которых включена функция «ReportingService».|  
   
 ## <a name="basic-samples"></a>Простые примеры

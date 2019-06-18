@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: fd259b95-bb58-4eb1-a436-6aa12fc6f5f2
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: eef1a8c7ca2d1a7aaff29e04455f17a7cc236b78
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: b2f2d3b15021569fe53bfc886f744ed7e53c1444
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291262"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63141254"
 ---
 # <a name="add-a-custom-map-to-a-reporting-services-mobile-report"></a>Добавление пользовательской карты в мобильный отчет служб Reporting Services
 Для пользовательской карты требуется два файла:  
@@ -26,7 +26,7 @@ ms.locfileid: "56291262"
   
 ## <a name="load-a-custom-map"></a>Загрузка пользовательской карты  
   
-1. На вкладке **Макет** выберите тип карты **Градиентная тепловая карта**, **Тепловая карта остановки диапазона** или **Пузырьковая карта**, перетащите ее в область конструктора и придайте карте нужный размер.  
+1. На вкладке **Макет** выберите тип карты ( **Gradient Heat Map**(Градиентная тепловая карта), **Range Stop Heat Map**(Относительная тепловая карта) или **Пузырьковая карта**), перетащите ее в область конструктора и придайте карте нужный размер.  
   
    ![Коллекция карт SSMRP](../../reporting-services/mobile-reports/media/ssmrp-mapsgallery.png)  
   

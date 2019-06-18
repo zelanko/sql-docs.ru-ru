@@ -11,10 +11,10 @@ ms.assetid: dd0410ea-8839-4e8c-9944-8cdfe5465591
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 54bd3d5acaf487909a4965c1f73a2e8c00aef82a
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65580223"
 ---
 # <a name="importing-html-into-a-report-report-builder-and-ssrs"></a>Импорт HTML в отчет (построитель отчетов и службы SSRS)
@@ -73,9 +73,9 @@ ms.locfileid: "65580223"
   
 -   Значения CSS неправильного формата пропускаются так же, как код HTML неправильного формата.  
   
--   Если в том же самом теге существуют и атрибут, и атрибуты стиля CSS, то свойство CSS имеет более высокий приоритет. Например, если текстом является **\<p style="text-align: right" align="left">**, то применяется только атрибут text-align, после чего текст будет выровнен по правому краю.  
+-   Если в том же самом теге существуют и атрибут, и атрибуты стиля CSS, то свойство CSS имеет более высокий приоритет. Например, если текстом является **\<p style="text-align: right" align="left">** , то применяется только атрибут text-align, после чего текст будет выровнен по правому краю.  
   
--   Применительно к атрибутам и стилям CSS, если свойство задано больше одного раза, применяется только последний экземпляр свойства. Например, если текстом является **\<p align="left" align="right">**, то текст выравнивается по правому краю.  
+-   Применительно к атрибутам и стилям CSS, если свойство задано больше одного раза, применяется только последний экземпляр свойства. Например, если текстом является **\<p align="left" align="right">** , то текст выравнивается по правому краю.  
   
 ## <a name="see-also"></a>См. также:  
  [Подготовка к просмотру в виде HTML (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md)  

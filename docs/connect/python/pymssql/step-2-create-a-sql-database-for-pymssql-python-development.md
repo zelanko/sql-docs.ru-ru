@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 8ff248fc77e02e5578752ae1b1585f65b893e4e9
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66803863"
 ---
 # <a name="step-2-create-a-sql-database-for-pymssql-python-development"></a>Шаг 2. Создание базы данных SQL для разработки на Python в pymssql

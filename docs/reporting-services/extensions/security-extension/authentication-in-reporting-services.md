@@ -11,14 +11,14 @@ helpviewer_keywords:
 - authentication [Reporting Services]
 - custom authentication [Reporting Services]
 ms.assetid: 103ce1f9-31d8-44bb-b540-2752e4dcf60b
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 2ec5ac57e69b74b97b027ce5119ab74ec97acee9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: c1092674266b518ec051dd20c51d4b05184ff4f0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651642"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63193850"
 ---
 # <a name="authentication-in-reporting-services"></a>Проверка подлинности в службах Reporting Services
   Проверка подлинности — это процесс определения прав пользователя на удостоверение. Чтобы проверить подлинность, можно использовать много методов. Самым распространенным является использование паролей. Например, если разрабатывается проверка подлинности с помощью форм, необходима реализация, которая запрашивает у пользователей учетные данные (обычно с помощью интерфейса, который запрашивает имя и пароль), а затем проверяет пользователей по хранилищу данных, которым может быть таблица, база данных или файл конфигурации. Если не удается проверить учетные данные, то процесс проверки подлинности завершается неуспешно и для пользователя принимается анонимное удостоверение.  
@@ -100,7 +100,7 @@ internal static bool VerifyPassword(string suppliedUserName,
   
  На следующем рисунке представлен метод проверки подлинности пользователей в веб-службе, где приложение развернуто на сервере отчетов, настроенном для использования нестандартного модуля проверки подлинности.  
   
- ![Схема проверки подлинности служб Reporting Services](../../../reporting-services/extensions/security-extension/media/rosettasecurityextensionauthenticationflow.gif "Схема проверки подлинности служб Reporting Services")  
+ ![Поток проверки подлинности служб Reporting Services](../../../reporting-services/extensions/security-extension/media/rosettasecurityextensionauthenticationflow.gif "Поток проверки подлинности служб Reporting Services")  
   
  На рис. 1 процесс проверки подлинности представлен следующим образом.  
   

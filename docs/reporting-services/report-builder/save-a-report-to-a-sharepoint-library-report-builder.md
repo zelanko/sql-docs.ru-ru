@@ -9,10 +9,10 @@ ms.assetid: 4daa1eee-78b7-43d0-8b22-4a98e8fa66ba
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 916c135c9de0d67862d4b7300e24c2ae412b0cb6
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65581135"
 ---
 # <a name="save-a-report-to-a-sharepoint-library-report-builder"></a>Сохранение отчета в библиотеке SharePoint (построитель отчетов)
@@ -22,7 +22,7 @@ ms.locfileid: "65581135"
   
 ### <a name="to-save-a-report-to-a-sharepoint-site"></a>Сохранение отчета на сайте SharePoint  
   
-1.  В построителе отчетов нажмите кнопку **Сохранить**. Откроется диалоговое окно **Сохранить как**_\<элемент отчета>_.  
+1.  В построителе отчетов нажмите кнопку **Сохранить**. Откроется диалоговое окно **Сохранить как** _\<элемент отчета>_ .  
   
     > [!NOTE]  
     >  Во время повторного сохранения отчет автоматически сохраняется в предыдущем расположении. Чтобы изменить расположение, используйте параметр **Сохранить как** .  
