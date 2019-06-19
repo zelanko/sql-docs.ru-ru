@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ccc7b96f4275b09b90b8120813b93f860ec07b9a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62871062"
 ---
 # <a name="view-or-change-the-compatibility-level-of-a-database"></a>Просмотр или изменение уровня совместимости базы данных
@@ -59,7 +59,7 @@ ms.locfileid: "62871062"
   
      Текущий уровень совместимости будет указан в списке **Уровень совместимости** .  
   
-5.  Чтобы изменить уровень совместимости, выберите в списке другой параметр. Доступны следующие значения: **SQL Server 2008 (100)**, **SQL Server 2012 (110)** и **SQL Server 2014 (120)**.  
+5.  Чтобы изменить уровень совместимости, выберите в списке другой параметр. Доступны следующие значения: **SQL Server 2008 (100)** , **SQL Server 2012 (110)** и **SQL Server 2014 (120)** .  
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   

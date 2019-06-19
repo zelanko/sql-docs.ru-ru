@@ -1,6 +1,6 @@
 ---
 title: AT TIME ZONE (Transact-SQL) | Документы Майкрософт
-ms.date: 11/16/2016
+ms.date: 06/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -17,12 +17,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: = azuresqldb-current ||>= sql-server-2016 ||>= sql-server-linux-2017 ||= sqlallproducts-allversions
-ms.openlocfilehash: ea975f49b5333c2ada88569d6ae3e6d84fac64e8
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.openlocfilehash: f366514d23a2de7180eb84d12997434f9414c427
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65981105"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66836359"
 ---
 # <a name="at-time-zone-transact-sql"></a>AT TIME ZONE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -125,7 +125,7 @@ inputdate AT TIME ZONE timezone
 ### <a name="a-add-target-time-zone-offset-to-datetime-without-offset-information"></a>A. Добавление смещения часового пояса к datetime без сведений о смещении  
  Используйте функцию **AT TIME ZONE**, чтобы добавить смещение на основании правил для часовых поясов, если известно, что исходные значения **datetime** указаны в том же часовом поясе:  
   
-```  
+```sql
 USE AdventureWorks2016;  
 GO  
   
@@ -137,21 +137,20 @@ FROM Sales.SalesOrderHeader;
 ### <a name="b-convert-values-between-different-time-zones"></a>Б. Преобразование значений между разными часовыми поясами  
  В следующем примере показано преобразование значений между разными часовыми поясами:  
   
-```  
+```sql
 USE AdventureWorks2016;  
 GO  
   
 SELECT SalesOrderID, OrderDate,   
     OrderDate AT TIME ZONE 'Pacific Standard Time' AS OrderDate_TimeZonePST,  
-    OrderDate AT TIME ZONE 'Pacific Standard Time'   
-    AT TIME ZONE 'Central European Standard Time' AS OrderDate_TimeZoneCET  
+    OrderDate AT TIME ZONE 'Central European Standard Time' AS OrderDate_TimeZoneCET  
 FROM Sales.SalesOrderHeader;  
 ```  
   
 ### <a name="c-query-temporal-tables-using-local-time-zone"></a>В. Запрос темпоральных таблиц с использованием местного часового пояса  
  В приведенном ниже примере показан выбор данных из темпоральной таблицы.  
   
-```  
+```sql
 USE AdventureWorks2016;  
 GO  
   

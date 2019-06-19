@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 189f2067-c6c4-48bd-9bd9-65f6b2021c12
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 40817f2e80ae969717bf9ab098a1fdc9665f88c5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 1a3610cddb39db4930bfb401fc9be7351f4f7223
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681252"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66761756"
 ---
 # <a name="configure-the-cursor-threshold-server-configuration-option"></a>Настройка параметра конфигурации сервера cursor threshold
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "47681252"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Продолжение**  [после настройки параметра cursor threshold](#FollowUp)  
+-   **Дальнейшие действия.**  [После настройки параметра cursor threshold](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
@@ -98,7 +98,7 @@ GO
   
  Дополнительные сведения см. в разделе [Параметры конфигурации сервера (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
-##  <a name="FollowUp"></a> Продолжение: после настройки параметра cursor threshold  
+##  <a name="FollowUp"></a> Дальнейшие действия. После настройки параметра cursor threshold  
  Параметр вступает в силу немедленно, без перезапуска сервера.  
   
 ## <a name="see-also"></a>См. также:  

@@ -1,7 +1,7 @@
 ---
 title: Общие сведения о расширенных событиях в SQL Server | Документация Майкрософт
 ms.custom: ''
-ms.date: 05/22/2019
+ms.date: 05/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 01ec6f0f6a48fd0d19b6bda98b42afe57abd0a07
-ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
+ms.openlocfilehash: 0ea8f2a0202793380d80c09694a2a844e6859af9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66175665"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66744015"
 ---
 # <a name="extended-events-overview"></a>Общие сведения о расширенных событиях
 
@@ -103,7 +103,10 @@ ms.locfileid: "66175665"
 |Описывает, как использовать расширенные события совместно со средством трассировки событий для Windows (ETW) для наблюдения за активностью системы.|[Мониторинг активности системы с помощью расширенных событий](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md)|  
 | Использование представлений каталога и динамических административных представлений для расширенных событий | [Использование SELECT и JOIN в системных представлениях для расширенных событий в SQL Server](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md) |
 
-  
+## <a name="code-examples-can-differ-for-azure-sql-database"></a>Примеры кода для базы данных SQL Azure могут отличаться
+
+[!INCLUDE[sql-on-premises-vs-azure-similar-sys-views-include.](../../includes/paragraph-content/sql-on-premises-vs-azure-similar-sys-views-include.md)]
+
 ## <a name="see-also"></a>См. также:  
  [Приложения уровня данных](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [Поддержка приложений уровня данных для объектов и версий SQL Server](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)   
@@ -111,4 +114,5 @@ ms.locfileid: "66175665"
  [Наблюдение за приложениями уровня данных](../../relational-databases/data-tier-applications/monitor-data-tier-applications.md)   
  [Динамические административные представления расширенных событий](../../relational-databases/system-dynamic-management-views/extended-events-dynamic-management-views.md)   
  [Представления каталога расширенных событий (Transact-SQL)](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)  
- [XELite: кроссплатформенная библиотека для чтения событий XEvent из XEL-файлов или обновляющихся потоков SQL](https://www.nuget.org/packages/Microsoft.SqlServer.XEvent.XELite/), выпущена в мае 2019 г.  
+ [XELite: кроссплатформенная библиотека для чтения событий XEvent из XEL-файлов или обновляющихся потоков SQL](https://www.nuget.org/packages/Microsoft.SqlServer.XEvent.XELite/), выпущена в мае 2019 г.   
+ Командлет [Read-SQLXEvent PowerShell](https://www.powershellgallery.com/packages/SqlServer.XEvent), выпущен в июне 2019 г.

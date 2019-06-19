@@ -23,13 +23,13 @@ helpviewer_keywords:
 ms.assetid: a7f95ddc-5154-4ed5-8117-c9fcf2221f13
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 0eafeec6fb34729de0545df636386ed42186c7b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 6be95b1c8a1a04f681abe270d3ab27d7b3aa62b8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629272"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66795547"
 ---
 # <a name="database-mirroring-sql-server"></a>Зеркальное отображение базы данных (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "47629272"
   
      Зеркальное отображение базы данных обеспечивает полную или почти полную избыточность данных в зависимости от того, какой режим установлен: высокой безопасности или высокой производительности. Дополнительные сведения см. в подразделе [Режимы работы](#OperatingModes)ниже в этом разделе.  
   
-     Участник зеркального отображения, запущенный в [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] или более поздней версии, предпринимает попытки автоматически разрешить ошибки некоторых типов, которые могут мешать чтению страницы данных. Участник, который не может прочитать страницу, запрашивает новую копию у другого участника. Если этот запрос завершился успешно, то нечитаемая страница заменяется копией, в результате чего ошибка обычно устраняется. Дополнительные сведения см. в подразделе [Автоматическое восстановление страниц (группы доступности: зеркальное отображение баз данных)](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md).  
+     Участник зеркального отображения, запущенный в [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] или более поздней версии, предпринимает попытки автоматически разрешить ошибки некоторых типов, которые могут мешать чтению страницы данных. Участник, который не может прочитать страницу, запрашивает новую копию у другого участника. Если этот запрос завершился успешно, то нечитаемая страница заменяется копией, в результате чего ошибка обычно устраняется. Дополнительные сведения см. в статье [Автоматическое восстановление страниц (группы доступности: зеркальное отображение баз данных)](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md).  
   
 -   Повышает доступность рабочей базы данных при обновлениях.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "47629272"
  После запуска или возобновления сеанса зеркального отображения процесс, при помощи которого собранные на основном сервере записи журнала основной базы данных отправляются на зеркальный сервер, который как можно быстрее записывает их на диск, чтобы приблизиться к состоянию основного сервера.  
   
  Безопасность транзакций  
- Характерное для зеркального отображения свойство базы данных, которое определяет, будет работать сеанс зеркального отображения базы данных в синхронном или асинхронном режиме. Предусмотрены два уровня безопасности: FULL и OFF.  
+ Характерное для зеркального отображения свойство базы данных, которое определяет, будет работать сеанс зеркального отображения базы данных в синхронном или асинхронном режиме. Существует два уровня безопасности: FULL и OFF.  
   
  Свидетель  
  Дополнительный экземпляр SQL Server для использования только в режиме повышенной безопасности, который позволяет зеркальному серверу узнавать время начала автоматического перехода на другой ресурс. В отличие от двух партнеров по обеспечению отработки отказа, следящий сервер не обслуживает базу данных. Его единственная функция заключается в поддержке автоматического перехода на другой ресурс.  
@@ -347,7 +347,7 @@ ms.locfileid: "47629272"
  [Конечная точка зеркального отображения базы данных (SQL Server)](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
  [Автоматическое восстановление страниц (группы доступности: зеркальное отображение баз данных)](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)   
  [Диагностика конфигурации зеркального отображения базы данных (SQL Server)](../../database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)   
- [Зеркальное отображение базы данных: взаимодействие и сосуществание (SQL Server)](../../database-engine/database-mirroring/database-mirroring-interoperability-and-coexistence-sql-server.md)   
+ [Зеркальное отображение базы данных: взаимодействие и совместимость &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-interoperability-and-coexistence-sql-server.md)   
  [Предварительные условия, ограничения и рекомендации по зеркальному отображению базы данных](../../database-engine/database-mirroring/prerequisites-restrictions-and-recommendations-for-database-mirroring.md)   
  [Обзор групп доступности AlwaysOn (SQL Server)](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Сведения о доставке журналов (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)  

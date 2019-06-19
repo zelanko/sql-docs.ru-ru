@@ -10,11 +10,11 @@ ms.reviewer: ''
 ms.technology: performance
 ms.topic: conceptual
 ms.openlocfilehash: 75563b5dcceead80b5b4d55c07413b37c9d0c278
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380665"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63299492"
 ---
 # <a name="use-dmvs-to-determine-usage-statistics-and-performance-of-views"></a>Использование динамических административных представлений для определения статистики использования и производительности представлений
 В этой статье рассматриваются методы и скрипты, используемые для получения информации о **производительности запросов, которые используют представления**. Цель этих скриптов — предоставить показатели использования и производительности различных представлений, найденных в базе данных. 

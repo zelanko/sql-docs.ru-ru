@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 592af27fb460f748dcf11b1463583a5d221402d9
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65715825"
 ---
 # <a name="catalogsetobjectparametervalue-ssisdb-database"></a>catalog.set_object_parameter_value (база данных SSISDB)
@@ -44,22 +44,22 @@ catalog.set_object_parameter_value [@object_type =] object_type
  Тип параметра. Значение `20` указывает параметр проекта, значение `30` — параметр пакета. Параметр *object_type* имеет тип **smallInt**.  
   
  [@folder_name =] *folder_name*  
- Имя папки, в которой содержится параметр. Параметр *folder_name* имеет тип **nvarchar(128)**.  
+ Имя папки, в которой содержится параметр. Параметр *folder_name* имеет тип **nvarchar(128)** .  
   
  [@project_name =] *project_name*  
- Имя проекта, в котором содержится параметр. Параметр *project_name* имеет тип **nvarchar(128)**.  
+ Имя проекта, в котором содержится параметр. Параметр *project_name* имеет тип **nvarchar(128)** .  
   
  [@parameter_name =] *parameter_name*  
- Имя параметра. Параметр *parameter_name* имеет тип **nvarchar(128)**.  
+ Имя параметра. Параметр *parameter_name* имеет тип **nvarchar(128)** .  
   
  [@parameter_value =] *parameter_value*  
  Значение параметра. Параметр *parameter_value* имеет тип **sql_variant**.  
   
  [@object_name =] *object_name*  
- Имя пакета. Этот аргумент обязателен, если параметр является параметром пакета. Параметр *object_name* имеет тип **nvarchar(260)**.  
+ Имя пакета. Этот аргумент обязателен, если параметр является параметром пакета. Параметр *object_name* имеет тип **nvarchar(260)** .  
   
  [@value_type =] *value_type*  
- Тип значения параметра. Символ `V` указывает, что *parameter_value* является литеральным значением, которое используется по умолчанию, если до исполнения не будет назначено других значений. Символ `R` означает, что *parameter_value* является указанным в ссылке значением и что ему было задано имя переменной среды. Этот аргумент является необязательным. По умолчанию используется символ `V`. Параметр *value_type* имеет тип **char(1)**.  
+ Тип значения параметра. Символ `V` указывает, что *parameter_value* является литеральным значением, которое используется по умолчанию, если до исполнения не будет назначено других значений. Символ `R` означает, что *parameter_value* является указанным в ссылке значением и что ему было задано имя переменной среды. Этот аргумент является необязательным. По умолчанию используется символ `V`. Параметр *value_type* имеет тип **char(1)** .  
   
 ## <a name="return-code-value"></a>Значения кодов возврата  
  0 (успешное завершение)  

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 7c326958-5ae9-4761-9c57-905972276a8f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c6d416be5087d9aa9c55f069940aecee568442f8
-ms.sourcegitcommit: d7ed341b2c635dcdd6b0f5f4751bb919a75a6dfe
+manager: jroth
+ms.openlocfilehash: 3f1ea7ec48f702173ad3370b7212b0b0b24260dc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57527127"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66765799"
 ---
 # <a name="enable-or-disable-always-on-availability-group-feature"></a>Включение или отключение функции групп доступности Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,23 +31,8 @@ ms.locfileid: "57527127"
 > [!IMPORTANT]  
 >  При удалении и повторном создании кластера WSFC необходимо отключить и повторно включить функцию [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] в каждом экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , который обеспечил размещение реплики доступности в исходном кластере WSFC.  
   
--   **Перед началом работы**  
   
-     [Предварительные требования](#Prerequisites)  
-  
-     [безопасность](#Security)  
-  
--   **Как**  
-  
-    -   [Определите, включены ли группы доступности AlwaysOn](#IsEnabled)  
-  
-    -   [Включение групп доступности AlwaysOn](#EnableAOAG)  
-  
-    -   [Отключение групп доступности AlwaysOn](#DisableAOAG)  
-  
-##  <a name="BeforeYouBegin"></a> Перед началом  
-  
-###  <a name="Prerequisites"></a> Необходимые условия включения групп доступности AlwaysOn  
+##  <a name="Prerequisites"></a> Необходимые условия включения групп доступности AlwaysOn  
   
 -   Экземпляр сервера должен находиться на узле отказоустойчивой кластеризации Windows Server (WSFC).  
   
@@ -57,10 +42,9 @@ ms.locfileid: "57527127"
   
  Сведения о дополнительных предварительных требованиях к созданию и настройке групп доступности см. в разделе [Предварительные требования, ограничения и рекомендации для групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
-###  <a name="Security"></a> Безопасность  
+## <a name="Permissions"></a> Permissions  
  Когда группы доступности AlwaysOn включены в экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], экземпляр сервера имеет полный контроль над кластером WSFC.  
-  
-####  <a name="Permissions"></a> Permissions  
+
  Требуется членство в группе **Администратор** на локальном компьютере и полный контроль над кластером WSFC. При отключении функции AlwaysOn с помощью PowerShell откройте окно командной строки, используя команду **Запуск от имени администратора** .  
   
  Требуются разрешения Active Directory на создание объектов и управление объектами.  
@@ -134,7 +118,7 @@ ms.locfileid: "57527127"
   
 2.  В меню **Пуск** последовательно выберите пункты **Все программы**, [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)], **Средства настройки**и **Диспетчер конфигурации SQL Server**.  
   
-3.  В **диспетчере конфигураций SQL Server** выберите **Службы SQL Server**, правой кнопкой мыши щелкните SQL Server (**\<**_имя_экземпляра_**), где** **\<**_имя_экземпляра_**>**  — это имя локального экземпляра сервера, для которого требуется включить группы доступности AlwaysOn, после чего щелкните **Свойства**.  
+3.  В **диспетчере конфигураций SQL Server** выберите **Службы SQL Server**, правой кнопкой мыши щелкните SQL Server ( **\<** _имя_экземпляра_ **), где** **\<** _имя_экземпляра_ **>**  — это имя локального экземпляра сервера, для которого требуется включить группы доступности AlwaysOn, после чего щелкните **Свойства**.  
   
 4.  Перейдите на вкладку **Высокий уровень доступности AlwaysOn**.  
   
@@ -198,13 +182,13 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
   
 2.  В меню **Пуск** последовательно укажите пункты **Все программы**, [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)], **Средства настройки**и выберите пункт **Диспетчер конфигурации SQL Server**.  
   
-3.  В **диспетчере конфигураций SQL Server** щелкните **SQL Server Services**, правой кнопкой щелкните SQL Server (**\<**_имя_экземпляра_**>)**, где **\<**_имя_экземпляра_**>**  — это имя локального экземпляра сервера, для которого требуется отключить группы доступности AlwaysOn, и щелкните **Свойства**.  
+3.  В **диспетчере конфигураций SQL Server** щелкните **SQL Server Services**, правой кнопкой щелкните SQL Server ( **\<** _имя_экземпляра_ **>)** , где **\<** _имя_экземпляра_ **>**  — это имя локального экземпляра сервера, для которого требуется отключить группы доступности AlwaysOn, и щелкните **Свойства**.  
   
-4.  На вкладке**Высокий уровень доступности AlwaysOn**снимите флажок **Включить группы доступности AlwaysOn** и нажмите кнопку **ОК**.  
+4.  На вкладке **Высокий уровень доступности Always On**снимите флажок **Включить группы доступности Always On** и нажмите кнопку **ОК**.  
   
      [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] сохранит изменения и перезапустит службу [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . После перезапуска службы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] функция AlwaysOn будет отключена, а для свойства **IsHadrEnabled** будет установлено значение 0, указывающее на то, что группы доступности AlwaysOn отключены.  
   
-5.  Рекомендуется ознакомиться с пунктом [Дальнейшие действия После отключения Always On](#FollowUp) далее в этом разделе.  
+5.  Рекомендуется ознакомиться с пунктом [Дальнейшие действия. После отключения Always On](#FollowUp) далее в этом разделе.  
   
 ###  <a name="PScmd3Procedure"></a> Использование SQL Server PowerShell  
  **Отключение функции AlwaysOn**  

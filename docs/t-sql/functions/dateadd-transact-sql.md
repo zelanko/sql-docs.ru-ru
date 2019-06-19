@@ -27,12 +27,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a2b31c801d485d4e127993ba7664b5277e5a1e01
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.openlocfilehash: 4f2e86162a7b7fc8dd491241fb598ed8083e2c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65943690"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66469640"
 ---
 # <a name="dateadd-transact-sql"></a>DATEADD (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -88,7 +88,8 @@ DATEADD (datepart , number , date )
 Для *date* `DATEADD` будет принимать столбец выражения, выражение, строковый литерал или определяемую пользователем переменную. Значение строкового литерала должно разрешаться в **datetime**. Во избежание неоднозначности используйте четырехзначную запись года. Сведения о двузначном обозначении года см. в статье [Настройка параметра конфигурации сервера two digit year cutoff](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md).
   
 ## <a name="return-types"></a>Типы возвращаемых данных
-Тип данных аргумента *date* становится типом данных возвращаемого значения `DATEADD`. Исключение составляют значения *date* строкового литерала. Для строкового литерала `DATEADD` возвращает значение **datetime**. Если строковый литерал имеет более трех позиций долей секунды (.nnn) или если строковый литерал содержит часть смещения часового пояса, `DATEADD` выдаст ошибку.
+
+Тип данных возвращаемого значения для этого метода является динамическим. Тип возвращаемого значения зависит от типа аргумента, переданного в `date`. Если значение для `date` является строковым литералом даты, `DATEADD` возвращает значение **datetime**. Если для `date` предоставляется другой тип допустимых входных данных, `DATEADD` возвращает тот же тип данных. Если строковый литерал имеет более трех позиций долей секунды (.nnn) или если строковый литерал содержит часть смещения часового пояса, `DATEADD` выдаст ошибку.
   
 ## <a name="return-value"></a>Возвращаемое значение  
   

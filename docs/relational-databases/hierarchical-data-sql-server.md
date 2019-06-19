@@ -1,7 +1,7 @@
 ---
 title: Иерархические данные (SQL Server) | Документация Майкрософт
 ms.custom: ''
-ms.date: 09/01/2017
+ms.date: 09/03/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -19,15 +19,17 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7cf997219044de427ed968ca39928e1449f73e60
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b4cca30125bd6b8fb69893332924d18fbb461cd9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659490"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66706913"
 ---
 # <a name="hierarchical-data-sql-server"></a>Иерархические данные (SQL Server)
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+
   Встроенный тип данных **hierarchyid** упрощает хранение и запрос иерархических данных. **hierarchyid** оптимизирован для представления деревьев, которые являются наиболее распространенным типом иерархических данных.  
   
  Иерархические данные представляют собой набор элементов данных, связанных между собой иерархическими связями. Иерархические связи — это связи, в которых один из элементов данных является родителем другого элемента. Примеры иерархических данных, которые обычно хранятся в базах данных, включают следующее.  
@@ -82,7 +84,7 @@ ms.locfileid: "51659490"
 ### <a name="parentchild"></a>Родители-потомки  
  Если используется подход «родители-потомки», в каждой строке содержится ссылка на родительскую переменную. Следующая таблица определяет типичную таблицу для хранения строк в связи типа «родители-потомки».  
   
-```  
+```sql
 USE AdventureWorks2012 ;  
 GO  
   
@@ -115,7 +117,7 @@ GO
   
      Если поддерево без конечных узлов необходимо часто перемещать и важна высокая производительность, но при этом большинство перемещений происходит на определенном уровне иерархии, рекомендуется разбить данные на две иерархические структуры: более высоких и более низких уровней. В этом случае все перемещения будут происходить на последнем уровне верхней иерархии. Например, рассмотрим иерархию веб-сайтов, входящих в одну службу. Сайты содержат много страниц, имеющих иерархическую структуру. Сайты службы могут перемещаться в другие места в иерархии сайтов, но реорганизация страниц происходит редко. Это можно представить так:  
   
-    ```  
+    ```sql
     CREATE TABLE HostedSites   
        (  
         SiteId hierarchyid, PageId hierarchyid  
@@ -137,7 +139,7 @@ GO
   
  Например, если приложение отслеживает работу многочисленных организаций, всегда хранит и извлекает всю организационную иерархию и не запрашивает подробные данные по отдельным организациям, таблица может иметь следующий вид.  
   
-```  
+```sql
 CREATE TABLE XMLOrg   
     (  
     Orgid int,  
@@ -162,14 +164,14 @@ GO
   
      В индексе преимущественно в ширину все прямые потомки узла хранятся в одном месте. Поэтому индекс преимущественно в ширину эффективен для запросов по прямым потомкам. Например: «найти всех прямых подчиненных этого начальника».  
   
- Выбор стратегии индексирования (в глубину, в ширину или обе) и ключа кластеризации зависит от того, какие из вышеуказанных типов запросов обрабатываются чаще и какие операции более важны (SELECT или DML). Пример использования стратегий индексирования см. в разделе [Tutorial: Using the hierarchyid Data Type](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
+ Выбор стратегии индексирования (в глубину, в ширину или обе) и ключа кластеризации зависит от того, какие из вышеуказанных типов запросов обрабатываются чаще и какие операции более важны (SELECT или DML). Пример использования стратегий индексирования см. в разделе [Учебник. Использование типа данных hierarchyid](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
   
   
 ### <a name="creating-indexes"></a>Создание индексов  
  Для организации данных в ширину можно использовать метод GetLevel(). В следующем примере создаются оба типа индекса: преимущественно в глубину и преимущественно в ширину.  
   
-```wmimof  
-USE AdventureWorks2012 ;   
+```sql
+USE AdventureWorks2012 ;   -- wmimof
 GO  
   
 CREATE TABLE Organization  
@@ -181,11 +183,11 @@ CREATE TABLE Organization
 GO  
   
 CREATE CLUSTERED INDEX Org_Breadth_First   
-ON Organization(OrgLevel,BusinessEntityID) ;  
+    ON Organization(OrgLevel,BusinessEntityID) ;  
 GO  
   
 CREATE UNIQUE INDEX Org_Depth_First   
-ON Organization(BusinessEntityID) ;  
+    ON Organization(BusinessEntityID) ;  
 GO  
 ```  
   
@@ -195,18 +197,20 @@ GO
 ### <a name="simple-example"></a>Простой пример  
  Следующий пример намеренно упрощен, чтобы легче было приступить к работе. Сначала создайте таблицу для хранения определенных географических данных.  
   
-```  
+```sql
 CREATE TABLE SimpleDemo  
-(Level hierarchyid NOT NULL,  
-Location nvarchar(30) NOT NULL,  
-LocationType nvarchar(9) NULL);  
+(
+    Level hierarchyid NOT NULL,  
+    Location nvarchar(30) NOT NULL,  
+    LocationType nvarchar(9) NULL
+);
 ```  
   
  Теперь введите данные для некоторых континентов, стран, штатов и городов.  
   
-```  
+```sql
 INSERT SimpleDemo  
-VALUES   
+    VALUES   
 ('/1/', 'Europe', 'Continent'),  
 ('/2/', 'South America', 'Continent'),  
 ('/1/1/', 'France', 'Country'),  
@@ -223,9 +227,9 @@ VALUES
   
  Выберите данные, добавляя столбец, который преобразовывает данные уровня в текстовое значение, удобное для восприятия. Этот запрос также отсортирует результат по типу данных **hierarchyid** .  
   
-```  
+```sql
 SELECT CAST(Level AS nvarchar(100)) AS [Converted Level], *   
-FROM SimpleDemo ORDER BY Level;  
+    FROM SimpleDemo ORDER BY Level;  
 ```  
   
  [!INCLUDE[ssResult](../includes/ssresult-md.md)]  
@@ -250,9 +254,9 @@ Converted Level  Level     Location         LocationType
   
  Добавьте еще одну строку и выберите результаты.  
   
-```  
+```sql
 INSERT SimpleDemo  
-VALUES ('/1/3/1/', 'Kyoto', 'City'), ('/1/3/1/', 'London', 'City');  
+    VALUES ('/1/3/1/', 'Kyoto', 'City'), ('/1/3/1/', 'London', 'City');  
 SELECT CAST(Level AS nvarchar(100)) AS [Converted Level], * FROM SimpleDemo ORDER BY Level;  
 ```  
   
@@ -260,15 +264,15 @@ SELECT CAST(Level AS nvarchar(100)) AS [Converted Level], * FROM SimpleDemo ORDE
   
  Кроме того, в этой таблице не используется верхняя часть иерархии `'/'`. Она была опущена, потому что общий родительский объект для всех континентов отсутствует. Его можно добавить путем добавления всей планеты.  
   
-```  
+```sql
 INSERT SimpleDemo  
-VALUES ('/', 'Earth', 'Planet');  
+    VALUES ('/', 'Earth', 'Planet');  
 ```  
   
 ##  <a name="tasks"></a> Связанные задачи  
   
 ###  <a name="migrating"></a> Переход со структуры «родители-потомки» на тип hierarchyid  
- Большинство деревьев представлены методом «родители-потомки». Для перехода со структуры "родители-потомки" на тип **hierarchyid** проще всего создать временный столбец или временную таблицу для хранения количества узлов на каждом уровне иерархии. Пример преобразования таблицы с организацией "родители-потомки" см. в статье [Учебник. Использование типа данных hierarchyid](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)(урок 1).  
+ Большинство деревьев представлены методом «родители-потомки». Для перехода со структуры "родители-потомки" на тип **hierarchyid** проще всего создать временный столбец или временную таблицу для хранения количества узлов на каждом уровне иерархии. Пример преобразования таблицы с организацией "родители-потомки" см. в уроке 1 из раздела [Учебник. Использование типа данных hierarchyid](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
   
   
 ###  <a name="BKMK_ManagingTrees"></a> Управление древовидной структурой с помощью hierarchyid  
@@ -290,7 +294,7 @@ VALUES ('/', 'Earth', 'Planet');
 #### <a name="example-using-error-detection"></a>Пример использования обнаружения ошибок  
  В следующем примере образец кода вычисляет значение нового потомка **EmployeeId** , определяет любое нарушение ключа, а затем возвращается к маркеру **INS_EMP** для повторного вычисления значения новой строки **EmployeeId** :  
   
-```  
+```sql
 USE AdventureWorks ;  
 GO  
   
@@ -302,18 +306,18 @@ CREATE TABLE Org_T1
    ) ;  
 GO  
   
-CREATE INDEX Org_BreadthFirst ON Org_T1(OrgLevel, EmployeeId)  
+CREATE INDEX Org_BreadthFirst ON Org_T1(OrgLevel, EmployeeId);
 GO  
   
 CREATE PROCEDURE AddEmp(@mgrid hierarchyid, @EmpName nvarchar(50) )   
 AS  
 BEGIN  
-    DECLARE @last_child hierarchyid  
+    DECLARE @last_child hierarchyid;
 INS_EMP:   
     SELECT @last_child = MAX(EmployeeId) FROM Org_T1   
-    WHERE EmployeeId.GetAncestor(1) = @mgrid  
-INSERT Org_T1 (EmployeeId, EmployeeName)  
-SELECT @mgrid.GetDescendant(@last_child, NULL), @EmpName   
+        WHERE EmployeeId.GetAncestor(1) = @mgrid;
+    INSERT INTO Org_T1 (EmployeeId, EmployeeName)  
+        SELECT @mgrid.GetDescendant(@last_child, NULL), @EmpName;
 -- On error, return to INS_EMP to recompute @last_child  
 IF @@error <> 0 GOTO INS_EMP   
 END ;  
@@ -324,7 +328,7 @@ GO
 #### <a name="example-using-a-serializable-transaction"></a>Пример использования сериализуемой транзакции  
  Тип данных **Org_BreadthFirst** обеспечивает использование поиска по диапазону для определения значения **@last_child** . В дополнение к другим случаям ошибок, проверка которых может потребоваться приложению, нарушение повторяющихся ключей после вставки может свидетельствовать о попытке добавления нескольких сотрудников с одним и тем же идентификатором; вследствие этого вычисление значения **@last_child** должно быть выполнено повторно. Следующий код использует сериализуемую транзакцию и индекс по ширине для вычисления значения нового узла:  
   
-```  
+```sql
 CREATE TABLE Org_T2  
     (  
     EmployeeId hierarchyid PRIMARY KEY,  
@@ -351,7 +355,7 @@ END ;
   
  Следующий код заполняет таблицу тремя строками и возвращает результаты:  
   
-```  
+```sql
 INSERT Org_T2 (EmployeeId, EmployeeName)   
     VALUES(hierarchyid::GetRoot(), 'David') ;  
 GO  
@@ -376,7 +380,7 @@ EmployeeId LastChild EmployeeName
 ###  <a name="BKMK_EnforcingTrees"></a> Принудительное формирование древовидной структуры  
  Приведенный выше пример показывает, как можно использовать приложение для поддержания целостности дерева. Обеспечить целостность дерева с помощью ограничений можно, создав для вычисляемого столбца, который определяет родителя для каждого узла, ограничение внешнего ключа относительно идентификатора первичного ключа.  
   
-```  
+```sql
 CREATE TABLE Org_T3  
 (  
    EmployeeId hierarchyid PRIMARY KEY,  
@@ -396,17 +400,17 @@ GO
   
  Используйте следующий код CLR, чтобы найти список предков и ближайшего общего предка:  
   
-```  
+```csharp
 using System;  
 using System.Collections;  
 using System.Text;  
-using Microsoft.SqlServer.Server;  
-using Microsoft.SqlServer.Types;  
+using Microsoft.SqlServer.Server;  // SqlFunction Attribute
+using Microsoft.SqlServer.Types;   // SqlHierarchyId
   
 public partial class HierarchyId_Operations  
 {  
-    [SqlFunction(FillRowMethodName = "FillRow_ListAncestors")]  
-    public static IEnumerable ListAncestors(SqlHierarchyId h)  
+    [SqlFunction(FillRowMethodName = "FillRow_ListAncestors")]
+    public static IEnumerable ListAncestors(SqlHierarchyId h)
     {  
         while (!h.IsNull)  
         {  
@@ -414,14 +418,20 @@ public partial class HierarchyId_Operations
             h = h.GetAncestor(1);  
         }  
     }  
-    public static void FillRow_ListAncestors(Object obj, out SqlHierarchyId ancestor)  
+    public static void FillRow_ListAncestors(
+        Object obj,
+        out SqlHierarchyId ancestor
+        )
     {  
         ancestor = (SqlHierarchyId)obj;  
     }  
   
-    public static HierarchyId CommonAncestor(SqlHierarchyId h1, HierarchyId h2)  
+    public static HierarchyId CommonAncestor(
+        SqlHierarchyId h1,
+        HierarchyId h2
+        )  
     {  
-        while (!h1.IsDescendant(h2))  
+        while (!h1.IsDescendantOf(h2))  
             h1 = h1.GetAncestor(1);  
   
         return h1;  
@@ -431,9 +441,9 @@ public partial class HierarchyId_Operations
   
  Чтобы получить возможность использовать методы **ListAncestor** и **CommonAncestor** в следующих примерах [!INCLUDE[tsql](../includes/tsql-md.md)] , постройте библиотеки DLL и создайте сборку **HierarchyId_Operations** в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , выполнив код, аналогичный следующему:  
   
-```  
+```sql
 CREATE ASSEMBLY HierarchyId_Operations   
-FROM '<path to DLL>\ListAncestors.dll'  
+    FROM '<path to DLL>\ListAncestors.dll';
 GO  
 ```  
   
@@ -443,7 +453,7 @@ GO
   
  Использование среды [!INCLUDE[tsql](../includes/tsql-md.md)]:  
   
-```  
+```sql
 CREATE FUNCTION ListAncestors (@node hierarchyid)  
 RETURNS TABLE (node hierarchyid)  
 AS  
@@ -453,7 +463,7 @@ GO
   
  Пример использования:  
   
-```  
+```sql
 DECLARE @h hierarchyid  
 SELECT @h = OrgNode   
 FROM HumanResources.EmployeeDemo    
@@ -470,7 +480,7 @@ GO
 ###  <a name="lowestcommon"></a> Нахождение ближайшего общего предка  
  С помощью класса **HierarchyId_Operations** , определенного выше, создайте следующую функцию [!INCLUDE[tsql](../includes/tsql-md.md)] для нахождения ближайшего общего предка, затрагивающую два узла в иерархии:  
   
-```  
+```sql
 CREATE FUNCTION CommonAncestor (@node1 hierarchyid, @node2 hierarchyid)  
 RETURNS hierarchyid  
 AS  
@@ -480,16 +490,16 @@ GO
   
  Пример использования:  
   
-```  
-DECLARE @h1 hierarchyid, @h2 hierarchyid  
+```sql
+DECLARE @h1 hierarchyid, @h2 hierarchyid;
   
 SELECT @h1 = OrgNode   
 FROM  HumanResources.EmployeeDemo   
-WHERE LoginID = 'adventure-works\jossef0' -- Node is /1/1/3/  
+WHERE LoginID = 'adventure-works\jossef0'; -- Node is /1/1/3/  
   
 SELECT @h2 = OrgNode   
 FROM HumanResources.EmployeeDemo    
-WHERE LoginID = 'adventure-works\janice0' -- Node is /1/1/5/2/  
+WHERE LoginID = 'adventure-works\janice0'; -- Node is /1/1/5/2/  
   
 SELECT OrgNode.ToString() AS LogicalNode, LoginID   
 FROM HumanResources.EmployeeDemo    
@@ -502,7 +512,7 @@ WHERE OrgNode = dbo.CommonAncestor(@h1, @h2) ;
 ###  <a name="BKMK_MovingSubtrees"></a> Перемещение поддеревьев  
  Другой распространенной операцией является перемещение поддеревьев. Описанная ниже процедура берет поддерево узла **@oldMgr** и делает его (включая сам узел **@oldMgr**) поддеревом узла **@newMgr**.  
   
-```  
+```sql
 CREATE PROCEDURE MoveOrg(@oldMgr nvarchar(256), @newMgr nvarchar(256) )  
 AS  
 BEGIN  
@@ -520,7 +530,7 @@ UPDATE HumanResources.EmployeeDemo
 SET OrgNode = OrgNode.GetReparentedValue(@nold, @nnew)  
 WHERE OrgNode.IsDescendantOf(@nold) = 1 ;  
   
-COMMIT TRANSACTION  
+COMMIT TRANSACTION;
 END ;  
 GO  
 ```  
@@ -528,7 +538,7 @@ GO
   
 ## <a name="see-also"></a>См. также:  
  [Справочник по методам типа данных hierarchyid](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)   
- [Tutorial: Using the hierarchyid Data Type](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
+ [Учебник. Использование типа данных hierarchyid](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
  [hierarchyid (Transact-SQL)](../t-sql/data-types/hierarchyid-data-type-method-reference.md)  
   
   

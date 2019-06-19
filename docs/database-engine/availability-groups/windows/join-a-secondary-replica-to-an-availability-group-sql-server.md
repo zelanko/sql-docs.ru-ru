@@ -16,50 +16,29 @@ helpviewer_keywords:
 ms.assetid: e5bd2489-097a-490e-8ea1-34fe48378ad1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c56c6586330830c0dbda3ece592db7a3bc71d4f0
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 36f74a3e4ca4806260f71353cee4d53bd629526e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213158"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66799290"
 ---
 # <a name="join-a-secondary-replica-to-an-always-on-availability-group"></a>Присоединение вторичной реплики к группе доступности Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   В этом разделе описывается присоединение вторичной реплики к группе доступности AlwaysOn с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или PowerShell в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. После добавления вторичной реплики в группу доступности AlwaysOn необходимо присоединить эту реплику к группе доступности. Операция присоединения реплики должна быть выполнена на экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , на котором находится вторичная реплика.  
+
   
--   **Перед началом работы**  
+##  <a name="Prerequisites"></a> Предварительные требования  
   
-     [Предварительные требования](#Prerequisites)  
-  
-     [безопасность](#Security)  
-  
--   **Подготовка базы данных-получателя с помощью различных средств.**  
-  
-     [Среда SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
--   **Дальнейшие действия.** [Настройте базы данных-получатели](#FollowUp)  
-  
-##  <a name="BeforeYouBegin"></a> Перед началом  
-  
-###  <a name="Prerequisites"></a> Предварительные требования  
-  
--   Первичная реплика группы доступности должна быть в сети.  
-  
--   Пользователь должен быть подключен к экземпляру сервера, на котором находится дополнительная реплика, которая еще не была присоединена к группе доступности.  
-  
+-   Первичная реплика группы доступности должна быть в сети.    
+-   Пользователь должен быть подключен к экземпляру сервера, на котором находится дополнительная реплика, которая еще не была присоединена к группе доступности.    
 -   Экземпляр локального сервера должен иметь возможность подключения к конечной точке зеркального отображения базы данных на экземпляре сервера, где находится первичная реплика.  
   
 > [!IMPORTANT]  
 >  Если какое-либо из предварительных условий не выполняется, происходит сбой операции соединения. После неудачной попытки соединения может быть необходимо подключиться к экземпляру сервера, на котором содержится первичная реплика, чтобы удалить и повторно добавить вторичную реплику, прежде чем можно будет выполнить соединение с группой доступности. Дополнительные сведения см. в разделах [Удаление вторичной реплики из группы доступности (SQL Server)](../../../database-engine/availability-groups/windows/remove-a-secondary-replica-from-an-availability-group-sql-server.md) и [Добавление вторичной реплики к группе доступности (SQL Server)](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md).  
   
-###  <a name="Security"></a> Безопасность  
-  
-####  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Permissions  
  Необходимо разрешение ALTER AVAILABILITY GROUP для группы доступности, разрешение CONTROL AVAILABILITY GROUP, разрешение ALTER ANY AVAILABILITY GROUP или разрешение CONTROL SERVER.  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
@@ -119,7 +98,7 @@ ms.locfileid: "53213158"
   
 -   [Поставщик SQL Server PowerShell](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> Дальнейшие действия. Настройте базы данных-получатели  
+##  <a name="FollowUp"></a> Дальнейшие действия. Настройка баз данных-получателей  
  Для каждой базы данных в группе доступности необходимо настроить базу данных-получатель на экземпляре сервера, где находится дополнительная реплика. Настроить базы данных-получатели до или после присоединения дополнительной реплики к группе доступности можно следующим образом.  
   
 1.  Восстановите последние базы данных и резервные копии журналов каждой базы данных-источника на экземпляр сервера, где находится вторичная реплика, используя инструкцию RESTORE WITH NORECOVERY для каждой операции восстановления. Дополнительные сведения см. в статье [Ручная подготовка базы данных-получателя для присоединения к группе доступности (SQL Server)](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  

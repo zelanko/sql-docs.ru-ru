@@ -34,16 +34,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3adc687a30c3f8f7e9f8564bfbbb3fec44ad4a20
-ms.sourcegitcommit: ccea98fa0768d01076cb6ffef0b4bdb221b2f9d5
+ms.openlocfilehash: 660b9d8ea0d0ebd0f0ef1ea83c225cd74f71080b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65560111"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66744170"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>Выпуски и поддерживаемые функции SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
+> [!div class="nextstepaction"]
+> [Поделитесь своим мнением о странице Центра документации по SQL!](https://github.com/MicrosoftDocs/sql-docs/issues/2249)
 
 В этом разделе подробно описаны функции, поддерживаемые различными выпусками SQL Server 2017. 
 
@@ -194,7 +196,7 @@ ms.locfileid: "65560111"
 |регулятор ресурсов|Да|нет|нет|нет|нет|  
 |Параллелизм секционированных таблиц|Да|нет|нет|нет|нет|
 |Несколько контейнеров файлового потока|Да|Да|Да|Да|Да|
-|Поддержка NUMA, выделение памяти больших страниц и массива буфера|Да|нет|нет|нет|нет|
+|Память больших страниц с поддержкой NUMA и выделение массивов буферов|Да|нет|нет|нет|нет|
 |Buffer Pool Extension|Да|Да|нет|нет|нет|
 |Управление ресурсами ввода-вывода|Да|нет|нет|нет|нет|  
 |Упреждающее чтение|Да|нет|нет|нет|нет|

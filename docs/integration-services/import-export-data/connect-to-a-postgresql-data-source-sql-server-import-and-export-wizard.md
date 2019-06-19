@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 168e53dde51641d79569eb3ef6a1930d0084d10f
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723985"
 ---
 # <a name="connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard"></a>Подключение к источнику данных PostgreSQL (мастер импорта и экспорта SQL Server)
@@ -55,7 +55,7 @@ ms.locfileid: "65723985"
 > Вы можете получить помощь в построении строки подключения. Кроме того, вместо указания строки подключения вы можете предоставить существующее имя DSN (имя источника данных) или создать новое. Дополнительные сведения об этих возможностях см. в разделе [Подключение к источнику данных ODBC](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md).
 
 **Драйвер**  
-Имя драйвера ODBC — **PostgreSQL ODBC Driver(UNICODE)** или **PostgreSQL ODBC Driver(ANSI)**.
+Имя драйвера ODBC — **PostgreSQL ODBC Driver(UNICODE)** или **PostgreSQL ODBC Driver(ANSI)** .
 
 **Server**  
 Имя сервера PostgreSQL. 

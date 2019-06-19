@@ -1,7 +1,7 @@
 ---
 title: Выпуски и поддерживаемые функции SQL Server 2016 | Документация Майкрософт
-ms.custom: ''
-ms.date: 05/24/2017
+ms.custom: sqlfreshmay19
+ms.date: 05/29/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -29,21 +29,22 @@ helpviewer_keywords:
 - installing SQL Server, editions
 - editions [SQL Server], about edition options
 - Setup [SQL Server]
+- CPSA
 ms.assetid: e5186f02-dd91-47d0-8fa4-de3f41c76903
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 12b7a440b8f100ff383deda7ad5c1dbc4c8a4578
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: cb908e8ff5af27e58fa97da1ce6b6626c8ed91db
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658438"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66701621"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2016"></a>Выпуски и поддерживаемые функции SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-В этом разделе подробно описаны функции, поддерживаемые различными выпусками SQL Server.  В данный момент нет изменений в функциях, поддерживаемых различными выпусками для SQL Server 2017.  
+В этом разделе подробно описаны функции, поддерживаемые различными выпусками SQL Server. Сейчас нет изменений в функциях, поддерживаемых различными выпусками для SQL Server 2017.  
   
 Требования для установки сильно зависят от потребностей приложения. Различные выпуски [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] удовлетворяют индивидуальным требованиям каждой организации или отдельного лица к производительности, среде выполнения и цене. Набор устанавливаемых компонентов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] зависит от потребностей конкретного пользователя. В следующих разделах содержатся сведения, на основе которых из множества выпусков и компонентов, доступных в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], можно сделать наилучший выбор.  
 
@@ -61,21 +62,22 @@ ms.locfileid: "58658438"
 > 
 > ![Значок виртуальной машины Azure](../analysis-services/media/azure-virtual-machine-small.png) **[Разверните виртуальную машину с уже установленным SQL Server 2016](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2016sp2-ws2016)**   
   
-## <a name="includessnoversionincludesssnoversion-mdmd-editions"></a>Выпуски[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)]   
+## <a name="includessnoversionincludesssnoversion-mdmd-editions"></a>Выпуски[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)]  
  Эти выпуски [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]описаны в следующей таблице. 
   
-|Выпуск[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] |Определение|  
+|Выпуск[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Определение|  
 |---------------------------------------|----------------|  
 |Enterprise|Выпуск [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Enterprise Edition является предложением премиум класса, обеспечивающим полный набор возможностей ЦОД с исключительно высокой производительностью, неограниченными возможностями виртуализации и исчерпывающими средствами бизнес-аналитики, что позволяет добиться высокого уровня обслуживания важнейших рабочих нагрузок и предоставить конечным пользователям доступ к анализу данных.|  
 |Standard|Выпуск [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Standard обеспечивает основные функции управления данными и предоставляет базу данных бизнес-аналитики для приложений, работающих в отделах и небольших организациях. Поддерживаются распространенные средства разработки в локальных системах и вычислительных облаках, что делает возможным эффективное управление базами данных с минимальными затратами ИТ-ресурсов.|  
-|Web Edition|Выпуск[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Web Edition — это вариант с низкой совокупной стоимостью владения, предназначенный для размещения веб-сайтов и дополнительных веб-услуг, который по доступной цене обеспечивает масштабируемость и функции управления для небольших и крупномасштабных веб-проектов.|  
+|Web Edition|Выпуск[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Web Edition — это вариант с низкой совокупной стоимостью владения, предназначенный для размещения веб-сайтов и дополнительных веб-услуг, который по доступной цене обеспечивает масштабируемость и функции управления для небольших и крупномасштабных веб-проектов.|  
 |Разработчик|Выпуск[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Developer Edition позволяет разработчикам создавать приложения любого типа на базе [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Он включает все функциональные возможности выпуска Enterprise Edition, однако лицензируется как система для разработки и тестирования, а не для применения в качестве рабочего сервера. Выпуск [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer является идеальным выбором для тех, кто создает [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] и тестирует приложения.|  
 |Экспресс-выпуски|Выпуск Express является бесплатной базой данных начального уровня и идеально подходит для обучения, а также для создания управляемых данными приложений, работающих на рабочих станциях и небольших серверах. Этот выпуск — лучший выбор для независимых поставщиков программного обеспечения, непрофессиональных разработчиков и любителей, создающих клиентские приложения. Если необходимы дополнительные функции базы данных, выпуск [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express можно легко обновить до версий [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]более высокого класса. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express LocalDB, облегченная версия Express, которая имеет все программные функции, запускается в пользовательском режиме, быстро устанавливается, не требует настройки; количество предварительных условий для ее установки невелико.|  
   
 ## <a name="using-includessnoversionincludesssnoversion-mdmd-with-an-internet-server"></a>Использование [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] с веб-сервером  
  На веб-сервере (например, под управлением служб IIS) обычно устанавливают клиентские средства [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Клиентские средства включают в себя клиентские компоненты соединения, которые используются приложениями, соединяющимися с экземпляром [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
-> **ПРИМЕЧАНИЕ.**  Хотя возможна установка экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на тот же компьютер, где работают службы IIS, обычно это делается только для небольших веб-сайтов, состоящих из одиночного серверного компьютера. У большинства веб-сайтов их системы IIS среднего уровня расположены на одном сервере или серверном кластере, а базы данных — на отдельном сервере или федерации серверов.  
+> [!NOTE]
+> Хотя возможна установка экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на тот же компьютер, где работают службы IIS, обычно это делается только для небольших веб-сайтов, состоящих из одиночного серверного компьютера. У большинства веб-сайтов их системы IIS среднего уровня расположены на одном сервере или серверном кластере, а базы данных — на отдельном сервере или федерации серверов.  
   
 ## <a name="using-includessnoversionincludesssnoversion-mdmd-with-clientserver-applications"></a>Использование [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] с клиентскими и серверными приложениями  
  На компьютер, где работают клиент-серверные приложения, которые подключаются непосредственно к экземпляру [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , можно установить только клиентские компоненты [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Установка клиентских компонентов будет хорошим выбором также и в том случае, если администрируется экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на сервере базы данных или планируется разработка приложений [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
@@ -101,18 +103,18 @@ ms.locfileid: "58658438"
 |[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]|Среда[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] — это интегрированная среда для доступа, настройки, управления, администрирования и разработки всех компонентов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Среда[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] позволяет разработчикам и администраторам, обладающим различными уровнями навыков, использовать [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].<br /><br /> Загрузите и установите <br />                [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] со страницы  [Скачивание SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx)|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager|Диспетчер конфигурации[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] обеспечивает базовые возможности управления конфигурациями для служб, серверных протоколов, клиентских протоколов и псевдонимов клиентов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|  
 |[!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]|Приложение[!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] предоставляет графический пользовательский интерфейс для наблюдения за экземпляром компонента [!INCLUDE[ssDE](../includes/ssde-md.md)] или служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|  
-|Помощник по настройке[!INCLUDE[ssDE](../includes/ssde-md.md)] |Помощник по настройке ядра компонента[!INCLUDE[ssDE](../includes/ssde-md.md)] помогает создавать оптимальные наборы индексов, индексированных представлений и секций.|  
+|Помощник по настройке[!INCLUDE[ssDE](../includes/ssde-md.md)]|Помощник по настройке ядра компонента[!INCLUDE[ssDE](../includes/ssde-md.md)] помогает создавать оптимальные наборы индексов, индексированных представлений и секций.|  
 |Клиент Data Quality|Предоставляет очень простой и понятный графический пользовательский интерфейс для подключения к серверу DQS и выполнения операций очистки данных. Он также позволяет централизованно отслеживать различные действия, выполняемые во время операции очистки данных.|  
 |[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]|[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] содержат интегрированную среду разработки, предназначенную для создания решений для следующих компонентов бизнес-аналитики: [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]и [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].<br /><br /> (Ранее — среда Business Intelligence Development Studio.)<br /><br /> [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] также содержит компонент «Проекты баз данных», который предоставляет интегрированную среду для разработчиков, предназначенную для выполнения всех работ по разработке баз данных для любой платформы [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (на самом предприятии и за его пределами) в Visual Studio. Разработчикам баз данных предлагается расширенный обозреватель серверов, который является компонентом Visual Studio, предназначенным для облегчения процессов создания и изменения объектов баз данных и данных в них, а также для выполнения запросов.|  
 |Компоненты связи|Устанавливает компоненты для связи между клиентами и серверами и сетевые библиотеки для DB-библиотеки, ODBC и OLE DB.|  
   
 |Документация|Описание|  
 |-------------------|-----------------|  
-|Электронная документация по[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] |Основная документация для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].| 
+|Электронная документация по[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Основная документация для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].| 
 
 **Выпуски Evaluation и Developer**  
 Поддерживаемые компоненты для выпусков Developer и Evaluation указаны в списке возможностей SQL Server Enterprise в приведенных ниже таблицах.
-Список возможностей, которые были добавлены в выпуск Developer для [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1, см. в статье [о выпусках SQL Server 2016 SP1](https://aka.ms/uw6cw4).  
+
 
 Выпуск Developer edition по-прежнему поддерживает только 1 клиент для [распределенного воспроизведения SQL Server](../tools/distributed-replay/sql-server-distributed-replay.md). 
   
@@ -131,7 +133,7 @@ ms.locfileid: "58658438"
   
 <sup>1</sup> Использование выпуска Enterprise Edition с лицензированием по принципу "лицензия на сервер и клиентские лицензии (Server+CAL)" (недоступно для новых соглашений) ограничено максимум 20 ядрами в расчете на экземпляр SQL Server. В модели лицензирования по числу ядер никаких ограничений нет. Дополнительные сведения см. в разделе [Compute Capacity Limits by Edition of SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
   
-<sup>2</sup> Применимо к [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] с пакетом обновления 1 (SP1). 
+<sup>2</sup> применяется к [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1 в процессе формирования общей контактной зоны возможностей программирования (CPSA) между выпусками. 
 
 ##  <a name="RDBMSHA"></a> RDBMS High Availability  
   
@@ -159,7 +161,7 @@ ms.locfileid: "58658438"
 
 <sup>2</sup> Дополнительные сведения о базовых группах доступности см. в разделе [Базовые группы доступности](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md).  
 
-<sup>3</sup> Область применения: [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 2016 с пакетом обновления 1 (SP1).
+<sup>3</sup> применяется к [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 2016 SP1 в процессе формирования общей контактной зоны возможностей программирования (CPSA) между выпусками. 
   
 ##  <a name="RDBMSSP"></a> RDBMS Scalability and Performance  
   
@@ -175,7 +177,7 @@ ms.locfileid: "58658438"
 |Resource Governor|Да|нет|нет|нет|нет|  
 |Параллелизм секционированных таблиц|Да|нет|нет|нет|нет|
 |Несколько контейнеров файлового потока|Да|Да <sup>2</sup>|Да <sup>2</sup>|Да <sup>2</sup>|Да <sup>2</sup>|
-|Поддержка NUMA, выделение памяти больших страниц и массива буфера|Да|Нет <sup>4</sup>|нет|нет|нет|
+|Память больших страниц с поддержкой NUMA и выделение массивов буферов|Да|Нет <sup>4</sup>|нет|нет|нет|
 |Buffer Pool Extension|Да|Да|нет|нет|нет|
 |Управление ресурсами ввода-вывода|Да|нет|нет|нет|нет|
 |Упреждающее чтение|Да|нет|нет|нет|нет|
@@ -184,7 +186,7 @@ ms.locfileid: "58658438"
 
 <sup>1</sup> Размер данных выполняющейся в памяти OLTP и кэша сегмента Columnstore ограничены объемом памяти, указанным в выпуске в разделе "Ограничения масштабирования". Максимальная степень параллелизма ограничена. Степень параллелизма процесса (DOP) для построения индекса ограничена значением 2 для выпуска Standard и 1 для выпусков Express и Web. Это относится к индексам columnstore, созданным на основе таблиц на диске и оптимизированных для памяти таблиц.
 
-<sup>2</sup> Применимо к [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] с пакетом обновления 1 (SP1). 
+<sup>2</sup> применяется к [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1 в процессе формирования общей контактной зоны возможностей программирования (CPSA) между выпусками.  
 
 <sup>3</sup> Эта функция не включена в вариант установки LocalDB.
 
@@ -204,7 +206,8 @@ ms.locfileid: "58658438"
 |Автономные базы данных|Да|Да|Да|Да|Да| 
 |Шифрование для резервного копирования|Да|Да|нет|нет|нет|  
 
-<sup>1</sup> Область применения: [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 2016 с пакетом обновления 1 (SP1).  
+<sup>1</sup> применяется к [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1 в процессе формирования общей контактной зоны возможностей программирования (CPSA) между выпусками.      
+
 ##  <a name="Replication"></a> Replication  
   
 |Компонент|Enterprise|Standard|Web Edition|Express с дополнительными службами|Express|   
@@ -264,7 +267,7 @@ ms.locfileid: "58658438"
   
  <sup>1</sup> Дополнительные сведения см. в разделе [Вопросы по установке SQL Server с помощью SysPrep](../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md).  
  
-<sup>2</sup> Область применения: [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 2016 с пакетом обновления 1 (SP1). 
+<sup>2</sup> применяется к [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1 в процессе формирования общей контактной зоны возможностей программирования (CPSA) между выпусками.      
   
 ##  <a name="DevTools"></a> Development Tools  
   
@@ -302,7 +305,7 @@ ms.locfileid: "58658438"
 
 <sup>1</sup> Для масштабного развертывания с несколькими вычислительными узлами требуется головной узел.
 
-<sup>2</sup> Область применения: [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 2016 с пакетом обновления 1 (SP1).
+<sup>2</sup> применяется к [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1 в процессе формирования общей контактной зоны возможностей программирования (CPSA) между выпусками.     
   
 ## <a name="IS"></a> Службы Integration Services
 
@@ -324,7 +327,8 @@ ms.locfileid: "58658438"
 |Параллельная обработка запросов для секционированных таблиц и индексов|Да|нет|нет|нет|нет|   
 |Глобальная статистическая обработка пакета|Да|нет|нет|нет|нет| 
 
-<sup>1</sup> Применимо к [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] с пакетом обновления 1 (SP1).  
+<sup>1</sup> применяется к [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1 в процессе формирования общей контактной зоны возможностей программирования (CPSA) между выпусками.     
+
 ##  <a name="SSAS"></a> Analysis Services  
   
 Дополнительные сведения о функциях служб Analysis Services, поддерживаемые различными выпусками [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)], в разделе [Analysis Services функции, поддерживаемые различными выпусками SQL Server](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md). 
@@ -379,7 +383,6 @@ ms.locfileid: "58658438"
 > [![Download SSMS](../analysis-services/media/download.png)](../ssms/download-sql-server-management-studio-ssms.md) **[Download the latest version of SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)**      
   
 ## <a name="see-also"></a>См. также:  
- [Спецификации SQL Server](https://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)   
  [Установка SQL Server 2016](../database-engine/install-windows/installation-for-sql-server-2016.md)  
  
   

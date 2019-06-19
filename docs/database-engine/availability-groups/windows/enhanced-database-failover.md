@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: jroth
 ms.openlocfilehash: 2d18dde037e9c6dc21ae7c33a84e403451edc1c7
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66765778"
 ---
 # <a name="enable-enhanced-database-failover-to-a-database-in-an-always-on-availability-group"></a>Включение улучшенной отработки отказа для базы данных в группе доступности Always On

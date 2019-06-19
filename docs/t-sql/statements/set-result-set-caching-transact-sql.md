@@ -15,14 +15,14 @@ author: XiaoyuL-Preview
 ms.author: xiaoyul
 manager: craigg
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 0b932c1fa3aa8575f8f12ef5f164841788f74c1a
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.openlocfilehash: 7e2c9ee878b49065a040865bc32d62837e8b8e25
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65948748"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66781015"
 ---
-# <a name="set-result-set-caching-transact-sql"></a>SET RESULT SET CACHING (Transact-SQL)
+# <a name="set-result-set-caching-transact-sql-preview-for-azure-sql-data-warehouse-gen2"></a>SET RESULT SET CACHING (Transact-SQL) (предварительная версия для хранилища данных SQL Azure 2-го поколения)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
@@ -85,7 +85,7 @@ SET RESULT_SET_CACHING OFF;
 ### <a name="check-result-set-caching-setting-for-a-database"></a>Проверка кэширования результирующих наборов для базы данных
 
 ```sql
-SELECT name, is_result_set_caching  
+SELECT name, is_result_set_caching_on  
 FROM sys.databases
 ```
 
@@ -131,7 +131,7 @@ FROM sys.dm_pdw_request_steps
 WHERE command like '%DWResultCacheDb%' and step_index = 0
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Инструкции SET (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)</br>
 [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql?view=azure-sqldw-latest)

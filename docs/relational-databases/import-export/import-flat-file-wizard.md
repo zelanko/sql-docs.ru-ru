@@ -13,18 +13,18 @@ ms.author: alayu
 ms.reviewer: maghan
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3399262b9ea80c789f81b7b4e745b6c8f32d11f1
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.openlocfilehash: 9ebb00b758aa3291c453d6c48d548f2047c72530
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66012911"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66836386"
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>Мастер импорта неструктурированных файлов в SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 > Сведения о мастере импорта и экспорта см. в разделе [Мастер импорта и экспорта SQL Server](https://docs.microsoft.com/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard).
 
-Мастер импорта неструктурированных файлов позволяет легко скопировать данные из неструктурированного файла (CSV-файл, TXT-файл) в место назначения. В этом обзоре описано, почему нужно использовать этот мастер, как его найти, а также приведен простой пример.
+Мастер импорта неструктурированных файлов позволяет легко скопировать данные из неструктурированного файла (CSV-файл, TXT-файл) в новую таблицу в вашей базе данных. В этом обзоре описано, почему нужно использовать этот мастер, как его найти, а также приведен простой пример.
 
 ## <a name="why-would-i-use-this-wizard"></a>Почему нужно использовать этот мастер?
 Этот мастер создан на основе интеллектуальной платформы Program Synthesis using Examples ([PROSE](https://microsoft.github.io/prose/)) и позволяет улучшить текущий процесс импорта. Для пользователей, которые не обладают глубокими знаниями в предметной области, импорт данных часто представляет собой трудную и утомительную задачу, чреватую ошибками. При использовании мастера достаточно указать входной файл и уникальное имя таблицы, и платформа PROSE сделает все остальное.

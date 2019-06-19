@@ -11,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4601435dcaf7cbc82cb4fb6e6e00ea911ef12f9f
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: 34a8cc218cac621a678ae32ced63166ead9ffef0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044391"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66749124"
 ---
 # <a name="columnstore-indexes---what39s-new"></a>Новые возможности индексов columnstore
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "55044391"
  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] добавляет указанные новые возможности.
 
 ### <a name="functional"></a>Функции
-- [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] поддерживает нематериализованные вычисляемые столбцы в кластеризованных индексах columnstore. Материализованные столбцы не поддерживаются в кластеризованных индексах columnstore. Вы не можете создать некластеризованный индекс для индекса columnstore с вычисляемым столбцом. 
+- [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] поддерживает нематериализованные вычисляемые столбцы в кластеризованных индексах columnstore. Не поддерживает материализованные вычисляемые столбцы в кластеризованных индексах columnstore. Невозможно создать некластеризованный индекс в индексе columnstore, где есть вычисляемый столбец. 
 
 ## [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
  В[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] реализованы ключевые усовершенствования для повышения производительности и гибкости индексов columnstore. Эти улучшения расширяют возможности хранения данных и обеспечивают поддержку операционной аналитики в реальном времени.  

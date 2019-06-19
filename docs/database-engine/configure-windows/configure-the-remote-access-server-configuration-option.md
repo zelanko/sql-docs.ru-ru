@@ -12,20 +12,20 @@ helpviewer_keywords:
 ms.assetid: f5de748d-1c55-4714-9661-38fe62e5095f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 80c8b1690a4a0e38b591fe0614bb13e4ab028e1a
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: ce926bbfbefce529a5d01607408818676f6d46f5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605154"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66783817"
 ---
 # <a name="configure-the-remote-access-server-configuration-option"></a>Настройка параметра конфигурации сервера remote access
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Эта статья посвящена компоненту "Удаленный доступ". Этот параметр конфигурации является довольно запутанной и устаревшей возможностью взаимодействия [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с другим [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], и пользоваться ей совершенно незачем. Если вы попали на эту страницу, пытаясь устранить неполадки с подключением к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], рекомендуем изучить какую-нибудь из следующих статей:  
   
--   [Учебник. Приступая к работе с компонентом Database Engine](../../relational-databases/tutorial-getting-started-with-the-database-engine.md)  
+-   [Учебник. Начало работы с ядром СУБД](../../relational-databases/tutorial-getting-started-with-the-database-engine.md)  
   
 -   [Вход в систему SQL Server](../../database-engine/configure-windows/logging-in-to-sql-server.md)  
   
@@ -41,11 +41,11 @@ ms.locfileid: "51605154"
   
  Программистам могут быть интересны следующие статьи.  
   
--   [How To: Connect to SQL Server Using SQL Authentication in ASP.NET 2.0 (Практическое руководство: подключение к SQL Server с помощью проверки подлинности SQL в ASP.NET 2.0)](https://msdn.microsoft.com/library/ff648340.aspx)  
+-   [Руководство. Подключение к SQL Server с помощью проверки подлинности SQL в ASP.NET 2.0](https://msdn.microsoft.com/library/ff648340.aspx)  
   
 -   [Соединение с экземпляром SQL Server](../../relational-databases/server-management-objects-smo/create-program/connecting-to-an-instance-of-sql-server.md)  
   
--   [Практическое руководство: создание подключений к базам данных SQL Server](https://msdn.microsoft.com/library/s4yys16a.aspx)  
+-   [Руководство. Создание подключений к базам данных SQL Server](https://msdn.microsoft.com/library/s4yys16a.aspx)  
   
  **Основная часть этой статьи начинается здесь.**  
   

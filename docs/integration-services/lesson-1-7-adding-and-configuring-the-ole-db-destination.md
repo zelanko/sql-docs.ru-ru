@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 620314ec11154737dc6d35bcf1d3e2587aaab2a1
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65722988"
 ---
 # <a name="lesson-1-7-add-and-configure-the-ole-db-destination"></a>Занятие 1-7. Добавление и настройка назначения OLE DB
@@ -42,7 +42,7 @@ ms.locfileid: "65722988"
   
 6.  Убедитесь в том, что в диалоговом окне **Редактор назначения OLE DB** в поле **Диспетчер соединений OLE DB** выбрано значение **localhost.AdventureWorksDW2012**.  
   
-7.  В поле **Имя таблицы или представления** введите или выберите значение **[dbo].[FactCurrencyRate]**.  
+7.  В поле **Имя таблицы или представления** введите или выберите значение **[dbo].[FactCurrencyRate]** .  
   
 8.  Чтобы создать таблицу, нажмите кнопку **Создать**.  Измените имя таблицы с **Образец назначения OLE DB** на **NewFactCurrencyRate**.  Нажмите кнопку **ОК**.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "65722988"
   
 13. Щелкните правой кнопкой мыши назначение **Образец назначения OLE DB** и выберите пункт **Свойства**.  
   
-14. В окне **Свойства** убедитесь в том, что свойство **LocaleID** установлено в значение **Английский (США)**, а свойство **DefaultCodePage** установлено в значение **1252**.  
+14. В окне **Свойства** убедитесь в том, что свойство **LocaleID** установлено в значение **Английский (США)** , а свойство **DefaultCodePage** установлено в значение **1252**.  
   
 ## <a name="go-to-next-task"></a>Перейти к следующему шагу
 [Шаг 8. Добавление заметок и форматирование пакета занятия 1](../integration-services/lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  

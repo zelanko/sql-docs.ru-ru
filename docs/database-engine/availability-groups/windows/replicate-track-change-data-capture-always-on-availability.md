@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3a40d8209fd01c6f5e3c4ec2c3d4344d2b62ee35
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+manager: jroth
+ms.openlocfilehash: 35ff790595dbcb6a3864b2d1414149374119d907
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125954"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66787988"
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>Репликация, отслеживание изменений, изменение данных в группах доступности AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -196,9 +196,9 @@ ms.locfileid: "54125954"
   
 -   При использовании репликации слиянием и базы данных публикации в группе доступности:  
   
-    -   Принудительная подписка: И издатель и распространитель должны иметь версию не ниже [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
+    -   Принудительная подписка: издатель и распространитель должны иметь версию не ниже [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
   
-    -   Подписка по запросу: Базы данных издателя, распространителя и подписчика должны находиться в экземпляре с версией не ниже [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. Это связано с тем, что агент слияния на подписчике должен иметь сведения о том, как группа доступности может выполнить отработку отказа на базу данных-получатель.  
+    -   Подписка по запросу: базы данных издателя, распространителя и подписчика должны находиться на экземпляре с версией не ниже [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. Это связано с тем, что агент слияния на подписчике должен иметь сведения о том, как группа доступности может выполнить отработку отказа на базу данных-получатель.  
   
 -   Экземпляры издателя должны удовлетворять всем предварительным условиям, необходимым для участия в группе доступности AlwaysOn. Дополнительные сведения см. в разделе [Предварительные требования, ограничения и рекомендации для групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   

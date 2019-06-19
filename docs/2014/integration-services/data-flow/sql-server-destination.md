@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 818f78cd0b38aba0a7201eb28f49eb573ba32672
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62770729"
 ---
 # <a name="sql-server-destination"></a>назначение «SQL Server»
@@ -32,7 +32,7 @@ ms.locfileid: "62770729"
  Пользователям, выполняющим пакеты, которые содержат назначение «SQL Server», необходимо разрешение на «Создание глобальных объектов». Предоставить это разрешение пользователям можно с помощью средства политики локальной безопасности, доступного в меню **Администрирование** . Если при выполнении пакета, который использует назначение «SQL Server», получено сообщение об ошибке, убедитесь, что учетная запись, под которой был запущен пакет, имеет разрешение на «Создание глобальных объектов».  
   
 ## <a name="bulk-inserts"></a>Массовые вставки  
- При попытке использовать назначение «SQL Server» для массовой загрузки данных в удаленной базе данных SQL Server, может появиться сообщение об ошибке следующего вида: «Доступна запись OLE DB. Источник: «Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client» Hresult: 0x80040E14 Описание: «Массовая загрузка не удалась, так как не удалось открыть объект сопоставления файлов служб SSIS 'Global\DTSQLIMPORT'. Код ошибки операционной системы 2 (система не может найти указанный файл). Убедитесь, что доступ к локальному серверу осуществляется через систему безопасности Windows"».  
+ При попытке использовать назначение SQL Server для массовой загрузки данных в удаленную базу данных SQL Server может появиться примерно сообщение об ошибке следующего содержания: An OLE DB record is available. Источник: "Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client" Hresult: 0x80040E14 Description: "Could not bulk load because SSIS file mapping object 'Global\DTSQLIMPORT ' could not be opened. Код ошибки операционной системы 2 (система не может найти указанный файл). Убедитесь, что доступ к локальному серверу осуществляется через систему безопасности Windows"».  
   
  Назначение "SQL Server" предлагает такую же высокоскоростную вставку данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , что и задача "Массовая вставка". Однако используя назначение "SQL Server", пакет может применить преобразования к столбцу раньше, чем данные будут загружены в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

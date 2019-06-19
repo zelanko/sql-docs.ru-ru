@@ -10,13 +10,13 @@ ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: f8a71f5e91fec924a73186211f3296bfc52add8a
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+manager: jroth
+ms.openlocfilehash: 434edd3a2fb48e6566deeac246b941f9ef7f2eb5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58872264"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66795001"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>Выбор метода обновления компонента Database Engine
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -27,9 +27,9 @@ ms.locfileid: "58872264"
   
  **Загрузить**  
   
--   Чтобы скачать [!INCLUDE[SSnoversion](../../includes/ssnoversion-md.md)], перейдите на сайт  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server)**.  
+-   Чтобы скачать [!INCLUDE[SSnoversion](../../includes/ssnoversion-md.md)], перейдите на сайт  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server)** .  
   
--   Есть учетная запись Azure?  Перейдите **[сюда](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2019-ws2016?tab=Overview)**, чтобы запустить виртуальную машину с уже установленной версией [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Developer Edition.  
+-   Есть учетная запись Azure?  Перейдите **[сюда](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2019-ws2016?tab=Overview)** , чтобы запустить виртуальную машину с уже установленной версией [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Developer Edition.  
   
 > [!NOTE]  
 >  При составлении плана обновления, кроме того, можно рассмотреть возможность обновления базы данных SQL Azure или виртуализации среды SQL Server. Эти статьи выходят за рамки данной статьи. Дополнительные сведения см. по следующим ссылкам:
@@ -45,7 +45,11 @@ ms.locfileid: "58872264"
 -   среда разработки без конфигурации высокой доступности;  
   
 -   рабочая среда без критически важных нагрузок, которая допускает некоторое время простоя и в которой используется новое оборудование и программное обеспечение. Время простоя зависит от размера базы данных и быстродействия подсистемы ввода-вывода. Обновление SQL Server 2014 при использовании оптимизированных для памяти таблиц займет немного больше времени. Дополнительные сведения см. в разделе [Составление и тестирование плана обновления ядра СУБД](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
-  
+
+> [!NOTE]
+> Пример того, как корпорация Майкрософт использовала эту стратегию, см. в следующей записи блога: [Обновлять или не обновлять, вот в чем вопрос](https://azure.microsoft.com/blog/azure-sql-server-to-upgrade-or-not-to-upgrade-that-is-the-question/). 
+
+
 > [!WARNING]  
 >  При запуске программы установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] останавливается и перезапускается в процессе выполнения предварительных проверок.  
   

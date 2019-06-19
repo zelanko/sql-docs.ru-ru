@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 0fa8785b-0830-4a52-aff5-fcf8268b72fc
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 1fffafeed8fe36520223aaf5ef900c410244e495
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 5b7d8a4cb398e984ede05ad411623a9e33653ac1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732212"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66803327"
 ---
 # <a name="configure-the-default-full-text-language-server-configuration-option"></a>Настройка параметра конфигурации сервера «язык полнотекстового поиска по умолчанию»
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "47732212"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Дальнейшие действия**  [После настройки параметра default full-text language](#FollowUp)  
+-   **Дальнейшие действия.**  [После настройки параметра default full-text language](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   

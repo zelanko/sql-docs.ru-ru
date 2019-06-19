@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8ec7519a4ea203693e6520eee569639a3259215f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62767516"
 ---
-# <a name="lesson-2-creating-the-deployment-bundle"></a>Урок 2. Cоздание пакета развертывания
+# <a name="lesson-2-creating-the-deployment-bundle"></a>Урок 2. Создание пакета развертывания
   В разделе [Занятие 1. Подготовка к созданию пакета развертывания](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md) вы создали проект служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] с именем "Учебник по развертыванию", добавили к нему пакеты и вспомогательные файлы, а также настроили пакеты.  
   
  На этом занятии создается пакет развертывания, представляющий собой папку, в которой содержатся все элементы, необходимые для установки пакетов на другом компьютере. В пакет развертывания необходимо включить манифест развертывания, копии пакетов и копии файлов поддержки из проекта «Учебник по развертыванию». В манифесте развертывания перечисляются пакеты, различные файлы и настройки из пакета развертывания.  

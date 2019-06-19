@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 72eb4fc1-7af4-4ec6-9e02-11a69e02748e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9178ee0cbb010f55cf7438c345112c95f3d2b3fb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: 34e5533d442dbbc91807a533ba53ebcc8b115d19
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508705"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66775337"
 ---
 # <a name="start-sql-server-in-single-user-mode"></a>Запуск SQL Server в однопользовательском режиме
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "52508705"
   
 4.  Уточните у администратора кластера или с помощью консоли управления отказоустойчивым кластером, остается ли ресурс [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в режиме «вне сети».  
   
-5.  Теперь подключитесь к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и выполните необходимую операцию: SQLCMD -E -S\<имя_сервера>.  
+5.  Подключитесь к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], используя теперь следующую команду, и выполните необходимую операцию: SQLCMD -E -S\<имя сервера>.  
   
 6.  После завершения операции закройте командную строку и переведите SQL и другие ресурсы обратно в режим «в сети», обратившись к администратору кластера.  
   

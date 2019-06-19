@@ -23,12 +23,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 05612e0b32a336b64614d6072169471fe0450d1b
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.openlocfilehash: 0a6f6f8c8699cc911d747d07edd9655fd363d667
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65943493"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66696980"
 ---
 # <a name="patindex-transact-sql"></a>PATINDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,44 +51,44 @@ PATINDEX ( '%pattern%' , expression )
  [Выражение](../../t-sql/language-elements/expressions-transact-sql.md), обычно столбец, в котором производится поиск по указанному шаблону. *expression* представляет собой выражение из категории типа данных "символьная строка".  
   
 ## <a name="return-types"></a>Типы возвращаемых данных  
- **bigint**, если *expression* имеет тип данных **varchar(max)** или **nvarchar(max)** ; в противном случае **int**.  
+**bigint**, если *expression* имеет тип данных **varchar(max)** или **nvarchar(max)** ; в противном случае **int**.  
   
 ## <a name="remarks"></a>Remarks  
- Если аргумент *pattern* или *expression* имеет значение NULL, функция PATINDEX возвращает значение NULL.  
+Если аргумент *pattern* или *expression* имеет значение NULL, функция PATINDEX возвращает значение NULL.  
  
- Начальная возвращенная позиция начинается с 1, а не с 0.
+Начальная позиция PATINDEX — это 1.
  
- Функция PATINDEX выполняет сравнение с учетом параметров сортировки входных значений. Для выполнения сравнения в указанных параметрах сортировки можно воспользоваться функцией COLLATE, чтобы явно указать параметры сортировки для входных данных.  
+Функция PATINDEX выполняет сравнение с учетом параметров сортировки входных значений. Для выполнения сравнения в указанных параметрах сортировки можно воспользоваться функцией COLLATE, чтобы явно указать параметры сортировки для входных данных.  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>Дополнительные символы (суррогатные пары)  
- При использовании параметров сортировки SC возвращаемое значение рассматривает любые суррогатные пары UTF-16 в параметре *expression* как один символ. Дополнительные сведения см. в статье [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
+При использовании параметров сортировки SC возвращаемое значение рассматривает любые суррогатные пары UTF-16 в параметре *expression* как один символ. Дополнительные сведения см. в статье [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
   
- Символ 0x0000 (**char(0)** ) не определен в параметрах сортировки Windows, и его нельзя включать в PATINDEX.  
+Символ 0x0000 (**char(0)** ) не определен в параметрах сортировки Windows, и его нельзя включать в PATINDEX.  
   
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-simple-patindex-example"></a>A. Простой пример использования функции PATINDEX  
  В приведенном ниже примере в короткой строке символов (`interesting data`) проверяется начальная позиция символов `ter`.  
   
-```  
+```sql  
 SELECT PATINDEX('%ter%', 'interesting data');  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `3`  
+`3`  
   
 ### <a name="b-using-a-pattern-with-patindex"></a>Б. Использование шаблона в функции PATINDEX  
- В следующем примере производится поиск позиции, с которой начинается шаблон `ensure` в указанной строке столбца `DocumentSummary` в таблице `Document` в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
+В следующем примере производится поиск позиции, с которой начинается шаблон `ensure` в указанной строке столбца `DocumentSummary` в таблице `Document` в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-```  
+```sql  
 SELECT PATINDEX('%ensure%',DocumentSummary)  
 FROM Production.Document  
 WHERE DocumentNode = 0x7B40;  
 GO   
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```
 -----------  
@@ -96,30 +96,30 @@ GO
 (1 row(s) affected)
 ```  
   
- Если не ограничить строки для поиска предложением `WHERE`, запрос возвращает все строки, содержащиеся в таблице, и выдает ненулевые значения для тех строк, в которых найден шаблон, либо нулевые для тех, где он не найден.  
+Если не ограничить строки для поиска предложением `WHERE`, запрос возвращает все строки, содержащиеся в таблице, и выдает ненулевые значения для тех строк, в которых найден шаблон, либо нулевые для тех, где он не найден.  
   
 ### <a name="c-using-wildcard-characters-with-patindex"></a>В. Использование символов-шаблонов в функции PATINDEX  
  В следующих примерах символы-шаблоны % и _ используются для поиска позиции, где в указанной строке (индекс начинается с позиции 1) начинается шаблон `'en'`, за которым следует один любой символ и `'ure'`:  
   
-```  
+```sql  
 SELECT PATINDEX('%en_ure%', 'please ensure the door is locked');  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```
 -----------  
 8  
 ```  
   
- `PATINDEX` работает аналогично `LIKE`, то есть можно можно использовать любой из этих шаблонов. Нет необходимости заключать шаблон в символы процентов (%). `PATINDEX('a%', 'abc')` возвращает 1 и `PATINDEX('%a', 'cba')` возвращает 3.  
+`PATINDEX` работает аналогично `LIKE`, то есть можно можно использовать любой из этих шаблонов. Нет необходимости заключать шаблон в символы процентов (%). `PATINDEX('a%', 'abc')` возвращает 1 и `PATINDEX('%a', 'cba')` возвращает 3.  
   
  В отличие от `LIKE`, `PATINDEX` возвращает позицию, аналогично `CHARINDEX`.  
   
 ### <a name="d-using-collate-with-patindex"></a>Г. Использование предложения COLLATE в функции PATINDEX  
  Следующий пример показывает, как функция `COLLATE` явно определяет параметры сортировки при поиске в выражении.  
   
-```  
+```sql  
 USE tempdb;  
 GO  
 SELECT PATINDEX ( '%ein%', 'Das ist ein Test'  COLLATE Latin1_General_BIN) ;  
@@ -127,23 +127,21 @@ GO
 ```  
   
 ### <a name="e-using-a-variable-to-specify-the-pattern"></a>Д. Использование переменной для указания шаблона  
- В приведенном ниже примере значение передается в параметр *pattern* с помощью переменной. В этом примере используется база данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
+В приведенном ниже примере значение передается в параметр *pattern* с помощью переменной. В этом примере используется база данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-```  
+```sql  
 DECLARE @MyValue varchar(10) = 'safety';   
 SELECT PATINDEX('%' + @MyValue + '%', DocumentSummary)   
 FROM Production.Document  
 WHERE DocumentNode = 0x7B40;  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- ```
- ------------  
- 22
- ```  
-  
-
+```
+------------  
+22
+```  
   
 ## <a name="see-also"></a>См. также:  
  [LIKE (Transact-SQL)](../../t-sql/language-elements/like-transact-sql.md)   

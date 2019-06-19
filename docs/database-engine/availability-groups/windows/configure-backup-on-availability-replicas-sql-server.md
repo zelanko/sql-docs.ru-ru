@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 74bc40bb-9f57-44e4-8988-1d69c0585eb6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c6016d1feff6d66fa7ef93fc99b04f20eda88970
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+manager: jroth
+ms.openlocfilehash: f4c5a8a94da47f5961d2034a76b6195420b3f8f2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133226"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66793802"
 ---
 # <a name="configure-backups-on-secondary-replicas-of-an-always-on-availability-group"></a>Настройка резервных копий вторичных реплик группы доступности Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,34 +33,11 @@ ms.locfileid: "54133226"
 > [!NOTE]  
 >  Основные сведения о резервном копировании вторичных реплик см. в разделе [Активные вторичные реплики: резервное копирование во вторичных репликах (группы доступности Always On)](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
--   **Перед началом работы**  
-  
-     [Предварительные требования](#Prerequisites)  
-  
-     [безопасность](#Security)  
-  
--   **Настройка резервного копирования во вторичных репликах с помощью:**  
-  
-     [Среда SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
--   **Дальнейшие действия.**  [После настройки резервного копирования во вторичных репликах](#FollowUp)  
-  
--   [Получение сведений о параметрах настройки резервного копирования](#ForInfoAboutBuPref)  
-  
--   [См. также](#RelatedContent)  
-  
-##  <a name="BeforeYouBegin"></a> Перед началом  
-  
-###  <a name="Prerequisites"></a> Предварительные требования  
+##  <a name="Prerequisites"></a> Предварительные требования  
  Необходимо подключиться к экземпляру сервера, на котором размещена первичная реплика.  
   
-###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Permissions  
   
 |Задача|Разрешения|  
 |----------|-----------------|  

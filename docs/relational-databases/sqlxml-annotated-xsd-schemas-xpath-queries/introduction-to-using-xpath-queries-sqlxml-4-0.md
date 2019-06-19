@@ -17,10 +17,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 57029e2aad7497e68eba2b2007102654f6aa58e0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63013354"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>Основные сведения об использовании запросов XPath (SQLXML 4.0)
@@ -50,7 +50,7 @@ ms.locfileid: "63013354"
   
  В этом документе  **\<клиента >** является узлом элемента **cid** — это узел атрибута и **«Важное»** является текстовым узлом.  
   
- XPath — это язык навигации графа, используемый для выбора набора узлов из XML-документа. Каждый оператор XPath выбирает набор узлов на основе набора узлов, выбранных предыдущим оператором XPath. Например, имея набор  **\<клиента >** узлов, XPath может выбрать все  **\<порядок >** узлов с **даты** значениеатрибута **«7/14/1999»**. Результирующий набор узлов содержит все заказы с датой заказа 7/14/1999.  
+ XPath — это язык навигации графа, используемый для выбора набора узлов из XML-документа. Каждый оператор XPath выбирает набор узлов на основе набора узлов, выбранных предыдущим оператором XPath. Например, имея набор  **\<клиента >** узлов, XPath может выбрать все  **\<порядок >** узлов с **даты** значениеатрибута **«7/14/1999»** . Результирующий набор узлов содержит все заказы с датой заказа 7/14/1999.  
   
  Язык XPath определен консорциумом W3C (World Wide Web Consortium) как стандартный язык навигации. SQLXML 4.0 реализует часть спецификации XPath консорциума W3C, которая находится в каталоге http://www.w3.org/TR/1999/PR-xpath-19991008.html.  
   
@@ -98,9 +98,9 @@ ms.locfileid: "63013354"
 |Предикаты с логическими значениями, включая последовательные и вложенные предикаты.||[Задание арифметических операторов в запросах XPath &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |Все реляционные операторы|=, !=, <, \<=, >, >=|[Указание реляционных операторов в запросах XPath &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-relational-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |арифметические операторы;|+, -, *, div|[Задание арифметических операторов в запросах XPath &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
-|Явные функции преобразования|**Number()**, **string()**, **Boolean()**|[Определение явных функций преобразования в запросах XPath &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-4-0.md)|  
+|Явные функции преобразования|**Number()** , **string()** , **Boolean()**|[Определение явных функций преобразования в запросах XPath &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-4-0.md)|  
 |логические операторы|AND, OR|[Указание логических операторов в запросах XPath &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-operators-in-xpath-queries-sqlxml-4-0.md)|  
-|логические функции|**true()**, **false()**, **not()**|[Указание логических функций в запросах XPath &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-functions-in-xpath-queries-sqlxml-4-0.md)|  
+|логические функции|**true()** , **false()** , **not()**|[Указание логических функций в запросах XPath &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-functions-in-xpath-queries-sqlxml-4-0.md)|  
 |переменные XPath||[Указание переменных XPath в запросах XPath &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-xpath-variables-in-xpath-queries-sqlxml-4-0.md)|  
   
 ## <a name="unsupported-functionality"></a>Неподдерживаемая функциональность  
@@ -108,13 +108,13 @@ ms.locfileid: "63013354"
   
 |Компонент|Элемент|  
 |-------------|----------|  
-|Оси|**предок**, **предка or-self**, **потомков**, **descendant-or-self (/ /)**, **следующие**,  **следующий одноуровневый**, **пространства имен**, **выше**, **предыдущему**|  
+|Оси|**предок**, **предка or-self**, **потомков**, **descendant-or-self (/ /)** , **следующие**,  **следующий одноуровневый**, **пространства имен**, **выше**, **предыдущему**|  
 |Предикаты с числовыми значениями||  
 |арифметические операторы;|mod|  
-|Функции узлов|**предок**, **предка or-self**, **потомков**, **descendant-or-self (/ /)**, **следующие**,  **следующий одноуровневый**, **пространства имен**, **выше**, **предыдущему**|  
-|Строковые функции|**String()**, **concat()**, **starts-with()**, **contains()**, **substring-before()**,  **SUBSTRING-AFTER()**, **substring()**, **string-length() языка**, **normalize()**, **translate()**|  
+|Функции узлов|**предок**, **предка or-self**, **потомков**, **descendant-or-self (/ /)** , **следующие**,  **следующий одноуровневый**, **пространства имен**, **выше**, **предыдущему**|  
+|Строковые функции|**String()** , **concat()** , **starts-with()** , **contains()** , **substring-before()** ,  **SUBSTRING-AFTER()** , **substring()** , **string-length() языка**, **normalize()** , **translate()**|  
 |логические функции|**lang()**|  
-|Числовые функции|**SUM()**, **floor()**, **ceiling()**, **round()**|  
+|Числовые функции|**SUM()** , **floor()** , **ceiling()** , **round()**|  
 |Оператор Union|&#124;|  
   
  При указании запросов XPath в шаблоне обратите внимание на следующее поведение.  

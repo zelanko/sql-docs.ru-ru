@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 827dd531eda338f4fd297a4420ed144d46a613ff
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62998933"
 ---
 # <a name="outer-joins"></a>Внешние соединения
 ODBC поддерживает SQL-92 слева, справа и полного внешнего соединения синтаксис. Escape-последовательность для внешних соединений  
   
- **{oj** _внешнего соединения_**}**  
+ **{oj** _внешнего соединения_ **}**  
   
  где *внешнего соединения* —  
   

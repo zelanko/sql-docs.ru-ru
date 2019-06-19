@@ -20,11 +20,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: afb12785dd744ddfd938fd2ddfd02e058f2e4034
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327405"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63033845"
 ---
 # <a name="revoke-database-principal-permissions-transact-sql"></a>REVOKE, отмена разрешений на участника базы данных (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -63,15 +63,15 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  Указывает разрешение, которое может быть отменено у участника базы данных. Список разрешений см. в подразделе "Примечания" далее в этом разделе.  
   
  USER ::*database_user*  
- Указывает класс и имя пользователя, у которого отменяется разрешение. Квалификатор области (**::**) является обязательным.  
+ Указывает класс и имя пользователя, у которого отменяется разрешение. Квалификатор области ( **::** ) является обязательным.  
   
  ROLE ::*database_role*  
- Указывает класс и имя роли, у которой отменяется разрешение. Квалификатор области (**::**) является обязательным.  
+ Указывает класс и имя роли, у которой отменяется разрешение. Квалификатор области ( **::** ) является обязательным.  
   
  APPLICATION ROLE ::*application_role*  
 **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   
- Указывает класс и имя роли приложения, у которой отменяется разрешение. Квалификатор области (**::**) является обязательным.  
+ Указывает класс и имя роли приложения, у которой отменяется разрешение. Квалификатор области ( **::** ) является обязательным.  
   
  GRANT OPTION  
  Показывает, что отменяется право на предоставление указанного разрешения другим участникам. Само разрешение отменено не будет.  
@@ -179,7 +179,7 @@ GO
 ```  
   
 ### <a name="c-revoking-impersonate-permission-on-a-user-from-an-application-role"></a>В. Отмена разрешения IMPERSONATE на пользователя у роли приложения  
- В следующем примере у роли приложения `IMPERSONATE` отменяется разрешение `HamithaL` на пользователя [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] базы данных `AccountsPayable17`.  
+ В следующем примере у роли приложения `IMPERSONATE` отменяется разрешение `HamithaL` на пользователя `AccountsPayable17` базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
 **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   

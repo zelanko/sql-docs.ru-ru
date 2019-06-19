@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 55f3ac04-5626-4ad2-96bd-a1f1b079659d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5c4f4c40711fad6d32d8fcc0aa859507e266fdd7
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+manager: jroth
+ms.openlocfilehash: 65f613ebf1364d7aeaeda77ec244794f983f3fc9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255379"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66775224"
 ---
 # <a name="view-or-change-server-properties-sql-server"></a>Просмотр или изменение свойств сервера (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "54255379"
   
 -   Некоторые страницы со свойствами предоставляют сведения, полученные через инструментарий управления Windows (WMI). Для отображения этих страниц на компьютере, где работает среда [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], должен быть установлен инструментарий WMI.  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
 ####  <a name="Permissions"></a> Permissions  
  Дополнительные сведения см. в разделе [Роли уровня сервера](../../relational-databases/security/authentication-access/server-level-roles.md).  
@@ -155,9 +155,9 @@ GO
   
 2.  В **диспетчере конфигурации SQL Server**выберите **Службы SQL Server**.  
   
-3.  На панели подробных сведений правой кнопкой мыши щелкните **SQL Server (\<**_имя_экземпляра_**>)** и выберите пункт **Свойства**.  
+3.  На панели подробных сведений правой кнопкой мыши щелкните **SQL Server (\<** _имя_экземпляра_ **>)** и выберите пункт **Свойства**.  
   
-4.  В диалоговом окне **Свойства SQL Server (\<**_имя_экземпляра_**>)**  измените свойства сервера на вкладке **Служба** или **Дополнительно** и нажмите кнопку **ОК**.  
+4.  В диалоговом окне **Свойства SQL Server (\<** _имя_экземпляра_ **>)** измените свойства сервера на вкладке **Служба** или **Дополнительно** и нажмите кнопку **ОК**.  
   
 ##  <a name="FollowUp"></a> Дальнейшие действия. После изменения свойств сервера  
  Для некоторых свойств необходимо перезапустить сервер, чтобы изменения вступили в силу.  
