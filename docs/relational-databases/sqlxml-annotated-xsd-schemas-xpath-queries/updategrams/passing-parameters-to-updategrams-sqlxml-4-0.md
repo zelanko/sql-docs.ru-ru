@@ -19,10 +19,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 501ee9f2bde6d77e8f07fcbdfa6a43a0fa6f3b3a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63007306"
 ---
 # <a name="passing-parameters-to-updategrams-sqlxml-40"></a>Передача параметров для диаграмм обновления (SQLXML 4.0)
@@ -32,7 +32,7 @@ ms.locfileid: "63007306"
  Диаграммы обновления позволяют передавать значение NULL в качестве значения параметра. Чтобы передать значение NULL параметра, необходимо указать **nullvalue** атрибута. Значение, которое назначается **nullvalue** атрибут затем указывается в качестве значения параметра. В диаграммах обновления это значение рассматривается как NULL.  
   
 > [!NOTE]  
->  В  **\<sql:header >** и  **\<updg:header >**, следует указать **nullvalue** как неполное имя; в то время как в  **\<updg:sync >**, указать **nullvalue** виде полного имени (например, **updg: nullValue**).  
+>  В  **\<sql:header >** и  **\<updg:header >** , следует указать **nullvalue** как неполное имя; в то время как в  **\<updg:sync >** , указать **nullvalue** виде полного имени (например, **updg: nullValue**).  
   
 ## <a name="examples"></a>Примеры  
  Чтобы создать рабочие образцы, используя следующие примеры, должны соответствовать требованиям, указанным в [требования для запуска примеров SQLXML](../../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  

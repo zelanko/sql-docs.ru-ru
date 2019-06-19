@@ -20,11 +20,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 55e6800063ba308fca51f60e253500f147e2acb1
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242115"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63026073"
 ---
 # <a name="recover-a-database-without-restoring-data-transact-sql"></a>Восстановление базы данных без восстановления данных (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ RESTORE DATABASE AdventureWorks2012
   
  Синтаксис инструкции [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) для восстановления файлов только по журналу транзакций:  
   
- RESTORE DATABASE *database_name* { FILE **=**_логическое_имя_файла_ | FILEGROUP **=**_логическое_имя_файловой_группы_ }[ **,**...*n* ] WITH RECOVERY  
+ RESTORE DATABASE *database_name* { FILE **=** _логическое_имя_файла_ | FILEGROUP **=** _логическое_имя_файловой_группы_ }[ **,** ...*n* ] WITH RECOVERY  
   
  **Пример**  
   

@@ -30,10 +30,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 47795998b019df22b01852519f75f6e8d3d274dd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63269868"
 ---
 # <a name="support-for-rules-triggers-default-values-and-stored-procedures-visual-foxpro-odbc-driver"></a>Поддержка правил, триггеров, значений по умолчанию и хранимых процедур (драйвер ODBC для Visual FoxPro)
@@ -44,7 +44,7 @@ ms.locfileid: "63269868"
  Если ваше приложение взаимодействует с данными, правила, триггеры, значения по умолчанию, или хранимые процедуры вызова других Visual FoxPro команд или функций, драйвер выдает ошибку. См. в разделе [неподдерживаемые команды Visual FoxPro и функции](../../odbc/microsoft/unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver.md) список команд и функций, не поддерживается драйвером.  
   
 > [!TIP]  
->  Если вы хотите вставить условный код в правила, триггеров или хранимых процедур, которые определяют команды для выполнения при вызове с помощью драйвера, можно использовать **(версии)** функции. **(Версии)** возвращает «драйвер ODBC для Visual FoxPro  *\<версии >*"при вызове с помощью драйвера.  
+>  Если вы хотите вставить условный код в правила, триггеров или хранимых процедур, которые определяют команды для выполнения при вызове с помощью драйвера, можно использовать **(версии)** функции. **(Версии)** возвращает «драйвер ODBC для Visual FoxPro  *\<версии >* "при вызове с помощью драйвера.  
   
 ## <a name="visual-foxpro-commands-and-functions-supported-in-rules-triggers-default-values-and-stored-procedures"></a>Команды Visual FoxPro и функций, поддерживаемых правил, триггеры, значения по умолчанию и хранимых процедур  
   

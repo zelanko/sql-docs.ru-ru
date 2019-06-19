@@ -1,7 +1,7 @@
 ---
-title: FROM (Transact-SQL) | Документы Майкрософт
+title: 'FROM: JOIN, APPLY, PIVOT (T-SQL) | Документация Майкрософт'
 ms.custom: ''
-ms.date: 03/16/2018
+ms.date: 06/01/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -35,20 +35,33 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 85e55be31f3f32316e8d9f841a34a7fcff3a3e97
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: 124e42175f82928fd601a1d8af2833e40a1ff458
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334791"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66462688"
 ---
-# <a name="from-transact-sql"></a>Предложение FROM (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="from-clause-plus-join-apply-pivot-transact-sql"></a>Предложение FROM и JOIN, APPLY, PIVOT (Transact-SQL)
 
-  Указывает таблицы, представления, производные таблицы и соединенные таблицы, которые используются в инструкциях DELETE, SELECT и UPDATE в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. В инструкции SELECT требуется предложение FROM, за исключением тех случаев, когда список выбора содержит только константы, переменные и арифметические выражения (без имен столбцов).  
-  
- ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
+[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+
+В Transact-SQL предложение FROM доступно для следующих инструкций:
+
+- [DELETE](../statements/delete-transact-sql.md)
+- [UPDATE](update-transact-sql.md)
+- [SELECT](select-transact-sql.md)
+
+Как правило, предложение FROM требуется в инструкции SELECT. Исключением является случай, когда не указаны столбцы таблицы, а заданы только литералы или переменные и арифметические выражения.
+
+В этой статье также рассматриваются следующие ключевые слова, которые могут использоваться в предложении FROM.
+
+- JOIN
+- APPLY
+- PIVOT
+
+![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
@@ -250,7 +263,7 @@ FROM { <table_source> [ ,...n ] }
  Указывает, что будет извлечено количество строк, приблизительно равное значению *sample_number*. При указании ROWS [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает приближенное значение количества указанных строк. При указании ROWS результатом выражения *sample_number* должно быть целочисленное значение больше нуля.  
   
  REPEATABLE  
- Указывает, что заданная выборка может быть возвращена снова. При указании такого же значения  *repeat_seed* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] будет возвращать то же подмножество строк до тех пор, пока не будут внесены изменения в какую-либо строку таблицы. При указании другого значения *repeat_seed* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], скорее всего, вернет другую выборку строк таблицы. Изменениями считаются следующие действия над таблицей: вставка, обновление, удаление, перестроение или дефрагментация индекса, а также восстановление или присоединение базы данных.  
+ Указывает, что заданная выборка может быть возвращена снова. При указании такого же значения *repeat_seed* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] будет возвращать то же подмножество строк до тех пор, пока не будут внесены изменения в какую-либо строку таблицы. При указании другого значения *repeat_seed* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], скорее всего, вернет другую выборку строк таблицы. Изменениями считаются следующие действия над таблицей: вставка, обновление, удаление, перестроение или дефрагментация индекса, а также восстановление или присоединение базы данных.  
   
  *repeat_seed*  
  Константное целочисленное выражение, используемое [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для формирования случайного числа. *repeat_seed* имеет тип **bigint**. Если аргумент *repeat_seed* не указан, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] присваивает значение случайным образом. Для определенного значения аргумента *repeat_seed* результат выборки всегда тот же, если в таблице не было произведено никаких изменений. Результат выражения *repeat_seed* должен быть целочисленным значением больше нуля.  
@@ -352,7 +365,7 @@ ON (p.ProductID = v.ProductID);
  Столбец значений оператора PIVOT. При использовании вместе с оператором UNPIVOT аргумент *value_column* не может быть именем существующего столбца во входном *table_source*.  
   
  FOR *pivot_column*  
- Столбец сведения оператора PIVOT. Аргумент *pivot_column* должен иметь тип данных, который может быть явно или неявно преобразован в тип данных **nvarchar()**. Этот столбец не может иметь тип **image** или **rowversion**.  
+ Столбец сведения оператора PIVOT. Аргумент *pivot_column* должен иметь тип данных, который может быть явно или неявно преобразован в тип данных **nvarchar()** . Этот столбец не может иметь тип **image** или **rowversion**.  
   
  При использовании оператора UNPIVOT аргумент *pivot_column* является именем выходного столбца, полученного из *table_source*. В *table_source* не может быть существующего столбца с таким именем.  
   
@@ -372,7 +385,7 @@ ON (p.ProductID = v.ProductID);
 **Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 
   
- Возвращает таблицу с одной записью для каждой строки, содержащей значения, которые были фактическими (текущими) в указанный момент времени в прошлом. На внутреннем уровне объединение выполняется между темпоральной таблицей и соответствующей таблицей журнала, и результаты отфильтровываются так, чтобы возвращались значения в строке, которая была действительной на момент времени, определяемый параметром *\<date_time>*. Значение для строки считается действительным, если значение *system_start_time_column_name* меньше или равно значению параметра *\<date_time>*, а значение *system_end_time_column_name* больше значения параметра *\<date_time>*.   
+ Возвращает таблицу с одной записью для каждой строки, содержащей значения, которые были фактическими (текущими) в указанный момент времени в прошлом. На внутреннем уровне объединение выполняется между темпоральной таблицей и соответствующей таблицей журнала, и результаты отфильтровываются так, чтобы возвращались значения в строке, которая была действительной на момент времени, определяемый параметром *\<date_time>* . Значение для строки считается действительным, если значение *system_start_time_column_name* меньше или равно значению параметра *\<date_time>* , а значение *system_end_time_column_name* больше значения параметра *\<date_time>* .   
   
  FROM \<start_date_time> TO \<end_date_time>
 
@@ -880,11 +893,9 @@ FROM Sales.Customer TABLESAMPLE SYSTEM (10 PERCENT) ;
   
 ## <a name="see-also"></a>См. также:  
  [CONTAINSTABLE (Transact-SQL)](../../relational-databases/system-functions/containstable-transact-sql.md)   
- [DELETE (Transact-SQL)](../../t-sql/statements/delete-transact-sql.md)   
  [FREETEXTTABLE (Transact-SQL)](../../relational-databases/system-functions/freetexttable-transact-sql.md)   
  [INSERT (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)   
  [OPENQUERY (Transact-SQL)](../../t-sql/functions/openquery-transact-sql.md)   
  [OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md)   
  [Операторы (Transact-SQL)](../../t-sql/language-elements/operators-transact-sql.md)   
- [UPDATE (Transact-SQL)](../../t-sql/queries/update-transact-sql.md)   
  [WHERE (Transact-SQL)](../../t-sql/queries/where-transact-sql.md)  

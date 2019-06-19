@@ -17,10 +17,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 334153d45cbc2f4998fdef5902a3084f5912ad95
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65090088"
 ---
 # <a name="set-the-service-startup-account-for-sql-server-agent-sql-server-configuration-manager"></a>Set the Service Startup Account for SQL Server Agent (SQL Server Configuration Manager)
@@ -78,9 +78,9 @@ ms.locfileid: "65090088"
   
 5.  В диспетчере конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на панели консоли выберите **Службы SQL Server**.  
   
-6.  В области сведений щелкните правой кнопкой **Агент SQL Server**_(имя\_сервера)_, где *имя_сервера* — это имя экземпляра агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], для которого нужно изменить стартовую учетную запись службы, и выберите пункт **Свойства**.  
+6.  В области сведений щелкните правой кнопкой **Агент SQL Server** _(имя\_сервера)_ , где *имя_сервера* — это имя экземпляра агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], для которого нужно изменить стартовую учетную запись службы, и выберите пункт **Свойства**.  
   
-7.  В диалоговом окне **Свойства агента SQL Server**_(имя\_сервера)_ **выберите** на вкладке **Вход в систему** один из следующих параметров в разделе **Использовать для входа**:  
+7.  В диалоговом окне **Свойства агента SQL Server** _(имя\_сервера)_ **выберите** на вкладке **Вход в систему** один из следующих параметров в разделе **Использовать для входа**:  
   
     -   **Встроенная учетная запись**. Выберите этот параметр, если заданиям требуются ресурсы только с локального сервера. Дополнительные сведения о выборе типа встроенной учетной записи Windows см. в разделе [Выбор учетной записи для службы агента SQL Server.](https://msdn.microsoft.com/library/ms191543.aspx)  
   

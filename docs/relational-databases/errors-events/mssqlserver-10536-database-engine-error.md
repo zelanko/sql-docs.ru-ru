@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c5e9c4574c462ef42b0235e843970c882532dc56
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635382"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63049067"
 ---
 # <a name="mssqlserver10536"></a>MSSQLSERVER_10536
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,10 +31,10 @@ ms.locfileid: "47635382"
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
 |Символическое имя|PG_TOO_MANY_STMTS|  
-|Текст сообщения|Не удалось создать структуру плана "%.\*ls", поскольку пакет или модуль, соответствующий указанному параметру **@plan_handle**, содержит более 1000 подходящих инструкций. Создайте структуру плана для каждой инструкции в пакете или модуле, указав для каждой инструкции значение **statement_start_offset**.|  
+|Текст сообщения|Не удалось создать структуру плана "%.\*ls", поскольку пакет или модуль, соответствующий указанному параметру **@plan_handle** , содержит более 1000 подходящих инструкций. Создайте структуру плана для каждой инструкции в пакете или модуле, указав для каждой инструкции значение **statement_start_offset**.|  
   
 ## <a name="explanation"></a>Объяснение  
-Пакет или модуль, соответствующий указанному дескриптору **@plan_handle**, содержит больше 1000 подходящих инструкций.  
+Пакет или модуль, соответствующий указанному дескриптору **@plan_handle** , содержит больше 1000 подходящих инструкций.  
   
 ## <a name="user-action"></a>Действие пользователя  
 Создайте структуру плана для каждой инструкции в пакете или модуле, указав для каждой инструкции значение **statement_start_offset**.  

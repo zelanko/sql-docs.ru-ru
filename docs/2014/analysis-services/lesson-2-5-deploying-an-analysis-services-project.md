@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ed38e8f28894143fd32b233870bc3aab2b24c464
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66078988"
 ---
 # <a name="deploying-an-analysis-services-project"></a>Развертывание проекта служб Analysis Services
@@ -35,7 +35,7 @@ ms.locfileid: "66078988"
      Просмотрите свойства развертывания проекта. По умолчанию шаблон проекта служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] настроен таким образом, что выполняется последовательное развертывание всех проектов служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] для указанного по умолчанию экземпляра служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] на локальном компьютере, создается база данных [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] с именем проекта, а также выполняется обработка объектов с параметрами по умолчанию после завершения развертывания. Дополнительные сведения см. в разделах [Настройка свойств проекта служб Analysis Services (среда SSDT)](multidimensional-models/configure-analysis-services-project-properties-ssdt.md)создаются определенные объекты.  
   
     > [!NOTE]  
-    >  Если вы хотите развернуть проект в именованном экземпляре [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] на локальном компьютере или к экземпляру на удаленном сервере, изменить **Server** имя свойства, к соответствующему экземпляру, такие как \<  *ServerName**>\\<** InstanceName ** >*.  
+    >  Если вы хотите развернуть проект в именованном экземпляре [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] на локальном компьютере или к экземпляру на удаленном сервере, изменить **Server** имя свойства, к соответствующему экземпляру, такие как \<  *ServerName **>\\<** InstanceName ** >* .  
   
 3.  Нажмите кнопку **ОК**.  
   

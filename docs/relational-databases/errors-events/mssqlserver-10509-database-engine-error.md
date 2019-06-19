@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 419b45c688f755d6e5f7cf86154ce6cc527fc6ea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761662"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63048248"
 ---
 # <a name="mssqlserver10509"></a>MSSQLSERVER_10509
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,10 +31,10 @@ ms.locfileid: "47761662"
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
 |Символическое имя|PG_INVALID_STMT|  
-|Текст сообщения|Не удалось создать структуру плана '%.\*ls', поскольку инструкция, указанная параметром **@stmt** или **@statement_start_offset**, содержит синтаксическую ошибку или недопустима для использования в структуре плана. Задайте одну допустимую инструкцию [!INCLUDE[tsql](../../includes/tsql-md.md)] или допустимую начальную позицию инструкции внутри пакета. Допустимую начальную позицию можно запросить из столбца statement_start_offset функции динамического управления sys.dm_exec_query_stats.|  
+|Текст сообщения|Не удалось создать структуру плана '%.\*ls', поскольку инструкция, указанная параметром **@stmt** или **@statement_start_offset** , содержит синтаксическую ошибку или недопустима для использования в структуре плана. Задайте одну допустимую инструкцию [!INCLUDE[tsql](../../includes/tsql-md.md)] или допустимую начальную позицию инструкции внутри пакета. Допустимую начальную позицию можно запросить из столбца statement_start_offset функции динамического управления sys.dm_exec_query_stats.|  
   
 ## <a name="explanation"></a>Объяснение  
-Инструкция, указанная параметром **@stmt** или **@statement_start_offset**, содержит синтаксическую ошибку или недопустима для использования в структуре плана.  
+Инструкция, указанная параметром **@stmt** или **@statement_start_offset** , содержит синтаксическую ошибку или недопустима для использования в структуре плана.  
   
 ## <a name="user-action"></a>Действие пользователя  
 Задайте одну допустимую инструкцию [!INCLUDE[tsql](../../includes/tsql-md.md)] или допустимую начальную позицию инструкции внутри пакета. Допустимую начальную позицию можно запросить из столбца statement_start_offset функции динамического управления sys.dm_exec_query_stats.  

@@ -17,11 +17,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 53f613bd2a791eb210d908e3e84f8f09098db977
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723402"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62715881"
 ---
 # <a name="write-sql-server-audit-events-to-the-security-log"></a>Запись событий подсистемы аудита SQL Server в журнал безопасности  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "47723402"
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
 ###  <a name="Restrictions"></a> Ограничения  
- Администраторы компьютера с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] должны учитывать, что локальные параметры журнала безопасности могут быть переопределены политикой домена. В этом случае политика домена может перезаписывать параметр подкатегории (**auditpol /get /subcategory:"application generated"**). Это может повлиять на способность [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] регистрировать события, причем будет невозможно определить, что события, для которых [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] пытается провести аудит, не регистрируются.  
+ Администраторы компьютера с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] должны учитывать, что локальные параметры журнала безопасности могут быть переопределены политикой домена. В этом случае политика домена может перезаписывать параметр подкатегории (**auditpol /get /subcategory:"application generated"** ). Это может повлиять на способность [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] регистрировать события, причем будет невозможно определить, что события, для которых [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] пытается провести аудит, не регистрируются.  
   
 ###  <a name="Security"></a> безопасность  
   

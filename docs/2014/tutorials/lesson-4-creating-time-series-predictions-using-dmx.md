@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 772e5f5f71ca82dd18fec48730522c80e907414f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63312089"
 ---
 # <a name="lesson-4-creating-time-series-predictions-using-dmx"></a>Занятие 4: Создание прогнозов на основе временных рядов с помощью расширений интеллектуального анализа данных

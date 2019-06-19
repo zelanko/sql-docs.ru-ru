@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 17edc0c7156513befd584f411c2598fc9fc70bcd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63046236"
 ---
 # <a name="optimize-parameterized-row-filters"></a>Оптимизация параметризованных фильтров строк
@@ -49,13 +49,13 @@ ms.locfileid: "63046236"
  Для оптимизации параметризованных фильтров строк можно воспользоваться следующими настройками:  
   
  **Partition Options**  
- Установите этот параметр на странице **Свойства** диалогового окна **Свойства статьи — \<статья>** или в диалоговом окне **Добавление фильтра**. Оба диалоговых окна доступны в мастере создания публикаций и в диалоговом окне **Свойства публикации — \<публикация>**. В диалоговом окне **Свойства статьи — \<статья>** можно указать дополнительные значения этого параметра, которые недоступны в диалоговом окне **Добавление фильтра**.  
+ Установите этот параметр на странице **Свойства** диалогового окна **Свойства статьи — \<статья>** или в диалоговом окне **Добавление фильтра**. Оба диалоговых окна доступны в мастере создания публикаций и в диалоговом окне **Свойства публикации — \<публикация>** . В диалоговом окне **Свойства статьи — \<статья>** можно указать дополнительные значения этого параметра, которые недоступны в диалоговом окне **Добавление фильтра**.  
   
  **Предварительное вычисление секций**  
- Если статьи публикации соблюдают ряд требований, то этот параметр по умолчанию имеет значение **True** . Дополнительные сведения об этих требованиях см. в статье [Оптимизация производительности параметризованного фильтра с помощью предварительно вычисляемых секций](../merge/parameterized-filters-optimize-for-precomputed-partitions.md). Измените этот параметр на странице **Параметры подписки** диалогового окна **Свойства публикации — \<публикация>**.  
+ Если статьи публикации соблюдают ряд требований, то этот параметр по умолчанию имеет значение **True** . Дополнительные сведения об этих требованиях см. в статье [Оптимизация производительности параметризованного фильтра с помощью предварительно вычисляемых секций](../merge/parameterized-filters-optimize-for-precomputed-partitions.md). Измените этот параметр на странице **Параметры подписки** диалогового окна **Свойства публикации — \<публикация>** .  
   
  **Оптимизировать синхронизацию**  
- Этот параметр должен иметь значение **True** только в том случае, если значение параметра **Предварительное вычисление секций** установлено равным **False**. Установите этот параметр на странице **Параметры подписки** диалогового окна **Свойства публикации — \<публикация>**.  
+ Этот параметр должен иметь значение **True** только в том случае, если значение параметра **Предварительное вычисление секций** установлено равным **False**. Установите этот параметр на странице **Параметры подписки** диалогового окна **Свойства публикации — \<публикация>** .  
   
  Дополнительные сведения об использовании мастера создания публикаций и доступе к диалоговому окну **Свойства публикации — \<публикация>** см. в статьях [Создание публикации](create-a-publication.md) и [Просмотр и изменение свойств публикации](view-and-modify-publication-properties.md).  
   
@@ -75,7 +75,7 @@ ms.locfileid: "63046236"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  Если вы находитесь в диалоговом окне **Свойства публикации — \<публикация>**, нажмите кнопку **ОК**, чтобы сохранить изменения и закрыть диалоговое окно.  
+5.  Если вы находитесь в диалоговом окне **Свойства публикации — \<публикация>** , нажмите кнопку **ОК**, чтобы сохранить изменения и закрыть диалоговое окно.  
   
 #### <a name="to-set-partition-options-in-the-article-properties---article-dialog-box"></a>Настройка параметров секционирования в диалоговом окне "Свойства статьи — \<статья>"  
   
@@ -97,7 +97,7 @@ ms.locfileid: "63046236"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  Если вы находитесь в диалоговом окне **Свойства публикации — \<публикация>**, нажмите кнопку **ОК**, чтобы сохранить изменения и закрыть диалоговое окно.  
+5.  Если вы находитесь в диалоговом окне **Свойства публикации — \<публикация>** , нажмите кнопку **ОК**, чтобы сохранить изменения и закрыть диалоговое окно.  
   
 #### <a name="to-set-precompute-partitions"></a>Задание настройки «Предварительное вычисление секций»  
   
@@ -116,13 +116,13 @@ ms.locfileid: "63046236"
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
- Определения параметров фильтрации для параметров **@keep_partition_changes** и **@use_partition_groups**см. в разделе [sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql).  
+ Определения параметров фильтрации для параметров **@keep_partition_changes** и **@use_partition_groups** см. в разделе [sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql).  
   
 #### <a name="to-specify-merge-filter-optimizations-when-creating-a-new-publication"></a>Указание оптимизации фильтра слияния при создании публикации  
   
 1.  На издателе в базе данных публикации выполните процедуру [sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql). Укажите **@publication** и значение `true` для одного со следующими параметрами:  
   
-    -   **@use_partition_groups**— оптимизация для наивысшей производительности при условии, что статьи соответствуют требованиям предварительно вычисляемых секций. Дополнительные сведения см. в статье [Оптимизация производительности параметризованного фильтра с помощью предварительно вычисляемых секций](../merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
+    -   **@use_partition_groups** — оптимизация для наивысшей производительности при условии, что статьи соответствуют требованиям предварительно вычисляемых секций. Дополнительные сведения см. в статье [Оптимизация производительности параметризованного фильтра с помощью предварительно вычисляемых секций](../merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
   
     -   **@keep_partition_changes** — применяется, если невозможно использовать предварительно вычисляемые секции.  
   
@@ -146,16 +146,16 @@ ms.locfileid: "63046236"
   
 #### <a name="to-view-and-modify-merge-filter-behaviors-for-an-existing-publication"></a>Просмотр и изменение поведения фильтра слияния для существующей публикации  
   
-1.  Чтобы определить фильтр соединения между двумя статьями, на издателе в базе данных публикации выполните процедуру [sp_helpmergepublication](/sql/relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql), указав параметр **@publication**. Запомните значения **keep_partition_changes** и **use_partition_groups** в результирующем наборе.  
+1.  Чтобы определить фильтр соединения между двумя статьями, на издателе в базе данных публикации выполните процедуру [sp_helpmergepublication](/sql/relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql), указав параметр **@publication** . Запомните значения **keep_partition_changes** и **use_partition_groups** в результирующем наборе.  
   
-2.  На издателе в базе данных публикации выполните процедуру [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)(необязательно). Укажите значение **use_partition_groups** для **@property** и либо `true` или `false` для **@value**.  
+2.  На издателе в базе данных публикации выполните процедуру [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)(необязательно). Укажите значение **use_partition_groups** для **@property** и либо `true` или `false` для **@value** .  
   
-3.  На издателе в базе данных публикации выполните процедуру [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)(необязательно). Укажите значение **keep_partition_changes** для **@property** и либо `true` или `false` для **@value**.  
+3.  На издателе в базе данных публикации выполните процедуру [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)(необязательно). Укажите значение **keep_partition_changes** для **@property** и либо `true` или `false` для **@value** .  
   
     > [!NOTE]  
-    >  При включении параметра **keep_partition_changes**необходимо вначале отключить параметр **use_partition_groups** и указать значение **1** в параметре **@force_reinit_subscription**.  
+    >  При включении параметра **keep_partition_changes**необходимо вначале отключить параметр **use_partition_groups** и указать значение **1** в параметре **@force_reinit_subscription** .  
   
-4.  На издателе в базе данных публикации выполните хранимую процедуру [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)(необязательно). Укажите значение **partition_options** в параметре **@property** и соответствующее значение в параметре **@value**. Определения этих параметров фильтрации см. в разделе [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) .  
+4.  На издателе в базе данных публикации выполните хранимую процедуру [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)(необязательно). Укажите значение **partition_options** в параметре **@property** и соответствующее значение в параметре **@value** . Определения этих параметров фильтрации см. в разделе [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) .  
   
 5.  При необходимости запустите агент моментальных снимков для повторного создания моментального снимка (необязательно). Сведения об изменениях, после которых необходимо повторно создавать моментальный снимок, см. в статье [Изменение свойств публикации и статьи](change-publication-and-article-properties.md).  
   

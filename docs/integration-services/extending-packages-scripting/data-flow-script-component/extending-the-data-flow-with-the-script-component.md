@@ -26,10 +26,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7d1688210ac2813ec48ff5c6ceddde853e07b2c8
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65724292"
 ---
 # <a name="extending-the-data-flow-with-the-script-component"></a>Расширение потока данных с помощью компонента скрипта
@@ -49,7 +49,7 @@ ms.locfileid: "65724292"
  В следующих подразделах представлены дополнительные сведения о компоненте скрипта.  
   
  [Настройка компонента скрипта в редакторе компонента скрипта](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)  
- Свойства, настраиваемые в **редакторе преобразования "Скрипт"**, влияют на возможности и производительность кода компонента скрипта.  
+ Свойства, настраиваемые в **редакторе преобразования "Скрипт"** , влияют на возможности и производительность кода компонента скрипта.  
   
  [Кодирование и отладка компонента скрипта](../../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)  
  Для разработки скриптов, содержащихся в компоненте скрипта, используется среда разработки на базе набора средств [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] для работы с приложениями (VSTA)  
