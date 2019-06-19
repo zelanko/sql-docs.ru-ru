@@ -16,10 +16,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 63491a3ba15f9a52e7180597bce7f6295927961f
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65096403"
 ---
 # <a name="job-activity-monitor"></a>Монитор активности заданий
@@ -58,7 +58,7 @@ ms.locfileid: "65096403"
 **Назначено**  
 **Да** , если заданию назначено расписание; **Нет** , если у задания нет расписания.  
   
-* Только члены предопределенной роли сервера sysadmin [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и группы администраторов сервера могут видеть значения этого столбца. Члены роли SQLAgentOperatorRole не могут видеть значения в этом столбце.  
+\* Только члены предопределенной роли сервера sysadmin [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и группы администраторов сервера могут видеть значения этого столбца. Члены роли SQLAgentOperatorRole не могут видеть значения в этом столбце.  
   
 #### <a name="to-open-the-job-activity-monitor"></a>Как открыть монитор активности заданий  
   

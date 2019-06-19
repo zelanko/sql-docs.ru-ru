@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 34f07a3b0518e202cbbcba0f15d7782da56921d4
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728591"
 ---
 # <a name="process-inserts-updates-and-deletes"></a>Обработка операций вставки, обновления и удаления
@@ -34,7 +34,7 @@ ms.locfileid: "65728591"
  В приведенном примере извлечения измененных данных функция **cdc.fn_cdc_get_net_changes_<экземпляр_отслеживания>** возвращает только столбец метаданных с именем **__$operation**. Этот столбец метаданных содержит порядковое значение, которое указывает операцию, вызвавшую изменение.  
   
 > [!NOTE]  
->  Дополнительные сведения о запросе, использующем вызовы функции **cdc.fn_cdc_get_net_changes_<экземпляр_отслеживания>**, см. в статье [Создание функции для получения информации об изменениях](../../integration-services/change-data-capture/create-the-function-to-retrieve-the-change-data.md).  
+>  Дополнительные сведения о запросе, использующем вызовы функции **cdc.fn_cdc_get_net_changes_<экземпляр_отслеживания>** , см. в статье [Создание функции для получения информации об изменениях](../../integration-services/change-data-capture/create-the-function-to-retrieve-the-change-data.md).  
   
  Связать порядковое значение с соответствующей операцией сложнее, чем использовать мнемонический код операции. Например, «D» может представлять операцию удаления, а «I» — операцию вставки. В примере запроса, созданном в разделе [Создание функции для получения измененных данных](../../integration-services/change-data-capture/create-the-function-to-retrieve-the-change-data.md), порядковое значение преобразуется в понятное строковое значение, которое возвращается в новом столбце. Это преобразование показано в следующем сегменте кода:  
   

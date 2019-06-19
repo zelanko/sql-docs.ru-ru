@@ -1,7 +1,7 @@
 ---
 title: CREATE SYMMETRIC KEY (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 09/12/2017
+ms.date: 06/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -23,12 +23,12 @@ ms.assetid: b5d23572-b79d-4cf1-9eef-d648fa3b1358
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 54c25b504befc151b31bf6f0727838170b6d5a9b
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 56be2b8913002d681a4478eff80448acd2e71089
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326505"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66836350"
 ---
 # <a name="create-symmetric-key-transact-sql"></a>CREATE SYMMETRIC KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ CREATE SYMMETRIC KEY key_name
   
 ## <a name="arguments"></a>Аргументы  
  *Key_name*  
- Уникальное имя, под которым симметричный ключ известен в базе данных. Имена временных ключей должны начинаться с одиночного символа номера (#). Например, **#temporaryKey900007**. Нельзя создать симметричный ключ, в начале имени которого указано более одного символа #. Временный симметричный ключ невозможно создать с помощью поставщика расширенного управления ключами.  
+ Уникальное имя, под которым симметричный ключ известен в базе данных. Временные ключи назначаются, если _key_name_ начинается с одного символа номера (#). Например, **#temporaryKey900007**. Нельзя создать симметричный ключ, в начале имени которого указано более одного символа #. Временный симметричный ключ невозможно создать с помощью поставщика расширенного управления ключами.  
   
  AUTHORIZATION *owner_name*  
  Указывает имя пользователя базы данных или роли приложения, которым будет принадлежать этот ключ.  
@@ -82,13 +82,13 @@ CREATE SYMMETRIC KEY key_name
 > [!NOTE]  
 >  Этот параметр недоступен в автономной базе данных.  
   
- KEY_SOURCE **='**_pass\_phrase_**'**  
+ KEY_SOURCE **='** _pass\_phrase_ **'**  
  Указывает парольную фразу, из которой извлекается ключ.  
   
- IDENTITY_VALUE **='**_identity\_phrase_**'**  
+ IDENTITY_VALUE **='** _identity\_phrase_ **'**  
  Указывает идентифицирующую фразу, из которой будет формироваться идентификатор GUID для маркировки данных, зашифрованных с помощью временного ключа.  
   
- PROVIDER_KEY_NAME **='**_key\_name\_in\_provider_**'**  
+ PROVIDER_KEY_NAME **='** _key\_name\_in\_provider_ **'**  
  Указывает имя, на которое ссылается поставщик расширенного управления ключами.  
   
 > [!NOTE]  

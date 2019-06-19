@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1f673ea96167b05326519bb9fe04345a87c81fd3
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65729167"
 ---
 # <a name="ssis-catalog"></a>Каталог служб SSIS
@@ -126,7 +126,7 @@ ms.locfileid: "65729167"
   
  Вы можете обновить или повторно развернуть проект [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] с тем же именем в той же папке в каталоге. По умолчанию при каждом повторном развертывании проекта в каталоге **SSISDB** сохраняется предыдущая версия проекта. Чтобы поддерживался размер данных операций, для удаления старых версий проектов используется **задание обслуживания сервера служб SSIS** .  
  
-Для запуска **задания обслуживания сервера служб SSIS**службы SSIS создают имя для входа SQL Server **##MS_SSISServerCleanupJobLogin##**. Это имя входа предназначено только для внутреннего использования службами SSIS.
+Для запуска **задания обслуживания сервера служб SSIS**службы SSIS создают имя для входа SQL Server **##MS_SSISServerCleanupJobLogin##** . Это имя входа предназначено только для внутреннего использования службами SSIS.
   
  Следующие два свойства каталога **SSISDB** определяют поведение этого задания агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Просмотреть и изменить свойства вы можете в диалоговом окне **Свойства каталога** или с помощью процедур [catalog.catalog_properties (база данных SSISDB)](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md) и [catalog.configure_catalog (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md).  
   

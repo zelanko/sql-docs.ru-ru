@@ -33,11 +33,11 @@ ms.author: jrasnick
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1e26632a80efce073df66f3d4fd564d513e4b28e
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334551"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62758711"
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -197,7 +197,7 @@ GO
   
  Если в шаблоне LIKE после escape-символа нет никакого символа, то шаблон является недопустимым и оператор LIKE возвращает значение FALSE. Если символ после escape-символа не является символом-шаблоном, то escape-символ игнорируется, а следующий символ рассматривается как обычный символ в шаблоне. К этим символам-шаблонам относятся: подчеркивание (_), процент (%) и левая квадратная скобка ([), в том случае, если они заключены в квадратные скобки. Escape-символы могут использоваться в квадратных скобках ([ ]), включая: знак вставки (^), дефис (-) и правую квадратную скобку (]).  
   
- Символ 0x0000 (**char(0)**) не определен в параметрах сортировки Windows, и его нельзя включать в LIKE.  
+ Символ 0x0000 (**char(0)** ) не определен в параметрах сортировки Windows, и его нельзя включать в LIKE.  
   
 ## <a name="examples"></a>Примеры  
   

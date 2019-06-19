@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b4d8fc3b59d3296a2996d37a190dc5c8e075744a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62466058"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>Размер строк и таблицы для таблиц, оптимизированных для памяти
@@ -70,7 +70,7 @@ ms.locfileid: "62466058"
   
  В следующей таблице описано вычисление размера текста строки как [фактический размер текста строки] = SUM([размер мелких типов]) + 2 + 2 * [число столбцов глубокого типа].  
   
-|Раздел|Размер|Комментарии|  
+|`Section`|Размер|Комментарии|  
 |-------------|----------|--------------|  
 |Столбцы поверхностных типов|SUM [размер поверхностных типов]<br /><br /> **Размер отдельных типов выглядит следующим образом:**<br /><br /> Bit &#124; 1<br /><br /> Tinyint &#124; 1<br /><br /> Smallint &#124; 2<br /><br /> Int &#124; 4<br /><br /> Real &#124; 4<br /><br /> Smalldatetime &#124; 4<br /><br /> Smallmoney &#124; 4<br /><br /> Bigint &#124; 8<br /><br /> Datetime &#124; 8<br /><br /> Datetime2 &#124; 8<br /><br /> Float 8<br /><br /> Money 8<br /><br /> Числовой (точность < = 18) &#124; 8<br /><br /> Time &#124; 8<br /><br /> Numeric(Precision>18) &#124; 16<br /><br /> Uniqueidentifier &#124; 16||  
 |Заполнение столбца поверхностного типа|Возможны следующие значения:<br /><br /> 1, если в таблице присутствуют столбцы глубоких типов, а общий размер данных в столбцах поверхностного типа является нечетным числом.<br /><br /> 0 в остальных случаях|Глубокие типы — это типы (var)binary и (n)(var)char.|  

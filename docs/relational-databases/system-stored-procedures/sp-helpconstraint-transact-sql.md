@@ -20,10 +20,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: bacf8f0c891e595a775a5e279c5341f3ca0944b1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62796083"
 ---
 # <a name="sphelpconstraint-transact-sql"></a>sp_helpconstraint (Transact-SQL)
@@ -42,9 +42,9 @@ sp_helpconstraint [ @objname = ] 'table'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @objname = ] 'table'` Является таблицей, о которых ограничение возвращаются сведения. Указанная таблица должна находиться в текущей базе данных. *Таблица* — **nvarchar(776)**, не имеет значения по умолчанию.  
+`[ @objname = ] 'table'` Является таблицей, о которых ограничение возвращаются сведения. Указанная таблица должна находиться в текущей базе данных. *Таблица* — **nvarchar(776)** , не имеет значения по умолчанию.  
   
-`[ @nomsg = ] 'no_message'` — Необязательный параметр, который выводит имя таблицы. *no_message* — **varchar(5)**, значение по умолчанию **msg**. **nomsg** подавляет печать.  
+`[ @nomsg = ] 'no_message'` — Необязательный параметр, который выводит имя таблицы. *no_message* — **varchar(5)** , значение по умолчанию **msg**. **nomsg** подавляет печать.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  

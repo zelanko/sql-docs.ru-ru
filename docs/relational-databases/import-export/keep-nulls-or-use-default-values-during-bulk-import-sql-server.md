@@ -23,10 +23,10 @@ ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6269db9bcf9c242162a01ab144ebc55de6aa0803
-ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/30/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64946621"
 ---
 # <a name="keep-nulls-or-use-default-values-during-bulk-import-sql-server"></a>Сохранение значений NULL или использование значений по умолчанию при массовом импорте данных (SQL Server)
@@ -154,7 +154,7 @@ REM Review results
 SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myNulls;"
 ```
   
-### **Использование команды [bcp](../../tools/bcp-utility.md) и сохранение значений NULL с помощью [файла форматирования в формате, отличном от XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="bcp_null_fmt"></a>
+### **Использование команды [bcp](../../tools/bcp-utility.md) и сохранение значений NULL с помощью [файла форматирования в формате, отличном от XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="bcp_null_fmt"></a>
 Параметры **-k** и **-f** . В командной строке введите следующую команду:
 
 ```cmd
@@ -182,7 +182,7 @@ REM Review results
 SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myNulls;"
 ```
   
-### **Использование команды [bcp](../../tools/bcp-utility.md) и значений по умолчанию с помощью [файла форматирования в формате, отличном от XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="bcp_default_fmt"></a>
+### **Использование команды [bcp](../../tools/bcp-utility.md) и значений по умолчанию с помощью [файла форматирования в формате, отличном от XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="bcp_default_fmt"></a>
 Параметр **-f** .  В командной строке введите следующую команду:
 
 ```cmd
@@ -215,7 +215,7 @@ BULK INSERT dbo.myNulls
 SELECT * FROM TestDatabase.dbo.myNulls;
 ```
 
-### **Использование инструкции [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) и сохранение значений NULL с помощью [файла форматирования в формате, отличном от XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="bulk_null_fmt"></a>
+### **Использование инструкции [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) и сохранение значений NULL с помощью [файла форматирования в формате, отличном от XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="bulk_null_fmt"></a>
 **KEEPNULLS** и аргумент **FORMATFILE** .  Выполните следующий запрос Transact-SQL в Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 
 ```sql
@@ -253,7 +253,7 @@ BULK INSERT dbo.myNulls
 SELECT * FROM TestDatabase.dbo.myNulls;
 ```
 
-### **Использование инструкции [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) и значений по умолчанию с помощью [файла форматирования в формате, отличном от XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="bulk_default_fmt"></a>
+### **Использование инструкции [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) и значений по умолчанию с помощью [файла форматирования в формате, отличном от XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="bulk_default_fmt"></a>
 Аргумент**FORMATFILE** .  Выполните следующий запрос Transact-SQL в Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 
 ```sql
@@ -271,7 +271,7 @@ BULK INSERT dbo.myNulls
 SELECT * FROM TestDatabase.dbo.myNulls;
 ```
 
-### **Использование инструкции [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) и сохранение значений NULL с помощью [файла форматирования в формате, отличном от XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="openrowset__null_fmt"></a>
+### **Использование инструкции [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) и сохранение значений NULL с помощью [файла форматирования в формате, отличном от XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="openrowset__null_fmt"></a>
 Аргумент**FORMATFILE** .  Выполните следующий запрос Transact-SQL в Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 
 ```sql
@@ -290,7 +290,7 @@ INSERT INTO dbo.myNulls
 SELECT * FROM TestDatabase.dbo.myNulls;
 ```
 
-### **Использование инструкции [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) и значений по умолчанию с помощью [файла форматирования в формате, отличном от XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="openrowset__default_fmt"></a>
+### **Использование инструкции [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) и значений по умолчанию с помощью [файла форматирования в формате, отличном от XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="openrowset__default_fmt"></a>
 Табличное указание**KEEPDEFAULTS** и аргумент **FORMATFILE** .  Выполните следующий запрос Transact-SQL в Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 
 ```sql

@@ -1,26 +1,23 @@
 ---
 title: Свойства сервера анализа данных (вкладка "Дополнительно") | Документация Майкрософт
 ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: sql
-ms.prod_service: sql-tools
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: f4415e35-8f50-4cb7-813e-bdfafbdee275
 author: stevestein
 ms.author: sstein
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
 ms.openlocfilehash: 92485676ba8340163c9fc1251be45f89336acf93
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62761026"
 ---
 # <a name="analysis-server-properties-advanced-tab"></a>Свойства сервера анализа данных (вкладка «Дополнительно»)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   Это служба Microsoft [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Если определены пользовательские свойства, они отображаются на этой вкладке вместе со значениями.  
   
 ## <a name="options"></a>Параметры  

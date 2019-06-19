@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: b0cf0f86-7652-4574-a9fb-908e10d03973
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d8681bfa94a859e5ce63a74e26960c64db3b7528
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 06ce19dba1624455bdc470cfeec7b16655ec3d3b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755352"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66794186"
 ---
 # <a name="configure-the-locks-server-configuration-option"></a>Настройка параметра конфигурации сервера locks
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "47755352"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Дальнейшие действия**  [После настройки параметра locks](#FollowUp)  
+-   **Дальнейшие действия.**  [После настройки параметра locks](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   

@@ -11,11 +11,11 @@ author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 52e0b3f317044e25b2004512083fdcaff7a77ecf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62468021"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67148985"
 ---
 # <a name="create-a-tabular-model-project"></a>Создание проекта табличной модели
 
@@ -47,7 +47,7 @@ ms.locfileid: "62468021"
   
     Эта рабочая область содержит базу данных табличной модели с тем же именем, что и проект во время создания модели. Интегрированная рабочая область означает, что Visual Studio использует встроенный экземпляр, избавляя от необходимости устанавливать отдельный экземпляр сервера служб Analysis Services для создания модели.
       
-6.  В **уровень совместимости**выберите **SQL Server 2017 / Azure Analysis Services (1400)**.   
+6.  В **уровень совместимости**выберите **SQL Server 2017 / Azure Analysis Services (1400)** .   
  
     ![as-lesson1-tmd](../tutorial-tabular-1400/media/as-lesson1-tmd.png)
       

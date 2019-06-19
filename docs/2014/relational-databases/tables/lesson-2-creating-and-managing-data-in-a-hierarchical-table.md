@@ -13,13 +13,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4553d98faf18c00fff6ad90a09d0ee9071a71d32
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62659936"
 ---
-# <a name="lesson-2-creating-and-managing-data-in-a-hierarchical-table"></a>Урок 2. Создание и управление данными в иерархической таблице
+# <a name="lesson-2-creating-and-managing-data-in-a-hierarchical-table"></a>Урок 2. Создание данных и управление ими в иерархической таблице
   В занятии 1 существующая таблица была изменена, чтобы использовать тип данных `hierarchyid`, а также столбец `hierarchyid` был заполнен представлением существующих данных. На этом занятии будет создана новая таблица и вставлены данные с помощью иерархических методов. Затем с помощью иерархических методов будет выполнен запрос данных и показано управление данными.  
   
  Это занятие содержит следующие разделы:  

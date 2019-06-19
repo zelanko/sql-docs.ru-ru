@@ -1,5 +1,5 @@
 ---
-title: Кворум. Как следящий сервер влияет на доступность базы данных (зеркальное отображение базы данных) | Документы Майкрософт
+title: Кворум. Как следящий сервер влияет на доступность базы данных (зеркальное отображение базы данных) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: a62d9dd7-3667-4751-a294-a61fc9caae7c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 8dbb81d75413909fe8d205d781cef1ec89640044
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: 020825afe9abf5abf121f9521668c1edd1670bbd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533370"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66795301"
 ---
 # <a name="quorum-how-a-witness-affects-database-availability-database-mirroring"></a>Кворум. Как следящий сервер влияет на доступность базы данных (зеркальное отображение базы данных)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -19,11 +19,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 3518aeb808b6a77294993aa11a40e35363dfbcd3
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326345"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62644127"
 ---
 # <a name="deny-availability-group-permissions-transact-sql"></a>DENY (Отмена) разрешений группы доступности (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -52,8 +52,8 @@ DENY permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
  *permission*  
  Указывает разрешение, которое может быть запрещено для группы доступности. Список разрешений см. в подразделе "Примечания" далее в этом разделе.  
   
- ON AVAILABILITY GROUP **::**_availability_group_name_  
- Указывает группу доступности, для которой будет запрещено разрешение. Квалификатор области (**::**) является обязательным.  
+ ON AVAILABILITY GROUP **::** _availability_group_name_  
+ Указывает группу доступности, для которой будет запрещено разрешение. Квалификатор области ( **::** ) является обязательным.  
   
  TO \<server_principal>  
  Задает имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], для которого запрещается разрешение.  

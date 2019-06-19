@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: ecd99f91-b9a2-4737-994e-507065a12f80
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
+manager: jroth
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: def5873f53093abfc13ed0968229671a012af839
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: c4f01db5d1d27c57b863c3421e6abee894975b85
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202133"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66796634"
 ---
 # <a name="change-which-cluster-manages-the-metadata-for-replicas-in-an-always-on-availability-group"></a>Изменение кластера, который управляет метаданными для реплик в группе доступности Always On
 
@@ -30,30 +30,10 @@ ms.locfileid: "53202133"
   
  Переключать контекст кластера HADR следует только во время миграции с кластера [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] на экземпляр [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] в новом кластере WSFC. Миграция с кластера [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] поддерживает обновление операционной системы до [!INCLUDE[win8](../../../includes/win8-md.md)] или [!INCLUDE[win8srv](../../../includes/win8srv-md.md)] с минимальным временем простоя групп доступности. Дополнительные сведения см. в документе [Миграция между кластерами групп доступности AlwaysOn для обновления ОС](https://msdn.microsoft.com/library/jj873730.aspx).  
   
--   **Перед началом работы**  
-  
-     [Ограничения](#Restrictions)  
-  
-     [Предварительные требования](#Prerequisites)  
-  
-     [Рекомендации](#Recommendations)  
-  
-     [безопасность](#Security)  
-  
--   **Переключение контекста кластера реплики доступности с помощью**:  [Transact-SQL](#TsqlProcedure)  
-  
--   **Дальнейшие действия.**  [После переключения контекста кластера реплики доступности](#FollowUp)  
-  
--   [Связанные задачи](#RelatedTasks)  
-  
--   [См. также](#RelatedContent)  
-  
-##  <a name="BeforeYouBegin"></a> Перед началом  
-  
 > [!CAUTION]  
 >  Переключать контекст кластера HADR следует только во время миграции между кластерами развертываний [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] .  
   
-###  <a name="Restrictions"></a> Ограничения  
+##  <a name="Restrictions"></a> Ограничения  
   
 -   Переключать контекст кластера HADR можно только с локального кластера WSFC на удаленный и обратно с удаленного кластера на локальный. Нельзя переключить контекст кластера HADR с одного удаленного кластера на другой удаленный кластер.  
   
@@ -61,7 +41,7 @@ ms.locfileid: "53202133"
   
 -   Удаленный контекст кластера HADR можно переключить обратно на локальный кластер в любое время. Однако контекст нельзя переключать повторно, пока на экземпляре сервера содержатся реплики доступности.  
   
-###  <a name="Prerequisites"></a> Предварительные требования  
+##  <a name="Prerequisites"></a> Предварительные требования  
   
 -   На экземпляре сервера, на котором необходимо изменить контекст кластера HADR, должна выполняться [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] или более новая версия (выпуск Enterprise Edition или выше).  
   
@@ -78,7 +58,7 @@ ms.locfileid: "53202133"
   
 -   Перед тем как станет возможным переключение с удаленного кластера на локальный кластер, все локальные реплики с синхронной фиксацией должны перейти в состояние SYNCHRONIZED.  
   
-###  <a name="Recommendations"></a> Рекомендации  
+##  <a name="Recommendations"></a> Рекомендации  
   
 -   Рекомендуется указывать полное имя домена. Это необходимо потому, что для поиска целевого IP-адреса короткого имени ALTER SERVER CONFIGURATION использует разрешение DNS. В некоторых ситуациях в зависимости от порядка поиска DNS использование кратких имен может вызвать затруднения. Например, рассмотрим следующую команду, которая выполняется на узле в домене `abc` (`node1.abc.com`). Целевым кластером назначения является кластер `CLUS01` в домене `xyz` (`clus01.xyz.com`). Однако на узлах локального домена также размещен кластер с именем `CLUS01` (`clus01.abc.com`).  
   
@@ -88,9 +68,8 @@ ms.locfileid: "53202133"
     ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT = 'clus01.xyz.com'  
     ```  
   
-###  <a name="Security"></a> Безопасность  
   
-####  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Permissions  
   
 -   **имя входа SQL Server**  
   
@@ -111,7 +90,7 @@ ms.locfileid: "53202133"
   
 2.  Используйте предложение SET HADR CLUSTER CONTEXT инструкции [ALTER SERVER CONFIGURATION](../../../t-sql/statements/alter-server-configuration-transact-sql.md) следующим образом:  
   
-     ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT **=** { **'**_windows\_cluster_**'** | LOCAL }  
+     ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT **=** { **'** _windows\_cluster_ **'** | LOCAL }  
   
      где  
   

@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 67377f638459a37f25fbc78b9acff395192a2f3f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62628267"
 ---
 # <a name="spmarkpendingschemachange-transact-sql"></a>sp_markpendingschemachange (Transact-SQL)
@@ -41,7 +41,7 @@ sp_markpendingschemachange [@publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [**@publication=** ] **"***публикации***"**  
+ [ **@publication=** ] **"***публикации***"**  
  Имя публикации. *Публикация* — **sysname**, не имеет значения по умолчанию.  
   
 `[ @schemaversion = ] schemaversion` Идентифицирует отложенное изменение схемы. *schemaversion* — **int**, со значением по умолчанию **0**. Используйте [sp_enumeratependingschemachanges &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-enumeratependingschemachanges-transact-sql.md) Чтобы получить список отложенные изменения схемы для публикации.  

@@ -16,44 +16,25 @@ helpviewer_keywords:
 ms.assetid: 4e51a570-58d7-4f01-9390-4198f3602576
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 637c4a984876ad401fb2a757ac4d76ea833a5222
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 1c8c5fe88e1b3c95abd435558b0565960ba25ebf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213553"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66801022"
 ---
 # <a name="remove-a-secondary-database-from-an-availability-group-sql-server"></a>Удаление базы данных-получателя из группы доступности (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   В этом разделе описывается удаление базы данных-получателя из группы доступности AlwaysOn с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или PowerShell в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+   
   
--   **Перед началом работы**  
-  
-     [Предварительные требования](#Prerequisites)  
-  
-     [безопасность](#Security)  
-  
--   **Удаление базы данных-получателя с помощью**  
-  
-     [Среда SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
--   **Дальнейшие действия.**  [После удаления базы данных-получателя из группы доступности](#FollowUp)  
-  
-##  <a name="BeforeYouBegin"></a> Перед началом  
-  
-###  <a name="Restrictions"></a>   
-###  <a name="Prerequisites"></a> Требования и ограничения  
+##  <a name="Prerequisites"></a> Требования и ограничения  
   
 -   Эта задача поддерживается только на вторичных репликах. Необходимо подключиться к экземпляру сервера, размещающему вторичную реплику, из которой удаляется база данных.  
   
-###  <a name="Security"></a> Безопасность  
-  
-####  <a name="Permissions"></a> Permissions  
+ 
+##  <a name="Permissions"></a> Permissions  
  Необходимо разрешение ALTER на базу данных.  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  

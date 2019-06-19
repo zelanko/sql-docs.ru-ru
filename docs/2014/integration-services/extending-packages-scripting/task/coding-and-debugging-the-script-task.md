@@ -22,10 +22,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 620b778069ef45deeeb5552296798736a1ebe5f4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62768419"
 ---
 # <a name="coding-and-debugging-the-script-task"></a>Написание кода и отладка задачи «Скрипт»
@@ -34,7 +34,7 @@ ms.locfileid: "62768419"
 ## <a name="script-task-development-environment"></a>Среда разработки задачи «Скрипт»  
  Задача "Скрипт" использует набор средств [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools для работы с приложениями (VSTA) в качестве среды разработки для самого скрипта.  
   
- Код скрипта пишется на языке [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic или [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#. Пользователь указывает язык скрипта, задавая значение свойства **ScriptLanguage** в окне **Редактор задачи "Скрипт"**. Если разработчик предпочитает пользоваться другим языком программирования, можно разработать пользовательскую сборку на выбранном языке и вызвать его функциональные возможности из кода в задаче «Скрипт».  
+ Код скрипта пишется на языке [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic или [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#. Пользователь указывает язык скрипта, задавая значение свойства **ScriptLanguage** в окне **Редактор задачи "Скрипт"** . Если разработчик предпочитает пользоваться другим языком программирования, можно разработать пользовательскую сборку на выбранном языке и вызвать его функциональные возможности из кода в задаче «Скрипт».  
   
  Скрипт, созданный в задаче «Скрипт», хранится в определении пакета. Отдельного файла скрипта не существует. Поэтому использование задачи «Скрипт» не влияет на развертывание пакета.  
   

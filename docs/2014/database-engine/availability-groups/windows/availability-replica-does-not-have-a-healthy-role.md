@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c5d487965237395da68bbc8ba3134c8d372f90db
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62815601"
 ---
 # <a name="availability-replica-does-not-have-a-healthy-role"></a>Доступность репликации не имеет исправной роли
@@ -41,7 +41,7 @@ ms.locfileid: "62815601"
 ## <a name="possible-causes"></a>Возможные причины  
  Роль этой реплики доступности неисправна. Реплике не назначена роль первичной или вторичной.  
   
-## <a name="possible-solution-informationstilltocome"></a>Возможное решение: Information_still_to_come  
+## <a name="possible-solution-informationstilltocome"></a>Возможное решение: информация готовится  
   
 ## <a name="see-also"></a>См. также  
  [Обзор групп доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   

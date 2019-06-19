@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 765f1e83-dd52-44fb-b0c8-1078f213607b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: cb41c4ec10b78f3457ca5c760a32f1012cdeeba1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 5ff522eff5e0f7742515d799303c5a1c28d4ff16
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636948"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66799428"
 ---
 # <a name="configure-the-priority-boost-server-configuration-option"></a>Настройка параметра конфигурации сервера priority boost
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "47636948"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Дальнейшие действия.**  [После настройки параметра повышения приоритета](#FollowUp)  
+-   **Дальнейшие действия.**  [После настройки параметра priority boost](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
@@ -93,7 +93,7 @@ GO
   
  Дополнительные сведения см. в разделе [Параметры конфигурации сервера (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
-##  <a name="FollowUp"></a> Дальнейшие действия. После настройки параметра повышения приоритета  
+##  <a name="FollowUp"></a> Дальнейшие действия. После настройки параметра priority boost  
  Чтобы изменения вступили в силу, необходимо перезапустить сервер.  
   
 ## <a name="see-also"></a>См. также:  

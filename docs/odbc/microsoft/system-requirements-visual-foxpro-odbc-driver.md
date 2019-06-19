@@ -20,10 +20,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ff2db6cff725e133789804856b1913517c34ceb0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62633752"
 ---
 # <a name="system-requirements-visual-foxpro-odbc-driver"></a>Требования к системе (драйвер ODBC для Visual FoxPro)
@@ -51,7 +51,7 @@ ms.locfileid: "62633752"
   
     -   Visual FoxPro [базы данных](../../odbc/microsoft/visual-foxpro-terminology.md) или каталог [свободных таблиц](../../odbc/microsoft/visual-foxpro-terminology.md)  
   
-    -   2.0 FoxPro, 2.5 и 2.6 [таблицы](../../odbc/microsoft/visual-foxpro-terminology.md)  
+    -   2\.0 FoxPro, 2.5 и 2.6 [таблицы](../../odbc/microsoft/visual-foxpro-terminology.md)  
   
  Драйвер ODBC для Visual FoxPro поддерживает двухбайтовые кодировки (DBCS). Дополнительные сведения см. в разделе [International Support](../../odbc/microsoft/international-support-visual-foxpro-odbc-driver.md).  
   

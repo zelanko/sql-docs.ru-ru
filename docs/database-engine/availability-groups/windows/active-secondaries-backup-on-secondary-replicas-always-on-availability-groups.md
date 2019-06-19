@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 82afe51b-71d1-4d5b-b20a-b57afc002405
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 40fa3d6f3464c92a16e27a2a8bdddbf664909504
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 5b74fc36a3a6e53e0b7f00438f013218b0d76344
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209443"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66801346"
 ---
 # <a name="offload-supported-backups-to-secondary-replicas-of-an-availability-group"></a>Перенос поддерживаемых резервных копий во вторичные реплики группы доступности
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,12 +34,7 @@ ms.locfileid: "53209443"
 > [!NOTE]  
 >  Инструкция RESTORE недопустима для базы данных-источника или базы данных-получателя группы доступности.  
   
--   [Поддерживаемые типы резервного копирования](#SupportedBuTypes)  
-  
--   [Настройка места выполнения заданий резервного копирования](#WhereBuJobsRun)  
-  
--   [Связанные задачи](#RelatedTasks)  
-  
+ 
 ##  <a name="SupportedBuTypes"></a> Поддерживаемые типы резервного копирования на вторичных репликах  
   
 -   **BACKUP DATABASE** поддерживает только полные, доступные только для копирования резервные копии баз данных, файлов и файловых групп, которые выполняются во вторичных репликах. Обратите внимание, что резервные копии, доступные только для копирования, не влияют на цепочку журналов и не очищают битовую карту разностного резервного копирования.  
@@ -59,7 +54,7 @@ ms.locfileid: "53209443"
   
 1.  Настройте группу доступности, чтобы указать, на каких репликах доступности предпочтительно проведение резервного копирования. Дополнительные сведения см. в описании параметров *AUTOMATED_BACKUP_PREFERENCE* и *BACKUP_PRIORITY* в разделе [CREATE AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/create-availability-group-transact-sql.md) или [ALTER AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/alter-availability-group-transact-sql.md).  
   
-2.  Создайте скрипты заданий резервного копирования для каждой из баз данных доступности на каждом экземпляре сервера, на котором размещается реплика доступности, потенциально используемая для выполнения резервного копирования. Дополнительные сведения см. в подразделе «Дальнейшие действия. После настройки резервного копирования во вторичных репликах" статьи [Настройка резервного копирования в репликах доступности (SQL Server)](../../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md).  
+2.  Создайте скрипты заданий резервного копирования для каждой из баз данных доступности на каждом экземпляре сервера, на котором размещается реплика доступности, потенциально используемая для выполнения резервного копирования. Дополнительные сведения см. в разделе "Дальнейшие действия. После настройки резервного копирования во вторичных репликах" статьи [Настройка резервного копирования в репликах доступности (SQL Server)](../../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md).  
   
 ##  <a name="RelatedTasks"></a> Связанные задачи  
  **Настройка резервного копирования во вторичных репликах**  

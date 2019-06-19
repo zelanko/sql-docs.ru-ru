@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e75565d69b2a5a1ac2cf5d6a9d512fffbcf768f5
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590728"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62653242"
 ---
 # <a name="unpack-a-dac-package"></a>Распаковка пакета DAC
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "53590728"
   
 2.  **Распаковка приложения уровня данных с использованием:**  [диалогового окна распаковки приложения уровня данных](#UnpackDACDial), [изучения содержимого пакета приложения уровня данных](#ExamDACPack)  
   
-##  <a name="Security"></a> Безопасность  
+##  <a name="Security"></a> безопасность  
  Рекомендуется не выполнять развертывание пакетов DAC, полученных из неизвестных или ненадежных источников. В этих пакетах может содержаться вредоносный код, вызывающий выполнение непредусмотренных инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] или появление ошибок из-за изменения схемы. Перед тем как использовать приложение уровня данных, полученное из неизвестного или ненадежного источника, разверните его на изолированном тестовом экземпляре компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)], распакуйте приложение уровня данных и изучите его код, например хранимые процедуры или другой определенный пользователем код.  
   
 ##  <a name="UnpackDACDial"></a> диалоговое окно распаковки приложения уровня данных  

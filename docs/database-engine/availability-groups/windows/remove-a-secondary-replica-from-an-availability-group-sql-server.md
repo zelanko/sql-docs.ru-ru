@@ -15,51 +15,29 @@ helpviewer_keywords:
 ms.assetid: 35ddc8b6-3e7c-4417-9a0a-d4987a09ddf7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4bacb15ea7932cdbe533ee9c4a3ff1be4a65ef9a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: cde3691b20ff9a674a64e4f7f997a8919594c93a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201923"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66801006"
 ---
 # <a name="remove-a-secondary-replica-from-an-availability-group-sql-server"></a>Удаление вторичной реплики из группы доступности (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   В этом разделе описывается удаление вторичной реплики из группы доступности AlwaysOn с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или PowerShell в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+ 
+   
+##  <a name="Restrictions"></a> Ограничения  
   
--   **Перед началом работы**  
-  
-     [Ограничения](#Restrictions)  
-  
-     [Предварительные требования](#Prerequisites)  
-  
-     [безопасность](#Security)  
-  
--   **Удаление вторичной реплики с помощью**  
-  
-     [Среда SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
--   **Дальнейшие действия.**  [После удаления вторичной реплики](#PostBestPractices)  
-  
-##  <a name="BeforeYouBegin"></a> Перед началом  
-  
-###  <a name="Restrictions"></a> Ограничения  
-  
--   Эта задача поддерживается только в первичной реплике.  
-  
+-   Эта задача поддерживается только в первичной реплике.    
 -   Из группы доступности может быть удалена только вторичная реплика.  
   
-###  <a name="Prerequisites"></a> Предварительные требования  
+## <a name="Prerequisites"></a> Предварительные требования  
   
 -   Необходимо иметь подключение к экземпляру сервера, на котором размещена первичная реплика группы доступности.  
   
-###  <a name="Security"></a> Безопасность  
-  
-####  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Permissions  
  Необходимо разрешение ALTER AVAILABILITY GROUP для группы доступности, разрешение CONTROL AVAILABILITY GROUP, разрешение ALTER ANY AVAILABILITY GROUP или разрешение CONTROL SERVER.  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  

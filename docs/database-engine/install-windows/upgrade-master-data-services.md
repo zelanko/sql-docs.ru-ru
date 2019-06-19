@@ -10,13 +10,13 @@ ms.assetid: 9c3543f3-3eb9-455d-a9bf-f17e9506ad21
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: b287e4f806f02f2b86493813f29776e118017fb8
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: jroth
+ms.openlocfilehash: dc39108ea476947e95f237bdccf1fb64a70bd36a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52405129"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66794729"
 ---
 # <a name="upgrade-master-data-services"></a>Обновление служб Master Data Services
 
@@ -113,7 +113,7 @@ ms.locfileid: "52405129"
   
  **Обновление с обновлением ядра СУБД**  
   
-1.  **Только для [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]**. Откройте **панель управления** > **Программы и компоненты** и удалите Microsoft [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
+1.  **Только для [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]** : Откройте **панель управления** > **Программы и компоненты** и удалите Microsoft [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
   
 2.  Обновите компонент Database Engine до [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] или [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)]. Дополнительные сведения см. в разделе [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md).  
   
@@ -150,7 +150,7 @@ ms.locfileid: "52405129"
 3.  Обновите схему базы данных служб MDS, создайте веб-приложение и свяжите его с обновленной базой данных служб MDS. Инструкции см. в шагах 2–4 раздела [Обновление без обновления компонента Database Engine](#noengine).  
   
 ## <a name="troubleshooting"></a>Устранение неполадок  
- **Проблема**. При открытии веб-приложения [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] или [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] появляется такое сообщение об ошибке: "версия клиента несовместима с версией базы данных".  
+ **Проблема:** При открытии веб-приложения [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] или [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] появляется сообщение об ошибке "Версия клиента несовместима с версией базы данных".  
   
  **Решение**. Эта ошибка может возникнуть, когда веб-приложение диспетчера основных данных [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] или [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] пытается получить доступ к базе данных, обновленной до служб [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)] Master Data Services. Следует использовать веб-приложение [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)].  
   

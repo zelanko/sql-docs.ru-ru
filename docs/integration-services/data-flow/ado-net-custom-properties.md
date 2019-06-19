@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b1ff09c90aece19ea306ec91b8d5cb0d95da937c
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727233"
 ---
 # <a name="ado-net-custom-properties"></a>Пользовательские свойства ADO NET
@@ -43,7 +43,7 @@ ms.locfileid: "65727233"
   
  Назначение [!INCLUDE[vstecado](../../includes/vstecado-md.md)] обладает как пользовательскими свойствами, так и свойствами, общими для всех компонентов потока данных.  
   
- В следующей таблице описаны пользовательские свойства назначения « [!INCLUDE[vstecado](../../includes/vstecado-md.md)] ». Все свойства доступны для чтения и записи. Эти свойства недоступны в диалоговом окне **Редактор назначения «ADO.NET»**, однако их можно установить при помощи окна **Расширенный редактор**.  
+ В следующей таблице описаны пользовательские свойства назначения « [!INCLUDE[vstecado](../../includes/vstecado-md.md)] ». Все свойства доступны для чтения и записи. Эти свойства недоступны в диалоговом окне **Редактор назначения «ADO.NET»** , однако их можно установить при помощи окна **Расширенный редактор**.  
   
 |Свойство|Тип данных|Описание|  
 |--------------|---------------|-----------------|  

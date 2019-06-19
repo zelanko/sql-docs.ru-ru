@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: be62f7dfe7cce25d6b4cd63767bdea211dacd1a5
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59242182"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "64478527"
 ---
 # <a name="back-up-the-transaction-log-when-the-database-is-damaged-sql-server"></a>Создание резервной копии журнала транзакций при повреждении базы данных (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -130,7 +130,7 @@ ms.locfileid: "59242182"
      `BACKUP LOG <database_name> TO <backup_device> WITH NORECOVERY`  
   
     > [!IMPORTANT]  
-    >  Во время восстановления в диалоговом окне "Восстановление базы данных" тип резервной копии заключительного фрагмента журнала отображается как **Журнал транзакций (только копия)**.  
+    >  Во время восстановления в диалоговом окне "Восстановление базы данных" тип резервной копии заключительного фрагмента журнала отображается как **Журнал транзакций (только копия)** .  
   
 15. При резервном копировании на накопитель на магнитной ленте (как указано в разделе **Назначение** страницы **Общие** ) активен параметр **Выгрузить ленту после резервного копирования** . Щелкните этот параметр, чтобы активировать параметр **Перемотать ленту перед выгрузкой** .  
   

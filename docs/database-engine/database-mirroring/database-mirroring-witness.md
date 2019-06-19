@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 05606de8-90c3-451a-938d-1ed34211dad7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 11c66e1ec21787fa263a999e9beaaf0e22646b5c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 996def514bc87bde79f85bffbb04056bf487764f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646742"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66795461"
 ---
 # <a name="database-mirroring-witness"></a>Database Mirroring Witness
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "47646742"
   
 -   Если зеркальный сервер отключен от следящего и основного серверов, то автоматическая отработка отказа невозможна вне зависимости от состояния основного сервера.  
   
- Требование, которое заключается в том, чтобы по крайней мере два экземпляра сервера оставались подключенными, называется *кворумом*. Кворум гарантирует, что в каждый момент времени база данных может обслуживаться только одним участником. Сведения о кворуме и его влиянии на сеанс см. в разделе [Кворум. Как следящий сервер влияет на доступность базы данных (зеркальное отображение базы данных)](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+ Требование, которое заключается в том, чтобы по крайней мере два экземпляра сервера оставались подключенными, называется *кворумом*. Кворум гарантирует, что в каждый момент времени база данных может обслуживаться только одним участником. Дополнительные сведения о кворуме и влиянии, которое он оказывает на сеанс, см. в разделе [Кворум. Как следящий сервер влияет на доступность базы данных &#40;зеркальное отображение базы данных&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
 ##  <a name="AddRemoveWitness"></a> Добавление или удаление следящего сервера  
  **Добавление следящего сервера**  

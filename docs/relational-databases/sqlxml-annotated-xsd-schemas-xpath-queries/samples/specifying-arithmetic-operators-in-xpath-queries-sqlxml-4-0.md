@@ -18,10 +18,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6c0d615a1012c976e2ef4a6f195a5808e9a36885
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62737530"
 ---
 # <a name="specifying-arithmetic-operators-in-xpath-queries-sqlxml-40"></a>Задание арифметических операторов в запросах XPath (SQLXML 4.0)
@@ -37,7 +37,7 @@ ms.locfileid: "62737530"
 /child::OrderDetail[@UnitPrice * @Quantity = 12.350]  
 ```  
   
- В запросе `child` является осью и `OrderDetail` является проверкой узла (значение TRUE, если **OrderDetail** —  **\<узла элемента >**, так как  **\< Элемент >** узел является основным узлом для **дочерних** оси). Для всех  **\<OrderDetail >** узлов элемента применяется проверка в предикате и возвращаются только те узлы, которые удовлетворяют условию.  
+ В запросе `child` является осью и `OrderDetail` является проверкой узла (значение TRUE, если **OrderDetail** —  **\<узла элемента >** , так как  **\< Элемент >** узел является основным узлом для **дочерних** оси). Для всех  **\<OrderDetail >** узлов элемента применяется проверка в предикате и возвращаются только те узлы, которые удовлетворяют условию.  
   
 > [!NOTE]  
 >  Числа в языке XPath являются числами с плавающей запятой двойной точности, и сравнение чисел с плавающей запятой, как указано в примере, приводит к округлению.  
