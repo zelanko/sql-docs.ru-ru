@@ -12,10 +12,10 @@ ms.author: janinez
 author: janinezhang
 manager: craigg
 ms.openlocfilehash: 8a2d8444e0b19ed4672e9582ef9802d0cd6f6fe7
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65720736"
 ---
 # <a name="load-data-into-azure-sql-data-warehouse-with-sql-server-integration-services-ssis"></a>Загрузка данных в Хранилище данных SQL Azure с помощью SQL Server Integration Services (SSIS)
@@ -52,9 +52,9 @@ ms.locfileid: "65720736"
 ## <a name="prerequisites"></a>предварительные требования
 Для прохождения этого руководства потребуется следующее.
 
-1. **SQL Server Integration Services (SSIS)**. Службы SSIS — это компонент SQL Server, которому для работы нужна лицензионная версия, версия для разработчиков или ознакомительная версия SQL Server. [Получить ознакомительную версию SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-rtm).
+1. **SQL Server Integration Services (SSIS)** . Службы SSIS — это компонент SQL Server, которому для работы нужна лицензионная версия, версия для разработчиков или ознакомительная версия SQL Server. [Получить ознакомительную версию SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-rtm).
 2. **Visual Studio** (необязательно). Для получения бесплатного выпуска Visual Studio Community см. раздел [Visual Studio Community][Visual Studio Community]. Если вы не хотите устанавливать Visual Studio, вы можете установить только SQL Server Data Tools (SSDT). Установка SSDT включает версию Visual Studio с ограниченной функциональностью.
-3. **SQL Server Data Tools для Visual Studio (SSDT)**. Чтобы получить SQL Server Data Tools для Visual Studio, см. раздел [Скачивание SQL Server Data Tools (SSDT)][Download SQL Server Data Tools (SSDT)].
+3. **SQL Server Data Tools для Visual Studio (SSDT)** . Чтобы получить SQL Server Data Tools для Visual Studio, см. раздел [Скачивание SQL Server Data Tools (SSDT)][Download SQL Server Data Tools (SSDT)].
 4. **База данных и разрешения Хранилища данных SQL Azure**. Этот учебник подключается к экземпляру хранилища данных SQL и загружает в него данные. У вас должны быть разрешения на подключение, создание таблицы и загрузку данных.
 
 ## <a name="create-a-new-integration-services-project"></a>Создание нового проекта служб Integration Services

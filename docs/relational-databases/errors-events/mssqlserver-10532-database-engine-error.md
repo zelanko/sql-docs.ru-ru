@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6d08c70c063142ff93e15464a04ddf156f290ea5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854388"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62985963"
 ---
 # <a name="mssqlserver10532"></a>MSSQLSERVER_10532
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,13 +31,13 @@ ms.locfileid: "47854388"
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
 |Символическое имя|PG_NO_ELIGIBLE_STMT|  
-|Текст сообщения|Не удается создать структуру плана '%.\*ls', поскольку пакет или модуль, заданный параметром **@plan_handle**, не содержит инструкций, допустимых для структуры плана. Укажите другое значение для параметра **@plan_handle**.|  
+|Текст сообщения|Не удается создать структуру плана '%.\*ls', поскольку пакет или модуль, заданный параметром **@plan_handle** , не содержит инструкций, допустимых для структуры плана. Укажите другое значение для параметра **@plan_handle** .|  
   
 ## <a name="explanation"></a>Объяснение  
-Пакет или модуль, заданный параметром **@plan_handle**, не содержит инструкций, допустимых для структуры плана.  
+Пакет или модуль, заданный параметром **@plan_handle** , не содержит инструкций, допустимых для структуры плана.  
   
 ## <a name="user-action"></a>Действие пользователя  
-Укажите другое значение для параметра **@plan_handle**.  
+Укажите другое значение для параметра **@plan_handle** .  
   
 ## <a name="see-also"></a>См. также:  
 [Руководства планов](~/relational-databases/performance/plan-guides.md)  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6a581e981829d6a2bbd8ed0181decc2d2af5e316
-ms.sourcegitcommit: 99847f34e949a5c3c58565d76be3abf5b80f9632
+manager: jroth
+ms.openlocfilehash: 08794856151267477753b1b756a63b6eb897b7f7
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55742104"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66761841"
 ---
 # <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts-for-always-on-availability-groups"></a>Механика и рекомендации для аренды, кластера, а также времени ожидания проверки работоспособности для групп доступности Always On 
 
@@ -78,10 +78,10 @@ ms.locfileid: "55742104"
 | Level | Условие, при котором экземпляр считается неработоспособным
 |:---|---
 | 1: OnServerDown | Проверка работоспособности не предпринимает никаких действий при возникновении сбоя в других ресурсах за исключением группы доступности. Данные группы доступности не были получены в течение 5 интервалов или 5/3 \* HealthCheckTimeout
-| 2. OnServerUnresponsive | Данные от `sp_server_diagnostics` не были получены в течение HealthCheckTimeout
-| 3. OnCriticalServerError | Компонент системы сообщает об ошибке (по умолчанию)
-| 4. OnModerateServerError | Компонент ресурса сообщает об ошибке 
-| 5.  OnAnyQualifiedFailureConitions |  Компонент обработки запроса сообщает об ошибке
+| 2: OnServerUnresponsive | Данные от `sp_server_diagnostics` не были получены в течение HealthCheckTimeout
+| 3: OnCriticalServerError | Компонент системы сообщает об ошибке (по умолчанию)
+| 4: OnModerateServerError | Компонент ресурса сообщает об ошибке 
+| 5:  OnAnyQualifiedFailureConitions |  Компонент обработки запроса сообщает об ошибке
 
 ## <a name="updating-cluster-and-always-on-timeout-values"></a>Обновление параметров времени ожидания кластера и Always On 
 

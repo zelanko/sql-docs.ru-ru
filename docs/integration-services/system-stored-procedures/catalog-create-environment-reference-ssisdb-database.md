@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 73871d69a8fbdc56b2359aa888cbc08e572a6107
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65716910"
 ---
 # <a name="catalogcreateenvironmentreference-ssisdb-database"></a>catalog.create_environment_reference (база данных SSISDB)
@@ -40,19 +40,19 @@ catalog.create_environment_reference [ @folder_name = ] folder_name
   
 ## <a name="arguments"></a>Аргументы  
  [ @folder_name = ] *folder_name*  
- Имя папки проекта, которая ссылается на среду. Параметр *folder_name* имеет тип **nvarchar(128)**.  
+ Имя папки проекта, которая ссылается на среду. Параметр *folder_name* имеет тип **nvarchar(128)** .  
   
  [ @project_name = ] *project_name*  
- Имя проекта, ссылающегося на среду. Параметр *project_name* имеет тип **nvarchar(128)**.  
+ Имя проекта, ссылающегося на среду. Параметр *project_name* имеет тип **nvarchar(128)** .  
   
  [ @environment_name = ] *environment_name*  
- Имя среды, на которую указывает ссылка. Параметр *environment_name* имеет тип **nvarchar(128)**.  
+ Имя среды, на которую указывает ссылка. Параметр *environment_name* имеет тип **nvarchar(128)** .  
   
  [ @reference_location = ] *reference_location*  
- Указывает, может среда находиться в той же папке, что и проект (относительная ссылка), или в другой папке (абсолютная ссылка). Значение `R` указывает, что ссылка относительная. Значение `A` указывает, что ссылка абсолютная. Параметр *reference_location* имеет тип **char(1)**.  
+ Указывает, может среда находиться в той же папке, что и проект (относительная ссылка), или в другой папке (абсолютная ссылка). Значение `R` указывает, что ссылка относительная. Значение `A` указывает, что ссылка абсолютная. Параметр *reference_location* имеет тип **char(1)** .  
   
  [ @environment_folder_name = ] *environment_folder_name*  
- Имя папки, в которой находится среда, на которую указывает ссылка. Это значение требуется для абсолютных ссылок. Параметр *environment_folder_name* имеет тип **nvarchar(128)**.  
+ Имя папки, в которой находится среда, на которую указывает ссылка. Это значение требуется для абсолютных ссылок. Параметр *environment_folder_name* имеет тип **nvarchar(128)** .  
   
  [ @reference_id = ] *reference_id*  
  Возвращает уникальный идентификатор для новой ссылки. Этот параметр является необязательным. Параметр *reference_id* имеет тип **bigint**.  

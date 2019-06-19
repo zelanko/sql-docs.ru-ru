@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5f7b30970020963e83fa101971d6c30d9e76397a
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723952"
 ---
 # <a name="column-mappings-sql-server-import-and-export-wizard"></a>Сопоставления столбцов (мастер импорта и экспорта SQL Server)
@@ -113,7 +113,7 @@ ms.locfileid: "65723952"
     Укажите масштаб числовых данных в конечном столбце, то есть количество знаков после запятой (если применимо).  
   
 ## <a name="whats-next"></a>Дальнейшие действия  
- После того как вы проверите и настроите конечные столбцы для приема скопированных данных из исходных столбцов и нажмете кнопку **ОК**, диалоговое окно **Сопоставления столбцов** вернет вас на страницу **Выбор исходных таблиц и представлений** или на страницу **Настройка назначения "Неструктурированный файл"**. Дополнительные сведения см. в разделах [Выбор исходных таблиц и представлений](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md) или [Настройка назначения "Неструктурированный файл"](../../integration-services/import-export-data/configure-flat-file-destination-sql-server-import-and-export-wizard.md).  
+ После того как вы проверите и настроите конечные столбцы для приема скопированных данных из исходных столбцов и нажмете кнопку **ОК**, диалоговое окно **Сопоставления столбцов** вернет вас на страницу **Выбор исходных таблиц и представлений** или на страницу **Настройка назначения "Неструктурированный файл"** . Дополнительные сведения см. в разделах [Выбор исходных таблиц и представлений](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md) или [Настройка назначения "Неструктурированный файл"](../../integration-services/import-export-data/configure-flat-file-destination-sql-server-import-and-export-wizard.md).  
   
  Если заданное сопоставление не добавится в список **Сопоставления** , диалоговое окно **Сопоставления столбцов** переадресует вас на страницу **Просмотр сопоставления типов данных** . На этой странице вы можете просмотреть предупреждения, настроить параметры преобразования и указать способ обработки ошибок. Дополнительные сведения см. в разделе [Просмотр сопоставления типов данных](../../integration-services/import-export-data/review-data-type-mapping-sql-server-import-and-export-wizard.md).  
  

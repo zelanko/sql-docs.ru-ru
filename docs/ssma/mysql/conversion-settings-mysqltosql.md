@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: fee221caf91d5d70f291f9351d05a00352e7cc00
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63253260"
 ---
 # <a name="conversion-settings-mysqltosql"></a>Параметры преобразования (MySQLToSQL)
@@ -71,7 +71,7 @@ ms.locfileid: "63253260"
   
         -   Преобразовать в соответствии с параметрами проекта  
   
-    2.  Если **«Да»**, этот параметр запрещает создание создания вспомогательного столбцов ROWID в целевых таблицах.  
+    2.  Если **«Да»** , этот параметр запрещает создание создания вспомогательного столбцов ROWID в целевых таблицах.  
   
     3.  Параметры, созданные пользователем, сохраняются в файле каскадного предпочтения после нажатия кнопки **применить** кнопки.  
   

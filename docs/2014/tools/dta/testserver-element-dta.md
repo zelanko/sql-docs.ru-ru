@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 73f5cdd35404617be9563c33574b09f825a2c7ad
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63138706"
 ---
 # <a name="testserver-element-dta"></a>Элемент TestServer (DTA)
@@ -40,7 +40,7 @@ ms.locfileid: "63138706"
 |--------------------|-----------------|  
 |**Тип данных и длина**|**string**, неограниченная длина|  
 |**Значение по умолчанию**|Нет.|  
-|**Наличие**|Необязательный. Может использоваться один раз для каждого элемента `TuningOptions`.|  
+|**Наличие**|Необязательный параметр. Может использоваться один раз для каждого элемента `TuningOptions`.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   

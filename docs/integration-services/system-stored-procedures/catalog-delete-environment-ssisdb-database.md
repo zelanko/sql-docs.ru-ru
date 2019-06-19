@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ba16c8726963fcb355f1e6e424c15ec66601c126
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65716607"
 ---
 # <a name="catalogdeleteenvironment-ssisdb-database"></a>catalog.delete_environment (база данных SSISDB)
@@ -35,10 +35,10 @@ delete_environment [ @folder_name = ] folder_name , [ @environment_name = ] envi
   
 ## <a name="arguments"></a>Аргументы  
  [ @folder_name = ] *folder_name*  
- Имя папки, которая содержит среду. Параметр *folder_name* имеет тип **nvarchar(128)**.  
+ Имя папки, которая содержит среду. Параметр *folder_name* имеет тип **nvarchar(128)** .  
   
  [ @environment_name = ] *environment_name*  
- Имя удаляемой среды. Параметр *environment_name* имеет тип **nvarchar(128)**.  
+ Имя удаляемой среды. Параметр *environment_name* имеет тип **nvarchar(128)** .  
   
 ## <a name="return-code-value"></a>Значения кодов возврата  
  0 (успешное завершение)  

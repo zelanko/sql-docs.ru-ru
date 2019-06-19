@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 253625d364bb8ae918ee9bdd2402e3cf249b26ce
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65719869"
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>Пакеты служб из заданий агента SQL Server
@@ -145,7 +145,7 @@ ms.locfileid: "65719869"
     |--------------------|-----------------|  
     |**Каталог служб SSIS**|Пакеты, хранимые в базе данных SSISDB. Пакеты хранятся в проектах [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , развернутых на сервере [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .|  
     |**SQL Server**|Пакеты, хранимые в базе данных MSDB. Для управления этими пакетами используется служба [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .|  
-    |**Хранилище пакетов служб SSIS**|Пакеты, хранимые в папке по умолчанию на локальном компьютере. Папка по умолчанию — *\<диск>*:\Program Files\Microsoft SQL Server\110\DTS\Packages. Для управления этими пакетами используется служба [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .<br /><br /> Примечание. Можно указать другую папку или дополнительные папки из файловой системы, которые будут управляться службой [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], изменив файл конфигурации для служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Дополнительные сведения см. в разделе [Службы Integration Services (SSIS)](../../integration-services/service/integration-services-service-ssis-service.md).|  
+    |**Хранилище пакетов служб SSIS**|Пакеты, хранимые в папке по умолчанию на локальном компьютере. Папка по умолчанию — *\<диск>* :\Program Files\Microsoft SQL Server\110\DTS\Packages. Для управления этими пакетами используется служба [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .<br /><br /> Примечание. Можно указать другую папку или дополнительные папки из файловой системы, которые будут управляться службой [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], изменив файл конфигурации для служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Дополнительные сведения см. в разделе [Службы Integration Services (SSIS)](../../integration-services/service/integration-services-service-ssis-service.md).|  
     |**Файловая система**|Пакеты, хранимые в любой папке на локальном компьютере.|  
   
      **В следующих таблицах описаны параметры конфигурации, доступные для шага задания в зависимости от выбранного источника пакета.**  

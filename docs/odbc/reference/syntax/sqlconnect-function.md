@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3f2eabec895a0b56d396d5848c8f418451e0afb7
-ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/11/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65537676"
 ---
 # <a name="sqlconnect-function"></a>Функция SQLConnect
@@ -50,7 +50,7 @@ SQLRETURN SQLConnect(
   
 ## <a name="arguments"></a>Аргументы  
  *ConnectionHandle*  
- [Вход] Дескриптор соединения.  
+ [Input] Дескриптор подключения  
   
  *ServerName*  
  [Вход] Имя источника данных. Данные могут быть расположены на одном компьютере с программой, или на другом компьютере, где-нибудь в сети. Сведения о выборе источника данных с помощью приложения, см. в разделе [Выбор источника данных или драйвера](../../../odbc/reference/develop-app/choosing-a-data-source-or-driver.md).  

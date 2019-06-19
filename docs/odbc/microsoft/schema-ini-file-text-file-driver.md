@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 708442d30b571f165f7f9d70f346a958764316d0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63127901"
 ---
 # <a name="schemaini-file-text-file-driver"></a>Файл Schema.ini (драйвер для текстовых файлов)
@@ -100,7 +100,7 @@ n=ColumnNametype [#]
 |Параметр|Описание|  
 |---------------|-----------------|  
 |*ColumnName*|Имя текстового столбца. Если имя столбца содержит пробелы, его необходимо заключить в двойные кавычки.|  
-|*type*|Типы данных являются следующим образом:<br /><br /> **Типы данных Microsoft Jet**<br /><br /> bit<br /><br /> Byte<br /><br /> Short<br /><br /> Long<br /><br /> CURRENCY<br /><br /> Один<br /><br /> Double<br /><br /> Datetime<br /><br /> Text<br /><br /> MEMO<br /><br /> **Типы данных ODBC** Char (то же, как текст)<br /><br /> Число с плавающей запятой (аналогично Double)<br /><br /> Целое число (аналогично Short)<br /><br /> LongChar (аналогично Memo)<br /><br /> Дата *формат даты*|  
+|*type*|Типы данных являются следующим образом:<br /><br /> **Типы данных Microsoft Jet**<br /><br /> bit<br /><br /> Byte<br /><br /> Short<br /><br /> Long<br /><br /> Currency<br /><br /> Один<br /><br /> Double<br /><br /> DateTime<br /><br /> Text<br /><br /> MEMO<br /><br /> **Типы данных ODBC** Char (то же, как текст)<br /><br /> Число с плавающей запятой (аналогично Double)<br /><br /> Целое число (аналогично Short)<br /><br /> LongChar (аналогично Memo)<br /><br /> Дата *формат даты*|  
 |**Width**|Значение символьной строки `Width`. Указывает, что следующий номер обозначает ширину столбца (необязательно для файлов, разделенных символом; требуется для файлов с фиксированной длины).|  
 |*#*|Целочисленное значение, которое обозначает ширину столбца (обязательно, если **ширины** указан).|  
   

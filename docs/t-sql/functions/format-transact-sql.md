@@ -19,12 +19,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 817b8a639a1c827d90c780d5c2c3e35a1855d11a
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.openlocfilehash: 732ca10f49982c7e2de190cffd50d9780a986a8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65949006"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66499520"
 ---
 # <a name="format-transact-sql"></a>FORMAT (Transact-SQL)
 
@@ -215,6 +215,27 @@ SELECT FORMAT(cast('07:35' as time), N'hh:mm');   --> returns NULL
 SELECT FORMAT(cast('07:35' as time), N'hh\.mm');  --> returns 07.35  
 SELECT FORMAT(cast('07:35' as time), N'hh\:mm');  --> returns 07:35  
 ```  
+
+Формат возвращает текущее время в формате с AM или PM
+
+```sql
+SELECT FORMAT(SYSDATETIME(), N'hh:mm tt'); -- returns 03:46 PM
+SELECT FORMAT(SYSDATETIME(), N'hh:mm t'); -- returns 03:46 P
+```
+
+Формат возвращает заданное время с AM
+
+```sql
+select FORMAT(CAST('2018-01-01 01:00' AS datetime2), N'hh:mm tt') -- returns 01:00 AM
+select FORMAT(CAST('2018-01-01 01:00' AS datetime2), N'hh:mm t')  -- returns 01:00 A
+```
+
+Формат возвращает заданное время с PM
+
+```sql
+select FORMAT(CAST('2018-01-01 14:00' AS datetime2), N'hh:mm tt') -- returns 02:00 PM
+select FORMAT(CAST('2018-01-01 14:00' AS datetime2), N'hh:mm t') -- returns 02:00 P
+```
   
 ## <a name="see-also"></a>См. также:
 

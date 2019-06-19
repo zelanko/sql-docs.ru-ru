@@ -29,11 +29,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8b190f7583a7b2c98294d2dd721979486309f2ee
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559761"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62862127"
 ---
 # <a name="database-states"></a>Состояния базы данных
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "51559761"
 ## <a name="database-state-definitions"></a>Определения состояний базы данных  
  Состояния базы данных определяются в следующей таблице.  
   
-|Состояние|Определение|  
+|Штат|Определение|  
 |-----------|----------------|  
 |ONLINE|База данных доступна. Первичная файловая группа находится в режиме в сети, хотя возможно не завершена стадия отката восстановления.|  
 |OFFLINE|База данных недоступна. База данных переходит в режим вне сети с помощью явного указания пользователя и остается в режиме вне сети до тех пор, пока пользователем не будет предпринято дополнительное действие. Например, база данных может быть переведена в режим вне сети, чтобы переместить файл на другой диск. После завершения перемещения файла база данных снова переводится в режим в сети.|  

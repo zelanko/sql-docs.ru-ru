@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4d71d15ada91055b7aff128bd750e1fd192b6e8f
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65480208"
 ---
 # <a name="create-master-data-manager-web-service-proxy-classes"></a>Создание классов-посредников веб-службы диспетчера основных данных
@@ -29,7 +29,7 @@ ms.locfileid: "65480208"
   
 1.  Откройте файл Web.config [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] в текстовом редакторе. Этот файл находится в папке WebApplication каталога пути установки [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
   
-2.  Найдите раздел **mdsWsHttpBehavior** в **\<serviceBehaviors>**. Для элемента **\<serviceMetadata>** присвойте параметру **httpGetEnabled** значение **true**.  
+2.  Найдите раздел **mdsWsHttpBehavior** в **\<serviceBehaviors>** . Для элемента **\<serviceMetadata>** присвойте параметру **httpGetEnabled** значение **true**.  
   
     > [!NOTE]  
     >  Чтобы включить веб-службы по протоколу SSL, задайте для свойства **httpsGetEnabled** значение **true** в разделе **mdsWsHttpBehavior** файла web.config. Необходимо также настроить **mdsWsHTTPBinding** для использования протокола SSL и закомментировать секцию не SSL.  

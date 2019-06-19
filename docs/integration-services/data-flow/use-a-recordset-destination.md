@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ba05390afed4b4c2a9f3753523f4afe31bee69c0
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65725721"
 ---
 # <a name="use-a-recordset-destination"></a>использовать назначение «Набор записей»
@@ -103,7 +103,7 @@ ms.locfileid: "65725721"
   
 1.  На вкладке **Поток управления** конструктора служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] добавьте в область конструктора задачу потока данных.  
   
-2.  На вкладке **Поток данных** tab, add an OLE DB source to the Поток данных task, and then open the **Редактор источника «OLE DB»**.  
+2.  На вкладке **Поток данных** tab, add an OLE DB source to the Поток данных task, and then open the **Редактор источника «OLE DB»** .  
   
 3.  На странице редактора **Диспетчер соединений** настройте источник со следующими параметрами.  
   
@@ -158,7 +158,7 @@ ms.locfileid: "65725721"
   
     5.  Для параметра **MessageSourceType**выберите значение **Прямой ввод**.  
   
-5.  На странице **Выражения** окна **Редактор задачи "Отправка почты"** нажмите кнопку с многоточием (**…**), чтобы открыть **Редактор выражений свойств**.  
+5.  На странице **Выражения** окна **Редактор задачи "Отправка почты"** нажмите кнопку с многоточием ( **…** ), чтобы открыть **Редактор выражений свойств**.  
   
 6.  В **Редакторе выражений свойств**введите следующие данные.  
   
