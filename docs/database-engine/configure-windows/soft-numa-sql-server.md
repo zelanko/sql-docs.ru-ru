@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 1af22188-e08b-4c80-a27e-4ae6ed9ff969
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: e3757c44ada2f4413693d6124e75bb726f63ac7d
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: a00716f654263528d0332fb5a71cef6d80f9bc21
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605394"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66775471"
 ---
 # <a name="soft-numa-sql-server"></a>Архитектура Soft-NUMA (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,11 +34,11 @@ ms.locfileid: "51605394"
 > Архитектура Soft-NUMA не поддерживает процессоры с "горячей" заменой.  
   
 ## <a name="automatic-soft-numa"></a>Автоматическое создание архитектуры Soft-NUMA  
- По умолчанию в [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] автоматически создает узлы архитектуры Soft-NUMA, если во время запуска обнаруживает более восьми физических ядер на один сокет или узел NUMA. Процессорные ядра с технологией Hyper-Threading не различаются при подсчете физических ядер на узле.  Если обнаружено больше восьми физических ядер на один сокет, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] создает узлы архитектуры Soft-NUMA. В идеале узлы содержат по восемь ядер, но поддерживают и другое количество: от пяти до девяти логических ядер на один узел. Размер аппаратного узла может быть ограничен маской сходства ЦП. Количество узлов NUMA не может превышать максимальное количество поддерживаемых узлов NUMA.  
+По умолчанию в [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] автоматически создает узлы архитектуры Soft-NUMA, если во время запуска обнаруживает более восьми физических ядер на один сокет или узел NUMA. Процессорные ядра с технологией Hyper-Threading не различаются при подсчете физических ядер на узле.  Если обнаружено больше восьми физических ядер на один сокет, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] создает узлы архитектуры Soft-NUMA. В идеале узлы содержат по восемь ядер, но поддерживают и другое количество: от пяти до девяти логических ядер на один узел. Размер аппаратного узла может быть ограничен маской сходства ЦП. Количество узлов NUMA не может превышать максимальное количество поддерживаемых узлов NUMA.  
   
- Использование архитектуры Soft-NUMA можно отключать и включать с помощью инструкции [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md) с аргументом `SET SOFTNUMA`. Чтобы изменение этого параметра вступило в силу, потребуется перезапустить ядро базы данных.  
+Использование архитектуры Soft-NUMA можно отключать и включать с помощью инструкции [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md) с аргументом `SET SOFTNUMA`. Чтобы изменение этого параметра вступило в силу, потребуется перезапустить ядро базы данных.  
   
- На рисунке ниже показан пример сведений об архитектуре Soft-NUMA, которые вы увидите в журнале ошибок SQL Server, если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обнаружит аппаратные узлы NUMA с более чем восемью физическими ядрами на каждый узел или сокет.  
+На рисунке ниже показан пример сведений об архитектуре Soft-NUMA, которые вы увидите в журнале ошибок SQL Server, если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обнаружит аппаратные узлы NUMA с более чем восемью физическими ядрами на каждый узел или сокет.  
 
 
 ```
@@ -49,6 +49,9 @@ ms.locfileid: "51605394"
 2016-11-14 13:39:43.63 Server      Node configuration: node 2: CPU mask: 0x0000555555000000:0 Active CPU mask: 0x0000555555000000:0. This message provides a description of the NUMA configuration for this computer. This is an informational message only. No user action is required.     
 2016-11-14 13:39:43.63 Server      Node configuration: node 3: CPU mask: 0x0000aaaaaa000000:0 Active CPU mask: 0x0000aaaaaa000000:0. This message provides a description of the NUMA configuration for this computer. This is an informational message only. No user action is required.   
 ```   
+
+> [!NOTE]
+> Начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 используйте флаг трассировки 8079, чтобы разрешить [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использовать автоматическую программную архитектуру NUMA. Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] эта реакция управляется подсистемой, и флаг трассировки 8079 не оказывает влияния. Дополнительные сведения см. в разделе [DBCC TRACEON — флаги трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
 
 ## <a name="manual-soft-numa"></a>Создание архитектуры Soft-NUMA вручную  
 Чтобы вручную настроить [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для использования архитектуры Soft-NUMA, отключите автоматическую настройку архитектуры Soft-NUMA и добавьте в реестре маску сходства для настройки узла. Маска архитектуры Soft-NUMA в этом случае указывается как запись реестра с двоичным типом данных, типом данных DWORD (шестнадцатеричным или десятичным) или QWORD (шестнадцатеричным или десятичным). Чтобы настроить большее количество процессоров (больше чем первые 32), используйте значения реестра QWORD или BINARY. (Значения QWORD нельзя использовать до [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]). Отредактировав реестр, перезапустите [!INCLUDE[ssDE](../../includes/ssde-md.md)], чтобы конфигурация архитектуры Soft-NUMA вступила в силу.  
@@ -70,7 +73,7 @@ ms.locfileid: "51605394"
   
  Экземпляр А, испытывающий значительную нагрузку ввода-вывода, теперь имеет два потока ввода-вывода и один поток модуля отложенной записи. Экземпляр В, выполняющий операции с интенсивным использованием процессора, имеет только один поток ввода-вывода и один поток модуля отложенной записи. Экземплярам может быть выделено различное количество памяти, но в отличие от оборудования NUMA, они оба получают память из одного блока памяти операционной системы, и здесь нет соответствия памяти и процессора.  
   
- Поток модуля отложенной записи связан с представлением физических узлов памяти NUMA в SQLOS. Поэтому любое число физических узлов NUMA, представленное оборудованием, будет равно числу создаваемых потоков модуля отложенной записи. Дополнительные сведения см. в разделе [Как это работает: программная архитектура NUMA, поток завершения ввода-вывода, рабочие процессы отложенной записи и узлы памяти](https://blogs.msdn.com/b/psssql/archive/2010/04/02/how-it-works-soft-numa-i-o-completion-thread-lazy-writer-workers-and-memory-nodes.aspx).  
+ Поток модуля отложенной записи связан с представлением физических узлов памяти NUMA в SQLOS. Поэтому любое число физических узлов NUMA, представленное оборудованием, будет равно числу создаваемых потоков модуля отложенной записи. Дополнительные сведения см. в разделе [Как это работает: программная архитектура NUMA, поток завершения ввода-вывода, рабочие потоки модуля отложенной записи и узлы памяти](https://blogs.msdn.com/b/psssql/archive/2010/04/02/how-it-works-soft-numa-i-o-completion-thread-lazy-writer-workers-and-memory-nodes.aspx).  
   
 > [!NOTE]
 > Разделы реестра **Soft-NUMA** не копируются при обновлении экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -128,9 +131,9 @@ SET PROCESS AFFINITY CPU=4 TO 7;
 ## <a name="metadata"></a>Метаданные  
  Для просмотра текущего состояния и конфигурации архитектуры Soft-NUMA можно использовать указанные ниже динамические административные представления.  
   
--   [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md): отображает текущее значение (0 или 1) для SOFTNUMA  
+-   [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md): отображает текущее значение (0 или 1) параметра SOFTNUMA.  
   
--   [sys.dm_os_sys_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md): в столбцах *softnuma* и *softnuma_desc* показаны текущие значения конфигурации.  
+-   [sys.dm_os_sys_info (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md): в столбцах *softnuma* и *softnuma_desc* показаны текущие значения конфигурации.  
   
 > [!NOTE]
 > Можно просмотреть текущее значение для автоматического создания программной архитектуры NUMA с помощью инструкции [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md), но изменить это значение с помощью **sp_configure** невозможно. Необходимо использовать инструкцию [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md) с аргументом `SET SOFTNUMA`.  

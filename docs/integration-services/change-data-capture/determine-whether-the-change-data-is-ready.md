@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b1e3f616b0de021d5c8ac967b630a6bf9ca9bc50
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728966"
 ---
 # <a name="determine-whether-the-change-data-is-ready"></a>Определение готовности информации об  изменениях данных
@@ -206,7 +206,7 @@ ms.locfileid: "65728966"
   
 7.  Оставьте без изменений создаваемую по умолчанию строку кода, которая возвращает **DtsExecResult.Success** в результате выполнения скрипта.  
   
-8.  Закройте среду разработки скриптов и **Редактор задачи «Скрипт»**.  
+8.  Закройте среду разработки скриптов и **Редактор задачи «Скрипт»** .  
   
 #### <a name="to-implement-a-delay-by-using-an-execute-sql-task"></a>Реализация задержки с помощью задачи «Выполнение SQL»  
   
@@ -334,7 +334,7 @@ ms.locfileid: "65728966"
   
     ```  
   
-8.  Закройте среду разработки скриптов и **Редактор задачи «Скрипт»**.  
+8.  Закройте среду разработки скриптов и **Редактор задачи «Скрипт»** .  
   
 ## <a name="next-step"></a>Следующий шаг  
  Убедившись, что информация об изменениях готова, выполните следующий шаг — подготовьте запрос для получения измененных данных.  

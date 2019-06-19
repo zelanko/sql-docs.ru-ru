@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 635205cbc92121034cd8c949382c4910c794b55e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47835352"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63045842"
 ---
 # <a name="mssqlserver21889"></a>MSSQLSERVER_21889
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,5 +37,5 @@ ms.locfileid: "47835352"
 Для размещения базы данных издателя экземпляр SQL Server должен быть издателем репликации. **sp_validate_redirected_publisher** вызывает **sp_helpdistributor** на удаленном сервере, чтобы определить, является ли сервер издателем репликации. Эта ошибка указывает на то, что целевой экземпляр SQL Server должен быть издателем репликации.  
   
 ## <a name="user-action"></a>Действие пользователя  
-Выполните **sp_adddistributor** на экземпляре SQL Server с размещенной базой данных издателя. При запуске **sp_adddistributor** правильно укажите распространителя. Используйте то же значение параметра *@password*, которое применялось при начальном запуске хранимой процедуры **sp_adddistributor** на распространителе.  
+Выполните **sp_adddistributor** на экземпляре SQL Server с размещенной базой данных издателя. При запуске **sp_adddistributor** правильно укажите распространителя. Используйте то же значение параметра *@password* , которое применялось при начальном запуске хранимой процедуры **sp_adddistributor** на распространителе.  
   

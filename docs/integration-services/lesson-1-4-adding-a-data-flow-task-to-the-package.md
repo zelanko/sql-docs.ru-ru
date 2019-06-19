@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d0572019dabc6d62a634022ebeac2cdcb295a9e1
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723333"
 ---
 # <a name="lesson-1-4-add-a-data-flow-task-to-the-package"></a>Урок 1-4. Добавление задачи потока данных к пакету
@@ -42,7 +42,7 @@ ms.locfileid: "65723333"
   
     Каждый компонент, который вы добавляете в область конструктора, должен иметь уникальное имя. Для удобства работы и обслуживания эти имена должны хорошо описывать функции компонентов. Следование этим правилам именования обеспечивает самодокументируемость пакетов служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Другим способом документирования пакетов является использование примечаний. Дополнительные сведения о заметках см. в разделе [Использование заметок в пакетах](../integration-services/use-annotations-in-packages.md).  
   
-4.  Щелкните правой кнопкой мыши задачу потока данных, выберите пункт **Свойства** и в окне "Свойства" убедитесь в том, что свойство **LocaleID** установлено в значение **Английский (США)**.  
+4.  Щелкните правой кнопкой мыши задачу потока данных, выберите пункт **Свойства** и в окне "Свойства" убедитесь в том, что свойство **LocaleID** установлено в значение **Английский (США)** .  
   
 ## <a name="go-to-next-task"></a>Переход к следующей задаче
 [Шаг 5. Добавление и настройка источника неструктурированных файлов](../integration-services/lesson-1-5-adding-and-configuring-the-flat-file-source.md)  
