@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 11414e0a669ea3169a610c98740b3fd35ff4e751
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727659"
 ---
 # <a name="ftp-task"></a>Задача «FTP»
@@ -86,7 +86,7 @@ ms.locfileid: "65727659"
   
 ### <a name="options"></a>Параметры  
  **FtpConnection**  
- Выберите существующий диспетчер подключений FTP или щелкните \<**Создать соединение...**>, чтобы создать его.  
+ Выберите существующий диспетчер подключений FTP или щелкните \<**Создать соединение...** >, чтобы создать его.  
   
 > [!IMPORTANT]  
 >  Диспетчер FTP-соединений поддерживает только анонимную проверку подлинности и обычную проверку подлинности. Проверка подлинности Windows не поддерживается.  
@@ -149,13 +149,13 @@ ms.locfileid: "65727659"
   
 #### <a name="isremotepathvariable--true"></a>IsRemotePathVariable = True  
  **RemoteVariable**  
- Выберите существующую пользовательскую переменную или щелкните \<**Создать переменную...**>, чтобы создать ее.  
+ Выберите существующую пользовательскую переменную или щелкните \<**Создать переменную...** >, чтобы создать ее.  
   
  **См. также:** [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md), "Добавление переменной"  
   
 #### <a name="isremotepathvariable--false"></a>IsRemotePathVariable = False  
  **RemotePath**  
- Выберите существующий диспетчер подключений FTP или щелкните \<**Создать соединение...**>, чтобы создать его.  
+ Выберите существующий диспетчер подключений FTP или щелкните \<**Создать соединение...** >, чтобы создать его.  
   
  **См. также:** [Диспетчер FTP-сеансов](../../integration-services/connection-manager/ftp-connection-manager.md), [Редактор диспетчера FTP-сеансов](../../integration-services/connection-manager/ftp-connection-manager-editor.md)  
   
@@ -163,13 +163,13 @@ ms.locfileid: "65727659"
   
 #### <a name="islocalpathvariable--true"></a>IsLocalPathVariable = True  
  **LocalVariable**  
- Выберите существующую пользовательскую переменную или щелкните \<**Создать переменную...**>, чтобы создать ее.  
+ Выберите существующую пользовательскую переменную или щелкните \<**Создать переменную...** >, чтобы создать ее.  
   
  **См. также:** [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md), "Добавление переменной"  
   
 #### <a name="islocalpathvariable--false"></a>IsLocalPathVariable = False  
  **LocalPath**  
- Выберите существующий диспетчер подключений файлов или щелкните \<**Создать подключение...**>, чтобы создать его.  
+ Выберите существующий диспетчер подключений файлов или щелкните \<**Создать подключение...** >, чтобы создать его.  
   
  **См. также**: [Диспетчер подключений неструктурированных файлов](../../integration-services/connection-manager/flat-file-connection-manager.md)  
   

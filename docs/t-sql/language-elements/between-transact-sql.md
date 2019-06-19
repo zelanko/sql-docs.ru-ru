@@ -25,10 +25,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6ff89056c2e96a815312314e84b5118b7b48726f
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65980081"
 ---
 # <a name="between-transact-sql"></a>Оператор BETWEEN (Transact-SQL)
@@ -179,7 +179,7 @@ WHERE RateChangeDate BETWEEN '20011212' AND '20020105';
  4           2002-01-05 00:00:00.000  
  ```  
  
- Запрос извлекает ожидаемые строки, так как значения даты в запросе и значения типа **datetime**, хранящиеся в столбце `RateChangeDate`, были заданы без указания времени. Если время не указано, по умолчанию оно принимается равным 0:00. Обратите внимание, что строка, время в которой позднее 12:00. 05.01.2002, не будет возвращена данным запросом, так как она находится за пределами диапазона.  
+ Запрос извлекает ожидаемые строки, так как значения даты в запросе и значения типа **datetime**, хранящиеся в столбце `RateChangeDate`, были заданы без указания времени. Если время не указано, по умолчанию оно принимается равным 0:00. Обратите внимание, что строка, время в которой позднее 12:00. 05\.01.2002, не будет возвращена данным запросом, так как она находится за пределами диапазона.  
   
   
 ## <a name="see-also"></a>См. также:  

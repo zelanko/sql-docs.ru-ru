@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b5b2b43d899041d501039ade4d0493a7fdbf0164
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66094628"
 ---
 # <a name="install-distributed-replay-setup"></a>Установка распределенного воспроизведения (программа установки)
@@ -76,7 +76,7 @@ ms.locfileid: "66094628"
   
 5.  На странице **Файлы поддержки программы установки** щелкните **Установить** , чтобы установить или обновить файлы поддержки программы установки для [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-6.  На странице **Роль установки** выберите **Установка компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**, а затем нажмите кнопку **Далее**, чтобы перейти на страницу **Выбор компонентов**.  
+6.  На странице **Роль установки** выберите **Установка компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** , а затем нажмите кнопку **Далее**, чтобы перейти на страницу **Выбор компонентов**.  
   
 7.  На странице **Выбор компонентов** укажите компоненты, которые необходимо установить.  
   

@@ -25,10 +25,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a866d6224417898b9ed442cb656b9c62f4071297
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726001"
 ---
 # <a name="lookup-transformation"></a>Преобразование «Уточняющий запрос»
@@ -270,7 +270,7 @@ ms.locfileid: "65726001"
  Изменить инструкцию SQL, которая используется для формирования эталонного набора данных.  
   
 > [!NOTE]  
->  Дополнительная инструкция SQL, которую можно указать на этой странице, заменяет имя таблицы, указанное на странице **Соединение** **Редактора преобразования «Уточняющий запрос»**. Дополнительные сведения см. в разделе [Редактор преобразования "Уточняющий запрос" (страница "Соединение")](../../../integration-services/data-flow/transformations/lookup-transformation-editor-connection-page.md).  
+>  Дополнительная инструкция SQL, которую можно указать на этой странице, заменяет имя таблицы, указанное на странице **Соединение** **Редактора преобразования «Уточняющий запрос»** . Дополнительные сведения см. в разделе [Редактор преобразования "Уточняющий запрос" (страница "Соединение")](../../../integration-services/data-flow/transformations/lookup-transformation-editor-connection-page.md).  
   
  **Задать параметры**  
  Сопоставить входные столбцы с параметрами, используя диалоговое окно **Установка параметров запроса** .  

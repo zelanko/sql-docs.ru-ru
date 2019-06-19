@@ -21,10 +21,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 4b8860af3af85b004da53a7fd218032e65d732f3
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65105303"
 ---
 # <a name="work-with-data-in-the-results-pane-visual-database-tools"></a>Работа с данными на панели результатов (визуальные инструменты для баз данных)
@@ -119,7 +119,7 @@ ms.locfileid: "65105303"
   
 -   Типы данных binary часто неудобны для людей, работающих с панелью результатов; их загрузка может занять огромное количество времени. Они представлены как *<Binary data>* или *Null*.  
   
--   Сохранение точности и масштаба не всегда возможно. Например, панель результатов поддерживает точность 27. Если данные являются типом данных с большей точностью, они могут быть усечены или представлены как *<Unable to read data>*.  
+-   Сохранение точности и масштаба не всегда возможно. Например, панель результатов поддерживает точность 27. Если данные являются типом данных с большей точностью, они могут быть усечены или представлены как *<Unable to read data>* .  
   
 ## <a name="see-also"></a>См. также:  
 [Выполнение основных операций с запросами (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  

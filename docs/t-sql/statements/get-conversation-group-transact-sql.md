@@ -26,10 +26,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 15be53ce562e717af448092699689687b4cb30bf
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65503443"
 ---
 # <a name="get-conversation-group-transact-sql"></a>GET CONVERSATION GROUP (Transact-SQL)
@@ -78,7 +78,7 @@ ms.locfileid: "65503443"
 ## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
->  Если инструкция GET CONVERSATION GROUP не является первой инструкцией в пакете или хранимой процедуре, предыдущая инструкция должна заканчиваться точкой с запятой (**;**) — разделителем инструкций языка [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+>  Если инструкция GET CONVERSATION GROUP не является первой инструкцией в пакете или хранимой процедуре, предыдущая инструкция должна заканчиваться точкой с запятой ( **;** ) — разделителем инструкций языка [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  Если очередь, указанная в инструкции GET CONVERSATION GROUP, недоступна, инструкция выдает ошибку языка [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   

@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 6e58a1f5e36ea4c8f9412c06ad08729716d02eef
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65101971"
 ---
 # <a name="using-msdeploy-with-dbsqlpackage-provider"></a>Использование MSDeploy с поставщиком dbSqlPackage
@@ -47,15 +47,15 @@ MSDeploy -verb: MSDeploy-verb -source:dbSqlPackage="Input"[,dbSqlPackage-source-
   
 |Команда|Описание|  
 |--------|---------------|  
-|дамп|Предоставляет сведения, включая имя, номер версии и описание базы данных-источника, содержащиеся в DACPAC-файле. Укажите базу данных-источник, используя следующий формат командной строки:<br /><br />**msdeploy -verb:dump -source:dbSqlPackage="**_.dacpac-file-path_**"**|  
-|sync|Задает действия dbSqlPackage, используя следующий формат командной строки:<br /><br />**msdeploy -verb:sync -source:dbSqlPackage**="input" _[,DbSqlPackage-source-parameters] -_**dest:dbSqlPackage**="input" *[,DbSqlPackage-destination-parameters]*<br /><br />Допустимые параметры источника и назначения для команды синхронизации см. в следующих разделах.|  
+|дамп|Предоставляет сведения, включая имя, номер версии и описание базы данных-источника, содержащиеся в DACPAC-файле. Укажите базу данных-источник, используя следующий формат командной строки:<br /><br />**msdeploy -verb:dump -source:dbSqlPackage="** _.dacpac-file-path_ **"**|  
+|sync|Задает действия dbSqlPackage, используя следующий формат командной строки:<br /><br />**msdeploy -verb:sync -source:dbSqlPackage**="input" _[,DbSqlPackage-source-parameters] -_ **dest:dbSqlPackage**="input" *[,DbSqlPackage-destination-parameters]*<br /><br />Допустимые параметры источника и назначения для команды синхронизации см. в следующих разделах.|  
   
 ## <a name="dbsqlpackage-source"></a>База данных-источник dbSqlPackage  
 Поставщик **dbSqlPackage** принимает в качестве входных данных вход допустимую строку подключения SQL Server/SQL Azure или путь к DACPAC-файлу на диске.  Синтаксис задания входного источника для поставщика:  
   
 |Ввод|По умолчанию|Описание|  
 |---------|-----------|---------------|  
-|**-source:dbSqlPackage=**{*input*}|**Н/Д**|*input* содержит допустимую строку подключения к SQL Server или SQL Azure либо путь к DACPAC-файлу на диске.<br /><br />**ПРИМЕЧАНИЕ.** Если в качестве источника входных данных используется строка подключения, в ней поддерживаются только следующие свойства: *InitialCatalog, DataSource, UserID, Password, IntegratedSecurity, Encrypt, TrustServerCertificate* и *ConnectionTimeout*.|  
+|**-source:dbSqlPackage=** {*input*}|**Н/Д**|*input* содержит допустимую строку подключения к SQL Server или SQL Azure либо путь к DACPAC-файлу на диске.<br /><br />**ПРИМЕЧАНИЕ.** Если в качестве источника входных данных используется строка подключения, в ней поддерживаются только следующие свойства: *InitialCatalog, DataSource, UserID, Password, IntegratedSecurity, Encrypt, TrustServerCertificate* и *ConnectionTimeout*.|  
   
 Если источником входных данных является строка подключения к активной базе данных SQL Server или SQL Azure, **dbSqlPackage** извлекает моментальный снимок базы данных в виде DACPAC-файла из активной базы данных SQL Server или SQL Azure.  
   

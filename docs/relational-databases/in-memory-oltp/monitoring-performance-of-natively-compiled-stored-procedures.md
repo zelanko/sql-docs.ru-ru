@@ -13,10 +13,10 @@ ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f3b341f6e40fdc5acf618d3f81c5932b9be50149
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65106234"
 ---
 # <a name="monitoring-performance-of-natively-compiled-stored-procedures"></a>Отслеживание производительности скомпилированных в собственном коде хранимых процедур
@@ -43,12 +43,12 @@ SELECT [definition]
 
 ## <a name="procedure-level-execution-statistics"></a>Статистика выполнения на уровне процедур
 
-**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**: включите или отключите сбор статистики для скомпилированных в собственном коде хранимых процедур на уровне процедуры с помощью [sys.sp_xtp_control_proc_exec_stats (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md).  Следующая инструкция включает сбор статистики выполнения на уровне процедуры для всех скомпилированных в собственном коде модулей T-SQL текущего экземпляра:
+**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** : включите или отключите сбор статистики для скомпилированных в собственном коде хранимых процедур на уровне процедуры с помощью [sys.sp_xtp_control_proc_exec_stats (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md).  Следующая инструкция включает сбор статистики выполнения на уровне процедуры для всех скомпилированных в собственном коде модулей T-SQL текущего экземпляра:
 ```sql
 EXEC sys.sp_xtp_control_proc_exec_stats 1
 ```
 
-**[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]**: включите или отключите сбор статистики для скомпилированных в собственном коде хранимых процедур на уровне процедуры с помощью [database-scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md), используя параметр `XTP_PROCEDURE_EXECUTION_STATISTICS`. Следующая инструкция включает сбор статистики выполнения на уровне процедуры для всех скомпилированных в собственном коде модулей T-SQL текущей базы данных:
+**[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]** : включите или отключите сбор статистики для скомпилированных в собственном коде хранимых процедур на уровне процедуры с помощью [database-scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md), используя параметр `XTP_PROCEDURE_EXECUTION_STATISTICS`. Следующая инструкция включает сбор статистики выполнения на уровне процедуры для всех скомпилированных в собственном коде модулей T-SQL текущей базы данных:
 ```sql
 ALTER DATABASE
     SCOPED CONFIGURATION
@@ -57,12 +57,12 @@ ALTER DATABASE
 
 ## <a name="query-level-execution-statistics"></a>Статистика выполнения на уровне запросов
 
-**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**: включите или отключите сбор статистики для скомпилированных в собственном коде хранимых процедур на уровне запроса с помощью [sys.sp_xtp_control_query_exec_stats (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md).  Следующая инструкция включает сбор статистики выполнения на уровне запроса для всех скомпилированных в собственном коде модулей T-SQL текущего экземпляра:
+**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** : включите или отключите сбор статистики для скомпилированных в собственном коде хранимых процедур на уровне запроса с помощью [sys.sp_xtp_control_query_exec_stats (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md).  Следующая инструкция включает сбор статистики выполнения на уровне запроса для всех скомпилированных в собственном коде модулей T-SQL текущего экземпляра:
 ```sql
 EXEC sys.sp_xtp_control_query_exec_stats 1
 ```
 
-**[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]**: включите или отключите сбор статистики для скомпилированных в собственном коде хранимых процедур на уровне инструкции с помощью [database-scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md), используя параметр `XTP_QUERY_EXECUTION_STATISTICS`. Следующая инструкция включает сбор статистики выполнения на уровне запроса для всех скомпилированных в собственном коде модулей T-SQL текущей базы данных:
+**[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]** : включите или отключите сбор статистики для скомпилированных в собственном коде хранимых процедур на уровне инструкции с помощью [database-scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md), используя параметр `XTP_QUERY_EXECUTION_STATISTICS`. Следующая инструкция включает сбор статистики выполнения на уровне запроса для всех скомпилированных в собственном коде модулей T-SQL текущей базы данных:
 ```sql
 ALTER DATABASE
     SCOPED CONFIGURATION

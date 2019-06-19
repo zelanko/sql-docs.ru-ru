@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 55dc0c5b3cbfb51e15cd0813c87c66e840e592a2
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65715924"
 ---
 # <a name="catalogsetenvironmentreferencetype-ssisdb-database"></a>catalog.set_environment_reference_type (база данных SSISDB)
@@ -40,10 +40,10 @@ catalog.set_environment_reference_location [ @reference_id = reference_id
  Уникальный идентификатор обновляемой ссылки на среду. Параметр *reference_id* имеет тип **bigint**.  
   
  [ @reference_type = ] *reference_type*  
- Указывает, может среда находиться в той же папке, что и проект (относительная ссылка), или в другой папке (абсолютная ссылка). Значение `R` указывает, что ссылка относительная. Значение `A` указывает, что ссылка абсолютная. Параметр *reference_type* имеет тип **char(1)**.  
+ Указывает, может среда находиться в той же папке, что и проект (относительная ссылка), или в другой папке (абсолютная ссылка). Значение `R` указывает, что ссылка относительная. Значение `A` указывает, что ссылка абсолютная. Параметр *reference_type* имеет тип **char(1)** .  
   
  [ @environment_folder_name = ] *environment_folder_name*  
- Папка, в которой находится среда. Это значение требуется для абсолютных ссылок. Параметр *environment_folder_name* имеет тип **nvarchar(128)**.  
+ Папка, в которой находится среда. Это значение требуется для абсолютных ссылок. Параметр *environment_folder_name* имеет тип **nvarchar(128)** .  
   
 ## <a name="return-code-value"></a>Значения кодов возврата  
  0 (успешное завершение)  

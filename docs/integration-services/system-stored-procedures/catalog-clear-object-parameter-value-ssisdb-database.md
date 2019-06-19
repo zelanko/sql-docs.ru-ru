@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 036fa3398103108cd4b49d1690cd5943cc53ff02
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65717055"
 ---
 # <a name="catalogclearobjectparametervalue-ssisdb-database"></a>catalog.clear_object_parameter_value (база данных SSISDB)
@@ -39,19 +39,19 @@ catalog.clear_object_parameter [ @folder_name = ] folder_name
   
 ## <a name="arguments"></a>Аргументы  
  [ \@folder_name = ] *folder_name*  
- Имя папки, которая содержит проект. Параметр *folder_name* имеет тип **nvarchar(128)**.  
+ Имя папки, которая содержит проект. Параметр *folder_name* имеет тип **nvarchar(128)** .  
   
  [ \@project_name = ] *project_name*  
- Имя проекта. Параметр *project_name* имеет тип **nvarchar(128)**.  
+ Имя проекта. Параметр *project_name* имеет тип **nvarchar(128)** .  
   
  [ \@object_type = ] *object_type*  
  Тип объекта. Для проекта допустимо, в частности, значение `20`, а для пакета — значение `30`. Параметр *object_type* имеет тип **smallInt**.  
   
  [ \@ object _name = ] *object _name*  
- Имя пакета. Параметр *object _name* имеет тип **nvarchar(260)**.  
+ Имя пакета. Параметр *object _name* имеет тип **nvarchar(260)** .  
   
  [ \@parameter_ name = ] *parameter_name*  
- Имя параметра. Параметр *parameter_ name* имеет тип **nvarchar(128)**.  
+ Имя параметра. Параметр *parameter_ name* имеет тип **nvarchar(128)** .  
   
 ## <a name="return-code-value"></a>Значения кодов возврата  
  0 (успешное завершение)  

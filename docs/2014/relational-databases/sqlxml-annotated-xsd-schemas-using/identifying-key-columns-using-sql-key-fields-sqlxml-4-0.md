@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bc3c063da7bb9133f8687a908c4bd7e0e13bae8f
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66013821"
 ---
 # <a name="identifying-key-columns-using-sqlkey-fields-sqlxml-40"></a>Идентификация ключевых столбцов с использованием sql:key-fields (SQLXML 4.0)
@@ -48,7 +48,7 @@ ms.locfileid: "66013821"
   
  **\<SQL: Relationship >** тег используется для указания «родитель потомок». Он идентифицирует столбец CustomerID в таблице Sales.SalesOrderHeader как родительский ключ, который ссылается на дочерний ключ CustomerID таблицы Sales.Customer. Сведения в  **\<SQL: Relationship >** не достаточно для уникальной идентификации строк в родительской таблице (Sales.SalesOrderHeader). Поэтому без заметки `sql:key-fields` формируемая иерархия является неточной.  
   
- С помощью `sql:key-fields` указано на  **\<порядок >**, заметка однозначно определяет строки в родительской таблице (Sales.SalesOrderHeader) и его дочерние элементы выводятся под родительским.  
+ С помощью `sql:key-fields` указано на  **\<порядок >** , заметка однозначно определяет строки в родительской таблице (Sales.SalesOrderHeader) и его дочерние элементы выводятся под родительским.  
   
  Схема:  
   
@@ -125,7 +125,7 @@ ms.locfileid: "66013821"
 ```  
   
 ### <a name="b-specifying-sqlkey-fields-to-produce-proper-nesting-in-the-result"></a>Б. Указание sql:key-fields для получения правильной вложенности в результате  
- В следующей схеме отсутствует иерархия определены с помощью  **\<SQL: Relationship >**. В схеме все еще требуется указать заметку `sql:key-fields`, чтобы уникальным образом идентифицировать сотрудников в таблице HumanResources.Employee.  
+ В следующей схеме отсутствует иерархия определены с помощью  **\<SQL: Relationship >** . В схеме все еще требуется указать заметку `sql:key-fields`, чтобы уникальным образом идентифицировать сотрудников в таблице HumanResources.Employee.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

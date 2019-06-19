@@ -20,10 +20,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e4b972abd2674d88274545d1ce4394be88f43c65
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65983062"
 ---
 # <a name="spfulltextcolumn-transact-sql"></a>sp_fulltext_column (Transact-SQL)
@@ -48,14 +48,14 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @tabname = ] 'qualified_table_name'` — Это одно - или двухкомпонентное имя таблицы. Таблица должна существовать в текущей базе данных. Таблица должна содержать полнотекстовый индекс. *таблицы не собирались* — **nvarchar(517)**, не имеет значения по умолчанию.  
+`[ @tabname = ] 'qualified_table_name'` — Это одно - или двухкомпонентное имя таблицы. Таблица должна существовать в текущей базе данных. Таблица должна содержать полнотекстовый индекс. *таблицы не собирались* — **nvarchar(517)** , не имеет значения по умолчанию.  
   
 `[ @colname = ] 'column_name'` Имя столбца в *таблицы не собирались*. Столбец должен иметь символьный тип, **varbinary(max)** или **изображение** столбца и не может быть вычисляемым столбцом. *column_name* — **sysname**, не имеет значения по умолчанию.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно создавать полнотекстовые индексы текстовых данных, хранящихся в столбцах, которые имеют **varbinary(max)** или **изображение** тип данных. Изображения и рисунки не индексируются.  
   
-`[ @action = ] 'action'` — Это действие, которое должно быть выполнено. *Действие* — **varchar(20)**, не значение по умолчанию и может принимать одно из следующих значений.  
+`[ @action = ] 'action'` — Это действие, которое должно быть выполнено. *Действие* — **varchar(20)** , не значение по умолчанию и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  

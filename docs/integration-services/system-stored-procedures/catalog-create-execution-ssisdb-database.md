@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 51be58cd1c486a139486839e39a9ac820d7818b6
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65716821"
 ---
 # <a name="catalogcreateexecution-ssisdb-database"></a>catalog.create_execution (база данных SSISDB)
@@ -44,13 +44,13 @@ catalog.create_execution [@folder_name = folder_name
   
 ## <a name="arguments"></a>Аргументы  
  [@folder_name =] *folder_name*  
- Имя папки, содержащей пакет, который необходимо выполнить. Параметр *folder_name* имеет тип **nvarchar(128)**.  
+ Имя папки, содержащей пакет, который необходимо выполнить. Параметр *folder_name* имеет тип **nvarchar(128)** .  
   
  [@project_name =] *project_name*  
- Имя проекта, содержащего пакет, который необходимо выполнить. Параметр *project_name* имеет тип **nvarchar(128)**.  
+ Имя проекта, содержащего пакет, который необходимо выполнить. Параметр *project_name* имеет тип **nvarchar(128)** .  
   
  [@package_name =] *package_name*  
- Имя пакета, который необходимо выполнить. Параметр *package_name* имеет тип **nvarchar(260)**.  
+ Имя пакета, который необходимо выполнить. Параметр *package_name* имеет тип **nvarchar(260)** .  
   
  [@reference_id =] *reference_id*  
  Уникальный идентификатор ссылки на среду. Этот параметр является необязательным. Параметр *reference_id* имеет тип **bigint**.  

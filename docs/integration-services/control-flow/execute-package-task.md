@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 47e228c3494c03e86ffa7208f7caf5c1fe150a95
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727742"
 ---
 # <a name="execute-package-task"></a>Задача «Выполнение пакета»
@@ -192,7 +192,7 @@ ms.locfileid: "65727742"
   
 ##### <a name="location--sql-server"></a>Местонахождение = SQL Server  
  **Соединение**  
- Выберите диспетчер подключений OLE DB в списке или щелкните \<**Создать соединение...**>, чтобы создать его.  
+ Выберите диспетчер подключений OLE DB в списке или щелкните \<**Создать соединение...** >, чтобы создать его.  
   
  **См. также:** [Диспетчер подключений OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)  
   
@@ -201,7 +201,7 @@ ms.locfileid: "65727742"
   
 ##### <a name="location--file-system"></a>Местоположение = файловая система  
  **Соединение**  
- Выберите диспетчер подключений файлов в списке или щелкните \<**Создать соединение...**>, чтобы создать его.  
+ Выберите диспетчер подключений файлов в списке или щелкните \<**Создать соединение...** >, чтобы создать его.  
   
  **См. также:** [Диспетчер соединения файлов](../../integration-services/connection-manager/file-connection-manager.md)  
   

@@ -17,10 +17,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 2dfa72301de2d9ea1b5c526ee3a7af9fdb6fceba
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65096746"
 ---
 # <a name="define-transact-sql-job-step-options"></a>Определение параметров для шагов заданий Transact-SQL
@@ -56,7 +56,7 @@ ms.locfileid: "65096746"
   
 2.  Щелкните страницу **Шаги** , шаг задания, а затем — **Изменить**.  
   
-3.  Проверьте, что в диалоговом окне **Свойства шага задания** задан тип задания **Скрипт Transact-SQL (TSQL)**, и выберите страницу **Дополнительно** .  
+3.  Проверьте, что в диалоговом окне **Свойства шага задания** задан тип задания **Скрипт Transact-SQL (TSQL)** , и выберите страницу **Дополнительно** .  
   
 4.  Выберите из списка **Действие при успехе** действие, которое будет инициироваться при успешном выполнении задания.  
   

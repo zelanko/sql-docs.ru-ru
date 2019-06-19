@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fa4eca66eaab6abf6b6bf4332dce1c48bb5835cd
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727314"
 ---
 # <a name="wmi-data-reader-task"></a>Задача «Модуль чтения данных WMI»
@@ -124,7 +124,7 @@ Select * FROM Win32_QuickFixEngineering
   
 ### <a name="static-options"></a>Статические параметры  
  **WMIConnectionName**  
- Выберите диспетчер подключений WMI в списке или щелкните \<**Создать WMI-соединение…**>, чтобы создать диспетчер подключений.  
+ Выберите диспетчер подключений WMI в списке или щелкните \<**Создать WMI-соединение…** >, чтобы создать диспетчер подключений.  
   
  **См. также:** подробные сведения о [диспетчере WMI-соединений](../../integration-services/connection-manager/wmi-connection-manager.md) и о [редакторе диспетчера WMI-соединений](../../integration-services/connection-manager/wmi-connection-manager-editor.md).  
   
@@ -159,13 +159,13 @@ Select * FROM Win32_QuickFixEngineering
   
 #### <a name="wqlquerysourcetype--file-connection"></a>WQLQuerySourceType = Соединение с файлом  
  **WQLQuerySource**  
- Выберите диспетчер подключений файлов в списке или щелкните \<**Создать соединение...**>, чтобы создать его.  
+ Выберите диспетчер подключений файлов в списке или щелкните \<**Создать соединение...** >, чтобы создать его.  
   
  **См. также:** подробные сведения о [диспетчере файловых подключений](../../integration-services/connection-manager/file-connection-manager.md) и о [редакторе диспетчера файловых подключений](../../integration-services/connection-manager/file-connection-manager-editor.md).  
   
 #### <a name="wqlquerysourcetype--variable"></a>WQLQuerySourceType = Переменная  
  **WQLQuerySource**  
- Выберите переменную в списке или щелкните \<**Создать переменную...**>, чтобы создать ее.  
+ Выберите переменную в списке или щелкните \<**Создать переменную...** >, чтобы создать ее.  
   
  **См. также:** подробные сведения о [переменных в службах Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) и о [добавлении переменной](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
@@ -173,13 +173,13 @@ Select * FROM Win32_QuickFixEngineering
   
 #### <a name="destinationtype--file-connection"></a>DestinationType = Соединение с файлом  
  **Назначение**  
- Выберите диспетчер подключений файлов в списке или щелкните \<**Создать соединение...**>, чтобы создать его.  
+ Выберите диспетчер подключений файлов в списке или щелкните \<**Создать соединение...** >, чтобы создать его.  
   
  **См. также:** подробные сведения о [диспетчере файловых подключений](../../integration-services/connection-manager/file-connection-manager.md) и о [редакторе диспетчера файловых подключений](../../integration-services/connection-manager/file-connection-manager-editor.md).  
   
 #### <a name="destinationtype--variable"></a>DestinationType = Переменная  
  **Назначение**  
- Выберите переменную в списке или щелкните \<**Создать переменную...**>, чтобы создать ее.  
+ Выберите переменную в списке или щелкните \<**Создать переменную...** >, чтобы создать ее.  
   
  **См. также:** подробные сведения о [переменных в службах Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) и о [добавлении переменной](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   

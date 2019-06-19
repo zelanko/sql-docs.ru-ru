@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cb7639f027a66e424d554a074a82a7ea2d08a827
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726180"
 ---
 # <a name="data-conversion-transformation"></a>преобразование «Конвертация данных»
@@ -60,7 +60,7 @@ ms.locfileid: "65726180"
   Используйте диалоговое окно **Редактор преобразования «Конвертация данных»** , чтобы выбрать столбцы, подлежащие преобразованию, выбрать тип данных, в который должен быть преобразован столбец, и установить атрибуты преобразования.  
   
 > [!NOTE]  
->  Свойства **FastParse** выходных столбцов при преобразовании «Конвертация данных» недоступны в **Редакторе преобразования «Конвертация данных»**, но могут быть настроены при помощи **Расширенного редактора**. Дополнительные сведения о данном свойстве см. в подразделе «Преобразование "Конвертация данных"» раздела [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md).  
+>  Свойства **FastParse** выходных столбцов при преобразовании «Конвертация данных» недоступны в **Редакторе преобразования «Конвертация данных»** , но могут быть настроены при помощи **Расширенного редактора**. Дополнительные сведения о данном свойстве см. в подразделе «Преобразование "Конвертация данных"» раздела [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md).  
   
 ### <a name="options"></a>Параметры  
  **Доступные входные столбцы**  

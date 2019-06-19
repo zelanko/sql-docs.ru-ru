@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e0e2cb6de46a20f185819f42825576ee529e0198
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108059"
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>PowerShell cmdlets для режима SharePoint службы Reporting Services
@@ -56,7 +56,7 @@ ms.locfileid: "66108059"
   
 ##  <a name="bkmk_cmdlet_sum"></a> Обзор командлетов  
 
- Для выполнения командлетов необходимо открыть консоль управления SharePoint. Можно также использовать редактор графического пользовательского интерфейса, который включен в Microsoft Windows, **интегрированная среда скриптов Windows PowerShell (ISE)**. Дополнительные сведения см. в разделе [Запуск Windows PowerShell на Windows Server](https://docs.microsoft.com/powershell/scripting/getting-started/starting-windows-powershell). В следующих сводках «базы данных приложения службы», подразумеваются все базы данных, создаваемых и используемых [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] приложения службы. Это включает базы данных конфигурации, предупреждений и временные базы данных.  
+ Для выполнения командлетов необходимо открыть консоль управления SharePoint. Можно также использовать редактор графического пользовательского интерфейса, который включен в Microsoft Windows, **интегрированная среда скриптов Windows PowerShell (ISE)** . Дополнительные сведения см. в разделе [Запуск Windows PowerShell на Windows Server](https://docs.microsoft.com/powershell/scripting/getting-started/starting-windows-powershell). В следующих сводках «базы данных приложения службы», подразумеваются все базы данных, создаваемых и используемых [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] приложения службы. Это включает базы данных конфигурации, предупреждений и временные базы данных.  
 
   
  Если при вводе примеров PowerShell отображается сообщение об ошибке следующего вида:  

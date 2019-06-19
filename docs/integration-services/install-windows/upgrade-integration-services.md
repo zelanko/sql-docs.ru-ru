@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
 ms.openlocfilehash: 1c5e56d0ed0d422770311ba8135992c4254370a0
-ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65805400"
 ---
 # <a name="upgrade-integration-services"></a>Обновление служб Integration Services
@@ -55,7 +55,7 @@ ms.locfileid: "65805400"
 ## <a name="upgrading-integration-services"></a>обновление служб Integration Services  
  Обновление можно выполнить одним из следующих способов.  
   
--   Запустите программу установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и выберите параметр **Обновление с SQL Server 2008, SQL Server 2008 R2, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] или [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]**.  
+-   Запустите программу установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и выберите параметр **Обновление с SQL Server 2008, SQL Server 2008 R2, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] или [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** .  
   
 -   Из командной строки запустите программу установки **setup.exe**, указав параметр **/ACTION=upgrade**. Дополнительные сведения см. в подразделе "Скрипты установки для служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]" раздела [Установка SQL Server 2016 из командной строки](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
   

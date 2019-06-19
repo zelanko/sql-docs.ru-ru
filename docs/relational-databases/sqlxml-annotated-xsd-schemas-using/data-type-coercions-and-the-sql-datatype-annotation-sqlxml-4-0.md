@@ -24,10 +24,10 @@ ms.reviewer: ''
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 21dc355570d5a2778e553924a189ce985513a7cc
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65981030"
 ---
 # <a name="data-type-coercions-and-the-sqldatatype-annotation-sqlxml-40"></a>Приведение типов данных и заметка sql:datatype (SQLXML 4.0)
@@ -89,9 +89,9 @@ ms.locfileid: "65981030"
 ## <a name="sqldatatype-annotation"></a>Заметка sql:datatype  
  **SQL: DataType** заметка используется для указания [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ; эту заметку в тип данных должен быть указан, если:  
   
--   Выполняется Массовая загрузка в **dateTime** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] столбец из XSD **dateTime**, **даты**, или **время** типа. В этом случае необходимо определить [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип данных столбца с помощью **SQL: DataType = «dateTime»**. Это правило применяется только для диаграмм обновления.  
+-   Выполняется Массовая загрузка в **dateTime** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] столбец из XSD **dateTime**, **даты**, или **время** типа. В этом случае необходимо определить [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип данных столбца с помощью **SQL: DataType = «dateTime»** . Это правило применяется только для диаграмм обновления.  
   
--   Выполняется Массовая загрузка в столбец [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **uniqueidentifier** тип и значение XSD представляет собой идентификатор GUID, который включает фигурные скобки ({и}). При указании **SQL: DataType = «uniqueidentifier»**, фигурные скобки удаляются из значения, прежде чем оно вставляется в столбец. Если **SQL: DataType** не указан, значение пересылается с фигурными скобками и вставка или обновление завершается неудачей.  
+-   Выполняется Массовая загрузка в столбец [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **uniqueidentifier** тип и значение XSD представляет собой идентификатор GUID, который включает фигурные скобки ({и}). При указании **SQL: DataType = «uniqueidentifier»** , фигурные скобки удаляются из значения, прежде чем оно вставляется в столбец. Если **SQL: DataType** не указан, значение пересылается с фигурными скобками и вставка или обновление завершается неудачей.  
   
 -   Тип данных XML **base64Binary** сопоставляется различным [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типы данных (**двоичных**, **изображение**, или **varbinary**). Чтобы сопоставить тип данных XML **base64Binary** с конкретными [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип данных, используйте **SQL: DataType** заметки. Эта заметка указывает явный тип данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] столбца, которому сопоставляется атрибут. Это полезно, если данные сохраняются в базах данных. Путем указания **SQL: DataType** заметки, можно определить явный [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип данных.  
   

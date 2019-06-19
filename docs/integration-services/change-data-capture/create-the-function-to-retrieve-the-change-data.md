@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7890ea871365188918a2b45105848b748f5aa670
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728980"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>Создание функции для получения информации об изменениях
@@ -33,9 +33,9 @@ ms.locfileid: "65728980"
 ## <a name="design-considerations-for-change-data-capture-functions"></a>Вопросы проектирования функций системы отслеживания измененных данных  
  Чтобы получить измененные данные, исходный компонент в потоке данных пакета вызывает одну из следующих функций запроса системы отслеживания измененных данных.  
   
--   **cdc.fn_cdc_get_net_changes_<capture_instance>**. Этот запрос возвращает для каждой операции обновления одну строку, которая содержит окончательное состояние каждой измененной строки. В большинстве случаев требуются только данные, возвращаемые запросом для конечных изменений. Дополнительные сведения см. в разделе [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; (Transact-SQL)](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md).  
+-   **cdc.fn_cdc_get_net_changes_<capture_instance>** . Этот запрос возвращает для каждой операции обновления одну строку, которая содержит окончательное состояние каждой измененной строки. В большинстве случаев требуются только данные, возвращаемые запросом для конечных изменений. Дополнительные сведения см. в разделе [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; (Transact-SQL)](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md).  
   
--   **cdc.fn_cdc_get_all_changes_<capture_instance>**. Этот запрос возвращает все изменения для каждой строки за весь период отслеживания. Дополнительные сведения см. в разделе [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62; (Transact-SQL)](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md).  
+-   **cdc.fn_cdc_get_all_changes_<capture_instance>** . Этот запрос возвращает все изменения для каждой строки за весь период отслеживания. Дополнительные сведения см. в разделе [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62; (Transact-SQL)](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md).  
   
  Затем исходный компонент получает результаты, возвращенные функцией, и передает их нисходящим преобразованиям и назначениям, которые применяют измененные данные к конечному назначению.  
   

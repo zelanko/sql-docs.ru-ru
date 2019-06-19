@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: b566905aa6814d10c1551b9d96562a28b11da944
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65099649"
 ---
 # <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>Руководство. Запуск модульных тестов SQL Server из сборки Team Foundation
@@ -115,7 +115,7 @@ ms.locfileid: "65099649"
   
 3.  Щелкните правой кнопкой мыши файл с именем **Копия app.config** и выберите пункт "Переименовать".  
   
-4.  Введите _BuildComputer_**.sqlunitttest.config** и нажмите клавишу ВВОД, где *BuildComputer* — имя компьютера, на котором запущен агент сборки.  
+4.  Введите _BuildComputer_ **.sqlunitttest.config** и нажмите клавишу ВВОД, где *BuildComputer* — имя компьютера, на котором запущен агент сборки.  
   
 5.  Дважды щелкните *BuildComputer*.sqlunitttest.config.  
   
@@ -274,7 +274,7 @@ ms.locfileid: "65099649"
   
 1.  В командном обозревателе разверните узел проекта группы, разверните узел «Построения», щелкните правой кнопкой мыши запускаемое определение построения и выберите команду «Поставить новую сборку в очередь».  
   
-    Откроется диалоговое окно **Поставить сборку в очередь {**_TeamProjectName_**}** со списком всех имеющихся типов сборки.  
+    Откроется диалоговое окно **Поставить сборку в очередь {** _TeamProjectName_ **}** со списком всех имеющихся типов сборки.  
   
 2.  При необходимости выберите новое определение сборки в поле **Определение сборки**.  
   
