@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: 82252e4f-b1d0-49e5-aa0b-3624aade2add
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
+manager: jroth
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: aa90cb3f34b3aecd236a832a62144914ac2dd249
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 6e09beb701d42562e2134186be6a0ec7c26f5314
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52415254"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66772228"
 ---
 # <a name="polybase-connectivity-configuration-transact-sql"></a>Конфигурация подключения к PolyBase (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -46,10 +46,10 @@ RECONFIGURE
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@configname=** ] **'**_option\_name_**'**  
- Имя параметра конфигурации. Аргумент*option_name* имеет тип **varchar(35)**, значение по умолчанию — NULL. Если этот параметр отсутствует, возвращается список всех параметров.  
+ [ **@configname=** ] **'** _option\_name_ **'**  
+ Имя параметра конфигурации. Аргумент*option_name* имеет тип **varchar(35)** , значение по умолчанию — NULL. Если этот параметр отсутствует, возвращается список всех параметров.  
   
- [ **@configvalue=** ] **"**_значение_**"**  
+ [ **@configvalue=** ] **"** _значение_ **"**  
  Новое значение параметра конфигурации. Аргумент*value* имеет тип **int**и значение по умолчанию NULL. Максимальное значение зависит от конкретного параметра.  
   
  **'hadoop connectivity'**  
@@ -57,29 +57,29 @@ RECONFIGURE
   
  Ниже приведены параметры подключения к Hadoop и соответствующие поддерживаемые источники данных Hadoop. Одновременно может действовать только один параметр. Параметры 1, 4 и 7 позволяют создать несколько типов внешних источников данных и использовать их во всех сеансах на сервере.  
   
--   Параметр 0. Отключить подключение Hadoop  
+-   Вариант 0. Отключить подключение Hadoop  
   
--   Параметр 1. Hortonworks HDP 1.3 в Windows Server  
+-   Вариант 1. Hortonworks HDP 1.3 в Windows Server  
   
--   Параметр 1. Хранилище BLOB-объектов Azure (WASB[S])  
+-   Вариант 1. Хранилище BLOB-объектов Azure (WASB[S])  
   
--   Параметр 2. Hortonworks HDP 1.3 в Linux  
+-   Вариант 2. Hortonworks HDP 1.3 в Linux  
   
--   Параметр 3. Cloudera CDH 4.3 в Linux  
+-   Способ 3. Cloudera CDH 4.3 в Linux;  
   
--   Параметр 4. Hortonworks HDP 2.0 в Windows Server  
+-   Вариант 4. Hortonworks HDP 2.0 в Windows Server  
   
--   Параметр 4. Хранилище BLOB-объектов Azure (WASB[S])  
+-   Вариант 4. Хранилище BLOB-объектов Azure (WASB[S])  
   
--   Параметр 5. Hortonworks HDP 2.0 в Linux  
+-   Вариант 5. Hortonworks HDP 2.0 в Linux  
   
--   Параметр 6. Cloudera 5.1, 5.2, 5.3, 5.4, 5.5, 5.9, 5.10, 5.11, 5.12 и 5.13 в Linux  
+-   Вариант 6. Cloudera 5.1, 5.2, 5.3, 5.4, 5.5, 5.9, 5.10, 5.11, 5.12 и 5.13 в Linux  
   
--   Параметр 7. Hortonworks 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 3.0 в Linux  
+-   Вариант 7. Hortonworks 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 3.0 в Linux  
   
--   Параметр 7. Hortonworks 2.1, 2.2 и 2.3 в Windows Server  
+-   Вариант 7. Hortonworks 2.1, 2.2 и 2.3 в Windows Server  
   
--   Параметр 7. Хранилище BLOB-объектов Azure (WASB[S])  
+-   Вариант 7. Хранилище BLOB-объектов Azure (WASB[S])  
   
  **RECONFIGURE**  
  Обновляет рабочее значение (run_value) в соответствии со значением конфигурации (config_value). См. определения параметров run_value и config_value в разделе [Наборы результатов](#ResultSets) . Новое значение конфигурации, которое задается параметром sp_configure, не вступит в силу до тех пор, пока инструкция RECONFIGURE не задаст рабочее значение.  

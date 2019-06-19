@@ -21,11 +21,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: f2c07b756c608e5e28de3351d887d7a7b2f051ce
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334411"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62927671"
 ---
 # <a name="readtext-transact-sql"></a>READTEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ _table_ **.** _column_
 Имя таблицы и столбца, откуда должны быть считаны данные. Имена таблиц и столбцов должны соответствовать правилам для [идентификаторов](../../relational-databases/databases/database-identifiers.md). Указание имен таблицы и столбца обязательно; однако указание имени базы данных и имен владельца является необязательным.  
   
 _text\_ptr_  
-Действительный текстовый указатель. Значение _text\_ptr_ должно иметь тип **binary(16)**.  
+Действительный текстовый указатель. Значение _text\_ptr_ должно иметь тип **binary(16)** .  
   
 _offset_  
 Это число байтов, если используется тип данных **text** или **image**. Это также может быть число символов, если используется тип данных **ntext**, которые следует пропустить, прежде чем приступить к чтению данных типа **text**, **image** или **ntext**.  

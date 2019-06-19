@@ -19,11 +19,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 09927ba3835b1a5e633adfec6e865600386336e1
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013835"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62638656"
 ---
 # <a name="revoke-xml-schema-collection-permissions-transact-sql"></a>REVOKE, отмена разрешений на коллекцию XML-схем (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -58,7 +58,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  *permission*  
  Указывает разрешение, которое может быть отменено для коллекции XML-схем. Список разрешений см. в подразделе "Примечания" далее в этом разделе.  
   
- ON XML SCHEMA COLLECTION :: [ _schema_name_**.** ] *имя_коллекции_схемы_XML*  
+ ON XML SCHEMA COLLECTION :: [ _schema_name_ **.** ] *имя_коллекции_схемы_XML*  
  Указывает коллекцию XML-схем, для которой отменяется разрешение. Квалификатор области (::) является обязательным. Если не указан аргумент *schema_name*, подразумевается схема по умолчанию. Если указан аргумент *schema_name*, обязательно указание квалификатора области схемы (.).  
   
  GRANT OPTION  

@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: ae0bb91fafb53c0c077a4e0d82558b550d0e6070
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62855719"
 ---
-# <a name="lesson-2-adding-mining-models-to-the-time-series-mining-structure"></a>Урок 2. Добавление моделей интеллектуального анализа данных для структуры интеллектуального анализа данных временных рядов
+# <a name="lesson-2-adding-mining-models-to-the-time-series-mining-structure"></a>Урок 2. Добавление моделей в структуру интеллектуального анализа данных на основе временных рядов
   На этом занятии вы добавите новую модель интеллектуального анализа данных к структуре интеллектуального анализа данных, которую вы только что создали в [занятии 1: Создание модели интеллектуального анализа данных и структура интеллектуального анализа данных временных рядов](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md).  
   
 ## <a name="alter-mining-structure-statement"></a>Инструкция ALTER MINING STRUCTURE  
