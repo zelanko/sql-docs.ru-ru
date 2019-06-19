@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 225d0cd15aa170edc146eda0615a708ab0fe3ce2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63195155"
 ---
 # <a name="global-settings-logging--mysqltosql"></a>Глобальные параметры (ведение журнала) (MySQLToSQL)
@@ -51,7 +51,7 @@ ms.locfileid: "63195155"
 |**Отладка**|Записи всех сообщений, включая отладку сообщения в журнал.|  
   
 **Путь к файлу журнала**  
-Путь к файлу и имя файлов журнала SSMA. Чтобы указать другое имя, щелкните по текущему пути и нажмите кнопку обзора (**...** ) кнопку.  
+Путь к файлу и имя файлов журнала SSMA. Чтобы указать другое имя, щелкните по текущему пути и нажмите кнопку обзора ( **...** ) кнопку.  
   
 **Размер файла журнала**  
 Максимальный размер файла журнала в КБ. Минимальный размер — 10 КБ. Размер по умолчанию — 10 240 КБ.  

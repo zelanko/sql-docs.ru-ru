@@ -20,11 +20,11 @@ ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 26f5f87c1df8ade01b7e2f24890990f19ee6ab52
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58306212"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62716231"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>Поиск свойств документа с использованием списков свойств поиска
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -199,7 +199,7 @@ GO
   
     1.  Чтобы удалить свойство документа, щелкните заголовок строки слева от свойства и нажмите кнопку DEL.  
   
-    2.  Чтобы добавить свойство документа, щелкните пустую строку в конце списка, справа от **\***, и введите значения для нового свойства.  
+    2.  Чтобы добавить свойство документа, щелкните пустую строку в конце списка, справа от **\*** , и введите значения для нового свойства.  
   
          Описание этих значений см. в разделе [Редактор списка свойств поиска](/sql/database-engine/search-property-list-editor). Сведения о способе получения этих значений для свойств, определенных корпорацией Майкрософт, см. в разделе [Поиск идентификаторов GUID наборов свойств и целочисленных идентификаторов свойств для свойств поиска](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md). Дополнительные сведения о свойствах, определенных независимыми поставщиками программного обеспечения (ISV), см. в документации по этим поставщикам.  
   

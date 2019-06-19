@@ -31,10 +31,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: af52376ae4749d42c8d746a64518632e6a047591
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63036238"
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>Реорганизация и перестроение индексов
@@ -79,7 +79,7 @@ ms.locfileid: "63036238"
   
  Выяснив степень фрагментации, используйте нижеследующую таблицу для определения наиболее подходящего метода устранения фрагментации.  
   
-|Значение**avg_fragmentation_in_percent** |Корректирующая инструкция|  
+|Значение**avg_fragmentation_in_percent**|Корректирующая инструкция|  
 |-----------------------------------------------|--------------------------|  
 |> 5% и \< = 30%|ALTER INDEX REORGANIZE|  
 |> 30%|ALTER INDEX REBUILD WITH (ONLINE = ON)*|  

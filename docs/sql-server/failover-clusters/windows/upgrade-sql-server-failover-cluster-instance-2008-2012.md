@@ -12,11 +12,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a73eda4fbb3898846894a4cf35de4253cffedbc3
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58872254"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63243365"
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>Обновление экземпляров SQL Server, работающих в кластерах Windows Server 2008, Windows Server 2008 R2 или Windows Server 2012
 
@@ -46,7 +46,7 @@ ms.locfileid: "58872254"
 
 |                                   | Требуются все серверные объекты и имена VNN | Требуются все серверные объекты и имена VNN | Серверные объекты и имена VNN не требуются\* | Серверные объекты и имена VNN не требуются\* |
 |-----------------------------------|--------------------------------------|--------------------------------------------------------------------|------------|------------|
-| **_Группы доступности? (да или нет)_**                  | **_Да_**                              | **_Нет_**                                                            | **_Да_**    | **_Нет_**    |
+| **_Группы доступности? (да или нет)_ **                  | **_Да_**                              | **_Нет_**                                                            | **_Да_**    | **_Нет_**    |
 | **Кластер использует только экземпляр отказоустойчивого кластера SQL**         | [Сценарий 3](#scenario-3-windows-cluster-has-both-sql-fcis-and-sql-server-availability-groups)                           | [Сценарий 2](#scenario-2-windows-clusters-with-sql-server-failover-cluster-instances-fcis)                                                        | [Сценарий 1](#scenario-1-windows-cluster-with-sql-server-availability-groups-and-no-failover-cluster-instances-fcis) | [Сценарий 2](#scenario-2-windows-clusters-with-sql-server-failover-cluster-instances-fcis) |
 | **Кластер использует автономные экземпляры** | [Сценарий 5](#scenario-5-windows-cluster-with-standalone-sql-server-instances-and-availability-groups)                           | [Сценарий 4](#scenario-4-windows-cluster-with-standalone-sql-server-instances-and-no-availability-groups)                                                         | [Сценарий 1](#scenario-1-windows-cluster-with-sql-server-availability-groups-and-no-failover-cluster-instances-fcis) | [Сценарий 4](#scenario-4-windows-cluster-with-standalone-sql-server-instances-and-no-availability-groups) |
 
@@ -283,7 +283,7 @@ ms.locfileid: "58872254"
 
     Привязки удаленных служб после миграции должны работать требуемым образом, так как переносятся все учетные записи пользователей, использующие эти привязки.
 
-### <a name="includessnoversionincludesssnoversion-mdmd-agent"></a>Агент[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 
+### <a name="includessnoversionincludesssnoversion-mdmd-agent"></a>Агент[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]
 
 -   **Задания**
 

@@ -32,12 +32,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 85ccb9573cb1a8a283e6deec7a52b0e9c5857da7
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: c1ff17941e837474d2d27919dcbd821d241d8394
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802608"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66749183"
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>Реорганизация и перестроение индексов
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -94,7 +94,13 @@ ms.locfileid: "56802608"
 ### <a name="Security"></a> безопасность  
   
 #### <a name="Permissions"></a> Permissions  
-Необходимо разрешение ALTER для таблицы или представления. Пользователь должен быть членом предопределенной роли сервера **sysadmin** или предопределенных ролей базы данных **db_ddladmin** и **db_owner**.  
+Необходимо разрешение ALTER для таблицы или представления. Пользователь должен входить хотя бы в одну из следующих ролей:
+
+* роль базы данных **db_ddladmin** <sup>1</sup>; 
+* роль базы данных **db_owner**;
+* роль сервера **sysadmin**;  
+
+<sup>1</sup>Роль базы данных **db_ddladmin** — [наименее привилегированная](/windows-server/identity/ad-ds/plan/security-best-practices/implementing-least-privilege-administrative-models).
   
 ## <a name="SSMSProcedureFrag"></a> Проверка фрагментации индексов с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
   

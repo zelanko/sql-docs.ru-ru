@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 904919bfac6dc9fc0c5bf638605d363eba5a68f2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63026383"
 ---
 # <a name="mspeerrequest-transact-sql"></a>MSpeer_request (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "63026383"
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|идентификатор|**int**|Идентификатор запроса.|  
+|id|**int**|Идентификатор запроса.|  
 |публикация|**sysname**|Имя публикации, для которой был инициирован запрос состояния.|  
 |sent_date|**datetime**|Дата и время инициализации запроса состояния.|  
 |description|**nvarchar(4000)**|Определяемые пользователем данные, которые могут использоваться для идентификации отдельных запросов состояния.|  

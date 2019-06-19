@@ -19,11 +19,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 98ddc4f21807b9ac5185ad5e510cd83e35bbc93b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521663"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62652608"
 ---
 # <a name="create-check-constraints"></a>Создание ограничений CHECK
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "52521663"
   
 1.  В **обозревателе объектов**разверните таблицу, в которую необходимо добавить проверочное ограничение, щелкните правой кнопкой пункт **Ограничения** и выберите команду **Создать ограничение**.  
   
-2.  В диалоговом окне **Проверочные ограничения** установите курсор в поле **Выражение** и затем нажмите кнопку с многоточием **(…)**.  
+2.  В диалоговом окне **Проверочные ограничения** установите курсор в поле **Выражение** и затем нажмите кнопку с многоточием **(…)** .  
   
 3.  В диалоговом окне **Выражение проверочного ограничения** введите выражения SQL, соответствующие проверочному ограничению. Например, чтобы ограничить записи в столбце `SellEndDate` таблицы `Product` значениями, которые больше или равны дате в столбце `SellStartDate` или равны NULL, введите следующее:  
   

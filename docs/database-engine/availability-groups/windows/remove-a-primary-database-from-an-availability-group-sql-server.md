@@ -17,43 +17,24 @@ helpviewer_keywords:
 ms.assetid: 6d4ca31e-ddf0-44bf-be5e-a5da060bf096
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e5fb0b24d51c383466cf91e6e691717170c290f4
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 0171d8e6c8b4148508f584743e36aa1a5a1c5a91
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202003"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66801033"
 ---
 # <a name="remove-a-primary-database-from-an-always-on-availability-group"></a>Удаление базы данных-источника из группы доступности Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   В этом разделе описывается удаление базы данных-источника и соответствующих баз данных-получателей из группы доступности AlwaysOn с использованием среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или PowerShell в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
--   **Перед началом работы**  
-  
-     [Требования и ограничения](#Prerequisites)  
-  
-     [безопасность](#Security)  
-  
--   **Удаление база данных доступности с помощью**  
-  
-     [Среда SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
--   **Дальнейшие действия.**  [После удаления базы данных доступности из группы доступности](#FollowUp)  
-  
-##  <a name="BeforeYouBegin"></a> Перед началом  
-  
-###  <a name="Prerequisites"></a> Требования и ограничения  
+##  <a name="Prerequisites"></a> Требования и ограничения  
   
 -   Эта задача поддерживается только на первичных репликах. Необходимо подключиться к экземпляру сервера, на котором размещена первичная реплика.  
   
-###  <a name="Security"></a> безопасность  
-  
-####  <a name="Permissions"></a> Permissions  
+ 
+##  <a name="Permissions"></a> Permissions  
  Необходимо разрешение ALTER AVAILABILITY GROUP для группы доступности, разрешение CONTROL AVAILABILITY GROUP, разрешение ALTER ANY AVAILABILITY GROUP или разрешение CONTROL SERVER.  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  

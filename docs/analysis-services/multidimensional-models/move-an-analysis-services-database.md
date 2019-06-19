@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3247bf2ca459f013131b21a25278bcc6e5d10b9a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62930902"
 ---
 # <a name="move-an-analysis-services-database"></a>Перемещение базы данных служб Analysis Services
@@ -49,7 +49,7 @@ ms.locfileid: "62930902"
   
 6.  Щелкните правой кнопкой мыши **баз данных** папку и выберите **присоединить...**  
   
-7.  В текстовое поле **папка** впечатайте новое местоположение папки базы данных. Кроме того, можно использовать кнопку обзора (**...** ) найдите папку базы данных.  
+7.  В текстовое поле **папка** впечатайте новое местоположение папки базы данных. Кроме того, можно использовать кнопку обзора ( **...** ) найдите папку базы данных.  
   
 8.  Выберите режим **ReadWrite** для базы данных.  
   

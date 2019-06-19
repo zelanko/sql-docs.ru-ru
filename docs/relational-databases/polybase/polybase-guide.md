@@ -1,6 +1,6 @@
 ---
 title: Что такое PolyBase? | Документы Майкрософт
-ms.date: 04/23/2019
+ms.date: 06/10/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.custom: ''
@@ -20,12 +20,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions||>=aps-pdw-2016||=azure-sqldw-latest'
-ms.openlocfilehash: 39a5341aaf32e37fe7c7cec3bde436cd0c5ba9d2
-ms.sourcegitcommit: f98a8a9a6def82ddd560150068824d4bbf8f067a
+ms.openlocfilehash: 4cea1e73dc2bc19add94a24c7a4f504c4d9e1224
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66376182"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66836341"
 ---
 # <a name="what-is-polybase"></a>Что такое PolyBase?
 
@@ -121,5 +121,6 @@ PolyBase поддерживает перечисленные ниже сцена
 - [Oracle;](polybase-configure-oracle.md)
 - [Teradata](polybase-configure-teradata.md)
 - [MongoDB](polybase-configure-mongodb.md)
+- [Универсальные типы ODBC](../../relational-databases/polybase/polybase-installation.md)
 
 ::: moniker-end

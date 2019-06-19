@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: ecd3fb79-b4a6-432f-9ef5-530e0d42d5a6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9748ef0f82fc62fd194efa9093f00032fd1d8cdc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 8e704a75a25849009e51a3e7f2c03fee535b7bbf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789712"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66780738"
 ---
 # <a name="configure-the-min-memory-per-query-server-configuration-option"></a>Настройка параметра конфигурации сервера min memory per query
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "47789712"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Продолжение:**  [после настройки параметра min memory per query](#FollowUp)  
+-   **Дальнейшие действия.**  [После настройки параметра min memory per query](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
@@ -101,7 +101,7 @@ RECONFIGURE;
 GO    
 ```  
   
-##  <a name="FollowUp"></a> Продолжение: после настройки параметра min memory per query  
+##  <a name="FollowUp"></a> Дальнейшие действия. После настройки параметра min memory per query  
  Параметр вступает в силу немедленно, без перезапуска сервера.  
   
 ## <a name="see-also"></a>См. также:  

@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 13e2b010a193e8c610c54a5b619d8a67c9b4d2d3
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65097459"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan"></a>Пошаговое руководство. Расширение процесса развертывания проекта базы данных для анализа плана развертывания
@@ -540,7 +540,7 @@ ms.locfileid: "65097459"
   
 3.  Щелкните **Подписать сборку**.  
   
-4.  В окне **Выберите файл ключа строгого имени** щелкните **<New>**.  
+4.  В окне **Выберите файл ключа строгого имени** щелкните **<New>** .  
   
 5.  В диалоговом окне **Создать ключ со строгим именем** в поле **Имя файла ключа**введите **MyRefKey**.  
   

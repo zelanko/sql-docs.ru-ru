@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8fd750b8c83816caf775fd508d892ff2511ce67f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109901"
 ---
 # <a name="choose-item-location-page-report-manager"></a>Страница «Выбор расположения элементов» (диспетчер отчетов)
@@ -52,7 +52,7 @@ ms.locfileid: "66109901"
 4.  На вкладке страницы свойств **Общие** нажмите кнопку **Изменить местоположение** , чтобы открыть страницу «Выбор расположения элементов».  
   
 ## <a name="options"></a>Параметры  
- **Местоположение**  
+ **Location**  
  Укажите имя папки, в которую будет помещен создаваемый элемент. Можно ввести полное имя или выбрать нужную папку в древовидном представлении.  
   
  **Представление в виде дерева**  

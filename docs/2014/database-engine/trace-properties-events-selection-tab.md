@@ -15,17 +15,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 64896beeb2e815f22662cd7d16aaf263135f8122
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66089580"
 ---
 # <a name="trace-properties-events-selection-tab"></a>Свойства трассировки (вкладка «Выбор событий»)
   Вкладка **Выбор событий** диалогового окна **Свойства трассировки** используется для просмотра и указания трассируемых событий и столбцов данных.  
   
 ## <a name="options"></a>Параметры  
- Столбец**События**   
+ Столбец**События**  
  Укажите трассируемые события, устанавливая или снимая флажок в соответствующем столбце. **События** упорядочены по категориям событий. Классы событий, указанные в шаблоне, выбираются автоматически. Дополнительные сведения см. в разделе [SQL Server Event Class Reference](../relational-databases/event-classes/sql-server-event-class-reference.md).  
   
  Столбцы данных  

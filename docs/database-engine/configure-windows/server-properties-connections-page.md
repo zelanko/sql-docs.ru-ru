@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 33be8ac5-12dd-4b8a-99e0-68261c219dd2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: fd6e2883714c538bff1e2ff2a93ace7b71fd5d02
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 394bacedb14f84a5cc11722200c0ee5a1e3380fc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604194"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66771846"
 ---
 # <a name="server-properties---connections-page"></a>Свойства сервера (страница "Соединения")
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "51604194"
  Просмотр текущих значений для параметров на этой панели. Эти значения доступны только для чтения.  
   
 ## <a name="see-also"></a>См. также:  
- [Параметры (выполнение запросов: SQL Server — страница "Дополнительно")](https://msdn.microsoft.com/library/3ec788c7-22c3-4216-9ad0-81a168d17074)   
+ [Параметры (Выполнение запросов: SQL Server: стандарт Страница "Дополнительно")](https://msdn.microsoft.com/library/3ec788c7-22c3-4216-9ad0-81a168d17074)   
  [Параметры конфигурации сервера (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
   
   
