@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c3be59fd99f072b7cb3a9156b92d5ee794208f1f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63158021"
 ---
 # <a name="in-memory-oltp-in-memory-optimization"></a>In-Memory OLTP (оптимизация в памяти)
@@ -76,7 +76,7 @@ ms.locfileid: "63158021"
 |[Скомпилированные в собственном коде хранимые процедуры](natively-compiled-stored-procedures.md)|Содержит базовое описание хранимых процедур, скомпилированных в собственном коде.|  
 |[Управление памятью для компонента "Выполняющаяся в памяти OLTP"](../../database-engine/managing-memory-for-in-memory-oltp.md)|Основные сведения об управлении памятью системы.|  
 |[Создание и управление хранилищем для оптимизированных для памяти объектов](creating-and-managing-storage-for-memory-optimized-objects.md)|Описывает файлы данных и разностные файлы, в которых хранятся сведения о транзакциях в оптимизированных для памяти таблицах.|  
-|[Резервное копирование и восстановление оптимизированных для памяти таблиц](restore-and-recovery-of-memory-optimized-tables.md)|Описывает резервное копирование, восстановление и восстановление оптимизированных для памяти таблиц. |  
+|[Резервное копирование и восстановление оптимизированных для памяти таблиц](restore-and-recovery-of-memory-optimized-tables.md)|Описывает резервное копирование, восстановление и восстановление оптимизированных для памяти таблиц.|  
 |[Поддержка Transact-SQL для выполняющейся в памяти OLTP](transact-sql-support-for-in-memory-oltp.md)|Описывает поддержку службой [!INCLUDE[tsql](../../../includes/tsql-md.md)] службы [!INCLUDE[hek_2](../../../includes/hek-2-md.md)].|  
 |[Поддержка высокого уровня доступности в базах данных OLTP в памяти](high-availability-support-for-in-memory-oltp-databases.md)|Описывает группы доступности и отказоустойчивые кластеры в службе [!INCLUDE[hek_2](../../../includes/hek-2-md.md)].|  
 |[Поддержка SQL Server для In-Memory OLTP](sql-server-support-for-in-memory-oltp.md)|Описание нового и обновленного синтаксиса и функций, поддерживающих оптимизированные для памяти таблицы.|  

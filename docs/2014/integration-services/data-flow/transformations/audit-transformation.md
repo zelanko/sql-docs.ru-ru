@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ea923f72e0c9e505bc9e1f056d5ff4dbe36ad9a7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62901038"
 ---
 # <a name="audit-transformation"></a>преобразование «Аудит»
@@ -28,7 +28,7 @@ ms.locfileid: "62901038"
 ## <a name="system-variables"></a>Системные переменные  
  В приведенной ниже таблице описаны системные переменные, применяемые в преобразовании «Аудит».  
   
-|Системная переменная|Индекс |Описание|  
+|Системная переменная|Индекс|Описание|  
 |---------------------|-----------|-----------------|  
 |`ExecutionInstanceGUID`|0|Идентификатор GUID, определяющий экземпляр выполнения пакета.|  
 |`PackageID`|1|Уникальный идентификатор пакета.|  

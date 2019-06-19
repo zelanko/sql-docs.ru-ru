@@ -12,10 +12,10 @@ ms.author: sawinark
 ms.reviewer: maghan
 manager: craigg
 ms.openlocfilehash: 8b91a1572e5c7cd477d8e112b68b8f9a46fb1153
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66012324"
 ---
 # <a name="run-sql-server-integration-services-ssis-packages-deployed-in-azure"></a>Выполнение пакетов служб SQL Server Integration Services (SSIS), развернутых в Azure
@@ -51,11 +51,11 @@ ms.locfileid: "66012324"
 
 Пакет можно выполнить в любой среде, из которой можно подключиться к базе данных SQL Azure и запустить код Transact-SQL. Для этого вызовите следующие хранимые процедуры.
 
-1. **[catalog].[create_execution]** . Дополнительные сведения см. в статье [catalog.deploy_packages](../system-stored-procedures/catalog-create-execution-ssisdb-database.md).
+1. **[catalog].[create_execution]**. Дополнительные сведения см. в статье [catalog.deploy_packages](../system-stored-procedures/catalog-create-execution-ssisdb-database.md).
 
-2. **[catalog].[set_execution_parameter_value]** . Дополнительные сведения см. в статье [catalog.set_execution_parameter_value](../system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md).
+2. **[catalog].[set_execution_parameter_value]**. Дополнительные сведения см. в статье [catalog.set_execution_parameter_value](../system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md).
 
-3. **[catalog].[start_execution]** . Дополнительные сведения см. в статье [catalog.start_execution](../system-stored-procedures/catalog-start-execution-ssisdb-database.md).
+3. **[catalog].[start_execution]**. Дополнительные сведения см. в статье [catalog.start_execution](../system-stored-procedures/catalog-start-execution-ssisdb-database.md).
 
 Дополнительные сведения см. в следующих примерах:
 

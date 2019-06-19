@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 285eae7ea20d5919fa73bd0d514c755fe73d9de0
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65484713"
 ---
 # <a name="task-17-reviewing-dqs-cleansing-project-created-by-the-ssis-package"></a>Задача 17. Проверка проекта очистки DQS, созданного пакетом SSIS
@@ -38,7 +38,7 @@ ms.locfileid: "65484713"
   
 8.  На главной странице **клиента DQS**, нажмите кнопку **открыть проект качества данных** в **проекты качества данных** области.  
   
-9. В списке проектов выберите проект, созданный компонентом «Очистка данных DQS» пакета служб SSIS. Имя проекта должно быть в формате:  **CleanseAndCurate.Cleanse Supplier Data.GUID (красным цветом)**. Может потребоваться отсортировать список по **Дата создания** столбца и найти последнюю запись.  
+9. В списке проектов выберите проект, созданный компонентом «Очистка данных DQS» пакета служб SSIS. Имя проекта должно быть в формате:  **CleanseAndCurate.Cleanse Supplier Data.GUID (красным цветом)** . Может потребоваться отсортировать список по **Дата создания** столбца и найти последнюю запись.  
   
 10. Нажмите кнопку **Далее**.  
   

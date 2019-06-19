@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ed2f40b2ea4f711c36a3c17031047fef555ab12a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62645509"
 ---
 # <a name="backupfile-transact-sql"></a>backupfile (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "62645509"
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**backup_set_id**|**int**|Уникальный идентификационный номер файла, содержащего набор данных с резервной копией. Ссылки на **backupset(backup_set_id)**.|  
+|**backup_set_id**|**int**|Уникальный идентификационный номер файла, содержащего набор данных с резервной копией. Ссылки на **backupset(backup_set_id)** .|  
 |**first_family_number**|**tinyint**|Семейный номер первого носителя, содержащего данный файл резервной копии. Может иметь значение NULL.|  
 |**first_media_number**|**smallint**|Номер носителя для первого носителя, содержащего данный файл резервной копии. Может иметь значение NULL.|  
 |**filegroup_name**|**nvarchar(128)**|Имя файловой группы, содержащей резервную копию файла базы данных. Может иметь значение NULL.|  
@@ -46,8 +46,8 @@ ms.locfileid: "62645509"
 |**logical_name**|**nvarchar(128)**|Логическое имя файла, резервная копия которого создана. Может иметь значение NULL.|  
 |**physical_drive**|**nvarchar(260)**|Имя физического диска или секции. Может иметь значение NULL.|  
 |**physical_name**|**nvarchar(260)**|Остаток имени физического файла (операционная система). Может иметь значение NULL.|  
-|**state**|**tinyint**|Одно из следующих состояний файла.<br /><br /> 0 = ONLINE<br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY PENDING <br /><br /> 4 = SUSPECT<br /><br /> 6 = OFFLINE<br /><br /> 7 = DEFUNCT<br /><br /> 8 = УДАЛЕНЫ<br /><br /> Примечание. Значение 5 пропущено в том случае, так что эти значения соответствуют значениям для состояний базы данных.|  
-|**state_desc**|**nvarchar(64)**|Одно из следующих описаний состояния файла.<br /><br /> ONLINE RESTORING <br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT OFFLINE DEFUNCT|  
+|**state**|**tinyint**|Одно из следующих состояний файла.<br /><br /> 0 = ONLINE<br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY PENDING<br /><br /> 4 = SUSPECT<br /><br /> 6 = OFFLINE<br /><br /> 7 = DEFUNCT<br /><br /> 8 = УДАЛЕНЫ<br /><br /> Примечание. Значение 5 пропущено в том случае, так что эти значения соответствуют значениям для состояний базы данных.|  
+|**state_desc**|**nvarchar(64)**|Одно из следующих описаний состояния файла.<br /><br /> ONLINE RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT OFFLINE DEFUNCT|  
 |**create_lsn**|**numeric(25,0)**|Регистрационный номер в журнале, под которым был создан файл.|  
 |**drop_lsn**|**numeric(25,0)**|Регистрационный номер в журнале, под которым файл был удален. Может иметь значение NULL.<br /><br /> Если файл не удален, установлено значение NULL.|  
 |**file_guid**|**uniqueidentifier**|Уникальный идентификатор файла.|  

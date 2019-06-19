@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 558173381d88eac95fc2b6993e11a1104844abf7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63022203"
 ---
 # <a name="ibm-db2-subscribers"></a>IBM DB2 Subscribers
@@ -31,7 +31,7 @@ ms.locfileid: "63022203"
   
 1.  Установите последнюю версию поставщика [!INCLUDE[msCoName](../../../includes/msconame-md.md)] OLE DB для DB2 на распространитель:  
   
-    -   Если используется выпуск [!INCLUDE[ssEnterpriseEd11](../../../includes/ssenterpriseed11-md.md)], на веб-странице [Загрузки SQL Server 2008](https://go.microsoft.com/fwlink/?LinkId=149256) в разделе **Загружаемые файлы, относящиеся к CTP-версии** щелкните ссылку на последнюю версию пакета дополнительных компонентов Microsoft SQL Server 2008. На веб-странице **Пакет дополнительных компонентов Microsoft SQL Server 2008** найдите раздел **Поставщик данных OLE DB для DB2 (Майкрософт)**.  
+    -   Если используется выпуск [!INCLUDE[ssEnterpriseEd11](../../../includes/ssenterpriseed11-md.md)], на веб-странице [Загрузки SQL Server 2008](https://go.microsoft.com/fwlink/?LinkId=149256) в разделе **Загружаемые файлы, относящиеся к CTP-версии** щелкните ссылку на последнюю версию пакета дополнительных компонентов Microsoft SQL Server 2008. На веб-странице **Пакет дополнительных компонентов Microsoft SQL Server 2008** найдите раздел **Поставщик данных OLE DB для DB2 (Майкрософт)** .  
   
     -   При использовании выпуска [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Standard установите последнюю версию сервера служб [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Host [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] (HIS), содержащего этот поставщик.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "63022203"
 |`datetimeoffset(0-7)`|VARCHAR(34)|  
 |`decimal(1-31, 0-31)`|DECIMAL(1-31, 0-31)|  
 |`decimal(32-38, 0-38)`|VARCHAR(41)|  
-|`float(53)`|DOUBLE|  
+|`float(53)`|Double|  
 |`float`|FLOAT|  
 |`geography`|IMAGE|  
 |`geometry`|IMAGE|  

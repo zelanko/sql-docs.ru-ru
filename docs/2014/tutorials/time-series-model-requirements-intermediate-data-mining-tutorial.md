@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 5b3438e832f28329cb0fec764d3a4846bae18ede
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63043120"
 ---
 # <a name="understanding-the-requirements-for-a-time-series-model-intermediate-data-mining-tutorial"></a>Основные сведения о требованиях для модели временных рядов (учебник по интеллектуальному анализу данных — средний уровень)
@@ -31,7 +31,7 @@ ms.locfileid: "63043120"
   
 ### <a name="to-identify-the-time-key-for-the-forecasting-model"></a>Идентификация ключа времени для модели прогнозирования  
   
-1.  В области **SalesByRegion.dsv [Design]**, щелкните правой кнопкой мыши таблицу vTimeSeries и выберите **Просмотр данных**.  
+1.  В области **SalesByRegion.dsv [Design]** , щелкните правой кнопкой мыши таблицу vTimeSeries и выберите **Просмотр данных**.  
   
      Откроется новая вкладка, под названием **Просмотр таблицы vTimeSeries**.  
   

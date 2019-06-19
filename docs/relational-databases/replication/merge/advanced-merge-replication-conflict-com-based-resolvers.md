@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6a9994984f833fcfc098a2c27e782bc8c058bc25
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807912"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63028919"
 ---
 # <a name="advanced-merge-replication-conflict---com-based-resolvers"></a>Конфликт расширенной репликации слиянием: сопоставители на базе технологии COM
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jroth
 ms.openlocfilehash: 6d493629c8b0564467155c3eae6ac05e25c5105c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66767970"
 ---
 # <a name="connect-to-sql-server-when-system-administrators-are-locked-out"></a>Подключение к SQL Server в случае, если доступ системных администраторов заблокирован
@@ -42,7 +42,7 @@ ms.locfileid: "66767970"
 > [!NOTE]  
 >  При запуске экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в однопользовательском режиме сначала нужно остановить службу «Агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ». В противном случае агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может установить соединение первым, что не позволит подключиться второму пользователю.  
   
- При использовании параметра **-m** с **sqlcmd** или [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]вы можете ограничить подключения к определенному клиентскому приложению. Например, **-m"sqlcmd"** разрешает только одно подключение, которое должно идентифицироваться как клиентская программа **sqlcmd** . Этот параметр следует использовать, когда [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запускается в однопользовательском режиме, а единственное доступное соединение занято неизвестным клиентским приложением. Чтобы подключиться с помощью редактора запросов в [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], используйте **-m"Microsoft SQL Server Management Studio - Query"** .  
+ При использовании параметра **-m** с **sqlcmd** или [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]вы можете ограничить подключения к определенному клиентскому приложению. Например, **-m"sqlcmd"** разрешает только одно подключение, которое должно идентифицироваться как клиентская программа **sqlcmd** . Этот параметр следует использовать, когда [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запускается в однопользовательском режиме, а единственное доступное соединение занято неизвестным клиентским приложением. Чтобы подключиться с помощью редактора запросов в [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], используйте **-m"Microsoft SQL Server Management Studio - Query"**.  
   
 > [!IMPORTANT]  
 >  Не используйте этот параметр как средство безопасности. Клиентское приложение предоставляет имя клиентского приложения и может указать ложное имя в составе строки подключения.  

@@ -16,10 +16,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 45b13c29af6a9c5e82533a4b66213d1cb1b9dd15
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62787762"
 ---
 # <a name="breaking-changes-to-full-text-search"></a>Критические изменения в полнотекстовом поиске
@@ -38,7 +38,7 @@ ms.locfileid: "62787762"
   
 |Компонент|Сценарий|SQL Server 2005|SQL Server 2008 и последующие версии|  
 |-------------|--------------|---------------------|----------------------------------------|  
-|[CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) с определяемые пользователем типы (UDT)|Полнотекстовый ключ — это определяемый пользователем тип [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], например `MyType = char(1)`.|Возвращаемый ключ имеет тип, назначенный определяемому пользователем типу.<br /><br /> В приведенном примере это будет **char(1)**.|Возвращаемый ключ имеет определяемый пользователем тип. В приведенном примере это будет **MyType**.|  
+|[CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) с определяемые пользователем типы (UDT)|Полнотекстовый ключ — это определяемый пользователем тип [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], например `MyType = char(1)`.|Возвращаемый ключ имеет тип, назначенный определяемому пользователем типу.<br /><br /> В приведенном примере это будет **char(1)** .|Возвращаемый ключ имеет определяемый пользователем тип. В приведенном примере это будет **MyType**.|  
 |*top_n_by_rank* параметра (из CONTAINSTABLE и [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) [!INCLUDE[tsql](../includes/tsql-md.md)] инструкции)|*top_n_by_rank* запросы, используя 0 в качестве параметра.|Завершается с сообщением об ошибке, указывающим на то, что значение должно быть больше нуля.|Завершается успешно, возвращая 0 строк.|  
 |Функции CONTAINSTABLE и **ItemCount**|Удаление строк из базовой таблицы перед передачей изменений компоненту MSSearch.|Функция CONTAINSTABLE возвращает фантомную запись. **ItemCount** не изменяется.|Функция CONTAINSTABLE не возвращает фантомных записей.|  
 |**ItemCount**|Таблица содержит документы или типы столбцов, имеющие значение NULL.|Кроме индексированных документов, документы, имеют значение null или имеющие пустой тип учитываются в **ItemCount** значение.|Только число индексированных документов, учитываются **ItemCount** значение.|  
