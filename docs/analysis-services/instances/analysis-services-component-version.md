@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b1da8384bb51360178e1735d13f6c6b706e8b7ff
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62659062"
 ---
 # <a name="verify-analysis-services-cumulative-update-build-version"></a>Проверка версии сборки накопительного пакета обновления служб Analysis Services
@@ -27,7 +27,7 @@ ms.locfileid: "62659062"
 Для проверки версии файла компонента, 
 
 1. Перейдите к [версии сборок SQL Server 2017](https://support.microsoft.com/help/4047329). 
-2. В **сборок SQL Server 2017 накопительное обновление (CU)**, нажмите кнопку **базы знаний** для сборки, вы хотите проверить.
+2. В **сборок SQL Server 2017 накопительное обновление (CU)** , нажмите кнопку **базы знаний** для сборки, вы хотите проверить.
 3. В **накопительного обновления (#) для SQL Server 2017** статьи, в **накопительный пакет обновления сведений о пакете** раскройте **сведения о файлах пакета накопительного обновления**.
 4. В **SQL Server 2017 Analysis Services** таблицы, проверьте версию файла для **msmdsrv.exe** файл компонента. Если применяется CU, номер версии файла должны соответствовать файл msmdsrv.exe, установленной на компьютере.
 

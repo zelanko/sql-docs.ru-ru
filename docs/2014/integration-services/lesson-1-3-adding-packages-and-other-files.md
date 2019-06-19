@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7db3e293c95b358d78e445e6b7534f90ea7b9310
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62892211"
 ---
 # <a name="step-3-adding-packages-and-other-files"></a>Шаг 3. Добавление пакетов и других файлов
@@ -51,7 +51,7 @@ ms.locfileid: "62892211"
   
 4.  В диалоговом окне **Добавление копии существующего пакета** в разделе **Расположение пакета**выберите пункт **Файловая система**.  
   
-5.  Нажмите кнопку обзора **(...)**, перейдите к папке C:\Program Files\Microsoft SQL Server\100\Samples\Integration ServicesTutorial\Deploying Packages\Completed Packages, выберите файл **DataTransfer.dtsx** и нажмите кнопку **Открыть**.  
+5.  Нажмите кнопку обзора **(...)** , перейдите к папке C:\Program Files\Microsoft SQL Server\100\Samples\Integration ServicesTutorial\Deploying Packages\Completed Packages, выберите файл **DataTransfer.dtsx** и нажмите кнопку **Открыть**.  
   
 6.  Нажмите кнопку **ОК**.  
   

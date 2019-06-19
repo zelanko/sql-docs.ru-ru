@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 13cb285396d63f2b06d004afab4a0ec8c7504fb0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63200360"
 ---
 # <a name="log-long-running-queries-odbc"></a>Ведение журналов длительных запросов (ODBC)
@@ -27,7 +27,7 @@ ms.locfileid: "63200360"
   
 ### <a name="to-log-long-running-queries-using-odbc-administrator"></a>Ведение журнала длительно выполняющихся запросов с помощью администратора ODBC  
   
-1.  В **панели управления**, дважды щелкните **Администрирование** и дважды щелкните **источники данных (ODBC)**. (Можно также запустить файл odbcad32.exe из командной строки.)  
+1.  В **панели управления**, дважды щелкните **Администрирование** и дважды щелкните **источники данных (ODBC)** . (Можно также запустить файл odbcad32.exe из командной строки.)  
   
 2.  Нажмите кнопку **DSN пользователя**, **системный DSN**, или **файловый DSN** вкладки.  
   

@@ -27,10 +27,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: f530f609c4c5ebc83d74d2e8ea376efe978dea89
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65983086"
 ---
 # <a name="set-statistics-io-transact-sql"></a>SET STATISTICS IO (Transact-SQL)
@@ -61,9 +61,9 @@ SET STATISTICS IO { ON | OFF }
 |**логические операции чтения**|Число страниц, считанных из кэша данных.|  
 |**физические операции чтения**|Число страниц, считанных с диска.|  
 |**операции упреждающего чтения**|Число страниц, помещенных в кэш для запроса.|  
-|**lob логических чтений**|Число страниц, считанных из кэша данных. Включает **text**, **ntext**, **image**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** или страницы индекса columnstore.|  
-|**физические операции чтения lob**|Число страниц, считанных с диска. Включает **text**, **ntext**, **image**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** или страницы индекса columnstore.|  
-|**lob упреждающих чтений**|Число страниц, помещенных в кэш для запроса. Включает **text**, **ntext**, **image**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** или страницы индекса columnstore.|
+|**lob логических чтений**|Число страниц, считанных из кэша данных. Включает **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** или страницы индекса columnstore.|  
+|**физические операции чтения lob**|Число страниц, считанных с диска. Включает **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** или страницы индекса columnstore.|  
+|**lob упреждающих чтений**|Число страниц, помещенных в кэш для запроса. Включает **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** или страницы индекса columnstore.|
 
  Параметр настройки SET STATISTICS IO устанавливается во время запуска или выполнения, но не во время синтаксического анализа.
 

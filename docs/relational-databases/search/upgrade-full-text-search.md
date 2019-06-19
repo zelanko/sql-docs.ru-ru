@@ -18,11 +18,11 @@ ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d83049bccf49fda6b4ca8d0ea6f0578415374eb1
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974303"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62716191"
 ---
 # <a name="upgrade-full-text-search"></a>Обновление полнотекстового поиска
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -122,7 +122,7 @@ ms.locfileid: "57974303"
   
  **Изменение поведения полнотекстового обновления на экземпляре сервера**  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)]. Используйте действие **upgrade\_option** хранимой процедуры [sp\_fulltext\_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md).  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)]: Используйте действие **upgrade\_option** хранимой процедуры [sp\_fulltext\_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md).  
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **:** Используйте параметр **Режим обновления полнотекстового каталога** в диалоговом окне **Свойства сервера**. Дополнительные сведения см. в разделе [Управление и наблюдение за полнотекстовым поиском для экземпляра сервера](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
   

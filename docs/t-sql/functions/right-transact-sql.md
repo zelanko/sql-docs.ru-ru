@@ -22,10 +22,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 045f9af1cd88c83f4591e4c02f476712eebf234e
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65944713"
 ---
 # <a name="right-transact-sql"></a>RIGHT (Transact-SQL)
@@ -46,7 +46,7 @@ RIGHT ( character_expression , integer_expression )
  [Выражение](../../t-sql/language-elements/expressions-transact-sql.md) символьных или двоичных данных. *character_expression* может быть константой, переменной или столбцом. *character_expression* может иметь любой тип данных, который может быть неявно преобразован в **varchar** или **nvarchar**, кроме **text** или **ntext**. В противном случае используйте функцию [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) для явного преобразования типа аргумента *character_expression*.  
   
  *integer_expression*  
- Положительное целое число, указывающее количество символов выражения *character_expression*, которое будет возвращено. Если аргумент *integer_expression* отрицателен, возвращается ошибка. Если аргумент *integer_expression* имеет тип **bigint** и содержит большое значение, аргумент *character_expression* должен иметь длинный тип данных, например **varchar(max)** .  
+ Положительное целое число, указывающее количество символов выражения *character_expression*, которое будет возвращено. Если аргумент *integer_expression* отрицателен, возвращается ошибка. Если аргумент *integer_expression* имеет тип **bigint** и содержит большое значение, аргумент *character_expression* должен иметь длинный тип данных, например **varchar(max)**.  
   
 ## <a name="return-types"></a>Типы возвращаемых данных  
  Возвращает значение типа **varchar**, если *character_expression* имеет символьный тип данных, отличный от Юникода.  

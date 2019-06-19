@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 36b28f90047bb7d116fffc1564eaecf43858822c
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65719808"
 ---
 # <a name="load-balancing-packages-on-remote-servers-by-using-sql-server-agent"></a>Пакеты балансировки нагрузки на удаленном сервере с использованием агента SQL Server
@@ -119,7 +119,7 @@ ms.locfileid: "65719808"
  Ошибка при работе по такому сценарию может произойти только в случае неуспешного вызова удаленной задачи «Выполнение задания агента SQL Server». Единственной причиной невозможности вызвать задачу является отсутствие связи с сервером, когда агент не отвечает на запросы. Если же агент отвечает на вызов родительского пакета, тот успешно завершает свою работу.  
   
 > [!NOTE]  
->  Можно использовать задачу "Выполнение SQL", содержащую инструкцию Transact-SQL **sp_start_job N'имя_пакета'**. Дополнительные сведения см. в разделе [sp_start_job (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md).  
+>  Можно использовать задачу "Выполнение SQL", содержащую инструкцию Transact-SQL **sp_start_job N'имя_пакета'** . Дополнительные сведения см. в разделе [sp_start_job (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md).  
   
 ### <a name="debugging-environment"></a>Среда отладки  
  Во время тестирования родительского пакета запустите в конструкторе среду отладки, выбрав в меню «Отладка» команду «Начать отладку» или нажав клавишу F5. Или можно воспользоваться программой командной строки **dtexec**. Дополнительные сведения см. в статье [dtexec Utility](../../integration-services/packages/dtexec-utility.md).  

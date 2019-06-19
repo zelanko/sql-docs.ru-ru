@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bffa36106278b8913a9ecb042e94318c41ce87b5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63022596"
 ---
 # <a name="configure-an-oracle-publisher"></a>Настройка издателя Oracle
@@ -41,7 +41,7 @@ ms.locfileid: "63022596"
 > [!NOTE]  
 >  При удалении открытого синонима **MSSQLSERVERDISTRIBUTOR** и пользователя сконфигурированной репликации Oracle с параметром **CASCADE** из издателя Oracle удаляются все объекты репликации.  
   
- Для помощи в настройке пользовательской схемы репликации предоставляется образец скрипта. Этот скрипт доступен также в следующем каталоге после установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: *\<диск>*:\\\Program Files\Microsoft SQL Server\\*\<имя_экземпляра>* \MSSQL\Install\oracleadmin.sql. Он также содержится в разделе [Script to Grant Oracle Permissions](script-to-grant-oracle-permissions.md).  
+ Для помощи в настройке пользовательской схемы репликации предоставляется образец скрипта. Этот скрипт доступен также в следующем каталоге после установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: *\<диск>* :\\\Program Files\Microsoft SQL Server\\ *\<имя_экземпляра>* \MSSQL\Install\oracleadmin.sql. Он также содержится в разделе [Script to Grant Oracle Permissions](script-to-grant-oracle-permissions.md).  
   
  Подключитесь к базе данных Oracle под учетной записью с правами доступа администратора базы данных (DBA) и выполните скрипт. Данный скрипт запрашивает имя пользователя и пароль для схемы администратора репликации, а также табличное пространство по умолчанию, в котором будут создаваться объекты (табличное пространство уже должно существовать в базе данных Oracle). Сведения об указании других табличных пространств для объектов см. в статье [Управление табличными пространствами Oracle](manage-oracle-tablespaces.md). Выберите любое имя пользователя и надежный пароль, запишите их, так как позднее при настройке базы данных Oracle как издателя запрашиваются это имя и пароль. Рекомендуется использовать схему только для объектов, которые требуются для репликации. Не создавайте таблиц, которые будут публиковаться в этой схеме.  
   

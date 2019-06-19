@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d6a8b8ce43caad05f56ac780a8c08997a217e288
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727781"
 ---
 # <a name="data-profiling-task-editor-general-page"></a>Редактор задачи «Профилирование данных» (страница «Общие»)
@@ -81,7 +81,7 @@ ms.locfileid: "65727781"
  Открывает средство просмотра профиля данных. Изолированное средство просмотра профиля данных отображает выходной профиль данных из задачи «Профилирование данных». Выходной профиль данных вы можете просмотреть после запуска задачи «Профилирование данных» внутри пакета служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] и расчета профилей данных.  
   
 > [!NOTE]  
->  Вы можете также открыть средство просмотра профиля данных путем запуска DataProfileViewer.exe в папке: *\<диск>*:\Program Files (x86) | Program Files\Microsoft SQL Server\110\DTS\Binn.  
+>  Вы можете также открыть средство просмотра профиля данных путем запуска DataProfileViewer.exe в папке: *\<диск>* :\Program Files (x86) | Program Files\Microsoft SQL Server\110\DTS\Binn.  
   
 ## <a name="see-also"></a>См. также:  
  [Форма быстрого профиля одной таблицы (задача "Профилирование данных")](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)   

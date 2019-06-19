@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ae385bd59de5f282ce383c6f819c6b5feb6521e6
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65721798"
 ---
 # <a name="lesson-4-3-add-error-flow-redirection"></a>Занятие 4-3. Добавление перенаправления потока ошибок
@@ -52,9 +52,9 @@ ms.locfileid: "65721798"
   
 8.  На странице **Входы и выходы** разверните **Выход 0**, выберите **Выходные столбцы** и нажмите кнопку **Добавить столбец**.  
   
-9. Для свойства **Name** введите *ErrorDescription* и задайте для свойства **DataType** значение **Unicode string [DT_WSTR]**.  
+9. Для свойства **Name** введите *ErrorDescription* и задайте для свойства **DataType** значение **Unicode string [DT_WSTR]** .  
   
-10. На странице **Скрипт** убедитесь в том, что свойство **LocaleID** имеет значение **Английский (США)**.
+10. На странице **Скрипт** убедитесь в том, что свойство **LocaleID** имеет значение **Английский (США)** .
   
 11. Нажмите кнопку **Изменить скрипт**, чтобы открыть среду [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications (VSTA). В методе **Input0_ProcessInputRow** введите или вставьте следующий код:  
   
@@ -97,7 +97,7 @@ ms.locfileid: "65721798"
   
 12. В меню **Сборка** выберите команду **Построить решение**, чтобы создать скрипт и сохранить изменения, а затем закройте средства VSTA.  
   
-13. Нажмите кнопку **ОК**, чтобы закрыть диалоговое окно **Редактор преобразования "Скрипт"**.  
+13. Нажмите кнопку **ОК**, чтобы закрыть диалоговое окно **Редактор преобразования "Скрипт"** .  
   
 ## <a name="go-to-next-task"></a>Перейти к следующему шагу
 [Шаг 4. Добавление назначения "Неструктурированный файл"](../integration-services/lesson-4-4-adding-a-flat-file-destination.md)  

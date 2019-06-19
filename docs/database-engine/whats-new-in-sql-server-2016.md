@@ -15,10 +15,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jroth
 ms.openlocfilehash: 65d7c56f399a9bd8ba6fb4d68311fe7823fa2eab
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66794528"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>Новые возможности в ядре СУБД SQL Server 2016
@@ -33,7 +33,7 @@ ms.locfileid: "66794528"
 
 #### <a name="try-it-out"></a>Попробуйте продукт
 
-- Чтобы скачать [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], перейдите на сайт **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** ![скачать](../analysis-services/media/download.png "скачать").
+- Чтобы скачать [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], перейдите на сайт **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**![скачать](../analysis-services/media/download.png "скачать").
 
 - Есть учетная запись Azure?  Затем перейдите **[сюда](https://azure.microsoft.com/services/virtual-machines/sql-server/)** , чтобы запустить виртуальную машину с уже установленным [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] .
 
