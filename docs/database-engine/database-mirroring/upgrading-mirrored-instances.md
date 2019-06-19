@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 0e73bd23-497d-42f1-9e81-8d5314bcd597
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: aad8a5ee94f9d4cc2320b8c31a7d32d44dea57f0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: d7335d16f428af13813cea36de6a7de79e1faf95
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52515982"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66795129"
 ---
 # <a name="upgrading-mirrored-instances"></a>Обновление зеркальных экземпляров
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,13 +32,13 @@ ms.locfileid: "52515982"
 ## <a name="prerequisites"></a>предварительные требования  
  Перед установкой ознакомьтесь со следующими важными сведениями.  
   
--   [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md). Убедитесь, что текущая версия операционной системы Windows позволяет обновить текущую версию SQL Server до версии SQL Server 2016. Например, вы не можете напрямую обновить экземпляр SQL Server 2005 до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+-   [Поддерживаемые обновления версий и выпусков](../../database-engine/install-windows/supported-version-and-edition-upgrades.md). Убедитесь, что текущая версия операционной системы Windows позволяет обновить текущую версию SQL Server до версии SQL Server 2016. Например, вы не можете напрямую обновить экземпляр SQL Server 2005 до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
--   [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md). Выберите подходящий метод обновления с учетом сведений о поддерживаемых версиях и обновлениях выпуска, а также компонентах, установленных в среде и требующих обновления (это нужно, чтобы обеспечить правильный порядок обновления этих компонентов).  
+-   [Выбор метода обновления ядра СУБД](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md). Выберите подходящий метод обновления с учетом сведений о поддерживаемых версиях и обновлениях выпуска, а также компонентах, установленных в среде и требующих обновления (это нужно, чтобы обеспечить правильный порядок обновления этих компонентов).  
   
--   [Составление и тестирование плана обновления Database Engine](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md). Просмотрите заметки о выпуске и известные проблемы, связанные с обновлением, изучите контрольный список предварительных требований, а затем разработайте и протестируйте план обновления.  
+-   [Составление и тестирование плана обновления ядра СУБД](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md). Просмотрите заметки о выпуске и известные проблемы, связанные с обновлением, изучите контрольный список предварительных требований, а затем разработайте и протестируйте план обновления.  
   
--   [Требования к оборудованию и программному обеспечению для установки SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md). Ознакомьтесь с требованиями к оборудованию и ПО для установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Если требуется дополнительное программное обеспечение, установите его на каждом узле перед запуском обновления, чтобы минимизировать время простоя.  
+-   [Требования к оборудованию и программному обеспечению для установки SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  Изучите требования к программному обеспечению для установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Если требуется дополнительное программное обеспечение, установите его на каждом узле перед запуском обновления, чтобы минимизировать время простоя.  
   
 ## <a name="recommended-preparation-best-practices"></a>Рекомендуемые подготовительные действия (рекомендации)  
  Перед запуском последовательного обновления рекомендуется выполнить следующие действия.  
@@ -85,20 +85,20 @@ ms.locfileid: "52515982"
   
     -   В [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: измените параметр **Режим работы** на **Высокая безопасность без автоматической отработки отказа (синхронный)** с помощью страницы [Зеркальное отображение](../../relational-databases/databases/database-properties-mirroring-page.md) диалогового окна **Свойства базы данных**. Дополнительные сведения о доступе к этой странице см. в разделе [Запуск мастер настройки безопасности зеркального отображения баз данных (среда SQL Server Management Studio)](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md).  
   
-    -   В [!INCLUDE[tsql](../../includes/tsql-md.md)]: установите безопасность транзакций в значение FULL. Дополнительные сведения см. в разделе [Изменение безопасности транзакций в сеансах зеркального отображения базы данных (Transact-SQL)](../../database-engine/database-mirroring/change-transaction-safety-in-a-database-mirroring-session-transact-sql.md).  
+    -   В [!INCLUDE[tsql](../../includes/tsql-md.md)]: установите безопасность транзакций как FULL. Дополнительные сведения см. в разделе [Изменение безопасности транзакций в сеансах зеркального отображения базы данных (Transact-SQL)](../../database-engine/database-mirroring/change-transaction-safety-in-a-database-mirroring-session-transact-sql.md).  
   
 ### <a name="to-remove-a-witness-from-a-session"></a>Удаление следящего сервера из сеанса  
   
 1.  Если сеанс зеркального отображения включает следящий сервер, рекомендуется удалить его перед выполнением последовательного обновления. В противном случае при обновлении экземпляра зеркального сервера доступность базы данных будет зависеть от следящего сервера, остающегося подключенным к экземпляру основного сервера. После удаления следящего сервера его можно обновить в любой момент во время последовательного обновления, без дополнительного простоя базы данных.  
   
     > [!NOTE]  
-    >  Дополнительные сведения см. в разделе [Кворум: как следящий сервер влияет на доступность базы данных (зеркальное отображение базы данных)](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+    >  Дополнительные сведения см. в статье [Кворум. Как следящий сервер влияет на доступность базы данных &#40;зеркальное отображение базы данных&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
     -   [Удаление следящего сервера из сеанса зеркального отображения базы данных (SQL Server)](../../database-engine/database-mirroring/remove-the-witness-from-a-database-mirroring-session-sql-server.md)  
   
 ### <a name="to-perform-the-rolling-upgrade"></a>Выполнение последовательного обновления  
   
-1.  Чтобы свести к минимуму время простоя, необходимо выполнить следующие рекомендации. Начните последовательное обновление с обновления участника зеркального отображения, который в настоящий момент является зеркальным сервером во всех сеансах зеркального отображения. На этом этапе, возможно, придется обновить несколько экземпляров сервера.  
+1.  Чтобы свести к минимуму время простоя, необходимо выполнить следующие рекомендации. Начните пошаговое обновление с обновления участника зеркального отображения, который в настоящий момент является зеркальным сервером во всех сеансах зеркального отображения. На этом этапе, возможно, придется обновить несколько экземпляров сервера.  
   
     > [!NOTE]  
     >  Следящий сервер можно обновить в любой момент пошагового обновления. Например, если экземпляр сервера является зеркальным сервером в сеансе 1 и следящим сервером в сеансе 2, этот сервер можно обновить сразу.  
@@ -140,9 +140,9 @@ ms.locfileid: "52515982"
   
 1.  При необходимости вернитесь в высокопроизводительный режим, используя один из следующих методов.  
   
-    -   В [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: измените параметр **Режим работы** на **Высокая производительность (асинхронный)** с помощью страницы [Зеркальное отображение](../../relational-databases/databases/database-properties-mirroring-page.md) диалогового окна **Свойства базы данных** .  
+    -   В [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: измените параметр **Режим работы** на **Высокая производительность (асинхронный)** с помощью страницы [Зеркальное отображение](../../relational-databases/databases/database-properties-mirroring-page.md) диалогового окна **Свойства базы данных**.  
   
-    -   В [!INCLUDE[tsql](../../includes/tsql-md.md)]: с помощью команды [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)установите безопасность транзакций в значение OFF.  
+    -   В [!INCLUDE[tsql](../../includes/tsql-md.md)]: с помощью команды [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md) установите безопасность транзакций в значение OFF.  
   
 ### <a name="to-add-a-witness-back-into-a-mirroring-session"></a>Возвращение следящего сервера в сеанс зеркального отображения  
   

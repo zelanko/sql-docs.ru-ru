@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f784da5b506930bd3a28366c4610c79e73b14c77
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66105552"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>Карты (построитель отчетов и службы SSRS)
@@ -77,7 +77,7 @@ ms.locfileid: "66105552"
 #### <a name="sources-of-spatial-data"></a>Источники пространственных данных  
  Поддерживаются следующие источники пространственных данных.  
   
--   **Отчеты галереи карт.** Пространственные данные внедряются в отчеты, находящиеся в коллекции карт. По умолчанию коллекция карт устанавливается в папку *\<диск>*:\Program Files\Microsoft SQL Server\Report Builder\MapGallery.  
+-   **Отчеты галереи карт.** Пространственные данные внедряются в отчеты, находящиеся в коллекции карт. По умолчанию коллекция карт устанавливается в папку *\<диск>* :\Program Files\Microsoft SQL Server\Report Builder\MapGallery.  
   
     > [!NOTE]  
     >  Службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] используют данные из файлов фигур TIGER/Line, поставляемых с разрешения Бюро переписи населения США переписи населения США ([http://www.census.gov/](http://www.census.gov/)). Файлы фигур TIGER/Line содержат выборочную географическую и картографическую информацию из базы данных Census MAF/TIGER. Файлы фигур TIGER/Line бесплатно распространяются Бюро переписи населения США. Дополнительные сведения о файлах фигуры TIGER/Line см. на странице [http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger). Информация о границах в шейп-файлах TIGER/Line может использоваться только для сбора и табулирования статистических данных. Их описание и использование в статистических целях не может повлечь изменения юридических полномочий или прав собственности. Они не являются законными описаниями земель. TIGER и TIGER/Line являются охраняемыми товарными знаками Бюро переписи населения США.  

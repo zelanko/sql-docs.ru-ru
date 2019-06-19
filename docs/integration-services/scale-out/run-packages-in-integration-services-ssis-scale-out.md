@@ -14,10 +14,10 @@ manager: craigg
 f1_keywords:
 - sql13.ssis.ssms.ispackageexecuteinscaleout.f1
 ms.openlocfilehash: 1825b26912b507b8e58b1828437102cf3650d5e6
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66015038"
 ---
 # <a name="run-packages-in-integration-services-ssis-scale-out"></a>Выполнение пакетов в SQL Server Integration Services (SSIS) Scale Out
@@ -78,7 +78,7 @@ ms.locfileid: "66015038"
 
 4. Запустите выполнения.
 
-    Вызовите процедуру `[catalog].[start_execution]`. Задайте параметр **@retry_count**, указывающий, сколько раз будет предприниматься повторная попытка выполнения пакета в случае сбоя.
+    Вызовите процедуру `[catalog].[start_execution]`. Задайте параметр **@retry_count** , указывающий, сколько раз будет предприниматься повторная попытка выполнения пакета в случае сбоя.
     
 ### <a name="example"></a>Пример
 В приведенном ниже примере выполняются два пакета — `package1.dtsx` и `package2.dtsx` — в Scale Out с использованием одной рабочей роли.  

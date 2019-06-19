@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: e90952527e5510d4a49fa7b7a72843c059686b96
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65102041"
 ---
 # <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>Пошаговое руководство. Расширение сборки проекта базы данных для формирования статистики модели
@@ -438,7 +438,7 @@ ms.locfileid: "65102041"
   
 3.  Щелкните **Подписать сборку**.  
   
-4.  В окне **Выберите файл ключа строгого имени** щелкните **<New>**.  
+4.  В окне **Выберите файл ключа строгого имени** щелкните **<New>** .  
   
 5.  В диалоговом окне **Создать ключ со строгим именем** в поле **Имя файла ключа**введите **MyRefKey**.  
   
@@ -525,7 +525,7 @@ ms.locfileid: "65102041"
   
 1.  В Visual Studio щелкните правой кнопкой мыши свой проект и выберите "Построить повторно". Проект будет перестроен, и откроется сформированная статистика модели, которая будет включена в вывод сборки и записана в файл ModelStatistics.xml. Заметьте, что в обозревателе решений может потребоваться перейти на вкладку "Показать все файлы", чтобы увидеть XML-файл.  
   
-2.  Откройте командную строку Visual Studio. В меню **Пуск** щелкните **Все программы**, **Microsoft Visual Studio<Visual Studio Version>**, **Средства Visual Studio**, затем **Командная строка Visual Studio(<Visual Studio Version>)**.  
+2.  Откройте командную строку Visual Studio. В меню **Пуск** щелкните **Все программы**, **Microsoft Visual Studio<Visual Studio Version>** , **Средства Visual Studio**, затем **Командная строка Visual Studio(<Visual Studio Version>)** .  
   
 3.  Используя командную строку, перейдите в каталог, содержащий проект SQL.  
   

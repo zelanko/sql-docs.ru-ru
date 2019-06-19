@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 5950f98a-3950-473d-95fd-cde3557b8fc2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2301a4709585f9243073f085703a3070c813b43e
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+manager: jroth
+ms.openlocfilehash: ae3cc8d39ec9c181d6e99a41acb3a0590ebc77ee
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860635"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66789648"
 ---
 # <a name="configure-extended-events-for-always-on-availability-groups"></a>Настройка расширенных событий для групп доступности Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -25,13 +25,7 @@ ms.locfileid: "58860635"
 ```sql  
 SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'  
 ```  
-  
- [Сеанс Alwayson_health](always-on-extended-events.md#BKMK_alwayson_health)  
-  
- [Расширенные события для отладки](always-on-extended-events.md#BKMK_Debugging)  
-  
- [Справочник по расширенным событиям для групп доступности AlwaysOn](always-on-extended-events.md#BKMK_Reference)  
-  
+   
 ##  <a name="BKMK_alwayson_health"></a> Сеанс Alwayson_health  
  Сеанс расширенных событий alwayson_health создается автоматически при создании группы доступности и фиксирует подмножество связанных с ней событий. Этот сеанс предварительно настроен в качестве удобного средства, которое поможет вам быстрее приступить к устранению неполадок для группы доступности. Мастер создания группы доступности автоматически запускает сеанс на всех участвующих репликах доступности, настроенных в мастере.  
   
@@ -91,7 +85,7 @@ SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'
 |Столбец|Описание|  
 |------------|-----------------|  
 |Имя|availability_replica_state_change|  
-|Категория|alwayson|  
+|Категория|always on|  
 |Channel|Операционный|  
   
 #### <a name="event-fields"></a>Поля событий  
@@ -122,7 +116,7 @@ GO
 |Столбец|Описание|  
 |------------|-----------------|  
 |Имя|availability_group_lease_expired|  
-|Категория|alwayson|  
+|Категория|always on|  
 |Channel|Операционный|  
   
 #### <a name="event-fields"></a>Поля событий  
@@ -150,7 +144,7 @@ GO
 |Имя|Описание|  
 |----------|-----------------|  
 |availability_replica_automatic _failover_validation||  
-|Категория|alwayson|  
+|Категория|always on|  
 |Channel|Аналитический|  
   
 #### <a name="event-fields"></a>Поля событий  
@@ -250,7 +244,7 @@ GO
 |Столбец|Описание|  
 |------------|-----------------|  
 |Имя|data_movement_suspend_resume|  
-|Категория|Alwayson|  
+|Категория|Always on|  
 |Channel|Операционный|  
   
 #### <a name="event-fields"></a>Поля событий  
@@ -293,7 +287,7 @@ GO
 |Столбец|Описание|  
 |------------|-----------------|  
 |Имя|alwayson_ddl_execution|  
-|Категория|alwayson|  
+|Категория|always on|  
 |Channel|Аналитический|  
   
 #### <a name="event-fields"></a>Поля событий  
@@ -326,7 +320,7 @@ GO
 |Столбец|Описание|  
 |------------|-----------------|  
 |Имя|availability_replica_manager_state_change|  
-|Категория|alwayson|  
+|Категория|always on|  
 |Channel|Операционный|  
   
 #### <a name="event-fields"></a>Поля событий  

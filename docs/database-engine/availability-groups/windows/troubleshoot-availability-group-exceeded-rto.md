@@ -1,5 +1,5 @@
 ---
-title: 'Устранение неполадок: превышение RTO в группе доступности (SQL Server) | Документы Майкрософт'
+title: 'Устранение неполадок: превышение RTO (SQL Server) в группе доступности | Документация Майкрософт'
 ms.custom: ag-guide
 ms.date: 06/13/2017
 ms.prod: sql
@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: e83e4ef8-92f0-406f-bd0b-dc48dc210517
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 392b683ac3213f51f4a263f6643adf34d76c133c
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: c40755122775faa3b67fb0f46f5f13b3a789bb32
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606874"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66803478"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rto"></a>Устранение неполадок: превышение RTO в группе доступности
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
