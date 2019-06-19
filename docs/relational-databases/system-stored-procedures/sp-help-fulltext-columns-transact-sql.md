@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 076a3df69245cb269593e1a2298f18c9266ab217
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65980327"
 ---
 # <a name="sphelpfulltextcolumns-transact-sql"></a>sp_help_fulltext_columns (Transact-SQL)
@@ -44,7 +44,7 @@ sp_help_fulltext_columns [ [ @table_name = ] 'table_name' ] ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @table_name = ] 'table\_name'` — Это одно - или двухкомпонентное имя таблицы, для которого запрашиваются сведения полнотекстового индекса. *TABLE_NAME* — **nvarchar(517)**, со значением по умолчанию NULL. Если *table_name* опущен, сведения о столбце полнотекстового индекса извлекаются для каждой таблицы с индексом полнотекстового поиска.  
+`[ @table_name = ] 'table\_name'` — Это одно - или двухкомпонентное имя таблицы, для которого запрашиваются сведения полнотекстового индекса. *TABLE_NAME* — **nvarchar(517)** , со значением по умолчанию NULL. Если *table_name* опущен, сведения о столбце полнотекстового индекса извлекаются для каждой таблицы с индексом полнотекстового поиска.  
   
 `[ @column_name = ] 'column\_name'` — Это имя столбца, для которого запрашиваются метаданные полнотекстового индекса. *column_name* — **sysname**, со значением по умолчанию NULL. Если *column_name* опущен или имеет значение NULL, возвращаются сведения о столбце полнотекстового поиска для каждого полнотекстового индексированного столбца для *table_name*. Если *table_name* также опущен или имеет значение NULL, возвращаются сведения о столбце полнотекстового индекса для каждого полнотекстового индексированного столбца для всех таблиц в базе данных.  
   

@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: be88f92c6dbf2a2fc0f04c3f29c54816174aafa0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63033668"
 ---
 # <a name="create-statistics"></a>Создание статистики
@@ -67,7 +67,7 @@ ms.locfileid: "63033668"
   
 3.  Щелкните значок «плюс», чтобы развернуть таблицу, в которой нужно создать новую статистику.  
   
-4.  Щелкните правой кнопкой мыши папку **Статистика** и выберите пункт **Создать статистику...**.  
+4.  Щелкните правой кнопкой мыши папку **Статистика** и выберите пункт **Создать статистику...** .  
   
      На странице **Общие** в диалоговом окне **Создание статистики по таблице**_имя_таблицы_ отображаются указанные ниже свойства.  
   

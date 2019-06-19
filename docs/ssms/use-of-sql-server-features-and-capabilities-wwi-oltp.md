@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 2c3fe113514ba44a63bce8b07d14efda865626cf
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65088747"
 ---
 # <a name="arguments-for-external-tools"></a>Аргументы для внешних средств
@@ -45,7 +45,7 @@ ms.locfileid: "65088747"
 |**Каталог решения**|$(SolutionDir)|Каталог текущего решения (определяется как диск + путь).|  
 |**Имя файла решения**|$(SolutionFileName)|Имя файла текущего решения (определяется как диск + путь + имя файла).|  
   
-* Текущая строка, текущий столбец или текущий текст определяются по положению курсора в редакторе текста, которое отображается в строке состояния.  
+\* Текущая строка, текущий столбец или текущий текст определяются по положению курсора в редакторе текста, которое отображается в строке состояния.  
   
 ## <a name="see-also"></a>См. также:  
 [Диалоговое окно «Внешние средства»](../ssms/external-tools-dialog-box.md)  

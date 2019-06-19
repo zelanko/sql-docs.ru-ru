@@ -26,10 +26,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: aed9a65000724b1b3ac7750fde45dddebbe3682d
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65946121"
 ---
 # <a name="eventdata-transact-sql"></a>EVENTDATA (Transact-SQL)
@@ -112,7 +112,7 @@ GO
 ```  
   
 > [!NOTE]  
->  Чтобы получить данные о событии используйте метод XQuery **value()** , а не **query()** . Метод **query()** возвращает XML-данные, содержащие символы возврата каретки и переноса строки (CR/LF), экранированные амперсандом, а метод **value()** не отображает эти символы.  
+>  Чтобы получить данные о событии используйте метод XQuery **value()**, а не **query()**. Метод **query()** возвращает XML-данные, содержащие символы возврата каретки и переноса строки (CR/LF), экранированные амперсандом, а метод **value()** не отображает эти символы.  
   
 ### <a name="b-creating-a-log-table-with-event-data-in-a-ddl-trigger"></a>Б. Создание таблицы журнала с данными о событии в триггере DDL  
 В этом примере для хранения сведений обо всех событиях уровня базы данных создается таблица, которая заполняется триггером DDL. Примените запрос XQuery к XML-данным, сформированным функцией `EVENTDATA`, чтобы получить тип события и инструкцию [!INCLUDE[tsql](../../includes/tsql-md.md)].  

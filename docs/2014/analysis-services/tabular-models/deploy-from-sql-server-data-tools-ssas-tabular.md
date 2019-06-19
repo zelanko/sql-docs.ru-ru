@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6429fb7f30c748c7ac0a8ab69bc16c3d63b4d3ae
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66067302"
 ---
 # <a name="deploy-from-sql-server-data-tools-ssas-tabular"></a>Развертывание из SQL Server Data Tools (табличные службы SSAS)
@@ -54,7 +54,7 @@ ms.locfileid: "66067302"
   
 #### <a name="to-deploy-a-tabular-model-solution"></a>Развертывание решения табличной модели  
   
--   В [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]на **построения** меню, щелкните **развернуть \<имя проекта >**.  
+-   В [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]на **построения** меню, щелкните **развернуть \<имя проекта >** .  
   
      Появится диалоговое окно **Развертывание** , в котором будет отображаться состояние развертывания метаданных и обработки каждой таблицы (если для свойства "Вариант обработки" не выбрано значение "Не обрабатывать"), включенной в модель. После завершения процесса развертывания с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] подключитесь к экземпляру служб Analysis Services и проверьте, был ли создан новый объект шаблона базы данных, либо используйте клиентское приложение создания отчетов для подключения к развернутой модели.  
   

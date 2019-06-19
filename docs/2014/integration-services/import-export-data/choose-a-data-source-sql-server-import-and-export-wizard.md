@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b6e399cf6c145f36febd9b32ae7a84c54741bb43
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62893599"
 ---
 # <a name="choose-a-data-source-sql-server-import-and-export-wizard"></a>Выбор источника данных (мастер импорта и экспорта SQL Server)
@@ -67,7 +67,7 @@ ms.locfileid: "62893599"
  Введите имя базы данных-источника.  
   
  **Встроенные функции безопасности**  
- Выберите `True`, чтобы использовать встроенную проверку подлинности Windows (рекомендуется), или `False` для соединения с использованием проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. При выборе `False` необходимо ввести идентификатор пользователя и пароль. Значение по умолчанию — `False`.  
+ Выберите `True`, чтобы использовать встроенную проверку подлинности Windows (рекомендуется), или `False` для соединения с использованием проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. При выборе `False` необходимо ввести идентификатор пользователя и пароль. Значение по умолчанию — `False`.  
   
  **Идентификатор пользователя**  
  Укажите имя пользователя для подключения к базе данных, если используется проверка подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

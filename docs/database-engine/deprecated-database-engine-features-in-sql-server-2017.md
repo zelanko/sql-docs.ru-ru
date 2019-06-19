@@ -17,10 +17,10 @@ ms.author: mikeray
 manager: jroth
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
 ms.openlocfilehash: e23d1a81585c542976242ac8936f88b032af73f3
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66795059"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>Нерекомендуемые функции ядра СУБД в SQL Server 2017
@@ -79,8 +79,8 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Типы данных|sp_addtype<br /><br /> хранимая процедура sp_droptype|CREATE TYPE<br /><br /> DROP TYPE|sp_addtype<br /><br /> хранимая процедура sp_droptype|62<br /><br /> 63|  
 |Типы данных|Синтаксис**timestamp** для типа данных **rowversion** .|Синтаксис типа данных**rowversion** .|timestamp|158|  
 |Типы данных|Возможность вставлять значения NULL в столбцы типа **timestamp** .|Используйте вместо этого DEFAULT.|INSERT NULL в столбцах TIMESTAMP.|179|  
-|Типы данных|Параметр таблицы «text in row».|Используйте типы данных **varchar(max)** , **nvarchar(max)** и **varbinary(max)** . Дополнительные сведения см. в разделе [sp_tableoption (Transact-SQL)](../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md).|Параметр таблицы «text in row»|9|  
-|Типы данных|Типы данных:<br /><br /> **text**<br /><br /> **ntext**<br /><br /> **image**|Используйте типы данных **varchar(max)** , **nvarchar(max)** и **varbinary(max)** .|Типы данных: **text**, **ntext** или **image**|4|  
+|Типы данных|Параметр таблицы «text in row».|Используйте типы данных **varchar(max)**, **nvarchar(max)** и **varbinary(max)**. Дополнительные сведения см. в разделе [sp_tableoption (Transact-SQL)](../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md).|Параметр таблицы «text in row»|9|  
+|Типы данных|Типы данных:<br /><br /> **text**<br /><br /> **ntext**<br /><br /> **image**|Используйте типы данных **varchar(max)**, **nvarchar(max)** и **varbinary(max)** .|Типы данных: **text**, **ntext** или **image**|4|  
 |Управление базами данных|sp_attach_db<br /><br /> sp_attach_single_file_db|Инструкция CREATE DATABASE с параметром FOR ATTACH. Чтобы перестроить несколько файлов журнала, если один или более файлов изменили расположение, используйте параметр FOR ATTACH_REBUILD_LOG.|sp_attach_db<br /><br /> sp_attach_single_file_db|81<br /><br /> 82|  
 |Объекты базы данных|CREATE DEFAULT<br /><br /> DROP DEFAULT<br /><br /> sp_bindefault<br /><br /> хранимая процедура sp_unbindefault|Ключевое слово DEFAULT в инструкциях CREATE TABLE и ALTER TABLE.|CREATE_DROP_DEFAULT<br /><br /> sp_bindefault<br /><br /> хранимая процедура sp_unbindefault|162<br /><br /> 64<br /><br /> 65|  
 |Объекты базы данных.|CREATE RULE<br /><br /> DROP RULE<br /><br /> sp_bindrule<br /><br /> sp_unbindrule|Ключевое слово CHECK в инструкциях CREATE TABLE и ALTER TABLE.|CREATE_DROP_RULE<br /><br /> sp_bindrule<br /><br /> sp_unbindrule|161<br /><br /> 66<br /><br /> 67|  
@@ -171,7 +171,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Хранимые процедуры, функции и представления каталогов трассировки SQL|хранимая процедура sp_trace_create<br /><br /> sp_trace_setevent, хранимая процедура<br /><br /> sp_trace_setfilter, хранимая процедура<br /><br /> sp_trace_setstatus<br /><br /> fn_trace_geteventinfo<br /><br /> fn_trace_getfilterinfo<br /><br /> fn_trace_getinfo<br /><br /> fn_trace_gettable<br /><br /> sys.traces<br /><br /> sys.trace_events<br /><br /> sys.trace_event_bindings<br /><br /> sys.trace_categories<br /><br /> sys.trace_columns<br /><br /> sys.trace_subclass_values|[Расширенные события](../relational-databases/extended-events/extended-events.md)|хранимая процедура sp_trace_create<br /><br /> sp_trace_setevent, хранимая процедура<br /><br /> sp_trace_setfilter, хранимая процедура<br /><br /> sp_trace_setstatus<br /><br /> fn_trace_geteventinfo<br /><br /> fn_trace_getfilterinfo<br /><br /> fn_trace_getinfo<br /><br /> fn_trace_gettable<br /><br /> sys.traces<br /><br /> sys.trace_events<br /><br /> sys.trace_event_bindings<br /><br /> sys.trace_categories<br /><br /> sys.trace_columns<br /><br /> sys.trace_subclass_values|258<br /><br /> 260<br /><br /> 261<br /><br /> 259<br /><br /> 256<br /><br /> 257|  
   
 > [!NOTE]  
-> Параметр **OUTPUT** куки-файла для инструкции **sp_setapprole** в настоящее время описан в документации как **varbinary(8000)** , что верно определяет его максимальную длину. Однако текущая реализация возвращает параметр **varbinary(50)** . Если разработчик выделил значение **varbinary(50)** , может потребоваться внести изменения в приложения на случай изменения размера возвращаемых куки-файлов в будущих выпусках. Хотя эта проблема не связана с устареванием, она описана в данном разделе, так как требует внесения аналогичных изменений в приложения. Дополнительные сведения см. в разделе [sp_setapprole (Transact-SQL)](../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md).  
+> Параметр **OUTPUT** куки-файла для инструкции **sp_setapprole** в настоящее время описан в документации как **varbinary(8000)** , что верно определяет его максимальную длину. Однако текущая реализация возвращает параметр **varbinary(50)**. Если разработчик выделил значение **varbinary(50)** , может потребоваться внести изменения в приложения на случай изменения размера возвращаемых куки-файлов в будущих выпусках. Хотя эта проблема не связана с устареванием, она описана в данном разделе, так как требует внесения аналогичных изменений в приложения. Дополнительные сведения см. в разделе [sp_setapprole (Transact-SQL)](../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Неподдерживаемые функции ядра СУБД в SQL Server 2016](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)  
