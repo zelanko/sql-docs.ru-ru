@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3af78971a17035091ab8a72bf0c9a8fe90250dd3
-ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/11/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65538189"
 ---
 # <a name="sqlbrowseconnect-function"></a>Функция SQLBrowseConnect
@@ -50,7 +50,7 @@ SQLRETURN SQLBrowseConnect(
   
 ## <a name="arguments"></a>Аргументы  
  *ConnectionHandle*  
- [Вход] Дескриптор соединения.  
+ [Input] Дескриптор подключения  
   
  *InConnectionString*  
  [Вход] Найдите строку подключения для запроса (см. в разделе "*InConnectionString* аргумент» в «Комментарии»).  

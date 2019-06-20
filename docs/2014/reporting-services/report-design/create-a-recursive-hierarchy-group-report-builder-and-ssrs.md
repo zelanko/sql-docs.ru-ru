@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ec051870966a3a8cf9d2d028d80a2fc36708ba28
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66106139"
 ---
 # <a name="create-a-recursive-hierarchy-group-report-builder-and-ssrs"></a>Создание группы рекурсивной иерархии (построитель отчетов и службы SSRS)
@@ -50,7 +50,7 @@ ms.locfileid: "66106139"
     > [!NOTE]  
     >  Если панель "Свойства" не отображается, щелкните **Свойства** на вкладке **Вид** .  
   
-2.  В панели «Свойства» разверните `Padding` узел, щелкните **слева**и в раскрывающемся списке выберите  **\<выражение... >**.  
+2.  В панели «Свойства» разверните `Padding` узел, щелкните **слева**и в раскрывающемся списке выберите  **\<выражение... >** .  
   
 3.  На панели «Выражение» введите следующее выражение:  
   

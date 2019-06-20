@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: be2568e0a99ff21280388bd309a1e49bdec7e072
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721676"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>Создание подписки для подписчика, отличного от подписчика SQL Server
@@ -96,7 +96,7 @@ ms.locfileid: "62721676"
   
     -   Для IBM DB2 база данных указывается в свойстве строки соединения DB2 **Исходный каталог** , которое может быть введено в поле **Дополнительные параметры соединения** , описанном далее в этом разделе.  
   
-8.  Чтобы получить доступ к диалоговому окну **Безопасность агента распространителя**, на странице**Безопасность агента распространителя** нажмите кнопку свойств (**...**), расположенную рядом с подписчиком.  
+8.  Чтобы получить доступ к диалоговому окну **Безопасность агента распространителя**, на странице**Безопасность агента распространителя** нажмите кнопку свойств ( **...** ), расположенную рядом с подписчиком.  
   
 9. В диалоговом окне **Безопасность агента распространителя** выполните следующие действия:  
   
@@ -155,27 +155,27 @@ ms.locfileid: "62721676"
   
     -   Если параметр `enabled_for_het_sub` имеет значение 1, то подписчики, отличные от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], поддерживаются.  
   
-    -   Если значение `enabled_for_het_sub` равно 0, выполнение [sp_changepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql), указав `enabled_for_het_sub` для **@property** и `true` для  **@value**.  
+    -   Если значение `enabled_for_het_sub` равно 0, выполнение [sp_changepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql), указав `enabled_for_het_sub` для **@property** и `true` для  **@value** .  
   
         > [!NOTE]  
         >  Перед изменением значения `enabled_for_het_sub` на `true` необходимо удалить все существующие подписки на публикацию. Нельзя присвоить параметру `enabled_for_het_sub` значение `true`, если публикация также поддерживает обновляемые подписки. Изменение параметра `enabled_for_het_sub` отразится на других свойствах публикации. Дополнительные сведения см. в статье [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md).  
   
-3.  В издателе в базе данных публикации выполните процедуру [sp_addsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). Задайте **@publication**, **@subscriber**, **(назначение по умолчанию)** @property **@destination_db**, **push** @property **@subscription_type**, а также 3 в качестве значения параметра **@subscriber_type** (задает поставщика OLE DB).  
+3.  В издателе в базе данных публикации выполните процедуру [sp_addsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). Задайте **@publication** , **@subscriber** , **(назначение по умолчанию)** @property **@destination_db** , **push** @property **@subscription_type** , а также 3 в качестве значения параметра **@subscriber_type** (задает поставщика OLE DB).  
   
 4.  В издателе в базе данных публикации выполните процедуру [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql). Укажите следующее.  
   
-    -   параметры **@subscriber**и **@publication** ;  
+    -   параметры **@subscriber** и **@publication** ;  
   
-    -   значение **(назначение по умолчанию)** @property **@subscriber_db**,  
+    -   значение **(назначение по умолчанию)** @property **@subscriber_db** ,  
   
-    -   свойства источника данных, отличного от[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , для параметров **@subscriber_provider**, **@subscriber_datasrc**, **@subscriber_location**, **@subscriber_provider_string**и **@subscriber_catalog**.  
+    -   свойства источника данных, отличного от[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , для параметров **@subscriber_provider** , **@subscriber_datasrc** , **@subscriber_location** , **@subscriber_provider_string** и **@subscriber_catalog** .  
   
-    -   параметры [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, с которыми будет запускаться агент распространителя на распространителе в параметре **@job_login** и **@job_password**.  
+    -   параметры [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, с которыми будет запускаться агент распространителя на распространителе в параметре **@job_login** и **@job_password** .  
   
         > [!NOTE]  
-        >  Для соединений, производимых с использованием встроенной проверки подлинности Windows, в параметрах **@job_login** и **@job_password**. Агент распространителя всегда создает локальные соединения с распространителем через встроенную систему проверки подлинности Windows. По умолчанию агент подключается к подписчику через встроенную систему проверки подлинности Windows;  
+        >  Для соединений, производимых с использованием встроенной проверки подлинности Windows, в параметрах **@job_login** и **@job_password** . Агент распространителя всегда создает локальные соединения с распространителем через встроенную систему проверки подлинности Windows. По умолчанию агент подключается к подписчику через встроенную систему проверки подлинности Windows;  
   
-    -   значение **0** @property **@subscriber_security_mode** и сведения об имени входа поставщика OLE DB для параметров **@subscriber_login** и **@subscriber_password**.  
+    -   значение **0** @property **@subscriber_security_mode** и сведения об имени входа поставщика OLE DB для параметров **@subscriber_login** и **@subscriber_password** .  
   
     -   Расписание задания агента распространителя для этой подписки. Дополнительные сведения см. в статье [Specify Synchronization Schedules](specify-synchronization-schedules.md).  
   

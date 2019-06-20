@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: 2bcf87b91423ae7aa79ae6a5194aa8fc31ca71c9
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66713263"
 ---
 # <a name="how-to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-on-linux"></a>Настройка координатора распределенных транзакций Microsoft (MSDTC) на платформе Linux
@@ -88,7 +88,7 @@ sudo ufw allow from any to any port 51999 proto tcp
 sudo ufw allow from any to any port 135 proto tcp
 ```
 
-В следующем примере показано, как это можно сделать на **Red Hat Enterprise Linux (RHEL)** :
+В следующем примере показано, как это можно сделать на **Red Hat Enterprise Linux (RHEL)**:
 
 ```bash
 sudo firewall-cmd --zone=public --add-port=51999/tcp --permanent

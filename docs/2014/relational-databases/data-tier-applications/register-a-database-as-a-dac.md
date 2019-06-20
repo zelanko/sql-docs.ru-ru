@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1b33e0d78dfe308c537ea5297b55415bce304474
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62918148"
 ---
 # <a name="register-a-database-as-a-dac"></a>Регистрация базы данных в качестве приложения уровня данных
@@ -101,7 +101,7 @@ ms.locfileid: "62918148"
  **Отмена** — работа мастера завершается без регистрации DAC.  
   
 ### <a name="validating-objects"></a>Проверка объектов  
- **Проверка**  _SchemaName_ **.** _ObjectName_ **.** — отображает индикатор выполнения по мере того, как мастер проверяет зависимости полученных объектов и допустимость этих объектов для DAC. _SchemaName_**.**_ObjectName_ указывает, для какого объекта в данный момент выполняется проверка.  
+ **Проверка**  _SchemaName_ **.** _ObjectName_ **.** — отображает индикатор выполнения по мере того, как мастер проверяет зависимости полученных объектов и допустимость этих объектов для DAC. _SchemaName_ **.** _ObjectName_ указывает, для какого объекта в данный момент выполняется проверка.  
   
  **\< Предыдущий** — возврат на **задание свойств** страницы для изменения записей.  
   

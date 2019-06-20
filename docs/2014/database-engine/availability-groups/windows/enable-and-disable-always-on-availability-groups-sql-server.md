@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9fc5fc211d0f0c843ad16fb377fad2082bcf02c1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62791951"
 ---
 # <a name="enable-and-disable-alwayson-availability-groups-sql-server"></a>Включение и отключение групп доступности AlwaysOn (SQL Server)
@@ -131,7 +131,7 @@ ms.locfileid: "62791951"
   
 2.  В меню **Пуск** последовательно выберите пункты **Все программы**, [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)], **Средства настройки**и **Диспетчер конфигурации SQL Server**.  
   
-3.  В **диспетчер конфигурации SQL Server**, нажмите кнопку **служб SQL Server**, щелкните правой кнопкой мыши SQL Server (**<*`instance name`*>)**, где **< *`instance name`* >** — это имя экземпляра локального сервера, для которого требуется включить группы доступности AlwaysOn, и Нажмите кнопку **свойства.**  
+3.  В **диспетчер конфигурации SQL Server**, нажмите кнопку **служб SQL Server**, щелкните правой кнопкой мыши SQL Server ( **< *`instance name`* >)** , где **< *`instance name`* >** — это имя экземпляра локального сервера, для которого требуется включить группы доступности AlwaysOn, и Нажмите кнопку **свойства.**  
   
 4.  Перейдите на вкладку **Высокий уровень доступности AlwaysOn** .  
   
@@ -195,13 +195,13 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
   
 2.  В меню **Пуск** последовательно укажите пункты **Все программы**, [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)], **Средства настройки**и выберите пункт **Диспетчер конфигурации SQL Server**.  
   
-3.  В **диспетчер конфигурации SQL Server**, нажмите кнопку **служб SQL Server**, щелкните правой кнопкой мыши SQL Server (**<*`instance name`*>)**, где **< *`instance name`* >** — это имя экземпляра локального сервера, для которого требуется отключить группы доступности AlwaysOn, и Нажмите кнопку **свойства**.  
+3.  В **диспетчер конфигурации SQL Server**, нажмите кнопку **служб SQL Server**, щелкните правой кнопкой мыши SQL Server ( **< *`instance name`* >)** , где **< *`instance name`* >** — это имя экземпляра локального сервера, для которого требуется отключить группы доступности AlwaysOn, и Нажмите кнопку **свойства**.  
   
 4.  На вкладке**Высокий уровень доступности AlwaysOn**снимите флажок **Включить группы доступности AlwaysOn** и нажмите кнопку **ОК**.  
   
      [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] сохранит изменения и перезапустит службу [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . После перезапуска службы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] функция AlwaysOn будет отключена, а свойство `IsHadrEnabled` будет установлено в значение 0, указывающее на то, группы доступности AlwaysOn отключены.  
   
-5.  Мы рекомендуем ознакомиться с разделом [исполнению: После отключения AlwaysOn](#FollowUp)далее в этом разделе.  
+5.  Рекомендуется ознакомиться с пунктом [Дальнейшие действия. После отключения AlwaysOn](#FollowUp)далее в этом разделе.  
   
 ###  <a name="PScmd3Procedure"></a> Использование SQL Server PowerShell  
  **Отключение функции AlwaysOn**  

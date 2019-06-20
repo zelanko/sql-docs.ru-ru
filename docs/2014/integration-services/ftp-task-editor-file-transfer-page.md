@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9386070902022e29ba191f24eb8fbfb10ed92b9a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66058439"
 ---
 # <a name="ftp-task-editor-file-transfer-page"></a>Редактор задачи «FTP» (страница «Передача файлов»)
@@ -67,13 +67,13 @@ ms.locfileid: "66058439"
   
 ### <a name="isremotepathvariable--true"></a>IsRemotePathVariable = True  
  **RemoteVariable**  
- Выберите существующую пользовательскую переменную или щелкните \<**Создать переменную...**>, чтобы создать ее.  
+ Выберите существующую пользовательскую переменную или щелкните \<**Создать переменную...** >, чтобы создать ее.  
   
  **См. также:** [Переменные в службах Integration Services (SSIS)](integration-services-ssis-variables.md), "Добавление переменной"  
   
 ### <a name="isremotepathvariable--false"></a>IsRemotePathVariable = False  
  **RemotePath**  
- Выберите существующий диспетчер подключений FTP или щелкните \<**Создать соединение...**>, чтобы создать его.  
+ Выберите существующий диспетчер подключений FTP или щелкните \<**Создать соединение...** >, чтобы создать его.  
   
  **См. также:** [Диспетчер FTP-сеансов](connection-manager/ftp-connection-manager.md), [Редактор диспетчера FTP-сеансов](../../2014/integration-services/ftp-connection-manager-editor.md)  
   
@@ -81,13 +81,13 @@ ms.locfileid: "66058439"
   
 ### <a name="islocalpathvariable--true"></a>IsLocalPathVariable = True  
  **LocalVariable**  
- Выберите существующую пользовательскую переменную или щелкните \<**Создать переменную...**>, чтобы создать ее.  
+ Выберите существующую пользовательскую переменную или щелкните \<**Создать переменную...** >, чтобы создать ее.  
   
  **См. также:** [Переменные в службах Integration Services (SSIS)](integration-services-ssis-variables.md), "Добавление переменной"  
   
 ### <a name="islocalpathvariable--false"></a>IsLocalPathVariable = False  
  **LocalPath**  
- Выберите существующий диспетчер подключений файлов или щелкните \<**Создать подключение...**>, чтобы создать его.  
+ Выберите существующий диспетчер подключений файлов или щелкните \<**Создать подключение...** >, чтобы создать его.  
   
  **См. также**: [Flat File Connection Manager](connection-manager/file-connection-manager.md), [редактор диспетчера подключения файлов](../../2014/integration-services/file-connection-manager-editor.md)  
   

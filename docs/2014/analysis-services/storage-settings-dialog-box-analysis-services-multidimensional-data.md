@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ecd796d2fb2bc37c4c2ad6d9fac00ef4258ec038
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66068027"
 ---
 # <a name="storage-settings-dialog-box-analysis-services---multidimensional-data"></a>Диалоговое окно «Настройки хранилища» (службы Analysis Services — многомерные данные)
   Используйте диалоговое окно **Настройки хранилища** в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] для задания свойств упреждающего кэширования, хранилища и уведомлений для измерения, куба, группы мер или секции. Диалоговое окно **Настройки хранилища** в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] можно отобразить:  
   
--   Нажав кнопку с многоточием (**...** ) для `ProactiveCaching` значение свойства измерения, куба, группы мер или секции в **свойства** окно [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
+-   Нажав кнопку с многоточием ( **...** ) для `ProactiveCaching` значение свойства измерения, куба, группы мер или секции в **свойства** окно [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
 -   Путем раскрытия группы мер на вкладке **Секции** окна **Конструктор кубов** , щелкнув **Настройки хранилища**.  
   

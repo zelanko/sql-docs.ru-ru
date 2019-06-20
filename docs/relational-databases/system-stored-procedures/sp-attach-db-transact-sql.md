@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cc0ab6b4dc44d14b375b13da971c0849eb42b0b3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62997064"
 ---
 # <a name="spattachdb-transact-sql"></a>sp_attach_db (Transact-SQL)
@@ -50,7 +50,7 @@ sp_attach_db [ @dbname= ] 'dbname'
 ## <a name="arguments"></a>Аргументы  
 `[ @dbname = ] 'dbnam_ '` — Имя базы данных, подключенные к серверу. Имя должно быть уникальным. *DBName* — **sysname**, значение по умолчанию NULL.  
   
-`[ @filename1 = ] 'filename_n'` Это физическое имя, включая путь файла базы данных. *filename_n* — **nvarchar(260)**, значение по умолчанию NULL. Можно указать до 16 имен файлов. Имена параметров начинаются с **@filename1** и возрастают до **@filename16**. Список имен файлов должен включать хотя бы первичный файл. Первичный файл содержит системные таблицы, указывающие на другие файлы базы данных. Список также должен включать все файлы, перемещенные после отключения базы данных.  
+`[ @filename1 = ] 'filename_n'` Это физическое имя, включая путь файла базы данных. *filename_n* — **nvarchar(260)** , значение по умолчанию NULL. Можно указать до 16 имен файлов. Имена параметров начинаются с **@filename1** и возрастают до **@filename16** . Список имен файлов должен включать хотя бы первичный файл. Первичный файл содержит системные таблицы, указывающие на другие файлы базы данных. Список также должен включать все файлы, перемещенные после отключения базы данных.  
   
 > [!NOTE]  
 >  Этот аргумент сопоставляется с параметром FILENAME инструкции CREATE DATABASE. Дополнительные сведения см. в разделе [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md).  

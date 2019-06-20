@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ad20bfbec71f08d694a5f6d7d3104538d9e19e93
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66063411"
 ---
 # <a name="threads-window"></a>Окно потоков
@@ -45,7 +45,7 @@ ms.locfileid: "66063411"
  **[SPID]**  
  Идентификатор процесса сеанса [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , который однозначно определяет этот сеанс. Можно получить дополнительные сведения об этом сеансе путем выборки строки в представлении sys.sysprocesses, которая имеет то же значение в столбце spid.  
   
- **Местоположение**  
+ **Location**  
  Отображается имя файла скрипта, который используется в отлаживаемом сеансе редактора запросов.  
   
  **Приоритет**  

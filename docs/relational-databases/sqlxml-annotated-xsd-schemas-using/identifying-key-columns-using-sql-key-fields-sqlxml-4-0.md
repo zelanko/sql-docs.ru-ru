@@ -24,10 +24,10 @@ ms.reviewer: ''
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2c9478f193e3e117abf22da53b225e43adac14c6
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65980816"
 ---
 # <a name="identifying-key-columns-using-sqlkey-fields-sqlxml-40"></a>Идентификация ключевых столбцов с использованием sql:key-fields (SQLXML 4.0)
@@ -51,7 +51,7 @@ ms.locfileid: "65980816"
   
  **\<SQL: Relationship >** тег используется для указания «родитель потомок». Он идентифицирует столбец CustomerID в таблице Sales.SalesOrderHeader как родительский ключ, который ссылается на дочерний ключ CustomerID таблицы Sales.Customer. Сведения в  **\<SQL: Relationship >** не достаточно для уникальной идентификации строк в родительской таблице (Sales.SalesOrderHeader). Поэтому без **SQL: Key-поля** заметки, создается иерархия является неточной.  
   
- С помощью **SQL: Key-поля** указано на  **\<порядок >**, заметка однозначно определяет строки в родительской таблице (Sales.SalesOrderHeader) и его дочерние элементы отображаются под его родительский объект.  
+ С помощью **SQL: Key-поля** указано на  **\<порядок >** , заметка однозначно определяет строки в родительской таблице (Sales.SalesOrderHeader) и его дочерние элементы отображаются под его родительский объект.  
   
  Схема:  
   
@@ -128,7 +128,7 @@ ms.locfileid: "65980816"
 ```  
   
 ### <a name="b-specifying-sqlkey-fields-to-produce-proper-nesting-in-the-result"></a>Б. Указание sql:key-fields для получения правильной вложенности в результате  
- В следующей схеме отсутствует иерархия определены с помощью  **\<SQL: Relationship >**. Схема по-прежнему требует указания **SQL: Key-поля** заметки для уникальной идентификации сотрудников в таблице HumanResources.Employee.  
+ В следующей схеме отсутствует иерархия определены с помощью  **\<SQL: Relationship >** . Схема по-прежнему требует указания **SQL: Key-поля** заметки для уникальной идентификации сотрудников в таблице HumanResources.Employee.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
