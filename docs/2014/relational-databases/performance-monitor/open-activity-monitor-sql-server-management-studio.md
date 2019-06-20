@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0d1c0312acfcd2e5dbb17d740fe2659cb8c91bbe
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63032008"
 ---
 # <a name="open-activity-monitor-sql-server-management-studio"></a>Открытие монитора активности (среда SQL Server Management Studio)
@@ -35,7 +35,7 @@ ms.locfileid: "63032008"
   
      [Среда SQL Server Management Studio](#SSMSProcedure)  
   
--   **Чтобы задать интервал обновления с помощью:**  [Среда SQL Server Management Studio](#Refresh)  
+-   **Чтобы задать интервал обновления с помощью:**  [SQL Server Management Studio](#Refresh)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
  Монитор активности выполняет запросы в отслеживаемом экземпляре, чтобы получать данные для панелей отображения монитора активности. Если установлен интервал обновления менее 10 секунд, то время, затрачиваемое на выполнение этих запросов, может повлиять на производительность сервера.  

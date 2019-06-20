@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3b37e09147652e856ac0c4c8160c1d7d3caf6f6d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62993130"
 ---
 # <a name="spchangemergesubscription-transact-sql"></a>sp_changemergesubscription (Transact-SQL)
@@ -51,7 +51,7 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
   
 `[ @property = ] 'property'` — Это свойство, изменяемое для данной публикации. *Свойство* — **sysname**, и может принимать одно из значений в таблице.  
   
-`[ @value = ] 'value'` Новое значение для указанного *свойство*. *значение* — **nvarchar(255)**, и может принимать одно из значений в таблице.  
+`[ @value = ] 'value'` Новое значение для указанного *свойство*. *значение* — **nvarchar(255)** , и может принимать одно из значений в таблице.  
   
 |Свойство|Значение|Описание|  
 |--------------|-----------|-----------------|  
