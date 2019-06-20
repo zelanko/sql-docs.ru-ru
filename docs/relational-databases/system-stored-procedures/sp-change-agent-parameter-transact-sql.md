@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 16de7ceaae80a2aebcf2ed40d2b06b9a6ccf0dc4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62997035"
 ---
 # <a name="spchangeagentparameter-transact-sql"></a>Хранимая процедура sp_change_agent_parameter (Transact-SQL)
@@ -241,7 +241,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
  Чтобы узнать, какие параметры определены для данного профиля, выполните **sp_help_agent_profile** и обратите внимание, *profile_name* связанные с *profile_id*. С соответствующим *profile_id*, следующий запуск **sp_help_agent_parameters** , используя *profile_id* для просмотра параметров, связанных с профилем. Параметры могут добавляться к профилю, выполнив [sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md).  
   
-`[ @parameter_value = ] 'parameter_value'` — Это новое значение параметра. *parameter_value* — **nvarchar(255)**, не имеет значения по умолчанию.  
+`[ @parameter_value = ] 'parameter_value'` — Это новое значение параметра. *parameter_value* — **nvarchar(255)** , не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  

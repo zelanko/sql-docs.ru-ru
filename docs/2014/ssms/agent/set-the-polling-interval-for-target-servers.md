@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1578bbefc9ae17baae56799d943e5ae6186628ea
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63033651"
 ---
 # <a name="set-the-polling-interval-for-target-servers"></a>Установка интервала опроса на целевых серверах
@@ -26,7 +26,7 @@ ms.locfileid: "63033651"
   
 -   **Перед началом:**  [Безопасность](#Security)  
   
--   **Чтобы задать интервал опроса на целевых серверах с помощью:**  [среды SQL Server Management Studio](#SSMS), [Transact-SQL](#TSQL)  
+-   **Для установки интервала опроса на целевых серверах используется:**  [среды SQL Server Management Studio](#SSMS), [Transact-SQL](#TSQL)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
  На каждом целевом сервере может одновременно выполняться только один экземпляр одного и того же задания. Каждый целевой сервер периодически опрашивает главный сервер, загружает копию новых назначенных ему заданий и отключается. Целевой сервер выполняет задание локально, а затем снова подключается к главному серверу, чтобы передать результирующее состояние задания.  

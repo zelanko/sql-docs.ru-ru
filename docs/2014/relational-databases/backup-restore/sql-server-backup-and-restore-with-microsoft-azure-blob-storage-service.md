@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 52f1bdf9e748625e1310210c98beeb4401a5dd81
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62920697"
 ---
 # <a name="sql-server-backup-and-restore-with-windows-azure-blob-storage-service"></a>Резервное копирование и восстановление SQL Server с помощью службы хранилищ больших двоичных объектов Windows Azure
@@ -27,7 +27,7 @@ ms.locfileid: "62920697"
     > [!NOTE]  
     >  В версиях SQL Server до SQL Server 2014 можно использовать надстройку средства резервного копирования SQL Server в Windows Azure для быстрого и простого создания резервных копий в хранилище Windows Azure. Дополнительные сведения см. в [центре загрузки](https://go.microsoft.com/fwlink/?LinkID=324399).  
   
--   **Функции SQL Server по управлению резервными копиями в Windows Azure:** Настройка SQL Server для управления резервного копирования стратегии и планирования резервного копирования для отдельной базы данных или нескольких баз данных, задать значения по умолчанию на уровне экземпляра. Эта функция называется **[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]**. Дополнительные сведения см. в разделе [SQL Server Managed Backup to Windows Azure](sql-server-managed-backup-to-microsoft-azure.md). Эта функция доступна в SQL Server 2014 и более поздних версиях.  
+-   **Функции SQL Server по управлению резервными копиями в Windows Azure:** Настройка SQL Server для управления резервного копирования стратегии и планирования резервного копирования для отдельной базы данных или нескольких баз данных, задать значения по умолчанию на уровне экземпляра. Эта функция называется **[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]** . Дополнительные сведения см. в разделе [SQL Server Managed Backup to Windows Azure](sql-server-managed-backup-to-microsoft-azure.md). Эта функция доступна в SQL Server 2014 и более поздних версиях.  
   
 ## <a name="benefits-of-using-the-windows-azure-blob-service-for-includessnoversionincludesssnoversion-mdmd-backups"></a>Преимущества использования службы хранилища больших двоичных объектов Windows Azure для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] резервного копирования  
   

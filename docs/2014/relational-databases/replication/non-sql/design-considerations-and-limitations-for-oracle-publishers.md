@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 043bf26fb17a3433e59623b5b3bfddaaea8bc89f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63022513"
 ---
 # <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Рассмотрение структуры и ограничений издателей Oracle
@@ -149,7 +149,7 @@ ms.locfileid: "63022513"
   
 -   Учетная запись, под которой агент моментальных снимков и агент чтения журналов устанавливают подключения от распространителя к издателю, указывается с помощью одного из следующих методов:  
   
-    -   Параметр **@security_mode** хранимой процедуры [sp_adddistpublisher (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql) (также указываются параметры **@login** и **@password**, если используется проверка подлинности Oracle).  
+    -   Параметр **@security_mode** хранимой процедуры [sp_adddistpublisher (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql) (также указываются параметры **@login** и **@password** , если используется проверка подлинности Oracle).  
   
     -   в диалоговом окне **Соединение с сервером** в среде SQL Server Management Studio, которое используется при настройке издателя Oracle на распространителе [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   

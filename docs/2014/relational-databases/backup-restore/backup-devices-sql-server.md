@@ -26,10 +26,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7cd01f1a3c98bcf0d67ab0224772538a7a82514d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62922204"
 ---
 # <a name="backup-devices-sql-server"></a>Устройства резервного копирования (SQL Server)
@@ -86,7 +86,7 @@ ms.locfileid: "62922204"
   
  BACKUP DATABASE *database_name*  
   
- TO DISK **=** { **'**_physical_backup_device_name_**'** | **@**_physical_backup_device_name_var_ }  
+ TO DISK **=** { **'** _physical_backup_device_name_ **'**  |  **@** _physical_backup_device_name_var_ }  
   
  Пример:  
   
@@ -100,7 +100,7 @@ GO
   
  RESTORE { DATABASE | LOG } *database_name*  
   
- FROM DISK **=** { **'**_physical_backup_device_name_**'** | **@**_physical_backup_device_name_var_ }  
+ FROM DISK **=** { **'** _physical_backup_device_name_ **'**  |  **@** _physical_backup_device_name_var_ }  
   
  Например,  
   
@@ -136,7 +136,7 @@ GO
     >  Резервное копирование данных через сеть может быть причиной сетевых ошибок. Поэтому при использовании удаленного диска рекомендуется проверять операцию резервного копирования после ее завершения. Дополнительные сведения см. в разделе [RESTORE VERIFYONLY (Transact-SQL)](/sql/t-sql/statements/restore-statements-verifyonly-transact-sql).  
   
 #### <a name="specifying-a-universal-naming-convention-unc-name"></a>Как указать имя в формате UNC  
- Чтобы указать сетевой ресурс в инструкции резервного копирования или восстановления, для файла, расположенного на устройстве резервного копирования, необходимо использовать полностью заданное имя в формате UNC. Имя в формате UNC имеет форму **\\\\**_Имя_системы_**\\**_Имя_общего_ресурса_**\\**_Путь_**\\**_Имя_файла_.  
+ Чтобы указать сетевой ресурс в инструкции резервного копирования или восстановления, для файла, расположенного на устройстве резервного копирования, необходимо использовать полностью заданное имя в формате UNC. Имя в формате UNC имеет форму **\\\\** _Имя_системы_ **\\** _Имя_общего_ресурса_ **\\** _Путь_ **\\** _Имя_файла_.  
   
  Пример:  
   
@@ -174,7 +174,7 @@ GO
   
  BACKUP { DATABASE | LOG } *database_name*  
   
- TO TAPE **=** { **'**_physical_backup_device_name_**'** | **@**_physical_backup_device_name_var_ }  
+ TO TAPE **=** { **'** _physical_backup_device_name_ **'**  |  **@** _physical_backup_device_name_var_ }  
   
  Пример:  
   
@@ -188,7 +188,7 @@ GO
   
  RESTORE { DATABASE | LOG } *database_name*  
   
- FROM TAPE **=** { **'**_physical_backup_device_name_**'** | **@**_physical_backup_device_name_var_ }  
+ FROM TAPE **=** { **'** _physical_backup_device_name_ **'**  |  **@** _physical_backup_device_name_var_ }  
   
 ###  <a name="TapeOptions"></a> Ленточных устройств параметры BACKUP и RESTORE (Transact-SQL)  
  Чтобы упростить управление лентой, инструкция BACKUP предоставляет следующие параметры для ленточных устройств.  
