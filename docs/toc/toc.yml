@@ -8215,12 +8215,12 @@
               href: ../azure-data-studio/extensibility-apis.md
         - name: Ресурсы
           items:
+            - name: ВОПРОСЫ И ОТВЕТЫ
+              href: ../azure-data-studio/faq.md
             - name: "Репозиторий GitHub Azure\_Data\_Studio\_>"
               href: 'https://www.github.com/Microsoft/azuredatastudio'
             - name: "Блог по SQL\_Server\_>"
               href: 'https://blogs.technet.microsoft.com/dataplatforminsider/'
-            - name: ВОПРОСЫ И ОТВЕТЫ
-              href: ../azure-data-studio/faq.md
             - name: "Сообщить о проблемах и внести предложения\_>"
               href: 'https://github.com/microsoft/azuredatastudio/issues'
     - name: Программы командной строки
