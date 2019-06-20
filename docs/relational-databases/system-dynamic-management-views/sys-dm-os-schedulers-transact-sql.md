@@ -22,10 +22,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 86b2ed6f19f17147eb5622f120898e6f579cb77a
-ms.sourcegitcommit: 856e28a4f540f851b988ca311846eac9ede6d492
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65626773"
 ---
 # <a name="sysdmosschedulers-transact-sql"></a>sys.dm_os_schedulers (Transact-SQL)
@@ -62,10 +62,10 @@ ms.locfileid: "65626773"
 |memory_object_address|**varbinary(8)**|Адрес объекта памяти планировщика. Не допускает значения NULL.|  
 |task_memory_object_address|**varbinary(8)**|Адрес объекта памяти задачи. Не допускает значение NULL. Дополнительные сведения см. в разделе [sys.dm_os_memory_objects &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).|  
 |quantum_length_us|**bigint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Отображает такт планировщика, используемый SQLOS.|  
-| total_cpu_usage_ms |**bigint**|**Применяется к**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и более поздних версий <br><br> Общее время ЦП, используемых данным планировщиком, предоставленное без вытеснения работников. Не допускает значение NULL.|
+| total_cpu_usage_ms |**bigint**|**Область применения**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и более поздних версий <br><br> Общее время ЦП, используемых данным планировщиком, предоставленное без вытеснения работников. Не допускает значение NULL.|
 |total_cpu_idle_capped_ms|**bigint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Указывает, регулирование на основе [цели уровня обслуживания](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu#service-level-objective), всегда будет равно 0 для версий сторонний [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Допускает значение NULL.|
-|total_scheduler_delay_ms|**bigint**|**Применяется к**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и более поздних версий <br><br> Время между одной рабочей ролью, исходящего переключения и переключение в другое. Может быть вызвана preemptive работников, задержки, планирование следующего рабочего процесса без вытеснения, или из-за ОС, планирование потоков из других процессов. Не допускает значение NULL.|
-|ideal_workers_limit|**int**|**Применяется к**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] и более поздних версий <br><br> Сколько сотрудников в идеале следует в планировщике. Если для текущих рабочих процессов к превышению из-за нагрузки несбалансированных задачи, как только они становятся неактивными, они будут обрезаны. Не допускает значение NULL.|
+|total_scheduler_delay_ms|**bigint**|**Область применения**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и более поздних версий <br><br> Время между одной рабочей ролью, исходящего переключения и переключение в другое. Может быть вызвана preemptive работников, задержки, планирование следующего рабочего процесса без вытеснения, или из-за ОС, планирование потоков из других процессов. Не допускает значение NULL.|
+|ideal_workers_limit|**int**|**Область применения**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] и более поздних версий <br><br> Сколько сотрудников в идеале следует в планировщике. Если для текущих рабочих процессов к превышению из-за нагрузки несбалансированных задачи, как только они становятся неактивными, они будут обрезаны. Не допускает значение NULL.|
 |pdw_node_id|**int**|**Применяется к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор для узла, это распределение является на.|  
   
 ## <a name="permissions"></a>Разрешения

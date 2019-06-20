@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6618a7c5023f140fdaee0b512c797c01586c62ff
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66082337"
 ---
 # <a name="define-a-new-attribute-manually"></a>Определение нового атрибута вручную
@@ -31,7 +31,7 @@ ms.locfileid: "66082337"
   
      Щелкните правой кнопкой мыши **атрибуты** области для **Показать атрибуты в**, а затем нажмите кнопку **сетки**.  
   
-3.  Перейдите к последней строке сетки, а затем нажмите кнопку  **\<новый атрибут >**.  
+3.  Перейдите к последней строке сетки, а затем нажмите кнопку  **\<новый атрибут >** .  
   
 4.  Введите имя атрибута для задания свойства `Name` и нажмите клавишу ВВОД.  
   

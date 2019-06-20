@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b4fd1a406848006739b83c1b8a0886d5c2d4bdfa
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63155718"
 ---
 # <a name="supported-constructs-in-natively-compiled-stored-procedures"></a>Поддерживаемые конструкции для хранимых процедур, скомпилированных в собственном коде
@@ -172,7 +172,7 @@ ms.locfileid: "63155718"
 ##  <a name="los"></a> Ограничения на сортировку  
  В запросе с использованием [TOP (Transact-SQL)](/sql/t-sql/queries/top-transact-sql) и [предложения ORDER BY (Transact-SQL)](/sql/t-sql/queries/select-order-by-clause-transact-sql) можно сортировать более 8 000 строк. Без [предложения ORDER BY (Transact-SQL)](/sql/t-sql/queries/select-order-by-clause-transact-sql) [TOP (Transact-SQL)](/sql/t-sql/queries/top-transact-sql) позволяет сортировать не более 8 000 строк (меньше, если есть соединения).  
   
- Если в запросе используется как оператор [TOP (Transact-SQL)](/sql/t-sql/queries/top-transact-sql), так и [предложение ORDER BY (Transact-SQL)](/sql/t-sql/queries/select-order-by-clause-transact-sql), для оператора TOP можно указать не более 8192 строк. При указании более 8192 строк вы получаете сообщение об ошибке: **Сообщение 41398, уровень 16, состояние 1, процедура  *\<Имя_процедуры >*, строки  *\<номер_строки >* оператор TOP может возвращать не более 8192 строк;  *\<номер >* был запрошен.**  
+ Если в запросе используется как оператор [TOP (Transact-SQL)](/sql/t-sql/queries/top-transact-sql), так и [предложение ORDER BY (Transact-SQL)](/sql/t-sql/queries/select-order-by-clause-transact-sql), для оператора TOP можно указать не более 8192 строк. При указании более 8192 строк вы получаете сообщение об ошибке: **Сообщение 41398, уровень 16, состояние 1, процедура  *\<Имя_процедуры >* , строки  *\<номер_строки >* оператор TOP может возвращать не более 8192 строк;  *\<номер >* был запрошен.**  
   
  Если отсутствует предложение TOP, то можно отсортировать любое количество строк с помощью предложения ORDER BY.  
   
