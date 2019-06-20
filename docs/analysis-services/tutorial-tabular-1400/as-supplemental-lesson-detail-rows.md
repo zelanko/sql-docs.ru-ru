@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 20f5f32d4cca8b69d94410296e3653a92a1d6d46
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: bad45d18c351e838ec944b1ae67e3ce88c7e1d20
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685249"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263307"
 ---
 # <a name="supplemental-lesson---detail-rows"></a>Дополнительный урок. Строки детализации
 
@@ -23,7 +23,7 @@ ms.locfileid: "57685249"
 
 В этом дополнительном занятии вы редактор DAX для определения пользовательского выражения строк детализации. Выражение строк детализации — это свойство на основе меры, предоставляющее конечным пользователям Дополнительные сведения об агрегированных результатах для меры. 
   
-Предполагаемое время выполнения данного занятия: **10 минут**  
+Предполагаемое время для выполнения этого занятия: **10 минут**  
   
 ## <a name="prerequisites"></a>предварительные требования  
 
@@ -81,6 +81,6 @@ ms.locfileid: "57685249"
   
 ## <a name="see-also"></a>См. также  
 
-[Функция SELECTCOLUMNS (DAX)](https://msdn.microsoft.com/library/mt761759.aspx)  
+[Функция SELECTCOLUMNS (DAX)](/dax/selectcolumns-function-dax)  
 [Дополнительный урок. Динамическая безопасность](../tutorial-tabular-1400/as-supplemental-lesson-dynamic-security.md)  
 [Дополнительный урок. Неоднородные иерархии](../tutorial-tabular-1400/as-supplemental-lesson-ragged-hierarchies.md)  

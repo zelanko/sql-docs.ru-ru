@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 854f880cf9cb4f06ee4fc44fd18cec5f0ab99ca8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62691068"
 ---
 # <a name="drilldownmemberbottom-mdx"></a>DrilldownMemberBottom (многомерные выражения)
@@ -59,7 +59,7 @@ DrillDownMemberBottom(<Set_Expression1>, <Set_Expression2>, <Count> [,[<Numeric_
   
  Первый набор может содержать кортежи вместо элементов. Углубленная детализация кортежей является расширением OLE DB и возвращает набор кортежей вместо набора элементов.  
   
- **DrilldownMemberBottom** функция аналогична [DrilldownMember](../mdx/drilldownmember-mdx.md) работать, но вместо включения всех потомков каждого элемента первого набора, также представить во втором наборе,  **DrilldownMemberBottom** функция возвращает набор самых нижних потомков для каждого элемента.  
+ **DrilldownMemberBottom** функция аналогична [DrilldownMember](../mdx/drilldownmember-mdx.md) работать, но вместо включения всех потомков каждого элемента первого набора, также представить во втором наборе, ** DrilldownMemberBottom** функция возвращает набор самых нижних потомков для каждого элемента.  
   
  Запрос свойства XMLA MdpropMdxDrillFunctions позволяет проверить уровень поддержки, предоставляемой сервером для функций детализации; см. в разделе [поддерживаемые свойства XMLA &#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) сведения.  
   

@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: faa24a68b0f8a8e6eecdacae41afeecb529af3b5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62640138"
 ---
 # <a name="sql-server-migration-assistant-for-oracle-oracletosql"></a>SQL Server Migration Assistant для Oracle (OracleToSQL)
@@ -24,7 +24,7 @@ ms.locfileid: "62640138"
   
 ## <a name="contents"></a>Содержание  
   
-|Раздел|Описание|  
+|`Section`|Описание|  
 |-----------|---------------|  
 |[Новые возможности в SSMA для Oracle](https://msdn.microsoft.com/f305ebb6-7393-4a43-abb3-6332b739d690)|Новые возможности в этой версии SSMA для Oracle|  
 |[Установка SSMA для Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-for-oracle-oracletosql.md)|Содержит разделы, содержащие предварительные требования и инструкции по установке SSMA для Oracle клиента и необходимых компонентов на компьютере, на котором выполняется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  

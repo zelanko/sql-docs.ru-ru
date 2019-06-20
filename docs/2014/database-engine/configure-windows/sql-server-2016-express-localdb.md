@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 224facf54b0cde09f97010be472e3cc28754e94b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62756990"
 ---
 # <a name="sql-server-2014-express-localdb"></a>SQL Server 2014 Express LocalDB
@@ -30,7 +30,7 @@ ms.locfileid: "62756990"
  Основной способ установки `LocalDB` — с помощью программы SqlLocalDB.msi. `LocalDB` можно использовать при установке номера SKU [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)]. Выберите `LocalDB` на **Выбор компонентов** страницы во время установки [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. Может существовать только одна копия `LocalDB` двоичные файлы для каждой основной [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] версии. Можно запускать несколько процессов [!INCLUDE[ssDE](../../includes/ssde-md.md)] , которые будут использовать одни и те же двоичные файлы. Экземпляр [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] запущена как `LocalDB` имеет те же ограничения, что [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]  
   
 ## <a name="description"></a>Описание  
- `LocalDB` Программа установки использует программу SqlLocalDB.msi для установки необходимых файлов на компьютере. После установки `LocalDB` является экземпляром класса [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] , можно создавать и открывать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] баз данных. Файлы системной базы данных, как правило, хранятся в каталоге AppData пользователя, который обычно скрыт. Например, **C:\Users\\<пользователь\>\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\LocalDBApp1\\**. Файлы пользовательской базы данных хранятся в месте, указанном пользователем, как правило, в папке **C:\Users\\<пользователь\>\Documents\\**.  
+ `LocalDB` Программа установки использует программу SqlLocalDB.msi для установки необходимых файлов на компьютере. После установки `LocalDB` является экземпляром класса [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] , можно создавать и открывать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] баз данных. Файлы системной базы данных, как правило, хранятся в каталоге AppData пользователя, который обычно скрыт. Например, **C:\Users\\<пользователь\>\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\LocalDBApp1\\** . Файлы пользовательской базы данных хранятся в месте, указанном пользователем, как правило, в папке **C:\Users\\<пользователь\>\Documents\\** .  
   
  Дополнительные сведения о включении `LocalDB` в приложении, см. в разделе [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] документации [Обзор локальных данных](https://msdn.microsoft.com/library/ms233817\(VS.110\).aspx), [Пошаговое руководство: Создание базы данных SQL Server LocalDB](https://msdn.microsoft.com/library/ms233763\(VS.110\).aspx), и [Пошаговое руководство: Подключение к данным в базе данных SQL Server LocalDB (Windows Forms)](https://msdn.microsoft.com/library/ms171890\(VS.110\).aspx).  
   
@@ -66,7 +66,7 @@ ms.locfileid: "62756990"
 ## <a name="starting-localdb-and-connecting-to-localdb"></a>Запуск LocalDB и подключение к LocalDB  
   
 ### <a name="connecting-to-the-automatic-instance"></a>Подключение к автоматическому экземпляру  
- Самый простой способ использования `LocalDB` является подключение к автоматическому экземпляру, владельцем текущего пользователя с помощью строки подключения **«Server = (localdb) \MSSQLLocalDB;Integrated Security = true»**. Подключиться к определенной базе данных, используя имя файла, можно с помощью строки подключения, подобной следующей: **"Server=(LocalDB)\MSSQLLocalDB; Integrated Security=true; AttachDbFileName=D:\Data\MyDB1.mdf"**.  
+ Самый простой способ использования `LocalDB` является подключение к автоматическому экземпляру, владельцем текущего пользователя с помощью строки подключения **«Server = (localdb) \MSSQLLocalDB;Integrated Security = true»** . Подключиться к определенной базе данных, используя имя файла, можно с помощью строки подключения, подобной следующей: **"Server=(LocalDB)\MSSQLLocalDB; Integrated Security=true; AttachDbFileName=D:\Data\MyDB1.mdf"** .  
   
 > [!NOTE]  
 >  В первый раз пользователь на компьютере пытается подключиться к `LocalDB`, автоматический экземпляр необходимо будет создать и запустить. Дополнительное время, необходимое для создания экземпляра, может стать причиной того, что попытка соединения завершится с ошибкой истечения времени ожидания. В этом случае подождите несколько секунд до завершения процесса создания экземпляра, а затем подключитесь снова.  

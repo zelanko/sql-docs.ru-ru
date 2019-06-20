@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 495b03b98e6c497bfd7a1527d9e2e2d81f25b762
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62805577"
 ---
 # <a name="create-custom-templates"></a>Создание пользовательских шаблонов
@@ -67,7 +67,7 @@ ms.locfileid: "62805577"
   
 10. В редакторе запросов введите **EXECUTE dbo.WorkOrdersForBlade**и нажмите клавишу F5, чтобы выполнить запрос. Убедитесь в том, что на панели **Результаты** отображается список заказов на производство роликовых коньков.  
   
-11. Измените скрипт шаблона (из шага 7), заменив имя товара с параметром  <strong>*<* product_name</strong>, `nvarchar(50)`, <strong>имя*>*</strong> , в четырех местах.  
+11. Измените скрипт шаблона (из шага 7), заменив имя товара с параметром  <strong> *<* product_name</strong>, `nvarchar(50)`, <strong>имя *>* </strong> , в четырех местах.  
   
     > [!NOTE]  
     >  Для параметра необходимо указать три элемента: имя замещаемого параметра, тип данных параметра, значение параметра по умолчанию.  

@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: b8a1ca0ec3662dddb2baa5fbac5fe01ed4d4f2e5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63213376"
 ---
 # <a name="load-data-with-integration-services-to-parallel-data-warehouse"></a>Загрузка данных с помощью служб Integration Services для Parallel Data Warehouse
@@ -56,7 +56,7 @@ For general information about developing Integration Services packages, see [Des
 ### <a name="run-from-powershell"></a>Запустить с помощью PowerShell  
 Чтобы запустить пакет из Windows PowerShell, с помощью **dtexec** служебной программы: `dtexec /FILE <packagePath>`  
   
-Например `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`   
+Например: `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`   
   
 ### <a name="run-from-a-windows-command-prompt"></a>Командная строка для запуска из Windows 
 Чтобы запустить пакет из командной строки Windows, с помощью **dtexec** служебной программы: `dtexec /FILE <packagePath>`  

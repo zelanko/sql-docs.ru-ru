@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6b38446a96f29006356f0ebf083a382fff4fb50f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63266581"
 ---
 # <a name="replicate-partitioned-tables-and-indexes"></a>Репликация секционированных таблиц и индексов
@@ -70,7 +70,7 @@ ms.locfileid: "63266581"
 ### <a name="enabling-partition-switching"></a>Включение переключения секций  
  Следующие свойства публикации транзакций позволяют пользователям управлять переключением секций в реплицируемой среде.  
   
--   **@allow_partition_switch**, если значение `true`, SWITCH PARTITION можно выполнять в базе данных публикации.  
+-   **@allow_partition_switch** , если значение `true`, SWITCH PARTITION можно выполнять в базе данных публикации.  
   
 -   **@replicate_partition_switch** определяет, реплицировать ли инструкцию DDL SWITCH PARTITION на подписчик. Этот параметр доступен, только если **@allow_partition_switch** присваивается `true`.  
   

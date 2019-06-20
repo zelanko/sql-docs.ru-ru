@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1b59ebbf4bb56d23009351f4a8fb7f193a59fa66
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62771450"
 ---
 # <a name="create-and-edit-an-oracle-cdc-service"></a>Создание и изменение службы CDC Oracle
@@ -61,7 +61,7 @@ ms.locfileid: "62771450"
  **Authentication**  
  Выберите один из следующих вариантов:  
   
--   **Проверка подлинности Windows**. Если этот флажок установлен, служба Oracle CDC будет подключаться к целевому [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] экземпляра, используя удостоверение учетной записи службы. Если экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] работает на другом компьютере, проверку подлинности Windows необходимо использовать с учетными записями домена.  
+-   **Проверка подлинности Windows**. В этом случае служба Oracle CDC будет подключаться к целевому экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], используя учетную запись службы. Если экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] работает на другом компьютере, проверку подлинности Windows необходимо использовать с учетными записями домена.  
   
 -   **Аутентификация SQL Server**: при выборе этого варианта необходимо будет ввести **Имя пользователя** и **Пароль** для имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которое вы хотите использовать. Служба Oracle CDC использует эти учетные данные при подключении к целевому экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -80,7 +80,7 @@ ms.locfileid: "62771450"
   
 -   **Шифровать соединение**: выберите параметр **Шифровать соединение**, чтобы обмен данными между службой Oracle CDC Service и целевым экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполнялся по зашифрованному соединению.  
   
--   **Дополнительно**: При необходимости введите любые дополнительные свойства соединения.  
+-   **Дополнительно**: При необходимости введите любые дополнительные свойства подключения.  
   
  **Главный пароль**  
  Введите пароль, который будет использоваться службой Windows Oracle CDC для защиты учетных данных средства интеллектуального анализа журнала.  

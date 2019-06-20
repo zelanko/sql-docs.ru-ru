@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5fe10a98910f54e4317d0191753d40b9b6b0b94f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62736091"
 ---
 # <a name="mining-model-content-analysis-services---data-mining"></a>Содержимое модели интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)
@@ -273,7 +273,7 @@ ms.locfileid: "62736091"
 |Модели временных рядов|[Содержимое моделей интеллектуального анализа данных для моделей временных рядов (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)|[Примеры запросов моделей временных рядов](../../analysis-services/data-mining/time-series-model-query-examples.md)|  
   
 ##  <a name="bkmk_Viewing"></a> Средства просмотра содержимого модели интеллектуального анализа данных  
- При просмотре и исследовании модели в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]просмотр данных производится с помощью **средства просмотра деревьев содержимого общего вида (Майкрософт)**, включенного в состав сред [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] и [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+ При просмотре и исследовании модели в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]просмотр данных производится с помощью **средства просмотра деревьев содержимого общего вида (Майкрософт)** , включенного в состав сред [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] и [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  Это средство [!INCLUDE[msCoName](../../includes/msconame-md.md)] отображает столбцы, правила, свойства, атрибуты, узлы и другое содержимое модели на основе данных, доступных через наборы строк схемы содержимого модели интеллектуального анализа данных. Набор строк схемы содержимого представляет собой общую платформу, предназначенную для предоставления подробных сведений о содержимом модели интеллектуального анализа данных. Содержимое модели можно просмотреть в любом клиенте, поддерживающем иерархические наборы строк. Средство просмотра в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] представляет эти данные в виде HTML-таблицы, обеспечивая представление всех моделей в согласованном формате, что значительно облегчает понимание структуры создаваемой модели. Дополнительные сведения см. в разделе [Просмотр модели в средстве просмотра деревьев содержимого общего вида (Майкрософт)](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md).  
   

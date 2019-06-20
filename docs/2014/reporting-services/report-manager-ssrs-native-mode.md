@@ -1,32 +1,20 @@
 ---
 title: Диспетчер отчетов (собственный режим служб SSRS) | Документация Майкрософт
-ms.custom: ''
-ms.date: 06/13/2017
 ms.prod: sql-server-2014
-ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
-helpviewer_keywords:
-- reports [Reporting Services], managing
-- Report Manager [Reporting Services], about Report Manager
-- customizing Report Manager
-- Report Manager [Reporting Services], customizing
-- report servers [Reporting Services], administering
-- browsing reports [Reporting Services]
-- administering reports
-- Report Manager [Reporting Services]
-- components [Reporting Services], Report Manager
-ms.assetid: 80949f9d-58f5-48e3-9342-9e9bf4e57896
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 31e64dfe871fa38daee266814006468a8ea32e65
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 04/26/2019
+ms.openlocfilehash: 55581ae96660732ee01bf12fa37e1c5e8ac9634e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59940670"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "64568386"
 ---
 # <a name="report-manager--ssrs-native-mode"></a>Диспетчер отчетов (службы SSRS в основном режиме)
   Диспетчер отчетов представляет собой веб-средство, предназначенное для доступа к отчетам и управления ими, которое применяется для администрирования экземпляра одного удаленного сервера отчетов через HTTP-соединение. Кроме того, диспетчер отчетов предоставляет средство просмотра отчетов и функции навигации. В этом разделе:  
@@ -109,17 +97,15 @@ ms.locfileid: "59940670"
 |![Значок "Папка"](media/hlp-16folder.gif "Значок \"Папка\"")|Папка|Чтобы открыть папку, щелкните ее значок или имя.|  
 |![Значок подписки](media/hlp-16subscription.gif "значок подписки")|Подписка|Чтобы редактировать подписку щелкните ее значок или описание.|  
 |![Значок управляемой данными подписки](media/hlp-16subscriptiondd.gif "значок управляемой данными подписки")|Управляемая данными подписка|Чтобы редактировать управляемую данными подписку щелкните ее значок или описание.|  
-|![Значок "Универсальный ресурс"](media/hlp-16file.gif "Значок \"Универсальный ресурс\"")|Ресурс|Чтобы открыть ресурс, щелкните его значок или имя. Ресурс откроется в отдельном окне.|  
+|![Значок "Универсальный ресурс"](media/hlp-16file.gif "Значок \"Универсальный ресурс\"")|Resource|Чтобы открыть ресурс, щелкните его значок или имя. Ресурс откроется в отдельном окне.|  
 |![Значок "Общий источник данных"](media/hlp-16datasource.png "Значок \"Общий источник данных\"")|Общий элемент источника данных|Чтобы открыть страницы свойств, список отчетов и список подписки общего источника данных, щелкните значок общего источника данных.|  
 |![Значок страницы свойств](media/hlp-16prop.gif "значок страницы свойств")|Страница свойств|Чтобы открыть дополнительные страницы для настройки свойств и безопасности, щелкните значок свойств.|  
   
-## <a name="see-also"></a>См. также  
- [Настройка URL-адреса (диспетчер конфигурации служб SSRS)](install-windows/configure-a-url-ssrs-configuration-manager.md)   
- [Планирование служб Reporting Services и поддержки Power View в браузерах &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)   
- [Построитель отчетов &#40;SSRS&#41;](tools/report-builder-authoring-environment-ssrs.md)   
- [Инструментальные средства служб Reporting Services](tools/reporting-services-tools.md)   
- [Управление содержимым сервера отчетов (службы Reporting Services в основном режиме)](report-server/report-server-content-management-ssrs-native-mode.md)   
- [Просмотр и изучение отчетов в собственном режиме с помощью веб-части SharePoint &#40;SSRS&#41;](reports/view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs.md)   
- [Справка F1 диспетчера отчетов](../../2014/reporting-services/report-manager-f1-help.md)  
-  
-  
+## <a name="see-also"></a>См. также
+
+- [Настройка URL-адреса (диспетчер конфигурации служб SSRS)](install-windows/configure-a-url-ssrs-configuration-manager.md)
+- [Планирование служб Reporting Services и поддержки Power View в браузерах &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)
+- [Построитель отчетов &#40;SSRS&#41;](tools/report-builder-authoring-environment-ssrs.md)
+- - [Инструментальные средства служб Reporting Services](tools/reporting-services-tools.md)
+- [Управление содержимым сервера отчетов (службы Reporting Services в собственном режиме)](report-server/report-server-content-management-ssrs-native-mode.md)  
+[Справка F1 диспетчера отчетов](../../2014/reporting-services/report-manager-f1-help.md)

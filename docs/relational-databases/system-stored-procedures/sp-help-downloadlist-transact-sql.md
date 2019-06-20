@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f6bb56be8654b37eea250122068ef52e165a2d99
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62796187"
 ---
 # <a name="sphelpdownloadlist-transact-sql"></a>sp_help_downloadlist (Transact-SQL)
@@ -54,7 +54,7 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 > [!NOTE]  
 >  Либо *job_id* или *имя_задания* должен быть указан, но не оба аргумента одновременно.  
   
-`[ @operation = ] 'operation'` Допустимая операция для указанного задания. *Операция* — **varchar(64)**, значение по умолчанию NULL, и может принимать одно из следующих значений.  
+`[ @operation = ] 'operation'` Допустимая операция для указанного задания. *Операция* — **varchar(64)** , значение по умолчанию NULL, и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -68,11 +68,11 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**ВО ВРЕМЯ СИНХРОНИЗАЦИИ**|Серверная операция, вызывающая синхронизацию системных часов целевого сервера с многосерверным доменом. Это дорогостоящая операция, поэтому ее не стоит выполнять регулярно.|  
 |**UPDATE**|Операция задания, обновляющая только **sysjobs** сведения для задания, а не шаги задания или расписания. Автоматически вызывается **sp_update_job**.|  
   
-`[ @object_type = ] 'object_type'` Тип объекта для указанного задания. *object_type* — **varchar(64)**, значение по умолчанию NULL. *object_type* может быть JOB или SERVER. Дополнительные сведения о допустимых *object_type*значения, см. в разделе [sp_add_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md).  
+`[ @object_type = ] 'object_type'` Тип объекта для указанного задания. *object_type* — **varchar(64)** , значение по умолчанию NULL. *object_type* может быть JOB или SERVER. Дополнительные сведения о допустимых *object_type*значения, см. в разделе [sp_add_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md).  
   
 `[ @object_name = ] 'object_name'` Имя объекта. *object_name* — **sysname**, значение по умолчанию NULL. Если *object_type* имеет значение JOB, *object_name*является именем задания. Если *object_type*является СЕРВЕРОМ, *object_name*является именем сервера.  
   
-`[ @target_server = ] 'target_server'` Имя целевого сервера. *target_server* — **nvarchar(128)**, значение по умолчанию NULL.  
+`[ @target_server = ] 'target_server'` Имя целевого сервера. *target_server* — **nvarchar(128)** , значение по умолчанию NULL.  
   
 `[ @has_error = ] has_error` Является ли задание подтверждать ошибки. *has_error* — **tinyint**, и по умолчанию NULL, которое указывает, ошибки будут подтверждаться. **1** указывает, что все ошибки будут подтверждаться.  
   

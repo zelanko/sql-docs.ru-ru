@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.custom: ''
 ms.date: 06/13/2017
 ms.openlocfilehash: 58ed105619ca5ad5eadb00271e18ddaa10c6bfe3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63266815"
 ---
 # <a name="planning-for-reporting-services-and-power-view-browser-support-reporting-services-2014"></a>Планирование служб Reporting Services и поддержки Power View в браузерах (Reporting Services 2014)
@@ -146,7 +146,7 @@ ms.locfileid: "63266815"
   
  Если поддержка скриптов отключена, появится сообщение об ошибке, похожее на следующее при открытии отчета:  
   
-- **Браузер не поддерживает выполнение скриптов или был настроен для запуска скриптов запрещено. Щелкните здесь для просмотра отчета без выполнения сценариев**.  
+- **Браузер не поддерживает выполнение скриптов или выполнение скриптов запрещено в его настройках. Щелкните здесь для просмотра отчета без выполнения сценариев**.  
   
  При просмотре отчета без поддержки выполнения скриптов отчет готовится к просмотру в формате HTML без таких средств просмотра отчетов, как панель инструментов отчета и схема документа.  
   

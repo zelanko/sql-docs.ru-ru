@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7bad6fbd9229547318a060f08eeb102b21cda9bb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62470892"
 ---
 # <a name="dbosysalerts-transact-sql"></a>dbo.sysalerts (Transact-SQL)
@@ -67,7 +67,7 @@ ms.locfileid: "62470892"
 |Decimal | binary | Значение |
 |------|------|------|
 |0 |0000 |сообщение не |
-|1 |0001 |Отправить по электронной почте |
+|1 |0001 |email |
 |2 |0010 |пейджер |
 |3 |0011 |пейджера и адрес электронной почты |
 |4 |0100 |Net send |
