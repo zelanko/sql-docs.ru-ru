@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f1acd7bf033ca2170a2a2b0cb1f701606510bf14
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108424"
 ---
 # <a name="lesson-5-formatting-a-report-reporting-services"></a>Занятие 5.: Форматирование отчета (службы Reporting Services)
@@ -62,9 +62,9 @@ ms.locfileid: "66108424"
   
     -   **Символ: $ English (United States)**  
   
-4.  Выберите **Использовать разделитель разрядов (пробел)**.  
+4.  Выберите **Использовать разделитель разрядов (пробел)** .  
   
-     Если будет отображен текст:**$12 345,00**, то вы задали правильные параметры.  
+     Если будет отображен текст: **$12 345,00**, то вы задали правильные параметры.  
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   

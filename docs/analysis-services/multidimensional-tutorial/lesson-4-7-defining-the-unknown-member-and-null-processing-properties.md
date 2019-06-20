@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0faff73e9b823ab46073137e67c5dfc511404330
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65404076"
 ---
 # <a name="lesson-4-7---defining-the-unknown-member-and-null-processing-properties"></a>Занятие 4 – 7-определение Unknown Member и Null Processing свойства
@@ -68,7 +68,7 @@ ms.locfileid: "65404076"
   
     Откроется диалоговое окно **Добавление или удаление таблиц** .  
   
-2.  В списке **Включенные объекты** выберите **DimProduct (dbo)**, а затем нажмите кнопку **Добавить связанные таблицы**.  
+2.  В списке **Включенные объекты** выберите **DimProduct (dbo)** , а затем нажмите кнопку **Добавить связанные таблицы**.  
   
     Будут добавлены объекты **DimProductSubcategory (dbo)** и **FactProductInventory (dbo)** . Удалите **FactProductInventory (dbo)** , чтобы в список **Включенные объекты** была добавлена только таблица **DimProductSubcategory (dbo)** .  
   
@@ -90,7 +90,7 @@ ms.locfileid: "65404076"
   
 9. На панели **Атрибуты** измените имя нового атрибута на **Category**.  
   
-10. В окне «Свойства» щелкните **NameColumn** свойство и нажмите кнопку обзора (**...** ) кнопку, чтобы открыть **столбец имени** диалоговое окно.  
+10. В окне «Свойства» щелкните **NameColumn** свойство и нажмите кнопку обзора ( **...** ) кнопку, чтобы открыть **столбец имени** диалоговое окно.  
   
 11. В списке **Исходный столбец** выберите **EnglishProductCategoryName** и нажмите кнопку **ОК**.  
   

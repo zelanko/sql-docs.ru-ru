@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a733b434e428f7486c235f4efc923adfa4b14949
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66083683"
 ---
 # <a name="mining-model-content-for-clustering-models-analysis-services---data-mining"></a>Содержимое моделей интеллектуального анализа данных для моделей кластеризации (службы Analysis Services — интеллектуальный анализ данных)
@@ -103,7 +103,7 @@ ms.locfileid: "66083683"
  NODE_DESCRIPTION  
  Описание узла.  
   
- **Родительский узел** Всегда имеет значение **(All)**.  
+ **Родительский узел** Всегда имеет значение **(All)** .  
   
  **Узлы кластера** Список с разделителями-запятыми основных атрибутов, которыми данный кластер отличается от других кластеров.  
   

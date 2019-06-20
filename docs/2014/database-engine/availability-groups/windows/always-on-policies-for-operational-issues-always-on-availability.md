@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 815f549cf9ab6dd7fe748c08ae7f32683c9d8551
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62815759"
 ---
 # <a name="always-on-policies-for-operational-issues-with-always-on-availability-groups-sql-server"></a>Политики AlwaysOn на случай проблем в работе с группами доступности AlwaysOn (SQL Server)
@@ -46,7 +46,7 @@ ms.locfileid: "62815759"
 ##  <a name="AlwaysOnPBM"></a> Стандартные политики и проблемы  
  В следующей таблице приведены итоговые сведения о стандартных политиках.  
   
-|Имя политики|Проблемы|Категории**<sup>*</sup>**|Аспект|  
+|Имя политики|Проблемы|Категории **<sup>*</sup>**|Аспект|  
 |-----------------|-----------|------------------------------|-----------|  
 |Состояние кластера WSFC|[WSFC служба кластеров работает в режиме вне сети](wsfc-cluster-service-is-offline.md).|Критическая|Экземпляр SQL Server|  
 |Режим «в сети» группы доступности|[Группа доступности в режиме вне сети](availability-group-is-offline.md).|Критическая|группа доступности|  

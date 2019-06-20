@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: c0b1a69ebbc96197a5bf8fc1cb617e7fde65c731
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66707177"
 ---
 # <a name="objectproxy-ado---wfc-syntax"></a>ObjectProxy (ADO — синтаксис WFC)
@@ -50,4 +50,4 @@ public Object ObjectProxy.( String method, Object[] args)
  Строка, содержащая имя метода для вызова на сервере.  
   
  *аргументы*  
- Необязательный параметр. Массив объектов, которые являются аргументов метода на сервере. Типами данных Java автоматически преобразуются в типы данных, подходящий для использования на сервере.
+ Необязательный. Массив объектов, которые являются аргументов метода на сервере. Типами данных Java автоматически преобразуются в типы данных, подходящий для использования на сервере.

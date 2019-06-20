@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7067449c0de9958e98a7a9dc5cc09c7f89f33fa9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9a23d2753f6fe1d94fcccab648766c3471581906
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62472296"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263394"
 ---
 # <a name="create-and-manage-tabular-model-partitions"></a>Создание и управление секциями табличной модели
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "62472296"
   Секции разделяют таблицу на логические части. Каждая секция затем может обрабатываться (обновляться) независимо от других секций. Секции, определенные для модели во время разработки модели, дублируются в модели развертывания. После развертывания можно настроить управление секциями с помощью диалогового окна **Секции** в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или с помощью скрипта. В задачах этого раздела описывается создание и управление секциями в развернутой модели.  
   
   > [!NOTE]  
->  Секции в табличных моделях, созданных на уровне совместимости 1400 определяются с помощью инструкции запроса M. Дополнительные сведения см. в разделе [ссылку M](https://msdn.microsoft.com/library/mt211003.aspx). 
+>  Секции в табличных моделях, созданных на уровне совместимости 1400 определяются с помощью инструкции запроса M. Дополнительные сведения см. в разделе [ссылку M](/powerquery-m/power-query-m-reference). 
 >
   
 ## <a name="tasks"></a>Задания  

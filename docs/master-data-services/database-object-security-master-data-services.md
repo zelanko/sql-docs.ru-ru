@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: df262ea32662a160b0a0ebcadc26eb43676271b6
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65487725"
 ---
 # <a name="database-object-security-master-data-services"></a>Защита объектов базы данных (службы Master Data Services)
@@ -48,11 +48,11 @@ ms.locfileid: "65487725"
   
 |Действие|Защищаемые объекты|Разрешения|  
 |------------|----------------|-----------------|  
-|Создание, обновление и удаление конечных элементов и их атрибутов.|stg.name_Leaf|Обязательно: INSERT<br /><br /> Необязательно: SELECT и UPDATE|  
+|Создание, обновление и удаление конечных элементов и их атрибутов.|stg.name_Leaf|Обязательно: INSERT<br /><br /> Необязательное действие: SELECT и UPDATE|  
 |Загрузить данные из конечной промежуточной таблицы в соответствующие таблицы базы данных MDS.|stg.udp_name_Leaf|EXECUTE|  
-|Создание, обновление и удаление консолидированных элементов и их атрибутов.|stg.name_Consolidated|Обязательно: INSERT<br /><br /> Необязательно: SELECT и UPDATE|  
+|Создание, обновление и удаление консолидированных элементов и их атрибутов.|stg.name_Consolidated|Обязательно: INSERT<br /><br /> Необязательное действие: SELECT и UPDATE|  
 |Загрузить данные из объединенной промежуточной таблицы в соответствующие таблицы базы данных MDS.|stg.udp_name_Consolidated|EXECUTE|  
-|Перемещение элементов в явную иерархию.|stg.name_Relationship|Обязательно: INSERT<br /><br /> Необязательно: SELECT и UPDATE|  
+|Перемещение элементов в явную иерархию.|stg.name_Relationship|Обязательно: INSERT<br /><br /> Необязательное действие: SELECT и UPDATE|  
 |Загрузить данные из промежуточной таблицы связей в соответствующие таблицы базы данных MDS.|stg.udp_name_Relationship|EXECUTE|  
 |Просмотреть ошибки, которые возникли при вставке данных из промежуточных таблиц в таблицы базы данных MDS.|stg.udp_name_Relationship|SELECT|  
   

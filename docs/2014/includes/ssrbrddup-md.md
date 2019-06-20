@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 3098f44a2515108afbac65c3b8f16ba5589538f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65819084"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67222544"
 ---
 Создавать и изменять определения отчетов \(RDL-файлы\) в SQL Server Data Tools можно в построителе отчетов и конструкторе отчетов. В каждой среде разработки существуют различные способы создания, открытия и сохранения отчетов и связанных элементов. Дополнительные сведения см. в разделе **Разработка отчетов в построителе отчетов и конструкторе отчетов \(SSRS\)** на веб-сайте microsoft.com.

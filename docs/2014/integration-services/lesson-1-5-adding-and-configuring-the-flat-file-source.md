@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 32b95a5d156ae52394b7128b024c86b9a7e308b1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62891542"
 ---
 # <a name="step-5-adding-and-configuring-the-flat-file-source"></a>Шаг 5. Добавление и настройка источника неструктурированных файлов
@@ -24,7 +24,7 @@ ms.locfileid: "62891542"
   
 ### <a name="to-add-a-flat-file-source-component"></a>Добавление компонента источника неструктурированных файлов  
   
-1.  Откройте **потока данных** конструктор, щелкнув `Extract Sample Currency Data` задачи потока данных или щелкнув **вкладка «поток данных»**.  
+1.  Откройте **потока данных** конструктор, щелкнув `Extract Sample Currency Data` задачи потока данных или щелкнув **вкладка «поток данных»** .  
   
 2.  В окне **Панель элементов служб SSIS**разверните элемент **Другие источники**и перетащите **Источник "Неструктурированный файл"** в область конструктора вкладки **Поток данных** .  
   
@@ -40,7 +40,7 @@ ms.locfileid: "62891542"
   
 8.  Щелкните правой кнопкой мыши источник "Неструктурированный файл" и выберите **Свойства**.  
   
-9. В окне «Свойства» убедитесь, что `LocaleID` свойству **русский (Россия)**.  
+9. В окне «Свойства» убедитесь, что `LocaleID` свойству **русский (Россия)** .  
   
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
  [Шаг 6. Добавление и Настройка преобразований «Уточняющий запрос»](lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  

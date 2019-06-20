@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dac94d8bfb0e2bc0ab91f6a18e6f18606481b112
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63198576"
 ---
 # <a name="delete---sql-command"></a>DELETE (команда SQL)
@@ -34,7 +34,7 @@ DELETE FROM [DatabaseName!]TableName
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- ИЗ [ *DatabaseName!*] *TableName*  
+ ИЗ [ *DatabaseName!* ] *TableName*  
  Указывает таблицу, в котором записи помечены для удаления.  
   
  *Имя базы данных!* Задает имя базы данных, содержащую таблицу, в том случае, если содержащий база данных не является база данных, указанная с источником данных. Необходимо включить имя базы данных, содержащую таблицу, в том случае, если база данных не является база данных, указанная с источником данных. Включить в разделители восклицательный знак (!), после имени базы данных и перед именем таблицы.  

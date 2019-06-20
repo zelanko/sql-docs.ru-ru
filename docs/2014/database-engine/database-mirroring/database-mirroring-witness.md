@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 682a3692414f89beb0c5e0f0204bc1a69b532e64
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62807637"
 ---
 # <a name="database-mirroring-witness"></a>Database Mirroring Witness
@@ -62,7 +62,7 @@ ms.locfileid: "62807637"
   
 -   Если зеркальный сервер отключен от следящего и основного серверов, то автоматическая отработка отказа невозможна вне зависимости от состояния основного сервера.  
   
- Требование, которое заключается в том, чтобы по крайней мере два экземпляра сервера оставались подключенными, называется *кворумом*. Кворум гарантирует, что в каждый момент времени база данных может обслуживаться только одним участником. Сведения о кворуме и его влияния на сеанс, см. в разделе [кворума: Как следящий сервер влияет на доступность базы данных &#40;зеркальное отображение базы данных&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+ Требование, которое заключается в том, чтобы по крайней мере два экземпляра сервера оставались подключенными, называется *кворумом*. Кворум гарантирует, что в каждый момент времени база данных может обслуживаться только одним участником. Дополнительные сведения о кворуме и влиянии, которое он оказывает на сеанс, см. в разделе [Кворум. Как следящий сервер влияет на доступность базы данных &#40;зеркальное отображение базы данных&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
 ##  <a name="AddRemoveWitness"></a> Добавление или удаление следящего сервера  
  **Добавление следящего сервера**  
@@ -78,7 +78,7 @@ ms.locfileid: "62807637"
 ## <a name="see-also"></a>См. также  
  [Переключение ролей во время сеанса зеркального отображения базы данных (SQL Server)](role-switching-during-a-database-mirroring-session-sql-server.md)   
  [Режимы работы зеркального отображения базы данных](database-mirroring-operating-modes.md)   
- [Кворум. Как следящий сервер влияет на доступность базы данных &#40;зеркального отображения базы данных&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)   
+ [Кворум. Как следящий сервер влияет на доступность базы данных (зеркальное отображение базы данных)](quorum-how-a-witness-affects-database-availability-database-mirroring.md)   
  [Возможные неполадки при зеркальном отображении базы данных](possible-failures-during-database-mirroring.md)   
  [Состояния зеркального отображения (SQL Server)](mirroring-states-sql-server.md)  
   

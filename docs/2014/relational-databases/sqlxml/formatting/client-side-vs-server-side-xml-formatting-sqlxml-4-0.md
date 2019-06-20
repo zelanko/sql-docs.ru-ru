@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4eaa4667db1e8b6ed789e2adb90bc8d72c1b02e6
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66012352"
 ---
 # <a name="client-side-vs-server-side-xml-formatting-sqlxml-40"></a>Сравнение запроса XPath на стороне клиента и Форматирование XML-кода на сервере (SQLXML 4.0)
@@ -179,7 +179,7 @@ CREATE VIEW ContactView AS (SELECT ContactID as CID,
 </ROOT>  
 ```  
   
- Если XML-форматирование выполняется на сервере (**client-side-xml = «0»**), можно использовать псевдоним для столбцов, возвращающих запросы, в какие реальная таблица и столбец имен возвращаются (даже при наличии указанных псевдонимов). Например, следующий шаблон выполняет запрос, и XML-форматирование выполняется на сервере ( **client-side-xml** параметр не указан и **Run On Client** параметр не выбран для виртуальный корень). Запрос также указывает режим AUTO (а не режим NESTED на стороне клиента).  
+ Если XML-форматирование выполняется на сервере (**client-side-xml = «0»** ), можно использовать псевдоним для столбцов, возвращающих запросы, в какие реальная таблица и столбец имен возвращаются (даже при наличии указанных псевдонимов). Например, следующий шаблон выполняет запрос, и XML-форматирование выполняется на сервере ( **client-side-xml** параметр не указан и **Run On Client** параметр не выбран для виртуальный корень). Запрос также указывает режим AUTO (а не режим NESTED на стороне клиента).  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

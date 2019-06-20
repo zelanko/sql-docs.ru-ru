@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7d6b2e91504c2c9ba796d2c0a55ba19fb3f6493e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63181695"
 ---
 # <a name="avg-mdx"></a>Avg (многомерные выражения)
@@ -51,7 +51,7 @@ Avg( Set_Expression [ , Numeric_Expression ] )
  Чтобы принудительно включить пустые ячейки, приложение должно использовать [CoalesceEmpty](../mdx/coalesceempty-mdx.md) функцию или укажите допустимый *Numeric_Expression* , предоставляет значение нуль (0), пустые значения. Дополнительные сведения о пустых ячейках см. в документации по OLE DB.  
   
 ## <a name="examples"></a>Примеры  
- Следующий пример возвращает среднее значение для меры в указанном наборе.  Обратите внимание, что заданная мера может быть либо мерой по умолчанию для элементов указанного набора, либо указанной мерой.  
+ Следующий пример возвращает среднее значение для меры в указанном наборе. Обратите внимание, что заданная мера может быть либо мерой по умолчанию для элементов указанного набора, либо указанной мерой.  
   
  `WITH SET [NW Region] AS`  
   

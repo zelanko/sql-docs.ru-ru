@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0fe0862438943fec36728a3c4e6c796061c86593
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62891582"
 ---
 # <a name="step-2-running-the-package-installation-wizard"></a>Шаг 2. Запуск мастера установки пакета
@@ -81,11 +81,11 @@ ms.locfileid: "62891582"
   
      Поскольку значения переменных среды на целевом компьютере отличаются от значений переменных среды на компьютере разработчика, на странице проверки пакетов отображается несколько предупреждений. Следует ожидать следующих предупреждений.  
   
-    -   Файл конфигурации: «C:\DeploymentTutorial\DataTransferConfig.dtsConfig» является недопустимым. Проверьте имя файла конфигурации.  
+    -   Недопустимый файл конфигурации C:\DeploymentTutorial\DataTransferConfig.dtsConfig. Проверьте имя файла конфигурации.  
   
     -   Не удалось загрузить по крайней мере одну запись конфигурации в пакете. Проверьте записи конфигурации и предыдущие предупреждения, чтобы увидеть, какая из них ошибочна.  
   
-    -   Файл конфигурации: «C:\DeploymentTutorial\LoadXMLDataConfig.dtsConfig недопустим. Проверьте имя файла конфигурации.  
+    -   Недопустимый файл конфигурации C:\DeploymentTutorial\LoadXMLDataConfig.dtsConfig. Проверьте имя файла конфигурации.  
   
     -   Не удалось загрузить по крайней мере одну запись конфигурации в пакете. Проверьте записи конфигурации и предыдущие предупреждения, чтобы увидеть, какая из них ошибочна.  
   

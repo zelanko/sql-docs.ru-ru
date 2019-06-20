@@ -19,10 +19,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4a237f0b4d4f1d65e471be065cf13fa985de4cff
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/17/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65821874"
 ---
 # <a name="sqlcmd---use-the-utility"></a>Использование программы sqlcmd
@@ -41,13 +41,13 @@ ms.locfileid: "65821874"
   
 ## <a name="typically-used-sqlcmd-options"></a>Часто используемые параметры sqlcmd  
   
--   Серверный параметр (**-S**) определяет экземпляр [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], к которому подключается программа **sqlcmd**.  
+-   Серверный параметр ( **-S**) определяет экземпляр [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], к которому подключается программа **sqlcmd**.  
   
--   Параметры проверки подлинности (**-E**, **-U**и **-P**), с помощью которых задаются учетные данные, используемые программой **sqlcmd** для подключения к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **ПРИМЕЧАНИЕ.** Параметр **-E** используется по умолчанию, и нет необходимости его указывать.  
+-   Параметры проверки подлинности ( **-E**, **-U**и **-P**), с помощью которых задаются учетные данные, используемые программой **sqlcmd** для подключения к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **ПРИМЕЧАНИЕ.** Параметр **-E** используется по умолчанию, и нет необходимости его указывать.  
   
--   Параметры входа (**-Q**, **-q**и **-i**) определяют расположение входных данных для программы **sqlcmd**.  
+-   Параметры входа ( **-Q**, **-q**и **-i**) определяют расположение входных данных для программы **sqlcmd**.  
   
--   Параметр выходных данных (**-o**) определяет файл, в который программа **sqlcmd** помещает выходные данные.  
+-   Параметр выходных данных ( **-o**) определяет файл, в который программа **sqlcmd** помещает выходные данные.  
   
 ## <a name="connect-to-the-sqlcmd-utility"></a>Подключение к программе sqlcmd  
   

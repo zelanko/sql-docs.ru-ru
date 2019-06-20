@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 11c930efdffe5eb685494843f2b0abe7b753ea3d
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66710419"
 ---
 # <a name="updatebatch-method"></a>Метод UpdateBatch
@@ -39,7 +39,7 @@ recordset.UpdateBatch AffectRecords, PreserveStatus
  Необязательный параметр. [AffectEnum](../../../ado/reference/ado-api/affectenum.md) значение, указывающее, сколько записей **UpdateBatch** повлияет на метод.  
   
  *PreserveStatus*  
- Необязательный параметр. Объект **логическое** значение, указывающее ли изменения, как указано в [состояние](../../../ado/reference/ado-api/status-property-ado-recordset.md) свойство, должен быть зафиксирован. Если это значение **True**, **состояние** свойство каждой записи остается неизменным после завершения обновления.  
+ Необязательный. Объект **логическое** значение, указывающее ли изменения, как указано в [состояние](../../../ado/reference/ado-api/status-property-ado-recordset.md) свойство, должен быть зафиксирован. Если это значение **True**, **состояние** свойство каждой записи остается неизменным после завершения обновления.  
   
 ## <a name="remarks"></a>Примечания  
  Используйте **UpdateBatch** метод при изменении **записей** объекта в пакетный режим обновления для передачи все изменения, внесенные в **записей** объекта в основную базу данных.  
