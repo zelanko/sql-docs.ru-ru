@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5f348a7f76f65c19801525967f3ded5c8b0d2d26
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62835835"
 ---
 # <a name="prepare-sql-server-for-cdc"></a>Подготовка SQL Server для CDC
@@ -49,7 +49,7 @@ ms.locfileid: "62835835"
   
 -   **Шифровать соединение**: выберите параметр **Шифровать соединение**, чтобы обмен данными между службой Oracle CDC Service и целевым экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполнялся по зашифрованному соединению.  
   
--   **Дополнительно**: При необходимости введите любые дополнительные свойства соединения.  
+-   **Дополнительно**: При необходимости введите любые дополнительные свойства подключения.  
   
 ### <a name="view-script"></a>Просмотреть скрипт  
  Щелкните **Просмотреть скрипт** для просмотра скрипта установки (он будет доступен только для чтения). Системный администратор [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при необходимости может скопировать этот скрипт в консоль управления SQL Server и отредактировать его. Дополнительные сведения о подготовке скрипта SQL Server см. в разделе [Подготовка SQL Server для скрипта представления CDC Oracle](prepare-sql-server-for-oracle-cdc-view-script.md).  

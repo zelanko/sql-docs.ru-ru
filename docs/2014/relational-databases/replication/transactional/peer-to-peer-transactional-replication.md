@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 133d44d233abdcffe7893ce29be5b462f4b16524
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63274351"
 ---
 # <a name="peer-to-peer-transactional-replication"></a>Peer-to-Peer Transactional Replication
@@ -137,7 +137,7 @@ ms.locfileid: "63274351"
   
 -   Параметр агента распространителя **-SubscriptionStreams** и параметр агента чтения журнала **-MaxCmdsInTran**.  
   
--   Свойства статьи **@destination_owner** и **@destination_table**.  
+-   Свойства статьи **@destination_owner** и **@destination_table** .  
 
 -   Одноранговая репликация транзакций не поддерживает создание односторонней транзакционной подписки на одноранговые публикации.
   
@@ -147,7 +147,7 @@ ms.locfileid: "63274351"
   
 -   Свойство статьи **@replicate_ddl** должно иметь значение `true`; **@identityrangemanagementoption** должно иметь значение `manual`; и **@status** требуется соответствующий параметр **24** имеет значение.  
   
--   Значение для свойства статьи **@ins_cmd**, **@del_cmd**, и **@upd_cmd** не может быть присвоено `SQL`.  
+-   Значение для свойства статьи **@ins_cmd** , **@del_cmd** , и **@upd_cmd** не может быть присвоено `SQL`.  
   
 -   Свойство подписки **@sync_type** должно иметь значение `none` или `automatic`.  
   

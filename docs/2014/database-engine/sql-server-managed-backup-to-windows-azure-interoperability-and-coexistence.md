@@ -1,5 +1,5 @@
 ---
-title: 'SQL Server управляемое резервное копирование в Windows Azure: Взаимодействие и совместная работа | Документация Майкрософт'
+title: Управляемое резервное копирование SQL Server в Microsoft Azure. Взаимодействие и совместная работа | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d4d883d54a1ad933d4e248f292d9b6a222915a00
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62842911"
 ---
-# <a name="sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence"></a>SQL Server управляемое резервное копирование в Windows Azure: Возможности взаимодействия и совместной работы
+# <a name="sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence"></a>Управляемое резервное копирование SQL Server в Microsoft Azure. Возможности взаимодействия и совместной работы
   В этом разделе описываются вопросы взаимодействия и совместной работы [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] с некоторыми функциями в [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. К таким средствам относятся: Группы доступности AlwaysOn, зеркальное отображение базы данных, планы обслуживания резервных копий, доставка журналов, Нерегламентированное резервное копирование, отсоединение базы данных и Drop Database.  
   
 ### <a name="alwayson-availability-groups"></a>Группы доступности AlwaysOn  

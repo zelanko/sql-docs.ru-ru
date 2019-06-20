@@ -1,5 +1,5 @@
 ---
-title: 'Пример внедрения: Создание экосистемы для предприятия с помощью Microsoft Dynamics ERP и репликации SQL Server 2014 для обеспечения масштабируемости и производительности | Документация Майкрософт'
+title: Пример. Создание экосистемы для предприятия с помощью Microsoft Dynamics ERP и репликации SQL Server 2014 для обеспечения масштабируемости и производительности | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,13 +10,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 64a1423295b8117640de555a7132a44af98b87c0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62470105"
 ---
-# <a name="case-study-building-an-enterprise-ecosystem-with-microsoft-dynamics-erp-and-sql-server-2014-replication-for-scalability-and-performance"></a>Пример внедрения: Создание экосистемы для предприятия с помощью Microsoft Dynamics ERP и репликации SQL Server 2014 для обеспечения масштабируемости и производительности
+# <a name="case-study-building-an-enterprise-ecosystem-with-microsoft-dynamics-erp-and-sql-server-2014-replication-for-scalability-and-performance"></a>Пример. Создание масштабируемой и высокопроизводительной экосистемы для предприятия с помощью Microsoft Dynamics ERP и репликации SQL Server 2014
 
   **Сводка** В этом документе рассматриваются следующие сценарии:  
 Как использовать репликацию транзакций в SQL Server 2014 для распространения транзакций от клиентов Dynamics AX между несколькими узлами. Поскольку данные сохраняются на узлы в режиме реального времени, репликация транзакций обеспечивает избыточность данных, что повышает доступность данных и позволяет более эффективно анализировать доступные данные с целью установления показателей производительности.  
