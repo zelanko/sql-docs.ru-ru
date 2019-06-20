@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2716e985897f8115d189d9410b7cdb13fb1af291
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62822078"
 ---
-# <a name="lesson-5-extending-the-time-series-model"></a>Занятие 5.: Расширение временных рядов модели
+# <a name="lesson-5-extending-the-time-series-model"></a>Занятие 5.: Расширение модели временных рядов
   В выпуске [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Enterprise в модель временных рядов можно добавлять новые данные и автоматически встраивать в эту модель новые данные. Добавить новые данные в модель интеллектуального анализа данных временных рядов можно одним из двух способов.  
   
 -   Использовать PREDICTION JOIN для соединения данных из внешнего источника с обучающими данными.  

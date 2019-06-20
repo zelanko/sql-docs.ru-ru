@@ -21,10 +21,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 247dd2950365a1b75a3b911fe6dfda1a4dd044df
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107367"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Источники данных, поддерживаемые службами Reporting Services (SSRS)
@@ -160,7 +160,7 @@ ms.locfileid: "66107367"
   
  В среде [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)]графическим конструктором запросов, связанным с этим модулем обработки данных, является [пользовательский интерфейс конструктора реляционных запросов](../relational-query-designer-user-interface.md), а не [конструктор визуальных инструментов для баз данных](../../ssms/visual-db-tools/visual-database-tool-designers.md) , который используется с типом источника данных **Microsoft SQL Server** .  
   
- [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] автоматически распознает **[!INCLUDE[ssSDS](../../includes/sssds-md.md)]** и **Microsoft SQL Server** источника данных и открывает графический конструктор, связанный с этим типом источника данных.  
+ [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] автоматически распознает ** [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ** и **Microsoft SQL Server** источника данных и открывает графический конструктор, связанный с этим типом источника данных.  
   
  Если конструктор запросов используется в графическом режиме, запрос анализируется и, возможно, переписывается. Текстовый конструктор запросов также доступен для написания запросов. Текстовый конструктор запросов можно использовать при необходимости четкого управления синтаксисом [!INCLUDE[tsql](../../includes/tsql-md.md)] в запросе. Дополнительные сведения см. в разделе [Пользовательский интерфейс текстового конструктора запросов](../text-based-query-designer-user-interface.md).  
   

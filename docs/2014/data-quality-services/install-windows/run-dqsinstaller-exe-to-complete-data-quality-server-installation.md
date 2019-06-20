@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 88b80e0eeba26e1a2c03f795d7ae3ce6fa796f10
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65480486"
 ---
 # <a name="run-dqsinstallerexe-to-complete-data-quality-server-installation"></a>Запуск файла DQSInstaller.exe для завершения установки сервера служб DQS
@@ -34,7 +34,7 @@ ms.locfileid: "65480486"
   
     -   **Начальный экран**. На **начальном экране** щелкните **Установщик сервера служб Data Quality**.  
   
-    -   **Меню "Пуск"**. На панели задач щелкните **запустить**, пункты **все программы**, нажмите кнопку **Microsoft SQL Server 2014**. В разделе **Microsoft SQL Server 2014**, нажмите кнопку **служб Data Quality Services**, а затем нажмите кнопку **установщик Data Quality Server.**  
+    -   **Меню "Пуск"** . На панели задач щелкните **запустить**, пункты **все программы**, нажмите кнопку **Microsoft SQL Server 2014**. В разделе **Microsoft SQL Server 2014**, нажмите кнопку **служб Data Quality Services**, а затем нажмите кнопку **установщик Data Quality Server.**  
   
     -   **Проводник**. Найдите файл DQSInstaller.exe. Если был установлен экземпляр SQL Server по умолчанию, файл DQSInstaller.exe будет находиться в папке «C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Binn». Дважды щелкните файл DQSInstaller.exe.  
   

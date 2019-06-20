@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4ecdc64918e582f25f0e017d263c66e78c0d1bee
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62725388"
 ---
 # <a name="data-types-in-analysis-services"></a>Типы данных в службах Analysis Services
@@ -27,7 +27,7 @@ ms.locfileid: "62725388"
 |BigInt|64-разрядное целое число со знаком. *BigInt* тип значения представляет целые числа со значениями в диапазоне от отрицательного числа 9223372036854775808 до 9223372036854775807 положительным.|  
 |Бинарный|Поток двоичных данных **байтов** типа. **Байтов** является типом значения, представляющий целых чисел без знака со значениями в диапазоне от 0 до 255.|  
 |Логическое значение|Экземпляры этого типа имеют значения либо `true`, либо `false`.|  
-|CURRENCY|Объект *валюты* значение от -922,337,203,685,477.5808 до + 922,337,203,685,477.5807 с точностью до одной десятитысячной единицы валюты (четыре знака после запятой).|  
+|Currency|Объект *валюты* значение от -922,337,203,685,477.5808 до + 922,337,203,685,477.5807 с точностью до одной десятитысячной единицы валюты (четыре знака после запятой).|  
 |Дата|Данные даты и времени, хранящиеся в виде типа double. Целая часть числа равна числу дней, прошедшему с 30 декабря 1899 г., а десятичная часть представляет долю (время) дня.|  
 |Double|Число с плавающей запятой в диапазоне от -1,79769313486232E +308 до 1,79769313486232E +308. Значения типа Double хранят сведения о числах с точностью до 15 десятичных знаков после запятой.|  
 |Целочисленный|32-разрядное целое число со знаком в диапазоне от минус 2 147 483 648 до плюс 2 147 483 647.|  
@@ -57,6 +57,6 @@ ms.locfileid: "62725388"
 ||NameColumn|Только WChar|  
 |TableMiningStructureColumn|ForeignKeyColumns|Все, кроме Binary|  
 |MeasureGroupAttribute|KeyColumns|Все, кроме Binary|  
-|Мера числа различных объектов|Source|BigInt, Integer, SmallInt, TinyInt, UnsignedBigInt, UnsignedInt, UnsignedSmallInt, UnsignedTinyInt|  
+|Мера числа различных объектов|`Source`|BigInt, Integer, SmallInt, TinyInt, UnsignedBigInt, UnsignedInt, UnsignedSmallInt, UnsignedTinyInt|  
   
   

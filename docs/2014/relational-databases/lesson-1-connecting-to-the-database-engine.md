@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 32b78c210647ab5b3722f01f334e9cb2e8bbfc13
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63145500"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>Урок 1. Подключение к ядру СУБД
@@ -72,7 +72,7 @@ ms.locfileid: "63145500"
   
 2.  Выберите **Компонент Database Engine**.  
   
-3.  В поле **Имя сервера** введите имя экземпляра компонента [!INCLUDE[ssDE](../includes/ssde-md.md)]. В экземпляре SQL Server по умолчанию имя сервера совпадает с именем компьютера. Для именованного экземпляра SQL Server имя сервера имеет вид *<имя_компьютера>***\\***<имя_экземпляра>*, например **ACCTG_SRVR\SQLEXPRESS**.  
+3.  В поле **Имя сервера** введите имя экземпляра компонента [!INCLUDE[ssDE](../includes/ssde-md.md)]. В экземпляре SQL Server по умолчанию имя сервера совпадает с именем компьютера. Для именованного экземпляра SQL Server имя сервера имеет вид *<имя_компьютера>***\\***<имя_экземпляра>* , например **ACCTG_SRVR\SQLEXPRESS**.  
   
 4.  Нажмите кнопку **Соединить**.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "63145500"
   
      Откроется диалоговое окно **Создание имени входа** .  
   
-2.  На **Общие** странице **имя входа** введите имя входа Windows в формате  *\<домена >\\< входа\>*.  
+2.  На **Общие** странице **имя входа** введите имя входа Windows в формате  *\<домена >\\< входа\>* .  
   
 3.  В поле **База данных по умолчанию** выберите [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] , если она доступна. В противном случае выберите базу данных **master**.  
   

@@ -10,16 +10,16 @@ ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 911086beaaaeb28a036a764e066402d7ba6f1da7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62747076"
 ---
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone-using-sql-server-setup"></a>Установить сервер машинного обучения (автономный) или с помощью программы установки SQL Server R Server (изолированный)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Программа установки SQL Server включает в себя **общих компонентов** вариант установки не привязаны, сервер автономного машинного обучения, который выполняется вне SQL Server. В SQL Server 2016 эта функция называется **R Server (изолированный)**. В SQL Server 2017, он называется **сервера машинного обучения (изолированного)** и включает в себя R и Python. 
+Программа установки SQL Server включает в себя **общих компонентов** вариант установки не привязаны, сервер автономного машинного обучения, который выполняется вне SQL Server. В SQL Server 2016 эта функция называется **R Server (изолированный)** . В SQL Server 2017, он называется **сервера машинного обучения (изолированного)** и включает в себя R и Python. 
 
 Изолированный сервер, как устанавливается программой установки SQL Server является функциональным эквивалентом версии без SQL-фирменной символики [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server), поддерживающий же вариантов использования и сценарии, включая:
 
@@ -61,7 +61,7 @@ ms.locfileid: "62747076"
 
 1. Запустите мастер установки.
 
-2. Нажмите кнопку **установки** и выберите **установки нового сервера машинного обучения (изолированного)**.
+2. Нажмите кнопку **установки** и выберите **установки нового сервера машинного обучения (изолированного)** .
     
      ![Установка автономного сервера машинного обучения](media/2017setup-installation-page-mlsvr.png "запуска установки автономного сервера машинного обучения")
 
@@ -100,7 +100,7 @@ ms.locfileid: "62747076"
 
 1. Запустите мастер установки.
 
-2. На **установки** щелкните **Установка нового R Server (изолированный)**.
+2. На **установки** щелкните **Установка нового R Server (изолированный)** .
     
      ![Запустите программу установки изолированного сервера R](media/2016-setup-installation-rsvr.png "запустите программу установки изолированного сервера R")
 

@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 86db5a13ab1bdac2b35c6d5128ba1b2234bc24b7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62860989"
 ---
 # <a name="managedbackupspbackupconfigadvanced-transact-sql"></a>managed_backup.sp_backup_config_advanced (Transact-SQL)
@@ -66,7 +66,7 @@ EXEC managed_backup.sp_backup_config_advanced
  Дополнительные сведения об алгоритмах шифрования см. в разделе [Choose an Encryption Algorithm](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md).  
   
  @encryptor_type  
- Тип шифратора, который может быть либо «СЕРТИФИКАТ» или "ASYMMETRIC_KEY». @encryptor_type — **Nvarchar(32)**. Этот параметр является необязательным, если указано значение NO_ENCRYPTION для @encryption_algorithm параметра.  
+ Тип шифратора, который может быть либо «СЕРТИФИКАТ» или "ASYMMETRIC_KEY». @encryptor_type — **Nvarchar(32)** . Этот параметр является необязательным, если указано значение NO_ENCRYPTION для @encryption_algorithm параметра.  
   
  @encryptor_name  
  Имя существующего сертификата или асимметричного ключа для шифрования резервной копии. @encryptor_name — **SYSNAME**. При использовании асимметричного ключа он должен быть сконфигурирован поставщиком расширенного управления ключами (EKM). Этот параметр является необязательным, если указано значение NO_ENCRYPTION для @encryption_algorithm параметра.  

@@ -29,10 +29,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0e352c6423230e7a921b019c6b02c40bf61bc538
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63025245"
 ---
 # <a name="updating-data-using-xml-updategrams-sqlxml-40"></a>Обновление данных при помощи диаграмм обновления XML (SQLXML 4.0)
@@ -266,7 +266,7 @@ ms.locfileid: "63025245"
   
  Элементы и атрибуты диаграммы обновления ссылаются на элементы и атрибуты схемы сопоставления.  
   
- Следующая схема сопоставления XSD содержит  **\<клиента >**,  **\<порядок >**, и  **\<OD >** элементов, которые сопоставляются Таблицы Sales.Customer, Sales.SalesOrderHeader и Sales.SalesOrderDetail в базе данных.  
+ Следующая схема сопоставления XSD содержит  **\<клиента >** ,  **\<порядок >** , и  **\<OD >** элементов, которые сопоставляются Таблицы Sales.Customer, Sales.SalesOrderHeader и Sales.SalesOrderDetail в базе данных.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -360,7 +360,7 @@ ms.locfileid: "63025245"
   
  Поскольку один студент может быть записан на несколько разных курсов, а на курс может быть записано много студентов, третья таблица Enrollment должна представлять связь M:N.  
   
- Следующая схема сопоставления XSD предоставляет XML-представление таблицы с помощью  **\<Student >**,  **\<курс >**, и  **\<регистрации >** элементов. **IDREFS** атрибуты в схеме сопоставления указывают отношения между этими элементами. **StudentIDList** атрибут  **\<курс >** элемент является **IDREFS** атрибут типа, который относится к столбцу StudentID в таблице Enrollment. Аналогичным образом **EnrolledIn** атрибут  **\<Student >** элемент является **IDREFS** атрибут типа, который относится к столбцу CourseID для регистрации; Таблица.  
+ Следующая схема сопоставления XSD предоставляет XML-представление таблицы с помощью  **\<Student >** ,  **\<курс >** , и  **\<регистрации >** элементов. **IDREFS** атрибуты в схеме сопоставления указывают отношения между этими элементами. **StudentIDList** атрибут  **\<курс >** элемент является **IDREFS** атрибут типа, который относится к столбцу StudentID в таблице Enrollment. Аналогичным образом **EnrolledIn** атрибут  **\<Student >** элемент является **IDREFS** атрибут типа, который относится к столбцу CourseID для регистрации; Таблица.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

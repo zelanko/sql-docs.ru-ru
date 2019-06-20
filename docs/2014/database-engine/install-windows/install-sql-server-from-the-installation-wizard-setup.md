@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0e0af29d348ff55b415d22d44bc8e8e48a35d290
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62775754"
 ---
 # <a name="install-sql-server-2014-from-the-installation-wizard-setup"></a>Установка SQL Server «2014» с помощью мастера установки (программы установки)
@@ -62,7 +62,7 @@ ms.locfileid: "62775754"
   
 8.  На странице «Установка установочных файлов» программа установки отображает индикаторы хода загрузки, извлечения и установки установочных файлов. При обнаружении обновления программы установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] оно также будет установлено, если указано, что его следует использовать.  
   
-9. На странице "Роль установки" выберите **Установка компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**, а затем нажмите кнопку **Далее**, чтобы перейти на страницу "Выбор компонентов".  
+9. На странице "Роль установки" выберите **Установка компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** , а затем нажмите кнопку **Далее**, чтобы перейти на страницу "Выбор компонентов".  
   
 10. Выберите компоненты для установки на странице «Выбор компонентов». После выбора имени компонента описание его группы отображается на панели **Описание компонентов** . Можно установить любое сочетание компонентов (устанавливаемые компоненты отмечаются флажками). Дополнительные сведения см. в разделе [выпуски и компоненты SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md) и [функции, поддерживаемые различными выпусками SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   

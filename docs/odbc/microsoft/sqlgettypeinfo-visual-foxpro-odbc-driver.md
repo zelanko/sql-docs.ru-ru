@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 05cc6dc2647b5297b8d7176cd4bc70261b78cb71
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63181412"
 ---
 # <a name="sqlgettypeinfo-visual-foxpro-odbc-driver"></a>SQLGetTypeInfo (драйвер ODBC для Visual FoxPro)
@@ -46,11 +46,11 @@ ms.locfileid: "63181412"
 |SQL_REAL|Double|  
 |SQL_SMALLINT|Целочисленный|  
 |SQL_TIME|Не поддерживается. Имеется не Visual FoxPro *время* типа.|  
-|SQL_TIMESTAMP|Datetime|  
+|SQL_TIMESTAMP|DateTime|  
 |SQL_TINYINT|Целочисленный|  
 |SQL_VARBINARY|MEMO (двоичный) *, общие|  
 |SQL_VARCHAR|Символ|  
   
- * Тип по умолчанию  
+ \* Тип по умолчанию  
   
  Дополнительные сведения о типах данных Visual FoxPro, см. в разделе [CREATE TABLE](../../odbc/microsoft/create-table-sql-command.md). Дополнительные сведения об этой функции см. в разделе [SQLGetTypeInfo](../../odbc/reference/syntax/sqlgettypeinfo-function.md) в *Справочник по программированию ODBC*.

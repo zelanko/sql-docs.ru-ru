@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: d11a8d5d775499246bd8af709764dec3f2ad61e8
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66698516"
 ---
 # <a name="copyrecord-method-ado"></a>Метод CopyRecord (ADO)
@@ -51,7 +51,7 @@ Record.CopyRecord (Source, Destination, UserName, Password, Options, Async)
  Необязательный параметр. Объект [CopyRecordOptionsEnum](../../../ado/reference/ado-api/copyrecordoptionsenum.md) значение, которое имеет значение по умолчанию **adCopyUnspecified**. Задает поведение этого метода.  
   
  *Async*  
- Необязательный. Объект **логическое** значением, которое при **True**, указывает, что эта операция должна быть асинхронной.  
+ Необязательный параметр. Объект **логическое** значением, которое при **True**, указывает, что эта операция должна быть асинхронной.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Объект **строка** значение, которое обычно возвращает значение *назначения*. Тем не менее возвращаемое точное значение зависит от поставщика.  

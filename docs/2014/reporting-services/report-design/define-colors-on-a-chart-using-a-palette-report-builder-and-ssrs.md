@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 59fc4a9e46e0dbe0f88047a2804330ba1c6ba18d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66106082"
 ---
 # <a name="define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs"></a>Задание цветов диаграммы с помощью палитры (построитель отчетов и службы SSRS)
@@ -44,7 +44,7 @@ ms.locfileid: "66106082"
   
 3.  В **диаграммы** разделе для `Palette` выберите **Custom**.  
   
-4.  В области свойства CustomPaletteColors нажмите кнопку изменения коллекции (**...**). Будет открыто окно **Редактор коллекции ReportColorExpression** .  
+4.  В области свойства CustomPaletteColors нажмите кнопку изменения коллекции ( **...** ). Будет открыто окно **Редактор коллекции ReportColorExpression** .  
   
 5.  Чтобы добавить цвет, нажмите кнопку **Добавить** . Выберите цвет из раскрывающегося списка или выберите выражение и укажите шестнадцатеричное значение конкретного цвета — например, ff6600 для оранжевого цвета.  
   

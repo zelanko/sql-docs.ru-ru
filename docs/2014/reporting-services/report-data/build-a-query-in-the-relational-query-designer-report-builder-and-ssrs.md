@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 901abf5be70f0b3c70b89b0415c59f19a9327b29
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107438"
 ---
 # <a name="build-a-query-in-the-relational-query-designer-report-builder-and-ssrs"></a>Построение запроса в конструкторе реляционных запросов (построитель отчетов и службы SSRS)
@@ -83,7 +83,7 @@ ms.locfileid: "66107438"
   
 ### <a name="to-view-a-query-result-set"></a>Просмотр результирующего набора запроса  
   
-1.  На панели инструментов конструктора запросов нажмите кнопку **Выполнить запрос (!)**.  
+1.  На панели инструментов конструктора запросов нажмите кнопку **Выполнить запрос (!)** .  
   
     > [!NOTE]  
     >  В конструкторе запросов для выполнения запроса и получения результирующего набора используются учетные данные времени разработки. Дополнительные сведения см. в разделе [Указание учетных данных в построителе отчетов](../specify-credentials-in-report-builder.md).  

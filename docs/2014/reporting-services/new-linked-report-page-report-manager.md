@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b6aab8fc0c8e083181779c13654b0d7d42531e50
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108170"
 ---
 # <a name="new-linked-report-page-report-manager"></a>Страница «Создание связанного отчета» (диспетчер отчетов)
@@ -50,7 +50,7 @@ ms.locfileid: "66108170"
  **Описание**  
  Введите описание содержимого отчета. Описание появится на странице «Содержимое» для тех пользователей, которые имеют разрешения на доступ к отчету.  
   
- **Местоположение**  
+ **Location**  
  Определите местоположение папки, которая содержит отчет. По умолчанию связанные отчеты имеют с основным отчетом общего родителя. Нажмите кнопку **Изменение расположения** , чтобы поместить связанный отчет в иную папку.  
   
  **OK**  
