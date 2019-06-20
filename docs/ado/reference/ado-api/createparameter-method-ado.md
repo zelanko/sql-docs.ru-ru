@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 251c35977421d63027fbc9d6042e193125da854d
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66695634"
 ---
 # <a name="createparameter-method-ado"></a>Метод CreateParameter (ADO)
@@ -45,13 +45,13 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
  Необязательный параметр. Объект [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) значение, указывающее тип данных **параметр** объекта.  
   
  *Направление*  
- Необязательный. Объект [ParameterDirectionEnum](../../../ado/reference/ado-api/parameterdirectionenum.md) значение, указывающее тип **параметр** объекта.  
+ Необязательный параметр. Объект [ParameterDirectionEnum](../../../ado/reference/ado-api/parameterdirectionenum.md) значение, указывающее тип **параметр** объекта.  
   
  *Размер*  
- Необязательный. Объект **Long** значение, которое указывает максимальную длину для значения параметра в символах или байтах.  
+ Необязательный параметр. Объект **Long** значение, которое указывает максимальную длину для значения параметра в символах или байтах.  
   
  *Значение*  
- Необязательный. Объект **Variant** , указывающее значение для **параметр** объекта.  
+ Необязательный параметр. Объект **Variant** , указывающее значение для **параметр** объекта.  
   
 ## <a name="remarks"></a>Примечания  
  Используйте **CreateParameter** метод для создания нового **параметр** объект с указанным именем, типом, направление, размер и значением. Все значения, указываемые в аргументах записываются в соответствующий **параметр** свойства.  

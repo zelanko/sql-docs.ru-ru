@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ebb1f67a981396f1f7bb2026f66a528052b0e4df
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66011150"
 ---
 # <a name="limit-search-results-with-rank"></a>Ограничение количества результатов поиска с использованием функции RANK
@@ -110,7 +110,7 @@ GO
  Документ  
  Сущность, возвращаемая в запросах. В [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ей соответствует строка. Документ может иметь несколько свойств точно так же, как и строка может иметь несколько полнотекстовых индексированных столбцов.  
   
- Индекс   
+ Индекс  
  Один инвертированный индекс одного или нескольких документов. Может полностью находиться в памяти или храниться на диске. Многие статистические данные относятся к конкретному индексу, в котором было обнаружено соответствие.  
   
  Полнотекстовый каталог  

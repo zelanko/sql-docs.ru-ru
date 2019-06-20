@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b90fb6d2a85d30179e630d292f8fc11250958344
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63261765"
 ---
 # <a name="specify-article-types-replication-transact-sql-programming"></a>задать типы статей (программирование репликации на языке Transact-SQL)
@@ -36,11 +36,11 @@ ms.locfileid: "63261765"
   
     -   **logbased** — журнальная статья таблицы (значение по умолчанию для репликации транзакций и моментальных снимков). Репликация автоматически создает хранимую процедуру, применяемую для горизонтальной фильтрации, и представление, определяющее статью с вертикальной фильтрацией.  
   
-    -   **logbased manualfilter** — журнальная статья с горизонтальной фильтрацией, где хранимая процедура для горизонтальной фильтрации создается вручную и определяется в параметре **@filter**на издателе в базе данных публикации. Дополнительные сведения см. в статье [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md).  
+    -   **logbased manualfilter** — журнальная статья с горизонтальной фильтрацией, где хранимая процедура для горизонтальной фильтрации создается вручную и определяется в параметре **@filter** на издателе в базе данных публикации. Дополнительные сведения см. в статье [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md).  
   
-    -   **logbased manualfilter** — журнальная статья с вертикальной фильтрацией, где определяющее ее представление создается вручную пользователем и определяется в параметре **@sync_object**на издателе в базе данных публикации. Дополнительные сведения см. в разделах [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md) и [Define and Modify a Column Filter](define-and-modify-a-column-filter.md).  
+    -   **logbased manualfilter** — журнальная статья с вертикальной фильтрацией, где определяющее ее представление создается вручную пользователем и определяется в параметре **@sync_object** на издателе в базе данных публикации. Дополнительные сведения см. в разделах [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md) и [Define and Modify a Column Filter](define-and-modify-a-column-filter.md).  
   
-    -   **logbased manualboth** — журнальная статья с горизонтальной и вертикальной фильтрацией, где хранимая процедура для горизонтальной фильтрации и представление, определяющее вертикальную фильтрацию, создаются пользователем вручную и указываются в параметрах **@filter** и **@sync_object**. Дополнительные сведения см. в разделах [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md) и [Define and Modify a Column Filter](define-and-modify-a-column-filter.md).  
+    -   **logbased manualboth** — журнальная статья с горизонтальной и вертикальной фильтрацией, где хранимая процедура для горизонтальной фильтрации и представление, определяющее вертикальную фильтрацию, создаются пользователем вручную и указываются в параметрах **@filter** и **@sync_object** . Дополнительные сведения см. в разделах [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md) и [Define and Modify a Column Filter](define-and-modify-a-column-filter.md).  
   
      Таким образом определяется новая статья для публикации. Дополнительные сведения см. в статье [определить статью](define-an-article.md).  
   
@@ -58,11 +58,11 @@ ms.locfileid: "63261765"
   
     -   **indexed view schema only** — статья со схемой, соответствующая индексированному представлению. Также необходимо выполнить репликацию базовой таблицы.  
   
-    -   **indexed view logbased manualfilter** — журнальная статья индексированного представления с горизонтальной фильтрацией, где хранимая процедура создается вручную и определяется пользователем в параметре **@filter**на издателе в базе данных публикации. Дополнительные сведения см. в разделе [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md).  
+    -   **indexed view logbased manualfilter** — журнальная статья индексированного представления с горизонтальной фильтрацией, где хранимая процедура создается вручную и определяется пользователем в параметре **@filter** на издателе в базе данных публикации. Дополнительные сведения см. в разделе [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md).  
   
-    -   **indexed view logbased manualfilter** — журнальная статья индексированного представления с фильтрацией, где представление, определяющее вертикальную фильтрацию, создается и определяется пользователем вручную и указывается в параметре **@sync_object**на издателе в базе данных публикации. Дополнительные сведения см. в разделах [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md) и [Define and Modify a Column Filter](define-and-modify-a-column-filter.md).  
+    -   **indexed view logbased manualfilter** — журнальная статья индексированного представления с фильтрацией, где представление, определяющее вертикальную фильтрацию, создается и определяется пользователем вручную и указывается в параметре **@sync_object** на издателе в базе данных публикации. Дополнительные сведения см. в разделах [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md) и [Define and Modify a Column Filter](define-and-modify-a-column-filter.md).  
   
-    -   **indexed view logbased manualboth** — журнальная статья индексированного представления с вертикальной и горизонтальной фильтрацией, где хранимая процедура для горизонтальной фильтрации и представление для вертикальной фильтрации создаются и определяются пользователем, а также указываются в параметрах **@filter** и **@sync_object**. Дополнительные сведения см. в разделах [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md) и [Define and Modify a Column Filter](define-and-modify-a-column-filter.md).  
+    -   **indexed view logbased manualboth** — журнальная статья индексированного представления с вертикальной и горизонтальной фильтрацией, где хранимая процедура для горизонтальной фильтрации и представление для вертикальной фильтрации создаются и определяются пользователем, а также указываются в параметрах **@filter** и **@sync_object** . Дополнительные сведения см. в разделах [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md) и [Define and Modify a Column Filter](define-and-modify-a-column-filter.md).  
   
      Таким образом определяется новая статья для публикации. Дополнительные сведения см. в статье [определить статью](define-an-article.md).  
   

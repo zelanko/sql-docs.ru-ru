@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 355ade7f4c90b595356efc5d39c2fa7cf587b11b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62509952"
 ---
 # <a name="view-data-refresh-history-power-pivot-for-sharepoint"></a>Просмотр журнала обновления данных (PowerPivot для SharePoint)
@@ -45,7 +45,7 @@ ms.locfileid: "62509952"
   
 2.  Выберите книгу и нажмите стрелку вниз, которая отображается справа.  
   
-3.  Выберите **Управление обновлением данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**.  
+3.  Выберите **Управление обновлением данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** .  
   
  Откроется страница журнала с полной сводкой всех действий обновления для данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в текущей книге Excel.  
   

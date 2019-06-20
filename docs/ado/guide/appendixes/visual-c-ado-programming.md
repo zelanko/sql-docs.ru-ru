@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: c8145b4000a621ecb09abff074e4b5e06aea7c80
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66702617"
 ---
 # <a name="visual-c-ado-programming"></a>Программирование объектов ADO с использованием Visual C++
@@ -103,7 +103,7 @@ rs->Fields->GetItem(long(2))->PutValue("value");
 rs->Fields->GetItem("au_fname")->PutValue("value");  
 ```
   
- - или - (альтернативный синтаксис **значение** также отображается свойство)  
+ \- или - (альтернативный синтаксис **значение** также отображается свойство)  
   
 ```cpp
 rs->Fields->Item[long(2)]->Value = "value";  
@@ -280,7 +280,7 @@ _bstr_t strMissing(L"");
 _variant_t  vtMissingYours(DISP_E_PARAMNOTFOUND, VT_ERROR);   
 ```
   
- - или -  
+ \- или -  
   
 ```cpp
 ...vtMissing...;  

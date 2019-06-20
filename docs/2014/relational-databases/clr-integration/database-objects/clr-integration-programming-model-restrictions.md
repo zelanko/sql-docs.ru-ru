@@ -16,10 +16,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: a9b51e0fc192c94b32b4d496523dbf3c9216efd6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62873818"
 ---
 # <a name="clr-integration-programming-model-restrictions"></a>Ограничения модели программирования на основе интеграции со средой CLR
@@ -37,7 +37,7 @@ ms.locfileid: "62873818"
   
 -   Сборка принадлежит к числу поддерживаемых сборок. Дополнительные сведения см. в разделе [поддерживаемые библиотеки платформы .NET Framework](supported-net-framework-libraries.md).  
   
--   При использовании `CREATE ASSEMBLY FROM`  *\<расположение >,* и все связанные сборки и их зависимости были доступны в  *\<расположение >*.  
+-   При использовании `CREATE ASSEMBLY FROM`  *\<расположение >,* и все связанные сборки и их зависимости были доступны в  *\<расположение >* .  
   
 -   При использовании `CREATE ASSEMBLY FROM`  *\<байт... >,* и все ссылки заданы с помощью пространства байтов, разделенных.  
   

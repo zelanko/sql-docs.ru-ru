@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 20a1580503ad141817edcf8e01772dfcc8dc39a3
-ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/11/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65537357"
 ---
 # <a name="sqlfetchscroll-function"></a>Функция SQLFetchScroll
@@ -165,7 +165,7 @@ SQLRETURN SQLFetchScroll(
 |---------------|-----------------------------|  
 |*Перед запуском*|1|  
 |*CurrRowsetStart + RowsetSize*[1]  *\<= LastResultRow*|*CurrRowsetStart + RowsetSize*[1]|  
-|*CurrRowsetStart + RowsetSize*[1]*> LastResultRow*|*После окончания*|  
+|*CurrRowsetStart + RowsetSize*[1] *> LastResultRow*|*После окончания*|  
 |*После окончания*|*После окончания*|  
   
  [1] Если размер набора строк были изменены с момента предыдущего вызова метода для получения строк, это размер набора строк, который использовался с предыдущим вызовом функции.  

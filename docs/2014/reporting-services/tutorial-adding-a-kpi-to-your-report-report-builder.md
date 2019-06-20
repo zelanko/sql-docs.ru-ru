@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a1b158b6fc504a0917e0c268846da93be3aa59b9
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66098979"
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>Учебник. Добавление ключевого показателя Эффективности к отчету (построитель отчетов)
@@ -273,7 +273,7 @@ ms.locfileid: "66098979"
   
 9. Нажмите кнопку **значения и состояния**.  
   
-10. В раскрывающемся списке значение выберите **[Sum(Sales)]**, но не изменяйте другие параметры.  
+10. В раскрывающемся списке значение выберите **[Sum(Sales)]** , но не изменяйте другие параметры.  
   
      По умолчанию синхронизация данных происходит в пределах области данных, а значение **Tablix1**, имя табличной области данных из отчета, отображается в поле **Область синхронизации** .  
   

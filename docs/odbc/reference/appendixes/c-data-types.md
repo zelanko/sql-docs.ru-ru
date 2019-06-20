@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3f948b50fae0995e16024ac41d8dd891630d1dbe
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62447543"
 ---
 # <a name="c-data-types"></a>Типы данных C
@@ -40,7 +40,7 @@ ms.locfileid: "62447543"
 |SQL_C_USHORT [j]|SQLUSMALLINT|unsigned short int|  
 |SQL_C_SLONG [j]|SQLINTEGER|Long int|  
 |SQL_C_ULONG [j]|SQLUINTEGER|unsigned long int|  
-|SQL_C_FLOAT|SQLREAL|FLOAT|  
+|SQL_C_FLOAT|SQLREAL|float|  
 |SQL_C_DOUBLE|SQLDOUBLE, SQLFLOAT|double|  
 |SQL_C_BIT|SQLCHAR|char без знака|  
 |SQL_C_STINYINT [j]|SQLSCHAR|char со знаком|  

@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 996acc5f8e9b47af683c8d8376515f7f59e63120
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62770994"
 ---
 # <a name="ole-db-custom-properties"></a>Пользовательские свойства OLE DB
@@ -58,7 +58,7 @@ ms.locfileid: "62770994"
 |FastLoadKeepIdentity|Логическое значение|Значение, которое указывает, следует ли при загрузке данных копировать значения идентификаторов. Это свойство доступно только при использовании одного из параметров быстрой загрузки. Значение по умолчанию этого свойства равно `False`. Это свойство соответствует OLE DB [IRowsetFastLoad &#40;OLE DB&#41; ](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-ole-db.md) свойство `SSPROP_FASTLOADKEEPIDENTITY`.|  
 |FastLoadKeepNulls|Логическое значение|Значение параметра указывает, следует ли при загрузке данных копировать значения NULL. Это свойство доступно только при использовании одного из параметров быстрой загрузки. Значение по умолчанию этого свойства равно `False`. Это свойство соответствует OLE DB [IRowsetFastLoad &#40;OLE DB&#41; ](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-ole-db.md) свойство `SSPROP_FASTLOADKEEPNULLS`.|  
 |FastLoadMaxInsertCommitSize|Целочисленный|Значение, указывающее размер пакетов, который назначение «OLE DB» пытается фиксировать во время операций быстрой загрузки. Значение по умолчанию **0**указывает, что используется единая операция фиксации после обработки всех строк.|  
-|FastLoadOptions|String|Коллекция параметров быстрой загрузки. К параметрам быстрой загрузки относятся параметры блокировки таблиц и проверки ограничений. Можно указать один, оба или не указывать ни одного параметра. Это свойство соответствует свойству OLE DB IRowsetFastLoad `SSPROP_FASTLOADOPTIONS` и принимает строковые значения, такие как `CHECK_CONSTRAINTS` и `TABLOCK`.<br /><br /> Примечание. Некоторые свойства недоступны в **редакторе назначения "Excel"**, но их можно задать с помощью **расширенного редактора**.|  
+|FastLoadOptions|String|Коллекция параметров быстрой загрузки. К параметрам быстрой загрузки относятся параметры блокировки таблиц и проверки ограничений. Можно указать один, оба или не указывать ни одного параметра. Это свойство соответствует свойству OLE DB IRowsetFastLoad `SSPROP_FASTLOADOPTIONS` и принимает строковые значения, такие как `CHECK_CONSTRAINTS` и `TABLOCK`.<br /><br /> Примечание. Некоторые свойства недоступны в **редакторе назначения "Excel"** , но их можно задать с помощью **расширенного редактора**.|  
 |OpenRowset|String|Если свойство AccessMode имеет `OpenRowset`, имя таблицы или представления, к которому обращается назначение OLE DB.|  
 |OpenRowsetVariable|String|Если свойство AccessMode имеет `OpenRowset from Variable`, имя переменной, содержащей имя таблицы или представления, к которому обращается назначение OLE DB.|  
 |SqlCommand|String|Если свойство AccessMode имеет `SQL Command`, инструкции Transact-SQL, который использует назначение «OLE DB» для указания целевых столбцов для данных.|  

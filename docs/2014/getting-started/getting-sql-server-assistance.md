@@ -42,10 +42,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a09293b660bc096f8dc9eacf3986f03950eabfb1
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66088562"
 ---
 # <a name="getting-sql-server-assistance"></a>Получение помощи по SQL Server
@@ -59,7 +59,7 @@ ms.locfileid: "66088562"
   
  Если не удается найти сведения, которые вы ищете, в этих источниках, можно опубликовать вопросы на [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] форумы сообщества и группы новостей либо открыть обращение в службу поддержки с [!INCLUDE[msCoName](../includes/msconame-md.md)].  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-books-online"></a>Электронная документация по[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]   
+## <a name="includessnoversionincludesssnoversion-mdmd-books-online"></a>Электронная документация по[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
  В электронной документации по [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] описаны основные понятия и действия, необходимые для эффективного использования [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Электронная документация также включает в себя справочные материалы по языкам и интерфейсам программирования, обеспечивающим хранение, извлечение и изменение данных, а также создание отчетов при помощи [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  Получить доступ к электронной документации можно следующими способами.  

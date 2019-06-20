@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c7364ad7c7de4678926187cb171e62318c884bd2
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66104839"
 ---
 # <a name="specifying-paths-to-external-items-report-builder-and-ssrs"></a>Указание путей к внешним элементам (построитель отчетов и службы SSRS)
@@ -39,7 +39,7 @@ ms.locfileid: "66104839"
   
 -   **Полный путь к элементу.**  
   
-    -   **На сервере отчетов** путь начинается с **/**(корневой папки), например /Reports/AllSubreports/Subreport1.  
+    -   **На сервере отчетов** путь начинается с **/** (корневой папки), например /Reports/AllSubreports/Subreport1.  
   
     -   **На сайте SharePoint** Необходимо указать имя отчета в выражении, полный URL-адресом элемента и расширением файла RDL. Например, `="http://server/site/library/folder/Report1.rdl"`.  
   

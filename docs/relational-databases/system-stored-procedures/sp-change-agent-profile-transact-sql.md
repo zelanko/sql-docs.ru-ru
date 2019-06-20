@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ee80fbdac31d58cdb4b4b4b60c61be01670ad65a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62993895"
 ---
 # <a name="spchangeagentprofile-transact-sql"></a>sp_change_agent_profile (Transact-SQL)
@@ -44,7 +44,7 @@ sp_change_agent_profile [ @profile_id = ] profile_id
   
 `[ @property = ] 'property'` — Имя свойства. *Свойство* — **sysname**, не имеет значения по умолчанию.  
   
-`[ @value = ] 'value'` — Это новое значение свойства. *значение* — **nvarchar(3000)**, не имеет значения по умолчанию.  
+`[ @value = ] 'value'` — Это новое значение свойства. *значение* — **nvarchar(3000)** , не имеет значения по умолчанию.  
   
  В приведенной ниже таблице описаны изменяемые свойства.  
   

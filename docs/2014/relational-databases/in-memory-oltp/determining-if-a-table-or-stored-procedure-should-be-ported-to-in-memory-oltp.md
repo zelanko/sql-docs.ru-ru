@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: de6a778f9cdbfb7ab916f40a5250ca4f9e20c811
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63072390"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>Определение, должна ли таблица или хранимая процедура быть перенесена в In-Memory OLTP
@@ -123,7 +123,7 @@ ms.locfileid: "63072390"
   
  Сборщик данных можно настроить на SQL Server 2012 или более поздней версии [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- Вам требуется настроить прокси-агент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с правильными учетными данными для сборщика данных, чтобы передавать данные в базу данных хранилища данных управления в экземпляре, отличном от экземпляра, в котором будут профилироваться транзакции. Чтобы включить прокси-агент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], необходимо сначала настроить учетные данные с именем входа в домен. Имя входа в домен должно быть участником группы `mdw_admin` для базы данных хранилища данных управления. См. в разделе [как: Создание учетных данных (SQL Server Management Studio)](../security/authentication-access/create-a-credential.md) сведения о том, как создать учетные данные.  
+ Вам требуется настроить прокси-агент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с правильными учетными данными для сборщика данных, чтобы передавать данные в базу данных хранилища данных управления в экземпляре, отличном от экземпляра, в котором будут профилироваться транзакции. Чтобы включить прокси-агент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], необходимо сначала настроить учетные данные с именем входа в домен. Имя входа в домен должно быть участником группы `mdw_admin` для базы данных хранилища данных управления. В разделе [Руководство. Создание учетных данных (SQL Server Management Studio)](../security/authentication-access/create-a-credential.md) сведения о том, как создать учетные данные.  
   
  Настройка сбора данных для передачи в базу данных хранилища данных управления на другом экземпляре.  
   

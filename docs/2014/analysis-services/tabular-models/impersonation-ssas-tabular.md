@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 81e8f9ae90db3c7613ccb99039d70d9a28c5a113
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66067063"
 ---
 # <a name="impersonation-ssas-tabular"></a>Олицетворение (табличные службы SSAS)
@@ -67,7 +67,7 @@ ms.locfileid: "66067063"
   
 |Параметр|ImpersonationMode<sup>1</sup>|Описание|  
 |------------|-----------------------------------|-----------------|  
-|**Конкретное имя пользователя Windows и пароль** <sup>2</sup>|ImpersonateWindowsUserAccount|Этот параметр указывает, что модель будет использовать учетную запись пользователя Windows для импорта или обработки данных из источника данных. Домен и имя учетной записи пользователя используют следующий формат:**\<доменное имя >\\< имя учетной записи пользователя\>**. При создании новой модели с помощью мастера импорта таблиц это значение установлено по умолчанию.|  
+|**Конкретное имя пользователя Windows и пароль** <sup>2</sup>|ImpersonateWindowsUserAccount|Этот параметр указывает, что модель будет использовать учетную запись пользователя Windows для импорта или обработки данных из источника данных. Домен и имя учетной записи пользователя используют следующий формат: **\<доменное имя >\\< имя учетной записи пользователя\>** . При создании новой модели с помощью мастера импорта таблиц это значение установлено по умолчанию.|  
 |**Учетная запись службы**|ImpersonateServiceAccount|Этот параметр указывает модели использовать учетные данные безопасности, связанные с экземпляром служб Analysis Services, управляющим моделью.|  
   
  <sup>1</sup>ImpersonationMode указывает значение для [элемент DataSourceImpersonationInfo &#40;ASSL&#41; ](https://docs.microsoft.com/bi-reference/assl/properties/impersonationinfo-element-assl) свойство в источнике данных.  
