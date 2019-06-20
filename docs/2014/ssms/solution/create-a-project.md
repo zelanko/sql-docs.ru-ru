@@ -6,21 +6,18 @@ ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
-f1_keywords:
-- vs.newproject
-- vs.addnewproject
 helpviewer_keywords:
 - projects [SQL Server Management Studio], creating
 ms.assetid: 7897be19-365b-4b06-bcf0-8a669f67a673
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a33663ff92a093ea63f183cf8efb901d133a5a27
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.openlocfilehash: 3c36d070701712158587f283df0f55cffadac2ca
+ms.sourcegitcommit: d0d2505d3d517e7b3ea9c4aef4d6fd08aeb28d54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63460137"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67197596"
 ---
 # <a name="create-a-project"></a>Создание проекта
   В существующем решении можно создать один или несколько проектов.  
@@ -94,7 +91,7 @@ ms.locfileid: "63460137"
   
 4.  Нажмите кнопку **ОК**.  
   
- Проекту скрипта можно назначить имя, но имена папок задаются средой [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] и не могут быть изменены. Можно определить букву диска и путь для общего набора папок, используя диалоговое окно **Добавить новый проект** . Щелкните правой кнопкой мыши значок решения в **обозревателе решений**, а затем щелкните **Добавить**. По умолчанию папка проекта скриптов находится в: C:\Documents and Settings\\*имя пользователя*\My Documents\SQL Server Management Studio\Projects\\.  
+ Проекту скрипта можно назначить имя, но имена папок задаются средой [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] и не могут быть изменены. Можно определить букву диска и путь для общего набора папок, используя диалоговое окно **Добавить новый проект** . Щелкните правой кнопкой мыши значок решения в **обозревателе решений**, а затем щелкните **Добавить**. По умолчанию папка проекта скриптов размещена по пути: C:\Documents and Settings\\*имя пользователя*\My Documents\SQL Server Management Studio\Projects\\.  
   
 ## <a name="see-also"></a>См. также  
  [Обозреватель решений](solution-explorer.md)   

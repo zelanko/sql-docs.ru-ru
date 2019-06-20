@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: a9d09605b040b0ce13e3756d6b26b79d777b7b82
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: HT
+ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65819624"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67224135"
 ---
 Компонент SQL Server Database Engine

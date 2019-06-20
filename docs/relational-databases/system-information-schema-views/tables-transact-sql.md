@@ -21,10 +21,10 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1ec2589c278ac4bdf4ddc66f211cc6d0912f0a48
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65983181"
 ---
 # <a name="tables-transact-sql"></a>TABLES (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "65983181"
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**TABLE_CATALOG**|**nvarchar(** 128 **)**|Квалификатор таблицы.|  
-|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|Имя схемы, содержащей таблицу.<br /><br /> <strong>\*\* Важные \* \*</strong>  не используйте представления INFORMATION_SCHEMA, чтобы определить схему объекта. Единственный надежный способ найти схему объекта — выполнить запрос к представлению каталога sys.objects. Представления INFORMATION_SCHEMA могут быть неполными, поскольку они не обновлены для работы со всеми новыми функциями.|  
+|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|Имя схемы, содержащей таблицу.<br /><br /> <strong>\*\* Важные \* \* </strong> не используйте представления INFORMATION_SCHEMA, чтобы определить схему объекта. Единственный надежный способ найти схему объекта — выполнить запрос к представлению каталога sys.objects. Представления INFORMATION_SCHEMA могут быть неполными, поскольку они не обновлены для работы со всеми новыми функциями.|  
 |**TABLE_NAME**|**sysname**|Имя таблицы или представления.|  
 |**TABLE_TYPE**|**varchar(** 10 **)**|Тип таблицы. Может быть VIEW или BASE TABLE.|  
   

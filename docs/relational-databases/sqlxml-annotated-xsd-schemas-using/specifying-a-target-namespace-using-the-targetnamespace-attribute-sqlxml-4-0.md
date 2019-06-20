@@ -22,10 +22,10 @@ ms.reviewer: ''
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a52ce206eee69fa585a72788e46f8f7174d936a8
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65980820"
 ---
 # <a name="specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-40"></a>Задание целевого пространства имен с помощью атрибута targetNamespace (SQLXML 4.0)
@@ -38,7 +38,7 @@ ms.locfileid: "65980820"
  Чтобы создать рабочие образцы на основе следующих примеров, необходимо выполнить определенные требования. Дополнительные сведения см. в разделе [требования для запуска примеров SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-a-target-namespace"></a>A. Указание целевого пространства имен  
- Следующая схема XSD указывает целевое пространство имен с помощью **xsd: targetNamespace** атрибута. Эта схема также выставляет **elementFormDefault** и **attributeFormDefault** значения для атрибутов **«unqualified»** (значение по умолчанию для этих атрибутов). Это глобальное объявление, влияет на все локальные элементы (**\<порядок >** в схеме) и атрибуты (**CustomerID**, **ContactName**и  **OrderID** в схеме).  
+ Следующая схема XSD указывает целевое пространство имен с помощью **xsd: targetNamespace** атрибута. Эта схема также выставляет **elementFormDefault** и **attributeFormDefault** значения для атрибутов **«unqualified»** (значение по умолчанию для этих атрибутов). Это глобальное объявление, влияет на все локальные элементы ( **\<порядок >** в схеме) и атрибуты (**CustomerID**, **ContactName**и  **OrderID** в схеме).  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -132,7 +132,7 @@ ms.locfileid: "65980820"
   
      Дополнительные сведения см. в разделе [использование объектов ADO для выполнения запросов SQLXML](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
- Если схема указывает **elementFormDefault** и **attributeFormDefault** атрибуты со значением **«qualified»**, документ будет содержать все локальной элементы и атрибуты обработаны квалификатором. Можно изменить предыдущую схему, чтобы включить эти атрибуты в  **\<xsd: schema >** элемента и выполняла шаблон еще раз. Так как атрибуты в экземпляре теперь также имеют квалификатор, XPath-запрос изменится так, чтобы включать префикс пространства имен.  
+ Если схема указывает **elementFormDefault** и **attributeFormDefault** атрибуты со значением **«qualified»** , документ будет содержать все локальной элементы и атрибуты обработаны квалификатором. Можно изменить предыдущую схему, чтобы включить эти атрибуты в  **\<xsd: schema >** элемента и выполняла шаблон еще раз. Так как атрибуты в экземпляре теперь также имеют квалификатор, XPath-запрос изменится так, чтобы включать префикс пространства имен.  
   
  Измененный XPath-запрос:  
   

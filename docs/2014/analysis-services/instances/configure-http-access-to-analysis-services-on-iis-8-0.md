@@ -1,7 +1,7 @@
 ---
 title: Настройка HTTP-доступа к службам Analysis Services в службах Internet Information Services (IIS) 8.0 | Документация Майкрософт
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 06/19/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: analysis-services
@@ -10,12 +10,12 @@ ms.assetid: cf2e2c84-0a69-4cdd-90a1-fb4021936513
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4c8af52dfe8c95b80f5b9550b41a14e1f70c7a6e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 42ccdae89fdb0883201ec022479e51a327ea0b33
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66080166"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263228"
 ---
 # <a name="configure-http-access-to-analysis-services-on-internet-information-services-iis-80"></a>Настройка HTTP-доступа к службам Analysis Services в службах Internet Information Services (IIS) 8.0
   В этой статье объясняется, как настроить конечную точку HTTP для доступа к экземпляру служб Analysis Services. Доступ по протоколу HTTP к службам Analysis Services можно включить путем настройки MSMDPUMP.dll — расширения ISAPI, которое работает на сервере IIS и переносит данные между клиентским приложением и сервером служб Analysis Services. Такой подход предоставляет альтернативные способы подключения к службам Analysis Services, если применяемое решение бизнес-аналитики требует получения следующих возможностей.  
@@ -84,7 +84,7 @@ ms.locfileid: "66080166"
   
 -   **Разработка приложений** | **Расширения ISAPI**  
   
- Чтобы проверить или добавить эти компоненты, последовательно выберите **Диспетчер сервера** | **Управление** | **Добавить роли и компоненты**. Выполните все шаги мастера, пока не дойдете до страницы **Роли сервера**. Прокрутите вниз, чтобы найти пункт **Веб-сервер (IIS)** .  
+ Чтобы проверить или добавить эти компоненты, последовательно выберите **Диспетчер сервера** | **Управление** | **Добавить роли и компоненты**. Выполните все шаги мастера, пока не дойдете до страницы **Роли сервера**. Прокрутите вниз, чтобы найти пункт **Веб-сервер (IIS)**.  
   
 1.  Откройте узел **Веб-сервер** | **Безопасность** и выберите методы проверки подлинности.  
   
@@ -261,7 +261,7 @@ ms.locfileid: "66080166"
 ##  <a name="bkmk_test"></a> Шаг 6. Проверка конфигурации  
  Синтаксис строки подключения для MSMDPUMP определен — это URL-адрес файла MSMDPUMP.dll.  
   
- Если веб-приложение прослушивает фиксированный порт, добавьте номер порта к имени сервера или IP-адрес (например, http://my-web-srv01:8080/OLAP/msmdpump.dll или http://123.456.789.012:8080/OLAP/msmdpump.dll.  
+ Если веб-приложение прослушивает фиксированный порт, добавьте номер порта к имени сервера или IP-адрес, например, `http://my-web-srv01:8080/OLAP/msmdpump.dll` или `http://123.456.789.012:8080/OLAP/msmdpump.dll`.  
   
  Чтобы быстро проверить подключение, можно открыть его с помощью Microsoft Excel или среды SQL Server Management Studio.  
   

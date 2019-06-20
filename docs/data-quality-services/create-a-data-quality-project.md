@@ -17,10 +17,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: jroth
 ms.openlocfilehash: 139a8317b934ac262f57cb4025deb15d05dadc20
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66785809"
 ---
 # <a name="create-a-data-quality-project"></a>Создание проекта служб DQS
@@ -45,7 +45,7 @@ ms.locfileid: "66785809"
   
 2.  На главном экране [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] щелкните **Создать проект служб DQS**.  
   
-3.  На экране **Новый проект служб DQS**  
+3.  На экране **Новый проект служб DQS**   
   
     1.  в поле **Имя** введите имя нового проекта служб DQS.  
   
