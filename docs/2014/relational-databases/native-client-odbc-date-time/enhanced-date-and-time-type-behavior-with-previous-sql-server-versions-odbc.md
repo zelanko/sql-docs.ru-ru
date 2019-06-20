@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 44ac9cecce81f7873ca5ef42ba414bd4528e05b4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63140630"
 ---
 # <a name="enhanced-date-and-time-type-behavior-with-previous-sql-server-versions-odbc"></a>Улучшенная работа типа даты-времени с предыдущими версиями SQL Server (ODBC)
@@ -33,7 +33,7 @@ ms.locfileid: "63140630"
   
 |Тип SQL Server 2005|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (или более поздней версии) Тип|Клиентский тип ODBC|Преобразование результата (из SQL в C)|Преобразование параметров (из C в SQL)|  
 |--------------------------|----------------------------------------------|----------------------|------------------------------------|---------------------------------------|  
-|Datetime|Дата|SQL_C_TYPE_DATE|OK|ОК (1)|  
+|DateTime|Дата|SQL_C_TYPE_DATE|OK|ОК (1)|  
 |||SQL_C_TYPE_TIMESTAMP|Поля времени устанавливаются в нули.|OK (2)<br /><br /> Завершается ошибкой, если значение поля времени не равно нулю. Работает с [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
 ||Time(0)|SQL_C_TYPE_TIME|OK|ОК (1)|  
 |||SQL_C_TYPE_TIMESTAMP|Поля даты устанавливаются в текущую дату.|OK (2)<br /><br /> Дата пропускается. Ошибка, если доли секунды не равны нулю. Работает с [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  

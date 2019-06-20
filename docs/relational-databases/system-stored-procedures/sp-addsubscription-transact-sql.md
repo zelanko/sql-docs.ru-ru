@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6a0064787eee6c3ac267b3ababcd9881e794ff2e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62998312"
 ---
 # <a name="spaddsubscription-transact-sql"></a>sp_addsubscription (Transact-SQL)
@@ -89,7 +89,7 @@ sp_addsubscription [ @publication = ] 'publication'
  Имя целевой базы данных, в которую помещаются реплицированные данные. *destination_db* — **sysname**, значение по умолчанию NULL. Если задано значение NULL, *destination_db* присваивается имя базы данных публикации. Для издателей Oracle *destination_db* должен быть указан. Для отличных от подписчика SQL Server, укажите значение (назначение по умолчанию) для *destination_db*.  
   
  [ @sync_type=] '*sync_type*'  
- Тип синхронизации подписки. *sync_type* — **nvarchar(255)**, и может принимать одно из следующих значений:  
+ Тип синхронизации подписки. *sync_type* — **nvarchar(255)** , и может принимать одно из следующих значений:  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -111,13 +111,13 @@ sp_addsubscription [ @publication = ] 'publication'
 |subscribed|Требуется инициализация подписки. Этот параметр задается, если значение *sync_type* выполняется автоматически.|  
   
  [ @subscription_type=] '*subscription_type*'  
- Тип подписки. *subscription_type* — **nvarchar(4)**, значение по умолчанию push. Может принимать значения push или pull. Агенты распространителя принудительных подписок находятся на распространителе, а агенты распространителя подписок по запросу на подписчике. *subscription_type* может принимать значение pull для создания именованной подписки по запросу, известной издателю. Дополнительные сведения см. в статье [Подписка на публикации](../../relational-databases/replication/subscribe-to-publications.md).  
+ Тип подписки. *subscription_type* — **nvarchar(4)** , значение по умолчанию push. Может принимать значения push или pull. Агенты распространителя принудительных подписок находятся на распространителе, а агенты распространителя подписок по запросу на подписчике. *subscription_type* может принимать значение pull для создания именованной подписки по запросу, известной издателю. Дополнительные сведения см. в статье [Подписка на публикации](../../relational-databases/replication/subscribe-to-publications.md).  
   
 > [!NOTE]  
 >  Анонимные подписки не нуждаются в использовании этой хранимой процедуры.  
   
  [ @update_mode=] '*update_mode*'  
- — Это тип обновления. *update_mode* — **nvarchar(30)**, и может принимать одно из следующих значений.  
+ — Это тип обновления. *update_mode* — **nvarchar(30)** , и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -130,7 +130,7 @@ sp_addsubscription [ @publication = ] 'publication'
  Обратите внимание на то, что значения synctran и queued tran не допускается, если публикация, на которую выполняется подписка допускает службы DTS.  
   
  [ @loopback_detection=] '*loopback_detection*"  
- Определяет, отправляет ли агент распространителя транзакции, изначально созданные на подписчике, обратно подписчику. *loopback_detection* — **nvarchar(5)**, и может принимать одно из следующих значений.  
+ Определяет, отправляет ли агент распространителя транзакции, изначально созданные на подписчике, обратно подписчику. *loopback_detection* — **nvarchar(5)** , и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -197,13 +197,13 @@ sp_addsubscription [ @publication = ] 'publication'
  Дата, когда запланирован останов агента распространителя, в формате ГГГГММДД. *active_end_date* — **int**, значение по умолчанию NULL.  
   
  [ @optional_command_line=] '*optional_command_line*"  
- Необязательное приглашение к вводу команды. *optional_command_line* — **nvarchar(4000)**, значение по умолчанию NULL.  
+ Необязательное приглашение к вводу команды. *optional_command_line* — **nvarchar(4000)** , значение по умолчанию NULL.  
   
  [ @reserved=] '*зарезервированные*"  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [ @enabled_for_syncmgr=] '*enabled_for_syncmgr*'  
- Является ли подписку можно синхронизировать через [!INCLUDE[msCoName](../../includes/msconame-md.md)] диспетчера синхронизации Windows. *enabled_for_syncmgr* — **nvarchar(5)**, значение по умолчанию FALSE. Если это значение равно FALSE, подписка не регистрируется диспетчером синхронизации Windows. Если значение равно TRUE, подписка регистрируется диспетчером синхронизации Windows и может быть синхронизирована без запуска среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Не поддерживается для издателей Oracle.  
+ Является ли подписку можно синхронизировать через [!INCLUDE[msCoName](../../includes/msconame-md.md)] диспетчера синхронизации Windows. *enabled_for_syncmgr* — **nvarchar(5)** , значение по умолчанию FALSE. Если это значение равно FALSE, подписка не регистрируется диспетчером синхронизации Windows. Если значение равно TRUE, подписка регистрируется диспетчером синхронизации Windows и может быть синхронизирована без запуска среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Не поддерживается для издателей Oracle.  
   
  [ @offloadagent= ] '*remote_agent_activation*'  
  Указывает на то, что агент может быть активирован удаленно. *remote_agent_activation* — **бит** значение по умолчанию 0.  
@@ -224,7 +224,7 @@ sp_addsubscription [ @publication = ] 'publication'
 >  Необходимо указать пароль, если *dts_package_name* указан.  
   
  [ @dts_package_location=] '*dts_package_location*"  
- Указывает местоположение пакета. *dts_package_location* — **nvarchar(12)**, значение по умолчанию РАСПРОСТРАНИТЕЛЬ. Пакет может храниться на распространителе или на подписчике.  
+ Указывает местоположение пакета. *dts_package_location* — **nvarchar(12)** , значение по умолчанию РАСПРОСТРАНИТЕЛЬ. Пакет может храниться на распространителе или на подписчике.  
   
  [ @distribution_job_name=] '*distribution_job_name*"  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -236,7 +236,7 @@ sp_addsubscription [ @publication = ] 'publication'
 >  *издатель* не следует указывать для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя.  
   
  [ @backupdevicetype=] '*backupdevicetype*"  
- Задает тип устройства резервного копирования, используемого при инициализации подписчика из резервной копии. *backupdevicetype* — **nvarchar(20)**, и может принимать одно из следующих значений:  
+ Задает тип устройства резервного копирования, используемого при инициализации подписчика из резервной копии. *backupdevicetype* — **nvarchar(20)** , и может принимать одно из следующих значений:  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -247,7 +247,7 @@ sp_addsubscription [ @publication = ] 'publication'
  *backupdevicetype* используется, только если *sync_method*имеет значение initialize_with_backup.  
   
  [ @backupdevicename=] '*backupdevicename*"  
- Указывает имя устройства, используемого при инициализации подписчика из резервной копии. *backupdevicename* — **nvarchar(1000)**, значение по умолчанию NULL.  
+ Указывает имя устройства, используемого при инициализации подписчика из резервной копии. *backupdevicename* — **nvarchar(1000)** , значение по умолчанию NULL.  
   
  [ @mediapassword=] '*mediapassword*"  
  Указывает пароль для набора носителей, если при форматировании носителя был задан пароль. *MEDIAPASSWORD* — **sysname**, со значением по умолчанию NULL.  

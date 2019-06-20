@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8e3a9a9f8043a3251e928b7b13e706b407097894
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 24d605c3ca3374a41fa080a861b64001c36f3ef2
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63019236"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263330"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode"></a>Совместимость формул в режиме DirectQuery 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -45,10 +45,10 @@ ms.locfileid: "63019236"
 
 Отсутствие оптимизации под DirectQuery у конкретной функции может быть вызвано тем, что базовый реляционный механизм не может выполнять вычисления, эквивалентные функциям подсистемы xVelocity, или формула не может быть преобразована в эквивалент выражения SQL. В других случаях производительность преобразованного выражения и итог вычислений могут оказаться неприемлемыми.
 
-Чтобы узнать обо всех функциях DAX, см. в статье [Справочник по функциям DAX]. (https://msdn.microsoft.com/library/ee634396.aspx)
+Чтобы узнать обо всех функциях DAX, см. в разделе [справочнике по функциям DAX](/dax/dax-function-reference).
 
 ## <a name="dax-operators-in-directquery-mode"></a>Операторы DAX в режиме DirectQuery
-Все операторы сравнения и арифметическими операциями DAX полностью поддерживаются в режиме DirectQuery. Дополнительные сведения см. в статье [Справочник по операторам DAX](https://msdn.microsoft.com/library/ee634237.aspx).
+Все операторы сравнения и арифметическими операциями DAX полностью поддерживаются в режиме DirectQuery. Дополнительные сведения см. в статье [Справочник по операторам DAX](/dax/dax-operator-reference).
 
 
  
@@ -160,7 +160,7 @@ SQL Server обрабатывает значения NULL и пустые зна
   
 Те же ограничения применяются к другим логарифмическим функциям: LOG10 и LN.  
   
-Дополнительные сведения о типе данных **blank** в DAX см. в разделе [Справочник по синтаксису DAX](https://msdn.microsoft.com/library/ee634217.aspx).  
+Дополнительные сведения о типе данных **blank** в DAX см. в разделе [Справочник по синтаксису DAX](/dax/dax-syntax-reference).  
   
 **Деление на 0 и деление на пустые данные**  
 В режиме DirectQuery при делении на нуль (0) или при делении на пустые данные (BLANK) всегда выдается ошибка. SQL Server не поддерживает концепцию бесконечности, и, поскольку естественным результатом при делении на нуль становится бесконечность, происходит ошибка. Однако SQL Server поддерживает деление на значения NULL, а результат всегда должно равняться NULL.  
