@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 5507eae7bb2f8a5ce138223a031ac4946d9f0030
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62675674"
 ---
 # <a name="uninstall-analytics-platform-system-hotfixes"></a>Удаление исправлений Analytics Platform System 
@@ -26,13 +26,13 @@ ms.locfileid: "62675674"
   
 -   Система Analytics Platform System имя входа с разрешениями для доступа к консоли администрирования для мониторинга устройства.  
   
--   Учетной записи администратора домена выполнить вход в <em>< appliance_domain ></em>**-HST01** узла.  
+-   Учетной записи администратора домена выполнить вход в <em>< appliance_domain ></em> **-HST01** узла.  
   
 -   Номер статьи базы знаний, исправления для удаления.  
   
 ## <a name="HowToUninstallPDW"></a>Чтобы удалить исправление SQL Server PDW  
   
-1.  Выполните вход на <em>< appliance_domain ></em>**-HST01** узел администратора домена Fabric.  
+1.  Выполните вход на <em>< appliance_domain ></em> **-HST01** узел администратора домена Fabric.  
   
 2.  Открыть командную строку с помощью запуска от имени администратора.  
   

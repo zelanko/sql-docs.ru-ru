@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 57b340d4f79ec093f6322687ceca0186931a9dcf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62658860"
 ---
 # <a name="predictsupport-dmx"></a>PredictSupport (расширения интеллектуального анализа данных)
@@ -32,7 +32,7 @@ PredictSupport(<scalar column reference>, [<predicted state>])
  Скалярный столбец.  
   
 ## <a name="return-type"></a>Тип возвращаемых данных  
- Скалярное значение типа, который задается параметром *\<* ссылка на скалярный столбец*>*.  
+ Скалярное значение типа, который задается параметром *\<* ссылка на скалярный столбец *>* .  
   
 ## <a name="remarks"></a>Примечания  
  Если прогнозируемое состояние не указано, используется состояние с наибольшей прогнозируемой вероятностью, за исключением сегмента отсутствующих состояний. Чтобы включить сегмента отсутствующих состояний, установите \<прогнозируемое состояние > для **INCLUDE_NULL**.  

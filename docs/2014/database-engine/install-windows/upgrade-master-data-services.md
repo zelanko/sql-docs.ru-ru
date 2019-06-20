@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: da78f21c6346281dc23332f40e8e6f46ff07aa06
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62774666"
 ---
 # <a name="upgrade-master-data-services"></a>Обновление служб Master Data Services
@@ -105,7 +105,7 @@ ms.locfileid: "62774666"
   
  Чтобы выполнить эту задачу, требуются следующие действия.  
   
-1.  **Для [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] только**: Откройте **панели управления** > **программы и компоненты** и удалите Microsoft [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
+1.  **Только для [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]** : Откройте **панель управления** > **Программы и компоненты** и удалите Microsoft [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
   
 2.  Обновите компонент Database Engine до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -117,7 +117,7 @@ ms.locfileid: "62774666"
   
     4.  Завершите работу мастера.  
   
-3.  **Для [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] только**: Когда обновление будет завершено, добавьте **[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]** функции.  
+3.  **Только для [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]** : Когда обновление будет завершено, добавьте **[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]** функции.  
   
     1.  Откройте мастер установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
@@ -127,7 +127,7 @@ ms.locfileid: "62774666"
   
     4.  На **тип установки** странице мастера выберите **Добавление компонентов к существующему экземпляру** параметр и выберите экземпляр, где установлена база данных MDS.  
   
-    5.  На **Выбор компонентов** раздела **общие компоненты**выберите **[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]**.  
+    5.  На **Выбор компонентов** раздела **общие компоненты**выберите **[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]** .  
   
     6.  Завершите работу мастера.  
   
@@ -300,7 +300,7 @@ ms.locfileid: "62774666"
 ## <a name="troubleshooting"></a>Устранение неполадок  
  **Проблема:** При открытии [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] или [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] отображается веб-приложения, сообщение об ошибке «версия клиента несовместима с версией базы данных».  
   
- **Решение:** Эта ошибка происходит, когда [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] или веб-приложения диспетчера основных данных пытаются получить доступ к базе данных, которая была обновлена в службах Master Data Services [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Следует использовать веб-приложение [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
+ **Решение**. Эта ошибка происходит, когда [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] или веб-приложения диспетчера основных данных пытаются получить доступ к базе данных, которая была обновлена в службах Master Data Services [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Следует использовать веб-приложение [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
  Она также может возникнуть, если не были выполнены останов и перезапуск **пула приложений служб MDS** в IIS при обновлении схемы базы данных служб MDS. Перезапустите **пул приложений служб MDS** , чтобы устранить проблему.  
   

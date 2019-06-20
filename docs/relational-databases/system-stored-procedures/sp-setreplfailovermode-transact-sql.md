@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ae89e606633fc3555745dd56fc7703ef50685468
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63028652"
 ---
 # <a name="spsetreplfailovermode-transact-sql"></a>Хранимая процедура sp_setreplfailovermode (Transact-SQL)
@@ -48,7 +48,7 @@ sp_setreplfailovermode [ @publisher= ] 'publisher'
   
 `[ @publication = ] 'publication'` — Имя публикации. *Публикация*— **sysname**, не имеет значения по умолчанию.  
   
- [**@failover_mode=**] **'***failover_mode***'**  
+ [ **@failover_mode=** ] **'***failover_mode***'**  
  Режим отработки отказа для подписок. *failover_mode* — **nvarchar(10)** и может принимать одно из следующих значений.  
   
 |Значение|Описание|  

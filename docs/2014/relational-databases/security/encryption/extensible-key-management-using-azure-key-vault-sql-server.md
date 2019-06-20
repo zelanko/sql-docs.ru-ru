@@ -16,12 +16,12 @@ ms.assetid: 3efdc48a-8064-4ea6-a828-3fbf758ef97c
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 852f65073a55cbe6e8d29b1dc17981cb5356d95f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f211a7300dceb542235538e0e7067e8dd989fe6d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63011525"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67046757"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Расширенное управление ключами с помощью хранилища ключей Azure (SQL Server)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Соединитель для [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Azure Key Vault позволяет [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] шифрования для использования службы Azure Key Vault в качестве [расширенного управления ключами &#40;расширенного управления Ключами&#41; ](extensible-key-management-ekm.md) поставщика для защиты его ключи шифрования.  
@@ -52,7 +52,7 @@ ms.locfileid: "63011525"
  ![Расширенное управление ключами с помощью Azure Key Vault (SQL Server)](../../../database-engine/media/ekm-using-azure-key-vault.png "Расширенное управление ключами с помощью Azure Key Vault (SQL Server)")  
   
 ##  <a name="Step1"></a> Шаг 1. Настройка хранилища ключей для использования в SQL Server  
- Выполните следующие действия, чтобы настроить хранилище ключей для использования с [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] в целях защиты ключа шифрования. Организация может уже использовать хранилище. Если хранилище не существует, администратор Azure в организации, назначенный для управления ключами шифрования, может создать хранилище, создать асимметричный ключ в хранилище и затем авторизовать [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для использования ключа. Ознакомьтесь со службой хранилища ключей, изучив статью [Приступая к работе с хранилищем ключей Azure](https://go.microsoft.com/fwlink/?LinkId=521402), и справочником по [командлетам PowerShell для работы с хранилищем ключей Azure](/powershell/module/azurerm.keyvault/) .  
+ Выполните следующие действия, чтобы настроить хранилище ключей для использования с [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] в целях защиты ключа шифрования. Организация может уже использовать хранилище. Если хранилище не существует, администратор Azure в организации, назначенный для управления ключами шифрования, может создать хранилище, создать асимметричный ключ в хранилище и затем авторизовать [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для использования ключа. Ознакомьтесь со службой хранилища ключей, изучив статью [Приступая к работе с хранилищем ключей Azure](https://go.microsoft.com/fwlink/?LinkId=521402), и справочником по [командлетам PowerShell для работы с хранилищем ключей Azure](https://docs.microsoft.com/powershell/module/azurerm.keyvault) .  
   
 > [!IMPORTANT]  
 >  Если у вас несколько подписок Azure, вы должны использовать ту подписку, которая содержит [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -85,7 +85,7 @@ ms.locfileid: "63011525"
   
     -   **Субъект-служба** для [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]: **CLIENTID_DBEngine** и **SECRET_DBEngine**.  
   
-4.  **Предоставление разрешения для субъектов-служб для доступа к хранилищу ключей:** Оба **CLIENTID_sysadmin_login** и **участников CLIENTID_DBEngineService** требуют **получить**, **списка**,  **wrapKey**, и **unwrapKey** разрешений в хранилище ключей. Если вы планируете создать ключи с помощью [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , вам также необходимо предоставить разрешение **create** в хранилище ключей.  
+4.  **Предоставление разрешения для субъектов-служб для доступа к хранилищу ключей:** Оба **CLIENTID_sysadmin_login** и **участников CLIENTID_DBEngineService** требуют **получить**, **списка**, ** wrapKey**, и **unwrapKey** разрешений в хранилище ключей. Если вы планируете создать ключи с помощью [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , вам также необходимо предоставить разрешение **create** в хранилище ключей.  
   
     > [!IMPORTANT]  
     >  У пользователей должны быть по крайней мере операции **wrapKey** и **unwrapKey** для хранилища ключей.  
@@ -98,7 +98,7 @@ ms.locfileid: "63011525"
   
     -   [Приступая к работе с хранилищем ключей Azure](https://go.microsoft.com/fwlink/?LinkId=521402)  
   
-    -   Справочник по [командлетам PowerShell для работы с хранилищем ключей Azure](https://go.microsoft.com/fwlink/?LinkId=521403)  
+    -   Справочник по [командлетам PowerShell для работы с хранилищем ключей Azure](https://docs.microsoft.com/powershell/module/azurerm.keyvault)  
   
 ##  <a name="Step2"></a> Шаг 2. Установка соединителя SQL Server  
  Соединитель [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] будет загружен и установлен администратором компьютера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Соединитель [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] можно загрузить из [Центра загрузки Майкрософт](https://go.microsoft.com/fwlink/p/?LinkId=521700).  Выполните поиск **соединителя SQL Server для хранилища ключей Microsoft Azure**, просмотрите подробные сведения, требования к системе и инструкции по установке, загрузите соединитель и начните установку с помощью команды **Выполнить**. Прочитайте лицензионное соглашение, примите его условия и продолжайте.  
@@ -159,7 +159,7 @@ ms.locfileid: "63011525"
 2.  Настройте учетные данные [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для входа администратора [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . С их помощью хранилище ключей будет использоваться для настройки сценариев шифрования [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и управления ими.  
   
     > [!IMPORTANT]  
-    >  **УДОСТОВЕРЕНИЙ** аргумент `CREATE CREDENTIAL` необходимо указать имя хранилища ключей. **СЕКРЕТ** аргумент `CREATE CREDENTIAL` требует  *\<идентификатор клиента >* (без дефисов) и  *\<секрет >* для передачи друг с другом без пробела между ними.  
+    >  **УДОСТОВЕРЕНИЙ** аргумент `CREATE CREDENTIAL` необходимо указать имя хранилища ключей. **СЕКРЕТ** аргумент `CREATE CREDENTIAL` требует * \<идентификатор клиента >* (без дефисов) и * \<секрет >* для передачи друг с другом без пробела между ними.  
   
      В следующем примере из **идентификатора клиента** (`EF5C8E09-4D2A-4A76-9998-D93440D8115D`) удаляются дефисы. Идентификатор клиента вводится как строка `EF5C8E094D2A4A769998D93440D8115D` , а **секрет** представляется строкой *SECRET_sysadmin_login*.  
   
@@ -224,7 +224,7 @@ ms.locfileid: "63011525"
 1.  Создайте учетные данные [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для [!INCLUDE[ssDE](../../../includes/ssde-md.md)] , которые будут использоваться при доступе к EKM хранилища ключей во время загрузки базы данных.  
   
     > [!IMPORTANT]  
-    >  **УДОСТОВЕРЕНИЙ** аргумент `CREATE CREDENTIAL` необходимо указать имя хранилища ключей. **СЕКРЕТ** аргумент `CREATE CREDENTIAL` требует  *\<идентификатор клиента >* (без дефисов) и  *\<секрет >* для передачи друг с другом без пробела между ними.  
+    >  **УДОСТОВЕРЕНИЙ** аргумент `CREATE CREDENTIAL` необходимо указать имя хранилища ключей. **СЕКРЕТ** аргумент `CREATE CREDENTIAL` требует * \<идентификатор клиента >* (без дефисов) и * \<секрет >* для передачи друг с другом без пробела между ними.  
   
      В следующем примере из **идентификатора клиента** (`EF5C8E09-4D2A-4A76-9998-D93440D8115D`) удаляются дефисы. Идентификатор клиента вводится как строка `EF5C8E094D2A4A769998D93440D8115D` , а **секрет** представляется строкой *SECRET_DBEngine*.  
   

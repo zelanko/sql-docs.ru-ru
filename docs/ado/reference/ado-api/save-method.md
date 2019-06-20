@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 0953b76ff642387679c907e6f0b3364cbac898df
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66711382"
 ---
 # <a name="save-method"></a>Метод Save
@@ -39,7 +39,7 @@ recordset.Save Destination, PersistFormat
  Необязательный параметр. Объект **Variant** , представляющая полный путь имя файла, где **набор записей** должен быть сохранен, или ссылка на **Stream** объекта.  
   
  *PersistFormat*  
- Необязательный. Объект [PersistFormatEnum](../../../ado/reference/ado-api/persistformatenum.md) значение, указывающее формат, в котором **записей** должен быть сохранен (XML или ADTG). Значение по умолчанию — **adPersistADTG**.  
+ Необязательный параметр. Объект [PersistFormatEnum](../../../ado/reference/ado-api/persistformatenum.md) значение, указывающее формат, в котором **записей** должен быть сохранен (XML или ADTG). Значение по умолчанию — **adPersistADTG**.  
   
 ## <a name="remarks"></a>Примечания  
  [Метода Save](../../../ado/reference/ado-api/save-method.md) метод может вызываться только при открытии **записей**. Используйте [метод Open (объект Recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md) способ восстановления более поздней версии **записей** из *назначения*.  

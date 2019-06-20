@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e3413cf3c0e316e25ad52cc35ba348cab1694ae4
-ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/11/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65537407"
 ---
 # <a name="sqlremovedrivermanager-function"></a>Функция SQLRemoveDriverManager
@@ -50,7 +50,7 @@ BOOL SQLRemoveDriverManager(
  Функция возвращает значение TRUE при успешном выполнении, FALSE в случае неудачи. Если запись не существует в сведениях о системе, при вызове этой функции, функция возвращает значение FALSE.  
   
 ## <a name="diagnostics"></a>Диагностика  
- Когда **SQLRemoveDriverManager** возвращает значение FALSE, связанным  *\*pfErrorCode* значение можно получить, вызвав **SQLInstallerError**. В следующей таблице перечислены  *\*pfErrorCode* значения, которые могут быть возвращены **SQLInstallerError** и объясняется каждый из них в контексте этой функции.  
+ Когда **SQLRemoveDriverManager** возвращает значение FALSE, связанным  *\*pfErrorCode* значение можно получить, вызвав **SQLInstallerError**. В следующей таблице перечислены *\*pfErrorCode* значения, которые могут быть возвращены **SQLInstallerError** и объясняется каждый из них в контексте этой функции.  
   
 |*\*pfErrorCode*|Ошибка|Описание|  
 |---------------------|-----------|-----------------|  

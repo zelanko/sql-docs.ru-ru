@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: aad2574457285208b47af26d0729c725a22c05b0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62629181"
 ---
 # <a name="spmarksubscriptionvalidation-transact-sql"></a>sp_marksubscriptionvalidation (Transact-SQL)
@@ -62,7 +62,7 @@ sp_marksubscriptionvalidation [ @publication = ] 'publication'
   
  Для не - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателей, не удается выполнить **sp_marksubscriptionvalidation** из явной транзакции. Это обусловлено тем, что явные транзакции не поддерживаются через соединение связанного сервера, через которое осуществляется подключение к издателю.  
   
- **sp_marksubscriptionvalidation** должен использоваться вместе с [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md), указав значение **1** для  *уровень_подписки*и может использоваться с другими вызовами **sp_marksubscriptionvalidation** Пометить текущую открытую транзакцию для других подписчиков.  
+ **sp_marksubscriptionvalidation** должен использоваться вместе с [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md), указав значение **1** для * уровень_подписки*и может использоваться с другими вызовами **sp_marksubscriptionvalidation** Пометить текущую открытую транзакцию для других подписчиков.  
   
 ## <a name="permissions"></a>Разрешения  
  Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять процедуру **sp_marksubscriptionvalidation**.  

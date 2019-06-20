@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 087360981a7c31de6980755cfee4f98f88f48a15
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63183431"
 ---
 # <a name="launch-the-configuration-manager-in-analytics-platform-system"></a>Запустить диспетчер конфигурации служб в Analytics Platform System
@@ -25,7 +25,7 @@ ms.locfileid: "63183431"
 Система платформы аналитики**Configuration Manager** может выполняться только администратором домена устройства. Чтобы запустить это средство, потребуется пароль администратор домена приложения. Чтобы создать дополнительных администраторов APS, см. в разделе [создайте учетную запись администратора домена APS &#40;APS&#41;](create-an-aps-domain-administrator-aps.md).  
   
 ## <a name="Accessing"></a>Запустить средство Configuration Manager  
-Чтобы запустить Configuration Manager, использование удаленного рабочего стола для подключения к узлу управления PDW (**_PDW_region_-CTL01**) узла и выполните вход как _appliance_domain_ **\Administrator**. При запуске **Configuration Manager** программы, используйте **Запуск от имени администратора** параметр, чтобы убедиться, что используются учетные данные администратора.  
+Чтобы запустить Configuration Manager, использование удаленного рабочего стола для подключения к узлу управления PDW ( **_PDW_region_-CTL01**) узла и выполните вход как _appliance_domain_ **\Administrator**. При запуске **Configuration Manager** программы, используйте **Запуск от имени администратора** параметр, чтобы убедиться, что используются учетные данные администратора.  
   
 #### <a name="to-launch-from-a-browser-window"></a>Чтобы запустить из окна браузера  
   

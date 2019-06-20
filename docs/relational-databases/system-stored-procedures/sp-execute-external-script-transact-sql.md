@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: f11b09d93510fe1da89abc1a723e7698f1fdd915
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 77d5386f05e371a2e653f4f6097257e99457e910
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531046"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67046712"
 ---
 # <a name="spexecuteexternalscript-transact-sql"></a>sp_execute_external_script (Transact-SQL)
 
@@ -78,9 +78,9 @@ sp_execute_external_script
  **@language** = N "*языка*"  
  Указывает язык скрипта. *Язык* — **sysname**.  В зависимости от версии SQL Server допустимые значения: Java (Предварительная версия SQL Server 2019), R (SQL Server 2016 и более поздние версии) и Python (SQL Server 2017 и более поздние версии). 
   
- **@script** = N "*скрипт*" внешний язык скрипта, указанных в качестве входных литералом или переменной. *сценарий* — **nvarchar(max)**.  
+ **@script** = N "*скрипт*" внешний язык скрипта, указанных в качестве входных литералом или переменной. *сценарий* — **nvarchar(max)** .  
 
-`[ @input_data_1 =  N'input_data_1' ]` Указывает входные данные, используемые внешних скриптов в виде [!INCLUDE[tsql](../../includes/tsql-md.md)] запроса. Тип данных *input_data_1* — **nvarchar(max)**.
+`[ @input_data_1 =  N'input_data_1' ]` Указывает входные данные, используемые внешних скриптов в виде [!INCLUDE[tsql](../../includes/tsql-md.md)] запроса. Тип данных *input_data_1* — **nvarchar(max)** .
 
 `[ @input_data_1_name = N'input_data_1_name' ]` Задает имя переменной, которая используется для представления запроса определяется @input_data_1. Тип данных переменной в внешних скриптов зависит от языка. В случае R Входная переменная — это блок данных. В случае Python входные данные должны быть табличных. *input_data_1_name* — **sysname**.  Значение по умолчанию — *InputDataSet*.  
 
@@ -124,7 +124,7 @@ sp_execute_external_script
 
  В SQL Server 2019 года сейчас в общедоступной предварительной версии, можно задать два дополнительных параметра, позволяющие моделирование с использованием секционированных данных, где секции основаны на один или больше столбцов, которые вы предоставляете, которые естественным образом разделить набор данных на логические разделы создается и используется только во время выполнения скрипта. Столбцы, содержащие повторяющиеся значения для age, gender, географический регион, дата или время, приведено несколько примеров, которые предоставляются для секционированных наборов данных.
  
- Два параметра **input_data_1_partition_by_columns** и **input_data_1_order_by_columns**, где второй параметр используется для упорядочения результирующего набора. Параметры передаются в качестве входных данных для `sp_execute_external_script` с внешнего скрипта выполняется один раз для каждой секции. Дополнительные сведения и примеры см. в разделе [руководства: Создание моделей на основе секций](https://docs.microsoft.com/sql/advanced-analytics/tutorials/r-tutorial-create-models-per-partition.md).
+ Два параметра **input_data_1_partition_by_columns** и **input_data_1_order_by_columns**, где второй параметр используется для упорядочения результирующего набора. Параметры передаются в качестве входных данных для `sp_execute_external_script` с внешнего скрипта выполняется один раз для каждой секции. Дополнительные сведения и примеры см. в разделе [руководства: Создание моделей на основе секций](https://docs.microsoft.com/sql/advanced-analytics/tutorials/r-tutorial-create-models-per-partition).
 
  Можно выполнить сценарий в параллельном режиме, указав `@parallel=1`. Если входной запрос может выполняться параллельно, следует задать `@parallel=1` как часть аргументов `sp_execute_external_script`. По умолчанию оптимизатор запросов работает в `@parallel=1` в таблицах, имеющих более 256 строки, но если вы хотите обрабатывать это явным образом, этот сценарий включает в себя параметр в качестве демонстрации.
 

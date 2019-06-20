@@ -13,20 +13,20 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 768a9c821c2c8f663bf65c58ed495993795b2eb9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62835950"
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity"></a>Конструктор системы отслеживания измененных данных для Oracle компании Attunity
   Консоль конструктора CDC служит для разработки и обслуживания экземпляров Oracle CDC. Консоль конструктора CDC ― это надстройка консоли управления (MMC), состоящая из следующих элементов.  
   
--   Мастер создания экземпляра. Этот мастер создает новый экземпляр CDC Oracle. Дополнительные сведения об использовании мастера создания экземпляра см. в разделе [Use the New Instance Wizard](use-the-new-instance-wizard.md).  
+-   Мастер создания экземпляра. Этот мастер создает новый экземпляр CDC Oracle Instance. Дополнительные сведения об использовании мастера создания экземпляра см. в разделе [Use the New Instance Wizard](use-the-new-instance-wizard.md).  
   
--   Средство просмотра свойств экземпляра CDC. Это закрепленное представление, показывающее состояние и конфигурация выбранного экземпляра CDC. Дополнительные сведения о средстве просмотра свойств см. в разделе [Как управлять экземпляром CDC](manage-a-cdc-instance.md).  
+-   Средство просмотра свойств экземпляра CDC. Это закрепленное представление, в котором отображаются состояние и конфигурация выбранного экземпляра CDC. Дополнительные сведения о средстве просмотра свойств см. в разделе [Как управлять экземпляром CDC](manage-a-cdc-instance.md).  
   
--   Редактор свойств экземпляра CDC. Это диалоговое окно позволяет изменить любой существующий экземпляр службы Oracle CDC Service. Дополнительные сведения об изменении свойств экземпляра CDC см. в разделе [Edit Instance Properties](edit-instance-properties.md).  
+-   Редактор свойств экземпляра CDC. В этом диалоговом окне можно изменить любой существующий экземпляр службы CDC Oracle. Дополнительные сведения об изменении свойств экземпляра CDC см. в разделе [Edit Instance Properties](edit-instance-properties.md).  
   
 ## <a name="in-this-documentation"></a>В этой документации  
   

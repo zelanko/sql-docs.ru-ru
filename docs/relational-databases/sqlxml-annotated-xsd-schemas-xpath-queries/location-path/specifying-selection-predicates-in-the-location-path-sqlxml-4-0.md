@@ -20,10 +20,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4ace1b9a52853ed96ccc9cf74099760c30332dfd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62720031"
 ---
 # <a name="specifying-selection-predicates-in-the-location-path-sqlxml-40"></a>Указание предикатов выбора в пути доступа (SQLXML 4.0)
@@ -42,7 +42,7 @@ ms.locfileid: "62720031"
 /child::Customer[attribute::CustomerID="ALFKI"]  
 ```  
   
- В этом запросе XPath `child` и `attribute` являются именами осей. `Customer` является проверкой узла (значение TRUE, если `Customer` —  **\<узла элемента >**, так как  **\<элемент >** является основным типом узла для `child` оси). `attribute::CustomerID="ALFKI"` является предикатом. В этом предикате `attribute` является осью и `CustomerID` является проверкой узла (значение TRUE, если **CustomerID** — это атрибут узла контекста, так как  **\<атрибут >** является участником Тип узла **атрибут** оси).  
+ В этом запросе XPath `child` и `attribute` являются именами осей. `Customer` является проверкой узла (значение TRUE, если `Customer` —  **\<узла элемента >** , так как  **\<элемент >** является основным типом узла для `child` оси). `attribute::CustomerID="ALFKI"` является предикатом. В этом предикате `attribute` является осью и `CustomerID` является проверкой узла (значение TRUE, если **CustomerID** — это атрибут узла контекста, так как  **\<атрибут >** является участником Тип узла **атрибут** оси).  
   
  Запрос XPath также можно задать с использованием сокращенного синтаксиса:  
   

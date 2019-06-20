@@ -13,13 +13,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8a957e2032f3be0e48d5bcfa4ed4508775e04477
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62510958"
 ---
-# <a name="job-step-properties-new-job-step-general-page"></a>Свойства шага задания: Создание шага задания (страница "Общие")
+# <a name="job-step-properties-new-job-step-general-page"></a>Свойства шага задания: создание шага задания (страница "Общие")
   Эта страница используется для просмотра и изменения свойств шага задания агента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или для определения нового шага задания.  
   
  Для перехода к данной странице в обозревателе объектов среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] разверните агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , щелкните правой кнопкой мыши **Задания**, выберите пункт **Создать задание**, страницу **Шаги** и нажмите кнопку **Создать**. Перейти к этой странице можно также, щелкнув правой кнопкой мыши задание в обозревателе объектов, наведя курсор мыши на пункт **Свойства**, затем выбрав страницу **Шаги** и нажав кнопку **Создать**, **Вставить**или **Изменить**.  

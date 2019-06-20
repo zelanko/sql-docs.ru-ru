@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b571bec94c873b830654126e39d75d554599e5fa
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721736"
 ---
 # <a name="create-a-push-subscription"></a>Создание принудительной подписки
@@ -91,20 +91,20 @@ ms.locfileid: "62721736"
   
     -   Если значение **allow_push** равно **1**, то принудительная подписка поддерживается.  
   
-    -   Если значение **allow_push** — **0**, выполнение [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql), указав **allow_push** для **@property** и `true` для **@value**.  
+    -   Если значение **allow_push** — **0**, выполнение [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql), указав **allow_push** для **@property** и `true` для **@value** .  
   
-2.  На издателе в базе данных публикации выполните хранимую процедуру [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). Укажите **@publication**, **@subscriber** и значение **@destination_db**. Укажите значение **push** в **@subscription_type**. Сведения об обновлении подписок см. в разделе [Создание обновляемой подписки на публикацию транзакций](publish/create-an-updatable-subscription-to-a-transactional-publication.md)  
+2.  На издателе в базе данных публикации выполните хранимую процедуру [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). Укажите **@publication** , **@subscriber** и значение **@destination_db** . Укажите значение **push** в **@subscription_type** . Сведения об обновлении подписок см. в разделе [Создание обновляемой подписки на публикацию транзакций](publish/create-an-updatable-subscription-to-a-transactional-publication.md)  
   
 3.  На издателе в базе данных публикации выполните хранимую процедуру [sp_addpushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql). Укажите следующее.  
   
-    -   Учетные данные **@subscriber**, **@subscriber_db**и **@publication** .  
+    -   Учетные данные **@subscriber** , **@subscriber_db** и **@publication** .  
   
-    -   параметры [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, с которыми будет запускаться агент распространителя на распространителе в параметре **@job_login** и **@job_password**.  
+    -   параметры [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, с которыми будет запускаться агент распространителя на распространителе в параметре **@job_login** и **@job_password** .  
   
         > [!NOTE]  
-        >  Для соединений, производимых с использованием встроенной проверки подлинности Windows, в параметрах **@job_login** и **@job_password**. Агент распространителя всегда создает локальные соединения с распространителем через встроенную систему проверки подлинности Windows. По умолчанию агент подключается к подписчику через встроенную систему проверки подлинности Windows;  
+        >  Для соединений, производимых с использованием встроенной проверки подлинности Windows, в параметрах **@job_login** и **@job_password** . Агент распространителя всегда создает локальные соединения с распространителем через встроенную систему проверки подлинности Windows. По умолчанию агент подключается к подписчику через встроенную систему проверки подлинности Windows;  
   
-    -   (необязательно) Значение **0** в **@subscriber_security_mode** и сведения об имени входа [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в параметрах **@subscriber_login** и значение **@subscriber_password**. Эти параметры указываются в том случае, если при соединении с подписчиком необходимо использовать проверку подлинности SQL Server.  
+    -   (необязательно) Значение **0** в **@subscriber_security_mode** и сведения об имени входа [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в параметрах **@subscriber_login** и значение **@subscriber_password** . Эти параметры указываются в том случае, если при соединении с подписчиком необходимо использовать проверку подлинности SQL Server.  
   
     -   Расписание задания агента распространителя для этой подписки. Дополнительные сведения см. в статье [Specify Synchronization Schedules](specify-synchronization-schedules.md).  
   
@@ -117,30 +117,30 @@ ms.locfileid: "62721736"
   
     -   Если значение **allow_push** равно **1**, то публикацией принудительные подписки поддерживаются.  
   
-    -   Если значение **allow_push** не **1**, выполнение [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql), указав **allow_push** для **@property** и `true` для **@value**.  
+    -   Если значение **allow_push** не **1**, выполнение [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql), указав **allow_push** для **@property** и `true` для **@value** .  
   
 2.  На издателе в базе данных публикации выполните хранимую процедуру [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql), указав следующие параметры.  
   
-    -   **@publication**. Имя публикации.  
+    -   **@publication** . Имя публикации.  
   
-    -   **@subscriber_type**. Для клиентской подписки укажите **local** , а для серверной — **global**.  
+    -   **@subscriber_type** . Для клиентской подписки укажите **local** , а для серверной — **global**.  
   
-    -   **@subscription_priority**. Для серверной подписки укажите приоритет подписки (в диапазоне от**0.00** до **99.99**).  
+    -   **@subscription_priority** . Для серверной подписки укажите приоритет подписки (в диапазоне от**0.00** до **99.99**).  
   
          Дополнительные сведения см. в статье [Advanced Merge Replication Conflict Detection and Resolution](merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
 3.  На издателе в базе данных публикации выполните хранимую процедуру [sp_addmergepushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql). Укажите следующее.  
   
-    -   Значения параметров **@subscriber**, **@subscriber_db**и **@publication** .  
+    -   Значения параметров **@subscriber** , **@subscriber_db** и **@publication** .  
   
-    -   Учетные данные Windows, с которыми будет запускаться агент слияния на распространителе в параметрах **@job_login** и значение **@job_password**.  
+    -   Учетные данные Windows, с которыми будет запускаться агент слияния на распространителе в параметрах **@job_login** и значение **@job_password** .  
   
         > [!NOTE]  
-        >  Для соединений, производимых с использованием встроенной проверки подлинности Windows, в параметрах **@job_login** и **@job_password**. Агент слияния всегда создает локальные соединения с распространителем через встроенную систему проверки подлинности Windows. По умолчанию агент подключается к подписчику через встроенную систему проверки подлинности Windows;  
+        >  Для соединений, производимых с использованием встроенной проверки подлинности Windows, в параметрах **@job_login** и **@job_password** . Агент слияния всегда создает локальные соединения с распространителем через встроенную систему проверки подлинности Windows. По умолчанию агент подключается к подписчику через встроенную систему проверки подлинности Windows;  
   
-    -   (необязательно) Значение **0** в **@subscriber_security_mode** и сведения об имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в параметрах **@subscriber_login** и значение **@subscriber_password**. Эти параметры указываются в том случае, если при соединении с подписчиком необходимо использовать проверку подлинности SQL Server.  
+    -   (необязательно) Значение **0** в **@subscriber_security_mode** и сведения об имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в параметрах **@subscriber_login** и значение **@subscriber_password** . Эти параметры указываются в том случае, если при соединении с подписчиком необходимо использовать проверку подлинности SQL Server.  
   
-    -   (необязательно) Значение **0** в **@publisher_security_mode** и сведения об имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в параметрах **@publisher_login** и значение **@publisher_password**. Эти параметры указываются в том случае, если при соединении с издателем необходимо использовать проверку подлинности SQL Server.  
+    -   (необязательно) Значение **0** в **@publisher_security_mode** и сведения об имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в параметрах **@publisher_login** и значение **@publisher_password** . Эти параметры указываются в том случае, если при соединении с издателем необходимо использовать проверку подлинности SQL Server.  
   
     -   Расписание агента слияния для данной подписки. Дополнительные сведения см. в статье [Specify Synchronization Schedules](specify-synchronization-schedules.md).  
   

@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 13d14fafd18fb9e0cdb156617798c8d2f15ff661
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62815367"
 ---
 # <a name="create-an-availability-group-transact-sql"></a>Создание группы доступности (Transact-SQL)
@@ -58,7 +58,7 @@ ms.locfileid: "62815367"
 ##  <a name="TsqlProcedure"></a> Создание и настройка группы доступности с помощью Transact-SQL  
   
 > [!NOTE]  
->  Образец процедуры настройки с примерами кода для каждой из этих [!INCLUDE[tsql](../../../includes/tsql-md.md)] инструкций, см. в разделе [пример: Настройка группы доступности, использующей проверку подлинности Windows](#ExampleConfigAGWinAuth)  
+>  Образец процедуры настройки с примерами кода для каждой из этих инструкций [!INCLUDE[tsql](../../../includes/tsql-md.md)] см. в разделе [Пример. Настройка группы доступности, использующей проверку подлинности Windows](#ExampleConfigAGWinAuth)  
   
 1.  Подключитесь к экземпляру сервера, на котором должна быть размещена первичная реплика.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "62815367"
   
 3.  Присоедините новую вторичную реплику к группе доступности. Дополнительные сведения см. в разделе [Присоединение вторичной реплики к группе доступности (SQL Server)](join-a-secondary-replica-to-an-availability-group-sql-server.md).  
   
-4.  Для каждой базы данных в группе доступности создайте базу данных-получатель путем восстановления последней резервной копии базы данных-источника с помощью инструкции RESTORE WITH NORECOVERY. Дополнительные сведения см. в разделе [пример: Настройка группы доступности с использованием проверки подлинности Windows (Transact-SQL)](create-an-availability-group-transact-sql.md), начиная с шага восстановления резервной копии базы данных.  
+4.  Для каждой базы данных в группе доступности создайте базу данных-получатель путем восстановления последней резервной копии базы данных-источника с помощью инструкции RESTORE WITH NORECOVERY. Дополнительные сведения см. в разделе [Пример. Настройка группы доступности с использованием проверки подлинности Windows (Transact-SQL)](create-an-availability-group-transact-sql.md), начиная с шага восстановления резервной копии базы данных.  
   
 5.  Присоедините каждую новую базу данных-получатель к группе доступности. Дополнительные сведения см. в разделе [Присоединение вторичной реплики к группе доступности (SQL Server)](join-a-secondary-replica-to-an-availability-group-sql-server.md).  
   

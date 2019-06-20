@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ef7972014dff498172b9c016b3a7debb79a054fa
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63149849"
 ---
 # <a name="column-element-for-index-dta"></a>Элемент Column описания индекса (DTA)
@@ -40,7 +40,7 @@ ms.locfileid: "63149849"
   
 |Атрибут столбца|Описание|  
 |----------------------|-----------------|  
-|`Type`|Необязательный параметр. Указывает тип столбца индекса. Используйте тип данных **string** для указания этого атрибута при помощи следующих допустимых значений:<br /><br /> `KeyColumn`.<br />                  Указывает, что на столбец ссылается ключ индекса. Для установки этого атрибута используйте следующий синтаксис:<br />`<Column Type="KeyColumn">`<br />Дополнительные сведения о ключевых столбцах см. в разделе [Описания кластеризованных и некластеризованных индексов](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md).<br /><br /> `IncludedColumn`. Указывает, что столбец является включенным (а не ключевым) столбцом. Для установки этого атрибута используйте следующий синтаксис:<br />`<Column Type="IncludedColumn">`<br />Дополнительные сведения о включенных столбцах см. в разделе [Создание индексов с включенными столбцами](../../relational-databases/indexes/create-indexes-with-included-columns.md).|  
+|`Type`|Необязательный. Указывает тип столбца индекса. Используйте тип данных **string** для указания этого атрибута при помощи следующих допустимых значений:<br /><br /> `KeyColumn`.<br />                  Указывает, что на столбец ссылается ключ индекса. Для установки этого атрибута используйте следующий синтаксис:<br />`<Column Type="KeyColumn">`<br />Дополнительные сведения о ключевых столбцах см. в разделе [Описания кластеризованных и некластеризованных индексов](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md).<br /><br /> `IncludedColumn`. Указывает, что столбец является включенным (а не ключевым) столбцом. Для установки этого атрибута используйте следующий синтаксис:<br />`<Column Type="IncludedColumn">`<br />Дополнительные сведения о включенных столбцах см. в разделе [Создание индексов с включенными столбцами](../../relational-databases/indexes/create-indexes-with-included-columns.md).|  
 |`SortOrder`|Необязательный. Указывает порядок сортировки столбца. Используйте тип данных **string** для указания порядка сортировки **по возрастанию** или **по убыванию** , как показано ниже:<br /><br /> `<Column SortOrder="Ascending">`|  
   
 ## <a name="element-characteristics"></a>Характеристики элемента  

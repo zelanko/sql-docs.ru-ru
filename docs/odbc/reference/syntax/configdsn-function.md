@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9387ffefe2fdcc9b30824018a763b87b81b831dc
-ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/11/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65538099"
 ---
 # <a name="configdsn-function"></a>Функция ConfigDSN
@@ -68,7 +68,7 @@ BOOL ConfigDSN(
  Функция возвращает значение TRUE при успешном выполнении, FALSE в случае неудачи.  
   
 ## <a name="diagnostics"></a>Диагностика  
- Когда **ConfigDSN** возвращает значение FALSE, связанным  *\*pfErrorCode* передано значение в буфер Ошибка установщика с помощью вызова **SQLPostInstallerError** и можно получить, вызвав **SQLInstallerError**. В следующей таблице перечислены  *\*pfErrorCode* значения, которые могут быть возвращены **SQLInstallerError** и объясняется каждый из них в контексте этой функции.  
+ Когда **ConfigDSN** возвращает значение FALSE, связанным  *\*pfErrorCode* передано значение в буфер Ошибка установщика с помощью вызова **SQLPostInstallerError** и можно получить, вызвав **SQLInstallerError**. В следующей таблице перечислены *\*pfErrorCode* значения, которые могут быть возвращены **SQLInstallerError** и объясняется каждый из них в контексте этой функции.  
   
 |*\*pfErrorCode*|Ошибка|Описание|  
 |---------------------|-----------|-----------------|  

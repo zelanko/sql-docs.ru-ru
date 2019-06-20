@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 209bc81c63998cea299d2c377175955ee99470c4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62875711"
 ---
 # <a name="recovery-of-related--databases-that-contain-marked-transaction"></a>Восстановление связанных баз данных, которые содержат помеченную транзакцию
@@ -61,11 +61,11 @@ BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'
 ## <a name="transact-sql-syntax-for-recovering-to-a-mark"></a>Синтаксис языка Transact-SQL для восстановления до метки  
  Отметив помеченную транзакцию с помощью инструкции[RESTORE LOG](/sql/t-sql/statements/restore-statements-transact-sql), можно использовать одно из следующих предложений, чтобы остановиться на метке или перед ней.  
   
--   Используйте WITH STOPATMARK = **"*`<mark_name>`*"** предложение, чтобы указать, что помеченная транзакция представляет собой точку восстановления.  
+-   Используйте WITH STOPATMARK = **" *`<mark_name>`* "** предложение, чтобы указать, что помеченная транзакция представляет собой точку восстановления.  
   
      С помощью предложения STOPATMARK выполняется накат к метке, при этом помеченная транзакция включается в накат.  
   
--   Используйте WITH STOPBEFOREMARK = **"*`<mark_name>`*"** предложение, чтобы указать, что запись журнала, которая находится непосредственно перед меткой представляет собой точку восстановления.  
+-   Используйте WITH STOPBEFOREMARK = **" *`<mark_name>`* "** предложение, чтобы указать, что запись журнала, которая находится непосредственно перед меткой представляет собой точку восстановления.  
   
      С помощью предложения STOPBEFOREMARK выполняется накат к метке, при этом помеченная транзакция не включается в накат.  
   

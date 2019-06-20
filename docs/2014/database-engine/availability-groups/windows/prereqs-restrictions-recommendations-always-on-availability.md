@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 047d635be9ff9a9b04770f4ebe3f9e31408ff83d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62789875"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-alwayson-availability-groups-sql-server"></a>предварительными требованиями, и ограничениями и рекомендациями для групп доступности AlwaysOn (SQL Server)
@@ -53,7 +53,7 @@ ms.locfileid: "62789875"
 |![Флажок](../../media/checkboxemptycenterxtraspacetopandright.gif "Флажок")|Убедитесь, что каждый компьютер работает под управлением либо системы x86 (без режима WoW64), либо на платформе x64 Windows Server 2008 или более поздних версиях.|WOW64 (Windows 32-бит на Windows 64-бит) не поддерживает функцию [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].|  
 |![Флажок](../../media/checkboxemptycenterxtraspacetopandright.gif "Флажок")|Убедитесь, что каждый компьютер является узлом в отказоустойчивой кластеризации Windows Server (WSFC).|[Отказоустойчивая кластеризация Windows Server (WSFC) с SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)|  
 |![Флажок](../../media/checkboxemptycenterxtraspacetopandright.gif "Флажок")|Убедитесь, что кластер WSFC содержит достаточное количество узлов для поддержки требуемых конфигураций групп доступности.|На узле WSFC можно размещать только одну реплику доступности для отдельной группы доступности. На каждом отдельном узле WSFC один или несколько экземпляров [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] могут содержать реплики доступности для многих групп доступности.<br /><br /> Обратитесь к администраторам базы данных, чтобы узнать, сколько узлов кластера WSFC требуется для поддержки реплик доступности для планируемых групп доступности.<br /><br /> [Обзор групп доступности AlwaysOn (SQL Server)](overview-of-always-on-availability-groups-sql-server.md).|  
-|![Флажок](../../media/checkboxemptycenterxtraspacetopandright.gif "Флажок")|Убедитесь, что все применимые исправления Windows были установлены на всех узлах кластера WSFC.|**\*\* Важные \* \***  определенное число исправлений требуется или рекомендуется для кластера узлов кластера WSFC, на котором [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] развертывается. Дополнительные сведения см. в подразделе [Исправления Windows для поддержки групп доступности AlwaysOn (ОС Windows)](#WinHotfixes) ниже.|  
+|![Флажок](../../media/checkboxemptycenterxtraspacetopandright.gif "Флажок")|Убедитесь, что все применимые исправления Windows были установлены на всех узлах кластера WSFC.|**\*\* Важные \* \* ** определенное число исправлений требуется или рекомендуется для кластера узлов кластера WSFC, на котором [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] развертывается. Дополнительные сведения см. в подразделе [Исправления Windows для поддержки групп доступности AlwaysOn (ОС Windows)](#WinHotfixes) ниже.|  
   
 > [!IMPORTANT]  
 >  Кроме того, убедитесь, что среда правильно настроена для соединения с группой доступности. Дополнительные сведения см. в разделе [подключение клиента AlwaysOn (SQL Server)](always-on-client-connectivity-sql-server.md).  

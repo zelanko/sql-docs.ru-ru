@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 29cafc7e9669ca322571ff171961dd64cab114cf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62754330"
 ---
 # <a name="set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql"></a>Настройка зеркальной базы данных на использование свойства TRUSTWORTHY (Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "62754330"
   
      Дополнительные сведения см. в разделе [sys.databases (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql).  
   
-2.  После начала зеркального отображения базы данных необходимо убедиться, что в этот момент база данных является основной, в сеансе используется синхронный режим работы и что сеанс уже синхронизирован.   
+2.  После начала зеркального отображения базы данных необходимо убедиться, что в этот момент база данных является основной, в сеансе используется синхронный режим работы и что сеанс уже синхронизирован.  
   
     ```  
     SELECT database_id, mirroring_role, mirroring_safety_level_desc, mirroring_state_desc FROM sys.database_mirroring  

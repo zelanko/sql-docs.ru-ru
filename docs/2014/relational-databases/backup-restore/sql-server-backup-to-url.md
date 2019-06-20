@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d3911ab34a01b2da971aa602df37c8c559ed6390
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62920728"
 ---
 # <a name="sql-server-backup-to-url"></a>Резервное копирование в SQL Server по URL-адресу
@@ -117,7 +117,7 @@ ms.locfileid: "62920728"
   
 -   Указание набора параметров резервного набора данных `RETAINDAYS` и `EXPIREDATE` не поддерживается.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] — 259 символов. Функция BACKUP TO URL использует 36 символов для необходимых элементов, которые нужны для указания URL (https://.blob.core.windows.net//.bak), оставляя 223 символа для имен учетной записи, контейнера и большого двоичного объекта.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] — 259 символов. Функция BACKUP TO URL использует 36 символов для необходимых элементов, которые нужны для указания URL (https://.blob.core.windows.net//.bak ), оставляя 223 символа для имен учетной записи, контейнера и большого двоичного объекта.  
   
 ###  <a name="Support"></a> Поддержка инструкций резервного копирования и восстановления  
   

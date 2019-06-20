@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 08623cc2f9bf5d57141644a9f24c01d29d04cbe3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62865035"
 ---
 # <a name="delete-a-publication"></a>Удаление публикации
@@ -58,7 +58,7 @@ ms.locfileid: "62865035"
   
     -   Для удаления отдельной публикации в базе данных публикации на издателе выполните инструкцию [sp_droppublication](/sql/relational-databases/system-stored-procedures/sp-droppublication-transact-sql) .  
   
-    -   Чтобы удалить все публикации и удалить все объекты репликации из опубликованной базы данных, выполните процедуру [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) на издателе. Укажите значение `tran` для **@type**. Если распространитель недоступен или база данных находится в подозрительном состоянии или в режиме «вне сети», укажите значение **1** в параметре **@force**. Укажите имя базы данных в параметре **@dbname** , если процедура [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) не выполнялась в базе данных публикации (необязательно).  
+    -   Чтобы удалить все публикации и удалить все объекты репликации из опубликованной базы данных, выполните процедуру [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) на издателе. Укажите значение `tran` для **@type** . Если распространитель недоступен или база данных находится в подозрительном состоянии или в режиме «вне сети», укажите значение **1** в параметре **@force** . Укажите имя базы данных в параметре **@dbname** , если процедура [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) не выполнялась в базе данных публикации (необязательно).  
   
         > [!NOTE]  
         >  Если задать значение **1** в параметре **@force** , в базе данных могут остаться объекты публикации, связанные с репликацией.  
@@ -73,7 +73,7 @@ ms.locfileid: "62865035"
   
     -   Чтобы удалить отдельную публикацию, выполните инструкцию [sp_dropmergepublication (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql) в базе данных публикации на издателе.  
   
-    -   Чтобы удалить все публикации и удалить все объекты репликации из опубликованной базы данных, выполните процедуру [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) на издателе. Укажите значение `merge` для **@type**. Если распространитель недоступен или база данных находится в подозрительном состоянии или в режиме «вне сети», укажите значение **1** в параметре **@force**. Укажите имя базы данных в параметре **@dbname** , если процедура [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) не выполнялась в базе данных публикации (необязательно).  
+    -   Чтобы удалить все публикации и удалить все объекты репликации из опубликованной базы данных, выполните процедуру [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) на издателе. Укажите значение `merge` для **@type** . Если распространитель недоступен или база данных находится в подозрительном состоянии или в режиме «вне сети», укажите значение **1** в параметре **@force** . Укажите имя базы данных в параметре **@dbname** , если процедура [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) не выполнялась в базе данных публикации (необязательно).  
   
         > [!NOTE]  
         >  Если задать значение **1** в параметре **@force** , в базе данных могут остаться объекты публикации, связанные с репликацией.  
