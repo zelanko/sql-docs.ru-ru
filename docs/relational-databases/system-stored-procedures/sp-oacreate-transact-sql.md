@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5b7a56afb2ffa11dbe4ec8937efb602c13c9599d
-ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65450019"
 ---
 # <a name="spoacreate-transact-sql"></a>sp_OACreate (Transact-SQL)
@@ -41,14 +41,14 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
   
 ## <a name="arguments"></a>Аргументы  
  *Идентификатор ProgID*  
- Программный идентификатор (ProgID) создаваемого OLE-объекта. Данная строка символов описывает класс OLE-объекта и имеет следующий вид: **"**_OLEComponent_**.** _Объект_**"**  
+ Программный идентификатор (ProgID) создаваемого OLE-объекта. Данная строка символов описывает класс OLE-объекта и имеет следующий вид: **"** _OLEComponent_ **.** _Объект_ **"**  
   
  *OLEComponent* имя компонента сервера OLE-автоматизации, и *объект* — имя OLE-объекта. Указанный OLE-объект должен быть допустимым и должен поддерживать **IDispatch** интерфейс.  
   
  Например, SQLDMO. SQLServer — это идентификатор ProgID объекта SQL-DMO **SQLServer** объекта. SQL-DMO содержит имя компонента — Sqldmo, **SQLServer** объект является допустимым и (как и все объекты SQL-DMO объектов) **SQLServer** поддерживает **IDispatch**.  
   
  *CLSID*  
- Идентификатор класса (CLSID) создаваемого OLE-объекта. Данная строка символов описывает класс OLE-объекта и имеет следующий вид: **"{**_nnnnnnnn-nnnn-nnnn-nnnn-nnnnnnnnnnnn_**}"**. Указанный OLE-объект должен быть допустимым и должен поддерживать **IDispatch** интерфейс.  
+ Идентификатор класса (CLSID) создаваемого OLE-объекта. Данная строка символов описывает класс OLE-объекта и имеет следующий вид: **"{** _nnnnnnnn-nnnn-nnnn-nnnn-nnnnnnnnnnnn_ **}"** . Указанный OLE-объект должен быть допустимым и должен поддерживать **IDispatch** интерфейс.  
   
  Например, {00026BA1-0000-0000-C000-000000000046} — это идентификатор CLSID объекта SQL-DMO **SQLServer** объекта.  
   

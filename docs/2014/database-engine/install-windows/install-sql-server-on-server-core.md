@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 29523dba8417a89261fed72da801898513796c17
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62775782"
 ---
 # <a name="install-sql-server-2014-on-server-core"></a>Установка SQL Server 2014 в операционной системе Server Core
@@ -28,7 +28,7 @@ ms.locfileid: "62775782"
 |-----------------|--------------------|  
 |[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0 с пакетом обновления 2 (SP2)|Входит в программу установки Server Core [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] с пакетом обновления 1 (SP1) и [!INCLUDE[win8srv](../../includes/win8srv-md.md)]. Если платформа не разрешена, то программа установки включает ее по умолчанию.<br /><br /> Невозможно параллельно запустить на данном компьютере версии 2.0, 3.0 и 3.5. При установке платформы .NET Framework 3.5 с пакетом обновления 1 (SP1) вы получаете уровни 2.0 и 3.0 автоматически.|  
 |[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 3.5 с пакетом обновления 1 (SP1) Full Profile|Входит в программу установки Server Core [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] с пакетом обновления 1 (SP1). Если платформа не разрешена, то программа установки включает ее по умолчанию.<br /><br /> На компьютере, работающем под управлением серверной ОС Windows, необходимо загрузить и установить платформу .NET Framework 3.5 с пакетом обновления 1 (SP1) перед началом установки, чтобы установить компоненты, зависимые от .NET Framework 3.5 с пакетом обновления 1 (SP1).<br /><br /> Дополнительные сведения о рекомендациях и указания о том, как получить и включить платформу .NET Framework 3.5 в [!INCLUDE[win8srv](../../includes/win8srv-md.md)], см. в разделе [особенности развертывания Microsoft .NET Framework 3.5](https://msdn.microsoft.com/library/windows/hardware/hh975396) (https://msdn.microsoft.com/library/windows/hardware/hh975396).|  
-|[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4 Server Core Profile|Для всех выпусков [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , кроме [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], программа установки устанавливает платформу [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4 Server Core Profile как обязательное ПО.<br /><br /> Для [!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)], скачайте [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4 Server Core Profile [Microsoft .NET Framework 4 (автономный установщик) для основных серверных компонентов](https://go.microsoft.com/fwlink/?LinkId=220467) (https://go.microsoft.com/fwlink/?LinkId=220467)и установить ее перед продолжением работы программы установки.|  
+|[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4 Server Core Profile|Для всех выпусков [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , кроме [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], программа установки устанавливает платформу [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4 Server Core Profile как обязательное ПО.<br /><br /> Для [!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)], скачайте [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4 Server Core Profile [Microsoft .NET Framework 4 (автономный установщик) для основных серверных компонентов](https://go.microsoft.com/fwlink/?LinkId=220467) (https://go.microsoft.com/fwlink/?LinkId=220467) и установить ее перед продолжением работы программы установки.|  
 |Установщик Windows 4.5|Поставляется с установкой Server Core с [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] с пакетом обновления 1 (SP1) и [!INCLUDE[win8srv](../../includes/win8srv-md.md)].|  
 |Windows PowerShell 2.0|Поставляется с установкой Server Core с [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] с пакетом обновления 1 (SP1) и [!INCLUDE[win8srv](../../includes/win8srv-md.md)].|  
   
@@ -37,8 +37,8 @@ ms.locfileid: "62775782"
   
 |Компонент|Поддерживается|  
 |-------------|---------------|  
-|Службы[!INCLUDE[ssDE](../../includes/ssde-md.md)] |Да|  
-|Репликация[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] |Да|  
+|Службы[!INCLUDE[ssDE](../../includes/ssde-md.md)]|Да|  
+|Репликация[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Да|  
 |Полнотекстовый поиск|Да|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|Да|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|нет|  
@@ -47,7 +47,7 @@ ms.locfileid: "62775782"
 |Сервер служб Integration Services<sup>[1]</sup>|Да|  
 |Обратная совместимость клиентских средств|нет|  
 |Пакет SDK клиентских средств|нет|  
-|Электронная документация по[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] |нет|  
+|Электронная документация по[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|нет|  
 |Основные средства управления|Только удаленные<sup>[2]</sup>|  
 |Средства управления — полный набор|Только удаленные<sup>[2]</sup>|  
 |Контроллер распределенного воспроизведения|нет|  

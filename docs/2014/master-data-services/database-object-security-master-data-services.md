@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3eafc9720197ffc32cdca2ef58f91725befaaec1
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65483152"
 ---
 # <a name="database-object-security-master-data-services"></a>Защита объектов базы данных (службы Master Data Services)
@@ -46,11 +46,11 @@ ms.locfileid: "65483152"
   
 |Действие|Защищаемые объекты|Разрешения|  
 |------------|----------------|-----------------|  
-|Загрузить конечные элементы и их атрибуты в промежуточную таблицу.|stg.name_Leaf|Обязательно: INSERT<br /><br /> Необязательно: SELECT и UPDATE|  
+|Загрузить конечные элементы и их атрибуты в промежуточную таблицу.|stg.name_Leaf|Обязательно: INSERT<br /><br /> Необязательное действие: SELECT и UPDATE|  
 |Загрузить данные из конечной промежуточной таблицы в соответствующие таблицы базы данных MDS.|stg.udp_name_Leaf|EXECUTE|  
-|Загрузить консолидированные элементы и их атрибуты в промежуточную таблицу.|stg.name_Consolidated|Обязательно: INSERT<br /><br /> Необязательно: SELECT и UPDATE|  
+|Загрузить консолидированные элементы и их атрибуты в промежуточную таблицу.|stg.name_Consolidated|Обязательно: INSERT<br /><br /> Необязательное действие: SELECT и UPDATE|  
 |Загрузить данные из объединенной промежуточной таблицы в соответствующие таблицы базы данных MDS.|stg.udp_name_Consolidated|EXECUTE|  
-|Загрузка в промежуточную таблицу конечных и консолидированных элементов связи друг с другом в явной иерархии.|stg.name_Relationship|Обязательно: INSERT<br /><br /> Необязательно: SELECT и UPDATE|  
+|Загрузка в промежуточную таблицу конечных и консолидированных элементов связи друг с другом в явной иерархии.|stg.name_Relationship|Обязательно: INSERT<br /><br /> Необязательное действие: SELECT и UPDATE|  
 |Загрузить данные из промежуточной таблицы связей в соответствующие таблицы базы данных MDS.|stg.udp_name_Relationship|EXECUTE|  
 |Просмотреть ошибки, которые возникли при вставке данных из промежуточных таблиц в таблицы базы данных MDS.|stg.udp_name_Relationship|SELECT|  
   

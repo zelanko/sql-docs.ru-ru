@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ae87ebd3afa2ee49b55471be4d955cbb4d894ca7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62811607"
 ---
 # <a name="configure-the-cost-threshold-for-parallelism-server-configuration-option"></a>Параметр конфигурации сервера cost threshold for parallelism
@@ -38,7 +38,7 @@ ms.locfileid: "62811607"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Дальнейшие действия.**  [После настройки параметра cost threshold for parallelism, параметр](#FollowUp)  
+-   **Дальнейшие действия.**  [После настройки параметра cost threshold for parallelism](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
@@ -108,7 +108,7 @@ GO
   
  Дополнительные сведения см. в разделе [Параметры конфигурации сервера (SQL Server)](server-configuration-options-sql-server.md).  
   
-##  <a name="FollowUp"></a> Дальнейшие действия. После настройки параметра cost threshold for parallelism, параметр  
+##  <a name="FollowUp"></a> Дальнейшие действия. После настройки параметра cost threshold for parallelism  
  Параметр вступает в силу немедленно, без перезапуска сервера.  
   
 ## <a name="see-also"></a>См. также  

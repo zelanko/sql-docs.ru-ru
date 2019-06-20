@@ -11,14 +11,14 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ea4397bddf9ab1c08c099df4c473a5e43c54c9ec
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65489069"
 ---
 # <a name="task-4-setting-domain-rules"></a>Задача 4. Задание правил домена
-  В этой задаче вы создаете правило для **контактный адрес электронной почты** домена, чтобы проверить, заканчивается ли адрес электронной почты **@adventure-works.com**. См. в разделе [создания правила домена](https://msdn.microsoft.com/library/hh510397.aspx) Дополнительные сведения на странице.  
+  В этой задаче вы создаете правило для **контактный адрес электронной почты** домена, чтобы проверить, заканчивается ли адрес электронной почты **@adventure-works.com** . См. в разделе [создания правила домена](https://msdn.microsoft.com/library/hh510397.aspx) Дополнительные сведения на странице.  
   
 1.  Нажмите кнопку **контактный адрес электронной почты** в **список доменов**.  
   

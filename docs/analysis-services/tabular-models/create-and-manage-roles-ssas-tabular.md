@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 093197db8257cf9be261658f1828783fa01d7cc2
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.openlocfilehash: 3723d83fb28f6d2824be921906326d719e705478
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072221"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263412"
 ---
 # <a name="create-and-manage-roles"></a>Создание ролей и управление ими 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "53072221"
  [Роли](../../analysis-services/tabular-models/roles-ssas-tabular.md)   
  [Перспективы](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   
  [Анализ в Excel](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)   
- [USERNAME, функция (DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f)   
- [CUSTOMDATA, функция (DAX)](http://msdn.microsoft.com/58235ad8-226c-43cc-8a69-5a52ac19dd4e)  
+ [USERNAME, функция (DAX)](/dax/username-function-dax)   
+ [CUSTOMDATA, функция (DAX)](/dax/customdata-function-dax)  
   
   

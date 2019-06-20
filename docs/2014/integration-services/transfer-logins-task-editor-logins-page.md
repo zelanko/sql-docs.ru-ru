@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ae8ebf56e4ae7c4fce3566cb7688d203b8ceb318
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66054925"
 ---
 # <a name="transfer-logins-task-editor-logins-page"></a>Редактор задачи «Передача имен входа» (страница «Имена входа»)
@@ -29,10 +29,10 @@ ms.locfileid: "66054925"
   
 ## <a name="options"></a>Параметры  
  **SourceConnection**  
- Выберите в списке диспетчер подключений SMO или нажмите кнопку **\<Создать подключение...>**, чтобы создать подключение к исходному серверу.  
+ Выберите в списке диспетчер подключений SMO или нажмите кнопку **\<Создать подключение...>** , чтобы создать подключение к исходному серверу.  
   
  **DestinationConnection**  
- Выберите в списке диспетчер подключений SMO или нажмите кнопку **\<Создать подключение...>**, чтобы создать подключение к целевому серверу.  
+ Выберите в списке диспетчер подключений SMO или нажмите кнопку **\<Создать подключение...>** , чтобы создать подключение к целевому серверу.  
   
  **LoginsToTransfer**  
  Выберите имена входа [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] для копирования их с исходного сервера на целевой. Параметры этого свойства приведены в следующей таблице.  

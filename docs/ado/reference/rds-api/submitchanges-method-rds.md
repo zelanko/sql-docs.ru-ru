@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: e35b5c2939c01fa0e8a10995ebcc620eae66fe56
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66718732"
 ---
 # <a name="submitchanges-method-rds"></a>Метод SubmitChanges (служба удаленных рабочих столов)
@@ -48,7 +48,7 @@ DataControl.SubmitChanges DataFactory.SubmitChanges Connection, Recordset
  Объектную переменную, которая представляет **записей** объекта.  
   
 ## <a name="remarks"></a>Примечания  
- [Connect](../../../ado/reference/rds-api/connect-property-rds.md), [Server](../../../ado/reference/rds-api/server-property-rds.md), и [SQL](../../../ado/reference/rds-api/sql-property.md) свойства должны быть установлены перед использованием **SubmitChanges** метод с  **RDS. DataControl** объекта.  
+ [Connect](../../../ado/reference/rds-api/connect-property-rds.md), [Server](../../../ado/reference/rds-api/server-property-rds.md), и [SQL](../../../ado/reference/rds-api/sql-property.md) свойства должны быть установлены перед использованием **SubmitChanges** метод с ** RDS. DataControl** объекта.  
   
  При вызове метода [CancelUpdate](../../../ado/reference/rds-api/cancelupdate-method-rds.md) метод после вызова **SubmitChanges** для того же **записей** объекта, **CancelUpdate** вызов завершается ошибкой, так как изменения уже были зафиксированы.  
   

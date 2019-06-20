@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8f41e323faeb898be1f44159760bb1c28b7ab024
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66011919"
 ---
 # <a name="import-native-and-character-format-data-from-earlier-versions-of-sql-server"></a>Импорт данных в собственном и символьном формате из предыдущих версий SQL Server
@@ -55,7 +55,7 @@ ms.locfileid: "66011919"
  При массовом экспорте данных с помощью **-V80** переключиться, `nvarchar(max)`, `varchar(max)`, `varbinary(max)`, XML и определяемый пользователем тип данных в собственном режиме хранятся с 4-байтовым префиксом, как `text`, `image`и `ntext`данных, вместо 8-байтового префикса, используемого по умолчанию для [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версий.  
   
 ## <a name="copying-date-values"></a>Копирование значений данных  
- Программа**bcp** использует API-интерфейс массового копирования ODBC. Таким образом, для импорта значений дат в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]программа **bcp** использует формат данных ODBC (*гггг-мм-дд чч:мм:сс*[*.f...*]).  
+ Программа**bcp** использует API-интерфейс массового копирования ODBC. Таким образом, для импорта значений дат в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]программа **bcp** использует формат данных ODBC (*гггг-мм-дд чч:мм:сс*[ *.f...* ]).  
   
  **Bcp** команда экспортирует файлы данных символьного формата с помощью формата ODBC по умолчанию для `datetime` и `smalldatetime` значения. Например, столбец типа `datetime`, содержащий дату `12 Aug 1998`, копируется с помощью массового копирования в файл данных в качестве строки символов `1998-08-12 00:00:00.000`.  
   

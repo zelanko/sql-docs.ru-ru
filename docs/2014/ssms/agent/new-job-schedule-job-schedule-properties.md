@@ -14,13 +14,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 65adf53cc7401053b66b8c77839b267e7d20406a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62704624"
 ---
-# <a name="new-job-schedule-job-schedule-properties"></a>Создание расписания задания: Свойства расписания задания
+# <a name="new-job-schedule-job-schedule-properties"></a>Создание расписания задания: свойства расписания задания
   Используйте эту страницу для просмотра и изменения свойств расписания.  
   
 ## <a name="options"></a>Параметры  

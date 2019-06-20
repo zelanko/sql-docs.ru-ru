@@ -18,10 +18,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 821fd05e94ac820dff50bd08c70c75e7e9cc653d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62779598"
 ---
 # <a name="install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases"></a>Установка пакета обновления на систему с минимальным временем простоя для зеркально отображаемых баз данных
@@ -74,13 +74,13 @@ ms.locfileid: "62779598"
   
 1.  Если сеанс зеркального отображения выполняется в высокопроизводительном режиме, перед выполнением последовательного обновления измените его на режим высокой безопасности без автоматической отработки отказа. Используйте один из следующих методов.  
   
-    -   В [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]: Изменение **режим работы** равным **высокая безопасность без автоматической отработки отказа (синхронный)** с помощью [зеркального отображения страницы](../relational-databases/databases/database-properties-mirroring-page.md) из **базы данных Свойства** диалоговое окно. Дополнительные сведения о доступе к этой странице см. в разделе [Запуск мастер настройки безопасности зеркального отображения баз данных (среда SQL Server Management Studio)](database-mirroring/start-the-configuring-database-mirroring-security-wizard.md).  
+    -   В [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]: измените параметр **Режим работы** на **Высокая безопасность без автоматической отработки отказа (синхронный)** с помощью страницы [Зеркальное отображение](../relational-databases/databases/database-properties-mirroring-page.md) диалогового окна **Свойства базы данных**. Дополнительные сведения о доступе к этой странице см. в разделе [Запуск мастер настройки безопасности зеркального отображения баз данных (среда SQL Server Management Studio)](database-mirroring/start-the-configuring-database-mirroring-security-wizard.md).  
   
-    -   В [!INCLUDE[tsql](../includes/tsql-md.md)]: Установите безопасность транзакций в значение FULL. Дополнительные сведения см. в разделе [Изменение безопасности транзакций в сеансах зеркального отображения базы данных (Transact-SQL)](database-mirroring/change-transaction-safety-in-a-database-mirroring-session-transact-sql.md).  
+    -   В [!INCLUDE[tsql](../includes/tsql-md.md)]: установите безопасность транзакций как FULL. Дополнительные сведения см. в разделе [Изменение безопасности транзакций в сеансах зеркального отображения базы данных (Transact-SQL)](database-mirroring/change-transaction-safety-in-a-database-mirroring-session-transact-sql.md).  
   
 ### <a name="to-perform-the-rolling-update"></a>Выполнение последовательного обновления  
   
-1.  Чтобы свести к минимуму время простоя, мы рекомендуем следующее. Начните последовательное обновление с обновления участника зеркального отображения, который в данный момент является зеркальным сервером во всех сеансах зеркального отображения. На этом этапе, возможно, придется обновить несколько экземпляров сервера.  
+1.  Чтобы свести к минимуму время простоя, необходимо выполнить следующие рекомендации. Начните последовательное обновление с обновления участника зеркального отображения, который в данный момент является зеркальным сервером во всех сеансах зеркального отображения. На этом этапе, возможно, придется обновить несколько экземпляров сервера.  
   
     > [!NOTE]  
     >  Следящий сервер можно обновить в любой момент последовательного обновления. Например, если экземпляр сервера является зеркальным сервером в сеансе 1 и следящим сервером в сеансе 2, этот сервер можно обновить сразу.  
@@ -123,7 +123,7 @@ ms.locfileid: "62779598"
   
 1.  При необходимости вернитесь в высокопроизводительный режим, используя один из следующих методов.  
   
-    -   В [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]: Изменение **режим работы** равным **высокая производительность (асинхронный)** с помощью [зеркального отображения страницы](../relational-databases/databases/database-properties-mirroring-page.md) из **свойства базы данных**диалоговое окно.  
+    -   В [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]: измените параметр **Режим работы** на **Высокая производительность (асинхронный)** с помощью страницы [Зеркальное отображение](../relational-databases/databases/database-properties-mirroring-page.md) диалогового окна **Свойства базы данных**.  
   
     -   В [!INCLUDE[tsql](../includes/tsql-md.md)]: Используйте [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring) установите безопасность транзакций в значение OFF.  
   

@@ -18,21 +18,21 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 1ba06c10b3f890f08abac371346c3d03a0278aa8
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66705722"
 ---
 # <a name="tables-collection-adox"></a>Коллекция Tables (ADOX)
 Содержит все [таблицы](../../../ado/reference/adox-api/table-object-adox.md) объектов каталога.  
   
 ## <a name="remarks"></a>Примечания  
- [Append](../../../ado/reference/adox-api/append-method-adox-tables.md) метод **таблиц** является уникальным для ADOX. Можно выполнить следующие действия:  
+ [Append](../../../ado/reference/adox-api/append-method-adox-tables.md) метод **таблиц** является уникальным для ADOX. Можно выполнить следующие действия:   
   
 -   Добавить новую таблицу в коллекцию с **Append** метод.  
   
- Остальные свойства и методы являются стандартными для коллекции ADO. Можно выполнить следующие действия:  
+ Остальные свойства и методы являются стандартными для коллекции ADO. Можно выполнить следующие действия:   
   
 -   Доступ к таблице в коллекции с [элемент](../../../ado/reference/ado-api/item-property-ado.md) свойство.  
   

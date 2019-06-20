@@ -20,10 +20,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 251c2f67861dd996ac78efc9a8e599d7ec191072
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66711557"
 ---
 # <a name="resync-method"></a>Метод Resync
@@ -41,7 +41,7 @@ Recordset.Resync AffectRecords, ResyncValues Record.Fields.Resync ResyncValues
  Необязательный параметр. [AffectEnum](../../../ado/reference/ado-api/affectenum.md) значение, которое определяет, сколько записей **Resync** повлияет на метод. Значение по умолчанию — **adAffectAll**. Это значение не входит в состав **Resync** метод **поля** коллекцию **записи** объекта.  
   
  *ResyncValues*  
- Необязательный. Объект [ResyncEnum](../../../ado/reference/ado-api/resyncenum.md) значение, которое указывает, перезаписываются ли базового значения. Значение по умолчанию — **adResyncAllValues**.  
+ Необязательный параметр. Объект [ResyncEnum](../../../ado/reference/ado-api/resyncenum.md) значение, которое указывает, перезаписываются ли базового значения. Значение по умолчанию — **adResyncAllValues**.  
   
 ## <a name="remarks"></a>Примечания  
   
