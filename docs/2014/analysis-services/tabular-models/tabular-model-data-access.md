@@ -10,12 +10,12 @@ ms.assetid: 6ae74a8b-0025-450d-94a5-4e601831d420
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7881df645a02e70948d81baa6fd8a029d06ea1b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5bf8d4af44f7596bb632a05483c387752ba2e056
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66066460"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284865"
 ---
 # <a name="tabular-model-data-access"></a>Доступ к данным табличной модели
   К табличным шаблонам базы данных в службах Analysis Services можно получить доступ с помощью большинства тех же клиентов, интерфейсов и языков, которые используются для извлечения данных или метаданных из многомерной модели. Дополнительные сведения см. в разделе [Доступ к данным многомерной модели (службы Analysis Services — многомерные данные)](../multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md).  
@@ -65,7 +65,7 @@ ms.locfileid: "66066460"
   
  Кроме того, выражения DAX можно использовать внутри контекста инструкции команды XMLA EXECUTE для отправки запросов к табличной модели, развернутой в режиме DirectQuery.  
   
- Примеры запросов к табличной модели с использованием DAX см. в статье [Справочник по синтаксису запроса DAX](https://msdn.microsoft.com/library/ee634217.aspx).  
+ Примеры запросов к табличной модели, с использованием DAX см. в статье [Справочник по синтаксису запроса DAX] (/ / dax —-Справочник по синтаксису dax
   
 ### <a name="mdx"></a>Многомерное выражение  
  С помощью многомерных выражений можно создавать запросы к табличным моделям, использующим кэш памяти в качестве предпочтительного метода запроса (то есть к моделям, не развернутым в режиме DirectQuery). Клиенты, например [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] , используют DAX как для создания агрегатов, так и для выполнения запросов к модели как к источнику данных, однако если вы знакомы с многомерными выражениями, задачу может упростить создание примеров запросов в виде многомерных выражений — см. раздел [Построение мер в многомерных выражениях](../multidimensional-models/mdx/mdx-building-measures.md).  

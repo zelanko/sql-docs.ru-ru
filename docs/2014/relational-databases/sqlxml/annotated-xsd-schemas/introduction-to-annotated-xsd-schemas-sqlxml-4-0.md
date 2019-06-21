@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d8813d34f2c669e9646b899230388fca649e4488
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66014460"
 ---
 # <a name="introduction-to-annotated-xsd-schemas-sqlxml-40"></a>Введение в схемы XSD с заметками (SQLXML 4.0)
@@ -44,7 +44,7 @@ ms.locfileid: "66014460"
 </xsd:schema>  
 ```  
   
-  **\<Xsd: schema >** элемент является производным от спецификации пространства имен схемы XML в http://www.w3.org/2001/XMLSchema.  
+ **\<Xsd: schema >** элемент является производным от спецификации пространства имен схемы XML в http://www.w3.org/2001/XMLSchema.  
   
 ## <a name="annotations-to-the-xsd-schema"></a>Заметки к схеме XSD  
  Можно использовать схему XSD с заметками, которые описывают сопоставление с базой данных, запрашивают базу данных, а затем возвращают результаты в форме XML-документа. Заметки служат для сопоставления схемы XSD с таблицами и столбцами базы данных. Можно указывать запросы XPath к представлениям XML, созданным на основе схемы XSD, для запроса базы данных и получения результатов в виде XML.  

@@ -13,12 +13,12 @@ ms.assetid: e19b6002-67bd-4e7d-9f19-ecb455522b1a
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b51cfde7e4d23d734a86955b3d639fab3e4625e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3b5cc194306a4baecb2c5fa5478bf4733d1386af
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65482688"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284984"
 ---
 # <a name="relationship-staging-table-master-data-services"></a>Промежуточная таблица связей (службы Master Data Services)
   Используйте промежуточную таблицу связей (stg.name_Relationship) в базе данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] для изменения расположения элементов в явной иерархии на основе связей между элементами.  
@@ -40,7 +40,7 @@ ms.locfileid: "65482688"
 |**ErrorCode**|Отображает код ошибки. Для всех записей со значением **ImportStatus_ID** , равным **2**, см. раздел [Ошибки промежуточного процесса (службы Master Data Services)](staging-process-errors-master-data-services.md).|  
   
 ## <a name="see-also"></a>См. также  
- [Перемещение элементов явной иерархии с помощью промежуточного процесса &#40;службы Master Data Services&#41;](/sql/2014/master-data-services/add-update-and-delete-data-master-data-services)   
+ [Перемещение элементов явной иерархии с помощью промежуточного процесса &#40;службы Master Data Services&#41;](add-update-and-delete-data-master-data-services.md)   
  [Импорт данных &#40;службы Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)   
  [Просмотр ошибок, возникающих в ходе промежуточного процесса &#40;службы Master Data Services&#41;](view-errors-that-occur-during-staging-master-data-services.md)   
  [Ошибки промежуточного процесса (службы Master Data Services)](staging-process-errors-master-data-services.md)  

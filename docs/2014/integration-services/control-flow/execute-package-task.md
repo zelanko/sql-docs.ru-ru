@@ -16,12 +16,12 @@ ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 59b623076e86f3bacf5ae8c6e24b48774e33f670
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 37d0edcabdb0171c8ca83c79080d59fdd8aafb76
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62831916"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284956"
 ---
 # <a name="execute-package-task"></a>Задача «Выполнение пакета»
   Задача «Выполнение пакета» расширяет возможности служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] в рамках организации, позволяя одним пакетам выполнять другие пакеты как часть рабочего процесса.  
@@ -112,12 +112,8 @@ ms.locfileid: "62831916"
   
 -   [Задание свойств задач или контейнеров](../set-the-properties-of-a-task-or-container.md)  
   
-## <a name="related-tasks"></a>Связанные задачи  
-  
 ## <a name="related-content"></a>См. также  
-  
--   Запись в блоге [служб SSIS: Следует выполнять дочерние пакеты внутри процесса или вне процесса? ](https://go.microsoft.com/fwlink/?LinkId=220819), на сайте consultingblogs.emc.com.  
-  
--   Запись в блоге [служб SSIS: Доступ к переменным из родительского пакета](https://andyleonard.blog/2015/08/ssis-design-pattern-access-parent-variables-from-a-child-package-in-the-ssis-catalog/), на andyleonard.blog. 
+
+Запись в блоге [служб SSIS: Доступ к переменным из родительского пакета](https://andyleonard.blog/2015/08/ssis-design-pattern-access-parent-variables-from-a-child-package-in-the-ssis-catalog/), на andyleonard.blog. 
   
   

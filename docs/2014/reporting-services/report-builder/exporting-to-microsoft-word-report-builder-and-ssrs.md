@@ -10,17 +10,17 @@ ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 003b950e908abab7e385836e761b5c230caa7fcf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3eaaace0d8ae5924305024e6ee67f7f3fefb415c
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66107878"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67285033"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Экспорт в Microsoft Word (построитель отчетов и службы SSRS)
   Модуль подготовки отчетов Word подготавливает отчеты в собственном формате [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007–2010. Используется формат Office Open XML.  
   
- Модуль подготовки отчетов Word является совместимым с [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007–2010, а также с [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 с установленным пакетом совместимости [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office для Word, Excel и PowerPoint. Дополнительные сведения о пакете совместимости см. в разделе [Пакет совместимости Microsoft Office для Word, Excel и PowerPoint](https://go.microsoft.com/fwlink/?LinkID=205622).  
+ Модуль подготовки отчетов Word является совместимым с [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007–2010, а также с [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 с установленным пакетом совместимости [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office для Word, Excel и PowerPoint. 
   
  Содержимое файлов, создаваемых этим модулем подготовки, имеет тип **application/vnd.openxmlformats-officedocument.wordprocessingml.document** , а имена файлов имеют расширение DOCX.  
   

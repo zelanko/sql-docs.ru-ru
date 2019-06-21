@@ -16,14 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3f7649875faf636d2bbc78834c13d4b5b1b99e72
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66063434"
 ---
 # <a name="error-list-window-management-studio"></a>Окно «Список ошибок» (среда Management Studio)
-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **среды** отображает синтаксические и семантические ошибки, сформированные из кода технологии IntelliSense в редакторе запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **среды** отображает синтаксические и семантические ошибки, сформированные из кода технологии IntelliSense в редакторе запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
 ## <a name="features-of-the-error-list"></a>Функции списка ошибок  
  **Список ошибок** обеспечивает следующую функциональность.  

@@ -13,12 +13,12 @@ ms.assetid: a8c953da-ec20-47dc-8656-ed5f0dfed89b
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3730ed26ec94d64dedb0ac17cd306a3d6d75a2b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 272fdcee66a8e702ac1dfe6c2da3d408c93a5e49
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65482914"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284968"
 ---
 # <a name="leaf-member-staging-table-master-data-services"></a>Конечный элемент таблицы элементов (службы Master Data Services)
   Промежуточная таблица конечных элементов (stg.name_Leaf) используется в базе данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] для создания, обновления, деактивации и удаления конечных элементов. Ее также можно использовать для обновления значений атрибутов конечных элементов.  
@@ -43,7 +43,7 @@ ms.locfileid: "65482914"
  Какие сведения вы искали и удалось ли вам их найти? Мы прислушиваемся к вашим отзывам для совершенствования содержимое. Отправляйте свои комментарии по адресу [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Leaf%20Member%20Staging%20Table%20page)  
   
 ## <a name="see-also"></a>См. также  
- [Загрузка или обновление членов в службы Master Data Services с помощью промежуточного процесса](/sql/2014/master-data-services/add-update-and-delete-data-master-data-services)   
+ [Загрузка или обновление членов в службы Master Data Services с помощью промежуточного процесса](add-update-and-delete-data-master-data-services.md)   
  [Импорт данных &#40;службы Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)   
  [Просмотр ошибок, возникающих в ходе промежуточного процесса &#40;службы Master Data Services&#41;](view-errors-that-occur-during-staging-master-data-services.md)   
  [Ошибки промежуточного процесса (службы Master Data Services)](staging-process-errors-master-data-services.md)  
