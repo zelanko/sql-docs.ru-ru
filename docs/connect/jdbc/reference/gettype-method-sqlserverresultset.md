@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 38cc11c791666ebefadf71a412ea5a5858c03f34
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66786149"
 ---
 # <a name="gettype-method-sqlserverresultset"></a>Метод getType (SQLServerResultSet)
@@ -48,7 +48,7 @@ public int getType()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getTime определен с помощью метода getTime в интерфейсе java.sql.ResultSet.  
+ Этот метод getType определен с помощью метода getType в интерфейсе java.sql.ResultSet.  
   
  Этот метод позволяет определить фактический тип курсора. Если в приложении выбран тип TYPE_FORWARD_ONLY или используется тип курсора по умолчанию, то возвращается значение TYPE_FORWARD_ONLY.  
   

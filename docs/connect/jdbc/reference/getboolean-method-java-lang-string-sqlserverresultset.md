@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 6d10e44472d5a40007d7ead9f464af89e5cf8734
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66777468"
 ---
 # <a name="getboolean-method-javalangstring-sqlserverresultset"></a>Метод getBoolean (java.lang.String) (SQLServerResultSet)
@@ -47,12 +47,12 @@ public boolean getBoolean(java.lang.String columnName)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getBoolean определен с помощью метода getBoolean в интерфейсе java.sql.CallableStatement.  
+ Этот метод getBoolean определен с помощью метода getBoolean в интерфейсе java.sql.ResultSet.  
   
  Этот метод поддерживается только для числовых и символьных типов данных. Он преобразует значения «1», 1, и "**true**" для **true**и значения «0», 0, и "**false**" для **false**. Для всех остальных значений поведение не определено.  
   
 ## <a name="see-also"></a>См. также:  
- [Метод updateBoolean (SQLServerResultSet)](../../../connect/jdbc/reference/getboolean-method-sqlserverresultset.md)   
+ [Метод getBoolean (SQLServerResultSet)](../../../connect/jdbc/reference/getboolean-method-sqlserverresultset.md)   
  [Элементы SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Класс SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

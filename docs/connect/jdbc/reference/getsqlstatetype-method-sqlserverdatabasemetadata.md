@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 55079e30c2f8908153cc708aca699e77aef41261
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66774179"
 ---
 # <a name="getsqlstatetype-method-sqlserverdatabasemetadata"></a>Метод getSQLStateType (SQLServerDatabaseMetaData)
@@ -38,7 +38,7 @@ public int getSQLStateType()
 ## <a name="return-value"></a>Возвращаемое значение  
  Значение **int**, указывающее тип SQLSTATE. Может принимать одно из следующих значений.  
   
--   Для Java Runtime Environment верси 5.0: Если **xopenStates** свойство подключения имеет значение **true**, этот метод возвращает DatabaseMetaData.sqlStateXOpen. Otherwise, DatabaseMetaData.sqlStateSQL99.  
+-   Для Java Runtime Environment верси 5.0: Если **xopenStates** свойство подключения имеет значение **true**, этот метод возвращает DatabaseMetaData.sqlStateXOpen. В противном случае — DatabaseMetaData.sqlStateSQL99.  
   
 -   Для Java Runtime Environment версии 6.0: Если **xopenStates** свойство подключения имеет значение **true**, этот метод возвращает DatabaseMetaData.sqlStateXOpen. В противном случае DatabaseMetaData.sqlStateSQL.  
   

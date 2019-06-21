@@ -18,10 +18,10 @@ author: pmasl
 ms.author: pelopes
 manager: jroth
 ms.openlocfilehash: 6778b08e106416a009e854c3b88c3f7a13efc88a
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66768583"
 ---
 # <a name="initialization-and-authorization-properties"></a>Свойства инициализации и авторизации
@@ -44,7 +44,7 @@ ms.locfileid: "66768583"
 |DBPROP_INIT_ASYNCH|Драйвер OLE DB для SQL Server поддерживает асинхронную инициализацию.<br /><br /> При установке разряда DBPROPVAL_ASYNCH_INITIALIZE в свойстве DBPROP_INIT_ASYNCH метод **IDBInitialize::Initialize** становится неблокирующим вызовом. Дополнительные сведения см. в разделе [выполнение асинхронных операций](../../oledb/features/performing-asynchronous-operations.md).|  
 |DBPROP_INIT_CATALOG|Имя существующей базы данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], к которой выполняется подключение.|  
 |DBPROP_INIT_DATASOURCE|Сетевое имя сервера, на котором запущен экземпляр [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Если на компьютере запущено несколько экземпляров [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], то для подключения к определенному экземпляру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] значение DBPROP_INIT_DATASOURCE указывается в формате *\\\имя_сервера\имя_экземпляра*. Вместо обратной косой черты используется escape-последовательность (\\\).|  
-|DBPROP_INIT_GENERALTIMEOUT|Указывает количество секунд до истечения времени запроса, кроме инициализации источника данных и выполнения команды. Значение 0 указывает на бесконечное время ожидания. Поставщики, работающие через сетевые соединения, в распределенных сценариях или сценариях на основе транзакций, могут реализовать поддержку этого свойства, чтобы принудительно сократить время ожидания задействованного компонента в случае длительного выполнения запроса. Временем ожидания для инициализации источника данных или выполнения команд по-прежнему управляют свойства DBPROP_INIT_TIMEOUT и DBPROP_COMMANDTIMEOUT, соответственно.<br /><br /> Свойство DBPROP_INIT_GENERALTIMEOUT доступно только для чтения, и при попытке присвоить ему значение в *dwstatus* возвращается ошибка DBPROPSTATUS_NOTSETTABLE.|  
+|DBPROP_INIT_GENERALTIMEOUT|Указывает количество секунд до истечения времени запроса, кроме инициализации источника данных и выполнения команды. Значение 0 указывает на бесконечное время ожидания. Поставщики, работающие через сетевые подключения в распределенных сценариях или сценариях на основе транзакций, могут реализовать поддержку этого свойства, чтобы принудительно сократить время ожидания задействованного компонента в случае длительного выполнения запроса. Временем ожидания для инициализации источника данных или выполнения команд по-прежнему управляют свойства DBPROP_INIT_TIMEOUT и DBPROP_COMMANDTIMEOUT, соответственно.<br /><br /> Свойство DBPROP_INIT_GENERALTIMEOUT доступно только для чтения, и при попытке присвоить ему значение в *dwstatus* возвращается ошибка DBPROPSTATUS_NOTSETTABLE.|  
 |DBPROP_INIT_HWND|Дескриптор Windows из вызывающего приложения. Действительный дескриптор окна необходим для инициализации диалогового окна, если разрешен запрос свойств инициализации.|  
 |DBPROP_INIT_IMPERSONATION_LEVEL|Драйвер OLE DB для SQL Server не поддерживает корректировку уровня олицетворения.<br /><br /> Драйвер OLE DB для SQL Server возвращает значение DB_S_ERRORSOCCURRED, при попытке установить значение свойства. Элемент *dwStatus* структуры DBPROP указывает DBPROPSTATUS_NOTSUPPORTED.|  
 |DBPROP_INIT_LCID|Драйвер OLE DB для SQL Server проверяет код языка и возвращает ошибку, если код языка не поддерживается или не установлен в клиенте.|  

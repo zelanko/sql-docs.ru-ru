@@ -7,13 +7,13 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.date: 03/14/2017
-ms.openlocfilehash: 50703b76ddd67ca4d41cc42625eb6cd0e5ac993b
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.date: 06/06/2019
+ms.openlocfilehash: a6383eb6bf9c00f6158e0e7adc77605cfc226d9f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65580376"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66826907"
 ---
 # <a name="configure-report-builder-access"></a>настроить доступ к построителю отчетов
 Построитель отчетов — средство автоматизированной системы отчетности, устанавливаемое с сервером отчетов служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , настроенным для собственного режима или режима интеграции SharePoint.  
@@ -28,29 +28,29 @@ ms.locfileid: "65580376"
 
 ## <a name="prerequisites"></a>предварительные требования
 
-Построитель отчетов доступен не в каждом выпуске [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые выпусками SQL Server 2017](~/sql-server/editions-and-components-of-sql-server-2017.md).  
+Построитель отчетов доступен не в каждом выпуске [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые выпусками SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
 
-На клиентском компьютере должна быть установлена платформа [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0. Платформа [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] предоставляет инфраструктуру для работы приложений [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] .  
+Клиентский компьютер должен иметь [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 или 4.6.1, установленная для SSRS 2016 и 2017, соответственно. Платформа [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] предоставляет инфраструктуру для работы приложений [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] .  
 
-Необходимо использовать обозреватель [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer 6.0 или более поздней версии.  
+Необходимо использовать [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer 11 или более поздней версии или другой современный браузер.  
 
 Построитель отчетов всегда работает при полном уровне доверия, его нельзя настроить на работу с частичным уровнем доверия. В предыдущих версиях можно было запустить построитель отчетов с частичным уровнем доверия, но этот режим отсутствует в [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и последующих версиях.  
 
 ## <a name="enabling-and-disabling-report-builder"></a>Включение и отключение построителя отчетов  
 
-По умолчанию построитель отчетов включен. Администраторы сервера отчетов могут отключить построитель отчетов, присвоив системному свойству сервера отчетов **EnableReportDesignClientDownload** значение **false**. Это отключит загрузку построителя отчетов для этого сервера отчетов.  
+По умолчанию построитель отчетов включен. Администраторы сервера отчетов могут отключить построитель отчетов, присвоив системному свойству **ShowDownloadMenu** сервера отчетов значение **false**. Задание этого свойства приведет к отключению построитель отчетов, издатель мобильных отчетов и Power BI Mobile загрузки для этого сервера отчетов.  
 
-Системные свойства сервера отчетов можно задать с помощью среды Management Studio или скрипта.  
+ Системные свойства сервера отчетов можно задать с помощью среды Management Studio или скрипта.   
 
-- Чтобы использовать среду Management Studio, подключитесь к серверу отчетов и используйте страницу «Дополнительные свойства сервера», чтобы назначить параметру **EnableReportDesignClientDownload** значение **false**. Дополнительные сведения об открытии этой страницы см. в разделе [Установка свойств сервера отчетов (среда Management Studio)](../../reporting-services/tools/set-report-server-properties-management-studio.md).  
+ - Чтобы использовать Management Studio, подключитесь к серверу отчетов и используйте страницу "Дополнительные свойства сервера", чтобы присвоить свойству **ShowDownloadMenu** значение **false**. Дополнительные сведения об открытии этой страницы см. в разделе [Установка свойств сервера отчетов (среда Management Studio)](../../reporting-services/tools/set-report-server-properties-management-studio.md).      
 
-- Пример сценария, который задает свойство сервера отчетов, см. в разделе [Написание скриптов для задач развертывания и администрирования](../../reporting-services/tools/script-deployment-and-administrative-tasks.md).  
+ - Пример сценария, который задает свойство сервера отчетов, см. в разделе [Написание скриптов для задач развертывания и администрирования](../../reporting-services/tools/script-deployment-and-administrative-tasks.md).  
 
 ## <a name="role-assignments-granting-report-builder-access-on-a-native-mode-report-server"></a>Назначения ролей предоставляют построителю отчетов доступ к серверу отчетов, работающему в собственном режиме  
 
 В собственном режиме работы сервера отчетов создайте назначения ролей, включающие задачи для использования построителя отчетов. Необходимо быть диспетчером содержимого или системным администратором, чтобы создать или изменить определения ролей или назначения ролей на уровне элемента или уровне сайта.  
 
-Следующие инструкции предполагают, что используются стандартные роли. Если изменяются определения ролей или если выполнено обновление с SQL Server 2000, проверьте роли, чтобы убедиться, что они содержат необходимые задачи. Дополнительные сведения о создании назначений ролей см. в разделе [Предоставление пользователям доступа к серверу отчетов (диспетчер отчетов)](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md).  
+Следующие инструкции предполагают, что используются стандартные роли. Если изменяются определения ролей или если выполнено обновление с SQL Server 2000, проверьте роли, чтобы убедиться, что они содержат необходимые задачи. См. подробнее о создании назначений ролей в руководстве по [предоставлению пользователям доступа к серверу отчетов](../../reporting-services/security/grant-user-access-to-a-report-server.md).
 
 После создания назначений ролей пользователи будут иметь разрешения для следующих действий.  
 
@@ -100,7 +100,7 @@ ms.locfileid: "65580376"
 
     3. В поле «Имя» введите **Построитель отчетов**.  
 
-    4. В поле «Описание» введите описание для роли, чтобы пользователи в диспетчере отчетов знали, для чего предназначена роль.  
+    4. В поле "Описание" введите описание для роли, чтобы пользователи в диспетчере отчетов знали, для чего предназначена роль.  
 
     5. Добавьте следующие задачи: **Использование отчетов**, **Просмотр отчетов**, **Просмотр моделей**, **Просмотр ресурсов**, **Просмотр папок**и **Управление отдельными подписками**.  
 
@@ -108,9 +108,10 @@ ms.locfileid: "65580376"
 
 #### <a name="to-create-role-assignments-that-grant-access-to-report-builder"></a>Создание назначений ролей, предоставляющих доступ к построителю отчетов  
 
-1. Запустите диспетчер отчетов.  
+1. Откройте веб-портал.  
 
-2. Щелкните элемент **Настройки сайта**.  
+2. Щелкните значок шестеренки в правом верхнем углу веб-портала домашней страницы и выберите **параметры сайта** из раскрывающегося меню.  
+![Щелкните значок шестеренки портала web и меню](../../reporting-services/report-builder/media/configure-report-builder-access/ssrswebportal-site-settings-gear-icon-and-menu.png)
 
 3. Перейдите на вкладку **Безопасность**.  
 
@@ -150,5 +151,6 @@ ms.locfileid: "65580376"
 - [Проверка подлинности с использованием сервера отчетов](../../reporting-services/security/authentication-with-the-report-server.md)
 - [Поддержка браузера для служб Reporting Services и Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)
 - [Запуск построителя отчетов](../../reporting-services/report-builder/start-report-builder.md)
-- [Диспетчер отчетов &#40;собственный режим SSRS&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)- [Подключение к серверу отчетов в Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)
+- [Веб-портал сервера отчетов (службы SSRS в собственном режиме)](../web-portal-ssrs-native-mode.md)
+- [Подключение к серверу отчетов в среде Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)
 - [Системные свойства сервера отчетов](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)

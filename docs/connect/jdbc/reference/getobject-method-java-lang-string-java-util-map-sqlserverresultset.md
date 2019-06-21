@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 59b08ec9038ee9cd786cf5f29bc0714ff8d26952
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66787636"
 ---
 # <a name="getobject-method-javalangstring-javautilmap-sqlserverresultset"></a>Метод getObject (java.lang.String, java.util.Map) (SQLServerResultSet)
@@ -55,7 +55,7 @@ public java.lang.Object getObject(java.lang.String colName,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getObject определен с помощью метода getObject в интерфейсе java.sql.CallableStatement.  
+ Этот метод getObject определен с помощью метода getObject в интерфейсе java.sql.ResultSet.  
   
  Этот метод вернет значение данного столбца в виде объекта Java. Объект Java будет иметь заданный по умолчанию тип, соответствующий типу SQL Server столбца и сопоставленный встроенным типам, указанным в спецификации JDBC. Если значение SQL NULL, то драйвер вернет значение Java NULL.  
   

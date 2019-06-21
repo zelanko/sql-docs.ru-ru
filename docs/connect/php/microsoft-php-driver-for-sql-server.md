@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 9dc380ea7eab9876980dfc9ee1ee050ff77fa237
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66800245"
 ---
 # <a name="microsoft-drivers-for-php-for-sql-server"></a>Драйверы Microsoft SQL Server для PHP
@@ -43,7 +43,7 @@ ms.locfileid: "66800245"
 * ![Загрузки стрелка вниз обведены](../../ssdt/media/download.png)[выполнять загрузку драйверов для PHP для SQL](download-drivers-php-sql-server.md)
   
 ## <a name="samples"></a>Примеры  
-* [Заметки о выпуске драйверов Майкрософт для PHP для SQL Server](code-samples-for-php-sql-driver.md)
+* [Примеры кода для драйверов Microsoft для PHP для SQL Server](code-samples-for-php-sql-driver.md)
 * [Приступая к работе с PHP на Windows](https://www.microsoft.com/sql-server/developer-get-started/php/windows/)
 * [Начало работы с PHP на macOS](https://www.microsoft.com/sql-server/developer-get-started/php/mac/)
 * [Приступая к работе с PHP на Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/php/ubuntu/)

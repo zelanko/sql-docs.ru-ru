@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 95683f46799802410669ac97035f6a0f03379a37
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66801646"
 ---
 # <a name="execute-method-javalangstring-sqlserverstatement"></a>Метод execute (java.lang.String) (SQLServerStatement)
@@ -47,7 +47,7 @@ public boolean execute(java.lang.String sql)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод execute определен с помощью метода execute в интерфейсе java.sql.PreparedStatement.  
+ Этот метод execute определен с помощью метода execute в интерфейсе java.sql.Statement.  
   
 ## <a name="see-also"></a>См. также:  
  [Метод Execute &#40;SQLServerStatement&#41;](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md)   

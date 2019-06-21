@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: cbcb076d33b45d8db58360c6c3741493aab2ed62
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66800845"
 ---
 # <a name="python-sql-driver"></a>Драйвер SQL Python
@@ -34,7 +34,7 @@ ms.locfileid: "66800845"
   
 ## <a name="community"></a>Сообщество  
 * [Центр разработчиков для Python](https://azure.microsoft.com/develop/python/)  
-* [python.org Community](https://www.python.org/community/)  
+* [Сообщество python.org](https://www.python.org/community/)  
   
 ## <a name="more-samples"></a>Дополнительные примеры  
 * [Создание веб-приложения Python, с помощью DJango и базы данных SQL в веб-сайта Azure](https://github.com/Microsoft/PTVS/wiki/Django-and-SQL-Database-on-Azure)

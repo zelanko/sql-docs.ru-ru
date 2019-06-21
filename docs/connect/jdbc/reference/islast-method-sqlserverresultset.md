@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: dab78e0f48f2bb7debcf5d993dfb128388a42506
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66796522"
 ---
 # <a name="islast-method-sqlserverresultset"></a>Метод isLast (SQLServerResultSet)
@@ -42,7 +42,7 @@ public boolean isLast()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Последний метод определен с помощью последнего метода в интерфейсе java.sql.ResultSet.  
+ Этот метод isLast определяется с помощью метода isLast в интерфейсе java.sql.ResultSet.  
   
  Если этот метод используется с однопроходными и динамическими курсорами, вызывается исключение.  
   

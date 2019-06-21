@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 387847f82246b8571fa588f52e9f07235172d0cd
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66785583"
 ---
 # <a name="getdate-method-javalangstring-sqlserverresultset"></a>Метод getDate (java.lang.String) (SQLServerResultSet)
@@ -52,7 +52,7 @@ public java.sql.Date getDate(java.lang.String columnName)
  Этот метод возвращает допустимую часть даты для типа данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] datetime или smalldatetime, а часть времени имеет начальное значение времени Java — 00:00 (полночь).  
   
 ## <a name="see-also"></a>См. также:  
- [Метод getByte (SQLServerResultSet)](../../../connect/jdbc/reference/getdate-method-sqlserverresultset.md)   
+ [Метод getDate (SQLServerResultSet)](../../../connect/jdbc/reference/getdate-method-sqlserverresultset.md)   
  [Элементы SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Класс SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

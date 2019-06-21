@@ -12,15 +12,15 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 82125679283a67006ed93bcd0d8355e2aaaf3d07
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66770660"
 ---
 # <a name="microsoft-adonet-for-sql-server"></a>Microsoft ADO.NET для SQL Server
 
-![Стрелка скачивания в круге](../../ssdt/media/download.png)[Скачать драйвер ODBC](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![Стрелка скачивания в круге](../../ssdt/media/download.png)[Скачать ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
 ADO.NET — это базовая технология доступа к данным для языков .NET. Для доступа к SQL Server используется пространство имен System.Data.SqlClient, а для доступа к хранилищам других производителей — соответствующие поставщики. Для доступа к данным из языков .NET с помощью других технологий доступа к данным используется System.Data.Odbc или System.Data.Oledb. Если в клиентских приложениях нужен автономный кэш данных, используется System.Data.Dataset. Кроме того, данная технология позволяет сохранять данные локально, а также предоставляет возможности по работе с XML, которые можно использовать в веб-службах.  
   

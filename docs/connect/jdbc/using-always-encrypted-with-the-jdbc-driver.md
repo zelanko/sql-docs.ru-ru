@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 860014601394e4e39436e3aa10de8ebcff55ddd6
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66790287"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>Использование функции Always Encrypted с драйвером JDBC
@@ -360,7 +360,7 @@ ds.setColumnEncryptionSetting("Enabled");
 SQLServerConnection con = (SQLServerConnection) ds.getConnection();
 ```
 
-Постоянное шифрование также можно включить для отдельных запросов. Подробнее см. раздел [Управление влиянием Always Encrypted на производительность](#controlling-the-performance-impact-of-always-encrypted) ниже. Включения функции Always Encrypted недостаточно для успешного шифрования или расшифровки. Необходимо также проверить выполнение следующих условий:
+Постоянное шифрование также можно включить для отдельных запросов. См. подробнее об [управлении влиянием функции Always Encrypted на производительность](#controlling-the-performance-impact-of-always-encrypted). Включения функции Always Encrypted недостаточно для успешного шифрования или расшифровки. Необходимо также проверить выполнение следующих условий:
 - Приложение имеет разрешения *VIEW ANY COLUMN MASTER KEY DEFINITION* и *VIEW ANY COLUMN ENCRYPTION KEY DEFINITION* для базы данных, необходимые для доступа к метаданным о ключах постоянного шифрования в базе данных. Дополнительные сведения см. в разделе [Разрешения в Always Encrypted (ядро СУБД)](../../relational-databases/security/encryption/always-encrypted-database-engine.md#database-permissions).
 - Приложение может получить доступ к главному ключу столбца, который защищает ключи шифрования столбцов, шифрующие запрашиваемые столбцы базы данных. Чтобы воспользоваться поставщиком Store ключ Java, необходимо указать дополнительные учетные данные в строке подключения. Дополнительные сведения см. в разделе [Using Java Key Store provider](#using-java-key-store-provider).
 

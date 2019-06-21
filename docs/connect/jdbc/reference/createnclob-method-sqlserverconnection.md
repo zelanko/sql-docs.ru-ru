@@ -12,16 +12,16 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 75ab28638070e243a8022654ac33e61a017b37ff
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66768213"
 ---
 # <a name="createnclob-method-sqlserverconnection"></a>Метод createNClob (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Создает объект Clob, не содержащий данных.  
+  Создает объект NClob, не содержащий данных.  
   
 ## <a name="syntax"></a>Синтаксис  
   

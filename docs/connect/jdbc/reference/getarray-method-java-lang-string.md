@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 24bb9e5831e3eb79bc5d9fa451ca4e73fcd56fef
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66800067"
 ---
 # <a name="getarray-method-javalangstring"></a>Метод getArray (java.lang.String)
@@ -41,7 +41,7 @@ public java.sql.Array getArray(java.lang.String sCol)
  Значение типа **String**, содержащее имя параметра.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Объекты массива.  
+ Объект Array.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

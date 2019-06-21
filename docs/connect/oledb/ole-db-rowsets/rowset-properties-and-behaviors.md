@@ -17,10 +17,10 @@ author: pmasl
 ms.author: pelopes
 manager: jroth
 ms.openlocfilehash: c3bb95de560e0e4ec6b5e01fda8623858a73aaf4
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66803811"
 ---
 # <a name="rowset-properties-and-behaviors"></a>Свойства и поведение наборов строк

@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: aca217a0918595f9538dd509498d6cd28d8d232f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66800211"
 ---
 # <a name="getref-method-javalangstring-sqlserverresultset"></a>Метод getRef (java.lang.String) (SQLServerResultSet)
@@ -47,7 +47,7 @@ public java.sql.Ref getRef(java.lang.String colName)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getURL определен с помощью метода getURL в интерфейсе java.sql.ResultSet.  
+ Этот метод getRef определен с помощью метода getRef в интерфейсе java.sql.ResultSet.  
   
 ## <a name="see-also"></a>См. также:  
  [Метод getRef &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getref-method-sqlserverresultset.md)   

@@ -1,5 +1,5 @@
 ---
-title: Пример кодов драйверов Майкрософт на языке PHP для SQL Server | Документация Майкрософт
+title: Руководство по программированию драйверов Microsoft для PHP для SQL Server | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 10269896b8c145293d5733a3fb34b2ac645a5e43
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66781001"
 ---
 # <a name="programming-guide-for-the-microsoft-drivers-for-php-for-sql-server"></a>Руководство по программированию для драйвера Microsoft для PHP для SQL Server

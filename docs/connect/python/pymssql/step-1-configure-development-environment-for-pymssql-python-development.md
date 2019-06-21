@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 9d74e3ce2f7db91aca295dcb7507431a82e49c8c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66803867"
 ---
 # <a name="step-1-configure-development-environment-for-pymssql-python-development"></a>Шаг 1. Настройка среды разработки для разработки на Python в pymssql
@@ -43,7 +43,7 @@ A. Перейдите к [python.org](https://www.python.org/downloads/)
 > pip install pymssql‑2.1.1‑cp27‑none‑win_amd64.whl  
 ```  
   
-## <a name="ubuntu-linux"></a>Ubuntu Linux 18.04  
+## <a name="ubuntu-linux"></a>Ubuntu Linux  
   
 1. **Установите среду выполнения Python и диспетчер пакетов pip** Python поставляется предварительно установленным в большинстве дистрибутивов Ubuntu.  Если компьютер не установили python, вы можете получить скачайте tar с источником из [python.org](https://www.python.org/downloads/) и хотите создать локально, или можно использовать диспетчер пакетов:  
 ```  

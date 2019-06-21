@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 6baa005d3567eed12ac2e2682012497129437058
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66798696"
 ---
 # <a name="updateclob-method-int-javasqlclob"></a>Метод updateClob (int, java.sql.Clob)
@@ -49,7 +49,7 @@ public void updateClob(int columnIndex,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getNClob определен с помощью метода getNClob в интерфейсе java.sql.ResultSet.  
+ Этот метод updateClob определен с помощью метода updateClob в интерфейсе java.sql.ResultSet.  
   
 ## <a name="see-also"></a>См. также:  
  [Метод updateClob (SQLServerResultSet)](../../../connect/jdbc/reference/updateclob-method-sqlserverresultset.md)   

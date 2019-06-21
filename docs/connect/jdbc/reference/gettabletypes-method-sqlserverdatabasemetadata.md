@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 6795a84a042a7abaa52fe83f562911c934709f81
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66779058"
 ---
 # <a name="gettabletypes-method-sqlserverdatabasemetadata"></a>Метод getTableTypes (SQLServerDatabaseMetaData)
@@ -42,7 +42,7 @@ public java.sql.ResultSet getTableTypes()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getTables определен с помощью метода getTables в интерфейсе java.sql.DatabaseMetaData.  
+ Этот метод getTableTypes определен с помощью метода getTableTypes в интерфейсе java.sql.DatabaseMetaData.  
   
  Результирующий набор, возвращаемый методом getTableTypes, включает следующие данные:  
   

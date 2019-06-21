@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 8aea7a5a74ae85563234c1f40f5faae1213e75de
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66789946"
 ---
 # <a name="download-odbc-driver-for-sql-server"></a>Скачивание драйвера ODBC Driver for SQL Server
@@ -28,7 +28,7 @@ ms.locfileid: "66789946"
 
 ### <a name="linux-and-macos"></a>Linux и macOS
 
-#### <a name="debian"></a>Debian:
+#### <a name="debian"></a>Debian
 - [Debian 9 .deb пакетов](https://packages.microsoft.com/debian/9/prod/pool/main/m/msodbcsql17/)
 - [Debian 8 .deb пакетов](https://packages.microsoft.com/debian/8/prod/pool/main/m/msodbcsql17/)
 
@@ -60,7 +60,7 @@ ms.locfileid: "66789946"
 
 ### <a name="linux-and-macos"></a>Linux и macOS
 
-#### <a name="debian"></a>Debian:
+#### <a name="debian"></a>Debian
 - [Debian 8 .deb пакетов](https://packages.microsoft.com/debian/8/prod/pool/main/m/msodbcsql/)
 
 #### <a name="redhat"></a>RedHat

@@ -14,10 +14,10 @@ author: pmasl
 ms.author: pelopes
 manager: jroth
 ms.openlocfilehash: 3ff9bc3f85340eb86aa0fa21820977e70ab51c5b
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66769372"
 ---
 # <a name="conversions-performed-from-server-to-client"></a>Преобразования, выполняемые при передаче от сервера к клиенту
@@ -30,7 +30,7 @@ ms.locfileid: "66769372"
 ## <a name="conversions"></a>Преобразования  
  В следующей таблице описываются преобразования между типом, возвращенным клиенту, и типом в привязке. Для выходных параметров, если был вызван ICommandWithParameters::SetParameterInfo и тип, указанный в *pwszDataSourceType* не соответствует фактическому типу на сервере, неявное преобразование будет выполняться на сервере , и тип, возвращаемый клиенту будет совпадать с типом, заданные с помощью ICommandWithParameters::SetParameterInfo. Это может привести к непредвиденным результатам преобразования, если правила преобразования сервера отличаются от описанных в данной статье. Например, когда требуется предоставить дату по умолчанию, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] использует значение 1900-1-1, а не 1899-12-30.  
   
-|В -><br /><br /> От|DATE|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
+|Полученное значение -><br /><br /> От|DATE|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
 |----------------------|----------|------------|------------|-------------|-----------------|-----------------------|--------------|-----------|-------------|---------------|----------|---------|----------|  
 |Дата|1, 7|OK|-|-|1|1, 3|1, 7|-|ОК (VT_BSTR)|OK|OK|4|4|  
 |Time|5, 6, 7|-|9|OK|6|3, 6|5, 6|-|ОК (VT_BSTR)|OK|OK|4|4|  

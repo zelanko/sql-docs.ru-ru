@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 1f3e311b0f7d27b6a0ca2d12ae510960859ae80d
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66797504"
 ---
 # <a name="connecting-to-sql-server"></a>Подключение к SQL Server
@@ -87,8 +87,8 @@ SSL использует библиотеку OpenSSL. Следующая таб
 
 |Платформа|Минимальная версия OpenSSL|Расположение хранилища доверия сертификатов по умолчанию|  
 |------------|---------------------------|--------------------------------------------|
-|Debian:|1.1.0|/etc/ssl/certs|
-|Debian: |1.0.1|/etc/ssl/certs|
+|Debian 9|1.1.0|/etc/ssl/certs|
+|Debian 8.71 |1.0.1|/etc/ssl/certs|
 |macOS 10.13|1.0.2|/usr/local/etc/OpenSSL/certs|
 |macOS 10.12|1.0.2|/usr/local/etc/OpenSSL/certs|
 |OS X 10.11|1.0.2|/usr/local/etc/OpenSSL/certs|

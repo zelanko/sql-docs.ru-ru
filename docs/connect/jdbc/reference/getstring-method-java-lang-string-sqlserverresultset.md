@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 13dd4f2bd18ef3bde6b920be0e5e562dc9aef956
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66773813"
 ---
 # <a name="getstring-method-javalangstring-sqlserverresultset"></a>Метод getString (java.lang.String) (SQLServerResultSet)
@@ -47,7 +47,7 @@ public java.lang.String getString(java.lang.String columnName)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getLong определен с помощью метода getLong в интерфейсе java.sql.ResultSet.  
+ Этот метод getString определен с помощью метода getString в интерфейсе java.sql.ResultSet.  
   
  Все столбцы в SQL Server можно возвращать как тип String. Это значит, что можно возвращать представление **String** всех числовых и символьных типов, а также шестнадцатеричное представление двоичных столбцов, таких как binary, varbinary, varbinary(max), image, timestamp и uniqueidentifier.  
   

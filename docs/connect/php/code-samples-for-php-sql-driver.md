@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: 3a5d218a-1490-4c61-a20c-4d71f6600c97
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 08a58a8696dea90728637a218f405a09f3552ef2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: a3dcb688b68e5bc2cbfe82124b1dc1bab2450748
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694970"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66795841"
 ---
-# <a name="code-samples-for-the-microsoft-drivers-for-php-for-sql-server"></a>Примеры кода для драйверов Майкрософт для PHP для SQL Server
+# <a name="code-samples-for-the-microsoft-drivers-for-php-for-sql-server"></a>Пример кода для драйверов Майкрософт для PHP для SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 
 * [Пример приложения (драйвер SQLSRV)](../../connect/php/example-application-sqlsrv-driver.md)  
-* [Пример приложения &#40;драйвера PDO_SQLSRV&#41;](../../connect/php/example-application-pdo-sqlsrv-driver.md)  
+* [Пример приложения (драйвер PDO_SQLSRV)](../../connect/php/example-application-pdo-sqlsrv-driver.md)  
   

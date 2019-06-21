@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 44996746-d373-4f59-9863-a8a20bb8024a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 70a19f97f3949fd43b0fba86b876f0da606a114b
-ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
+manager: jroth
+ms.openlocfilehash: c0d9d79d6462300df8b96fa3ec58349c39e751cf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52159112"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66770273"
 ---
 # <a name="building-the-connection-url"></a>Формирование URL-адреса соединения
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -97,7 +97,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
   
  Файлы sqljdbc_auth.dll устанавливаются в следующем местоположении:  
   
- \<*каталог установки*> \sqljdbc_\<*версии*>\\<*языка*> \auth\  
+ \<*каталог_установки*>\sqljdbc_\<*версия*>\\<*язык*>\auth\  
   
  Для любой операционной системы, поддерживаемые [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], см. в разделе [с помощью встроенной проверки подлинности Kerberos для подключения к SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md) описание реализованной в [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] , позволяет подключиться к приложению База данных, используя встроенную проверку подлинности по протоколу Kerberos типа 4.  
   

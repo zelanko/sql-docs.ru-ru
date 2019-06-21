@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 717b8788f29d226c3c5cef1bbd86b08af12d5d99
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66803704"
 ---
 # <a name="afterlast-method-sqlserverresultset"></a>Метод afterLast (SQLServerResultSet)
@@ -39,7 +39,7 @@ public void afterLast()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Последний метод определен с помощью последнего метода в интерфейсе java.sql.ResultSet.  
+ Этот метод afterLast определен с помощью метода afterLast в интерфейсе java.sql.ResultSet.  
   
 ## <a name="see-also"></a>См. также:  
  [Элементы SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

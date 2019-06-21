@@ -1,6 +1,6 @@
 ---
 title: Службы Reporting Services в среде SQL Server Management Studio (SSRS) | Документы Майкрософт
-ms.date: 03/01/2017
+ms.date: 06/10/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: tools
@@ -10,27 +10,23 @@ helpviewer_keywords:
 ms.assetid: 60685458-9108-47bf-820a-5e7db454d408
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: de602e47f7c68c06fee042265b3f84d3d6d385f9
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 27fe190bfa73414158d05353c4aa8f244b65b4f4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65581315"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67140361"
 ---
 # <a name="reporting-services-in-sql-server-management-studio-ssrs"></a>Службы Reporting Services в среде SQL Server Management Studio (SSRS)
   Администраторы сервера отчетов могут использовать среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , чтобы сделать следующее:  
   
 -   Включить функции, задать параметры сервера по умолчанию и управлять выполнением заданий.  
   
--   Просматривать и создавать пользовательские отчеты. В обозревателе объектов многие узлы показывают стандартный набор отчетов, который устанавливается с [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Необходимо иметь разрешения администратора. Схема пользовательского отчета должна соответствовать схеме установленных отчетов. Дополнительные сведения см. в статьях [Пользовательские отчеты в среде Management Studio](../../ssms/object/custom-reports-in-management-studio.md) и [Определение версии схемы определения отчета (службы SSRS)](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md).  
+-   Просмотрите пользовательские отчеты. В обозревателе решений большинство узлов экран пользовательские отчеты. Необходимо иметь разрешения администратора. Схема пользовательского отчета должна соответствовать схеме установленных отчетов. Дополнительные сведения см. в статьях [Пользовательские отчеты в среде Management Studio](../../ssms/object/custom-reports-in-management-studio.md) и [Определение версии схемы определения отчета (службы SSRS)](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md).  
   
- Авторы отчетов могут использовать [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] , чтобы делать следующее:  
+ В следующем разделе содержатся ссылки на статьи, содержащие пошаговые инструкции по выполнению различных задач с помощью [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Кроме того, можно также создать и управления общими расписаниями на веб-портале.  
   
--   Просматривать пространственные данные из результатов запроса для отчета-карты. После выполнения запроса для просмотра результатов воспользуйтесь вкладкой **Пространственные результаты** на панели результатов. Дополнительные сведения см. в статье [View Spatial Data in Object Explorer](../../relational-databases/scripting/view-spatial-data-in-object-explorer.md).  
-  
- В этом разделе приведены пошаговые инструкции по выполнению с помощью среды [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]различных задач, связанных с отчетами. Создание общих расписаний и управление ими также выполняется с помощью диспетчера отчетов.  
-  
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
   
 -   [Подключение к серверу отчетов в среде Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)  
   
@@ -40,8 +36,7 @@ ms.locfileid: "65581315"
   
 -   [Отмена заданий сервера отчетов (среда Management Studio)](../../reporting-services/tools/cancel-report-server-jobs-management-studio.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также раздел  
  [Справка F1 по использованию сервера отчетов среде Management Studio](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
- [Общие сведения о среде SQL Server Management Studio](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)  
-  
+ [SQL Server Management Studio (SSMS)](../../ssms/sql-server-management-studio-ssms.md)  
   

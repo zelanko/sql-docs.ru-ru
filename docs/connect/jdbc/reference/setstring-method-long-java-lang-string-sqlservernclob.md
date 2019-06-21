@@ -1,5 +1,5 @@
 ---
-title: Метод setString (long, java.lang.String, int, int) | Документация Майкрософт
+title: Метод setString (long, java.lang.String) в NClob | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 6f9ca7497c14da33d9e25b1c6a5ed934b7d96181
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66771580"
 ---
 # <a name="setstring-method-long-javalangstring-sqlservernclob"></a>Метод setString (long, java.lang.String) (SQLServerNClob)
@@ -47,7 +47,7 @@ public int setString(long pos,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод setString определен с помощью метода setString в интерфейсе java.sql.PreparedStatement.  
+ Этот метод setString определен с помощью метода setString в интерфейсе java.sql.NClob.  
   
 ## <a name="see-also"></a>См. также:  
  [Методы SQLServerNClob](../../../connect/jdbc/reference/sqlservernclob-methods.md)   

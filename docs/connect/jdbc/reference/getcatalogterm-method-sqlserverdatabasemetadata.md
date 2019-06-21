@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 9a99453f869167a3804643baac750cf91dd82266
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66796785"
 ---
 # <a name="getcatalogterm-method-sqlserverdatabasemetadata"></a>Метод getCatalogTerm (SQLServerDatabaseMetaData)
@@ -42,7 +42,7 @@ public java.lang.String getCatalogTerm()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getCatalogs определяется методом getCatalogs в интерфейсе java.sql.DatabaseMetaData.  
+ Этот метод getCatalogTerm определяется методом getCatalogTerm в интерфейсе java.sql.DatabaseMetaData.  
   
  При использовании [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] с базой данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] этот метод всегда будет возвращать термин "database".  
   

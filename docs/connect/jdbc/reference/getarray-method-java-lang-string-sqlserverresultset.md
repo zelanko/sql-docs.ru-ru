@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 6cab84fd4ea0ae1e22ff175da1cd198e45a1b3a3
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66800079"
 ---
 # <a name="getarray-method-javalangstring-sqlserverresultset"></a>Метод getArray (java.lang.String) (SQLServerResultSet)
@@ -41,16 +41,16 @@ public java.sql.Array getArray(java.lang.String colName)
  Значение типа **String**, содержащее имя столбца.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Объекты массива.  
+ Объект Array.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getArray определен с помощью метода getArray в интерфейсе java.sql.CallableStatement.  
+ Этот метод getArray определен с помощью метода getArray в интерфейсе java.sql.ResultSet.  
   
 ## <a name="see-also"></a>См. также:  
- [Метод updateArray (SQLServerResultSet)](../../../connect/jdbc/reference/getarray-method-sqlserverresultset.md)   
+ [Метод getArray (SQLServerResultSet)](../../../connect/jdbc/reference/getarray-method-sqlserverresultset.md)   
  [Элементы SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Класс SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Метод prepareStatement (java.lang.String, int[]) | Документация Майкрософт
+title: Метод updateInt (java.lang.String, int) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: c612b90db5a699df0b7e23c8591de8b6f79163d7
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66797161"
 ---
 # <a name="updateint-method-javalangstring-int"></a>Метод updateInt (java.lang.String, int)
@@ -49,7 +49,7 @@ public void updateInt(java.lang.String columnName,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getInt определен с помощью метода getInt в интерфейсе java.sql.ResultSet.  
+ Этот метод updateInt определен с помощью метода updateInt в интерфейсе java.sql.ResultSet.  
   
 ## <a name="see-also"></a>См. также:  
  [Метод updateInt &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateint-method-sqlserverresultset.md)   

@@ -9,10 +9,10 @@ ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b4ac7074d89b0e187d18c6cee79840c2a6ab61e8
-ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66499984"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>Тип соединения список SharePoint (службы SSRS)
@@ -71,7 +71,7 @@ ms.locfileid: "66499984"
   
  Дополнительные сведения о поддержке проверки подлинности на основе утверждений в стеке бизнес-аналитики Майкрософт см. в разделе [Использование проверки подлинности на основе утверждений в стеке бизнес-аналитики Майкрософт](https://social.technet.microsoft.com/wiki/contents/articles/15274.using-claims-authentication-across-the-microsoft-bi-stack.aspx).  
   
- Дополнительные сведения см. в разделах [Подключения к данным, источники данных и строки подключения (построитель отчетов и службы SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md), [Указание учетных данных в построителе отчетов](specify-credential-and-connection-information-for-report-data-sources.md) и [Источники данных, поддерживаемые службами Reporting Services (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
+ См. подробнее о [подключении к данным, источникам данных и строкам подключения (построитель отчетов и службы SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md), [указании учетных данных и сведений о подключении для источников данных отчетов](specify-credential-and-connection-information-for-report-data-sources.md) и [использовании источников данных, поддерживаемых в Reporting Services (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
 ##  <a name="Query"></a> Запросы  
  Чтобы построить запрос, создайте новый набор данных на основе источника данных и откройте связанный конструктор запросов. Дополнительные сведения см. в разделе [Создание общего или внедренного набора данных (построитель отчетов и службы SSRS)](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md).  

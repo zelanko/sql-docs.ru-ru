@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 9686d29f11f2357b983dce349e8e4dc5d13af664
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66804008"
 ---
 # <a name="getbytes-method-sqlserverblob"></a>Метод getBytes (SQLServerBlob)
@@ -52,7 +52,7 @@ public byte[] getBytes(long pos,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Метод setBytes определен с помощью метода setBytes в интерфейсе java.sql.Blob.  
+ Метод getBytes определен с помощью метода getBytes в интерфейсе java.sql.Blob.  
   
  Если длина большого двоичного объекта равна нулю или имеет значение NULL, то при попытке получить ровно 0 байт в позиции 1 возвращается пустой массив **byte** (массив длиной 0).  
   

@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 987be5ee9fd49385acf02e52108e1e657fbc08a4
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66786523"
 ---
 # <a name="deleterow-method-sqlserverresultset"></a>Метод deleteRow (SQLServerResultSet)
@@ -43,7 +43,7 @@ public void deleteRow()
   
  Этот метод не может быть вызван при нахождении курсора в строке вставки.  
   
- Если используются курсоры, управляемые набором ключей, этот метод оставляет пробел в результирующем наборе. Можно проверить наличие такого пробела методом [rowDeleted](../../../connect/jdbc/reference/rowdeleted-method-sqlserverresultset.md). Номера строк в результирующем наборе не изменяются.  
+ Если используются курсоры, управляемые набором ключей, этот метод оставляет пробел в результирующем наборе. Его наличие можно проверить с помощью метода [rowDeleted](../../../connect/jdbc/reference/rowdeleted-method-sqlserverresultset.md). Номера строк в результирующем наборе не изменяются.  
   
 ## <a name="see-also"></a>См. также:  
  [Элементы SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

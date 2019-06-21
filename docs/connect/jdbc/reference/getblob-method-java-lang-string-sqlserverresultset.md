@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: aff8b39940b9074160167c63f264f75aa2a9b9f1
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66799709"
 ---
 # <a name="getblob-method-javalangstring-sqlserverresultset"></a>Метод getBlob (java.lang.String) (SQLServerResultSet)
@@ -47,10 +47,10 @@ public java.sql.Blob getBlob(java.lang.String colName)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getNClob определен с помощью метода getNClob в интерфейсе java.sql.ResultSet.  
+ Этот метод getBlob определен с помощью метода getBlob в интерфейсе java.sql.ResultSet.  
   
 ## <a name="see-also"></a>См. также:  
- [Метод getClob (SQLServerResultSet)](../../../connect/jdbc/reference/getblob-method-sqlserverresultset.md)   
+ [Метод getBlob (SQLServerResultSet)](../../../connect/jdbc/reference/getblob-method-sqlserverresultset.md)   
  [Элементы SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Класс SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

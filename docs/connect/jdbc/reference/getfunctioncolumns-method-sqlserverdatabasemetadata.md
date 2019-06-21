@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: cd4958db78e2e35d29bcc47428295db50f7e5678
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66774624"
 ---
 # <a name="getfunctioncolumns-method-sqlserverdatabasemetadata"></a>Метод getFunctionColumns (SQLServerDatabaseMetaData)
@@ -57,7 +57,7 @@ public ResultSet getFunctionColumns(java.lang.String catalog,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getColumns определен с помощью метода getColumns в интерфейсе java.sql.DatabaseMetaData.  
+ Этот метод getFunctionColumns определен с помощью метода getFunctionColumns в интерфейсе java.sql.DatabaseMetaData.  
   
  Этот метод возвращает только те функции и параметры, которые соответствуют указанному имени@@@ схемы, имени функции, имени параметра в указанном каталоге  
   

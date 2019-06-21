@@ -1,5 +1,5 @@
 ---
-title: Метод getTime (int, java.util.Calendar) | Документация Майкрософт
+title: Метод getTimestamp (int, java.util.Calendar) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 9f48f135f42c0e738f13d4e59f0be49589f32057
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66778620"
 ---
 # <a name="gettimestamp-method-int-javautilcalendar"></a>Метод getTimestamp (int, java.util.Calendar)

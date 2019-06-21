@@ -1,5 +1,5 @@
 ---
-title: Типы курсоров (драйвер PDO_SQLSRV) | Документация Майкрософт
+title: Типы курсоров (драйвер SQLSRV) | Документация Майкрософт
 ms.custom: ''
 ms.date: 02/11/2019
 ms.prod: sql
@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 6452fc506814cdfdeee4f61085ec9a1ee0cededa
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66801489"
 ---
 # <a name="cursor-types-sqlsrv-driver"></a>Типы курсоров (драйвер SQLSRV)

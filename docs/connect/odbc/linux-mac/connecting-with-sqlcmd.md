@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 48e4771b8d538775ae2e2faec053f0263bd6d653
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66789885"
 ---
 # <a name="connecting-with-sqlcmd"></a>Соединение с помощью sqlcmd
@@ -65,7 +65,7 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
 - -k — удалить или заменить символы управления.  
   
 - **-K**_приложения\_намерение_  
-Объявляет тип рабочей нагрузки приложения при соединении с сервером. Единственным поддерживаемым в данное время значением является **ReadOnly**. Если параметр **-K** не указан, `sqlcmd` не поддерживает подключение ко вторичной реплике в группе доступности AlwaysOn. Дополнительные сведения см. в статье [Поддержка высокой доступности и аварийного восстановления в драйвере ODBC для Linux](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
+Объявляет тип рабочей нагрузки приложения при соединении с сервером. Единственным поддерживаемым в данное время значением является **ReadOnly**. Если параметр **-K** не указан, `sqlcmd` не поддерживает подключение ко вторичной реплике в группе доступности AlwaysOn. См. подробнее об [обеспечении высокой доступности и аварийного восстановления с помощью драйвера ODBC для Linux и macOS](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
   
 > [!NOTE]  
 > Параметр **-K** не поддерживается в CTP-версии для SUSE Linux. Однако вы можете указать ключевое слово **ApplicationIntent=ReadOnly** в файле DSN, передаваемом в `sqlcmd`. Дополнительные сведения см. в разделе "Поддержка имени DSN в `sqlcmd` и `bcp`" в конце этой статьи.  

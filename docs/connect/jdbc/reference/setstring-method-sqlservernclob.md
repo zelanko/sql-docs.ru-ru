@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 31f365292a58aabc852f28cc1bd4b5cd737d94de
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66773383"
 ---
 # <a name="setstring-method-sqlservernclob"></a>Метод setString (SQLServerNClob)
@@ -27,7 +27,7 @@ ms.locfileid: "66773383"
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[Метод setString (long, java.lang.String, int, int) (SQLServerNClob)](../../../connect/jdbc/reference/setstring-method-long-java-lang-string-sqlservernclob.md)|Записывает указанный **строка** для **NCLOB** начиная с указанной позиции.|  
+|[Метод setString (long, java.lang.String) в SQLServerNClob](../../../connect/jdbc/reference/setstring-method-long-java-lang-string-sqlservernclob.md)|Записывает указанный **строка** для **NCLOB** начиная с указанной позиции.|  
 |[Метод setString (long, java.lang.String, int, int) (SQLServerNClob)](../../../connect/jdbc/reference/setstring-method-long-java-lang-string-int-int-sqlservernclob.md)|Записывает указанную строку в NCLOB, начиная с указанного положения на основе заданного смещения и длины.|  
   
 ## <a name="see-also"></a>См. также:  

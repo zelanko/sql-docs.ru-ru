@@ -1,5 +1,5 @@
 ---
-title: Метод getTime (int, java.util.Calendar) | Документация Майкрософт
+title: Метод getTimestamp (int, java.util.Calendar) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 469cc5febe96b84e3df05a6b56fbb5367efce155
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66778704"
 ---
 # <a name="gettimestamp-method-int-javautilcalendar-sqlserverresultset"></a>Метод getTimestamp (int, java.util.Calendar) (SQLServerResultSet)
@@ -52,7 +52,7 @@ public java.sql.Timestamp getTimestamp(int columnIndex,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getTimestamp определен с помощью метода getTimestamp в интерфейсе java.sql.CallableStatement.  
+ Этот метод getTimestamp определен с помощью метода getTimestamp в интерфейсе java.sql.ResultSet.  
   
  Этот метод возвращает значения только из столбцов [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] datetime и smalldatetime.  
   

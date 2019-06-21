@@ -11,12 +11,12 @@ ms.assetid: d90fa182-1dab-4d6f-bd85-a04dd1479986
 author: MightyPen
 ms.author: genemi
 manager: jroth
-ms.openlocfilehash: 6ff03713555f73a26e48f9760f87cb281b4a98ab
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
-ms.translationtype: HT
+ms.openlocfilehash: 9b48188cbc1eb25774bc127246514d82ca5ef475
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797721"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66841084"
 ---
 # <a name="system-requirements-installation-and-driver-files"></a>Системные требования, установка и файлы драйвера
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -28,7 +28,9 @@ ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 
 ODBC Driver 13 и 13.1 для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], в дополнение к вышесказанному поддерживает SQL Server 2016. 
 
 ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает только те выше, а также SQL Server 2017.
-  
+
+ODBC Driver 17 for SQL Server поддерживает 2019 SQL Server, начиная с версии драйвера 17.3.
+
 Имя драйвера, указываемое в строке подключения — `ODBC Driver 11 for SQL Server` или `ODBC Driver 13 for SQL Server` (для 13 и 13.1) или `ODBC Driver 17 for SQL Server`.
   
 ## <a name="supported-operating-systems"></a>Поддерживаемые операционные системы
@@ -76,7 +78,7 @@ msiexec /quiet /passive /qn /i msodbcsql.msi IACCEPTMSODBCSQLLICENSETERMS=YES AD
 msiexec /quiet /passive /qn /uninstall msodbcsql.msi  
 ```  
   
-Если приложение использует драйвер, оно должно указывать, что зависит от драйвера, с помощью параметра установки `APPGUID`. Это позволяет установщику драйвера вывести сведения о зависимых приложениях перед удалением. Чтобы задать зависимость от драйвера, присвойте параметру командной строки `APPGUID` код продукта при автоматической установке драйвера. (Код продукта необходимо создать при использовании установщика (Майкрософт) для формирования пакета установки приложения.) Пример:  
+Если приложение использует драйвер, оно должно указывать, что зависит от драйвера, с помощью параметра установки `APPGUID`. Это позволяет установщику драйвера вывести сведения о зависимых приложениях перед удалением. Чтобы задать зависимость от драйвера, присвойте параметру командной строки `APPGUID` код продукта при автоматической установке драйвера. (Код продукта необходимо создать при использовании установщика Майкрософт для формирования пакета установки приложения.) Пример:  
   
 ```  
 msiexec /i msodbcsql.msi APPGUID={ <Your dependent application's APPGUID> }  

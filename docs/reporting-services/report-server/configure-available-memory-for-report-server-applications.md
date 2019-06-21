@@ -1,6 +1,6 @@
 ---
 title: Настройка доступной памяти для приложений сервера отчетов | Документы Майкрософт
-ms.date: 03/20/2017
+ms.date: 05/30/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -11,22 +11,22 @@ helpviewer_keywords:
 ms.assetid: ac7ab037-300c-499d-89d4-756f8d8e99f6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4727cff529db944205f46be291f65ebb653eb9bc
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 8cf0b0008efb05d15f7e34827ab0f80855fb526d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65580391"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66506579"
 ---
 # <a name="configure-available-memory-for-report-server-applications"></a>Настройка доступной памяти для приложений сервера отчетов
-  Хотя службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] могут использовать всю доступную память, можно переопределить поведение по умолчанию, настроив верхний предел ресурсов памяти, выделяемых серверным приложениям служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Можно также задать пороговые значения, которые изменяют способ назначения приоритета и обработки запросов сервером отчетов в зависимости от дефицита свободной памяти. При малом дефиците свободной памяти сервер отчетов назначает чуть более высокий приоритет интерактивной обработке отчетов или обработке отчетов по запросу. При серьезном дефиците свободной памяти сервер отчетов использует многочисленные приемы, чтобы сохранить работоспособность в условиях ограниченных доступных ресурсов.  
+ Хотя службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] могут использовать всю доступную память, можно переопределить поведение по умолчанию, настроив верхний предел ресурсов памяти, выделяемых серверным приложениям служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Можно также задать пороговые значения, которые изменяют способ назначения приоритета и обработки запросов сервером отчетов в зависимости от дефицита свободной памяти. При малом дефиците свободной памяти сервер отчетов назначает чуть более высокий приоритет интерактивной обработке отчетов или обработке отчетов по запросу. При серьезном дефиците свободной памяти сервер отчетов использует многочисленные приемы, чтобы сохранить работоспособность в условиях ограниченных доступных ресурсов.  
   
- В этом разделе описаны задаваемые пользователем параметры конфигурации и реакция сервера в случаях, когда при обработке запросов приходится учитывать недостаток свободной памяти.  
+ В этой статье описаны настраиваемые пользователем параметры конфигурации и реакция сервера в случаях, когда при обработке запросов нужно учитывать недостаток свободной памяти.  
   
 ## <a name="memory-management-policies"></a>Политики управления памятью  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] изменяют объем памяти, выделяемый определенным приложениям и типы обработки запросов. Приложения, которые выполняются в службе сервера отчетов и участвуют в управлении памятью.  
   
--   Диспетчер отчетов, клиентский веб-интерфейс для сервера отчетов.  
+-   Веб-портал, клиентский веб-интерфейс для сервера отчетов.  
   
 -   Веб-служба сервера отчетов, используемая для интерактивной обработки отчетов и запросов по требованию.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "65580391"
   
  На следующей иллюстрации показано, как параметры используются совместно, чтобы различить низкий, средний и высокий уровни нехватки свободной памяти:  
   
- ![Параметры конфигурации для состояния памяти](../../reporting-services/report-server/media/rs-memoryconfigurationzones.gif "Параметры конфигурации для состояния памяти")  
+ ![Параметры конфигурации для состояния памяти](../../reporting-services/report-server/media/rs-memoryconfigurationzones.png "Параметры конфигурации для состояния памяти")  
   
  В следующей таблице приведены описания параметров **WorkingSetMaximum**, **WorkingSetMinimum**, **MemorySafetyMargin**и **MemoryThreshold** . Параметры конфигурации задаются в файле [RSReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md).  
   
@@ -77,20 +77,17 @@ ms.locfileid: "65580391"
 #### <a name="example-of-memory-configuration-settings"></a>Пример параметров конфигурации памяти  
  Следующий пример показывает параметры конфигурации для компьютера серверов отчетов, в котором используются пользовательские значения конфигурации памяти. Чтобы добавить параметр **WorkingSetMaximum** или **WorkingSetMinimum**, необходимо вставить соответствующие элементы и значения в файл RSReportServer.config. Оба значения представляют собой целые числа, указывающие объем ОЗУ в килобайтах, выделяемый для серверных приложений. В следующем примере указывается, что общая память, выделенная для приложений сервера отчетов, не может превышать 4 гигабайт. Если значение параметра **WorkingSetMinimum** по умолчанию (60 % от значения **WorkingSetMaximum**) приемлемо, его можно опустить и задать в файле RSReportServer.config только параметр **WorkingSetMaximum** . Пример содержит параметр **WorkingSetMinimum** , чтобы показать, как выглядит этот параметр, если понадобится его добавить:  
   
-```  
-      <MemorySafetyMargin>80</MemorySafetyMargin>  
+''' Файлы конфигурации <MemorySafetyMargin>80</MemorySafetyMargin>  
       <MemoryThreshold>90</MemoryThreshold>  
       <WorkingSetMaximum>4000000</WorkingSetMaximum>  
       <WorkingSetMinimum>2400000</WorkingSetMinimum>  
 ```  
   
-#### <a name="about-aspnet-memory-configuration-settings"></a>О параметрах конфигурации памяти ASP.NET  
- Хотя веб-служба сервера отчетов и диспетчер отчетов представляют собой приложения [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] , ни одно из приложений не реагирует на параметры конфигурации памяти, указанные в разделе **processModel** файла machine.config для приложений [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] , работающих в режиме совместимости с IIS 5.0. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] считывают параметры конфигурации памяти только из файла RSReportServer.config.  
+#### About ASP.NET memory configuration settings  
+ Although the 2016 and later Report Server Web service and web portal are HTML5 applications, previous versions are [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] applications, neither application responds to memory configuration settings that you specify in the **processModel** section of machine.config for [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] applications that run in IIS 5.0 and higher compatibility mode. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] reads memory configuration settings from the RSReportServer.config file only.  
   
-## <a name="see-also"></a>См. также:  
- [Файл конфигурации RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [Файл конфигурации RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [Изменение файла конфигурации служб Reporting Services (RSreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
+## See also  
+ [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
+ [Modify a Reporting Services Configuration File &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)  
  [Application Domains for Report Server Applications](../../reporting-services/report-server/application-domains-for-report-server-applications.md)  
-  
   

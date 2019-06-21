@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: f3299b061303400f75241e863b8675ad95b3e485
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66804050"
 ---
 # <a name="getbytes-method-int-sqlserverresultset"></a>Метод getBytes (int) (SQLServerResultSet)
@@ -47,7 +47,7 @@ public byte[] getBytes(int columnIndex)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getBytes определен с помощью метода getBytes в интерфейсе java.sql.CallableStatement.  
+ Этот метод getBytes определен с помощью метода getBytes в интерфейсе java.sql.ResultSet.  
   
  Этот метод поддерживает получение всех столбцов путем прямого считывания байтов с сервера. Он возвращает массив байтов непосредственно с сервера в формате, который хранится на сервере.  
   

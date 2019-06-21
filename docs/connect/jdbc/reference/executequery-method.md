@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 9d5374aeef43632fe82ac85b021e6a2a473a5d5d
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66796960"
 ---
 # <a name="executequery-method-"></a>Метод executeQuery ()
@@ -42,7 +42,7 @@ public java.sql.ResultSet executeQuery()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод execute определен с помощью метода execute в интерфейсе java.sql.PreparedStatement.  
+ Этот метод executeQuery определен с помощью метода executeQuery в интерфейсе java.sql.PreparedStatement.  
   
 ## <a name="see-also"></a>См. также:  
  [Метод executeQuery (SQLServerPreparedStatement)](../../../connect/jdbc/reference/executequery-method-sqlserverpreparedstatement.md)   

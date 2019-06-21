@@ -1,5 +1,5 @@
 ---
-title: Метод executeUpdate (java.lang.String, java.lang.String) | Документация Майкрософт
+title: Метод executeUpdate | Документация Майкрософт
 ms.custom: ''
 ms.date: 02/07/2017
 ms.prod: sql
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 8c408098ebe1e9e732b171390eb1901f01014292
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66804146"
 ---
 # <a name="executeupdate-method-javalangstring"></a>Метод executeUpdate (java.lang.String)
@@ -45,7 +45,7 @@ public final int executeUpdate(java.lang.String sql)
 [SQLServerException](./sqlserverexception-class.md)
 
 ## <a name="remarks"></a>Remarks
-Этот метод execute определен с помощью метода execute в интерфейсе java.sql.PreparedStatement.
+Этот метод executeUpdate определен с помощью метода executeUpdate в интерфейсе java.sql.PreparedStatement.
 
 Вызов этого метода приводит к исключению, поскольку инструкция SQL для объекта SQLServerPreparedStatement определена при создании объекта.
 

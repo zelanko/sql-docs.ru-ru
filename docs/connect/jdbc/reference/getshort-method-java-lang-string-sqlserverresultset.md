@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 7b295f312057e366ef9e7b09c62da55a09a2262a
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66791796"
 ---
 # <a name="getshort-method-javalangstring-sqlserverresultset"></a>Метод getShort (java.lang.String) (SQLServerResultSet)
@@ -47,7 +47,7 @@ public short getShort(java.lang.String columnName)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getInt определен с помощью метода getInt в интерфейсе java.sql.ResultSet.  
+ Этот метод getShort определен с помощью метода getShort в интерфейсе java.sql.ResultSet.  
   
  Этот метод поддерживается только для типов данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], таких как smallint, tinyint и bit, которые могут безопасно возвращать целочисленное значение. Использование этого метода при работе со столбцами других типов данных приведет к возникновению исключения.  
   

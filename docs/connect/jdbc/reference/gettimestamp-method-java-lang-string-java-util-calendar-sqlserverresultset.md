@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: a7aa807dc1cbcbd027cd4a5c26b43509438c67ef
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66767395"
 ---
 # <a name="gettimestamp-method-javalangstring-javautilcalendar-sqlserverresultset"></a>Метод getTimestamp (java.lang.String, java.util.Calendar) (SQLServerResultSet)
@@ -52,7 +52,7 @@ public java.sql.Timestamp getTimestamp(java.lang.String colName,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getTimestamp определен с помощью метода getTimestamp в интерфейсе java.sql.CallableStatement.  
+ Этот метод getTimestamp определен с помощью метода getTimestamp в интерфейсе java.sql.ResultSet.  
   
  Этот метод возвращает значения только из столбцов [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] datetime и smalldatetime.  
   

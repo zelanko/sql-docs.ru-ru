@@ -1,5 +1,5 @@
 ---
-title: Отладка хранимых процедур | Документация Майкрософт
+title: Хранимые процедуры | Документация Майкрософт
 description: Хранимые процедуры
 ms.custom: ''
 ms.date: 06/12/2018
@@ -17,10 +17,10 @@ author: pmasl
 ms.author: pelopes
 manager: jroth
 ms.openlocfilehash: 64654f5ba2f4356a4bb6efad5455ca4610689f3b
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66795889"
 ---
 # <a name="stored-procedures"></a>Хранимые процедуры

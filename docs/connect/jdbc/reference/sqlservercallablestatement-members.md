@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 9c6f0ab616be75d9ccd71bd5b191fde3c76098d1
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66772968"
 ---
 # <a name="sqlservercallablestatement-members"></a>Члены SQLServerCallableStatement
@@ -40,7 +40,7 @@ ms.locfileid: "66772968"
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[addBatch](../../../connect/jdbc/reference/addbatch-method-sqlserverpreparedstatement.md)|(Наследуется от [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) Добавляет набор параметров к пакету команд для этого объекта инструкции.|  
+|[addBatch](../../../connect/jdbc/reference/addbatch-method-sqlserverpreparedstatement.md)|(Наследуется от [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) Добавляет набор параметров к пакету команд для этого объекта CallableStatement.|  
 |[cancel](../../../connect/jdbc/reference/cancel-method-sqlserverstatement.md)|(Наследуется от [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Отменяет инструкцию SQL, выполняемую в настоящее время объектом CallableStatement.|  
 |[clearBatch](../../../connect/jdbc/reference/clearbatch-method-sqlserverpreparedstatement.md)|(Наследуется от [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) Обнуляет текущий список команд SQL для данного объекта CallableStatement.|  
 |[clearParameters](../../../connect/jdbc/reference/clearparameters-method-sqlserverpreparedstatement.md)|(Наследуется от [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) Немедленно удаляет текущие значения параметров.|  

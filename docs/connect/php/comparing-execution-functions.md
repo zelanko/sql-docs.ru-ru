@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 82a5b96d25ed608ad9e44dec6a937527055c65e3
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66795828"
 ---
 # <a name="comparing-execution-functions"></a>Сравнение функций выполнения
@@ -28,7 +28,7 @@ ms.locfileid: "66795828"
 ## <a name="sqlsrv-execution-functions"></a>Функции выполнения SQLSRV  
 При использовании драйвера SQLSRV используйте [sqlsrv_query](../../connect/php/sqlsrv-query.md) для выполнения одного запроса и [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md) с [sqlsrv_execute](../../connect/php/sqlsrv-execute.md) для многократного выполнения подготовленной инструкции с различными значениями параметров при каждом выполнении.  
 
-## <a name="pdosqlsrv-execution-functions"></a>PDO_SQLSRV Execution Functions 
+## <a name="pdosqlsrv-execution-functions"></a>Функции выполнения PDO_SQLSRV 
 При использовании драйвера PDO_SQLSRV запрос можно выполнить одним из следующих способов:  
   
 -   [PDO::exec](../../connect/php/pdo-exec.md)  

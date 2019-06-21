@@ -17,10 +17,10 @@ author: pmasl
 ms.author: pelopes
 manager: jroth
 ms.openlocfilehash: 1906ad25e9bb170b8979f44757ec5742ad9ec6c4
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66778044"
 ---
 # <a name="using-ado-with-ole-db-driver-for-sql-server"></a>Использование объектов ADO с драйвером OLE DB для SQL Server
@@ -42,7 +42,7 @@ ms.locfileid: "66778044"
 
 -   `DataTypeCompatibility=80`  
 
- Дополнительные сведения о ключевых словах строки подключения см. в статье [Использование ключевых слов строки подключения с драйвером OLE DB для SQL Server](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md).  
+ См. подробнее об [использовании ключевых слов строки подключения с OLE DB Driver for SQL Server](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md).  
 
  Ниже приведен пример создания строки подключения ADO, полностью обеспечивающей работу с драйвером OLE DB для SQL Server, в том числе включающей поддержку функции MARS.  
 

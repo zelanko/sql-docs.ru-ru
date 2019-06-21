@@ -14,10 +14,10 @@ author: pmasl
 ms.author: pelopes
 manager: jroth
 ms.openlocfilehash: c1edbe7d411e06e477db016db62b4245e0893aee
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66801155"
 ---
 # <a name="inserting-data-into-table-valued-parameters"></a>Вставка данных в параметры, возвращающие табличные значения

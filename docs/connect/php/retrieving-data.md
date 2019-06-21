@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 85fc9956e8e88398703adf283c91517972aa7e77
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66797067"
 ---
 # <a name="retrieving-data"></a>Извлечение данных
@@ -76,7 +76,7 @@ ms.locfileid: "66797067"
 |[Использование параметров направления](../../connect/php/using-directional-parameters.md)|Описывает, как использовать параметры направления при вызове хранимой процедуры.|  
 |[Указание типа курсора и выбор строк](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)|Показано, как создать результирующий набор со строками, которые доступны в любом порядке.|  
 |[Практическое руководство. Получение типов даты и времени в виде строк с помощью драйвера SQLSRV](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md)|Здесь объясняется, как получить типы даты и времени в виде строк с помощью драйвера SQLSRV.|  
-|[Как извлечь типы даты и времени в виде объектов даты и времени PHP с помощью драйвера PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)|Как извлечь типы даты и времени в виде объектов даты и времени PHP с помощью драйвера PDO_SQLSRV|  
+|[Как извлечь типы даты и времени в виде объектов даты и времени PHP с помощью драйвера PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)|Описано, как получать типы даты и времени в виде объектов с помощью драйвера PDO_SQLSRV.|  
 |[Форматирование десятичных строк с помощью драйвера SQLSRV](../../connect/php/formatting-decimals-sqlsrv-driver.md)|Демонстрируется способ форматирования значения decimal и money, с помощью драйвера SQLSRV.|  
 |[Форматирование десятичных строк с помощью драйвера PDO_SQLSRV](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md)|Демонстрируется способ форматирования значения decimal и money, с помощью драйвера PDO_SQLSRV.|  
   

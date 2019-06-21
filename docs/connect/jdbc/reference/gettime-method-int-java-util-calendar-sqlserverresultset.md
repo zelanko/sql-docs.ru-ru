@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: a0dab0dd5052959782b1aa6591fd571d652251b0
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66779018"
 ---
 # <a name="gettime-method-int-javautilcalendar-sqlserverresultset"></a>Метод getTime (int, java.util.Calendar) (SQLServerResultSet)
@@ -57,7 +57,7 @@ public java.sql.Time getTime(int columnIndex,
  Этот метод возвращает допустимую часть времени для типа данных datetime или smalldatetime [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], а часть даты имеет начальное значение даты Java — 1 января 1970 г. в часовом поясе указанного календаря.  
   
 ## <a name="see-also"></a>См. также:  
- [Метод getByte (SQLServerResultSet)](../../../connect/jdbc/reference/gettime-method-sqlserverresultset.md)   
+ [Метод getTime (SQLServerResultSet)](../../../connect/jdbc/reference/gettime-method-sqlserverresultset.md)   
  [Элементы SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Класс SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

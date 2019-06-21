@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: b17e45fee91b293524cca39037f15fac15cd881e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66797075"
 ---
 # <a name="release-notes-for-the-microsoft-drivers-for-php-for-sql-server"></a>Заметки о выпуске драйверов Майкрософт для PHP для SQL Server
@@ -74,13 +74,13 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
   - Версия 17 теперь используется по умолчанию на всех платформах
 - Поддержка Ubuntu 17.10, Debian 9 и Suse Enterprise Linux 12
 - Прекращена поддержка Ubuntu 15.10
-- Поддержка Always Encrypted с CRUD дополнительные функции Windows. Дополнительные сведения см. в статье [Использование функции Always Encrypted с драйвером ODBC для SQL Server](../../connect/php/using-always-encrypted-php-drivers.md).
+- Поддержка Always Encrypted с CRUD дополнительные функции Windows. См. подробнее об [использовании функции Always Encrypted с драйвером PHP для SQL Server](../../connect/php/using-always-encrypted-php-drivers.md).
   - Поддержка Windows Certificate Store
   - Постоянное шифрование поддерживается только с Microsoft ODBC Driver 17 и выше
 - Поддержка национальных настроек не UTF8 в Linux и macOS
   - Языковые стандарты Non-UTF8 в Linux и macOS поддерживаются только с Microsoft ODBC Driver 17 и выше
 - Поддержка хранилища данных SQL Azure
-- Поддержка Управляемого экземпляра SQL Azure (расширенная закрытая предварительная версия).
+- Поддержка Управляемого экземпляра SQL Azure (расширенная закрытая предварительная версия)
 
 ## <a name="whats-new-in-version-43"></a>Новые возможности версии 4.3
 

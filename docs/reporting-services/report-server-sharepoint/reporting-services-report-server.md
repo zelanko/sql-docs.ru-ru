@@ -1,20 +1,20 @@
 ---
-title: Сервер отчетов служб Reporting Services | Документы Майкрософт
-ms.date: 09/25/2017
+title: Сравнение машинный код и серверы отчетов служб Reporting Services SharePoint | Документация Майкрософт
+ms.date: 06/10/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c432132f856d8c83b98f718351e1ef78be98360d
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: f7a75f578c025386966fc4fc7a15c41e7e44e0a7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65580577"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67038012"
 ---
-# <a name="reporting-services-report-server"></a>Сервер отчетов служб Reporting Services
+# <a name="comparing-native-and-sharepoint-reporting-services-report-servers"></a>Сравнение машинный код и серверы отчетов служб Reporting Services SharePoint
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
@@ -52,7 +52,7 @@ ms.locfileid: "65580577"
 |**URL-адреса**|Да|В режиме интеграции с SharePoint по-другому осуществляется работа с URL-адресами. URL-адреса SharePoint используются в качестве ссылок на отчеты, модели отчетов, общие источники данных и ресурсы. Иерархия папок сервера отчетов не используется. Если в пользовательских приложениях используется метод доступа на основе URL-адресов, поддерживаемый в собственном режиме сервера отчетов, данная функциональность оказывается недоступной, если сервер отчетов настроен для работы в режиме интеграции с SharePoint.<br /><br /> Дополнительные сведения о доступе по URL-адресу см. в разделе [Ссылка на параметр доступа по URL-адресу](../../reporting-services/url-access-parameter-reference.md).|  
 |**Настраиваемые модули безопасности**|Да|На сервере отчетов нельзя разворачивать или использовать настраиваемые модули безопасности служб Reporting Services. Сервер отчетов содержит специализированный модуль безопасности, который используется при настройке сервера отчетов для работы в режиме интеграции с SharePoint. Этот модуль безопасности является внутренним компонентом, который необходим для работы в интегрированном режиме.|  
 |**диспетчер конфигураций**|Да|**\*\* Важно. \*\*** Диспетчер конфигурации нельзя использовать для управления сервером отчетов в режиме интеграции с SharePoint. Вместо этого следует использовать центр администрирования SharePoint.|  
-|**Диспетчер отчетов**|Да|Диспетчер отчетов не может быть использован для управления в режиме интеграции с SharePoint. Используйте страницы приложения SharePoint. Дополнительные сведения см. в разделе [Служба SharePoint и приложения служб Reporting Services](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md).|  
+|**Веб-портал**|Да|Вы не можете управлять режиме интеграции с SharePoint на веб-портале. Используйте страницы приложения SharePoint. Дополнительные сведения см. в разделе [Служба SharePoint и приложения служб Reporting Services](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md).|  
 |**Связанные отчеты**|Да|Нет.|  
 |**Мои отчеты**|Да|нет|  
 |**Мои подписки** и методы пакетной обработки.|Да|нет|  
@@ -132,14 +132,12 @@ ms.locfileid: "65580577"
   
 ## <a name="related-tasks"></a>Связанные задачи
 
- В следующих разделах дополнительную информацию по установке, использованию и поддержке сервера отчетов:  
+ В следующих статьях представлены дополнительные сведения по установке, использованию и обслуживанию сервера отчетов:  
   
 |Задача|Ссылка|  
 |----------|----------|  
 |Ознакомьтесь с требованиями к оборудованию и программному обеспечению.|[Hardware and Software Requirements for Reporting Services in SharePoint Mode](https://msdn.microsoft.com/library/ed91877d-4f74-4266-a932-b824b4810c99).|  
 |Установка служб Reporting Services в режиме интеграции с SharePoint|[Установка служб Reporting Services в режиме SharePoint для SharePoint 2010](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c)|  
-|Веб-разработчик или пользователь, имеющий опыт создания каскадных таблиц стилей, может (на свой страх и риск) модифицировать таблицы стилей по умолчанию, чтобы изменить цвета, шрифты и макет панели инструментов или диспетчер отчетов. В этой версии не документированы ни таблицы стилей по умолчанию, ни инструкции по изменению таблиц стилей.|[Настройка таблицы стилей для средства просмотра HTML-страниц и диспетчера отчетов](https://msdn.microsoft.com/library/df805cff-b1de-4062-b2ac-423f37390fbd)|  
-|Разработчики веб-приложений, знакомые со стилями HTML и каскадными таблицами стилей (CSS), могут использовать сведения в этом разделе, чтобы определить, какие файлы можно изменять, чтобы настроить внешний вид диспетчера отчетов.|[Настройка передачи файлов cookie для пользовательской проверки подлинности на веб-портале](assetid:///91aeb053-149e-4562-ae4c-a688d0e1b2ba)|  
 |Объясняется, как настроить параметры памяти для веб-службы и службы Windows сервера отчетов.|[Настройка доступной памяти для приложений сервера отчетов](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)|  
 |Описаны рекомендованные шаги по настройке сервера отчетов для удаленного администрирования.|[настроить сервер отчетов для удаленного администрирования](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)|  
 |Содержит инструкции по настройке доступности папки **Мои отчеты** на экземпляре сервера отчетов, работающего в собственном режиме.|[Включение и отключение папки «Мои отчеты»](../../reporting-services/report-server/enable-and-disable-my-reports.md)|  

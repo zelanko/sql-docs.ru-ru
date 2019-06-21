@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 8386d896391405777648ee3ec27b188b313c737c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66788954"
 ---
 # <a name="sqlservernclob-members"></a>Элементы SQLServerNClob
@@ -41,7 +41,7 @@ ms.locfileid: "66788954"
 |[getCharacterStream](../../../connect/jdbc/reference/getcharacterstream-method-sqlservernclob.md)|Извлекает **NCLOB** обозначенный значение **java.sql.NClob** объекта.|  
 |[getSubString](../../../connect/jdbc/reference/getsubstring-method-sqlservernclob.md)|Извлекает копию указанной подстроки в **NCLOB** обозначенный значение **java.sql.NClob** объекта.|  
 |[length](../../../connect/jdbc/reference/length-method-sqlservernclob.md)|Возвращает число символов в **NCLOB** обозначенный значение **java.sql.NClob** объекта.|  
-|[position](../../../connect/jdbc/reference/position-method-sqlservernclob.md)|Извлекает положение символа указанного объекта **NClob** или подстроки в **NClob** на основании указанной начальной позиции.|  
+|[position](../../../connect/jdbc/reference/position-method-sqlservernclob.md)|Извлекает положение символа указанного объекта **java.sql.NClob** или подстроки в **java.sql.NClob** с учетом указанной начальной позиции.|  
 |[setAsciiStream](../../../connect/jdbc/reference/setasciistream-method-sqlservernclob.md)|Извлекает поток, используемый для записи символов ASCII в значение **NCLOB**, представленное данным объектом **java.sql.NClob**, начиная с указанной позиции.|  
 |[setCharacterStream](../../../connect/jdbc/reference/setcharacterstream-method-sqlservernclob.md)|Извлекает поток, используемый для записи символов Юникода в значение **NCLOB**, представленное этим объектом **java.sql.NClob**, начиная с указанной позиции.|  
 |[setString](../../../connect/jdbc/reference/setstring-method-sqlservernclob.md)|Записывает указанный **строка** для **NCLOB** начиная с указанной позиции.|  

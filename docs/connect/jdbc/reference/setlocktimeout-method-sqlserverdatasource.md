@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 32f61572dca7124e552a9d40497a3385bc243b31
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66790466"
 ---
 # <a name="setlocktimeout-method-sqlserverdatasource"></a>Метод setLockTimeout (SQLServerDataSource)
@@ -41,7 +41,7 @@ public void setLockTimeout(int lockTimeout)
  Значение **int**, содержащее число миллисекунд ожидания.  
   
 ## <a name="remarks"></a>Remarks  
- Время ожидания блокировки — это продолжительность времени (в миллисекундах) до того, как база данных сообщает об истечении времени ожидания блокировки. Значение -1 (задано по умолчанию) показывает, что время ожидания неограниченно. Если задано это значение, оно будет использоваться по умолчанию для всех инструкций в соединении.  
+ Время ожидания блокировки — это продолжительность времени (в миллисекундах) до того, как база данных сообщит об истечении времени ожидания блокировки. Значение -1 (задано по умолчанию) показывает, что время ожидания не ограничено. Если задано это значение, оно будет использоваться по умолчанию для всех инструкций в соединении.  
   
 > [!NOTE]  
 >  Значение 0 указывает на отсутствие ожидания. Если свойство lockTimeout не задано, то метод [getLockTimeout](../../../connect/jdbc/reference/getlocktimeout-method-sqlserverdatasource.md) возвращает значение по умолчанию (-1).  

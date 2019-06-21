@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 36ccbdddde5276bedffe3271a541875f1e555df3
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66770477"
 ---
 # <a name="always-encrypted-api-reference-for-the-jdbc-driver"></a>Справочник по API Always Encrypted для драйвера JDBC
@@ -75,8 +75,8 @@ ms.locfileid: "66770477"
   
 |Имя|Описание|  
 |----------|-----------------|  
-|`public byte[] decryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] encryptedColumnEncryptionKey)`|Расшифровывает указанное зашифрованное значение ключа шифрования столбца. Зашифрованное значение должно быть зашифровано с помощью сертификата по указанному пути ключа и с помощью указанного алгоритма.<br /><br /> **Путь ключа должен иметь один из следующих форматов.**<br /><br /> Отпечаток: <отпечаток_сертификата><br /><br /> Псевдоним: <псевдоним_сертификата><br /><br /> (Переопределяет SQLServerColumnEncryptionKeyStoreProvider. decryptColumnEncryptionKey(String, String, Byte[]).)|  
-|`public byte[] encryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] plainTextColumnEncryptionKey)`|Шифрует ключ шифрования столбца с помощью сертификата по указанному пути ключа и с помощью указанного алгоритма.<br /><br /> **Путь ключа должен иметь один из следующих форматов.**<br /><br /> Отпечаток: <отпечаток_сертификата><br /><br /> Псевдоним: <псевдоним_сертификата><br /><br /> (Переопределяет SQLServerColumnEncryptionKeyStoreProvider. encryptColumnEncryptionKey(String, String, Byte[]).)|  
+|`public byte[] decryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] encryptedColumnEncryptionKey)`|Расшифровывает указанное зашифрованное значение ключа шифрования столбца. Зашифрованное значение должно быть зашифровано с помощью сертификата по указанному пути ключа и с помощью указанного алгоритма.<br /><br /> **Путь ключа должен иметь один из следующих форматов.**<br /><br /> Отпечаток:<отпечаток_сертификата><br /><br /> Псевдоним:<псевдоним_сертификата><br /><br /> (Переопределяет SQLServerColumnEncryptionKeyStoreProvider. decryptColumnEncryptionKey(String, String, Byte[]).)|  
+|`public byte[] encryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] plainTextColumnEncryptionKey)`|Шифрует ключ шифрования столбца с помощью сертификата по указанному пути ключа и с помощью указанного алгоритма.<br /><br /> **Путь ключа должен иметь один из следующих форматов.**<br /><br /> Отпечаток:<отпечаток_сертификата><br /><br /> Псевдоним:<псевдоним_сертификата><br /><br /> (Переопределяет SQLServerColumnEncryptionKeyStoreProvider. encryptColumnEncryptionKey(String, String, Byte[]).)|  
 |`public void setName (String name)`|Задает имя поставщика хранилища ключей.|
 |`public String getName ()`|Получает имя поставщика хранилища ключей.|
   

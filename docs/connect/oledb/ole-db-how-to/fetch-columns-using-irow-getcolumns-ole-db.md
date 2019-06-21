@@ -14,10 +14,10 @@ author: pmasl
 ms.author: pelopes
 manager: jroth
 ms.openlocfilehash: cbc97de598e05d6045a5f7f142a67b39dcb9dd05
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66791558"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>Выбор столбцов при помощи метода IRow::GetColumns (OLE DB)
@@ -53,7 +53,7 @@ ms.locfileid: "66791558"
   
 -   Как дважды получить доступ к столбцу ― в первый раз узнается фактическая ширина столбца, а затем осуществляется доступ к данным.  
   
- В структуре DBCOLUMNACCESS, если pData имеет значение NULL, а cbMaxLen = 0, вызов IRow->GetColumns возвращает только фактическую длину столбца. В этом случае IRow->GetColumns можно вызвать снова для того же столбца, чтобы получить данные. Этот образец не поддерживается на архитектуре IA64.  
+ Если в структуре DBCOLUMNACCESS pData имеет значение NULL, а cbMaxLen — значение 0, вызов IRow->GetColumns возвращает только фактическую длину столбца. В этом случае IRow->GetColumns можно вызвать снова для того же столбца, чтобы получить данные. Этот образец не поддерживается на архитектуре IA64.  
   
  Образцу требуется образец базы данных AdventureWorks, который можно загрузить с домашней страницы [Образцы кода и проекты сообщества Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384) (возможно, на английском языке).  
   

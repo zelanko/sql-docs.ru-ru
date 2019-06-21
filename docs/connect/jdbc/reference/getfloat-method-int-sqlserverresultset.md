@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 72a2ed57b9b86db50c7d0c1f824181c4a5623026
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66802013"
 ---
 # <a name="getfloat-method-int-sqlserverresultset"></a>Метод getFloat (int) (SQLServerResultSet)
@@ -47,12 +47,12 @@ public float getFloat(int columnIndex)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getInt определен с помощью метода getInt в интерфейсе java.sql.ResultSet.  
+ Этот метод getFloat определен с помощью метода getFloat в интерфейсе java.sql.ResultSet.  
   
  Этот метод возвращает все числовые типы с точностью Java **float**.  
   
 ## <a name="see-also"></a>См. также:  
- [Метод updateFloat (SQLServerResultSet)](../../../connect/jdbc/reference/getfloat-method-sqlserverresultset.md)   
+ [Метод getFloat (SQLServerResultSet)](../../../connect/jdbc/reference/getfloat-method-sqlserverresultset.md)   
  [Элементы SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Класс SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

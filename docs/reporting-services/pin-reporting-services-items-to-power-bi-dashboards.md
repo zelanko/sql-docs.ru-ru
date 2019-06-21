@@ -16,10 +16,10 @@ ms.assetid: 1d96c3f7-2fd4-40f7-8d1c-14a7f54cdb15
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ad7e73839a988e057f57b9a294e795f65e41f9fb
-ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66500033"
 ---
 # <a name="pin-reporting-services-paginated-report-items-to-dashboards-in-power-bi"></a>Закрепление элементов отчетов Reporting Services с разбивкой на страницы на панелях мониторинга Power BI
@@ -40,7 +40,7 @@ ms.locfileid: "66500033"
   
 -   Отчеты следует настроить так, чтобы они использовали хранимые учетные данные, если вы хотите, чтобы закрепленный элемент обновлялся.  При закреплении элемента подписка [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] создается автоматически для управления обновлением данных элемента на информационной панели.  Если в отчете не используются сохраненные учетные данные, при запуске подписки появится сообщение, похожее на следующее сообщение на странице **Мои подписки**.  
   
-    Ошибка доставки PowerBI: панель мониторинга: образец анализа расходов на ИТ, визуальный элемент: Chart2, ошибка: невозможно завершить текущее действие. Учетные данные источника данных пользователя не соответствуют требованиям для выполнения этого отчета или общего набора данных. Введите учетные данные источника данных пользователя".
+    "PowerBI Delivery error: dashboard: IT Spend Analysis Sample, visual: Chart2, error: The current action cannot be completed. Учетные данные источника данных пользователя не соответствуют требованиям для выполнения этого отчета или общего набора данных. Введите учетные данные источника данных пользователя".
  
     См. раздел "Настройка сохраненных учетных данных для источника данных, связанного с отчетами (собственный режим)" статьи [Сохраненные учетные данные в источнике данных Reporting Services](../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md).  
   
@@ -56,7 +56,7 @@ ms.locfileid: "66500033"
   
 ##  <a name="bkmk_to_pin"></a> Закрепление элемента отчета  
   
-1. Убедитесь, что вы вошли в [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. В [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]щелкните пункт меню **Мои параметры** и выполните вход. См. дополнительные сведения о [странице "Мои параметры", используемой для интеграции с Power BI на веб-портале](my-settings-for-power-bi-integration-web-portal.md).
+1. Убедитесь, что вы вошли в [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. В [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]щелкните пункт меню **Мои параметры** и выполните вход. См. подробнее о [странице "Мои параметры", используемой для интеграции с Power BI на веб-портале](my-settings-for-power-bi-integration-web-portal.md).
 
     ![ssRS_WebPortal_MySettings](../reporting-services/media/ssrs-webportal-mysettings.png)  
   
@@ -96,7 +96,7 @@ ms.locfileid: "66500033"
   
 ##  <a name="bkmk-troubleshoot"></a> Устранение неполадок  
   
--   **Нет кнопки [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] на панели инструментов средства просмотра отчетов:** это означает, что сервер отчетов не был интегрирован с [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. Дополнительные сведения см. в разделе [Интеграция сервера отчетов с Power BI (диспетчер конфигурации)](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md).  
+-   **Нет кнопки [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] на панели инструментов средства просмотра отчетов:** это сообщение означает, что сервер отчетов не интегрирован с [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. Дополнительные сведения см. в разделе [Интеграция сервера отчетов с Power BI (диспетчер конфигурации)](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md).  
   
 - **Не удается закрепить элемент**: при попытке закрепления элемента отображается следующее сообщение об ошибке. См. раздел [Элементы, которые вы можете закрепить](#bkmk_supported_items).  
   
@@ -108,11 +108,11 @@ ms.locfileid: "66500033"
   
         PowerBI Delivery error: dashboard: SSRS items, visual: Image3, error: The current action can't be completed. The user data source credentials do not meet the requirements to run this report or shared dataset. Either the user data source credentials are not stored in the report server database, or the user data source is configured not to require credentials but the unattended execution account is not specified. (rsInvalidDataSourceCredentialSetting)
   
--   **Истек срок действия учетных данных Power BI:**  при попытке закрепления элемента появляется следующее сообщение об ошибке. В [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]щелкните **Мои параметры** и на странице "Мои параметры" щелкните **Войти**. См. дополнительные сведения о [странице "Мои параметры", используемой для интеграции с Power BI на веб-портале](my-settings-for-power-bi-integration-web-portal.md).  
+-   **Истек срок действия учетных данных Power BI:**  при попытке закрепления элемента появляется следующее сообщение об ошибке. В [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]щелкните **Мои параметры** и на странице "Мои параметры" щелкните **Войти**. См. подробнее о [странице "Мои параметры", используемой для интеграции с Power BI на веб-портале](my-settings-for-power-bi-integration-web-portal.md).  
   
         Cannot Pin: Unexpected Server Error: Missing, invalid or expired Power BI credentials.  
   
--   **Невозможно закрепить**. Если вы попытаетесь закрепить элемент на панели мониторинга, которая доступна только для чтения, появится следующее сообщение об ошибке:  
+-   **Невозможно закрепить.** Если вы попытаетесь закрепить элемент на панели мониторинга, которая доступна только для чтения, появится следующее сообщение об ошибке:  
   
         Server Error: The item 'Dashboard deleted 015cf022-8e2f-462e-88e5-75ab0a04c4d0' can't be found. (rsItemNotFound)  
   

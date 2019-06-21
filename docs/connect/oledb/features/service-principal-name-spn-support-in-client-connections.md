@@ -16,10 +16,10 @@ author: pmasl
 ms.author: pelopes
 manager: jroth
 ms.openlocfilehash: 9055af8a085b6566a542ed44ab6b13bda62e0c3f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66802925"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>Поддержка имени участника-службы в клиентских соединениях
@@ -70,7 +70,7 @@ ms.locfileid: "66802925"
  Поведение нового соединения реализуется клиентом, поэтому оно не зависит от версии [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="linked-servers-and-delegation"></a>Связанные серверы и делегирование  
- При создании связанных серверов параметр **@provstr** хранимой процедуры [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) можно использовать для указания имени субъекта-службы сервера и партнера по обеспечению отработки отказа. Такой подход имеет те же преимущества, что и при указании имен субъектов-служб в строках соединения клиента: проще и надежнее установить соединения, использующие проверку подлинности Kerberos.  
+ При создании связанных серверов параметр **@provstr** хранимой процедуры [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) можно использовать для указания имени субъекта-службы сервера и партнера по обеспечению отработки отказа. Такой подход имеет те же преимущества, что и при указании имен субъектов-служб в клиентских строках подключения, — установить подключения на основе аутентификации Kerberos проще и надежнее.  
   
  Делегирование со связанными серверами требует проверки подлинности Kerberos.  
   

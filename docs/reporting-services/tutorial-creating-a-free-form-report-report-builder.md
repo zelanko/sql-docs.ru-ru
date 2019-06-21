@@ -9,10 +9,10 @@ ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 567abd4423f546f853abea4caa5c944ce9d8ccdb
-ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66499563"
 ---
 # <a name="tutorial-creating-a-free-form-report-report-builder"></a>Учебник. Создание отчета в свободной форме (построитель отчетов)
@@ -505,7 +505,7 @@ ms.locfileid: "66499563"
 * [Создание счета-фактуры и формы со списками](../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)
 * [Ячейки, строки и столбцы области данных табликса (построитель отчетов и службы SSRS)](../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)  
   
-Дополнительные сведения о конструкторах запросов см. в разделах [Конструкторы запросов (построитель отчетов)](report-data/query-design-tools-ssrs.md) и [Пользовательский интерфейс текстового конструктора запросов (построитель отчетов)](../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
+См. подробнее о конструкторах запросов в руководствах по [средствам проектирования запросов (SSRS)](report-data/query-design-tools-ssrs.md) и [пользовательскому интерфейсу текстового конструктора запросов (построитель отчетов)](../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
   
 ## <a name="see-also"></a>См. также:  
 [Учебники по построителю отчетов](../reporting-services/report-builder-tutorials.md) 

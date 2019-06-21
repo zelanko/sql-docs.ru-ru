@@ -14,10 +14,10 @@ ms.assetid: 21e5c32f-ad67-4917-b55a-8e21bd64f5a6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 25b695456bbac34e2c6ce8bf8c312c4108dd852e
-ms.sourcegitcommit: 561cee96844b82ade6cf543a228028ad5c310768
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66506647"
 ---
 # <a name="reporting-services-configuration-files"></a>Файлы конфигурации служб Reporting Services
@@ -26,20 +26,20 @@ ms.locfileid: "66506647"
  Изменение файлов конфигурации необходимо только при добавлении или настройке дополнительных параметров. Параметры конфигурации задаются либо как элементы XML, либо как атрибуты. Если вы знакомы с XML и файлами конфигурации, то можете использовать редактор текста или кода для настройки пользовательских параметров. Дополнительные сведения об изменении файла конфигурации, а также о считывании сервером отчетов новых и обновленных параметров конфигурации см. в разделе [Изменение файла конфигурации служб Reporting Services (RSreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
   
 > [!NOTE]  
-> В предыдущих версиях диспетчер отчетов имел собственный файл конфигурации с именем RSWebApplication.config. Этот файл устарел. Если выполняется обновление предыдущей установки, этот файл останется, но сервер отчетов не будет считывать из него параметры. Если файл RSWebApplication.config существует на компьютере, его следует удалить. В [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версиях все параметры диспетчера отчетов хранятся в файле конфигурации RSReportServer.config и считываются из него. Список удаленных или перемещенных параметров см. в разделе [Критические изменения в службах SQL Server Reporting Services в выпуске SQL Server 2016](../../reporting-services/breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md).  
+> В предыдущих версиях диспетчер отчетов имел собственный файл конфигурации с именем RSWebApplication.config. Этот файл устарел. Если выполняется обновление предыдущей установки, этот файл останется, но сервер отчетов не будет считывать из него параметры. Если файл RSWebApplication.config существует на компьютере, его следует удалить. В [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версиях все параметры диспетчера отчетов и веб-портала хранятся в файле конфигурации RSReportServer.config и считываются из него. Список удаленных или перемещенных параметров см. в разделе [Критические изменения в службах SQL Server Reporting Services в выпуске SQL Server 2016](../../reporting-services/breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md).  
   
- В этой статье  
+ В этой статье описано следующее:  
   
 -   [Сводка файлов конфигурации (собственный режим)](#bkmk_config_file_Summary_native_mode)  
   
 -   [Сводка файлов конфигурации (режим интеграции с SharePoint)](#bkmk_config_file_Summary_sharepoint_mode)  
   
-##  <a name="bkmk_config_file_Summary_native_mode"></a> Сводка файлов конфигурации (собственный режим)  
+##  <a name="bkmk_config_file_Summary_native_mode"></a> Сводка по файлам конфигурации (собственный режим)  
  В следующей таблице приводится описание мест хранения параметров настройки. Большая часть параметров настройки хранится в файлах конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. По умолчанию каталог установки следующий:  
   
 ''' Установка пути  
 C:\Program Files\Microsoft SQL Server\MSRSxx.MSSQLSERVER, (где xx — номер версии MS SQL) или  
-C:\Program Files\Microsoft SQL Server Reporting Services.  
+C:\Program Files\Microsoft SQL Server Reporting Services\SSRS  
   в зависимости от версии служб SSRS
 ```  
   
@@ -66,7 +66,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
   
 |Место хранения|Описание|Местоположение|  
 |----------------|-----------------|--------------|  
-|RSReportServer.config|Хранит параметры конфигурации для областей функций службы сервера отчетов: диспетчера отчетов, веб-службы сервера отчетов и фоновой обработки. Дополнительные сведения о каждом параметре см. в разделе [Файл конфигурации RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md).|\<каталог_установки>\Reporting Services\ReportServer|  
+|RSReportServer.config|Хранит параметры конфигурации для областей функций службы сервера отчетов: диспетчера отчетов или веб-портала, веб-службы сервера отчетов и фоновой обработки. Дополнительные сведения о каждом параметре см. в разделе [Файл конфигурации RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md).|\<каталог_установки>\Reporting Services\ReportServer|  
 |RSSrvPolicy.config|Хранит политики управления доступом для кода для модулей сервера. Дополнительные сведения об этом файле см. в разделе [Using Reporting Services Security Policy Files](../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md).|\<каталог_установки>\Reporting Services\ReportServer|  
 |Файл Web.config для веб-службы сервера отчетов|Включает только те параметры, которые необходимы для ASP.NET, если это применимо для версии служб SSRS.|\<каталог_установки>\Reporting Services\ReportServer|  
 |Параметры регистрации|Хранит состояние настройки и другие параметры, которые используются для отмены установки служб Reporting Services. Также хранит сведения о каждом приложении службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .<br /><br /> Не изменяйте эти параметры вручную, поскольку это может нарушить целостность установки.|HKEY_LOCAL_MACHINE \SOFTWARE \Microsoft \Microsoft SQL Server \\<ИД экземпляра\>\Setup<br /><br /> Идентификатор экземпляра образца: MSSQL13.MSSQLSERVER<br /><br /> **и**<br /><br /> HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\Reporting Services\Service Applications|  

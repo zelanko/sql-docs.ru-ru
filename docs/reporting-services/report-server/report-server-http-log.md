@@ -1,6 +1,6 @@
 ---
 title: Журнал HTTP-запросов сервера отчетов | Документы Майкрософт
-ms.date: 03/02/2018
+ms.date: 06/12/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 6cc433b7-165c-4b16-9034-79256dd6735f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2d290d32cbe05a0e378486cad72c5f39a2bc6e58
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 7fb733325b09c189221729a3edc0dd12cf33b283
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65581393"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67140456"
 ---
 # <a name="report-server-http-log"></a>Журнал HTTP-запросов сервера отчетов
   В файле журнала HTTP сервера отчетов хранится информация для каждого HTTP-запроса и ответа, обработанного сервером отчетов. Сообщения об ошибках, связанных с переполнением очереди запросов и временем ожидания, не достигают сервера отчетов, поэтому не регистрируются в файле журнала.  
@@ -28,9 +28,9 @@ ms.locfileid: "65581393"
 |||  
 |-|-|  
 |Имя файла|По умолчанию этот файл имеет имя ReportServerService_HTTP_\<отметка_времени>.log. Можно задать другой префикс имени файла, изменив атрибут HttpTraceFileName в файле конфигурации ReportingServicesService.exe.config. Отметки времени создаются на основе времени по Гринвичу (UTC).|  
-|Размещение файла|Этот файл расположен в папке \Microsoft SQL Server\\*\<экземпляр SQL Server>* \Reporting Services\LogFiles.|  
+|Размещение файла|Этот файл расположен в папке \Microsoft SQL Server\\ *\<экземпляр SQL Server>* \Reporting Services\LogFiles.|  
 |Формат файла|Этот файл имеет формат EN-US. Он представляет собой текстовый ASCII-файл.|  
-|Создание и хранение файла|Журнал HTTP создается после его включения в файле конфигурации, перезапуска службы и обработки сервером отчетов HTTP-запроса. Если необходимые параметры были настроены, но файл журнала отсутствует, откройте какой-либо отчет или запустите одно из приложений сервера отчетов (например, диспетчер отчетов), чтобы был сформирован HTTP-запрос для создания этого файла.<br /><br /> После каждого перезапуска службы и последующего HTTP-запроса на сервер отчетов создается новый экземпляр файла журнала.<br /><br /> По умолчанию размер журналов трассировки ограничен 32 МБ, а срок их хранения — 14 дней.|  
+|Создание и хранение файла|Журнал HTTP создается после его включения в файле конфигурации, перезапуска службы и обработки сервером отчетов HTTP-запроса. Если необходимые параметры настроены, но файл журнала отсутствует, откройте любой отчет или запустите одно из приложений сервера отчетов (например, веб-портал), чтобы создать HTTP-запрос для создания этого файла.<br /><br /> После каждого перезапуска службы и последующего HTTP-запроса на сервер отчетов создается новый экземпляр файла журнала.<br /><br /> По умолчанию размер журналов трассировки ограничен 32 МБ, а срок их хранения — 14 дней.|  
   
 ## <a name="configuration-settings-for-report-server-http-log"></a>Параметры конфигурации для журнала HTTP сервера отчетов  
  Чтобы настроить конфигурацию журнала HTTP-сервера отчетов, измените файл ReportingServicesService.exe.config с помощью программы Блокнот. Этот файл конфигурации находится в папке \Program Files\Microsoft SQL Server\MSSQL.n\Reporting Services\ReportServer\Bin.  
@@ -76,9 +76,8 @@ ms.locfileid: "65581393"
 |CookieSent|Содержимое куки-файла, отправленного сервером.|нет|  
 |Referrer|Предыдущий сайт, посещенный клиентом.|нет|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также раздел  
  [Журнал трассировки службы сервера отчетов](../../reporting-services/report-server/report-server-service-trace-log.md)   
  [Файлы и источники журналов служб Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
  [Справочник по ошибкам и событиям (службы Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
-  
   

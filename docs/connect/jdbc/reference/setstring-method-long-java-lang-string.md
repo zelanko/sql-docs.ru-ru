@@ -1,5 +1,5 @@
 ---
-title: Метод setString (long, java.lang.String, int, int) | Документация Майкрософт
+title: Метод setString (long, java.lang.String) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: b23c0c5de87fc5df557d5d02958a72eaa336f8fb
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66771667"
 ---
 # <a name="setstring-method-long-javalangstring"></a>Метод setString (long, java.lang.String)
@@ -52,7 +52,7 @@ public int setString(long pos,
  java.sql.SQLException  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод setString указывается методом setString в интерфейсе java.sql.CallableStatement.  
+ Этот метод setString определен с помощью метода setString в интерфейсе java.sql.Clob.  
   
  Символьные данные перезаписываются, начиная с указанной позиции, и могут превысить исходную длину объекта CLOB. Если указать значение позиции+1, будет добавлена строка. Если указать значение позиции+2 и более (либо нулевое или отрицательное значение), то создается ошибка позиции.  
   

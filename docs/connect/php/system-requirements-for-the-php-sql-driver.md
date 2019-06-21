@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 0cea4c62c7976e1f6d84dc046abc1046179ef125
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66803905"
 ---
 # <a name="system-requirements-for-the-microsoft-drivers-for-php-for-sql-server"></a>Системные требования драйверов Майкрософт для PHP для SQL Server
@@ -58,7 +58,7 @@ ms.locfileid: "66803905"
 
 При загрузке Windows версию драйвера на 64-разрядной версии Windows ODBC 64-разрядный установщик устанавливает 32-разрядных и 64-разрядные драйверы ODBC. Если вы используете в 32-разрядной версии Windows, использующие ODBC x86 установщика. На платформах, отличных от Windows доступны только в 64-разрядные версии драйвера.
 
-|PHP для SQL Server версии драйвера&#8594;<br />Версия драйвера JDBC|5.6|5.3|5.2|4.3|4.0|3.2|3.1|
+|PHP для SQL Server версии драйвера&#8594;<br />&#8595; Версия драйвера ODBC|5.6|5.3|5.2|4.3|4.0|3.2|3.1|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |Драйвер ODBC 17+ |Да|Да|Да| | | | |
 |Драйвер ODBC 13.1|Да|Да|Да|Да|Да| | |
