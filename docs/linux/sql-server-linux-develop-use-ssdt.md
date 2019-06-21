@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
 ms.openlocfilehash: fafec68510e2c9214ed77294314b2ff06e456ff2
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66713286"
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>Использовать Visual Studio для создания баз данных для SQL Server в Linux
@@ -110,8 +110,8 @@ SQL Server в Linux поддерживается SSDT 17.0, версия-КАН�
 
 Дополнительные сведения о разработке базы данных с помощью SQL Data Tools, см. в разделе [документы MSDN по SSDT]
 
-[Скачайте и установите Visual Studio]:https://www.visualstudio.com/downloads/
+[Скачайте и установите Visual Studio]: https://www.visualstudio.com/downloads/
 [Download and Install SSDT]:https://aka.ms/ssdt-download
 [Документы MSDN по SSDT]: https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx
-[Учебник. Составление инструкций Transact-SQL]:https://msdn.microsoft.com/library/ms365303.aspx
-[Справочник по Transact-SQL (ядро СУБД)]:https://msdn.microsoft.com/library/bb510741.aspx
+[Учебник. Составление инструкций Transact-SQL]: https://msdn.microsoft.com/library/ms365303.aspx
+[Справочник по Transact-SQL (ядро СУБД)]: https://msdn.microsoft.com/library/bb510741.aspx
