@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 47a882b7-efe5-4ee6-bef4-06118eb56903
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 9d591d3fb8e3852564429742a4bd0c2cf3af2653
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 2aa2fefb5df874b08a34c4a7091d450afdfd4828
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028313"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62513166"
 ---
 # <a name="lesson-1-creating-a-sample-subscriber-database"></a>Занятие 1. Создание образца базы данных подписчика
 
@@ -55,7 +55,7 @@ ms.locfileid: "50028313"
     GO  
     ```  
   
-7.  Нажмите кнопку **! Выполнить** на панели инструментов.  
+7.  Щелкните **! Выполнить** на панели инструментов.  
   
 8.  С помощью инструкции SELECT удостоверьтесь, что создано три строки данных. Например: `select * from OrderInfo`  
   

@@ -11,11 +11,11 @@ author: David-Engel
 ms.author: genemi
 manager: ''
 ms.openlocfilehash: 0790d2cc0497ef2912f96cd4679e4541fc9b2262
-ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58645506"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63180270"
 ---
 # <a name="microsoft-php-drivers-for-sql-server-support-matrix"></a>Драйверы Microsoft PHP для SQL Server Support Matrix
 
@@ -31,24 +31,24 @@ ms.locfileid: "58645506"
 
 Перечисленные ниже версии драйверов Microsoft PHP будут поддерживаться до указанной даты окончания поддержки.
 
-|Имя драйвера|Версия пакета драйвера|Заканчивается Основная фаза поддержки|
+|Имя драйвера|Версия пакета драйвера|Окончание основной фазы поддержки|
 |-|:-:|-|
-|Драйверы Microsoft PHP 5.6 для SQL Server|5.6|21 февраля 2024|
-|Драйверы Microsoft PHP 5.3 для SQL Server|5.3|20 июля 2023 г.|
-|Драйверы Microsoft PHP 5.2 для SQL Server|5.2|9 февраля 2023 г.|
-|Драйверы Microsoft PHP 4.3 для SQL Server|4.3|6 июля 2022|
-|Драйверы Microsoft PHP 4.0 для SQL Server|4.0|11 июля 2021|
-|Драйверы Microsoft PHP 3.2 для SQL Server|3.2|9 марта 2020 г.|
-|Драйверы Microsoft PHP 3.1 для SQL Server|3.1|12 декабря 2019 г.|
+|Драйверы Microsoft PHP версии 5.6 для SQL Server|5.6|21 февраля 2024|
+|Драйверы Microsoft PHP версии 5.3 для SQL Server|5.3|20 июля 2023 г.|
+|Драйверы Microsoft PHP версии 5.2 для SQL Server|5.2|9 февраля 2023 г.|
+|Драйверы Microsoft PHP версии 4.3 для SQL Server|4.3|6 июля 2022|
+|Драйверы Microsoft PHP версии 4.0 для SQL Server|4.0|11 июля 2021 г.|
+|Драйверы Microsoft PHP версии 3.2 для SQL Server|3.2|9 марта 2020 г.|
+|Драйверы Microsoft PHP версии 3.1 для SQL Server|3.1|12 декабря 2019 г.|
 | &nbsp; | &nbsp; | &nbsp; |
 
 Следующие драйверы Microsoft PHP больше не поддерживаются.
 
-|Имя драйвера|Версия пакета драйвера|Заканчивается Основная фаза поддержки|
+|Имя драйвера|Версия пакета драйвера|Окончание основной фазы поддержки|
 |-|:-:|-|
-|Драйверы Microsoft PHP 3.0 для SQL Server|3.0|6 марта 2017 г.|
-|Драйверы Microsoft PHP 2.0 для SQL Server|2.0|10 августа 2015 г.|
-|Драйверы Microsoft PHP 1.0 для SQL Server|1.0|28 апреля 2014 г.|
+|Драйверы Microsoft PHP версии 3.0 для SQL Server|3.0|6 марта 2017 г.|
+|Драйверы Microsoft PHP версии 2.0 для SQL Server|2.0|10 августа 2015 г.|
+|Драйверы Microsoft PHP версии 1.0 для SQL Server|1.0|28 апреля 2014 г.|
 | &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="sql-server-version-certified-compatibility"></a>Сертифицированные совместимости версии SQL Server
@@ -56,7 +56,7 @@ ms.locfileid: "58645506"
 
 |PHP для SQL Server версии драйвера&#8594;<br />&#8595; версия SQL Server|5.6|5.3|5.2|4.3|4.0|3.2|3.1|3.0|2.0|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|Управляемый экземпляр SQL Azure<br/> (Расширенная закрытая Предварительная версия)|Да|Да|Да|Да| | | | | |
+|Управляемый экземпляр SQL Azure<br/> (Расширенная закрытая предварительная версия)|Да|Да|Да|Да| | | | | |
 |Хранилище данных SQL Azure|Да|Да|Да|Да| | | | | |
 |SQL Server 2017         |Да|Да|Да|Да| | | | | |
 |SQL Server 2016         |Да|Да|Да|Да|Да| | | | |
