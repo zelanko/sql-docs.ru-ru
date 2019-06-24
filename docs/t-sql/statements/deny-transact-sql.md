@@ -28,12 +28,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f3ca28e379188c13c266871c4b2afdeecca773bf
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: d14ee4d8bef4e9b7ada7ee558ca2524538775148
+ms.sourcegitcommit: 0343cdf903ca968c6722d09f017df4a2a4c7fd6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361654"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67166374"
 ---
 # <a name="deny-transact-sql"></a>DENY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -128,7 +128,8 @@ DENY
  Обозначает, что разрешение запрещается для указанного участника и всех других участников, которым этот участник предоставил разрешение. Требуется, если участник имеет разрешение с параметром GRANT OPTION.  
   
  AS *principal*  
-  Используйте предложение субъекта AS, чтобы указать, что субъект, записанный как объект, отзывающий разрешение, должен быть субъектом, отличным от пользователя, выполняющего инструкцию. Предположим, что пользователь Мария — это участник 12, пользователь Павел — участник 15. Мария выполняет `DENY SELECT ON OBJECT::X TO Steven WITH GRANT OPTION AS Raul;`. В таблице sys.database_permissions для параметра grantor_prinicpal_id инструкции отмены указано значение 15 (Павел), хотя инструкция была выполнена пользователем 12 (Мария).
+ Указывает участника, от которого участник, выполняющий данный запрос, получает право на запрещение разрешения.
+Используйте предложение субъекта AS, чтобы указать, что субъект, записанный как объект, отзывающий разрешение, должен быть субъектом, отличным от пользователя, выполняющего инструкцию. Предположим, что пользователь Мария — это участник 12, пользователь Павел — участник 15. Мария выполняет `DENY SELECT ON OBJECT::X TO Steven WITH GRANT OPTION AS Raul;`. В таблице sys.database_permissions для параметра grantor_prinicpal_id инструкции отмены указано значение 15 (Павел), хотя инструкция была выполнена пользователем 12 (Мария).
   
 AS в данной инструкции не дает возможность олицетворять другого пользователя.  
   

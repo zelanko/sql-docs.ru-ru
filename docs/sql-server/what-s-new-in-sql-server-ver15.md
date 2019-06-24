@@ -9,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 018a9ddb9a51b9962486d8a9e6d2c6b1945e5885
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b4e36454809519b6470c353b9dd77364491a87f8
+ms.sourcegitcommit: 3870a41f49906108136396c4ed8c130691c46b18
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66836309"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67298218"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>Новые возможности [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -233,7 +233,6 @@ ms.locfileid: "66836309"
 |В динамическом административном представлении `sys.dm_exec_requests` столбец `command` отображает `SELECT (STATMAN)`, если `SELECT` ожидает завершения синхронной операции обновления статистики, прежде чем продолжить выполнение запроса. | [`sys.dm_exec_requests`](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) |
 |Отображается новый тип ожидания `WAIT_ON_SYNC_STATISTICS_REFRESH` в динамическом административном представлении `sys.dm_os_wait_stats`. Он отображает суммарное время на уровне экземпляра, затраченное на синхронные операции обновления статистики.|[`sys.dm_os_wait_stats`](../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) |
 |Гибридный буферный пул — это новая возможность ядра СУБД SQL Server, когда доступ к страницам базы данных, хранящимся в файлах базы данных и помещенным в устройство постоянной памяти (PMEM), осуществляется напрямую при необходимости.|[Гибридный буферный пул](../database-engine/configure-windows/hybrid-buffer-pool.md) |
-|В [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] вводится статическое маскирование данных. Статическое маскирование данных используется для очистки конфиденциальных данных в копиях баз данных SQL Server.|[Статическое маскирование данных](../relational-databases/security/static-data-masking.md) |
 |Использование псевдонимов производной таблицы или представления для графовых запросов MATCH |[Ограничения ребер графа](../relational-databases/tables/graph-edge-constraints.md) |
 | &nbsp; | &nbsp; |
 

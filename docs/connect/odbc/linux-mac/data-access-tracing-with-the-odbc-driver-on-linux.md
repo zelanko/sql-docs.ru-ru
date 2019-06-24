@@ -14,12 +14,12 @@ ms.assetid: 3149173a-588e-47a0-9f50-edb8e9adf5e8
 author: MightyPen
 ms.author: genemi
 manager: jroth
-ms.openlocfilehash: 23d867bba50a42dc55f4095abbfd92129df634be
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: cd71429e5a407e595cc3f65e73e984bfc12280b1
+ms.sourcegitcommit: 5d27fb187006e676d652884f0c1f5133a1bd62b2
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66785868"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67152216"
 ---
 # <a name="data-access-tracing-with-the-odbc-driver-on-linux-and-macos"></a>Трассировка доступа к данным с помощью драйвера ODBC в Linux и macOS
 
@@ -30,6 +30,7 @@ ms.locfileid: "66785868"
 Для трассировки поведения приложения ODBC, изменить `odbcinst.ini` файла `[ODBC]` раздел для установки значений `Trace=Yes` и `TraceFile` на путь к файлу, который должен содержать трассировки выходные данные; например:
 
 ```ini
+[ODBC]
 Trace=Yes
 TraceFile=/home/myappuser/odbctrace.log
 ```

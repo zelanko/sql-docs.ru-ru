@@ -36,11 +36,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 4afc59a5901497fc3112cff3a06bbe20dd3ce04d
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334811"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62467003"
 ---
 # <a name="contains-transact-sql"></a>CONTAINS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -143,7 +143,7 @@ CONTAINS (
   
 ## <a name="arguments"></a>Аргументы  
  *column_name*  
- Имя столбца с полнотекстовым индексом в таблице, указанной в предложении FROM. Столбцы должны иметь тип **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary** или **varbinary(max)**.  
+ Имя столбца с полнотекстовым индексом в таблице, указанной в предложении FROM. Столбцы должны иметь тип **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary** или **varbinary(max)** .  
   
  *column_list*  
  Задает несколько столбцов, разделенных запятыми. *column_list* должен быть заключен в скобки. Если задан аргумент *language_term*, то у всех столбцов в *column_list* должен быть одинаковый язык.  
@@ -211,7 +211,7 @@ WHERE CONTAINS(Description, @SearchWord);
 >  Некоторые языки, например в ряде азиатских стран, которые могут содержать фразы, состоящие из одного или нескольких слов без пробелов между ними.  
   
 \<simple_term>  
-Указывает соответствие для точного слова или фразы. Примерами допустимых простых выражений являются "база данных", данные и "Microsoft SQL Server". Фразы должны заключаться в двойные кавычки (""). Слова во фразе должны стоять в таком же порядке, как задано в аргументе *\<contains_search_condition>*, по мере их появления в столбце базы данных. Поиск символов в слове или фразе проводится без учета регистра. Пропускаемые слова (или [стоп-слова](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md), такие как "a", "and" или "the"), содержащиеся в столбцах полнотекстового индекса, не хранятся в полнотекстовом индексе. Если при поиске по одному слову используется слово из числа пропускаемых, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает сообщение об ошибке, в котором говорится, что запрос содержит только пропускаемые слова. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] хранит стандартный список пропускаемых слов в каталоге \Mssql\Binn\FTERef каждого экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+Указывает соответствие для точного слова или фразы. Примерами допустимых простых выражений являются "база данных", данные и "Microsoft SQL Server". Фразы должны заключаться в двойные кавычки (""). Слова во фразе должны стоять в таком же порядке, как задано в аргументе *\<contains_search_condition>* , по мере их появления в столбце базы данных. Поиск символов в слове или фразе проводится без учета регистра. Пропускаемые слова (или [стоп-слова](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md), такие как "a", "and" или "the"), содержащиеся в столбцах полнотекстового индекса, не хранятся в полнотекстовом индексе. Если при поиске по одному слову используется слово из числа пропускаемых, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает сообщение об ошибке, в котором говорится, что запрос содержит только пропускаемые слова. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] хранит стандартный список пропускаемых слов в каталоге \Mssql\Binn\FTERef каждого экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Знаки препинания пропускаются. Поэтому предикат `CONTAINS(testing, "computer failure")` соответствует строке «Where is my computer? Failure to find it would be expensive». Дополнительные сведения о поведении разбиения по словам см. в разделе [Настройка средств разбиения текста на слова и парадигматических модулей и управление ими для поиска](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md).  
   
@@ -313,7 +313,7 @@ CONTAINS(column_name, 'NEAR ((Monday, Tuesday, Wednesday), MAX, TRUE)')
  Указывает на то, что совпадающие строки (возвращенные запросом) соответствуют списку слов и фраз, каждому из которых при необходимости дано взвешенное значение.  
   
  ISABOUT  
- Указывает ключевое слово *\<weighted_term>*.  
+ Указывает ключевое слово *\<weighted_term>* .  
   
  WEIGHT(*weight_value*)  
  Указывает взвешенное значение, которое может принимать значение от 0,0 до 1,0. Каждый компонент в *\<weighted_term>* может включать *weight_value*. *weight_value* — это способ изменения того, как различные части запроса влияют на ранжирующее значение, назначенное каждой строке, удовлетворяющей условию запроса. Параметр WEIGHT не влияет на результаты запросов CONTAINS, но влияет на ранг в запросах [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md).  
@@ -321,7 +321,7 @@ CONTAINS(column_name, 'NEAR ((Monday, Tuesday, Wednesday), MAX, TRUE)')
 > [!NOTE]  
 >  В качестве десятичного разделителя всегда используется точка, независимо от кода локали операционной системы.  
   
- { AND | & } | { AND NOT | &! } | { OR | | }   
+ { AND | & } | { AND NOT | &! } | { OR | | }  
  Задает логическую операцию между двумя условиями поиска на вхождение.  
   
  { AND | & }  

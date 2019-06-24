@@ -19,11 +19,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e746730f0a2da408bc838e9074b9049d748a1682
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326415"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63034266"
 ---
 # <a name="revoke-database-permissions-transact-sql"></a>REVOKE, отмена разрешения на базу данных (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -57,7 +57,7 @@ permission | ALL [ PRIVILEGES ]
   
 ## <a name="arguments"></a>Аргументы  
  *permission*  
- Указывает отзываемое разрешение для базы данных.  Список разрешений см. в подразделе "Примечания" далее в этом разделе.  
+ Указывает отзываемое разрешение для базы данных. Список разрешений см. в подразделе "Примечания" далее в этом разделе.  
   
  ALL  
  Этот параметр не отменяет все возможные разрешения. Отзыв ALL эквивалентен отзыву следующих разрешений: BACKUP DATABASE, BACKUP LOG, CREATE DATABASE, CREATE DEFAULT, CREATE FUNCTION, CREATE PROCEDURE, CREATE RULE, CREATE TABLE и CREATE VIEW.  

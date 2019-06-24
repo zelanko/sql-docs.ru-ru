@@ -13,11 +13,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: eae7dfb2a198cf7cb3b1563f8f5b35c5fbb0b4eb
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409621"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62515991"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>Создание темпоральной таблицы с системным управлением версиями
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ WITH (SYSTEM_VERSIONING = ON)
   
 -   Анонимная таблица журнала автоматически создается в одной схеме с текущей или темпоральной таблицей.  
   
--   Имя анонимной таблицы журнала имеет следующий формат: *MSSQL_TemporalHistoryFor_<ИД_объекта_текущей_темпоральной_таблицы>_[suffix]*. Суффикс является необязательным и добавляется только в том случае, если первая часть имени таблицы не является уникальной.  
+-   Имя анонимной таблицы журнала имеет следующий формат: *MSSQL_TemporalHistoryFor_<ид_объекта_текущей_темпоральной_таблицы>_[суффикс]* . Суффикс является необязательным и добавляется только в том случае, если первая часть имени таблицы не является уникальной.  
   
 -   Таблица журнала создается как таблица rowstore. Если возможно, применяется сжатие PAGE. В противном случае таблица журнала остается без сжатия. Некоторые табличные конфигурации, например "Разреженные столбцы", не разрешают сжатие.  
   

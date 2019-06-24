@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6a92ea4fd7b16715cdea3994d8ab68fa0ef047c4
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510551"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62939048"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>Продвижение часто используемых XML-значений с помощью вычисляемых столбцов
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -80,20 +80,20 @@ WHERE  ISBN = '0-7356-1588-2'
   
 -   Создать триггеры для XML-столбца с целью обслуживания таблиц свойств. В триггерах сделайте что-либо одно из следующего перечисленного ниже.  
   
-    -   Используйте методы типа данных **xml** , такие как **nodes()** и **value()**, для вставки строк в таблицы свойств и их удаления.  
+    -   Используйте методы типа данных **xml** , такие как **nodes()** и **value()** , для вставки строк в таблицы свойств и их удаления.  
   
     -   Создайте в среде CLR потоковые возвращающие табличное значение функции для вставки строк в таблицы свойств и их удаления.  
   
     -   Напишите запросы, осуществляющие основанный на SQL доступ к таблицам свойств и основанный на XML доступ к XML-столбцу базовой таблицы, соединяя таблицы с использованием их первичного ключа.  
   
-### <a name="example-create-a-property-table"></a>Пример создание таблицы свойств  
+### <a name="example-create-a-property-table"></a>Пример Создание таблицы свойств  
  Предположим, что требуется выполнить продвижение свойства, представляющего имена авторов. У книги может быть несколько авторов, поэтому данное свойство является многозначным. Каждое имя хранится в отдельной строке таблицы свойств. Первичный ключ базовой таблицы дублируется в таблице свойств ради обратного соединения таблиц.  
   
 ```  
 create table tblPropAuthor (propPK int, propAuthor varchar(max))  
 ```  
   
-### <a name="example-create-a-user-defined-function-to-generate-a-rowset-from-an-xml-instance"></a>Пример создание пользовательской функции для создания набора строк на основе экземпляра XML  
+### <a name="example-create-a-user-defined-function-to-generate-a-rowset-from-an-xml-instance"></a>Пример Создание пользовательской функции для создания набора строк на основе экземпляра XML  
  Следующая возвращающая табличное значение функция, udf_XML2Table, принимает значение первичного ключа и экземпляр XML. Она извлекает имена всех авторов из элемента <`book`> и возвращает набор строк, состоящий из пар (первичный ключ / имя).  
   
 ```  
@@ -109,7 +109,7 @@ begin
 end  
 ```  
   
-### <a name="example-create-triggers-to-populate-a-property-table"></a>Пример создание триггеров для заполнения таблицы свойств  
+### <a name="example-create-triggers-to-populate-a-property-table"></a>Пример Создание триггеров для заполнения таблицы свойств  
  Триггер вставки вставляет строки в таблицу свойств:  
   
 ```  
@@ -156,7 +156,7 @@ begin
 end  
 ```  
   
-### <a name="example-find-xml-instances-whose-authors-have-the-same-first-name"></a>Пример поиск экземпляров XML, включающих авторов с именем «David»  
+### <a name="example-find-xml-instances-whose-authors-have-the-same-first-name"></a>Пример Поиск экземпляров XML, включающих авторов с именем "David"  
  Можно составить такой запрос для XML-столбца или найти в таблице свойств записи с именами David и выполнить обратное соединение с базовой таблицей для возврата экземпляра XML. Пример:  
   
 ```  
@@ -165,7 +165,7 @@ FROM     T JOIN tblPropAuthor ON T.pk = tblPropAuthor.propPK
 WHERE    tblPropAuthor.propAuthor = 'David'  
 ```  
   
-### <a name="example-solution-using-the-clr-streaming-table-valued-function"></a>Пример решение, основанное на использовании потоковой возвращающей табличное значение функции CLR  
+### <a name="example-solution-using-the-clr-streaming-table-valued-function"></a>Пример Решение, основанное на использовании потоковой функции CLR с табличным значением  
  Данное решение состоит из следующих шагов:  
   
 1.  определение CLR-класса SqlReaderBase, реализующего интерфейс ISqlReader и формирующего потоковый возвращающий табличное значение выход путем применения выражения пути к экземпляру XML;  

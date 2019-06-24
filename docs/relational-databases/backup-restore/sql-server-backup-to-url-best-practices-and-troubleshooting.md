@@ -12,11 +12,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b74e4137ebb076b1cbea37ecaf3e1ae3c26f26f6
-ms.sourcegitcommit: d765563ccd03f299544bac233bc35f9b1df3fd47
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58434485"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62516152"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>Резервное копирование SQL Server на URL-адрес — рекомендации и устранение неполадок
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -115,7 +115,7 @@ ms.locfileid: "58434485"
   
         Чтобы устранить эту ошибку, выдайте повторно инструкцию **RESTORE** и укажите в ней значение **BLOCKSIZE = 65536**.  
   
--   Ошибка во время резервного копирования из-за больших двоичных объектов с активной арендой: Сбой операции резервного копирования может привести к созданию больших двоичных объектов с активными арендами.  
+-   Ошибка во время резервного копирования из-за больших двоичных объектов с активной арендой: сбой операции резервного копирования может привести к созданию больших двоичных объектов с активными арендами.  
   
      Если эта инструкция резервного копирования повторяется, то операция резервного копирования может завершиться со следующей ошибкой:  
   

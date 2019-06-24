@@ -2,7 +2,7 @@
 title: Оценка предприятия и объединение отчетов с оценкой (SQL Server) | Документация Майкрософт
 description: Узнайте, как использовать DMA для оценки предприятия и объединение отчетов с оценкой перед обновлением SQL Server или переход на базу данных SQL Azure.
 ms.custom: ''
-ms.date: 03/19/2019
+ms.date: 06/21/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 manager: jroth
-ms.openlocfilehash: f9ca00c2390ef0a03369ac21cfe02fcf7ed01392
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0021e5851627e156addb86fa1c136d78d3be2228
+ms.sourcegitcommit: 3f2936e727cf8e63f38e5f77b33442993ee99890
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794375"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67313838"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Оценка предприятия и объединять оценки с помощью DMA
 
@@ -30,22 +30,24 @@ ms.locfileid: "66794375"
 
 - Назначьте средства компьютер в сети, из которого будет инициироваться DMA. Убедитесь, что этот компьютер может подключиться к используемой SQL Server.
 - Скачайте и установите:
-    - [Помощник по миграции данных](https://www.microsoft.com/download/details.aspx?id=53595) v3.6 или более поздней версии.
-    - [PowerShell](https://aka.ms/wmf5download) версии 5.0 или более поздней версии.
-    - [.NET framework](https://www.microsoft.com/download/details.aspx?id=30653) версии 4.5 или более поздней версии.
-    - [SSMS](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 17.0 или более поздней версии.
-    - [PowerBI desktop](https://docs.microsoft.com/power-bi/desktop-get-the-desktop).
-    - [Модули Azure PowerShell](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.0.0)
+  - [Помощник по миграции данных](https://www.microsoft.com/download/details.aspx?id=53595) v3.6 или более поздней версии.
+  - [PowerShell](https://aka.ms/wmf5download) версии 5.0 или более поздней версии.
+  - [.NET framework](https://www.microsoft.com/download/details.aspx?id=30653) версии 4.5 или более поздней версии.
+  - [SSMS](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 17.0 или более поздней версии.
+  - [Power BI desktop](https://docs.microsoft.com/power-bi/desktop-get-the-desktop).
+  - [Модули Azure PowerShell](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.0.0)
 - Загрузите и извлеките:
-    - [DMA отчеты Power BI шаблона](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/2/PowerBI-Reports.zip).
-    - [LoadWarehouse скрипт](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/1/LoadWarehouse1.zip).
+  - [DMA отчеты Power BI шаблона](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/2/PowerBI-Reports.zip).
+  - [LoadWarehouse скрипт](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/1/LoadWarehouse1.zip).
 
 ## <a name="loading-the-powershell-modules"></a>Загрузка модулей PowerShell
+
 Сохранение модулей PowerShell в каталог modules PowerShell позволяет вызывать модули без необходимости загружать их явно перед использованием.
 
 Чтобы загрузить модули, выполните следующие действия:
+
 1. Перейдите к C:\Program Files\WindowsPowerShell\Modules и создайте папку с именем **DataMigrationAssistant**.
-2. Откройте [модули PowerShell](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/3/PowerShell-Modules2.zip), а затем сохраните их в созданную папку.
+2. Откройте [модули PowerShell](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/4/PowerShell-Modules2.zip), а затем сохраните их в созданную папку.
 
       ![Модули PowerShell](../dma/media//dma-consolidatereports/dma-powershell-modules.png)
 
@@ -64,9 +66,11 @@ ms.locfileid: "66794375"
     PowerShell должен загружаться эти модули автоматически при запуске нового сеанса PowerShell.
 
 ## <a name="create-inventory"></a> Создание инвентаризации серверов SQL Server
+
 Прежде чем запустить сценарий PowerShell для оценки серверов SQL Server, необходимо создать перечень серверов SQL Server, который вы хотите оценить.
 
 Этот инвентаризации может находиться в одном из двух форм:
+
 - Excel CSV-файла
 - Таблицы SQL Server
 
@@ -79,7 +83,7 @@ ms.locfileid: "66794375"
 
 
 При использовании CSV-файл для импорта данных, убедитесь, существует только два столбца данных — **имя экземпляра** и **имя базы данных**, и что у столбцов нет строки заголовка.
- 
+
  ![содержимое файла CSV](../dma/media//dma-consolidatereports/dma-csv-file-contents.png)
 
 ### <a name="if-using-a-sql-server-table"></a>При использовании таблицы SQL Server
@@ -88,6 +92,7 @@ ms.locfileid: "66794375"
 > Для экземпляров по умолчанию присвоено имя экземпляра MSSQLServer.
 
 Создать базу данных с именем **EstateInventory** и таблица с именем **DatabaseInventory**. Может иметь любое количество столбцов, таблица, содержащая эти данные инвентаризации, до тех пор, пока существуют следующие четыре столбца:
+
 - ServerName
 - InstanceName
 - DatabaseName
@@ -102,6 +107,7 @@ ms.locfileid: "66794375"
 Имейте в виду, что в зависимости от количества объектов и их сложности, оценка может занять слишком долго (часов +), поэтому разумно отделить оценки на управляемые фрагменты.
 
 ## <a name="running-a-scaled-assessment"></a>Выполнение масштабированное оценки
+
 После загрузки модули PowerShell в каталог modules и проведения инвентаризации, необходимо провести оценку, масштабируемой, откройте PowerShell и выполните функцию dmaDataCollector.
  
   ![функция вхождений dmaDataCollector](../dma/media//dma-consolidatereports/dma-dmaDataCollector-function-listing.png)
@@ -144,6 +150,7 @@ ms.locfileid: "66794375"
 Функция dmaProcessor обычно занимает несколько секунд для обработки одного файла.
 
 ## <a name="loading-the-data-warehouse"></a>Загрузка хранилища данных
+
 После завершения обработки файлов оценки dmaProcessor данные будут загружены в таблице ReportData базы данных DMAReporting. На этом этапе необходимо загрузить в хранилище данных.
 
 1. Используйте сценарий LoadWarehouse для заполнения отсутствующих значений в измерениях.
@@ -155,6 +162,7 @@ ms.locfileid: "66794375"
       ![Загрузить содержимое LoadWarehouse](../dma/media//dma-consolidatereports/dma-LoadWarehouse-loaded.png)
 
 ## <a name="set-your-database-owners"></a>Задайте ваши владельцы базы данных
+
 Хотя это не обязательно, чтобы извлечь максимальную пользу из отчетов, рекомендуется установить владельцы базы данных **dimDBOwner** измерения, а затем обновите **DBOwnerKey** в  **FactAssessment** таблицы.  Этот процесс позволит создания срезов и фильтрации отчета Power BI, в зависимости от конкретной базы данных владельцы.
 
 Сценарий LoadWarehouse может использоваться для предоставления простых инструкций TSQL для задания владельцы базы данных.
@@ -176,7 +184,9 @@ ms.locfileid: "66794375"
    > Если вы не видите данных, которые вы ожидали, попробуйте изменить active закладки.  Дополнительные сведения см. в разделе подробно в следующем разделе.
 
 ## <a name="working-with-dma-reports"></a>Работа с отчетами DMA
+
 Для работы с отчетами DMA используйте закладки и срезы для фильтрации по:
+
 - Оценка типов (база данных SQL Azure, Azure SQL MI, SQL на локальной) 
 - Имя экземпляра
 - Имя базы данных
@@ -186,11 +196,12 @@ ms.locfileid: "66794375"
 
 ![DMA отчет закладки и фильтры](../dma/media//dma-consolidatereports/dma-report-bookmarks-filters.png)
 
-Это позволяет колонку следующего вида:
+Выбирая эту закладку фильтров позволяет колонку следующего вида:
 
 ![Колонка DMA представлений отчетов](../dma/media//dma-consolidatereports/dma-report-views-blade.png)
 
 Закладки можно использовать для переключения контекста отчетов между:
+
 - Оценок облака Azure SQL DB
 - Azure SQL MI cloud оценок
 - В локальной оценок
@@ -201,10 +212,11 @@ ms.locfileid: "66794375"
 
 ![Кнопка "Назад" DMA представлений отчетов](../dma/media//dma-consolidatereports/dma-report-bookmarks-back.png)
 
-Есть приглашение в левом нижнем углу страницы отчета для отображения, применяется ли в настоящее время фильтр на любой из следующих:
-* FactAssessment — InstanceName
-* FactAssessment — имя базы данных
-* dimDBOwner - DBOwner
+Есть приглашение в левом нижнем углу страницы отчета для отображения, применяется ли в настоящее время фильтр на любой из следующих элементов:
+
+- FactAssessment — InstanceName
+- FactAssessment — имя базы данных
+- dimDBOwner - DBOwner
 
 ![Применен фильтр строки](../dma/media//dma-consolidatereports/dma-filter-applied-prompt.png)
 
@@ -212,6 +224,7 @@ ms.locfileid: "66794375"
 > Если только выполнить оценку базы данных SQL Azure, заполняются только отчеты в облаке. И наоборот если только выполнить оценку в локальной, заполняются только отчеты на локальном. Тем не менее если выполнить приложение Azure и локальной оценку, а затем загрузки обоих оценок в хранилище, можно переключаться между облачной и локальной отчеты с помощью клавиши CTRL значок.
 
 ## <a name="reports-visuals"></a>Визуальные элементы отчетов
+
 Отображаемые сведения в отчетах Power BI отображается в следующих разделах.
 
 ### <a name="readiness-"></a>% Готовности
@@ -231,6 +244,7 @@ ms.locfileid: "66794375"
   ![Контейнер готовности DMA](../dma/media//dma-consolidatereports/dma-readiness-bucket.png)
 
 Этот визуальный элемент приведена разбивка этих баз данных, в следующих ресурсах готовности:
+
 - 100% ГОТОВНОСТИ
 - ВСЕ ГОТОВО ДЛЯ 75-99%
 - ВСЕ ГОТОВО ДЛЯ 50-75%
@@ -240,13 +254,14 @@ ms.locfileid: "66794375"
  
   ![Проблемы DMA WordCloud](../dma/media//dma-consolidatereports/dma-issues-word-cloud.png)
 
-Этот визуальный элемент показаны проблемы, которые в данный момент выполняются в рамках в контексте выделения (все, экземпляр базы данных [кратными]). Чем больше отображается слово на экран, тем больше число проблем в этой категории. При наведении указателя мыши слово показывает количество возникающих в этой категории.
+Этот визуальный элемент показаны проблемы, которые в данный момент выполняются в рамках в контексте выделения (все, экземпляр базы данных [кратными]). Чем больше слово появляется на экране, тем больше число проблем в этой категории. При наведении указателя мыши слово показывает количество возникающих в этой категории.
 
 ### <a name="database-readiness"></a>Готовность к базе данных
 
   ![Отчет о готовности базы данных DMA](../dma/media//dma-consolidatereports/dma-database-readiness-report.png)
 
 В этом разделе находится в основной отчет, показывающий готовность базы-данных экземпляра. Этот отчет содержит иерархию детализации:
+
 - База_данных_экземпляра
 - ChangeCategory
 - Заголовок
@@ -270,4 +285,5 @@ ms.locfileid: "66794375"
   ![Планирование обновлений DMA параметры фильтра отчета](../dma/media//dma-consolidatereports/dma-remediation-plan-report-filter-options.png)
 
 ### <a name="script-disclaimer"></a>Заявление об отказе скрипта
+
 *Примеры сценариев, приведенные в этой статье не поддерживаются никакими Microsoft стандартными программами поддержки и обслуживания. Все скрипты предоставляются как есть без каких-либо гарантий. Корпорация Майкрософт не предоставляет все подразумеваемые гарантии, включая, без ограничений, любые подразумеваемые гарантии товарной пригодности или пригодности для определенной цели. Весь риск, возникающие в результате использования или функционирования примеры сценариев и документации, остается с вами. Не Майкрософт, ее автора или всех пользователей, в противном случае при создании, производства и доставки сценариев несут ответственность за весь ущебр ни при каких обстоятельствах (включая без ограничения, потерю упущенную, перерыв, потере бизнес-информации, или других упущенную потери) возникающие в результате использования или невозможности использовать примеры сценариев или документации, даже если корпорация Майкрософт знала о возможности таких убытков.  Поиск разрешения, прежде чем повторно записывающие эти сценарии на другие сайты/репозиториев и блоги.*

@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ea3c26affaac50e791a9d18d68911850a1ac53f6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688622"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62797167"
 ---
 # <a name="mssqlserver7936"></a>MSSQLSERVER_7936
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47688622"
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
 |Символическое имя|DBCC2_FS_ORPHANED_COLUMN_DIRECTORY|  
-|Текст сообщения|Ошибка таблицы: существует каталог FILESTREAM для столбца с идентификатором C_ID объекта с идентификатором O_ID, идентификатором индекса I_ID, идентификатором секции PN_ID, однако этот столбец имеет тип, отличный от FILESTREAM.|  
+|Текст сообщения|Ошибка таблицы: каталог Filestream существует для идентификатора столбца C_ID, идентификатора объекта O_ID с идентификатором индекса I_ID и идентификатором секции PN_ID, однако данный столбец не является столбцом Filestream.|  
   
 ## <a name="explanation"></a>Объяснение  
 Во время выполнения команды DBCC CHECKDB для указанного столбца был найден каталог файловых потоков, но этот столбец не является столбцом **FILESTREAM**.  

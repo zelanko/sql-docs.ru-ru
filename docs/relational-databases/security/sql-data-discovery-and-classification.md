@@ -12,12 +12,12 @@ ms.date: 02/13/2018
 ms.author: giladm
 author: giladm
 manager: shaik
-ms.openlocfilehash: 18495f81289981d4ce5a72ac943150bfea4c4f3d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e3df41240791d01beb1214f3f5b150bdba618420
+ms.sourcegitcommit: 757cda42bce65721a6079fe403add874f9afb31e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539132"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67316689"
 ---
 # <a name="sql-data-discovery-and-classification"></a>Обнаружение и классификация данных SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,12 +43,11 @@ ms.locfileid: "52539132"
 * метки — основные атрибуты классификации, которые служат для определения уровня конфиденциальности данных, хранящихся в столбце;  
 * типы сведений — предоставляют более подробные сведения о типе данных, хранящихся в столбце.
 
-<br>
 **Классификация базы данных SQL Server**
 
 1. В SQL Server Management Studio (SSMS) подключитесь к серверу SQL Server.
 
-2. В обозревателе объектов SSMS щелкните правой кнопкой мыши базу данных, которую необходимо классифицировать, и выберите пункты **Задачи** > **Классифицировать данные...**.
+2. В обозревателе объектов SSMS щелкните правой кнопкой мыши базу данных, которую необходимо классифицировать, и выберите пункты **Задачи** > **Классифицировать данные...** .
 
     ![Область навигации][1]
 

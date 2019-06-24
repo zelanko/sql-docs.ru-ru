@@ -14,18 +14,18 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a9e698b750e37e595592299e9b7e41a60e868d79
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640298"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62694303"
 ---
 # <a name="performance-statistics-event-class"></a>Performance Statistics, класс событий
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Класс событий Performance Statistics можно использовать для наблюдения за производительностью выполняемых запросов, хранимых процедур и триггеров. Каждый из шести подклассов событий обозначает событие, относящееся ко времени существования запросов, хранимых процедур и триггеров в системе. Сочетая эти подклассы событий и связанные с ними динамические административные представления sys.dm_exec_query_stats, sys.dm_exec_procedure_stats и sys.dm_exec_trigger_stats, можно восстановить историю производительности любого заданного запроса, хранимой процедуры или триггера.  
   
 ## <a name="performance-statistics-event-class-data-columns"></a>Столбцы данных класса событий Performance Statistics  
- Следующие таблицы описывают столбцы данных класса событий, связанные с каждым из следующих подклассов событий: EventSubClass 0, EventSubClass 1,EventSubClass 2,EventSubClass 3, EventSubClass 4 и EventSubClass 5.  
+ Следующие таблицы описывают столбцы данных класса событий, связанные с каждым из следующих подклассов событий: EventSubClass 0, EventSubClass 1, EventSubClass 2, EventSubClass 3, EventSubClass 4 и EventSubClass 5.  
   
 ### <a name="eventsubclass-0"></a>EventSubClass 0  
   

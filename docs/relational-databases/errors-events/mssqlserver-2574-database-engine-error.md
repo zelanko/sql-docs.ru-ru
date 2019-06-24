@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 453c1a2aad80b9aa607a9d948660a78b5195c314
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720912"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63045230"
 ---
 # <a name="mssqlserver2574"></a>MSSQLSERVER_2574
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47720912"
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
 |Символическое имя|DBCC_EMPTY_INDEX_TREE_LEVEL_PAGE|  
-|Текст сообщения|Ошибка в таблице. Страница P_ID пуста в объекте с идентификатором O_ID, идентификатором индекса I_ID, идентификатором секции PN_ID, идентификатором единицы распределения A_ID (тип TYPE). Это недопустимо на LEVEL уровне сбалансированного дерева.|  
+|Текст сообщения|Ошибка таблицы: страница P_ID пуста в объекте с идентификатором O_ID, идентификатором индекса I_ID, идентификатором секции PN_ID, идентификатором единицы распределения A_ID (тип TYPE). Это недопустимо на LEVEL уровне сбалансированного дерева.|  
   
 ## <a name="explanation"></a>Объяснение  
 Страница сбалансированного дерева над конечным уровнем указанного индекса пуста, следовательно, не содержит строк. В [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] такое поведение возможно для страниц конечного уровня, но невозможно на уровнях дерева.  

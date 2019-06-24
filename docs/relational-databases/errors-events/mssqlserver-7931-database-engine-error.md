@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 330ea355feb3d200173a727c8308ac66cddb6591
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729332"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62797214"
 ---
 # <a name="mssqlserver7931"></a>MSSQLSERVER_7931
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47729332"
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
 |Символическое имя|DBCC2_FS_DOUBLE_ROWSET_ACTUAL_FACT|  
-|Текст сообщения|Ошибка базы данных. Каталог FILESTREAM с идентификатором F_ID для секции был обнаружен дважды.|  
+|Текст сообщения|Ошибка базы данных: каталог файловых потоков с идентификатором "идентификатор" для секции был обнаружен дважды.|  
   
 ## <a name="explanation"></a>Объяснение  
 В метаданных обнаружен такой же идентификатор секции для каталога файловых потоков.  

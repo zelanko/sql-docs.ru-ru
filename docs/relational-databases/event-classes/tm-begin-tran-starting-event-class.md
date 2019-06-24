@@ -1,5 +1,5 @@
 ---
-title: 'Класс событий TM: Begin Tran Starting | Документация Майкрософт'
+title: TM. Класс события Begin Tran Starting | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,17 +14,17 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4a54b50078edc7b15e13e2567cd7231ed8ea9b8d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735012"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62661599"
 ---
-# <a name="tm-begin-tran-starting-event-class"></a>Класс событий TM: Begin Tran Starting
+# <a name="tm-begin-tran-starting-event-class"></a>TM. Класс события Begin Tran Starting
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Класс событий TM: Begin Tran Starting показывает начало запроса BEGIN TRANSACTION. Запрос отправляется клиентом через интерфейс управления транзакциями.  
+  События класса TM: Begin Tran Starting показывают начало запроса BEGIN TRANSACTION. Запрос отправляется клиентом через интерфейс управления транзакциями.  
   
-## <a name="tm-begin-tran-starting-event-class-data-columns"></a>Столбцы данных класса событий TM: Begin Tran Starting  
+## <a name="tm-begin-tran-starting-event-class-data-columns"></a>TM. Столбцы данных класса событий Begin Tran Starting  
   
 |Имя столбца данных|Тип данных|Описание|Идентификатор столбца|Фильтруемый|  
 |----------------------|---------------|-----------------|---------------|----------------|  

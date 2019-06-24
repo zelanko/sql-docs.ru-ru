@@ -16,12 +16,12 @@ ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b1b43a2c739de3ae0f23871c7bc023b3f215b4ce
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 4c436c6c9b0c20d99e5de168aa375f66f2e76999
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126645"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62665511"
 ---
 # <a name="replication-distribution-agent"></a>Агент распространения репликации
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -92,14 +92,14 @@ distrib [-?]
  **-?**  
  Выводит список всех доступных параметров.  
   
- **-Publisher** _server_name_[**\\**_instance_name_]  
- Имя издателя. Укажите *server_name* , чтобы использовать экземпляр сервера [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию. Укажите _имя_сервера_**\\**_имя_экземпляра_ для именованного экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на этом сервере.  
+ **-Publisher** _server_name_[ **\\** _instance_name_]  
+ Имя издателя. Укажите *server_name* , чтобы использовать экземпляр сервера [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию. Укажите _имя_сервера_ **\\** _имя_экземпляра_ для именованного экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на этом сервере.  
   
  **-PublisherDB** _publisher_database_  
  Имя базы данных издателя.  
   
- **-Subscriber** _server_name_[**\\**_instance_name_]  
- Имя подписчика. Укажите *server_name* , чтобы использовать экземпляр сервера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию. Укажите _имя_сервера_**\\**_имя_экземпляра_ для именованного экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на этом сервере.  
+ **-Subscriber** _server_name_[ **\\** _instance_name_]  
+ Имя подписчика. Укажите *server_name* , чтобы использовать экземпляр сервера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию. Укажите _имя_сервера_ **\\** _имя_экземпляра_ для именованного экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на этом сервере.  
   
  **-SubscriberDB** _subscriber_database_  
  Имя базы данных подписчика.  
@@ -111,10 +111,10 @@ distrib [-?]
  Число строк для отправки при операции массового копирования. При выполнении операции **bcp in** размер пакета равен числу строк для отправки на сервер в одной транзакции, а также числу строк, которые необходимо отправить до того, как агент распространителя зарегистрирует сообщение о ходе выполнения от программы **bcp** . При выполнении операции **bcp out** используются пакеты фиксированного размера ( **1000** ).  
   
  **-CommitBatchSize** _commit_batch_size_  
- Число транзакций, отправляемых подписчику перед выполнением инструкции COMMIT. Значение по умолчанию — 100.  
+ Число транзакций, отправляемых подписчику перед выполнением инструкции COMMIT. Значение по умолчанию равно 100, а максимальное — 10 000.
   
  **-CommitBatchThreshold**  _commit_batch_threshold_  
- Число команд репликации, отправляемых подписчику перед выполнением инструкции COMMIT. Значение по умолчанию — 1000.  
+ Число команд репликации, отправляемых подписчику перед выполнением инструкции COMMIT. Значение по умолчанию равно 1000, а максимальное — 10 000. 
   
  **-Continuous**  
  Определяет, будет ли агент постоянно опрашивать реплицируемые транзакции. Если параметр задан, то даже при отсутствии ожидающих транзакций агент опрашивает реплицируемые транзакции с источника через интервалы опроса.  
@@ -233,7 +233,7 @@ distrib [-?]
  **-QuotedIdentifier** _quoted_identifier_  
  Указывает символ, применяемый для идентификаторов, заключенных в кавычки. Первый символ значения указывает значение, используемое агентом распространителя. Если параметр **QuotedIdentifier** указан без значения, то агент распространителя использует пробел. Если параметр **QuotedIdentifier** не указан, то агент распространителя использует заключенный в кавычки идентификатор, поддерживаемый подписчиком.  
   
- **-SkipErrors** _native_error_id_ [**:**_...n_]  
+ **-SkipErrors** _native_error_id_ [ **:** _...n_]  
  Список с разделителями-двоеточиями, перечисляющий коды ошибок, которые этот агент должен пропускать.  
   
  **-SubscriberDatabasePath** _subscriber_database_path_  

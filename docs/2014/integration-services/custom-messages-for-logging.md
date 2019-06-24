@@ -15,12 +15,12 @@ ms.assetid: 3c74bba9-02b7-4bf5-bad5-19278b680730
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 47a14ad3baf1660b2b60cd6b96f2ef51f1e5d727
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a557d3dfddf5989c580b0ba78f9b5d930c548617
+ms.sourcegitcommit: 757cda42bce65721a6079fe403add874f9afb31e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66060087"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67316667"
 ---
 # <a name="custom-messages-for-logging"></a>Пользовательские сообщения для ведения журнала
   Службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] предусматривают большой набор пользовательских событий, предполагающих добавление записей в журнал для пакетов и многих задач. Записывая стандартные события или определенные пользователем сообщения с целью последующего анализа, можно сохранить подробные сведения о процессе выполнения, результатах и проблемах. Например, можно записать, когда начинается и заканчивается массовая вставка, чтобы идентифицировать проблемы с производительностью при выполнении пакета.  
@@ -258,12 +258,8 @@ ms.locfileid: "66060087"
   
 |Запись журнала|Описание|  
 |---------------|-----------------|  
-|`XMLOperation`|Предоставляет сведения об операции, выполняемой задачей|  
-  
-## <a name="related-content"></a>См. также  
- Запись в блоге: [Ведение журнала пользовательских событий для задач служб Integration Services](https://go.microsoft.com/fwlink/?LinkId=150580), на сайте dougbert.com  
+|`XMLOperation`|Предоставляет сведения об операции, выполняемой задачей|   
   
 ## <a name="see-also"></a>См. также  
  [Ведение журналов в службах Integration Services (SSIS)](performance/integration-services-ssis-logging.md)  
-  
   

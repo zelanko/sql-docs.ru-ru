@@ -28,11 +28,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4960dae2aad32a75f612b1b07e4aacdeb6a3d4d9
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55421231"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63026106"
 ---
 # <a name="alter-authorization-transact-sql"></a>ALTER AUTHORIZATION (Transact-SQL)
 
@@ -153,7 +153,7 @@ ALTER AUTHORIZATION ON
  Имя сущности.    
     
  *principal_name* | SCHEMA OWNER    
- Имя субъекта безопасности, который будет являться собственником сущности.  Объекты базы данных должны принадлежать субъекту базы данных; пользователю базы данных или роли.  Объекты сервера (такие как базы данных) должны принадлежать субъекту сервера (имя для входа). Определите **SCHEMA OWNER** в качестве *principal_name*, чтобы показать, что объект должен принадлежать участнику, который владеет схемой объекта.    
+ Имя субъекта безопасности, который будет являться собственником сущности. Объекты базы данных должны принадлежать субъекту базы данных; пользователю базы данных или роли. Объекты сервера (такие как базы данных) должны принадлежать субъекту сервера (имя для входа). Определите **SCHEMA OWNER** в качестве *principal_name*, чтобы показать, что объект должен принадлежать участнику, который владеет схемой объекта.    
     
 ## <a name="remarks"></a>Remarks    
  Инструкция ALTER AUTHORIZATION может использоваться для изменения владельца любой сущности, у которой он есть. Владение содержащимися в базе данных сущностями можно передать любому участнику уровня базы данных. Владение сущностями уровня сервера можно передать только участникам уровня сервера.    
@@ -195,7 +195,7 @@ ALTER AUTHORIZATION ON
 ## <a name="AlterDB"></a> ALTER AUTHORIZATION для баз данных  
 **ПРИМЕНИМО К**: [!INCLUDE[ssSQL15](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
 ### <a name="for-sql-server"></a>Для SQL Server:  
-**Требования к новому владельцу:**   
+**Требования к новому владельцу:**    
 Новый участник-владелец должен быть одним из следующих:  
 
 -   имя входа для проверки подлинности SQL Server;  
@@ -206,7 +206,7 @@ ALTER AUTHORIZATION ON
 Если вы не являетесь членом предопределенной роли сервера **sysadmin**, вам требуется как минимум разрешение TAKE OWNERSHIP для базы данных и разрешение IMPERSONATE для имени входа нового владельца.   
 
 ### <a name="for-azure-sql-database"></a>Для базы данных SQL Azure  
-**Требования к новому владельцу:**   
+**Требования к новому владельцу:**    
 Новый участник-владелец должен быть одним из следующих:  
 
 -   имя входа для проверки подлинности SQL Server;  

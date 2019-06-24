@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4d17541df2e84aec2f16c3d5e5cdd7b17b8d9cd3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838572"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62797095"
 ---
 # <a name="mssqlserver7937"></a>MSSQLSERVER_7937
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47838572"
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
 |Символическое имя|DBCC2_FS_MISSING_COLUMN_DIRECTORY|  
-|Текст сообщения|Ошибка в таблице: не найден каталог Filestream для идентификатора столбца C_ID идентификатора объекта O_ID с идентификатором индекса I_ID и идентификатором секции PN_ID.|  
+|Текст сообщения|Ошибка таблицы: не найден каталог Filestream для идентификатора столбца C_ID идентификатора объекта O_ID с идентификатором индекса I_ID и идентификатором секции PN_ID.|  
   
 ## <a name="explanation"></a>Объяснение  
 Указанный столбец имеется в секции, однако соответствующий каталог FILESTREAM не найден в пространстве данных FILESTREAM.  

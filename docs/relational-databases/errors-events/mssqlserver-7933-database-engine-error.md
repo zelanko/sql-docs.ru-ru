@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 92154266ba63b51b83667ee548fdb2fa9d8472e6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766512"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62805610"
 ---
 # <a name="mssqlserver7933"></a>MSSQLSERVER_7933
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47766512"
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
 |Символическое имя|DBCC2_FS_ORPHANED_ROWSET_DIRECTORY|  
-|Текст сообщения|Ошибка в таблице. Для секции существует каталог FILESTREAM с идентификатором F_ID, однако в базе данных отсутствует соответствующая секция.|  
+|Текст сообщения|Ошибка таблицы: для секции существует каталог файловых потоков с идентификатором F_ID, но в базе данных отсутствует соответствующая секция.|  
   
 ## <a name="explanation"></a>Объяснение  
 При выполнении команды DBCC CHECKDB в пространстве данных FILESTREAM был обнаружен каталог наборов строк, но в базе данных отсутствует соответствующая ему секция.  

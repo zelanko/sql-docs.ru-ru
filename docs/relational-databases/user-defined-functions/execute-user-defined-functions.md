@@ -16,18 +16,18 @@ ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 74a14c0f28b7353a4d09eb531678450f0b26f3fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47774778"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63034744"
 ---
 # <a name="execute-user-defined-functions"></a>Выполнение определяемых пользователем функций
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
   Выполните определяемую пользователем функцию с помощью Transact-SQL.
   
 
-> **Примечание.** Дополнительные сведения см. в разделах, посвященных  [определяемым пользователем функциям](user-defined-functions.md) и [созданию функций (Transact SQL](../../t-sql/statements/create-function-transact-sql.md) . 
+> **Примечание.** Дополнительные сведения см. в разделах, посвященных [определяемым пользователем функциям](user-defined-functions.md) и [созданию функций (Transact SQL](../../t-sql/statements/create-function-transact-sql.md). 
   
  
 ##  <a name="BeforeYouBegin"></a> Перед началом  

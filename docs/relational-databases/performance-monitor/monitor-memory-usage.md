@@ -25,11 +25,11 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 ms.openlocfilehash: 84f05928f5033895e0d6b25a6461231e5a350267
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53379074"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62737978"
 ---
 # <a name="monitor-memory-usage"></a>Наблюдение за использованием памяти
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,11 +56,11 @@ ms.locfileid: "53379074"
   
 -   **Процесс: рабочий набор**  
   
--   **SQL Server: Диспетчер буферов: коэффициент попаданий в буферный кэш**  
+-   **SQL Server: Buffer Manager: коэффициент попаданий в буферный кэш**  
   
--   **SQL Server: Диспетчер буферов: страниц базы данных**  
+-   **SQL Server: Buffer Manager: страниц базы данных**  
   
--   **SQL Server: Диспетчер памяти: общая память сервера (КБ)**  
+-   **SQL Server: Memory Manager: общая память сервера (КБ)**  
   
  Счетчик **WorkingSet** отображает объем памяти, занятый процессом. Если это число постоянно меньше объема памяти, установленного параметрами сервера **min server memory** и **max server memory** , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] настроен для использования слишком большого объема памяти.  
   

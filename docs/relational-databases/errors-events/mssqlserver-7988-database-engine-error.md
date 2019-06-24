@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e6bd546d47bbd78a4b448ed3059605365a9d2d0c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699542"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62797112"
 ---
 # <a name="mssqlserver7988"></a>MSSQLSERVER_7988
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47699542"
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
 |Символическое имя|DBCC2_PRE_CHECKS_CHAIN_LOOP_DETECTED|  
-|Текст сообщения|Предварительная проверка системных таблиц: объект с идентификатором O_ID. Обнаружена циклическая цепочка данных в P_ID. Инструкция проверки прервана из-за непоправимой ошибки.|  
+|Текст сообщения|Предварительная проверка системных таблиц: идентификатор объекта O_ID. Обнаружена циклическая цепочка данных в P_ID. Инструкция проверки прервана из-за непоправимой ошибки.|  
   
 ## <a name="explanation"></a>Объяснение  
 Первый этап работы DBCC CHECKDB заключается в осуществлении примитивных проверок страниц данных важных системных таблиц. Если найдены ошибки, они считаются неисправимыми, поэтому инструкция DBCC CHECKDB немедленно прерывается. На странице *P_ID* обнаружена циклическая связь страниц. Циклическая связь страниц происходит, если указатели следующих страниц с одной из страниц, в конце концов, возвращаются к этой же странице.  

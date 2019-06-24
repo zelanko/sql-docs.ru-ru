@@ -19,11 +19,11 @@ ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e697adb4df3127468e5e74d5e5c4cbbebbae6615
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135804"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62508338"
 ---
 # <a name="validate-replicated-data"></a>Проверка реплицированных данных
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -100,14 +100,14 @@ ms.locfileid: "54135804"
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]   
 7.  Просмотрите результаты проверки в мониторе репликации или в диалоговом окне **Просмотр состояния синхронизации** . Для каждой подписки:   
     1.  Раскройте публикацию и щелкните правой кнопкой мыши подписку, затем выберите **Просмотр состояния синхронизации**.    
-    2.  2. Если агент не запущен, нажмите кнопку **Пуск** в диалоговом окне **Просмотр состояния синхронизации** . В диалоговом окне появятся информационные сообщения о проверке.    
+    2.  2\. Если агент не запущен, нажмите кнопку **Пуск** в диалоговом окне **Просмотр состояния синхронизации** . В диалоговом окне появятся информационные сообщения о проверке.    
      Если нет никаких сообщений, касающихся проверки, значит, агент уже зарегистрировал сообщение ранее. В этом случае просмотрите результаты проверки в мониторе репликации. Дополнительные сведения см. в описании процедур монитора репликации данного раздела.  
 
 ### <a name="using-transact-sql"></a>Использование Transact-SQL
 
 #### <a name="all-articles"></a>Все статьи 
   
-1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_publication_validation (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md). Задайте параметр **@publication** и одно из следующих значений для **@rowcount_only**:  
+1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_publication_validation (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md). Задайте параметр **@publication** и одно из следующих значений для **@rowcount_only** :  
   
     -   **1** — проверка только количества строк (по умолчанию);    
     -   **2** — проверка количества строк и двоичной контрольной суммы.  
@@ -119,7 +119,7 @@ ms.locfileid: "54135804"
   
 #### <a name="single-article"></a>Одна статья  
   
-1.  На издателе в базе данных публикации выполните процедуру [sp_article_validation (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md). Задайте параметр **@publication**, имя статьи в параметре **@article**и одно из следующих значений в параметре **@rowcount_only**:  
+1.  На издателе в базе данных публикации выполните процедуру [sp_article_validation (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md). Задайте параметр **@publication** , имя статьи в параметре **@article** и одно из следующих значений в параметре **@rowcount_only** :  
   
     -   **1** — проверка только количества строк (по умолчанию)    
     -   **2** — проверка количества строк и двоичной контрольной суммы.  
@@ -133,9 +133,9 @@ ms.locfileid: "54135804"
 #### <a name="single-subscriber"></a>Один подписчик 
   
 1.  На издателе в базе данных публикации откройте явную транзакцию с помощью [BEGIN TRANSACTION (Transact-SQL)](../../t-sql/language-elements/begin-transaction-transact-sql.md).    
-2.  На издателе в базе данных публикации выполните процедуру [sp_marksubscriptionvalidation (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql.md). Задайте публикацию в параметре **@publication**, имя подписчика в параметре **@subscriber**и имя базы данных подписки для **@destination_db**.    
+2.  На издателе в базе данных публикации выполните процедуру [sp_marksubscriptionvalidation (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql.md). Задайте публикацию в параметре **@publication** , имя подписчика в параметре **@subscriber** и имя базы данных подписки для **@destination_db** .    
 3.  Повторите шаг 2 для каждой проверяемой подписки (необязательно).    
-4.  На издателе в базе данных публикации выполните процедуру [sp_article_validation (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md). Задайте параметр **@publication**, имя статьи в параметре **@article**и одно из следующих значений в параметре **@rowcount_only**:    
+4.  На издателе в базе данных публикации выполните процедуру [sp_article_validation (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md). Задайте параметр **@publication** , имя статьи в параметре **@article** и одно из следующих значений в параметре **@rowcount_only** :    
     -   **1** — проверка только количества строк (по умолчанию)    
     -   **2** — проверка количества строк и двоичной контрольной суммы.  
   
@@ -161,9 +161,9 @@ ms.locfileid: "54135804"
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]    
 6.  Перейдите на вкладку **Все подписки** .  
 7.  Просмотрите результаты проверки. Для каждой принудительной подписки:    
-    1.  1. Если агент не запущен, щелкните правой кнопкой мыши подписку и выберите **Запустить синхронизацию**.    
+    1.  1\. Если агент не запущен, щелкните правой кнопкой мыши подписку и выберите **Запустить синхронизацию**.    
     2.  Щелкните правой кнопкой мыши подписку, затем выберите **Просмотреть подробности**.   
-    3.  3.Просмотрите сведения на вкладке **Журнал операций от распространителя к подписчику** в текстовом поле **Действия в выбранном сеансе** .  
+    3.  3\.Просмотрите сведения на вкладке **Журнал операций от распространителя к подписчику** в текстовом поле **Действия в выбранном сеансе** .  
   
 ## <a name="for-a-single-subscription-to-a-merge-publication"></a>Для одной подписки на публикацию слиянием
 
@@ -208,12 +208,12 @@ ms.locfileid: "54135804"
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]    
 7.  Перейдите на вкладку **Все подписки** .    
 8.  Просмотрите результаты проверки:    
-    1.  1. Если агент не запущен, щелкните правой кнопкой мыши подписку и выберите **Запустить синхронизацию**.    
+    1.  1\. Если агент не запущен, щелкните правой кнопкой мыши подписку и выберите **Запустить синхронизацию**.    
     2.  Щелкните правой кнопкой мыши подписку, затем выберите **Просмотреть подробности**.    
     3.  Просмотрите сведения на вкладке **Журнал синхронизации** в текстовом поле **Последнее сообщение выбранного сеанса** .  
 
 ### <a name="using-transact-sql"></a>Использование Transact-SQL
-1.  На издателе в базе данных публикации выполните процедуру [sp_validatemergesubscription (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql.md). Задайте параметр **@publication**, имя подписчика в параметре **@subscriber**, имя базы данных подписки в параметре **@subscriber_db**и одно из следующих значений в параметре **@level**:   
+1.  На издателе в базе данных публикации выполните процедуру [sp_validatemergesubscription (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql.md). Задайте параметр **@publication** , имя подписчика в параметре **@subscriber** , имя базы данных подписки в параметре **@subscriber_db** и одно из следующих значений в параметре **@level** :   
     -   **1** — проверка только количества строк.    
     -   **3** — проверка двоичной контрольной суммы.  
   
@@ -235,12 +235,12 @@ ms.locfileid: "54135804"
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]    
 5.  Перейдите на вкладку **Все подписки** .    
 6.  Просмотрите результаты проверки. Для каждой принудительной подписки:    
-    1.  1. Если агент не запущен, щелкните правой кнопкой мыши подписку и выберите **Запустить синхронизацию**.    
+    1.  1\. Если агент не запущен, щелкните правой кнопкой мыши подписку и выберите **Запустить синхронизацию**.    
     2.  Щелкните правой кнопкой мыши подписку, затем выберите **Просмотреть подробности**.    
     3.  Просмотрите сведения на вкладке **Журнал синхронизации** в текстовом поле **Последнее сообщение выбранного сеанса** . 
   
 ### <a name="using-transact-sql"></a>Использование Transact-SQL
-1.  На издателе в базе данных публикации выполните процедуру [sp_validatemergepublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql.md). Задайте параметр **@publication** и одно из следующих значений для **@level**:    
+1.  На издателе в базе данных публикации выполните процедуру [sp_validatemergepublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql.md). Задайте параметр **@publication** и одно из следующих значений для **@level** :    
     -   **1** — проверка только количества строк.   
     -   **3** — проверка двоичной контрольной суммы.  
   

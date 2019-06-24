@@ -13,18 +13,18 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fbb29e8e8f694c76ac7fab7340a3f90d7e5c7ea3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624753"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63047818"
 ---
 # <a name="create-and-access-tables-in-tempdb-from-stored-procedures"></a>Создание таблиц в TempDB и доступ к ним из хранимых процедур
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Создание и обращение к таблицам в базе данных TempDB из скомпилированных в собственном коде хранимых процедур не поддерживается. Вместо этого используйте оптимизированные для памяти таблицы с параметром DURABILITY=SCHEMA_ONLY или табличные типы и переменные. 
 
-Дополнительные сведения об оптимизации для памяти временных таблиц и табличных переменных см. в разделе [Улучшение производительности временной таблицы и табличной переменной с помощью оптимизации для памяти](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md).
+Дополнительные сведения об оптимизации временных таблиц для памяти и табличных переменных см. в разделе: [Улучшение производительности временной таблицы и табличной переменной с помощью оптимизации памяти](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md).
   
   В следующем примере показано, как временную таблицу с тремя столбцами (id, ProductID, Quantity) можно заменить табличной переменной **@OrderQuantityByProduct** типа **dbo.OrderQuantityByProduct**:  
   

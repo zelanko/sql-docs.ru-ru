@@ -11,17 +11,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: de1f8d1a64a7db68780509c27c8ceb219ce0917f
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51695597"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63037275"
 ---
 # <a name="configure-failureconditionlevel-property-settings"></a>Настройка параметров свойства FailureConditionLevel
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Свойство FailureConditionLevel служит для задания для экземпляра отказоустойчивого кластера FCI в группе AlwaysOn условий отработки отказа или перезапуска. Изменения значения этого свойства вступают в силу немедленно, без перезапуска службы отказоустойчивого кластера Windows Server или ресурса отказоустойчивого кластера SQL Server.  
   
--   **Перед началом работы**  [параметры свойства FailureConditionLevel](#Restrictions), [безопасность](#Security)  
+-   **Перед началом работы**  [Параметры свойства FailureConditionLevel](#Restrictions), [Безопасность](#Security)  
   
 -   **To configure the FailureConditionLevel property settings using,** [PowerShell](#PowerShellProcedure), [Failover Cluster Manager](#WSFC), [Transact-SQL](#TsqlProcedure)  
   

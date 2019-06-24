@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 58b54c71171e2d05ac57de0d9851ceb63f88a71e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821112"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63045336"
 ---
 # <a name="mssqlserver2537"></a>MSSQLSERVER_2537
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47821112"
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
 |Символическое имя|DBCC_RECORD_CHECK_FAILED|  
-|Текст сообщения|Ошибка таблицы: Идентификатор объекта O_ID, идентификатор индекса I_ID, идентификатор секции PN_ID, идентификатор единицы распределения A_ID (тип TYPE), страница P_ID, строка ROW_ID. Проверка записи (CHECK_TEXT) завершилась неудачно. Значениями являются VALUE1 и VALUE2.|  
+|Текст сообщения|Ошибка таблицы: идентификатор объекта O_ID, идентификатор индекса I_ID, идентификатор секции PN_ID, идентификатор единицы распределения A_ID (тип TYPE), страница P_ID, строка ROW_ID. Проверка записи (CHECK_TEXT) завершилась неудачно. Значениями являются VALUE1 и VALUE2.|  
   
 ## <a name="explanation"></a>Объяснение  
 В строке ROW_ID (или в одном из столбцов в строке) окончилась неудачей проверка или нарушено условие, описанное значением CHECK_TEXT.  

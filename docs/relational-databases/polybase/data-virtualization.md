@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 45cde8d0e42c2e85238bf3d42fc8835584083d27
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: a64e02ecdb3f8a8321e0a625a3788228df0890fc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510981"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "64775187"
 ---
 # <a name="use-the-external-table-wizard-with-relational-data-sources"></a>Используйте мастер создания внешней таблицы с реляционными источниками данных
 
@@ -23,7 +23,7 @@ ms.locfileid: "58510981"
 
 ## <a name="start-the-external-table-wizard"></a>Запуск мастера внешних таблиц
 
-Подключитесь к главному экземпляру, используя IP-адрес/номер порта (31433), полученные по окончании скрипта развертывания. Разверните узел **Базы данных** в обозревателе объектов. Затем выберите одну из баз данных, где необходимо виртуализировать данные из существующего экземпляра SQL Server. Щелкните правой кнопкой мыши базу данных и выберите **Создать внешнюю таблицу**, чтобы запустить мастер виртуализации данных. Вы можете также запустить его в палитре команд. Нажмите клавиши CTRL+SHIFT+P в Windows или CMD+SHIFT+P на Mac.
+Подключитесь к основному экземпляру по IP-адресу и номеру порта конечной точки **sql-server-master**, получив их с помощью команды [**mssqlctl cluster endpoints list**](../../big-data-cluster/deployment-guidance.md#endpoints). Разверните узел **Базы данных** в обозревателе объектов. Затем выберите одну из баз данных, где необходимо виртуализировать данные из существующего экземпляра SQL Server. Щелкните правой кнопкой мыши базу данных и выберите **Создать внешнюю таблицу**, чтобы запустить мастер виртуализации данных. Вы можете также запустить его в палитре команд. Нажмите клавиши CTRL+SHIFT+P в Windows или CMD+SHIFT+P на Mac.
 
 ![Мастер виртуализации данных](media/data-virtualization/virtualize-data-wizard.png)
 ## <a name="select-a-data-source"></a>Выбор источника данных

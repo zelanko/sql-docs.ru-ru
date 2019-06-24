@@ -21,11 +21,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 88f175d5d3658a61964ab7d7daba1be88438e2cd
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130574"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62639777"
 ---
 # <a name="advanced-merge-replication---conflict-detection-and-resolution"></a>Подробнее о репликации слиянием — обнаружение и разрешение конфликтов
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -112,7 +112,7 @@ ms.locfileid: "54130574"
   
  Указание типа подписки на публикацию слиянием и приоритета устранения конфликтов см. в разделе  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. [Указание типа подписки слиянием и приоритета устранения конфликтов (SQL Server Management Studio)](../../../relational-databases/replication/specify-a-merge-subscription-type-and-conflict-resolution-priority.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Указание типа подписки слиянием и приоритета устранения конфликтов (SQL Server Management Studio)](../../../relational-databases/replication/specify-a-merge-subscription-type-and-conflict-resolution-priority.md)  
   
 -   Программирование репликации с помощью [!INCLUDE[tsql](../../../includes/tsql-md.md)] и объектов RMO: [Создание подписки по запросу](../../../relational-databases/replication/create-a-pull-subscription.md) и [Создание принудительной подписки](../../../relational-databases/replication/create-a-push-subscription.md).  
   
@@ -127,7 +127,7 @@ ms.locfileid: "54130574"
   
  Средство просмотра конфликтов отображает информацию из трех системных таблиц:  
   
--   При репликации для каждой таблицы в статье слияния создается таблица конфликтов с именем следующего вида: **MSmerge_conflict_\<имя_публикации>_\<имя_статьи>**.  
+-   При репликации для каждой таблицы в статье слияния создается таблица конфликтов с именем следующего вида: **MSmerge_conflict_\<имя_публикации>_\<имя_статьи>** .  
   
      Таблицы конфликтов имеют структуру, аналогичную структуре таблиц, на которых они основаны. Строка в одной из этих таблиц состоит из проигравшей версии строки конфликта (победившая версия строки находится в существующей пользовательской таблице).  
   
@@ -145,7 +145,7 @@ ms.locfileid: "54130574"
   
  **Просмотр конфликтов**  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. [Просмотр и разрешение конфликтов данных для публикации слиянием (SQL Server Management Studio)](../../../relational-databases/replication/view-and-resolve-data-conflicts-for-merge-publications.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Просмотр и разрешение конфликтов данных для публикации слиянием (SQL Server Management Studio)](../../../relational-databases/replication/view-and-resolve-data-conflicts-for-merge-publications.md)  
   
 -   Программирование репликации на языке [!INCLUDE[tsql](../../../includes/tsql-md.md)]: [View Conflict Information for Merge Publications](../../../relational-databases/replication/view-conflict-information-for-merge-publications.md) (Просмотр сведений о конфликтах для публикаций слиянием)  
   

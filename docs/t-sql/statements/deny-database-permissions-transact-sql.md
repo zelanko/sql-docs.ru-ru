@@ -20,11 +20,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c18ceba0be4237cc6b4a0ae824af9021631861c1
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828464"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62643752"
 ---
 # <a name="deny-database-permissions-transact-sql"></a>DENY, запрет разрешений на базу данных (Transact-SQL)
 
@@ -180,7 +180,7 @@ AS \<database_principal> указывает участника, от котор�
 
 ### <a name="a-denying-permission-to-create-certificates"></a>A. Запрет разрешения на создание сертификатов
 
-Следующий код отказывает в разрешении `CREATE CERTIFICATE` пользователю [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] базы данных `MelanieK`.
+Следующий код отказывает в разрешении `CREATE CERTIFICATE` пользователю `MelanieK` базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].
 
 ```sql
 USE AdventureWorks2012;

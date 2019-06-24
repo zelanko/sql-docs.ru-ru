@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fae8f6de4479ae2f4d2675ab92c75e030304fd63
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846112"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62694708"
 ---
 # <a name="mssqlserver7904"></a>MSSQLSERVER_7904
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47846112"
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
 |Символическое имя|DBCC2_FS_MISSING_FILE|  
-|Текст сообщения|Ошибка в таблице: не найден файл FILESTREAM для столбца с идентификатором C_ID, ROWGUID RG_ID в объекте с идентификатором O_ID, идентификатором индекса I_ID, идентификатором секции PN_ID.|  
+|Текст сообщения|Ошибка таблицы: не найден файл FILESTREAM для столбца с идентификатором C_ID, ROWGUID RG_ID в объекте с идентификатором O_ID, идентификатором индекса I_ID, идентификатором секции PN_ID.|  
   
 ## <a name="explanation"></a>Объяснение  
 Значение столбца секции не содержит нужного файла FILESTREAM в соответствующем каталоге столбца FILESTREAM.  

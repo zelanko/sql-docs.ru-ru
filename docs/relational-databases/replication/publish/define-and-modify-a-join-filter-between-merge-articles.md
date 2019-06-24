@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 67866652e7c010a00018c394677c9d1e7e1cb8d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728902"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62508447"
 ---
 # <a name="define-and-modify-a-join-filter-between-merge-articles"></a>Определение и изменение фильтра соединения между статьями публикации слиянием
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "47728902"
 -   Фильтры соединения можно создать вручную для набора таблиц, или же репликация может создать эти фильтры автоматически, основываясь на связях между внешними ключами и первичными ключами, заданных в таблицах. Дополнительные сведения об автоматическом создании набора фильтров соединения см. в статье [Автоматическое создание фильтров соединения между статьями публикации слиянием](../../../relational-databases/replication/publish/automatically-generate-join-filters-between-merge-articles.md).  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
- Операции определения, изменения и удаления фильтров соединения выполняются на странице **Фильтрация строк таблицы** мастера создания публикаций или странице **Фильтрация строк** диалогового окна **Свойства публикации — \<публикация>**. Дополнительные сведения об использовании мастера и доступе к этому диалоговому окну см. в статьях [Создание публикации](../../../relational-databases/replication/publish/create-a-publication.md) и [Просмотр и изменение свойств публикации](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+ Операции определения, изменения и удаления фильтров соединения выполняются на странице **Фильтрация строк таблицы** мастера создания публикаций или странице **Фильтрация строк** диалогового окна **Свойства публикации — \<публикация>** . Дополнительные сведения об использовании мастера и доступе к этому диалоговому окну см. в статьях [Создание публикации](../../../relational-databases/replication/publish/create-a-publication.md) и [Просмотр и изменение свойств публикации](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
 #### <a name="to-define-a-join-filter"></a>Определение фильтра соединения  
   
@@ -66,7 +66,7 @@ ms.locfileid: "47728902"
   
     -   Если решено применить конструктор, то для создания инструкции соединения используйте столбцы в сетке (**Сопряжение**, **Фильтруемый столбец таблицы**, **Оператор**и **Столбец соединяемой таблицы**).  
   
-         Каждый столбец в сетке содержит раскрывающийся список для выбора двух столбцов и оператора (**=**, **<>**, **<=**, **\<**, **>=**, **>** и **like**). Результаты выводятся в текстовом поле **Предварительный просмотр** . Если в соединении участвует более двух столбцов, выберите логику (AND или OR) из столбца **Сопряжение** , а затем введите еще два столбца и оператор.  
+         Каждый столбец в сетке содержит раскрывающийся список для выбора двух столбцов и оператора ( **=** , **<>** , **<=** , **\<** , **>=** , **>** и **like**). Результаты выводятся в текстовом поле **Предварительный просмотр** . Если в соединении участвует более двух столбцов, выберите логику (AND или OR) из столбца **Сопряжение** , а затем введите еще два столбца и оператор.  
   
     -   Если нужно написать инструкцию вручную, введите ее в текстовом поле **Инструкция соединения** . Используйте списки **Столбцы фильтруемой таблицы** и **Столбцы соединяемой таблицы** , перетягивая из них поля в текстовое поле **Инструкция соединения** .  
   
@@ -89,7 +89,7 @@ ms.locfileid: "47728902"
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-6.  Если вы находитесь в диалоговом окне **Свойства публикации — \<публикация>**, нажмите кнопку **ОК**, чтобы сохранить изменения и закрыть диалоговое окно.  
+6.  Если вы находитесь в диалоговом окне **Свойства публикации — \<публикация>** , нажмите кнопку **ОК**, чтобы сохранить изменения и закрыть диалоговое окно.  
   
 #### <a name="to-modify-a-join-filter"></a>Изменение фильтра соединения  
   
@@ -116,7 +116,7 @@ ms.locfileid: "47728902"
   
 2.  Чтобы определить связанные с публикацией статьи (которые также называют дочерними), в базе данных публикации на издателе выполните хранимую процедуру [sp_addmergearticle (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Дополнительные сведения см. в статье [определить статью](../../../relational-databases/replication/publish/define-an-article.md).  
   
-3.  На издателе в базе данных публикации выполните хранимую процедуру [sp_addmergefilter (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md). Задайте значение параметра **@publication**, а также укажите уникальное имя фильтра в параметре **@filtername**, имя дочерней статьи, созданной на шаге 2, в параметре **@article**, имя родительской статьи, к которой производится присоединение, в параметре **@join_articlename**, а в параметре **@join_unique_key**задайте одно из следующих значений.  
+3.  На издателе в базе данных публикации выполните хранимую процедуру [sp_addmergefilter (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md). Задайте значение параметра **@publication** , а также укажите уникальное имя фильтра в параметре **@filtername** , имя дочерней статьи, созданной на шаге 2, в параметре **@article** , имя родительской статьи, к которой производится присоединение, в параметре **@join_articlename** , а в параметре **@join_unique_key** задайте одно из следующих значений.  
   
     -   **0** — указывает на соединение типа «многие к одному» или «многие ко многим» между родительской и дочерними статьями.  
   
@@ -141,8 +141,8 @@ ms.locfileid: "47728902"
  [Параметризованные фильтры строк](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [Изменение свойств публикации и статьи](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [Фильтрация опубликованных данных для репликации слиянием](../../../relational-databases/replication/merge/filter-published-data-for-merge-replication.md)   
- [Определение и изменение фильтра соединения между статьями публикации слиянием](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
- [Основные понятия системных хранимых процедур репликации](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
+ [Руководство. Как определить и изменить фильтр соединения между статьями публикации слиянием (среда SQL Server Management Studio)](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
+ [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
  [Определение связи логических записей между статьями таблиц слияния](../../../relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md)   
  [Определение и изменение параметризованного фильтра строк для статьи публикации слиянием](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)  
   

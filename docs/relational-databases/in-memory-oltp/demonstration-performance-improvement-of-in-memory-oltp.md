@@ -1,5 +1,5 @@
 ---
-title: Демонстрация повышения производительности для выполняющейся в памяти OLTP | Документация Майкрософт
+title: Демонстрация. Повышение производительности для выполняющейся в памяти OLTP | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/19/2016
 ms.prod: sql
@@ -13,13 +13,13 @@ ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2b2087165cc406971a6452298b672554a7c7994f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677553"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63047888"
 ---
-# <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>Демонстрация. Улучшение производительности выполняющейся в памяти OLTP
+# <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>Демонстрация. Повышение производительности In-Memory OLTP
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Пример кода в этом разделе демонстрирует повышение производительности оптимизированных для памяти таблиц. Повышение производительности наблюдается, когда доступ к данным в оптимизированных для памяти таблицах осуществляется из традиционного интерпретированного [!INCLUDE[tsql](../../includes/tsql-md.md)]. Улучшение производительности будет даже заметнее, если доступ к данным в оптимизированной для памяти таблице выполняется из хранимой процедуры, скомпилированной в собственном коде (NCSProc).  
@@ -38,7 +38,7 @@ ms.locfileid: "51677553"
   
 1.  Подключитесь к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]с помощью среды SQL Server Management Studio, используя SSMS.exe. Можно также использовать любое другое аналогичное средство.  
   
-2.  Вручную создайте каталог с именем **C:\data\\**. Пример кода Transact SQL предполагает, что каталог уже существует.  
+2.  Вручную создайте каталог с именем **C:\data\\** . Пример кода Transact SQL предполагает, что каталог уже существует.  
   
 3.  Запустите короткий код T-SQL, чтобы создать базу данных и соответствующую оптимизированную для памяти файловую группу.  
   
@@ -59,7 +59,7 @@ USE imoltp;
 go  
 ```  
   
-### <a name="step-1b-prerequisite-if-using-includesssdsfullincludessssdsfull-mdmd"></a>Шаг 1b. Предварительные требования при использовании [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]  
+### <a name="step-1b-prerequisite-if-using-includesssdsfullincludessssdsfull-mdmd"></a>Шаг 1б. Предварительные требования при использовании [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]  
  Описанные здесь действия применяются только в случае использования [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. Выполните следующие действия.  
   
 1.  Выберите существующую тестовую базу данных, которая будет использоваться для примера кода.  
@@ -68,7 +68,7 @@ go
   
  Инструкции по созданию базы данных на портале Azure см. в [руководстве по началу работы с базами данных SQL Azure](https://azure.microsoft.com/documentation/articles/sql-database-get-started).  
   
-### <a name="step-2-create-memory-optimized-tables-and-ncsproc"></a>Шаг 2. Создание оптимизированных для памяти таблиц и NCSProc  
+### <a name="step-2-create-memory-optimized-tables-and-ncsproc"></a>Шаг 2. Создание оптимизированных для памяти таблиц и NCSProc  
  На этом шаге создаются оптимизированные для памяти таблицы и хранимая процедура, скомпилированная в собственном коде (NCSProc). Выполните следующие действия.  
   
 1.  Подключитесь к новой базе данных с помощью SSMS.exe.  

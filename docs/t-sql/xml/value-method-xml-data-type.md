@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0a208baaf237987c9f3e544da4d02dca72b191f9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56021455"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62857315"
 ---
 # <a name="value-method-xml-data-type"></a>Метод value() (тип данных xml)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ value (XQuery, SQLType)
  Метод **value()** неявно использует оператор CONVERT [!INCLUDE[tsql](../../includes/tsql-md.md)] и пытается преобразовать результат выражения XQuery, сериализованное строковое представление, из типа данных XSD в соответствующий тип SQL, указанный преобразованием языка [!INCLUDE[tsql](../../includes/tsql-md.md)]. Дополнительные сведения о правилах приведения типов для оператора CONVERT см. в разделе [CAST и CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md).  
   
 > [!NOTE]  
->  Для увеличения производительности операции сравнения с реляционным значением вместо метода **value()** в предикате используйте метод **exist()** совместно с **sql:column()**. Это показано в следующем примере Г.  
+>  Для увеличения производительности операции сравнения с реляционным значением вместо метода **value()** в предикате используйте метод **exist()** совместно с **sql:column()** . Это показано в следующем примере Г.  
   
 ## <a name="examples"></a>Примеры  
   
@@ -121,7 +121,7 @@ WHERE CatalogDescription.exist('
   
 -   Столбец `CatalogDescription` является типизированным XML-столбцом. Это означает, что с ним связан набор схем. В [XQuery Prolog](../../xquery/modules-and-prologs-xquery-prolog.md) объявлено пространство имен, определяющее префикс, который затем используется в теле запроса.  
   
--   Если метод `exist()` возвращает значение `1` (TRUE), это значит, что экземпляр XML содержит дочерний элемент <`Warranty`>.  
+-   Если метод `exist()` возвращает значение `1` (True), это значит, что экземпляр XML содержит дочерний элемент <`Warranty`>.  
   
 -   Метод `value()` в предложении `SELECT` затем извлекает значения атрибутов `ProductModelID` в виде целых чисел.  
   

@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dab6f53c5b75e1ef78eab346d2b0dd96a42e5861
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510151"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62703954"
 ---
 # <a name="xml-schema-collections-sql-server"></a>Коллекции XML-схем (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -170,7 +170,7 @@ ms.locfileid: "58510151"
   
 -   написать запросы Transact-SQL, адресованные соответствующим представлениям каталога, связанным с коллекциями XML-схем;  
   
--   Используйте встроенную функцию **XML_SCHEMA_NAMESPACE()**. К результатам этой функции можно применять методы типа данных **xml** . Однако изменять базовые XML-схемы нельзя.  
+-   Используйте встроенную функцию **XML_SCHEMA_NAMESPACE()** . К результатам этой функции можно применять методы типа данных **xml** . Однако изменять базовые XML-схемы нельзя.  
   
  Все это поясняют следующие примеры.  
   
@@ -191,7 +191,7 @@ WHERE    XSC.name = 'myCollection'
 SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection')  
 ```  
   
- Отдельные XML-схемы из коллекции можно получить как экземпляры типа данных **xl** , указав целевое пространство имен в качестве третьего аргумента функции **XML_SCHEMA_NAMESPACE()**. Это показано в следующем примере.  
+ Отдельные XML-схемы из коллекции можно получить как экземпляры типа данных **xl** , указав целевое пространство имен в качестве третьего аргумента функции **XML_SCHEMA_NAMESPACE()** . Это показано в следующем примере.  
   
 ### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>Пример Вывод конкретной схемы из коллекции XML-схем  
  Следующая инструкция выводит XML-схему с _симулированным_ целевым пространством имен https/\/www.microsoft.com/was-books из коллекции XML-схем myCollection реляционной схемы dbo.  

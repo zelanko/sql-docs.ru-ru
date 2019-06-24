@@ -23,12 +23,12 @@ ms.assetid: d2bade70-07cf-4d94-b5d2-88aecb538ed1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bf2776df77af8f4ba5fec9595d6ba9cddf927f7a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7756482734dac8d4d5982b0ab6d5d58942065697
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65620511"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263527"
 ---
 # <a name="tutorials-for-sql-server-management-studio-ssms"></a>Учебники по SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "65620511"
 
     Из этого учебника вы узнаете, как создавать скрипты для различных объектов в среде SSMS, включая базы данных и запросы. 
 
-- [Учебник. Использование шаблонов в SSMS](templates-ssms.md)
+- [Учебник. Использование шаблонов в SSMS](../template/templates-ssms.md)
    
     Из этого учебника вы узнаете, как работать с готовыми шаблонами в среде SSMS. Шаблоны — это малоизвестный компонент, в котором хранится ряд фрагментов кода Transact-SQL для разных задач администрирования баз данных. 
 
