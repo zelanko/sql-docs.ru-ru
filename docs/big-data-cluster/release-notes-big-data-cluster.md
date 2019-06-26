@@ -5,17 +5,17 @@ description: В этой статье описываются последние 
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: d3967da74969556cd96483d4a9c3afa3135fa342
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 424b09f9cd18a3fa68eb8a3ade26eecc1191ef72
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66779219"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388638"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>Заметки о выпуске для кластеров больших данных в SQL Server
 
@@ -24,6 +24,95 @@ ms.locfileid: "66779219"
 В этой статье перечислены обновления и известные проблемы для последних выпусков кластеров больших данных в SQL Server.
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
+
+## <a id="ctp31"></a> CTP-версии 3.1 (июнь)
+
+Новые возможности и известные проблемы с кластерами больших данных в SQL Server 2019 CTP 3.1 в следующих разделах.
+
+### <a name="whats-new"></a>What's New
+
+| Новые функции или обновления | Сведения |
+|:---|:---|
+| `mssqlctl` команда изменяет | `mssqlctl cluster` команды были переименованы в `mssqlctl bdc`. Дополнительные сведения см. в разделе [ `mssqlctl` ссылку](reference-mssqlctl.md). |
+| Новый `mssqlctl` командах состояния и удаления на портал администрирования кластера. | В этом выпуске удаляется на портале администрирования кластера. Были добавлены новые команды состояние `mssqlctl` дополнения существующих мониторинга команды. |
+| Пулов вычислительных Spark | Создание дополнительных узлов для увеличения вычислительной мощности Spark без необходимости для увеличения масштаба хранилища. Кроме того вы можете начать узлы пула хранения, которые не используются для Spark. Spark и хранилище связаны между собой. Дополнительные сведения см. в разделе [настройки хранилища без spark](deployment-custom-configuration.md#sparkstorage). |
+| Соединитель MSSQL Spark | Поддержка чтения и записи к внешним таблицам данных пула. Предыдущие выпуски, поддерживаемые на чтение и запись главного экземпляра только таблицы. |
+| С помощью MLeap машинного обучения | [Обучить модель машинного обучения MLeap в Spark и оценить ее в SQL Server с помощью расширения языка Java](spark-create-machine-learning-model.md). |
+
+### <a name="known-issues"></a>Известные проблемы
+
+Известные проблемы и ограничения в выпуске в следующих разделах.
+
+#### <a name="hdfs"></a>HDFS
+
+- Если щелкнуть правой кнопкой мыши файл в файловой системе HDFS, чтобы сделать это, может появиться следующая ошибка:
+
+   `Error previewing file: File exceeds max size of 30MB`
+
+   В настоящее время нет способа для предварительного просмотра файлов, размер которых превышает 30 МБ студии данных Azure.
+
+- Изменения конфигурации HDFS, влечет за собой изменения hdfs-site.xml не поддерживаются.
+
+#### <a name="deployment"></a>Развертывание
+
+- Обновление данных кластерам больших данных с предыдущего выпуска не поддерживается.
+
+   > [!IMPORTANT]
+   > Необходимо создать резервную копию данных и удалите существующего кластера больших данных (с помощью предыдущей версии **mssqlctl**) перед развертыванием в последнем выпуске. Дополнительные сведения см. в разделе [обновление до нового выпуска](deployment-upgrade.md).
+
+- После развертывания в AKS, могут появиться следующие два события-предупреждения из развертывания. Оба эти события перечислены известные проблемы, но они не препятствуют успешному развертыванию кластера больших данных в AKS.
+
+   `Warning  FailedMount: Unable to mount volumes for pod "mssql-storage-pool-default-1_sqlarisaksclus(c83eae70-c81b-11e8-930f-f6b6baeb7348)": timeout expired waiting for volumes to attach or mount for pod "sqlarisaksclus"/"mssql-storage-pool-default-1". list of unmounted volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs]. list of unattached volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs storage-pool-java-storage secrets default-token-q9mlx]`
+
+   `Warning  Unhealthy: Readiness probe failed: cat: /tmp/provisioner.done: No such file or directory`
+
+- Если происходит сбой развертывания кластера больших данных, связанное пространство имен не удаляется. В итоге потерянные пространством имен в кластере. Обойти это можно вручную удалить пространство имен перед развертыванием кластера с тем же именем.
+
+#### <a name="external-tables"></a>Внешние таблицы
+
+- Развертывание кластера больших данных больше не создает **SqlDataPool** и **SqlStoragePool** внешних источников данных. Можно создать эти источники данных вручную для поддержки виртуализации данных к пулу данных и пула носителей.
+
+   > [!NOTE]
+   > URI для создания этих внешних источников данных отличается от CTP-версии. См. в разделе команд Transact-SQL см. в разделе об их создании 
+
+   ```sql
+   -- Create default data sources for SQL Big Data Cluster
+   IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
+       CREATE EXTERNAL DATA SOURCE SqlDataPool
+       WITH (LOCATION = 'sqldatapool://controller-svc/default');
+ 
+   IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
+       CREATE EXTERNAL DATA SOURCE SqlStoragePool
+       WITH (LOCATION = 'sqlhdfs://controller-svc/default');
+   ```
+
+- Это позволяет создать внешнюю таблицу пула данных для таблицы, которая имеет неподдерживаемые типы столбцов. При выполнении запроса внешней таблицы, вы получите сообщение следующего вида:
+
+   `Msg 7320, Level 16, State 110, Line 44 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 105079; Columns with large object types are not supported for external generic tables.`
+
+- Если базовый файл копируется в HDFS в то же время при выполнении запроса внешней таблицы пула хранения, может появиться ошибка.
+
+   `Msg 7320, Level 16, State 110, Line 157 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 110806;A distributed query failed: One or more errors occurred.`
+
+- При создании внешней таблицы к базе данных Oracle, использовать символьные типы данных, мастер виртуализации Azure Data Studio интерпретирует эти столбцы как VARCHAR в определении внешней таблицы. В результате сбоя в язык DDL внешней таблицы. Измените схемы Oracle для NVARCHAR2 на типе, или вручную создайте инструкций ВНЕШНЕЙ таблицы, укажите NVARCHAR, а не с помощью мастера.
+
+#### <a name="application-deployment"></a>Развертывание приложения
+
+- При вызове приложения R, Python или MLeap из RESTful API, вызов истечет время ожидания в течение 5 минут.
+
+#### <a name="spark-and-notebooks"></a>Spark и записные книжки
+
+- IP-адресом МОДУЛЯ адреса могут измениться в среде Kubernetes, время перезагрузки модулей POD. В сценарии, где перезапускает master-pod, сеанс Spark может произойти сбой с `NoRoteToHostException`. Это связано с виртуальной машины Java кэшей, не обновляется с помощью нового IP-адреса адреса.
+
+- Если у вас есть Jupyter уже установлен и отдельные Python в Windows, записные книжки Spark может завершиться ошибкой. Чтобы обойти эту проблему, обновите Jupyter до последней версии.
+
+- В записной книжке, если щелкнуть **добавить текст** команды ячейку текст добавляется в режиме предварительного просмотра, а не в режиме редактирования. Можно щелкнуть значок предварительного просмотра, чтобы переключиться в режим правки и изменять ячейки.
+
+#### <a name="security"></a>безопасность
+
+- SA_PASSWORD является частью среды и доступными (например, в файл дампа кабель). После развертывания, необходимо сбросить SA_PASSWORD на основной экземпляр. Это не ошибка, но шаг по обеспечению безопасности. Дополнительные сведения о способах изменения SA_PASSWORD в контейнере Linux, см. в разделе [Смена пароля Администратора](../linux/quickstart-install-connect-docker.md#sapassword).
+
+- AKS журналы могут содержать пароль системного Администратора для развертывания кластера больших данных.
 
 ## <a id="ctp30"></a> CTP-версии 3.0 (май)
 
@@ -89,11 +178,11 @@ ms.locfileid: "66779219"
    -- Create default data sources for SQL Big Data Cluster
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
        CREATE EXTERNAL DATA SOURCE SqlDataPool
-       WITH (LOCATION = 'sqldatapool://controller-svc:8080/datapools/default');
+       WITH (LOCATION = 'sqldatapool://controller-svc/default');
  
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
        CREATE EXTERNAL DATA SOURCE SqlStoragePool
-       WITH (LOCATION = 'sqlhdfs://controller-svc:8080/default');
+       WITH (LOCATION = 'sqlhdfs://controller-svc/default');
    ```
 
 - Это позволяет создать внешнюю таблицу пула данных для таблицы, которая имеет неподдерживаемые типы столбцов. При выполнении запроса внешней таблицы, вы получите сообщение следующего вида:

@@ -6,17 +6,17 @@ author: nelgson
 ms.author: negust
 ms.reviewer: jroth
 manager: jroth
-ms.date: 12/06/2018
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: a71c4fb8902bb016de0d5ee607f955db61d94901
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d57fbeee578d2889d330ba19401477a43ab95e60
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66783070"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67387942"
 ---
 # <a name="security-concepts-for-sql-server-big-data-clusters"></a>Основные понятия безопасности для работы с большими данными кластеров SQL Server
 
@@ -34,7 +34,7 @@ ms.locfileid: "66783070"
 
 * Шлюз HDFS или Spark (Knox) — это конечная точка на основе HTTPS. Благодаря этому передаются другим конечным точкам. Шлюз HDFS/Spark используется для доступа к службам, таким как webHDFS и Livy. Везде, где вы видите ссылки на Knox, это конечная точка.
 
-* Конечная точка контроллера - больших данных кластера службы управления, который предоставляет REST API для управления кластером. Некоторые средства, такие как на портале администрирования осуществляется через эту конечную точку.
+* Конечная точка контроллера - больших данных кластера службы управления, который предоставляет REST API для управления кластером. Некоторые средства осуществляется через эту конечную точку.
 
 * Главный экземпляр - конечной точки TDS инструменты для баз данных и приложений для подключения к экземпляру SQL Server Master в кластере.
 

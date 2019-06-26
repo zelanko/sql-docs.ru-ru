@@ -5,17 +5,17 @@ description: Дополнительные сведения о кластерах
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 12/07/2018
+ms.date: 06/26/2019
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: fed82f9bda8f72d92157de726eb6ae3c6ed1c0c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 667c7a76bfc0b74ab8ee642ccb558a774a1e0e2c
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801891"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388732"
 ---
 # <a name="what-are-sql-server-big-data-clusters"></a>Что такое кластеры больших данных SQL Server
 
@@ -57,9 +57,7 @@ ms.locfileid: "66801891"
 
 ### <a name="management-and-monitoring"></a>Управление и мониторинг
 
-Управление и мониторинг предоставляются через сочетание средств командной строки, интерфейсы API, на портал администратора и динамические административные представления.
-
-[Портал администратора кластера](cluster-admin-portal.md) — веб-интерфейс, который отображает состояние и работоспособность модулей POD в кластере. Он также предоставляет ссылки на другие панели мониторинга для log analytics и панели мониторинга.
+Управление и мониторинг предоставляются через сочетание средств командной строки, API-интерфейсы, порталы и динамические административные представления.
 
 Azure Data Studio можно использовать для выполнения различных задач в кластере больших данных. Эта функция включена по новому **расширение 2019 г. (Предварительная версия) для SQL Server**. Это расширение предоставляет:
 

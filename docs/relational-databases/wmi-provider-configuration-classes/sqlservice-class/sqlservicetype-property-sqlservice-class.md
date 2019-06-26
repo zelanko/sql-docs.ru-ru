@@ -18,12 +18,12 @@ ms.assetid: dbff2968-3011-41d6-a141-52d814af0213
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 12e285e4348c2fac373797d4e260ea088facaabf
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 778316994f607201d45f93c60f9c57a9dce4160c
+ms.sourcegitcommit: 20d24654e056561fc33cadc25eca8b4e7f214b1b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675613"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67351594"
 ---
 # <a name="sqlservicetype-property-sqlservice-class"></a>Свойство SqlServiceType (класс SqlService)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,6 +55,11 @@ object.SqlServiceType [= value]
 |*5*|MSSQLServerOLAPService — служба [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] .|  
 |*6*|ReportServer — служба [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] .|  
 |*7*|SQLBrowser — служба « [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , обозреватель».|  
+|*8*|— NsService [!INCLUDE[ssNoVersion](../../../includes/ssns-md.md)] службу уведомлений.|  
+|*9*|— MSSQLFDLauncher [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] службы запуска управляющей программы фильтрации для полнотекстового поиска.|  
+|*10*|— SQLPBENGINE [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] службы Polybase Engine.|  
+|*11*|— SQLPBDMS [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] службе перемещения данных Polybase.|  
+|*12*|— MSSQLLaunchpad [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] служба панели запуска.|  
   
 ## <a name="see-also"></a>См. также  
  [Запуск и остановка служб](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

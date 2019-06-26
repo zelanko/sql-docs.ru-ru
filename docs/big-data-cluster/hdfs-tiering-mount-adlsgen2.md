@@ -6,16 +6,16 @@ author: nelgson
 ms.author: negust
 ms.reviewer: jroth
 manager: jroth
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 504559fab3078b03ea3b8aea923035654f60ce47
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 16b336113f869733b8f6ba93e3dbfe3dde5a52c1
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66782142"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388793"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>Как Gen2 ADLS подключения для HDFS, распределение по уровням в кластере больших данных
 
@@ -112,10 +112,10 @@ ms.locfileid: "66782142"
    mssqlctl login -e https://<IP-of-controller-svc-external>:30080/
    ```
 
-1. Подключение удаленного хранилища HDFS в Azure с помощью **создать монтирования пул носителей кластера mssqlctl**. Замените значения заполнителей перед выполнением следующей команды:
+1. Подключение удаленного хранилища HDFS в Azure с помощью **создать подключения пула носителей bdc mssqlctl**. Замените значения заполнителей перед выполнением следующей команды:
 
    ```bash
-   mssqlctl cluster storage-pool mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --mount-path /mounts/<mount-name> --credential-file <path-to-adls-credentials>/file.creds
+   mssqlctl bdc storage-pool mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --mount-path /mounts/<mount-name> --credential-file <path-to-adls-credentials>/file.creds
    ```
 
    > [!NOTE]
@@ -128,21 +128,21 @@ ms.locfileid: "66782142"
 Чтобы получить список состояние всех подключение кластера больших данных, используйте следующую команду:
 
 ```bash
-mssqlctl cluster storage-pool mount status
+mssqlctl bdc storage-pool mount status
 ```
 
 Чтобы получить список состояние подключения в указанную папку в файловой системе HDFS, используйте следующую команду:
 
 ```bash
-mssqlctl cluster storage-pool mount status --mount-path <mount-path-in-hdfs>
+mssqlctl bdc storage-pool mount status --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a id="delete"></a> Удаление подключения
 
-Чтобы удалить подключение, используйте **удаления подключения пул носителей кластера mssqlctl** команды и укажите путь подключения в HDFS:
+Чтобы удалить подключение, используйте **mssqlctl bdc пула носителей подключения delete** команды и укажите путь подключения в HDFS:
 
 ```bash
-mssqlctl cluster storage-pool mount delete --mount-path <mount-path-in-hdfs>
+mssqlctl bdc storage-pool mount delete --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a name="next-steps"></a>Следующие шаги

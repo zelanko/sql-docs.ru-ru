@@ -5,16 +5,16 @@ description: Справочная статья по mssqlctl команды.
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: acc25e6b3deca199ad774378318e17991614dcaa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2601d526710e6cf51de089f7879f0f5517bf86aa
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66779242"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388666"
 ---
 # <a name="mssqlctl"></a>mssqlctl
 
@@ -26,9 +26,11 @@ ms.locfileid: "66779242"
 |     |     |
 | --- | --- |
 |[приложение mssqlctl](reference-mssqlctl-app.md) | Создание, удаление, запуска и управления приложениями. |
-|[mssqlctl кластера](reference-mssqlctl-cluster.md) | Выберите, управление и работу кластеров. |
+|[mssqlctl bdc](reference-mssqlctl-bdc.md) | Выберите, управление и работу больших кластерах данных SQL Server. |
+|[mssqlctl hdfs](reference-mssqlctl-hdfs.md) | Модуль HDFS предоставляет команды для доступа к HDFS файловая система. |
 [Имя входа mssqlctl](#mssqlctl-login) | Войдите в конечную точку кластера контроллера.
 [mssqlctl выхода](#mssqlctl-logout) | Выйдите из кластера.
+|[mssqlctl sql](reference-mssqlctl-sql.md) | Интерфейс командной строки SQL DB позволяет пользователю взаимодействовать с SQL Server с помощью T-SQL. |
 ## <a name="mssqlctl-login"></a>Имя входа mssqlctl
 При развертывании кластера будут перечислены во время развертывания, который следует использовать конечную точку контроллер с именем входа.  Если вы не знаете конечную точку контроллера, вы имеете права входа в систему за счет конфигурации kube кластера на компьютере в расположении по умолчанию <user home>/.kube/config или использовать KUBECONFIG env var, т. е. Экспорт KUBECONFIG=path/to/.kube/config.
 ```bash
@@ -56,7 +58,7 @@ mssqlctl login -n ClusterName
 #### `--controller-username -u`
 Учетная запись пользователя. Если вы не хотите использовать этот аргумент, можно задать переменную среды CONTROLLER_USERNAME.
 #### `--controller-endpoint -e`
-Конечная точка контроллера кластера "https://host:port«. Если вы не хотите использовать этот аргумент, можно использовать файл конфигурации kube на вашем компьютере. Убедитесь, файл конфигурации расположен в папке по умолчанию <user home>/.kube/config или используйте переменную среды KUBECONFIG
+Конечная точка контроллера кластера "https://host:port «. Если вы не хотите использовать этот аргумент, можно использовать файл конфигурации kube на вашем компьютере. Убедитесь, файл конфигурации расположен в папке по умолчанию <user home>/.kube/config или используйте переменную среды KUBECONFIG
 #### `--accept-eula -a`
 Вы принимаете условия лицензионного соглашения? [Да/Нет]. Если вы не хотите использовать этот аргумент, можно задать переменную среды ACCEPT_EULA «Yes»
 ### <a name="global-arguments"></a>Глобальные аргументы

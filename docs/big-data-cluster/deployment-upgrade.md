@@ -5,16 +5,16 @@ description: Сведения об обновлении кластеров SQL S
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 3af688d607e8ec2d9dad7efe0d2275840c48cba8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2bde0037933f420147d0467f83f1bcb6428cf526
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66782240"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388738"
 ---
 # <a name="how-to-upgrade-sql-server-big-data-clusters"></a>Обновление кластеров больших данных в SQL Server
 
@@ -31,7 +31,7 @@ ms.locfileid: "66782240"
 1. Удалите старый кластер с `mssqlctl delete cluster` команды.
 
    ```bash
-    mssqlctl cluster delete --name <old-cluster-name>
+    mssqlctl bdc delete --name <old-cluster-name>
    ```
 
    > [!Important]
@@ -39,30 +39,24 @@ ms.locfileid: "66782240"
 
 1. Если у вас есть все предыдущие выпуски **mssqlctl** установлен, очень важно удалить **mssqlctl** перед установкой последней версии.
 
-   Если вы удаляете **mssqlctl** соответствующий CTP-версии 2.2 или нижней выполнения:
+   Для CTP-версия 2.3 или более поздней версии выполните следующую команду. Замените `ctp3.0` в команде с версией **mssqlctl** , при удалении. Если версия до версии CTP 3.0, добавить дефис перед номер версии (например, `ctp-2.5`).
 
    ```powershell
-   pip3 uninstall mssqlctl
+   pip3 uninstall -r  https://private-repo.microsoft.com/python/ctp3.0/mssqlctl/requirements.txt
    ```
 
-   Для CTP-версия 2.3 или более поздней версии выполните следующую команду. Замените `ctp-2.5` в команде с версией **mssqlctl** , при удалении:
-
-   ```powershell
-   pip3 uninstall -r  https://private-repo.microsoft.com/python/ctp-2.5/mssqlctl/requirements.txt
-   ```
-
-1. Установите последнюю версию **mssqlctl**. Следующие команды устанавливают **mssqlctl** для CTP-версии 3.0:
+1. Установите последнюю версию **mssqlctl**. Следующие команды устанавливают **mssqlctl** для CTP-версии 3.1:
 
    **Windows:**
 
    ```powershell
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp3.0/mssqlctl/requirements.txt
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp3.1/mssqlctl/requirements.txt
    ```
 
    **Linux:**
 
    ```bash
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp3.0/mssqlctl/requirements.txt --user
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp3.1/mssqlctl/requirements.txt --user
    ```
 
    > [!IMPORTANT]

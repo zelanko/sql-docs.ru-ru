@@ -5,17 +5,17 @@ description: Дополнительные сведения о развертыв
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 15cd412de1dda9d1245859c27d35a7c7f9f52710
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4bd6d260d58b837e2df0d216c28149b6e9a3fa51
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66782251"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388784"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Развертывание кластеров больших данных SQL Server в Kubernetes
 
@@ -82,14 +82,14 @@ kubectl config view
 
 | Профиль развертывания | Среды Kubernetes |
 |---|---|
-| **aks-dev-test.json** | Служба Azure Kubernetes (AKS) |
-| **kubeadm-dev-test.json** | Несколько компьютеров (kubeadm) |
-| **minikube-dev-test.json** | Minikube |
+| **aks-dev-test** | Служба Azure Kubernetes (AKS) |
+| **kubeadm-dev-test** | Несколько компьютеров (kubeadm) |
+| **minikube-dev-test** | Minikube |
 
-Можно развернуть кластер больших данных, выполнив **создания кластера mssqlctl**. Это приглашение выбрать одну из конфигураций по умолчанию и затем поможет выполнить развертывание.
+Можно развернуть кластер больших данных, выполнив **создать mssqlctl bdc**. Это приглашение выбрать одну из конфигураций по умолчанию и затем поможет выполнить развертывание.
 
 ```bash
-mssqlctl cluster create
+mssqlctl bdc create
 ```
 
 В этом случае будут запрошены все параметры, которые не являются частью конфигурации по умолчанию, такие как пароли. Обратите внимание, что данные Docker предоставляется вам корпорацией Майкрософт как часть 2019 сервера SQL [программе раннего освоения](https://aka.ms/eapsignup).
@@ -99,35 +99,38 @@ mssqlctl cluster create
 
 ## <a id="customconfig"></a> Пользовательские конфигурации
 
-Можно также настроить свой собственный файл конфигурации развертывания. Это можно сделать, выполнив следующие действия:
+Можно также настроить собственный профиль конфигурации развертывания. Это можно сделать, выполнив следующие действия:
 
-1. Начните с одного из профилей, стандартного развертывания, которые соответствуют вашей среде Kubernetes. Можно использовать **список конфигурации кластеров mssqlctl** команду, чтобы перечислить их:
+1. Начните с одного из профилей, стандартного развертывания, которые соответствуют вашей среде Kubernetes. Можно использовать **mssqlctl bdc конфигурации списка** команду, чтобы перечислить их:
 
    ```bash
-   mssqlctl cluster config list
+   mssqlctl bdc config list
    ```
 
-1. Чтобы настроить развертывание, создать копию профиля развертывания с помощью **init конфигурации кластера mssqlctl** команды. Например, следующая команда создает копию **aks-dev-test.json** файл конфигурации развертывания в текущем каталоге:
+1. Чтобы настроить развертывание, создать копию профиля развертывания с помощью **mssqlctl bdc config init** команды. Например, следующая команда создает копию **aks разработка и тестирование** файл конфигурации развертывания в целевой каталог с именем `custom`:
 
    ```bash
-   mssqlctl cluster config init --src aks-dev-test.json --target custom.json
-   ```
-
-1. Чтобы настроить параметры в файле конфигурации развертывания, его можно изменить при помощи инструмента, который хорошо подходит для редактирования документы json, как и VS Code. Для сценариев автоматизации, можно изменить файл конфигурации с помощью **набор раздел конфигурации кластера mssqlctl** команды. Например, следующая команда изменяет пользовательский файл конфигурации можно изменить имя развернутого кластера по умолчанию (**mssql-cluster**) для **тестового кластера**:  
-
-   ```bash
-   mssqlctl cluster config section set --config-file custom.json --json-values "metadata.name=test-cluster"
+   mssqlctl bdc config init --source aks-dev-test --target custom
    ```
 
    > [!TIP]
-   > — Это полезное средство для поиска путей JSON [JSONPath Online вычислителя](https://jsonpath.com/).
+   > `--target` Указывает каталог, содержащий файл конфигурации на основе `--source` параметра.
+
+1. Чтобы настроить параметры в профиле конфигурации развертывания, можно изменить файл конфигурации развертывания при помощи инструмента, который хорошо подходит для редактирования JSON-файлов, например, VS Code. Для сценариев автоматизации, можно также изменить профиль пользовательское развертывание с помощью **mssqlctl bdc config раздел набора** команды. Например, следующая команда изменяет профиль развертывания, чтобы изменить имя развернутого кластера по умолчанию (**mssql-cluster**) для **тестового кластера**:  
+
+   ```bash
+   mssqlctl bdc config section set --config-profile custom --json-values "metadata.name=test-cluster"
+   ```
+
+   > [!TIP]
+   > `--config-profile` Определяет имя каталога для развертывания пользовательского профиля, но фактические изменения происходят в JSON-файл конфигурации развертывания в этой папке. — Это полезное средство для поиска путей JSON [JSONPath Online вычислителя](https://jsonpath.com/).
 
    Помимо передачи пары "ключ значение", можно также предоставляют встроенные значения JSON или передать файлы исправления JSON. Дополнительные сведения см. в разделе [настроить параметры развертывания для больших данных кластеров](deployment-custom-configuration.md).
 
-1. Затем передать настраиваемый файл конфигурации для **создания кластера mssqlctl**. Обратите внимание, что необходимо задать требуемый [переменные среды](#env), в противном случае вам будет предложено ввести значения:
+1. Затем передать настраиваемый файл конфигурации для **создать mssqlctl bdc**. Обратите внимание, что необходимо задать требуемый [переменные среды](#env), в противном случае вам будет предложено ввести значения:
 
    ```bash
-   mssqlctl cluster create --config-file custom.json --accept-eula yes
+   mssqlctl bdc create --config-profile custom --accept-eula yes
    ```
 
 > [!TIP]
@@ -146,7 +149,7 @@ mssqlctl cluster create
 | **KNOX_PASSWORD** | Пароль для пользователя Knox. |
 | **MSSQL_SA_PASSWORD** | Пароль пользователя SA для главного экземпляра SQL. |
 
-Эти переменные среды задаются до вызова метода **создания кластера mssqlctl**. Если любой переменной не задано, запросит его.
+Эти переменные среды задаются до вызова метода **создать mssqlctl bdc**. Если любой переменной не задано, запросит его.
 
 В следующем примере показано, как задать переменные среды для Linux (bash) и Windows (PowerShell):
 
@@ -168,10 +171,10 @@ SET DOCKER_USERNAME=<docker-username>
 SET DOCKER_PASSWORD=<docker-password>
 ```
 
-После настройки переменных среды, необходимо запустить `mssqlctl cluster create` для инициации развертывания. В этом примере используется файл конфигурации кластера, созданный выше:
+После настройки переменных среды, необходимо запустить `mssqlctl bdc create` для инициации развертывания. В этом примере созданный ранее профиль конфигурации кластера:
 
 ```
-mssqlctl cluster create --config-file custom.json --accept-eula yes
+mssqlctl bdc create --config-profile custom --accept-eula yes
 ```
 
 Обратите внимание, приведенным ниже рекомендациям:
@@ -182,7 +185,7 @@ mssqlctl cluster create --config-file custom.json --accept-eula yes
 
 ## <a id="unattended"></a> Автоматическая установка
 
-Для автоматического развертывания, необходимо задать все необходимые переменные среды, используйте файл конфигурации и вызов `mssqlctl cluster create` с `--accept-eula yes` параметра. В предыдущем разделе примерах синтаксиса для автоматической установки.
+Для автоматического развертывания, необходимо задать все необходимые переменные среды, используйте файл конфигурации и вызов `mssqlctl bdc create` с `--accept-eula yes` параметра. В предыдущем разделе примерах синтаксиса для автоматической установки.
 
 ## <a id="monitor"></a> Мониторинг развертывания
 
@@ -195,7 +198,7 @@ mssqlctl cluster create --config-file custom.json --accept-eula yes
 Меньше 15 – 30 минут вы должны быть уведомлены выполняющийся модуль контроллера:
 
 ```output
-2019-04-12 15:01:10.0809 UTC | INFO | Waiting for controller pod to be up. Checkthe mssqlctl.log file for more details.
+2019-04-12 15:01:10.0809 UTC | INFO | Waiting for controller pod to be up. Check the mssqlctl.log file for more details.
 2019-04-12 15:01:40.0861 UTC | INFO | Controller pod is running.
 2019-04-12 15:01:40.0884 UTC | INFO | Controller Endpoint: https://<ip-address>:30080
 ```
@@ -206,11 +209,8 @@ mssqlctl cluster create --config-file custom.json --accept-eula yes
 После завершения развертывания, уведомляет о выходных данных успеха.
 
 ```output
-2019-04-12 15:37:18.0271 UTC | INFO | Monitor and track your cluster at the Portal Endpoint: https://<ip-address>:30777/portal/
 2019-04-12 15:37:18.0271 UTC | INFO | Cluster deployed successfully.
 ```
-
-Обратите внимание, URL-адрес **конечной точки портала** в предыдущих выходных данных для использования в следующем разделе.
 
 > [!TIP]
 > Имя по умолчанию для кластера развернутой больших данных — `mssql-cluster` Если пользовательской конфигурации.
@@ -236,10 +236,10 @@ mssqlctl cluster create --config-file custom.json --accept-eula yes
 
    Укажите имя пользователя и пароль, настроенный для контроллера (CONTROLLER_USERNAME и CONTROLLER_PASSWORD) во время развертывания.
 
-1. Запустите **списка конечных точек кластера mssqlctl** для получения списка с описанием каждой конечной точки и соответствующих IP адрес и порт. 
+1. Запустите **списка конечных точек bdc mssqlctl** для получения списка с описанием каждой конечной точки и соответствующих IP адрес и порт. 
 
    ```bash
-   mssqlctl cluster endpoint list
+   mssqlctl bdc endpoint list
    ```
 
    В следующем списке приведены пример выходных данных этой команды:
@@ -252,7 +252,6 @@ mssqlctl cluster create --config-file custom.json --accept-eula yes
    yarn-ui            Spark Diagnostics and Monitoring Dashboard              https://11.111.111.111:30443/gateway/default/yarn          11.111.111.111  30443   https
    app-proxy          Application Proxy                                       https://11.111.111.111:30778                               11.111.111.111  30778   https
    management-proxy   Management Proxy                                        https://11.111.111.111:30777                               11.111.111.111  30777   https
-   portal             Management Portal                                       https://11.111.111.111:30777/portal                        11.111.111.111  30777   https
    log-search-ui      Log Search Dashboard                                    https://11.111.111.111:30777/kibana                        11.111.111.111  30777   https
    metrics-ui         Metrics Dashboard                                       https://11.111.111.111:30777/grafana                       11.111.111.111  30777   https
    controller         Cluster Management Service                              https://11.111.111.111:30080                               11.111.111.111  30080   https
