@@ -3,7 +3,7 @@ title: Расширение SQL Server 2019 (Предварительная ве
 titleSuffix: Azure Data Studio
 description: Расширение 2019 г. версия SQL Server для данных в студии
 ms.custom: seodec18
-ms.date: 05/15/2019
+ms.date: 06/25/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: jroth
-ms.openlocfilehash: aa83e92fb62f9cb0ad00830d1e78e5367112899c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0b8f31d55ae9dcc7042fff051c37a4beaa72a47e
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798056"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67399996"
 ---
 # <a name="sql-server-2019-extension-preview"></a>Расширение SQL Server 2019 (Предварительная версия)
 
@@ -30,9 +30,9 @@ ms.locfileid: "66798056"
 
    |Платформа|Загрузить|Дата выпуска|Версия
    |:---|:---|:---|:---|
-   |Windows|[.VSIX](https://go.microsoft.com/fwlink/?linkid=2092817)|15 мая 2019 г. |0.13.1
-   |macOS|[.VSIX](https://go.microsoft.com/fwlink/?linkid=2092816)|15 мая 2019 г. |0.13.1
-   |Linux|[.VSIX](https://go.microsoft.com/fwlink/?linkid=2092815)|15 мая 2019 г. |0.13.1
+   |Windows|[.VSIX](https://go.microsoft.com/fwlink/?linkid=2097803)|25 июня 2019 г. |0.14.1
+   |macOS|[.VSIX](https://go.microsoft.com/fwlink/?linkid=2097802)|25 июня 2019 г. |0.14.1
+   |Linux|[.VSIX](https://go.microsoft.com/fwlink/?linkid=2097801)|25 июня 2019 г. |0.14.1
 
 1. В Azure Data Studio выберите **установить расширения из пакета VSIX** из **файл** меню и выберите загруженный VSIX-файл.
 
@@ -43,6 +43,9 @@ ms.locfileid: "66798056"
 1. После повторной загрузки расширения будут установлены зависимости. Вы увидите ход выполнения в окне вывода и может занять несколько минут.
 
 1. После зависимостей завершить установку, закройте и снова откройте Studio данных Azure. **Кластера больших данных в SQL Server** тип подключения недоступен, необходимо перезапустить Studio данных Azure.
+
+## <a name="changes-in-release-0141"></a>Изменения в выпуске 0.14.1
+* CTP 3.1 поддерживает использование источника данных
 
 ## <a name="changes-in-release-0121"></a>Изменения в выпуске 0.12.1
 

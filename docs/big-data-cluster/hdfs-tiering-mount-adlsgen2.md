@@ -10,12 +10,12 @@ ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 16b336113f869733b8f6ba93e3dbfe3dde5a52c1
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: ea4f04a2618bc1da6348f68675373704b46770a0
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388793"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400018"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>Как Gen2 ADLS подключения для HDFS, распределение по уровням в кластере больших данных
 
@@ -64,17 +64,15 @@ ms.locfileid: "67388793"
 
 Подождите 5 – 10 минут, прежде чем использовать учетные данные для подключения
 
-### <a name="create-credential-file"></a>Создайте файл с учетными данными
+### <a name="set-environment-variable-for-oauth-credentials"></a>Задайте учетные данные OAuth в переменной среды
 
-Откройте командную строку на клиентском компьютере с доступом к кластеру больших данных.
-
-Создайте локальный файл с именем **filename.creds** , содержащий учетные данные учетной записи Gen2 хранилища Озера данных Azure в следующем формате:
+Откройте командную строку на клиентском компьютере с доступом к кластеру больших данных. Задайте переменную среды, используя следующий формат: Обратите внимание, что учетные данные должны быть в разделенном запятыми списке. Команда «set» используется в Windows. Если вы используете Linux, затем используйте «export».
 
    ```text
-    fs.azure.account.auth.type=OAuth
-    fs.azure.account.oauth.provider.type=org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider
-    fs.azure.account.oauth2.client.endpoint=[token endpoint from step6 above]
-    fs.azure.account.oauth2.client.id=[<Application ID> from step3 above]
+    set MOUNT_CREDENTIALS=fs.azure.account.auth.type=OAuth,
+    fs.azure.account.oauth.provider.type=org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider,
+    fs.azure.account.oauth2.client.endpoint=[token endpoint from step6 above],
+    fs.azure.account.oauth2.client.id=[<Application ID> from step3 above],
     fs.azure.account.oauth2.client.secret=[<key> from step5 above]
    ```
 
@@ -85,20 +83,20 @@ ms.locfileid: "67388793"
  > [!TIP]
    > Дополнительные сведения о том, как найти ключ доступа (`<storage-account-access-key>`) для учетной записи хранения, см. в разделе [Просмотр и копирование ключей доступа к](https://docs.microsoft.com/azure/storage/common/storage-account-manage?#view-and-copy-access-keys).
 
-### <a name="create-credential-file"></a>Создайте файл с учетными данными
+### <a name="set-environment-variable-for-access-key-credentials"></a>Задайте учетные данные ключа доступа в переменной среды
 
 1. Откройте командную строку на клиентском компьютере с доступом к кластеру больших данных.
 
-1. Создайте локальный файл с именем **filename.creds** , содержащий учетные данные учетной записи Gen2 хранилища Озера данных Azure в следующем формате:
+1. Откройте командную строку на клиентском компьютере с доступом к кластеру больших данных. Задайте переменную среды, используя следующий формат. Обратите внимание, что учетные данные должны быть в разделенном запятыми списке. Команда «set» используется в Windows. Если вы используете Linux, затем используйте «export».
 
    ```text
-   fs.azure.abfs.account.name=<your-storage-account-name>.dfs.core.windows.net
+   set MOUNT_CREDENTIALS=fs.azure.abfs.account.name=<your-storage-account-name>.dfs.core.windows.net,
    fs.azure.account.key.<your-storage-account-name>.dfs.core.windows.net=<storage-account-access-key>
    ```
 
 ## <a id="mount"></a> Подключение удаленного хранилища HDFS
 
-Теперь, когда вы подготовили файл учетных данных с помощью клавиши доступа, или с помощью OAuth, можно начать подключение. Следующие действия подключить внешнее хранилище HDFS в Azure Data Lake в локальном хранилище HDFS кластера больших данных.
+Теперь, когда вы задали переменную среды MOUNT_CREDENTIALS ключи доступа или с помощью OAuth, можно начать подключение. Следующие действия подключить внешнее хранилище HDFS в Azure Data Lake в локальном хранилище HDFS кластера больших данных.
 
 1. Используйте **kubectl** найти IP-адрес для конечной точки **контроллера svc-external** службы в кластере больших данных. Найдите **внешний IP-** .
 
@@ -111,11 +109,12 @@ ms.locfileid: "67388793"
    ```bash
    mssqlctl login -e https://<IP-of-controller-svc-external>:30080/
    ```
+1. Задание переменной среды MOUNT_CREDENTIALS (прокрутки для использования инструкции)
 
 1. Подключение удаленного хранилища HDFS в Azure с помощью **создать подключения пула носителей bdc mssqlctl**. Замените значения заполнителей перед выполнением следующей команды:
 
    ```bash
-   mssqlctl bdc storage-pool mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --mount-path /mounts/<mount-name> --credential-file <path-to-adls-credentials>/file.creds
+   mssqlctl bdc storage-pool mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --mount-path /mounts/<mount-name>
    ```
 
    > [!NOTE]

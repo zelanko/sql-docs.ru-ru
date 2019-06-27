@@ -14,12 +14,12 @@ ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
 zone_pivot_groups: cs1-command-shell
-ms.openlocfilehash: 55061de57903d33c5f31c532f680fcf0c66684f9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 667103945781e5c7814879456027a81b77cf7338
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66506565"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67399925"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>Краткое руководство. Запускать образы контейнера SQL Server с помощью Docker
 
@@ -184,19 +184,19 @@ SELECT @@SERVERNAME,
 
    ::: zone pivot="cs1-bash"
    ```bash
-   sudo docker pull mcr.microsoft.com/mssql/server:2019-CTP3.0-ubuntu
+   sudo docker pull mcr.microsoft.com/mssql/server:2019-CTP3.1-ubuntu
    ```
    ::: zone-end
 
    ::: zone pivot="cs1-powershell"
    ```PowerShell
-   docker pull mcr.microsoft.com/mssql/server:2019-CTP3.0-ubuntu
+   docker pull mcr.microsoft.com/mssql/server:2019-CTP3.1-ubuntu
    ```
    ::: zone-end
 
    ::: zone pivot="cs1-cmd"
    ```cmd
-   docker pull mcr.microsoft.com/mssql/server:2019-CTP3.0-ubuntu
+   docker pull mcr.microsoft.com/mssql/server:2019-CTP3.1-ubuntu
    ```
    ::: zone-end
 
@@ -215,7 +215,7 @@ SELECT @@SERVERNAME,
    ```bash
    sudo docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' \
       -p 1433:1433 --name sql1 \
-      -d mcr.microsoft.com/mssql/server:2019-CTP3.0-ubuntu
+      -d mcr.microsoft.com/mssql/server:2019-CTP3.1-ubuntu
    ```
    ::: zone-end
 
@@ -223,7 +223,7 @@ SELECT @@SERVERNAME,
    ```PowerShell
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong!Passw0rd>" `
       -p 1433:1433 --name sql1 `
-      -d mcr.microsoft.com/mssql/server:2019-CTP3.0-ubuntu
+      -d mcr.microsoft.com/mssql/server:2019-CTP3.1-ubuntu
    ```
    ::: zone-end
 
@@ -231,7 +231,7 @@ SELECT @@SERVERNAME,
    ```cmd
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong!Passw0rd>" `
       -p 1433:1433 --name sql1 `
-      -d mcr.microsoft.com/mssql/server:2019-CTP3.0-ubuntu
+      -d mcr.microsoft.com/mssql/server:2019-CTP3.1-ubuntu
    ```
    ::: zone-end
 
@@ -249,7 +249,7 @@ SELECT @@SERVERNAME,
    | **-e 'SA_PASSWORD=\<YourStrong!Passw0rd\>'** | Укажите свой надежный пароль длиной не меньше восьми символов, соответствующий [требованиям к паролям в SQL Server](../relational-databases/security/password-policy.md). Обязательный параметр для образа SQL Server. |
    | **-p 1433:1433** | Сопоставление TCP-порта среды узла (первое значение) с TCP-портом в контейнере (второе значение). В этом примере SQL Server прослушивает TCP 1433 в контейнере, и он предоставляется к порту 1433 на узле. |
    | **--name sql1** | Укажите свое имя для контейнера вместо сгенерированного случайным образом. При запуске нескольких контейнеров использовать одинаковые имена запрещено. |
-   | **mcr.microsoft.com/mssql/server:2019-CTP3.0-ubuntu** | Образ контейнера SQL Server 2019 CTP 3.0 Linux. |
+   | **mcr.microsoft.com/mssql/server:2019-CTP3.1-ubuntu** | Образ контейнера SQL Server 2019 CTP3.1 Linux. |
 
 3. Для просмотра ваших контейнеров Docker используйте команду `docker ps`.
 

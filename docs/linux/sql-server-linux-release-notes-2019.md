@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8645fc41b518618194a62f24e3826b31a56596ad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4b6a8cb48e6447992fafc5b028146955668a7f66
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705263"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67399981"
 ---
 # <a name="release-notes-for-sql-server-2019-preview-on-linux"></a>Заметки о выпуске для предварительной версии SQL Server 2019 в Linux
 
@@ -47,7 +47,8 @@ ms.locfileid: "66705263"
 
 | Выпуск               | Version       | Дата выпуска |
 |-----------------------|---------------|--------------|
-| [CTP-ВЕРСИИ 3.0](#CTP30)     | 15.0.1600.8  | 2019-5-22    |
+| [CTP-ВЕРСИИ 3.1](#CTP31)     | 15.0.1700.37  | 2019-6-26    |
+| [CTP-ВЕРСИИ 3.0](#CTP30)     | 15.0.1600.8   | 2019-5-22    |
 | [CTP-ВЕРСИИ 2.5](#CTP25)     | 15.0.1500.28  | 2019-4-24    |
 | [CTP 2.4](#CTP24)     | 15.0.1400.75  | 2019-3-27    |
 | [CTP-ВЕРСИИ 2.3](#CTP23)     | 15.0.1300.359 | 2019-3-01    |
@@ -65,8 +66,28 @@ ms.locfileid: "66705263"
 - [Установите пакет Full-text Search](sql-server-linux-setup-full-text-search.md)
 - [Установка служб SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 - [Установка предварительной версии SQL Server 2019 R для служб машинного обучения и поддержки Python в Linux](sql-server-linux-setup-machine-learning.md)
+- [Установите пакет PolyBase](../relational-databases/polybase/polybase-linux-setup.md)
 - [Включить агент SQL Server](sql-server-linux-setup-sql-agent.md)
-- [Настройка для PolyBase Linux](../relational-databases/polybase/polybase-linux-setup.md)
+
+## <a id="CTP31"></a> CTP-версии 3.1 (июнь 2019 г.)
+
+В следующих разделах приведены расположения пакетов и известные проблемы для CTP-версии 3.1 выпуске. Дополнительные сведения о новых возможностях для Linux на SQL Server 2019, см. в разделе [новые возможности в SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md).
+
+### <a name="package-details"></a>Сведения о пакете
+
+Для установки пакетов вручную или автономном режиме вы можете скачать пакеты RPM и Debian с информацией в следующей таблице:
+
+| Пакет | Версия пакета | Файлы для загрузки |
+|-----|-----|-----|
+| Пакет Red Hat RPM | 15.0.1700.37-2 | [Пакет RPM ядра](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-15.0.1700.37-2.x86_64.rpm)</br>[Высокий уровень доступности RPM пакета](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-ha-15.0.1700.37-2.x86_64.rpm)</br>[Пакет RPM поиска полнотекстового поиска](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-fts-15.0.1700.37-2.x86_64.rpm)</br>[Пакет RPM расширяемости](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-15.0.1700.37-2.x86_64.rpm)</br>[Пакет RPM расширяемости Java](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-java-15.0.1700.37-2.x86_64.rpm)</br>[Пакет PolyBase RPM](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-polybase-15.0.1700.37-2.x86_64.rpm)|
+| Пакет SLES RPM | 15.0.1700.37-2 | [пакет RPM ядра MSSQL-server](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-15.0.1700.37-2.x86_64.rpm)</br>[Высокий уровень доступности RPM пакета](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-ha-15.0.1700.37-2.x86_64.rpm)</br>[Пакет RPM поиска полнотекстового поиска](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-fts-15.0.1700.37-2.x86_64.rpm)</br>[Пакет RPM расширяемости](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-15.0.1700.37-2.x86_64.rpm)</br>[Пакет RPM расширяемости Java](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-java-15.0.1700.37-2.x86_64.rpm)</br>[Пакет PolyBase RPM](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-polybase-15.0.1700.37-2.x86_64.rpm)|
+| Пакет Debian Ubuntu 16.04 | 15.0.1700.37-2 | [Пакет Debian ядра](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server/mssql-server_15.0.1700.37-2_amd64.deb)</br>[Высокий уровень доступности Debian пакета](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.1700.37-2_amd64.deb)</br>[Пакет Debian полнотекстового поиска](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.1700.37-2_amd64.deb)</br>[Пакет Debian расширяемости](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.1700.37-2_amd64.deb)</br>[Debian пакета расширения Java](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.1700.37-2_amd64.deb)</br>[Пакет PolyBase RPM](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-polybase/mssql-server-polybase_15.0.1700.37-2_amd64.deb)|
+
+### <a name="known-issues"></a>Известные проблемы
+
+#### <a id="msdtc"></a> Служба координатора распределенных транзакций
+
+В настоящее время MSDTC требует транзакции должны быть без проверки подлинности. Например если используется связанный сервер с SQL Server на Windows для SQL Server в Linux или использовать клиентское приложение Windows для запуска распределенной транзакции в SQL Server в Linux, MSDTC в Windows server или клиента, то требуется использовать параметр «No Требуется проверка подлинности».
 
 ## <a id="CTP30"></a> CTP-версии 3.0 (мая 2019 г.)
 

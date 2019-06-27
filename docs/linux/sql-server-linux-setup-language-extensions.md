@@ -4,17 +4,17 @@ description: Сведения об установке расширения яз�
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8c796d8f445f4cc1b02a0f49d12cde55e0a7ab4b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9231828263020c352700fda6a4a0a9953dd70760
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719376"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67399936"
 ---
 # <a name="install-sql-server-2019-language-extensions-java-on-linux"></a>Установка расширения языка SQL Server 2019 г. (Java) в Linux
 
@@ -28,7 +28,7 @@ ms.locfileid: "66719376"
 
 ## <a name="uninstall-previous-ctp"></a>Удаление предыдущей CTP-версии
 
-Список пакетов изменилось за последние несколько выпусков CTP, приводит к меньшим числом пакетов. Мы рекомендуем удалить CTP-версии 2.x, чтобы удалить все предыдущие пакеты перед установкой CTP-версии 3.0. Side-by-side установку нескольких версий не поддерживается.
+Список пакетов изменилось за последние несколько выпусков CTP, приводит к меньшим числом пакетов. Мы рекомендуем удалить CTP-версии 2.x, чтобы удалить все предыдущие пакеты перед установкой CTP-версии 3.1. Side-by-side установку нескольких версий не поддерживается.
 
 ### <a name="1-confirm-package-installation"></a>1. Подтверждение установки пакета
 
@@ -52,7 +52,7 @@ ls /opt/microsoft/mssql/bin
 | SLES  | `sudo zypper remove msssql-server-extensibility-java` |
 | Ubuntu    | `sudo apt-get remove msssql-server-extensibility-java`|
 
-### <a name="3-proceed-with-ctp-30-install"></a>3. Продолжить установку CTP 3.0
+### <a name="3-proceed-with-ctp-31-install"></a>3. Продолжить установку CTP 3.1
 
 Установите на самом высоком уровне пакета, с помощью инструкций в этой статье для вашей операционной системы.
 
@@ -185,6 +185,20 @@ sudo zypper install mssql-server-extensibility-java
 6. Перезапустите `mssql-launchpadd` службы снова.
 
 7. Для каждой базы данных, необходимо использовать расширения языка в, необходимо зарегистрировать внешний язык [создать внешний язык](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql).
+
+## <a name="register-external-language"></a>Регистрация внешней языка
+
+Для каждой базы данных, необходимо использовать расширения языка в, необходимо зарегистрировать внешний язык [создать внешний язык](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql).
+
+В следующем примере добавляется внешний язык, называемый Java к базе данных на сервере SQL Server в Linux.
+
+```SQL
+CREATE EXTERNAL LANGUAGE Java
+FROM (CONTENT = N'<path-to-tar.gz>', FILE_NAME = 'javaextension.so');
+GO
+```
+
+Дополнительные сведения см. в разделе [создать внешний язык](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql).
 
 ## <a name="verify-installation"></a>Проверка установки
 

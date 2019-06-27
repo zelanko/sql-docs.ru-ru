@@ -1,7 +1,7 @@
 ---
 title: dbo.sysjobhistory (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
-ms.date: 08/03/2016
+ms.date: 06/24/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -20,19 +20,22 @@ ms.assetid: 1b1fcdbb-2af2-45e6-bf3f-e8279432ce13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1797fb6183863bb0249bd0cda6024d0e95914e82
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 809e8c80ec1734c24f6930b4042b5e1a84356597
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62470852"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400102"
 ---
 # <a name="dbosysjobhistory-transact-sql"></a>dbo.sysjobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Содержит сведения о выполнении назначенных заданий агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Эта таблица хранится в **msdb** базы данных.  
+Содержит сведения о выполнении назначенных заданий агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
-> **ПРИМЕЧАНИЕ.** Данные обновляются только после завершения этапов задания.  
+> [!NOTE]
+> В большинстве случаев данные обновляются только после завершения шага задания и таблицы обычно не содержит записей для шагов задания, выполняющиеся в настоящее время, но в некоторых случаях лежащие в основе процедуры *сделать* Указание сведений о в Ход выполнения шагов задания.
+
+Эта таблица хранится в **msdb** базы данных.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
@@ -43,7 +46,7 @@ ms.locfileid: "62470852"
 |**sql_message_id**|**int**|Идентификатор любого сообщения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] об ошибке, возвращенного при сбое задания.|  
 |**sql_severity**|**int**|Уровень серьезности любой ошибки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**message**|**nvarchar(4000)**|Текст ошибки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], если он имеется.|  
-|**run_status**|**int**|Состояние выполнения задания.<br /><br /> **0** = ошибка<br /><br /> **1** = выполнено успешно<br /><br /> **2** = повторение<br /><br /> **3** = отменено<br /><br /> **4** = выполняется|  
+|**run_status**|**int**|Состояние выполнения задания.<br /><br /> **0** = ошибка<br /><br /> **1** = выполнено успешно<br /><br /> **2** = повторение<br /><br /> **3** = отменено<br /><br />**4** = выполняется|  
 |**run_date**|**int**|Дата начала выполнения задания или этапа. Для внутрипроцессного журнала это дата и время записи журнала.|  
 |**run_time**|**int**|Время запуска задания или этапа.|  
 |**run_duration**|**int**|Время, затраченное на выполнение задания или этапа в **ЧЧММСС** формат.|  
