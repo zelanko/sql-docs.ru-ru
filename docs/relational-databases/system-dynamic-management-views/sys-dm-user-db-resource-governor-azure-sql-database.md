@@ -2,10 +2,10 @@
 title: sys.dm_user_db_resource_governance (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/27/2019
-ms.prod: ''
+ms.prod: sql
+ms.technology: system-objects
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
 - sys.resource_governance
@@ -21,12 +21,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: bb4c43fa4193d9254d7f06f24bd903f974739e87
-ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
+ms.openlocfilehash: d25c4d3cfe8628c01b44a99c6e26a96adf453050
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58567640"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67413065"
 ---
 # <a name="sysdmuserdbresourcegovernance-transact-sql"></a>sys.dm_user_db_resource_governance (Transact-SQL)
 
@@ -39,14 +39,14 @@ ms.locfileid: "58567640"
 |**database_id**|ssNoversion|Идентификатор базы данных, уникальное в пределах сервера базы данных SQL Azure.|
 |**logical_database_guid**|UNIQUEIDENTIFIER|Логический идентификатор guid для пользовательской базы данных и остается на протяжении жизненного цикла пользовательской базы данных.  Переименование или перевод базы данных на другой цели уровня Обслуживания не приведет к изменению идентификатор GUID. |
 |**physical_database_guid**|UNIQUEIDENTIFIER|Guid физического для пользовательской базы данных, который остается на протяжении жизненного цикла физического экземпляра базы данных пользователей. Параметр, чтобы разные цели уровня Обслуживания вызовет этот столбец для изменения.|
-|**server_name**|NVARCHAR|Имя логического сервера.|
-|**database_name**|NVARCHAR|Имя логической базы данных.|
-|**slo_name**|NVARCHAR|Служба цели Создание и на уровне оборудования.|
+|**server_name**|nvarchar|Имя логического сервера.|
+|**database_name**|nvarchar|Имя логической базы данных.|
+|**slo_name**|nvarchar|Служба цели Создание и на уровне оборудования.|
 |**dtu_limit**|ssNoversion|Лимит DTU базы данных (NULL для виртуальное).|
 |**cpu_limit**|ssNoversion|Виртуальное ядро предел (NULL для баз данных DTU) базы данных.|
-|**min_cpu**|TINYINT|Минимальный процент ЦП, который может использоваться пользователем рабочей нагрузкой.|
-|**max_cpu**|TINYINT|Максимальный процент ЦП, который может использоваться пользователем рабочей нагрузкой.|
-|**cap_cpu**|TINYINT|Ограничение процентов ЦП для группы рабочей нагрузки пользователей.|
+|**min_cpu**|tinyint|Минимальный процент ЦП, который может использоваться пользователем рабочей нагрузкой.|
+|**max_cpu**|tinyint|Максимальный процент ЦП, который может использоваться пользователем рабочей нагрузкой.|
+|**cap_cpu**|tinyint|Ограничение процентов ЦП для группы рабочей нагрузки пользователей.|
 |**min_cores**|smallint|Количество процессоров, используемых SQL.|
 |**max_dop**|smallint|Максимальная степень параллелизма, используемых рабочую нагрузку для пользователя.|
 |**min_memory**|ssNoversion|Процент минимальный объем памяти, могут использоваться рабочую нагрузку для пользователя.|
@@ -68,15 +68,15 @@ ms.locfileid: "58567640"
 |**max_transaction_size**|BIGINT|Максимальный объем журнала, любая транзакция, в КБ.|
 |**checkpoint_rate_mbps**|ssNoversion|Контрольная точка полоса пропускания, Мбит/с.|
 |**checkpoint_rate_io**|ssNoversion|Частота установки контрольных точек операции ввода-ВЫВОДА в операций ввода-вывода в секунду.|
-|**last_updated_date_utc**|DATETIME|Дата и время последнего изменения настроек или перенастройки.|
+|**last_updated_date_utc**|datetime|Дата и время последнего изменения настроек или перенастройки.|
 |**primary_group_id**|ssNoversion|Идентификатор группы рабочей нагрузки основного пользователя.|
 |**primary_group_max_workers**|ssNoversion|Количества работников на уровне группы рабочей нагрузки основного пользователя.|
 |**primary_min_log_rate**|BIGINT|Скорость минимальное журнала (байт / с) на уровне группы рабочей нагрузки основного пользователя.|
 |**primary_max_log_rate**|BIGINT|Скорость максимальное журнала (байт / с) на уровне группы рабочей нагрузки основного пользователя.|
 |**primary_group_min_io**|ssNoversion|Минимальное операций ввода-ВЫВОДА на уровне группы рабочей нагрузки основного пользователя.|
 |**primary_group_max_io**|ssNoversion|Максимальное операций ввода-ВЫВОДА на уровне группы рабочей нагрузки основного пользователя.|
-|**primary_group_min_cpu**|FLOAT|Минимальный процент ЦП ограничить на уровне группы рабочей нагрузки основного пользователя.|
-|**primary_group_max_cpu**|FLOAT|Максимальный процент ограничения на ЦП на уровне группы рабочей нагрузки основного пользователя.|
+|**primary_group_min_cpu**|float|Минимальный процент ЦП ограничить на уровне группы рабочей нагрузки основного пользователя.|
+|**primary_group_max_cpu**|float|Максимальный процент ограничения на ЦП на уровне группы рабочей нагрузки основного пользователя.|
 |**primary_log_commit_fee**|ssNoversion|Журнал управления фиксации тариф на уровне группы рабочей нагрузки основного пользователя.|
 |**primary_pool_max_workers**|ssNoversion|Количества работников на уровне пула основного пользователя.
 |**pool_max_io**|ssNoversion|Максимальное ограничение ввода-ВЫВОДА на уровне пула основного пользователя.|

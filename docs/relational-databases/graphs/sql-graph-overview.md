@@ -1,7 +1,7 @@
 ---
 title: Граф, обработка с помощью SQL Server и базы данных SQL Azure | Документация Майкрософт
 ms.custom: ''
-ms.date: 07/18/2017
+ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dcabc19d3c83cd1ed4c9ee7b8047759e2550863e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 010d985245052949451a0b519ee4d7b312a97f4a
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62502507"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67413079"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>Граф, обработка с помощью SQL Server и базы данных SQL Azure
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -84,6 +84,9 @@ AND Person1.Name = 'John';
 [СЛИЯНИЯ](../../t-sql/statements/merge-transact-sql.md) инструкция выполняет вставки, обновления или удаления операций применительно к целевой таблице, на основе результатов соединения с исходной таблицей. Например можно синхронизировать две таблицы путем вставки, обновления или удаления строк в целевой таблице, исходя из различий между целевой и исходной таблицы. С помощью предикатов СОВПАДЕНИЯ в инструкции MERGE теперь поддерживается в базе данных SQL Azure и SQL Server vNext. То есть это теперь возможность объединять данные графа текущего (узла или граничной таблицы) с использованием предикатов СОВПАДЕНИЕ задать граф связей в одной инструкции, а не отдельных инструкций INSERT/UPDATE/DELETE новых данных.
 
 Дополнительные сведения об использовании совпадение при слиянии DML см. в [инструкции MERGE](../../t-sql/statements/merge-transact-sql.md)
+
+## <a name="shortest-path"></a>Кратчайший путь
+[SHORTEST_PATH](./sql-graph-shortest-path.md) функция находит кратчайший путь между любыми 2 узлами в диаграмму или начиная с заданного узла на другие узлы в графе. Кратчайший путь можно использовать также для поиска транзитивное замыкание или для обходов произвольной длины в графе. 
 
  ## <a name="next-steps"></a>Следующие шаги  
 Чтение [Graph базы данных SQL — архитектура](./sql-graph-architecture.md)

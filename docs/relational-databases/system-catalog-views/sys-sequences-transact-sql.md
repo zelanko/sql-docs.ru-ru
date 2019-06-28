@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e33dfa78117b68d1cb67baed2aea6bd7f5487e5b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 64532403f495a65cd61fbf6a8bc95369a0a4add3
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398127"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67413081"
 ---
 # <a name="syssequences-transact-sql"></a>sys.sequences (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,8 +48,9 @@ ms.locfileid: "52398127"
 |**user_type_id**|**int NOT NULL**|Определенный пользователем идентификатор типа данных для объекта последовательности.|  
 |**precision**|**tinyint NOT NULL**|Максимальная точность типа данных.|  
 |**масштаб**|**tinyint NOT NULL**|Максимальный масштаб типа данных. Масштаб возвращается вместе с точностью для предоставления пользователю полных метаданных. Масштаб объектов последовательности всегда равен 0, поскольку для них допустимы только целочисленные типы.|  
-|**Текущее значение**|**sql_variant NOT NULL**|Последнее предоставленное значение. То есть значение, возвращаемое из последнего выполнения функции NEXT VALUE FOR или последнее значение выполнения **sp_sequence_get_range** процедуры. Если последовательность не использовалась, возвращается значение START WITH.|  
+|**current_value**|**sql_variant NOT NULL**|Последнее предоставленное значение. То есть значение, возвращаемое из последнего выполнения функции NEXT VALUE FOR или последнее значение выполнения **sp_sequence_get_range** процедуры. Если последовательность не использовалась, возвращается значение START WITH.|  
 |**is_exhausted**|**бит NOT NULL**|0 указывает, что последовательность еще может предоставлять новые значения. 1 указывает, что объект последовательности достиг значения MAXVALUE и для последовательности не задан параметр CYCLE. Функция NEXT VALUE FOR будет возвращать ошибку, пока последовательность не будет перезапущена с помощью инструкции ALTER SEQUENCE.|  
+|**last_used_value**|**sql_variant NULL**|Возвращает последнее значение, сформированное путем [Next Value For](../../t-sql/functions/next-value-for-transact-sql.md) функции. Применяется к SQL Server 2017 и более поздней версии.|  
   
 ## <a name="permissions"></a>Разрешения  
  В [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версиях видимость метаданных в представлениях каталогов ограничивается защищаемыми объектами, которыми пользователь владеет или на которые ему были предоставлены разрешения. Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

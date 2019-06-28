@@ -1,7 +1,7 @@
 ---
 title: Добавление моментального снимка к журналу отчета (диспетчер отчетов) | Документы Майкрософт
-ms.prod: reporting-services-2014
-ms.technology: reporting-services-native
+ms.prod: sql-server-2014
+ms.technology: reporting-services
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - report snapshots [Reporting Services], adding
 ms.custom: ''
 ms.date: 06/13/2017
-ms.openlocfilehash: 633ac335067f579459809264fb055ff43481f4e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 00b1caa2f68da0a3a38d98cf35f959f83257b99e
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63135088"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67413119"
 ---
 # <a name="add-a-snapshot-to-report-history-report-manager"></a>добавить моментальный снимок к журналу отчета (диспетчер отчетов)
 
@@ -73,7 +73,7 @@ ms.locfileid: "63135088"
   
 ## <a name="see-also"></a>См. также
 
-- [Настройка свойств выполнения для отчета &#40;диспетчера отчетов&#41;](../reports/configure-execution-properties-for-a-report-report-manager.md)
+- [Настройка свойств выполнения для отчета (диспетчер отчетов)](../reports/configure-execution-properties-for-a-report-report-manager.md)
 - [Открытие и закрытие отчетов (диспетчер отчетов)](../reports/open-and-close-a-report-report-manager.md)
 - [Ограничение размеров журнала отчета (диспетчер отчетов)](../reports/limit-report-history-report-manager.md)
 - [Расписания](../subscriptions/schedules.md)   

@@ -3,25 +3,26 @@ title: Задача "Очистка журнала" (план обслужива
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
-ms.reviewer: ''
-ms.technology: supportability"
+ms.technology: supportability
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.maint.historycleanup.f1
 helpviewer_keywords:
 - History Cleanup Task dialog box
 ms.assetid: 66bb6c39-958c-4053-a27f-b1118d2567f5
+ms.reviewer: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a0629aa0787b535f0a577c60751665d7a2dd760e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a2b398a9910926ca2ced339395feaf938c31d519
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806806"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67412709"
 ---
 # <a name="history-cleanup-task-maintenance-plan"></a>Задача «Очистка журнала» (план обслуживания)
+
   Используйте диалоговое окно **Задача «Очистка журнала»** , чтобы исключить устаревшие данные предыстории из таблиц в базе данных msdb. Эта задача поддерживает удаление и восстановление журнала резервного копирования, журнала заданий агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , а также журнала плана обслуживания.  
   
  Эта инструкция применяет инструкции **sp_purge_jobhistory** и **sp_delete_backuphistory** .  

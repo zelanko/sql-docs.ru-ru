@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: cbb4860cd747e454a09f1374d3b166fae466ee33
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ffb63e3e7fb2891aeed1b9b26fbc43dddf69c78e
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797918"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67412965"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>Установка средств SQL Server 2019 больших данных
 
@@ -33,7 +33,7 @@ ms.locfileid: "66797918"
 |---|---|---|---|
 | **mssqlctl** | Да | Средство командной строки для установки и управления ими кластерам больших данных. | [Установка](deploy-install-mssqlctl.md) |
 | **kubectl**<sup>1</sup> | Да | Средство командной строки для мониторинга базового кластера Kuberentes ([сведения](https://kubernetes.io/docs/tasks/tools/install-kubectl/)). | [Windows](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-with-powershell-from-psgallery) \| [Linux](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-native-package-management) |
-| **Azure Data Studio** | Да | Кросс платформенных графическое средство для выполнения запросов к SQL Server ([сведения](https://docs.microsoft.com/sql/azure-data-studio/what-is?view=sql-server-ver15)). | [Установка](../azure-data-studio/download.md) |
+| **Azure Data Studio (участников программы предварительной оценки)** | Да | Кросс платформенных графическое средство для выполнения запросов к SQL Server ([сведения](https://docs.microsoft.com/sql/azure-data-studio/what-is?view=sql-server-ver15)). | [Установка](https://aka.ms/azdata-insiders) |
 | **Расширение SQL Server 2019** | Да | Расширение для Azure Data Studio, которая поддерживает подключение к кластеру больших данных. Также предоставляет мастер виртуализации данных. | [Установка](../azure-data-studio/sql-server-2019-extension.md) |
 | **Azure CLI**<sup>2</sup> | Для AKS | Современный интерфейс командной строки для управления службами Azure. Используется при развертывании кластера AKS больших данных ([сведения](https://docs.microsoft.com/cli/azure/?view=azure-cli-latest)). | [Установка](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest) |
 | **mssql-cli** | Необязательно | Современный интерфейс командной строки для выполнения запросов к SQL Server ([сведения](https://github.com/dbcli/mssql-cli/blob/master/README.rst)). | [Windows](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/windows.md) \| [Linux](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/linux.md) |
