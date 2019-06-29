@@ -5,16 +5,16 @@ description: Узнайте, как установить средство mssqlc
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 06/26/2019
+ms.date: 06/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 399f82778f54c96112875c9af389a8b427ad759a
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 31167ae419c98fcd0166b1bd8056ea0d7976b674
+ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388820"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67463447"
 ---
 # <a name="install-mssqlctl-to-manage-sql-server-big-data-clusters"></a>Установка mssqlctl для управления кластерами больших данных в SQL Server
 
@@ -91,7 +91,7 @@ ms.locfileid: "67388820"
 1. Установка **mssqlctl** , выполнив следующую команду:
 
    ```bash
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp-3.1/mssqlctl/requirements.txt --user
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp3.1/mssqlctl/requirements.txt --user
    ```
 
    > [!NOTE]
