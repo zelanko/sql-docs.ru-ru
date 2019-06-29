@@ -3,7 +3,7 @@ title: Как использовать записные книжки SQL в Azur
 titleSuffix: Azure Data Studio
 description: Узнайте, как использовать записные книжки SQL в Azure Data Studio
 ms.custom: seodec18
-ms.date: 03/17/2019
+ms.date: 06/28/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: achatter; alayu; sstein
@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: jroth
-ms.openlocfilehash: 6ac15dcd6b440a8c3bcca0c468a79548469fe059
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 02146596b8c0c21531d269a815f97512b5c955a5
+ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798041"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67469082"
 ---
 # <a name="how-to-use-notebooks-in-azure-data-studio"></a>Использование записных книжек в Azure Data Studio
 
@@ -163,14 +163,13 @@ import <package-name>
 
 При выполнении этой команды `Module not found` возвращается. Если пакет существует, то не будет ошибка.
 
-Если он возвращает `Module not Found` ошибки, а затем щелкните **управление пакетами** запуск терминал. Теперь можно установить пакеты локально. Чтобы установить пакеты, используйте следующие команды:
+Если он возвращает `Module not Found` ошибки, а затем щелкните **управление пакетами** для запуска работу мастера. 
 
-```bash
-./pip install <package-name>
-```
+![Image17](media/sql-notebooks/manage-packages.png)
 
-   > [!Tip]
-   > На компьютере Mac выполните инструкции в окне терминала для установки пакетов. 
+В этом мастере можно будет см. в разделе **установленные** пакетов. Можно выполнять поиск по списку и соответствующая версия каждого из этих пакетов. Если вам нужно **удаление** любой из этих пакетов, то можно щелкнуть один из пакетов и выберите команду **Удалите выбранные пакеты** параметр.
+
+Вы также сможете щелкнуть **добавить** пакетов **поиска** определенный пакет, выберите связанные версии и нажмите кнопку **установить**. По умолчанию мы выберем последнюю версию которой выполняется поиск пакета. 
 
 После установки пакета вы сможете перейдите в ячейку записной книжки и введите следующую команду:
 
@@ -178,11 +177,7 @@ import <package-name>
 import <package-name>
 ```
 
-Чтобы удалить пакет, используйте следующую команду из терминала:
-
-```bash
-./pip uninstall <package-name>
-```
+Если вам нужно **удаление** любой из этих пакетов, то можно щелкнуть один или несколько пакетов и выберите команду **Удалите выбранные пакеты** параметр.
 
 ## <a name="next-steps"></a>Следующие шаги
 

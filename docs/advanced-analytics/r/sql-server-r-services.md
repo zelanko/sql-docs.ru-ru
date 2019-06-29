@@ -8,12 +8,13 @@ ms.topic: overview
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 14be74e19219fee834a4ab82e74c004a4e426483
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+monikerRange: =sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: bc506d245878d459a3c4639ff4e5a6c2f2a9f8f6
+ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62642331"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67469106"
 ---
 # <a name="r-services-in-sql-server-2016"></a>Службы R в SQL Server 2016
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -25,7 +26,7 @@ ms.locfileid: "62642331"
 Библиотеки R включают в себя [ **RevoScaleR**](ref-r-revoscaler.md), [ **MicrosoftML (R)** ](ref-r-microsoftml.md)и другие. Так как службы R интегрирована с ядром СУБД, можно поддерживать аналитикой рядом с данными и избежав затрат и рисков, связанных с перемещением данных.
 
 > [!Note]
-> Службы R был переименован в SQL Server 2017 для [службы машинного обучения SQL Server](../what-is-sql-server-machine-learning.md), отражая Добавление Python.
+> Службы R был переименован в SQL Server 2017 и более поздние версии, чтобы [службы машинного обучения SQL Server](../what-is-sql-server-machine-learning.md), отражая Добавление Python.
 
 ## <a name="components"></a>Компоненты
 

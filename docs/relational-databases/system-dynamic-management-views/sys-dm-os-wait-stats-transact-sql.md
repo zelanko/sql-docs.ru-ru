@@ -21,12 +21,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4f4d66846be52a1f42a87f6dd11a584ace4e3ac4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e85d3d1257b4cd873ddb1686a78d746cf92021c3
+ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66499684"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67469143"
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -346,6 +346,7 @@ GO
 |HADR_TDS_LISTENER_SYNC |Внутренняя система Always On или кластер WSFC запросит запуск или остановку прослушивателей. Обработка этого запроса всегда выполняется асинхронно, и существует механизм для удаления избыточных запросов. Существуют также моменты, когда этот процесс приостанавливается из-за изменений в конфигурации. Все ожидания, связанные с этим механизмом синхронизации прослушивателей, используют этот тип ожидания. Только для внутреннего использования., <br /> **Применимо к**: с [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |HADR_TDS_LISTENER_SYNC_PROCESSING |Используется в конце инструкции Transact-SQL AlwaysOn, которая требует запуска или остановки прослушивателя группы доступности. Поскольку операция запуска или остановки выполняется асинхронно, пользовательский поток будет блокировать использовать этот тип ожидания, пока состояние прослушивателя известно., <br /> **Применимо к**: с [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |HADR_THROTTLE_LOG_RATE_GOVERNOR |Только для внутреннего применения. <br /> **Применимо к**: с [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
+|HADR_THROTTLE_LOG_RATE_MISMATCHED_SLO | Происходит, когда базу данных-получатель георепликации настраивается с помощью нижней вычислить размер (нижней SLO), чем у основного. Вы можете регулировать базы данных-источника из-за отложенной журналов потребления вторичным. Это вызвано наличие вычислений недостаточно емкости для базы данных-источника в скорости изменения базы данных-получателя. <br /> **Область применения**: База данных SQL Azure| 
 |HADR_THROTTLE_LOG_RATE_LOG_SIZE |Только для внутреннего применения. <br /> **Применимо к**: с [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |HADR_THROTTLE_LOG_RATE_SEEDING |Только для внутреннего применения. <br /> **Применимо к**: с [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |HADR_THROTTLE_LOG_RATE_SEND_RECV_QUEUE_SIZE |Только для внутреннего применения. <br /> **Применимо к**: с [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 

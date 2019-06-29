@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 424b09f9cd18a3fa68eb8a3ade26eecc1191ef72
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 1f2d7f5a1d4a966edbce3c4ad96a7b31bd604b48
+ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388638"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67469125"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>Заметки о выпуске для кластеров больших данных в SQL Server
 
@@ -36,7 +36,7 @@ ms.locfileid: "67388638"
 | `mssqlctl` команда изменяет | `mssqlctl cluster` команды были переименованы в `mssqlctl bdc`. Дополнительные сведения см. в разделе [ `mssqlctl` ссылку](reference-mssqlctl.md). |
 | Новый `mssqlctl` командах состояния и удаления на портал администрирования кластера. | В этом выпуске удаляется на портале администрирования кластера. Были добавлены новые команды состояние `mssqlctl` дополнения существующих мониторинга команды. |
 | Пулов вычислительных Spark | Создание дополнительных узлов для увеличения вычислительной мощности Spark без необходимости для увеличения масштаба хранилища. Кроме того вы можете начать узлы пула хранения, которые не используются для Spark. Spark и хранилище связаны между собой. Дополнительные сведения см. в разделе [настройки хранилища без spark](deployment-custom-configuration.md#sparkstorage). |
-| Соединитель MSSQL Spark | Поддержка чтения и записи к внешним таблицам данных пула. Предыдущие выпуски, поддерживаемые на чтение и запись главного экземпляра только таблицы. |
+| Соединитель MSSQL Spark | Поддержка чтения и записи к внешним таблицам данных пула. Предыдущие выпуски, поддерживаемые на чтение и запись главного экземпляра только таблицы. Дополнительные сведения см. в разделе [как для чтения и записи к SQL Server из Spark с помощью соединителя Spark MSSQL](spark-mssql-connector.md). |
 | С помощью MLeap машинного обучения | [Обучить модель машинного обучения MLeap в Spark и оценить ее в SQL Server с помощью расширения языка Java](spark-create-machine-learning-model.md). |
 
 ### <a name="known-issues"></a>Известные проблемы
