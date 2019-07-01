@@ -9,12 +9,12 @@ ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
 manager: craigg
-ms.openlocfilehash: 1204b3a4aabf4a170901154c656b5f84d05fda82
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6fd837276436de158f58fd2f66ed864930fe6032
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63269919"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400045"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -602,4 +602,10 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |**/p:**|UnmodifiableObjectWarnings = (ЛОГИЧЕСКОЕ "True")|Указывает, следует ли формировать предупреждения, если обнаружены различия в объектах, которые не могут быть изменены (например, если отличаются размеры или пути файлов).|
 |**/p:**|VerifyCollationCompatibility = (ЛОГИЧЕСКОЕ "True")|Указывает, проверяется ли совместимость параметров сортировки.
 |**/p:**|VerifyDeployment = (ЛОГИЧЕСКОЕ "True")|Указывает, следует ли выполнять проверки перед началом публикации, останавливаемой при возникновении проблем, которые могут заблокировать успешную публикацию. Например, публикация может остановиться в случае, если во время публикации возникли ошибки, связанные с тем, что внешние ключи в целевой базе данных не существуют в проекте базы данных.|
-  
+
+## <a name="exit-codes"></a>Коды выхода
+
+Команды, которые возвращают следующие коды выхода:
+
+- 0 = успешное завершение;
+- ненулевое значение = неуспешное завершение

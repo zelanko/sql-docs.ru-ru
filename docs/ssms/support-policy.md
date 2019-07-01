@@ -12,11 +12,11 @@ author: dnethi
 ms.author: dinethi
 manager: craigg
 ms.openlocfilehash: 3fa971160eb4a8d2caa4773c4a9c4ccef1b31027
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524614"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62935002"
 ---
 # <a name="sql-server-management-studio-ssms-support-policy"></a>Политика поддержки SQL Server Management Studio (SSMS)
 
@@ -36,7 +36,7 @@ ms.locfileid: "52524614"
 
 Для достижения максимально эффективного уровня работы рекомендуется, чтобы клиенты установили самую последнюю версию со страницы https://aka.ms/ssms.  
 
-Этап обслуживания **Полная поддержка**: при использовании последней версии Current Branch среды SQL Server Management Studio вы получаете все обновления — обновления для системы безопасности, критические обновления, новые возможности т. д.
+Этап обслуживания **Полная поддержка**: при использовании последней версии Current Branch среды SQL Server Management Studio вы получаете все обновления — обновления для системы безопасности, критические обновления, новые возможности и т. д.
 
 
 

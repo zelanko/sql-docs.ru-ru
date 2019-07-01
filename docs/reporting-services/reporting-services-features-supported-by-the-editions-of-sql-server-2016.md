@@ -6,13 +6,13 @@ ms.technology: reporting-services
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 11/01/2018
-ms.openlocfilehash: b536d94f5dcfb332f39733f8e3a116294a7d40c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.date: 06/20/2019
+ms.openlocfilehash: eca8f43d358ca3869c3812a457b710d64dadeaf5
+ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65936555"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67343881"
 ---
 # <a name="sql-server-reporting-services-features-supported-by-its-editions"></a>Возможности служб SQL Server Reporting Services, поддерживаемые различными выпусками
 
@@ -53,7 +53,7 @@ ms.locfileid: "65936555"
 |Библиотека общих компонентов|Да|Да|||Да|  
 |Подписка и планирование по электронной почте и в общую папку|Да|Да|||Да|  
 |Журнал отчета, моментальные снимки выполнения и кэширование|Да|Да|||Да|  
-|интеграция с SharePoint|Да|Да|||Да|  
+|Интеграция с SharePoint<sup>2</sup>|Да|Да|||Да|  
 |Поддержка удаленных источников данных и источников данных, отличных от SQL<sup>1</sup>|Да|Да|||Да|  
 |Источник данных, доставка, модуль подготовки отчетов, расширение RDCE|Да|Да|||Да|  
 |Индивидуальная фирменная символика|Да||||Да|  
