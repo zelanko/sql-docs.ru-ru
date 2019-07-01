@@ -14,12 +14,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ba776c683ea05665708891dbe734e82591077bf7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cd0a4a2850af0bcd954db1c257adef209d5876c8
+ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64946232"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67218999"
 ---
 # <a name="create-a-format-file-sql-server"></a>Создание файла форматирования (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "64946232"
  Как правило, XML-файлы и файлы форматирования в формате, отличном от XML взаимозаменяемы. Однако рекомендуется пользоваться XML-синтаксисом новых файлов форматирования, так как он обеспечивает ряд преимуществ перед файлами форматирования в формате, отличном от XML.  
   
 > [!NOTE]  
->  Версия служебной программы **bcp** (Bcp.exe), которая используется для чтения файла форматирования, должна соответствовать версии, используемой при создании этого файла форматирования, или более поздней версии. Например, служебная программа [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]**bcp** может считать файл форматирования версии 10.0, созданный служебной программой [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]**bcp**, но служебная программа [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]**bcp** не может считать файл форматирования версии 11.0, созданный служебной программой [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]**bcp**.  
+>  Версия служебной программы **bcp** (Bcp.exe), которая используется для чтения файла форматирования, должна соответствовать версии, используемой при создании этого файла форматирования, или более поздней версии. Например, служебная программа [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] **bcp** может считать файл форматирования версии 10.0, созданный служебной программой [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **bcp**, но служебная программа [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **bcp** не может считать файл форматирования версии 11.0, созданный служебной программой [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] **bcp**.  
   
  В этом разделе описано применение программы [bcp](../../tools/bcp-utility.md) для создания файла форматирования для таблицы. Файл форматирования основан на заданных параметрах типов данных ( **-n**, **-c**, **-w**или **-N**) и разделителях таблиц или представлений.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "64946232"
  **bcp** _таблица_или_представление_ **format** nul **-f**_имя_файла_формата_  
   
 > [!NOTE]  
->  Для файлов форматирования в формате, отличном от XML рекомендуется использовать расширение FMT, например MyTable.fmt.  
+> Для файлов форматирования в формате, отличном от XML рекомендуется использовать расширение FMT, например MyTable.fmt.  
   
  Сведения о структуре и полях файлов форматирования в формате, отличном от XML, см. в разделе [Файлы формата, отличные от XML (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md).  
   
@@ -172,7 +172,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
  **bcp** _таблица_или_представление_ **format nul-f** _имя_файла_формата_ **-x**  
   
 > [!NOTE]  
->  Для XML-файлов форматирования рекомендуется использовать расширение XML, например MyTable.xml.  
+> Для XML-файлов форматирования рекомендуется использовать расширение XML, например MyTable.xml.  
   
  Сведения о структуре и полях файлов форматирования в формате XML, см. в разделе [XML-файлы форматирования (SQL Server)](../../relational-databases/import-export/xml-format-files-sql-server.md).  
   
@@ -180,7 +180,6 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
  В этом разделе содержатся следующие примеры использования команд **bcp** для создания XML-файлов форматирования.  
   
 -   A. Создание XML-файла форматирования для символьных данных  
-  
 -   Б. Создание XML-файла форматирования для данных в собственном формате  
   
  В этом примере используется таблица `HumanResources.Department` в образце базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Таблица `HumanResources.Department` содержит четыре столбца: `DepartmentID`, `Name`, `GroupName`и `ModifiedDate`.  
@@ -203,7 +202,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
  В командной строке Windows введите следующую команду `bcp` :  
   
 ```cmd
-bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-c..xml -t, -T  
+bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-c.xml -t, -T  
 ```  
   
  Созданный файл форматирования `Department-c.xml`содержит следующие XML-элементы:  
@@ -242,7 +241,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-
  В командной строке Windows введите следующую команду `bcp` :  
   
 ```cmd
-bcp AdventureWorks2012.HumanResources.Department format nul -x -f Department-n..xml -n -T  
+bcp AdventureWorks2012.HumanResources.Department format nul -x -f Department-n.xml -n -T  
 ```  
   
  Созданный файл форматирования `Department-n.xml`содержит следующие XML-элементы:  

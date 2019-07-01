@@ -14,11 +14,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2ab9b5d763fba9d33af7ccfb9229e223522a919f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615222"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62446761"
 ---
 # <a name="spcacheremove-event-class"></a>SP:CacheRemove, класс событий
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47615222"
 |DatabaseName|**nvarchar**|Имя базы данных, в которой выполняется хранимая процедура.|35|Да|  
 |EventClass|**int**|Тип события = 36.|27|нет|  
 |EventSequence|**int**|Последовательность данного события в запросе.|51|нет|  
-|EventSubClass|**int**|Тип подкласса события.<br /><br /> 1 = удаление из плана Comppla: скомпилированный план запроса был удален из кэша.<br /><br /> 2 = сброс кэша процедур: все записи были удалены из кэша процедур.|21|Да|  
+|EventSubClass|**int**|Тип подкласса события.<br /><br /> 1 = удаление из плана Compplan. Скомпилированный план запроса был удален из кэша.<br /><br /> 2 = сброс кэша процедур. Все записи были удалены из кэша процедур.|21|Да|  
 |GroupID|**int**|Идентификатор группы рабочей нагрузки, в которой запускается событие трассировки SQL.|66|Да|  
 |HostName|**nvarchar**|Имя компьютера, на котором выполняется клиентская программа. Этот столбец данных заполняется, если клиент предоставляет имя узла. Чтобы определить имя узла, используйте функцию HOST_NAME.|8|Да|  
 |IsSystem|**int**|Указывает, произошло событие в системном или в пользовательском процессе. 1 = системный, 0 = пользовательский.|60|Да|  

@@ -1,7 +1,7 @@
 ---
 title: Настройка постоянного шифрования с помощью PowerShell | Документация Майкрософт
 ms.custom: ''
-ms.date: 05/17/2017
+ms.date: 06/26/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -11,12 +11,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 529aaf3e6de3d748ee998b4b345bf90e84a885f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a65a662ad178eaf5e6ae620c7b66a64fd63e75ae
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62521688"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67387971"
 ---
 # <a name="configure-always-encrypted-using-powershell"></a>Configure Always Encrypted using PowerShell
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "62521688"
 
 Командлеты для постоянного шифрования в модуле SqlServer работают с ключами или конфиденциальными данными, поэтому очень важно выполнять командлеты на защищенном компьютере. При управлении Always Encrypted командлеты нужно запускать на компьютере, отличном от компьютера с экземпляром SQL Server.
 
-Так как основной задачей функции постоянного шифрования является обеспечение целостности зашифрованных конфиденциальных данных даже в случае нарушения безопасности системы базы данных, выполнение скрипта PowerShell, обрабатывающего ключи или конфиденциальные данные на сервере SQL Server, может снизить или вообще отменить эффект действия функции. Дополнительные рекомендации по безопасности см. в разделе [Security Considerations for Key Management](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md#SecurityForKeyManagement)(Вопросы безопасности для управления ключами).
+Так как основной задачей функции постоянного шифрования является обеспечение целостности зашифрованных конфиденциальных данных даже в случае нарушения безопасности системы базы данных, выполнение скрипта PowerShell, обрабатывающего ключи или конфиденциальные данные на сервере SQL Server, может снизить или вообще отменить эффект действия функции. Дополнительные рекомендации по безопасности см. в разделе [Security Considerations for Key Management](overview-of-key-management-for-always-encrypted.md#security-considerations-for-key-management)(Вопросы безопасности для управления ключами).
 
 Ссылки на статьи, посвященные отдельным командлетам, указаны [внизу страницы](#aecmdletreference).
 

@@ -7,12 +7,12 @@ ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 ms.date: 01/15/2019
-ms.openlocfilehash: 490a21572d1a62bbf90754a8c33e0aa98bac0aea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2560c752dd55741e1718ba60f942288093d027bb
+ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65571350"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67463583"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>Свойства сервера (страница «Дополнительно») — службы Reporting Services
 
@@ -93,8 +93,9 @@ ms.locfileid: "65571350"
 
 **AccessControlMaxAge**. Задает время в секундах, в течение которого результаты запроса preflight могут кэшироваться. Значение по умолчанию — 600 (10 минут).
 
-**AllowedResourceExtensionsForUpload** ***(только Сервер отчетов Power BI)***. Задает расширения ресурсов, которые можно отправлять на сервер отчетов. Расширения встроенных типов файлов, таких как &ast;.rdl и &ast;.pbix, включать не нужно. Значение по умолчанию — "&ast;, &ast;.xml, &ast;.xsd, &ast;.xsl, &ast;.png, &ast;.gif, &ast;.jpg, &ast;.tif, &ast;.jpeg, &ast;.tiff, &ast;.bmp, &ast;.pdf, &ast;.svg, &ast;.rtf, &ast;.txt, &ast;.doc, &ast;.docx, &ast;.pps, &ast;.ppt, &ast;.pptx". 
+**AllowedResourceExtensionsForUpload** набор расширений ресурсов, которые могут быть загружены на сервер отчетов. Расширения встроенных типов файлов, таких как &ast;.rdl и &ast;.pbix, включать не нужно. Значение по умолчанию — "&ast;, &ast;.xml, &ast;.xsd, &ast;.xsl, &ast;.png, &ast;.gif, &ast;.jpg, &ast;.tif, &ast;.jpeg, &ast;.tiff, &ast;.bmp, &ast;.pdf, &ast;.svg, &ast;.rtf, &ast;.txt, &ast;.doc, &ast;.docx, &ast;.pps, &ast;.ppt, &ast;.pptx".
 
+**RestrictedResourceMimeTypeForUpload** набор пользователей типы mime не права на отправку содержимого с помощью. Все ресурсы, которые уже хранятся с типом mime с ограниченным доступом может загружаться только как приложения/octet-stream не открыт и выполняется с помощью браузера.  По умолчанию нет ограниченных элементов в этом списке, но корпорация Майкрософт рекомендует организациям заполнить это, чтобы обеспечить наиболее безопасную работу.
 
 **EditSessionCacheLimit**  
 Указывает количество записей кэша данных, которые могут быть активны в сеансе изменения отчета. По умолчанию количество задается равным 5.  

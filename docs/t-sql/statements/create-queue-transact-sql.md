@@ -26,12 +26,12 @@ ms.assetid: fce80faf-2bdc-475d-8ca1-31438ed41fb0
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ab7873152b9ae372c3d61d2906d3b52a055d4130
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1f7c970293a68e1ecf4df19ac70bb0e7e1ba303a
+ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65503239"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67232558"
 ---
 # <a name="create-queue-transact-sql"></a>CREATE QUEUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -163,32 +163,32 @@ CREATE QUEUE <object>
 |message_id|**uniqueidentifier**|Уникальный идентификатор для сообщения.|  
   
 ## <a name="permissions"></a>Разрешения  
- Разрешение на создание службы имеют члены предопределенных ролей базы данных db_ddladmin и db_owner  и предопределенной роли сервера sysadmin.  
+ Разрешение на создание службы имеют члены предопределенных ролей базы данных `db_ddladmin` и `db_owner` и предопределенной роли сервера `sysadmin`.  
   
- Разрешение REFERENCES на очередь по умолчанию имеет владелец очереди, члены предопределенных ролей db_admin или db_owner базы данных, а также члены предопределенной роли сервера sysadmin.  
+ Разрешение `REFERENCES` на очередь по умолчанию имеет владелец очереди, члены предопределенных ролей `db_ddladmin` или `db_owner` базы данных, а также члены предопределенной роли сервера `sysadmin`.  
   
- Разрешение RECEIVE на очередь по умолчанию имеет владелец очереди, члены предопределенной роли базы данных db_owner и члены предопределенной роли сервера sysadmin.  
+ Разрешение `RECEIVE` на очередь по умолчанию имеет владелец очереди, члены предопределенной роли `db_owner` базы данных, а также члены предопределенной роли сервера `sysadmin`.  
   
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-creating-a-queue-with-no-parameters"></a>A. Создание очереди без параметров  
  В следующем примере создается очередь, готовая к приему сообщений. Для очереди не указана хранимая процедура активации.  
   
-```  
+```sql  
 CREATE QUEUE ExpenseQueue ;  
 ```  
   
 ### <a name="b-creating-an-unavailable-queue"></a>Б. Создание недоступной очереди  
  В следующем примере создается очередь, недоступная для приема сообщений. Для очереди не указана хранимая процедура активации.  
   
-```  
+```sql  
 CREATE QUEUE ExpenseQueue WITH STATUS=OFF ;  
 ```  
   
 ### <a name="c-creating-a-queue-and-specify-internal-activation-information"></a>В. Создание очереди с указанием внутренних сведений об активации  
  В следующем примере создается очередь, готовая к приему сообщений. При поступлении сообщения в очередь запускается хранимая процедура `expense_procedure`. Хранимая процедура выполняется в контексте пользователя `ExpenseUser`. Очередь запускает не более `5` экземпляров хранимой процедуры.  
   
-```  
+```sql  
 CREATE QUEUE ExpenseQueue  
     WITH STATUS=ON,  
     ACTIVATION (  
@@ -200,7 +200,7 @@ CREATE QUEUE ExpenseQueue
 ### <a name="d-creating-a-queue-on-a-specific-filegroup"></a>Г. Создание очереди для указанной файловой группы  
  В следующем примере создается очередь на основании файловой группы `ExpenseWorkFileGroup`.  
   
-```  
+```sql  
 CREATE QUEUE ExpenseQueue  
     ON ExpenseWorkFileGroup ;  
 ```  
@@ -208,7 +208,7 @@ CREATE QUEUE ExpenseQueue
 ### <a name="e-creating-a-queue-with-multiple-parameters"></a>Д. Создание очереди с несколькими параметрами  
  В следующем примере создается очередь на основании файловой группы `DEFAULT`. Очередь недоступна для приема сообщений. Сообщения хранятся в очереди до завершения диалога, которому они принадлежат. При переключении очереди в состояние готовности к приему сообщений с помощью инструкции ALTER QUEUE в очереди активируется хранимая процедура `2008R2.dbo.expense_procedure` для обработки сообщений. Хранимая процедура выполняется в контексте пользователя, выполнившего инструкцию `CREATE QUEUE`. Очередь запускает не более `10` экземпляров хранимой процедуры.  
   
-```  
+```sql  
 CREATE QUEUE ExpenseQueue  
     WITH STATUS = OFF,  
       RETENTION = ON,  
