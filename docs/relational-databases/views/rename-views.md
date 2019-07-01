@@ -16,11 +16,11 @@ ms.author: sstein
 ms.manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fdc46b1d0addad193f5bc09a9bcd60fab9efe027
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418175"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62744037"
 ---
 # <a name="rename-views"></a>Переименование представлений
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "52418175"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Follow Up:**  [After renaming a view](#FollowUp)  
+-   **Дальнейшие действия.**  [После переименования представления](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
@@ -72,7 +72,7 @@ ms.locfileid: "52418175"
   
  Дополнительные сведения см. в разделах [CREATE VIEW (Transact-SQL)](../../t-sql/statements/create-view-transact-sql.md) и [DROP VIEW (Transact-SQL)](../../t-sql/statements/drop-view-transact-sql.md).  
   
-##  <a name="FollowUp"></a> Продолжение: после переименования представления  
+##  <a name="FollowUp"></a> Дальнейшие действия. После переименования представления  
  Убедитесь, что все объекты, скрипты и приложения, ссылающиеся на предыдущее имя представления, теперь используют новое имя.  
   
   

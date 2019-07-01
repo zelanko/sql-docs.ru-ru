@@ -13,11 +13,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 187a333da1f38cc89f8783b48e0c171630339c9b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766183"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63034844"
 ---
 # <a name="temporal-table-system-consistency-checks"></a>Проверка согласованности системной темпоральной таблицы
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "47766183"
 10. Таблица журнала не настроена на отслеживание изменений или запись измененных данных.  
   
 ### <a name="data-consistency-check"></a>Проверка согласованности данных  
- Прежде чем **SYSTEM_VERSIONING** примет значение **ON** , в рамках операции DML система выполнит следующую проверку: **SysEndTime** ≥**SysStartTime**  
+ Прежде чем **SYSTEM_VERSIONING** примет значение **ON**, в рамках операции DML система выполнит следующую проверку: **SysEndTime** ≥ **SysStartTime**  
   
  При создании ссылки на существующую таблицу журнала вы можете указать необходимость проверки согласованности данных. Проверка согласованности данных гарантирует, что существующие записи не будут перекрываться и что для каждой записи будут выполняться временные требования. Проверка согласованности данных является проверкой по умолчанию. Как правило, выполнение проверки согласованности данных рекомендуется, когда данные текущей таблицы и таблицы журнала могут оказаться несинхронизированными. Например, такая ситуация может возникнуть при внедрении существующей таблицы журнала, заполненной данными журнала.  
   

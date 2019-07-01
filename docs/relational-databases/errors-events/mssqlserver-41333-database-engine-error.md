@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a4e5e6d6b8e7b8fb62c3e7e8948bad8ecf5b0af2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703472"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62716491"
 ---
 # <a name="mssqlserver41333"></a>MSSQLSERVER_41333
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47703472"
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
 |Символическое имя|CROSS_CONTAINER_ISOLATION_FAILURE|  
-|Текст сообщения|Следующие транзакции должны принимать оптимизированные для памяти таблицы и скомпилированные в собственном коде хранимые процедуры в режиме изоляции моментальных снимков: транзакции RepeatableRead, транзакции Serializable и транзакции, которые обращаются к таблицам, не оптимизированным для памяти, в режиме изоляции RepeatableRead или Serializable.|  
+|Текст сообщения|Следующие транзакции должны обращаться к таблицам, оптимизируемым для памяти, и к скомпилированным в собственном коде хранимым процедурам с уровнем изоляции моментального снимка: транзакции RepeatableRead, транзакции Serializable и транзакции, которые обращаются к не оптимизированным для памяти таблицам с уровнем изоляции RepeatableRead или Serializable.|  
   
 ## <a name="explanation"></a>Объяснение  
 Между дисковыми транзакциями и XTP-транзакциями существуют ограничения для пользователей на более высоких уровнях изоляции.  
