@@ -10,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 8f44927fb59e6d1b613b2a67e26aed980b3a080a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 82fc1e58ffd329a74849986b858aa25cf733dc84
+ms.sourcegitcommit: 0343cdf903ca968c6722d09f017df4a2a4c7fd6b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65993946"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67166366"
 ---
 # <a name="sql-server-2019-preview-release-notes"></a>Заметки о выпуске предварительной версии SQL Server 2019
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -98,6 +98,16 @@ ms.locfileid: "65993946"
 - **Область применения**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.0, CTP 2.5, CTP 2.4, CTP 2.3, CTP 2.2, CTP 2.1, CTP 2.0.
 
 ## <a name="always-encrypted-with-secure-enclaves"></a>Always Encrypted с безопасными анклавами.
+
+### <a name="loading-enclave-fails"></a>Происходит сбой загрузки анклава
+
+- **Проблема и последствия для клиентов**: Загрузка анклава для Always Encrypted завершается сбоем со следующим сообщением в журнале ошибок: `Internal enclave error: Cannot initialize the 1 enclave`.
+
+- **Обходной путь**: Нет. Разрешение запланировано к CTP-версии 3.1.
+
+- **Область применения**: CTP 3.0
+
+### <a name="rich-computations-performance"></a>Производительность полнофункциональных вычислений
 
 - **Проблема и последствия для клиентов**: Для полнофункциональных вычислений будут выпущены несколько оптимизаций производительности, включая ограниченную функциональность (отсутствие индексирования и т. д.). Сейчас они отключены по умолчанию.
 

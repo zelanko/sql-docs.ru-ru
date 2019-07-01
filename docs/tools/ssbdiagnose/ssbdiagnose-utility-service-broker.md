@@ -26,12 +26,12 @@ ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 07e4f9c8f694f68e1ee0df02ec6110847fde4e0f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 34d549a433bebe20beaae287362537a851b2ae6b
+ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66836324"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67469149"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>Программа ssbdiagnose (компонент Service Broker)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -185,14 +185,14 @@ WHERE database_id = DB_ID();
  *conversation_handle*  
  Уникальный идентификатор, определяющий конечную точку диалога в приложении. Дескрипторы диалога уникальны для одной конечной точки диалога. Вызывающая и целевая конечные точки имеют различные дескрипторы диалога.  
   
- Дескрипторы диалога возвращаются в приложения с помощью параметра *@dialog_handle* инструкции **BEGIN DIALOG** , а также в столбце **conversation_handle** результирующего набора инструкции **RECEIVE** .  
+ Дескрипторы диалога возвращаются в приложения с помощью параметра *\@dialog_handle* инструкции **BEGIN DIALOG**, а также в столбце **conversation_handle** результирующего набора инструкции **RECEIVE**.  
   
  Дескрипторы диалогов отображаются в столбце **conversation_handle** представлений каталога **sys.transmission_queue** и **sys.conversation_endpoints** .  
   
  *conversation_group_id*  
  Уникальный идентификатор, определяющий группу сообщений.  
   
- Идентификаторы групп диалогов возвращаются в приложения с помощью параметра *@conversation_group_id* инструкции **GET CONVERSATION GROUP** , а также в столбце **conversation_group_id** результирующего набора инструкции **RECEIVE** .  
+ Идентификаторы групп диалогов возвращаются в приложения с помощью параметра *\@conversation_group_id* инструкции **GET CONVERSATION GROUP**, а также в столбце **conversation_group_id** результирующего набора инструкции **RECEIVE**.  
   
  Идентификаторы групп диалогов отображаются в столбцах **conversation_group_id** представлений каталога **sys.conversation_groups** и **sys.conversation_endpoints** .  
   

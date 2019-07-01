@@ -13,12 +13,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: 063c344e36ed4cb4404e2f78ae97a4e118322bb4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ad92bfee285b8a64b704e0636ce2421a80da4fed
+ms.sourcegitcommit: 20d24654e056561fc33cadc25eca8b4e7f214b1b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63002363"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67351553"
 ---
 # <a name="sql-server-2012-release-notes"></a>Заметки о выпуске SQL Server 2012
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -464,10 +464,12 @@ SQL Server 2012 поддерживается в следующих операц�
 ### <a name="54-an-error-might-occur-when-navigating-in-the-generate-script-wizard"></a>5.4. При навигации по мастеру формирования скриптов может возникать ошибка  
 **Проблема:** После создания скрипта в мастере создания скриптов путем нажатия кнопки **Сохранить или опубликовать скрипты** с дальнейшим переходом к разделам **Выбрать параметры** или **Задание параметров скриптов** повторное нажатие кнопки **Сохранить или опубликовать скрипты** может вызывать следующую ошибку:  
   
-<a name="prean-exception-occurred-while-executing-a-transact-sql-statement-or-batch-microsoftsqlserverconnectioninfo"></a><pre>An exception occurred while executing a Transact-SQL statement or batch. (Microsoft.SqlServer.ConnectionInfo)  
+<pre>
+An exception occurred while executing a Transact-SQL statement or batch. (Microsoft.SqlServer.ConnectionInfo)  
 ------------------------------  
-Дополнительные сведения:  
-Недопустимое имя объекта sys.federations. (Microsoft SQL Server, ошибка: 208)</pre>  
+ADDITIONAL INFORMATION:  
+Invalid object name 'sys.federations'. (Microsoft SQL Server, Error: 208)
+</pre>  
   
 **Решение:** закройте и снова откройте мастер формирования скриптов.  
   

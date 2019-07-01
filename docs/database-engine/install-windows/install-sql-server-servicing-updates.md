@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: jroth
-ms.openlocfilehash: 6e27dc247648e8fd69ed372a5ddd2a8566240efd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 290a3a9d307e19820af7f59cd5d6f821bcefc1a3
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794897"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67412775"
 ---
 # <a name="install-sql-server-servicing-updates"></a>Установка обновлений для обслуживания SQL Server
 
@@ -55,7 +55,7 @@ ms.locfileid: "66794897"
 После получения обновления через центр обновления [!INCLUDE[msCoName](../../includes/msconame-md.md)] все компоненты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обновляются до последней версии в автоматическом режиме. Если необходима дополнительная гибкость в процессе установки или отсутствует доступ к Интернету или службам WSUS, то нужно получить обновления из Центра загрузки [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
 ## <a name="see-also"></a>См. также:  
-[Установка SQL Server с помощью мастера установки &#40;программы установки&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)
-[Добавление компонентов в экземпляр SQL Server &#40;программа установки&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)
-[Исправление неудавшейся установки SQL Server](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)  
+[Установка SQL Server с помощью мастера установки &#40;программы установки&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)        
+[Добавление компонентов в экземпляр SQL Server (программа установки)](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)         
+[Исправление неудавшейся установки SQL Server](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)  
 
