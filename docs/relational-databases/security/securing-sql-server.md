@@ -1,7 +1,7 @@
 ---
 title: Защита SQL Server | Документация Майкрософт
 ms.custom: ''
-ms.date: 01/31/2017
+ms.date: 06/21/2019
 ms.prod: sql
 ms.prod_service: security
 ms.reviewer: ''
@@ -18,17 +18,19 @@ helpviewer_keywords:
 ms.assetid: 4d93489e-e9bb-45b3-8354-21f58209965d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 1c5694fc4fbf2464030eb5fe3104117cfee71eb0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: jroth
+ms.openlocfilehash: 410fef7965918c69c49585fe282277ccebf01575
+ms.sourcegitcommit: 3f2936e727cf8e63f38e5f77b33442993ee99890
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398367"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67314010"
 ---
 # <a name="securing-sql-server"></a>Обеспечение безопасности SQL Server
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Защиту [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно рассматривать как последовательность шагов, затрагивающих четыре области: платформу, проверку подлинности, объекты (включая данные) и приложения, получающие доступ к системе. В приведенных ниже разделах описано создание и реализация эффективного плана обеспечения безопасности.  
+
+Защиту [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно рассматривать как последовательность шагов, затрагивающих четыре области: платформу, проверку подлинности, объекты (включая данные) и приложения, получающие доступ к системе. В приведенных ниже разделах описано создание и реализация эффективного плана обеспечения безопасности.  
   
  Дополнительные сведения о безопасности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. на веб-сайте [SQL Server](https://go.microsoft.com/fwlink/?LinkID=31629) . Они включают руководство с рекомендациями и контрольный список безопасности. Кроме того, этот веб-сайт содержит сведения о пакетах обновлений и файлы для загрузки.  
   
@@ -43,6 +45,7 @@ ms.locfileid: "52398367"
 |Сведения о|См.|  
 |---------------------------|---------|  
 |[!INCLUDE[ssEW](../../includes/ssew-md.md)] и сетевой доступ к другим выпускам [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Раздел «Настройка и обеспечение безопасности среды сервера» в электронной документации по [!INCLUDE[ssEW](../../includes/ssew-md.md)]|  
+| &nbsp; | &nbsp; |
   
 ### <a name="operating-system-security"></a>Безопасность операционной системы  
  В состав пакетов обновления и отдельных обновлений для операционной системы входят важные дополнения, позволяющие усилить безопасность. Все обновления для операционной системы необходимо устанавливать только после их тестирования с приложениями базы данных.  
@@ -56,12 +59,14 @@ ms.locfileid: "52398367"
 |Настройка брандмауэра для работы со службами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|[Настройка брандмауэра Windows на разрешение доступа к службам Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)|  
 |Открытие конкретных портов брандмауэра, чтобы предоставить доступ к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Настройка брандмауэра Windows для разрешения доступа к SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|  
 |Настройка поддержки расширенной защиты для проверки подлинности с помощью привязки каналов и привязки служб|[Соединение с компонентом Database Engine с использованием расширенной защиты](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)|  
+| &nbsp; | &nbsp; |
   
  Уменьшение контактной зоны является мерой безопасности, предполагающей остановку или отключение неиспользуемых компонентов. Уменьшение контактной зоны повышает уровень безопасности за счет уменьшения числа возможных способов атаковать систему. Важную роль в ограничении контактной зоны [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] играет запуск необходимых служб по принципу «минимума прав доступа», согласно которому службам и пользователям предоставляются только необходимые для работы права. Следующая таблица содержит дополнительные сведения по службам и доступу к системе.  
   
 |Сведения о|См.|  
 |---------------------------|---------|  
 |Службы, необходимые для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Настройка учетных записей службы Windows и разрешений](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)|  
+| &nbsp; | &nbsp; |
   
  Если в системе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используются службы IIS, необходимы дополнительные действия для обеспечения безопасности контактной зоны платформы. Следующая таблица содержит сведения о [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и службах IIS.  
   
@@ -70,6 +75,7 @@ ms.locfileid: "52398367"
 |Безопасность служб IIS в [!INCLUDE[ssEW](../../includes/ssew-md.md)]|«Безопасность служб IIS» в электронной документации по [!INCLUDE[ssEW](../../includes/ssew-md.md)]|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Проверка подлинности|[Проверка подлинности в службах Reporting Services](../../reporting-services/extensions/security-extension/authentication-in-reporting-services.md)|  
 |[!INCLUDE[ssEW](../../includes/ssew-md.md)] и доступ к службам IIS|«Блок-схема безопасности служб IIS» в электронной документации по [!INCLUDE[ssEW](../../includes/ssew-md.md)]|  
+| &nbsp; | &nbsp; |
   
 ### <a name="sql-server-operating-system-files-security"></a>Безопасность файлов операционной системы SQL Server  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует файлы операционной системы для работы и хранения данных. Оптимальным решением для обеспечения безопасности файлов будет ограничение доступа к ним. Следующая таблица содержит сведения об этих файлах.  
@@ -77,14 +83,14 @@ ms.locfileid: "52398367"
 |Сведения о|См.|  
 |---------------------------|---------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] программные файлы|[Расположение файлов для экземпляра по умолчанию и именованных экземпляров SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)|  
+| &nbsp; | &nbsp; |
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] позволяют повысить безопасность. Для определения новейшего доступного пакета обновления для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]перейдите на веб-сайт [SQL Server](https://go.microsoft.com/fwlink/?LinkID=31629) .  
   
  С помощью приведенного ниже скрипта можно определить установленный в системе пакет обновления.  
   
-```  
+```sql
 SELECT CONVERT(char(20), SERVERPROPERTY('productlevel'));  
-GO  
 ```  
   
 ## <a name="principals-and-database-object-security"></a>Безопасность участников и объектов базы данных  
@@ -95,6 +101,7 @@ GO
 |Пользователи, роли и процессы сервера и базы данных|[Участники (компонент Database Engine)](../../relational-databases/security/authentication-access/principals-database-engine.md)|  
 |Безопасность объектов сервера и базы данных|[Защищаемые объекты](../../relational-databases/security/securables.md)|  
 |Иерархия безопасности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Иерархия разрешений (компонент Database Engine)](../../relational-databases/security/permissions-hierarchy-database-engine.md)|  
+| &nbsp; | &nbsp; |
   
 ### <a name="encryption-and-certificates"></a>Шифрование и сертификаты  
  Шифрование не решает проблемы управления доступом. Однако оно повышает безопасность, ограничивая потерю данных даже в тех редких случаях, когда средства управления доступом удается обойти. Например, если главный компьютер, на котором установлена база данных, был настроен неправильно, и злонамеренный пользователь смог получить конфиденциальные данные (например, номера кредитных карточек), то украденная информация будет бесполезна, если она была предварительно зашифрована. В следующей таблице содержатся дополнительные сведения о шифровании в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -111,12 +118,24 @@ GO
 |---------------------------|---------|  
 |Создание сертификата, который будет использоваться [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)|  
 |Использование сертификатов при зеркальном отображении базы данных|[Использование сертификатов для конечной точки зеркального отображения базы данных (Transact-SQL)](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)|  
-  
-## <a name="application-security"></a>Безопасность приложений  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] рекомендуется разрабатывать защищенные клиентские приложения.  
-  
- Дополнительные сведения об обеспечении безопасности клиентских приложений на сетевом уровне см. в разделе [Client Network Configuration](../../database-engine/configure-windows/client-network-configuration.md).  
-  
+| &nbsp; | &nbsp; |
+
+## <a name="application-security"></a>Безопасность приложений
+
+### <a name="client-programs"></a>Клиентские программы
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] рекомендуется разрабатывать защищенные клиентские приложения. Дополнительные сведения об обеспечении безопасности клиентских приложений на сетевом уровне см. в разделе [Client Network Configuration](../../database-engine/configure-windows/client-network-configuration.md).
+
+### <a name="windows-defender-application-control-wdac"></a>Управление приложениями в Защитнике Windows (WDAC)
+
+<!--
+This next live paragraph, about Windows Defender Application Control (WDAC), was requested by Bella Brahm, 2019/06/20. (GeneMi)
+
+WDAC can also prevent the kind of highly sophisticated 'Nansh0u' attacks described in 'https://www.guardicore.com/2019/05/nansh0u-campaign-hackers-arsenal-grows-stronger/'. That webpage recommends this present article.
+-->
+
+Управление приложениями в Защитнике Windows (WDAC) предотвращает попытки несанкционированного выполнения кода. WDAC является эффективным способом устранения угрозы со стороны вредоносных программ с исполняемыми файлами. Дополнительные сведения см. в подразделе документации [Управление приложениями в Защитнике Windows](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control).
+
 ## <a name="sql-server-security-tools-utilities-views-and-functions"></a>Средства, программы, представления и функции безопасности SQL Server  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предусмотрены средства, программы, представления и функции, которые используются для настройки и управления безопасностью.  
   
@@ -130,7 +149,8 @@ GO
 |Настройка сети и управление [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Диспетчер конфигурации SQL Server](../../relational-databases/sql-server-configuration-manager.md)|  
 |Включение и отключение компонентов с помощью средства управления на основе политики|[Администрирование серверов с помощью управления на основе политик](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)|  
 |Управление симметричными ключами для сервера отчетов|[Программа rskeymgmt (SSRS)](../../reporting-services/tools/rskeymgmt-utility-ssrs.md)|  
-  
+| &nbsp; | &nbsp; |
+
 ### <a name="sql-server-security-catalog-views-and-functions"></a>Представления каталога и функции безопасности SQL Server  
  В компоненте [!INCLUDE[ssDE](../../includes/ssde-md.md)] сведения о безопасности доступны через несколько представлений и функций, оптимизированных для наибольшей производительности и полезности. Следующая таблица содержит сведения о представлениях и функциях безопасности.  
   
@@ -139,7 +159,8 @@ GO
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] представления каталога безопасности, которые возвращают сведения о разрешениях, участниках, ролях и других сущностях уровня базы данных и сервера. Кроме того, существуют представления каталога, содержащие сведения о ключах шифрования, сертификатах и учетных данных.|[Представления каталога безопасности (Transact-SQL)](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которые возвращают сведения о текущем пользователе, разрешениях и схемах.|[Функции безопасности (Transact-SQL)](../../t-sql/functions/security-functions-transact-sql.md)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Динамические представления управления и функции, связанные с безопасностью (Transact-SQL)](../../relational-databases/system-dynamic-management-views/security-related-dynamic-management-views-and-functions-transact-sql.md)|  
-  
+| &nbsp; | &nbsp; |
+
 ## <a name="related-content"></a>См. также  
  [Вопросы безопасности при установке SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
  [Центр обеспечения безопасности для базы данных Azure SQL и SQL Server Database Engine](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  

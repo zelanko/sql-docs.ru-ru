@@ -1,7 +1,7 @@
 ---
 title: Выполняющаяся в памяти OLTP (оптимизация в памяти) | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/22/2016
+ms.date: 06/24/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,14 +15,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d5d982ba0b7a2ec5b35a6d38da3a5831119c4c1c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8ebb953132e28a3ea0766f7d9d7cd40f3f620659
+ms.sourcegitcommit: 20d24654e056561fc33cadc25eca8b4e7f214b1b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63047578"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67351658"
 ---
 # <a name="in-memory-oltp-in-memory-optimization"></a>In-Memory OLTP (оптимизация в памяти)
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] может значительно улучшить производительность обработки транзакций, приема и загрузки данных, а также оптимизировать сценарии с использованием временных данных.  Базовый код и сведения, необходимые для быстрого тестирования вашей собственной оптимизированной для памяти таблицы и скомпилированной в собственном коде хранимой процедуры, см. в статье:
@@ -42,7 +43,7 @@ ms.locfileid: "63047578"
  
  Обратите внимание на то, что [!INCLUDE[hek_2](../../includes/hek-2-md.md)] представляет собой технологию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для повышения производительности при обработке транзакций. Сведения о технологии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , повышающей производительность при обработке отчетов и аналитических запросов, см. в статье [Руководство по индексам columnstore](../../relational-databases/indexes/columnstore-indexes-overview.md).
   
- В [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], а также в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] для выполняющейся в памяти OLTP было внесено несколько улучшений. Контактная зона Transact-SQL увеличена для облегчения переноса приложений баз данных. Добавлена поддержка выполнения операций ALTER для оптимизированных для памяти таблиц и скомпилированных в собственном коде хранимых процедур, чтобы упростить обслуживание приложений. Сведения о новых функциях [!INCLUDE[hek_2](../../includes/hek-2-md.md)] см. на странице [Новые возможности индексов columnstore](../../relational-databases/indexes/columnstore-indexes-what-s-new.md).  
+ В [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], а также в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] для выполняющейся в памяти OLTP было внесено несколько улучшений. Контактная зона Transact-SQL увеличена для облегчения переноса приложений баз данных. Добавлена поддержка выполнения операций ALTER для оптимизированных для памяти таблиц и скомпилированных в собственном коде хранимых процедур, чтобы упростить обслуживание приложений.
   
 > [!NOTE]  
 >  **Попробуйте продукт**  

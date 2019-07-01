@@ -19,12 +19,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6bfaeb323e940ca2d289ddae58aaf679bed9fffa
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: 852b98c1ee0eecba21b426c74397985208fd2178
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65993717"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67140798"
 ---
 # <a name="create-external-library-transact-sql"></a>CREATE EXTERNAL LIBRARY (Transact-SQL)  
 
@@ -127,6 +127,8 @@ WITH ( LANGUAGE = 'R' )
 Указывает содержимое пакета для конкретной платформы. Поддерживается только один файл артефакта на платформу.
 
 Файл можно указать в виде локального или сетевого пути.
+
+При попытке доступа к файлу, указанному в **<client_library_specifier>** , SQL Server олицетворяет разрешения контекста безопасности текущего имени входа Windows. Если **<client_library_specifier>** задает расположение в сети (UNC-путь), олицетворение текущего имени входа не распространяется на это расположение в сети из-за ограничений передачи прав. В этом случае доступ осуществляется при помощи контекста безопасности учетной записи службы SQL Server. Дополнительные сведения см. в статье [Учетные данные (компонент Database Engine)](../../relational-databases/security/authentication-access/credentials-database-engine.md).
 
 При необходимости можно указать платформу операционной системы для файла. Для каждой платформы операционной системы для конкретного языка или среды выполнения разрешен только один артефакт файла или содержимое.
 

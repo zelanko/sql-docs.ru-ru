@@ -1,7 +1,7 @@
-- name: SQL Server >>
-  href: ../sql-server/sql-server-technical-documentation.md?toc=../toc/toc.json
 - name: Изучение служб машины SQL Server
   href: ../advanced-analytics/sql-server-machine-learning-services.md
+- name: Вас приветствует SQL Server >>
+  href: ../sql-server/sql-server-technical-documentation.md?toc=../toc/toc.json
 - name: Обзор
   items:
     - name: "Службы машинного обучения\_— (R, Python)"
