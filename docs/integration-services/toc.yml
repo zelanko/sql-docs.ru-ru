@@ -1,7 +1,7 @@
-- name: SQL Server >>
-  href: ../sql-server/sql-server-technical-documentation.md?toc=../toc/toc.json
-- name: Службы SQL Server Integration Services
+- name: Службы SQL Server Integration Services (SSIS)
   href: ../integration-services/sql-server-integration-services.md
+- name: Вас приветствует SQL Server >>
+  href: ../sql-server/sql-server-technical-documentation.md?toc=../toc/toc.json
 - name: Обзор
   items:
     - name: "Новые возможности служб Integration Services в SQL Server\_2016"

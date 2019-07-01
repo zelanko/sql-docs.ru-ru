@@ -20,12 +20,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 521b183a1901bac8a5ac982baa65d2d8cbb60264
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8303b8639ff72ad8bf6f9e3ebfc0b2232aae147b
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840088"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67412668"
 ---
 # <a name="permissions-database-engine"></a>Разрешения (ядро СУБД)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -108,8 +108,8 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |EXECUTE|Типы CLR, внешние сценарии, процедуры ([!INCLUDE[tsql](../../includes/tsql-md.md)] и среда CLR), скалярные и агрегатные функции ([!INCLUDE[tsql](../../includes/tsql-md.md)] и среда CLR), а также синонимы|  
 |IMPERSONATE|Имена входа и пользователи|  
 |INSERT|Синонимы, таблицы и столбцы, а также представления и столбцы. Разрешение можно предоставить на уровне базы данных, схемы или объектов.|  
-|RECEIVE|Очереди[!INCLUDE[ssSB](../../includes/sssb-md.md)] |  
-|REFERENCES|AGGREGATE,<br />ASSEMBLY,<br />ASYMMETRIC KEY,<br />CERTIFICATE,<br />CONTRACT,<br />DATABASE,<br />DATABASE SCOPED CREDENTIAL,<br />FULLTEXT CATALOG,<br />FULLTEXT STOPLIST,<br />FUNCTION,<br />MESSAGE TYPE,<br />PROCEDURE,<br />QUEUE, <br />RULE,<br />SCHEMA,<br />SEARCH PROPERTY LIST,<br />SEQUENCE OBJECT, <br />SYMMETRIC KEY,<br />SYNONYM,<br />TABLE,<br />TYPE,<br />VIEW и<br />XML SCHEMA COLLECTION|  
+|RECEIVE|Очереди[!INCLUDE[ssSB](../../includes/sssb-md.md)]|  
+|REFERENCES|AGGREGATE,<br />ASSEMBLY,<br />ASYMMETRIC KEY,<br />CERTIFICATE,<br />CONTRACT,<br />DATABASE,<br />DATABASE SCOPED CREDENTIAL,<br />FULLTEXT CATALOG,<br />FULLTEXT STOPLIST,<br />FUNCTION,<br />MESSAGE TYPE,<br />PROCEDURE,<br />QUEUE, <br />RULE,<br />SCHEMA,<br />SEARCH PROPERTY LIST,<br />SEQUENCE OBJECT, <br />SYMMETRIC KEY,<br />TABLE,<br />TYPE,<br />VIEW и<br />XML SCHEMA COLLECTION|  
 |SELECT|Синонимы, таблицы и столбцы, а также представления и столбцы. Разрешение можно предоставить на уровне базы данных, схемы или объектов.|  
 |TAKE OWNERSHIP|Все классы объектов, кроме DATABASE SCOPED CONFIGURATION, LOGIN, SERVER и USER.|  
 |UPDATE|Синонимы, таблицы и столбцы, а также представления и столбцы. Разрешение можно предоставить на уровне базы данных, схемы или объектов.|  
@@ -418,7 +418,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 
 ## <a name="special-considerations-for-column-level-permissions"></a>Особые замечания относительно разрешений на уровне столбца
 
-Разрешения на уровне столбца предоставляются с помощью синтаксиса *<имя_таблицы> (\<имя_столбца>)*. Пример:
+Разрешения на уровне столбца предоставляются с помощью синтаксиса *<имя_таблицы> (\<имя_столбца>)* . Пример:
 ```sql
 GRANT SELECT ON OBJECT::Customer(CustomerName) TO UserJoe;
 ```
