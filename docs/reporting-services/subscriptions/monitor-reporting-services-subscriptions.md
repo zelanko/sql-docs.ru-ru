@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 33d865ad28e9d013b97910ff30c4bcf7be760f93
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: HT
+ms.openlocfilehash: d1cfa2c5face12eab1677d4a1386511d005aa5dd
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67140537"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67285045"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>Отслеживание подписок служб Reporting Services
   Вы можете отслеживать подписки [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в пользовательском интерфейсе, Windows PowerShell или в файлах журнала. Параметры, которые можно отслеживать, зависят от того, какой режим сервера отчетов используется.  
@@ -76,7 +76,7 @@ ms.locfileid: "67140537"
   
  Ниже приведен пример сообщения об ошибке трассировки журнала файла, связанного с подписками.  
   
--   library!WindowsService_7!b60!05/20/2019-22:34:36:: i INFO: Initializing EnableExecutionLogging to 'True'  as specified in Server system properties.emailextension!WindowsService_7!b60!05/20/2019-22:34:41:: e ОШИБКА: **Ошибка при отправке сообщения**. Исключение: System.Net.Mail.SmtpException: SMTP-серверу требуется безопасное соединение, или клиент не прошел проверку подлинности. Ответ сервера: 5.7.1. Клиент не прошел проверку подлинности в System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response).  
+-   library!WindowsService_7!b60!05/20/2019-22:34:36 i INFO: Initializing EnableExecutionLogging to 'True'  as specified in Server system properties.emailextension!WindowsService_7!b60!05/20/2019-22:34:41 Ошибка: **ошибка при отправке сообщения**. Исключение: System.Net.Mail.SmtpException: SMTP-серверу требуется безопасное соединение, или клиент не прошел проверку подлинности. Ответ сервера: 5.7.1. Клиент не прошел проверку подлинности в System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response).  
   
  Файл журнала не содержит сведения об открытии отчета или об успешном фактическом выполнении доставки. Успешная доставка означает, что ошибки обработчика планирования и доставки отсутствуют и сервер отчетов подключился к почтовому серверу. Если при попытке доставки по электронной почте в почтовый ящик пользователя пришло сообщение о невозможности доставки отчета, то эти сведения не будут включены в файл журнала. Дополнительные сведения о файлах журналов см. в разделе [Файлы и источники журналов служб Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
   

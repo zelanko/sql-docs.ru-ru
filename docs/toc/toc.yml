@@ -157,8 +157,8 @@
           items:
             - name: Подключение к кластеру больших данных
               href: ../big-data-cluster/connect-to-big-data-cluster.md
-            - name: Портал администрирования кластера
-              href: ../big-data-cluster/cluster-admin-portal.md
+            - name: Просмотр состояния кластера
+              href: ../big-data-cluster/view-cluster-status.md
             - name: Устранение неполадок с Kubernetes
               href: ../big-data-cluster/cluster-troubleshooting-commands.md
         - name: Записные книжки
@@ -177,56 +177,56 @@
               href: ../big-data-cluster/spark-submit-job-intellij-tool-plugin.md
             - name: Использование расширенного сервера журнала Spark
               href: ../big-data-cluster/spark-history-server.md
-- name: Справочник
-  items:
-    - name: Справочник по развертыванию
+    - name: Справочник
       items:
-        - name: Файл конфигурации развертывания
-          href: ../big-data-cluster/reference-deployment-config.md
-    - name: Справочник по mssqlctl
-      items:
-        - name: mssqlctl
-          href: ../big-data-cluster/reference-mssqlctl.md
-        - name: Развертывание приложения
+        - name: Справочник по развертыванию
           items:
-            - name: app
-              href: ../big-data-cluster/reference-mssqlctl-app.md
-            - name: app template
-              href: ../big-data-cluster/reference-mssqlctl-app-template.md
-        - name: Кластер
+            - name: Файл конфигурации развертывания
+              href: ../big-data-cluster/reference-deployment-config.md
+        - name: Справочник по mssqlctl
           items:
-            - name: bdc
-              href: ../big-data-cluster/reference-mssqlctl-bdc.md
-            - name: bdc config
-              href: ../big-data-cluster/reference-mssqlctl-bdc-config.md
-            - name: bdc config section
-              href: ../big-data-cluster/reference-mssqlctl-bdc-config-section.md
-            - name: bdc control
-              href: ../big-data-cluster/reference-mssqlctl-bdc-control.md
-            - name: bdc control status
-              href: ../big-data-cluster/reference-mssqlctl-bdc-control-status.md
-            - name: bdc debug
-              href: ../big-data-cluster/reference-mssqlctl-bdc-debug.md
-            - name: bdc endpoint
-              href: ../big-data-cluster/reference-mssqlctl-bdc-endpoint.md
-            - name: bdc pool
-              href: ../big-data-cluster/reference-mssqlctl-bdc-pool.md
-            - name: bdc pool status
-              href: ../big-data-cluster/reference-mssqlctl-bdc-pool-status.md
-            - name: bdc status
-              href: ../big-data-cluster/reference-mssqlctl-bdc-status.md
-        - name: Память
-          items:
-            - name: bdc storage
-              href: ../big-data-cluster/reference-mssqlctl-storage.md
-            - name: bdc storage mount
-              href: ../big-data-cluster/reference-mssqlctl-storage-mount.md
-            - name: hdfs
-              href: ../big-data-cluster/reference-mssqlctl-hdfs.md
-        - name: SQL
-          items:
-            - name: sql
-              href: ../big-data-cluster/reference-mssqlctl-sql.md
+            - name: mssqlctl
+              href: ../big-data-cluster/reference-mssqlctl.md
+            - name: Развертывание приложения
+              items:
+                - name: app
+                  href: ../big-data-cluster/reference-mssqlctl-app.md
+                - name: app template
+                  href: ../big-data-cluster/reference-mssqlctl-app-template.md
+            - name: Кластер
+              items:
+                - name: bdc
+                  href: ../big-data-cluster/reference-mssqlctl-bdc.md
+                - name: bdc config
+                  href: ../big-data-cluster/reference-mssqlctl-bdc-config.md
+                - name: bdc config section
+                  href: ../big-data-cluster/reference-mssqlctl-bdc-config-section.md
+                - name: bdc control
+                  href: ../big-data-cluster/reference-mssqlctl-bdc-control.md
+                - name: bdc control status
+                  href: ../big-data-cluster/reference-mssqlctl-bdc-control-status.md
+                - name: bdc debug
+                  href: ../big-data-cluster/reference-mssqlctl-bdc-debug.md
+                - name: bdc endpoint
+                  href: ../big-data-cluster/reference-mssqlctl-bdc-endpoint.md
+                - name: bdc pool
+                  href: ../big-data-cluster/reference-mssqlctl-bdc-pool.md
+                - name: bdc pool status
+                  href: ../big-data-cluster/reference-mssqlctl-bdc-pool-status.md
+                - name: bdc status
+                  href: ../big-data-cluster/reference-mssqlctl-bdc-status.md
+            - name: Память
+              items:
+                - name: bdc storage
+                  href: ../big-data-cluster/reference-mssqlctl-bdc-storage-pool.md
+                - name: bdc storage mount
+                  href: ../big-data-cluster/reference-mssqlctl-bdc-storage-pool-mount.md
+                - name: hdfs
+                  href: ../big-data-cluster/reference-mssqlctl-hdfs.md
+            - name: SQL
+              items:
+                - name: sql
+                  href: ../big-data-cluster/reference-mssqlctl-sql.md
 - name: Непрерывность бизнес-процессов
   items:
     - name: Обзор
@@ -1415,6 +1415,8 @@
           href: ../relational-databases/graphs/sql-graph-architecture.md
         - name: Образец
           href: ../relational-databases/graphs/sql-graph-sample.md
+        - name: SHORTEST_PATH
+          href: ../relational-databases/graphs/sql-graph-shortest-path.md
     - name: Порядковые номера
       href: ../relational-databases/sequence-numbers/sequence-numbers.md
       items:
@@ -1611,6 +1613,8 @@
                   href: ../relational-databases/tables/modifying-data-in-a-system-versioned-temporal-table.md
                 - name: Данные запросов
                   href: ../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md
+                - name: безопасность
+                  href: ../relational-databases/tables/temporal-table-security.md
                 - name: Изменение схемы
                   href: ../relational-databases/tables/changing-the-schema-of-a-system-versioned-temporal-table.md
                 - name: Остановка системного управления версиями
@@ -8759,16 +8763,10 @@
           items:
             - name: SQL Server Management Studio (SSMS)
               href: ../ssms/sql-server-management-studio-ssms.md
-        - name: Краткие руководства
+        - name: Учебники
           items:
             - name: Подключение и отправка запроса к SQL Server
               href: ../ssms/tutorials/connect-query-sql-server.md
-        - name: Учебники
-          items:
-            - name: Объекты скриптов
-              href: ../ssms/tutorials/scripting-ssms.md
-            - name: "Конфигурация\_SSMS"
-              href: ../ssms/tutorials/ssms-configuration.md
         - name: Основные понятия
           items:
             - name: Окна инструментов SSMS
@@ -9045,6 +9043,10 @@
               href: ../ssms/install-other-languages.md
             - name: "Использование шаблонов в\_SSMS"
               href: ../ssms/tutorials/templates-ssms.md
+            - name: Объекты скриптов
+              href: ../ssms/tutorials/scripting-ssms.md
+            - name: "Конфигурация\_SSMS"
+              href: ../ssms/tutorials/ssms-configuration.md
             - name: Настройка меню и сочетаний клавиш
               href: ../ssms/customize-menus-and-shortcut-keys.md
             - name: Настройка инструментария WMI для отображения состояния сервера в инструментальных средствах SQL Server
@@ -12839,6 +12841,8 @@
               href: ../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md
             - name: sys.dm_os_server_diagnostics_log_configurations
               href: ../relational-databases/system-dynamic-management-views/sys-dm-os-server-diagnostics-log-configurations.md
+            - name: sys.dm_os_spinlock_stats
+              href: ../relational-databases/system-dynamic-management-views/sys-dm-os-spinlock-stats-transact-sql.md
             - name: sys.dm_os_stacks
               href: ../relational-databases/system-dynamic-management-views/sys-dm-os-stacks-transact-sql.md
             - name: sys.dm_os_sys_info
