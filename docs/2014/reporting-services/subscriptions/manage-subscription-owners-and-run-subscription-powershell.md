@@ -10,12 +10,12 @@ ms.assetid: 0fa6cb36-68fc-4fb8-b1dc-ae4f12bf6ff0
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d6598781301ad6e7483a3cea6b45949c1cd39cf3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d83ee924a1df8db92b74be5a3282bd7b4d16cf11
+ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66100807"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67500058"
 ---
 # <a name="use-powershell-to-change-and-list-reporting-services-subscription-owners-and-run-a-subscription"></a>Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription
   Приступая к работе с [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] , вы можете программно передать владение подпиской [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] от одного пользователя другому. В этом разделе содержится несколько скриптов Windows PowerShell, которые можно использовать для смены владельца подписки или простого перечисления владельцев. В каждом примере содержится образец синтаксиса для собственного режима и режима SharePoint. После смены владельца подписки подписка будет выполняться в контексте безопасности нового владельца, а в отчете в поле «User!UserID» будет отображаться значение нового владельца. Дополнительные сведения об объектной модели вызовов образцов см. в разделе <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
@@ -213,7 +213,7 @@ ForEach ($item in $items)
         $curRepSubs = $rs2010.ListSubscriptions($item.Path);  
         ForEach ($curRepSub in $curRepSubs)  
         {  
-            if ($curRepSub.Owner -eq $previousOwner)  
+            if ($curRepSub.Owner -eq $currentOwner)  
             {  
                 $subscriptions += $curRepSub;  
             }  

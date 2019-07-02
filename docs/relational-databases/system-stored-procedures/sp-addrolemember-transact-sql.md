@@ -19,12 +19,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6d7b47670d56ab916a8c2f263f9ddee3dc85c0a6
-ms.sourcegitcommit: c4870cb5bebf9556cdb4d8b35ffcca265fb07862
+ms.openlocfilehash: 18680069663b0979662b3288b5d02439fdf55297
+ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55652543"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67492754"
 ---
 # <a name="spaddrolemember-transact-sql"></a>Хранимая процедура sp_addrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -58,7 +58,7 @@ sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'
   
  Роль не может быть членом самой себя. Такие «циклические» определения недопустимы, даже если подразумевается только косвенное членство через несколько промежуточных ролей.  
   
- Хранимая процедура sp_addrolemember не может добавить предопределенной роли базы данных, предопределенной роли сервера или dbo роли. Хранимая процедура sp_addrolemember не может быть выполнена в пользовательской транзакции.  
+ Хранимая процедура sp_addrolemember не может добавить предопределенной роли базы данных, предопределенной роли сервера или dbo роли.
   
  Процедура sp_addrolemember используется только для добавления нового члена к роли базы данных. Добавление члена к роли сервера, используйте [sp_addsrvrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md).  
   

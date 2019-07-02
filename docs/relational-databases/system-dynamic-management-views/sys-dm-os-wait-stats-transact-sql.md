@@ -21,12 +21,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e85d3d1257b4cd873ddb1686a78d746cf92021c3
-ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
+ms.openlocfilehash: 1d4fa43746db12f8a1ee2957e3846bf1082ff219
+ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/29/2019
-ms.locfileid: "67469143"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67492770"
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -114,11 +114,11 @@ GO
 |BACKUPTHREAD |Имеет место, когда для своего завершения задача ожидает завершения задачи резервного копирования. Время ожидания может быть длительным, от нескольких минут до нескольких часов. Если задача, выполнение которой ожидается, находится в процессе ввода-вывода, этот тип не указывает на проблему.| 
 |BAD_PAGE_PROCESS |Имеет место, когда фоновый регистратор сбойных страниц пытается избежать запуска чаще, чем каждые пять секунд. Чрезмерное количество сбойных страниц вызывает частые запуски регистратора.| 
 |BLOB_METADATA |Только для внутреннего применения. <br />**Применимо к**: с [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|BMPALLOCATION |Только для внутреннего применения. <br />**Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|BMPBUILD |Только для внутреннего применения. <br />**Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|BMPREPARTITION |Только для внутреннего применения. <br /> **Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|BMPREPLICATION |Только для внутреннего применения. <br /> **Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|BPSORT |Только для внутреннего применения. <br /> **Применимо к**: с [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
+|BMPALLOCATION |Происходит во время синхронизации потоков, введя этапы обработки, отличающиеся внутри оператор пакетного режима. <br />**Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
+|BMPBUILD |Происходит во время синхронизации потоков, введя этапы обработки, отличающиеся внутри оператор пакетного режима. <br />**Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
+|BMPREPARTITION |Происходит во время синхронизации потоков, введя этапы обработки, отличающиеся внутри оператор пакетного режима. <br /> **Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
+|BMPREPLICATION |Происходит во время синхронизации потоков, введя этапы обработки, отличающиеся внутри оператор пакетного режима. <br /> **Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
+|BPSORT |Происходит во время синхронизации потоков, введя этапы обработки, отличающиеся внутри оператор пакетного режима. <br /> **Применимо к**: с [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |BROKER_CONNECTION_RECEIVE_TASK |Имеет место при ожидании доступа для получения сообщения на конечной точке соединения. Доступ на получение к конечной точке сериализуется.| 
 |BROKER_DISPATCHER |Только для внутреннего применения. <br /> **Применимо к**: с [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |BROKER_ENDPOINT_STATE_MUTEX |Происходит при конфликте доступа к состоянию конечной точки соединения компонента Service Broker. Доступ к состоянию изменений сериализуется.| 
@@ -361,11 +361,11 @@ GO
 |HK_RESTORE_FILEMAP |Только для внутреннего применения. <br /> **Применимо к**: с [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |HKCS_PARALLEL_MIGRATION |Только для внутреннего применения. <br /> **Применимо к**: с [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |HKCS_PARALLEL_RECOVERY |Только для внутреннего применения. <br /> **Применимо к**: с [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|HTBUILD |Только для внутреннего применения. <br /> **Применимо к**: с [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|HTDELETE |Только для внутреннего применения. <br /> **Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|HTMEMO |Только для внутреннего применения. <br /> **Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|HTREINIT |Только для внутреннего применения. <br /> **Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|HTREPARTITION |Только для внутреннего применения. <br /> **Применимо к**: с [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
+|HTBUILD |Происходит во время синхронизации потоков, введя этапы обработки, отличающиеся внутри оператор пакетного режима. <br /> **Применимо к**: с [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
+|HTDELETE |Происходит во время синхронизации потоков, введя этапы обработки, отличающиеся внутри оператор пакетного режима. <br /> **Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
+|HTMEMO |Происходит во время синхронизации потоков, введя этапы обработки, отличающиеся внутри оператор пакетного режима. <br /> **Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
+|HTREINIT |Происходит во время синхронизации потоков, введя этапы обработки, отличающиеся внутри оператор пакетного режима. <br /> **Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
+|HTREPARTITION |Происходит во время синхронизации потоков, введя этапы обработки, отличающиеся внутри оператор пакетного режима. <br /> **Применимо к**: с [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |HTTP_ENUMERATION |Имеет место при запуске системы для перечисления конечных точек HTTP с целью запуска протокола HTTP.| 
 |HTTP_START |Имеет место при ожидании соединением завершения инициализации HTTP.| 
 |HTTP_STORAGE_CONNECTION |Только для внутреннего применения. <br /> **Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
