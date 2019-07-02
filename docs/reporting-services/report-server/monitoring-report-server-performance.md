@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c1bc13d4-8297-4daf-bb19-4c1e5ba292a6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 36837445c13d5a0aa0c2bf0f93008d93e87d77d8
-ms.sourcegitcommit: 3f2936e727cf8e63f38e5f77b33442993ee99890
-ms.translationtype: HT
+ms.openlocfilehash: 5d277089fded73524e55d05bbc21078d5df426e3
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67314016"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67412657"
 ---
 # <a name="monitoring-report-server-performance"></a>Наблюдение за производительностью сервера отчетов
   Для наблюдения за производительностью сервера отчетов используются средства наблюдения за производительностью, позволяющие оценить активность сервера, наблюдать тренды, диагностировать узкие места системы и собирать данные, помогающие определить адекватность текущей конфигурации системы. Для настройки производительности сервера можно задать частоту очистки домена приложений сервера отчетов. Дополнительные сведения см. в разделе [Настройка доступной памяти для приложений сервера отчетов](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md).  
@@ -53,6 +53,8 @@ ms.locfileid: "67314016"
 -   убедиться в том, что обновление оборудования оказывает необходимое влияние на производительность;  
   
 -   убедиться в том, что изменения конфигурации системы оказывают необходимое влияние на производительность.  
+
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
   
 ## <a name="reporting-services-performance-objects"></a>Объекты производительности служб Reporting Services  
 SQL Server 2016 Reporting Services или более поздней версии (службы SSRS) включает в себя следующие объекты производительности:  
@@ -85,9 +87,8 @@ SQL Server 2016 Reporting Services или более поздней версии
   
  [Счетчики производительности для объектов производительности ReportServer:Service и ReportServerSharePoint:Service](../../reporting-services/report-server/performance-counters-reportserver-service-performance-objects.md)  
  Содержит описание счетчиков производительности в службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], связанных с HTTP и с памятью.  
-  
- События для сервера отчетов в режиме интеграции с SharePoint  
- Содержит описание полезных диагностических событий, возникающих при запуске среды создания отчетов с продуктом SharePoint.  
+
+::: moniker-end
   
 ## <a name="see-also"></a>См. также раздел  
  [Настройка доступной памяти для приложений сервера отчетов](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)   
