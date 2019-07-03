@@ -1,6 +1,6 @@
 ---
 title: Заметки о выпуске SQL Server 2019 | Документация Майкрософт
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: release-landing
@@ -10,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 82fc1e58ffd329a74849986b858aa25cf733dc84
-ms.sourcegitcommit: 0343cdf903ca968c6722d09f017df4a2a4c7fd6b
+ms.openlocfilehash: e8f54884f7f4338ce7cea4556fc59b4778b4c978
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67166366"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400097"
 ---
 # <a name="sql-server-2019-preview-release-notes"></a>Заметки о выпуске предварительной версии SQL Server 2019
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -23,11 +23,11 @@ ms.locfileid: "67166366"
 В этой статье описываются ограничения и известные проблемы ознакомительной версии для сообщества (CTP) [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]. Дополнительные сведения см. в следующих статьях:
 - [Новые возможности в SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md)
 
-## <a name="ctp-30"></a>CTP 3.0
+## <a name="ctp-31"></a>CTP 3.1
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.0 — последний общедоступный выпуск [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)].
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.1 — последний общедоступный выпуск [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)].
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.0 доступен только в виде Evaluation Edition. Другие выпуски недоступны. 
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.1 предоставляется только в качестве ознакомительного выпуска. Другие выпуски недоступны.
 
 Подробные сведения о поддержке и лицензировании выпусков CTP приведены в файле `license_Eval.rtf` на установочном носителе.
 
@@ -68,11 +68,11 @@ ms.locfileid: "67166366"
 
 ## <a name="updated-compiler"></a>Обновленный компилятор
 
-- **Проблема и последствия для клиентов**: сборка [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] выполнена с помощью обновленного компилятора. В CTP 2.1 была известная проблема, при которой результаты для чисел с плавающей точкой и результаты других сценариев преобразования могли отличаться от результатов таких же операций в прошлых версиях из-за использования обновленного компилятора. В CTP 2.2 была проведена дополнительная работа, чтобы убедиться, что сценарии, на которые распространяется эта проблема, возвращают те же результаты, что и в предыдущих версиях [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. На момент выхода CTP 3.0 эта проблема была полностью устранена. Если вы обнаружите какие-либо различия в результатах по сравнению с [!INCLUDE[ss2017](../includes/sssqlv14-md.md)], незамедлительно сообщите о них [команде разработчиков [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]](http://aka.ms/sqlfeedback).
+- **Проблема и последствия для клиентов**: сборка [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] выполнена с помощью обновленного компилятора. В CTP 2.1 была известная проблема, при которой результаты для чисел с плавающей точкой и результаты других сценариев преобразования могли отличаться от результатов таких же операций в прошлых версиях из-за использования обновленного компилятора. В CTP 2.2 была проведена дополнительная работа, чтобы убедиться, что сценарии, на которые распространяется эта проблема, возвращают те же результаты, что и в предыдущих версиях [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. На момент выхода CTP 3.1 эта проблема была полностью устранена. Если вы обнаружите какие-либо различия в результатах по сравнению с [!INCLUDE[ss2017](../includes/sssqlv14-md.md)], незамедлительно сообщите о них [команде разработчиков [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]](http://aka.ms/sqlfeedback).
 
 - **Обходной путь**: Недоступно
 
-- **Область применения**: SQL Server 2019 CTP 3.0, CTP 2.5,CTP 2.4, CTP 2.3, CTP 2.2, CTP 2.1
+- **Область применения**: SQL Server 2019 CTP 3.1, CTP 3.0, CTP 2.5, CTP 2.4, CTP 2.3, CTP 2.2, CTP 2.1
 
 ## <a name="installation-wizard-may-wait-between-eula-pages"></a>Мастер установки может ожидать между страницами лицензионного соглашения
 
@@ -95,25 +95,30 @@ ms.locfileid: "67166366"
  
 - **Обходной путь**: для CTP [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] — отсутствует.
 
-- **Область применения**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.0, CTP 2.5, CTP 2.4, CTP 2.3, CTP 2.2, CTP 2.1, CTP 2.0.
+- **Область применения**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.1, CTP 3.0, CTP 2.5, CTP 2.4, CTP 2.3, CTP 2.2, CTP 2.1, CTP 2.0.
 
 ## <a name="always-encrypted-with-secure-enclaves"></a>Always Encrypted с безопасными анклавами.
 
-### <a name="loading-enclave-fails"></a>Происходит сбой загрузки анклава
+- **Проблема и последствия для клиентов**: Для полнофункциональных вычислений, которые сейчас они отключены по умолчанию, ожидаются оптимизации производительности и улучшения обработки ошибок.
 
-- **Проблема и последствия для клиентов**: Загрузка анклава для Always Encrypted завершается сбоем со следующим сообщением в журнале ошибок: `Internal enclave error: Cannot initialize the 1 enclave`.
+- **Обходной путь**: Чтобы включить полнофункциональные вычисления, выполните команду `DBCC traceon(127,-1)`. См. подробнее о [включении полнофункциональных вычислений](../relational-databases/security/encryption/configure-always-encrypted-enclaves.md#configure-a-secure-enclave).
 
-- **Обходной путь**: Нет. Разрешение запланировано к CTP-версии 3.1.
+- **Область применения**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.1
 
-- **Область применения**: CTP 3.0
+## <a name="sql-server-configuration-manager-may-not-start"></a>Диспетчер конфигурации SQL Server может не запуститься
 
-### <a name="rich-computations-performance"></a>Производительность полнофункциональных вычислений
+- **Проблема и последствия для клиентов**: Диспетчер конфигурации SQL Server (SSCM) не запускается на компьютере без VCRuntime 140. При запуске SSCM может появиться следующее сообщение: 
 
-- **Проблема и последствия для клиентов**: Для полнофункциональных вычислений будут выпущены несколько оптимизаций производительности, включая ограниченную функциональность (отсутствие индексирования и т. д.). Сейчас они отключены по умолчанию.
+  `
+  MMC could not create the snap-in. The snap-in might not have been installed correctly.
+  `
 
-- **Обходной путь**: Чтобы включить полнофункциональные вычисления, выполните команду `DBCC traceon(127,-1)`. Дополнительные сведения см. в разделе [Настройка безопасного анклава](../relational-databases/security/encryption/configure-always-encrypted-enclaves.md#configure-a-secure-enclave).
+- **Обходной путь**:  Установите последнюю версию среды выполнения VC 2013 (x86):
 
-- **Область применения**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.0, CTP 2.5, CTP 2.4, CTP 2.3, 2.2, CTP 2.1, 2.0.
+  - [Verbose](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads)
+  - [Direct](https://support.microsoft.com/en-us/help/4032938/update-for-visual-c-2013-redistributable-package)
+
+- **Область применения**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.1, CTP 3.0, CTP 2.5.
 
 [!INCLUDE[get-help-options-msft-only](../includes/paragraph-content/get-help-options.md)]
 
