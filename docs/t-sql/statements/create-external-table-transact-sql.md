@@ -45,7 +45,7 @@ ms.locfileid: "67145480"
 
 ||||||
 |---|---|---|---|---|
-|** _\* SQL Server \*_ ** &nbsp;|[База данных SQL](create-external-table-transact-sql.md?view=azuresqldb-current)|[Хранилище данных<br />SQL](create-external-table-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
+|** _\*SQL Server\*_** &nbsp;|[База данных SQL](create-external-table-transact-sql.md?view=azuresqldb-current)|[Хранилище данных<br />SQL](create-external-table-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -574,7 +574,7 @@ WITH
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|** _\* База данных SQL \*_ ** &nbsp;|[Хранилище данных<br />SQL](create-external-table-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
+|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|** _\* База данных SQL \*_** &nbsp;|[Хранилище данных<br />SQL](create-external-table-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -699,7 +699,7 @@ WITH
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|[База данных SQL](create-external-table-transact-sql.md?view=azuresqldb-current)|** _\* Хранилище данных<br />SQL \*_ ** &nbsp;|[Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
+|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|[База данных SQL](create-external-table-transact-sql.md?view=azuresqldb-current)|** _\* Хранилище данных<br />SQL \*_** &nbsp;|[Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -924,7 +924,7 @@ AS SELECT * FROM
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|[База данных SQL](create-external-table-transact-sql.md?view=azuresqldb-current)|[Хранилище данных<br />SQL](create-external-table-transact-sql.md?view=azure-sqldw-latest)|** _\* Analytics<br />Platform System (PDW) \*_ ** &nbsp;|
+|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|[База данных SQL](create-external-table-transact-sql.md?view=azuresqldb-current)|[Хранилище данных<br />SQL](create-external-table-transact-sql.md?view=azure-sqldw-latest)|** _\* Analytics<br />Platform System (PDW) \*_** &nbsp;|
 ||||||
 
 &nbsp;
