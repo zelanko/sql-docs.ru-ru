@@ -2,22 +2,22 @@
 title: Обнаружение и классификация данных SQL | Документы Майкрософт
 description: Обнаружение и классификация данных SQL
 documentationcenter: ''
-ms.reviewer: carlrab
+ms.reviewer: vanto
 ms.assetid: 89c2a155-c2fb-4b67-bc19-9b4e03c6d3bc
 ms.service: sql-database
 ms.prod_service: sql-database,sql
 ms.custom: security
 ms.topic: conceptual
-ms.date: 02/13/2018
-ms.author: giladm
-author: giladm
-manager: shaik
-ms.openlocfilehash: e3df41240791d01beb1214f3f5b150bdba618420
-ms.sourcegitcommit: 757cda42bce65721a6079fe403add874f9afb31e
+ms.date: 06/25/2019
+ms.author: mibar
+author: barmichal
+manager: craigg
+ms.openlocfilehash: b45f3a081b7be55642e662ed195cfc1377e3659b
+ms.sourcegitcommit: 20d24654e056561fc33cadc25eca8b4e7f214b1b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67316689"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67351735"
 ---
 # <a name="sql-data-discovery-and-classification"></a>Обнаружение и классификация данных SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "67316689"
 * управление доступом к базам данных и столбцам, содержащим конфиденциальные данные, а также усиление их безопасности.
 
 > [!NOTE]
-> Средство обнаружения и классификации данных **поддерживается в SQL Server 2008 и более поздних версиях**. Сведения, касающиеся Базы данных SQL Azure, см. в статье [Обнаружение и классификация данных в Базе данных SQL Azure](https://go.microsoft.com/fwlink/?linkid=866265).
+> Средство обнаружения и классификации данных **поддерживается в SQL Server 2008 и более поздних версий и может использоваться с SSMS 17.5 и более поздних версий**. Сведения, касающиеся Базы данных SQL Azure, см. в статье [Обнаружение и классификация данных в Базе данных SQL Azure](https://go.microsoft.com/fwlink/?linkid=866265).
 
 ## <a id="subheading-1"></a>Обзор
 Средство обнаружения и классификации данных включает в себя набор эффективных служб, которые образуют новую парадигму SQL Information Protection, направленную на защиту данных, а не только базы данных.

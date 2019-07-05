@@ -1,7 +1,7 @@
 ---
 title: ALTER INDEX (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 04/03/2018
+ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -47,12 +47,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: abffa2d7bebfcf6defab15cf058c4fdf50b359c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 758c6524e124557083fc61af234283b567633a7b
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66413642"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388854"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -127,6 +127,7 @@ ALTER INDEX { index_name | ALL } ON <object>
 {  
       ALLOW_ROW_LOCKS = { ON | OFF }  
     | ALLOW_PAGE_LOCKS = { ON | OFF }  
+    | OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | OFF}
     | IGNORE_DUP_KEY = { ON | OFF }  
     | STATISTICS_NORECOMPUTE = { ON | OFF }  
     | COMPRESSION_DELAY= {0 | delay [Minutes]}  
@@ -209,7 +210,7 @@ ALTER INDEX { index_name | ALL }
   
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] поддерживает трехкомпонентный формат имени database_name.[schema_name].table_or_view_name, где database_name — текущая база данных или база данных tempdb, а имя таблицы или представления table_or_view_name начинается с #.  
   
- REBUILD [ WITH **(**\<rebuild_index_option> [ **,**... *n*]**)** ]  
+ REBUILD [ WITH **(** \<rebuild_index_option> [ **,** ... *n*] **)** ]  
  Указывает, что индекс будет перестроен с использованием тех же столбцов, типов индекса, атрибута уникальности и порядка сортировки. Это предложение эквивалентно [DBCC DBREINDEX](../../t-sql/database-console-commands/dbcc-dbreindex-transact-sql.md). REBUILD включает отключенный индекс. При перестройке кластеризованного индекса не перестраиваются ассоциированные некластеризованные индексы, если только не указано ключевое слово ALL. Если параметры индекса не заданы, то применяется существующий параметр индекса, который хранится в таблице [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md). Для любого параметра индекса, значение которого не хранится в таблице **sys.indexes**, применяется значение по умолчанию, указанное в определении аргумента.  
   
  Если указано ключевое слово ALL, а базовая таблица реализована в виде кучи, операция перестроения не воздействует на таблицу. Перестраиваются все некластеризованные индексы, ассоциированные с таблицей.  
@@ -248,7 +249,7 @@ PARTITION
   
  Количество секций секционированного индекса, который необходимо перестроить или реорганизовать. Аргумент *partition_number* является постоянным выражением, которое может обращаться к переменным. К ним относятся переменные определяемых пользователем типов или функции и определяемые пользователем функции, но не ссылки на инструкции языка [!INCLUDE[tsql](../../includes/tsql-md.md)]. *partition_number*должен существовать, или выполнение инструкции завершится с ошибкой.  
   
- WITH **(**\<single_partition_rebuild_index_option>**)**  
+ WITH **(** \<single_partition_rebuild_index_option> **)**  
    
 **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) и [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
@@ -309,7 +310,7 @@ COMPRESS_ALL_ROW_GROUPS позволяет принудительно отпра
   
 -   OFF принудительно отправляет все группы строк CLOSED в columnstore.  
   
-SET **(** \<set_index option> [ **,**... *n*] **)**  
+SET **(** \<set_index option> [ **,** ... *n*] **)**  
  Указывает параметры индекса без перестройки или реорганизации индекса. SET нельзя указать для отключенного индекса.  
   
 PAD_INDEX = { ON | OFF }  
@@ -423,7 +424,7 @@ FILLFACTOR = *fillfactor*
   
 -   подмножество секционированного индекса (секционированный индекс можно целиком перестроить в сети).  
 
--  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] до версии 12 и SQL Server до версии [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] не допускают использование параметра `ONLINE` для операций построения или перестроения кластеризованного индекса, если базовая таблица содержит столбцы **varchar(max)** или **varbinary(max)**.
+-  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] до версии 12 и SQL Server до версии [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] не допускают использование параметра `ONLINE` для операций построения или перестроения кластеризованного индекса, если базовая таблица содержит столбцы **varchar(max)** или **varbinary(max)** .
 
 RESUMABLE **=** { ON | **OFF**}
 
@@ -467,7 +468,13 @@ ALLOW_PAGE_LOCKS **=** { **ON** | OFF }
   
 > [!NOTE]
 >  Индекс не может быть реорганизован, если ALLOW_PAGE_LOCKS установлен в состояние OFF.  
-  
+
+ OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | **OFF** }
+
+**Область применения**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] и более поздних версий.
+
+Определяет, следует ли выполнять оптимизацию, связанную с состязанием при операциях вставки на последнюю страницу. Значение по умолчанию — OFF. См. подробнее раздел о [последовательных ключах](./create-index-transact-sql.md#sequential-keys) в документации по CREATE INDEX.
+
  MAXDOP **=** max_degree_of_parallelism  
  
 **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) и [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
@@ -529,7 +536,7 @@ ALLOW_PAGE_LOCKS **=** { **ON** | OFF }
   
  Дополнительные сведения о сжатии см. в разделе [Сжатие данных](../../relational-databases/data-compression/data-compression.md).  
   
- ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [**,**...n] **)**  
+ ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,** ...n] **)**  
     
 **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) и [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. 
   
@@ -686,7 +693,7 @@ ABORT
 Для активизации индекса следует использовать инструкцию ALTER INDEX REBUILD или инструкцию CREATE INDEX WITH DROP_EXISTING. Перестроить отключенный кластеризованный индекс нельзя, если параметр ONLINE установлен в ON. Дополнительные сведения см. в статье [Отключение индексов и ограничений](../../relational-databases/indexes/disable-indexes-and-constraints.md).  
   
 ## <a name="setting-options"></a>Настройка параметров  
-Можно установить параметры ALLOW_ROW_LOCKS, ALLOW_PAGE_LOCKS, IGNORE_DUP_KEY и STATISTICS_NORECOMPUTE для конкретного индекса без перестройки или реорганизации этого индекса. Измененные значения немедленно применяются к индексу. Для просмотра этих установок следует использовать таблицу **sys.indexes**. Дополнительные сведения см. в разделе [Установка параметров индекса](../../relational-databases/indexes/set-index-options.md).  
+Вы можете установить параметры ALLOW_ROW_LOCKS, ALLOW_PAGE_LOCKS, OPTIMIZE_FOR_SEQUENTIAL_KEY, IGNORE_DUP_KEY и STATISTICS_NORECOMPUTE для определенного индекса без его перестройки или реорганизации. Измененные значения немедленно применяются к индексу. Для просмотра этих установок следует использовать таблицу **sys.indexes**. Дополнительные сведения см. в разделе [Установка параметров индекса](../../relational-databases/indexes/set-index-options.md).  
   
 ### <a name="row-and-page-locks-options"></a>Параметры блокировок строк и страниц  
 Когда присвоены значения ALLOW_ROW_LOCKS = ON и ALLOW_PAGE_LOCK = ON, при доступе к индексу допустимы блокировки на уровне строк, уровне страниц и уровне таблиц. Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] выбирает соответствующую блокировку и может повышать уровень с блокировки строки или страницы до блокировки таблицы.  

@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL LANGUAGE (Transact-SQL) — SQL Server | Документация Майкрософт
 ms.custom: ''
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.prod: sql
 ms.reviewer: dphansen
 ms.technology: t-sql
@@ -10,20 +10,20 @@ author: nelgson
 ms.author: negust
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 223388d4a3c61dfb90ac9fa5434e9149bc25fae3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2185c40562e6ad7102ebde10cacb34c56d36f714
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65994982"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67399962"
 ---
 # <a name="create-external-language-transact-sql"></a>CREATE EXTERNAL LANGUAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Регистрирует расширения внешнего языка в базе данных из заданного пути файла или байтового потока. Эта инструкция служит универсальным механизмом для администратора базы данных, позволяющим регистрировать новые расширения внешнего языка на любой платформе операционной системы, поддерживаемой SQL Server.
+Регистрирует расширения внешнего языка в базе данных из заданного пути файла или байтового потока. Эта инструкция служит универсальным механизмом для администратора базы данных, позволяющим регистрировать новые расширения внешнего языка на любой платформе операционной системы, поддерживаемой SQL Server. См подробнее о [расширениях языка](https://docs.microsoft.com/sql/language-extensions/language-extensions-overview).
 
 > [!NOTE]
-> **R** и **Python** являются зарезервированными именами, поэтому создать внешние языки с такими именами невозможно.
+> Сейчас только **Java** поддерживается как внешний язык. **R** и **Python** являются зарезервированными именами, поэтому создать внешние языки с такими именами невозможно. См. подробнее об использовании **R** и **Python** в документации по [Службам машинного обучения SQL Server](https://docs.microsoft.com/sql/advanced-analytics/sql-server-machine-learning-services).
 
 ## <a name="syntax"></a>Синтаксис
 

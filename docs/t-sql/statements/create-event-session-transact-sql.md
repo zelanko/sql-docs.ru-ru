@@ -23,12 +23,12 @@ ms.assetid: 67683027-2b0f-47aa-b223-604731af8b4d
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 482d6fd7062dfb0b733e3a3d50bae82f2f754f72
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 49570a5dd2c5d0e45e75a51a4835df28b63aa783
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66354514"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388123"
 ---
 # <a name="create-event-session-transact-sql"></a>CREATE EVENT SESSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "66354514"
   
 ```    
 CREATE EVENT SESSION event_session_name  
-ON SERVER  
+ON { SERVER | DATABASE }
 {  
     <event_definition> [ ,...n]  
     [ <event_target_definition> [ ,...n] ]  
@@ -241,7 +241,7 @@ ON SERVER
 Приоритеты выполнения логических операторов распределяются следующим образом: `NOT` (наивысший приоритет), `AND`, `OR` (низший приоритет).  
   
 ## <a name="permissions"></a>Разрешения  
-Требуется разрешение `ALTER ANY EVENT SESSION`.  
+В SQL Server требуется разрешение `ALTER ANY EVENT SESSION`. В Базе данных SQL требуется соответствующее разрешение `ALTER ANY DATABASE EVENT SESSION`.
   
 ## <a name="examples"></a>Примеры  
  В следующем примере демонстрируется, как создать сеанс событий с именем `test_session`. В этом примере добавляются два события, а также используется цель средства отслеживания событий для Windows.  
@@ -269,7 +269,6 @@ GO
  [DROP EVENT SESSION (Transact-SQL)](../../t-sql/statements/drop-event-session-transact-sql.md)   
  [sys.server_event_sessions (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-event-sessions-transact-sql.md)   
  [sys.dm_xe_objects (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql.md)   
- [sys.dm_xe_object_columns (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-xe-object-columns-transact-sql.md)  
-  
+ [sys.dm_xe_object_columns (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-xe-object-columns-transact-sql.md)   
   
 

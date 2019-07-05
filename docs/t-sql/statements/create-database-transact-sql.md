@@ -38,12 +38,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 95aa89336e4dcd6decc4434d4afaf77073dd45e0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 04339f2553d2eb6787fec1b83d61b71623159308
+ms.sourcegitcommit: 20d24654e056561fc33cadc25eca8b4e7f214b1b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66428962"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67351694"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -61,7 +61,7 @@ ms.locfileid: "66428962"
 
 |||||
 |-|-|-|-|
-|** _\* SQL Server \*_ ** &nbsp;| [Отдельная база данных/эластичный пул Базы данных SQL<br />](create-database-transact-sql.md?view=azuresqldb-current) | [Управляемый экземпляр Базы данных SQL<br />](create-database-transact-sql.md?view=azuresqldb-mi-current) | [Хранилище данных<br />SQL](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
+|** _\* SQL Server \*_** &nbsp;| [Отдельная база данных/эластичный пул Базы данных SQL<br />](create-database-transact-sql.md?view=azuresqldb-current) | [Управляемый экземпляр Базы данных SQL<br />](create-database-transact-sql.md?view=azuresqldb-mi-current) | [Хранилище данных<br />SQL](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
 |||||
 
 &nbsp;
@@ -865,7 +865,7 @@ GO
 
 > |||||
 > |-|-|-|-|
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| ** _\* Отдельная база данных/эластичный пул Базы данных SQL<br /> \*_ ** | [Управляемый экземпляр Базы данных SQL<br />](create-database-transact-sql.md?view=azuresqldb-mi-current) | [Хранилище данных<br />SQL](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| ** _\* Отдельная база данных/эластичный пул Базы данных SQL<br /> \*_** | [Управляемый экземпляр Базы данных SQL<br />](create-database-transact-sql.md?view=azuresqldb-mi-current) | [Хранилище данных<br />SQL](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
@@ -949,8 +949,6 @@ EDITION
 Указывает уровень службы базы данных.
 
 Отдельные базы данных и базы данных в пуле на отдельной базе данных или в эластичном пуле. Доступные значения: "basic", "standard", "premium", "GeneralPurpose", "BusinessCritical" и "Hyperscale".
-
-Если параметр EDITION задан, а MAXSIZE нет, то параметру MAXSIZE задается самое ограничивающее значение, поддерживаемое этим выпуском.
 
 MAXSIZE     
 Указывает максимальный размер базы данных. Значение параметра MAXSIZE должно быть допустимо для указанного значения параметра EDITION (уровень службы). Далее приведены поддерживаемые значения MAXSIZE и значения по умолчанию (D) для уровней службы.
@@ -1038,12 +1036,12 @@ MAXSIZE
 |:----- | -------: |--------: |--------: |--------: |--------: |---------:|--------: |
 |Максимальный размер данных (ГБ)|3072|3072|3072|4096|4096|4096|4096|
 
-Если при использовании модели виртуальных ядер значение `MAXSIZE` не задано, используется значение по умолчанию, равное 32 ГБ. См. дополнительные сведения об [ограничениях ресурсов в модели с виртуальными ядрами](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits).
+Если при использовании модели виртуальных ядер значение `MAXSIZE` не задано, используется значение по умолчанию — 32 ГБ. См. дополнительные сведения об [ограничениях ресурсов в модели с виртуальными ядрами](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits).
 
 Следующие правила применяются к аргументам MAXSIZE и EDITION:
 
-- Если параметр EDITION указан, а параметр MAXSIZE — нет, то в качестве выпуска будет использоваться значение по умолчанию. Например, если параметру EDITION задано значение Standard, а параметр MAXSIZE не задан, то параметру MAXSIZE будет автоматически присвоено значение 250 МБ.
-- Если не указаны значения ни для MAXSIZE, ни для EDITION, то параметру EDITION задается значение Standard (S0), а параметру MAXSIZE — 250 ГБ.
+- Если параметр EDITION указан, а параметр MAXSIZE — нет, то в качестве выпуска будет использоваться значение по умолчанию. Например, если параметру EDITION задано значение Standard, а параметру MAXSIZE значение не задано, MAXSIZE автоматически получает значение 250 МБ.
+- Если значения MAXSIZE и EDITION не указаны, для EDITION задается значение General Purpose, а для MAXSIZE — 32 ГБ.
 
 SERVICE_OBJECTIVE     
 - **Для отдельных и включенных в пул баз данных**
@@ -1122,7 +1120,7 @@ CREATE DATABASE TestDB1;
 ```
 
 ### <a name="simple-example-with-edition"></a>Простой пример с указанием выпуска
-Простой пример создания базы данных Standard.
+Простой пример создания базы данных общего назначения.
 
 ```sql
 CREATE DATABASE TestDB2
@@ -1194,7 +1192,7 @@ CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140 (MAXSIZE = 100 MB, EDITION = '
 
 > |||||
 > |-|-|-|-|
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [Отдельная база данных/эластичный пул Базы данных SQL<br />](create-database-transact-sql.md?view=azuresqldb-current)| ** _\* Управляемый экземпляр Базы данных SQL<br /> \*_ ** | [Хранилище данных<br />SQL](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [Отдельная база данных/эластичный пул Базы данных SQL<br />](create-database-transact-sql.md?view=azuresqldb-current)| ** _\* Управляемый экземпляр Базы данных SQL<br /> \*_** | [Хранилище данных<br />SQL](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
@@ -1261,7 +1259,7 @@ CREATE DATABASE TestDB1;
 
 > |||||
 > |-|-|-|-|
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [Отдельная база данных/эластичный пул Базы данных SQL<br />](create-database-transact-sql.md?view=azuresqldb-current)| [Управляемый экземпляр Базы данных SQL<br />](create-database-transact-sql.md?view=azuresqldb-mi-current)| ** _\* Хранилище данных<br />SQL \*_ **| [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [Отдельная база данных/эластичный пул Базы данных SQL<br />](create-database-transact-sql.md?view=azuresqldb-current)| [Управляемый экземпляр Базы данных SQL<br />](create-database-transact-sql.md?view=azuresqldb-mi-current)| ** _\* Хранилище данных<br />SQL \*_**| [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
@@ -1373,7 +1371,7 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
 
 > |||||
 > |-|-|-|-|
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [Отдельная база данных/эластичный пул Базы данных SQL<br />](create-database-transact-sql.md?view=azuresqldb-current)| [Управляемый экземпляр Базы данных SQL<br />](create-database-transact-sql.md?view=azuresqldb-mi-current)|[Хранилище данных<br />SQL](create-database-transact-sql.md?view=azure-sqldw-latest)|** _\* Analytics Platform<br />System (PDW) \*_ ** |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [Отдельная база данных/эластичный пул Базы данных SQL<br />](create-database-transact-sql.md?view=azuresqldb-current)| [Управляемый экземпляр Базы данных SQL<br />](create-database-transact-sql.md?view=azuresqldb-mi-current)|[Хранилище данных<br />SQL](create-database-transact-sql.md?view=azure-sqldw-latest)|** _\* Analytics Platform<br />System (PDW) \*_** |
 
 &nbsp;
 

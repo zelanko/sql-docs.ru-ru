@@ -12,12 +12,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c33b07af2ad43f15913580ce55c173d04a876366
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 67131c083966244db252c047b200c2a6d979aadb
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511545"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388136"
 ---
 # <a name="columnstore-indexes---defragmentation"></a>Дефрагментация индексов columnstore
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "52511545"
   
 Для расчета фрагментации воспользуйтесь примером из статьи [sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md). Это поможет вам определить, стоит ли выполнять операцию REORGANIZE.  
   
-### <a name="example-how-reorganizing-works"></a>Пример. Как работает реорганизация  
+### <a name="example-how-reorganizing-works"></a>Пример Как работает реорганизация  
  В этом примере показано, как инструкция ALTER INDEX REORGANIZE может принудительно отправить все группы строк deltastore в columnstore, а затем объединить эти группы строк.  
   
 1.  Запустите этот код Transact-SQL, чтобы создать промежуточную таблицу, содержащую 300 000 строк. Мы воспользуемся ею для массовой загрузки строк в индекс columnstore.  
@@ -55,6 +55,9 @@ ms.locfileid: "52511545"
     CREATE DATABASE [columnstore];  
     GO  
   
+    USE columnstore;
+    GO
+
     IF EXISTS (SELECT name FROM sys.tables  
         WHERE name = N'staging'  
         AND object_id = OBJECT_ID (N'staging'))  

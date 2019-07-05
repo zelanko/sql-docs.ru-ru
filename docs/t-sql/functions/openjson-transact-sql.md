@@ -1,7 +1,7 @@
 ---
 title: OPENJSON (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 07/17/2017
+ms.date: 06/21/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: genemi
@@ -19,12 +19,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 53739518c40221b752d63016faf369b9e3e71587
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 88c74779b60ae25ea381a2814b06a11b4fdd2e22
+ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65576320"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67343857"
 ---
 # <a name="openjson-transact-sql"></a>OPENJSON (Transact-SQL)
 
@@ -74,33 +74,37 @@ OPENJSON( jsonExpression [ , path ] )  [ <with_clause> ]
 Символьное выражение Юникода, содержащее текст JSON.  
   
 OPENJSON выполняет итерацию по элементам массива или свойствам объекта в выражении JSON и возвращает одну строку для каждого элемента или свойства. В следующем примере возвращаются все свойства объекта *jsonExpression*:  
-  
-```sql  
-DECLARE @json NVARCHAR(4000) = N'{  
-   "StringValue":"John",  
-   "IntValue":45,  
-   "TrueValue":true,  
-   "FalseValue":false,  
-   "NullValue":null,  
-   "ArrayValue":["a","r","r","a","y"],  
-   "ObjectValue":{"obj":"ect"}  
-}'
 
-SELECT *
-FROM OPENJSON(@json)
-```  
-  
-**Результаты**
-  
-|ключ|value|type|  
-|---------|-----------|----------|  
-|StringValue|Джон|1|  
-|IntValue|45|2|  
-|TrueValue|true|3|  
-|FalseValue|false|3|  
-|NullValue|NULL|0|  
-|ArrayValue|["a","r","r","a","y"]|4|  
-|ObjectValue|{"obj":"ect"}|5|  
+```sql
+DECLARE @json NVarChar(2048) = N'{
+   "String_value": "John",
+   "DoublePrecisionFloatingPoint_value": 45,
+   "DoublePrecisionFloatingPoint_value": 2.3456,
+   "BooleanTrue_value": true,
+   "BooleanFalse_value": false,
+   "Null_value": null,
+   "Array_value": ["a","r","r","a","y"],
+   "Object_value": {"obj":"ect"}
+}';
+
+SELECT * FROM OpenJson(@json);
+```
+
+**Результаты:**
+
+| ключ                                | value                 | type |
+| :--                                | :----                 | :--- |
+| String_value                       | Джон                  | 1 |
+| DoublePrecisionFloatingPoint_value | 45                    | 2 |
+| DoublePrecisionFloatingPoint_value | 2.3456                | 2 |
+| BooleanTrue_value                  | true                  | 3 |
+| BooleanFalse_value                 | false                 | 3 |
+| Null_value                         | NULL                  | 0 |
+| Array_value                        | ["a","r","r","a","y"] | 4 |
+| Object_value                       | {"obj":"ect"}         | 5 |
+| &nbsp; | &nbsp; | &nbsp; |
+
+- DoublePrecisionFloatingPoint_value соответствует IEEE-754.
 
 ### <a name="path"></a>*путь*
 
@@ -228,7 +232,7 @@ WITH (
         |------------------------------|--------------------|  
         |0|null|  
         |1|строка|  
-        |2|ssNoversion|  
+        |2|INT|  
         |3|true/false|  
         |4|массиве|  
         |5|объект|  

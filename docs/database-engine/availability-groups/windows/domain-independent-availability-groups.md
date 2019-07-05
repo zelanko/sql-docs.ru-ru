@@ -13,12 +13,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: jroth
-ms.openlocfilehash: ad844d0b08ba0323f9930970a3056e592e44c25e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 19e64c2fa9f1006e07f6da72d8fdfc146c9faf8b
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66765714"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388110"
 ---
 # <a name="create-a-domain-independent-availability-group"></a>Создание группы доступности, независимой от домена
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,8 +71,10 @@ ms.locfileid: "66765714"
 10. Вам будет предложено перезагрузить компьютер. Если вы не хотите выполнять перезагрузку компьютера незамедлительно, нажмите кнопку "Перезагрузить позже"; в противном случае нажмите кнопку "Перезагрузить сейчас".
 11. После перезагрузки сервера откройте диалоговое окно "Система" еще раз и убедитесь, что общий DNS-суффикс настроен.
 
-
 ![Успешная настройка DNS-суффикса][4]
+
+  > [!NOTE]
+  > Если вы используете несколько подсетей и статический DNS, вам нужно обновить запись DNS, связанную с прослушивателем, прежде чем выполнять отработку отказа, иначе имя сети не будет предоставляться через Интернет.
 
 ## <a name="create-a-domain-independent-availability-group"></a>Создание группы доступности, независимой от домена
 

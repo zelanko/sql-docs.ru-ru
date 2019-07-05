@@ -17,12 +17,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: jroth
-ms.openlocfilehash: 7f0f2c7bf602e0280f7d38147d3d7924712d90eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1498a7d78e88055052499027a8255743ca3da6dc
+ms.sourcegitcommit: fb9114df7224446696e7772024f64735c3e46c8f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66772630"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67345143"
 ---
 # <a name="configure-distributed-transactions-for-an-always-on-availability-group"></a>Настройка распределенных транзакций для группы доступности Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -89,6 +89,15 @@ ALTER AVAILABILITY GROUP MyaAG
 
 >[!NOTE]
 >Начиная с версии [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] с пакетом обновления 2 (SP2), группу доступности для распределенных транзакций можно изменять. В версиях [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] до пакета обновления 2 (SP2) потребуется удалить и вновь создать группу доступности с параметром `DTC_SUPPORT = PER_DB`. 
+
+Чтобы отключить распределенные транзакции, используйте следующую команду Transact-SQL:
+
+```sql
+ALTER AVAILABILITY GROUP MyaAG
+   SET (
+      DTC_SUPPORT = NONE  
+      );
+```
 
 ## <a name="a-namedisttrandistributed-transactions---technical-concepts"></a><a name="distTran"/>Распределенные транзакции: технические понятия
 

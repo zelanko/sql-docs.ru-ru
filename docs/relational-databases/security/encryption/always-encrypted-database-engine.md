@@ -17,12 +17,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2ac5ce3e74713da1b1560d4fd0e1cb86bb4593be
-ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
+ms.openlocfilehash: 0fefd22e080ac0ed4e0646dde1805ce5923b8e3a
+ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54185030"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67419160"
 ---
 # <a name="always-encrypted-database-engine"></a>Always Encrypted (ядро СУБД)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -181,11 +181,11 @@ Always Encrypted не поддерживается для столбцов с о
 Следующие функции не работают для зашифрованных столбцов:
 
 - репликация транзакций или репликация слиянием;
-- распределенные запросы (связанные серверы).
+- распределенные запросы (связанные серверы, OPENROWSET(T-SQL), OPENDATASOURCE(T-SQL)).
 
 Требования к средствам
 
-- SQL Server Management Studio может расшифровать результаты, полученные из зашифрованных столбцов, если подключение выполняется с *включенным шифрованием столбцов* на вкладке **Дополнительные свойства** диалогового окна **Подключение к серверу** . Для вставки, обновления или фильтрации зашифрованных столбцов требуется версия SQL Server Management Studio не ниже 17.
+- SQL Server Management Studio может расшифровать результаты, полученные из зашифрованных столбцов, если подключение выполняется с *включенным шифрованием столбцов* на вкладке **Дополнительные свойства** диалогового окна **Подключение к серверу** . Для вставки, обновления или фильтрации зашифрованных столбцов требуется версия SQL Server Management Studio не ниже 17. Строки подключения для использования в клиентских приложениях см. в руководстве по [Always Encrypted (разработка клиентских приложений)](../../../relational-databases/security/encryption/always-encrypted-client-development.md).
 
 - Для использования зашифрованных соединений из `sqlcmd` требуется версия не ниже 13.1, которую можно скачать из [Центра загрузки](https://go.microsoft.com/fwlink/?LinkID=825643).
 

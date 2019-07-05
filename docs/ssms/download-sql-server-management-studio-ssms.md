@@ -24,12 +24,12 @@ ms.author: dinethi
 manager: craigg
 ms.custom: ''
 ms.date: 06/12/2019
-ms.openlocfilehash: 7993cfbf21efcbb6f984a91347987e5805741904
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 403ca9e5132a00f003aa67a2011d98d0044b4807
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67033407"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67399655"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Скачивание SQL Server Management Studio (SSMS)
 
@@ -68,7 +68,6 @@ SSMS 18.1 является последней общедоступной вер�
 SQL Server Management Studio 18.1:<br>
 [Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x40a)
 
-
 > [!NOTE]
 > Модуль SQL Server PowerShell устанавливается отдельно из коллекции PowerShell. Дополнительные сведения см. в статье [Загрузка модуля PowerShell (SQL Server)](download-sql-server-ps-module.md).
 
@@ -79,7 +78,6 @@ SQL Server Management Studio 18.1:<br>
 - **Integration Services (SSIS)** — поддержка планирования пакета служб SSIS, расположенного в каталоге служб SSIS в Azure или в файловой системе, в Azure. Три записи для запуска диалогового окна "Создание расписания": пункт меню *Новое расписание...* , который отображается, если щелкнуть правой кнопкой мыши пакет служб SSIS в каталоге служб SSIS в Azure; пункт меню *Планирование выполнения пакета служб SSIS в Azure* в разделе *Миграция в Azure* меню *Сервис* и "Расписание служб SSIS в Azure", который отображается, если щелкнуть правой кнопкой мыши папку заданий агента SQL Server из управляемого экземпляра базы данных SQL Azure.
 
 Дополнительные сведения о новых возможностях в этом выпуске см. в [заметках о выпуске SSMS](release-notes-ssms.md).
-
 
 ## <a name="supported-sql-offerings-ssms-181"></a>Поддерживаемые предложения SQL (SSMS 18.1)
 
@@ -93,7 +91,8 @@ SQL Server Management Studio 18.1:<br>
 
 - Windows 10 (64-разрядная) <sup>*</sup>
 - Windows 8.1 (64-разрядная)
-- Windows Server 2016 <sup>*</sup>
+- Windows Server 2019 (64-разрядная версия)
+- Windows Server 2016 (64-разрядная версия) <sup>*</sup>
 - Windows Server 2012 R2 (64-разрядная версия)
 - Windows Server 2012 (64-разрядная версия)
 - Windows Server 2008 R2 (64-разрядная версия)
@@ -105,7 +104,7 @@ SQL Server Management Studio 18.1:<br>
 
 ## <a name="release-notes-ssms-181"></a>Заметки о выпуске (SSMS 18.1)
 
-Известных проблем в этом выпуске нет.
+В этом выпуске есть несколько [известных проблем](release-notes-ssms.md#known-issues-181).
 
 Дополнительные сведения об этом выпуске см. в [заметках о выпуске SSMS](release-notes-ssms.md).
 

@@ -1,7 +1,7 @@
 ---
 title: Ограничения ребер графа | Документация Майкрософт
 ms.custom: ''
-ms.date: 04/23/2019
+ms.date: 06/21/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -13,31 +13,22 @@ helpviewer_keywords:
 - edge constraints [Azure SQL Database]
 - graph edge constraints
 - SQL Graph
-ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
-manager: craigg
-monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 86544dee5262a1d04c1ff1d8e59f8ddac5e9b5ce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current'
+ms.openlocfilehash: aa73858e6df29c814821ee9e24923cbfc0fbd4a2
+ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64774655"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67343885"
 ---
 # <a name="edge-constraints"></a>Ограничения границ
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx.md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-  Ограничения ребер могут использоваться для обеспечения целостности данных и применения определенной семантики в таблицах ребер в базе данных графа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
-  
-Эта статья состоит из следующих разделов:  
-  
-[Ограничения ребер](../../relational-databases/tables/graph-edge-constraints.md#Connection)  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-[Ограничения ребер](../../relational-databases/tables/graph-edge-constraints.md#Connection)  
-  
-[Связанные задачи](../../relational-databases/tables/graph-edge-constraints.md#Tasks)  
-  
+Ограничения ребер могут использоваться для обеспечения целостности данных и применения определенной семантики в таблицах ребер в базе данных графа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+
 ##  <a name="Connection"></a> Ограничения ребер
  В первом выпуске функций графа в таблицах ребер не предусмотрено ничего для конечных точек ребра. То есть ребро в базе данных графа может соединить любой узел с другим, независимо от типа. 
 
@@ -66,3 +57,5 @@ ms.locfileid: "64774655"
 |Описывает, как удалить ограничение ребра.|[Удаление ограничений ребер](../../relational-databases/tables/delete-edge-constraint.md)|  
 |Описывает, как изменить ограничение ребра.|[Изменение ограничения ребер](../../relational-databases/tables/modify-edge-constraint.md)|  
 |Описывает, как просмотреть свойства ограничения ребер.|[Просмотр свойств ограничений ребер](../../relational-databases/tables/view-edge-constraint-properties.md)|  
+| Общие сведения о технологии Graph в SQL Server | [Обработка графов в SQL Server и Базы данных SQL Azure](../graphs/sql-graph-overview.md) |
+| &nbsp; | &nbsp; |

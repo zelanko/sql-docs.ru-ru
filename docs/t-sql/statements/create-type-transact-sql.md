@@ -27,12 +27,12 @@ ms.assetid: 2202236b-e09f-40a1-bbc7-b8cff7488905
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: fba367c376084ff4842ef165382fb5a91f410724
-ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
+ms.openlocfilehash: 02a84386929f2e62200cc67946be3567c6e02a51
+ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53266005"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67463596"
 ---
 # <a name="create-type-transact-sql"></a>CREATE TYPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,13 +52,15 @@ ms.locfileid: "53266005"
 -- User-defined Data Type Syntax    
 CREATE TYPE [ schema_name. ] type_name  
 {   
-    FROM base_type   
-    [ ( precision [ , scale ] ) ]  
-    [ NULL | NOT NULL ]   
-  | EXTERNAL NAME assembly_name [ .class_name ]   
-AS TABLE ( { <column_definition> | <computed_column_definition> [ ,... n ] }
-    | [ <table_constraint> ] [ ,... n ]    
-    | [ <table_index> ] [ ,... n ] } )
+    [
+      FROM base_type   
+      [ ( precision [ , scale ] ) ]  
+      [ NULL | NOT NULL ]
+    ]
+    | EXTERNAL NAME assembly_name [ .class_name ]   
+    | AS TABLE ( { <column_definition> | <computed_column_definition> [ ,... n ] }
+      [ <table_constraint> ] [ ,... n ]    
+      [ <table_index> ] [ ,... n ] } )
  
 } [ ; ]  
   
@@ -206,7 +208,7 @@ column_name <data_type>
  **[.** *class_name*  **]**  
  **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Задает класс сборки, реализующей определяемый пользователем тип. Аргумент *class_name* должен быть допустимым идентификатором и существовать как класс в сборке с видимостью сборки. Аргумент *class_name* учитывает регистр символов независимо от параметров сортировки, установленных в библиотеке. Его значение должно точно соответствовать имени класса в соответствующей сборке. Именем класса может быть заключенное в квадратные скобки (**[]**) имя с указанием пространства имен, если в языке программирования, на котором записан класс, используется концепция пространств имен, как, например, в языке C#. Если аргумент *class_name* не задан, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]считает, что его значение равно значению аргумента *type_name*.  
+ Задает класс сборки, реализующей определяемый пользователем тип. Аргумент *class_name* должен быть допустимым идентификатором и существовать как класс в сборке с видимостью сборки. Аргумент *class_name* учитывает регистр символов независимо от параметров сортировки, установленных в библиотеке. Его значение должно точно соответствовать имени класса в соответствующей сборке. Именем класса может быть заключенное в квадратные скобки ( **[]** ) имя с указанием пространства имен, если в языке программирования, на котором записан класс, используется концепция пространств имен, как, например, в языке C#. Если аргумент *class_name* не задан, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]считает, что его значение равно значению аргумента *type_name*.  
   
  \<column_definition>  
  Определяет столбцы для определяемого пользователем табличного типа.  
@@ -317,6 +319,25 @@ CREATE TYPE LocationTableType AS TABLE
     , CostRate INT );  
 GO  
 ```  
+
+### <a name="d-creating-a-user-defined-table-type-with-primary-key-and-index"></a>Г. Создание определяемого пользователем табличного типа с первичным узлом и индексом
+В следующем примере создается определяемый пользователем табличный тип с тремя столбцами, один из которых (`Name`) является первичным ключом, а другой (`Price`) имеет некластеризованный индекс.  Дополнительные сведения о создании и использовании возвращающих табличное значение параметрах см. в разделе [Использование параметров, возвращающих табличные значения (ядро СУБД)](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).
+
+```sql
+CREATE TYPE InventoryItem AS TABLE
+(
+    [Name] NVARCHAR(50) NOT NULL,
+    SupplierId BIGINT NOT NULL,
+    Price DECIMAL (18, 4) NULL,
+    PRIMARY KEY (
+        Name
+    ),
+    INDEX IX_InventoryItem_Price (
+        Price
+    )
+)
+GO
+```
   
 ## <a name="see-also"></a>См. также:  
  [CREATE ASSEMBLY (Transact-SQL)](../../t-sql/statements/create-assembly-transact-sql.md)   
