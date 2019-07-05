@@ -3,7 +3,7 @@ title: SandDance для Studio данных Azure
 titleSuffix: Azure Data Studio
 description: Как использовать SandDance студии данных Azure
 ms.custom: seodec18
-ms.date: 04/18/2019
+ms.date: 07/03/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: jroth
-ms.openlocfilehash: 683aea4066c0b27db295cc07db31ecd07fb33245
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 466b2b60548d1dcef104979d1e291d44bf53b3de
+ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798081"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67563992"
 ---
 # <a name="sanddance-for-azure-data-studio-preview"></a>SandDance для Studio данных Azure (Предварительная версия)
 Azure Data Studio предлагает способ создания быстрого визуализации для файлов CSV и .tsv, вы работаете. Сюда входят локальные файлы или файлы в HDFS в ваш кластер SQL Server 2019 больших данных. Это расширение полезно в тех случаях, когда вы пытаетесь имеют быстрого просмотра данных и понять, что происходит. Мы используем технологию, которая называется SandDance от Microsoft Research, которые можно создавать визуализации данных на месте.

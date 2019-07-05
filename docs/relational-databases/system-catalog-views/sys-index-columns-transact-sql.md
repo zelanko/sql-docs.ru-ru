@@ -1,7 +1,7 @@
 ---
 title: sys.index_columns (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
-ms.date: 03/15/2017
+ms.date: 07/03/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d7ee4944511dca9167c787c529cdebcf33cdc92c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8707cb6cfb4f535a634f501e9113406c26b7e4a8
+ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63004390"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67564191"
 ---
 # <a name="sysindexcolumns-transact-sql"></a>sys.index_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,15 +42,18 @@ ms.locfileid: "63004390"
 |**key_ordinal**|**tinyint**|Порядковый номер (нумерация начинается с 1) внутри набора ключевых столбцов.<br /><br /> 0 = неключевой столбец или XML-индекс, индекс columnstore или пространственный индекс.<br /><br /> Примечание. XML-индекс или пространственный индекс не может быть так, как базовые столбцы не поддерживают сравнение, это означает, что их значения не может быть упорядочен.|  
 |**partition_ordinal**|**tinyint**|Порядковый номер (нумерация начинается с 1) внутри набора столбцов секционирования. Кластеризованный индекс columnstore может иметь самое большее 1 столбец секционирования.<br /><br /> 0 = Объект не является столбцом секционирования.|  
 |**is_descending_key**|**bit**|1 = Направление сортировки ключевого столбца индексов по убыванию.<br /><br /> 0 = ключевой столбец индекса имеет направление сортировки по возрастанию, или столбец входит в состав индекса columnstore или хэш-индекса.|  
-|**is_included_column**|**bit**|1 = столбец является неключевым столбцом, добавленным к индексу с использованием предложения CREATE INDEX INCLUDE, или столбец входит в состав индекса columnstore.<br /><br /> 0 = Столбец не является включенным.<br /><br /> Столбцы, добавленные неявно, поскольку они являются частью ключа кластеризации, не перечислены в **sys.index_columns**.<br /><br /> Столбцы, добавленные неявно, поскольку они представляют собой столбец секционирования, возвращаются как 0.|  
+|**is_included_column**|**bit**|1 = столбец является неключевым столбцом, добавленным к индексу с использованием предложения CREATE INDEX INCLUDE, или столбец входит в состав индекса columnstore.<br /><br /> 0 = Столбец не является включенным.<br /><br /> Столбцы, добавленные неявно, поскольку они являются частью ключа кластеризации, не перечислены в **sys.index_columns**.<br /><br /> Столбцы, добавленные неявно, поскольку они представляют собой столбец секционирования, возвращаются как 0.| 
+|**column_store_order_ordinal**</br> Применимо для следующих объектов: Хранилище данных SQL Azure (Предварительная версия)|**tinyint**|Порядковый номер (начинающийся с 1) внутри набора порядок столбцов в индексе упорядоченный кластеризованный индекс columnstore.|
   
-## <a name="permissions"></a>Разрешения  
+## <a name="permissions"></a>Разрешения
+
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="examples"></a>Примеры  
+## <a name="examples"></a>Примеры
+
  В следующем примере возвращаются все индексы и индексированные столбцы для таблицы `Production.BillOfMaterials`.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT i.name AS index_name  
@@ -59,7 +62,7 @@ SELECT i.name AS index_name
     ,ic.key_ordinal  
 ,ic.is_included_column  
 FROM sys.indexes AS i  
-INNER JOIN sys.index_columns AS ic   
+INNER JOIN sys.index_columns AS ic
     ON i.object_id = ic.object_id AND i.index_id = ic.index_id  
 WHERE i.object_id = OBJECT_ID('Production.BillOfMaterials');  
   
@@ -67,7 +70,7 @@ WHERE i.object_id = OBJECT_ID('Production.BillOfMaterials');
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```  
+```
   
 index_name                                                 column_name        index_column_id key_ordinal is_included_column  
 ---------------------------------------------------------- -----------------  --------------- ----------- -------------  

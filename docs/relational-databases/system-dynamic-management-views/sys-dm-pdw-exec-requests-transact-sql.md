@@ -1,7 +1,7 @@
 ---
 title: sys.dm_pdw_exec_requests (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
-ms.date: 05/01/2019
+ms.date: 07/03/2019
 ms.prod: sql
 ms.technology: data-warehouse
 ms.reviewer: ''
@@ -9,16 +9,16 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
-author: ronortloff
-ms.author: rortloff
+author: XiaoyuL-Preview
+ms.author: xiaoyul
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 20ce33d85c3906a14bbc813b110591e3aa0b71fe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a3aa0219e1e8d0733926662b22f929fa923ae071
+ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65836190"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67564175"
 ---
 # <a name="sysdmpdwexecrequests-transact-sql"></a>sys.dm_pdw_exec_requests (Transact-SQL)
 
@@ -44,6 +44,8 @@ ms.locfileid: "65836190"
 |importance|**nvarchar(32)**|Отправлено важность запроса. Запросы с низким важности останется в очереди в приостановленном состоянии, если выше важности запросы отправляются.  Запросы с высокой важностью будет выполняться до нижней важность запросов, отправленных ранее.  Дополнительные сведения о важности, см. в разделе [важность рабочих нагрузок](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-workload-importance).  |NULL</br>Низкий</br>below_normal</br>Обычный (по умолчанию)</br>above_normal</br>Высокий уровень|
 |group_name| |Зарезервировано для внутреннего использования.</br>Применимо для следующих объектов: Хранилище данных SQL Azure|
 |resource_allocation_percentage| |Зарезервировано для внутреннего использования.</br>Применимо для следующих объектов: Хранилище данных SQL Azure|
+|result_set_cache|**bit**|Подробное описание ли завершенным запросом было попадание в кэш результат (1) или нет (0).|0,1|
+||||
   
  Сведения о максимальное число строк, сохраняемых в этом представлении см. в разделе метаданных в [ограничения емкости](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) раздела.   
   
