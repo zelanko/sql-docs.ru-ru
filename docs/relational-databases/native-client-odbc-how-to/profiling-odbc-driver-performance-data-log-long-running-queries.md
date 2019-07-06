@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e3605365fcee0a351d7638fb20f3633f03b976a3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c2d90f9ec9a396333715f6285ed300bc2436eed2
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656623"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580971"
 ---
 # <a name="profiling-odbc-driver-performance-data---log-long-running-queries"></a>Создание профилей данных производительности драйвера ODBC — ведение журналов длительных запросов
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "51656623"
   
 ### <a name="to-log-long-running-queries-using-odbc-administrator"></a>Ведение журнала длительно выполняющихся запросов с помощью администратора ODBC  
   
-1.  В **панели управления**, дважды щелкните **Администрирование** и дважды щелкните **источники данных (ODBC)**. (Можно также запустить файл odbcad32.exe из командной строки.)  
+1.  В **панели управления**, дважды щелкните **Администрирование** и дважды щелкните **источники данных (ODBC)** . (Можно также запустить файл odbcad32.exe из командной строки.)  
   
 2.  Нажмите кнопку **DSN пользователя**, **системный DSN**, или **файловый DSN** вкладки.  
   
@@ -45,7 +45,9 @@ ms.locfileid: "51656623"
 6.  Выберите **сохранять длительные запросы в файл журнала**. В текстовое поле введите имя файла журнала для запросов длительного выполнения. При необходимости щелкните **Обзор** чтобы просматривать файловую систему для журнала запросов.  
   
 7.  Задайте интервал времени ожидания запроса, в миллисекундах, в **длительность запроса (в миллисекундах)** поле.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ### <a name="to-log-long-running-queries-data-programmatically"></a>Ведение журнала длительно выполняющихся запросов программным образом  
   
 1.  Вызовите [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) SQL_COPT_SS_PERF_QUERY_LOG и полный путь и имя файла журнала долго выполняющегося запроса. Пример:  

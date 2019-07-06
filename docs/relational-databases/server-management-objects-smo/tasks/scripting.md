@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 68fcd735be7c3729f01e50a6133b5de2a6f9cfe6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a53ab0d5b8fde978afce5adeb3dd753da554cda4
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715692"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582636"
 ---
-# <a name="scripting"></a>Создание скриптов
+# <a name="scripting"></a>Написание скриптов
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   Создание скрипта в SMO управляется <xref:Microsoft.SqlServer.Management.Smo.Scripter> объекта и его дочерних объектов или **скрипт** метод на индивидуальные объекты. <xref:Microsoft.SqlServer.Management.Smo.Scripter> Объекта управляет сопоставлением связей зависимости для объектов в экземпляре [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -34,7 +34,9 @@ ms.locfileid: "47715692"
 2.  Создание списка  
   
 3.  Создание скрипта  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  Фаза обнаружения использует объект <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker>. Учитывая URN-список объектов, метод <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker.DiscoverDependencies%2A> объекта <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker> возвращает объект <xref:Microsoft.SqlServer.Management.Smo.DependencyTree> объектам в URN-списке. Логическое значение *fParents* параметр используется для выбора объектов, которые необходимо обнаружить родительских или дочерних элементов указанного объекта. На данном этапе можно изменить дерево зависимостей.  
   
  На фазе создания списка передается дерево и возвращается результирующий список. Данный список объекта существует в порядке создания сценария, и им можно управлять.  

@@ -18,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0a73e1cc51cade93183af1fe4e98e59c3c65d474
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ba7ff25e8f80fbdda0994b8855a30d47e4532c93
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62738265"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580226"
 ---
 # <a name="setting-large-data"></a>Присваивание больших данных
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,7 +57,9 @@ ms.locfileid: "62738265"
 5.  Вызовите функцию **GetNextRows** для выборки следующих строк из набора строк. Вызовите функцию **GetData** для чтения данных набора строк.  
   
 6.  Создайте объект хранилища, содержащий данные (с признаком длины) и вызовите метод **IRowsetChange::SetData** (или **IRowsetChange::InsertRow**) с методом доступа, привязывающим столбец BLOB для задания данных.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="example"></a>Пример  
  Следующий пример показывает получение данных BLOB. В примере создается таблица, добавляется образец записи, эта запись выбирается из набора строк, а затем устанавливается значение поля BLOB.  
   

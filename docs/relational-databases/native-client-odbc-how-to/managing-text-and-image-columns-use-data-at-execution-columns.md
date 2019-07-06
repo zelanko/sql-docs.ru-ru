@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8858ba41bf1ff3a6acf4161865c535fd5b10f412
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 54b15c11eacdd29eeea01b867f9f1c7e8a7186b4
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203303"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580272"
 ---
 # <a name="managing-text-and-image-columns---use-data-at-execution-columns"></a>Управление столбцами text и image — использование столбцов данных времени выполнения
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +43,9 @@ ms.locfileid: "53203303"
     -   Вызовите функцию [SQLPutData](../../relational-databases/native-client-odbc-api/sqlputdata.md) один или более раз, чтобы отправить данные столбца, до тех пор, пока не будет отправлена длина.  
   
 4.  Вызовите функцию [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) , чтобы указать, что данные для конечного столбца с данными времени выполнения отправлены. При этом не будет возвращено значение SQL_NEED_DATA.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="example"></a>Пример  
  В этом образце показано, как с помощью функции SQLGetData считывать символьные данные из переменной типа SQL_LONG. Этот образец не поддерживается на архитектуре IA64.  
   

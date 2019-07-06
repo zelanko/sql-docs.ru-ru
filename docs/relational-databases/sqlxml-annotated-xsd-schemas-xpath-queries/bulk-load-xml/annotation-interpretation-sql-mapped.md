@@ -19,18 +19,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b33bdeff7f34993681fbdede0200e9bcab8ab96e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: aa5370e91aa5a8f5012a9c8f35f3fb98b3b3e726
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040075"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581914"
 ---
 # <a name="annotation-interpretation---sqlmapped"></a>Интерпретация заметки — sql:mapped
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Массовая загрузка XML обрабатывает **sql: сопоставлены** является заметки в схемах XSD, ожидается, если схема сопоставления задает **sql: сопоставлены = «false»** для любого элемента или атрибута, Массовая загрузка XML не поддерживает Попытка сохранить связанные данные в соответствующем столбце.  
   
- Массовая загрузка XML пропускает элементы и атрибуты, которые не сопоставлены (поскольку они не описаны в схеме, или они помечены в схеме XSD с **sql: сопоставлены = «false»**). Все несопоставленные данные попадают в столбце переполнения, если такой столбец задается с помощью **SQL: Overflow-поле**.  
+ Массовая загрузка XML пропускает элементы и атрибуты, которые не сопоставлены (поскольку они не описаны в схеме, или они помечены в схеме XSD с **sql: сопоставлены = «false»** ). Все несопоставленные данные попадают в столбце переполнения, если такой столбец задается с помощью **SQL: Overflow-поле**.  
   
  В качестве примера рассмотрим следующую схему XSD.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "56040075"
 </xsd:schema>  
 ```  
   
- Так как **HomePhone** атрибут задает **sql: сопоставлены = «false»**, Массовая загрузка XML не сопоставляет этот атрибут в соответствующий столбец. В схеме XSD определяется столбец переполнения (**OverflowColumn**) в который Массовая загрузка сохраняет невостребованные данные.  
+ Так как **HomePhone** атрибут задает **sql: сопоставлены = «false»** , Массовая загрузка XML не сопоставляет этот атрибут в соответствующий столбец. В схеме XSD определяется столбец переполнения (**OverflowColumn**) в который Массовая загрузка сохраняет невостребованные данные.  
   
 ### <a name="to-test-a-working-sample"></a>Проверка рабочего образца  
   
@@ -86,7 +86,9 @@ ms.locfileid: "56040075"
     ```  
   
 4.  Чтобы выполнить массовую загрузку XML-данных, сохраните этот пример на языке [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic Scripting Edition (VBScript) в файле Sample.vbs и выполните его.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     ```  
     set objBL = CreateObject("SQLXMLBulkLoad.SQLXMLBulkload.4.0")  
     objBL.ConnectionString = "provider=SQLOLEDB;data source=localhost;database=tempdb;integrated security=SSPI"  

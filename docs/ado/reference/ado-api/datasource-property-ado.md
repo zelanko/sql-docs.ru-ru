@@ -16,18 +16,18 @@ ms.assetid: 300a702a-3544-48c5-b759-83b511fe97e0
 author: MightyPen
 ms.author: genemi
 manager: jroth
-ms.openlocfilehash: f913d6ef342a110d6484e05a2f1925e47d5abdac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4c62953f958ef14134d7463c899f5b842d94f596
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718491"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597583"
 ---
 # <a name="datasource-property-ado"></a>Свойство DataSource (ADO)
 Указывает объект, содержащий данные для представления в виде [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта.  
   
 ## <a name="remarks"></a>Примечания  
- Это свойство используется для создания элементов управления с привязкой данных в среде данных. Поддерживает среду данных наборами данных (источники данных), содержащий именованные объекты (члены данных), на которые будет представлена в виде **записей** объект *.*  
+ Это свойство используется для создания элементов управления с привязкой данных в среде данных. Поддерживает среду данных наборами данных (источники данных), содержащий именованные объекты (члены данных), на которые будет представлена в виде **записей** объекта.  
   
  [DataMember](../../../ado/reference/ado-api/datamember-property.md) и **DataSource** свойства должен использоваться совместно.  
   

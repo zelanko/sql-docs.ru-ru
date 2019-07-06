@@ -15,15 +15,15 @@ ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
 author: MightyPen
 ms.author: genemi
 manager: jroth
-ms.openlocfilehash: c67a58b1299a002428c3a72b9df23892c76cd81c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 207ac319852435d3d0178e4a0dcc78a1cc1a0c8e
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702652"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597500"
 ---
 # <a name="absolute-and-relative-urls"></a>Абсолютные и относительные URL-адреса
-URL-адрес указывает расположение целевого объекта, хранящиеся на локальном или сетевом компьютере. Целевой объект может быть файл, каталог, HTML-страницы, изображения, программы и т. д. *.*  
+URL-адрес указывает расположение целевого объекта, хранящиеся на локальном или сетевом компьютере. Целевой объект может быть файл, каталог, HTML-страницы, изображения, программы и т. д.  
   
  *Абсолютный URL-адрес* содержит все сведения, необходимые для размещения ресурсов.  
   
@@ -53,7 +53,7 @@ URL-адрес указывает расположение целевого об
   
  С помощью ADO 2.7 или более поздней версии абсолютный URL-адрес можно также определить контекст. Например, если [записи](../../../ado/reference/ado-api/record-object-ado.md) объект открыт с абсолютным URL-адресом, **подключения** неявно создается объект для представления ресурса, указанного URL-адрес.  
   
- Абсолютный URL-адрес, который определяет контекст может быть указано в *ActiveConnection* параметр **записи** объект [откройте](../../../ado/reference/ado-api/open-method-ado-record.md) метод. Абсолютный URL-адрес также можно задать для параметра «URL-адрес **=** "ключевое слово в **подключения** объект [откройте](../../../ado/reference/ado-api/open-method-ado-connection.md) метод  *ConnectionString* параметра и [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объект [откройте](../../../ado/reference/ado-api/open-method-ado-recordset.md) метод *ActiveConnection* параметра.  
+ Абсолютный URL-адрес, который определяет контекст может быть указано в *ActiveConnection* параметр **записи** объект [откройте](../../../ado/reference/ado-api/open-method-ado-record.md) метод. Абсолютный URL-адрес также можно задать для параметра «URL-адрес =» ключевое слово в **подключения** объект [откройте](../../../ado/reference/ado-api/open-method-ado-connection.md) метод *ConnectionString* параметра и [Записей](../../../ado/reference/ado-api/recordset-object-ado.md) объект [откройте](../../../ado/reference/ado-api/open-method-ado-recordset.md) метод *ActiveConnection* параметра.  
   
  Контекст можно также определить, открыв **записи** или **записей** объект, который представляет каталог, так как эти объекты уже имеется неявно или явно объявленных **подключения**  , указывающий контекст.  
   

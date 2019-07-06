@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 34be43cc8274f165a85d2ac51ccc2f1ca7939d3d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 863ceaa522e11269f1b2b7fa8ca4549cf0f32295
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673271"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583813"
 ---
 # <a name="retrieve-rows-using-bookmarks-ole-db"></a>Получение строк с помощью закладок (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +42,9 @@ ms.locfileid: "51673271"
 4.  Установите в поле **dwFlag** структуры привязки флаг DBCOLUMNSINFO_ISBOOKMARK для столбца, используемого в качестве закладки.  
   
 5.  С помощью метода **IRowsetLocate::GetRowsAt** выполните выборку строк, начиная со строки, указанной в качестве смещения относительно закладки.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="example"></a>Пример  
  В данном образце демонстрируется выполнение выборки строк с использованием закладки. Этот образец не поддерживается на архитектуре IA64.  
   

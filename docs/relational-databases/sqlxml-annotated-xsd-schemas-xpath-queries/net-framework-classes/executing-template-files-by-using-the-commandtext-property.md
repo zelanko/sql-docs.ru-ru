@@ -18,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6af0bf5d7226cea9a7ff42b2b4fd22c34b56f0c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: af64b8a622cb23ae04bcbf7dbf090be764a54882
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62500441"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584859"
 ---
 # <a name="executing-template-files-by-using-the-commandtext-property"></a>Выполнение файлов шаблонов с использованием свойства CommandText
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -93,7 +93,9 @@ class Test
      Будет создан исполняемый файл (DocSample.exe).  
   
 5.  Запустите файл DocSample.exe из командной строки.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  Если параметр передается в шаблон, имя параметра должно начинаться с символа (@); Например, p.Name=»\@ContactID», где p — объект SqlXmlParameter.  
   
  Это обновленный шаблон, который принимает один параметр.  

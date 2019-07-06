@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d8d0d377cff846bcabac999667718c5696089971
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: a10ce1d483343a81ba61e9e6f39b93cb48040337
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53216053"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584704"
 ---
 # <a name="bulk-copy-data-from-program-variables-odbc"></a>Обеспечение массового копирования данных из переменных приложения (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "53216053"
   
     -   Имя файла данных, в который сохраняются все сообщения об ошибках массового копирования (укажите значение NULL, если файл сообщений не требуется).  
   
-    -   Направление копирования: DB_IN из приложения в представление или таблицу или DB_OUT в приложение из таблицы или представления.  
+    -   Направление копирования: DB_IN из приложения в представление, таблицу или DB_OUT в приложение из таблицы или представления.  
   
 5.  Вызовите [bcp_bind](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) для каждого столбца при массовом копировании для привязки столбца к программной переменной.  
   
@@ -57,7 +57,9 @@ ms.locfileid: "53216053"
 7.  После передачи нескольких строк, вызвать [bcp_batch](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md) до контрольной точки, уже переданных строк. Рекомендуется вызывать [bcp_batch](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md) по крайней мере один раз на каждые 1000 строк.  
   
 8.  После отправки всех строк, вызвать [bcp_done](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-done.md) для завершения операции.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  Можно изменять местонахождение и длину переменных программы во время операции массового копирования путем вызова [bcp_colptr](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colptr.md) и [bcp_collen](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md). Используйте [bcp_control](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) задать различные параметры массового копирования. Используйте [bcp_moretext](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md) для отправки **текст**, **ntext**, и **изображения** данные в сегменты на сервер.  
   
 ## <a name="example"></a>Пример  

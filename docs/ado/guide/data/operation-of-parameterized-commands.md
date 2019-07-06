@@ -14,12 +14,12 @@ ms.assetid: 4fae0d54-83b6-4ead-99cc-bcf532daa121
 author: MightyPen
 ms.author: genemi
 manager: jroth
-ms.openlocfilehash: 4001ac5b449609683293cd3174dc4410cabf4c4b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c07c42a1f864c3dc6888003cd31b06fce9e6893c
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701864"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597458"
 ---
 # <a name="operation-of-parameterized-commands"></a>Использование параметризованных команд
 При работе с большой дочерним **набор записей**, особенно по сравнению с размер родительского **набор записей**, но требуется доступ только несколько дочерних главы, может оказаться эффективнее использовать параметризованные команды.  
@@ -36,7 +36,7 @@ SHAPE {SELECT * FROM customer}
    RELATE cust_id TO PARAMETER 0)  
 ```  
   
- Родительскую и дочернюю таблицы с именами столбцов в общие cust_id *.* *Дочерняя команда* имеет «?» заполнитель, на который ссылается в предложении RELATE (то есть «... ПАРАМЕТР, 0").  
+ Родительскую и дочернюю таблицы с именами столбцов в распространенных *cust_id*. *Дочерняя команда* имеет «?» заполнитель, на который ссылается в предложении RELATE (то есть «... ПАРАМЕТР, 0").  
   
 > [!NOTE]
 >  В предложении параметр относится исключительно к синтаксис команды фигуры. Она не связана с либо ADO [параметр](../../../ado/reference/ado-api/parameter-object.md) объекта или [параметры](../../../ado/reference/ado-api/parameters-collection-ado.md) коллекции.  

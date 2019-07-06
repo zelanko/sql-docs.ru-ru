@@ -17,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 52cd97e832c73c795dc6a08e6877b70dec29f49f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 13d5383f979899bc5d610579cd2cb99004cf5520
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205112"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580453"
 ---
 # <a name="bulk-copy-data-using-irowsetfastload-ole-db"></a>Выполнение массового копирования данных с использованием интерфейса IRowsetFastLoad (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -54,15 +54,17 @@ ms.locfileid: "53205112"
 6.  Задайте буфер памяти, из которого данные будут копироваться в таблицу.  
   
 7.  Вызовите **IRowsetFastLoad::InsertRow** для массового копирования данных в таблицу.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="example"></a>Пример  
  В этом примере в таблицу IRFLTable добавляется 10 записей. Необходимо создать в базе данных таблицу IRFLTable. Этот образец не поддерживается на архитектуре IA64.  
   
- Выполните первый ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) кода объявление, чтобы создать таблицу, используемую приложением.  
+ Выполните первый листинг кода ([!INCLUDE[tsql](../../includes/tsql-md.md)]), чтобы создать таблицу, используемую приложением.  
   
  Скомпилируйте с библиотеками ole32.lib и oleaut32.lib и выполните следующий листинг кода (C++). Это приложение соединяется с установленным на компьютер экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию. В некоторых операционных системах Windows придется заменить (localhost) или (local) на имя своего экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Чтобы подключиться к именованному экземпляру, измените строку подключения с L"(local)" на L"(local)\\\<имя>", где <имя> — это именованный экземпляр. По умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express устанавливается на именованный экземпляр. Убедитесь, что переменная среды INCLUDE включает каталог, содержащий файл sqlncli.h.  
   
- Выполните третий ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) кода объявление, чтобы удалить таблицу, используемую приложением.  
+ Выполните третий листинг кода ([!INCLUDE[tsql](../../includes/tsql-md.md)]), чтобы удалить таблицу, используемую приложением.  
   
 ```  
 USE AdventureWorks  

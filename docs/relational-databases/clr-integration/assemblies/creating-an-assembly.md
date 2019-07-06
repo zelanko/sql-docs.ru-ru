@@ -17,12 +17,12 @@ ms.assetid: a2bc503d-b6b2-4963-8beb-c11c323f18e0
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c9b69fa2c6ed790a33da50c0002b17a7e4461d0e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 8d9c14a534dc46f320ddacbf518c2df766292de6
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656763"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584049"
 ---
 # <a name="creating-an-assembly"></a>Создание сборки
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
 -   Сборка, которая вызывается или на которую указывает ссылка, была создана в этой базе данных.  
   
 ## <a name="specifying-security-when-creating-assemblies"></a>Уровни безопасности при создании сборки  
- При создании сборки в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] базы данных, можно указать один из трех различных уровней безопасности, в котором может выполняться код: **БЕЗОПАСНОМ**, **EXTERNAL_ACCESS**, или **UNSAFE** . Когда **CREATE ASSEMBLY** инструкция выполняется, выполняются определенные проверки сборку кода, которая может привести к сборке, не зарегистрирована на сервере. Дополнительные сведения см. в разделе образца Impersonation на [CodePlex](https://msftengprodsamples.codeplex.com/).  
+ При создании сборки в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] базы данных, можно указать один из трех различных уровней безопасности, в котором может выполняться код: **БЕЗОПАСНЫЙ**, **EXTERNAL_ACCESS**, или **UNSAFE**. Когда **CREATE ASSEMBLY** инструкция выполняется, выполняются определенные проверки сборку кода, которая может привести к сборке, не зарегистрирована на сервере. Дополнительные сведения см. в разделе образца Impersonation на [CodePlex](https://msftengprodsamples.codeplex.com/).  
   
  **БЕЗОПАСНЫЙ** набор разрешений по умолчанию и работает для большинства сценариев. Чтобы задать определенный уровень безопасности, измените синтаксис инструкции CREATE ASSEMBLY следующим образом.  
   
@@ -80,7 +80,9 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
 1.  Сборка должна иметь строгое имя, подписанное обычной подписью или кодом Authenticode с сертификатом. Это строгое имя (или сертификат) создается внутри [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] как асимметричный ключ (или сертификат), и имеет соответствующее имя входа с **EXTERNAL ACCESS ASSEMBLY** разрешение (для сборок внешнего доступа) или  **UNSAFE ASSEMBLY** разрешение (для небезопасных сборок).  
   
 2.  Владелец базы данных (DBO) имеет **EXTERNAL ACCESS ASSEMBLY** (для **ВНЕШНЕГО доступа** сборок) или **UNSAFE ASSEMBLY** (для **UNSAFE** Разрешение сборок) и база данных имеет [свойство базы данных TRUSTWORTHY](../../../relational-databases/security/trustworthy-database-property.md) присвоено **ON**.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  Два приведенных выше условия также проверяются при загрузке сборки (которая включает выполнение). Чтобы загрузить сборку, должно выполняться хотя бы одно условие.  
   
  Мы рекомендуем [свойство базы данных TRUSTWORTHY](../../../relational-databases/security/trustworthy-database-property.md) в базе данных не будет присвоено **ON** только для запуска common language runtime (CLR) кода в серверный процесс. Вместо этого рекомендуется создать асимметричный ключ из файла сборки в главной базе данных. Затем необходимо создать имя входа, сопоставленное с этим асимметричным ключом, и имя входа должно быть предоставлено **EXTERNAL ACCESS ASSEMBLY** или **UNSAFE ASSEMBLY** разрешение.  

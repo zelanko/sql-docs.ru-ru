@@ -1,6 +1,6 @@
 ---
 title: Поддерживаемые источники данных в SQL Server Analysis Services для табличных моделей 1200 | Документация Майкрософт
-ms.date: 11/07/2018
+ms.date: 07/02/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 49c63d205d2ce1b900f3b8d4ad9a08e3bf83e2f6
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: a1ef7ae48e3d1500d08c9adba5e39db6214125c5
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269687"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597361"
 ---
 # <a name="data-sources-supported-in-sql-server-analysis-services-tabular-1200-models"></a>Источники данных, поддерживаемые в SQL Server Analysis Services табличных моделей 1200
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "51269687"
   
 |||||  
 |-|-|-|-|  
-|Source|Версии|Тип файла|Поставщики|  
+|`Source`|Версии|Тип файла|Поставщики|  
 |Базы данных Access|Microsoft Access 2010 и более поздних версий|ACCDB или MDB|Поставщик ACE 14 OLE DB <sup> [1](#dnu)</sup>|  
 |Реляционные базы данных SQL Server|SQL Server 2008 и более поздней версии, данные хранилища SQL Server 2008 и более поздних версий, Azure базы данных SQL, хранилище данных SQL Azure, Analytics Platform System (APS)<br /><br /> <br /><br /> Analytics Platform System (APS) ранее была известна как SQL Server Parallel данных хранилища (PDW). Изначально для подключения к PDW из служб Analysis Services требовался специальный поставщик данных. В SQL Server 2012 он был заменен. Начиная с SQL Server 2012, для подключения к PDW и APS используется SQL Server Native Client. |(неприменимо)|Поставщик OLE DB для SQL Server<br /><br /> Поставщик OLE DB для собственного клиента SQL Server<br /><br /> Поставщик OLE DB для клиента SQL Server Native Client 10.0<br /><br /> Поставщик данных .NET Framework для клиента SQL|  
 |Реляционные базы данных Oracle|Oracle 9i и более поздних версий|(неприменимо)|Поставщик OLE DB для Oracle<br /><br /> Поставщик данных .NET Framework для клиента Oracle<br /><br /> Поставщик данных .NET Framework для SQL Server<br /><br /> OraOLEDB<br /><br /> MSDASQL|  
@@ -58,9 +58,20 @@ Microsoft SQL Server    |  2008 и более поздних версий      |
 База данных Microsoft Azure SQL    |   All      |  Поставщик OLE DB для SQL Server, поставщик OLE DB для собственного клиента SQL Server, поставщик данных .NET Framework для клиента SQL Server            
 Хранилище данных SQL Microsoft Azure     |   All     |  Поставщик OLE DB для собственного клиента SQL Server, поставщик данных .NET Framework для клиента SQL Server       
 Системы платформы аналитики Microsoft SQL (APS)     |   All      |  Поставщик OLE DB для SQL Server, поставщик OLE DB для собственного клиента SQL Server, поставщик данных .NET Framework для клиента SQL Server       
+|Microsoft SQL Server Always Encrypted <sup> [2](#ae)</sup> | 2016 и более поздних версий. 2014 и более ранних версий только в выпуске Enterprise. | Поставщик данных .NET Framework для клиента SQL
+|База данных Azure SQL Always Encrypted <sup> [2](#ae)</sup>| All | Поставщик данных .NET Framework для клиента SQL
 Реляционные базы данных Oracle     |  Oracle 9i и более поздних версий       |  Поставщик OLE DB для Oracle       
 Реляционные базы данных Teradata    |  Teradata V2R6 и более поздних версий     | Поставщик данных .NET для Teradata    
 
+
+### <a name="using-sql-server-analysis-services-with-always-encrypted"></a>С помощью SQL Server Analysis Services с помощью постоянного шифрования
+
+<a name="ae">[2] </a> SQL Server Analysis Services могут выступать в качестве клиента для базы данных при помощи [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) в SQL Server или базы данных SQL Azure при следующих условиях: 
+
+*  Главный ключ столбца, Защита зашифрованных столбцов должны быть сертификаты, хранящиеся в хранилище сертификатов Windows. Главные ключи столбцов, хранимых в хранилище ключей Azure не поддерживаются.   
+*  Компьютер Windows, на котором установлены службы Analysis Services имеет сертификаты главного ключа столбца необходимо установить. Дополнительные сведения см. в разделе [Создание главных ключей столбцов, в Windows Store сертификата](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md#creating-column-master-keys-in-windows-certificate-store).
+*  Источник данных служб Analysis Services использует для подключения к SQL основан на .net Framework поставщика, а параметр шифрования столбца, необходимо включить свойство в источнике данных. .NET framework 4.6.1 или более поздней версии должна присутствовать на сервере служб Analysis Services.
+*  Источник данных SQL Server или базы данных SQL должен быть *поставщика* тип источника данных, поддерживаемый уровень совместимости 1200. Он не будет работать с помощью Power Query *структурированных* источников данных, представленные в уровне совместимости 1400.
   
 ##  <a name="bkmk_tips"></a> Советы по выбору источников данных  
   

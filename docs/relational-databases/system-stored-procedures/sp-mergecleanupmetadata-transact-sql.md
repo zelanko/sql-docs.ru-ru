@@ -16,12 +16,12 @@ ms.assetid: 892f8628-4cbe-4cc3-b959-ed45ffc24064
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6924ef36c57036cf6cad6e25a6dc5cebfa5fa5f2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 12e2dde3916392e2e106499bdfb9dd0d4fad5b0c
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63017842"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582172"
 ---
 # <a name="spmergecleanupmetadata-transact-sql"></a>sp_mergecleanupmetadata (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +88,9 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
 5.  Восстановите файлы моментального снимка для всех публикаций слиянием, используемым на всех уровнях. При попытке слияния без предварительного повторного формирования моментального снимка будет предложено повторно сформировать моментальный снимок.  
   
 6.  Выполните резервное копирование базы данных публикации. Невыполнение этого требования может вызвать сбой слияния после восстановления базы данных публикации.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  **Специальные рассуждения о непрерывном режиме слияния**  
   
  При выполнении слияния в непрерывном режиме необходимо:  

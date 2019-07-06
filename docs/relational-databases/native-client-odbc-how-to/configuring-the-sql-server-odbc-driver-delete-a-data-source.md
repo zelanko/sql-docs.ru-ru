@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 087e2194fb5d0963e8fd9cb4aef0d0193359de04
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e8c4447413468fe01370ad67c16da0209fcee359
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818664"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584585"
 ---
 # <a name="configuring-the-sql-server-odbc-driver---delete-a-data-source"></a>Настройка драйвера ODBC SQL Server — удаление источника данных
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,14 +31,16 @@ ms.locfileid: "47818664"
   
 ### <a name="to-delete-a-data-source-by-using-odbc-administrator"></a>Удаление источника данных с помощью администратора ODBC  
   
-1.  В **панели управления**откройте **Администрирование**, а затем дважды щелкните либо **источников данных ODBC (64-разрядная версия)** или **источников данных ODBC (32-разрядная версия)**. Либо можно запустить файл odbcad32.exe из командной строки.  
+1.  В **панели управления**откройте **Администрирование**, а затем дважды щелкните либо **источников данных ODBC (64-разрядная версия)** или **источников данных ODBC (32-разрядная версия)** . Либо можно запустить файл odbcad32.exe из командной строки.  
   
 2.  Нажмите кнопку **DSN пользователя**, **системный DSN**, или **файловый DSN** вкладки.  
   
 3.  Выберите источник данных для удаления.  
   
 4.  Нажмите кнопку **удалить**, а затем подтвердите удаление.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="example"></a>Пример  
  Чтобы программно удалить источник данных, вызовите [SQLConfigDataSource](../../relational-databases/native-client-odbc-api/sqlconfigdatasource.md) с помощью значение ODBC_REMOVE_DSN или ODBC_REMOVE_SYS_DSN в качестве второго параметра.  
   

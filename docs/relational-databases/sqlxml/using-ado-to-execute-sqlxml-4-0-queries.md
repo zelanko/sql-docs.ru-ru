@@ -18,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4c80ec6b02af9e639c04eb1e30b730bcd22b6f78
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a5c20129498eb439a80d4768feb9bf00da41e05c
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028875"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582841"
 ---
 # <a name="using-ado-to-execute-sqlxml-40-queries"></a>Использование ADO для выполнения запросов SQLXML 4.0
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -107,7 +107,9 @@ ms.locfileid: "56028875"
 4.  Проверьте, что созданы все дополнительные файлы, такие как XML-шаблоны или схемы, которые являются частью образца, который нужно локально создать повторно на компьютере. Эти файлы должны находиться в том же каталоге, в котором сохранен файл тестового скрипта (Sqlxml4test.vbs).  
   
 5.  Следуйте инструкциям следующего раздела по использованию тестового скрипта SQLXML 4.0.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="using-the-sqlxml-40-test-script"></a>Использование тестового скрипта SQLXML 4.0  
  Следующая процедура описывает способ использования файлов Sqlxml4test.vbs для тестирования примеров запросов, предоставленных в этой документации.  
   

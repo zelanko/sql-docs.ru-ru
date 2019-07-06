@@ -16,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e16bbc20d98a313be039f207556b963ac43fa541
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 43f213ca1abcbb9b8fae1e20e338b773907a0b38
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035725"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581892"
 ---
 # <a name="annotation-interpretation---sqlrelationship-and-key-ordering-rule"></a>Интерпретация заметки — sql:relationship и правило упорядочения ключа
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "56035725"
 </xsd:schema>  
 ```  
   
- Как  **\<клиента >** узел элемента входит в область, Массовая загрузка XML формирует запись для клиента. Эта запись существует, пока Массовая загрузка XML считывает  **\</Customer >**. Во время обработки  **\<порядок >** узла элемента, Массовая загрузка XML использует  **\<SQL: Relationship >** для получения значения внешнего ключевого столбца CustomerID таблицы CustOrder из  **\<клиента >** родительского элемента, в том случае, так как  **\<порядок >** элемент не содержит **CustomerID** атрибут. Это означает, что в определении  **\<клиента >** элемент, необходимо указать **CustomerID** атрибут в схеме, прежде чем указывать  **\<sql: связь >**. В противном случае, если  **\<порядок >** элемент входит в область, Массовая загрузка XML формирует запись для таблицы CustOrder и при массового XML нагрузка достигает  **\</Order >** закрывающий тег, она отправляет запись в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] без значения внешнего ключевого столбца CustomerID.  
+ Как  **\<клиента >** узел элемента входит в область, Массовая загрузка XML формирует запись для клиента. Эта запись существует, пока Массовая загрузка XML считывает  **\</Customer >** . Во время обработки  **\<порядок >** узла элемента, Массовая загрузка XML использует  **\<SQL: Relationship >** для получения значения внешнего ключевого столбца CustomerID таблицы CustOrder из  **\<клиента >** родительского элемента, в том случае, так как  **\<порядок >** элемент не содержит **CustomerID** атрибут. Это означает, что в определении  **\<клиента >** элемент, необходимо указать **CustomerID** атрибут в схеме, прежде чем указывать  **\<sql: связь >** . В противном случае, если  **\<порядок >** элемент входит в область, Массовая загрузка XML формирует запись для таблицы CustOrder и при массового XML нагрузка достигает  **\</Order >** закрывающий тег, она отправляет запись в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] без значения внешнего ключевого столбца CustomerID.  
   
  Сохраните схему, приведенную в этом примере, в файле SampleSchema.xml.  
   
@@ -107,7 +107,9 @@ ms.locfileid: "56035725"
     ```  
   
 3.  Чтобы выполнить массовую загрузку XML-данных, сохраните этот пример на языке [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic Scripting Edition (VBScript) в файле MySample.vbs и выполните его.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     ```  
     set objBL = CreateObject("SQLXMLBulkLoad.SQLXMLBulkload.4.0")  
     objBL.ConnectionString = "provider=SQLOLEDB;data source=localhost;database=tempdb;integrated security=SSPI"  
@@ -118,7 +120,7 @@ ms.locfileid: "56035725"
     set objBL=Nothing  
     ```  
   
-     В результате массовая загрузка XML вставит значение NULL во внешний ключевой столбец CustomerID в таблице CustOrder. Если изменить данные образца XML таким образом, чтобы  **\<CustomerID >** дочерний элемент находился перед  **\<порядок >** дочерний элемент, вы получаете ожидаемый результат: массовая загрузка XML вставит указанное значение внешнего ключа в столбец.  
+     The result is that XML Bulk Load inserts a NULL value in the CustomerID foreign key column of the CustOrder table. If you revise the XML sample data so that the **\<CustomerID>** child element appears before the **\<Order>** child element, you get the expected result: XML Bulk Load inserts the specified foreign key value into the column.  
   
  Эквивалентная схема XDR:  
   

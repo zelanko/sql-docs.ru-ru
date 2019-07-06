@@ -16,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 33860539b188af46404865738621ceaf87ebfb3c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 1e12e038d4128a7290e4dd848b6b2afccba8c0bb
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659435"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582089"
 ---
 # <a name="bulk-copy-a-select-result-set-odbc"></a>Выполнение массового копирования результирующего набора SELECT (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,12 +48,14 @@ ms.locfileid: "51659435"
   
     -   Имя файла данных, в который сохраняются все сообщения об ошибках массового копирования (укажите значение NULL, если файл для сообщений не требуется).  
   
-    -   Направление копирования: значение DB_OUT.  
+    -   Направление копирования: ЗНАЧЕНИЕ DB_OUT.  
   
 5.  Вызовите [bcp_control](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md), установите параметр eOption в BCPHINTS и поместите ivalue присвойте указатель на массив SQLTCHAR, содержащую инструкцию SELECT.  
   
 6.  Вызовите [bcp_exec](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) для выполнения операции массового копирования.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  При использовании этих шагов создается файл в собственном формате. Значения данных можно преобразовать в другие типы данных с помощью [bcp_colfmt](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md). Дополнительные сведения см. в разделе [Создание файла форматирования массового копирования &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/create-a-bulk-copy-format-file-odbc.md).  
   
 ## <a name="example"></a>Пример  

@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 79b84888a788c34b9f103e1ae55b2f38d6d87f60
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 1541309fa19bbbf9ca4ee234c5b4831ee616ceea
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210503"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580954"
 ---
 # <a name="running-stored-procedures---process-return-codes-and-output-parameters"></a>Выполнение хранимых процедур — обработка кодов возврата и выходных параметров
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +42,9 @@ ms.locfileid: "53210503"
 3.  Выполните инструкцию с помощью **SQLExecDirect**.  
   
 4.  Обрабатывайте результирующие наборы до тех пор, пока **SQLFetch** или **SQLFetchScroll** не возвратит SQL_NO_DATA при обработке последнего результирующего набора или до тех пор, пока **SQLMoreResults** не возвратит SQL_NO_DATA. На этот момент переменные, привязанные к коду возврата, а также выходные параметры заполнены возвращенными значениями данных.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="example"></a>Пример  
  В данном образце демонстрируется обработка кода возврата и выходного параметра. Этот образец не поддерживается на архитектуре IA64. Этот образец разработан для ODBC версии 3.0 или более поздней.  
   

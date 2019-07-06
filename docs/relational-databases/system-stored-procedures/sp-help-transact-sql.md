@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f5e514307e1427cea0ea1bb4d75e7bf0806fd516
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 39a1e699b52b29db74209aa5288bb5dc01896a3b
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63017751"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586248"
 ---
 # <a name="sphelp-transact-sql"></a>sp_help (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -74,7 +74,9 @@ sp_help [ [ @objname = ] 'name' ]
     |**Параметры сортировки**|**sysname**|Параметры сортировки для типа данных. Имеет значение NULL для несимвольных типов данных.|  
   
 3.  Если *имя* — это любой объект базы данных, кроме типа данных, **sp_help** возвращает этот результирующий задано, а также дополнительные результирующие наборы, основанные на тип указанного объекта.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     |Имя столбца|Тип данных|Описание|  
     |-----------------|---------------|-----------------|  
     |**Name**|**nvarchar(** 128 **)**|Имя таблицы|  
@@ -82,9 +84,9 @@ sp_help [ [ @objname = ] 'name' ]
     |**Тип**|**nvarchar(** 31 **)**|Тип таблицы|  
     |**Created_datetime**|**datetime**|Дата создания таблицы|  
   
-     В зависимости от базы данных указанного объекта **sp_help** возвращает дополнительные результирующие наборы.  
+     Depending on the database object specified, **sp_help** returns additional result sets.  
   
-     Если *имя* системной таблице, пользовательской таблицы или представления, **sp_help** возвращает следующие результирующие наборы. Однако результирующий набор, описывающий место расположения файла данных внутри файловой группы, для представления не возвращается.  
+     If *name* is a system table, user table, or view, **sp_help** returns the following result sets. However, the result set that describes where the data file is located on a file group is not returned for a view.  
   
     -   Дополнительный результирующий набор, возвращаемый для объектов столбца:  
   

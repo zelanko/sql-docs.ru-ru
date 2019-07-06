@@ -12,12 +12,12 @@ ms.assetid: e78008ec-51e8-4fd1-b86f-1058a781de17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 75f04b8dfb6cfec70c6fc141178dfb56c9ffd94c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 56ccb1e8a25b7d9f138c2900422d301919fef039
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63205102"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597546"
 ---
 # <a name="example-specifying-the-xmltext-directive"></a>Пример Определение директивы XMLTEXT
   Этот пример иллюстрирует, как при помощи директивы `XMLTEXT` в инструкции `SELECT`, использующей режим EXPLICIT, осуществляется обращение к данным столбца Overflow.  
@@ -98,9 +98,9 @@ FOR XML EXPLICIT;
   
  `</Parent>`  
   
- Если указано значение *AttributeName* вместе с директивой `xmltext`, атрибуты элемента <`overflow`> добавляются как атрибуты вложенных элементов содержащего его элемента <`Parent`>. Имя, указанное как *AttributeName* , становится именем вложенного элемента  
+ Если указано значение *AttributeName* вместе с директивой `xmltext`, атрибуты элемента <`overflow`> добавляются как атрибуты вложенных элементов содержащего его элемента <`Parent`>. Имя, указанное для *AttributeName* становится именем вложенного элемента.  
   
- В этом запросе значение *AttributeName*, <`overflow`>, указано вместе с директивой `xmltext`xmltext *:*  
+ В этом запросе *AttributeName*, <`overflow`>, указано вместе с `xmltext` директивы:  
   
 ```  
 SELECT 1 as Tag, NULL as parent,  

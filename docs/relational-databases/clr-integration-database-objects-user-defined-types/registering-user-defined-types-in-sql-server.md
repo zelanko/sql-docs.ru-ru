@@ -33,12 +33,12 @@ ms.assetid: f7da3e92-e407-4f0b-b3a3-f214e442b37d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f82da51a519525451078a7f65548a91a532a0c86
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: cad827776e525c55b41517ae1de05d547d88dd2a
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537309"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584048"
 ---
 # <a name="registering-user-defined-types-in-sql-server"></a>Регистрация определяемых пользователем типов в SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,9 @@ ms.locfileid: "52537309"
 4.  Напишите код для реализации определяемого пользователем типа.  
   
 5.  Из **построения** меню, выберите **развернуть**. Эта команда регистрирует сборку и создает тип в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="using-transact-sql-to-deploy-udts"></a>Использование Transact-SQL для развертывания определяемых пользователем типов  
  Синтаксис CREATE ASSEMBLY языка [!INCLUDE[tsql](../../includes/tsql-md.md)] используется для регистрации сборки в базе данных, в которой требуется использование определяемого пользователем типа. Он хранится внутри системных таблиц базы данных, а во внешней файловой системе. Если определяемый пользователем тип зависит от внешних сборок, их тоже необходимо загрузить в базу данных. Инструкция CREATE TYPE используется для создания определяемого пользователем типа в базе данных, в которой он будет использоваться. Дополнительные сведения см. в разделе [CREATE ASSEMBLY &#40;Transact-SQL&#41; ](../../t-sql/statements/create-assembly-transact-sql.md) и [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md).  
   

@@ -18,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3d08831c8699acb7ef938e8d977801109704943d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 739c664e9e6c4085f55e68aa7222a3b47f556026
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62719700"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580873"
 ---
 # <a name="executing-sql-queries-sqlxml-managed-classes"></a>Выполнение запросов SQL (управляемые классы SQLXML)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -99,7 +99,9 @@ public static int Main(String[] args)
      Будет создан исполняемый файл (DocSample.exe).  
   
 3.  Запустите файл DocSample.exe из командной строки.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  Чтобы проверить этот пример, необходимо установить на компьютер платформу [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework.  
   
  Вместо указания запросов SQL в виде текста команды можно задать шаблон (как показано в следующем фрагменте кода), который выполняет диаграмму обновления (также шаблон) для вставки пользовательской записи. Можно задать шаблоны и диаграммы обновления в файлах и выполнить эти файлы. Дополнительные сведения см. в разделе [выполнение файлов шаблонов с помощью свойства CommandText](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-template-files-by-using-the-commandtext-property.md).  

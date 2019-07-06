@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 14d152adb1d2b24b70e64a0924935416cdcf09af
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 00edc71fdec53ac7606f11d913a2c1089ecf0216
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675113"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586225"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>Выбор столбцов при помощи метода IRow::GetColumns (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "51675113"
   
 -   Как получить группу столбцов (последовательно).  
   
--   Как дважды получить доступ к столбцу. В первый раз узнается фактическая ширина столбца, а затем осуществляется доступ к данным. Если в структуре DBCOLUMNACCESS **pData** имеет значение NULL, а **cbMaxLen** = 0, вызов **IRow**-**>GetColumns()** возвращает только фактическую длину столбца. В этом случае **IRow->GetColumns()** можно вызвать снова для того же столбца, чтобы получить данные.  
+-   Как дважды получить доступ к столбцу. В первый раз узнается фактическая ширина столбца, а затем осуществляется доступ к данным. Если в структуре DBCOLUMNACCESS **pData** имеет значение NULL, а **cbMaxLen** = 0, вызов **IRow**- **>GetColumns()** возвращает только фактическую длину столбца. В этом случае **IRow->GetColumns()** можно вызвать снова для того же столбца, чтобы получить данные.  
   
 > [!IMPORTANT]  
 >  По возможности используйте аутентификацию Windows. Если проверка подлинности Windows недоступна, запросите у пользователя ввод учетных данных во время выполнения. Избегайте хранения учетных данных в файле. Если необходимо сохранить учетные данные, зашифруйте их с помощью [API-интерфейса шифрования Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
@@ -45,7 +45,9 @@ ms.locfileid: "51675113"
 3.  Вызовите функцию IRow::GetColumns() для извлечения одного или нескольких столбцов из полученной строки. Если перед получением данных нужно определить фактический размер столбца, присвойте pData в структуре DBCOLUMNACCESS значение NULL. Вызов IRow::GetColumns() возвращает только ширину столбца. Еще один вызов IRow::GetColumns() получает данные.  
   
 4.  Выполняйте функцию IRow::GetColumns(), пока не получите данные из всех нужных столбцов. Доступ к столбцами должен осуществляться последовательно.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="example"></a>Пример  
  В данном образце показывается, как использовать интерфейс IRow для прямого доступа к столбцам строки результирующего набора. В этом примере показано следующее.  
   
@@ -53,7 +55,7 @@ ms.locfileid: "51675113"
   
 -   Как дважды получить доступ к столбцу ― в первый раз узнается фактическая ширина столбца, а затем осуществляется доступ к данным.  
   
- В структуре DBCOLUMNACCESS, если pData имеет значение NULL, а cbMaxLen = 0, вызов IRow->GetColumns возвращает только фактическую длину столбца. В этом случае IRow->GetColumns можно вызвать снова для того же столбца, чтобы получить данные. Этот образец не поддерживается на архитектуре IA64.  
+ Если в структуре DBCOLUMNACCESS pData имеет значение NULL, а cbMaxLen — значение 0, вызов IRow->GetColumns возвращает только фактическую длину столбца. В этом случае IRow->GetColumns можно вызвать снова для того же столбца, чтобы получить данные. Этот образец не поддерживается на архитектуре IA64.  
   
  Образцу требуется образец базы данных AdventureWorks, который можно загрузить с домашней страницы [Образцы кода и проекты сообщества Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384) (возможно, на английском языке).  
   

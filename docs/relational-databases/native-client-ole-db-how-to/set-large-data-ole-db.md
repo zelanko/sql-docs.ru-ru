@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 33a35a56cb433e860eb1cc66b7e0178db3eed925
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 2f23c7ace1a4a83b07d5ac25972c8fd4028d173f
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667543"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583794"
 ---
 # <a name="set-large-data-ole-db"></a>Задание данных больших объектов (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,7 +49,9 @@ ms.locfileid: "51667543"
 5.  Вызовите функцию **GetNextRows** для выборки следующих строк из набора строк. Вызовите функцию **GetData** для чтения данных набора строк.  
   
 6.  Для задания данных создайте объект хранения, содержащий данные (а также индикатор длины), а затем вызовите метод **IRowsetChange::SetData** (или **IRowsetChange::InsertRow**) с методом доступа, который привяжет столбец BLOB.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="example"></a>Пример  
   
 ### <a name="description"></a>Описание  

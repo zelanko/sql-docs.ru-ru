@@ -19,12 +19,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f4c377bbfbe4170b5631ba1ac9c017af1176b279
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f0f26d2484c7626a689dd83955d1bfb498365449
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013982"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584086"
 ---
 # <a name="using-data-files-and-format-files"></a>Использование файлов данных и файлов форматирования
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,7 +45,9 @@ ms.locfileid: "63013982"
 2.  Вызовите [bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) с *eOption* значение BCPHINTS и *iValue* — указатель на строку SQLTCHAR, содержащую инструкцию Transact-SQL.  
   
 3.  Вызовите **bcp_exec** для выполнения операции массового копирования.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  В качестве инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] подходит любая инструкция, которая создает результирующий набор. Создается файл данных, содержащий первый результирующий набор инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)]. Если инструкция [!INCLUDE[tsql](../../includes/tsql-md.md)] создает несколько результирующих наборов, операция массового копирования пропускает все результирующие наборы, следующие за первым.  
   
  Чтобы создать файл данных, в которых столбец данные хранятся в другом формате, чем в таблице, вызовите [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) чтобы указать, сколько столбцов будет изменен, а затем вызовите [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md) для каждого столбца, формат которого Вы хотите изменить. Это необходимо сделать после вызова метода **bcp_init** , но перед вызовом **bcp_exec**. **bcp_colfmt** указывает формат, в котором данные столбца хранятся в файле данных. Он может использоваться при выполнении массового копирования in или out. Можно также использовать **bcp_colfmt** для задания признаков конца строк и столбцов. Например, если данные содержат не символы табуляции, можно создать файл с разделителями табуляции с помощью **bcp_colfmt** задать символ табуляции в качестве признака конца для каждого столбца.  

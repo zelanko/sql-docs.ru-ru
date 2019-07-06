@@ -21,12 +21,12 @@ ms.assetid: 02295794-397d-4445-a3e3-971b25e7068d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 19fb2cb2fc3b70bb8389a85d661992a5f7a7cb4e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7bbcc576ab0ff38adde9042a713e0dfd0c7d54be
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700708"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583286"
 ---
 # <a name="sysspcdccleanupchangetable-transact-sql"></a>sys.sp_cdc_cleanup_change_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,13 +46,13 @@ sys.sp_cdc_cleanup_change_table
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @capture_instance =] '*capture_instance*"  
+ [ @capture_instance = ] '*capture_instance*'  
  Имя экземпляра системы отслеживания, связанного с таблицей изменений. *capture_instance* — **sysname**, не имеет значения по умолчанию и не может иметь значение NULL.  
   
  *capture_instance* необходимо присвоить имя экземпляра отслеживания, который существует в текущей базе данных.  
   
- [ @low_water_mark =] *low_water_mark*  
- — Это порядковый номер транзакции в журнале (LSN), для использования в качестве нового значения нижнего предела для *экземпляра отслеживания*. *low_water_mark* — **binary(10)**, не имеет значения по умолчанию.  
+ [ @low_water_mark = ] *low_water_mark*  
+ — Это порядковый номер транзакции в журнале (LSN), для использования в качестве нового значения нижнего предела для *экземпляра отслеживания*. *low_water_mark* — **binary(10)** , не имеет значения по умолчанию.  
   
  Если значение является не нулевым, оно должно отображаться в качестве значения start_lsn текущей записи в [cdc.lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) таблицы. Если в таблице cdc.lsn_time_mapping есть несколько записей, соответствующих одному моменту времени, на который ссылается указатель новой нижней конечной точки, то данному указателю присваивается наименьшее значение номера LSN данной группы записей.  
   
@@ -76,7 +76,9 @@ sys.sp_cdc_cleanup_change_table
     >  Новая нижняя конечная точка может не являться точкой, указанной в вызове хранимой процедуры. Если в таблице cdc.lsn_time_mapping есть несколько записей, соответствующих одному моменту времени, то в качестве нижней конечной точки выбирается наименьшее значение start_lsn в группе записей. Если @low_water_mark параметр равен NULL или текущая нижняя больше, чем новый конечная точка, значение start_lsn, для экземпляра системы отслеживания оставляется без изменения.  
   
 2.  Записи таблицы изменений, значения __$start_lsn которых меньше нижней конечной точки, удаляются. Пороговое значение удаления используется для ограничения количества строк, удаляемых в одной транзакции. Неуспешное удаление записей сопровождается выводом сообщения, но не влияет на изменения нижней конечной точки экземпляра системы отслеживания, которая могла быть создана при вызове.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  Пользуйтесь процедурой sys.sp_cdc_cleanup_change_table в следующих случаях.  
   
 -   Задание агента очистки сообщает о неудачном удалении.  
