@@ -17,12 +17,12 @@ ms.assetid: 019c10ab-68f6-4e40-a5e8-735b2e1270db
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1dae7b73c02ce1c9ced01104754dc881bf25893f
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: 20cebbb314e2830272e677da2d26bf53668798ab
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51571234"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579842"
 ---
 # <a name="filter-a-trace"></a>Фильтрация трассировки
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,9 @@ ms.locfileid: "51571234"
 2.  Определите данные и столбцы данных, содержащие необходимые сведения.  
   
 3.  Определите подмножество необходимых данных и определите фильтры, основанные на данном подмножестве.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  Допустим, что интересны только те события, которые происходят дольше определенного отрезка времени. Тогда можно создать трассировку, в которой будут содержаться события, для которых значения столбца данных **Продолжительность** больше, чем 300 миллисекунд. В трассировку не будут включаться события, выполнение которых продолжалось менее 300 миллисекунд.  
   
  Создавать фильтры можно при помощи хранимых процедур Transact-SQL или приложения SQL Server Profiler.  

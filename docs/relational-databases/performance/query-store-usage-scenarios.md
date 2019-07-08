@@ -14,12 +14,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 455530c12d498f62b367ecb7ce30d0eb34aa6c5d
-ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
+ms.openlocfilehash: 6169d09cd048c9883836c3d34ff8912e9101ba07
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59542044"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586322"
 ---
 # <a name="query-store-usage-scenarios"></a>Сценарии использования хранилища запросов
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -67,7 +67,9 @@ ms.locfileid: "59542044"
 4.  Убедитесь, что индексы, которые использует запрос, дефрагментированы.  
   
 5.  Вы можете переписать запрос, потребляющий много ресурсов. Например, можно использовать возможности параметризации запросов и уменьшить использование динамического SQL. Реализуйте оптимальную логику при считывании данных (примените фильтрацию данных на стороне базы данных, а не на стороне приложения).  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="ab-testing"></a>Тестирование А/Б  
  Использовать хранилище запросов для сравнения производительности рабочей нагрузки до и после того, как приложение изменит план. Ниже приводится список ситуаций, в которых можно использовать хранилище запросов для оценки влияния смены среды или приложения на производительность рабочей нагрузки.  
   

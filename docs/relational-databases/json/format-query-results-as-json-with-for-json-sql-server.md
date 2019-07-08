@@ -15,12 +15,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3ea42c8ca9025880f28f273248682e5b8fa88f3b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b30a29f7aa2cd0e64c645d2e62f60a10c74063ac
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66743906"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586263"
 ---
 # <a name="format-query-results-as-json-with-for-json-sql-server"></a>Форматирование результатов запроса как JSON с помощью предложения FOR JSON (SQL Server)
 
@@ -195,7 +195,9 @@ JSON_F52E2B61-18A1-11d1-B105-00805F49916B
     -   Каждый столбец в результатах инструкции SELECT (до применения предложения FOR JSON) становится свойством объекта JSON.  
   
 3.  Как имена столбцов, так и их значения экранируются согласно синтаксису JSON. Дополнительные сведения см. в разделе [Как FOR JSON экранирует специальные и управляющие символы (SQL Server)](../../relational-databases/json/how-for-json-escapes-special-characters-and-control-characters-sql-server.md).
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ### <a name="example"></a>Пример
 Приведенный ниже пример показывает, каким образом предложение **FOR JSON** форматирует выходные данные JSON.  
   

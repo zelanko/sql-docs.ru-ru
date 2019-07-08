@@ -18,12 +18,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fa37094aa6e41da48de776e7bb73b98096cae503
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 15be60fe093bfc28d29e5d9b8883f3928936883b
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523489"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583196"
 ---
 # <a name="create-filtered-indexes"></a>Создание отфильтрованных индексов
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -113,11 +113,11 @@ ms.locfileid: "52523489"
   
 3.  Щелкните знак «плюс», чтобы развернуть таблицу, в которой необходимо создать отфильтрованный индекс.  
   
-4.  Щелкните правой кнопкой мыши папку **Индексы**, выберите **Создать индекс** и **Некластеризованный индекс…**.  
+4.  Щелкните правой кнопкой мыши папку **Индексы**, выберите **Создать индекс** и **Некластеризованный индекс…** .  
   
 5.  В диалоговом окне **Создание индекса** на странице **Общие** введите имя нового индекса в поле **Имя индекса** .  
   
-6.  В разделе **Ключевые столбцы индекса** щелкните **Добавить…**.  
+6.  В разделе **Ключевые столбцы индекса** щелкните **Добавить…** .  
   
 7.  В диалоговом окне **Выбор столбцов из**_имя\_таблицы_ установите флажки для столбцов таблицы, добавляемых к уникальному индексу.  
   
@@ -126,7 +126,9 @@ ms.locfileid: "52523489"
 9. На странице **Фильтр** в поле **Критерий фильтра** введите выражение SQL, которое будет использоваться для создания фильтруемого индекса.  
   
 10. Нажмите кнопку **ОК**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   
 #### <a name="to-create-a-filtered-index"></a>Создание фильтруемого индекса  

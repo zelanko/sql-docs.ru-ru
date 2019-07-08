@@ -15,12 +15,12 @@ ms.assetid: 00dfb229-f1de-4d33-90b0-d7c99ab52dcb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 14255fde1f8d0d165e1071f95c737f60aacf5058
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: a5064d3c2f2252137ac3b3f614e6f509bf971e85
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131434"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582472"
 ---
 # <a name="create-a-snapshot-for-a-merge-publication-with-parameterized-filters"></a>Создание моментального снимка для публикации слиянием с параметризованными фильтрами
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,14 +59,16 @@ ms.locfileid: "54131434"
 -   Если при фильтрации одной или нескольких статей публикации получаются неперекрывающиеся секции, которые являются уникальными для каждой подписки, метаданные очищаются при каждом запуске агента слияния. Это означает, что срок действия секционированного снимка истекает быстрее. При выборе этого параметра необходимо рассмотреть возможность разрешения подписчикам инициировать создание и доставку моментальных снимков. 
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
- Создание моментальных снимков для секций на странице **Секции данных** диалогового окна **Свойства публикации — \<публикация>**. Дополнительные сведения о доступе к этому диалоговому окну см. в разделе [Просмотр и изменение свойств публикации](../../relational-databases/replication/publish/view-and-modify-publication-properties.md). Подписчикам можно разрешить инициировать создание и доставку или только создание моментальных снимков.  
+ Создание моментальных снимков для секций на странице **Секции данных** диалогового окна **Свойства публикации — \<публикация>** . Дополнительные сведения о доступе к этому диалоговому окну см. в разделе [Просмотр и изменение свойств публикации](../../relational-databases/replication/publish/view-and-modify-publication-properties.md). Подписчикам можно разрешить инициировать создание и доставку или только создание моментальных снимков.  
   
  Перед созданием моментальных снимков для одной или нескольких секций необходимо следующее.  
   
 1.  Создать публикацию слиянием при помощи мастера создания публикаций и указать один или несколько параметризованных фильтров строк на странице **Добавление фильтра** окна мастера. Дополнительные сведения см. в статье [Определение и изменение параметризованного фильтра строк для статьи публикации слиянием](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
   
 2.  Создайте моментальный снимок схемы для публикации. По умолчанию создание моментального снимка схемы происходит по завершении выполнения мастера создания публикаций; создание моментального снимка схемы также возможно из среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-generate-a-schema-snapshot"></a>Создание моментального снимка схемы  
   
 1.  Подключитесь к издателю в среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], а затем раскройте узел сервера.  
@@ -97,7 +99,7 @@ ms.locfileid: "54131434"
   
     2.  Примите используемое по умолчанию расписание обновления моментальных снимков или щелкните **Изменить** , чтобы указать другое расписание.  
   
-4.  Щелкните **ОК**, чтобы вернуться в диалоговое окно **Свойства публикации — \<публикация>**.  
+4.  Щелкните **ОК**, чтобы вернуться в диалоговое окно **Свойства публикации — \<публикация>** .  
   
 5.  Выберите секцию в сетке свойств, затем щелкните **Создать выбранные моментальные снимки**.  
   
@@ -119,13 +121,13 @@ ms.locfileid: "54131434"
   
 1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_addmergepublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). Укажите значения следующих параметров.  
   
-    -   имя публикации в качестве значения параметра **@publication**.  
+    -   имя публикации в качестве значения параметра **@publication** .  
   
-    -   значение **true** параметра **@allow_subscriber_initiated_snapshot**, позволяющее подписчикам запускать процесс создания моментального снимка;  
+    -   значение **true** параметра **@allow_subscriber_initiated_snapshot** , позволяющее подписчикам запускать процесс создания моментального снимка;  
   
-    -   допустимое число параллельно выполняемых процессов динамических моментальных снимков в качестве значения параметра **@max_concurrent_dynamic_snapshots**. Если выполняется максимальное число процессов и подписчик пытается создать моментальный снимок, то процесс помещается в очередь. По умолчанию число параллельных процессов не ограничено.  
+    -   допустимое число параллельно выполняемых процессов динамических моментальных снимков в качестве значения параметра **@max_concurrent_dynamic_snapshots** . Если выполняется максимальное число процессов и подписчик пытается создать моментальный снимок, то процесс помещается в очередь. По умолчанию число параллельных процессов не ограничено.  
   
-2.  На издателе выполните процедуру [sp_addpublication_snapshot (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). В качестве значения параметра **@publication** укажите имя публикации, которое использовалось в шаге 1, а также учетные данные [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, под которыми выполняется [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md) , — в качестве значений параметров **@job_login** и **@password**. Если агент при соединении с издателем будет использовать проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , то необходимо также указать значение **0** параметра **@publisher_security_mode** укажите имя публикации, которое использовалось в шаге 1, а также учетные данные [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в параметрах **@publisher_login** и **@publisher_password**. Будет создано задание агента моментальных снимков для публикации. Дополнительные сведения о формировании исходного моментального снимка и определении пользовательского расписания для агента моментальных снимков см. в разделе [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
+2.  На издателе выполните процедуру [sp_addpublication_snapshot (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). В качестве значения параметра **@publication** укажите имя публикации, которое использовалось в шаге 1, а также учетные данные [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, под которыми выполняется [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md) , — в качестве значений параметров **@job_login** и **@password** . Если агент при соединении с издателем будет использовать проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , то необходимо также указать значение **0** параметра **@publisher_security_mode** укажите имя публикации, которое использовалось в шаге 1, а также учетные данные [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в параметрах **@publisher_login** и **@publisher_password** . Будет создано задание агента моментальных снимков для публикации. Дополнительные сведения о формировании исходного моментального снимка и определении пользовательского расписания для агента моментальных снимков см. в разделе [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
   
     > [!IMPORTANT]  
     >  Если издатель настраивается с удаленным распространителем, то значения, передаваемые для всех аргументов, включая *job_login* и *job_password*, передаются распространителю в формате обычного (незашифрованного) текста. Прежде чем выполнять эту хранимую процедуру, необходимо зашифровать соединение между издателем и его удаленным распространителем. Дополнительные сведения см. в разделе [Включение шифрования соединений в компоненте Database Engine (диспетчер конфигураций SQL Server)](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
@@ -140,7 +142,7 @@ ms.locfileid: "54131434"
   
 1.  Чтобы создать публикацию, выполните хранимую процедуру [sp_addmergepublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). Дополнительные сведения см. в статье [о создании публикации](../../relational-databases/replication/publish/create-a-publication.md).  
   
-2.  На издателе выполните процедуру [sp_addpublication_snapshot (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). В качестве значения параметра **@publication** , а учетные данные Windows, с которыми работает агент моментальных снимков, — в параметрах **@job_login** и **@password**. Если агент при соединении с издателем будет использовать проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , то необходимо также указать значение **0** параметра **@publisher_security_mode** укажите имя публикации, которое использовалось в шаге 1, а также учетные данные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в параметрах **@publisher_login** и **@publisher_password**. Будет создано задание агента моментальных снимков для публикации. Дополнительные сведения о формировании исходного моментального снимка и определении пользовательского расписания для агента моментальных снимков см. в разделе [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
+2.  На издателе выполните процедуру [sp_addpublication_snapshot (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). В качестве значения параметра **@publication** , а учетные данные Windows, с которыми работает агент моментальных снимков, — в параметрах **@job_login** и **@password** . Если агент при соединении с издателем будет использовать проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , то необходимо также указать значение **0** параметра **@publisher_security_mode** укажите имя публикации, которое использовалось в шаге 1, а также учетные данные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в параметрах **@publisher_login** и **@publisher_password** . Будет создано задание агента моментальных снимков для публикации. Дополнительные сведения о формировании исходного моментального снимка и определении пользовательского расписания для агента моментальных снимков см. в разделе [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
   
     > [!IMPORTANT]  
     >  Если издатель настраивается с удаленным распространителем, то значения, передаваемые для всех аргументов, включая *job_login* и *job_password*, передаются распространителю в формате обычного (незашифрованного) текста. Прежде чем выполнять эту хранимую процедуру, необходимо зашифровать соединение между издателем и его удаленным распространителем. Дополнительные сведения см. в разделе [Включение шифрования соединений в компоненте Database Engine (диспетчер конфигураций SQL Server)](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
@@ -153,18 +155,18 @@ ms.locfileid: "54131434"
   
 6.  Преобразуйте значение параметра **snapshot_jobid** , полученное в шаге 5, в тип **uniqueidentifier**.  
   
-7.  На издателе в базе данных **msdb** выполните хранимую процедуру [sp_start_job (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md), при этом присвойте преобразованное значение, полученное на шаге 6, параметру **@job_id**.  
+7.  На издателе в базе данных **msdb** выполните хранимую процедуру [sp_start_job (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md), при этом присвойте преобразованное значение, полученное на шаге 6, параметру **@job_id** .  
   
-8.  На издателе в базе данных публикации выполните хранимую процедуру [sp_addmergepartition (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md). Укажите имя публикации из шага 1 в качестве значения параметра **@publication**, а также значение, определяющее секцию, в качестве значения параметра **@suser_sname**, если в предложении фильтра используется функция [SUSER_SNAME (Transact-SQL)](../../t-sql/functions/suser-sname-transact-sql.md), либо **@host_name**, если в предложении фильтра используется функция [HOST_NAME (Transact-SQL)](../../t-sql/functions/host-name-transact-sql.md).  
+8.  На издателе в базе данных публикации выполните хранимую процедуру [sp_addmergepartition (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md). Укажите имя публикации из шага 1 в качестве значения параметра **@publication** , а также значение, определяющее секцию, в качестве значения параметра **@suser_sname** , если в предложении фильтра используется функция [SUSER_SNAME (Transact-SQL)](../../t-sql/functions/suser-sname-transact-sql.md), либо **@host_name** , если в предложении фильтра используется функция [HOST_NAME (Transact-SQL)](../../t-sql/functions/host-name-transact-sql.md).  
   
-9. На издателе в базе данных публикации выполните хранимую процедуру [sp_adddynamicsnapshot_job (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-adddynamicsnapshot-job-transact-sql.md). Укажите имя публикации из шага 1 в качестве значения параметра **@publication**, значение параметра **@suser_sname** или **@host_name** из шага 8, а также расписание для этого задания. Будет создано задание, создающее параметризованный моментальный снимок для указанной секции. Дополнительные сведения см. в статье [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md).  
+9. На издателе в базе данных публикации выполните хранимую процедуру [sp_adddynamicsnapshot_job (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-adddynamicsnapshot-job-transact-sql.md). Укажите имя публикации из шага 1 в качестве значения параметра **@publication** , значение параметра **@suser_sname** или **@host_name** из шага 8, а также расписание для этого задания. Будет создано задание, создающее параметризованный моментальный снимок для указанной секции. Дополнительные сведения см. в статье [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md).  
   
     > [!NOTE]  
     >  Это задание выполняется в той же учетной записи Windows, что и задание исходного моментального снимка в шаге 2. Чтобы удалить задание параметризованного моментального снимка и связанную с ним секцию данных, выполните хранимую процедуру [sp_dropdynamicsnapshot_job (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dropdynamicsnapshot-job-transact-sql.md).  
   
 10. На издателе в базе данных публикации выполните хранимую процедуру [sp_helpmergepartition (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpmergepartition-transact-sql.md), указав в параметре **@publication** значение из шага 1 и значение параметра **@suser_sname** или **@host_name** из шага 8. Запомните значение параметра **dynamic_snapshot_jobid** в результирующем наборе.  
   
-11. На распространителе в базе данных **msdb** выполните хранимую процедуру [sp_start_job (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md), при этом присвойте значение, полученное на шаге 9, параметру **@job_id**. Будет запущено задание параметризованного моментального снимка для данной секции.  
+11. На распространителе в базе данных **msdb** выполните хранимую процедуру [sp_start_job (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md), при этом присвойте значение, полученное на шаге 9, параметру **@job_id** . Будет запущено задание параметризованного моментального снимка для данной секции.  
   
 12. Чтобы создать секционированный снимок для каждой подписки, повторите шаги 8–11.  
   
@@ -172,7 +174,7 @@ ms.locfileid: "54131434"
   
 1.  Чтобы создать публикацию, выполните хранимую процедуру [sp_addmergepublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). Дополнительные сведения см. в статье [о создании публикации](../../relational-databases/replication/publish/create-a-publication.md).  
   
-2.  На издателе выполните процедуру [sp_addpublication_snapshot (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). В качестве значения параметра **@publication** , а учетные данные Windows, с которыми работает агент моментальных снимков, — в параметрах **@job_login** и **@password**. Если агент при соединении с издателем будет использовать проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , то необходимо также указать значение **0** параметра **@publisher_security_mode** укажите имя публикации, которое использовалось в шаге 1, а также учетные данные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в параметрах **@publisher_login** и **@publisher_password**. Будет создано задание агента моментальных снимков для публикации. Дополнительные сведения о формировании исходного моментального снимка и определении пользовательского расписания для агента моментальных снимков см. в разделе [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
+2.  На издателе выполните процедуру [sp_addpublication_snapshot (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). В качестве значения параметра **@publication** , а учетные данные Windows, с которыми работает агент моментальных снимков, — в параметрах **@job_login** и **@password** . Если агент при соединении с издателем будет использовать проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , то необходимо также указать значение **0** параметра **@publisher_security_mode** укажите имя публикации, которое использовалось в шаге 1, а также учетные данные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в параметрах **@publisher_login** и **@publisher_password** . Будет создано задание агента моментальных снимков для публикации. Дополнительные сведения о формировании исходного моментального снимка и определении пользовательского расписания для агента моментальных снимков см. в разделе [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
   
     > [!IMPORTANT]  
     >  Если издатель настраивается с удаленным распространителем, то значения, передаваемые для всех аргументов, включая *job_login* и *job_password*, передаются распространителю в формате обычного (незашифрованного) текста. Прежде чем выполнять эту хранимую процедуру, необходимо зашифровать соединение между издателем и его удаленным распространителем. Дополнительные сведения см. в разделе [Включение шифрования соединений в компоненте Database Engine (диспетчер конфигураций SQL Server)](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
@@ -305,7 +307,7 @@ PAUSE
   
     -   Максимальное количество заданий динамических моментальных снимков, которые должны быть выполнены <xref:Microsoft.SqlServer.Replication.MergePublication.MaxConcurrentDynamicSnapshots%2A>. Поскольку инициированные подписчиком запросы на моментальные снимки могут возникнуть в любое время, это свойство ограничивает количество заданий агента моментальных снимков, которые могут выполняться одновременно, когда несколько подписчиков запрашивают секционированные снимки в одно и то же время. Если выполняется максимальное количество заданий, дополнительные запросы на секционированные моментальные снимки помещаются в очередь, пока одно из выполняющихся заданий не будет завершено.  
   
-    -   Используйте оператор побитового логического ИЛИ (**|** в Visual C# и **Or** в Visual Basic), чтобы добавить значение <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowSubscriberInitiatedSnapshot> в <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>.  
+    -   Используйте оператор побитового логического ИЛИ ( **|** в Visual C# и **Or** в Visual Basic), чтобы добавить значение <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowSubscriberInitiatedSnapshot> в <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>.  
   
     -   Поля <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> и <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> свойства <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> содержат учетные данные учетной записи [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, от имени которой выполняются задания агента моментальных снимков.  
   

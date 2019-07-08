@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3053f1415332ee26017126322ab5cd029f668e32
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 6e8472678a0d25c134f99317a2588e329c468e8d
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665131"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579429"
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>Поддержка среды SQL Server Management Studio для In-Memory OLTP
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,8 +36,10 @@ ms.locfileid: "51665131"
 3.  Чтобы добавить новую файловую группу данных с оптимизацией для памяти, перейдите на страницу **Группы файлов** . В разделе **ОПТИМИЗИРОВАННЫЕ ДЛЯ ПАМЯТИ ДАННЫЕ**щелкните **Добавить файловую группу** и затем введите имя файловой группы данных, оптимизированной для памяти.  Столбец с меткой **Файлы FILESTREAM** представляет количество контейнеров в файловой группе. Контейнеры добавляются на странице **Общие** .  
   
 4.  Чтобы добавить файл (контейнер) в файловую группу, перейдите на страницу **Общие** . В разделе **Файлы базы данных**нажмите кнопку **Добавить**. Выберите для параметра **Тип файла** значение **Данные FILESTREAM**, укажите логическое имя контейнера, выберите файловую группу, оптимизированную для памяти, и убедитесь в том, что параметр **Автоувеличение/максимальный размер** имеет значение **Без ограничения**.  
-  
-     Дополнительные сведения о создании базы данных с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]см. в разделе [Создание базы данных](../../relational-databases/databases/create-a-database.md).  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     For more information on how to create a new database by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], see [Create a Database](../../relational-databases/databases/create-a-database.md).  
   
 ### <a name="to-create-a-memory-optimized-table"></a>Создание таблицы с оптимизацией для памяти  
   
@@ -92,7 +94,7 @@ ms.locfileid: "51665131"
   
  Для объектов баз данных, таблиц, хранимых процедур, пользовательского табличного типа и объектов индекса были обновлены и расширены следующие функции [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] для поддержки OLTP в памяти.  
   
--   Обозреватель объектов  
+-   обозревателе объектов  
   
     -   Контекстные меню  
   
@@ -139,7 +141,7 @@ ms.locfileid: "51665131"
   
         -   Копирование баз данных. Для баз данных с оптимизированными для памяти объектами в рамках транзакции база данных не будет создана на целевом сервере, а данные не будут переданы.  
   
-        -   Импорт и экспорт данных. Используйте параметр **"Скопировать данные из одной или нескольких таблиц или представлений" мастера импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**. Если целевая таблица оптимизирована для памяти, которая не существует в целевой базе данных:  
+        -   Импорт и экспорт данных. Используйте параметр **"Скопировать данные из одной или нескольких таблиц или представлений" мастера импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** . Если целевая таблица оптимизирована для памяти, которая не существует в целевой базе данных:  
   
             1.  В **мастере импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** в окне **Выбор копирования таблицы или запроса** выберите параметр **Скопировать данные из одной или нескольких таблиц или представлений**. Затем нажмите кнопку **Далее**.  
   

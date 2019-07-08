@@ -24,12 +24,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 250334bceefa2a3cac6226d32792a8be5ef89206
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bd312800fd20ae3e2d57c09df20aa9a14181af8a
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62716101"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582044"
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>Использование мастера полнотекстового индексирования
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -47,6 +47,9 @@ ms.locfileid: "62716101"
 4. **Язык для средства разбиения по словам.** Выберите язык из раскрывающегося списка. Выбранный язык будет использоваться для идентификации правильных средств разбиения текста на слова для индекса. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует средства разбиения по словам для определения границ слов в данных, подвергаемых полнотекстовому индексированию.  
   
 5.  **Столбец типа.** Выберите имя столбца, содержащего тип документа столбца, подвергаемого полнотекстовому индексированию.  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 > **ПРИМЕЧАНИЕ.** Параметр **Столбец типа** доступен только в случае, если столбец, указанный в столбце **Доступные столбцы**, принадлежит типу **varbinary(max)** или **image**.  
   
 6. **Статистическая семантика.** Укажите, следует ли включить статистическое семантическое индексирование для выбранного столбца. Дополнительные сведения см. в разделе [Семантический поиск (SQL Server)](../../relational-databases/search/semantic-search-sql-server.md).  

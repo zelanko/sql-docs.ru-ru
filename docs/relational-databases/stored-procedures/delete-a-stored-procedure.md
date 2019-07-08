@@ -15,12 +15,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7d5dc099d335c0a77efc3cbcf864940d0c16f27a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0871c813a70b93b1e263dcfb3b50345d57e526af
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62960131"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585021"
 ---
 # <a name="delete-a-stored-procedure"></a>Удаление хранимой процедуры
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -62,7 +62,9 @@ ms.locfileid: "62960131"
 5.  Подтвердите, что выбрана нужная процедура, и нажмите кнопку **ОК**.  
   
 6.  Удалите ссылки на процедуру из зависимых объектов и скриптов.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ###  <a name="TsqlProcedure"></a> Использование Transact-SQL  
  **Удаление процедуры в редакторе запросов**  
   

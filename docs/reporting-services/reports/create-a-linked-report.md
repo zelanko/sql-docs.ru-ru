@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 12be8341-cb57-45e8-a421-2bf66b50234d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 77590da41aa09f66d7549a0d7ff615cdb3f63af3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6dad85f35be1d7fb26f4c9eef6241e01baadb692
+ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66506643"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67492818"
 ---
 # <a name="create-a-linked-report"></a>Создание связанного отчета
   Связанный отчет является элементом сервера отчетов, обеспечивающим точку доступа к существующему отчету. Концептуально связанный отчет можно сравнить с ярлыком, который используется для запуска программы или открытия файла.  
@@ -45,7 +45,7 @@ ms.locfileid: "66506643"
      ![Значок "Связанный отчет"](../../reporting-services/report-server/media/hlp-16linked.gif "Значок \"Связанный отчет\"")  
   
 ## <a name="see-also"></a>См. также раздел  
- [Открытие и закрытие отчетов &#40;веб-портала&#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md)  
+
  [Основные сведения о Reporting Services (SSRS)](../../reporting-services/reporting-services-concepts-ssrs.md)  
  [Веб-портал сервера отчетов (службы SSRS в собственном режиме)](../../reporting-services/web-portal-ssrs-native-mode.md)
   

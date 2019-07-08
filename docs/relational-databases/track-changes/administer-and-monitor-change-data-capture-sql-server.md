@@ -14,12 +14,12 @@ ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 807f347bb176f6d8b3191f9f10c8f30448ce9b1f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 45fd2a7f8281a2b65097c7c0e493cc0a6f60eddc
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65099972"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584355"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>Администрирование и наблюдение за отслеживанием измененных данных (SQL Server)
 
@@ -175,7 +175,9 @@ SELECT command_count/duration AS [Throughput] FROM sys.dm_cdc_log_scan_sessions 
 3. В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]разверните вкладку **Управление**, затем вкладку **Сбор данных**. Щелкните правой кнопкой мыши пункт **Сборщик данных о производительности CDC**, затем пункт **Запустить набор сбора данных**.  
   
 4. В хранилище данных, которое было настроено в шаге 1, найдите таблицу custom_snapshots.cdc_log_scan_data. В данной таблице предоставлен архивный моментальный снимок данных из сеансов просмотра журнала. Эти данные могут быть использованы для анализа задержки, пропускной способности и других показателей производительности во времени.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="ScriptUpgrade"></a> Режим обновления скрипта
 
 При установке накопительных обновлений или пакетов обновления для экземпляра при перезагрузке экземпляр может войти в режим обновления скрипта. В этом режиме SQL Server может выполнить шаг для анализа и обновления внутренних таблиц CDC, что может привести к повторному созданию таких объектов, как индексы на таблицах записи. В зависимости от объема тестовых данных этот шаг может занять некоторое время или вызвать использование журнала транзакций для базы данных с поддержкой CDC.

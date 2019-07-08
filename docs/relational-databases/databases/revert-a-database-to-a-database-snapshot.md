@@ -14,12 +14,12 @@ ms.assetid: 8f74dd31-c9ca-4537-8760-0c7648f0787d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7d04286e2b8703e7d06a9913b421f69a94234b25
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: b0b31cb616e5e7d8c2b5c83386f247729a115cbe
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591058"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583544"
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>Восстановление базы данных до состояния, сохраненного в моментальном снимке
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ ms.locfileid: "53591058"
   
 -   Удалите все прочие моментальные снимки, существующие в базе данных. Дополнительные сведения см. в разделе [Удаление моментального снимка базы данных (Transact-SQL)](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md).  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
 ####  <a name="Permissions"></a> Permissions  
  Возвратить базу данных-источник к состоянию на момент создания моментального снимка базы данных может любой пользователь с разрешением RESTORE DATABASE.  
@@ -101,7 +101,7 @@ ms.locfileid: "53591058"
   
      Чтобы выполнить операцию восстановления базы данных-источника, необходимо обладать разрешением RESTORE DATABASE. Чтобы восстановить базу данных, необходимо ввести следующую инструкцию Transact-SQL.  
   
-     RESTORE DATABASE *database_name* FROM DATABASE_SNAPSHOT **=**_database_snapshot_name_  
+     RESTORE DATABASE *database_name* FROM DATABASE_SNAPSHOT **=** _database_snapshot_name_  
   
      где *database_name* — это база данных-источник, а *database_snapshot_name* — имя моментального снимка, к состоянию на момент создания которого необходимо восстановить базу данных. Обратите внимание, что в данной инструкции необходимо задавать имя моментального снимка, а не устройство резервного копирования.  
   
@@ -118,7 +118,9 @@ ms.locfileid: "53591058"
 5.  Запустите базу данных.  
   
 6.  Кроме того, можно создать резервную копию восстанавливаемой базы данных, особенно если в ней используется полная модель восстановления или модель восстановления с неполным протоколированием. Сведения о резервном копировании базы данных см. в разделе [Создание полной резервной копии базы данных (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ###  <a name="TsqlExample"></a> Примеры (Transact-SQL)  
  В этом разделе содержатся примеры восстановления базы данных до состояния, соответствующего моментальному снимку.  
   

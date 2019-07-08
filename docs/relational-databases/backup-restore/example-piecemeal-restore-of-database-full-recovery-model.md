@@ -15,12 +15,12 @@ ms.assetid: 0a84892d-2f7a-4e77-b2d0-d68b95595210
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3bf9130dadbc0b7a851856d70d78403b6f0008e1
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: caae503d57460d88d2396842f565125ff32c9378
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59581849"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579435"
 ---
 # <a name="example-piecemeal-restore-of-database-full-recovery-model"></a>Пример поэтапного восстановления базы данных (модель полного восстановления)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -75,14 +75,16 @@ BACKUP LOG adb TO tailLogBackup WITH NORECOVERY, NO_TRUNCATE
      На этом этапе первичная файловая группа и файловые группы `A` и `C` находятся в режиме в сети. Файлы в файловой группе `B` ожидают восстановления, при этом она находится в режиме «вне сети». Отложенные транзакции разрешены, и выполняется усечение журнала.  
   
 3.  Восстановление файловой группы `B`«в сети».  
-  
-     В третьей последовательности восстановления администратор базы данных восстанавливает файловую группу `B`. После того как файловая группа `B` стала доступна только для чтения, используется ее резервная копия, чтобы не нужно было осуществлять накат во время восстановления.  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     In the third restore sequence, the database administrator restores filegroup `B`. The backup of filegroup `B` was taken after the filegroup became read-only; therefore, it does not have to be rolled forward during recovery.  
   
     ```  
     RESTORE DATABASE adb FILEGROUP='B' FROM backup2b WITH RECOVERY  
     ```  
   
-     Теперь все файловые группы находятся в режиме «в сети».  
+     All filegroups are now online.  
   
 ## <a name="additional-examples"></a>Дополнительные примеры  
   

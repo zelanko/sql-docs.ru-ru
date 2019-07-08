@@ -11,12 +11,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9f26af2d630270428aec6affa0d633eeac86194b
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.openlocfilehash: 5e3d1f2d0a2ad21cd7603912c81e8b8335bfa3c8
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58305462"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586161"
 ---
 # <a name="change-the-word-breaker-used-for-us-english-and-uk-english"></a>Change the Word Breaker Used for US English and UK English
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "58305462"
   
 #### <a name="to-switch-from-the-current-version-of-the-us-english-word-breaker-to-the-previous-version"></a>Переход от текущей версии средства разбиения по словам для английского языка (США) к предыдущей версии  
   
-1.  Перейдите к следующему разделу реестра: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
+1.  Перейдите к следующему узлу реестра: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
   
 2.  Чтобы добавить новые разделы для идентификаторов классов COM предыдущей версии интерфейсов средства разбиения по словам для английского языка (США) и парадигматического модуля для идентификатора LCID 1033, выполните следующие действия.  
   
@@ -49,17 +49,19 @@ ms.locfileid: "58305462"
   
     4.  Обновите данные (по умолчанию) значения этого раздела до **infosoft.dll**.  
   
-3.  Перейдите к следующему разделу реестра: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\enu**.  
+3.  Перейдите к следующему узлу реестра: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\enu**.  
   
-4.  Обновите значение раздела **WBreakerClass** до **{188D6CC5-CB03-4C01-912E-47D21295D77E}**.  
+4.  Обновите значение раздела **WBreakerClass** до **{188D6CC5-CB03-4C01-912E-47D21295D77E}** .  
   
-5.  Обновите значение раздела **StemmerClass** до **{EEED4C20-7F1B-11CE-BE57-00AA0051FE20}**.  
+5.  Обновите значение раздела **StemmerClass** до **{EEED4C20-7F1B-11CE-BE57-00AA0051FE20}** .  
   
 6.  Перезапустите [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-switch-from-the-current-version-of-the-uk-english-word-breaker-to-the-previous-version"></a>Переход от текущей версии средства разбиения по словам для английского языка (Соединенное Королевство) к предыдущей версии  
   
-1.  Перейдите к следующему разделу реестра: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
+1.  Перейдите к следующему узлу реестра: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
   
 2.  Чтобы добавить новый раздел для идентификаторов классов COM для предыдущей версии интерфейсов средства разбиения по словам для английского языка (Соединенное Королевство) и парадигматического модуля для идентификатора LCID 2057, выполните следующие действия.  
   
@@ -71,11 +73,11 @@ ms.locfileid: "58305462"
   
     4.  Обновите данные (по умолчанию) значения этого раздела до **infosoft.dll**.  
   
-3.  Перейдите к следующему разделу реестра: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\eng**.  
+3.  Перейдите к следующему узлу реестра: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\eng**.  
   
-4.  Обновите значение раздела **WBreakerClass** до **{173C97E2-AEBE-437C-9445-01B237ABF2F6}**.  
+4.  Обновите значение раздела **WBreakerClass** до **{173C97E2-AEBE-437C-9445-01B237ABF2F6}** .  
   
-5.  Обновите значение раздела **StemmerClass** до **{D99F7670-7F1A-11CE-BE57-00AA0051FE20}**.  
+5.  Обновите значение раздела **StemmerClass** до **{D99F7670-7F1A-11CE-BE57-00AA0051FE20}** .  
   
 6.  Перезапустите [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -83,7 +85,7 @@ ms.locfileid: "58305462"
   
 #### <a name="to-switch-back-from-the-previous-version-of-the-us-english-word-breaker-to-the-current-version"></a>Переход обратно от предыдущей версии средства разбиения по словам для английского языка (США) к текущей версии  
   
-1.  Перейдите к следующему разделу реестра: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
+1.  Перейдите к следующему узлу реестра: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
   
 2.  Если следующие разделы реестра не существуют, выполните следующие действия, чтобы добавить новый раздел для идентификаторов классов COM для текущей версии интерфейсов средства разбиения по словам для английского языка (США) и парадигматического модуля для идентификатора LCID 1033.  
   
@@ -95,17 +97,17 @@ ms.locfileid: "58305462"
   
     4.  Обновите данные (по умолчанию) значения этого раздела до **MsWb7.dll**.  
   
-3.  Перейдите к следующему разделу реестра: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\eng**.  
+3.  Перейдите к следующему узлу реестра: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\eng**.  
   
-4.  Обновите значение раздела **WBreakerClass** до **{9faed859-0b30-4434-ae65-412e14a16fb8}**.  
+4.  Обновите значение раздела **WBreakerClass** до **{9faed859-0b30-4434-ae65-412e14a16fb8}** .  
   
-5.  Обновите значение раздела **StemmerClass** до **{e1e5ef84-c4a6-4e50-8188-99aef3de2659}**.  
+5.  Обновите значение раздела **StemmerClass** до **{e1e5ef84-c4a6-4e50-8188-99aef3de2659}** .  
   
 6.  Перезапустите [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 #### <a name="to-switch-back-from-the-previous-version-of-the-uk-english-word-breaker-to-the-current-version"></a>Переход обратно от предыдущей версии средства разбиения по словам для английского языка (Соединенное Королевство) к текущей версии  
   
-1.  Перейдите к следующему разделу реестра: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
+1.  Перейдите к следующему узлу реестра: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
   
 2.  Если следующие разделы реестра не существуют, выполните следующие действия, чтобы добавить новый раздел для идентификаторов классов COM для текущей версии интерфейсов средства разбиения по словам для английского языка (Соединенное Королевство) и парадигматического модуля для идентификатора LCID 2057.  
   
@@ -117,11 +119,11 @@ ms.locfileid: "58305462"
   
     4.  Обновите данные (по умолчанию) значения этого раздела до **MsWb7.dll**.  
   
-3.  Перейдите к следующему разделу реестра: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\eng**.  
+3.  Перейдите к следующему узлу реестра: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\eng**.  
   
-4.  Обновите значение раздела **WBreakerClass** до **{9faed859-0b30-4434-ae65-412e14a16fb8}**.  
+4.  Обновите значение раздела **WBreakerClass** до **{9faed859-0b30-4434-ae65-412e14a16fb8}** .  
   
-5.  Обновите значение раздела **StemmerClass** до **{e1e5ef84-c4a6-4e50-8188-99aef3de2659}**.  
+5.  Обновите значение раздела **StemmerClass** до **{e1e5ef84-c4a6-4e50-8188-99aef3de2659}** .  
   
 6.  Перезапустите [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

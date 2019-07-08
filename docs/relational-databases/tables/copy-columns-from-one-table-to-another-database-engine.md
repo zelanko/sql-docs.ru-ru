@@ -15,12 +15,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bb65ec8874d6fc006f3c765ba91667233bb5571c
-ms.sourcegitcommit: 99847f34e949a5c3c58565d76be3abf5b80f9632
+ms.openlocfilehash: 7709a7d43d99daae1eaec74472b1332c2bf5fa4d
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55742094"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585060"
 ---
 # <a name="copy-columns-from-one-table-to-another-database-engine"></a>Копирование столбцов из одной таблицы в другую (компонент Database Engine)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -29,15 +29,15 @@ ms.locfileid: "55742094"
   
  **В этом разделе**  
   
--   **Перед началом работы:**  
+-   **Перед началом работы**  
   
      [Ограничения](#Restrictions)  
   
-     [Безопасность](#Security)  
+     [безопасность](#Security)  
   
 -   **Копирование столбцов с помощью:**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Среда SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -46,7 +46,7 @@ ms.locfileid: "55742094"
 ###  <a name="Restrictions"></a> Ограничения  
  При копировании из одной базы данных в другую столбца, имеющего псевдоним типа данных, исходный тип данных в целевой базе данных может оказаться недоступным. В этом случае столбцу будет назначен ближайший подходящий базовый тип данных, доступный в целевой базе данных.  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
 ####  <a name="Permissions"></a> Permissions  
  Требуется разрешение ALTER на таблицу.  
@@ -64,7 +64,9 @@ ms.locfileid: "55742094"
 4.  Выберите вкладку таблицы, в которую требуется скопировать столбцы.  
   
 5.  Выделите столбец, после которого нужно поместить вставляемые столбцы, и в меню **Правка** выберите **Вставить**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-copy-data-from-one-table-to-another"></a>Копирование данных из одной таблицы в другую  
   
 1.  Следуйте приведенным выше инструкциям для копирования определения столбцов.  

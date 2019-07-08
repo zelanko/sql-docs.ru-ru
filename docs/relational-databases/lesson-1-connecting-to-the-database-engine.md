@@ -11,14 +11,14 @@ ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b9414215e82a6828152e1ab84265a5b70b6a2171
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: a7f95a4ebc0227a4bb16f256073a3408ae15a1c2
+ms.sourcegitcommit: c8f9e5577465148ffe94eec784848f5a956b1086
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801688"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67517772"
 ---
-# <a name="lesson-1-connecting-to-the-database-engine"></a>Урок 1. Соединение с компонентом Database Engine
+# <a name="lesson-1-connecting-to-the-database-engine"></a>Урок 1. Подключение к ядру СУБД
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Набор средств, устанавливаемых с компонентом [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], зависит от выпуска и от параметров, заданных при установке. На этом уроке рассматриваются важнейшие средства, а также показываются способы подключения и выполнения одной из базовых функций (разрешение входа дополнительным пользователям).  
@@ -60,6 +60,8 @@ ms.locfileid: "56801688"
 3.  Если компонент «Зарегистрированные серверы» не отображается, в меню **Вид** выберите пункт **Зарегистрированные серверы**.
 4.  Выбрав компонент **Ядро СУБД** на панели инструментов "Зарегистрированные серверы", разверните компонент **Ядро СУБД**, щелкните правой кнопкой мыши пункт **Группы локальных серверов**, наведите указатель на пункт **Задачи**и выберите пункт **Зарегистрировать локальные серверы**. Отобразятся все экземпляры компонента [!INCLUDE[ssDE](../includes/ssde-md.md)] , установленные на компьютере. Экземпляр по умолчанию безымянный и отображается как имя компьютера. Именованный экземпляр отображается как имя компьютера, за которым следует обратная косая черта (\\), а затем имя экземпляра. Для [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] имя экземпляра — *<имя_компьютера>* \sqlexpress, если имя не было изменено в процессе установки.  
 
+[!INCLUDE[fresh-note-steps-feedback](../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##### <a name="to-verify-that-the-database-engine-is-running"></a>Подтверждение того, что компонент ядра СУБД запущен
 
 1.  В компоненте «Зарегистрированные серверы», если имя экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] содержит зеленую точку с белой стрелкой рядом с именем, компонент [!INCLUDE[ssDE](../includes/ssde-md.md)] выполняется и никаких дальнейших действий не требуется.  
@@ -77,7 +79,7 @@ ms.locfileid: "56801688"
 
 ![object-explorer](../relational-databases/media/object-explorer.png)
 
-3.  В поле **Имя сервера** введите имя экземпляра компонента [!INCLUDE[ssDE](../includes/ssde-md.md)]. В экземпляре SQL Server по умолчанию имя сервера совпадает с именем компьютера. Для именованного экземпляра SQL Server имя сервера имеет вид _\<имя_компьютера\>_**\\**_\<имя_экземпляра\>_, например **ACCTG_SRVR\SQLEXPRESS**. На снимке экрана ниже показано подключение к экземпляру [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] по умолчанию (неименованному) на компьютере с именем PracticeComputer. В Windows вошел пользователь Mary из домена Contoso. При использовании проверки подлинности Windows нельзя изменить имя пользователя. 
+3.  В поле **Имя сервера** введите имя экземпляра компонента [!INCLUDE[ssDE](../includes/ssde-md.md)]. В экземпляре SQL Server по умолчанию имя сервера совпадает с именем компьютера. Для именованного экземпляра SQL Server имя сервера имеет вид _\<имя_компьютера\>_ **\\** _\<имя_экземпляра\>_ , например **ACCTG_SRVR\SQLEXPRESS**. На снимке экрана ниже показано подключение к экземпляру [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] по умолчанию (неименованному) на компьютере с именем PracticeComputer. В Windows вошел пользователь Mary из домена Contoso. При использовании проверки подлинности Windows нельзя изменить имя пользователя. 
 
 ![connect-to-server](../relational-databases/media/connect-to-server.png)
 

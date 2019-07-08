@@ -15,12 +15,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3f60cb38a7b57ebd56d603d6041535974ec7ac7e
-ms.sourcegitcommit: 4cf0fafe565b31262e4148b572efd72c2a632241
+ms.openlocfilehash: 4fb94a2ae07993b1f95ab9adf97e164843aa06e7
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56464720"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582995"
 ---
 # <a name="specify-default-values-for-columns"></a>Указание значений по умолчанию для столбца
 
@@ -66,6 +66,8 @@ ms.locfileid: "56464720"
    > Чтобы задать численное значение по умолчанию, введите число. В случае объекта или функции нужно ввести его или ее имя. Чтобы задать алфавитно-цифровое значение по умолчанию, введите его, заключив в одинарные кавычки.
 
 4. В меню **Файл** выберите пункт **Сохранить** _имя_таблицы_.
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="TsqlProcedure"></a> Использование Transact-SQL для определения значения по умолчанию
 

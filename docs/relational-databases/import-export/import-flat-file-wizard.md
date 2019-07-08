@@ -13,12 +13,12 @@ ms.author: alayu
 ms.reviewer: maghan
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9ebb00b758aa3291c453d6c48d548f2047c72530
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f577b3f7f739f2642af239c3396a545dfd6332fb
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66836386"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585889"
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>Мастер импорта неструктурированных файлов в SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -44,6 +44,8 @@ PROSE анализирует шаблоны данных во входном ф�
 1. Откройте **SQL Server Management Studio**.
 2. Подключитесь к экземпляру ядра СУБД SQL Server или к узлу localhost.
 3. Разверните узел **Базы данных**, щелкните правой кнопкой мыши базу данных ("test" в примере ниже), выберите **Задачи**, а затем — **Импорт неструктурированного файла** над пунктом меню "Импорт данных".
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ![Меню мастера](media/import-flat-file-wizard/importffmenu.png)
 

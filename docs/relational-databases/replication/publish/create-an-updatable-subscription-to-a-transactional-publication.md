@@ -14,12 +14,12 @@ ms.assetid: f9ef89ed-36f6-431b-8843-25d445ec137f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 690e84fb754f7a50137ff6879bb8866127e2ed7e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 683e916810766430d9fe1c26f5473b709bb82d0b
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62661106"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580141"
 ---
 # <a name="create-an-updatable-subscription-to-a-transactional-publication"></a>Создание обновляемых подписок для публикаций транзакций
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,6 +54,8 @@ ms.locfileid: "62661106"
     Дополнительные сведения о разрешениях, требуемых для учетной записи связанного сервера, см. в статье **Подписки, обновляемые посредством очередей** из [введите здесь описание ссылки](../../../relational-databases/replication/security/secure-the-subscriber.md)
 
 8. Завершите работу мастера.
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="configure-an-updatable-subscription-from-the-subscriber"></a>Настройка обновляемой подписки из подписчика
 

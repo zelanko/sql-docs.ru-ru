@@ -18,12 +18,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2aa0eb5794abca24ff3bea6c4242799bf9f8e802
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 4e6d654dd50890ee00c19dbc7be57966ad11a0d5
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349634"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586283"
 ---
 # <a name="save-an-execution-plan-in-xml-format"></a>Сохранение плана выполнения в формате XML
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -69,10 +69,12 @@ ms.locfileid: "53349634"
   
 4.  На панели **Результаты** щелкните правой кнопкой мыши поле **Microsoft SQL Server XML Showplan** , содержащее план запроса, и выберите пункт **Сохранить результаты как**.  
   
-5.  В диалоговом окне **Сохранить** **результаты** \<сетка или текст> найдите поле **Тип файла** и выберите в нем значение **Все файлы (\*.\*)**.  
+5.  В диалоговом окне **Сохранить** **результаты** \<сетка или текст> найдите поле **Тип файла** и выберите в нем значение **Все файлы (\*.\*)** .  
   
 6.  В поле **Имя файла** укажите имя в формате \<имя **>.sqlplan**, после чего нажмите кнопку **Сохранить**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ### <a name="to-save-an-execution-plan-by-using-sql-server-management-studio-options"></a>Сохранение плана выполнения с помощью параметров среды SQL Server Management Studio  
   
 1.  Сформируйте либо прогнозируемый, либо фактический план выполнения с помощью среды [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Дополнительные сведения см. в разделах [Отображение расчетного плана выполнения](../../relational-databases/performance/display-the-estimated-execution-plan.md) или [Отображение фактического плана выполнения](../../relational-databases/performance/display-an-actual-execution-plan.md).  
@@ -81,7 +83,7 @@ ms.locfileid: "53349634"
   
      Как альтернативный вариант можно также выбрать **Сохранить план выполнения как** в меню **Файл** .  
   
-3.  В диалоговом окне **Сохранение** убедитесь, что в поле **Тип файла** установлено значение **Файлы плана выполнения (\*.sqlplan)**.  
+3.  В диалоговом окне **Сохранение** убедитесь, что в поле **Тип файла** установлено значение **Файлы плана выполнения (\*.sqlplan)** .  
   
 4.  В поле **Имя файла** укажите имя в формате \<имя **>.sqlplan**, после чего нажмите кнопку **Сохранить**.  
   
@@ -89,7 +91,7 @@ ms.locfileid: "53349634"
   
 1.  В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]в меню **Файл** выберите **Открыть**, а затем нажмите **Файл**.  
   
-2.  В диалоговом окне **Открытие файла** установите в поле **Файлы типа** значение **Файлы плана выполнения (\*.sqlplan)**, чтобы получить отфильтрованный список сохраненных файлов XML с планами запросов.  
+2.  В диалоговом окне **Открытие файла** установите в поле **Файлы типа** значение **Файлы плана выполнения (\*.sqlplan)** , чтобы получить отфильтрованный список сохраненных файлов XML с планами запросов.  
   
 3.  Выберите файл плана запроса XML, который нужно просмотреть, и нажмите **Открыть**.  
   

@@ -16,12 +16,12 @@ ms.assetid: b4efb0ae-cfe6-4d81-a4b4-6e4916885caa
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 292c180b70143826ebdb8ea75b015dcbe6a2011f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3c7b7588801419f57d04996d6bd2cad335a9eede
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523926"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583232"
 ---
 # <a name="attach-a-database"></a>Присоединение базы данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,32 +58,34 @@ ms.locfileid: "52523926"
 2.  Щелкните правой кнопкой мыши узел **Базы данных** и выберите команду **Присоединить**.  
   
 3.  Чтобы указать присоединяемую базу данных, в диалоговом окне **Присоединение баз данных** нажмите кнопку **Добавить**, в диалоговом окне **Расположение файлов базы данных** выберите диск, на котором находится база данных, и разверните дерево каталогов, чтобы найти и выбрать MDF-файл, например:  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
      `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA\AdventureWorks2012_Data.mdf`  
   
     > [!IMPORTANT]  
-    > При попытке выбора базы данных, которая уже присоединена, возникает ошибка.  
+    > Trying to select a database that is already attached generates an error.  
   
-     **Базы данных для присоединения**  
-     Отобразятся сведения о выбранных базах данных.  
+     **Databases to attach**  
+     Displays information about the selected databases.  
   
-     \<нет заголовка столбца>  
-     Отображается значок, указывающий на состояние операции присоединения. Возможные значки описываются в приводимом ниже описании **Состояние** .  
+     \<no column header>  
+     Displays an icon indicating the status of the attach operation. The possible icons are described in the **Status** description, below).  
   
-     **Расположение файла MDF**  
-     Отображается путь и имя выбранного MDF-файла.  
+     **MDF File Location**  
+     Displays the path and file name of the selected MDF file.  
   
      **Database Name**  
-     Отображается имя базы данных.  
+     Displays the name of the database.  
   
-     **Присоединить как**  
-     Необязательный параметр, указывает другое имя, под которым присоединяется база данных.  
+     **Attach As**  
+     Optionally, specifies a different name for the database to attach as.  
   
-     **Владелец**  
-     Содержит раскрывающийся список возможных владельцев базы данных, из которого при необходимости можно выбрать другого владельца.  
+     **Owner**  
+     Provides a drop-down list of possible database owners from which you can optionally select a different owner.  
   
-     **Состояние**  
-     Отображается состояние базы данных в соответствии со следующей таблицей.  
+     **Status**  
+     Displays the status of the database according to the following table.  
   
     |Значок|Текст состояния|Описание|  
     |----------|-----------------|-----------------|  
@@ -94,32 +96,32 @@ ms.locfileid: "52523926"
     |Кружок с двумя черными квадратами (слева и справа) и двумя белыми квадратами (сверху и снизу)|Остановлена|Операция присоединения не была успешно завершена, т.к. пользователь остановил операцию.|  
     |Кружок, содержащий изогнутую стрелку, указывающую в направлении против часовой стрелки|Выполнен откат|Операция присоединения была успешной, но был выполнен ее откат из-за ошибки, возникшей при вложении другого объекта.|  
   
-     **Сообщение**  
-     Отображается пустое сообщение или гиперссылка «Файл не найден».  
+     **Message**  
+     Displays either a blank message or a "File not found" hyperlink.  
   
-     **Добавить**  
-     Найдите необходимые основные файлы базы данных. Если пользователь выбирает mdf-файл, необходимые сведения автоматически вводятся в соответствующие поля сетки **Базы данных для присоединения** .  
+     **Add**  
+     Find the necessary main database files. When the user selects an .mdf file, applicable information is automatically filled in the respective fields of the **Databases to attach** grid.  
   
-     **Удалить**  
-     Удаляет выбранный файл из сетки **Базы данных для присоединения** .  
+     **Remove**  
+     Removes the selected file from the **Databases to attach** grid.  
   
-     **"** *<database_name>* **" сведения о базе данных**  
-     Отображаются имена файлов, которые необходимо присоединить. Чтобы проверить или изменить путь к файлу, нажмите кнопку **Обзор** (**...**).  
+     **"** *<database_name>* **" database details**  
+     Displays the names of the files to be attached. To verify or change the pathname of a file, click the **Browse** button (**...**).  
   
     > [!NOTE]  
-    > Если файл не существует, в столбце **Сообщение** отображается сообщение «Не найден». Если файл журнала не найден, то он существует в другом каталоге или был удален. Необходимо или обновить путь файла в сетке **Сведения о базе данных** таким образом, чтобы этот путь указывал на правильное расположение, или удалить файл журнала из сетки. Если MDF-файл не найден, необходимо обновить путь этого файла в сетке таким образом, чтобы этот путь указывал на правильное расположение.  
+    > If a file does not exist, the **Message** column displays "Not found." If a log file is not found, it exists in another directory or has been deleted. You need to either update the file path in the **database details** grid to point to the correct location or remove the log file from the grid. If an .ndf data file is not found, you need to update its path in the grid to point to the correct location.  
   
-     **Имя исходного файла**  
-     Отображается имя присоединенного файла, принадлежащего базе данных.  
+     **Original File Name**  
+     Displays the name of the attached file belonging to the database.  
   
-     **Тип файла**  
-     Указывается тип файла: **Данные** или **Журнал**.  
+     **File Type**  
+     Indicates the type of file, **Data** or **Log**.  
   
-     **Текущий путь к файлу**  
-     Отображается путь к выбранному файлу базы данных. Путь может быть изменен вручную.  
+     **Current File Path**  
+     Displays the path to the selected database file. The path can be edited manually.  
   
-     **Сообщение**  
-     Отображается пустое сообщение или гиперссылка "**Файл не найден**".  
+     **Message**  
+     Displays either a blank message or a "**File not found**" hyperlink.  
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   
@@ -143,7 +145,7 @@ ms.locfileid: "52523926"
     > [!NOTE]  
     > Кроме того, можно вызвать хранимую процедуру [sp_attach_db](../../relational-databases/system-stored-procedures/sp-attach-db-transact-sql.md) или [sp_attach_single_file_db](../../relational-databases/system-stored-procedures/sp-attach-single-file-db-transact-sql.md) . Но эти расширенные хранимые процедуры в будущих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]будут удалены. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Вместо этого рекомендуется использовать `CREATE DATABASE ... FOR ATTACH` .  
   
-##  <a name="FollowUp"></a> Продолжение: после обновления базы данных SQL Server  
+##  <a name="FollowUp"></a> Дальнейшие действия. После обновления базы данных SQL Server  
 После обновления базы данных при помощи описанного метода присоединения, эта база данных сразу становится доступной, после чего обновляется автоматически. Если база данных содержит полнотекстовые индексы, то в процессе обновления будет произведен их импорт, сброс или перестроение в зависимости от установленного значения свойства сервера **Режим обновления полнотекстового каталога** . Если при обновлении выбран режим **Импортировать** или **Перестроить**, то полнотекстовые индексы во время обновления будут недоступны. В зависимости от объема индексируемых данных процесс импорта может занять несколько часов, а перестроение — в несколько (до десяти) раз больше. Обратите внимание, что если при обновлении выбран режим **Импортировать**, а полнотекстовый каталог недоступен, то связанные с ним полнотекстовые индексы будут перестроены.  
   
 Если уровень совместимости пользовательской базы данных до обновления был 100 или выше, после обновления он останется таким же. Если уровень совместимости до обновления был 90, в обновленной базе данных он устанавливается в 100, что является минимально поддерживаемым уровнем совместимости в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Дополнительные сведения см. в разделе [Уровень совместимости инструкции ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  

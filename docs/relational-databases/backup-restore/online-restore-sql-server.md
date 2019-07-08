@@ -14,12 +14,12 @@ ms.assetid: 7982a687-980a-4eb8-8e9f-6894148e7d8c
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d4c91fff761b25e1a8fa1efea65d08121d5cf03c
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 06fb23f63b65d06be6e05569ecd31387830522ae
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242207"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581072"
 ---
 # <a name="online-restore-sql-server"></a>Восстановление в сети (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,9 @@ ms.locfileid: "54242207"
 1.  Восстановление данных.  
   
 2.  Восстановление журнала с параметром WITH RECOVERY для восстановления последнего журнала. Восстановленные данные переводятся в режим «в сети».  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  Иногда невозможно выполнить откат незафиксированной транзакции, поскольку данные, требующие отката, во время запуска восстановления в сети находятся в режиме «вне сети». В этом случае транзакция откладывается. Дополнительные сведения см. в разделе [Отложенные транзакции (SQL Server)](../../relational-databases/backup-restore/deferred-transactions-sql-server.md).  
   
 > [!NOTE]  

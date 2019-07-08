@@ -20,12 +20,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5a6f4b6283c6e1a29f273eae5c607478166535af
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 1197244abd63560bf6fa9d76401c0836b833c6a5
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256029"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581421"
 ---
 # <a name="view-user-defined-functions"></a>Просмотр определяемых пользователем функций
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -70,47 +70,49 @@ ms.locfileid: "54256029"
     -   Агрегатная функция  
   
 4.  Щелкните правой кнопкой мыши функцию, свойства которой необходимо просмотреть, и выберите пункт **Свойства**.  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     The following properties appear in the **Function Properties -** _function_name_ dialog box.  
   
-     Следующие свойства отображаются в диалоговом окне **Свойства функции —**_имя_функции_.  
-  
-     **База данных**  
-     Имя базы данных, содержащей эту функцию.  
+     **Database**  
+     The name of the database containing this function.  
   
      **Server**  
-     Имя текущего экземпляра сервера.  
+     The name of the current server instance.  
   
-     **Пользователь**  
-     Имя пользователя этого соединения.  
+     **User**  
+     The name of the user of this connection.  
   
-     **Дата создания**  
-     Дата создания функции.  
+     **Created date**  
+     Displays the date the function was created.  
   
-     **Выполнить от имени**  
-     Контекст выполнения для функции.  
+     **Execute As**  
+     Execution context for the function.  
   
-     **Название**  
-     Имя текущей функции.  
+     **Name**  
+     The name of the current function.  
   
-     **Схема**  
-     Схема, которой принадлежит функция.  
+     **Schema**  
+     Displays the schema that owns the function.  
   
-     **Системный объект**  
-     Указывает принадлежность функции к системным объектам. Возможные значения: True и False.  
+     **System object**  
+     Indicates whether the function is a system object. Values are True and False.  
   
-     **Значения NULL по стандарту ANSI**  
-     Указывает, был ли объект создан с параметром ANSI NULL.  
+     **ANSI NULLs**  
+     Indicates if the object was created with the ANSI NULLs option.  
   
-     **Зашифрована**  
-     Указывает, зашифрована ли функция. Возможные значения: True и False.  
+     **Encrypted**  
+     Indicates whether the function is encrypted. Values are True and False.  
   
-     **Тип функции**  
-     Тип определяемой пользователем функции.  
+     **Function Type**  
+     The type of user defined function.  
   
-     **Заключенный в кавычки идентификатор**  
-     Показывает, был ли объект создан с параметром «заключенный в кавычки идентификатор».  
+     **Quoted identifier**  
+     Indicates if the object was created with the quoted identifier option.  
   
-     **Привязка к схеме**  
-     Указывает, привязана ли функция к схеме. Возможные значения: True и False. Дополнительные сведения о функциях, привязанных к схеме, см. в подразделе SCHEMABINDING раздела [CREATE FUNCTION (Transact-SQL)](../../t-sql/statements/create-function-transact-sql.md).  
+     **Schema bound**  
+     Indicates whether the function is schema-bound. Values are True and False. For information about schema-bound functions, see the SCHEMABINDING section of [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md).  
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   

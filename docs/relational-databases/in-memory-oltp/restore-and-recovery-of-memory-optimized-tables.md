@@ -11,12 +11,12 @@ ms.assetid: 294975b7-e7d1-491b-b66a-fdb1100d2acc
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 8dbf17ab9e9340b793b4310427169be3bcdfe120
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 074802ff3717b8935015071fdf37e43923d752c1
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671323"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582979"
 ---
 # <a name="restore-and-recovery-of-memory-optimized-tables"></a>Восстановление оптимизированных для памяти таблиц
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,9 @@ ms.locfileid: "51671323"
     Когда вышеописанные операции с дисковыми и оптимизированными для памяти таблицами будут выполнены, база данных станет доступна для использования.  
   
 3.  **Откат**. В этой фазе выполняется откат незафиксированных транзакций.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="process-for-improving-load-time"></a>Сокращение времени загрузки
 Загрузка в память таблиц, оптимизированных для памяти, может повлиять на производительность целевого времени восстановления (RTO). Чтобы сократить время загрузки оптимизированных для памяти данных из файлов данных и разностных файлов, модуль In-Memory OLTP загружает данные и разностные параллельно следующим образом.  
   

@@ -15,12 +15,12 @@ ms.assetid: fb5566fe-58c5-48f7-8464-814ea78e6221
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2ec0db9af18be44617103b15c8c66c40ef695f3d
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: be78157b91a1eebfc207be5f5ec5c28cb7346891
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124514"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585809"
 ---
 # <a name="manage-partitions-for-a-merge-publication-with-parameterized-filters"></a>Управление секциями для публикации слиянием с параметризованными фильтрами
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "54124514"
 -   Если публикация имеет параметризованные фильтры, позволяющие получать подписки с неперекрывающимися секциями, то при необходимости повторного создания подписки в случае ее утраты необходимо удалить секцию, которая была на нее подписана, создать заново подписку, а затем повторно создать секцию. Дополнительные сведения см. в разделе [Параметризованные фильтры строк](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md). При формировании скрипта публикации репликация формирует скрипты создания для существующих секций подписчика. Дополнительные сведения см. в статье [Scripting Replication](../../../relational-databases/replication/scripting-replication.md).  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
- Управление секциями осуществляется на странице **Секции данных** диалогового окна **Свойства публикации — \<публикация>**. Дополнительные сведения о доступе к этому диалоговому окну см. в разделе [Просмотр и изменение свойств публикации](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md). На этой странице доступны следующие возможности: создание и удаление секций, разрешение подписчикам выполнять создание и доставку моментального снимка, создание моментальных снимков для одной или нескольких секций, очистка моментальных снимков.  
+ Управление секциями осуществляется на странице **Секции данных** диалогового окна **Свойства публикации — \<публикация>** . Дополнительные сведения о доступе к этому диалоговому окну см. в разделе [Просмотр и изменение свойств публикации](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md). На этой странице доступны следующие возможности: создание и удаление секций, разрешение подписчикам выполнять создание и доставку моментального снимка, создание моментальных снимков для одной или нескольких секций, очистка моментальных снимков.  
   
 #### <a name="to-create-a-partition"></a>Создание секции  
   
@@ -64,7 +64,9 @@ ms.locfileid: "54124514"
     2.  Примите используемое по умолчанию расписание обновления моментальных снимков или щелкните **Изменить** , чтобы указать другое расписание.  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-delete-a-partition"></a>Удаление секции  
   
 1.  На странице **Секции данных** выберите секцию в сетке.  
@@ -102,11 +104,11 @@ ms.locfileid: "54124514"
   
 #### <a name="to-view-information-on-existing-partitions"></a>Просмотр информации о существующих секциях  
   
-1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_helpmergepartition (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-helpmergepartition-transact-sql.md). Укажите имя публикации в параметре **@publication**. Укажите в параметрах **@suser_sname** или **@host_name** возврат данных на основе одного критерия фильтрации (необязательно).  
+1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_helpmergepartition (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-helpmergepartition-transact-sql.md). Укажите имя публикации в параметре **@publication** . Укажите в параметрах **@suser_sname** или **@host_name** возврат данных на основе одного критерия фильтрации (необязательно).  
   
 #### <a name="to-define-a-new-partition-and-generate-a-new-partitioned-snapshot"></a>Определение новой секции и формирование нового секционированного снимка  
   
-1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_addmergepartition (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md). Укажите имя публикации в параметре **@publication**имя публикации, а также параметризованное значение определения секции в одном из следующих параметров:  
+1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_addmergepartition (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md). Укажите имя публикации в параметре **@publication** имя публикации, а также параметризованное значение определения секции в одном из следующих параметров:  
   
     -   **@suser_sname** — если параметризованный фильтр определен значением, возвращенным [SUSER_SNAME (Transact-SQL)](../../../t-sql/functions/suser-sname-transact-sql.md).  
   

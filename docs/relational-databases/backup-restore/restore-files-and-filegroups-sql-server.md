@@ -18,12 +18,12 @@ ms.assetid: 72603b21-3065-4b56-8b01-11b707911b05
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9ed0ab606ec5ff41719111f160d5afb30da534bb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d4f31434f5e210a4c681a3d080824850527c6cbc
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62501752"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583747"
 ---
 # <a name="restore-files-and-filegroups-sql-server"></a>Восстановление файлов и файловых групп (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -138,22 +138,24 @@ ms.locfileid: "62501752"
     |**Восстановить как**|Полный путь к файлу базы данных, который нужно восстановить. Чтобы указать новый восстанавливаемый файл, щелкните текстовое поле и измените предложенные путь и имя файла. Изменение пути или имени файла в столбце **Восстановить как** равнозначно использованию параметра MOVE в инструкции RESTORE языка [!INCLUDE[tsql](../../includes/tsql-md.md)] .|  
   
 11. В качестве значения параметра **Состояние восстановления** укажите состояние базы данных после операции восстановления.  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     **Leave the database ready for use by rolling back the uncommitted transactions. Additional transaction logs cannot be restored. (RESTORE WITH RECOVERY)**  
+     Recovers the database. This is the default behavior. Choose this option only if you are restoring all of the necessary backups now. This option is equivalent to specifying WITH RECOVERY in a [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE statement.  
   
-     **Оставить базу данных готовой к использованию, выполнив откат незафиксированных транзакций. Невозможно восстановить дополнительные журналы транзакций. (RESTORE WITH RECOVERY)**  
-     Восстанавливает базу данных. Это поведение по умолчанию. Выберите этот параметр для восстановления всех необходимых резервных копий. Этот параметр равнозначен указанию предложения WITH RECOVERY в инструкции RESTORE языка [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
+     **Leave the database non-operational, and don't roll back the uncommitted transactions. Additional transaction logs can be restored. (RESTORE WITH NORECOVERY)**  
+     Leaves the database in the restoring state. To recover the database, you will need to perform another restore using the preceding RESTORE WITH RECOVERY option (see above). This option is equivalent to specifying WITH NORECOVERY in a [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE statement.  
   
-     **Оставить базу данных в нерабочем состоянии и не выполнять откат незавершенных транзакций. Можно восстановить дополнительные журналы транзакций. (RESTORE WITH NORECOVERY)**  
-     Оставляет базу данных в состоянии восстановления. Чтобы восстановить базу данных, необходимо выполнить еще одно восстановление с использованием предыдущего параметра RESTORE WITH RECOVERY (см. выше). Этот параметр равнозначен указанию предложения WITH NORECOVERY в инструкции RESTORE языка [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
+     If you select this option, the **Preserve replication settings** option is unavailable.  
   
-     Если выбран этот параметр, то параметр **Сохранить настройки репликации** недоступен.  
+     **Leave the database in read-only mode. Roll back the uncommitted transactions, but save the rollback operation in a file so the recovery effects can be undone. (RESTORE WITH STANDBY)**  
+     Leaves the database in a standby state. This option is equivalent to specifying WITH STANDBY in a [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE statement.  
   
-     **Оставить базу данных в режиме «только для чтения». Выполнить откат незавершенных транзакций с сохранением операции отката в файле, чтобы можно было отменить операцию восстановления. (RESTORE WITH STANDBY)**  
-     Оставляет базу данных в резервном состоянии. Этот параметр равнозначен указанию предложения WITH STANDBY в инструкции RESTORE языка [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
+     Choosing this option requires that you specify a standby file.  
   
-     При выборе этого параметра необходимо указать резервный файл.  
-  
-     **Файл отмены отката**  
-     Укажите имя резервного файла в текстовом поле **Файл отмены отката** . Этот параметр необходим, если нужно оставить базу данных в режиме «только для чтения» (RESTORE WITH STANDBY).  
+     **Rollback undo file**  
+     Specify a standby file name in the **Rollback undo file** text box. This option is required if you leave the database in read-only mode (RESTORE WITH STANDBY).  
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   

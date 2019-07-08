@@ -19,12 +19,12 @@ ms.assetid: 6d4a1474-4d13-4826-8be2-80050fafa8a5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e5504030fb8d5759056ce8c5c938f81fcab207b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 08813aa3faad6738bb023a0c04c92f331bf5a457
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656682"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581159"
 ---
 # <a name="disable-publishing-and-distribution"></a>Отключение публикации и распространения
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +68,9 @@ ms.locfileid: "47656682"
 2.  Щелкните правой кнопкой мыши папку **Репликация** и выберите **Отключить публикацию и распространение**.  
   
 3.  Выполните шаги, предлагаемые мастером отключения публикации и распространителя.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
  Публикацию и распространение можно отключить программно с помощью хранимых процедур репликации.  
   

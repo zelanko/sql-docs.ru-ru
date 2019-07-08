@@ -12,12 +12,12 @@ ms.assetid: f342dec2-d1d6-483e-b44e-98eb7d168b5e
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 0053db2d88c63a4ea7d5a49dc88048b218a6c517
-ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
+ms.openlocfilehash: 23b539444f2de609053d530df85edafcc58ba1f7
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55689747"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582421"
 ---
 # <a name="configure-resource-governor-using-a-template"></a>Настройка регулятора ресурсов с помощью шаблона
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -47,7 +47,9 @@ ms.locfileid: "55689747"
 5.  Чтобы сохранить изменения, внесенные в шаблон, нажмите кнопку **ОК**.  
   
 6.  Чтобы запустить запрос, нажмите кнопку **Выполнить**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="see-also"></a>См. также:  
  [регулятор ресурсов](../../relational-databases/resource-governor/resource-governor.md)   
  [Активация регулятора ресурсов](../../relational-databases/resource-governor/enable-resource-governor.md)   

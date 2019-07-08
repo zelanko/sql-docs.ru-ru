@@ -19,12 +19,12 @@ ms.assetid: f394d4bc-1518-4e61-97fc-bf184d972e2b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d1081ea3a972dea318e7ad7952f313a95f407223
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 053ea3fdc7ad56ef6b6c9c9992506cf07623cb5e
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621552"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584023"
 ---
 # <a name="manage-the-suspectpages-table-sql-server"></a>Управление таблицей suspect_pages (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "47621552"
   
      Таблица **suspect_pages** содержит по одной строке на каждую страницу, в которой обнаружена ошибка с номером 824, но не более 1000 строк. В следующей таблице приводятся ошибки, занесенные в столбец **event_type** таблицы **suspect_pages** .  
   
-    |Описание ошибки|Значение**event_type** |  
+    |Описание ошибки|Значение**event_type**|  
     |-----------------------|---------------------------|  
     |Ошибка 823, вызванная ошибкой CRC операционной системы, или ошибка 824, не относящаяся к неверной контрольной сумме или обрыву страницы (например, неверный идентификатор страницы).|1|  
     |Неверная контрольная сумма|2|  
@@ -133,7 +133,9 @@ ms.locfileid: "47621552"
 3.  Разверните узел **dbo.suspect_pages** и щелкните правой кнопкой мыши **Изменить 200 верхних строк**.  
   
 4.  В окне запроса измените, обновите или удалите необходимые строки.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   
 #### <a name="to-manage-the-suspectpages-table"></a>Управление таблицей suspect_pages  

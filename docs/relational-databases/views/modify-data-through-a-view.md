@@ -16,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 62a9120013d1a654460553bcba7a378560cef9ff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2677dbe1bc4a1cc45f609d98abcd0b42896231d3
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749085"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582358"
 ---
 # <a name="modify-data-through-a-view"></a>Изменение данных через представление
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,14 +53,16 @@ ms.locfileid: "47749085"
     > **ВАЖНО!** Нельзя удалить строку, если представление ссылается на несколько базовых таблиц. Можно обновлять только те столбцы, которые принадлежат к одной базовой таблице.  
   
 5.  Чтобы вставить строку, прокрутите строки вниз до конца и вставьте новые значения.  
-  
-    > **ВАЖНО!** Нельзя вставить строку, если представление ссылается на несколько базовых таблиц.  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+    > **IMPORTANT!** You cannot insert a row if the view references more than one base table.  
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   
 #### <a name="to-update-table-data-through-a-view"></a>Обновление данных таблицы с помощью представления  
   
-1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   
@@ -79,7 +81,7 @@ ms.locfileid: "47749085"
   
 #### <a name="to-insert-table-data-through-a-view"></a>Вставка данных таблицы с помощью представления  
   
-1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   

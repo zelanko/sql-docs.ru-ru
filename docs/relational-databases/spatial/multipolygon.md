@@ -14,12 +14,12 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a66491bb68469ecaa8f9cde47f77566e6c31236a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1c806c91beb14d2a50988b95e0ab09ee7f678dc3
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65936434"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584702"
 ---
 # <a name="multipolygon"></a>MultiPolygon
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -65,7 +65,9 @@ DECLARE @g geometry = 'MULTIPOLYGON(((1 1, 1 -1, -1 -1, -1 1, 1 1)),((1 1, 3 1, 
 1.  Все экземпляры, составляющие экземпляр **MultiPolygon** , являются допустимыми экземплярами **Polygon** . Сведения о допустимых экземплярах **Polygon** см. в разделе [Polygon](../../relational-databases/spatial/polygon.md).  
   
 2.  Никакие экземпляры **Polygon** , составляющие экземпляр **MultiPolygon** , не перекрываются.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 В следующем примере показаны два допустимых экземпляра **MultiPolygon** и один недопустимый экземпляр **MultiPolygon** .  
   
 ```sql  

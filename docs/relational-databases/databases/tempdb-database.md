@@ -18,12 +18,12 @@ ms.author: sstein
 manager: craigg
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 86c030eabfe3b18f544ca43f3e493bcd90f5e5ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a12c6ae385b4fa527251da266f2d0711eb2b9e9c
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65994238"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583442"
 ---
 # <a name="tempdb-database"></a>База данных tempdb
 
@@ -244,6 +244,8 @@ ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON
     ```
 3. Запросы к таблицам, оптимизированным для памяти, не поддерживают указания блокировки и изоляции, поэтому запросы к представлениям каталога оптимизированной для памяти TempDB не будут учитывать указания блокировки и изоляции. Как и в случае с другими системными представлениями каталога в SQL Server, все транзакции для системных представлений будут находиться в изоляции READ COMMITTED (или READ COMMITTED SNAPSHOT в данном случае).
 4. При включении оптимизированных для памяти метаданных tempdb возможны некоторые проблемы с индексами columnstore во временных таблицах. В этом предварительном выпуске рекомендуется избегать индексов columnstore во временных таблицах при использовании оптимизированных для памяти метаданных tempdb.
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 > [!NOTE] 
 > Эти ограничения действуют только при ссылке на системные представления TempDB, при необходимости вы сможете создать временную таблицу в той же транзакции, где обращаетесь к оптимизированной для памяти таблице в пользовательской базе данных.

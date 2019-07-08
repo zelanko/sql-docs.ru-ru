@@ -13,12 +13,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: ebfac68a62ef9ddbe954ed692bf46549e07bae88
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 0c22fb10e6264420c95149bb77c2318fdf89a715
+ms.sourcegitcommit: 3a64cac1e1fc353e5a30dd7742e6d6046e2728d9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67391344"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67556971"
 ---
 # <a name="tutorial-creating-and-using-indexes-on-enclave-enabled-columns-using-randomized-encryption"></a>Руководство. Создание и использование индексов в столбцах с поддержкой анклава с помощью случайного шифрования
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -87,7 +87,7 @@ ms.locfileid: "67391344"
 
    CREATE INDEX IX_LastName ON [Employees] ([LastName])
    INCLUDE ([EmployeeID], [FirstName], [SSN], [Salary]);
-   GO;
+   GO
    ```
 
 1. Выполните полнофункциональный запрос к столбцу **LastName** и убедитесь, что SQL Server использует индекс при выполнении запроса.
@@ -154,7 +154,7 @@ ms.locfileid: "67391344"
 
         CREATE INDEX IX_LastName ON [Employees] ([LastName])
         INCLUDE ([EmployeeID], [FirstName], [SSN], [Salary]);
-        GO;
+        GO
         ```
 
 1. От имени владельца данных выполните полнофункциональный запрос к столбцу **LastName** и убедитесь, что SQL Server использует индекс при выполнении запроса.

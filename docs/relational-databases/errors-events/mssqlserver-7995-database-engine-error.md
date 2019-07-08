@@ -12,12 +12,12 @@ ms.assetid: af6d6322-3cba-43d8-be97-e6ef15f8c933
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4afcdeef25dd28a97cf5b9096e8ac5635ca0c35f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f6c3ec14df307f0868444e58e7adbaa375591487
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62797684"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585071"
 ---
 # <a name="mssqlserver7995"></a>MSSQLSERVER_7995
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,9 @@ ms.locfileid: "62797684"
 2.  Проверка согласованности системных базовых таблиц. Это равносильно запуску команды DBCC CHECKTABLE для небольшого количества необходимых системных базовых таблиц.  
   
 3.  Полная проверка согласованности базы данных.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 Ошибка MSSQLEngine_7995 возникает на втором этапе, когда команда DBCC CHECKDB находит ошибки, которые она не может исправить, или команда, для которой параметр REPAIR не определен. Команда DBCC CHECKDB не может перейти к этапу 3, так как соответствующие базовые системные таблицы хранят метаданные всех объектов базы данных, либо повреждены.  
   
 ## <a name="user-action"></a>Действие пользователя  

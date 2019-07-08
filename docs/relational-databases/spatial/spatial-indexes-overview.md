@@ -13,12 +13,12 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6cad42165bfb79e411a6e1fe6edef0c1b2ef9caa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 542fd8c891a0efcaf216d9a5d00de69921ae0dd7
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65939213"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585819"
 ---
 # <a name="spatial-indexes-overview"></a>Общие сведения о пространственных индексах
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -170,7 +170,9 @@ ms.locfileid: "65939213"
 2.  Делает обе пирамиды плоскими.  
   
 3.  Соединяет плоские пирамиды для создания неевклидовой плоскости.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  На следующем рисунке показано схематическое представление трехэтапного процесса декомпозиции. В пирамидах пунктирные линии представляют границы четырех граней каждой пирамиды. На шагах 1 и 2 показан геодезический эллипсоид, зеленая горизонтальная линия представляет экваториальную долготу, а ряд зеленых вертикальных линий представляют несколько широт. На шаге 1 показано проецирование двух полушарий на пирамиды. На шаге 2 показано уплощение пирамид. На шаге 3 показаны плоские пирамиды после их объединения в плоскость и число спроецированных линий долготы. Обратите внимание, что эти спроецированные линии выпрямлены и различаются по длине в зависимости от места проецирования на пирамиду.  
   
  ![Проекция эллипсоида на плоскость](../../relational-databases/spatial/media/spndx-geodetic-projection.gif "Проекция эллипсоида на плоскость")  

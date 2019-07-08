@@ -7,13 +7,13 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
-ms.date: 10/03/2018
-ms.openlocfilehash: a6c04be1bf56577d0a6d40ccba9f627d319535ad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.date: 07/03/2019
+ms.openlocfilehash: cc9e35829be7ea287cebaa99d7f96d10bb0d92d1
+ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65937237"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67563998"
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>настроить сервер отчетов в кластере с балансированием сетевой нагрузки
 
@@ -62,16 +62,16 @@ ms.locfileid: "65937237"
     В следующем примере приведено значение, которое должно быть получено. Не нужно вставлять в файл конфигурации данные из этого примера; значения ключа недопустимы.  
   
     ```xml
-    <machineKey validationKey="123455555" decryptionKey="678999999" validation="SHA1" decryption="AES"/>  
+    <MachineKey ValidationKey="123455555" DecryptionKey="678999999" Validation="SHA1" Decryption="AES"/>  
     ```  
   
-2. Откройте файл конфигурации Web.config для сервера отчетов и вставьте в раздел <`system.web`> полученный элемент <`machineKey`>. Файл Web.config для диспетчера отчетов по умолчанию находится в папке \Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\Reportserver\Web.  
+2. Откройте файл конфигурации Web.config для сервера отчетов и вставьте в раздел <`system.web`> полученный элемент <`MachineKey`>. Файл Web.config для диспетчера отчетов по умолчанию находится в папке \Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\Reportserver\Web.  
   
 3. Сохраните файл.  
   
 4. Повторите предыдущий шаг для каждого сервера отчетов в конфигурации масштабного развертывания.  
   
-5. Убедитесь, что все файлы Web.Config в папках \Reporting Services\Reportserver содержат идентичные элементы <`machineKey`> в разделе <`system.web`>.  
+5. Убедитесь, что все файлы Web.Config в папках \Reporting Services\Reportserver содержат идентичные элементы <`MachineKey`> в разделе <`system.web`>.  
 
 ::: moniker-end
 
@@ -82,7 +82,7 @@ ms.locfileid: "65937237"
     В следующем примере приведено значение, которое должно быть получено. Не нужно вставлять в файл конфигурации данные из этого примера; значения ключа недопустимы. Для сервера отчетов требуется правильный регистр.
 
     ```xml
-    <machineKey validationKey="123455555" decryptionKey="678999999" validation="SHA1" decryption="AES"/>
+    <MachineKey ValidationKey="123455555" DecryptionKey="678999999" Validation="SHA1" Decryption="AES"/>
     ```
 
 2. Сохраните файл.

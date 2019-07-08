@@ -13,12 +13,12 @@ ms.assetid: b28bf963-89f9-4941-b6c1-6004fec347f1
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: ce55668552be49eb708b02d79233c2888e2cf57e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cd765a3ae978c695d0a82e97edaca559f315d84b
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63010169"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581661"
 ---
 # <a name="create-a-policy-based-management-policy"></a>Создание политики управления на основе политик
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "63010169"
   
 6.  Установите флажок **Включено** , если требуется, чтобы политика была включена сразу после ее создания. Если режим вычисления имеет значение **По запросу**, флажок **Включено** недоступен.  
   
-7.  В списке **Проверить условие** выберите одно из существующих условий или укажите пункт **Создать условие**. Для изменения условия выберите его и нажмите кнопку с многоточием (**...**). Дополнительные сведения см. в статье [Создание нового условия управления на основе политик](../../relational-databases/policy-based-management/create-a-new-policy-based-management-condition.md) или [Просмотр или изменение свойств условия управления на основе политик](../../relational-databases/policy-based-management/view-or-modify-the-properties-of-a-policy-based-management-condition.md).  
+7.  В списке **Проверить условие** выберите одно из существующих условий или укажите пункт **Создать условие**. Для изменения условия выберите его и нажмите кнопку с многоточием ( **...** ). Дополнительные сведения см. в статье [Создание нового условия управления на основе политик](../../relational-databases/policy-based-management/create-a-new-policy-based-management-condition.md) или [Просмотр или изменение свойств условия управления на основе политик](../../relational-databases/policy-based-management/view-or-modify-the-properties-of-a-policy-based-management-condition.md).  
   
 8.  Выберите один или несколько типов целевого объекта для данной политики в окне **Применить к** . Некоторые условия и аспекты можно применить только к определенным типам целей. Доступные наборы целей появляются в соответствующем окне. Чтобы выбрать условие фильтрации для некоторых типов целей, разверните **Каждый** . Если в разделе не появляются целевые объекты, убедитесь, что условие ограничено уровнем сервера.  
   
@@ -70,5 +70,6 @@ ms.locfileid: "63010169"
      Дополнительные сведения о параметрах, доступных в диалоговом окне **Создание новой политики** , см. в разделах [Диалоговое окно «Создание новой политики» или «Открытие политики», страница «Общие»](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-general-page.md) и [Диалоговое окно «Создание новой политики» или «Открытие политики», страница «Описание»](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-description-page.md).  
   
 12. В завершение нажмите кнопку **ОК**.  
-  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+

@@ -18,12 +18,12 @@ ms.assetid: 68d6b2a9-c36f-465a-9cd2-01d43a667e99
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 9f480a406983fa0e4bdce4c100b4ccb4d44c5c3a
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: df064e5ebe9a5a6fabbd1eda16cf29bfa3f58d0e
+ms.sourcegitcommit: 3a64cac1e1fc353e5a30dd7742e6d6046e2728d9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361594"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67556914"
 ---
 # <a name="deny-server-permissions-transact-sql"></a>DENY, запрет разрешений на сервере (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,13 +60,16 @@ DENY permission [ ,...n ]
  Указывает разрешение, которое может быть запрещено на сервере. Список разрешений см. в подразделе "Примечания" далее в этом разделе.  
   
  CASCADE  
- Указывает, что запрещаемое разрешение также запрещается для других участников, которым оно было предоставлено данным участником.  
+ Обозначает, что разрешение запрещается для указанного участника и всех других участников, которым этот участник предоставил разрешение. Требуется, если участник имеет разрешение с параметром GRANT OPTION. 
   
  TO \<server_principal>  
  Указывает участника, для которого запрещается разрешение.  
   
  AS \<grantor_principal>  
- Указывает участника, от которого участник, выполняющий данный запрос, получает право на запрещение разрешения.  
+ Указывает участника, от которого участник, выполняющий данный запрос, получает право на запрещение разрешения.
+Используйте предложение субъекта AS, чтобы указать, что субъект, записанный как объект, отзывающий разрешение, должен быть субъектом, отличным от пользователя, выполняющего инструкцию. Предположим, что пользователь Мария — это участник 12, пользователь Павел — участник 15. Мария выполняет `DENY SELECT ON OBJECT::X TO Steven WITH GRANT OPTION AS Raul;`. В таблице sys.database_permissions для параметра grantor_prinicpal_id инструкции отмены указано значение 15 (Павел), хотя инструкция была выполнена пользователем 12 (Мария).
+  
+AS в данной инструкции не дает возможность олицетворять другого пользователя.    
   
  *SQL_Server_login*  
  Указывает имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

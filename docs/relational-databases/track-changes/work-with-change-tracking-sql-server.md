@@ -22,12 +22,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e2f41329c10544686194524327ddb7fd560cb57d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 333e4f7eb3177529f55a9be18aa1e042b10737c8
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514148"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584677"
 ---
 # <a name="work-with-change-tracking-sql-server"></a>Работа с отслеживанием изменений (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -207,7 +207,9 @@ ON
 3.  Получите изменения для таблицы Sales с помощью функции CHANGETABLE(CHANGES ...).  
   
 4.  Получите изменения для таблицы SalesOrders с помощью функции CHANGETABLE(CHANGES ...).  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  В базе данных выполняются следующие два процесса, которые могут повлиять на результаты, возвращаемые на предыдущих шагах.  
   
 -   Процесс очистки выполняется в фоновом режиме и удаляет данные отслеживания изменений старше указанного срока хранения.  

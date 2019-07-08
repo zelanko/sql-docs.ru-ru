@@ -14,12 +14,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 14e32081c9cbe03d7336f4ee973b02737f1cda1d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6239c7854a5a63165672dc3a66d5b6ce26dfb3ff
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66454594"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579897"
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>Приступая к работе с разрешениями Database Engine
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,29 +29,29 @@ ms.locfileid: "66454594"
 ## <a name="security-principals"></a>Субъекты безопасности  
  Субъект безопасности — это официальное название удостоверений, которые используют [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и которым можно назначать разрешения для выполнения действий. Обычно это пользователи или группы пользователей, однако субъектами безопасности могут быть и другие сущности, олицетворяющие пользователей. Создавать субъекты безопасности и управлять ими можно с помощью списков [!INCLUDE[tsql](../../../includes/tsql-md.md)] или [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
   
- Имена входа  
+##### <a name="logins"></a>Имена входа  
  Имена входа — это учетные записи отдельных пользователей для входа в [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] поддерживают имена входа на основе проверки подлинности Windows и на основе проверки подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Дополнительные сведения об этих двух типах имен входа см. в разделе [Choose an Authentication Mode](../../../relational-databases/security/choose-an-authentication-mode.md).  
   
- Предопределенные роли сервера  
+##### <a name="fixed-server-roles"></a>Предопределенные роли сервера  
  В [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]предопределенные роли сервера — это набор предварительно настроенных ролей, который представляет собой удобную группу разрешений на уровне сервера. Имена входа можно добавить в роли, используя инструкцию `ALTER SERVER ROLE ... ADD MEMBER` . Дополнительные сведения см. в разделе [ALTER SERVER ROLE (Transact-SQL)](../../../t-sql/statements/alter-server-role-transact-sql.md). [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] не поддерживает предопределенные роли сервера, однако включает две роли в базе данных master (`dbmanager` и `loginmanager`), которые выполняют аналогичные функции.  
   
- Определяемые пользователем роли сервера  
+##### <a name="user-defined-server-roles"></a>Определяемые пользователем роли сервера  
  В [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]можно создавать собственные роли сервера и назначать им разрешения на уровне сервера. Имена входа можно добавить в роли сервера, используя инструкцию `ALTER SERVER ROLE ... ADD MEMBER` . Дополнительные сведения см. в разделе [ALTER SERVER ROLE (Transact-SQL)](../../../t-sql/statements/alter-server-role-transact-sql.md). [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] не поддерживает определяемые пользователем роли сервера.  
   
- Пользователи базы данных  
+##### <a name="database-users"></a>Пользователи базы данных  
  Именам входа доступ к базе данных предоставляется путем создания пользователя базы данных в базе данных и сопоставления этого пользователя базы данных с именем входа. Как правило, имя пользователя базы данных совпадает с именем входа, хотя это и необязательно. Один пользователь базы данных сопоставляется с одним именем входа. Имя входа может быть сопоставлено только с одним пользователем в базе данных, однако может сопоставляться как пользователь базы данных в нескольких базах данных.  
   
  Кроме того, можно создать пользователей базы данных без соответствующих имен входа. Они называются *пользователями автономной базы данных*. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] рекомендуют использовать пользователей автономной базы данных, поскольку это упрощает перенос базы данных на другой сервер. Как и для имен входа, для пользователей автономной базы данных можно использовать проверку подлинности Windows или проверку подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в разделе [Пользователи автономной базы данных — создание переносимой базы данных](../../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
   
  Существует 12 типов пользователей с незначительными различиями в способах проверки подлинности и представляемых сущностях. Список пользователей см. в разделе [CREATE USER (Transact-SQL)](../../../t-sql/statements/create-user-transact-sql.md).  
   
- Предопределенные роли базы данных  
+##### <a name="fixed-database-roles"></a>Предопределенные роли базы данных  
  Предопределенные роли базы данных — это набор предварительно настроенных ролей, который представляет собой удобную группу разрешений на уровне базы данных. Пользователей базы данных и определяемые пользователем роли базы данных можно добавить в предопределенные роли базы данных с помощью инструкции `ALTER ROLE ... ADD MEMBER`. Дополнительные сведения см. в разделе [ALTER ROLE (Transact-SQL)](../../../t-sql/statements/alter-role-transact-sql.md).  
   
- Определяемые пользователем роли базы данных  
+##### <a name="user-defined-database-roles"></a>Определяемые пользователем роли базы данных  
  Пользователи с разрешением `CREATE ROLE` могут создавать определяемые пользователем роли базы данных для представления групп пользователей с общими разрешениями. Обычно разрешения предоставляются или отклоняются для всей роли, что упрощает управление разрешениями и мониторинг. Пользователей базы данных можно добавлять в роли базы данных с помощью инструкции `ALTER ROLE ... ADD MEMBER` . Дополнительные сведения см. в разделе [ALTER ROLE (Transact-SQL)](../../../t-sql/statements/alter-role-transact-sql.md).  
   
- Другие субъекты  
+##### <a name="other-principals"></a>Другие субъекты  
  В данной статье не рассматриваются дополнительные субъекты безопасности, такие как роли приложений и имена входа и пользователи, основанные на сертификатах или асимметричных ключах.  
   
  График, отображающий связи между пользователями Windows, группами Windows, именами входа и пользователями базы данных, см. в разделе [Create a Database User](../../../relational-databases/security/authentication-access/create-a-database-user.md).  
@@ -66,7 +66,9 @@ ms.locfileid: "66454594"
 2.  Создайте группы Windows, представляющие рабочие единицы и рабочие функции.  
   
 3.  Добавьте пользователей Windows в группы Windows.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="if-the-person-connecting-will-be-connecting-to-many-databases"></a>Если пользователь будет подключаться к нескольким базам данных  
   
 1.  Создайте имя входа для групп Windows. (При использовании проверки подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] пропустите шаги, относящиеся к Active Directory, и создайте имена входа для проверки подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .)  

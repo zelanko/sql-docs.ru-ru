@@ -26,12 +26,12 @@ ms.assetid: 4bc50af9-2f7d-49df-bb01-854d080c72c7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b8e4679cb4627f5366327c02f6b30db32d3b2610
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6ad284fdb121900e3c6eff89f38213c09cf0331b
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62760698"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582323"
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>Сравнение типизированного и нетипизированного XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -154,7 +154,9 @@ declare @x xml (DOCUMENT Production.ProductDescriptionSchemaCollection);
     3.  все значения **xs:date** или **xs:dateTime** , предшествующие дате "1 января 1 года", приведут к ошибке выполнения при перестроении индекса или применении инструкции XQuery или XML-DML к данным XML, содержащим такие значения;  
   
 2.  все отрицательные значения года в аспектах **xs:date** или **xs:dateTime** или значения по умолчанию в коллекции схем XML автоматически обновляются до наименьшего значения, допустимого базовым типом **xs:date** или **xs:dateTime** (например, 0001-01-01T00:00:00.0000000Z для **xs:dateTime**).  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  Обратите внимание, что при помощи простой SQL-инструкции SELECT можно получить весь тип XML-данных, даже если в нем содержатся отрицательные значения года. Отрицательные значения года рекомендуется заменить значением года в обновленном поддерживаемом диапазоне; кроме того, можно изменить тип элемента или атрибута на **xs:string**.  
   
 ## <a name="see-also"></a>См. также:  

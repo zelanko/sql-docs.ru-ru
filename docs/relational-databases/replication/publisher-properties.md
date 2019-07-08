@@ -16,12 +16,12 @@ ms.assetid: 98df1aea-0406-40bf-a917-4bd80464125c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1ba43fc3f35c1fd3cacd3bdda6d4192cf7dc75af
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: def9df7e03f596cf519eebebd7b2ca83a912fe98
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129844"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580021"
 ---
 # <a name="sql-server-replication-publisher-properties-dialog-box"></a>Репликация SQL Server: диалоговое окно "Свойства издателя"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,9 @@ ms.locfileid: "54129844"
   
 1.  Отключите публикацию на сервере издателя. Дополнительные сведения см. в статье [Отключение публикации и распространения](../../relational-databases/replication/disable-publishing-and-distribution.md).    
 2.  Повторно настройте публикацию и распространение. Дополнительные сведения см. в статье [Configure Publishing and Distribution](../../relational-databases/replication/configure-publishing-and-distribution.md).  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="distributor"></a>Распространитель 
 Диалоговое окно **Свойства издателя** позволяет просматривать и изменять свойства, относящиеся к связи между издателем и его распространителем.  
   

@@ -11,12 +11,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b529ce2337fa92a5c5ae6fe3ed2810a8b6c7ec11
-ms.sourcegitcommit: 258c32f7e85a38aaf674da3478ae3ed10648d1f1
+ms.openlocfilehash: bd863e5869e820d07e67baf6094fe00a5b9b4a56
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53414149"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580791"
 ---
 # <a name="modify-a-partition-function"></a>Изменение функции секционирования
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -85,7 +85,9 @@ ms.locfileid: "53414149"
 3.  Щелкните правой кнопкой мыши функцию секционирования, которую нужно удалить, и выберите пункт **Удалить**.  
   
 4.  В диалоговом окне **Удаление объекта** убедитесь, что выбрана верная функция секционирования, и нажмите кнопку **ОК**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   
 #### <a name="to-split-a-single-partition-into-two-partitions"></a>Разбиение одной секции на две  

@@ -14,12 +14,12 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9bbed0ab919c2eb4258c22bee4545ec8d49a1462
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 192b068c8ece6bcfda9aee2899793d7d901dd90a
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66761452"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581695"
 ---
 # <a name="polygon"></a>Polygon
 
@@ -43,7 +43,9 @@ ms.locfileid: "66761452"
 2.  на рисунке 2 представлен экземпляр **Polygon** , граница которого определяется внешним и двумя внутренними кольцами. Область внутри внутренних колец является частью внешней стороны экземпляра **Polygon** ;  
   
 3.  на рисунке 3 представлен допустимый экземпляр **Polygon** , поскольку внутренние кольца пересекаются в одной точке касания.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ### <a name="accepted-instances"></a>Правильные экземпляры  
  Правильные экземпляры **Polygon** — это экземпляры, которые можно сохранить в переменной **geometry** или **geography** , не вызывая исключения. Следующие экземпляры **Polygon** являются правильными:  
   
