@@ -15,12 +15,12 @@ ms.assetid: d651186e-c9ca-4864-a444-2cd6943b8e35
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7dae619283acc6259a488ae868c853c193a2f2f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 78fc4eff34dd98552924435c3132c1fafb96c746
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62668922"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585803"
 ---
 # <a name="configure-iis-for-web-synchronization"></a>настроить сервер IIS для веб-синхронизации
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,9 @@ ms.locfileid: "62668922"
 4.  Установите нужные разрешения для средства прослушивания репликации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 5.  Запустите веб-синхронизацию в диагностическом режиме, чтобы проверить соединение с сервером IIS и убедиться, что SSL-сертификат установлен правильно.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="configuring-secure-sockets-layer"></a>Настройка протокола SSL  
  Чтобы настроить протокол SSL, укажите сертификат, который будет использоваться сервером IIS. Веб-синхронизация для репликации слиянием поддерживает использование серверных сертификатов, а не клиентских. Чтобы настроить службы IIS для развертывания, необходимо вначале получить сертификат из центра сертификации (certification authority, CA). Центр сертификации — это организация, отвечающая за установку и документальное подтверждение подлинности открытых ключей шифрования, принадлежащих пользователям, компьютерам и другим центрам сертификации. Дополнительные сведения о сертификатах см. в документации по службам IIS. После установки сертификата необходимо связать сертификат с веб-сайтом, который используется веб-синхронизацией.  
   

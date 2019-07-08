@@ -18,12 +18,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5e0431b913366b4e4ccb34bea7a00f0cf003a82e
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 077abbbb8ca5e233cc9582d9305f3e689a25bc6a
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134434"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583183"
 ---
 # <a name="create-nonclustered-indexes"></a>Создание некластеризованных индексов
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -73,7 +73,9 @@ ms.locfileid: "54134434"
 8.  Щелкните **Закрыть**.  
   
 9. В меню **Файл** выберите пункт **Сохранить**_имя_таблицы_.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-create-a-nonclustered-index-by-using-object-explorer"></a>Создание некластеризованного индекса в обозревателе объектов  
   
 1.  В обозревателе объектов разверните базу данных, содержащую таблицу, в которой необходимо создать некластеризованный индекс.  
@@ -86,7 +88,7 @@ ms.locfileid: "54134434"
   
 5.  В диалоговом окне **Создание индекса** на странице **Общие** введите имя нового индекса в поле **Имя индекса** .  
   
-6.  В разделе **Ключевые столбцы индекса** щелкните **Добавить…**.  
+6.  В разделе **Ключевые столбцы индекса** щелкните **Добавить…** .  
   
 7.  В диалоговом окне **Выбор столбцов из**_имя_таблицы_ установите флажки для столбцов таблицы, добавляемых к некластеризованному индексу.  
   

@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9f57b07be679195794df5f0f9fe2329417a0b30f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d65ccbf6784b7571684624423cc0f7d378c0f2c7
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62860687"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585285"
 ---
 # <a name="estimate-the-size-of-a-heap"></a>Оценка размера кучи
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -83,8 +83,10 @@ ms.locfileid: "62860687"
      Вычисленное количество страниц должно быть округлено в большую сторону до ближайшей целой страницы.  
   
 8.  Вычислите размер пространства, требуемого для хранения данных в куче (всего 8192 на страницу):  
-  
-     Размер кучи (в байтах) = 8192 x **_Num_Pages_**  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     Heap size (bytes) = 8192 x **_Num_Pages_**  
   
  Этот расчет не учитывает следующие факторы.  
   

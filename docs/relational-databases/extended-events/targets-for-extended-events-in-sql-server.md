@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: a34c835fe87edb3acf8e6bb64f262a090cc92806
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: 6d9a5221f3386bd96a728bab27db93eca9373054
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58478139"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583391"
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>Целевые объекты для расширенных событий в SQL Server
 
@@ -521,6 +521,7 @@ CREATE EVENT SESSION [pair_matching_lock_a_r_33]
 3. Намеренное отсутствие COMMIT TRANSACTION, до изучения целевых объектов.
 4. Выполнение COMMIT TRANSACTION после тестирования.
 
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 Простой целевой объект **event_counter** предоставил указанные ниже выходные строки. Поскольку 52-50 = 2, выходные данные указывают на то, что мы должны видеть 2 непарных события lock_acquired при рассмотрении результата целевого объекта pair_matching.
 

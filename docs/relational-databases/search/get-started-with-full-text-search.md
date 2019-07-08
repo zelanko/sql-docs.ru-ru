@@ -16,12 +16,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0d87ebe37c4dcf669243262c97422337b1669be6
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 6043372a62776b4f7417b3a666417be9a811bfce
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973714"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585498"
 ---
 # <a name="get-started-with-full-text-search"></a>Приступая к работе с компонентом Full-Text Search
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,6 +31,8 @@ ms.locfileid: "57973714"
 Чтобы настроить полнотекстовый поиск, обычно требуется выполнить два основных шага:  
 1.  Создание полнотекстового каталога.  
 2.  Создание полнотекстового индекса по таблицам или индексированному представлению, где требуется произвести поиск. 
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 Полнотекстовый индекс должен принадлежать к полнотекстовому каталогу. Можно либо создать отдельный текстовый каталог для каждого полнотекстового индекса, либо связать с одним каталогом несколько полнотекстовых индексов. Полнотекстовый каталог является виртуальным объектом и не входит в файловую группу. Каталог — это логическое понятие, которое ссылается на группу полнотекстовых индексов.
 

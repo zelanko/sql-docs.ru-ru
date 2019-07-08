@@ -11,12 +11,12 @@ ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: dcc749166f7c86575a84f41e12b452275ff3649c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4127d0dce2f693a89bec5ef79e83884f1181d0d1
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66402989"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586083"
 ---
 # <a name="quickstart-sql-server-backup-and-restore-to-azure-blob-storage-service"></a>Краткое руководство. Резервное копирование и восстановление SQL Server с помощью службы хранилищ BLOB-объектов Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,6 +39,9 @@ ms.locfileid: "66402989"
 
 1. Откройте портал Azure. 
 1. Перейдите к своей учетной записи хранения. 
+
+[!INCLUDE[freshInclude](../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
    1. Выберите учетную запись хранения, прокрутите вниз до раздела **Службы BLOB-объектов**.
    1. Выберите **BLOB-объекты**, а затем щелкните **+ Контейнер**, чтобы добавить новый контейнер. 
    1. Введите имя контейнера и запишите его. Эти сведения используются в URL-адресе (пути к файлу резервной копии) в инструкциях T-SQL далее в этом руководстве. 

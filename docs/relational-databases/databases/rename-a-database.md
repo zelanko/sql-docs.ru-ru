@@ -15,12 +15,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0e3d57094a6863bb5b6bebd96f05ed57a1fcc25f
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 1be87a50ad6e8815a9446ca22c2734a6e82b4745
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58872024"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583537"
 ---
 # <a name="rename-a-database"></a>Переименование базы данных
 
@@ -72,7 +72,9 @@ ms.locfileid: "58872024"
 3. В обозревателе объектов разверните узел **Базы данных**, щелкните правой кнопкой мыши базу данных, которую необходимо переименовать, а затем выберите пункт **Переименовать**.  
   
 4. Введите новое имя базы данных и нажмите кнопку **ОК**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="rename-a-database-using-transact-sql"></a>Переименование базы данных с помощью Transact-SQL  
   
 ### <a name="to-rename-a-sql-server-database-by-placing-it-in-single-user-mode"></a>Переименование базы данных SQL Server путем перевода ее в однопользовательский режим

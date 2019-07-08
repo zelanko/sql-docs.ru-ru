@@ -13,12 +13,12 @@ ms.assetid: 49438285-a011-4dac-bd4f-f35cd90fda61
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 1fcf2b3c6f6b516d34f2d1c8658acd61549650b6
-ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
+ms.openlocfilehash: 2780556c86203cd89e6804cf9a108bdf37ecd019
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55689867"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582428"
 ---
 # <a name="change-resource-pool-settings"></a>Изменение параметров пула ресурсов
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -51,7 +51,9 @@ ms.locfileid: "55689867"
 4.  Щелкните или дважды щелкните ячейки в строке, подлежащие изменению, и введите новые значения.  
   
 5.  Чтобы сохранить изменения, нажмите кнопку **ОК**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="ChgRPTSQL"></a> Изменение параметров пула ресурсов с помощью Transact-SQL  
  **Изменение параметров пула ресурсов с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)]**  
   

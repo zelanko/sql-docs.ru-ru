@@ -12,12 +12,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3d1d5699a32b62de823846e64757a1842a9337ad
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 38d58dc9156488e9c80e199ba2074b96015df7f7
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294452"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583171"
 ---
 # <a name="get-started-with-columnstore-for-real-time-operational-analytics"></a>Начало работы с Columnstore для получения операционной аналитики в реальном времени
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -84,7 +84,9 @@ ms.locfileid: "56294452"
     ```  
   
 3.  Вот и все, что нужно сделать!  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  Теперь все готово для запуска операционной аналитики в реальном времени без внесения изменений в приложение.  Аналитические запросы будут использовать индекс columnstore, а операции OLTP продолжат использовать индексы сбалансированного дерева OLTP. Рабочие нагрузки OLTP продолжат выполняться, однако появятся некоторые дополнительные издержки на обработку индекса columnstore. В следующем разделе описаны процессы оптимизации производительности.  
   
 ## <a name="blog-posts"></a>Записи блога  
