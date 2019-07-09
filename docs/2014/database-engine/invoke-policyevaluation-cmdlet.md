@@ -16,12 +16,12 @@ ms.assetid: 3e6d4f5a-59b7-4203-b95a-f7e692c0f131
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c1239d2dea1a4f73b54f78345f769c9550c262b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 871f5eb0dab1105017fac8be1f978e0c81a9f1d3
+ms.sourcegitcommit: 9af07bd57b76a34d3447e9e15f8bd3b17709140a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66064684"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67624370"
 ---
 # <a name="invoke-policyevaluation-cmdlet"></a>Invoke-PolicyEvaluation, командлет
   **Invoke-PolicyEvaluation** — это командлет [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , который определяет, соответствует ли набор целей объектов SQL Server условиям, заданным в одной или нескольких политиках в системе управления на основе политик.  
@@ -88,7 +88,7 @@ gci "Database Status.xml", "Trustworthy Database.xml" | Invoke-PolicyEvaluation 
   
 -   Параметр **-TargetObjects** принимает объект или массив объектов, которые представляют объекты SQL Server в наборе целей. Например, можно создать массив объектов класса <xref:Microsoft.SqlServer.Management.Smo.Database> для передачи параметру **-TargetObjects**.  
   
--   Параметр **-TargetExpressions** принимает строку, содержащую выражение запроса, которое определяет объекты в наборе целей. Это выражение запроса состоит из узлов, разделенных символом «/». Каждый узел имеет вид ObjectType[Filter]. Тип объекта — это один из объектов в иерархии управляющих объектов SQL Server (SMO). Фильтр — это выражение, которое фильтрует объекты в этом узле. Дополнительные сведения см. в статье [Query Expressions and Uniform Resource Names](../powershell/query-expressions-and-uniform-resource-names.md).  
+-   Параметр **-TargetExpressions** принимает строку, содержащую выражение запроса, которое определяет объекты в наборе целей. Это выражение запроса состоит из узлов, разделенных символом «/». Каждый узел имеет вид ObjectType[Filter]. Тип объекта является один из объектов в иерархии объектов управления SQL Server (SMO) объекта. Фильтр — это выражение, которое фильтрует объекты в этом узле. Дополнительные сведения см. в статье [Query Expressions and Uniform Resource Names](../powershell/query-expressions-and-uniform-resource-names.md).  
   
  Укажите либо **-TargetObjects** , либо **-TargetExpression**, но не оба параметра.  
   

@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7987b0cfb8be268a8e48fd25d7512b4969aea6fb
-ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
+ms.openlocfilehash: 6158df674c90f14a1f77f5e12c18adcb6f8fbc4f
+ms.sourcegitcommit: f97394f18f8509aec596179acd4c59d8492a4cd2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59542184"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67652863"
 ---
 # <a name="sysquerystoreplan-transact-sql"></a>sys.query_store_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -57,8 +57,8 @@ ms.locfileid: "59542184"
 |**last_execution_time**|**datetimeoffset**|Время последнего выполнения относится к последней время окончания/плана запроса.|  
 |**avg_compile_duration**|**float**|Планирование статистики компиляции. <br/>**Примечание.** Хранилище данных SQL Azure всегда будет возвращать нуль (0).|  
 |**last_compile_duration**|**bigint**|Планирование статистики компиляции. <br/>**Примечание.** Хранилище данных SQL Azure всегда будет возвращать нуль (0).|  
-|**plan_forcing_type**|**int**|Тип принудительного применения плана.<br /><br />0: None<br /><br />1: MANUAL<br /><br />2. AUTO|  
-|**plan_forcing_type_desc**|**nvarchar(60)**|Text description of plan_forcing_type.<br /><br />НЕТ: Форсирование планов не<br /><br />ВРУЧНУЮ: План, принудительно задается пользователем<br /><br />АВТО: Принудительно используемый план автоматической настройкой|  
+|**plan_forcing_type**|**int**|Тип принудительного применения плана.<br /><br />0: None<br /><br />1: MANUAL<br /><br />2: AUTO|  
+|**plan_forcing_type_desc**|**nvarchar(60)**|Text description of plan_forcing_type.<br /><br />NONE: Форсирование планов не<br /><br />ВРУЧНУЮ: План, принудительно задается пользователем<br /><br />АВТО: Принудительно используемый план автоматической настройкой|  
 
 ## <a name="plan-forcing-limitations"></a>Ограничения принудительного использования планов
 Хранилище запросов имеет механизм, позволяющий оптимизатору запросов принудительно применить определенный план выполнения. Но существуют некоторые ограничения, которые могут препятствовать применению плана. 
@@ -68,7 +68,7 @@ ms.locfileid: "59542184"
 * ссылка на внешнюю таблицу;
 * распределенный запрос или полнотекстовые операции;
 * использование глобальных запросов. 
-* Курсоры
+* Динамического или набора ключей курсоры (принудительное выполнение плана поддерживается для статических и Быстрые однонаправленные курсоры)
 * Недопустимая спецификация соединения типа "звезда" 
 
 Во-вторых, когда объекты, от которых зависит план, больше не доступны:
