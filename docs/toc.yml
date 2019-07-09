@@ -1,5 +1,5 @@
 - name: Вас приветствует SQL Server
-  href: sql-server/sql-server-technical-documentation.md?toc=toc.json
+  href: sql-server/sql-server-technical-documentation.md?toc=../toc.json
 - name: Предыдущие версии (2005–2014)
   href: toc/previous-versions-sql-server.md
 - name: Обзор
@@ -30,7 +30,7 @@
         - name: "SQL\_Server\_2019"
           href: sql-server/sql-server-ver15-release-notes.md
         - name: "SQL Server\_2017"
-          href: sql-server/sql-server-2017-release-notes.md?toc=../toc/toc.json
+          href: sql-server/sql-server-2017-release-notes.md?toc=../toc.json
         - name: "SQL Server\_2016"
           href: sql-server/sql-server-2016-release-notes.md
         - name: SQL Server 2014
@@ -8763,14 +8763,10 @@
           items:
             - name: SQL Server Management Studio (SSMS)
               href: ssms/sql-server-management-studio-ssms.md
-        - name: Краткие руководства
+        - name: Учебники
           items:
             - name: Подключение и отправка запроса к SQL Server
               href: ssms/tutorials/connect-query-sql-server.md
-        - name: Учебники
-          items:
-            - name: Проектирование отдельной реляционной базы данных
-              href: 'https://docs.microsoft.com/en-us/azure/sql-database/sql-database-design-first-database?view=sql-server-2017'
         - name: Основные понятия
           items:
             - name: Окна инструментов SSMS
@@ -8907,12 +8903,11 @@
                   href: ssms/register-servers/register-servers.md
                 - name: Справка F1 по зарегистрированным серверам
                   href: ssms/register-servers/registered-servers-f1-help.md
-            - name: Написание скриптов
+            - name: Работа со скриптами в SSMS
               items:
                 - name: Редакторы запросов и текста
+                  href: ssms/scripting/query-and-text-editors-sql-server-management-studio.md
                   items:
-                    - name: Редакторы запросов и текста
-                      href: ssms/scripting/query-and-text-editors-sql-server-management-studio.md
                     - name: Редактор запросов компонента Database Engine
                       href: ssms/scripting/database-engine-query-editor-sql-server-management-studio.md
                     - name: Редактор XML
@@ -9339,10 +9334,9 @@
                   href: ssms/register-servers/export-registered-server-information-sql-server-management-studio.md
                 - name: Импорт сведений о зарегистрированном сервере
                   href: ssms/register-servers/import-registered-server-information-sql-server-management-studio.md
-            - name: Написание скриптов
+            - name: Работа со скриптами ядра СУБД
+              href: ssms/scripting/database-engine-scripting.md
               items:
-                - name: Написание скриптов
-                  href: ssms/scripting/database-engine-scripting.md
                 - name: Редакторы запросов и текста
                   href: ssms/scripting/query-and-text-editors-sql-server-management-studio.md
                 - name: Редактор запросов компонента Database Engine
@@ -16679,7 +16673,7 @@
                   href: t-sql/statements/alter-index-transact-sql.md
                 - name: INDEX (выборочные XML-индексы)
                   href: t-sql/statements/alter-index-selective-xml-indexes.md
-                - name: LOGIN
+                - name: Имя_для_входа
                   href: t-sql/statements/alter-login-transact-sql.md
                 - name: MASTER KEY
                   href: t-sql/statements/alter-master-key-transact-sql.md
@@ -16849,7 +16843,7 @@
                   href: t-sql/statements/create-function-sql-data-warehouse.md
                 - name: INDEX
                   href: t-sql/statements/create-index-transact-sql.md
-                - name: LOGIN
+                - name: Имя_для_входа
                   href: t-sql/statements/create-login-transact-sql.md
                 - name: MASTER KEY
                   href: t-sql/statements/create-master-key-transact-sql.md
@@ -17007,7 +17001,7 @@
                   href: t-sql/statements/drop-index-transact-sql.md
                 - name: INDEX (выборочные XML-индексы)
                   href: t-sql/statements/drop-index-selective-xml-indexes.md
-                - name: LOGIN
+                - name: Имя_для_входа
                   href: t-sql/statements/drop-login-transact-sql.md
                 - name: MASTER KEY
                   href: t-sql/statements/drop-master-key-transact-sql.md
