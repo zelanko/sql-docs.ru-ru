@@ -16,12 +16,12 @@ ms.assetid: 9c290a88-4e9f-4a7e-aab5-4442137a9918
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c2b1729996b53bb3419838c0ce55dc30182c467f
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 85125ef01d299c34081578bd38eb6ac3fdb328a4
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135449"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582718"
 ---
 # <a name="work-with-replication-agent-profiles"></a>Работа с профилями агента репликации
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +70,9 @@ ms.locfileid: "54135449"
 ###  <a name="Access_SSMS"></a> Доступ к диалоговому окну «Профили агентов» из среды SQL Server Management Studio  
   
 1.  На странице **Общие** диалогового окна **Свойства распространителя — \<распространитель>** щелкните элемент **Параметры профиля по умолчанию**.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-access-the-agent-profiles-dialog-box-from-replication-monitor"></a>Доступ к диалоговому окну «Профили агентов» из монитора репликации  
   
 -   Чтобы открыть диалоговое окно для всех агентов, щелкните издатель правой кнопкой мыши, затем щелкните **Профили агентов**.  
@@ -93,7 +95,7 @@ ms.locfileid: "54135449"
   
 1.  Если в окне **Профили агентов** отображаются профили нескольких агентов, следует выбрать агент.  
   
-2.  Нажмите кнопку свойств (**…**), следующую за профилем.  
+2.  Нажмите кнопку свойств (**…**) рядом с профилем.  
   
 3.  Просмотрите параметры и значения в диалоговом окне **Свойства профиля \<имя_профиля**.  
   

@@ -1,5 +1,5 @@
 ---
-title: Учебник. Настройка репликации между двумя полностью подключенными серверами (репликация транзакций) | Документация Майкрософт
+title: Руководство. Настройка репликации между двумя полностью подключенными серверами (репликация транзакций) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,14 +15,14 @@ ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cc911c9a5a3d02e097945ebfe4a74b8ddd9ee285
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: f7d40e49816ccec8c84486056a3f5b3bdee759de
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128354"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581325"
 ---
-# <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>Учебник. Настройка репликации между двумя полностью подключенными серверами (репликация транзакций)
+# <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>Руководство. Настройка репликации между двумя полностью подключенными серверами (репликация транзакций)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Репликация транзакций — это хорошее решение для перемещения данных между постоянно подключенными серверами. С помощью мастера репликации можно легко настроить и администрировать топологию репликации. 
 
@@ -59,7 +59,7 @@ ms.locfileid: "54128354"
 > - В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] необходимо подключиться к издателю и подписчику с помощью имени входа, которое является членом предопределенной роли сервера **sysadmin**. Дополнительные сведения о роли см. в статье [Роли уровня сервера](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/server-level-roles).  
   
   
-**Предполагаемое время для выполнения заданий данного учебника: 60 минут**  
+**На изучение этого руководства потребуется примерно 60 минут**  
   
 ## <a name="configure-the-publisher-for-transactional-replication"></a>Настройка издателя для репликации транзакций
 В этом разделе с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] создается публикация транзакций для публикации фильтрованного подмножества таблицы **Продукт** из примера базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Также в список доступа к публикации (PAL) добавляется имя входа SQL Server, используемое агентом распространителя.
@@ -116,6 +116,8 @@ ms.locfileid: "54128354"
     ![Страница "Завершение работы мастера" с именем публикации](media/tutorial-replicating-data-between-continuously-connected-servers/advworksproducttrans.png)
   
 14. После создания публикации нажмите кнопку **Закрыть**, чтобы закрыть мастер. 
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 Если при попытке создать публикацию обнаруживается, что агент SQL Server не запущен, может возникнуть следующая ошибка. Она указывает на то, что публикация создана успешно, но при этом агент моментальных снимков запустить не удалось. В этом случае необходимо запустить агент SQL Server, а затем вручную запустить агент моментальных снимков. Инструкции приведены в следующем разделе. 
 
@@ -242,4 +244,4 @@ ms.locfileid: "54128354"
 В следующей статье будет описана настройка репликации слиянием:  
 
 > [!div class="nextstepaction"]
-> [Руководство Настройка репликации между сервером и мобильными клиентами (репликация слиянием)](tutorial-replicating-data-with-mobile-clients.md)
+> [Учебник. Настройка репликации между сервером и мобильными клиентами (репликация слиянием)](tutorial-replicating-data-with-mobile-clients.md)

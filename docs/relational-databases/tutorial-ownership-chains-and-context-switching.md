@@ -1,5 +1,5 @@
 ---
-title: Руководство. Цепочки владения и переключение контекста | Документация Майкрософт
+title: Руководство. Цепочки владения и переключение контекста | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,14 +14,14 @@ ms.assetid: db5d4cc3-5fc5-4cf5-afc1-8d4edc1d512b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f74c768c55058f2ec17fb569c934317f550d13bc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 22851b6b515d50ce9a68c4323729b1b838b5e281
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657202"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581474"
 ---
-# <a name="tutorial-ownership-chains-and-context-switching"></a>Tutorial: Ownership Chains and Context Switching
+# <a name="tutorial-ownership-chains-and-context-switching"></a>Руководство. Цепочки владения и переключение контекста
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 В этом учебнике приведен пример, в котором рассматриваются основные понятия безопасности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , включая цепочки владения и переключение контекста.  
   
@@ -40,7 +40,9 @@ ms.locfileid: "47657202"
 2.  Создание хранимой процедуры для получения доступа к данным по заказам на покупку.   
 3.  Доступ к данным через хранимую процедуру.  
 4.  Сброс среды.  
-  
+
+[!INCLUDE[freshInclude](../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 Каждый блок кода в этом примере объясняется по порядку. Чтобы скопировать весь пример, см. раздел [Пример целиком](#CompleteExample) в конце этого учебника.
 
 ## <a name="prerequisites"></a>предварительные требования

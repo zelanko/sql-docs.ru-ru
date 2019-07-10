@@ -16,12 +16,12 @@ ms.assetid: 97f2535b-ec19-4973-823d-bcf3d5aa0216
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5c662d888d627b6dcce3d43161d16aee50a994ec
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 25625a5340707efdf21589a735a177e0be667bd1
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124854"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586415"
 ---
 # <a name="specify-synchronization-schedules"></a>Указание расписаний синхронизации
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,12 +66,14 @@ ms.locfileid: "54124854"
   
     -   **Запуск только по запросу**  
   
-    -   **\<Задать расписание…>**  
+    -   **\<Задать расписание...>**  
   
-2.  При выборе **\<Задать расписание…>** укажите расписание в диалоговом окне **Свойства расписания задания**, а затем нажмите кнопку **ОК**.  
+2.  При выборе **\<Задать расписание...>** укажите расписание в диалоговом окне **Свойства расписания задания**, а затем нажмите кнопку **ОК**.  
   
 3.  Завершите работу мастера.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-modify-a-synchronization-schedule-for-a-push-subscription-in-replication-monitor"></a>Изменение расписания синхронизации для принудительных подписок в мониторе репликации  
   
 1.  На левой панели монитора репликации раскройте группу издателей, раскройте нужный издатель, а затем выберите публикацию.  

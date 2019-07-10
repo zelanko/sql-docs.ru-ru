@@ -1,5 +1,5 @@
 ---
-title: Занятие 1. Преобразование таблицы в иерархическую структуру | Документация Майкрософт
+title: Урок 1. Преобразование таблицы в иерархическую структуру | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/22/2018
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: 5ee6f19a-6dd7-4730-a91c-bbed1bd77e0b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6e95be3958bf3b5ab77e3da43e31b91b75c918d4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 83871be7e8de5976eee684788d7a1a852aaa7c8a
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661162"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582146"
 ---
-# <a name="lesson-1-converting-a-table-to-a-hierarchical-structure"></a>Урок 1. преобразование таблицы в иерархическую структуру
+# <a name="lesson-1-converting-a-table-to-a-hierarchical-structure"></a>Урок 1. Преобразование таблицы в иерархическую структуру
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 Если у клиентов имеются таблицы, в которых для выражения иерархических связей используются самосоединения, то эти таблицы можно преобразовать в иерархическую структуру, руководствуясь указаниями из данного занятия. Миграция от старого метода представления к методу представления, использующему тип данных **hierarchyid**, проходит относительно легко. После миграции пользователи получат компактное и легкое для понимания иерархическое представление, которое может быть проиндексировано несколькими способами для обеспечения эффективного поиска.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "47661162"
 - Установите выпуск [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 - Скачайте [примеры баз данных AdventureWorks2017](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).
 
-Инструкции по восстановлению баз данных в SSMS см. в статье [Восстановление базы данных](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).  
+См. инструкции по восстановлению резервной копии базы данных с помощью SSMS см. в статье: [Восстановление базы данных](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).  
 
 ## <a name="examine-the-current-structure-of-the-employee-table"></a>Изучение текущей структуры таблицы сотрудников
 Образец базы данных Adventureworks2017 (или более поздней версии) содержит таблицу **Employee** в схеме **HumanResources**. Чтобы не изменять исходную таблицу, на этом шаге создается копия таблицы **Employee** , называющаяся **EmployeeDemo**. Для упрощения этого примера копируется только пять столбцов из исходной таблицы. Затем выполняется запрос к таблице **HumanResources.EmployeeDemo** , позволяющий просмотреть структуру данных в таблице без использования типа данных **hierarchyid** .  
@@ -42,7 +42,9 @@ ms.locfileid: "47661162"
 ### <a name="copy-the-employee-table"></a>Копирование таблицы Employee  
   
 1.  Запустите следующий код в окне редактора запросов, чтобы скопировать структуру и данные таблицы **Employee** в новую таблицу **EmployeeDemo**. Поскольку в исходной таблице уже используется hierarchyid, этот запрос фактически преобразует иерархию в плоскую структуру, чтобы получить записи руководителя и сотрудника. В следующих частях этого занятия мы будем реконструировать эту иерархию.
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     ```sql  
     USE AdventureWorks2017;  
     GO  
@@ -290,7 +292,7 @@ ms.locfileid: "47661162"
     /1/1/5/ 0x5AE3  3   11  adventure-works\ovidiu0
     ```
 
-    Индекс преимущественно по **EmployeeID**: строки хранятся в соответствии с последовательностью значений **EmployeeID**.  
+    Индекс с приоритетом значений в столбце **EmployeeID**: строки хранятся в соответствии с последовательностью значений **EmployeeID**.  
 
     ```
     LogicalNode OrgNode H_Level EmployeeID  LoginID

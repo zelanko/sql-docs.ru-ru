@@ -34,12 +34,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 660b9d8ea0d0ebd0f0ef1ea83c225cd74f71080b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c7e831a6c0e5a1d45c8e7ac2c921be3ef120a41f
+ms.sourcegitcommit: 3a64cac1e1fc353e5a30dd7742e6d6046e2728d9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66744170"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67556955"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>Выпуски и поддерживаемые функции SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -167,7 +167,7 @@ ms.locfileid: "66744170"
 |Помощник по восстановлению базы данных|Да|Да|Да|Да|Да|
 |Зашифрованная резервная копия|Да|Да|нет|нет|нет|
 |Гибридное резервное копирование в Microsoft Azure (резервное копирование на URL-адрес)|Да|Да|нет|нет|нет|
-|Группа доступности без кластеров|Да|Да|нет|нет|нет|нет|
+|Группа доступности для чтения и масштабирования|Да|Да|нет|нет|нет|нет|
 |Группа доступности с минимальным числом реплик для фиксации|Да|Да|Да|нет|нет|нет|
   
 

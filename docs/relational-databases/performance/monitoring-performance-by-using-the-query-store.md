@@ -1,7 +1,7 @@
 ---
 title: Мониторинг производительности с использованием хранилища запросов | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/29/2018
+ms.date: 04/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 92752fa479852c2f0c17ded6fa2a047cfcff5dcb
-ms.sourcegitcommit: 20de089b6e23107c88fb38b9af9d22ab0c800038
+ms.openlocfilehash: e407b4ae2a9be3b4a2d3c2671c59548db94916de
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356477"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581395"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Мониторинг производительности с использованием хранилища запросов
 [!INCLUDE[appliesto-ss-asdb-xxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,9 @@ ms.locfileid: "58356477"
 2.  В диалоговом окне **Свойства базы данных** перейдите на страницу **Хранилище запросов** .  
   
 3.  В поле **Режим работы (запрошенный)** выберите значение **Чтение и запись**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="use-transact-sql-statements"></a>Использование инструкций Transact-SQL  
   
 Используйте инструкцию **ALTER DATABASE** , чтобы включить хранилище запросов. Пример:  
@@ -571,7 +573,7 @@ OPTION (MERGE JOIN);
   
 Вы можете также определить несоответствующую производительность запросов для запроса с параметрами (заданными автоматически или вручную). Разнообразие планов позволяет выбрать такой план, который будет достаточно быстрым и эффективным для всех (или большинства) значений параметров. Принудительное выполнение такого плана обеспечит прогнозируемую производительность в самых разных пользовательских сценариях.  
   
- ### <a name="force-a-plan-for-a-query-apply-forcing-policy"></a>Принудительное применение плана запроса (применение политики принудительного выполнения).
+### <a name="force-a-plan-for-a-query-apply-forcing-policy"></a>Принудительное применение плана запроса (применение политики принудительного выполнения).
 
 Если план для определенного запроса выполняется принудительно, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пытается принудительно применить план в оптимизаторе. Если это не удастся сделать, будет порождено событие XEvent и оптимизация будет выполнена как обычно.
 
@@ -580,7 +582,11 @@ EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;
 ```  
   
 При использовании **sp_query_store_force_plan** можно принудительно выполнять только планы, записанные хранилищем запросов в качестве плана для этого запроса. Другими словами, доступные для запроса планы — это планы, которые уже использовались для выполнения этого запроса, когда хранилище запросов было активно.  
+
+#### <a name="a-namectp23a-plan-forcing-support-for-fast-forward-and-static-cursors"></a><a name="ctp23"><a/> План форсирует поддержку для перемотки вперед и статических курсоров
   
+[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3 Query Store поддерживает возможность форсирования планов выполнения запросов с перемоткой вперед и статическими курсорами в T-SQL и API. Форсирование теперь поддерживается через `sp_query_store_force_plan` или с помощью отчетов SQL Server Management Studio Query Store.
+
 ### <a name="remove-plan-forcing-for-a-query"></a>Отмена принудительного применения плана для запроса
 
 Чтобы снова использовать оптимизатор запросов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для вычисления оптимального плана запросов, используйте **sp_query_store_unforce_plan** для отмены принудительного выполнения плана, выбранного для запроса.  
@@ -588,7 +594,9 @@ EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;
 ```sql  
 EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;  
 ```  
-  
+
+
+
 ## <a name="see-also"></a>См. также:  
  [Рекомендации по хранилищу запросов](../../relational-databases/performance/best-practice-with-the-query-store.md)   
  [Использование хранилища запросов с выполняющейся в памяти OLTP](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)   

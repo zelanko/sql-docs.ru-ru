@@ -16,12 +16,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d3a20135a3063e5316f133e2f6483eb40e17d035
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 27fb2d88af957067af09baccd7cbd6f3629b7353
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256639"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585042"
 ---
 # <a name="view-statistics-properties"></a>Просмотр свойств статистики
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "54256639"
   
 6.  В диалоговом окне **Свойства статистики —** _имя_статистики_ на панели **Выбор страницы** выберите **Сведения**.  
   
-     На странице **Сведения** в диалоговом окне **Свойства статистики —**_имя_статистики_ отображаются следующие свойства.  
+     На странице **Сведения** в диалоговом окне **Свойства статистики —** _имя_статистики_ отображаются следующие свойства.  
   
      **Имя таблицы**  
      Отображает имя таблицы, которую описывает данная статистика.  
@@ -97,7 +97,7 @@ ms.locfileid: "54256639"
      Среднее число байтов на значение для всех ключевых столбцов в объекте статистики.  
   
      **String Index**  
-     Значение «Да» указывает, что объект статистики содержит сводную строковую статистику, позволяющую уточнить оценку количества элементов для предикатов запроса, использующих оператор LIKE, например `WHERE ProductName LIKE '%Bike'`. Сводная строковая статистика хранится отдельно от гистограммы и создается в первом ключевом столбце объекта статистики, если он имеет тип **char**, **varchar**, **nchar**, **nvarchar**, **varchar(max)**, **nvarchar(max)**, **text**или **ntext**.  
+     Значение «Да» указывает, что объект статистики содержит сводную строковую статистику, позволяющую уточнить оценку количества элементов для предикатов запроса, использующих оператор LIKE, например `WHERE ProductName LIKE '%Bike'`. Сводная строковая статистика хранится отдельно от гистограммы и создается в первом ключевом столбце объекта статистики, если он имеет тип **char**, **varchar**, **nchar**, **nvarchar**, **varchar(max)** , **nvarchar(max)** , **text**или **ntext**.  
   
      **Критерий фильтра**  
      Предикат для подмножества строк таблицы, включенных в объект статистики. NULL — неотфильтрованная статистика.  
@@ -134,7 +134,9 @@ ms.locfileid: "54256639"
      Среднее количество строк с повторяющимися значениями столбцов в пределах шага гистограммы, исключая верхнюю границу (RANGE_ROWS/DISTINCT_RANGE_ROWS для DISTINCT_RANGE_ROWS > 0).  
   
 7.  Нажмите кнопку **ОК**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   
 #### <a name="to-view-statistics-properties"></a>Просмотр свойств статистики  

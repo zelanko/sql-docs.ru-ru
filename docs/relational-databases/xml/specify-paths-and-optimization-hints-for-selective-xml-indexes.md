@@ -11,12 +11,12 @@ ms.assetid: 486ee339-165b-4aeb-b760-d2ba023d7d0a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9d32ec82d15e8d66295a715fe62f98960fd7ad26
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 2763cd39d1be3318bfa297539f56720838cde6d9
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510711"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584429"
 ---
 # <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>Задайте путь и указания по оптимизации для селективных XML-индексов
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "58510711"
  Дополнительные сведения о селективных XML-индексах см. в разделе [Выборочный XML-индекс (SXI)](../../relational-databases/xml/selective-xml-indexes-sxi.md).  
   
 ##  <a name="untyped"></a> Основные сведения о типах Xquery и SQL Server в нетипизированном XML  
- Селективные XML-индексы поддерживают две системы типов. Типы XQuery и типы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Индексированный путь можно использовать для сопоставления с выражением Xquery или с возвращаемым типом метода value() типа данных XML.  
+ Селективные XML-индексы поддерживают две системы типов — типы XQuery и типы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Индексированный путь можно использовать для сопоставления с выражением Xquery или с возвращаемым типом метода value() типа данных XML.  
   
 -   Если путь для индексирования не снабжен заметками или ключевым словом XQUERY, путь будет сопоставляться с выражением Xquery. Есть две вариации путей узла, снабженных ключевым словом XQUERY.  
   
@@ -112,7 +112,7 @@ pathY = '/a/b/d' as XQUERY 'xs:string' MAXLENGTH(200) SINGLETON
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] соответствуют возвращаемому значению метода value().  
   
--   Типы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которые поддерживают это указание оптимизации: SINGLETON.  
+-   Типы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживают указание оптимизации SINGLETON.  
   
  Указание типа обязательно для путей, возвращающих типы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Необходимо использовать тот же тип [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , который бы использовался в методе value().  
   
@@ -216,7 +216,7 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
 ### <a name="choosing-the-nodes-to-index"></a>Выбор узлов для индексирования  
  Следующие два простых принципа позволяют определить нужное подмножество узлов, которые необходимо добавить в селективный XML-индекс.  
   
-1.  **Принцип 1**. Чтобы оценить заданное выражение Xquery, необходимо проиндексировать все узлы, подлежащие изучению.  
+1.  **Принцип 1**. Чтобы оценить заданное выражение XQuery, необходимо проиндексировать все узлы, подлежащие изучению.  
   
     -   Индексируйте все узлы, существование или значения которых используются в выражении XQuery.  
   
@@ -236,7 +236,9 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
     -   Узел `b`, поскольку предикат применяется на узел`b` в выражении XQuery.  
   
 2.  **Принцип 2**. Для достижения наилучшей производительности рекомендуется индексировать все узлы, необходимые для вычисления заданного выражения XQuery. Если индексируются только некоторые узлы, селективный XML-индекс улучшает оценку вложенных выражений, содержащих только индексированные узлы.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  Для улучшения производительности инструкции SELECT, описанной выше, вы можете создать следующий селективный XML-индекс.  
   
 ```sql  

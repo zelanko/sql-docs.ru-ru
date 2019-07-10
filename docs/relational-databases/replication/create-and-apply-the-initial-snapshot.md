@@ -14,12 +14,12 @@ ms.assetid: 742727a1-5189-44ec-b3ae-6fd7aa1f5347
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8d537dedf9cf84cafd0b61cfac6605f1b0457fb8
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: a18aaf9d8743e5f3d250d04156dd5bab5375625f
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135614"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579466"
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>Создание и применение исходного моментального снимка
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "54135614"
 
 Чтобы просмотреть или изменить папку по умолчанию для моментального снимка, см.  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. [Изменение параметров моментального снимка](../../relational-databases/replication/snapshot-options.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Изменение параметров моментального снимка](../../relational-databases/replication/snapshot-options.md)  
   
 -   Программирование репликации и RMO: [Настройка публикации и распространения](../../relational-databases/replication/configure-publishing-and-distribution.md)  
 
@@ -54,7 +54,7 @@ ms.locfileid: "54135614"
   
 ### <a name="modify-the-default-snapshot-location"></a>Изменение местоположения моментальных снимков по умолчанию  
   
-1.  В диалоговом окне **Свойства распространителя — \<распространитель>** на странице **Издатели** нажмите кнопку свойств (**...**) рядом с издателем, для которого нужно изменить расположение моментальных снимков по умолчанию.  
+1.  В диалоговом окне **Свойства распространителя — \<распространитель>** на странице **Издатели** нажмите кнопку свойств ( **...** ) рядом с издателем, для которого нужно изменить расположение моментальных снимков по умолчанию.  
   
 2.  В диалоговом окне **Свойства издателя — \<издатель>** введите значение для свойства **Папка моментальных снимков по умолчанию**.  
   
@@ -62,6 +62,8 @@ ms.locfileid: "54135614"
     >  Агент моментальных снимков должен иметь разрешения на запись в указанный каталог, а агент распространителя или агент слияния должен иметь разрешения на чтение из этого каталога. Если используются подписки по запросу, необходимо указать UNC-путь общего каталога, например \\\computername\snapshot. Дополнительные сведения см. в статье [Организация безопасности папки моментальных снимков](../../relational-databases/replication/security/secure-the-snapshot-folder.md).  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="create-snapshot"></a>Создание моментального снимка
 По умолчанию, если выполняется агент SQL Server, агент моментальных снимков создает моментальный снимок сразу после того, как создана публикация с помощью мастера создания публикаций. Затем по умолчанию агент распространителя (для репликации моментальных снимков и репликации транзакций) или агент слияния (для подписок на публикацию слиянием) применяет моментальный снимок ко всем подпискам. Моментальный снимок также можно создать с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] и монитора репликации. Сведения о запуске монитора репликации см. в [этой статье](../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
@@ -94,7 +96,7 @@ ms.locfileid: "54135614"
   
     -   **@job_password** — пароль для указанных учетных данных Windows.  
   
-    -   (Необязательно) Значение **0** в параметре **@publisher_security_mode** , если агент при соединении с издателем будет использовать проверку подлинности SQL Server. В этом случае в параметрах **@publisher_login** и **@publisher_password**.  
+    -   (Необязательно) Значение **0** в параметре **@publisher_security_mode** , если агент при соединении с издателем будет использовать проверку подлинности SQL Server. В этом случае в параметрах **@publisher_login** и **@publisher_password** .  
   
     -   (Необязательно) Расписание синхронизации для задания агента моментальных снимков. Дополнительные сведения см. в разделе [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md).  
   

@@ -1,9 +1,9 @@
 ---
 title: Безопасность на уровне строк | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/06/2018
+ms.date: 05/14/2019
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
+ms.prod_service: database-engine, sql-database, sql-data-warehouse
 ms.reviewer: ''
 ms.technology: security
 ms.topic: conceptual
@@ -18,12 +18,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0ba5cddf682ba9e3f9dfa6e5ef9b44ce7f9e5f4e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: de58a5d37bae0f589cae0c56dba21370923aa850
+ms.sourcegitcommit: 869d4de6c807a37873b66e5479d2c5ceff9efb85
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67140601"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67559451"
 ---
 # <a name="row-level-security"></a>Безопасность на уровне строк
 
@@ -38,8 +38,8 @@ ms.locfileid: "67140601"
 Логика ограничения находится на уровне базы данных, а не на отдалении от данных на другом уровне приложения. Система базы данных применяет ограничения доступа каждый раз, когда выполняется попытка доступа к данным с любого уровня. Это делает систему безопасности более надежной и устойчивой за счет уменьшения контактной зоны системы безопасности.  
   
 Реализуйте безопасность на уровне строк с помощью инструкции [CREATE SECURITY POLICY](../../t-sql/statements/create-security-policy-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] и предикатов в виде [встроенных функций с табличным значением](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md).  
-  
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] по [текущую версию](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([получить](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)), [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
+
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] по [текущую версию](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([получить](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)), [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].
   
 > [!NOTE]
 > Хранилище данных SQL Azure поддерживает только предикаты фильтров. Предикаты блокирования сейчас не поддерживаются в Хранилище данных SQL Azure.
@@ -422,7 +422,7 @@ DROP LOGIN Manager;
 ### <a name="MidTier"></a> В. Сценарий для пользователей, подключающихся к базе данных через приложение среднего уровня
 
 > [!NOTE]
-> Этот пример неприменим к хранилищу данных SQL Azure, так как предикат SESSION_CONTEXT и предикат блокирования сейчас не поддерживаются.
+> Функции предикатов блокировки из этого примера сейчас не поддерживаются для Хранилища данных SQL Azure, поэтому вставка строк с неправильным идентификатором пользователя не блокируется для Хранилища данных SQL Azure.
 
 В этом примере показано, как приложение среднего уровня может реализовать фильтрацию подключений, когда пользователи приложения (или клиенты) совместно используют того же пользователя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (приложение). Приложение задает идентификатор пользователя текущего приложения в [SESSION_CONTEXT (Transact-SQL)](../../t-sql/functions/session-context-transact-sql.md) после подключения к базе данных, а затем политики безопасности прозрачно фильтруют строки, которые не должны быть видимыми для данного идентификатора, а также запрещают пользователю вставлять строки для другого ИД пользователя. Другие изменения приложения не требуются.  
   

@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b05cca816684cbb95c625232883d06706edfe7f6
-ms.sourcegitcommit: 20d24654e056561fc33cadc25eca8b4e7f214b1b
+ms.openlocfilehash: 26db878bee2a786dc52f6046afea617bf7c69c0f
+ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67351725"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67500158"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -50,7 +50,7 @@ ms.locfileid: "67351725"
 
 ||||||
 |---|---|---|---|---|
-|** _\* SQL Server \*_** &nbsp;|[Отдельная база данных/эластичный пул Базы данных SQL<br />](alter-database-transact-sql.md?view=azuresqldb-current)|[Управляемый экземпляр Базы данных SQL<br />](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[Хранилище данных<br />SQL](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
+|** _\*SQL Server\*_** &nbsp;|[Отдельная база данных/эластичный пул Базы данных SQL<br />](alter-database-transact-sql.md?view=azuresqldb-current)|[Управляемый экземпляр Базы данных SQL<br />](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[Хранилище данных<br />SQL](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -566,10 +566,7 @@ FORCE_FAILOVER_ALLOW_DATA_LOSS — повышает уровень базы да
 
 ## <a name="permissions"></a>Разрешения
 
-Изменять базу данных могут только имя входа субъект серверного уровня (созданное в процессе провизионирования) или члены роли базы данных `dbmanager`.
-
-> [!IMPORTANT]
-> Владелец базы данных не может изменять базу данных, если он не является членом роли `dbmanager`.
+Для изменения базы данных имя для входа должно быть либо именем для входа субъекта уровня сервера (созданного в процессе подготовки), либо членом роли `dbmanager` базы данных в базе данных master, либо членом роли `db_owner` базы данных текущей базе данных, либо `dbo` базы данных.
 
 ## <a name="examples"></a>Примеры
 

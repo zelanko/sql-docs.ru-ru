@@ -1,7 +1,7 @@
 ---
-title: SET RESULT SET CACHING (Transact-SQL) | Документация Майкрософт
+title: SET RESULT_SET_CACHING (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
-ms.date: 05/03/2019
+ms.date: 07/03/2019
 ms.prod: sql
 ms.prod_service: sql-data-warehouse
 ms.reviewer: jrasnick
@@ -15,12 +15,12 @@ author: XiaoyuL-Preview
 ms.author: xiaoyul
 manager: craigg
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: f9750cdc2dea7049bde77d31c275789691abf1b0
-ms.sourcegitcommit: 3f2936e727cf8e63f38e5f77b33442993ee99890
+ms.openlocfilehash: a9f050fd8e95a7dba255cf7aa164f1d58179182e
+ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67313816"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67564117"
 ---
 # <a name="set-result-set-caching-transact-sql"></a>SET RESULT SET CACHING (Transact-SQL) 
 
@@ -28,7 +28,7 @@ ms.locfileid: "67313816"
 
 Определяет поведение кэширования результирующего набора для текущего сеанса клиента.  
 
-Область применения этой статьи: хранилище данных SQL Azure (предварительная версия) 
+Область применения этой статьи: хранилище данных SQL Azure (предварительная версия)
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,11 +46,23 @@ SET RESULT_SET_CACHING { ON | OFF };
 **OFF**   
 Отключает кэширование результирующего набора для текущего сеанса клиента.
 
+## <a name="examples"></a>Примеры
+
+В [sys.dm_pdw_exec_requests](/sql/relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql) запросите столбец result_cache_hit, используя request_id запроса, чтобы определить, был ли запрос результатов выполнен с попаданием в кэше или промахом кэша.
+
+```sql
+SELECT result_cache_hit
+FROM sys.dm_pdw_exec_requests
+WHERE request_id = 'QID58286'
+```
+
 ## <a name="permissions"></a>Разрешения
 
 Требуется членство в роли public.
 
 ## <a name="see-also"></a>См. также раздел
 
-[Инструкции SET (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)</br>
-[ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql?view=azure-sqldw-latest)
+[Параметры ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options?view=azure-sqldw-latest)</br>
+[ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql?view=azure-sqldw-latest)</br>
+[DBCC SHOWRESULTCACHESPACEUSED (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-showresultcachespaceused-transact-sql)</br>
+[DBCC DROPRESULTSETCACHE (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-dropresultsetcache-transact-sql)

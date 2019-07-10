@@ -1,7 +1,7 @@
 ---
 title: CREATE TABLE (хранилище данных SQL Azure) | Документы Майкрософт
 ms.custom: ''
-ms.date: 07/14/2017
+ms.date: 07/03/2019
 ms.service: sql-data-warehouse
 ms.reviewer: ''
 ms.topic: language-reference
@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 328a0aaeed34bd03e33f480ea0b0ea6afc7e940d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4a137ff26240b23e99f2faeadb367b1379b8c0f8
+ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66413331"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67564020"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (хранилище данных SQL Azure)
 
@@ -164,21 +164,21 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 
  См. раздел [Создание секционированной таблицы](#PartitionedTable) в разделе "Примеры".
 
-### <a name="ordered-clustered-columnstore-index-option-preview"></a>Вариант упорядоченного кластеризованного индекса columnstore (предварительная версия)
+### <a name="ordered-clustered-columnstore-index-option-preview-for-azure-sql-data-warehouse"></a>Вариант упорядоченного кластеризованного индекса columnstore (предварительная версия для Хранилища данных SQL Azure)
 
 Кластеризованный индекс columnstore включен по умолчанию для создания таблиц в Хранилище данных SQL Azure.  Спецификация ORDER связана с ключами COMPOUND по умолчанию.  Сортировка будет всегда выполняться по возрастанию. Если предложение ORDER не указано, индекс columnstore не будет отсортирован. Из-за упорядочения в таблице, содержащей упорядоченный кластеризованный индекс columnstore, время загрузки данных может быть увеличено по сравнению с неупорядоченными кластеризованными индексами columnstore. Если вам необходимо больше места в базе данных tempdb при загрузке данных, можно уменьшить объем данных в одной инструкции insert.
 
-На этапе предварительной версии можно выполнить следующий запрос для проверки столбцов с включенной спецификацией ORDER.  Представление каталога станет доступным позже для предоставления этой информации и порядковых номеров столбцов, если в спецификации ORDER указано несколько столбцов.
+На этапе предварительной версии можно выполнить следующий запрос для проверки столбцов с включенной спецификацией ORDER.
 
 ```sql
-SELECT o.name, c.name, s.min_data_id, s.max_data_id, s.max_data_id-s.min_data_id as difference,  s.*
-FROM sys.objects o 
-INNER JOIN sys.columns c ON o.object_id = c.object_id 
-INNER JOIN sys.partitions p ON o.object_id = p.object_id   
-INNER JOIN sys.column_store_segments s 
-    ON p.hobt_id = s.hobt_id AND s.column_id = c.column_id  
-WHERE o.name = 't1' and c.name = 'col1' 
-ORDER BY c.name, s.min_data_id, s.segment_id;
+SELECT i.name AS index_name  
+    ,COL_NAME(ic.object_id,ic.column_id) AS column_name  
+    ,ic.index_column_id  
+    ,ic.key_ordinal  
+,ic.is_included_column  
+FROM sys.indexes AS i  
+INNER JOIN sys.index_columns AS ic
+    ON i.object_id = ic.object_id AND i.index_id = ic.index_id  
 ```
 
 ### <a name="DataTypes"></a> Тип данных
@@ -594,7 +594,8 @@ WITH
 <a name="SeeAlso"></a>
 ## <a name="see-also"></a>См. также раздел
  
- [CREATE TABLE AS SELECT (хранилище данных SQL Azure)](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)   
- [DROP TABLE (Transact-SQL)](../../t-sql/statements/drop-table-transact-sql.md)   
- [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)  
+[CREATE TABLE AS SELECT (хранилище данных SQL Azure)](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)   
+[DROP TABLE (Transact-SQL)](../../t-sql/statements/drop-table-transact-sql.md)   
+[ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)   
+[sys.index_columns (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-index-columns-transact-sql?view=azure-sqldw-latest) 
   

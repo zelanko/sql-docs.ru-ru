@@ -13,12 +13,12 @@ ms.assetid: 240c8416-c8e5-4346-8433-07e0f779099f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2b91e4f912de3eff2d64e7cbbf35aad56cbccbcd
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 19043cd42f89c16dbbab88264bf5710c50d14067
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58072228"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586448"
 ---
 # <a name="configure-an-oracle-publisher"></a>Настройка издателя Oracle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,6 +31,8 @@ ms.locfileid: "58072228"
 3.  Установите на распространитель [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] клиентское ПО Oracle и поставщик OLE DB, а затем остановите и перезапустите экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Если распространитель запущен на 64-разрядной платформе, нужно использовать 64-разрядную версию поставщика OLE DB Oracle.  
   
 4.  Настройте базу данных Oracle как издатель на распространителе [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает следующие разнородные сценарии для репликации транзакций и репликации моментальных снимков.  
   
@@ -138,7 +140,7 @@ ms.locfileid: "58072228"
 > [!NOTE]  
 >  Издатель Oracle не может иметь то же имя, что и его распространитель [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , или имя любого из издателей [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , использующих тот же распространитель.  
   
- При идентификации баз данных Oracle в качестве издателя необходимо выбрать параметр публикации Oracle: «Complete» или «Oracle Gateway». После идентификации издателя изменить данный параметр без удаления и перенастройки издателя невозможно. Параметр «Complete» предназначен для обеспечения публикаций моментальными снимками и публикаций транзакций полным набором поддерживаемых функций, необходимых для публикаций Oracle. Параметр «Oracle Gateway» обеспечивает оптимизацию производительности для случаев, когда шлюзом между системами выступает репликация.  
+ При идентификации баз данных Oracle в качестве издателя необходимо выбрать параметр публикации Oracle: Complete или Oracle Gateway. После идентификации издателя изменить данный параметр без удаления и перенастройки издателя невозможно. Параметр «Complete» предназначен для обеспечения публикаций моментальными снимками и публикаций транзакций полным набором поддерживаемых функций, необходимых для публикаций Oracle. Параметр «Oracle Gateway» обеспечивает оптимизацию производительности для случаев, когда шлюзом между системами выступает репликация.  
   
  После идентификации издателя Oracle на распространителе [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] репликация создает связанный сервер с таким же именем, как и служба TNS базы данных Oracle. Этот связанный сервер может использоваться только репликацией. Если вам нужно подключиться к издателю Oracle через подключение связанного сервера, создайте другое имя службы TNS и используйте это имя при вызове процедуры [sp_addlinkedserver &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).  
   

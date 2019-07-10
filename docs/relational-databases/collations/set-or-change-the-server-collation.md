@@ -13,12 +13,12 @@ ms.assetid: 3242deef-6f5f-4051-a121-36b3b4da851d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2bb8afe1e20e71245beea8f9482ff0aec4b047ba
-ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
+ms.openlocfilehash: 29b980fffbc4c6f670f48694cd238c521337ef70
+ms.sourcegitcommit: c8f9e5577465148ffe94eec784848f5a956b1086
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59671141"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67517745"
 ---
 # <a name="set-or-change-the-server-collation"></a>Задание или изменение параметров сортировки сервера
 
@@ -61,7 +61,7 @@ ms.locfileid: "59671141"
   
 ## <a name="setting-the-server-collation-in-managed-instance"></a>Задание параметров сортировки сервера в управляемом экземпляре
 
-Параметры сортировки на уровне сервера (предварительная версия) в Управляемом экземпляре SQL Azure можно указать при создании экземпляра и нельзя изменить позднее. Параметры сортировки на уровне сервера можно настроить на [портале Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started#create-a-managed-instance) или с помощью [PowerShell и шаблона Resource Manager](https://docs.microsoft.com/azure/sql-database/scripts/sql-managed-instance-create-powershell-azure-resource-manager-template) во время создания экземпляра. Параметры сортировки по умолчанию — **SQL_Latin1_General_CP1_CI_AS**. Параметры сортировки только для Юникода и новые параметры сортировки UTF-8 не могут быть заданы как параметры сортировки уровня сервера.
+Параметры сортировки на уровне сервера в Управляемом экземпляре SQL Azure можно указать при создании экземпляра и нельзя изменить позднее. Параметры сортировки на уровне сервера можно настроить на [портале Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started#create-a-managed-instance) или с помощью [PowerShell и шаблона Resource Manager](https://docs.microsoft.com/azure/sql-database/scripts/sql-managed-instance-create-powershell-azure-resource-manager-template) во время создания экземпляра. Параметры сортировки по умолчанию — **SQL_Latin1_General_CP1_CI_AS**. Параметры сортировки только для Юникода и новые параметры сортировки UTF-8 не могут быть заданы как параметры сортировки уровня сервера.
 При миграции баз данных SQL Server на управляемый экземпляр проверьте параметры сортировки сервера в исходном SQL Server с помощью функции `SERVERPROPERTY(N'Collation')` и создайте управляемый экземпляр, который соответствует параметрам сортировки SQL Server. Миграция базы данных из SQL Server в управляемый экземпляр с несоответствующими параметрами сортировки на уровне сервера может приводить к нескольким непредвиденным ошибкам в запросах. Изменить параметры сортировки уровня сервера у существующего управляемого экземпляра невозможно.
 
 ## <a name="see-also"></a>См. также:

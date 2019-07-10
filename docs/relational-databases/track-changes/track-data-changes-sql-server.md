@@ -20,12 +20,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1c5979aade2147d74c2ff34b5d6cc2e48771bab2
-ms.sourcegitcommit: 1968bf31c63210f7f62ea553e67aa792950c89bb
+ms.openlocfilehash: 0928eb2cd30ba16466c3c091ab2c810c2f3a17d5
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725465"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585363"
 ---
 # <a name="track-data-changes-sql-server"></a>Отслеживание измененных данных (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -109,7 +109,9 @@ ms.locfileid: "57725465"
 1.  Убедитесь, что на зеркальном сервере запущен агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 2.  Создайте задание отслеживания и задание очистки на зеркальном сервере после того, как был выполнен переход с основного сервера на зеркальный. Для создания заданий используйте хранимую процедуру [sys.sp_cdc_add_job (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md).  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  Дополнительные сведения о зеркальном отображении базы данных см. в разделе [Зеркальное отображение базы данных (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
 #### <a name="transactional-replication"></a>репликация транзакций  
@@ -155,7 +157,7 @@ ms.locfileid: "57725465"
   
 -   [Центр разработки Microsoft Sync Framework](https://go.microsoft.com/fwlink/?LinkId=108054)  
   
-     Содержит полную документацию по [!INCLUDE[ssSyncFrameLong](../../includes/sssyncframelong-md.md)] и [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]. В документации по [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)] раздел «Как использовать отслеживание изменений SQL Server» содержит подробные сведения и примеры программного кода.  
+     Содержит полную документацию по [!INCLUDE[ssSyncFrameLong](../../includes/sssyncframelong-md.md)] и [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]. В документации по [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)] раздел «Как использовать отслеживание изменений SQL Server" содержит подробные сведения и примеры программного кода.  
   
 ## <a name="related-tasks-required"></a>Связанные задачи (обязательно)  
   

@@ -14,12 +14,12 @@ ms.assetid: be94f1c1-816b-4b1d-83f6-2fd6f5807ab7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e12b5746d99635b773e3b61a6db10485f2e60765
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9c4259070befa31239ca68ce93106ec990b131e4
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667842"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582204"
 ---
 # <a name="troubleshooting-oracle-publishers"></a>Диагностика издателей Oracle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "47667842"
   
 -   "Экземпляр сервера Oracle \<*имя_издателя_Oracle*> ранее использовал \<*имя_распространителя_SQLServer*> в качестве распространителя. Чтобы использовать в качестве распространителя \<*имя_нового_распространителя_SQLServer*>, необходимо удалить текущую конфигурацию репликации на экземпляре сервера Oracle, в результате чего будут удалены все публикации на этом экземпляре сервера".  
   
--   "Сервер Oracle \<*имя_сервера_Oracle*> уже определен в качестве издателя \<*имя_издателя_Oracle*> на распространителе \<*имя_распространителя_SQLServer*>.*\<имя_базы_данных_распространения*>. Для повторного создания удалите издатель или открытый синоним *\<имя_синонима>*".  
+-   "Сервер Oracle \<*имя_сервера_Oracle*> уже определен в качестве издателя \<*имя_издателя_Oracle*> на распространителе \<*имя_распространителя_SQLServer*>. *\<имя_базы_данных_распространения*>. Для повторного создания удалите издатель или открытый синоним *\<имя_синонима>* ".  
   
  При удалении издателя Oracle объекты репликации в базе данных Oracle автоматически очищаются. Однако в некоторых случаях необходима ручная очистка объектов репликации Oracle. Для ручной очистки объектов репликации Oracle, созданных при репликации, выполните следующее:  
   
@@ -79,7 +79,9 @@ ms.locfileid: "47667842"
 2.  Выполните команду SQL `DROP PUBLIC SYNONYM MSSQLSERVERDISTRIBUTOR;`.  
   
 3.  Выполните команду SQL `DROP USER <replication_administrative_user_schema>``CASCADE;`.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="sql-server-error-21663-is-raised-regarding-the-lack-of-a-primary-key"></a>Ошибка SQL Server 21663 возникает из-за отсутствия первичного ключа  
  Статьи в публикациях транзакций должны иметь правильный первичный ключ. Если они не имеют правильного первичного ключа, при попытке добавления статьи выдается следующее сообщение об ошибке:  
   
@@ -157,7 +159,7 @@ ms.locfileid: "47667842"
   
 2.  В диалоговом окне **Выполнить** введите **regedit**, затем нажмите кнопку **OK**.  
   
-3.  Перейдите к папке HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\\*\<имя_экземпляра>* \Providers.  
+3.  Перейдите к папке HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\\ *\<имя_экземпляра>* \Providers.  
   
      В папке для поставщиков (Providers) должна находиться папка с именем OraOLEDB.Oracle. В этой папке должна присутствовать DWORD-переменная с именем **AllowInProcess**, которой присвоено значение **1**.  
   

@@ -15,12 +15,12 @@ ms.assetid: aeee9546-4480-49f9-8b1e-c71da1f056c7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0b9a3f872a87695da3e6c57ad90012cfe1307109
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8a5aced367f3b046473887999ff8e72b24ff8156
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63047342"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580463"
 ---
 # <a name="conflict-resolution-for-merge-replication"></a>Разрешение конфликтов при репликации слиянием
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "63047342"
   
     -   Выберите одну или более строк в верхней сетке, щелкните **Удалить**, что эквивалентно нажатию кнопки **Отправить выигравший** (без внесения каких-либо изменений в данные).  
   
-    -   Нажать кнопку свойств **…** ) для просмотра дополнительной информации о столбце, вовлеченном в конфликт.  
+    -   Нажать кнопку свойств ( **...** ) для просмотра дополнительной информации о столбце, вовлеченном в конфликт.  
   
     -   Измените данные в столбце **Выигравший вариант** или **Проигравший вариант** до отправки данных (данные доступны только для чтения, если столбец окрашен в серый цвет).  
   
@@ -74,8 +74,8 @@ ms.locfileid: "63047342"
   
 6.  Закройте средство просмотра конфликтов репликации.  
 
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
-  
 ## <a name="view-conflict-information"></a>Просмотр сведений о конфликтах
 Если конфликт разрешается в репликации слиянием, данные из проигравшей строки записываются в таблицу конфликтов. Эти данные конфликта можно просмотреть программно с помощью хранимых процедур репликации. Дополнительные сведения см. в разделе [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   

@@ -23,19 +23,19 @@ helpviewer_keywords:
 ms.assetid: 24ba54fc-98f7-4d35-8881-b5158aac1d66
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 04632f7b1ef117c31701cf998b913375656e8a39
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6e4ec1c90f49de20707690825f9e5ba802965278
+ms.sourcegitcommit: 869d4de6c807a37873b66e5479d2c5ceff9efb85
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62928685"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67559419"
 ---
 # <a name="from---using-pivot-and-unpivot"></a>FROM — использование PIVOT и UNPIVOT
+
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Реляционные операторы `PIVOT` и `UNPIVOT` можно использовать для изменения возвращающего табличное значение выражения в другой таблице. `PIVOT` поворачивает возвращающее табличное значение выражение, преобразуя уникальные значения одного столбца выражения в несколько выходных столбцов, а также, в случае необходимости, объединяет оставшиеся повторяющиеся значения столбца и отображает их в выходных данных. `UNPIVOT` выполняет действия, обратные PIVOT, преобразуя столбцы возвращающего табличное значение выражения в значения столбца.  
+Реляционные операторы `PIVOT` и `UNPIVOT` можно использовать для изменения возвращающего табличное значение выражения в другой таблице. `PIVOT` поворачивает возвращающее табличное значение выражение, преобразуя уникальные значения одного столбца выражения в несколько выходных столбцов. В случае необходимости `PIVOT` также объединяет оставшиеся повторяющиеся значения столбца и отображает их в выходных данных. `UNPIVOT` выполняет действия, обратные PIVOT, преобразуя столбцы возвращающего табличное значение выражения в значения столбца.  
   
 Синтаксис `PIVOT` является более простым и понятным, чем синтаксис, который может выполнить то же действие с помощью последовательности инструкций `SELECT...CASE`. Полное описание синтаксиса инструкции `PIVOT` см. в разделе [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md).  
   
@@ -75,7 +75,6 @@ GO
 SELECT DaysToManufacture, AVG(StandardCost) AS AverageCost   
 FROM Production.Product  
 GROUP BY DaysToManufacture;  
-  
 ```  
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  

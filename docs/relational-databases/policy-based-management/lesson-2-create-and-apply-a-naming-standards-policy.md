@@ -1,5 +1,5 @@
 ---
-title: Занятие 2. Создание и применение политики стандартов именования | Документация Майкрософт
+title: Урок 2. Создание и применение политики стандартов именования | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,14 +11,14 @@ ms.assetid: 87e51f4e-156c-4def-8572-76a15075d75e
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 688a61aeecfb729eeee877e0f8d3e463eaff06c8
-ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
+ms.openlocfilehash: c00b9b2156848e45ce4f73429c8cf397f7d34fc2
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52159042"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584898"
 ---
-# <a name="lesson-2-create-and-apply-a-naming-standards-policy"></a>Занятие 2. Создание и применение политики стандартов именования
+# <a name="lesson-2-create-and-apply-a-naming-standards-policy"></a>Урок 2. Создание и применение политики стандартов именования
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Некоторые типы политик управления на основе политик могут создавать триггеры для обеспечения будущего соответствия с политикой. На этом занятии создается политика, обеспечивающая стандарт именования таблиц. Затем для ее проверки выполняется попытка создания таблицы, нарушающей политику.  
 
@@ -40,6 +40,7 @@ ms.locfileid: "52159042"
   
 2.  В обозревателе объектов щелкните **Базы данных**и нажмите клавишу F5 для обновления списка баз данных.  
 
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="create-the-finance-tables-condition"></a>Создание условия "Таблицы Finance" 
 
@@ -49,8 +50,8 @@ ms.locfileid: "52159042"
   
 2.  В диалоговом окне **Создание нового условия** в поле **Имя** введите **Finance Tables**.  
     1. В списке **Аспект** выберите **Многокомпонентное имя**. 
-    1. В диалоговом окне **Выражение** области **Поле** выберите **@Name**, в поле **Оператор** выберите **Like**, а в поле **Значение** введите ```'fintbl%'``` для того, чтобы все имена таблиц начинались с букв **fintbl**.
-    1. На странице **Описание** введите **Имена таблиц Finance должны начинаться с букв "fintbl"**, а затем нажмите кнопку **ОК** для создания условия.  
+    1. В диалоговом окне **Выражение** области **Поле** выберите **@Name** , в поле **Оператор** выберите **Like**, а в поле **Значение** введите ```'fintbl%'``` для того, чтобы все имена таблиц начинались с букв **fintbl**.
+    1. На странице **Описание** введите **Имена таблиц Finance должны начинаться с букв "fintbl"** , а затем нажмите кнопку **ОК** для создания условия.  
 
     ![Условие "Таблицы Finance"](Media/lesson-2-create-and-apply-a-naming-standards-policy/finance-tables-condition.png)
  
@@ -156,7 +157,7 @@ ms.locfileid: "52159042"
 В этом учебнике показано создание условий управления на основе политик, политик и групп политик, а также применение фильтров и проверка соответствия целей управления на основе политик.  
   
 ## <a name="next"></a>Дальше  
-Данный учебник завершен. Чтобы вернуться к началу, обратитесь к статье [Учебник. Администрирование серверов с помощью управления на основе политик](../../relational-databases/policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md).  
+Данный учебник завершен. Чтобы вернуться к началу, перейдите по этой ссылке: [Руководство. Администрирование серверов с помощью управления на основе политик](../../relational-databases/policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md).  
   
 Список учебников см. в разделе [Учебные материалы по SQL Server 2016](../../sql-server/tutorials-for-sql-server-2016.md).  
   

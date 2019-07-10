@@ -11,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 79be3e174e77648b4cbe908fa7d29f827bf4d3c5
-ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
+ms.openlocfilehash: d1f75a8c70415fe31419a8f30f80e727226fa879
+ms.sourcegitcommit: 3a64cac1e1fc353e5a30dd7742e6d6046e2728d9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67263500"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67556934"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>Новые возможности в SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ SQL Server 2017 включает множество новых функций, 
 - Столбец **modified_extent_page_count** в [sys.dm_db_file_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md) отслеживает разностные изменения в каждом файле базы данных, что позволяет использовать интеллектуальные решения для полного или разностного резервного копирования, основываясь на проценте измененных страниц базы данных. (CTP 2.0)
 - Синтаксис T-SQL [SELECT INTO](../t-sql/queries/select-into-clause-transact-sql.md) теперь поддерживает загрузку таблицы в файловую группу, отличную от пользовательской группы по умолчанию, с помощью ключевого слова **ON**. (CTP 2.0)
 - Теперь поддерживаются транзакции между всеми базами данных, входящими в **группу доступности AlwaysOn**, включая базы данных, являющиеся частью одного экземпляра. См. раздел [Transactions - Always On Availability Groups and Database Mirroring](../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md) (Транзакции — группы доступности AlwaysOn и зеркальное отображение баз данных) (CTP 2.0)
-- Новые функции для **Групп доступности** включают поддержку групп без кластеров, параметр минимального числа реплик для фиксации, возможности миграции между Windows и Linux и тестирование на обеих системах. (CTP 1.3)
+- Новые функции для **Групп доступности** включают поддержку чтения и масштабирования без кластера, параметр минимального числа реплик для фиксации, возможности миграции между Windows и Linux и тестирование на обеих системах. (CTP 1.3)
 - Новые динамические административные представления:
     - [sys.dm_db_log_stats](../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md) предоставляет сводку атрибутов и сведения о файлах журналов транзакций, которые помогают контролировать работоспособность в журналах транзакций. (CTP 2.1)
     - [sys.dm_tran_version_store_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-space-usage.md) отслеживает использование хранилища версий для каждой базы данных, что помогает оперативно планировать размеры tempdb. (CTP 2.0)

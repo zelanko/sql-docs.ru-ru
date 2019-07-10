@@ -17,12 +17,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c9c0d51046b7ac30cbf1f2a608c51c34974b75d9
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: 07d8b7936051b202c73b7457c87e7533e1d46192
+ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579394"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67500221"
 ---
 # <a name="subqueries-sql-server"></a>Вложенные запросы (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -106,7 +106,7 @@ GO
 -   Список выбора вложенного запроса, начинающегося с предложения `EXISTS`, по соглашению содержит звездочку (\*) вместо отдельного имени столбца. Правила для вложенного запроса, начинающегося с предложения `EXISTS`, являются такими же, как для стандартного списка выбора, поскольку вложенный запрос, начинающийся с предложения `EXISTS`, проводит проверку на существование и возвращает TRUE или FALSE вместо данных.   
 
 ## <a name="qualifying"></a> Уточнение имен столбцов во вложенных запросах
-В следующем примере столбец *CustomerID* в предложении `WHERE` внешнего запроса неявно уточняется именем таблицы, используемой в предложении `FROM` внешнего запроса (*Sales.Store*). Ссылка на столбец *CustomerID* в списке выборки вложенного запроса уточняется именем таблицы с помощью предложения `FROM` вложенного запроса, то есть *Sales.Customer*.
+В следующем примере столбец *BusinessEntityID* в предложении `WHERE` внешнего запроса неявно уточняется именем таблицы, используемой в предложении `FROM` внешнего запроса (*Sales.Store*). Ссылка на столбец *CustomerID* в списке выборки вложенного запроса уточняется именем таблицы с помощью предложения `FROM` вложенного запроса, то есть *Sales.Customer*.
 
 ```sql
 USE AdventureWorks2016;

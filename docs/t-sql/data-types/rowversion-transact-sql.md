@@ -27,12 +27,12 @@ ms.assetid: 65c9cf0e-3e8a-45f8-87b3-3460d96afb0b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: da68caa3ac81d25c8a03dfe11c1f75dcee15d40d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 876e498a84ea3b6066647b47ea7ba27b5fc2a91d
+ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041545"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67492584"
 ---
 # <a name="rowversion-transact-sql"></a>rowversion (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ CREATE TABLE ExampleTable2 (PriKey int PRIMARY KEY, VerCol rowversion) ;
 > [!NOTE]  
 >  При использовании инструкции SELECT INTO, в которой столбец типа **rowversion** находится в списке SELECT, могут быть сформированы повторяющиеся значения **rowversion**. Использовать тип данных **rowversion** таким образом не рекомендуется.  
   
-Столбец типа **rowversion**, который не может принимать значение NULL, семантически эквивалентен столбцу типа **binary(8)**. Столбец типа **rowversion**, который может принимать значение NULL, семантически эквивалентен столбцу типа **varbinary(8)**.
+Столбец типа **rowversion**, который не может принимать значение NULL, семантически эквивалентен столбцу типа **binary(8)** . Столбец типа **rowversion**, который может принимать значение NULL, семантически эквивалентен столбцу типа **varbinary(8)** .
   
 С помощью столбца **rowversion** можно легко определить, выполнялась ли инструкция обновления применительно к строке с момента ее последнего считывания. При выполнении инструкции обновления применительно к строке значение rowversion изменяется. Если для строки не выполнялись инструкции обновления, значение rowversion будет таким же, как и при предыдущем считывании. Чтобы получить текущее значение rowversion для базы данных, используйте функцию [@@DBTS](../../t-sql/functions/dbts-transact-sql.md).
   
@@ -102,7 +102,7 @@ IF (SELECT COUNT(*) FROM @t) = 0
   
 `myRv` является значением столбца **rowversion** для строки, которое указывает время последнего считывания строки. Это значение должно заменяться фактическим значением **rowversion**. Примером фактического значения **rowversion** является 0x00000000000007D3.
   
-В транзакцию можно также ввести эти образцы инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)]. При запросе переменной `@t` в области действия транзакции можно получить обновленный столбец `myKey` таблицы без отправки повторного запроса в таблицу `MyTes`.
+В транзакцию можно также ввести эти образцы инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)]. При запросе переменной `@t` в области действия транзакции можно получить обновленный столбец `myKey` таблицы без отправки повторного запроса в таблицу `MyTest`.
   
 Ниже приведен тот же пример с использованием синтаксиса **timestamp**.
   

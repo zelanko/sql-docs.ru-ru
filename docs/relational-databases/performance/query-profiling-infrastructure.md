@@ -17,12 +17,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: dbf81f0cb1100fdc5663a8c2ff46343d8d9671c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 47382961ebb72d3d0b51ae9a72161fb107021f75
+ms.sourcegitcommit: 869d4de6c807a37873b66e5479d2c5ceff9efb85
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64568269"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67559470"
 ---
 # <a name="query-profiling-infrastructure"></a>Инфраструктура профилирования запросов
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -171,6 +171,18 @@ WITH (MAX_MEMORY=4096 KB, EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,
     MAX_DISPATCH_LATENCY=30 SECONDS, MAX_EVENT_SIZE=0 KB, 
     MEMORY_PARTITION_MODE=NONE, TRACK_CAUSALITY=OFF, STARTUP_STATE=OFF);
 ```
+
+## <a name="query-profiling-infrastruture-usage-guidance"></a>Руководство по использованию инфраструктуры профилирования запросов
+В приведенной ниже таблице перечислены действия по включению стандартного или упрощенного профилирования глобально (на уровне сервера) или в одном сеансе. В ней также приведены сведения о минимальных версиях, поддерживающих это действие. 
+
+|Область действия|Стандартное профилирование|Упрощенное профилирование|
+|---------------|---------------|---------------|
+|Global|Сеанс xEvent с расширенным событием `query_post_execution_showplan`. Минимальная версия: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|Флаг трассировки 7412. Минимальная версия: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 1 (SP1)|
+|Global|Система "Трассировка SQL" и SQL Server Profiler с событием трассировки `Showplan XML`. Минимальная версия: SQL Server 2000|Сеанс xEvent с расширенным событием `query_thread_profile`. Минимальная версия: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] с пакетом обновления 2 (SP2)|
+|Global|-|Сеанс xEvent с расширенным событием `query_post_execution_plan_profile`. Минимальная версия: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|
+|Session|Используйте `SET STATISTICS XML ON`. Минимальная версия: SQL Server 2000|Используйте указание запроса `QUERY_PLAN_PROFILE`, а также сеанс xEvent с расширенным событием `query_plan_profile`. Минимальная версия: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 2 (SP2) и накопительным пакетом обновления 3 (CU3) и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] с накопительным пакетом обновления 11 (CU11)|
+|Session|Используйте `SET STATISTICS PROFILE ON`. Минимальная версия: SQL Server 2000|-|
+|Session|Нажмите кнопку [Статистика активных запросов](../../relational-databases/performance/live-query-statistics.md) в SSMS. Минимальная версия: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] с пакетом обновления 2 (SP2)|-|
 
 ## <a name="remarks"></a>Remarks
 

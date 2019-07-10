@@ -16,12 +16,12 @@ author: s-r-k
 ms.author: karam
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: dd767690533365dc51f1ef3e1fb27bcf3659eeb4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8dba65eb4ca0aa97ca747567a6337e68fb7c2f29
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64775144"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581427"
 ---
 # <a name="scalar-udf-inlining"></a>Встраивание скалярных пользовательских функций
 
@@ -136,6 +136,8 @@ SELECT C_NAME, dbo.customer_category(C_CUSTKEY) FROM CUSTOMER;
 2. Сервер SQL Server определил наличие неявного предложения `GROUP BY O_CUSTKEY on ORDERS` и реализовал его с помощью IndexSpool и StreamAggregate.
 3. Параллелизм теперь применяется для всех операторов.
 
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 В зависимости от сложности логики в пользовательской функции план запроса также может быть больше и сложнее. Как видите, операции внутри пользовательской функции теперь прозрачны, поэтому оптимизатор запросов может оценить затраты и оптимизировать их. Кроме того, так как в плане больше нет пользовательской функции, полностью устраняются накладные расходы, связанные с ее итеративными вызовами.
 
 ## <a name="inlineable-scalar-udfs-requirements"></a>Требования к встраиваемым скалярным пользовательским функциям
@@ -182,7 +184,7 @@ SELECT C_NAME, dbo.customer_category(C_CUSTKEY) FROM CUSTOMER;
 
 ## <a name="enabling-scalar-udf-inlining"></a>Включение встраивания скалярных пользовательских функций
 
-Рабочие нагрузки можно автоматически сделать подходящими для встраивания скалярных пользовательских функций, включив для базы данных уровень совместимости 150.  Это можно сделать с помощью Transact-SQL. Пример:  
+Рабочие нагрузки можно автоматически сделать подходящими для встраивания скалярных пользовательских функций, включив для базы данных уровень совместимости 150. Это можно сделать с помощью Transact-SQL, например так:  
 
 ```sql
 ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;

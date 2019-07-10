@@ -14,12 +14,12 @@ ms.assetid: 759fab42-66c7-4541-a7a3-bb6fb868493c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1aa12d4c61f8dae99a948cde69e2370665977227
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 68e61f26cc33d505ec183e3d863cfa3a6f407275
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124674"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586429"
 ---
 # <a name="modify-snapshot-initialization-options-for-sql-replication"></a>Изменение параметров инициализации моментальных снимков для репликации SQL 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "54124674"
 При [инициализации подписки с помощью моментального снимка](initialize-a-subscription-with-a-snapshot.md) можно указать несколько параметров.
 
 ## <a name="specify-snapshot-format-sql-server-management-studio"></a>указать формат моментальных снимков (среда SQL Server Management Studio)
-  Укажите формат моментального снимка на странице **Моментальный снимок** диалогового окна **Свойства публикации — \<публикация>**. Дополнительные сведения о доступе к этому диалоговому окну см. в разделе [Просмотр и изменение свойств публикации](../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+  Укажите формат моментального снимка на странице **Моментальный снимок** диалогового окна **Свойства публикации — \<публикация>** . Дополнительные сведения о доступе к этому диалоговому окну см. в разделе [Просмотр и изменение свойств публикации](../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
 ### <a name="to-specify-snapshot-format"></a>Указание формата моментальных снимков  
   
@@ -38,6 +38,8 @@ ms.locfileid: "54124674"
   
 2.  Нажмите кнопку **ОК**.   
 
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="snapshot-folder-locations"></a>Расположения папки моментальных снимков
 
 ### <a name="default-snapshot-location"></a>Расположение моментального снимка по умолчанию
@@ -47,7 +49,7 @@ ms.locfileid: "54124674"
   
 ### <a name="to-modify-the-default-snapshot-location"></a>Изменение местоположения моментальных снимков по умолчанию  
   
-1.  В диалоговом окне **Свойства распространителя — \<распространитель>** на странице **Издатели** нажмите кнопку свойств (**...**) рядом с издателем, для которого нужно изменить расположение моментальных снимков по умолчанию.    
+1.  В диалоговом окне **Свойства распространителя — \<распространитель>** на странице **Издатели** нажмите кнопку свойств ( **...** ) рядом с издателем, для которого нужно изменить расположение моментальных снимков по умолчанию.    
 2.  В диалоговом окне **Свойства издателя — \<издатель>** введите значение для свойства **Папка моментальных снимков по умолчанию**.  
   
     > [!NOTE]  

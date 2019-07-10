@@ -24,12 +24,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 768ffcece8525d36eb7ab3576f28596430941caa
-ms.sourcegitcommit: 3a1e0b92cbe53ccf3b233faf8629d16bbf673b30
+ms.openlocfilehash: a34c21deff4314747f1477efeb3f20991d311fb5
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55229045"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585034"
 ---
 # <a name="statistics"></a>Статистика
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -112,7 +112,7 @@ ORDER BY s.name;
     * Если на момент оценки статистических данных кратность в таблице не превышала 500, обновление выполняется для каждых 500 модификаций.
     * Если на момент оценки статистических данных кратность в таблице превышала 500, обновление выполняется для каждых 500 + 20 % модификаций.
 
-* Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и при [уровне совместимости базы данных](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 130 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используется пороговое значение для динамического обновления статистических данных по убыванию. Значение изменяется в зависимости от числа строк в таблице. Оно вычисляется как квадратный корень из произведения текущего значения кратности в таблице и 1000. Например, если таблица содержит 2 миллиона строк, значение вычисляется как квадратный корень из (1000 * 2000000) = 44721,359. Благодаря этому изменению статистика для больших таблиц будет обновляться чаще. Но если уровень совместимости для базы данных ниже 130, применяется пороговое значение [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
+* Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и при [уровне совместимости базы данных](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 130 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используется пороговое значение для динамического обновления статистических данных по убыванию. Значение изменяется в зависимости от числа строк в таблице. Оно вычисляется как квадратный корень из произведения текущего значения кратности в таблице и 1000. Например, если таблица содержит 2 миллиона строк, значение вычисляется как квадратный корень из (1000 * 2000000) = 44721,359. Благодаря этому изменению статистика для больших таблиц будет обновляться чаще. Но если уровень совместимости для базы данных ниже 130, применяется пороговое значение [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. ?
 
 > [!IMPORTANT]
 > Начиная с версии [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] и до [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] или с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] при [уровне совместимости базы данных](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) ниже 130 применяется [флаг трассировки 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используется пороговое значение для динамического обновления статистических данных по убыванию. Значение изменяется в зависимости от числа строк в таблице.
@@ -162,7 +162,9 @@ ORDER BY s.name;
 1.  Оптимизатор запросов создает статистику для индексов таблиц или представлений в момент создания индекса. Такая статистика создается по ключевым столбцам индекса. Если индекс является отфильтрованным, оптимизатор запросов создает отфильтрованную статистику по подмножеству строк, которое указано для отфильтрованного индекса. Дополнительные сведения об отфильтрованных индексах см. в статье [Создание отфильтрованных индексов](../../relational-databases/indexes/create-filtered-indexes.md) и [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
 2.  Если включен параметр [AUTO_CREATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_create_statistics), оптимизатор запросов создает статистику для отдельных столбцов в предикатах запросов.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 Для большинства запросов эти два метода создания статистики обеспечивают создание высококачественного плана запроса. В некоторых случаях план запроса можно усовершенствовать, создав дополнительную статистику с помощью инструкции [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) . Эта дополнительная статистика может фиксировать статистическую корреляцию, которую не учитывает оптимизатор запросов при создании статистики для индексов или отдельных столбцов. Приложение может иметь дополнительные статистические корреляции в данных таблицы. Если учитывать такие корреляции в объекте статистики, оптимизатор запросов сможет усовершенствовать планы запросов. Например, план запроса можно улучшить путем использования отфильтрованной статистики по подмножеству строк данных или статистики по нескольким столбцам предиката запроса.  
   
 Если статистика создается инструкцией CREATE STATISTICS, рекомендуем оставлять параметр AUTO_CREATE_STATISTICS включенным, чтобы оптимизатор запросов продолжал регулярно создавать статистику по отдельным столбцам предиката запроса. Дополнительные сведения о предикатах запросов см. в разделе [Условие поиска (Transact-SQL)](../../t-sql/queries/search-condition-transact-sql.md).  
@@ -236,7 +238,7 @@ GO
 Только [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может создавать и обновлять временную статистику. Тем не менее можно удалять временную статистику и наблюдать за свойствами статистики с помощью тех же инструментов, которые используются для постоянной статистики:  
   
 * Удаление временной статистики осуществляется с использованием инструкции [DROP STATISTICS](../../t-sql/statements/drop-statistics-transact-sql.md).  
-* Мониторинг статистики ведется с помощью представлений каталога **[sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)** и **[sys.stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)**. **sys_stats** включает столбец **is_temporary** для указания на то, какая статистика является постоянной, а какая временной.  
+* Мониторинг статистики ведется с помощью представлений каталога **[sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)** и **[sys.stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)** . **sys_stats** включает столбец **is_temporary** для указания на то, какая статистика является постоянной, а какая временной.  
   
  Поскольку временная статистика хранится в базе данных **tempdb**, перезапуск службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] приведет к удалению всей временной статистики.  
     

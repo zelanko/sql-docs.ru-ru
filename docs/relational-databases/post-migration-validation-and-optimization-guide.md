@@ -13,12 +13,12 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
 manager: craigg
-ms.openlocfilehash: 7e9e96ee56895c38a8c242d3cd48804884f581d1
-ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
+ms.openlocfilehash: d13809c3fa5b100a29df4434da5aec354de0c7c2
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54206370"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581226"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>Руководство по оптимизации и проверке после миграции
 
@@ -53,7 +53,7 @@ ms.locfileid: "54206370"
 **Применимо к:** внешняя платформа (например, Oracle, DB2, MySQL или Sybase) для миграции [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 > [!NOTE]
-> При миграции с [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], если подобная проблема имелась в исходном [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], переход на новую версию [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] без изменений будет проходить без учета этого сценария. 
+> Если при миграции с [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] подобная проблема возникнет в источнике [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], миграция на новую версию [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] без изменений будет проходить без учета этого сценария. 
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] компилирует планы запросов для хранимых процедур, используя перехват входных параметров во время первой компиляции и создавая параметризованный план с возможностью повторного использования, оптимизированный для распространения этих параметров. Даже если хранимых процедур нет, большинство операторов, создающий простые планы, будет параметризовано. После первого кэширования плана любое выполнение сопоставляется с кэшированным ранее планом.
 Проблемы могут возникнуть, если в первой компиляции не использовались наборы параметров, наиболее типичные для обычной рабочей нагрузки. С другими параметрами план выполнения будет неэффективным. Дополнительные сведения по этой теме см. в разделе [Сканирование параметров](../relational-databases/query-processing-architecture-guide.md#ParamSniffing).
@@ -108,6 +108,9 @@ ms.locfileid: "54206370"
   -   Для этого может потребоваться сравнение конструкции пользовательского кода, хранящийся в базе данных (например, хранимых процедур, определяемых пользователем функций или представлений), с системными таблицами, которые содержат сведения о типах данных, используемых в базовых таблицах (таких как [sys.columns](../relational-databases/system-catalog-views/sys-columns-transact-sql.md)).
 2. Если перебрать весь код до указанной выше точки нельзя, то с той же целью можно изменить тип данных в таблице в соответствии с объявлением переменной или параметра.
 3. Рассмотрите целесообразность применения следующих конструкций:
+
+[!INCLUDE[freshInclude](../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
   -   функции, используемые в качестве предикатов;
   -   поиск с подстановочными знаками;
   -   сложные выражения на основе данных, расположенных в один столбец (подумайте, не стоит ли вместо них создать материализованные вычисляемые столбцы, которые можно проиндексировать).

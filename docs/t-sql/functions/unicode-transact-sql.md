@@ -21,12 +21,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3c3ebe7192142b47011864ab112d514187ead99c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ec799438a384ba8bf20e8070b84703e6f1e60e6f
+ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65946796"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67500218"
 ---
 # <a name="unicode-transact-sql"></a>UNICODE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,14 +42,14 @@ UNICODE ( 'ncharacter_expression' )
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- **'** *ncharacter_expression* **'**  
- Выражение **nchar** или **nvarchar**.  
+**'** *ncharacter_expression* **'**  
+Выражение **nchar** или **nvarchar**.  
   
 ## <a name="return-types"></a>Типы возвращаемых данных  
- **int**  
+**int**  
   
 ## <a name="remarks"></a>Remarks  
- В версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], более ранних, чем [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], и в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] функция Юникода возвращала кодовую точку UCS-2 в диапазоне от 0 до 0xFFFF. Начиная с версии [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] при использовании параметров сортировки с поддержкой [дополнительных символов](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) Юникод возвращает кодовую точку UTF-16 в диапазоне от 0 до 0x10FFFF.  
+В версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], предшествовавших [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], и в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] функция UNICODE возвращала кодовую точку UCS-2 в диапазоне от 0 до 0xFFFF, который может представлять 65 535 символов в основном многоязычном поле (BMP) Юникода. Начиная с версии [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] при использовании параметров сортировки с поддержкой [дополнительных символов](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) Юникод возвращает кодовую точку UTF-16 в диапазоне от 000000 до 10FFFF. Дополнительные сведения о поддержке Юникода в [!INCLUDE[ssde_md](../../includes/ssde_md.md)] см. в статье [Поддержка параметров сортировки и Юникода](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn). 
   
 ## <a name="examples"></a>Примеры  
   

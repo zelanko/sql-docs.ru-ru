@@ -14,15 +14,17 @@ ms.assetid: 8096cfc6-1836-4ed5-a769-a5d63b137171
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b342fff66d5e3ec955566963a4a31d1540a2853e
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 1535618a2f5ed180d679bad982c0b77e05a66f95
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58513031"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579794"
 ---
 # <a name="use-full-text-search-with-xml-columns"></a>Полнотекстовый поиск в XML-столбцах
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
   Для XML-столбцов можно создавать полнотекстовые индексы, индексирующие XML-значения, но игнорирующие XML-разметку. Теги элементов используются в качестве границ токенов. Индексируются следующие элементы:  
   
 -   Содержимое XML-элементов.  
@@ -34,11 +36,13 @@ ms.locfileid: "58513031"
 1.  Сначала отфильтруйте интересующие XML-значения, используя механизм полнотекстового поиска SQL.  
   
 2.  Затем запросите XML-значения, которые используют XML-индекс, связанный с XML-столбцом.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="example-combining-full-text-search-with-xml-querying"></a>Пример Комбинирование полнотекстового поиска с запросами XML-данных  
  После создания полнотекстового индекса для XML-столбца следующий запрос проверяет, что название книги содержит слово «custom»:  
   
-```  
+```sql
 SELECT *   
 FROM   T   
 WHERE  CONTAINS(xCol,'custom')   
@@ -54,7 +58,7 @@ AND    xCol.exist('/book/title/text()[contains(.,"custom")]') =1
 ## <a name="example-full-text-search-on-xml-values-using-stemming"></a>Пример Полнотекстовый поиск XML-значений с использованием парадигматического модуля  
  Проверку **contains()** языка XQuery, выполненную в предыдущем примере, обычно устранить нельзя. Рассмотрим следующий запрос:  
   
-```  
+```sql
 SELECT *   
 FROM   T   
 WHERE  CONTAINS(xCol,'run')   

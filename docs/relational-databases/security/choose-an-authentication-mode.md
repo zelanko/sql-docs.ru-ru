@@ -26,16 +26,16 @@ ms.assetid: ff7a6a48-3d38-4209-aa0f-7d6c0a8c64ef
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: ac0c3526439d0dc899e81554305c7602c4fa8a9d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bb99199e90a4e85412fed33210d75b18c8f2975a
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781912"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579868"
 ---
 # <a name="choose-an-authentication-mode"></a>Выбор режима проверки подлинности
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Во время процесса установки следует выбрать режим проверки подлинности для компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Существует два возможных режима: проверка подлинности Windows и смешанный режим. Режим проверки подлинности Windows включает проверку подлинности Windows и отключает проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . В смешанном режиме включены как проверка подлинности Windows, так и проверка подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Проверка подлинности Windows доступна всегда, и отключить ее нельзя.  
+  Во время процесса установки следует выбрать режим проверки подлинности для компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Существует два возможных режима: режим проверки подлинности Windows и смешанный режим. Режим проверки подлинности Windows включает проверку подлинности Windows и отключает проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . В смешанном режиме включены как проверка подлинности Windows, так и проверка подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Проверка подлинности Windows доступна всегда, и отключить ее нельзя.  
   
 ## <a name="configuring-the-authentication-mode"></a>Настройка режима проверки подлинности  
  Если во время установки был выбран смешанный режим проверки подлинности, необходимо задать и подтвердить надежный пароль для встроенной учетной записи системного администратора [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с именем sa. Учетная запись sa устанавливает соединения с помощью проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -74,8 +74,10 @@ ms.locfileid: "47781912"
 2.  В диалоговом окне **Выполнить** введите **secpol.msc**, а затем нажмите кнопку **ОК**.  
   
 3.  В приложении **Локальная политика безопасности** разверните узлы **Настройки безопасности**и **Политики учетных записей**, затем щелкните **Политика паролей**.  
-  
-     Политики паролей будут описаны в панели результатов.  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     The password policies are described in the results pane.  
   
 ### <a name="disadvantages-of-sql-server-authentication"></a>Недостатки проверки подлинности SQL Server  
   

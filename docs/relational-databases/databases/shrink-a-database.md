@@ -20,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f7642b2514f7a73034e8f0c2a5c75db71149d33e
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: ae356a0f5ad27a92eb7ba7ba70fcf1553c0aa65c
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559591"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583462"
 ---
 # <a name="shrink-a-database"></a>Сжатие базы данных
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "51559591"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Follow Up:**  [You shrink a database](#FollowUp)  
+-   **Дальнейшие действия.**  [Сжатие базы данных](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
@@ -106,7 +106,9 @@ ms.locfileid: "51559591"
      Введите максимальный процент свободного пространства, которое должно остаться в базе данных после ее сжатия. Допустимы значения от 0 до 99.  
   
 4.  Нажмите кнопку **ОК**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   
 #### <a name="to-shrink-a-database"></a>Сжатие базы данных  
@@ -119,7 +121,7 @@ ms.locfileid: "51559591"
   
  [!code-sql[DBCC#DBCC_SHRINKDB1](../../relational-databases/databases/codesnippet/tsql/shrink-a-database_1.sql)]  
   
-##  <a name="FollowUp"></a> Продолжение: после сжатия базы данных  
+##  <a name="FollowUp"></a> Дальнейшие действия. После сжатия базы данных  
  Данные, перемещаемые в процессе сжатия файла, могут быть разбросаны по любым доступным местам в файле. Это вызывает фрагментацию индекса и может увеличить время выполнения запросов, выполняющих поиск в диапазоне индекса. Чтобы устранить фрагментацию, предусмотрите возможность перестроения индексов файла после сжатия.  
   
 ## <a name="see-also"></a>См. также:  
