@@ -11,12 +11,12 @@ manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 06/06/2019
-ms.openlocfilehash: 453c00715e68a648e9cdfc2010810ce701358cf6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2b06e8476e10abc3a96ab6c6f2304ef81f225f02
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798096"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67681619"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Заметки о выпуске для Azure Data Studio
 
@@ -367,7 +367,7 @@ _0.32.8 содержит исправления для несколько рег
 ### <a name="github-issues-fixes-june-2018"></a>Исправляет проблемы GitHub, июня 2018 г.
 
 - Запрос на функцию ([выдавать 1204](https://github.com/Microsoft/azuredatastudio/issues/1204)): Проверьте результаты ширина столбца Автоподбор размера сетки данных и вспомнить изменения, вносимые вручную в том случае, если тот же запрос запускается повторно.
-- Исправить [выдавать 1398](https://github.com/Microsoft/azuredatastudio/issues/1398): Следует показать добавьте сообщение и кнопка учетной записи для учетной записи при пустом связанной учетной записи.
+- Исправить [выдавать 1398](https://github.com/Microsoft/azuredatastudio/issues/1398): Следует показать добавьте сообщение и кнопка учетной записи при пустом связанной учетной записи.
 - Исправить [выдавать 1399](https://github.com/Microsoft/azuredatastudio/issues/1399): Вкладка связанной учетной записи разорвано при свернутом представлении.
 - Исправить [выдавать 1374](https://github.com/Microsoft/azuredatastudio/issues/1374): Служба средства SQL происходит сбой, при открытии SQL-файл с диска.
 - Исправить [выдавать 1372](https://github.com/Microsoft/azuredatastudio/issues/1372): Отсутствует ключевое слово SQL «BETWEEN».

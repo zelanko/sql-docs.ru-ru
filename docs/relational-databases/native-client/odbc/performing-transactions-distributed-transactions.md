@@ -18,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e3eb73528800d45daf0ea8b68ae94536f63c25df
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 179885276bdda206e4414bd22675e97449df9129
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67585479"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67687615"
 ---
 # <a name="create-a-distributed-transaction"></a>Создание распределенной транзакции
 
@@ -53,7 +53,7 @@ MSDTC вызывается драйвером собственного клие�
 3. Приложение обновляет некоторые данные на сервере SQL на компьютере B.
     - При сбое обновления на сервере SQL, откатываются все незафиксированные обновления на обоих экземплярах SQL Server
 
-4. Наконец приложение завершает транзакцию путем вызова [SQLEndTran _(1)_ ](../../../relational-databases/native-client-odbc-api/sqlendtran.md), с параметром SQL_COMMIT или SQL_ROLLBACK.
+4. Наконец, приложение завершает транзакцию путем вызова [SQLEndTran _(1)_ ](../../../relational-databases/native-client-odbc-api/sqlendtran.md), с параметром SQL_COMMIT или SQL_ROLLBACK.
 
 [!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 

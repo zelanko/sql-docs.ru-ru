@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: d7a61c97d3e1636cd6a11173e281c192d1533d93
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 2ace3ee9cd17240890a9da901297c731ced4016c
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388753"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67681592"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-big-data-cluster-preview"></a>Развертывание приложения в кластере SQL Server больших данных (Предварительная версия)
 
@@ -107,7 +107,7 @@ mssqlctl app create --spec <directory containing spec file>
 mssqlctl app create --spec ./addpy
 ```
 
-Это предполагает, что у вас есть приложение, хранятся в `addpy` папку. Эта папка также должен содержать файл спецификации для приложения, называется вызываемой `spec.yaml`. См. в разделе [странице развертывание приложения](concept-application-deployment.md) Дополнительные сведения о `spec.yaml` файл.
+Это предполагает, что у вас есть приложение, хранятся в `addpy` папку. Эта папка также должен содержать файл спецификации для приложения, вызывается `spec.yaml`. См. в разделе [странице развертывание приложения](concept-application-deployment.md) Дополнительные сведения о `spec.yaml` файл.
 
 Чтобы развернуть этот пример приложения, создайте следующие файлы в каталог с именем `addpy`:
 

@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: jroth
-ms.openlocfilehash: 0b8f31d55ae9dcc7042fff051c37a4beaa72a47e
-ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
+ms.openlocfilehash: bc865b36dc8b8036fa9a6a1a9c58c6890acadf47
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67399996"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67681602"
 ---
 # <a name="sql-server-2019-extension-preview"></a>Расширение SQL Server 2019 (Предварительная версия)
 

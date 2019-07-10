@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 0d07288bccc641f67644a37cd027e093fc3967c8
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: 8d701d9e8595eee3a583e913baabc2148af214fe
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645553"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67681624"
 ---
 # <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>Служб монитора SQL Server машинного обучения с помощью динамических административных представлений (DMV)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -196,7 +196,7 @@ FROM sys.dm_os_sys_info;
 |--------|-------------|
 | physical_memory_kb | Общий объем физической памяти на компьютере. |
 | committed_kb | Выделенная память в килобайтах (КБ) в диспетчере памяти. Не включает зарезервированную память в диспетчере памяти. |
-| external_pool_peak_memory_kb | Сумма максимальный объем используемой памяти, в килобайтах, для всех внешних пулов ресурсов. |
+| external_pool_peak_memory_kb | Сумма максимальный объем памяти, используются в килобайтах, для всех внешних пулов ресурсов. |
 
 ## <a name="memory-configuration"></a>Настройка использования памяти
 
@@ -278,7 +278,7 @@ WITH result sets((Package NVARCHAR(255), Version NVARCHAR(100), Depends NVARCHAR
 | Столбец | Описание |
 |--------|-------------|
 | Пакет | Имя установленного пакета. |
-| Версия | Версия пакета. |
+| Version | Версия пакета. |
 | Зависит | Список пакетов, который зависит от установленного пакета. |
 | Лицензия | Лицензии для установленного пакета. |
 | LibPath | Каталог, где можно найти пакет. |
@@ -304,7 +304,7 @@ WITH result sets((Package NVARCHAR(128), Version NVARCHAR(128), Location NVARCHA
 | Столбец | Описание |
 |--------|-------------|
 | Пакет | Имя установленного пакета. |
-| Версия | Версия пакета. |
+| Version | Версия пакета. |
 | Местоположение | Каталог, где можно найти пакет. |
 
 ## <a name="next-steps"></a>Следующие шаги
