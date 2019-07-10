@@ -9054,9 +9054,9 @@
               href: ssms/configure-login-auditing-sql-server-management-studio.md
             - name: Диагностика
               items:
-                - name: Создать полный дамп памяти
+                - name: Получение полного дампа памяти
                   href: ssms/troubleshoot/get-full-memory-dump.md
-                - name: Сбои и зависания
+                - name: Получение диагностических данных
                   href: ssms/troubleshoot/ssms-troubleshoot.md
             - name: "Агент SQL\_Server"
               items:
