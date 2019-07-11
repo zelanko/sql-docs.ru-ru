@@ -15,23 +15,23 @@ ms.assetid: 6e6cabcf-a204-40eb-b77d-8a0c4a5e8524
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 89be9c958cb848384a67e7eaf74cfecc72f07c35
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 597fe4f7697375cc2e75bef79059beeba9d91e14
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63148884"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792760"
 ---
 # <a name="sqlstate-mappings"></a>Сопоставления SQLSTATE
-В этом разделе рассматриваются значениях SQLSTATE для ODBC 2. *x* и ODBC 3. *x*. Дополнительные сведения о ODBC 3. *x* значения SQLSTATE, см. в разделе [приложении a. Коды ошибок ODBC](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md).  
+В этом разделе обсуждаются значениях SQLSTATE для ODBC *2.x* и ODBC *3.x*. Дополнительные сведения о ODBC *3.x* значения SQLSTATE, см. в разделе [приложении a. Коды ошибок ODBC](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md).  
   
- В ODBC 3. *x*HYxxx SQLSTATE возвращаются вместо S1xxx и SQLSTATE 42Sxx возвращаются вместо S00XX. Это было сделано в соответствии со стандартами Open Group и ISO. Во многих случаях сопоставление не один к одному, так как стандарты переопределен интерпретацию несколько SQLSTATE.  
+ В ODBC *3.x*HYxxx SQLSTATE возвращаются вместо S1xxx и SQLSTATE 42Sxx возвращаются вместо S00XX. Это было сделано в соответствии со стандартами Open Group и ISO. Во многих случаях сопоставление не один к одному, так как стандарты переопределен интерпретацию несколько SQLSTATE.  
   
- Когда ODBC 2. *x* обновлении приложения до ODBC 3. *x* приложение, приложение должно изменить ожидать ODBC 3. *x* SQLSTATE, а не ODBC 2. *x* SQLSTATE. В следующей таблице перечислены ODBC 3. *x* SQLSTATE, каждый ODBC 2. *x* сопоставляется с кодом SQLSTATE.  
+ Когда ODBC *2.x* обновлении приложения до ODBC *3.x* приложение, приложение должно изменить ожидать ODBC *3.x* SQLSTATE, а не ODBC *2.x* SQLSTATE. В следующей таблице перечислены ODBC *3.x* SQLSTATE, каждый ODBC *2.x* сопоставляется с кодом SQLSTATE.  
   
- Если атрибуту окружения SQL_ATTR_ODBC_VERSION присвоено SQL_OV_ODBC2, драйвер учитывает ODBC 2. *x* SQLSTATE, а не ODBC 3. *x* SQLSTATE при **SQLGetDiagField** или **SQLGetDiagRec** вызывается. Конкретного сопоставления можно определить с помощью отметить ODBC 2 *.x* SQLSTATE, в столбце 1 в следующей таблице, соответствующий ODBC 3. *x* SQLSTATE в столбце 2.  
+ Публикует при SQL_OV_ODBC2 равным атрибуту окружения SQL_ATTR_ODBC_VERSION, драйвер ODBC *2.x* SQLSTATE, а не ODBC *3.x* SQLSTATE при **SQLGetDiagField**или **SQLGetDiagRec** вызывается. Конкретного сопоставления можно определить с помощью отметить ODBC *2.x* SQLSTATE, в столбце 1 в следующей таблице, соответствующий ODBC *3.x* SQLSTATE в столбце 2.  
   
-|ODBC 2. *x* SQLSTATE|ODBC 3. *x* SQLSTATE|Комментарии|  
+|ODBC *2.x* SQLSTATE|ODBC *3.x* SQLSTATE|Комментарии|  
 |-------------------------|-------------------------|--------------|  
 |01S03|01001||  
 |01S04|01001||  
@@ -50,7 +50,7 @@ ms.locfileid: "63148884"
 |S0023|42S23||  
 |S1000|HY000||  
 |S1001|HY001||  
-|S1002|07009|ODBC 2. *x* SQLSTATE S1002 сопоставляется с ODBC 3. *x* SQLSTATE 07009 при базовой функции **SQLBindCol**, **SQLColAttribute**, **SQLExtendedFetch**, **SQLFetch** , **SQLFetchScroll**, или **SQLGetData**.|  
+|S1002|07009|ODBC *2.x* SQLSTATE S1002 сопоставляется с ODBC *3.x* SQLSTATE 07009 при базовой функции **SQLBindCol**, **SQLColAttribute**, **SQLExtendedFetch**, **SQLFetch**, **SQLFetchScroll**, или **SQLGetData**.|  
 |S1003|HY003||  
 |S1004|HY004||  
 |S1008|HY008||  
@@ -63,7 +63,7 @@ ms.locfileid: "63148884"
 |S1090|HY090||  
 |S1091|HY091||  
 |S1092|HY092||  
-|S1093|07009|ODBC 3. *x* SQLSTATE 07009 сопоставляется с ODBC 2. *x* S1093 SQLSTATE, если функция базового **SQLBindParameter** или **SQLDescribeParam**.|  
+|S1093|07009|ODBC *3.x* сопоставляются ODBC SQLSTATE 07009 *2.x* S1093 SQLSTATE, если функция базового **SQLBindParameter** или **SQLDescribeParam**.|  
 |S1096|HY096||  
 |S1097|HY097||  
 |S1098|HY098||  
@@ -83,4 +83,4 @@ ms.locfileid: "63148884"
 |S1T00|HYT00||  
   
 > [!NOTE]  
->  ODBC 3. *x* SQLSTATE 07008 сопоставляется с ODBC 2. *x* SQLSTATE S1000.
+>  ODBC *3.x* сопоставляются ODBC SQLSTATE 07008 *2.x* SQLSTATE S1000.

@@ -10,12 +10,12 @@ ms.assetid: 98fde3c5-297c-4d95-981e-95700bbf5ccd
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2fb48665fafc9c79856279c7460918b85334bfb8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c96443d7f46dee539fd7d39a91a168b3ed5a0d8c
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66064295"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792927"
 ---
 # <a name="create-the-off-by-default-policy"></a>Создание политики, отключенной по умолчанию
   В этой задаче создается условие с именем «Mail Off», основанное на аспекте «Настройка контактной зоны». Затем создается политика с именем «Отключена по умолчанию».  
@@ -28,7 +28,7 @@ ms.locfileid: "66064295"
   
 3.  В окне **Аспект** подтвердите выбор аспекта **Настройка контактной зоны** .  
   
-4.  В диалоговом окне **Выражение** в поле **Поле** выберите **@DatabaseMailEnabled**, в поле **Оператор** выберите **=**, а в поле **Значение** выберите **False**.  
+4.  В **выражение** область в **поле** выберите  **\@DatabaseMailEnabled**в **оператор** выберите **=** , а затем в **значение** выберите **False**.  
   
 5.  Для создания условия введите его описание на странице **Описание** и нажмите кнопку **ОК** .  
   

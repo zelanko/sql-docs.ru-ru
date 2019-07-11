@@ -2,20 +2,20 @@
 title: Настройка службы Azure Kubernetes
 titleSuffix: SQL Server big data clusters
 description: Сведения о настройке службы Azure Kubernetes (AKS) для развернутых кластеров (Предварительная версия) SQL Server 2019 больших данных.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: ad42063b2c4959429bdc54e3772aa755bc32e2f2
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.openlocfilehash: c5860e4c26008cf94b9ec168bb6a705f15ae7cd1
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67412951"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728917"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>Настроить службу Azure Kubernetes для развертывания кластера больших данных в SQL Server
 
@@ -30,7 +30,7 @@ AKS позволяет легко создавать, настраивать и 
 > [!TIP] 
 > Пример скрипта python, выполняющий развертывание больших данных кластера AKS и SQL Server, см. в разделе [краткое руководство: Развертывание SQL Server, большие данные кластера в службе Azure Kubernetes (AKS)](quickstart-big-data-cluster-deploy.md).
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 - [Развертывание средств работы с большими данными SQL Server 2019](deploy-big-data-tools.md):
    - **kubectl**

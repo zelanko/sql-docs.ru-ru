@@ -2,20 +2,20 @@
 title: Создать код для задачи по структурированию данных
 titleSuffix: Azure Data Studio
 description: В этой статье описывается использование сочетаний клавиш кода PROSE студии данных Azure для автоматического создания кода для распространенные задачи по структурированию данных.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: f5406ce0e67322a8f7148fc83b83d0789f27e1ae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c26a6efa1f96ac5016d1560f0ae4d9e02f0d369d
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66770779"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728314"
 ---
 # <a name="data-wrangling-using-prose-code-accelerator"></a>С помощью ускорителя кода PROSE Wrangling данных
 
@@ -114,7 +114,7 @@ builder.learn().code()
 Другим распространенным сценарием является для обнаружения закономерностей в строковый столбец для очистки и группирования. Например возможно столбец даты с датами в нескольких различных форматах. Чтобы стандартизировать значения, может потребоваться написать условные инструкции, с помощью регулярных выражений.
 
 
-|   |Имя                      |BirthDate      |
+|   |Name                      |BirthDate      |
 |---|:-------------------------|:--------------|
 | 0 |Bertram du Plessis        |1995           |
 | 1 |Naiara Moravcikova        |Неизвестно        |

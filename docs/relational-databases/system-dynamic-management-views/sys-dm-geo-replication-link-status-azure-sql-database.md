@@ -14,16 +14,16 @@ helpviewer_keywords:
 - dm_geo_replication_link_status dynamic management view
 - sys.dm_geo_replication_link_status dynamic management view
 ms.assetid: d763d679-470a-4c21-86ab-dfe98d37e9fd
-author: CarlRabeler
-ms.author: carlrab
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 2c416d0d2a39439e2b6fe79fbe755cdc62a4b8cf
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e94406cf30d1a942581f5fcfd30438c84ea2b159
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56021757"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716696"
 ---
 # <a name="sysdmgeoreplicationlinkstatus-azure-sql-database"></a>sys.dm_geo_replication_link_status (база данных SQL Azure)
 
@@ -40,7 +40,7 @@ ms.locfileid: "56021757"
 |replication_lag_sec|**int**|Разница во времени в секундах между last_replication и меткой времени фиксации этой транзакции на сервере-источнике, в формате базы данных-источника.  Это значение доступно только основной базы данных.|  
 |replication_state|**tinyint**|Состояние географической репликации для этой базы данных, один из:.<br /><br /> 1 = заполнение. Георепликация целевой объект заполняется, но еще не синхронизированы две базы данных. До завершения первоначального заполнения, не удается подключиться к базе данных-получателе. Удаление базы данных-получателя из основного отменит операции заполнения.<br /><br /> 2 = захват. База данных-получатель находится в состоянии транзакционной согласованности и постоянно синхронизируются с базы данных-источника.<br /><br /> 4 = Suspended. Это неактивная связь непрерывного копирования. Это состояние обычно означает, что доступной для Interlink полосы пропускания недостаточно для уровня активности транзакций в базе данных-источнике. Однако связь непрерывного копирования не повреждена.|  
 |replication_state_desc|**nvarchar(256)**|PENDING<br /><br /> SEEDING<br /><br /> CATCH_UP|  
-|роль|**tinyint**|Роль георепликации, один из:<br /><br /> 0 = primary. Database_id относится к базе данных источнику в партнерстве георепликации.<br /><br /> 1 = вторичный.  Database_id относится к базе данных источнику в партнерстве георепликации.|  
+|role|**tinyint**|Роль георепликации, один из:<br /><br /> 0 = primary. Database_id относится к базе данных источнику в партнерстве георепликации.<br /><br /> 1 = вторичный.  Database_id относится к базе данных источнику в партнерстве георепликации.|  
 |role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  
 |secondary_allow_connections|**tinyint**|Тип вторичного, один из:<br /><br /> 0 = не должно быть прямых подключений к базе данных-получателе и базе данных не доступен для доступа на чтение.<br /><br /> 2 = all подключений к базе данных в дополнительный repl; йлы приложения для доступа только для чтения.|  
 |secondary_allow_connections_desc|**nvarchar(256)**|Нет<br /><br /> All|  

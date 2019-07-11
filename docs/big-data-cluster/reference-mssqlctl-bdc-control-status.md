@@ -2,19 +2,20 @@
 title: mssqlctl bdc control status reference
 titleSuffix: SQL Server big data clusters
 description: Справочная статья по mssqlctl bdc управления состояние команды.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 714ed2152dfff071193a7c33ed29e5fcb9ec8f17
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: c87849f8539cbef18222a053ae17fae487194e93
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67394396"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728599"
 ---
 # <a name="mssqlctl-bdc-control-status"></a>состояние системы управления mssqlctl bdc
 

@@ -14,15 +14,15 @@ ms.assetid: 4bb51845-ee91-4b97-9dd4-2fab977f2aec
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 39736d4d007814e29bc8c8293fa7e1020539b940
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 841310d1e51084ae6a61c629b8782a8b84c665f8
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63280861"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793583"
 ---
 # <a name="sqlallocenv-mapping"></a>Сопоставление SQLAllocEnv
-Если приложение вызывает **SQLAllocEnv** через ODBC 3 *.x* драйвера, вызов **SQLAllocEnv**(*phenv*) сопоставляется с **SQLAllocHandle** следующим образом:  
+Если приложение вызывает **SQLAllocEnv** через ODBC *3.x* драйвера, вызов **SQLAllocEnv**(*phenv*) сопоставляется с **SQLAllocHandle** следующим образом:  
   
 1.  Диспетчер драйверов выделяет дескриптор среды и возвращает его приложению. Диспетчер драйверов вызывает **SQLSetEnvAttr** присвоить атрибуту окружения SQL_ATTR_ODBC_VERSION SQL_OV_ODBC2.  
   

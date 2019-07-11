@@ -14,12 +14,12 @@ ms.assetid: 4ccff067-85cd-4bfa-a6cd-7f28051fb5b9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b390df48e676290696ae8080c8f671fd0e37bad8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4cb723e7325454e6ff60e05d28a6321fd4d167e2
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63298271"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792830"
 ---
 # <a name="sqlsetdescfield-and-sqlsetdescrec-cursor-library"></a>SQLSetDescField и SQLSetDescRec (библиотека курсоров)
 > [!IMPORTANT]  
@@ -55,7 +55,7 @@ ms.locfileid: "63298271"
   
  Библиотека курсоров выполняет вызовы **SQLSetDescRec** для столбца закладки.  
   
- При работе с ODBC 2. *x* драйвер, библиотека курсоров возвращает SQLSTATE HY090 (Недопустимая длина строки или буфера) при **SQLSetDescField** или **SQLSetDescRec** вызывается для установки SQL_DESC_OCTET_ Длина поля записи закладки Отменить значение не равно 4. При работе с ODBC 3 *.x* драйвера, библиотека курсоров ODBC позволяет буфера быть любого размера.  
+ При работе с ODBC *2.x* драйвер, библиотека курсоров возвращает SQLSTATE HY090 (Недопустимая длина строки или буфера) при **SQLSetDescField** или **SQLSetDescRec** называется Чтобы задать поле SQL_DESC_OCTET_LENGTH записи закладки Отменить значение не равно 4. При работе с ODBC *3.x* драйвера, библиотека курсоров ODBC позволяет буфера быть любого размера.  
   
  Библиотека курсоров выполняет **SQLSetDescField** при ее вызове для возврата значения поля SQL_DESC_BIND_OFFSET_PTR, SQL_DESC_BIND_TYPE, SQL_DESC_ROW_ARRAY_SIZE или SQL_DESC_ROW_STATUS_PTR. Эти поля могут быть возвращены для любой строке, а не только строки закладки.  
   

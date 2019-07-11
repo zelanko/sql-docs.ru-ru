@@ -12,16 +12,16 @@ helpviewer_keywords:
 - remote execution
 - queries, remote execution
 ms.assetid: ca89aa4c-c4c1-4c46-8515-a6754667b3e5
-author: CarlRabeler
-ms.author: carlrab
+author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: a475ba50aa8d3ba140ea551306d8b9f17fe66d22
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 100da3bfaeee1c4b1e4dae00c96bcc08a763f3b3
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035905"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716611"
 ---
 # <a name="spexecuteremote-azure-sql-database"></a>sp_execute_remote (база данных SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sp_execute_remote [ @data_source_name = ] datasourcename
  Идентифицирует источник внешних данных, где выполняется инструкция. См. в разделе [создать внешний ИСТОЧНИК данных &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md). Внешний источник данных может быть типа «Реляционной СУБД» или «SHARD_MAP_MANAGER».  
   
  [ \@stmt =] *инструкции*  
- Строка в Юникоде, содержащий [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкции или пакета. \@stmt должен быть константой или переменной в Юникоде. Более сложные выражения Юникода, например объединение двух строк с помощью оператора +, недопустимы. Символьные константы недопустимы. Если указана константа Юникода, он должен начинаться с префикса **N**. Например, константа Юникода **N 'sp_who'** является допустимым, а символьная константа **'sp_who'** не является. Размер строки ограничивается только доступной серверу баз данных памятью. На 64-разрядных серверах, размер строки ограничен 2 ГБ, максимальный размер **nvarchar(max)**.  
+ Строка в Юникоде, содержащий [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкции или пакета. \@stmt должен быть константой или переменной в Юникоде. Более сложные выражения Юникода, например объединение двух строк с помощью оператора +, недопустимы. Символьные константы недопустимы. Если указана константа Юникода, он должен начинаться с префикса **N**. Например, константа Юникода **N 'sp_who'** является допустимым, а символьная константа **'sp_who'** не является. Размер строки ограничивается только доступной серверу баз данных памятью. На 64-разрядных серверах, размер строки ограничен 2 ГБ, максимальный размер **nvarchar(max)** .  
   
 > [!NOTE]  
 >  \@stmt может содержать параметры, называющиеся аналогично как имя переменной, например: `N'SELECT * FROM HumanResources.Employee WHERE EmployeeID = @IDParameter'`  

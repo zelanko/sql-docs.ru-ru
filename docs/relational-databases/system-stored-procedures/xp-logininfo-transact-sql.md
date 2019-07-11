@@ -18,12 +18,12 @@ ms.assetid: ee7162b5-e11f-4a0e-a09c-1878814dbbbd
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 96dc11ebc246e42fb4b01b777b430c6aa9230b5e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2e48337afee5320355eb71025bffb972b85e3358
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65099960"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793611"
 ---
 # <a name="xplogininfo-transact-sql"></a>xp_logininfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
 `[ @acctname = ] 'account_name'` Имя пользователя Windows или группы, к предоставлен [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *account_name* — **sysname**, значение по умолчанию NULL. Если *account_name* не указан, все группы Windows и пользователей Windows, которым было явно предоставлено разрешение на вход выводятся. *account_name* должно быть полным. Например, 'ADVWKS4\macraes' или 'BUILTIN\Administrators'.  
   
  **«all»**  |  **«members»**  
- Указывает, следует ли доставлять данные обо всех путях разрешений для данной учетной записи или только сведения о членах группы Windows. **@option** — **varchar(10)** , значение по умолчанию NULL. Если не **все** указано, отображается только путь для первого разрешения.  
+ Указывает, следует ли доставлять данные обо всех путях разрешений для данной учетной записи или только сведения о членах группы Windows. **\@параметр** — **varchar(10)** , значение по умолчанию NULL. Если не **все** указано, отображается только путь для первого разрешения.  
   
 `[ @privilege = ] variable_name` Является выходным параметром, возвращающий уровень прав доступа для указанной учетной записи Windows. *имя_переменной* — **varchar(10)** , значение по умолчанию «Not wanted». Возвращаемый уровень прав доступа **пользователя**, **администратора**, или **null**.  
   

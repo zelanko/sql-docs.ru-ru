@@ -14,15 +14,15 @@ ms.assetid: fa599517-3f3e-4dad-a65a-b8596ae3f330
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f2423d41b1e9c549b7202a68fb2a0e085e0a6e11
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 98bbdcf66ed9ee8f2d716d8953fde8f4a888fca0
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63297961"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792853"
 ---
 # <a name="sqlgetstmtoption-mapping"></a>Сопоставление SQLGetStmtOption
-Если приложение вызывает **SQLGetStmtOption** ODBC 3 *.x* драйвер, который не поддерживает это, вызов  
+Если приложение вызывает **SQLGetStmtOption** в ODBC *3.x* драйвер, который не поддерживает это, вызов  
   
 ```  
 SQLGetStmtOption(hstmt, fOption, pvParam)  
@@ -52,6 +52,6 @@ SQLGetStmtOption(hstmt, fOption, pvParam)
   
  Для параметров соединения ODBC, определяемое, устанавливает диспетчер драйверов *BufferLength* аргумента в вызове **SQLGetConnectAttr** предопределенные максимальной длины (SQL_MAX_OPTION_STRING_LENGTH); параметра подключения нестроковые *BufferLength* имеет значение 0.  
   
- Параметр инструкции SQL_GET_BOOKMARK был объявлен устаревшим в ODBC 3 *.x*. Для ODBC 3 *.x* драйвера для работы с ODBC 2. *x* приложений, использующих SQL_GET_BOOKMARK, он должен поддерживать SQL_GET_BOOKMARK. Для ODBC 3 *.x* драйвера для работы с ODBC 2. *x* приложений, он должен поддерживать значение SQL_USE_BOOKMARKS SQL_UB_ON и должны предоставлять закладки фиксированной длины. Если ODBC 3 *.x* драйвер поддерживает только закладки переменной длины, но не закладки фиксированной длины, оно должно возвращать SQLSTATE HYC00 (дополнительная возможность не реализована) Если ODBC 2. *x* приложение пытается присвоить SQL_USE_BOOKMARKS SQL_UB_ON.  
+ Параметр инструкции SQL_GET_BOOKMARK был объявлен устаревшим в ODBC *3.x*. Для ODBC *3.x* драйвера для работы с ODBC *2.x* приложений, использующих SQL_GET_BOOKMARK, он должен поддерживать SQL_GET_BOOKMARK. Для ODBC *3.x* драйвера для работы с ODBC *2.x* приложений, он должен поддерживать значение SQL_USE_BOOKMARKS SQL_UB_ON и должны предоставлять закладки фиксированной длины. Если ODBC *3.x* драйвер поддерживает только закладки переменной длины, но не закладки фиксированной длины, оно должно возвращать SQLSTATE HYC00 (дополнительная возможность не реализована) Если ODBC *2.x* приложение пытается значение SQL_USE_BOOKMARKS SQL_UB_ON.  
   
- Для ODBC 3 *.x* драйвера, диспетчер драйверов не проверяет ли *параметр* символах SQL_STMT_OPT_MIN и SQL_STMT_OPT_MAX — или больше, чем SQL_CONNECT_OPT_DRVR_START. Драйвер необходимо проверить это.
+ Для ODBC *3.x* драйвера, диспетчер драйверов не проверяет ли *параметр* символах SQL_STMT_OPT_MIN и SQL_STMT_OPT_MAX — или больше, чем SQL_CONNECT_OPT_DRVR_START. Драйвер необходимо проверить это.

@@ -20,12 +20,12 @@ ms.assetid: 45210682-cfea-4e5d-9951-bcf1cbe10f41
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f4277c6606392c91ffb3de40ace658cd68461f01
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bc0c1d981180c61452f97a01bc0aba6fdc2d81e3
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536272"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793734"
 ---
 # <a name="sqlstatistics-function"></a>SQLStatistics, функция
 **Соответствие стандартам**  
@@ -86,7 +86,7 @@ SQLRETURN SQLStatistics(
   
  SQL_ENSURE запросов, что драйвер безусловно получения статистики. (Драйверы, которые соответствуют стандарту Open Group и не поддерживаем расширения ODBC не будет поддерживать SQL_ENSURE.)  
   
- SQL_QUICK запросов, что драйвер получить количество ЭЛЕМЕНТОВ и СТРАНИЦАХ только в том случае, если они доступны с сервера. В этом случае драйвер не гарантирует актуальность значений. (Приложения, написанные в стандарте Open Group будет всегда получают значение SQL_QUICK из ODBC 3 *.x*-совместимые драйверы.)  
+ SQL_QUICK запросов, что драйвер получить количество ЭЛЕМЕНТОВ и СТРАНИЦАХ только в том случае, если они доступны с сервера. В этом случае драйвер не гарантирует актуальность значений. (Приложения, написанные в стандарте Open Group будет всегда получают значение SQL_QUICK из ODBC *3.x*-совместимые драйверы.)  
   
 ## <a name="returns"></a>Возвращает  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR, or SQL_INVALID_HANDLE.  
@@ -126,9 +126,9 @@ SQLRETURN SQLStatistics(
 > [!NOTE]  
 >  Дополнительные сведения о общего использования, аргументы и возвращаемые данные функций каталога ODBC, см. в разделе [функций каталога](../../../odbc/reference/develop-app/catalog-functions.md).  
   
- Следующие столбцы были переименованы для ODBC 3 *.x*. Изменения имен столбцов не влияют на обратную совместимость так, как выполнить привязку приложения, номер столбца.  
+ Следующие столбцы были переименованы для ODBC *3.x*. Изменения имен столбцов не влияют на обратную совместимость так, как выполнить привязку приложения, номер столбца.  
   
-|Столбец ODBC 2.0|ODBC 3 *.x* столбца|  
+|Столбец ODBC 2.0|ODBC *3.x* столбца|  
 |---------------------|-----------------------|  
 |TABLE_QUALIFIER|TABLE_CAT|  
 |TABLE_OWNER|TABLE_SCHEM|  

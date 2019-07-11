@@ -17,12 +17,12 @@ ms.assetid: add88e48-ada3-4c0c-a5ac-e78903d3ff41
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b81acf6c60bd11e03a598e349e145dbf72e174b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 76846a5027ff5229997151b36a93b1ea553ddbc8
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63026953"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793217"
 ---
 # <a name="bookmark-c-data-type"></a>Тип данных C Bookmark
 Тип данных C закладки позволяет приложению извлекать закладку. Типы закладок C используются только для извлечения значения закладки, которые могут быть переменную длину; они не должны преобразовываться в другие типы данных. Приложение извлекает из 0 столбец результирующего набора с закладки **SQLBulkOperations** (с помощью операции SQL_ADD), **SQLFetch**, **SQLFetchScroll**, или **SQLGetData**. Дополнительные сведения см. в разделе [закладки](../../../odbc/reference/develop-app/bookmarks-odbc.md).  
@@ -30,7 +30,7 @@ ms.locfileid: "63026953"
  В следующей таблице перечислены значения *CType* для типа данных C закладку, введите тип данных ODBC C, который реализует тип данных C закладки и определение этих данных из SQL. З.  
   
 > [!NOTE]
->  Тип данных SQL_C_BOOKMARK является устаревшим. ODBC 3 *.x* приложения не должны использовать SQL_C_BOOKMARK. ODBC 3 *.x* драйверы должны поддерживать SQL_C_BOOKMARK только в том случае, если они хотят работать с ODBC 2. *x* приложений, которые ее используют. Диспетчер драйверов сопоставляет SQL_C_VARBOOKMARK SQL_C_BOOKMARK в том случае, когда приложение работает с ODBC 2. *x* драйвера.  
+>  Тип данных SQL_C_BOOKMARK является устаревшим. ODBC *3.x* приложения не должны использовать SQL_C_BOOKMARK. ODBC *3.x* драйверы должны поддерживать SQL_C_BOOKMARK только в том случае, если они хотят работать с ODBC *2.x* приложений, которые ее используют. Приложения, работающего с ODBC Driver Manager сопоставляет SQL_C_VARBOOKMARK SQL_C_BOOKMARK *2.x* драйвера.  
   
 |Идентификатор типа C|Определение типа ODBC C|Тип C|  
 |-----------------------|--------------------|------------|  

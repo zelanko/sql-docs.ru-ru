@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 03ca95fad4f6e88c22edb612441a9eb4ea986bbb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 961878494958f0f7ef5d1814c0836a98f5da5682
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66462526"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716576"
 ---
 # <a name="sysdmexecrequests-transact-sql"></a>sys.dm_exec_requests (Transact-SQL)
 
@@ -89,8 +89,8 @@ ms.locfileid: "66462526"
 |group_id|**int**|Идентификатор группы рабочей нагрузки, которой принадлежит этот запрос. Не допускает значение NULL.|  
 |query_hash|**binary(8)**|Двоичное хэш-значение рассчитывается для запроса и используется для идентификации запросов с аналогичной логикой. Можно использовать хэш запроса для определения использования статистических ресурсов для запросов, которые отличаются только своими литеральными значениями.|  
 |query_plan_hash|**binary(8)**|Двоичное хэш-значение рассчитывается для плана выполнения запроса и используется для идентификации аналогичных планов выполнения запросов. Можно использовать хэш плана запроса для нахождения совокупной стоимости запросов со схожими планами выполнения.|  
-|statement_sql_handle|**varbinary(64)**|**Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Дескриптор SQL отдельный запрос. |  
-|statement_context_id|**bigint**|**Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Необязательный внешний ключ к sys.query_context_settings. |  
+|statement_sql_handle|**varbinary(64)**|**Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Дескриптор SQL отдельный запрос.<br /><br />Этот столбец равен NULL, если запрос Store не включена для базы данных. |  
+|statement_context_id|**bigint**|**Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Необязательный внешний ключ к sys.query_context_settings.<br /><br />Этот столбец равен NULL, если запрос Store не включена для базы данных. |  
 |dop |**int** |**Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Степень параллелизма запроса. |  
 |parallel_worker_count |**int** |**Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Количество зарезервированных параллельных рабочих процессов в случае параллельных запросов.  |  
 |external_script_request_id |**uniqueidentifier** |**Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Идентификатор запроса внешнего скрипта, связанного с текущим запросом. |  

@@ -20,25 +20,25 @@ ms.assetid: 2a825ba7-7942-4c23-bcdb-c80dc12f8c86
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dbdd2038bc217a7ca2a2efe08940c03c5da5d8f0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9e0c2a9c367df9cd71d68d73ff676c8df915237b
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62985237"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793885"
 ---
 # <a name="sqlsetscrolloptions-function"></a>Функция SQLSetScrollOptions
 **Соответствие стандартам**  
  Представленные версии: Соответствие стандартам 1.0 ODBC: Устарело  
   
  **Сводка**  
- В ODBC 3 *.x*, функция ODBC 2.0 **SQLSetScrollOptions** был заменен классом вызовы **SQLGetInfo** и **SQLSetStmtAttr**.  
+ В ODBC *3.x*, функция ODBC 2.0 **SQLSetScrollOptions** был заменен классом вызовы **SQLGetInfo** и **SQLSetStmtAttr**.  
   
 > [!NOTE]
->  Дополнительные сведения о что диспетчер драйверов сопоставляет эту функцию, чтобы при ODBC 2 *.x* при работе с ODBC 3 *.x* драйвера, см. в разделе [устаревшей функции сопоставления](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)в приложение ж Рекомендации по драйверов для обеспечения обратной совместимости.  
+>  Дополнительные сведения о что диспетчер драйверов сопоставляет эту функцию, чтобы при ODBC *2.x* при работе с ODBC *3.x* драйвера, см. в разделе [устаревшей функции сопоставления](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)в приложение ж Рекомендации по драйверов для обеспечения обратной совместимости.  
 > 
 > [!NOTE]
->  Когда диспетчер драйверов сопоставляет **SQLSetScrollOptions** для приложения, работа с ODBC 3 *.x* драйвер, который не поддерживает **SQLSetScrollOptions**, драйвер Диспетчер задает параметр инструкции SQL_ROWSET_SIZE, атрибут не SQL_ATTR_ROW_ARRAY_SIZE инструкции к *RowsetSize* аргумента в **SQLSetScrollOption**. В результате **SQLSetScrollOptions** не может использоваться приложением, при получении нескольких строк путем вызова **SQLFetch** или **SQLFetchScroll**. Он может использоваться только в том случае, если получение несколько строк с помощью вызова **SQLExtendedFetch**.  
+>  Когда диспетчер драйверов сопоставляет **SQLSetScrollOptions** для приложения, работа с ODBC *3.x* драйвер, который не поддерживает **SQLSetScrollOptions**, драйвер Диспетчер задает параметр инструкции SQL_ROWSET_SIZE, атрибут не SQL_ATTR_ROW_ARRAY_SIZE инструкции к *RowsetSize* аргумента в **SQLSetScrollOption**. В результате **SQLSetScrollOptions** не может использоваться приложением, при получении нескольких строк путем вызова **SQLFetch** или **SQLFetchScroll**. Он может использоваться только в том случае, если получение несколько строк с помощью вызова **SQLExtendedFetch**.  
   
 ## <a name="remarks"></a>Примечания  
  Если приложение выполняется в 64-разрядной операционной системе, см. в разделе [сведения о ODBC 64-разрядном](../../../odbc/reference/odbc-64-bit-information.md).  

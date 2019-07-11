@@ -16,12 +16,12 @@ ms.assetid: c9fa81b1-6c81-4c11-927b-fab16301a8f5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6b38446a96f29006356f0ebf083a382fff4fb50f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f2201be33df4346ab2afa812828ab9655b0ed2be
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63266581"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793293"
 ---
 # <a name="replicate-partitioned-tables-and-indexes"></a>Репликация секционированных таблиц и индексов
   Секционирование делает большие таблицы и индексы более управляемыми, так как позволяет быстро и эффективно получать доступ к подмножествам данных и управлять ими, при этом сохраняя целостность всей коллекции данных. Дополнительные сведения см. в разделе [Partitioned Tables and Indexes](../../partitions/partitioned-tables-and-indexes.md). Репликация поддерживает секционирование, предоставляя набор свойств, которые указывают, как работать с секционированными таблицами и индексами.  
@@ -70,9 +70,9 @@ ms.locfileid: "63266581"
 ### <a name="enabling-partition-switching"></a>Включение переключения секций  
  Следующие свойства публикации транзакций позволяют пользователям управлять переключением секций в реплицируемой среде.  
   
--   **@allow_partition_switch** , если значение `true`, SWITCH PARTITION можно выполнять в базе данных публикации.  
+-   **\@allow_partition_switch**, когда значение `true`, SWITCH PARTITION можно выполнять в базе данных публикации.  
   
--   **@replicate_partition_switch** определяет, реплицировать ли инструкцию DDL SWITCH PARTITION на подписчик. Этот параметр доступен, только если **@allow_partition_switch** присваивается `true`.  
+-   **\@replicate_partition_switch** определяет, должны ли инструкцию SWITCH PARTITION DDL реплицироваться на подписчики. Этот параметр доступен, только если  **\@allow_partition_switch** присваивается `true`.  
   
  Эти свойства можно задать с помощью хранимой процедуры [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) при создании публикации или с помощью процедуры [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql) после создания публикации. Как уже отмечалось, репликация слиянием не поддерживает переключение секций. Чтобы выполнить команду SWITCH PARTITION для таблицы, для которой включена репликация слиянием, удалите эту таблицу из публикации.  
   

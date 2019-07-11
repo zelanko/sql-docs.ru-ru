@@ -17,15 +17,15 @@ ms.assetid: a8fcdd00-6cb3-4871-9489-6018b3d0d65f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4d425a6896a64f06bf1610ed8f6be87dd60af25d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b4582a99797d5f6035f6d5d639514c5a6fdd572d
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62658187"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67794057"
 ---
 # <a name="new-features"></a>Новые возможности
-Следующие новые функциональные возможности представлена в ODBC 3. *x*. ODBC 3. *x* приложение, которое работает с ODBC 2 *.x* драйвер не сможете использовать эту функцию. ODBC 3. *x* диспетчер драйверов не удается сопоставить эти возможности при работе с ODBC 2 *.x* драйвера.  
+Следующие новые функциональные возможности был введен в ODBC *3.x*. ODBC *3.x* приложение, которое работает с ODBC *2.x* драйвер не сможете использовать эту функцию. ODBC *3.x* диспетчер драйверов не удается сопоставить эти возможности при работе с ODBC *2.x* драйвера.  
   
 -   Функции, принимающие дескриптор обрабатывать как аргумент. **SQLSetDescField**, **SQLGetDescField**, **SQLSetDescRec**, **SQLGetDescRec**, и **SQLCopyDesc**.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "62658187"
   
 -   Именованные параметры.  
   
--   Любой из ODBC 3. *x*-конкретных **SQLGetInfo** параметры. (Если ODBC 3. *x* приложение, которое работает с ODBC 2. *x* драйвер вызывает SQL_XXX_CURSOR_ATTRIBUTES1 типы сведений, которые были заменены несколько ODBC 2. *x* типы информации, возможно, некоторые сведения о надежных, но некоторые могут быть ненадежными. Дополнительные сведения см. в разделе [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md).)  
+-   Любой из ODBC *3.x*-конкретных **SQLGetInfo** параметры. (Если ODBC *3.x* приложение, которое работает с ODBC *2.x* драйвер вызывает SQL_XXX_CURSOR_ATTRIBUTES1 типы сведений, которые были заменены несколько ODBC *2.x* типы сведений, некоторые данные могут быть надежных, но некоторые могут быть ненадежными. Дополнительные сведения см. в разделе [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md).)  
   
 -   Смещения привязки.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "62658187"
   
 -   Использование **SQLDescribeCol** и **SQLColAttribute** на столбец 0.  
   
--   Использование любой ODBC 3. *x*-атрибуты конкретного столбца в вызове **SQLColAttribute**.  
+-   Использование любой ODBC *3.x*-атрибуты конкретного столбца в вызове **SQLColAttribute**.  
   
 -   Использование нескольких дескрипторов среды.  
   

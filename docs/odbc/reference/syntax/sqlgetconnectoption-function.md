@@ -20,22 +20,22 @@ ms.assetid: 59cde899-7957-4b5e-8677-f34d3b859bfd
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 30d91302161b236cee5634196bea33f61411f046
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 947a7ea107e334eb393248f7d368fe958e6229c0
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63259569"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792583"
 ---
 # <a name="sqlgetconnectoption-function"></a>Функция SQLGetConnectOption
 **Соответствие стандартам**  
  Представленные версии: Соответствие стандартам 1.0 ODBC: Устарело  
   
  **Сводка**  
- В ODBC 3 *.x*, ODBC 2 *.x* функция **SQLGetConnectOption** был заменен классом **SQLGetConnectAttr**. Дополнительные сведения см. в разделе [SQLGetConnectAttr](../../../odbc/reference/syntax/sqlgetconnectattr-function.md).  
+ В ODBC *3.x*, ODBC *2.x* функция **SQLGetConnectOption** был заменен классом **SQLGetConnectAttr**. Дополнительные сведения см. в разделе [SQLGetConnectAttr](../../../odbc/reference/syntax/sqlgetconnectattr-function.md).  
   
 > [!NOTE]
->  Дополнительные сведения о что диспетчер драйверов сопоставляет эту функцию, чтобы при ODBC 2 *.x* при работе с ODBC 3 *.x* драйвера, см. в разделе [устаревшей функции сопоставления](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)в приложение ж Рекомендации по драйверов для обеспечения обратной совместимости.  
+>  Дополнительные сведения о что диспетчер драйверов сопоставляет эту функцию, чтобы при ODBC *2.x* при работе с ODBC *3.x* драйвера, см. в разделе [устаревшей функции сопоставления](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)в приложение ж Рекомендации по драйверов для обеспечения обратной совместимости.  
 > 
 > [!NOTE]
 >  Атрибут SQL_ASYNC_DBC_FUNCTION_ENABLE, представленные в ODBC 3.8 не поддерживается в **SQLGetConnectOption**. Приложения, использующие асинхронной операции на дескрипторе соединений необходимо использовать **SQLGetConnectAttr**.  

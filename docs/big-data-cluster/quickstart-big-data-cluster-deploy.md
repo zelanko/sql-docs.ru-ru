@@ -1,32 +1,32 @@
 ---
-title: Краткое руководство по развертыванию
+title: Скрипт развертывания
 titleSuffix: SQL Server big data clusters
 description: Пошаговое руководство по развертыванию кластеров SQL Server 2019 больших данных (Предварительная версия) в службе Azure Kubernetes (AKS).
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 05/22/2019
-ms.topic: quickstart
+ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: d1b8c595512d3268e0e04482d464f6c19ee01234
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0254b76b0845ff5f913d2d0ab69324ddd0072923
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798735"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728781"
 ---
-# <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Краткое руководство. Развертывание кластера больших данных SQL Server в службе Azure Kubernetes (AKS)
+# <a name="deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Развертывание кластера больших данных SQL Server в службе Azure Kubernetes (AKS)
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-В этом кратком руководстве используется пример сценария развертывания для развертывания кластера SQL Server 2019 больших данных (Предварительная версия) для службы Azure Kubernetes (AKS). 
+В этом руководстве используется пример сценария развертывания для развертывания кластера SQL Server 2019 больших данных (Предварительная версия) для службы Azure Kubernetes (AKS). 
 
 > [!TIP]
 > Только один вариант для размещения Kubernetes для больших данных кластера AKS. Дополнительные сведения о других вариантах развертывания, как для настройки развертывания параметры, см. в разделе [развертывание больших данных в SQL Server кластеров Kubernetes](deployment-guidance.md).
 
-Развертывание кластера больших данных по умолчанию, используемый здесь состоит из экземпляра SQL Master, один вычислительный экземпляр пула, два экземпляра пула данных и два экземпляра пула хранения. Данные сохраняются с помощью постоянных томах Kubernetes, использующих классы хранения по умолчанию AKS. Конфигурация по умолчанию, в этом кратком руководстве подходит для сред разработки и тестирования.
+Развертывание кластера больших данных по умолчанию, используемый здесь состоит из экземпляра SQL Master, один вычислительный экземпляр пула, два экземпляра пула данных и два экземпляра пула хранения. Данные сохраняются с помощью постоянных томах Kubernetes, использующих классы хранения по умолчанию AKS. В этом учебнике используется конфигурация по умолчанию подходит для сред разработки и тестирования.
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
@@ -50,7 +50,7 @@ az login
 
 ## <a name="download-the-deployment-script"></a>Скачайте сценарий развертывания
 
-В этом кратком руководстве, позволяет автоматизировать создание кластера больших данных в AKS с помощью скрипта python **развертывание — sql больших data-aks.py**. Если вы уже установили python для **mssqlctl**, вы должны иметь возможность успешного выполнения скрипта в этом кратком руководстве. 
+Этот учебник позволяет автоматизировать создание кластера больших данных в AKS с помощью скрипта python **развертывание — sql больших data-aks.py**. Если вы уже установили python для **mssqlctl**, можно успешно запустить скрипт в этом руководстве. 
 
 В строке bash, PowerShell, Windows или Linux выполните следующую команду, чтобы скачать скрипт развертывания из репозитория GitHub.
 

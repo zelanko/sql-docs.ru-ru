@@ -4,19 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: Разверните скрипт Python или R в качестве приложения в кластере SQL Server 2019 больших данных (Предварительная версия).
 author: jeroenterheerdt
 ms.author: jterh
-ms.reviewer: jroth
+ms.reviewer: mikeray
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: 2ace3ee9cd17240890a9da901297c731ced4016c
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 2309fd7a318222ef337815ddf511359f5b305e26
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67681592"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729287"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-big-data-cluster-preview"></a>Развертывание приложения в кластере SQL Server больших данных (Предварительная версия)
 
@@ -38,7 +37,7 @@ ms.locfileid: "67681592"
 - MLeap обслуживания
 - Службы SQL Server Integration Services (SSIS)
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 - [Кластер SQL Server 2019 больших данных](deployment-guidance.md)
 - [Программа командной строки mssqlctl](deploy-install-mssqlctl.md)

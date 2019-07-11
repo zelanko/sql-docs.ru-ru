@@ -2,19 +2,20 @@
 title: Справочник по отладки bdc mssqlctl
 titleSuffix: SQL Server big data clusters
 description: Справочная статья по команды отладки mssqlctl bdc.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: dde99490805ec0f78c9acbaa3875f1ae1406e77f
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 20257039a40594cd592bcc4d4f6050027d8858ea
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67394346"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728577"
 ---
 # <a name="mssqlctl-bdc-debug"></a>mssqlctl bdc отладки
 

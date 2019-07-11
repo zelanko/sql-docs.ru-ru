@@ -2,20 +2,20 @@
 title: Прием данных с помощью заданий Spark
 titleSuffix: SQL Server big data clusters
 description: Этом руководстве показано, как прием данных в пул данных с помощью заданий Spark в Azure Data Studio кластера больших данных SQL Server 2019 (Предварительная версия).
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: shivsood
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: 56715b8134ca5427807bb287124d7766aefb1b3b
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 1d52a88a1742cdf1dbd83bebe52ebeb6cc277033
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388557"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727434"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>Учебник. Прием данных в пул данных SQL Server с помощью заданий Spark
 

@@ -2,19 +2,20 @@
 title: пул носителей подключения mssqlctl bdc ссылки
 titleSuffix: SQL Server big data clusters
 description: Справочная статья по команды подключения mssqlctl bdc пула носителей.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: cf6012b6c700afd6ee0eca763df0961f088a3be4
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 4204e87e96fd0d91a9bfbf64813583ef92d3202b
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67394246"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727478"
 ---
 # <a name="mssqlctl-bdc-storage-pool-mount"></a>подключения пула носителей mssqlctl bdc
 

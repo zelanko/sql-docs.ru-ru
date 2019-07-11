@@ -4,18 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: Разверните скрипт Python или R в качестве приложения в кластере SQL Server 2019 больших данных (Предварительная версия).
 author: jeroenterheerdt
 ms.author: jterh
-ms.reviewer: jroth
+ms.reviewer: mikeray
 manager: jroth
 ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0b0d76db3813e0a399f1ece841d729711743cbd9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ba56ebb90d09866b7860c5f29dd2a26cf525fd9b
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801907"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729311"
 ---
 # <a name="how-to-use-vs-code-to-deploy-applications-to-sql-server-big-data-clusters"></a>Как использовать VS Code для развертывания приложений к кластерам больших данных в SQL Server
 
@@ -128,7 +128,7 @@ VS Code предлагает ввести соответствующую кон�
 - Выходные параметры
 - ссылки
   - swagger
-  - подробности
+  - details
 
 Если щелкнуть `Links`, вы увидите, что доступ к `swagger.json` развернутого приложения таким образом, можно написать собственные клиенты, которые вызывают приложения:
 

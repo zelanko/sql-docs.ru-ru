@@ -2,19 +2,20 @@
 title: Настройка развертывания
 titleSuffix: SQL Server big data clusters
 description: Дополнительные сведения о настройке развертывания в кластере больших данных с файлами конфигурации.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ba2587c2effdc3242e6032a0137bbf43ac153f1c
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 19654422bcc57f2ad00b9ab8170d163f848f188b
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388801"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728891"
 ---
 # <a name="configure-deployment-settings-for-big-data-clusters"></a>Настройка параметров развертывания для больших данных кластеров
 

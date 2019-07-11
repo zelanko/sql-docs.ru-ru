@@ -20,12 +20,12 @@ ms.assetid: bb2d9f21-bda0-4e50-a8be-f710db660034
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c49e7fd827cfd48df07e5e5a01367977504f4511
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5f3fe596428450795426537f5c2f5913a6c83a46
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536263"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793741"
 ---
 # <a name="sqlspecialcolumns-function"></a>SQLSpecialColumns, функция
 **Соответствие стандартам**  
@@ -151,9 +151,9 @@ SQLRETURN SQLSpecialColumns(
   
  **SQLSpecialColumns** возвращает результаты в виде стандартных результирующий набор, упорядоченный по области.  
   
- Следующие столбцы были переименованы для ODBC 3 *.x*. Изменения имен столбцов не влияют на обратную совместимость так, как выполнить привязку приложения, номер столбца.  
+ Следующие столбцы были переименованы для ODBC *3.x*. Изменения имен столбцов не влияют на обратную совместимость так, как выполнить привязку приложения, номер столбца.  
   
-|Столбец ODBC 2.0|ODBC 3 *.x* столбца|  
+|Столбец ODBC 2.0|ODBC *3.x* столбца|  
 |---------------------|-----------------------|  
 |PRECISION|COLUMN_SIZE|  
 |LENGTH|BUFFER_LENGTH|  

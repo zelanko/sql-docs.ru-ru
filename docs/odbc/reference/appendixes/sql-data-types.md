@@ -15,12 +15,12 @@ ms.assetid: 1b22f985-f5e4-4779-87eb-e43329a442b1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 623ac38791eebc6db84380dfadd499651af938af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 56caa8131cea834b88eeb338bb05d20c25349ea9
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63280914"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67794164"
 ---
 # <a name="sql-data-types"></a>Типы данных SQL
 Каждой СУБД определяет собственные типы SQL. Каждый ODBC-драйвер предоставляет только эти типы данных SQL, который определяет связанные СУБД. Сведения о том, как драйвер сопоставляет типов СУБД SQL, чтобы идентификаторы типа SQL, определенных для ODBC и драйвером сопоставление типов СУБД SQL свои собственные идентификаторы типа специфические для драйвера SQL возвращается путем вызова **SQLGetTypeInfo**. Драйвер также возвращает типы данных SQL при описании типы данных столбцов и параметров с помощью вызовов **SQLColAttribute**, **SQLColumns**, **SQLDescribeCol**, **SQLDescribeParam**, **SQLProcedureColumns**, и **SQLSpecialColumns**.  
@@ -86,7 +86,7 @@ ms.locfileid: "63280914"
   
  [5] в зависимости от реализации, может быть точность SQL_FLOAT, 24 или 53: совпадает ли это 24, тип данных SQL_FLOAT SQL_REAL; Если это 53, тип данных SQL_FLOAT — так же, как SQL_DOUBLE.  
   
- [6] в ODBC 3 *.x*, типы данных date, time и timestamp SQL: SQL_TYPE_DATE, SQL_TYPE_TIME и SQL_TYPE_TIMESTAMP, соответственно; в ODBC 2. *x*, типы данных: SQL_DATE, SQL_TIME и SQL_TIMESTAMP.  
+ [6] в ODBC *3.x*, типы данных date, time и timestamp SQL: SQL_TYPE_DATE, SQL_TYPE_TIME и SQL_TYPE_TIMESTAMP, соответственно; в ODBC *2.x*, типы данных: SQL_DATE, SQL_TIME и SQL_ ОТМЕТКА ВРЕМЕНИ.  
   
  [7] Дополнительные сведения об интервальных типов данных SQL см. в разделе [интервальных типов данных](../../../odbc/reference/appendixes/interval-data-types.md) раздела ниже в этом приложении.  
   

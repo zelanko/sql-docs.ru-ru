@@ -16,16 +16,16 @@ helpviewer_keywords:
 - sys.dm_db_resource_stats
 - dm_db_resource_stats
 ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
-author: CarlRabeler
-ms.author: carlrab
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 074981f19f0eb74a7e7c7d4e82466957f0ff98b8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fdc778a34a513c2aca12da0dd0e1245e50dc5d6a
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63047061"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716273"
 ---
 # <a name="sysdmosjobobject-azure-sql-database"></a>sys.dm_os_job_object (база данных SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "63047061"
 |peak_job_memory_used_mb|**bigint**|Объем памяти в МБ, что все процессы в объект задания потратило использован, поскольку объект задания был создан.|
   
 ## <a name="permissions"></a>Разрешения  
-SQL управляемом экземпляре базы данных, требуется `VIEW SERVER STATE` разрешение. В базе данных SQL, требуется `VIEW DATABASE STATE` разрешение в базе данных.  
+SQL управляемом экземпляре базы данных, требуется `VIEW SERVER STATE` разрешение. В Базе данных SQL требуется соответствующее разрешение `VIEW DATABASE STATE`.  
  
 ## <a name="see-also"></a>См. также  
 

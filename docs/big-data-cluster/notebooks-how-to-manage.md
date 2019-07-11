@@ -2,20 +2,20 @@
 title: Управление записных книжек в Azure Data Studio
 titleSuffix: SQL Server big data clusters
 description: Сведения об управлении записных книжек в Azure Data Studio. Это включает в себя Открытие записных книжек, их сохранение и изменение подключения кластера больших данных.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: 9173c630514465914a31bb5b4c2999145884c78a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cf0041ee2beecb0864f196c4d13c7be309b40d17
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66790048"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727568"
 ---
 # <a name="how-to-manage-notebooks-in-azure-data-studio"></a>Как управлять записных книжек в Azure Data Studio
 

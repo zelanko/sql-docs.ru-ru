@@ -13,15 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_add_agent_profile
 ms.assetid: 5c246a33-2c21-4a77-9c2a-a2c9f0c5dda1
-author: CarlRabeler
-ms.author: carlrab
+author: mashamsft
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ab2d928770a8e10c04e03aa2ccb5f36374fe1227
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 2afaf37cc82ccfee3c5a85c2945a7998457a979d
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493607"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716629"
 ---
 # <a name="spaddagentprofile-transact-sql"></a>sp_add_agent_profile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ sp_add_agent_profile [ [ @profile_id= ] profile_id OUTPUT ]
   
  **0** обозначает системный профиль. **1** обозначает пользовательский профиль. Только пользовательские профили могут создаваться с помощью этой хранимой процедуры; поэтому единственным допустимым значением является **1**. Только [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создает системные профили.  
   
-`[ @description = ] 'description'` — Описание профиля. *Описание* — **nvarchar(3000)**, не имеет значения по умолчанию.  
+`[ @description = ] 'description'` — Описание профиля. *Описание* — **nvarchar(3000)** , не имеет значения по умолчанию.  
   
 `[ @default = ] default` Указывает, является ли профиль по умолчанию для *agent_type **.* *по умолчанию* — **бит**, значение по умолчанию **0**. **1** указывает, что при добавлении профиля станет профилем по умолчанию для агента, задаваемого аргументом *agent_type*.  
   

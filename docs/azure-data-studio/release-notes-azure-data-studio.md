@@ -10,17 +10,37 @@ ms.author: maghan
 manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 06/06/2019
-ms.openlocfilehash: 2b06e8476e10abc3a96ab6c6f2304ef81f225f02
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.date: 07/10/2019
+ms.openlocfilehash: 5e3aa3f0472b775f1dfbd13634228226e4e7e0c2
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67681619"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67794073"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Заметки о выпуске для Azure Data Studio
 
 **[Скачайте и установите последний выпуск!](download.md)**
+
+## <a name="july-2019"></a>Июль 2019 г.
+
+10 июля 2019 &nbsp;  /  &nbsp; версии: 1.9.0 
+
+&nbsp;
+
+| Изменить | Сведения |
+| :----- | :------ |
+| Версия расширения SentryOne планирование Explorer | Отправите значениями Microsoft партнера, SentryOne, их [Explorer планирование SentryOne расширение для Azure Data Studio](https://www.sentryone.com/products/sentryone-plan-explorer-extension-azure-data-studio). <br> Это бесплатное расширение, который предоставляет улучшенные плана диаграммы для запросов запуска студии данных Azure с алгоритмами оптимизированный макет и интуитивно понятный цветовое кодирование для быстрого определения самых дорогих операторы влияет на производительность запросов. Дополнительные сведения о расширении, ознакомьтесь с SentryOne в записи блога [здесь](https://sqlperformance.com/2019/07/sentryone/plan-explorer-extension-azure-data-studio). |
+| Новые возможности для сравнения схем | &bull; &nbsp; Поддержка файлов сравнения схем (. SCMP) <br/>&bull; &nbsp; Отмена поддержки сравнения схем <br/>&bull; &nbsp; Можно найти полный изменения [здесь](https://github.com/microsoft/azuredatastudio/issues?utf8=%E2%9C%93&q=is%3Aissue+milestone%3A%22July+2019+Release%22+label%3A%22Area%3A+Schema+Compare%22+is%3Aclosed+)|
+| Усовершенствования записной книжки | &bull; &nbsp; Поддержка plotly Python <br/>&bull; &nbsp; Открыть записную книжку из браузера <br/> &bull; &nbsp; Диалоговое окно управления пакетами Python <br/> &bull; &nbsp; Производительности и улучшения Markdown <br/> &bull; &nbsp; Сочетания клавиш обновления <br/>  &bull; &nbsp; Исправления ошибок и вспомогательные функции можно найти [здесь](https://github.com/microsoft/azuredatastudio/issues?utf8=%E2%9C%93&q=is%3Aissue+milestone%3A%22July+2019+Release%22+is%3Aclosed+label%3A%22Area%3A+Notebooks%22+) |
+| Поддержка SQL Server 2019 г. |  Этот выпуск включает поддержку дополнительных функций SQL Server 2019 большой кластер, данные в том числе: <br/> &bull; &nbsp; Таблица конечные точки службы в панели управления, в котором перечислены все ключевые службы в кластере. <br/> &bull; &nbsp; Записная книжка состояние кластера показано, как запрос и устранение неполадок состояния кластера для всех служб и модулей.| 
+| Обновленные языковые пакеты доступны| Доступны теперь 10 языковых пакетов в диспетчере расширений marketplace. Проще говоря поиск конкретного языка, с помощью расширения marketplace и установить. После установки выбранного языка, Azure Data Studio предложит перезагрузить с новым языком. |
+| Обновление SQL Server Profiler | Расширения профиля SQL Server был обновлен для включения новых функций, включая: <br/> &bull; &nbsp; Фильтрация по имени базы данных <br/> &bull; &nbsp; Затем скопируйте и вставьте поддержки <br/> &bull; &nbsp; Сохранить или загрузить фильтр <br/>Полный список улучшений для SQL Server Profiler расширения можно найти [здесь](https://github.com/microsoft/azuredatastudio/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aclosed+milestone%3A%22July+2019+Release%22+label%3A%22Area%3A+SQL+Profiler%22+).  |
+| Visual Studio Code может выпускать слияния 1.35 | Можно найти наиболее актуальных улучшений [здесь](https://code.visualstudio.com/updates/v1_35). |
+| Разрешенные ошибки и проблемы | В предыдущих версиях Azure Data Studio Если был выбран в базу данных пользователя при подключении из диалогового окна соединения, Результирующая запись обозревателя объектов была отнесена к области полностью к одной базе данных. Начиная с этого выпуска, что изменяется поведение, чтобы свойства уровня сервера также отображаются в обозревателе объектов. <br/> Полный список исправлений см. в разделе [ошибок и проблем на GitHub](https://github.com/microsoft/azuredatastudio/milestone/35?closed=1). |
+| &nbsp; | &nbsp; |
+
+
 
 ## <a name="june-2019"></a>2019 июня
 
@@ -34,7 +54,7 @@ ms.locfileid: "67681619"
 | Версия расширения администрирования базы данных для Windows | Это расширение запускает два наиболее часто используемых функций в SQL Server Management Studio из среды Studio данных Azure. Пользователей можно щелкнуть правой кнопкой мыши множество разные объекты (например, базы данных, таблицы, столбцы, представления и многое другое) и выберите свойства, чтобы открыть диалоговое окно свойств SSMS, для этого объекта. Кроме того пользователи могут щелкнуть правой кнопкой мыши базу данных и выбирать сформировать скрипты для запуска известное SSMS мастером создания скриптов. 
 | Усовершенствования схемы сравнения | &bull; &nbsp; Добавлено исключение или включение параметров <br/>&bull; &nbsp; Создать скрипт открывает скрипт после создания <br/>&bull; &nbsp; Удалить полосы прокрутки double  <br/>&bull; &nbsp; Улучшения форматирование и макет <br/>&bull; &nbsp; Можно найти полный изменения [здесь](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+label%3A%22Area%3A+Schema+Compare%22+is%3Aclosed)|
 | Перемещенный раздел сообщений собственную вкладку. | Когда пользователи запускали SQL-запросы, результаты и сообщения были на панелях с накоплением. Теперь они находятся в отдельных вкладках на одной панели, как и в среде SSMS. |
-| Усовершенствования SQL записной книжки | &bull; &nbsp; Пользователи теперь могут использовать свои собственные установки Python 3, Anaconda в записных книжках <br/>&bull; &nbsp; Несколько стабильность + исправления по размеру и окончания &bull; &nbsp; просмотреть полный список улучшений [здесь](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+is%3Aclosed+label%3A%22Area%3A+Notebooks%22)|
+| Усовершенствования SQL записной книжки | &bull; &nbsp; Пользователи теперь могут использовать свои собственные установки Python 3, Anaconda в записных книжках <br/>&bull; &nbsp; Несколько стабильность + исправления по размеру и окончания <br/> &bull; &nbsp; Просмотреть полный список улучшений [здесь](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+is%3Aclosed+label%3A%22Area%3A+Notebooks%22)|
 | Visual Studio Code может выпускать слияния 1.34 | Можно найти наиболее актуальных улучшений [здесь](https://code.visualstudio.com/updates/v1_34) |
 | Разрешенные ошибки и проблемы. | См. в разделе [ошибок и проблем на GitHub](https://github.com/microsoft/azuredatastudio/milestone/32?closed=1). |
 | &nbsp; | &nbsp; |

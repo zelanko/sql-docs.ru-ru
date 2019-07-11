@@ -1,6 +1,6 @@
 ---
-title: Функции, поддерживаемые различными выпусками SQL Server, служб Analysis Services | Документация Майкрософт
-ms.date: 06/25/2019
+title: Функции Analysis Services, поддерживаемые различными выпусками SQL Server | Документация Майкрософт
+ms.date: 07/10/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,14 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9947b10e01864f66bf26d6599e43814ab37dadc6
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 6d4f0cc16638963dbbbb091bc19cade36e45fe3b
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388210"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792550"
 ---
 # <a name="analysis-services-features-supported-by-sql-server-edition"></a>Выпуск SQL Server поддерживает функций служб Analysis Services
+
 [!INCLUDE[ssas-appliesto-sql2016-later](../includes/ssas-appliesto-sql2016-later.md)]
 
 В этой статье описываются функции, поддерживаемые различными выпусками SQL Server 2016, 2017 г., службы Analysis Services 2019 г. Ознакомительный выпуск поддерживает функции Enterprise edition.
@@ -50,7 +51,7 @@ ms.locfileid: "67388210"
   
 |Компонент|Enterprise|Standard|Web Edition|Express с дополнительными службами|Express с инструментами|Express|Разработчик|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
-|Полуаддитивные меры|Да|Нет <sup>1</sup>|||||Да|  
+|Полуаддитивные меры|Да|Не <sup> [1](#sameas)</sup>|||||Да|  
 |Иерархии|Да|Да|||||Да|  
 |Ключевые показатели эффективности|Да|Да|||||Да|  
 |перспективами|Да||||||Да|  
@@ -59,12 +60,12 @@ ms.locfileid: "67388210"
 |логика операций со временем|Да|Да|||||Да|  
 |Пользовательские свертки|Да|Да|||||Да|  
 |Куб обратной записи|Да|Да|||||Да|  
-|Измерения обратной записи|Да||||||Да|  
+|Измерения обратной записи|Да <sup>[2](#wb)</sup>||||||Да <sup>[2](#wb)</sup>|  
 |Ячейки обратной записи|Да|Да|||||Да|  
 |Детализация|Да|Да|||||Да|  
 |Расширенные типы иерархии (родители-потомки, неоднородные иерархии)|Да|Да|||||Да|  
 |Расширенные измерения (ссылочные измерения, измерения "многие ко многим")|Да|Да|||||Да|  
-|Связанные меры и измерения|Да|Да  <sup>2</sup> |||||Да|  
+|Связанные меры и измерения|Да|Да <sup> [3](#linkmd)</sup> |||||Да|  
 |Translations|Да|Да|||||Да|  
 |Aggregations|Да|Да|||||Да|  
 |Несколько секций|Да|Да, до 3|||||Да|  
@@ -80,8 +81,12 @@ ms.locfileid: "67388210"
 |Обработка в принудительном режиме|Да||||||Да|  
 |Выражения мер|Да||||||Да|  
   
- <sup>1</sup> Полуаддитивная мера LastChild поддерживается в выпуске Standard, а другие полуаддитивные меры, например None, FirstChild, FirstNonEmpty, LastNonEmpty, AverageOfChildren и ByAccount, не поддерживаются. Аддитивные меры, например Sum, Count, Min, Max, и неаддитивные меры (DistinctCount) поддерживаются во всех выпусках.  
-  <sup>2</sup> Выпуск Standard поддерживает связывания мер и измерений в одной базе данных, но не из других баз данных или экземпляров.
+<a name="sameas">[1] </a> Полуаддитивная мера LastChild поддерживается в выпуске Standard edition, но другие полуаддитивные меры, например None, FirstChild, FirstNonEmpty, LastNonEmpty, AverageOfChildren и ByAccount, не поддерживаются. Аддитивные меры, например Sum, Count, Min, Max, и неаддитивные меры (DistinctCount) поддерживаются во всех выпусках. 
+
+<a name="wb">[2] </a> Измерения обратной записи не поддерживаются в SQL Server Analysis Services 2019 и более поздних версий.
+ 
+<a name="linkmd">[3] </a> Выпуск standard поддерживает связывания мер и измерений в той же базе данных, но не из других баз данных или экземпляров.
+  
   
 ## <a name="power-pivot-for-sharepoint"></a>Power Pivot для SharePoint  
   
@@ -95,6 +100,9 @@ ms.locfileid: "67388210"
 |Веб-каналы данных Power Pivot|Да||||||Да|  
   
 ## <a name="data-mining"></a>Интеллектуальный анализ данных  
+
+> [!NOTE]
+> Интеллектуальный анализ данных составляет [устаревшим](analysis-services-backward-compatibility-sql2017.md#deprecated-features) в SQL Server Analysis Services 2017.
   
 |Имя функции|Enterprise|Standard|Web Edition|Express с дополнительными службами|Express с инструментами|Express|Разработчик|  
 |------------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  

@@ -21,12 +21,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b006e2795a79f9a7cbaf3686113bb2f1c7ad8172
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8aae950e39dd66bb08a2adbc6225358c75ad4d37
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63049741"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67730167"
 ---
 # <a name="syscryptproperties-transact-sql"></a>sys.crypt_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,9 +39,9 @@ ms.locfileid: "63049741"
 |**class_desc**|**nvarchar(60)**|Описание класса, для которого существует свойство.<br /><br /> OBJECT_OR_COLUMN<br /> ASSEMBLY|  
 |**major_id**|**int**|Идентификатор предмета, для которого существует свойство, интерпретируемое согласно классу|  
 |**отпечаток**|**varbinary(32)**|Хэш SHA-1 используемого сертификата или асимметричного ключа.|  
-|**crypt_type**|**char(4)**|Тип шифрования.<br /><br /> SPVC = Зашифрован закрытым ключом сертификата<br /><br /> SPVC = Зашифрован асимметричным закрытым ключом<br /><br /> CPVC = Подпись закрытым ключом сертификата<br /><br /> CPVA = Подпись закрытым асимметричным ключом|  
+|**crypt_type**|**char(4)**|Тип шифрования.<br /><br /> SPVC = подпись закрытым ключом сертификата<br /><br /> SPVA = подписано асимметричным закрытым ключом<br /><br /> CPVC = Подпись закрытым ключом сертификата<br /><br /> CPVA = Подпись закрытым асимметричным ключом|  
 |**crypt_type_desc**|**nvarchar(60)**|Описание типа шифрования.<br /><br /> SIGNATURE BY CERTIFICATE<br /><br /> SIGNATURE BY ASYMMETRIC KEY<br /><br /> SIGNATURE BY CERTIFICATE<br /><br /> SIGNATURE BY ASYMMETRIC KEY|  
-|**crypt_property**|**varbinary(max)**|Подписанные или зашифрованные биты.|  
+|**crypt_property**|**varbinary(max)**|Подписанные или зашифрованные биты. Для подписанного модуля это биты подписи модуля.|  
   
 ## <a name="permissions"></a>Разрешения  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

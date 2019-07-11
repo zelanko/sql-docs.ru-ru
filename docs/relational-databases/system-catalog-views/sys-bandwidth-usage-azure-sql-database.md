@@ -16,16 +16,16 @@ helpviewer_keywords:
 - sys.bandwidth_usage
 - bandwidth_usage
 ms.assetid: 43ed8435-f059-4907-b5c0-193a258b394a
-author: CarlRabeler
-ms.author: carlrab
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: e3432bbf535b329f539b9404cb0f5b5b87d38542
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 4b7534a806a856dee922ead1055da6a7567a4d8c
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035715"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716600"
 ---
 # <a name="sysbandwidthusage-azure-sql-database"></a>sys.bandwidth_usage (база данных SQL Azure)
 
@@ -44,7 +44,7 @@ ms.locfileid: "56035715"
 |-----------------|-----------------|  
 |**time**|Время (час) использования пропускной полосы. Строки в этом представлении указаны для каждого часа. Например, 2009-09-19 02:00:00.000 означает, что пропускная способность использовалась 19 сентября 2009 г. c 02:00 до 03:00.|  
 |**database_name**|Имя базы данных, использовавшей полосу пропускания.|  
-|**direction**|Тип полосы пропускания, которая была использована. Одно из следующих значений.<br /><br /> Входящие данные: Данные, которые передаются в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Исходящий трафик: Данные, которые передаются из [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
+|**direction**|Тип полосы пропускания, которая была использована. Одно из следующих значений.<br /><br /> Входящие данные: Данные, которые перемещаются в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Исходящий трафик: Данные, которые перемещаются из [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
 |**class**|Класс полосы пропускания, которая была использована. Одно из следующих значений.<br />Внутренняя: Данные, которые перемещаются внутри платформы Azure.<br />Внешние: Данные, которые перемещаются из платформы Azure.<br /><br /> Этот класс возвращается, только если база данных участвует в связи непрерывного копирования между регионами ([!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)]). Если для заданной базы данных не участвует в связи непрерывного копирования, «Interlink» строки не возвращаются. Дополнительные сведения см. в подразделе «Замечания» далее в этом разделе.|  
 |**time_period**|Период времени, которого происходило потребление — пик или ставить. The Peak time is based on the region in which the server was created. Например, если сервер был создан в регионе «US_Northwest», параметр Peak определяется как время от 10:00 до 18:00. по тихоокеанскому времени.|  
 |**количество**|Объем использованной полосы пропускания в килобайтах (КБ).|  

@@ -4,18 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: В этой статье описывается настройка HDFS, распределение по уровням для монтажа внешней системы S3 файл в HDFS в кластере SQL Server 2019 больших данных (Предварительная версия).
 author: nelgson
 ms.author: negust
-ms.reviewer: jroth
+ms.reviewer: mikeray
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f26fcfa24da5b9f22ddab1e76c2f80a0d24fae8d
-ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
+ms.openlocfilehash: d782a2c8727f053b569c77af525795d81afebbc7
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400031"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728747"
 ---
 # <a name="how-to-mount-s3-for-hdfs-tiering-in-a-big-data-cluster"></a>Как S3 подключения для HDFS, распределение по уровням в кластере больших данных
 

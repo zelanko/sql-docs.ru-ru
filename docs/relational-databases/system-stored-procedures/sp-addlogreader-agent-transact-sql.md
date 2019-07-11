@@ -13,15 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addlogreader_agent
 ms.assetid: d83096b9-96ee-4789-bde0-940d4765b9ed
-author: stevestein
-ms.author: sstein
+author: mashamsft
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7b3968f7c196c63ed66b98f19acd1dcf4d972336
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 7aa2fc93806bdbce244643d78930c7c9c113bf01
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494346"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716619"
 ---
 # <a name="spaddlogreaderagent-transact-sql"></a>sp_addlogreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ sp_addlogreader_agent [ @job_login = ] 'job_login'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @job_login = ] 'job_login'` Имя входа для [!INCLUDE[msCoName](../../includes/msconame-md.md)] учетной записи Windows, под которой запускается агент. *job_login* — **nvarchar(257)**, со значением по умолчанию NULL. Для соединения агента с распространителем всегда используется эта учетная запись Windows.  
+`[ @job_login = ] 'job_login'` Имя входа для [!INCLUDE[msCoName](../../includes/msconame-md.md)] учетной записи Windows, под которой запускается агент. *job_login* — **nvarchar(257)** , со значением по умолчанию NULL. Для соединения агента с распространителем всегда используется эта учетная запись Windows.  
   
 > [!NOTE]
 >  Для не - [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателей, это должно быть то же имя входа, указанное в [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md).  

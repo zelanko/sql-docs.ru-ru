@@ -2,20 +2,20 @@
 title: Используйте curl для загрузки данных в HDFS | Документация Майкрософт
 titleSuffix: SQL Server big data clusters
 description: Используйте curl для загрузки данных в HDFS в кластерах SQL Server 2019 больших данных.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: d1e8da7430048381a320936abef35cdd64bad134
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 40907155c819e4a1c6f9117a3b345fa8376efeb2
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66800707"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729013"
 ---
 # <a name="use-curl-to-load-data-into-hdfs-on-sql-server-big-data-clusters"></a>Используйте curl для загрузки данных в HDFS в кластерах больших данных в SQL Server
 

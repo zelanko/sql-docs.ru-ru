@@ -4,18 +4,17 @@ titleSuffix: SQL Server big data clusters
 description: Используйте PySpark для обучения и создания моделей машинного обучения с помощью Spark в кластерах больших данных SQL Server (Предварительная версия). Экспорт с MLeap, а затем в SQL Server для создания модели с помощью Java.
 author: lgongmsft
 ms.author: lgong
-ms.manager: craigg
-ms.reviewer: jroth
+ms.reviewer: mikeray
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 709d74ef33ab6b54ac688763b006d66e4210006d
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.openlocfilehash: aa4c31eca725e8e662937259f078cf00a3441915
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67412885"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727375"
 ---
 # <a name="create-export-and-score-spark-machine-learning-models-on-sql-server-big-data-clusters"></a>Создание, экспорт и оценка моделей машинного обучения Spark в кластерах больших данных в SQL Server
 

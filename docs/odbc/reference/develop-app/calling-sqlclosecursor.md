@@ -17,12 +17,12 @@ ms.assetid: ef448c39-a9ad-4f07-8ef3-65bd4cef672a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7ee139dd652204c750c99d8bad8ab2b17c7c1ba1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: da5a674f86228c71a26e621936dc711a688a684d
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63007810"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793944"
 ---
 # <a name="calling-sqlclosecursor"></a>Вызов SQLCloseCursor
-Так как **SQLCloseCursor** практически не отличается от как **SQLFreeStmt** с SQL_CLOSE, диспетчер драйверов не соответствует этой функции. Функции замены сопоставляются таким образом, чтобы существующие ODBC 2 *.x* приложений можно легко переместить в ODBC 3. *x* с помощью новых функций. Это решение упрощает для таких приложений начать работу с новой ODBC 3. *x* функции внутри условного кода в модульном варианте. **SQLCloseCursor** не представляет никаких новых функциональных возможностей. Приложения не смогут получить все преимущества, переместив **SQLCloseCursor** из **SQLFreeStmt** с SQL_CLOSE.
+Так как **SQLCloseCursor** практически не отличается от как **SQLFreeStmt** с SQL_CLOSE, диспетчер драйверов не соответствует этой функции. Функции замены сопоставляются таким образом, чтобы существующие ODBC *2.x* приложений можно легко переместить в ODBC *3.x* с помощью новых функций. Это решение упрощает для таких приложений начать работу с новой ODBC *3.x* функции внутри условного кода в модульном варианте. **SQLCloseCursor** не представляет никаких новых функциональных возможностей. Приложения не смогут получить все преимущества, переместив **SQLCloseCursor** из **SQLFreeStmt** с SQL_CLOSE.
