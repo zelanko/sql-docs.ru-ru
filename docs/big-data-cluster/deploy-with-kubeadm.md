@@ -2,20 +2,20 @@
 title: Настройка Kubernetes с помощью kubeadm
 titleSuffix: SQL Server big data clusters
 description: Сведения о настройке Kubernetes на несколько Ubuntu 16.04 или 18.04 компьютеров (физических или виртуальных) для развертывания кластера (Предварительная версия) SQL Server 2019 больших данных.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: c48a8a8ad84a1378eed09727a3e51a51252b88c6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c5e59caaf408968f6b669364ccbe07e8ea973c34
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66803066"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728896"
 ---
 # <a name="configure-kubernetes-on-multiple-machines-for-sql-server-big-data-cluster-deployments"></a>Настройка Kubernetes на несколько компьютеров для развертывания кластера больших данных в SQL Server
 
@@ -26,7 +26,7 @@ ms.locfileid: "66803066"
 > [!TIP] 
 > Примеры сценариев, которые настроить Kubernetes, см. в разделе [создание кластера Kubernetes с помощью Kubeadm на Ubuntu 16.04 LTS или 18.04 LTS](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm).
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 - Не менее 3 Linux физических компьютеров или виртуальных машин
 - Рекомендуемая конфигурация для компьютера:
