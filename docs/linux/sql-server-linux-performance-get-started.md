@@ -1,20 +1,20 @@
 ---
-title: Начало работы с функциями повышения производительности SQL Server в Linux | Документация Майкрософт
+title: Начало работы с функциями повышения производительности SQL Server в Linux
 description: В этой статье содержатся вводные функций производительности SQL Server для пользователей Linux, которые не знакомы с SQL Server. Многие из этих примеров могут работать на всех платформах, но в контексте этой статьи — Linux.
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 60036d26-4797-4872-9a9e-3552841c61be
-ms.openlocfilehash: a340b3b8ded0824947cc242538ad19159b4abb4d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c5cf07107702579af1ae111c9c55843c16c01bd0
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713331"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834835"
 ---
 # <a name="walkthrough-for-the-performance-features-of-sql-server-on-linux"></a>Пошаговое руководство по возможности SQL Server в Linux для повышения производительности
 
