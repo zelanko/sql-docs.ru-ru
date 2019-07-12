@@ -1,20 +1,20 @@
 ---
-title: Извлечение, преобразование и загрузка данных в Linux с помощью служб SSIS | Документация Майкрософт
+title: Извлечение, преобразование и загрузка данных в Linux с помощью служб SSIS
 description: В этой статье описывается SQL Server Integration Services (SSIS) для компьютеров Linux
 author: lrtoyou1223
 ms.author: lle
 ms.reviewer: maghan
-manager: craigg
+manager: jroth
 ms.date: 01/09/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 724f78cd88330a0dc2fcc001cb4c34d09e453246
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 161bdd4d624e342864a930ae67b70a2f866b2acd
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705200"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834880"
 ---
 # <a name="extract-transform-and-load-data-on-linux-with-ssis"></a>Извлечение, преобразование и загрузка данных в Linux с помощью служб SSIS
 
@@ -26,7 +26,7 @@ ms.locfileid: "66705200"
 
 Дополнительные сведения о возможностях служб SSIS см. в разделе [SQL Server Integration Services](../integration-services/sql-server-integration-services.md).
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 Для запуска пакетов служб SSIS на компьютер под управлением Linux, сначала необходимо установить SQL Server Integration Services. Службы SSIS не включается в установку SQL Server для компьютеров Linux. Инструкции по установке см. в разделе [установить SQL Server Integration Services](sql-server-linux-setup-ssis.md).
 

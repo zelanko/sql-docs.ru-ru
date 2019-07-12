@@ -1,20 +1,20 @@
 ---
-title: Установка SQL Server Integration Services в Linux | Документация Майкрософт
+title: Установка SQL Server Integration Services в Linux
 description: В этой статье описывается установка SQL Server Integration Services (SSIS) в Linux.
 author: lrtoyou1223
 ms.author: lle
 ms.reviewer: maghan
-manager: craigg
+manager: jroth
 ms.date: 01/09/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 4e85755cd794f5c7f61f63579b65ed294ee4d893
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7c142b9b06e18acc3a97e6ae8b8fb7aa57a17ec1
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705091"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834674"
 ---
 # <a name="install-sql-server-integration-services-ssis-on-linux"></a>Установка SQL Server Integration Services (SSIS) в Linux
 
@@ -135,7 +135,7 @@ sudo SSIS_PID=Developer ACCEPT_EULA=Y /opt/ssis/bin/ssis-conf -n setup
 | Переменная среды | Описание |
 |---|---|
 | **ACCEPT_EULA** | Принимает лицензионное соглашение SQL Server, если задано любое значение (например, `Y`).|
-| **SSIS_PID** | Задает ключ SQL Server edition или продукта. Ниже приведены возможные значения:<br/>Ознакомительная версия<br/>Разработчик<br/>Express <br/>Web Edition <br/>Standard<br/>Enterprise <br/>Ключ продукта<br/><br/>Если указать ключ продукта, ключ продукта должен быть в форме `#####-#####-#####-#####-#####`, где `#` является буквой или цифрой.  |
+| **SSIS_PID** | Задает ключ SQL Server edition или продукта. Ниже приведены возможные значения:<br/>Ознакомительная версия<br/>Разработчик<br/>Express <br/>Интернет <br/>Standard<br/>Enterprise <br/>Ключ продукта<br/><br/>Если указать ключ продукта, ключ продукта должен быть в форме `#####-#####-#####-#####-#####`, где `#` является буквой или цифрой.  |
 | | |
 
 ## <a name="next-steps"></a>Следующие шаги

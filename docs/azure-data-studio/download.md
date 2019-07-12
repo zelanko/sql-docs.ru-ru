@@ -9,14 +9,14 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.custom: seodec18
-ms.date: 07/10/2019
+ms.date: 07/11/2019
 ms.reviewer: alayu; sstein
-ms.openlocfilehash: 75122c146a33e5e44b61cbfd894c6997c2a4601f
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 741c36331e6c0c8827e34517dd7ee4e5d04abf93
+ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 07/11/2019
-ms.locfileid: "67792941"
+ms.locfileid: "67826588"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Скачайте и установите Studio данных Azure
 
@@ -30,9 +30,9 @@ ms.locfileid: "67792941"
 
 |Платформа|Загрузить|Дата выпуска| Версия |
 |:---|:---|:---|:---|
-|Windows|[Установщик для пользователя (рекомендуется)](https://go.microsoft.com/fwlink/?linkid=2098449)<br>[Установщик системы](https://go.microsoft.com/fwlink/?linkid=2098450)<br>[ZIP](https://go.microsoft.com/fwlink/?linkid=2098500)|10 июля 2019 г. |1.9.0|
-|macOS|[ZIP](https://go.microsoft.com/fwlink/?linkid=2098501)|10 июля 2019 г. |1.9.0|
-|Linux|[.DEB](https://go.microsoft.com/fwlink/?linkid=2098279)<br>[.RPM](https://go.microsoft.com/fwlink/?linkid=2098280)<br>[. tar.gz](https://go.microsoft.com/fwlink/?linkid=2098197)|10 июля 2019 г. |1.9.0|
+|Windows|[Установщик для пользователя (рекомендуется)](https://go.microsoft.com/fwlink/?linkid=2098449)<br>[Установщик системы](https://go.microsoft.com/fwlink/?linkid=2098450)<br>[ZIP](https://go.microsoft.com/fwlink/?linkid=2098500)|11 июля 2019 г. |1.9.0|
+|macOS|[ZIP](https://go.microsoft.com/fwlink/?linkid=2098501)|11 июля 2019 г. |1.9.0|
+|Linux|[.DEB](https://go.microsoft.com/fwlink/?linkid=2098279)<br>[.RPM](https://go.microsoft.com/fwlink/?linkid=2098280)<br>[. tar.gz](https://go.microsoft.com/fwlink/?linkid=2098197)|11 июля 2019 г. |1.9.0|
 
 Подробнее см. в [заметках о выпуске](release-notes.md).
 

@@ -4,17 +4,18 @@ titleSuffix: SQL Server
 description: Сведения о настройке SQL Server всегда в группе доступности (AG) для рабочих нагрузок чтения и масштабирования в Linux.
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 01/09/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 2b95d1d97a81ce99ab22d72e47d0ae7a6940f4f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4cbb11da91864716838a7fbb4be26ac2dc00614c
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713411"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834282"
 ---
 # <a name="configure-a-sql-server-availability-group-for-read-scale-on-linux"></a>Настройка группы доступности SQL Server для чтения и масштабирования в Linux
 

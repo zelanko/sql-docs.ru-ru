@@ -1,21 +1,22 @@
 ---
-title: Параметры конфигурации для SQL Server в Docker | Документация Майкрософт
+title: Параметры конфигурации для SQL Server в Docker
 description: Ознакомьтесь с различными способами с помощью и взаимодействия с SQL Server 2017 и 2019 изображения предварительного просмотра контейнера в Docker. Сюда входят сохранение данных, копирование файлов и устранения неполадок.
-author: rothja
-ms.author: jroth
-manager: craigg
+author: vin-yu
+ms.author: vinsonyu
+ms.reviewer: vanto
+manager: jroth
 ms.date: 01/17/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 822fdbe60a9fe7740d2b7cb13ed9b8784e88945d
-ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
+ms.openlocfilehash: 34320ca5f0e969443ecd60eae64ca80a6aeaec63
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67500026"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834068"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>Настройка образов контейнеров SQL Server в Docker
 

@@ -1,20 +1,20 @@
 ---
-title: Установка SQL Server Full-Text Search в Linux | Документация Майкрософт
+title: Установка SQL Server Full-Text Search в Linux
 description: В этой статье описывается установка SQL Server Full-Text Search в Linux.
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
-ms.openlocfilehash: 40b2e50932994644ce5e49237adbef08b825b513
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 80d058fba56f091af7be92b908454f71fc8552e8
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705044"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834714"
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>Установка SQL Server Full-Text Search в Linux
 
@@ -107,7 +107,7 @@ sudo zypper update mssql-server-fts
 | Английский | 1033 |
 | Французский | 1036 |
 | Немецкий | 1031 |
-| Greek | 1032 |
+| Греческий | 1032 |
 | Гуджарати | 1095 |
 | Иврит | 1037 |
 | Hindi | 1081 |
@@ -120,7 +120,7 @@ sudo zypper update mssql-server-fts
 | Латышский | 1062 |
 | Литовский | 1063 |
 | Malay - Malaysia | 1086 |
-| Малайялам | 1100 |
+| Малаялам | 1100 |
 | Маратхи | 1102 |
 | Польский | 1045 |
 | Португальский | 2070 |

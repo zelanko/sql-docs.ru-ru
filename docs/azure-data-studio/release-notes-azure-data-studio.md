@@ -10,21 +10,21 @@ ms.author: maghan
 manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 07/10/2019
-ms.openlocfilehash: 5e3aa3f0472b775f1dfbd13634228226e4e7e0c2
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.date: 07/11/2019
+ms.openlocfilehash: 9b6fa6e7ec82853e05070a1675154f06091e5092
+ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 07/11/2019
-ms.locfileid: "67794073"
+ms.locfileid: "67826516"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Заметки о выпуске для Azure Data Studio
 
 **[Скачайте и установите последний выпуск!](download.md)**
 
-## <a name="july-2019"></a>Июль 2019 г.
+## <a name="july-2019"></a>Июль 2019
 
-10 июля 2019 &nbsp;  /  &nbsp; версии: 1.9.0 
+11 июля 2019 &nbsp;  /  &nbsp; версии: 1.9.0 
 
 &nbsp;
 
@@ -39,7 +39,6 @@ ms.locfileid: "67794073"
 | Visual Studio Code может выпускать слияния 1.35 | Можно найти наиболее актуальных улучшений [здесь](https://code.visualstudio.com/updates/v1_35). |
 | Разрешенные ошибки и проблемы | В предыдущих версиях Azure Data Studio Если был выбран в базу данных пользователя при подключении из диалогового окна соединения, Результирующая запись обозревателя объектов была отнесена к области полностью к одной базе данных. Начиная с этого выпуска, что изменяется поведение, чтобы свойства уровня сервера также отображаются в обозревателе объектов. <br/> Полный список исправлений см. в разделе [ошибок и проблем на GitHub](https://github.com/microsoft/azuredatastudio/milestone/35?closed=1). |
 | &nbsp; | &nbsp; |
-
 
 
 ## <a name="june-2019"></a>2019 июня

@@ -20,16 +20,16 @@ author: bluefooted
 ms.author: pamela
 manager: amitban
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 03d284ad2dc8ac41e13ca6c90b38a65297ec7fcd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 71e32cbe889a6c8236bf536a83109b37e6845842
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822244"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833002"
 ---
 # <a name="sysdmdbpageinfo-transact-sql"></a>sys.dm_db_page_info (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ssver15-asdb-xxxx-xxx](../../includes/tsql-appliesto-ssver15-asdb-xxxx-xxx.md)]
 
 Возвращает сведения о странице в базе данных.  Функция возвращает одну строку, содержащим данные заголовков со страницы, включая `object_id`, `index_id`, и `partition_id`.  В большинстве случаев эта функция заменяет потребность в использовании `DBCC PAGE`.
 

@@ -1,20 +1,20 @@
 ---
-title: Настройка параметров SQL Server в Linux | Документация Майкрософт
+title: Настройка параметров SQL Server в Linux
 description: В этой статье описывается, как использовать средство mssql-conf для настройки параметров SQL Server на Linux.
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: 9fd4e35a9fbdd7e0cd3c77fb05ef2f7fdde53c02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 57e43f3afd9c46e3b49e4f1f07ab3038359c8c50
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719399"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834010"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Настройка SQL Server в Linux с помощью средства mssql-conf
 
@@ -394,7 +394,7 @@ ms.locfileid: "66719399"
 
     В следующей таблице перечислены возможные **coredump.coredumptype** значения.
 
-    | Тип | Описание |
+    | Type | Описание |
     |-----|-----|
     | **Mini** | Mini — это наименьший тип файла дампа. Сведения о системе Linux используется для определения потоков и модулей в процессе. Дамп содержит только стеки потоков среды узла и модули. Он не содержит ссылки на память, косвенные или глобальных переменных. |
     | **miniplus** | MiniPlus аналогичен mini, но он включает в себя дополнительную память. Понимание внутренних механизмов SQLPAL и хост-среды, добавление следующих областей памяти дампа:</br></br> -Различные globals</br> -Всю память выше 64 ТБ</br> — Все с именем регионов **/proc/$ pid и сопоставлений**</br> -Косвенных памяти из потоков и стеки</br> -Сведения о потоке</br> -Связанные Teb элемента и его Peb</br> -Данные модуля</br> -VMM и VAD дерева |

@@ -2,20 +2,20 @@
 title: Начало работы с SQL Server в Red Hat Enterprise Linux
 titleSuffix: SQL Server
 description: В этом кратком руководстве показано, как установить SQL Server 2017 или SQL Server 2019 в Red Hat Enterprise Linux, а затем создать и запрос к базе данных с помощью sqlcmd.
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 07/16/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
-ms.openlocfilehash: b811ea193dd15b2d472224dfc7d719a60174ed4b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4e61449a8645dca651e3422306ae5b049b7a7e9d
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713521"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834988"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>Краткое руководство. Установка SQL Server и создать базу данных в Red Hat
 
@@ -37,7 +37,7 @@ ms.locfileid: "66713521"
 > [!TIP]
 > Этого учебника требуется ввод данных пользователем и подключение к Интернету. Если вы заинтересованы в [автоматической](sql-server-linux-setup.md#unattended) или [автономной](sql-server-linux-setup.md#offline) процедуры установки см. в разделе [руководство по установке для SQL Server в Linux](sql-server-linux-setup.md).
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 Необходимо иметь компьютер RHEL 7.3, 7.4, 7.5 или 7.6 с **по крайней мере 2 ГБ** памяти.
 

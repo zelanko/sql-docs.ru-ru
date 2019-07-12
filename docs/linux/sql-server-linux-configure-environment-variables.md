@@ -1,20 +1,20 @@
 ---
-title: Настройка параметров SQL Server с помощью переменных среды | Документация Майкрософт
+title: Настройка параметров SQL Server с помощью переменных среды
 description: В этой статье описывается, как использовать переменные среды, чтобы настраивать конкретные параметры SQL Server 2017 в Linux.
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 02/20/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 2b32c965dfed3647484a1de54539c79af3777ce4
-ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
+ms.openlocfilehash: 71f537d0f9da626fbd7624727b3aee22d2a47676
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400072"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834051"
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Настройка параметров SQL Server с помощью переменных среды в Linux
 

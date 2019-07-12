@@ -1,20 +1,20 @@
 ---
-title: Настройка репозиториев Linux для SQL Server 2017 и 2019 г. | Документация Майкрософт
+title: Настройка репозиториев Linux для SQL Server 2017 и 2019 г.
 description: Проверьте и настройте репозиториях для SQL Server 2019 и SQL Server 2017 в Linux. Исходный репозиторий влияет на версию SQL Server, который применяется во время установки и обновления.
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 02/11/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 zone_pivot_groups: ld2-linux-distribution
-ms.openlocfilehash: 5e21110eb8a24c736b08833d10b509b5494adc48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 05299a2efd374dc7d58b5e32fcdea918b12fc1d3
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713334"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834078"
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>Настройка репозиториев для установки и обновления SQL Server в Linux
 
@@ -39,7 +39,7 @@ ms.locfileid: "66713334"
 
 При установке SQL Server в Linux, необходимо настроить репозиторий Microsoft. Этот репозиторий используется для получения пакет ядра СУБД, **mssql-server**и связанные пакеты SQL Server. В настоящее время существует три основных репозиториев:
 
-| Хранилище | Имя | Описание |
+| Хранилище | Name | Описание |
 |---|---|---|
 | **Предварительная версия (2017 г.)** | **mssql-server** | Репозиторий SQL Server 2017 CTP и версии-Кандидата (неподдерживаемые). |
 | **Предварительная версия (2019 г.)** | **mssql-server-preview** | SQL Server 2019 предварительной версии и версии-КАНДИДАТА репозитория. |

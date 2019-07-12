@@ -20,12 +20,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 22d771f57e5ac0d9035b8c283eb6da69027eadb3
-ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
+ms.openlocfilehash: 1df2ac9979e99a301d416d25d143039bef3ee4ed
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67716675"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833042"
 ---
 # <a name="sysdmdbresourcestats-azure-sql-database"></a>sys.dm_db_resource_stats (база данных SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "67716675"
 |end_time|**datetime**|Время в формате UTC, указывающее окончание текущего отчетного интервала.|  
 |avg_cpu_percent|**Decimal (5,2)**|Средний уровень использования вычислительных мощностей в процентах от предела для уровня службы.|  
 |avg_data_io_percent|**Decimal (5,2)**|Среднее использование ввода-вывода в процентах от предела для уровня службы данных.|  
-|avg_log_write_percent|**Decimal (5,2)**|Среднее использование пропускной способности ввода-вывода в процентах от предела для уровня службы записи.|  
+|avg_log_write_percent|**Decimal (5,2)**|Записи в журнал транзакций среднее (в Мбит/с) как процент лимита уровня службы.|  
 |avg_memory_usage_percent|**Decimal (5,2)**|Средний уровень использования памяти в процентах от предела для уровня службы.<br /><br /> Это включает память, используемую для страниц в буферном пуле и хранения объектов OLTP в памяти.|  
 |xtp_storage_percent|**Decimal (5,2)**|Использование хранилища для In-Memory OLTP в процентах от предела для уровня службы (в конце интервала отчетности). Это включает память, используемая для хранения следующих объектов In-Memory OLTP: оптимизированные для памяти таблицы, индексы и табличные переменные. Она также включает память, используемая для обработки операции ALTER TABLE.<br /><br /> Возвращает 0, если не используется In-Memory OLTP в базе данных.|  
 |max_worker_percent|**Decimal (5,2)**|Максимальное количество одновременных рабочих ролей (запросов) в процентах от предела для уровня службы базы данных.|  

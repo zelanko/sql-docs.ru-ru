@@ -1,20 +1,21 @@
 ---
-title: Установка SQL Server службы машинного обучения (R, Python) на платформе Linux | Документация Майкрософт
+title: Установка SQL Server службы машинного обучения (R, Python) в Linux
 description: Сведения об установке SQL Server служб машинного обучения (R, Python) в Red Hat, Ubuntu и SUSE.
 author: dphansen
 ms.author: davidph
+ms.reviewer: vanto
 manager: cgronlun
 ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4a36ae06f28cb68395fd24b64921575567757a7f
-ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
+ms.openlocfilehash: 5e64f19c7495a58c02852d9c1207b047de669758
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67399949"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834684"
 ---
 # <a name="install-sql-server-2019-machine-learning-services-r-python-on-linux"></a>Установка SQL Server 2019 службы машинного обучения (R, Python) на платформе Linux
 
@@ -165,9 +166,9 @@ zypper update
 | mssql-mlservices-python | Python | Распределение открытым исходным кодом Anaconda и Python. |
 |mssql-mlservices-mlm-py  | Python | *Полная установка*. Предоставляет revoscalepy, microsoftml, предварительно обученных моделей для анализа тональности образа Добавление признаков и текст.| 
 |mssql-mlservices-packages-py  | Python | *Минимальная установка*. Предоставляет revoscalepy и microsoftml. <br/>Исключает предварительно обученных моделей. | 
-| [Microsoft-r-открытым *](#mro) | Чтение | Открытый дистрибутив R, состоящий из трех пакетов. |
-|mssql-mlservices-mlm-r  | Чтение | *Полная установка*. Предоставляет RevoScaleR, MicrosoftML, sqlRUtils, olapR, предварительно обученных моделей для анализа тональности образа Добавление признаков и текст.| 
-|mssql-mlservices-packages-r  | Чтение | *Минимальная установка*. Предоставляет RevoScaleR, sqlRUtils, MicrosoftML, olapR. <br/>Исключает предварительно обученных моделей. | 
+| [Microsoft-r-открытым *](#mro) | R | Открытый дистрибутив R, состоящий из трех пакетов. |
+|mssql-mlservices-mlm-r  | R | *Полная установка*. Предоставляет RevoScaleR, MicrosoftML, sqlRUtils, olapR, предварительно обученных моделей для анализа тональности образа Добавление признаков и текст.| 
+|mssql-mlservices-packages-r  | R | *Минимальная установка*. Предоставляет RevoScaleR, sqlRUtils, MicrosoftML, olapR. <br/>Исключает предварительно обученных моделей. | 
 |mssql-mlservices-mml-py  | Только CTP 2.0 — 2.1 | Устарело в CTP-версии 2.2, из-за консолидации пакета Python в mssql-mslservices-python. Предоставляет revoscalepy. Исключает предварительно обученных моделей и microsoftml.| 
 |mssql-mlservices-mml-r  | Только CTP 2.0 — 2.1 | Устарело в CTP-версии 2.2, из-за консолидации пакета R в mssql-mslservices-python. Предоставляет RevoScaleR, sqlRUtils, olapR. Исключает предварительно обученных моделей и MicrosoftML.  |
 
@@ -278,7 +279,7 @@ sudo zypper install mssql-mlservices-packages-r-9.4.7*
    sudo /opt/mssql/bin/mssql-conf setup
    ```
 
-2. Примите лицензионные соглашения для открытым исходным кодом R и Python. Это можно осуществить несколькими способами. Если вы ранее принят лицензирования SQL Server и теперь при добавлении расширения R или Python, следующая команда является ваше согласие на свои условия:
+2. Примите лицензионные соглашения для открытым исходным кодом R и Python. Для этого можно использовать следующие способы. Если вы ранее принят лицензирования SQL Server и теперь при добавлении расширения R или Python, следующая команда является ваше согласие на свои условия:
 
    ```bash
    # Run as SUDO or root

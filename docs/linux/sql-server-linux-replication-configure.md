@@ -1,21 +1,22 @@
 ---
-title: Настройка репликации SQL Server в Linux | Документация Майкрософт
+title: Настройка репликации SQL Server в Linux
 description: В этой статье описывается, как настроить репликацию SQL Server в Linux.
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 03/20/2018
 ms.topic: article
 ms.prod: sql
 ms.prod_service: database-engine
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 29c8dd4ef4898796722e1c54eeaff94afef1c0c6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fe12afac12e34dfb6c66a44a1d1de6c2b5ce1876
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705336"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834790"
 ---
 # <a name="configure-sql-server-replication-on-linux"></a>Настройка репликации SQL Server в Linux
 
@@ -33,7 +34,7 @@ ms.locfileid: "66705336"
   
 * Пример с помощью хранимых процедур, выполните [репликации SQL Server можно настроить на платформе Linux](sql-server-linux-replication-tutorial-tsql.md) руководства.
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 Прежде чем настраивать издателей, распространителей и подписчиков, необходимо выполнить ряд действия по настройке для экземпляра SQL Server.
 

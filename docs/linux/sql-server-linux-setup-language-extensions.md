@@ -1,20 +1,21 @@
 ---
-title: Установка расширения языка (Java) для SQL Server в Linux | Документация Майкрософт
+title: Установка расширения языка (Java) для SQL Server в Linux
 description: Сведения об установке расширения языка (Java) для SQL Server в Red Hat, Ubuntu и SUSE.
 author: dphansen
 ms.author: davidph
+ms.reviewer: vanto
 manager: cgronlun
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9231828263020c352700fda6a4a0a9953dd70760
-ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
+ms.openlocfilehash: 25aa15f66827aeee7e86e7052febde9c31c7e15a
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67399936"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834702"
 ---
 # <a name="install-sql-server-2019-language-extensions-java-on-linux"></a>Установка расширения языка SQL Server 2019 г. (Java) в Linux
 

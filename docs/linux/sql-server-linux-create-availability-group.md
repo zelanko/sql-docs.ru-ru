@@ -1,19 +1,20 @@
 ---
-title: Создание и настройка группы доступности для SQL Server в Linux | Документация Майкрософт
+title: Создание и настройка группы доступности для SQL Server в Linux
 description: Этом руководстве показано, как создать и настроить группы доступности для SQL Server в Linux.
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 06/28/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 1841b7e38e47ffa1192b19564e1c6596ea9804a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7bd6f1259989c1cb0286fca546ea9e0410e0837f
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719386"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833905"
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>Создание и настройка группы доступности для SQL Server в Linux
 

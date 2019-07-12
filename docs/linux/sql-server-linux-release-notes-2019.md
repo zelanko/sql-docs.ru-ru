@@ -1,20 +1,20 @@
 ---
-title: Заметки о выпуске для предварительной версии SQL Server 2019 на платформе Linux | Документация Майкрософт
+title: Заметки о выпуске для предварительной версии SQL Server 2019 в Linux
 description: Эта статья содержит заметки о выпуске и поддерживаемых функций для предварительной версии SQL Server 2019 под управлением Linux. Заметки о выпуске включены для последнего выпуска и несколько предыдущих выпусков.
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 07/02/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: f172cf3b4ab72fe413cbc639c3e880edef311e9e
-ms.sourcegitcommit: eacc2d979f1f13cfa07e0aa4887eb9d48824b633
+ms.openlocfilehash: 88c4ebbd5d2e106dbab2dcb057ef024fe0c7f26c
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67533841"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834818"
 ---
 # <a name="release-notes-for-sql-server-2019-preview-on-linux"></a>Заметки о выпуске для предварительной версии SQL Server 2019 в Linux
 

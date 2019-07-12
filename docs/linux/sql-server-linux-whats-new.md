@@ -1,20 +1,20 @@
 ---
-title: Новые возможности SQL Server 2017 на платформе Linux | Документация Майкрософт
+title: Новые возможности SQL Server 2017 в Linux
 description: В данной статье рассматриваются новые возможности SQL Server 2017 в Linux.
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
-ms.openlocfilehash: 266982731cc98121e6456d10fb93c7ccffaa4b22
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3852a4b29cab1b0fe8ab44a4b65fc344f6adfb49
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719338"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834642"
 ---
 # <a name="whats-new-for-sql-server-on-linux"></a>Новые возможности SQL Server в Linux
 

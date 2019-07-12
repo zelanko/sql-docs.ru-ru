@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6158df674c90f14a1f77f5e12c18adcb6f8fbc4f
-ms.sourcegitcommit: f97394f18f8509aec596179acd4c59d8492a4cd2
+ms.openlocfilehash: 7adf4a825fb93b6c87714476607b30e9f4ec97a7
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67652863"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833574"
 ---
 # <a name="sysquerystoreplan-transact-sql"></a>sys.query_store_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -68,8 +68,11 @@ ms.locfileid: "67652863"
 * ссылка на внешнюю таблицу;
 * распределенный запрос или полнотекстовые операции;
 * использование глобальных запросов. 
-* Динамического или набора ключей курсоры (принудительное выполнение плана поддерживается для статических и Быстрые однонаправленные курсоры)
+* Курсоры динамического или набора ключей 
 * Недопустимая спецификация соединения типа "звезда" 
+
+> [!NOTE]
+> База данных SQL Azure и SQL Server 2019 (Предварительная версия) поддерживает статические и Быстрые однонаправленные курсоры принудительного выполнения плана.
 
 Во-вторых, когда объекты, от которых зависит план, больше не доступны:
 * база данных (если база данных, где план был создан изначально, больше не существует);

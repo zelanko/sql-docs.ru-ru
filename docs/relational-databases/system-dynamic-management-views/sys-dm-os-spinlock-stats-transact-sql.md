@@ -5,11 +5,8 @@ ms.date: 06/03/2019
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: ''
-ms.component: dmv's
-ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -21,20 +18,19 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - sys.dm_os_spinlock_stats dynamic management view
-ms.assetid: ''
-caps.latest.revision: ''
 author: bluefooted
 ms.author: pamela
+ms.reviewer: maghan
 manager: amitban
-ms.workload: Inactive
-ms.openlocfilehash: d26369b657848bf1ff092bc69fba1a6aa5850102
-ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
+ms.openlocfilehash: e302eadaa559674482911904678cc8aa4cbd2577
+ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67420856"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67826602"
 ---
 # <a name="sysdmosspinlockstats-transact-sql"></a>sys.dm_os_spinlock_stats (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Возвращает сведения обо всех случаях ожидания спин-блокировки, упорядоченных по типу.  
@@ -191,7 +187,7 @@ GO
 |LANG_RES_LOAD|Только для внутреннего применения.|
 |LIVE_TARGET_TVF|Только для внутреннего применения.|
 |LOCK_FREE_LIST|Только для внутреннего применения.|
-|LOCK_HASH|Защищает доступ к хэш-таблицы диспетчера блокировок, хранит сведения о блокировки, удерживаемые в базе данных. См. в разделе [в этой статье](https://support.microsoft.comkb/2926217) Дополнительные сведения.|
+|LOCK_HASH|Защищает доступ к хэш-таблицы диспетчера блокировок, хранит сведения о блокировки, удерживаемые в базе данных. См. в разделе [в этой статье](https://support.microsoft.com/kb/2926217) Дополнительные сведения.|
 |LOCK_NOTIFICATION|Только для внутреннего применения.|
 |LOCK_RESOURCE_ID|Только для внутреннего применения.|
 |LOCK_RW_ABTX_HASH_SET|Только для внутреннего применения.|

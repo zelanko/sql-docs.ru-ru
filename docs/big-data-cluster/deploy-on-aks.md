@@ -6,16 +6,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
 manager: jroth
-ms.date: 02/28/2019
+ms.date: 07/10/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c5860e4c26008cf94b9ec168bb6a705f15ae7cd1
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 872988b29cddc202ea2c0f199548bc28b946b918
+ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728917"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67826521"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>Настроить службу Azure Kubernetes для развертывания кластера больших данных в SQL Server
 
@@ -76,9 +76,39 @@ AKS позволяет легко создавать, настраивать и 
    az group create --name sqlbdcgroup --location westus2
    ```
 
+## <a name="verify-available-kubernetes-versions"></a>Проверьте доступные версии Kubernetes
+
+Используйте последнюю доступную версию Kubernetes. Последней доступной версии зависит от расположения, где развертывается кластер. Следующая команда возвращает версий Kubernetes, доступных в определенном расположении.
+
+Перед выполнением команды, обновите скрипт. Замените `<Azure data center>` с расположением кластера.
+
+   **Bash**
+
+   ```bash
+   az aks get-versions \
+   --location <Azure data center> \
+   --query orchestrators \
+   --o table
+   ```
+
+   **PowerShell**
+
+   ```powershell
+   az aks get-versions `
+   --location <Azure data center> `
+   --query orchestrators `
+   --o table
+   ```
+
+Выберите последнюю доступную версию для кластера. Запишите номер версии. Он понадобится на следующем шаге.
+
 ## <a name="create-a-kubernetes-cluster"></a>Создание кластера Kubernetes
 
-1. Создание кластера Kubernetes в AKS при помощи [создать az aks](https://docs.microsoft.com/cli/azure/aks) команды. В следующем примере создается кластер Kubernetes с именем *kubcluster* с одним узлом агента Linux размера **Standard_L8s**. Убедитесь, что вы создаете кластер AKS в той же группе ресурсов, который использовался в предыдущих разделах.
+1. Создание кластера Kubernetes в AKS при помощи [создать az aks](https://docs.microsoft.com/cli/azure/aks) команды. В следующем примере создается кластер Kubernetes с именем *kubcluster* с одним узлом агента Linux размера **Standard_L8s**.
+
+   Перед выполнением скрипта замените `<version number>` с номером версии, вы определили на предыдущем шаге.
+
+   Убедитесь, что вы создаете кластер AKS в той же группе ресурсов, который использовался в предыдущих разделах.
 
    **Bash:**
 
@@ -88,7 +118,7 @@ AKS позволяет легко создавать, настраивать и 
    --generate-ssh-keys \
    --node-vm-size Standard_L8s \
    --node-count 1 \
-   --kubernetes-version 1.12.8
+   --kubernetes-version <version number>
    ```
 
    **PowerShell:**
@@ -99,7 +129,7 @@ AKS позволяет легко создавать, настраивать и 
    --generate-ssh-keys `
    --node-vm-size Standard_L8s `
    --node-count 1 `
-   --kubernetes-version 1.12.8
+   --kubernetes-version <version number>
    ```
 
    Можно увеличить или уменьшить количество узлов агентов Kubernetes, изменив `--node-count <n>` где `<n>` — количество узлов агентов, которые вы хотите использовать. Сюда не входят главном узле Kubernetes, который управляется в фоновом AKS. Предыдущий пример использует только один узел для ознакомительных целей.
