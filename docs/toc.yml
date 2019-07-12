@@ -9041,11 +9041,13 @@
             - name: Установка SSMS не на английском языке
               href: ssms/install-other-languages.md
             - name: "Использование шаблонов в\_SSMS"
-              href: ssms/tutorials/templates-ssms.md
+              href: ssms/template/templates-ssms.md
             - name: Объекты скриптов
               href: ssms/tutorials/scripting-ssms.md
             - name: "Конфигурация\_SSMS"
               href: ssms/tutorials/ssms-configuration.md
+            - name: Дополнительные советы и рекомендации
+              href: ssms/tutorials/ssms-tricks.md
             - name: Настройка меню и сочетаний клавиш
               href: ssms/customize-menus-and-shortcut-keys.md
             - name: Настройка инструментария WMI для отображения состояния сервера в инструментальных средствах SQL Server
@@ -9959,8 +9961,6 @@
                   href: ssms/visual-db-tools/print-query-results-visual-database-tools.md
         - name: Ресурсы
           items:
-            - name: SQL Server Management Studio
-              href: ssms/tutorials/tutorial-sql-server-management-studio.md
             - name: Политика поддержки SSMS
               href: ssms/support-policy.md
             - name: Варианты поддержки для бизнес-пользователей
@@ -10180,15 +10180,15 @@
           href: linux/quickstart-install-connect-clouds.md
     - name: Учебники
       items:
-        - name: 1_Миграция с Windows
+        - name: Миграция с Windows
           href: linux/sql-server-linux-migrate-restore-database.md
-        - name: 2_Миграция в Docker
+        - name: Миграция в Docker
           href: linux/tutorial-restore-backup-in-sql-server-container.md
-        - name: 3_Создание задания
+        - name: Создание задания
           href: linux/sql-server-linux-run-sql-server-agent-job.md
-        - name: 4_Настройка проверки подлинности AD
+        - name: "Настройка проверки подлинности\_AD"
           href: linux/sql-server-linux-active-directory-authentication.md
-        - name: 5_Создание экземпляра отказоустойчивого кластера
+        - name: Создание экземпляра отказоустойчивого кластера
           href: linux/sql-server-linux-shared-disk-cluster-configure.md
           items:
             - name: iSCSI
@@ -10197,16 +10197,18 @@
               href: linux/sql-server-linux-shared-disk-cluster-configure-nfs.md
             - name: SMB
               href: linux/sql-server-linux-shared-disk-cluster-configure-smb.md
-        - name: "6_Работа экземпляра отказоустойчивого кластера\_— SQL\_Server в Linux"
+        - name: Работа экземпляра отказоустойчивого кластера — SQL Server на Linux
           href: linux/sql-server-linux-shared-disk-cluster-operate.md
-        - name: 7_Развертывание кластера Pacemaker
+        - name: Развертывание кластера Pacemaker
           href: linux/sql-server-linux-deploy-pacemaker-cluster.md
-        - name: 8_Создание и настройка групп доступности
+        - name: Создание и настройка групп доступности
           href: linux/sql-server-linux-create-availability-group.md
-        - name: 9_Развертывание в Kubernetes
+        - name: Развертывание в Kubernetes
           href: linux/tutorial-sql-server-containers-kubernetes.md
-        - name: 10_Настройка репликации
+        - name: Настройка репликации
           href: linux/sql-server-linux-replication-tutorial-tsql.md
+        - name: Машинное обучение в контейнере
+          href: linux/sql-server-linux-machine-learning-services-container.md
     - name: Основные понятия
       items:
         - name: Установка
