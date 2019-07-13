@@ -18,12 +18,12 @@ ms.assetid: 4a13b804-45f2-4f82-987f-42d9a57dd6db
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b7ddacb0951b25469404b96d41ec81d2eaaba9cc
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 5faad4f4e0de6f9c56115bff59933360f551ab55
+ms.sourcegitcommit: 4181429ada1169871c2f4d73d18d2ba013007501
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530585"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67866273"
 ---
 # <a name="sphelpjobstep-transact-sql"></a>sp_help_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**os_run_priority**|**int**|Зарезервировано.|  
 |**output_file_name**|**nvarchar(200)**|Файл, чтобы какая команда выходные данные должны записываться ([!INCLUDE[tsql](../../includes/tsql-md.md)], **CmdExec**, и **PowerShell** только для шагов).|  
 |**last_run_outcome**|**int**|Результат последнего запуска этапа:<br /><br /> **0** = ошибка<br /><br /> **1** = выполнено успешно<br /><br /> **2** = повторение<br /><br /> **3** = отменено<br /><br /> **5** = неизвестно|  
-|**last_run_duration**|**int**|Продолжительность этапа в секундах при последнем запуске.|  
+|**last_run_duration**|**int**|Продолжительность (ччммсс) шага в секундах при последнем запуске.|  
 |**last_run_retries**|**int**|Число повторов команды при последнем запуске этапа.|  
 |**last_run_date**|**int**|Дата начала последнего выполнения этапа.|  
 |**last_run_time**|**int**|Время начала последнего выполнения этапа.|  
