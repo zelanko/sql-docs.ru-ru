@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: cc392987-1aab-45f5-b5af-a26be53409bf
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5534fdf65543e651b52373629c81010d75cab449
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 72a91250b5b39c4e7c15c5264ba66c68327e714d
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65098131"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67689596"
 ---
 # <a name="table-properties-visual-database-tools"></a>Свойства таблицы (визуальные инструменты для баз данных)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "65098131"
 Показывает, выполняется ли репликация таблицы в другом местоположении.  
   
 **Категория спецификации регулярного пространства данных**  
-Разворачивается, чтобы показать свойства параметров **(Тип пространства данных)**, **Имя файловой группы или схемы секционирования**и **Список столбцов секционирования**.  
+Разворачивается, чтобы показать свойства параметров **(Тип пространства данных)** , **Имя файловой группы или схемы секционирования**и **Список столбцов секционирования**.  
   
 **(Тип пространства данных)**  
 Показывает, хранится ли эта таблица с использованием файловой группы или схемы секционирования.  

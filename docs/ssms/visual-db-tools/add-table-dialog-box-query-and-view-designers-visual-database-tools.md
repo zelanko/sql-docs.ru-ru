@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: fce7adcc-4cf5-4a52-9203-11c13d1ecf08
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: cfbad10dd90ddc5b68e44bac88bc1ee6d437f78e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 3da683d21f7abadd59352ba84483d9e8c566b276
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65099490"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67686643"
 ---
 # <a name="add-table-dialog-box-query-and-view-designers-visual-database-tools"></a>Диалоговое окно «Добавить таблицу» (конструкторы запросов и представлений) (визуальные инструменты для баз данных)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

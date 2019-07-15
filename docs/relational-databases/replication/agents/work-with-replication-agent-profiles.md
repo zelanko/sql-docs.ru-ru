@@ -16,12 +16,12 @@ ms.assetid: 9c290a88-4e9f-4a7e-aab5-4442137a9918
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 85125ef01d299c34081578bd38eb6ac3fdb328a4
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 74f0746d3b69183702ef2a9d0609c39e25b28e95
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67582718"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860475"
 ---
 # <a name="work-with-replication-agent-profiles"></a>Работа с профилями агента репликации
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -95,7 +95,7 @@ ms.locfileid: "67582718"
   
 1.  Если в окне **Профили агентов** отображаются профили нескольких агентов, следует выбрать агент.  
   
-2.  Нажмите кнопку свойств (**…**) рядом с профилем.  
+2.  Нажмите кнопку свойств ( **…** ), следующую за профилем.  
   
 3.  Просмотрите параметры и значения в диалоговом окне **Свойства профиля \<имя_профиля**.  
   
@@ -140,7 +140,7 @@ ms.locfileid: "67582718"
   
 ###  <a name="Create_tsql"></a> Создание нового профиля агента  
   
-1.  На распространителе выполните хранимую процедуру [sp_add_agent_profile (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md). Задайте параметр **@name**, значение **1** для **@profile_type**и одно из следующих значений для **@agent_type**:  
+1.  На распространителе выполните хранимую процедуру [sp_add_agent_profile (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md). Задайте параметр **@name** , значение **1** для **@profile_type** и одно из следующих значений для **@agent_type** :  
   
     -   **1** - [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
@@ -152,13 +152,13 @@ ms.locfileid: "67582718"
   
     -   **9** - [Replication Queue Reader Agent](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)  
   
-     Если этот профиль станет профилем по умолчанию для агента репликации данного типа, укажите значение **1** для **@default**. Идентификатор нового профиля можно получить с помощью выходного параметра **@profile_id** . Таким образом создается новый профиль с набором параметров профиля на основе профиля по умолчанию для данного типа агента.  
+     Если этот профиль станет профилем по умолчанию для агента репликации данного типа, укажите значение **1** для **@default** . Идентификатор нового профиля можно получить с помощью выходного параметра **@profile_id** . Таким образом создается новый профиль с набором параметров профиля на основе профиля по умолчанию для данного типа агента.  
   
 2.  Когда новый профиль создан, для его настройки можно добавить, удалить или изменить параметры по умолчанию.  
   
 ###  <a name="Modify_tsql"></a> Изменение существующего профиля агента  
   
-1.  На распространителе выполните хранимую процедуру [sp_help_agent_profile (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md). В параметре **@agent_type**:  
+1.  На распространителе выполните хранимую процедуру [sp_help_agent_profile (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md). В параметре **@agent_type** :  
   
     -   **1** - [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
@@ -172,24 +172,24 @@ ms.locfileid: "67582718"
   
      Будут получены все профили для указанного типа агента. Запомните значение **profile_id** в результирующем наборе для профиля, который требуется изменить.  
   
-2.  На распространителе выполните хранимую процедуру [sp_help_agent_parameter (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md). В параметре **@profile_id**. В результате будут возвращены все параметры для профиля. Запомните имена параметров профиля, которые требуется изменить или удалить.  
+2.  На распространителе выполните хранимую процедуру [sp_help_agent_parameter (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md). В параметре **@profile_id** . В результате будут возвращены все параметры для профиля. Запомните имена параметров профиля, которые требуется изменить или удалить.  
   
-3.  Чтобы изменить значение параметра в профиле, выполните хранимую процедуру [sp_change_agent_parameter (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-change-agent-parameter-transact-sql.md). В параметре **@profile_id**, имя изменяемого параметра в **@parameter_name**и новое значение параметра для **@parameter_value**.  
+3.  Чтобы изменить значение параметра в профиле, выполните хранимую процедуру [sp_change_agent_parameter (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-change-agent-parameter-transact-sql.md). В параметре **@profile_id** , имя изменяемого параметра в **@parameter_name** и новое значение параметра для **@parameter_value** .  
   
     > [!NOTE]  
     >  Существующий профиль агента невозможно сделать профилем по умолчанию для агента. Профиль по умолчанию должен быть создан заново, как показано в предыдущей процедуре.  
   
-4.  Чтобы удалить параметр из профиля, выполните хранимую процедуру [sp_drop_agent_parameter (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-drop-agent-parameter-transact-sql.md). В параметре **@profile_id** и имя удаляемого параметра для **@parameter_name**.  
+4.  Чтобы удалить параметр из профиля, выполните хранимую процедуру [sp_drop_agent_parameter (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-drop-agent-parameter-transact-sql.md). В параметре **@profile_id** и имя удаляемого параметра для **@parameter_name** .  
   
 5.  Чтобы добавить новый параметр в профиль, сделайте следующее.  
   
     -   Запросите таблицу [MSagentparameterlist (Transact-SQL)](../../../relational-databases/system-tables/msagentparameterlist-transact-sql.md) на распространителе, чтобы определить, какие параметры профиля можно задать для каждого типа агента.  
   
-    -   На распространителе выполните хранимую процедуру [sp_add_agent_parameter (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md). В параметре **@profile_id**, имя допустимого добавляемого параметра в **@parameter_name**и значение параметра для **@parameter_value**.  
+    -   На распространителе выполните хранимую процедуру [sp_add_agent_parameter (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md). В параметре **@profile_id** , имя допустимого добавляемого параметра в **@parameter_name** и значение параметра для **@parameter_value** .  
   
 ###  <a name="Delete_tsql"></a> Удаление профиля агента  
   
-1.  На распространителе выполните хранимую процедуру [sp_help_agent_profile (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md). В параметре **@agent_type**:  
+1.  На распространителе выполните хранимую процедуру [sp_help_agent_profile (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md). В параметре **@agent_type** :  
   
     -   **1** - [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
@@ -203,11 +203,11 @@ ms.locfileid: "67582718"
   
      Будут получены все профили для указанного типа агента. Запомните **profile_id** в результирующем наборе для удаляемого профиля.  
   
-2.  На распространителе выполните хранимую процедуру [sp_drop_agent_profile (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-drop-agent-profile-transact-sql.md). В параметре **@profile_id**.  
+2.  На распространителе выполните хранимую процедуру [sp_drop_agent_profile (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-drop-agent-profile-transact-sql.md). В параметре **@profile_id** .  
   
 ###  <a name="Synch_tsql"></a> Использование профилей агента при синхронизации  
   
-1.  На распространителе выполните хранимую процедуру [sp_help_agent_profile (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md). В параметре **@agent_type**:  
+1.  На распространителе выполните хранимую процедуру [sp_help_agent_profile (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md). В параметре **@agent_type** :  
   
     -   **1** - [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   

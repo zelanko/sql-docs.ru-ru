@@ -1,5 +1,5 @@
 ---
-title: Урок 1. Основы перемещения в помощнике по настройке ядра СУБД | Документация Майкрософт
+title: Урок 1. Основы работы с помощником по настройке ядра СУБД | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine Tuning Advisor [SQL Server], tutorials
 ms.assetid: ad49b2e0-a5e3-49d2-80fd-9f4eaa3652cb
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d41c8a3dcc995849fa62ea9a06703d915298eeac
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 149fc4781c0a93db423a863c98f7eeaf0afcf2da
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201783"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727616"
 ---
 # <a name="lesson-1-basic-navigation-in-database-engine-tuning-advisor"></a>Урок 1. Основы перемещения в помощнике по настройке ядра СУБД
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "53201783"
 - Скачайте [пример базы данных AdventureWorks2017](https://docs.microsoft.com/sql/samples/adventureworks-install-configure?view=sql-server-2017).
 
 
-Ниже приведены инструкции по восстановлению баз данных в SSMS. Восстановление базы данных
+См. инструкции по [восстановлению резервной копии базы данных с помощью SSMS](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms?view=sql-server-2017).
 
   >[!NOTE]
   > Этот учебник предназначен для пользователей, знакомых с использованием SQL Server Management Studio и основные задачи администрирования. 
@@ -42,7 +42,7 @@ ms.locfileid: "53201783"
 ## <a name="launch-database-tuning-advisor"></a>Запуск помощника по настройке ядра СУБД 
 Откройте графический интерфейс пользователя (GUI) помощника по настройке ядра СУБД (DTA). При первом использовании помощника по настройке ядра СУБД для инициализации этого приложения его должен запустить член, имеющий предопределенную роль сервера **sysadmin** . После инициализации помощника по настройке ядра СУБД его могут использовать члены предопределенной роли базы данных **db_owner** для настройки тех баз данных, которыми они владеют. Дополнительные сведения об инициализации помощника по настройке ядра СУБД см. в разделе [Запуск и использование помощника по настройке ядра СУБД](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   
-1. Запустите среду SQL Server Management Studio (SSMS). В Windows **меню "Пуск"**, пункты **все программы** и найдите **SQL Server Management Studio**. 
+1. Запустите среду SQL Server Management Studio (SSMS). В Windows **меню "Пуск"** , пункты **все программы** и найдите **SQL Server Management Studio**. 
 2. После открытия среды SSMS выберите **средства** меню и выберите **помощник по настройке СУБД**. 
 
   ![Запустите DTA из SSMS](media/dta-tutorials/launch-dta.png)
@@ -86,7 +86,7 @@ ms.locfileid: "53201783"
     -   По умолчанию установлен флажок **Запрашивать подтверждение перед остановкой анализа сеанса** , что позволяет избежать случайной остановки сеанса настройки до завершения анализа рабочей нагрузки в помощнике по настройке ядра СУБД.  
   
 ## <a name="next-lesson"></a>Следующее занятие  
-[Занятие 2. Использование помощника по настройке ядра СУБД](../../tools/dta/lesson-2-using-database-engine-tuning-advisor.md)  
+[Урок 2. Использование помощника по настройке ядра СУБД](../../tools/dta/lesson-2-using-database-engine-tuning-advisor.md)  
   
   
   

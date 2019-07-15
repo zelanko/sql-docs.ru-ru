@@ -13,15 +13,15 @@ helpviewer_keywords:
 - health monitor [SQL Server]
 - Replay Configuration dialog box
 ms.assetid: 58761a25-a84f-4a90-9c61-97700bc5ad9c
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ded43c2d61999b0bf4fe4cfe7501f4907492f399
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f082f484c945dd6acbb6be2f4bf92cd107605175
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808042"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67733403"
 ---
 # <a name="replay-options-sql-server-profiler"></a>Параметры воспроизведения (приложение SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ ms.locfileid: "47808042"
   
 ## <a name="see-also"></a>См. также:  
  [Воспроизведение трассировок](../../tools/sql-server-profiler/replay-traces.md)   
- [Требования к воспроизведению](../../tools/sql-server-profiler/replay-requirements.md)   
+ [Replay Requirements](../../tools/sql-server-profiler/replay-requirements.md)   
  [Вопросы воспроизведения трассировки (приложение SQL Server Profiler)](../../tools/sql-server-profiler/considerations-for-replaying-traces-sql-server-profiler.md)  
   
   

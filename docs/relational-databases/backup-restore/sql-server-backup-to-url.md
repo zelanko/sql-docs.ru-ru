@@ -11,12 +11,12 @@ ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1ffaaae5e6849db094c4c7ea176118b68a040ad7
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 73faafc9f9aca28ec6c334722a1cb9ce0a51d5ca
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67582759"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860698"
 ---
 # <a name="sql-server-backup-to-url"></a>Резервное копирование в SQL Server по URL-адресу
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -127,7 +127,7 @@ ms.locfileid: "67582759"
 |инструкция RESTORE HEADERONLY|Да||Необходимо определять учетные данные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и указывать аргумент WITH CREDENTIAL, если учетные данные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определяются с помощью ключа учетной записи хранения в качестве секрета.|  
 |RESTORE LABELONLY|Да||Необходимо определять учетные данные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и указывать аргумент WITH CREDENTIAL, если учетные данные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определяются с помощью ключа учетной записи хранения в качестве секрета.|  
 |RESTORE VERIFYONLY|Да||Необходимо определять учетные данные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и указывать аргумент WITH CREDENTIAL, если учетные данные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определяются с помощью ключа учетной записи хранения в качестве секрета.|  
-|RESTORE REWINDONLY|?|||  
+|RESTORE REWINDONLY|-|||  
   
  Общую информацию и синтаксис инструкций резервного копирования см. в разделе [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md).  
   
@@ -151,9 +151,9 @@ ms.locfileid: "67582759"
 |COMPRESSION&#124;NO_COMPRESSION|Да|Не поддерживается для резервного копирования моментальных снимков файлов.||  
 |DESCRIPTION|Да|||  
 |NAME|Да|||  
-|EXPIREDATE &#124; RETAINDAYS|?|||  
-|NOINIT &#124; INIT|?||Добавление к большим двоичным объектам невозможно. Для перезаписи резервной копии используйте аргумент **WITH FORMAT** . Однако при использовании резервных копий моментальных снимков файлов (с помощью аргумента **WITH FILE_SNAPSHOT** ) аргумент **WITH FORMAT** не разрешен, чтобы избежать появления потерянных моментальных снимков файлов, которые были созданы во время первоначального резервного копирования.|  
-|NOSKIP &#124; SKIP|?|||  
+|EXPIREDATE &#124; RETAINDAYS|-|||  
+|NOINIT &#124; INIT|-||Добавление к большим двоичным объектам невозможно. Для перезаписи резервной копии используйте аргумент **WITH FORMAT** . Однако при использовании резервных копий моментальных снимков файлов (с помощью аргумента **WITH FILE_SNAPSHOT** ) аргумент **WITH FORMAT** не разрешен, чтобы избежать появления потерянных моментальных снимков файлов, которые были созданы во время первоначального резервного копирования.|  
+|NOSKIP &#124; SKIP|-|||  
 |NOFORMAT &#124; FORMAT|Да||Создание резервных копий в существующем большом двоичном объекте завершается ошибкой, если не указан аргумент **WITH FORMAT** . Если аргумент **WITH FORMAT** указан, существующий большой двоичный объект будет перезаписан. Однако при использовании резервных копий моментальных снимков файлов (с помощью аргумента **WITH FILE_SNAPSHOT** ) аргумент FORMAT не разрешен, чтобы избежать появления потерянных моментальных снимков файлов, которые были созданы во время первоначального резервного копирования снимков файлов. Однако при использовании резервных копий моментальных снимков файлов (с помощью аргумента **WITH FILE_SNAPSHOT** ) аргумент **WITH FORMAT** не разрешен, чтобы избежать появления потерянных моментальных снимков файлов, которые были созданы во время первоначального резервного копирования.|  
 |MEDIADESCRIPTION|Да|||  
 |MEDIANAME|Да|||  
@@ -163,8 +163,8 @@ ms.locfileid: "67582759"
 |NO_CHECKSUM &#124; CHECKSUM|Да|||  
 |STOP_ON_ERROR | CONTINUE_AFTER_ERROR|Да|||  
 |STATS|Да|||  
-|REWIND &#124; NOREWIND|?|||  
-|UNLOAD &#124; NOUNLOAD|?|||  
+|REWIND &#124; NOREWIND|-|||  
+|UNLOAD &#124; NOUNLOAD|-|||  
 |NORECOVERY &#124; STANDBY|Да|||  
 |NO_TRUNCATE|Да|||  
   
@@ -186,19 +186,19 @@ ms.locfileid: "67582759"
 |REPLACE|Да|||  
 |RESTART|Да|||  
 |RESTRICTED_USER|Да|||  
-|FILE|?|||  
+|FILE|-|||  
 |PASSWORD|Да|||  
 |MEDIANAME|Да|||  
 |MEDIAPASSWORD|Да|||  
 |BLOCKSIZE|Да|||  
-|BUFFERCOUNT|?|||  
-|MAXTRANSFERSIZE|?|||  
+|BUFFERCOUNT|-|||  
+|MAXTRANSFERSIZE|-|||  
 |CHECKSUM &#124; NO_CHECKSUM|Да|||  
 |STOP_ON_ERROR | CONTINUE_AFTER_ERROR|Да|||  
 |FILESTREAM|Да|Не поддерживается для резервного копирования моментальных снимков.||  
 |STATS|Да|||  
-|REWIND &#124; NOREWIND|?|||  
-|UNLOAD &#124; NOUNLOAD|?|||  
+|REWIND &#124; NOREWIND|-|||  
+|UNLOAD &#124; NOUNLOAD|-|||  
 |KEEP_REPLICATION|Да|||  
 |KEEP_CDC|Да|||  
 |ENABLE_BROKER &#124; ERROR_BROKER_CONVERSATIONS &#124; NEW_BROKER|Да|||  
@@ -219,9 +219,6 @@ ms.locfileid: "67582759"
 2.  Разверните узел **Базы данных**, щелкните правой кнопкой мыши нужную базу данных, укажите пункт **Задачи**и выберите **Копировать базу данных**.
   
 3.  На странице **Общие** в разделе **Назначение** в раскрывающемся списке **Создать резервную копию на:** доступен вариант **URL-адрес** .  Параметр **URL-адрес** используется для создания резервной копии в хранилище Windows Azure. Нажмите кнопку **Добавить** , чтобы открыть диалоговое окно **Выбор места расположения резервной копии** .
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
     1.  **Контейнер хранилища Azure**. Имя контейнера хранилища Microsoft Azure для хранения файлов резервной копии.  Выберите существующий контейнер в раскрывающемся списке или введите контейнер вручную. 
   
     2.  **Политика подписанных URL-адресов:** введите подписанный URL-адрес для контейнера, указанного вручную.  Это поле недоступно, если был выбран существующий контейнер. 
@@ -229,11 +226,13 @@ ms.locfileid: "67582759"
     3.  **Файл резервной копии:** Имя файла резервной копии.
     
     4.  **Создать контейнер:** используется для регистрации существующего контейнера, который не имеет подписанного URL-адреса.  См. раздел [Соединение с подпиской Microsoft Azure](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md).
-  
+
 > [!NOTE] 
 >  **Добавить** поддерживает несколько файлов резервных копий и контейнеров хранилища для одного набора носителей.
-  
- При выборе **URL-адреса** в качестве назначения некоторые параметры на странице **Параметры носителя** отключаются.  Следующие разделы содержат дополнительные сведения о диалоговом окне «Резервное копирование базы данных»:  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+При выборе **URL-адреса** в качестве назначения некоторые параметры на странице **Параметры носителя** отключаются.  Следующие разделы содержат дополнительные сведения о диалоговом окне «Резервное копирование базы данных»:  
   
  [Резервное копирование базы данных (страница "Общие")](../../relational-databases/backup-restore/back-up-database-general-page.md)  
   

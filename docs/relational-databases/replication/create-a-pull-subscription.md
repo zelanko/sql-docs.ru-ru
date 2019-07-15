@@ -17,12 +17,12 @@ ms.assetid: 41d1886d-59c9-41fc-9bd6-a59b40e0af6e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a710dd9b9cb67d8b0f56407ea3c8d8838a51b35b
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: cec08c2709fc07bc912e399e1cdceb464868c194
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67582512"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860749"
 ---
 # <a name="create-a-pull-subscription"></a>Создание подписки по запросу
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -121,9 +121,9 @@ ms.locfileid: "67582512"
   
 2.  На подписчике выполните процедуру [sp_addmergepullsubscription (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md). Укажите значения параметров **@publisher** , **@publisher_db** , **@publication** , а также следующих:  
   
-    -   **@subscriber_type** — укажите значение **local** для клиентской подписки или **global** для серверной подписки;  
+    -   **@subscriber_type** — укажите значение **local** для клиентской подписки или **global** — для серверной;  
   
-    -   **@subscription_priority** — укажите приоритет подписки (от **0,00** до **99,99**). Это значение необходимо указывать только для серверной подписки.  
+    -   **@subscription_priority** — укажите приоритет подписки (от**0.00** до **99.99**). Это значение необходимо указывать только для серверной подписки.  
   
          Дополнительные сведения см. в статье [Расширенное обнаружение и разрешение конфликтов репликации слиянием](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   

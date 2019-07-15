@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 9711c617-3c68-4e5a-aea3-befc64d51524
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 63c772e9957a180b76949ecc95a95661a4632aff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 320d149698714e074c51eb61bf754ae0851fe212
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65820879"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67683503"
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>Формирование скриптов (среда SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "65820879"
   
 3.  Разверните категорию объекта. Например, разверните узел **Таблицы** или узел **Представления** .  
   
-4.  Щелкните объект правой кнопкой мыши, наведите указатель на пункт **Создать скрипт для \<тип объекта>**, например **Создать скрипт для таблицы**.  
+4.  Щелкните объект правой кнопкой мыши, наведите указатель на пункт **Создать скрипт для \<тип объекта>** , например **Создать скрипт для таблицы**.  
   
 5.  Укажите тип скрипта, например **Создать** или **Изменить**.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "65820879"
   
 6.  Удерживая клавишу CTRL, щелкните левой кнопкой второй объект, который необходимо включить в скрипт.  
   
-7.  Щелкните правой кнопкой мыши один из выделенных объектов и выберите **Создать скрипт для \<тип объекта>**.  
+7.  Щелкните правой кнопкой мыши один из выделенных объектов и выберите **Создать скрипт для \<тип объекта>** .  
 
     ![обозревателе объектов](media/generate-scripts-sql-server-management-studio/objectexplorerdetails.png)
   

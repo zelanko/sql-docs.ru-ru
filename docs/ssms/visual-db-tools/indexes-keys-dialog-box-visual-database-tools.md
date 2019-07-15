@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: 9e4060ba-80c3-468f-bccb-e12e99f672c2
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: fb350568200226585f4c3138224e65816e617780
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 206f9d3907a5b3b7123c7d2d919f3b586fa4eee1
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65096664"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67682233"
 ---
 # <a name="indexes---keys-dialog-box-visual-database-tools"></a>Диалоговое окно "Индексы/Ключи" (визуальные инструменты для баз данных)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

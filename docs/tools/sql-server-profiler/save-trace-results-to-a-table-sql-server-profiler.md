@@ -11,15 +11,15 @@ helpviewer_keywords:
 - saving traces
 - traces [SQL Server], saving
 ms.assetid: edbecf74-683b-4e43-a1ef-7a3d5f5e27f6
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: aa36bff5b14a1ff201b24a6e607dbe65293f8a45
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5a5351c296c7e4924139217f0e866292a13afd1a
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755252"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67730836"
 ---
 # <a name="save-trace-results-to-a-table-sql-server-profiler"></a>сохранять результаты трассировки в таблицу (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47755252"
   
 6.  В списке **Таблица** введите или выберите имя таблицы для сохранения результатов трассировки. Нажмите кнопку **ОК.**  
   
-7.  В диалоговом окне **Свойства трассировки** установите флажок **Максимальное число строк (тыс.)**, чтобы задать максимальное число строк для сохранения.  
+7.  В диалоговом окне **Свойства трассировки** установите флажок **Максимальное число строк (тыс.)** , чтобы задать максимальное число строк для сохранения.  
   
 ## <a name="see-also"></a>См. также:  
  [Приложение SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  

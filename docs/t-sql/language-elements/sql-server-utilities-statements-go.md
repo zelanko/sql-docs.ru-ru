@@ -20,12 +20,12 @@ ms.assetid: b2ca6791-3a07-4209-ba8e-2248a92dd738
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c867fd986ea88d6323c56b2ac76c9aecaba57a15
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 144bcbf882b997dfa07889c2cae5977d0b12b8dc
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65981661"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832957"
 ---
 # <a name="sql-server-utilities-statements---go"></a>Инструкции служебных программ SQL Server — GO
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,6 @@ ms.locfileid: "65981661"
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 GO [count]  
 ```  
   
@@ -78,16 +77,16 @@ GO
   
  Приложения, основанные на API-интерфейсах ODBC или OLE DB, при попытке выполнить команду GO получают уведомление о синтаксической ошибке. Программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] никогда не отправляют команду GO серверу.  
   
- Не используйте точку с запятой в качестве признака конца инструкции после команды GO.  
-  
-## <a name="permissions"></a>Разрешения  
- Для выполнения команды GO не требуются какие-либо разрешения. Она может быть выполнена любым пользователем.  
-  
-```  
+ Не используйте точку с запятой в качестве признака конца инструкции после команды GO.
+ 
+```
 -- Yields an error because ; is not permitted after GO  
 SELECT @@VERSION;  
 GO;  
-```  
+```
+  
+## <a name="permissions"></a>Разрешения  
+ Для выполнения команды GO не требуются какие-либо разрешения. Она может быть выполнена любым пользователем.    
   
 ## <a name="examples"></a>Примеры  
  В следующем примере создаются два пакета. Первый содержит только инструкцию `USE AdventureWorks2012`, которая задает контекст базы данных. Остальные инструкции выполняют те или иные операции над локальной переменной и должны быть сгруппированы в один пакет. Поэтому следующая команда `GO` указывается только после последней инструкции, в которой используется переменная.  

@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: 7e2e586d-947d-4fe2-86c5-f06200ebf139
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 7aef54c119c9941b245068186cc93f66f4e5f135
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b4fab6179453ccd21623a2da5ea0157d235eea40
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677753"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67732115"
 ---
 # <a name="distributed-replay-security"></a>Безопасность распределенного воспроизведения
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,14 +65,14 @@ ms.locfileid: "51677753"
 |Учетная запись|Разрешения папки|  
 |-------------|------------------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Учетная запись службы контроллера распределенного воспроизведения|`<Controller_Installation_Path>\DReplayController` (чтение, запись и удаление)<br /><br /> `DReplayServer.xml` файл (чтение, запись)|  
-|Учетная запись службы клиента распределенного воспроизведения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|`<Client_Installation_Path>\DReplayClient` (чтение, запись и удаление)<br /><br /> `DReplayClient.xml` файл (чтение, запись)<br /><br /> Рабочие и результирующие каталоги, как указано в файле конфигурации клиента элементами `WorkingDirectory` и `ResultDirectory` соответственно. (Чтение и запись)|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Учетная запись службы клиента распределенного воспроизведения|`<Client_Installation_Path>\DReplayClient` (чтение, запись и удаление)<br /><br /> `DReplayClient.xml` файл (чтение, запись)<br /><br /> Рабочие и результирующие каталоги, как указано в файле конфигурации клиента элементами `WorkingDirectory` и `ResultDirectory` соответственно. (Чтение и запись)|  
   
 ## <a name="dcom-permissions"></a>Разрешения DCOM  
  DCOM используется для связи через удаленный вызов процедур (RPC) между контроллером и средством администрирования и между контроллером и всеми клиентами. После установки компонентов распределенного воспроизведения необходимо настроить разрешения DCOM на контроллере для компьютера и конкретных приложений на контроллере.  
   
  Чтобы настроить разрешения DCOM на контроллере, выполните следующие шаги.  
   
-1.  **Откройте dcomcnfg.exe, оснастку "Службы компонентов"**: это средство, которое используется для настройки разрешений DCOM.  
+1.  **Откройте dcomcnfg.exe, оснастку "Службы компонентов"** : это средство, которое используется для настройки разрешений DCOM.  
   
     1.  На компьютере контроллера нажмите кнопку **Пуск**.  
   
