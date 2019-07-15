@@ -20,15 +20,15 @@ helpviewer_keywords:
 - command prompt [SQL Server], starting instance of SQL Server
 - continuing instance of SQL Server
 ms.assetid: 60e8ef0a-0851-41cf-a6d8-cca1e04cbcdb
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 7dba9e5498d39c80a5bc5d1c43134242c5715980
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 93a4572b44cf2be6fa8f1c0912fa7e8178e6c9a7
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656914"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67733358"
 ---
 # <a name="sqlservr-application"></a>Приложение sqlservr
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ sqlservr [-sinstance_name] [-c] [-dmaster_path] [-f]
  Запускает экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] с минимальной конфигурацией. Эта функция полезна в случае, если установленные значения конфигурации (например, слишком большой объем выделяемой памяти) не позволяют выполнить запуск сервера.  
   
  **-e** *error_log_path*  
- Указывает полный путь к файлу журнала ошибок. Если путь не указан, расположением по умолчанию является *\<диск>*:\Program Files\Microsoft SQL Server\MSSQL\Log\Errorlog для экземпляра по умолчанию и *\<диск>*:\Program Files\Microsoft SQL Server\MSSQL$*имя_экземпляра*\Log\Errorlog — для именованного экземпляра. Между параметрами **-e** и *error_log_path*нет пробелов.  
+ Указывает полный путь к файлу журнала ошибок. Если путь не указан, расположением по умолчанию является *\<диск>* :\Program Files\Microsoft SQL Server\MSSQL\Log\Errorlog для экземпляра по умолчанию и *\<диск>* :\Program Files\Microsoft SQL Server\MSSQL$*имя_экземпляра*\Log\Errorlog — для именованного экземпляра. Между параметрами **-e** и *error_log_path*нет пробелов.  
   
  **-l** *master_log_path*  
  Указывает полный путь к файлу журнала транзакций базы данных **master** . Между параметрами **-l** и *master_log_path*нет пробелов.  
@@ -75,10 +75,10 @@ sqlservr [-sinstance_name] [-c] [-dmaster_path] [-f]
  Позволяет запустить именованный экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Если не указать параметр **-s** , будет выполнена попытка запуска экземпляра по умолчанию. Перед запуском программы **sqlservr.exe**в командной строке необходимо перейти в каталог BINN соответствующего экземпляра. Например, если экземпляр Instance1 должен использовать \mssql$Instance1 для своих двоичных файлов, для запуска **sqlservr.exe -s instance1**пользователь должен быть в каталоге \mssql$Instance1\binn. Если экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] запускается с параметром **-n** , целесообразно также использовать параметр **-e** , иначе события [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] не будут регистрироваться.  
   
  **-T** *trace#*  
- Указывает, что экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] фактически должен запускаться с установленным флагом трассировки (*trace#*). Флаги трассировки используются для запуска сервера в нестандартном режиме. Дополнительные сведения см. в разделе [Флаги трассировки (Transact-SQL)](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
+ Указывает, что экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] фактически должен запускаться с установленным флагом трассировки (*trace#* ). Флаги трассировки используются для запуска сервера в нестандартном режиме. Дополнительные сведения см. в разделе [Флаги трассировки (Transact-SQL)](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
   
 > [!IMPORTANT]  
->  При указании флага трассировки укажите **-T**, чтобы передать номер флага трассировки. Знак t в нижнем регистре (**-t**) также принимается [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Однако в этом случае **-t** установит другие внутренние флаги трассировки, необходимые специалистам службы поддержки [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
+>  При указании флага трассировки укажите **-T**, чтобы передать номер флага трассировки. Знак t в нижнем регистре ( **-t**) также принимается [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Однако в этом случае **-t** установит другие внутренние флаги трассировки, необходимые специалистам службы поддержки [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  **-v**  
  Отображает номер версии сервера.  

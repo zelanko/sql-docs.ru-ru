@@ -16,16 +16,16 @@ helpviewer_keywords:
 - troubleshooting [SQL Server replication], non-convergence
 - non-convergence [SQL Server]
 ms.assetid: 3c3cb865-7a4d-4d66-98f2-5935e28929fc
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: f0c4bec0b0ef0181a62ac8c8183830716a604490
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 5a8612dc30a39a033d32daac158799fb3868ae65
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128514"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67733534"
 ---
 # <a name="tablediff-utility"></a>tablediff, программа
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -81,8 +81,8 @@ tablediff
  [ **-?** ]  
  Возвращает список поддерживаемых параметров.  
   
- **-sourceserver** _имя_исходного_сервера_[**\\**_имя\_экземпляра_]  
- Имя исходного сервера. Укажите *имя_исходного_сервера* для экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]по умолчанию. Укажите _имя_исходного_сервера_**\\**_имя_экземпляра_ для именованного экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ **-sourceserver** _имя_исходного_сервера_[ **\\** _имя\_экземпляра_]  
+ Имя исходного сервера. Укажите *имя_исходного_сервера* для экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]по умолчанию. Укажите _имя_исходного_сервера_ **\\** _имя_экземпляра_ для именованного экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **-sourcedatabase** _база_данных_источник_  
  Имя базы данных-источника.  
@@ -105,8 +105,8 @@ tablediff
  **-sourcelocked**  
  Исходная таблица блокируется в ходе сравнения при помощи табличных подсказок TABLOCK и HOLDLOCK.  
   
- **-destinationserver** _имя_целевого_сервера_[**\\**_имя_экземпляра_]  
- Имя целевого сервера. Укажите *имя_целевого_сервера* для экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]по умолчанию. Укажите _имя_целевого_сервера_**\\**_имя_экземпляра_ для именованного экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ **-destinationserver** _имя_целевого_сервера_[ **\\** _имя_экземпляра_]  
+ Имя целевого сервера. Укажите *имя_целевого_сервера* для экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]по умолчанию. Укажите _имя_целевого_сервера_ **\\** _имя_экземпляра_ для именованного экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **-destinationdatabase** _база_данных_подписки_  
  Имя целевой базы данных.  
@@ -130,7 +130,7 @@ tablediff
  Целевая таблица блокируется в ходе сравнения при помощи табличных указаний TABLOCK и HOLDLOCK.  
   
  **-b** _число_байтов_больших_объектов_  
- Число байтов для сравнения столбцов, содержащих данные типа больших объектов, к которым относятся: **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)** и **varbinary(max)**. *число_байтов_больших_объектов* по умолчанию имеет размер столбца. Любые данные, размер которых превышает значение *число_байтов_больших_объектов* , не учитываются при сравнении.  
+ Число байтов для сравнения столбцов, содержащих данные типа больших объектов, к которым относятся: **text**, **ntext**, **image**, **varchar(max)** , **nvarchar(max)** и **varbinary(max)** . *число_байтов_больших_объектов* по умолчанию имеет размер столбца. Любые данные, размер которых превышает значение *число_байтов_больших_объектов* , не учитываются при сравнении.  
   
  **-bf**  _число_инструкций_  
  Число инструкций [!INCLUDE[tsql](../includes/tsql-md.md)] для записи в текущий файл скрипта [!INCLUDE[tsql](../includes/tsql-md.md)] при использовании параметра **-f** . Когда число инструкций [!INCLUDE[tsql](../includes/tsql-md.md)] превышает значение *число_инструкций*, создается новый файл скрипта [!INCLUDE[tsql](../includes/tsql-md.md)] .  
@@ -201,7 +201,7 @@ tablediff
   
 -   **varchar(max)**  
   
--   **nvarchar(max)**;  
+-   **nvarchar(max)** ;  
   
 -   **varbinary(max)**  
   
