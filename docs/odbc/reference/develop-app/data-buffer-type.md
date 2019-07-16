@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 58bea3e9-d552-447f-b3ad-ce1dab213b72
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7e02d42d6d63608ccb70dc984e05ae11578d3160
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 615625ca396e5f2ae094962457cc9e746730ddcf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63049970"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067412"
 ---
 # <a name="data-buffer-type"></a>Тип буфера данных
 Тип данных C буфера указан приложением. С одной переменной это происходит, когда приложение выделяет переменную. С универсального память — то есть памяти, на который ссылается указатель типа void - это происходит, когда приложение приводит к памяти для определенного типа. Драйвер обнаруживает этот тип одним из двух способов:  

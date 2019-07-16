@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 00460f30-8cf7-494e-82df-41012f40ae51
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b2fe669c521e1d21b46b6eb503f0ca03944e12e9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 86e51b7880004117e8efc96bd310c6de705d43a6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702075"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925509"
 ---
 # <a name="dynamic-cursors"></a>Динамические курсоры
 Динамические курсоры обнаруживают все изменения, сделанные в строках в результирующем наборе, независимо от того происходят изменения из внутри курсора или другими пользователями вне курсора. Все инструкции insert, update и инструкций delete, выполняемые пользователями, видимы посредством курсора. Динамический курсор может обнаружить любые изменения, внесенные в строки, порядок и значения в результирующем наборе после открытия курсора. Обновления, сделанные вне курсора, не будут видны, до момента фиксации (если уровень изоляции транзакций курсора не задано значение «незафиксированных»).  

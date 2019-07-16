@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: cab1c662-5d40-4c16-9f5c-36ff9608810b
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 00cdd9f4968af4e0af47259341a60255d32faa8f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8733b93648080e02a4d98a5be90faf1ec7ceba06
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65486085"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68074418"
 ---
 # <a name="setting-properties-for-master-data-services-add-in-for-excel"></a>Задание свойств надстройки Master Data Services для Excel
 

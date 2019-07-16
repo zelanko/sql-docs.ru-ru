@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 3f0fce34f57591d9c6c3f3a9c7382266d655f364
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 32cf59ea3ca8c7f153170881ac5eb970e50c90b3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37985451"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68076404"
 ---
 # <a name="functions-dmx"></a>Функции (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "37985451"
   
  Большинство функций расширений интеллектуального анализа данных возвращают скалярное значение, например опорное значение прогноза, но некоторые возвращают табличный результат. Например функция PredictHistogram возвращает таблицу, содержащую несущего множества и вероятности для каждого состояния заданного прогнозируемого столбца. Результаты отображаются в виде нового табличного столбца.  
   
- **Дополнительные сведения:** [общие функции прогнозирования &#40;расширений интеллектуального анализа данных&#41;](../dmx/general-prediction-functions-dmx.md), [расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; справочнике по функциям](../dmx/data-mining-extensions-dmx-function-reference.md)  
+ **Дополнительные сведения:** [Общие функции прогнозирования &#40;расширений интеллектуального анализа данных&#41;](../dmx/general-prediction-functions-dmx.md), [расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; справочнике по функциям](../dmx/data-mining-extensions-dmx-function-reference.md)  
   
 ## <a name="visual-basic-for-applications-vba-and-excel-functions"></a>Функции языка Visual Basic for Applications (VBA) и приложения Excel  
  В дополнение к функциям собственно расширений интеллектуального анализа данных в инструкциях расширений интеллектуального анализа данных можно также вызывать разнообразные функции языка VBA и приложения Excel. Например можно использовать функцию lCase, чтобы изменить способ отображения столбца Attribute_Name в содержимом модели TM_Decision_Tree. Это показано в следующем образце кода.  
@@ -52,7 +51,7 @@ FROM [TM_Decision_Tree].CONTENT
  **Дополнительные сведения:** [Управление сборками многомерной модели](../analysis-services/multidimensional-models/multidimensional-model-assemblies-management.md)  
   
 ## <a name="see-also"></a>См. также  
- [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; ссылки](../dmx/data-mining-extensions-dmx-reference.md)   
+ [Справочник по расширениям интеллектуального анализа данных (расширения интеллектуального анализа данных)](../dmx/data-mining-extensions-dmx-reference.md)   
  [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; справочнике по функциям](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; Справочник по операторам](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; Справка по инструкции](../dmx/data-mining-extensions-dmx-statements.md)   

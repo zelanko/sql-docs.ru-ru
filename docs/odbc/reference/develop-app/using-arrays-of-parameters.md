@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5a28be88-e171-4f5b-bf4d-543c4383c869
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7ff4a76c38f04c7b9b12842ef800bc8a26a27ed9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cf6b5127bac7aedf9e67918d38020c73a4afe186
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63312521"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079602"
 ---
 # <a name="using-arrays-of-parameters"></a>Использование массивов параметров
 Использование массивов параметров, приложение вызывает **SQLSetStmtAttr** с *атрибут* аргумент SQL_ATTR_PARAMSET_SIZE, чтобы указать число наборов параметров. Он вызывает **SQLSetStmtAttr** с *атрибут* аргумент SQL_ATTR_PARAMS_PROCESSED_PTR, чтобы указать адрес переменной, в котором драйвер может возвращать число наборов параметров обработки Задает включая ошибки. Он вызывает **SQLSetStmtAttr** с *атрибут* аргумент SQL_ATTR_PARAM_STATUS_PTR, чтобы указывать на массив, в котором для возвращения сведений о состоянии для каждой строки значений параметров. Драйвер хранит эти адреса в структуре, которые он поддерживает для инструкции.  

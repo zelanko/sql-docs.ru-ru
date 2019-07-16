@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e158802c-c347-4a5d-bf75-c03e5ae56e6b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f1ab6c1408b9f9c2de2e4070ab35e34ea8a458df
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 7914e3b56dd02d96c02835bf6b4dcc5eb90e8f4b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526766"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084880"
 ---
 # <a name="spupdatejobstep-transact-sql"></a>sp_update_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,9 +69,9 @@ sp_update_jobstep
   
 `[ @step_name = ] 'step_name'` — Это новое имя для шага. *step_name*— **sysname**, значение по умолчанию NULL.  
   
-`[ @subsystem = ] 'subsystem'` Подсистема, используемая агентом Microsoft SQL Server для выполнения *команда*. *Подсистема* — **nvarchar(40)**, значение по умолчанию NULL.  
+`[ @subsystem = ] 'subsystem'` Подсистема, используемая агентом Microsoft SQL Server для выполнения *команда*. *Подсистема* — **nvarchar(40)** , значение по умолчанию NULL.  
   
-`[ @command = ] 'command'` Выполнение команд для выполнения с помощью *подсистемы*. *команда* — **nvarchar(max)**, значение по умолчанию NULL.  
+`[ @command = ] 'command'` Выполнение команд для выполнения с помощью *подсистемы*. *команда* — **nvarchar(max)** , значение по умолчанию NULL.  
   
 `[ @additional_parameters = ] 'parameters'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
@@ -100,7 +99,7 @@ sp_update_jobstep
   
 `[ @on_fail_step_id = ] fail_step_id` Идентификационный номер шага данного задания, для выполнения, если шаг завершился с ошибкой и *fail_action* — **4**. *fail_step_id* — **int**, значение по умолчанию NULL.  
   
-`[ @server = ] 'server'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *сервер* — **nvarchar(128)**, значение по умолчанию NULL.  
+`[ @server = ] 'server'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *сервер* — **nvarchar(128)** , значение по умолчанию NULL.  
   
 `[ @database_name = ] 'database'` Имя базы данных, в которой выполняется [!INCLUDE[tsql](../../includes/tsql-md.md)] шаг. *База данных*— **sysname**. Символы, заключенные в квадратные скобки ([ ]), являются недопустимыми. Значение по умолчанию — NULL.  
   
@@ -112,7 +111,7 @@ sp_update_jobstep
   
 `[ @os_run_priority = ] run_priority` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @output_file_name = ] 'file_name'` Имя файла, в котором будет сохранен выход данного шага. *File_name* — **nvarchar(200)**, значение по умолчанию NULL. Данный аргумент действителен только с командами, запущенными в подсистемах [!INCLUDE[tsql](../../includes/tsql-md.md)] или CmdExec.  
+`[ @output_file_name = ] 'file_name'` Имя файла, в котором будет сохранен выход данного шага. *File_name* — **nvarchar(200)** , значение по умолчанию NULL. Данный аргумент действителен только с командами, запущенными в подсистемах [!INCLUDE[tsql](../../includes/tsql-md.md)] или CmdExec.  
   
  Чтобы вернуть аргументу output_file_name значение NULL, необходимо задать *аргументу output_file_name* пустую строку ("") или в строку из пробелов, но вы не можете использовать **CHAR(32)** функции. Например, установление данного аргумента равным пустой строке производится следующим образом:  
   

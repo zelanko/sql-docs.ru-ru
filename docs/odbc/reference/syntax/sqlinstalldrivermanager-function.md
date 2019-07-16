@@ -19,17 +19,16 @@ helpviewer_keywords:
 ms.assetid: aebc439b-fffd-4d98-907a-0163f79aee8d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 17a1539463e56e2795d03fa401b17b7e7d173440
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1f1e3ac7f0a76c607fa07d6eb92d069d99ef5e0a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536518"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68076213"
 ---
 # <a name="sqlinstalldrivermanager-function"></a>Функция SQLInstallDriverManager
 **Соответствие стандартам**  
- Представленные версии: ODBC 1.0: Рекомендуется использовать в Windows XP с пакетом обновления 2, пакет обновления 1 для Windows Server 2003 и более поздних операционных системах  
+ Представленные версии: ODBC 1.0. Рекомендуется использовать в Windows XP с пакетом обновления 2, пакет обновления 1 для Windows Server 2003 и более поздних операционных системах  
   
  **Сводка**  
  **SQLInstallDriverManager** возвращает путь к целевой каталог для установки основных компонентов ODBC. Фактически, вызывающей программе необходимо скопировать файлы диспетчера драйверов в целевой каталог.  

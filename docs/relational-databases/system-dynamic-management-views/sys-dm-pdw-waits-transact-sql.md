@@ -11,14 +11,13 @@ dev_langs:
 ms.assetid: 5130e498-1c77-4ae3-a80b-9aae396494e9
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 61824058d90b7a922f6bd2d288a85b4923c0975e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 476b2f251bd41480962eb9925af6e3619507e791
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56042875"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088750"
 ---
 # <a name="sysdmpdwwaits-transact-sql"></a>sys.dm_pdw_waits (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -29,7 +28,7 @@ ms.locfileid: "56042875"
 |-----------------|---------------|-----------------|-----------|  
 |wait_id|**bigint**|Уникальный числовой идентификатор, связанный с состояния ожидания.<br /><br /> Ключ для этого представления.|Уникальными среди всех ожиданий в системе.|  
 |session_id|**nvarchar(32)**|Идентификатор сеанса, в котором произошло состояния ожидания.|См. в разделе session_id в [sys.dm_pdw_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).|  
-|Тип|**nvarchar(255)**|Тип ожидания, которые представляет эта запись.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
+|type|**nvarchar(255)**|Тип ожидания, которые представляет эта запись.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |object_type|**nvarchar(255)**|Тип объекта, который зависит от ожидания.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |object_name|**nvarchar(386)**|Имя или идентификатор GUID для указанного объекта, который был подвергнут ожидания.||  
 |request_id|**nvarchar(32)**|Идентификатор запроса, в котором произошло состояния ожидания.|См. в разделе request_id в [sys.dm_pdw_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  

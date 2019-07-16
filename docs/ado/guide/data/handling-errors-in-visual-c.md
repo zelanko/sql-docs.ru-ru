@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b7576f07-020a-45f7-9e79-b5756f33f7ab
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5d78e135a3cea0c9dcfc472f59368d33b0106b84
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fb9eb29a78c3ec5f47e3ff09641ba04ca01d204a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702040"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925126"
 ---
 # <a name="handling-errors-in-visual-c"></a>Обработка ошибок в Visual C++
 В модели COM большинство операций возвращает код возврата HRESULT, указывающее, успешно ли завершен функции. Директива #import приводит к возникновению ошибки кода программы-оболочки вокруг каждого «raw» метод или свойство и проверяет возвращаемое значение HRESULT. Если значение HRESULT указывает на ошибку, код оболочки выводит ошибку COM, вызывающий _com_issue_errorex() с кодом возврата HRESULT в качестве аргумента. Ошибка COM-объектов может быть перехвачено в **try-catch** блока. (Catch ссылку на объект _com_error ради повышения эффективности в).  

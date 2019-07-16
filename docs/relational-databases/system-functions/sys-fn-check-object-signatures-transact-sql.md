@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 47509566-d3d7-46a9-89c1-91b4895d56b9
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dc6d8bb4c3318f488c7969359c6aa8b18782b6cb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b9054cae2d8b67a96be964ca8dd0f1effe2113a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800962"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046309"
 ---
 # <a name="sysfncheckobjectsignatures-transact-sql"></a>sys.fn_check_object_signatures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -56,14 +55,14 @@ fn_ check_object_signatures (
  \@*Класс* — **sysname**.  
   
  { \@ *отпечаток* }  
- Хэш SHA-1 сертификата, с помощью которого был зашифрован ключ, или идентификатор GUID асимметричного ключа, которым был зашифрован этот ключ. \@*отпечаток* — **varbinary(20)**.  
+ Хэш SHA-1 сертификата, с помощью которого был зашифрован ключ, или идентификатор GUID асимметричного ключа, которым был зашифрован этот ключ. \@*отпечаток* — **varbinary(20)** .  
   
 ## <a name="tables-returned"></a>Возвращаемые таблицы  
  В следующей таблице перечислены столбцы, **fn_check_object_signatures** возвращает.  
   
-|Столбец|Тип|Описание|  
+|Столбец|Type|Описание|  
 |------------|----------|-----------------|  
-|Тип|**nvarchar(120)**|Возвращает описание типа или сборки.|  
+|type|**nvarchar(120)**|Возвращает описание типа или сборки.|  
 |entity_id|**int**|Возвращает идентификатор оцениваемого объекта.|  
 |is_signed|**int**|Возвращает значение 0, если объект не был подписан с помощью предоставленного отпечатка. Возвращает значение 1, если объект подписан с помощью предоставленного отпечатка.|  
 |is_signature_valid|**int**|Если значение is_signed равно 1, возвращает значение 0, если подпись не является допустимой. Возвращает значение 1, если подпись является допустимой.<br /><br /> Если значение is_signed равно 0, всегда возвращает 0.|  

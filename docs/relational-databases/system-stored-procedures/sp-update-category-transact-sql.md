@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 098b926a-b078-4122-a5e1-3ef54b979dd4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 58cab4235a0b0199540179250fc5358ff6a525b6
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 3ebee467890e26aa58171690f5fdabaef3607ee1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528860"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084918"
 ---
 # <a name="spupdatecategory-transact-sql"></a>sp_update_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ sp_update_category
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @class = ] 'class'` Класс категории. *Класс*— **varchar(8)**, по умолчанию и может принимать одно из следующих значений.  
+`[ @class = ] 'class'` Класс категории. *Класс*— **varchar(8)** , по умолчанию и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  

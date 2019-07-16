@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0efee2d6-ce94-411e-9976-97ba28b8da37
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a99592210ff315db026d60b8743d4a3bca13c969
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 60b6673c4a6d618e52c78b48fe7307c20c8628f0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63061632"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069841"
 ---
 # <a name="fetching-rows-with-sqlbulkoperations"></a>Выборка строк с помощью SQLBulkOperations
 Данные можно refetched в набор строк с помощью закладок с помощью вызова **SQLBulkOperations.** Строки, которые необходимо извлечь идентифицируются по закладки столбца привязанного закладки. Столбцы со значением SQL_COLUMN_IGNORE не извлекаются.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: db245c80-981a-4638-bd03-69d04bc67af0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 733b958ee883aa62034b4acc1eec67100b35a74d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9d27f168640b25652ed0fd40154ebfb677ef9300
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62628457"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068638"
 ---
 # <a name="file-data-sources"></a>Файловые источники данных
 *Файловые источники данных* хранятся в файле и разрешить сведения о подключении для использования в несколько раз одним пользователем или совместно использовать несколько пользователей. При использовании источника данных, диспетчер драйверов устанавливает подключение к источнику данных, используя сведения в файле .dsn. Этот файл можно управлять как любой другой файл. Источника данных имеет имя источника данных, так как не машинные источники данных и не зарегистрирована для любого одного пользователя или компьютера.  

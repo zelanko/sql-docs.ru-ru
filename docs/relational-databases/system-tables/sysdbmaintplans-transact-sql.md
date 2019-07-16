@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0363296a-3082-48a9-9eb5-a1020b2f541a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0525a50b30036470336dafe10c78a42218486c63
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a47ae49ab640b18cbcd7286bc5d95bdc74143aac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62686240"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029970"
 ---
 # <a name="sysdbmaintplans-transact-sql"></a>sysdbmaintplans (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ ms.locfileid: "62686240"
 |**remote_history_server**|**sysname**|Имя удаленного сервера, на котором может быть сохранен отчет журнала.|  
 |**max_remote_history_rows**|**int**|Максимальное количество строк, выделенных в системной таблице на удаленном сервере, в которые может быть записан отчет журнала.|  
 |**user_defined_1**|**int**|Значение по умолчанию — NULL.|  
-|**user_defined_2**|**nvarchar(100)**|Значение по умолчанию — NULL.|  
+|**user_defined_2**|**Nvarchar(100)**|Значение по умолчанию — NULL.|  
 |**user_defined_3**|**datetime**|Значение по умолчанию — NULL.|  
 |**user_defined_4**|**uniqueidentifier**|Значение по умолчанию — NULL.|  
 |**log_shipping**|**bit**|Статус доставки журналов:<br /><br /> **0** = отключено **1** = включено|  

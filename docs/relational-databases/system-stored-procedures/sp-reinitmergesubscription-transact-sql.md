@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 249a4048-e885-48e0-a92a-6577f59de751
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1188bb26c8c63267f30110bf890589d1670fdf8b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 27c10f9d5fa04ae449bdcca84891f0f28376eeb6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531446"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075702"
 ---
 # <a name="spreinitmergesubscription-transact-sql"></a>sp_reinitmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ sp_reinitmergesubscription [ [ @publication = ] 'publication'
   
 `[ @subscriber_db = ] 'subscriber_db'` — Имя базы данных подписчика. *subscriber_db* — **sysname**, значение по умолчанию **все**.  
   
-`[ @upload_first = ] 'upload_first'` — Будут ли изменения на подписчике переданы перед повторной инициализацией подписки. *upload_first* — **nvarchar(5)**, значение по умолчанию FALSE. Если **true**, изменения передаются перед повторной инициализацией подписки. Если **false**, изменения не передаются.  
+`[ @upload_first = ] 'upload_first'` — Будут ли изменения на подписчике переданы перед повторной инициализацией подписки. *upload_first* — **nvarchar(5)** , значение по умолчанию FALSE. Если **true**, изменения передаются перед повторной инициализацией подписки. Если **false**, изменения не передаются.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  

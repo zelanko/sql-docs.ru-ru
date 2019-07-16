@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 440bc409-1188-4175-afc4-c68e31e44fed
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8ac38c2e54fde2beb02e009e00b9f587e9265a43
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4241ac9a457aa51f32ec12e9b1d8b83aa534995e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62759945"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060219"
 ---
 # <a name="sysmaileventlog-transact-sql"></a>sysmail_event_log (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "62759945"
 |**Log_id**|**int**|Идентификатор элементов в журнале.|  
 |**event_type**|**varchar(11)**|Тип уведомления, помещаемого в журнал. Допустимые значения: ошибки, предупреждения, информационные сообщения, сообщения об успешном завершении и дополнительные внутренние сообщения.|  
 |**log_date**|**datetime**|Дата и время добавления записи в журнал.|  
-|**Описание**|**nvarchar(max)**|Текст добавленного сообщения.|  
+|**description**|**nvarchar(max)**|Текст добавленного сообщения.|  
 |**process_id**|**int**|Идентификатор процесса внешней программы Database Mail. Обычно он изменяется при каждом запуске внешней программы Database Mail.|  
 |**mailitem_id**|**int**|Идентификатор почтового отправления в очереди почты. Содержит NULL, если сообщение не относится к определенному элементу электронной почты.|  
 |**account_id**|**int**|**Account_id** учетной записи, относящиеся к событию. Содержит NULL, если сообщение не относится к определенной учетной записи.|  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 13189359-73ff-45cf-8225-2a8f7194accc
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 9879a065db11bb8e8b8ddff9c57376faf36fe151
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8937eb796d75afdc404ef4815918245cda7f13a5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63280332"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68074151"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-db2tosql"></a>Команды меню и другие сочетания клавиш (DB2ToSQL)
 В следующих разделах описаны сочетания клавиш для доступа к командам меню и другие сочетания клавиш, используемые в различных диалоговых окнах из SSMA для DB2 приложения.  

@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: 1954541d-b716-4e03-8fcc-7022f428e01d
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 27df857e8863272f2b502c4950b4cc36ad936978
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b5c40ce6d1c7b7ef85f24fc8032559e000d89be1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401959"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097825"
 ---
 # <a name="sysdmexecdistributedrequeststeps-transact-sql"></a>sys.dm_exec_distributed_request_steps (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -41,7 +40,7 @@ ms.locfileid: "52401959"
 |step_index|**int**|Позиция этого шага в последовательности действий, составляющих запрос.|0 (n-1) для запроса с n шагов.|  
 |operation_type|**nvarchar(128)**|Тип операции, представленное в этом действии.|«MoveOperation», «OnOperation», «RandomIDOperation», «RemoteOperation», «ReturnOperation», «ShuffleMoveOperation», «TempTablePropertiesOperation», «DropDiagnosticsNotifyOperation», «HadoopShuffleOperation», «HadoopBroadCastOperation», «HadoopRoundRobinOperation»|  
 |distribution_type|**nvarchar(32)**|Где выполняется шаг.|«Возможные «,» AllDistributions, «ComputeNode», «Distribution», «AllNodes», «SubsetNodes», «SubsetDistributions,» не задано».|  
-|значение параметра location_type действия|**nvarchar(32)**|Где выполняется шаг.|«Вычисления», «Head» или «DMS». Все действия перемещения данных показывают «DMS».|  
+|location_type|**nvarchar(32)**|Где выполняется шаг.|«Вычисления», «Head» или «DMS». Все действия перемещения данных показывают «DMS».|  
 |status|**nvarchar(32)**|Состояние этого шага|«Ожидание» «Выполняется», «Завершено», «Сбой», «UndoFailed», «PendingCancel», «отменено», «Отменено», «Прервано»|  
 |error_id|**nvarchar(36)**|Уникальный идентификатор, связанный с этим шагом, если таковые имеются ошибки|См. в разделе идентификатор [sys.dm_exec_compute_node_errors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-errors-transact-sql.md), или значение NULL, если не возникло ошибок.|  
 |start_time|**datetime**|Время начала выполнения шага|Меньше или равным текущее время и больше или равна end_compile_time запроса, к которой принадлежит этот шаг.|  

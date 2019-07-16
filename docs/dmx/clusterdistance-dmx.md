@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: ad3d0d06016fe8684cacaf73286b229a423aa7c6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 1884bf191d842ba136165cf28aa14c23dd82b2e3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533664"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071075"
 ---
 # <a name="clusterdistance-dmx"></a>ClusterDistance (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -88,7 +87,7 @@ NATURAL PREDICTION JOIN
 |--------------|  
 |Кластер 6|  
   
-## <a name="example2-obtaining-distance-to-a-specified-cluster"></a>Пример 2. Получение расстояния до указанного кластера  
+## <a name="example2-obtaining-distance-to-a-specified-cluster"></a>Example2: Получение расстояния до указанного кластера  
  Следующий синтаксис использует набор строк схемы содержимого модели интеллектуального анализа данных для возврата списка идентификаторов узла и заголовков узла для кластеров в модели интеллектуального анализа. Затем можно использовать заголовок узла в качестве аргумента идентификатора кластера в **ClusterDistance** функции.  
   
 ```  

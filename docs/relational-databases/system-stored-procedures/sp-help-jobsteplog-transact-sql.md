@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1a0be7b1-8f31-4b4c-aadb-586c0e00ed04
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b6480c498914c4ec0bc02ba21552615bbdd28f6e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: e3af6ff05b971e6b9a0dedc1ec2e14f4ba87e00c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535696"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090042"
 ---
 # <a name="sphelpjobsteplog-transact-sql"></a>sp_help_jobsteplog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +68,7 @@ sp_help_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**date_created**|**datetime**|Дата создания этапа.|  
 |**date_modified**|**datetime**|Дата последнего изменения этапа.|  
 |**log_size**|**float**|Размер журнала шага задания в мегабайтах (МБ).|  
-|**журнал**|**nvarchar(max)**|Вывод журнала шага задания.|  
+|**log**|**nvarchar(max)**|Вывод журнала шага задания.|  
   
 ## <a name="remarks"></a>Примечания  
  **sp_help_jobsteplog** в **msdb** базы данных.  

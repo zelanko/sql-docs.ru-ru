@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f87c9f4a-bda1-4bce-84b2-a055a3229ecd
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3a8549d33b000744f4d8430ee306e0083455894c
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 23ecda5fd8d91f20133eb2295d38dc9d9ace66f6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531766"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069104"
 ---
 # <a name="sysmaildeletemailitemssp-transact-sql"></a>sysmail_delete_mailitems_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ sysmail_delete_mailitems_sp  [ [ @sent_before = ] 'sent_before' ]
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
 ## <a name="remarks"></a>Примечания  
- Сообщения компонента Database Mail и их вложения хранятся в **msdb** базы данных. Сообщения должны периодически удаляться, чтобы предотвратить **msdb** от увеличения размера, чем ожидалось и в соответствии с вашей программы по хранению документов организации. Используйте **sysmail_delete_mailitems_sp** хранимую процедуру, чтобы окончательно удалить сообщения электронной почты из таблиц компонента Database Mail. Необязательный аргумент позволяет удалить только старые сообщения, указав дату и время. Сообщения, которые старше этого аргумента, будут удалены. Еще один необязательный аргумент позволяет удалить только сообщения определенного типа, заданный как **sent_status** аргумент. Необходимо указать аргумент для **@sent_before** или **@sent_status**. Чтобы удалить все сообщения, используйте  **@sent_before = getdate()**.  
+ Сообщения компонента Database Mail и их вложения хранятся в **msdb** базы данных. Сообщения должны периодически удаляться, чтобы предотвратить **msdb** от увеличения размера, чем ожидалось и в соответствии с вашей программы по хранению документов организации. Используйте **sysmail_delete_mailitems_sp** хранимую процедуру, чтобы окончательно удалить сообщения электронной почты из таблиц компонента Database Mail. Необязательный аргумент позволяет удалить только старые сообщения, указав дату и время. Сообщения, которые старше этого аргумента, будут удалены. Еще один необязательный аргумент позволяет удалить только сообщения определенного типа, заданный как **sent_status** аргумент. Необходимо указать аргумент для **@sent_before** или **@sent_status** . Чтобы удалить все сообщения, используйте  **@sent_before = getdate()** .  
   
  Удаление сообщений электронной почты также удаляет вложения, связанные с этими сообщениями. Удаление сообщений не удаляет соответствующие записи из **sysmail_event_log**. Используйте [sysmail_delete_log_sp](../../relational-databases/system-stored-procedures/sysmail-delete-log-sp-transact-sql.md) для удаления элементов из журнала.  
   

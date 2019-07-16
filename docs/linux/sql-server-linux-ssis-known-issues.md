@@ -4,17 +4,16 @@ description: В этой статье описываются ограничен�
 author: lrtoyou1223
 ms.author: lle
 ms.reviewer: maghan
-manager: jroth
 ms.date: 06/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: bc4ec7f99a8cbcf5b6bd48924f3eed1e8f10f658
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 45e5d9b36b6fd75db7bbc3c5ea397ee9226e2771
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67833134"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032230"
 ---
 # <a name="limitations-and-known-issues-for-ssis-on-linux"></a>Ограничения и известные проблемы для служб SSIS в Linux
 

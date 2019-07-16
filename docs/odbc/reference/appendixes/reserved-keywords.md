@@ -13,15 +13,14 @@ helpviewer_keywords:
 ms.assetid: 8eeede59-a828-44bf-866c-1ca9a77a2c5e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1d77d6632d689a1f169c61cb636e3bc89a900419
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a89a24ddbbe14938824819e24fd9112597168507
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62628906"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68057208"
 ---
-# <a name="reserved-keywords"></a>Зарезервированные слова
+# <a name="reserved-keywords"></a>Зарезервированные ключевые слова
 Следующие слова зарезервированы для использования в вызовах функций ODBC. Эти слова не ограничивают минимальную грамматику SQL; Тем не менее чтобы обеспечить совместимость с драйверами, поддерживающими базовую грамматику SQL, приложения следует избегать, с помощью любого из этих ключевых слов. #**Определить** значение SQL_ODBC_KEYWORDS содержит разделенный запятыми список из этих ключевых слов.  
   
 |||  

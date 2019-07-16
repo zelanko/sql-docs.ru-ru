@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 1baab80455cc5267686bf26251629a1d47065344
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 7a7a9c18599d13c4db510793a1d75c85bbb7a829
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38042122"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070866"
 ---
 # <a name="data-mining-extensions-dmx-statements"></a>Инструкции расширений интеллектуального анализа данных
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -61,7 +60,7 @@ ms.locfileid: "38042122"
   
 |Раздел|Описание|  
 |-----------|-----------------|  
-|[Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; инструкции определения данных](../dmx/dmx-statements-data-definition.md)|Часть языка определения данных (DDL). Используется для определения новой модели интеллектуального анализа данных (включая обучение).|  
+|[Инструкции определения расширений интеллектуального анализа данных](../dmx/dmx-statements-data-definition.md)|Часть языка определения данных (DDL). Используется для определения новой модели интеллектуального анализа данных (включая обучение).|  
 |[Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; инструкций по обработке данных](../dmx/dmx-statements-data-manipulation.md)|Часть языка обработки данных (DML). Используется для работы с существующими моделями интеллектуального анализа данных, включая обзор модели и создание прогнозов.|  
   
 ## <a name="see-also"></a>См. также  

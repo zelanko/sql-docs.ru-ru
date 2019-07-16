@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: eb7b58b8-3508-4114-97c2-d877bcb12964
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 821eaa4b7c54d8d2f449b2b071582480ac806378
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4811d27e00336f6e02d62d9dd6c346d26400f129
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66429024"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936931"
 ---
 # <a name="sysdmexecquerystats-transact-sql"></a>sys.dm_exec_query_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -78,7 +77,7 @@ ms.locfileid: "66429024"
 |**total_rows**|**bigint**|Общее число строк, возвращаемых запросом. Не может иметь значение null.<br /><br /> Значение всегда равно 0, если скомпилированная в собственном коде хранимая процедура запрашивает оптимизированную для памяти таблицу.|  
 |**last_rows**|**bigint**|Число строк, возвращенных последним выполнением запроса. Не может иметь значение null.<br /><br /> Значение всегда равно 0, если скомпилированная в собственном коде хранимая процедура запрашивает оптимизированную для памяти таблицу.|  
 |**min_rows**|**bigint**|Минимальное количество строк, когда-либо возвращенных при выполнении запроса во время одного выполнения. Не может иметь значение null.<br /><br /> Значение всегда равно 0, если скомпилированная в собственном коде хранимая процедура запрашивает оптимизированную для памяти таблицу.|  
-|**max_rows**|**bigint**|Максимальное число строк, когда-либо возвращенных при выполнении запроса во время одного выполнения. Не может иметь значение null.<br /><br /> Значение всегда равно 0, если скомпилированная в собственном коде хранимая процедура запрашивает оптимизированную для памяти таблицу.|  
+|**Max_Rows**|**bigint**|Максимальное число строк, когда-либо возвращенных при выполнении запроса во время одного выполнения. Не может иметь значение null.<br /><br /> Значение всегда равно 0, если скомпилированная в собственном коде хранимая процедура запрашивает оптимизированную для памяти таблицу.|  
 |**statement_sql_handle**|**varbinary(64)**|**Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Заполнены значениями отличное от NULL только в том случае, если включен Query Store и сбор статистики для данного конкретного запроса.|  
 |**statement_context_id**|**bigint**|**Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Заполнены значениями отличное от NULL только в том случае, если включен Query Store и сбор статистики для данного конкретного запроса.|  
 |**total_dop**|**bigint**|Этот план общую сумму степень параллелизма и использовать с момента его компиляции. Он всегда будет равно 0, для запроса к таблице, оптимизированной для памяти.<br /><br /> **Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
@@ -128,7 +127,7 @@ ms.locfileid: "66429024"
 ## <a name="permissions"></a>Разрешения  
 
 На [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], требуется `VIEW SERVER STATE` разрешение.   
-На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], требуется `VIEW DATABASE STATE` разрешение в базе данных.   
+В [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] необходимо разрешение `VIEW DATABASE STATE` для базы данных.   
    
 ## <a name="remarks"></a>Примечания  
  Статистика в представлении обновляется после завершения выполнения запроса.  

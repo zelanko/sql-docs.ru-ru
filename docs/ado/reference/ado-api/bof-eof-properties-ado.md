@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 36c31ab2-f3b6-4281-89b6-db7e04e38fd2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9a449c0e635c7fe0e63bc1f4d8b1b0b91712135d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4932d3349c2d4e2948ddd28d9df3a30424064dcb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696290"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920387"
 ---
 # <a name="bof-eof-properties-ado"></a>Свойства BOF и EOF (ADO)
 -   **BOF** указывает, что текущая запись позиция находится перед первой записи в [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта.  
@@ -50,10 +49,10 @@ ms.locfileid: "66696290"
   
 ||Примеры MoveFirst,<br /><br /> MoveLast|MovePrevious,<br /><br /> Переместить < 0|Переместить 0|MoveNext,<br /><br /> Переместить > 0|  
 |------|-----------------------------|---------------------------------|------------|-----------------------------|  
-|**BOF**=**True**, **EOF**=**False**|Разрешено|Ошибка|Ошибка|Разрешено|  
-|**BOF**=**False**, **EOF**=**True**|Разрешено|Разрешено|Ошибка|Ошибка|  
+|**BOF**=**True**, **EOF**=**False**|Allowed|Ошибка|Ошибка|Allowed|  
+|**BOF**=**False**, **EOF**=**True**|Allowed|Allowed|Ошибка|Ошибка|  
 |Оба **True**|Ошибка|Ошибка|Ошибка|Ошибка|  
-|Оба **False**|Разрешено|Разрешено|Разрешено|Разрешено|  
+|Оба **False**|Allowed|Allowed|Allowed|Allowed|  
   
  Позволяя **переместить** не гарантирует, что метод будет успешно находить запись; это только означает, что вызов указанного **переместить** метод не приведет к ошибке.  
   

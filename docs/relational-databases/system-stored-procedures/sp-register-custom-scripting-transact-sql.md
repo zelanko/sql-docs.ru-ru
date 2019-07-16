@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a8159282-de3b-4b9e-bdc9-3d3fce485c7f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 85f9104d9a9bb634dd10dfb588cf07e01d1c1fb1
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: c10451148c6f9b2fda231691b770bca3928517f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535925"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075750"
 ---
 # <a name="spregistercustomscripting-transact-sql"></a>Процедура sp_register_custom_scripting (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ sp_register_custom_scripting [ @type  = ] 'type'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @type = ] 'type'` Тип пользовательской хранимой процедуры или скрипта регистрируется. *Тип* — **varchar(16)**, по умолчанию и может принимать одно из следующих значений.  
+`[ @type = ] 'type'` Тип пользовательской хранимой процедуры или скрипта регистрируется. *Тип* — **varchar(16)** , по умолчанию и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -50,7 +49,7 @@ sp_register_custom_scripting [ @type  = ] 'type'
 |**delete**|Зарегистрированная пользовательская хранимая процедура, выполняющаяся при репликации инструкции DELETE.|  
 |**custom_script**|Скрипт, выполняющийся в конце триггера языка DDL.|  
   
-`[ @value = ] 'value'` Имя хранимой процедуры или имя и полный путь к [!INCLUDE[tsql](../../includes/tsql-md.md)] файл скрипта регистрации. *значение* — **nvarchar(1024)**, не имеет значения по умолчанию.  
+`[ @value = ] 'value'` Имя хранимой процедуры или имя и полный путь к [!INCLUDE[tsql](../../includes/tsql-md.md)] файл скрипта регистрации. *значение* — **nvarchar(1024)** , не имеет значения по умолчанию.  
   
 > [!NOTE]  
 >  Указав значение NULL для *значение*параметр отменяет регистрацию зарегистрированного ранее сценарий, который является таким же, как работает [sp_unregister_custom_scripting](../../relational-databases/system-stored-procedures/sp-unregister-custom-scripting-transact-sql.md).  

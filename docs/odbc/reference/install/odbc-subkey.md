@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: f9534144-8f42-4946-b0fb-638e9dcde9c8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ee7cf624e7c118a5d9ef36738c810aecc4ec5684
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8aad5171b98c54aa0c4adbde1a5678e4fd953640
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63281011"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093962"
 ---
 # <a name="odbc-subkey"></a>Подраздел ODBC
 Значения в столбце подраздел ODBC укажите параметры трассировки ODBC. Эти параметры задаются «трассировка» диалогового окна Администратор источников данных ODBC, отображаемого элементом **SQLManageDataSources**. Подраздел ODBC является необязательным. Формат этих значений является, как показано в следующей таблице.  
   
-|Имя|Тип данных|Данные|  
+|Name|Тип данных|Data|  
 |----------|---------------|----------|  
 |Trace|REG_SZ|**0** &#124; **1**|  
 |TraceFile|REG_SZ|*путь файла трассировки*|  

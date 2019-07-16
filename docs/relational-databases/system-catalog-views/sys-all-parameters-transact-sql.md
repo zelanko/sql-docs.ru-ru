@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: eecbb68e-9b4c-4243-94e2-8096a9cc7892
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4365ad34102965e163d18d26b3f9a139e6025bb8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 63231301109f83243b431244028fddffb8cc6fe7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820402"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68001323"
 ---
 # <a name="sysallparameters-transact-sql"></a>sys.all_parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,9 +39,9 @@ ms.locfileid: "47820402"
 |**parameter_id**|**int**|Идентификатор параметра. Уникален в пределах объекта. Если объект является скалярной функцией, **parameter_id** = 0 представляет возвращаемое значение.|  
 |**system_type_id**|**tinyint**|Идентификатор системного типа параметра.|  
 |**user_type_id**|**int**|Определенный пользователем идентификатор типа параметра.<br /><br /> Чтобы вернуть имя типа, присоедините к [sys.types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) представления по этому столбцу каталога.|  
-|**max_length**|**smallint**|Максимальная длина параметра в байтах.<br /><br /> -1 = тип данных столбца — **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, или **xml**.|  
-|**Точность**|**tinyint**|Точность параметра, если он является числовым; иначе — 0.|  
-|**Масштаб**|**tinyint**|Масштаб числового параметра, если он является числовым; иначе — 0.|  
+|**max_length**|**smallint**|Максимальная длина параметра в байтах.<br /><br /> -1 = тип данных столбца — **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , или **xml**.|  
+|**precision**|**tinyint**|Точность параметра, если он является числовым; иначе — 0.|  
+|**масштаб**|**tinyint**|Масштаб числового параметра, если он является числовым; иначе — 0.|  
 |**is_output**|**bit**|1 = выходной параметр (или возвращаемый); иначе — 0.|  
 |**is_cursor_ref**|**bit**|1 = параметр является ссылкой на курсор.|  
 |**has_default_value**|**bit**|1 = параметр имеет значение по умолчанию.<br /><br /> В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживаются значения по умолчанию для объектов среды CLR в данном представлении каталога, поэтому в данном столбце всегда будет содержаться значение 0 для объектов языка [!INCLUDE[tsql](../../includes/tsql-md.md)]. Чтобы просмотреть значение по умолчанию параметра в [!INCLUDE[tsql](../../includes/tsql-md.md)] объекта, запрос **определение** столбец [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) представления каталога или используйте [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md)системной функции.|  

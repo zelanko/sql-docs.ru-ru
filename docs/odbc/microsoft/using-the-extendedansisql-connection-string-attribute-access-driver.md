@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 92675c30-9100-43ae-aa35-041f3006a54f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4e8994c441c2c0de82ff89029a489e5ff3d3a7e9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bdd80ab8f23e0c940130ad058155f032572bea08
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63259371"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088015"
 ---
 # <a name="using-the-extendedansisql-connection-string-attribute-access-driver"></a>Использование атрибута строки подключения ExtendedAnsiSQL (драйвер для Access)
 Jet 4.0 имеет несколько новых функций, которые не включены по умолчанию в драйверы для баз данных ODBC рабочего стола версии 4.0. Чтобы воспользоваться преимуществами этих новых функций, приложение будет задать новый атрибут соединения, добавьте новый атрибут в строку подключения или задать атрибут в имени DSN. Атрибут называется ExtendedAnsiSQL и относится только к драйверы Microsoft ODBC Desktop базы данных 4.0 и более поздних версий.  

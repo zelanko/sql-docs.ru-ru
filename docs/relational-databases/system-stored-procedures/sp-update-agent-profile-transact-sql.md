@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: cc81f227-0df3-4151-bb4d-4f45ea997b71
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bf8ec9183ce1bac5557040aa3256ef5e6499c0f5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5e90136d319ed0f04766bfec503126999bb73dd0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760136"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061221"
 ---
 # <a name="spupdateagentprofile-transact-sql"></a>sp_update_agent_profile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ sp_update_agent_profile [@agent_type=] agent_type, [ @agent_id= ] agent_id, [ @p
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [**@agent_type=**] **"***agent_type***"**  
+ [ **@agent_type=** ] **"***agent_type***"**  
  Тип агента. *agent_type* — **int**, по умолчанию и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
@@ -49,10 +48,10 @@ sp_update_agent_profile [@agent_type=] agent_type, [ @agent_id= ] agent_id, [ @p
 |**4**|Агент слияния.|  
 |**9**|Агент чтения очереди.|  
   
- [**@agent_id=**] *agent_id*  
+ [ **@agent_id=** ] *agent_id*  
  Идентификатор агента. *agent_id* — **int**, не имеет значения по умолчанию.  
   
- [**@profile_id=**] *profile_id*  
+ [ **@profile_id=** ] *profile_id*  
  Идентификатор профиля, который должен использовать агент. *profile_id* — **int**, не имеет значения по умолчанию. Чтобы просмотреть список профилей, определенных для каждого агента, используйте [sp_help_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md). Дополнительные сведения о системных профилях см. в разделе [профили агента репликации](../../relational-databases/replication/agents/replication-agent-profiles.md).  
   
 ## <a name="return-code-values"></a>Значения кода возврата  

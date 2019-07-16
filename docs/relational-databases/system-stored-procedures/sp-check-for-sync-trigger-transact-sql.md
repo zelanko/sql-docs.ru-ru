@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 54a1e2fd-c40a-43d4-ac64-baed28ae4637
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ef51624f3d14ef12be1c37b17727b70f5f31df10
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: b7d4d26374d7b582f2ba5ddad79dd317145cecd7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526426"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070430"
 ---
 # <a name="spcheckforsynctrigger-transact-sql"></a>sp_check_for_sync_trigger (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
 `[ @fonpublisher = ] fonpublisher` Указывает место выполнения хранимой процедуры. *fonpublisher* — **бит**, со значением по умолчанию 0. Если значение равно 0, тогда выполнение происходит на подписчике, а если 1, то выполнение происходит на издателе.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- 0 указывает на то, что хранимая процедура не вызывается внутри контекста немедленно обновляющегося триггера. 1 указывает, что он вызывается внутри контекста немедленно обновляющегося триггера и тип триггера записывается в аргументе *@trigger_op*.  
+ 0 указывает на то, что хранимая процедура не вызывается внутри контекста немедленно обновляющегося триггера. 1 указывает, что он вызывается внутри контекста немедленно обновляющегося триггера и тип триггера записывается в аргументе *@trigger_op* .  
   
 ## <a name="remarks"></a>Примечания  
  **sp_check_for_sync_trigger** используется в репликации моментальных снимков и репликации транзакций.  

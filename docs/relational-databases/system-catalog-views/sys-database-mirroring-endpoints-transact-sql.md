@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: f2285199-97ad-473c-a52d-270044dd862b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0aa757203ba82794a0564e50c715134e502c6ac1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: bcbe9d23bab18e47b69f82812f604a94d4c5ce9c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538081"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022761"
 ---
 # <a name="sysdatabasemirroringendpoints-transact-sql"></a>sys.database_mirroring_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,8 +40,8 @@ ms.locfileid: "52538081"
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**\<наследуемые столбцы >**|-|Наследует столбцы из **sys.endpoints** (Дополнительные сведения см. в разделе [sys.endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)).|  
-|**Роли**|**tinyint**|Роль в зеркальном отображении, одна из следующих:<br /><br /> **0** = нет<br /><br /> **1** = partner<br /><br /> **2** = следящего сервера<br /><br /> **3** = all<br /><br /> Примечание. Это значение применимо только при зеркальном отображении баз данных.|  
-|**role_desc**|**nvarchar(60)**|Описание роли в зеркальном отображении, одно из следующих.<br /><br /> **NONE**<br /><br /> **ПАРТНЕР**<br /><br /> **СЛЕДЯЩИЙ СЕРВЕР**<br /><br /> **ALL**<br /><br /> Примечание. Это значение применимо только при зеркальном отображении баз данных.|  
+|**Роли**|**tinyint**|Роль в зеркальном отображении, одна из следующих:<br /><br /> **0** = нет<br /><br /> **1** = partner<br /><br /> **2** = следящего сервера<br /><br /> **3** = all<br /><br /> Примечание. Это значение относится только к зеркального отображения базы данных.|  
+|**role_desc**|**nvarchar(60)**|Описание роли в зеркальном отображении, одно из следующих.<br /><br /> **NONE**<br /><br /> **ПАРТНЕР**<br /><br /> **СЛЕДЯЩИЙ СЕРВЕР**<br /><br /> **ALL**<br /><br /> Примечание. Это значение относится только к зеркального отображения базы данных.|  
 |**is_encryption_enabled**|**bit**|**1** означает, что шифрование включено.<br /><br /> **0** означает, что шифрование отключено.|  
 |**connection_auth**|**tinyint**|Тип проверки подлинности соединения, требуемый при подключении к этой конечной точке, один из следующих.<br /><br /> **1** -NTLM<br /><br /> **2** -KERBEROS<br /><br /> **3** -СОГЛАСОВАНИЯ<br /><br /> **4** -СЕРТИФИКАТА<br /><br /> **5** -NTLM, CERTIFICATE<br /><br /> **6** -KERBEROS, CERTIFICATE<br /><br /> **7** -NEGOTIATE, CERTIFICATE<br /><br /> **8** -CERTIFICATE, NTLM<br /><br /> **9** -CERTIFICATE, KERBEROS<br /><br /> **10** -CERTIFICATE, NEGOTIATE|  
 |**connection_auth_desc**|**Nvarchar (60)**|Описание типа проверки подлинности, необходимого для подключения к конечной точке. Это один из следующих типов.<br /><br /> NTLM<br /><br /> KERBEROS<br /><br /> NEGOTIATE<br /><br /> CERTIFICATE<br /><br /> NTLM, CERTIFICATE<br /><br /> KERBEROS, CERTIFICATE<br /><br /> NEGOTIATE, CERTIFICATE<br /><br /> CERTIFICATE, NTLM<br /><br /> CERTIFICATE, KERBEROS<br /><br /> CERTIFICATE, NEGOTIATE|  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 04e119a4-39e1-45fe-8e39-c9b9afbfeb27
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7ba5c845320311298a2b1162451c601372fd257d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9b76eb52f9f90e97c47d96e8bb072c2bee33061e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696994"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964757"
 ---
 # <a name="views-collection-properties-methods-and-events"></a>Свойства, методы и события коллекции Views
 ## <a name="properties"></a>Свойства  

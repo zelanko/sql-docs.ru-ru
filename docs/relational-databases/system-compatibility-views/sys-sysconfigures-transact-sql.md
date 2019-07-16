@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 146bf10a-c898-4676-a2a1-673fb1cee7a2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 61936891ecd31b3bf5421a8cac49aad9f0dd37f7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c785ee1c4d3c5382aa42adf48ad9880f00297137
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635322"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68089206"
 ---
 # <a name="syssysconfigures-transact-sql"></a>sys.sysconfigures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "47635322"
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**Значение**|**int**|Значение переменной, доступное для изменения пользователем. Оно используется компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)], только если была выполнена инструкция RECONFIGURE.|  
+|**value**|**int**|Значение переменной, доступное для изменения пользователем. Оно используется компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)], только если была выполнена инструкция RECONFIGURE.|  
 |**конфигурации**|**int**|Номер переменной конфигурации.|  
 |**Комментарий**|**nvarchar(255)**|Описание параметра конфигурации.|  
 |**status**|**smallint**|Битовая карта, указывающая состояние параметра. Возможные значения:<br /><br /> 0 = статический. Настройка вступает в силу после перезапуска сервера.<br /><br /> 1 = динамический. Переменная вступает в силу после выполнения инструкции RECONFIGURE.<br /><br /> 2 = расширенный. Переменная показывается только тогда, когда **Показать расширенные параметры** имеет значение. Настройка вступает в силу после перезапуска сервера.<br /><br /> 3 = расширенный динамический.|  

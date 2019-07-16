@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: b87b9683-abed-4677-8c50-18bdba704655
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 8a695217909641c737b7780fc4f8b80b2cb08152
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 01154cf477435e9dc5335606d0c11a05aecc492b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63299133"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066662"
 ---
 # <a name="project-settings-type-mapping-accesstosql"></a>Параметры проекта (сопоставление типов) (AccessToSQL)
 Параметры сопоставления типов проекта позволяет настроить сопоставления типов по умолчанию для проекта SSMA. Можно также указать сопоставления типов для отдельных объектов базы данных. Дополнительные сведения см. в разделе [сопоставление исходного и целевого типов данных](mapping-source-and-target-data-types-accesstosql.md).  
@@ -58,7 +57,7 @@ ms.locfileid: "63299133"
 |**MEMO**|**nvarchar(max)**|  
 |**MEMO** — для Access 97|**varchar(max)**|  
 |**Единый**|**real**|  
-|**text[\*..\*]**|**nvarchar [\*]**|  
+|**текст [\*.. \*]**|**nvarchar [\*]**|  
 |**текст [\*.. \*]** — для Access 97|**varchar [\*]**|  
   
 **Добавить**  

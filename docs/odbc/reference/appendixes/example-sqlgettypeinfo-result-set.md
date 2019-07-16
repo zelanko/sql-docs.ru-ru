@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: dc1952cc-7581-4d69-9c72-7dc1cd370836
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f6e41dbd41aefeabecd9d60278aca718a413e33d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8264f1dfad8bff5d676cd4de8c8b9d7763b39b52
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63188999"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948756"
 ---
 # <a name="example-sqlgettypeinfo-result-set"></a>Пример результирующего набора SQLGetTypeInfo
 Приложение вызывает **SQLGetTypeInfo** для определения, какие типы данных поддерживаются источником данных и характеристики этих типов данных. В следующих таблицах приведены образец результирующего набора, возвращенный **SQLGetTypeInfo** для источника данных, который поддерживает SQL_CHAR, SQL_LONGVARCHAR, SQL_DECIMAL, SQL_REAL, SQL_DATETIME, SQL_INTERVAL_YEAR и SQL_INTERVAL_DAY_TO_SECOND.  
@@ -29,9 +28,9 @@ ms.locfileid: "63188999"
 |----------------|----------------|------------------|---------------------|---------------------|--------------------|--------------|  
 |«char»|SQL_CHAR|255|"'"|"'"|«Длина»|SQL_TRUE|  
 |"text"|SQL_LONGVARCHAR|2147483647|"'"|"'"|\<NULL >|SQL_TRUE|  
-|"decimal"|SQL_DECIMAL|28|\<NULL >|\<NULL >|«точность,<br />Масштаб»|SQL_TRUE|  
+|«десятичное число»|SQL_DECIMAL|28|\<NULL >|\<NULL >|«точность,<br />Масштаб»|SQL_TRUE|  
 |«настоящих»|SQL_REAL|7|\<NULL >|\<NULL >|\<NULL >|SQL_TRUE|  
-|"datetime"|SQL_TYPE_TIMESTAMP|23|"'"|"'"|\<NULL >|SQL_TRUE|  
+|«datetime»|SQL_TYPE_TIMESTAMP|23|"'"|"'"|\<NULL >|SQL_TRUE|  
 |«ИНТЕРВАЛ YEAR() ГОД»|SQL_INTERVAL_YEAR|9|"'"|"'"|«точность»|SQL_TRUE|  
 |«ИНТЕРВАЛ DAY() ДЛЯ FRACTION(5)»|SQL_INTERVAL_DAY_TO_SECOND|24|"'"|"'"|«точность»|SQL_TRUE|  
   
@@ -39,9 +38,9 @@ ms.locfileid: "63188999"
 |----------------|---------------------|----------------|-------------------------|------------------------|-------------------------|-----------------------|  
 |**SQL_CHAR**|SQL_FALSE|SQL_SEARCHABLE|\<NULL >|SQL_FALSE|\<NULL >|«char»|  
 |**SQL_LONGVARCHAR**|SQL_FALSE|SQL_PRED_CHAR|\<NULL >|SQL_FALSE|\<NULL >|"text"|  
-|**SQL_DECIMAL**|SQL_FALSE|SQL_PRED_BASIC|SQL_FALSE|SQL_FALSE|SQL_FALSE|"decimal"|  
+|**SQL_DECIMAL**|SQL_FALSE|SQL_PRED_BASIC|SQL_FALSE|SQL_FALSE|SQL_FALSE|«десятичное число»|  
 |**SQL_REAL**|SQL_FALSE|SQL_PRED_BASIC|SQL_FALSE|SQL_FALSE|SQL_FALSE|«настоящих»|  
-|**SQL_TYPE_TIMESTAMP**|SQL_FALSE|SQL_SEARCHABLE|\<NULL >|SQL_FALSE|\<NULL >|"datetime"|  
+|**SQL_TYPE_TIMESTAMP**|SQL_FALSE|SQL_SEARCHABLE|\<NULL >|SQL_FALSE|\<NULL >|«datetime»|  
 |**SQL_INTERVAL_YEAR**|SQL_FALSE|SQL_SEARCHABLE|\<NULL >|SQL_FALSE|\<NULL >|«ИНТЕРВАЛ YEAR() ГОД»|  
 |**SQL_INTERVAL_DAY_TO_SECOND**|SQL_FALSE|SQL_PRED_BASIC|\<NULL >|SQL_FALSE|\<NULL >|«ИНТЕРВАЛ DAY() ДЛЯ FRACTION(5)»|  
   

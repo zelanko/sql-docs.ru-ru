@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4cb4da20-3b99-4aae-8c80-329ee23e796e
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 1c4b128dc548780350d76c758543a852895118e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 26e24bc55df7eef0af34f9cd23215f27ba314700
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63126607"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029048"
 ---
 # <a name="global-settings-logging-sybasetosql"></a>Глобальные параметры (ведение журнала) (SybaseToSQL)
 Используйте **глобальные параметры** диалоговое окно, чтобы указать параметры ведения журнала для SSMA. Как правило можно изменить эти параметры только в том случае, при взаимодействии со службой поддержки продукта.  

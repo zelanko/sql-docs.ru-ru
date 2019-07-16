@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1cc38f85-3caa-42d0-8c76-a380c1d15c67
 author: HJToland3
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 02d320990b255cdee2a6d75ac88a93ab98ce5ff4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 036ae77a6d65ff396df60f54b38eeffba4e202f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66841074"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086204"
 ---
 # <a name="whats-new-in-ssma-for-db2-db2tosql"></a>Новые возможности в SSMA для DB2 (DB2ToSQL)
 
@@ -42,7 +41,7 @@ ms.locfileid: "66841074"
 > [!NOTE]
 > Известная проблема с помощью автоматического обновления могут вызвать сбой обновления из SSMA v8.0 для версии 8.1. Если эта ошибка возникает, загрузите новую версию и установить его вручную.
 
-## <a name="ssma-v80"></a>SSMA v8.0
+## <a name="ssma-v80"></a>SSMA версии 8.0
 
 Для предоставления целевых исправлений, предназначенный для повышения качества и преобразования метрики улучшены в выпуске версии 8.0 SSMA для DB2. Этот выпуск также предлагает следующие новые функции:
 
@@ -92,7 +91,7 @@ ms.locfileid: "66841074"
 
 Улучшены в выпуске v7.6 SSMA для DB2 с целевых исправлений, повышающих качество и преобразования метрик и поддержка SQL Server 2017 (Предварительная версия). Поддержка SQL Server 2017 в Windows и Linux в общедоступной предварительной версии и не должны использоваться для миграции в рабочей среде.
 
-## <a name="ssma-v75"></a>SSMA v7.5
+## <a name="ssma-v75"></a>SSMA версии 7.5
 
 В выпуске версии 7.5 SSMA для DB2 дополнено несколько улучшений, чтобы обеспечить большую доступность для людей с ограниченными возможностями.
 

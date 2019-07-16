@@ -3,18 +3,17 @@ title: Как настроить MSDTC на платформе Linux
 description: В этой статье приведены пошаговые инструкции для настройки MSDTC на Linux.
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 03/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: f4fe81c5e306b059414fe0f2245aca9c9787ee1b
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: c44458e1a68c842b6433d7a137865ae8451c136c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834024"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077609"
 ---
 # <a name="how-to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-on-linux"></a>Настройка координатора распределенных транзакций Microsoft (MSDTC) на платформе Linux
 
@@ -28,7 +27,7 @@ ms.locfileid: "67834024"
 
 SQL Server 2019 представлены два параметра конфигурации для mssql-conf служебной программы.
 
-| mssql-conf setting | Описание |
+| параметр MSSQL-conf | Описание |
 |---|---|
 | **Network.rpcport** | Процесс RPC endpoint mapper связывает TCP-порта. |
 | **distributedtransaction.servertcpport** | Порт, который прослушивает сервер MSDTC. Если не задано, служба MSDTC использует случайный эфемерный порт на перезапуска службы и исключения брандмауэра потребуется изменить конфигурацию, чтобы убедиться, что служба MSDTC может продолжать взаимодействие. |

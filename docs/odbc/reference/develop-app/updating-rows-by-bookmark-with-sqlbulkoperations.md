@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c9ad82b7-8dba-45b0-bdb9-f4668b37c0d6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e9f0c59324542793301965c7d3555cf35ad40f5d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e9b10037883ef9cfa4051195270e6477c5cc04ee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63194397"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091625"
 ---
 # <a name="updating-rows-by-bookmark-with-sqlbulkoperations"></a>Обновление строк по закладкам с помощью SQLBulkOperations
 При обновлении строки по закладкам, **SQLBulkOperations** позволяет обновить одну или несколько строк таблицы источника данных. Строки идентифицируются по закладкам в столбце привязанного закладки. Обновить строку, используя данные в буферах приложения для каждого привязанного столбца (кроме случаев, когда значение в буфер длины/индикатора для столбца SQL_COLUMN_IGNORE). Непривязанные столбцы не обновляется.  

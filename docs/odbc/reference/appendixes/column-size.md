@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 541b83ab-b16d-4714-bcb2-3c3daa9a963b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 22271cd37069123d0e11a3d0ab660134c61e283b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5639828c90141079ab66f6cceb466328ddb3f56d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63224469"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019232"
 ---
 # <a name="column-size"></a>Размер столбца
 Размер столбца (или параметров) из числовых типов данных определяется как максимальное число разрядов, используемое точность данных или тип данных столбца или параметра. Для символьных типов это длина в символах данных. для двоичных типов данных размер столбца представляет собой длину в байтах данных. Время, отметка времени и все типы данных интервала это число символов в символьном представлении этих данных. В следующей таблице показан размер столбца, определенные для каждого краткого типа данных SQL.  

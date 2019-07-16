@@ -20,15 +20,14 @@ helpviewer_keywords:
 ms.assetid: 724c7b86-300a-4fa9-ad96-4afa0fdcb3e9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d7e52ec70e53608f1af48b4abcd2dd1edb4fc454
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2f68a87db729df2f4a27e2766a9de60e8c75a71a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63042587"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036421"
 ---
-# <a name="connection-strings"></a>Строки соединения
+# <a name="connection-strings"></a>Строки подключения
 Строка подключения содержит сведения, используемые для установления соединения. Полная строка подключения содержит все сведения, необходимые для установления соединения. Строка подключения представляет собой ряд пар "ключевое слово/значение", разделенных точкой с запятой. (Полный синтаксис строки подключения, см. в разделе [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) описание функции.) Строка подключения используется:  
   
 -   **SQLDriverConnect**, который завершает строку подключения, взаимодействие с пользователем.  

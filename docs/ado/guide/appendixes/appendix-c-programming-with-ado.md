@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 40af6e70-2a37-480f-aadc-92095d450af7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 63dfa7de6bd952f86718b90ce446868c9d74be10
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d06cf8343bf100077fccc34645ccb14dbdbfaae6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63302330"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926877"
 ---
 # <a name="appendix-c-programming-with-ado-in-development-environments"></a>Приложение В. Программирование с использованием ADO в средах разработки
 ADO — это компонент интерфейс автоматизации COM, который может использоваться с многих языков программирования, включая Microsoft Visual Basic, VBScript, JScript и Visual C++. ADO версии с каждым из этих средств и других приложений, таких как Microsoft Office и Microsoft SQL Server.

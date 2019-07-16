@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 568e9119-b9b0-4284-9cef-3878c691de5f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f7b50d9cf05f1242ae853f7aa24e7e681bdc245f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bd8c82a401f78f4907bb891ede845017c00ac5ad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63004166"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032633"
 ---
 # <a name="spsyscollectorcreatecollectortype-transact-sql"></a>sp_syscollector_create_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,16 +46,16 @@ sp_syscollector_create_collector_type
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @collector_type_uid = ] '*collector_type_uid*'  
+ [ @collector_type_uid =] '*аргумент collector_type_uid*"  
  Идентификатор GUID типа сборщика. *Аргумент collector_type_uid* — **uniqueidentifier** и если он равен NULL, он будет автоматически создается и возвращается как OUTPUT.  
   
  [ @name =] '*имя*"  
  Имя типа сборщика. *имя* — **sysname** и должен быть указан.  
   
- [ @parameter_schema = ] '*parameter_schema*'  
+ [ @parameter_schema =] '*parameter_schema*"  
  Схема XML для этого типа сборщика. *parameter_schema* — **xml** значение по умолчанию NULL.  
   
- [ @parameter_formatter = ] '*parameter_formatter*'  
+ [ @parameter_formatter =] '*parameter_formatter*"  
  Шаблон, применяемый для преобразования XML с целью его использования на странице свойств набора элементов сбора. *parameter_formatter* — **xml** значение по умолчанию NULL.  
   
  [@collection_package_id =] *collection_package_id*  

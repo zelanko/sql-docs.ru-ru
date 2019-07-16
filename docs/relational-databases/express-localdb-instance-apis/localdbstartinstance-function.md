@@ -15,13 +15,12 @@ apitype: DLLExport
 ms.assetid: cb325f5d-10ee-4a56-ba28-db0074ab3926
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: dc464988d46d5896b4a925253c8c42916897bcd2
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b06364adefd62b4267d43bac50d79f8f1d37958a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418788"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022089"
 ---
 # <a name="localdbstartinstance-function"></a>Функция LocalDBStartInstance
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -108,7 +107,7 @@ HRESULT LocalDBStartInstance(
 ## <a name="details"></a>Сведения  
  Аргумент буфера соединения (*wszSqlConnection*) и аргумент размера буфера соединения (*lpcchSqlConnection*) являются необязательными. В следующей таблице показаны варианты использования этих аргументов и их результаты.  
   
-|Буфер|Размер буфера|Правильно|Действие|  
+|Буфер|Размер буфера|Правильно|Action|  
 |------------|-----------------|---------------|------------|  
 |NULL|NULL|Пользователь хочет запустить экземпляр и не обязательно канала имя.|Запускает экземпляр (имя канала и необходимый размер буфера не возвращаются).|  
 |NULL|Существует|Пользователь запрашивает размер выходного буфера. (При следующем вызове пользователь скорее всего запросит запуск).|Возвращает требуемый размер буфера (без запуска и возврата канала). Результат равен S_OK.|  

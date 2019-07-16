@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: cbdfea38-9e42-47f3-8fc8-5978b82e2623
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c12e078505c8049511e59973c26d6a1417c7eae0
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 5428ae9130646db662c6c960f777c6a7dfe25000
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537856"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084895"
 ---
 # <a name="spupdatejob-transact-sql"></a>sp_update_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,19 +58,19 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
 ## <a name="arguments"></a>Аргументы  
 `[ @job_id = ] job_id` Идентификационный номер задания, чтобы обновить. *job_id*— **uniqueidentifier**.  
   
-`[ @job_name = ] 'job_name'` Имя задания. *имя_задания* — **nvarchar(128)**.  
+`[ @job_name = ] 'job_name'` Имя задания. *имя_задания* — **nvarchar(128)** .  
   
 > **ПРИМЕЧАНИЕ.** Либо *job_id* или *имя_задания* должен быть указан, но не оба аргумента одновременно.  
   
-`[ @new_name = ] 'new_name'` Новое имя для задания. *новое_имя* — **nvarchar(128)**.  
+`[ @new_name = ] 'new_name'` Новое имя для задания. *новое_имя* — **nvarchar(128)** .  
   
 `[ @enabled = ] enabled` Указывает, включено ли задание (**1**) или не включено (**0**). *включить* — **tinyint**.  
   
-`[ @description = ] 'description'` Описание задания. *Описание* — **nvarchar(512)**.  
+`[ @description = ] 'description'` Описание задания. *Описание* — **nvarchar(512)** .  
   
 `[ @start_step_id = ] step_id` Идентификационный номер первого этапа, выполняемого в ходе задания. *step_id* — **int**.  
   
-`[ @category_name = ] 'category'` Категория задания. *Категория* — **nvarchar(128)**.  
+`[ @category_name = ] 'category'` Категория задания. *Категория* — **nvarchar(128)** .  
   
 `[ @owner_login_name = ] 'login'` Имя учетной записи владельца задания. *Имя входа* — **nvarchar(128)** только членами **sysadmin** предопределенной роли сервера можно изменить владельца задания.  
   
@@ -90,11 +89,11 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
   
 `[ @notify_level_page = ] page_level` Указывает, нужно ли послать страницу по завершении этого задания. *page_level* — **int**. *page_level*использует те же значения, что *eventlog_level*.  
   
-`[ @notify_email_operator_name = ] 'operator_name'` Имя оператора, которому отправляется сообщение электронной почты при *email_level* достижения. *имя_электронной_почты* — **nvarchar(128)**.  
+`[ @notify_email_operator_name = ] 'operator_name'` Имя оператора, которому отправляется сообщение электронной почты при *email_level* достижения. *имя_электронной_почты* — **nvarchar(128)** .  
   
-`[ @notify_netsend_operator_name = ] 'netsend_operator'` Имя оператора, которому отправляется сетевое сообщение. *netsend_operator* — **nvarchar(128)**.  
+`[ @notify_netsend_operator_name = ] 'netsend_operator'` Имя оператора, которому отправляется сетевое сообщение. *netsend_operator* — **nvarchar(128)** .  
   
-`[ @notify_page_operator_name = ] 'page_operator'` Имя оператора, которому посылается страница. *page_operator* — **nvarchar(128)**.  
+`[ @notify_page_operator_name = ] 'page_operator'` Имя оператора, которому посылается страница. *page_operator* — **nvarchar(128)** .  
   
 `[ @delete_level = ] delete_level` Указывает, нужно ли удалять задание. *delete_value*— **int**. *delete_level*использует те же значения, что *eventlog_level*.  
   

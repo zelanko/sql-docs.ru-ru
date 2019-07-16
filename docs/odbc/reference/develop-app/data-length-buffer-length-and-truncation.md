@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2825c6e7-b9ff-42fe-84fc-7fb39728ac5d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1ed2e5ca1fdaba97dde64329c5e8e1b692f43158
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8586157237db1158587e3c39f1320b78d8251fb5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63267747"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081472"
 ---
 # <a name="data-length-buffer-length-and-truncation"></a>Длина данных, длина буфера и усечение
 *Длина данных* является байтовая длина данных, так как он будет храниться в буфере данных приложения, не в том случае, поскольку оно хранится в источнике данных. Это различие очень важно, так как данные часто хранятся в различных типов в буфере данных, чем в источнике данных. Так что для данных, отправляемых в источнике данных, это байтовая длина данных перед преобразованием в тип источника данных. Для данных, извлекаемых из источника данных это байтовая длина данных после преобразования к типу буфера данных, и перед выполнением любой усечение.  

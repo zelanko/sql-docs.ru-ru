@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: da98e9b9-a4ac-4a9d-bae6-e9252b1fe1e5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 58df84bf96306a2cfbc0567a3d5f6cb13514a06e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7dfc63aaa6f162d382d6d8b3c627ff078c76825c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62861909"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079058"
 ---
 # <a name="prompting-the-user-for-connection-information"></a>Запрос сведений о подключении у пользователя
 Если приложение использует **SQLConnect** и ему нужно запрашивать пользователя сведения о соединении, такие как имя пользователя и пароль, он должен сделать это сам. Это позволяет приложению контролировать его «вид», она вынудит приложение должно содержать код для конкретного драйвера. Это происходит, когда приложение должно запрашивать сведения о подключении специфические для драйвера. Это представляется невозможным ситуации для универсальных приложений, которые предназначены для работы с всех драйверов, включая драйверы, которые отсутствуют при записи приложения.  

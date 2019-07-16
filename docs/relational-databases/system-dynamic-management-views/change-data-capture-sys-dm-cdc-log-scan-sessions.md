@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: d337e9d0-78b1-4a07-8820-2027d0b9f87c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d789ec1dd936b7eb40ecae56226a5879754a2260
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 52abdd077d892982c7fb63a34cec8bbdbd973379
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698592"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017992"
 ---
 # <a name="change-data-capture---sysdmcdclogscansessions"></a>Change Data Capture - sys.dm_cdc_log_scan_sessions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "47698592"
 |**start_time**|**datetime**|Время начала сеанса.<br /><br /> Когда **session_id** = 0, время начала сбора статистики.|  
 |**end_time**|**datetime**|Время окончания сеанса.<br /><br /> NULL = сеанс активен.<br /><br /> Когда **session_id** = 0, время окончания последнего сеанса.|  
 |**duration**|**bigint**|Продолжительность сеанса в секундах.<br /><br /> Значение 0 означает, что сеанс не содержит транзакций системы отслеживания измененных данных.<br /><br /> Когда **session_id** = 0, суммарную длительность (в секундах) всех сеансов с помощью транзакций системы отслеживания измененных данных.|  
-|**scan_phase**|**Nvarchar(200)**|Текущая стадия сеанса. Ниже приведены возможные значения и их описания.<br /><br /> 1: чтение конфигурации<br />2: первая проверка, построение хэш-таблицы<br />3: во-вторых сканирования<br />4: во-вторых сканирования<br />5: во-вторых сканирования<br />6: управление версиями схемы<br />7: последнего сканирования<br />8: Готово<br /><br /> Когда **session_id** = 0, это значение всегда равно «Aggregate».|  
+|**scan_phase**|**Nvarchar(200)**|Текущая стадия сеанса. Ниже приведены возможные значения и их описания.<br /><br /> 1: Чтение конфигурации<br />2: Первый Просмотр, построение хэш-таблицу<br />3: Второй просмотр<br />4: Второй просмотр<br />5: Второй просмотр<br />6\. Управление версиями схемы<br />7\. Последняя проверка<br />8\. Договорились<br /><br /> Когда **session_id** = 0, это значение всегда равно «Aggregate».|  
 |**error_count**|**int**|Количество обнаруженных ошибок.<br /><br /> Когда **session_id** = 0, общее число ошибок во всех сеансах.|  
 |**start_lsn**|**nvarchar(23)**|Начальный номер LSN для сеанса.<br /><br /> Когда **session_id** = 0, первый номер LSN последнего сеанса.|  
 |**current_lsn**|**nvarchar(23)**|Текущий номер LSN, который был просмотрен.<br /><br /> Когда **session_id** = 0, текущий номер LSN равен 0.|  

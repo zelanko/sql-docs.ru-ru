@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9408fa13-54a0-4cb1-8fb0-845e5536ef50
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fb281923e5b6d48a23cb6aa3f60bf36bbe9764da
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 8af56ae768ca883e22d7c9e18150e75025086d63
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531876"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085265"
 ---
 # <a name="sphelppublicationaccess-transact-sql"></a>sp_help_publication_access (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ sp_help_publication_access [ @publication = ] 'publication'
   
 `[ @return_granted = ] 'return_granted'` Идентификатор входа. *return_granted* — **бит**, значение по умолчанию 1. Если **0** указан и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используется проверка подлинности, возвращаются доступные имена входа, которые отображаются на издателе, но не на распространителе. Если **0** указывается и используется проверка подлинности Windows, имена входа, не специально отказано в доступе на издателе или распространителе возвращаются.  
   
-`[ @login = ] 'login'` Идентификатор стандартного защищенного имени входа. *Имя входа* — **sysname**, значение по умолчанию **%**.  
+`[ @login = ] 'login'` Идентификатор стандартного защищенного имени входа. *Имя входа* — **sysname**, значение по умолчанию **%** .  
   
 `[ @initial_list = ] initial_list` Указывает, следует ли возвращать список всех элементов с правом доступа публикации или только те, которые имели право доступа до были добавлены новые элементы в список. *initial_list* имеет тип bit и значение по умолчанию **0**.  
   

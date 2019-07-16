@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 9d5e5f59-6973-4df9-9eb2-9372f354ca57
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4329b8fcbddb0050f529e401da8d6c7c14f065d9
-ms.sourcegitcommit: d92ad400799d8b74d5c601170167b86221f68afb
+ms.openlocfilehash: 5016f6f556967fa45364460280080ca829e521b8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58080276"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936885"
 ---
 # <a name="sysdmexectextqueryplan-transact-sql"></a>sys.dm_exec_text_query_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ sys.dm_exec_text_query_plan
   
 ## <a name="arguments"></a>Аргументы  
 *plan_handle*  
-— Это маркер, который уникально идентифицирует план выполнения запроса для запущенного пакета, и ее план находится в кэше планов, или в данный момент. *plan_handle* — **varbinary(64)**.   
+— Это маркер, который уникально идентифицирует план выполнения запроса для запущенного пакета, и ее план находится в кэше планов, или в данный момент. *plan_handle* — **varbinary(64)** .   
 
 *Plan_handle* можно получить из следующих объектов DMO: 
   
@@ -68,7 +67,7 @@ sys.dm_exec_text_query_plan
 
 -   [sys.dm_exec_trigger_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)  
   
-*statement_start_offset* | 0 | DEFAULT  
+*statement_start_offset* | 0 | ПО УМОЛЧАНИЮ  
 Начальная позиция запроса, который описывает строка, в соответствующем тексте пакета или сохраняемом объекте, в байтах. *statement_start_offset* — **int**. Значение 0 обозначает начало пакета. Значение по умолчанию — 0.  
   
 Начальное смещение инструкции можно получить из следующих объектов DMO:  
@@ -77,7 +76,7 @@ sys.dm_exec_text_query_plan
   
 -  [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
   
-*statement_end_offset* | -1 | DEFAULT  
+*statement_end_offset* | -1 | ПО УМОЛЧАНИЮ  
 Конечная позиция запроса, который описывает строка, в соответствующем тексте пакета или сохраняемом объекте, в байтах.  
   
 *statement_start_offset* — **int**.  

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: defd6efb-9507-4247-a91f-dc6ff5841e17
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e5c46d9051fb1760791c16c9274a1803c58c1e90
-ms.sourcegitcommit: f46fd79fd32a894c8174a5cb246d9d34db75e5df
+ms.openlocfilehash: 9b42a6808d9cab6a3431a68bff9e29e83354a2af
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/26/2018
-ms.locfileid: "53785885"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090226"
 ---
 # <a name="sysdmxesessions-transact-sql"></a>sys.dm_xe_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,9 +36,9 @@ ms.locfileid: "53785885"
 |address|**varbinary(8)**|Адрес памяти сеанса. адрес является уникальным в локальной системе. Не допускает значение NULL.|  
 |name|**nvarchar(256)**|Имя сеанса. имя является уникальным в локальной системе. Не допускает значение NULL.|  
 |pending_buffers|**int**|Число полных буферов, ожидающих обработки. Не допускает значение NULL.|  
-|total_regular_buffers|**int**|Общее число обычных буферов, связанных с сеансом. Не допускает значение NULL.<br /><br /> Примечание. Большую часть времени используются обычные буферы. Размер этих буферов достаточен для размещения многих событий. Обычно в сеансе будут использоваться три или более буферов. Число обычных буферов определяется сервером автоматически, основываясь на секционировании памяти, заданном через параметр MEMORY_PARTITION_MODE. Размер обычных буферов равен значению параметра MAX_MEMORY (значение по умолчанию = 4 Мб), разделенному на число буферов. Дополнительные сведения о MEMORY_PARTITION_MODE и MAX_MEMORY параметрах см. в разделе [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md).|  
+|total_regular_buffers|**int**|Общее число обычных буферов, связанных с сеансом. Не допускает значение NULL.<br /><br /> Примечание. В большинстве случаев используются обычные буферы. Размер этих буферов достаточен для размещения многих событий. Обычно в сеансе будут использоваться три или более буферов. Число обычных буферов определяется сервером автоматически, основываясь на секционировании памяти, заданном через параметр MEMORY_PARTITION_MODE. Размер обычных буферов равен значению параметра MAX_MEMORY (значение по умолчанию = 4 Мб), разделенному на число буферов. Дополнительные сведения о MEMORY_PARTITION_MODE и MAX_MEMORY параметрах см. в разделе [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md).|  
 |regular_buffer_size|**bigint**|Размер обычного буфера в байтах. Не допускает значение NULL.|  
-|total_large_buffers|**int**|Общее число больших буферов. Не допускает значение NULL.<br /><br /> Примечание. Большие буферы используются в случае, когда событие превышает размер обычного буфера. Они выделяются специально в этих целях. Большие буферы выделяются в начале сеанса события, их размер определяется параметром MAX_EVENT_SIZE. Дополнительные сведения о параметре max_event_size см. в разделе [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md).|  
+|total_large_buffers|**int**|Общее число больших буферов. Не допускает значение NULL.<br /><br /> Примечание. Большие буферы используются в том случае, когда событие больше обычного буфера. Они выделяются специально в этих целях. Большие буферы выделяются в начале сеанса события, их размер определяется параметром MAX_EVENT_SIZE. Дополнительные сведения о параметре max_event_size см. в разделе [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md).|  
 |large_buffer_size|**bigint**|Размер большого буфера в байтах. Не допускает значение NULL.|  
 |total_buffer_size|**bigint**|Общий размер буфера памяти, использованного для хранения событий для сеанса (в байтах). Не допускает значение NULL.|  
 |buffer_policy_flags|**int**|Битовая карта, которая показывает поведение буферов событий сеанса в том случае, когда все буферы полны и происходит новое событие. Не допускает значение NULL.|  

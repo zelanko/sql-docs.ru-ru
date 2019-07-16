@@ -2,19 +2,18 @@
 title: Физические компоненты устройства - Analytics Platform System | Документация Майкрософт
 description: Имена и описания для PDW и устройства физические компоненты структуры.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 0adbd92d1a29a98a80de65268c53ea63e3941d07
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fb7ad8715d3f7a885bc48f6bdcc7f1ec2842f269
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62639913"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960428"
 ---
 # <a name="appliance-physical-components---analytics-platform-system"></a>Физические компоненты устройства - Analytics Platform System
 Имена и описания для PDW и устройства физические компоненты структуры. 

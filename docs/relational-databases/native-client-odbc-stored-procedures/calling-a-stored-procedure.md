@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: d13737f4-f641-45bf-b56c-523e2ffc080f
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e7cd89d826177074bca18a047545a32acee115a9
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 7b1441f06a5825467431a7c11ee9a8e3e46df6fc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128369"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910266"
 ---
 # <a name="calling-a-stored-procedure"></a>Вызов хранимой процедуры
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "54128369"
   
  Управляющая последовательность ODBC CALL для вызова процедуры такова:  
   
- {[**? =**]**вызвать**_procedure_name_[([*параметр*] [**,**[*параметр*]] ...)]}  
+ {[ **? =** ]**вызвать**_procedure_name_[([*параметр*] [ **,** [*параметр*]] ...)]}  
   
  где *имя_процедуры* указывает имя процедуры и *параметр* указывает параметр процедуры. Именованные параметры поддерживаются только в инструкциях, использующих escape-последовательности ODBC CALL.  
   
@@ -46,7 +45,7 @@ ms.locfileid: "54128369"
   
  Входные и входные-выходные параметры в вызовах процедуры могут быть пропущены. Если процедура вызывается со скобками, но без параметров, то драйвер передает источнику данных указание, что для первого параметра должно использоваться значение по умолчанию. Пример:  
   
- {**вызвать** _имя_процедуры_**()**}  
+ {**вызвать** _имя_процедуры_ **()** }  
   
  Если процедура не имеет ни одного параметра, ее вызов завершается ошибкой. Если процедура вызывается без скобок, драйвер не передает какие-либо значения параметров. Пример:  
   

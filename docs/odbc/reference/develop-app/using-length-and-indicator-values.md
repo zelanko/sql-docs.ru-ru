@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 849792f1-cb1e-4bc2-b568-c0aff0b66199
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 442d0865ede4819ea3413d662411295daa5b48bd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b3a0b54617d55033addabc729adbd078680022fc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62501115"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67902468"
 ---
 # <a name="using-length-and-indicator-values"></a>Использование значений длины и индикатора
 Буфер длины/индикатора используется для передачи байт данных в буфере данных или специальный индикатор, например SQL_NULL_DATA, который указывает, что данные имеют значение NULL. В зависимости от функции, в котором он используется буфер длины/индикатора определяется как SQLINTEGER или SQLSMALLINT. Таким образом единственный аргумент необходим для его описания. Если буфер данных nondeferred входного буфера, этот аргумент содержит длину в байтах сами данные, либо значением индикатора. Он часто называется *StrLen_or_Ind* или таким же именем. Например, следующий код вызывает **SQLPutData** для передачи буфера full данных; байтовая длина (*ValueLen*) передается непосредственно, так как буфер данных (*ValuePtr*) — Входной буфер.  
@@ -61,7 +60,7 @@ SQLGetData(hstmt, 1, SQL_C_CHAR, ValuePtr, sizeof(ValuePtr), &ValueLenOrInd);
   
  Следующие значения могут использоваться в качестве значения длины и индикатора. Значение SQL_NULL_DATA хранится в поле дескриптора SQL_DESC_INDICATOR_PTR; все остальные значения хранятся в поля дескриптора SQL_DESC_OCTET_LENGTH_PTR.  
   
--   SQL_NULL_DATA. Данные значения данных NULL и значение в соответствующий буфер данных учитывается. Это значение является допустимым только для данных SQL, отправленных или полученных из драйвера.  
+-   ЗНАЧЕНИЕ SQL_NULL_DATA. Данные значения данных NULL и значение в соответствующий буфер данных учитывается. Это значение является допустимым только для данных SQL, отправленных или полученных из драйвера.  
   
 -   SQL_DATA_AT_EXEC. Буфер данных не содержит все данные. Вместо этого данные будут отправлены с **SQLPutData** при выполнении инструкции или **SQLBulkOperations** или **SQLSetPos** вызывается. Это значение является допустимым только для данных SQL, отправляемых к драйверу. Дополнительные сведения см. в разделе [SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md), [SQLBulkOperations](../../../odbc/reference/syntax/sqlbulkoperations-function.md), и [SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md).  
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 192b6214-df6e-44a3-bdd4-9d933a981619
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 35b18161e9d0022e0f7df29498a94c40646a5055
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 4fbba559eceae58483419c0f1e3826b9db79bef5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493982"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061835"
 ---
 # <a name="spaddpublicationsnapshot-transact-sql"></a>sp_addpublication_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -78,9 +77,9 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 |------------------------------|-----------------------------------|  
 |**1**|*frequency_interval* не используется.|  
 |**4** (по умолчанию)|Каждый *frequency_interval* дней, по умолчанию ежедневно.|  
-|**8**|*frequency_interval* равно одному или нескольким из следующих (в сочетании с [ &#124; (побитовое или)](../../t-sql/language-elements/bitwise-or-transact-sql.md) логический оператор):<br /><br /> **1** = Sunday &#124;<br /><br /> **2** = понедельник&#124;<br /><br /> **4** = Вторник&#124;<br /><br /> **8** = среда&#124;<br /><br /> **16** = Thursday &#124;<br /><br /> **32** = Friday &#124;<br /><br /> **64** = суббота|  
+|**8**|*frequency_interval* равно одному или нескольким из следующих (в сочетании с [ &#124; (побитовое или)](../../t-sql/language-elements/bitwise-or-transact-sql.md) логический оператор):<br /><br /> **1** = воскресенье&#124;<br /><br /> **2** = понедельник&#124;<br /><br /> **4** = Вторник&#124;<br /><br /> **8** = среда&#124;<br /><br /> **16** = четверг&#124;<br /><br /> **32** = Пятница&#124;<br /><br /> **64** = суббота|  
 |**16**|На *frequency_interval* день месяца.|  
-|**32**|*frequency_interval* является одним из следующих:<br /><br /> **1** = Sunday &#124;<br /><br /> **2** = понедельник&#124;<br /><br /> **3** = Вторник&#124;<br /><br /> **4** = среда&#124;<br /><br /> **5** = Thursday &#124;<br /><br /> **6** = Пятница&#124;<br /><br /> **7** = Saturday &#124;<br /><br /> **8** = день&#124;<br /><br /> **9** = рабочий день&#124;<br /><br /> **10** = выходной день|  
+|**32**|*frequency_interval* является одним из следующих:<br /><br /> **1** = воскресенье&#124;<br /><br /> **2** = понедельник&#124;<br /><br /> **3** = Вторник&#124;<br /><br /> **4** = среда&#124;<br /><br /> **5** = четверг&#124;<br /><br /> **6** = Пятница&#124;<br /><br /> **7** = суббота&#124;<br /><br /> **8** = день&#124;<br /><br /> **9** = рабочий день&#124;<br /><br /> **10** = выходной день|  
 |**64**|*frequency_interval* не используется.|  
 |**128**|*frequency_interval* не используется.|  
   
@@ -118,7 +117,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 > [!IMPORTANT]  
 >  Не храните данные проверки подлинности в файлах скриптов. В целях повышения безопасности рекомендуется вводить имена входа и пароли во время выполнения.  
   
-`[ @job_login = ] 'job_login'` — Это имя для учетной записи, под которой запускается агент. Azure SQL управляемом экземпляре базы данных используйте учетную запись SQL Server. *job_login* — **nvarchar(257)**, значение по умолчанию NULL. Для соединений агента с распространителем всегда используется эта учетная запись. Необходимо указывать этот аргумент при создании нового задания агента моментальных снимков.  
+`[ @job_login = ] 'job_login'` — Это имя для учетной записи, под которой запускается агент. Azure SQL управляемом экземпляре базы данных используйте учетную запись SQL Server. *job_login* — **nvarchar(257)** , значение по умолчанию NULL. Для соединений агента с распространителем всегда используется эта учетная запись. Необходимо указывать этот аргумент при создании нового задания агента моментальных снимков.  
   
 > [!NOTE]
 >  Для не - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателей, это должно быть то же имя входа, указанное в [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md).  

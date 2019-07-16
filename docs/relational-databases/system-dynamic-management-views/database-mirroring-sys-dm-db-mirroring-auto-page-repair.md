@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 49f0fc2a-e25e-47e1-a135-563adb509af1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 976992cfe5d68659b95a62cc0b4e839f19f8cdd4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e08aa031af0bd8c9d5c5ad012d11c534281f92f3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47638432"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017915"
 ---
 # <a name="database-mirroring---sysdmdbmirroringautopagerepair"></a>Базы данных зеркальное отображение — sys.dm_db_mirroring_auto_page_repair
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "47638432"
 |**page_status**|**int**|Состояние попытки восстановления страниц:<br /><br /> 2 = в очереди на запрос к участнику;<br /><br /> 3 = запрос отправлен участнику;<br /><br /> 4 = в очереди на автоматическое восстановление страниц (от участника получен ответ);<br /><br /> 5 = автоматическое восстановление страниц успешно завершено, и страница должна быть готова к использованию;<br /><br /> 6 = непоправимо повреждена. Во время попытки восстановления страниц произошла ошибка, например потому, что страница также повреждена на участнике, или участник не подключен, или возникли проблемы с сетью. Это состояние не окончательное: если на странице вновь встретится повреждение, она будет запрошена у участника.|  
 |**modification_time**|**datetime**|Время последнего изменения состояния страницы.|  
   
-## <a name="security"></a>безопасность  
+## <a name="security"></a>Безопасность  
   
 ### <a name="permissions"></a>Разрешения  
  необходимо разрешение VIEW SERVER STATE на сервере.  

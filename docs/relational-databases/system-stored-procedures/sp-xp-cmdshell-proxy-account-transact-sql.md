@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: f807c373-7fbc-4108-a2bd-73b48a236003
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 83525324b328a688713418835b353e4a72892a0b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 59ea64e16f1469c12461a559c3f102094615fa12
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781652"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950463"
 ---
 # <a name="spxpcmdshellproxyaccount-transact-sql"></a>sp_xp_cmdshell_proxy_account (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,7 +57,7 @@ sp_xp_cmdshell_proxy_account [ NULL | { 'account_name' , 'password' } ]
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="remarks"></a>Примечания  
- Учетные данные прокси-сервера будет вызываться **# #xp_cmdshell_proxy_account ##**.  
+ Учетные данные прокси-сервера будет вызываться **# #xp_cmdshell_proxy_account ##** .  
   
  При выполнении с аргументом NULL **sp_xp_cmdshell_proxy_account** удаляет учетные данные прокси-сервера.  
   

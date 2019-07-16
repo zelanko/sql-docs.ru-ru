@@ -19,21 +19,20 @@ helpviewer_keywords:
 ms.assetid: 45969884-cd61-48e8-aee5-c725c78e3e4c
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 683adbb172802d3709250c3cac46efdbed6cc544
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f2bbaaaa6770c5644da227c7e64a9ff9e0fc2c13
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766137"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68026838"
 ---
 # <a name="sysdmdbxtphashindexstats-transact-sql"></a>sys.dm_db_xtp_hash_index_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Эти статистические данные могут быть полезными для понимания и настройки числа контейнеров. Их также можно использовать, чтобы определить наличие повторяющихся ключей индекса.  
   
- Большая средняя длина цепочки означает, что множество строк хэшируются в один контейнер. Это могло произойти по следующим причинам.  
+ Большая средняя длина цепочки означает, что множество строк хэшируется в один контейнер. Это могло произойти по следующим причинам.  
   
 -   Если количество пустых контейнеров небольшое или средняя и максимальная длина цепочки близки по значению, вероятно, что общее число контейнеров слишком мало. Это приводит к тому, что разные ключи индекса хэшируются в один контейнер.  
   
@@ -46,7 +45,7 @@ ms.locfileid: "47766137"
   
 Дополнительные сведения см. в разделе [хэш-индексы для оптимизированных для памяти таблиц](../../relational-databases/sql-server-index-design-guide.md#hash_index).  
   
-|Имя столбца|Тип|Описание|  
+|Имя столбца|Type|Описание|  
 |-----------------|----------|-----------------|  
 |object_id|**int**|Идентификатор объекта родительской таблицы.|  
 |xtp_object_id|**bigint**|Идентификатор таблицы, оптимизированной для памяти.|  

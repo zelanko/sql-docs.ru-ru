@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 92452940-b2a7-456e-94fc-3780c71da33c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 14bb7fd2e4a6dd8e6eb8f369342923ce1a9728c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 72526eca57d08152d7eaa773be50d68d4b3688e1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697613"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932463"
 ---
 # <a name="getstring-method-ado"></a>Метод GetString (ADO)
 Возвращает [записей](../../../ado/reference/ado-api/recordset-object-ado.md) как строка.  
@@ -45,7 +44,7 @@ Variant = recordset.GetString(StringFormat, NumRows, ColumnDelimiter, RowDelimit
  Необязательный параметр. Число строк для преобразования в **записей**. Если *NumRows* не указан, или если оно превышает общее число строк в **записей**, затем все строки **записей** преобразуются.  
   
  *ColumnDelimiter*  
- Необязательный. Разделитель, используемый между столбцами, если указано, в противном случае символ табуляции.  
+ Необязательный параметр. Разделитель, используемый между столбцами, если указано, в противном случае символ табуляции.  
   
  *RowDelimiter*  
  Необязательный. Разделитель, используемый между строками, если указано, в противном случае символ возврата каретки.  

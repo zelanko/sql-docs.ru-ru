@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: fbabe1ec-57cf-425c-bae7-af7f5d3198fd
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 18a1de1e3b7dc1f312094a9023e0af9df014214b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: ab6168730f8c2f5be3db951ed595db4d377b996d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526376"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048370"
 ---
 # <a name="sphelpsubscriberinfo-transact-sql"></a>sp_helpsubscriberinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @subscriber = ] 'subscriber'` — Имя подписчика. *подписчик* — **sysname**, значение по умолчанию **%**, при котором возвращаются сведения.  
+`[ @subscriber = ] 'subscriber'` — Имя подписчика. *подписчик* — **sysname**, значение по умолчанию **%** , при котором возвращаются сведения.  
   
 `[ @publisher = ] 'publisher'` — Имя издателя. *издатель* — **sysname**и значение по умолчанию — имя текущего сервера.  
   
@@ -70,7 +69,7 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 |**active_end_date**|**int**|Дата, когда запланирован останов агента распространителя, в формате ГГГГММДД.|  
 |**retryattempt**|**int**|Не поддерживается.|  
 |**значение retrydelay**|**int**|Не поддерживается.|  
-|**Описание**|**nvarchar(255)**|Текстовое описание подписчика.|  
+|**description**|**nvarchar(255)**|Текстовое описание подписчика.|  
 |**security_mode**|**int**|Реализованный режим безопасности:<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] проверки подлинности Windows|  
 |**frequency_type2**|**int**|Частота запуска агента слияния:<br /><br /> **1** = один раз<br /><br /> **2** = по запросу<br /><br /> **4** = ежедневно<br /><br /> **8** = еженедельно<br /><br /> **16** = ежемесячно<br /><br /> **32** = ежемесячное расписание<br /><br /> **64** = автозапуск<br /><br /> **128** = повторять|  
 |**frequency_interval2**|**int**|Значение, применяемое к частоте, задаваемой аргументом *frequency_type*.|  
