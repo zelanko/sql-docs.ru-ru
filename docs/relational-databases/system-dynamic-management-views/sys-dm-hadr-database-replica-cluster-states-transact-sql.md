@@ -20,18 +20,17 @@ helpviewer_keywords:
 ms.assetid: 6f719071-ebce-470d-aebd-1f55ee8cd70a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 253959175db3519c00874db43466fa21c31cf5e0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2fbd066113f5ad4394b83e0151643ab9ea3b7b82
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636682"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900670"
 ---
 # <a name="sysdmhadrdatabasereplicaclusterstates-transact-sql"></a>sys.dm_hadr_database_replica_cluster_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Возвращает строку, содержащую сведения должны давать вам достаточно сведений для понимания исправность баз данных доступности в группах доступности AlwaysOn в каждой группы доступности AlwaysOn в кластере сервера отказоустойчивой кластеризации Windows (WSFC). Запрос **sys.dm_hadr_database_replica_states** позволяет ответить на следующие вопросы:  
+  Возвращает строку с информацией, помогающей получить полезные сведения о работоспособности баз данных доступности в каждой группе доступности AlwaysOn в кластере WSFC. Запрос **sys.dm_hadr_database_replica_states** позволяет ответить на следующие вопросы:  
   
 -   Все ли базы данных в группе доступности готовы к отработке отказа?  
   
@@ -39,7 +38,7 @@ ms.locfileid: "47636682"
   
 -   Если первичная реплика в настоящий момент недоступна, выбор какой вторичной реплики в качестве первичной позволит минимизировать потерю данных?  
   
--   Если значение [sys.databases](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md)**log_reuse_wait_desc** столбец является «availability_replica», то какая вторичная реплика в группе доступности содержит усечение журнала в указанной базе данных ?     
+-   Если значение [sys.databases](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md)**log_reuse_wait_desc** столбец является «availability_replica», то какая вторичная реплика в группе доступности содержит усечение журнала в указанной базе данных ?  
    
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
@@ -52,7 +51,7 @@ ms.locfileid: "47636682"
 |**recovery_lsn**|**numeric(25,0)**|На первичной реплике это конец журнала транзакций до записи репликой любых новых записей журнала после восстановления или отработки отказа. На первичной реплике в строке для заданной базы данных-получателя содержится значение, до которого первичной реплике необходимо синхронизировать вторичную реплику (то есть восстановить и повторно инициализировать).<br /><br /> На вторичных репликах это значение равно NULL. Обратите внимание, что на каждой из вторичных реплик это будет либо значение MAX, либо более низкое значение, вернуться к которому вторичной реплике указала первичная реплика.|  
 |**truncation_lsn**|**numeric(25,0)**|Значение усечения журнала [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], которое может быть выше локального номера LSN усечения, если локальное усечение журнала заблокировано (например, операцией резервного копирования).|  
   
-## <a name="security"></a>безопасность  
+## <a name="security"></a>Безопасность  
   
 ### <a name="permissions"></a>Разрешения  
  необходимо разрешение VIEW SERVER STATE на сервере.  

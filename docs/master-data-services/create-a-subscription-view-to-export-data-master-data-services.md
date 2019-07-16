@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 62118034106187081ba41be91026ecd6d7330ec5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 755e9c6baa708033f166f7026164590c2119e44d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65485064"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67896920"
 ---
 # <a name="create-a-subscription-view-to-export-data-master-data-services"></a>Создание представления подписки для экспорта данных (службы Master Data Services)
 
@@ -27,7 +26,7 @@ ms.locfileid: "65485064"
 
   Создайте представление подписки, чтобы экспортировать данные служб Master Data Services в системы-подписчики. Представление данных создается в базе данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
  Для выполнения этой процедуры:  
   
 -   необходимо разрешение на доступ к функциональной области **Управление интеграцией** ; Дополнительные сведения см. в разделе [Разрешения функциональной области (службы Master Data Services)](../master-data-services/functional-area-permissions-master-data-services.md).  
@@ -69,7 +68,7 @@ ms.locfileid: "65485064"
 |Столбец|Описание|  
 |------------|-----------------|  
 |Состояние|Состояние представления.<br /><br /> Когда вы нажимаете **Сохранить**, появляется изображение ![Значок обновления состояния](../master-data-services/media/mds-statusicon-updating.png "Значок обновления состояния"), указывающее на обновление атрибута.<br /><br /> Если при создании или редактировании атрибута произойдет ошибка, появится изображение ![Значок состояния ошибки](../master-data-services/media/mds-statusicon-error.png "Значок состояния ошибки").<br /><br /> В противном случае состояние является нормальным, и появляется изображение ![Значок нормального состояния](../master-data-services/media/mds-statusicon-ok.png "Значок нормального состояния").|  
-|Имя|Имя представления подписки.|  
+|Name|Имя представления подписки.|  
 |Модель|Имя модели.|  
 |Version|Имя версии.|  
 |Флаг версии|Имя флага версии.|  

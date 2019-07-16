@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2952ece0-7217-4448-bb09-f6b64f43b7e2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ccd783bdb7bf266bfdc83c3a02520345d707ceea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: db11e86ab479ad0df4224d59c3408729fa9903ab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702631"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926375"
 ---
 # <a name="visual-c-extensions-for-ado"></a>Расширения Visual C++ для ADO
 Предпочтительный способ программирования ADO в Visual C++ использует **#import** директивы, как описано в [Microsoft Visual C++ ADO программирования](../../../ado/guide/appendixes/visual-c-ado-programming.md). Тем не менее, более ранних версиях ADO в состав альтернативный способ программирования на языке Visual C++: расширения Visual C++. В данном разделе описываются эту функцию для тех, кто должен поддерживать код расширений Visual C++, но новый код ADO должны быть написаны с помощью #**импорта**.

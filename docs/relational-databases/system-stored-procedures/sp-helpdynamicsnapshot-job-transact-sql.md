@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: d6dfdf26-f874-495f-a8a6-8780699646d7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cede3c4419f4e11d2110e7c3f735c3dec2474ec4
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 6b009fc8d08b9494a6ad3a33169fbb7d783b92be
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531486"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67902896"
 ---
 # <a name="sphelpdynamicsnapshotjob-transact-sql"></a>sp_helpdynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,9 +45,9 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'` — Имя публикации. *Публикация* — **sysname**, значение по умолчанию **%**, котором возвращаются сведения обо всем заданиям моментальных снимков отфильтрованных данных, соответствующих указанному *dynamic_ snapshot_jobid*и *dynamic_snapshot_jobname*для всех публикаций.  
+`[ @publication = ] 'publication'` — Имя публикации. *Публикация* — **sysname**, значение по умолчанию **%** , котором возвращаются сведения обо всем заданиям моментальных снимков отфильтрованных данных, соответствующих указанному *dynamic_ snapshot_jobid*и *dynamic_snapshot_jobname*для всех публикаций.  
   
-`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'` — Имя задания моментального снимка отфильтрованных данных. *dynamic_snapshot_jobname*— **sysname**, значение по умолчанию **%**", возвращаются все динамические задания для публикации с указанным *dynamic_ snapshot_jobid*. Если имя задания было задано явно во время создания задания, оно будет в следующем формате:  
+`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'` — Имя задания моментального снимка отфильтрованных данных. *dynamic_snapshot_jobname*— **sysname**, значение по умолчанию **%** ", возвращаются все динамические задания для публикации с указанным *dynamic_ snapshot_jobid*. Если имя задания было задано явно во время создания задания, оно будет в следующем формате:  
   
 ```  
 'dyn_' + <name of the standard snapshot job> + <GUID>  

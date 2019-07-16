@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2085d9fc-828c-453e-82ec-b54ed8347ae5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: eb61a77aca509393143d4abae98af0a9efb5e888
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0b7650dc05118de5c07e7d12a7a77a9c2f9d6652
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63048048"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900077"
 ---
 # <a name="sysdmoslatchstats-transact-sql"></a>sys.dm_os_latch_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ ms.locfileid: "63048048"
 ## <a name="permissions"></a>Разрешения  
 
 На [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], требуется `VIEW SERVER STATE` разрешение.   
-На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], требуется `VIEW DATABASE STATE` разрешение в базе данных.   
+В [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] необходимо разрешение `VIEW DATABASE STATE` для базы данных.   
   
 ## <a name="remarks"></a>Примечания  
  Представление динамического управления sys.dm_os_latch_stats может быть использовано для выявления источника состязания между кратковременными блокировками путем исследования относительного числа ожиданий и времени ожидания для различных классов кратковременных блокировок. В некоторых ситуациях возможно устранение состязания между кратковременными блокировками или снижение его остроты. Но возможны и такие ситуации, когда будет необходимо обратиться в службу поддержки пользователей [!INCLUDE[msCoName](../../includes/msconame-md.md)].  

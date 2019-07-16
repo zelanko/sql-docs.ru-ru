@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: a73da875-be22-45fc-b5e2-ea7ebd48e2d6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a37300ad1bf16ac76fbcbd0c6e77870077f7f631
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1dd486757a912d8f0364f55570a368292cf39ab7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62470603"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984903"
 ---
 # <a name="dbosysproxies-transact-sql"></a>dbo.sysproxies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "62470603"
 |**name**|**sysname**|Имя учетной записи-посредника.|  
 |**credential_id**|**int**|Идентификатор учетных данных, используемых учетной записью-посредником.|  
 |**включен**|**tinyint**|Состояние учетной записи-посредника:<br /><br /> **0** = отключено. **1** = включен.|  
-|**Описание**|**nvarchar(512)**|Описание, введенное пользователем при создании учетной записи-посредника.|  
+|**description**|**nvarchar(512)**|Описание, введенное пользователем при создании учетной записи-посредника.|  
 |**user_sid**|**varbinary(85)**|Microsoft Windows *security_identifier* пользователя или группы, связанной с учетными данными прокси-сервера.|  
 |**credential_date_created**|**datetime**|Дата и время создания учетных данных.|  
   

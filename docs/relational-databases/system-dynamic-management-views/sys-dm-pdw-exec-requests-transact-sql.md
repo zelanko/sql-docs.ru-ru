@@ -11,14 +11,13 @@ dev_langs:
 ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 author: XiaoyuL-Preview
 ms.author: xiaoyul
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: a3aa0219e1e8d0733926662b22f929fa923ae071
-ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
+ms.openlocfilehash: 8e6514991c0819342861a50a2a50b37e7d8748cf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/04/2019
-ms.locfileid: "67564175"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899401"
 ---
 # <a name="sysdmpdwexecrequests-transact-sql"></a>sys.dm_pdw_exec_requests (Transact-SQL)
 
@@ -53,7 +52,7 @@ ms.locfileid: "67564175"
 
  Необходимо разрешение VIEW SERVER STATE.  
   
-## <a name="security"></a>безопасность
+## <a name="security"></a>Безопасность
 
  sys.dm_pdw_exec_requests не фильтрует результаты запроса в соответствии с конкретной базы данных разрешения. Имена входа с разрешением VIEW SERVER STATE можно получить результаты запроса результаты для всех баз данных  
   

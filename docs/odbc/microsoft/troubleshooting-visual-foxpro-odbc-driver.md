@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: fd478dd8-666a-4f0a-a2d6-b94e81cbbe4b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7f0576d017068b8ab0694da798c5be458f115e56
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4eeb6210b9bce124e16a1b4e666dee03c1d992be
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62632610"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912386"
 ---
 # <a name="troubleshooting-visual-foxpro-odbc-driver"></a>Устранение неполадок (драйвер ODBC для Visual FoxPro)
 В следующих разделах рассматриваются способы повышения производительности и решения проблем, которые могут возникнуть при использовании драйвера ODBC для Visual FoxPro.  

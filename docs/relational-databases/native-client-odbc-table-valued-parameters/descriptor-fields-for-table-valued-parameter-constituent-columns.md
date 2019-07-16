@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 944b3968-fd47-4847-98d6-b87e8ef2acdc
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7399a5f2764bfbdcdac04a2f973f500ee2e797e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3987d21f69e6dfa74a1996428dbaf337633b2abf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62738470"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67895519"
 ---
 # <a name="descriptor-fields-for-table-valued-parameter-constituent-columns"></a>Поля дескриптора для столбцов, содержащих параметры, возвращающие табличные значения
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,13 +29,13 @@ ms.locfileid: "62738470"
 ## <a name="remarks"></a>Примечания  
  SQL_DESC_AUTO_UNIQUE_VALUE используется для параметров, возвращающих табличные значения, и других компонентов.  
   
-|Имя атрибута|Тип|Описание|  
+|Имя атрибута|Type|Описание|  
 |--------------------|----------|-----------------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE|SQLINTEGER|SQL_TRUE указывает, что этот столбец является столбцом идентификаторов.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Эти сведения можно использовать для оптимизации производительности, но приложение не обязано устанавливать это свойство для столбцов идентификаторов.|  
   
  Следующие атрибуты добавляются к параметрам всех типов в дескрипторе параметра приложения (APD) и дескрипторе параметра реализации (IPD).  
   
-|Имя атрибута|Тип|Описание|  
+|Имя атрибута|Type|Описание|  
 |--------------------|----------|-----------------|  
 |SQL_CA_SS_COLUMN_COMPUTED|SQLSMALLINT|SQL_TRUE указывает, что этот столбец является вычисляемым.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Эти сведения можно использовать для оптимизации производительности, но приложение не обязано устанавливать это свойство для вычисляемых столбцов.<br /><br /> Этот атрибут пропускается в случае привязок, не являющихся столбцами параметров, возвращающих табличные значения.|  
 |SQL_CA_SS_COLUMN_IN_UNIQUE_KEY|SQLSMALLINT|SQL_TRUE указывает, что столбец возвращающих табличное значение параметров является частью уникального ключа. Это может повысить производительность запросов. Этот атрибут пропускается в случае привязок, не являющихся столбцами параметров, возвращающих табличные значения.|  

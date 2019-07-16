@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2be0cf8d-6dbe-443a-abbd-036249922205
 author: HJToland3
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 727ede7a057491eea2ea230d7057aa3228b5fc82
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: af728d438f01203308258d8f074f145494780a3d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66841104"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67944579"
 ---
 # <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>Новые возможности в SSMA для SAP ASE (SybaseToSQL)
 В этой статье перечислены SQL Server Migration Assistant (SSMA) для SAP ASE (прежнее название — SSMA для Sybase) изменения в каждом выпуске.
@@ -41,7 +40,7 @@ ms.locfileid: "66841104"
 > [!NOTE]
 > Известная проблема с помощью автоматического обновления могут вызвать сбой обновления из SSMA v8.0 для версии 8.1. Если эта ошибка возникает, загрузите новую версию и установить его вручную.
 
-## <a name="ssma-v80"></a>SSMA v8.0
+## <a name="ssma-v80"></a>SSMA версии 8.0
 
 В выпуске версии 8.0 SSMA для SAP ASE дополнено целевых исправлений, предназначенный для повышения качества и преобразования метрики. Кроме того этот выпуск предлагает следующие новые функции:
 
@@ -91,7 +90,7 @@ ms.locfileid: "66841104"
 * Целевых исправлений, повышающих качество и преобразования метрик и поддержка SQL Server 2017 (Предварительная версия). Поддержка SQL Server 2017 в Windows и Linux в общедоступной предварительной версии и не должны использоваться для миграции в рабочей среде.
 * Поддержка преобразования функций Sybase.
 
-## <a name="ssma-v75"></a>SSMA v7.5
+## <a name="ssma-v75"></a>SSMA версии 7.5
 
 В выпуске версии 7.5 SSMA для SAP ASE (прежнее название — SSMA для Sybase) содержит следующие изменения:
 

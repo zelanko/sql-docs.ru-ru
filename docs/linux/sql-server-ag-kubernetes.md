@@ -5,18 +5,17 @@ description: В этой статье рассматриваются групп�
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-manager: jroth
 ms.date: 08/09/2018
 ms.topic: article
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e778af484881ae26669d2bac952b568532300c93
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 3910c74be803b7fc63c8bf560fc637387e06ee15
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67833029"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910468"
 ---
 # <a name="always-on-availability-groups-for-sql-server-containers"></a>Группы доступности AlwaysOn для SQL Server контейнеров
 
@@ -67,7 +66,7 @@ SQL Server 2019 поддерживает группы доступности н�
 
 StatfulSet содержит:
 
-* mssql-server container
+* контейнер MSSQL-server
 
 * контейнер MSSQL-ha-"контролер"
 

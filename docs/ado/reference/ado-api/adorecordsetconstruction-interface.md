@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 08386eba-f1f7-4879-8ffd-8733930ecb2f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f08d007395c85ef6b423c7db6c1aed5b39cb27ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1e1d14255acd4cc7f18abea1c494353ef970903c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718549"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920797"
 ---
 # <a name="adorecordsetconstruction-interface"></a>Интерфейс ADORecordsetConstruction
 **ADORecordsetConstruction** интерфейс используется для создания ADO **записей** объект из OLE DB **набора строк** объекта в приложении C/C++.  

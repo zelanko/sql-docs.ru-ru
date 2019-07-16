@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6e3305a0-7bc7-40d1-9122-235c15d23ab2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3d1f328baf628e86c75abc9a452600e1f0e8cf88
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 541c92cd34b9cbaecdd1001be29dbab8d9b194a0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704252"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922410"
 ---
 # <a name="rds-tutorial"></a>Учебник по RDS
 Этот учебник демонстрирует использование модели программирования служб удаленных рабочих СТОЛОВ для запроса и обновления источника данных. Во-первых он описывает действия, необходимые для выполнения этой задачи. Затем руководства повторяется в Microsoft® Visual Basic Scripting Edition (с ADO ввода для Windows Foundation Classes (ADO и WFC)).  

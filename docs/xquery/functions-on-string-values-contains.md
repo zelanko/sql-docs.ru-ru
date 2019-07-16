@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2c88c015-04fc-429b-84b2-835596a28b65
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c108689f2b06fca884978de68c106c2c8f28f741
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 54b3603c18d814276d700a220fbee5e16ed77502
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254966"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899029"
 ---
 # <a name="functions-on-string-values---contains"></a>Функции со строковыми значениями — contains
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +59,7 @@ fn:contains ($arg1 as xs:string?, $arg2 as xs:string?) as xs:boolean?
  В этом разделе приведены примеры запросов XQuery к экземплярам XML, хранящимся в различных столбцах типа xml в базе данных AdventureWorks.  
   
 ### <a name="a-using-the-contains-xquery-function-to-search-for-a-specific-character-string"></a>A. Использование функции contains() языка XQuery для поиска указанной строки символов  
- В следующем запросе выполняется поиск продуктов, сводное описание которых содержат слово «Aerodynamic». Для таких продуктов запрос возвращает идентификатор и элемент <`Summary`>.  
+ В следующем запросе выполняется поиск продуктов, сводное описание которых содержат слово «Aerodynamic». Запрос возвращает идентификатор и <`Summary`> элемент для таких продуктов.  
   
 ```  
 --The product model description document uses  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f0dd84c6-5c33-4ab9-82b4-4c42dfdd2277
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 370ea53d652f88f1870d81440e6a676cbc29da26
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 158b9084ebe9aac28a2ec05c18938338c1bc90ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718338"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922961"
 ---
 # <a name="address-book-navigation-buttons"></a>Кнопки навигации адресной книги
 Приложения адресной книги отображаются кнопки навигации в нижней части веб-страницы. Кнопки перехода можно использовать для перемещения по данным в сетке отображается HTML, выбирая первой или последней строки или строк, смежных к текущему выделению.  

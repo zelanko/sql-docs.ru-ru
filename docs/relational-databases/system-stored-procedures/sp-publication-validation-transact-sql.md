@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 06be2363-00c0-4936-97c1-7347f294a936
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 124d5d14f810a32e32ce92cbb96afe4569804c67
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: c7e6323c8a20aec7d464f7aa6f11a27fc24728d3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537176"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67896622"
 ---
 # <a name="sppublicationvalidation-transact-sql"></a>sp_publication_validation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,19 +41,19 @@ sp_publication_validation [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [**@publication=**] **"**_публикации"_  
+ [ **@publication=** ] **"** _публикации"_  
  Имя публикации. *Публикация* — **sysname**, не имеет значения по умолчанию.  
   
- [**@rowcount_only=**] *rowcount_only*  
+ [ **@rowcount_only=** ] *rowcount_only*  
  Указывает, возвращать ли только количество строк таблицы. *rowcount_only* — **smallint** и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|**0**|Рассчитать контрольную сумму в формате [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0.<br /><br /> Примечание. Если статья отфильтрована горизонтально, вместо операции расчета контрольной суммы выполняется операция подсчета строк.|  
+|**0**|Рассчитать контрольную сумму в формате [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0.<br /><br /> Примечание. Если статья отфильтрована горизонтально, вместо операцию вычисления контрольной суммы выполняется операция подсчета строк.|  
 |**1** (по умолчанию)|Выполнить проверку только количества строк.|  
-|**2**|Выполнить проверку количества строк и двоичной контрольной суммы.<br /><br /> Примечание. Для подписчиков версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 выполняется только проверка количества строк.|  
+|**2**|Выполнить проверку количества строк и двоичной контрольной суммы.<br /><br /> Примечание. Для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняется подписчиков версии 7.0, только проверка количества строк.|  
   
- [**@full_or_fast=**] *full_or_fast*  
+ [ **@full_or_fast=** ] *full_or_fast*  
  Метод, применяемый для подсчета числа строк. *full_or_fast* — **tinyint** и может принимать одно из следующих значений.  
   
 |Значение|Описание|  

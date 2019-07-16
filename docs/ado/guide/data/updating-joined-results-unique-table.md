@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d52e6926-5c22-43dc-9f32-7b32c1a071e2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 56c7e93af35f312dbcd2c8229cc01a6ac8ee3605
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b951587fcc00788e92555eed208ea7f99b525a6a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66699909"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923659"
 ---
 # <a name="updating-joined-results-unique-table"></a>Обновление результатов объединения JOIN: уникальная таблица
 ADO позволяет точно модификаций элемента управления определенной базовой таблицей в наборе записей, который был сформирован с помощью операции ОБЪЕДИНЕНИЯ на несколько базовых таблиц, с помощью динамического свойства уникальной таблицы. Дополнительные сведения об использовании уникальной таблицы ссылаются программированию объектов ADO справочную информацию о динамических свойствах уникальной таблицы и обновления установки выполнить повторную синхронизацию.  

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: d18019dd-f8dc-4492-b035-b1a639369b65
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b06ffc7a8400d3b02698009b2452282658cf959e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 91efefbdc28480cf2a3b3fb579dba0946dba8a2e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745362"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900778"
 ---
 # <a name="sysdmhadravailabilitygroupstates-transact-sql"></a>sys.dm_hadr_availability_group_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,10 +42,10 @@ ms.locfileid: "47745362"
 |**primary_recovery_health_desc**|**nvarchar(60)**|Описание **primary_replica_health**, используя один из:<br /><br /> ONLINE_IN_PROGRESS<br /><br /> ONLINE<br /><br /> NULL|  
 |**secondary_recovery_health**|**tinyint**|Указывает состояние работоспособности восстановления реплики с вторичной реплики, одно из:<br /><br /> 0 = выполняется<br /><br /> 1 = в сети<br /><br /> NULL<br /><br /> В первичной реплике **secondary_recovery_health** столбец имеет значение NULL.|  
 |**secondary_recovery_health_desc**|**nvarchar(60)**|Описание **secondary_recovery_health**, используя один из:<br /><br /> ONLINE_IN_PROGRESS<br /><br /> ONLINE<br /><br /> NULL|  
-|**synchronization_health**|**tinyint**|Отражает свертку **synchronization_health** всех реплик доступности в группе доступности. Ниже приведены возможные значения и их описания.<br /><br /> 0: неработоспособны. Ни одна из реплик доступности не имеет исправное состояние **synchronization_health** (2 = HEALTHY).<br /><br /> 1: частично работоспособна. Некоторые, но не все реплики доступности находятся в исправном состоянии.<br /><br /> 2: работоспособное. Все реплики доступности находятся в исправном состоянии синхронизации.<br /><br /> Сведения об исправности синхронизации реплики, см. в разделе **synchronization_health** столбца в [sys.dm_hadr_availability_replica_states &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql.md).|  
+|**synchronization_health**|**tinyint**|Отражает свертку **synchronization_health** всех реплик доступности в группе доступности. Ниже приведены возможные значения и их описания.<br /><br /> 0: Неработоспособна. Ни одна из реплик доступности не имеет исправное состояние **synchronization_health** (2 = HEALTHY).<br /><br /> 1: Частично работоспособна. Некоторые, но не все реплики доступности находятся в исправном состоянии.<br /><br /> 2: Работоспособны. Все реплики доступности находятся в исправном состоянии синхронизации.<br /><br /> Сведения об исправности синхронизации реплики, см. в разделе **synchronization_health** столбца в [sys.dm_hadr_availability_replica_states &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql.md).|  
 |**synchronization_health_desc**|**nvarchar(60)**|Описание **synchronization_health**, используя один из:<br /><br /> NOT_HEALTHY<br /><br /> PARTIALLY_HEALTHY<br /><br /> HEALTHY|  
   
-## <a name="security"></a>безопасность  
+## <a name="security"></a>Безопасность  
   
 ### <a name="permissions"></a>Разрешения  
  необходимо разрешение VIEW SERVER STATE на сервере.  

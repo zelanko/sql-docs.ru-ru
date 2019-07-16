@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: fbc39e3d-67d9-4331-bf5f-76dbd74c4c45
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 015ea45d1383e6813973aeb1e4c86451a506a2aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 14837bc5ba3368fbb0d33680ee1c54936ab0a224
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63213329"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898850"
 ---
 # <a name="sqlgetinfo-visual-foxpro-odbc-driver"></a>SQLGetInfo (драйвер ODBC для Visual FoxPro)
 > [!NOTE]  
@@ -43,10 +42,10 @@ ms.locfileid: "63213329"
   
  SQL_ALTER_TABLE возвращает SQL_AT_ADD_COLUMN или SQL_AT_DROP_COLUMN.  
   
-## <a name="b"></a>B  
+## <a name="b"></a>С  
  SQL_BOOKMARK_PERSISTENCE возвращает SQL_BP_SCROLL.  
   
-## <a name="c"></a>C  
+## <a name="c"></a>В  
  SQL_COLUMN_ALIAS возвращает «Y».  
   
  SQL_CONCAT_NULL_BEHAVIOR возвращает SQL_CB_NULL.  
@@ -127,7 +126,7 @@ ms.locfileid: "63213329"
 ## <a name="e"></a>E  
  Возвращает SQL_EXPRESSIONS_IN_ORDERBY 'N'.  
   
-## <a name="f"></a>Ж  
+## <a name="f"></a>C  
  Возвращает SQL_FETCH_DIRECTION:  
   
 -   SQL_FD_FETCH_NEXT  
@@ -164,7 +163,7 @@ ms.locfileid: "63213329"
   
  Возвращает SQL_IDENTIFIER_QUOTE_CHAR ".  
   
-## <a name="k"></a>Л  
+## <a name="k"></a>K  
  Возвращает SQL_KEYWORDS «».  
   
 ## <a name="l"></a>L  
@@ -215,7 +214,7 @@ ms.locfileid: "63213329"
   
  SQL_MULTIPLE_ACTIVE_TXN возвращает «Y». Несколько подключений может иметь несколько транзакций за один раз открыть.  
   
-## <a name="n"></a>Нет  
+## <a name="n"></a>в  
  Возвращает SQL_NEED_LONG_DATA_LEN 'N'.  
   
  SQL_NON_NULLABLE_COLUMNS возвращает SQL_NNC_NON_NULL.  
@@ -287,7 +286,7 @@ ms.locfileid: "63213329"
   
  SQL_OWNER_USAGE возвращает 0. Драйвер ODBC для Visual FoxPro не поддерживает владельцев для своих объектов.  
   
-## <a name="p"></a>P  
+## <a name="p"></a>С  
  SQL_POS_OPERATIONS возвращает SQL_POS_POSITION.  
   
  SQL_POSITIONED_STATEMENTS возвращает 0.  
@@ -307,7 +306,7 @@ ms.locfileid: "63213329"
   
  SQL_QUOTED_IDENTIFIER_CASE возвращает sql_ic_mixed, имеющим.  
   
-## <a name="r"></a>Чтение  
+## <a name="r"></a>R  
  Возвращает SQL_ROW_UPDATES «N». Драйвер ODBC для Visual FoxPro поддерживает только статические и прямой курсоры.  
   
 ## <a name="s"></a>S  
@@ -384,7 +383,7 @@ ms.locfileid: "63213329"
   
  Возвращает SQL_TIMEDATE_ADD_INTERVALS:  
   
--   SQL_FN_TSI_ SECOND  
+-   ВТОРОЙ SQL_FN_TSI_  
   
 -   SQL_FN_TSI_MINUTE  
   
@@ -406,7 +405,7 @@ ms.locfileid: "63213329"
   
  Возвращает SQL_TIMEDATE_DIFF_INTERVALS:  
   
--   SQL_FN_TSI_ SECOND  
+-   ВТОРОЙ SQL_FN_TSI_  
   
 -   SQL_FN_TSI_MINUTE  
   

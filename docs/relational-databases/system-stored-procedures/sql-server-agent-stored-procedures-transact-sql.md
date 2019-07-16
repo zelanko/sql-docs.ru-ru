@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9c8de925-928b-460c-9455-779c4c37b966
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7e8287e9ac39d0c052b4080ab76ef046f9d35914
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0396823be5a733acc551dc52a96ff642b67076c3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703352"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950374"
 ---
 # <a name="sql-server-agent-stored-procedures-transact-sql"></a>Хранимые процедуры агента SQL Server (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ ms.locfileid: "47703352"
 |[sp_delete_operator](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)|[sp_resync_targetserver](../../relational-databases/system-stored-procedures/sp-resync-targetserver-transact-sql.md)|  
 |[sp_delete_proxy](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)|[sp_revoke_login_from_proxy](../../relational-databases/system-stored-procedures/sp-revoke-login-from-proxy-transact-sql.md)|  
 |[sp_delete_schedule](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)|[sp_revoke_proxy_from_subsystem](../../relational-databases/system-stored-procedures/sp-revoke-proxy-from-subsystem-transact-sql.md)|  
-|[sp_delete_targetserver, хранимая процедура, хранимая процедура](../../relational-databases/system-stored-procedures/sp-delete-targetserver-transact-sql.md)|[sp_start_job](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md)|  
+|[sp_delete_targetserver, хранимая процедура](../../relational-databases/system-stored-procedures/sp-delete-targetserver-transact-sql.md)|[sp_start_job](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md)|  
 |[sp_delete_targetservergroup](../../relational-databases/system-stored-procedures/sp-delete-targetservergroup-transact-sql.md)|[sp_stop_job](../../relational-databases/system-stored-procedures/sp-stop-job-transact-sql.md)|  
 |[sp_delete_targetsvrgrp_member](../../relational-databases/system-stored-procedures/sp-delete-targetsvrgrp-member-transact-sql.md)|[sp_update_alert](../../relational-databases/system-stored-procedures/sp-update-alert-transact-sql.md)|  
 |[sp_detach_schedule](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)|[sp_update_category](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)|  

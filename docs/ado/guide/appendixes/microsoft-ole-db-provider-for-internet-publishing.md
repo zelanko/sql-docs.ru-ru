@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 66a208d9-b580-4655-a41e-1d36e5b5bfca
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 48c6e95a644c643721a7cb1c6f15c5eaf1e5a995
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 19d719ddb4e5a2f7851a1d12dc4abe69069a354f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701393"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926751"
 ---
 # <a name="microsoft-ole-db-provider-for-internet-publishing-overview"></a>Поставщик Microsoft OLE DB для Общие сведения о публикации в Интернете
 Поставщик Microsoft OLE DB для публикаций в Интернете позволяет ADO для доступа к ресурсам, обслуживаемых Microsoft FrontPage или Microsoft Internet Information Server. Ресурсы включают web исходных файлов, например HTML-файлы или веб-папки Windows 2000.

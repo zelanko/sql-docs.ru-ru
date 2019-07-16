@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3067e1e3-05b7-4f11-9206-c612ef4e7e42
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: c541c61f32b24a2d32ee78d20a78a6f894a0dece
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e6121d2e55d6e97d6fc474146d5f2cf41f3c8371
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65477097"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67906595"
 ---
 # <a name="create-a-version-flag-master-data-services"></a>Создание флага версии (службы Master Data Services)
 

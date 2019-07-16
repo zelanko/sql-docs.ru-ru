@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 00a0c8b8-8b63-433f-95b8-020ab05874a0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d946e744fe3b3e5fba12f83067dc751296b58ac6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 582d0b87edd4729ce54cc2a7323b0a63443cab82
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66710533"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938856"
 ---
 # <a name="underlyingvalue-property"></a>Свойство UnderlyingValue
 Указывает текущее значение [поле](../../../ado/reference/ado-api/field-object.md) объекта базы данных.  
@@ -38,7 +37,7 @@ ms.locfileid: "66710533"
   
  При использовании этого свойства с **OriginalValue** можно устранить конфликты, возникающие из пакетных обновлений.  
   
-## <a name="record"></a>Записей  
+## <a name="record"></a>Запись  
  Для [записи](../../../ado/reference/ado-api/record-object-ado.md) объектов, это свойство будет пустым для поля, добавленные перед [обновления](../../../ado/reference/ado-api/update-method.md) вызывается.  
   
 ## <a name="applies-to"></a>Объект применения  

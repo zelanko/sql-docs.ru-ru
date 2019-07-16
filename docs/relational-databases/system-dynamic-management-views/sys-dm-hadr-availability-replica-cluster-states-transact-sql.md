@@ -20,18 +20,17 @@ helpviewer_keywords:
 ms.assetid: 2e0dd780-6a71-4f4b-b7f7-6e063bec71d6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5e39bd1072f3de3448381d9ac457ef8ab4459184
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5021a2074d49d7a8b1da88d82c52b175f16ff3c3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806222"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900634"
 ---
 # <a name="sysdmhadravailabilityreplicaclusterstates-transact-sql"></a>sys.dm_hadr_availability_replica_cluster_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Возвращает строку для каждой реплики доступности AlwaysOn (вне зависимости от состояния соединения) из всех групп доступности AlwaysOn (вне зависимости от расположения реплики) в кластере сервера отказоустойчивой кластеризации Windows (WSFC).  
+  Возвращает по строке для каждой реплики доступности AlwaysOn (независимо от состояния соединения) во всех группах доступности AlwaysOn (независимо от расположения реплики) в кластере WSFC.  
   
 ##  <a name="connected_state"></a>  
   
@@ -43,7 +42,7 @@ ms.locfileid: "47806222"
 |**join_state**|**tinyint**|0 = не присоединена.<br /><br /> 1 = присоединена, автономный экземпляр.<br /><br /> 2 = присоединена, экземпляр отказоустойчивого кластера.|  
 |**join_state_desc**|**nvarchar(60)**|NOT_JOINED<br /><br /> JOINED_STANDALONE_INSTANCE<br /><br /> JOINED_FAILOVER_CLUSTER_INSTANCE|  
   
-## <a name="security"></a>безопасность  
+## <a name="security"></a>Безопасность  
   
 ### <a name="permissions"></a>Разрешения  
  необходимо разрешение VIEW SERVER STATE на сервере.  

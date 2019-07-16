@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 4bf12058-0534-42ca-a5ba-b1c23b24d90f
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3c69c9ea5e3274b22748839e0eda4af60289fabc
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 94442202816751022aca97755021bd5a54940269
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416121"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67913026"
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>Большие определяемые пользователем типы данных CLR (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -82,7 +81,7 @@ ms.locfileid: "52416121"
   
  Для определяемых пользователем типов определяются также следующие столбцы.  
   
-|Идентификатор столбца|Тип|Описание|  
+|Идентификатор столбца|Type|Описание|  
 |-----------------------|----------|-----------------|  
 |DBCOLUMN_UDT_CATALOGNAME|DBTYPE_WSTR|Для столбцов определяемого пользователем типа — имя каталога, в котором определен тип, определяемый пользователем.|  
 |DBCOLUMN_UDT_SCHEMANAME|DBTYPE_WSTR|Для столбцов определяемого пользователем типа — имя схемы, в которой определен тип, определяемый пользователем.|  
@@ -107,7 +106,7 @@ ms.locfileid: "52416121"
   
  Для определяемых пользователем типов определяются также следующие дополнительные столбцы.  
   
-|Идентификатор столбца|Тип|Описание|  
+|Идентификатор столбца|Type|Описание|  
 |-----------------------|----------|-----------------|  
 |SS_UDT_CATALOGNAME|DBTYPE_WSTR|Для столбцов определяемого пользователем типа — имя каталога, в котором определен тип, определяемый пользователем.|  
 |SS_UDT_SCHEMANAME|DBTYPE_WSTR|Для столбцов определяемого пользователем типа — имя схемы, в которой определен тип, определяемый пользователем.|  

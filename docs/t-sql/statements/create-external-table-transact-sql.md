@@ -45,7 +45,7 @@ ms.locfileid: "67145480"
 
 ||||||
 |---|---|---|---|---|
-|** _\*SQL Server\*_** &nbsp;|[База данных SQL](create-external-table-transact-sql.md?view=azuresqldb-current)|[Хранилище данных<br />SQL](create-external-table-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
+|**\*_SQL Server\*_** &nbsp;|[База данных SQL](create-external-table-transact-sql.md?view=azuresqldb-current)|[Хранилище данных<br />SQL](create-external-table-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;

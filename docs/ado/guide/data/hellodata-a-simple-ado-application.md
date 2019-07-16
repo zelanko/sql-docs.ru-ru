@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: de4bcd56-dac2-45e6-95ab-9fd7f25878fc
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 97957adf53cfea64693530b79920dd54d6d0a1bf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e666f479d95e3915703dc539ba2731e95175488b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700636"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925131"
 ---
 # <a name="hellodata-a-simple-ado-application"></a>HelloData: простое приложение ADO
 Это простое приложение пошаговые инструкции по каждой из четырех основных операций ADO: получение, анализ, редактирование и обновление данных. Эти операции выполняются в образце базы данных "Борей", в состав Microsoft® SQL Server. Чтобы сосредоточиться на основ ADO и предотвратить перегруженность кода, обработка ошибок в примере сводится к минимуму.  
@@ -48,14 +47,14 @@ ms.locfileid: "66700636"
 |Формы|Имя|Form1|  
 ||Высота|6500|  
 ||Ширина|6500|  
-|MS DataGrid|Имя|grdDisplay1|  
+|MS DataGrid|Name|grdDisplay1|  
 |TextBox|Имя|txtDisplay1|  
 ||Многострочный|true|  
-|Кнопка команды|Имя|cmdGetData|  
+|Кнопка команды|Name|cmdGetData|  
 ||Заголовок|Получение данных|  
-|Кнопка команды|Имя|cmdExamineData|  
+|Кнопка команды|Name|cmdExamineData|  
 ||Заголовок|Изучение данных|  
-|Кнопка команды|Имя|cmdEditData|  
+|Кнопка команды|Name|cmdEditData|  
 ||Заголовок|Изменение данных|  
-|Кнопка команды|Имя|cmdUpdateData|  
+|Кнопка команды|Name|cmdUpdateData|  
 ||Заголовок|Обновление данных|

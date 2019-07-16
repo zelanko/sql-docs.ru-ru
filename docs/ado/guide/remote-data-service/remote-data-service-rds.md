@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 63a5f26b-e7ca-47d9-a004-59eaad6052b4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: bb2b494f55bb421312798a550da72fcfd5630286
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0faa6f595f4f2001dc3456fde6d01cac0d52355c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718362"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922306"
 ---
 # <a name="remote-data-service-rds"></a>Служба Remote Data Service (RDS)
 Служба Remote Data (RDS) — это функция ADO, с помощью которого можно перемещать данные с сервера клиентское приложение или веб-странице, работы с данными на стороне клиента и возвращать обновления на сервер в рамках одного цикла обработки.  

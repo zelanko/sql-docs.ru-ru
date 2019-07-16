@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d6001863-7733-4c32-817f-081e48587fa1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 231d9ced5bf370b8ee7c507e930e6961cfbed5a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 02a861daa78b798c1b19b5fc2607cfcaf0ce5968
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700577"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924948"
 ---
 # <a name="issuing-commands-to-the-underlying-data-provider"></a>Выдача команды для базового поставщика данных
 Любую команду, которая не начинается с ФИГУРОЙ передается через поставщик данных. Это эквивалентно при выполнении команды фигуры в форме «SHAPE {команды поставщика}». Эти команды выполняют *не* создать **записей**. Например «ФИГУРЫ {DROP ТАБЛИЦУ MyTable} — это допустимые фигуры команда, при условии, что поставщик данных поддерживает DROP TABLE.  

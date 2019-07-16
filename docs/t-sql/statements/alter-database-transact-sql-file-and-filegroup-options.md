@@ -64,7 +64,7 @@ ms.locfileid: "63201694"
 
 |||
 |-|-|-|
-|** _\* SQL Server \*_** &nbsp;|[Управляемый экземпляр Базы данных SQL<br />](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
+|**\* _SQL Server \*_** &nbsp;|[Управляемый экземпляр Базы данных SQL<br />](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
 |||
 
 &nbsp;

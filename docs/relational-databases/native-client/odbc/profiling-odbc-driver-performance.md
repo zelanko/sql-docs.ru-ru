@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 8f44e194-d556-4119-a759-4c9dec7ecead
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 366909575681db12ee0f309637786c5dca58c78d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b6e35918f266d6dcf77c559c7243e519a0ec95cf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62636283"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67913151"
 ---
 # <a name="profiling-odbc-driver-performance"></a>Создание профилей производительности драйвера ODBC
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -86,7 +85,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |SQLiduRows|Количество инструкций INSERT, DELETE и UPDATE после SQL_PERF_START.|  
 |SQLSelects|Количество инструкций SELECT, обработанных после SQL_PERF_START.|  
 |SQLSelectRows|Количество строк, выбранных после SQL_PERF_START.|  
-|Transactions|Количество пользовательских транзакций после SQL_PERF_START, включая откаты. Если приложение ODBC запущено с параметром SQL_AUTOCOMMIT_ON, каждая команда считается транзакцией.|  
+|Транзакции|Количество пользовательских транзакций после SQL_PERF_START, включая откаты. Если приложение ODBC запущено с параметром SQL_AUTOCOMMIT_ON, каждая команда считается транзакцией.|  
 |SQLPrepares|Число [функция SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360) вызовы после SQL_PERF_START.|  
 |ExecDirects|Число **SQLExecDirect** вызовы после SQL_PERF_START.|  
 |SQLExecutes|Число **SQLExecute** вызовы после SQL_PERF_START.|  

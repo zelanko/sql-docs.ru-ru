@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: ab79a623-88a9-40b6-a017-a658bf19b778
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b4d105d648c7877e7099dea637c2a2c6a094985f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 97c7f1c143c83dd35ca5ff17e9776d79fb734ff9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63241089"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917926"
 ---
 # <a name="open-method-ado-record"></a>Метод Open (объект Record ADO)
 Открывает существующий [записи](../../../ado/reference/ado-api/record-object-ado.md) объект или создает новый элемент, представленный **записи**, например файла или каталога.  
@@ -36,19 +35,19 @@ Open Source, ActiveConnection, Mode, CreateOptions, Options, UserName, Password
   
 #### <a name="parameters"></a>Параметры  
  *Source*  
- Необязательный. Объект **Variant** , может представлять URL-адрес сущности, представляемый этим **записи** объекта, **команда**, открытую [записей](../../../ado/reference/ado-api/recordset-object-ado.md) или другой **записи** объект, строка, содержащая инструкцию SQL SELECT или имя таблицы.  
+ Необязательный параметр. Объект **Variant** , может представлять URL-адрес сущности, представляемый этим **записи** объекта, **команда**, открытую [записей](../../../ado/reference/ado-api/recordset-object-ado.md) или другой **записи** объект, строка, содержащая инструкцию SQL SELECT или имя таблицы.  
   
  *ActiveConnection*  
- Необязательный параметр. Объект **Variant** , представляющее строку подключения или открыть [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекта.  
+ Необязательный. Объект **Variant** , представляющее строку подключения или открыть [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекта.  
   
  *Режим*  
- Необязательный параметр. Объект [ConnectModeEnum](../../../ado/reference/ado-api/connectmodeenum.md) значение, указывающее режим доступа для результирующего **записи** объекта. Значение по умолчанию — **adModeUnknown**.  
+ Необязательный. Объект [ConnectModeEnum](../../../ado/reference/ado-api/connectmodeenum.md) значение, указывающее режим доступа для результирующего **записи** объекта. Значение по умолчанию — **adModeUnknown**.  
   
  *CreateOptions*  
  Необязательный параметр. Объект [RecordCreateOptionsEnum](../../../ado/reference/ado-api/recordcreateoptionsenum.md) значение, указывающее, следует открыть существующий файл или каталог, или должен будет создан новый файл или каталог. Значение по умолчанию — **adFailIfNotExists**. Если присвоено значение по умолчанию, режим доступа получается из [режим](../../../ado/reference/ado-api/mode-property-ado.md) свойство. Этот параметр учитывается при *источника* параметр не содержит URL-адрес.  
   
  *Параметры*  
- Необязательный. Объект [RecordOpenOptionsEnum](../../../ado/reference/ado-api/recordopenoptionsenum.md) значение, указывающее параметры для открытия **записи**. Значение по умолчанию — **adOpenRecordUnspecified**. Эти значения можно объединять.  
+ Необязательный параметр. Объект [RecordOpenOptionsEnum](../../../ado/reference/ado-api/recordopenoptionsenum.md) значение, указывающее параметры для открытия **записи**. Значение по умолчанию — **adOpenRecordUnspecified**. Эти значения можно объединять.  
   
  *UserName*  
  Необязательный параметр. Объект **строка** значение, содержащее идентификатор пользователя, если это необходимо, разрешает доступ к *источника*.  

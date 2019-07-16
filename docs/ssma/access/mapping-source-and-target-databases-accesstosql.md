@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 69bee937-7b2c-49ee-8866-7518c683fad4
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: d2be7854240a52edd8f3308ea92e3ea7eb25924f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 192db2e6c074305ca258d76652351175c8a82751
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63299202"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67907149"
 ---
 # <a name="mapping-source-and-target-databases-accesstosql"></a>Сопоставление исходной и целевой баз данных (AccessToSQL)
 При подключении к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure, необходимо указать целевую базу данных для миграции. Если у вас есть несколько баз данных Access можно сопоставить их к нескольким [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] баз данных (или схемы), а также несколько схем в группе соединений с базой данных SQL Azure.  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7a0b3457-7265-4f24-a255-7f055d908f20
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bb939681cb97b80a7bd0498a2e0c1fa30202c404
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: de4970e82155454b3d05d6200bc7413baca97aef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791546"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67939015"
 ---
 # <a name="mspublications-transact-sql"></a>MSpublications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ ms.locfileid: "52791546"
 |**allow_push**|**bit**|Указывает, могут ли быть созданы для данной публикации принудительные подписки.|  
 |**allow_pull**|**bit**|Указывает, могут ли быть созданы для данной публикации подписки по запросу.|  
 |**allow_anonymous**|**bit**|Указывает, могут ли быть созданы для данной публикации анонимные подписки.|  
-|**Описание**|**nvarchar(255)**|Описание публикации.|  
+|**description**|**nvarchar(255)**|Описание публикации.|  
 |**vendor_name**|**Nvarchar(100)**|Имя поставщика, если издатель не является [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базы данных.|  
 |**хранение**|**int**|Срок хранения публикации в часах.|  
 |**sync_method**|**int**|Метод синхронизации.<br /><br /> **0** — собственная (производит массовое копирование вывода всех таблиц).<br /><br /> **1** = символ (порождает символьный; производит массовое копирование вывода всех таблиц).<br /><br /> **3** = одновременный (производит массовое копирование вывода всех таблиц, но не блокирует таблицы во время создания моментального снимка).<br /><br /> **4** = Concurrent_c (Одновременный символьный; производит массовое копирование вывода всех таблиц, но не блокирует таблицы во время создания моментального снимка)<br /><br /> Значения **3** и **4** доступны для репликации транзакций и репликации слиянием, но не для репликации моментальных снимков.|  

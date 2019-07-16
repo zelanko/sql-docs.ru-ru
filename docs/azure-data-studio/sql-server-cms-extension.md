@@ -10,13 +10,12 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-manager: jroth
-ms.openlocfilehash: 743bf6f78fa84f628a20bed23af0ace8cf23d06f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 03edfc5b6d95c5cd6497d96d7014641f3032fb84
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798020"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959204"
 ---
 # <a name="sql-server-central-management-servers-extension-preview"></a>Расширение Центральных серверов управления SQL Server (предварительная версия)
 Расширение центральные серверы управления позволяет пользователям хранить список экземпляров SQL Server, организованных в одну или несколько групп. Действия, выполняемые с помощью группы CMS действовать на всех серверах в группе серверов.

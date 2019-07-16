@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ce37fa06-c581-4d80-9a9b-c3aa66408909
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5c3aa056447bd6e2eb7451db4d9af8090edc54d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2e4681bb9e1fd1028ee1ddc2bd7f72efc03fb6c7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66699662"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923181"
 ---
 # <a name="overview-of-multidimensional-schemas-and-data"></a>Общие сведения о многомерных схемах и данных
 ## <a name="understanding-multidimensional-schemas"></a>Основные сведения о многомерных схемах  
@@ -69,7 +68,7 @@ Hamburg, Munich, Stuttgart}
   
 -   Города `= {Ottawa, Toronto, Vancouver, Calgary, Seattle, Boise, Los Angeles, Houston, Shreveport, Miami, Boston, New York, London, Dover, Glasgow, Edinburgh, Cardiff, Pembroke, Belfast, Derry, Berlin, Hamburg, Munich, Stuttgart}`  
   
-### <a name="members"></a>Члены  
+### <a name="members"></a>Members  
  Члены, на конечном уровне иерархии имеют нет дочерних элементов и элементов на корневом уровне не имеют родительского объекта. Все другие члены имеют по крайней мере один родительский элемент и по крайней мере один дочерний элемент. Например частичного обхода дерева иерархии в измерении Geography получаются следующие родительско дочерних отношений:  
   
 -   `{All} (parent of) {Europe, North America}`  

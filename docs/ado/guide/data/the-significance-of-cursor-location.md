@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 70ef5b1c-0459-41a1-b796-031f61a29a8a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ed59dc8c4dd2cc53c4ad86992e5b778f0f8b17ac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e663ac5cdcf85fc1d050e0f066b597d29141ebfd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704839"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923892"
 ---
 # <a name="the-significance-of-cursor-location"></a>Важность положения курсора
 Каждый курсор использует временные ресурсы для хранения своих данных. Эти ресурсы могут быть память, файл подкачки на диске, временные файлы или даже временного хранения в базе данных. Курсор называется *клиентского* курсора, если эти ресурсы находятся на клиентском компьютере. Курсор называется *серверных* курсора, если эти ресурсы находятся на сервере.  

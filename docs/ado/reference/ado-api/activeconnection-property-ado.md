@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 52d0a96c-14fb-4ad9-b004-4d821bc0a6db
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0f423eb2d06ccdc925402d0db5d8a459f7ffdd5d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8dabf974e36b1f6beaff36f3a4888c128d7dfe1b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66698927"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921513"
 ---
 # <a name="activeconnection-property-ado"></a>Свойство ActiveConnection (ADO)
 Указывает, к которому [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекта указанного [команда](../../../ado/reference/ado-api/command-object-ado.md), [записей](../../../ado/reference/ado-api/recordset-object-ado.md), или [записи](../../../ado/reference/ado-api/record-object-ado.md) в данный момент принадлежит объект.  
@@ -60,7 +59,7 @@ ms.locfileid: "66698927"
 > [!NOTE]
 >  **Удаленное использование службы данных** при использовании на стороне клиента **записей** объект, это свойство можно задать только на строку подключения или (в Microsoft Visual Basic или Visual Basic Scripting Edition) *Nothing* .  
   
-## <a name="record"></a>Записей  
+## <a name="record"></a>Запись  
  Это свойство доступно для чтения/записи при **записи** объект закрывается и может содержать строки подключения или ссылку на открытую **подключения** объекта. Это свойство только для чтения при **записи** объект открыт и содержит ссылку на открытую **подключения** объекта.  
   
  Объект **подключения** объекта создается неявно при **записи** объект открыт из URL-адрес. Откройте **записи** с существующим, откройте **подключения** объекта путем назначения **подключения** к этому свойству, или помощи **подключения** объект в качестве параметра в [откройте](../../../ado/reference/ado-api/open-method-ado-record.md) вызова метода. Если **записи** открывается из существующего **записи** или [набор записей](../../../ado/reference/ado-api/recordset-object-ado.md), а затем автоматически связывается с этим **записи** или  **Набор записей** объекта **подключения** объекта.  

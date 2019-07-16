@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1ac3bd9b-2d45-4cc8-88ec-bd8a218cfb49
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cbf289e73cd3cb94418521f3d4070cf155a7fdf2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: aeac8c848f01f01e8969f94c571ad15f5e7f615a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704913"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923911"
 ---
 # <a name="the-microsoft-cursor-service-for-ole-db"></a>Служба курсора Майкрософт для OLE DB
 При выборе клиентский курсор, или задать **CursorLocation** свойства **adUseClient**, вызываемом служба курсора Майкрософт для OLE DB. Может также появиться ссылки на «Обработчик курсора клиента», который является по сути то же самое в контексте ADO. Эта служба дополняет поддержка курсоров функции поставщиков данных. Таким образом может воспринимать относительно однообразного функциональные возможности из всех поставщиков данных.  

@@ -5,17 +5,16 @@ description: Использование приложения, развернут
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
-manager: jroth
 ms.date: 03/18/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 308bbe40ba49566bf6cbccad13f8edab0db3d363
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 919ffb2cd4916451245f29c7d783ca05dbfa6998
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67729295"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958881"
 ---
 # <a name="consume-an-app-deployed-on-sql-server-big-data-cluster-using-a-restful-web-service"></a>Использовать приложение, развернутое в кластере SQL Server больших данных, с помощью веб-службу RESTful
 
@@ -23,7 +22,7 @@ ms.locfileid: "67729295"
 
 В этой статье описывается, как использовать приложение, развернутое в кластере SQL Server 2019 больших данных, с помощью веб-службу RESTful (Предварительная версия).
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 
 - [Кластер SQL Server 2019 больших данных](deployment-guidance.md)
 - [Программа командной строки mssqlctl](deploy-install-mssqlctl.md)

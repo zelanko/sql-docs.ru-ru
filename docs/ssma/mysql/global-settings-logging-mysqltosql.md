@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0d033492-5ec3-473a-8de1-821894ec9518
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 225d0cd15aa170edc146eda0615a708ab0fe3ce2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3d5188d701cd7930ff93c37aab74e11bba949d9b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63195155"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67896396"
 ---
 # <a name="global-settings-logging--mysqltosql"></a>Глобальные параметры (ведение журнала) (MySQLToSQL)
 Используйте **глобальные параметры** диалоговое окно, чтобы указать параметры ведения журнала для SSMA. Как правило можно изменить эти параметры только в том случае, при взаимодействии со службой поддержки продукта.  

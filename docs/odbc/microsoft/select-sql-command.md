@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2149c3ca-3a71-446d-8d53-3d056e2f301a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0c2d991afa179fdfbb536853e302b33de8bf12e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 85f281aefe79a09806c42e13cd771f976362d053
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63127878"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67943786"
 ---
 # <a name="select---sql-command"></a>SELECT (команда SQL)
 Извлекает данные из одной или нескольких таблиц.  
@@ -130,7 +129,7 @@ FROM [DatabaseName!]Table [Local_Alias]
 |<>, !=, #|Не равно|  
 |>|Более чем|  
 |>=|Больше или равно|  
-|<|Меньше чем|  
+|<|Меньше|  
 |<=|Меньше или равно|  
   
  При использовании оператора = со строками, он действует по-разному, в зависимости от параметра SET ANSI. Если SET ANSI имеет значение OFF, Visual FoxPro обрабатывает сравнения строк образом знакомы пользователям Xbase. Если SET ANSI имеет значение ON, Visual FoxPro соответствует стандартам ANSI для сравнения строк. См. в разделе [SET ANSI](../../odbc/microsoft/set-ansi-command.md) и [ЗАДАТЬ ТОЧНОЕ](../../odbc/microsoft/set-exact-command.md) Дополнительные сведения о том, как Visual FoxPro выполняет сравнение строк.  

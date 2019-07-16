@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: ed9851ce-44ee-4c8e-b626-1d0b52da30fe
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d4e546aa56cf9831a0b519f5788359d8c58c41fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f9ead25f93ff16d453923be437dfacd7572c09f3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65538164"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67937971"
 ---
 # <a name="odbc-64-bit-information"></a>Сведения о 64-разрядном интерфейсе ODBC
 Начиная с Windows Server 2003, поддерживаемые библиотеки ODBC 64-разрядных операционных систем Microsoft. ODBC заголовки и библиотеки, сначала в состав MDAC 2.7 SDK содержат изменения, позволяющий программистам легко написать код для нового 64-разрядных платформах. Убедившись, что код использует ODBC определенных типов, перечисленных ниже, можно скомпилировать одного исходного кода для 64-разрядных и 32-разрядных платформ на основе **_WIN64** или **WIN32** макросы.  
@@ -323,9 +322,9 @@ typedef SQLULEN BOOKMARK;
   
  SQL_ATTR_IMP_ROW_DESC  
   
- SQL_ATTR_KEYSET_SIZE  
+ АТРИБУТА SQL_ATTR_KEYSET_SIZE  
   
- SQL_ATTR_MAX_LENGTH  
+ ЗНАЧЕНИЯ SQL_ATTR_MAX_LENGTH  
   
  SQL_ATTR_MAX_ROWS  
   
@@ -443,9 +442,9 @@ typedef SQLULEN BOOKMARK;
   
  SQL_ATTR_IMP_ROW_DESC  
   
- SQL_ATTR_KEYSET_SIZE  
+ АТРИБУТА SQL_ATTR_KEYSET_SIZE  
   
- SQL_ATTR_MAX_LENGTH  
+ ЗНАЧЕНИЯ SQL_ATTR_MAX_LENGTH  
   
  SQL_ATTR_MAX_ROWS  
   

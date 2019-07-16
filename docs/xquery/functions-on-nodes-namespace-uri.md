@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9b48d216-26c8-431d-9ab4-20ab187917f4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a21c38506d44c687d639b13ca452e155a97adcef
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 05412c69aa121b9de14f2bab16555db2a8a4fdb4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255109"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929941"
 ---
 # <a name="functions-on-nodes---namespace-uri"></a>Функции с узлами — namespace-uri
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ SELECT @x.query('namespace-uri(/ROOT[1])')
   
  Так как указанное имя QName не содержит части URI-кода пространства имен, а только часть локального имени, результатом будет строка нулевой длины.  
   
- Следующий запрос адресован инструкциям типизированные **xml** столбца. Выражение `namespace-uri(/AWMI:root[1]/AWMI:Location[1])` возвращает URI-код пространства имен первого дочернего элемента <`Location`> элемента <`root`>.  
+ Следующий запрос адресован инструкциям типизированные **xml** столбца. Выражение, `namespace-uri(/AWMI:root[1]/AWMI:Location[1])`, возвращает URI первого пространства имен <`Location`> дочернего элемента <`root`> элемента.  
   
 ```  
 SELECT Instructions.query('  
@@ -99,7 +98,7 @@ WHERE ProductModelID=19
 ...  
 ```  
   
- Пространство имен URI в предыдущем запросе можно изменить на адрес `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`. Тогда будут получены все дочерние узлы элемента <`ProductDescription`>, чья часть URI-кода пространства имен расширенного QName является адресом `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`.  
+ Пространство имен URI в предыдущем запросе можно изменить на адрес `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`. Тогда будут получены все дочерние узлы элемента <`ProductDescription`> элемента, часть URI пространства имен QName, развернутом которого `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`.  
   
 ### <a name="implementation-limitations"></a>Ограничения реализации  
  Существуют следующие ограничения:  

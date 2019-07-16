@@ -5,17 +5,16 @@ description: В этой статье объясняется, как просм�
 author: yualan
 ms.author: alayu
 ms.reviewer: mikeray
-manager: jroth
 ms.date: 06/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b3cc78e36fe427966c7730533104c63aa3ed9332
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 1a8d04ab43adac77a534a82626cc4a018c24b68f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67727330"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957670"
 ---
 # <a name="how-to-view-the-status-of-a-big-data-cluster"></a>Как просмотреть состояние кластера больших данных
 

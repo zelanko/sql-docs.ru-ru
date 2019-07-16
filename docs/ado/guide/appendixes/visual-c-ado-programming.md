@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 11233b96-e05c-4221-9aed-5f20944b0f1c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c8145b4000a621ecb09abff074e4b5e06aea7c80
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1890d554367b2a21bcd46a6d2ebddf00013957e6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702617"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926421"
 ---
 # <a name="visual-c-ado-programming"></a>Программирование объектов ADO с использованием Visual C++
 Справочник по API ADO представлены функции ADO интерфейс программирования (API) с помощью синтаксиса для Microsoft Visual Basic. То, что целевая аудитория всем пользователям, программистам ADO использовать разных языков, например Visual Basic, Visual C++ (с и без **#import** директивы) и Visual J ++ (с пакетом класс ADO и WFC).  

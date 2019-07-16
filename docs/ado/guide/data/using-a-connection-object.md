@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4b34f971-5699-43e7-9b15-137d334fa66e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b19713028bcc5569a6a4aace4528e7c725cf7d0e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4f1b867e1870b81641c7cea09d9a8fb3accfcc01
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704544"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923649"
 ---
 # <a name="using-a-connection-object"></a>Использование объекта Connection
 Прежде чем открывать **подключения** объекта, необходимо определить определенные сведения об источнике данных и тип подключения. Большая часть этой информации удерживается *ConnectionString* параметр [метод Open](../../../ado/reference/ado-api/open-method-ado-connection.md) на **подключения** объекта, или с помощью [ConnectionString Свойство](../../../ado/reference/ado-api/connectionstring-property-ado.md) на **подключения** объекта. Строка подключения состоит из списка пар аргументов и значений, разделенных точкой с запятой, значения, заключенные в одинарные кавычки. Пример:  

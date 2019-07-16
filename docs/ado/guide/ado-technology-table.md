@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 38c8ad3c-d6f1-40f6-a394-bbba6ed861e5
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8403af8dec6e3d96f955b6b4523662a164931be3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2e260ba5e9bfa4cc0d55187dff09072dd5842828
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702824"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927017"
 ---
 # <a name="products-and-technologies-table"></a>Продукты и технологии таблицы
 Ниже перечислены продукты Microsoft, средства и технологии, описанные в руководстве по программированию объектов ADO. Он содержит ссылки, везде, где это возможно, на соответствующие разделы руководства.

@@ -2,19 +2,18 @@
 title: Приобретение и настройка сервера для загрузки - Parallel Data Warehouse | Документация Майкрософт
 description: В этой статье описывается, как получить и настройка сервера для загрузки, как система Windows не является специализированным для отправки данных загружает для Parallel Data Warehouse (PDW).
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: da404aa881f3ff7af26a681751aae12a45f2628f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d753237841695786de3d368bebf9a606875ea634
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63231106"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961610"
 ---
 # <a name="acquire-and-configure-a-loading-server-for-parallel-data-warehouse"></a>Приобретение и настройка сервера для загрузки для Parallel Data Warehouse
 В этой статье описывается, как получить и настройка сервера для загрузки, как система Windows не является специализированным для отправки данных загружает для Parallel Data Warehouse (PDW).  

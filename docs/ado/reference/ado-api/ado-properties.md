@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0ac0d1a7-6c7a-4f4c-b115-428935e0f98b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3b6155de4c1bbc04e921b3b019eb0128694f6412
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d3ddf4e26d015067c0b5bf06f6e2adeecd39f041
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696623"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920899"
 ---
 # <a name="ado-properties"></a>Свойства ADO
 

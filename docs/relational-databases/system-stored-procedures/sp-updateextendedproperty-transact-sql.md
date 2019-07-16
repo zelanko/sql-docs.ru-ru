@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 7f02360f-cb9e-48b4-b75f-29b4bc9ea304
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 347e8d170006cb289b421171851140b18e64f14b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2f1c1c856cadbb4f005a99d5a5d49dc0c1280a8e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843852"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898417"
 ---
 # <a name="spupdateextendedproperty-transact-sql"></a>sp_updateextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,7 +59,7 @@ sp_updateextendedproperty
  Значение, связанное со свойством. *значение* — **sql_variant**, значение по умолчанию NULL. Размер *значение* может оказаться более чем 7 500 байт.  
   
  [ @level0type=] {"*level0_object_type*"}  
- Пользователь или тип, определяемый пользователем. *level0_object_type* — **varchar(128)**, значение по умолчанию NULL. Допустимыми входными значениями являются сборки, КОНТРАКТА, уведомления о СОБЫТИИ, файловой группы, тип сообщений, функции СЕКЦИОНИРОВАНИЯ, СХЕМЫ СЕКЦИОНИРОВАНИЯ, СТРУКТУРЫ ПЛАНА, REMOTE SERVICE BINDING, МАРШРУТА, СХЕМЫ, службы, пользователя, триггер, тип и значение NULL.  
+ Пользователь или тип, определяемый пользователем. *level0_object_type* — **varchar(128)** , значение по умолчанию NULL. Допустимыми входными значениями являются сборки, КОНТРАКТА, уведомления о СОБЫТИИ, файловой группы, тип сообщений, функции СЕКЦИОНИРОВАНИЯ, СХЕМЫ СЕКЦИОНИРОВАНИЯ, СТРУКТУРЫ ПЛАНА, REMOTE SERVICE BINDING, МАРШРУТА, СХЕМЫ, службы, пользователя, триггер, тип и значение NULL.  
   
 > [!IMPORTANT]  
 >  Типы USER и TYPE уровня 0 будут удалены в будущих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Старайтесь не использовать эти функции в новых разработках и предусмотрите соответствующие изменения в приложениях, которые используют их в настоящее время. Тип SCHEMA следует использовать в качестве типа уровня 0 вместо USER. В значении аргумента TYPE следует указывать тип SCHEMA в качестве типа уровня 0 и TYPE в качестве типа уровня 1.  

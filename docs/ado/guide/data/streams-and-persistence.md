@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ad5bf52c-fd10-4cfa-bf7d-fcedcaa41eea
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 246d894ff38cc0dd74e96bb0fcbdb7b170b51d53
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 22fbf503196c467a7816bf4e9c76151276cc6d4a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700495"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924021"
 ---
 # <a name="streams-and-persistence"></a>Потоки и сохраняемость
 [Записей](../../../ado/reference/ado-api/recordset-object-ado.md) объект [Сохранить](../../../ado/reference/ado-api/save-method.md) метод хранилищ, или *сохраняется*, **записей** в файле и [откройте](../../../ado/reference/ado-api/open-method-ado-recordset.md)метод восстанавливает **записей** из этого файла.  

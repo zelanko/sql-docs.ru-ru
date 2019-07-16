@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6a0109a0-f2d9-4f7c-8e1e-42763f9acaea
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 959cb06535cf1f6530898c7da565ce281bf9df4e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f18884c7a1aabe138408cca7eb529f4f21120330
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696162"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919911"
 ---
 # <a name="collections-ado-for-visual-c-syntax"></a>Collections (синтаксис ADO для Visual C++)
 ## <a name="parameters"></a>Параметры  
@@ -36,7 +35,7 @@ Delete(VARIANT Index);
 Refresh(void);  
 ```  
   
- Дополнительные сведения см. в разделе  
+ Дополнительные сведения см. на странице  
   
 -   [Метод Append (ADO)](../../../ado/reference/ado-api/append-method-ado.md)  
   
@@ -51,7 +50,7 @@ get_Count(long *c);
 get_Item(VARIANT Index, _ADOParameter **ppvObject);  
 ```  
   
- Дополнительные сведения см. в разделе  
+ Дополнительные сведения см. на странице  
   
 -   [Свойство Count (ADO)](../../../ado/reference/ado-api/count-property-ado.md)  
   
@@ -67,7 +66,7 @@ Delete(VARIANT Index);
 Refresh(void);  
 ```  
   
- Дополнительные сведения см. в разделе  
+ Дополнительные сведения см. на странице  
   
 -   [Метод Append (ADO)](../../../ado/reference/ado-api/append-method-ado.md)  
   
@@ -82,7 +81,7 @@ get_Count(long *c);
 get_Item(VARIANT Index, ADOField **ppvObject);  
 ```  
   
- Дополнительные сведения см. в разделе  
+ Дополнительные сведения см. на странице  
   
 -   [Свойство Count (ADO)](../../../ado/reference/ado-api/count-property-ado.md)  
   
@@ -97,7 +96,7 @@ Clear(void);
 Refresh(void);  
 ```  
   
- Дополнительные сведения см. в разделе  
+ Дополнительные сведения см. на странице  
   
 -   [Метод Clear (ADO)](../../../ado/reference/ado-api/clear-method-ado.md)  
   
@@ -110,7 +109,7 @@ get_Count(long *c);
 get_Item(VARIANT Index, ADOError **ppvObject);  
 ```  
   
- Дополнительные сведения см. в разделе  
+ Дополнительные сведения см. на странице  
   
 -   [Свойство Count (ADO)](../../../ado/reference/ado-api/count-property-ado.md)  
   
@@ -124,7 +123,7 @@ get_Item(VARIANT Index, ADOError **ppvObject);
 Refresh(void);  
 ```  
   
- Дополнительные сведения см. в разделе  
+ Дополнительные сведения см. на странице  
   
 -   [Метод Refresh (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
@@ -135,7 +134,7 @@ get_Count(long *c);
 get_Item(VARIANT Index, ADOProperty **ppvObject);  
 ```  
   
- Дополнительные сведения см. в разделе  
+ Дополнительные сведения см. на странице  
   
 -   [Свойство Count (ADO)](../../../ado/reference/ado-api/count-property-ado.md)  
   

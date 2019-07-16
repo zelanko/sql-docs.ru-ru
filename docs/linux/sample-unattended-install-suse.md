@@ -4,17 +4,16 @@ titleSuffix: SQL Server
 description: Пример сценария SQL Server — автоматическая установка на SUSE Linux Enterprise Server
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 41f1a996698dbc0d8a08e049e7d8ed7d4e139acb
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: eb19357b739dbc52b3eb19cf2390f225e4205d6e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834982"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910456"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-suse-linux-enterprise-server"></a>Образец. Установка сценария автоматической установки SQL Server для SUSE Linux Enterprise Server
 
@@ -25,7 +24,7 @@ ms.locfileid: "67834982"
 > [!TIP]
 > Если не требуется использовать сценарий автоматической установки, то самый быстрый способ установки SQL Server — следуйте [краткое руководство по SLES](quickstart-install-connect-suse.md). Другие сведения о настройке см. в разделе [руководство по установке для SQL Server в Linux](sql-server-linux-setup.md).
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 
 - Необходимо по крайней мере 2 ГБ памяти для запуска SQL Server в Linux.
 - Файловая система должна быть **XFS** или **EXT4**. Другие файловые системы, такие как **BTRFS**, не поддерживаются.

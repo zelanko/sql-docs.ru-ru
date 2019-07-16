@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2c57eca6-9336-4b06-ba10-9fef5926b1d0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7cb3e56d0219973be97b694ee2b22dbbb58eb0d8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 27386894ce6d1d393505d49b4863a0ba9bf3320b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66698526"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933226"
 ---
 # <a name="datatypeenum"></a>DataTypeEnum
 Указывает тип данных [поле](../../../ado/reference/ado-api/field-object.md), [параметр](../../../ado/reference/ado-api/parameter-object.md), или [свойство](../../../ado/reference/ado-api/property-object-ado.md). В круглых скобках в столбце "Описание" в следующей таблице показан соответствующий индикатор типа OLE DB.  

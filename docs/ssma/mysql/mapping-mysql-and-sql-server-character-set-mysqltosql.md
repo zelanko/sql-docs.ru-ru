@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 20b3f22e-16a2-4a87-b4eb-c277be6bf5c8
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: cebdf2ed28287a59ec9d4f0daaa1d0c200f8fe20
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 32d5e23579b99b323da870d2608b2d197520f99f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63312372"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909023"
 ---
 # <a name="mapping-mysql-and-sql-server-character-set-mysqltosql"></a>Сопоставление кодировок MySQL и SQL Server (MySQLToSQL)
 Для символьных типов данных MySQL, выражения и литералы можно указать набор символов (Charset).  
@@ -101,7 +100,7 @@ ms.locfileid: "63312372"
     |GBK|Китайская упрощенная GBK|NCHAR/NVARCHAR (по умолчанию)|  
     |latin5|ISO 8859-9 турецкая|CHAR/VARCHAR (по умолчанию)|  
     |armscii8|Армянский ARMSCII-8|CHAR/VARCHAR (по умолчанию)|  
-    |utf8|Юникода UTF-8|NCHAR/NVARCHAR (по умолчанию)|  
+    |UTF8|Юникода UTF-8|NCHAR/NVARCHAR (по умолчанию)|  
     |ucs2|Юникода UCS-2|NCHAR/NVARCHAR (по умолчанию)|  
     |cp866|Русский DOS|CHAR/VARCHAR (по умолчанию)|  
     |keybcs2|Чешский Kamenicky DOS-словацкий|CHAR/VARCHAR (по умолчанию)|  
@@ -109,8 +108,8 @@ ms.locfileid: "63312372"
     |MacRoman|Mac — Западная Европа|CHAR/VARCHAR (по умолчанию)|  
     |cp852|Европейский центр DOS|CHAR/VARCHAR (по умолчанию)|  
     |latin7|ISO 8859-13 балтийская|CHAR/VARCHAR (по умолчанию)|  
-    |cp 1251|Кириллица Windows|CHAR/VARCHAR (по умолчанию)|  
-    |cp 1256|Арабский Windows|CHAR/VARCHAR (по умолчанию)|  
+    |CP 1251|Кириллица Windows|CHAR/VARCHAR (по умолчанию)|  
+    |CP 1256|Арабский Windows|CHAR/VARCHAR (по умолчанию)|  
     |CP 1257|Балтийская Windows|CHAR/VARCHAR (по умолчанию)|  
     |binary|Двоичный псевдо-charset|CHAR/VARCHAR (по умолчанию)|  
     |geostd8|Грузинский GEOSTD8|CHAR/VARCHAR (по умолчанию)|  

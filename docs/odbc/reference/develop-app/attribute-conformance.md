@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 34fea100-10f9-46d5-bc50-3aa867b70f24
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 44f1311d98f37412454ad2352366492a8d5a1768
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 71f0da7bbd7ef1a37a1f48539c7230bff0ceda15
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62672533"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909915"
 ---
 # <a name="attribute-conformance"></a>Соответствие атрибутов
 Следующая таблица указывает уровень соответствия каждого атрибута ODBC среде, где это является правильно определенным.  
@@ -75,8 +74,8 @@ ms.locfileid: "62672533"
 |SQL_ATTR_FETCH_BOOKMARK_PTR|Уровень 2|  
 |SQL_ATTR_IMP_PARAM_DESC|Основные сведения|  
 |SQL_ATTR_IMP_ROW_DESC|Основные сведения|  
-|SQL_ATTR_KEYSET_SIZE|Уровень 2|  
-|SQL_ATTR_MAX_LENGTH|уровне 1|  
+|АТРИБУТА SQL_ATTR_KEYSET_SIZE|Уровень 2|  
+|ЗНАЧЕНИЯ SQL_ATTR_MAX_LENGTH|уровне 1|  
 |SQL_ATTR_MAX_ROWS|уровне 1|  
 |SQL_ATTR_METADATA_ID|Основные сведения|  
 |SQL_ATTR_NOSCAN|Основные сведения|  

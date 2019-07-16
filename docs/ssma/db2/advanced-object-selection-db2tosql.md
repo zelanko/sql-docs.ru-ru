@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ca098c15-c343-4d7d-a284-c2fc405eb991
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 46e1bdc5b9fdfbbe9c804b4bf2214b9c04b6cdac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 35e6c735fe0d9411d310298d4f32dbaab97b93c5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63453496"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927781"
 ---
 # <a name="advanced-object-selection-db2tosql"></a>Расширенный выбор объектов (DB2ToSQL)
 **Расширенный объект разделе** диалоговое окно позволяет фильтровать объекты базы данных с помощью строки и подстроки в качестве имени объекта, а затем выберите или отмените выделение этих объектов. SSMA выполняет преобразование и миграцию операции, для выбранных объектов.  

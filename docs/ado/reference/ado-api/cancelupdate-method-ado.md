@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: eaa856cc-c786-462e-890c-c896261b1741
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b53fa2e9d69b39218d846b57070b78ae230d81cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fa9e680e1626311f2cc10aa7c79fb583841fbc38
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66698813"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920118"
 ---
 # <a name="cancelupdate-method-ado"></a>Метод CancelUpdate (ADO)
 Отменяет все изменения, внесенные в текущей или новой строки [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта, или [поля](../../../ado/reference/ado-api/fields-collection-ado.md) коллекцию [записи](../../../ado/reference/ado-api/record-object-ado.md) объект перед вызовом [обновления ](../../../ado/reference/ado-api/update-method.md) метод.  
@@ -42,7 +41,7 @@ recordset.CancelUpdaterecord.Fields.CancelUpdate
   
  Если вы перейдете в режим редактирования и хотите отказаться от использования текущей записи (например, с помощью [переместить](../../../ado/reference/ado-api/move-method-ado.md), [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md), или [закрыть](../../../ado/reference/ado-api/close-method-ado.md) методы), можно использовать  **CancelUpdate** отменить все ожидающие изменения. Может потребоваться сделать, если обновления не могут быть зарегистрированы успешно к источнику данных. Например, попытка удалить оставит что завершается сбоем из-за нарушений целостности **записей** в режиме редактирования после вызова [удалить](../../../ado/reference/ado-api/delete-method-ado-recordset.md).  
   
-## <a name="record"></a>Записей  
+## <a name="record"></a>Запись  
  **CancelUpdate** метод отменяет все ожидающие Вставка и удаление [поле](../../../ado/reference/ado-api/field-object.md) объектов и отменяет ожидающие обновления существующих полей и восстанавливает их к исходным значениям. [Состояние](../../../ado/reference/ado-api/status-property-ado-recordset.md) свойства всех полей в **поля** коллекции имеет значение **adFieldOK**.  
   
 ## <a name="applies-to"></a>Объект применения  

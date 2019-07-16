@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1d64f309-2a6e-4ad1-a6b5-e81145549c56
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2391c01d93c876562ab9d870ab0dba22bf74cea5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2c69f784c2ce7c29cb49c81bf23f34a9cad12089
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63189016"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67913619"
 ---
 # <a name="executing-positioned-update-and-delete-statements"></a>Выполнение инструкций позиционированного обновления и удаления
 > [!IMPORTANT]  
@@ -35,9 +34,9 @@ ms.locfileid: "63189016"
   
      **ОБНОВЛЕНИЕ** *имя таблицы*  
   
-     **SET** *column-identifier* **=** {*expression* &#124; **NULL**}  
+     **ЗАДАЙТЕ** *идентификатор столбца* **=** {*выражение* &#124; **NULL**}  
   
-     [**,** *column-identifier* **=** {*expression* &#124; **NULL**}]  
+     [ **,** *идентификатор столбца* **=** {*выражение* &#124; **NULL**}]  
   
      **WHERE CURRENT OF** *имя курсора*  
   
@@ -62,6 +61,6 @@ ms.locfileid: "63189016"
 |Инструкция, используемая|Значение в массив статусов строк|Значения в<br /><br /> буферы строк|Значения в<br /><br /> буферы кэша|  
 |--------------------|-------------------------------|----------------------------------|---------------------------------|  
 |Позиционированное обновление|SQL_ROW_UPDATED|Новые значения [1]|Новые значения [1]|  
-|Позиционированные delete|SQL_ROW_DELETED|Старые значения|Старые значения|  
+|Позиционированные delete|ЗНАЧЕНИЕ SQL_ROW_DELETED|Старые значения|Старые значения|  
   
  [1] приложения необходимо обновить значения в буферы строк перед выполнением инструкции позиционированного обновления; После выполнения инструкции позиционированного обновления, библиотека курсоров копирует значения в буферы строк в свой кэш.

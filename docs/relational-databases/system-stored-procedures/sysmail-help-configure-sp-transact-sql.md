@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e598d4c8-3041-4965-b046-dce3a8e3d3e0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1ef80206f9ff82cf1ab2917e90f61432be15c190
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f55025f8eec24925aec8661c46b81a1a40ed2aa6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838432"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909077"
 ---
 # <a name="sysmailhelpconfiguresp-transact-sql"></a>sysmail_help_configure_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [**@parameter_name** =] **"***parameter_name***"**  
+ [ **@parameter_name** =] **"***parameter_name***"**  
  Имя параметра конфигурации, значение которого нужно получить. Если он указан, значение параметра конфигурации возвращается в **@parameter_value** ВЫХОДНОЙ параметр. Если аргумент **@parameter_name** указан, эта хранимая процедура возвращает результирующий набор, содержащий все параметры конфигурации компонента Database Mail в экземпляре.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -54,12 +53,12 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
 |Имя столбца|Тип данных|Описание|  
 |**paramName**|**nvarchar(256)**|Имя параметра конфигурации.|  
 |**ParamValue**|**nvarchar(256)**|Значение параметра конфигурации.|  
-|**Описание**|**nvarchar(256)**|Описание параметра конфигурации.|  
+|**description**|**nvarchar(256)**|Описание параметра конфигурации.|  
   
 ## <a name="remarks"></a>Примечания  
  Хранимая процедура **sysmail_help_configure_sp** отображает список текущих параметров конфигурации компонента Database Mail для экземпляра.  
   
- Когда **@parameter_name** указано, но без выходного параметра предоставляется для **@parameter_value**, эта хранимая процедура не возвращает выходные данные.  
+ Когда **@parameter_name** указано, но без выходного параметра предоставляется для **@parameter_value** , эта хранимая процедура не возвращает выходные данные.  
   
  Хранимая процедура **sysmail_help_configure_sp** в **msdb** базы данных и принадлежит **dbo** схемы. Процедура должен вызываться с трехкомпонентным именем, если текущая база данных не **msdb**.  
   

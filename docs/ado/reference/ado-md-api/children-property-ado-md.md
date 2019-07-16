@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 61d36468-1ccd-467a-9cb5-17d0bfacc766
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 219aeba8cfc7e913a2febdd031c844aed922832e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cbec9733044127d23e75364697a41ccd7e8910e4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66709671"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911523"
 ---
 # <a name="children-property-ado-md"></a>Свойство Children (многомерные объекты ADO)
 Возвращает [члены](../../../ado/reference/ado-md-api/members-collection-ado-md.md) коллекции, для которого текущий [член](../../../ado/reference/ado-md-api/member-object-ado-md.md) является родителем в иерархии.  

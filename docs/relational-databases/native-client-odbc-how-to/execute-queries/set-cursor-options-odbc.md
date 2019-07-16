@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 0e72b48a-fc5a-4656-8cf5-39f57d8c1565
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6bf8a5002c67ee236075efc0a06d5422f03cf398
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 185040c174608d2f3a14d23047d63ab8ccf8c0a8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47638482"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898528"
 ---
 # <a name="set-cursor-options-odbc"></a>Указание параметров курсора (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

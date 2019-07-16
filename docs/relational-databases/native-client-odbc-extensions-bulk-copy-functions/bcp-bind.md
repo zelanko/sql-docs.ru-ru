@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 6e335a5c-64b2-4bcf-a88f-35dc9393f329
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0574683e2f77efe0654a8c3193bee2f499a9400b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: c1c53d7fc6578f753e92cf3192c7cd7783590292
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135744"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67895737"
 ---
 # <a name="bcpbind"></a>bcp_bind
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -140,26 +139,26 @@ bcp_bind(hdbc, szName, 0,
 |SQLBIGBINARY|unsigned char *|  
 |SQLVARBINARY|unsigned char *|  
 |SQLBIGVARBINARY|unsigned char *|  
-|SQLBIT|char;|  
-|SQLBITN|char;|  
-|SQLINT1|char;|  
+|SQLBIT|char|  
+|SQLBITN|char|  
+|SQLINT1|char|  
 |SQLINT2|short int|  
 |SQLINT4|ssNoversion|  
 |SQLINT8|_int64|  
-|SQLINTN|*cbIndicator*<br /> 1: SQLINT1<br /> 2. SQLINT2<br /> 4. SQLINT4<br /> 8. SQLINT8|  
-|SQLFLT4|FLOAT|  
-|SQLFLT8|FLOAT|  
-|SQLFLTN|*cbIndicator*<br /> 4. SQLFLT4<br /> 8. SQLFLT8|  
+|SQLINTN|*cbIndicator*<br /> 1: SQLINT1<br /> 2: SQLINT2<br /> 4: SQLINT4<br /> 8\. SQLINT8|  
+|SQLFLT4|float|  
+|SQLFLT8|float|  
+|SQLFLTN|*cbIndicator*<br /> 4: SQLFLT4<br /> 8\. SQLFLT8|  
 |SQLDECIMALN|SQL_NUMERIC_STRUCT|  
 |SQLNUMERICN|SQL_NUMERIC_STRUCT|  
 |SQLMONEY|DBMONEY|  
 |SQLMONEY4|DBMONEY4|  
-|SQLMONEYN|*cbIndicator*<br /> 4. SQLMONEY4<br /> 8. SQLMONEY|  
+|SQLMONEYN|*cbIndicator*<br /> 4: SQLMONEY4<br /> 8\. SQLMONEY|  
 |SQLTIMEN|SQL_SS_TIME2_STRUCT|  
 |SQLDATEN|SQL_DATE_STRUCT|  
 |SQLDATETIM4|DBDATETIM4|  
 |SQLDATETIME|DBDATETIME|  
-|SQLDATETIMN|*cbIndicator*<br /> 4. SQLDATETIM4<br /> 8. SQLDATETIME|  
+|SQLDATETIMN|*cbIndicator*<br /> 4: SQLDATETIM4<br /> 8\. SQLDATETIME|  
 |SQLDATETIME2N|SQL_TIMESTAMP_STRUCT|  
 |SQLDATETIMEOFFSETN|SQL_SS_TIMESTAMPOFFSET_STRUCT|  
 |SQLIMAGE|unsigned char *|  
@@ -189,7 +188,7 @@ bcp_bind(hdbc, szName, 0,
   
  Если *pData* для столбца имеет значение NULL, так как его значение будет предоставлено вызовами [bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md), любой последующий столбец со *eDataType* присвоено SQLTEXT, SQLNTEXT, SQLXML, SQLUDT, SQLCHARACTER, SQLVARCHAR, SQLVARBINARY, SQLBINARY, SQLNCHAR или SQLIMAGE должен быть также связан с *pData* присваивается значение NULL, и их значения, также должен быть указан при вызове **bcp_moretext**.  
   
- Для новых типов больших значений таких как **varchar(max)**, **varbinary(max)**, или **nvarchar(max)**, можно использовать значения SQLCHARACTER, SQLVARCHAR, SQLVARBINARY, SQLBINARY, и КАЧЕСТВЕ индикаторов типа в *eDataType* параметра.  
+ Для новых типов больших значений таких как **varchar(max)** , **varbinary(max)** , или **nvarchar(max)** , можно использовать значения SQLCHARACTER, SQLVARCHAR, SQLVARBINARY, SQLBINARY, и КАЧЕСТВЕ индикаторов типа в *eDataType* параметра.  
   
  Если *cbTerm* является не равен 0, любое значение (1, 2, 4 или 8) является допустимым для префикса (*cbIndicator*). В этом случае [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client будет искать признак конца, вычислять его длину данных признак конца (*я*) и задайте *cbData* наименьшее значение i и значение префикс.  
   

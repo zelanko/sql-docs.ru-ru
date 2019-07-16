@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: dff6d19b-765c-4df9-afff-9a0e7be9b91b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 44ab042814b95886faa9f632fb58d7a809c9e458
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 31a52f86692d5769fe22f4cf0b5a04ad324c3ac0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666963"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930117"
 ---
 # <a name="functions-on-nodes---number"></a>Функции с узлами — number
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ fn:number($arg as node()?) as xs:double?
  Узел, значение которого будет возвращено в виде числа.  
   
 ## <a name="remarks"></a>Примечания  
- Если *$arg* является не указан, возвращается числовое значение контекстного узла, преобразуемого к типу double. В SQL Server **fn:number()** без аргумента может быть использована только в контексте контекстно зависимого предиката. Точнее, она может использоваться только внутри квадратных скобок ([ ]). Например, следующее выражение возвращает элемент <`ROOT`>.  
+ Если *$arg* является не указан, возвращается числовое значение контекстного узла, преобразуемого к типу double. В SQL Server **fn:number()** без аргумента может быть использована только в контексте контекстно зависимого предиката. Точнее, она может использоваться только внутри квадратных скобок ([ ]). Например, следующее выражение возвращает <`ROOT`> элемента.  
   
 ```  
 declare @x xml  
@@ -81,7 +80,7 @@ WHERE ProductModelID=7
   
 -   Запрос для **LotSizeD** иллюстрирует использование числового значения в арифметической операции.  
   
- Результат:  
+ Это результат:  
   
 ```  
 ProductModelID   Result  

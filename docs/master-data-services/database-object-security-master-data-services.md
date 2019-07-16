@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: dd5ba503-7607-45d9-ad0d-909faaade179
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: df262ea32662a160b0a0ebcadc26eb43676271b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 65aa1f12870d47e61a0fa634f0281f8bde9c9462
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65487725"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67906476"
 ---
 # <a name="database-object-security-master-data-services"></a>Защита объектов базы данных (службы Master Data Services)
 
@@ -46,7 +45,7 @@ ms.locfileid: "65487725"
 ##  <a name="Staging"></a> Промежуточное сохранение данных  
  В следующей таблице каждый защищаемый объект имеет строку name в составе имени. Это указывает на имя промежуточной таблицы, которая определена при создании сущности. Дополнительные сведения см. в статье [Обзор: импорт данных из таблиц &#40;службы Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
   
-|Действие|Защищаемые объекты|Разрешения|  
+|Action|Защищаемые объекты|Разрешения|  
 |------------|----------------|-----------------|  
 |Создание, обновление и удаление конечных элементов и их атрибутов.|stg.name_Leaf|Обязательно: INSERT<br /><br /> Необязательное действие: SELECT и UPDATE|  
 |Загрузить данные из конечной промежуточной таблицы в соответствующие таблицы базы данных MDS.|stg.udp_name_Leaf|EXECUTE|  

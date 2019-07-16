@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: ebdbac93-3d68-438f-8416-ef1f08e04269
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6cb79375475e4827e1e1c4d3b76721f1614e864e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c404cbb1f29adbdcb49ef6bed8bb57a047f64f3b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65538170"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911321"
 ---
 # <a name="sqlgetdiagrec-function"></a>Функция SQLGetDiagRec
 **Соответствие стандартам**  
@@ -61,7 +60,7 @@ SQLRETURN SQLGetDiagRec(
   
 -   SQL_HANDLE_ENV  
   
--   SQL_HANDLE_STMT  
+-   ЗНАЧЕНИЕ SQL_HANDLE_STMT  
   
  Дескриптор SQL_HANDLE_DBC_INFO_TOKEN используется только для диспетчера драйверов и драйверов. Приложения не должны использовать этот тип дескриптора. Дополнительные сведения о SQL_HANDLE_DBC_INFO_TOKEN, см. в разделе [драйвера ODBC с поддержкой пула подключений разработка](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md).  
   
@@ -108,7 +107,7 @@ SQLRETURN SQLGetDiagRec(
   
     -   Если вы используете асинхронное уведомление, асинхронные операции для дескриптора не завершена.  
   
--   SQL_NO_DATA: *RecNumber* поданных единиц превысил количество диагностических записей, которые существовали для дескриптор, указанный в *обработки.* Функция также возвращает значение SQL_NO_DATA для любой положительных *RecNumber* Если нет диагностических записей для *обрабатывать*.  
+-   ЗНАЧЕНИЕ SQL_NO_DATA: *RecNumber* поданных единиц превысил количество диагностических записей, которые существовали для дескриптор, указанный в *обработки.* Функция также возвращает значение SQL_NO_DATA для любой положительных *RecNumber* Если нет диагностических записей для *обрабатывать*.  
   
 ## <a name="comments"></a>Комментарии  
  Приложение обычно вызывает **SQLGetDiagRec** после предыдущего вызова функции ODBC вернул значение SQL_ERROR или SQL_SUCCESS_WITH_INFO. Тем не менее, поскольку любая функция ODBC можно разместить ноль или более записей диагностики при каждом вызове, приложение может вызвать **SQLGetDiagRec** после любого вызова функции ODBC. Приложение может вызвать **SQLGetDiagRec** несколько раз, чтобы вернуть некоторые или все записи в структуре диагностических данных. ODBC не предусмотрено ограничение на количество диагностических записей, которые могут храниться в любой момент времени.  

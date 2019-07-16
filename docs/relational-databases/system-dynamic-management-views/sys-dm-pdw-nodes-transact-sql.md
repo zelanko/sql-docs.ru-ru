@@ -11,14 +11,13 @@ dev_langs:
 ms.assetid: 93966909-d758-4d50-950b-f5066d104fa6
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: a5df628a6b37c8d89843506c5b7f4c5050157158
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 61593522e09ed86ec10f08a6ad8ff7a941a2e10e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027396"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899348"
 ---
 # <a name="sysdmpdwnodes-transact-sql"></a>sys.dm_pdw_nodes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "56027396"
 |Имя столбца|Тип данных|Описание|Диапазон|  
 |-----------------|---------------|-----------------|-----------|  
 |pdw_node_id|**int**|Уникальный числовой идентификатор, связанный с узлом.<br /><br /> Ключ для этого представления.|UNIQUE на устройстве, независимо от типа.|  
-|Тип|**nvarchar(32)**|Тип узла.|«ВЫЧИСЛЕНИЯ», «УПРАВЛЕНИЕ», «УПРАВЛЕНИЕ»|  
+|type|**nvarchar(32)**|Тип узла.|«ВЫЧИСЛЕНИЯ», «УПРАВЛЕНИЕ», «УПРАВЛЕНИЕ»|  
 |name|**nvarchar(32)**|Логическое имя узла.|Любая строка соответствующей длины.|  
 |address|**nvarchar(32)**|IP-адрес этого узла.|В формате [0-255]. [0-255]. [0-255]. [0-255].|  
 |is_passive|**int**|Указывает, выполняется на сервере, назначенных виртуальной машины, работающей на узел или была переключена на запасной сервер.|0 — на исходном сервере работает узел виртуальной Машины.<br /><br /> 1 - узел виртуальной Машины выполняется на запасной сервер.|  

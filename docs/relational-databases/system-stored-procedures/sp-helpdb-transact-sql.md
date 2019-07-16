@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4c3e3302-6cf1-4b2b-8682-004049b578c3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d47f8d8ebd0e37f106e7610937af8f6585820cce
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 7acc14d3950e0e2d1004727b2efbffd2e4963a2b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533436"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67903022"
 ---
 # <a name="sphelpdb-transact-sql"></a>sp_helpdb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,12 +49,12 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Имя базы данных.|  
-|**db_size**|**nvarchar(13)**|Общий размер базы данных.|  
+|**значение db_size**|**nvarchar(13)**|Общий размер базы данных.|  
 |**Владелец**|**sysname**|Владелец базы данных, таких как **sa**.|  
 |**dbid**|**smallint**|Идентификатор базы данных.|  
 |**Создан**|**nvarchar(11)**|Дата создания базы данных.|  
 |**status**|**nvarchar(600)**|Разделенный запятыми список значений параметров базы данных, которые в данный момент установлены для базы данных.<br /><br /> Перечислены только включенные параметры с логическими значениями. Не являющиеся логическими параметры перечислены с соответствующими значениями в виде *option_name*=*значение*.<br /><br /> Дополнительные сведения см. в разделе [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md).|  
-|**compatibility_level**|**tinyint**|Уровень совместимости базы данных: 60, 65, 70, 80 или 90.|  
+|**compatibility_level**|**tinyint**|Уровень совместимости базы данных: 60, 65, 70, 80 и 90.|  
   
  Если *имя* указано, есть дополнительный результирующий набор, который показывает распределение файлов для указанной базы данных.  
   
