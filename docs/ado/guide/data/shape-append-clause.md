@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f90fcf55-6b24-401d-94e1-d65bd24bd342
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5cc89f54dd030604e5d5d842aabb68713e46fd4c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e09113b42f655a3b94ab3877ff81f2553a363931
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718673"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924185"
 ---
 # <a name="shape-append-clause"></a>Предложение APPEND для формирования данных
 Предложение APPEND для формирования команды добавляет столбец или столбцы для **записей**. Часто, эти столбцы являются столбцами Глава, указывающие на дочерний элемент **записей**.  
@@ -43,7 +42,7 @@ SHAPE [parent-command [[AS] parent-alias]] APPEND column-list
   
 -   Таблица ключевое слово, за которым следует имя таблицы в поставщике данных.  
   
- *parent-alias*  
+ *родительский alias*  
  Дополнительный псевдоним, который ссылается на родительский **записей**.  
   
  *Список столбцов*  
@@ -87,7 +86,7 @@ SHAPE [parent-command [[AS] parent-alias]]
  *PARAM-number*  
  См. в разделе [параметризованных команд](../../../ado/guide/data/operation-of-parameterized-commands.md).  
   
- *chapter-alias*  
+ *Глава alias*  
  Псевдоним, который ссылается на столбец добавляется к родительскому элементу.  
   
 > [!NOTE]

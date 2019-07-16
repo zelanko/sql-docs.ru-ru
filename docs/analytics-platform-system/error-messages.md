@@ -2,19 +2,18 @@
 title: Сообщения об ошибках - Parallel Data Warehouse | Документация Майкрософт
 description: Parallel Data Warehouse (PDW) ошибок регистрации ошибок и проблем, обнаруженных компонентов PDW, а также может содержать ошибки SQL Server, доступных через PDW. Эти сообщения об ошибках используйте единым синтаксисом для представления информации. Основные сведения об этом синтаксисе позволит вам выявлять и устранять неполадки.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 3ffc7a097845f4652f56d82c572ecfab868d33f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 78c5cd8dab37ac9cb32de794861c68e6c8085747
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63042600"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960962"
 ---
 # <a name="error-messages-in-parallel-data-warehouse"></a>Сообщения об ошибках в Parallel Data Warehouse
 

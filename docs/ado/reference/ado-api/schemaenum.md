@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 21c97651-297f-469f-b5b5-c48af72b62a8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4aa145a3c42c5ed807a63dc551e67afe6af95cde
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c064120e3c658cafd88a96953ff00e18fbaa9b88
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711303"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931110"
 ---
 # <a name="schemaenum"></a>SchemaEnum
 Указывает тип схемы **записей** , [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) методом.  
@@ -73,8 +72,8 @@ ms.locfileid: "66711303"
 |**adSchemaTablePrivileges**|14|Возвращает привилегии для таблиц, определенные в каталоге, которые доступны или предоставленные указанному пользователю.<br /><br /> (Набор строк TABLE_PRIVILEGES)|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME GRANTOR GRANTEE|  
 |**adSchemaTables**|20|Возвращает таблицы (включая представления) определены в каталоге, которые доступны для данного пользователя.<br /><br /> (Набор строк таблицы)|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME TABLE_TYPE|  
 |**adSchemaTranslations**|21|Возвращает преобразования знаков, определенные в каталоге и доступные указанному пользователю.<br /><br /> (Переводы строк)|TRANSLATION_CATALOG TRANSLATION_SCHEMA TRANSLATION_NAME|  
-|**adSchemaTrustees**|39|Зарезервировано для последующего использования.||  
-|**adSchemaUsagePrivileges**|15|Возвращает привилегии USAGE для объектов, определенные в каталоге, которые доступны или предоставленные указанному пользователю.<br /><br /> (Набор строк USAGE_PRIVILEGES)|OBJECT_CATALOG OBJECT_SCHEMA OBJECT_NAME OBJECT_TYPE GRANTOR GRANTEE|  
+|**adSchemaTrustees**|39|Зарезервировано для будущего использования.||  
+|**adSchemaUsagePrivileges**|15|Возвращает привилегии USAGE для объектов, определенные в каталоге, которые доступны или предоставленные указанному пользователю.<br /><br /> (Набор строк USAGE_PRIVILEGES)|OBJECT_CATALOG OBJECT_SCHEMA OBJECT_NAME OBJECT_TYPE GRANTOR УЧАСТНИКА|  
 |**adSchemaViewColumnUsage**|24|Возвращает столбцы, по которым просматриваемые таблицы, определенные в каталоге и принадлежащие данному пользователю, зависят.<br /><br /> (Набор строк VIEW_COLUMN_USAGE)|VIEW_CATALOG VIEW_SCHEMA VIEW_NAME|  
 |**adSchemaViews**|23|Возвращает представления, определенные в каталоге и доступные указанному пользователю.<br /><br /> (Набор строк ПРЕДСТАВЛЕНИЯ)|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME|  
 |**adSchemaViewTableUsage**|25|Возвращает просматриваемые таблицы, определенные в каталоге и принадлежащие данному пользователю, таблиц, в котором зависят.<br /><br /> (Набор строк VIEW_TABLE_USAGE)|VIEW_CATALOG VIEW_SCHEMA VIEW_NAME|  

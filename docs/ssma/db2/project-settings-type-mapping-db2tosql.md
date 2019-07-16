@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: cf426c69-6a8e-4d19-951d-6661d5ae2562
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 91498db5535c99c7c8afaba85efc35639510a079
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7c0866a753bb61cb688ffe491e1de77431ddcb22
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63270005"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060163"
 ---
 # <a name="project-settings-type-mapping-db2tosql"></a>Параметры проекта (сопоставление типов) (DB2ToSQL)
 На странице сопоставления типов **параметры проекта** диалоговое окно содержит настройки, установленные как SSMA преобразует типы данных DB2 в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типов данных.  
@@ -64,7 +63,7 @@ ms.locfileid: "63270005"
 |binary_float|число с плавающей запятой [53]|  
 |binary_integer|ssNoversion|  
 |большой двоичный объект|varbinary(max)|  
-|Логическое|bit|  
+|boolean|bit|  
 |char|varchar(max)|  
 |char varying|varchar(max)|  
 |character|varchar(max)|  
@@ -90,7 +89,7 @@ ms.locfileid: "63270005"
 |NCLOB|nvarchar(max)|  
 |number|число с плавающей запятой [53]|  
 |NUMERIC|число с плавающей запятой [53]|  
-|nvarchar2|nvarchar(max)|  
+|NVARCHAR2|nvarchar(max)|  
 |pls_integer|ssNoversion|  
 |raw|varbinary(max)|  
 |real|число с плавающей запятой [53]|  
@@ -147,13 +146,13 @@ ms.locfileid: "63270005"
 |Long [\*.. 8000]|varchar [\*]|  
 |Long [8001..\*]|varchar(max)|  
 |National char|nchar|  
-|National char varying [\*.. \*]|nvarchar[\*]|  
-|National char [\*.. \*]|nchar[\*]|  
+|National char varying [\*.. \*]|nvarchar [\*]|  
+|National char [\*.. \*]|nchar [\*]|  
 |символов национального алфавита|nchar|  
-|различных национальных символов [\*.. \*]|nvarchar[\*]|  
-|символов национального алфавита [\*.. \*]|nchar[\*]|  
+|различных национальных символов [\*.. \*]|nvarchar [\*]|  
+|символов национального алфавита [\*.. \*]|nchar [\*]|  
 |nchar|nchar|  
-|nchar[\*]|nchar[\*]|  
+|nchar [\*]|nchar [\*]|  
 |NCLOB|nvarchar(max)|  
 |number|число с плавающей запятой [53]|  
 |Номер [\*.. \*]|числовые [\*]|  
@@ -161,21 +160,21 @@ ms.locfileid: "63270005"
 |NUMERIC|NUMERIC|  
 |числовые [\*.. \*]|числовые [\*]|  
 |числовые [\*.. \*][\*.. \*]|числовые [\*] [\*]|  
-|nvarchar2[\*..\*]|nvarchar[\*]|  
+|NVARCHAR2 [\*.. \*]|nvarchar [\*]|  
 |необработанные [\*.. \*]|varbinary [\*]|  
 |real|число с плавающей запятой [53]|  
 |RowId|UNIQUEIDENTIFIER|  
 |smallint|smallint|  
 |TIMESTAMP|datetime2|  
 |Метка времени с местным часовым поясом|datetimeoffset|  
-|Метка времени с местным часовым поясом [\*.. \*]|datetimeoffset[\*]|  
+|Метка времени с местным часовым поясом [\*.. \*]|DateTimeOffset [\*]|  
 |Метка времени с часовым поясом|datetimeoffset|  
-|Метка времени с часовым поясом [\*.. \*]|datetimeoffset[\*]|  
-|Метка времени [\*.. \*]|datetime2[\*]|  
+|Метка времени с часовым поясом [\*.. \*]|DateTimeOffset [\*]|  
+|Метка времени [\*.. \*]|datetime2 [\*]|  
 |urowid|UNIQUEIDENTIFIER|  
-|urowid[\*..\*]|UNIQUEIDENTIFIER|  
+|urowid [\*.. \*]|UNIQUEIDENTIFIER|  
 |varchar [\*.. \*]|varchar [\*]|  
-|varchar2[\*..\*]|varchar [\*]|  
+|VARCHAR2 [\*.. \*]|varchar [\*]|  
 |xmltype|Xml|  
   
 ### <a name="default-local-variable-type-mapping"></a>Сопоставление по умолчанию тип локальной переменной  
@@ -219,19 +218,19 @@ ms.locfileid: "63270005"
 |Long raw [\*.. 8000]|varbinary [\*]|  
 |Long raw [8001..\*]|varbinary(max)|  
 |National char|nchar|  
-|National char varying [\*.. 4000]|nvarchar[\*]|  
+|National char varying [\*.. 4000]|nvarchar [\*]|  
 |National char varying [4001..\*]|nvarchar(max)|  
-|National char [\*.. 4000]|nchar[\*]|  
+|National char [\*.. 4000]|nchar [\*]|  
 |National char [4001..\*]|nvarchar(max)|  
 |символов национального алфавита|nchar|  
-|символов национального алфавита [\*.. 4000]|nvarchar[\*]|  
+|символов национального алфавита [\*.. 4000]|nvarchar [\*]|  
 |символов национального алфавита [4001..\*]|nvarchar(max)|  
-|различных национальных символов [\*.. 4000]|nvarchar[\*]|  
+|различных национальных символов [\*.. 4000]|nvarchar [\*]|  
 |различных национальных символов [4001..\*]|nvarchar(max)|  
 |Nchar|nchar|  
-|nchar [\*.. 4000]|nchar[\*]|  
+|nchar [\*.. 4000]|nchar [\*]|  
 |nchar [4001..\*]|nvarchar(max)|  
-|nchar varying [\*.. 4000]|nvarchar[\*]|  
+|nchar varying [\*.. 4000]|nvarchar [\*]|  
 |nchar varying [4001..\*]|nvarchar(max)|  
 |NCLOB|nvarchar(max)|  
 |Number|число с плавающей запятой [53]|  
@@ -240,8 +239,8 @@ ms.locfileid: "63270005"
 |Numeric|numeric[38][0]|  
 |числовые [\*.. \*]|числовые [\*]|  
 |числовые [\*.. \*][\*.. \*]|числовые [\*] [\*]|  
-|nvarchar2[\*..4000]|nvarchar[\*]|  
-|nvarchar2[4001..\*]|nvarchar(max)|  
+|NVARCHAR2 [\*.. 4000]|nvarchar [\*]|  
+|NVARCHAR2 [4001..\*]|nvarchar(max)|  
 |pls_integer|ssNoversion|  
 |необработанные [\*.. 8000]|varbinary [\*]|  
 |необработанные [8001..\*]|varbinary(max)|  
@@ -254,15 +253,15 @@ ms.locfileid: "63270005"
 |TIMESTAMP|datetime2|  
 |Метка времени с местным часовым поясом|datetimeoffset|  
 |Метка времени с часовым поясом|datetimeoffset|  
-|Метка времени с местным часовым поясом [\*.. \*]|datetimeoffset[\*]|  
-|Метка времени с часовым поясом [\*.. \*]|datetimeoffset[\*]|  
-|Метка времени [\*.. \*]|datetime2[\*]|  
+|Метка времени с местным часовым поясом [\*.. \*]|DateTimeOffset [\*]|  
+|Метка времени с часовым поясом [\*.. \*]|DateTimeOffset [\*]|  
+|Метка времени [\*.. \*]|datetime2 [\*]|  
 |urowid|UNIQUEIDENTIFIER|  
-|urowid[\*..\*]|UNIQUEIDENTIFIER|  
+|urowid [\*.. \*]|UNIQUEIDENTIFIER|  
 |varchar [\*.. 8000]|varchar [\*]|  
 |varchar [8001..\*]|varchar(max)|  
 |VARCHAR2 [\*.. 8000]|varchar [\*]|  
-|varchar2[8001..\*]|varcha(max)|  
+|VARCHAR2 [8001..\*]|varcha(max)|  
 |xmltype|Xml|  
   
 ## <a name="see-also"></a>См. также  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 399e1a64-8766-4c44-81ff-445399b7a1de
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 10e3726d26e03da2f9f731babc105244dbf1ff05
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 14499071bd180a7ea709fda3eb26aeae46f229c7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63267732"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077025"
 ---
 # <a name="data-returned-by-catalog-functions"></a>Данные, возвращаемые функциями каталога
 Каждая функция каталога возвращает данные в виде результирующего набора. Этот результирующий набор ничем не отличается от результирующего набора. Обычно формируется по заранее определенный, параметризованные **ВЫБЕРИТЕ** инструкцию, которая является жестко задано в драйвер или хранимой процедуры в источнике данных. Сведения о способах получения данных из результирующего набора, см. в разделе [был результирующий набор создан?](../../../odbc/reference/develop-app/was-a-result-set-created.md).  

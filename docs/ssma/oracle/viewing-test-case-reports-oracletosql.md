@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8da14323-9dd6-4019-bf79-3e8b972a9bc0
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 2d40fd986c68968680bcd39821d762101723b87b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 75ce91d7948b53522f6ac861a078f8f902b23ab7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63283637"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086791"
 ---
 # <a name="viewing-test-case-reports-oracletosql"></a>Просмотр отчетов о тестовых случаях (OracleToSQL)
 В отчете тестовый случай отображаются результаты проверки и тестирования, общие сведения. В случае сбоя теста сведения о любой несоответствующие данные в объектах проверенных также отображается.  

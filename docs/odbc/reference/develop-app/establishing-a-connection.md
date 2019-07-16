@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 8e3c717e-35e3-47ef-b5d3-3a96eeb7b869
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 70f459f60616e7edd77078a7e9653ab9dff097e9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6fd8d7a68e993aa6b35897ca14a7a87c08fc8763
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63248345"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901364"
 ---
 # <a name="establishing-a-connection"></a>Установление подключения
 После выделения среды и дескрипторов соединения и установки любых атрибутов соединения, приложение сможет подключиться к источнику данных или драйверу. Существует три разных функций, которые приложение может использовать для этого: **SQLConnect** (Core уровень соответствия интерфейса), **SQLDriverConnect** (ядро), и **SQLBrowseConnect** (уровень 1). Каждая из трех предназначен для использования в другом сценарии. Перед подключением, приложение может определить, какие из этих функций поддерживается с **ConnectFunctions** ключевое слово, возвращенный **SQLDrivers**.  

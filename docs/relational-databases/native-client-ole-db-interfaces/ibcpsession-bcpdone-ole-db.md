@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 19cd6e55-432a-450e-a15c-54d50eb53dee
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eda345764ef6f8b917f1496e05c8cb73471c9624
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cec04c6cd1fac02dd2ef128fe556fe4e011e2b0d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47638052"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091058"
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +37,7 @@ HRESULT BCPDone(void);
 ```  
   
 ## <a name="remarks"></a>Примечания  
- Никакая другая операция не может быть вызвана применительно к интерфейсу [IBCPSession](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md) после вызова метода **BCPDone**. Единственной возможностью является вызов метода [IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) для инициализации операции массового копирования. Это аналогично вызову метода [IRowsetFastLoad::Commit](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-commit-ole-db.md).  
+ Никакая другая операция не может быть вызвана применительно к интерфейсу [IBCPSession](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md) после вызова метода **BCPDone**. Единственной возможностью является вызов метода [IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) для инициализации операции массового копирования. Это аналогично вызову метода [IRowsetFastLoad::Commit](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-commit-ole-db.md) .  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  S_OK  
@@ -50,7 +49,7 @@ HRESULT BCPDone(void);
 ## <a name="example"></a>Пример  
  В этом образце показано, как использовать интерфейс **IBCPSession** .  
   
- Перед запуском этого образца необходимо выполнить следующий код [!INCLUDE[tsql](../../includes/tsql-md.md)]:  
+ Перед запуском этого образца необходимо выполнить следующий код [!INCLUDE[tsql](../../includes/tsql-md.md)] :  
   
 ```  
 create table fltest(col1 int, col2 int, col3 image)  

@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 4217c6d8-8cd2-43dc-b36f-3cfd8a58fabc
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dfcb5a9f287936303fce50d5a2f1e3babccc1ed6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 07c5eeeecae56415c4703417f89bfaca94ed8ed8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47665374"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069505"
 ---
 # <a name="tables-and-indexes"></a>Таблицы и индексы
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "47665374"
   
 |Идентификатор свойства|Описание|  
 |-----------------|-----------------|  
-|SSPROP_COL_COLLATIONNAME|Тип: VT_BSTR<br /><br /> Запись и запись:<br /><br /> По умолчанию: Null<br /><br /> Описание: это свойство используется только в интерфейсе **ITableDefinition**. Строка, указанная в этом свойстве, используется при создании инструкции [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md).<br /><br /> .|  
+|SSPROP_COL_COLLATIONNAME|Тип: VT_BSTR<br /><br /> И ЗАПИСЬ: запись<br /><br /> По умолчанию: NULL<br /><br /> Описание. Это свойство используется только в **ITableDefinition**. Строка, указанная в этом свойстве, используется при создании инструкции [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md).<br /><br /> .|  
   
 ## <a name="in-this-section"></a>в этом разделе  
   

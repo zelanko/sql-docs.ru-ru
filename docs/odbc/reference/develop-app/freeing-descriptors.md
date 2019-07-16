@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 317213f4-0ebb-4bf8-a37a-4d6b1313823f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d643ccad0110796127524a10e82aef7c3339b163
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fe489222c026c1499135b716f0485bb04f51bad9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63061492"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069773"
 ---
 # <a name="freeing-descriptors"></a>Освобождение дескрипторов
 Явно выделенные дескрипторы могут быть освобождены либо явно, путем вызова **SQLFreeHandle** с *HandleType* SQL_HANDLE_DESC или неявно, когда дескриптор соединения освобождается. Когда освобождается явно выделенные дескриптор, все дескрипторы инструкций, к которым дескриптор освобожденные применяется автоматически вернуться к дескрипторам неявно выделенную для них.  

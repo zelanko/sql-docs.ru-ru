@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8a01041f-3572-46f9-8213-b817f3cf929c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d5cf669883ce81528adbe1fbd8faeff2ed716218
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b2082a97b24284afcc879048bb08e86a7b2bb3ba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62735142"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070114"
 ---
 # <a name="sqltransact-mapping"></a>Сопоставление SQLTransact
 **SQLTransact** заменяется **SQLEndTran**. Это основное отличие между двумя функциями **SQLEndTran** содержит аргумент *HandleType*, который указывает объем работы, которые необходимо выполнить. *HandleType* аргумента можно указать среду или дескриптора соединения. Следующий вызов **SQLTransact**:  

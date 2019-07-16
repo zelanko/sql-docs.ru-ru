@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 90cb636a-9416-48a4-b4eb-bb11bbd40950
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 14255d0fc7a073f7a69f0373c009b4b948888151
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 587be8f0686cd7b2498080984d40e79c80bde898
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66695087"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932698"
 ---
 # <a name="field-visual-c-syntax-index-with-import"></a>Поля (индекс синтаксиса Visual C++ с #import)
 ## <a name="methods"></a>Методы  

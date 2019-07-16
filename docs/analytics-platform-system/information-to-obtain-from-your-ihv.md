@@ -2,19 +2,18 @@
 title: Получить данные из Независимых - Analytics Platform System | Документация Майкрософт
 description: Сведения, получаемые от независимого поставщика Оборудования о Analytics Platform System.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 57b61ed7741bc6d36b7531a62416893e7cc10fb7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 016a20567968e45456be79c8c67e77d7c3fbb2bd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63150232"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960839"
 ---
 # <a name="information-to-obtain-from-your-ihv"></a>Сведения, получаемые от независимого поставщика Оборудования
 Когда поставщиком независимых оборудования (IHV) позволяет вашей новым устройством SQL Server PDW, они также позволяют предоставлять сведения о конфигурации оборудования устройства, выполняли на устройстве. Вам потребуется эта информация для администрирования устройства.  

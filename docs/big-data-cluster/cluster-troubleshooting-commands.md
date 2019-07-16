@@ -5,17 +5,16 @@ description: Эта статья содержит полезные команд�
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 404d81c8d16a6ee6c173de4ebc5a85edc070a6ca
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 102ac9528c5dca1040fcb6ce3a5453f5c9342a3e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67729217"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958839"
 ---
 # <a name="monitoring-and-troubleshoot-sql-server-big-data-clusters"></a>Мониторинг и устранение неполадок с кластерами больших данных SQL Server
 

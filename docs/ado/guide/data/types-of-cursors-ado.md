@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7cc01544-e814-403b-bbfe-a2750bf921bd
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 717229c9645384477b89e67b569c15179e9f3bc5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 00c89272d121898b6ac5af75022344acf1dceb28
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704907"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923859"
 ---
 # <a name="types-of-cursors-ado"></a>Типы курсоров (ADO)
 Как правило приложение должно использовать самый простой курсор, который предоставляет доступ, необходимые данные. Дополнительные курсора характеристик некоторые особенности (однопроходный, только для чтения, статический прокрутки, без буферизации) имеет цену - в клиентской памяти, сетевой нагрузки или производительности. Во многих случаях параметры курсора по умолчанию создаются более сложные курсора, чем действительно требуется приложению.  

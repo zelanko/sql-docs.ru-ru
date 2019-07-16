@@ -4,18 +4,17 @@ description: В этой статье объясняется, как подкл�
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-manager: jroth
 ms.date: 08/09/2018
 ms.topic: article
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b4d56e3d470ca0ba3dbffe6b8cb5ebc64ab48445
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: f05bc51f587723414d3b0a4090fe2b27ad5fb837
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67833583"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67952607"
 ---
 # <a name="connect-to-a-sql-server-always-on-availability-group-on-kubernetes"></a>Подключение к SQL Server Always On Availability Group в Kubernetes
 

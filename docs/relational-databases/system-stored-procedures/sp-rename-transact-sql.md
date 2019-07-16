@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: bc3548f0-143f-404e-a2e9-0a15960fc8ed
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 330b330375ee49d13242dd400ed76fae2bfc6e71
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 070c2a362a69fb6863cc263da3975efc66c7c9f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661212"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006942"
 ---
 # <a name="sprename-transact-sql"></a>sp_rename (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
  [ @objname =] '*object_name*"  
  Текущее полное или неполное имя пользовательского объекта или типа данных. Если переименовать объект представляет собой столбец в таблице, *object_name* должно быть в форме *таблица.столбец* или *столбце schema.table.column*. Если объект, который требуется переименовать, индекса, *object_name* должно быть в форме *table.index* или *schema.table.index*. Если объект, который требуется переименовать, ограничения, *object_name* должно быть в форме *schema.constraint*.  
   
- Кавычки необходимы, только если указан объект с полным именем. Если предоставлено полное имя таблицы, включая имя базы данных, в качестве последнего должно использоваться имя текущей базы данных. *object_name* — **nvarchar(776)**, не имеет значения по умолчанию.  
+ Кавычки необходимы, только если указан объект с полным именем. Если предоставлено полное имя таблицы, включая имя базы данных, в качестве последнего должно использоваться имя текущей базы данных. *object_name* — **nvarchar(776)** , не имеет значения по умолчанию.  
   
  [ @newname =] '*новое_имя*"  
  Новое имя для указанного объекта. *новое_имя* должно быть однокомпонентным и должно соответствовать правилам для идентификаторов. *newname* — **sysname**, не имеет значения по умолчанию.  
@@ -60,7 +59,7 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
 >  Имена триггеров не могут начинаться с символов # или ##.  
   
  [ @objtype =] '*object_type*"  
- Тип переименовываемого объекта. *object_type* — **varchar(13)**, значение по умолчанию NULL, и может принимать одно из следующих значений.  
+ Тип переименовываемого объекта. *object_type* — **varchar(13)** , значение по умолчанию NULL, и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -91,7 +90,7 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-renaming-a-table"></a>A. Переименование таблицы  
- В следующем примере столбец `SalesTerritory` в таблице `SalesTerr` переименовывается в `Sales` .  
+ В следующем примере в схеме `Sales` таблица `SalesTerritory` переименовывается в `SalesTerr`.  
   
 ```  
 USE AdventureWorks2012;  

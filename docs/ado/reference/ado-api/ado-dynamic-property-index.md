@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 80d389dd-46ef-459f-b0d4-6f712fc4f32d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8dd1263d19972124166e1e11d91c8370fc3a9ff0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9eb88905f56abf9c1c702f5fd73cbe61a1bcde3d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696733"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921085"
 ---
 # <a name="ado-dynamic-property-index"></a>Индекс динамических свойств ADO
 Поставщики данных, поставщиков служб и компонентов службы можно добавить все динамические свойства **свойства** коллекции неоткрытый [подключения](../../../ado/reference/ado-api/connection-object-ado.md) и [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекты. Данного поставщика также может добавить дополнительные свойства, при открытии этих объектов. Некоторые из этих свойств, перечислены в [динамические свойства ADO](../../../ado/reference/ado-api/ado-dynamic-properties.md) раздел. Сведения отображаются в категории определенными поставщиками в [приложении a. Поставщики](../../../ado/guide/appendixes/appendix-a-providers.md) раздел.  
@@ -64,7 +63,7 @@ ms.locfileid: "66696733"
 |Многотабличное обновление|DBPROP_MULTITABLEUPDATE|  
 |Порядок сортировки NULL|DBPROP_NULLCOLLATION|  
 |Поведение при конкатенации с NULL|DBPROP_CONCATNULLBEHAVIOR|  
-|Службы OLE DB|DBPROP_INIT_OLEDBSERVICES|  
+|Службы OLE DB|DBPROP_INIT_OLEDBSERVICES, УСТАНОВИТЬ|  
 |Версия OLE DB|DBPROP_PROVIDEROLEDBVER|  
 |Поддержка объектов OLE|DBPROP_OLEOBJECTS|  
 |Поддержка открытия наборов данных|DBPROP_OPENROWSETSUPPORT|  

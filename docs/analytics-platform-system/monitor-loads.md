@@ -2,19 +2,18 @@
 title: Контролировать загрузку для Parallel Data Warehouse | Документация Майкрософт
 description: Отслеживание активные и Недавние загрузок с помощью консоли администрирования (APS) системы платформы аналитики или параллельных данных (PDW) системные представления.»
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: cb840c64c2235a2f3902c45633aa5471655482dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1eadf20e036c6c76cd3bece7c404fde2af4a7d70
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62639962"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960608"
 ---
 # <a name="monitor-loads-into-parallel-data-warehouse"></a>Монитор загружает в Parallel Data Warehouse
 Монитор, активные и Недавние [dwloader](dwloader.md) загружает с помощью консоли администрирования Analytics Platform System (APS) или Parallel Data Warehouse (PDW) [системных представлений](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-reference-tsql-system-views/). 

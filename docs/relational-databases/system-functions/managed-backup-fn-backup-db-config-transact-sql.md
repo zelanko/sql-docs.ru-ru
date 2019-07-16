@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 7c755d8a-64dd-44b2-be5e-735d30758900
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ae0d84ba18a350adb47ca9a9aeeaf966a90af2a8
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: a23f8eb64ae99b999cdf6b16f1c888383a88c147
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409581"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067781"
 ---
 # <a name="managedbackupfnbackupdbconfig-transact-sql"></a>managed_backup.fn_backup_db_config (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +62,7 @@ managed_backup.fn_backup_db_config ('database_name' | '' | NULL)
 |Encryptor_type|NCHAR(15)|Возвращает настройки шифратора: сертификат или асимметричный ключ.|  
 |Encryptor_name|NCHAR(max_length_of_cert/asymm_key_name)|Имя сертификата или асимметричного ключа.|  
   
-## <a name="security"></a>безопасность  
+## <a name="security"></a>Безопасность  
   
 ### <a name="permissions"></a>Разрешения  
  Требуется членство в **db_backupoperator** роли базы данных с **ALTER ANY CREDENTIAL** разрешения. Пользователь не должен быть запрещен **VIEW ANY DEFINITION** разрешения.  

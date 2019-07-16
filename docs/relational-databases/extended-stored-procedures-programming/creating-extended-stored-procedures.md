@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9f7c0cdb-6d88-44c0-b049-29953ae75717
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ec645ca897bb3760cb5ac866fbc28de5e2f6fcab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3c22077de3bf41bc09864ac2c7f24dbdd4ecc3e7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711812"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032038"
 ---
 # <a name="creating-extended-stored-procedures"></a>Создание расширенных хранимых процедур
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +63,7 @@ __declspec(dllexport) ULONG __GetXpVersion()
 > [!NOTE]  
 >  Объявление __declspec(dllexport) является расширением компилятора Майкрософт. Если компилятор не поддерживает эту директиву, то функцию необходимо экспортировать в DEF-файле в раздел EXPORTS.  
   
- Когда [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запускается с трассировкой флаг - T260 или пользователь с правами системного администратора запускает DBCC TRACEON (260), если расширенная хранимая процедура DLL не поддерживает функцию __GetXpVersion(), предупреждающее сообщение (ошибка 8131: расширенной хранимой процедуры Библиотека DLL «%» не экспортирует \__GetXpVersion().) печатается в журнале ошибок. (Обратите внимание, что \__GetXpVersion() начинается с двух символов подчеркивания.)  
+ Когда [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запускается с трассировкой флаг - T260 или пользователь с правами системного администратора запускает DBCC TRACEON (260), если расширенная хранимая процедура DLL не поддерживает функцию __GetXpVersion(), предупреждающее сообщение (ошибка 8131: Расширенная хранимая процедура «%» библиотека DLL не экспортирует \__GetXpVersion().) печатается в журнале ошибок. (Обратите внимание, что \__GetXpVersion() начинается с двух символов подчеркивания.)  
   
  Если DLL-библиотека расширенной хранимой процедуры экспортирует __GetXpVersion(), но версия, возвращенная этой функцией, меньше, чем требует сервер, то в журнал ошибок заносится предупредительное сообщение, содержащее версию, возвращенную функцией, и версию, ожидаемую сервером. Если вы получаете это сообщение, возвращается неверное значение из \__GetXpVersion(), или при компиляции с более старой версией srv.h.  
   

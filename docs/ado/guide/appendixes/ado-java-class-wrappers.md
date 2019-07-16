@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1fc09dc1-9e32-412e-9f43-b8eb8bb483ca
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 34a4ab7327edfb6f6f4204fb457ade97be4f5975
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 70486a27cfbe5c977d371906da89563059685093
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702924"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927004"
 ---
 # <a name="ado-java-class-wrappers"></a>Классы-оболочки Java для объектов ADO
 Этот код объявляет экземпляр ADO [записей](../../../ado/reference/ado-api/recordset-object-ado.md) оболочки класса и инициализирует его, все в одной строке кода. Кроме того, он объявляет переменные для каждого аргумента в [откройте](../../../ado/reference/ado-api/open-method-ado-recordset.md) метод, особенно для [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) и [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) (так как Java не поддерживает перечисленные типы). Он открывает и закрывает **записей** объекта. Задав Rs1 NULL просто планирует эту переменную, чтобы освободить после ее выпуска систематический и с периодической неиспользуемых объектов выполняет Java.  

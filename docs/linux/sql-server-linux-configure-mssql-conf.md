@@ -3,18 +3,17 @@ title: Настройка параметров SQL Server в Linux
 description: В этой статье описывается, как использовать средство mssql-conf для настройки параметров SQL Server на Linux.
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: 57e43f3afd9c46e3b49e4f1f07ab3038359c8c50
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: ac1f88377b15bf8bd4a92a5dd705716db55deaaf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834010"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077602"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Настройка SQL Server в Linux с помощью средства mssql-conf
 
@@ -27,7 +26,7 @@ ms.locfileid: "67834010"
 
 |||
 |---|---|
-| [Агент](#agent) | Включить агент SQL Server |
+| [Агент](#agent) | Включите агент SQL Server. |
 | [Параметры сортировки](#collation) | Задайте новые параметры сортировки для SQL Server в Linux. |
 | [Отзывы клиентов](#customerfeedback) | Выберите ли SQL Server отправляет отзыв в корпорацию Майкрософт. |
 | [Профиль компонента Database Mail](#dbmail) | Настройте почтовый профиль по умолчанию базы данных для SQL Server в Linux. |
@@ -508,7 +507,7 @@ sudo systemctl restart mssql-server
 
 Существует несколько других параметров для mssql-conf, который можно использовать для наблюдения и диагностики MSDTC. В следующей таблице кратко описаны эти параметры. Дополнительные сведения по их использованию см. сведения в статье службы поддержки Windows, [как включить диагностическую трассировку для MS DTC](https://support.microsoft.com/help/926099/how-to-enable-diagnostic-tracing-for-ms-dtc-on-a-windows-based-compute).
 
-| mssql-conf setting | Описание |
+| параметр MSSQL-conf | Описание |
 |---|---|
 | distributedtransaction.allowonlysecurerpccalls | Настройка безопасного вызовы RPC только для распределенных транзакций |
 | distributedtransaction.fallbacktounsecurerpcifnecessary | Настройка безопасности только вызовы RPC для распределенных |транзакции
@@ -617,7 +616,7 @@ outboundnetworkaccess = 1
 |Параметр |Описание |
 |--- |--- |
 |**Network.ForceEncryption** |Если значение равно 1, затем [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] заставляет все подключения должны быть зашифрованы. По умолчанию этот параметр является 0. |
-|**network.tlscert** |Абсолютный путь к сертификату файла, который [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] использует для TLS. Пример   `/etc/ssl/certs/mssql.pem`  Файл сертификата должны быть доступны с помощью учетной записи mssql. Корпорация Майкрософт рекомендует ограничения доступа к файлу с помощью `chown mssql:mssql <file>; chmod 400 <file>`. |
+|**Network.tlscert** |Абсолютный путь к сертификату файла, который [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] использует для TLS. Пример   `/etc/ssl/certs/mssql.pem`  Файл сертификата должны быть доступны с помощью учетной записи mssql. Корпорация Майкрософт рекомендует ограничения доступа к файлу с помощью `chown mssql:mssql <file>; chmod 400 <file>`. |
 |**Network.tlskey** |Абсолютный путь к закрытому ключу файла, который [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] использует для TLS. Пример  `/etc/ssl/private/mssql.key`  Файл сертификата должны быть доступны с помощью учетной записи mssql. Корпорация Майкрософт рекомендует ограничения доступа к файлу с помощью `chown mssql:mssql <file>; chmod 400 <file>`. |
 |**Network.tlsprotocols** |Разделенный запятыми список, из какой TLS протоколы разрешено использовать с SQL Server. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] всегда пытается согласовать надежный протокол разрешенных. Если клиент не поддерживает любой допустимый протокол [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] отклоняет попытки подключения.  Для обеспечения совместимости всех поддерживаемых протоколов разрешены по умолчанию (1.2, 1.1, 1.0).  Если ваши клиенты поддерживают TLS 1.2, корпорация Майкрософт рекомендует, позволяя только TLS 1.2. |
 |**Network.tlsciphers** |Указывает, какие шифры допускаемых [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] для TLS. Эта строка должны быть отформатированы в [формате списка шифров OpenSSL](https://www.openssl.org/docs/man1.0.2/apps/ciphers.html). Как правило нет необходимости для изменения этого параметра. <br /> По умолчанию допускаются следующие шифров: <br /> `ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA` |
@@ -680,7 +679,7 @@ sudo cat /var/opt/mssql/mssql.conf
 Обратите внимание на то, что все параметры, не отображаются в этот файл при использовании значения по умолчанию. В следующем разделе приводится пример **mssql.conf** файла.
 
 
-## <a id="mssql-conf-format"></a> mssql.conf format
+## <a id="mssql-conf-format"></a> Формат MSSQL.conf
 
 Следующие **/var/opt/mssql/mssql.conf** файл содержит пример для каждого параметра. Этот формат можно использовать вручную внести изменения в **mssql.conf** файл при необходимости. Если вы вручную измените файл, необходимо перезапустить SQL Server перед применением изменений. Чтобы использовать **mssql.conf** файла с помощью Docker, необходимо иметь Docker [сохранить данные](sql-server-linux-configure-docker.md). Сначала добавьте полное **mssql.conf** файла в каталоге узла, а затем запустите контейнер. Пример этого [отзывы клиентов](sql-server-linux-customer-feedback.md).
 

@@ -5,17 +5,16 @@ description: Разверните скрипт Python или R в качеств
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
-manager: jroth
 ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ba56ebb90d09866b7860c5f29dd2a26cf525fd9b
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 1e5ab6364437432c803a364abd50ef5b1af4f8f6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67729311"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958914"
 ---
 # <a name="how-to-use-vs-code-to-deploy-applications-to-sql-server-big-data-clusters"></a>Как использовать VS Code для развертывания приложений к кластерам больших данных в SQL Server
 
@@ -23,7 +22,7 @@ ms.locfileid: "67729311"
 
 В этой статье описывается развертывание приложений в кластере SQL Server больших данных, с помощью Visual Studio Code с расширением развертывания приложения. Эта возможность появилась в CTP-версии 2.3. 
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 - [Visual Studio Code](https://code.visualstudio.com/).
 - [Кластер SQL Server больших данных](big-data-cluster-overview.md) CTP-версия 2.3 или более поздней версии.

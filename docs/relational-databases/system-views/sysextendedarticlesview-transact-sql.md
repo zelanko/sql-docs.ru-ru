@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8bdd22f7-c268-49b6-820c-3fe603feb128
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 40a494f4cf157b85f13327f8367b90e8db2fcce7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d88db9492489175ab12e2f808b846899a1bf4a5f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62693767"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910116"
 ---
 # <a name="sysextendedarticlesview-transact-sql"></a>sysextendedarticlesview (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "62693767"
 |**artid**|**int**|Столбец идентификаторов, в котором хранится уникальный идентификатор статьи.|  
 |**creation_script**|**nvarchar(255)**|Скрипт создания схемы для статьи.|  
 |**del_cmd**|**nvarchar(255)**|Команда для выполнения после инструкции DELETE; в ином случае строится на основе журнала.|  
-|**Описание**|**nvarchar(255)**|Описание статьи.|  
+|**description**|**nvarchar(255)**|Описание статьи.|  
 |**dest_table**|**nvarchar(128)**|Имя целевой таблицы.|  
 |**фильтр**|**int**|Идентификатор объекта хранимой процедуры, используемой для горизонтального секционирования.|  
 |**filter_clause**|**ntext**|Предложение WHERE для статьи, используемое при горизонтальной фильтрации.|  

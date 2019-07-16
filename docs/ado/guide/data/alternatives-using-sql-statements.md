@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8b528b23-063d-45ea-8dea-6a90d4060b20
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c85f6ec6ce130d6bcb10db5f137a16f0cd102475
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f41ef7f0641877056a6e2f3d85fd6a40ff7826db
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701063"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925990"
 ---
 # <a name="alternatives-using-sql-statements"></a>Альтернатива: использование инструкций SQL
 ADO также позволяет с помощью команд в качестве альтернативы его встроенные свойства и методы для изменения данных. В зависимости от поставщика, все операции, описанные в этом разделе может также быть выполнено путем передачи команды к источнику данных. Например, можно использовать инструкции SQL UPDATE для изменения данных без использования **значение** свойство **поле**. Инструкции SQL INSERT может использоваться для добавления новых записей в источник данных, а не метод ADO **AddNew**. Дополнительные сведения о SQL или языка обработки данных поставщика см. в документации источника данных.  

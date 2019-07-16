@@ -4,18 +4,17 @@ titleSuffix: SQL Server
 description: В этом кратком руководстве показано, как установить SQL Server 2017 или SQL Server 2019 в Red Hat Enterprise Linux, а затем создать и запрос к базе данных с помощью sqlcmd.
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 07/16/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
-ms.openlocfilehash: 4e61449a8645dca651e3422306ae5b049b7a7e9d
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 38df65ffefbc0ed264d631214025059449d84b35
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834988"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910503"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>Краткое руководство. Установка SQL Server и создать базу данных в Red Hat
 

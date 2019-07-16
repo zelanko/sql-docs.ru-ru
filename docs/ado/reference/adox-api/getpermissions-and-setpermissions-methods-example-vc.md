@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8c75d547-d3d7-44c4-b7de-eead5d11b92e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d860f67bcea2d8ff6cdfabf08f7d4dc76d82eec6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1b866e0671786552cfcf1fef70579eb2f83d19de
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712103"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966251"
 ---
 # <a name="getpermissions-and-setpermissions-methods-example-vc"></a>Примеры методов GetPermissions и SetPermissions (Visual C++)
 В этом примере показано [GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md) и [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md) методы. Следующий код дает полный доступ к таблице Orders пользователю с правами администратора.  

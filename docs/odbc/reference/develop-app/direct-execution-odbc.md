@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: dd00a535-b136-494f-913b-410838e3de7e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 73c061718dc326e43f72be369a28ad12726a3cab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 72d9222be541a8d41b5b9935ac7cbbcfde4da19c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63242353"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039806"
 ---
 # <a name="direct-execution-odbc"></a>Прямое выполнение (ODBC)
 Прямое выполнение — это самый простой способ выполнения инструкции. При отправке инструкции для выполнения источника данных, компилирует его в плане доступа и затем выполняет план доступа.  

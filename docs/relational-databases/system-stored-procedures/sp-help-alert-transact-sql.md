@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 850cef4e-6348-4439-8e79-fd1bca712091
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bca9c53780bb3258f73a274240c0bb5e63e126c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 39d0c2f6e17f51928de561820f33bc0c34d89a62
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62796581"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055241"
 ---
 # <a name="sphelpalert-transact-sql"></a>sp_help_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +63,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |-----------------|---------------|-----------------|  
 |**идентификатор**|**int**|Присвоенный системой уникальный целочисленный идентификатор.|  
 |**name**|**sysname**|Имя предупреждения (например, Демонстрация: Полная **msdb** журнала).|  
-|**event_source**|**nvarchar(100)**|Источник события. Всегда будет иметь **MSSQLServer** для [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] версии 7.0|  
+|**event_source**|**Nvarchar(100)**|Источник события. Всегда будет иметь **MSSQLServer** для [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] версии 7.0|  
 |**event_category_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**event_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**message_id**|**int**|Код ошибки сообщения, который определен для предупреждения (Обычно соответствует номеру ошибки в **sysmessages** таблицы). Если уровень серьезности используется для определения предупреждения, **message_id** — **0** или значение NULL.|  
@@ -78,7 +77,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**notification_message**|**nvarchar(512)**|Необязательное дополнительное сообщение, отправляемое оператору по электронной почте или на пейджер.|  
 |**include_event_description**|**tinyint**|Указывает, следует ли включить в текст уведомления описание ошибки SQL Server из журнала приложений Microsoft Windows.|  
 |**database_name**|**sysname**|База данных, ошибка в которой приводит к появлению предупреждения. Если имя базы данных равно значению NULL, предупреждение появляется независимо от места возникновения ошибки.|  
-|**event_description_keyword**|**nvarchar(100)**|Описание ошибки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в журнале приложений Windows, которое должно соответствовать указанной последовательности символов.|  
+|**event_description_keyword**|**Nvarchar(100)**|Описание ошибки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в журнале приложений Windows, которое должно соответствовать указанной последовательности символов.|  
 |**occurrence_count**|**int**|Количество раз возникновения предупреждения.|  
 |**count_reset_date**|**int**|Дата **occurrence_count** последнего сброса.|  
 |**count_reset_time**|**int**|Время **occurrence_count** последнего сброса.|  
@@ -98,7 +97,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |-----------------|---------------|-----------------|  
 |**идентификатор**|**int**|Присвоенный системой уникальный целочисленный идентификатор.|  
 |**name**|**sysname**|Имя предупреждения (например, Демонстрация: Полная **msdb** журнала).|  
-|**event_source**|**nvarchar(100)**|Источник события. Всегда будет иметь **MSSQLServer** для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] версии 7.0|  
+|**event_source**|**Nvarchar(100)**|Источник события. Всегда будет иметь **MSSQLServer** для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] версии 7.0|  
 |**event_category_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**event_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**message_id**|**int**|Код ошибки сообщения, который определен для предупреждения (Обычно соответствует номеру ошибки в **sysmessages** таблицы). Если уровень серьезности используется для определения предупреждения, **message_id** — **0** или значение NULL.|  
@@ -112,7 +111,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**notification_message**|**nvarchar(512)**|Необязательное дополнительное сообщение, отправляемое оператору по электронной почте или на пейджер.|  
 |**include_event_description**|**tinyint**|Указывает, следует ли включить в текст сообщения уведомления описание ошибки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из журнала приложений Windows.|  
 |**database_name**|**sysname**|База данных, ошибка в которой приводит к появлению предупреждения. Если имя базы данных равно значению NULL, предупреждение появляется независимо от места возникновения ошибки.|  
-|**event_description_keyword**|**nvarchar(100)**|Описание ошибки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в журнале приложений Windows, которое должно соответствовать указанной последовательности символов.|  
+|**event_description_keyword**|**Nvarchar(100)**|Описание ошибки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в журнале приложений Windows, которое должно соответствовать указанной последовательности символов.|  
 |**occurrence_count**|**int**|Количество раз возникновения предупреждения.|  
 |**count_reset_date**|**int**|Дата **occurrence_count** последнего сброса.|  
 |**count_reset_time**|**int**|Время **occurrence_count** последнего сброса.|  

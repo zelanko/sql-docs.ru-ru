@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0eeaab8b-ad82-4a36-b464-9a1211d5f72c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f7ff0bd2988460596623eb47ded276392dc3d443
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8d00a3c26d842b196e20861da6d8ae3e818d4cbe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63270982"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056902"
 ---
 # <a name="sql-to-c-bit"></a>SQL в C: bit
 Идентификатор для типа данных bit ODBC SQL — это:  
@@ -31,10 +30,10 @@ ms.locfileid: "63270982"
   
 |Идентификатор типа C|Тест|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_CHAR<br /><br /> SQL_C_WCHAR|*BufferLength* > 1<br /><br /> *BufferLength* < = 1|Данные<br /><br /> Не определено.|1<br /><br /> Не определено.|н/д<br /><br /> 22003|  
-|SQL_C_STINYINT<br /><br /> SQL_C_UTINYINT<br /><br /> SQL_C_TINYINT<br /><br /> SQL_C_SBIGINT<br /><br /> SQL_C_UBIGINT<br /><br /> SQL_C_SSHORT<br /><br /> SQL_C_USHORT<br /><br /> SQL_C_SHORT<br /><br /> SQL_C_SLONG<br /><br /> SQL_C_ULONG<br /><br /> SQL_C_LONG<br /><br /> SQL_C_FLOAT<br /><br /> SQL_C_DOUBLE<br /><br /> SQL_C_NUMERIC|Нет [a]|Данные|Размер типа данных C|н/д|  
-|SQL_C_BIT|Нет [a]|Данные|1 [b]|н/д|  
-|SQL_C_BINARY|*BufferLength* > = 1<br /><br /> *BufferLength* < 1|Данные<br /><br /> Не определено.|1<br /><br /> Не определено.|н/д<br /><br /> 22003|  
+|SQL_C_CHAR<br /><br /> SQL_C_WCHAR|*BufferLength* > 1<br /><br /> *BufferLength* < = 1|Data<br /><br /> Не определено.|1<br /><br /> Не определено.|Н/Д<br /><br /> 22003|  
+|SQL_C_STINYINT<br /><br /> SQL_C_UTINYINT<br /><br /> SQL_C_TINYINT<br /><br /> SQL_C_SBIGINT<br /><br /> SQL_C_UBIGINT<br /><br /> SQL_C_SSHORT<br /><br /> SQL_C_USHORT<br /><br /> SQL_C_SHORT<br /><br /> SQL_C_SLONG<br /><br /> SQL_C_ULONG<br /><br /> SQL_C_LONG<br /><br /> SQL_C_FLOAT<br /><br /> SQL_C_DOUBLE<br /><br /> SQL_C_NUMERIC|Нет [a]|Data|Размер типа данных C|Н/Д|  
+|SQL_C_BIT|Нет [a]|Data|1 [b]|Н/Д|  
+|SQL_C_BINARY|*BufferLength* > = 1<br /><br /> *BufferLength* < 1|Data<br /><br /> Не определено.|1<br /><br /> Не определено.|Н/Д<br /><br /> 22003|  
   
  [a] значение *BufferLength* игнорируется для этого преобразования. Драйвер предполагает, что размер **TargetValuePtr* — это размер типа данных C.  
   

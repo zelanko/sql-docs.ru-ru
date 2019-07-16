@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: ec9de780-68fd-4551-b70b-2d3ab3709b3e
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 24784fd337a80b7fd545cca04f76ad9a548ebe6f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 73ee5d7ac8bd512b69cc187f9860b9e7f2c38a78
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613172"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68001296"
 ---
 # <a name="sysallocationunits-transact-sql"></a>sys.allocation_units (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "47613172"
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |allocation_unit_id|**bigint**|Идентификатор единицы распределения. Уникален в базе данных.|  
-|Тип|**tinyint**|Тип единицы распределения:<br /><br /> 0 = удаленная;<br /><br /> 1 = внутристрочные данные (все типы данных, за исключением типов данных LOB);<br /><br /> 2 = данные больших объектов (LOB) (**текст**, **ntext**, **изображение**, **xml**, типы больших значений и определяемые пользователем типы среды CLR)<br /><br /> 3 = превышающие размер страницы данные строки.|  
+|type|**tinyint**|Тип единицы распределения:<br /><br /> 0 = удаленная;<br /><br /> 1 = внутристрочные данные (все типы данных, за исключением типов данных LOB);<br /><br /> 2 = данные больших объектов (LOB) (**текст**, **ntext**, **изображение**, **xml**, типы больших значений и определяемые пользователем типы среды CLR)<br /><br /> 3 = превышающие размер страницы данные строки.|  
 |type_desc|**nvarchar(60)**|Описание типа единицы распределения:<br /><br /> **УДАЛЕНЫ**<br /><br /> **IN_ROW_DATA**<br /><br /> **LOB_DATA**<br /><br /> **ROW_OVERFLOW_DATA**|  
 |container_id|**bigint**|Идентификатор контейнера хранения, связанного с единицей распределения.<br /><br /> Если значение type = 1 или 3, то идентификатор container_id = sys.partitions.hobt_id.<br /><br /> Если тип type равен 2, то идентификатор container_id = sys.partitions.partition_id.<br /><br /> 0 = единица распределения помечена для отложенного удаления|  
 |data_space_id|**int**|Идентификатор файловой группы, в которой находится эта единица распределения.|  

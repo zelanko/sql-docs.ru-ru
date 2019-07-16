@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: a745449428a0a348dc60a5b47304612bb889556c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 17d24c6924b03e4ed0415e73bfefc0d372ca45bd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37989926"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070854"
 ---
 # <a name="data-mining-extensions-dmx-syntax-elements"></a>Элементы синтаксиса расширений интеллектуального анализа данных
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -52,11 +51,11 @@ ms.locfileid: "37989926"
  [Использование &#40;расширений интеллектуального анализа данных&#41;](../dmx/usage-dmx.md)  
  Позволяет определить способ использования моделью интеллектуального анализа данных содержащихся в ней столбцов.  
   
- [Флаги моделирования &#40;расширений интеллектуального анализа данных&#41;](../dmx/modeling-flags-dmx.md)  
+ [Флаги моделирования (расширения интеллектуального анализа данных)](../dmx/modeling-flags-dmx.md)  
  Позволяет задать дополнительные указания для алгоритма, которые он может использовать при обработке модели интеллектуального анализа данных.  
   
 ## <a name="see-also"></a>См. также  
- [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; ссылки](../dmx/data-mining-extensions-dmx-reference.md)   
+ [Справочник по расширениям интеллектуального анализа данных (расширения интеллектуального анализа данных)](../dmx/data-mining-extensions-dmx-reference.md)   
  [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; справочнике по функциям](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; Справочник по операторам](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; Справка по инструкции](../dmx/data-mining-extensions-dmx-statements.md)   

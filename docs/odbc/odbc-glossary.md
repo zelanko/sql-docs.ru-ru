@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e8227000-1944-42e5-a881-1f549e1ff9d1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a6741b5f07f2427ef502f5177bbf01acd56c4d5b
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: a91f051badfabe19373825edd156e6b2c21ca2c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67794158"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911372"
 ---
 # <a name="odbc-glossary"></a>Глоссарий по интерфейсу ODBC
 ## <a name="a"></a>Объект  

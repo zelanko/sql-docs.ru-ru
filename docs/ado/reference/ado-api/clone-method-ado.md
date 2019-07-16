@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: ad49265f-1c05-4271-9bbf-7c00010ac18c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: fbeedf9e56c1f0606a7c8f842baedc9d11ad3929
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7439f9a4a04582f4cf4c4878892ed0f4f33e228c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66698793"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920019"
 ---
 # <a name="clone-method-ado"></a>Метод Clone (ADO)
 Создает дубликат [записей](../../../ado/reference/ado-api/recordset-object-ado.md) из существующего **записей** объекта. При необходимости указывает, что клона быть доступны только для чтения.  
@@ -45,7 +44,7 @@ Set rstDuplicate = rstOriginal.Clone (LockType)
  Объектную переменную, которая идентифицирует **записей** объекта к дублированию.  
   
  *LockType*  
- Необязательный. Объект [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) значение, указывающее тип блокировки исходного **записей**, или только для чтения **записей**. Допустимые значения: **adLockUnspecified** или **adLockReadOnly**.  
+ Необязательный параметр. Объект [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) значение, указывающее тип блокировки исходного **записей**, или только для чтения **записей**. Допустимые значения: **adLockUnspecified** или **adLockReadOnly**.  
   
 ## <a name="remarks"></a>Примечания  
  Используйте **клона** повторяющийся метод для создания нескольких **записей** объектов, особенно в том случае, если вы хотите поддерживать более чем одна текущая запись в заданном наборе записей. С помощью **клона** метод является более эффективным, чем создание и открытие нового **записей** объект, который использует то же определение, что и исходный.  

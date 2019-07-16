@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 44fae9dd-5585-4cd6-8bbd-3248a78931b4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6af8fcd665fdfe503eab5aec591419982d0d3958
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 60510302525562d9c3007a6ef57213fc261b4c60
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702714"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926623"
 ---
 # <a name="microsoft-ole-db-provider-for-oracle-overview"></a>Поставщик Microsoft OLE DB для Oracle Обзор
 > [!IMPORTANT]

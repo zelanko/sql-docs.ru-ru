@@ -2,19 +2,18 @@
 title: Настроить мгновенную инициализацию файлов - Analytics Platform System | Документация Майкрософт
 description: Настройте мгновенную инициализацию файлов в Analytics Platform System. Мгновенная инициализация файлов является компонентом SQL Server, который обеспечивает более быстрое выполнение операций файла данных.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 959d219565de6577e31d9548f5daea0fe0d2419e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 27f716b5fc3668b78fd7e5728dc4a2cd640c7940
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63298117"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960737"
 ---
 # <a name="instant-file-initialization-configuration"></a>Конфигурация мгновенной инициализации файлов
 Мгновенная инициализация файлов является компонентом SQL Server, который обеспечивает более быстрое выполнение операций файла данных. Установите флажок, чтобы включить мгновенную инициализацию файлов улучшит производительность SQL Server PDW. Тем не менее если это представляет угрозу безопасности для вас бизнеса, оставьте поле флажок снят.  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 02c0f81a-54ed-4ca4-aa4f-bb7463a9ab9a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2a4627491075dd7b7db9d75188137271edd17804
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5c005ff603f21dca387215cafd9dff572db53960
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721702"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053096"
 ---
 # <a name="spdescribecursortables-transact-sql"></a>sp_describe_cursor_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,16 +52,16 @@ sp_describe_cursor_tables
  Имя объявленной переменной для получения выходных данных курсора. *output_cursor_variable* — **курсор**, не по умолчанию, и не может быть связан с какими-либо курсорами во время вызова sp_describe_cursor_tables. Возвращаемый курсор является прокручиваемым, динамическим и доступным только для чтения.  
   
  [ @cursor_source=] {N'local' | N'global' | N'variable'}  
- Указывает, задан ли возвращаемый курсор с помощью имени локального курсора, глобального курсора или курсорной переменной. Параметр — **nvarchar(30)**.  
+ Указывает, задан ли возвращаемый курсор с помощью имени локального курсора, глобального курсора или курсорной переменной. Параметр — **nvarchar(30)** .  
   
  [ @cursor_identity=] N'*local_cursor_name*"  
- Имя курсора, созданного с помощью инструкции DECLARE CURSOR c ключевым словом LOCAL или параметром LOCAL по умолчанию. *local_cursor_name* — **nvarchar(128)**.  
+ Имя курсора, созданного с помощью инструкции DECLARE CURSOR c ключевым словом LOCAL или параметром LOCAL по умолчанию. *local_cursor_name* — **nvarchar(128)** .  
   
  [ @cursor_identity=] N'*global_cursor_name*"  
- Имя курсора, созданного с помощью инструкции DECLARE CURSOR с ключевым словом GLOBAL или параметром GLOBAL по умолчанию. *global_cursor_name* также может быть именем серверного курсора API, открывающиеся приложением ODBC, которое затем назначило курсору, вызвав SQLSetCursorName. *global_cursor_name* — **nvarchar(128)**.  
+ Имя курсора, созданного с помощью инструкции DECLARE CURSOR с ключевым словом GLOBAL или параметром GLOBAL по умолчанию. *global_cursor_name* также может быть именем серверного курсора API, открывающиеся приложением ODBC, которое затем назначило курсору, вызвав SQLSetCursorName. *global_cursor_name* — **nvarchar(128)** .  
   
  [ @cursor_identity=] N'*input_cursor_variable*"  
- Имя переменной курсора, связанной с открытым курсором. *input_cursor_variable* — **nvarchar(128)**.  
+ Имя переменной курсора, связанной с открытым курсором. *input_cursor_variable* — **nvarchar(128)** .  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  None  

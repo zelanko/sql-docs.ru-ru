@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e04d464a-60ab-4b39-a710-c066025708e6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 63a3ff2cdb075dc8ce48aaa6c6951458d12710b0
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: e77488a379543dd6f2749a07048fa67a92d530ee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538156"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041028"
 ---
 # <a name="spresyncmergesubscription-transact-sql"></a>sp_resyncmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ sp_resyncmergesubscription [ [ @publisher = ] 'publisher' ]
 |**1**|Синхронизация начинается с момента проведения последней успешной проверки. Все новые или неоконченные поколения, созданные со времени проведения последней успешной проверки, заново применяются к подписчику.|  
 |**2**|Синхронизация начинается с даты, заданной в *resync_date_str*. Все новые или незаконченные поколения, созданные после этой даты, заново применяются к подписчику.|  
   
-`[ @resync_date_str = ] resync_date_string` Определяет дату, когда должна начаться повторная синхронизация. *resync_date_string* — **nvarchar(30)**, значение по умолчанию NULL. Этот параметр используется при *аргумент resync_type* представляет собой значение **2**. Заданная дата преобразуется в эквивалентное **datetime** значение.  
+`[ @resync_date_str = ] resync_date_string` Определяет дату, когда должна начаться повторная синхронизация. *resync_date_string* — **nvarchar(30)** , значение по умолчанию NULL. Этот параметр используется при *аргумент resync_type* представляет собой значение **2**. Заданная дата преобразуется в эквивалентное **datetime** значение.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  

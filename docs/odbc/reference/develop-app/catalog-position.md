@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5bc5f64b-c75a-43d2-8745-102ec7a49000
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 22a9a9d50891a6101076af6378fb33543274b21b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3d7c320521a9948c7968f4f7f5d42fd715f6c03d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63237954"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68062682"
 ---
 # <a name="catalog-position"></a>Положение каталога
 Местоположение имени каталога в код и как он отделен от остальной части идентификатора зависит от источника данных к источнику данных. Для этого в источнике данных Xbase имя каталога является каталогом и, в Microsoft® Windows® отделяется от имени таблицы (который является именем файла) обратную косую черту (\\). На следующем рисунке показано это условие.  

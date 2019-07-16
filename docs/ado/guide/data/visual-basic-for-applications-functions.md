@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ccbdea9d-f9cf-4b0c-ade2-2d65311e12dc
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ada9b4c6b1e22769e15714f4da8c81ce5e1f48ad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 25cac9bffce7602ce211be7f83c7e55239061282
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66699705"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923465"
 ---
 # <a name="visual-basic-for-applications-functions"></a>Функции Visual Basic для приложений
 Следующие функции Visual Basic для приложений можно использовать в выражениях CALC формирования данных:  
@@ -31,7 +30,7 @@ ms.locfileid: "66699705"
 |Abs|Asc|Atn|CBool|CByte|CCur|  
 |CDate|CDbl|Chr|ChrB|ChrW|Chr$|  
 |ChrB$|CInt|CLng|Cos|CSng|CStr|  
-|Cvar|CVDate|CVErr|Дата|Date$|DateAdd|  
+|Cvar|CVDate|CVErr|Date|Date$|DateAdd|  
 |DateDiff|DatePart|DateSerial|DateValue|День|DDB|  
 |Ошибка|Error$|Exp|Fix|Формат|Format$|  
 |FV|Hex|Hex$|Час|IIF|InStr|  

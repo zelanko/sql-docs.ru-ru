@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 55b83f9c-da10-4e65-9846-f4ef3c0c0f36
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4a020dc8b695bbebaef4bc5cc60c956b5a9e4e05
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9c9acae0a0d3f0b7c89296f795c8fd34929cf72f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825162"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090648"
 ---
 # <a name="sysdmtranactivesnapshotdatabasetransactions-transact-sql"></a>sys.dm_tran_active_snapshot_database_transactions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -75,7 +74,7 @@ sys.dm_tran_active_snapshot_database_transactions
 ## <a name="permissions"></a>Разрешения
 
 На [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], требуется `VIEW SERVER STATE` разрешение.   
-На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], требуется `VIEW DATABASE STATE` разрешение в базе данных.   
+В [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] необходимо разрешение `VIEW DATABASE STATE` для базы данных.   
 
 ## <a name="remarks"></a>Примечания  
  **sys.dm_tran_active_snapshot_database_transactions** о транзакциях, назначаются порядковый номер транзакции (XSN). Порядковый номер XSN назначается при первом доступе транзакции к хранилищу версий. В следующих примерах показано, как в базе данных, для которой включена изоляция моментальных снимков или READ COMMITTED с использованием управления версиями строк, транзакции назначается номер XSN.  
@@ -146,13 +145,13 @@ elapsed_time_seconds
   
  Следующие сведения оценивает результаты из **sys.dm_tran_active_snapshot_database_transactions**:  
   
--   XSN-57: Так как эта транзакция выполняется не в режиме изоляции моментального снимка, `is_snapshot` значение и `first_snapshot_sequence_num` являются `0`. Аргумент `transaction_sequence_num` показывает, что данной транзакции был присвоен порядковый номер, поскольку параметр READ_COMMITTED_SNAPSHOT или ALLOW_SNAPSHOT_ISOLATION (или оба) имеют значение ON.  
+-   XSN-57. Так как эта транзакция выполняется не в режиме изоляции моментального снимка, `is_snapshot` значение и `first_snapshot_sequence_num` являются `0`. Аргумент `transaction_sequence_num` показывает, что данной транзакции был присвоен порядковый номер, поскольку параметр READ_COMMITTED_SNAPSHOT или ALLOW_SNAPSHOT_ISOLATION (или оба) имеют значение ON.  
   
--   XSN-58: Эта транзакция не выполняется в режиме изоляции моментального снимка и применяет те же сведения по XSN-57.  
+-   XSN-58. Эта транзакция выполняется не в режиме изоляции моментального снимка и применяет те же сведения по XSN-57.  
   
--   XSN-59: Это первая активная транзакция, на котором работает в режиме изоляции моментального снимка. Транзакция считывает данные, зафиксированные транзакцией XSN-57, на что указывает параметр `first_snapshot_sequence_num`. Вывод этой транзакции также указывает на то, что максимальная цепочка версий, пройденная для строки, равна `1` и что для каждой строки, к которой был получен доступ, пройдена в среднем `1` версия. Это означает, что транзакции XSN-57, XSN-58 и XSN-60 не изменяли строки и были зафиксированы.  
+-   XSN-59. Это первая активная транзакция, на котором работает в режиме изоляции моментального снимка. Транзакция считывает данные, зафиксированные транзакцией XSN-57, на что указывает параметр `first_snapshot_sequence_num`. Вывод этой транзакции также указывает на то, что максимальная цепочка версий, пройденная для строки, равна `1` и что для каждой строки, к которой был получен доступ, пройдена в среднем `1` версия. Это означает, что транзакции XSN-57, XSN-58 и XSN-60 не изменяли строки и были зафиксированы.  
   
--   XSN-60: Это вторая транзакция, выполняемая при изоляции моментальных снимков. Вывод содержит такие же сведения, что и для транзакции XSN-59.  
+-   XSN-60. Это вторая транзакция, выполняемая при изоляции моментальных снимков. Вывод содержит такие же сведения, что и для транзакции XSN-59.  
   
 ## <a name="see-also"></a>См. также  
  [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7a8c298a-2160-491d-a300-d36f45568d9c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ebb09b3118c2d16041d4ca60bf738d0fda561346
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: eeb8fae9c563e675499dec47839acdd0a003765a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63199081"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020512"
 ---
 # <a name="retrieving-output-parameters-using-sqlgetdata"></a>Получение выходных параметров с помощью метода SQLGetData
 Перед ODBC 3.8 приложение может только получить выходные параметры запроса с помощью буфера привязанного выходные данные. Тем не менее трудно выделить очень большой буфер, если размер значения параметра очень велико (например, большое изображение). ODBC 3.8 представляет собой новый метод для извлечения выходных параметров в частях. Теперь можно вызвать приложение **SQLGetData** с небольшим буфером несколько раз, чтобы извлечь значение параметра большого объема. Это похоже на получение столбца большого объема данных.  

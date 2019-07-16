@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b5085979-2f76-48e1-bf3b-765a84003dd9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 581a6be7472818f983bc82ef3a717be0c0edaa48
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 9446d03db98d7fa5181fb0217814cdd86c55de1f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802816"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029811"
 ---
 # <a name="sysmergeschemaarticles-transact-sql"></a>sysmergeschemaarticles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "52802816"
 |**type**|**tinyint**|Тип статьи со схемой, который может иметь одно из следующих значений:<br /><br /> **0x20** = хранимая процедура статьи схемой.<br /><br /> **0x40** = статьи со схемой представление или индексированное представление статьи со схемой.|  
 |**objID**|**int**|Идентификатор базового объекта статьи. Может быть идентификатором процедуры, представления, индексированного представления или определяемой пользователем функции.|  
 |**artid**|**uniqueidentifier**|Идентификатор статьи.|  
-|**Описание**|**nvarchar(255)**|Описание статьи.|  
+|**description**|**nvarchar(255)**|Описание статьи.|  
 |**pre_creation_command**|**tinyint**|Действие по умолчанию, выполняемое при создании статьи в базе данных подписки:<br /><br /> **0 =** none — Если таблица уже существует на подписчике, никакие действия не выполняются.<br /><br /> **1** = Удалить — удаляет таблицу перед ее повторным созданием.<br /><br /> **2** = delete — выполняет удаление предложения WHERE в фильтре подмножества.<br /><br /> **3** = Truncate — аналогично **2**, но вместо строк удаляются страницы. Однако предложение WHERE не используется.|  
 |**pubid**|**uniqueidentifier**|Уникальный идентификатор публикации.|  
 |**status**|**tinyint**|Состояние статьи со схемой, которое может иметь следующие значения:<br /><br /> **1** = Unsynced — скрипт начальной обработки для публикации таблицы будет выполнен при следующем запуске агента моментальных снимков.<br /><br /> **2** = active — скрипт начальной обработки для публикации таблицы будет выполнено.<br /><br /> **5** = New_inactive — для добавления.<br /><br /> **6** = New_active — для добавления.|  

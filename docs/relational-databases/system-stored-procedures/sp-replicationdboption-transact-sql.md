@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d021864e-3f21-4d1a-89df-6c1086f753bf
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 153c2e2b8c75c21451dca3b673129a059d78e3a6
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: e8285713df1fb17b2e82dcfa6edac0fd6db5500a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527336"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950665"
 ---
 # <a name="spreplicationdboption-transact-sql"></a>sp_replicationdboption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,10 +41,10 @@ sp_replicationdboption [ @dbname= ] 'db_name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [**@dbname=**] **"***dbname***"**  
+ [ **@dbname=** ] **"***dbname***"**  
  База данных, для которой устанавливаются параметры репликации. *db_name* — **sysname**, не имеет значения по умолчанию.  
   
- [**@optname=**] **"***optname***"**  
+ [ **@optname=** ] **"***optname***"**  
  Параметр репликации базы данных, который должен быть включен или выключен. *optname* — **sysname**, и может принимать одно из следующих значений.  
   
 |Значение|Описание|  

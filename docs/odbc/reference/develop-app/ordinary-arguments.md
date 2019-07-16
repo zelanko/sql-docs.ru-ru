@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a18cdae1-6b85-41cb-875c-b5a01ec90aeb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 31d83b00fd70cd54587a19ebfea7310154167493
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 997604b4376656d36d2bc4bc31f1959aa6c8a229
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62999286"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67987827"
 ---
 # <a name="ordinary-arguments"></a>Обычные аргументы
 Обычный аргумент строкового аргумента функции каталога, считается строковым литералом. Обычный аргумент принимает список значений, ни шаблон поиска строки. В случае обычных аргумента важен, и буквально кавычек в строке. Эти аргументы рассматриваются как обычные аргументы, если атрибут инструкции SQL_ATTR_METADATA_ID имеет значение SQL_FALSE; они обрабатываются как аргументы идентификатора вместо Если этот атрибут имеет значение SQL_TRUE.  

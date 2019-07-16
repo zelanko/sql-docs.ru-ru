@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 00b44baf-fcf0-4095-aabe-49fa87e77316
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f483c6fe53ab980893ba8e1104b46e073336b027
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: a5f699f21b1f28537da2e2f0033fe6b17908186a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533986"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68002460"
 ---
 # <a name="sprefreshparameterencryption-transact-sql"></a>sp_refresh_parameter_encryption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 
 `[ @name = ] 'module_name'` — Имя хранимой процедуры, определяемой пользователем функции, представления, триггера DML, триггер DDL уровня базы данных или триггера DDL уровня сервера. *module_name* не может быть общеязыковая среда выполнения (CLR) хранимая процедура или функция среды CLR. *module_name* не может быть привязана к схеме. *module_name* является `nvarchar`, не имеет значения по умолчанию. *module_name* может быть составным идентификатором, но может ссылаться только на объекты в текущей базе данных.
 
-`[ @namespace = ] ' < class > '` — Класс указанного модуля. Когда *module_name* является триггером DDL, `<class>` является обязательным. Параметр `<class>` равен `nvarchar(20)`. Допустимыми входными значениями являются `DATABASE_DDL_TRIGGER` и `SERVER_DDL_TRIGGER`.    
+`[ @namespace = ] ' < class > '` — Класс указанного модуля. Когда *module_name* является триггером DDL, `<class>` является обязательным. Свойство `<class>` имеет значение `nvarchar(20)`. Допустимыми входными значениями являются `DATABASE_DDL_TRIGGER` и `SERVER_DDL_TRIGGER`.    
 
 ## <a name="return-code-values"></a>Значения кода возврата  
 

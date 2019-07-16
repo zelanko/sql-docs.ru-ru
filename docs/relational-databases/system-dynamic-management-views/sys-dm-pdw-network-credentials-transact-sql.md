@@ -11,14 +11,13 @@ dev_langs:
 ms.assetid: d4fee3ad-6285-4ea5-8513-5e6eb617abb0
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7d9e18284ac4d97efaa217802682fe79ebb2dfc5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b75eb53da9961025e3310f27e4a12608dd4fda78
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041525"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899362"
 ---
 # <a name="sysdmpdwnetworkcredentials-transact-sql"></a>sys.dm_pdw_network_credentials (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -29,7 +28,7 @@ ms.locfileid: "56041525"
 |-----------------|---------------|-----------------|  
 |pdw_node_id|**int**|Уникальный числовой идентификатор, связанный с узлом.|  
 |имя_сервера_назначения|**nvarchar(32)**|IP-адрес целевого сервера, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] обратится к с использованием учетных данных имени пользователя и пароля.|  
-|username|**nvarchar(32)**|Имя пользователя, для которого хранится пароль.|  
+|username пользователя|**nvarchar(32)**|Имя пользователя, для которого хранится пароль.|  
 |last_modified|**datetime**|Дата и время последней операции изменения учетных данных.|  
   
 ## <a name="permissions"></a>Разрешения  

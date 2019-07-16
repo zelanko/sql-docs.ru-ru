@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 143ce689-108b-49d7-9892-fd3a86897f38
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a56e8cb4531fbe48e2a66242d23406d6d647573c
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: fe71adc1be14b40d18baf50eecd68c2bef65c836
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536706"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997572"
 ---
 # <a name="sphelpreplicationdboption-transact-sql"></a>sp_helpreplicationdboption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @dbname = ] 'dbname'` — Имя базы данных. *DBName* — **sysname**, значение по умолчанию **%**. Если **%**, то результирующий набор содержит все базы данных на издателе, в противном случае данные только относительно указанной базы данных возвращается. Данные не возвращаются для тех баз данных, где у пользователя нет соответствующих описанных ниже разрешений.  
+`[ @dbname = ] 'dbname'` — Имя базы данных. *DBName* — **sysname**, значение по умолчанию **%** . Если **%** , то результирующий набор содержит все базы данных на издателе, в противном случае данные только относительно указанной базы данных возвращается. Данные не возвращаются для тех баз данных, где у пользователя нет соответствующих описанных ниже разрешений.  
   
 `[ @type = ] 'type'` Ограничивает результирующий набор должен содержать только базы данных, на котором указанный аргумент репликации *тип* включен. *Тип* — **sysname**, и может принимать одно из следующих значений.  
   

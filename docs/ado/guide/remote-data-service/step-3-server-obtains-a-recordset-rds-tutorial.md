@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9c6779c9-1208-4696-ac51-c39f3a6d9240
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: eb0afbbe470a1cc9cddbf9e9f2f892deb7ce0864
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 685dd476b5d434ff9dd8feb0e23400dd703ca0d5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704166"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922084"
 ---
 # <a name="step-3-server-obtains-a-recordset-rds-tutorial"></a>Шаг 3. Сервер получает набор записей (учебник по RDS)
 Программа server использует текст строки и команду connect для запросов к источнику данных для нужные строки. ADO обычно используется для извлечения этого **записей**, несмотря на то, что интерфейсы, доступа к данным других Майкрософт, таких как OLE DB, могут использоваться.  

@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: cc0351ae-4882-4b67-b0d8-bd235d20c901
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b28967d1000a8e307c99d05ea840dd62ced09fb8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0e6ee58a9c04c64c71ab63c3bbd639ae0c3357a8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635732"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059104"
 ---
 # <a name="sysfnxefiletargetreadfile-transact-sql"></a>sys.fn_xe_file_target_read_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,16 +48,16 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
   
 ## <a name="arguments"></a>Аргументы  
  *путь*  
- Путь к файлам для чтения. *путь* может содержать подстановочных знаков и включать имя файла. *путь* — **nvarchar(260)**. Значение по умолчанию отсутствует. В контексте базы данных SQL Azure это значение является URL-адресом HTTP в файл в службе хранилища Azure.
+ Путь к файлам для чтения. *путь* может содержать подстановочных знаков и включать имя файла. *путь* — **nvarchar(260)** . Значение по умолчанию отсутствует. В контексте базы данных SQL Azure это значение является URL-адресом HTTP в файл в службе хранилища Azure.
   
  *mdpath*  
- Путь к файлу метаданных, соответствующий файлу или файлам, указанным *путь* аргумент. *mdpath* — **nvarchar(260)**. Значение по умолчанию отсутствует. Начиная с SQL Server 2016, этот параметр может быть задан как null.
+ Путь к файлу метаданных, соответствующий файлу или файлам, указанным *путь* аргумент. *mdpath* — **nvarchar(260)** . Значение по умолчанию отсутствует. Начиная с SQL Server 2016, этот параметр может быть задан как null.
   
 > [!NOTE]  
 >  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] не требует *mdpath* параметра. Однако он используется для поддержки обратной совместимости фалов журналов, сформированных в предыдущих версиях SQL Server.  
   
  *initial_file_name*  
- Первый файл для чтения из *путь*. *параметров initial_file_name* — **nvarchar(260)**. Значение по умолчанию отсутствует. Если **null** указывается как аргумент, всех файлов, найденных в *путь* доступны для чтения.  
+ Первый файл для чтения из *путь*. *параметров initial_file_name* — **nvarchar(260)** . Значение по умолчанию отсутствует. Если **null** указывается как аргумент, всех файлов, найденных в *путь* доступны для чтения.  
   
 > [!NOTE]  
 >  *параметров initial_file_name* и *initial_offset* парных аргументы. При указании значения для любого из этих аргументов необходимо также указать значение для второго аргумента.  

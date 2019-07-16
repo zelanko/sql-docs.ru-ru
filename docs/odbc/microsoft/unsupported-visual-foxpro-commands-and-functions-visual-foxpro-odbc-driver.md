@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: afdb6b7e-738d-42ca-8053-67ae50873ca6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c6b69c8bf15b4d56872c4030725638e4b61571e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: db6aff35944b8811e79627c6076ab61e838edf3f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62633374"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912322"
 ---
 # <a name="unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver"></a>Неподдерживаемые команды и функции Visual FoxPro (драйвер ODBC для Visual FoxPro)
 В следующей таблице перечислены FoxPro команд и функций, которые не поддерживаются драйвером ODBC для Visual FoxPro, но поддерживаемых Microsoft® Visual FoxPro.  
@@ -33,7 +32,7 @@ ms.locfileid: "62633374"
   
 ||||  
 |-|-|-|  
-|#DEFINE ... #UNDEF|#IF... #ENDIF-директива препроцессора|#IFDEF &AMP;#124; #IFNDEF|  
+|# #UNDEF DEFINE …|#IF... #ENDIF-директива препроцессора|#IFDEF &#124; #IFNDEF|  
 |#INCLUDE-директива препроцессора|:: Оператор разрешения области|! Команда (см. в разделе ВЫПОЛНЕНИЯ &#124; ! Команда)|  
 |? &#124; ?? Command|??? Command|\ &#124; \\\ Команды|  
 |@ ... ПОЛЕ команды|@ ... Класс команды|@ ... Команда «Очистить»|  
@@ -52,7 +51,7 @@ ms.locfileid: "62633374"
 |AMEMBERS ()-функция|ANSITOOEM ()-функция|APRINTERS ()-функция|  
 |ASELOBJ ()-функция|Команда ASSIST||  
   
-## <a name="b"></a>B  
+## <a name="b"></a>С  
   
 ||||  
 |-|-|-|  
@@ -61,7 +60,7 @@ ms.locfileid: "62633374"
 |_BROWSER системной памяти переменной|Команда приложения ПОСТРОЕНИЯ|СОЗДАТЬ команду exe-файла|  
 |Команда проекта ПОСТРОЕНИЯ|_BUILDER системной памяти переменной||  
   
-## <a name="c"></a>C  
+## <a name="c"></a>В  
   
 ||||  
 |-|-|-|  
@@ -105,7 +104,7 @@ ms.locfileid: "62633374"
 |УДАЛИТЬ команду|ВНЕШНЯЯ команда|Команда экспорта|  
 |Команды ИЗВЛЕЧЕНИЯ|СТРАНИЦА команды ИЗВЛЕЧЕНИЯ||  
   
-## <a name="f"></a>Ж  
+## <a name="f"></a>C  
   
 ||||  
 |-|-|-|  
@@ -117,7 +116,7 @@ ms.locfileid: "62633374"
 |FPUTS ()-функция|FREAD ()-функция||  
 |FWRITE ()-функция|FCHSIZE ()-функция||  
   
-## <a name="g"></a>Ж  
+## <a name="g"></a>П  
   
 ||||  
 |-|-|-|  
@@ -127,7 +126,7 @@ ms.locfileid: "62633374"
 |GETFILE ()-функция|GETFONT ()-функция|Функция GETOBJECT)|  
 |GETPAD ()-функция|GETPICT ()-функция|GETPRINTER ()-функция|  
   
-## <a name="h"></a>З  
+## <a name="h"></a>H  
   
 ||||  
 |-|-|-|  
@@ -143,13 +142,13 @@ ms.locfileid: "62633374"
 |Команда «Вставить»|INSMODE ()-функция||  
 |ISMOUSE ()-функция|_INDENT системной памяти переменной||  
   
-## <a name="j"></a>К  
+## <a name="j"></a>J  
   
 ||||  
 |-|-|-|  
 |Присоединяйтесь к команды|||  
   
-## <a name="k"></a>Л  
+## <a name="k"></a>K  
   
 ||||  
 |-|-|-|  
@@ -180,7 +179,7 @@ ms.locfileid: "62633374"
 |MRKBAR ()-функция|MRKPAD ()-функция||  
 |MWINDOW ()-функция|MDOWN ()-функция||  
   
-## <a name="n"></a>Нет  
+## <a name="n"></a>в  
   
 ||||  
 |-|-|-|  
@@ -199,7 +198,7 @@ ms.locfileid: "62633374"
 |Выбор КОМАНДЫ меню|КОМАНДЫ ПАНЕЛИ ВЫБОРА||  
 |Завершение работы КОМАНДЫ|OBJVAR ()-функция||  
   
-## <a name="p"></a>P  
+## <a name="p"></a>С  
   
 ||||  
 |-|-|-|  
@@ -223,7 +222,7 @@ ms.locfileid: "62633374"
 |-|-|-|  
 |Выйти из команды|||  
   
-## <a name="r"></a>Чтение  
+## <a name="r"></a>R  
   
 ||||  
 |-|-|-|  
@@ -237,7 +236,7 @@ ms.locfileid: "62633374"
 |Команда подключения ПЕРЕИМЕНОВАНИЯ|ПЕРЕИМЕНОВАНИЕ таблицы команды|ВОССТАНОВЛЕНИЕ из команды|  
 |Команды ОТЧЕТА|REQUERY ()-функция|ОКНО команды RESTORE|  
 |МАКРОСЫ команды RESTORE|ЭКРАН команды RESTORE|RGBSCHEME ()-функция|  
-|Команда RESUME|RGB ()-функция|RUN &#124; ! Command|  
+|Команда RESUME|RGB ()-функция|ЗАПУСТИТЕ &#124; ! Command|  
 |RMDIR-команда|Функция ROW)||  
 |Команда функции RunScript МАРКЕРА|RDLEVEL ()-функция||  
   

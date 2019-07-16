@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 808595c3-8ef1-40bd-a93e-5cf237950e08
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 00144c51e60b72fe043443d2a9c8d1d51a6cb8da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 051ded7d675f81998718b858c71488ba968ec680
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63138837"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006597"
 ---
 # <a name="creating-variable-value-files-accesstosql"></a>Создание файлов переменных значений (AccessToSQL)
 Файл значение переменной является XML-файл, состоящий из значений параметра команд (например, имя сервера источника или назначения), которые часто изменяются в разных миграция сервера. При возникновении большое количество миграцию баз данных, несколько файлов переменной для хранения значения каждого исходного сервера создаются и на которые ссылается файл скрипта базы данных master с **- v** переключиться в командной строке. Это помогает в поддержании статических значений в нескольких файлах скриптов, если значения переменных в нескольких файлах переменной.  

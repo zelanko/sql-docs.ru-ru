@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7382e4d1b9e9d968d7ad87af9830691dd931d657
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.openlocfilehash: 4ad185085c19d8286fa6a09e46742860a948849a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226621"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67934559"
 ---
 # <a name="automatic-tuning"></a>Автоматическая настройка
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "54226621"
 
 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] Мониторы запросы, которые выполняются в базе данных и автоматически повышает производительность рабочей нагрузки. [!INCLUDE[ssde_md](../../includes/ssde_md.md)] Имеет встроенный аналитический механизм, который может автоматически настраивать и повышать производительность запросов путем динамической адаптации базы данных к рабочей нагрузке. Существует два функций автонастройки, которые доступны.
 
- -  **Автоматическое исправление плана** идентифицирует проблемных запросов, планы выполнения и устраняет проблемы с производительностью плана выполнения запроса. **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Начиная с [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+ -  **Автоматическое исправление плана** идентифицирует проблемных запросов, планы выполнения и устраняет проблемы с производительностью плана выполнения запроса. **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
  -  **Автоматическое управление индексами** определяет индексы, которые должны быть добавлены в базу данных или, которые должны быть удалены. **Область применения**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 ## <a name="why-automatic-tuning"></a>Почему Автоматическая настройка?
@@ -96,7 +95,7 @@ SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
 
 В [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], можно найти с помощью системных представлений запросов Store регрессией в выборе плана. В [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], [!INCLUDE[ssde_md](../../includes/ssde_md.md)] и показывает потенциальных регрессией в выборе плана и рекомендуемые действия, которые должны быть применены в [sys.dm_db_tuning_recommendations &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) представления. В представлении отображаются сведения о проблеме, важность проблемы и сведения, такие как выявленных запросов, идентификатор плана с ухудшением, идентификатор плана, который был использован в качестве базовых показателей для сравнения и [!INCLUDE[tsql_md](../../includes/tsql-md.md)] инструкцию, которая может выполняться для исправления проблема.
 
-| Тип | description | DATETIME | score | подробности | ... |
+| type | description | datetime | score | details | ... |
 | --- | --- | --- | --- | --- | --- |
 | `FORCE_LAST_GOOD_PLAN` | Изменено с 4 мс до 14 мс времени ЦП | 3/17/2017 | 83 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |
 | `FORCE_LAST_GOOD_PLAN` | Изменено с 37 мс до 84 мс времени ЦП | 3/16/2017 | 26 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |

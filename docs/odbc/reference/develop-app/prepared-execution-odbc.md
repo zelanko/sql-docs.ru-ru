@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f08c8a98-31ee-48b2-9dbf-6f31c2166dbb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c7bd6bc8281dd6bdc3bcfbd437380b2d5269ee43
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2107ca1eeecc6fad24311c5bce629784ae4ceff0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63199105"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68023282"
 ---
 # <a name="prepared-execution-odbc"></a>Подготовленное выполнение ODBC
 Подготовленное выполнение является эффективным способом для выполнения инструкции более одного раза. Инструкция компилируется во-первых, или *подготовлен,* в план доступа. План доступа — а затем выполняются один или несколько раз в более позднее время. Дополнительные сведения о планах доступа см. в разделе [обработки инструкции SQL](../../../odbc/reference/processing-a-sql-statement.md).  

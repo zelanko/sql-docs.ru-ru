@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d2727ce7-da9f-4271-ae3c-9334ef477c14
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7b23466adb660f2aa18cb44a20d189f456c3bb3c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9d196a60986734c5717be9711af1fa28accee414
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697545"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963475"
 ---
 # <a name="server-property-rds"></a>Свойство Server (служба удаленных рабочих столов)
 Указывает протокол, имя и обмен данными Internet Information Services (IIS).  
@@ -126,7 +125,7 @@ DataControl.Server=""
 ## <a name="see-also"></a>См. также  
  [Пример свойства Server (VBScript)](../../../ado/reference/rds-api/server-property-example-vbscript.md)   
  [Свойство (RDS)](../../../ado/reference/rds-api/connect-property-rds.md)   
- [SQL Property](../../../ado/reference/rds-api/sql-property.md)   
+ [Свойство SQL](../../../ado/reference/rds-api/sql-property.md)   
  [Метод SubmitChanges (служба удаленных рабочих столов)](../../../ado/reference/rds-api/submitchanges-method-rds.md)
 
 

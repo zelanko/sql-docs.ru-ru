@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5c1becc5-f34e-4869-bf69-dfafab684540
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 515f9de1c1b3856758b9e0cd2892e059667cfbb7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0674bf993087b349d4e8b6f9947c65167e94df8e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47647532"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68001799"
 ---
 # <a name="logmarkhistory-transact-sql"></a>logmarkhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "47647532"
 |-----------------|---------------|-----------------|  
 |**database_name**|**nvarchar(128)**|Локальная база данных, в которой возникла помеченная транзакция.|  
 |**mark_name**|**nvarchar(128)**|Предоставляемое пользователем имя помеченной транзакции.|  
-|**Описание**|**nvarchar(255)**|Предоставляемое пользователем описание помеченной транзакции. Может иметь значение NULL.|  
+|**description**|**nvarchar(255)**|Предоставляемое пользователем описание помеченной транзакции. Может иметь значение NULL.|  
 |**user_name**|**nvarchar(128)**|Имя пользователя базы данных, выполнившего помеченную транзакцию. Может иметь значение NULL.|  
 |**lsn**|**numeric(25,0)**|Номер LSN записи транзакции с пометкой.|  
 |**mark_time**|**datetime**|Время фиксации помеченной транзакции (локальное время).|  

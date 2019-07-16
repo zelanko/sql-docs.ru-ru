@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 854f880cf9cb4f06ee4fc44fd18cec5f0ab99ca8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 79bea49705c4f2fb66b8c9866be335433cbb783f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62691068"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68049258"
 ---
 # <a name="drilldownmemberbottom-mdx"></a>DrilldownMemberBottom (многомерные выражения)
 
@@ -59,7 +58,7 @@ DrillDownMemberBottom(<Set_Expression1>, <Set_Expression2>, <Count> [,[<Numeric_
   
  Первый набор может содержать кортежи вместо элементов. Углубленная детализация кортежей является расширением OLE DB и возвращает набор кортежей вместо набора элементов.  
   
- **DrilldownMemberBottom** функция аналогична [DrilldownMember](../mdx/drilldownmember-mdx.md) работать, но вместо включения всех потомков каждого элемента первого набора, также представить во втором наборе, ** DrilldownMemberBottom** функция возвращает набор самых нижних потомков для каждого элемента.  
+ **DrilldownMemberBottom** функция аналогична [DrilldownMember](../mdx/drilldownmember-mdx.md) работать, но вместо включения всех потомков каждого элемента первого набора, также представить во втором наборе,  **DrilldownMemberBottom** функция возвращает набор самых нижних потомков для каждого элемента.  
   
  Запрос свойства XMLA MdpropMdxDrillFunctions позволяет проверить уровень поддержки, предоставляемой сервером для функций детализации; см. в разделе [поддерживаемые свойства XMLA &#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) сведения.  
   

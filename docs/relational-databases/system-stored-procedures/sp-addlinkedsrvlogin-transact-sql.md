@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: eb69f303-1adf-4602-b6ab-f62e028ed9f6
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: c34d7f326c10ceebb3ee3b97c72b583e13a78ff5
-ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
+ms.openlocfilehash: 1bf39a9a1262f30e3c0bbd6fd2ea5892a55540dd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59542194"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072671"
 ---
 # <a name="spaddlinkedsrvlogin-transact-sql"></a>sp_addlinkedsrvlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ sp_addlinkedsrvlogin [ @rmtsrvname = ] 'rmtsrvname'
  Имя связанного сервера, к которому применяется сопоставление имен входа. *серверу rmtsrvname* — **sysname**, не имеет значения по умолчанию.  
   
  `[ @useself = ] { 'TRUE' | 'FALSE' | NULL }'`  
- Определяет, следует ли подключиться к *серверу rmtsrvname* с олицетворением локального имени входа или явной отправки имени входа и пароля. Тип данных является **varchar (** 8 **)**, значение по умолчанию TRUE.  
+ Определяет, следует ли подключиться к *серверу rmtsrvname* с олицетворением локального имени входа или явной отправки имени входа и пароля. Тип данных является **varchar (** 8 **)** , значение по умолчанию TRUE.  
   
  Значение TRUE указывает, что имена входа используются собственные учетные данные для подключения к *серверу rmtsrvname*, с помощью *rmtuser* и *rmtpassword* пропуская аргументы. Значение FALSE указывает, что *rmtuser* и *rmtpassword* аргументы используются для подключения к *серверу rmtsrvname* для указанного *locallogin* . Если *rmtuser* и *rmtpassword* , также задано значение NULL, без имени входа или пароль используется для подключения к связанному серверу.  
   

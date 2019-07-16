@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2f2d22c1-51d6-4055-9f5a-53bc31e9fea0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d477dbc6b54d7ebd82b7e2ef8611f5f6dd807e83
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6352a5ae894adb09f714a78386bfecfa3ce1df77
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63188815"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041622"
 ---
 # <a name="interval-literal-syntax"></a>Синтаксис литерала интервала
 Для интервала литералы в ODBC используется следующий синтаксис.  
@@ -33,13 +32,13 @@ ms.locfileid: "63188815"
   
  *day-time-literal* ::= *day-time-interval* &#124; *time-interval*  
   
- *day-time-interval* ::= *days-value* [*hours-value* [:*minutes-value*[:*seconds-value*]]]  
+ *день интервала* :: = *значение дней* [*значение часов* [:*значение минут*[:*значение секунд*]]]  
   
  *time-interval* ::= *hours-value* [:*minutes-value* [:*seconds-value* ] ]  
   
- &#124; *minutes-value* [:*seconds-value* ]  
+ &#124;*значение минут* [:*значение секунд* ]  
   
- &#124; *seconds-value*  
+ &#124;*значение секунд*  
   
  *years-value* ::= *datetime-value*  
   
@@ -61,7 +60,7 @@ ms.locfileid: "63188815"
   
  *interval-qualifier* ::= *start-field* TO *end-field* &#124; *single-datetime-field*  
   
- *start-field* ::= *non-second-datetime-field* [(*interval-leading-field-precision* )]  
+ *поле начала* :: = *не секунду поля даты и времени* [(*интервал начальные поля точности* )]  
   
  *end-field* ::= *non-second-datetime-field* &#124; SECOND[(*interval-fractional-seconds-precision*)]  
   

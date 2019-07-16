@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: f242c1bd-3cc8-4c8b-8aaf-c79b6a8a0329
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: d7fff3c65aaf6a5670be2d457440f4384f7c5fdd
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: ec3fae7d4e2a649ea05c48d400728e229607d92f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011995"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079274"
 ---
 # <a name="syselasticpoolresourcestats-azure-sql-database"></a>sys.elastic_pool_resource_stats (база данных SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ ms.locfileid: "56011995"
 |**max_session_percent**|**Decimal(5,2)**|Максимальное число одновременных сеансов в процентах от предела пула.|  
 |**elastic_pool_dtu_limit**|**int**|Текущее максимальное значение параметра DTU для этого пула эластичных БД в течение этого интервала.|  
 |**elastic_pool_storage_limit_mb**|**bigint**|Значение для этого пула эластичных БД в мегабайтах во время этого интервала текущего размера хранилища эластичного пула.|
-|**avg_allocated_storage_percent**|**Decimal(5,2)**|Процент пространства данных, выделенной с помощью всех баз данных в эластичном пуле.  Это отношение данных пространства, выделенного для данных максимальный размер для эластичного пула.  Дополнительные сведения см. в разделе [Управление файлами места в базе данных SQL](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|  
+|**avg_allocated_storage_percent**|**Decimal(5,2)**|Процент пространства данных, выделенной с помощью всех баз данных в эластичном пуле.  Это отношение данных пространства, выделенного для данных максимальный размер для эластичного пула.  Дополнительные сведения см.: [Управление файлами места в базе данных SQL](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|  
   
 ## <a name="remarks"></a>Примечания
 

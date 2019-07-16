@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 19c54fc5-9dd6-49b6-8c9f-a38961b40a65
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4a51183964fe36d799e0e62243c6a0012da99727
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 9939d11e3a779cc25d7faeb4950783353947f140
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793277"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081449"
 ---
 # <a name="writing-odbc-3x-applications"></a>Написание приложений ODBC 3.x
 Когда ODBC *2.x* обновлении приложения до ODBC *3.x*, должны быть написаны таким образом, что она работает с и ODBC *2.x* и *3.x* драйверы . Приложение должно предусматривать условный код, чтобы воспользоваться всеми преимуществами ODBC *3.x* функции.  

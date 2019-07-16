@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 56895fe5-e8df-4d75-9adc-c1f7757cdef8
 author: pmasl
 ms.author: pelopes
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 254ba42c828bbe719d5ddce0502d0a9063755fe3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cfca7379336d07b9e5a7099c6c8075c0f959b7ed
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65947268"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900924"
 ---
 # <a name="sysdmftsmemorybuffers-transact-sql"></a>sys.dm_fts_memory_buffers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "65947268"
 |Столбец|Data type|Описание|  
 |------------|---------------|-----------------|  
 |**pool_id**|**int**|Идентификатор выделенного пула памяти.<br /><br /> 0 = небольшие буферы<br /><br /> 1 = большие буферы|  
-|**memory_address**|**varbinary(8)**|Адрес выделенного буфера памяти.|  
+|**адрес_памяти**|**varbinary(8)**|Адрес выделенного буфера памяти.|  
 |**name**|**nvarchar(4000)**|Имя общего буфера памяти, для которого было произведено данное выделение.|  
 |**is_free**|**bit**|Текущее состояние буфера памяти.<br /><br /> 0 = свободен<br /><br /> 1 = занят|  
 |**row_count**|**int**|Число строк, обрабатываемое в данный момент буфером.|  
@@ -50,7 +49,7 @@ ms.locfileid: "65947268"
 ## <a name="permissions"></a>Разрешения  
 
 На [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], требуется `VIEW SERVER STATE` разрешение.   
-На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], требуется `VIEW DATABASE STATE` разрешение в базе данных.   
+В [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] необходимо разрешение `VIEW DATABASE STATE` для базы данных.   
   
 ## <a name="physical-joins"></a>Физические соединения  
  ![Существенные соединения данного динамического административного представления](../../relational-databases/system-dynamic-management-views/media/join-dm-fts-memory-buffers-1.gif "существенные соединения данного динамического административного представления")  

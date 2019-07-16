@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d0b7e254-c89f-4406-b846-a060ef038c30
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 48b1f3794828af7f60c1d00313506fa9f9c522c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e5ecc6de67defb2366bf208c38bd2de5bff643e4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696634"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920900"
 ---
 # <a name="ado-objects-and-interfaces"></a>Объекты и интерфейсы ADO
 Связи между этими объектами, представлены в [объектная модель ADO](../../../ado/reference/ado-api/ado-object-model.md).  
@@ -38,7 +37,7 @@ ms.locfileid: "66696634"
 |[Ошибка](../../../ado/reference/ado-api/error-object.md)|Содержит сведения об ошибках доступа к данным, которые относятся к одной операции с участием поставщика.<br /><br /> **Ошибка** объект не является безопасным для использования в сценариях.|  
 |[Поле](../../../ado/reference/ado-api/field-object.md)|Представляет столбец данных с типом данных.|  
 |[Параметр](../../../ado/reference/ado-api/parameter-object.md)|Представляет параметр или аргумент, связанный с **команда** объекта на основании параметризованного запроса или хранимой процедуры.<br /><br /> **Параметр** объект не является безопасным для использования в сценариях.|  
-|[Свойство](../../../ado/reference/ado-api/property-object-ado.md)|Представляет характеристику динамического объекта ADO, определенной поставщиком.|  
+|[Property](../../../ado/reference/ado-api/property-object-ado.md)|Представляет характеристику динамического объекта ADO, определенной поставщиком.|  
 |[Запись](../../../ado/reference/ado-api/record-object-ado.md)|Представляет строку **записей**, каталог или файл в файловой системе. **Записи** объект безопасен для скриптов.|  
 |[Набор записей](../../../ado/reference/ado-api/recordset-object-ado.md)|Представляет набор записей из базовой таблицы или результаты выполнения команды. В любое время **записей** объект ссылается на одну запись в наборе как текущую запись.<br /><br /> **Записей** объект безопасен для скриптов.|  
 |[поток](../../../ado/reference/ado-api/stream-object-ado.md)|Представляет двоичный поток данных.<br /><br /> **Stream** объект безопасен для скриптов.|  

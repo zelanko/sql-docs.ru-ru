@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d0b64286-2cc4-4a22-8f1d-9aefeebbcbc6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5e0c0e9e2debfc33d8bb51d4797215155247f3a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0d737c2f031fa3ba630eabb7e52dff0e056c3390
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66698667"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919590"
 ---
 # <a name="comparebookmarks-method-ado"></a>Метод CompareBookmarks (ADO)
 Сравнивает два закладки и возвращает сведения об их относительных значениях.  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 43dc42a8-7057-48e6-93d6-880d5c5c51a4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 76cd14b8ee1c5a55e0312993090bfaf098c7e219
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6aebf318652e604c5f5ad4c30ef389fdfd9e78c7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702135"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925644"
 ---
 # <a name="data-section"></a>Раздел данных
 Раздел данных определяет данные для набора строк вместе с любым требующимся обновления, вставки или удаления. Раздел данных может содержать ноль или более строк. Он может содержать только данные из одного набора строк, где строки определяется схемой. Кроме того как было отмечено ранее, можно опустить столбцы без данных. Если атрибут или дочерний элемент используется в секции данных, и эта конструкция не был определен в разделе схемы, он игнорируется без уведомления.  

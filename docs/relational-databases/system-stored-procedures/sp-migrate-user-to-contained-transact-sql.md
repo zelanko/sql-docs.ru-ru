@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b3a49ff6-46ad-4ee7-b6fe-7e54213dc33e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9bdab8cd50a16913f37115f0d38c00c5c699bc0f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d5bcafb24313851f58fd18fc19ebabd0ee98f6dd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66836298"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022336"
 ---
 # <a name="spmigrateusertocontained-transact-sql"></a>sp_migrate_user_to_contained (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ sp_migrate_user_to_contained [ @username = ] N'user' ,
  [ **@rename =** ] **N "***copy_login_name***"**  | **N "***keep_name***"**  
  Если с именем входа пользователя базы данных имеет другое имя пользователя от имени входа, используйте *keep_name* для сохранения имени пользователя базы данных во время миграции. Используйте *copy_login_name* для создания нового пользователя автономной базы данных с именем входа в систему, а не пользователя. Если пользователь базы данных, созданный на основе имени входа, имеет имя, совпадающее с именем входа, то в обоих вариантах будет создан пользователь автономной базы данных без изменения имени.  
   
- [ **@disablelogin =** ] **N'***disable_login***'**  | **N'***do_not_disable_login***'**  
+ [ **@disablelogin =** ] **N "***disable_login***"**  | **N "***do_not_disable_login***"**  
  *disable_login* отключает имя входа в базе данных master. Для подключения, если имя входа отключено, необходимо указать имя автономной базы данных как **исходный каталог** как часть строки подключения.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -70,7 +69,7 @@ sp_migrate_user_to_contained [ @username = ] N'user' ,
   
 -   **Хранимая процедура sp_migrate_user_to_contained** не может использоваться в системной базе данных.  
   
-## <a name="security"></a>безопасность  
+## <a name="security"></a>Безопасность  
  При миграции пользователей следите за тем, чтобы не отключить и не удалить все имена входа администраторов экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если удаляются все имена входа, см. в разделе [подключение к SQL Server при системных администраторов заблокирован](../../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md).  
   
  Если **BUILTIN\Administrators** присутствует имя входа, администраторы могут подключиться, запустив свое приложение с помощью **Запуск от имени администратора** параметр.  

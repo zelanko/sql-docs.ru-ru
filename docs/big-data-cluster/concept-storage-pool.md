@@ -5,17 +5,16 @@ description: В этой статье описывается пула носит
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4d1ed459aa44de3855153f4316b82ca77db60049
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 58e6f16a088d6dc6c1fc6bd32297e7bd698acbbf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67729093"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958651"
 ---
 # <a name="what-is-the-storage-pool-sql-server-big-data-clusters"></a>Что такое пул носителей (кластеры больших данных в SQL Server)
 

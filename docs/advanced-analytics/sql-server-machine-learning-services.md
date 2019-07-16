@@ -7,14 +7,13 @@ ms.date: 06/13/2019
 ms.topic: overview
 author: dphansen
 ms.author: davidph
-manager: cgronlun
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: cbe617ea7732468732555bf6f0bba8ebaec2c17a
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: 16bf39172144b17b3ecb03969244f31ac4715400
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67141383"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962309"
 ---
 # <a name="sql-server-machine-learning-services"></a>Изучение служб машины SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -56,10 +55,10 @@ ms.locfileid: "67141383"
 
 | Пакет | Язык | Описание |
 |:--------|:---------|:------------|
-| [RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) | Чтение | Распределенная и параллельная обработка для задач R: преобразование данных, исследование, визуализация, статистическая и прогнозная аналитика. |
-| [MicrosoftML](/machine-learning-server/r-reference/microsoftml/microsoftml-package) | Чтение | Функции, основанные на алгоритмах ИИ Майкрософт, адаптированные для R. |
-| [olapR](/machine-learning-server/r-reference/olapr/olapr) | Чтение | Импорт данных из куба OLAP. |
-| [sqlRUtils](/machine-learning-server/r-reference/sqlrutils/sqlrutils) | Чтение | Вспомогательные функции для инкапсуляции R и T-SQL. |
+| [RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) | R | Распределенная и параллельная обработка для задач R: преобразование данных, исследование, визуализация, статистическая и прогнозная аналитика. |
+| [MicrosoftML](/machine-learning-server/r-reference/microsoftml/microsoftml-package) | R | Функции, основанные на алгоритмах ИИ Майкрософт, адаптированные для R. |
+| [olapR](/machine-learning-server/r-reference/olapr/olapr) | R | Импорт данных из куба OLAP. |
+| [sqlRUtils](/machine-learning-server/r-reference/sqlrutils/sqlrutils) | R | Вспомогательные функции для инкапсуляции R и T-SQL. |
 [revoscalepy](/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | Python | Распределенная и параллельная обработка задач Python: преобразование данных, исследование, визуализация, статистическая и прогнозная аналитика. |
 | [microsoftml](/machine-learning-server/python-reference/microsoftml/microsoftml-package) | Python | Функции, основанные на алгоритмах ИИ Майкрософт, адаптированные для Python. |
 | &nbsp; | &nbsp; | &nbsp; |
