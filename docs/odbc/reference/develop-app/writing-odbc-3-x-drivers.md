@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 9b75f59b-623f-4711-9ca2-e751b3622e00
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3f548e1496ce45d9fdb4677fd9659de349e5c5cc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fb403cef47f901cdb43bbb32c669ba68aa34913d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62636109"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078898"
 ---
 # <a name="writing-odbc-3x-drivers"></a>Написание драйверов ODBC 3.x
 В следующей таблице показаны функции поддержки в ODBC 3. *x* драйвер и приложение ODBC и сопоставления, выполняемые диспетчером драйверов при вызове функций для работы с ODBC 3. *x* драйвера.  
   
-|Компонент|Поддерживается<br /><br /> по<br /><br /> ODBC 3.*x*<br /><br /> драйвер?|Поддерживается<br /><br /> по<br /><br /> ODBC 3.*x*<br /><br /> приложение?|Сопоставить поддерживается<br /><br /> в ODBC 3. *x*<br /><br /> Диспетчер драйверов для<br /><br /> ODBC-3. *x* драйвер?|  
+|Компонент|Поддерживается<br /><br /> по<br /><br /> ODBC 3. *x*<br /><br /> драйвер?|Поддерживается<br /><br /> по<br /><br /> ODBC 3. *x*<br /><br /> приложение?|Сопоставить поддерживается<br /><br /> в ODBC 3. *x*<br /><br /> Диспетчер драйверов для<br /><br /> ODBC-3. *x* драйвер?|  
 |--------------|----------------------------------------------------|---------------------------------------------------------|---------------------------------------------------------------------------------------------|  
 |**SQLAllocConnect**|Нет|Нет [1]|Да|  
 |**SQLAllocEnv**|Нет|Нет [1]|Да|  

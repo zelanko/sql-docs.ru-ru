@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 8b75c906-7315-486c-bc59-293ef12078e8
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b9dca1aca3883b16b13f4e0abdb842deaf5bbfdd
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 55fedd154195b4f5abf230120a0e16e6a41ce6e3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537906"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032928"
 ---
 # <a name="spsettriggerorder-transact-sql"></a>sp_settriggerorder (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @triggername = ] '[ _triggerschema.] _triggername'` Имя триггера и схемы, к которой он принадлежит, если это применимо, порядок которых нужно задать или изменить. [_triggerschema_**.**] *triggername* — **sysname**. Если имя не соответствует триггеру или соответствует триггеру INSTEAD OF, процедура возвращает ошибку. *triggerschema* нельзя указывать для триггеров DDL или входа.  
+`[ @triggername = ] '[ _triggerschema.] _triggername'` Имя триггера и схемы, к которой он принадлежит, если это применимо, порядок которых нужно задать или изменить. [_triggerschema_ **.** ] *triggername* — **sysname**. Если имя не соответствует триггеру или соответствует триггеру INSTEAD OF, процедура возвращает ошибку. *triggerschema* нельзя указывать для триггеров DDL или входа.  
   
 `[ @order = ] 'value'` Это параметр для нового заказа триггера. *значение* — **varchar(10)** и он может принимать одно из следующих значений.  
   
@@ -61,7 +60,7 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
   
  Триггер может быть назначен в качестве **первый** или **последнего** триггер для типа инструкции только после этого триггера был определен как триггер для данного типа инструкций. Например, триггер **TR1** может быть назначен **первый** для инструкции INSERT в таблице **T1** Если **TR1** определен как триггер INSERT. [!INCLUDE[ssDE](../../includes/ssde-md.md)] Возвращает сообщение об ошибке, если **TR1**, определенный только как триггер INSERT задан в качестве **первый**, или **последнего**, триггер для инструкции UPDATE. Дополнительные сведения см. в разделе «Примечания».  
   
- **@namespace=** { **«DATABASE»** | **«СЕРВЕР»** | NULL}  
+ **@namespace=** { **«DATABASE»**  |  **«СЕРВЕР»** | NULL}  
  Когда *triggername* является триггером DDL, **@namespace** указывает ли *triggername* был создан с помощью области базы данных или в области сервера. Если *triggername* является триггером входа, необходимо указать сервер. Дополнительные сведения о область действия триггера DDL, см. в разделе [триггеры DDL](../../relational-databases/triggers/ddl-triggers.md). Если не указан или если указано значение NULL, *triggername* является триггером DML.  
   
 ||  

@@ -28,13 +28,12 @@ helpviewer_keywords:
 ms.assetid: e449de20-d6ca-4902-9f8e-814eb6e86650
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 47795998b019df22b01852519f75f6e8d3d274dd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 90a39ad540f3320ed78e981030679b59d911eeef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63269868"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68080772"
 ---
 # <a name="support-for-rules-triggers-default-values-and-stored-procedures-visual-foxpro-odbc-driver"></a>Поддержка правил, триггеров, значений по умолчанию и хранимых процедур (драйвер ODBC для Visual FoxPro)
 Не удается создать правила Visual FoxPro, триггеры, значения по умолчанию или хранимых процедур с помощью драйвера ODBC для Visual FoxPro. Тем не менее приложение может взаимодействовать с существующие правила, триггеры, значения по умолчанию или хранимых процедур, как он вставляет, обновляются или удаляются из базы данных Visual FoxPro.  
@@ -71,7 +70,7 @@ ms.locfileid: "63269868"
 |ATLINE ()-функция|ATN2 ()-функция||  
 |Среднее команды|Функция ACOS)||  
   
-## <a name="b"></a>B  
+## <a name="b"></a>С  
   
 ||||  
 |-|-|-|  
@@ -81,7 +80,7 @@ ms.locfileid: "63269868"
 |BITTEST ()-функция|BITXOR ()-функция||  
 |Функция BOF)|Функция BITAND)||  
   
-## <a name="c"></a>C  
+## <a name="c"></a>В  
   
 ||||  
 |-|-|-|  
@@ -117,7 +116,7 @@ ms.locfileid: "63269868"
 |Ошибка ()-функция|Функция EXP)||  
 |Команда END TRANSACTION|EOF ()-функция||  
   
-## <a name="f"></a>Ж  
+## <a name="f"></a>C  
   
 ||||  
 |-|-|-|  
@@ -128,7 +127,7 @@ ms.locfileid: "63269868"
 |Команда свободного TABLE|FSIZE ()-функция|Функция FTIME)|  
 |FULLPATH ()-функция|ФУНКЦИИ-команда|Аргумент ()-функция|  
   
-## <a name="g"></a>Ж  
+## <a name="g"></a>П  
   
 ||||  
 |-|-|-|  
@@ -136,7 +135,7 @@ ms.locfileid: "63269868"
 |GETFLDSTATE ()-функция|GOMONTH ()-функция||  
 |GETCP ()-функция|GETENV ()-функция||  
   
-## <a name="h"></a>З  
+## <a name="h"></a>H  
   
 |||  
 |-|-|  
@@ -153,7 +152,7 @@ ms.locfileid: "63269868"
 |Isleadbyte-функция)|ISLOWER ()-функция|Функция ISNULL)|  
 |ISREADONLY ()-функция|ISUPPER ()-функция||  
   
-## <a name="k"></a>Л  
+## <a name="k"></a>K  
   
 ||||  
 |-|-|-|  
@@ -179,7 +178,7 @@ ms.locfileid: "63269868"
 |Функция MIN)|Функции (минуты)|MLINE ()-функция|  
 |Функция MOD)|МЕСЯЦ ()-функция|MTON ()-функция|  
   
-## <a name="n"></a>Нет  
+## <a name="n"></a>в  
   
 ||||  
 |-|-|-|  
@@ -194,7 +193,7 @@ ms.locfileid: "63269868"
 |Основные КОМАНДЫ|НА ()-функция|Команда ОТКРЫТЬ базу данных|  
 |ИЛИ оператор|ПОРЯДОК ()-функция|ОС ()-функция|  
   
-## <a name="p"></a>P  
+## <a name="p"></a>С  
   
 ||||  
 |-|-|-|  
@@ -202,9 +201,9 @@ ms.locfileid: "63269868"
 |ПАРАМЕТРЫ команды|(ОСНОВНОЙ)-функция|Команда PRIVATE|  
 |Функция PI)|ПРОГРАММЫ ()-функция|ПРАВИЛЬНЫЙ ()-функция|  
 |Команда ПРОЦЕДУРЫ|PV ()-функция||  
-|ОТКРЫТЫЙ команды|PADL( ) &#124; PADR( ) &#124; PADC( ) Functions||  
+|ОТКРЫТЫЙ команды|() PADL &#124; (PADR) &#124; PADC функции)||  
   
-## <a name="r"></a>Чтение  
+## <a name="r"></a>R  
   
 ||||  
 |-|-|-|  
@@ -274,7 +273,7 @@ ms.locfileid: "63269868"
 |-|-|-|  
 |НЕДЕЛЯ ()-функция|||  
   
-## <a name="y"></a>Да  
+## <a name="y"></a>Y  
   
 ||||  
 |-|-|-|  

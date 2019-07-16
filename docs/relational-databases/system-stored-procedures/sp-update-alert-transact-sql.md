@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4bbaeaab-8aca-4c9e-abc1-82ce73090bd3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 54d96cf86b55a7c5a24917672bcae470a3bf7335
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: baecdca82d7edcb27196c7c43d9d071a82adf792
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529576"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084951"
 ---
 # <a name="spupdatealert-transact-sql"></a>Хранимая процедура sp_update_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +74,7 @@ sp_update_alert
   
 `[ @delay_between_responses = ] delay_between_responses` Новый период ожидания между ответами на предупреждение в секундах. *delay_between_responses* — **int**, значение по умолчанию NULL.  
   
-`[ @notification_message = ] 'notification_message'` Измененный текст дополнительного сообщения, отправляемое оператору как часть сообщения электронной почты, **команды net send**, или уведомления на пейджер. *notification_message* — **nvarchar(512)**, значение по умолчанию NULL.  
+`[ @notification_message = ] 'notification_message'` Измененный текст дополнительного сообщения, отправляемое оператору как часть сообщения электронной почты, **команды net send**, или уведомления на пейджер. *notification_message* — **nvarchar(512)** , значение по умолчанию NULL.  
   
 `[ @include_event_description_in = ] include_event_description_in` Указывает, является ли описание [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ошибки в журнале приложений Windows, которые должны быть включены в сообщение уведомления. *include_event_description_in* — **tinyint**, значение по умолчанию NULL, и может иметь одно или несколько из следующих значений.  
   
@@ -89,7 +88,7 @@ sp_update_alert
   
 `[ @database_name = ] 'database'` Имя базы данных, в которой должна произойти ошибка, для которой срабатывает предупреждение. *База данных* является **sysname.** Символы, заключенные в квадратные скобки ([ ]), являются недопустимыми. Значение по умолчанию — NULL.  
   
-`[ @event_description_keyword = ] 'event_description_keyword'` Последовательность символов, которые необходимо найти в описании ошибки в журнале сообщений об ошибках. Могут использоваться символы-шаблоны выражений [!INCLUDE[tsql](../../includes/tsql-md.md)] LIKE. *event_description_keyword* — **nvarchar(100)**, значение по умолчанию NULL. Этот параметр полезен для фильтрации имен объектов (например, **% customer_table %**).  
+`[ @event_description_keyword = ] 'event_description_keyword'` Последовательность символов, которые необходимо найти в описании ошибки в журнале сообщений об ошибках. Могут использоваться символы-шаблоны выражений [!INCLUDE[tsql](../../includes/tsql-md.md)] LIKE. *event_description_keyword* — **nvarchar(100)** , значение по умолчанию NULL. Этот параметр полезен для фильтрации имен объектов (например, **% customer_table %** ).  
   
 `[ @job_id = ] job_id` Идентификационный номер задания. *job_id* — **uniqueidentifier**, значение по умолчанию NULL. Если *job_id* указано, *имя_задания* необходимо пропустить.  
   
@@ -111,19 +110,19 @@ sp_update_alert
   
 `[ @raise_snmp_trap = ] raise_snmp_trap` Зарезервировано.  
   
-`[ @performance_condition = ] 'performance_condition'` Значение, выраженное в формате **"***itemcomparatorvalue***"**. *performance_condition* — **nvarchar(512)**, значение по умолчанию NULL и состоит из следующих элементов.  
+`[ @performance_condition = ] 'performance_condition'` Значение, выраженное в формате **"***itemcomparatorvalue***"** . *performance_condition* — **nvarchar(512)** , значение по умолчанию NULL и состоит из следующих элементов.  
   
 |Элемент формата|Описание|  
 |--------------------|-----------------|  
 |*Элемент*|Объект производительности, счетчик производительности или именованный экземпляр счетчика.|  
-|*Оператор сравнения*|Один из этих операторов: **>**, **<**, **=**|  
+|*Оператор сравнения*|Один из этих операторов: **>** , **<** , **=**|  
 |*Значение*|Числовое значение счетчика|  
   
 `[ @category_name = ] 'category'` Имя категории предупреждения. *Категория* — **sysname** значение по умолчанию NULL.  
   
 `[ @wmi_namespace = ] 'wmi_namespace'` Пространство имен WMI для запроса событий. *wmi_namespace* — **sysname**, значение по умолчанию NULL.  
   
-`[ @wmi_query = ] 'wmi_query'` Запрос, указывающий событие WMI для предупреждения. *wmi_query* — **nvarchar(512)**, значение по умолчанию NULL.  
+`[ @wmi_query = ] 'wmi_query'` Запрос, указывающий событие WMI для предупреждения. *wmi_query* — **nvarchar(512)** , значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  

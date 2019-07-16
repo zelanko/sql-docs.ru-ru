@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: f1a7fc0a-f4b4-47eb-9138-eebf930dc9ac
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ed2f40b2ea4f711c36a3c17031047fef555ab12a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c12575ae2eb07b5984d1e4a383830ff6fb44573a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62645509"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091858"
 ---
 # <a name="backupfile-transact-sql"></a>backupfile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ ms.locfileid: "62645509"
 |**physical_drive**|**nvarchar(260)**|Имя физического диска или секции. Может иметь значение NULL.|  
 |**physical_name**|**nvarchar(260)**|Остаток имени физического файла (операционная система). Может иметь значение NULL.|  
 |**state**|**tinyint**|Одно из следующих состояний файла.<br /><br /> 0 = ONLINE<br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY PENDING<br /><br /> 4 = SUSPECT<br /><br /> 6 = OFFLINE<br /><br /> 7 = DEFUNCT<br /><br /> 8 = УДАЛЕНЫ<br /><br /> Примечание. Значение 5 пропущено в том случае, так что эти значения соответствуют значениям для состояний базы данных.|  
-|**state_desc**|**nvarchar(64)**|Одно из следующих описаний состояния файла.<br /><br /> ONLINE RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT OFFLINE DEFUNCT|  
+|**state_desc**|**Nvarchar(64)**|Одно из следующих описаний состояния файла.<br /><br /> ONLINE RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT OFFLINE DEFUNCT|  
 |**create_lsn**|**numeric(25,0)**|Регистрационный номер в журнале, под которым был создан файл.|  
 |**drop_lsn**|**numeric(25,0)**|Регистрационный номер в журнале, под которым файл был удален. Может иметь значение NULL.<br /><br /> Если файл не удален, установлено значение NULL.|  
 |**file_guid**|**uniqueidentifier**|Уникальный идентификатор файла.|  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2726498c-dbd8-4266-983b-ae7d62c39142
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f67f074596bfcf93eb7017a7afe273285f721aae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 409c4e21395b7b903cf4ff03726fbd37a2a218d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66695334"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919086"
 ---
 # <a name="deleterecord-method-ado"></a>Метод DeleteRecord (ADO)
 Удаляет сущности, представленной [записи](../../../ado/reference/ado-api/record-object-ado.md).  
@@ -36,7 +35,7 @@ Record.DeleteRecord Source, Async
   
 #### <a name="parameters"></a>Параметры  
  *Source*  
- Необязательный. Объект **строка** значение, содержащее URL-адрес идентифицирует сущность (например, файл или каталог) для удаления. Если *источника* опущен или указывает пустую строку, сущности, представленной текущим [записи](../../../ado/reference/ado-api/record-object-ado.md) удаляется. Если запись является записью коллекции ([RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md) из **adCollectionRecord**, например в каталоге) также будут удалены все дочерние элементы (например, вложенные папки).  
+ Необязательный параметр. Объект **строка** значение, содержащее URL-адрес идентифицирует сущность (например, файл или каталог) для удаления. Если *источника* опущен или указывает пустую строку, сущности, представленной текущим [записи](../../../ado/reference/ado-api/record-object-ado.md) удаляется. Если запись является записью коллекции ([RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md) из **adCollectionRecord**, например в каталоге) также будут удалены все дочерние элементы (например, вложенные папки).  
   
  *Async*  
  Необязательный параметр. Объект **логическое** значением, которое при **True**, указывает, что асинхронная операция удаления.  

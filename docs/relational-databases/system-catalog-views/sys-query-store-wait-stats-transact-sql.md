@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9e91217f725251b17dadbcdddeb04b4d06d82642
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 68ceb35ee3ef2cb3db3233c7050380584163c317
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59476670"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067923"
 ---
 # <a name="sysquerystorewaitstats-transact-sql"></a>sys.query_store_wait_stats (Transact-SQL)
 
@@ -63,7 +62,7 @@ ms.locfileid: "59476670"
 |**5**|**Кратковременной блокировки буфера**|PAGELATCH_ %|
 |**6**|**Буфер ввода-ВЫВОДА**|PAGEIOLATCH_ %|
 |**7**|**Компиляция***|RESOURCE_SEMAPHORE_QUERY_COMPILE|
-|**8**|**SQL CLR**|CLR%, SQLCLR%|
+|**8**|**SQL CLR**|CLR %, SQLCLR %|
 |**9**|**Зеркальное отображение**|DBMIRROR %|
 |**10**|**Transaction**|XACT%, DTC%, TRAN_MARKLATCH_%, MSQL_XACT_%, TRANSACTION_MUTEX|
 |**11**|**Простоя**|% SLEEP_, LAZYWRITER_SLEEP, SQLTRACE_BUFFER_FLUSH, SQLTRACE_INCREMENTAL_FLUSH_SLEEP, SQLTRACE_WAIT_ENTRIES, FT_IFTS_SCHEDULER_IDLE_WAIT, XE_DISPATCHER_WAIT, REQUEST_FOR_DEADLOCK_SEARCH, LOGMGR_QUEUE, ONDEMAND_TASK_QUEUE, CHECKPOINT_ ОЧЕРЕДИ, XE_TIMER_EVENT|
@@ -77,8 +76,8 @@ ms.locfileid: "59476670"
 |**19**|**Трассировка**|TRACEWRITE, SQLTRACE_LOCK, SQLTRACE_FILE_BUFFER, SQLTRACE_FILE_WRITE_IO_COMPLETION, SQLTRACE_FILE_READ_IO_COMPLETION, SQLTRACE_PENDING_BUFFER_WRITERS, SQLTRACE_SHUTDOWN, QUERY_TRACEOUT, TRACE_EVTNOTIFF|
 |**20**|**Полнотекстовый поиск**|FT_RESTART_CRAWL, FULLTEXT СБОРА ДАННЫХ, MSSEARCH, FT_METADATA_MUTEX, FT_IFTSHC_MUTEX, FT_IFTSISM_MUTEX, FT_IFTS_RWLOCK, FT_COMPROWSET_RWLOCK, FT_MASTER_MERGE, FT_PROPERTYLIST_CACHE, FT_MASTER_MERGE_COORDINATOR, PWAIT_RESOURCE_SEMAPHORE_FT_ PARALLEL_QUERY_SYNC|
 |**21**|**Другие дискового ввода-ВЫВОДА**|ASYNC_IO_COMPLETION, IO_COMPLETION, BACKUPIO, WRITE_COMPLETION, IO_QUEUE_LIMIT, IO_RETRY|
-|**22**|**Репликация**|SE_REPL_ %, REPL_ %, HADR_ % **(но не HADR_THROTTLE_LOG_RATE_GOVERNOR)**, % PWAIT_HADR_, REPLICA_WRITES, FCB_REPLICA_WRITE, FCB_REPLICA_READ, PWAIT_HADRSIM|
-|**23**|**Скорость регулятора журналов**|LOG_RATE_GOVERNOR, POOL_LOG_RATE_GOVERNOR, HADR_THROTTLE_LOG_RATE_GOVERNOR, INSTANCE_LOG_RATE_GOVERNOR|
+|**22**|**Репликация**|SE_REPL_ %, REPL_ %, HADR_ % **(но не HADR_THROTTLE_LOG_RATE_GOVERNOR)** , % PWAIT_HADR_, REPLICA_WRITES, FCB_REPLICA_WRITE, FCB_REPLICA_READ, PWAIT_HADRSIM|
+|**23**|**Скорость регулятора журналов**|LOG_RATE_GOVERNOR POOL_LOG_RATE_GOVERNOR, HADR_THROTTLE_LOG_RATE_GOVERNOR, INSTANCE_LOG_RATE_GOVERNOR|
 
 **Компиляция** категории ожидания сейчас не поддерживается.
 

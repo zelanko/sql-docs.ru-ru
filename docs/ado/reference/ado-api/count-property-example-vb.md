@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 35033910-623b-449a-a57d-baff3ed5ab8f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cba540af0557c96cb265abefc2a6144530ea390d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5be99b4f43669a14f948cf10ee0b91028907ec0c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66695754"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933361"
 ---
 # <a name="count-property-example-vb"></a>Пример свойства Count (Visual Basic)
 В этом примере показано [число](../../../ado/reference/ado-api/count-property-ado.md) свойство с коллекциями в ***сотрудника*** базы данных. Свойство получает число объектов в каждой коллекции и задает верхнюю границу для циклов, которые перечисляют этих коллекций. Другой способ для перечисления этих коллекций без использования **число** свойство было бы использовать `For Each...Next` инструкций.  

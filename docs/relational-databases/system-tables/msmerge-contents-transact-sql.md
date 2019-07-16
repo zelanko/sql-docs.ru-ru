@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8d68a61a-683f-4b20-92f9-c0a8d9ba0ad1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e5aa95edeb1a947aea517de30efcbbbc3c6c799c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a4be6cffcc7e4f13b88d8037b53d438d604b9650
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52750386"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68089937"
 ---
 # <a name="msmergecontents-transact-sql"></a>MSmerge_contents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

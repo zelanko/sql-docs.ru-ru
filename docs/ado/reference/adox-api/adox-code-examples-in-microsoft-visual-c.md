@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b63ec31e-488c-4677-ab58-01371015e692
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 518677742431aa2283c1613c7f8e78d25a31e091
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d8ee6ac768cc7cb0225f78602754c64e0363786f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66708448"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67952120"
 ---
 # <a name="adox-code-examples-in-microsoft-visual-c"></a>Примеры кода ADOX в Microsoft Visual C++
 В этих разделах обсуждаются образцы кода помогут вам понять, как использовать ADOX. Все примеры кода написаны с помощью Microsoft Visual C++.  

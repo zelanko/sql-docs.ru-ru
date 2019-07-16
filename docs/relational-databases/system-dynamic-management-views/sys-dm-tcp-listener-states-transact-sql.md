@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 9997ffed-a4c1-428f-8bac-3b9e4b16d7cf
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f45c634b2a5ab057fd9c2ae878e544a6b7d84f7f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 396d2e1c2d0387e716123ce6f87ea5cef4ecbbe8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62960030"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090649"
 ---
 # <a name="sysdmtcplistenerstates-transact-sql"></a>sys.dm_tcp_listener_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "62960030"
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**listener_id**|**int**|Прослушивателя внутренний идентификатор. Не допускает значение NULL.<br /><br /> Первичный ключ.|  
-|**ip_address**|**nvarchar(48)**|IP-адрес прослушивателя, который доступен в сети и по которому в настоящее время идет прослушивание. Допустимы адреса IPv4 и IPv6. Если прослушиватель имеет адреса обоих типов, то они указываются в списке раздельно. Шаблон IPv4 отображается как «0.0.0.0». Шаблон IPv6 отображается как «::».<br /><br /> Не допускает значение NULL.|  
+|**IP-адрес**|**nvarchar(48)**|IP-адрес прослушивателя, который доступен в сети и по которому в настоящее время идет прослушивание. Допустимы адреса IPv4 и IPv6. Если прослушиватель имеет адреса обоих типов, то они указываются в списке раздельно. Шаблон IPv4 отображается как «0.0.0.0». Шаблон IPv6 отображается как «::».<br /><br /> Не допускает значение NULL.|  
 |**is_ipv4**|**bit**|Тип IP-адреса<br /><br /> 1 = IPv4<br /><br /> 0 = IPv6|  
 |**port**|**int**|Номер порта, на котором работает прослушиватель. Не допускает значение NULL.|  
 |**type**|**tinyint**|Тип прослушивателя, может принимать одно из следующих значений:<br /><br /> 0 = [!INCLUDE[tsql](../../includes/tsql-md.md)]<br /><br /> 1 = компонент Service Broker<br /><br /> 2 = зеркальное отображение базы данных<br /><br /> Не допускает значение NULL.|  
@@ -48,7 +47,7 @@ ms.locfileid: "62960030"
 |**state_desc**|**nvarchar(16) в формате**|Описание **состояние**, используя один из:<br /><br /> ONLINE<br /><br /> PENDING_RESTART<br /><br /> Не допускает значение NULL.|  
 |**start_time**|**datetime**|Отметка времени, указывающая, когда был запущен прослушиватель. Не допускает значение NULL.|  
   
-## <a name="security"></a>безопасность  
+## <a name="security"></a>Безопасность  
   
 ### <a name="permissions"></a>Разрешения  
  необходимо разрешение VIEW SERVER STATE на сервере.  

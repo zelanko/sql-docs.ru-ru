@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: fb4088d5-5968-42d6-aeaa-3955046bb4da
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: fef3eac34a624925401eeac2fd82b2f34eaa3a1f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d2a2f23360cf3ce032d14af7ca475d5c2c3ea638
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704043"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921678"
 ---
 # <a name="activecommand-property-ado"></a>Свойство ActiveCommand (ADO)
 Указывает [команда](../../../ado/reference/ado-api/command-object-ado.md) объект, который создан связанный [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта.  

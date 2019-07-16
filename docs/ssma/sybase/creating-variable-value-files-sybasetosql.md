@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 395be464-4b19-44f7-91e5-b8876d6743dc
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 7afced10f0be71310edc4b42ea0158ca996f3aa3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2c0c76a36502d9d590b6db478efcab6feb50ba01
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63069669"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029387"
 ---
 # <a name="creating-variable-value-files-sybasetosql"></a>Создание файлов переменных значений (SybaseToSQL)
 Файл переменных значение является XML-файл, состоящий из значений параметра команды, имя сервера источника или назначения, которые часто изменяются в зависимости от одного сервера миграции. При возникновении большое количество миграцию баз данных, несколько файлов переменной для хранения значения каждого исходного сервера создается, на которые ссылается файл скрипта базы данных master с **- v** переключиться в командной строке. Это помогает в поддержании статических значений в нескольких файлах скриптов, если значения переменных в нескольких файлах переменной.  

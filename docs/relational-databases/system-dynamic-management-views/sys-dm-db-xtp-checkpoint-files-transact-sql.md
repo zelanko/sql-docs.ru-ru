@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: ac8e6333-7a9f-478a-b446-5602283e81c9
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f2c7f7f4296b3cbed025303f58cf07717db06c8e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: fb3aa62880de7013cf503e61eb2d86a3454c2350
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510871"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68026909"
 ---
 # <a name="sysdmdbxtpcheckpointfiles-transact-sql"></a>sys.dm_db_xtp_checkpoint_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -42,9 +41,9 @@ ms.locfileid: "52510871"
  Дополнительные сведения см. в разделе [Создание и управление хранилищем для оптимизированных для памяти объектов](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md).  
   
 ##  <a name="bkmk_2016"></a> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и более поздние версии  
- В следующей таблице описаны столбцы для `sys.dm_db_xtp_checkpoint_files`, начиная с версии **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]**.  
+ В следующей таблице описаны столбцы для `sys.dm_db_xtp_checkpoint_files`, начиная с версии **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]** .  
   
-|Имя столбца|Тип|Описание|  
+|Имя столбца|Type|Описание|  
 |-----------------|----------|-----------------|  
 |container_id|**int**|Идентификатор контейнера (представленного в виде файла с типом FILESTREAM в таблице sys.database_files), частью которого является файл данных или разностный файл. Соединения с file_id в [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md).|  
 |container_guid|**uniqueidentifier**|Идентификатор GUID контейнера, который входит корневой, данных или разностный файл. Соединения с file_guid в таблице sys.database_files.|  
@@ -65,12 +64,12 @@ ms.locfileid: "52510871"
 |end_checkpoint_id|**bigint**|Идентификатор конец контрольной точки.|  
 |last_updated_checkpoint_id|**bigint**|Идентификатор последней контрольной точки, этот файл обновлен.|  
 |encryption_status|**smallint**|0, 1, 2|  
-|encryption_status_desc|**nvarchar(60)**|0 = &GT; UNENCRTPTED<br /><br /> 1 = &GT; ЗАШИФРОВАНЫ С ПОМОЩЬЮ КЛЮЧА 1<br /><br /> 2 = &GT; ЗАШИФРОВАНЫ С ПОМОЩЬЮ КЛЮЧА 2. Допустимо только для активных файлов.|  
+|encryption_status_desc|**nvarchar(60)**|0 = > UNENCRTPTED<br /><br /> 1 = > ЗАШИФРОВАНЫ С ПОМОЩЬЮ КЛЮЧА 1<br /><br /> 2 = > ЗАШИФРОВАНЫ С ПОМОЩЬЮ КЛЮЧА 2. Допустимо только для активных файлов.|  
   
 ##  <a name="bkmk_2014"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
- В следующей таблице описаны столбцы для `sys.dm_db_xtp_checkpoint_files`, для **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]**.  
+ В следующей таблице описаны столбцы для `sys.dm_db_xtp_checkpoint_files`, для **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** .  
   
-|Имя столбца|Тип|Описание|  
+|Имя столбца|Type|Описание|  
 |-----------------|----------|-----------------|  
 |container_id|**int**|Идентификатор контейнера (представленного в виде файла с типом FILESTREAM в таблице sys.database_files), частью которого является файл данных или разностный файл. Соединения с file_id в [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md).|  
 |container_guid|**uniqueidentifier**|Идентификатор GUID контейнера, частью которого является файл данных или разностный файл.|  

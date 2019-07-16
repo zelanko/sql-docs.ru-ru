@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 44262bdd-430c-4337-ac92-9333f54c7039
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 11c4a53fc29e23a41ac2d7f16109bd41a0cc34c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cc478b6325e89801837828dbd90af1a7b6950665
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65484831"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68047943"
 ---
 # <a name="add-a-user-master-data-services"></a>Добавление пользователя (службы Master Data Services)
 
@@ -27,7 +26,7 @@ ms.locfileid: "65484831"
 
   Чтобы начать назначение разрешений для веб-приложения, нужно добавить пользователя в список **Пользователи** в [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . Чтобы пользователь из этого списка мог воспользоваться средой [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], ему нужно предоставить разрешение на одну или более функциональных областей и объектов модели.  
   
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
  Для выполнения этой процедуры:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Разрешения пользователей и групп** ;  

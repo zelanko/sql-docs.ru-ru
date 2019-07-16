@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e9625b59-06a0-4883-b155-b932ba7528d9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d1c31ef622281b4f52f62ca3867c5afa7dcae8ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d2895ec765df3910dbbaa1e76ba1579e4afe5cca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63194414"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091650"
 ---
 # <a name="updating-data-with-sqlsetpos"></a>Обновление данных с помощью SQLSetPos
 Приложения могут обновлять или удалять любую строку набора строк с **SQLSetPos**. Вызов **SQLSetPos** является удобной альтернативой созданию и выполнению инструкции SQL. Это позволяет драйверу ODBC поддерживают позиционированные обновления даже в том случае, если источник данных не поддерживает позиционированные инструкции SQL. Он является частью парадигма достижения всей базы данных access посредством вызовов функций.  

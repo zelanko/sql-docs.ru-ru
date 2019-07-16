@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 1e55a35144fce7b90cf4bb33cbbb82f26d8db62c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b723a706521b24c9aa216c46f617d8ff94997137
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63233628"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68098555"
 ---
 # <a name="mdx-data-definition---create-action"></a>Определение данных многомерных выражений — CREATE ACTION
 

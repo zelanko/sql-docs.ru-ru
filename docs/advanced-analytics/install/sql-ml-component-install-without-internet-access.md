@@ -7,13 +7,12 @@ ms.date: 03/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: da9676f029bb917adf15690b6870583fb0465fc4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 09934e01d6118bfa48a7c3f62e8086763ebf44c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65836217"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962914"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>Установка SQL Server в машинном обучении R и Python на компьютерах без доступа к Интернету
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -43,7 +42,7 @@ ms.locfileid: "65836217"
 Microsoft R Open     |[SRO_3.3.3.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851496)|
 Microsoft R Server      |[SRS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851507)|
 Откройте Microsoft Python     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502) |
-Microsoft Python Server    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851508) |
+Сервер Microsoft Python    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851508) |
 
 ###  <a name="2---get-sql-server-2017-installation-media"></a>2 - Получение установочного носителя SQL Server 2017
 
@@ -55,7 +54,7 @@ Microsoft Python Server    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwl
 
 ## <a name="sql-server-2016-offline-install"></a>Автономной установки SQL Server 2016
 
-Аналитика в базе данных SQL Server 2016 — предназначенным только для R с помощью только два CAB файлов для пакетов продукта и распространяемого корпорацией Майкрософт R с открытым кодом, соответственно. Начать с установки любого из этих выпусков: RTM, SP 1, SP 2. После установки на месте, накопительные пакеты обновления могут применяться в качестве следующего шага.
+Аналитика в базе данных SQL Server 2016 — предназначенным только для R с помощью только два CAB файлов для пакетов продукта и распространяемого корпорацией Майкрософт R с открытым кодом, соответственно. Начать с установки любого из этих выпусков: RTM-ВЕРСИИ, С ПАКЕТОМ ОБНОВЛЕНИЯ 1, SP 2. После установки на месте, накопительные пакеты обновления могут применяться в качестве следующего шага.
 
 На компьютере, наличия подключения к Интернету Загрузите CAB-файлы, используемые программой установки для установки аналитики в базе данных на SQL Server 2016. 
 

@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: e15d8169-3517-4323-9c9e-0f5c34aff7df
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 14e14c23741f5473e6c9eaae46140a2f7a0668bb
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b4ab5b0146f4b271fba6ba3f0975e29a5fd58f6e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52406181"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68043268"
 ---
 # <a name="using-user-defined-types"></a>Использование определяемых пользователем типов данных
 [!INCLUDE[appliesto-ss-asdb-xxxx-pdw-md](../../../includes/appliesto-ss-asdb-xxxx-pdw-md.md)]
@@ -86,7 +85,7 @@ ms.locfileid: "52406181"
 #### <a name="the-procedureparameters-schema-rowset"></a>Набор строк схемы PROCEDURE_PARAMETERS  
  В набор строк схемы PROCEDURE_PARAMETERS были сделаны следующие добавления.  
   
-|Имя столбца|Тип|Описание|  
+|Имя столбца|Type|Описание|  
 |-----------------|----------|-----------------|  
 |SS_UDT_CATALOGNAME|DBTYPE_WSTR|Идентификатор трехкомпонентного имени.|  
 |SS_UDT_SCHEMANAME|DBTYPE_WSTR|Идентификатор трехкомпонентного имени.|  
@@ -96,7 +95,7 @@ ms.locfileid: "52406181"
 #### <a name="the-sqlassemblies-schema-rowset"></a>Набор строк схемы SQL_ASSEMBLIES  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Поставщик OLE DB для собственного клиента предоставляет новый набор строк схемы конкретного поставщика, который описывает зарегистрированные определяемые пользователем типы. Сервер ASSEMBLY может быть указан как тип DBTYPE_WSTR, но он отсутствует в наборе строк. Если значение не задано, то по умолчанию для набора строк будет использоваться текущий сервер. Набор строк схемы SQL_ASSEMBLIES определен в следующей таблице.  
   
-|Имя столбца|Тип|Описание|  
+|Имя столбца|Type|Описание|  
 |-----------------|----------|-----------------|  
 |ASSEMBLY_CATALOG|DBTYPE_WSTR|Имя каталога сборки, содержащей тип.|  
 |ASSEMBLY_SCHEMA|DBTYPE_WSTR|Имя схемы или имя владельца сборки, содержащей тип. Хотя сборки ограничены базой данных, а не схемой, они все еще имеют владельца, отраженного здесь.|  
@@ -108,7 +107,7 @@ ms.locfileid: "52406181"
 #### <a name="the-sqlassemblies-dependencies-schema-rowset"></a>Набор строк схемы SQL_ASSEMBLIES_ DEPENDENCIES  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Поставщик собственного клиента OLE DB предоставляет новый набор строк схемы, определенной поставщиком, который описывает зависимости сборки указанного сервера. ASSEMBLY_SERVER может быть указан участником как тип DBTYPE_WSTR, но отсутствовать в наборе строк. Если значение не задано, то по умолчанию для набора строк будет использоваться текущий сервер. Набор строк схемы SQL_ASSEMBLY_DEPENDENCIES определен в следующей таблице.  
   
-|Имя столбца|Тип|Описание|  
+|Имя столбца|Type|Описание|  
 |-----------------|----------|-----------------|  
 |ASSEMBLY_CATALOG|DBTYPE_WSTR|Имя каталога сборки, содержащей тип.|  
 |ASSEMBLY_SCHEMA|DBTYPE_WSTR|Имя схемы или имя владельца сборки, содержащей тип. Хотя сборки ограничены базой данных, а не схемой, они все еще имеют владельца, отраженного здесь.|  
@@ -118,7 +117,7 @@ ms.locfileid: "52406181"
 #### <a name="the-sqlusertypes-schema-rowset"></a>Набор строк схемы SQL_USER_TYPES  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Поставщик собственного клиента OLE DB предоставляет новый набор строк схемы SQL_USER_TYPES, который описывает, когда добавляется зарегистрированных определяемых пользователем типов для указанного сервера. UDT_SERVER должен быть указан участником как тип DBTYPE_WSTR, но отсутствовать в наборе строк. Набор строк схемы SQL_USER_TYPES определен в следующей таблице.  
   
-|Имя столбца|Тип|Описание|  
+|Имя столбца|Type|Описание|  
 |-----------------|----------|-----------------|  
 |UDT_CATALOGNAME|DBTYPE_WSTR|Для столбцов определяемого пользователем типа данное свойство содержит строку, представляющую имя каталога, в котором определен этот тип.|  
 |UDT_SCHEMANAME|DBTYPE_WSTR|Для столбцов определяемого пользователем типа данное свойство содержит строку, представляющую имя схемы, в которой определен этот тип.|  
@@ -128,7 +127,7 @@ ms.locfileid: "52406181"
 #### <a name="the-columns-schema-rowset"></a>Набор строк схемы COLUMNS  
  Добавления в наборе строк схемы COLUMNS включает следующие столбцы.  
   
-|Имя столбца|Тип|Описание|  
+|Имя столбца|Type|Описание|  
 |-----------------|----------|-----------------|  
 |SS_UDT_CATALOGNAME|DBTYPE_WSTR|Для столбцов определяемого пользователем типа данное свойство содержит строку, представляющую имя каталога, в котором определен этот тип.|  
 |SS_UDT_SCHEMANAME|DBTYPE_WSTR|Для столбцов определяемого пользователем типа данное свойство содержит строку, представляющую имя схемы, в которой определен этот тип.|  
@@ -152,7 +151,7 @@ ms.locfileid: "52406181"
 #### <a name="the-dbpropsetsqlservercolumn-property-set"></a>Набор свойств DBPROPSET_SQLSERVERCOLUMN  
  Для поддержки создания таблиц в **ITableDefinition** интерфейс, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственный клиент добавляет набор свойств dbpropset_sqlservercolumn три новых столбца.  
   
-|Имя|Описание|Тип|Описание|  
+|Name|Описание|Type|Описание|  
 |----------|-----------------|----------|-----------------|  
 |SSPROP_COL_UDT_CATALOGNAME|UDT_CATALOGNAME|VT_BSTR|Для столбцов типа DBTYPE_UDT это свойство содержит строку, указывающую имя каталога, в котором определен определяемый пользователем тип.|  
 |SSPROP_COL_UDT_SCHEMANAME|UDT_SCHEMANAME|VT_BSTR|Для столбцов типа DBTYPE_UDT это свойство содержит строку, указывающую имя схемы, в которой определен определяемый пользователем тип.|  
@@ -183,7 +182,7 @@ ms.locfileid: "52406181"
 #### <a name="the-icolumnsrowset-interface"></a>Интерфейс IColumnsRowset  
  В дополнение к **ISSCommandWithParameters** интерфейс, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственный клиент также добавляет новые значения в набор строк, возвращаемый вызовом **возвращаемый методом IColumnsRowset::GetColumnRowset** метод в том числе следующие.  
   
-|Имя столбца|Тип|Описание|  
+|Имя столбца|Type|Описание|  
 |-----------------|----------|-----------------|  
 |DBCOLUMN_SS_UDT_CATALOGNAME|DBTYPE_WSTR|Идентификатор имени каталога определяемого пользователем типа.|  
 |DBCOLUMN_SS_UDT_SCHEMANAME|DBTYPE_WSTR|Идентификатор имени схемы определяемого пользователем типа.|  

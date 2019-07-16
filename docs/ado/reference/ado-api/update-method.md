@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6b2a9c31-1a7e-40db-8a53-30720d0f6cc1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e48185f0524a920d52092540f5e3ed6d8546edfe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6ce247905afd6ed34366424f5f905d57b42d988f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66710507"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938844"
 ---
 # <a name="update-method"></a>Метод Update
 Сохраняет любые изменения, вносимые в текущей строке [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта, или [поля](../../../ado/reference/ado-api/fields-collection-ado.md) коллекцию [записи](../../../ado/reference/ado-api/record-object-ado.md) объекта.  
@@ -39,7 +38,7 @@ record.Fields.Update
  Необязательный параметр. Объект **Variant** , представляющий одно имя, или **Variant** массив, представляющий имена или порядковые номера поле или поля, которую нужно изменить.  
   
  *Значения*  
- Необязательный параметр. Объект **Variant** , представляющий одно значение, или **Variant** массив, представляющий значения для поля или поля в новой записи.  
+ Необязательный. Объект **Variant** , представляющий одно значение, или **Variant** массив, представляющий значения для поля или поля в новой записи.  
   
 ## <a name="remarks"></a>Примечания  
   
@@ -62,7 +61,7 @@ record.Fields.Update
   
  Текущая запись остается текущее, после вызова метода **обновления** метод.  
   
-## <a name="record"></a>Записей  
+## <a name="record"></a>Запись  
  **Обновление** метод завершает дополнения, удаления и обновления полей в [поля](../../../ado/reference/ado-api/fields-collection-ado.md) коллекцию **записи** объекта.  
   
  Например, поля, удаляется при помощи **удалить** метода, помечаются для удаления немедленно, но остаются в коллекции. **Обновления** метод должен вызываться действительности удалить эти поля из коллекции поставщика.  

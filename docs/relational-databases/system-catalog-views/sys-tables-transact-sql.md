@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 8c42eba1-c19f-4045-ac82-b97a5e994090
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 94dc9ca5d83530db97607bd21e9fee4a2dc3dbf8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6cce3b4f08fcb55530ffd7abf6da3011c325478f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618022"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055377"
 ---
 # <a name="systables-transact-sql"></a>sys.tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "47618022"
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |\<наследуемые столбцы >||Список столбцов, наследуемых этим представлением, см. в разделе [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
-|lob_data_space_id|**int**|Ненулевое значение — это идентификатор пространства данных (файловой группы или схемы секционирования), хранящего данные больших двоичных объектов (LOB) для этой таблицы. Примеры типов данных LOB **varbinary(max)**, **varchar(max)**, **geography**, или **xml**.<br /><br /> 0 = таблица не содержит данных LOB.|  
+|lob_data_space_id|**int**|Ненулевое значение — это идентификатор пространства данных (файловой группы или схемы секционирования), хранящего данные больших двоичных объектов (LOB) для этой таблицы. Примеры типов данных LOB **varbinary(max)** , **varchar(max)** , **geography**, или **xml**.<br /><br /> 0 = таблица не содержит данных LOB.|  
 |filestream_data_space_id|**int**|Идентификатор пространства данных для файловой группы FILESTREAM или схемы секционирования, состоящей из файловых групп FILESTREAM.<br /><br /> Для сообщения имени файловой группы FILESTREAM, выполните запрос `SELECT FILEGROUP_NAME (filestream_data_space_id) FROM sys.tables`.<br /><br /> sys.tables можно объединить со следующими представлениями по условию filestream_data_space_id = data_space_id.<br /><br /> -sys.filegroups<br /><br /> -sys.partition_schemes<br /><br /> -sys.indexes<br /><br /> -sys.allocation_units<br /><br /> -sys.fulltext_catalogs<br /><br /> -sys.data_spaces<br /><br /> -sys.destination_data_spaces<br /><br /> -sys.master_files<br /><br /> -sys.database_files<br /><br /> -backupfilegroup (соединенная по столбцу filegroup_id)|  
 |max_column_id_used|**int**|Максимальный идентификатор столбца, когда-либо использованный в таблице.|  
 |lock_on_bulk_load|**bit**|Таблица заблокирована при массовой загрузке. Дополнительные сведения см. в разделе [sp_tableoption (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md).|  
@@ -50,7 +49,7 @@ ms.locfileid: "47618022"
 |large_value_types_out_of_row|**bit**|1 = типы больших значений хранятся вне строк. Дополнительные сведения см. в разделе [sp_tableoption (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md).|  
 |is_tracked_by_cdc|**bit**|1 = в таблице включена система отслеживания измененных данных. Дополнительные сведения см. в разделе [sys.sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md).|  
 |lock_escalation|**tinyint**|Значение параметра LOCK_ESCALATION для таблицы.<br /><br /> 0 = TABLE<br /><br /> 1 = DISABLE<br /><br /> 2 = AUTO|  
-|lock_escalation_desc|**nvarchar(60)**|Текстовое описание параметра lock_escalation для таблицы. Возможными значениями являются: таблицы, AUTO и DISABLE.|  
+|lock_escalation_desc|**nvarchar(60)**|Текстовое описание параметра lock_escalation для таблицы. Возможны следующие значения: ТАБЛИЦЫ, AUTO и DISABLE.|  
 |is_filetable|**bit**|**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)].<br /><br /> 1 = таблица имеет тип FileTable.<br /><br /> Дополнительные сведения о таблицах FileTable см. в разделе [Таблицы FileTable (SQL Server)](../../relational-databases/blob/filetables-sql-server.md).|  
 |устойчивость|**tinyint**|**Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)].<br /><br /> Возможные следующие значения.<br /><br /> 0 = SCHEMA_AND_DATA<br /><br /> 1 = SCHEMA_ONLY<br /><br /> Значением по умолчанию является значение 0.|  
 |durability_desc|**nvarchar(60)**|**Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)].<br /><br /> Допустимы следующие значения:<br /><br /> SCHEMA_ONLY<br /><br /> SCHEMA_AND_DATA<br /><br /> Значение SCHEMA_AND_DATA указывает, что таблица является надежной и оптимизированной для памяти. SCHEMA_AND_DATA — это значение по умолчанию для таблиц, оптимизированных для памяти. Значение SCHEMA_ONLY указывает, что табличные данные не будут сохранены после перезапуска базы данных с объектами, оптимизированными для памяти.|  
@@ -61,7 +60,7 @@ ms.locfileid: "47618022"
 |is_remote_data_archive_enabled|**bit**|**Применяется к**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]<br /><br /> Указывает, является ли таблица с включенным Stretch.<br /><br /> 0 = таблица не совместимых со Stretch.<br /><br /> 1 = таблица является, совместимых со Stretch.<br /><br /> Дополнительные сведения см. в разделе [Stretch Database](../../sql-server/stretch-database/stretch-database.md).|  
 |is_external|**bit**|**Применяется к**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)], и [!INCLUDE[sssdwfull](../../includes/sssdwfull-md.md)].<br /><br /> Указывает, что таблица является внешней таблицы.<br /><br /> 0 = таблица не имеет внешней таблицы.<br /><br /> 1 = таблица является внешней таблицы.| 
 |history_retention_period|**int**|**Применимо к**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>Числовое значение, указывающее продолжительность периода хранения темпоральных журналов в единицах, заданных с помощью history_retention_period_unit. |  
-|history_retention_period_unit|**int**|**Применимо к**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>Числовое значение, представляющее тип единицы измерения срока хранения темпоральных журналов. <br /><br />ЗНАЧЕНИЕ -1: НЕОГРАНИЧЕННОЕ <br /><br />3: ДЕНЬ <br /><br />4: НЕДЕЛЯ <br /><br />5: МЕСЯЦ <br /><br />6: ГОД |  
+|history_retention_period_unit|**int**|**Применимо к**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>Числовое значение, представляющее тип единицы измерения срока хранения темпоральных журналов. <br /><br />ЗНАЧЕНИЕ -1: НЕОГРАНИЧЕННОЕ <br /><br />3: DAY <br /><br />4: WEEK <br /><br />5: MONTH <br /><br />6\. YEAR |  
 |history_retention_period_unit_desc|**nvarchar(10)**|**Применимо к**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>Текстовое описание типа единицы измерения срока хранения темпоральных журналов. <br /><br />INFINITE <br /><br />DAY <br /><br />WEEK <br /><br />MONTH <br /><br />YEAR |  
 |is_node|**bit**|**Применимо к**: [!INCLUDE[sssql17-md.md](../../includes/sssql17-md.md)] и [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>1 = это таблицу узлов графа. <br /><br />0 = не является таблицей узла графа. |  
 |is_edge|**bit**|**Применимо к**: [!INCLUDE[sssql17-md.md](../../includes/sssql17-md.md)] и [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>1 = таблица Edge графа. <br /><br />0 = это не является таблицей Edge графа. |  

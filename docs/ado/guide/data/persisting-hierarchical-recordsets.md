@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 43798bb5-98a6-4ad6-9bf8-78154b3a1827
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f25b61ca54b3a4ac15584ecf31874f90787c735d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 34649bba37f922e7597bf09870e3e9d3bcf522dc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700469"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924628"
 ---
 # <a name="persisting-hierarchical-recordsets"></a>Сохранение иерархических наборов записей
 Вы можете сохранить иерархической **записей** в файл в формате XML или ADTG путем вызова [Сохранить](../../../ado/reference/ado-api/save-method.md) метод. Однако два ограничения применяются при сохранении иерархические **записей**s в формате XML: Не удается сохранить в формате XML, если иерархическое **записей** содержит ожидающие обновления, и вы не можете сохранить параметризованную иерархические **набор записей**.  

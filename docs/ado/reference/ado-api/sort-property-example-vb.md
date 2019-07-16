@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: fc2fd40b-65d6-4023-90a3-90c9a88ef6cf
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 537ca70a2741cb1226602af5406529eaa281fcd6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7dec17461f44c9e461a010e8a0bf5cf3fe3bbbd9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711213"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931022"
 ---
 # <a name="sort-property-example-vb"></a>Пример свойства Sort (Visual Basic)
 В этом примере используется [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта [сортировки](../../../ado/reference/ado-api/sort-property.md) свойство для изменения порядка строк **записей** производным от ***авторы*** таблицы ***Pubs*** базы данных. Вторичный служебной процедуры выводит каждую строку.  

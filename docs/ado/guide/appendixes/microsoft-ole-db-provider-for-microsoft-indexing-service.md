@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f86a0598-5097-471b-8318-d2c859d085f2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: dea7ec95efc1f560a2279868b2116d02d7ad6fef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a5a81514fd12117a9f43e2c33bf0cda579fb363d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701204"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926666"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Поставщик Microsoft OLE DB для индексирования Общие сведения о службе Microsoft
 Поставщик Microsoft OLE DB для службы индексирования Microsoft предоставляет программный доступ только для чтения к файловая система и веб-данных, службой индексирования Microsoft. Приложения ADO можно выполнять запросы SQL для извлечения содержимого и файл сведений.

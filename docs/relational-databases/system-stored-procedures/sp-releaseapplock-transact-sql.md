@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 51b03c2f-0d54-40f5-9172-e747942d4a46
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b5c980cbc6f8d212cf615469c199f6ccafcd70b4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7b75962019d9b39728ceff0b151e770dd0f51a25
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722092"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075631"
 ---
 # <a name="spreleaseapplock-transact-sql"></a>sp_releaseapplock (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ sp_releaseapplock [ @Resource = ] 'resource_name'
  Имя ресурса блокировки, указанное клиентским приложением. Приложение должно убедиться в уникальности ресурса. Указанное имя внутренне хэшируется в значение, которое может быть сохранено в диспетчере блокировок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *имя_ресурса* — **nvarchar(255)** не имеет значения по умолчанию. *имя_ресурса* является сравнивается по таким образом чувствителен к регистру независимо от параметров сортировки текущей базы данных.  
   
  [ @LockOwner=] '*lock_owner*"  
- Владелец блокировки, которая имеет значение *lock_owner* на момент запроса блокировки. Аргумент *lock_owner* имеет тип **nvarchar(32)**. Значением может быть **Transaction** (по умолчанию) или **Session**. Когда *lock_owner* значение **транзакции**, по по умолчанию или явно указан, процедура sp_getapplock должна выполняться из транзакции.  
+ Владелец блокировки, которая имеет значение *lock_owner* на момент запроса блокировки. Аргумент *lock_owner* имеет тип **nvarchar(32)** . Значением может быть **Transaction** (по умолчанию) или **Session**. Когда *lock_owner* значение **транзакции**, по по умолчанию или явно указан, процедура sp_getapplock должна выполняться из транзакции.  
   
  [ @DbPrincipal=] '*database_principal*"  
  Пользователь, роль или роль приложения, которые имеют разрешения на объект базы данных. Вызывающий эту функцию участник должен быть членом предопределенной роли базы данных *database_principal*, dbo или db_owner, чтобы успешно выполнить вызов этой функции. Значение по умолчанию: public.  

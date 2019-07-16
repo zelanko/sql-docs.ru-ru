@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 4b907ca844c80dcdb0953776a5cfb73b57937ff3
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 28f7788b0dc11c8c06e98b385d6814cb7fe81142
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51599945"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061735"
 ---
 # <a name="dmx-tutorials-analysis-services---data-mining"></a>Учебники по расширениям интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "51599945"
   
  Этот учебник поможет научиться создавать модель интеллектуального анализа данных для прогнозирования того, какие продукты обычно приобретаются вместе с другими. Кроме того, учебник демонстрирует использование вложенных таблиц в интеллектуальном анализе данных.  
   
-## <a name="reference"></a>Справочник  
+## <a name="reference"></a>Ссылка  
  [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; элементы синтаксиса](../dmx/data-mining-extensions-dmx-syntax-elements.md)  
   
  [Инструкции определения расширений интеллектуального анализа данных](../dmx/dmx-statements-data-definition.md)  
@@ -39,7 +38,7 @@ ms.locfileid: "51599945"
   
  [Общие сведения об инструкции SELECT в расширении интеллектуального анализа данных](../dmx/understanding-the-dmx-select-statement.md)  
   
-## <a name="related-sections"></a>См. также  
+## <a name="related-sections"></a>Связанные разделы  
  [Доступ к данным многомерной модели &#40;службы Analysis Services — многомерные данные&#41;](../analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md)  
   
 ## <a name="see-also"></a>См. также  

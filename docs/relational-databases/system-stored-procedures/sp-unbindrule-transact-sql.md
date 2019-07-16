@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f54ee155-c3c9-4f1a-952e-632a8339f0cc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 86efa9f7951277e6effdae9f59669fb7101f6f67
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: b409b76d3a7c07ac03173346059f38ac616f5a87
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527286"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68095861"
 ---
 # <a name="spunbindrule-transact-sql"></a>sp_unbindrule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,12 +43,12 @@ sp_unbindrule [ @objname = ] 'object_name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @objname = ] 'object_name'` — Имя таблицы и столбца или псевдонима типа данных, из которого отменяется привязка правила. *object_name* — **nvarchar(776)**, не имеет значения по умолчанию. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пытается вычислить по идентификаторам, состоящим из двух частей, сначала имена столбцов, а затем псевдонимы типов данных. При отмене привязки правила к псевдониму типа данных для всех столбцов этого типа данных, имеющих то же самое правило, также отменяется привязка. Столбцы этого типа данных с правилами, которые привязаны непосредственно к ним, не затрагиваются.  
+`[ @objname = ] 'object_name'` — Имя таблицы и столбца или псевдонима типа данных, из которого отменяется привязка правила. *object_name* — **nvarchar(776)** , не имеет значения по умолчанию. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пытается вычислить по идентификаторам, состоящим из двух частей, сначала имена столбцов, а затем псевдонимы типов данных. При отмене привязки правила к псевдониму типа данных для всех столбцов этого типа данных, имеющих то же самое правило, также отменяется привязка. Столбцы этого типа данных с правилами, которые привязаны непосредственно к ним, не затрагиваются.  
   
 > [!NOTE]  
 >  *object_name* может содержать квадратные скобки **[]** качестве символов идентификатора с разделителем. Дополнительные сведения см. в разделе [Идентификаторы баз данных](../../relational-databases/databases/database-identifiers.md).  
   
-`[ @futureonly = ] 'futureonly_flag'` Используется только в том случае, при отмене привязки правила к псевдониму типа данных. *аргумента futureonly_flag* — **varchar(15)**, значение по умолчанию NULL. Когда *аргумента futureonly_flag* — **futureonly**, существующие столбцы этого типа данных не теряют указанного правила.  
+`[ @futureonly = ] 'futureonly_flag'` Используется только в том случае, при отмене привязки правила к псевдониму типа данных. *аргумента futureonly_flag* — **varchar(15)** , значение по умолчанию NULL. Когда *аргумента futureonly_flag* — **futureonly**, существующие столбцы этого типа данных не теряют указанного правила.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  

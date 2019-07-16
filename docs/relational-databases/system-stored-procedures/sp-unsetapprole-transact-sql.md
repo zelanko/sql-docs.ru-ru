@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4c4033d3-1a34-4dfb-835d-e3293d1a442d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 52a3c04463eb4384d48e333e6d81097a33fd9ac1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 65fe8e1496fba4e622d63f1ce560aba4c1acfb83
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716602"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022242"
 ---
 # <a name="spunsetapprole-transact-sql"></a>sp_unsetapprole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,10 +40,10 @@ sp_unsetapprole @cookie
   
 ## <a name="arguments"></a>Аргументы  
  **@cookie**  
- Указывает куки-файл, который был создан при активации роли приложения. Файл cookie создается с [sp_setapprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md). **varbinary(8000)**.  
+ Указывает куки-файл, который был создан при активации роли приложения. Файл cookie создается с [sp_setapprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md). **varbinary(8000)** .  
   
 > [!NOTE]  
->  Параметр **OUTPUT** куки-файла для инструкции **sp_setapprole** в настоящее время описан в документации как **varbinary(8000)** , что верно определяет его максимальную длину. Однако текущая реализация возвращает параметр **varbinary(50)**. Приложения должны продолжать зарезервировать **varbinary(8000)** таким образом, приложение для правильной работы в случае увеличения размера куки в будущем выпуске.  
+>  Параметр **OUTPUT** куки-файла для инструкции **sp_setapprole** в настоящее время описан в документации как **varbinary(8000)** , что верно определяет его максимальную длину. Однако текущая реализация возвращает параметр **varbinary(50)** . Приложения должны продолжать зарезервировать **varbinary(8000)** таким образом, приложение для правильной работы в случае увеличения размера куки в будущем выпуске.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) и 1 (неуспешное завершение)  

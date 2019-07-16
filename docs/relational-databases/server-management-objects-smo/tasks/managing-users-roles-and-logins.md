@@ -14,31 +14,30 @@ helpviewer_keywords:
 ms.assetid: 74e411fa-74ed-49ec-ab58-68c250f2280e
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 80a84d208ecd75b86df312d8d520a332669a8ce8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ae6c07026bbbc12fc526eca1b5079bcc9cf36782
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731052"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030265"
 ---
 # <a name="managing-users-roles-and-logins"></a>Управление пользователями, ролями и именами входа
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  В SMO имена входа представлены объектом <xref:Microsoft.SqlServer.Management.Smo.Login>. Если имя входа существует в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], его можно добавить в роль сервера. Роль сервера представлена <xref:Microsoft.SqlServer.Management.Smo.ServerRole> объекта. Роль базы данных представлена объектом <xref:Microsoft.SqlServer.Management.Smo.DatabaseRole>, а роль приложения представлена объектом <xref:Microsoft.SqlServer.Management.Smo.ApplicationRole>.  
+  В SMO имена входа представлены объектом <xref:Microsoft.SqlServer.Management.Smo.Login>. Если имя входа существует в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], его можно добавить в роль сервера. Роль сервера представлена объектом <xref:Microsoft.SqlServer.Management.Smo.ServerRole>. Роль базы данных представлена объектом <xref:Microsoft.SqlServer.Management.Smo.DatabaseRole>, а роль приложения представлена объектом <xref:Microsoft.SqlServer.Management.Smo.ApplicationRole>.  
   
- Права доступа уровня сервера перечислены как свойства <xref:Microsoft.SqlServer.Management.Smo.ServerPermission> объекта. Права доступа уровня сервера можно предоставлять, запрещать или отзывать для отдельных учетных записей входа.  
+ Права доступа уровня сервера перечислены в виде свойств объекта <xref:Microsoft.SqlServer.Management.Smo.ServerPermission>. Права доступа уровня сервера можно предоставлять, запрещать или отзывать для отдельных учетных записей входа.  
   
- Каждый <xref:Microsoft.SqlServer.Management.Smo.Database> объект имеет <xref:Microsoft.SqlServer.Management.Smo.UserCollection> объекта, в котором указываются все пользователи в базе данных. С каждым пользователем связано имя входа. Одно имя входа может быть связано с пользователями в нескольких базах данных. <xref:Microsoft.SqlServer.Management.Smo.Login> Объекта <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A> метод может использоваться для перечисления всех пользователей в каждой базе данных, которая связана с именем входа. И наоборот, свойство <xref:Microsoft.SqlServer.Management.Smo.User> объекта <xref:Microsoft.SqlServer.Management.Smo.Login> содержит имя входа, связанное с пользователем.  
+ У каждого объекта <xref:Microsoft.SqlServer.Management.Smo.Database> есть объект <xref:Microsoft.SqlServer.Management.Smo.UserCollection>, в котором указываются все пользователи базы данных. С каждым пользователем связано имя входа. Одно имя входа может быть связано с пользователями в нескольких базах данных. Метод <xref:Microsoft.SqlServer.Management.Smo.Login> объекта <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A> используется для перечисления всех пользователей во всех базах данных, связанных с именем входа. И наоборот, свойство <xref:Microsoft.SqlServer.Management.Smo.User> объекта <xref:Microsoft.SqlServer.Management.Smo.Login> содержит имя входа, связанное с пользователем.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] также есть роли, которые определяют набор прав на уровне базы данных, позволяющих пользователям выполнять определенные задачи. В отличие от ролей сервера, роли базы данных не являются фиксированными. Их можно создавать, изменять и удалять. Права доступа и пользователей можно назначать роли базы данных для пакетного администрирования.  
+ В базах данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] также есть роли, которые определяют набор прав доступа уровня базы данных, позволяющих пользователям выполнять определенные задачи. В отличие от ролей сервера, роли базы данных не являются фиксированными. Их можно создавать, изменять и удалять. Права доступа и пользователей можно назначать роли базы данных для пакетного администрирования.  
   
 ## <a name="example"></a>Пример  
  В следующих примерах кода для создания приложения необходимо выбрать среду программирования, шаблон программирования и язык программирования. Дополнительные сведения см. в разделе [Visual C создайте&#35; проекта SMO в Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="enumerating-logins-and-associated-users-in-visual-c"></a>Перечисление имен входа и связанных пользователей на языке Visual C#  
- Каждый пользователь базы данных связан с именем входа. Имя входа может быть связано с пользователями в нескольких базах данных. В этом примере кода показан вызов метода <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A> объекта <xref:Microsoft.SqlServer.Management.Smo.Login> для перечисления всех пользователей базы данных, связанных с именем входа. В примере создается имя входа и пользователя в [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] базы данных, чтобы убедиться в том, сведения о сопоставлении для перечисления.  
+ Каждый пользователь базы данных связан с именем входа. Имя входа может быть связано с пользователями в нескольких базах данных. В этом примере кода показан вызов метода <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A> объекта <xref:Microsoft.SqlServer.Management.Smo.Login> для перечисления всех пользователей базы данных, связанных с именем входа. В примере создается имя входа и пользователь в базе данных [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] , чтобы обеспечить сведения о сопоставлении для перечисления.  
   
 ```csharp  
 {   
@@ -64,7 +63,7 @@ foreach ( Database db in srv.Databases) {
 ```  
   
 ## <a name="enumerating-logins-and-associated-users-in-powershell"></a>Перечисление имен входа и связанных пользователей в PowerShell  
- Каждый пользователь базы данных связан с именем входа. Имя входа может быть связано с пользователями в нескольких базах данных. В этом примере кода показан вызов метода <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A> объекта <xref:Microsoft.SqlServer.Management.Smo.Login> для перечисления всех пользователей базы данных, связанных с именем входа. В примере создается имя входа и пользователя в [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] базы данных, чтобы убедиться в том, сведения о сопоставлении для перечисления.  
+ Каждый пользователь базы данных связан с именем входа. Имя входа может быть связано с пользователями в нескольких базах данных. В этом примере кода показан вызов метода <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A> объекта <xref:Microsoft.SqlServer.Management.Smo.Login> для перечисления всех пользователей базы данных, связанных с именем входа. В примере создается имя входа и пользователь в базе данных [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] , чтобы обеспечить сведения о сопоставлении для перечисления.  
   
 ```powershell  
 # Set the path context to the local, default instance of SQL Server.  

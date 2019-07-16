@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: badf3a45-f941-44ae-a31d-393116f68a18
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cc9c7a3d9f75e1863d90b16986234e0036229d01
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bda4abf9802bd58e81f35bd4223b28f687e89b4f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62714096"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67951799"
 ---
 # <a name="what-is-odbc"></a>Что такое ODBC?
 В компьютерном мире существует много неверных предположений об ODBC. Для конечного пользователя это значок в панели управления Microsoft® Windows®. Программисту приложения это библиотека, содержащая процедуры доступа данных. К многим другим это ответ на все проблемы доступа к базе данных даже трудно себе представить.  

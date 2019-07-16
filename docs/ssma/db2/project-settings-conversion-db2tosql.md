@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 538c93cf-c5bb-43d5-b758-186d9fb00c19
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: a446fd4ce116ee19aa8b38d1ae6d8213e35c16e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e6918dac33ce0e69116f713cb8906b2774d00575
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63273017"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084552"
 ---
 # <a name="project-settings-conversion-db2tosql"></a>Параметры проекта (преобразование) (DB2ToSQL)
 На странице преобразования **параметры проекта** диалоговое окно содержит настройки, установленные как SSMA преобразует синтаксис DB2 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] синтаксис.  
@@ -372,7 +371,7 @@ DB2 и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращ�
 ### <a name="use-isnull-in-replace-function-calls"></a>В вызовах функций REPLACE следует использовать ISNULL  
 Инструкция ISNULL используется в вызовах функций REPLACE для эмуляции режима DB2. Для этого параметра присутствуют следующие параметры:  
   
--   YES  
+-   да  
   
 -   NO  
   
@@ -385,7 +384,7 @@ DB2 и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращ�
 ### <a name="use-isnull-in-concat-function-calls"></a>Использовать ISNULL в вызовах функций CONCAT  
 Инструкция ISNULL используется в вызовах функции CONCAT для эмуляции режима DB2. Для этого параметра присутствуют следующие параметры:  
   
--   YES  
+-   да  
   
 -   NO  
   

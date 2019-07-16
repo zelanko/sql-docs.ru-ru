@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 568d89ed-2c96-4795-8a0c-2f3e375081da
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1d4fa43746db12f8a1ee2957e3846bf1082ff219
-ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
+ms.openlocfilehash: fc1c8cff535d44cedeb5f42301f010278b87c96d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67492770"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899742"
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,7 +47,7 @@ ms.locfileid: "67492770"
 ## <a name="permissions"></a>Разрешения
 
 На [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], требуется `VIEW SERVER STATE` разрешение.   
-На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], требуется `VIEW DATABASE STATE` разрешение в базе данных.   
+В [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] необходимо разрешение `VIEW DATABASE STATE` для базы данных.   
 
 ##  <a name="WaitTypes"></a> Типы ожиданий  
  **Ожидающие ресурсы** Ожидание ресурсов имеет место, когда исполнитель запрашивает доступ к ресурсу, который недоступен, так как ресурс уже используется другим исполнителем или пока недоступен. Примерами ожидания ресурсов являются блокировки, кратковременные блокировки, сетевые ожидания и ожидания дискового ввода-вывода. Ожидания блокировок и кратковременных блокировок представляют собой ожидания объектов синхронизации.  

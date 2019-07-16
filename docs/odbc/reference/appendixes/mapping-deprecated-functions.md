@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ee462617-1d79-4c88-afeb-b129cff34cc6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0568306ad0e2fd8a73737bf80a4270e8eaa3ed18
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 307f0f54434fdcb4ebb19c38256a7a04f4a5c46d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793183"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67990710"
 ---
 # <a name="mapping-deprecated-functions"></a>Сопоставление нерекомендуемых функций
 В этом разделе описывается, как устаревшие функции сопоставляются по ODBC *3.x* диспетчера драйверов для обеспечения обратной совместимости из ODBC *3.x* драйверы, которые используются с ODBC *2.x* приложений. Диспетчер драйверов выполняет это сопоставление, независимо от версии приложения. Так как каждый из ODBC *2.x* функции в следующем списке сопоставляется с соответствующей ODBC *3.x* функции при вызове в ODBC *3.x* драйвера ODBC *3.x* драйвер должен реализовывать ODBC *2.x* функции.  

@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 134003fd-9c93-4f5c-a988-045990933b80
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5bfb18fea7b36236ad571dbd9b39301069fb00fc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 80255b80ffe05e2c89a0929c8f83999d1cb32c5d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717912"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67937308"
 ---
 # <a name="constructing-sql-statements-for-cursors"></a>Конструирование инструкций SQL для курсоров
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "47717912"
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Драйвер ODBC собственного клиента использует серверные курсоры для реализации функциональности курсоров, определенных в спецификации ODBC. Приложение ODBC управляет режимом работы курсоров с помощью [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) задать различные атрибуты инструкций. К ним относятся атрибуты и их значения по умолчанию.  
   
-|attribute|По умолчанию|  
+|attribute|Значение по умолчанию|  
 |---------------|-------------|  
 |SQL_ATTR_CONCURRENCY|SQL_CONCUR_READ_ONLY|  
 |SQL_ATTR_CURSOR_TYPE|SQL_CURSOR_FORWARD_ONLY|  

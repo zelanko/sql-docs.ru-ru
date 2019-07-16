@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c1330f03-940b-4564-ac42-6030c6e21173
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 94cb0913e8122997652786cd4bf09ddccf7fa433
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 45dad1cfaa6057cd50ee4c01b484df8250121a46
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775444"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079152"
 ---
 # <a name="msreplversion-transact-sql"></a>MSrepl_version (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

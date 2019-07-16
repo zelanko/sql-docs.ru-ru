@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f841d3bd-901a-4980-ad0b-1c6eeba3f717
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5c809679694811d23b01dee426aa1afdd7d5cf06
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1eb9a4d1a19f54f9e57e988b350594ce6031b243
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63017825"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085077"
 ---
 # <a name="sphelptargetserver-transact-sql"></a>sp_help_targetserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,14 +52,14 @@ sp_help_targetserver
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|Идентификационный номер сервера.|  
 |**server_name**|**nvarchar(30)**|Имя сервера.|  
-|**расположение**|**nvarchar(200)**|Расположение указанного сервера.|  
+|**расположение**|**Nvarchar(200)**|Расположение указанного сервера.|  
 |**time_zone_adjustment**|**int**|Настройка временной зоны в часах, от среднего времени по Гринвичу.|  
 |**enlist_date**|**datetime**|Дата прикрепления указанного сервера.|  
 |**last_poll_date**|**datetime**|Дата последнего опроса сервером заданий.|  
 |**status**|**int**|Состояние указанного сервера.|  
 |**unread_instructions**|**int**|Наличие на сервере непрочитанных инструкций. Если все строки были загружены, этот столбец имеет **0**.|  
 |**local_time**|**datetime**|Локальная дата и время на целевом сервере, которые основаны на локальном времени целевого сервера после последнего опроса главного сервера.|  
-|**enlisted_by_nt_user**|**nvarchar(100)**|Пользователь Microsoft Windows, который прикрепил целевой сервер.|  
+|**enlisted_by_nt_user**|**Nvarchar(100)**|Пользователь Microsoft Windows, который прикрепил целевой сервер.|  
 |**poll_interval**|**int**|Частота в секундах, с которой целевой сервер опрашивает службу Master SQLServerAgent, чтобы загрузить задания и выгрузить состояние заданий.|  
   
 ## <a name="permissions"></a>Разрешения  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6dc59973-7bb5-40f1-87c8-5bf68b3bf2ee
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e028502bd7bc6ac1a81006d340b6ce606a0ae337
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 99f8219ef53f72b0d7ab1477bba5d24d441a3141
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63259594"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065082"
 ---
 # <a name="sql-to-c-time"></a>SQL в C: Time
 Идентификатор для времени, которое имеет тип данных ODBC SQL:  
@@ -31,11 +30,11 @@ ms.locfileid: "63259594"
   
 |Идентификатор типа C|Тест|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_CHAR|*BufferLength* > байт символов<br /><br /> *9* <= *BufferLength* < = байтов символов<br /><br /> *BufferLength* < 9|Данные<br /><br /> Усеченные данные [a]<br /><br /> Не определено.|Длина данных в байтах<br /><br /> Длина данных в байтах<br /><br /> Не определено.|н/д<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_WCHAR|*BufferLength* > Длина символьной<br /><br /> *9* <= *BufferLength* < = символов<br /><br /> *BufferLength* < 9|Данные<br /><br /> Усеченные данные [a]<br /><br /> Не определено.|Длина данных в символах<br /><br /> Длина данных в символах<br /><br /> Не определено.|н/д<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_BINARY|Байтовая длина данных < = *BufferLength*<br /><br /> Длину данных в байтах > *BufferLength*|Данные<br /><br /> Не определено.|Длина данных в байтах<br /><br /> Не определено.|н/д<br /><br /> 22003|  
-|SQL_C_TYPE_TIME|Нет [b]|Данные|6 [d]|н/д|  
-|SQL_C_TYPE_TIMESTAMP|Нет [b]|Данные [c]|16 [d]|н/д|  
+|SQL_C_CHAR|*BufferLength* > байт символов<br /><br /> *9* <= *BufferLength* < = байтов символов<br /><br /> *BufferLength* < 9|Data<br /><br /> Усеченные данные [a]<br /><br /> Не определено.|Длина данных в байтах<br /><br /> Длина данных в байтах<br /><br /> Не определено.|Н/Д<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_WCHAR|*BufferLength* > Длина символьной<br /><br /> *9* <= *BufferLength* < = символов<br /><br /> *BufferLength* < 9|Data<br /><br /> Усеченные данные [a]<br /><br /> Не определено.|Длина данных в символах<br /><br /> Длина данных в символах<br /><br /> Не определено.|Н/Д<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_BINARY|Байтовая длина данных < = *BufferLength*<br /><br /> Длину данных в байтах > *BufferLength*|Data<br /><br /> Не определено.|Длина данных в байтах<br /><br /> Не определено.|Н/Д<br /><br /> 22003|  
+|SQL_C_TYPE_TIME|Нет [b]|Data|6 [d]|Н/Д|  
+|SQL_C_TYPE_TIMESTAMP|Нет [b]|Данные [c]|16 [d]|Н/Д|  
   
  [a] время на доли секунды усекаются.  
   

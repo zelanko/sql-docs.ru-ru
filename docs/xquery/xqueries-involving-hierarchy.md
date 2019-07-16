@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6953d8b7-bad8-4b64-bf7b-12fa4f10f65c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f60ce03d303941855b0b1eaa242b03966db1e79f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 8aa762af8e08c72f7f00369219771c371ce39aac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670843"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946107"
 ---
 # <a name="xqueries-involving-hierarchy"></a>Запросы XQuery, использующие иерархию
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "51670843"
 ### <a name="a-from-the-manufacturing-instructions-documents-retrieve-work-center-locations-together-with-the-first-manufacturing-step-at-those-locations"></a>A. Получение сведений о размещении цехов и о первом этапе производства в этих цехах из документов инструкций производства  
  Для продукта модели 7 запрос создает XML, включающий <`ManuInstr`> элемент, с помощью **ProductModelID** и **ProductModelName** атрибуты и один или несколько <`Location`> дочерние элементы.  
   
- Каждый элемент <`Location`> имеет свой собственный набор атрибутов и один дочерний элемент <`step`>. Этот дочерний элемент <`step`> соответствует первому этапу производства в данном цехе:  
+ Каждый <`Location`> элемент имеет свой собственный набор атрибутов и один <`step`> дочерний элемент. Это <`step`> дочерний элемент — это первый этап производства на участке цеха.  
   
 ```sql
 SELECT Instructions.query('  
@@ -62,7 +61,7 @@ WHERE ProductModelID=7
   
 -   **SQL: column()** используется для включения реляционного значения в XML, который создается.  
   
--   При формировании элемента <`Location`>, $wc/@* возвращает все атрибуты размещения цехов.  
+-   При конструировании <`Location`> элемент, $wc/@* возвращает все атрибуты размещения цехов.  
   
 -   **String()** функция возвращает строковое значение из <`step`> элемента.  
   
@@ -85,7 +84,7 @@ WHERE ProductModelID=7
 ```  
   
 ### <a name="b-find-all-telephone-numbers-in-the-additionalcontactinfo-column"></a>Б. Поиск всех телефонных номеров в столбце AdditionalContactInfo  
- Следующий запрос возвращает дополнительные телефонные номера заказчиков поиском по всей иерархии элемента <`telephoneNumber`>. Поскольку элемент <`telephoneNumber`> может находиться в любом месте иерархии, запрос использует нисходящий поиск от корня иерархии (//):  
+ Следующий запрос возвращает дополнительные телефонные номера заказчиков поиском по всей иерархии <`telephoneNumber`> элемента. Так как <`telephoneNumber`> элемент может находиться в любом месте иерархии, в запросе используется оператор нисходящий (/ /) для поиска.  
   
 ```sql
 SELECT AdditionalContactInfo.query('  
@@ -99,7 +98,7 @@ FROM  Person.Contact
 WHERE ContactID = 1  
 ```  
   
- Результат:  
+ Это результат:  
   
 ```xml
 \<act:number   
@@ -112,7 +111,7 @@ WHERE ContactID = 1
 \</act:number>  
 ```  
   
- Чтобы получить телефонные номера только верхнего уровня (дочерние элементы <`telephoneNumber`> элемента <`AdditionalContactInfo`>), следует изменить выражение FOR в запросе на:  
+ Для получения только номера телефонов верхнего уровня, в частности <`telephoneNumber`> дочерними элементами элемента <`AdditionalContactInfo`>, изменяет выражение FOR в запросе на  
   
  `for $ph in /ci:AdditionalContactInfo/act:telephoneNumber`.  
   

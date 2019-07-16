@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 43ab0d1b-ead4-471c-85f3-f6c4b9372aab
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8d60f772d7848d0e207f83b5c7a1a10da4b43b37
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 77fb03c71bd0773cc8f004a89c28c1925284876b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804942"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68043041"
 ---
 # <a name="cdcfncdcgetnetchangesltcaptureinstancegt-transact-sql"></a>CDC.fn_cdc_get_net_changes_&lt;capture_instance&gt; (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,12 +53,12 @@ cdc.fn_cdc_get_net_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
   
 ## <a name="arguments"></a>Аргументы  
  *from_lsn*  
- Номер LSN, представляющий нижнюю конечную точку диапазона LSN, включаемую в результирующий набор. *from_lsn* — **binary(10)**.  
+ Номер LSN, представляющий нижнюю конечную точку диапазона LSN, включаемую в результирующий набор. *from_lsn* — **binary(10)** .  
   
  Только строки в [cdc.&#91; capture_instance&#93;_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) изменить таблицу со значением __ $start_lsn, больше или равно *from_lsn* включаются в результирующий набор.  
   
  *to_lsn*  
- Номер LSN, представляющий верхнюю конечную точку диапазона LSN, включаемую в результирующий набор. *to_lsn* — **binary(10)**.  
+ Номер LSN, представляющий верхнюю конечную точку диапазона LSN, включаемую в результирующий набор. *to_lsn* — **binary(10)** .  
   
  Только строки в [cdc.&#91; capture_instance&#93;_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) изменить таблицу со значением __ $start_lsn, меньшим или равным *from_lsn* или равным *to_lsn* включаются в результирующий набор.  
   
@@ -73,7 +72,7 @@ cdc.fn_cdc_get_net_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
  Возвращает номер LSN окончательного изменения строки и операцию, необходимую для применения строки в столбцах метаданных __ $start_lsn и \_ \_$operation. Кроме того, если операция обновления возвращает (\_\_$operation = 4), измененные в обновлении отслеживаемые столбцы помечаются в значении, возвращенном в \_ \_$update_mask.  
   
  all with merge  
- Возвращает номер LSN окончательного изменения строки в столбцах метаданных __$start_lsn. Столбец \_ \_$operation будет иметь одно из двух значений: 1 для удаления и 5, чтобы указать, что операцию, необходимую для применения изменений является вставкой или обновлением. Столбец \_ \_$update_mask всегда имеет значение NULL.  
+ Возвращает номер LSN окончательного изменения строки в столбцах метаданных __$start_lsn. Столбец \_ \_$operation будет иметь одно из двух значений: 1 — для удаления и 5, чтобы указать, что операцию, необходимую для применения изменений является вставкой или обновлением. Столбец \_ \_$update_mask всегда имеет значение NULL.  
   
  Поскольку логика определения точной операции для конкретного изменения дополнительно усложняет запрос, эта операция предназначена для увеличения производительности запроса, когда достаточно указать, что операция изменения является вставкой или обновлением, но не требуется явно выбирать тип операции. Этот параметр особенно полезен в целевых средах, в которых операция слияния доступна непосредственно, например в среде [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   

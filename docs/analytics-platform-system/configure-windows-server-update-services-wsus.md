@@ -2,19 +2,18 @@
 title: Настройка служб WSUS - Analytics Platform System | Документация Майкрософт
 description: Эти инструкции описывают шаги по использованию мастера настройки Windows Server Update Services (WSUS) для настройки служб WSUS для Analytics Platform System.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 776859eb291004431a7e4e2743f1c008a7b752dd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 16dc05500964bb37e3252edf81aff85042b7abdb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63134956"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961127"
 ---
 # <a name="configure-windows-server-update-services-wsus-in-analytics-platform-system"></a>Настройка Windows Server Update Services (WSUS) в Analytics Platform System
 Эти инструкции описывают шаги по использованию мастера настройки Windows Server Update Services (WSUS) для настройки служб WSUS для Analytics Platform System. Необходимо настроить службы WSUS, перед применением обновлений программного обеспечения на устройство. На виртуальной машине VMM устройства уже установлена служба WSUS.  

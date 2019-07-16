@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4417e57c-31dd-475e-8fe9-eab00a459c80
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: db7dc5482347ad9b7f194b3c9c8c6cd7fc3f9f6a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 16e7e4d133fdfafd7a005c19b0a2943b2ea9ef6d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63199595"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086453"
 ---
 # <a name="sqlfetchscroll-cursor-library"></a>SQLFetchScroll (библиотека курсоров)
 > [!IMPORTANT]  
@@ -62,7 +61,7 @@ ms.locfileid: "63199595"
 |Тип курсора|Типы выборки|  
 |-----------------|-----------------|  
 |Однонаправленный|SQL_FETCH_NEXT|  
-|Статические|SQL_FETCH_NEXT<br /><br /> SQL_FETCH_PRIOR<br /><br /> SQL_FETCH_FIRST<br /><br /> SQL_FETCH_LAST<br /><br /> SQL_FETCH_RELATIVE<br /><br /> SQL_FETCH_ABSOLUTE<br /><br /> SQL_FETCH_BOOKMARK|  
+|Static|SQL_FETCH_NEXT<br /><br /> SQL_FETCH_PRIOR<br /><br /> SQL_FETCH_FIRST<br /><br /> SQL_FETCH_LAST<br /><br /> SQL_FETCH_RELATIVE<br /><br /> SQL_FETCH_ABSOLUTE<br /><br /> ИНСТРУКЦИЯ SQL_FETCH_BOOKMARK|  
   
 ## <a name="errors"></a>ошибки  
  Когда **SQLFetchScroll** вызывается и одного из вызовов к **SQLFetch** возвращает значение SQL_ERROR, продолжается библиотеки курсора, следующим образом. После завершения этих действий, библиотека курсоров продолжает обработку.  

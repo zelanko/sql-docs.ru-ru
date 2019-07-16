@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 723107a1-be08-4ea3-a8c0-b2c45d38d1aa
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ba21e2a13b755c938c8b1bdc321a5f23bf87c29f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d8d7f1b8ec5647a34b09f0636fc8fcc2ad070f72
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63213308"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019242"
 ---
 # <a name="column-size-decimal-digits-transfer-octet-length-and-display-size---odbc"></a>Размер столбца, число десятичных разрядов, длительность октета передачи и отображаемый размер - ODBC
 Типы данных характеризуются размер столбца (или параметр), десятичных цифр, длиной и размерах дисплея. Следующие функции ODBC возвращают эти атрибуты в качестве параметра в инструкции SQL или для типа данных SQL на источнике данных. Каждая функция ODBC возвращает другой набор этих атрибутов, следующим образом:  

@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: b76e642e2760f0a10a44c77c9859876502d944ab
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ee2c0623df9ce285e466cc80287f323ac9706351
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37992639"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070775"
 ---
 # <a name="data-types-dmx"></a>Типы данных (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -23,7 +22,7 @@ ms.locfileid: "37992639"
   
  Типы данных зависят от конкретного алгоритма. Каждый алгоритм определяет поддерживаемые им типы данных и способ их использования. Алгоритмы Microsoft поддерживают следующие типы данных:  
   
--   Текст  
+-   Text  
   
 -   Long  
   
@@ -31,13 +30,13 @@ ms.locfileid: "37992639"
   
 -   Double  
   
--   Дата  
+-   Date  
   
  Дополнительные сведения о данных, типах, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] поддерживает, см. в разделе [типы данных &#40;интеллектуального анализа данных&#41;](../analysis-services/data-mining/data-types-data-mining.md).  
   
 ## <a name="see-also"></a>См. также  
- [Алгоритмы интеллектуального анализа данных &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; ссылки](../dmx/data-mining-extensions-dmx-reference.md)   
+ [Алгоритмы интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Справочник по расширениям интеллектуального анализа данных (расширения интеллектуального анализа данных)](../dmx/data-mining-extensions-dmx-reference.md)   
  [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; справочнике по функциям](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; Справочник по операторам](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; Справка по инструкции](../dmx/data-mining-extensions-dmx-statements.md)   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 79510fcf-4c83-4426-bdd4-15b4170ecfbd
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 2aba0d743c46416c3adf87542d2611c064db906e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d9f6905ea87c08460fe9faba22095a9ecaf0b308
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65485295"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68052105"
 ---
 # <a name="change-an-attribute-group-name-master-data-services"></a>Изменение имени группы атрибутов (службы Master Data Services)
 
@@ -26,7 +25,7 @@ ms.locfileid: "65485295"
 
   В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]можно изменить имя группы атрибутов.  
   
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
  Для выполнения этой процедуры:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** ;  

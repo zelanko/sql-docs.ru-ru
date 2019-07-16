@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5830d394330778fae6aab795286c7fbc9e211072
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9682535c82f8a579259993e82560dfe6bc930f93
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710722"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061366"
 ---
 # <a name="systrustedassemblies-transact-sql"></a>sys.trusted_assemblies (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "47710722"
 |Хэш |varbinary(8000) |SHA2_512 хэш содержимого сборки. |
 |description |nvarchar(4000) |Необязательное пользовательское описание сборки. Корпорация Майкрософт рекомендует использовать каноническое имя, кодирующая простое имя, номер версии, язык и региональные параметры, открытый ключ и архитектуру сборки для доверия. Это значение уникально идентифицирует сборку среды выполнения (CLR) стороны выполнения и совпадает со значением значение clr_name sys.assemblies. |
 |create_date |datetime2 |Дата, когда сборка была добавлена в список доверенных сборок. |
-|created_by |nvarchar(128) |Имя входа участника, добавляемого в список сборки. |
+|created_by |NVARCHAR(128) |Имя входа участника, добавляемого в список сборки. |
 | | | |
 
 

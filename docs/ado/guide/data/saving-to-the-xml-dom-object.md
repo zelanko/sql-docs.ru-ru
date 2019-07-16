@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4d20fd28-aaf8-4232-83ce-f9d1e5f93dae
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 47462e323e77e23b70a85321764413c40494f3f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fe4790fa7fc1a2859013500f44dcd4a266719f39
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701605"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924313"
 ---
 # <a name="saving-to-the-xml-dom-object"></a>Сохранение в объект DOM XML
 Набор записей можно сохранить в формате XML в экземпляр объекта DOM в MSXML, как показано в следующем коде Visual Basic:  

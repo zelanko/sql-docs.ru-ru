@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 9aee483e-61f3-4613-bec6-f084161f45ac
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7e37ffc3054bac0233cae05601bb8a39dec84d8e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c071a09f7b70499b8d869f4763448572b20cfcd2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719702"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102215"
 ---
 # <a name="syspartitionrangevalues-transact-sql"></a>sys.partition_range_values (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "47719702"
 |**function_id**|**int**|Идентификатор функции секционирования для данного граничного значения диапазона.|  
 |**boundary_id**|**int**|Идентификатор (порядковый номер, начиная с 1) кортежа граничных значений. Самое левое граничное значение имеет идентификатор 1.|  
 |**parameter_id**|**int**|Идентификатор параметра функции, которому соответствует данное значение. В этом столбце значения соответствуют значениям **parameter_id** столбец **sys.partition_parameters** представления для какого-либо конкретного каталога **function_id**.|  
-|**Значение**|**sql_variant**|Фактическое граничное значение.|  
+|**value**|**sql_variant**|Фактическое граничное значение.|  
   
 ## <a name="permissions"></a>Разрешения  
  Необходимо быть членом роли **public**. Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

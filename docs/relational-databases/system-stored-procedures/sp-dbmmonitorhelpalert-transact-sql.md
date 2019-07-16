@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 43911660-b4e4-4934-8c02-35221160aaec
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4639f548ec75844e72c19cb34ec29fc21933e31a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fc850c8be9b5222fe178563de78e34e2ba263c12
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851612"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899195"
 ---
 # <a name="spdbmmonitorhelpalert-transact-sql"></a>sp_dbmmonitorhelpalert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,8 +68,8 @@ sp_dbmmonitorhelpalert database_name
 |Столбец|Data type|Описание|  
 |------------|---------------|-----------------|  
 |**alert_id**|**int**|В таблице ниже перечислены **alert_id** значение для каждой метрики производительности и единицы измерения метрики, отображаемые в **sp_dbmmonitorresults** сам себя результирующий набор:|  
-|**Пороговое значение**|**int**|Пороговое значение для предупреждения. Если при обновлении состояния зеркального отображения возвращено значение выше данного порога, в журнал событий Windows будет внесена запись. Это значение измеряется в килобайтах, минутах или миллисекундах, в зависимости от типа предупреждения. Если порог в данный момент не установлен, значение принимается равным NULL.<br /><br /> **Примечание:** Чтобы просмотреть текущие значения, выполните [sp_dbmmonitorresults](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md) хранимой процедуры.|  
-|**включен**|**bit**|0 = событие отключено.<br /><br /> 1 = событие включено.<br /><br /> **Примечание:** срок хранения всегда включен.|  
+|**Пороговое значение**|**int**|Пороговое значение для предупреждения. Если при обновлении состояния зеркального отображения возвращено значение выше данного порога, в журнал событий Windows будет внесена запись. Это значение измеряется в килобайтах, минутах или миллисекундах, в зависимости от типа предупреждения. Если порог в данный момент не установлен, значение принимается равным NULL.<br /><br /> **Примечание.** Чтобы просмотреть текущие значения, выполните [sp_dbmmonitorresults](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md) хранимой процедуры.|  
+|**включен**|**bit**|0 = событие отключено.<br /><br /> 1 = событие включено.<br /><br /> **Примечание.** Срок хранения всегда включен.|  
   
 |Значение|Метрика производительности|Единицы|  
 |-----------|------------------------|----------|  
@@ -97,7 +96,7 @@ EXEC sp_dbmmonitorhelpalert AdventureWorks2012;
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Наблюдение за зеркальным отображением базы данных (SQL Server)](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
+ [Мониторинг зеркального отображения базы данных (SQL Server)](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [sp_dbmmonitorchangealert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangealert-transact-sql.md)   
  [sp_dbmmonitorchangemonitoring &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)   
  [sp_dbmmonitordropalert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitordropalert-transact-sql.md)   

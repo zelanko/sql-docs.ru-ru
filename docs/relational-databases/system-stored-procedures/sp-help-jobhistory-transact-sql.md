@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a944d44e-411b-4735-8ce4-73888d4262d7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0b2ee476694098f4734c31439b48a7ec9efdc892
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 10033b2525ba28e79bd31a73bd9e71a7cca15e42
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534436"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054927"
 ---
 # <a name="sphelpjobhistory-transact-sql"></a>sp_help_jobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -89,9 +88,9 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
   
 `[ @oldest_first = ] oldest_first` Показывать ли выходные данные начиная со старейшего задания сначала. *oldest_first* — **int**, значение по умолчанию **0**, которое представляет новых заданий. **1** первыми будут показаны старейшего задания.  
   
-`[ @server = ] 'server'` Имя сервера, на котором выполняется задание. *сервер* — **nvarchar(30)**, значение по умолчанию NULL.  
+`[ @server = ] 'server'` Имя сервера, на котором выполняется задание. *сервер* — **nvarchar(30)** , значение по умолчанию NULL.  
   
-`[ @mode = ] 'mode'` Выводит ли SQL Server все столбцы в результирующем наборе (**полный**) или сводку по столбцам. *режим* — **varchar(7)**, значение по умолчанию **Сводка**.  
+`[ @mode = ] 'mode'` Выводит ли SQL Server все столбцы в результирующем наборе (**полный**) или сводку по столбцам. *режим* — **varchar(7)** , значение по умолчанию **Сводка**.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
@@ -113,7 +112,7 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 |**run_date**|**int**|Дата начала выполнения задания или этапа.|  
 |**run_time**|**int**|Дата начала выполнения задания или этапа.|  
 |**run_duration**|**int**|Время, прошедшее с момента запуска задания или этапа в формате «ЧЧММСС».|  
-|**operator_emailed**|**nvarchar(20)**|Оператор, которому было отправлено электронное письмо относительно этого задания (NULL для журнала этапов). |  
+|**operator_emailed**|**nvarchar(20)**|Оператор, которому было отправлено электронное письмо относительно этого задания (NULL для журнала этапов).|  
 |**operator_netsent**|**nvarchar(20)**|Оператор, которому было отправлено сетевое сообщение относительно этого задания (NULL для журнала этапов).|  
 |**operator_paged**|**nvarchar(20)**|Оператор, которому было отправлено сообщение на пейджер относительно этого задания (NULL для журнала этапов).|  
 |**retries_attempted**|**int**|Количество повторных попыток запуска этапа (всегда 0 для журнала заданий).|  

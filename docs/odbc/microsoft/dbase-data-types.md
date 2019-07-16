@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a0e31e6b-d02b-4ee2-9b37-5baf6a11c0a6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fc4b4c7a5c1074a62bf0e84d265840109f65ea55
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1753e0d50655205bc6f459548f2ef2b77d5cc885
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63126317"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096454"
 ---
 # <a name="dbase-data-types"></a>Типы данных dBASE
 В следующей таблице показаны как типы данных dBASE сопоставляются типы данных ODBC SQL. Обратите внимание на то, что поддерживаются не все типы данных ODBC SQL.  

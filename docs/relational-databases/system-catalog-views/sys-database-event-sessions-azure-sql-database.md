@@ -8,14 +8,13 @@ ms.topic: language-reference
 ms.assetid: 02c2cd71-d35e-4d4c-b844-92b240f768f4
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 844a002f7fc57e49fedabc353cdb0622964d7f28
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 4ef8388e18ee73a0f1217e4e04adc13379892520
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032005"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915081"
 ---
 # <a name="sysdatabaseeventsessions-azure-sql-database"></a>sys.database_event_sessions (база данных SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "56032005"
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|Уникальный идентификатор сеанса событий. Не допускает значение NULL.|  
 |name|**sysname**|Определяемое пользователем имя, идентифицирующее сеанс событий. имя является уникальным. Не допускает значение NULL.|  
-|event_retention_mode|**nchar(1)**|Определяет способ обработки потери события. Значение по умолчанию — S. Не допускает значения NULL. Принимает одно из следующих значений.<br /><br /> Х. Maps to event_retention_mode_desc = ALLOW_SINGLE_EVENT_LOSS<br /><br /> Н. Maps to event_retention_mode_desc = ALLOW_MULTIPLE_EVENT_LOSS<br /><br /> О. Maps to event_retention_mode_desc = NO_EVENT_LOSS|  
+|event_retention_mode|**nchar(1)**|Определяет способ обработки потери события. Значение по умолчанию — S. Не допускает значения NULL. Принимает одно из следующих значений.<br /><br /> Х. Соответствует event_retention_mode_desc = allow_single_event_loss.<br /><br /> Н. Соответствует event_retention_mode_desc = allow_multiple_event_loss.<br /><br /> О. Соответствует event_retention_mode_desc = NO_EVENT_LOSS|  
 |event_retention_mode_desc|**sysname**|Описывает способ обработки потери события. Значение по умолчанию ALLOW_SINGLE_EVENT_LOSS. Не допускает значение NULL. Принимает одно из следующих значений.<br /><br /> ALLOW_SINGLE_EVENT_LOSS. Возможна потеря событий в сеансе. Одиночные события удаляются только в том случае, если все буферы событий полны. Потеря одиночных событий при заполнении буферов событий обеспечивает приемлемые характеристики производительности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], одновременно уменьшая до минимума потери данных в потоке обработанных событий.<br /><br /> ALLOW_MULTIPLE_EVENT_LOSS. Возможна потеря полных буферов событий в сеансе. Число потерянных событий зависит от размера памяти, выделенной для сеанса, способа секционирования памяти и размера событий в буфере. Этот параметр уменьшает влияние быстрого заполнения буферов событий на производительность сервера. Однако возможна потеря большого числа событий в сеансе.<br /><br /> NO_EVENT_LOSS. Потеря событий не разрешена. Этот параметр обеспечивает сохранение всех произошедших событий. При использовании этого параметра все задачи, которые инициируют события, должны ждать освобождения пространства в буфере событий. Это может привести к заметному снижению производительности во время активного сеанса событий.|  
 |max_dispatch_latency|**int**|Промежуток времени в миллисекундах, в течение которого события находятся в буферной памяти перед отправкой целям сеанса. Допустимые значения: от 1 до 2 147 483 648 и -1. Значение «-1» указывает на то, что задержка диспетчера является бесконечной. Допускает значение NULL.|  
 |max_memory|**int**|Объем памяти, выделенной в сеансе для буферов событий. Значение по умолчанию — 4 МБ. Допускает значение NULL.|  

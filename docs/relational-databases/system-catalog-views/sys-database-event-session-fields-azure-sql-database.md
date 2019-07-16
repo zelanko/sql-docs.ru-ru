@@ -10,14 +10,13 @@ ms.topic: language-reference
 ms.assetid: 9b5c94d6-612c-4e0f-976d-ac6ba55da3ac
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7874cb88d70aae5a843475f2adf4946730aed1b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f5486fa6f9100e61dbd25ad029f1024115485111
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717965"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915123"
 ---
 # <a name="sysdatabaseeventsessionfields-azure-sql-database"></a>sys.database_event_session_fields (база данных SQL Azure)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -26,7 +25,7 @@ ms.locfileid: "47717965"
   
 ||  
 |-|  
-|**Применяется к**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] версии 12 и любые более поздние версии.|  
+|**Область применения**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] До версии 12 и любые более поздние версии.|  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  

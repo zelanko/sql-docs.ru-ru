@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: dcc2f044-b785-4a29-9bc5-b673f66eedf9
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: fc34bb3dc275e325163d8113db1a3b38c954840b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bbf97a4095f2295b8851f87ba20ab083938e70ed
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66709785"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67947749"
 ---
 # <a name="cell-object-ado-md"></a>Объект Cell (многомерные объекты ADO)
 Представляет данные на пересечении координатах оси, содержащиеся в наборе ячеек.  
@@ -43,7 +42,7 @@ ms.locfileid: "66709785"
   
  **Свойства** коллекция содержит свойства, предоставляемые поставщиком. Ниже перечислены свойства, которые могут быть доступны. В списке свойств фактическое может различаться в зависимости от реализации поставщика. См. в документации поставщика более полный список доступных свойств.  
   
-|Имя|Описание|  
+|Name|Описание|  
 |----------|-----------------|  
 |BackColor|Цвет фона, используемый при отображении ячейки.|  
 |FontFlags|Битовая шрифта.|  

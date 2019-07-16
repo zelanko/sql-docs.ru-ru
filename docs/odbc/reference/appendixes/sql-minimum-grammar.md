@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4f36d785-104f-4fec-93be-f201203bc7c7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 26cf76200010edae7f85993ec33eb3722f35e94e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 85b1f59efd809c604458bd7b99882705db240e9a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63270500"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68057008"
 ---
 # <a name="sql-minimum-grammar"></a>Минимальная грамматика SQL
 В этом разделе описывается минимальный синтаксис SQL, драйвер ODBC должен поддерживать. Синтаксис, описанный в этом разделе — это подмножество запись уровня синтаксиса SQL-92.  
@@ -64,13 +63,13 @@ ms.locfileid: "63270500"
   
  &#124; *delete-statement-searched*  
   
- &#124; *drop-table-statement*  
+ &#124;*инструкции drop таблица*  
   
  &#124; *insert-statement*  
   
  &#124; *select-statement*  
   
- &#124; *update-statement-searched*  
+ &#124;*поиск обновления оператор*  
   
  *Поиск обновления оператор*  
   
@@ -78,7 +77,7 @@ ms.locfileid: "63270500"
   
  ЗАДАЙТЕ *идентификатор столбца* = {*выражение* &#124; NULL}  
   
- [, *column-identifier* = {*expression* &#124; NULL}]...  
+ [, *идентификатор столбца* = {*выражение* &#124; NULL}]...  
   
  [ГДЕ *условие поиска*]  
   

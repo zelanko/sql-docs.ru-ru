@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: fba93f65-c1db-44f4-91ba-532f87241cf7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 930a848ea01d128cb248c7929408ce7510937ad9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a42c8767228c75d3b7b0da308d739516875cf966
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63188899"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67947559"
 ---
 # <a name="interval-data-types"></a>Интервальные типы данных
 Интервал определяется как разница между двумя значениями даты и времени. Интервалы выражаются в одном из двух способов. Он *год месяц* интервала, который выражает интервалов с точки зрения лет и месяцев целого числа. Другой — *времени дня* интервал, который выражает интервалов с точки зрения дней, минуты и секунды. Эти два типа, интервалов отличаются, а не может одновременно, так как месяцев может иметь различное количество дней.  

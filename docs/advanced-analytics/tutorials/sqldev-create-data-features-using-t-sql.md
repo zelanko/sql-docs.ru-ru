@@ -7,15 +7,14 @@ ms.date: 10/19/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 32f762de13a844f12144e89f4742409c3afcbab0
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 5d304bdf03eaea53ede0cf4b2f8d82f64c3d1021
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511971"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961924"
 ---
-# <a name="lesson-2-create-data-features-using-r-and-t-sql"></a>Занятие 2. Создание функций данных с помощью R и T-SQL
+# <a name="lesson-2-create-data-features-using-r-and-t-sql"></a>Урок 2. Создание функций данных с помощью R и T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Эта статья входит руководства для разработчиков SQL по использованию R в SQL Server.

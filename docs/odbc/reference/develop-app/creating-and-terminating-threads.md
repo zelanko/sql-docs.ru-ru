@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a2cf98ef-1c71-4742-8ee2-b53fd8e04333
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e9d6d15c449d88043e844addd12ac10a98d5c4a0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b97f29ad06c4ed961f3cee571b0ca7b8d9c0b774
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62470872"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68002081"
 ---
 # <a name="creating-and-terminating-threads"></a>Создание и завершение потоков
 Многопоточные приложения, использующие ODBC должны вызывать Microsoft® Visual C++® функции библиотеки времени выполнения **_beginthread** и **_endthread** (или **_beginthreadex**и **_endthreadex**) для создания и завершения потоков, которые вызывают диспетчер драйверов ODBC. Если приложения вызывают функции Microsoft Windows NT® **CreateThread** и **EndThread** вместо этого функции памяти, утечек произойдет в том случае, так как диспетчер драйверов и некоторые драйверы ODBC вызовите времени выполнения C, не будет работать в потоке, созданном путем вызова **CreateThread**. Дополнительные сведения см. в документации Microsoft Windows®.

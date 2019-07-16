@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 803b22f2-0016-436b-a561-ce6f023d6b6a
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 30a9d28c1fe7c07a4bcfb642fee2dc318aec6896
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 679a048a40c990c5c86c0c5a24f4f1c53fb9e0b3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810302"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102395"
 ---
 # <a name="sysmasterfiles-transact-sql"></a>sys.master_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -38,16 +37,16 @@ ms.locfileid: "47810302"
 |database_id|**int**|Идентификатор базы данных, которому принадлежит данный файл. Masterdatabase_id всегда равно 1.|  
 |file_id|**int**|Идентификатор файла в базе данных. Параметр file_id первичного файла всегда имеет значение 1.|  
 |file_guid|**uniqueidentifier**|Уникальный идентификатор файла.<br /><br /> NULL = база данных обновлена с предыдущей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|Тип|**tinyint**|Тип файла:<br /><br /> 0 = строки.<br /><br /> 1 = журнал.<br /><br /> 2 = FILESTREAM.<br /><br /> 3 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = полнотекстовый каталог (полнотекстовые каталоги в версии, предшествующей [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]; полнотекстовые каталоги, которые обновлены до версии или созданы в версии [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и последующих, сообщают о типе файла 0).|  
+|type|**tinyint**|Тип файла:<br /><br /> 0 = строки.<br /><br /> 1 = журнал.<br /><br /> 2 = FILESTREAM.<br /><br /> 3 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = полнотекстовый каталог (полнотекстовые каталоги в версии, предшествующей [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]; полнотекстовые каталоги, которые обновлены до версии или созданы в версии [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и последующих, сообщают о типе файла 0).|  
 |type_desc|**nvarchar(60)**|Описание типа файла:<br /><br /> ROWS<br /><br /> LOG<br /><br /> FILESTREAM<br /><br /> FULLTEXT (полнотекстовые каталоги в версии, предшествующей [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]).|  
 |data_space_id|**int**|Идентификатор пространства данных, которому принадлежит этот файл. Пространство данных является файловой группой.<br /><br /> 0 = файлы журнала|  
 |name|**sysname**|Логическое имя файла в базе данных.|  
 |physical_name|**nvarchar(260)**|Имя файла в операционной системе.|  
 |state|**tinyint**|Состояние файла:<br /><br /> 0 = ONLINE<br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY_PENDING<br /><br /> 4 = SUSPECT<br /><br /> 5 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 6 = OFFLINE<br /><br /> 7 = DEFUNCT|  
 |state_desc|**nvarchar(60)**|Описание состояния файла:<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT<br /><br /> OFFLINE<br /><br /> DEFUNCT<br /><br /> Дополнительные сведения см. в разделе [Состояния файлов](../../relational-databases/databases/file-states.md).|  
-|size|**int**|Текущий размер файла, в 8 КБ страницах. Для моментального снимка базы данных аргумент size отражает максимальное пространство, которое моментальный снимок может использовать только для файла.<br /><br /> Примечание: Это поле заполняется нулем для контейнеров FILESTREAM. Запрос *sys.database_files* представления для фактического размера контейнеров FILESTREAM каталога.|  
-|max_size|**int**|Максимальный размер файла в страницах по 8 КБ:<br /><br /> 0 = Увеличение размера запрещено.<br /><br /> -1 = размер файла может увеличиваться до полного заполнения диска.<br /><br /> 268435456 = файл журнала может увеличиваться до 2 ТБ.<br /><br /> Примечание: Базы данных, которые обновляются с размером файла журнала неограниченного возвращают -1 для максимального размера файла журнала.|  
-|growth|**int**|0 = Файл имеет фиксированный размер и не будет увеличиваться.<br /><br /> >0 = Размер файла будет увеличиваться автоматически.<br /><br /> Если аргумент is_percent_growth имеет значение 0, шаг роста измеряется в страницах по 8 КБ, округленных до ближайших 64 КБ.<br /><br /> Если значение аргумента is_percent_growth = 1, шаг увеличения размера выражается в процентах от общего размера.|  
+|size|**int**|Текущий размер файла, в 8 КБ страницах. Для моментального снимка базы данных аргумент size отражает максимальное пространство, которое моментальный снимок может использовать только для файла.<br /><br /> Примечание. Это поле заполняется нулем для контейнеров FILESTREAM. Запрос *sys.database_files* представления для фактического размера контейнеров FILESTREAM каталога.|  
+|max_size|**int**|Максимальный размер файла в страницах по 8 КБ:<br /><br /> 0 = Увеличение размера запрещено.<br /><br /> -1 = размер файла может увеличиваться до полного заполнения диска.<br /><br /> 268435456 = файл журнала может увеличиваться до 2 ТБ.<br /><br /> Примечание. Базы данных, которые обновляются с размером файла журнала возвращают -1 для максимального размера файла журнала.|  
+|growth|**int**|0 = Файл имеет фиксированный размер и не будет увеличиваться.<br /><br /> > 0 = размер файла будет увеличиваться автоматически.<br /><br /> Если аргумент is_percent_growth имеет значение 0, шаг роста измеряется в страницах по 8 КБ, округленных до ближайших 64 КБ.<br /><br /> Если значение аргумента is_percent_growth = 1, шаг увеличения размера выражается в процентах от общего размера.|  
 |is_media_read_onlyF|**bit**|1 = файл находится на носителе только для чтения.<br /><br /> 0 = Файл размещен на носителе, доступно для чтения и записи.|  
 |is_read_only|**bit**|1 = файл помечен как файл только для чтения.<br /><br /> 0 = Файл помечен как доступный для чтения и записи.|  
 |is_sparse|**bit**|1 = разреженный файл.<br /><br /> 0 = неразреженный файл.<br /><br /> Дополнительные сведения см. в разделе [Просмотр размера разреженного файла снимка базы данных (Transact-SQL)](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md).|  

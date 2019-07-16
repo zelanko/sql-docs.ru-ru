@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: bd2b9d85-e75e-4fc8-a392-076582019caa
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 445374eabceb3534f2b5791c1fb67ba6a22d4c33
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b0cc864aa298055796985dd58ec6595961a17841
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696547"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920365"
 ---
 # <a name="bof-eof-and-bookmark-properties-example-vc"></a>BOF, EOF и Bookmark Example свойства (Visual C++)
 Первая функция в этом примере используется [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) и [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) свойства для отображения сообщения в том случае, если пользователь пытается перейти на первой или последней записи из [записей](../../../ado/reference/ado-api/recordset-object-ado.md). Она использует [закладки](../../../ado/reference/ado-api/bookmark-property-ado.md) свойства позволяют пометить отдельные записи в **записей** и вернуться к нему позже.  

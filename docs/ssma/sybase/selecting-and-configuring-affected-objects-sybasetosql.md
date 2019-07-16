@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a219df74-543a-4aec-aeeb-79f90ac3e2ee
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 48d5305854d214e61036e00ca23a94b85313138a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3aa7ccc8d559f7017fd2a9bf0bc20bc7ae191c46
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62667511"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020988"
 ---
 # <a name="selecting-and-configuring-affected-objects-sybasetosql"></a>Выбор и настройка обрабатываемых объектов (SybaseToSQL)
 На этой странице можно выбрать таблицы и внешние ключи, изменения, в которой следует сравнивать при SSMA проверяет результаты выполнения для объектов, выбранным в предыдущем шаге. Кроме того можно настроить параметры проверки.  
@@ -49,7 +48,7 @@ ms.locfileid: "62667511"
 ## <a name="sql"></a>SQL  
 Вкладка SQL содержит «создать таблицу» SQL таблицы, выбранной.  
   
-## <a name="data"></a>Данные  
+## <a name="data"></a>Data  
 Вкладка "данные" отображаются данные в выбранную таблицу.  
   
 ## <a name="properties"></a>Свойства  

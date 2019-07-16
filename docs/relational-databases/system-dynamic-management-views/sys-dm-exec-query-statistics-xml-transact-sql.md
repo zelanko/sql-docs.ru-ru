@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfecb
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 63e1d22670929448110083c31e9900e462d576bc
-ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
+ms.openlocfilehash: 06091ffc26ea036a4a0bd7e30196545bcaca60d3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58072308"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936949"
 ---
 # <a name="sysdmexecquerystatisticsxml-transact-sql"></a>sys.dm_exec_query_statistics_xml (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -51,14 +50,20 @@ sys.dm_exec_query_statistics_xml(session_id)
 |-----------------|---------------|-----------------|
 |session_id|**smallint**|Идентификатор сеанса. Не допускает значения NULL.|
 |request_id|**int**|Идентификатор запроса. Не допускает значения NULL.|
-|sql_handle|**varbinary(64)**|Карта хэширования SQL-текста запроса. Допускает значение NULL.|
-|plan_handle|**varbinary(64)**|Карта хэширования плана запроса. Допускает значение NULL.|
-|query_plan|**xml**|Showplan XML с частичной статистики. Допускает значение NULL.|
+|sql_handle|**varbinary(64)**|— Это маркер, уникально определяющий пакета или хранимой процедуры, частью которого является запрос. Допускает значение NULL.|
+|plan_handle|**varbinary(64)**|— Это маркер, который уникально идентифицирует план выполнения запроса для пакета, который в данный момент. Допускает значение NULL.|
+|query_plan|**xml**|Содержит представление инструкции Showplan плана выполнения запроса, указанный в среде выполнения *plan_handle* содержит частичные статистику. Представление Showplan имеет формат XML. Для каждого пакета, содержащего, например нерегламентированные инструкции языка [!INCLUDE[tsql](../../includes/tsql-md.md)], вызовы хранимых процедур и вызовы определяемых пользователем функций, формируется один план. Допускает значение NULL.|
 
 ## <a name="remarks"></a>Примечания
 Этой системной функции доступен, начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 1. См. в статье базы Знаний [3190871](https://support.microsoft.com/en-us/help/3190871)
 
-Это системная функция работает при обоих **стандартный** и **упрощенных** инфраструктуру профилирования статистики выполнения запросов. Дополнительные сведения см. в разделе [Инфраструктура профилирования запросов](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md).  
+Это системная функция работает при обоих **стандартный** и **упрощенных** инфраструктуру профилирования статистики выполнения запросов. Дополнительные сведения см. в разделе [Инфраструктура профилирования запросов](../../relational-databases/performance/query-profiling-infrastructure.md).  
+
+При следующих условиях вывод инструкции Showplan не возвращается в **query_plan** столбец возвращаемой таблицы для **sys.dm_exec_query_statistics_xml**:  
+  
+-   Если план запроса, соответствующего указанному *session_id* больше не выполняется, **query_plan** столбец возвращаемой таблицы имеет значение null. Например, такое условие может возникнуть при наличии задержки между принятием дескриптора плана и когда он использовался с **sys.dm_exec_query_statistics_xml**.  
+    
+Из-за ограничения количества уровней вложенности, допустимых в **xml** тип данных, **sys.dm_exec_query_statistics_xml** не может возвратить планы запросов, которые соответствуют или превосходят 128 уровней вложенных элементов. В более ранних версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] это условие предназначалось для предотвращения возврата плана запроса и формирования ошибки 6335. В [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 и более поздних версиях **query_plan** столбец возвращает значение NULL.   
 
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение `VIEW SERVER STATE` на сервере.  

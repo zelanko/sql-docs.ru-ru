@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 40ab5453-040c-4d2e-bb49-e340cf90c3ee
 author: pmasl
 ms.author: pelopes
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3157284e23c2ec2ccee6df89b24c557403ecc5a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 91a811fd2c868194ad0fc45d75cae7649a324672
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65944399"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950997"
 ---
 # <a name="sysdmftsactivecatalogs-transact-sql"></a>sys.dm_fts_active_catalogs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ ms.locfileid: "65944399"
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|Идентификатор базы данных, содержащей активный полнотекстовый каталог.|  
 |**catalog_id**|**int**|Идентификатор активного полнотекстового каталога.|  
-|**memory_address**|**varbinary(8)**|Адрес буферов памяти, выделенных для операции заполнения, относящейся к полнотекстовому каталогу.|  
+|**адрес_памяти**|**varbinary(8)**|Адрес буферов памяти, выделенных для операции заполнения, относящейся к полнотекстовому каталогу.|  
 |**name**|**nvarchar(128)**|Имя активного полнотекстового каталога.|  
 |**is_paused**|**bit**|Указывает, было ли приостановлено заполнение активного полнотекстового каталога.|  
 |**status**|**int**|Текущее состояние полнотекстового каталога. Это может быть:<br /><br /> 0 = инициализация<br /><br /> 1 = готовность<br /><br /> 2 = пауза<br /><br /> 3 = временная ошибка<br /><br /> 4 = необходимость повторного подключения<br /><br /> 5 = выключение<br /><br /> 6 = приостановлен для резервного копирования<br /><br /> 7 = резервное копирование осуществлено через каталог<br /><br /> 8 = каталог поврежден|  
@@ -62,7 +61,7 @@ ms.locfileid: "65944399"
 ## <a name="permissions"></a>Разрешения  
 
 На [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], требуется `VIEW SERVER STATE` разрешение.   
-На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], требуется `VIEW DATABASE STATE` разрешение в базе данных.   
+В [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] необходимо разрешение `VIEW DATABASE STATE` для базы данных.   
    
 ## <a name="physical-joins"></a>Физические соединения  
  ![Существенные соединения данного динамического административного представления](../../relational-databases/system-dynamic-management-views/media/join-dm-fts-active-catalogs-1.gif "существенные соединения данного динамического административного представления")  

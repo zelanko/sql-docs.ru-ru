@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 475662b9-6985-45bf-b1e9-b0f26ef50443
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 91c7333f47306da90d634e45f50df44d1b6ae0f2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: cdcbd34978738d64d52b3c70a280507b6cb0c391
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675333"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68052375"
 ---
 # <a name="sqlserveralias-class"></a>Класс SqlServerAlias
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "51675333"
   
 -   экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , с которым соединяется клиент, прослушивает альтернативный именованный канал.  
   
- **Примечание.** [SqlServerAlias Class](../../../relational-databases/wmi-provider-configuration-classes/sqlserveralias-class/sqlserveralias-class.md) наследует метод **Put** из класса Provider. Однако он не возвращает результаты, как указано методом **Provider::Put** . Дополнительные сведения см. в документации WMI.  
+ **Примечание.** [Класс SqlServerAlias](../../../relational-databases/wmi-provider-configuration-classes/sqlserveralias-class/sqlserveralias-class.md) наследует **поместить** метод из класса Provider. Однако он не возвращает результаты, как указано методом **Provider::Put** . Дополнительные сведения см. в документации WMI.  
   
 ## <a name="see-also"></a>См. также  
  [Настройка клиентских протоколов](https://technet.microsoft.com/library/ms181035.aspx)  

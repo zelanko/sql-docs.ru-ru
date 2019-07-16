@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d514c622-2c0d-4f41-80d2-66add4d113b1
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 12b945d4f9e320cba6a143893b306a9fc11da675
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3927e0a312c077f1d39405ca5526d7f3c0099342
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63192374"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909029"
 ---
 # <a name="legal-notice-mysqltosql"></a>Юридическая информация (MySQLToSql)
 Настоящий документ, в том числе содержащиеся в нем образцы приложений, предоставляется исключительно в ознакомительных целях без каких-либо явных или подразумеваемых гарантий. Данные, содержащиеся в этой документации, включая URL-адреса, а также ссылки на другие веб-сайты, могут меняться без предварительного уведомления. Всю ответственность за использование документации, а также за результаты ее использования несет исключительно пользователь.  

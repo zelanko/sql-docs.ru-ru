@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: ea48cf80-904a-4273-a950-6d35b1b0a1b6
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ab6e80c80e2fab306b1b890f62546de07d6be108
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: da427117b2282c9014ff0171e1a7c29f7490940e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63049880"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078753"
 ---
 # <a name="syscredentials-transact-sql"></a>sys.credentials (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "63049880"
 |credential_identity|**nvarchar(4000)**|Имя применяемого идентификатора. Обычно это пользователь Windows. Это имя не обязательно должно быть уникальным.|  
 |create_date|**datetime**|Время создания учетных данных.|  
 |modify_date|**datetime**|Время последнего изменения учетных данных.|  
-|target_type|**nvarchar(100)**|Тип учетных данных. Возвращает значение NULL для традиционных учетных данных и значение CRYPTOGRAPHIC PROVIDER для учетных данных, сопоставленных с поставщиком служб шифрования. Дополнительные сведения о поставщиках управлении ключами см. в разделе [расширенного управления ключами &#40;расширенного управления Ключами&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).|  
+|target_type|**Nvarchar(100)**|Тип учетных данных. Возвращает значение NULL для традиционных учетных данных и значение CRYPTOGRAPHIC PROVIDER для учетных данных, сопоставленных с поставщиком служб шифрования. Дополнительные сведения о поставщиках управлении ключами см. в разделе [расширенного управления ключами &#40;расширенного управления Ключами&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).|  
 |target_id|**int**|Идентификатор объекта, с которым сопоставлены учетные данные. Возвращает значение 0 для традиционных учетных данных и значение, отличное от 0, для учетных данных, сопоставленных с поставщиком служб шифрования. Дополнительные сведения о поставщиках управлении ключами см. в разделе [расширенного управления ключами &#40;расширенного управления Ключами&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).|  
 
 ## <a name="remarks"></a>Примечания  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 269fbab0-e5f2-4a98-86c0-2d7b647acaae
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 914bd4759552680a57c345dc3a7c3bc1bcc103a6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: aa936eb9f8ef3328945d4ece63fb36432a5fd618
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63188495"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68100590"
 ---
 # <a name="procedure-call-escape-sequence"></a>Escape-последовательность вызова процедуры
 ODBC использует escape-последовательности для вызовов процедур. Синтаксис escape-последовательность выглядит следующим образом:  
@@ -37,11 +36,11 @@ ODBC использует escape-последовательности для в�
   
  *procedure-identifier* ::= *user-defined-name*  
   
- *procedure-name* ::= *procedure-identifier*  
+ *Имя процедуры* :: = *идентификатор процедуры*  
   
  &#124;*имя владельца*. *Идентификатор процедуры*  
   
- &#124; *catalog-name catalog-separator* *procedure-identifier*  
+ &#124;*разделитель каталога имя каталога* *идентификатор процедуры*  
   
  &#124;*разделитель каталога имя каталога* [*имя владельца*]. *Идентификатор процедуры*  
   
@@ -57,7 +56,7 @@ ODBC использует escape-последовательности для в�
   
  *procedure-parameter-list* ::= *procedure-parameter*  
   
- &#124; *procedure-parameter*, *procedure-parameter-list*  
+ &#124;*параметр процедуры*, *список параметров процедуры*  
   
  *procedure-parameter* ::= *dynamic-parameter* &#124; *literal* &#124; *empty-string*  
   

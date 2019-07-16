@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 360e01bb-6347-4e2b-acda-0daa161ed33b
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: c0ac65e0973ac9e862a73dd9c04a916156c8a314
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: de6df03f894d43819cf9d27be3fd35a977631f29
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63298801"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989627"
 ---
 # <a name="global-settings-dialogs-db2tosql"></a>Глобальные параметры (диалоговые окна) (DB2ToSQL)
 Используйте страницу диалоговые окна **глобальные параметры** диалоговое окно, чтобы указать действие пользователя по умолчанию и параметры предупреждения для SSMA.  

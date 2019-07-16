@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 0b0993f8-73e0-402b-8c6c-1b0963956f5d
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d96c8565a8d908518504cf86eb253fc5913f1a85
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c82970caa25089320a1dc5daf68076f27478081f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63004161"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032839"
 ---
 # <a name="spspecialcolumns-transact-sql"></a>sp_special_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -67,7 +66,7 @@ sp_special_columns [ @table_name = ] 'table_name'
  [ @nullable=] '*допускает значения NULL*"  
  Определяет, допускают ли специальные столбцы значение NULL. *допускает значения NULL* — **char (** 1 **)** , значение по умолчанию U. O указывает специальные столбцы, которые не допускают значения null. U указывает столбцы, частично допускающие значения NULL.  
   
- [ @ODBCVer=] '*ODBCVer*'  
+ [ @ODBCVer=] '*Аргумент ODBCVer*"  
  Используемая версия ODBC. *Аргумент ODBCVer* — **int (** 4 **)** , значение по умолчанию 2. Это значение соответствует версии ODBC 2.0. Дополнительные сведения о различиях между ODBC версии 2.0 и ODBC версии 3.0 см. в спецификации ODBC SQLSpecialColumns для ODBC версии 3.0.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  

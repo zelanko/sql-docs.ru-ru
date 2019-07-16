@@ -22,18 +22,17 @@ helpviewer_keywords:
 ms.assetid: dd50eebd-75df-4e0d-8c4d-88b511aae4c7
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 128c83e0fd63b2724311aec046bdb9683c569a03
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4cd58a535836a82dc6cca660ba745aed58e2c84c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62740947"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67986324"
 ---
 # <a name="installing-sql-server-migration-assistant-for-access-accesstosql"></a>Установка SQL Server Migration Assistant для Access (AccessToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) для доступа устанавливается с помощью мастера на основе установщика Windows. Этот раздел содержит сведения о необходимых компонентах установки, ссылку на последнюю версию SSMA и инструкции по установке, лицензирование, удаление и обновление SSMA.  
   
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
 Перед установкой SSMA, убедитесь, что ваша система отвечает следующим требованиям:  
   
 -   Windows 7 или более поздней версии или Windows Server 2008 или более поздней версии.  

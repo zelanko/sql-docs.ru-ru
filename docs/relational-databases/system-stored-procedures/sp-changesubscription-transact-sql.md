@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f9d91fe3-47cf-4915-b6bf-14c9c3d8a029
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c81843220b9613bfc59f03d197f369e77a850f84
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: cddc14c14054ecfa81a963d15a7a604e8d71d085
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534046"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016530"
 ---
 # <a name="spchangesubscription-transact-sql"></a>sp_changesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,9 +56,9 @@ sp_changesubscription [ @publication = ] 'publication'
   
 `[ @destination_db = ] 'destination_db'` — Имя базы данных подписки. *destination_db* — **sysname**, не имеет значения по умолчанию.  
   
-`[ @property = ] 'property'` — Это свойство, изменяемое для данной подписки. *Свойство* — **nvarchar(30)**, и может принимать одно из значений в таблице.  
+`[ @property = ] 'property'` — Это свойство, изменяемое для данной подписки. *Свойство* — **nvarchar(30)** , и может принимать одно из значений в таблице.  
   
-`[ @value = ] 'value'` Новое значение для указанного *свойство*. *значение* — **nvarchar(4000)**, и может принимать одно из значений в таблице.  
+`[ @value = ] 'value'` Новое значение для указанного *свойство*. *значение* — **nvarchar(4000)** , и может принимать одно из значений в таблице.  
   
 |Свойство|Значение|Описание|  
 |--------------|-----------|-----------------|  

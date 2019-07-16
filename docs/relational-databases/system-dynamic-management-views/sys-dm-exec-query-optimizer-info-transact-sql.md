@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 1d72cef1-22d8-4ae0-91db-6694fe918c9e
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7ca0db131690b0b734d7e42175f4ccfb4df6a381
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a35e2f44825546d651917c4fbe4030d2a2a05e5a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013215"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097694"
 ---
 # <a name="sysdmexecqueryoptimizerinfo-transact-sql"></a>sys.dm_exec_query_optimizer_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "63013215"
 > [!NOTE]  
 >  Вызывать его из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], используйте имя **sys.dm_pdw_nodes_exec_query_optimizer_info**.  
   
-|Имя|Тип данных|Описание|  
+|Name|Тип данных|Описание|  
 |----------|---------------|-----------------|  
 |**Счетчик**|**nvarchar(4000)**|Имя события статистики оптимизатора.|  
 |**occurrence**|**bigint**|Количество вхождений события оптимизации для этого счетчика.|  
@@ -46,7 +45,7 @@ ms.locfileid: "63013215"
 ## <a name="permissions"></a>Разрешения  
 
 На [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], требуется `VIEW SERVER STATE` разрешение.   
-На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], требуется `VIEW DATABASE STATE` разрешение в базе данных.   
+В [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] необходимо разрешение `VIEW DATABASE STATE` для базы данных.   
     
 ## <a name="remarks"></a>Примечания  
  **sys.dm_exec_query_optimizer_info** содержит следующие свойства (счетчики). Все значения частотности рассматриваются совокупно и при перезапуске системы устанавливаются в 0. Все значения полей значений при перезапуске системы устанавливаются в NULL. Все значения значимых столбцов, по которым определяется среднее, используют значение частотности из той же строки, что и знаменатель в вычислении среднего. Все оптимизации запросов измеряются, когда [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определяет изменения **dm_exec_query_optimizer_info**, включая оба пользователя и сформированные системой запросы. Выполнение кэшированного плана не изменяет значений в **dm_exec_query_optimizer_info**, оптимизации значимыми являются только.  

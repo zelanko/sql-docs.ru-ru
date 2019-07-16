@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 0aeefb3f-02ef-457e-8c42-84ddb26f1c88
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 451fef0ce805dcebdb8e3d7f3d13a9b42eeadaa7
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 7e691a52cebf3ca9de0454ca2ccd60b3f8daa43f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255210"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078376"
 ---
 # <a name="viewtableusage-transact-sql"></a>VIEW_TABLE_USAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,12 +35,12 @@ ms.locfileid: "54255210"
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**VIEW_CATALOG**|**nvarchar(** 128 **)**|Квалификатор представления.|  
-|**VIEW_SCHEMA**|**nvarchar(** 128 **)**|Имя схемы, содержащей представление.<br /><br /> **&#42;&#42;Важные &#42; &#42;**  не используйте представления INFORMATION_SCHEMA, чтобы определить схему объекта. Единственный надежный способ найти схему объекта — направить запрос к представлению каталога sys.objects.|  
+|**VIEW_CATALOG**|**nvarchar (** 128 **)**|Квалификатор представления.|  
+|**VIEW_SCHEMA**|**nvarchar (** 128 **)**|Имя схемы, содержащей представление.<br /><br /> **&#42;&#42;Важные &#42; &#42;**  не используйте представления INFORMATION_SCHEMA, чтобы определить схему объекта. Единственный надежный способ найти схему объекта — направить запрос к представлению каталога sys.objects.|  
 |**VIEW_NAME**|**sysname**|Имя представления.|  
-|**TABLE_CATALOG**|**nvarchar(** 128 **)**|Квалификатор таблицы.|  
-|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|Имя схемы, содержащей базовую таблицу.<br /><br /> **&#42;&#42;Важные &#42; &#42;**  не используйте представления INFORMATION_SCHEMA, чтобы определить схему объекта. Единственный надежный способ найти схему объекта — направить запрос к представлению каталога sys.objects.|  
-|**TABLE_NAME**|**sysname**|Базовая таблица, на которой базируется представление.|  
+|**ЗНАЧЕНИЯМ TABLE_CATALOG**|**nvarchar (** 128 **)**|Квалификатор таблицы.|  
+|**TABLE_SCHEMA**|**nvarchar (** 128 **)**|Имя схемы, содержащей базовую таблицу.<br /><br /> **&#42;&#42;Важные &#42; &#42;**  не используйте представления INFORMATION_SCHEMA, чтобы определить схему объекта. Единственный надежный способ найти схему объекта — направить запрос к представлению каталога sys.objects.|  
+|**ИМЯ_ТАБЛИЦЫ**|**sysname**|Базовая таблица, на которой базируется представление.|  
   
 ## <a name="see-also"></a>См. также  
  [Системные представления &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   

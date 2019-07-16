@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: 8edbf68f-d05d-4d77-92f6-e9500008f520
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 43be1c5e75998903ff4e64fc5f4230818a873ffc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: eb54ba7becad42d8d9d2c2870c02db37a3c7d89f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63281126"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093979"
 ---
 # <a name="odbc-drivers-subkey"></a>Подраздел драйвера ODBC
 Значения в подразделе драйверы ODBC список установленных драйверов. В следующей таблице показан формат из следующих значений.  
   
-|Имя|Тип данных|Данные|  
+|Name|Тип данных|Data|  
 |----------|---------------|----------|  
 |*Описание драйвера*|REG_SZ|**установлен**|  
   

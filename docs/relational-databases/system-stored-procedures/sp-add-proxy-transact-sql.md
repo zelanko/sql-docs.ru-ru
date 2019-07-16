@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: cb59df37-f103-439b-bec1-2871fb669a8b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 247c834abfbc47485628702bf4cd87c7662c44a8
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 4aa4120db7b45cb0b3a7d7a10bb53931b8300d9d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494276"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088478"
 ---
 # <a name="spaddproxy-transact-sql"></a>Хранимая процедура sp_add_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ sp_add_proxy
   
 `[ @enabled = ] is_enabled` Указывает, включен ли прокси-сервер. *Is_enabled* установлен флаг **tinyint**, значение по умолчанию 1. Когда *is_enabled* — **0**, прокси-сервер не включен и не может использоваться шагом задания.  
   
-`[ @description = ] 'description'` Описание прокси-сервера. Описание **nvarchar(512)**, значение по умолчанию NULL. Описание позволяет документировать учетную запись-посредника, но оно не используется агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для других целей. Поэтому этот аргумент необязателен.  
+`[ @description = ] 'description'` Описание прокси-сервера. Описание **nvarchar(512)** , значение по умолчанию NULL. Описание позволяет документировать учетную запись-посредника, но оно не используется агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для других целей. Поэтому этот аргумент необязателен.  
   
 `[ @credential_name = ] 'credential_name'` Имя учетных данных прокси-сервера. *Credential_name* — **sysname**, значение по умолчанию NULL. Либо *credential_name* или *credential_id* должен быть указан.  
   

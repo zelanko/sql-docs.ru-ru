@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: d96a14f3-4284-45ff-b1fe-4858e540a013
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 21b97ab3eaae8399fbc0bf37905b2b61b608948c
-ms.sourcegitcommit: f46fd79fd32a894c8174a5cb246d9d34db75e5df
+ms.openlocfilehash: 8b44824310637b279388ea367cd4ab1d07401d1f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/26/2018
-ms.locfileid: "53785785"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090278"
 ---
 # <a name="sysdmxeobjectcolumns-transact-sql"></a>sys.dm_xe_object_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +38,11 @@ ms.locfileid: "53785785"
 |-----------------|---------------|-----------------|  
 |name|**nvarchar(256)**|Имя столбца. имя является уникальным в пределах объекта. Не допускает значение NULL.|  
 |column_id|**int**|Идентификатор столбца. Идентификатор column_id является уникальным в пределах объекта при использовании с column_type. Не допускает значение NULL.|  
-|object_name|**nvarchar(256)**|Имя объекта, которому принадлежит столбец. Обеспечивает связь «многие к одному» с sys.dm_xe_objects.id. Не допускает значение NULL.|  
+|object_name|**nvarchar(256)**|Имя объекта, которому принадлежит столбец. Устанавливается отношение "многие к одному" с sys.dm_xe_objects.id. Не допускает значение NULL.|  
 |object_package_guid|**uniqueidentifier**|Идентификатор GUID пакета, в котором содержится объект. Не допускает значение NULL.|  
 |type_name|**nvarchar(256)**|Имя типа для этого столбца. Не допускает значение NULL.|  
 |type_package_guid|**uniqueidentifier**|Идентификатор GUID пакета, в котором содержится тип данных столбца. Не допускает значение NULL.|  
-|column_type|**nvarchar(60)**|Показывает, как используется этот столбец. Не допускает значение NULL. column_type может принимать одно из следующих значений:<br /><br /> readonly. Столбец содержит статическое значение, которое нельзя изменить.<br /><br /> data. Столбец содержит данные времени выполнения, представленные объектом.<br /><br /> customizable. Столбец содержит значение, которое можно изменить.<br /><br /> Примечание. При изменении этого значения может измениться поведение объекта.|  
+|column_type|**nvarchar(60)**|Показывает, как используется этот столбец. Не допускает значение NULL. column_type может принимать одно из следующих значений:<br /><br /> readonly. Столбец содержит статическое значение, которое нельзя изменить.<br /><br /> data. Столбец содержит данные времени выполнения, представленные объектом.<br /><br /> customizable. Столбец содержит значение, которое можно изменить.<br /><br /> Примечание. Изменение этого значения можно изменить поведение объекта.|  
 |column_value|**nvarchar(256)**|Отображает статические значения, связанные со столбцом объекта. Допускает значение NULL.|  
 |capabilities|**int**|Битовая карта, описывающая возможности столбца. Допускает значение NULL.|  
 |capabilities_desc|**nvarchar(256)**|Описание возможностей этого столбца объекта. Значение может быть одним из следующих.<br /><br /> Mandatory. Значение должно быть задано при привязывании родительского объекта к сеансу событий.<br /><br /> Допускает значение NULL.|  

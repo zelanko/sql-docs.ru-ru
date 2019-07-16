@@ -5,23 +5,22 @@ description: В этой статье описывается настройка 
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-manager: jroth
 ms.date: 06/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 94835b3ae041aa721e915bb5399737b35c52799f
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: ce7836b66408fda5f60e5566625dc1aa460fa672
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728783"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958374"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>Как Gen2 ADLS подключения для HDFS, распределение по уровням в кластере больших данных
 
 Следующие разделы содержат пример, демонстрирующий настройку HDFS, распределение по уровням с источником данных Gen2 хранилища Озера данных Azure.
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 - [Развернутые больших данных кластера](deployment-guidance.md)
 - [Средства работы с большими данными](deploy-big-data-tools.md)

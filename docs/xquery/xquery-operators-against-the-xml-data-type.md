@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 39ca3d2e-e928-4333-872b-75c4ccde8e79
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2786295b344cfc2df6ae613e42a39f71aee4d3d8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b113fbd8111072790d1f0904b3e751c6629725b2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038895"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945959"
 ---
 # <a name="xquery-operators-against-the-xml-data-type"></a>Сравнение операторов XQuery с XML-данными
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ WHERE  AdditionalContactInfo.value('
       'bit')= cast(1 as bit)  
 ```  
   
- Существует еще один способ определения того, как работает описанный запрос. Каждый значение телефонного номера полученную **AdditionalContactInfo** столбца сравнивается с набором из двух телефонных номеров. Если значение входит в набор, в результате запроса возвращается этот заказчик.  
+ Есть еще один способ определения того, как работает описанный запрос: Каждый значение телефонного номера полученную **AdditionalContactInfo** столбца сравнивается с набором из двух телефонных номеров. Если значение входит в набор, в результате запроса возвращается этот заказчик.  
   
 ### <a name="b-using-a-numeric-operator"></a>Б. Использование числового оператора  
  Оператор + в данном запросе является оператором значения, так как он применяется к одному объекту. К примеру, значение 1 добавляется к размеру лота, возвращаемому этим запросом.  
@@ -79,7 +78,7 @@ where ProductModelID=7
 ```  
   
 ### <a name="c-using-a-value-operator"></a>В. Использование оператора значения  
- Следующий запрос считывает элементы <`Picture`> для модели продукта, размер картинки которой равен «small».  
+ Следующий запрос получает <`Picture`> элементы для модели продукта, где размер рисунка является «small»:  
   
 ```sql
 SELECT CatalogDescription.query('  

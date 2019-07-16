@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a80d54b0-43ff-4dfd-b6cb-f4694a5ed765
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0485ecf720cb84580c17c77b31fc6816de2e679a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ef42fe2ab881a7e24d680e0dd941cbea0d95488f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62641037"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68076896"
 ---
 # <a name="dbms-based-driver-diagnostic-example"></a>Пример диагностики драйверов на основе СУБД
 Драйверов на основе СУБД отправляет запросы к СУБД и возвращает сведения в приложение через диспетчер драйверов. Так как драйвер является компонентом, который взаимодействует с диспетчером драйверов, он форматирует и возвращает аргументы для **SQLGetDiagRec**.  

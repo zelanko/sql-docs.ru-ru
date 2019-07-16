@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 08e5c5bf-f7de-4bf9-97a9-f214c128ad8c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 728edb30336d3687e92638b348d605fef5842d34
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c1f49de41c0735f53323c1f9ba75c6f2257439b0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697844"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932495"
 ---
 # <a name="getrows-method-example-vc"></a>Пример метода GetRows (Visual C++)
 В этом примере используется [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) метод для получения указанного числа строк из [записей](../../../ado/reference/ado-api/recordset-object-ado.md) и заполняют массив полученные данные. **GetRows** метод возвратит меньше, чем требуемое число строк в двух случаях: либо если [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) был достигнут, или если **GetRows** попытка получить запись, которая была удалена другим пользователем. Функция возвращает **False** только в том случае, если происходит второй вариант. Функция GetRowsOK является обязательным для выполнения этой процедуры.  

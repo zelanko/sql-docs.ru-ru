@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 231750a6-4828-4d03-afe6-b91d38c42ed3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ac1fb436ded0d829d9b6a9c8fe4e642f8de8cb16
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2a766ad74f42336612859c63cf42df654846ff96
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690322"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084842"
 ---
 # <a name="spupdateoperator-transact-sql"></a>sp_update_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,10 +63,10 @@ sp_update_operator
  Число, указывающее текущее состояние оператора (**1** включенный в настоящее время **0** в противном случае). *включить* — **tinyint**, значение по умолчанию NULL. Если оператор не включен, он не будет получать предупреждающих оповещений.  
   
  [ @email_address=] '*email_address*"  
- Адрес электронной почты оператора. Эта строка передается напрямую в систему электронной почты. *email_address* — **nvarchar(100)**, значение по умолчанию NULL.  
+ Адрес электронной почты оператора. Эта строка передается напрямую в систему электронной почты. *email_address* — **nvarchar(100)** , значение по умолчанию NULL.  
   
  [ @pager_address=] '*pager_number*"  
- Адрес пейджера оператора. Эта строка передается напрямую в систему электронной почты. *pager_number* — **nvarchar(100)**, значение по умолчанию NULL.  
+ Адрес пейджера оператора. Эта строка передается напрямую в систему электронной почты. *pager_number* — **nvarchar(100)** , значение по умолчанию NULL.  
   
  [ @weekday_pager_start_time=] *weekday_pager_start_time*  
  Указывает время, по истечении которого на пейджер указанному оператору может быть отправлено оповещение (с понедельника по пятницу). *weekday_pager_start_time*— **int**, значение по умолчанию NULL, необходимо вводить в формате ЧЧММСС с использованием 24-часовом формате.  
@@ -101,7 +100,7 @@ sp_update_operator
 |**64**|Суббота|  
   
  [ @netsend_address=] '*netsend_address*"  
- Сетевой адрес оператора, которому посылается сетевое сообщение. *netsend_address*— **nvarchar(100)**, значение по умолчанию NULL.  
+ Сетевой адрес оператора, которому посылается сетевое сообщение. *netsend_address*— **nvarchar(100)** , значение по умолчанию NULL.  
   
  [ @category_name=] '*категории*"  
  Имя категории предупреждения. *Категория* — **sysname**, значение по умолчанию NULL.  

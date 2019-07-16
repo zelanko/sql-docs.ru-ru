@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7ad5fe44-6445-4ba8-a457-5af792631f11
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 12e2e61c6b55bf3c549c08f2b090059d674ed83d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7a8ad0b6c4c1e836a3eacca1f497d7ed229dbfc4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63162025"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67908872"
 ---
 # <a name="project-settings-conversion-mysqltosql"></a>Параметры проекта (преобразование) (MySQLToSQL)
 На странице преобразования **параметры проекта** диалоговое окно содержит настройки, установленные как SSMA преобразует синтаксис MySQL в синтаксис SQL Server или SQL Azure.  
@@ -90,7 +89,7 @@ ms.locfileid: "63162025"
 |**По умолчанию, ограничивающий прямоугольник {XMAX&#124;XMIN&#124;YMAX&#124;YMIN} для пространственных индексов**|Определяет значение по умолчанию для {XMAX&#124;XMIN&#124;YMAX&#124;YMIN} параметр ограничивающий прямоугольник, используемые в пространственных индексах.<br /><br />**Режим по умолчанию**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0<br /><br />**Режим оптимистичного**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX:  100<br /><br />YMIN: 0<br /><br />**Полный режим**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0|  
 |**Плотность сетки для пространственных индексов**|Определяет значение по умолчанию для LEVEL_1, LEVEL_2, LEVEL_3 и LEVEL_4 плотности сетки, используемых в пространственных индексах.<br /><br />**Режим по умолчанию**<br /><br />LEVEL_1: Значение по умолчанию<br /><br />LEVEL_2: Значение по умолчанию<br /><br />LEVEL_3: Значение по умолчанию<br /><br />LEVEL_4: Значение по умолчанию<br /><br />**Режим оптимистичного**<br /><br />LEVEL_1: Значение по умолчанию<br /><br />LEVEL_2: Значение по умолчанию<br /><br />LEVEL_3: Значение по умолчанию<br /><br />LEVEL_4: Значение по умолчанию<br /><br />**Полный режим**<br /><br />LEVEL_1: Значение по умолчанию<br /><br />LEVEL_2: Значение по умолчанию<br /><br />LEVEL_3: Значение по умолчанию<br /><br />LEVEL_4: Значение по умолчанию|  
   
-### <a name="transactions"></a>Transactions  
+### <a name="transactions"></a>Транзакции  
   
 |||  
 |-|-|  

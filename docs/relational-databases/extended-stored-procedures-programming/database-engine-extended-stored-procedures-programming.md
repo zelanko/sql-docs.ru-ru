@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 561305cd-c803-48af-9eec-2c19f4d311ce
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a2f25356cfc035fa2185fabe4dae4d9a6d3443f7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 541f24693598d20925dd37d4970c6d9916945793
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688572"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032011"
 ---
 # <a name="database-engine-extended-stored-procedures---programming"></a>Программирование расширенных хранимых процедур ядра СУБД
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "47688572"
 > [!NOTE]  
 >  При наличии существующих приложений шлюзов нельзя использовать библиотеку opends60.dll, поставляемую с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], для запуска приложений. Приложения шлюзов больше не поддерживаются.  
   
-## <a name="extended-stored-procedures-vs-clr-integration"></a>Расширенные хранимые процедуры и Интеграция со средой CLR.  
+## <a name="extended-stored-procedures-vs-clr-integration"></a>Расширенные хранимые процедуры и. Интеграция со средой CLR.  
  В более ранних версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] расширенные хранимые процедуры представляли собой единственный доступный механизм, позволяющий разработчикам баз данных создавать логику на стороне сервера, которую трудно или невозможно написать с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)]. Интеграция со средой CLR более надежна, чем использование таких хранимых процедур. Более того, благодаря интеграции со средой CLR, логика, ранее создаваемая в виде хранимых процедур, зачастую лучше выражается возвращающими табличные значения функциями, что позволяет выполнять к результатам такой функции запросы в виде инструкций SELECT, внедряя их в предложение FROM.  
   
 ## <a name="see-also"></a>См. также  

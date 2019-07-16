@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0273457f-9d2a-4a6f-9a16-6a6bf281cba0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d003b1f15500b1f6d0b8490d9e712a6a34b100a3
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 630c2f90085cedfbb5c59ba395c7d0d9ae9d9643
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538636"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67906098"
 ---
 # <a name="sphelpnotification-transact-sql"></a>sp_help_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,11 +44,11 @@ sp_help_notification
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @object_type = ] 'object_type'` Тип возвращаемых данных. *object_type*— **char(9)**, не имеет значения по умолчанию. *object_type* может принимать значение ALERTS, перечисляя предупреждения, назначенные указанному имени оператора *,* или OPERATORS, перечисляя операторов, ответственных за указанное имя предупреждения *.*  
+`[ @object_type = ] 'object_type'` Тип возвращаемых данных. *object_type*— **char(9)** , не имеет значения по умолчанию. *object_type* может принимать значение ALERTS, перечисляя предупреждения, назначенные указанному имени оператора *,* или OPERATORS, перечисляя операторов, ответственных за указанное имя предупреждения *.*  
   
 `[ @name = ] 'name'` Имя оператора (если *object_type* имеет значение OPERATORS) или имя предупреждения (если *object_type* имеет значение ALERTS). *имя* — **sysname**, не имеет значения по умолчанию.  
   
-`[ @enum_type = ] 'enum_type'` *Object_type*сведений, возвращаемых. *enum_type* в большинстве случаев имеет значение ACTUAL. *enum_type*— **char(10)**, по умолчанию и может принимать одно из следующих значений.  
+`[ @enum_type = ] 'enum_type'` *Object_type*сведений, возвращаемых. *enum_type* в большинстве случаев имеет значение ACTUAL. *enum_type*— **char(10)** , по умолчанию и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  

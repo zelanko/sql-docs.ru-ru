@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 95a8a1d40792c2993d44624a321bccf99030e181
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5906dc6d964603576831a5c7009cd0224f0ffb08
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62658896"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67928446"
 ---
 # <a name="select-distinct-from-ltmodel-gt-dmx"></a>SELECT DISTINCT FROM &lt;модели &gt; (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -56,7 +55,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
   
  Результаты **SELECT DISTINCT FROM \<модели >** инструкции, зависит от типа столбца. В следующей таблице описаны поддерживаемые типы столбцов и выводимые инструкцией данные.  
   
-|Тип столбца|Вывод|  
+|Тип столбца|Output|  
 |-----------------|------------|  
 |Discrete|Уникальные значения в столбце.|  
 |Дискретизированный|Средняя точка каждого дискретного сегмента памяти в столбце.|  
@@ -75,7 +74,7 @@ FROM [TM Decision Tree]
 |Gender|  
 |------------|  
 ||  
-|Ж|  
+|C|  
 |M|  
   
  Для столбцов, содержащих дискретные значения, результаты всегда включают недостающее состояние, показанное как значение NULL.  
@@ -135,7 +134,7 @@ FROM [TM Decision Tree]
 >  Минимальное значение минимального сегмента и максимальное значение максимального сегмента представляют собой самое высокое и самое низкое наблюдаемое значение. Предполагается, что все значения, остающиеся за пределами этого наблюдаемого диапазона, принадлежат минимальному и максимальному сегментам.  
   
 ## <a name="see-also"></a>См. также  
- [ВЫБЕРИТЕ &AMP;#40;РАСШИРЕНИЙ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ&AMP;#41;](../dmx/select-dmx.md)   
+ [ВЫБЕРИТЕ &#40;РАСШИРЕНИЙ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ&#41;](../dmx/select-dmx.md)   
  [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; инструкций по обработке данных](../dmx/dmx-statements-data-manipulation.md)   
  [Справочник по расширениям интеллектуального анализа данных (расширения интеллектуального анализа данных)](../dmx/data-mining-extensions-dmx-statements.md)  
   

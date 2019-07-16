@@ -7,13 +7,12 @@ ms.date: 09/05/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: c3f72a755d0ca75ca699465f7eb7a62ea48ff81f
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 216adc526f558152d90f4c8639b4ca1ba5dc67ac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511371"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963068"
 ---
 # <a name="r-language-extension-in-sql-server"></a>Расширение языка R в SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -57,7 +56,7 @@ SQL Server не изменяет базовый исполняемые файл�
 
 ![rsql_indb780-01](../r/media/script_in-db-r.png)
 
-1. Запрос к среде выполнения R, указанный с помощью параметра _@language='R'_, передается хранимой процедуре [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). SQL Server отправляет этот запрос в службу панели запуска.
+1. Запрос к среде выполнения R, указанный с помощью параметра _@language='R'_ , передается хранимой процедуре [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). SQL Server отправляет этот запрос в службу панели запуска.
 2. Служба панели запуска запускает соответствующее средство запуска. В данном случае RLauncher.
 3. RLauncher запускает внешний процесс R.
 4. BxlServer координирует со средой выполнения R для управления обмен данными с SQL Server и хранилищем результатов работы.

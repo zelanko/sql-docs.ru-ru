@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e8f42de7-c738-41c3-8bf5-dbd559dc7184
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 31caafde6ea3cdd93355910f244ed5872b6990ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 844e96d765f9ed06f88b140b906b78eb4ea16ea0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62635891"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997442"
 ---
 # <a name="sphelpserver-transact-sql"></a>sp_helpserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +56,7 @@ sp_helpserver [ [ @server = ] 'server' ]
 |**rpc**|Включает RPC с определенного сервера.|  
 |**RPC out**|Включает RPC на определенный сервер.|  
 |**sub**|Подписчик.|  
-|**Системы**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**system**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**использовать удаленные параметры сортировки**|Применение параметров сортировки удаленного столбца вместо параметров сортировки локального сервера.|  
   
 `[ @show_topology = ] 'show_topology'` — Это связь указанного сервера на другие серверы. *значение аргумента show_topology* — **varchar (** 1 **)** , значение по умолчанию NULL. Если *значение аргумента show_topology* не равно **t** или имеет значение NULL, **sp_helpserver** возвращает столбцы, перечисленные в разделе «результирующие наборы». Если *значение аргумента show_topology* равен **t**, помимо столбцов, перечисленных в результирующих наборах, **sp_helpserver** также возвращает **topx** и **topy** сведения.  
@@ -71,7 +70,7 @@ sp_helpserver [ [ @server = ] 'server' ]
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Имя сервера.|  
 |**сетевое_имя**|**sysname**|Сетевое имя сервера.|  
-|**status**|**varchar(** 70 **)**|Состояние сервера.|  
+|**status**|**varchar (** 70 **)**|Состояние сервера.|  
 |**идентификатор**|**char (** 4 **)**|Идентификационный номер сервера.|  
 |**collation_name**|**sysname**|Параметры сортировки сервера.|  
 |**connect_timeout**|**int**|Значение времени ожидания для подключения к связанному серверу.|  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: d311fe1c-d882-4136-9fa5-220a4121e04c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 84710ffd69ea377c979adf94af1394d8436ef10b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 590bd488ae87e8e871837c3055a3225794850d00
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62640466"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077008"
 ---
 # <a name="data-type-conversions"></a>Преобразования типов данных
 Данные могут преобразовываться из одного типа в другой на одном из четыре раза: когда данные передаются из переменной одно приложение на другой (C для C), при отправке данных в переменную приложения к параметру инструкции (C to SQL), при возврате данных в столбец результирующего набора в переменную приложения (из SQL в C), и при передаче данных из столбца источника данных другой (SQL для SQL).  

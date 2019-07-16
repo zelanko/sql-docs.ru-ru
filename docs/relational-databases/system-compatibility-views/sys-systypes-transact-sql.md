@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: 1b0b1d0c-5f7b-470b-bd52-8bfa922d7889
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4acf3466615548e9c88b7743c48e39d3915f9c8d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5533e521ba28c0190a5be57ed7637632213d7447
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602693"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018080"
 ---
 # <a name="syssystypes-transact-sql"></a>sys.systypes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,7 +42,7 @@ ms.locfileid: "47602693"
 |**xtype**|**tinyint**|Тип физического хранилища.|  
 |**status**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**xusertype**|**smallint**|Расширенный пользовательский тип. Вызывает переполнение или возвращает значение NULL, если количество типов данных превышает 32 767.|  
-|**Длина**|**smallint**|Физическая длина типа данных.|  
+|**length**|**smallint**|Физическая длина типа данных.|  
 |**xprec**|**tinyint**|Внутренняя точность, используемая сервером. Не для использования в запросах.|  
 |**XScale**|**tinyint**|Внутренний масштаб, используемый сервером. Не для использования в запросах.|  
 |**tdefault**|**int**|Идентификатор хранимой процедуры, содержащей проверку целостности для этого типа данных.|  
@@ -57,7 +56,7 @@ ms.locfileid: "47602693"
 |**type**|**tinyint**|Тип данных физического хранилища.|  
 |**printfmt**|**varchar(255)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**prec**|**smallint**|Уровень точности для этого типа данных.<br /><br /> -1 = **xml** или типы больших значений.|  
-|**Масштаб**|**tinyint**|Масштаб для этого типа данных на основе точности.<br /><br /> NULL = данные не числовые.|  
+|**масштаб**|**tinyint**|Масштаб для этого типа данных на основе точности.<br /><br /> NULL = данные не числовые.|  
 |**Параметры сортировки**|**sysname**|Для символьного **параметры сортировки** параметры сортировки текущей базы данных; в противном случае возвращается значение NULL.|  
   
 ## <a name="see-also"></a>См. также  

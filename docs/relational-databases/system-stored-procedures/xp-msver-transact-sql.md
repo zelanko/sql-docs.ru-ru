@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9264cf8c-92ba-45ad-b2d6-15d26d805a16
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 8aaa598f5f6477b13a932e8ec2849e36c97b21cc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b936f00f449bd57a7a00fa825910a809a1baf225
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639832"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898368"
 ---
 # <a name="xpmsver-transact-sql"></a>xp_msver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ xp_msver [ optname ]
 |**FileDescription**|Операционная система.|  
 |**Необязательный параметр**|Версия исполняемого файла [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**Внутреннееимя**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] внутреннее имя для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], например SQLSERVR.|  
-|**LegalCopyright**|Сведения о законных авторских правах, требуемые для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], например © [!INCLUDE[msCoName](../../includes/msconame-md.md)] Corp. 1988-2005.|  
+|**LegalCopyright**|Юридические сведения об авторских правах, необходимых для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; например Copyright © [!INCLUDE[msCoName](../../includes/msconame-md.md)] Corp. 1988-2005.|  
 |**LegalTrademarks**|Сведения о зарегистрированном товарном знаке, требуемые для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Например [!INCLUDE[msCoName](../../includes/msconame-md.md)] является охраняемым товарным знаком [!INCLUDE[msCoName](../../includes/msconame-md.md)] Corporation.|  
 |**OriginalFilename**|Имя файла, выполняемого при запуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; например Sqlservr.exe.|  
 |**PrivateBuild**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  

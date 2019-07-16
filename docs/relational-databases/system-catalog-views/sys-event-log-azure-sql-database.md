@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: ad5496b5-e5c7-4a18-b5a0-3f985d7c4758
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: afef7b79c10b3d7f72d69dbe9bfca8721f6d13ec
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a239624fcbc3913d636f7f57b496c006d06a64b4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041535"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061378"
 ---
 # <a name="syseventlog-azure-sql-database"></a>sys.event_log (база данных SQL Azure)
 
@@ -44,13 +43,13 @@ ms.locfileid: "56041535"
 |**database_name**|**sysname**|Имя базы данных. Если подключение завершилось ошибкой и пользователь не указал имя базы данных, то этот столбец остается пустым.|  
 |**start_time**|**datetime2**|Дата и время начала интервала статистической обработки в формате UTC. Для статистических событий время всегда кратно 5 минутам. Пример:<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
 |**end_time**|**datetime2**|Дата и время окончания интервала статистической обработки в формате UTC. Для статистических событий **End_time** — всегда на 5 минут больше, чем соответствующие **start_time** в той же строке. Для событий, которые не объединяются **start_time** и **end_time** равны фактические даты в формате UTC и время события.|  
-|**event_category**|**nvarchar(64)**|Высокоуровневый компонент, вызвавший данное событие.<br /><br /> См. в разделе [типы событий](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) список возможных значений.|  
-|**event_type**|**nvarchar(64)**|Тип события.<br /><br /> См. в разделе [типы событий](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) список возможных значений.|  
+|**event_category**|**Nvarchar(64)**|Высокоуровневый компонент, вызвавший данное событие.<br /><br /> См. в разделе [типы событий](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) список возможных значений.|  
+|**event_type**|**Nvarchar(64)**|Тип события.<br /><br /> См. в разделе [типы событий](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) список возможных значений.|  
 |**event_subtype**|**int**|Подтип произошедшего события.<br /><br /> См. в разделе [типы событий](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) список возможных значений.|  
-|**event_subtype_desc**|**nvarchar(64)**|Описание подтипа события.<br /><br /> См. в разделе [типы событий](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) список возможных значений.|  
+|**event_subtype_desc**|**Nvarchar(64)**|Описание подтипа события.<br /><br /> См. в разделе [типы событий](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) список возможных значений.|  
 |**severity**|**int**|Степень серьезности ошибки. Возможны следующие значения:<br /><br /> 0 = информационные<br />1 = предупреждение<br />2 = ошибка|  
 |**event_count**|**int**|Количество раз возникновения этого события для указанной базы данных в интервале времени, указанном (**start_time** и **end_time**).|  
-|**Описание**|**nvarchar(max)**|Подробное описание события.<br /><br /> См. в разделе [типы событий](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) список возможных значений.|  
+|**description**|**nvarchar(max)**|Подробное описание события.<br /><br /> См. в разделе [типы событий](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) список возможных значений.|  
 |**additional_data**|**XML**|*Примечание. Это значение всегда равно NULL для базы данных SQL Azure версии 12. См. в разделе [примеры](#Deadlock) раздел по получению события взаимоблокировки для версии 12.*<br /><br /> Для **взаимоблокировки** события, этот столбец содержит диаграмму взаимоблокировок. Этот столбец содержит значение NULL для других типов событий. |  
   
 ##  <a name="EventTypes"></a> Типы событий
@@ -62,7 +61,7 @@ ms.locfileid: "56041535"
 > [!NOTE]  
 > Это представление включает не все возможные события базы данных [!INCLUDE[ssSDS](../../includes/sssds-md.md)], которые могут возникнуть, а только события перечисленные ниже. Дополнительные категории, типы событий и подтипы могут быть добавлены в будущих версиях [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
-|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**severity**|**Описание**|  
+|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**severity**|**description**|  
 |-------------------------|---------------------|------------------------|------------------------------|------------------|---------------------|  
 |**подключение**|**connection_successful**|0|**connection_successful**|0|Успешное подключение к базе данных.|  
 |**подключение**|**connection_failed**|0|**invalid_login_name**|2|Имя входа не является допустимым именем входа в данной версии SQL Server.|  
@@ -77,7 +76,7 @@ ms.locfileid: "56041535"
 |**подключение**|**connection_failed**|9|**Перенастройка**|2|*Примечание. Применяется только к версии 11 базы данных Azure SQL.*<br /><br /> При подключении возникла ошибка, так как в это время выполнялась настройка базы данных.|  
 |**подключение**|**connection_terminated**|0|**idle_connection_timeout**|2|*Примечание. Применяется только к версии 11 базы данных Azure SQL.*<br /><br /> Соединение бездействует дольше заданного системой порогового периода.|  
 |**подключение**|**connection_terminated**|1|**Перенастройка**|2|*Примечание. Применяется только к версии 11 базы данных Azure SQL.*<br /><br /> Сеанс прерван из-за изменения конфигурации базы данных.|  
-|**подключение**|**Регулирование**|*\<код причины >*|**reason_code**|2|*Примечание. Применяется только к версии 11 базы данных Azure SQL.*<br /><br /> Запрос регулируется.  Код причины регулирования:  *\<код причины >*. Дополнительные сведения см. в разделе [регулирование ресурсов ядра](https://msdn.microsoft.com/library/windowsazure/dn338079.aspx).|  
+|**подключение**|**Регулирование**|*\<код причины >*|**reason_code**|2|*Примечание. Применяется только к версии 11 базы данных Azure SQL.*<br /><br /> Запрос регулируется.  Код причины регулирования:  *\<код причины >* . Дополнительные сведения см. в разделе [регулирование ресурсов ядра](https://msdn.microsoft.com/library/windowsazure/dn338079.aspx).|  
 |**подключение**|**throttling_long_transaction**|40549|**long_transaction**|2|*Примечание. Применяется только к версии 11 базы данных Azure SQL.*<br /><br /> Сеанс завершен по причине долго выполняющейся транзакции. Рекомендуется сократить транзакцию. Дополнительные сведения см. в разделе [ограничения ресурсов](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
 |**подключение**|**throttling_long_transaction**|40550|**excessive_lock_usage**|2|*Примечание. Применяется только к версии 11 базы данных Azure SQL.*<br /><br /> Сеанс был завершен в связи с тем, что он получил слишком много блокировок. Рекомендуется сократить число строк, считываемых или изменяемых в одной транзакции. Дополнительные сведения см. в разделе [ограничения ресурсов](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
 |**подключение**|**throttling_long_transaction**|40551|**excessive_tempdb_usage**|2|*Примечание. Применяется только к версии 11 базы данных Azure SQL.*<br /><br /> Сеанс был завершен в связи с чрезмерным использованием базы данных TEMPDB. Попробуйте изменить запрос, чтобы сократить объем использования временных таблиц. Дополнительные сведения см. в разделе [ограничения ресурсов](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
@@ -100,7 +99,7 @@ ms.locfileid: "56041535"
   
  Например, если пользователю не удается подключиться к базе данных Database1 из-за недопустимого имени входа 7 раз с 11:00 до 11:05 5 февраля 2012 г. (UTC), эти сведения доступны в одной строке в следующем представлении:  
   
-|**database_name**|**start_time**|**end_time**|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**severity**|**event_count**|**Описание**|**additional_data**|  
+|**database_name**|**start_time**|**end_time**|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**severity**|**event_count**|**description**|**additional_data**|  
 |------------------------|---------------------|-------------------|-------------------------|---------------------|------------------------|------------------------------|------------------|----------------------|---------------------|--------------------------|  
 |`Database1`|`2012-02-05 11:00:00`|`2012-02-05 11:05:00`|`connectivity`|`connection_failed`|`4`|`login_failed_for_user`|`2`|`7`|`Login failed for user.`|`NULL`|  
   
@@ -231,5 +230,5 @@ SELECT * FROM CTE2;
 
 ## <a name="see-also"></a>См. также
 
- [Расширенные события в базе данных SQL Azure](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)  
+ [Расширенные события в Базе данных SQL Azure](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)  
  

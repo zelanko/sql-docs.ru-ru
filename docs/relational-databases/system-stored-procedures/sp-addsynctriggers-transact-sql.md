@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e37d0c3b-19bf-4719-9535-96ba361372b3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3ae733d560c227ccf282dfe4caed3935d9ffaebe
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 2b9bdabcc11c900ae0a1cbe71280b64efb6ccdaf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493646"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096208"
 ---
 # <a name="spaddsynctriggers-transact-sql"></a>sp_addsynctriggers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -82,9 +81,9 @@ sp_addsynctriggers [ @sub_table = ] 'sub_table'
   
 `[ @ts_col = ] 'timestamp_col'` Имя **timestamp** столбца на издателе. *timestamp_col* — **sysname**, значение по умолчанию NULL.  
   
-`[ @filter_clause = ] 'filter_clause'` Является ограничением предложение (WHERE), которое задает горизонтальный фильтр. При вводе предложения ограничения опустите ключевое слово WHERE. *filter_clause*— **nvarchar(4000)**, значение по умолчанию NULL.  
+`[ @filter_clause = ] 'filter_clause'` Является ограничением предложение (WHERE), которое задает горизонтальный фильтр. При вводе предложения ограничения опустите ключевое слово WHERE. *filter_clause*— **nvarchar(4000)** , значение по умолчанию NULL.  
   
-`[ @primary_key_bitmap = ] 'primary_key_bitmap'` — Это битовая схема первичных ключевых столбцов в таблице. *primary_key_bitmap* — **varbinary(4000)**, не имеет значения по умолчанию.  
+`[ @primary_key_bitmap = ] 'primary_key_bitmap'` — Это битовая схема первичных ключевых столбцов в таблице. *primary_key_bitmap* — **varbinary(4000)** , не имеет значения по умолчанию.  
   
 `[ @identity_support = ] identity_support` Включает и выключает автоматическую обработку диапазона идентификаторов при использовании отложенного обновления. *identity_support* — **бит**, значение по умолчанию **0**. **0** поддержки, диапазона означает, что удостоверение не **1** включает автоматическую обработку диапазона идентификаторов.  
   

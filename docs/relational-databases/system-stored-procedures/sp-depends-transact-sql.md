@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d9934590-c6ae-4936-91c3-146055ef2c57
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f20945b6c4dc8fc1dda398c3dc9e721ff8b44d07
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9ee6b9df37e61dcb4eed45bc11431d49b160cf87
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63047176"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053100"
 ---
 # <a name="spdepends-transact-sql"></a>sp_depends (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +67,7 @@ sp_depends [ @objname = ] '<object>'
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**name**|**nvarchar(257** **)**|Имя элемента, для которого существует зависимость.|  
+|**name**|**nvarchar (257** **)**|Имя элемента, для которого существует зависимость.|  
 |**type**|**nvarchar(16) в формате**|Тип элемента.|  
 |**обновлены**|**nvarchar(7)**|Был ли элемент обновлен.|  
 |**Выбранные**|**nvarchar(8)**|Используется ли объект в инструкции SELECT.|  
@@ -78,7 +77,7 @@ sp_depends [ @objname = ] '<object>'
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**name**|**nvarchar(257** **)**|Имя элемента, для которого существует зависимость.|  
+|**name**|**nvarchar (257** **)**|Имя элемента, для которого существует зависимость.|  
 |**type**|**nvarchar(16) в формате**|Тип элемента.|  
   
 ## <a name="permissions"></a>Разрешения  
