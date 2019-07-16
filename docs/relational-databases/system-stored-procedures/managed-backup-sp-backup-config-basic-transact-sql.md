@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3ad73051-ae9a-4e41-a889-166146e5508f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f3345e2b27a14285f3b9a3bfffd1ec95549ef124
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: d09fa38377910c2960b43eb6534dba4546538b4b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201823"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942120"
 ---
 # <a name="managedbackupspbackupconfigbasic-transact-sql"></a>managed_backup.sp_backup_config_basic (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +70,7 @@ EXEC managed_backup.sp_backup_config_basic
 ## <a name="return-code-value"></a>Значения кодов возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="security"></a>безопасность  
+## <a name="security"></a>Безопасность  
   
 ### <a name="permissions"></a>Разрешения  
  Требуется членство в **db_backupoperator** роли базы данных с помощью **ALTER ANY CREDENTIAL** разрешения, и **EXECUTE** разрешения на **sp_delete_ backuphistory** хранимой процедуры.  

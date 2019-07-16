@@ -21,18 +21,17 @@ helpviewer_keywords:
 ms.assetid: b5e7d1fb-3ffb-4767-8135-604c575016b1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 839e471e8861f081762f6129dff731e66bed77a7
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b363e410f35eb7880933520dd1dbf47f258b651e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403489"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041060"
 ---
 # <a name="sysavailabilitygrouplisteners-transact-sql"></a>sys.availability_group_listeners (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Для каждого AlwaysOn группы доступности возвращает либо ноль строк, указывающую, что имя сети не связана с группой доступности, или возвращает по строке для каждой конфигурации прослушивателя группы доступности в Windows Server отказоустойчивого кластера (WSFC) кластер. Это представление отображает получаемые из кластера в реальном времени сведения о конфигурации.  
+  Для каждой группы доступности AlwaysOn не возвращает ни одной строки, указывая на то, что с группой доступности не связаны имена сети, либо возвращает по одной строке для каждой конфигурации прослушивателей групп доступности в кластере WSFC. Это представление отображает получаемые из кластера в реальном времени сведения о конфигурации.  
   
 > [!NOTE]  
 >  В этом представлении каталога не описывается подробно конфигурация IP-адресов, заданная в кластере WSFC.  
@@ -46,7 +45,7 @@ ms.locfileid: "52403489"
 |**is_conformant**|**bit**|Соответствует ли стандартам эта конфигурация IP-адресов, одно из следующих значений:<br /><br /> 1 = прослушиватель соответствует стандартам. Только отношения «Или» существует между его адреса протокола Интернета (IP). *Соответствующие стандарту* охватывает каждый IP-конфигурацию, которая была создана с [CREATE AVAILABILITY GROUP](../../t-sql/statements/create-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкции. Кроме того, если конфигурация IP-адресов была создана вне [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], например с помощью диспетчера отказоустойчивого кластера WSFC (но ее можно изменить с помощью инструкции ALTER AVAILABILITY GROUP), то конфигурация IP-адресов считается соответствующей стандартам.<br /><br /> 0 = прослушиватель не соответствует стандартам. Как правило, это указывает на наличие IP-адреса, который не удалось настроить с помощью команд [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и который вместо этого был определен непосредственно в кластере WSFC.|  
 |**ip_configuration_string_from_cluster**|**nvarchar(max)**|Строки конфигурации IP-адресов кластера для этого прослушивателя, если они имеются. NULL = прослушиватель не имеет виртуальных IP-адресов. Пример:<br /><br /> IPv4-адрес: `65.55.39.10`.<br /><br /> IPv6-адрес:  `2001::4898:23:1002:20f:1fff:feff:b3a3`|  
   
-## <a name="security"></a>безопасность  
+## <a name="security"></a>Безопасность  
   
 ### <a name="permissions"></a>Разрешения  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

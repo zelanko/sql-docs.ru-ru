@@ -5,17 +5,16 @@ description: Справочная статья по mssqlctl bdc команды.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 96ecf1c987baffec0ff71b8b6ef5eccb204b3108
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: a9da2de60248246bee3daeeaee40d3071da69c4b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67727487"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957958"
 ---
 # <a name="mssqlctl-bdc"></a>mssqlctl bdc
 
@@ -29,7 +28,7 @@ ms.locfileid: "67727487"
 [Создание mssqlctl bdc](#mssqlctl-bdc-create) | Создание кластера больших данных.
 [mssqlctl bdc delete](#mssqlctl-bdc-delete) | Удаление кластера больших данных.
 [mssqlctl bdc config](reference-mssqlctl-bdc-config.md) | Команды для настройки.
-[mssqlctl bdc endpoint](reference-mssqlctl-bdc-endpoint.md) | Команды конечных точек.
+[Конечная точка mssqlctl bdc](reference-mssqlctl-bdc-endpoint.md) | Команды конечных точек.
 [состояние mssqlctl bdc](reference-mssqlctl-bdc-status.md) | Состояние команды.
 [mssqlctl bdc отладки](reference-mssqlctl-bdc-debug.md) | Команды отладки.
 [mssqlctl bdc-пула носителей](reference-mssqlctl-bdc-storage-pool.md) | Команды пулов хранения.

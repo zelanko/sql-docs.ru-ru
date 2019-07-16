@@ -2,19 +2,18 @@
 title: Состояние - служб на PDW, Analytics Platform System | Документация Майкрософт
 description: Состояние служб Parallel Data Warehouse (PDW) для Analytics Platform System.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 6892bfcca05e0f85039dddee65a54b485a7ed433
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3db994b4869c1b017a079b404af3d95db1316dad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63027571"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960368"
 ---
 # <a name="parallel-data-warehouse-services-status-for-analytics-platform-system"></a>Состояние служб Parallel Data Warehouse для Analytics Platform System
 Parallel Data Warehouse **состояние служб** страницы в Microsoft Analytics платформы System Configuration Manager показано текущее состояние всех служб SQL Server PDW, а также предоставляет возможность останавливать и запускать службы PDW. Это единственный поддерживаемый способ запуска и остановки службы PDW. Обратите внимание на то, что отдельные компоненты или службы не может запускаться независимо друг от друга.  

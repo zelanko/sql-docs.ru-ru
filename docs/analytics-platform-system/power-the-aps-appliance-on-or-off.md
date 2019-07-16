@@ -2,19 +2,18 @@
 title: Питания устройства, включить или отключить - Analytics Platform System | Документация Майкрософт
 description: Power устройства, включить или отключить для Analytics Platform System
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 994b0f94448b7fb7901734b2ae737e26be23900f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d24f808365a8a04fdc6b469a8eaac98c208c19e8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62678632"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960247"
 ---
 # <a name="power-the-appliance-on-or-off-for-analytics-platform-system"></a>Power устройства, включить или отключить для Analytics Platform System
 В этом разделе описывается, как степень вашей Systemappliance платформы Analytics включения и выключения питания, на котором выполняется Parallel Data Warehouse. Используйте этот раздел при перемещении в Analytics Platform System appliance, или степень устройство с поддержкой после разрушительного сбоя.  

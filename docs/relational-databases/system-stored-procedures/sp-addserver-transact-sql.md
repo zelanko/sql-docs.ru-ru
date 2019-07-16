@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 160a6b29-5e80-44ab-80ec-77d4280f627c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ab5c15d15c77688c06eedec1d54e82c7b8199380
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 616b835b2b190346df4891caa4d7295c8fb328e1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492932"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022433"
 ---
 # <a name="spaddserver-transact-sql"></a>sp_addserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,13 +48,13 @@ sp_addserver [ @server = ] 'server' ,
   
  Если на одном компьютере установлено несколько экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , то каждый экземпляр работает, как на отдельном сервере. Указать именованный экземпляр, ссылаясь на *server* как *имя_сервера\имя_экземпляра*.  
   
-`[ @local = ] 'LOCAL'` Указывает, что сервер, который добавляется в качестве локального сервера. **@local** — **varchar(10)**, значение по умолчанию NULL. Указание **@local** как **ЛОКАЛЬНОГО** определяет **@server** как имя локального сервера, а @ @@SERVERNAME функция, возвращающая значение из *сервера*.  
+`[ @local = ] 'LOCAL'` Указывает, что сервер, который добавляется в качестве локального сервера. **@local** — **varchar(10)** , значение по умолчанию NULL. Указание **@local** как **ЛОКАЛЬНОГО** определяет **@server** как имя локального сервера, а @ @@SERVERNAME функция, возвращающая значение из *сервера*.  
   
  Программа настройки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] во время установки присваивает этой переменной в качестве значения имя компьютера. По умолчанию при подключении пользователей к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используется имя компьютера, и никакая дополнительная настройка не требуется.  
   
  Локальное переопределение вступает в силу только после перезагрузки компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] . На каждом экземпляре компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]может быть определен только один локальный сервер.  
   
-`[ @duplicate_ok = ] 'duplicate_OK'` Указывает, разрешено ли совпадение имен серверов. **@duplicate_OK** — **varchar(13)**, значение по умолчанию NULL. **@duplicate_OK** может иметь только значение **duplicate_OK** или значение NULL. Если **duplicate_OK** указан и имя сервера, который добавляется уже существует, ошибка не возникает. Если именованные параметры не используются, **@local** должен быть указан.  
+`[ @duplicate_ok = ] 'duplicate_OK'` Указывает, разрешено ли совпадение имен серверов. **@duplicate_OK** — **varchar(13)** , значение по умолчанию NULL. **@duplicate_OK** может иметь только значение **duplicate_OK** или значение NULL. Если **duplicate_OK** указан и имя сервера, который добавляется уже существует, ошибка не возникает. Если именованные параметры не используются, **@local** должен быть указан.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  

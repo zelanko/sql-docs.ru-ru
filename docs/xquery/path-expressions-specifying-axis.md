@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: c44fb843-0626-4496-bde0-52ca0bac0a9e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d8f6c624427a8dc8c5a6c1828b9a48ff7f335cea
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 07058816406ef6ac0d5a3356423e231a10ce6165
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670333"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946483"
 ---
 # <a name="path-expressions---specifying-axis"></a>Выражения пути — указание оси
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -109,11 +108,11 @@ select @y
   
  Если в этом выражении указать ось потомков для данного выражения пути,  
   
- `/child::a/child::b/descendant::*`, то будут запрошены все потомки узла элемента <`b`>.  
+ `/child::a/child::b/descendant::*`, то будут запрошены все потомки узла <`b`> элементного узла.  
   
  Звездочка (*) в проверке узла представляет имя узла как проверку узла. Поэтому тип основного узла оси потомков, узел-элемент, определяет типы возвращаемых узлов. Таким образом, выражение возвращает все узлы-элементы. Текстовые узлы возвращены не будут. Дополнительные сведения о типе основного узла и его связи с проверкой узла см. в разделе [указание проверки узла в шаге выражения пути](../xquery/path-expressions-specifying-node-test.md) раздела.  
   
- Будут возвращены узлы-элементы <`c`> и <`d`>, как показано в следующем результате:  
+ Узлы элемента <`c`> и <`d`> возвращаются, как показано в следующем результате:  
   
 ```  
 <c>text2  
@@ -122,9 +121,9 @@ select @y
 <d>text3</d>  
 ```  
   
- Если указать ось descendant-or-self вместо оси descendant, то выражение `/child::a/child::b/descendant-or-self::*` возвратит контекстный узел-элемент <`b`> и его потомков.  
+ Если указать ось descendant-or-self вместо оси-потомка, `/child::a/child::b/descendant-or-self::*` возвращает контекстный узел, элемент <`b`> и его потомков.  
   
- Результат:  
+ Это результат:  
   
 ```  
 <b>text1  
@@ -152,9 +151,9 @@ WHERE ProductModelID=19
 ```  
   
 ### <a name="c-specifying-a-parent-axis"></a>В. Указание родительской оси  
- Следующий запрос возвращает дочерний элемент <`Summary`> элемента <`ProductDescription`> в XML-документе каталога продукта, сохраненном в таблице `Production.ProductModel`.  
+ Следующий запрос возвращает <`Summary`> дочернего элемента <`ProductDescription`> элемент в XML-документа каталога продуктов хранится в `Production.ProductModel` таблицы.  
   
- Этот пример использует родительскую ось для возврата к родителю элемента <`Feature`> и получения дочернего элемента <`Summary`> элемента <`ProductDescription`>.  
+ Этот пример использует родительскую ось для возврата к родителю элемента <`Feature`> и получения <`Summary`> дочернего элемента <`ProductDescription`> элемента.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -194,7 +193,7 @@ WHERE  ProductModelID=19
 <Feature ProductModelID="...">...</Feature>  
 ```  
   
- Чтобы добавить `ProductModelID` для каждого элемента `<Feature`>, указана ось `parent`:  
+ Чтобы добавить `ProductModelID` для каждого `<Feature`> элемент, `parent` ось:  
   
 ```  
 SELECT CatalogDescription.query('  

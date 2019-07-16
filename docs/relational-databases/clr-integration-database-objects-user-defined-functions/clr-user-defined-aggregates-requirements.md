@@ -19,17 +19,16 @@ helpviewer_keywords:
 ms.assetid: dbf9eb5a-bd99-42f7-b275-556d0def045d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f7ec6322489ba862d335c5c52021d643da73deb1
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c007beeab554486fe490a0d2f6bfc335e1a50cf9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662473"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68009756"
 ---
 # <a name="clr-user-defined-aggregates---requirements"></a>Требования для определяемых пользователем агрегатных функций среды CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Тип в сборке CLR можно зарегистрировать как определяемую пользователем агрегатную функцию, если он реализует необходимую статистическую обработку. Этот контракт состоит из **SqlUserDefinedAggregate** атрибут и статистической обработки контракта методы. Статистический контракт включает механизм сохранения промежуточного состояния статистической обработки и механизм накопления новых значений, который состоит из четырех методов: **Init**, **Accumulate**,  **Слияние**, и **завершить**. При соблюдении этих требований, появится возможность воспользоваться всеми преимуществами определяемых пользователем статистических функций в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В следующих подразделах этого раздела содержатся подробные сведения о создании определяемых пользователем статистических функций и работе с ними. Например, см. в разделе [Invoking CLR User-Defined агрегатные функции](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregate-invoking-functions.md).  
+  Тип в сборке CLR можно зарегистрировать как определяемую пользователем агрегатную функцию, если он реализует необходимую статистическую обработку. Этот контракт состоит из **SqlUserDefinedAggregate** атрибут и статистической обработки контракта методы. Статистический контракт включает механизм сохранения промежуточного состояния статистической обработки и механизм накопления новых значений, который состоит из четырех методов: **Init**, **накапливать**, **слияния**, и **завершить**. При соблюдении этих требований, появится возможность воспользоваться всеми преимуществами определяемых пользователем статистических функций в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В следующих подразделах этого раздела содержатся подробные сведения о создании определяемых пользователем статистических функций и работе с ними. Например, см. в разделе [Invoking CLR User-Defined агрегатные функции](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregate-invoking-functions.md).  
   
 ## <a name="sqluserdefinedaggregate"></a>SqlUserDefinedAggregate  
  Дополнительные сведения см. в разделе [SqlUserDefinedAggregateAttribute](https://go.microsoft.com/fwlink/?LinkId=124626).  

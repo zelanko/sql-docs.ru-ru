@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: a0f4c3e4-5906-4ab3-ad34-c606f173169a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fb1fcf2a88824a2ddef2e8b896b2ee585fa2623a
-ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
+ms.openlocfilehash: c544668ebadab4a20b07f53fca9e1b501f6b1cf7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/29/2019
-ms.locfileid: "67469087"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003174"
 ---
 # <a name="sqlgetinfo-returned-values-for-excel"></a>Возвращаемые значения SQLGetInfo для Excel
 В следующей таблице перечислены языка C# defines для *fInfoType* аргумент и соответствующие значения, возвращаемые методом **SQLGetInfo**. Эти сведения можно получить, передав перечисленных языка C# defines **SQLGetInfo** в *fInfoType* аргумент. Дополнительные сведения о значениях, возвращаемых **SQLGetInfo**, см. в разделе *Справочник по программированию ODBC*.  
@@ -157,7 +156,7 @@ ms.locfileid: "67469087"
 |SQL_SCROLL_OPTIONS|Несколько значений|  
 |SQL_SEARCH_PATTERN_ESCAPE|"\\"|  
 |SQL_SERVER_NAME|«EXCEL»|  
-|SQL_SPECIAL_CHARACTERS|"~\`\@#$%^&\*\_-+=\\}{"';:?/><,.!'[]&#124;"|  
+|SQL_SPECIAL_CHARACTERS|«~\`\@#$%^&\*\_-+=\\} {"";:? / ><,.! " []&#124;"|  
 |SQL_STRING_FUNCTIONS|Несколько значений|  
 |SQL_SUBQUERIES|Несколько значений|  
 |SQL_SYSTEM_FUNCTIONS|0|  

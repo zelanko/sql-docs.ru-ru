@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 981d49c3-3531-4543-aa75-5bd9e4f67000
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 75ff7e83aa87bca9f33a3a8f44447af2eb60c581
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7e709c74062e31483b042c3930572fb63ca8c786
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63026773"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996215"
 ---
 # <a name="appendix-d-data-types"></a>Приложение Г. Типы данных
 ODBC определяет два набора типов данных: Типы данных SQL и типы данных C. Типы данных SQL указания типа данных данные, хранящиеся в источнике данных. Типы данных C указания типа данных данные, хранящиеся в буферы приложения.  

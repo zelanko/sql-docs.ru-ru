@@ -1,21 +1,20 @@
 ---
-title: mssqlctl bdc control status reference
+title: ссылки на состояние mssqlctl bdc элемент управления
 titleSuffix: SQL Server big data clusters
 description: Справочная статья по mssqlctl bdc управления состояние команды.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c87849f8539cbef18222a053ae17fae487194e93
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: a92ce6420cc560592d36bae2eb218a182c66e063
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728599"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958114"
 ---
 # <a name="mssqlctl-bdc-control-status"></a>состояние системы управления mssqlctl bdc
 
@@ -27,7 +26,7 @@ ms.locfileid: "67728599"
 |     |     |
 | --- | --- |
 [Показать состояние управления bdc mssqlctl](#mssqlctl-bdc-control-status-show) | Состояние элемента управления.
-## <a name="mssqlctl-bdc-control-status-show"></a>mssqlctl bdc control status show
+## <a name="mssqlctl-bdc-control-status-show"></a>Показать состояние управления bdc mssqlctl
 Состояние элемента управления.
 ```bash
 mssqlctl bdc control status show 

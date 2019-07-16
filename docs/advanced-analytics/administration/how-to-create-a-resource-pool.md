@@ -7,13 +7,12 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: f180f6223f255734f353348c0d5fef58d19b0cbd
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 3f032a9e2a60a0428a2aac76ae8c3ee6baa62775
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58512091"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963155"
 ---
 # <a name="how-to-create-a-resource-pool-for-machine-learning-in-sql-server"></a>Создание пула ресурсов для машинного обучения в SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -62,7 +61,7 @@ ms.locfileid: "58512091"
 
 ## <a name="modify-server-resource-usage"></a>Изменение использования ресурсов сервера
 
-1.  В [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] выполните следующую инструкцию, чтобы ограничить объем используемой сервером [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] памяти, задав для параметра максимальной памяти сервера значение **60 %**.
+1.  В [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] выполните следующую инструкцию, чтобы ограничить объем используемой сервером [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] памяти, задав для параметра максимальной памяти сервера значение **60 %** .
 
     ```sql
     ALTER RESOURCE POOL "default" WITH (max_memory_percent = 60);

@@ -1,21 +1,20 @@
 ---
-title: mssqlctl bdc status reference
+title: Ссылка состояния mssqlctl bdc
 titleSuffix: SQL Server big data clusters
 description: Справочная статья по mssqlctl bdc состояние команды.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2f1b7f7c635b621c1c85953e63acc8f80bb52b01
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 3f180ac08ba8ea68008c1f6ccd027a5190ce491a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728553"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958018"
 ---
 # <a name="mssqlctl-bdc-status"></a>состояние mssqlctl bdc
 
@@ -27,7 +26,7 @@ ms.locfileid: "67728553"
 |     |     |
 | --- | --- |
 [Показать состояние mssqlctl bdc](#mssqlctl-bdc-status-show) | Отображает состояние кластера больших данных.
-## <a name="mssqlctl-bdc-status-show"></a>mssqlctl bdc status show
+## <a name="mssqlctl-bdc-status-show"></a>Показать состояние mssqlctl bdc
 Отображает состояние кластера больших данных.
 ```bash
 mssqlctl bdc status show 

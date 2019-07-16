@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ba2fdccc-5ed4-40ef-a479-79497b4d61aa
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 09af9a0190b8ba3b01c72cfa29e0647ad6d6b74d
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 9ba9e1f0757f23072b5e4f18f73fb5f7c69a005a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528436"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037362"
 ---
 # <a name="sysmailupdateaccountsp-transact-sql"></a>sysmail_update_account_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,13 +56,13 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
   
 `[ @account_name = ] 'account_name'` Имя учетной записи для обновления. *account_name* — **sysname**, значение по умолчанию NULL. Хотя бы один из *account_id* или *account_name* должен быть указан. Если указаны оба аргумента, процедура изменяет имя учетной записи.  
   
-`[ @email_address = ] 'email_address'` Новый адрес электронной почты для отправки сообщений. Этот адрес должен быть адресом электронной почты Интернета. Имя сервера в адресе принадлежит серверу, который используется компонентом Database Mail для отправки почты от имени этой учетной записи. *email_address* — **nvarchar(128)**, значение по умолчанию NULL.  
+`[ @email_address = ] 'email_address'` Новый адрес электронной почты для отправки сообщений. Этот адрес должен быть адресом электронной почты Интернета. Имя сервера в адресе принадлежит серверу, который используется компонентом Database Mail для отправки почты от имени этой учетной записи. *email_address* — **nvarchar(128)** , значение по умолчанию NULL.  
   
-`[ @display_name = ] 'display_name'` Новое отображаемое имя для использования в сообщениях электронной почты с этой учетной записи. *display_name* — **nvarchar(128)**, не имеет значения по умолчанию.  
+`[ @display_name = ] 'display_name'` Новое отображаемое имя для использования в сообщениях электронной почты с этой учетной записи. *display_name* — **nvarchar(128)** , не имеет значения по умолчанию.  
   
-`[ @replyto_address = ] 'replyto_address'` Новый адрес для использования в заголовке ответа для сообщений электронной почты с этой учетной записи. *replyto_address* — **nvarchar(128)**, не имеет значения по умолчанию.  
+`[ @replyto_address = ] 'replyto_address'` Новый адрес для использования в заголовке ответа для сообщений электронной почты с этой учетной записи. *replyto_address* — **nvarchar(128)** , не имеет значения по умолчанию.  
   
-`[ @description = ] 'description'` Новое описание для учетной записи. *Описание* — **nvarchar(256)**, значение по умолчанию NULL.  
+`[ @description = ] 'description'` Новое описание для учетной записи. *Описание* — **nvarchar(256)** , значение по умолчанию NULL.  
   
 `[ @mailserver_name = ] 'server_name'` Новое имя почтового SMTP-сервера для этой учетной записи. На компьютере под управлением [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен быть способен Разрешить *имя_сервера* IP-адресу. *имя_сервера* — **sysname**, не имеет значения по умолчанию.  
   

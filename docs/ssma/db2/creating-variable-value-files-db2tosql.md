@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 122f3fbe-46a0-40df-ac3b-d43bf33d96ba
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: cf62d09de1180687598d817ff9199d7098008829
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 945b7e86641c796e79bfb87b8b7b5de25949e4c2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63299135"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989768"
 ---
 # <a name="creating-variable-value-files-db2tosql"></a>Создание файлов переменных значений (DB2ToSQL)
 Файл переменных значение является XML-файл, состоящий из значений параметра команды, имя сервера источника или назначения, которые часто изменяются в зависимости от одного сервера миграции. При возникновении большое количество миграцию баз данных, несколько файлов переменной для хранения значения каждого исходного сервера создается, на которые ссылается файл скрипта базы данных master с **- v** переключиться в командной строке. Это помогает в поддержании статических значений в нескольких файлах скриптов, если значения переменных в нескольких файлах переменной.  

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 332e1b4b-b0ed-4e7a-aa4d-4f35f4f4476b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c77f8e6bd137b557b150ba91c143abb5438778c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 292b1c4d9cd0281de610af4e53f25aa3d0ab6f90
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536624"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005763"
 ---
 # <a name="sqlprepare-function"></a>Функция SQLPrepare
 **Соответствие стандартам**  
@@ -55,7 +54,7 @@ SQLRETURN SQLPrepare(
  [Вход] Длина **StatementText* в символах.  
   
 ## <a name="returns"></a>Возвращает  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR, or SQL_INVALID_HANDLE.  
+ Значение SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, значение SQL_ERROR или SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Диагностика  
  Когда **SQLPrepare** возвращает значение SQL_ERROR или SQL_SUCCESS_WITH_INFO, а связанное значение SQLSTATE можно получить, вызвав **SQLGetDiagRec** с *HandleType* из SQL_ HANDLE_STMT и *обрабатывать* из *StatementHandle*. В следующей таблице перечислены значения SQLSTATE, обычно возвращаемые **SQLPrepare** и объясняется каждый из них в контексте этой функции; описания SQLSTATE, возвращаемых диспетчером драйверов предшествует обозначение «(DM)». Возвращается связанный с каждого значения SQLSTATE значение SQL_ERROR, если не указано иное.  

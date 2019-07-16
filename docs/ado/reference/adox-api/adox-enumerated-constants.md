@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9d91f511-d46f-44ef-97ef-77bf93836186
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d71009c7e4f2c9b717a41f10ca4dc8b9f815ad30
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8ff18386cb9da4edbeaa8930d138ba9951965ee0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66708424"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67928554"
 ---
 # <a name="adox-enumerated-constants"></a>ADOX Enumerated Constants
 Для целей отладки, константы ADOX перечисления списка значение для каждой константы. Тем не менее это значение исключительно рекомендации и может отличаться от одного выпуска ADOX на другой. Ваш код должен основываться только на имя, а не фактического значения, перечислимых констант.  

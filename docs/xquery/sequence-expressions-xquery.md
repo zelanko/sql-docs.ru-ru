@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 41e18b20-526b-45d2-9bd9-e3b7d7fbce4e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6c73d2be8550bd6ce3dad9e6c9e07e2403785f7b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7fa45029557cc217b89293fa7963bf29b39f373f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661834"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946308"
 ---
 # <a name="sequence-expressions-xquery"></a>Выражения последовательности (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +66,7 @@ select @x.query('(1, 2, <a/>, <b/>)')
 go  
 ```  
   
-### <a name="example-b"></a>Пример B-адреса  
+### <a name="example-b"></a>Пример Б  
  Следующий запрос конструирует последовательность из атомарных значений, соединяя последовательности разной длины в единую последовательность.  
   
 ```  
@@ -114,7 +113,7 @@ FROM Person.Contact
 WHERE ContactID=3  
 ```  
   
- Результат:  
+ Это результат:  
   
 ```  
 <act:telephoneNumber xmlns:act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">  
@@ -132,7 +131,7 @@ Page only in case of emergencies.
 ```  
   
 ## <a name="filtering-sequences"></a>Фильтрация последовательностей  
- Можно отфильтровать возвращаемую последовательность по выражению, добавив предикат. Дополнительные сведения см. в разделе [выражения пути &#40;XQuery&#41;](../xquery/path-expressions-xquery.md). Например, следующий запрос возвращает последовательность, состоящую из трех узловых элементов <`a`>:  
+ Можно отфильтровать возвращаемую последовательность по выражению, добавив предикат. Дополнительные сведения см. в разделе [выражения пути &#40;XQuery&#41;](../xquery/path-expressions-xquery.md). Например, следующий запрос возвращает последовательность из трех <`a`> узлов элементов:  
   
 ```  
 declare @x xml  
@@ -144,7 +143,7 @@ set @x = '<root>
 SELECT @x.query('/root/a')  
 ```  
   
- Результат:  
+ Это результат:  
   
 ```  
 <a attrA="1">111</a>  
@@ -152,7 +151,7 @@ SELECT @x.query('/root/a')
 <a />  
 ```  
   
- Чтобы получить только элементы <`a`> с атрибутом attrA, укажите в предикате фильтр. Результирующая последовательность содержит только один элемент <`a`>.  
+ Чтобы получить только <`a`> элементов, которые имеют атрибут attrA, указывается в предикате фильтра. Результирующая последовательность содержит только один <`a`> элемента.  
   
 ```  
 declare @x xml  
@@ -164,7 +163,7 @@ set @x = '<root>
 SELECT @x.query('/root/a[@attrA]')  
 ```  
   
- Результат:  
+ Это результат:  
   
 ```  
 <a attrA="1">111</a>  
@@ -196,7 +195,7 @@ SELECT @x.query('
 ')  
 ```  
   
- Результат:  
+ Это результат:  
   
 ```  
 <c>C under a</c>  
@@ -223,7 +222,7 @@ SELECT @x.query('
 ')  
 ```  
   
- Результат:  
+ Это результат:  
   
 ```  
 <a>  

@@ -7,13 +7,12 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: c39d19807cfe01ca9c96b47de020abb9227c43a0
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 4092de07d19d4d33bd56025076e606269c2b04e8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58513081"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962152"
 ---
 #  <a name="visualize-sql-server-data-using-r-sql-server-and-revoscaler-tutorial"></a>Визуализация данных SQL Server, с помощью языка R (руководство по SQL Server и RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -79,7 +78,7 @@ ms.locfileid: "58513081"
 На этом этапе изменения касаются только объекта источника данных в R; новые данные не будет записана в таблицу базы данных еще. Тем не менее данные, записанные в переменную sumOut можно использовать для создания визуализаций и сводок. 
 
 > [!TIP]
-> Если вы забудете, какой контекст вычисления, вы используете, выполните **rxGetComputeContext()**. Возвращаемое значение, равное «Контекст вычислений RxLocalSeq» указывает, что вы работаете в локальном контексте вычисления.
+> Если вы забудете, какой контекст вычисления, вы используете, выполните **rxGetComputeContext()** . Возвращаемое значение, равное «Контекст вычислений RxLocalSeq» указывает, что вы работаете в локальном контексте вычисления.
 
 ## <a name="visualize-data-using-rxhistogram"></a>Визуализация данных с помощью rxHistogram
 

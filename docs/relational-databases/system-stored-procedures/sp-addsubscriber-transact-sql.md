@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b8a584ea-2a26-4936-965b-b84f026e39c0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cd59aae098a91a47e1137bd55cd97cf1066b02bf
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: cb21731dd02fee4ec3779affed56f85e5dbc0e9b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493376"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079228"
 ---
 # <a name="spaddsubscriber-transact-sql"></a>sp_addsubscriber (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +76,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 > [!NOTE]  
 >  Данный аргумент является устаревшим и сохранен только для поддержки обратной совместимости скриптов. Свойство теперь задается на основе подписки, при выполнении [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Если значение указано, то оно используется в качестве значения по умолчанию при создании подписок на данном подписчике и при возвращении предупреждающего сообщения.  
   
-`[ @password = ] 'password'` Пароль для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности. *пароль* — **nvarchar(524)**, значение по умолчанию NULL.  
+`[ @password = ] 'password'` Пароль для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности. *пароль* — **nvarchar(524)** , значение по умолчанию NULL.  
   
 > [!IMPORTANT]  
 >  Не используйте пустые пароли. Выбирайте надежные пароли.  
@@ -116,7 +115,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 > [!NOTE]  
 >  Данный аргумент является устаревшим и сохранен только для поддержки обратной совместимости скриптов. Свойство теперь задается на основе подписки, при выполнении [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Если значение указано, то оно используется в качестве значения по умолчанию при создании подписок на данном подписчике и при возвращении предупреждающего сообщения.  
   
- [**@frequency_interval=** ] *frequency_interval*  
+ [ **@frequency_interval=** ] *frequency_interval*  
  Значение, применяемое к частоте, задаваемой аргументом *frequency_type*. *frequency_interval* — **int**, значение по умолчанию 1.  
   
 > [!NOTE]  
@@ -177,7 +176,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 > [!NOTE]  
 >  Данный аргумент является устаревшим и сохранен только для поддержки обратной совместимости скриптов. Свойство теперь задается на основе подписки, при выполнении [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Если значение указано, то оно используется в качестве значения по умолчанию при создании подписок на данном подписчике и при возвращении предупреждающего сообщения.  
   
-`[ @description = ] 'description'` Представляет собой текстовое описание подписчика. *Описание* — **nvarchar(255)**, значение по умолчанию NULL.  
+`[ @description = ] 'description'` Представляет собой текстовое описание подписчика. *Описание* — **nvarchar(255)** , значение по умолчанию NULL.  
   
 `[ @security_mode = ] security_mode` — Это Реализованный режим безопасности. *security_mode* — **int**, значение по умолчанию 1. **0** указывает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности. **1** задает проверку подлинности Windows.  
   

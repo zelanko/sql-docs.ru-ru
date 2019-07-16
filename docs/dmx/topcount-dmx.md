@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 0ec801da96735f15b6320c3f0372855c1ff3c2c8
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 48621e242fae86b0b9fca689149ed1364cb7ff1a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502829"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079839"
 ---
 # <a name="topcount-dmx"></a>TopCount (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -109,7 +108,7 @@ NATURAL PREDICTION JOIN
 SELECT Predict ([Association].[v Assoc Seq Line Items], INCLUDE_STATISTICS, 3, $SUPPORT)  
 ```  
   
- Результаты содержат первые 3 прогноза, отсортированные по значению поддержки. Можно заменить $SUPPORT на $PROBABILITY или $ADJUSTED_PROBABILITY, чтобы получить прогнозы, ранжированные по вероятности или скорректированной вероятности. Дополнительные сведения см. в разделе **прогнозирования (расширения интеллектуального анализа данных)**.  
+ Результаты содержат первые 3 прогноза, отсортированные по значению поддержки. Можно заменить $SUPPORT на $PROBABILITY или $ADJUSTED_PROBABILITY, чтобы получить прогнозы, ранжированные по вероятности или скорректированной вероятности. Дополнительные сведения см. в разделе **прогнозирования (расширения интеллектуального анализа данных)** .  
   
 ## <a name="see-also"></a>См. также  
  [Функции &#40;расширений интеллектуального анализа данных&#41;](../dmx/functions-dmx.md)   

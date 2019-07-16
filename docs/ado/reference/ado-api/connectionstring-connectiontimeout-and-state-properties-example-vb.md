@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4de7336a-b5ea-43f1-b750-5fa302b5b756
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f80b2f49b31a3eb175f0f5c613bba11d67c50365
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1d0cd34b13889ed44e32e29a058ca01d48aea1b3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66695736"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933478"
 ---
 # <a name="connectionstring-connectiontimeout-and-state-properties-example-vb"></a>Пример свойства состояния (Visual Basic), ConnectionString и ConnectionTimeout
 В этом примере рассматриваются различные способы использования [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) свойства, чтобы открыть [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекта. Он также использует [ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md) свойство, чтобы задать период ожидания соединения и [состояние](../../../ado/reference/ado-api/state-property-ado.md) свойство для проверки состояния подключения. Функция GetState является обязательным для выполнения этой процедуры.  

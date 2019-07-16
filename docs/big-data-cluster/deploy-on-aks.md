@@ -5,17 +5,16 @@ description: Сведения о настройке службы Azure Kubernete
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 07/10/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 872988b29cddc202ea2c0f199548bc28b946b918
-ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
+ms.openlocfilehash: d39f62345a539094c585b196c9b6030b673f8e89
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67826521"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958489"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>Настроить службу Azure Kubernetes для развертывания кластера больших данных в SQL Server
 
@@ -30,7 +29,7 @@ AKS позволяет легко создавать, настраивать и 
 > [!TIP] 
 > Пример скрипта python, выполняющий развертывание больших данных кластера AKS и SQL Server, см. в разделе [краткое руководство: Развертывание SQL Server, большие данные кластера в службе Azure Kubernetes (AKS)](quickstart-big-data-cluster-deploy.md).
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 
 - [Развертывание средств работы с большими данными SQL Server 2019](deploy-big-data-tools.md):
    - **kubectl**

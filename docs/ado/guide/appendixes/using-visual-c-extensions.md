@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ff759185-df41-4507-8d12-0921894ffbd9
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9f89b08d968b5f601c37f89b15196d6ef03db434
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a9d60695bd033bfc83e3a091490f27f9432782c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702907"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926454"
 ---
 # <a name="visual-c-extensions"></a>Расширения Visual C++
 ## <a name="the-iadorecordbinding-interface"></a>Интерфейс IADORecordBinding

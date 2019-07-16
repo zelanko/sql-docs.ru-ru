@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 268078df-63ca-4c03-a8e7-7108bcea9697
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 59799119920170db3dcab21619c01b52e7dda8db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6e060411864c0f354ee9107216b86a47f738bf43
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800772"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028061"
 ---
 # <a name="host-protection-attributes-and-clr-integration-programming"></a>Атрибуты защиты узла и программирование средств интеграции со средой CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "47800772"
   
 -   **ExternalProcessMgmt**, который указывает, предоставляет ли API способ управления процессом узла.  
   
- C учетом этих атрибутов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при помощи управления доступом для кода определяет список атрибутов защиты сервера, которые запрещены в размещенной среде. Требования управления доступом для кода применяется один из трех [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] наборов разрешений: **БЕЗОПАСНОМ**, **EXTERNAL_ACCESS**, или **UNSAFE**. Один из этих трех уровней безопасности задается при регистрации сборки на сервере, с помощью **CREATE ASSEMBLY** инструкции. Код, выполняемый в **БЕЗОПАСНОМ** или **EXTERNAL_ACCESS** наборы разрешений необходимо избегать определенных типов или членов, имеющих **System.Security.Permissions.HostProtectionAttribute** применен атрибут. Дополнительные сведения см. в разделе [Creating an Assembly](../../relational-databases/clr-integration/assemblies/creating-an-assembly.md) и [ограничения модели программирования интеграции со средой CLR](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md).  
+ C учетом этих атрибутов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при помощи управления доступом для кода определяет список атрибутов защиты сервера, которые запрещены в размещенной среде. Требования управления доступом для кода применяется один из трех [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] наборов разрешений: **БЕЗОПАСНЫЙ**, **EXTERNAL_ACCESS**, или **UNSAFE**. Один из этих трех уровней безопасности задается при регистрации сборки на сервере, с помощью **CREATE ASSEMBLY** инструкции. Код, выполняемый в **БЕЗОПАСНОМ** или **EXTERNAL_ACCESS** наборы разрешений необходимо избегать определенных типов или членов, имеющих **System.Security.Permissions.HostProtectionAttribute** применен атрибут. Дополнительные сведения см. в разделе [Creating an Assembly](../../relational-databases/clr-integration/assemblies/creating-an-assembly.md) и [ограничения модели программирования интеграции со средой CLR](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md).  
   
  **HostProtectionAttribute** не является разрешением безопасности так же, как способ повышения надежности, поскольку он определяет конкретный код создает типы или методы, что ведущее приложение может запрещать. Использование **HostProtectionAttribute** обеспечивает модель программирования, которая позволяет гарантировать стабильность узла.  
   

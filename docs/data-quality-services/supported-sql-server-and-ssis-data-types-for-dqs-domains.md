@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4931143a-b84d-478b-9b45-174128d36ed3
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
-ms.openlocfilehash: 4e0fed979571c27aa42e01a9e876abae81aaff9e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2a75eacaf4283b957a24ade9319ea0dc46c436bf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66783830"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67991765"
 ---
 # <a name="supported-sql-server-and-ssis-data-types-for-dqs-domains"></a>Типы данных SQL Server и службы SSIS, поддерживаемые для доменов DQS
 
@@ -32,7 +31,7 @@ ms.locfileid: "66783830"
   
 |Тип данных доменов DQS|Поддерживаемый тип данных SQL Server|  
 |--------------------------|------------------------------------|  
-|Дата|Дата|  
+|Date|Дата|  
 |Decimal|Decimal<br /><br /> float<br /><br /> money<br /><br /> NUMERIC<br /><br /> real<br /><br /> smallmoney|  
 |Целочисленный|BIGINT<br /><br /> ssNoversion<br /><br /> smallint<br /><br /> tinyint|  
 |String|char<br /><br /> nchar<br /><br /> nvarchar<br /><br /> varchar|  
@@ -44,7 +43,7 @@ ms.locfileid: "66783830"
   
 |Тип данных доменов DQS|Поддерживаемые типы данных служб SSIS|  
 |--------------------------|------------------------------|  
-|Дата|DT_DATE|  
+|Date|DT_DATE|  
 |Decimal|DT_DECIMAL<br /><br /> DT_NUMERIC<br /><br /> DT_R4<br /><br /> DT_R8|  
 |Целочисленный|DT_I1<br /><br /> DT_I2<br /><br /> DT_I4<br /><br /> DT_I8<br /><br /> DT_U1<br /><br /> DT_U2<br /><br /> DT_U4<br /><br /> DT_U8|  
 |String|DT_STR<br /><br /> DT_WSTR|  

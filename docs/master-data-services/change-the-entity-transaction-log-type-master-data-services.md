@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 75250b32-3384-43c2-9b5c-1607cc3aa7b3
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 994ead2df766436dfd6c28912faf6905ffac359c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9857a3c7d8d0f783c83e5bcb5b8fbe18aa7e7250
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65485312"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68052080"
 ---
 # <a name="change-the-entity-transaction-log-type-master-data-services"></a>Изменение типа журнала транзакций сущности (Master Data Services)
 

@@ -2,19 +2,18 @@
 title: Настройка безопасности PolyBase Hadoop в Analytics Platform System | Документация Майкрософт
 description: В этой статье описывается настройка PolyBase в Parallel Data Warehouse для подключения к внешней Hadoop.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 10/26/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: cef02b909d533d8cf0e5bc870c524c204885a6eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1aebac3f63a105f0276e676ccc807aaebdbf097d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66175321"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960299"
 ---
 # <a name="polybase-configuration-and-security-for-hadoop"></a>Конфигурация и обеспечение безопасности PolyBase для Hadoop
 
@@ -68,7 +67,7 @@ ms.locfileid: "66175321"
    |6|mapred-site.xml|mapreduce.jobhistory.address|Найдите конфигурацию для Hadoop и скопируйте ее на компьютер с SQL Server. Пример: 10.193.26.174:10020|  
    |7|yarn-site.xml yarn|yarn.resourcemanager.principal|Найдите конфигурацию для Hadoop и скопируйте ее на компьютер с SQL Server. Например: yarn/_HOST@YOUR-REALM.COM|  
 
-**core-site.xml**
+**Core-site.xml**
 ```xml
 <property>
   <name>polybase.kerberos.realm</name>
@@ -117,7 +116,7 @@ ms.locfileid: "66175321"
 ## <a id="encryptionzone"></a> Настройка зоны шифрования Hadoop
 Если вы используете Hadoop зона шифрования изменить core-site.xml и hdfs-site.xml, следующим образом. Укажите IP-адрес, где запущена служба KMS с соответствующий номер порта. Порт по умолчанию для службы KMS в CDH равна 16 000.
 
-**core-site.xml**
+**Core-site.xml**
 ```xml
 <property>
   <name>hadoop.security.key.provider.path</name>

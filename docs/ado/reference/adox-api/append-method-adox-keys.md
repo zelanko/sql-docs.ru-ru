@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 215a5391-f422-42ec-99ea-4e6fbb5d3d64
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ea4e06fa790e8a360cfb1254b3064b3b540e7842
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fd66edb75bec4f4b7e35c53c9ebeabd9b3c75d83
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66708345"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67967298"
 ---
 # <a name="append-method-adox-keys"></a>Метод Append (коллекция Keys ADOX)
 Добавляет новый [ключ](../../../ado/reference/adox-api/key-object-adox.md) объект [ключи](../../../ado/reference/adox-api/keys-collection-adox.md) коллекции.  
@@ -42,13 +41,13 @@ Keys.Append Key [,KeyType] [,Column] [,RelatedTable] [,RelatedColumn]
  Необязательный параметр. Объект **Long** значение, указывающее тип ключа. *Ключ* параметр соответствует параметру [тип](../../../ado/reference/adox-api/type-property-key-adox.md) свойство **ключ** объекта.  
   
  *Столбец*  
- Необязательный. Объект **строка** значение, указывающее имя столбца для индексирования. *Столбцы* параметр соответствует параметру значение [имя](../../../ado/reference/adox-api/name-property-adox.md) свойство [столбец](../../../ado/reference/adox-api/column-object-adox.md) объекта.  
+ Необязательный параметр. Объект **строка** значение, указывающее имя столбца для индексирования. *Столбцы* параметр соответствует параметру значение [имя](../../../ado/reference/adox-api/name-property-adox.md) свойство [столбец](../../../ado/reference/adox-api/column-object-adox.md) объекта.  
   
  *RelatedTable*  
  Необязательный параметр. Объект **строка** значение, указывающее имя связанной таблицы. *RelatedTable* параметр соответствует параметру значение **имя** свойство [таблицы](../../../ado/reference/adox-api/table-object-adox.md) объекта.  
   
  *RelatedColumn*  
- Необязательный параметр. Объект **строка** значение, указывающее имя связанного столбца для внешнего ключа. *RelatedColumn* параметр соответствует параметру значение **имя** свойство [столбец](../../../ado/reference/adox-api/column-object-adox.md) объекта.  
+ Необязательный. Объект **строка** значение, указывающее имя связанного столбца для внешнего ключа. *RelatedColumn* параметр соответствует параметру значение **имя** свойство [столбец](../../../ado/reference/adox-api/column-object-adox.md) объекта.  
   
 ## <a name="remarks"></a>Примечания  
  *Столбцы* параметр может принимать либо имя столбца, либо массив имен столбцов.  

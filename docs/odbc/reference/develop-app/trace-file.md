@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ec97f949-126f-40a2-b67e-e74520a524cb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8138a0cef3a28d31242a74162f0024e28e8b8fe9
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: c94c3718c116b37eb198264887dfb4a319bd1dc3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793933"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67985148"
 ---
 # <a name="trace-file"></a>Файл трассировки
 Приложение указывает файл трассировки, либо задав **TraceFile** ключевое слово в записи реестра Odbc.ini или вызвав **SQLSetConnectAttr** с атрибутом SQL_ATTR_TRACEFILE подключения. Если файл не существует, если трассировка включена, диспетчер драйверов создаст файл. Каждое приложение должно иметь свой собственный файл выделенный трассировки, чтобы избежать конфликта. Приложение может использовать более одного файла трассировки; Программа установки приложения может предоставить пользователю выбор файлов трассировки. Если трассировка включена динамически, приложение может также выводить результаты трассировки, а не ведения журнала в файл трассировки.  

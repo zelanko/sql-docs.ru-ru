@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1ba0d113-dc05-4431-8689-e14a8821bafd
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 8924ffbbbbbedccdc3bb99469c92667efb822a4c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6c35168f1c77f0574b202b77da515dab497a3ec7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63138931"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006656"
 ---
 # <a name="connecting-to-azure-sql-db-accesstosql"></a>Подключение к базе данных Azure SQL (AccessToSQL)
 Чтобы перенести базы данных Access в SQL Azure, необходимо подключиться к целевому экземпляру SQL Azure. При подключении, SSMA получает метаданные обо всех базах данных в экземпляре SQL Azure и отображает метаданные базы данных в обозревателе метаданных SQL Azure. SSMA хранит сведения о какой экземпляр SQL Azure вы подключены, но не хранит пароли.  

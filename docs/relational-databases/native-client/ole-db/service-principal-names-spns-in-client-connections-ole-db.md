@@ -10,14 +10,13 @@ ms.topic: reference
 ms.assetid: e212010e-a5b6-4ad1-a3c0-575327d3ffd3
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 62073e1618d4ab43acbbfbaad1fb6e2ff16c7658
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 23f0f32e07430dcb9829be48fea9f966dd1b453f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62631702"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68031918"
 ---
 # <a name="service-principal-names-spns-in-client-connections-ole-db"></a>Имена участника-службы в клиентских соединениях (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "62631702"
 ## <a name="data-source-initialization-properties"></a>Свойства инициализации источника данных  
  Следующие свойства набора свойств **DBPROPSET_SQLSERVERDBINIT** позволяют приложениям указывать имена участников-служб.  
   
-|Имя|Тип|Использование|  
+|Имя|Type|Использование|  
 |----------|----------|-----------|  
 |SSPROP_INIT_SERVERSPN|VT_BSTR, чтение и запись|Задает имя участника-службы для сервера. Значением по умолчанию является пустая строка, и в этом случае собственный клиент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] использует имя участника-службы по умолчанию, создаваемое поставщиком.|  
 |SSPROP_INIT_FAILOVERPARTNERSPN|VT_BSTR, чтение и запись|Указывает имя участника-службы для партнера по обеспечению отработки отказа. Значением по умолчанию является пустая строка, и в этом случае собственный клиент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] использует имя участника-службы по умолчанию, создаваемое поставщиком.|  
@@ -44,7 +43,7 @@ ms.locfileid: "62631702"
 ## <a name="data-source-properties"></a>Свойства источника данных  
  Следующие свойства набора свойств **DBPROPSET_SQLSERVERDATASOURCEINFO** позволяют приложениям распознавать метод проверки подлинности.  
   
-|Имя|Тип|Использование|  
+|Имя|Type|Использование|  
 |----------|----------|-----------|  
 |SSPROP_INTEGRATEDAUTHENTICATIONMETHOD|VT_BSTR, только для чтения|Возвращает метод проверки подлинности, используемый для соединения. Приложению возвращается значение, которое Windows возвращает собственному клиенту [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Возможные следующие значения. <br />Значение «NTLM», которое возвращается в том случае, если соединение установлено с использованием проверки подлинности NTLM.<br />Значение «Kerberos», которое возвращается в том случае, если соединение установлено с использованием проверки подлинности Kerberos.<br /><br /> Если при открытом соединении нельзя определить метод проверки подлинности, то возвращается значение VT_EMPTY.<br /><br /> Это свойство доступно для чтения только в том случае, если инициализирован источник данных. При попытке считывания свойства до инициализации источника данных, IDBProperties::GetProperies соответственно вернет ошибку DB_S_ERRORSOCCURRED или DB_E_ERRORSOCCURRED и для атрибута DBPROPSET_PROPERTIESINERROR данного свойства будет установлено значение DBPROPSTATUS_NOTSUPPORTED. Это поведение соответствует основной спецификации OLE DB.|  
 |SSPROP_MUTUALLYAUTHENICATED|VT_BOOL, только для чтения|Если при соединении серверов была выполнена взаимная проверка подлинности, возвращает значение VARIANT_TRUE. В противном случае возвращает VARIANT_FALSE.<br /><br /> Это свойство доступно для чтения только в том случае, если инициализирован источник данных. При попытке считывания свойства до инициализации источника данных, IDBProperties::GetProperies соответственно вернет ошибку DB_S_ERRORSOCCURRED или DB_E_ERRORSOCCURRED и для атрибута DBPROPSET_PROPERTIESINERROR данного свойства будет установлено значение DBPROPSTATUS_NOTSUPPORTED. Это поведение соответствует основной спецификации OLE DB.<br /><br /> Если этот атрибут запрашивается соединением, не использующим проверку подлинности Windows, возвращается значение VARIANT_FALSE.|  

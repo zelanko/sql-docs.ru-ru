@@ -2,19 +2,18 @@
 title: Планирование резервного копирования сервера - Parallel Data Warehouse | Документация Майкрософт
 description: Это таблица планирования емкости поможет вам определить требования для резервного копирования сервера для Parallel Data Warehouse резервную копию базы данных операций и восстановления. Используется для создания плана приобретения нового или подготовки существующих резервных серверов.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 500bebab375a0d0b94032a1855af3844bc2e6fa7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8e7b1f43f586ae2db81fd3bc87563511a17c46ff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63295063"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961326"
 ---
 # <a name="backup-server-capacity-planning-worksheet---parallel-data-warehouse"></a>Резервное копирование сервера таблица планирования емкости - Parallel Data Warehouse
 Это таблица планирования емкости поможет вам определить требования для резервного копирования сервера SQL Server PDW резервную копию базы данных операций и восстановления. Используется для создания плана приобретения нового или подготовки существующих резервных серверов.  

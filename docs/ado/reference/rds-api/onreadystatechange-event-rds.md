@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bf2ae3ac-bfe4-4709-b50a-ea7c282c3164
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5fc38ed5f4c7fb7e2d12eaa1853b57eb0cdbc13a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3558fc1fecd343fff480cca3b45c468860a801f8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712557"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963831"
 ---
 # <a name="onreadystatechange-event-rds"></a>Событие onReadyStateChange (служба удаленных рабочих столов)
 **OnReadyStateChange** событие вызывается каждый раз, когда значение [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md) изменения свойств.  

@@ -19,17 +19,16 @@ helpviewer_keywords:
 ms.assetid: 3a41511f-6603-4b81-a815-7883874023c4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e3413cf3c0e316e25ad52cc35ba348cab1694ae4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5cd31a45ed891a8dc95f4f23981d4b626a6095b6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537407"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68024541"
 ---
 # <a name="sqlremovedrivermanager-function"></a>Функция SQLRemoveDriverManager
 **Соответствие стандартам**  
- Представленные версии: ODBC 3.0: Рекомендуется использовать в Windows XP с пакетом обновления 2, пакет обновления 1 для Windows Server 2003 и более поздних операционных системах.  
+ Представленные версии: ODBC 3.0. Рекомендуется использовать в Windows XP с пакетом обновления 2, пакет обновления 1 для Windows Server 2003 и более поздних операционных системах.  
   
  **Сводка**  
  **SQLRemoveDriverManager** изменяет или удаляет сведения о внутренних компонентах ODBC из файла Odbcinst.ini записи в сведениях о системе.  
@@ -81,12 +80,12 @@ BOOL SQLRemoveDriverManager(
   
 |||  
 |-|-|  
-|ODBC32DLL|ODBCCP32.DLL|  
-|ODBCCR32.DLL|ODBC16GT. БИБЛИОТЕКИ DLL|  
-|ODBCCU32.DLL|ODBC32GT. БИБЛИОТЕКИ DLL|  
-|ODBCINT. БИБЛИОТЕКИ DLL|DS16GT.DLL|  
-|ODBCTRAC. БИБЛИОТЕКИ DLL|DS32GT.DLL|  
-|MSVCRT40.DLL|ODBCAD32.EXE|  
+|ODBC32DLL|ODBCCP32. БИБЛИОТЕКИ DLL|  
+|ODBCCR32. БИБЛИОТЕКИ DLL|ODBC16GT. БИБЛИОТЕКИ DLL|  
+|ODBCCU32. БИБЛИОТЕКИ DLL|ODBC32GT. БИБЛИОТЕКИ DLL|  
+|ODBCINT. БИБЛИОТЕКИ DLL|DS16GT. БИБЛИОТЕКИ DLL|  
+|ODBCTRAC. БИБЛИОТЕКИ DLL|DS32GT. БИБЛИОТЕКИ DLL|  
+|MSVCRT40. БИБЛИОТЕКИ DLL|ODBCAD32.EXE|  
 |ODBCCP32.CPL||  
   
  **SQLRemoveDriverManager** также вызывается как часть процесса обновления. Если приложение обнаруживает, что ей нужно выполнить обновление, и он ранее установлен драйвер, следует удалить и переустановить драйвер.  

@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 8a453fb545fd0a51b7d356c0d855813cea69f272
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: a34cdf743ff0bcecbb4b3088d99efdf3bbfef744
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602604"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938161"
 ---
 # <a name="select-into-dmx"></a>SELECT INTO (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -53,7 +52,7 @@ FROM <existing model>
   
  **WITH DRILLTHROUGH** предложение включает детализацию для новой модели интеллектуального анализа данных. Включить детализацию можно только при создании модели.  
   
-## <a name="example-1-altering-the-parameters-of-the-model"></a>Пример 1: Изменение параметров модели  
+## <a name="example-1-altering-the-parameters-of-the-model"></a>Пример 1. Изменение параметров модели  
  В следующем примере создается новый модели интеллектуального анализа данных, в зависимости от существующей модели интеллектуального анализа данных, `TM_Clustering`, который создается в [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). В новой модели параметр CLUSTER_COUNT изменяется так, чтобы существовало максимум пять кластеров. В существующей модели, напротив, используется значение по умолчанию, равное 10.  
   
 ```  
@@ -62,7 +61,7 @@ USING [Microsoft_Clustering] (CLUSTER_COUNT = 5)
 FROM [TM Clustering]  
 ```  
   
-## <a name="example-2-adding-a-filter-to-the-model"></a>Пример 2: Добавление фильтра к модели  
+## <a name="example-2-adding-a-filter-to-the-model"></a>Пример 2. Добавление фильтра к модели  
  В следующем примере создается новая модель интеллектуального анализа данных на базе существующей модели интеллектуального анализа данных и к этой модели добавляется фильтр. Фильтр ограничивает обучающие данные тремя клиентами, которые проживают в определенном районе.  
   
 ```  

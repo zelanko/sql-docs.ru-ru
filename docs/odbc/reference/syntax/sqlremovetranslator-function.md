@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: c6feda49-0359-4224-8de9-77125cf2397b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 42513e6dcf32e21030e56fd3b386800b7525f534
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8a577a868f7b56a6677da3cb12cfb29057ea66f6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537150"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68024520"
 ---
 # <a name="sqlremovetranslator-function"></a>Функция SQLRemoveTranslator
 **Соответствие стандартам**  
@@ -54,7 +53,7 @@ BOOL SQLRemoveTranslator(
  Функция возвращает значение TRUE при успешном выполнении, FALSE в случае неудачи. Если запись не существует в сведениях о системе, при вызове этой функции, функция возвращает значение FALSE.  
   
 ## <a name="diagnostics"></a>Диагностика  
- Когда **SQLRemoveTranslator** возвращает значение FALSE, связанным  *\*pfErrorCode* значение можно получить, вызвав **SQLInstallerError**. В следующей таблице перечислены  *\*pfErrorCode* значения, которые могут быть возвращены **SQLInstallerError** и объясняется каждый из них в контексте этой функции.  
+ Когда **SQLRemoveTranslator** возвращает значение FALSE, связанным  *\*pfErrorCode* значение можно получить, вызвав **SQLInstallerError**. В следующей таблице перечислены *\*pfErrorCode* значения, которые могут быть возвращены **SQLInstallerError** и объясняется каждый из них в контексте этой функции.  
   
 |*\*pfErrorCode*|Ошибка|Описание|  
 |---------------------|-----------|-----------------|  

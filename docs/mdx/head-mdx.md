@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 05cfcb3c23a0369f010b8440d4a27e94ffacdb21
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6e6d8da7a5813f7e99c022e19f18de2800598885
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63125570"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67906006"
 ---
 # <a name="head-mdx"></a>Head (многомерные выражения)
 

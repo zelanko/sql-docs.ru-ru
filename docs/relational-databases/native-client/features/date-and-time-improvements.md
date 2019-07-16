@@ -9,14 +9,13 @@ ms.topic: reference
 ms.assetid: 9b1d0d9d-1f6e-4399-8f61-e23f9a486a7a
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 56df8dd8a0f8341180ad094e58868636b8d5a37d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: fdb0f3382824f11e3058a23555ba0c60e24ef256
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56029175"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67987569"
 ---
 # <a name="date-and-time-improvements"></a>Улучшения функций даты и времени
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "56029175"
 ### <a name="use-time-as-a-distinct-data-type"></a>Использование Time как отдельного типа данных  
  OLE DB уже имеет тип данных, представляющий время с точностью до 1 секунды — DBTYPE_DBTIME. В ODBC его эквивалентом является тип SQL_TYPE_TIME (SQL_TIME для приложений ODBC 2.0).  
   
- Новый тип данных времени [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] имеет точность до 100 наносекунд. Это потребовало введения в собственном клиенте [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] новых типов данных: DBTYPE_DBTIME2 (OLE DB) и SQL_SS_TIME2 (ODBC). Существующие приложения, не работающие с долями секунд, могут пользоваться столбцами time(0). Существующие типы OLE DB DBTYPE_TIME и ODBC SQL_TYPE_TIME и соответствующие им структуры должны работать правильно, если приложение не использует тип, возвращаемый в метаданных.  
+ Новый тип данных времени [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] имеет точность до 100 наносекунд. Это требуются новые типы в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client: DBTYPE_DBTIME2 (OLE DB) и SQL_SS_TIME2 (ODBC). Существующие приложения, не работающие с долями секунд, могут пользоваться столбцами time(0). Существующие типы OLE DB DBTYPE_TIME и ODBC SQL_TYPE_TIME и соответствующие им структуры должны работать правильно, если приложение не использует тип, возвращаемый в метаданных.  
   
 ### <a name="use-time-as-a-distinct-data-type-with-extended-fractional-seconds-precision"></a>Использование Time как отдельного типа данных с расширенной точностью до долей секунд  
  Некоторым приложениям, например приложениям для управления производством и процессами, необходима возможность обработки времени с точностью до 100 наносекунд. Эту возможность обеспечивают новые типы DBTYPE_DBTIME2 (OLE DB) и SQL_SS_TIME2 (ODBC).  

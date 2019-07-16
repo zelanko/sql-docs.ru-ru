@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 829153be-aa8e-4162-87e8-69882feecf19
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: fabc454fe6adc77ec3e9789925e099fb6b0de6b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 03d622c50a8760bbf1767bc8a4f79e215773695f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63138846"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006607"
 ---
 # <a name="creating-the-server-connection-files-accesstosql"></a>Создание файлов подключения к (AccessToSQL) сервера
 Сведения о сервере может быть указано в разделе "серверы" файла скрипта. Сведения о сервере также можно указать в файле подключения отдельный сервер. Параметр командной строки файла подключения к серверу — `-c <serverconnectionfile>`. Если один и тот же идентификатор сервера присутствует в файлах подключения и скрипт и сервер, считается определение сервера в файле скрипта.  

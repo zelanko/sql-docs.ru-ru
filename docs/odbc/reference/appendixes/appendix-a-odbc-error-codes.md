@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: c06902e4-721d-42e2-b818-05f0e18e4ce0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e93e9dd8da111d367657d99dfba19513ff7f7539
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5c16ec959f847f1b2dba5bdfbea8f886bb00545a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63026795"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996238"
 ---
 # <a name="appendix-a-odbc-error-codes"></a>Приложение А. Коды ошибок ODBC
 В этом разделе рассматриваются значениях SQLSTATE для ODBC 3. *x*. Дополнительные сведения о ODBC 3. *x* значения SQLSTATE, см. в разделе [сопоставления SQLSTATE](../../../odbc/reference/develop-app/sqlstate-mappings.md).  
@@ -97,8 +96,8 @@ ms.locfileid: "63026795"
 |44000|Нарушение параметра WITH CHECK OPTION|**SQLBulkOperations**<br /><br /> **SQLExecDirect**<br /><br /> **SQLExecute**<br /><br /> **SQLParamData**<br /><br /> **SQLSetPos**|  
 |HY000|Общая ошибка|Все функции ODBC, за исключением:<br /><br /> **SQLError**<br /><br /> **SQLGetDiagField**<br /><br /> **SQLGetDiagRec**|  
 |HY001|Ошибка выделения памяти|Все функции ODBC, за исключением:<br /><br /> **SQLError**<br /><br /> **SQLGetDiagField**<br /><br /> **SQLGetDiagRec**|  
-|HY003|Недопустимый тип буфера приложения|**SQLBindCol**<br /><br /> **SQLBindParameter**<br /><br /> **SQLGetData**|  
-|HY004|Недопустимый тип данных SQL|**SQLBindParameter**<br /><br /> **SQLGetTypeInfo**|  
+|HY003 И СООБЩЕНИЕМ|Недопустимый тип буфера приложения|**SQLBindCol**<br /><br /> **SQLBindParameter**<br /><br /> **SQLGetData**|  
+|HY004 И СООБЩЕНИЕМ|Недопустимый тип данных SQL|**SQLBindParameter**<br /><br /> **SQLGetTypeInfo**|  
 |HY007|Связанная инструкция не подготовлена|**SQLCopyDesc**<br /><br /> **SQLGetDescField**<br /><br /> **SQLGetDescRec**|  
 |HY008|Операция отменена|Все функции ODBC, которые могут обрабатываться асинхронно:<br /><br /> **SQLBrowseConnect**<br /><br /> **SQLBulkOperations**<br /><br /> **SQLColAttribute**<br /><br /> **SQLColumnPrivileges**<br /><br /> **SQLColumns**<br /><br /> **SQLConnect**<br /><br /> **SQLDescribeCol**<br /><br /> **SQLDescribeParam**<br /><br /> **SQLDisconnect**<br /><br /> **SQLDriverConnect**<br /><br /> **SQLEndTran**<br /><br /> **SQLExecDirect**<br /><br /> **SQLExecute**<br /><br /> **SQLExtendedFetch**<br /><br /> **SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLForeignKeys**<br /><br /> **SQLGetData**<br /><br /> **SQLGetTypeInfo**<br /><br /> **SQLMoreResults**<br /><br /> **SQLNumParams**<br /><br /> **SQLNumResultCols**<br /><br /> **SQLParamData**<br /><br /> **SQLPrepare**<br /><br /> **SQLPrimaryKeys**<br /><br /> **SQLProcedureColumns**<br /><br /> **SQLProcedures**<br /><br /> **SQLPutData**<br /><br /> **SQLSetConnectAttr**<br /><br /> **SQLSetPos**<br /><br /> **SQLSpecialColumns**<br /><br /> **SQLStatistics**<br /><br /> **SQLTablePrivileges**<br /><br /> **SQLTables**|  
 |HY009|Недопустимое использование пустого указателя|**SQLAllocHandle**<br /><br /> **SQLBindParameter**<br /><br /> **SQLBulkOperations**<br /><br /> **SQLColumnPrivileges**<br /><br /> **SQLColumns**<br /><br /> **SQLExecDirect**<br /><br /> **SQLForeignKeys**<br /><br /> **SQLGetCursorName**<br /><br /> **SQLGetData**<br /><br /> **SQLGetFunctions**<br /><br /> **SQLNativeSql**<br /><br /> **SQLPrepare**<br /><br /> **SQLPrimaryKeys**<br /><br /> **SQLProcedureColumns**<br /><br /> **SQLProcedures**<br /><br /> **SQLPutData**<br /><br /> **SQLSetConnectAttr**<br /><br /> **SQLSetCursorName**<br /><br /> **SQLSetEnvAttr**<br /><br /> **SQLSetStmtAttr**<br /><br /> **SQLSpecialColumns**<br /><br /> **SQLStatistics**<br /><br /> **SQLTablePrivileges**<br /><br /> **SQLTables**|  
@@ -106,7 +105,7 @@ ms.locfileid: "63026795"
 |HY011|Атрибут нельзя установить сейчас|**SQLBulkOperations**<br /><br /> **SQLParamData**<br /><br /> **QLSetPos**<br /><br /> **SQLSetStmtAttr**|  
 |HY012|Недопустимый код операции транзакции|**SQLEndTran**|  
 |HY013|Ошибка управления памятью|Все функции ODBC, за исключением:<br /><br /> **SQLGetDiagField**<br /><br /> **SQLGetDiagRec**|  
-|HY014|Предельное число дескрипторов|**SQLAllocHandle**|  
+|HY014 ДОСТИГНУТ|Предельное число дескрипторов|**SQLAllocHandle**|  
 |HY015|Имена курсоров недоступны|**SQLGetCursorName**|  
 |HY016|Не удается изменить дескриптор строки реализации|**SQLCopyDesc**<br /><br /> **SQLSetDescField**<br /><br /> **SQLSetDescRec**|  
 |HY017|Недопустимое использование автоматически выделенного дескриптора|**SQLFreeHandle**<br /><br /> **SQLSetStmtAttr**|  

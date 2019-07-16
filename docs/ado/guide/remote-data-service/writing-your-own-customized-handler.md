@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d447712a-e123-47b5-a3a4-5d366cfe8d72
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 58a380336d3b1abc99e00f1f4052cd24a8cc5988
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 98e2ec3538de68bffa5b22acc94dda3d81e5c6f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66699411"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921886"
 ---
 # <a name="writing-your-own-customized-handler"></a>Создание собственного настраиваемого обработчика
 Вы можете написать собственный обработчик, если вы являетесь администратором сервера IIS, желающего поддерживать служб удаленных рабочих СТОЛОВ, значение по умолчанию, но больший контроль над запросами пользователей и права доступа.  
@@ -32,7 +31,7 @@ ms.locfileid: "66699411"
 ## <a name="idatafactoryhandler-interface"></a>Интерфейс IDataFactoryHandler  
  Этот интерфейс содержит два метода **GetRecordset** и **повторное соединение**. Оба метода требуют [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) свойства задать значение **adUseClient**.  
   
- Оба метода используют аргументы, которые отображаются после первой запятой в "**обработчик =**" ключевое слово. Например `"Handler=progid,arg1,arg2;"` будет передана строка аргумента из `"arg1,arg2"`, и `"Handler=progid"` передаст аргументом null.  
+ Оба метода используют аргументы, которые отображаются после первой запятой в "**обработчик =** " ключевое слово. Например `"Handler=progid,arg1,arg2;"` будет передана строка аргумента из `"arg1,arg2"`, и `"Handler=progid"` передаст аргументом null.  
   
 ## <a name="getrecordset-method"></a>Метод GetRecordset  
  Этот метод отправляет запросы к источнику данных и создает новый [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объект по указанным аргументам. **Записей** должен открываться с **adLockBatchOptimistic** и не должен быть открыт асинхронно.  
@@ -56,7 +55,7 @@ ms.locfileid: "66699411"
   
  ***запросы на Вытягивание*** объект **записей** объекта.  
   
-## <a name="msdfhdlidl"></a>msdfhdl.idl  
+## <a name="msdfhdlidl"></a>msdfhdl.IDL  
  Это определение интерфейса **IDataFactoryHandler** , отображаемый в **msdfhdl.idl** файла.  
   
 ```cpp

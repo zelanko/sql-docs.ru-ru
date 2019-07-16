@@ -21,18 +21,17 @@ helpviewer_keywords:
 ms.assetid: e515fa6b-1354-4110-9b70-ab2e6164c992
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ca29b9925de2d2c1c80e18372a8abf6e818edd15
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a9c66e12ec326ba5021de0829b0d7cc479f858c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814729"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997586"
 ---
 # <a name="sysavailabilitygrouplisteneripaddresses-transact-sql"></a>sys.availability_group_listener_ip_addresses (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Возвращает по строке на каждый IP-адрес, который связан с любой Always On прослушивателя группы доступности в кластере сервера отказоустойчивой кластеризации Windows (WSFC).  
+  Возвращает по строке для каждого IP-адреса, связанного с прослушивателем группы доступности AlwaysOn в кластере WSFC.  
   
  Первичный ключ: **listener_id** + **IP-адрес** + **ip_sub_mask**  
   
@@ -49,7 +48,7 @@ ms.locfileid: "47814729"
 |**state**|**tinyint**|Состояние ONLINE/OFFLINE IP-ресурса в кластере WSFC, одно из следующих значений:<br /><br /> 1 = в сети. IP-ресурс находится в режиме «в сети».<br /><br /> 0 = вне сети. IP-ресурс находится вне сети.<br /><br /> 2 = ожидание перехода в режиме «в сети» IP-ресурс находится вне сети, но производится его перевод в режим «в сети».<br /><br /> 3 = ошибка. В процессе перевода IP-ресурса в режим «в сети» произошла ошибка.|  
 |**state_desc**|**nvarchar(60)**|Описание **состояние**, используя один из:<br /><br /> ONLINE<br /><br /> OFFLINE<br /><br /> ONLINE_PENDING<br /><br /> FAILED|  
   
-## <a name="security"></a>безопасность  
+## <a name="security"></a>Безопасность  
   
 ### <a name="permissions"></a>Разрешения  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

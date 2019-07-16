@@ -5,17 +5,16 @@ description: Справочная статья по mssqlctl команды hdfs
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 8f211faf827bdf925a8fde938fff8f96998bc359
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 6a2044594065e6f98ed919ace2171279e6f72c25
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728533"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957919"
 ---
 # <a name="mssqlctl-hdfs"></a>mssqlctl hdfs
 
@@ -26,17 +25,17 @@ ms.locfileid: "67728533"
 ## <a name="commands"></a>Команды
 |     |     |
 | --- | --- |
-[mssqlctl hdfs shell](#mssqlctl-hdfs-shell) | Оболочки HDFS — это оболочка простой интерактивной командой для файловой системы HDFS.
+[оболочки hdfs mssqlctl](#mssqlctl-hdfs-shell) | Оболочки HDFS — это оболочка простой интерактивной командой для файловой системы HDFS.
 [mssqlctl hdfs ls](#mssqlctl-hdfs-ls) | Список состояний заданного файла или каталога.
-[mssqlctl hdfs exists](#mssqlctl-hdfs-exists) | Определите, существует ли файл или каталог.  Возвращает значение True, если существует и False в противном случае.
+[существует mssqlctl hdfs](#mssqlctl-hdfs-exists) | Определите, существует ли файл или каталог.  Возвращает значение True, если существует и False в противном случае.
 [mssqlctl hdfs mkdir](#mssqlctl-hdfs-mkdir) | Создайте каталог по указанному пути.
 [mssqlctl hdfs mv](#mssqlctl-hdfs-mv) | Переместите указанный файл или путь в указанное расположение.
-[mssqlctl hdfs create](#mssqlctl-hdfs-create) | Создайте текстовый файл в указанном расположении.  Простое текстовое содержимое можно добавить с помощью параметра данных.
-[mssqlctl hdfs read](#mssqlctl-hdfs-read) | Читать содержимое файла.  Смещение и длина в байтах являются необязательными.
+[Создание mssqlctl hdfs](#mssqlctl-hdfs-create) | Создайте текстовый файл в указанном расположении.  Простое текстовое содержимое можно добавить с помощью параметра данных.
+[чтение hdfs mssqlctl](#mssqlctl-hdfs-read) | Читать содержимое файла.  Смещение и длина в байтах являются необязательными.
 [mssqlctl hdfs rm](#mssqlctl-hdfs-rm) | Удаление файла или каталога.
 [mssqlctl hdfs rmr](#mssqlctl-hdfs-rmr) | Рекурсивно удалить файл или каталог.
 [mssqlctl hdfs chmod](#mssqlctl-hdfs-chmod) | Измените разрешение для заданного файла или каталога.
-[mssqlctl hdfs chown](#mssqlctl-hdfs-chown) | Измените владельца или группу из указанного файла.
+[сменить mssqlctl hdfs](#mssqlctl-hdfs-chown) | Измените владельца или группу из указанного файла.
 ## <a name="mssqlctl-hdfs-shell"></a>mssqlctl hdfs shell
 Оболочки HDFS — это оболочка простой интерактивной командой для файловой системы HDFS.
 ```bash
@@ -83,7 +82,7 @@ mssqlctl hdfs ls --path '/tmp'
 Строка запроса JMESPath. См. в разделе [ http://jmespath.org/ ](http://jmespath.org/]) Дополнительные сведения и примеры.
 #### `--verbose`
 Увеличьте уровень подробного ведения журнала. Используйте параметр--debug, чтобы получить полные журналы отладки.
-## <a name="mssqlctl-hdfs-exists"></a>mssqlctl hdfs exists
+## <a name="mssqlctl-hdfs-exists"></a>существует mssqlctl hdfs
 Определите, существует ли файл или каталог.  Возвращает значение True, если существует и False в противном случае.
 ```bash
 mssqlctl hdfs exists --path -p 
@@ -187,7 +186,7 @@ mssqlctl hdfs create --path '/tmp/test.txt' --data "This is a test."
 Строка запроса JMESPath. См. в разделе [ http://jmespath.org/ ](http://jmespath.org/]) Дополнительные сведения и примеры.
 #### `--verbose`
 Увеличьте уровень подробного ведения журнала. Используйте параметр--debug, чтобы получить полные журналы отладки.
-## <a name="mssqlctl-hdfs-read"></a>mssqlctl hdfs read
+## <a name="mssqlctl-hdfs-read"></a>чтение hdfs mssqlctl
 Читать содержимое файла.  Смещение и длина в байтах являются необязательными.
 ```bash
 mssqlctl hdfs read --path -p 
@@ -294,7 +293,7 @@ mssqlctl hdfs chmod --permission 775 --path '/tmp/test.txt'
 Строка запроса JMESPath. См. в разделе [ http://jmespath.org/ ](http://jmespath.org/]) Дополнительные сведения и примеры.
 #### `--verbose`
 Увеличьте уровень подробного ведения журнала. Используйте параметр--debug, чтобы получить полные журналы отладки.
-## <a name="mssqlctl-hdfs-chown"></a>mssqlctl hdfs chown
+## <a name="mssqlctl-hdfs-chown"></a>сменить mssqlctl hdfs
 Измените владельца или группу из указанного файла.
 ```bash
 mssqlctl hdfs chown --path -p 

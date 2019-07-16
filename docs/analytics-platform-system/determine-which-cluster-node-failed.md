@@ -2,19 +2,18 @@
 title: Определить узел сбоя кластера - Analytics Platform System | Документация Майкрософт
 description: В этой статье описывается, как определить имя узла Analytics Platform System (APS), не удалась после возникновения сбоя кластера и было активировано предупреждение отказоустойчивого кластера. В процессе устранения неполадок отказоустойчивого кластера необходимо определить имя узла, который не удалось перед обращением в службу Майкрософт, чтобы помочь устранить проблему.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 4fd739e55725a3138a22539ef837088f86c8d8b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2c17fde577b71382cd3ee63b8c6f50818184eab0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63283145"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961058"
 ---
 # <a name="determine-which-cluster-node-failed-for-analytics-platform-system"></a>Определить, какому кластеру узлов, сбой для Analytics Platform System
 В этом разделе описывается, как определить имя узла Analytics Platform System (APS), не удалась после возникновения сбоя кластера и было активировано предупреждение отказоустойчивого кластера. В процессе устранения неполадок отказоустойчивого кластера необходимо определить имя узла, который не удалось перед обращением в службу Майкрософт, чтобы помочь устранить проблему.  

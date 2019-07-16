@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b519a101-fa53-44be-bd55-6ea79245b5d1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 227762e4fbc71d58641aa5f67ec975df9df08360
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5a94299b1411cdb53a47c773330773ce7209fbf2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802786"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67990334"
 ---
 # <a name="ihpublications-transact-sql"></a>IHpublications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,10 +57,10 @@ ms.locfileid: "52802786"
 |**centralized_conflicts**|**bit**|Определяет, хранятся ли на издателе конфликтные записи.<br /><br /> **0** = конфликтные записи хранятся как на издателе и на подписчике, вызвавшем конфликт.<br /><br /> **1** = конфликтные записи хранятся на издателе.<br /><br /> *Не поддерживается для издателей не SQL.*|  
 |**conflict_retention**|**int**|Задает срок хранения конфликтных записей в днях. *Не поддерживается для издателей не SQL.*|  
 |**conflict_policy**|**int**|Задает политику устранения конфликтов при обновлении подписчика посредством очередей. Может принимать одно из следующих значений:<br /><br /> **1** = конфликт разрешается в пользу издателя.<br /><br /> **2** = разрешение конфликта в пользу подписчика.<br /><br /> **3** = повторной инициализации подписки.<br /><br /> *Не поддерживается для издателей не SQL.*|  
-|**queue_type**|**int**|Задает используемый тип очереди. Может принимать одно из следующих значений:<br /><br /> **1** = msmq, который использует [!INCLUDE[msCoName](../../includes/msconame-md.md)] очереди сообщений для хранения транзакций.<br /><br /> **2** = sql, который использует [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для хранения транзакций.<br /><br /> Этот столбец не используется издателями, отличными[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателей.<br /><br /> Примечание. Компонент [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing устарел и больше не поддерживается.<br /><br /> *Этот столбец не поддерживается для SQL издателей, отличных от.*|  
+|**queue_type**|**int**|Задает используемый тип очереди. Может принимать одно из следующих значений:<br /><br /> **1** = msmq, который использует [!INCLUDE[msCoName](../../includes/msconame-md.md)] очереди сообщений для хранения транзакций.<br /><br /> **2** = sql, который использует [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для хранения транзакций.<br /><br /> Этот столбец не используется издателями, отличными[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателей.<br /><br /> Примечание. С помощью [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing устарел и больше не поддерживается.<br /><br /> *Этот столбец не поддерживается для SQL издателей, отличных от.*|  
 |**ad_guidname**|**sysname**|Указывает, опубликована ли публикация в каталоге [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory. Допустимый глобальный уникальный идентификатор (GUID) указывает, что публикация опубликована в [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory и идентификатор GUID является соответствующим объектом публикации Active Directory **objectGUID**. Если это значение равно NULL, публикация в [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory не публикуется. *Не поддерживается для издателей не SQL.*|  
 |**backward_comp_level**|**int**|Уровень совместимости базы данных может иметь одно из следующих значений:<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].<br /><br /> *Не поддерживается для издателей не SQL.*|  
-|**Описание**|**nvarchar(255)**|Описание публикации.|  
+|**description**|**nvarchar(255)**|Описание публикации.|  
 |**independent_agent**|**bit**|Показывает наличие изолированного агента распространителя для этой публикации.<br /><br /> **0** = публикация использует общий агент распространителя и каждого издателя паре базы данных/подписчика соответствует единственный общий агент.<br /><br /> **1** = имеется изолированный агент распространителя для этой публикации.|  
 |**immediate_sync**|**bit**|Указывает, является ли файлы синхронизации создаются или заново при каждом запуске агента моментальных снимков где **1** означает, что они создаются каждый раз при запуске агента.|  
 |**allow_push**|**bit**|Указывает, разрешены ли принудительные подписки на публикацию; где **1** означает, что они разрешены.|  

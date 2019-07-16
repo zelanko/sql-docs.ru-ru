@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2266a233-6354-464b-91ec-824ca4eb9ceb
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 84fe7cea5418a022282958a7c16d263e5c7e9604
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 5e967ae5b46ec703da4e8b1fff64f298fdf8a081
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52399838"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942048"
 ---
 # <a name="managedbackupspgetbackupdiagnostics-transact-sql"></a>managed_backup.sp_get_backup_diagnostics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ managed_backup.sp_get_backup_diagnostics [@xevent_channel = ] 'event type' [, [@
   
 ##  <a name="Arguments"></a> Аргументы  
  @xevent_channel  
- Тип расширенного события. Значение по умолчанию предполагает возврат всех событий, занесенных в журнал за предшествующие 30 минут. Занесенные в журнал события зависят от типа включенных расширенных событий. Этот параметр можно использовать для фильтрации хранимой процедуры, чтобы показывать только события определенного типа. Можно указать либо полное имя события, либо подстроку, например: **«Admin»**, **'Analytic'**, **'Operational'**, и **'Debug'**. @event_channel — **VARCHAR (255)**.  
+ Тип расширенного события. Значение по умолчанию предполагает возврат всех событий, занесенных в журнал за предшествующие 30 минут. Занесенные в журнал события зависят от типа включенных расширенных событий. Этот параметр можно использовать для фильтрации хранимой процедуры, чтобы показывать только события определенного типа. Можно указать полное имя события или укажите подстроки, например: **«Admin»** , **'Analytic'** , **'Operational'** , и **'Debug'** . @event_channel — **VARCHAR (255)** .  
   
  Чтобы получить список событий, используйте типы в настоящее время включено **managed_backup.fn_get_current_xevent_settings** функции.  
   
@@ -65,7 +64,7 @@ managed_backup.sp_get_backup_diagnostics [@xevent_channel = ] 'event type' [, [@
 |Событие|NVARCHAR(512)|Сводка журналов событий.|  
 |Отметка времени|timestamp|Отметка времени события, показывающая, когда оно возникло.|  
   
-## <a name="security"></a>безопасность  
+## <a name="security"></a>Безопасность  
   
 ### <a name="permissions"></a>Разрешения  
  Требуется **EXECUTE** разрешений на хранимую процедуру. Это также потребует выполнения **VIEW SERVER STATE** разрешения, так как процедура автоматически вызывает другие системные объекты, требующие этого разрешения.  

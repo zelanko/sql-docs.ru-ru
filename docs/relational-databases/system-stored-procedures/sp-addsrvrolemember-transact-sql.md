@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 777f0e09-8ee5-4cb2-a3ac-939d02c3cd22
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 80de1581116ddc477ee1d5b8197532a853ee3da7
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 2c927bdff462922d1846188366fbb92ce0d3663c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130524"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022424"
 ---
 # <a name="spaddsrvrolemember-transact-sql"></a>sp_addsrvrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,10 +43,10 @@ sp_addsrvrolemember [ @loginame= ] 'login'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @loginame **=** ] **"**_входа_**"**  
+ [ @loginame **=** ] **"** _входа_ **"**  
  Имя входа, добавляемое к предопределенной роли сервера. *Имя входа* — **sysname**, не имеет значения по умолчанию. *Имя входа* может быть [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] входа или имя входа Windows. Если имени входа Windows еще не был предоставлен доступ к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], он предоставляется автоматически.  
   
- [ @rolename **=** ] **"**_роли_**"**  
+ [ @rolename **=** ] **"** _роли_ **"**  
  Имя предопределенной роли сервера, к которой добавляется имя входа. *роль* — **sysname**, значение по умолчанию NULL, и должен иметь одно из следующих значений:  
   
 -   sysadmin  

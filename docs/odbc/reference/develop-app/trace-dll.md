@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5ab99bd3-cdc3-4e2c-8827-932d1fcb6e00
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d7a99f6c2960600d62a789471f68c1f5da89ae8c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6fe910c93beac676e5fb0f663b740c03a826c326
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63148875"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67985221"
 ---
 # <a name="trace-dll"></a>Библиотека DLL трассировки
 Библиотеки DLL, которая выполняет трассировку является одним из основных компонентов ODBC. Трассировка библиотеку DLL, в настоящее время предоставляется в качестве образца библиотеки DLL в компоненте ODBC пакета SDK для Windows, а также был ранее включенных Microsoft данных Access Components (MDAC) SDK. Таким образом запись реестра, интерфейса и образец кода для библиотеки DLL трассировки доступны. Эта библиотека DLL могут быть заменены DLL, созданные пользователем ODBC или стороннего поставщика трассировки. Пользовательская Библиотека трассировки должен предоставляться отличается от имени исходной трассировки образец библиотеки DLL. Библиотеки DLL трассировки должен устанавливаться в системном каталоге, или они смогут загрузить. Строки подключения не передаются в трассировку DLL диспетчером драйверов.  

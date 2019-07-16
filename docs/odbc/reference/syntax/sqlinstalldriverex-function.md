@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 1dd74544-f4e9-46e1-9b5f-c11d84fdab4c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5664a4cb745a250aa8db6d98b92a275bb91c7a8d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 673e3e53468780ef261a22b00a2ec1bb9df0e184
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536582"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030603"
 ---
 # <a name="sqlinstalldriverex-function"></a>Функция SQLInstallDriverEx
 **Соответствие стандартам**  
@@ -84,7 +83,7 @@ BOOL SQLInstallDriverEx(
  Функция возвращает значение TRUE при успешном выполнении, FALSE в случае неудачи.  
   
 ## <a name="diagnostics"></a>Диагностика  
- Когда **SQLInstallDriverEx** возвращает значение FALSE, связанным  *\*pfErrorCode* значение можно получить, вызвав **SQLInstallerError**. В следующей таблице перечислены  *\*pfErrorCode* значения, которые могут быть возвращены **SQLInstallerError** и объясняется каждый из них в контексте этой функции.  
+ Когда **SQLInstallDriverEx** возвращает значение FALSE, связанным  *\*pfErrorCode* значение можно получить, вызвав **SQLInstallerError**. В следующей таблице перечислены *\*pfErrorCode* значения, которые могут быть возвращены **SQLInstallerError** и объясняется каждый из них в контексте этой функции.  
   
 |*\*pfErrorCode*|Ошибка|Описание|  
 |---------------------|-----------|-----------------|  

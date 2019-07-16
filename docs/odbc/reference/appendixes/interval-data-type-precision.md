@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: eb73bd77-2e7e-4498-a266-4d7c990a0d56
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a8df4339ae30b9058e5a5864c37807c6b02e4fdd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3424c58d25be69d2ddc42a3088aa457ebddf1d4b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63188907"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67947605"
 ---
 # <a name="interval-data-type-precision"></a>Точность интервального типа данных
 Точность для типа данных interval включает интервала, точность, точности интервала и точностью.  

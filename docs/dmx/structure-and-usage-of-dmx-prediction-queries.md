@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 37ff157cbddb0894880f12097c977b923d92f177
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 99d8ef98ad4e86bce0e1beff819a8d140662aaf7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37981918"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938061"
 ---
 # <a name="structure-and-usage-of-dmx-prediction-queries"></a>Структура и методы использования прогнозирующих запросов расширений интеллектуального анализа данных
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +44,7 @@ ms.locfileid: "37981918"
   
 -   **TOP**  
   
--   **ИЗ***\<модели >***PREDICTION JOIN**   
+-   **ИЗ** *\<модели >* **PREDICTION JOIN**  
   
 -   **ON**  
   
@@ -70,7 +69,7 @@ ms.locfileid: "37981918"
  Дополнительные сведения о синтаксисе инструкции прогноза см. в разделе [SELECT FROM &#60;модели&#62; PREDICTION JOIN &#40;расширений интеллектуального анализа данных&#41; ](../dmx/select-from-model-prediction-join-dmx.md) и [SELECT FROM &#60;модели&#62; &#40;расширений интеллектуального анализа данных &#41;](../dmx/select-from-model-dmx.md).  
   
 ## <a name="see-also"></a>См. также  
- [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; ссылки](../dmx/data-mining-extensions-dmx-reference.md)   
+ [Справочник по расширениям интеллектуального анализа данных (расширения интеллектуального анализа данных)](../dmx/data-mining-extensions-dmx-reference.md)   
  [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; справочнике по функциям](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; Справочник по операторам](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; Справка по инструкции](../dmx/data-mining-extensions-dmx-statements.md)   

@@ -7,13 +7,12 @@ ms.date: 06/16/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 0c6c4384dd6c02e35fe77a6fb2bfc4017a445b1b
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: f30c00503a0dd183619550d3ab0e92c0be1449dd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67140722"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962773"
 ---
 # <a name="install-new-python-packages-on-sql-server"></a>Установка новых пакетов Python в SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -22,7 +21,7 @@ ms.locfileid: "67140722"
 
 Дополнительные сведения о пути расположения и установки пакета, см. в разделе [получить R или Python данные пакетов](../package-management/installed-package-information.md).
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 + [Служб SQL Server 2017 машинного обучения (в базе данных)](../install/sql-machine-learning-services-windows-install.md) с параметром языка Python. 
 
@@ -80,7 +79,7 @@ ms.locfileid: "67140722"
 
   Полный путь к **сценариев** в установке по умолчанию выглядит следующим образом:
 
-    C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Scripts
+    C:\Program Files\Microsoft SQL Server\MSSQL14. MSSQLSERVER\PYTHON_SERVICES\Scripts
 
 + Если вы используете Visual Studio 2017 или Visual Studio 2015 с помощью расширений Python, можно запустить `pip install` из **окружения Python** окна. Нажмите кнопку **пакетов**и в текстовом поле введите имя или расположение пакета для установки. Не нужно вводить `pip install`; он заполняется для вас автоматически. 
 

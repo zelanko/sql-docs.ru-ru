@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 77ed4c6c-d976-4eb2-8526-a12697b0ef83
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b96d86952b2d8be152aefad584e85104accb7cee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1a00861365df27357099176151bcd681e15e585e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63148976"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67985123"
 ---
 # <a name="tracing"></a>Трассировка
 Диспетчер драйверов ODBC имеет трассировки средство, позволяющее последовательность вызовов функций, произведенным приложением ODBC позволяет записывать и расшифрованной в файл журнала. Трассировки выполняет трассировку библиотеки DLL, которая захватывает вызовы между приложением и диспетчера драйверов, а также между диспетчера драйверов и драйверов. Этот метод трассировки заменяет трассировки, выполненные ODBC 2 *.x* диспетчера драйверов и трассировки, выполняемые в ODBC 2 *.x* по ODBC Spy.  

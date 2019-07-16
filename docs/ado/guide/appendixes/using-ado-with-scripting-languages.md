@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 76fc4d00-0c9f-422b-af5c-af6ed8fb29d8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d41d5a0239f11882c135c27fd4af8e817e83b799
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6b322dacbf85ec24b58e315ecbbf9d547d1481f9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702763"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926481"
 ---
 # <a name="using-ado-with-scripting-languages"></a>Использование объектов ADO с языками сценариев
 В среде создания сценариев ADO позволяет обеспечивать доступ к данным посредством сценариев на стороне сервера. В этом случае ADO, базовому поставщику OLE DB, который его использует, и любые другие компоненты, необходимые для ссылки на хранилище данных установлены на сервере под управлением Internet Information Services (IIS). ADO, используя Active Server Pages (ASP), — это компонент, на которую ссылается скрипт, который может создавать HTML, например. Это содержимое HTML могут передаваться по протоколу HTTP в веб-браузер клиента. С помощью сценариев, веб-страницы могли отправлять действия сценария на стороне сервера, позволяя обновления, просматривать или просматривать определенные данные.  

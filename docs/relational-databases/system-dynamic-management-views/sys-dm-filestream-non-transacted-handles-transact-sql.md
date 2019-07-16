@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 507ec125-67dc-450a-9081-94cde5444a92
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2b25594feb96fe10f0a04ad0ab542fd582089759
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 4dda607ace977be539dbed096a3d83ac5f220ea0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52411631"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950981"
 ---
 # <a name="sysdmfilestreamnontransactedhandles-transact-sql"></a>sys.dm_filestream_non_transacted_handles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +56,7 @@ ms.locfileid: "52411631"
 |database_directory_name|nvarchar(512)|Часть opened_file_name, которая представляет имя каталога базы данных.|  
 |table_directory_name|nvarchar(512)|Часть opened_file_name, которая представляет имя каталога таблицы.|  
 |remaining_file_name|nvarchar(512)|Часть opened_file_name, которая представляет остальную часть имени каталога.|  
-|open_time|DATETIME|Время открытия дескриптора.|  
+|open_time|datetime|Время открытия дескриптора.|  
 |flags|ssNoversion|ShareFlagsUpdatedToFcb = 0x1,<br />DeleteOnClose = 0x2,<br />NewFile = 0x4,<br />PostCreateDoneForNewFile = 0x8,<br />StreamFileOverwritten = 0x10,<br />RequestCancelled = 0x20,<br />NewFileCreationRolledBack = 0x40|  
 |login_id|ssNoversion|Идентификатор участника, открывшего дескриптор.|  
 |login_name|nvarchar(512)|Имя участника, открывшего дескриптор.|  

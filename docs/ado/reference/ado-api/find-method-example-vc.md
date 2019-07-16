@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 594c51cb-1157-4417-802b-d91b875ba020
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 860b64a924762e68e7405ae02b6d909cc807b368
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e6be0edf100501762f6d4eada735ff90caa84df4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66694970"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932529"
 ---
 # <a name="find-method-example-vc"></a>Пример метода Find (Visual C++)
 В этом примере используется [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта [найти](../../../ado/reference/ado-api/find-method-ado.md) метод для поиска и подсчитать количество должностей в **Pubs** базы данных. В примере предполагается, что базовый поставщик не поддерживает аналогичные функциональные возможности.  

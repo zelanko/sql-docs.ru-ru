@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: fd8374eaa97ffc08528c245569ec7bff8499747a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 25db7fdb20ceb2dd24f819e1db7077d40f7e7e3f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701330"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926638"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Поставщик Microsoft OLE DB для ODBC-Обзор
 Для использования программистами ADO или служб удаленных рабочих СТОЛОВ идеальном мире бы один, в котором каждый источник предоставляет интерфейс OLE DB таким образом, ADO может вызывать непосредственно в источнике данных. Несмотря на то, что все чаще других поставщиков базы данных при реализации интерфейсов OLE DB, некоторые источники данных не еще доступны таким образом. Однако большинство систем СУБД, в настоящее время может осуществляться через ODBC.
@@ -107,7 +106,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |Максимальное количество столбцов в Order By (KAGPROP_MAXCOLUMNSINORDERBY)|Указывает максимальное число столбцов, которые могут быть перечислены в предложении ORDER BY инструкции SELECT.|
 |Максимальное количество столбцов в Select (KAGPROP_MAXCOLUMNSINSELECT)|Указывает максимальное число столбцов, которые могут быть перечислены в части SELECT инструкции SELECT.|
 |Максимальное количество столбцов в таблице (KAGPROP_MAXCOLUMNSINTABLE)|Указывает максимальное число столбцов, допустимое в таблице.|
-|Numeric Functions (KAGPROP_NUMERICFUNCTIONS)|Указывает числовые функции, которые поддерживаются драйвером ODBC. Список имен функций и связанных значений, используемых в этой битовой маске, см. в разделе [приложении E: Скалярные функции](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md), в документации ODBC.|
+|Числовые функции (KAGPROP_NUMERICFUNCTIONS)|Указывает числовые функции, которые поддерживаются драйвером ODBC. Список имен функций и связанных значений, используемых в этой битовой маске, см. в разделе [приложении E: Скалярные функции](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md), в документации ODBC.|
 |Возможности внешнего соединения (KAGPROP_OJCAPABILITY)|Указывает типы ВНЕШНИХ соединений, поддерживаемых поставщиком.|
 |Внешние соединения (KAGPROP_OUTERJOINS)|Указывает, поддерживает ли поставщик ВНЕШНИЕ соединения.|
 |Специальные символы (KAGPROP_SPECIALCHARACTERS)|Указывает, какие символы имеют особое значение для драйвера ODBC.|
@@ -268,7 +267,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |Многотабличное обновление|DBPROP_MULTITABLEUPDATE|
 |Порядок сортировки NULL|DBPROP_NULLCOLLATION|
 |Поведение при конкатенации с NULL|DBPROP_CONCATNULLBEHAVIOR|
-|Службы OLE DB|DBPROP_INIT_OLEDBSERVICES|
+|Службы OLE DB|DBPROP_INIT_OLEDBSERVICES, УСТАНОВИТЬ|
 |Версия OLE DB|DBPROP_PROVIDEROLEDBVER|
 |Поддержка объектов OLE|DBPROP_OLEOBJECTS|
 |Поддержка открытия наборов данных|DBPROP_OPENROWSETSUPPORT|

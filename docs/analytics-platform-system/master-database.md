@@ -2,19 +2,18 @@
 title: Базы данных master - Parallel Data Warehouse | Документация Майкрософт
 description: Дополнительные сведения о базе данных master в Parallel Data Warehouse.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: bf07b9c27e08a49cb0866b177a0ec37fed4528a0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9f37c7a85baea3b41f6016a57e4f57579b427719
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63213295"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960654"
 ---
 # <a name="master-database---parallel-data-warehouse"></a>Базы данных master - Parallel Data Warehouse
 Базы данных master SQL Server PDW хранит данные для входа на уровне устройства и каталоге базы данных. Это база данных master SQL Server, находится на узле управления. Таким образом он предоставляет аналогичную функциональность для SQL Server PDW как главный обеспечивает для SQL Server.  

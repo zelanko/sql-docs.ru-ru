@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 93f50869-2627-4642-899f-8f626f8833f4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1181ab030078b0f7ba61a72448991ed677e22d76
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 11d71139786ac1442588f016bf8c576b92853cf3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62636170"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997577"
 ---
 # <a name="sphelpremotelogin-transact-sql"></a>sp_helpremotelogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +56,7 @@ sp_helpremotelogin [ [ @remoteserver = ] 'remoteserver' ]
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|сервер|**sysname**|Имя удаленного сервера, определенного на локальном сервере.|  
+|server|**sysname**|Имя удаленного сервера, определенного на локальном сервере.|  
 |local_user_name|**sysname**|Имя входа на локальном сервере, с которым сопоставлены удаленные имена входа.|  
 |remote_user_name|**sysname**|Имя входа на удаленном сервере, который сопоставляется local_user_name.|  
 |параметры|**sysname**|Доверенное = Удаленное имя входа не нуждается в подтверждении паролем при установке соединения с локальным сервером из удаленного сервера.<br /><br /> Не доверенное (или пустое) = Для подтверждения удаленного имени входа запрашивается пароль при установке соединения с локальным сервером из удаленного сервера.|  

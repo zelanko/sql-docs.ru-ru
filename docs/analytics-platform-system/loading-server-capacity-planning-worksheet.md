@@ -2,19 +2,18 @@
 title: Загрузка емкости сервера планирование - Analytics Platform System | Документация Майкрософт
 description: Это таблица планирования емкости поможет вам определить требования для сервера для загрузки для загрузки данных в Analytics платформы системы Parallel Data Warehouse.»
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 2f0efd7e0688496d5af7887431ca00ae683c874f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0bb15fdd3b20c538237b3e012df4217ad5568bad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63213395"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960668"
 ---
 # <a name="loading-server-capacity-planning-worksheet-for-analytics-platform-system"></a>Загрузка таблица планирования емкости сервера для Analytics Platform System
 Это таблица планирования емкости поможет вам определить требования для сервера для загрузки для загрузки данных в SQL Server PDW. Используется для создания плана для приобретения или подготовки существующих загрузка серверов.  

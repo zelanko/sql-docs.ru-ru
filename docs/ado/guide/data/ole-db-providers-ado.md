@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6e0488c3-934d-4976-99dc-65c580dc7a3c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 926e5abc1c65db152c5ca5927c5acd2c932d6b90
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7e86375639d875f5cfec21705af47c005afd901e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700523"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924759"
 ---
 # <a name="ole-db-providers-ado"></a>Поставщики OLE DB (ADO)
 OLE DB определяет набор COM-интерфейсы для предоставления приложениям стандартизированный доступ к данным, которые хранятся в различных источниках. Такой подход позволяет источнику данных для совместного использования данных через интерфейсы, поддерживающие объем архиватора соответствующие к источнику данных. По своей структуре высокопроизводительных архитектуры OLE DB основан на его использование модели гибкий, основанный на компонент службы. Вместо того, предписанное число промежуточных слоев между приложением и данных, OLE DB требуется только в том случае, как многие компоненты, которые необходимы для выполнения конкретной задачи.  

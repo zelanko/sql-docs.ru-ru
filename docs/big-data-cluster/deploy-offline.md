@@ -5,17 +5,16 @@ description: Узнайте, как выполнение автономного 
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1300c375903eb8692b8da6dce4e74a41e91d80c0
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 25145a7278f5b0feb85641d8798a34e4258f6b3f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728930"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958517"
 ---
 # <a name="perform-an-offline-deployment-of-a-sql-server-big-data-cluster"></a>Выполнение автономного развертывания кластера больших данных SQL Server
 
@@ -72,25 +71,25 @@ ms.locfileid: "67728930"
 Для автономной установки необходимы следующие образы контейнера кластера больших данных:
 
  - **MSSQL-appdeploy-init**
- - **mssql-monitor-fluentbit**
+ - **MSSQL-monitor-fluentbit**
  - **MSSQL-monitor-collectd**
- - **mssql-server-data**
+ - **MSSQL-server-data**
  - **mssql-hadoop**
- - **mssql-java**
+ - **MSSQL-java**
  - **mssql-mlservices-pythonserver**
- - **mssql-mlservices-rserver**
+ - **MSSQL-mlservices-rserver**
  - **MSSQL-monitor-elasticsearch**
  - **MSSQL-monitor-influxdb**
- - **mssql-security-knox**
- - **mssql-mlserver-r-runtime**
+ - **MSSQL-security-knox**
+ - **MSSQL-mlserver-r-runtime**
  - **MSSQL-mlserver-py-runtime**
- - **mssql-controller**
- - **mssql-server-controller**
+ - **MSSQL контроллер**
+ - **MSSQL-server контроллер**
  - **MSSQL-monitor-grafana**
  - **MSSQL-monitor-kibana**
- - **mssql-service-proxy**
- - **mssql-app-service-proxy**
- - **mssql-ssis-app-runtime**
+ - **MSSQL службы прокси-сервера**
+ - **MSSQL-app-service прокси**
+ - **MSSQL--приложения — среда выполнения служб ssis**
  - **MSSQL-monitor-telegraf**
  - **MSSQL-mleap обслуживания runtime**
   

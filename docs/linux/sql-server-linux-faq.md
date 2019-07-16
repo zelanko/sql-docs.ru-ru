@@ -3,17 +3,16 @@ title: SQL Server в Linux часто задаваемые вопросы
 description: В этой статье содержатся ответы на часто задаваемые вопросы о SQL Server на платформе Linux.
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 01/10/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 161db6a803082039e3fb17fcd89b9e0ba813fae4
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: c6d9ea0eb36c212d3312522adafc50406c7a646d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67833596"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67952635"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>SQL Server в Linux, часто задаваемые вопросы (FAQ)
 

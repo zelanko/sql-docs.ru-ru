@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a4360ed4-b70f-4734-9041-4025d033346b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 99fe38d78ff146503995a3e28dbe186b04be870d
-ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
+ms.openlocfilehash: 5c60567da677564c168f0601625686bdfb8b3d67
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67597494"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926591"
 ---
 # <a name="microsoft-ole-db-remoting-provider-overview"></a>Общие сведения о поставщике Microsoft OLE DB удаленного взаимодействия
 Поставщик Microsoft OLE DB удаленного взаимодействия позволяет локального пользователя на клиентском компьютере для вызова поставщиков данных на удаленном компьютере. Укажите параметры поставщика данных для удаленного компьютера, как это делается, если локальный пользователь на удаленном компьютере. Затем укажите параметры, используемые поставщиком удаленного взаимодействия для доступа к удаленной машине. Можно затем получить удаленный компьютер, как если бы вы были локального пользователя.

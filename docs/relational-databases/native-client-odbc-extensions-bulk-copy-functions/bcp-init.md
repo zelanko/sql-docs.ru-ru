@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 6a25862c-7f31-4873-ab65-30f3abde89d2
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 74400acc3030967a985fca6041a60b96947ef64b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e47c7c4f5324da021db2624e5e936493fd54ea45
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630302"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67895531"
 ---
 # <a name="bcpinit"></a>bcp_init
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -84,7 +83,7 @@ RETCODE bcp_init (
   
 -   При копировании в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] порядковый номер столбца в файле данных должен совпадать с порядковым номером столбца таблицы базы данных. При копировании из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **bcp_exec** помещает данные, основанные на порядковый номер столбца в таблице базы данных.  
   
--   Если тип данных базы данных имеет переменную длину (например, **varbinary(22)**) или если столбец базы данных может содержать значения null, данные в файле данных в качестве префикса Признак длины, null. Ширина признака изменяется в зависимости от типа данных и версии массового копирования.  
+-   Если тип данных базы данных имеет переменную длину (например, **varbinary(22)** ) или если столбец базы данных может содержать значения null, данные в файле данных в качестве префикса Признак длины, null. Ширина признака изменяется в зависимости от типа данных и версии массового копирования.  
   
  Чтобы изменить значения форматов данных, указанный для файла данных, вызовите [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) и [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md).  
   

@@ -7,13 +7,12 @@ ms.date: 12/04/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: e5419900b8ba573ec0658a5022be68105b0b8607
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 431fddf870b5755691cad92e576c95d0d3a83890
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62641855"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962497"
 ---
 # <a name="olapr-r-library-in-sql-server"></a>olapR (библиотека R в SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -40,14 +39,14 @@ library(olapR)
 
 Этот пакет предоставляется в следующих продуктах, а также на несколько образов виртуальных машин в Azure. Расположение пакета изменяется соответствующим образом.
 
-Продукт | Местоположение |
+Продукт | Location |
 --------|----------|
-Служб SQL Server 2017 машинного обучения (с интеграцией R) | C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library | 
-SQL Server 2016 R Services | C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library
+Служб SQL Server 2017 машинного обучения (с интеграцией R) | C:\Program Files\Microsoft SQL Server\MSSQL14. MSSQLSERVER\R_SERVICES\library | 
+SQL Server 2016 R Services | C:\Program Files\Microsoft SQL Server\MSSQL13. MSSQLSERVER\R_SERVICES\library
 Microsoft Machine Learning Server (R Server) | C:\Program Files\Microsoft\R_SERVER\library |
 Microsoft R Client | C:\Program Files\Microsoft\R Client\R_SERVER\library |
 Виртуальная машина анализа данных (в Azure) | C:\Program Files\Microsoft\R Client\R_SERVER\library |
-Виртуальной машине SQL Server (в Azure) <sup>1</sup> | C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library |
+Виртуальной машине SQL Server (в Azure) <sup>1</sup> | C:\Program Files\Microsoft SQL Server\MSSQL14. MSSQLSERVER\R_SERVICES\library |
 
 <sup>1</sup> интеграция R является необязательным в SQL Server. Библиотека olapR устанавливается при добавлении машинного обучения или компонент R во время настройки виртуальной Машины.
 

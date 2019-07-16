@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: dec96be6-0b31-4953-9c9a-e962b5afcd18
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 918836e949593672417240c1b91026e1e02c4788
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c6b50714cdff536418e759828d972c16abd7d7a0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712319"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964546"
 ---
 # <a name="createobject-method-rds"></a>Метод CreateObject (служба удаленных рабочих столов)
 Создает прокси для целевого бизнес-объекта и возвращает указатель на него. Прокси-сервера пакетов и выполняет маршалинг данные заглушки на стороне сервера для обмена данными с бизнес-объект для отправки запросов и данных через Интернет. Для объектов в процессе компонент прокси-серверы не используются, предоставляется только указатель на объект.  
@@ -32,8 +31,8 @@ ms.locfileid: "66712319"
   
 |Protocol|Синтаксис|  
 |--------------|------------|  
-|HTTP|Set object = DataSpace.CreateObject("ProgId", "https\://awebsrvr")|  
-|HTTPS|Set object = DataSpace.CreateObject("ProgId", "https\://awebsrvr")|  
+|HTTP|Объект набора = DataSpace.CreateObject ("ProgId", "https\://awebsrvr")|  
+|HTTPS|Объект набора = DataSpace.CreateObject ("ProgId", "https\://awebsrvr")|  
 |DCOM|Set object = DataSpace.CreateObject("ProgId", "computername")|  
 |В процессе|Set object = DataSpace.CreateObject("ProgId", "")|  
   

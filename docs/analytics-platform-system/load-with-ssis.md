@@ -2,19 +2,18 @@
 title: Загрузка с помощью службы Integration Services — Parallel Data Warehouse | Документация Майкрософт
 description: Предоставляет ссылки и информация о развертывании для загрузки данных в Parallel Data Warehouse (PDW) с помощью пакетов служб SQL Server Integration Services (SSIS).
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: b8a1ca0ec3662dddb2baa5fbac5fe01ed4d4f2e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 90d9f7422a3073df79a93949b3b7ed2e94208412
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63213376"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960673"
 ---
 # <a name="load-data-with-integration-services-to-parallel-data-warehouse"></a>Загрузка данных с помощью служб Integration Services для Parallel Data Warehouse
 Предоставляет ссылки и информация о развертывании для загрузки данных в SQL Server Parallel Data Warehouse с помощью пакетов служб SQL Server Integration Services (SSIS).  
@@ -56,7 +55,7 @@ For general information about developing Integration Services packages, see [Des
 ### <a name="run-from-powershell"></a>Запустить с помощью PowerShell  
 Чтобы запустить пакет из Windows PowerShell, с помощью **dtexec** служебной программы: `dtexec /FILE <packagePath>`  
   
-Например: `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`   
+Например: `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
   
 ### <a name="run-from-a-windows-command-prompt"></a>Командная строка для запуска из Windows 
 Чтобы запустить пакет из командной строки Windows, с помощью **dtexec** служебной программы: `dtexec /FILE <packagePath>`  
@@ -222,11 +221,11 @@ id,city,lastUpdateDate,orderDate
   
     Для подключения Ethernet **имя сервера**: Введите IP-адрес узла кластера управления, запятая, порт 17001. Например 10.192.63.134,17001.  
   
-    **Пользователь:**`user1`  
+    **Пользователь:** `user1`  
   
-    **Пароль:**`password1`  
+    **Пароль:** `password1`  
   
-    **Целевая база данных:**`LoadExampleDB`  
+    **Целевая база данных:** `LoadExampleDB`  
   
 6.  Выберите целевую таблицу: `Orders`.  
   

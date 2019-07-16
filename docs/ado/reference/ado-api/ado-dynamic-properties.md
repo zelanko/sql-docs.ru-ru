@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d7b06d72-f792-4328-93a2-5006b9e2c581
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2ad6c2804b70011380a12b5b9e0cd1f52fd56398
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 71396a071a42d7dd40a6537a2834541aab2b6bad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696864"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921096"
 ---
 # <a name="ado-dynamic-properties"></a>Динамические свойства ADO
 Динамические свойства, которые могут добавляться к [свойства](../../../ado/reference/ado-api/properties-collection-ado.md) коллекции [подключения](../../../ado/reference/ado-api/connection-object-ado.md), [команда](../../../ado/reference/ado-api/command-object-ado.md), или [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объектов. Источником для этих свойств является либо поставщик данных, таких как [поставщик OLE DB для SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md), или к поставщику услуг, таких как [служба курсора Майкрософт для OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md). Укажите ссылку на подходящий поставщик данных или документации по поставщику службы Дополнительные сведения об определенном свойстве динамического.  

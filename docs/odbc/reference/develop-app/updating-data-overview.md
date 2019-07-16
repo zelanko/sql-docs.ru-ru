@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 062036a4-cda6-4aaa-9765-f1ec3e0b31b1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3edbd41bc5361d864abcc7d631a90521af98ef01
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0701218b5ef489d1f8962ffadc9409986a0c36c7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62632669"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942817"
 ---
 # <a name="updating-data-overview"></a>Общие сведения об обновлении данных
 Приложения можно обновить данные, либо при выполнении инструкций SQL, либо путем вызова **SQLSetPos** или **SQLBulkOperations**. **ОБНОВЛЕНИЕ**, **удалить**, и **вставить** инструкций выступать непосредственно в источнике данных и обычно поддерживаются драйверы. Поиск обновления и инструкций delete содержит спецификацию для изменения строк. Расположенный update и delete и **SQLSetPos** работать на источник данных с помощью курсора и поддерживаются не часто.  

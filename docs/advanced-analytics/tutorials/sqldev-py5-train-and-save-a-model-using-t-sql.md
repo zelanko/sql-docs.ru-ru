@@ -7,13 +7,12 @@ ms.date: 11/01/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 2e0505cf847a091a5650b392aab56f486cee16aa
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: f2793c6773dc38ebeb4a420e24c38504deb412d0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511251"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961851"
 ---
 # <a name="train-and-save-a-python-model-using-t-sql"></a>Обучение и сохранение модели Python с помощью T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -116,7 +115,7 @@ ms.locfileid: "58511251"
 
     Обработка данных и компоновка модели может занять несколько минут. Сообщения, которые должны передаваться в Python **stdout** потока отображаются в **сообщений** окно [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Пример:
 
-    *Сообщения STDOUT из внешнего скрипта:*
+    *Сообщения STDOUT из внешнего скрипта:* 
   *C:\Program Files\Microsoft SQL Server\MSSQL14. MSSQLSERVER\PYTHON_SERVICES\lib\site packages\revoscalepy*
 
 3. Откройте таблицу *Нью-Йорка\_taxi_models*. Вы увидите, что была добавлена одна новая строка, которая содержит сериализованную модель в столбце _model_.
@@ -180,12 +179,12 @@ ms.locfileid: "58511251"
 
     Обработка данных и компоновка модели может занять некоторое время. Сообщения, которые должны передаваться в Python **stdout** потока отображаются в **сообщений** окно [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Пример:
 
-    *Сообщения STDOUT из внешнего скрипта:*
+    *Сообщения STDOUT из внешнего скрипта:* 
   *C:\Program Files\Microsoft SQL Server\MSSQL14. MSSQLSERVER\PYTHON_SERVICES\lib\site packages\revoscalepy*
 
 3. Откройте таблицу *nyc_taxi_models*. Вы увидите, что была добавлена одна новая строка, которая содержит сериализованную модель в столбце _model_.
 
-    *revoscalepy_model* *0x8003637265766F7363616c....*
+    *revoscalepy_model* *0x8003637265766F7363616c...*
 
 В следующем шаге обученных моделей используется для создания прогнозов.
 

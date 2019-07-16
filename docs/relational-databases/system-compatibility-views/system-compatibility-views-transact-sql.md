@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 8e4624f5-9d36-4ce7-9c9e-1fe010fa2122
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: dbc4f4f1fb55603a6918357e4c6aa16e4a819f3d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 466dc68da1c5cef56a7debe3953ba38956bb2993
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805488"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018033"
 ---
 # <a name="system-compatibility-views-transact-sql"></a>Системные представления совместимости (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +58,7 @@ ms.locfileid: "47805488"
   
  При обращении к базе данных пользователя, системные таблицы, которые были объявлены как устаревшие в SQL Server 2000 (такие как **syslanguages** или **syscacheobjects**), теперь привязан к представлению обратной совместимости в **sys** схемы. С тех пор как системные таблицы SQL Server 2000 устарели для многих версий, данное изменение не считается критическим изменением.  
   
- Пример: Если пользователь создает таблицу пользователя с именем **syslanguages** пользователя-базы данных в SQL Server 2008, инструкция `SELECT * from dbo.syslanguages;` в этой базе данных вернет значения из пользовательской таблицы. Начиная с SQL Server 2012, этот метод будет возвращать данные из системного представления **sys.syslanguages**.  
+ Пример Если пользователь создает таблицу пользователя с именем **syslanguages** пользователя-базы данных в SQL Server 2008, инструкция `SELECT * from dbo.syslanguages;` в этой базе данных вернет значения из пользовательской таблицы. Начиная с SQL Server 2012, этот метод будет возвращать данные из системного представления **sys.syslanguages**.  
   
 ## <a name="see-also"></a>См. также  
  [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   

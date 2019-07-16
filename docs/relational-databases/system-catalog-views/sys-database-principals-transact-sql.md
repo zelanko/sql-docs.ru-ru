@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 8cb239e9-eb8c-4109-9cec-0d35de95fa0e
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 512994ada852ea7807cc14ecd5b25d9acff56ffc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c369bfe81a86af7a11a370a4d827440cd4544a9d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62632701"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022684"
 ---
 # <a name="sysdatabaseprincipals-transact-sql"></a>sys.database_principals (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -45,7 +44,7 @@ ms.locfileid: "62632701"
 |**owning_principal_id**|**int**|Идентификатор участника, являющегося владельцем данного участника. Владельцем всех участников, кроме ролей баз данных **dbo**.|  
 |**ИД безопасности**|**varbinary(85)**|SID (идентификатор защиты) участника.  NULL для SYS и INFORMATION SCHEMAS.|  
 |**is_fixed_role**|**bit**|Если значение равно 1, в данной строке представляется запись для одной из предопределенных ролей базы данных: db_owner, db_accessadmin, db_datareader, db_datawriter, db_ddladmin, db_securityadmin, db_backupoperator, db_denydatareader, db_denydatawriter.|  
-|**authentication_type**|**int**|**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Обозначает тип проверки подлинности. Ниже приведены возможные значения и их описания.<br /><br /> 0 : Без проверки подлинности<br />1 : Проверка подлинности экземпляра<br />2 : Проверка подлинности базы данных<br />3 : Проверка подлинности Windows|  
+|**authentication_type**|**int**|**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Обозначает тип проверки подлинности. Ниже приведены возможные значения и их описания.<br /><br /> 0: Без проверки подлинности<br />1\. Проверка подлинности экземпляра<br />2\. Проверка подлинности базы данных<br />3\. Проверка подлинности Windows|  
 |**authentication_type_desc**|**nvarchar(60)**|**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Описание типа проверки подлинности. Ниже приведены возможные значения и их описания.<br /><br /> NONE: Без проверки подлинности<br />ЭКЗЕМПЛЯР: Проверка подлинности экземпляра<br />БАЗА ДАННЫХ: Проверка подлинности базы данных<br />WINDOWS: Проверка подлинности Windows|  
 |**default_language_name**|**sysname**|**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Обозначает язык по умолчанию для участника.|  
 |**default_language_lcid**|**int**|**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Обозначает код языка по умолчанию для участника.|  

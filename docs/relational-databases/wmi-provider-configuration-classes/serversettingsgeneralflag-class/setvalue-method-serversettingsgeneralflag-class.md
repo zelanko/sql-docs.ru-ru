@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a889feac-c0e0-4635-b506-843863d86967
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 5a4f58527820e853ad7764ccb6be277d043183bc
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ec0a215db84b8b1d8dbd2d12e603a365f6a54023
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666613"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68052674"
 ---
 # <a name="setvalue-method-serversettingsgeneralflag-class"></a>Метод SetValue (класс ServerSettingsGeneralFlag)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ object.SetValue(Value)
   
 |Параметр|Описание|  
 |---------------|-----------------|  
-|*Value*|Логическое значение, указывающее состояние флага.|  
+|*Значение*|Логическое значение, указывающее состояние флага.|  
   
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Значение **uint32** , равное 0, если служба изменена успешно, и 1, если запрос не поддерживается. Любое другое значение указывает на ошибку.  
