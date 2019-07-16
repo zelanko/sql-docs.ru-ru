@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 5f8e16547893038b009d6cd5d051500111807510
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63028787"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68216419"
 ---
  Неправильное изменение реестра может вызвать серьезные проблемы. Перед внесением изменений в реестр рекомендуется создать резервную копию всех важных данных. 
