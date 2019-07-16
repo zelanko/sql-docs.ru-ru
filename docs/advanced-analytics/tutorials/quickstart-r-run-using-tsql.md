@@ -7,20 +7,19 @@ ms.date: 04/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 1c3ee703bca46bf46dba8225e1d28da3174dc932
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 331184f49918dbb17b7b97590b3155cbc8eb89ed
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59240172"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961989"
 ---
 # <a name="quickstart-hello-world-r-script-in-sql-server"></a>Краткое руководство. R-сценарий «Hello world» в SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 В этом кратком руководстве вы узнаете основные понятия, выполнив «Hello World» R скрипт inT-SQL, представив Введение **sp_execute_external_script** системной хранимой процедуры. 
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 Предыдущего краткого руководства, [проверьте R в SQL Server существует](quickstart-r-verify.md), сведения и ссылки по настройке среды R, необходимые для этого краткого руководства.
 

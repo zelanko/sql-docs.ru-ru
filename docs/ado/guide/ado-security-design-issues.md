@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 86b83a38-efdf-4831-a6d5-7e470d517d1c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1b098733eccd03db7bafff084fdc2416ddff5845
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f638f6e48dccccd91849f02c65331d9212f9bbb7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701758"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927037"
 ---
 # <a name="ado-security-design-features"></a>Функции разработки безопасности ADO
 В следующих разделах функции разработки безопасности в ActiveX Data Objects (ADO) 2.8 и более поздних версий. Эти изменения были внесены в ADO 2.8 для повышения безопасности. ADO 6.0, который включен в Windows DAC 6.0 в Windows Vista, является функциональным эквивалентом ADO 2.8, который был включен в компонентах MDAC 2.8 в Windows XP и Windows Server 2003. Этот раздел содержит сведения о том, как наилучшим образом защитить приложения в ADO 2.8 или более поздней.

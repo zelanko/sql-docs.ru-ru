@@ -1,5 +1,5 @@
 ---
-title: Определение хранимых процедур | Документы Microsoft
+title: Определение хранимых процедур | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 54b14cd5ee54edab4508c06c55e5815bfeab934f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020101"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209377"
 ---
 # <a name="defining-stored-procedures"></a>Определение хранимых процедур
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3fdfead2-b5ab-4163-9b1d-3d2143a5db8c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e1e268da5eb4c53b6270e474987c69b88383cd9b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fa6862808643f3d687fa406cb3fc2aa23c9b7d7b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700339"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924143"
 ---
 # <a name="shape-compute-clause"></a>Предложение COMPUTE для формирования данных
 Предложение COMPUTE для формирования создает родительского **записей**, столбцы которых состоят из ссылки на дочерние **записей**; необязательный столбцы, содержимое которой представлено главы, новый, или вычисляемых столбцов, или результат выполнения агрегатные функции на дочернем **записей** или ранее сформированные **записей**; и любых столбцов с дочернего **набор записей** перечисленные в необязательное предложение BY.  

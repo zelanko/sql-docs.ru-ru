@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 01ced74e-c575-4a25-83f5-bd7d918123f8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9387ffefe2fdcc9b30824018a763b87b81b831dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 78be24ea75fad04c7b7c1bdae103dfd3f92c78ee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65538099"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016725"
 ---
 # <a name="configdsn-function"></a>Функция ConfigDSN
 **Соответствие стандартам**  
@@ -56,7 +55,7 @@ BOOL ConfigDSN(
   
  ODBC_CONFIG_DSN: Настройка (изменить) существующего источника данных.  
   
- ODBC_REMOVE_DSN: Удаление существующего источника данных.  
+ ЗНАЧЕНИЕ ODBC_REMOVE_DSN: Удаление существующего источника данных.  
   
  *lpszDriver*  
  [Вход] Описание драйвера (обычно имя связанного СУБД) предоставляемые пользователям вместо имени физического драйвера.  

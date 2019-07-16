@@ -14,15 +14,14 @@ helpviewer_keywords:
 ms.assetid: bea087d3-911f-418b-b483-d2b5b334da19
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8edb075be1bf64dad8f4ef18924a6396b7c64e80
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 02ee7c1fb396dc1c9c0708cf6c0e7a52ff1c11ec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63294370"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019407"
 ---
-# <a name="c-to-sql-date"></a>C в SQL: Дата
+# <a name="c-to-sql-date"></a>C в SQL: Date
 Идентификатор для типа данных ODBC C дата является:  
   
  SQL_C_TYPE_DATE  
@@ -31,10 +30,10 @@ ms.locfileid: "63294370"
   
 |Идентификатор типа SQL|Тест|SQLSTATE|  
 |-------------------------|----------|--------------|  
-|SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|Длина столбца в байтах > = 10<br /><br /> Столбец байтов длиной < 10<br /><br /> Значение данных не является допустимой датой|н/д<br /><br /> 22001<br /><br /> 22008|  
-|SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|Длина столбца символ > = 10<br /><br /> Столбец символов длиной < 10<br /><br /> Значение данных не является допустимой датой|н/д<br /><br /> 22001<br /><br /> 22008|  
-|SQL_TYPE_DATE|Значение данных представляет собой допустимую дату<br /><br /> Значение данных не является допустимой датой|н/д<br /><br /> 22007|  
-|SQL_TYPE_TIMESTAMP|Значение данных представляет собой допустимую дату [a]<br /><br /> Значение данных не является допустимой датой|н/д<br /><br /> 22007|  
+|SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|Длина столбца в байтах > = 10<br /><br /> Столбец байтов длиной < 10<br /><br /> Значение данных не является допустимой датой|Н/Д<br /><br /> 22001<br /><br /> 22008|  
+|SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|Длина столбца символ > = 10<br /><br /> Столбец символов длиной < 10<br /><br /> Значение данных не является допустимой датой|Н/Д<br /><br /> 22001<br /><br /> 22008|  
+|SQL_TYPE_DATE|Значение данных представляет собой допустимую дату<br /><br /> Значение данных не является допустимой датой|Н/Д<br /><br /> 22007|  
+|SQL_TYPE_TIMESTAMP|Значение данных представляет собой допустимую дату [a]<br /><br /> Значение данных не является допустимой датой|Н/Д<br /><br /> 22007|  
   
  [a] части времени отметки времени, равным нулю.  
   

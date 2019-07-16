@@ -2,19 +2,18 @@
 title: Параллельное хранилище данных компонентов - Analytics Platform System | Документация Майкрософт
 description: В этой статье объясняется, программное обеспечение устройства и компоненты программного обеспечения не является специализированным Analytics Platform System.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: aaf90124cc7877b633a997a2c4f170057b965028
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 87525a741c1d0081b366394c0c5dd1b152ad15f1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62639877"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960478"
 ---
 # <a name="parallel-data-warehouse-components---analytics-platform-system"></a>Параллельное хранилище данных компонентов - Analytics Platform System
 В этой статье объясняется, программное обеспечение устройства и компоненты программного обеспечения не является специализированным Analytics Platform System.  

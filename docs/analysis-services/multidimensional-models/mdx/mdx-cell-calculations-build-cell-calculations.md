@@ -1,5 +1,5 @@
 ---
-title: Построение вычислений значений ячеек в Многомерном выражении | Документы Microsoft
+title: Построение вычислений значений ячеек в многомерных Выражениях (многомерные Выражения) | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e2263ac667b65def1bd59745e3cfef711820b494
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021651"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208792"
 ---
-# <a name="mdx-cell-calculations---build-cell-calculations"></a>Вычисления многомерных Выражений ячейки - построение вычислений значений ячеек
+# <a name="mdx-cell-calculations---build-cell-calculations"></a>Вычисления ячеек многомерных Выражений — построение вычислений значений ячеек
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-  Многомерные выражения предоставляют целый ряд инструментов для формирования вычисляемых значений, таких как вычисляемые элементы, пользовательские свертки и пользовательские элементы.  Однако по этой причине применить эти средства так, чтобы повлиять только на часть ячеек или на одну ячейку, будет трудно.  
+  Многомерные выражения предоставляют целый ряд инструментов для формирования вычисляемых значений, таких как вычисляемые элементы, пользовательские свертки и пользовательские элементы. Однако по этой причине применить эти средства так, чтобы повлиять только на часть ячеек или на одну ячейку, будет трудно.  
   
  Чтобы формировать вычисляемые значения ячеек, надо воспользоваться имеющимися в многомерных выражениях возможностями вычисляемых ячеек. Вычисляемые ячейки позволяют выделить особый срез ячеек, который называется *вложенным кубом вычисления*, и применить формулу к каждой ячейке вложенного куба вычисления, удовлетворяющей дополнительному условию, применимому к любой ячейке.  
   
@@ -35,9 +35,9 @@ ms.locfileid: "34021651"
      Дополнительные сведения о применении инструкций CREATE CELL CALCULATION и ALTER CUBE для создания вычисляемых ячеек в сеансе см. в разделе [Создание вычисляемых ячеек с областью действия сеанса](../../../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-session-scoped-calculated-cells.md).  
   
 ## <a name="see-also"></a>См. также  
- [Инструкция ALTER CUBE & #40; Многомерные Выражения & #41;](../../../mdx/mdx-data-definition-alter-cube.md)   
- [Создать инструкции ВЫЧИСЛЕНИЯ ЯЧЕЙКИ & #40; Многомерные Выражения & #41;](../../../mdx/mdx-data-definition-create-cell-calculation.md)   
- [Создание вычислений ячеек с областью действия запроса & #40; Многомерные Выражения & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-query-scoped-cell-calculations.md)   
- [Основные принципы запросов многомерных Выражений & #40; Службы Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [Инструкция ALTER CUBE (многомерные выражения)](../../../mdx/mdx-data-definition-alter-cube.md)   
+ [Инструкция CREATE CELL CALCULATION (многомерные выражения)](../../../mdx/mdx-data-definition-create-cell-calculation.md)   
+ [Создание вычислений ячеек с областью действия запроса (многомерные выражения)](../../../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-query-scoped-cell-calculations.md)   
+ [Основные принципы запросов многомерных выражений (службы Analysis Services)](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

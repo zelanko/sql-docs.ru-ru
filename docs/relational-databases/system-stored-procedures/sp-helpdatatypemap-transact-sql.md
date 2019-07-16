@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 800c9c65-723e-4961-a63d-327987f129f0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bf42231158f646e34c63bd148ba66c9780b14785
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: ee304c9847019b21f1e08f57a3e0fdf0b439d241
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529596"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68101400"
 ---
 # <a name="sphelpdatatypemap-transact-sql"></a>sp_helpdatatypemap (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
 |**MSSQLSERVER**|Источником является база данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**ORACLE**|Источником является база данных Oracle.|  
   
-`[ @source_version = ] 'source_version'` Версия продукта исходной СУБД. *source_version*— **varchar(10)**, и если не указан, сопоставления типов данных для всех версий исходной СУБД возвращаются. Позволяет фильтровать результирующий набор по типу данных по версии исходной СУБД.  
+`[ @source_version = ] 'source_version'` Версия продукта исходной СУБД. *source_version*— **varchar(10)** , и если не указан, сопоставления типов данных для всех версий исходной СУБД возвращаются. Позволяет фильтровать результирующий набор по типу данных по версии исходной СУБД.  
   
 `[ @source_type = ] 'source_type'` Тип данных, приведенных в СУБД-источнике. *source_type* — **sysname**, и если не указан, возвращаются сопоставления для всех типов данных в исходной СУБД. Позволяет фильтровать результирующий набор по типу данных исходной СУБД.  
   
@@ -64,7 +63,7 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
 |**DB2**|Целевой является база данных IBM DB2.|  
 |**SYBASE**|Целевой является база данных Sybase.|  
   
-`[ @destination_version = ] 'destination_version'` Версия продукта целевой СУБД. *destination_version*— **varchar(10)**, и если не указан, возвращаются сопоставления для всех версий целевой СУБД. Позволяет фильтровать результирующий набор по типу данных по версии целевой СУБД.  
+`[ @destination_version = ] 'destination_version'` Версия продукта целевой СУБД. *destination_version*— **varchar(10)** , и если не указан, возвращаются сопоставления для всех версий целевой СУБД. Позволяет фильтровать результирующий набор по типу данных по версии целевой СУБД.  
   
 `[ @destination_type = ] 'destination_type'` Тип данных, приведенных в целевой СУБД. *destination_type*— **sysname**, и если не указан, возвращаются сопоставления для всех типов данных в целевой СУБД. Позволяет фильтровать результирующий набор по типу данных целевой СУБД.  
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 45c61b33a7cc1669ae34f7888fda1450524b079b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: f963aa920a1e783cfec5b467d1c57fdb2e805893
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536826"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124861"
 ---
 # <a name="spchangepublication-transact-sql"></a>sp_changepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,9 +43,9 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ## <a name="arguments"></a>Аргументы  
 `[ @publication = ] 'publication'` — Имя публикации. *Публикация* — **sysname**, значение по умолчанию NULL.  
   
-`[ @property = ] 'property'` Представляет изменяемое свойство публикации. *Свойство* — **nvarchar(255)**.  
+`[ @property = ] 'property'` Представляет изменяемое свойство публикации. *Свойство* — **nvarchar(255)** .  
   
-`[ @value = ] 'value'` — Это новое значение свойства. *значение* — **nvarchar(255)**, значение по умолчанию NULL.  
+`[ @value = ] 'value'` — Это новое значение свойства. *значение* — **nvarchar(255)** , значение по умолчанию NULL.  
   
  В данной таблице описаны свойства публикации, доступные для изменения, а также ограничения на значения этих свойств.  
   
@@ -73,7 +72,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**Sub reinit**|Для обновления подписчиков. Если происходит конфликт, подписку необходимо инициализировать повторно. Это свойство можно изменить только при отсутствии активных подписок. Не поддерживается для издателей Oracle.|  
 ||**Sub wins**|Политика устранения конфликтов, возникающих при обновлении подписчиков, при которой преимущество имеет подписчик. Это свойство можно изменить только при отсутствии активных подписок. Не поддерживается для издателей Oracle.|  
 |**conflict_retention**||**int** , указывающий срок хранения конфликтов, в днях. Значение по умолчанию — 14 суток. **0** означает, что очистка конфликтов не требуется. Не поддерживается для издателей Oracle.|  
-|**Описание**||Необязательная запись описания публикации.|  
+|**description**||Необязательная запись описания публикации.|  
 |**enabled_for_het_sub**|**true**|Позволяет публикации поддерживать подписчиков, не являющихся подписчиками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **enabled_for_het_sub** нельзя изменить, если существуют подписки на публикацию. Может потребоваться выполнить [хранимые процедуры репликации (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) соблюдать следующие требования перед установкой **enabled_for_het_sub** значение true:<br /> - **allow_queued_tran** должно быть **false**.<br /> - **allow_sync_tran** должно быть **false**.<br /> Изменение **enabled_for_het_sub** для **true** может изменить существующие параметры публикации. Дополнительные сведения см. в статье [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md). Это свойство невозможно изменить для публикаций, не являющихся [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 ||**false**|Публикация не поддерживает подписчиков, не являющихся [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Это свойство невозможно изменить для публикаций, не являющихся [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**enabled_for_internet**|**true**|Публикация через Интернет разрешена, поэтому для передачи файлов моментальных снимков подписчику может быть использован протокол FTP. Файлы синхронизации для публикации помещаются в следующий каталог: C:\Program Files\Microsoft SQL Server\MSSQL\Repldata\ftp. *ftp_address* не может иметь значение NULL. Это свойство невозможно изменить для публикаций, не являющихся [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -110,7 +109,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 |**sync_method**|**native**|При синхронизации подписок выполняется массовое копирование таблиц в собственном режиме.|  
 ||**character**|При синхронизации подписок выполняется массовое копирование таблиц в символьном режиме.|  
 ||**Параллельные**|Используется собственный программный вывод для массового копирования всех таблиц, не блокирующий таблицы во время формирования моментальных снимков. Недопустимо для репликации моментальных снимков.|  
-||**concurrent_c**|Используется символьный программный вывод для массового копирования всех таблиц, не блокирующий таблицы во время формирования моментальных снимков. Недопустимо для репликации моментальных снимков.|  
+||**Concurrent_c**|Используется символьный программный вывод для массового копирования всех таблиц, не блокирующий таблицы во время формирования моментальных снимков. Недопустимо для репликации моментальных снимков.|  
 |**Идентификатор задачи**||Это свойство устарело и больше не поддерживается.|  
 |**allow_drop**|**true**|Позволяет `DROP TABLE` DLL поддержки для статей, которые являются частью репликации транзакций. Минимальная поддерживаемая версия: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Пакет обновления 2 или более поздней версии и [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] пакет обновления 1 или более поздней версии. Дополнительные справочные материалы. [Статья базы знаний 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1)|
 ||**false**|Отключает `DROP TABLE` DLL поддержки для статей, которые являются частью репликации транзакций. Это **по умолчанию** значение этого свойства.|

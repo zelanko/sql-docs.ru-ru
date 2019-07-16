@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 92c67289441ab0b6baed4509bdce8dcc0b082395
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52785626"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211506"
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>Настройка многосетевого компьютера для доступа к SQL Server
   Если сервер должен предоставить соединение с двумя или более сетями или подсетями, обычно используется многосетевой компьютер. Часто этот компьютер расположен в пограничной сети (также известной как ДМЗ, демилитаризованная зона или экранированная подсеть). В этом разделе описываются настройки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и брандмауэра Windows в режиме повышенной безопасности для предоставления сетевого подключения экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в многосетевой среде.  
@@ -66,9 +66,9 @@ ms.locfileid: "52785626"
   
 #### <a name="to-determine-the-ip-addresses-and-ports-used-by-includessnoversionincludesssnoversion-mdmd"></a>Определение IP-адресов и портов, используемых [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
-1.  Нажмите кнопку **Пуск**, последовательно наведите указатель на пункты **Все программы**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Средства настройки** и выберите пункт **Диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**.  
+1.  Нажмите кнопку **Пуск**, последовательно наведите указатель на пункты **Все программы**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Средства настройки** и выберите пункт **Диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** .  
   
-2.  В области консоли **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Диспетчер конфигурации** разверните узел **Сетевая конфигурация[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**, затем **Протоколы для \<имя экземпляра>**, и дважды щелкните **TCP/IP**.  
+2.  В области консоли **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Диспетчер конфигурации** разверните узел **Сетевая конфигурация[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** , затем **Протоколы для \<имя экземпляра>** , и дважды щелкните **TCP/IP**.  
   
 3.  В диалоговом окне **Свойства TCP/IP** на вкладке **IP-адреса** появится несколько IP-адресов в формате **IP1**, **IP2**до **IPAll**. Одним из приведенных IP-адресов является адрес адаптера заглушки 127.0.0.1. Для каждого IP-адреса, настроенного на компьютере, появятся дополнительные IP-адреса.  
   

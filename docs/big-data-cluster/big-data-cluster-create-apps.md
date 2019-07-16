@@ -5,17 +5,16 @@ description: Разверните скрипт Python или R в качеств
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2309fd7a318222ef337815ddf511359f5b305e26
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: e3768ff5bfc01f2068b10ebd8afc18d12fa808c2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67729287"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958868"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-big-data-cluster-preview"></a>Развертывание приложения в кластере SQL Server больших данных (Предварительная версия)
 

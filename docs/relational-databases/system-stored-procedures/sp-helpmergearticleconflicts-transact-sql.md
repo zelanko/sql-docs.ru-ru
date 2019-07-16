@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4678a2b9-9a5f-4193-a20d-2e11fc896c3a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e02cbdeaaf754819b3a0efa15aa9515cc8515e62
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 85e75e1ce52866eb04b3c410f021db8de392239a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534036"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122330"
 ---
 # <a name="sphelpmergearticleconflicts-transact-sql"></a>sp_helpmergearticleconflicts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ sp_helpmergearticleconflicts [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'` — Имя создаваемой публикации слиянием. *публикации* — **sysname**, значение по умолчанию **%**, который возвращает все статьи в базе данных, содержащие конфликты.  
+`[ @publication = ] 'publication'` — Имя создаваемой публикации слиянием. *публикации* — **sysname**, значение по умолчанию **%** , который возвращает все статьи в базе данных, содержащие конфликты.  
   
 `[ @publisher = ] 'publisher'` — Имя издателя. *издателя* — **sysname**, значение по умолчанию NULL.  
   

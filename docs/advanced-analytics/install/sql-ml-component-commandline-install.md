@@ -7,13 +7,12 @@ ms.date: 03/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: d852cc745578d852b2c8235ebcaf3614020a1bb8
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 6ffd4b13d5ab92187ac998fd983e8fa8416e4401
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511751"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962897"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-components-from-the-command-line"></a>Установка SQL Server в машинном обучении компоненты R и Python из командной строки
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -57,7 +56,7 @@ ms.locfileid: "58511751"
 | /IACCEPTPYTHONLICENSETERMS | Указывает, что вы приняли условия лицензионного соглашения по использованию компонентов Python. |
 | /IACCEPTSQLSERVERLICENSETERMS | Указывает, что вы приняли условия лицензионного соглашения по использованию SQL Server.|
 | / MRCACHEDIRECTORY | Для установки в автономном режиме устанавливается в папку, содержащую CAB-файлы компонентов R. |
-| / MPYCACHEDIRECTORY | Зарезервировано для последующего использования. Используйте % TEMP % для хранения CAB-файлы Python компонентов для установки на компьютерах, у которых нет подключения к Интернету. |
+| / MPYCACHEDIRECTORY | Зарезервировано для будущего использования. Используйте % TEMP % для хранения CAB-файлы Python компонентов для установки на компьютерах, у которых нет подключения к Интернету. |
 
 
 ## <a name="indb"></a> Установку экземпляра базы данных

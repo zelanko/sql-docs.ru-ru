@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d9b41853-e22d-4813-a79f-57efb4511f09
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 750d299b951b403ed6fe51baa43b047505860c3f
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: b16fe1f29d132b900eeb4c8f450fcdbd66eb22b5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493806"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942385"
 ---
 # <a name="spaddalert-transact-sql"></a>sp_add_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ sp_add_alert [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @name = ] 'name'` Имя предупреждения. Имя появляется в сообщении электронной почты или пейджера, отправленном в ответ на предупреждение. Оно должно быть уникальным и может содержать процент (**%**) символов. *имя* — **sysname**, не имеет значения по умолчанию.  
+`[ @name = ] 'name'` Имя предупреждения. Имя появляется в сообщении электронной почты или пейджера, отправленном в ответ на предупреждение. Оно должно быть уникальным и может содержать процент ( **%** ) символов. *имя* — **sysname**, не имеет значения по умолчанию.  
   
 `[ @message_id = ] message_id` Номер ошибки сообщения, определяемый предупреждением. (Обычно соответствует номеру ошибки в **sysmessages** таблицы.) *message_id* — **int**, значение по умолчанию **0**. Если *серьезность* используется для определения предупреждения, *message_id* должно быть **0** или значение NULL.  
   
@@ -73,7 +72,7 @@ sp_add_alert [ @name = ] 'name'
   
  Установкой этого значения можно предотвратить, например отправку нежелательных почтовых сообщений, если предупреждение возникает многократно за короткий промежуток времени.  
   
-`[ @notification_message = ] 'notification_message'` Необязательное дополнительное сообщение, отправляемое оператору как часть сообщения электронной почты, **команды net send**, или уведомления на пейджер. *notification_message* — **nvarchar(512)**, значение по умолчанию NULL. Указание *notification_message* полезно для добавления специальных комментариев, таких как корректирующие процедуры.  
+`[ @notification_message = ] 'notification_message'` Необязательное дополнительное сообщение, отправляемое оператору как часть сообщения электронной почты, **команды net send**, или уведомления на пейджер. *notification_message* — **nvarchar(512)** , значение по умолчанию NULL. Указание *notification_message* полезно для добавления специальных комментариев, таких как корректирующие процедуры.  
   
 `[ @include_event_description_in = ] include_event_description_in` Является ли описание [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ошибка должны быть включены в сообщение уведомления. *include_event_description_in*— **tinyint**, значение по умолчанию **5** (по электронной почте и **команды net send**) и может иметь одно или несколько из следующих значений в сочетании с **Или** логический оператор.  
   
@@ -89,7 +88,7 @@ sp_add_alert [ @name = ] 'name'
   
 `[ @database_name = ] 'database'` База данных, в которой должна произойти ошибка, для которой срабатывает предупреждение. Если *базы данных*не указан, предупреждение появляется независимо от того, где произошла ошибка. *База данных* — **sysname**. Символы, заключенные в квадратные скобки ([ ]), являются недопустимыми. Значение по умолчанию — NULL.  
   
-`[ @event_description_keyword = ] 'event_description_keyword_pattern'` Последовательность символов, описание [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ошибки должны быть похожи. Могут использоваться символы-шаблоны выражений [!INCLUDE[tsql](../../includes/tsql-md.md)] LIKE. *event_description_keyword_pattern* — **nvarchar(100)**, значение по умолчанию NULL. Этот параметр полезен для фильтрации имен объектов (например, **% customer_table %**).  
+`[ @event_description_keyword = ] 'event_description_keyword_pattern'` Последовательность символов, описание [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ошибки должны быть похожи. Могут использоваться символы-шаблоны выражений [!INCLUDE[tsql](../../includes/tsql-md.md)] LIKE. *event_description_keyword_pattern* — **nvarchar(100)** , значение по умолчанию NULL. Этот параметр полезен для фильтрации имен объектов (например, **% customer_table %** ).  
   
 `[ @job_id = ] job_id` Идентификационный номер задания, которое запускается в ответ на это предупреждение. *job_id* — **uniqueidentifier**, значение по умолчанию NULL.  
   
@@ -112,7 +111,7 @@ sp_add_alert [ @name = ] 'name'
   
 `[ @wmi_namespace = ] 'wmi_namespace'` Пространство имен WMI для запроса событий. *wmi_namespace* — **sysname**, значение по умолчанию NULL. Поддерживаются только пространства имен на локальном сервере.  
   
-`[ @wmi_query = ] 'wmi_query'` Запрос, указывающий событие WMI для предупреждения. *wmi_query* — **nvarchar(512)**, значение по умолчанию NULL.  
+`[ @wmi_query = ] 'wmi_query'` Запрос, указывающий событие WMI для предупреждения. *wmi_query* — **nvarchar(512)** , значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  

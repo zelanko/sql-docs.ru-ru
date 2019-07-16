@@ -1,5 +1,5 @@
 ---
-title: Создать запрос расширений интеллектуального анализа данных в SQL Server Management Studio | Документы Microsoft
+title: Создать запрос расширений интеллектуального анализа данных в SQL Server Management Studio | Документация Майкрософт
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,14 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9842dd19b9f613c7b10c86e3596ddda96a99f59b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183991"
 ---
 # <a name="create-a-dmx-query-in-sql-server-management-studio"></a>Создание DMX-запроса в среде SQL Server Management Studio
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]предоставляет набор возможностей, которые помогают создавать прогнозирующие запросы, запросы к содержимому и запросов определения данных к моделям интеллектуального анализа данных и структур интеллектуального анализа данных.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет набор возможностей, упрощающих создание прогнозирующих запросов, запросов содержимого и запросов определения данных к моделям интеллектуального анализа данных и структурам интеллектуального анализа данных.  
   
 -   В среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] и среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]доступен графический построитель прогнозирующих запросов, упрощающий написание прогнозирующих запросов и сопоставление наборов данных с моделью.  
   
@@ -41,7 +42,7 @@ ms.lasthandoff: 05/10/2018
  Также можно создавать пользовательские шаблоны для часто используемых запросов или команд.  
   
 ## <a name="xmla-query-templates"></a>Шаблоны XMLA-запросов  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]также предоставляет шаблоны для XMLA-запросов.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] также предоставляют шаблоны для XMLA-запросов.  
   
  Типы запросов, выполняемые с помощью XML для аналитики и расширений интеллектуального анализа данных, в некоторой степени перекрываются. Например, запросы к содержимому модели можно создавать с помощью расширений интеллектуального анализа данных или с помощью набора строк схемы интеллектуального анализа данных, однако иногда наборы строк схемы содержат данные, которые недоступны DMX-запросам содержимого.  
   
@@ -73,10 +74,10 @@ ms.lasthandoff: 05/10/2018
   
  [Создание одноэлементного прогнозирующего запроса из шаблона](../../analysis-services/data-mining/create-a-singleton-prediction-query-from-a-template.md)  
   
- [Создание запроса содержимого модели интеллектуального анализа данных](../../analysis-services/data-mining/create-a-content-query-on-a-mining-model.md)  
+ [Создание запроса содержимого к модели интеллектуального анализа данных](../../analysis-services/data-mining/create-a-content-query-on-a-mining-model.md)  
   
 ## <a name="see-also"></a>См. также  
  [Средства запросов интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-query-tools.md)   
- [Расширения интеллектуального анализа данных & #40; расширений интеллектуального анализа данных & #41; Ссылка](../../dmx/data-mining-extensions-dmx-reference.md)  
+ [Справочник по расширениям интеллектуального анализа данных (расширения интеллектуального анализа данных)](../../dmx/data-mining-extensions-dmx-reference.md)  
   
   

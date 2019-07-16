@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: a87d8080-a238-45e5-bc80-9a8625b3810f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e22ab07f40ad6b4ef916d950909957b04c9d5be1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 089fad427989c26ed1ed22ec3e9267297a29b820
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66708716"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949387"
 ---
 # <a name="open-method-ado-md"></a>Метод Open (многомерные объекты ADO)
 Извлекает результаты многомерного запроса и возвращает результаты, чтобы [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md).  
@@ -39,7 +38,7 @@ Cellset.Open Source, ActiveConnection
  Необязательный параметр. Объект **Variant** , имеющего значение допустимого многомерного запроса, например запрос многомерных выражений (MDX). *Источника* аргумент соответствует [источника](../../../ado/reference/ado-md-api/source-property-ado-md.md) свойство. Дополнительные сведения о многомерных Выражениях см. в разделе [OLE DB для оперативной аналитической обработки (OLAP)](https://msdn.microsoft.com/8a7673c6-3ca1-4411-9f1e-adf1e47df4f3) документации в компонентах Microsoft Data Access SDK.  
   
  *ActiveConnection*  
- Необязательный. Объект **Variant** , результатом которого является строка, указав допустимый ADO [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекта, имя переменной или определение для подключения. *ActiveConnection* аргумент указывает соединение, в котором следует открыть [набора ячеек](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) объекта. Если передать определение подключения для этого аргумента, ADO открывает новое подключение, используя указанные параметры. *ActiveConnection* аргумент соответствует [ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md) свойство.  
+ Необязательный параметр. Объект **Variant** , результатом которого является строка, указав допустимый ADO [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекта, имя переменной или определение для подключения. *ActiveConnection* аргумент указывает соединение, в котором следует открыть [набора ячеек](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) объекта. Если передать определение подключения для этого аргумента, ADO открывает новое подключение, используя указанные параметры. *ActiveConnection* аргумент соответствует [ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md) свойство.  
   
 ## <a name="remarks"></a>Примечания  
  **Откройте** метод выдает ошибку, если ни один из его параметров указан, и его соответствующее значение свойства не задано до попытки открыть **Cellset**.  

@@ -1,23 +1,22 @@
 ---
-title: mssqlctl bdc config section reference
+title: раздел конфигурации ссылку для mssqlctl bdc
 titleSuffix: SQL Server big data clusters
 description: Справочная статья по команды раздела конфигурации mssqlctl bdc.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 3ca96ddbbf64b04e8ccd8854a8338fe6e118debb
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 3f3ba7854b4df63495926e4cc207de7cbe6a9378
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728692"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958191"
 ---
-# <a name="mssqlctl-bdc-config-section"></a>mssqlctl bdc config section
+# <a name="mssqlctl-bdc-config-section"></a>раздел config mssqlctl bdc
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -26,9 +25,9 @@ ms.locfileid: "67728692"
 ## <a name="commands"></a>Команды
 |     |     |
 | --- | --- |
-[mssqlctl bdc config section show](#mssqlctl-bdc-config-section-show) | Получает раздел из профиля конфигурации.
-[mssqlctl bdc config section set](#mssqlctl-bdc-config-section-set) | Задает раздел для профиля конфигурации.
-## <a name="mssqlctl-bdc-config-section-show"></a>mssqlctl bdc config section show
+[Показать раздел конфигурации bdc mssqlctl](#mssqlctl-bdc-config-section-show) | Получает раздел из профиля конфигурации.
+[раздел config set для mssqlctl bdc](#mssqlctl-bdc-config-section-set) | Задает раздел для профиля конфигурации.
+## <a name="mssqlctl-bdc-config-section-show"></a>Показать раздел конфигурации bdc mssqlctl
 Получает указанный раздел из выбранной конфигурации профиля в соответствии с json для заданного пути.
 ```bash
 mssqlctl bdc config section show --json-path -j 
@@ -66,7 +65,7 @@ mssqlctl bdc config section show --config-profile custom-config  --json-path '$.
 Строка запроса JMESPath. См. в разделе [ http://jmespath.org/ ](http://jmespath.org/]) Дополнительные сведения и примеры.
 #### `--verbose`
 Увеличьте уровень подробного ведения журнала. Используйте параметр--debug, чтобы получить полные журналы отладки.
-## <a name="mssqlctl-bdc-config-section-set"></a>mssqlctl bdc config section set
+## <a name="mssqlctl-bdc-config-section-set"></a>раздел config set для mssqlctl bdc
 Задает указанный раздел в профиле выбранной конфигурации в соответствии с json для заданного пути.  Все examplesbelow приведены в Bash.  Если используется другой командной строки, имейте в виду, что может потребоваться escapequotations соответствующим образом.  Кроме того можно использовать функции исправления файлов.
 ```bash
 mssqlctl bdc config section set --config-profile -c 

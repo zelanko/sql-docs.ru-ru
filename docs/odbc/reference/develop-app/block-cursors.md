@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1a92b5d8-7c6e-4ce5-8c99-600a387026aa
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dc62e7b5225c434bac33630f2f0cf8f39c72bfc9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3e0ea6ff655140c979f400f67a59cd7259bac9e5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63199288"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118822"
 ---
 # <a name="block-cursors"></a>Блочные курсоры
 Многие приложения тратят значительное количество времени, перенос данных по сети. Часть этого времени расходуется фактически перенос данных по сети, и его часть расходуется на сетевых издержек, например вызова, сделанного с помощью драйвера для запроса строки данных. Последнее время можно сократить, если приложение выполняет эффективное использование *блока,* или *fat,* *курсоров,* которого может возвращать более чем одной строке за раз.  

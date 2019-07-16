@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: cbf15f32-0550-4c74-8088-8f7ac3855469
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5f427074f7cd7153f448aaef43bc4ac5dca84c01
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ec9eacef6f0bd63eb0aaeac36dc97938297d1f16
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63186314"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135639"
 ---
 # <a name="data-source-example"></a>Образец источника данных
 На компьютерах под управлением Microsoft® Windows NT® Server и Windows 2000 Server, Microsoft Windows NT Workstation и Windows 2000 Professional или Microsoft Windows® 95/98, данные компьютера источника хранится в реестре. В зависимости от того, какие параметры реестра ключа сведения хранятся в разделе, источник данных называется *источника данных* или *системный источник данных*. Пользовательские источники данных хранятся в разделе HKEY_CURRENT_USER и доступны только для текущего пользователя. Системные источники данных хранятся в разделе HKEY_LOCAL_MACHINE и может использоваться более чем одним пользователем, на одном компьютере. Они также могут использоваться службами всей системы, которые затем могут получить доступ к источнику данных, даже если пользователь не вошел в систему на компьютере. Дополнительные сведения о пользовательских и системных источников данных, см. в разделе [SQLManageDataSources](../../odbc/reference/syntax/sqlmanagedatasources.md).  

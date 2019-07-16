@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: de94cd2e-2d48-49fb-9ebd-a2d90c79bf62
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: fd6417c10be286164b9d56a0c2587dfd63a1de23
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 5b1dc7b961dd0b85824ea180cbc4815d5488a360
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670342"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004504"
 ---
 # <a name="logical-expressions-xquery"></a>Логические выражения (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ expression1 or expression2
   
  Логический **и** и **или** оператор применяется к итоговый логическим значениям выражений со стандартной логической семантикой.  
   
- Следующий запрос получает из каталога продуктов маленькие фронтальные картинки (элемент <`Picture`>) для указанной модели продукции. Обратите внимание, что для каждого документа с описанием продукта каталог может хранить одно или несколько изображений продукта с различными атрибутами, такими как размер и угол.  
+ Следующий запрос получает из каталога продуктов маленькие фронтальные картинки, <`Picture`> элемент для определенной модели продукта. Обратите внимание, что для каждого документа с описанием продукта каталог может хранить одно или несколько изображений продукта с различными атрибутами, такими как размер и угол.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -62,7 +61,7 @@ FROM  Production.ProductModel
 where ProductModelID=19  
 ```  
   
- Результат:  
+ Это результат:  
   
 ```  
 <PD:Picture   

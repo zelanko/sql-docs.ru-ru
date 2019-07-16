@@ -1,5 +1,5 @@
 ---
-title: Переводы в табличных моделях (службы Analysis Services) | Документы Microsoft
+title: Переводы в табличных моделях (службы Analysis Services) | Документация Майкрософт
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,10 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ddd49ce6d3edc3f1e2f72a3fe7f5ab61621eef62
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68162416"
 ---
 # <a name="translations-in-tabular-models-analysis-services"></a>Переводы в табличных моделях (службы Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -48,7 +49,7 @@ ms.lasthandoff: 05/10/2018
   
 4.  Щелкните **Экспорт файла языка**.  Укажите имя файла и расположение.  
   
- ![SSAS табличных перевод экспорта](../../analysis-services/tabular-models/media/ssas-tabular-translate-export.png "ssas табличных перевод Экспорт")  
+ ![SSAS — табличные перевод экспорта](../../analysis-services/tabular-models/media/ssas-tabular-translate-export.png "ssas — табличные перевод экспорта")  
   
 ## <a name="add-translations"></a>Добавление переводов  
  Пустой JSON-файл перевода содержит метаданные для переводов на конкретный язык. Применяемые при переводе заполнители для имен объектов и описаний указываются в разделе **Culture** в конце определения модели. Переводы можно добавлять для следующих элементов.  
@@ -104,7 +105,7 @@ ms.lasthandoff: 05/10/2018
   
 2.  В диалоговом окне "Соединение с Excel" выберите язык и региональные параметры, для которых в модели существуют переводы строк. Excel обнаруживает языки и региональные параметры, определенные в модели, и соответствующим образом формирует раскрывающийся список.  
   
-     ![службы SSAS — табличные переводы excel](../../analysis-services/tabular-models/media/ssas-tabular-translations-excel.png "ssas табличных переводы excel")  
+     ![службы SSAS — табличные переводы excel](../../analysis-services/tabular-models/media/ssas-tabular-translations-excel.png "ssas табличных переводы — excel")  
   
      При создании сводной таблицы появятся переведенные имена таблиц и столбцов.  
   

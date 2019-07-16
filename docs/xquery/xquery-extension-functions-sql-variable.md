@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6e2e5063-c1cf-4b5a-b642-234921e3f4f7
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: fe1115c7e0cf0e4f78ff09acb405c64912af3471
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 56a8c53a22fefec7fbda4c2ac7476ae46d664199
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658003"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946005"
 ---
 # <a name="xquery-extension-functions---sqlvariable"></a>Функции расширения XQuery — sql:variable()
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +84,7 @@ WHERE ProductID=771
   
 -   `namespace` Ключевое слово используется для определения префикса пространства имен в [прологе XQuery](../xquery/modules-and-prologs-xquery-prolog.md). Это возможно потому, что значение атрибута `ProductModelName` получается из столбца типа `CatalogDescription xml`, с которым связана схема.  
   
- Результат:  
+ Это результат:  
   
 ```xml
 <Product ProductID="771" ProductModelID="19"   

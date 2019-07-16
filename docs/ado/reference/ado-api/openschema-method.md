@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 850cf3ce-f18f-4e7c-8597-96c1dc504866
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 32f8c0086f1f81103156e5f592bcd63b0a43dd73
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b2080145e00c658288f9d34e3fa42ed335e0c1d9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66707105"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931866"
 ---
 # <a name="openschema-method"></a>Метод OpenSchema
 Получает сведения о схеме базы данных от поставщика.  
@@ -42,7 +41,7 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
  Любой [SchemaEnum](../../../ado/reference/ado-api/schemaenum.md) значение, представляющее тип запроса схемы для запуска.  
   
  *Критерии*  
- Необязательный параметр. Массив ограничений запросов для каждого *QueryType* параметра, как указано в [SchemaEnum](../../../ado/reference/ado-api/schemaenum.md).  
+ Необязательный. Массив ограничений запросов для каждого *QueryType* параметра, как указано в [SchemaEnum](../../../ado/reference/ado-api/schemaenum.md).  
   
  *SchemaID*  
  Идентификатор GUID для запроса схемы поставщика, не определенных в спецификации OLE DB. Этот параметр является обязательным, если *QueryType* присваивается **adSchemaProviderSpecific**; в противном случае он не используется.  

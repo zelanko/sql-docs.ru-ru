@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 8c45c598-cb01-4789-a571-e93619a18ed9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e23b7dd9ce81f02a822bece3546bf1c604030df1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c4577b97c827d527422fe2448656496d7c196c40
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537558"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118703"
 ---
 # <a name="sqlcolattribute-function"></a>Функция SQLColAttribute
 **Соответствие стандартам**  
@@ -90,7 +89,7 @@ SQLRETURN SQLColAttribute (
  [Выход] Указатель на буфер целое число, в которую будет возвращено значение в *FieldIdentifier* поле *ColumnNumber* строки ird, если поле является числовой дескриптор типа, например SQL_DESC_COLUMN_LENGTH. В противном случае поле не используется. Обратите внимание на то, что некоторые драйверы могут вести запись только в нижнем 32-разрядном или 16-разрядное буфера и оставьте без изменений бит высокого порядка. Таким образом приложения следует инициализировать значение 0, перед вызовом этой функции.  
   
 ## <a name="returns"></a>Возвращает  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR, or SQL_INVALID_HANDLE.  
+ Значение SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, значение SQL_ERROR или SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Диагностика  
  Когда **SQLColAttribute** возвращает значение SQL_ERROR или SQL_SUCCESS_WITH_INFO, можно получить путем вызова связанного значения SQLSTATE **SQLGetDiagRec** с *HandleType*значение SQL_HANDLE_STMT и *обрабатывать* из *StatementHandle*. В следующей таблице перечислены значения SQLSTATE, обычно возвращаемые **SQLColAttribute** и объясняется каждый из них в контексте этой функции; описания SQLSTATE, возвращаемых диспетчером драйверов предшествует обозначение «(DM)». Возвращается связанный с каждого значения SQLSTATE значение SQL_ERROR, если не указано иное.  
@@ -146,7 +145,7 @@ SQLRETURN SQLColAttribute (
   
  В следующей таблице перечислены типы дескрипторов, возвращенный **SQLColAttribute**. Тип для *NumericAttributePtr* значения — **SQLLEN \*** .  
   
-|*FieldIdentifier*|Сведения<br /><br /> возвращается в|Описание|  
+|*FieldIdentifier*|Information<br /><br /> возвращается в|Описание|  
 |-----------------------|---------------------------------|-----------------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE (ODBC 1.0)|*NumericAttributePtr*|SQL_TRUE, если столбец является столбцом с автоматическим приращением.<br /><br /> Значение SQL_FALSE, если столбец не является столбцом с автоматическим приращением, или не является числом.<br /><br /> Это поле является допустимым для только столбцы типа числовых данных. Приложение может вставлять значение в строку, содержащую столбец «Автоувеличение», но обычно не удается обновить значения в столбце.<br /><br /> При внесении вставки в столбец «Автоувеличение», уникальное значение вставляется в столбец во время операции вставки. Приращение не определен, но — это данные, зависящие от источника. Приложения не должен предполагать, что столбец autoincrement начинается в любой определенный момент или с шагом по любой определенное значение.|  
 |SQL_DESC_BASE_COLUMN_NAME (ODBC 3.0)|*CharacterAttributePtr*|Имя базового столбца для результирующего набора столбцов. Если имя базового столбца не существует (как в случае столбцы, являющиеся выражениями), то эта переменная содержит пустую строку.<br /><br /> Эти сведения возвращаются из поля записи SQL_DESC_BASE_COLUMN_NAME ird, предназначенного только для чтения.|  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 21d5f8d9-a3aa-4aa4-bc37-ff8bc90c0870
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 219a6d2e837280ca3220382bea56d2ab610ce87a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 145170afee5ab791602695c662ce1e80e86cae7e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63270888"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915672"
 ---
 # <a name="supported-data-types-odbc-driver-for-oracle"></a>Поддерживаемые типы данных (драйвер ODBC для Oracle)
 > [!IMPORTANT]  
@@ -29,19 +28,19 @@ ms.locfileid: "63270888"
   
 |Тип данных|Oracle 7.3|Oracle8|  
 |---------------|----------------|-------------|  
-|BFILE|н/д|Не поддерживается|  
-|BLOB|н/д|Не поддерживается|  
+|BFILE|Н/Д|Не поддерживается|  
+|BLOB|Н/Д|Не поддерживается|  
 |CHAR|Поддерживается|Поддерживается|  
-|CLOB|н/д|Не поддерживается|  
+|CLOB|Н/Д|Не поддерживается|  
 |DATE|Поддерживается|Поддерживается|  
 |FLOAT|Поддерживается|Поддерживается|  
 |INTEGER|Поддерживается|Поддерживается|  
 |LONG|Поддерживается|Поддерживается|  
 |LONG RAW|Поддерживается|Поддерживается|  
-|NCHAR|н/д|Не поддерживается|  
-|NCLOB|н/д|Не поддерживается|  
+|NCHAR|Н/Д|Не поддерживается|  
+|NCLOB|Н/Д|Не поддерживается|  
 |NUMBER|Поддерживается|Поддерживается|  
-|NVARCHAR2|н/д|Не поддерживается|  
+|NVARCHAR2|Н/Д|Не поддерживается|  
 |RAW|Поддерживается|Поддерживается|  
 |VARCHAR2|Поддерживается|Поддерживается|  
 |MLSLABEL|Не поддерживается.|Не поддерживается.|  

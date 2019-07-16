@@ -8,14 +8,13 @@ ms.date: 03/27/2019
 ms.topic: tutorial
 ms.author: davidph
 author: dphansen
-manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f7b176cf4aa50292c3b3968107ded5fcdd3533d8
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: e2cbffcab6fd34d08e8338522e8dcc97ac50f4c5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582144"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961971"
 ---
 # <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>Учебник. Создание моделей на основе секций на R в SQL Server
 [!INCLUDE[appliesto-ssvnex-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "59582144"
 > * Создайте и обучения моделей в каждой секции и хранить объекты в базе данных.
 > * Прогнозирования вероятности совет результаты по каждой секции модели, используя демонстрационные данные, зарезервированные для этой цели.
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
  
 Для работы с этим учебником необходимо иметь следующее:
 

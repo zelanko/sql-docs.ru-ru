@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ad75b648-d119-4119-98f0-d18f058be68d
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 286e7b466e4868ab698168e6ac573d7e25422829
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d6fea9a78928e2944cba1571737008965d679759
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63453579"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938388"
 ---
 # <a name="working-with-the-sample-console-script-filesexecuting-the-ssma-console-accesstosql"></a>Работа с FilesExecuting сценария образец консоли команд консоли SSMA (AccessToSQL)
 Справочник по пользовательскому и использовании были предоставлены несколько образцы файлов вместе с продуктом. В этом разделе описывается способ легко настроить эти сценарии в соответствии с потребностями пользователя.  

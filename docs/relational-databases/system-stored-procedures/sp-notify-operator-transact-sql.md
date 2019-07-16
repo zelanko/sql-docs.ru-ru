@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c440f5c9-9884-4196-b07c-55d87afb17c3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f12ce5837e47ce9cb647d1f7364ce23ad921e26c
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 74558320df59414a756e1655bb073e9bf0d7d73c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526276"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107978"
 ---
 # <a name="spnotifyoperator-transact-sql"></a>sp_notify_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,21 +47,21 @@ sp_notify_operator
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @profile_name = ] 'profilename'` Имя профиля компонента Database Mail для отправки сообщения. *ProfileName* — **nvarchar(128)**. Если *profilename* не указан, используется профиль компонента Database Mail по умолчанию.  
+`[ @profile_name = ] 'profilename'` Имя профиля компонента Database Mail для отправки сообщения. *ProfileName* — **nvarchar(128)** . Если *profilename* не указан, используется профиль компонента Database Mail по умолчанию.  
   
 `[ @id = ] id` Идентификатор оператора, которому отправляется сообщение. *Идентификатор* — **int**, значение по умолчанию NULL. Один из *идентификатор* или *имя* должен быть указан.  
   
-`[ @name = ] 'name'` Имя оператора, которому отправляется сообщение. *имя* — **nvarchar(128)**, значение по умолчанию NULL. Один из *идентификатор* или *имя* должен быть указан.  
+`[ @name = ] 'name'` Имя оператора, которому отправляется сообщение. *имя* — **nvarchar(128)** , значение по умолчанию NULL. Один из *идентификатор* или *имя* должен быть указан.  
   
-> **ПРИМЕЧАНИЕ.** Прежде чем оператор сможет получить сообщение, необходимо указать адрес электронной почты.  
+> **ПРИМЕЧАНИЕ.** Адрес электронной почты должны быть определены для оператора, прежде чем они могут получать сообщения.  
   
 `[ @subject = ] 'subject'` Тема сообщения электронной почты. *Тема* — **nvarchar(256)** не имеет значения по умолчанию.  
   
 `[ @body = ] 'message'` Тело сообщения электронной почты. *сообщение* — **nvarchar(max)** не имеет значения по умолчанию.  
   
-`[ @file_attachments = ] 'attachment'` Имя файла, прилагаемого к сообщению электронной почты. *вложение* — **nvarchar(512)**, не имеет значения по умолчанию.  
+`[ @file_attachments = ] 'attachment'` Имя файла, прилагаемого к сообщению электронной почты. *вложение* — **nvarchar(512)** , не имеет значения по умолчанию.  
   
-`[ @mail_database = ] 'mail_host_database'` Указывает имя базы данных обслуживания почты. *mail_host_database* — **nvarchar(128)**. Если не *mail_host_database* указано, **msdb** база данных используется по умолчанию.  
+`[ @mail_database = ] 'mail_host_database'` Указывает имя базы данных обслуживания почты. *mail_host_database* — **nvarchar(128)** . Если не *mail_host_database* указано, **msdb** база данных используется по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  

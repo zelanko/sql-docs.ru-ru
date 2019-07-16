@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a7b589ac-104d-4b68-b4aa-9f5fc192b13d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 79e95ac14691a4e712710303542c5743f57aacf6
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.openlocfilehash: 8762f13eab6cf56e85cb4802db0d3b8fa962a306
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58305982"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118533"
 ---
 # <a name="monitoring-and-troubleshooting-managed-database-objects"></a>Наблюдение и устранение неполадок в управляемых объектах базы данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "58305982"
 ## <a name="performance-counters"></a>Счетчики производительности  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет объекты и счетчики, которые могут применяться системным монитором для отслеживания активности на компьютере, где запущен экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Объект представляет собой любой ресурс [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], например блокировку [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или процесс Windows. В каждом объекте содержатся один или более счетчиков, определяющих различные аспекты объектов для мониторинга. Дополнительные сведения см. в разделе [Использование объектов SQL Server](../../relational-databases/performance-monitor/use-sql-server-objects.md).  
   
-|Объект|Описание|  
+|Object|Описание|  
 |------------|-----------------|  
 |[SQL Server, объект CLR](../../relational-databases/performance-monitor/sql-server-clr-object.md)|Общее время выполнения в среде CLR.|  
   

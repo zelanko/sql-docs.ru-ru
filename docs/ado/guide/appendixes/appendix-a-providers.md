@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: e2581b47-b11e-4e1e-b96c-d39c77c5b48a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3f31e5522fdac506e31ffe0bbaa5ad76e3fae87b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4ffecfc87ec23fc4d62174dae31220511c9f72d4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701557"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926973"
 ---
 # <a name="appendix-a-data-and-service-providers"></a>Приложение А. Данные и поставщиков услуг
 В этом разделе рассматриваются три вида поставщиков: поставщики данных, поставщиков служб и компонентов службы. Поставщики делятся на две категории: те, предоставляющая данные и их предоставления служб. Объект *поставщик данных* владеет собственными данными и передают их в табличную форму в приложение. Объект *поставщика услуг* инкапсулирует службы, создавая и используя данные, дополнение функции в приложениях ADO. Поставщик услуг может также быть указан как *компонент службы*, который должны работать вместе с других поставщиков служб или компонентов.

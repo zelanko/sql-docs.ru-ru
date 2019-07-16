@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3e57af8d-519b-4467-a0bd-af468534cefd
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 55f5d599ea2399697a0b96cc3d316776179b7562
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7d7251e3a403168e8383e636a8e6b5f712b9f7bf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66699584"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922526"
 ---
 # <a name="rds-programming-model-in-detail"></a>Подробные сведения о модели программирования RDS
 Ниже приведены ключевые элементы модели программирования служб удаленных рабочих СТОЛОВ.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 71aed2a5-4c8a-41db-a869-37db4d07a5a9
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 75f2784c9d144cdb33bb4062d08c3a855413e0ad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 944c36a13f76e4518081e506f003e4549ddcb217
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701466"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926833"
 ---
 # <a name="internet-explorer-error-codes-for-remote-data-service"></a>Коды ошибок Internet Explorer для удаленной службы данных
 Ниже перечислены коды ошибок Microsoft® Internet Explorer, связанные с использованием удаленной службы данных. Положительное десятичное преобразование низкой два байта, показаны отрицательное десятичное преобразование кода ошибку переполнения и шестнадцатеричные значения.

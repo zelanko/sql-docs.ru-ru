@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 11ba1857-b533-4517-8131-a2a8a0154a0a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ab1f808b005afaa91ed93bf8f8ec7a8385c9c945
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a4b602d5ff4a94d2888395e6a62f03553fb50f98
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62447288"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68216377"
 ---
 # <a name="implementing-sqlgetdiagrec-and-sqlgetdiagfield"></a>Реализация SQLGetDiagRec и SQLGetDiagField
 **SQLGetDiagRec** и **SQLGetDiagField** реализуются путем диспетчера драйверов и каждого драйвера. Диспетчер драйверов каждого драйвера обслуживания диагностических записей для каждой среды, подключения, инструкции и дескриптора и освободить записи только в том случае, когда будет вызвана другая функция с маркер или дескриптор освобождается.  

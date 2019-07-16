@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 5c8cece0-63b0-4dee-8db7-6b43d94027ec
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 225e80855c0042085b35670efc0666f133806d04
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 8b241d1f90a24ae69ab180404621a2feda393c01
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59242332"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67940239"
 ---
 # <a name="sysdatabaseconnectionstats-azure-sql-database"></a>sys.database_connection_stats (база данных SQL Azure)
 
@@ -33,7 +32,7 @@ ms.locfileid: "59242332"
 
   Содержит статистику для [!INCLUDE[ssSDS](../../includes/sssds-md.md)] базы данных **подключения** события, предоставляя Обзор базы данных успешных и неудачных подключений. Дополнительные сведения о событиях подключения см. в разделе типов событий в [sys.event_log &#40;базы данных SQL Azure&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
   
-|Статистика|Тип|Описание|  
+|Статистика|Type|Описание|  
 |---------------|----------|-----------------|  
 |**database_name**|**sysname**|Имя базы данных.|  
 |**start_time**|**datetime2**|Дата и время начала интервала статистической обработки в формате UTC. Время всегда кратно 5 минутам. Пример:<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  

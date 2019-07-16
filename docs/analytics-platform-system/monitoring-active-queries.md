@@ -2,19 +2,18 @@
 title: Мониторинг активных запросов — Parallel Data Warehouse | Документация Майкрософт
 description: Используйте консоль администрирования и Parallel Data Warehouse системных представлений для мониторинга активных запросов в Analytics Platform System.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: d2b1ee84b2ae738d7790e1238176331a221ac473
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 65d656b02ef0d726292a7d37aef565bf508d7662
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62640007"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960496"
 ---
 # <a name="monitoring-active-queries---parallel-data-warehouse"></a>Мониторинг активных запросов — Parallel Data Warehouse
 В этой статье показано, как использовать консоль администрирования и системных представлений SQL Server PDW для мониторинга активных запросов. См. в разделе [мониторинг устройства с помощью консоли администрирования](monitor-the-appliance-by-using-the-admin-console.md) и [системные представления](tsql-system-views.md) сведения об этих средствах.  

@@ -21,21 +21,20 @@ helpviewer_keywords:
 ms.assetid: 20f6bc9c-839a-4fa4-b3f3-a6c47d1b69af
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d4323fd5542216550013624dc75a6428cd1a8cd0
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
-ms.translationtype: MT
+ms.openlocfilehash: f270d31e18edadd2c30003c3615e232d36d23ba4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663593"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899750"
 ---
 # <a name="sysdmossysinfo-transact-sql"></a>sys.dm_os_sys_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   Возвращает разнородный набор полезных сведений о компьютере, а также о ресурсах, доступных для служб [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] и используемых ими.  
   
-> **Примечание:** вызывать его из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], используйте имя **sys.dm_pdw_nodes_os_sys_info**.  
+> **ПРИМЕЧАНИЕ.** Вызывать его из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], используйте имя **sys.dm_pdw_nodes_os_sys_info**.  
   
 |Имя столбца|Тип данных|Описание и заметки о версии |  
 |-----------------|---------------|-----------------|  
@@ -73,18 +72,18 @@ ms.locfileid: "51663593"
 |**virtual_machine_type_desc**|**nvarchar(60)**|**Применимо к**: с [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Описывает **virtual_machine_type** столбца. Не допускает значения NULL.<br /><br /> NONE = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не запущена на виртуальной машине.<br /><br /> HYPERVISOR = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняется внутри гипервизора, который подразумевает виртуализацию с поддержкой аппаратного обеспечения. При установке роли Hyper_V низкоуровневая оболочка размещает операционную систему, чтобы экземпляр, запущенный на ОС узла, выполнялся в этой оболочке.<br /><br /> OTHER = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняется на виртуальной машине, не использующей поддержку оборудования, например Microsoft Virtual PC.|  
 |**softnuma_configuration**|**int**|**Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Указывает, что настроены узлы NUMA способом. Не допускает значения NULL.<br /><br /> 0 = OFF указывает оборудования по умолчанию<br /><br /> 1 = автоматическая архитектура soft-NUMA<br /><br /> 2 = вручную программной архитектуры NUMA с помощью реестра|  
 |**softnuma_configuration_desc**|**nvarchar(60)**|**Применимо к**: с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> OFF = программной архитектуры NUMA функция — ОТКЛЮЧЕНИЕ<br /><br /> ВКЛЮЧЕН = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] автоматически определяет размеры узлов NUMA для программной архитектуры NUMA<br /><br /> MANUAL = настроен вручную программной архитектуры NUMA|
-|**process_physical_affinity**|**nvarchar(3072)** |**Применяется к:** начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].<br /><br />Сведения о еще в будущем. |
-|**sql_memory_model**|**int**|**Применяется к:** [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br />Указывает модели памяти, используемой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для выделения памяти. Не допускает значения NULL.<br /><br />1 = модель обычной памяти<br />2 = блокировка страниц в памяти<br /> 3 = больших страниц в памяти|
-|**sql_memory_model_desc**|**nvarchar(120)**|**Применяется к:** [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br />Указывает модели памяти, используемой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для выделения памяти. Не допускает значения NULL.<br /><br />**ОБЫЧНЫЕ**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует модель обычной памяти для выделения памяти. Это объем памяти sql по умолчанию модель при [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] учетная запись службы не имеет блокировка страниц в памяти привилегии во время запуска.<br />**LOCK_PAGES**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используется блокировка страниц в памяти для выделения памяти. Это диспетчер памяти sql по умолчанию, если учетная запись службы SQL Server должен присутствовать блокировка страниц в памяти во время запуска SQL Server.<br /> **LARGE_PAGES**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использование больших страниц в памяти для выделения памяти. SQL Server использует распределения больших страниц для выделения памяти только в выпуске Enterprise edition, когда учетная запись службы SQL Server должен присутствовать блокировка страниц в памяти во время запуска сервера и при включении трассировки 834 флаг.|
+|**process_physical_affinity**|**nvarchar(3072)** |**Применимо к:** Начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].<br /><br />Сведения о еще в будущем. |
+|**sql_memory_model**|**int**|**Применимо к:** [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br />Указывает модели памяти, используемой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для выделения памяти. Не допускает значения NULL.<br /><br />1 = модель обычной памяти<br />2 = блокировка страниц в памяти<br /> 3 = больших страниц в памяти|
+|**sql_memory_model_desc**|**nvarchar(120)**|**Применимо к:** [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br />Указывает модели памяти, используемой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для выделения памяти. Не допускает значения NULL.<br /><br />**ОБЫЧНЫЕ**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует модель обычной памяти для выделения памяти. Это объем памяти sql по умолчанию модель при [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] учетная запись службы не имеет блокировка страниц в памяти привилегии во время запуска.<br />**LOCK_PAGES**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используется блокировка страниц в памяти для выделения памяти. Это диспетчер памяти sql по умолчанию, если учетная запись службы SQL Server должен присутствовать блокировка страниц в памяти во время запуска SQL Server.<br /> **LARGE_PAGES**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использование больших страниц в памяти для выделения памяти. SQL Server использует распределения больших страниц для выделения памяти только в выпуске Enterprise edition, когда учетная запись службы SQL Server должен присутствовать блокировка страниц в памяти во время запуска сервера и при включении трассировки 834 флаг.|
 |**pdw_node_id**|**int**|**Применяется к:** [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор для узла, это распределение является на.|  
-|**socket_count** |**int** | **Применимо к**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 2 (SP2) по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br />Указывает количество доступных сокетов процессоров в системе. |  
-|**cores_per_socket** |**int** | **Применимо к**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 2 (SP2) по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br />Указывает количество процессоров на ядро, которые доступны в системе. |  
-|**numa_node_count** |**int** | **Применимо к**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 2 (SP2) по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br />Указывает количество доступных узлов numa в системе. Этот столбец содержит узлы физической топологией numa, а также узлов программной архитектуры numa. |  
+|**socket_count** |**int** | **Применимо к:** с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 2 (SP2) по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br />Указывает количество доступных сокетов процессоров в системе. |  
+|**cores_per_socket** |**int** | **Применимо к:** с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 2 (SP2) по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br />Указывает количество процессоров на ядро, которые доступны в системе. |  
+|**numa_node_count** |**int** | **Применимо к:** с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 2 (SP2) по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br />Указывает количество доступных узлов numa в системе. Этот столбец содержит узлы физической топологией numa, а также узлов программной архитектуры numa. |  
   
 ## <a name="permissions"></a>Разрешения
 
 На [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], требуется `VIEW SERVER STATE` разрешение.   
-На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], требуется `VIEW DATABASE STATE` разрешение в базе данных.   
+В [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] необходимо разрешение `VIEW DATABASE STATE` для базы данных.   
 
 ## <a name="see-also"></a>См. также  
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   

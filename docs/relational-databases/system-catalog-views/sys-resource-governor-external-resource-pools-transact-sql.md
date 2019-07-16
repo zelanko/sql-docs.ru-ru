@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 75063e36-a91b-496f-9936-88f3d57bd447
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e9ed2152873f40fd2f2ded34a11a2cfded2fbe2a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 379dae51b913fc02a16a562037776620b1e0433c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47823543"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904474"
 ---
 # <a name="sysresourcegovernorexternalresourcepools-transact-sql"></a>sys.resource_governor_external_resource_pools (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "47823543"
   
 |Имя столбца|Тип данных|Описание|
 |-----------------|---------------|-----------------|
-|pool_id|**int**|Уникальный идентификатор пула ресурсов. Не допускает значение NULL.<br /><br /> **Примечание:** могут быть переименованы в будущем.|
+|pool_id|**int**|Уникальный идентификатор пула ресурсов. Не допускает значение NULL.<br /><br /> **Примечание.** Могут быть переименованы в будущем.|
 |name|**sysname**|Имя пула ресурсов. Не допускает значение NULL.|
 |max_cpu_percent|**int**|Максимальная средняя пропускная способность ЦП, разрешенная для всех запросов в пуле ресурсов при возникновении состязания использования ЦП. Не допускает значение NULL.|
 |max_memory_percent|**int**|Процентная доля от общего объема памяти сервера, который может использоваться для запросов в данном пуле ресурсов. Не допускает значение NULL. Эффективный максимум зависит от минимальных значений для пула. Например, значение max_memory_percent можно установить в 100, но реальный максимум будет ниже.|

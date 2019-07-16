@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: fe52dd83-000a-4665-83fb-7a0024193dec
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ff94284ba1f60d40697ad5a1e209b284dfaaefdf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9d670c1dbfc94e80394cf34733b8a91aeb6cb056
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63005870"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032702"
 ---
 # <a name="spstoredprocedures-transact-sql"></a>sp_stored_procedures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -73,9 +72,9 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
 |**PROCEDURE_QUALIFIER**|**sysname**|Имя квалификатора процедуры. Этот столбец может принимать значение NULL.|  
 |**PROCEDURE_OWNER**|**sysname**|Имя владельца процедуры. Этот столбец всегда возвращает значение.|  
 |**PROCEDURE_NAME**|**nvarchar(134)**|Имя процедуры. Этот столбец всегда возвращает значение.|  
-|**NUM_INPUT_PARAMS**|**int**|Зарезервировано для последующего использования.|  
-|**NUM_OUTPUT_PARAMS**|**int**|Зарезервировано для последующего использования.|  
-|**NUM_RESULT_SETS**|**int**|Зарезервировано для последующего использования.|  
+|**NUM_INPUT_PARAMS**|**int**|Зарезервировано для будущего использования.|  
+|**NUM_OUTPUT_PARAMS**|**int**|Зарезервировано для будущего использования.|  
+|**NUM_RESULT_SETS**|**int**|Зарезервировано для будущего использования.|  
 |**"ПРИМЕЧАНИЯ"**|**varchar(254)**|Описание процедуры. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не возвращает значение для этого столбца.|  
 |**PROCEDURE_TYPE**|**smallint**|Тип процедуры. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] всегда возвращает 2.0. Значение может быть одним из следующих.<br /><br /> 0 = SQL_PT_UNKNOWN;<br /><br /> 1 = SQL_PT_PROCEDURE;<br /><br /> 2 = SQL_PT_FUNCTION.|  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 375f8f24-36de-4946-916e-c75abc6f070d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 15772c3bf74001084985d81d6560baf8accbaa3a
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: ecec6116ee16f4affa615518a690d2c665648464
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793561"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091239"
 ---
 # <a name="sqlbindparam-mapping"></a>Сопоставление SQLBindParam
 **SQLBindParam** не может по-настоящему вызываться не рекомендуется, так как он не существует в ODBC; тем не менее, он по-прежнему представляет продублированные функции — диспетчер драйверов необходимо экспортировать его, поскольку ISO и откройте группу совместимые приложения будет использовать его. Так как **SQLBindParameter** содержит все функциональные возможности **SQLBindParam**, **SQLBindParam** будет сопоставляться на основе **SQLBindParameter** (при базового драйвера ODBC *3.x* драйвер). ODBC *3.x* драйвер не нужно реализовать **SQLBindParam**.  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: cb2e7443-0260-4d1a-930f-0154db447979
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d9aca006623d9ddb8292147d8a28c93f912fd25d
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: fb8f5848ef9fdffab8592215fdcc5406b24319c3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67794024"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118784"
 ---
 # <a name="bookmark-types"></a>Типы закладок
 Все закладки в ODBC *3.x* закладок переменной длины. Это позволяет первичный ключ или уникальный индекс, связанный с таблицей для использования в качестве закладки. Закладки также может быть 32-разрядное значение, которое использовалось в ODBC *2.x*. Чтобы указать, что с курсором, ODBC, используется закладка *3.x* приложение устанавливает атрибут инструкции SQL_ATTR_USE_BOOKMARK SQL_UB_VARIABLE. Автоматически используется закладка переменной длины.  

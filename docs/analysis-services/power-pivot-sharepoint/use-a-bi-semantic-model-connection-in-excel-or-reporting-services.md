@@ -1,5 +1,5 @@
 ---
-title: Использование соединения семантической модели бизнес-Аналитики в Excel или Reporting Services | Документы Microsoft
+title: Использовать соединение семантической модели Бизнес-аналитики в Excel или Reporting Services | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,10 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: bfd1bde3a39af9954437c6f777d82db1f1ffe187
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68163615"
 ---
 # <a name="use-a-bi-semantic-model-connection-in-excel-or-reporting-services"></a>Использование соединения семантической модели бизнес-аналитики в службах Excel или Reporting Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -28,7 +29,7 @@ ms.lasthandoff: 05/10/2018
   
 -   Щелкните правой кнопкой мыши соединение BISM в библиотеке и выберите команду **Запустить Excel**.  
   
- ![Команда быстрого запуска экрана BISM](../../analysis-services/power-pivot-sharepoint/media/ssas-bism-quicklaunch.gif "команда быстрого запуска экрана BISM")  
+ ![Команда быстрого запуска BISM экрана](../../analysis-services/power-pivot-sharepoint/media/ssas-bism-quicklaunch.gif "BISM снимок экрана: команда быстрого запуска")  
   
  Нажмите кнопку **Включить** при появлении подсказки для включения подключения к данным. Excel откроет книгу, содержащую список полей сводной таблицы, заполненный полями из базового источника данных.  
   

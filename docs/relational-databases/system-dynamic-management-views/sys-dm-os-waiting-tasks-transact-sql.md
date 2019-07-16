@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: ca5e6844-368c-42e2-b187-6e5f5afc8df3
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 10a17dba594359ca83fbc3b15e148fb72356e162
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MT
+ms.openlocfilehash: f6ce0fa8270a05d8c3385cbc7b5c25edeaa84bc5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62998007"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899637"
 ---
 # <a name="sysdmoswaitingtasks-transact-sql"></a>sys.dm_os_waiting_tasks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -59,7 +58,7 @@ ms.locfileid: "62998007"
   
  **Владелец ресурса параллельного запроса:**  
   
--   exchangeEvent id={Port|Pipe}\<hex-address> WaitType=\<exchange-wait-type> nodeId=\<exchange-node-id>  
+-   exchangeEvent id = {порта | Канал}\<hex-address > WaitType =\<exchange-wait-type > nodeId =\<exchange узел id >  
   
  **Exchange-wait-type:**  
   
@@ -79,7 +78,7 @@ ms.locfileid: "62998007"
   
  **Владелец ресурса блокировки:**  
   
--   \<type-specific-description> id=lock\<lock-hex-address> mode=\<mode> associatedObjectId=\<associated-obj-id>  
+-   \<Тип specific-description > id = блокировка\<блокировки hex-address > режим =\<режим > associatedObjectId =\<связанные obj-id >  
   
      **\<Тип specific-description > может быть:**  
   
@@ -103,7 +102,7 @@ ms.locfileid: "62998007"
   
     -   Для HOBT: Hobtlock hobtid =\<hobt-id > subresource =\<hobt-subresource > dbid =\<db-id >  
   
-    -   For ALLOCATION_UNIT: allocunitlock hobtid=\<hobt-id> subresource=\<alloc-unit-subresource> dbid=\<db-id>  
+    -   Для ALLOCATION_UNIT: Allocunitlock hobtid =\<hobt-id > subresource =\<alloc-unit-subresource > dbid =\<db-id >  
   
      **\<Режим > может быть:**  
   
@@ -115,7 +114,7 @@ ms.locfileid: "62998007"
   
  **Владелец универсального ресурса:**  
   
--   TransactionMutex TransactionInfo Workspace=\<workspace-id>  
+-   Рабочая область TransactionInfo TransactionMutex =\<идентификатор рабочей области >  
   
 -   Mutex  
   
@@ -131,14 +130,14 @@ ms.locfileid: "62998007"
   
 -   \<DB-id >:\<файл id >:\<в файл подкачки >  
   
--   \<ИДЕНТИФИКАТОР GUID &GT;  
+-   \<ИДЕНТИФИКАТОР GUID >  
   
--   \<latch-class> (\<latch-address>)  
+-   \<Класс кратковременных блокировок > (\<кратковременной блокировки address >)  
   
 ## <a name="permissions"></a>Разрешения
 
 На [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], требуется `VIEW SERVER STATE` разрешение.   
-На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], требуется `VIEW DATABASE STATE` разрешение в базе данных.   
+В [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] необходимо разрешение `VIEW DATABASE STATE` для базы данных.   
  
 ## <a name="example"></a>Пример
 В этом примере будет идентифицировать заблокированных сеансов.  Выполнение [!INCLUDE[tsql](../../includes/tsql-md.md)] запроса в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].

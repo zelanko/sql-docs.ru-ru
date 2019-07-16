@@ -5,17 +5,16 @@ description: В этой статье описываются последние 
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2937734ad4543d9dc59e777ceaddfc597da148d2
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 10ba3b53e32f5809bf8b1bb1cd69266d4d43afd7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67794091"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957877"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>Заметки о выпуске для кластеров больших данных в SQL Server
 
@@ -228,7 +227,7 @@ ms.locfileid: "67794091"
 |:---|:---|
 | Профили развертывания | Используйте стандартные и настраиваемые [JSON-файлы конфигурации развертывания](deployment-guidance.md#configfile) для развертывания кластера больших данных вместо переменных среды. |
 | Развертывания с подсказками | `mssqlctl cluster create` теперь запрашивает все необходимые параметры для развертывания по умолчанию. |
-| Изменение имен конечной точки службы и pod | Следующие внешние конечные точки были изменены имена:<br/>&nbsp;&nbsp;&nbsp;- **endpoint-master-pool** => **master-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **Конечная точка контроллера** => **контроллера svc-external**<br/>&nbsp;&nbsp;&nbsp;- **Конечная точка службы прокси-сервера** => **mgmtproxy-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-security** => **gateway-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-app-service-proxy** => **appproxy-svc-external**|
+| Изменение имен конечной точки службы и pod | Следующие внешние конечные точки были изменены имена:<br/>&nbsp;&nbsp;&nbsp;- **Конечная точка master-pool** => **master-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **Конечная точка контроллера** => **контроллера svc-external**<br/>&nbsp;&nbsp;&nbsp;- **Конечная точка службы прокси-сервера** => **mgmtproxy-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **Конечная точка безопасности** => **шлюз svc-external**<br/>&nbsp;&nbsp;&nbsp;- **Конечная точка приложения службы прокси** => **appproxy-svc-external**|
 | Улучшения **mssqlctl** | Используйте **mssqlctl** для [перечисления внешних конечных точек](deployment-guidance.md#endpoints) и проверяйте версию **mssqlctl** с помощью параметра `--version`. |
 | Автономная установка | Руководство для развертывания кластера вне сети больших данных. |
 | Усовершенствования распределения по уровням HDFS | Распределение по уровням S3, кэширование подключения и OAuth поддержка ADLS Gen2. |

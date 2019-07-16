@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9dfb6784-037d-4f9d-bb7f-b506b4498573
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: abbdbeec81a029716ac6516f9436373e91365a23
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 22286cbe571420475cf273ca377d16e79610fc3e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702775"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926569"
 ---
 # <a name="using-ado-with-microsoft-visual-basic-and-visual-basic-for-applications"></a>Использование ADO с Microsoft Visual Basic и Visual Basic для приложений
 Настройка в проект ADO и написания кода ADO аналогично ли вы использовать Visual Basic или Visual Basic для приложений. Этот раздел описывает, с помощью ADO в Visual Basic и Visual Basic для приложений и отмечает все различия.

@@ -1,5 +1,5 @@
 ---
-title: Поиск конкретного узла в сети зависимостей | Документы Microsoft
+title: Поиск определенного узла в сети зависимостей | Документация Майкрософт
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ad00f715533e5da24cbec9c61dc79a045fa035ef
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014471"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183251"
 ---
 # <a name="find-a-specific-node-in-a-dependency-network"></a>Поиск определенного узла в сети зависимостей
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -33,6 +33,6 @@ ms.locfileid: "34014471"
 3.  Выберите необходимый узел из списка, а затем нажмите кнопку **ОК**.  
   
 ## <a name="see-also"></a>См. также  
- [Задачи средства просмотра модели интеллектуального анализа данных и инструкции по](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)  
+ [Задачи и инструкции по средству просмотра моделей интеллектуального анализа данных](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)  
   
   

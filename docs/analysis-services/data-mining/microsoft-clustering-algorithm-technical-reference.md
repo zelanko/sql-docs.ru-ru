@@ -1,5 +1,5 @@
 ---
-title: Технический справочник по алгоритму кластеризации (Майкрософт) | Документы Microsoft
+title: Технический справочник по алгоритму кластеризации (Майкрософт) | Документация Майкрософт
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: eb86c8271599b56deb27fd3143fd205c11f52f35
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018361"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183123"
 ---
 # <a name="microsoft-clustering-algorithm-technical-reference"></a>Технический справочник по алгоритму кластеризации (Майкрософт)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "34018361"
   
  Дополнительные сведения об использовании моделей кластеризации см. в следующих разделах.  
   
--   [Содержимое модели интеллектуального анализа данных для кластеризации моделей & #40; Службы Analysis Services — Интеллектуальный анализ данных & #41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+-   [Содержимое моделей интеллектуального анализа данных для моделей кластеризации (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
 -   [Примеры запросов к модели кластеризации](../../analysis-services/data-mining/clustering-model-query-examples.md)  
   
@@ -81,7 +81,7 @@ ms.locfileid: "34018361"
  CLUSTERING_METHOD  
  Указывает метод кластеризации, используемый алгоритмом. Доступны следующие методы кластеризации:  
   
-|Идентификатор|Метод|  
+|id|Метод|  
 |--------|------------|  
 |1|Масштабируемая максимизация ожидания|  
 |2|Немасштабируемая максимизация ожидания|  
@@ -146,9 +146,9 @@ ms.locfileid: "34018361"
 ### <a name="modeling-flags"></a>Флаги моделирования  
  Алгоритм поддерживает следующие флаги моделирования. Флаги моделирования определяются при создании структуры или модели интеллектуального анализа данных. Флаги моделирования определяют, как происходит обработка значений в каждом столбце при анализе.  
   
-|Флаг моделирования|Description|  
+|Флаг моделирования|Описание|  
 |-------------------|-----------------|  
-|MODEL_EXISTENCE_ONLY|Столбец будет обрабатываться так, как будто у него два возможных состояния: отсутствует и присутствует. NULL означает отсутствие значения.<br /><br /> Применяется к столбцу модели интеллектуального анализа данных.|  
+|MODEL_EXISTENCE_ONLY|Столбец будет обрабатываться как имеющий два возможных состояния: Отсутствует и присутствует. NULL означает отсутствие значения.<br /><br /> Применяется к столбцу модели интеллектуального анализа данных.|  
 |NOT NULL|Этот столбец не может содержать значение NULL. Если во время обучения модели службы Analysis Services обнаружат значение NULL, возникнет ошибка.<br /><br /> Применяется к столбцу структуры интеллектуального анализа данных.|  
   
 ## <a name="requirements"></a>Требования  
@@ -166,8 +166,8 @@ ms.locfileid: "34018361"
 >  Типы содержимого Cyclical и Ordered поддерживаются, но алгоритм обрабатывает их как дискретные величины и не производит их особой обработки.  
   
 ## <a name="see-also"></a>См. также  
- [Алгоритм кластеризации Майкрософт](../../analysis-services/data-mining/microsoft-clustering-algorithm.md)   
+ [Алгоритм кластеризации (Майкрософт)](../../analysis-services/data-mining/microsoft-clustering-algorithm.md)   
  [Примеры запросов к модели кластеризации](../../analysis-services/data-mining/clustering-model-query-examples.md)   
- [Содержимое модели интеллектуального анализа данных для кластеризации моделей & #40; Службы Analysis Services — Интеллектуальный анализ данных & #41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+ [Содержимое моделей интеллектуального анализа данных для моделей кластеризации (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
   

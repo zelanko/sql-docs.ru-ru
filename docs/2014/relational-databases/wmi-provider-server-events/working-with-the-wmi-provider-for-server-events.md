@@ -21,11 +21,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 0519561b24d8aff32adc7c375657fa85b9dfa496
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376224"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68195731"
 ---
 # <a name="working-with-the-wmi-provider-for-server-events"></a>Работа с поставщиком WMI для событий сервера
   В этом разделе приводятся рекомендации, которые следует учитывать при программировании с помощью поставщика WMI для событий сервера.  
@@ -109,7 +109,7 @@ WHERE DatabaseName = "AdventureWorks2012"
     -   DENY or REVOKE (применимо только к разрешениям ALTER DATABASE, ALTER ANY DATABASE EVENT NOTIFICATION, CREATE DATABASE DDL EVENT NOTIFICATION, CONTROL SERVER, ALTER ANY EVENT NOTIFICATION, CREATE DDL EVENT NOTIFICATION или CREATE TRACE EVENT NOTIFICATION.)  
   
 ## <a name="working-with-event-data-on-the-client-side"></a>Работа с данными событий на стороне клиента  
- После поставщик WMI для событий сервера создает уведомление о событии, необходимых в целевую базу данных, уведомление о событии отправляет данные события целевой службе в базе данных msdb, которая называется **SQL/уведомления/ProcessWMIEventProviderNotification /V1.0**. Целевая служба ставит событие в очередь в `msdb` с именем **WMIEventProviderNotificationQueue**. (И очередь и служба динамически создаются поставщиком при первом соединении с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].) Затем поставщик считывает XML-данные события из этой очереди и преобразует их в данные MOF, прежде чем возвратить их в клиентское приложение. Данные MOF состоят из свойств события, запрашиваемого WQL-запросом в виде определения класса общей информационной модели (CIM). Каждое свойство имеет соответствующий тип CIM. Например, свойство `SPID` возвращается как тип CIM `Sint32`. Типы CIM для каждого свойства приведены в списке под каждым из классов событий в разделе [Поставщик WMI для классов и свойств событий сервера](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md).  
+ После поставщик WMI для событий сервера создает уведомление о событии, необходимых в целевую базу данных, уведомление о событии отправляет данные события целевой службе в базе данных msdb, которая называется **SQL/уведомления/ProcessWMIEventProviderNotification /V1.0**. Целевая служба ставит событие в очередь в `msdb` с именем **WMIEventProviderNotificationQueue**. (Служба и очередь динамически создаются поставщиком при первом подключении к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].) Затем поставщик считывает XML-данные события из этой очереди и преобразует его в формат управляющих объектов (MOF) перед его возвратом клиентскому приложению. Данные MOF состоят из свойств события, запрашиваемого WQL-запросом в виде определения класса общей информационной модели (CIM). Каждое свойство имеет соответствующий тип CIM. Например, свойство `SPID` возвращается как тип CIM `Sint32`. Типы CIM для каждого свойства приведены в списке под каждым из классов событий в разделе [Поставщик WMI для классов и свойств событий сервера](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md).  
   
 ## <a name="see-also"></a>См. также  
  [Основные понятия о поставщике WMI для событий сервера](https://technet.microsoft.com/library/ms180560.aspx)  

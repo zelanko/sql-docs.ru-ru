@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: ab561b096c4436349580201eec3b3ea10a8aaa75
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 4e8e6bea11794545a2b0ab9c340e85344ec23d33
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685311"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68162178"
 ---
 # <a name="deploy"></a>Развертывание
 
@@ -23,11 +23,11 @@ ms.locfileid: "57685311"
 
 На этом занятии вы настроите свойства развертывания; Указание сервера для развертывания и имя для модели. Затем развернуть модель на сервер. После развертывания модели, пользователи смогут подключаться к нему с помощью клиентского приложения для создания отчетов. Дополнительные сведения см. в разделе [развертывание в Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/analysis-services-deploy) и [развертывание решений табличной модели](../tabular-models/tabular-model-solution-deployment-ssas-tabular.md).  
   
-Предполагаемое время выполнения данного занятия: **5 минут**  
+Предполагаемое время для выполнения этого занятия: **5 минут**  
   
 ## <a name="prerequisites"></a>предварительные требования  
 
-Эта статья входит в учебник по табличному моделированию, который следует изучать в порядке. Прежде чем выполнять задания в этом занятии, необходимо завершить предыдущее занятие: [Занятие 12. Анализ в Excel](../tutorial-tabular-1400/as-lesson-12-analyze-in-excel.md).  
+Эта статья входит в учебник по табличному моделированию, который следует изучать в порядке. Перед выполнением задач на этом занятии, необходимо завершить предыдущее занятие: [Занятие 12. Анализ в Excel](../tutorial-tabular-1400/as-lesson-12-analyze-in-excel.md).  
 
 > [!IMPORTANT]  
 > Если развертывание служб Azure Analysis Services, необходимо иметь [разрешения администратора](https://docs.microsoft.com/azure/analysis-services/analysis-services-server-admins) на serever.  

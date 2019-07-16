@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1b97c46a-d2e5-4540-8239-9d975e5321c6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 736867be33531a73c0ada66a3be0f1245f1c483a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5e50e8128bb80b290e7610d9cc846dd3e148e398
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537601"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118631"
 ---
 # <a name="sqlcompleteasync-function"></a>Функция SQLCompleteAsync
 **Соответствие стандартам**  
@@ -71,7 +70,7 @@ SQLRETURN SQLCompleteAsync(
   
 -   ЗНАЧЕНИЕ SQL_ERROR: *AsyncRetCodePtr* имеет значение NULL или асинхронной обработки не включен для дескриптора.  
   
--   SQL_NO_DATA: В режиме уведомлений асинхронная операция не выполняется, или диспетчер драйверов не получал уведомление о приложения. В режиме опроса асинхронной операции не выполняется.  
+-   ЗНАЧЕНИЕ SQL_NO_DATA: В режиме уведомлений асинхронная операция не выполняется, или диспетчер драйверов не получал уведомление о приложения. В режиме опроса асинхронной операции не выполняется.  
   
 ## <a name="comments"></a>Комментарии  
  В режиме опроса на основе асинхронной обработки *AsyncRetCodePtr* может быть SQL_STILL_EXECUTING при **SQLCompleteAsync** возвращает значение SQL_SUCCESS. Приложения должны периодически опрашивать до *AsyncRetCodePtr* не SQL_STILL_EXECUTING. В режиме асинхронной обработки на основе уведомлений *AsyncRetCodePtr* никогда не будет SQL_STILL_EXECUTING.  

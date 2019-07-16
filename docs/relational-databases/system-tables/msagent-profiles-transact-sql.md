@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4ab1b2ae-b6d9-42b7-9b31-98547dbb7f99
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 99ba1785ffebebf87556258dbcf0278bebbf237d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5147ef1f482850b55a5d01a476b1981dfa012e5e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817146"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68021065"
 ---
 # <a name="msagentprofiles-transact-sql"></a>MSagent_profiles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "52817146"
 |**profile_name**|**sysname**|Уникальное имя профиля для типа агента.|  
 |**agent_type**|**int**|Тип агента:<br /><br /> **1** = агент моментальных снимков<br /><br /> **2** = агент чтения журнала<br /><br /> **3** = агент распространителя<br /><br /> **4** = агент слияния<br /><br /> **9** = агент чтения очереди|  
 |**type**|**int**|Тип профиля:<br /><br /> **0** = system**1** = пользовательский|  
-|**Описание**|**nvarchar(3000)**|Описание профиля.|  
+|**description**|**nvarchar(3000)**|Описание профиля.|  
 |**def_profile**|**bit**|Указывает на использование профиля по умолчанию для данного типа агента.|  
   
 ## <a name="see-also"></a>См. также  

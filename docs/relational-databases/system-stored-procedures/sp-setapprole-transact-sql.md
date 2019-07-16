@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: cf0901c0-5f90-42d4-9d5b-8772c904062d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: c18aa6fefb23bb3d388069773aa1633c29859e90
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 44e7b670ef5f16b6df861e939f9b8b2d9ace8dd5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533536"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104436"
 ---
 # <a name="spsetapprole-transact-sql"></a>sp_setapprole (Transact-SQL)
 
@@ -58,7 +57,7 @@ sp_setapprole [ @rolename = ] 'role',
  **@encrypt = «none»**  
  Указывает, что кодирование пароля не используется. Пароль передается серверу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] как обычный текст. Это значение по умолчанию.  
   
- **@encrypt= 'odbc'**  
+ **@encrypt= «odbc»**  
  Указывает, что ODBC закодирует пароль с помощью ODBC **шифрования** функцию перед отправкой компоненту [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Этот аргумент может быть указан, только если используется клиент ODBC или поставщик OLE DB для SQL Server.  
   
 `[ @fCreateCookie = ] true | false` Указывает, является ли файл cookie должен быть создан. **значение true,** неявно преобразуется в 1. **false** неявно преобразуется в 0.  
@@ -66,7 +65,7 @@ sp_setapprole [ @rolename = ] 'role',
 `[ @cookie = ] @cookie OUTPUT` Указывает выходной параметр, содержащий файл cookie. Куки-файл формируется только в том случае, если значение **@fCreateCookie** — **true**. **varbinary(8000)**  
   
 > [!NOTE]  
-> Параметр **OUTPUT** куки-файла для инструкции **sp_setapprole** в настоящее время описан в документации как **varbinary(8000)** , что верно определяет его максимальную длину. Однако текущая реализация возвращает параметр **varbinary(50)**. Приложения должны продолжать зарезервировать **varbinary(8000)** таким образом, приложение для правильной работы в случае увеличения размера куки в будущем выпуске.
+> Параметр **OUTPUT** куки-файла для инструкции **sp_setapprole** в настоящее время описан в документации как **varbinary(8000)** , что верно определяет его максимальную длину. Однако текущая реализация возвращает параметр **varbinary(50)** . Приложения должны продолжать зарезервировать **varbinary(8000)** таким образом, приложение для правильной работы в случае увеличения размера куки в будущем выпуске.
   
 ## <a name="return-code-values"></a>Значения кода возврата
 

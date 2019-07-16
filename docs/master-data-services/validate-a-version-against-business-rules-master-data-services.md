@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5aee7901-6d05-41d4-8bbb-c6f26791d1df
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: bfa4d13e82bd82bd08d2d3338e51feb0382ca094
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 57a78efbe6de9a4439846df69ac04e32d073fe3e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65484972"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102556"
 ---
 # <a name="validate-a-version-against-business-rules-master-data-services"></a>Подтверждение исправления проблемы, обнаруженной при проверке на соответствие бизнес-правилам (службы Master Data Services)
 
@@ -34,7 +33,7 @@ ms.locfileid: "65484972"
 > [!NOTE]  
 >  Чтобы версию можно было зафиксировать, все элементы должны успешно пройти проверку.  
   
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
  Для выполнения этой процедуры:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Управление версиями** ;  

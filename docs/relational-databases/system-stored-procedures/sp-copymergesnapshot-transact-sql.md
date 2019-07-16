@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: eaecd6e0-8486-4e5d-ace7-8ae75768c0a8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d3abdc711d509f323dfd1600360b26c46b2e05ab
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: b96ef181f0a584c51258a81a37b9f246af46f090
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526246"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108740"
 ---
 # <a name="spcopymergesnapshot-transact-sql"></a>sp_copymergesnapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ sp_copymergesnapshot [ @publication = ] 'publication', [ @destination_folder = ]
 ## <a name="arguments"></a>Аргументы  
 `[ @publication = ] 'publication'` — Имя публикации, должны быть скопированы, содержимое моментального снимка. *Публикация* — **sysname**, не имеет значения по умолчанию.  
   
-`[ @destination_folder = ] 'destination_folder'` — Это имя папки, где будет копироваться содержимое моментального снимка публикации. *destination_folder*is **nvarchar(255)**, with no default. *Папка_назначения* может быть альтернативное расположение, например, на другом сервере, на сетевом диске или на съемном носителе (например, компакт-диски или съемные диски).  
+`[ @destination_folder = ] 'destination_folder'` — Это имя папки, где будет копироваться содержимое моментального снимка публикации. *папка_назначения*— **nvarchar(255)** , не имеет значения по умолчанию. *Папка_назначения* может быть альтернативное расположение, например, на другом сервере, на сетевом диске или на съемном носителе (например, компакт-диски или съемные диски).  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  

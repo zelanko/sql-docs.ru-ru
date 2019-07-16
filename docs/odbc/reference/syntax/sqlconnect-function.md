@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 59075e46-a0ca-47bf-972a-367b08bb518d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3f2eabec895a0b56d396d5848c8f418451e0afb7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b1c0b20fed0e6c15fef76b1bcbebc98edd37cfbc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537676"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121464"
 ---
 # <a name="sqlconnect-function"></a>Функция SQLConnect
 **Соответствие стандартам**  
@@ -71,7 +70,7 @@ SQLRETURN SQLConnect(
  [Вход] Длина **проверки подлинности* в символах.  
   
 ## <a name="returns"></a>Возвращает  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, SQL_INVALID_HANDLE, or SQL_STILL_EXECUTING.  
+ Значение SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, значение SQL_ERROR, SQL_INVALID_HANDLE или SQL_STILL_EXECUTING.  
   
 ## <a name="diagnostics"></a>Диагностика  
  Когда **SQLConnect** возвращает значение SQL_ERROR или SQL_SUCCESS_WITH_INFO, а связанное значение SQLSTATE можно получить, вызвав **SQLGetDiagRec** с *HandleType* из SQL_ HANDLE_DBC и *обрабатывать* из *ConnectionHandle*. В следующей таблице перечислены значения SQLSTATE, обычно возвращаемые при помощи **SQLConnect** и объясняется каждый из них в контексте этой функции; описания SQLSTATE, возвращаемых диспетчером драйверов предшествует обозначение «(DM)». Возвращается связанный с каждого значения SQLSTATE значение SQL_ERROR, если не указано иное.  

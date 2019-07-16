@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4f1266c5-93d7-402d-94ed-43f69494c04b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 49f7c204dd5c8fd74c1e2fe1c1c57adb38e60d69
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4fc30086978e26f53f7a4fdbab8a731ac2334181
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524074"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946112"
 ---
 # <a name="xqueries-involving-order"></a>Запросы XQuery, использующие упорядочивание
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +63,7 @@ WHERE ProductModelID=7
   
 -   **@\*** Извлекает все атрибуты второго участка производственного цеха.  
   
--   Итерация FLWOR (FOR ... RETURN) извлекает все дочерние элементы <`step`> второго участка производственного цеха.  
+-   Итерация FLWOR (для... RETURN) извлекает все <`step`> дочерних элементов второго участка цеха.  
   
 -   [Функция SQL: column() (XQuery)](../xquery/xquery-extension-functions-sql-column.md) включает реляционного значения в XML, который создается.  
   
@@ -138,7 +137,7 @@ where ProductModelID=7
 ```  
   
 ### <a name="c-retrieve-the-first-two-product-feature-descriptions-from-the-product-catalog"></a>В. Извлечь описания характеристик первых двух продуктов из каталога продуктов  
- Для определенной модели продукта запрос извлекает первые два описания характеристик из элемента <`Features`> в каталоге моделей продукта.  
+ Для определенной модели продукта запрос извлекает первые два описания характеристик из <`Features`> элемента в каталоге моделей продукта.  
   
 ```sql
 SELECT CatalogDescription.query('  
@@ -158,9 +157,9 @@ where ProductModelID=19
   
  Обратите внимание на следующие данные из предыдущего запроса:  
   
- Текст запроса формирует XML, который включает элемент <`ProductModel`>, имеющий атрибуты ProductModelID и ProductModelName.  
+ Текст запроса формирует XML, включающий <`ProductModel`> элемент, имеющий атрибуты ProductModelID и ProductModelName.  
   
--   Запрос использует цикл FOR ... RETURN для получения описаний характеристик моделей продуктов. **Position()** функция используется для получения первых двух характеристик.  
+-   Запрос использует цикл FOR... RETURN для получения описаний характеристик моделей продуктов. **Position()** функция используется для получения первых двух характеристик.  
   
  Это результат:  
   

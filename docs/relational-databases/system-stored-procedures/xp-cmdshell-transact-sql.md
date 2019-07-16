@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 18935cf4-b320-4954-b6c1-e007fcefe358
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 533b096b11ded9c76db81e640c961449a2785330
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: b01628e339e4a3ce1f824f27edd75e2e5aea2526
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211523"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68123773"
 ---
 # <a name="xpcmdshell-transact-sql"></a>xp_cmdshell (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ xp_cmdshell { 'command_string' } [ , no_output ]
   
 ## <a name="arguments"></a>Аргументы  
  **"** *command_string* **"**  
- Строка, содержащая команду для передачи операционной системе. *command_string* — **varchar(8000)** или **nvarchar(4000)**, не имеет значения по умолчанию. *command_string* не может содержать более одного набора двойных кавычек. Одной пары кавычек является обязательным, если все пробелы в пути к файлам или именах программ в аргументе *command_string*. Если входящие пробелы вызывают неполадки, то следует присваивать файлам имена в формате FAT 8.3.  
+ Строка, содержащая команду для передачи операционной системе. *command_string* — **varchar(8000)** или **nvarchar(4000)** , не имеет значения по умолчанию. *command_string* не может содержать более одного набора двойных кавычек. Одной пары кавычек является обязательным, если все пробелы в пути к файлам или именах программ в аргументе *command_string*. Если входящие пробелы вызывают неполадки, то следует присваивать файлам имена в формате FAT 8.3.  
   
  **no_output**  
  Необязательный параметр, указывающий, что клиенту не следует возвращать выходные данные.  
@@ -74,7 +73,7 @@ The command(s) completed successfully.
 >  Если **xp_cmdshell** выполняется в пакете и возвращает сообщение об ошибке пакета завершится ошибкой. Это изменение поведения. В более ранних версиях [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пакета продолжилось бы для выполнения.  
   
 ## <a name="xpcmdshell-proxy-account"></a>Учетная запись-посредник для процедуры xp_cmdshell  
- Если он вызывается пользователем, который не является членом **sysadmin** предопределенной роли сервера, **xp_cmdshell** подключается к Windows, используя имя учетной записи и пароль хранятся в учетных данных с именем **## #xp_cmdshell_proxy_account ##**. Если эти посреднические учетные данные не существует, **xp_cmdshell** завершится ошибкой.  
+ Если он вызывается пользователем, который не является членом **sysadmin** предопределенной роли сервера, **xp_cmdshell** подключается к Windows, используя имя учетной записи и пароль хранятся в учетных данных с именем **## #xp_cmdshell_proxy_account ##** . Если эти посреднические учетные данные не существует, **xp_cmdshell** завершится ошибкой.  
   
  Учетные данные учетной записи прокси-сервера можно создать, выполнив **sp_xp_cmdshell_proxy_account**. В качестве аргумента эта хранимая процедура обрабатывает имя пользователя Windows и пароль. Например, следующая команда создает посреднические учетные записи-посредники для пользователя домена Windows `SHIPPING\KobeR` с паролем Windows `sdfh%dkc93vcMt0`.  
   

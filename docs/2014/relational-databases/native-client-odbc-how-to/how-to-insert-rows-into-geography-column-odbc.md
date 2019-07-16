@@ -1,5 +1,5 @@
 ---
-title: 'Практическое: вставлять строки в столбец Geography (ODBC) | Документация Майкрософт'
+title: Практическое руководство. Вставка строк в столбец Geography (ODBC) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9067a1ceeff9422ed55f9a96fd3b52e2f99fe999
-ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50753501"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206808"
 ---
-# <a name="how-to-insert-rows-into-geography-column-odbc"></a>Как вставлять строки в столбец Geography (ODBC)
-  В этом примере выполняется вставка двух строк в таблицу со столбцом типа geography из WellKnownBinary (WKB) с помощью двух различных привязок (SQLCCHAR и SQLCBINARY). Затем выбирается одна строка из этой таблицы, для ее отображения используется метод ::STAsText(). WKB равен 0x01010000000700ECFAD03A4C4001008000B5DF07C0. Приложение выводит в консоль следующие данные: POINT(56.4595 -2.9842).  
+# <a name="how-to-insert-rows-into-geography-column-odbc"></a>Практическое руководство. Вставка строк в столбец Geography (ODBC)
+  В этом примере выполняется вставка двух строк в таблицу со столбцом типа geography из WellKnownBinary (WKB) с помощью двух различных привязок (SQLCCHAR и SQLCBINARY). Затем он выбирается одна строка из этой таблицы и использует:: STAsText(), чтобы отобразить ее. WKB равен 0x01010000000700ecfad03a4c4001008000b5df07c0. приложение выводит на консоль: ТОЧКА (56.4595-2.9842).  
   
  Этому образцу не требуется источник данных ODBC, но по умолчанию образец работает на локальном экземпляре SQL Server.  
   

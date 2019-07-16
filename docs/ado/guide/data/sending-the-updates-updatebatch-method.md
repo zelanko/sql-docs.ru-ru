@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 87123797-831f-48e0-94b5-f669f9ca194a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6759f007e652a6a52a1633b021553faa2978f6b7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 182e444587ce9bb3ca73166fb05dfac2506a39aa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66706647"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924256"
 ---
 # <a name="sending-the-updates-updatebatch-method"></a>Отправка обновлений: Метод UpdateBatch
 Следующий код открывает набор записей в пакетном режиме, задав свойство LockType adLockBatchOptimistic и CursorLocation для adUseClient. Он добавляет две новые записи и изменяет значение поля в существующую запись, сохранение исходных значений и затем вызывает метод UpdateBatch для отправки изменений обратно в источник данных.  

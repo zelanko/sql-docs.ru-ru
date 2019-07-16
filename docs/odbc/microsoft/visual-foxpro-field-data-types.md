@@ -13,27 +13,26 @@ helpviewer_keywords:
 ms.assetid: 50b733dc-679a-4b10-bc5d-98bb474dead2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 07aa06eae9f1e75a047bdd302754d884790436e1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 217058bf328677bf375d346ae7201c6eb81efa4e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806133"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68087938"
 ---
 # <a name="visual-foxpro-field-data-types"></a>Типы данных полей Visual FoxPro
 В следующей таблице перечислены значения для *FieldType* аргумент в инструкции ALTER TABLE и CREATE TABLE и указывает ли *nFieldWidth* и *nPrecision* аргументы Обязательно.  
   
 |*FieldType*|*NFieldWidth*|*nPrecision*|Описание|  
 |-----------------|-------------------|------------------|-----------------|  
-|B|-|d|Double|  
-|C|Нет|-|Символ поле шириной *n*|  
-|D|-|-|Дата|  
-|Ж|Нет|d|С плавающей запятой числовое поле шириной *n* с *d* десятичных разрядов|  
-|Ж|-|-|Общие|  
+|С|-|d|Double|  
+|В|в|-|Символ поле шириной *n*|  
+|D|-|-|Date|  
+|C|в|d|С плавающей запятой числовое поле шириной *n* с *d* десятичных разрядов|  
+|П|-|-|Общие|  
 |I|-|-|Целочисленный|  
 |L|-|-|Логические|  
 |M|-|-|MEMO|  
-|Нет|Нет|d|Числовое поле шириной *n* с *d* десятичных разрядов|  
+|в|в|d|Числовое поле шириной *n* с *d* десятичных разрядов|  
 |T|-|-|DateTime|  
-|Да|-|-|CURRENCY|
+|Y|-|-|Currency|

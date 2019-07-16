@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 27e704e6274910e2c9e3f77fe235e02918d95425
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072211"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207663"
 ---
 # <a name="enable-directquery-mode-in-ssms"></a>Включение режима DirectQuery в SSMS
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "53072211"
   
 -   В качестве последнего шага выполните запрос, чтобы убедиться, что режим DirectQuery работает.  
   
-## <a name="step-1-check-the-compatibility-level"></a>Шаг 1. Проверка уровня совместимости  
+## <a name="step-1-check-the-compatibility-level"></a>Шаг 1. Проверка уровня совместимости  
  Свойства, которые определяют доступ к данным, различаются на разных уровнях совместимости. Прежде всего нужно проверить, на каком уровне совместимости находится база данных.  
   
 1.  В [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]подключитесь к экземпляру, имеющему табличную модель.  

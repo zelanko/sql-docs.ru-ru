@@ -2,19 +2,18 @@
 title: Антивирусное программное обеспечение - Analytics Platform System | Документация Майкрософт
 description: Если для центра обработки данных требуется антивирусное программное обеспечение, используйте их для установки антивирусного программного обеспечения на Analytics Platform System. Рекомендуется не устанавливать антивирусного программного обеспечения, если только это не является жестким требованием центра обработки данных.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/24/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: c5b9a1eddf8bf06a9d9e5b59754b2c6a34b94267
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1e52841ebe96d8aab84e4d09c91b590e8e4d7e2d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63199612"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961605"
 ---
 # <a name="antivirus-software-for-analytics-platform-system"></a>Антивирусное программное обеспечение для системы платформы аналитики
 Если для центра обработки данных требуется антивирусное программное обеспечение, используйте их для установки антивирусного программного обеспечения на Analytics Platform System. Рекомендуется не устанавливать антивирусного программного обеспечения, если только это не является жестким требованием центра обработки данных.  

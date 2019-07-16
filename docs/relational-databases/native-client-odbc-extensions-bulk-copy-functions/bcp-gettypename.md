@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 65f036d1-f60e-4b8a-97b3-76fccf0dfed4
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: de5b4a62dbb86008f686cb0d630386340238f42c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 57d2a7562efce015f5fb693cbb9a2f6114826e6d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743202"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67895551"
 ---
 # <a name="bcpgettypename"></a>bcp_gettypename
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -56,7 +55,7 @@ RETCODE bcp_gettypename (
   
  В следующей таблице указаны возможные типы BCP, независимо от того, являются ли они типами max или нет, а также ожидаемые выходные данные.  
   
-|Имя типа BCP|MaxType|Вывод|  
+|Имя типа BCP|MaxType|Output|  
 |-------------------|-------------|------------|  
 |**SQLDECIMAL**|Допустим любой вариант|**decimal**|  
 |**SQLNUMERIC**|Допустим любой вариант|**numeric**|  
@@ -74,7 +73,7 @@ RETCODE bcp_gettypename (
 |**SQLVARCHAR**|Нет|**varchar**|  
 |**SQLTEXT**|Допустим любой вариант|**text**|  
 |**SQLBIGBINARY**|Нет|**binary**|  
-|**SQLBINARY**|Нет|**Двоичный**|  
+|**SQLBINARY**|Нет|**Binary**|  
 |**SQLBIGVARBINARY**|Нет|**varbinary**|  
 |**SQLVARBINARY**|Нет|**varbinary**|  
 |**SQLIMAGE**|Допустим любой вариант|**Изображение**|  

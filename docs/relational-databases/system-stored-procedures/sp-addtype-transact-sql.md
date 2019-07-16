@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ed72cd8e-5ff7-4084-8458-2d8ed279d817
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ead23c8feb428772fcde5bcdb59f19e1a23b6cd9
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 4e52fb6700d0af133a687c8b93e28cd12f72221c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492846"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117937"
 ---
 # <a name="spaddtype-transact-sql"></a>sp_addtype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +70,7 @@ sp_addtype [ @typename = ] type,
  *s*  
  Неотрицательное целое число, показывающее максимальное количество десятичных разрядов числа (справа от десятичного разделителя), которое не должно превышать точность. Дополнительные сведения см. в разделе [decimal и numeric (Transact-SQL)](../../t-sql/data-types/decimal-and-numeric-transact-sql.md).  
   
-`[ @nulltype = ] 'null_type'` Указывает способ обработки значений null типом данных псевдонима. *null_type* — **varchar (** 8 **)**, значение по умолчанию NULL и должен быть заключен в одинарные кавычки ('NULL', 'NOT NULL' или 'NONULL'). Если *null_type* не определяется явным образом **sp_addtype**, ему присваивается текущее допустимость значений NULL по умолчанию. Для определения текущего значения параметра возможности по умолчанию иметь значения NULL используйте системную функцию NULLGETANSINULL. Его можно настраивать с помощью инструкции SET или ALTER DATABASE. Возможность иметь значения NULL необходимо задавать в явной форме. Если **@phystype** — **бит**, и **@nulltype** не указан, по умолчанию не NULL.  
+`[ @nulltype = ] 'null_type'` Указывает способ обработки значений null типом данных псевдонима. *null_type* — **varchar (** 8 **)** , значение по умолчанию NULL и должен быть заключен в одинарные кавычки ('NULL', 'NOT NULL' или 'NONULL'). Если *null_type* не определяется явным образом **sp_addtype**, ему присваивается текущее допустимость значений NULL по умолчанию. Для определения текущего значения параметра возможности по умолчанию иметь значения NULL используйте системную функцию NULLGETANSINULL. Его можно настраивать с помощью инструкции SET или ALTER DATABASE. Возможность иметь значения NULL необходимо задавать в явной форме. Если **@phystype** — **бит**, и **@nulltype** не указан, по умолчанию не NULL.  
   
 > [!NOTE]  
 >  *Null_type* параметр только определяет допустимость значений NULL по умолчанию для этого типа данных. Если возможность иметь значения NULL явно указывается для типа данных псевдонима при создании таблицы, эта настройка имеет приоритет над возможностью по умолчанию иметь значения NULL. Дополнительные сведения см. в разделе [ALTER TABLE &#40;Transact-SQL&#41; ](../../t-sql/statements/alter-table-transact-sql.md) и [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  
@@ -92,7 +91,7 @@ sp_addtype [ @typename = ] type,
 > [!IMPORTANT]  
 >  В целях обратной совместимости **открытый** роли базы данных автоматически предоставляется разрешение REFERENCES для типов данных псевдонима, созданные с помощью **sp_addtype**. Обратите внимание на то, когда типы данных псевдонима создаются с помощью инструкции CREATE TYPE, а не **sp_addtype**, нет разрешение автоматически не предоставляется.  
   
- Псевдонимы типов данных не может быть определен с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **timestamp**, **таблицы**, **xml**, **varchar(max)**, **nvarchar(max)** или **varbinary(max)** типов данных.  
+ Псевдонимы типов данных не может быть определен с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **timestamp**, **таблицы**, **xml**, **varchar(max)** , **nvarchar(max)** или **varbinary(max)** типов данных.  
   
 ## <a name="permissions"></a>Разрешения  
  Требуется членство в **db_owner** или **db_ddladmin** предопределенной роли базы данных.  

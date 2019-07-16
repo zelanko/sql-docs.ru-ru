@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 65d6d78b-a8c8-489a-9dad-f8d127a44882
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6f249bb13ece6382e96dfe953b1d3c1d96c7bf65
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 730ead7bf90af3b6e6906fe184e0fa3312212137
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63149005"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107262"
 ---
 # <a name="statement-handles"></a>Дескрипторы инструкций
 Объект *инструкции* проще всего рассматривать как инструкции SQL, таких как **ВЫБЕРИТЕ \* сотрудника из**. Однако инструкция будет больше, чем просто инструкции SQL: он состоит из всех данных, связанных с этой инструкции SQL, таких как все результирующие наборы, созданного с помощью инструкции и параметры, используемые при выполнении инструкции. Оператор даже не нужно иметь определяемый приложением инструкции SQL. Например, при каталога функции например **SQLTables** выполняется в операторе, он выполняет стандартные инструкции SQL, который возвращает список имен таблиц.  

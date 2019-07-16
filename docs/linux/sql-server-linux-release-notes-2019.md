@@ -3,18 +3,17 @@ title: Заметки о выпуске для предварительной в
 description: Эта статья содержит заметки о выпуске и поддерживаемых функций для предварительной версии SQL Server 2019 под управлением Linux. Заметки о выпуске включены для последнего выпуска и несколько предыдущих выпусков.
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 07/02/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 88c4ebbd5d2e106dbab2dcb057ef024fe0c7f26c
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 490b47c43e5a930f42163edc75280b2642e2dabc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834818"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67896140"
 ---
 # <a name="release-notes-for-sql-server-2019-preview-on-linux"></a>Заметки о выпуске для предварительной версии SQL Server 2019 в Linux
 
@@ -48,12 +47,12 @@ ms.locfileid: "67834818"
 | Выпуск               | Version       | Дата выпуска |
 |-----------------------|---------------|--------------|
 | [CTP-ВЕРСИИ 3.1](#CTP31)     | 15.0.1700.37  | 2019-6-26    |
-| [CTP-ВЕРСИИ 3.0](#CTP30)     | 15.0.1600.8   | 2019-5-22    |
+| [CTP-ВЕРСИИ 3.0](#CTP30)     | 15.0.1600.8   | 2019 г.-5-22    |
 | [CTP-ВЕРСИИ 2.5](#CTP25)     | 15.0.1500.28  | 2019-4-24    |
 | [CTP 2.4](#CTP24)     | 15.0.1400.75  | 2019-3-27    |
 | [CTP-ВЕРСИИ 2.3](#CTP23)     | 15.0.1300.359 | 2019-3-01    |
 | [CTP-ВЕРСИИ 2.2](#CTP22)     | 15.0.1200.24  | 2018-12-11   |
-| [CTP-ВЕРСИИ 2.1](#CTP21)     | 15.0.1100.94  | 2018-11-06   |
+| [CTP-ВЕРСИИ 2.1](#CTP21)     | 15.0.1100.94  | 2018 г.-11-06   |
 | [CTP-ВЕРСИИ 2.0](#CTP20)     | 15.0.1000.34  | 2018-09-24   |
 
 ## <a id="cuinstall"></a> Установка обновлений

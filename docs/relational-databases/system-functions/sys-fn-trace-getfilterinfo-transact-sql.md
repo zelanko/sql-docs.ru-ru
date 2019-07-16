@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 09fe4a28-ff8a-4655-9da1-4654d5bc514d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ce54144c3f7f367248cdb9d92484874deaaf78fc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 22b1b6bf2abbf322cec690d9e466f2ea40fcb72a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690652"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059249"
 ---
 # <a name="sysfntracegetfilterinfo-transact-sql"></a>sys.fn_trace_getfilterinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +57,7 @@ fn_trace_getfilterinfo ( trace_id )
 |**columnid**|**int**|Идентификатор столбца, к которому применяется фильтр.|  
 |**logical_operator**|**int**|Указывает, какой применяется оператор: AND или OR.|  
 |**comparison_operator**|**int**|Задает тип сравнения.<br /><br /> 0 = равны.<br /><br /> 1 = не равны.<br /><br /> 2 = больше чем.<br /><br /> 3 = меньше чем.<br /><br /> 4 = больше или равно.<br /><br /> 5 = меньше или равно.<br /><br /> 6 = схожи.<br /><br /> 7 = не схожи.|  
-|**Значение**|**sql_variant**|Задает значение, к которому применяется фильтр.|  
+|**value**|**sql_variant**|Задает значение, к которому применяется фильтр.|  
   
 ## <a name="remarks"></a>Примечания  
  Пользователь задает *trace_id* значение для определения, изменения и управления трассировкой. Идентификатор конкретной трассировки, **fn_trace_getfilterinfo** возвращает сведения о любой фильтр к данной трассировке. Если к указанной трассировке не применяются фильтры, функция возвращает пустой набор строк. Если передать недопустимый идентификатор, эта функция вернет пустой набор строк. Аналогичные сведения о трассировках см. в разделе [sys.fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md).  

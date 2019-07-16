@@ -2,19 +2,18 @@
 title: Восстановление базы данных, защищаемую прозрачным Шифрованием - Parallel Data Warehouse | Документация Майкрософт
 description: Следуйте инструкциям ниже для восстановления базы данных, который зашифрован с применением прозрачного шифрования данных в Analytics платформы системы Parallel Data Warehouse.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: a791d4110dc70c506025f8f11fb06b9ba2e5dcb3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7c2f676f75c5a8c79bfc2f2417ff30c9806e3c80
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63157014"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960168"
 ---
 # <a name="restore-a-database-protected-by-tde-in-parallel-data-warehouse"></a>Восстановление базы данных, защищаемую прозрачным Шифрованием в Parallel Data Warehouse
 Следуйте инструкциям ниже для восстановления базы данных, который зашифрован с применением прозрачного шифрования данных.  

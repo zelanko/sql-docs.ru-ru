@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7caab48e-cbb5-4bbc-a09b-5cf902e5bc45
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 73379b769da61fe14ba18815446337d0172c2805
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 34d2ceb19bce2e466ff5cae7647125e94fdb7c03
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63045489"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044996"
 ---
 # <a name="numeric-functions-visual-foxpro-odbc-driver"></a>Числовые функции (драйвер ODBC для Visual FoxPro)
 В следующей таблице описаны числовые функции ODBC, поддерживаемых драйвером Visual FoxPro ODBC; Если Visual FoxPro грамматики для той же функции отличается от синтаксиса ODBC, Visual FoxPro эквивалентное отображаются.  
@@ -45,7 +44,7 @@ ms.locfileid: "63045489"
 |PI *)*||  
 |RADIANS *(выражение «числовое_выражение»)*|DTOR *(выражение «числовое_выражение»)*|  
 |Функция RAND *([целое_выражение])*||  
-|ROUND *(numeric_exp, integer_exp)*||  
+|ROUND *(выражение «числовое_выражение», целое_выражение)*||  
 |ЗНАК *(выражение «числовое_выражение»)*||  
 |SIN *(float_exp)*||  
 |SQRT *(float_exp)*||  

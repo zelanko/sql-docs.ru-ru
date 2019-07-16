@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 06ded0ca-7d21-4400-864a-b801e855b257
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 14001680cd4cf92086ab797f77e2233222d36b67
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: e6d3880c4be8925e6b85a20af1324537e3977ecc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590718"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103285"
 ---
 # <a name="parameters-transact-sql"></a>PARAMETERS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -57,14 +56,14 @@ ms.locfileid: "53590718"
 |**NUMERIC_PRECISION_RADIX**|**smallint**|Основание системы счисления точности приблизительных числовых данных, точных числовых данных, целочисленных данных или денежных данных. В противном случае возвращается значение NULL.|  
 |**NUMERIC_SCALE**|**tinyint**|Масштаб приблизительных числовых данных, точных числовых данных, целочисленных данных или денежных данных. В противном случае возвращается значение NULL.|  
 |**DATETIME_PRECISION**|**smallint**|Точность до долей секунды, если тип параметра — **datetime** или **smalldatetime**. В противном случае возвращается значение NULL.|  
-|**INTERVAL_TYPE**|**nvarchar (** 30 **)**|NULL. Зарезервировано для последующего использования.|  
-|**INTERVAL_PRECISION**|**smallint**|NULL. Зарезервировано для последующего использования.|  
-|**USER_DEFINED_TYPE_CATALOG**|**nvarchar (** 128 **)**|NULL. Зарезервировано для последующего использования.|  
-|**USER_DEFINED_TYPE_SCHEMA**|**nvarchar (** 128 **)**|NULL. Зарезервировано для последующего использования.|  
-|**USER_DEFINED_TYPE_NAME**|**nvarchar (** 128 **)**|NULL. Зарезервировано для последующего использования.|  
-|**SCOPE_CATALOG**|**nvarchar (** 128 **)**|NULL. Зарезервировано для последующего использования.|  
-|**SCOPE_SCHEMA**|**nvarchar (** 128 **)**|NULL. Зарезервировано для последующего использования.|  
-|**SCOPE_NAME**|**nvarchar (** 128 **)**|NULL. Зарезервировано для последующего использования.|  
+|**INTERVAL_TYPE**|**nvarchar (** 30 **)**|NULL. Зарезервировано для будущего использования.|  
+|**INTERVAL_PRECISION**|**smallint**|NULL. Зарезервировано для будущего использования.|  
+|**USER_DEFINED_TYPE_CATALOG**|**nvarchar (** 128 **)**|NULL. Зарезервировано для будущего использования.|  
+|**USER_DEFINED_TYPE_SCHEMA**|**nvarchar (** 128 **)**|NULL. Зарезервировано для будущего использования.|  
+|**USER_DEFINED_TYPE_NAME**|**nvarchar (** 128 **)**|NULL. Зарезервировано для будущего использования.|  
+|**SCOPE_CATALOG**|**nvarchar (** 128 **)**|NULL. Зарезервировано для будущего использования.|  
+|**SCOPE_SCHEMA**|**nvarchar (** 128 **)**|NULL. Зарезервировано для будущего использования.|  
+|**SCOPE_NAME**|**nvarchar (** 128 **)**|NULL. Зарезервировано для будущего использования.|  
   
 ## <a name="see-also"></a>См. также  
  [Системные представления &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   

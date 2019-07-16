@@ -1,5 +1,5 @@
 ---
-title: Подключение пользователя данные нельзя делегировать | Документы Microsoft
+title: Подключение пользователя данные невозможно делегировать | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cbf9b41b58e4c492c4b278aa4cad60fa26dbcb08
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34028345"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208013"
 ---
-# <a name="the-data-connection-user-could-not-be-delegated"></a>Не удалось делегировать подключение пользователя данных
+# <a name="the-data-connection-user-could-not-be-delegated"></a>Не удалось делегировать пользователя подключения данных
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Служба Excel Services возвращает эту ошибку для книг Excel, содержащих данные [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , если она не может подключиться к экземпляру сервера [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в SharePoint.  
   
@@ -27,7 +27,7 @@ ms.locfileid: "34028345"
 |Область применения|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint|  
 |Номер версии продукта|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |Причина|Сбой соединения при попытке использовать поставщик данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .|  
-|Текст сообщения|Подключение к данным использует проверку подлинности Windows, а учетные данные нельзя делегировать. Следующие соединения не удалось обновить: данные [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .|  
+|Текст сообщения|Подключение к данным использует проверку подлинности Windows, а учетные данные нельзя делегировать. Следующие соединения не удалось обновить: [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Данные|  
   
 ## <a name="explanation"></a>Объяснение  
  Есть несколько причин возникновения этого сообщения об ошибке. Общим для всех них является то, что служба Excel Services не может получить действительное удостоверение пользователя Windows из токена утверждений в SharePoint. При работе с книгами Excel, которые содержат данные [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , эта ошибка возникает при наличии любого из следующих условий:  

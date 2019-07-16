@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4a3618b7-d2b8-43c6-a1fd-7a4e6fa8c7d0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 94afb817462022ff21c312291b31c738be15c72f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8de1a2053913ee0339c58a4a27ccd45772487e77
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537684"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118667"
 ---
 # <a name="sqlcolumns-function"></a>SQLColumns, функция
 **Соответствие стандартам**  
@@ -91,7 +90,7 @@ SQLRETURN SQLColumns(
  [Вход] Длина в символах **ColumnName*.  
   
 ## <a name="returns"></a>Возвращает  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR, or SQL_INVALID_HANDLE.  
+ Значение SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, значение SQL_ERROR или SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Диагностика  
  Когда **SQLColumns** возвращает значение SQL_ERROR или SQL_SUCCESS_WITH_INFO, а связанное значение SQLSTATE можно получить, вызвав **SQLGetDiagRec** с *HandleType* из SQL_ HANDLE_STMT и *обрабатывать* из *StatementHandle*. В следующей таблице перечислены значения SQLSTATE, обычно возвращаемые при помощи **SQLColumns** и объясняется каждый из них в контексте этой функции; описания SQLSTATE, возвращаемых диспетчером драйверов предшествует обозначение «(DM)». Возвращается связанный с каждого значения SQLSTATE значение SQL_ERROR, если не указано иное.  
@@ -161,7 +160,7 @@ SQLRETURN SQLColumns(
 |Имя столбца|Столбец<br /><br /> number|Тип данных|Комментарии|  
 |-----------------|-----------------------|---------------|--------------|  
 |TABLE_CAT (ODBC 1.0)|1|Varchar|Имя каталога; Значение NULL, если не применим к источнику данных. Если драйвер поддерживает каталоги для некоторых таблиц, но не для других пользователей, например, когда драйвер извлекает данные из разных СУБД, возвращается пустая строка ("») для этих таблиц, у которых нет каталогов.|  
-|TABLE_SCHEM (ODBC 1.0)|2|Varchar|Имя схемы; Значение NULL, если не применим к источнику данных. Если драйвер поддерживает схемы для некоторых таблиц, но не для других пользователей, например, когда драйвер извлекает данные из разных СУБД, возвращается пустая строка ("») для этих таблиц, у которых нет схемы.|  
+|ПО ЗНАЧЕНИЯМ TABLE_SCHEM (ODBC 1.0)|2|Varchar|Имя схемы; Значение NULL, если не применим к источнику данных. Если драйвер поддерживает схемы для некоторых таблиц, но не для других пользователей, например, когда драйвер извлекает данные из разных СУБД, возвращается пустая строка ("») для этих таблиц, у которых нет схемы.|  
 |TABLE_NAME (ODBC 1.0)|3|Varchar not NULL|Имя таблицы.|  
 |COLUMN_NAME (ODBC 1.0)|4|Varchar not NULL|Имя столбца. Драйвер возвращает пустую строку для столбца, который не имеет имени.|  
 |DATA_TYPE (ODBC 1.0)|5|Smallint, не NULL|Тип данных SQL. Это может быть типом данных ODBC SQL или типом данных специфические для драйвера SQL. Для типов данных даты и времени и интервал этот столбец возвращает тип данных краткую (SQL_TYPE_DATE или SQL_INTERVAL_YEAR_TO_MONTH вместо типа nonconcise данных, например SQL_DATETIME или SQL_INTERVAL). Список допустимых типов данных ODBC SQL, см. в разделе [типы данных SQL](../../../odbc/reference/appendixes/sql-data-types.md) в приложение г Типы данных. Сведения о типах данных драйвера SQL см. в разделе документации по драйверу.<br /><br /> Типы данных, возвращаемых для ODBC 3. *x* и ODBC 2. *x* приложений может быть другим. Дополнительные сведения см. в разделе [обратной совместимости и соответствия стандартам](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md).|  

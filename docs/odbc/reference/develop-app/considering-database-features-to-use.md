@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 59760114-508e-46c5-81d2-8f2498c0d778
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b92eeb64b95d666b15c03c70d656d2309a63eabf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3a945eef43a1fc12689853c3fa209f6126df4f0d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63042190"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67951870"
 ---
 # <a name="considering-database-features-to-use"></a>Оценка возможности использования функций базы данных
 После известен базовый уровень взаимодействия, необходимо учитывать функции базы данных, используемых приложением. Например какие инструкции SQL приложение выполнит? Будет ли приложение использовать Прокручиваемые курсоры? Транзакции? Процедуры? Длинные данные? Понять, какие функции могут поддерживаться не все СУБД, см. в разделе [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md), [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md), и [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md) описаний функций и [ Приложение c. Грамматика SQL](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md). Возможности, необходимые для приложения может решить некоторые СУБД из списка целевой СУБД. Они также показывают, что приложение может легко выбирать целевые многие СУБД.  

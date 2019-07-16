@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0cb548e0-fcb4-4c49-98c8-be287911f826
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 39130be0e6be31700f70002726f3aaf674aa4c82
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 188a95f985ac1d578bca8c7e10ac4c4054c935c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700928"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925958"
 ---
 # <a name="batch-mode"></a>Пакетный режим
 Пакетный режим действует при **LockType** свойству **adLockBatchOptimistic** и пакетное обновление поддерживается поставщиком. Некоторые параметры типа блокировки недоступны в зависимости от положения курсора. Например, тип пессимистической блокировки вариант недоступен, если **CursorLocation** присваивается **adUseClient**. И наоборот поставщик не поддерживает оптимистической блокировки пакетной службы, когда курсор находится на сервере. Следует использовать пакетного обновления с набором ключей или только для статического курсора.  

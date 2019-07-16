@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 1dbc4398-97a8-4585-bb77-1f7ea75e24c4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1446a999029b2c39bfbe4c6c43cf48ad3a09e58f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 620ccce9a035139482b2d9b4630bb2242f720af8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65538120"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103779"
 ---
 # <a name="sqlgetdiagfield-function"></a>Функция SQLGetDiagField
 
@@ -61,7 +60,7 @@ SQLRETURN SQLGetDiagField(
   
 -   SQL_HANDLE_ENV  
   
--   SQL_HANDLE_STMT  
+-   ЗНАЧЕНИЕ SQL_HANDLE_STMT  
   
  Дескриптор SQL_HANDLE_DBC_INFO_TOKEN используется только для диспетчера драйверов и драйверов. Приложения не должны использовать этот тип дескриптора. Дополнительные сведения о SQL_HANDLE_DBC_INFO_TOKEN, см. в разделе [драйвера ODBC с поддержкой пула подключений разработка](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md).  
   
@@ -119,7 +118,7 @@ SQLRETURN SQLGetDiagField(
   
     -   Если вы используете асинхронное уведомление, асинхронные операции для дескриптора не завершена.  
   
--   SQL_NO_DATA: *RecNumber* поданных единиц превысил количество диагностических записей, которые существовали для дескриптор, указанный в *обработки.* Функция также возвращает значение SQL_NO_DATA для любой положительных *RecNumber* Если нет диагностических записей для *обрабатывать*.  
+-   ЗНАЧЕНИЕ SQL_NO_DATA: *RecNumber* поданных единиц превысил количество диагностических записей, которые существовали для дескриптор, указанный в *обработки.* Функция также возвращает значение SQL_NO_DATA для любой положительных *RecNumber* Если нет диагностических записей для *обрабатывать*.  
   
 ## <a name="comments"></a>Комментарии  
  Приложение обычно вызывает **SQLGetDiagField** для выполнения одной из трех целей:  
@@ -193,26 +192,26 @@ SQLRETURN SQLGetDiagField(
 |*домена инструкции ALTER*|«ALTER ДОМЕН»|SQL_DIAG_ALTER_DOMAIN|  
 |*Таблица инструкции ALTER*|«ALTER TABLE»|SQL_DIAG_ALTER_TABLE|  
 |*Определение утверждения*|«СОЗДАНИЕ УТВЕРЖДЕНИЕ»|SQL_DIAG_CREATE_ASSERTION|  
-|*character-set-definition*|«СОЗДАТЬ НАБОР СИМВОЛОВ»|SQL_DIAG_CREATE_CHARACTER_SET|  
+|*определения для набора символов*|«СОЗДАТЬ НАБОР СИМВОЛОВ»|SQL_DIAG_CREATE_CHARACTER_SET|  
 |*Определение параметров сортировки*|«СОЗДАНИЕ ПАРАМЕТРОВ СОРТИРОВКИ»|SQL_DIAG_CREATE_COLLATION|  
 |*Определение domainn*|«СОЗДАНИЕ ДОМЕНА»|SQL_DIAG_CREATE_DOMAIN|
-|*create-index-statement*|«СОЗДАНИЕ ИНДЕКСА»|SQL_DIAG_CREATE_INDEX|  
+|*Индекс инструкция CREATE*|«СОЗДАНИЕ ИНДЕКСА»|SQL_DIAG_CREATE_INDEX|  
 |*— Инструкция CREATE table*|«СОЗДАНИЕ ТАБЛИЦЫ»|SQL_DIAG_CREATE_TABLE|  
 |*представление инструкция CREATE*|«СОЗДАНИЕ ПРЕДСТАВЛЕНИЯ»|SQL_DIAG_CREATE_VIEW|  
 |*спецификацией курсора.*|«SELECT КУРСОРА»|SQL_DIAG_SELECT_CURSOR|  
 |*положение инструкции DELETE*|«DELETE ДИНАМИЧЕСКИЙ КУРСОР»|SQL_DIAG_DYNAMIC_DELETE_CURSOR|  
-|*delete-statement-searched*|«УДАЛИТЬ WHERE»|SQL_DIAG_DELETE_WHERE|  
-|*drop-assertion-statement*|«DROP УТВЕРЖДЕНИЕ»|SQL_DIAG_DROP_ASSERTION|  
+|*Поиск DELETE оператор*|«УДАЛИТЬ WHERE»|SQL_DIAG_DELETE_WHERE|  
+|*инструкцию DROP утверждения*|«DROP УТВЕРЖДЕНИЕ»|SQL_DIAG_DROP_ASSERTION|  
 |*drop-character-set-stmt*|«СИМВОЛ DROP SET»|SQL_DIAG_DROP_CHARACTER_SET|  
-|*drop-collation-statement*|«СБРОСА ПАРАМЕТРОВ СОРТИРОВКИ»|SQL_DIAG_DROP_COLLATION|  
+|*инструкцию DROP — параметры сортировки*|«СБРОСА ПАРАМЕТРОВ СОРТИРОВКИ»|SQL_DIAG_DROP_COLLATION|  
 |*инструкцию DROP домена*|«DROP ДОМЕН»|SQL_DIAG_DROP_DOMAIN|  
 |*drop-index-statement*|«DROP INDEX»|SQL_DIAG_DROP_INDEX|  
-|*drop-schema-statement*|«DROP SCHEMA»|SQL_DIAG_DROP_SCHEMA|  
+|*инструкцию DROP схемы*|«DROP SCHEMA»|SQL_DIAG_DROP_SCHEMA|  
 |*инструкцию DROP таблица*|«DROP TABLE»|SQL_DIAG_DROP_TABLE|  
-|*drop-translation-statement*|«DROP ПЕРЕВОДА»|SQL_DIAG_DROP_TRANSLATION|  
+|*инструкцию DROP перевода*|«DROP ПЕРЕВОДА»|SQL_DIAG_DROP_TRANSLATION|  
 |*инструкцию DROP представление*|«DROP VIEW»|SQL_DIAG_DROP_VIEW|  
 |*grantstatement*|«ПРЕДОСТАВЛЕНИЕ»|SQL_DIAG_GRANT|
-|*insert-statement*|«ВСТАВИТЬ»|SQL_DIAG_INSERT|  
+|*инструкции INSERT*|«ВСТАВИТЬ»|SQL_DIAG_INSERT|  
 |*ODBC-процедуры extension*|«CALL»|ВЫЗОВ SQL_DIAG_|  
 |*Инструкция REVOKE*|«ОТОЗВАТЬ»|SQL_DIAG_REVOKE|  
 |*Определение схемы*|«СОЗДАТЬ СХЕМУ»|SQL_DIAG_CREATE_SCHEMA|  

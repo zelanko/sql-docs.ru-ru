@@ -1,5 +1,5 @@
 ---
-title: Атрибуты в иерархиях родителей потомков | Документы Microsoft
+title: Атрибуты в иерархиях родителей потомков | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f6b6c10c8b1c7f311f7ba5e876c1b8d96c9e9701
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023461"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68165417"
 ---
-# <a name="parent-child-dimension-attributes"></a>Родительские атрибуты измерения
+# <a name="parent-child-dimension-attributes"></a>Атрибуты измерения "родители-потомки"
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   В службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]о содержимом элементов измерения обычно делается общее предположение. Конечные элементы содержат данные, полученные непосредственно из основных источников данных; неконечные элементы содержат данные статистических вычислений, рассчитанных по дочерним элементам.  
   
@@ -39,6 +39,6 @@ ms.locfileid: "34023461"
   
 ## <a name="see-also"></a>См. также  
  [Справочник по свойствам атрибута измерения](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)   
- [Родитель потомок измерения](../../analysis-services/multidimensional-models/parent-child-dimension.md)  
+ [Измерения «родители-потомки»](../../analysis-services/multidimensional-models/parent-child-dimension.md)  
   
   

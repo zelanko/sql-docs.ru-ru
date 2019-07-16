@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: c63d5cae-24fc-4fee-89a9-ad0367cddc3e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b82e56dd7998ca19ce9e401369cd8d2f52b58573
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 02577370218a799faf86a7f8986859c415962f5a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62636240"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897738"
 ---
 # <a name="developing-connection-pool-awareness-in-an-odbc-driver"></a>Разработка драйвера ODBC с поддержкой пула подключений
 В этом разделе рассматриваются сведения о разработке драйверу ODBC, содержащий сведения о том, как драйвер должен предоставить службы пула подключений.  

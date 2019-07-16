@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 85777525-1555-4731-8309-63a464c6b43a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9e33beff29463172a26d53953dd5f563fe1f3f5c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: caf8f68221c1ac14649bf10be0105e1e691c7482
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63240955"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68129959"
 ---
 # <a name="elements-used-in-sql-statements"></a>Элементы, используемые в инструкциях SQL
 Следующие элементы используются в инструкциях SQL, перечисленных выше.  
@@ -32,25 +31,25 @@ ms.locfileid: "63240955"
   
  *Логическое значение коэффициента* :: = [NOT] *основной логическое значение*  
   
- *boolean-primary* ::= comparison *-predicate* &#124; ( *search-condition* )  
+ *значение типа Boolean-primary* :: = сравнения *-предикат* &#124; ( *условие поиска* )  
   
- *boolean-term* ::= *boolean-factor* [AND *boolean-term*]  
+ *Логическое значение термина* :: = *логическое значение коэффициента* [AND *логическое значение термина*]  
   
  *character-string-literal* ::= ''{*character*}...'' (*символ* — это любой символ в кодировке источника данных или драйвера. Чтобы включить символ одинарной кавычки литерала ("") в символьный литерал строки, используйте два символа кавычки литерала [""].)  
   
  *column-identifier* ::= *user-defined-name*  
   
- *column-name* ::= [*table-name*.]*column-identifier*  
+ *Имя столбца* :: = [*имя таблицы*.] *идентификатор столбца*  
   
- *comparison-operator* ::= < &#124; > &#124; \<= &#124; >= &#124; = &#124; <>  
+ *оператор сравнения* :: = < &#124; > &#124; \<= &#124; > = &#124; = &#124; <>  
   
- *comparison-predicate* ::= *expression* comparison-operator expression  
+ *Предикат сравнения* :: = *выражение* выражения оператора сравнения  
   
  *Тип данных* :: = *тип строки символов* (*тип строки символов* — это любой тип данных, для которого столбец ««DATA_TYPE»» в результирующем наборе, возвращенные SQLGetTypeInfo является либо SQL_CHAR или SQL_VARCHAR.)  
   
  *digit* ::= 0 &#124; 1 &#124; 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; 9  
   
- *dynamic-parameter* ::= ?  
+ *динамический параметр* :: =?  
   
  *expression* ::= term &#124; expression {+&#124;-} term  
   
@@ -60,11 +59,11 @@ ms.locfileid: "63240955"
   
  *динамический параметр*  
   
- &#124; *literal*  
+ &#124;*литерала*  
   
- &AMP;#124;ЗНАЧЕНИЕ NULL  
+ &#124;ЗНАЧЕНИЕ NULL  
   
- &#124; USER  
+ &#124;ПОЛЬЗОВАТЕЛЬ  
   
  *letter* ::= *lower-case-letter &#124; upper-case-letter*  
   
@@ -74,17 +73,17 @@ ms.locfileid: "63240955"
   
  *предложение ORDER by* :: = ORDER BY *спецификацией сортировки* [, *спецификацией сортировки*]...  
   
- *primary* ::= *column-name*  
+ *основной* :: = *имя столбца*  
   
  &#124;*динамический параметр*  
   
- &#124; *literal*  
+ &#124;*литерала*  
   
- &#124; ( *expression* )  
+ &#124;( *выражение* )  
   
  *условие поиска* :: = *логическое значение термина* [или *условие поиска*]  
   
- *select-list* ::= \* &#124; *select-sublist* [, *select-sublist*]...  (*select-list* cannot contain parameters.)  
+ *список выбора* :: = \* &#124; *выберите подсписок* [, *выберите подсписок*]...  (*список выбора* не может содержать параметры.)  
   
  *select-sublist* ::= *expression*  
   
@@ -94,7 +93,7 @@ ms.locfileid: "63240955"
   
  *table-name* ::= *table-identifier*  
   
- *table-reference* ::= *table-name*  
+ *ссылка на таблицу* :: = *имя таблицы*  
   
  *table-reference-list* ::= *table-reference* [,*table-reference*]...  
   

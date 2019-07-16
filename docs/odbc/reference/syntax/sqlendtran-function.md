@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: ff375ce1-eb50-4693-b1e6-70181a6dbf9f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 16b4bcfec2640c0dbd55d43be9df2391ed1f66c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 82045d5dbbee356f084d587100edfbafd4947f54
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65538045"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104635"
 ---
 # <a name="sqlendtran-function"></a>Функция SQLEndTran
 **Соответствие стандартам**  
@@ -60,7 +59,7 @@ SQLRETURN SQLEndTran(
  ПАРАМЕТРОМ SQL_COMMIT SQL_ROLLBACK  
   
 ## <a name="returns"></a>Возвращает  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, SQL_INVALID_HANDLE, or SQL_STILL_EXECUTING.  
+ Значение SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, значение SQL_ERROR, SQL_INVALID_HANDLE или SQL_STILL_EXECUTING.  
   
 ## <a name="diagnostics"></a>Диагностика  
  Когда **SQLEndTran** возвращает значение SQL_ERROR или SQL_SUCCESS_WITH_INFO, а связанное значение SQLSTATE может быть получен путем вызова **SQLGetDiagRec** с соответствующим *HandleType*и *обрабатывать*. В следующей таблице перечислены значения SQLSTATE, обычно возвращаемые **SQLEndTran** и объясняется каждый из них в контексте этой функции; описания SQLSTATE, возвращаемых диспетчером драйверов предшествует обозначение «(DM)». Возвращается связанный с каждого значения SQLSTATE значение SQL_ERROR, если не указано иное.  

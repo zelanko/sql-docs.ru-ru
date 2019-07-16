@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: c8de92033c58f2583fc7ba93e6c326d4a406c90a
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 8eff7603fa0d0be0e90af201e524554f5e336ea8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37985436"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67937798"
 ---
 # <a name="general-prediction-functions-dmx"></a>Общие функции прогнозирования (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "37985436"
 |-|-|  
 |[BottomCount &#40;расширений интеллектуального анализа данных&#41;](../dmx/bottomcount-dmx.md)|[RangeMin &#40;расширений интеллектуального анализа данных&#41;](../dmx/rangemin-dmx.md)|  
 |[BottomPercent &#40;расширений интеллектуального анализа данных&#41;](../dmx/bottompercent-dmx.md)|[TopCount &#40;расширений интеллектуального анализа данных&#41;](../dmx/topcount-dmx.md)|  
-|[Прогнозирование &#40;расширений интеллектуального анализа данных&#41;](../dmx/predict-dmx.md)|[TopPercent &#40;расширений интеллектуального анализа данных&#41;](../dmx/toppercent-dmx.md)|  
+|[Predict (расширения интеллектуального анализа данных)](../dmx/predict-dmx.md)|[TopPercent &#40;расширений интеллектуального анализа данных&#41;](../dmx/toppercent-dmx.md)|  
 |[RangeMax &#40;расширений интеллектуального анализа данных&#41;](../dmx/rangemax-dmx.md)|[TopSum &#40;расширений интеллектуального анализа данных&#41;](../dmx/topsum-dmx.md)|  
 |[RangeMid &#40;расширений интеллектуального анализа данных&#41;](../dmx/rangemid-dmx.md)||  
   
@@ -36,13 +35,13 @@ ms.locfileid: "37985436"
   
 -   [Существует &#40;расширений интеллектуального анализа данных&#41;](../dmx/exists-dmx.md)  
   
--   [IsDescendant &#40;расширений интеллектуального анализа данных&#41;](../dmx/isdescendant-dmx.md)  
+-   [IsDescendant (расширения интеллектуального анализа данных)](../dmx/isdescendant-dmx.md)  
   
 -   [IsTestCase &#40;расширений интеллектуального анализа данных&#41;](../dmx/istestcase-dmx.md)  
   
 -   [IsTrainingCase &#40;расширений интеллектуального анализа данных&#41;](../dmx/istrainingcase-dmx.md)  
   
--   [Прогнозирование &#40;расширений интеллектуального анализа данных&#41;](../dmx/predict-dmx.md)  
+-   [Predict (расширения интеллектуального анализа данных)](../dmx/predict-dmx.md)  
   
 -   [RangeMax &#40;расширений интеллектуального анализа данных&#41;](../dmx/rangemax-dmx.md)  
   
@@ -62,15 +61,15 @@ ms.locfileid: "37985436"
 |Тип запроса|Поддерживаемые функции|Примечания|  
 |----------------|-------------------------|-------------|  
 |[SELECT DISTINCT FROM \<модели >](../dmx/select-distinct-from-model-dmx.md)|[RangeMin &#40;расширений интеллектуального анализа данных&#41;](../dmx/rangemin-dmx.md)<br /><br /> [RangeMid &#40;расширений интеллектуального анализа данных&#41;](../dmx/rangemid-dmx.md)<br /><br /> [RangeMax &#40;расширений интеллектуального анализа данных&#41;](../dmx/rangemax-dmx.md)|Эти функции используются для получения максимальных, минимальных и средних значений столбцов с числовыми данными любого типа — как непрерывными, так и дискретизированными.|  
-|[SELECT FROM \<модели >. СОДЕРЖИМОЕ](../dmx/select-from-model-content-dmx.md)<br /><br /> или диспетчер конфигурации служб<br /><br /> [SELECT FROM \<модели >. DIMENSION_CONTENT](../dmx/select-from-model-dimension-content-dmx.md)|[IsDescendant &#40;расширений интеллектуального анализа данных&#41;](../dmx/isdescendant-dmx.md)|Эта функция получает дочерние узлы указанного узла модели. Ее можно использовать, например, для просмотра всех узлов содержимого модели интеллектуального анализа данных. Порядок узлов в модели интеллектуального анализа данных зависит от типа модели. Сведения о структуре для каждого типа модели интеллектуального анализа данных см. в разделе [содержимое модели интеллектуального анализа данных &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).<br /><br /> Если содержимое модели интеллектуального анализа данных сохранено в виде измерения, можно использовать также другие существующие функции многомерных выражений (MDX) для запросов к иерархии атрибутов.|  
-|[SELECT FROM \<модели >. ВАРИАНТЫ](../dmx/select-from-model-cases-dmx.md)|[IsInNode &#40;расширений интеллектуального анализа данных&#41;](../dmx/isinnode-dmx.md)<br /><br /> [Класс ClientSettingsGeneralFlag](../relational-databases/wmi-provider-configuration-classes/clientsettingsgeneralflag-class/clientsettingsgeneralflag-class.md)<br /><br /> [IsTrainingCase &#40;расширений интеллектуального анализа данных&#41;](../dmx/istrainingcase-dmx.md)<br /><br /> [IsTestCase &#40;расширений интеллектуального анализа данных&#41;](../dmx/istestcase-dmx.md)|Функция Lag поддерживается только для моделей временных рядов.<br /><br /> Функция IsTestCase поддерживается в моделях, основанных на структуре, который был создан с параметром контрольных данных, чтобы создать набор проверочных данных. Если для структуры, на которой основана модель, не был создан набор проверочных данных с помощью параметров контрольных данных, все варианты считаются обучающими.|  
-|[SELECT FROM \<модели >. SAMPLE_CASES](../dmx/select-from-model-sample-cases-dmx.md)|[IsInNode &#40;расширений интеллектуального анализа данных&#41;](../dmx/isinnode-dmx.md)|В этом контексте Функция IsInNode возвращает что-то принадлежащий множеству идеализированных вариантов-образцов.|  
-|SELECT FROM \<модели >. PMML|Неприменимо. Используйте вместо этого функции запросов XML.|Представления языка разметки прогнозирующей модели (PMML) поддерживаются только для следующих типов моделей:<br /><br /> алгоритм дерева принятия решений ([!INCLUDE[msCoName](../includes/msconame-md.md)]);<br /><br /> алгоритм кластеризации ([!INCLUDE[msCoName](../includes/msconame-md.md)]);|  
+|[SELECT FROM \<модели >. СОДЕРЖИМОЕ](../dmx/select-from-model-content-dmx.md)<br /><br /> или диспетчер конфигурации служб<br /><br /> [SELECT FROM \<модели >. DIMENSION_CONTENT](../dmx/select-from-model-dimension-content-dmx.md)|[IsDescendant (расширения интеллектуального анализа данных)](../dmx/isdescendant-dmx.md)|Эта функция получает дочерние узлы указанного узла модели. Ее можно использовать, например, для просмотра всех узлов содержимого модели интеллектуального анализа данных. Порядок узлов в модели интеллектуального анализа данных зависит от типа модели. Сведения о структуре для каждого типа модели интеллектуального анализа данных см. в разделе [содержимое модели интеллектуального анализа данных &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).<br /><br /> Если содержимое модели интеллектуального анализа данных сохранено в виде измерения, можно использовать также другие существующие функции многомерных выражений (MDX) для запросов к иерархии атрибутов.|  
+|[SELECT FROM \<модели >. ВАРИАНТЫ](../dmx/select-from-model-cases-dmx.md)|[IsInNode (расширения интеллектуального анализа данных)](../dmx/isinnode-dmx.md)<br /><br /> [Класс ClientSettingsGeneralFlag](../relational-databases/wmi-provider-configuration-classes/clientsettingsgeneralflag-class/clientsettingsgeneralflag-class.md)<br /><br /> [IsTrainingCase &#40;расширений интеллектуального анализа данных&#41;](../dmx/istrainingcase-dmx.md)<br /><br /> [IsTestCase &#40;расширений интеллектуального анализа данных&#41;](../dmx/istestcase-dmx.md)|Функция Lag поддерживается только для моделей временных рядов.<br /><br /> Функция IsTestCase поддерживается в моделях, основанных на структуре, который был создан с параметром контрольных данных, чтобы создать набор проверочных данных. Если для структуры, на которой основана модель, не был создан набор проверочных данных с помощью параметров контрольных данных, все варианты считаются обучающими.|  
+|[SELECT FROM \<модели >. SAMPLE_CASES](../dmx/select-from-model-sample-cases-dmx.md)|[IsInNode (расширения интеллектуального анализа данных)](../dmx/isinnode-dmx.md)|В этом контексте Функция IsInNode возвращает что-то принадлежащий множеству идеализированных вариантов-образцов.|  
+|SELECT FROM \<модели >. PMML|Неприменимо. Используйте вместо этого функции запросов XML.|Представления языка разметки прогнозирующей модели (PMML) поддерживаются только для следующих типов моделей:<br /><br /> алгоритм дерева принятия решений ([!INCLUDE[msCoName](../includes/msconame-md.md)]);<br /><br /> алгоритм кластеризации [!INCLUDE[msCoName](../includes/msconame-md.md)]|  
 |[SELECT FROM \<модель > PREDICTION JOIN](../dmx/select-from-model-prediction-join-dmx.md)|Функции прогноза, характерные для алгоритма, который используется для построения модели.|Список прогнозирующих функций для каждого типа модели, см. в разделе [запросов интеллектуального анализа данных](../analysis-services/data-mining/data-mining-queries.md).|  
 |[SELECT FROM \<модели >](../dmx/select-from-model-dmx.md)|Функции прогноза, характерные для алгоритма, который используется для построения модели.|Список прогнозирующих функций для каждого типа модели, см. в разделе [запросов интеллектуального анализа данных](../analysis-services/data-mining/data-mining-queries.md).|  
   
 ## <a name="see-also"></a>См. также  
- [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; ссылки](../dmx/data-mining-extensions-dmx-reference.md)   
+ [Справочник по расширениям интеллектуального анализа данных (расширения интеллектуального анализа данных)](../dmx/data-mining-extensions-dmx-reference.md)   
  [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; справочнике по функциям](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; Справочник по операторам](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; Справка по инструкции](../dmx/data-mining-extensions-dmx-statements.md)   

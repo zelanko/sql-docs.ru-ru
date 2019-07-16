@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9fe0d4fd-950a-4274-a493-85e776278045
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d7e1c3534e510e2a18929331918db7b6cf3efa60
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3ebcda61d95cc5131048ab32701d9d68228646ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657463"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138414"
 ---
 # <a name="sysdmclrappdomains-transact-sql"></a>sys.dm_clr_appdomains (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,13 +58,13 @@ ms.locfileid: "51657463"
   
 ## <a name="appdomain-initialization"></a>Инициализация домена приложений  
   
-|Состояние|Описание|  
+|Штат|Описание|  
 |-----------|-----------------|  
 |E_APPDOMAIN_CREATING|**AppDomain** создается.|  
   
 ## <a name="appdomain-usage"></a>Использование домена приложений  
   
-|Состояние|Описание|  
+|Штат|Описание|  
 |-----------|-----------------|  
 |E_APPDOMAIN_SHARED|Среда выполнения **AppDomain** готов для использования несколькими пользователями.|  
 |E_APPDOMAIN_SINGLEUSER|**AppDomain** готов для использования в операциях DDL. Это отличается от E_APPDOMAIN_SHARED, в котором используется общий домен приложения для выполнения интеграции CLR в качестве противопоставления операциям DDL. Такие домены приложения изолированы от остальных текущих операций.|  
@@ -73,7 +72,7 @@ ms.locfileid: "51657463"
   
 ## <a name="appdomain-cleanup"></a>Очистка домена приложений  
   
-|Состояние|Описание|  
+|Штат|Описание|  
 |-----------|-----------------|  
 |E_APPDOMAIN_UNLOADING|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] что среды CLR выгрузку, запросил **AppDomain**, обычно потому, что сборка, содержащая управляемые объекты базы данных была изменена или удалена.|  
 |E_APPDOMAIN_UNLOADED|Среда CLR выгрузила **AppDomain**. Это характерно для процедуры из-за **ThreadAbort**, **OutOfMemory**, или необработанное исключение в пользовательском коде.|  

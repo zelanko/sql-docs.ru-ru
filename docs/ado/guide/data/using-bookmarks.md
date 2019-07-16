@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cca244e6-84f8-4394-bca9-f7a819b8f4df
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c7e14e063d1aabcfce6391a85c0fcddbf0ff4e9f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9fa2a738a3e94cd306619a318b75a2fd506972c8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704615"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923605"
 ---
 # <a name="using-bookmarks"></a>Использование закладок
 Часто бывает полезно для возврата непосредственно к конкретной записи, после, перемещаются **записей** без необходимости прокрутки всех записей и сравнение значений. Например, при попытке найти записи с помощью **найти** метод, но поиск не возвращает записи, вы автоматически оказываетесь на любом конце **записей**. Если поставщик поддерживает их, чтобы отметить место, прежде чем использовать может использоваться закладки **найти** метод, поэтому можно вернуться в папку. Закладка представляет **Variant** введите значение, которое однозначно определяет запись в **записей** объекта.  

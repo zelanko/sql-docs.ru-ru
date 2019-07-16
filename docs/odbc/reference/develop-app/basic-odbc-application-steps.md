@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a92d1f78-c669-47ad-88c4-0b1a93503dfc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cb15d3b64496374bed5b16f2661528c7ba1f9aae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 524c4b8f8c9467358a3868f191f8a0d527ca3d70
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63201636"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909819"
 ---
 # <a name="basic-odbc-application-steps"></a>Общие шаги по работе с приложением ODBC
 В этом разделе описывается общая схема потока приложения ODBC. Маловероятно, что любое приложение вызывает все эти функции именно в такой последовательности. Однако большинство приложений использует некоторую вариацию следующие действия. На следующем рисунке показаны этапы основные приложения.  

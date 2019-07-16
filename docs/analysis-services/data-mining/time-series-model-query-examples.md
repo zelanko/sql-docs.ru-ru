@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f839b7e108f6398f96c302016cfc45c82a110c6d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526502"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209614"
 ---
 # <a name="time-series-model-query-examples"></a>Примеры запросов моделей временных рядов
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -97,7 +97,7 @@ WHERE NODE_NAME = 'TA00000007'
  Дополнительные сведения об интерпретации этой информации см. в разделе [Содержимое моделей интеллектуального анализа данных для моделей временных рядов (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md).  
   
   
-###  <a name="bkmk_Query3"></a> Образец запроса 3. Получение выражения для модели ARTXP  
+###  <a name="bkmk_Query3"></a> Образец запроса 3. Получение уравнения для модели ARTXP  
  В моделях ARTxp на каждом уровне дерева хранится разная информация. Дополнительные сведения о структуре модели ARTxp и о том, как следует интерпретировать сведения в выражении, см. в разделе [Содержимое моделей интеллектуального анализа данных для моделей временных рядов (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md).  
   
  Приведенная ниже инструкция DMX извлекает данные для части дерева ARTxp, представляющей объем продаж модели R250 в Европе.  
@@ -128,7 +128,7 @@ AND NODE_TYPE = 15
 ###  <a name="bkmk_ReplaceExtend"></a> Основные сведения о работе операций замены и расширения  
  Добавляя новые данные в модель временных рядов, можно указать, что делать с прежними обучающими данными — расширить или заменить их.  
   
--   **Расширить:** При расширении ряда данных службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] добавляют новые данные в конец существующего набора данных для обучения. Также увеличивается число обучающих вариантов.  
+-   **Расширить:** При расширении ряда данных [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] добавляют новые данные в конец существующих обучающих данных. Также увеличивается число обучающих вариантов.  
   
      Увеличение количества обучающих вариантов полезно, чтобы модель постоянно обновлялась новыми данными. Например, если необходимо создать растущий с течением времени обучающий набор, можно просто дополнить модель.  
   

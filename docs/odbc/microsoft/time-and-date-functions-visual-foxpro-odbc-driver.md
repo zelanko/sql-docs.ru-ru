@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c1fb63b7-af50-45d6-8dec-ae6ea7119527
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cf8e7552faf9567dab25ee3dc5b7b293034faef0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 537af13edf943e27a634d3a8ba4f0f85c645251f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62632774"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912405"
 ---
 # <a name="time-and-date-functions-visual-foxpro-odbc-driver"></a>Функции даты и времени (драйвер ODBC для Visual FoxPro)
 В следующей таблице перечислены ODBC функций даты и времени поддерживаются драйвером Visual FoxPro ODBC; Если Visual FoxPro грамматики для той же функции отличается от синтаксиса ODBC, Visual FoxPro эквивалентное отображаются.  
@@ -35,11 +34,11 @@ ms.locfileid: "62632774"
 |Функция DAYNAME *(выражение_даты)*|CDOW *(выражение_даты)*|  
 |DAYOFMONTH (*выражения «выражение_даты»)*|ДЕНЬ *)*|  
 |ЧАС *(выражение_времени)*||  
-|MINUTE *(time_exp)*||  
+|МИНУТЫ *(выражение_времени)*||  
 |МЕСЯЦ *(выражение_времени)*||  
-|MONTHNAME *(date_exp)*|CMONTH *(date_exp)*|  
+|MONTHNAME *(выражение_даты)*|CMONTH *(выражение_даты)*|  
 |ТЕПЕРЬ *)*|DATETIME *)*|  
-|ВТОРОЙ *(выражение_времени)*|SEC *(time_exp)*|  
+|ВТОРОЙ *(выражение_времени)*|СЕК *(выражение_времени)*|  
 |НЕДЕЛЯ *(выражение_даты)*||  
 |ГОД *(выражение_даты)*||  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 513f071a-d5e6-4ed5-acca-269bf76323c5
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: d6daf0e74ff8c7a7c65441bc98afc9c47964ef0b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cd8dfbd7aa4205424c45861f6ada1113f76d344e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62633029"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029170"
 ---
 # <a name="edit-type-mapping-sybasetosql"></a>Изменение сопоставления типов (SybaseToSQL)
 **Изменение сопоставления типа** диалоговое окно позволяет указать, как типы сопоставляются между объектами базы данных источника и назначения.  
@@ -34,10 +33,10 @@ ms.locfileid: "62633029"
   
 Если тип данных имеет переменную длину, следующие поля будут отображаться на вкладке **типа источника**:  
   
-**От**  
+**From**  
 Укажите минимальную длину для данного сопоставления. Например, для **nchar** тип данных, можно ввести 10, чтобы указать, что это сопоставление для диапазона, начиная с **nchar(10) в формате**.  
   
-**Чтобы**  
+**Задача**  
 Укажите максимальную длину для данного сопоставления. Например, для **nchar** тип данных, можно ввести 20, чтобы указать, что это сопоставление для диапазона, заканчивая **nchar(20)** .  
   
 **Тип целевого объекта**  

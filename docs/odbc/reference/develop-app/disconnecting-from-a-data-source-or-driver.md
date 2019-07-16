@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 83dbf0bf-b400-41fb-8537-9b016050dc3c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2189c0fcc65fd4192e94da140e2d55ac86826137
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a01220b6a4f15ee3770b844f41e7ddc5399f5f86
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62936003"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039759"
 ---
 # <a name="disconnecting-from-a-data-source-or-driver"></a>Отключение от источника данных или драйвера
 Когда приложение завершило использование источника данных, он вызывает **SQLDisconnect**. **SQLDisconnect** освобождает все инструкции, выделенных для подключения и отсоединяет драйвер от источника данных. Он возвращает ошибку, если транзакция находится в процессе.  

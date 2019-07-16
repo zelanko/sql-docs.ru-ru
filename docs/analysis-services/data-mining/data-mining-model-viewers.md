@@ -1,5 +1,5 @@
 ---
-title: Средства просмотра моделей интеллектуального анализа данных | Документы Microsoft
+title: Средства просмотра моделей интеллектуального анализа данных | Документация Майкрософт
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7db05fc43c7054e36d38eebe1047fe5c22802dab
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017951"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183720"
 ---
 # <a name="data-mining-model-viewers"></a>Средства просмотра моделей интеллектуального анализа данных
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "34017951"
   
      Оно автоматически создает граф временного ряда и предоставляет пять прогнозов.  
   
-2.  Затем та же модель отображается с помощью **средства просмотра деревьев содержимого общего вида (Майкрософт)**.  
+2.  Затем та же модель отображается с помощью **средства просмотра деревьев содержимого общего вида (Майкрософт)** .  
   
      С левой стороны в стандартном средстве просмотра отображается список всех узлов в выбранной модели интеллектуального анализа данных. Щелкнув узел, можно просмотреть его содержимое на правой панели.  
   
@@ -46,35 +46,35 @@ ms.locfileid: "34017951"
   
  Можно также вручную ввести *запрос содержимого* на языке расширений интеллектуального анализа данных, чтобы получить всю информацию, представленную в средстве просмотра. Дополнительные сведения см. в разделе [Запросы содержимого (интеллектуальный анализ данных)](../../analysis-services/data-mining/content-queries-data-mining.md).  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  В следующих разделах более подробно описано каждое из средств просмотра, а также даны рекомендации по интерпретации данных в них.  
   
- [Просмотр модели в средстве просмотра деревьев (Microsoft)](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
+ [Просмотр модели с помощью средства просмотра деревьев (Майкрософт)](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
  Описывает средство просмотра деревьев [!INCLUDE[msCoName](../../includes/msconame-md.md)] . В этом средстве просмотра отображаются модели интеллектуального анализа данных, которые формируются с помощью алгоритма дерева принятия решений [!INCLUDE[msCoName](../../includes/msconame-md.md)] и алгоритма линейной регрессии [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
- [Просмотр модели в средстве просмотра кластеров (Microsoft)](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
+ [Просмотр модели с помощью средства просмотра кластеров (Майкрософт)](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
  Описывает средство просмотра кластеров [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Это средство просмотра отображает модели интеллектуального анализа данных, которые построены по алгоритму кластеризации [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
- [Просмотр модели в средство просмотра временных рядов](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
+ [Просмотр модели с помощью средства просмотра временных рядов (Майкрософт)](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
  Описывает средство просмотра временных рядов [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Это средство просмотра отображает модели, которые построены по алгоритму временных рядов [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
- [Просмотр модели с помощью средства просмотра упрощенного алгоритма Байеса упрощенного Microsoft](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
+ [Просмотр модели с помощью средства просмотра упрощенного алгоритма Байеса (Майкрософт)](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
  Описывает средство просмотра упрощенных алгоритмов Байеса [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Это средство просмотра отображает модели интеллектуального анализа данных, которые построены по упрощенному алгоритму Байеса [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
- [Просмотр модели в средство просмотра кластеризации последовательностей (Майкрософт)](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+ [Просмотр модели с помощью средства просмотра кластеризации последовательностей (Майкрософт)](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
  Описывает средство просмотра кластеризации последовательностей [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Это средство просмотра отображает модели интеллектуального анализа данных, которые построены по алгоритму кластеризации последовательностей [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
- [Просмотр модели с помощью средства просмотра правил взаимосвязи (Microsoft)](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
+ [Просмотр модели с помощью средства просмотра правил ассоциации (Майкрософт)](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
  Описывает средство просмотра правил взаимосвязи [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Это средство просмотра отображает модели интеллектуального анализа данных, которые построены по алгоритму взаимосвязи [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
- [Просмотр модели с помощью средства просмотра нейронных сетей Майкрософт](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-neural-network-viewer.md)  
+ [Просмотр модели с помощью средства просмотра нейронных сетей (Майкрософт)](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-neural-network-viewer.md)  
  Описывает средство просмотра нейронных сетей [!INCLUDE[msCoName](../../includes/msconame-md.md)] . В этом средстве просмотра отображаются модели интеллектуального анализа данных, построенные с помощью алгоритма нейронной сети [!INCLUDE[msCoName](../../includes/msconame-md.md)] , включая модели, в которых используется алгоритм логистической регрессии [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
- [Просмотр модели с помощью средства просмотра деревьев содержимого Microsoft Generic](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)  
+ [Просмотр модели с помощью средства просмотра деревьев содержимого общего вида (Майкрософт)](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)  
  Описывает подробные сведения, доступные в общем средстве просмотра для всех моделей интеллектуального анализа данных, и содержит примеры интерпретации информации для каждого алгоритма.  
   
 ## <a name="see-also"></a>См. также  
- [Алгоритмы интеллектуального анализа данных & #40; Службы Analysis Services — Интеллектуальный анализ данных & #41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Алгоритмы интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Конструктор интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-designer.md)  
   
   

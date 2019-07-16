@@ -10,13 +10,12 @@ ms.reviewer: alayu; sstein
 ms.topic: tutorial
 author: kevcunnane
 ms.author: kcunnane
-manager: jroth
-ms.openlocfilehash: 2f031ec68cc6ae342b8bac51c450ee40a9df0555
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c7c247e739a9b983dd715844262794bd18fca9cf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797961"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959087"
 ---
 # <a name="tutorial-create-an-azure-data-studio-extension"></a>Учебник. Создайте расширение Studio данных Azure
 
@@ -31,7 +30,7 @@ ms.locfileid: "66797961"
 > * Пакет расширения
 > * Публикация расширения в marketplace
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 Azure Data Studio лежит та же платформа, как Visual Studio Code, чтобы расширения для Azure Data Studio строятся с использованием Visual Studio Code. Чтобы начать работу, необходимы следующие компоненты:
 

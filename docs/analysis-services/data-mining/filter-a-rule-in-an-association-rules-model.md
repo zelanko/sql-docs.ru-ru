@@ -1,5 +1,5 @@
 ---
-title: Фильтр правила в ассоциации модели правил | Документы Microsoft
+title: Фильтр правила в ассоциации модели правил | Документация Майкрософт
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,10 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 28d3601b18f792b957627e63630806453d971110
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209993"
 ---
 # <a name="filter-a-rule-in-an-association-rules-model"></a>Фильтрация правила в модели ассоциативных правил
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +39,7 @@ ms.lasthandoff: 05/10/2018
   
 5.  В поле **Минимальная важность**повысьте значение важности, чтобы отобразить меньше правил, или понизьте значение, чтобы показать больше правил.  
   
-6.  Для функции **Показать**выберите один из следующих параметров: **Отобразить имя и значение атрибута**, **Отобразить только имя атрибута**или **Отобразить только значение атрибута**.  
+6.  Для **Показать**, выберите один из следующих вариантов: **Показать имя и значение атрибута**, **отобразить только имя атрибута**, или **отобразить только значение атрибута**.  
   
 7.  В поле **Максимальное число строк**повысьте значение, чтобы увеличить общее количество правил, удовлетворяющих указанным условиям, или понизьте значение, чтобы ограничить число возвращаемых правил. Правила упорядочиваются по вероятности, поэтому можно исключить дополнительные правила, удовлетворяющие условиям для вероятности или важности.  
   
@@ -51,11 +52,11 @@ ms.lasthandoff: 05/10/2018
   
 ### <a name="create-a-query-on-the-itemsets-in-an-association-model"></a>Создание запроса к наборам элементов в модели взаимосвязей  
   
--   [Примеры запросов к модели взаимосвязей](../../analysis-services/data-mining/association-model-query-examples.md)  
+-   [Примеры запросов моделей взаимосвязей](../../analysis-services/data-mining/association-model-query-examples.md)  
   
 ## <a name="see-also"></a>См. также  
- [Задачи средства просмотра модели интеллектуального анализа данных и инструкции по](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
- [Просмотр модели с помощью средства просмотра правил взаимосвязи (Microsoft)](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)   
- [Занятие 3: Построение сценария потребительской корзины & #40; учебник по интеллектуальному анализу данных — средний & #41;](http://msdn.microsoft.com/library/651eef38-772e-4d97-af51-075b1b27fc5a)  
+ [Задачи и инструкции средства просмотра моделей интеллектуального анализа данных](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
+ [Просмотр модели с помощью средства просмотра правил ассоциации (Майкрософт)](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)   
+ [Занятие 3. Построение сценария потребительской корзины &#40;средний уровень учебник по интеллектуальному анализу данных&#41;](http://msdn.microsoft.com/library/651eef38-772e-4d97-af51-075b1b27fc5a)  
   
   

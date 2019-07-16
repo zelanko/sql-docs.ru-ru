@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7da7068d-6388-465a-b708-a2f27ded1efe
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: fade74c6ecebe55c859a79fa02cfbcc5a44df656
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 128d62aceec5a847e721d6227372e1ff115706ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811122"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078231"
 ---
 # <a name="change-data-capture-stored-procedures-transact-sql"></a>Хранимые процедуры системы отслеживания измененных данных (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

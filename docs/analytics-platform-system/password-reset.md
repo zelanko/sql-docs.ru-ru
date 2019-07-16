@@ -2,19 +2,18 @@
 title: Сброс пароля — Analytics Platform System | Документация Майкрософт
 description: На странице сброса пароля позволяет изменить пароль для учетных записей администратора, используемых Analytics Platform System.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 63fbb097bf1ca926223ce7c0114c8da5d10cd969
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5fb3bbb5adba5754c220c34503a22656f6da39c5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62639956"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960460"
 ---
 # <a name="password-reset---analytics-platform-system"></a>Сброс пароля — Analytics Platform System
 **Сброса пароля** страница позволяет изменить пароль для учетных записей администратора, используемых Analytics Platform System.  

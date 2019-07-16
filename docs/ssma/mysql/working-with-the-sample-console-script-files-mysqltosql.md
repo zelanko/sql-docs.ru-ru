@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7e6aaa8a-5f5c-414d-9fb8-21e56b9ffaef
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 7d00385c7346d7602719326dbe700f7cd44c63fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6dacba33ecbaa7bdeb51d0a31438c3cbdb21969f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63288572"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904894"
 ---
 # <a name="working-with-the-sample-console-script-files-mysqltosql"></a>Работа с образцами файлов сценария консоли (MySQLToSQL)
 Справочник по пользовательскому и использовании были предоставлены несколько образцы файлов вместе с продуктом. В этом разделе описывается способ легко настроить эти сценарии в соответствии с потребностями пользователя.  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 808661eb-0d7c-4e6d-8e40-9dc3bef3d77a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e821c98f5d390e0eb30dcada9a816c6e29d9d482
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bc5b2e2bce410309656bad5591a3df90781cc8bc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66707558"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932228"
 ---
 # <a name="mode-property-ado"></a>Свойство Mode (ADO)
 Указывает доступные разрешения для изменения данных в [подключения](../../../ado/reference/ado-api/connection-object-ado.md), [записи](../../../ado/reference/ado-api/record-object-ado.md), или [Stream](../../../ado/reference/ado-api/stream-object-ado.md) объекта.  

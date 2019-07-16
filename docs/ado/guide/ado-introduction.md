@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c5b3a134-de22-4e9c-9489-9a1cc7a5dcfa
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: df0132f1702da688cc599253dcd6a044be940b4c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 42bae7f340f7f46bb5a57498b1c846f6d532ff20
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701631"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927129"
 ---
 # <a name="ado-overview-and-benefits"></a>Обзор ADO и преимущества
 ActiveX Data Objects (ADO) — это простой в использовании, высокоуровневый интерфейс для OLE DB. OLE DB — это интерфейс низкого уровня, высокой производительности, для различных хранилищ данных. ADO и OLE DB можно работать с реляционных (табличных) и нереляционных (иерархические или потока) данных.

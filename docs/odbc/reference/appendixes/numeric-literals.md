@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9dc23656-61e1-4b62-a07f-64ab716e45d2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1b2effb3900e4277d82edee70439628c8adc837d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3409376b5fd2f71ecff8d510d17ce3771e63fa73
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63181321"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67990695"
 ---
 # <a name="numeric-literals"></a>Числовые литералы
 Числовые литералы используются в том случае, если числовые значения данных хранятся в символьных строках. Для преобразования числовых данных SQL в строку SQL_C_CHAR или преобразование числовых данных C в строку SQL_CHAR или SQL_VARCHAR синтаксисе числовых литералов используется для указания того, что содержится в целевом объекте. Для преобразования числовых, хранящихся в виде строки SQL_C_CHAR к числовым данным SQL или числовыми, хранящихся в виде строки SQL_CHAR к числовым данным C такой синтаксис используется для проверки того, что содержится в источнике.  

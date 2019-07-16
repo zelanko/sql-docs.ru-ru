@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 5cfb2590ea31003446bcb7027049e70924fd3f16
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036855"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68185758"
 ---
-# <a name="lesson-1-preparing-the-analysis-services-database-basic-data-mining-tutorial"></a>Урок 1. Подготовка базы данных служб Analysis Services (учебник по интеллектуальному анализу данных — начальный уровень)
+# <a name="lesson-1-preparing-the-analysis-services-database-basic-data-mining-tutorial"></a>Урок 1. Подготовка базы данных Analysis Services (учебник интеллектуального анализа данных)
   Вы — новый сотрудник из [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] кто поручено проектирование приложения бизнес-аналитики в [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] хочет воспользоваться вашей [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] опытом в анализе данных для обнаружения интересных и перспективных сведений о покупателях велосипедов. Необходимо также спрогнозировать, какие потенциальные клиенты с наибольшей вероятностью купят велосипед в будущем.  
   
  Разработка этого приложения в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] начинается с создания в [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] из [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] проект основан на [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] шаблон проекта для многомерного моделирования и интеллектуального анализа данных. После создания проекта служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] необходимо задать один или несколько источников данных. После этого можно определить представление метаданных, называемое *представление источника данных*, из выбранных таблиц и представлений источников данных.  

@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 66329d4c25a23a6b3dbc3570723bab8aecfa3d4a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039885"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68190970"
 ---
 # <a name="instance-configuration"></a>Конфигурация экземпляра
   На странице **Конфигурация экземпляра** мастера установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно выбрать создание экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]по умолчанию или именованного экземпляра. Если экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] еще не установлен и не указано создание именованного экземпляра, то будет создан экземпляр по умолчанию.  

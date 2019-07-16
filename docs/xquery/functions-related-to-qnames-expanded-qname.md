@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b8377042-95cc-467b-9ada-fe43cebf4bc3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e95081c03a5a3f91b601e9db1ddbb24b9c5f295a
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 7c50409ea35809c52de718a8281bf76f75a5a0e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256899"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004580"
 ---
 # <a name="functions-related-to-qnames---expanded-qname"></a>Функции, связанные с QName — expanded-QName
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -114,7 +113,7 @@ SELECT * from T
 go  
 ```  
   
- Результат. Теперь элемент <`ElemQN`> типа QName имеет другое значение:  
+ Результат. Обратите внимание, что элемент <`ElemQN`> для QName тип теперь имеет новое значение:  
   
 ```  
 <Root xmlns="QNameXSD" xmlns:ns="urn">  
@@ -158,7 +157,7 @@ SELECT *
 FROM T  
 ```  
   
- В нижеследующем примере иллюстрируется попытка добавить другой элемент <`root`>, но попытка завершается неудачей, так как функция expanded-QName() не поддерживается в XML-конструкции.  
+ Следующий пример с попыткой добавляет другой <`root`> элемент но попытка завершается неудачей, так как функция expanded-QName() не поддерживается в XML-конструкции.  
   
 ```  
 update T SET xmlCol.modify('  
@@ -166,7 +165,7 @@ insert <root>{expanded-QName("http://ns","someLocalName")}</root> as last into /
 go  
 ```  
   
- Решением является вставка в экземпляр значения элемента <`root`> и его последующая модификация. В этом примере используется начальное значение нуль при добавлении элемента <`root`>. Коллекция XML-схем в этом примере разрешает значение нуль для элемента <`root`>.  
+ Решением является вставка экземпляра со значением для <`root`> элемент и изменить его. В этом примере используется начальное значение нуль при <`root`> вставляется элемент. Коллекции схем XML в этом примере разрешает значение нуль для <`root`> элемента.  
   
 ```  
 update T SET xmlCol.modify('  

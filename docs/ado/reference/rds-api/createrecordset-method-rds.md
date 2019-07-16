@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e0ac86f4ceac4c806bfa3f6df5cc9e2024b4d03d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3c65f7d415864b169b683e0c9ab858506d31783b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712585"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964517"
 ---
 # <a name="createrecordset-method-rds"></a>Метод CreateRecordset (служба удаленных рабочих столов)
 Создает пустой, отключен [записей](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -49,9 +48,9 @@ object.CreateRecordset(ColumnInfos)
   
 |attribute|Описание|  
 |---------------|-----------------|  
-|Имя|Имя заголовка столбца.|  
-|Тип|Целое число типа данных.|  
-|Размер|Целое число от ширины в символах, независимо от типа данных.|  
+|Name|Имя заголовка столбца.|  
+|Type|Целое число типа данных.|  
+|Size|Целое число от ширины в символах, независимо от типа данных.|  
 |Допускает значения NULL|Логическое значение.|  
 |Масштаб (необязательно)|Этот необязательный атрибут определяет масштаб для числовых полей. Если это значение не указано, числовые значения будут усечены масштабом, равным трем. Не влияет на точность, но количество цифр после десятичной запятой будет усечено до трех.|  
   

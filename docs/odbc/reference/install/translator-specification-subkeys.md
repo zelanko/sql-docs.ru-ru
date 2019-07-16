@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 3c0edeee-d43a-4466-a177-bf2d2435707a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a3c5ad31437cf2639d6b8478d173c7522fa3e9fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ec94f3e02b720617e8f7369b12a916c2bbbe7b16
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63272942"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093799"
 ---
 # <a name="translator-specification-subkeys"></a>Подразделы спецификаций преобразователей
 Каждого из них перечислены в подраздел ODBC-преобразователей содержит подраздел свои собственные. Этот подраздел содержит имя, совпадающее с именем соответствующего значения в подразделе переводчиков ODBC. Значения в этом подразделе перечислены полные пути переводчик и библиотеках установки translator и счетчик использования. Как показано в следующей таблице, используются форматы значений.  
   
-|Имя|Тип данных|Данные|  
+|Name|Тип данных|Data|  
 |----------|---------------|----------|  
 |Translator|REG_SZ|*путь к библиотеке DLL перевода*|  
 |Установка|REG_SZ|*путь к библиотеке DLL программы установки*|  

@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 02295794-397d-4445-a3e3-971b25e7068d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7bbcc576ab0ff38adde9042a713e0dfd0c7d54be
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: dcf68e23652eb81e163722f69d9645c7502af5b9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67583286"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106526"
 ---
 # <a name="sysspcdccleanupchangetable-transact-sql"></a>sys.sp_cdc_cleanup_change_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,12 +45,12 @@ sys.sp_cdc_cleanup_change_table
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @capture_instance = ] '*capture_instance*'  
+ [ @capture_instance =] '*capture_instance*"  
  Имя экземпляра системы отслеживания, связанного с таблицей изменений. *capture_instance* — **sysname**, не имеет значения по умолчанию и не может иметь значение NULL.  
   
  *capture_instance* необходимо присвоить имя экземпляра отслеживания, который существует в текущей базе данных.  
   
- [ @low_water_mark = ] *low_water_mark*  
+ [ @low_water_mark =] *low_water_mark*  
  — Это порядковый номер транзакции в журнале (LSN), для использования в качестве нового значения нижнего предела для *экземпляра отслеживания*. *low_water_mark* — **binary(10)** , не имеет значения по умолчанию.  
   
  Если значение является не нулевым, оно должно отображаться в качестве значения start_lsn текущей записи в [cdc.lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) таблицы. Если в таблице cdc.lsn_time_mapping есть несколько записей, соответствующих одному моменту времени, на который ссылается указатель новой нижней конечной точки, то данному указателю присваивается наименьшее значение номера LSN данной группы записей.  

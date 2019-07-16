@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 996c1321-c926-4f57-8297-85c8c20de974
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b784553302bf9df30750f239291ca179ecf6cf74
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2f0c76a668c7191467e9f66ba48c486aceea16df
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701877"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924348"
 ---
 # <a name="retrieving-resultsets-into-streams"></a>Извлечение результирующих наборов в потоки
 Вместо получения результатов в традиционных **записей** объекта ADO вместо этого можно получить результаты запроса в поток. ADO **Stream** объекта (или другим объектом, поддерживающим COM- **IStream** интерфейса, например ASP **запроса** и **ответа** объектов ) можно использовать для хранения этих результатов. Эта функция применяется для получения результатов в формате XML. С помощью SQL Server, например, XML результаты могут быть возвращены несколькими способами, например с помощью предложения FOR XML с помощью SQL-запрос SELECT или с помощью запроса XPath.  

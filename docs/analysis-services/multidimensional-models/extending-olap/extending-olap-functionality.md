@@ -1,5 +1,5 @@
 ---
-title: Расширение функциональных возможностей OLAP | Документы Microsoft
+title: Расширение функциональных возможностей OLAP | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 06b73c0b9f8b4c2d93bb81762ebec442f94e7198
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021421"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68177786"
 ---
 # <a name="extending-olap-functionality"></a>Расширение функциональных возможностей OLAP
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -24,10 +24,10 @@ ms.locfileid: "34021421"
   
  Персонализации представляют собой пользовательские объекты, которые могут добавляться в куб для обеспечения функций, которые отличаются от пользователя к пользователю. Персонализации не являются постоянными объектами куба, но представляют собой объекты, которые динамически применяются клиентским приложением во время сеанса конкретного пользователя. Например, изменение валют в денежном выражении в зависимости от пользователя, который осуществляет доступ к данным, предоставление индивидуальных ключевых показателей эффективности или целевых списков предложений для постоянных покупателей в сети.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Расширение OLAP через личные настройки](../../../analysis-services/multidimensional-models/extending-olap/extending-olap-through-personalizations.md)  
   
- [Модули персонализации служб аналитики](../../../analysis-services/multidimensional-models/extending-olap/analysis-services-personalization-extensions.md)  
+ [Расширения персонализации служб Analysis Services](../../../analysis-services/multidimensional-models/extending-olap/analysis-services-personalization-extensions.md)  
   
  [Определение хранимых процедур](../../../analysis-services/multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   

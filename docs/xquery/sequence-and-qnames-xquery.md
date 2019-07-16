@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3593ac26-dd78-4bf0-bb87-64fbcac5f026
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0e7c73e33a1f19acb2158ced848c220b2b7af447
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: fbb20c9e14c4e76b8862a23e8d758fcbba94da7f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254159"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946348"
 ---
 # <a name="sequence-and-qnames-xquery"></a>Последовательность и QNames (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -141,7 +140,7 @@ WHERE ProductModelID=7;
 |fn|http://www.w3.org/2004/07/xpath-functions|  
 |(без префикса)|`urn:schemas-microsoft-com:xml-sql`|  
 |sqltypes|https://schemas.microsoft.com/sqlserver/2004/sqltypes|  
-|xml|`http://www.w3.org/XML/1998/namespace`|  
+|Xml|`http://www.w3.org/XML/1998/namespace`|  
 |(без префикса)|`https://schemas.microsoft.com/sqlserver/2004/SOAP`|  
   
  У всех создаваемых баз данных **sys** коллекции XML-схем. Эти схемы зарезервированы, поэтому к ним можно обратиться из любой пользовательской коллекции XML-схем.  

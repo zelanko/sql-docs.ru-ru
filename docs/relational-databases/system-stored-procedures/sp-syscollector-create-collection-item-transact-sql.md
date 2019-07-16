@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 60dacf13-ca12-4844-b417-0bc0a8bf0ddb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1e155fb51bd5f78a3c4a639e9233746131ddf6f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7ba3753a18d8e79848b0674e4738f2d2b811143e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63004145"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032675"
 ---
 # <a name="spsyscollectorcreatecollectionitem-transact-sql"></a>sp_syscollector_create_collection_item (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +46,10 @@ sp_syscollector_create_collection_item
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @collection_set_id = ] *collection_set_id*  
+ [ @collection_set_id =] *collection_set_id*  
  Уникальный локальный идентификатор набора элементов сбора. *collection_set_id* — **int**.  
   
- [ @collector_type_uid = ] '*collector_type_uid*'  
+ [ @collector_type_uid =] '*аргумент collector_type_uid*"  
  Идентификатор GUID, идентифицирующий тип сборщика, используемый для этого элемента *аргумент collector_type_uid* — **uniqueidentifier** без значения по умолчанию... Чтобы получить список типов сборщиков, выполните запрос системного представления syscollector_collector_types.  
   
  [ @name =] '*имя*"  

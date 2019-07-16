@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: b5082e81-1fee-4e2c-b567-5412eaee41c1
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: '>=aps-pdw-2016|| = azure-sqldw-latest ||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cae28e453e37f6f2d91826aefef265b7991ef51d
-ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
+ms.openlocfilehash: ee626b9eef8cf2f2e80217b2a3709271a227f293
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67263250"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67906127"
 ---
 # <a name="sysfnhelpcollations-transact-sql"></a>sys.fn_helpcollations (Transact-SQL)
 
@@ -48,7 +47,7 @@ fn_helpcollations ()
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|Имя|**sysname**|Имя стандартных параметров сортировки|  
+|Name|**sysname**|Имя стандартных параметров сортировки|  
 |Описание|**nvarchar(1000)**|Описание параметров сортировки|  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает параметры сортировки Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] также поддерживает ограниченное число (< 80) из параметров сортировки вызван [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] параметры сортировки, которые были разработаны до появления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживаемые параметры сортировки Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] параметры сортировки по-прежнему поддерживаются для обеспечения обратной совместимости, но не должны использоваться для новых разработок. Дополнительные сведения о параметрах сортировки Windows см. в статье [Имя параметров сортировки Windows (Transact-SQL)](../../t-sql/statements/windows-collation-name-transact-sql.md). Дополнительные сведения о параметрах сортировки см. в разделе [Поддержка параметров сортировки и Юникода](../../relational-databases/collations/collation-and-unicode-support.md).  
