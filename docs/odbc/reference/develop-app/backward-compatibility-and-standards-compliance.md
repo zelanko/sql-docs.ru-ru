@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b5eee7be-28ed-4467-8cf1-2205e2010a53
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dc89fd8d43df4b906f47ab1ef6b6932a5a814a86
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 7588859abb8298a9191409e5c05df1949e85ba89
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67794109"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909870"
 ---
 # <a name="backward-compatibility-and-standards-compliance"></a>Обратная совместимость и соответствие стандартам
 Обратная совместимость — это способность новых компонентов ODBC для работы с старые компоненты ODBC. В следующих разделах рассматривается, как эти компоненты были затронуты изменениями в ODBC *3.x*. Сведения, содержащиеся в них, в основном устраняет записи ODBC *3.x* приложения и как назад обрабатываются проблемы совместимости с драйверами ODBC. Дополнительные инструкции о том, как обратной совместимости неполадках записи ODBC *3.x* драйвера, см. в разделе [приложение G: Рекомендации по драйверов для обеспечения обратной совместимости](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md).  

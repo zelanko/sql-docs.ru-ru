@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ee7162b5-e11f-4a0e-a09c-1878814dbbbd
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 2e48337afee5320355eb71025bffb972b85e3358
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 2b3af47a1c09160faab97494d9749fd67c051cd4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793611"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898412"
 ---
 # <a name="xplogininfo-transact-sql"></a>xp_logininfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +59,7 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**Имя учетной записи**|**sysname**|Полностью уточненное имя учетной записи Windows.|  
-|**type**|**char(8)**|Тип учетной записи Windows. Допустимые значения: **пользователя** или **группы**.|  
+|**type**|**значение типа char(8)**|Тип учетной записи Windows. Допустимые значения: **пользователя** или **группы**.|  
 |**привилегий**|**char(9)**|Права доступа к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Допустимые значения: **администратора**, **пользователя**, или **null**.|  
 |**Сопоставленное имя входа**|**sysname**|Для учетных записей пользователей с пользовательскими привилегиями столбец **сопоставить имя входа** показано сопоставленное имя входа, что [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пытается использовать при добавлении входа с использованием этой учетной записи с помощью правил сопоставления с доменным именем перед ним.|  
 |**Путь разрешения**|**sysname**|Членство в группе, разрешающее доступ к учетной записи.|  

@@ -2,19 +2,18 @@
 title: Резервное копирование и восстановление - Parallel Data Warehouse | Документация Майкрософт
 description: Описывает, каким образом данные резервном копировании и восстановлении для Parallel Data Warehouse (PDW). Операции резервного копирования и восстановления используются для аварийного восстановления. Резервное копирование и восстановление может также использоваться для копирования базы данных с одного устройства для другого устройства.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 01/19/2019
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 0b95d18eb38bbe0012235304747ca80b3dc19a79
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d322eb27a92c644afa834371d5f38b3d9d7ad28b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63200951"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961402"
 ---
 # <a name="backup-and-restore"></a>Резервное копирование и восстановление
 

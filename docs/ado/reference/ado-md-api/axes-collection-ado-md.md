@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 072fb21a-ec0f-4b02-9022-1cef3ad4bfff
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f30d7fed3748e954410272d8c1a019194c335ea1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6c06faf6327d60be823ce9d99215655b5badf5e3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66709943"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67947409"
 ---
 # <a name="axes-collection-ado-md"></a>Коллекция Axes (многомерные объекты ADO)
 Содержит [оси](../../../ado/reference/ado-md-api/axis-object-ado-md.md) объектами, которые определяют набор ячеек.  

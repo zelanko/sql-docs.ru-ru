@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2de8fd02-0f49-4d47-8bd3-397726d1c644
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 450a3f88b58048bf3167997fffec242f9a3b9351
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bb1bda7808b8875da5982b70e749f45ec15e5958
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66695664"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919349"
 ---
 # <a name="createrecordset-method-example-vb"></a>Пример метода CreateRecordset (Visual Basic)
 Можно создать [записей](../../../ado/reference/ado-api/recordset-object-ado.md) и укажите сведения о столбце. Затем можно вставить данные в **записей** объекта; в базовые буферы набора строк операции вставки.  

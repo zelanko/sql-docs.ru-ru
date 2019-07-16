@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d33467a5-5a56-450d-98c1-c3ce6f9f103c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d8103da63d91c5d59d1bfc4ac5b738ba8f333d1e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0ae1a96f2f5a72f354e376faa3e9e7370f9fcb92
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719196"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932472"
 ---
 # <a name="getrows-method-example-jscript"></a>Пример метода GetRows (JScript)
 В этом примере используется [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) метод для извлечения всех строк *Custiomers* таблицу [записей](../../../ado/reference/ado-api/recordset-object-ado.md) и заполняют массив полученные данные. **GetRows** метод возвратит меньше, чем требуемое число строк в двух случаях: либо если [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) был достигнут, или если **GetRows** попытка получить запись, которая была удалена другим пользователем. Функция возвращает **False** только в том случае, если происходит второй вариант. Вырежьте и вставьте следующий код в блокноте или другом текстовом редакторе и сохраните его в **GetRowsJS.asp**.  

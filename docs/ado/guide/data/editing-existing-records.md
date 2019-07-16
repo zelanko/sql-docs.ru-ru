@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 17ce1263-5897-452a-9ea5-c7f96b33df65
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6bd1e02bf406906cc8a893ccee66a408b38510f3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ce8679c0c7b20dfaa641918f0447a2f77bfd474a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702066"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925443"
 ---
 # <a name="editing-existing-records"></a>Изменение существующих записей
 Для изменения существующих записей, перейдите к строке, необходимо отредактировать и изменить **значение** свойства полей, которые вы хотите изменить. Дополнительные сведения о **поле** объекта **значение** свойство, см. в разделе [проверки данных](../../../ado/guide/data/examining-data.md). В зависимости от типа курсора, будет использовать **обновление** или **UpdateBatch** для отправки изменений в источнике данных. Дополнительные сведения см. в разделе [обновление и сохранение данных](../../../ado/guide/data/updating-and-persisting-data.md).  
