@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ca12767f-0ae5-4652-b523-c23473f100a1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 97964286b3281eee4e5b6850065c85034628bfdc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c39665f54a915282a6c59fe7d57b24d0cde0a5e7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62994401"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68045929"
 ---
 # <a name="spcertifyremovable-transact-sql"></a>sp_certify_removable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ sp_certify_removable [ @dbname= ] 'dbname'
 ## <a name="arguments"></a>Аргументы  
 `[ @dbname = ] 'dbname'` Указывает проверяемую базу данных. *DBName* — **sysname**.  
   
-`[ @autofix = ] 'auto'` Делает системного администратора владельцем базы данных и все объекты базы данных и удаляет все созданные пользователем базы данных пользователей и разрешений не по умолчанию. *Автоматическое* — **nvarchar(4)**, значение по умолчанию NULL.  
+`[ @autofix = ] 'auto'` Делает системного администратора владельцем базы данных и все объекты базы данных и удаляет все созданные пользователем базы данных пользователей и разрешений не по умолчанию. *Автоматическое* — **nvarchar(4)** , значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  

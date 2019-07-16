@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: 118a7cac-4c0d-44fd-b63e-3d542932d239
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f4d8f3684f4b01a17b6c0ce41ddb8e2fc1ab63e8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3e52ecc471255db772fddc46585f635fbc6cb182
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794362"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67987550"
 ---
 # <a name="using-ado-with-sql-server-native-client"></a>Использование ADO с собственным клиентом SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "47794362"
  Чтобы позволить ADO использовать новые возможности последних версий [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], были внесены некоторые улучшения в поставщик OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], расширяющие базовую функциональность OLE DB. Эти улучшения позволяют приложениям ADO использовать новые возможности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и применять два типа данных, появившихся в [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]: **xml** и **udt**. Эти улучшения также используют усовершенствования типов данных **varchar**, **nvarchar** и **varbinary**. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Собственный клиент добавляет свойство инициализации SSPROP_INIT_DATATYPECOMPATIBILITY к набору свойств DBPROPSET_SQLSERVERDBINIT для использования приложениями ADO, чтобы новые типы данных представлены в совместимым с ADO образом. Кроме того [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поставщик OLE DB для собственного клиента также определяет новое ключевое слово строки подключения с именем **DataTypeCompatibility** , задается в строке подключения.  
   
 > [!NOTE]  
->  Существующие приложения ADO могут обращаться к полям XML определяемых пользователем типов, текстовым полям больших значений и полям двоичных значений, а также обновлять их значения с помощью поставщика SQLOLEDB. Новые типы данных **varchar(max)**, **nvarchar(max)** и **varbinary(max)** увеличенного размера возвращаются как типы ADO **adLongVarChar**, **adLongVarWChar** и **adLongVarBinary** соответственно. XML-столбцы возвращаются как **adLongVarChar**, а столбцы пользовательских типов возвращаются как **adVarBinary**. Тем не менее если вы используете [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поставщика OLE DB для собственного клиента (SQLNCLI11) вместо SQLOLEDB, необходимо обязательно установите **DataTypeCompatibility** ключевое слово «80», чтобы новые типы данных правильно сопоставлялись данных ADO типы.  
+>  Существующие приложения ADO могут обращаться к полям XML определяемых пользователем типов, текстовым полям больших значений и полям двоичных значений, а также обновлять их значения с помощью поставщика SQLOLEDB. Новые типы данных **varchar(max)** , **nvarchar(max)** и **varbinary(max)** увеличенного размера возвращаются как типы ADO **adLongVarChar**, **adLongVarWChar** и **adLongVarBinary** соответственно. XML-столбцы возвращаются как **adLongVarChar**, а столбцы пользовательских типов возвращаются как **adVarBinary**. Тем не менее если вы используете [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поставщика OLE DB для собственного клиента (SQLNCLI11) вместо SQLOLEDB, необходимо обязательно установите **DataTypeCompatibility** ключевое слово «80», чтобы новые типы данных правильно сопоставлялись данных ADO типы.  
   
 ## <a name="enabling-sql-server-native-client-from-ado"></a>Включение собственного клиента SQL Server из ADO  
  Чтобы включить использование [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, приложения ADO должны реализовать следующие ключевые слова в строке подключения:  

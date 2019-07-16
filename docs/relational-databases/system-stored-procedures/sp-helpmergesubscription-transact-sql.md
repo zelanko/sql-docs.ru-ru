@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: da564112-f769-4e67-9251-5699823e8c86
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4643cfc08db68e5369cfca25d2de76d314ffb347
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 0e5f044482d3e46e4e20279a437b8d9459d1d3bd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530676"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68002640"
 ---
 # <a name="sphelpmergesubscription-transact-sql"></a>sp_helpmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,17 +43,17 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'` — Имя публикации. *Публикация* — **sysname**, значение по умолчанию **%**. Публикация уже должна существовать и соответствовать правилам идентификаторов. Если значение равно NULL или **%**, возвращаются сведения обо всех публикациях слиянием и подписках текущей базы данных.  
+`[ @publication = ] 'publication'` — Имя публикации. *Публикация* — **sysname**, значение по умолчанию **%** . Публикация уже должна существовать и соответствовать правилам идентификаторов. Если значение равно NULL или **%** , возвращаются сведения обо всех публикациях слиянием и подписках текущей базы данных.  
   
-`[ @subscriber = ] 'subscriber'` — Имя подписчика. *подписчик* — **sysname**, значение по умолчанию **%**. Если этот аргумент равен NULL или %, возвращаются сведения обо всех подписках данной публикации.  
+`[ @subscriber = ] 'subscriber'` — Имя подписчика. *подписчик* — **sysname**, значение по умолчанию **%** . Если этот аргумент равен NULL или %, возвращаются сведения обо всех подписках данной публикации.  
   
-`[ @subscriber_db = ] 'subscriber_db'` — Имя базы данных подписки. *subscriber_db*— **sysname**, значение по умолчанию **%**, которое возвращает сведения обо всех базах данных подписки.  
+`[ @subscriber_db = ] 'subscriber_db'` — Имя базы данных подписки. *subscriber_db*— **sysname**, значение по умолчанию **%** , которое возвращает сведения обо всех базах данных подписки.  
   
-`[ @publisher = ] 'publisher'` — Имя издателя. Издатель должен быть действительным сервером. *издатель*— **sysname**, значение по умолчанию **%**, который возвращает сведения обо всех издателях.  
+`[ @publisher = ] 'publisher'` — Имя издателя. Издатель должен быть действительным сервером. *издатель*— **sysname**, значение по умолчанию **%** , который возвращает сведения обо всех издателях.  
   
-`[ @publisher_db = ] 'publisher_db'` — Имя базы данных издателя. *publisher_db*— **sysname**, значение по умолчанию **%**, которое возвращает сведения обо всех базах данных издателя.  
+`[ @publisher_db = ] 'publisher_db'` — Имя базы данных издателя. *publisher_db*— **sysname**, значение по умолчанию **%** , которое возвращает сведения обо всех базах данных издателя.  
   
-`[ @subscription_type = ] 'subscription_type'` — Тип подписки. *subscription_type*— **nvarchar(15)**, и может принимать одно из следующих значений.  
+`[ @subscription_type = ] 'subscription_type'` — Тип подписки. *subscription_type*— **nvarchar(15)** , и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -79,7 +78,7 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 |**subscription_type**|**int**|Тип подписки:<br /><br /> **0** = Принудительная<br /><br /> **1** = по запросу<br /><br /> **2** = both|  
 |**priority**|**float(8)**|Число, показывающее приоритет подписки.|  
 |**sync_type**|**tinyint**|Тип синхронизации подписки.|  
-|**Описание**|**nvarchar(255)**|Короткое описание данной подписки слиянием.|  
+|**description**|**nvarchar(255)**|Короткое описание данной подписки слиянием.|  
 |**merge_jobid**|**binary(16)**|Идентификатор задания агента слияния.|  
 |**full_publication**|**tinyint**|Подписка к полной или фильтрованной публикации.|  
 |**offload_enabled**|**bit**|Указывает, установлено ли на запуск выполнение разгрузки агента репликации на подписчике. Если равно NULL, выполняется на издателе.|  
@@ -88,7 +87,7 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 |**Имя узла**|**sysname**|Значение задается, если подписка фильтруется по значению [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) функции.|  
 |**subscriber_security_mode**|**smallint**|Режим безопасности на подписчике, где **1** означает проверку подлинности Windows, и **0** означает [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности.|  
 |**subscriber_login**|**sysname**|Имя входа на подписчике.|  
-|**subscriber_password**|**sysname**|Фактический пароль подписчика никогда не возвращается. Результат скрывается "**\*\*\*\*\*\***" строка.|  
+|**subscriber_password**|**sysname**|Фактический пароль подписчика никогда не возвращается. Результат скрывается " **\*\*\*\*\*\*** " строка.|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  

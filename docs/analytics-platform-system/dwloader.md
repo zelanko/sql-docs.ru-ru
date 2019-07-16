@@ -2,19 +2,18 @@
 title: dwloader загрузчика командной строки - Parallel Data Warehouse | Документация Майкрософт
 description: dwloader является средством командной строки Parallel Data Warehouse (PDW), который загружает строки таблицы в пакетном режиме в существующую таблицу.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: df30a9b849b987b5514a1824f25736a82587da09
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dd3f005346c5faae9e02513a144d04d80857b770
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66175034"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961026"
 ---
 # <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>dwloader загрузчика командной строки для Parallel Data Warehouse
 **dwloader** является средством командной строки Parallel Data Warehouse (PDW), который загружает строки таблицы в пакетном режиме в существующую таблицу. При загрузке строк, можно добавить все строки в конец таблицы (*режим добавления* или *режиме fastappend*), будет добавлена новая строка и обновлять существующие строки (*режиме upsert*), или удалить все существующие строки перед загрузкой и затем вставить все строки в пустую таблицу (*перезагрузить режим*).  
@@ -211,7 +210,7 @@ For more information about this install option, see [Install dwloader Command-Li
 **-fh** *number_header_rows*  
 Количество строк, чтобы игнорировать в начале *source_data_file_name*. Значение по умолчанию равно 0.  
   
-<variable_length_column_options>  
+< variable_length_column_options >  
 Параметры для *source_data_file_name* с символами столбцов переменной длины. По умолчанию *source_data_file_name* содержит символы ASCII в столбцы с переменной длиной.  
   
 Для файлов, ASCII значения NULL, представляются последовательное размещение разделители. Например, в файл, разделенные символами вертикальной черты ("|»), указывается значение NULL «||». В файле с разделителями запятыми, указывается значение NULL «,,». Кроме того **-E** (--emptyStringAsNull) необходимо указать параметр. Дополнительные сведения об -E см. в разделе ниже.  
@@ -236,7 +235,7 @@ For more information about this install option, see [Install dwloader Command-Li
   
 Примеры:  
   
--t "|"  
+-t «|»  
   
 -t ""  
   
@@ -253,7 +252,7 @@ For more information about this install option, see [Install dwloader Command-Li
   
 Примеры CR + LF:  
   
--r \r\n  
+\r\n - r  
   
 0x0d0x0a - r  
   
@@ -280,7 +279,7 @@ LF является обязательным для Unix. CR является о
   
 -s 0x22  
   
-< fixed_width_column_options>  
+< fixed_width_column_options >  
 Параметры для файла источника данных, имеющий столбцов фиксированной длины. По умолчанию *source_data_file_name* содержит символы ASCII в столбцы с переменной длиной.  
   
 Фиксированная ширина столбцов не поддерживаются при -e — UTF8.  
@@ -322,7 +321,7 @@ SalesID = 10
   
 Примеры CR + LF:  
   
--r \r\n  
+\r\n - r  
   
 0x0d0x0a - r  
   
@@ -426,7 +425,7 @@ fastappend
 < reject_options >  
 Указывает параметры для определения количества сбоев при загрузке, с помощью которых загрузчик. Если сбои загрузки, которые превышают пороговое значение, загрузчик halt и фиксирует все строки.  
   
-**-rt** { **value** | percentage }  
+**-rt** { **значение** | процент}  
 Указывает ли*reject_value* в **-rv** *reject_value* вариант — литерал несколько строк (значение) или частоту сбоев (в процентах). По умолчанию используется значение.  
   
 Параметр процента — вычисление в режиме реального времени, которое происходит через интервалы в соответствии с параметром - rs.  
@@ -557,7 +556,7 @@ For the maximum number of loads per appliance, see [Minimum and Maximum Values](
 |Куча|Да|Да|Да|Минимальный|  
 |Куча|Да|Нет|Да|Минимальный|  
 |Куча|Нет|Да|Нет|Минимальный|  
-|Куча|Нет|нет|Нет|Минимальный|  
+|Куча|Нет|Нет|Нет|Минимальный|  
 |CL|Да|Да|Нет|Минимальный|  
 |CL|Да|Нет|Да|Полное|  
 |CL|Нет|Да|Нет|Минимальный|  

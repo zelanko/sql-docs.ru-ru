@@ -1,5 +1,5 @@
 ---
-title: Объекты ASSL и характеристики объектов | Документы Microsoft
+title: Объекты ASSL и характеристики объектов | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 55150d0835fc0a9e3324acfb8007a1d22e9b55d8
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022401"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208501"
 ---
 # <a name="assl-objects-and-object-characteristics"></a>Объекты ASSL и характеристики объектов
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "34022401"
 ## <a name="object-groups"></a>Группы объектов  
  Все [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] объекты имеют XML-представление. Объекты разделены на две группы.  
   
- **Основные объекты.**  
+ **Основные объекты**  
  Основные объекты можно создавать, изменять и удалять независимо. К основным объектам относятся следующие:  
   
 -   Серверы  
@@ -38,7 +38,7 @@ ms.locfileid: "34022401"
   
 -   Секции  
   
--   Перспективы  
+-   перспективами  
   
 -   Модели интеллектуального анализа данных  
   
@@ -54,7 +54,7 @@ ms.locfileid: "34022401"
   
 -   **LastSchemaUpdate**  
   
--   **LastProcessed** (при необходимости)  
+-   **LastProcessed** (по необходимости)  
   
 > [!NOTE]  
 >  Отнесение объекта к основным влияет на то, как этот объект рассматривается в экземпляре служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], а также на то, как он обрабатывается в языке определения объектов. Однако такая классификация не гарантирует, что средства управления и разработки служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] разрешат независимое создание, изменение или удаление этих объектов.  
@@ -87,7 +87,7 @@ ms.locfileid: "34022401"
  В этом разделе справки ASSL описывается *ExpandFull* представление. Все остальные **ObjectExpansion** уровни являются производными от этого уровня.  
   
 ## <a name="object-processing"></a>Обработка объектов  
- ASSL есть элементы, доступные только для чтения и свойства (например, **LastProcessed**), которые можно считывать из [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] экземпляр, но которые пропускаются при подаче на экземпляр командных скриптов. Службы [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] не учитывают измененные значения для элементов, которые доступны только для чтения, не выдавая при этом предупреждений или сообщений об ошибке.  
+ ASSL есть элементы, доступные только для чтения и свойства (например, **LastProcessed**), могут быть прочитаны из [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] экземпляр, но которые пропускаются при подаче на экземпляр командных скриптов. Службы [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] не учитывают измененные значения для элементов, которые доступны только для чтения, не выдавая при этом предупреждений или сообщений об ошибке.  
   
  Службы [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] также пропускают несоответствующие свойства, не формируя при этом ошибок проверки правильности. Например, допустим, что элемент Х должен присутствовать, только если элемент Y имеет определенное значение. Экземпляр служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] не учитывает элемент X вместо проверки правильности этого элемента по значению элемента Y.  
   

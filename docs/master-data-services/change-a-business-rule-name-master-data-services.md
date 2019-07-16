@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: cffcae43-a208-443f-9f43-a0ec9e05f79c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 8669a087dd2cd4459c4bdb35c7a808d6d7b665d5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 59ecf00588ceeeb7d4ca0b9a4bd71675f2d74739
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65485379"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68047374"
 ---
 # <a name="change-a-business-rule-name-master-data-services"></a>Изменение имени бизнес-правила (службы Master Data Services)
 
@@ -26,7 +25,7 @@ ms.locfileid: "65485379"
 
   В службах [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]изменение имени бизнес-правила может потребоваться в том случае, если заданное имя не соответствует потребностям предприятия.  
   
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
  Для выполнения этой процедуры:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** ;  

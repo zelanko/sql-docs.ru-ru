@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: bb777a0de00596c99e22e514986cf3ec930ba0fd
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 2cf3cf85b0efb024d65744f6eea0f5eea47ead83
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37991065"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68074856"
 ---
 # <a name="export-dmx"></a>EXPORT (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -33,7 +32,7 @@ EXPORT <object type> <object name>[, <object name>] [<object type> <object name>
  (Необязательно) тип объекта для экспорта (модели или структуры интеллектуального анализа данных).  
   
  *Имя объекта*  
- Необязательный параметр. Имя экспортируемого объекта.  
+ Необязательный. Имя экспортируемого объекта.  
   
  *Имя файла*  
  Имя и расположение файла для экспорта (аргумент типа string).  
@@ -61,7 +60,7 @@ EXPORT MINING MODEL [Association] TO 'C:\Association_NEW.abf' WITH DEPENDENCIES
  [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; инструкции определения данных](../dmx/dmx-statements-data-definition.md)   
  [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; инструкций по обработке данных](../dmx/dmx-statements-data-manipulation.md)   
  [Расширения интеллектуального анализа данных &#40;расширений интеллектуального анализа данных&#41; Справка по инструкции](../dmx/data-mining-extensions-dmx-statements.md)   
- [ИМПОРТ &AMP;#40;РАСШИРЕНИЙ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ&AMP;#41;](../dmx/import-dmx.md)   
+ [ИМПОРТ &#40;РАСШИРЕНИЙ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ&#41;](../dmx/import-dmx.md)   
  [Экспорт и импорт объектов интеллектуального анализа данных](../analysis-services/data-mining/export-and-import-data-mining-objects.md)  
   
   

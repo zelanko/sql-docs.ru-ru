@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7f8aea7b-9183-4b29-8ac0-a393ed2e8bd5
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 60cb539a22a53573d184afe55f612e20e39811eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f544afd1a82a2e42a7fae110f20dc51f865a69f0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66707341"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932075"
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-example-vc"></a>MoveFirst, MoveLast, MoveNext и MovePrevious примеры методов (Visual C++)
 В этом примере используется [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), и [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) методы, чтобы переместить указатель записи [Записей](../../../ado/reference/ado-api/recordset-object-ado.md) на основе предоставленного команды. Функция MoveAny является обязательным для выполнения этого примера.  

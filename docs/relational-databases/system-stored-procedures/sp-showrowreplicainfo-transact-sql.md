@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6a9dbc1a-e1e1-40c4-97cb-8164a2288f76
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0d009b05fea2a2c587f97dc4b2416588932ad0bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d0c750fd35dce98c1d754f192214cd96cfc56143
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62447992"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032892"
 ---
 # <a name="spshowrowreplicainfo-transact-sql"></a>sp_showrowreplicainfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +56,7 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 |**db_name**|**sysname**|Имя базы данных, содержащей данную запись.|  
 |**db_nickname**|**binary(6)**|Псевдоним базы данных, содержащей данную запись.|  
 |**version**|**int**|Версия записи.|  
-|**current_state**|**nvarchar(9)**|Возвращает сведения о текущем состоянии строки.<br /><br /> **y** — данные строки представляют ее текущее состояние строки.<br /><br /> **n** -данных в строке не представляет текущее состояние строки.<br /><br /> **\<н/д >** — неприменимо.<br /><br /> **\<Неизвестный >** -не удается определить текущее состояние.|  
+|**параметр current_state со значением**|**nvarchar(9)**|Возвращает сведения о текущем состоянии строки.<br /><br /> **y** — данные строки представляют ее текущее состояние строки.<br /><br /> **n** -данных в строке не представляет текущее состояние строки.<br /><br /> **\<н/д >** — неприменимо.<br /><br /> **\<Неизвестный >** -не удается определить текущее состояние.|  
 |**rowversion_table**|**nchar(17)**|Указывает, хранятся ли версии строк в [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md) таблицы или [MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md) таблицы.|  
 |**Комментарий**|**nvarchar(255)**|Дополнительные сведения о данной записи версии строки. Обычно это поле не заполнено.|  
   

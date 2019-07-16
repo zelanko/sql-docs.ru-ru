@@ -7,13 +7,12 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 93384c8152109b01720ae7e861731638316d4966
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: 6210cfe67b4c360f14fc3e68929a5ac4f5f5d570
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67141433"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962823"
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>Обновление компонентов машинного обучения (R и Python) в экземплярах SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -54,9 +53,9 @@ ms.locfileid: "67141433"
 Компонент |Первоначальный выпуск | [R Server 9.0.1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows) | [R Server 9.1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows) | [MLS 9.2.1](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) | [MLS 9.3](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) |
 ----------|----------------|----------------|--------------|---------|-------|
 Microsoft R Open (MRO) через R | R 3.2.2     | R 3.3.2   |3\.3.3 R   | R 3.4.1  | R 3.4.3 |
-[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) | 8.0.3  | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
-[MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)| n.a. | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
-[предварительно обученных моделей](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models)| n.a. | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
+[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) | 8.0.3  | версии 9.0.1 |  9.1 |  9.2.1 |  9.3 |
+[MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)| n.a. | версии 9.0.1 |  9.1 |  9.2.1 |  9.3 |
+[предварительно обученных моделей](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models)| n.a. | версии 9.0.1 |  9.1 |  9.2.1 |  9.3 |
 [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils)| n.a. | 1.0 |  1.0 |  1.0 |  1.0 |
 [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | n.a. | 1.0 |  1.0 |  1.0 |  1.0 |
 
@@ -189,7 +188,7 @@ WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 
     | Компонент | Загрузить |
     |---------|----------|
-    | Чтение       | [SRO_3.4.3.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=867186&clcid=1033) |
+    | R       | [SRO_3.4.3.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=867186&clcid=1033) |
     | Python  | [SPO_9.3.0.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=859054) | 
     | Предварительно обученная модель | [MLM_9.3.0.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=859053) |
 
@@ -277,7 +276,7 @@ WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 
 ### <a name="parameters"></a>Параметры
 
-|Имя|Описание|
+|Name|Описание|
 |------|------|
 |*list*| Выводит список идентификаторов всех экземпляров баз данных SQL на текущем компьютере.|
 |*bind*| Обновляет указанный экземпляр базы данных SQL до последней версии R Server и обеспечивает автоматическое получение экземпляром будущих обновлений для R Server.|

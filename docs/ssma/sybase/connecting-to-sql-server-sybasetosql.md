@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: dd368a1a-45b0-40e9-b4d3-5cdb48c26606
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 2d7370b9b219c43bab4bfdc45377795edf148fc9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4f40fd6fa88b001eaa222789d6be35b83f9bf90a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63207852"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948548"
 ---
 # <a name="connecting-to-sql-server-sybasetosql"></a>Подключение к SQL Server (SybaseToSQL)
 Для переноса баз данных Sybase Adaptive Server Enterprise (ASE) для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], необходимо подключиться к любому из экземпляров целевого [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. При подключении, SSMA получает метаданные обо всех базах данных в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и отображает метаданные базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обозреватель метаданных. SSMA хранит сведения о какой экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] вы подключены, но не хранит пароли.  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3e9083f3-357b-41aa-833c-2c8aac2226cd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 76c2e4673d9b561aeb5af3e61e1e4dc8532195d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7220497bfac2b74e933595cb7debfd35b98fc07b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63201597"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037728"
 ---
 # <a name="c-to-sql-binary"></a>C в SQL: Бинарный
 Идентификатор двоичного типа данных ODBC C представляет собой:  
@@ -32,7 +31,7 @@ ms.locfileid: "63201597"
   
 |Идентификатор типа SQL|Тест|SQLSTATE|  
 |-------------------------|----------|--------------|  
-|SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|Байтовая длина данных < = длина столбца в байтах<br /><br /> Длину данных в байтах > длина столбца в байтах|н/д<br /><br /> 22001|  
-|SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|Длина данных < = длина столбца символов<br /><br /> Длина данных символьной > длины столбца символов|н/д<br /><br /> 22001|  
-|SQL_DECIMAL<br /><br /> SQL_NUMERIC<br /><br /> SQL_TINYINT<br /><br /> SQL_SMALLINT<br /><br /> SQL_INTEGER<br /><br /> SQL_BIGINT<br /><br /> SQL_REAL<br /><br /> SQL_FLOAT<br /><br /> SQL_DOUBLE<br /><br /> SQL_BIT SQL_TYPE_DATE<br /><br /> SQL_TYPE_TIME<br /><br /> SQL_TYPE_TIMESTAMP|Длину данных в байтах = длина данных SQL<br /><br /> Длину в байтах длину данных SQL <> данных|н/д<br /><br /> 22003|  
-|SQL_BINARY<br /><br /> SQL_VARBINARY<br /><br /> SQL_LONGVARBINARY|Длина данных < = длина столбца<br /><br /> Длина данных > длина столбца|н/д<br /><br /> 22001|
+|SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|Байтовая длина данных < = длина столбца в байтах<br /><br /> Длину данных в байтах > длина столбца в байтах|Н/Д<br /><br /> 22001|  
+|SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|Длина данных < = длина столбца символов<br /><br /> Длина данных символьной > длины столбца символов|Н/Д<br /><br /> 22001|  
+|SQL_DECIMAL<br /><br /> SQL_NUMERIC<br /><br /> SQL_TINYINT<br /><br /> SQL_SMALLINT<br /><br /> SQL_INTEGER<br /><br /> SQL_BIGINT<br /><br /> SQL_REAL<br /><br /> SQL_FLOAT<br /><br /> SQL_DOUBLE<br /><br /> SQL_BIT SQL_TYPE_DATE<br /><br /> SQL_TYPE_TIME<br /><br /> SQL_TYPE_TIMESTAMP|Длину данных в байтах = длина данных SQL<br /><br /> Длину в байтах длину данных SQL <> данных|Н/Д<br /><br /> 22003|  
+|SQL_BINARY<br /><br /> SQL_VARBINARY<br /><br /> SQL_LONGVARBINARY|Длина данных < = длина столбца<br /><br /> Длина данных > длина столбца|Н/Д<br /><br /> 22001|

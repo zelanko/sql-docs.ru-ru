@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4baa8b1fa57acde99439584483381f84f7a8d5c4
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59042263"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68180623"
 ---
 # <a name="write-enabled-dimensions"></a>Измерения, доступные для записи
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "59042263"
 > [!NOTE]  
 >  Обратная запись в измерения не поддерживается связанными измерениями.  
   
-## <a name="security"></a>безопасность  
+## <a name="security"></a>Безопасность  
  Обновление измерений, доступных для записи, могут выполнять только бизнес-пользователи, которые являются членами ролей базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , и которым было предоставлено разрешение на чтение измерения и запись в него. Для каждой роли можно контролировать возможность обновления тех или иных элементов. Чтобы бизнес-пользователи могли обновлять измерения, доступные для записи, их клиентское приложение должно поддерживать такую возможность. Для таких пользователей измерение, доступное для записи, должно содержаться в кубе, который подвергался обработке с момента последнего изменения измерения. Дополнительные сведения см. в разделе [Предоставление доступа к объектам и операциям (Analysis Services)](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md).  
   
  Пользователи и группы, входящие в роль «Администраторы», могут обновлять элементы атрибутов и значения свойств связанных элементов измерения, доступного для записи, даже если оно не включено в куб.  

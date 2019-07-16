@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: dfe1e1e1-9a65-406a-aced-6385a078e135
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 580ac26d2478de1f42800d6f8d6704f26bc6fff4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d291288c44341c3a707696b0b3baecdcd15779ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62660805"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137654"
 ---
 # <a name="sphelpmergepublication-transact-sql"></a>sp_helpmergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +57,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
  [ @publisher **=** ] **"***издателя***"**  
  Имя издателя. *издатель* — **sysname**, значение по умолчанию NULL.  
   
- [@publisher_db **=** ] **'***publisher_db***'**  
+ [@publisher_db **=** ] **"***publisher_db***"**  
  Имя базы данных публикации. *publisher_db* — **sysname**, значение по умолчанию NULL.  
   
 ## <a name="result-sets"></a>Результирующие наборы  
@@ -97,7 +96,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |allow_subscription_copy|**int**|Указывает, разрешено ли копирование баз данных подписки, подписанных на данную публикацию. Значение **0** означает, что копирование запрещено.|  
 |allow_synctoalternate|**int**|Показывает, допустимо ли для данного издателя наличие альтернативного участника синхронизации. Значение **0** означает, что участник синхронизации не допускается.|  
 |validate_subscriber_info|**nvarchar(500)**|Выводит список функций, с помощью которых возвращаются сведения о подписчике, и проверяет правильность критериев параметризованной фильтрации строк на подписчике. Позволяет убедиться в том, что данные в каждом слиянии секционированы согласованным образом.|  
-|backward_comp_level|**int**|Уровень совместимости базы данных. Может иметь одно из следующих значений:<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP1<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
+|backward_comp_level|**int**|Уровень совместимости базы данных. Может иметь одно из следующих значений:<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **90**  =  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] С ПАКЕТОМ ОБНОВЛЕНИЯ 1<br /><br /> **90**  =  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] С ПАКЕТОМ ОБНОВЛЕНИЯ 2<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
 |publish_to_activedirectory|**bit**|Указывает, опубликованы ли сведения о публикации в Active Directory. Значение **0** означает, что сведения о публикации не доступен из Active Directory.<br /><br /> Этот аргумент устарел и поддерживается только для обратной совместимости скриптов. Сведения о публикации больше не могут быть добавлены в Active Directory.|  
 |max_concurrent_merge|**int**|Число параллельных процессов слияния. Если **0**, нет ограничений на количество параллельно выполняемых одновременно процессов слияния.|  
 |max_concurrent_dynamic_snapshots|**int**|Максимальное количество параллельных сеансов моментальных снимков фильтрованных данных, которые могут выполняться для публикации слиянием. Если **0**, не ограничено максимальное количество сеансов моментальных снимков отфильтрованных данных, которые могут одновременно выполняться для публикации в любой момент времени.|  

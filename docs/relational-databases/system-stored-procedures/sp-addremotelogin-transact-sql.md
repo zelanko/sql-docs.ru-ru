@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 71b7cd36-a17d-4b12-b102-10aeb0f9268b
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: e23684e04d8e49d1a6456185f94ad74b71b1604c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: eb45ce1c3e1786eb5a9a3cd630741dd4df773c40
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537936"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030959"
 ---
 # <a name="spaddremotelogin-transact-sql"></a>sp_addremotelogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,13 +44,13 @@ sp_addremotelogin [ @remoteserver = ] 'remoteserver'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @remoteserver **=** ] **"**_remoteserver_**"**  
+ [ @remoteserver **=** ] **"** _remoteserver_ **"**  
  Имя удаленного сервера, к которому применяется удаленный вход. *удаленный сервер* — **sysname**, не имеет значения по умолчанию. Если только *remoteserver* указан, все пользователи на *remoteserver* сопоставляются существующие имена входа с тем же именем на локальном сервере. Сервер должен быть известен локальному серверу. Он добавляется с помощью sp_addserver. Когда пользователей на *remoteserver* подключиться к локальному серверу, на котором выполняется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для выполнения удаленной хранимой процедуры осуществляется по локальным именам входа, совпадающим с их именами на *remoteserver* . *удаленный сервер* — это сервер, который инициирует удаленный вызов процедур.  
   
- [ @loginame **=** ] **"**_входа_**"**  
+ [ @loginame **=** ] **"** _входа_ **"**  
  Идентификатор имени входа для пользователя локального экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Аргумент *login* имеет тип **sysname** и значение по умолчанию NULL. *Имя входа*должен уже существовать на локальном экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если *входа* указано, все пользователи в *remoteserver* сопоставляются, определенным локальным именем входа. Когда пользователей на *remoteserver* подключиться к локальному экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для выполнения удаленной хранимой процедуры осуществляется по *входа*.  
   
- [ @remotename **=** ] **"**_remote_name_**"**  
+ [ @remotename **=** ] **"** _remote_name_ **"**  
  Идентификатор имени входа пользователя на удаленном сервере. *remote_name* — **sysname**, значение по умолчанию NULL. *remote_name* должен существовать на *remoteserver*. Если *remote_name* указан, пользователь *remote_name* сопоставляется *входа* на локальном сервере. Когда *remote_name* на *remoteserver* подключается к локальному экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для выполнения удаленной хранимой процедуры, она подключается как *входа*. Идентификатор входа *remote_name* может отличаться от идентификатора входа на удаленном сервере, *входа*.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  

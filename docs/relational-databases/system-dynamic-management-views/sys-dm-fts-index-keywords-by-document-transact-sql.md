@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: 793b978b-c8a1-428c-90c2-a3e49d81b5c9
 author: pmasl
 ms.author: pelopes
-manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ed1ebf610eafe5c882b2e19ed70129e0cac432fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 86ab3a31f53f480713ae27a70bfe59d3817af017
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65944364"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078564"
 ---
 # <a name="sysdmftsindexkeywordsbydocument-transact-sql"></a>sys.dm_fts_index_keywords_by_document (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]

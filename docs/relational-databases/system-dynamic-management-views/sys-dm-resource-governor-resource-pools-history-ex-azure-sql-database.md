@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: joesackmsft
 ms.author: josack
-manager: craigg
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: 130c4f9c38e5eb7ee47d31377a224c5b602b5b35
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.openlocfilehash: 7b40d9afe54137fb31088aa8aa8b5664c90b715d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67412948"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053305"
 ---
 # <a name="sysdmresourcegovernorresourcepoolshistoryex-transact-sql"></a>sys.dm_resource_governor_resource_pools_history_ex (Transact-SQL)
 
@@ -40,7 +39,7 @@ ms.locfileid: "67412948"
 |**name**|sysname|Имя пула ресурсов. Не допускает значение NULL.|
 |**snapshot_time**|datetime2|DateTime снимка статистики пула ресурсов, сделанного|
 |**duration_ms**|ssNoversion|Интервал времени между текущим и предыдущим моментальных снимков|
-|**statistics_start_time**|datetime2|Время, когда была очищена статистика для данного пула. Не допускает значение NULL.|
+|**для statistics_start_time**|datetime2|Время, когда была очищена статистика для данного пула. Не допускает значение NULL.|
 |**active_session_count**|ssNoversion|Всего активных сеансов в текущий моментальный снимок|
 |**active_worker_count**|ssNoversion|Общее количество рабочих процессов в текущий моментальный снимок|
 |**delta_cpu_usage_ms**|ssNoversion|Использование ЦП в миллисекундах с момента создания последнего моментального снимка. Не допускает значение NULL.|

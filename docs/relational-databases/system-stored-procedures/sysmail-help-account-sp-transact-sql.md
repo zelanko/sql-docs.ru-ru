@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 87c7c39c-8e05-4e68-9272-45f908809c3b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2dd164f25848d4c6b4f913ca2ddc746d7801fb78
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 2b5f416d1f2989cd9392ecac0279e792477cca8d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536616"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909186"
 ---
 # <a name="sysmailhelpaccountsp-transact-sql"></a>sysmail_help_account_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 |Имя столбца|Тип данных|Описание|  
 |**account_id**|**int**|Идентификатор учетной записи.|  
 |**name**|**sysname**|Имя учетной записи.|  
-|**Описание**|**nvarchar(256)**|Описание учетной записи.|  
+|**description**|**nvarchar(256)**|Описание учетной записи.|  
 |**email_address**|**nvarchar(128)**|Адрес электронной почты для отправки сообщений.|  
 |**display_name**|**nvarchar(128)**|Отображаемое имя учетной записи.|  
 |**replyto_address**|**nvarchar(128)**|Адрес, на который посылаются ответы на сообщения данной учетной записи.|  

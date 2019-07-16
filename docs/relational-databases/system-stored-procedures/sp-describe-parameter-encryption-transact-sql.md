@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 706ed441-2881-4934-8d5e-fb357ee067ce
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 243207c6175f5604e7cc887bd7c67085e2d86291
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 377a1e342970e9593b37924c3739ee7a706d5264
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507644"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053032"
 ---
 # <a name="spdescribeparameterencryption-transact-sql"></a>sp_describe_parameter_encryption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -66,7 +65,7 @@ sp_describe_parameter_encryption
 |**column_encryption_key_ordinal**|**int**|Идентификатор строки в результирующем наборе.|  
 |**database_id**|**int**|Идентификатор базы данных.|  
 |**column_encryption_key_id**|**int**|Идентификатор ключа шифрования столбцов. Примечание: этот идентификатор обозначает строку в [sys.column_encryption_keys &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) представления каталога.|  
-|**column_encryption_key_version**|**int**|Зарезервировано для последующего использования. В настоящее время всегда содержит 1.|  
+|**column_encryption_key_version**|**int**|Зарезервировано для будущего использования. В настоящее время всегда содержит 1.|  
 |**column_encryption_key_metadata_version**|**binary(8)**|Метка времени, представляющий время создания ключа шифрования столбца.|  
 |**column_encryption_key_encrypted_value**|**varbinary(4000)**|Зашифрованное значение ключа шифрования столбца.|  
 |**column_master_key_store_provider_name**|**sysname**|Имя поставщика для хранилища ключей, который содержит главный ключ столбца, который использовался для создания зашифрованное значение ключа шифрования столбца.|  

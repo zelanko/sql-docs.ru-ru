@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 37815869-ed30-45fd-9aea-0a986c1b305c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 27e789c4eb34ed275d6f18f62325287febb73422
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4a44060ae4ffd9399c34d4cd8133f5ad7404ed5a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62740194"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949605"
 ---
 # <a name="level-object-ado-md"></a>Объект Level (многомерные объекты ADO)
 Содержит набор элементов, каждый из которых имеет один и тот же ранг в иерархии.  
@@ -43,7 +42,7 @@ ms.locfileid: "62740194"
   
  **Свойства** коллекция содержит свойства, предоставляемые поставщиком. Ниже перечислены свойства, которые могут быть доступны. В списке свойств фактическое может различаться в зависимости от реализации поставщика. См. в документации поставщика более полный список доступных свойств.  
   
-|Имя|Описание|  
+|Name|Описание|  
 |----------|-----------------|  
 |CatalogName|Имя каталога, к которому принадлежит этот куб.|  
 |CubeName|Имя куба.|  

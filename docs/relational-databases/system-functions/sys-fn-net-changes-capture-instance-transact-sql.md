@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 342fa030-9fd9-4b74-ae4d-49f6038a5073
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 081eaa3995507edf20be0b83f3e0ce766135139c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 556518a5fc2950ff69e6a872df5387b4c8367c6b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416325"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122568"
 ---
 # <a name="sysfnnetchangesltcaptureinstancegt-transact-sql"></a>sys.fn_net_changes_&lt;capture_instance&gt; (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -98,10 +97,10 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
 |-----------------|-----------------|-----------------|  
 |\<столбцы из @column_list>|**зависит от**|Столбцы, которые определены в **column_list** функции sp_cdc_generate_wrapper_function при ее вызове для создания сценария для создания оболочки. Если *column_list* имеет значение NULL, будут отображаться все отслеживаемые исходные столбцы в результирующем наборе.|  
 |__CDC_OPERATION|**nvarchar(2)**|Код операции, указывающий операцию, необходимую для применения строки к целевой среде. Операция варьируется в зависимости от значения аргумента *row_filter_option* , предоставляемая в следующий вызов:<br /><br /> *row_filter_option* = «all», «all with mask»<br /><br /> «D» — операция удаления<br /><br /> «I» — операция вставки<br /><br /> 'UN' — операция обновления<br /><br /> *row_filter_option* = 'all with merge'<br /><br /> «D» — операция удаления<br /><br /> 'M' — операция вставки либо обновления|  
-|\<столбцы из @update_flag_list>|**bit**|Битовый флаг, имя которого образуется добавлением _uflag к имени столбца. Флаг получает значение, отличное от NULL только тогда, когда *row_filter_option* **= 'all with mask'** и \__CDC_OPERATION **= 'UN'**. Если соответствующий столбец изменялся в окне запроса, флагу присваивается значение 1. В противном случае флагу присваивается значение 0.|  
+|\<столбцы из @update_flag_list>|**bit**|Битовый флаг, имя которого образуется добавлением _uflag к имени столбца. Флаг получает значение, отличное от NULL только тогда, когда *row_filter_option* **= 'all with mask'** и \__CDC_OPERATION **= 'UN'** . Если соответствующий столбец изменялся в окне запроса, флагу присваивается значение 1. В противном случае флагу присваивается значение 0.|  
   
 ## <a name="remarks"></a>Примечания  
- Функция fn_net_changes_<capture_instance> выступает в качестве оболочки для функции запроса cdc.fn_cdc_get_net_changes_<capture_instance>. Для формирования скрипта, создающего оболочку, используется хранимая процедура sys.sp_cdc_generate_wrapper.  
+ Функция fn_net_changes_ < capture_instance > служит оболочкой для функции запроса cdc.fn_cdc_get_net_changes_ < экземпляр_отслеживания >. Для формирования скрипта, создающего оболочку, используется хранимая процедура sys.sp_cdc_generate_wrapper.  
   
  Функции-оболочки не создаются автоматически. Чтобы создать функции-оболочки, нужно выполнить две операции:  
   

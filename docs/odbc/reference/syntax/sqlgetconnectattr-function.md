@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 2cb4ffa8-19d3-4664-8c2f-6682cdcc3f33
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7051c94e4883c57daab4d5706feb073323e1c371
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 06c158c49c0ce175204bc9738a4f4136db7fe344
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65538051"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006214"
 ---
 # <a name="sqlgetconnectattr-function"></a>Функция SQLGetConnectAttr
 **Соответствие стандартам**  
@@ -78,7 +77,7 @@ SQLRETURN SQLGetConnectAttr(
  [Выход] Указатель на буфер, в которую будет возвращено общее число байтов (за исключением знака завершения null) для возврата в \* *ValuePtr*. Если \* *ValuePtr* является указателем null, длина не возвращается. Если значение атрибута — строка символов, а также количество байтов, доступных для возврата больше, чем *BufferLength* минус длина символа завершения null, данные в  *\*ValuePtr*усекается до *BufferLength* минус длина знак завершения null и заканчивается нулевым байтом драйвером.  
   
 ## <a name="returns"></a>Возвращает  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_ERROR, or SQL_INVALID_HANDLE.  
+ Значение SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, значение SQL_ERROR или SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Диагностика  
  Когда **SQLGetConnectAttr** возвращает значение SQL_ERROR или SQL_SUCCESS_WITH_INFO, а связанное значение SQLSTATE можно получить из структуры диагностических данных, вызвав **SQLGetDiagRec** с *HandleType* из SQL_HANDLE_DBC и *обрабатывать* из *ConnectionHandle*. В следующей таблице перечислены значения SQLSTATE, обычно возвращаемые при помощи **SQLGetConnectAttr** и объясняется каждый из них в контексте этой функции; описания SQLSTATE, возвращаемых диспетчером драйверов предшествует обозначение «(DM)» . Возвращается связанный с каждого значения SQLSTATE значение SQL_ERROR, если не указано иное.  

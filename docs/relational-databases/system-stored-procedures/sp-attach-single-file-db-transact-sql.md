@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 13bd1044-9497-4293-8390-1f12e6b8e952
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d8d2ad4c7df20b2b9649b1ad780dd40353a7796e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b285b5032c1ccde03ef8bd3f287d6b7f60eb0ffc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62996815"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046168"
 ---
 # <a name="spattachsinglefiledb-transact-sql"></a>sp_attach_single_file_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ sp_attach_single_file_db [ @dbname= ] 'dbname'
 ## <a name="arguments"></a>Аргументы  
 `[ @dbname = ] 'dbname'` — Имя базы данных, подключенные к серверу. Имя должно быть уникальным. *DBName* — **sysname**, значение по умолчанию NULL.  
   
-`[ @physname = ] 'physical_name'` Это физическое имя, включая путь файла базы данных. *physical_name* — **nvarchar(260)**, значение по умолчанию NULL.  
+`[ @physname = ] 'physical_name'` Это физическое имя, включая путь файла базы данных. *physical_name* — **nvarchar(260)** , значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  Этот аргумент сопоставляется с параметром FILENAME инструкции CREATE DATABASE. Дополнительные сведения см. в разделе [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md).  

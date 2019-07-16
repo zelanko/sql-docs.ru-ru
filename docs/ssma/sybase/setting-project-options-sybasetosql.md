@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 97b70fc8-1f68-4f15-8e22-db5b784ea4ec
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 08b1084f2f54a204f82bc0d1a0ee4096d207d835
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2c8d074db2fc1e8a9d29ecf5fdc0405524e9bb1a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62667432"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020918"
 ---
 # <a name="setting-project-options-sybasetosql"></a>Настройка параметров проекта (SybaseToSQL)
 Для каждого проекта SSMA можно задать параметры уровня проекта. Эти параметры задают преобразование объекта, загрузка объекта, SQL azure, пользовательский интерфейс и параметры миграции данных. Перед началом преобразования объектов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure или переносить данные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure, убедитесь, что параметры конфигурации подходят для проекта.  

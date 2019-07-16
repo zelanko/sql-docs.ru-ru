@@ -1,21 +1,20 @@
 ---
-title: mssqlctl bdc config reference
+title: Справочник по конфигурации bdc mssqlctl
 titleSuffix: SQL Server big data clusters
 description: Справочная статья по mssqlctl bdc команды.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5c4182f216b13d4b56d1c37f6d003ad2ea6f5cf6
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: f6aee38bd11d226ba324153b76c750ba57eb9fb8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728691"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958179"
 ---
 # <a name="mssqlctl-bdc-config"></a>mssqlctl bdc config
 
@@ -28,7 +27,7 @@ ms.locfileid: "67728691"
 | --- | --- |
 [mssqlctl bdc config show](#mssqlctl-bdc-config-show) | Получает текущую конфигурацию кластера больших данных.
 [mssqlctl bdc config init](#mssqlctl-bdc-config-init) | Инициализирует больших данных кластера, создайте профиль конфигурации, который может использоваться с кластером.
-[mssqlctl bdc config list](#mssqlctl-bdc-config-list) | Приведен список вариантов профиля конфигурации.
+[Список config mssqlctl bdc](#mssqlctl-bdc-config-list) | Приведен список вариантов профиля конфигурации.
 [раздел config mssqlctl bdc](reference-mssqlctl-bdc-config-section.md) | Команды для работы с отдельными разделами профиля конфигурации кластера больших данных.
 ## <a name="mssqlctl-bdc-config-show"></a>mssqlctl bdc config show
 Получает текущий профиль конфигурации кластера больших данных и выводит его в целевой каталог или довольно выводит на консоль.
@@ -91,7 +90,7 @@ mssqlctl bdc config init --source aks-dev-test --target custom
 Строка запроса JMESPath. См. в разделе [ http://jmespath.org/ ](http://jmespath.org/]) Дополнительные сведения и примеры.
 #### `--verbose`
 Увеличьте уровень подробного ведения журнала. Используйте параметр--debug, чтобы получить полные журналы отладки.
-## <a name="mssqlctl-bdc-config-list"></a>mssqlctl bdc config list
+## <a name="mssqlctl-bdc-config-list"></a>Список config mssqlctl bdc
 Приведен список вариантов конфигурации профиля для использования в `bdc config init`
 ```bash
 mssqlctl bdc config list [--config-profile -c] 

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6c8db22d-2e4c-4b7c-ac5a-8762ef1b175b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 99ce8003b70ad41be225a7678c97ed44d9f6c7dd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4bcbbf3d4e0e0b77156b7adceedbdc5aad97afdc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62760180"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060358"
 ---
 # <a name="syscollectorexecutionlogfull-transact-sql"></a>syscollector_execution_log_full (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ ms.locfileid: "62760180"
 |finish_time|**datetime**|Время окончания выполнения завершенных пакетов и наборов элементов сбора. Допускает значение NULL.|  
 |duration|**int**|Время выполнения пакета или набора элементов сбора (в секундах). Допускает значение NULL.|  
 |failure_message|**nvarchar(2048)**|Если набор элементов сбора или пакет завершился с ошибкой, содержит самое последнее сообщение об ошибке для данного компонента. Допускает значение NULL. Чтобы получить более подробные сведения об ошибке, используйте [fn_syscollector_get_execution_details &#40;Transact-SQL&#41; ](../../relational-databases/system-functions/fn-syscollector-get-execution-details-transact-sql.md) функции.|  
-|оператор|**nvarchar(128)**|Определяет, кто запустил набор элементов сбора или пакет. Допускает значение NULL.|  
+|operator|**nvarchar(128)**|Определяет, кто запустил набор элементов сбора или пакет. Допускает значение NULL.|  
 |package_execution_id|**uniqueidentifier**|Содержит ссылку на таблицу журнала служб [!INCLUDE[ssIS](../../includes/ssis-md.md)]. Допускает значение NULL.|  
 |collection_set_id|**int**|Предоставляет ссылку на таблицу конфигурации сбора данных в базе данных msdb. Допускает значение NULL.|  
   

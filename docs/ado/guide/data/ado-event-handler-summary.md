@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b34f4472-5e04-4a2c-ab64-38d6eca31a69
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f1901892b3e48446f3598b24ebb0a529360b9edf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d4fef63ff610ad85e353c2ef1dc0f8e5987c74ee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702643"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926195"
 ---
 # <a name="ado-connection-and-recordset-events"></a>Соединение ADO и события набора записей
 Два объекта ADO может порождать события: [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекта и [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта. **ConnectionEvent** семейства относится к операциям на **подключения** объекта и **RecordsetEvent** семейства относится к операциям на  **Набор записей** объекта.

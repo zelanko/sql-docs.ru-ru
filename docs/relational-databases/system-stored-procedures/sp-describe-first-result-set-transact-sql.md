@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: f2355a75-3a8e-43e6-96ad-4f41038f6d22
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1063facd150c6dfd6273f1fd78b6f507d062788e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: dc58447e9893647dfa73643f14455d715625478e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528166"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053048"
 ---
 # <a name="spdescribefirstresultset-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -43,9 +42,9 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ \@tsql = ] 'Transact-SQL_batch'` Один или несколько [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкций. *Transact SQL_batch* может быть **nvarchar (***n***)** или **nvarchar(max)**.  
+`[ \@tsql = ] 'Transact-SQL_batch'` Один или несколько [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкций. *Transact SQL_batch* может быть **nvarchar (***n***)** или **nvarchar(max)** .  
   
-`[ \@params = ] N'parameters'` \@params обеспечивает строку объявления параметров для [!INCLUDE[tsql](../../includes/tsql-md.md)] пакета, который схожего с sp_executesql. Параметры могут быть **nvarchar(n)** или **nvarchar(max)**.  
+`[ \@params = ] N'parameters'` \@params обеспечивает строку объявления параметров для [!INCLUDE[tsql](../../includes/tsql-md.md)] пакета, который схожего с sp_executesql. Параметры могут быть **nvarchar(n)** или **nvarchar(max)** .  
   
  Строка, содержащая определения всех параметров, внедренных в [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*. Строка должна представлять собой константу в Юникоде либо переменную в этом же формате. Определение каждого параметра состоит из имени параметра и типа данных. *n* — заполнитель, указывающий Дополнительные определения параметра. Каждый параметр, указанный в инструкции должен быть определен в \@params. Если [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкция или пакет в инструкции не содержит параметров, \@params не является обязательным. Значением по умолчанию для этого аргумента является NULL.  
   
@@ -71,7 +70,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 |**is_nullable**|**бит NOT NULL**|Содержит значение 1, если столбец допускает значения NULL, значение 0, если столбец не допускает значения NULL, и значение 1, если не удалось определить, допускает ли столбец значения NULL.|  
 |**system_type_id**|**int NOT NULL**|Содержит system_type_id для типа данных столбца, как указано в sys.types. Для типов CLR, даже если system_type_name возвращает NULL, этот столбец вернет значение 240.|  
 |**system_type_name**|**nvarchar(256) NULL**|Содержит имя и аргументы (длина, точность, масштаб и т. д.), указанные для типа данных столбца. Если тип данных является пользовательским псевдонимом, то здесь указывается базовый системный тип данных. Если это определяемый пользователем тип данных CLR, то в этом столбце вернется NULL.|  
-|**max_length**|**smallint NOT NULL**|Максимальная длина столбца (в байтах).<br /><br /> -1 = тип данных столбца — **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, или **xml**.<br /><br /> Для **текст** столбцы, **max_length** значение будет равно 16 или значение, заданное параметром **sp_tableoption «text in row»**.|  
+|**max_length**|**smallint NOT NULL**|Максимальная длина столбца (в байтах).<br /><br /> -1 = тип данных столбца — **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , или **xml**.<br /><br /> Для **текст** столбцы, **max_length** значение будет равно 16 или значение, заданное параметром **sp_tableoption «text in row»** .|  
 |**precision**|**tinyint NOT NULL**|Точность столбца, если он является числовым. В противном случае возвращается 0.|  
 |**масштаб**|**tinyint NOT NULL**|Масштаб значений столбца в случае числового выражения. В противном случае возвращается 0.|  
 |**collation_name**|**аргумент NULL**|Имя параметров сортировки столбца, если он символьный. В противном случае возвращается NULL.|  
@@ -298,7 +297,7 @@ ELSE
     SELECT c FROM t1;'  
 ```  
   
- Результат: Ошибка, несовпадающие типы (**varchar(10)** и **nvarchar(10)**).  
+ Результат: Ошибка, несовпадающие типы (**varchar(10)** и **nvarchar(10)** ).  
   
 #### <a name="result-set-can-return-an-error"></a>Результирующий набор может вернуть ошибку  
  Первым результирующим набором передается либо ошибка, либо действительно результирующий набор.  

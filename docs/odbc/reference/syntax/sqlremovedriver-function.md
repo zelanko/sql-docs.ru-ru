@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9a3b4f8b-982b-44b9-ade6-754ff026dc90
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 274451cdd2d1c3d811e4105a6d646044537999f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a86d958114a0755d8aead4470936115902f9c57a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537367"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68024553"
 ---
 # <a name="sqlremovedriver-function"></a>Функция SQLRemoveDriver
 **Соответствие стандартам**  
@@ -60,7 +59,7 @@ BOOL SQLRemoveDriver(
  Функция возвращает значение TRUE при успешном выполнении, FALSE в случае неудачи. Если запись не существует в сведениях о системе, при вызове этой функции, функция возвращает значение FALSE.  
   
 ## <a name="diagnostics"></a>Диагностика  
- Когда **SQLRemoveDriver** возвращает значение FALSE, связанным  *\*pfErrorCode* значение можно получить, вызвав **SQLInstallerError**. В следующей таблице перечислены  *\*pfErrorCode* значения, которые могут быть возвращены **SQLInstallerError** и объясняется каждый из них в контексте этой функции.  
+ Когда **SQLRemoveDriver** возвращает значение FALSE, связанным  *\*pfErrorCode* значение можно получить, вызвав **SQLInstallerError**. В следующей таблице перечислены *\*pfErrorCode* значения, которые могут быть возвращены **SQLInstallerError** и объясняется каждый из них в контексте этой функции.  
   
 |*\*pfErrorCode*|Ошибка|Описание|  
 |---------------------|-----------|-----------------|  

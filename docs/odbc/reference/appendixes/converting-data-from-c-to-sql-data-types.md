@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: ee0afe78-b58f-4d34-ad9b-616bb23653bd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 168fa55d89488277cd17f4bdca3105f7d879c8f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: aca333a6f3006b1f12cf44d1670e38556027e476
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63224679"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019118"
 ---
 # <a name="converting-data-from-c-to-sql-data-types"></a>Преобразование данных из C в типы данных SQL
 Если приложение вызывает **SQLExecute** или **SQLExecDirect**, драйвер получает данные для параметров, привязанного с **SQLBindParameter** из места хранения в приложение. Если приложение вызывает **SQLSetPos**, драйвер получает данные для обновления или операции добавления столбцов, привязанных с **SQLBindCol**. Для параметров данных времени выполнения, приложение отправляет данные с помощью параметра **SQLPutData**. Если необходимо, драйвер преобразует данные из типа данных, указанного *ValueType* аргумента в **SQLBindParameter** тип данных, указанный в *ParameterType*аргумента в **SQLBindParameter**, а затем отправляет данные в источник данных.  

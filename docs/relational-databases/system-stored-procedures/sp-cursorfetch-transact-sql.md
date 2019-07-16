@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 14513c5e-5774-4e4c-92e1-75cd6985b6a3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a7b07ccf7641f0529d03b2b37650e2ac8afbc9d2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4635bffa5b5b681d0ff202c4231c4d8b8d10ae26
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62724578"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108514"
 ---
 # <a name="spcursorfetch-transact-sql"></a>sp_cursorfetch (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ sp_cursorfetch cursor
  *fetchType*  
  Указывает, какой буфер курсора выбирается. *fetchType* является необязательным параметром требует одного из следующих целых входных значений.  
   
-|Значение|Имя|Описание|  
+|Значение|Name|Описание|  
 |-----------|----------|-----------------|  
 |0x0001|FIRST|Извлекает первый буфер *nrows* строк. Если *nrows* равен 0, курсор помещается перед результирующим набором и строки не возвращаются.|  
 |0x0002|NEXT|Извлекает следующий буфер *nrows* строк.|  

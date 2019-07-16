@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: aa1bf665-8dc0-4259-b36f-46ae67197a43
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: d1dbbb57527fc2d362837e0340f35a241d764b75
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 97425a6795889f72b329280ff70f9638378e7799
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63473526"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006572"
 ---
 # <a name="executing-the-ssma-console-accesstosql"></a>Выполнение команд консоли SSMA (AccessToSQL)
 Майкрософт предоставляет широкий набор команд файла скрипта и параметры командной строки для выполнения и SSMA действия управления. В последующих разделах подробно описано же.  
@@ -47,7 +46,7 @@ ms.locfileid: "63473526"
   
     -   SQL server 2016 г.  
   
-    -   sql-azure  
+    -   SQL azure  
   
     Значение по умолчанию — «sql server 2008».  
   
@@ -547,9 +546,9 @@ Connect-target-database
   
 3.  `on-error:` Указывает, следует ли для указания ошибок синхронизации в качестве предупреждения или ошибки. Доступные параметры для при ошибке:  
   
-    -   report-total-as-warning  
+    -   Общее число отчетов как предупреждение  
   
-    -   report-each-as-warning  
+    -   отчет each как предупреждение  
   
     -   Сбой скрипта  
   
@@ -612,9 +611,9 @@ Connect-target-database
   
 3.  `on-error:` Указывает, следует ли для указания ошибки обновления как предупреждения или ошибки. Доступные параметры для при ошибке:  
   
-    -   report-total-as-warning  
+    -   Общее число отчетов как предупреждение  
   
-    -   report-each-as-warning  
+    -   отчет each как предупреждение  
   
     -   Сбой скрипта  
   
@@ -661,7 +660,7 @@ Connect-target-database
   
 **Command**  
   
-save-as-script  
+Сохранить как сценарий  
   
 Позволяет сохранить скрипты объектов в файле, упомянутом при метабазы = цель, это является альтернативой команду синхронизации, где в мы получить скрипты и выполнить соответствует в целевой базе данных.  
   

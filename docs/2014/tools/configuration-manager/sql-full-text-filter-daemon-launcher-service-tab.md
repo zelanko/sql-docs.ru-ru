@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6f5129771e5d487075ad2223317047fbbb3c09fe
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52803386"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211164"
 ---
 # <a name="sql-full-text-filter-daemon-launcher-service-tab"></a>Средство запуска управляющей программы полнотекстовой фильтрации SQL (вкладка «Служба»)
   Начиная с версии [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], в полнотекстовом поиске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используется средство запуска управляющей программы полнотекстовой фильтрации SQL (средство запуска FDHOST). Эта служба должна быть запущена при использовании полнотекстового поиска. Сведения о хост-процессах управляющей программы фильтрации см. в разделе «Архитектура компонента Full-Text Search» электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -47,9 +47,9 @@ ms.locfileid: "52803386"
  **Режим запуска**  
  Установите для этой службы один из следующих вариантов:  
   
--   Вручную. Эта служба не запускается автоматически при запуске компьютера. Необходимо запустить службу при помощи диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или другого средства.  
+-   Вручную: Эта служба запускается автоматически при запуске компьютера. Необходимо запустить службу при помощи диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или другого средства.  
   
--   Автоматически. Эта служба пытается запуститься при запуске компьютера.  
+-   Автоматически: Эта служба пытается запуститься при запуске этого компьютера.  
   
 -   Отключено: Служба не может быть запущена.  
   

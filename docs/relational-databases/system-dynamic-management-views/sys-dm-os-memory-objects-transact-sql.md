@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 5688bcf8-5da9-4ff9-960b-742b671d7096
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fc006a940318ba84c3670ed9d10b96f728219668
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MT
+ms.openlocfilehash: dd7d1ddf40805eb94ca71594c7e4f7f6dae6ca7e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800652"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899946"
 ---
 # <a name="sysdmosmemoryobjects-transact-sql"></a>sys.dm_os_memory_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -62,7 +61,7 @@ ms.locfileid: "47800652"
 ## <a name="permissions"></a>Разрешения
 
 На [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], требуется `VIEW SERVER STATE` разрешение.   
-На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], требуется `VIEW DATABASE STATE` разрешение в базе данных.   
+В [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] необходимо разрешение `VIEW DATABASE STATE` для базы данных.   
 
 ## <a name="remarks"></a>Примечания  
  Объекты памяти представляют собой кучи. Они обеспечивают выделение памяти с большей точностью, чем клерки памяти. Компоненты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используют вместо клерков памяти объекты памяти. Объекты памяти для выделения страниц используют интерфейс средства выделения памяти от клерка памяти. Виртуальные или общие интерфейсы памяти объектами памяти не используются. В зависимости от шаблонов выделения памяти компоненты могут создавать различные типы объектов для выделения областей памяти произвольного размера.  

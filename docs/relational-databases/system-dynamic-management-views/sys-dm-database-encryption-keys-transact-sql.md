@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 56fee8f3-06eb-4fff-969e-abeaa0c4b8e4
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ea8e6825a2019667734a9d68f5798da00084c71b
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
-ms.translationtype: MT
+ms.openlocfilehash: 04f40d4d788e391026bd981f8be7218062282c07
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583047"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005060"
 ---
 # <a name="sysdmdatabaseencryptionkeys-transact-sql"></a>sys.dm_database_encryption_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,15 +46,15 @@ ms.locfileid: "59583047"
 |encryptor_thumbprint|**varbinary(20)**|Показывает отпечаток шифратора.|  
 |encryptor_type|**nvarchar(32)**|**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).<br /><br /> Описывает шифратор.|  
 |percent_complete|**real**|Процент выполнения шифрования базы данных. Значение 0, если изменения состояния не было.|
-|encryption_state_desc|**nvarchar(32)**|**Применяется к**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] и более поздних версий.<br><br> Строка, которая указывает, зашифрован ли базы данных или не шифруются.<br><br>None<br><br>БЕЗ ШИФРОВАНИЯ<br><br>ШИФРОВАНИЕ<br><br>DECRYPTION_IN_PROGRESS<br><br>ENCRYPTION_IN_PROGRESS<br><br>KEY_CHANGE_IN_PROGRESS<br><br>PROTECTION_CHANGE_IN_PROGRESS|
-|encryption_scan_state|**int**|**Применяется к**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] и более поздних версий.<br><br>Указывает текущее состояние сканирования шифрования. <br><br>0 = нет запускается проверка, прозрачное шифрование данных не включена<br><br>1 = проверка выполняется.<br><br>2 = Проверка выполняется, но было приостановлено, пользователь может возобновить.<br><br>3 = успешного завершения проверки, включено прозрачное шифрование данных и шифрования завершена.<br><br>4 = сканирование прекращено по какой-либо причине, требуется ручное вмешательство. Для получения дополнительной помощи обратитесь в службу поддержки Майкрософт.|
-|encryption_scan_state_desc|**nvarchar(32)**|**Применяется к**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] и более поздних версий.<br><br>Строка, указывающая текущее состояние сканирования шифрования.<br><br> None<br><br>RUNNING<br><br>SUSPENDED<br><br>ЗАВЕРШИТЬ<br><br>ABORTED|
-|encryption_scan_modify_date|**datetime**|**Применяется к**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] и более поздних версий.<br><br> Дата (в формате UTC) последнего изменения состояния сканирования шифрования.|
+|encryption_state_desc|**nvarchar(32)**|**Область применения**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] и более поздних версий.<br><br> Строка, которая указывает, зашифрован ли базы данных или не шифруются.<br><br>None<br><br>БЕЗ ШИФРОВАНИЯ<br><br>ШИФРОВАНИЕ<br><br>DECRYPTION_IN_PROGRESS<br><br>ENCRYPTION_IN_PROGRESS<br><br>KEY_CHANGE_IN_PROGRESS<br><br>PROTECTION_CHANGE_IN_PROGRESS|
+|encryption_scan_state|**int**|**Область применения**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] и более поздних версий.<br><br>Указывает текущее состояние сканирования шифрования. <br><br>0 = нет запускается проверка, прозрачное шифрование данных не включена<br><br>1 = проверка выполняется.<br><br>2 = Проверка выполняется, но было приостановлено, пользователь может возобновить.<br><br>3 = успешного завершения проверки, включено прозрачное шифрование данных и шифрования завершена.<br><br>4 = сканирование прекращено по какой-либо причине, требуется ручное вмешательство. Для получения дополнительной помощи обратитесь в службу поддержки Майкрософт.|
+|encryption_scan_state_desc|**nvarchar(32)**|**Область применения**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] и более поздних версий.<br><br>Строка, указывающая текущее состояние сканирования шифрования.<br><br> None<br><br>RUNNING<br><br>SUSPENDED<br><br>ЗАВЕРШИТЬ<br><br>ABORTED|
+|encryption_scan_modify_date|**datetime**|**Область применения**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] и более поздних версий.<br><br> Дата (в формате UTC) последнего изменения состояния сканирования шифрования.|
   
 ## <a name="permissions"></a>Разрешения
 
 На [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], требуется `VIEW SERVER STATE` разрешение.   
-На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], требуется `VIEW DATABASE STATE` разрешение в базе данных.   
+В [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] необходимо разрешение `VIEW DATABASE STATE` для базы данных.   
 
 ## <a name="see-also"></a>См. также  
 

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ede1415f-c3df-4cc5-a05b-2576b2b84b60
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cc95d6ef7e61dcde373a646359d134dce0b3389d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e76bc993b6f3fed781b8458bc7cf4a70081cd167
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711948"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931362"
 ---
 # <a name="recordset-object-ado"></a>Объект Recordset (ADO)
 Представляет полный набор записей из базовой таблицы или результаты выполнения команды. В любое время **записей** объект ссылается на одну запись в наборе как текущую запись.  

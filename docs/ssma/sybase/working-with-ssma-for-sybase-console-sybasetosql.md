@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c465e477-c479-4aa8-918d-58bf30884789
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 117438f012686ee7fb40070539aa0848ecc78661
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fcc1543a26c179ae6a775b6d735283ba068312ab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63187160"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68112876"
 ---
 # <a name="working-with-ssma-for-sybase-console-sybasetosql"></a>Работа с консолью SSMA для Sybase (SybaseToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA), выпуска для Sybase Adaptive Server Enterprise (ASE), теперь доступна через консольное приложение командной строки. Файлы скриптов образуют входных данных для приложения, для выполнения команд. Как консольное приложение SSMA обеспечивает взаимодействие на уровне сценария позволяет сократить цикл миграции и масштабирует мероприятий по миграции.  

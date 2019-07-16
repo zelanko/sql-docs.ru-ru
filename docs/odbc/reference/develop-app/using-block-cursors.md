@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2aad7d6b-216e-47e7-b3cb-f95ad096f21a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 388995cd5cb8a711d72533685c14088a7e908475
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 529b71540b4abde5fce868975fcbf2749e31dc8e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63313508"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135540"
 ---
 # <a name="using-block-cursors"></a>Использование блочных курсоров
 Поддержка для блочных курсоров встроена в ODBC 3. *x*. **SQLFetch** может использоваться только для нескольких строк выборки, при вызове в ODBC 3. *x*; Если ODBC 2. *x* приложение вызывает **SQLFetch**, он будет открыт только одной строкой и однопроходный курсор. Когда ODBC 3. *x* приложение вызывает **SQLFetch** в ODBC 2. *x* драйвера, он возвращает строку, если драйвер не поддерживает **SQLExtendedFetch**. Дополнительные сведения см. в разделе [блочные курсоры, Прокручиваемые курсоры и обратная совместимость](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) в приложении G: Рекомендации по драйверов для обеспечения обратной совместимости.  

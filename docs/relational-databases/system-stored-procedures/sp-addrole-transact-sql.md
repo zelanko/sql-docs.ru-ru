@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e8a21642-8440-419a-8585-93d3d9d44f00
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: a1cc9a65d1d4b6baba4d457d28ee36f0ac6156a1
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 1711ec3941a5fced5ef9e0c32808d6153b673e2b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492196"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030918"
 ---
 # <a name="spaddrole-transact-sql"></a>sp_addrole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ sp_addrole [ @rolename = ] 'role' [ , [ @ownername = ] 'owner' ]
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="remarks"></a>Примечания  
- Имена ролей базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] могут содержать от 1 до 128 символов, включая буквы, символы и цифры. Имена ролей базы данных не могут: содержать символ обратной косой черты (\\), иметь значение NULL, или пустая строка (**''**).  
+ Имена ролей базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] могут содержать от 1 до 128 символов, включая буквы, символы и цифры. Имена ролей базы данных не могут: содержать символ обратной косой черты (\\), иметь значение NULL, или пустая строка ( **''** ).  
   
  После добавления роли базы данных, используйте [sp_addrolemember &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) Добавление участников к роли. При использовании инструкций GRANT, DENY или REVOKE для назначения разрешений роли базы данных члены данной роли наследуют эти разрешения, как если бы они были применены напрямую к их учетным записям.  
   

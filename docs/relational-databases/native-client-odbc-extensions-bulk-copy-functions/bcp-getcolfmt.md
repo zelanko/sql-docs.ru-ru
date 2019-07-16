@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: f8bdada5-7b2d-4475-8c98-f93e9d77b130
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e9b87bcfd88b4401ad79d3a3a6afe174df94a29d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7aec6cf3345a0693384835f433bd445fd5079c82
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761152"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67895672"
 ---
 # <a name="bcpgetcolfmt"></a>bcp_getcolfmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -68,9 +67,9 @@ RETCODE bcp_getcolfmt (
  SUCCEED или FAIL.  
   
 ## <a name="remarks"></a>Примечания  
- Значения свойства формата столбца перечислены в [bcp_setcolfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setcolfmt.md) раздела. Они устанавливаются с помощью вызова функции **bcp_setcolfmt** , а для их поиска используется функция **bcp_getcolfmt** .  
+ Значения свойства формата столбца перечислены в разделе [bcp_setcolfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setcolfmt.md) . Они устанавливаются с помощью вызова функции **bcp_setcolfmt** , а для их поиска используется функция **bcp_getcolfmt** .  
   
- Изменения в поведении заметны при подключении к [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (или более поздней версии) компьютере сервера, по сравнению с ранее [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] версий. Дополнительные сведения см. в разделе [Обнаружение метаданных](../../relational-databases/native-client/features/metadata-discovery.md).  
+ Изменения в поведении заметны при подключении к серверному компьютеру с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (или более поздней версии), если сравнивать с более ранними версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в разделе [Обнаружение метаданных](../../relational-databases/native-client/features/metadata-discovery.md).  
   
 ## <a name="bcpgetcolfmt-support-for-enhanced-date-and-time-features"></a>Поддержка функцией bcp_getcolfmt улучшенных возможностей даты-времени  
  Типы, используемые со **BCP_FMT_TYPE** свойство для типов даты и времени, как указано в [изменения массового копирования для типов усиленной даты и времени &#40;OLE DB и ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  

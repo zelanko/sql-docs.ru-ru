@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 7c22f07e-36de-425b-aa67-e32a84afae92
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0b56a5ebd0ad00e2c3abb87b72d2de8735245f99
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 18bf7e3f66140ef92b520ea7c86b616ea7067b16
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537979"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016697"
 ---
 # <a name="configtranslator-function"></a>Функция ConfigTranslator
 **Соответствие стандартам**  
@@ -54,7 +53,7 @@ BOOL ConfigTranslator(
  Функция возвращает значение TRUE при успешном выполнении, FALSE в случае неудачи.  
   
 ## <a name="diagnostics"></a>Диагностика  
- Когда **ConfigTranslator** возвращает значение FALSE, связанным  *\*pfErrorCode* передано значение в буфер Ошибка установщика с помощью вызова **SQLPostInstallerError**и может быть получен путем вызова **SQLInstallerError**. В следующей таблице перечислены  *\*pfErrorCode* значения, которые могут быть возвращены **SQLInstallerError** и объясняется каждый из них в контексте этой функции.  
+ Когда **ConfigTranslator** возвращает значение FALSE, связанным  *\*pfErrorCode* передано значение в буфер Ошибка установщика с помощью вызова **SQLPostInstallerError**и может быть получен путем вызова **SQLInstallerError**. В следующей таблице перечислены *\*pfErrorCode* значения, которые могут быть возвращены **SQLInstallerError** и объясняется каждый из них в контексте этой функции.  
   
 |*\*pfErrorCode*|Ошибка|Описание|  
 |---------------------|-----------|-----------------|  

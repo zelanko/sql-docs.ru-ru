@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 74ab6706-e2dc-42cb-af77-dbc58a9cf4ce
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 032677452fa80502d37383af8172ff9475dea363
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cab6638704856baf873274807c0e2eff9a1f92d8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704820"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923864"
 ---
 # <a name="transaction-processing"></a>Обработка транзакций
 Объект *транзакции* разделяет начало и конец ряда операций доступа к данным выполняется через подключение. Зависит от возможностей источника данных транзакций **подключения** объекта также позволяет создавать и управлять транзакциями. Например используя поставщик Microsoft OLE DB для SQL Server для доступа к базе данных на Microsoft SQL Server, можно создать несколько вложенных транзакций для команд, которые выполняются.  

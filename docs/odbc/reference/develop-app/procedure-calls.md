@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 145130cc-40e7-4722-8417-dff131084752
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 775b48eb5a7f2089d65c6e9548a986b2f7b9bec7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 926ee91fae207d50248df4c82d1b82bb6424e239
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63284577"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68023252"
 ---
 # <a name="procedure-calls"></a>Вызовы процедур
 Объект *процедуры* представляет собой исполняемый объект, хранящиеся в источнике данных. Обычно процедурой является одна или несколько заранее скомпилированных инструкций SQL. Escape-последовательность для вызова процедуры —  
