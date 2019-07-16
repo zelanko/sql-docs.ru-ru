@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 782b4490-372b-4366-aad7-a486fb8a07c8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c9a3d63f0bf1923905c5281655aff2af294b8284
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b5fe4081d0786ace40dd027606a830982798075e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63241325"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044950"
 ---
 # <a name="data-type-support"></a>Поддержка типов данных
 Драйверы ODBC должны поддерживать по крайней мере один из SQL_CHAR и SQL_VARCHAR. Поддержка других типов данных определяется уровень соответствия SQL-92 источник драйвера или данных. Приложение должно вызывать **SQLGetTypeInfo** для определения типов данных, поддерживаемых драйвером.  

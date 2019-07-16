@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 052870e3-3f3f-4f07-91da-b649348225f4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8eb98d7c17663894e1bacdc27e431d6a54f45d3b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7abe4dd2f0bfb0b5302022d8e50cddc7df84f192
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62468671"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020470"
 ---
 # <a name="retrieving-results-basic"></a>Извлечение результатов (базовые возможности)
 Объект *сам себя результирующий набор* представляет собой набор строк в источнике данных, который соответствует определенным условиям. Это основные таблицы, полученный в результате запроса и доступна для приложения в табличной форме. **ВЫБЕРИТЕ** операторы, функции работы с каталогами и некоторые процедуры создания результирующих наборов. В следующем примере первая инструкция SQL создает результирующий набор, содержащий все строки, а также все столбцы в таблице Orders, а вторая инструкция SQL создает результирующий набор, содержащий столбцы OrderID, менеджеров по продажам и состояние для строк в таблице Orders в котором открыт:  

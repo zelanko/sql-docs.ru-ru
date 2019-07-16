@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5a8c8040-4f96-4c74-93ab-15bdefd132f0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6900c60b788c30cadd404cc2d687cf7993aa119c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9b08de0ce5acde863d8f2683b9bc8d6f38c2fa4b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62507316"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108631"
 ---
 # <a name="spcreateplanguide-transact-sql"></a>sp_create_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,12 +54,12 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
  [ \@имя =] N'*plan_guide_name*"  
  Имя структуры плана. Имена структур планов ограничены областью текущей базы данных. *plan_guide_name* должны соответствовать требованиям, предъявляемым к [идентификаторы](../../relational-databases/databases/database-identifiers.md) и не может начинаться со знака номера (#). Максимальная длина *plan_guide_name* равна 124 символам.  
   
- [ \@stmt = ] N'*statement_text*'  
+ [ \@stmt =] N'*statement_text*"  
  Инструкция языка [!INCLUDE[tsql](../../includes/tsql-md.md)], для которой создается структура плана. Когда [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запроса, оптимизатор распознает запроса, который соответствует *statement_text*, *plan_guide_name* вступает в силу. Для создания структуры плана для успешной работы *statement_text* должен указываться в контексте, определяемом \@типа, \@module_or_batch, и \@параметров params.  
   
  *statement_text* должно быть указано в виде, позволяет оптимизатору запросов сопоставить ее с соответствующей инструкцией, в рамках пакета или модуля, идентифицируемого по \@module_or_batch и \@params. Дополнительные сведения см. в разделе «Примечания». Размер *statement_text* ограничено только объемом доступной памяти сервера.  
   
- [\@type = ]N'{ OBJECT | SQL | TEMPLATE }'  
+ [\@тип =] N'{объект | SQL | ШАБЛОН} "  
  Тип сущности, в которой *statement_text* отображается. Таким образом задается контекст для сопоставления *statement_text* для *plan_guide_name*.  
   
  OBJECT  
@@ -79,7 +78,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
   
  [*schema_name*.] *object_name* имя [!INCLUDE[tsql](../../includes/tsql-md.md)] хранимые процедуры, скалярные функции, многооператорной функции с табличным или [!INCLUDE[tsql](../../includes/tsql-md.md)] триггера DML, содержащего *statement_text*. Если *schema_name* не указан, *schema_name* используется схема текущего пользователя. Если указано значение NULL и \@тип = «SQL», значение \@module_or_batch присваивается значение \@stmt. Если \@тип = "ШАБЛОН **"** , \@module_or_batch должен иметь значение NULL.  
   
- [ \@params = ]{ N' *\@parameter_name data_type* [ , *...n* ]' | NULL }  
+ [ \@params =] {N " *\@parameter_name data_type* [, *... n* ] "| NULL}  
  Указывает определения всех параметров, внедренных в *statement_text*. \@params применяется, только если одно из следующих имеет значение true:  
   
 -   \@Тип = 'SQL' или 'TEMPLATE'. Если «TEMPLATE», \@params не должен иметь значение NULL.  
@@ -88,11 +87,11 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
   
  *\@имя_параметра data_type* должны быть указаны в формате, так как оно передается в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] либо с помощью процедуры sp_executesql или автоматической отправки после параметризации. Дополнительные сведения см. в разделе «Примечания». Если пакет не содержит параметров, необходимо указать значение NULL. Размер \@params ограничивается только доступной памяти на сервере.  
   
- [\@hints = ]{ N'OPTION (*query_hint* [ , *...n* ] )' | N'*XML_showplan*' | NULL }  
+ [\@указания =] {N'OPTION (*query_hint* [, *... n* ]) "| N'*XML_showplan*"| NULL}  
  N'OPTION (*query_hint* [, *... n* ])  
  Указывает предложение OPTION, чтобы присоединить к запросу, который соответствует \@stmt. \@подсказки должен синтаксически так же, как предложение OPTION в инструкции SELECT и может содержать любую допустимую последовательность указаний запроса.  
   
- N'*XML_showplan*'  
+ N'*XML_showplan*"  
  План запроса в формате XML для применения в качестве указания.  
   
  Значение аргумента XML_showplan рекомендуется присвоить переменной, иначе каждый символ одиночной кавычки необходимо предварять дополнительным символом одиночной кавычки. См. пример Д.  

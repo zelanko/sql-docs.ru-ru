@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 35fa15dc6651d8bfd9b6d32cafd00cd47698560b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804256"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206971"
 ---
 # <a name="sql-server-cursor-manager-by-type-object"></a>SQL Server: объект Cursor Manager by Type
   Объект **SQLServer: диспетчер курсоров по типу** содержит счетчики для отслеживания курсоров с группировкой по типу.  

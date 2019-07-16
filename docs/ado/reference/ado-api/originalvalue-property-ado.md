@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6e33c6ec-14d9-4b1d-ba9b-cb99862e7bac
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e9a576220d7771ed539765da2947f6a7cc750f64
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 512569ce2baa8acabdf8bcbf8f637ebf20e4f613
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66706928"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917842"
 ---
 # <a name="originalvalue-property-ado"></a>Свойство OriginalValue (ADO)
 Указывает значение [поле](../../../ado/reference/ado-api/field-object.md) , существовали в записи, прежде чем были сделаны изменения.  
@@ -36,7 +35,7 @@ ms.locfileid: "66706928"
   
  В *пакетный режим обновления* (в котором поставщик кэширует несколько изменений и записывает их в базовом источнике данных только в том случае, когда вы вызываете [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) метод), **OriginalValue** свойство возвращает значение поля, которые существовали до изменения (то есть с момента последнего **UpdateBatch** вызова метода). Это то же значение, которое [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) метод используется для замены **значение** свойства. При использовании этого свойства с [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md) можно устранить конфликты, возникающие из пакетных обновлений.  
   
-## <a name="record"></a>Записей  
+## <a name="record"></a>Запись  
  Для [записи](../../../ado/reference/ado-api/record-object-ado.md) объектов, **OriginalValue** свойство будет пустым для поля, добавленные перед [обновления](../../../ado/reference/ado-api/update-method.md) вызывается.  
   
 ## <a name="applies-to"></a>Объект применения  

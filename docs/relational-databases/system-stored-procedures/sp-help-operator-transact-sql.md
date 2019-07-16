@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: caedc43d-44b8-415a-897e-92923f6de3b8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 48d70126d071879754011fed7342d03dd72185a5
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: e6568b15a12949180ca0e2df41063c100abc3290
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534386"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085302"
 ---
 # <a name="sphelpoperator-transact-sql"></a>Хранимая процедура sp_help_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,10 +59,10 @@ sp_help_operator
 |**идентификатор**|**int**|Идентификационный номер оператора.|  
 |**name**|**sysname**|Имя оператора.|  
 |**включен**|**tinyint**|Доступность оператора для получения уведомлений:<br /><br /> **1** = Да<br /><br /> **0** = Нет|  
-|**email_address**|**nvarchar(100)**|Адрес электронной почты оператора.|  
+|**email_address**|**Nvarchar(100)**|Адрес электронной почты оператора.|  
 |**last_email_date**|**int**|Дата, когда оператор получил последнее уведомление по электронной почте.|  
 |**last_email_time**|**int**|Время, когда оператор получил последнее уведомление по электронной почте.|  
-|**pager_address**|**nvarchar(100)**|Адрес пейджера оператора.|  
+|**pager_address**|**Nvarchar(100)**|Адрес пейджера оператора.|  
 |**last_pager_date**|**int**|Дата, когда оператор получил последнее уведомление по пейджеру.|  
 |**last_pager_time**|**int**|Время, когда оператор получил последнее уведомление по пейджеру.|  
 |**weekday_pager_start_time**|**int**|Время начала периода, в течение которого оператор доступен для уведомлений по пейджеру в рабочие дни.|  
@@ -73,7 +72,7 @@ sp_help_operator
 |**sunday_pager_start_time**|**int**|Время начала периода, в течение которого оператор доступен для уведомлений по пейджеру по воскресеньям.|  
 |**sunday_pager_end_time**|**int**|Время окончания периода, в течение которого оператор доступен для уведомлений по пейджеру по воскресеньям.|  
 |**pager_days**|**tinyint**|Битовая маска (**1** = воскресенье, **64** = суббота) дней недели, указывающее, когда оператор доступен для уведомлений по пейджеру.|  
-|**netsend_address**|**nvarchar(100)**|Адрес оператора для всплывающих сетевых уведомлений.|  
+|**netsend_address**|**Nvarchar(100)**|Адрес оператора для всплывающих сетевых уведомлений.|  
 |**last_netsend_date**|**int**|Дата, когда оператор получил последнее всплывающее сетевое уведомление.|  
 |**last_netsend_time**|**int**|Время, когда оператор получил последнее всплывающее сетевое уведомление.|  
 |**category_name**|**sysname**|Имя категории операторов, к которой принадлежит этот оператор.|  

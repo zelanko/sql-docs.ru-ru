@@ -2,19 +2,18 @@
 title: Подготовка - сертификата Analytics Platform System | Документация Майкрософт
 description: Подготовка сертификатов в Analytics Platform System.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 98fffc189aab674f46030086a8277395e84f7f4d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0da49afe13ab0f8cc92e8dd58e78f40564ff53c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62678601"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960220"
 ---
 # <a name="certificate-provisioning-in-analytics-platform-system"></a>Подготовка сертификатов в Analytics Platform System
 **Подготовка сертификата PDW** странице Analytics Platform System**Configuration Manager** импортирует или удаляет сертификат, используемый PDW. 

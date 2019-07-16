@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3236749c-4b71-4235-89e2-ccdfaaa9319d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9aee9b4f6054b5cbfca41db35f34a27000a7ac01
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 16142f200e6fd6e7c141b4f1fe6d45fe8917bc28
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719217"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931902"
 ---
 # <a name="open-method-ado-recordset"></a>Метод Open (объект Recordset ADO)
 Открывает курсор на [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта.  
@@ -48,7 +47,7 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
  Необязательный параметр. Объект [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) значение, которое определяет, какой тип блокировки (параллелизм) поставщик следует использовать при открытии **записей**. Значение по умолчанию — **adLockReadOnly**.  
   
  *Параметры*  
- Необязательный. Объект **Long** значение, указывающее, каким образом следует оценить, поставщик *источника* аргумент, если что-то отличное от **команда** объекта или, **Записей** должен быть восстановлен из файла, где он был ранее сохранен. Может быть один или несколько [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) или [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) значения, которые могут быть объединены с помощью побитового оператора OR.  
+ Необязательный параметр. Объект **Long** значение, указывающее, каким образом следует оценить, поставщик *источника* аргумент, если что-то отличное от **команда** объекта или, **Записей** должен быть восстановлен из файла, где он был ранее сохранен. Может быть один или несколько [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) или [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) значения, которые могут быть объединены с помощью побитового оператора OR.  
   
 > [!NOTE]
 >  При открытии **записей** из **Stream** содержащий материализованный **записей**, с использованием [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) значение **adAsyncFetchNonBlocking** не окажет никакого воздействия; выборка будет иметь синхронной и блокировки.  

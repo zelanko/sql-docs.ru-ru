@@ -1,5 +1,5 @@
 ---
-title: Предоставление разрешений базы данных (службы Analysis Services) | Документы Microsoft
+title: Предоставление разрешений базы данных (службы Analysis Services) | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,17 +10,17 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f799b086833f0be7b08786aff08e65d202f29674
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024641"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68177638"
 ---
 # <a name="grant-database-permissions-analysis-services"></a>Предоставление разрешений базы данных (службы Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Если вы подходите к администрированию базы данных службы Analysis Services с квалификацией в смежных базах данных, первое, что вам необходимо понять, с точки зрения доступа к данным, это то, что база данных не является первичным защищаемым объектом службы Analysis Services.  
   
- Первичной структурой запроса в службе Analysis Services является куб (или табличная модель), с пользовательскими разрешениями, установленными на эти отдельные объекты. В отличие от родственного ядра СУБД, в котором имена для входа и разрешения пользователя (часто **db_datareader**) установлены на саму базу данных, база данных службы Analysis Services в большинстве случаев является контейнером для основных объектов запроса в модели данных. Если вашей ближайшей целью является активация доступа к данным для куба или табличной модели, вы можете сейчас пропустить разрешения базы данных и перейти прямо к изучению данной статьи: [Предоставление разрешений кубу или модели (службы Analysis Services)](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md).  
+ Первичной структурой запроса в службе Analysis Services является куб (или табличная модель), с пользовательскими разрешениями, установленными на эти отдельные объекты. В отличие от родственного ядра СУБД, в котором имена для входа и разрешения пользователя (часто **db_datareader**) установлены на саму базу данных, база данных службы Analysis Services в большинстве случаев является контейнером для основных объектов запроса в модели данных. Если вашей ближайшей целью является активация доступа к данным для куба или табличной модели, можете сейчас пропустить разрешения базы данных и перейти прямо к этой статьи: [Предоставление разрешений кубу или модели &#40;служб Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md).  
   
  Разрешения базы данных в службе Analysis Services активируют функции управления; в общих чертах, как и регистр разрешения базы данных Полный Доступ или более детализированные, если вы делегируете операции обработки. Уровни разрешений для базы данных службы Analysis Services указаны на вкладке **Общие** диалогового окна **Создать Роль** показанного на следующей иллюстрации и описанного ниже.  
   
@@ -76,6 +76,6 @@ ms.locfileid: "34024641"
   
 ## <a name="see-also"></a>См. также  
  [Предоставление прав администратора сервера для экземпляра служб Analysis Services](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
- [Предоставление разрешений доступа & #40; Службы Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)  
+ [Предоставление разрешений на обработку (службы Analysis Services)](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)  
   
   

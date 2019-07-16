@@ -20,14 +20,13 @@ ms.assetid: 2ed6b53d-1cf2-4763-9d58-36ea24a610ef
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ef59338f86601316a71ae4f97004dc9beceb015f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0aa04b9a4b90b470ca3cc6df4a8f5cf62134027c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64945632"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68220504"
 ---
 # <a name="sysfulltextlanguages-transact-sql"></a>sys.fulltext_languages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -59,7 +58,7 @@ ms.locfileid: "64945632"
 |Английский|1033|  
 |Французский|1036|  
 |Немецкий|1031|  
-|**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Greek|1032|  
+|**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Греческий|1032|  
 |Гуджарати|1095|  
 |Иврит|1037|  
 |Hindi|1081|  
@@ -72,7 +71,7 @@ ms.locfileid: "64945632"
 |Латышский|1062|  
 |Литовский|1063|  
 |Malay - Malaysia|1086|  
-|Малайялам|1100|  
+|Малаялам|1100|  
 |Маратхи|1102|  
 |Нейтральный|0|  
 |Norwegian (Bokmål)|1044|  

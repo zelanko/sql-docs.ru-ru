@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 896a3d19345805d5468f3ec238ae5e75be34daba
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822258"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211476"
 ---
 # <a name="create-a-cmdexec-job-step"></a>Создание шага задания CmdExec
   В этом разделе описано, как создать и определить шаг задания агента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , использующий выполняемую программу или команду операционной системы, с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] или управляющих объектов SQL Server.  
@@ -56,7 +56,7 @@ ms.locfileid: "52822258"
   
 4.  В диалоговом окне **Новый шаг задания** введите **имя шага**задания.  
   
-5.  В списке **Тип** выберите **Операционная система (CmdExec)**.  
+5.  В списке **Тип** выберите **Операционная система (CmdExec)** .  
   
 6.  В списке **Выполнять как** выберите учетную запись-посредник с учетными данными, используемыми в задании. По умолчанию шаги задания CmdExec выполняются под учетной записью службы агента SQL Server.  
   

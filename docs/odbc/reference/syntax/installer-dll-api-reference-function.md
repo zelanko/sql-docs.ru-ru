@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 47fcadc3-f102-4989-9ee7-a1c65233142a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 14a89c859e98a069106b79c9289187a64c310fa9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4478595fe34e81919a67c37a7f0a714329a5ea44
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63232825"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67906214"
 ---
 # <a name="installer-dll-api-reference-function"></a>Функция справочника по API библиотеки DLL установщика
 В этом разделе описывается синтаксис функций в установщик API библиотеки DLL. Установщик API библиотеки DLL состоит из 20 функций. Три из этих функций **SQLGetTranslator**, **SQLRemoveDSNFromIni**, и **SQLWriteDSNToIni**, вызываются только программой установки библиотек DLL. Другие функции вызываются программ установки и администрирования.  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 31844099-4b33-4dc9-84b4-bac70aa82598
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b867e4ffe4b23ee1a7195bb3c201ae05c2b6d075
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2c19f2d8e75a3c9744318d65683b29d1d84857ff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62817070"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67907423"
 ---
 # <a name="msdistpublishers-transact-sql"></a>MSdistpublishers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "62817070"
 |**password**|**nvarchar(524)**|Пароль (зашифрованный) для проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**Active**|**bit**|Показывает, используется ли локальный распространитель удаленным издателем.|  
 |**доверенные**|**bit**|Показывает, использует ли удаленный издатель такой же пароль, что и локальный распространитель:<br /><br /> **0** = A удаленного издателя для соединения с распространителем необходим пароль.<br /><br /> **1** = нет необходимости вводить пароль.|  
-|**third_party**|**bit**|Является ли издатель установкой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установки.** 1** = разнородный источник данных.|  
+|**third_party**|**bit**|Является ли издатель установкой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установки. **1** = разнородный источник данных.|  
 |**publisher_type**|**sysname**|Тип издателя:<br /><br /> **MSSQLSERVER**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя.<br /><br /> **ORACLE** = стандартный издатель Oracle.<br /><br /> **ORACLE GATEWAY** = издатель Oracle Gateway.|  
 |**storage_connection_string**|**nvarchar(779)**|Значение строки подключения хранилища базы данных SQL Azure.|  
 

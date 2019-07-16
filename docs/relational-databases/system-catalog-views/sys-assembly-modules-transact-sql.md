@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 5f9e644e-8065-49a2-b53d-db7df98f70d8
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ade1adbfeb8292e894ce18db305687c7092707cf
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 68e91d6935549bc8dd421361c092c3ad1fb01905
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391450"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118171"
 ---
 # <a name="sysassemblymodules-transact-sql"></a>sys.assembly_references (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "52391450"
 |**assembly_class**|**sysname**|Имя класса в сборке, определяющее этот модуль.|  
 |**assembly_method**|**sysname**|Имя метода в рамках **assembly_class** , определяющее этот модуль.<br /><br /> Для агрегатных функций (AF) имеет значение NULL.|  
 |**null_on_null_input**|**bit**|Модуль выдает выходные значения NULL при любых входных значениях NULL.|  
-|**execute_as_principal_id**|**int**|Идентификатор участника базы данных, в контексте которого производится выполнение, как указано в предложении EXECUTE AS функции, хранимой процедуры или триггера среды CLR. <br /><br /> NULL = EXECUTE AS CALLER. Это значение по умолчанию.<br /><br /> Идентификатор указанного участника базы данных = EXECUTE AS SELF, EXECUTE AS *user_name*, или EXECUTE AS *login_name*.<br /><br /> -2 = EXECUTE AS OWNER.|  
+|**execute_as_principal_id**|**int**|Идентификатор участника базы данных, в контексте которого производится выполнение, как указано в предложении EXECUTE AS функции, хранимой процедуры или триггера среды CLR.<br /><br /> NULL = EXECUTE AS CALLER. Это значение по умолчанию.<br /><br /> Идентификатор указанного участника базы данных = EXECUTE AS SELF, EXECUTE AS *user_name*, или EXECUTE AS *login_name*.<br /><br /> -2 = EXECUTE AS OWNER.|  
   
 ## <a name="permissions"></a>Разрешения  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
