@@ -9,13 +9,12 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d17cc2ccc46733c857f884f78a1b0c9b3f980586
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f33d36cccbbea6f37139410f9d3d6e03f740ee96
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674113"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067621"
 ---
 # <a name="wideworldimportersdw-etl-workflow"></a>Рабочий процесс WideWorldImportersDW ETL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "51674113"
 
 Затем последовательность задач потока данных загружает каждого измерения. После этого они загружаются каждый факт.
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 - SQL Server 2016 (или более поздней версии), с помощью WideWorldImporters и WideWorldImportersDW базы данных (в том же или в разных экземплярах SQL Server)
 - SQL Server Management Studio

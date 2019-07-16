@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 846354b8-966c-4c2c-b32f-b0c8e649cedd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f94b1191815f37728a2d8de8fc1175113644bc5a
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: c64575777fc9210c36be5d417cd3def0c2c7102a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793888"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068678"
 ---
 # <a name="calling-sqlsetpos"></a>Вызов SQLSetPos
 В ODBC *2.x*, указатель на массив статусов строк был аргумента **SQLExtendedFetch**. Массив статусов строк позже была обновлена с помощью вызова **SQLSetPos**. Некоторые драйверы полагались на тот факт, что этот массив не меняется между **SQLExtendedFetch** и **SQLSetPos**. В ODBC *3.x*, поле дескриптора является указатель на массив состояний, и поэтому приложения можно легко изменить его в другой массив. Это может стать проблемой при ODBC *3.x* при работе с ODBC *2.x* драйвер, но вызывает **SQLSetStmtAttr** задать указатель состояния массива и вызывает  **SQLFetchScroll** для выборки данных. Диспетчер драйверов сопоставляет ее как последовательность вызовов **SQLExtendedFetch**. В следующем коде ошибка обычно должно порождаться при диспетчера драйверов сопоставляет второй **SQLSetStmtAttr** вызывать при работе с ODBC *2.x* драйвера:  

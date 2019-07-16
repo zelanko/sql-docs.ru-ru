@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 467e0c0c-a818-4737-8a24-3d8e15c7e162
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f14294b76fc7977de256697c730f7dca31e7a469
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2b5e9fea64986bf595676540d74bb87a6e62521c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62735134"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070008"
 ---
 # <a name="using-data-type-identifiers"></a>Использование идентификаторов типов данных
 Приложения используют идентификаторы типа данных двумя способами: для описания свои буферы на драйвер и для получения метаданных о результирующем наборе от драйвера, чтобы определить, какой тип C помещает в буфер для хранения данных. Приложения вызывают следующие функции для выполнения следующих задач:  

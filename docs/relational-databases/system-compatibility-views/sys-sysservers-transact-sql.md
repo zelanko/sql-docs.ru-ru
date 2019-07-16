@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: d02f186f-c00f-44a6-b38d-dc78a3d2145b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ede7e1a97ca121073760eaa0c5dcd309b5e3e412
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 03875d828940a2baa5d9f30f7beb58adb77abf07
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608080"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018116"
 ---
 # <a name="syssysservers-transact-sql"></a>sys.sysservers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +62,7 @@ ms.locfileid: "47608080"
 |**rpcout**|**bit**|1 =  **sp_serveroption@rpc out** присвоено **true** или **на**.<br /><br /> 0 =  **sp_serveroption@rpc out** присвоено **false** или **off**.|  
 |**DataAccess**|**bit**|1 =  **sp_serveroption@data доступа** присвоено **true** или **на**.<br /><br /> 0 =  **sp_serveroption@data доступа** присвоено **false** или **off**.|  
 |**collationcompatible**|**bit**|1 =  **sp_serveroption@collation совместимых** присвоено **true** или **на**.<br /><br /> 0 =  **sp_serveroption@collation совместимых** присвоено **false** или **off**.|  
-|**Системы**|**bit**|1 = **sp_serveroption@system** присвоено **true** или **на**.<br /><br /> 0 = **sp_serveroption@system** присвоено **false** или **off**.|  
+|**system**|**bit**|1 = **sp_serveroption@system** присвоено **true** или **на**.<br /><br /> 0 = **sp_serveroption@system** присвоено **false** или **off**.|  
 |**useremotecollation**|**bit**|1 =  **sp_serveroption@remote параметры сортировки** присвоено **true** или **на**.<br /><br /> 0 =  **sp_serveroption@remote параметры сортировки** присвоено **false** или **off**.|  
 |**lazyschemavalidation**|**bit**|1 =  **sp_serveroption@lazy проверка схемы** присвоено **true** или **на**.<br /><br /> 0 =  **sp_serveroption@lazy проверка схемы** присвоено **false** или **off**.|  
 |**Параметры сортировки**|**sysname**|Параметры сортировки сервера, задаваемое при помощи  **sp_serveroption@collation имя**.|  

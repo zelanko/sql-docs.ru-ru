@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 98562d0e-d0e0-4f62-b001-90acbac67277
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b426d7f4f5056c76e7ccc6807785366f0f12287f
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 7f64c9ff6664410983d9c3ce7ebdbf07e493ca03
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51293040"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038992"
 ---
 # <a name="constructor-functions-xquery"></a>Функции-конструкторы (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -139,7 +138,7 @@ TYP($atomicvalue as xdt:anyAtomicType?
  В этом разделе приведены примеры запросов XQuery к экземплярам XML, которые хранятся в различных **xml** -столбец базы данных AdventureWorks.  
   
 ### <a name="a-using-the-datetime-xquery-function-to-retrieve-older-product-descriptions"></a>A. Использование функции dateTime() языка XQuery для получения описаний старой продукции  
- В этом примере образец XML-документа сначала назначается для **xml** переменной типа. Этот документ включает три элемента <`ProductDescription`>, каждый из которых содержит дочерний элемент <`DateCreated`>.  
+ В этом примере образец XML-документа сначала назначается для **xml** переменной типа. Этот документ содержит три примера <`ProductDescription`> элементов, каждый из которых содержит <`DateCreated`> дочерний элемент.  
   
  После этого выполняется запрос переменной, получающей описания только тех продуктов, которые были произведены до указанной даты. В целях сравнения в запросе используется **xs: DateTime()** функции-конструктора в тип даты.  
   
@@ -174,13 +173,13 @@ select @x.query('
   
  Обратите внимание на следующие данные из предыдущего запроса:  
   
--   Чтобы Структура цикла WHERE используется для получения \<ProductDescription > элемент, удовлетворяющий условию, указанному в предложении WHERE.  
+-   FOR... Структура цикла WHERE используется для получения \<ProductDescription > элемент, удовлетворяющий условию, указанному в предложении WHERE.  
   
 -   **DateTime()** функции-конструктора используется для создания **dateTime** тип значения, поэтому их можно проверять соответствующим образом.  
   
 -   После этого запрос создает итоговый XML-код. Так как при этом создается последовательность атрибутов, при формировании XML-кода используются запятые и скобки.  
   
- Результат:  
+ Это результат:  
   
 ```  
 <Product   

@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ed234a487d5c382400b3a839820a4509c8b880f2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0124126556967800e37b296a73bd951a18d3936e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63026829"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035986"
 ---
 # <a name="sql-graph-architecture"></a>Архитектура графа базы данных SQL  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -101,15 +100,15 @@ ms.locfileid: "63026829"
 
 |Имя столбца    |Тип данных  |is_hidden  |Комментарий  |
 |---  |---|---|---  |
-|graph_id_\<hex_string> |bigint |1  |Внутренняя `graph_id` столбца  |
+|graph_id_\<hex_string > |bigint |1  |Внутренняя `graph_id` столбца  |
 |$node_id_\<hex_string> |NVARCHAR   |0  |Внешний узел `node_id` столбца  |
 
 Неявные столбцы в граничную таблицу
 
 |Имя столбца    |Тип данных  |is_hidden  |Комментарий  |
 |---  |---|---|---  |
-|graph_id_\<hex_string> |bigint |1  |Внутренняя `graph_id` столбца  |
-|$edge_id_\<hex_string> |NVARCHAR   |0  |внешние `edge_id` столбца  |
+|graph_id_\<hex_string > |bigint |1  |Внутренняя `graph_id` столбца  |
+|$edge_id_\<hex_string > |NVARCHAR   |0  |внешние `edge_id` столбца  |
 |from_obj_id_\<hex_string>  |INT    |1  |Внутренняя из узла `object_id`  |
 |from_id_\<hex_string>  |bigint |1  |Внутренняя из узла `graph_id`  |
 |$from_id_\<hex_string> |NVARCHAR   |0  |внешние из узла `node_id`  |

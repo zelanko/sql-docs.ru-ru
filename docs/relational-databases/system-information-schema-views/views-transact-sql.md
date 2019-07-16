@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 6119bc94-0b22-45d4-a34b-967afd810a9d
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c23935ef020763bffe80957f054637a96e6785db
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: b4e2a969450c2ec4593c7daec1b9c9b203b18410
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254779"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078358"
 ---
 # <a name="views-transact-sql"></a>VIEWS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,12 +35,12 @@ ms.locfileid: "54254779"
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CATALOG**|**nvarchar(** 128 **)**|Квалификатор представления.|  
-|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|Имя схемы, содержащей представление.<br /><br /> **&#42;&#42;Важные &#42; &#42;**  не используйте представления INFORMATION_SCHEMA, чтобы определить схему объекта. Единственный надежный способ найти схему объекта — направить запрос к представлению каталога sys.objects.|  
-|**TABLE_NAME**|**nvarchar(** 128 **)**|Имя представления.|  
-|**VIEW_DEFINITION**|**nvarchar(** 4000 **)**|Если длина или определение больше, чем **nvarchar (** 4000 **)**, этот столбец равен NULL. В противном случае этот столбец является текстом определения представления.|  
-|**CHECK_OPTION**|**varchar(** 7 **)**|Тип инструкции WITH CHECK OPTION. CASCADE, если первоначальное представление было создано с помощью инструкции WITH CHECK OPTION. Иначе возвращается значение NONE.|  
-|**IS_UPDATABLE**|**varchar(** 2 **)**|Указывает, можно ли обновлять это представление. Всегда возвращает NO.|  
+|**ЗНАЧЕНИЯМ TABLE_CATALOG**|**nvarchar (** 128 **)**|Квалификатор представления.|  
+|**TABLE_SCHEMA**|**nvarchar (** 128 **)**|Имя схемы, содержащей представление.<br /><br /> **&#42;&#42;Важные &#42; &#42;**  не используйте представления INFORMATION_SCHEMA, чтобы определить схему объекта. Единственный надежный способ найти схему объекта — направить запрос к представлению каталога sys.objects.|  
+|**ИМЯ_ТАБЛИЦЫ**|**nvarchar (** 128 **)**|Имя представления.|  
+|**VIEW_DEFINITION**|**nvarchar (** 4000 **)**|Если длина или определение больше, чем **nvarchar (** 4000 **)** , этот столбец равен NULL. В противном случае этот столбец является текстом определения представления.|  
+|**CHECK_OPTION**|**varchar (** 7 **)**|Тип инструкции WITH CHECK OPTION. CASCADE, если первоначальное представление было создано с помощью инструкции WITH CHECK OPTION. Иначе возвращается значение NONE.|  
+|**IS_UPDATABLE**|**varchar (** 2 **)**|Указывает, можно ли обновлять это представление. Всегда возвращает NO.|  
   
 ## <a name="see-also"></a>См. также  
  [Системные представления &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   

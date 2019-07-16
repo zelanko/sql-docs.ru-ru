@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: ea8950b7-fabc-4aa4-89f8-9573a2617d70
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 6cbdd0a1394114e3fdef0511c7ed14658f7dd9b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 602bc0ac1584f9ff369efa8a2484a16a97a92285
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63126307"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029152"
 ---
 # <a name="executing-the-ssma-console-sybasetosql"></a>Выполнение команд консоли SSMA (SybaseToSQL)
 Корпорация Майкрософт предоставляет широкий набор сценариев файл команды для выполнения и контроля над SSMA действий. В последующих разделах подробно описано же.  
@@ -406,9 +405,9 @@ sql-server-schema="<target-schema>"/>
   
 -   `on-error:` Указывает, следует ли для указания ошибок синхронизации в качестве предупреждения или ошибки. Доступные параметры для при ошибке:  
   
-    -   report-total-as-warning  
+    -   Общее число отчетов как предупреждение  
   
-    -   report-each-as-warning  
+    -   отчет each как предупреждение  
   
     -   Сбой скрипта  
   
@@ -467,9 +466,9 @@ fail-script>" (optional)
   
 -   `on-error:` Указывает, следует ли вызывать обновление ошибки как предупреждения или ошибки. Доступные параметры для при ошибке:  
   
-    -   report-total-as-warning  
+    -   Общее число отчетов как предупреждение  
   
-    -   report-each-as-warning  
+    -   отчет each как предупреждение  
   
     -   Сбой скрипта  
   
@@ -514,7 +513,7 @@ fail-script>" (optional)
 ## <a name="script-generation-commands"></a>Команды создания сценариев  
 Команды создания сценариев выполнения двух задач: они помогают сохранить выходные данные в файле скрипта консоли, и они записывают выходные данные T-SQL на консоль или файл, созданный на основе параметров, можно указать.  
   
-### <a name="save-as-script"></a>save-as-script  
+### <a name="save-as-script"></a>Сохранить как сценарий  
 Эта команда используется для сохранения скриптов для объектов в файл упоминалось, когда метабазы = target. Это является альтернативой команду синхронизации, в том, что мы получить скрипты и выполнить соответствует в целевой базе данных.  
   
 Эта команда требуется один или несколько узлов метабазы в качестве параметра командной строки.  

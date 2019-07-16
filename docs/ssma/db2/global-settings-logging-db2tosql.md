@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d314a2ca-ea2e-46e0-ae5e-8774841da91b
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 7d632b040a5124d73470ce825af91e254866a0ae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 16f987415e59d145c4ff423b1c221bffe54bd13d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63299220"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989561"
 ---
 # <a name="global-settings-logging-db2tosql"></a>Глобальные параметры (Ведение журнала) (DB2ToSQL)
 Используйте **глобальные параметры** диалоговое окно, чтобы указать параметры ведения журнала для SSMA. Как правило можно изменить эти параметры только в том случае, при взаимодействии со службой поддержки продукта.  

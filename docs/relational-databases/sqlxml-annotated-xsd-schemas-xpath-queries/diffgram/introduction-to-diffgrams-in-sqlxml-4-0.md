@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: 1902d67f-baf3-46e6-a36c-b24b5ba6f8ea
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0c0213344f518139573f5f9b95e71704689a637c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 7b232b2a6f6458139236595b2cac29afb54c0099
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016405"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073395"
 ---
 # <a name="introduction-to-diffgrams-in-sqlxml-40"></a>Введение в работу с дельтами в SQLXML 4.0
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -60,7 +59,7 @@ ms.locfileid: "56016405"
  Этот необязательный блок не учитывается средствами обработки дельт.  
   
 ## <a name="diffgram-annotations"></a>Заметки дельт  
- Эти заметки определяются в пространстве имен DiffGram **«urn: schemas-microsoft-com: XML-diffgram-01»**:  
+ Эти заметки определяются в пространстве имен DiffGram **«urn: schemas-microsoft-com: XML-diffgram-01»** :  
   
  **идентификатор**  
  Этот атрибут используется для сопоставления элементов в  **\<перед >** и  **\<DataInstance >** блоков.  
@@ -78,7 +77,7 @@ ms.locfileid: "56016405"
 |---------------|-----------------|  
 |Insert|Дельта задает операцию вставки, если элемент присутствует в  **\<DataInstance >** блок, но отсутствует в соответствующем  **\<перед >** блока, а также **diffgr: HasChanges** указан атрибут (**diffgr: HasChanges = вставлены**) в элементе. В этом случае дельта применяется для вставки экземпляра записи, указанной в  **\<DataInstance >** блок в базу данных.<br /><br /> Если **diffgr: HasChanges** атрибут не указан, то элемент учитывается средствами обработки и вставка не выполняется. Рабочие образцы см. в разделе [примеры дельт &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md).|  
 |Update|Дельта задает операцию обновления, если элемент, в \<перед > блока, для которого отсутствует соответствующий элемент в  **\<DataInstance >** блоков (то есть оба элемента имеют **diffgr: ID** атрибут с тем же значением) и **diffgr: HasChanges** указан атрибут со значением **изменения** для элемента в  **\<DataInstance >** блока.<br /><br /> Если **diffgr: HasChanges** атрибут не указан для элемента в  **\<DataInstance >** блока, возвращается сообщение об ошибке с помощью логики обработки. Рабочие образцы см. в разделе [примеры дельт &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md).<br /><br /> Если **diffgr: parentID** указывается в  **\<перед >** блокировать родительско дочернее отношение элементов, которые определяются **parentID** используются в Определение порядка, в котором записи обновляются.|  
-|DELETE|Дельта задает операцию удаления, если элемент присутствует в  **\<перед >** блок, но отсутствует в соответствующем  **\<DataInstance >** блока. В этом случае дельта применяется для удаления экземпляра записи, указанной в  **\<перед >** блок из базы данных. Рабочие образцы см. в разделе [примеры дельт &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md).<br /><br /> Если **diffgr: parentID** указывается в  **\<перед >** блокировать родительско дочернее отношение элементов, которые определяются **parentID** используются в Определение порядка, в котором записи будут удалены.|  
+|Оператор delete|Дельта задает операцию удаления, если элемент присутствует в  **\<перед >** блок, но отсутствует в соответствующем  **\<DataInstance >** блока. В этом случае дельта применяется для удаления экземпляра записи, указанной в  **\<перед >** блок из базы данных. Рабочие образцы см. в разделе [примеры дельт &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md).<br /><br /> Если **diffgr: parentID** указывается в  **\<перед >** блокировать родительско дочернее отношение элементов, которые определяются **parentID** используются в Определение порядка, в котором записи будут удалены.|  
   
 > [!NOTE]  
 >  Передача параметров в дельты не предусмотрена.  

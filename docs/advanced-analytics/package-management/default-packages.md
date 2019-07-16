@@ -8,13 +8,12 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: c2cf95e2d86836cd22aaa9dc67942f9d83c97e8c
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: 961d55237af75c0ef169332068c91e7d2341a542
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67141413"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962787"
 ---
 #  <a name="get-r-and-python-package-information"></a>Получить сведения о пакете R и Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -89,7 +88,7 @@ C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\si
 
 Существует несколько способов, которые можно получить полный список установленных пакетов. Одним из преимуществ запуска пакета списка команд из sp_execute_external_script является, что вы гарантированно получите пакеты, установленные в библиотеке экземпляра.
 
-### <a name="r"></a>Чтение
+### <a name="r"></a>R
 
 В следующем примере используется функция R `installed.packages()` в [!INCLUDE[tsql](../../includes/tsql-md.md)] хранимую процедуру, чтобы получить таблицу пакетов, которые были установлены в библиотеке R_SERVICES для текущего экземпляра. Этот скрипт возвращает поля имени и версии пакета в файле DESCRIPTION, возвращается только имя.
 
@@ -131,7 +130,7 @@ WITH RESULT SETS (( PackageVersion nvarchar (150) ))
 
 Если вы установили пакет и хотим убедиться, что он доступен для конкретного экземпляра SQL Server, можно выполнить следующий вызов хранимой процедуры для загрузки пакета и возвращать только сообщения.
 
-### <a name="r"></a>Чтение
+### <a name="r"></a>R
 
 В этом примере ищет и загружает библиотеки RevoScaleR, если он доступен.
 

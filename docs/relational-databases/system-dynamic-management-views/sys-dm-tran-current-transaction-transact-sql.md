@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 75d5697d-b390-4963-99b8-fa0b4244a40c
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 532bc1fb5f0ad31c56cd6b47dd3b0d98f5138fda
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0fcdba317a9bab5fee4e328c08111ccbbba86f8b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640432"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053188"
 ---
 # <a name="sysdmtrancurrenttransaction-transact-sql"></a>sys.dm_tran_current_transaction (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,7 +47,7 @@ sys.dm_tran_current_transaction
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**transaction_id**|**bigint**|Идентификатор транзакции текущего моментального снимка.|  
-|**transaction_sequence_num**|**bigint**|Порядковый номер транзакции, формирующей версию записи.|  
+|**transaction_sequence_num**|**bigint**|Порядковый номер транзакции, формирующий номер версии записи.|  
 |**transaction_is_snapshot**|**bit**|Состояние изоляции моментального снимка. Значение 1, если транзакция запускается с изоляцией моментального снимка. В противном случае — значение 0.|  
 |**first_snapshot_sequence_num**|**bigint**|Наименьший порядковый номер транзакции, которая была активна при получении моментального снимка. При выполнении транзакции моментального снимка она формирует моментальный снимок активных в этот момент транзакций. Для транзакций, не связанных с моментальными снимками, в этом столбце отображается 0.|  
 |**last_transaction_sequence_num**|**bigint**|Глобальный последовательный номер. Последний последовательный номер транзакции, созданный системой.|  
@@ -58,7 +57,7 @@ sys.dm_tran_current_transaction
 ## <a name="permissions"></a>Разрешения
 
 На [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], требуется `VIEW SERVER STATE` разрешение.   
-На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], требуется `VIEW DATABASE STATE` разрешение в базе данных.   
+В [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] необходимо разрешение `VIEW DATABASE STATE` для базы данных.   
   
 ## <a name="examples"></a>Примеры  
  Следующий пример использует тестовый сценарий, содержащий четыре параллельные транзакции, идентифицированные порядковыми номерами (XSN), который выполняется в базе данных с параметрами ALLOW_SNAPSHOT_ISOLATION и READ_COMMITTED_SNAPSHOT, установленными в значение ON. Следующие транзакции запущены:  

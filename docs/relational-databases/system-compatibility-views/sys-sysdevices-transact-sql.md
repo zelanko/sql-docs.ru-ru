@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: ac5bcaf4-8fb6-4855-8856-d7643f469361
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: be4c586e3a3bdf4387601d1221bd7afeab852677
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9cbd14a7ce8dd1cfb1571874a83a615065200014
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595302"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053522"
 ---
 # <a name="syssysdevices-transact-sql"></a>sys.sysdevices (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "47595302"
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Логическое имя файла резервной копии или базы данных.|  
-|**size**|**int**|Размер файла в страницах по 2 КБ. |  
+|**size**|**int**|Размер файла в страницах по 2 КБ.|  
 |**Низкий**|**int**|Поддерживается только для обратной совместимости.|  
 |**Высокий уровень**|**int**|Поддерживается только для обратной совместимости.|  
 |**status**|**smallint**|Битовая карта, показывающая тип устройства:<br /><br /> 1 = диск по умолчанию;<br /><br /> 2 = физический диск;<br /><br /> 4 = логический диск;<br /><br /> 8 = пропустить заголовок;<br /><br /> 16 = файл резервной копии;<br /><br /> 32 = устройство последовательной записи;<br /><br /> 4096 = только для чтения.|  

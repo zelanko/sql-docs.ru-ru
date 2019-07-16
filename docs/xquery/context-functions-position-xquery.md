@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f1bab9e4-1715-4c06-9cb0-06c7e0c9c97f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c7ec642a516d4ad2ac5a0f8d894351fc6670c117
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: de9f30c3c63030aa956366c222b7cbda94e2becb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540625"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038978"
 ---
 # <a name="context-functions---position-xquery"></a>Функции контекста — position (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ fn:position() as xs:integer
  В этом разделе приведены примеры запросов XQuery к экземплярам XML, которые хранятся в различных **xml** -столбцов в [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] базы данных.  
   
 ### <a name="a-using-the-position-xquery-function-to-retrieve-the-first-two-product-features"></a>A. Использование функции position() в запросе XQuery для получения первых двух характеристик продукта  
- Следующий запрос получает первые две характеристики — первые два дочерних <`Features`> — из описания каталога моделей продуктов. Если характеристик больше, к результату добавляется элемент <`there-is-more/`>.  
+ Следующий запрос получает первые две характеристики — первые два дочерних элемента <`Features`> элемент, из описания каталога моделей продуктов. Если имеются дополнительные функции, он добавляет <`there-is-more/`> элемент к результату.  
   
 ```  
 SELECT CatalogDescription.query('  

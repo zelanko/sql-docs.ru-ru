@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9a60f004-1477-4c54-a20c-7378e1116713
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5254b7bb3744e06dae300f33ff1b612b4aca2341
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 676f9fb526996e96b27bb758a7343c86afaac460
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537271"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053652"
 ---
 # <a name="sqlputdata-function"></a>SQLPutData, функция
 **Соответствие стандартам**  
@@ -63,7 +62,7 @@ SQLRETURN SQLPutData(
  Для всех других типов данных C если *StrLen_or_Ind* не SQL_NULL_DATA или SQL_DEFAULT_PARAM, драйвер предполагает, что размер \* *DataPtr* буфер — это размер указан тип данных C с помощью *ValueType* или *TargetType* и отправляет значения типа данных. Дополнительные сведения см. в разделе [преобразование данных из C в типы данных SQL](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md) в приложение г Типы данных.  
   
 ## <a name="returns"></a>Возвращает  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR, or SQL_INVALID_HANDLE.  
+ Значение SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, значение SQL_ERROR или SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Диагностика  
  Когда **SQLPutData** возвращает значение SQL_ERROR или SQL_SUCCESS_WITH_INFO, а связанное значение SQLSTATE можно получить, вызвав **SQLGetDiagRec** с *HandleType* из SQL_ HANDLE_STMT и *обрабатывать* из *StatementHandle*. В следующей таблице перечислены значения SQLSTATE, обычно возвращаемые **SQLPutData** и объясняется каждый из них в контексте этой функции; описания SQLSTATE, возвращаемых диспетчером драйверов предшествует обозначение «(DM)». Возвращается связанный с каждого значения SQLSTATE значение SQL_ERROR, если не указано иное.  

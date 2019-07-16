@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a2fce164-2b64-40c2-8f35-6eeb7844abf1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5e0bbf6e8befa751ee680cd97c2a29ad9f0fe084
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 904a694d73613bb1c40c671b18ca33e5d9b5d0e6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527696"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085277"
 ---
 # <a name="sphelpproxy-transact-sql"></a>sp_help_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +65,7 @@ sp_help_proxy
 |Dts|Выполнение пакетов служб SSIS|  
 |PowerShell|Скрипт PowerShell|  
   
-`[ @name = ] 'name'` Имя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] входа должны быть перечислены посредники. Имя **nvarchar(256)**, значение по умолчанию NULL. Когда *имя* указано, *subsystem_name* также должен быть указан.  
+`[ @name = ] 'name'` Имя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] входа должны быть перечислены посредники. Имя **nvarchar(256)** , значение по умолчанию NULL. Когда *имя* указано, *subsystem_name* также должен быть указан.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
@@ -77,9 +76,9 @@ sp_help_proxy
 |-----------------|---------------|-----------------|  
 |**proxy_id**|**int**|Идентификационный номер учетной записи-посредника.|  
 |**name**|**sysname**|Имя учетной записи-посредника.|  
-|**credential_identity**|**sysname**|Имя домена и имя пользователя Microsoft Windows для учетных данных, относящихся к учетной записи-посреднику.|  
+|**столбец credential_identity**|**sysname**|Имя домена и имя пользователя Microsoft Windows для учетных данных, относящихся к учетной записи-посреднику.|  
 |**включен**|**tinyint**|Указывает, включена ли учетная запись-посредник. { **0** — не включено, **1** = включена}|  
-|**Описание**|**nvarchar(1024)**|Описание этой учетной записи-посредника.|  
+|**description**|**nvarchar(1024)**|Описание этой учетной записи-посредника.|  
 |**user_sid**|**varbinary(85)**|Идентификатор безопасности Windows для пользователя Windows, соответствующего этой учетной записи-посреднику.|  
 |**credential_id**|**int**|Идентификатор учетных данных, связанных с учетной записью-посредником.|  
 |**credential_identity_exists**|**int**|Указывает, существует ли столбец credential_identity. { 0 = не существует, 1 = существует }|  

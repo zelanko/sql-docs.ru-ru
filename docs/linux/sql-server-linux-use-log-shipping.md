@@ -3,17 +3,16 @@ title: Настройте доставку журналов для SQL Server в
 description: Этом руководстве показано, как выполнить репликацию с экземпляром SQL Server на Linux с помощью дополнительного экземпляра, использования доставки журналов простой пример.
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 04/19/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 0bbe4e8076578afd3addb9521a60bc72b5be9a06
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 5f5b795d35899025f1651b0f7db758d60103c511
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834625"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032200"
 ---
 # <a name="get-started-with-log-shipping-on-linux"></a>Начало работы с доставкой журналов на платформе Linux
 
@@ -30,7 +29,7 @@ ms.locfileid: "67834625"
 - Копирование файла резервной копии журнала транзакций по сети на один или несколько дополнительных экземпляров SQL Server
 - Восстановление файла резервной копии журнала транзакций в дополнительных экземплярах SQL Server
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 - [Установка агента SQL Server в Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-sql-agent)
 
 ## <a name="setup-a-network-share-for-log-shipping-using-cifs"></a>Программа установки в сетевую папку для доставки журналов с помощью CIFS 

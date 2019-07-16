@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: c6253b48-29f5-4371-bfcd-3ef404060621
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 61cd3c5c4ba15d42c1b1fe261703cfbb67b3e24f
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 1dc80f17fc88fa665b41a130bb69ebe0d4f1f26c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538556"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032876"
 ---
 # <a name="spspaceused-transact-sql"></a>sp_spaceused (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -51,11 +50,11 @@ sp_spaceused [[ @objname = ] 'objname' ]
    
  Полное или неполное имя таблицы, индексированного представления или очереди, для которых были запрошены сведения по использованию места на диске. Кавычки необходимы только в том случае, если указано уточненное имя объекта. Если указано полностью уточненное имя, включающее имя базы данных, именем базы данных должно быть имя текущей базы данных.  
 Если *objname* не указан, результаты возвращаются для всей базы данных.  
-*ObjName* — **nvarchar(776)**, значение по умолчанию NULL.  
+*ObjName* — **nvarchar(776)** , значение по умолчанию NULL.  
 > [!NOTE]  
 > [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)] и [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)] поддерживают только объекты базы данных и таблицы.
   
-`[ @updateusage = ] 'updateusage'` Указывает, что следует запускать DBCC UPDATEUSAGE для обновления сведений об использовании пространства. Когда *objname* — не указано, инструкция выполняется на всю базу данных; в противном случае инструкция выполняется *objname*. Значения могут быть **true** или **false**. *UPDATEUSAGE* — **varchar(5)**, значение по умолчанию **false**.  
+`[ @updateusage = ] 'updateusage'` Указывает, что следует запускать DBCC UPDATEUSAGE для обновления сведений об использовании пространства. Когда *objname* — не указано, инструкция выполняется на всю базу данных; в противном случае инструкция выполняется *objname*. Значения могут быть **true** или **false**. *UPDATEUSAGE* — **varchar(5)** , значение по умолчанию **false**.  
   
 `[ @mode = ] 'mode'` Указывает область результатов. Для перенесенной таблицы или базы данных *режим* позволяет включить или исключить удаленного часть объекта. Дополнительные сведения см. в разделе [Stretch Database](../../sql-server/stretch-database/stretch-database.md).  
   
@@ -67,7 +66,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |LOCAL_ONLY|Возвращает статистику только локальную часть объектов или база данных хранилища. Если объект или база данных не совместимых со Stretch, возвращает та же статистика, как и при @mode = ALL.|  
 |REMOTE_ONLY|Возвращает статистику только удаленной части объекта или базы данных хранилища. Этот параметр выдает ошибку, если выполняется одно из следующих условий:<br /><br /> В таблице не включена для Stretch.<br /><br /> Таблица включена для Stretch, но никогда не включалась переноса данных. В этом случае удаленная таблица еще не содержит схему.<br /><br /> Пользователь удален вручную удаленной таблицы.<br /><br /> При подготовке remote data archive вернул состояние успешно, но на самом деле не удалось.|  
   
- *режим* — **varchar(11)**, значение по умолчанию **N'ALL'**.  
+ *режим* — **varchar(11)** , значение по умолчанию **N'ALL'** .  
   
 `[ @oneresultset = ] oneresultset` Указывает, следует ли возвращать один результирующий набор. *Oneresultset* аргумент может иметь следующие значения:  
   

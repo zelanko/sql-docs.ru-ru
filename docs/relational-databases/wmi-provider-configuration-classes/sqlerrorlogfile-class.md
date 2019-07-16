@@ -10,13 +10,12 @@ ms.topic: reference
 ms.assetid: 2b83ae4a-c0d4-414c-b6e5-a41ec7c13159
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 2794e4f59b6c898b1fd956c0f9390ba9bbbd439e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 849a487cefc5ec0be58eabcc2e312b7dd047aa4b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62515479"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68052469"
 ---
 # <a name="sqlerrorlogfile-class"></a>SqlErrorLogFile, класс
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ class SQLErrorLogFile
 |InstanceName|Тип данных: **строка**<br /><br /> Тип доступа: Только для чтения<br /><br /> Квалификаторы: Ключ<br /><br /> <br /><br /> Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], на котором хранится файл журнала.|  
 |Дата изменения|Тип данных: **даты и времени**<br /><br /> Тип доступа: Только для чтения<br /><br /> <br /><br /> Дата последнего изменения файла журнала.|  
 |LogFileSize|Тип данных: **uint32**<br /><br /> Тип доступа: Только для чтения<br /><br /> <br /><br /> Размер файла журнала в байтах.|  
-|Имя|Тип данных: **строка**<br /><br /> Тип доступа: Только для чтения<br /><br /> Квалификаторы: Ключ<br /><br /> <br /><br /> Имя файла журнала.|  
+|Name|Тип данных: **строка**<br /><br /> Тип доступа: Только для чтения<br /><br /> Квалификаторы: Ключ<br /><br /> <br /><br /> Имя файла журнала.|  
   
 ## <a name="remarks"></a>Примечания  
   
@@ -83,7 +82,7 @@ Next
 "SELECT * FROM SqlErrorLogFile"  
 ```  
   
-## <a name="security"></a>безопасность  
+## <a name="security"></a>Безопасность  
  Для подключения к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] файла журнала посредством инструментария WMI, необходимо иметь следующие разрешения как на локальных и удаленных компьютерах:  
   
 -   Доступ на чтение к **Root\Microsoft\SqlServer\ComputerManagement10** пространство имен WMI. По умолчанию доступ для чтения задается для всех с помощью разрешения «Включить учетную запись».  

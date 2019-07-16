@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 800f2c1a-6f79-4ed1-830b-aa1a62ff5165
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 194a90482946814995ca1963f7c8fc4bce48d223
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c7c028ca7e89378e959b11f59cad4119cef5086a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63126367"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083310"
 ---
 # <a name="committing-and-rolling-back-transactions"></a>Фиксация и откат транзакций
 Для фиксации или отката транзакции в режиме ручной фиксации, приложение вызывает **SQLEndTran**. Драйверы для СУБД, которые обычно поддерживают транзакции реализуют эту функцию, выполнив **ЗАФИКСИРОВАТЬ** или **ОТКАТА** инструкции. Диспетчер драйверов не вызывает **SQLEndTran** при подключении в режиме автоматической фиксации; он просто возвращает SQL_SUCCESS, даже если приложение попытается выполнить откат транзакции. Так как драйверы для СУБД, которые не поддерживают транзакции всегда находятся в режиме автоматической фиксации, они могут либо реализовать **SQLEndTran** для возвращения SQL_SUCCESS, не выполняя никаких действий или реализует его вообще.  

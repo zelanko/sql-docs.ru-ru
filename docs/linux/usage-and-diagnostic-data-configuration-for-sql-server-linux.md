@@ -3,17 +3,16 @@ title: Настройка использования и сбора диагно�
 description: Описывает способы сбора и настроен на платформе Linux использование клиента SQL Server и диагностических данных.
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 03/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: ab0b00013c09c5328ad711307558e67adc784d05
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 36c5194df015b26e5c9925575a9e524ef17ce602
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834538"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68057231"
 ---
 # <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-on-linux"></a>Настройка использования и сбора диагностических данных для SQL Server в Linux
 

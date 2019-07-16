@@ -14,13 +14,12 @@ ms.assetid: fd7e99d8-d26a-408c-9733-6ffccde99f75
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
-manager: craigg
-ms.openlocfilehash: e1f1097927f61355cf4a50f4287397d823fd3177
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5140c69184332b1760859421b7e802a5163a0f09
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62632417"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68100598"
 ---
 # <a name="parameter-data-types"></a>Типы данных параметров
 Несмотря на то, что каждый параметр указан с **SQLBindParameter** имеет определенный тип данных SQL, параметры в инструкции SQL с помощью имеют внутренний тип данных. Таким образом маркеры параметров могут быть включены в инструкцию SQL, только в том случае, если их типы данных может быть выведен из другой операнд в инструкции. Например в арифметического выражения, такие как? + COLUMN1, тип данных параметра может быть определено из тип данных именованного столбца, представленного COLUMN1. Приложение не может использовать маркер параметра, если невозможно определить тип данных.  

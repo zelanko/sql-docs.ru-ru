@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: cf56c684-c261-4b89-994a-db14ab2241d6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 21054bdb3f869a0f06349b32e481144b3582de4e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1a2ed3cffcb196cb09841df3b54fbfab53e22477
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63258819"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056874"
 ---
 # <a name="sql-to-c-guid"></a>SQL в C: GUID
 Идентификатор для типа данных GUID ODBC SQL представляет собой:  
@@ -31,13 +30,13 @@ ms.locfileid: "63258819"
   
 |Идентификатор типа C|Тест|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_CHAR|*BufferLength* > байт символов|Данные|36|н/д|  
+|SQL_C_CHAR|*BufferLength* > байт символов|Data|36|Н/Д|  
 ||*BufferLength* < 37|Не определено.|Не определено.|22003|  
-|SQL_C_WCHAR|*BufferLength* > Длина символьной|Данные|36|н/д|  
+|SQL_C_WCHAR|*BufferLength* > Длина символьной|Data|36|Н/Д|  
 ||*BufferLength* < 37|Не определено.|Не определено.|22003|  
-|SQL_C_BINARY|Байтовая длина данных \< =  *BufferLength*|Данные|Длина данных в байтах|н/д|  
+|SQL_C_BINARY|Байтовая длина данных \< =  *BufferLength*|Data|Длина данных в байтах|Н/Д|  
 ||Длину данных в байтах > *BufferLength*|Не определено.|Не определено.|22003|  
-|SQL_C_GUID|Нет [a]|Данные|16 [b]|н/д|  
+|SQL_C_GUID|Нет [a]|Data|16 [b]|Н/Д|  
   
  [a] значение *BufferLength* игнорируется для этого преобразования. Драйвер предполагает, что размер **TargetValuePtr* — это размер типа данных C.  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
 author: HJToland3
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: bd80395b4df7957f48cc480ba858af387e870b86
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 20fc72ce649d8ab66c43fe1c8f3a87775d83f9fa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66841095"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086778"
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>Новые возможности в SSMA для Oracle (OracleToSQL)
 В этой статье перечислены SQL Server Migration Assistant (SSMA) для Oracle изменения в каждом выпуске.
@@ -49,7 +48,7 @@ ms.locfileid: "66841095"
 > [!NOTE]
 > Известная проблема с помощью автоматического обновления могут вызвать сбой обновления из SSMA v8.0 для версии 8.1. Если эта ошибка возникает, загрузите новую версию и установить его вручную.
 
-## <a name="ssma-v80"></a>SSMA v8.0
+## <a name="ssma-v80"></a>SSMA версии 8.0
 
 В выпуске версии 8.0 SSMA для Oracle дополнено целевых исправлений, предназначенный для повышения качества и преобразования метрики. Этот выпуск также предлагает следующие новые функции:
 
@@ -117,7 +116,7 @@ ms.locfileid: "66841095"
 
 В выпуске v7.6 SSMA для Oracle повышается с целевых исправлений, повышающих качество и преобразования метрик и поддержка SQL Server 2017 (Предварительная версия). Поддержка SQL Server 2017 в Windows и Linux в общедоступной предварительной версии и не должны использоваться для миграции в рабочей среде.
 
-## <a name="ssma-v75"></a>SSMA v7.5
+## <a name="ssma-v75"></a>SSMA версии 7.5
 
 В выпуске версии 7.5 SSMA для Oracle содержит следующие изменения:
 

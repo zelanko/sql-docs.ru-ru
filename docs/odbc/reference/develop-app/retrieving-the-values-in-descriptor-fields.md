@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c05b180f-c2b0-437b-8d1c-ce7f4da93287
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ae95160a11a965e47845726748c2b9449a819e8a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 55d7017c659ca4d0b8094ed4a665d27c10b355f7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63284954"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020449"
 ---
 # <a name="retrieving-the-values-in-descriptor-fields"></a>Получение значений в полях дескриптора
 Приложение может вызвать **SQLGetDescField** для получения одного поля записи дескриптора. **SQLGetDescField** дает приложению доступ с дескрипторами полей, определенных в ODBC и также полей, определяемых драйвером.  

@@ -3,18 +3,17 @@ title: Управление SQL Server в Linux
 description: В этой статье ссылки на общие задачи управления и средства для SQL Server на платформе Linux.
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 6bd8eb0b-593d-467e-87ea-ab1c4dbcd1ea
-ms.openlocfilehash: 33489d1704d90d32b8b9362b1fa87f123ac17236
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: e38e51eb1db6c335175b2fc55636532df88ac27d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834919"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68000054"
 ---
 # <a name="choose-the-right-tool-to-manage-sql-server-on-linux"></a>Выбор подходящего средства для управления SQL Server в Linux
 
@@ -22,7 +21,7 @@ ms.locfileid: "67834919"
 
 Существует несколько способов управления SQL Server в Linux. Следующий раздел содержит краткий обзор управления различных инструментов и методов с указателями на дополнительные ресурсы.
 
-## <a name="mssql-conf"></a>mssql-conf 
+## <a name="mssql-conf"></a>MSSQL-conf 
 
 **Mssql-conf** средство настраивает SQL Server в Linux. Дополнительные сведения см. в разделе [Настройка SQL Server в Linux с помощью mssql-conf](sql-server-linux-configure-mssql-conf.md).
 

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 835b09b5-eb42-47ea-b46e-e115d4d6461f
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 2cc49bbd3d2927431da2c16debbe0f35dbf4bb79
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 72efa0f050a3b930ebaa99ff425b48e1fe9b6ba5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63453560"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67986652"
 ---
 # <a name="global-settings-logging-accesstosql"></a>Глобальные параметры (Ведение журнала) (AccessToSQL)
 Используйте **глобальные параметры** диалоговое окно, чтобы указать параметры ведения журнала для SSMA. Как правило можно изменить эти параметры только в том случае, при взаимодействии со службой поддержки продукта.  

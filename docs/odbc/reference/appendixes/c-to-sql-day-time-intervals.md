@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f9ee1ddb-dec7-4f78-b6e2-5ba34e7d6f59
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cb41d658637258c6d60b5adb4e0d7abb9ae81d91
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a3a4df236273b5afcaba78052ac236669bb133f0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63213416"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019375"
 ---
 # <a name="c-to-sql-day-time-intervals"></a>C в SQL: Интервалы времени дня
 Идентификаторы для типов данных ODBC C интервал времени дня следующие:  
@@ -50,10 +49,10 @@ ms.locfileid: "63213416"
   
 |Идентификатор типа SQL|Тест|SQLSTATE|  
 |-------------------------|----------|--------------|  
-|SQL_CHAR [a]<br /><br /> SQL_VARCHAR, [a]<br /><br /> SQL_LONGVARCHAR [a]|Длина столбца в байтах > = байтов символов<br /><br /> Длина в байтах столбца < символов байт []<br /><br /> Значение данных не является допустимое значение литерала интервала|н/д<br /><br /> 22001<br /><br /> 22015|  
-|SQL_WCHAR [a]<br /><br /> SQL_WVARCHAR [a]<br /><br /> SQL_WLONGVARCHAR [a]|Длина столбца символ > = символьную длину данных<br /><br /> Длина столбца символ < символ длину данных, [a]<br /><br /> Значение данных не является допустимое значение литерала интервала|н/д<br /><br /> 22001<br /><br /> 22015|  
-|SQL_TINYINT [b]<br /><br /> SQL_SMALLINT[b] SQL_INTEGER[b]<br /><br /> SQL_BIGINT [b] SQL_NUMERIC [b]<br /><br /> SQL_DECIMAL [b]|Преобразование интервала одному полю не привел к усечение целой части<br /><br /> Преобразование привело к усечению целой части|н/д<br /><br /> 22003|  
-|SQL_INTERVAL_DAY<br /><br /> SQL_INTERVAL_HOUR<br /><br /> SQL_INTERVAL_MINUTE<br /><br /> SQL_INTERVAL_SECOND<br /><br /> SQL_INTERVAL_DAY_TO_HOUR<br /><br /> SQL_INTERVAL_DAY_TO_MINUTE<br /><br /> SQL_INTERVAL_DAY_TO_SECOND<br /><br /> SQL_INTERVAL_HOUR_TO_MINUTE<br /><br /> SQL_INTERVAL_HOUR_TO_SECOND<br /><br /> SQL_INTERVAL_MINUTE_TO_SECOND|Значение данных был преобразован без усечения всех полей<br /><br /> Одно или несколько полей данных значения были усечены во время преобразования|н/д<br /><br /> 22015|  
+|SQL_CHAR [a]<br /><br /> SQL_VARCHAR, [a]<br /><br /> SQL_LONGVARCHAR [a]|Длина столбца в байтах > = байтов символов<br /><br /> Длина в байтах столбца < символов байт []<br /><br /> Значение данных не является допустимое значение литерала интервала|Н/Д<br /><br /> 22001<br /><br /> 22015|  
+|SQL_WCHAR [a]<br /><br /> SQL_WVARCHAR [a]<br /><br /> SQL_WLONGVARCHAR [a]|Длина столбца символ > = символьную длину данных<br /><br /> Длина столбца символ < символ длину данных, [a]<br /><br /> Значение данных не является допустимое значение литерала интервала|Н/Д<br /><br /> 22001<br /><br /> 22015|  
+|SQL_TINYINT [b]<br /><br /> SQL_SMALLINT [b] SQL_INTEGER [b]<br /><br /> SQL_BIGINT [b] SQL_NUMERIC [b]<br /><br /> SQL_DECIMAL [b]|Преобразование интервала одному полю не привел к усечение целой части<br /><br /> Преобразование привело к усечению целой части|Н/Д<br /><br /> 22003|  
+|SQL_INTERVAL_DAY<br /><br /> SQL_INTERVAL_HOUR<br /><br /> SQL_INTERVAL_MINUTE<br /><br /> SQL_INTERVAL_SECOND<br /><br /> SQL_INTERVAL_DAY_TO_HOUR<br /><br /> SQL_INTERVAL_DAY_TO_MINUTE<br /><br /> SQL_INTERVAL_DAY_TO_SECOND<br /><br /> SQL_INTERVAL_HOUR_TO_MINUTE<br /><br /> SQL_INTERVAL_HOUR_TO_SECOND<br /><br /> SQL_INTERVAL_MINUTE_TO_SECOND|Значение данных был преобразован без усечения всех полей<br /><br /> Одно или несколько полей данных значения были усечены во время преобразования|Н/Д<br /><br /> 22015|  
   
  [a] все C интервальных типов данных могут преобразовываться в символьный тип данных.  
   

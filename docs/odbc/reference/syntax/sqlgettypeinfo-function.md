@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: bdedb044-8924-4ca4-85f3-8b37578e0257
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: aef1e90053eba71db84e1fe89aa90684829a4941
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1c597cd4ca51ca578ca90c4e95db584dec4bcd6d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536537"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030588"
 ---
 # <a name="sqlgettypeinfo-function"></a>Функция SQLGetTypeInfo
 **Соответствие стандартам**  
@@ -54,7 +53,7 @@ SQLRETURN SQLGetTypeInfo(
  [Вход] Тип данных SQL. Это должно быть одно из значений в [типы данных SQL](../../../odbc/reference/appendixes/sql-data-types.md) части приложение г Типы данных, или к типу данных специфические для драйвера SQL. SQL_ALL_TYPES указывает, что должно возвращаться сведения обо всех типах данных.  
   
 ## <a name="returns"></a>Возвращает  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR, or SQL_INVALID_HANDLE.  
+ Значение SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, значение SQL_ERROR или SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Диагностика  
  Когда **SQLGetTypeInfo** возвращает значение SQL_ERROR или SQL_SUCCESS_WITH_INFO, а связанное значение SQLSTATE можно получить, вызвав **SQLGetDiagRec** с *HandleType* из SQL _HANDLE_STMT и *обрабатывать* из *StatementHandle*. В следующей таблице перечислены значения SQLSTATE, обычно возвращаемые **SQLGetTypeInfo** и объясняется каждый из них в контексте этой функции; описания SQLSTATE, возвращаемых диспетчером драйверов предшествует обозначение «(DM)». Возвращается связанный с каждого значения SQLSTATE значение SQL_ERROR, если не указано иное.  
@@ -69,7 +68,7 @@ SQLRETURN SQLGetTypeInfo(
 |40003|Состояние транзакции неизвестно|Не удалось выполнить связанное соединение во время выполнения этой функции и не удается определить состояние транзакции.|  
 |HY000|Общая ошибка|Произошла ошибка, для которой было нет конкретных SQLSTATE и SQLSTATE не зависящие от реализации, который был определен. Сообщение об ошибке, возвращенные **SQLGetDiagRec** в  *\*MessageText* буфера описывает ошибку и его причины.|  
 |HY001|Ошибка выделения памяти|Драйвер не удалось выделить память, необходимую для поддержки выполнения или завершения функции.|  
-|HY004|Недопустимый тип данных SQL|Значение, указанное для аргумента *DataType* был допустимым идентификатором типа данных ODBC SQL, ни идентификатор типа данных, поддерживаемых драйвером.|  
+|HY004 И СООБЩЕНИЕМ|Недопустимый тип данных SQL|Значение, указанное для аргумента *DataType* был допустимым идентификатором типа данных ODBC SQL, ни идентификатор типа данных, поддерживаемых драйвером.|  
 |HY008|Операция отменена|Асинхронная обработка была включена для *StatementHandle*, затем вызова функции и, прежде чем он завершил выполнение, **SQLCancel** или **SQLCancelHandle** был вызывается на *StatementHandle*. Затем функция был снова вызван для *StatementHandle*.<br /><br /> Функция была вызвана, и до его завершения выполнения, **SQLCancel** или **SQLCancelHandle** был вызван для *StatementHandle* из другого потока в многопоточные приложения.|  
 |HY010|Ошибка последовательности функций|(DM) был вызван асинхронно выполняемой функции для дескриптора соединения, связанный с *StatementHandle*. Если по-прежнему выполнении асинхронной функции **SQLGetTypeInfo** была вызвана функция.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, или **SQLMoreResults** был вызван для *StatementHandle* и возвращается SQL_PARAM_DATA_ ДОСТУПНО. Прежде чем данные были получены для всех параметров потоковой вызове этой функции.<br /><br /> (DM) асинхронно выполняемой функции (не такой) был вызван для *StatementHandle* и еще выполнялась при вызове этой функции.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, или **SQLSetPos** был вызван для  *StatementHandle* и возвращается значение SQL_NEED_DATA. Эта функция был вызван перед отправкой данных для всех параметров данных времени выполнения или столбцов.|  
 |HY013|Ошибка управления памятью|Не удалось обработать вызов функции, так как базовые объекты памяти оказываются недоступны, возможно из-за нехватки памяти.|  

@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: 3b24e5ed-0c79-47e5-805c-a0902d0aeb86
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2f860306c721bba75a9d5fc9af63ddbe0c6fc9bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 38d21e20ec158ea316caf6acd17f7225c8d3a49d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649542"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68002649"
 ---
 # <a name="sysdmdbmissingindexcolumns-transact-sql"></a>sys.dm_db_missing_index_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ sys.dm_db_missing_index_columns(index_handle)
 |-----------------|---------------|-----------------|  
 |**column_id**|**int**|Идентификатор столбца.|  
 |**column_name**|**sysname**|Имя столбца таблицы.|  
-|**column_usage**|**varchar(20)**|Способ использования столбца запросом. Ниже приведены возможные значения и их описания.<br /><br /> РАВЕНСТВО: Столбец участвует в предикате, выражающем равенство, в формате: <br />                        *table.column* = *constant_value*<br /><br /> НЕРАВЕНСТВО: Столбец участвует в предикате, выражающем неравенство, например, предикат в формате: *таблица.столбец* > *constant_value*. Любой оператор сравнения, кроме «=», выражает неравенство.<br /><br /> INCLUDE: Столбец не используется для вычисления предиката, но используются по другой причине, например, для выполнения запроса.|  
+|**column_usage**|**varchar(20)**|Способ использования столбца запросом. Ниже приведены возможные значения и их описания.<br /><br /> РАВЕНСТВА: Столбец участвует в предикате, выражающем равенство, в формате: <br />                        *table.column* = *constant_value*<br /><br /> НЕРАВЕНСТВО: Столбец участвует в предикате, выражающем неравенство, например, предикат в формате: *таблица.столбец* > *constant_value*. Любой оператор сравнения, кроме «=», выражает неравенство.<br /><br /> ВКЛЮЧАЮТ: Столбец не используется для вычисления предиката, но используются по другой причине, например, для выполнения запроса.|  
   
 ## <a name="remarks"></a>Примечания  
  Сведения, возвращаемые функцией **sys.dm_db_missing_index_columns** обновляется, когда запрос оптимизирован оптимизатором запросов и не сохраняется. Сведения об отсутствующих индексах хранятся только до перезапуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Администраторы базы данных должны периодически делать резервные копии сведений об отсутствующих индексах, чтобы сохранить их после перезагрузки сервера.  

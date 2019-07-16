@@ -2,19 +2,18 @@
 title: Устройство, установить и настроить - Analytics Platform System | Документация Майкрософт
 description: Пошаговое описание Analytics Platform System (APS) Администраторы устройств через первоначальные этапы для настройки и приступить к использованию нового устройства.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 5b6aa75cdab85fce9ef308d3e853ddb0107c28ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1f32cbeccb9a71d1d4c801443b40df5a762b8f38
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63276350"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961481"
 ---
 # <a name="appliance-installation-and-configuration-for-analytics-platform-system"></a>Модуль установки и настройки для Analytics Platform System
 Пошаговое описание Analytics Platform System (APS) Администраторы устройств через первоначальные этапы для настройки и приступить к использованию нового устройства.  

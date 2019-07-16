@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e972a510-960e-41d6-93c5-c71cd581a585
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3f842060c6ca621fc52fa34f08838541dc65e993
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 42a98fe7af16c4e8aab22d6ace02f359dfe02c54
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62719548"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096205"
 ---
 # <a name="sphelpmaintenanceplan-transact-sql"></a>sp_help_maintenance_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +64,7 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
 |**remote_history_server**|**int**|Имя удаленного сервера, на который может быть записан хронологический отчет.|  
 |**max_remote_history_rows**|**int**|Максимальное количество строк, выделенное в системной таблице на удаленном сервере, куда может быть записан хронологический отчет.|  
 |**user_defined_1**|**int**|Значение по умолчанию — NULL.|  
-|**user_defined_2**|**nvarchar(100)**|Значение по умолчанию — NULL.|  
+|**user_defined_2**|**Nvarchar(100)**|Значение по умолчанию — NULL.|  
 |**user_defined_3**|**datetime**|Значение по умолчанию — NULL.|  
 |**user_defined_4**|**uniqueidentifier**|Значение по умолчанию — NULL.|  
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-manager: jroth
-ms.openlocfilehash: 592b581ae4981e42bea2f6bf6f9135018917b002
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 49300b679ea650bf4dd6f032fb9c1443224e9f86
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794358"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054747"
 ---
 # <a name="migrate-on-premises-sql-server-or-sql-server-on-azure-vms-to-azure-sql-database-using-the-data-migration-assistant"></a>Миграция на локальном сервере SQL Server или SQL Server на виртуальных машинах Azure в базу данных SQL Azure с помощью Data Migration Assistant
 

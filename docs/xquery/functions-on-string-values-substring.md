@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2b3b8651-de51-46dc-af82-c86c45eac871
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3185da6f25f0e224240ad0891ad448267b26465c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 2188cff20411fe90d4858763f65cff7f6fe9c9d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656364"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004642"
 ---
 # <a name="functions-on-string-values---substring"></a>Функции со строковыми значениями — substring
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +72,7 @@ fn:substring($sourceString as xs:string?,
  В этом разделе приведены примеры запросов XQuery к экземплярам XML, хранящимся в различных **xml** -столбцов в [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] базы данных.  
   
 ### <a name="a-using-the-substring-xquery-function-to-retrieve-partial-summary-product-model-descriptions"></a>A. Использование функции XQuery substring() для получения частичного резюме о модели продукта  
- Этот запрос получает первые 50 символов строки, описывающей модель продукта, элемент <`Summary`> документа.  
+ Запрос извлекает первые 50 символов строки, описывающей модель продукта <`Summary`> элемент в документе.  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  
@@ -86,9 +85,9 @@ where CatalogDescription.exist('/pd:ProductDescription')  = 1;
   
  Обратите внимание на следующие данные из предыдущего запроса:  
   
--   **String()** функция возвращает строковое значение <`Summary`> элемента. Эту функцию необходимо использовать, потому что элемент <`Summary`> содержит как текст, так и вложенные элементы (элементы в формате html), которые нужно пропустить и вернуть весь текст.  
+-   **String()** функция возвращает строковое значение <`Summary`> элемента. Эта функция используется, так как <`Summary`> элемент содержит текст и вложенные элементы (элементы в формате html), и потому, что будет пропустить и вернуть весь текст.  
   
--   **Substring()** функция возвращает первые 50 символов из строкового значения, получаемого по **string()**.  
+-   **Substring()** функция возвращает первые 50 символов из строкового значения, получаемого по **string()** .  
   
  Частичный результат:  
   

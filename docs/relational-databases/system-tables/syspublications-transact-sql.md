@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a86eb4f5-1f7b-493e-af55-3d15cf878228
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ed5e46a5bfb9b4c4081eb2df7d4f93b7dd12b29f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 6d7fb57743726a59c0b501544802ecc7c701da20
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822938"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029749"
 ---
 # <a name="syspublications-transact-sql"></a>Таблица syspublications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "52822938"
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**Описание**|**nvarchar(255)**|Запись, содержащая описание публикации.|  
+|**description**|**nvarchar(255)**|Запись, содержащая описание публикации.|  
 |**name**|**sysname**|Уникальное имя, связанное с публикацией.|  
 |**pubid**|**int**|Столбец идентификаторов, в котором содержится уникальный идентификатор публикации.|  
 |**repl_freq**|**tinyint**|Частота репликации:<br /><br /> **0** = зависит от транзакции.<br /><br /> **1** = запланированное обновление таблицы.|  

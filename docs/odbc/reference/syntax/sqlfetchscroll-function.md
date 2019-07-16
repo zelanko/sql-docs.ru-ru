@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: c0243667-428c-4dda-ae91-3c307616a1ac
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 20a1580503ad141817edcf8e01772dfcc8dc39a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6f3d82cc11763722f552896a29bb3831d892054b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537357"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003042"
 ---
 # <a name="sqlfetchscroll-function"></a>Функция SQLFetchScroll
 **Соответствие стандартам**  
@@ -67,7 +66,7 @@ SQLRETURN SQLFetchScroll(
   
  SQL_FETCH_RELATIVE  
   
- SQL_FETCH_BOOKMARK  
+ ИНСТРУКЦИЯ SQL_FETCH_BOOKMARK  
   
  Дополнительные сведения см. в разделе «Позиционирования курсора» в разделе «Примечания».  
   
@@ -137,7 +136,7 @@ SQLRETURN SQLFetchScroll(
 |SQL_FETCH_ABSOLUTE|Возвращают набор строк, начиная со строки *FetchOffset*.|  
 |SQL_FETCH_FIRST|Возвращает первый набор строк в результирующем наборе.<br /><br /> **SQLFetchScroll** игнорирует значение *FetchOffset*.|  
 |SQL_FETCH_LAST|Возвращает последний полный набор строк в результирующем наборе.<br /><br /> **SQLFetchScroll** игнорирует значение *FetchOffset*.|  
-|SQL_FETCH_BOOKMARK|Возвращает набор строк FetchOffset строки из закладки, указанном в атрибуте инструкции SQL_ATTR_FETCH_BOOKMARK_PTR.|  
+|ИНСТРУКЦИЯ SQL_FETCH_BOOKMARK|Возвращает набор строк FetchOffset строки из закладки, указанном в атрибуте инструкции SQL_ATTR_FETCH_BOOKMARK_PTR.|  
   
  Драйверы не требуются для поддержки всех ориентациях выборки; приложение вызывает **SQLGetInfo** с типом сведения SQL_DYNAMIC_CURSOR_ATTRIBUTES1, SQL_KEYSET_CURSOR_ATTRIBUTES1 или SQL_STATIC_CURSOR_ATTRIBUTES1 (в зависимости от типа курсора) чтобы определить, какие выборки драйвер поддерживает ориентации. Просмотрите приложения и SQL_CA1_NEXT, SQL_CA1_RELATIVE, SQL_CA1_ABSOLUTE и WQL_CA1_BOOKMARK битовой маски в эти типы сведений. Кроме того, если курсор может перемещаться только вперед и FetchOrientation не SQL_FETCH_NEXT, **SQLFetchScroll** возвращает SQLSTATE HY106 (тип выборки за пределами диапазона).  
   
@@ -192,7 +191,7 @@ SQLRETURN SQLFetchScroll(
 |Условие|Первая строка новый набор строк|  
 |---------------|-----------------------------|  
 |*(Перед работы и FetchOffset > 0) ИЛИ (после окончания и FetchOffset < 0)*|*--* <sup>[1]</sup>|  
-|*BeforeStart AND FetchOffset <= 0*|*Перед запуском*|  
+|*BeforeStart и FetchOffset < = 0*|*Перед запуском*|  
 |*CurrRowsetStart = 1 и FetchOffset < 0*|*Перед запуском*|  
 |*CurrRowsetStart > 1 AND CurrRowsetStart + FetchOffset < 1 AND &#124; FetchOffset &#124; > RowsetSize* <sup>[3]</sup>|*Перед запуском*|  
 |*CurrRowsetStart > 1 AND CurrRowsetStart + FetchOffset < 1 AND &#124; FetchOffset &#124; < = RowsetSize* <sup>[3]</sup>|*1* <sup>[2]</sup>|  
@@ -241,7 +240,7 @@ SQLRETURN SQLFetchScroll(
   
  [1] Если размер набора строк были изменены с момента предыдущего вызова метода для получения строк, это новый размер набора строк.  
   
-## <a name="sqlfetchbookmark"></a>SQL_FETCH_BOOKMARK  
+## <a name="sqlfetchbookmark"></a>ИНСТРУКЦИЯ SQL_FETCH_BOOKMARK  
  Применяются следующие правила.  
   
 |Условие|Первая строка новый набор строк|  

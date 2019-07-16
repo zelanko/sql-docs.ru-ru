@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 5e38d37eae107c713ced69857898c604a77af297
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ff14718e09fa3732a40ea245430f33c599325eea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63187605"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003510"
 ---
 # <a name="mdx-function-reference-mdx"></a>Справочник по функциям многомерных выражений (многомерные выражения)
 

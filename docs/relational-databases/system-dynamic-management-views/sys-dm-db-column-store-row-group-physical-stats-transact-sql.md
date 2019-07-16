@@ -19,14 +19,13 @@ helpviewer_keywords:
 - sys.dm_db_column_store_row_group_physical_stats dynamic management view
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1460ef53098a9cdd7cf8bb1672c45cfd27adff57
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7e5e421935a9642c42a525fe8a25c4c8c9504c97
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822734"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005017"
 ---
 # <a name="sysdmdbcolumnstorerowgroupphysicalstats-transact-sql"></a>sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)
 
@@ -48,7 +47,7 @@ ms.locfileid: "66822734"
 |**total_rows**|**bigint**|Количество физических строк, хранимых в группе строк. Для групп сжатых строк такие, которые помечены удаляемых строк.|  
 |**deleted_rows**|**bigint**|Количество строк, физически хранятся в сжатой группе строк, которые помечены для удаления.<br /><br /> 0 для групп строк, которые находятся в разностном хранилище.|  
 |**size_in_bytes**|**bigint**|Общий размер в байтах всех страниц в этой группе строк. Этот размер включает размер, необходимый для хранения метаданных или Общие словари.|  
-|**trim_reason**|**tinyint**|Причины, вызвавшей группы строк COMPRESSED Чтобы меньше, чем максимальное количество строк.<br /><br /> 0 - UNKNOWN_UPGRADED_FROM_PREVIOUS_VERSION<br /><br /> 1 - NO_TRIM<br /><br /> 2 - BULKLOAD<br /><br /> 3 - REORG<br /><br /> 4 - DICTIONARY_SIZE<br /><br /> 5 - MEMORY_LIMITATION<br /><br /> 6 - RESIDUAL_ROW_GROUP<br /><br /> 7 - STATS_MISMATCH<br /><br /> 8 - ПЕРЕБРОСКИ|  
+|**trim_reason**|**tinyint**|Причины, вызвавшей группы строк COMPRESSED Чтобы меньше, чем максимальное количество строк.<br /><br /> 0 — UNKNOWN_UPGRADED_FROM_PREVIOUS_VERSION<br /><br /> 1 - NO_TRIM<br /><br /> 2 - BULKLOAD<br /><br /> 3 - REORG<br /><br /> 4 - DICTIONARY_SIZE<br /><br /> 5 - MEMORY_LIMITATION<br /><br /> 6 - RESIDUAL_ROW_GROUP<br /><br /> 7 - STATS_MISMATCH<br /><br /> 8 - ПЕРЕБРОСКИ|  
 |**trim_reason_desc**|**nvarchar(60)**|Описание *trim_reason*.<br /><br /> 0 — UNKNOWN_UPGRADED_FROM_PREVIOUS_VERSION: Произошла при обновлении с предыдущей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> 1 - NO_TRIM: Группы строк не был усечен. Группа строк была сжата с максимально 1,048,476 строк.  Число строк, может быть меньше, если subsset строк был удален после закрытия разностной группы строк<br /><br /> 2 - BULKLOAD. Размер пакета массовой загрузки из ограниченного числа строк.<br /><br /> 3 - REORG:  Принудительное сжатие как часть команды REORG.<br /><br /> 4 - DICTIONARY_SIZE: Размер словаря увеличились слишком велик для сжатия всех строк друг с другом.<br /><br /> 5 - MEMORY_LIMITATION: Недостаточно памяти для сжатия всех строк друг с другом.<br /><br /> 6 - RESIDUAL_ROW_GROUP:  Закрытый в составе последней группы строк с помощью строк < 1 миллиона во время построения индекса<br /><br /> STATS_MISMATCH: Только для индекса columnstore для таблицы в памяти. Если статистика неправильно указано, > = 1 миллион строк полное в заключительный фрагмент, но мы нашли меньшее число, функция сжатую группу строк будет иметь < 1 миллион строк<br /><br /> ПЕРЕБРОСКИ: Только для индекса columnstore для таблицы в памяти. Если заключительного > 1 миллион отмеченные строки, оставшиеся строки последнего пакета будут сжаты, если число равно между 100 тыс. и 1 миллион|  
 |**transition_to_compressed_state**|tinyint|Показано, как эту группу строк перемещались из deltastore в сжатом состоянии columnstore.<br /><br /> 1 - NOT_APPLICABLE<br /><br /> 2 - INDEX_BUILD<br /><br /> 3 - TUPLE_MOVER<br /><br /> 4 - REORG_NORMAL<br /><br /> 5 - REORG_FORCED<br /><br /> 6 - BULKLOAD<br /><br /> 7 - СЛИЯНИЯ|  
 |**transition_to_compressed_state_desc**|nvarchar(60)|NOT_APPLICABLE - операция не применяется в deltastore. Или группа строк была сжата перед обновлением до [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] в этом случае журнал не сохраняется.<br /><br /> Создание индекса INDEX_BUILD - или перестроение индекса в сжатые группы строк.<br /><br /> TUPLE_MOVER - процесс перемещения кортежей в фоновом режиме сжатые группы строк. Это происходит после группы строк изменяет состояние из ОТКРЫТОГО ЗАКРЫТО.<br /><br /> REORG_NORMAL - операция реорганизации, ALTER INDEX... REORG, перемещен ЗАКРЫТУЮ группу строк из deltastore в columnstore. Это произошло раньше времени для перемещения группы строк, кортежей.<br /><br /> REORG_FORCED - этой группы строк был открыт в deltastore и принудительно раньше, чем его полное число строк в columnstore.<br /><br /> BULKLOAD - операции массовой загрузки сжатые группы строк напрямую без использования deltastore.<br /><br /> СЛИЯНИЕ - операция слияния консолидированных один или несколько групп строк в эту группу строк и затем выполнить сжатие columnstore.|  

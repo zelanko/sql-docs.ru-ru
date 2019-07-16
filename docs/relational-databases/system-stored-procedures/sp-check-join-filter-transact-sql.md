@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: e9699d59-c8c9-45f6-a561-f7f95084a540
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 02c46d74a1e68af322aa50c7b0ac1c3d4f96ee49
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: f180e2b3478ce136fa16d82084d46b79e6152957
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531756"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070423"
 ---
 # <a name="spcheckjoinfilter-transact-sql"></a>sp_check_join_filter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,11 +45,11 @@ sp_check_join_filter [ @filtered_table = ] 'filtered_table'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @filtered_table = ] 'filtered_table'` — Имя фильтруемой таблицы. *filtered_table* — **nvarchar(400)**, не имеет значения по умолчанию.  
+`[ @filtered_table = ] 'filtered_table'` — Имя фильтруемой таблицы. *filtered_table* — **nvarchar(400)** , не имеет значения по умолчанию.  
   
-`[ @join_table = ] 'join_table'` Имя таблицы, соединяемой с *filtered_table*. *join_table* — **nvarchar(400)**, не имеет значения по умолчанию.  
+`[ @join_table = ] 'join_table'` Имя таблицы, соединяемой с *filtered_table*. *join_table* — **nvarchar(400)** , не имеет значения по умолчанию.  
   
-`[ @join_filterclause = ] 'join_filterclause'` Тестируется предложение фильтра соединения. *join_filterclause* — **nvarchar(1000)**, не имеет значения по умолчанию.  
+`[ @join_filterclause = ] 'join_filterclause'` Тестируется предложение фильтра соединения. *join_filterclause* — **nvarchar(1000)** , не имеет значения по умолчанию.  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   

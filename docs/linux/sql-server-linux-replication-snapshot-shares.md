@@ -4,18 +4,17 @@ description: В этой статье описывается, как настр�
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-manager: jroth
 ms.date: 09/24/2018
 ms.topic: article
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4091bd6f1a3afcf32431af78ad47089ffc9a1620
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 2513511889c4bc22757f0970269fa9ee7b51857d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834782"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093118"
 ---
 # <a name="configure-replication-snapshot-folder-with-shares"></a>Настройка папки моментальных снимков репликации с помощью общих папок
 

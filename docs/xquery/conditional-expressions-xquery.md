@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: b280dd96-c80f-4c51-bc06-a88d42174acb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 62a061632b5f598932fe29499519d7eb897c78a6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f593455269b8c005a3b4d3725f4360db77ea48f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041745"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039015"
 ---
 # <a name="conditional-expressions-xquery"></a>Выражения условий (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ else
   
 -   **Else** выражение является обязательным. Если оно не требуется, можно возвратить « ( ) », как показано в примерах, приведенных в этом подразделе.  
   
- Например, следующий запрос адресован **xml** переменной типа. **Если** проверяется значение SQL-переменной (@v) внутри выражения XQuery с помощью [функции SQL: variable()](../xquery/xquery-extension-functions-sql-variable.md) функцию расширения. Если оно равно «FirstName», возвращается элемент <`FirstName`>. В противном случае возвращается элемент <`LastName`>.  
+ Например, следующий запрос адресован **xml** переменной типа. **Если** проверяется значение SQL-переменной (@v) внутри выражения XQuery с помощью [функции SQL: variable()](../xquery/xquery-extension-functions-sql-variable.md) функцию расширения. Если значение переменной «FirstName», он возвращает <`FirstName`> элемента. В противном случае возвращается <`LastName`> элемента.  
   
 ```  
 declare @x xml  
@@ -81,7 +80,7 @@ if ( sql:variable("@v")="FirstName" ) then
 <FirstName>fname</FirstName>  
 ```  
   
- Следующий запрос получает описания первых двух характеристик конкретной модели продукции из каталога товаров. Если в документе описано большее число характеристик, в результат добавляется пустой элемент <`there-is-more`>.  
+ Следующий запрос получает описания первых двух характеристик конкретной модели продукции из каталога товаров. При наличии большего числа характеристик в документе, он добавляет <`there-is-more`> пустой элемент.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -123,7 +122,7 @@ WHERE ProductModelID = 19
 </Product>  
 ```  
   
- Следующий запрос возвращает элемент <`Location`> с атрибутом LocationID, если для цеха не задано рабочее время.  
+ В следующем запросе <`Location`> элемент с атрибутом LocationID возвращается в том случае, если для цеха не задано рабочее время.  
   
 ```  
 SELECT Instructions.query('  

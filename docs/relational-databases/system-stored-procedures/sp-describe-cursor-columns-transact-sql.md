@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6eaa54af-7ba4-4fce-bf6c-6ac67cc1ac94
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c64e89fd5d965b98b59107d6047e6f43c0bcc9b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1dffb53a2b6436725a2b7dc19dfb209a58b1134e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716712"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053113"
 ---
 # <a name="spdescribecursorcolumns-transact-sql"></a>sp_describe_cursor_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,18 +51,18 @@ sp_describe_cursor_columns
  Имя объявленной переменной для получения выходных данных курсора. *output_cursor_variable* — **курсор**, не по умолчанию, и не может быть связан с какими-либо курсорами во время вызова sp_describe_cursor_columns. Возвращаемый курсор является прокручиваемым, динамическим и доступным только для чтения.  
   
  [ @cursor_source=] {N'local' | N'global' | N'variable'}  
- Указывает, задан ли возвращаемый курсор с помощью имени локального курсора, глобального курсора или курсорной переменной. Параметр — **nvarchar(30)**.  
+ Указывает, задан ли возвращаемый курсор с помощью имени локального курсора, глобального курсора или курсорной переменной. Параметр — **nvarchar(30)** .  
   
  [ @cursor_identity=] N'*local_cursor_name*"  
- Имя курсора, созданного инструкцией DECLARE CURSOR с ключевым словом LOCAL или параметром LOCAL по умолчанию. *local_cursor_name* — **nvarchar(128)**.  
+ Имя курсора, созданного инструкцией DECLARE CURSOR с ключевым словом LOCAL или параметром LOCAL по умолчанию. *local_cursor_name* — **nvarchar(128)** .  
   
  [ @cursor_identity=] N'*global_cursor_name*"  
- Имя курсора, созданного инструкцией DECLARE CURSOR с ключевым словом GLOBAL или параметром GLOBAL по умолчанию. *global_cursor_name* — **nvarchar(128)**.  
+ Имя курсора, созданного инструкцией DECLARE CURSOR с ключевым словом GLOBAL или параметром GLOBAL по умолчанию. *global_cursor_name* — **nvarchar(128)** .  
   
  *global_cursor_name* также может быть именем серверного курсора API, открытого приложением ODBC и затем именованного вызовом SQLSetCursorName.  
   
  [ @cursor_identity=] N'*input_cursor_variable*"  
- Имя переменной курсора, связанной с открытым курсором. *input_cursor_variable* — **nvarchar(128)**.  
+ Имя переменной курсора, связанной с открытым курсором. *input_cursor_variable* — **nvarchar(128)** .  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  None  
@@ -83,7 +82,7 @@ sp_describe_cursor_columns
 |column_precision|**tinyint**|Максимальная точность столбца согласно *bPrecision* значение в OLE DB.|  
 |column_scale|**tinyint**|Количество цифр справа от десятичной запятой для **числовых** или **десятичное** типы данных согласно *bScale* значение в OLE DB.|  
 |order_position|**int**|Если столбец участвует в сортировке результирующего набора, позиция столбца в ключе сортировки относительно крайнего левого столбца.|  
-|order_direction|**varchar(1)**(допускающие значение NULL)|A — Столбец входит в ключ сортировки, которая производится по возрастанию.<br /><br /> D — Столбец входит в ключ сортировки, которая упорядочивается по убыванию.<br /><br /> NULL — Столбец не участвует в сортировке.|  
+|order_direction|**varchar(1)** (допускающие значение NULL)|A — Столбец входит в ключ сортировки, которая производится по возрастанию.<br /><br /> D — Столбец входит в ключ сортировки, которая упорядочивается по убыванию.<br /><br /> NULL — Столбец не участвует в сортировке.|  
 |hidden_column|**smallint**|0 = данный столбец отображается в списке выбора.<br /><br /> 1 = зарезервировано для использования в будущем.|  
 |columnid|**int**|Идентификатор базового столбца. Если столбец результирующего набора строится из выражения, значение columnid равно -1.|  
 |objectid|**int**|Идентификатор объекта или базовой таблицы, служащих источником столбца. Если столбец результирующего набора строится из выражения, значение objectid равно -1.|  

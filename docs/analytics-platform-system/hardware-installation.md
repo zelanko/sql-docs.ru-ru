@@ -2,19 +2,18 @@
 title: Установка оборудования - Analytics Platform System | Документация Майкрософт
 description: В этой статье описывается перемещение, распаковка и установка оборудования для устройства SQL Server PDW. В этой статье носит исключительно информационный характер и призван помочь вам понять процесс. Ваше устройство следует распаковать, установить и проверить перед переворачиваются вам. Участия клиентов является обязательным для элементов, таких как данные center доступа, мощность системы электропитания и Ethernet-подключения.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 169b38a1228f909a79d7866eba20b85b4a56c30b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c864a560bb37d27a5bb8ef306ac66815e8b5149c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63157324"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960878"
 ---
 # <a name="hardware-installation-for-analytics-platform-system-appliance"></a>Установка оборудования для Analytics Platform System appliance
 В этой статье описывается перемещение, распаковка и установка оборудования для устройства SQL Server PDW. В этой статье носит исключительно информационный характер и призван помочь вам понять процесс. Ваше устройство следует распаковать, установить и проверить перед переворачиваются вам. Участия клиентов является обязательным для элементов, таких как данные center доступа, мощность системы электропитания и Ethernet-подключения.  

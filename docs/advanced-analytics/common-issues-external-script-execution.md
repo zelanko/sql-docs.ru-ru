@@ -6,13 +6,12 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: a6943a850a2955a36723d14c0226bd5c503f23ec
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: 2d7f82230dbc6b87bcc8f752c99b7c92ef759253
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67140204"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963121"
 ---
 # <a name="common-issues-with-launchpad-service-and-external-script-execution-in-sql-server"></a>Распространенные проблемы со службой панели запуска и выполнения внешних скриптов в SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -57,7 +56,7 @@ ms.locfileid: "67140204"
 
 Чтобы устранить проблему, задайте для группы **SQLRUserGroup** разрешение **Локальный вход в систему**.
 
-Дополнительные сведения см. в разделе [Windows, настроить учетные записи и разрешения](../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).
+Дополнительные сведения см. в статье [Настройка учетных записей службы Windows и разрешений](../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).
 
 ## <a name="permissions-to-run-external-scripts"></a>Разрешения для выполнения внешних скриптов
 

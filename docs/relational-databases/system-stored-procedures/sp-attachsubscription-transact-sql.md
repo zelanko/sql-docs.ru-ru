@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b9bbda36-a46a-4327-a01e-9cd632e4791b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 47e1eec1aaa8162565f481b2d82982781e1a3c8c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d9f144d9d896fb75af5f59850c249b9044d1b781
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62996089"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046151"
 ---
 # <a name="spattachsubscription-transact-sql"></a>sp_attachsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ sp_attachsubscription [ @dbname = ] 'dbname'
 ## <a name="arguments"></a>Аргументы  
 `[ @dbname = ] 'dbname'` — Строка, которая указывает целевую базу данных подписки по имени. *DBName* — **sysname**, не имеет значения по умолчанию.  
   
-`[ @filename = ] 'filename'` Имя и физическое расположение первичного файла MDF (**master** файла данных). *Имя файла* — **nvarchar(260)**, не имеет значения по умолчанию.  
+`[ @filename = ] 'filename'` Имя и физическое расположение первичного файла MDF (**master** файла данных). *Имя файла* — **nvarchar(260)** , не имеет значения по умолчанию.  
   
 `[ @subscriber_security_mode = ] 'subscriber_security_mode'` — Режим безопасности подписчика для использования при подключении к подписчику при синхронизации. *subscriber_security_mode* — **int**, значение по умолчанию NULL.  
   
@@ -91,14 +90,14 @@ sp_attachsubscription [ @dbname = ] 'dbname'
 > [!IMPORTANT]  
 >  Не используйте пустые пароли. Выбирайте надежные пароли. По возможности предлагайте пользователям вводить учетные данные системы безопасности во время выполнения приложения. В случае необходимости хранения учетных данных в файле скрипта этот файл следует защищать во избежание несанкционированного доступа.  
   
-`[ @job_login = ] 'job_login'` — Это имя для учетной записи Windows, под которой запускается агент. *job_login* — **nvarchar(257)**, не имеет значения по умолчанию. Для соединения агента с распространителем всегда используется эта учетная запись Windows.  
+`[ @job_login = ] 'job_login'` — Это имя для учетной записи Windows, под которой запускается агент. *job_login* — **nvarchar(257)** , не имеет значения по умолчанию. Для соединения агента с распространителем всегда используется эта учетная запись Windows.  
   
 `[ @job_password = ] 'job_password'` — Пароль для учетной записи Windows, под которой запускается агент. *job_password* — **sysname**, не имеет значения по умолчанию. Значение *job_password* должно содержать менее 120 символов Юникода.  
   
 > [!IMPORTANT]  
 >  По возможности предлагайте пользователям вводить учетные данные системы безопасности во время выполнения приложения. В случае необходимости хранения учетных данных в файле скрипта этот файл следует защищать во избежание несанкционированного доступа.  
   
-`[ @db_master_key_password = ] 'db_master_key_password'` — Пароль для определяемого пользователем главного ключа базы данных. *db_master_key_password* — **nvarchar(524)**, со значением по умолчанию NULL. Если *db_master_key_password* не указан, существующий главный ключ базы данных будет удалена и создана заново.  
+`[ @db_master_key_password = ] 'db_master_key_password'` — Пароль для определяемого пользователем главного ключа базы данных. *db_master_key_password* — **nvarchar(524)** , со значением по умолчанию NULL. Если *db_master_key_password* не указан, существующий главный ключ базы данных будет удалена и создана заново.  
   
 > [!IMPORTANT]  
 >  По возможности предлагайте пользователям вводить учетные данные системы безопасности во время выполнения приложения. В случае необходимости хранения учетных данных в файле скрипта этот файл следует защищать во избежание несанкционированного доступа.  

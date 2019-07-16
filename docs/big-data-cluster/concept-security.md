@@ -5,17 +5,16 @@ description: В этой статье описываются основные п
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 49577ce5a29a0c014fea7c8c9a0c5c320a9b7174
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 54ae86785590eb26fb8ac402f3ae8ab6c7f29a98
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67729108"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958667"
 ---
 # <a name="security-concepts-for-sql-server-big-data-clusters"></a>Основные понятия безопасности для работы с большими данными кластеров SQL Server
 
@@ -61,10 +60,10 @@ ms.locfileid: "67729108"
  + CONTROLLER_PASSWORD = < controller_password >
 
 Пароль системного Администратора SQL Master: 
- + MSSQL_SA_PASSWORD=<controller_sa_password>
+ + MSSQL_SA_PASSWORD = < controller_sa_password >
 
 Пароль для доступа к конечной точке HDFS/Spark:
- + KNOX_PASSWORD=<knox_password>
+ + KNOX_PASSWORD = < knox_password >
 
 ### <a name="intra-cluster-authentication"></a>Проверка подлинности внутри кластера
 

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: cb5a68f8-dba4-41da-bafd-04efe53706b7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 598326335c32f18b5d7f5a764d387e5b5ea536f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c89756e86a702217d5d9d8495bf62b0d27f52321
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66699428"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922474"
 ---
 # <a name="rds-returns-quotstream-not-readquot-error"></a>RDS возвращает &quot;Stream не чтения&quot; ошибки
 «Объект Stream не удалось прочитать, так как он пуст или текущая позиция находится в конце Stream. Для потоков не пустой установите текущее положение с помощью свойства Position. Чтобы определить, пуста ли Stream, проверьте свойство размера.»  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8b42b8ae-7862-4b63-a0b3-2a204e0c43a5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8e559eab5787a64b6bdf0850147d7d9128fc435c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f24e50b7f6dd8b129a2777ce1132ec426b7ea182
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63208576"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078986"
 ---
 # <a name="writing-an-interoperable-application"></a>Создание приложений с поддержкой взаимодействия
 Каждый раз, когда приложение использует один и тот же код с более чем один драйвер, этот код должен быть с возможностью взаимодействия между эти драйверы. В большинстве случаев это непростая задача. Например код для выборки строк с курсором последовательного одинаков для всех драйверов. В некоторых случаях это может быть более сложным. Например код для создания идентификаторов для использования в инструкциях SQL необходимо учитывать регистр идентификатора, заключение в кавычки и соглашения об именовании одного, двух частей и трех частей.  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f28178d9-ecd6-4e8c-9644-9bb624999dcb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6ab470951162b5e4035c1253ed4ce425356ad8ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 240bdf074fbe7fd28f5aafff5c1bbab7651d0c71
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63042530"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067468"
 ---
 # <a name="custom-applications"></a>Пользовательские приложения
 Пользовательские приложения обычно выполняют определенную задачу для нескольких СУБД. Например приложение может получать данные из одной СУБД и Создание отчета, или он может передавать данные между несколькими СУБД. Что эти приложения имеют общие, что эти СУБД известны, прежде чем написать приложение и вряд ли изменяются на протяжении приложения.  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 93dfc377-45f1-4384-9392-560d9331a915
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5a39312142a2d81761320c1e5f75cefe2a85b9d7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 8711190a6d3cbae0c716f7f62af478b70b9473e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673493"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038916"
 ---
 # <a name="functions-on-boolean-values---not-function"></a>Функции с логическими значениями — функция not 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ fn:not($arg as item()*) as xs:boolean
  В этом разделе приведены примеры запросов XQuery к экземплярам XML, которые хранятся в различных **xml** -столбец базы данных AdventureWorks.  
   
 ### <a name="a-using-the-not-xquery-function-to-find-product-models-whose-catalog-descriptions-do-not-include-the-specifications-element"></a>A. Использование функции not() XQuery для поиска моделей продуктов, описания которых в каталоге не включают \<спецификации > элемента.  
- В результате выполнения приведенного ниже запроса создается XML-документ, содержащий идентификаторы моделей продуктов, не содержащие элемент <`Specifications`>.  
+ Следующий запрос создает XML, содержащий идентификаторы моделей для моделей продукции, описания которых в каталоге не содержат <`Specifications`> элемента.  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  
@@ -94,7 +93,7 @@ WHERE ProductModelID=7
   
 -   В запросе **не (@MachineHours)** предикат возвращает значение True, если не **MachineHours** атрибута.  
   
- Результат:  
+ Это результат:  
   
 ```  
 ProductModelID Result   

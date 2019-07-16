@@ -5,17 +5,16 @@ description: Дополнительные сведения о развертыв
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e04986691b52149f0918b1559f1f3db1d99cab38
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 0f2993d15cecd87879cabc50918d784a16750b30
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728795"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958419"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Развертывание кластеров больших данных SQL Server в Kubernetes
 
@@ -82,9 +81,9 @@ kubectl config view
 
 | Профиль развертывания | Среды Kubernetes |
 |---|---|
-| **aks-dev-test** | Служба Azure Kubernetes (AKS) |
-| **kubeadm-dev-test** | Несколько компьютеров (kubeadm) |
-| **minikube-dev-test** | Minikube |
+| **aks разработки и тестирования** | Служба Azure Kubernetes (AKS) |
+| **kubeadm разработки и тестирования** | Несколько компьютеров (kubeadm) |
+| **minikube — разработка и тестирование** | Minikube |
 
 Можно развернуть кластер больших данных, выполнив **создать mssqlctl bdc**. Это приглашение выбрать одну из конфигураций по умолчанию и затем поможет выполнить развертывание.
 

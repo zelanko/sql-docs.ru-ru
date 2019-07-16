@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d50ea3e6-7a9e-4fb6-8cd8-1d429d2f7b3c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: df7a2d036692cefcd1b2ea2338d51938a11ea85a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6d0ed7a5f488765b56b2af0688ca14361590ab44
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63208439"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022099"
 ---
 # <a name="vertical-applications"></a>Вертикальные приложения
 Вертикальные приложения обычно выполняют четко определенной задачи от одной СУБД. Например приложение для ввода заказов отслеживает заказов в компании. Что общего у этих типов приложений, что схемы базы данных обычно создаются разработчиком приложения и, хотя приложение может работать с количеством разных СУБД, он работает с одной СУБД для одного клиента.  

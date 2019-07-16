@@ -7,20 +7,19 @@ ms.date: 04/10/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 6d8da3ce90e915344f2380d4cd5cc866db6715ef
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: a2d0987441f8f26304590f5ccbde15a2e15cf3c7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59476639"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962068"
 ---
 # <a name="quickstart-hello-world-python-script-in-sql-server"></a>Краткое руководство. Скрипт Python «Hello world» в SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 В этом кратком руководстве вы узнаете основные понятия, выполнив Python «Hello, World!» скрипт inT-SQL, представив Введение **sp_execute_external_script** системной хранимой процедуры. 
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 Предыдущего краткого руководства, [проверьте Python в SQL Server существует](quickstart-python-verify.md), сведения и ссылки по настройке среды Python, необходимые для этого краткого руководства.
 

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9168b0b6-a828-4fef-b8cd-bdf439776f23
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: af0ed8307652ccf45e7fbfffb6c00355c8a8b004
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5863935ddf595409d48be79dc646c0994ddeb0b8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63159354"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019322"
 ---
 # <a name="c-to-sql-guid"></a>C в SQL: GUID
 Идентификатор для типа данных GUID ODBC C является:  
@@ -31,13 +30,13 @@ ms.locfileid: "63159354"
   
 |Идентификатор типа SQL|Тест|SQLSTATE|  
 |-------------------------|----------|--------------|  
-|SQL_CHAR|Длина столбца в байтах > = 36|н/д|  
+|SQL_CHAR|Длина столбца в байтах > = 36|Н/Д|  
 |SQL_VARCHAR|Столбец байтов длиной < 36|22001|  
 |SQL_LONGVARCHAR|Значение данных не является допустимым идентификатором GUID|22018|  
-|SQL_WCHAR|Длина столбца символ > = 36|н/д|  
+|SQL_WCHAR|Длина столбца символ > = 36|Н/Д|  
 |SQL_WVARCHAR|Длина < 36 символов столбца|22001|  
 |SQL_WLONGVARCHAR|Значение данных не является допустимым идентификатором GUID|22018|  
-|SQL_GUID|Нет [a]|н/д|  
+|SQL_GUID|Нет [a]|Н/Д|  
   
  [a] все шестнадцатеричных значений могут использоваться в качестве идентификатора GUID.  
   

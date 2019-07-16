@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 796322df-e62a-45bf-b519-89e1d521abce
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 46c055e017c2cf5c06993f3e117010ac1621e175
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2521d9543c71d9dee298fbb58518163fd45fbfdc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62936744"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67999528"
 ---
 # <a name="sysdatabasecredentials-transact-sql"></a>sys.database_credentials (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "62936744"
 |credential_identity|**nvarchar(4000)**|Имя применяемого идентификатора. Обычно это пользователь Windows. Это имя не обязательно должно быть уникальным.|  
 |create_date|**datetime**|Время создания учетных данных области базы данных.|  
 |modify_date|**datetime**|Время последнего изменения учетных данных области базы данных.|  
-|target_type|**nvarchar(100)**|Тип базы данных учетных данных. Возвращает значение NULL, если для базы данных учетные данные.|  
+|target_type|**Nvarchar(100)**|Тип базы данных учетных данных. Возвращает значение NULL, если для базы данных учетные данные.|  
 |target_id|**int**|Идентификатор объекта, который сопоставляется с учетные данные уровня базы данных. Возвращает значение 0 для базы данных учетные данные|  
   
 ## <a name="permissions"></a>Разрешения  

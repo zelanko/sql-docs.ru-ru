@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4ca37b28-a6df-465b-8988-d422d37fc025
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1a2971ef09877a3a6e86334563913941282244f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a5a869d38782478b69ce47656455c38c2b4645b6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537306"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005740"
 ---
 # <a name="sqlprocedurecolumns-function"></a>SQLProcedureColumns, функция
 **Соответствие стандартам**  
@@ -87,7 +86,7 @@ SQLRETURN SQLProcedureColumns(
  [Вход] Длина в символах **ColumnName*.  
   
 ## <a name="returns"></a>Возвращает  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR, or SQL_INVALID_HANDLE.  
+ Значение SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, значение SQL_ERROR или SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Диагностика  
  Когда **SQLProcedureColumns** возвращает значение SQL_ERROR или SQL_SUCCESS_WITH_INFO, а связанное значение SQLSTATE можно получить, вызвав **SQLGetDiagRec** с *HandleType* значение SQL_HANDLE_STMT и *обрабатывать* из *StatementHandle*. В следующей таблице перечислены значения SQLSTATE, обычно возвращаемые **SQLProcedureColumns** и объясняется каждый из них в контексте этой функции; описания SQLSTATE, возвращаемых драйвером предшествует обозначение «(DM)» Диспетчер. Возвращается связанный с каждого значения SQLSTATE значение SQL_ERROR, если не указано иное.  

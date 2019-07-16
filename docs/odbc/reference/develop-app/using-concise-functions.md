@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 31ac070f-8c59-4fd5-bd5a-466bb27dbca0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1d70d3ca60a046a355549260406edba261f805e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 43004601845d3032d404c308b7b1fa4850f694ee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63312483"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022187"
 ---
 # <a name="using-concise-functions"></a>Использование сокращенных функций
 Неявные доступа к дескрипторам некоторые функции ODBC. Программисты могут оказаться более удобным, чем вызов **SQLSetDescField** или **SQLGetDescField**. При вызове этих функций *краткими* функции, поскольку они выполняют ряд функций, включая задания или получения поля дескриптора. Некоторые сокращенных функций позволяют приложению задавать или получать несколько полей связанных дескриптор в одном вызове функции.  
