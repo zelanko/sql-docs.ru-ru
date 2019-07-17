@@ -1,4 +1,12 @@
-## <a name="prerequisites"></a>предварительные требования
+---
+ms.openlocfilehash: 7d392ee6791c120243b304ab24b2f8268499617d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68215582"
+---
+## <a name="prerequisites"></a>Предварительные требования
 
 Перед созданием группы доступности необходимо выполнить следующие действия:
 

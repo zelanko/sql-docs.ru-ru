@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 76afbfcd2cd7668cfc65fc5078a1015ac33bc964
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529110"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68178959"
 ---
 # <a name="data-sources-and-bindings-ssas-multidimensional"></a>Источники данных и привязки (многомерные службы SSAS)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -37,13 +37,13 @@ ms.locfileid: "52529110"
 |---------------------------------|-----------------|  
 |BigInt|64-разрядное целое число со знаком. Этот тип данных соответствует типу данных Int64 в Microsoft [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] и типу данных DBTYPE_I8 в OLE DB.|  
 |Bool|Значение типа Boolean. Этот тип данных соответствует типу данных Boolean в [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] и типу данных DBTYPE_BOOL в OLE DB.|  
-|CURRENCY|Значение валюты от -263 (или -922 337 203 685 477,5808) до 263-1 (или 922 337 203 685 477,5807) с точностью до одной тысячной единицы валюты. Этот тип данных соответствует типу данных Decimal в [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] и типу данных DBTYPE_CY в OLE DB.|  
-|Дата|Данные о дате, сохраненные в виде числа с плавающей запятой двойной точности. Целая часть числа равна числу дней, прошедшему с 30 декабря 1899 г., а десятичная часть равна части дня. Этот тип данных соответствует типу данных DateTime в [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] и типу данных DBTYPE_DATE в OLE DB.|  
+|Currency|Значение валюты от -263 (или -922 337 203 685 477,5808) до 263-1 (или 922 337 203 685 477,5807) с точностью до одной тысячной единицы валюты. Этот тип данных соответствует типу данных Decimal в [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] и типу данных DBTYPE_CY в OLE DB.|  
+|Date|Данные о дате, сохраненные в виде числа с плавающей запятой двойной точности. Целая часть числа равна числу дней, прошедшему с 30 декабря 1899 г., а десятичная часть равна части дня. Этот тип данных соответствует типу данных DateTime в [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] и типу данных DBTYPE_DATE в OLE DB.|  
 |Double|Число с плавающей запятой двойной точности в диапазоне от -1,79E +308 до 1,79E +308. Этот тип данных соответствует типу данных Double в [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] и типу данных DBTYPE_R8 в OLE DB.|  
 |Целочисленный|32-разрядное целое число со знаком. Этот тип данных соответствует типу данных Int32 в [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] и типу данных DBTYPE_I4 в OLE DB.|  
 |Один|Число с плавающей запятой одинарной точности в диапазоне от -3,40E +38 до 3,40E +38. Этот тип данных соответствует типу данных Single в [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] и типу данных DBTYPE_R4 в OLE DB.|  
 |SmallInt|16-разрядное целое число со знаком. Этот тип данных соответствует типу данных Int16 в [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] и типу данных DBTYPE_I2 в OLE DB.|  
-|TinyInt|8-разрядное число со знаком. Этот тип данных соответствует типу данных SByte в [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] и типу данных DBTYPE_I1 в OLE DB.<br /><br /> Примечание. Если источник данных содержит поля, имеющие тип данных tinyint, и свойство AutoIncrement имеет значение True, то в представлении источника данных они будут преобразованы в целые числа.|  
+|TinyInt|8-разрядное число со знаком. Этот тип данных соответствует типу данных SByte в [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] и типу данных DBTYPE_I1 в OLE DB.<br /><br /> Примечание. Если источник данных содержит поля, имеющие тип данных tinyint, и свойство AutoIncrement имеет значение True, то они будут преобразованы в целые числа в представлении источника данных.|  
 |UnsignedBigInt|64-разрядное целое число без знака. Этот тип данных соответствует типу данных UInt64 в [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] и типу данных DBTYPE_UI8 в OLE DB.|  
 |UnsignedInt|32-разрядное целое число без знака. Этот тип данных соответствует типу данных UInt32 в [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] и типу данных DBTYPE_UI4 в OLE DB.|  
 |UnsignedSmallInt|16-разрядное целое число без знака. Этот тип данных соответствует типу данных UInt16 в [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] и типу данных DBTYPE_UI2 в OLE DB.|  
@@ -145,7 +145,7 @@ ms.locfileid: "52529110"
   
  Внешние привязки указываются с помощью включения в команду обработки необязательного объекта коллекции **Bindings** . Необязательная коллекция **Bindings** содержит следующие элементы:  
   
-|Свойство|Количество элементов|Тип|Описание|  
+|Свойство|Количество элементов|Type|Описание|  
 |--------------|-----------------|----------|-----------------|  
 |**Binding**|От 0 до n|**Binding**|Предоставляет коллекцию новых привязок.|  
 |**DataSource**|0–1|**DataSource**|Заменяет **DataSource** с сервера, который будет использоваться.|  

@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 7fd80e47-5bd9-41e2-a3d3-091a7c8c5f2b
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5454f7c41a55442c8b68cd57dd71c3859902be97
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 1a272a93d0148524da2def06fb8b4bbc121a9b0c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535117"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68128693"
 ---
 # <a name="data-source-information-properties"></a>Свойства сведений об источнике данных
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,15 +32,15 @@ ms.locfileid: "52535117"
   
 |Идентификатор свойства|Описание|  
 |-----------------|-----------------|  
-|SSPROP_COLUMNLEVELCOLLATION|Тип: VT_BOOL<br /><br /> Чтение-запись: Чтение<br /><br /> По умолчанию: VARIANT_TRUE<br /><br /> Описание. Указывает, поддерживаются ли параметры сортировки столбцов.<br /><br /> VARIANT_TRUE: Параметры сортировки на уровне столбцов не поддерживаются.<br /><br /> VARIANT_FALSE: Параметры сортировки на уровне столбцов не поддерживаются.|  
-|SSPROP_UNICODELCID|Тип: VT_I4  Чтение и запись: Чтение<br /><br /> Описание. Код локали в Юникоде.<br /><br /> Это локаль, используемый для сортировки данных в Юникоде.|  
-|SSPROP_UNICODECOMPARISONSTYLE|Тип: VT_I4  Чтение и запись: Чтение<br /><br /> Описание. Стиль сравнения Юникод.<br /><br /> Параметры сортировки, используемые для сортировки данных в Юникоде.|  
+|SSPROP_COLUMNLEVELCOLLATION|Тип: VT_BOOL<br /><br /> И ЗАПИСЬ: Чтение<br /><br /> По умолчанию: VARIANT_TRUE<br /><br /> Описание. Позволяет определить, поддерживается ли параметры сортировки столбца.<br /><br /> VARIANT_TRUE: Параметры сортировки уровня столбцов поддерживается.<br /><br /> VARIANT_FALSE: Параметры сортировки уровня столбцов не поддерживается.|  
+|SSPROP_UNICODELCID|Тип: VT_I4 И ЗАПИСЬ: Чтение<br /><br /> Описание. Идентификатор языкового стандарта Unicode<br /><br /> Это локаль, используемый для сортировки данных в Юникоде.|  
+|SSPROP_UNICODECOMPARISONSTYLE|Тип: VT_I4 И ЗАПИСЬ: Чтение<br /><br /> Описание. Стиль сравнения Юникод.<br /><br /> Параметры сортировки, используемые для сортировки данных в Юникоде.|  
   
  В специфичном для каждого поставщика множестве свойств DBPROPSET_SQLSERVERSTREAM поставщик OLE DB собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определяет следующее дополнительное свойство.  
   
 |Идентификатор свойства|Описание|  
 |-----------------|-----------------|  
-|SSPROP_STREAM_XMLROOT|Тип: VT_BSTR  Чтение и запись: Чтение/запись<br /><br /> Описание. Результат запроса FOR XML может не быть правильно сформированным XML-документом. Если это свойство задано, результат инструкции "select … for XML" окажется завернут в корневой тег, предоставленный данным свойством, для возвращения правильно сформированного XML-документа. Если запрос выполняется в браузере, при загрузке результата в окне браузера может быть выведена информация об ошибках средства синтаксического анализа. Для избежания этой ошибки в SQL ISAPI применяется ключевое слово ROOT. Оно соответствует свойству SSPROP_STREAM_XMLROOT.|  
+|SSPROP_STREAM_XMLROOT|Тип: VT_BSTR И ЗАПИСЬ: Чтение и запись<br /><br /> Описание. Результат запроса FOR XML не может быть документом правильного формата. Если это свойство задано, результат инструкции "select … for XML" окажется завернут в корневой тег, предоставленный данным свойством, для возвращения правильно сформированного XML-документа. Если запрос выполняется в браузере, при загрузке результата в окне браузера может быть выведена информация об ошибках средства синтаксического анализа. Для избежания этой ошибки в SQL ISAPI применяется ключевое слово ROOT. Оно соответствует свойству SSPROP_STREAM_XMLROOT.|  
   
 ## <a name="see-also"></a>См. также  
  [Объекты источника данных &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  

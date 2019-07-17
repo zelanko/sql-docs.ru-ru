@@ -21,11 +21,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ba5b5edf57bf877827fefe4f8764b8b71124a550
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078334"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196536"
 ---
 # <a name="create-nested-triggers"></a>Создание вложенных триггеров
   При выполнении триггером действия, инициирующего другой триггер, триггеры DML и DDL становятся вложенными. Эти действия могут инициировать другие триггеры и т.д. Вложенность триггеров DML и DDL может составлять до 32 уровней. Можно разрешать или запрещать вложенность триггеров AFTER с помощью параметра конфигурации сервера **nested triggers** . Вложенность триггеров INSTEAD OF (только триггеры DML могут быть триггерами INSTEAD OF) не зависит от этого параметра.  

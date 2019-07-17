@@ -10,14 +10,13 @@ ms.topic: reference
 ms.assetid: 96976bac-018c-47cc-b1b2-fa9605eb55e5
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4a568fdfcf2e6dc6abd59d060f2e374339e13341
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 188a2322dd60a84b62a509d5622e827bdbae8e38
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534722"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106916"
 ---
 # <a name="new-date-and-time-features-with-previous-sql-server-versions-ole-db"></a>Новые функции даты и времени с предыдущими версиями SQL Server (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -26,7 +25,7 @@ ms.locfileid: "52534722"
   В этом разделе описывается ожидаемое поведение, когда клиентское приложение, которое использует функции расширенного даты и времени взаимодействует с версией [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] более ранней, чем [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]и когда клиент, скомпилированный с версией [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client более ранней, чем [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] отправляет команды к серверу, поддерживающему улучшенные функции даты и времени.  
   
 ## <a name="down-level-client-behavior"></a>Работа в клиентах низкого уровня  
- Клиентские приложения, использующие версию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственный клиент более ранней, чем [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] см. в разделе типы даты или как **nvarchar** столбцов. Содержимое столбца представлено литералом. Дополнительные сведения см. в разделе «Форматы данных: Строки и литералы» раздела [поддержки типов данных даты OLE DB и ускорение](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md). Размер столбца представляет максимальную длину литерала для точности, указанной для столбца.  
+ Клиентские приложения, использующие версию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственный клиент более ранней, чем [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] см. в разделе типы даты или как **nvarchar** столбцов. Содержимое столбца представлено литералом. Дополнительные сведения см. в разделе «форматы данных: Строки и литералы» раздела [поддержки типов данных даты OLE DB и ускорение](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md). Размер столбца представляет максимальную длину литерала для точности, указанной для столбца.  
   
  API-интерфейсы каталога возвращают метаданные, согласующиеся с кодом типа данных низкого уровня, возвращаемым клиенту (например, **nvarchar**) и связанного представлением низкого уровня (например, соответствующий формат литерала). Тем не менее, будет возвращено реальное имя типа данных [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
@@ -34,7 +33,7 @@ ms.locfileid: "52534722"
   
 |Тип клиента OLE DB|Тип SQL Server 2005|Тип SQL Server 2008 (или более поздних версий)|Преобразование результата (сервер-клиент)|Преобразование параметра (клиент-сервер)|  
 |------------------------|--------------------------|---------------------------------------|--------------------------------------------|-----------------------------------------------|  
-|DBTYPE_DBDATE|DATETIME|Дата|OK|OK|  
+|DBTYPE_DBDATE|DateTime|Date|OK|OK|  
 |DBTYPE_DBTIMESTAMP|||Поля времени устанавливаются в нули.|IRowsetChange завершится ошибкой из-за усечения строки, если поле времени не равно нулю.|  
 |DBTYPE_DBTIME||Time(0)|OK|OK|  
 |DBTYPE_DBTIMESTAMP|||Поля даты устанавливаются в текущую дату.|IRowsetChange завершится ошибкой из-за усечения строки, если доли секунды не равны нулю.<br /><br /> Дата не учитывается.|  
@@ -42,7 +41,7 @@ ms.locfileid: "52534722"
 |DBTYPE_DBTIMESTAMP|||Сбой — недопустимый литерал времени.|OK|  
 |DBTYPE_DBTIMESTAMP||Datetime2(3)|OK|OK|  
 |DBTYPE_DBTIMESTAMP||datetime2(7)|OK|OK|  
-|DBTYPE_DBDATE|Smalldatetime|Дата|OK|OK|  
+|DBTYPE_DBDATE|Smalldatetime|Date|OK|OK|  
 |DBTYPE_DBTIMESTAMP|||Поля времени устанавливаются в нули.|IRowsetChange завершится ошибкой из-за усечения строки, если поля времени не равно нулю.|  
 |DBTYPE_DBTIME||Time(0)|OK|OK|  
 |DBTYPE_DBTIMESTAMP|||Поля даты устанавливаются в текущую дату.|IRowsetChange завершится ошибкой из-за усечения строки, если доли секунды не равны нулю.<br /><br /> Дата не учитывается.|  
@@ -58,7 +57,7 @@ ms.locfileid: "52534722"
   
 -   Переключение на **datetime2** так, как это предпочтительный тип данных для даты и времени.  
   
- Приложения, использующие сервер метаданные, полученные через наборы строк ICommandWithParameters::GetParameterInfo или схемы для задания сведений о типах параметров через ICommandWithParameters::SetParameterInfo завершится ошибкой во время клиентских преобразований где строка представление источника данных больше, чем строковое представление значений конечного типа. Например, если привязка клиента использует DBTYPE_DBTIMESTAMP, а столбец сервера содержит дату [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client будет преобразовать значение «мм дд гггг чч:мм:сс.мс», но метаданные сервера будут возвращены в виде **nvarchar(10)**. В результате переполнение приведет к ошибке DBSTATUS_E_CATCONVERTVALUE. Аналогичные проблемы возникают при преобразовании данных с IRowsetChange, так как метаданные наборов строк из метаданных результирующего набора.  
+ Приложения, использующие сервер метаданные, полученные через наборы строк ICommandWithParameters::GetParameterInfo или схемы для задания сведений о типах параметров через ICommandWithParameters::SetParameterInfo завершится ошибкой во время клиентских преобразований где строка представление источника данных больше, чем строковое представление значений конечного типа. Например, если привязка клиента использует DBTYPE_DBTIMESTAMP, а столбец сервера содержит дату [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client будет преобразовать значение «мм дд гггг чч:мм:сс.мс», но метаданные сервера будут возвращены в виде **nvarchar(10)** . В результате переполнение приведет к ошибке DBSTATUS_E_CATCONVERTVALUE. Аналогичные проблемы возникают при преобразовании данных с IRowsetChange, так как метаданные наборов строк из метаданных результирующего набора.  
   
 ### <a name="parameter-and-rowset-metadata"></a>Метаданные параметров и наборов строк  
  В этом разделе описаны метаданные для параметров, результирующих столбцов и наборов строк схемы для клиентов, которые компилируются с версией [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственный клиент более ранней, чем [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
@@ -68,10 +67,10 @@ ms.locfileid: "52534722"
   
 |Тип параметра|wType|ulParamSize|bPrecision|bScale|  
 |--------------------|-----------|-----------------|----------------|------------|  
-|Дата|DBTYPE_WSTR|10|~0|~0|  
+|date|DBTYPE_WSTR|10|~0|~0|  
 |time|DBTYPE_WSTR|8, 10..16|~0|~0|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|  
-|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|  
+|datetime|DBTYPE_DBTIMESTAMP|16|23|3|  
 |datetime2|DBTYPE_WSTR|19,21..27|~0|~0|  
 |datetimeoffset|DBTYPE_WSTR|26,28..34|~0|~0|  
   
@@ -82,10 +81,10 @@ ms.locfileid: "52534722"
   
 |Тип столбца|DBCOLUMN_TYPE|DBCOLUMN_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE, DBCOLUMN_DATETIMEPRECISION|  
 |-----------------|--------------------|--------------------------|-------------------------|--------------------------------------------------|  
-|Дата|DBTYPE_WSTR|10|NULL|NULL|  
+|date|DBTYPE_WSTR|10|NULL|NULL|  
 |time|DBTYPE_WSTR|8, 10..16|NULL|NULL|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|  
-|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|  
+|datetime|DBTYPE_DBTIMESTAMP|16|23|3|  
 |datetime2|DBTYPE_WSTR|19,21..27|NULL|NULL|  
 |datetimeoffset|DBTYPE_WSTR|26,28..34|NULL|NULL|  
   
@@ -94,10 +93,10 @@ ms.locfileid: "52534722"
   
 |Тип параметра|wType|ulColumnSize|bPrecision|bScale|  
 |--------------------|-----------|------------------|----------------|------------|  
-|Дата|DBTYPE_WSTR|10|~0|~0|  
+|date|DBTYPE_WSTR|10|~0|~0|  
 |time(1..7)|DBTYPE_WSTR|8, 10..16|~0|~0|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|  
-|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|  
+|datetime|DBTYPE_DBTIMESTAMP|16|23|3|  
 |datetime2|DBTYPE_WSTR|19,21..27|~0|~0|  
 |datetimeoffset|DBTYPE_WSTR|26,28..34|~0|~0|  
   
@@ -109,10 +108,10 @@ ms.locfileid: "52534722"
   
 |Тип столбца|DATA_TYPE|CHARACTER_MAXIMUM_LENGTH|CHARACTER_OCTET_LENGTH|DATETIME_PRECISION|  
 |-----------------|----------------|--------------------------------|------------------------------|-------------------------|  
-|Дата|DBTYPE_WSTR|10|20|NULL|  
+|date|DBTYPE_WSTR|10|20|NULL|  
 |time|DBTYPE_WSTR|8, 10..16|16,20..32|NULL|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|NULL|NULL|0|  
-|DATETIME|DBTYPE_DBTIMESTAMP|NULL|NULL|3|  
+|datetime|DBTYPE_DBTIMESTAMP|NULL|NULL|3|  
 |datetime2|DBTYPE_WSTR|19,21..27|38,42..54|NULL|  
 |datetimeoffset|DBTYPE_WSTR|26,28..34|52, 56..68|NULL|  
   
@@ -121,19 +120,19 @@ ms.locfileid: "52534722"
   
 |Тип столбца|DATA_TYPE|CHARACTER_MAXIMUM_LENGTH|CHARACTER_OCTET_LENGTH|TYPE_NAME<br /><br /> LOCAL_TYPE_NAME|  
 |-----------------|----------------|--------------------------------|------------------------------|--------------------------------------|  
-|Дата|DBTYPE_WSTR|10|20|Дата|  
+|date|DBTYPE_WSTR|10|20|date|  
 |time|DBTYPE_WSTR|8, 10..16|16,20..32|time|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|NULL|NULL|smalldatetime|  
-|DATETIME|DBTYPE_DBTIMESTAMP|NULL|NULL|DATETIME|  
+|datetime|DBTYPE_DBTIMESTAMP|NULL|NULL|datetime|  
 |datetime2|DBTYPE_WSTR|19,21..27|38,42..54|datetime2|  
 |datetimeoffset|DBTYPE_WSTR|26,28..34|52, 56..68|datetimeoffset|  
   
 #### <a name="providertypes-rowset"></a>Набор строк PROVIDER_TYPES  
  Для типов даты-времени возвращаются следующие строки:  
   
-|Тип -><br /><br /> Столбец|Дата|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|Тип -><br /><br /> Столбец|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |--------------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
-|TYPE_NAME|Дата|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|TYPE_NAME|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |DATA_TYPE|DBTYPE_WSTR|DBTYPE_WSTR|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_WSTR|DBTYPE_WSTR|  
 |COLUMN_SIZE|10|16|16|23|27|34|  
 |LITERAL_PREFIX|'|'|'|'|'|'|  
@@ -145,7 +144,7 @@ ms.locfileid: "52534722"
 |UNSIGNED_ATTRIBUTE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |FIXED_PREC_SCALE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
 |AUTO_UNIQUE_VALUE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
-|LOCAL_TYPE_NAME|Дата|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|LOCAL_TYPE_NAME|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |MINIMUM_SCALE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |MAXIMUM_SCALE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |GUID|NULL|NULL|NULL|NULL|NULL|NULL|  

@@ -1,5 +1,5 @@
 ---
-title: Поддерживаемые источники данных (службы SSAS — многомерные) | Документы Microsoft
+title: Поддерживаемые источники данных (службы SSAS — многомерные) | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 907e6cc6deaa9617a4af93ab2080bfe495dacd0b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025381"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208458"
 ---
 # <a name="supported-data-sources-ssas---multidimensional"></a>Поддерживаемые источники данных (службы SSAS — многомерные)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "34025381"
 |-|-|-|-|  
 |Source|Версии|Тип файла|Поставщики*|  
 |Базы данных Access|Microsoft Access 2010, 2013, 2016|ACCDB или MDB|Поставщик Microsoft OLE DB для Jet 4.0|  
-|Реляционные базы данных SQL Server*|Microsoft SQL Server 2008, 2008 R2, 2012, 2014, 2016, [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)], хранилище данных Azure SQL, Microsoft Analytics Platform System (APS)<br /><br /> <br /><br /> Примечание. Дополнительные сведения о [!INCLUDE[ssSDS](../../includes/sssds-md.md)] см. на сайте [Azure.com](http://go.microsoft.com/fwlink/?LinkID=157856).<br /><br /> Примечание: Analytics Platform System (APS) ранее была известна как SQL Server Parallel данных хранилища (PDW). Изначально для подключения к PDW из служб Analysis Services требовался специальный поставщик данных. В SQL Server 2012 он был заменен. Начиная с SQL Server 2012, для подключения к PDW и APS используется SQL Server Native Client. Дополнительные сведения об APS см. на веб-сайте [Microsoft Analytics Platform System](http://www.microsoft.com/en-us/server-cloud/products/analytics-platform-system/resources.aspx).|(неприменимо)|Поставщик OLE DB для SQL Server<br /><br /> Поставщик OLE DB для собственного клиента SQL Server<br /><br /> Поставщик OLE DB для собственного клиента SQL Server 11,0<br /><br /> Поставщик данных .NET Framework для клиента SQL|  
+|Реляционные базы данных SQL Server*|Microsoft SQL Server 2008, 2008 R2, 2012, 2014, 2016, [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)], хранилище данных Azure SQL, Microsoft Analytics Platform System (APS)<br /><br /> <br /><br /> Примечание. Дополнительные сведения о [!INCLUDE[ssSDS](../../includes/sssds-md.md)] на [Azure.com](http://go.microsoft.com/fwlink/?LinkID=157856).<br /><br /> Примечание. Analytics Platform System (APS) ранее была известна как SQL Server Parallel данных хранилища (PDW). Изначально для подключения к PDW из служб Analysis Services требовался специальный поставщик данных. В SQL Server 2012 он был заменен. Начиная с SQL Server 2012, для подключения к PDW и APS используется SQL Server Native Client. Дополнительные сведения об APS см. на веб-сайте [Microsoft Analytics Platform System](http://www.microsoft.com/en-us/server-cloud/products/analytics-platform-system/resources.aspx).|(неприменимо)|Поставщик OLE DB для SQL Server<br /><br /> Поставщик OLE DB для собственного клиента SQL Server<br /><br /> Поставщик OLE DB для собственного клиента SQL Server 11,0<br /><br /> Поставщик данных .NET Framework для клиента SQL|  
 |Реляционные базы данных Oracle|Oracle 9i, 10g, 11g, 12g|(неприменимо)|Поставщик OLE DB для Oracle<br /><br /> Поставщик данных .NET Framework для клиента Oracle<br /><br /> Поставщик данных .NET Framework для SQL Server<br /><br /> OraOLEDB<br /><br /> MSDASQL|  
 |Реляционные базы данных Teradata|Teradata V2R6, V12|(неприменимо)|Поставщик TDOLEDB OLE DB<br /><br /> Поставщик данных .NET для Teradata|  
 |Реляционные базы данных Informix|V11.10|(неприменимо)|Поставщик OLE DB для Informix|  

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4f681961-ac9f-4d88-b065-5258ba112642
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 20316f2a7932768951633ae24e1b1e180c1dfb49
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e324b1f49bd6f8d0cad15ac2bcde73f558220330
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537575"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121450"
 ---
 # <a name="sqlconfigdriver-function"></a>Функция SQLConfigDriver
 **Соответствие стандартам**  
@@ -84,7 +83,7 @@ BOOL SQLConfigDriver(
  Функция возвращает значение TRUE при успешном выполнении, FALSE в случае неудачи.  
   
 ## <a name="diagnostics"></a>Диагностика  
- Когда **SQLConfigDriver** возвращает значение FALSE, связанным  *\*pfErrorCode* значение можно получить, вызвав **SQLInstallerError**. В следующей таблице перечислены  *\*pfErrorCode* значения, которые могут быть возвращены **SQLInstallerError** и объясняется каждый из них в контексте этой функции.  
+ Когда **SQLConfigDriver** возвращает значение FALSE, связанным  *\*pfErrorCode* значение можно получить, вызвав **SQLInstallerError**. В следующей таблице перечислены *\*pfErrorCode* значения, которые могут быть возвращены **SQLInstallerError** и объясняется каждый из них в контексте этой функции.  
   
 |*\*pfErrorCode*|Ошибка|Описание|  
 |---------------------|-----------|-----------------|  

@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 23d3ccd2-f356-4d89-a2cd-bee381243f99
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3fee962111dd6b1316e6740f76f02bf3862745e4
-ms.sourcegitcommit: 9e722cc8d10ecbdb93efc2fc1886fe7b20dbc13c
+ms.openlocfilehash: 8f3e007a0676afd507af54e3b3406297cf40042e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "52282026"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108992"
 ---
 # <a name="syssqlmodules-transact-sql"></a>sys.sql_modules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,8 +46,8 @@ ms.locfileid: "52282026"
 |**null_on_null_input**|**bit**|Модуль был объявлен, чтобы обеспечить выходные значения NULL для любых входных значений NULL.|  
 |**execute_as_principal_id**|**Int**|ID-идентификатор участника базы данных, указанного в инструкции EXECUTE AS.<br /><br /> По умолчанию и в случае EXECUTE AS CALLER имеет значение NULL.<br /><br /> Идентификатор заданного участника, если EXECUTE AS SELF или EXECUTE AS \<участника >.<br /><br /> -2 = EXECUTE AS OWNER.|  
 |**uses_native_compilation**|**bit**|**Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].<br /><br /> 0 = не скомпилированы в собственном коде<br /><br /> 1 = скомпилированы в собственном коде<br /><br /> Значение по умолчанию — 0.|  
-|**is_inlineable**|**bit**|**Применяется к**: [!INCLUDE[ssSQL15](../../includes/sssqlv15-md.md)] и более поздних версий.<br/><br />Указывает, является ли модуль inlineable или нет. Inlineability зависит от условий, заданных [здесь](../user-defined-functions/scalar-udf-inlining.md#inlineable-scalar-udfs-requirements).<br /><br /> 0 = не inlineable<br /><br /> 1 = является inlineable. <br /><br /> Для определяемых пользователем скалярных функций значение будет равно 1, если определяемая пользователем Функция inlineable и 0 в противном случае. Он всегда содержит значение 1 для Встроенные возвращающие табличное значение функции и 0 для всех других типов модуля.<br />|  
-|**inline_type**|**bit**|**Применяется к**: [!INCLUDE[ssSQL15](../../includes/sssqlv15-md.md)] и более поздних версий.<br /><br />Указывает ли встраивание включен для модуля в настоящее время. <br /><br />0 = встраивания находится в отключенном состоянии<br /><br /> 1 = встраивания включен.<br /><br /> Для скалярных определяемых пользователем функций, значение будет равно 1, если встроенные включен (явно или неявно). Значение всегда равно 1 для Встроенные возвращающие табличное значение функции и 0 для других типов модуля.<br />|  
+|**is_inlineable**|**bit**|**Область применения**: [!INCLUDE[ssSQL15](../../includes/sssqlv15-md.md)] и более поздних версий.<br/><br />Указывает, является ли модуль inlineable или нет. Inlineability зависит от условий, заданных [здесь](../user-defined-functions/scalar-udf-inlining.md#inlineable-scalar-udfs-requirements).<br /><br /> 0 = не inlineable<br /><br /> 1 = является inlineable. <br /><br /> Для определяемых пользователем скалярных функций значение будет равно 1, если определяемая пользователем Функция inlineable и 0 в противном случае. Он всегда содержит значение 1 для Встроенные возвращающие табличное значение функции и 0 для всех других типов модуля.<br />|  
+|**inline_type**|**bit**|**Область применения**: [!INCLUDE[ssSQL15](../../includes/sssqlv15-md.md)] и более поздних версий.<br /><br />Указывает ли встраивание включен для модуля в настоящее время. <br /><br />0 = встраивания находится в отключенном состоянии<br /><br /> 1 = встраивания включен.<br /><br /> Для скалярных определяемых пользователем функций, значение будет равно 1, если встроенные включен (явно или неявно). Значение всегда равно 1 для Встроенные возвращающие табличное значение функции и 0 для других типов модуля.<br />|  
 
   
 ## <a name="remarks"></a>Примечания  

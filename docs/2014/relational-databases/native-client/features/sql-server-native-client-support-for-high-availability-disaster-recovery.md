@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4bd73d32a58e156a3ae8577d41bbdd4725f85656
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040235"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206644"
 ---
 # <a name="sql-server-native-client-support-for-high-availability-disaster-recovery"></a>Поддержка высокого уровня доступности и аварийного восстановления собственного клиента SQL Server
   В этом разделе описывается поддержка Native Client [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (начиная с версии [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]) для [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Дополнительные сведения о [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], см. в разделе [прослушиватели группы доступности, возможность подключения клиентов и отработка отказа приложений &#40;SQL Server&#41;](../../../database-engine/listeners-client-connectivity-application-failover.md), [Создание и Настройка групп доступности &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [отказоустойчивая кластеризация и группы доступности AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md), и [активные вторичные реплики: Вторичные реплики для чтения (группы доступности AlwaysOn)](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
@@ -44,7 +44,7 @@ ms.locfileid: "56040235"
   
 -   При установлении соединения с экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], настроенным на работу с более чем 64 IP-адресами, будет возникать ошибка соединения.  
   
--   Поведение приложения, использующего свойство соединения `MultiSubnetFailover`, не зависит от типа проверки подлинности: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], Kerberos или Windows.  
+-   Поведение приложения, использующего `MultiSubnetFailover` свойство соединения не зависит от типа проверки подлинности: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Проверка подлинности, проверка подлинности Kerberos или проверку подлинности Windows.  
   
 -   Значение `loginTimeout` можно увеличить с учетом времени отработки отказа, это уменьшит количество попыток повторного соединения в приложениях.  
   

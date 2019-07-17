@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 6979ec9b-0043-411e-aafb-0226fa26c5ba
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f93ac0b4a11e10d3db952fd850f4c83668a97d3b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 33d94bf5a709c2581c6ee99a1e019f4eebcabe0d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62855271"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68132959"
 ---
 # <a name="sysservicebrokerendpoints-transact-sql"></a>sys.service_broker_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ ms.locfileid: "62855271"
 |**connection_auth_desc**|**nvarchar(60)**|Описание типа проверки подлинности, необходимого для соединения с данной конечной точкой, одно из следующих:<br /><br /> NTLM<br /><br /> KERBEROS<br /><br /> NEGOTIATE<br /><br /> CERTIFICATE<br /><br /> NTLM, CERTIFICATE<br /><br /> KERBEROS, CERTIFICATE<br /><br /> NEGOTIATE, CERTIFICATE<br /><br /> CERTIFICATE, NTLM<br /><br /> CERTIFICATE, KERBEROS<br /><br /> CERTIFICATE, NEGOTIATE<br /><br /> Допускает значение NULL.|  
 |**идентификатор_сертификата**|**int**|Идентификатор сертификата, используемого для проверки подлинности (если таковой имеется).<br /><br /> 0 = используется проверка подлинности Windows.|  
 |**encryption_algorithm**|**tinyint**|Алгоритм шифрования. Ниже приведены возможные значения с описаниями и соответствующие параметры DDL.<br /><br /> **0** : NONE. Соответствующий параметр DDL: Отключено.<br /><br /> **1** :  ВЕРСИЯ-КАНДИДАТ 4. Соответствующий параметр DDL: {необходимые &#124; требуется алгоритм RC4}.<br /><br /> **2** : AES. Соответствующий параметр DDL: Требуется алгоритм AES.<br /><br /> **3** : NONE, RC4. Соответствующий параметр DDL: {поддерживаемые &#124; поддерживается алгоритм RC4}.<br /><br /> **4** : NONE, AES. Соответствующий параметр DDL: Поддерживается алгоритм AES.<br /><br /> **5** : RC4, AES. Соответствующий параметр DDL: Требуется алгоритм RC4 AES.<br /><br /> **6** : AES, RC4. Соответствующий параметр DDL: Требуется алгоритм RC4 AES.<br /><br /> **7** : NONE, RC4, AES. Соответствующий параметр DDL: Поддерживается алгоритм RC4 AES.<br /><br /> **8** : NONE, AES, RC4. Соответствующий параметр DDL: Поддерживается алгоритм RC4 AES.<br /><br /> Не допускает значения NULL.|  
-|**encryption_algorithm_desc**|**nvarchar(60)**|Описание алгоритма шифрования. Ниже перечислены возможные значения и их соответствующие пункты DDL:<br /><br /> NONE: Выключено<br /><br /> RC4  : {Required &#124; Required Algorithm RC4}<br /><br /> AES: Требуется алгоритм AES<br /><br /> NONE, RC4: {поддерживается &#124; поддерживается алгоритм RC4}<br /><br /> NONE, AES: Поддерживается алгоритм AES<br /><br /> RC4, AES: Требуется алгоритм RC4 AES<br /><br /> AES, RC4: Требуется алгоритм AES RC4<br /><br /> NONE, RC4, AES: Поддерживается алгоритм RC4 AES<br /><br /> NONE, AES, RC4: Поддерживается алгоритм AES RC4<br /><br /> Допускает значение NULL.|  
+|**encryption_algorithm_desc**|**nvarchar(60)**|Описание алгоритма шифрования. Ниже перечислены возможные значения и их соответствующие пункты DDL:<br /><br /> NONE: Выключено<br /><br /> Версия-кандидат 4: {необходимые &#124; требуется алгоритм RC4}<br /><br /> AES: Требуется алгоритм AES<br /><br /> NONE, RC4: {поддерживается &#124; поддерживается алгоритм RC4}<br /><br /> NONE, AES: Поддерживается алгоритм AES<br /><br /> RC4, AES: Требуется алгоритм RC4 AES<br /><br /> AES, RC4: Требуется алгоритм AES RC4<br /><br /> NONE, RC4, AES: Поддерживается алгоритм RC4 AES<br /><br /> NONE, AES, RC4: Поддерживается алгоритм AES RC4<br /><br /> Допускает значение NULL.|  
   
 ## <a name="remarks"></a>Примечания  
   

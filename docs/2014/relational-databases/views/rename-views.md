@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a0dfa9a95697c4bb1fcb2e4e5d3798f18e305e42
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393708"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211656"
 ---
 # <a name="rename-views"></a>Переименование представлений
   Представление в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] можно переименовать, используя [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -69,7 +69,7 @@ ms.locfileid: "52393708"
   
  Дополнительные сведения см. в разделах [CREATE VIEW (Transact-SQL)](/sql/t-sql/statements/create-view-transact-sql) и [DROP VIEW (Transact-SQL)](/sql/t-sql/statements/drop-view-transact-sql).  
   
-##  <a name="FollowUp"></a> Дальнейшие действия: После переименования представления  
+##  <a name="FollowUp"></a> Дальнейшие действия. После переименования представления  
  Убедитесь, что все объекты, скрипты и приложения, ссылающиеся на предыдущее имя представления, теперь используют новое имя.  
   
   

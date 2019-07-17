@@ -11,11 +11,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: dc8da3880afe5cf107c7e6df260957e3df6ddc9d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013585"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68185745"
 ---
 # <a name="lesson-1-evaluate-best-practices-on-an-on-demand-basis"></a>Урок 1. Выполнение политик рекомендаций по запросу
   Метод оценки политики по требованию (называемый также нерегламентированным) позволяет быстро оценить рекомендованные политики, чтобы определить, соответствует ли экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] советам и рекомендациям.  

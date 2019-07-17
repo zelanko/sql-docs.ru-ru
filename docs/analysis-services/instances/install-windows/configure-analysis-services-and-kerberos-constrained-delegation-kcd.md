@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cc8c2ee84c8210adc3a52d81deff5edf6d3f542f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52811156"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68181714"
 ---
 # <a name="configure-analysis-services-and-kerberos-constrained-delegation-kcd"></a>Настройка служб Analysis Services и ограниченного делегирования Kerberos (KCD)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -53,9 +53,9 @@ ms.locfileid: "52811156"
 ### <a name="domain-controller"></a>Контроллер домена  
  Ниже приведен краткий обзор того, что следует установить для контроллера домена (DC).  
   
--   **Роль:** Доменные службы Active Directory. Общие сведения см. в разделе [Настройка Active Directory (AD DS) в Windows Server 2012](http://sharepointgeorge.com/2012/configuring-active-directory-ad-ds-in-windows-server-2012/).  
+-   **Роль**. Доменные службы Active Directory. Общие сведения см. в разделе [Настройка Active Directory (AD DS) в Windows Server 2012](http://sharepointgeorge.com/2012/configuring-active-directory-ad-ds-in-windows-server-2012/).  
   
--   **Роль:** DNS-сервер  
+-   **Роль**. DNS-сервер  
   
 -   **Компонент:** компоненты .NET Framework 3.5 или .NET Framework 3.5  
   
@@ -71,7 +71,7 @@ ms.locfileid: "52811156"
   
     3.  Нажмите кнопку **Свойства**.  
   
-    4.  Щелкните **IP версии 6 (TCP/IPv6)**.  
+    4.  Щелкните **IP версии 6 (TCP/IPv6)** .  
   
     5.  Нажмите кнопку **Свойства**.  
   

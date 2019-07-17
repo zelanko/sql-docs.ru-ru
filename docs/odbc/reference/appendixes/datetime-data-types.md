@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 6b9363c9-04bf-4492-a210-7aa15dea4af8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 13cb433da64b78a8b5e70f28642fd576f6803ed5
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 1cb92afa9467717b8a589ddbcaee4ab8a5a529f6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67792588"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130093"
 ---
 # <a name="datetime-data-types"></a>Типы данных даты и времени
 В ODBC *3.x*, идентификаторы для даты, времени и типы данных timestamp SQL были изменены относительно SQL_DATE, SQL_TIME и SQL_TIMESTAMP (экземплярами **#define** в файле заголовка, 9, 10 и 11) для SQL_ TYPE_DATE, SQL_TYPE_TIME и SQL_TYPE_TIMESTAMP (экземплярами **#define** в файле заголовка, 91, 92 и 93), соответственно. Соответствующий тип C идентификаторы были изменены относительно SQL_C_DATE SQL_C_TIME и SQL_C_TIMESTAMP SQL_C_TYPE_DATE SQL_C_TYPE_TIME и SQL_C_TYPE_TIMESTAMP, соответственно и в экземплярах **#define** были изменены соответствующим образом.  

@@ -12,26 +12,25 @@ helpviewer_keywords:
 ms.assetid: 7d445c0e-77ef-4734-993b-e022de31df23
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5e6069f4b80942ef6c7ebc4fa2be3326cf31e224
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f2851cab846e8f814e03e2b96ad10c69136c9a27
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705672"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111494"
 ---
 # <a name="creating-altering-and-removing-views"></a>Создание, изменение и удаление представлений
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
   В [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SMO представления [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] представлены объектом <xref:Microsoft.SqlServer.Management.Smo.View>.  
   
- Свойство <xref:Microsoft.SqlServer.Management.Smo.View.TextBody%2A> объекта <xref:Microsoft.SqlServer.Management.Smo.View> определяет представление. Он является эквивалентом [!INCLUDE[tsql](../../../includes/tsql-md.md)] инструкции SELECT для создания представления.  
+ Свойство <xref:Microsoft.SqlServer.Management.Smo.View.TextBody%2A> объекта <xref:Microsoft.SqlServer.Management.Smo.View> определяет представление. Это эквивалентно использованию инструкции [!INCLUDE[tsql](../../../includes/tsql-md.md)] SELECT для создания представления.  
   
 ## <a name="example"></a>Пример  
  Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. в разделе [Visual C создайте&#35; проекта SMO в Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-altering-and-removing-a-view-in-visual-basic"></a>Создание, изменение и удаление представления на языке Visual Basic  
- В этом образце кода показано создание представления двух таблиц с использованием внутреннего соединения. Представление создается с использованием текстового режима, поэтому <xref:Microsoft.SqlServer.Management.Smo.View.TextHeader%2A> свойство должно иметь значение.  
+ В этом образце кода показано создание представления двух таблиц с использованием внутреннего соединения. Представление создается с использованием текстового режима, поэтому для него необходимо задать свойство <xref:Microsoft.SqlServer.Management.Smo.View.TextHeader%2A>.  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -53,7 +52,7 @@ myview.Drop()
 ```
   
 ## <a name="creating-altering-and-removing-a-view-in-visual-c"></a>Создание, изменение и удаление представления на языке Visual C#  
- В этом образце кода показано создание представления двух таблиц с использованием внутреннего соединения. Представление создается с использованием текстового режима, поэтому <xref:Microsoft.SqlServer.Management.Smo.View.TextHeader%2A> свойство должно иметь значение.  
+ В этом образце кода показано создание представления двух таблиц с использованием внутреннего соединения. Представление создается с использованием текстового режима, поэтому для него необходимо задать свойство <xref:Microsoft.SqlServer.Management.Smo.View.TextHeader%2A>.  
   
 ```csharp  
 {  
@@ -77,7 +76,7 @@ myview.Drop()
 ```  
   
 ## <a name="creating-altering-and-removing-a-view-in-powershell"></a>Создание, изменение и удаление представления в PowerShell  
- В этом образце кода показано создание представления двух таблиц с использованием внутреннего соединения. Представление создается с использованием текстового режима, поэтому <xref:Microsoft.SqlServer.Management.Smo.View.TextHeader%2A> свойство должно иметь значение.  
+ В этом образце кода показано создание представления двух таблиц с использованием внутреннего соединения. Представление создается с использованием текстового режима, поэтому для него необходимо задать свойство <xref:Microsoft.SqlServer.Management.Smo.View.TextHeader%2A>.  
   
 ```powershell   
 # Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2012  

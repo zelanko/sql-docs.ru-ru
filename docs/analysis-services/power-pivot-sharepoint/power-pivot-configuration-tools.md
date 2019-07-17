@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e2d15054f3d6ebbcd25627df42aab5b9248db1f6
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207503"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68163896"
 ---
 # <a name="power-pivot-configuration-tools"></a>Power Pivot Configuration Tools
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -59,14 +59,14 @@ ms.locfileid: "53207503"
 ###  <a name="bkmk_sum_differences_betweentools"></a> Отличия двух средств настройки  
  Две версии средств настройки похожи, однако есть отличия в этапах настройки, которые применяются средствами. Отличия обусловлены расхождениями в SharePoint 2010 и SharePoint 2013, а также различием в архитектуре версии SQL Server 2012 SP1 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint и предыдущих версий [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint.  
   
- В следующей таблице приводится описание новых и измененных функций в средстве **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint 2013** . Таблица также содержит описание возможностей в **средстве настройки [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**, не входящих в средство настройки [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePont 2013. Строки в таблице располагаются в том же порядке, что и вкладки в средстве настройки.  
+ В следующей таблице приводится описание новых и измененных функций в средстве **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint 2013** . Таблица также содержит описание возможностей в **средстве настройки [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** , не входящих в средство настройки [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePont 2013. Строки в таблице располагаются в том же порядке, что и вкладки в средстве настройки.  
   
 |[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint 2013|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Средство настройки|  
 |--------------------------------------------------------------|-----------------------------------------------|  
 |На главной странице появился новый параметр для **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Server для служб Excel**. Параметр поддерживает новую архитектуру с экземпляром служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , выполняемым за пределами фермы SharePoint. Необходимо настроить службы Excel для использования одного или нескольких серверов служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , работающих в режиме интеграции с SharePoint.<br /><br /> ![Сервер PowerPivot в новом средстве настройки](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-configtool-differences-new-mainpage.gif "сервера PowerPivot в новом средстве настройки")||  
 ||Средство 2010 содержит страницу **Регистрация служб SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) на локальном сервере** для настройки локального экземпляра [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Эта страница не является частью средства 2013, поскольку локальный экземпляр [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]отсутствует.<br /><br /> ![КАК учетная запись службы в старом средстве настройки](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-configtool-differences-old-register-as-localserver.gif "как учетная запись службы в старом средстве настройки")|  
 ||Страница **Создание приложения службы** [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] содержит дополнительный параметр **Обновить книги, чтобы получить возможность обновления данных**. Этот параметр недоступен в средстве 2013.<br /><br /> ![Обновление книг в старом средстве настройки](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-configtool-differences-old-uprgadeworkbooks.gif "обновление книг в старом средстве настройки")|  
-|В средстве 2013 появилась новая страница **Настройка серверов [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**. Эта страница поддерживает новую архитектуру экземпляра [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , выполняемого за пределами фермы SharePoint. По умолчанию имя сервера, указанное на главной странице в текстовом поле **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Server для Excel Services**, также отображается на вкладке **Настройка серверов [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**.<br /><br /> ![Зарегистрировать новое средство настройки PowerPivot сервера](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-configtool-differences-new-powerpivot-servers.gif "новое средство настройки PowerPivot для регистрации сервера")||  
+|В средстве 2013 появилась новая страница **Настройка серверов [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** . Эта страница поддерживает новую архитектуру экземпляра [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , выполняемого за пределами фермы SharePoint. По умолчанию имя сервера, указанное на главной странице в текстовом поле **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Server для Excel Services**, также отображается на вкладке **Настройка серверов [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** .<br /><br /> ![Зарегистрировать новое средство настройки PowerPivot сервера](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-configtool-differences-new-powerpivot-servers.gif "новое средство настройки PowerPivot для регистрации сервера")||  
 |В средстве 2013 появилась новая страница **Зарегистрируйте надстройку [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] как модуль отслеживания служб Excel**. Службы Excel SharePoint 2010 не отслеживают сведения об использовании [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].||  
 ||Средство 2010 содержит страницу **Добавить MSOLAP.5 в качестве доверенного поставщика** для регистрации MSOLAP, чтобы службы Excel могли загружать в SharePoint 2010 модели [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Эта страница не является частью средства 2013. SharePoint 2013 со службами Excel не использует поставщика MSOLAP для моделей загрузки.|  
   
@@ -103,7 +103,7 @@ ms.locfileid: "53207503"
   
      ![два средства настройки powerpivot](../../analysis-services/instances/install-windows/media/as-powerpivot-configtools-bothicons.gif "два средства настройки powerpivot")  
   
-     **Примечание.** Эти средства доступны, только если на локальном сервере установлен компонент [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)].  
+     **Примечание.** Средства, доступен, только если [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] установлен на локальном сервере.  
   
 2.  Во время запуска средство настройки проверяет состояние установки и предоставляет задачи, допустимые для нее.  
   

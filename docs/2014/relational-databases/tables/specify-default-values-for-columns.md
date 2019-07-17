@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8a02385a6cd12b85be1661c738488c000f810510
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100669"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196724"
 ---
 # <a name="specify-default-values-for-columns"></a>Указание значений по умолчанию для столбца
   Можно указать значение по умолчанию, которое будет введено в столбец в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , при помощи [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Если значение по умолчанию не задано и пользователь оставляет столбец пустым, происходит следующее:  

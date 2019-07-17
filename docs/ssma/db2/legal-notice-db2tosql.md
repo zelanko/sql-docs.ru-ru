@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d2e558b8-7208-44b4-82b3-4b411a34a8c9
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 4f5e5c052bb779ac6f6227aaf0b4b6a60a94110d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2a99cc9b4eaa1ca45d1d72d3cf3fbab6e6b3571e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63298733"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68141037"
 ---
 # <a name="legal-notice-db2tosql"></a>Юридическая информация (DB2toSQL)
 Настоящий документ, в том числе содержащиеся в нем образцы приложений, предоставляется исключительно в ознакомительных целях без каких-либо явных или подразумеваемых гарантий. Данные, содержащиеся в этой документации, включая URL-адреса, а также ссылки на другие веб-сайты, могут меняться без предварительного уведомления. Всю ответственность за использование документации, а также за результаты ее использования несет исключительно пользователь.  

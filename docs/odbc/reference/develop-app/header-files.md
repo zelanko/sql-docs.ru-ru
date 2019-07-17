@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b4a03273-5e30-4d7b-826e-02f8f28ba078
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c706dca3a1479a299841f9d47743785d29689f12
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 2d20f2535038b13eac0b8d5ca20dfa77bfc12588
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67792561"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139026"
 ---
 # <a name="header-files"></a>Файлы заголовков
 Файл заголовка Sql.h содержит прототипы функций и компонентов в уровню соответствия базового интерфейса ODBC. Файл заголовка Sqlext.h содержит прототипы функций и возможностей уровня 1 и уровни соответствия API уровня 2. Файл заголовка Sqltypes.h содержит определения типов и индикаторы для типов данных SQL.  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6314331be3a844b86ff8790c8c38abb4c0d3758e
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072531"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207512"
 ---
 # <a name="relationships"></a>Связи 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "53072531"
 ##  <a name="what"></a> Преимущества  
  Связь представляет собой соединение двух таблиц данных на основании одного или нескольких столбцов в каждой таблице. Чтобы понять, чем полезны связи, представим, что отслеживаются данные для заказов клиентов в бизнесе. Можно отслеживать все данные в одной таблице, имеющей структуру, подобную следующей.  
   
-|CustomerID|Имя|EMail|DiscountRate|OrderID|OrderDate|Продукт|количество|  
+|CustomerID|Name|EMail|DiscountRate|OrderID|OrderDate|Продукт|количество|  
 |----------------|----------|-----------|------------------|-------------|---------------|-------------|--------------|  
 |1|Эштон|chris.ashton@contoso.com|0,05|256|2010-01-07|Компактный цифровой|11|  
 |1|Эштон|chris.ashton@contoso.com|0,05|255|2010-01-03|Однообъективный зеркальный фотоаппарат|15|  
@@ -83,7 +83,7 @@ ms.locfileid: "53072531"
   
  В следующей таблице представлены связи между тремя таблицами.  
   
-|Связь|Тип|столбцом подстановки|столбцом|  
+|Связь|Type|столбцом подстановки|столбцом|  
 |------------------|----------|-------------------|------------|  
 |Customers — CustomerDiscounts|один к одному|Customers.CustomerID|CustomerDiscounts.CustomerID|  
 |Customers — Orders|один ко многим|Customers.CustomerID|Orders.CustomerID|  

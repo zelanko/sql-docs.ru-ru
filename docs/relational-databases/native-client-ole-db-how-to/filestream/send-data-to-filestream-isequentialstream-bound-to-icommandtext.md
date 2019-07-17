@@ -10,14 +10,13 @@ ms.topic: reference
 ms.assetid: 2225f6ab-a6cf-4c95-8291-2d2a13be7952
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: af2c8eb24f9fc3928d1b62ed5461f4a44ccdab4e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 29002e403b028f9f879782241588961a04007b65
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205623"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68110101"
 ---
 # <a name="send-data-to-filestream---isequentialstream-bound-to-icommandtext"></a>Отправка данных в FILESTREAM — ISequentialStream с привязкой к ICommandText
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +43,7 @@ ms.locfileid: "53205623"
   
  При запуске этого образца необходимо передать имя сервера или сервер\имя_экземпляра, а также значение между 4 МБ (0x400001) и 4 ГБ (0xFFFFFFFF), указывающее количество записываемых данных.  
   
- Четвертый ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) пример кода удаляет базу данных, созданные этим примером.  
+ Четвертый листинг кода ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) удаляет базу данных, созданную в этом примере.  
   
 ```  
 // ISSHelper.h: interface for the CISSHelper class.  

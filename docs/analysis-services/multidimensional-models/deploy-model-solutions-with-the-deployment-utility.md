@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 76d1a3e3cfff777f610bb00f52644af3903ac615
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37975165"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68178514"
 ---
 # <a name="deploy-model-solutions-with-the-deployment-utility"></a>Развертывание решений моделей с использованием программы развертывания
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]

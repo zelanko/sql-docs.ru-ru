@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 88fc1dba-f4cb-47c0-92c2-bf398f4a382e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5a686f78ea5dff8a3ea551016d9fbe9c9046b110
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dce66e74f7415a8ff5ac6de4505d8a1f0632391b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62724439"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108449"
 ---
 # <a name="spcursoroption-transact-sql"></a>sp_cursoroption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ sp_cursoroption cursor, code, value
  *код*  
  Служит для указания различных коэффициентов возвращаемых значений курсора. *код* требует одного из следующих **int** входных значений:  
   
-|Значение|Имя|Описание|  
+|Значение|Name|Описание|  
 |-----------|----------|-----------------|  
 |0x0001|TEXTPTR_ONLY|Возвращает не фактические данные, а текстовый указатель для определенных назначенных столбцов типа text или image.<br /><br /> TEXTPTR_ONLY позволяет текстовые указатели для использования в качестве *дескрипторы* для объектов blob, которые можно выборочно извлечь или обновить с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)] или DBLib (например) [!INCLUDE[tsql](../../includes/tsql-md.md)] READTEXT или DBLIB DBWRITETEXT).<br /><br /> Если присвоено значение «0», то все столбцы типа text или image из выбранного списка будут возвращать вместо данных текстовые указатели.|  
 |0x0002|CURSOR_NAME|Назначает имя, указанное в *значение* до текущей позиции. Это, в свою очередь позволяет интерфейсу ODBC применять [!INCLUDE[tsql](../../includes/tsql-md.md)] позиционированных инструкций UPDATE и DELETE на курсоры, открываемым процедурой sp_cursoropen.<br /><br /> Строка может иметь любой символьный тип данных или UNICODE.<br /><br /> Так как [!INCLUDE[tsql](../../includes/tsql-md.md)] позиционированные инструкции UPDATE и DELETE работают по умолчанию на первой строке в крупном курсоре, sp_cursor SETPOSITION следует использовать для позиционирования курсора перед выдачей позиционированной инструкции UPDATE и DELETE.|  

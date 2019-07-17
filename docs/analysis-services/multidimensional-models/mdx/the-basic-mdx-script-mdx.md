@@ -1,5 +1,5 @@
 ---
-title: Базовый скрипт многомерных Выражений (MDX) | Документы Microsoft
+title: Базовый скрипт многомерных Выражений (многомерные Выражения) | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2bebee1057180259c9813d7a650594c0c6d4736d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023011"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208702"
 ---
 # <a name="the-basic-mdx-script-mdx"></a>Базовый скрипт многомерных выражений (многомерные выражения)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "34023011"
   
  Скрипт многомерных выражений по умолчанию также включает в себя команды, создающие именованные наборы, назначения и вычисляемые элементы, созданные в конструкторе кубов.  
   
--   Службы [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] добавляют команды непосредственно в скрипт многомерных выражений по умолчанию.  
+-   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] добавляют команды непосредственно в скрипт многомерных выражений по умолчанию.  
   
 -   Для каждого именованного набора в кубе в скрипт многомерных выражений по умолчанию добавляется соответствующая инструкция CREATE SET.  
   
@@ -47,18 +47,18 @@ ms.locfileid: "34023011"
  Все инструкции сценариев многомерных выражений  
  Инструкции скриптов многомерных выражений управляют контекстом и областью вычислений, а также поведением других инструкций в скрипте многомерных выражений. В эту категорию входят следующие инструкции:  
   
--   [ВЫЧИСЛЕНИЯ](../../../mdx/mdx-scripting-calculate.md)  
+-   [CALCULATE](../../../mdx/mdx-scripting-calculate.md)  
   
--   [ЗАКРЕПИТЬ](../../../mdx/mdx-scripting-freeze.md)  
+-   [FREEZE](../../../mdx/mdx-scripting-freeze.md)  
   
--   [ОБЛАСТЬ ДЕЙСТВИЯ](../../../mdx/mdx-scripting-scope.md)  
+-   [SCOPE](../../../mdx/mdx-scripting-scope.md)  
   
  Дополнительные сведения об инструкциях сценариев многомерных выражений см. в разделе [Инструкции сценариев многомерных выражений (многомерные выражения)](../../../mdx/mdx-scripting-statements-mdx.md).  
   
- [СОЗДАНИЕ ЧЛЕНА](../../../mdx/mdx-data-definition-create-member.md)  
+ [CREATE MEMBER](../../../mdx/mdx-data-definition-create-member.md)  
  Инструкция CREATE MEMBER служит для создания вычисляемых элементов. Дополнительные сведения о создании вычисляемых элементов см. в разделе [Создание вычисляемых элементов в многомерных выражениях (многомерные выражения)](../../../analysis-services/multidimensional-models/mdx/mdx-calculated-members-building-calculated-members.md).  
   
- [СОЗДАТЬ НАБОР](../../../mdx/mdx-data-definition-create-set.md)  
+ [CREATE SET](../../../mdx/mdx-data-definition-create-set.md)  
  Инструкция CREATE SET служит для создания именованных наборов. Дополнительные сведения о создании именованных наборов см. в разделе [Построение именованных наборов в многомерных выражениях (многомерные выражения)](../../../analysis-services/multidimensional-models/mdx/mdx-named-sets-building-named-sets.md).  
   
  Условные инструкции  
@@ -85,7 +85,7 @@ ms.locfileid: "34023011"
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Справочник по языку многомерных Выражений & #40; Многомерные Выражения & #41;](../../../mdx/mdx-language-reference-mdx.md)   
- [Основные понятия о сценариях многомерных Выражений & #40; Службы Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)  
+ [Справочник по языку многомерных выражений (многомерные выражения)](../../../mdx/mdx-language-reference-mdx.md)   
+ [Основные принципы создания скриптов многомерных выражений (службы Analysis Services)](../../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)  
   
   

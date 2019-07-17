@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d4cfe904cc6a808efc6c8a7208b3825117b2909d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194074"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68197132"
 ---
 # <a name="ole-automation-sample-script"></a>Пример скрипта OLE-автоматизации
   В этом разделе содержится пример пакета инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] , который использует хранимые процедуры OLE-автоматизации для создания и использования объекта SQLServer языка SQL-DMO в логическом экземпляре [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Части приведенного кода используются в качестве примеров в разделах справки по системным хранимым процедурам OLE-автоматизации.  

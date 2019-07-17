@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 17a91433-f9b6-4a40-88c4-8c704ec2de9f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c43d969f56619109cfb6ebe09b8a416824f59638
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9ede8b65cb3f11ed6640121031ea6a2fe5b57b83
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65982975"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124193"
 ---
 # <a name="spfulltextservice-transact-sql"></a>sp_fulltext_service (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ sp_fulltext_service [ [@action=] 'action'
 > [!NOTE]  
 >  Следующие действия будут удалены в одном из будущих выпусков [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **clean_up**, **connect_timeout**, **data_timeout**, и **resource_ Использование**. Следует избегать использования этих действий в новой разработке и запланировать изменение приложений, использующих их в настоящий момент.  
   
-|Действие|Тип данных|Описание|  
+|Action|Тип данных|Описание|  
 |------------|---------------|-----------------|  
 |**clean_up**|**int**|Поддерживается только для обеспечения обратной совместимости. Значение всегда равно 0.|  
 |**connect_timeout**|**int**|Поддерживается только для обеспечения обратной совместимости. Значение всегда равно 0.|  

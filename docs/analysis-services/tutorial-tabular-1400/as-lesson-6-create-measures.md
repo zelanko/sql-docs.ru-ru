@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: f3592f1494661fa603e6dc252d3cd2e10093c24e
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 715fe6144cc430e545feb3c484d148531cff6ec9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685651"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207343"
 ---
 # <a name="create-measures"></a>Создание мер
 
@@ -29,11 +29,11 @@ ms.locfileid: "57685651"
   
 На этом занятии вы создадите меры путем ввода формулы DAX в строке формул и с помощью функции "Автосумма".  
   
-Предполагаемое время выполнения данного занятия: **30 минут**  
+Предполагаемое время для выполнения этого занятия: **30 минут**  
   
 ## <a name="prerequisites"></a>предварительные требования  
 
-Эта статья входит в учебник по табличному моделированию, который следует изучать в порядке. Прежде чем выполнять задания в этом занятии, необходимо завершить предыдущее занятие: [Занятие 5. Создание вычисляемых столбцов](../tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md).  
+Эта статья входит в учебник по табличному моделированию, который следует изучать в порядке. Перед выполнением задач на этом занятии, необходимо завершить предыдущее занятие: [Занятие 5. Создание вычисляемых столбцов](../tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md).  
   
 ## <a name="create-measures"></a>Создание мер  
   
@@ -78,7 +78,7 @@ ms.locfileid: "57685651"
   
     Функция автосуммирования автоматически создаст меру для выбранного столбца, используя стандартную статистическую формулу DistinctCount.  
     
-       ![as-lesson6-newmeasure2](../tutorial-tabular-1400/media/as-lesson6-newmeasure2.png)
+       ![как newmeasure2 lesson6](../tutorial-tabular-1400/media/as-lesson6-newmeasure2.png)
   
 4.  В сетке мер щелкните новую меру, а затем в **свойства** окно в **имя меры**, переименуйте эту меру в **InternetDistinctCountSalesOrder**. 
  

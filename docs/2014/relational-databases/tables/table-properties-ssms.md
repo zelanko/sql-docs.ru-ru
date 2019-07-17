@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b07f157294700b3b3b7958ce4cdc6f1589bff864
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356281"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196708"
 ---
 # <a name="table-properties"></a>Свойства таблицы
   Данный раздел описывает свойства таблицы, отображаемые в диалоговом окне «Свойства таблицы» в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Дополнительные сведения по отображению этих свойств см. в разделе [Просмотр определения таблицы](view-the-table-definition.md).  
@@ -85,7 +85,7 @@ ms.locfileid: "53356281"
   
 ##  <a name="ChangeTracking"></a> Страница отслеживания изменений  
  **Отслеживание изменений**  
- Указывает, разрешено ли отслеживание изменений для этой таблицы. Значение по умолчанию — `False`.  
+ Указывает, разрешено ли отслеживание изменений для этой таблицы. Значение по умолчанию — `False`.  
   
  Этот параметр доступен только в том случае, если отслеживание изменений разрешено для базы данных.  
   

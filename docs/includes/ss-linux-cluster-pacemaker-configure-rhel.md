@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 6cf3dd279f33ea0c157743d4b4c11248267a0a62
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68215620"
+---
 3. В брандмауэрах на всех узлах кластера откройте порты для Pacemaker. Чтобы открыть эти порты с помощью `firewalld`, выполните следующую команду:
 
    ```bash

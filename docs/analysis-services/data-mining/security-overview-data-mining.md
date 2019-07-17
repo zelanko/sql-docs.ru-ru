@@ -1,5 +1,5 @@
 ---
-title: Общие сведения о безопасности (интеллектуальный анализ данных) | Документы Microsoft
+title: Общие сведения о безопасности (интеллектуальный анализ данных) | Документация Майкрософт
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8cf7958cdde480bf48c26dfed7e3056385439a4d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016891"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209691"
 ---
 # <a name="security-overview-data-mining"></a>Общие сведения о безопасности (интеллектуальный анализ данных)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -23,13 +23,13 @@ ms.locfileid: "34016891"
 ##  <a name="bkmk_Architecture"></a> Архитектура защиты  
  В следующих источниках приводятся сведения об архитектуре безопасности экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], включая то, как службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] используют проверку подлинности [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows для проверки подлинности доступа пользователей.  
   
--   [Роли безопасности & #40; Analysis Services — многомерные данные & #41;](../../analysis-services/multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)  
+-   [Роли безопасности (службы Analysis Services — многомерные данные)](../../analysis-services/multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)  
   
 -   [Свойства безопасности](../../analysis-services/server-properties/security-properties.md)  
   
--   [Настройка учетных записей служб & #40; Службы Analysis Services & #41;](../../analysis-services/instances/configure-service-accounts-analysis-services.md)  
+-   [Настройка учетных записей служб (службы Analysis Services)](../../analysis-services/instances/configure-service-accounts-analysis-services.md)  
   
--   [Авторизацию доступа к объектам и операции & #40; Службы Analysis Services & #41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
+-   [Предоставление доступа к объектам и операциям (службы Analysis Services)](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
   
 ##  <a name="bkmk_Logon"></a> Настройка учетной записи входа для служб Analysis Services  
  Необходимо выбрать подходящую учетную запись входа для служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] и указать для нее разрешения. Следует убедиться, что учетная запись входа служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] обладает только теми разрешениями, которые необходимы для выполнения требуемых задач, включая соответствующие разрешения на доступ к базовым источникам данных.  
@@ -54,6 +54,6 @@ ms.locfileid: "34016891"
  При использовании пакетов служб Integration Services для очистки данных, обновления моделей интеллектуального анализа данных или для прогнозирования необходимо позаботиться о том, чтобы служба Integration Services имела соответствующие разрешения на работу с базой данных, в которой хранится модель, и соответствующие разрешения на работу с данными источника.  
   
 ## <a name="see-also"></a>См. также  
- [Роли и разрешения & #40; Службы Analysis Services & #41;](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)  
+ [Роли и разрешения (службы Analysis Services)](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)  
   
   

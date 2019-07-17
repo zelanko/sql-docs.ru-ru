@@ -1,5 +1,5 @@
 ---
-title: Удалить столбцы из структуры интеллектуального анализа данных | Документы Microsoft
+title: Удалить столбцы из структуры интеллектуального анализа данных | Документация Майкрософт
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: bd8691d8ec0cc1546e27e8195e7d0bbc20709f59
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015881"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209687"
 ---
 # <a name="remove-columns-from-a-mining-structure"></a>удалить столбцы из структуры интеллектуального анализа данных
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -39,6 +39,6 @@ ms.locfileid: "34015881"
 4.  В диалоговом окне **Удаление объектов** нажмите кнопку **ОК**.  
   
 ## <a name="see-also"></a>См. также  
- [Интеллектуального анализа данных структуры задачи и инструкции](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
+ [Задачи и инструкции по структуре интеллектуального анализа данных](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   

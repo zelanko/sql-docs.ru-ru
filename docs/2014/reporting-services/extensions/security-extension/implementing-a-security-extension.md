@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e5cf1fa6ce0e0a02a52e6a27f693c152d1f97152
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60153843"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211537"
 ---
 # <a name="implementing-a-security-extension"></a>Реализация модуля безопасности
   Проверка подлинности [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows является основной системой защиты отчетов в службах [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Однако в определенных случаях может понадобиться расширить систему безопасности служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], чтобы обеспечить соответствие требованиям системы безопасности предприятия. Для этого используется платформа разработки, предоставляемая API служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. В этом разделе представлены общие сведения о модулях безопасности в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  

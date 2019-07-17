@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: a324d07d-cfdf-43bd-98a0-acf332c5a4db
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 7760a893082f7b4a8899e00480fc43914b1c12ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 6947a51b731b22b28ffbaa509f7cd38be5e7ebc5
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62625918"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266532"
 ---
 # <a name="setting-project-options-oracletosql"></a>Настройка параметров проекта (OracleToSQL)
 Для каждого проекта SSMA можно задать параметры уровня проекта. Эти параметры задают преобразование объекта, загрузка объекта, параметры миграции интерфейсом и данными пользователя. Перед началом преобразования объектов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или перенести данные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], убедитесь, что параметры конфигурации подходят для проекта.  

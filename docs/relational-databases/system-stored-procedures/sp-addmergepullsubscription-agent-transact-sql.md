@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a2f4b086-078d-49b5-8971-8a1e3f6a6feb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5859d7e4c026375d5e9ade69628b9cf9e4a76ed0
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 8bfa9ff0683f67a1d38aeb17bccd0cfc1443d6d2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494366"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117958"
 ---
 # <a name="spaddmergepullsubscriptionagent-transact-sql"></a>sp_addmergepullsubscription_agent (Transact-SQL)
 
@@ -214,15 +213,15 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @active_end_date = ] active_end_date` Дата плановой остановки агента слияния, в формате ГГГГММДД. *active_end_date* — **int**, значение по умолчанию NULL.  
   
-`[ @optional_command_line = ] 'optional_command_line'` — Это дополнительная Командная строка, предоставляемая для агента слияния. *optional_command_line* — **nvarchar(255)**, значение по умолчанию "". Может использоваться для передачи агенту слияния дополнительных параметров. Следующий пример иллюстрирует увеличение времени ожидания выполнения запроса по умолчанию до `600` секунд.  
+`[ @optional_command_line = ] 'optional_command_line'` — Это дополнительная Командная строка, предоставляемая для агента слияния. *optional_command_line* — **nvarchar(255)** , значение по умолчанию "". Может использоваться для передачи агенту слияния дополнительных параметров. Следующий пример иллюстрирует увеличение времени ожидания выполнения запроса по умолчанию до `600` секунд.  
   
 ```  
 @optional_command_line = N'-QueryTimeOut 600'  
 ```  
   
-`[ @merge_jobid = ] merge_jobid` — Это выходной параметр идентификатора задания. *merge_jobid* — **binary(16)**, значение по умолчанию NULL.  
+`[ @merge_jobid = ] merge_jobid` — Это выходной параметр идентификатора задания. *merge_jobid* — **binary(16)** , значение по умолчанию NULL.  
   
-`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'` Указывает, может ли подписка быть синхронизирована посредством диспетчера синхронизации Windows. *enabled_for_syncmgr* — **nvarchar(5)**, значение по умолчанию FALSE. Если **false**, подписка не зарегистрирована диспетчером синхронизации. Если **true**, подписка регистрируется диспетчером синхронизации и может быть синхронизирована без запуска [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'` Указывает, может ли подписка быть синхронизирована посредством диспетчера синхронизации Windows. *enabled_for_syncmgr* — **nvarchar(5)** , значение по умолчанию FALSE. Если **false**, подписка не зарегистрирована диспетчером синхронизации. Если **true**, подписка регистрируется диспетчером синхронизации и может быть синхронизирована без запуска [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 `[ @ftp_address = ] 'ftp_address'` Только для обратной совместимости.  
   
@@ -232,15 +231,15 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @ftp_password = ] 'ftp_password'` Только для обратной совместимости.  
   
-`[ @alt_snapshot_folder = ] 'alternate_snapshot_folder'` Указывает расположение, откуда извлекаются файлы моментальных снимков. *alternate_snapshot_folder* — **nvarchar(255)**, значение по умолчанию NULL. При значении NULL файлы моментальных снимков считываются из местонахождения по умолчанию, определяемого издателем.  
+`[ @alt_snapshot_folder = ] 'alternate_snapshot_folder'` Указывает расположение, откуда извлекаются файлы моментальных снимков. *alternate_snapshot_folder* — **nvarchar(255)** , значение по умолчанию NULL. При значении NULL файлы моментальных снимков считываются из местонахождения по умолчанию, определяемого издателем.  
   
-`[ @working_directory = ] 'working_directory'` Это имя рабочего каталога, используемого для временного хранения файлов данных и схем публикации при использовании протокола FTP для передачи файлов моментальных снимков. *working_directory* — **nvarchar(255)**, значение по умолчанию NULL.  
+`[ @working_directory = ] 'working_directory'` Это имя рабочего каталога, используемого для временного хранения файлов данных и схем публикации при использовании протокола FTP для передачи файлов моментальных снимков. *working_directory* — **nvarchar(255)** , значение по умолчанию NULL.  
   
-`[ @use_ftp = ] 'use_ftp'` Указывает использование протокола FTP вместо обычного протокола для получения моментальных снимков. *use_ftp* — **nvarchar(5)**, значение по умолчанию FALSE.  
+`[ @use_ftp = ] 'use_ftp'` Указывает использование протокола FTP вместо обычного протокола для получения моментальных снимков. *use_ftp* — **nvarchar(5)** , значение по умолчанию FALSE.  
   
 `[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @use_interactive_resolver = ] 'use_interactive_resolver' ]` Использует интерактивный арбитр конфликтов для всех статей, которые допускают интерактивное разрешение. *use_interactive_resolver* — **nvarchar(5)**, значение по умолчанию FALSE.  
+`[ @use_interactive_resolver = ] 'use_interactive_resolver' ]` Использует интерактивный арбитр конфликтов для всех статей, которые допускают интерактивное разрешение. *use_interactive_resolver* — **nvarchar(5)** , значение по умолчанию FALSE.  
   
 `[ @offloadagent = ] 'remote_agent_activation'`
  > [!NOTE]  
@@ -252,15 +251,15 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @job_name = ] 'job_name' ]` — Имя существующего задания агента. *имя_задания* — **sysname**, со значением по умолчанию NULL. Этот аргумент указывается только тогда, когда подписка будет синхронизироваться с использованием существующего задания, а не вновь создаваемого задания (выбор по умолчанию). Если вы не являетесь членом **sysadmin** предопределенной роли сервера, необходимо указать *job_login* и *job_password* при указании *имя_задания*.  
   
-`[ @dynamic_snapshot_location = ] 'dynamic_snapshot_location' ]` Путь к папке, в которой файлы моментальных снимков будут считываться из Если моментального снимка отфильтрованных данных будет использоваться. *dynamic_snapshot_location* — **nvarchar(260)**, значение по умолчанию NULL. Дополнительные сведения см. в разделе [Параметризованные фильтры строк](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+`[ @dynamic_snapshot_location = ] 'dynamic_snapshot_location' ]` Путь к папке, в которой файлы моментальных снимков будут считываться из Если моментального снимка отфильтрованных данных будет использоваться. *dynamic_snapshot_location* — **nvarchar(260)** , значение по умолчанию NULL. Дополнительные сведения см. в разделе [Параметризованные фильтры строк](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
 `[ @use_web_sync = ] use_web_sync` Указывает, что веб-синхронизация разрешена. *use_web_sync* — **бит**, значение по умолчанию 0. **1** указывает, что подписки по запросу могут синхронизироваться через Интернет по протоколу HTTP.  
   
-`[ @internet_url = ] 'internet_url'` — Это расположение средства прослушивания репликации (REPLISAPI. Библиотека DLL) для веб-синхронизации. *internet_url* — **nvarchar(260)**, значение по умолчанию NULL. *internet_url* — это полный URL-адрес в формате `http://server.domain.com/directory/replisapi.dll`. Если сервер настроен для прослушивания порта, отличного от 80-го, необходимо также задать номер порта в формате `http://server.domain.com:portnumber/directory/replisapi.dll`, где `portnumber` указывает номер порта.  
+`[ @internet_url = ] 'internet_url'` — Это расположение средства прослушивания репликации (REPLISAPI. Библиотека DLL) для веб-синхронизации. *internet_url* — **nvarchar(260)** , значение по умолчанию NULL. *internet_url* — это полный URL-адрес в формате `http://server.domain.com/directory/replisapi.dll`. Если сервер настроен для прослушивания порта, отличного от 80-го, необходимо также задать номер порта в формате `http://server.domain.com:portnumber/directory/replisapi.dll`, где `portnumber` указывает номер порта.  
   
 `[ @internet_login = ] 'internet_login'` Имя входа, используемое агентом слияния при подключении к веб-сервера, на котором размещается веб-синхронизации используется обычная проверка подлинности HTTP. *internet_login* — **sysname**, значение по умолчанию NULL.  
   
-`[ @internet_password = ] 'internet_password'` Пароль, используемое агентом слияния при подключении к веб-сервера, на котором размещается веб-синхронизации используется обычная проверка подлинности HTTP. *internet_password* — **nvarchar(524)**, со значением по умолчанию NULL.  
+`[ @internet_password = ] 'internet_password'` Пароль, используемое агентом слияния при подключении к веб-сервера, на котором размещается веб-синхронизации используется обычная проверка подлинности HTTP. *internet_password* — **nvarchar(524)** , со значением по умолчанию NULL.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
@@ -279,7 +278,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @hostname = ] 'hostname'` Переопределяет значение, возвращаемое функцией HOST_NAME() при использовании этой функции в предложении WHERE параметризованного фильтра. *Имя узла* — **sysname**, значение по умолчанию NULL.  
   
-`[ @job_login = ] 'job_login'` — Это имя для учетной записи Windows, под которой запускается агент. *job_login* — **nvarchar(257)**, не имеет значения по умолчанию. Эта учетная запись Windows всегда используется при соединениях агента с подписчиком и соединениях с распространителем и издателем, когда применяется встроенная проверка подлинности Windows.  
+`[ @job_login = ] 'job_login'` — Это имя для учетной записи Windows, под которой запускается агент. *job_login* — **nvarchar(257)** , не имеет значения по умолчанию. Эта учетная запись Windows всегда используется при соединениях агента с подписчиком и соединениях с распространителем и издателем, когда применяется встроенная проверка подлинности Windows.  
   
 `[ @job_password = ] 'job_password'` — Пароль для учетной записи Windows, под которой запускается агент. *job_password* — **sysname**, не имеет значения по умолчанию.  
   

@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a9968f22db053bf12a28e3e491817a2c3ac23008
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781776"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68186770"
 ---
 # <a name="sql-server-configuration-manager-help"></a>Справка диспетчера конфигурации SQL Server
   Используйте диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , чтобы настроить службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и сетевые соединения. Для создания и управления объектами базы данных, настройки безопасности и создания запросов [!INCLUDE[tsql](../../includes/tsql-md.md)] используйте среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Дополнительные сведения о среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]см. в электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -50,7 +50,7 @@ ms.locfileid: "52781776"
 -   настройка сетевого протокола [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
->  Краткий учебник о настройке протоколов и подключении к [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], см. в разделе [руководства: Начало работы с ядром СУБД](../../relational-databases/tutorial-getting-started-with-the-database-engine.md).  
+>  Краткие инструкции по настройке протоколов и подключению к компоненту [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] см. в руководстве [по началу работы с ядром СУБД](../../relational-databases/tutorial-getting-started-with-the-database-engine.md).  
   
 ## <a name="sql-server-native-client-configuration"></a>Конфигурация собственного клиента SQL Server  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подключаются к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при помощи сетевой библиотеки собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Используйте диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для следующих задач, относящихся к клиентским приложениям на этом компьютере:  

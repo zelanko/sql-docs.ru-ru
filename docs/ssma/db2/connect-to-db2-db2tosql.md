@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9d485fd0-ab5d-402a-a59a-e9982a61b7de
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: ab734e93743d3a3158feb16dba044b58e7f48f23
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2a14b3a5de4292b01fd6fdb2df67bd4839d1a8d9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63299156"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68141092"
 ---
 # <a name="connect-to-db2-db2tosql"></a>Подключение к DB2 (DB2ToSQL)
 Используйте **подключение к DB2** диалоговое окно для подключения к базе данных DB2, которые требуется перенести.  

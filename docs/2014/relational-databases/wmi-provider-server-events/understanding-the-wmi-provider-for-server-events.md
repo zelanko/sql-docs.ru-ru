@@ -15,18 +15,18 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 2deedb64e5c8995524978a19b02110a068bde08d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358216"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68195819"
 ---
 # <a name="understanding-the-wmi-provider-for-server-events"></a>Основные сведения о поставщике WMI для событий сервера
   Поставщик инструментария WMI для событий сервера позволяет использовать Инструментарий управления Windows (WMI) для контроля событий в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В ходе своей работы поставщик преобразует [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в управляемый объект инструментария WMI. Этот поставщик позволяет инструментарию WMI использовать все события, которые могут формировать уведомления о событии в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Кроме того, агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], играя роль управляющего приложения, взаимодействующего с инструментарием WMI, может реагировать на эти события, расширяя область событий, охватываемых агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предыдущих версий.  
   
  Управляющие приложения, такие как агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], могут получать доступ к событиям [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью поставщика WMI для событий сервера путем выполнения инструкций WMI Query Language (WQL). WQL является упрощенным подмножеством языка SQL с некоторыми расширениями, специфичными для WMI. При использовании языка WQL приложение получает тип события для определенной базы данных или объекта базы данных. Поставщик WMI для событий сервера преобразовывает запрос в уведомление о событии, создавая уведомление в базе данных-получателе. Дополнительные сведения о работе уведомлений о событиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в разделе [поставщик WMI для событий сервера основные понятия](https://technet.microsoft.com/library/ms180560.aspx). События, которые можно запросить, перечислены в [поставщик WMI для событий классов и свойств сервера](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md).  
   
- При возникновении события, которое вызывает уведомление о событии для отправки сообщения, сообщение направляется в стандартную целевую службу в **msdb** с именем **SQL/Notifications/ProcessWMIEventProviderNotification/v1.0**. Служба ставит событие в стандартную очередь в **msdb** с именем **WMIEventProviderNotificationQueue**. (Служба и очередь создаются динамически при первом подключении поставщика к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].) Затем поставщик считывает сведения о событии из этой очереди и преобразует их в формат управляющих объектов (MOF), прежде чем возвращать их приложению. На следующем рисунке показан этот процесс.  
+ При возникновении события, которое вызывает уведомление о событии для отправки сообщения, сообщение направляется в стандартную целевую службу в **msdb** с именем **SQL/Notifications/ProcessWMIEventProviderNotification/v1.0**. Служба ставит событие в стандартную очередь в **msdb** с именем **WMIEventProviderNotificationQueue**. (Служба и очередь создаются динамически поставщиком при первом подключении к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].) Затем поставщик считывает данные события из этой очереди и преобразует его в формат управляющих объектов (MOF) перед его возвратом в приложение. На следующем рисунке показан этот процесс.  
   
  ![Схема потока поставщик WMI для событий сервера](../../../2014/database-engine/dev-guide/media/wmi-provider-functional-spec.gif "схема потока поставщик WMI для событий сервера")  
   

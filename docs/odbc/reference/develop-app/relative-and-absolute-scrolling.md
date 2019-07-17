@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3d0ff48d-fef5-4c01-bb1d-a583e6269b66
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5ba05cb9079514750cf087149bae476efe0d8d41
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e2034a3922dcd3db77113e08a6c48fe7ac39457f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62861514"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138060"
 ---
 # <a name="relative-and-absolute-scrolling"></a>Относительная и абсолютная прокрутка
 Почти все действия, параметры прокрутки в **SQLFetchScroll** позиционирования курсора относительно текущей позиции или абсолютное позиционирование. **SQLFetchScroll** поддерживает выборку следующего, предыдущего, первого и последнего наборов строк, как хорошо как относительной (набора строк, *n* строк с начала текущего набора строк) и абсолютной (fetch начальный набор строк в строке *n*). Если *n* имеет отрицательное значение в абсолютная выборка, строки отсчитываются с конца результирующего набора. Таким образом абсолютная выборка строки -1 означает, что для выборки строк, который начинается с последней строки в результирующем наборе.  

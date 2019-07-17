@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e80d5790f78c83a8a1ff3059e12e0946e206c060
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52795836"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211451"
 ---
 # <a name="create-a-sql-server-agent-master-job"></a>Создание задания агента главного сервера SQL Server
   В данном разделе описывается создание задание агента главного сервера [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -53,7 +53,7 @@ ms.locfileid: "52795836"
   
 2.  Щелкните знак "плюс", чтобы развернуть **Агент SQL Server**.  
   
-3.  Щелкните правой кнопкой мыши папку **Задания** и выберите пункт **Создать задание…**.  
+3.  Щелкните правой кнопкой мыши папку **Задания** и выберите пункт **Создать задание…** .  
   
 4.  На странице **Общие** в диалоговом окне **Создание задания** измените общие свойства задания. Дополнительные сведения о параметрах, доступных на этой странице, см. в разделе [свойства задания и новое задание &#40;страница "Общие"&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   

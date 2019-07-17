@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 94d3faab4c831fe64e54a582a5f70b2ae6b664e4
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125354"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210786"
 ---
 # <a name="compare-replicated-tables-for-differences-replication-programming"></a>сравнить реплицируемые таблицы на предмет различий (программирование репликации)
   Проверка статей используется для определения того, совпадают ли опубликованные данные в статьях таблицы на издателе с данными  на подписчике. В результате могут быть выявлены расхождения. Дополнительные сведения см. в статье [Проверка реплицированных данных](../validate-data-at-the-subscriber.md). Однако проверка дает только сведения о том, есть расхождение или нет. Никаких подробностей о расхождении данных в исходной таблице и целевой таблице не сообщается. Программа командной строки **tablediff** возвращает подробные сведения о расхождениях в двух таблицах и даже может создать скрипт [!INCLUDE[tsql](../../../includes/tsql-md.md)] для приведения подписки в соответствие с данными на издателе.  

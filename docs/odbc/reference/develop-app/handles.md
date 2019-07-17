@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f663101e-a4cc-402b-b9d7-84d5e975be71
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a205a23c4c7e7e45269fd00fc0923d4168ec7091
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d31d36f315291d6826712771d0e3b6b1d8fbc496
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63061448"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139042"
 ---
 # <a name="handles"></a>Маркеры
 Дескрипторы становятся непрозрачных, 32-разрядных значений, определяющих какой-либо элемент; в ODBC этот элемент может быть среды, подключения, инструкции или дескриптора. Когда приложение вызывает **SQLAllocHandle**, диспетчер драйверов или драйвер создает новый элемент указанного типа и возвращает его дескриптор в приложение. Позднее приложение использует маркер для идентификации этого элемента при вызове функций ODBC. Диспетчер драйверов и драйверов с помощью маркера для поиска сведений об элементе.  

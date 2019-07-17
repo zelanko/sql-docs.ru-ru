@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8abaa8c1-d99e-4788-970f-c4752246c577
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e10d4e46e01f4da5a36d7bdf59d7566f2a989e75
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: acbbd043080b107a5d545408fabe271d62015e54
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493156"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68105080"
 ---
 # <a name="sparticlecolumn-transact-sql"></a>sp_articlecolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ sp_articlecolumn [ @publication = ] 'publication'
   
 `[ @column = ] 'column'` — Имя столбца, который требуется добавить или удалить. *столбец* — **sysname**, значение по умолчанию NULL. Если значение равно NULL, публикуются все столбцы.  
   
-`[ @operation = ] 'operation'` Указывает, следует ли добавлять или удалять столбцы из статьи. *Операция* — **nvarchar(5)**, значение по умолчанию add. **Добавление** столбец для репликации. **DROP** — снять отметку столбца.  
+`[ @operation = ] 'operation'` Указывает, следует ли добавлять или удалять столбцы из статьи. *Операция* — **nvarchar(5)** , значение по умолчанию add. **Добавление** столбец для репликации. **DROP** — снять отметку столбца.  
   
 `[ @refresh_synctran_procs = ] refresh_synctran_procs` Указывает, формируется ли хранимые процедуры, поддерживающие немедленно обновляемую подписку заново в соответствии с числом реплицируемых столбцов. *refresh_synctran_procs* — **бит**, значение по умолчанию **1**. Если **1**, хранимые процедуры формируются повторно.  
   

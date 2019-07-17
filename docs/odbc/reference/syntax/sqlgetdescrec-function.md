@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 325e0907-8e87-44e8-a111-f39e636a9cbc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c737a9dfd6e7a33b5e160b3d952fac0b354148b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c27b16d8b72e289f66a051cb2710004f72309599
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65538193"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103788"
 ---
 # <a name="sqlgetdescrec-function"></a>Функция SQLGetDescRec
 **Соответствие стандартам**  
@@ -89,7 +88,7 @@ SQLRETURN SQLGetDescRec(
  [Выход] Указатель на буфер, в которую будет возвращено значение поля SQL_DESC_NULLABLE для записи дескриптора.  
   
 ## <a name="returns"></a>Возвращает  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, SQL_NO_DATA, or SQL_INVALID_HANDLE.  
+ Значение SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, значение SQL_ERROR, SQL_NO_DATA или SQL_INVALID_HANDLE.  
   
  Будет возвращено значение SQL_NO_DATA, если *RecNumber* больше, чем текущее количество записей дескриптора.  
   

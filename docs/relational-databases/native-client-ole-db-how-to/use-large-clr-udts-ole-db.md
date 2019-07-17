@@ -10,14 +10,13 @@ ms.topic: reference
 ms.assetid: 30f59c11-3bca-41be-8bd7-0d1efaf1f0be
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7734c520d0e97246fe6a87aa6b1d4585b6507c54
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: e3d2ed3b506b6df25ed0559944230822f8886a24
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204413"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68109921"
 ---
 # <a name="use-large-clr-udts-ole-db"></a>Использование определяемых пользователем типов больших данных CLR (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,11 +29,11 @@ ms.locfileid: "53204413"
   
  Скомпилируйте первый листинг кода (C#) в DLL-библиотеку.  Затем скопируйте этот DLL-файл в корневой каталог диска C.  
   
- Выполните второй ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) листинг кода, чтобы добавить сборку в базу данных master.  
+ Выполните второй листинг кода ([!INCLUDE[tsql](../../includes/tsql-md.md)]), чтобы добавить сборку в базу данных master.  
   
  Скомпилируйте с библиотеками ole32.lib и oleaut32.lib и выполните третий листинг кода (C++). Это приложение соединяется с установленным на компьютер экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию. В некоторых операционных системах Windows придется заменить (localhost) или (local) на имя своего экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Чтобы подключиться к именованному экземпляру, измените строку подключения с L"(local)" на L"(local)\\\<имя>", где <имя> — это именованный экземпляр. По умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express устанавливается на именованный экземпляр. Убедитесь, что переменная среды INCLUDE включает каталог, содержащий файл sqlncli.h.  
   
- Выполните четвертый ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) листинг кода, чтобы удалить сборку в базу данных master.  
+ Выполните четвертый листинг кода ([!INCLUDE[tsql](../../includes/tsql-md.md)]), чтобы удалить сборку из базы данных master.  
   
 ```  
 // compile with: /target: library  

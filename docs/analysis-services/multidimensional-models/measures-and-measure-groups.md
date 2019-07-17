@@ -1,5 +1,5 @@
 ---
-title: Меры и группы мер | Документы Microsoft
+title: Меры и группы мер | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 04eb5a41bec6e9abb62cfde516f2dad2ff820521
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024251"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68165751"
 ---
 # <a name="measures-and-measure-groups"></a>Меры и их группы
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -22,13 +22,13 @@ ms.locfileid: "34024251"
   
  В этом разделе описываются [Measures](#bkmk_measure) и [Measure Groups](#bkmk_mg). Здесь также приведена следующая таблица с ссылками на инструкции по созданию и настройке мер и групп мер.  
   
-|**Ссылка**|**Description**|  
+|**Ссылка**|**Описание**|  
 |--------------|---------------------|  
-|[Создание меры и группы мер в многомерных моделях](../../analysis-services/multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md)|Выберите один из способов создания мер и групп мер.|  
+|[Создание мер и групп мер в многомерных моделях](../../analysis-services/multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md)|Выберите один из способов создания мер и групп мер.|  
 |[Настройка свойств мер](../../analysis-services/multidimensional-models/configure-measure-properties.md)|Если мастер кубов используется для запуска куба, возможно, потребуется изменить метод агрегирования, применить формат данных, настроить видимость для меры в клиентских приложениях или добавить выражение меры для работы с данными, прежде чем значения объединятся.|  
 |[Настройка свойств группы мер](../../analysis-services/multidimensional-models/configure-measure-group-properties.md)|В многомерной модели группа мер соответствует таблице фактов в хранилище данных источника. Свойства в группе мер позволяют задавать поведение кэширования, хранения и директивы обработки, которые работают вместе на уровне группы мер. Конфигурация раздела частично определяется свойствами, заданными для объектов группы мер.|  
 |[Использование агрегатных функций](../../analysis-services/multidimensional-models/use-aggregate-functions.md)|Понимание методов агрегирования, которые могут быть присвоены мере.|  
-|[Определение полуаддитивного режима](../../analysis-services/multidimensional-models/define-semiadditive-behavior.md)|Полуаддитивный режим ссылается на агрегаты, которые являются допустимыми для одних измерений, но не других. Распространенным примером является баланс банковского счета. Может потребоваться выполнить агрегирование баланса по клиентам и областям, но не по времени. Например, нет смысла складывать баланс одного и того же счета за несколько дней подряд. Чтобы определить полуаддитивный режим, используйте мастер добавления бизнес-аналитики.|  
+|[Определить полуаддитивный режим](../../analysis-services/multidimensional-models/define-semiadditive-behavior.md)|Полуаддитивный режим ссылается на агрегаты, которые являются допустимыми для одних измерений, но не других. Распространенным примером является баланс банковского счета. Может потребоваться выполнить агрегирование баланса по клиентам и областям, но не по времени. Например, нет смысла складывать баланс одного и того же счета за несколько дней подряд. Чтобы определить полуаддитивный режим, используйте мастер добавления бизнес-аналитики.|  
 |[Связанные группы мер](../../analysis-services/multidimensional-models/linked-measure-groups.md)|Используйте существующую группу мер в других кубах той же базы данных или в других базах данных служб Analysis Services.|  
   
 ##  <a name="bkmk_measure"></a> Measures  
@@ -40,7 +40,7 @@ ms.locfileid: "34024251"
   
  В этом примере **товарооборот посредников** объединяется с различными уровнями иерархии **территории сбыта** .  
   
- ![Сводная таблица с мерами и измерениями, вызванной](../../analysis-services/multidimensional-models/media/ssas-keyconcepts-pivot1-measures-dimensions.png "сводной таблицы с мерами и измерениями, вызванной")  
+ ![Сводная таблица с мерами и измерениями, вызванной](../../analysis-services/multidimensional-models/media/ssas-keyconcepts-pivot1-measures-dimensions.png "Сводная таблица с мерами и измерениями, вызванной")  
   
  Меры выдают правильные результаты, когда таблица фактов, содержащая числовые исходные данные, также содержит ссылки на таблицы измерений, которые используются в запросе. На примере товарооборота посредников, если каждая строка, хранящая объем продаж, содержит указатель на таблицу продуктов, таблицу дат или таблицу территории сбыта, то запросы, которые включают элементы из этих измерений, будут обработаны правильно.  
   
@@ -57,6 +57,6 @@ ms.locfileid: "34024251"
   
 ## <a name="see-also"></a>См. также  
  [Кубы в многомерных моделях](../../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)   
- [Создание меры и группы мер в многомерных моделях](../../analysis-services/multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md)  
+ [Создание мер и групп мер в многомерных моделях](../../analysis-services/multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md)  
   
   

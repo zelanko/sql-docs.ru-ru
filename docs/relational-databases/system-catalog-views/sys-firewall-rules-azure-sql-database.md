@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 140d2cd8-9aa1-4cc5-870d-e1dbc873b3fe
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 5127dacf628231199c5ce5ac49fdb2377c82f270
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2be0d498da026f386c3a89002cca621b19a2a15d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62631636"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133988"
 ---
 # <a name="sysfirewallrules-azure-sql-database"></a>sys.firewall_rules (база данных SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e355f5f1-4f1a-4933-8c74-ee73e90d2d19
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 383a81aea121882b334bbfdab806408ac0513893
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6b0205208a28238f4fbccb5ae2fd96639b664bd6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62724219"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139152"
 ---
 # <a name="hard-coded-sql-statements"></a>Жестко запрограммированные инструкции SQL
 Приложения, осуществляющие фиксированной задачи обычно содержат жестко запрограммированных инструкциях SQL. Например система ввода заказов может использовать следующий вызов в список открытых заказов на продажу:  

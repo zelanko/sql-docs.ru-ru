@@ -1,5 +1,5 @@
 ---
-title: Создание вычислений ячеек с областью действия запроса (многомерные Выражения) | Документы Microsoft
+title: Создание вычислений ячеек с областью действия запроса (многомерные Выражения) | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c9cb6f083751b14ad3cd8f2ffaac692ef4e6eb86
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022841"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208782"
 ---
-# <a name="mdx-cell-calculations---query-scoped-cell-calculations"></a>Вычисления многомерных Выражений ячейки - вычислений ячеек с областью действия запроса
+# <a name="mdx-cell-calculations---query-scoped-cell-calculations"></a>Вычисления ячеек многомерных Выражений — вычислений ячеек с областью действия запроса
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Ключевое слово **WITH** в многомерном выражении описывает вычисляемые ячейки в контексте запроса. Синтаксис ключевого слова **WITH** имеет следующий вид:  
   
@@ -26,7 +26,7 @@ WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression
   
  Значение `CellCalc_Identifier` — это имя вычисляемых ячеек. Значение `String_Expression` — это перечень ортогональных одномерных выражений набора многомерных выражений. Каждое выражение набора должно разрешаться к одной из перечисленных ниже категорий.  
   
-|Категория|Description|  
+|Category|Описание|  
 |--------------|-----------------|  
 |Пустой набор|Выражение набора многомерных выражений, которое разрешается к пустому набору. В этом случае областью вычисляемой ячейки является весь куб.|  
 |Одноэлементный набор|Выражение набора многомерных выражений, которое разрешается к единственному элементу.|  
@@ -51,6 +51,6 @@ WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression
  С другой стороны, многомерное выражение обрабатывает формулу вычисления всякий раз, когда в кубе выполняется запрос многомерных выражений, работающий с ячейками, входящими в определение вычисляемых ячеек. Такая обработка выполняется независимо от области при создании определения.  
   
 ## <a name="see-also"></a>См. также  
- [Создать инструкции ВЫЧИСЛЕНИЯ ЯЧЕЙКИ & #40; Многомерные Выражения & #41;](../../../mdx/mdx-data-definition-create-cell-calculation.md)  
+ [Инструкция CREATE CELL CALCULATION (многомерные выражения)](../../../mdx/mdx-data-definition-create-cell-calculation.md)  
   
   

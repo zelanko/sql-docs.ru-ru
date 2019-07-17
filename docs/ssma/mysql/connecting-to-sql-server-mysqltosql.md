@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 08233267-693e-46e6-9ca3-3a3dfd3d2be7
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 64dd3fae9776c09f81571a721aa53753e34fbb17
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0ec33e462f1b68d70a86a0fbf4f7cf0214d25770
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63273512"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103132"
 ---
 # <a name="connecting-to-sql-server-mysqltosql"></a>Подключение к SQL Server (MySQLToSQL)
 Чтобы перенести базы данных MySQL в SQL Server, необходимо подключиться к целевому экземпляру SQL Server. При подключении, SSMA получает метаданные обо всех базах данных в экземпляре SQL Server и отображает метаданные базы данных в обозревателе метаданных SQL Server. SSMA хранят сведения о экземпляра SQL Server, вы подключены, но не хранит пароли.  

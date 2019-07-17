@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 7cbb9171-3310-4aae-8458-755c882d6462
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cf94358d5d4f06f787546ab98a8cbfcab2693bcb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8a1278426b6774c8f5c2d9bb13577e1499930c13
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63051414"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68109472"
 ---
 # <a name="sysconversationpriorities-transact-sql"></a>sys.conversation_priorities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

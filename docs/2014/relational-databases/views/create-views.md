@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 27748ee6f4c70ebbcb4d1d28738130ddea07232b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134404"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211669"
 ---
 # <a name="create-views"></a>Создание представлений
   Представления можно создать в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Представление можно использовать в следующих целях.  
@@ -62,7 +62,7 @@ ms.locfileid: "54134404"
   
 2.  Щелкните правой кнопкой папку **Представления** и выберите **Создать представление...**  
   
-3.  В **добавить таблицу** диалогового окна выберите один или несколько элементов, которые вы хотите включить в новое представление, на один из следующих вкладок: «Таблицы», «Представления», «Функции» и «Синонимы».  
+3.  В диалоговом окне **Добавить таблицу** выберите один или несколько элементов, которые необходимо включить в новое представление, на одной из этих вкладок: "Таблицы", "Представления", "Функции" и "Синонимы".  
   
 4.  Щелкните **Добавить**, а затем выберите **Закрыть**.  
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6d63ed32-68cf-4d8f-aa40-05a3826e05b8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 04874761ce88069f35c75d5e2ac3b6354a5af5fe
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: a2f4b2e8dbcf8e8427f51388c7bead75263d95a6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531327"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130640"
 ---
 # <a name="spdeletejobserver-transact-sql"></a>sp_delete_jobserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ sp_delete_jobserver { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 > [!NOTE]  
 >  Либо *job_id* или *имя_задания* должен быть указан, нельзя указать одновременно.  
   
-`[ @server_name = ] 'server'` Имя целевого сервера для удаления из указанного задания. *сервер* — **nvarchar(30)**, не имеет значения по умолчанию. *сервер* может быть **(LOCAL)** или имя удаленного целевого сервера.  
+`[ @server_name = ] 'server'` Имя целевого сервера для удаления из указанного задания. *сервер* — **nvarchar(30)** , не имеет значения по умолчанию. *сервер* может быть **(LOCAL)** или имя удаленного целевого сервера.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  

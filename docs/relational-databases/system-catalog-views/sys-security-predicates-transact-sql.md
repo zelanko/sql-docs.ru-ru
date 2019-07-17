@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: c7a2f28c-98da-463d-8b8a-8e5619e2c6a6
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 48505a7e33d8d691314216846ee054d6625b7cf4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6cf464370c5c2ca3f5075205c6783e9332309f12
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62446234"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135217"
 ---
 # <a name="syssecuritypredicates-transact-sql"></a>sys.security_predicates (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "62446234"
 |predicate_definition|**nvarchar(max)**|Полное имя функции, которая будет использоваться в качестве предиката безопасности, включая аргументы. Обратите внимание, что имя `schema.function` может быть нормализовано (т. е. экранировано), как и любой другой элемент в тексте, для обеспечения согласованности. Пример:<br /><br /> `[dbo].[fn_securitypredicate]([wing], [startTime], [endTime])`|  
 |predicate_type|**int**|Тип предикат, используемый с такой политикой безопасности:<br /><br /> 0 = ПРЕДИКАТА ФИЛЬТРА<br /><br /> 1 = ПРЕДИКАТ БЛОКИРОВКИ|  
 |predicate_type_desc|**nvarchar(60)**|Тип предикат, используемый с такой политикой безопасности:<br /><br /> FILTER<br /><br /> БЛОК|  
-|операции|**int**|Тип операции, заданной для предиката:<br /><br /> NULL = все применимые операции<br /><br /> 1 = ПОСЛЕ ВСТАВКИ<br /><br /> 2 = ПОСЛЕ ОБНОВЛЕНИЯ<br /><br /> 3 = ДО ОБНОВЛЕНИЯ<br /><br /> 4 = ДО УДАЛЕНИЯ|  
+|operation|**int**|Тип операции, заданной для предиката:<br /><br /> NULL = все применимые операции<br /><br /> 1 = ПОСЛЕ ВСТАВКИ<br /><br /> 2 = ПОСЛЕ ОБНОВЛЕНИЯ<br /><br /> 3 = ДО ОБНОВЛЕНИЯ<br /><br /> 4 = ДО УДАЛЕНИЯ|  
 |operation_desc|**nvarchar(60)**|Тип операции, заданной для предиката:<br /><br /> NULL<br /><br /> ПОСЛЕ ВСТАВКИ<br /><br /> AFTER UPDATE<br /><br /> ПЕРЕД ОБНОВЛЕНИЕМ<br /><br /> ДО УДАЛЕНИЯ|  
   
 ## <a name="permissions"></a>Разрешения  

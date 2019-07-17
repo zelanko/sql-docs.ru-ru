@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 7078b4ed-c779-4bf3-8db8-f9dcb3edd50f
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: ee8d2e4c16987f5cc012f734cdf649cde7f4ebb8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: b3857d2acda8f5c8b16f416987651db2b6b991b7
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63288576"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264235"
 ---
 # <a name="edit-type-mapping-oracletosql"></a>Изменение сопоставления типов (OracleToSQL)
 **Изменение сопоставления типа** диалоговое окно позволяет указать, как типы сопоставляются между объектами базы данных источника и назначения.  
@@ -34,10 +34,10 @@ ms.locfileid: "63288576"
   
 Если тип данных имеет переменную длину, следующие поля будут отображаться на вкладке **типа источника**:  
   
-**От**  
+**From**  
 Укажите минимальную длину для данного сопоставления. Например, для **nchar** тип данных, можно ввести 10, чтобы указать, что это сопоставление для диапазона, начиная с **nchar(10) в формате**.  
   
-**Чтобы**  
+**Задача**  
 Укажите максимальную длину для данного сопоставления. Например, для **nchar** тип данных, можно ввести 20, чтобы указать, что это сопоставление для диапазона, заканчивая **nchar(20)** .  
   
 **Тип целевого объекта**  

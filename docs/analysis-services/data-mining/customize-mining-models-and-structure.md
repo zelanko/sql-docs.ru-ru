@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7c4c951d294ab57e19b4114380fd4692b9fc8151
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52411371"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183762"
 ---
 # <a name="customize-mining-models-and-structure"></a>Настройка структуры и моделей интеллектуального анализа данных
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
