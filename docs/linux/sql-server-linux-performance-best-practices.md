@@ -4,17 +4,16 @@ description: Эта статья содержит рекомендации по 
 author: rgward
 ms.author: bobward
 ms.reviewer: vanto
-manager: jroth
 ms.date: 09/14/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: d82ee87f0911ab6e47a9537e035e522b062a699c
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 543488eada46a088f3c634ce2326c7e2db2a97a5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834851"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68105442"
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-on-linux"></a>Рекомендации по производительности и рекомендации по конфигурации для SQL Server в Linux
 
@@ -74,7 +73,7 @@ ms.locfileid: "67834851"
 | Параметр | Значение | Дополнительные сведения |
 |---|---|---|
 | предварительно считанных с диска | 4096 | См. в разделе **blockdev** команды |
-| Параметры sysctl | kernel.sched_min_granularity_ns = 10000000<br/>kernel.sched_wakeup_granularity_ns = 15000000<br/>vm.dirty_ratio = 40<br/>vm.dirty_background_ratio = 10<br/>vm.swappiness=10 | См. в разделе **sysctl** команды |
+| Параметры sysctl | kernel.sched_min_granularity_ns 10 000 000<br/>kernel.sched_wakeup_granularity_ns = 15000000<br/>vm.dirty_ratio = 40<br/>VM.dirty_background_ratio = 10<br/>VM.swappiness = 10 | См. в разделе **sysctl** команды |
 
 ### <a name="kernel-setting-auto-numa-balancing-for-multi-node-numa-systems"></a>Ядра параметр auto numa, балансировки для системах с несколькими узлами NUMA
 

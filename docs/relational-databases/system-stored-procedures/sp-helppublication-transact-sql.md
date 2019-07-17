@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e801c3f0-dcbd-4b4a-b254-949a05f63518
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d6f2760d225848503d93ea361a54a0069ce16c14
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 18fc2e1dfadff4e276cd40ff6d64a0aa2fc9a06e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58532976"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137572"
 ---
 # <a name="sphelppublication-transact-sql"></a>sp_helppublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'` — Имя просматриваемой публикации. *Публикация* имеет тип sysname и значение по умолчанию **%**, который возвращает сведения обо всех публикациях.  
+`[ @publication = ] 'publication'` — Имя просматриваемой публикации. *Публикация* имеет тип sysname и значение по умолчанию **%** , который возвращает сведения обо всех публикациях.  
   
 `[ @found = ] 'found' OUTPUT` — Это флаг для указания возвращаемых строк. *найти*— **int** и ВЫХОДНОЙ параметр, значение по умолчанию **23456**. **1** указывает, что публикация найдена. **0** указывает, что публикация не найдена.  
   
@@ -88,7 +87,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |centralized_conflicts|**bit**|Определяет, хранятся ли на издателе конфликтные записи.<br /><br /> **0** = конфликтные записи хранятся как на издателе и на подписчике, вызвавшем конфликт.<br /><br /> **1** = конфликтные записи хранятся на издателе.|  
 |conflict_retention|**int**|Задает срок хранения конфликтных записей в днях.|  
 |conflict_policy|**int**|Задает политику устранения конфликтов при обновлении подписчика посредством очередей. Может принимать одно из следующих значений:<br /><br /> **1** = конфликт разрешается в пользу издателя.<br /><br /> **2** = разрешение конфликта в пользу подписчика.<br /><br /> **3** = повторной инициализации подписки.|  
-|queue_type||Задает используемый тип очереди. Может принимать одно из следующих значений:<br /><br /> **MSMQ** = использовать [!INCLUDE[msCoName](../../includes/msconame-md.md)] очереди сообщений для хранения транзакций.<br /><br /> **SQL** = использовать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для хранения транзакций.<br /><br /> Примечание. Компонент Message Queuing больше не поддерживается.|  
+|queue_type||Задает используемый тип очереди. Может принимать одно из следующих значений:<br /><br /> **MSMQ** = использовать [!INCLUDE[msCoName](../../includes/msconame-md.md)] очереди сообщений для хранения транзакций.<br /><br /> **SQL** = использовать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для хранения транзакций.<br /><br /> Примечание. Для очереди сообщений не поддерживается.|  
 |backward_comp_level||Уровень совместимости базы данных. Может иметь одно из следующих значений:<br /><br /> **90** = [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **100** = [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
 |publish_to_AD|**bit**|Указывает, опубликована ли публикация в [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory код. Значение **1** указывает, что она опубликована и значение **0** указывает, что он не опубликован.|  
 |allow_initialize_from_backup|**bit**|Показывает, может ли подписчик инициализировать подписку на эту публикацию из резервной копии, а не из исходного моментального снимка. **1** означает, что подписки могут быть инициализированы из резервной копии, и **0** означает, что это невозможно. Дополнительные сведения см. в разделе [инициализация транзакционной подписки без моментального снимка](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md) подписчика на публикацию транзакций без моментального снимка.|  

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: ccad6262-01e1-447a-bd2b-c105154c80ce
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: a1f175de4b205b6af98ea9bcc29e7679711b0943
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 971d7e8dde2ae56da02205b50b2f6576a875bd70
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63192383"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264461"
 ---
 # <a name="generating-reports-oracletosql"></a>Создание отчетов (OracleToSQL)
 В консоли SSMA на уровне дерева объектов создаются отчеты определенных действий, выполняемых с помощью команд.  
@@ -50,8 +50,8 @@ ms.locfileid: "63192383"
     ||||  
     |-|-|-|  
     |**SL. Нет.**|**Команд и параметров**|**Описание выходных данных**|  
-    |1|verbose="false"|Создает приведен сводный отчет действия.|  
-    |2|verbose="true"|Создает отчет о состоянии сводные и подробные для каждого действия.|  
+    |1|verbose = «false»|Создает приведен сводный отчет действия.|  
+    |2|verbose = «true»|Создает отчет о состоянии сводные и подробные для каждого действия.|  
   
     > [!NOTE]  
     > Параметры детализации отчета, указанных выше применимы для формирования--отчет об оценке, convert схемы, перенос данных, команды sql инструкцию convert.  
@@ -107,9 +107,9 @@ ms.locfileid: "63192383"
   
 **в случае ошибки:** Указывает, следует ли для указания ошибок синхронизации в качестве предупреждения или ошибки. Доступные параметры для при ошибке:  
   
--   report-total-as-warning  
+-   Общее число отчетов как предупреждение  
   
--   report-each-as-warning  
+-   отчет each как предупреждение  
   
 -   Сбой скрипта  
   
@@ -135,9 +135,9 @@ ms.locfileid: "63192383"
   
 **в случае ошибки:** Указывает, следует ли для указания ошибки обновления как предупреждения или ошибки. Доступные параметры для при ошибке:  
   
--   report-total-as-warning  
+-   Общее число отчетов как предупреждение  
   
--   report-each-as-warning  
+-   отчет each как предупреждение  
   
 -   Сбой скрипта  
   

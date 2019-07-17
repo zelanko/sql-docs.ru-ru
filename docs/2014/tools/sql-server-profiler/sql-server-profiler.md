@@ -26,11 +26,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c9b0bb789dc7571a988c434f526070546d8db454
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52780726"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211043"
 ---
 # <a name="sql-server-profiler"></a>Приложение SQL Server Profiler
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] представляет собой развитый интерфейс, предназначенный для создания трассировок и управления ими, а также для анализа и воспроизведения результатов трассировок. События сохраняются в файле трассировки, который затем может быть проанализирован или использован для воспроизведения определенных последовательностей шагов для выявления возникших проблем.  
@@ -67,7 +67,7 @@ ms.locfileid: "52780726"
 > [!NOTE]  
 >  При работе с приложением [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]полезно иметь представление о трассировке SQL. Дополнительные сведения см. в статье [SQL Trace](../../relational-databases/sql-trace/sql-trace.md).  
   
- **Событие**  
+ **Event**  
  Событие — это действие экземпляра [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Примеры:  
   
 -   подключения пользователей, сбои, отключения;  

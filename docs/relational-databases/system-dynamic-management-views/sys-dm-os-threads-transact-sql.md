@@ -20,12 +20,12 @@ ms.assetid: a5052701-edbf-4209-a7cb-afc9e65c41c1
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6dd627a8361b29157b4e45bcba04dc78c72f26bf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6ca20c4a8719ee6a80bd6a3c349dd50c8b0df81d
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67899769"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68258714"
 ---
 # <a name="sysdmosthreads-transact-sql"></a>sys.dm_os_threads (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "67899769"
 |stack_bytes_committed|**int**|Число байтов, сохраненных в стеке.|  
 |stack_bytes_used|**int**|Число байтов, используемых потоком в данный момент.|  
 |affinity|**bigint**|Маска ЦП, на которой выполняется данный поток. Это зависит от значения, установленного **ALTER SERVER CONFIGURATION SET PROCESS AFFINITY** инструкции. Может отличаться от планировщика в случае мягкой привязки.|  
-|Приоритет|**int**|Приоритет данного потока.|  
+|Priority|**int**|Приоритет данного потока.|  
 |Локаль|**int**|Кэшированное значение идентификатора локали (LCID) для данного потока.|  
 |Токен|**varbinary(8)**|Кэшированный дескриптор токена олицетворения для данного потока.|  
 |is_impersonating|**int**|Указывает, использует ли данный поток олицетворение Win32:<br /><br /> 1 = поток использует учетные данные для обеспечения безопасности, отличающиеся от данных для процесса по умолчанию. Это значит, что поток олицетворяет сущность, отличную от созданной процессом.|  
@@ -68,7 +68,7 @@ ms.locfileid: "67899769"
 ## <a name="permissions"></a>Разрешения
 
 На [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], требуется `VIEW SERVER STATE` разрешение.   
-В [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] необходимо разрешение `VIEW DATABASE STATE` для базы данных.   
+На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровней Premium необходимо `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровней Standard и Basic, требует **администратора сервера** или **администратор Azure Active Directory** учетной записи.   
 
 ## <a name="notes-on-linux-version"></a>Заметки о версии Linux
 

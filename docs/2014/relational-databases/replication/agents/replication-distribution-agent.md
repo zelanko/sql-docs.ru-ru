@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0a1bdbe715aa970f87596060a774ac2b1ed8df15
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028065"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210749"
 ---
 # <a name="replication-distribution-agent"></a>Агент распространения репликации
   Агент распространения репликации перемещает моментальный снимок (для репликации моментальных снимков или транзакций) и транзакции, находящиеся в таблицах базы данных распространителя (для репликации транзакций), в целевые таблицы на подписчиках.  
@@ -89,14 +89,14 @@ ms.locfileid: "56028065"
  **-?**  
  Выводит список всех доступных параметров.  
   
- **-Publisher** _server_name_[**\\**_instance_name_]  
- Имя издателя. Укажите *server_name* , чтобы использовать экземпляр сервера [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию. Укажите _имя_сервера_**\\**_имя_экземпляра_ для именованного экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на этом сервере.  
+ **-Publisher** _server_name_[ **\\** _instance_name_]  
+ Имя издателя. Укажите *server_name* , чтобы использовать экземпляр сервера [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию. Укажите _имя_сервера_ **\\** _имя_экземпляра_ для именованного экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на этом сервере.  
   
  **-PublisherDB** _publisher_database_  
  Имя базы данных издателя.  
   
- **-Subscriber** _server_name_[**\\**_instance_name_]  
- Имя подписчика. Укажите *server_name* , чтобы использовать экземпляр сервера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию. Укажите _имя_сервера_**\\**_имя_экземпляра_ для именованного экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на этом сервере.  
+ **-Subscriber** _server_name_[ **\\** _instance_name_]  
+ Имя подписчика. Укажите *server_name* , чтобы использовать экземпляр сервера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию. Укажите _имя_сервера_ **\\** _имя_экземпляра_ для именованного экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на этом сервере.  
   
  **-SubscriberDB** _subscriber_database_  
  Имя базы данных подписчика.  
@@ -230,7 +230,7 @@ ms.locfileid: "56028065"
  **-QuotedIdentifier** _quoted_identifier_  
  Указывает символ, применяемый для идентификаторов, заключенных в кавычки. Первый символ значения указывает значение, используемое агентом распространителя. Если параметр **QuotedIdentifier** указан без значения, то агент распространителя использует пробел. Если параметр **QuotedIdentifier** не указан, то агент распространителя использует заключенный в кавычки идентификатор, поддерживаемый подписчиком.  
   
- **-SkipErrors** _native_error_id_ [**:**_...n_]  
+ **-SkipErrors** _native_error_id_ [ **:** _...n_]  
  Список с разделителями-двоеточиями, перечисляющий коды ошибок, которые этот агент должен пропускать.  
   
  **-SubscriberDatabasePath** _subscriber_database_path_  

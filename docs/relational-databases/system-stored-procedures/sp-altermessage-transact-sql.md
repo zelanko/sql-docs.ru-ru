@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1b28f280-8ef9-48e9-bd99-ec14d79abaca
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: df2bab593e0e945e854e310a394abbc93f75efa4
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 0722bbc713804af6b2b97b5651df5b564d17a136
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493126"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117796"
 ---
 # <a name="spaltermessage-transact-sql"></a>sp_altermessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ sp_altermessage [ @message_id = ] message_number   ,[ @parameter = ]'write_to_lo
 > [!NOTE]  
 >  Если сообщение заносится в журнал приложений Windows, оно также заносится и в журнал ошибок компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-`[ @parameter_value = ]'value_'` Используется с **@parameter** для указания того, что ошибка для записи [!INCLUDE[msCoName](../../includes/msconame-md.md)] журнал приложений Windows. *значение* — **varchar(5)**, не имеет значения по умолчанию. Если **true**, ошибка всегда записывается в журнал приложений Windows. Если **false**, ошибка не всегда записывается в журнал приложений Windows, но может записываться в зависимости от того, как произошла ошибка. Если *значение* указано, *write_to_log* для **@parameter** также должен быть указан.  
+`[ @parameter_value = ]'value_'` Используется с **@parameter** для указания того, что ошибка для записи [!INCLUDE[msCoName](../../includes/msconame-md.md)] журнал приложений Windows. *значение* — **varchar(5)** , не имеет значения по умолчанию. Если **true**, ошибка всегда записывается в журнал приложений Windows. Если **false**, ошибка не всегда записывается в журнал приложений Windows, но может записываться в зависимости от того, как произошла ошибка. Если *значение* указано, *write_to_log* для **@parameter** также должен быть указан.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  

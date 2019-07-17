@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 42c5226c-cb40-4d1e-809f-2ea50ce6bd55
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 306632f544f144aa4b21e150543c2d4ca5a37d0e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ad13379552e3a5a576b0aa5cc8720ca6ca1688a9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63008025"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118736"
 ---
 # <a name="buffers"></a>Буферы
 Буфер является любая часть памяти приложения, используемый для передачи данных между приложением и драйвер. Например, буферы приложения может быть связан, или *привязки, а* столбцы с помощью результирующего набора **SQLBindCol**. Так как каждая строка выбрана, данные возвращаются для каждого столбца в буфер. *Входные буферы* используются для передачи данных из приложения для драйвера. *Выходные буферы* используются для возвращения данных из драйвера в приложение.  

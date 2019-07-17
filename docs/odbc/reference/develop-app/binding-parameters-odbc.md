@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7538a82b-b08b-4c8f-9809-e4ccea16db11
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d62c0864678e116e30a0673bdf2625d70de0cedd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1bc40d4800e7cd013b7ac908400c0492286314e3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63199606"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107627"
 ---
 # <a name="binding-parameters-odbc"></a>Привязка параметров (ODBC)
 Каждый параметр в инструкции SQL должен быть связан, или *привязаны,* переменной в приложении перед выполнением инструкции. Если приложение связывает параметр переменной, в нем описаны эту переменную - адрес, тип данных C и т. д. — к драйверу. Он также описывает сам параметр - тип данных SQL, точность и т. д. Драйвер сохраняет эту информацию в структуре поддерживает для этой инструкции и использует данные для извлечения значения из переменной при выполнении инструкции.  

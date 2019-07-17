@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 7741035c-f3e7-4c89-901e-fe528392f67d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3aa085cc0a098f557ca7a8cbddcd787a178b79d0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 24e3d4c87f3bc461a339a6cb635d64f20dc73e20
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62760772"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106166"
 ---
 # <a name="descriptor-handles"></a>Указатели дескрипторов
 Объект *дескриптор* является коллекцией метаданных, описывающих параметры инструкции SQL или столбцы результирующего набора, как явствует приложение или драйвер (также известный как *реализации*). Таким образом дескриптор может заполнить любой из четырех ролей:  

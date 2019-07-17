@@ -19,11 +19,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4af21c912ce5a703cd46f0f9b00b5dd4bda7d2d3
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135834"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68212056"
 ---
 # <a name="view-and-modify-publication-properties"></a>Просмотр и изменение свойств публикации
   В данном разделе описывается процесс просмотра и изменения свойств публикации в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] при помощи среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или объектов RMO.  
@@ -55,7 +55,7 @@ ms.locfileid: "54135834"
 -   После создания публикации для некоторых изменений свойств требуется новый моментальный снимок. Если на публикацию имеются подписки, для некоторых изменений также требуется повторная инициализация всех подписок. Дополнительные сведения см. в статьях [Изменение свойств публикации и статьи](change-publication-and-article-properties.md) и [Добавление и удаление статей в существующих публикациях](add-articles-to-and-drop-articles-from-existing-publications.md).  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
- Просмотрите и измените свойства публикации в диалоговом окне **Свойства публикации - \<Публикация>**, доступном в и [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]мониторе репликации. Сведения о запуске монитора репликации см. в [этой статье](../monitor/start-the-replication-monitor.md).  
+ Просмотрите и измените свойства публикации в диалоговом окне **Свойства публикации - \<Публикация>** , доступном в и [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]мониторе репликации. Сведения о запуске монитора репликации см. в [этой статье](../monitor/start-the-replication-monitor.md).  
   
  Диалоговое окно **Свойства публикации - \<Публикация>** содержит следующие страницы:  
   
@@ -109,7 +109,7 @@ ms.locfileid: "54135834"
 1.  Выполните хранимую процедуру [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql), указав изменяемое свойство публикации в параметре **@property** , а новое значение этого свойства — в параметре **@value** .  
   
     > [!NOTE]  
-    >  Если изменение потребует создания нового моментального снимка, нужно также указать значение **1** в параметре **@force_invalidate_snapshot**, а если изменение потребует повторной инициализации подписчиков — значение **1** в параметре **@force_reinit_subscription**. Дополнительные сведения о свойствах публикации и статьи, при изменении которых требуется создание нового моментального снимка или повторная инициализация, см. в [этой статье](change-publication-and-article-properties.md).  
+    >  Если изменение потребует создания нового моментального снимка, нужно также указать значение **1** в параметре **@force_invalidate_snapshot** , а если изменение потребует повторной инициализации подписчиков — значение **1** в параметре **@force_reinit_subscription** . Дополнительные сведения о свойствах публикации и статьи, при изменении которых требуется создание нового моментального снимка или повторная инициализация, см. в [этой статье](change-publication-and-article-properties.md).  
   
 #### <a name="to-view-the-properties-of-a-merge-publication"></a>Просмотр свойств публикации слиянием  
   
@@ -120,7 +120,7 @@ ms.locfileid: "54135834"
 1.  Выполните хранимую процедуру [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql), указав свойство публикации, которое нужно изменить, в параметре **@property** , а новое значение этого свойства — в параметре **@value** .  
   
     > [!NOTE]  
-    >  Если изменение потребует создания нового моментального снимка, нужно также указать значение **1** в параметре **@force_invalidate_snapshot**, а если изменение потребует повторной инициализации подписчиков — значение **1** в параметре **@force_reinit_subscription**. Дополнительные сведения о свойствах публикации и статьи, изменение которых требует нового мгновенного снимка или повторной инициализации, см. в [этой статье](change-publication-and-article-properties.md).  
+    >  Если изменение потребует создания нового моментального снимка, нужно также указать значение **1** в параметре **@force_invalidate_snapshot** , а если изменение потребует повторной инициализации подписчиков — значение **1** в параметре **@force_reinit_subscription** . Дополнительные сведения о свойствах публикации и статьи, изменение которых требует нового мгновенного снимка или повторной инициализации, см. в [этой статье](change-publication-and-article-properties.md).  
   
 #### <a name="to-view-the-properties-of-a-snapshot"></a>Просмотр свойств моментального снимка  
   

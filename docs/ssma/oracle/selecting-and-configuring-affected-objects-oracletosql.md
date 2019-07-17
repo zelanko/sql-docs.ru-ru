@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 545eeda2-9829-4187-a858-619a96b4b71d
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: fbd151b0fa8682865e44615c22a9fdd7577014ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: c06fb621cab581e934ba4655ed6507149d109c60
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62626528"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266496"
 ---
 # <a name="selecting-and-configuring-affected-objects-oracletosql"></a>Выбор и настройка обрабатываемых объектов (OracleToSQL)
 На этой странице можно выбрать таблицы и внешние ключи, изменения, в которой следует сравнивать при SSMA проверяет результаты выполнения для объектов, выбранным в предыдущем шаге. Кроме того можно настроить параметры проверки.  
@@ -50,7 +50,7 @@ ms.locfileid: "62626528"
 ## <a name="sql"></a>SQL  
 Вкладка SQL содержит «создать таблицу» SQL таблицы, выбранной.  
   
-## <a name="data"></a>Данные  
+## <a name="data"></a>Data  
 Вкладка "данные" отображаются данные в выбранную таблицу.  
   
 ## <a name="properties"></a>Свойства  

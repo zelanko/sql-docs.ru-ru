@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 05da1495-63b9-47b7-86e2-6746394a2d8a
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 06e538ebbdab9d6438182eaa0b61d44818286547
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: e5f14f79c355317f5e5d7a047b2d2c1ca71a4acb
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62796032"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262961"
 ---
 # <a name="mapping-oracle-and-sql-server-data-types-oracletosql"></a>Сопоставление типов данных Oracle и SQL Server (OracleToSQL)
 Типы базы данных Oracle отличаются от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типы базы данных. При преобразовании объектов базы данных Oracle для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] объектов, необходимо указать способ сопоставления типов данных из Oracle в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Вы можете принять сопоставления типов данных по умолчанию, или можно настроить сопоставления, как показано в следующих разделах.  

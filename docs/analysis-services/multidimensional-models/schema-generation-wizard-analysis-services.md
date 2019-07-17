@@ -1,5 +1,5 @@
 ---
-title: Мастер формирования схем (службы Analysis Services) | Документы Microsoft
+title: Мастер формирования схем (службы Analysis Services) | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 41e1c17aac763657a16327bb038c180f614fcf67
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022981"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68165226"
 ---
 # <a name="schema-generation-wizard-analysis-services"></a>Мастер формирования схем (службы Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "34022981"
   
  В качестве общего правила любые изменения объекта, изначально созданного мастером формирования схем, перезаписываются при последующем повторном формировании объекта мастером формирования схем. Первичным исключением из этого правила является добавление столбцов к таблице, созданной мастером формирования схем. В этом случае мастер формирования схем сохраняет добавленные к таблице столбцы, а также данные в этих столбцах.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>Содержание раздела  
  В следующей таблице приводятся дополнительные темы, объясняющие принципы работы с мастером формирования схем.  
   
 |Раздел|Описание|  

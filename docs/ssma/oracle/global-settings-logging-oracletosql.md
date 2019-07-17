@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 12dbcd77-2b90-4fa1-9cf9-239231ea5773
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: abe73fd789a74d358c0573b6c0778a15612532a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 374630b5e5eab1602bb33e176e6f205ee1375af9
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63192391"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264432"
 ---
 # <a name="global-settings-logging-oracletosql"></a>Глобальные параметры (ведение журнала) (OracleToSQL)
 Используйте **глобальные параметры** диалоговое окно, чтобы указать параметры ведения журнала для SSMA. Как правило можно изменить эти параметры только в том случае, при взаимодействии со службой поддержки продукта.  

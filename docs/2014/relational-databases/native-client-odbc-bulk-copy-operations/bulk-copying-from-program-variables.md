@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5473d741f5144338c99627e1057c51ce116093d6
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130294"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206840"
 ---
 # <a name="bulk-copying-from-program-variables"></a>Массовое копирование из переменных приложения
   Массовое копирование можно производить напрямую из переменных программы. После распределения переменных для хранения данных для строки и вызова функции [bcp_init](../native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) для запуска массового копирования, вызовите [bcp_bind](../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) для каждого столбца указать расположение и формат переменной программы, необходимо сопоставить со столбцом. Заполните каждую переменную с данными, затем вызвать [bcp_sendrow](../native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) отправлять одну строку данных на сервер. Повторяйте процесс заполнения переменных и вызова **bcp_sendrow** пока все строки уже переданы на сервер, затем вызвать [bcp_done](../native-client-odbc-extensions-bulk-copy-functions/bcp-done.md) для указания, что операция завершена.  

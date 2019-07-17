@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 9418cb34-d869-4d24-95b3-6cb9db949bb0
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: f1497b40fbf3462228af6b0ef9ce964c7212df64
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: a5e8feb6c083c787d877cbc5491c533b8a35d740
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62630889"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266613"
 ---
 # <a name="project-settingsloading-system-objects-oracletosql"></a>Параметры проекта (загрузка системных объектов) (OracleToSQL)
 На странице загрузки Системные объекты **параметры проекта** диалоговое окно позволяет указать, какие объекты системы Oracle SSMA преобразует и загружает в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -37,7 +37,7 @@ ms.locfileid: "62630889"
   
 -   SYS. STANDARD  
   
--   SYS.UTL_FILE  
+-   SYS. UTL_FILE  
   
 -   SYS.DBMS_LOB  
   

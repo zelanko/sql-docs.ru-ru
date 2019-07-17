@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 23a48cb6-ff30-49bb-b4a7-603ebcab336f
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: da846d4afb4ce8fe745b98c8503901fe804520e0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 42ab1e77dbdb7cee237a9ec22c49a725a64390c0
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63287730"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264485"
 ---
 # <a name="connect-to-oracle-oracletosql"></a>Подключение к Oracle (OracleToSQL)
 Используйте **подключение к Oracle** диалоговое окно для подключения к базе данных Oracle, которые требуется перенести.  
@@ -51,7 +51,7 @@ ms.locfileid: "63287730"
   
 Это режим TNSNAME.  
   
-**Oracle SID**  
+**SID-идентификатор Oracle**  
 Введите идентификатор безопасности для базы данных. Идентификатор безопасности — это идентификатор, который отличает базы данных Oracle на компьютере. Идентификатор безопасности по умолчанию для базы данных — это первые восемь символов имени базы данных.  
   
 Это стандартный режим.  

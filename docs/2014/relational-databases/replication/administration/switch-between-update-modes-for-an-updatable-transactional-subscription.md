@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5ee768eb4e50e4501af204c885916cd14409df2c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52785196"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210758"
 ---
 # <a name="switch-between-update-modes-for-an-updatable-transactional-subscription"></a>Переключение между режимами обновления для обновляемой подписки на публикацию транзакций
   В этом разделе описывается переключение между режимами обновления для обновляемой подписки на публикацию транзакций в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Режим обновляемых подписок можно указать с помощью мастера создания подписки. Сведения об установке режима с помощью этого мастера см. в статье [Просмотр и изменение свойств подписки по запросу](../view-and-modify-pull-subscription-properties.md).  
@@ -49,17 +49,17 @@ ms.locfileid: "52785196"
   
 3.  Щелкните правой кнопкой подписку, для которой хотите установить режим обновления, и щелкните **Выбор метода обновления**.  
   
-4.  В **Выбор метода обновления — \<подписчик >: \<База данных подписки >** выберите **немедленное обновление** или **обновление посредством очереди**.  
+4.  В диалоговом окне **Выбор метода обновления — \<подписчик>: \<база_данных_подписки>** выберите **Немедленное обновление** или **Обновление посредством очереди**.  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 #### <a name="to-set-the-updating-mode-for-a-pull-subscription"></a>Установка режима обновления для подписки по запросу  
   
-1.  В **свойства подписки — \<издатель >: \<База данных публикации >** диалоговое окно, выберите значение **немедленно реплицировать изменения** или **ставить изменения в очередь** для **метод обновления подписчика** параметр.  
+1.  На издателе в окне **Свойства подписки — \<издатель>: \<база данных публикации>** выберите значение **Немедленно реплицировать изменения** или **Ставить изменения в очередь** для параметра **Метод обновления подписчика**.  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
- Дополнительные сведения о доступе к **свойства подписки — \<издатель >: \<База данных публикации >** диалоговом окне см. в разделе [Просмотр и изменение свойств подписки по запросу](../view-and-modify-pull-subscription-properties.md).  
+ Дополнительные сведения о методах доступа к диалоговому окну **Свойства подписки — \<издатель>: \<база_данных_публикации>** см. в статье [Просмотр и изменение свойств подписки по запросу](../view-and-modify-pull-subscription-properties.md).  
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   
@@ -67,7 +67,7 @@ ms.locfileid: "52785196"
   
 1.  Удостоверьтесь в том, что данная подписка поддерживает отработку отказа, выполнив хранимую процедуру [sp_helppullsubscription](/sql/relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql) для подписки по запросу или [sp_helpsubscription](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql) для принудительной подписки. Если значение **update mode** результирующего набора равен **3** или **4**, то отработка отказа поддерживается.  
   
-2.  На подписчике в базе данных подписки выполните процедуру [sp_setreplfailovermode](/sql/relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql). Задайте значения параметров **@publisher**, **@publisher_db**, **@publication**, а в качестве параметра **@failover_mode**укажите одно из следующих значений:  
+2.  На подписчике в базе данных подписки выполните процедуру [sp_setreplfailovermode](/sql/relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql). Задайте значения параметров **@publisher** , **@publisher_db** , **@publication** , а в качестве параметра **@failover_mode** укажите одно из следующих значений:  
   
     -   **queued** — переход в режим обновления посредством очередей при временной потере соединения;  
   

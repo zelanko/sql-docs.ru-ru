@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0b9276d0a8684023d8e6dba1a890b5f1698a017a
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700332"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68181993"
 ---
 # <a name="clear-the-analysis-services-caches"></a>Очистка кэша служб Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -46,13 +46,13 @@ ms.locfileid: "51700332"
   
  Для очистки кэша необходимо указать идентификатор объекта в инструкции **ClearCache** в запросе XMLA. Сначала в этом разделе описывается, как получить идентификатор объекта.  
   
-#### <a name="step-1-get-the-object-identifier"></a>Шаг 1. Получение идентификатора объекта  
+#### <a name="step-1-get-the-object-identifier"></a>Шаг 1. Получение идентификатора объекта  
   
 1.  В среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]щелкните объект правой кнопкой мыши, выберите пункт **Свойства**и скопируйте значение свойства "Идентификатор" на панели **Свойства** . Такой подход работает для баз данных, кубов, измерений и таблиц.  
   
 2.  Чтобы получить идентификатор группы мер, щелкните правой кнопкой мыши группу мер и выберите пункт **Создать скрипт для группы мер**. Выберите команду **CREATE** или **ALTER**и отправьте запрос в окно. Идентификатор группы мер будет виден в определении объекта. Скопируйте идентификатор определения объекта.  
   
-#### <a name="step-2-run-the-query"></a>Шаг 2. Запуск запроса  
+#### <a name="step-2-run-the-query"></a>Шаг 2. Выполнить запрос  
   
 1.  В среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]щелкните правой кнопкой мыши базу данных, укажите пункт **Создать запрос**и выберите пункт **XMLA**.  
   

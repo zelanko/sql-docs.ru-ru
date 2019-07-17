@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 0cdc343bf4ea6866d1a55672187451a3b6d95ec1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68215569"
+---
 
 ## <a name="add-a-database-to-the-availability-group"></a>Добавление базы данных в группу доступности
 

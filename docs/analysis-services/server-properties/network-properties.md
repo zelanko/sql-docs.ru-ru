@@ -10,18 +10,18 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3b9bb77c5139b299a25fbd75bc30a58790ee0c30
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072361"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207950"
 ---
 # <a name="network-properties"></a>Свойства сети
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] поддерживают свойства сервера, перечисленные в следующих таблицах. Дополнительные сведения о дополнительных свойствах сервера и их настройке см. в разделе [Свойства сервера в службах Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
- **Применимо к:** многомерный и табличный режим сервера  
+ **Применимо к:** Многомерный и Табличный режим сервера  
   
 ## <a name="general"></a>Общие  
  **ListenOnlyOnLocalConnections**  
@@ -65,7 +65,7 @@ ms.locfileid: "53072361"
  **EnableCompression**  
  Логическое свойство, определяющее сжатие запросов.  
   
-## <a name="responses"></a>Ответы  
+## <a name="responses"></a>Responses  
  **CompressionLevel**  
  Дополнительное свойство, которое следует изменять только под руководством службы поддержки [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   

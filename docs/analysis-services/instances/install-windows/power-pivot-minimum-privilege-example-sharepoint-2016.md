@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: eac736994b104ffbce855fa1ad6761d592fccad1
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40393763"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209482"
 ---
 # <a name="power-pivot-minimum-privilege-example---sharepoint-2016"></a>Power Pivot с минимальными правами пример — SharePoint 2016
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "40393763"
   
  В следующей таблице представлены три учетные записи, используемые в данном примере конфигурации с минимальными правами доступа.  
   
-|Область действия|Имя|  
+|Область действия|Name|  
 |-----------|----------|  
 |Учетная запись администратора SharePoint|**SPAdmin**|  
 |Учетная запись фермы SharePoint|**SPFarm**|  

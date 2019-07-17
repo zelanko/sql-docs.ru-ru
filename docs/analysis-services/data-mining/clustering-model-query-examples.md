@@ -1,5 +1,5 @@
 ---
-title: Примеры запросов к модели кластеризации | Документы Microsoft
+title: Примеры запросов к модели кластеризации | Документация Майкрософт
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f6e415c0b82738ec153b20cb79e19af59bacba16
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019431"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210172"
 ---
 # <a name="clustering-model-query-examples"></a>Примеры запросов к модели кластеризации
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -73,7 +73,7 @@ WHERE NODE_TYPE = 1
 |NODE_CAPTION|Кластерная модель|  
 |NODE_SUPPORT|12939|  
 |CHILDREN_CARDINALITY|10|  
-|NODE_DESCRIPTION|все|  
+|NODE_DESCRIPTION|All|  
   
  Значение этих столбцов в модели кластеризации см. в разделе [Содержимое моделей интеллектуального анализа данных для моделей кластеризации (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md).  
   
@@ -369,23 +369,23 @@ NATURAL PREDICTION JOIN
 |[Cluster (расширения интеллектуального анализа данных)](../../dmx/cluster-dmx.md)|Возвращает кластер, который с наибольшей вероятностью содержит входной вариант.|  
 |[ClusterDistance (расширения интеллектуального анализа данных)](../../dmx/clusterdistance-dmx.md)|Возвращает расстояние до входного варианта от указанного кластера, а если кластер не указан, то расстояние до входного варианта от наиболее вероятного кластера.<br /><br /> Возвращает вероятность того, что входной вариант принадлежит определенному кластеру.|  
 |[ClusterProbability (расширения интеллектуального анализа данных)](../../dmx/clusterprobability-dmx.md)|Возвращает вероятность того, что входной вариант принадлежит определенному кластеру.|  
-|[IsDescendant & #40; расширений интеллектуального анализа данных & #41;](../../dmx/isdescendant-dmx.md)|Определяет, является ли узел дочерним для другого узла модели.|  
-|[IsInNode & #40; расширений интеллектуального анализа данных & #41;](../../dmx/isinnode-dmx.md)|Указывает, содержит ли заданный узел текущий вариант.|  
-|[PredictAdjustedProbability & #40; расширений интеллектуального анализа данных & #41;](../../dmx/predictadjustedprobability-dmx.md)|Возвращает взвешенную вероятность.|  
-|[PredictAssociation & #40; расширений интеллектуального анализа данных & #41;](../../dmx/predictassociation-dmx.md)|Прогнозирует вхождение в ассоциативном наборе данных.|  
+|[IsDescendant (расширения интеллектуального анализа данных)](../../dmx/isdescendant-dmx.md)|Определяет, является ли узел дочерним для другого узла модели.|  
+|[IsInNode (расширения интеллектуального анализа данных)](../../dmx/isinnode-dmx.md)|Указывает, содержит ли заданный узел текущий вариант.|  
+|[PredictAdjustedProbability (расширения интеллектуального анализа данных)](../../dmx/predictadjustedprobability-dmx.md)|Возвращает взвешенную вероятность.|  
+|[PredictAssociation (расширения интеллектуального анализа данных)](../../dmx/predictassociation-dmx.md)|Прогнозирует вхождение в ассоциативном наборе данных.|  
 |[PredictCaseLikelihood (расширения интеллектуального анализа данных)](../../dmx/predictcaselikelihood-dmx.md)|Возвращает достоверность, с которой входной вариант соответствует существующей модели.|  
 |[PredictHistogram (расширения интеллектуального анализа данных)](../../dmx/predicthistogram-dmx.md)|Возвращает таблицу значений, связанную с текущим прогнозируемым значением.|  
-|[PredictNodeId & #40; расширений интеллектуального анализа данных & #41;](../../dmx/predictnodeid-dmx.md)|Возвращает параметр Node_ID для каждого случая.|  
-|[PredictProbability & #40; расширений интеллектуального анализа данных & #41;](../../dmx/predictprobability-dmx.md)|Возвращает вероятность для прогнозируемого значения.|  
-|[PredictStdev & #40; расширений интеллектуального анализа данных & #41;](../../dmx/predictstdev-dmx.md)|Возвращает прогнозируемое среднеквадратичное отклонение для заданного столбца.|  
-|[PredictSupport & #40; расширений интеллектуального анализа данных & #41;](../../dmx/predictsupport-dmx.md)|Возвращает опорное значение для указанного состояния.|  
-|[PredictVariance & #40; расширений интеллектуального анализа данных & #41;](../../dmx/predictvariance-dmx.md)|Возвращает дисперсию указанного столбца.|  
+|[PredictNodeId (расширения интеллектуального анализа данных)](../../dmx/predictnodeid-dmx.md)|Возвращает параметр Node_ID для каждого случая.|  
+|[PredictProbability (расширения интеллектуального анализа данных)](../../dmx/predictprobability-dmx.md)|Возвращает вероятность для прогнозируемого значения.|  
+|[PredictStdev (расширения интеллектуального анализа данных)](../../dmx/predictstdev-dmx.md)|Возвращает прогнозируемое среднеквадратичное отклонение для заданного столбца.|  
+|[PredictSupport (расширения интеллектуального анализа данных)](../../dmx/predictsupport-dmx.md)|Возвращает опорное значение для указанного состояния.|  
+|[PredictVariance (расширения интеллектуального анализа данных)](../../dmx/predictvariance-dmx.md)|Возвращает дисперсию указанного столбца.|  
   
  Синтаксис отдельных функций см. в статье [Справочник по функциям расширений интеллектуального анализа данных (расширения интеллектуального анализа данных)](../../dmx/data-mining-extensions-dmx-function-reference.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Запросы интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-queries.md)   
- [Microsoft Clustering Algorithm Technical Reference](../../analysis-services/data-mining/microsoft-clustering-algorithm-technical-reference.md)   
+ [Технический справочник по алгоритму кластеризации (Майкрософт)](../../analysis-services/data-mining/microsoft-clustering-algorithm-technical-reference.md)   
  [Алгоритм кластеризации (Майкрософт)](../../analysis-services/data-mining/microsoft-clustering-algorithm.md)  
   
   

@@ -19,11 +19,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 06bfc2148f7a367fa02d94109e9b5b8a250fd1f9
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133784"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68198978"
 ---
 # <a name="view-and-modify-pull-subscription-properties"></a>Просмотр и изменение свойств подписки по запросу
   В данном разделе описывается просмотр и изменение свойств подписки по запросу в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] при помощи среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]или объектов RMO.  
@@ -39,7 +39,7 @@ ms.locfileid: "54133784"
      [объекты RMO;](#RMOProcedure)  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
- Просмотр свойств подписки по запросу на издателе или подписчике в **свойства подписки — \<издатель >: \<База данных публикации >** диалоговое окно, которое доступно из [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. На подписчике можно просмотреть и изменить ряд дополнительных свойств. Свойства можно также просмотреть на издателе на вкладке **Все подписки** , доступной в мониторе репликации. Сведения о запуске монитора репликации см. в [этой статье](monitor/start-the-replication-monitor.md).  
+ Просмотрите свойства подписки по запросу в издателе или подписчике в диалоговом окне **Свойства подписки —\<издатель>: \<база данных публикации>** , которое доступно из среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. На подписчике можно просмотреть и изменить ряд дополнительных свойств. Свойства можно также просмотреть на издателе на вкладке **Все подписки** , доступной в мониторе репликации. Сведения о запуске монитора репликации см. в [этой статье](monitor/start-the-replication-monitor.md).  
   
 #### <a name="to-view-pull-subscription-properties-from-the-publisher-in-management-studio"></a>Просмотр свойств подписки по запросу на издателе в среде Management Studio  
   
@@ -76,23 +76,23 @@ ms.locfileid: "54133784"
   
 #### <a name="to-view-the-properties-of-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>Просмотр свойств подписки по запросу на публикацию моментальных снимков или публикацию транзакций  
   
-1.  На подписчике выполните хранимую процедуру [sp_helppullsubscription](/sql/relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql). Задайте значения для параметров **@publisher**, **@publisher_db**и **@publication**. Тем самым возвращаются сведения о подписке, хранящиеся в системных таблицах на подписчике.  
+1.  На подписчике выполните хранимую процедуру [sp_helppullsubscription](/sql/relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql). Задайте значения для параметров **@publisher** , **@publisher_db** и **@publication** . Тем самым возвращаются сведения о подписке, хранящиеся в системных таблицах на подписчике.  
   
-2.  На подписчике выполните процедуру [sp_helpsubscription_properties](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql). Задайте значения для параметров **@publisher**, **@publisher_db**, **@publication**, а также одно из следующих значений в параметре **@publication_type**:  
+2.  На подписчике выполните процедуру [sp_helpsubscription_properties](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql). Задайте значения для параметров **@publisher** , **@publisher_db** , **@publication** , а также одно из следующих значений в параметре **@publication_type** :  
   
     -   **0** — подписка принадлежит публикации транзакций;  
   
     -   **1** — подписка принадлежит публикации моментальных снимков.  
   
-3.  На издателе выполните хранимую процедуру [sp_helpsubscription](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql). Укажите параметр **@publication** и **@subscriber**.  
+3.  На издателе выполните хранимую процедуру [sp_helpsubscription](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql). Укажите параметр **@publication** и **@subscriber** .  
   
-4.  На издателе выполните хранимую процедуру [sp_helpsubscriberinfo](/sql/relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql), указав параметр **@subscriber**. Будут выведены сведения о подписчике.  
+4.  На издателе выполните хранимую процедуру [sp_helpsubscriberinfo](/sql/relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql), указав параметр **@subscriber** . Будут выведены сведения о подписчике.  
   
 #### <a name="to-change-the-properties-of-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>Изменение свойств подписки по запросу на публикацию моментальных снимков или публикацию транзакций  
   
-1.  На подписчике выполните хранимую процедуру [sp_change_subscription_properties](/sql/relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql), указав параметр **@publisher**, **@publisher_db**, **@publication**, значение **0** (публикация транзакций) или **1** (публикация моментальных снимков) в параметре **@publication_type**, изменяемое свойство подписки как **@property**и новое значение как **@value**.  
+1.  На подписчике выполните хранимую процедуру [sp_change_subscription_properties](/sql/relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql), указав параметр **@publisher** , **@publisher_db** , **@publication** , значение **0** (публикация транзакций) или **1** (публикация моментальных снимков) в параметре **@publication_type** , изменяемое свойство подписки как **@property** и новое значение как **@value** .  
   
-2.  На подписчике в базе данных подписки выполните хранимую процедуру [sp_changesubscriptiondtsinfo](/sql/relational-databases/system-stored-procedures/sp-changesubscriptiondtsinfo-transact-sql). Укажите идентификатор задания агента распространителя в параметре **@jobid**и следующие свойства пакетов служб DTS:  
+2.  На подписчике в базе данных подписки выполните хранимую процедуру [sp_changesubscriptiondtsinfo](/sql/relational-databases/system-stored-procedures/sp-changesubscriptiondtsinfo-transact-sql). Укажите идентификатор задания агента распространителя в параметре **@jobid** и следующие свойства пакетов служб DTS:  
   
     -   **@dts_package_name**  
   
@@ -107,17 +107,17 @@ ms.locfileid: "54133784"
   
 #### <a name="to-view-the-properties-of-a-pull-subscription-to-a-merge-publication"></a>Просмотр свойств подписки по запросу на публикацию слиянием  
   
-1.  На подписчике выполните хранимую процедуру [sp_helpmergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql). Задайте значения для параметров **@publisher**, **@publisher_db**и **@publication**.  
+1.  На подписчике выполните хранимую процедуру [sp_helpmergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql). Задайте значения для параметров **@publisher** , **@publisher_db** и **@publication** .  
   
-2.  На подписчике выполните процедуру [sp_helpsubscription_properties](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql). Задайте значения для параметров **@publisher**, **@publisher_db**, **@publication**и значение 2 в параметре **@publication_type**.  
+2.  На подписчике выполните процедуру [sp_helpsubscription_properties](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql). Задайте значения для параметров **@publisher** , **@publisher_db** , **@publication** и значение 2 в параметре **@publication_type** .  
   
-3.  Чтобы вывести сведения о подписке, выполните на издателе хранимую процедуру [sp_helpmergesubscription](/sql/relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql) . Чтобы возвратить сведения о конкретной подписке, необходимо указать параметры **@publication**, **@subscriber**и значение **pull** в параметре **@subscription_type**.  
+3.  Чтобы вывести сведения о подписке, выполните на издателе хранимую процедуру [sp_helpmergesubscription](/sql/relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql) . Чтобы возвратить сведения о конкретной подписке, необходимо указать параметры **@publication** , **@subscriber** и значение **pull** в параметре **@subscription_type** .  
   
-4.  На издателе выполните хранимую процедуру [sp_helpsubscriberinfo](/sql/relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql), указав параметр **@subscriber**. Будут выведены сведения о подписчике.  
+4.  На издателе выполните хранимую процедуру [sp_helpsubscriberinfo](/sql/relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql), указав параметр **@subscriber** . Будут выведены сведения о подписчике.  
   
 #### <a name="to-change-the-properties-of-a-pull-subscription-to-a-merge-publication"></a>Изменение свойств подписки по запросу на публикацию слиянием  
   
-1.  На подписчике выполните хранимую процедуру [sp_changemergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql). Задайте значения для параметров **@publication**, **@publisher**, **@publisher_db**, изменяемое свойство подписки как **@property**и новое значение как **@value**.  
+1.  На подписчике выполните хранимую процедуру [sp_changemergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql). Задайте значения для параметров **@publication** , **@publisher** , **@publisher_db** , изменяемое свойство подписки как **@property** и новое значение как **@value** .  
   
 ##  <a name="RMOProcedure"></a> При помощи объектов RMO  
  Конкретные классы объектов RMO, используемые для этого, зависят от типа публикации, для которой создается подписка по запросу.  

@@ -1,5 +1,5 @@
 ---
-title: Работа с функцией RollupChildren (многомерные Выражения) | Документы Microsoft
+title: Работа с функцией RollupChildren (многомерные Выражения) | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 135ab6e43a0b751639bd1ce1d93bf2183039f713
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024106"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208772"
 ---
-# <a name="mdx-data-manipulation---rollupchildren-function"></a>Управление данными MDX - функция RollupChildren
+# <a name="mdx-data-manipulation---rollupchildren-function"></a>Обработка данных многомерных выражений — функция RollupChildren
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Функция [RollupChildren](../../../mdx/rollupchildren-mdx.md) многомерных выражений вычисляет свертку потомков некоторого элемента, применяя различные унарные операторы к каждому потомку, и возвращает результат этой свертки в виде числа. Унарный оператор может браться из свойства, связанного с элементом-потомком, или же оператор может быть строковым выражением, непосредственно заданным для этой функции.  
   
@@ -67,7 +67,7 @@ RollupChildren([Net Sales], IIf([Net Sales].CurrentMember.Properties("UNARY_OPER
   
  Инструкция многомерных выражений анализирует унарный оператор дочернего элемента. Если унарный оператор применяется для вычитания (как в случае элементов с внутренними и внешними возвратами), то функция **IIf** заменяет унарный оператор тильду (~). В противном случае функция **IIf** использует унарный оператор дочернего элемента. Наконец вычисленное значение суммы свертки умножается на коэффициент 1,1 для получения значения прогнозируемых валовых внутренних и внешних продаж.  
   
-## <a name="see-also"></a>См. также раздел  
- [Обработка данных & #40; Многомерные Выражения & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
+## <a name="see-also"></a>См. также  
+ [Манипулирование данными (многомерные выражения)](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
   
   

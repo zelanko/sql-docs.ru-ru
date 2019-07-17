@@ -10,18 +10,18 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a5383fe83963a9b388413b9b829b4fac7fc11788
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53071593"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207974"
 ---
 # <a name="lock-manager-properties"></a>Свойства диспетчера блокировок
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] поддерживают свойства сервера диспетчера блокировок, перечисленные в следующей таблице. Дополнительные сведения о дополнительных свойствах сервера и их настройке см. в разделе [Свойства сервера в службах Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
- **Применимо к:** многомерный и табличный режим сервера  
+ **Применимо к:** Многомерный и Табличный режим сервера  
   
 ## <a name="properties"></a>Свойства  
  **DefaultLockTimeoutMS**  

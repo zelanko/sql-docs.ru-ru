@@ -13,11 +13,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 0649e167ebaa90267422594ccd193ba468838e6f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182014"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68187291"
 ---
 # <a name="reading-the-data-in-a-table-tutorial"></a>Чтение данных из таблицы (учебник)
   Для чтения данных в таблице используется инструкция SELECT. Инструкция SELECT является одной из наиболее важных инструкций [!INCLUDE[tsql](../includes/tsql-md.md)] , и для нее существует много разновидностей синтаксиса. В этом учебнике будет показана работа с пятью простыми вариантами.  
@@ -81,7 +81,7 @@ ms.locfileid: "48182014"
 |||  
 |-|-|  
 |[Строковые функции (Transact-SQL)](/sql/t-sql/functions/string-functions-transact-sql)|[Типы данных и функции даты и времени (Transact-SQL)](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql)|  
-|[Математические функции (Transact-SQL)](/sql/t-sql/functions/mathematical-functions-transact-sql)|[Изображение функции обработки текста и &#40;Transact-SQL&#41;](/sql/t-sql/functions/text-and-image-functions-textptr-transact-sql)|  
+|[Математические функции (Transact-SQL)](/sql/t-sql/functions/mathematical-functions-transact-sql)|[Функции для работы с типами данных text и image (Transact-SQL)](/sql/t-sql/functions/text-and-image-functions-textptr-transact-sql)|  
   
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
  [Сводка. Создание объектов базы данных](lesson-1-5-summary-creating-database-objects.md)  
