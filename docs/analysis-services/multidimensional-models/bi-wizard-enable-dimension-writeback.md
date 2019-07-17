@@ -1,5 +1,5 @@
 ---
-title: Включение обратной записи в измерение | Документы Microsoft
+title: Включение обратной записи в измерение | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 561dc878302afe7636a2660a9e194ac14a35c7f1
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020321"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68179114"
 ---
-# <a name="bi-wizard---enable-dimension-writeback"></a>Мастер бизнес-Аналитики — включить обратную запись в измерение
+# <a name="bi-wizard---enable-dimension-writeback"></a>Мастер бизнес-аналитики — включение обратной записи в измерение
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Добавьте расширение обратной записи в куб или измерение, чтобы пользователи могли вручную изменять структуру и элементы измерения. Обновления измерений, доступных для записи, записываются прямо в таблицу измерения. Это расширение изменяет настройку свойства **WriteEnabled** для измерения.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "34020321"
 >   
 >  Дополнительные сведения см. в разделе [Использование множественных активных результирующих наборов (MARS)](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Измерения, доступные для записи](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)  
   
   

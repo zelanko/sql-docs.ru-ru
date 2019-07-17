@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: c9c90dbb072ace600258edfb4ff13f99ecadf188
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093034"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196518"
 ---
 # <a name="ddl-events"></a>DDL-события
   В следующих таблицах перечислены DDL-события, которые могут быть использованы для срабатывания триггера DDL или уведомления о событиях. Обратите внимание, что каждое событие соответствует инструкции языка [!INCLUDE[tsql](../../includes/tsql-md.md)] или хранимой процедуре, причем синтаксис инструкции при этом включает в себя символ подчеркивания (_) между ключевыми словами.  

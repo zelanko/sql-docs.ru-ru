@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e290e0e15797a8b84a6d52c945a5fd78458515fc
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505631"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208202"
 ---
 # <a name="power-pivot-configuration-using-windows-powershell"></a>Настройка PowerPivot с помощью Windows PowerShell
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

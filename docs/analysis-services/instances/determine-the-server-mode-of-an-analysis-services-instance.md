@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b292e20880dcb77c4f448f7e141355edff67417f
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579004"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209524"
 ---
 # <a name="determine-the-server-mode-of-an-analysis-services-instance"></a>Определение режима работы сервера экземпляра служб Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  Службы Analysis Services могут быть установлены в одном из трех серверных режимов: Многомерный и интеллектуальный анализ данных (по умолчанию), [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint и табличный. Режим сервера экземпляра служб Analysis Services определяется во время установки, когда пользователь выбирает параметры для установки сервера.  
+  Службы Analysis Services можно установить одним из трех серверных режимов: Многомерный и интеллектуальный анализ данных (по умолчанию), [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint и табличный. Режим сервера экземпляра служб Analysis Services определяется во время установки, когда пользователь выбирает параметры для установки сервера.  
   
  Режим сервера определяет тип создаваемого и развертываемого решения. Если программное обеспечение сервера не было установлено и необходимо узнать, в каком режиме установлен сервер, режим можно определить, следуя указаниям в этом разделе. Дополнительные сведения о доступных функциях в определенном режиме см. в разделе [сравнение табличных и многомерных решений](../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md).  
   

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d7dd7de5aac016239c2b778a7afeee9447144259
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145689"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183208"
 ---
 # <a name="management-of-data-mining-solutions-and-objects"></a>Управление решениями и объектами интеллектуального анализа данных
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -76,14 +76,14 @@ ms.locfileid: "50145689"
   
 -   <xref:Microsoft.AnalysisServices>  
   
- **Ограничения.** Нет.  
+ **Ограничения:** Нет.  
   
 ### <a name="data-mining-extensions-dmx"></a>Расширения интеллектуального анализа данных  
  Расширения интеллектуального анализа данных могут быть использованы вместе с другими интерфейсами команд, например с [!INCLUDE[vstecado](../../includes/vstecado-md.md)] или ADOMD.Net, для создания и удаления структур и моделей интеллектуального анализа данных, а также создания запросов к ним.  
   
 -   [Инструкции определения расширений интеллектуального анализа данных](../../dmx/dmx-statements-data-definition.md)  
   
- **Ограничения.** Некоторые свойства нельзя изменять с помощью расширения интеллектуального анализа данных.  
+ **Ограничения:** Некоторые свойства нельзя изменить с помощью расширений интеллектуального анализа данных.  
   
 ### <a name="xml-for-analysis-xmla"></a>XML для аналитики (XMLA)  
  XML для аналитики, или XMLA, — это язык описания данных DDL для всех служб Analysis Services. XMLA позволяет управлять большинством объектов интеллектуального анализа данных и операциями на сервере. Все операции управления между клиентом и сервером можно выполнять с помощью XMLA. Для удобства при создании оболочки для XML можно использовать язык скриптов служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (ASSL).  

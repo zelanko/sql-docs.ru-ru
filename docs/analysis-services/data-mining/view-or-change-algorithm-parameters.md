@@ -1,5 +1,5 @@
 ---
-title: Просмотр или изменение параметров алгоритма | Документы Microsoft
+title: Просмотр или изменение параметров алгоритма | Документация Майкрософт
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 58b512d726d45a8ceabb76a4ce2b1e6c8c62815b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018221"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209557"
 ---
 # <a name="view-or-change-algorithm-parameters"></a>Просмотр или изменение параметров алгоритма
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "34018221"
   
 -   Указание начального значения или размера внутренней перегрузки во время создания модели.  
   
- Параметры сильно отличаются для каждого из алгоритмов. Список параметров, которые можно задать для каждого алгоритма, см. в технических справочниках в этом разделе: [Алгоритмы интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md).  
+ Сильно параметры, заданные для каждого алгоритма; список параметров, которые можно задать для каждого алгоритма см. в технических справочниках в этом разделе: [Алгоритмы интеллектуального анализа данных &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md).  
   
 ### <a name="change-an-algorithm-parameter"></a>Изменение параметров алгоритма  
   
@@ -62,6 +62,6 @@ ms.locfileid: "34018221"
     ```  
   
 ## <a name="see-also"></a>См. также  
- [Задачи модели интеллектуального анализа данных и инструкции](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
+ [Задачи и инструкции по модели интеллектуального анализа данных](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
   
   

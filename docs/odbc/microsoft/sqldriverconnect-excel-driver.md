@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 285cb1ea-f461-4596-97f2-fc57af05dede
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b2d7e879c35e7cbf2f2b261d94eff22936f7880b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e38f2f513b7da2c9342470ba75e2ee11b3d7e52a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63238099"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053901"
 ---
 # <a name="sqldriverconnect-excel-driver"></a>SQLDriverConnect (драйвер для Excel)
 > [!NOTE]  
