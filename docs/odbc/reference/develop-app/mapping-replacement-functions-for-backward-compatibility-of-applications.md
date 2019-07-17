@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: f5e6d9da-76ef-42cb-b3f5-f640857df732
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 099fd0ff318a77f1f1916395fbd13087ab8ba18b
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 45cec32e818eab1ec5586196eadef998b8f988ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793312"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036391"
 ---
 # <a name="mapping-replacement-functions-for-backward-compatibility-of-applications"></a>Сопоставление замещающих функций для обеспечения обратной совместимости приложений
 ODBC *3.x* приложение, которое работает через ODBC *3.x* диспетчера драйверов будет работать для ODBC *2.x* драйвера, если используются нет новых функций. Оба дублирование функциональные возможности и изменения в поведении Однако, влиять на, ODBC *3.x* приложение работает в ODBC *2.x* драйвера. При работе с ODBC *2.x* драйвера, диспетчер драйверов сопоставляет следующие ODBC *3.x* функций, которые были заменены один или несколько ODBC *2.x* функции, в соответствующий ODBC *2.x* функции.  
@@ -453,10 +452,10 @@ SQLParamOptions (StatementHandle, Size, &RowCount);
 |------------|-----------|  
 |ColumnName|"" (пустая строка)|  
 |\* NameLengthPtr|0|  
-|*DataTypePtr|SQL_BINARY|  
+|\* DataTypePtr|SQL_BINARY|  
 |\* ColumnSizePtr|4|  
 |\* DecimalDigitsPtr|0|  
-|*NullablePtr|SQL_NO_NULLS|  
+|\* NullablePtr|SQL_NO_NULLS|  
   
 ### <a name="sqlgetdata"></a>SQLGetData  
  Когда ODBC *3.x* приложение, которое работает с ODBC *2.x* драйвер производит вызов **SQLGetData** извлекаемого закладки:  

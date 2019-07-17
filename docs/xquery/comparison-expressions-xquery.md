@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: dc671348-306f-48ef-9e6e-81fc3c7260a6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ac4e617b7abb220dd2a8767a334ddbdf1c685d2c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7462e089f70b4da76edea25dcfe6e7e314ad7c46
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661843"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039029"
 ---
 # <a name="comparison-expressions-xquery"></a>Выражения сравнения (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,8 +48,8 @@ ms.locfileid: "51661843"
 |--------------|-----------------|  
 |=|Равно|  
 |!=|Не равно|  
-|\<|Меньше чем|  
-|>|Больше чем|  
+|\<|Меньше|  
+|>|Больше|  
 |\<=|Меньше или равно|  
 |>=|Больше или равно|  
   
@@ -122,7 +121,7 @@ WHERE ContactID=1
   
 ```  
   
- Результат:  
+ Это результат:  
   
 ```  
 \<act:number   
@@ -144,8 +143,8 @@ WHERE ContactID=1
 |--------------|-----------------|  
 |eq|Равно|  
 |ne|Не равно|  
-|lt|Меньше чем|  
-|gt|Больше чем|  
+|lt|Меньше|  
+|gt|Больше|  
 |le|Меньше или равно|  
 |ge|Больше или равно|  
   
@@ -174,7 +173,7 @@ WHERE ProductModelID=19
   
 -   Обратите внимание, что, поскольку операторы значений работают только для атомарных значений, **data()** функция неявно используется для получения значения узла. То есть функция `data($P/PD:Size) eq "small"` выдает тот же результат.  
   
- Результат:  
+ Это результат:  
   
 ```  
 \<PD:Picture   
@@ -208,7 +207,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=7           
 ```  
   
- Результат:  
+ Это результат:  
   
 ```  
 ProductModelID       Result          
@@ -221,9 +220,9 @@ ProductModelID       Result
   
  На основе порядка документа выполняются следующие сравнения:  
   
--   `<<` : **Операнд 1** предшествовать **операнда 2** в порядке документа.  
+-   `<<` : Does **операнд 1** предшествовать **операнда 2** в порядке документа.  
   
--   `>>` : **Операнд 1** выполните **операнда 2** в порядке документа.  
+-   `>>` : Does **операнд 1** выполните **операнда 2** в порядке документа.  
   
  Следующий запрос возвращает True, если в описании каталога продукции \<гарантии > элемент, предшествующие \<обслуживания > элемента в порядке документа для конкретного продукта.  
   

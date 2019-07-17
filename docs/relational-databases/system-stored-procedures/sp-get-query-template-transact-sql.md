@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 85e9bef7-2417-41a8-befa-fe75507d9bf2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f0d4d19f7b32297401ff036e61806308b54e44c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9841e7815f31af26aeeb3ed0f4783d3a36d83030
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810282"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124084"
 ---
 # <a name="spgetquerytemplate-transact-sql"></a>sp_get_query_template (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,13 +43,13 @@ sp_get_query_template
   
 ## <a name="arguments"></a>Аргументы  
  "*query_text*"  
- Запрос, для которого создается параметризованная версия. "*query_text*" должны быть заключены в одинарные кавычки и предваряться описателем Юникода n. N'*query_text*"— это значение, присваиваемое @querytext параметра. Тип **nvarchar(max)**.  
+ Запрос, для которого создается параметризованная версия. "*query_text*" должны быть заключены в одинарные кавычки и предваряться описателем Юникода n. N'*query_text*"— это значение, присваиваемое @querytext параметра. Тип **nvarchar(max)** .  
   
  @templatetext  
- Является выходным параметром типа **nvarchar(max)**, предназначенный для получения параметризованной формы *query_text* как строковый литерал.  
+ Является выходным параметром типа **nvarchar(max)** , предназначенный для получения параметризованной формы *query_text* как строковый литерал.  
   
  @parameters  
- Является выходным параметром типа **nvarchar(max)**, предназначенный для получения параметров имена и типы данных, которые были параметризованы в строковый литерал @templatetext.  
+ Является выходным параметром типа **nvarchar(max)** , предназначенный для получения параметров имена и типы данных, которые были параметризованы в строковый литерал @templatetext.  
   
 ## <a name="remarks"></a>Примечания  
  Процедура sp_get_query_template возвращает ошибку, если:  

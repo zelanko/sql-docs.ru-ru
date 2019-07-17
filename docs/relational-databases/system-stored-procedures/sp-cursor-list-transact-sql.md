@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7187cfbe-d4d9-4cfa-a3bb-96a544c7c883
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8c6cef14177e871f35ccd5c84af4a2b28e35aff5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5adcaab96bfe9af3945b479e4bff5180ca8140d8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62724049"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108581"
 ---
 # <a name="spcursorlist-transact-sql"></a>sp_cursor_list (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
  [ @cursor_return=] *cursor_variable_name*выходных данных  
  Имя объявленной переменной курсора. *cursor_variable_name* — **курсор**, не имеет значения по умолчанию. Этот аргумент является динамическим, прокручиваемым и предназначенным только для чтения.  
   
- [ @cursor_scope= ] *cursor_scope*  
+ [ @cursor_scope=] *cursor_scope*  
  Определяет, какие уровни курсоров включаются в отчет. *cursor_scope* — **int**, по умолчанию и может принимать одно из следующих значений.  
   
 |Значение|Описание|  

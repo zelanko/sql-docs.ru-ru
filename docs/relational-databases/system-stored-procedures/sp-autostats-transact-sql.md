@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: d1df8c15-ee73-49eb-9d13-6e98943c3e38
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6264266f85edc1cae0821bbcf81c8c0993dba151
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d390cff9bf101167db277c1c7614ee68d10edb6a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62995688"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046100"
 ---
 # <a name="spautostats-transact-sql"></a>Хранимая процедура sp_autostats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @tblname = ] 'table_or_indexed_view_name'` Имя таблицы или индексированного представления, для которого отображается параметр AUTO_UPDATE_STATISTICS. *table_or_indexed_view_name* — **nvarchar(776)**, не имеет значения по умолчанию.  
+`[ @tblname = ] 'table_or_indexed_view_name'` Имя таблицы или индексированного представления, для которого отображается параметр AUTO_UPDATE_STATISTICS. *table_or_indexed_view_name* — **nvarchar(776)** , не имеет значения по умолчанию.  
   
 `[ @flagc = ] 'stats_value'` Обновляет параметр AUTO_UPDATE_STATISTICS в одно из следующих значений:  
   
@@ -53,7 +52,7 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
   
  **OFF** = OFF  
   
- Когда *stats_flag* является не указан, отображается текущее значение AUTO_UPDATE_STATISTICS. *stats_value* — **varchar(10)**, значение по умолчанию NULL.  
+ Когда *stats_flag* является не указан, отображается текущее значение AUTO_UPDATE_STATISTICS. *stats_value* — **varchar(10)** , значение по умолчанию NULL.  
   
 `[ @indname = ] 'statistics_name'` — Имя статистики для отображения или обновления параметра AUTO_UPDATE_STATISTICS на. Чтобы отобразить статистику для индекса, можно использовать имя индекса. Имя индекса совпадает с именем соответствующего объекта статистики.  
   
@@ -70,7 +69,7 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**Index Name**|**varchar(60)**|Имя индекса или статистики.|  
-|**СТАТИСТИКА**|**varchar(3)**|Текущее значение параметра AUTO_UPDATE_STATISTICS.|  
+|**СТАТИСТИКА**|**тип varchar(3) столбцы разделяются**|Текущее значение параметра AUTO_UPDATE_STATISTICS.|  
 |**Последнее обновление:**|**datetime**|Дата последнего обновления статистики.|  
   
  Результирующий набор для таблицы или индексированного представления содержит статистику, созданную для индексов, статистику по отдельным столбцам, созданным параметром AUTO_CREATE_STATISTICS, и статистику, созданную с помощью [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) инструкции.  

@@ -1,5 +1,5 @@
 ---
-title: Технический справочник по алгоритму линейной регрессии Майкрософт | Документы Microsoft
+title: Технический справочник по алгоритму линейной регрессии Майкрософт | Документация Майкрософт
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 84d0d6609538bb9abdbca61e75c6691c25a45950
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019381"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183063"
 ---
 # <a name="microsoft-linear-regression-algorithm-technical-reference"></a>Технический справочник по алгоритму линейной регрессии (Майкрософт)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -52,10 +52,10 @@ ms.locfileid: "34019381"
 ### <a name="modeling-flags"></a>Флаги моделирования  
  Алгоритм линейной регрессии [!INCLUDE[msCoName](../../includes/msconame-md.md)] поддерживает приведенные ниже флаги модели. Чтобы задать порядок обработки в ходе анализа значений в каждом столбце, во время создания структуры или модели интеллектуального анализа данных определяются флаги модели. Дополнительные сведения см. в разделе [Флаги моделирования (интеллектуальный анализ данных)](../../analysis-services/data-mining/modeling-flags-data-mining.md).  
   
-|Флаг моделирования|Description|  
+|Флаг моделирования|Описание|  
 |-------------------|-----------------|  
 |NOT NULL|Указывает, что столбец не может принимать значение NULL. Если во время обучения модели службы Analysis Services обнаружат значение NULL, возникнет ошибка.<br /><br /> Применяется к столбцам структуры интеллектуального анализа данных.|  
-|REGRESSOR|Указывает, что столбец содержит непрерывные численные значения, которые при анализе нужно обрабатывать как потенциальные независимые переменные. Применяется к столбцам модели интеллектуального анализа данных.<br /><br /> Примечание. Если столбец указан как регрессор, это не значит, что он будет использован в качестве регрессора в окончательной модели.|  
+|REGRESSOR|Указывает, что столбец содержит непрерывные численные значения, которые при анализе нужно обрабатывать как потенциальные независимые переменные. Применяется к столбцам модели интеллектуального анализа данных.<br /><br /> Примечание. Пометка в качестве регрессора столбец не гарантирует, что столбец будет использоваться в качестве регрессора в окончательной модели.|  
   
 ### <a name="regressors-in-linear-regression-models"></a>Регрессоры в моделях линейной регрессии  
  Модели линейной регрессии основаны на алгоритме дерева принятия решений [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Даже если не используется алгоритм линейной регрессии [!INCLUDE[msCoName](../../includes/msconame-md.md)] , любая модель дерева принятия решений может содержать дерево или узлы, представляющие регрессию применительно к какому-то непрерывному атрибуту.  
@@ -81,8 +81,8 @@ ms.locfileid: "34019381"
 >  Типы содержимого**Cyclical** и **Ordered** поддерживаются, но алгоритм обрабатывает их как дискретные величины и не производит их особой обработки.  
   
 ## <a name="see-also"></a>См. также  
- [Алгоритм линейной регрессии Майкрософт](../../analysis-services/data-mining/microsoft-linear-regression-algorithm.md)   
+ [Алгоритм линейной регрессии (Майкрософт)](../../analysis-services/data-mining/microsoft-linear-regression-algorithm.md)   
  [Примеры запросов модели линейной регрессии](../../analysis-services/data-mining/linear-regression-model-query-examples.md)   
- [Содержимое модели интеллектуального анализа данных для модели линейной регрессии & #40; Службы Analysis Services — Интеллектуальный анализ данных & #41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [Содержимое моделей интеллектуального анализа данных для моделей линейной регрессии (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

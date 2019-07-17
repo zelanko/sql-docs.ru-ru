@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 774a1678-0b27-42be-8adc-a6d7a4a56510
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 40696085bc8eb9980d1150feade91a9edd627be0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cc058fea8e2ce86584c19a7a93018734f4782f69
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62471143"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084763"
 ---
 # <a name="data-tier-application-tables---sysdachistoryinternal"></a>Таблицы приложений уровня данных — sysdac_history_internal
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "62471143"
 |**sequence_id**|**int**|Идентифицирует шаг действия.|  
 |**instance_id**|**uniqueidentifier**|Идентификатор экземпляра DAC. Этот столбец может быть соединен **instance_id** столбца в [dbo.sysdac_instances &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md).|  
 |**action_type**|**tinyint**|Идентификатор типа действия:<br /><br /> **0** = развернуть<br /><br /> **1** = создать<br /><br /> **2** = переименовать<br /><br /> **3** = отсоединить<br /><br /> **4** = delete|  
-|**action_type_name**|**varchar(19)**|Имя типа действия:<br /><br /> **Развертывание**<br /><br /> **Создание**<br /><br /> **Переименование**<br /><br /> **отсоединение**<br /><br /> **delete**|  
+|**action_type_name**|**varchar(19)**|Имя типа действия:<br /><br /> **Развертывание**<br /><br /> **Создание**<br /><br /> **rename**<br /><br /> **отсоединение**<br /><br /> **delete**|  
 |**dac_object_type**|**tinyint**|Идентификатор типа объекта, на который влияет действие:<br /><br /> **0** = пакет DAC<br /><br /> **1** = имя входа<br /><br /> **2** = база данных|  
 |**dac_object_type_name**|**varchar(8)**|Имя типа объекта, на который влияет действие:<br /><br /> **DACPAC** = экземпляр приложения уровня данных<br /><br /> **Имя входа**<br /><br /> **базой данных**|  
 |**action_status**|**tinyint**|Код, отображающий текущее состояние действия:<br /><br /> **0** = ожидает согласования<br /><br /> **1** = успешное завершение<br /><br /> **2** = неуспешное завершение|  

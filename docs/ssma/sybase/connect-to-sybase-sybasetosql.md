@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 524f95ef-10bd-497c-84ca-c06a0ae794fb
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 0805246d5b88138cfa97019d1e0cd524c82456c6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6cb2f4196737cceec2f60684de1b7409f5e383a0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63061007"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083396"
 ---
 # <a name="connect-to-sybase-sybasetosql"></a>Подключение к Sybase (SybaseToSQL)
 Используйте **подключение к Sybase** диалоговое окно для подключения к экземпляру Sybase Adaptive Server Enterprise (ASE), которые требуется перенести.  
@@ -53,7 +52,7 @@ ms.locfileid: "63061007"
     |Параметр|Параметр Sybase 12,5|Параметр Sybase 15|  
     |-----------|-------------------------|-----------------------|  
     |Имя сервера|Имя сервера|Сервер|  
-    |Порт|Адрес порта сервера|Порт|  
+    |Port|Адрес порта сервера|Port|  
     |Имя пользователя|Идентификатор пользователя|Идентификатор пользователя|  
     |Пароль|Пароль|Пароль|  
     |Поставщик|Поставщик|Поставщик|  
@@ -74,7 +73,7 @@ ms.locfileid: "63061007"
     |Имя сервера|Сервер|  
     |Имя пользователя|UID|  
     |Пароль|PWD|  
-    |Номер порта|Порт|  
+    |Номер порта|Port|  
   
     Для Sybase ASE 12,5 или 15 пример строки подключения выглядит следующим образом:  
   
@@ -87,7 +86,7 @@ ms.locfileid: "63061007"
     |Имя сервера|Сервер|  
     |Имя пользователя|UID|  
     |Пароль|PWD|  
-    |Номер порта|Порт|  
+    |Номер порта|Port|  
   
     Пример строки подключения для поставщика ADO.NET, выглядит следующим образом:  
   

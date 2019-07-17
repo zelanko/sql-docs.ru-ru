@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 222be651-5690-4341-9dfb-f9ec1d80c970
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6c60f56980aedc29c8262089748a77f113cc0449
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 86e8d3d21246cbb308db5b698a29f2b02ce45ac3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536486"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137750"
 ---
 # <a name="sphelpmergedeleteconflictrows-transact-sql"></a>sp_helpmergedeleteconflictrows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,9 +40,9 @@ sp_helpmergedeleteconflictrows [ [ @publication = ] 'publication']
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'` — Имя публикации. *Публикация* — **sysname**, значение по умолчанию **%**. Если указана публикация, возвращаются все конфликты, определенные этой публикацией.  
+`[ @publication = ] 'publication'` — Имя публикации. *Публикация* — **sysname**, значение по умолчанию **%** . Если указана публикация, возвращаются все конфликты, определенные этой публикацией.  
   
-`[ @source_object = ] 'source_object'` — Имя исходного объекта. *source_object* — **nvarchar(386)**, значение по умолчанию NULL.  
+`[ @source_object = ] 'source_object'` — Имя исходного объекта. *source_object* — **nvarchar(386)** , значение по умолчанию NULL.  
   
 `[ @publisher = ] 'publisher'` — Имя издателя. *издателя* — **sysname**, значение по умолчанию NULL.  
   
@@ -55,7 +54,7 @@ sp_helpmergedeleteconflictrows [ [ @publication = ] 'publication']
 |-----------------|---------------|-----------------|  
 |**source_object**|**nvarchar(386)**|Исходный объект для конфликта удаления.|  
 |**столбец ROWGUID**|**uniqueidentifier**|Идентификатор строки для конфликта удаления.|  
-|**conflict_type**|**int**|Код, указывающий на тип конфликта.<br /><br /> **1** = UpdateConflict: конфликт обнаружен на уровне строки.<br /><br /> **2** = ColumnUpdateConflict: конфликт обнаружен на уровне столбца.<br /><br /> **3** = UpdateDeleteWinsConflict: инструкция Delete выигрывает конфликт.<br /><br /> **4** = UpdateWinsDeleteConflict: в этой таблице записан удаленный идентификатор rowguid, проигравший конфликт.<br /><br /> **5** = UploadInsertFailed: инструкция Insert от подписчика не может быть применена на издателе.<br /><br /> **6** = DownloadInsertFailed: инструкция Insert от издателя не может быть применена на подписчике.<br /><br /> **7** = UploadDeleteFailed: инструкция Delete на подписчике не может быть передана на издатель.<br /><br /> **8** = DownloadDeleteFailed: инструкция Delete на издателе не может быть загружена на подписчик.<br /><br /> **9** = UploadUpdateFailed: инструкция Update на подписчике не может быть применена на издателе.<br /><br /> **10** = DownloadUpdateFailed: инструкция Update на издателе не может быть применена на подписчике.|  
+|**conflict_type**|**int**|Код, указывающий на тип конфликта.<br /><br /> **1** = UpdateConflict: На уровне строк обнаруживается конфликт.<br /><br /> **2** = ColumnUpdateConflict: Конфликт обнаружен на уровне столбца.<br /><br /> **3** = UpdateDeleteWinsConflict: Инструкция Delete выигрывает конфликт.<br /><br /> **4** = UpdateWinsDeleteConflict: Удаленный идентификатор rowguid, которая уступает в конфликте, записывается в этой таблице.<br /><br /> **5** = UploadInsertFailed: Инструкция INSERT от подписчика не может быть применена на издателе.<br /><br /> **6** = DownloadInsertFailed: Инструкция INSERT от издателя не может быть применена на подписчике.<br /><br /> **7** = UploadDeleteFailed: Инструкция DELETE на подписчике не удалось загрузить на издатель.<br /><br /> **8** = DownloadDeleteFailed: Не удалось загрузить удаления со стороны издателя на подписчик.<br /><br /> **9** = UploadUpdateFailed: Инструкция UPDATE на подписчике не может быть применена на издателе.<br /><br /> **10** = DownloadUpdateFailed: Инструкция UPDATE на издателе не может быть применена на подписчик.|  
 |**reason_code**|**Int**|Код ошибки, который может зависеть от контекста.|  
 |**reason_text**|**varchar(720)**|Описание ошибки, которое может зависеть от контекста.|  
 |**origin_datasource**|**varchar(255)**|Источник конфликта.|  

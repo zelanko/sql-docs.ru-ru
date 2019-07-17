@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 21f779f1e0b1764fd35d6399aa220e244574d576
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545594"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183173"
 ---
 # <a name="microsoft-association-algorithm-technical-reference"></a>Технический справочник по алгоритму взаимосвязей (Майкрософт)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -133,7 +133,7 @@ ms.locfileid: "52545594"
  Применяется к столбцу структуры интеллектуального анализа данных.  
   
  MODEL_EXISTENCE_ONLY  
- Столбец будет обрабатываться так, как будто у него два возможных состояния: **Отсутствует** и **существующие**. NULL означает отсутствие значения.  
+ Означает, что столбец будет обрабатываться как имеющий два возможных состояния: **Отсутствует** и **существующие**. NULL означает отсутствие значения.  
   
  Применяется к столбцу модели интеллектуального анализа данных.  
   

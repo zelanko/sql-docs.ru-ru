@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: f216d1cd-997c-42f0-a737-abbdfcd88383
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0b873a4d43d76fe27c7a807324c2fb60ce3d42fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 131cabc90680a9d1069802f4549c7c3754a78dec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719722"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053389"
 ---
 # <a name="syssyslanguages-transact-sql"></a>sys.syslanguages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "47719722"
 |langid|**smallint**|Уникальный идентификатор языка.|  
 |формат даты|**nchar(3)**|Формат представления даты, например DMY.|  
 |datefirst|**tinyint**|Первый день недели: 1 — понедельник, 2 — вторник и так далее до 7 — воскресенье.|  
-|обновление|**int**|Зарезервировано для системного использования.|  
+|upgrade|**int**|Зарезервировано для системного использования.|  
 |name|**sysname**|Официальное название языка, например Francais.|  
 |alias|**sysname**|Альтернативное название языка, например French.|  
 |months|**nvarchar(372)**|Список полных названий месяцев через запятую в порядке с января до декабря. Каждое название может содержать не более 20 символов.|  
@@ -53,7 +52,7 @@ ms.locfileid: "47719722"
 |Английское название языка|Код языка в Windows|Идентификатор группы сообщений компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]|  
 |---------------------|------------------|-----------------------------------------|  
 |Английский|1033|1033|  
-|German|1031|1031|  
+|Немецкий|1031|1031|  
 |Французский|1036|1036|  
 |Японский|1041|1041|  
 |Danish|1030|1030|  
@@ -71,7 +70,7 @@ ms.locfileid: "47719722"
 |Хорватский|1050|1050|  
 |Словацкий|1051|1051|  
 |Slovene|1060|1060|  
-|Greek|1032|1032|  
+|Греческий|1032|1032|  
 |Болгарский|1026|1026|  
 |Русский|1049|1049|  
 |Турецкий|1055|1055|  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0c9e5d21-9321-49f8-a055-69459e1c9c85
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8e2f3b1e63578af7c0b42f00113fbb9e87cb8003
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e8478e80ae2ebd19a3e0f2aa8307e0985b2c092d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63208418"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68043688"
 ---
 # <a name="paradox-data-types"></a>Типы данных Paradox
 Драйвер ODBC для Paradox сопоставляет типы данных Paradox типов данных ODBC SQL. В следующей таблице перечислены все типы данных Paradox и показано ODBC SQL, типы данных, которые они сопоставляются.  
@@ -32,7 +31,7 @@ ms.locfileid: "63208418"
 |-----------------------|--------------------|  
 |БУКВЕННО-ЦИФРОВОЙ|SQL_VARCHAR|  
 |АВТОУВЕЛИЧЕНИЕ [1]|SQL_INTEGER|  
-|BCD[1]|SQL_DOUBLE|  
+|BCD [1]|SQL_DOUBLE|  
 |БАЙТЫ [1]|SQL_BINARY|  
 |DATE|SQL_DATE|  
 |ИЗОБРАЖЕНИЯ [2]|SQL_LONGVARBINARY|  

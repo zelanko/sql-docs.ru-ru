@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a8da43c9-d9a5-45e5-bd9a-1dd633db2ee0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7ea11803847505698ea42d13727b6177f3a24bda
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c4a3734ff8d9f0cb120e1d33433ee3a301bb59ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63316528"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019301"
 ---
 # <a name="c-to-sql-time"></a>C в SQL: Time
 Идентификатор для типа данных ODBC C времени является:  
@@ -31,10 +30,10 @@ ms.locfileid: "63316528"
   
 |Идентификатор типа SQL|Тест|SQLSTATE|  
 |-------------------------|----------|--------------|  
-|SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|Длина столбца в байтах > = 8<br /><br /> Столбец байтов длиной < 8<br /><br /> Значение данных не является допустимым временем|н/д<br /><br /> 22001<br /><br /> 22008|  
-|SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|Длина столбца символ > = 8<br /><br /> Столбец символов длиной < 8<br /><br /> Значение данных не является допустимым временем|н/д<br /><br /> 22001<br /><br /> 22008|  
-|SQL_TYPE_TIME|Значение является действительным значением времени<br /><br /> Значение данных не является допустимым временем|н/д<br /><br /> 22007|  
-|SQL_TYPE_TIMESTAMP|Значение является действительным значением времени [a]<br /><br /> Значение данных не является допустимым временем|н/д<br /><br /> 22007|  
+|SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|Длина столбца в байтах > = 8<br /><br /> Столбец байтов длиной < 8<br /><br /> Значение данных не является допустимым временем|Н/Д<br /><br /> 22001<br /><br /> 22008|  
+|SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|Длина столбца символ > = 8<br /><br /> Столбец символов длиной < 8<br /><br /> Значение данных не является допустимым временем|Н/Д<br /><br /> 22001<br /><br /> 22008|  
+|SQL_TYPE_TIME|Значение является действительным значением времени<br /><br /> Значение данных не является допустимым временем|Н/Д<br /><br /> 22007|  
+|SQL_TYPE_TIMESTAMP|Значение является действительным значением времени [a]<br /><br /> Значение данных не является допустимым временем|Н/Д<br /><br /> 22007|  
   
  [a] дату часть штампа времени имеет значение текущей даты и доли секунды, часть штампа времени, равным нулю.  
   

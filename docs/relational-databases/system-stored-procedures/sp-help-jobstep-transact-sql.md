@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4a13b804-45f2-4f82-987f-42d9a57dd6db
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5faad4f4e0de6f9c56115bff59933360f551ab55
-ms.sourcegitcommit: 4181429ada1169871c2f4d73d18d2ba013007501
+ms.openlocfilehash: c65498b25bfbe0a5eee38a43ea212e29edc26295
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67866273"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090054"
 ---
 # <a name="sphelpjobstep-transact-sql"></a>sp_help_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +78,7 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**retry_attempts**|**int**|Максимальное количество повторных попыток выполнения команды (в случае сбоев).|  
 |**retry_interval**|**int**|Интервал (в минутах) между повторными попытками.|  
 |**os_run_priority**|**int**|Зарезервировано.|  
-|**output_file_name**|**nvarchar(200)**|Файл, чтобы какая команда выходные данные должны записываться ([!INCLUDE[tsql](../../includes/tsql-md.md)], **CmdExec**, и **PowerShell** только для шагов).|  
+|**output_file_name**|**Nvarchar(200)**|Файл, чтобы какая команда выходные данные должны записываться ([!INCLUDE[tsql](../../includes/tsql-md.md)], **CmdExec**, и **PowerShell** только для шагов).|  
 |**last_run_outcome**|**int**|Результат последнего запуска этапа:<br /><br /> **0** = ошибка<br /><br /> **1** = выполнено успешно<br /><br /> **2** = повторение<br /><br /> **3** = отменено<br /><br /> **5** = неизвестно|  
 |**last_run_duration**|**int**|Продолжительность (ччммсс) шага в секундах при последнем запуске.|  
 |**last_run_retries**|**int**|Число повторов команды при последнем запуске этапа.|  
