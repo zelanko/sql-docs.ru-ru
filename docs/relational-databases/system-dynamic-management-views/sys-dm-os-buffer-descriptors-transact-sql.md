@@ -20,12 +20,12 @@ ms.assetid: 012aab95-8888-4f35-9ea3-b5dff6e3f60f
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 52d2a0284666c7b26c40fad62e8fdf9455379b49
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: HT
+ms.openlocfilehash: 7395d52b7c91678f11a37a4da32877f31e5780bf
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67900252"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265857"
 ---
 # <a name="sysdmosbufferdescriptors-transact-sql"></a>sys.dm_os_buffer_descriptors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "67900252"
 ## <a name="permissions"></a>Разрешения  
 
 На [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], требуется `VIEW SERVER STATE` разрешение.   
-В [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] необходимо разрешение `VIEW DATABASE STATE` для базы данных.   
+На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровней Premium необходимо `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровней Standard и Basic, требует **администратора сервера** или **администратор Azure Active Directory** учетной записи.   
    
 ## <a name="remarks"></a>Примечания  
  представление sys.dm_os_buffer_descriptors возвращает страницы, используются ли в базе данных ресурсов. представление sys.dm_os_buffer_descriptors возвращает сведения о свободных или заимствованных страницах, или о страницах, в которых возникли ошибки при чтении.  

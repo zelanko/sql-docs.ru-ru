@@ -16,16 +16,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b044fb7b3b8dd0cc0586cc9908daab8f0a2b6424
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350216"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68189524"
 ---
 # <a name="create-a-schedule"></a>Создание расписания
   Расписание для заданий агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] вы можете создать с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]или управляющих объектов SQL Server.  
   
--   **Перед началом работы**  
+-   **Перед началом:**  
   
      [безопасность](#Security)  
   

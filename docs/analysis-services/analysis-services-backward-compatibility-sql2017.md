@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: e7903de787a1b63627bca8da23369fbee9014c6e
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 3ad5bed93bf69f004276fd751f7f2fdef1ea9997
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685741"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210277"
 ---
 # <a name="analysis-services-backward-compatibility-sql-2017"></a>Обратная совместимость служб анализа (SQL 2017 г.)
 [!INCLUDE[ssas-appliesto-sql2017](../includes/ssas-appliesto-sql2017.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "57685741"
 |Multidimensional|Интеллектуальный анализ данных|
 |Multidimensional|Удаленные связанные группы мер|
 |Табличный|Модели с уровнем совместимости 1100 и 1103|
-|Табличный|Свойства табличной объектной модели: Column.TableDetailPosition, Column.IsDefaultLabel, Column.IsDefaultImage|
+|Табличный|Свойства табличной объектной модели: Column.IsDefaultImage Column.TableDetailPosition Column.IsDefaultLabel,|
 |Инструменты|Приложение SQL Server Profiler для перехвата трассировки<br /><br /> В качестве замены можно использовать профилировщик расширенных событий, встроенный в SQL Server Management Studio.  <br /> См. раздел [Monitor Analysis Services with SQL Server Extended Events](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md).|  
 |Инструменты|Воспроизведение трассировки с помощью приложения SQL Server Profiler <br />Замена. Замена отсутствует.|  
 |Объекты управления трассировкой и интерфейсы API трассировки|Объекты Microsoft.AnalysisServices.Trace (содержат интерфейсы API для объектов трассировки и воспроизведения Analysis Services). Замена состоит из нескольких частей:<br /><br /> — Настройка трассировки: Microsoft.SqlServer.Management.XEvent<br />-Чтение трассировки: Microsoft.SqlServer.XEvent.Linq<br />— Воспроизведение трассировки: None|  

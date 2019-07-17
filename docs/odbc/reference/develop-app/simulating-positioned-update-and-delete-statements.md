@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: b24ed59f-f25b-4646-a135-5f3596abc1a4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6d98d40ae24c68f90a304edb0293febfe76fac2c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 85d7642620d510ebba050a3fbc4348898e070070
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62445896"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107536"
 ---
 # <a name="simulating-positioned-update-and-delete-statements"></a>Моделирование инструкций позиционированного обновления и удаления
 Если источник данных не поддерживает позиционированного обновления и удаления инструкций, драйвер может имитировать их. Например библиотеку курсоров ODBC имитирует позиционированного обновления и удаления. Общая стратегия для имитации инструкций позиционированного обновления и удаления является преобразование позиционированные инструкции для поиска из них. Это делается путем замены **WHERE CURRENT OF** предложение, с которой выполняется поиск **ГДЕ** предложение, определяющее текущую строку.  

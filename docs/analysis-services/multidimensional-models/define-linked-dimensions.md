@@ -1,5 +1,5 @@
 ---
-title: Определите связанные измерения | Документы Microsoft
+title: Определение связанных измерений | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8441f37d902c823e9d8dce27a96b2d78f3f38b26
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023631"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209015"
 ---
 # <a name="define-linked-dimensions"></a>Определите связанные измерения
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "34023631"
   
 1.  В мастере источников данных на странице «Выбор метода определения соединения» нажмите кнопку **Создать**.  
   
-2.  В диспетчере соединений проверьте, что установлен поставщик **Собственный поставщик OLE DB\Поставщик OLE DB для служб Analysis Services 11.0 (Майкрософт)**.  
+2.  В диспетчере соединений проверьте, что установлен поставщик **Собственный поставщик OLE DB\Поставщик OLE DB для служб Analysis Services 11.0 (Майкрософт)** .  
   
 3.  Введите имя сервера (для именованного экземпляра используйте формат *имя_сервера*\\*имя_экземпляра* ) или введите **localhost** , чтобы подключиться к серверу служб Analysis Services, запущенному на том же компьютере.  
   
@@ -75,6 +75,6 @@ ms.locfileid: "34023631"
 ## <a name="see-also"></a>См. также  
  [Уровень совместимости многомерной базы данных (службы Analysis Services)](../../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md)   
  [Связанные группы мер](../../analysis-services/multidimensional-models/linked-measure-groups.md)   
- [Связей измерений](../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
+ [Связи измерений](../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
   
   

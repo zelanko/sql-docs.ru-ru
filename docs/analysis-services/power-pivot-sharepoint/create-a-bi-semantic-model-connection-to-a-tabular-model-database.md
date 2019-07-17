@@ -1,5 +1,5 @@
 ---
-title: Создание соединения семантической модели бизнес-Аналитики в базе данных табличной модели | Документы Microsoft
+title: Создание соединения семантической модели в базу данных табличной модели | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d17f5d68c1ea60c413a631ba0d734768c61fa5b2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024301"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208276"
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-tabular-model-database"></a>Создание соединения семантической модели бизнес-аналитики с табличным шаблоном базы данных
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -144,6 +144,6 @@ ms.locfileid: "34024301"
   
 ## <a name="see-also"></a>См. также  
  [Соединение семантической модели бизнес-аналитики PowerPivot (BISM-файлы)](../../analysis-services/power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)   
- [Создание подключения между семантической моделью бизнес-аналитики и книгой Power Pivot](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)  
+ [Создание подключения между семантической моделью бизнес-аналитики и книгой PowerPivot](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)  
   
   

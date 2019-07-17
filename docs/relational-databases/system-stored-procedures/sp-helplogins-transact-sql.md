@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f9ad3767-5b9f-420d-8922-b637811404f7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3461d6f80bb1ac693cca78954e5165fb7f012436
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: b4c3d6ded5d85e5d38556792aaa7ea71dd9f42fa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529746"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122453"
 ---
 # <a name="sphelplogins-transact-sql"></a>sp_helplogins (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 |**DefDBName**|**sysname**|По умолчанию базы данных, которые **LoginName** при подключении к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**DefLangName**|**sysname**|Язык, используемый по умолчанию **LoginName**.|  
 |**Auser**|**char(5)**|Yes = **LoginName** имеет связанное имя пользователя в базе данных.<br /><br /> Нет = **LoginName** не имеет связанного имени пользователя.|  
-|**Возможность**|**char(7)**|Yes = **LoginName** имеет связанного имени для удаленного входа.<br /><br /> Нет = **LoginName** не имеет связанного имени для входа.|  
+|**Возможность**|**символ(7)**|Yes = **LoginName** имеет связанного имени для удаленного входа.<br /><br /> Нет = **LoginName** не имеет связанного имени для входа.|  
   
  Второй отчет содержит данные о пользователях, сопоставленных с каждым из имен входа, а также ролях, членом которых является каждое имя входа, как показано в следующей таблице.  
   
@@ -64,7 +63,7 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 |**LoginName**|**sysname**|Имя входа.|  
 |**DBName**|**sysname**|По умолчанию базы данных, которые **LoginName** при подключении к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**UserName**|**sysname**|Учетная запись пользователя, **LoginName** сопоставляется в **DBName**и роли, **LoginName** входит в **DBName**.|  
-|**UserOrAlias**|**char(8)**|MemberOf = **UserName** — это роль.<br /><br /> Пользователь = **UserName** является учетной записью пользователя.|  
+|**UserOrAlias**|**значение типа char(8)**|MemberOf = **UserName** — это роль.<br /><br /> Пользователь = **UserName** является учетной записью пользователя.|  
   
 ## <a name="remarks"></a>Примечания  
  Прежде чем удалить имя входа, используйте **sp_helplogins** для идентификации учетных записей пользователей, сопоставленных с именем входа.  

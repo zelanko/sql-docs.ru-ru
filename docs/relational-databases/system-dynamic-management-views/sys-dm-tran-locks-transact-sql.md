@@ -20,12 +20,12 @@ ms.assetid: f0d3b95a-8a00-471b-9da4-14cb8f5b045f
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bf16f34ae878b03890a180c20d84ab64c6e7a34d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: HT
+ms.openlocfilehash: 32140a9ef5b1a8965876c4ee30fe72559ba8b7ce
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68090605"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262618"
 ---
 # <a name="sysdmtranlocks-transact-sql"></a>sys.dm_tran_locks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "68090605"
 ## <a name="permissions"></a>Разрешения
 
 На [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], требуется `VIEW SERVER STATE` разрешение.   
-В [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] необходимо разрешение `VIEW DATABASE STATE` для базы данных.   
+На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровней Premium необходимо `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровней Standard и Basic, требует **администратора сервера** или **администратор Azure Active Directory** учетной записи.   
  
 ## <a name="remarks"></a>Примечания  
  Состояние предоставленного запроса показывает, что блокировка ресурса была предоставлена запрашивающему объекту. Ожидающий запрос обозначает, что запрос еще не был предоставлен. Возвращаются следующие типы ожидающих запросов **request_status** столбца:  

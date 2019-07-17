@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 572644cf673c70000cee7de77f2bca9199f19675
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52780776"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211098"
 ---
 # <a name="profiler-utility"></a>Приложение SQL Profiler
   Служебная программа **profiler** запускает средство [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] . Дополнительные аргументы, перечисленные ниже в этом разделе, позволяют управлять способом запуска приложения.  

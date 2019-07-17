@@ -18,16 +18,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3dc86f27ab9e111c5d93c91de65c51da9008ba33
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228764"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207081"
 ---
 # <a name="constructing-sql-statements-for-cursors"></a>Конструирование инструкций SQL для курсоров
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Драйвер ODBC собственного клиента использует серверные курсоры для реализации функциональности курсоров, определенных в спецификации ODBC. Приложение ODBC управляет режимом работы курсоров с помощью [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md) задать различные атрибуты инструкций. К ним относятся атрибуты и их значения по умолчанию.  
   
-|attribute|По умолчанию|  
+|attribute|Значение по умолчанию|  
 |---------------|-------------|  
 |SQL_ATTR_CONCURRENCY|SQL_CONCUR_READ_ONLY|  
 |SQL_ATTR_CURSOR_TYPE|SQL_CURSOR_FORWARD_ONLY|  

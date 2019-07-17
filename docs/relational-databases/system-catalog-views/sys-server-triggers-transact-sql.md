@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 25926ff4-9271-45bf-bc32-d5d3344bd47a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9b13aeed62a84258fcfbf5820c17dca59f4b5852
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 995a9b5fe4786e1e188a8bbdc612cce743e77a18
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62660755"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133006"
 ---
 # <a name="sysservertriggers-transact-sql"></a>sys.server_triggers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "62660755"
 |**object_id**|**int**|Идентификатор объекта.|  
 |**parent_class**|**tinyint**|Класс родителя. Всегда:<br /><br /> 100 = Сервер|  
 |**parent_class_desc**|**nvarchar(60)**|Описание класса родителя. Всегда:<br /><br /> SERVER.|  
-|**parent_id**|**int**|Всегда равно 0 для триггеров на SERVER.|  
+|**parent_ID**|**int**|Всегда равно 0 для триггеров на SERVER.|  
 |**type**|**char(2)**|Тип объекта:<br /><br /> TA = триггер сборки (среда CLR)<br /><br /> TR = триггер SQL|  
 |**type_desc**|**nvarchar(60)**|Описание класса объекта.<br /><br /> CLR_TRIGGER<br /><br /> SQL_TRIGGER|  
 |**create_date**|**datetime**|Дата создания триггера.|  

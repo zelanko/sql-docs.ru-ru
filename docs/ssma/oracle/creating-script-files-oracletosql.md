@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 55e5bc68-3040-4f07-bb00-0408a17c9821
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: fe8dd1ebcc6604b8cff514cff3628abc23275517
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: a4ee7047e2c517f05f311bf4e842f8f4c64ca8fe
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63287252"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264241"
 ---
 # <a name="creating-script-files-oracletosql"></a>Создание файлов сценария (OracleToSQL)
 Первый шаг перед запуском приложения консоли SSMA заключается в создании файла скрипта и при необходимости создания файла значение переменной и файле подключения сервера.  
@@ -66,7 +66,7 @@ ms.locfileid: "63287252"
   
     </output-providers>  
     ```  
-    *или диспетчер конфигурации служб*  
+    *or*  
   
     ```xml  
     <...All commands...>  
@@ -103,7 +103,7 @@ ms.locfileid: "63287252"
   
     </output-providers>  
     ```  
-    *или диспетчер конфигурации служб*  
+    *or*  
   
     ```xml  
     <migrate-data>  
@@ -136,7 +136,7 @@ ms.locfileid: "63287252"
   
     </output-providers>  
     ```  
-    *или диспетчер конфигурации служб*  
+    *or*  
   
     ```xml  
     <!-- Connect to target database -->  
@@ -169,7 +169,7 @@ ms.locfileid: "63287252"
   
     </output-providers>  
     ```  
-    *или диспетчер конфигурации служб*  
+    *or*  
   
     ```xml  
     <!--synchronization-->  
@@ -180,7 +180,7 @@ ms.locfileid: "63287252"
   
     </synchronize-target>  
     ```  
-    *или диспетчер конфигурации служб*  
+    *or*  
   
     ```xml  
     <!--data migration-->  
@@ -215,7 +215,7 @@ ms.locfileid: "63287252"
   
     </output-providers>  
     ```  
-    *или диспетчер конфигурации служб*  
+    *or*  
   
     ```xml  
     <convert-schema object-name="<object-name>">  
@@ -268,7 +268,7 @@ ms.locfileid: "63287252"
   
     </output-providers>  
     ```  
-    *или диспетчер конфигурации служб*  
+    *or*  
   
     ```xml  
     <...All commands...>  
@@ -310,7 +310,7 @@ ms.locfileid: "63287252"
   
     </output-providers>  
     ```  
-    *или диспетчер конфигурации служб*  
+    *or*  
   
     ```xml  
     <...All commands...>  

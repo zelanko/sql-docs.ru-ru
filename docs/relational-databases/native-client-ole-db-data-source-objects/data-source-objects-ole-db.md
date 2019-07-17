@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: c1d4ed20-ad3b-4e33-a26b-38d7517237b7
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3b5d65c5df2d1ebc1e2b0435e02bd9668f3feb18
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f3ad8fa44e5222406f16be09a6157f96fac6b345
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627172"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68128675"
 ---
 # <a name="data-source-objects-ole-db"></a>Объекты источников данных (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "47627172"
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Собственный клиент использует источник данных, термин для набора интерфейсов OLE DB, используемый для установления связи с хранилищем данных, таких как [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Создание экземпляра объекта источника данных поставщика — первая задача [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] потребителя собственного клиента.  
   
- Каждый поставщик OLE DB объявляет свой идентификатор класса (CLSID). Идентификатор CLSID для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщика OLE DB для собственного клиента является идентификатором GUID C/C++ CLSID_SQLNCLI10 (символ SQLNCLI_CLSID будет разрешен в правильный идентификатор progid в файле sqlncli.h, на которую ссылается). Используя CLSID, потребитель может вызвать функцию OLE **CoCreateInstance** для создания экземпляра объекта источника данных.  
+ Каждый поставщик OLE DB объявляет свой идентификатор класса (CLSID). Идентификатор CLSID для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщик OLE DB для собственного клиента — C /C++ GUID CLSID_SQLNCLI10 (символ SQLNCLI_CLSID будет разрешен в правильный идентификатор progid в файле sqlncli.h, на которую ссылается). Используя CLSID, потребитель может вызвать функцию OLE **CoCreateInstance** для создания экземпляра объекта источника данных.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Собственный клиент — это внутрипроцессный сервер. Экземпляры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] объекты поставщика OLE DB для собственного клиента создаются с помощью макроса CLSCTX_INPROC_SERVER для указания на исполняемый контекст.  
   

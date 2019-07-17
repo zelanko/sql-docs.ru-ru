@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: c4458738-ed25-40a6-8294-a26ca5a05bd9
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 533f37252fa16e2e139f29ac843d6d4a933f13de
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 7dd10d28855cc4c10f5496c74f1f39a91826052f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58532148"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106537"
 ---
 # <a name="sysspcdcaddjob-transact-sql"></a>sys.sp_cdc_add_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @job_type = ] 'job\_type'` Тип добавляемого задания. *job_type* — **nvarchar(20)** и не может иметь значение NULL. Допустимыми входными значениями являются **'capture'** и **«cleanup»**.  
+`[ @job_type = ] 'job\_type'` Тип добавляемого задания. *job_type* — **nvarchar(20)** и не может иметь значение NULL. Допустимыми входными значениями являются **'capture'** и **«cleanup»** .  
   
 `[ @start_job = ] start_job` Флаг, указывающий запускать задание сразу после его добавления. *start_job* — **бит** значение по умолчанию 1.  
   
@@ -90,7 +89,7 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
   
  Так как задания очистки и отслеживания создаются по умолчанию, данная хранимая процедура используется только в тех случаях, когда задание необходимо повторно создать после выполнения явного удаления.  
   
- Именем задания является **cdc.**  _\<базы данных\_имя\>_**\_очистки** или **cdc.**  _\<базы данных\_имя\>_**\_захвата**, где *< имя_базы_данных >* имя в текущей базе данных. Если задание с таким именем уже существует, к имени добавляется с периодом (**.**) и уникальным идентификатором, например: **cdc. AdventureWorks_capture. A1ACBDED-13FC-428C-8302-10100EF74F52**.  
+ Именем задания является **cdc.**  _\<базы данных\_имя\>_ **\_очистки** или **cdc.**  _\<базы данных\_имя\>_ **\_захвата**, где *< имя_базы_данных >* имя в текущей базе данных. Если задание с таким именем уже существует, к имени добавляется с периодом ( **.** ) и уникальным идентификатором, например: **cdc. AdventureWorks_capture. A1ACBDED-13FC-428C-8302-10100EF74F52**.  
   
  Для просмотра текущей конфигурации задания очистки или отслеживания используйте [sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md). Чтобы изменить конфигурацию задания, используйте [sp_cdc_change_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-change-job-transact-sql.md).  
   

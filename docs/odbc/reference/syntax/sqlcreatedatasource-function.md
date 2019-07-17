@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 76ee851a-dca9-40cc-8e9e-eb3f74e560ee
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8b432e8d40952574f1264e07a0b09e91a1e334b3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0b3a6fced096c779b5ab91bf4e5b6a3f0a66e5f1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537604"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121389"
 ---
 # <a name="sqlcreatedatasource-function"></a>Функция SQLCreateDataSource
 **Соответствие стандартам**  
@@ -54,7 +53,7 @@ BOOL SQLCreateDataSource(
  **SQLCreateDataSource** возвращает TRUE, если создается источник данных. В противном случае возвращается значение FALSE.  
   
 ## <a name="diagnostics"></a>Диагностика  
- Когда **SQLCreateDataSource** возвращает значение FALSE, связанным  *\*pfErrorCode* значение можно получить, вызвав **SQLInstallerError**. В следующей таблице перечислены  *\*pfErrorCode* значения, которые могут быть возвращены **SQLInstallerError** и объясняется каждый из них в контексте этой функции.  
+ Когда **SQLCreateDataSource** возвращает значение FALSE, связанным  *\*pfErrorCode* значение можно получить, вызвав **SQLInstallerError**. В следующей таблице перечислены *\*pfErrorCode* значения, которые могут быть возвращены **SQLInstallerError** и объясняется каждый из них в контексте этой функции.  
   
 |*\*pfErrorCode*|Ошибка|Описание|  
 |---------------------|-----------|-----------------|  

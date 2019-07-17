@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 16849cfd-050c-4ac7-bd3d-a929aebb5010
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: acfc9cc5593001e3a9a918abe788494b1b7fd405
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 02d1d499cb9030b737028e59219fd779bde295c6
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63209832"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264674"
 ---
 # <a name="new-project-oracletosql"></a>Создание проекта (OracleToSQL)
 Используйте **новый проект** диалоговое окно для создания нового проекта SSMA. Чтобы получить доступ к **новый проект** диалоговом окне **файл** меню, щелкните **новый проект**.  

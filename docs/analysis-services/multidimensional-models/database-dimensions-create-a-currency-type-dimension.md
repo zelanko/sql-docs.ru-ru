@@ -1,5 +1,5 @@
 ---
-title: Создание измерения типа Currency | Документы Microsoft
+title: Создание измерения типа Currency | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 73c44e299e448606ce37848ee8f58dd0e15aea76
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027091"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68178886"
 ---
 # <a name="database-dimensions---create-a-currency-type-dimension"></a>Измерения базы данных — Создание измерения типа Currency
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

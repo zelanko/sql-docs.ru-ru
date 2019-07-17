@@ -10,12 +10,12 @@ ms.assetid: 40c1eb02-26b2-44ba-969d-6c430c61c281
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 57dde428be8a70b1476de390dbbd22549434c2ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9189087be52fbb23e8768dd64f0a63bb9d0fe480
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63453513"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266991"
 ---
 # <a name="sql-server-migration-assistant-for-access-accesstosql"></a>SQL Server Migration Assistant для Access (AccessToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) для доступа — это средство для переноса баз данных из [!INCLUDE[msCoName](../../includes/msconame_md.md)] доступ к версиям 97 до 2010 к [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2017 в Windows и Linux (Предварительная версия) / [!INCLUDE[msCoName](../../includes/msconame_md.md)] база данных Azure SQL. SSMA для Access преобразует объекты базы данных доступ к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или объекты базы данных Azure SQL, загружает эти объекты в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или Azure SQL, и затем переносит данные из доступ к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или Azure SQL.  

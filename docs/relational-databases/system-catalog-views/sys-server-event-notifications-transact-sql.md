@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 1a83a044-3130-4551-95ca-162525846ff5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b985d915d3d7bb6b3130ccb63a400f314fa05a38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8e3eaa1bdfa45e0c3e0b0412b8852e134c43c3eb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62860916"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124990"
 ---
 # <a name="sysservereventnotifications-transact-sql"></a>sys.server_event_notifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "62860916"
 |**object_id**|**int**|Идентификационный номер объекта. Уникален в пределах **master** базы данных.|  
 |**parent_class**|**tinyint**|Класс родителя. Всегда равен 100 = Сервер.|  
 |**parent_class_desc**|**nvarchar(60)**|Описание класса родителя. Всегда SERVER.|  
-|**parent_id**|**int**|Всегда равно 0.|  
+|**parent_ID**|**int**|Всегда равно 0.|  
 |**create_date**|**datetime**|Дата создания.|  
 |**modify_date**|**datetime**|Дата последнего изменения объекта с помощью инструкции ALTER.|  
 |**service_name**|**nvarchar(256)**|Имя целевой службы, куда посылается уведомление.|  

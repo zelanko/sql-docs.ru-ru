@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 651b13121653f5627f59bc6a8a11f1e2e49c43b2
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130324"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211845"
 ---
 # <a name="modify-check-constraints"></a>Изменение проверочного ограничения
   Изменение проверочных ограничений в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] осуществляется в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)] , если необходимо изменить выражение ограничения или параметры, включающие или отключающие ограничение для конкретных условий.  
@@ -50,7 +50,7 @@ ms.locfileid: "54130324"
   
 1.  В **обозревателе объектов**щелкните правой кнопкой мыши таблицу, содержащую проверочное ограничение, и выберите пункт **Конструктор**.  
   
-2.  В меню **Конструктор таблиц** выберите **Проверочные ограничения...**.  
+2.  В меню **Конструктор таблиц** выберите **Проверочные ограничения...** .  
   
 3.  В диалоговом окне **Проверочные ограничения** выберите ограничение, которое нужно изменить, из списка **Выбранное проверочное ограничение**.  
   

@@ -14,18 +14,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f4d18ef352c3e5ab6342e573d16bc3deaed5db72
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753966"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211992"
 ---
 # <a name="create-a-resource-pool"></a>Создание пула ресурсов
   Можно создать пул ресурсов в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
--   **Перед началом работы**  [Ограничения](#LimitationsRestrictions), [разрешения](#Permissions)  
+-   **Перед началом:**  [ограничения](#LimitationsRestrictions), [разрешения](#Permissions)  
   
--   **Для создания ресурса пула с помощью:**  [SQL Server Management Studio](#CreRPProp), [Transact-SQL](#CreRPTSQL)  
+-   **Создание пула ресурсов с использованием:**  [среды SQL Server Management Studio](#CreRPProp), [Transact-SQL](#CreRPTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   

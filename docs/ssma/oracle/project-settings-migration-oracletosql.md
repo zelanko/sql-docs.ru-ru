@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: fcd6b988-633b-4b2b-9f36-6368b5e86b60
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: f1391c44f5dd6f231a1a0beb734fd71548f28a43
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 8c9d934cc74bbafc5dca4517a063aaeb8c49e9a1
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62630904"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266603"
 ---
 # <a name="project-settings-migration-oracletosql"></a>Параметры проекта (миграция) (OracleToSQL)
 На странице миграции **параметры проекта** диалоговое окно содержит настройки, установленные как SSMA переносит данные из Oracle в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

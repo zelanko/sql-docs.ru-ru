@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5ab4f304d865992a3269b4ee83c9e25f61069e8c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37984696"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210260"
 ---
 # <a name="analysis-services-backward-compatibility-sql-server-2016"></a>Обратная совместимость служб анализа (SQL Server 2016)
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "37984696"
   
 |||  
 |-|-|  
-|**Режим/категории**|**Компонент**|  
+|**Режим/категории**|**Возможность**|  
 |Multidimensional|Удаленные секции|  
 |Multidimensional|Удаленные связанные группы мер|  
 |Multidimensional|Многомерная обратная запись|  
@@ -39,7 +39,7 @@ ms.locfileid: "37984696"
 |Табличный|Уровни совместимости 1100 и 1103 табличной модели не будут поддерживаться в будущем выпуске. Замена — можно задать на уровне совместимости 1200 или выше, преобразовав определения модели в табличных метаданных. См. раздел [Уровень совместимости табличных моделей в службах Analysis Services](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md).|  
 |Инструменты|Приложение SQL Server Profiler для перехвата трассировки<br /><br /> В качестве замены можно использовать профилировщик расширенных событий, встроенный в SQL Server Management Studio.  <br /> См. раздел [Monitor Analysis Services with SQL Server Extended Events](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md).|  
 |Инструменты|Воспроизведение трассировки с помощью приложения SQL Server Profiler <br />Замена. Замена отсутствует.|  
-|Объекты управления трассировкой и интерфейсы API трассировки|Объекты Microsoft.AnalysisServices.Trace (содержат интерфейсы API для объектов трассировки и воспроизведения Analysis Services). Замена состоит из нескольких частей:<br /><br /> — Настройка трассировки: Microsoft.SqlServer.Management.xevent;<br />— Чтение трассировки: Microsoft.SqlServer.XEvent.Linq<br />— воспроизведение трассировки: отсутствует.|  
+|Объекты управления трассировкой и интерфейсы API трассировки|Объекты Microsoft.AnalysisServices.Trace (содержат интерфейсы API для объектов трассировки и воспроизведения Analysis Services). Замена состоит из нескольких частей:<br /><br /> — Настройка трассировки: Microsoft.SqlServer.Management.XEvent<br />-Чтение трассировки: Microsoft.SqlServer.XEvent.Linq<br />— Воспроизведение трассировки: None|  
   
 > [!NOTE]  
 >  Предыдущие объявления нерекомендуемых функций из [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] остаются в силе. Так как код поддержки этих функций еще не удален из продукта, многие из них все еще присутствуют в данной версии. Хотя объявленные ранее нерекомендуемыми функции могут быть доступны, они все равно считаются таковыми и могут быть физически удалены из продукта в любое время.  
@@ -51,7 +51,7 @@ ms.locfileid: "37984696"
 
 |||  
 |-|-|  
-|**Компонент**|**Замена или решение**|  
+|**Возможность**|**Замена или решение**|  
 |[CalculationPassValue (многомерные выражения)](../mdx/calculationpassvalue-mdx.md)|Нет. Эта функция устарела в SQL Server 2005.|  
 |[CalculationCurrentPass (многомерные выражения)](../mdx/calculationcurrentpass-mdx.md)|Нет. Эта функция устарела в SQL Server 2005.|  
 |Подсказка оптимизатора запросов NON_EMPTY_BEHAVIOR|Нет. Эта функция устарела в SQL Server 2008.|  

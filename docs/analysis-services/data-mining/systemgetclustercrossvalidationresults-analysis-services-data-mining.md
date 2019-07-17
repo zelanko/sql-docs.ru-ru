@@ -1,5 +1,5 @@
 ---
-title: Хранимая процедура SystemGetClusterCrossValidationResults (службы Analysis Services — Интеллектуальный анализ данных) | Документы Microsoft
+title: SystemGetClusterCrossValidationResults (службы Analysis Services — Интеллектуальный анализ данных) | Документация Майкрософт
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ce11f7cb54d40336633d09a5d6601f0366c6bf55
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018881"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209635"
 ---
 # <a name="systemgetclustercrossvalidationresults-analysis-services---data-mining"></a>Хранимая процедура SystemGetClusterCrossValidationResults (службы Analysis Services — интеллектуальный анализ данных)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -119,7 +119,7 @@ CALL SystemGetClusterCrossValidationResults(
   
  Образец результатов.  
   
-|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|Тест|Мера|Значение|  
+|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|Тест|Measure|Значение|  
 |---------------|-------------------|--------------------|--------------------|-------------------|----------|-------------|-----------|  
 |Кластер 1|||1|3025|Кластеризация|Вероятность варианта|0.930524511864121|  
 |Кластер 1|||2|3025|Кластеризация|Вероятность варианта|0.919184178430778|  
@@ -133,8 +133,8 @@ CALL SystemGetClusterCrossValidationResults(
   
 ## <a name="see-also"></a>См. также  
  [SystemGetCrossValidationResults (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)   
- [SystemGetAccuracyResults &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
- [Хранимая процедура SystemGetClusterCrossValidationResults](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
- [SystemGetClusterAccuracyResults & #40; Службы Analysis Services — Интеллектуальный анализ данных & #41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
+ [SystemGetAccuracyResults (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
+ [SystemGetClusterCrossValidationResults](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
+ [SystemGetClusterAccuracyResults (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
   
   

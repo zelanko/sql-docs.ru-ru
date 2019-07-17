@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: b85df83b-ba56-43bf-bcdf-b2a6fca43276
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6f87258630e033949c1dc83efacb959c5c9796cf
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: ed725ac58b7224ad157dd7b5d06b3b522395023b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041625"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68220388"
 ---
 # <a name="sqlxml-40-net-framework-support---using-bulk-load"></a>Поддержка SQLXML 4.0 на платформе .NET Framework — использование массовой загрузки
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "56041625"
  Для использования объекта COM массовой загрузки SQLXML в управляемой среде необходимо добавить в этот объект ссылку на проект. Это сформирует управляемый интерфейс оболочки объекта массовой загрузки COM.  
   
 > [!NOTE]  
->  Управляемая массовая загрузка XML не работает с управляемыми потоками и требует оболочки собственных потоков. Компонент массовой загрузки SQLXML не будет запущен в многопоточной среде (атрибут '[MTAThread]'). При попытке запустить компонент массовой загрузки в многопоточной среде, вы получаете исключение InvalidCastException со следующими дополнительными сведениями: «Метод QueryInterface для интерфейса SQLXMLBULKLOADLib.ISQLXMLBulkLoad завершился с ошибкой». Обойти это можно сделать объект, содержащий Массовая загрузка объекта одним потоком доступ (например, с помощью **[STAThread]** атрибута, как показано в примере).  
+>  Управляемая массовая загрузка XML не работает с управляемыми потоками и требует оболочки собственных потоков. Компонент массовой загрузки SQLXML не будет запущен в многопоточной среде (атрибут '[MTAThread]'). При попытке запустить компонент массовой загрузки в многопоточной среде, вы получаете исключение InvalidCastException со следующими дополнительными сведениями: «Ошибка QueryInterface для интерфейса SQLXMLBULKLOADLib.ISQLXMLBulkLoad». Обойти это можно сделать объект, содержащий Массовая загрузка объекта одним потоком доступ (например, с помощью **[STAThread]** атрибута, как показано в примере).  
   
  Этот раздел содержит образец реализации приложения на языке C# для массовой загрузки XML-данных в базу данных. Чтобы создать образец реализации, выполните следующие шаги.  
   

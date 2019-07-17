@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c851c1ab-3b29-4b99-9902-78c2665a844b
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: c6a6e31b4dc36e0f280dfb03d8eadf09a7d4ff7c
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 957bbdc43c0f0adf3a545fee76e9f69df130d8f9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534866"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68116674"
 ---
 # <a name="xpgrantlogin-transact-sql"></a>xp_grantlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ xp_grantlogin {[@loginame = ] 'login'} [,[@logintype = ] 'logintype']
 ## <a name="arguments"></a>Аргументы  
 `[ @loginame = ] 'login'` — Имя пользователя Windows или группы для добавления. Windows пользователь или группа должны быть дополнены именем домена Windows в виде *домена*\\*пользователя*. *Имя входа* — **sysname**, не имеет значения по умолчанию.  
   
-`[ @logintype = ] 'logintype'` Уровень безопасности имени входа предоставляется доступ. *Тип учетных данных* — **varchar(5)**, значение по умолчанию NULL. Только **администратора** можно указать. Если **администратора** указано, *входа* к предоставлен [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]и добавляется как член **sysadmin** предопределенной роли сервера.  
+`[ @logintype = ] 'logintype'` Уровень безопасности имени входа предоставляется доступ. *Тип учетных данных* — **varchar(5)** , значение по умолчанию NULL. Только **администратора** можно указать. Если **администратора** указано, *входа* к предоставлен [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]и добавляется как член **sysadmin** предопределенной роли сервера.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  

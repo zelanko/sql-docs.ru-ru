@@ -1,5 +1,5 @@
 ---
-title: Экспорт и импорт объектов интеллектуального анализа данных | Документы Microsoft
+title: Экспорт и импорт объектов интеллектуального анализа данных | Документация Майкрософт
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: eb1726006db1693e94e12326617436bdff7ae73e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018941"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210013"
 ---
 # <a name="export-and-import-data-mining-objects"></a>Экспорт и импорт объектов интеллектуального анализа данных
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -42,10 +42,10 @@ ms.locfileid: "34018941"
   
  Структуру или модель интеллектуального анализа данных можно также импортировать с помощью команды **Restore** . Модели или структуры будут восстановлены в базе данных с тем же именем, что и в базе данных, из которой они были экспортированы. Дополнительные сведения см. в статье [Restore Options](../../analysis-services/multidimensional-models/restore-options.md).  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
  Невозможно импортировать модель или структуру на сервер, если на этом сервере уже существует модель или структура с таким же именем. Кроме того, невозможно экспортировать объект интеллектуального анализа данных и затем изменить имя этого объекта в файле экспорта. Следовательно, если предполагается возможность возникновения конфликта имен, следует либо удалить объект интеллектуального анализа данных на целевом сервере, либо переименовать этот объект интеллектуального анализа данных до выполнения операции экспорта определения.  
   
 ## <a name="see-also"></a>См. также  
- [Управление решениями интеллектуального анализа данных и объектов](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md)  
+ [Управление решениями и объектами интеллектуального анализа данных](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md)  
   
   

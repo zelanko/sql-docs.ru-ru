@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6ccb44bc-8695-4bad-91af-363ef22bdb85
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d61f6e2d5c2999a1ff7cea86d497eb4f0fb13244
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 49f0023f726dd4bb290ffba1018ce2608800dd90
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63061602"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68216362"
 ---
 # <a name="getting-long-data"></a>Получение данных типа Long
 Определите СУБД *данные большой длины* как любой символьных или двоичных данных через определенный размер, например 255 символов. Эти данные могут быть достаточно небольшим, чтобы хранить в один буфер, такие как часть описания несколько тысяч символов. Тем не менее возможно, слишком длинное для хранения в памяти, такие как длинные текстовые документы или растровые изображения. Поскольку такие данные не могут храниться в один буфер, он извлекается из драйвера в частях с **SQLGetData** после другие данные в строке были получены.  

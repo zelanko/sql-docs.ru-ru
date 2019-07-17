@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: dd32be6b-10d1-4059-b4fd-0bf817f40d54
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 04abb6062986e17f4f84c9d4ac6f6bd1ef6d2204
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a96d536143c7e636045eb926e9240e047c78070b
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67899986"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265805"
 ---
 # <a name="sysdmosmemorycacheentries-transact-sql"></a>sys.dm_os_memory_cache_entries (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "67899986"
 ## <a name="permissions"></a>Разрешения 
 
 На [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], требуется `VIEW SERVER STATE` разрешение.   
-В [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] необходимо разрешение `VIEW DATABASE STATE` для базы данных.   
+На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровней Premium необходимо `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровней Standard и Basic, требует **администратора сервера** или **администратор Azure Active Directory** учетной записи.   
 
 ## <a name="see-also"></a>См. также  
  

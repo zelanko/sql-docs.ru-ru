@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b1baf29a88ff25eb278271719680d1979940c590
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367909"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211497"
 ---
 # <a name="planning-a-sql-server-installation"></a>Планирование установки SQL Server
   Чтобы установить [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], выполните описанные далее действия.  
@@ -57,7 +57,7 @@ ms.locfileid: "53367909"
  [Версии SQL Server на местных языках](../../../2014/sql-server/install/local-language-versions-in-sql-server.md)  
  В этом разделе рассматриваются локализованные версии [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-## <a name="related-sections"></a>См. также  
+## <a name="related-sections"></a>Связанные разделы  
  [Установка SQL Server 2014](../../database-engine/install-windows/install-sql-server.md)  
  В этом разделе представлены общие сведения о разных параметрах установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   

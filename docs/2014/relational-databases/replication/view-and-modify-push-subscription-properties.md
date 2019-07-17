@@ -18,11 +18,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5dc55cc688f4e40d188492636c3653556f88b1c6
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127264"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68212011"
 ---
 # <a name="view-and-modify-push-subscription-properties"></a>Просмотр и изменение свойств принудительной подписки
   В данном разделе описывается просмотр и изменение свойств принудительной подписки в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] при помощи среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]или объектов RMO.  
@@ -40,7 +40,7 @@ ms.locfileid: "54127264"
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
  Просмотр и изменение свойств принудительной подписки со стороны издателя:  
   
--   **Свойства подписки — \<издатель >: \<База данных публикации >** диалоговое окно, которое доступно из [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+-   В диалоговом окне **Свойства подписки — \<издатель>: \<база данных публикации>** , которое доступно из среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 -   На вкладке **Все подписки** в мониторе репликации. Сведения о запуске монитора репликации см. в [этой статье](monitor/start-the-replication-monitor.md).  
   
@@ -69,15 +69,15 @@ ms.locfileid: "54127264"
   
 #### <a name="to-view-the-properties-of-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>Просмотр свойств принудительной подписки на публикацию моментальных снимков или транзакций  
   
-1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_helpsubscription](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql). Укажите параметры **@publication**, **@subscriber**и значение **all** в параметре **@article**.  
+1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_helpsubscription](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql). Укажите параметры **@publication** , **@subscriber** и значение **all** в параметре **@article** .  
   
-2.  На издателе в базе данных публикации выполните хранимую процедуру [sp_helpsubscription](/sql/relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql), указав параметр **@subscriber**.  
+2.  На издателе в базе данных публикации выполните хранимую процедуру [sp_helpsubscription](/sql/relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql), указав параметр **@subscriber** .  
   
 #### <a name="to-change-the-properties-of-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>Изменение свойств принудительной подписки на публикацию моментальных снимков или транзакций  
   
 1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_helpsubscription](/sql/relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql), указав параметр **@subscriber** и любые параметры для свойств подписчика, которые нужно изменить.  
   
-2.  На издателе в базе данных публикации выполните хранимую процедуру [sp_changesubscription](/sql/relational-databases/system-stored-procedures/sp-changesubscription-transact-sql). Укажите параметры **@publication**, **@subscriber**, **@destination_db**, значение **all** в параметре **@article**, изменяемое свойство подписки в параметре **@property**и новое значение в параметре **@value**. При этом изменятся параметры безопасности для принудительной подписки.  
+2.  На издателе в базе данных публикации выполните хранимую процедуру [sp_changesubscription](/sql/relational-databases/system-stored-procedures/sp-changesubscription-transact-sql). Укажите параметры **@publication** , **@subscriber** , **@destination_db** , значение **all** в параметре **@article** , изменяемое свойство подписки в параметре **@property** и новое значение в параметре **@value** . При этом изменятся параметры безопасности для принудительной подписки.  
   
 3.  Чтобы изменить свойства пакета служб DTS подписки, выполните хранимую процедуру [sp_changesubscriptiondtsinfo](/sql/relational-databases/system-stored-procedures/sp-changesubscriptiondtsinfo-transact-sql) на подписчике для базы данных подписки (необязательно). Укажите идентификатор задания агента распространителя в параметре **@jobid** и следующие свойства пакета служб DTS.  
   
@@ -94,13 +94,13 @@ ms.locfileid: "54127264"
   
 #### <a name="to-view-the-properties-of-a-push-subscription-to-a-merge-publication"></a>Просмотр свойств принудительной подписки на публикацию слиянием  
   
-1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_helpmergesubscription](/sql/relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql). Укажите параметры **@publication** и **@subscriber**.  
+1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_helpmergesubscription](/sql/relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql). Укажите параметры **@publication** и **@subscriber** .  
   
-2.  Выполните на издателе процедуру [sp_helpsubscription](/sql/relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql), указав параметр **@subscriber**.  
+2.  Выполните на издателе процедуру [sp_helpsubscription](/sql/relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql), указав параметр **@subscriber** .  
   
 #### <a name="to-change-the-properties-of-a-push-subscription-to-a-merge-publication"></a>Изменение свойств принудительной подписки на публикацию слиянием  
   
-1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_changemergesubscription](/sql/relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql). Укажите параметры **@publication**, **@subscriber**, **@subscriber_db**, изменяемое свойство подписки в параметре **@property**и новое значение в параметре **@value**.  
+1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_changemergesubscription](/sql/relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql). Укажите параметры **@publication** , **@subscriber** , **@subscriber_db** , изменяемое свойство подписки в параметре **@property** и новое значение в параметре **@value** .  
   
 ###  <a name="TsqlExample"></a> Примеры (Transact-SQL)  
   

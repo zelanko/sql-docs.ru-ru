@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f5e0abec-8f24-42e0-b94f-16dd1f2004fd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5dd36e82b71ff862a543bfa38cda4b4a660738a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 649c00f1db486dab4a996138be4e26b0e270fbae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63287745"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106296"
 ---
 # <a name="arguments-in-catalog-functions"></a>Аргументы в функциях каталога
 Все функции работы с каталогами принимать аргументы, с которыми приложение можно ограничить объем возвращаемых данных. Например, первый и второй вызовы **SQLTables** в следующем коде возвращает результирующий набор, содержащий сведения обо всех таблицах, а третий вызов возвращает сведения о таблице Orders:  
@@ -34,7 +33,7 @@ SQLTables(hstmt3, NULL, 0, NULL, 0, "Orders", SQL_NTS, NULL, 0);
   
  Строковые аргументы функции каталога делятся на четыре различных типа: обычный аргумент (OA), аргумент значения шаблона (PV), аргумента идентификатора (ID) и аргумент значения списка (Корпоративная лицензия). Большинство строковых аргументов может быть одного из двух различных типов, в зависимости от значения атрибута SQL_ATTR_METADATA_ID инструкции. В следующей таблице перечислены аргументы для каждой функции каталога и описывает тип аргумента для значения SQL_TRUE или SQL_FALSE SQL_ATTR_METADATA_ID.  
   
-|Компонент|Аргумент|Время SQL_<br /><br /> ATTR_METADATA_<br /><br /> ID = SQL_FALSE|Время SQL_<br /><br /> ATTR_METADATA_<br /><br /> ИДЕНТИФИКАТОР = SQL_TRUE|  
+|Компонент|Аргумент|Время SQL_<br /><br /> ATTR_METADATA_<br /><br /> ИДЕНТИФИКАТОР = SQL_FALSE|Время SQL_<br /><br /> ATTR_METADATA_<br /><br /> ИДЕНТИФИКАТОР = SQL_TRUE|  
 |--------------|--------------|---------------------------------------------------------------|--------------------------------------------------------------|  
 |**SQLColumnPrivileges**|*CatalogName* *SchemaName* *TableName* *ColumnName*|OA OA OA PV|ИДЕНТИФИКАТОР ID ИДЕНТИФИКАТОРОМ ID|  
 |**SQLColumns**|*CatalogName* *SchemaName* *TableName* *ColumnName*|OA PV PV PV|ИДЕНТИФИКАТОР ID ИДЕНТИФИКАТОРОМ ID|  

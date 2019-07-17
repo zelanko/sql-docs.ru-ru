@@ -23,12 +23,12 @@ ms.assetid: 82374ad2-7737-4164-a489-13261ba393d4
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 20efdf681baa8305b3b2be08b2e9f3efe999d3fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 115aa0db8e8d6f2fdc35718ccb60f1d0ed06b5c1
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62760138"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68259905"
 ---
 # <a name="linking-access-applications-to-sql-server---azure-sql-db-accesstosql"></a>Связь приложений Access SQL Server — база данных SQL Azure (AccessToSQL)
 Если вы хотите использовать существующие приложения Access с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], можно связать исходные таблицы Access с перенесенными [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или таблиц SQL Azure. Связывание изменяет базу данных Access, благодаря чему ваши запросы, формы, отчеты и данные доступа к страницам использовать данные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или базы данных SQL Azure вместо данных в базе данных.  

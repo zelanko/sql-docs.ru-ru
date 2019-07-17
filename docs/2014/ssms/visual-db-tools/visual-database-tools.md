@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 085afa47a00875f5311e6996502e9030b6070920
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763066"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211224"
 ---
 # <a name="visual-database-tools"></a>Визуальные инструменты для баз данных
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] включает визуальные конструкторы для построения запросов [!INCLUDE[tsql](../../includes/tsql-md.md)] и таблиц, а также формирования диаграмм баз данных.  

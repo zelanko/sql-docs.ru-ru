@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 9e49c25f-9216-43f4-8e99-2eaab298e215
 author: Shamikg
 ms.author: Shamikg
-manager: v-pelars
-ms.openlocfilehash: 8793e1ddd29d5327a02a2a4077daf4c643a8c316
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 7e45f85a26d2beaaba552707681e574bae4795cc
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62625768"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266509"
 ---
 # <a name="save-metadata--oracletosql"></a>Сохранение метаданных (OracleToSQL)
 **Сохранить метаданные** диалоговое окно с предложением загрузить метаданные в проект SSMA, прежде чем сохранить его. Это позволяет, у вас есть полный файл проекта, которые можно использовать в автономном режиме и отправить другим пользователям, например отдела технической поддержки.  

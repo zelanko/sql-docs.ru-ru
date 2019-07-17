@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4c118cb1-2008-44e2-a797-34b7dc34d6b1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6f2843456f4f95d1019b51f82082d59977ce14d5
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: ce5d59e050aafa69a0b2584c66328c568f5ddee1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493699"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118059"
 ---
 # <a name="spaddmergefilter-transact-sql"></a>sp_addmergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ sp_addmergefilter [ @publication = ] 'publication'
   
 `[ @join_articlename = ] 'join_articlename'` Родительская статья, к которой дочерняя статья, указанная с *статье*, должны быть соединены с помощью предложения join, указанного по *join_filterclause*, чтобы определить строки дочерней статьи, которые соответствуют критерию фильтрации фильтра слияния. *join_articlename* — **sysname**, не имеет значения по умолчанию. Статья должна находиться в публикации, указанной аргументом *публикации*.  
   
-`[ @join_filterclause = ] join_filterclause` Предложение соединения, который должен использоваться для соединения дочерней статьи, определяемое *статье*и родительской статьей, указанной аргументом *join_article*, для определения строк, указывающих фильтр слияния. *join_filterclause* — **nvarchar(1000)**.  
+`[ @join_filterclause = ] join_filterclause` Предложение соединения, который должен использоваться для соединения дочерней статьи, определяемое *статье*и родительской статьей, указанной аргументом *join_article*, для определения строк, указывающих фильтр слияния. *join_filterclause* — **nvarchar(1000)** .  
   
 `[ @join_unique_key = ] join_unique_key` Указывает, если соединение между дочерней статьей *статье*и родительской статьей *join_article*один ко многим, один к одному, многие к одному или многие ко многим. *join_unique_key* — **int**, значение по умолчанию 0. **0** указывает на соединение многие к одному "или" многие ко многим. **1** указывает на соединение один к одному "или" один ко многим. Это значение равно **1** Если соединяемые столбцы формируют уникальный ключ в *join_article*, или если *join_filterclause* между внешним ключом в *статье* и первичный ключ в *join_article*.  
   

@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dfaba668e4f2328610656db6a61f01960814bff0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52784426"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68189514"
 ---
 # <a name="create-a-sql-server-agent-proxy"></a>Создание учетной записи-посредника агента SQL Server
   В этом разделе описано, как создать учетную запись-посредник агента SQL Server в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -56,7 +56,7 @@ ms.locfileid: "52784426"
   
 ####  <a name="Permissions"></a> Permissions  
   
--   Только члены предопределенной роли сервера **sysadmin** имеют разрешение на создание, изменение или удаление учетных записей-посредников. Пользователи, не являющиеся членами из **sysadmin** предопределенной роли сервера необходимо добавить одно из следующих [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предопределенных ролей базы данных в агент **msdb** базу данных для использования прокси-серверов: **SQLAgentUserRole**, **SQLAgentReaderRole**, или **SQLAgentOperatorRole**.  
+-   Только члены предопределенной роли сервера **sysadmin** имеют разрешение на создание, изменение или удаление учетных записей-посредников. Пользователи, не являющиеся членами предопределенной роли сервера **sysadmin**, должны быть добавлены к одной из следующих предопределенных ролей базы данных агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в базе данных **msdb**, чтобы использовать записи-посредники: **SQLAgentUserRole**, **SQLAgentReaderRole** или **SQLAgentOperatorRole**.  
   
 -   При создании учетных данных в дополнение к учетной записи-посреднику требуется разрешение `ALTER ANY CREDENTIAL`.  
   

@@ -20,12 +20,12 @@ author: bluefooted
 ms.author: pamela
 manager: amitban
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 71e32cbe889a6c8236bf536a83109b37e6845842
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 31b1a282e6d68bf9a31f26536926f9dccd4ff6de
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67833002"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263824"
 ---
 # <a name="sysdmdbpageinfo-transact-sql"></a>sys.dm_db_page_info (Transact-SQL)
 
@@ -59,11 +59,11 @@ sys.dm_db_page_info ( DatabaseId, FileId, PageId, Mode )
 |file_id |ssNoversion |Идентификатор файла |
 |page_id |ssNoversion |Идентификатор страницы |
 |page_type |ssNoversion |Тип страницы |
-|page_type_desc |nvarchar(64) |Описание типа страницы |
-|page_flag_bits |nvarchar(64) |Флаговые биты в заголовке страницы |
+|page_type_desc |Nvarchar(64) |Описание типа страницы |
+|page_flag_bits |Nvarchar(64) |Флаговые биты в заголовке страницы |
 |page_flag_bits_desc |nvarchar(256) |Описание bits флаг в заголовке страницы |
-|page_type_flag_bits |nvarchar(64) |Введите флаговые биты в заголовке страницы |
-|page_type_flag_bits_desc |nvarchar(64) |Описание bits флаг типа в заголовке страницы |
+|page_type_flag_bits |Nvarchar(64) |Введите флаговые биты в заголовке страницы |
+|page_type_flag_bits_desc |Nvarchar(64) |Описание bits флаг типа в заголовке страницы |
 |object_id |ssNoversion |Идентификатор объекта, получившего страницы |
 |index_id |ssNoversion |Идентификатор индекса (0 для страниц данных кучи) |
 |partition_id |BIGINT |Идентификатор секции |
@@ -77,35 +77,35 @@ sys.dm_db_page_info ( DatabaseId, FileId, PageId, Mode )
 |pfs_file_id |smallint |Идентификатор файла соответствующий PFS-страницы |
 |pfs_page_id |ssNoversion |Идентификатор соответствующего PFS-страницы |
 |pfs_alloc_percent |ssNoversion |Процент распределения, как указано в PFS байтов |
-|pfs_status |nvarchar(64) |PFS байтов |
-|pfs_status_desc |nvarchar(64) |Описание PFS байта |
+|pfs_status |Nvarchar(64) |PFS байтов |
+|pfs_status_desc |Nvarchar(64) |Описание PFS байта |
 |gam_file_id |smallint |Идентификатор файла, соответствующей страницы GAM |
 |gam_page_id |ssNoversion |Идентификатор страницы, соответствующей страницы GAM |
 |gam_status |bit |Чтобы указать, если бит выделенный в GAM |
-|gam_status_desc |nvarchar(64) |Описание состояния бита на карте GAM |
+|gam_status_desc |Nvarchar(64) |Описание состояния бита на карте GAM |
 |sgam_file_id |smallint |Идентификатор файла, соответствующий SGAM-страницы |
 |sgam_page_id |ssNoversion |Идентификатор страницы, соответствующий SGAM-страницы |
 |sgam_status |bit |Чтобы указать, если бит выделенных в SGAM |
-|sgam_status_desc |nvarchar(64) |Описание состояния соответствующий бит SGAM |
+|sgam_status_desc |Nvarchar(64) |Описание состояния соответствующий бит SGAM |
 |diff_map_file_id |smallint |Идентификатор соответствующей страницы битовой карте разностного файла |
 |diff_map_page_id |ssNoversion |Идентификатор страницы, соответствующей страницы разностная битовая карта |
 |diff_status |bit |Бит, чтобы указать, если изменяется состояние копирования |
-|diff_status_desc |nvarchar(64) |Описание состояния бита diff |
+|diff_status_desc |Nvarchar(64) |Описание состояния бита diff |
 |ml_file_id |smallint |Идентификатор файла на соответствующей странице точечного рисунка минимальное протоколирование |
 |ml_page_id |ssNoversion |Идентификатор страницы, соответствующей страницы точечного рисунка минимальное протоколирование |
 |ml_status |bit |Бит, чтобы указать, если страницы минимальный журнал |
-|ml_status_desc |nvarchar(64) |Описание состояния минимальное протоколирование бит |
+|ml_status_desc |Nvarchar(64) |Описание состояния минимальное протоколирование бит |
 |free_bytes |smallint |Количество свободных байт на страницу |
 |free_data_offset |ssNoversion |Смещение свободного места в конце области данных |
 |reserved_bytes |smallint |Количество свободных байт, зарезервированной с помощью все транзакции (Если куча) <br> Количество фантомных строк (если конечный индекс) |
 |reserved_xdes_id |smallint |Пространство, порожденного m_xdesID для m_reservedCnt <br> Только для отладки |
-|xdes_id |nvarchar(64) |Последняя транзакция, порожденного m_reserved <br> Только для отладки |
+|xdes_id |Nvarchar(64) |Последняя транзакция, порожденного m_reserved <br> Только для отладки |
 |prev_page_file_id |smallint |Предыдущий идентификатор файла страницы |
 |prev_page_page_id |ssNoversion |Предыдущей страницы, идентификатор страницы |
 |next_page_file_id |smallint |Следующий идентификатор файла страницы |
 |next_page_page_id |ssNoversion |Следующая страница идентификатор страницы |
 |min_len |smallint |Длина строки фиксированного размера |
-|lsn |nvarchar(64) |Регистрационный номер / метки времени |
+|lsn |Nvarchar(64) |Регистрационный номер / метки времени |
 |header_version |ssNoversion |Версия заголовка страницы |
 
 ## <a name="remarks"></a>Примечания

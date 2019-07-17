@@ -10,12 +10,12 @@ ms.assetid: 84abdd92-682c-404b-879d-7879bdf5b468
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: faa24a68b0f8a8e6eecdacae41afeecb529af3b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fefccd8e57f3e6772da391421fbbba133200de05
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62640138"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266492"
 ---
 # <a name="sql-server-migration-assistant-for-oracle-oracletosql"></a>SQL Server Migration Assistant для Oracle (OracleToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) для Oracle — это средство для переноса баз данных Oracle в [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012, [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 г., [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 г., [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2017 в Windows и Linux (Предварительная версия) и Azure SQL DB. SSMA для Oracle преобразует объекты базы данных Oracle для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] объектов базы данных, создает эти объекты в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], а затем переносит данные из Oracle в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

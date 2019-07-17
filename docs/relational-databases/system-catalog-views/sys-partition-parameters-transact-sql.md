@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 2012ed9d-3ea3-4c29-9b78-dfa54a392dce
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 464fc14c2dbb192fb5c06aee7c718cfec5806d54
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 32fe257f14c1e085a43b4150ee933888a83d5d14
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791162"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68125344"
 ---
 # <a name="syspartitionparameters-transact-sql"></a>sys.partition_parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,8 +38,8 @@ ms.locfileid: "47791162"
 |**parameter_id**|**int**|Идентификатор параметра. Уникален внутри функции секционирования, начинается с 1.|  
 |**system_type_id**|**tinyint**|Идентификатор системного типа параметра. Соответствует **system_type_id** столбец **sys.types** представления каталога.|  
 |**max_length**|**smallint**|Максимальная длина аргумента в байтах.|  
-|**Точность**|**tinyint**|Для числового аргумента — точность; иначе 0.|  
-|**Масштаб**|**tinyint**|Масштаб числового аргумента; иначе 0.|  
+|**precision**|**tinyint**|Для числового аргумента — точность; иначе 0.|  
+|**масштаб**|**tinyint**|Масштаб числового аргумента; иначе 0.|  
 |**collation_name**|**sysname**|Имя параметров сортировки параметра, если он является символьным; в противном случае значение NULL.|  
 |**user_type_id**|**int**|Идентификатор типа данных. Уникален в пределах базы данных. Для системных типов данных **user_type_id** = **system_type_id**.|  
   

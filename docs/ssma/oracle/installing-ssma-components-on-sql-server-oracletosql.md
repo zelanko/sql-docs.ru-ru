@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 33070e5f-4e39-4b70-ae81-b8af6e4983c5
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 2041901a851ca755b1079535ccbf763472ec7bc4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 2ce13298c61595d5e5641cb89bffb28fd277e0d7
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63055674"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68259734"
 ---
 # <a name="installing-ssma-components-on-sql-server-oracletosql"></a>Установка компонентов SSMA в SQL Server (OracleToSQL)
 Помимо установки SSMA, необходимо также установить компоненты на компьютере, на котором выполняется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Эти компоненты включают пакет расширений SSMA, которая поддерживает перенос данных и поставщики Oracle, чтобы обеспечить подключение между серверами.  
@@ -28,7 +28,7 @@ ms.locfileid: "63055674"
   
 Кроме того, при переносе данных для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], создает SSMA [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] задания агента, когда модуль переноса данных на стороне сервера используется для переноса данных.  
   
-### <a name="prerequisites"></a>предварительные требования  
+### <a name="prerequisites"></a>Предварительные требования  
 Перед установкой SSMA для Oracle серверные компоненты на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], убедитесь, что система соответствует следующим требованиям:  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установлен экземпляр. SSMA не поддерживает SQL Server 2008 Express Edition.  

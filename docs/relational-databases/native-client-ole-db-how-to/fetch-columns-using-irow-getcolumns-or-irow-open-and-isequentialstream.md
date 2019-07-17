@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: 0761f469-9b6c-4fa6-bbd7-f0cb936e4f1c
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 45d144b583c934ef6599a611255d68d51f9413ef
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 8aeb097f2cabac01b0d4108dbcf07ed46f15f971
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205283"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68110261"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>Выбор столбцов с помощью метода IRow::GetColumns (или IRow::Open) и интерфейса ISequentialStream
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,11 +37,11 @@ ms.locfileid: "53205283"
   
 2.  Выполните команду (в этом примере **ICommandExecute::Execute()** вызывается с идентификатором IID_IRow).  
   
-3.  Выборки данных столбца с помощью **интерфейсов IRow:: Open()** или **IRow:: Getcolumns()**.  
+3.  Выборки данных столбца с помощью **интерфейсов IRow:: Open()** или **IRow:: Getcolumns()** .  
   
     -   **Интерфейсов IRow:: Open()** может использоваться для открытия **ISequentialStream** в строке. Задайте параметр DBGUID_STREAM, чтобы указать, что столбец содержит поток двоичных данных. После этого можно прочитать данные из столбца с помощью метода **IStream** или **ISequentialStream**.  
   
-    -   Если используется метод **IRow::GetColumns()**, элементу **pData** структуры DBCOLUMNACCESS присваивается указатель на объект потока.  
+    -   Если используется метод **IRow::GetColumns()** , элементу **pData** структуры DBCOLUMNACCESS присваивается указатель на объект потока.  
   
 4.  Используйте **ISequentialStream::Read()** несколько раз, чтобы указанное число байтов, считанных в буфер потребителя.  
   
@@ -51,11 +50,11 @@ ms.locfileid: "53205283"
   
  Образцу требуется образец базы данных AdventureWorks, который можно загрузить с домашней страницы [Образцы кода и проекты сообщества Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384) (возможно, на английском языке).  
   
- Первый ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) пример кода создает таблицу, используемую образцом.  
+ Первый листинг кода ([!INCLUDE[tsql](../../includes/tsql-md.md)]) создает таблицу, которая используется в примере.  
   
  Выполните компиляцию с библиотеками ole32.lib и oleaut32.lib, а затем выполните второй листинг кода (C++). Это приложение соединяется с установленным на компьютер экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию. В некоторых операционных системах Windows придется заменить (localhost) или (local) на имя своего экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Чтобы подключиться к именованному экземпляру, измените строку подключения с L"(local)" на L"(local)\\\<имя>", где <имя> — это именованный экземпляр. По умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express устанавливается на именованный экземпляр. Убедитесь, что переменная среды INCLUDE включает каталог, содержащий файл sqlncli.h.  
   
- Третий ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) пример кода удаляет таблицу, используемую образцом.  
+ Третий листинг кода ([!INCLUDE[tsql](../../includes/tsql-md.md)]) удаляет таблицу, используемую в примере.  
   
 ```  
 USE AdventureWorks  

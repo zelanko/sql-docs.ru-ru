@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2c2abc45712be58eabd4ed6ef4c9b276438e8afe
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535726"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68199476"
 ---
 # <a name="define-and-modify-a-static-row-filter"></a>Определение и изменение статического строкового фильтра
   В этом разделе описывается определение и изменение статического строкового фильтра [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] при помощи среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -51,11 +51,11 @@ ms.locfileid: "58535726"
 -   Поскольку эти фильтры являются статическими, все подписчики получат один и тот же поднабор данных. Если необходимо динамически фильтровать строки в статье таблицы, принадлежащей к публикации слиянием, чтобы каждый подписчик получал собственную секцию данных, см. раздел [Определение и изменение параметризованного фильтра строк для статьи публикации слиянием](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md). Репликация слиянием также позволяет фильтровать связанные строки на основе существующего фильтра строк. Дополнительные сведения см. в статье [Определение и изменение фильтра соединения между статьями публикации слиянием](define-and-modify-a-join-filter-between-merge-articles.md).  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
- Операции определения, изменения и удаления статических строковых фильтров выполняются на странице **Фильтрация строк таблицы** мастера создания публикаций или на странице **Фильтрация строк** диалогового окна **Свойства публикации — \<публикация>**. Дополнительные сведения об использовании мастера и доступе к этому диалоговому окну см. в статьях [Создание публикации](create-a-publication.md) и [Просмотр и изменение свойств публикации](view-and-modify-publication-properties.md).  
+ Операции определения, изменения и удаления статических строковых фильтров выполняются на странице **Фильтрация строк таблицы** мастера создания публикаций или на странице **Фильтрация строк** диалогового окна **Свойства публикации — \<публикация>** . Дополнительные сведения об использовании мастера и доступе к этому диалоговому окну см. в статьях [Создание публикации](create-a-publication.md) и [Просмотр и изменение свойств публикации](view-and-modify-publication-properties.md).  
   
 #### <a name="to-define-a-static-row-filter"></a>Определение статического фильтра строк  
   
-1.  Действия, выполняемые на странице **Фильтрация строк таблицы** мастера создания публикаций или на странице **Фильтрация строк** диалогового окна **Свойства публикации — \<публикация>**, зависят от типа публикации.  
+1.  Действия, выполняемые на странице **Фильтрация строк таблицы** мастера создания публикаций или на странице **Фильтрация строк** диалогового окна **Свойства публикации — \<публикация>** , зависят от типа публикации.  
   
     -   Для публикации моментальных снимков или публикации транзакций щелкните **Добавить**.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "58535726"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  Если вы находитесь в диалоговом окне **Свойства публикации — \<публикация>**, нажмите кнопку **ОК**, чтобы сохранить изменения и закрыть диалоговое окно.  
+5.  Если вы находитесь в диалоговом окне **Свойства публикации — \<публикация>** , нажмите кнопку **ОК**, чтобы сохранить изменения и закрыть диалоговое окно.  
   
 #### <a name="to-modify-a-static-row-filter"></a>Изменение статического фильтра строк  
   
@@ -109,15 +109,15 @@ ms.locfileid: "58535726"
   
 1.  Определите статью для фильтрации. Дополнительные сведения см. в статье [определить статью](define-an-article.md).  
   
-2.  В издателе в базе данных публикации выполните процедуру [sp_articlefilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql). Укажите имя статьи в параметре **@article**, имя публикации в параметре **@publication**, имя фильтра в параметре **@filter_name**и предложение фильтрации в параметре **@filter_clause** (не включая `WHERE`).  
+2.  В издателе в базе данных публикации выполните процедуру [sp_articlefilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql). Укажите имя статьи в параметре **@article** , имя публикации в параметре **@publication** , имя фильтра в параметре **@filter_name** и предложение фильтрации в параметре **@filter_clause** (не включая `WHERE`).  
   
-3.  При необходимости определения фильтра столбцов см. раздел [Определение или изменение фильтра столбцов](define-and-modify-a-column-filter.md). В противном случае выполнение процедуру [sp_articleview (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql). В параметре **@publication**укажите имя публикации, в параметре **@article**— имя фильтруемой статьи, а в параметре **@filter_clause**. Будут созданы объекты синхронизации для отфильтрованной статьи.  
+3.  При необходимости определения фильтра столбцов см. раздел [Определение или изменение фильтра столбцов](define-and-modify-a-column-filter.md). В противном случае выполнение процедуру [sp_articleview (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql). В параметре **@publication** укажите имя публикации, в параметре **@article** — имя фильтруемой статьи, а в параметре **@filter_clause** . Будут созданы объекты синхронизации для отфильтрованной статьи.  
   
 #### <a name="to-modify-a-static-row-filter-for-a-snapshot-or-transactional-publication"></a>Изменение статического фильтра строк для моментального снимка публикации транзакций  
   
-1.  В издателе в базе данных публикации выполните процедуру [sp_articlefilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql). Укажите имя статьи в параметре **@article**, имя публикации в параметре **@publication**, имя фильтра в параметре **@filter_name**и новое предложение фильтрации в параметре **@filter_clause** (не включая `WHERE`). Поскольку это изменение приведет к недействительности данных в существующей подписке, в параметре **@force_reinit_subscription** необходимо указать значение **@force_reinit_subscription**.  
+1.  В издателе в базе данных публикации выполните процедуру [sp_articlefilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql). Укажите имя статьи в параметре **@article** , имя публикации в параметре **@publication** , имя фильтра в параметре **@filter_name** и новое предложение фильтрации в параметре **@filter_clause** (не включая `WHERE`). Поскольку это изменение приведет к недействительности данных в существующей подписке, в параметре **@force_reinit_subscription** необходимо указать значение **@force_reinit_subscription** .  
   
-2.  В издателе в базе данных публикации выполните процедуру [sp_articleview &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql). В параметре **@publication**укажите имя публикации, в параметре **@article**— имя фильтруемой статьи, а в параметре **@filter_clause**. В результате будет повторно создано представление, определяющее опубликованную статью.  
+2.  В издателе в базе данных публикации выполните процедуру [sp_articleview &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql). В параметре **@publication** укажите имя публикации, в параметре **@article** — имя фильтруемой статьи, а в параметре **@filter_clause** . В результате будет повторно создано представление, определяющее опубликованную статью.  
   
 3.  Чтобы сформировать обновленный моментальный снимок, перезапустите задание агента моментальных снимков для публикации. Дополнительные сведения см. в статье [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md).  
   
@@ -125,7 +125,7 @@ ms.locfileid: "58535726"
   
 #### <a name="to-delete-a-static-row-filter-for-a-snapshot-or-transactional-publication"></a>Удаление статического фильтра строк для моментального снимка публикации транзакций  
   
-1.  В издателе в базе данных публикации выполните процедуру [sp_articlefilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql). Укажите имя статьи в параметре **@article**, имя публикации в параметре **@publication**, значение NULL в параметре **@filter_name**и NULL в параметре **@filter_clause**. Поскольку это изменение приведет к недействительности данных в существующей подписке, в параметре **@force_reinit_subscription** необходимо указать значение **@force_reinit_subscription**.  
+1.  В издателе в базе данных публикации выполните процедуру [sp_articlefilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql). Укажите имя статьи в параметре **@article** , имя публикации в параметре **@publication** , значение NULL в параметре **@filter_name** и NULL в параметре **@filter_clause** . Поскольку это изменение приведет к недействительности данных в существующей подписке, в параметре **@force_reinit_subscription** необходимо указать значение **@force_reinit_subscription** .  
   
 2.  Чтобы сформировать обновленный моментальный снимок, перезапустите задание агента моментальных снимков для публикации. Дополнительные сведения см. в статье [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md).  
   
@@ -139,7 +139,7 @@ ms.locfileid: "58535726"
   
 #### <a name="to-modify-a-static-row-filter-for-a-merge-publication"></a>Изменение статического фильтра строк для публикации слиянием  
   
-1.  В издателе в базе данных публикации выполните процедуру [sp_changemergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). В параметре **@publication**укажите имя публикации, в параметре **@article**, значение свойства **subset_filterclause** необходимо указать значение **@property**и новое предложение фильтрации в параметре **@value** (не включая `WHERE`). Поскольку в результате этого изменения данные в существующей подписке станут недопустимыми, укажите значение 1 в параметре **@force_reinit_subscription**.  
+1.  В издателе в базе данных публикации выполните процедуру [sp_changemergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). В параметре **@publication** укажите имя публикации, в параметре **@article** , значение свойства **subset_filterclause** необходимо указать значение **@property** и новое предложение фильтрации в параметре **@value** (не включая `WHERE`). Поскольку в результате этого изменения данные в существующей подписке станут недопустимыми, укажите значение 1 в параметре **@force_reinit_subscription** .  
   
 2.  Чтобы сформировать обновленный моментальный снимок, перезапустите задание агента моментальных снимков для публикации. Дополнительные сведения см. в статье [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md).  
   

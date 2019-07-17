@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: eb674ea7bd9540f7ae74bf9ad8737bdb83c237f7
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538606"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68195633"
 ---
 # <a name="openxml-sql-server"></a>Инструкция OPENXML (SQL Server)
   Ключевое слово OPENXML языка [!INCLUDE[tsql](../../includes/tsql-md.md)] предоставляет набор строк по XML-документам в памяти, подобный таблице или представлению. OPENXML позволяет получить доступ к XML-данным так, как если бы это был реляционный набор строк. Это делается при помощи представления внутреннего отображения XML-документа в виде набора строк. Записи в наборе строк могут храниться в таблицах базы данных.  
@@ -164,11 +164,11 @@ EXEC sp_xml_removedocument @docHandle;
   
  Сопоставление может быть указано двумя способами, в том числе и обоими сразу:  
   
--   Используя аргумент *flags*   
+-   Используя аргумент *flags*  
   
      Указание сопоставления посредством аргумента *flags* предполагает соответствие имен, в котором узлы XML сопоставляются с соответствующими столбцами набора строк, имеющими то же имя.  
   
--   Используя аргумент *ColPattern*   
+-   Используя аргумент *ColPattern*  
   
      *ColPattern*, выражение XPath, указывается как часть *SchemaDeclaration* в предложении WITH. Сопоставлением, указанным в *ColPattern* , перекрывается сопоставление, указанное аргументом *flags* .  
   

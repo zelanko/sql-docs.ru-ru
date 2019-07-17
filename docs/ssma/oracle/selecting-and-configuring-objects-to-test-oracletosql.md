@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 29fb6542-5c1f-4b14-a822-87700beb7623
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: d568d1749cd54796072a108e438e448bf2a74578
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: e0a8e7650534d50c5e5d7c3b02f2857764d9c2ca
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62626209"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264644"
 ---
 # <a name="selecting-and-configuring-objects-to-test-oracletosql"></a>Выбор и настройка объектов для тестирования (OracleToSQL)
 На этом этапе вы выберите объекты для тестирования и настроить параметры для сравнения процедуры и "функции выходные параметры, а также возвращаемые значения функции.  

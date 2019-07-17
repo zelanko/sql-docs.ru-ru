@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: f03ef5e1-66e6-4c84-ada2-252dd5ada82f
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 771e9a4553679ae2afa0dd58d83b1d15ccf0fd62
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 858c564c965fe7105c86a3087923887097e4ddac
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62626061"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266482"
 ---
 # <a name="testing-migrated-database-objects-oracletosql"></a>Тестирование объектов баз данных после миграции (OracleToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Помощник по миграции для Oracle Tester (тестер SSMA) автоматически проверяет преобразования объекта базы данных и переноса данных, произведенные SSMA. После завершения всех шагов миграции SSMA позволяет убедиться, что преобразованные объекты работают так же, как и все данные было передано надлежащим образом тест-инженер SSMA.  
@@ -45,7 +45,7 @@ ms.locfileid: "62626061"
 > [!NOTE]  
 > Внимание! Никогда не используйте SSMA тест-инженер в рабочих системах. Во время выполнения тест-инженер изменяются исходной схемы и данных. В то же время полного восстановления исходного состояния может оказаться невозможным для некоторых типов тестируемого кода.  
   
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
 Если вы хотите использовать тест-инженер SSMA, установите пакет расширения SSMA Oracle с **установить базы данных тест-инженер** включенным параметром.  
   
 Чтобы включить сравнение полученных данных таблицы, задать **ROWID сформировать столбец** равным **Да** перед началом преобразования схемы. SSMA будет добавлен столбец ROWID ко всем таблицам во время выполнения **преобразования схемы** команды.  
@@ -58,7 +58,7 @@ ms.locfileid: "62626061"
   
 Обратите внимание на то, что текущая версия SSMA Tester не поддерживает параллельное выполнение разными пользователями на одном исходном или целевом сервере.  
   
-## <a name="getting-started"></a>Приступая к работе  
+## <a name="getting-started"></a>Начало работы  
 [Создание тестовых случаев &#40;OracleToSQL&#41;](../../ssma/oracle/creating-test-cases-oracletosql.md)  
   
 ## <a name="see-also"></a>См. также  

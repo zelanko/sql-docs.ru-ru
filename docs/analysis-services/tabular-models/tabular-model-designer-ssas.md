@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8be4f1f78b444933cc1ad7f4ec4fb71b28bfae1b
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072571"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207481"
 ---
 # <a name="tabular-model-designer"></a>Конструктор табличных моделей
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -108,7 +108,7 @@ ms.locfileid: "53072571"
   
  По умолчанию окно **Список ошибок** не отображается, если не возвращена ошибка. Однако окно **Список ошибок** вы можете просмотреть в любое время. Для просмотра окна **Список ошибок** в меню **Вид** выберите пункт **Список ошибок**.  
   
-### <a name="output"></a>Вывод  
+### <a name="output"></a>Output  
  Сведения о сборке и развертывании отображаются в окне **Вывод** (в дополнение к модальному диалоговому ходу выполнения). Для просмотра окна **Вывод** в меню **Вид** выберите пункт «Вывод».  
   
 ### <a name="menu-items"></a>Пункты меню  

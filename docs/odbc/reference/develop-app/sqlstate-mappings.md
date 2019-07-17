@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6e6cabcf-a204-40eb-b77d-8a0c4a5e8524
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 597fe4f7697375cc2e75bef79059beeba9d91e14
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 3987085d7d04bf248bcc728c3bcd1ee5503d9af1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67792760"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107364"
 ---
 # <a name="sqlstate-mappings"></a>Сопоставления SQLSTATE
 В этом разделе обсуждаются значениях SQLSTATE для ODBC *2.x* и ODBC *3.x*. Дополнительные сведения о ODBC *3.x* значения SQLSTATE, см. в разделе [приложении a. Коды ошибок ODBC](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md).  
@@ -51,8 +50,8 @@ ms.locfileid: "67792760"
 |S1000|HY000||  
 |S1001|HY001||  
 |S1002|07009|ODBC *2.x* SQLSTATE S1002 сопоставляется с ODBC *3.x* SQLSTATE 07009 при базовой функции **SQLBindCol**, **SQLColAttribute**, **SQLExtendedFetch**, **SQLFetch**, **SQLFetchScroll**, или **SQLGetData**.|  
-|S1003|HY003||  
-|S1004|HY004||  
+|S1003|HY003 И СООБЩЕНИЕМ||  
+|S1004|HY004 И СООБЩЕНИЕМ||  
 |S1008|HY008||  
 |S1009|HY009|Возвращается для недопустимое использование пустого указателя.|  
 |S1009|HY024|Возвращается для недопустимым значением атрибута.|  
