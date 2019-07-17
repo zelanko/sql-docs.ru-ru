@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cb8b8bec38b428ca7b2eea5166867141b34a2405
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791916"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68185976"
 ---
 # <a name="tablediff-utility"></a>tablediff, программа
   Служебная программа **tablediff** используется для сравнения данных в двух таблицах на расхождение и особенно полезна для устранения несоответствия данных в топологии репликации. Эта программа может запускаться из командной строки или из пакетного файла и служит для выполнения следующих задач:  
@@ -76,8 +76,8 @@ ms.locfileid: "52791916"
  [ **-?** ]  
  Возвращает список поддерживаемых параметров.  
   
- **-sourceserver** *имя_исходного_сервера*[**\\**_имя_экземпляра_]  
- Имя исходного сервера. Укажите _источника\_server\_имя_ для экземпляра по умолчанию [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Укажите _источника\_server\_имя_**\\**_экземпляр\_имя_ для именованного экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ **-sourceserver** *имя_исходного_сервера*[ **\\** _имя_экземпляра_]  
+ Имя исходного сервера. Укажите _источника\_server\_имя_ для экземпляра по умолчанию [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Укажите _источника\_server\_имя_ **\\** _экземпляр\_имя_ для именованного экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **-sourcedatabase** *база_данных_источник*  
  Имя базы данных-источника.  
@@ -100,8 +100,8 @@ ms.locfileid: "52791916"
  **-sourcelocked**  
  Исходная таблица блокируется в ходе сравнения при помощи табличных подсказок TABLOCK и HOLDLOCK.  
   
- **-destinationserver** *имя_целевого_сервера*[**\\**_экземпляр\_имя_]  
- Имя целевого сервера. Укажите *имя_целевого_сервера* для экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]по умолчанию. Укажите _назначения\_server\_имя_**\\**_экземпляр\_имя_ для именованного экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ **-destinationserver** *имя_целевого_сервера*[ **\\** _экземпляр\_имя_]  
+ Имя целевого сервера. Укажите *имя_целевого_сервера* для экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]по умолчанию. Укажите _назначения\_server\_имя_ **\\** _экземпляр\_имя_ для именованного экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **-destinationdatabase** *база_данных_подписки*  
  Имя целевой базы данных.  
@@ -178,7 +178,7 @@ ms.locfileid: "52791916"
 |Тип данных источника|Тип данных назначения|  
 |----------------------|---------------------------|  
 |`tinyint`|`smallint`, `int` или `bigint`|  
-|`smallint`|`int` либо `bigint`|  
+|`smallint`|`int` или `bigint`|  
 |`int`|`bigint`|  
 |`timestamp`|`varbinary`|  
 |`varchar(max)`|`text`|  

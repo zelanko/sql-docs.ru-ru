@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 09d859cf8b5c372b9588266b9210837012396ea6
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072141"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68162861"
 ---
 # <a name="deploy-from-sql-server-data-tools"></a>Развертывание из SQL Server Data Tools
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "53072141"
   
 #### <a name="to-deploy-a-tabular-model"></a>Для развертывания табличной модели
   
--   В SSDT на **построения** меню, щелкните **развернуть \<имя проекта >**.  
+-   В SSDT на **построения** меню, щелкните **развернуть \<имя проекта >** .  
   
      Появится диалоговое окно **Развертывание** , в котором будет отображаться состояние развертывания метаданных и обработки каждой таблицы (если для свойства "Вариант обработки" не выбрано значение "Не обрабатывать"), включенной в модель. После завершения процесса развертывания, используйте SSMS для подключения к экземпляру служб Analysis Services и убедитесь, что был создан новый объект шаблона базы данных или клиентские приложения для подключения к развернутой модели.  
   

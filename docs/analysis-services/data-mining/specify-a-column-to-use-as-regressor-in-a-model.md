@@ -1,5 +1,5 @@
 ---
-title: Указать столбец для использования в качестве Регрессора в модели | Документы Microsoft
+title: Указание столбца, который используется как Регрессор в модели | Документация Майкрософт
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0cfbe8f17c14518b2acf41bdb9ecf64b1679ffb2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016551"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182343"
 ---
 # <a name="specify-a-column-to-use-as-regressor-in-a-model"></a>Указание столбца, который будет использоваться в модели в качестве регрессора
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "34016551"
   
 3.  В меню **Модель интеллектуального анализа данных** выберите пункт **Создать модель интеллектуального анализа данных**.  
   
-4.  В качестве алгоритма выберите **Алгоритм линейной регрессии (Майкрософт)**. В качестве имени введите **Call Center Regression**.  
+4.  В качестве алгоритма выберите **Алгоритм линейной регрессии (Майкрософт)** . В качестве имени введите **Call Center Regression**.  
   
 5.  На вкладке **Модели интеллектуального анализа данных** измените использование столбца следующим образом. Все столбцы, отсутствующие в следующем списке, должны быть установлены в значение **Пропустить**.  
   
@@ -60,9 +60,9 @@ ms.locfileid: "34016551"
      В средстве просмотра модель представляется единственным узлом, содержащим формулу регрессии. Можно просмотреть формулу в окне **Обозначения интеллектуального анализа данных**или получить коэффициенты для формулы с помощью запросов.  
   
 ## <a name="see-also"></a>См. также  
- [Алгоритм линейной регрессии Майкрософт](../../analysis-services/data-mining/microsoft-linear-regression-algorithm.md)   
+ [Алгоритм линейной регрессии (Майкрософт)](../../analysis-services/data-mining/microsoft-linear-regression-algorithm.md)   
  [Запросы интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-queries.md)   
- [Технический справочник по алгоритму линейной регрессии Майкрософт](../../analysis-services/data-mining/microsoft-linear-regression-algorithm-technical-reference.md)   
- [Содержимое модели интеллектуального анализа данных для модели линейной регрессии & #40; Службы Analysis Services — Интеллектуальный анализ данных & #41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [Технический справочник по алгоритму линейной регрессии (Майкрософт)](../../analysis-services/data-mining/microsoft-linear-regression-algorithm-technical-reference.md)   
+ [Содержимое моделей интеллектуального анализа данных для моделей линейной регрессии (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

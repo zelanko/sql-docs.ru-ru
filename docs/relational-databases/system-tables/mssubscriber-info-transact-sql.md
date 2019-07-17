@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5ca22f41-6020-4f72-8110-e69baf3447cb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c345046c09094d8b81f6396d41786fafa8b97486
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 45065f7cde525d65997df2c97c972d684cadd90f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62693850"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139824"
 ---
 # <a name="mssubscriberinfo-transact-sql"></a>MSsubscriber_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ ms.locfileid: "62693850"
 |**type**|**tinyint**|Тип подписчика:<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подписчика.<br /><br /> **1** = источник данных ODBC.|  
 |**Имя входа**|**sysname**|Имя входа для проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Хранится в зашифрованном формате, если подписчик добавляется в режиме проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**password**|**nvarchar(524)**|Пароль для проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Хранится в зашифрованном формате, если подписчик добавляется в режиме проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**Описание**|**nvarchar(255)**|Описание подписчика.|  
+|**description**|**nvarchar(255)**|Описание подписчика.|  
 |**security_mode**|**int**|Реализованный режим безопасности:<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности.<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] проверки подлинности Windows.|  
   
 ## <a name="see-also"></a>См. также  

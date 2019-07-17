@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0fb9986a-3c33-46ef-87bb-297396ea5a6a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: eec9be936a14b0d5c78b5bc183516a8118c339a2
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: e1c297e050121c3013242c40938fdd4c0ba8b936
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533446"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122345"
 ---
 # <a name="sphelpmergearticle-transact-sql"></a>sp_helpmergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,9 +38,9 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'` — Имя публикации, о котором будут получены данные. *Публикация*— **sysname**, значение по умолчанию **%**, которое возвращает сведения обо всех статьях публикации слиянием, содержащихся во всех публикациях в текущей базе данных.  
+`[ @publication = ] 'publication'` — Имя публикации, о котором будут получены данные. *Публикация*— **sysname**, значение по умолчанию **%** , которое возвращает сведения обо всех статьях публикации слиянием, содержащихся во всех публикациях в текущей базе данных.  
   
-`[ @article = ] 'article'` — Имя статьи, для которого возвращаются сведения. *статья*— **sysname**, значение по умолчанию **%**, которое возвращает сведения обо всех статьях публикации слиянием в данной публикации.  
+`[ @article = ] 'article'` — Имя статьи, для которого возвращаются сведения. *статья*— **sysname**, значение по умолчанию **%** , которое возвращает сведения обо всех статьях публикации слиянием в данной публикации.  
   
 ## <a name="result-set"></a>Результирующий набор  
   
@@ -53,7 +52,7 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 |**source_object**|**sysname**|Имя исходного объекта, из которого будет добавляться статья.|  
 |**sync_object_owner**|**sysname**|Имя владельца представления, определяющего опубликованную статью.|  
 |**sync_object**|**sysname**|Имя пользовательского объекта, который устанавливает исходные данные секции.|  
-|**Описание**|**nvarchar(255)**|Описание статьи.|  
+|**description**|**nvarchar(255)**|Описание статьи.|  
 |**status**|**tinyint**|Состояние статьи может быть одним из следующих:<br /><br /> **1** = неактивно<br /><br /> **2** = активно<br /><br /> **5** = ожидает выполнения операции языка DDL определение данных<br /><br /> **6** = DDL-операции с последним созданным моментальным снимком<br /><br /> Примечание. При повторной инициализации статьи значения из **5** и **6** заменяются **2**.|  
 |**creation_script**|**nvarchar(255)**|Путь и имя необязательного скрипта схем статей, используемого для создания статьи в базе данных подписки.|  
 |**conflict_table**|**nvarchar(270)**|Имя таблицы, хранящей конфликты при операциях вставки или обновления.|  

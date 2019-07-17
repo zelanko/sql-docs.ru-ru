@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 33f037f4d82cbf5bbdebde01a5c4492128ecc8ae
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775836"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206028"
 ---
 # <a name="execute-sql-server-agent-job-task-maintenance-plan"></a>Задача «Выполнение задания агента SQL Server» (план обслуживания)
   Используйте диалоговое окно **Задача «Выполнение задания агента SQL Server»** для выполнения заданий агента Microsoft SQL Server в соответствии с планом обслуживания. Данный параметр недоступен, если для выбранного соединения нет заданий агента SQL Server.  

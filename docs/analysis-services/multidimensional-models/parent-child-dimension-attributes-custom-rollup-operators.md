@@ -1,5 +1,5 @@
 ---
-title: Операторы пользовательской свертки в измерениях родители потомки | Документы Microsoft
+title: Операторы пользовательской свертки в измерениях родители потомки | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 000d6355aee1fc38aa4fdcb97cf02df2a4ef09da
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020961"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68165426"
 ---
-# <a name="parent-child-dimension-attributes---custom-rollup-operators"></a>Атрибуты измерения родители потомки - операторы пользовательской свертки
+# <a name="parent-child-dimension-attributes---custom-rollup-operators"></a>Атрибуты измерения "родители-потомки" — операторы пользовательской свертки
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Операторы пользовательской свертки предоставляют простой способ контроля свертки значений элементов в значения родительских элементов в иерархии типа «родители-потомки». В измерении, содержащем связь типа «родители-потомки», указывается столбец, содержащий унарные операторы, указывающие свертку для всех невычисляемых элементов родительского атрибута. Унарный оператор применяется к элементам каждый раз, когда оцениваются значения родительских элементов.  
   
@@ -29,6 +29,6 @@ ms.locfileid: "34020961"
   
 ## <a name="see-also"></a>См. также  
  [Определение нестандартных формул элементов](../../analysis-services/multidimensional-models/attribute-properties-define-custom-member-formulas.md)   
- [Унарные операторы в измерениях родители потомки](../../analysis-services/multidimensional-models/parent-child-dimension-attributes-unary-operators.md)  
+ [Унарные операторы в измерениях типа «родители-потомки»](../../analysis-services/multidimensional-models/parent-child-dimension-attributes-unary-operators.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Алгоритм логистической регрессии Майкрософт | Документы Microsoft
+title: Алгоритм логистической регрессии (Майкрософт) | Документация Майкрософт
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5d293b386cf02d492e3a78a6cef34396f22277ee
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016941"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182999"
 ---
 # <a name="microsoft-logistic-regression-algorithm"></a>Алгоритм логистической регрессии (Майкрософт)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -75,7 +75,7 @@ ms.locfileid: "34016941"
   
 ## <a name="see-also"></a>См. также  
  [Содержимое моделей интеллектуального анализа данных для моделей логистической регрессии (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)   
- [Технический справочник по алгоритму логистической регрессии Майкрософт](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm-technical-reference.md)   
+ [техническом справочнике по алгоритму логистической регрессии (Майкрософт)](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm-technical-reference.md)   
  [Примеры запросов модели логистической регрессии](../../analysis-services/data-mining/logistic-regression-model-query-examples.md)  
   
   

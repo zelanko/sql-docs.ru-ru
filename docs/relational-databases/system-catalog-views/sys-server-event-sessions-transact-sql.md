@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 796f3093-6a3e-4d67-8da6-b9810ae9ef5b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6a07324137ee2e37a10f13eebff47710e2b13f0a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: be062171c66cb870c26d210a2f93d76dd59b6321
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821812"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133176"
 ---
 # <a name="sysservereventsessions-transact-sql"></a>sys.server_event_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

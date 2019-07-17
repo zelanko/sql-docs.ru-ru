@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: c2d2ae49-0808-46d8-8444-db69a69d0ec3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e8c1ee1b5bdf2796aa64159867389639496a4906
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: ccd72de184115929483a43fd69d133abe0e195af
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492876"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117908"
 ---
 # <a name="spaddumpdevice-transact-sql"></a>sp_addumpdevice (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ sp_addumpdevice [ @devtype = ] 'device_type'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @devtype = ] 'device_type'` — Тип устройства резервного копирования. *Аргумент device_type* — **varchar(20)**, по умолчанию и может принимать одно из следующих значений.  
+`[ @devtype = ] 'device_type'` — Тип устройства резервного копирования. *Аргумент device_type* — **varchar(20)** , по умолчанию и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -57,7 +56,7 @@ sp_addumpdevice [ @devtype = ] 'device_type'
   
 `[ @logicalname = ] 'logical_name'` — Это логическое имя устройства резервного копирования, используемых в инструкциях BACKUP и RESTORE. *logical_name* — **sysname**, не имеет значения по умолчанию и не может иметь значение NULL.  
   
-`[ @physicalname = ] 'physical_name'` — Это физическое имя устройства резервного копирования. Физические имена должны соответствовать правилам для имен файлов операционной системы или формату UNC для сетевых устройств и должны содержать полный путь. *physical_name* — **nvarchar(260)**, не имеет значения по умолчанию значение, и не может иметь значение NULL.  
+`[ @physicalname = ] 'physical_name'` — Это физическое имя устройства резервного копирования. Физические имена должны соответствовать правилам для имен файлов операционной системы или формату UNC для сетевых устройств и должны содержать полный путь. *physical_name* — **nvarchar(260)** , не имеет значения по умолчанию значение, и не может иметь значение NULL.  
   
  При создании устройства резервного копирования в удаленном сетевом каталоге убедитесь, что имя входа, под которым запущен компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)], имеет на удаленном компьютере необходимые права на запись.  
   

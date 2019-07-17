@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 766488cc-450c-434c-9c88-467f6c57e17c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 09805ab73af76bc55890222fc1ffd0e1857d0f33
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3f7264b17c13d6b66bf1be24da81e96a4ca3e8a8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62447392"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122834"
 ---
 # <a name="batches-of-sql-statements"></a>Пакеты инструкций SQL
 Пакет инструкций SQL является группой из двух или более инструкций SQL или отдельной инструкции SQL, который имеет тот же эффект, как группа из двух или более инструкций SQL. В некоторых реализациях инструкция весь пакет выполняется, прежде чем результаты будут доступны. Это часто более эффективен, чем отправка инструкций по, в том случае, так как часто можно сократить сетевой трафик и источника данных иногда может оптимизировать выполнение пакета инструкций SQL. В других реализациях вызова **SQLMoreResults** вызывает выполнение следующей инструкции в пакете. ODBC поддерживает следующие типы пакетов:  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9f7f766f-2492-463c-aab7-f2476e222042
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2c7d4a14a6afc2d716e85e687cbae1a202a596d7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 61afd5c9932f58c49e54b4aff8b053d0a25a6e3f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63241248"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130024"
 ---
 # <a name="display-size"></a>Отображаемый размер
 Размер экрана столбца — максимальное количество символов, чтобы отобразить данные в виде символа. Следующая таблица определяет размер экрана для каждого типа данных ODBC SQL.  
@@ -39,7 +38,7 @@ ms.locfileid: "63241248"
 |SQL_FLOAT SQL_DOUBLE|24 (знак, 15 цифр, десятичного разделителя, буквы *E*, знак и 3 цифры).|  
 |Все типы binary [a]|Определено или максимальное значение (для типов переменных) длина столбца времени 2. (Каждый двоичного байтового представлен 2-разрядное шестнадцатеричное число.)|  
 |SQL_TYPE_DATE|10 (дату в формате *гггг мм дд*).|  
-|SQL_TYPE_TIME|8 (время в формате *чч: мм:*)<br /><br /> — или —<br /><br /> 9 + *s* (время в формате *чч: мм:*[.fff...], где *s* имеет точность в долях секунды).|  
+|SQL_TYPE_TIME|8 (время в формате *чч: мм:* )<br /><br /> — или —<br /><br /> 9 + *s* (время в формате *чч: мм:* [.fff...], где *s* имеет точность в долях секунды).|  
 |SQL_TYPE_TIMESTAMP|19 (для метки времени в *гггг мм дд чч: мм:* формат)<br /><br /> — или —<br /><br /> 20 + *s* (для метки времени в *гггг мм дд чч: мм:* формат [.fff], где *s* имеет точность в долях секунды).|  
 |Все типы данных интервала|См. в разделе [длина типа данных Interval](../../../odbc/reference/appendixes/interval-data-type-length.md).|  
 |SQL_GUID|36 (количество символов в *aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee* формат|  

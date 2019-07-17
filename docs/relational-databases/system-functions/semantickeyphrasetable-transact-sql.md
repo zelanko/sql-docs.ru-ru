@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d33b973a-2724-4d4b-aaf7-67675929c392
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 01e00d353f3585f7fd2568d5b8906e202263c212
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bfde3ee5d26557759bd881bce34a69b6ecf98dd1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65103303"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140574"
 ---
 # <a name="semantickeyphrasetable-transact-sql"></a>semantickeyphrasetable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +67,7 @@ SEMANTICKEYPHRASETABLE
 ## <a name="table-returned"></a>Возвращаемая таблица  
  В следующей таблице приведены сведения о ключевых фразах, которые возвращает эта функция набора строк.  
   
-|Column_name|Тип|Описание|  
+|Column_name|Type|Описание|  
 |------------------|----------|-----------------|  
 |**column_id**|**int**|Идентификатор столбца, из которого была извлечена и проиндексирована текущая ключевая фраза.<br /><br /> Способы извлечения имени столбца по идентификатору столбца и идентификатора столбца по имени см. в описании функций COL_NAME и COLUMNPROPERTY.|  
 |**document_key**|**\***<br /><br /> Этот ключ соответствует типу уникального ключа в исходной таблице.|Значение уникального ключа документа или строки, в которых была проиндексирована текущая ключевая фраза.|  
@@ -85,7 +84,7 @@ SEMANTICKEYPHRASETABLE
   
 -   [sys.dm_fts_index_population (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md)  
   
-## <a name="security"></a>безопасность  
+## <a name="security"></a>Безопасность  
   
 ### <a name="permissions"></a>Разрешения  
  Требуется разрешение SELECT на базовую таблицу, в которой были созданы индекс полнотекстового поиска и семантический индекс.  

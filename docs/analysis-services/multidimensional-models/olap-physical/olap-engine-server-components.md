@@ -1,5 +1,5 @@
 ---
-title: Серверные компоненты ядра OLAP | Документы Microsoft
+title: Серверные компоненты ядра OLAP | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2e8acd27d64d2aaed12cffd1e05fc2faf62da044
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026931"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208605"
 ---
 # <a name="olap-engine-server-components"></a>Серверные компоненты ядра OLAP
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -48,17 +48,17 @@ ms.locfileid: "34026931"
 ## <a name="xmla-listener"></a>Прослушиватель XML для аналитики  
  Компонент прослушивателя XML для аналитики обрабатывает все XMLA-взаимодействия между службами [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] и их клиентами. Параметр конфигурации [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] **Порт** , указанный в файле msmdsrv.ini, может использоваться для указания порта, на котором экземпляр служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] выполняет прослушивание. Значение 0 указывает на то, что [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] прослушивает порт по умолчанию. По умолчанию службы [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] пользуются следующими TCP-портами:  
   
-|Порт|Описание|  
+|Port|Описание|  
 |----------|-----------------|  
 |2383|Экземпляр служб [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]по умолчанию.|  
 |2382|Перенаправитель для других экземпляров служб [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
 |Динамически назначается при запуске сервера|Именованный экземпляр служб [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
   
- В разделе [Configure Windows Firewall to Allow Analysis Services Access](../../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) для получения дополнительных сведений.  
+ См. в разделе [Настройка брандмауэра Windows на разрешение доступа к Analysis Services](../../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) для получения дополнительных сведений.  
   
 ## <a name="see-also"></a>См. также  
  [Правила именования объектов &#40;служб Analysis Services&#41;](../../../analysis-services/multidimensional-models/olap-physical/object-naming-rules-analysis-services.md)   
- [Физическая архитектура &#40;службы Analysis Services — многомерные данные&#41;](../../../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-physical-architecture.md)   
+ [Физическая архитектура (службы Analysis Services — многомерные данные)](../../../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-physical-architecture.md)   
  [Логическая архитектура &#40;службы Analysis Services — многомерные данные&#41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)  
   
   

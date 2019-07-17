@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: aae3b89c52f5d1d8524681a3a4fd2eda9ab73907
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398067"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68164244"
 ---
 # <a name="configure-power-pivot-health-rules"></a>Настройка правил определения работоспособности PowerPivot
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
   
  [Настройка правил определения работоспособности, используемых для оценки стабильности работы приложения (приложение службы PowerPivot)](#bkmk_evaluate_application_stability)  
   
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
  Для изменения свойств конфигурации экземпляра служб Analysis Services и приложения службы [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] необходимы права администратора.  
   
 ##  <a name="bkmk_view"></a> Просмотр правил определения работоспособности PowerPivot  

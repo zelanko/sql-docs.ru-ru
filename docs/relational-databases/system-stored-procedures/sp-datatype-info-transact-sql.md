@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 045f3b5d-6bb7-4748-8b4c-8deb4bc44147
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3eadc5efc471f44998abddc596f1acc5c6e378ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 39e8f688c23cffb1512be1cd1142d38c010668a7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62506975"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108303"
 ---
 # <a name="spdatatypeinfo-transact-sql"></a>Хранимая процедура sp_datatype_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -55,9 +54,9 @@ sp_datatype_info [ [ @data_type = ] data_type ]
 |TYPE_NAME|**sysname**|Тип данных, зависящий от СУБД.|  
 |DATA_TYPE|**smallint**|Код типа ODBC, с которым сопоставляются все столбцы данного типа.|  
 |PRECISION|**int**|Максимальная точность типа данных в источнике данных. Для типов данных, к которым понятие точности не применимо, возвращается значение NULL. Значение, возвращаемое для столбца PRECISION, имеет десятичную форму.|  
-|LITERAL_PREFIX|**varchar(** 32 **)**|Символ или символы, используемые перед константой. Например, одинарная кавычка ( **"** ) для символьных типов и 0 x для двоичного файла.|  
-|LITERAL_SUFFIX|**varchar(** 32 **)**|Символ или символы, используемые после константы. Например, одинарная кавычка ( **"** ) для символьных типов и кавычки для двоичного файла.|  
-|CREATE_PARAMS|**varchar(** 32 **)**|Описание параметров создания типа данных. Например **десятичное** является «точность, масштаб», **float** имеет значение NULL, и **varchar** — «max_length».|  
+|LITERAL_PREFIX|**varchar (** 32 **)**|Символ или символы, используемые перед константой. Например, одинарная кавычка ( **"** ) для символьных типов и 0 x для двоичного файла.|  
+|LITERAL_SUFFIX|**varchar (** 32 **)**|Символ или символы, используемые после константы. Например, одинарная кавычка ( **"** ) для символьных типов и кавычки для двоичного файла.|  
+|CREATE_PARAMS|**varchar (** 32 **)**|Описание параметров создания типа данных. Например **десятичное** является «точность, масштаб», **float** имеет значение NULL, и **varchar** — «max_length».|  
 |NULLABLE|**smallint**|Указывает возможность содержать значение NULL.<br /><br /> 1 = значения NULL допускаются.<br /><br /> 0 = значения NULL не допускаются.|  
 |CASE_SENSITIVE|**smallint**|Чувствительность к регистру.<br /><br /> 1 = все столбцы этого типа чувствительны к регистру (для параметров сортировки).<br /><br /> 0 = все столбцы этого типа не чувствительны к регистру.|  
 |SEARCHABLE|**smallint**|Задает возможность поиска для типа столбца:<br /><br /> 1 = поиск невозможен;<br /><br /> 2 = возможен поиск с оператором LIKE;<br /><br /> 3 = возможен поиск с предложением WHERE;<br /><br /> 4 = возможен поиск с предложением WHERE или оператором LIKE.|  
@@ -74,7 +73,7 @@ sp_datatype_info [ [ @data_type = ] data_type ]
 |USERTYPE|**smallint**|**usertype** значение из таблицы systypes.|  
   
 ## <a name="remarks"></a>Примечания  
- sp_datatype_info is equivalent to SQLGetTypeInfo in ODBC. Возвращаемые этой процедурой результаты упорядочиваются по значению DATA_TYPE, а затем по степени соответствия типа данных аналогичному типу данных ODBC SQL.  
+ sp_datatype_info эквивалентна SQLGetTypeInfo в ODBC. Возвращаемые этой процедурой результаты упорядочиваются по значению DATA_TYPE, а затем по степени соответствия типа данных аналогичному типу данных ODBC SQL.  
   
 ## <a name="permissions"></a>Разрешения  
  Требуется членство в роли public.  

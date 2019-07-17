@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 12f7b46f-9228-46d8-9877-cc6a7948c64b
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: ff3acde2d4257412c743958311a050a7879ed2a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 3380531a26e062d6b06c2f08cb5bc36a8df55004
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62816336"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262983"
 ---
 # <a name="legal-notice-ssma-for-oracle"></a>Юридическая информация (SSMA для Oracle)
 Настоящий документ, в том числе содержащиеся в нем образцы приложений, предоставляется исключительно в ознакомительных целях без каких-либо явных или подразумеваемых гарантий. Данные, содержащиеся в этой документации, включая URL-адреса, а также ссылки на другие веб-сайты, могут меняться без предварительного уведомления. Всю ответственность за использование документации, а также за результаты ее использования несет исключительно пользователь.  

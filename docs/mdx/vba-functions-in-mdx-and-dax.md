@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 4f6b6d89ced88a570ce242ae9490d4c6d8bd6ac8
-ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
+ms.openlocfilehash: 39a0db181f3b1d1a40af1a5fa27ba78366a9d2b3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67500047"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135023"
 ---
 # <a name="vba-functions-in-mdx-and-dax"></a>Функции VBA в DAX и многомерных выражениях
 
@@ -51,7 +50,7 @@ ms.locfileid: "67500047"
 |CurDir|Не поддерживается||  
 |CVar|Только многомерные выражения||  
 |CVErr|Не поддерживается||  
-|Дата|Только многомерные выражения|**Предупреждение** DAX реализована другая функция с тем же именем; функция DATE (Year, Month, Day), используемый для создания значения типа date из заданных аргументов|  
+|Date|Только многомерные выражения|**Предупреждение** DAX реализована другая функция с тем же именем; функция DATE (Year, Month, Day), используемый для создания значения типа date из заданных аргументов|  
 |DateAdd|Только многомерные выражения|**Предупреждение** DAX реализована другая функция с тем же именем; DATEADD (\<даты >, < number_of_intervals >,\<интервал >) функции, необходимо сдвинуть заданной даты используется ряд заданных интервалов|  
 |DateDiff|Только многомерные выражения||  
 |DatePart|Только многомерные выражения||  

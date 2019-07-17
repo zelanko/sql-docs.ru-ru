@@ -1,5 +1,5 @@
 ---
-title: Определение групп элементов | Документы Microsoft
+title: Определение групп элементов | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1da226353847409f1d808472dc155cb2055395cd
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021081"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68179593"
 ---
-# <a name="attribute-properties---define-member-groups"></a>Атрибут свойства - определение групп элементов
+# <a name="attribute-properties---define-member-groups"></a>Свойства атрибута — определение групп элементов
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Если атрибут содержит большое число элементов, можно сгруппировать их в контейнеры, уменьшая таким образом число элементов, которые будут видеть пользователи при просмотре иерархии данных. Также можно задать число контейнеров, по которым будут группироваться контейнеры, и установить схему именования контейнеров. Дополнительные сведения см. в разделе [Группирование элементов атрибутов (дискретизация)](../../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md).  
   

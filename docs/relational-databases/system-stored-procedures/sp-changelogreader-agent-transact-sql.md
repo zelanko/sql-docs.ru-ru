@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 929b2fa7-1267-41d0-8b69-e9ab26a62c0f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6d3671c96b73fa1fb8138a7085748704c7a38d76
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: cfa7196c0ad197a3eb7cb1a31fbdb58e74a78968
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494226"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68110818"
 ---
 # <a name="spchangelogreaderagent-transact-sql"></a>sp_changelogreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ sp_changelogreader_agent [ [ @job_login = ] 'job_login' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @job_login = ] 'job_login'` — Это имя для учетной записи, под которой запускается агент. *job_login* — **nvarchar(257)**, значение по умолчанию NULL. Azure SQL управляемом экземпляре базы данных используйте учетную запись SQL Server. *Это единственно возможный отличается от* [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *издателя.*  
+`[ @job_login = ] 'job_login'` — Это имя для учетной записи, под которой запускается агент. *job_login* — **nvarchar(257)** , значение по умолчанию NULL. Azure SQL управляемом экземпляре базы данных используйте учетную запись SQL Server. *Это единственно возможный отличается от* [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *издателя.*  
   
 `[ @job_password = ] 'job_password'` — Пароль для учетной записи, под которой запускается агент. *job_password* — **sysname**, значение по умолчанию NULL.  
   

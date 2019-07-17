@@ -21,12 +21,12 @@ author: pelopes
 ms.author: pelopes
 manager: ajayj
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b1ff6dee668cd6bc93d9a3c74ae4b3e25cbe99be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 000dd995427f8eafec759688db1ab76a6546b789
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013158"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263262"
 ---
 # <a name="sysdmexecqueryparallelworkers-transact-sql"></a>sys.dm_exec_query_parallel_workers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "63013158"
   
 |Имя|Тип данных|Описание|  
 |----------|---------------|-----------------|  
-|**node_id**|**int**|Идентификатор узла NUMA.|  
+|**NODE_ID**|**int**|Идентификатор узла NUMA.|  
 |**scheduler_count**|**int**|Количество планировщиков на данном узле.|  
 |**max_worker_count**|**int**|Максимальное число рабочих ролей для параллельных запросов.|  
 |**reserved_worker_count**|**int**|Число рабочих процессов, зарезервированной с помощью параллельных запросов, а также число основных рабочих процессов, используемых всеми запросами.| 
@@ -45,7 +45,7 @@ ms.locfileid: "63013158"
 ## <a name="permissions"></a>Разрешения  
 
 На [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], требуется `VIEW SERVER STATE` разрешение.   
-На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], требуется `VIEW DATABASE STATE` разрешение в базе данных.   
+На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровней Premium необходимо `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровней Standard и Basic, требует **администратора сервера** или **администратор Azure Active Directory** учетной записи.   
  
 ## <a name="examples"></a>Примеры  
   

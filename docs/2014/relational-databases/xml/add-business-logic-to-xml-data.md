@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ca0953b9ac191dfb765992f79988f3cc1502dfa4
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529126"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211567"
 ---
 # <a name="add-business-logic-to-xml-data"></a>Добавление бизнес-логики для XML-данных
   Бизнес-логику можно добавить в XML-данные несколькими способами.  
@@ -51,7 +51,7 @@ public static SqlXml TransformXml (SqlXml XmlData, string xslPath) {
 }   
 ```  
   
- После регистрации сборки и создания пользовательской функции [!INCLUDE[tsql](../../includes/tsql-md.md)] **SqlXslTransform()** , соответствующей **TransformXml()**, эту функцию можно вызывать из кода Transact-SQL, как показано в следующем запросе:  
+ После регистрации сборки и создания пользовательской функции [!INCLUDE[tsql](../../includes/tsql-md.md)] **SqlXslTransform()** , соответствующей **TransformXml()** , эту функцию можно вызывать из кода Transact-SQL, как показано в следующем запросе:  
   
 ```  
 SELECT SqlXslTransform (xCol, 'C:\MyFile\xsltransform.xsl')  

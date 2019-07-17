@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 39f8bcc63b7e5344f70a6d4a3b6c44ae3e69e108
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 420b1ca4e6cdd72d86c715301957be1f14074fee
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685402"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207151"
 ---
 # <a name="supplemental-lesson---ragged-hierarchies"></a>Дополнительный урок. Неоднородные иерархии
 
@@ -27,9 +27,9 @@ ms.locfileid: "57685402"
 
 Табличные модели с уровнем совместимости 1400 имеют дополнительное **скрыть члены** свойство для иерархий. **По умолчанию** предполагает отсутствие пустых членов на любом уровне. **Скрыть пустые члены** исключает пустые члены из иерархии при добавлении в сводную таблицу или отчет.  
   
-Предполагаемое время выполнения данного занятия: **20 минут**  
+Предполагаемое время для выполнения этого занятия: **20 минут**  
   
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
 В этой статье дополнительное занятие входит в учебник по табличному моделированию. Перед выполнением задач в этом дополнительном занятии, необходимо завершить все предыдущие занятия или иметь завершенный проект образца модели Adventure Works Internet Sales. 
 
 Если в рамках этого руководства вы создали проект AW Internet Sales, модель не еще содержит данные или неоднородные иерархии. Для выполнения этого дополнительного занятия, необходимо сначала создать проблему, добавив несколько дополнительных таблиц, создать связи, вычисляемые столбцы, меры и новую иерархию организации. Эта часть займет около 15 минут. Затем вам потребуется решить проблему за несколько минут.  
@@ -48,9 +48,9 @@ ms.locfileid: "57685402"
 
     | Таблица 1           | Столбец       | Направление фильтра   | Таблица 2     | Столбец      | Активен |
     |-------------------|--------------|--------------------|-------------|-------------|--------|
-    | FactResellerSales | OrderDateKey | Значение по умолчанию            | DimDate     | Дата        | Да    |
-    | FactResellerSales | DueDate      | Значение по умолчанию            | DimDate     | Дата        | Нет     |
-    | FactResellerSales | ShipDateKey  | Значение по умолчанию            | DimDate     | Дата        | Нет     |
+    | FactResellerSales | OrderDateKey | Значение по умолчанию            | DimDate     | Date        | Да    |
+    | FactResellerSales | DueDate      | Значение по умолчанию            | DimDate     | Date        | Нет     |
+    | FactResellerSales | ShipDateKey  | Значение по умолчанию            | DimDate     | Date        | Нет     |
     | FactResellerSales | ProductKey   | Значение по умолчанию            | DimProduct  | ProductKey  | Да    |
     | FactResellerSales | EmployeeKey  | К обеим таблицам | DimEmployee | EmployeeKey | Да    |
 

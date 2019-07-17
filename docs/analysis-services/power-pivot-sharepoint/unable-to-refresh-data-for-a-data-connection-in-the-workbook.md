@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a5db5706af88a657b213e85d97777abe3ef4f744
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203143"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207994"
 ---
 # <a name="unable-to-refresh-data-for-a-data-connection-in-the-workbook"></a>Не удалось обновить данные для подключения к данным в книге
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "53203143"
   
  Возможно, книга, которую вы пытаетесь открыть, создана в другой версии [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для Excel для SQL Server 2008 R2. Наиболее вероятно, что указанный в строке подключения поставщик данных служб Analysis Services, отсутствует на компьютере, который обрабатывает этот запрос.  
   
- Если это так, в журнале ULS вы найдете следующее сообщение: «Сбой обновления для " [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]t данных" в книге "\<URL-адрес книги >"», а затем «Не удалось установить соединение».  
+ Если это так, вы найдете следующее сообщение в журнале ULS: «Сбой обновления для " [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]t данных" в книге "\<URL-адрес книги >"», а затем «Не удалось установить соединение».  
   
  Чтобы определить версию книги, необходимо открыть ее в Excel и проверить, какой поставщик данных указан в строке подключения. Книга SQL Server 2008 R2 использует в качестве поставщика данных MSOLAP.4.  
   

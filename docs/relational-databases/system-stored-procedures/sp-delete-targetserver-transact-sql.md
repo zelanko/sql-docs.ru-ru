@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: cc438701-ad91-419d-9f23-ebc4c548c700
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 194395728e60f31c689293191be2cedca4d549f3
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 487d88a7580432bf947893920d307e2f0adffd18
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528916"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111993"
 ---
 # <a name="spdeletetargetserver-transact-sql"></a>sp_delete_targetserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ sp_delete_targetserver [ @server_name = ] 'server'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @server_name = ] 'server'` Имя сервера, необходимо удалить в качестве доступного целевого сервера. *сервер* — **nvarchar(30)**, не имеет значения по умолчанию.  
+`[ @server_name = ] 'server'` Имя сервера, необходимо удалить в качестве доступного целевого сервера. *сервер* — **nvarchar(30)** , не имеет значения по умолчанию.  
   
 `[ @clear_downloadlist = ] clear_downloadlist` Указывает, очистить ли список загрузки для целевого сервера. *clear_downloadlist* является типом **бит**, значение по умолчанию **1**. Когда *clear_downloadlist* — **1**, процедура очищает список загрузки для сервера перед удалением сервера. Когда *clear_downloadlist* — **0**, список загрузки не очищается.  
   

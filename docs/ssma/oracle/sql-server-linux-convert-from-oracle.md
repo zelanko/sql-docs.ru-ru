@@ -3,18 +3,18 @@ title: Перенос схемы Oracle HR в SQL Server в Linux | Докуме
 description: Преобразовать образец схемы Oracle в SQL Server в Linux
 author: shamikg
 ms.author: shamikg
-manager: v-thobro
+manager: shamikg
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: ''
 ms.technology: ssma
-ms.openlocfilehash: 312797b2b883f764fc65588e72cd67d7227e327a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1926c13b739de8294966fd6ce84df3d1e02a676e
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62629803"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266520"
 ---
 # <a name="migrate-an-oracle-schema-to-sql-server-2017-on-linux-with-the-sql-server-migration-assistant"></a>Перенос схемы Oracle для SQL Server 2017 на платформе Linux с помощью SQL Server Migration Assistant
 

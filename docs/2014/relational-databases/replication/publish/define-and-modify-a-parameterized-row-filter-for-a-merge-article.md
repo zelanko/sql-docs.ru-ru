@@ -19,11 +19,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 86a96f938a036edf39b3602278f9b6b6d2d46719
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52771666"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68212118"
 ---
 # <a name="define-and-modify-a-parameterized-row-filter-for-a-merge-article"></a>Определение и изменение параметризованного фильтра строк для статьи публикации слиянием
   В этом разделе описывается определение и изменение параметризованного фильтра строк в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] при помощи среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -44,7 +44,7 @@ ms.locfileid: "52771666"
   
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
- Операции определения, изменения и удаления параметризованных фильтров строк выполняются на странице **Фильтрация строк таблицы** мастера создания публикаций или странице **Фильтрация строк** диалогового окна **Свойства публикации — \<публикация>**. Дополнительные сведения об использовании мастера и доступе к этому диалоговому окну см. в статьях [Создание публикации](create-a-publication.md) и [Просмотр и изменение свойств публикации](view-and-modify-publication-properties.md).  
+ Операции определения, изменения и удаления параметризованных фильтров строк выполняются на странице **Фильтрация строк таблицы** мастера создания публикаций или странице **Фильтрация строк** диалогового окна **Свойства публикации — \<публикация>** . Дополнительные сведения об использовании мастера и доступе к этому диалоговому окну см. в статьях [Создание публикации](create-a-publication.md) и [Просмотр и изменение свойств публикации](view-and-modify-publication-properties.md).  
   
 #### <a name="to-define-a-parameterized-row-filter"></a>Определение параметризованного фильтра строк  
   
@@ -78,7 +78,7 @@ ms.locfileid: "52771666"
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-6.  Если вы находитесь в диалоговом окне **Свойства публикации — \<публикация>**, нажмите кнопку **ОК**, чтобы сохранить изменения и закрыть диалоговое окно.  
+6.  Если вы находитесь в диалоговом окне **Свойства публикации — \<публикация>** , нажмите кнопку **ОК**, чтобы сохранить изменения и закрыть диалоговое окно.  
   
 #### <a name="to-modify-a-parameterized-row-filter"></a>Изменение параметризованного фильтра строк  
   
@@ -99,7 +99,7 @@ ms.locfileid: "52771666"
   
 #### <a name="to-define-a-parameterized-row-filter-for-an-article-in-a-merge-publication"></a>Определение параметризованного фильтра строк для статьи в публикации слиянием  
   
-1.  В издателе в базе данных публикации выполните процедуру [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Укажите параметр **@publication**, имя статьи в параметре **@article**, публикуемую таблицу в параметре **@source_object**, предложение WHERE, определяющее параметризованный фильтр в параметре **@subset_filterclause** (исключая `WHERE`), и одно из следующих значений в параметре **@partition_options**, описывающее тип секционирования, которое будет получено в результате применения параметризованного фильтра строк.  
+1.  В издателе в базе данных публикации выполните процедуру [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Укажите параметр **@publication** , имя статьи в параметре **@article** , публикуемую таблицу в параметре **@source_object** , предложение WHERE, определяющее параметризованный фильтр в параметре **@subset_filterclause** (исключая `WHERE`), и одно из следующих значений в параметре **@partition_options** , описывающее тип секционирования, которое будет получено в результате применения параметризованного фильтра строк.  
   
     -   **0** — фильтрация для данной статьи либо является статической, либо не возвращает уникального подмножества данных для каждой из секций (то есть имеются перекрывающиеся секции).  
   
@@ -111,9 +111,9 @@ ms.locfileid: "52771666"
   
 #### <a name="to-change-a-parameterized-row-filter-for-an-article-in-a-merge-publication"></a>Изменение параметризованного фильтра строк для статьи в публикации слиянием  
   
-1.  В базе данных публикации на издателе выполните процедуру [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Укажите **@publication**, **@article**, значение `subset_filterclause` для **@property**, выражение, определяющее параметризованный фильтр в параметре **@value** (не включая `WHERE`), а значение **1** для обоих **@force_invalidate_snapshot** и **@force_reinit_subscription**.  
+1.  В базе данных публикации на издателе выполните процедуру [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Укажите **@publication** , **@article** , значение `subset_filterclause` для **@property** , выражение, определяющее параметризованный фильтр в параметре **@value** (не включая `WHERE`), а значение **1** для обоих **@force_invalidate_snapshot** и **@force_reinit_subscription** .  
   
-2.  Если это изменение приведет к разному поведению секционирования, еще раз выполните хранимую процедуру [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) . Укажите **@publication**, **@article**, значение `partition_options` для **@property**и наиболее оптимальный параметр секционирования для **@value**, который может принимать одно из следующих:  
+2.  Если это изменение приведет к разному поведению секционирования, еще раз выполните хранимую процедуру [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) . Укажите **@publication** , **@article** , значение `partition_options` для **@property** и наиболее оптимальный параметр секционирования для **@value** , который может принимать одно из следующих:  
   
     -   **0** — фильтрация для данной статьи либо является статической, либо не возвращает уникального подмножества данных для каждой из секций (то есть имеются перекрывающиеся секции).  
   

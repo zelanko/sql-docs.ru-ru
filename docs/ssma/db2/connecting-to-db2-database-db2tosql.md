@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5eb5801d-f0c3-4127-97c0-0b1ef49f4844
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: ce6a13eec87b60480ed2e68aa3d21a4c4f90ba1b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b49e5f53e1efbff6febe37a6f3d02fbb3e9cfc05
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63299351"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68141072"
 ---
 # <a name="connecting-to-db2-database-db2tosql"></a>Подключение к базе данных DB2 (DB2ToSQL)
 Для переноса баз данных DB2 в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], необходимо подключиться к базе данных DB2, которые требуется перенести. При подключении, SSMA получает метаданные о всех схем DB2 и затем отображается в панели обозревателя метаданных DB2. SSMA хранит сведения о сервере базы данных, но не хранит пароли.  

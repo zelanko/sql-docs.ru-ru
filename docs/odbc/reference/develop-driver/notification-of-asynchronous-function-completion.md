@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 336565da-4203-4745-bce2-4f011c08e357
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c54e545bdbd1ae137c24f79c71b53502480cbca9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: de3496661f2ab329e5bf662a9cb8fa749cb81bfc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62690539"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68129322"
 ---
 # <a name="notification-of-asynchronous-function-completion"></a>Уведомление о выполнении асинхронной функции
 В пакете SDK для Windows 8 ODBC добавлен механизм для уведомления приложений при завершении асинхронной операции, который мы будем подразумевать «уведомления после завершения». (См. в разделе [асинхронное выполнение (метод уведомления)](../../../odbc/reference/develop-app/asynchronous-execution-notification-method.md) подробнее.) В этом разделе рассматриваются некоторые из проблем для разработчиков драйверов.  

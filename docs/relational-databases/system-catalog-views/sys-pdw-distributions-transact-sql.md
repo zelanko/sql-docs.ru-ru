@@ -11,14 +11,13 @@ dev_langs:
 ms.assetid: 572b5187-9753-4063-adf8-65dea87d11f8
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: a1ff7801ef639ff8b8783296638ae571939ed1ca
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 7deddb57cdc02410fe161728f45190492ac18a16
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040215"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68127554"
 ---
 # <a name="syspdwdistributions-transact-sql"></a>sys.pdw_distributions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]

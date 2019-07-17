@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9370e47a-d128-4f15-9224-1c3642770c39
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0040f986e5ff3b6de025761b32d2f40e2e127d39
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: fe75ffcf1e8cdcc387acb48c882e247b21889c06
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529623"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68113813"
 ---
 # <a name="spchangesubstatus-transact-sql"></a>sp_changesubstatus (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,11 +64,11 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'` — Имя публикации. *Публикация* — **sysname**, значение по умолчанию **%**. Если *публикации* не указан, влияют на все публикации.  
+`[ @publication = ] 'publication'` — Имя публикации. *Публикация* — **sysname**, значение по умолчанию **%** . Если *публикации* не указан, влияют на все публикации.  
   
-`[ @article = ] 'article'` — Имя статьи. Оно должно быть уникальным для публикации. *статья* — **sysname**, значение по умолчанию **%**. Если *статье* не указан, влияют на все статьи.  
+`[ @article = ] 'article'` — Имя статьи. Оно должно быть уникальным для публикации. *статья* — **sysname**, значение по умолчанию **%** . Если *статье* не указан, влияют на все статьи.  
   
-`[ @subscriber = ] 'subscriber'` — Это имя подписчика, чтобы изменить состояние. *подписчик* — **sysname**, значение по умолчанию **%**. Если *подписчика* не указано, состояние изменяется для всех подписчиков на указанную статью.  
+`[ @subscriber = ] 'subscriber'` — Это имя подписчика, чтобы изменить состояние. *подписчик* — **sysname**, значение по умолчанию **%** . Если *подписчика* не указано, состояние изменяется для всех подписчиков на указанную статью.  
   
 `[ @status = ] 'status'` Состояние подписки в **syssubscriptions** таблицы. *состояние* — **sysname**, по умолчанию и может принимать одно из следующих значений.  
   
@@ -81,7 +80,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
   
 `[ @previous_status = ] 'previous_status'` — Это прежнее состояние подписки. *previous_status* — **sysname**, значение по умолчанию NULL. Этот параметр позволяет изменять любые подписки, для которых этот статус, таким образом позволяя групповых функций в определенном наборе подписок (например возвращение всем активным подпискам **подписка**).  
   
-`[ @destination_db = ] 'destination_db'` — Имя целевой базы данных. *destination_db* — **sysname**, значение по умолчанию **%**.  
+`[ @destination_db = ] 'destination_db'` — Имя целевой базы данных. *destination_db* — **sysname**, значение по умолчанию **%** .  
   
 `[ @frequency_type = ] frequency_type` Это частота, с которой необходимо планировать задачу распространения. *frequency_type* — **int**, значение по умолчанию NULL.  
   
@@ -120,9 +119,9 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
   
 `[ @active_end_date = ] active_end_date` Дата, когда запуск задачи распространения, в формате ГГГГММДД. *active_end_date* — **int**, значение по умолчанию NULL.  
   
-`[ @optional_command_line = ] 'optional_command_line'` — Это дополнительная Командная строка. *optional_command_line* — **nvarchar(4000)**, значение по умолчанию NULL.  
+`[ @optional_command_line = ] 'optional_command_line'` — Это дополнительная Командная строка. *optional_command_line* — **nvarchar(4000)** , значение по умолчанию NULL.  
   
-`[ @distribution_jobid = ] distribution_jobid` При изменении состояния подписки с неактивного на активный идентификатор задания агента распространителя на распространителе для подписки. В иных случаях он не определяется. Если в отдельный вызов этой хранимой процедуры вовлечено более одного агента распространителя, результат не определен. *distribution_jobid* — **binary(16)**, значение по умолчанию NULL.  
+`[ @distribution_jobid = ] distribution_jobid` При изменении состояния подписки с неактивного на активный идентификатор задания агента распространителя на распространителе для подписки. В иных случаях он не определяется. Если в отдельный вызов этой хранимой процедуры вовлечено более одного агента распространителя, результат не определен. *distribution_jobid* — **binary(16)** , значение по умолчанию NULL.  
   
 `[ @from_auto_sync = ] from_auto_sync` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   

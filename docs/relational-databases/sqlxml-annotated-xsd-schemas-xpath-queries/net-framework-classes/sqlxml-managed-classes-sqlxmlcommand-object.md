@@ -30,14 +30,13 @@ helpviewer_keywords:
 ms.assetid: c1f9e0bb-a89d-4d6a-a96e-289ef516a3a6
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5ac8e2b23988f09b21f21ed5cfded790871a25a9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 9f6ad55aff8291e3c0f14e8f44085da71d2b594c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041505"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119518"
 ---
 # <a name="sqlxml-managed-classes---sqlxmlcommand-object"></a>Управляемые классы SQLXML — объект SqlXmlCommand
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -104,7 +103,7 @@ public SqlXmlCommand(string cnString)
  Текст команды. Это свойство используется для задания текста команды, которую нужно выполнить. Работающий пример см. в разделе [выполнение запросов SQL &#40;управляемых классов SQLXML&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-sqlxml-managed-classes.md).  
   
  CommandStream  
- Командный поток. Это свойство служит для выполнения команды из файла (например, XML-шаблона). При использовании CommandStream, только **«Шаблон»**, **«UpdateGram»** и **CommandType «DiffGram»** значения поддерживаются. Работающий пример см. в разделе [выполнение файлов шаблонов с помощью свойства CommandStream](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-template-files-by-using-the-commandstream-property.md).  
+ Командный поток. Это свойство служит для выполнения команды из файла (например, XML-шаблона). При использовании CommandStream, только **«Шаблон»** , **«UpdateGram»** и **CommandType «DiffGram»** значения поддерживаются. Работающий пример см. в разделе [выполнение файлов шаблонов с помощью свойства CommandStream](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-template-files-by-using-the-commandstream-property.md).  
   
  CommandType  
  Идентифицирует тип команды. Это свойство используется для задания типа команды, которую нужно выполнить. Значения в следующей таблице задают тип команды. Работающий пример см. в разделе [доступ к функциональным возможностям SQLXML в среде .NET](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/accessing-sqlxml-functionality-in-the-net-environment.md).  

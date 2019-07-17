@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: fda788cecbad21a73186b96a6c360ceeae3948e3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537280"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68179055"
 ---
 # <a name="browse-data-and-metadata-in-cube"></a>Просмотр данных и метаданных в кубе
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -91,7 +91,7 @@ ms.locfileid: "52537280"
   
  Для целей безопасности вкладка **Браузер** поддерживает только следующие действия.  
   
--   URL-адрес  
+-   URL  
   
 -   Набор строк  
   

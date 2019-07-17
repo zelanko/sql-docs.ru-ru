@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 43989355-cebf-4d8b-ba3d-fa8546e70230
 author: Shamikg
 ms.author: Shamikg
-manager: v-pelars
-ms.openlocfilehash: a85eb72b3c239b8be0141c445e5d4507efb438cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 4fc68e8b8d3fc009b766f0fb0be97f1124797764
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63192322"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68259652"
 ---
 # <a name="global-settings-dialogs--oracletosql"></a>Глобальные параметры (диалоговые окна) (OracleToSQL)
 Используйте страницу диалоговые окна **глобальные параметры** диалоговое окно, чтобы указать действие пользователя по умолчанию и параметры предупреждения для SSMA.  

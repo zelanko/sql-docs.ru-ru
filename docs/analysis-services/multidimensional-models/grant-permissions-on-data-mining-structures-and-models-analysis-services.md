@@ -1,5 +1,5 @@
 ---
-title: Предоставление разрешений структурам интеллектуального анализа данных и модели (службы Analysis Services) | Документы Microsoft
+title: Предоставление разрешений на структур интеллектуального анализа данных и модели (службы Analysis Services) | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 91e805488ff5a90b4f358cb908fe2efa6fd8d04a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023061"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208842"
 ---
 # <a name="grant-permissions-on-data-mining-structures-and-models-analysis-services"></a>Предоставление разрешений структурам интеллектуального анализа данных и моделям интеллектуального анализа данных (службы Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  По умолчанию, только администратор сервера службы Analysis Services обладает разрешениями на просмотр интеллектуального анализа данных или моделей интеллектуального анализа данных в базе данных.   Следуйте инструкциям, приведенным ниже, для предоставления разрешений пользователям без прав администратора.  
+  По умолчанию, только администратор сервера службы Analysis Services обладает разрешениями на просмотр интеллектуального анализа данных или моделей интеллектуального анализа данных в базе данных. Следуйте инструкциям, приведенным ниже, для предоставления разрешений пользователям без прав администратора.  
   
 ## <a name="set-permissions-to-access-a-mining-structure"></a>Установка разрешений для доступа к интеллектуальному анализу данных  
   
@@ -43,7 +43,7 @@ ms.locfileid: "34023061"
   
  Чтобы предоставить разрешения на чтение или на чтение и запись роли базы данных, пользователь должен быть членом роли сервера служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] или роли базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , которая обладает разрешениями «Полный контроль» (администратор).  
   
-1.  В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] соединитесь с экземпляром служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], разверните узел **Роли** для соответствующей базы данных в обозревателе объектов, а затем щелкните роль базы данных (или создайте новую).  
+1.  В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]соединитесь с экземпляром служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], разверните узел **Роли** для соответствующей базы данных в обозревателе объектов, а затем щелкните роль базы данных (или создайте новую).  
   
 2.  На вкладке **Интеллектуальный анализ** поместите модель интеллектуального анализа в список **Модели интеллектуального анализа** , а затем выберите **Чтение**, **Чтение/Запись**, **Детализация**или **Навигация** для данной модели интеллектуального анализа.  
   
@@ -58,8 +58,8 @@ ms.locfileid: "34023061"
   
 ## <a name="see-also"></a>См. также  
  [Предоставление прав администратора сервера для экземпляра служб Analysis Services](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
- [Предоставьте куба или модели разрешения & #40; Службы Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)   
- [Предоставление настраиваемого доступа к измерению данных & #40; Службы Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)   
- [Предоставление настраиваемого доступа к ячейке данных & #40; Службы Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)  
+ [Предоставление разрешений кубу или модели (службы Analysis Services)](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)   
+ [Предоставление настраиваемого доступа к данным измерений (службы Analysis Services)](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)   
+ [Предоставление настраиваемого доступа к данным ячейки (службы Analysis Services)](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)  
   
   

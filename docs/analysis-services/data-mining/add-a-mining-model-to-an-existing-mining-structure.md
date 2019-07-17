@@ -1,5 +1,5 @@
 ---
-title: Добавление модели интеллектуального анализа данных к существующей структуре интеллектуального анализа данных | Документы Microsoft
+title: Добавление модели интеллектуального анализа данных к существующей структуре интеллектуального анализа данных | Документация Майкрософт
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f8b995a5b3fb89956e690598c786dc0a09474021
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019781"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210227"
 ---
 # <a name="add-a-mining-model-to-an-existing-mining-structure"></a>добавить модель интеллектуального анализа данных к существующей структуре интеллектуального анализа данных
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -35,6 +35,6 @@ ms.locfileid: "34019781"
  На вкладке **Модели интеллектуального анализа данных** появляется новая модель интеллектуального анализа данных. Модель использует столбцы по умолчанию, существующие в структуре. Дополнительные сведения об изменении столбцов см. в разделе [Изменение свойств модели интеллектуального анализа данных](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md).  
   
 ## <a name="see-also"></a>См. также  
- [Задачи модели интеллектуального анализа данных и инструкции](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
+ [Задачи и инструкции по модели интеллектуального анализа данных](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
   
   

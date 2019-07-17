@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7bb62a84-12d8-4b29-9b6e-6aa25410618e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 4c2478cfa5753c094284f44c13cf0037bf927a5a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6c57ba8b2a5639dc271eaa7cf1877ab3ccbba9ca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65488344"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68131854"
 ---
 # <a name="lock-a-version-master-data-services"></a>Блокировка версии (службы Master Data Services)
 
@@ -30,7 +29,7 @@ ms.locfileid: "65488344"
 > [!NOTE]  
 >  Если версия заблокирована, суперпользователи и администраторы модели по-прежнему могут добавлять, изменять и удалять элементы. Другие пользователи с разрешениями для модели могут только просматривать элементы.  
   
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
  Для выполнения этой процедуры:  
   
 -   необходимо быть администратором модели. Дополнительные сведения см. в статье [Администраторы (службы Master Data Services)](../master-data-services/administrators-master-data-services.md).  

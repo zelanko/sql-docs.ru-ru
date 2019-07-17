@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: eddef353-83f3-4a3c-8f24-f9ed888890a4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d179e7da0b53dbff66c8a3262f68fc4c3fa89df8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 63982d87f0dbbe0c8ab1a540185e298d9943f630
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537718"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104796"
 ---
 # <a name="sqldescribecol-function"></a>SQLDescribeCol, функция
 **Соответствие стандартам**  
@@ -93,7 +92,7 @@ SQLRETURN SQLDescribeCol(
  SQL_NULLABLE_UNKNOWN: Драйвер не может определить, допускает ли столбец значения NULL.  
   
 ## <a name="returns"></a>Возвращает  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR, or SQL_INVALID_HANDLE.  
+ Значение SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, значение SQL_ERROR или SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Диагностика  
  Когда **SQLDescribeCol** возвращает значение SQL_ERROR или SQL_SUCCESS_WITH_INFO, можно получить путем вызова связанного значения SQLSTATE **SQLGetDiagRec** с *HandleType*значение SQL_HANDLE_STMT и *обрабатывать* из *StatementHandle*. В следующей таблице перечислены значения SQLSTATE, обычно возвращаемые **SQLDescribeCol** и объясняется каждый из них в контексте этой функции; описания SQLSTATE, возвращаемых диспетчером драйверов предшествует обозначение «(DM)». Возвращается связанный с каждого значения SQLSTATE значение SQL_ERROR, если не указано иное.  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3c56cd62-2966-4e87-a986-44cb3fd0b760
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e51c42237b57830cbe894114019657ab5b3742c3
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 71027fb060a5085289aed4c8a637bc76a71bbd2a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531006"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108678"
 ---
 # <a name="spcopysubscription-transact-sql"></a>sp_copysubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,11 +43,11 @@ sp_copysubscription [ @filename = ] 'file_name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @filename = ] 'file_name'` — Строка, указывающая полный путь, включая имя файла, в котором требуется сохранить копию файла данных (MDF). *Имя файла* — **nvarchar(260)**, не имеет значения по умолчанию.  
+`[ @filename = ] 'file_name'` — Строка, указывающая полный путь, включая имя файла, в котором требуется сохранить копию файла данных (MDF). *Имя файла* — **nvarchar(260)** , не имеет значения по умолчанию.  
   
-`[ @temp_dir = ] 'temp_dir'` — Имя каталога, содержащего временные файлы. *temp_dir* — **nvarchar(260)**, значение по умолчанию NULL. Если значение равно NULL, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] каталог данных по умолчанию будет использоваться. Каталог должен включать достаточно свободного места для хранения файла с размером, равным суммарному размеру всех файлов баз данных подписчика.  
+`[ @temp_dir = ] 'temp_dir'` — Имя каталога, содержащего временные файлы. *temp_dir* — **nvarchar(260)** , значение по умолчанию NULL. Если значение равно NULL, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] каталог данных по умолчанию будет использоваться. Каталог должен включать достаточно свободного места для хранения файла с размером, равным суммарному размеру всех файлов баз данных подписчика.  
   
-`[ @overwrite_existing_file = ] 'overwrite_existing_file'` Необязательный логический флаг, который указывает, следует ли перезаписать существующий файл с именем, указанным в **@filename**. *overwrite_existing_file*— **бит**, значение по умолчанию **0**. Если **1**, она перезаписывает файл, указанный параметром **@filename**, если он существует. Если **0**, хранимая процедура завершается неудачей, если файл существует, и файл не перезаписывается.  
+`[ @overwrite_existing_file = ] 'overwrite_existing_file'` Необязательный логический флаг, который указывает, следует ли перезаписать существующий файл с именем, указанным в **@filename** . *overwrite_existing_file*— **бит**, значение по умолчанию **0**. Если **1**, она перезаписывает файл, указанный параметром **@filename** , если он существует. Если **0**, хранимая процедура завершается неудачей, если файл существует, и файл не перезаписывается.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  

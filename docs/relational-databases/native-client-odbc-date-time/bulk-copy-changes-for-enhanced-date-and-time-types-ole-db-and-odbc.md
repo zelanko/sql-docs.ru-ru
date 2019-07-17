@@ -12,29 +12,28 @@ helpviewer_keywords:
 ms.assetid: c29e0f5e-9b3c-42b3-9856-755f4510832f
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4688fd344bbc0576aa30e2afc70a32f16cf78588
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 784917e29c0b0a407eb66006bb0e8798602722ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416625"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106124"
 ---
 # <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc"></a>Изменения в функции массового копирования для работы с улучшенными типами даты и времени (OLE DB и ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Описываются новые возможности даты-времени для поддержки операций массового копирования. Приведенные в данном разделе сведения верны как для OLE DB, так и для ODBC в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
+  Описываются новые возможности даты-времени для поддержки операций массового копирования. Приведенные в данном разделе сведения верны как для OLE DB, так и для ODBC в собственном клиенте [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="format-files"></a>Файлы форматирования  
  При интерактивном построении файлов форматирования следующая таблица описывает вводные данные для задания типов даты-времени и соответствующих имен типов данных из файлов размещения.  
   
 |Тип файла хранилища|Тип данных файла|Ответ на приглашение: «Тип файлового хранилища поля < имя_поля > [\<по умолчанию >]:»|  
 |-----------------------|-------------------------|-----------------------------------------------------------------------------------------------------|  
-|DATETIME|SQLDATETIME|d|  
+|DateTime|SQLDATETIME|d|  
 |Smalldatetime|SQLDATETIM4|D|  
-|Дата|SQLDATE|de|  
+|Date|SQLDATE|de|  
 |Time|SQLTIME|te|  
 |Datetime2|SQLDATETIME2|d2|  
 |Datetimeoffset|SQLDATETIMEOFFSET|do|  
@@ -65,7 +64,7 @@ ms.locfileid: "52416625"
 ```  
   
 ## <a name="character-data-files"></a>Файлы символьных данных  
- В файлах символьных данных значения даты-времени представлены в соответствии с документом «Форматы данных: Строки и литералы» раздела [поддержка типов данных ODBC Дата и время улучшениях](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md) для ODBC или из [поддержки типов данных даты OLE DB и ускорение](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md) для OLE DB.  
+ В файлах символьных данных представлены значения даты и времени, как описано в разделе «форматы данных: Строки и литералы» раздела [поддержка типов данных ODBC Дата и время улучшениях](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md) для ODBC или из [поддержки типов данных даты OLE DB и ускорение](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md) для OLE DB.  
   
  В файлах данных в собственном формате значения даты и времени для четырех новых типов представлены как их представления потока табличных данных с масштабом 7 (так как это максимальную длину, поддерживаемую [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и файлы данных bcp не хранят масштаб для этих столбцов). В хранении существующих типов **datetime** и **smalldatetime**, а также их представлений в виде потоков табличных данных (TDS) изменений нет.  
   
@@ -73,9 +72,9 @@ ms.locfileid: "52416625"
   
 |Тип файла хранилища|Объем памяти в байтах|  
 |-----------------------|---------------------------|  
-|DATETIME|8|  
+|datetime|8|  
 |smalldatetime|4|  
-|Дата|3|  
+|date|3|  
 |time|6|  
 |datetime2|9|  
 |datetimeoffset|11|  
@@ -96,9 +95,9 @@ ms.locfileid: "52416625"
   
 |Тип файла хранилища|Тип данных файла|Введите в файле sqlncli.h для использования с IBCPSession::BCPColFmt|Значение|  
 |-----------------------|-------------------------|-----------------------------------------------------------|-----------|  
-|DATETIME|SQLDATETIME|BCP_TYPE_SQLDATETIME|0x3d|  
+|DateTime|SQLDATETIME|BCP_TYPE_SQLDATETIME|0x3d|  
 |Smalldatetime|SQLDATETIM4|BCP_TYPE_SQLDATETIME4|0x3a|  
-|Дата|SQLDATE|BCP_TYPE_SQLDATE|0x28|  
+|Date|SQLDATE|BCP_TYPE_SQLDATE|0x28|  
 |Time|SQLTIME|BCP_TYPE_SQLTIME|0x29|  
 |Datetime2|SQLDATETIME2|BCP_TYPE_SQLDATETIME2|0x2a|  
 |Datetimeoffset|SQLDATETIMEOFFSET|BCP_TYPE_SQLDATETIMEOFFSET|0x2b|  
@@ -108,12 +107,12 @@ ms.locfileid: "52416625"
   
  **Примечание для OLE DB**. Следующие преобразования выполняются через интерфейс IBCPSession. IRowsetFastLoad использует преобразования OLE DB, как определено в [преобразования, выполняемые от клиента к серверу](../../relational-databases/native-client-ole-db-date-time/conversions-performed-from-client-to-server.md). Следует заметить, что значения даты-времени округляются до 1/300 секунды, а в значениях типа smalldatetime после выполнения клиентских преобразований, описанных ниже, значение секунд становится равным нулю. Округление даты-времени распространяется на часы и минуты, но не на дату.  
   
-|Кому --><br /><br /> От|Дата|time|smalldatetime|DATETIME|datetime2|datetimeoffset|char;|wchar|  
+|Кому --><br /><br /> От|date|time|smalldatetime|datetime|datetime2|datetimeoffset|char|wchar|  
 |------------------------|----------|----------|-------------------|--------------|---------------|--------------------|----------|-----------|  
-|Дата|1|-|1,6|1,6|1,6|1,5,6|1,3|1,3|  
+|Date|1|-|1,6|1,6|1,6|1,5,6|1,3|1,3|  
 |Time|Н/Д|1,10|1,7,10|1,7,10|1,7,10|1,5,7,10|1,3|1,3|  
 |Smalldatetime|1,2|1,4,10|1|1|1,10|1,5,10|1,11|1,11|  
-|DATETIME|1,2|1,4,10|1,12|1|1,10|1,5,10|1,11|1,11|  
+|DateTime|1,2|1,4,10|1,12|1|1,10|1,5,10|1,11|1,11|  
 |Datetime2|1,2|1,4,10|1,10 (ODBC)1,12 (OLE DB)|1,10|1,10|1,5,10|1,3|1,3|  
 |Datetimeoffset|1,2,8|1,4,8,10|1,8,10|1,8,10|1,8,10|1,10|1,3|1,3|  
 |Char/wchar (date)|9|-|9,6 (ODBC)9,6,12 (OLE DB)|9,6 (ODBC)9,6,12 (OLE DB)|9,6|9,5,6|Н/Д|Н/Д|  

@@ -18,16 +18,15 @@ helpviewer_keywords:
 - sp_enclave_send_keys
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6540cdd36cccba4f5a7ccb3beddf31ce00cd9107
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: b3d5ed50ac407beebfb54370cf91f0f3b8ba3101
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67394146"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124686"
 ---
-# <a name="spenclavesendkeys----transact-sql"></a>sp_enclave_send_keys    (Transact-SQL)
+# <a name="spenclavesendkeys----transact-sql"></a>sp_enclave_send_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Отправляет все поддержкой анклава столбца ключей шифрования в базе данных анклава, используемые [всегда зашифрованы с помощью безопасного enclaves &#40;СУБД&#41;](../../relational-databases/security/encryption/always-encrypted-enclaves.md).

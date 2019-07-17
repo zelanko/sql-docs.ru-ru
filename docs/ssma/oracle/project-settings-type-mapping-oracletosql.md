@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 4bb8466e-2199-4f00-8513-b04e9586723d
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 449f1ecc2fbcc2f9e18ea24cb5bd42323bbf5ddc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 4551181da22af1244f8083f6df5ea00f63e00e69
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62625888"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266585"
 ---
 # <a name="project-settings-type-mapping-oracletosql"></a>Параметры проекта (сопоставление типов) (OracleToSQL)
 На странице сопоставления типов **параметры проекта** диалоговое окно содержит настройки, установленные как SSMA преобразует типы данных Oracle в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типов данных.  
@@ -64,7 +64,7 @@ ms.locfileid: "62625888"
 |binary_float|число с плавающей запятой [53]|  
 |binary_integer|ssNoversion|  
 |большой двоичный объект|varbinary(max)|  
-|Логическое|bit|  
+|boolean|bit|  
 |char|varchar(max)|  
 |char varying|varchar(max)|  
 |character|varchar(max)|  
@@ -90,7 +90,7 @@ ms.locfileid: "62625888"
 |NCLOB|nvarchar(max)|  
 |number|число с плавающей запятой [53]|  
 |NUMERIC|число с плавающей запятой [53]|  
-|nvarchar2|nvarchar(max)|  
+|NVARCHAR2|nvarchar(max)|  
 |pls_integer|ssNoversion|  
 |raw|varbinary(max)|  
 |real|число с плавающей запятой [53]|  
@@ -241,7 +241,7 @@ ms.locfileid: "62625888"
 |числовые [*.. \*]|числовые [*]|  
 |numeric[*..\*][\*..\*]|числовые [*] [\*]|  
 |NVARCHAR2 [*.. 4000]|nvarchar [*]|  
-|nvarchar2[4001..*]|nvarchar(max)|  
+|NVARCHAR2 [4001.. *]|nvarchar(max)|  
 |pls_integer|ssNoversion|  
 |необработанные [*.. 8000]|varbinary [*]|  
 |необработанные [8001.. *]|varbinary(max)|  
@@ -262,7 +262,7 @@ ms.locfileid: "62625888"
 |varchar [*.. 8000]|varchar [*]|  
 |varchar [8001.. *]|varchar(max)|  
 |VARCHAR2 [*.. 8000]|varchar [*]|  
-|varchar2[8001..*]|varcha(max)|  
+|VARCHAR2 [8001.. *]|varcha(max)|  
 |xmltype|Xml|  
   
 ## <a name="see-also"></a>См. также  

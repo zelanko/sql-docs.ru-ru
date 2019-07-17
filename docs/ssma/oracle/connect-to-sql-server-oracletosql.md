@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 4ef384ea-5f3e-4f70-ad7c-b62d7b0da628
 author: Shamikg
 ms.author: Shamikg
-manager: v-pelars
-ms.openlocfilehash: ed7f16c6cee61281a8320b2b8874282fdfae6b24
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: e6e06585ca99305d6825898a98a7dbab31b5b39b
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63288367"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266172"
 ---
 # <a name="connect-to-sql-server--oracletosql"></a>Диалоговое окно "Подключение к SQL Server" (OracleToSQL)
 Используйте **подключение к SQL Server** диалоговое окно для подключения к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , необходимо выполнить перенос. Для доступа к **подключение к SQL Server** диалоговом окне **файл** меню, щелкните **подключение к SQL Server**.  

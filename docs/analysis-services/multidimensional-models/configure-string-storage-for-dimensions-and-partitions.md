@@ -1,5 +1,5 @@
 ---
-title: Настройка хранилища строк для измерений и секций | Документы Microsoft
+title: Настройка хранилища строк для измерений и секций | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f6a5aff8822d3fceb05d22433094dc952c6cb872
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023861"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209108"
 ---
 # <a name="configure-string-storage-for-dimensions-and-partitions"></a>Настройка хранилища строк для измерений и секций
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "34023861"
   
  Уровню совместимости базы данных должно быть присвоено значение 1100. Если база данных создавалась или развертывалась с использованием [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] и [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] или более поздней версии [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], то уровень совместимости базы данных уже установлен в значение 1100. Если база данных, созданная в службах [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] более ранней версии, перемещалась в ssSQL11 или более позднюю версию, необходимо обновить уровень совместимости. Для баз данных, которые перемещаются без повторного развертывания, можно задать уровень совместимости в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Дополнительные сведения см. в разделе [Уровень совместимости многомерной базы данных (службы Analysis Services)](../../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md).  
   
-##  <a name="bkmk_step1"></a> Шаг 1. Задание свойства StringStoreCompatiblityLevel в SQL Server Data Tools  
+##  <a name="bkmk_step1"></a> Шаг 1. Задание свойства StringStoreCompatiblityLevel в SQL Server Data Tools  
   
 1.  В среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]откройте проект, содержащий измерения или секции, которые необходимо изменить.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "34023861"
   
 8.  Сохраните файл.  
   
-##  <a name="bkmk_step2"></a> Шаг 2. Обработка объектов  
+##  <a name="bkmk_step2"></a> Шаг 2. Обработка объектов  
  После обработки объектов будет использоваться новая архитектура хранилища. Обработка объектов также подтверждает успешное разрешение проблемы с ограничением размера хранилища, поскольку сообщение об ошибке переполнения хранилища строк больше не возникает.  
   
 -   В обозревателе решений щелкните правой кнопкой мыши только что измененное измерение и выберите пункт **Обработать**.  
@@ -88,8 +88,8 @@ ms.locfileid: "34023861"
   
 ## <a name="see-also"></a>См. также  
  [Средства и способы обработки (службы Analysis Services)](../../analysis-services/multidimensional-models/tools-and-approaches-for-processing-analysis-services.md)   
- [Параметры обработки и параметры & #40; Службы Analysis Services & #41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)   
- [Обработка и режимы хранения секции](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)   
+ [Настройка параметров обработки (службы Analysis Services)](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)   
+ [Режимы хранения и обработка секции](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)   
  [Хранение измерений](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md)  
   
   

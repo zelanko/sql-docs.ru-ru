@@ -1,5 +1,5 @@
 ---
-title: Свойства измерения базы данных | Документы Microsoft
+title: Свойства измерений базы данных | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,29 +10,29 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7c7944ab279f2b036a3acd7cf75bd775d0ec6d6c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021511"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68180776"
 ---
 # <a name="database-dimension-properties"></a>Свойства измерений базы данных
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  В [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], характеристики измерения задаются метаданные для измерения, основываясь на настройках различных свойств измерения и на нем атрибутах или иерархиях, содержащихся в измерении. Следующая таблица содержит описания свойств измерений служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+  В [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], характеристики измерения задаются метаданные для измерения, основываясь на настройках различных свойств измерения, а также на нем атрибутах или иерархиях, содержащихся в измерении. Следующая таблица содержит описания свойств измерений служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
-|property|Описание|  
+|Свойство|Описание|  
 |--------------|-----------------|  
 |**AttributeAllMemberName**|Задает имя элемента «Все» для атрибутов измерения.|  
 |**Параметры сортировки**|Задает параметры сортировки, применяемые в измерении.|  
 |**CurrentStorageMode**|Содержит текущий режим хранения для измерения.|  
-|**DependsOnDimension**|Содержит идентификатор другого измерения, от которого зависит данное (если такое имеется).|  
-|**Description**|Содержит описание измерения.|  
+|**Раздел о DependsOnDimension**|Содержит идентификатор другого измерения, от которого зависит данное (если такое имеется).|  
+|**Описание**|Содержит описание измерения.|  
 |**ErrorConfiguration**|Настраиваемые параметры обработки ошибок для обработки ситуаций с повторяющимися ключами, неизвестными ключами, предельными значениями ошибок, действиями при обнаружении ошибки, файлом журнала ошибок и ключами со значением NULL.|  
 |**Идентификатор**|Содержит уникальный идентификатор измерения.|  
 |**Язык**|Задает язык по умолчанию для измерения.|  
 |**MdxMissingMemberMode**|Определяет, как обрабатываются пропущенные элементы для инструкций многомерных выражений.|  
 |**MiningModelID**|Содержит идентификатор модели интеллектуального анализа данных, с которой связано измерение интеллектуального анализа данных. Применяется, только если измерение является измерением модели интеллектуального анализа данных.|  
-|**Название**|Указывает имя измерения.|  
+|**Name**|Указывает имя измерения.|  
 |**ProactiveCaching**|Определяет настройки упреждающего кэширования для измерения.|  
 |**ProcessingGroup**|Указывает группу обработки. Значения: ByAttribute и ByTable. Значение по умолчанию — **ByAttribute**.|  
 |**ProcessingMode**|Показывает, следует ли службам [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] производить индексирование и статистическую обработку во время работы или после нее.|  
@@ -45,12 +45,12 @@ ms.locfileid: "34021511"
 |**WriteEnabled**|Показывает, доступна ли обратная запись в измерение (зависит от прав доступа).|  
   
 > [!NOTE]  
->  Дополнительные сведения о настройке значений свойства ErrorConfiguration и UnknownMember при работе со значениями null и других проблемах целостности данных см. в разделе [обработка проблем целостности данных в службах Analysis Services 2005](http://go.microsoft.com/fwlink/?LinkId=81891).  
+>  Дополнительные сведения о настройке значений свойства ErrorConfiguration и UnknownMember при работе со значениями null и других проблемах целостности данных, см. в разделе [обработка проблем целостности данных в службах аналитики 2005](http://go.microsoft.com/fwlink/?LinkId=81891).  
   
 ## <a name="see-also"></a>См. также  
  [Атрибуты и иерархии атрибутов](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
  [Пользовательские иерархии](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md)   
- [Связей измерений](../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [Измерения & #40; Analysis Services — многомерные данные & #41;](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
+ [Связи измерений](../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
+ [Измерения (службы Analysis Services — многомерные данные)](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
   
   

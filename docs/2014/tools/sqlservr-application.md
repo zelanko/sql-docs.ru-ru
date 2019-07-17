@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 23f45c0a2e47381b60fe8f6852f24fd8f5f200fc
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591868"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211016"
 ---
 # <a name="sqlservr-application"></a>Приложение sqlservr
   Приложение **sqlservr** позволяет запускать, останавливать, приостанавливать и возобновлять работу экземпляра [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] из командной строки.  
@@ -61,7 +61,7 @@ ms.locfileid: "53591868"
  Запускает экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] с минимальной конфигурацией. Эта функция полезна в случае, если установленные значения конфигурации (например, слишком большой объем выделяемой памяти) не позволяют выполнить запуск сервера.  
   
  **-e** _error_log_path_  
- Указывает полный путь к файлу журнала ошибок. Если путь не указан, расположением по умолчанию является *\<диск>*:\Program Files\Microsoft SQL Server\MSSQL\Log\Errorlog для экземпляра по умолчанию и *\<диск>*:\Program Files\Microsoft SQL Server\MSSQL$*имя_экземпляра*\Log\Errorlog — для именованного экземпляра. Между параметрами **-e** и *error_log_path*нет пробелов.  
+ Указывает полный путь к файлу журнала ошибок. Если путь не указан, расположением по умолчанию является *\<диск>* :\Program Files\Microsoft SQL Server\MSSQL\Log\Errorlog для экземпляра по умолчанию и *\<диск>* :\Program Files\Microsoft SQL Server\MSSQL$*имя_экземпляра*\Log\Errorlog — для именованного экземпляра. Между параметрами **-e** и *error_log_path*нет пробелов.  
   
  **-l** _master_log_path_  
  Указывает полный путь к файлу журнала транзакций базы данных **master** . Между параметрами **-l** и *master_log_path*нет пробелов.  
@@ -73,10 +73,10 @@ ms.locfileid: "53591868"
  Позволяет запустить именованный экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Если не указать параметр **-s** , будет выполнена попытка запуска экземпляра по умолчанию. Перед запуском программы **sqlservr.exe**в командной строке необходимо перейти в каталог BINN соответствующего экземпляра. Например, если экземпляр Instance1 должен использовать \mssql$Instance1 для своих двоичных файлов, для запуска **sqlservr.exe -s instance1**пользователь должен быть в каталоге \mssql$Instance1\binn. Если экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] запускается с параметром **-n** , целесообразно также использовать параметр **-e** , иначе события [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] не будут регистрироваться.  
   
  **-T** _trace#_  
- Указывает, что экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] фактически должен запускаться с установленным флагом трассировки (*trace#*). Флаги трассировки используются для запуска сервера в нестандартном режиме. Дополнительные сведения см. в разделе [Флаги трассировки (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql).  
+ Указывает, что экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] фактически должен запускаться с установленным флагом трассировки (*trace#* ). Флаги трассировки используются для запуска сервера в нестандартном режиме. Дополнительные сведения см. в разделе [Флаги трассировки (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql).  
   
 > [!IMPORTANT]  
->  При указании флага трассировки укажите **-T**, чтобы передать номер флага трассировки. Знак t в нижнем регистре (**-t**) также принимается [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Однако в этом случае **-t** установит другие внутренние флаги трассировки, необходимые специалистам службы поддержки [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
+>  При указании флага трассировки укажите **-T**, чтобы передать номер флага трассировки. Знак t в нижнем регистре ( **-t**) также принимается [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Однако в этом случае **-t** установит другие внутренние флаги трассировки, необходимые специалистам службы поддержки [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  **-v**  
  Отображает номер версии сервера.  
@@ -91,9 +91,9 @@ ms.locfileid: "53591868"
   
  Используйте значение параметра **-g** по умолчанию, только если в файле журнала ошибок [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] не присутствуют следующие предупреждения:  
   
--   «Ошибка виртуального выделения байтов: FAIL_VIRTUAL_RESERVE \<размер >»  
+-   «Ошибка виртуального выделения байтов: FAIL_VIRTUAL_RESERVE \<размер>"  
   
--   «Ошибка виртуального выделения байтов: FAIL_VIRTUAL_COMMIT \<размер >»  
+-   «Ошибка виртуального выделения байтов: FAIL_VIRTUAL_COMMIT \<размер>"  
   
  Эти сообщения могут свидетельствовать о попытках [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] освободить часть пула памяти [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , чтобы найти пространство для таких элементов, как dll-файлы расширенных хранимых процедур или объекты автоматизации. В этом случае рассмотрите возможность увеличения размера памяти, зарезервированной с помощью параметра **-g**``.  
   

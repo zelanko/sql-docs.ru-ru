@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 01982222ba5a18086aeadbbec776cba222f0e235
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354223"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207053"
 ---
 # <a name="prepared-execution"></a>Подготовленное выполнение
   API-интерфейс ODBC определяет подготовленное выполнение как способ уменьшить расходы на синтаксический анализ и компиляцию, связанные с повторным выполнением инструкции [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Приложение строит строку символов, содержащую инструкцию SQL, а затем выполняет ее в два этапа. Он вызывает [функция SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360) один раз, чтобы оператор анализируются и компилируются в план выполнения, [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. Затем он вызывает **SQLExecute** для каждого выполнения подготовленного плана выполнения. Это снижает расход ресурсов на синтаксический анализ и компиляцию при каждом выполнении. Подготовленное выполнение часто используется приложениями для многократного выполнения параметризованных инструкций SQL.  

@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: c73e628a-f54a-411a-bfe3-6dae519316cc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e49d95cb7a675985039969003d80872a0b9cbad3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 15e4a750e2568598fc5db2bab175643b50310db2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661293"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138612"
 ---
 # <a name="getting-started-with-clr-integration"></a>Приступая к работе с интеграцией со средой CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -86,7 +85,7 @@ End Class
   
 ```  
   
- Эта простая программа содержит единственный статический метод общего класса. Этот метод использует два новых класса, **[SqlContext](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlcontext.aspx)** и  **[SqlPipe](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlpipe.aspx)**, позволяющие создать управляемые объекты базы данных для вывода простого текста Сообщение. Метод также присваивает строку «Hello world!» для параметра выходной параметр. Этот метод можно объявить как хранимую процедуру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], а затем выполнить так же, как и любую хранимую процедуру [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
+ Эта простая программа содержит единственный статический метод общего класса. Этот метод использует два новых класса, **[SqlContext](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlcontext.aspx)** и  **[SqlPipe](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlpipe.aspx)** , позволяющие создать управляемые объекты базы данных для вывода простого текста Сообщение. Метод также присваивает строку «Hello world!» для параметра выходной параметр. Этот метод можно объявить как хранимую процедуру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], а затем выполнить так же, как и любую хранимую процедуру [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
  Скомпилировать эту программу как библиотеку, загрузить его в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], и запустите его от имени хранимой процедуры.  
   

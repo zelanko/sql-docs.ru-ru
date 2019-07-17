@@ -1,5 +1,5 @@
 ---
-title: Добавление типа содержимого соединения семантической модели бизнес-Аналитики в библиотеку | Документы Microsoft
+title: Добавление типа содержимого соединения семантической модели бизнес-Аналитики в библиотеку | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ce6afcf0a00473760a35a062f51ef3b87c5a75d4
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021371"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208364"
 ---
 # <a name="add-bi-semantic-model-connection-content-type-to-library"></a>Добавление типа содержимого соединения семантической модели бизнес-Аналитики в библиотеку
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "34021371"
   
 12. Чтобы проверить тип добавляемого содержимого, вернитесь к библиотеке и щелкните **Создать документ** в области «Документы» на ленте библиотеки. В списке «Создать документ» будет пункт **Файл соединения семантической модели бизнес-аналитики** .  
   
-     ![Новый документ подменю в библиотеке SharePoint](../../analysis-services/power-pivot-sharepoint/media/ssas-bismconnection-new.gif "подменю новый документ в библиотеку SharePoint")  
+     ![Подменю документа в библиотеке SharePoint](../../analysis-services/power-pivot-sharepoint/media/ssas-bismconnection-new.gif "подменю новый документ в библиотеку SharePoint")  
   
  После включения типа файла соединения семантической модели бизнес-аналитики в библиотеке можно будет создать соединение, которое будет перенаправлять подключение к данным семантической модели, и использовать его в отчетах Excel или [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] . Выберите одну из следующих ссылок, чтобы узнать подробнее о следующем шаге.  
   
@@ -62,6 +62,6 @@ ms.locfileid: "34021371"
   
 ## <a name="see-also"></a>См. также  
  [Соединение семантической модели бизнес-аналитики PowerPivot (BISM-файлы)](../../analysis-services/power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)   
- [Использовать соединение семантической модели бизнес-Аналитики в Excel или Reporting Services](../../analysis-services/power-pivot-sharepoint/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)  
+ [Использование соединения семантической модели бизнес-аналитики в службах Excel или Reporting Services](../../analysis-services/power-pivot-sharepoint/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)  
   
   

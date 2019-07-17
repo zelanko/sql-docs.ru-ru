@@ -17,11 +17,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 37a6846d8c185549bd6c54f32cb5ab02eb564d1d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531584"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211712"
 ---
 # <a name="create-user-defined-functions-database-engine"></a>Создание определяемых пользователем функций (компонент Database Engine)
   В этом разделе описывается создание определяемой пользователем функции в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)].  

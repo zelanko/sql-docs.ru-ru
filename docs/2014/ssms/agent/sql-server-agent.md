@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0f434c5d323f2203965fd0584dbc1dbc8bd89563
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783886"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68188830"
 ---
 # <a name="sql-server-agent"></a>Агент SQL Server
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] — это служба Microsoft Wвdows, выполняющая запланированные административные задачи, которые называются *заданиями* в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  

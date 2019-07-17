@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 084c7020-f729-4f91-90e0-143f85fa68d1
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 233b6824ef527a9ed4e7e02164a08e31e41f3699
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6cb47c0f06d7133b8c7454a4fa538937a0e78e19
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63253328"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103174"
 ---
 # <a name="connecting-to-mysql-mysqltosql"></a>Подключение к MySQL (MySQLToSQL)
 Чтобы перенести базы данных MySQL в SQL Server или SQL Azure, необходимо подключиться к базе данных MySQL, которые требуется перенести. При подключении, SSMA получает метаданные о все схемы MySQL и затем отображается в панели обозревателя метаданных MySQL. SSMA хранит сведения о сервере базы данных, но не хранит пароли.  

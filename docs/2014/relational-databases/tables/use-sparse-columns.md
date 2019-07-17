@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1e98485d0a1887b2ac24da20d8b8a672c0060591
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52798936"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196655"
 ---
 # <a name="use-sparse-columns"></a>Использование разреженных столбцов
   Разреженные столбцы — это обычные столбцы, имеющие оптимизированное хранилище для значений NULL. Разреженные столбцы уменьшают пространство, необходимое для хранения значений NULL, однако увеличивается стоимость получения значений, отличных от NULL. Разреженные столбцы следует использовать только в том случае, если экономится не менее чем от 20 до 40 процентов места. Наборы столбцов и разреженные столбцы определяются с помощью инструкций [CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql) и [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) .  
@@ -104,9 +104,9 @@ ms.locfileid: "52798936"
 |Тип данных|Неразреженные байты|Разреженные байты|Процент значений NULL|  
 |---------------|---------------------|------------------|---------------------|  
 |`sql_variant`|Зависит от базового типа данных|||  
-|`varchar` либо `char`|2*|4*|60%|  
-|`nvarchar` либо `nchar`|2*|4*+|60%|  
-|`varbinary` либо `binary`|2*|4*|60%|  
+|`varchar` или `char`|2*|4*|60%|  
+|`nvarchar` или `nchar`|2*|4*+|60%|  
+|`varbinary` или `binary`|2*|4*|60%|  
 |`xml`|2*|4*|60%|  
 |`hierarchyid`|2*|4*|60%|  
   

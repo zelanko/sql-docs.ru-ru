@@ -1,5 +1,5 @@
 ---
-title: С помощью осей запроса и среза простой пример (многомерные Выражения) | Документы Microsoft
+title: С помощью осей запроса и среза в простой пример (многомерные Выражения) | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: fce95d7e51c17f6e8a0fedbec01eccf7bd8ec8c4
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022631"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68165838"
 ---
-# <a name="mdx-query-and-slicer-axes---using-axes-in-a-simple-example"></a>Многомерных Выражений оси запроса и среза - с помощью осей простой пример
+# <a name="mdx-query-and-slicer-axes---using-axes-in-a-simple-example"></a>Запрос многомерных выражений и ось среза — использование оси в простом примере
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Пример в этом разделе демонстрирует простейший метод указания и использования осей запроса и среза.  
   
@@ -45,7 +45,7 @@ WHERE ( [Measures].[Packages] )
 |Второй квартал|45|45|  
   
 ## <a name="see-also"></a>См. также  
- [Определение содержимого оси запроса & #40; Многомерные Выражения & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md)   
- [Определение содержимого оси среза & #40; Многомерные Выражения & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
+ [Определение содержимого оси запроса (многомерные выражения)](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md)   
+ [Определение содержимого оси среза (многомерные выражения)](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
   
   

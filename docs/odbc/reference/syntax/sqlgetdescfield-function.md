@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: f09ff660-1e4a-4370-be85-90d4da0487d3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a590e66bbbe205a7aa218ce03b0d88ed9f940318
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cdf2990056c297d217248543812e347b61d3486d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65538058"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103813"
 ---
 # <a name="sqlgetdescfield-function"></a>Функция SQLGetDescField
 **Соответствие стандартам**  
@@ -81,7 +80,7 @@ SQLRETURN SQLGetDescField(
  [Выход] Указатель на буфер, в которую будет возвращено общее число байтов (за исключением число байтов, необходимых для символа завершения null) для возврата в **ValuePtr*.  
   
 ## <a name="returns"></a>Возвращает  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, SQL_NO_DATA, or SQL_INVALID_HANDLE.  
+ Значение SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, значение SQL_ERROR, SQL_NO_DATA или SQL_INVALID_HANDLE.  
   
  Будет возвращено значение SQL_NO_DATA, если *RecNumber* больше, чем текущее количество записей дескриптора.  
   

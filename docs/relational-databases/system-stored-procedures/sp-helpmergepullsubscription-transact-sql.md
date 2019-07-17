@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6f3125f3-0dfa-40bd-b725-8aa1591234f6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 899846e0868b6381c019281c432c014144e6354c
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: c92ea8e2f172d9cb5b40559c2a7b77a60153065b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535336"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137711"
 ---
 # <a name="sphelpmergepullsubscription-transact-sql"></a>sp_helpmergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,13 +40,13 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 ```  
   
 ## <a name="argument"></a>Аргумент  
-`[ @publication = ] 'publication'` — Имя публикации. *Публикация* — **sysname**, значение по умолчанию **%**. Если *публикации* — **%**, возвращаются сведения обо всех публикациях слиянием и подписках текущей базы данных.  
+`[ @publication = ] 'publication'` — Имя публикации. *Публикация* — **sysname**, значение по умолчанию **%** . Если *публикации* — **%** , возвращаются сведения обо всех публикациях слиянием и подписках текущей базы данных.  
   
-`[ @publisher = ] 'publisher'` — Имя издателя. *издатель*— **sysname**, значение по умолчанию **%**.  
+`[ @publisher = ] 'publisher'` — Имя издателя. *издатель*— **sysname**, значение по умолчанию **%** .  
   
-`[ @publisher_db = ] 'publisher_db'` — Имя базы данных издателя. *publisher_db*— **sysname**, значение по умолчанию **%**.  
+`[ @publisher_db = ] 'publisher_db'` — Имя базы данных издателя. *publisher_db*— **sysname**, значение по умолчанию **%** .  
   
-`[ @subscription_type = ] 'subscription_type'` Является ли показывать подписки по запросу. *subscription_type*— **nvarchar(10)**, значение по умолчанию **'pull'**. Допустимые значения: **«push»**, **'pull'**, или **«both»**.  
+`[ @subscription_type = ] 'subscription_type'` Является ли показывать подписки по запросу. *subscription_type*— **nvarchar(10)** , значение по умолчанию **'pull'** . Допустимые значения: **«push»** , **'pull'** , или **«both»** .  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
@@ -64,7 +63,7 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 |**subscription_type**|**int**|Тип подписки:<br /><br /> **0** = Принудительная<br /><br /> **1** = по запросу<br /><br /> **2** = анонимная|  
 |**priority**|**float(8)**|Приоритет подписки. Значение должно быть меньше, чем **100,00**.|  
 |**sync_type**|**tinyint**|Тип синхронизации подписки:<br /><br /> **1** = automatic<br /><br /> **2** = моментальный снимок не используется.|  
-|**Описание**|**nvarchar(255)**|Краткое описание подписки по запросу.|  
+|**description**|**nvarchar(255)**|Краткое описание подписки по запросу.|  
 |**merge_jobid**|**binary(16)**|Идентификатор задания агента слияния.|  
 |**enabled_for_syncmgr**|**int**|Может ли подписка быть синхронизирована через [!INCLUDE[msCoName](../../includes/msconame-md.md)] диспетчер синхронизации.|  
 |**last_updated**|**nvarchar(26)**|Время последней успешной синхронизации подписки агентом слияния.|  
@@ -97,7 +96,7 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 |**internet_timeout**|**int**|Время (в секундах) перед отменой запроса на веб-синхронизацию.|  
 |**Имя узла**|**nvarchar(128)**|Указывает переопределяемое значение [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) когда эта функция используется в предложении WHERE параметризованного фильтра строк.|  
 |**job_login**|**nvarchar(512)**|Учетная запись Windows, под которой запускается агент слияния, который возвращается в формате *домена*\\*username*.|  
-|**job_password**|**sysname**|По соображениям безопасности значение "**\*\*\*\*\*\*\*\*\*\***" — всегда возвращается.|  
+|**job_password**|**sysname**|По соображениям безопасности значение " **\*\*\*\*\*\*\*\*\*\*** " — всегда возвращается.|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  

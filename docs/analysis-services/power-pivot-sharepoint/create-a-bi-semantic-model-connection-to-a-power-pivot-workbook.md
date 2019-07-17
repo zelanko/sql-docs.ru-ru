@@ -1,5 +1,5 @@
 ---
-title: Создание соединения семантической модели бизнес-Аналитики в книге PowerPivot | Документы Microsoft
+title: Создание подключения семантической модели бизнес-Аналитики в книге PowerPivot | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 992e8a3f84af3de9cb9c8ae461b5c6c0505c1b66
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026511"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68164138"
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-power-pivot-workbook"></a>Создание подключения между семантической моделью бизнес-аналитики и книгой PowerPivot
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "34026511"
   
  Необходима библиотека, поддерживающая тип содержимого соединения семантической модели бизнес-аналитики. Дополнительные сведения см. в разделе [Добавление типа содержимого соединения для семантической модели бизнес-аналитики в библиотеку (PowerPivot для SharePoint)](../../analysis-services/power-pivot-sharepoint/add-bi-semantic-model-connection-content-type-to-library.md).  
   
- Необходимо знать URL-адрес [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] книги, для которой настраивается соединение семантической модели бизнес-Аналитики (например, `http://adventure-works/shared documents/myworkbook.xlsx`). Книга должна находиться в той же ферме.  
+ Необходимо знать URL-адрес [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] книги, для которой настраивается соединение семантической модели Бизнес-аналитики (например, `http://adventure-works/shared documents/myworkbook.xlsx`). Книга должна находиться в той же ферме.  
   
  Все компьютеры и пользователи, участвующие в последовательности соединения, должны относиться к одному домену или находиться в доверенном домене (двустороннее доверие).  
   
@@ -47,7 +47,7 @@ ms.locfileid: "34026511"
   
 1.  В библиотеке, в которой будет размещаться соединение семантической модели бизнес-аналитики, нажмите кнопку **Документы** на ленте SharePoint. Щелкните стрелку вниз на кнопке "Новый документ" и выберите **Файл соединения BISM** , чтобы открыть страницу "Создание соединения BISM".  
   
-     ![Новый документ подменю в библиотеке SharePoint](../../analysis-services/power-pivot-sharepoint/media/ssas-bismconnection-new.gif "подменю новый документ в библиотеку SharePoint")  
+     ![Подменю документа в библиотеке SharePoint](../../analysis-services/power-pivot-sharepoint/media/ssas-bismconnection-new.gif "подменю новый документ в библиотеку SharePoint")  
   
 2.  В качестве значения свойства **Сервер** задайте URL-адрес книги [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в SharePoint (например, `http://mysharepoint/shared documents/myWorkbook.xlsx`. При развертывании [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint данные могут быть загружены на любой сервер в ферме. По этой причине при подключениях к данным [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] указывается только путь к рабочей книге. Системная служба [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] определяет, какой сервер загружает данные.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "34026511"
   
      Страница должна выглядеть примерно так, как на следующей иллюстрации.  
   
-     ![Отображение URL-адрес к книге страница соединения BISM](../../analysis-services/power-pivot-sharepoint/media/ssas-bismconnection-ppvtds.gif "страница соединения BISM, URL-адресом для книги")  
+     ![Страница соединения BISM, с URL-адрес к книге](../../analysis-services/power-pivot-sharepoint/media/ssas-bismconnection-ppvtds.gif "страница соединения BISM, с URL-адрес к книге")  
   
      (Необязательно.) При наличии разрешений SharePoint для книги выполняется дополнительная проверка, что позволяет убедиться в правильности расположения. Если разрешения на доступ к данным нет, предоставляется возможность сохранить соединение семантической модели бизнес-аналитики без проверки.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "34026511"
   
 ## <a name="see-also"></a>См. также  
  [Соединение семантической модели бизнес-аналитики PowerPivot (BISM-файлы)](../../analysis-services/power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)   
- [Использовать соединение семантической модели бизнес-Аналитики в Excel или Reporting Services](../../analysis-services/power-pivot-sharepoint/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)   
- [Создание подключения между семантической моделью бизнес-аналитики и книгой PowerPivot](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
+ [Использование соединения семантической модели бизнес-аналитики в службах Excel или Reporting Services](../../analysis-services/power-pivot-sharepoint/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)   
+ [Создание соединения семантической модели бизнес-аналитики с табличным шаблоном базы данных](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
   
   

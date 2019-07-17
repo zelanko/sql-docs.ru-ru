@@ -17,11 +17,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 3a0ef44b57e092c13b4046b250c99fca5eaea101
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52780826"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211571"
 ---
 # <a name="wmi-provider-for-server-events-concepts"></a>Основные понятия о поставщике WMI для событий сервера
   Поставщик WMI для событий сервера позволяет использовать инструментарий управления Windows (WMI) для наблюдения за событиями в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -36,10 +36,10 @@ ms.locfileid: "52780826"
  [Использование WQL с поставщиком WMI для событий сервера](using-wql-with-the-wmi-provider-for-server-events.md)  
  Рассказывает о синтаксисе языка запросов WMI (WMI Query Language, WQL) и его использовании для программирования работы с поставщиком.  
   
- [Образец. Создание предупреждения агента SQL Server с помощью поставщика WMI для событий сервера](sample-creating-a-sql-server-agent-alert-with-the-wmi-provider.md)  
+ [Пример: Создание предупреждения агента SQL Server с помощью поставщика WMI для событий сервера](sample-creating-a-sql-server-agent-alert-with-the-wmi-provider.md)  
  Иллюстрирует использование поставщика WMI для возвращения трассировочной информации о событиях сервера, на основании которой создается предупреждение агента SQL Server.  
   
- [Образец. Использование поставщика событий WMI с платформой .NET Framework](sample-using-the-wmi-event-provider-with-the-net-framework.md)  
+ [Пример: Использование поставщика событий WMI с платформой .NET Framework](sample-using-the-wmi-event-provider-with-the-net-framework.md)  
  Иллюстрирует использование поставщика WMI для возвращения данных события сервера в приложении на языке C#.  
   
  [Поставщик WMI для классов и свойств событий сервера](wmi-provider-for-server-events-classes-and-properties.md)  

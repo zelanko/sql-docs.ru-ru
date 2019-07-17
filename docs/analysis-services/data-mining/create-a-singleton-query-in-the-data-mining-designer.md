@@ -1,5 +1,5 @@
 ---
-title: Создание одноэлементного запроса в конструкторе интеллектуального анализа данных | Документы Microsoft
+title: Создание одноэлементного запроса в конструкторе интеллектуального анализа данных | Документация Майкрософт
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,10 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d30fee91882ecd2f76fde1e0c61d0e5bc3d302bc
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183930"
 ---
 # <a name="create-a-singleton-query-in-the-data-mining-designer"></a>Создание одноэлементного запроса в конструкторе интеллектуального анализа данных
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -75,7 +76,7 @@ AS [t]
   
      Откроется новый экран, в котором отобразится результат запроса. Чтобы просмотреть созданную DMX-инструкцию, щелкните **SQL**.  
   
-## <a name="see-also"></a>См. также раздел  
- [Прогнозирующие запросы & #40; интеллектуального анализа данных & #41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
+## <a name="see-also"></a>См. также  
+ [Прогнозирующие запросы (интеллектуальный анализ данных)](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
   
   

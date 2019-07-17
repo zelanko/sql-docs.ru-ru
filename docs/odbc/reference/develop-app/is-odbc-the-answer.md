@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: bfa5e6ee-5979-42a9-be6f-a84d1ee7a54c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f90f2395eac5dce76848d7bc309f1a3d5ce289f9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2e325793a7b703c445be836f6f427645acda3370
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63179890"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138851"
 ---
 # <a name="is-odbc-the-answer"></a>Есть ли смысл использовать ODBC?
 Прежде чем исследовать вопросы взаимодействия, рассмотрим следующий вопрос: Приложение должно использовать ODBC вообще? Это может показаться странным вопрос в руководство по ODBC, но это, по сути, правильный. ODBC не предназначалась для полной замены базы данных в собственном API-интерфейсы, а также была разработана для предоставления доступа к базе данных во всех случаях. Он обеспечивает общий интерфейс для баз данных и был предназначен для освобождения приложения программистов от необходимости Узнайте и обслуживать ссылки на несколько баз данных.  

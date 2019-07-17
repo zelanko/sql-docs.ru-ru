@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 37b0983e-3b69-4f0f-977e-20efce0a0b97
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c86f2b8ba6b9cc7223fa9fa16794ee69aa9cf46e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 42c350876037c83505860c65b26f4302d75b6eed
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533266"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122560"
 ---
 # <a name="sphelpdistributor-transact-sql"></a>sp_helpdistributor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,13 +49,13 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @distributor = ] 'distributor' OUTPUT` — Имя распространителя. Распространитель — **sysname**, значение по умолчанию **%**, который является единственным значением, которое возвращает результирующий набор.  
+`[ @distributor = ] 'distributor' OUTPUT` — Имя распространителя. Распространитель — **sysname**, значение по умолчанию **%** , который является единственным значением, которое возвращает результирующий набор.  
   
-`[ @distribdb = ] 'distribdb' OUTPUT` — Имя базы данных распространителя. *distribdb* — **sysname**, значение по умолчанию **%**, который является единственным значением, которое возвращает результирующий набор.  
+`[ @distribdb = ] 'distribdb' OUTPUT` — Имя базы данных распространителя. *distribdb* — **sysname**, значение по умолчанию **%** , который является единственным значением, которое возвращает результирующий набор.  
   
-`[ @directory = ] 'directory' OUTPUT` — Это рабочий каталог. *каталог* — **nvarchar(255)**, значение по умолчанию **%**, который является единственным значением, которое возвращает результирующий набор.  
+`[ @directory = ] 'directory' OUTPUT` — Это рабочий каталог. *каталог* — **nvarchar(255)** , значение по умолчанию **%** , который является единственным значением, которое возвращает результирующий набор.  
   
-`[ @account = ] 'account' OUTPUT` Является [!INCLUDE[msCoName](../../includes/msconame-md.md)] учетной записи пользователя Windows. *Учетная запись*— **nvarchar(255)**, значение по умолчанию **%**, который является единственным значением, которое возвращает результирующий набор.  
+`[ @account = ] 'account' OUTPUT` Является [!INCLUDE[msCoName](../../includes/msconame-md.md)] учетной записи пользователя Windows. *Учетная запись*— **nvarchar(255)** , значение по умолчанию **%** , который является единственным значением, которое возвращает результирующий набор.  
   
 `[ @min_distretention = ] _min_distretentionOUTPUT` — Это минимальный срок хранения, в часах. *min_distretention* — **int**, значение по умолчанию **-1**.  
   
@@ -64,17 +63,17 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
   
 `[ @history_retention = ] _history_retentionOUTPUT` — Это срок хранения журнала в часах. *history_retention* — **int**, значение по умолчанию **-1**.  
   
-`[ @history_cleanupagent = ] 'history_cleanupagent' OUTPUT` Это имя агента очистки журнала. *history_cleanupagent* — **nvarchar(100)**, значение по умолчанию **%**, который является единственным значением, которое возвращает результирующий набор.  
+`[ @history_cleanupagent = ] 'history_cleanupagent' OUTPUT` Это имя агента очистки журнала. *history_cleanupagent* — **nvarchar(100)** , значение по умолчанию **%** , который является единственным значением, которое возвращает результирующий набор.  
   
-`[ @distrib_cleanupagent = ] 'distrib_cleanupagent' OUTPUT` — Имя агента очистки распространителя. *distrib_cleanupagent* — **nvarchar(100)**, значение по умолчанию **%**, который является единственным значением, которое возвращает результирующий набор.  
+`[ @distrib_cleanupagent = ] 'distrib_cleanupagent' OUTPUT` — Имя агента очистки распространителя. *distrib_cleanupagent* — **nvarchar(100)** , значение по умолчанию **%** , который является единственным значением, которое возвращает результирующий набор.  
   
 `[ @publisher = ] 'publisher'` — Имя издателя. *издатель* — **sysname**, значение по умолчанию NULL.  
   
-`[ @local = ] 'local'` Является ли [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен получать значения локального сервера. *локальный* — **nvarchar(5)**, значение по умолчанию NULL.  
+`[ @local = ] 'local'` Является ли [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен получать значения локального сервера. *локальный* — **nvarchar(5)** , значение по умолчанию NULL.  
   
-`[ @rpcsrvname = ] 'rpcsrvname' OUTPUT` — Имя сервера, инициирующего удаленные вызовы процедур. *rpcsrvname* — **sysname**, значение по умолчанию **%**, который является единственным значением, которое возвращает результирующий набор.  
+`[ @rpcsrvname = ] 'rpcsrvname' OUTPUT` — Имя сервера, инициирующего удаленные вызовы процедур. *rpcsrvname* — **sysname**, значение по умолчанию **%** , который является единственным значением, которое возвращает результирующий набор.  
   
-`[ @publisher_type = ] 'publisher_type' OUTPUT` — Тип издателя издателя. *publisher_type* — **sysname**, значение по умолчанию **%**, который является единственным значением, которое возвращает результирующий набор.  
+`[ @publisher_type = ] 'publisher_type' OUTPUT` — Тип издателя издателя. *publisher_type* — **sysname**, значение по умолчанию **%** , который является единственным значением, которое возвращает результирующий набор.  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
@@ -87,8 +86,8 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 |**Min Распр хранения**|**int**|Минимальный срок хранения распространения.|  
 |**Max Распр хранения**|**int**|Максимальный срок хранения распространения.|  
 |**срок хранения журнала**|**int**|Срок хранения журнала.|  
-|**агента очистки журнала**|**nvarchar(100)**|Имя агента очистки журнала.|  
-|**агента очистки распространителя**|**nvarchar(100)**|Имя агента очистки распространителя.|  
+|**агента очистки журнала**|**Nvarchar(100)**|Имя агента очистки журнала.|  
+|**агента очистки распространителя**|**Nvarchar(100)**|Имя агента очистки распространителя.|  
 |**Имя сервера RPC**|**sysname**|Имя удаленного или локального распространителя.|  
 |**Имя входа RPC**|**sysname**|Имя входа, используемое при удаленных вызовах процедур удаленного распространителя.|  
 |**Тип издателя**|**sysname**|Тип издателя; возможны следующие варианты:<br /><br /> **MSSQLSERVER**<br /><br /> **ORACLE**<br /><br /> **ORACLE GATEWAY**|  

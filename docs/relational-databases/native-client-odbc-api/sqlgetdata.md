@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: 204848be-8787-45b4-816f-a60ac9d56fcf
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1ac7c2cc1600b3a9c6ce2e6cef57c4ea6551bd78
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 576551308b2ad7cc195b5425a50f2764b3cf6ad5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63014420"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135438"
 ---
 # <a name="sqlgetdata"></a>SQLGetData
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "63014420"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Драйвер ODBC собственного клиента не поддерживает использование **SQLGetData** для получения данных в порядке произвольного столбца. Все непривязанные столбцы, обрабатываемые с **SQLGetData** должен иметь высокий порядковые номера столбцов, чем привязанные столбцы в результирующем наборе. Приложение обрабатывает данные непривязанных столбцов (начиная со столбца с наименьшим порядковым номером и заканчивая столбцом с наибольшим порядковым номером). Попытка получить данные из столбца с более низким порядковым номером приведет к ошибке. Если в приложении используются серверные курсоры для формирования сообщений о строках результирующего набора, то приложение может повторно получить текущую строку, а затем получить значение столбца. Если инструкция выполняется только для чтения, однопроходный курсор по умолчанию, необходимо повторно выполнить инструкцию для резервного копирования **SQLGetData**.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Драйвер ODBC собственного клиента точно сообщает длину **текст**, **ntext**, и **изображение** данные, полученные с помощью **SQLGetData **. Приложение может работать при *StrLen_or_IndPtr* параметр возврата быстро получении данных большой длины.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Драйвер ODBC собственного клиента точно сообщает длину **текст**, **ntext**, и **изображение** данные, полученные с помощью **SQLGetData** . Приложение может работать при *StrLen_or_IndPtr* параметр возврата быстро получении данных большой длины.  
   
 > [!NOTE]  
 >  Для типов больших значений *StrLen_or_IndPtr* возвращает значение SQL_NO_TOTAL в случае усечения данных.  

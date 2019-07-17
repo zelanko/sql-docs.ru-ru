@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 783654f312590d64c57c1c47481886c865d203c6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52792756"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68188167"
 ---
 # <a name="create-a-central-management-server-and-server-group-sql-server-management-studio"></a>Создание центрального сервера управления и группы сервера (среда SQL Server Management Studio)
   В этом разделе описывается, как назначить экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в качестве сервера централизованного управления в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. На серверах централизованного управления хранится список экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , организованных в одну или несколько групп серверов централизованного управления. Действия, производимые с помощью группы серверов централизованного управления, влияют на все серверы в группе. Это включает соединение с сервером при помощи обозревателя объектов, а также выполнение инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] и применение политик управления на основе политик одновременно на нескольких серверах.  

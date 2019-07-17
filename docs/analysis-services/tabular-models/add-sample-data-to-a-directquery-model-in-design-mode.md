@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: db5ef518a715553b1eecbeeaf5a5ba248b365bf5
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53071541"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207855"
 ---
 # <a name="add-sample-data-to-a-directquery-model-in-design-mode"></a>Добавление демонстрационных данных в модель DirectQuery в режиме конструктора
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "53071541"
   
 2.  Выберите меню **Таблица** > **Свойства** , чтобы открыть диалоговое окно "Управление секциями".  
   
-    Обратите внимание, что раздел по умолчанию называется **(Direct Query) \<имя таблицы >**. Это полное представление данных. Не удаляйте эту секцию. Она будет использоваться при развертывании модели.  
+    Обратите внимание, что раздел по умолчанию называется **(Direct Query) \<имя таблицы >** . Это полное представление данных. Не удаляйте эту секцию. Она будет использоваться при развертывании модели.  
   
 4.  Выберите эту секцию и нажмите кнопку **Копировать**.  
 

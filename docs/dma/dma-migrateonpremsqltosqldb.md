@@ -2,7 +2,7 @@
 title: Миграция на локальном сервере SQL Server или SQL Server на виртуальных машинах Azure в базу данных SQL Azure с помощью Data Migration Assistant | Документация Майкрософт
 description: Узнайте, как использовать Data Migration Assistant для переноса в SQL Server в локальной базе данных SQL Azure
 ms.custom: ''
-ms.date: 03/12/2019
+ms.date: 07/15/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-ms.openlocfilehash: 49300b679ea650bf4dd6f032fb9c1443224e9f86
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 37e0065ed711c3cf550fec4bafe9aa08be8398e6
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68054747"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262314"
 ---
 # <a name="migrate-on-premises-sql-server-or-sql-server-on-azure-vms-to-azure-sql-database-using-the-data-migration-assistant"></a>Миграция на локальном сервере SQL Server или SQL Server на виртуальных машинах Azure в базу данных SQL Azure с помощью Data Migration Assistant
 
 Помощник по миграции данных позволяет простой проверки SQL Server в локальной и обновляется до более поздних версиях SQL Server или миграции на SQL Server на виртуальных машинах Azure или базы данных SQL Azure.
 
-В этой статье содержатся пошаговые инструкции по миграции SQL Server в локальной базе данных SQL Azure с помощью Data Migration Assistant.   
+В этой статье содержатся пошаговые инструкции по миграции SQL Server в локальной базе данных SQL Azure с помощью Data Migration Assistant.
 
 ## <a name="create-a-new-migration-project"></a>Создайте новый проект миграции
 
@@ -44,7 +44,7 @@ ms.locfileid: "68054747"
 2. Выберите **тип проверки подлинности** поддерживаемых исходный экземпляр SQL Server.
 
    > [!NOTE]
-   > Это recommedned шифровать соединение, выбрав **шифровать соединение** флажок **poperties подключения**.
+   > Рекомендуется шифровать соединение, выбрав **шифровать соединение** флажок **poperties подключения**.
 
     ![Выбор исходного сервера](../dma/media/select-source-server.png)
 
@@ -66,7 +66,7 @@ ms.locfileid: "68054747"
 2. Выберите **тип проверки подлинности** поддерживается на целевом экземпляре базы данных SQL Azure.
 
    > [!NOTE]
-   > Это recommedned шифровать соединение, выбрав **шифровать соединение** флажок **poperties подключения**.
+   > Рекомендуется шифровать соединение, выбрав **шифровать соединение** флажок **poperties подключения**.
 
      ![Выбор целевого сервера](../dma/media/select-target-server.png)
 
@@ -83,17 +83,17 @@ ms.locfileid: "68054747"
 
 ## <a name="select-schema-objects"></a>Выберите объекты схемы
 
-1.  Выберите объекты схемы базы данных-источника, которые требуется перенести базу данных SQL Azure.
+1. Выберите объекты схемы базы данных-источника, которые требуется перенести базу данных SQL Azure.
 
     ![Выберите объекты схемы](../dma/media/select-schema-objects.png)
 
        > [!NOTE]
-       > Некоторые объекты, которые не может быть преобразован в виде — является предоставляется возможности автоматического исправления. При щелчке эти объекты на панели слева отображаются предлагаемые исправления в правой области. Просмотрите исправления и нажмите кнопку Применить или отменить все изменения, поочередно для каждого объекта. Обратите внимание на то, что применение или пропуск всех изменений для одного объекта не влияет на изменения на другие объекты базы данных. Инструкции, которые невозможно преобразовать или исправить автоматически комментарий, воспроизвести в целевой базе данных.
+       > Some of the objects that cannot be converted as-is are presented with automatic fix opportunities. Clicking these objects on the left pane displays the suggested fixes on the right pane. Review the fixes and choose to either apply or ignore all changes, object by object. Note that applying or ignoring all changes for one object does not affect changes to other database objects. Statements that cannot be converted or automatically fixed are reproduced to the target database and commented.
 
     ![Предложенное исправление](../dma/media/suggested-fix.png)
 
 2. Выберите **скрипт SQL Общие**.
- 
+
 3. Проверьте созданный скрипт.
 
     ![Созданный скрипт](../dma/media/generated-script.png)
@@ -103,23 +103,23 @@ ms.locfileid: "68054747"
 1. Выберите **Deploy schema**.
 
 2. Просмотрите результаты развертывания схемы.
- 
+
     ![Результаты развертывания схемы](../dma/media/schema-deployment-results.png)
 
 3. Выберите **переноса данных** запускать процесс миграции данных.
- 
+
 4. Выберите таблицы с данными, которые требуется перенести.
 
     ![Выберите таблицы для переноса](../dma/media/select-tables-to-migrate.png) 
 
 5. Выберите **запустить перенос данных**.
- 
+
 Последнем экране показано общее состояние.
 
    ![Состояние миграции](../dma/media/migration-status.png) 
 
 ## <a name="see-also"></a>См. также
 
-- [Data Migration Assistant (DMA)](../dma/dma-overview.md)
-- [Помощник по миграции данных: Параметры конфигурации](../dma/dma-configurationsettings.md)
-- [Помощник по миграции данных: Советы и рекомендации](../dma/dma-bestpractices.md)
+* [Data Migration Assistant (DMA)](../dma/dma-overview.md)
+* [Помощник по миграции данных: Параметры конфигурации](../dma/dma-configurationsettings.md)
+* [Помощник по миграции данных: Советы и рекомендации](../dma/dma-bestpractices.md)

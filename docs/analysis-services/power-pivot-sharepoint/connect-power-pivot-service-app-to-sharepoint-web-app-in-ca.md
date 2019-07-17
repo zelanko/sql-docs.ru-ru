@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: fd72f62cc513064e01c04e5a501b18a070f4c7a8
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50098977"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208283"
 ---
 # <a name="connect-power-pivot-service-app-to-sharepoint-web-app-in-ca"></a>Подключение приложения службы Power Pivot к веб-приложению SharePoint в ЦС
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "50098977"
   
 3.  В разделе "Веб-приложения" на вкладке "Управление" выберите **Соединения службы**.  
   
-4.  В списке **Изменить следующую группу соединений**выберите **[пользовательское]**.  
+4.  В списке **Изменить следующую группу соединений**выберите **[пользовательское]** .  
   
 5.  Установите флажки для всех соединений приложений служб, которые будут использоваться. Если есть несколько приложений службы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] (обозначены типом **Прокси-сервер приложения службы PowerPivot**), то должно быть выбрано только одно.  
   

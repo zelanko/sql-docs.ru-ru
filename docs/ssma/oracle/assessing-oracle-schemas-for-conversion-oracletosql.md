@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 4de9bcf6-1346-4740-87f9-7f24a8226357
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: acf31c29b498562708c7cb049e89a0a7425fd31f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 0ff56be1b7da0376250c7ed021ae78d7144a7645
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63288454"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264554"
 ---
 # <a name="assessing-oracle-schemas-for-conversion-oracletosql"></a>Оценка схем Oracle для преобразования (OracleToSQL)
 Прежде чем загружать объекты и перенести данные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], следует определить, насколько сложным будут миграции и сколько времени займет перенос. SSMA можно создать отчет об оценке, который показывает процент объектов, которые будет успешно преобразован. SSMA также позволяет просматривать конкретные проблемы, вызывающие ошибки преобразования.  

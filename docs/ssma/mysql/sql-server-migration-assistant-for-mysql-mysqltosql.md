@@ -10,12 +10,12 @@ ms.assetid: 2793bc33-38d3-46ed-8277-b8580cf78ced
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 5a703adf94d4708a4ee222a6cfcc442386202567
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4f5380aa17cb75baaca18c8c241970b8954b9d05
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63288538"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266178"
 ---
 # <a name="sql-server-migration-assistant-for-mysql-mysqltosql"></a>SQL Server Migration Assistant для MySQL (MySQLToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) для MySQL — это средство для переноса баз данных MySQL для [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2017 в Windows и Linux (Предварительная версия) или Azure [!INCLUDE[msCoName](../../includes/msconame_md.md)] DB. SSMA для MySQL преобразует объекты базы данных MySQL в объекты базы данных SQL Server, создает эти объекты в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], а затем переносит данные из MySQL в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

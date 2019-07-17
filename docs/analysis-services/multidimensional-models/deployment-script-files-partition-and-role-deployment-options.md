@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8bd62cc5fef3ef13dede85c06b28b0501a83de2f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513908"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68178445"
 ---
 # <a name="deployment-script-files---partition-and-role-deployment-options"></a>Файлы скриптов развертывания — указание параметров развертывания секций и ролей
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]

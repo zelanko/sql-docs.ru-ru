@@ -18,20 +18,19 @@ helpviewer_keywords:
 ms.assetid: e59632f4-3292-419f-9217-ca375749f1a5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 25af20743a98ad674e24cf4ae028185b024697e5
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: a96bcedaa3922ebb0691ac949f9eb15ed28336b3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395895"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103300"
 ---
 # <a name="sysdmfilestreamfileiohandles-transact-sql"></a>sys.dm_filestream_file_io_handles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Показывает дескрипторы файлов, известные владельцу пространства имен (NSO). Дескрипторов FileStream, которые клиент получил с помощью **OpenSqlFilestream** отображаются в данном представлении.  
   
-|Столбец|Тип|Описание|  
+|Столбец|Type|Описание|  
 |------------|----------|-----------------|  
 |**handle_context_address**|**varbinary(8)**|Показывает адрес внутренней структуры NSO, связанной с дескриптором клиента. Допускает значение NULL.|  
 |**creation_request_id**|**int**|Показывает поле из запроса ввода-вывода REQ_PRE_CREATE, используемого для создания этого дескриптора. Не допускает значение NULL.|  

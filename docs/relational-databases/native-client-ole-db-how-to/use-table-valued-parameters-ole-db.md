@@ -10,14 +10,13 @@ ms.topic: reference
 ms.assetid: 18cb684f-c307-4fda-a2ab-8b638416c3f0
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0d17f7b1f4d2f0d7674e59eb53948475ccde31ab
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: f326704a949e4e0703f6dcb732471edd8187729b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204863"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68109964"
 ---
 # <a name="use-table-valued-parameters-ole-db"></a>Использование возвращающих табличные значения параметров (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "53204863"
  Дополнительные сведения о возвращающих табличные значения параметров, см. в разделе [возвращающего табличное значение параметров &#40;собственный клиент SQL Server&#41;](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md).  
   
 ## <a name="example"></a>Пример  
- Первый ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) пример кода создает базу данных, используемую образцом.  
+ Первый листинг кода ([!INCLUDE[tsql](../../includes/tsql-md.md)]) создает базу данных, используемую в примере.  
   
  Поместите второй листинг кода в файл stdafx.h.  
   
@@ -46,7 +45,7 @@ ms.locfileid: "53204863"
   
  Скомпилируйте с библиотеками ole32.lib и oleaut32.lib и выполните четвертый листинг кода (C++). Это приложение соединяется с установленным на компьютер экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию. В некоторых операционных системах Windows придется заменить (localhost) или (local) на имя своего экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Чтобы подключиться к именованному экземпляру, измените строку подключения с L"(local)" на L"(local)\\\<имя>", где <имя> — это именованный экземпляр. По умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express устанавливается на именованный экземпляр. Убедитесь, что переменная среды INCLUDE включает каталог, содержащий файл sqlncli.h.  
   
- Пятый ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) пример кода создает базу данных, используемую образцом.  
+ Пятый листинг кода ([!INCLUDE[tsql](../../includes/tsql-md.md)]) создает базу данных, используемую в примере.  
   
 ```  
 create database testdb  

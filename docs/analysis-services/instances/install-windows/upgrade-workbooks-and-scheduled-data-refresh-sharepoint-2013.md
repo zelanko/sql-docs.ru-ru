@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5f0d49d6aeb8231dbffb56b42fe1151ae90d0e41
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505224"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68181306"
 ---
 # <a name="upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013"></a>Обновление книг и запланированное обновление данных (SharePoint 2013)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "52505224"
   
 -   SQL Server 2012 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для Excel 2013  
   
- **Как обновление книги:** Плановое обновление данных не будет работать, пока книга не будет обновлена до книги 2012. Для обновления книги и содержащейся в ней модели выполните одно из следующих действий.  
+ **Как обновление книги:** Плановое обновление данных не будет работать, пока вы не обновите ее до книги 2012. Для обновления книги и содержащейся в ней модели выполните одно из следующих действий.  
   
 -   Скачайте и откройте книгу в Microsoft Excel 2010 с помощью установленной надстройки SQL Server 2012 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для Excel.  
   

@@ -1,5 +1,5 @@
 ---
-title: Проверка PowerPivot для SharePoint | Документы Microsoft
+title: VERIFY a Power Pivot для SharePoint | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f047593657806b872aafdda802c9c85ac4526b56
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017511"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209461"
 ---
 # <a name="verify-a-power-pivot-for-sharepoint-installation"></a>Проверка установки PowerPivot для SharePoint
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -62,13 +62,13 @@ ms.locfileid: "34017511"
 ## <a name="verify-integration-at-the-site-level"></a>Проверка интеграции на уровне сайта  
  Чтобы проверить интеграцию [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] с сайтом SharePoint, сделайте следующее.  
   
-1.  Откройте созданное веб-приложение в браузере. Если вы использовали значения по умолчанию, можно указать http://\<имя компьютера > в URL-адреса.  
+1.  Откройте созданное веб-приложение в браузере. Если вы использовали значения по умолчанию, можно указать http://\<имя компьютера > URL-адрес.  
   
 2.  Убедитесь, что в приложении есть доступ к данным [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] и функциям обработки. Определить это можно по наличию предоставляемых [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]шаблонов библиотек.  
   
     1.  Щелкните **Содержимое сайта**.  
   
-    2.  В списке приложений отобразится **Библиотека каналов данных** и **Коллекция [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]**. Эти шаблоны библиотек предоставляются компонентом [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] и отображаются в списке библиотек только при правильной интеграции этого компонента.  
+    2.  В списке приложений отобразится **Библиотека каналов данных** и **Коллекция [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]** . Эти шаблоны библиотек предоставляются компонентом [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] и отображаются в списке библиотек только при правильной интеграции этого компонента.  
   
 ## <a name="verify-data-access-on-the-server"></a>Проверка доступа к данным на сервере  
  Чтобы выполнить проверку доступа к данным [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] на сервере, сделайте следующее.  
@@ -89,7 +89,7 @@ ms.locfileid: "34017511"
   
 7.  На странице «Тип сервера» выберите **Analysis Services**.  
   
-8.  В поле имя сервера введите  **\<имя_сервера > \powerpivot**, где  **\<имя сервера >** имя компьютера, на котором имеется [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для SharePoint Установка.  
+8.  В поле имя сервера, введите  **\<имя_сервера > \powerpivot**, где  **\<имя_сервера >** — это имя компьютера, на котором есть [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для SharePoint Установка.  
   
 9. Нажмите кнопку **Соединить**. Будет проверена доступность сервера служб Analysis Services.  
   

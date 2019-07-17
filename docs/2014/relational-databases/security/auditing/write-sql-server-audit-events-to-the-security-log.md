@@ -16,11 +16,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: bd272abda4b22f220e3fc599111d10cb4979f42e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056784"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211970"
 ---
 # <a name="write-sql-server-audit-events-to-the-security-log"></a>Запись событий подсистемы аудита SQL Server в журнал безопасности
   В среде с повышенной безопасностью подходящим местом для записи событий доступа к объектам является журнал безопасности Windows. Другие местонахождения аудита поддерживаются, но они более уязвимы для вторжения злоумышленников.  
@@ -58,7 +58,7 @@ ms.locfileid: "48056784"
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
 ###  <a name="Restrictions"></a> Ограничения  
- Администраторы компьютера с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] должны учитывать, что локальные параметры журнала безопасности могут быть переопределены политикой домена. В этом случае политика домена может перезаписывать параметр подкатегории (**auditpol /get /subcategory:"application generated"**). Это может повлиять на способность [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] регистрировать события, причем будет невозможно определить, что события, для которых [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] пытается провести аудит, не регистрируются.  
+ Администраторы компьютера с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] должны учитывать, что локальные параметры журнала безопасности могут быть переопределены политикой домена. В этом случае политика домена может перезаписывать параметр подкатегории (**auditpol /get /subcategory:"application generated"** ). Это может повлиять на способность [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] регистрировать события, причем будет невозможно определить, что события, для которых [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] пытается провести аудит, не регистрируются.  
   
 ###  <a name="Security"></a> безопасность  
   

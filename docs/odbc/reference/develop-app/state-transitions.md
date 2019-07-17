@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: fc741611-6535-43cc-8156-6d897d04664e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 30c1db4f850e6f181757d974ae74bb475b0cc5cc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d2512d277980b071523cfea6cbe132f2a3861b7d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63148993"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107288"
 ---
 # <a name="state-transitions"></a>Переходы состояния
 ODBC определяет дискретных *состояний* для каждой среды, для каждого подключения и каждой инструкции. Например в среде имеет три возможных состояния: Свободен (в который выделяется среда не), выделенное место (в которой выделяется среде, но соединения не выделяются) и соединения (в котором среды и одно или несколько соединений выделяются). Соединение имеет семь состояний; инструкции имеют 13 возможных состояний.  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 45001fc9-2dbd-463c-af1d-aa8982d8c813
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a6786b8f26cd9040492bb03fff8ed18cd14be5ff
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: f9cb198b8083a525c6416af17df774ecfe605bd0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528426"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119380"
 ---
 # <a name="spvalidatereplicahostsaspublishers-transact-sql"></a>sp_validate_replica_hosts_as_publishers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ sp_validate_replica_hosts_as_publishers
  Нет.  
   
 ## <a name="remarks"></a>Примечания  
- Если не существует запись для издателя и базы данных публикации, **sp_validate_redirected_publisher** возвращает значение null, если для параметра вывода *@redirected_publisher*. В противном случае происходит возврат связанного перенаправленного издателя как в случае успеха, так и в случае неудачи.  
+ Если не существует запись для издателя и базы данных публикации, **sp_validate_redirected_publisher** возвращает значение null, если для параметра вывода *@redirected_publisher* . В противном случае происходит возврат связанного перенаправленного издателя как в случае успеха, так и в случае неудачи.  
   
  Если проверка прошла успешно, **sp_validate_redirected_publisher** Возвращает указание на успех.  
   
@@ -65,7 +64,7 @@ sp_validate_replica_hosts_as_publishers
 >   
 >  Сообщение 21899, уровень 11, состояние 1, процедура **sp_hadr_verify_subscribers_at_publisher**, строка 109  
 >   
->  Запрос на перенаправленном издателе «MyReplicaHostName» для определения того, были ли там записи sysserver для подписчиков оригинального издателя «MyOriginalPublisher», завершился с ошибкой «976», сообщение об ошибке «Ошибка 976, уровень 14, состояние 1, сообщение: Целевая база данных «MyPublishedDB» участвует в группе доступности и в настоящее время недоступна для запросов. Либо перемещение данных приостанавливается, либо реплика доступности не разрешена для чтения. Чтобы разрешить доступ только для чтения к этой и другим базам данных в группе доступности, задайте доступ для чтения одной или нескольким вторичным репликам доступности в группе.  Дополнительные сведения см. в описании инструкции **ALTER AVAILABILITY GROUP** в электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+>  Запрос на перенаправленном издателе "MyReplicaHostName" для определения того, были ли там записи sysserver для подписчиков оригинального издателя "MyOriginalPublisher", завершился с ошибкой "976", сообщение об ошибке "Ошибка 976, уровень 14, состояние 1, сообщение: Целевая база данных "MyPublishedDB" участвует в группе доступности и в настоящее время недоступна для запросов. Либо перемещение данных приостанавливается, либо реплика доступности не разрешена для чтения. Чтобы разрешить доступ только для чтения к этой и другим базам данных в группе доступности, задайте доступ для чтения одной или нескольким вторичным репликам доступности в группе.  Дополнительные сведения см. в описании инструкции **ALTER AVAILABILITY GROUP** в электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
 >   
 >  Произошла одна или несколько ошибок проверки издателя для узла реплики «MyReplicaHostName».  
   

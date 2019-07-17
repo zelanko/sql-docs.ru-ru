@@ -1,5 +1,5 @@
 ---
-title: Типы данных (интеллектуальный анализ данных) | Документы Microsoft
+title: Типы данных (интеллектуальный анализ данных) | Документация Майкрософт
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,10 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4b62c9a4ebc9caf9875a1e5b6aef987bf0b4fa8a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183354"
 ---
 # <a name="data-types-data-mining"></a>Типы данных (интеллектуальный анализ данных)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -23,7 +24,7 @@ ms.lasthandoff: 05/10/2018
   
 |Тип данных|Поддерживаемые типы содержимого|  
 |---------------|-----------------------------|  
-|**Текст**|Cyclical, Discrete, Discretized, Key Sequence, Ordered, Sequence|  
+|**Text**|Cyclical, Discrete, Discretized, Key Sequence, Ordered, Sequence|  
 |**Long**|Continuous, Cyclical, Discrete, Discretized, Key, Key Sequence, Key Time, Ordered, Sequence, Time<br /><br /> Classified|  
 |**Boolean**|Cyclical, Discrete, Ordered|  
 |**Double**|Continuous, Cyclical, Discrete, Discretized, Key, Key Sequence, Key Time, Ordered, Sequence, Time<br /><br /> Classified|  
@@ -46,11 +47,11 @@ ms.lasthandoff: 05/10/2018
  При изменении типа данных в столбце необходимо всегда снова обрабатывать структуру и модели интеллектуального анализа данных, основанные на этой структуре. Иногда при изменении типа данных столбец более не может использоваться в определенной модели. В этом случае службы Analysis Services либо вернут ошибку при повторной обработке модели, либо обработают модель, но пропустят определенный столбец.  
   
 ## <a name="see-also"></a>См. также  
- [Содержимого типы & #40; интеллектуального анализа данных & #41;](../../analysis-services/data-mining/content-types-data-mining.md)   
- [Содержимого типы & #40; расширений интеллектуального анализа данных & #41;](../../dmx/content-types-dmx.md)   
- [Алгоритмы интеллектуального анализа данных & #40; Службы Analysis Services — Интеллектуальный анализ данных & #41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Структуры интеллектуального анализа данных и &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [Типы данных & #40; расширений интеллектуального анализа данных & #41;](../../dmx/data-types-dmx.md)   
+ [Типы содержимого (интеллектуальный анализ данных)](../../analysis-services/data-mining/content-types-data-mining.md)   
+ [Типы содержимого (расширения интеллектуального анализа данных)](../../dmx/content-types-dmx.md)   
+ [Алгоритмы интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Структуры интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [Типы данных (расширения интеллектуального анализа данных)](../../dmx/data-types-dmx.md)   
  [Столбцы модели интеллектуального анализа данных](../../analysis-services/data-mining/mining-model-columns.md)   
  [Столбцы структуры интеллектуального анализа данных](../../analysis-services/data-mining/mining-structure-columns.md)  
   
