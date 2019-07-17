@@ -4,18 +4,17 @@ description: ''
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-manager: jroth
 ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: 407e1e11bcaf2c1b7ffe0426c6a3c7493e71bc74
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 83c25db6f0915aae9cf210d2b749df970da40590
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67833162"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032300"
 ---
 # <a name="configure-failover-cluster-instance---sql-server-on-linux-rhel"></a>Настроить экземпляр отказоустойчивого кластера — SQL Server на Linux (RHEL)
 
@@ -35,7 +34,7 @@ ms.locfileid: "67833162"
 
 Общие сведения см. в разделе [SQL Server экземпляра (Отказоустойчивого кластера) в Linux](sql-server-linux-shared-disk-cluster-concepts.md).
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 Для работы в следующем сценарии end-to-end, требуется две машины для развертывания кластера двумя узлами и другой сервер для хранения. Следующие действия описывают настройку этих серверов.
 

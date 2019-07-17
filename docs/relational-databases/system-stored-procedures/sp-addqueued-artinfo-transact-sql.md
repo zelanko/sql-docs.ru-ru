@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: decdb6eb-3dcd-4053-a21d-fd367c3fbafb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e44891f5a16625cb6c3176fac8188fa568822add
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: a0f94fbf686e9b9bd9fd1b6780b298c661ce42f6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493187"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68031010"
 ---
 # <a name="spaddqueuedartinfo-transact-sql"></a>sp_addqueued_artinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ sp_addqueued_artinfo [ @artid= ] 'artid'
   
 `[ @dest_table = ] _'dest_table'` — Имя целевой таблицы. *dest_table* — **sysname**, не имеет значения по умолчанию.  
   
- [ **@owner =** ] **"**_владельца_**"**  
+ [ **@owner =** ] **"** _владельца_ **"**  
  Владелец подписки. *владелец* — **sysname**, не имеет значения по умолчанию.  
   
 `[ @cft_table = ] 'cft_table'` Имя таблицы конфликтов в очереди обновления в этой статье. *cft_table*— **sysname**, не имеет значения по умолчанию.  

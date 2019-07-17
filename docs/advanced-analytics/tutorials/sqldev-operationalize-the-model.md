@@ -7,15 +7,14 @@ ms.date: 11/16/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 4e74f587177c31f55c952eb06ccb8a7e8960c93a
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: ca5d09b052d80083589189f53a8dc9c059e5cf99
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511591"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961867"
 ---
-# <a name="lesson-4-run-predictions-using-r-embedded-in-a-stored-procedure"></a>Урок 4. Запустите прогнозы с помощью R, внедренный в хранимой процедуре
+# <a name="lesson-4-run-predictions-using-r-embedded-in-a-stored-procedure"></a>Занятие 4: Запустите прогнозы с помощью R, внедренный в хранимой процедуре
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Эта статья входит руководства для разработчиков SQL по использованию R в SQL Server.

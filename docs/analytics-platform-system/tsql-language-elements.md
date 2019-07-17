@@ -2,19 +2,18 @@
 title: Элементы языка T-SQL - Parallel Data Warehouse | Документация Майкрософт
 description: Элементы языка T-SQL для аналитической Platform System (APS) SQL Server Parallel Data хранилища (PDW).
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: d9e2011ef30864e35245f59cab0861ea116d1502
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0f019599e5dde2759da9f1e8f94e71b2fe2b9c9a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63035005"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959948"
 ---
 # <a name="t-sql-language-elements-for-parallel-data-warehouse"></a>Элементы языка T-SQL для Parallel Data Warehouse
 Элементы языка T-SQL для аналитической Platform System (APS) SQL Server Parallel Data хранилища (PDW).
@@ -224,7 +223,7 @@ ms.locfileid: "63035005"
 * [YEAR](../t-sql/functions/year-transact-sql.md)
 * [XACT_STATE](../t-sql/functions/xact-state-transact-sql.md)
 
-## <a name="transactions"></a>Transactions
+## <a name="transactions"></a>Транзакции
 * [Транзакции](../t-sql/language-elements/transactions-sql-data-warehouse.md)
 
 ## <a name="diagnostic-sessions"></a>Сеансы диагностики
@@ -268,7 +267,7 @@ ms.locfileid: "63035005"
 * [SET FMTONLY](../t-sql/statements/set-fmtonly-transact-sql.md)
 * [НАБОР IMPLICIT_TRANSACITONS](../t-sql/statements/set-implicit-transactions-transact-sql.md)
 * [SET LOCK_TIMEOUT](../t-sql/statements/set-lock-timeout-transact-sql.md)
-* [SET NUMBERIC_ROUNDABORT](../t-sql/statements/set-numeric-roundabort-transact-sql.md)
+* [НАБОР NUMBERIC_ROUNDABORT](../t-sql/statements/set-numeric-roundabort-transact-sql.md)
 * [SET QUOTED_IDENTIFIER](../t-sql/statements/set-quoted-identifier-transact-sql.md)
 * [SET ROWCOUNT](../t-sql/statements/set-rowcount-transact-sql.md)
 * [SET TEXTSIZE](../t-sql/statements/set-textsize-transact-sql.md)

@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3a141cb4-229d-4027-9349-615cb2995e36
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 00daac655f0c435c1ee22239d3d4aafa23065997
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ed99ab72e3d5112588a0b1c93df34b01aff7acdd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63217786"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044918"
 ---
 # <a name="character-data-and-c-strings"></a>Символьные данные и строки C
 Входные параметры, которые ссылаются на данные переменной длины символов (например, имена столбцов, динамических параметров и значений атрибутов строки) имеют связанные длина параметр. Если приложение завершает работу строки с нулевой символ, как это обычно бывает в C, он предоставляет как аргумент, либо длина в байтах строки (не включая конечное значение null) или SQL_NTS (Null-Terminated строка). Аргумент является неотрицательным длина указывает фактическую длину связанные строки. Аргумент length может быть 0, чтобы указать строку нулевой длины, которая отличается от значения NULL. Отрицательное значение SQL_NTS Указывает драйверу, что для определения длины строки, найдя знак завершения null.  

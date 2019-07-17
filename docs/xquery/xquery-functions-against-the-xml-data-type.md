@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8df0877d-a03f-4ca9-b84e-908c4bb42b5e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6a7527fe3fb4e250e0cf884e17ee6e53eeba7b8b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e885b537fbc86f3b70a8142c5513dbf16cb1c158
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56042955"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945998"
 ---
 # <a name="xquery-functions-against-the-xml-data-type"></a>Функции XQuery для типа данных xml
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -33,18 +32,18 @@ ms.locfileid: "56042955"
   
  В следующей таблице перечислены функции XQuery, поддерживаемые для **xml**тип данных.  
   
-|Категория|Имя функции|  
+|Category|Имя функции|  
 |--------------|-------------------|  
 |[Функции для числовых значений](https://msdn.microsoft.com/library/d5740a32-b174-43b9-b64d-1cc6edc50cff)|[верхний предел](../xquery/numeric-values-functions-ceiling.md)|  
-||[функция FLOOR](../xquery/numeric-values-functions-floor.md)|  
-||[Округление](../xquery/numeric-values-functions-round.md)|  
+||[floor](../xquery/numeric-values-functions-floor.md)|  
+||[round](../xquery/numeric-values-functions-round.md)|  
 |[Функции XQuery для строковых значений](https://msdn.microsoft.com/library/2dccefef-5d90-4f56-bda7-4c1954d8a730)|[Concat](../xquery/functions-on-string-values-concat.md)|  
 ||[contains](../xquery/functions-on-string-values-contains.md)|  
 ||[SUBSTRING](../xquery/functions-on-string-values-substring.md)|  
 ||[LOWER-Case, функция &#40;XQuery&#41;](../xquery/functions-on-string-values-lower-case.md)|  
 ||[Длина строки](../xquery/functions-on-string-values-string-length.md)|  
 ||[Функции Upper-case &#40;XQuery&#41;](../xquery/functions-on-string-values-upper-case.md)|  
-|Функции над значениями типа Boolean|[не](../xquery/functions-on-boolean-values-not-function.md)|  
+|Функции над значениями типа Boolean|[not](../xquery/functions-on-boolean-values-not-function.md)|  
 |[Функции с узлами](https://msdn.microsoft.com/library/09a8affa-3341-4f50-aebc-fdf529e00c08)|[number](../xquery/functions-on-nodes-number.md)|  
 ||[Функция local-name (XQuery)](../xquery/functions-on-nodes-local-name.md)|  
 ||[Функция namespace-uri (XQuery)](../xquery/functions-on-nodes-namespace-uri.md)|  

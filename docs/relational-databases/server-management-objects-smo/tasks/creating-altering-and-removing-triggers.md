@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 8ddbe23b-6e31-4f8e-8a70-17bd5072413e
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fe733a909911679195b204913f89a8e4a4522f70
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 735428d35b267168f76798f875ca63f3972a676c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627352"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68002663"
 ---
 # <a name="creating-altering-and-removing-triggers"></a>Создание, изменение и удаление триггеров
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "47627352"
  
   
 ## <a name="creating-altering-and-removing-a-trigger-in-visual-basic"></a>Создание, изменение и удаление триггера на языке Visual Basic  
- В этом примере кода показано, как создать и вставить триггер Update в существующую таблицу с именем `Sales` в базе данных [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]. Триггер отправляет сообщение с напоминанием при обновлении таблицы или вставке новой записи.  
+ В этом примере кода показано, как создать и вставить триггер Update в существующую таблицу с именем `Sales`в базе данных [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] . Триггер отправляет сообщение с напоминанием при обновлении таблицы или вставке новой записи.  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -63,7 +62,7 @@ tr.Drop()
 ``` 
   
 ## <a name="creating-altering-and-removing-a-trigger-in-visual-c"></a>Создание, изменение и удаление триггера на языке Visual C#  
- В этом примере кода показано, как создать и вставить триггер Update в существующую таблицу с именем `Sales` в базе данных [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]. Триггер отправляет сообщение с напоминанием при обновлении таблицы или вставке новой записи.  
+ В этом примере кода показано, как создать и вставить триггер Update в существующую таблицу с именем `Sales`в базе данных [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] . Триггер отправляет сообщение с напоминанием при обновлении таблицы или вставке новой записи.  
   
 ```csharp  
 {  
@@ -96,7 +95,7 @@ tr.Drop()
 ```  
   
 ## <a name="creating-altering-and-removing-a-trigger-in-powershell"></a>Создание, изменение и удаление триггера в PowerShell  
- В этом примере кода показано, как создать и вставить триггер Update в существующую таблицу с именем `Sales` в базе данных [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]. Триггер отправляет сообщение с напоминанием при обновлении таблицы или вставке новой записи.  
+ В этом примере кода показано, как создать и вставить триггер Update в существующую таблицу с именем `Sales`в базе данных [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] . Триггер отправляет сообщение с напоминанием при обновлении таблицы или вставке новой записи.  
   
 ```powershell  
 # Set the path context to the local, default instance of SQL Server and to the  

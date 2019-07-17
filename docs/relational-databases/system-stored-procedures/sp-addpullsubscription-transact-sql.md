@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0f4bbedc-0c1c-414a-b82a-6fd47f0a6a7f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: dbdd156c20378eda748cef17ec58f6ecf7129cb9
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: ea87c5e83b5be3945469ddb0e32c9f8158a5e116
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494386"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022446"
 ---
 # <a name="spaddpullsubscription-transact-sql"></a>sp_addpullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,13 +50,13 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
   
 `[ @publication = ] 'publication'` — Имя публикации. *Публикация* — **sysname**, не имеет значения по умолчанию.  
   
-`[ @independent_agent = ] 'independent_agent'` Указывает, имеется ли для этой публикации изолированный агент распространителя. *independent_agent* — **nvarchar(5)**, значение по умолчанию TRUE. Если **true**, имеется изолированный агент распространителя для этой публикации. Если **false**, имеется один агент распространителя для каждой пары издатель базы данных подписчик базы данных. *independent_agent* является свойством публикации и должен иметь то же значение что и на издателе.  
+`[ @independent_agent = ] 'independent_agent'` Указывает, имеется ли для этой публикации изолированный агент распространителя. *independent_agent* — **nvarchar(5)** , значение по умолчанию TRUE. Если **true**, имеется изолированный агент распространителя для этой публикации. Если **false**, имеется один агент распространителя для каждой пары издатель базы данных подписчик базы данных. *independent_agent* является свойством публикации и должен иметь то же значение что и на издателе.  
   
-`[ @subscription_type = ] 'subscription_type'` — Тип подписки. *subscription_type* — **nvarchar(9)**, значение по умолчанию **анонимный**. Необходимо указать значение **по запросу** для *subscription_type*, только если вы хотите создать подписку без регистрации подписки на издателе. В этом случае необходимо указать значение **анонимный**. Это необходимо в тех случаях, когда невозможно установить соединение [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с издателем в момент настройки подписки.  
+`[ @subscription_type = ] 'subscription_type'` — Тип подписки. *subscription_type* — **nvarchar(9)** , значение по умолчанию **анонимный**. Необходимо указать значение **по запросу** для *subscription_type*, только если вы хотите создать подписку без регистрации подписки на издателе. В этом случае необходимо указать значение **анонимный**. Это необходимо в тех случаях, когда невозможно установить соединение [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с издателем в момент настройки подписки.  
   
-`[ @description = ] 'description'` Представляет собой описание публикации. *Описание* — **nvarchar(100)**, значение по умолчанию NULL.  
+`[ @description = ] 'description'` Представляет собой описание публикации. *Описание* — **nvarchar(100)** , значение по умолчанию NULL.  
   
-`[ @update_mode = ] 'update_mode'` — Это тип обновления. *update_mode* — **nvarchar(30)**, и может принимать одно из следующих значений.  
+`[ @update_mode = ] 'update_mode'` — Это тип обновления. *update_mode* — **nvarchar(30)** , и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  

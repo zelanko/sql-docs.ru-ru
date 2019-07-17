@@ -8,16 +8,16 @@ ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 16942624-5374-446c-8de4-ee6ed34d6e94
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: ea089a65065aedac59eb7cac7308acdab097ff47
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
-ms.translationtype: MTE75
+ms.openlocfilehash: f1a48d9b2892033ee0e6203800a5b30cbd45b7c3
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213073"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67731924"
 ---
 # <a name="sql-server-properties-startup-parameters-tab"></a>Свойства SQL Server (вкладка «Параметры запуска»)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "53213073"
  Подробнее о перемещении базы данных master см. в разделе «Перемещение системных баз данных» электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="optional-parameters"></a>Необязательные параметры  
- Все поддерживаемые параметры запуска описаны в разделе «Использование параметров запуска службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] » электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Параметр запуска -T*trace#* показывает, что экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен запускаться с указанным флагом трассировки (*trace#*). Флаги трассировки используются для запуска сервера в нестандартном режиме. Дополнительные сведения см. в разделе о флагах трассировки ([!INCLUDE[tsql](../../includes/tsql-md.md)]) электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Все поддерживаемые параметры запуска описаны в разделе «Использование параметров запуска службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] » электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Параметр запуска -T*trace#* показывает, что экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен запускаться с указанным флагом трассировки (*trace#* ). Флаги трассировки используются для запуска сервера в нестандартном режиме. Дополнительные сведения см. в разделе о флагах трассировки ([!INCLUDE[tsql](../../includes/tsql-md.md)]) электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!CAUTION]  
 >  Описание некоторых дополнительных недокументированных параметров запуска и флагов трассировки можно найти в Интернете. Недокументированные параметры запуска и флаги трассировки создаются для решения нетиповых задач и создания определенных условий, необходимых для тестирования. Использование недокументированных параметров запуска может привести к непредвиденным результатам. Используйте недокументированные параметры только по указанию службы поддержки пользователей Майкрософт.  
@@ -80,6 +80,6 @@ ms.locfileid: "53213073"
 -   Учетная запись домена, используемая [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], если компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] настроен для работы под определенной учетной записью домена.  
   
 ## <a name="books-online-references"></a>Электронная документация  
- Дополнительные сведения о параметрах запуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в разделе о настройке параметров запуска сервера (диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Дополнительные сведения о параметрах запуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в статье с инструкциями по настройке параметров запуска сервера (диспетчер конфигурации[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) в электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
   

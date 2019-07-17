@@ -1,7 +1,7 @@
 ---
 title: Новые возможности в помощнике по миграции данных (SQL Server) | Документация Майкрософт
 ms.custom: ''
-ms.date: 05/18/2019
+ms.date: 07/15/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -13,16 +13,19 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
-manager: jroth
-ms.openlocfilehash: f88562c25982ce8c5d6c8d4b87dd629e4ba57c03
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4bce2ed84dbaac8d6ec95bbcf34827a8113c1f54
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794312"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262270"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>Новые возможности Data Migration Assistant
 В этой статье представлены сведения о материалах в каждом выпуске из Data Migration Assistant (DMA).
+
+## <a name="dma-v44"></a>DMA v4.4
+
+В выпуске v4.4 DMA обеспечивает поддержку для отправки оценок для "Миграция Azure".
 
 ## <a name="dma-v43"></a>DMA v4.3
 
@@ -161,7 +164,7 @@ Linux и Windows используют форматы другой путь. Та
   * Устаревшие функции
 * Обнаружение новых возможностях целевой платформы SQL Server, базы данных могут использовать преимущества после обновления. Описываются все результаты как рекомендуемые возможности, и они могут быть относится к категории в следующих областях:
   * Производительность
-  * безопасность
+  * Безопасность
   * Память
 * Современный пользовательский интерфейс для выполнения оценки.
 

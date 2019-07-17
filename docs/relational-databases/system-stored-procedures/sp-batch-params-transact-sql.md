@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7b92fe9e-e755-4b7a-8a15-822c58a813d3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b66e8b2d1b0d397a24c4ff5c702c00aff14988d4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9a5b4ac7c5e1e8d3c136f99475fa7a17ebd8b002
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62996165"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68001816"
 ---
 # <a name="spbatchparams-transact-sql"></a>sp_batch_params (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,14 +48,14 @@ sp_batch_params [ [ @tsqlbatch = ] 'tsqlbatch' ]
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**PARAMETER_NAME**|**sysname**|Имя параметра, который [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обнаружил в пакете.|  
-|**COLUMN_TYPE**|**smallint**|Это поле возвращает одно из следующих значений:<br /><br /> 0 = SQL_PARAM_TYPE_UNKNOWN<br /><br /> 1 = SQL_PARAM_TYPE_INPUT<br /><br /> 2 = SQL_PARAM_TYPE_OUTPUT<br /><br /> 3 = SQL_RESULT_COL<br /><br /> 4 = SQL_PARAM_OUTPUT<br /><br /> 5 = SQL_RETURN_VALUE<br /><br /> Этот столбец всегда содержит значение 0.|  
+|**ИМЯ_ПАРАМЕТРА**|**sysname**|Имя параметра, который [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обнаружил в пакете.|  
+|**ЗНАЧЕНИЕМ COLUMN_TYPE, РАВНЫМ**|**smallint**|Это поле возвращает одно из следующих значений:<br /><br /> 0 = SQL_PARAM_TYPE_UNKNOWN<br /><br /> 1 = SQL_PARAM_TYPE_INPUT<br /><br /> 2 = SQL_PARAM_TYPE_OUTPUT<br /><br /> 3 = SQL_RESULT_COL<br /><br /> 4 = SQL_PARAM_OUTPUT<br /><br /> 5 = SQL_RETURN_VALUE<br /><br /> Этот столбец всегда содержит значение 0.|  
 |**DATA_TYPE**|**smallint**|Тип данных параметра (целочисленный код для типа данных ODBC). Если этот тип данных нельзя сопоставить с типом ISO, то значением будет NULL. Имя типа данных в собственном формате возвращается в **TYPE_NAME** столбца. Это значение всегда равно NULL.|  
 |**TYPE_NAME**|**sysname**|Строковое представление типа данных, как оно представляется в базовой СУБД. Значение NULL.|  
 |**PRECISION**|**int**|Количество значащих цифр. Возвращаемое значение для **точности** основано на десятичной системе счисления.|  
 |**LENGTH**|**int**|Размер передаваемых данных. Значение NULL.|  
 |**МАСШТАБ**|**smallint**|Число цифр справа от десятичной запятой. Значение NULL.|  
-|**RADIX**|**smallint**|Основание системы счисления для числовых типов. Значение NULL.|  
+|**ОСНОВАНИЕ СИСТЕМЫ СЧИСЛЕНИЯ**|**smallint**|Основание системы счисления для числовых типов. Значение NULL.|  
 |**ДОПУСКАЮЩИЙ ЗНАЧЕНИЕ NULL**|**smallint**|Определяет допустимость значений NULL:<br /><br /> 1 = тип данных параметра может быть создан со значением NULL.<br /><br /> 0 = значения NULL недопустимы.<br /><br /> Значение NULL.|  
 |**SQL_DATA_TYPE**|**smallint**|Значение системного типа данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], как оно показано в поле TYPE дескриптора. Этот столбец содержит то же значение, что и столбец **DATA_TYPE**, за исключением типов данных **datetime** и ISO **interval**. Этот столбец всегда возвращает значение. Значение NULL.|  
 |**SQL_DATETIME_SUB**|**smallint**|**Datetime** или ISO **интервал** Доп. Если значение **SQL_DATA_TYPE** равно SQL_DATETIME или SQL_INTERVAL. Для типов данных, отличных от **datetime** и ISO **интервал**, этот столбец равен NULL. Значение NULL.|  

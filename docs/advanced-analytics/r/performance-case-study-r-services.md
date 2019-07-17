@@ -6,13 +6,12 @@ ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 392a6da09827355e6bc9a901b0e4580e5eb72bf5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ce4bb94efa8c8ffb1b0a3b0c52c29de74a2b966e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62642677"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962551"
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>Производительность для служб R: результаты и ресурсы
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -90,7 +89,7 @@ metric time pct
 
 Первый тест по сравнению с использование сжатия и таблицы столбцов для уменьшения объема данных.
 
-| Имя таблицы            | Строки     | Зарезервировано   | Данные       | index_size | Не используется  | Процент сохранения (зарезервировано) |
+| Имя таблицы            | Строки     | Зарезервировано   | Data       | index_size | Не используется  | Процент сохранения (зарезервировано) |
 |-----------------------|----------|------------|------------|------------|---------|---------------------|
 | *airlineWithIndex*    | 10 000 000 | 2 978 816 КБ | 2 972 160 КБ | 6128 КБ    | 528 КБ  | 0                   |
 | *airlineWithPageComp* | 10 000 000 | 625 784 КБ  | 623 744 КБ  | 1352 КБ    | 688 КБ  | 79 %                 |

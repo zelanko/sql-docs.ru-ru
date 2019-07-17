@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 085deef8-2709-4da9-bb97-9ab32effdacf
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f36ad40a2b16401218fe2a5927407464fe6ac11b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 93e9c574346ad57a6947645552616cd8db46fe85
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536133"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056368"
 ---
 # <a name="sppostmsxoperation-transact-sql"></a>sp_post_msx_operation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ sp_post_msx_operation
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @operation = ] 'operation'` Тип операции для отправленной операции. *Операция*— **varchar(64)**, не имеет значения по умолчанию. Допустимость операций зависит *object_type*.  
+`[ @operation = ] 'operation'` Тип операции для отправленной операции. *Операция*— **varchar(64)** , не имеет значения по умолчанию. Допустимость операций зависит *object_type*.  
   
 |Тип объекта|Операция|  
 |-----------------|---------------|  
@@ -54,11 +53,11 @@ sp_post_msx_operation
 |**СЕРВЕР**|RE-ENLIST<br /><br /> DEFECT<br /><br /> SYNC-TIME<br /><br /> SET-POLL|  
 |**РАСПИСАНИЕ**|INSERT<br /><br /> UPDATE<br /><br /> DELETE|  
   
-`[ @object_type = ] 'object'` Тип объекта, для которого отправляется операция. Допустимые типы: **задания**, **SERVER**, и **РАСПИСАНИЕ**. *Объект* — **varchar(64)**, значение по умолчанию **задания**.  
+`[ @object_type = ] 'object'` Тип объекта, для которого отправляется операция. Допустимые типы: **задания**, **SERVER**, и **РАСПИСАНИЕ**. *Объект* — **varchar(64)** , значение по умолчанию **задания**.  
   
 `[ @job_id = ] job_id` Идентификационный номер задания, к которому применяется операция. *job_id* — **uniqueidentifier**, не имеет значения по умолчанию. **0x00** подразумевает все задания. Если *объект* — **SERVER**, затем *job_id*не является обязательным.  
   
-`[ @specific_target_server = ] 'target_server'` Имя целевого сервера, для которого применяется заданная операция. Если *job_id* указан, но *target_server* не указан, то операции направляются на все серверы задания. *target_server* — **nvarchar(30)**, значение по умолчанию NULL.  
+`[ @specific_target_server = ] 'target_server'` Имя целевого сервера, для которого применяется заданная операция. Если *job_id* указан, но *target_server* не указан, то операции направляются на все серверы задания. *target_server* — **nvarchar(30)** , значение по умолчанию NULL.  
   
 `[ @value = ] value` Интервал опроса в секундах. Аргумент*value* имеет тип **int**и значение по умолчанию NULL. Укажите этот параметр только в том случае, если *операции* — **SET-POLL**.  
   

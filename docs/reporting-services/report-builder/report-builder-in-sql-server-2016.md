@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: aa1dd3517002405a93185ea55adcdc5ecd808e6f
-ms.sourcegitcommit: c40f663d4486e574fd749f2c8e84c98d41970352
+ms.openlocfilehash: c10e37d7c1231a3ed4db2d7412ea223cccc6922d
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67037843"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67688515"
 ---
 # <a name="report-builder-in-sql-server"></a>Построитель отчетов в SQL Server
 
- [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] — это инструмент создания отчетов с разбиением на страницы, предназначенный для корпоративных пользователей, которые предпочитают работать в автономной среде вместо использования конструктора отчетов в Visual Studio/SSDT.  При проектировании отчета с разбиением на страницы вы создаете определение отчета, в котором указано, откуда и какие брать данные, а также как их отображать. При запуске отчета обработчик получает заданное определение отчета, извлекает данные и объединяет их с макетом отчета, чтобы создать отчет. Отчет можно предварительно просмотреть в [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. После этого отчет можно опубликовать в собственном режиме или в режиме интеграции с SharePoint на сервере отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (2016 и более ранние версии). 
+ [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] — это инструмент создания отчетов с разбиением на страницы, предназначенный для корпоративных пользователей, которые предпочитают работать в автономной среде вместо использования конструктора отчетов в Visual Studio/SSDT.  При разработке отчета с разбиением на страницы вы создаете определение отчета, в котором указано, откуда и какие брать данные, а также как их отображать. При запуске отчета обработчик получает заданное определение отчета, извлекает данные и объединяет их с макетом отчета, чтобы создать отчет. Отчет можно предварительно просмотреть в [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. После этого отчет можно опубликовать в собственном режиме или в режиме интеграции с SharePoint на сервере отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (2016 и более ранние версии). 
 
 Можно также опубликовать отчет с разбивкой на страницы в службе Power BI. Узнайте больше об [отчетах с разбивкой на страницы в Power BI Premium](https://docs.microsoft.com/power-bi/paginated-reports-report-builder-power-bi) (предварительная версия).
   

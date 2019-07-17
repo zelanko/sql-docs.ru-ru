@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b537348a-bea0-4bd6-84a4-52a75292957f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b99fd70e0119aa01d384066aaa2f3b91eed152b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3ff069ef0602e419eda93df0ca5a72dbf7c8ef1e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63026874"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68045158"
 ---
 # <a name="microsoft-access-data-types"></a>Типы данных Microsoft Access
 Ниже приведены типы данных Microsoft Access, типы данных, используемые для создания таблиц и типов данных ODBC SQL.  

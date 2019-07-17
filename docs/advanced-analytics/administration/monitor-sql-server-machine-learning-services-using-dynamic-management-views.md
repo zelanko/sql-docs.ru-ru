@@ -7,13 +7,12 @@ ms.date: 10/29/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 8d701d9e8595eee3a583e913baabc2148af214fe
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 4fd41ebb8f486b6117ba3e99c080566771bd4a63
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67681624"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963144"
 ---
 # <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>Служб монитора SQL Server машинного обучения с помощью динамических административных представлений (DMV)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "67681624"
 
 При наблюдении за рабочих нагрузок машины обучения в SQL Server можно использовать следующие динамические административные представления. Для выполнения запроса динамических административных представлений, вам потребуется `VIEW SERVER STATE` разрешения на экземпляр.
 
-| Динамическое административное представление | Тип | Описание |
+| Динамическое административное представление | Type | Описание |
 |-------------------------|------|-------------|
 | [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) | Выполнение | Возвращает строку для каждой активной рабочей учетной записи, в которой выполняется внешний скрипт. |
 | [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md) | Выполнение | Возвращает по одной строке для каждого типа запроса внешнего скрипта. |
@@ -305,7 +304,7 @@ WITH result sets((Package NVARCHAR(128), Version NVARCHAR(128), Location NVARCHA
 |--------|-------------|
 | Пакет | Имя установленного пакета. |
 | Version | Версия пакета. |
-| Местоположение | Каталог, где можно найти пакет. |
+| Location | Каталог, где можно найти пакет. |
 
 ## <a name="next-steps"></a>Следующие шаги
 

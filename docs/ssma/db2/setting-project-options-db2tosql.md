@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f325a606-97ac-48bc-b344-b55f5e086a48
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 16bf79c185a23399d48d141b5d773e2e0d41dc3f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d384433e5a2653291fac4d990bb3660b31c13855
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63269984"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060034"
 ---
 # <a name="setting-project-options-db2tosql"></a>Настройка параметров проекта (DB2ToSQL)
 Для каждого проекта SSMA можно задать параметры уровня проекта. Эти параметры задают преобразование объекта, загрузка объекта, параметры миграции интерфейсом и данными пользователя. Перед началом преобразования объектов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или перенести данные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], убедитесь, что параметры конфигурации подходят для проекта.  

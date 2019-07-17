@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 263452f1-9708-48f0-9536-402a89e7f5bf
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 74116af7883c4b9a3f27c2afed88d16c993198ce
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a432685809676f997049940ea5aa1ce43dc38a60
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52747893"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029635"
 ---
 # <a name="ihsyscolumns-transact-sql"></a>IHsyscolumns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ ms.locfileid: "52747893"
 |**autoval**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**offset**|**int**|Сдвиг в строке, в которой встречается этот столбец.|  
 |**collationid**|**int**|Идентификатор параметров сортировки столбца. Значение NULL для несимвольных столбцов.|  
-|**Язык**|**int**|Идентификатор языка для столбца.|  
+|**language**|**int**|Идентификатор языка для столбца.|  
 |**status**|**int**|Битовая карта, используемая для описания свойства столбца или параметра:<br /><br /> **0x08** = столбец допускает значения null.<br /><br /> **0x10** = заполнение символами ANSI был в силу, если **varchar** или **varbinary** были добавлены столбцы. Замыкающие пробелы сохраняются для **varchar** и замыкающие нули сохраняются для **varbinary** столбцов.<br /><br /> **0x40** = параметр является ВЫХОДНЫМ параметром.<br /><br /> **0x80** = столбец является столбцом идентификаторов.|  
 |**type**|**int**|Тип физического хранилища из [sys.systypes &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
 |**usertype**|**tinyint**|Идентификатор типа пользовательских данных из [sys.systypes &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  

@@ -7,13 +7,12 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 5773641f442fe844657e6aabd6b9dcea24f4475b
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: c9cb9d84637d20f3f0e73f97fa6565d84d12fb4e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58509911"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961952"
 ---
 # <a name="run-custom-r-functions-on-sql-server-using-rxexec"></a>Выполнения пользовательских функций R на SQL Server с помощью rxExec
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -24,7 +23,7 @@ ms.locfileid: "58509911"
 
 В этом руководстве используется смоделированные данные для демонстрации выполнения пользовательскую функцию R, которая выполняется на удаленном сервере.
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 + [Службы машинного обучения SQL Server 2017 (с помощью R)](../install/sql-machine-learning-services-windows-install.md) или [SQL Server 2016 R Services (в базе данных)](../install/sql-r-services-windows-install.md)
   

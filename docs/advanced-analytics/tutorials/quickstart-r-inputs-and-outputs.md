@@ -7,13 +7,12 @@ ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 4df9e266e16e2cc37ce527c19ba7be483e43d50a
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: 1672cdeb59dfe35e313c999549e46f3fd76b688e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582687"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962001"
 ---
 # <a name="quickstart-handle-inputs-and-outputs-using-r-in-sql-server"></a>Краткое руководство. Обрабатывать входные и выходные данные с помощью языка R в SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -26,7 +25,7 @@ ms.locfileid: "59582687"
 
 Хранимая процедура возвращает один кадр данных R как выходные данные, но можно также выводить скалярных величин и модели как переменные. Например можно выходные данные обученной модели в качестве двоичной переменной и передать его в инструкцию T-SQL INSERT для записи в таблицу модели. Можно также создавать графики (в двоичном формате) или скаляры (отдельных значений, таких как дата и время, затраченное время для обучения модели и так далее).
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 Предыдущего краткого руководства, [проверьте R в SQL Server существует](quickstart-r-verify.md), сведения и ссылки по настройке среды R, необходимые для этого краткого руководства.
 

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: d863179f-12a9-4b55-ac6b-7d84202d3da3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 42d90172c9e0d0fafb836e5b917a88d52a994b86
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9d42512c2d5d7671c35197c7968f317f688e304c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536508"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005833"
 ---
 # <a name="sqlnumresultcols-function"></a>SQLNumResultCols, функция
 **Соответствие стандартам**  
@@ -51,7 +50,7 @@ SQLRETURN SQLNumResultCols(
  [Выход] Указатель на буфер, в которую будет возвращено число столбцов в результирующий набор. Это число не включает столбец привязанного закладки.  
   
 ## <a name="returns"></a>Возвращает  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR, or SQL_INVALID_HANDLE.  
+ Значение SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, значение SQL_ERROR или SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Диагностика  
  Когда **SQLNumResultCols** возвращает значение SQL_ERROR или SQL_SUCCESS_WITH_INFO, а связанное значение SQLSTATE можно получить, вызвав **SQLGetDiagRec** с *HandleType* из Значение SQL_HANDLE_STMT и *обрабатывать* из *StatementHandle*. В следующей таблице перечислены значения SQLSTATE, обычно возвращаемые **SQLNumResultCols** и объясняется каждый из них в контексте этой функции; описания SQLSTATE, возвращаемых диспетчером драйверов предшествует обозначение «(DM)». Возвращается связанный с каждого значения SQLSTATE значение SQL_ERROR, если не указано иное.  

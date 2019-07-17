@@ -2,19 +2,18 @@
 title: Удаление обновлений - Analytics Platform System | Документация по Microsoft»
 description: Удаление обновлений в Analytics Platform System (APS).
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 4739d05b1878c8b7fc9f66f2e0b8145ff1044e54
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f910eeb7f3b38d29f7ae7b084de981c22a6f3f4a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63243828"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959835"
 ---
 # <a name="uninstall-microsoft-updates-in-analytics-platform-system"></a>Удаление обновлений в Analytics Platform System
 В этой статье описан процесс удаления ранее установленного обновления Майкрософт на устройстве, Analytics Platform System.  

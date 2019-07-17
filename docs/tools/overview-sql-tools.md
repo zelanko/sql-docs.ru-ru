@@ -8,16 +8,16 @@ ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: ''
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 84cebceddc18ee3d288226ebd00bc86ea25ac926
-ms.sourcegitcommit: eb1f3a2f5bc296f74545f17d20c6075003aa4c42
-ms.translationtype: MTE75
+ms.openlocfilehash: 0d7683ed4f45a2d2e28843b24d9abd2592b08fae
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52190994"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67731594"
 ---
 # <a name="sql-tools-and-utilities-for-sql-server-azure-sql-database-and-azure-sql-data-warehouse"></a>Средства и программы для SQL Server, база данных Azure SQL и хранилище данных Azure SQL SQL
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,7 +25,6 @@ ms.locfileid: "52190994"
 Для управления (запросов, монитор, и т.д.) требуется инструмент базы данных. Хотя базы данных могут работать в облаке, на Windows или на [Linux](../linux/sql-server-linux-overview.md), ваше средство не должен выполняться на той же платформе, что и база данных. 
 
 Существует множество инструменты для баз данных, поэтому в этой статье представлено описание и ссылки на некоторые из доступных средств работы с базами данных SQL. Если вам нужна помощь, решить, какое средство см [какие средства следует использовать?](#which-tool-should-i-choose).
-
 
 ## <a name="gui-tools-to-manage-databases"></a>Графические средства для управления базами данных  
 
@@ -45,13 +44,13 @@ ms.locfileid: "52190994"
 
 | Инструмент | Описание | Работает на |
 |:--|:--|:--|
-|[**mssql-cli (предварительная версия)**](mssql-cli.md)|**MSSQL-cli** — это интерактивное средство командной строки для выполнения запросов к SQL Server. | Windows, macOS и Linux|
+|[**mssql-cli (предварительная версия)** ](mssql-cli.md)|**MSSQL-cli** — это интерактивное средство командной строки для выполнения запросов к SQL Server. | Windows, macOS и Linux|
 | [**sqlpackage**](sqlpackage.md) |**sqlpackage** — это программа командной строки, которая позволяет автоматизировать некоторые задачи разработки базы данных. macOS и Linux, версиях sqlpackage сейчас доступны в предварительной версии. | Windows, macOS и Linux|
 |[**SQL Server PowerShell**](../powershell/sql-server-powershell.md)| **SQL Server PowerShell** предоставляет командлеты для работы с SQL| Windows, macOS и Linux|
 | [**sqlcmd**](sqlcmd-utility.md) |**sqlcmd** служебная программа позволяет вводить инструкции Transact-SQL, системные процедуры и файлы скриптов в командной строке. | Windows, macOS и Linux|
 |[**bcp**](https://docs.microsoft.com/sql/tools/bcp-utility?view=sql-server-2014)|Служебная программа "**b**ulk **c**opy **p**rogram" (**bcp**) используется для массового копирования данных между экземпляром [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и файлом данных в указанном пользователем формате.|Windows, macOS и Linux|
-|[**MSSQL-scripter (Предварительная версия)**](https://github.com/Microsoft/mssql-scripter)|**MSSQL-scripter** — это интерфейс командной строки для нескольких платформ для сценариев баз данных SQL Server|Windows, macOS и Linux|
-|[**MSSQL-conf**](../linux/sql-server-linux-configure-mssql-conf.md)|**MSSQL-conf** настраивает SQL Server на Linux.|Linux|
+|[**MSSQL-scripter (Предварительная версия)** ](https://github.com/Microsoft/mssql-scripter)|**MSSQL-scripter** — это интерфейс командной строки для нескольких платформ для сценариев баз данных SQL Server|Windows, macOS и Linux|
+|[**mssql-conf**](../linux/sql-server-linux-configure-mssql-conf.md)|**MSSQL-conf** настраивает SQL Server на Linux.|Linux|
 
 
 
@@ -69,7 +68,7 @@ ms.locfileid: "52190994"
 
 | Инструмент | Описание |
 |:--|:--|
-| [Диспетчер конфигураций](../tools/configuration-manager/sql-server-configuration-manager-help.md) | Используйте диспетчер конфигурации SQL Server для настройки служб SQL Server и настройках сетевого взаимодействия. Configuration Manager работает на Windows|
+| [диспетчер конфигураций](../tools/configuration-manager/sql-server-configuration-manager-help.md) | Используйте диспетчер конфигурации SQL Server для настройки служб SQL Server и настройках сетевого взаимодействия. Configuration Manager работает на Windows|
 | [Помощник по миграции SQL Server](../ssma/sql-server-migration-assistant.md) | Помощник по миграции SQL Server используется для автоматизации миграции баз данных в SQL Server из Microsoft Access, DB2, MySQL, Oracle и Sybase.|
 | [Database Experimentation Assistant](../dea/database-experimentation-assistant-overview.md) | Используйте помощник базы данных службы "Экспериментирование" для оценки целевую версию SQL для заданной рабочей нагрузки. |
 | [Распределенное воспроизведение](../tools/distributed-replay/install-distributed-replay-overview.md) | Используйте компонента распределенного воспроизведения, которые помогут оценить влияние будущих обновлений SQL Server. Также можно используйте распределенного воспроизведения для оценки влияния оборудования и обновления операционной системы и настройке SQL Server. |

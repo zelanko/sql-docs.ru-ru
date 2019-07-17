@@ -12,14 +12,13 @@ dev_langs:
 ms.assetid: 1016db6e-9950-4ae2-a004-bd4171e27359
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d0b15109f261e1d793235593c54a0178b7e76f2d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 152265e072d9f21baae715692cada63ee4f7ab11
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805942"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005182"
 ---
 # <a name="sysexternaldatasources-transact-sql"></a>sys.external_data_sources (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "47805942"
 |name|**sysname**|Имя внешнего источника данных.||  
 |location|**nvarchar(4000)**|Строка подключения, которая включает в себя протокол, IP-адрес и порт для внешнего источника данных.||  
 |type_desc|**nvarchar(255)**|Тип источника данных отображается в виде строки.|HADOOP, реляционной СУБД, SHARD_MAP_MANAGER, RemoteDataArchiveTypeExtDataSource|  
-|Тип|**tinyint**|Тип источника данных отображается в виде числа.|0 — HADOOP<br /><br /> 1 - РЕЛЯЦИОННОЙ СУБД<br /><br /> 2 - SHARD_MAP_MANAGER<br /><br /> 3 - RemoteDataArchiveTypeExtDataSource|  
+|type|**tinyint**|Тип источника данных отображается в виде числа.|0 — HADOOP<br /><br /> 1 - РЕЛЯЦИОННОЙ СУБД<br /><br /> 2 - SHARD_MAP_MANAGER<br /><br /> 3 - RemoteDataArchiveTypeExtDataSource|  
 |resource_manager_location|**nvarchar(4000)**|Введите HADOOP, IP-адрес и порт расположение диспетчера ресурсов Hadoop. Используется для отправки задания на источнике данных Hadoop.<br /><br /> Значение NULL для других типов внешних источников данных.||  
 |credential_id|**int**|Идентификатор объекта базы данных учетных данных для подключения к внешнему источнику данных.||  
 |database_name|**sysname**|Для типа реляционной СУБД, имя удаленной базы данных. Для типа SHARD_MAP_MANAGER, имя базы данных диспетчера карты сегментов. Значение NULL для других типов внешних источников данных.||  

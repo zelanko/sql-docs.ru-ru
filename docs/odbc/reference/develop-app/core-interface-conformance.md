@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: aaaa864a-6477-45ff-a50a-96d8db66a252
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e41d71cd3651e1db5d1a533159012b645b8c7764
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 02e8aabf808ebf11f2e241fc7d330f794dbb0112
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63043766"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68002115"
 ---
 # <a name="core-interface-conformance"></a>Соответствие основного интерфейса
 Все драйверы ODBC должны обладать по крайней мере уровень ядра соответствие интерфейса. Так как функции на уровне ядра, предусмотренные стандартом наиболее универсальных приложений с возможностью взаимодействия, драйвер может работать с таких приложений. Возможности уровня ядра также соответствуют для функций, определенных в спецификации ISO CLI и необходимые компоненты, определенные в спецификации Open CLI группы. Драйвер ODBC интерфейс совместимого уровня ядра позволяет приложению выполнять любые из следующих:  

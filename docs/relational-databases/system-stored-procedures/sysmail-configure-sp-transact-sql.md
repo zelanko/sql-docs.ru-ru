@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 73b33c56-2bff-446a-b495-ae198ad74db1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: abe47df497b61d35c66bfebfb3ba5a75fad0e183
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 7984fba52f813644c9dcb25bca2beb123be85622
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53588558"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017721"
 ---
 # <a name="sysmailconfiguresp-transact-sql"></a>sysmail_configure_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,13 +41,13 @@ sysmail_configure_sp [ [ @parameter_name = ] 'parameter_name' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [**@parameter_name** =] **"**_parameter_name_**"**  
+ [ **@parameter_name** =] **"** _parameter_name_ **"**  
  Имя параметра, которое необходимо изменить.  
   
- [**@parameter_value** =] **"**_parameter_value_**"**  
+ [ **@parameter_value** =] **"** _parameter_value_ **"**  
  Новое значение параметра.  
   
- [**@description** =] **"**_описание_**"**  
+ [ **@description** =] **"** _описание_ **"**  
  Описание параметра.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -62,7 +61,7 @@ sysmail_configure_sp [ [ @parameter_name = ] 'parameter_name' ]
   
 ||||  
 |-|-|-|  
-|Имя параметра|Описание|Значение по умолчанию|  
+|Имя параметра|Описание|Default Value|  
 |*AccountRetryAttempts*|Число попыток, предпринимаемых процессом внешней почты для отправки сообщения электронной почты с использованием каждой учетной записи в указанном профиле.|**1**|  
 |*AccountRetryDelay*|Время ожидания процесса внешней почты между попытками отправить сообщение (в секундах).|**5000**|  
 |*DatabaseMailExeMinimumLifeTime*|Минимальное время в секундах, в течение которого остается активным процесс внешней почты. Когда компонент Database Mail рассылает большое количество сообщений, необходимо увеличить это значение, чтобы поддержать этот компонент в активном состоянии и избежать дополнительной нагрузки из-за частых остановок и запусков.|**600**|  

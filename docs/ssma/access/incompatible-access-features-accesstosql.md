@@ -27,13 +27,12 @@ helpviewer_keywords:
 ms.assetid: 99d45b9c-e3b9-4d56-8c25-b594b887ace1
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 29b5225f95c6b2cb04f42c0e67c504ac2cb20e53
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2cc48fa530730beec07aaca4bfb933c9ff8fb2b7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62740909"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67986354"
 ---
 # <a name="incompatible-access-features-accesstosql"></a>Несовместимые компоненты Access (AccessToSQL)
 Не все функции доступа к базе данных совместимы с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Например [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и доступа имеют разные наборы зарезервированные ключевые слова. Проблемы, такие, как они могут помешать успешной миграции для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Используйте следующую таблицу, чтобы узнать о возможных проблемы миграции и возможностях о них.  

@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 767dd410-6bc9-4c4a-ab0f-6d2cf6163426
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 12d6c57e59ee37443b9ec600d8eb760c7f53018a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 183fa2fc1a674ec1cc987c265f5a0d4c399e27cc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843783"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68010756"
 ---
 # <a name="syssyscomments-transact-sql"></a>sys.syscomments (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,15 +38,15 @@ ms.locfileid: "47843783"
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**идентификатор**|**int**|Идентификатор объекта, к которому применяется текст.|  
-|**номер**|**smallint**|Номер внутри группирования процедур, если группирование существует.<br /><br /> 0 = записи не являются процедурами.|  
+|**number**|**smallint**|Номер внутри группирования процедур, если группирование существует.<br /><br /> 0 = записи не являются процедурами.|  
 |**идентификатора столбца**|**smallint**|Последовательный номер строки для определения объекта с длиной более 4 000 символов.|  
 |**status**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**ctext**|**varbinary(8000)**|Приблизительное число байтов в инструкции определения SQL.|  
 |**texttype**|**smallint**|0 = пользовательский комментарий<br /><br /> 1 = системный комментарий<br /><br /> 4 = зашифрованный комментарий|  
-|**Язык**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**language**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**Шифрование**|**bit**|Указывает, применялось ли к определению процедуры запутывание.<br /><br /> 0 = запутывание не применялось;<br /><br /> 1 = запутывание применялось.<br /><br /> **\*\* Важные \* \***  для запутывания определения хранимых процедур, используется инструкция CREATE PROCEDURE с ключевым словом ENCRYPTION.|  
-|**сжатые**|**bit**|Всегда возвращает значение 0. Это означает, что процедура сжата.|  
-|**text**|**nvarchar(4000)**|Фактический текст инструкции определения SQL.<br /><br /> Семантика расшифрованных выражений соответствует исходному тексту, однако правильность синтаксиса не гарантируется. Например, пробельные символы удаляются из расшифрованного выражения.<br /><br /> Это [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]-представление, совместимое получает информацию из текущих [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] структуры и может возвращать больше символов, чем **nvarchar(4000)** определения. **sp_help** возвращает **nvarchar(4000)** как тип данных текстового столбца. При работе с **syscomments** рассмотрите возможность использования **nvarchar(max)**. Для новых разработок, не используйте **syscomments**.|  
+|**сжатые**|**bit**|Всегда возвращает 0. Это означает, что процедура сжата.|  
+|**text**|**nvarchar(4000)**|Фактический текст инструкции определения SQL.<br /><br /> Семантика расшифрованных выражений соответствует исходному тексту, однако правильность синтаксиса не гарантируется. Например, пробельные символы удаляются из расшифрованного выражения.<br /><br /> Это [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]-представление, совместимое получает информацию из текущих [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] структуры и может возвращать больше символов, чем **nvarchar(4000)** определения. **sp_help** возвращает **nvarchar(4000)** как тип данных текстового столбца. При работе с **syscomments** рассмотрите возможность использования **nvarchar(max)** . Для новых разработок, не используйте **syscomments**.|  
   
 ## <a name="see-also"></a>См. также  
  [Сопоставление системных таблиц с системными представлениями &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   

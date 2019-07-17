@@ -31,14 +31,13 @@ helpviewer_keywords:
 ms.assetid: a9efbbde-ed2b-4929-acc1-261acaaed19d
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cdd0c4efafbab577aef1016d367ca2210ea3d863
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 6201ddd9a04fd95ae27b987710f94701161577cf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011436"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005280"
 ---
 # <a name="sql-server-xml-bulk-load-object-model-sqlxml-40"></a>Объектная модель массовой загрузки XML SQL Server (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -139,8 +138,8 @@ ms.locfileid: "56011436"
   
  Значение по умолчанию — FALSE.  
   
- TempFilePath  
- Указывает файловый путь, по которому массовая загрузка XML создает временные файлы для хранения данных, массово загружаемых в транзакции. (Это свойство полезно, только когда свойство Transaction имеет значение TRUE.) Следует убедиться, что у учетной записи [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], используемой для массовой загрузки XML, есть доступ к этому пути. Если это свойство не установлено, массовая загрузка XML хранит временные файлы в месте, заданном переменной среды TEMP.  
+ Каталог временных файлов  
+ Указывает файловый путь, по которому массовая загрузка XML создает временные файлы для хранения данных, массово загружаемых в транзакции. (Это свойство полезно, только в том случае, когда свойство Transaction имеет значение TRUE.) Необходимо убедиться, что [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] учетной записи, которая используется для массовой загрузки XML имеет доступ к этому пути. Если это свойство не установлено, массовая загрузка XML хранит временные файлы в месте, заданном переменной среды TEMP.  
   
  Transaction  
  Указывает, должна ли массовая загрузка выполняться в транзакции. В этом случае при неудачном завершении массовой загрузки производится откат транзакции. Это свойство является логическим. Когда свойство имеет значение TRUE, массовая загрузка XML проводится в контексте транзакции. Свойство TempFilePath полезно только в том случае, если транзакция имеет значение TRUE.  

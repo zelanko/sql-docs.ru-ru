@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: b4d05439-6360-45db-b1cd-794f4a64935e
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7adf4a825fb93b6c87714476607b30e9f4ec97a7
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: d1aee3dcdfe287e4d6db64be6c74edb7eb1362a7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67833574"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068052"
 ---
 # <a name="sysquerystoreplan-transact-sql"></a>sys.query_store_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -49,7 +48,7 @@ ms.locfileid: "67833574"
 |**is_forced_plan**|**bit**|План будет помечена как принудительно, когда пользователь выполняет хранимую процедуру **sys.sp_query_store_force_plan**. Механизм принудительного *не гарантирует* что именно этот план будет использоваться для запроса, который ссылается **query_id**. Форсирование планов вызывает запрос, чтобы скомпилировать еще раз и обычно создает точно одинаковые или похожие плана для плана, который ссылается **plan_id**. Если форсирование планов не работает, **force_failure_count** увеличивается и **last_force_failure_reason** заполняется причину сбоя. <br/>**Примечание.** Хранилище данных SQL Azure всегда будет возвращать нуль (0).|  
 |**is_natively_compiled**|**bit**|План содержит процедуры, скомпилированные в собственном коде оптимизированные для памяти. (0 = FALSE, 1 = TRUE). <br/>**Примечание.** Хранилище данных SQL Azure всегда будет возвращать нуль (0).|  
 |**force_failure_count**|**bigint**|Количество попыток принудительного плана произошел сбой. Он может быть увеличен только в том случае, когда запрос перекомпилируется (*не при каждом выполнении*). Он сбрасывается на 0 каждый раз **is_plan_forced** меняется с **FALSE** для **TRUE**. <br/>**Примечание.** Хранилище данных SQL Azure всегда будет возвращать нуль (0).|  
-|**last_force_failure_reason**|**int**|Причина, почему сбой форсирования плана.<br /><br /> 0: не ошибка, в противном случае номер ошибки, вызвавшей Принудительная переход на другой<br /><br /> 8637: ONLINE_INDEX_BUILD<br /><br /> 8683: INVALID_STARJOIN<br /><br /> 8684: TIME_OUT<br /><br /> 8689: NO_DB<br /><br /> 8690: HINT_CONFLICT<br /><br /> 8691: SETOPT_CONFLICT<br /><br /> 8694: DQ_NO_FORCING_SUPPORTED<br /><br /> 8698: NO_PLAN<br /><br /> 8712: ВНИМАНИЕ<br /><br /> 8713: VIEW_COMPILE_FAILED<br /><br /> \<другое значение >: GENERAL_FAILURE <br/>**Примечание.** Хранилище данных SQL Azure всегда будет возвращать нуль (0).|  
+|**last_force_failure_reason**|**int**|Причина, почему сбой форсирования плана.<br /><br /> 0: не ошибка, в противном случае номер ошибки, вызвавшей Принудительная переход на другой<br /><br /> 8637: ONLINE_INDEX_BUILD<br /><br /> 8683: INVALID_STARJOIN<br /><br /> 8684: ВРЕМЯ_ОЖИДАНИЯ<br /><br /> 8689: NO_DB<br /><br /> 8690: HINT_CONFLICT<br /><br /> 8691: SETOPT_CONFLICT<br /><br /> 8694: DQ_NO_FORCING_SUPPORTED<br /><br /> 8698: NO_PLAN<br /><br /> 8712: ВНИМАНИЕ<br /><br /> 8713: VIEW_COMPILE_FAILED<br /><br /> \<другое значение >: GENERAL_FAILURE <br/>**Примечание.** Хранилище данных SQL Azure всегда будет возвращать нуль (0).|  
 |**last_force_failure_reason_desc**|**nvarchar(128)**|Текстовое описание last_force_failure_reason_desc.<br /><br /> ONLINE_INDEX_BUILD: запрос пытается изменить данные, хотя целевая таблица имеет индекс, который строится через Интернет<br /><br /> INVALID_STARJOIN: план содержит недопустимую спецификацию StarJoin<br /><br /> ВРЕМЯ_ОЖИДАНИЯ: Оптимизатор превысил количество разрешенных операций во время поиска плана, заданные принудительного плана<br /><br /> NO_DB: Не существует в базе данных, указанной в плане<br /><br /> HINT_CONFLICT: Запрос невозможно скомпилировать, так как план конфликтует с указанием запроса<br /><br /> DQ_NO_FORCING_SUPPORTED: Невозможно выполнить запрос, поскольку план конфликтует с использованием распределенного запроса или операций полнотекстового поиска.<br /><br /> NO_PLAN: Обработчику запросов не удалось создать план запроса, поскольку не удалось проверить принудительный план был допустимым для запроса<br /><br /> ВНИМАНИЕ: Индекс, заданный в план больше не существует<br /><br /> VIEW_COMPILE_FAILED: Не удалось принудительно использовать план запроса из-за проблемы в индексированное представление, указанное в плане<br /><br /> GENERAL_FAILURE: принудительное ошибка (не реализуются посредством выше причинам) <br/>**Примечание.** Хранилище данных SQL Azure всегда будет возвращать *NONE*.|  
 |**count_compiles**|**bigint**|Планирование статистики компиляции.|  
 |**initial_compile_start_time**|**datetimeoffset**|Планирование статистики компиляции.|  
@@ -58,7 +57,7 @@ ms.locfileid: "67833574"
 |**avg_compile_duration**|**float**|Планирование статистики компиляции. <br/>**Примечание.** Хранилище данных SQL Azure всегда будет возвращать нуль (0).|  
 |**last_compile_duration**|**bigint**|Планирование статистики компиляции. <br/>**Примечание.** Хранилище данных SQL Azure всегда будет возвращать нуль (0).|  
 |**plan_forcing_type**|**int**|Тип принудительного применения плана.<br /><br />0: None<br /><br />1: MANUAL<br /><br />2: AUTO|  
-|**plan_forcing_type_desc**|**nvarchar(60)**|Text description of plan_forcing_type.<br /><br />NONE: Форсирование планов не<br /><br />ВРУЧНУЮ: План, принудительно задается пользователем<br /><br />АВТО: Принудительно используемый план автоматической настройкой|  
+|**plan_forcing_type_desc**|**nvarchar(60)**|Текстовое описание plan_forcing_type.<br /><br />NONE: Форсирование планов не<br /><br />ВРУЧНУЮ: План, принудительно задается пользователем<br /><br />АВТО: Принудительно используемый план автоматической настройкой|  
 
 ## <a name="plan-forcing-limitations"></a>Ограничения принудительного использования планов
 Хранилище запросов имеет механизм, позволяющий оптимизатору запросов принудительно применить определенный план выполнения. Но существуют некоторые ограничения, которые могут препятствовать применению плана. 

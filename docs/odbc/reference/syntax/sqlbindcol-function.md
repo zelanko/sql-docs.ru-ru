@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 41a37655-84cd-423f-9daa-e0b47b88dc54
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 17b907be3e2641fe1dcbbb8fbd96586132e054ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3860243580981d995e6581d883e12afe3f033d3b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65538066"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036219"
 ---
 # <a name="sqlbindcol-function"></a>SQLBindCol, функция
 **Соответствие стандартам**  
@@ -84,7 +83,7 @@ SQLRETURN SQLBindCol(
   
 -   SQL_NO_TOTAL  
   
--   SQL_NULL_DATA  
+-   ЗНАЧЕНИЕ SQL_NULL_DATA  
   
  Приложение можно поместить следующие значения в буфер длины/индикатора для использования с **SQLBulkOperations** или **SQLSetPos**:  
   
@@ -92,7 +91,7 @@ SQLRETURN SQLBindCol(
   
 -   SQL_NTS  
   
--   SQL_NULL_DATA  
+-   ЗНАЧЕНИЕ SQL_NULL_DATA  
   
 -   SQL_DATA_AT_EXEC  
   
@@ -121,7 +120,7 @@ SQLRETURN SQLBindCol(
 |07009|Недопустимый индекс дескриптора|Значение, указанное для аргумента *ColumnNumber* превышено максимальное число столбцов в результирующем наборе.|  
 |HY000|Общая ошибка|Произошла ошибка, для которой было нет конкретных SQLSTATE и SQLSTATE не зависящие от реализации, который был определен. Сообщение об ошибке, возвращенные **SQLGetDiagRec** в  *\*MessageText* буфера описывает ошибку и его причины.|  
 |HY001|Ошибка выделения памяти|Драйвер не удалось выделить память, необходимая для поддержки выполнения или завершения функции.|  
-|HY003|Недопустимый тип буфера приложения|Аргумент *TargetType* был SQL_C_DEFAULT ни допустимый тип данных.|  
+|HY003 И СООБЩЕНИЕМ|Недопустимый тип буфера приложения|Аргумент *TargetType* был SQL_C_DEFAULT ни допустимый тип данных.|  
 |HY010|Ошибка последовательности функций|(DM) был вызван асинхронно выполняемой функции для дескриптора соединения, связанный с *StatementHandle*. Если по-прежнему выполнении асинхронной функции **SQLBindCol** был вызван.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, или **SQLMoreResults** был вызван для *StatementHandle* и возвращается SQL_PARAM_DATA_ ДОСТУПНО. Прежде чем данные были получены для всех параметров потоковой вызове этой функции.<br /><br /> (DM) был вызван асинхронно выполняемой функции для *StatementHandle* и еще выполнялась при вызове этой функции.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, или **SQLSetPos** был вызван для  *StatementHandle* и возвращается значение SQL_NEED_DATA. Эта функция был вызван перед отправкой данных для всех параметров данных времени выполнения или столбцов.|  
 |HY013|Ошибка управления памятью|Не удалось обработать вызов функции, так как базовые объекты памяти оказываются недоступны, возможно из-за нехватки памяти.|  
 |HY090|Недопустимая длина строки или буфера|(DM) значение, указанное для аргумента *BufferLength* меньше 0.<br /><br /> (DM) драйвер был ODBC 2. *x* драйвера, *ColumnNumber* аргумент имеет значение 0, а значение, указанное для аргумента *BufferLength* не равно 4.|  
