@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 6ff79bbf-4acf-4f75-926f-38637ca8a943
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: baf454d021f64931d06c39b49ee0a18f92841507
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b138a299edbb1e9f3a2314e92b7e77418594a711
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52402859"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119330"
 ---
 # <a name="backupset-transact-sql"></a>backupset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "52402859"
 |-----------------|---------------|-----------------|  
 |**backup_set_id**|**int**|Уникальный идентификационный номер резервного набора, который определяет резервный набор. Удостоверение, первичный ключ.|  
 |**backup_set_uuid**|**uniqueidentifier**|Уникальный идентификационный номер резервного набора, который определяет резервный набор.|  
-|**media_set_id**|**int**|Уникальный идентификационный номер набора носителей, который определяет набор носителей, содержащий резервный набор данных. Ссылки на **backupmediaset(media_set_id)**.|  
+|**media_set_id**|**int**|Уникальный идентификационный номер набора носителей, который определяет набор носителей, содержащий резервный набор данных. Ссылки на **backupmediaset(media_set_id)** .|  
 |**first_family_number**|**tinyint**|Номер семейства носителя, с которого начинается резервный набор данных. Может иметь значение NULL.|  
 |**first_media_number**|**smallint**|Номер носителя, с которого начинается резервный набор данных. Может иметь значение NULL.|  
 |**last_family_number**|**tinyint**|Номер семейства носителя, которым заканчивается резервный набор данных. Может иметь значение NULL.|  
@@ -51,7 +50,7 @@ ms.locfileid: "52402859"
 |**expiration_date**|**datetime**|Дата и время окончания срока действия для резервного набора. Может иметь значение NULL.|  
 |**software_vendor_id**|**int**|Идентификационный номер поставщика программного обеспечения, выполняющего запись заголовка резервного носителя. Может иметь значение NULL.|  
 |**name**|**nvarchar(128)**|Имя резервного набора. Может иметь значение NULL.|  
-|**Описание**|**nvarchar(255)**|Описание резервного набора данных. Может иметь значение NULL.|  
+|**description**|**nvarchar(255)**|Описание резервного набора данных. Может иметь значение NULL.|  
 |**user_name**|**nvarchar(128)**|Имя пользователя, выполняющего операцию резервного копирования. Может иметь значение NULL.|  
 |**software_major_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Основной номер версии. Может иметь значение NULL.|  
 |**software_minor_version**|**tinyint**|Дополнительный номер версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Может иметь значение NULL.|  

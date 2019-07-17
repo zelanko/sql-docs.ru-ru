@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4f622cf4-0603-47a1-a48b-944c4ef46364
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c596f4924e9859b3ac61d38f68bacbc3ecd54a2e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: aab33f8805741083fd42e9fbcb25d67a416be319
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62468700"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061620"
 ---
 # <a name="row-wise-binding"></a>Привязка на уровне строки
 Если используется привязка на уровне строки, определяет структуру, содержащую один или два, или в некоторых случаях трех элементов для каждого столбца, для которого будет возвращаться данных приложением. Первый элемент содержит значение, а второй элемент содержит буфер длины/индикатора. Индикаторы и значений длины могут храниться в отдельных буферах, установка полей дескриптора SQL_DESC_INDICATOR_PTR и SQL_DESC_OCTET_LENGTH_PTR разные значения; Если это сделано, эта структура содержит третьего элемента. Затем приложение выделяет массив этих структур, содержащий столько элементов, сколько строк в наборе строк.  

@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 565483ea-875b-4133-b327-d0006d2d7b4c
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 40437cd27af345aff91314f07888c66e2bdff2d0
-ms.sourcegitcommit: 98324d9803edfa52508b6d5d3554614d0350a0b9
+ms.openlocfilehash: 2600543715bffaba36e29305b0893a9f17cca59c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52321750"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072689"
 ---
 # <a name="spaddextendedproperty-transact-sql"></a>sp_addextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,7 +60,7 @@ sp_addextendedproperty
  Значение, связываемое со свойством. *значение* — **sql_variant**, значение по умолчанию NULL. Размер аргумента *value* не может превышать 7 500 байт.  
   
  [ @level0type=] {"*level0_object_type*"}  
- Тип объекта уровня 0. *level0_object_type* — **varchar(128)**, значение по умолчанию NULL.  
+ Тип объекта уровня 0. *level0_object_type* — **varchar(128)** , значение по умолчанию NULL.  
   
  Допустимые входные данные: ASSEMBLY, CONTRACT, EVENT NOTIFICATION, FILEGROUP, MESSAGE TYPE, PARTITION FUNCTION, PARTITION SCHEME, REMOTE SERVICE BINDING, ROUTE, SCHEMA, SERVICE, USER, TRIGGER, TYPE, PLAN GUIDE и NULL.  
   
@@ -72,12 +71,12 @@ sp_addextendedproperty
  Имя указанного типа объекта уровня 0. *level0_object_name* — **sysname** значение по умолчанию NULL.  
   
  [ @level1type=] {"*level1_object_type*"}  
- Тип объекта уровня 1. *level1_object_type* — **varchar(128)**, значение по умолчанию NULL. Допустимыми входными значениями являются статистическое ВЫРАЖЕНИЕ, по умолчанию, ФУНКЦИЯ, ЛОГИЧЕСКОЕ имя файла, ПРОЦЕДУРЫ, ОЧЕРЕДИ, правило, ПОСЛЕДОВАТЕЛЬНОСТИ, СИНОНИМ, таблицы, TABLE_TYPE, тип, ПРЕДСТАВЛЕНИЯ, XML SCHEMA COLLECTION и NULL.    
+ Тип объекта уровня 1. *level1_object_type* — **varchar(128)** , значение по умолчанию NULL. Допустимыми входными значениями являются статистическое ВЫРАЖЕНИЕ, по умолчанию, ФУНКЦИЯ, ЛОГИЧЕСКОЕ имя файла, ПРОЦЕДУРЫ, ОЧЕРЕДИ, правило, ПОСЛЕДОВАТЕЛЬНОСТИ, СИНОНИМ, таблицы, TABLE_TYPE, тип, ПРЕДСТАВЛЕНИЯ, XML SCHEMA COLLECTION и NULL.    
  [ @level1name=] {"*level1_object_name*"}  
  Имя указанного типа объекта уровня 1. *level1_object_name* — **sysname**, значение по умолчанию NULL.  
   
  [ @level2type=] {"*level2_object_type*"}  
- Тип объекта уровня 2. *level2_object_type* — **varchar(128)**, значение по умолчанию NULL. Допустимые входные данные: COLUMN, CONSTRAINT, EVENT NOTIFICATION, INDEX, PARAMETER, TRIGGER и NULL.  
+ Тип объекта уровня 2. *level2_object_type* — **varchar(128)** , значение по умолчанию NULL. Допустимые входные данные: COLUMN, CONSTRAINT, EVENT NOTIFICATION, INDEX, PARAMETER, TRIGGER и NULL.  
   
  [ @level2name=] {"*level2_object_name*"}  
  Имя указанного типа объекта уровня 2. *level2_object_name* — **sysname**, значение по умолчанию NULL.  
@@ -86,7 +85,7 @@ sp_addextendedproperty
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="remarks"></a>Примечания  
- Чтобы указывать расширенные свойства, объекты в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] классифицируются по трем уровням: 0, 1 и 2. Уровень 0 является самым высоким и определен как «объекты, содержащиеся в области базы данных». Объекты уровня 1 содержатся в схеме и в пользовательской области, а объекты уровня 2 содержатся в объектах уровня 1. Расширенные свойства могут быть определены для объектов на любом из этих уровней.  
+ Для указания расширенных свойств объекты в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базы данных, делятся на три уровня: 0, 1 и 2. Уровень 0 является самым высоким и определен как «объекты, содержащиеся в области базы данных». Объекты уровня 1 содержатся в схеме и в пользовательской области, а объекты уровня 2 содержатся в объектах уровня 1. Расширенные свойства могут быть определены для объектов на любом из этих уровней.  
   
  Ссылки на объект определенного уровня должны быть уточнены именами объектов более высокого уровня, в которых они содержатся или которым они принадлежат. Например, при добавлении расширенного свойства к столбцу таблицы (уровень 2) необходимо также задать имя таблицы (уровень 1), содержащей этот столбец, а также схему (уровень 0), содержащую таблицу.  
   
@@ -99,8 +98,8 @@ sp_addextendedproperty
 ## <a name="replicating-extended-properties"></a>Репликация расширенных свойств  
  Расширенные свойства реплицируются только во время начальной синхронизации между издателем и подписчиком. При добавлении или изменении расширенного свойства после начальной синхронизации эти изменения не реплицируются. Дополнительные сведения о репликации объектов базы данных см. в разделе [публикация данных и объектов базы данных](../../relational-databases/replication/publish/publish-data-and-database-objects.md).  
   
-## <a name="schema-vs-user"></a>Схема и  Пользовательская  
- Не рекомендуется указывать тип USER в качестве типа уровня 0 при применении расширенного свойства к объекту базы данных, так как это может вызвать неоднозначность при разрешении имен. Например, предположим, что пользователь Владимир владеет двумя схемами (Vladimir и MySchema) и в обеих этих схемах содержится таблица с именем MyTable. Если Mary добавит расширенное свойство к таблице MyTable и указывает  **@level0type = N'USER'**,  **@level0name = Mary**, это не неясно, к какой таблице применяется расширенное свойство. Чтобы обеспечить обратную совместимость, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] применит свойство к таблице, содержащейся в схеме Mary.  
+## <a name="schema-vs-user"></a>Vs схемы. Пользовательская  
+ Не рекомендуется указывать тип USER в качестве типа уровня 0 при применении расширенного свойства к объекту базы данных, так как это может вызвать неоднозначность при разрешении имен. Например, предположим, что пользователь Владимир владеет двумя схемами (Vladimir и MySchema) и в обеих этих схемах содержится таблица с именем MyTable. Если Mary добавит расширенное свойство к таблице MyTable и указывает  **@level0type = N'USER'** ,  **@level0name = Mary**, это не неясно, к какой таблице применяется расширенное свойство. Чтобы обеспечить обратную совместимость, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] применит свойство к таблице, содержащейся в схеме Mary.  
   
 ## <a name="permissions"></a>Разрешения  
  Члены предопределенной роли базы данных db_ddladmin и db_owner могут добавлять расширенные свойства к любым объектам со следующим исключением: db_ddladmin не может добавлять свойства к самой базе данных, пользователям или ролям.  

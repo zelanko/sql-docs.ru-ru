@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9ab758f83bde2cb587d3cfab8764fd7eb8fe2577
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788856"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68197991"
 ---
 # <a name="using-capture-mode"></a>Использование режима записи
   Программы SMO могут фиксировать и записывать эквивалентные инструкции [!INCLUDE[tsql](../../../includes/tsql-md.md)] вместо исполняемых программой инструкций или в дополнение к ним. Режим записи можно включить с помощью объекта <xref:Microsoft.SqlServer.Management.Common.ServerConnection> или свойства <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> объекта <xref:Microsoft.SqlServer.Management.Smo.Server>.  

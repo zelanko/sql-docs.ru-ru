@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a8dd8d13-c827-45c4-87ba-802725301382
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1ffa8c9c45e1810fb4a81deed34f7c6c2e4a0ca0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 8a0505b8316254090fe5f2310fa68011d8289679
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52756552"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68129552"
 ---
 # <a name="sysarticlecolumns-system-view-transact-sql"></a>Системное представление sysarticlecolumns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "52756552"
 |**идентификатора столбца**|**int**|Идентифицирует столбец в статье.|  
 |**is_udt**|**int**|Указывает, принадлежит ли столбец к пользовательскому типу данных (UDT). Значение **1** означает столбец определяемого пользователем ТИПА.|  
 |**is_xml**|**int**|Указывает, принадлежит ли столбец **xml** столбца. Значение **1** указывает **xml** столбца.|  
-|**is_max**|**int**|Указывает, принадлежит ли столбец столбцом типа данных больших значений (**varchar(max)**, **nvarchar(max)** или **varbinary(max)**). Значение **1** означает столбец больших значений.|  
+|**is_max**|**int**|Указывает, принадлежит ли столбец столбцом типа данных больших значений (**varchar(max)** , **nvarchar(max)** или **varbinary(max)** ). Значение **1** означает столбец больших значений.|  
   
 ## <a name="see-also"></a>См. также  
  [sp_articlecolumn (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   

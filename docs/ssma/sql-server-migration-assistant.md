@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d0233525-a83b-4279-813e-c554042abd0e
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: a5cc32ab3579555bff85e4e18052bd0126372517
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b6c0f5d54f8a6d3ac1dd35c7d02b05e1b5900278
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63240229"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083563"
 ---
 # <a name="sql-server-migration-assistant"></a>Помощник по миграции SQL Server
 Microsoft SQL Server миграции Assistant (SSMA) — это средство, предназначенное для автоматизации миграции баз данных в SQL Server из Microsoft Access, DB2, MySQL, Oracle и SAP ASE.  

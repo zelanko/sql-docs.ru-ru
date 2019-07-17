@@ -1,5 +1,5 @@
 ---
-title: SystemGetAccuracyResults (службы Analysis Services — Интеллектуальный анализ данных) | Документы Microsoft
+title: SystemGetAccuracyResults (службы Analysis Services — Интеллектуальный анализ данных) | Документация Майкрософт
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 54fc91b67a695110383c19422befab0d7b0f7a9d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017801"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209662"
 ---
 # <a name="systemgetaccuracyresults-analysis-services---data-mining"></a>SystemGetAccuracyResults (службы Analysis Services — интеллектуальный анализ данных)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -103,7 +103,7 @@ SystemGetAccuracyResults(<mining structure>,
 |AttributeName|Имя прогнозируемого столбца.|  
 |AttributeState|Целевое значение в прогнозируемом столбце.<br /><br /> Если столбец содержит значение, показатели собираются только для заданного состояния.<br /><br /> Если значение не задано или равно NULL, показатели вычисляются для наиболее вероятного состояния каждого прогноза.|  
 |PartitionIndex|Определяет секцию, к которой применяется результат.<br /><br /> Для этой процедуры значение всегда равно 0.|  
-|PartitionCases|Целое число, указывающее количество строк в наборе вариантов, на основе  *\<набор данных >* параметра.|  
+|PartitionCases|Целое число, указывающее количество строк в наборе вариантов, основанное на  *\<набора данных >* параметра.|  
 |Тест|Тип выполненного теста.|  
 |Measure|Имя меры, возвращенной тестом. Меры для каждой модели зависят от типа модели и типа прогнозируемого значения.<br /><br /> Список мер, возвращаемых для каждого прогнозируемого типа, см. в разделе [Меры в отчете перекрестной проверки](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md).<br /><br /> Определение каждой меры см. в разделе [Перекрестная проверка (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md).|  
 |Значение|Значение для заданной меры.|  
@@ -141,7 +141,7 @@ CALL SystemGetAccuracyResults (
   
  Образец результатов:  
   
-|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|Тест|Мера|Значение|  
+|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|Тест|Measure|Значение|  
 |---------------|-------------------|--------------------|--------------------|-------------------|----------|-------------|-----------|  
 |v Target Mail DT|Покупатель велосипеда|1|0|1638|Классификация|Истинный положительный результат|605|  
 |v Target Mail DT|Покупатель велосипеда|1|0|1638|Классификация|Ложный положительный результат|177|  
@@ -156,8 +156,8 @@ CALL SystemGetAccuracyResults (
   
 ## <a name="see-also"></a>См. также  
  [SystemGetCrossValidationResults (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)   
- [Systemgetaccuracyresults, хранимая процедура](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
- [Хранимая процедура SystemGetClusterCrossValidationResults &#40;службы Analysis Services — Интеллектуальный анализ данных&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
- [SystemGetClusterAccuracyResults & #40; Службы Analysis Services — Интеллектуальный анализ данных & #41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
+ [SystemGetAccuracyResults, хранимая процедура](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
+ [SystemGetClusterCrossValidationResults (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
+ [SystemGetClusterAccuracyResults (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
   
   

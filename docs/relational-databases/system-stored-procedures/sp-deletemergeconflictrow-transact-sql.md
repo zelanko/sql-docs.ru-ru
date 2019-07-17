@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 64cf1186-28b8-4cd9-88f1-a7808a9c8d60
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5bef3e4902562edde0adb2a4f495c51e6a82b091
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: a315bc147cf86df40cf6fa216b8c45eeb1fcccca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535286"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111957"
 ---
 # <a name="spdeletemergeconflictrow-transact-sql"></a>sp_deletemergeconflictrow (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,15 +41,15 @@ sp_deletemergeconflictrow [ [ @conflict_table = ] 'conflict_table' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @conflict_table = ] 'conflict_table'` — Имя таблицы конфликтов. *conflict_table* — **sysname**, значение по умолчанию **%**. Если *conflict_table* указан как NULL или **%**, конфликт считается конфликтом удаления и строка, совпадающая *rowguid* и *origin_datasource* и *source_object* удаляется из [MSmerge_conflicts_info &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md) таблицы.  
+`[ @conflict_table = ] 'conflict_table'` — Имя таблицы конфликтов. *conflict_table* — **sysname**, значение по умолчанию **%** . Если *conflict_table* указан как NULL или **%** , конфликт считается конфликтом удаления и строка, совпадающая *rowguid* и *origin_datasource* и *source_object* удаляется из [MSmerge_conflicts_info &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md) таблицы.  
   
-`[ @source_object = ] 'source_object'` — Имя исходной таблицы. *source_object* — **nvarchar(386)**, значение по умолчанию NULL.  
+`[ @source_object = ] 'source_object'` — Имя исходной таблицы. *source_object* — **nvarchar(386)** , значение по умолчанию NULL.  
   
 `[ @rowguid = ] 'rowguid'` — Это идентификатор строки для конфликта удаления. *ROWGUID* — **uniqueidentifier**, не имеет значения по умолчанию.  
   
-`[ @origin_datasource = ] 'origin_datasource'` Происхождение конфликта. *origin_datasource* — **varchar(255)**, не имеет значения по умолчанию.  
+`[ @origin_datasource = ] 'origin_datasource'` Происхождение конфликта. *origin_datasource* — **varchar(255)** , не имеет значения по умолчанию.  
   
-`[ @drop_table_if_empty = ] 'drop_table_if_empty'` Флаг, указывающий, что *conflict_table* , удалена, если пусто. *drop_table_if_empty* — **varchar(10)**, значение по умолчанию FALSE.  
+`[ @drop_table_if_empty = ] 'drop_table_if_empty'` Флаг, указывающий, что *conflict_table* , удалена, если пусто. *drop_table_if_empty* — **varchar(10)** , значение по умолчанию FALSE.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  

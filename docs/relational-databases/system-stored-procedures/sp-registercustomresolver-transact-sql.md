@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6d2b0472-0e1f-4005-833c-735d1940fe93
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0187853dcf0fc16fe88feb7e2731414a69fdd183
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 0d003cccfa6fdedd0610ea34f15acb6ee1833e5a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536986"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075728"
 ---
 # <a name="spregistercustomresolver-transact-sql"></a>sp_registercustomresolver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,15 +41,15 @@ sp_registercustomresolver [ @article_resolver = ] 'article_resolver'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @article_resolver = ] 'article_resolver'` Указывает понятное имя регистрируемого пользовательского бизнес-логики. *article_resolver* — **nvarchar(255)**, не имеет значения по умолчанию.  
+`[ @article_resolver = ] 'article_resolver'` Указывает понятное имя регистрируемого пользовательского бизнес-логики. *article_resolver* — **nvarchar(255)** , не имеет значения по умолчанию.  
   
-`[ @resolver_clsid = ] 'resolver_clsid'` Указывает значение идентификатора CLSID объекта COM, что регистрируется. Пользовательская бизнес-логика *resolver_clsid* — **nvarchar(50)**, значение по умолчанию NULL. Значение этого аргумента должно быть равным допустимому идентификатору CLSID или NULL (в случае регистрации сборки обработчиков бизнес-логики).  
+`[ @resolver_clsid = ] 'resolver_clsid'` Указывает значение идентификатора CLSID объекта COM, что регистрируется. Пользовательская бизнес-логика *resolver_clsid* — **nvarchar(50)** , значение по умолчанию NULL. Значение этого аргумента должно быть равным допустимому идентификатору CLSID или NULL (в случае регистрации сборки обработчиков бизнес-логики).  
   
-`[ @is_dotnet_assembly = ] 'is_dotnet_assembly'` Указывает тип пользовательской бизнес-логики регистрируется. *is_dotnet_assembly* — **nvarchar(50)**, значение по умолчанию FALSE. **значение true,** указывает, что регистрируемая пользовательских бизнес-логика обработчика бизнес-логики сборкой. **false** означает, что COM-компонента.  
+`[ @is_dotnet_assembly = ] 'is_dotnet_assembly'` Указывает тип пользовательской бизнес-логики регистрируется. *is_dotnet_assembly* — **nvarchar(50)** , значение по умолчанию FALSE. **значение true,** указывает, что регистрируемая пользовательских бизнес-логика обработчика бизнес-логики сборкой. **false** означает, что COM-компонента.  
   
-`[ @dotnet_assembly_name = ] 'dotnet_assembly_name'` — Имя сборки, реализующей обработчик бизнес-логики. *dotnet_assembly_name* — **nvarchar(255)**, со значением по умолчанию NULL. Если полный путь к сборке не описан в том же каталоге, что и исполняемый объект агента слияния, необходимо указать его в каталоге приложения, синхронно запускающего агент слияния, или в глобальном кэше сборок (GAC).  
+`[ @dotnet_assembly_name = ] 'dotnet_assembly_name'` — Имя сборки, реализующей обработчик бизнес-логики. *dotnet_assembly_name* — **nvarchar(255)** , со значением по умолчанию NULL. Если полный путь к сборке не описан в том же каталоге, что и исполняемый объект агента слияния, необходимо указать его в каталоге приложения, синхронно запускающего агент слияния, или в глобальном кэше сборок (GAC).  
   
-`[ @dotnet_class_name = ] 'dotnet_class_name'` Имя класса, переопределяющего <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> для реализации обработчика бизнес-логики. Следует указать имя в форме **пространствоИмен.ИмяКласса**. *dotnet_class_name* — **nvarchar(255)**, со значением по умолчанию NULL.  
+`[ @dotnet_class_name = ] 'dotnet_class_name'` Имя класса, переопределяющего <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> для реализации обработчика бизнес-логики. Следует указать имя в форме **пространствоИмен.ИмяКласса**. *dotnet_class_name* — **nvarchar(255)** , со значением по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  

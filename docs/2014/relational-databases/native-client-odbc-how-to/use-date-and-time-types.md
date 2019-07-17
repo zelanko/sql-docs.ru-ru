@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fc57a2c286c9870421a223ce6a14ef201bef0c3d
-ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50753451"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68205508"
 ---
 # <a name="use-date-and-time-types"></a>Использование типов данных даты и времени
   Этот образец показывает, как инициализировать структуры данных даты-времени, добавленные в [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Затем подготавливаются входные значения, привязываются параметры и выполняется запрос. Дополнительные сведения об использовании этих типов см. в разделе [время улучшения функций даты и &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  

@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 571ed8140e408577626c437d38080ccabb6c241f
-ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
+ms.openlocfilehash: 350b1eca94f8041a0a38105c650e1c0ec7e1f617
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56852959"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046284"
 ---
 # <a name="sysfngetauditfile-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ fn_get_audit_file ( file_pattern,
   
 ## <a name="arguments"></a>Аргументы  
  *file_pattern*  
- Указывает каталог или путь и имя файла для файла аудита, который предстоит прочитать. Тип — **nvarchar(260)**. 
+ Указывает каталог или путь и имя файла для файла аудита, который предстоит прочитать. Тип — **nvarchar(260)** . 
  
  - **SQL Server**:
     
@@ -70,7 +69,7 @@ fn_get_audit_file ( file_pattern,
 >  При передаче пути без имени файла сформируется ошибка.  
   
  *initial_file_name*  
- Указывает путь и имя файла для определенного файла в наборе файлов аудита, из которого предстоит начать чтение записей аудита. Тип — **nvarchar(260)**.  
+ Указывает путь и имя файла для определенного файла в наборе файлов аудита, из которого предстоит начать чтение записей аудита. Тип — **nvarchar(260)** .  
   
 > [!NOTE]  
 >  *Параметров initial_file_name* аргумент должен содержать допустимые записи или должен содержать значение по умолчанию | Значение NULL.  
@@ -84,13 +83,13 @@ fn_get_audit_file ( file_pattern,
 ## <a name="tables-returned"></a>Возвращаемые таблицы  
  В следующей таблице описано содержимое файла аудита, которое может возвращаться этой функцией.  
   
-| Имя столбца | Тип | Описание |  
+| Имя столбца | Type | Описание |  
 |-------------|------|-------------|  
 | action_id | **varchar(4)** | Идентификатор действия. Не допускает значения NULL. |  
 | additional_information | **nvarchar(4000)** | Уникальные сведения, применимые только к одиночному событию, возвращаются в формате XML. Немногие действия, доступные для аудита, содержат сведения этого вида.<br /><br /> Для действий, имеющих связанный с ними стек TSQL, отображается один уровень стека TSQL в формате XML. Используется следующий формат XML:<br /><br /> `<tsql_stack><frame nest_level = '%u' database_name = '%.*s' schema_name = '%.*s' object_name = '%.*s' /></tsql_stack>`<br /><br /> Параметр «frame nest_level» указывает текущий уровень вложенности кадра. Имя модуля состоит из трех частей (имя базы данных database_name, имя схемы schema_name и имя объекта object_name).  Имя модуля будут анализироваться для экранирования недопустимый xml символы, такие как `'\<'`, `'>'`, `'/'`, `'_x'`. Они будут экранируются как `_xHHHH\_`. Здесь HHHH обозначает четырехразрядный шестнадцатеричный код символа в UCS-2.<br /><br /> Допускает значение NULL. Возвращает NULL, если событие не сообщает дополнительных сведений. |
 | affected_rows | **bigint** | **Область применения**: Только база данных Azure SQL<br /><br /> Число строк, затронутых при выполненной инструкции. |  
 | application_name | **nvarchar(128)** | **Область применения**: Azure SQL DB и экземпляр SQL Server (начиная с 2017)<br /><br /> Имя клиентского приложения, для которого выполнена инструкцию, которая вызвала событие аудита |  
-| audit_file_offset | **bigint** | **Aplies для**: только SQL Server<br /><br /> Смещение буфера в файле, который содержит запись аудита. Не допускает значение NULL. |  
+| audit_file_offset | **bigint** | **Aplies для**: Только SQL Server<br /><br /> Смещение буфера в файле, который содержит запись аудита. Не допускает значение NULL. |  
 | audit_schema_version | **int** | Всегда имеет значение 1 |  
 | class_type | **varchar(2)** | Тип доступной для аудита сущности, для которой проводится аудит. Не допускает значение NULL. |  
 | client_ip | **nvarchar(128)** | **Область применения**: Azure SQL DB и экземпляр SQL Server (начиная с 2017)<br /><br />    Исходный IP-адрес клиентского приложения |  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c96a6c5e-f3ca-4c1e-b64b-0d8ef6986af8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d34b13931151e5b4490cd64292d66ae38756c125
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 7616401e8dcc9461d5eb3c7d67aedccf3a8c7af9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534947"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68095885"
 ---
 # <a name="spunbindefault-transact-sql"></a>Хранимая процедура sp_unbindefault (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,14 +43,14 @@ sp_unbindefault [ @objname = ] 'object_name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @objname = ] 'object_name'` — Имя таблицы и столбца или псевдонима типа данных, из которого по умолчанию используется отменяется. *object_name* — **nvarchar(776)**, не имеет значения по умолчанию. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пытается вычислить по идентификаторам, состоящим из двух частей, сначала имена столбцов, а затем псевдонимы типов данных.  
+`[ @objname = ] 'object_name'` — Имя таблицы и столбца или псевдонима типа данных, из которого по умолчанию используется отменяется. *object_name* — **nvarchar(776)** , не имеет значения по умолчанию. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пытается вычислить по идентификаторам, состоящим из двух частей, сначала имена столбцов, а затем псевдонимы типов данных.  
   
  При отмене привязки для псевдонима типа данных привязка также отменяется для всех столбцов этого типа данных, имеющих такое же значение по умолчанию. Столбцы с этим типом данных, имеющие непосредственную привязку значений по умолчанию, не затрагиваются.  
   
 > [!NOTE]  
 >  *object_name* может содержать квадратные скобки **[]** качестве символов идентификатора с разделителем. Дополнительные сведения см. в разделе [Идентификаторы баз данных](../../relational-databases/databases/database-identifiers.md).  
   
-`[ @futureonly = ] 'futureonly_flag'` Используется только в том случае, при отмене привязки значения по умолчанию для псевдонима типа данных. *аргумента futureonly_flag* — **varchar(15)**, значение по умолчанию NULL. Когда *аргумента futureonly_flag* — **futureonly**, существующие столбцы типа данных не теряют заданного по умолчанию.  
+`[ @futureonly = ] 'futureonly_flag'` Используется только в том случае, при отмене привязки значения по умолчанию для псевдонима типа данных. *аргумента futureonly_flag* — **varchar(15)** , значение по умолчанию NULL. Когда *аргумента futureonly_flag* — **futureonly**, существующие столбцы типа данных не теряют заданного по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  

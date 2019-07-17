@@ -13,16 +13,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e2881a2a118306f9d567236516f05bb29ad2d60a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370536"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68186574"
 ---
 # <a name="lesson-3-using-the-dta-command-prompt-utility"></a>Урок 3. Использование программы командной строки dta
   Программа командной строки **dta** расширяет функциональные возможности помощника по настройке ядра СУБД.  
   
- Применяя XML-схему помощника по настройке ядра СУБД, пользователь может создавать входные файлы данной программы с помощью удобных для себя средств XML. Эта схема устанавливается вместе со службами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и находится по следующему адресу: C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd.  
+ Применяя XML-схему помощника по настройке ядра СУБД, пользователь может создавать входные файлы данной программы с помощью удобных для себя средств XML. Эта схема устанавливается при установке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и может быть найдено на: C:\Program файлы (x86) \Microsoft SQL Server\110\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd.  
   
  XML-схема помощника по настройке ядра СУБД также доступна на [веб-сайте корпорации Майкрософт](https://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409).  
   

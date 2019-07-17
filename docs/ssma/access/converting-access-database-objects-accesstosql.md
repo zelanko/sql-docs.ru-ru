@@ -29,13 +29,12 @@ helpviewer_keywords:
 ms.assetid: e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: c4bb3d1b6fdc57e1251e9c8ca39f0c7437ffb126
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 56c55dbc5df61bfdb9013e505335af16fccbeecd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63139030"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006629"
 ---
 # <a name="converting-access-database-objects-accesstosql"></a>Преобразование объектов базы данных Access (AccessToSQL)
 После добавления базы данных Access и подключены к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure, SSMA отображает метаданные для доступа и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или объекты базы данных SQL Azure. Теперь Выбор объектов базы данных Access и затем преобразовать схемы в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или схем SQL Azure.  

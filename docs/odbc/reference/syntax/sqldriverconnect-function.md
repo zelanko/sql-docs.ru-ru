@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: e299be1d-5c74-4ede-b6a3-430eb189134f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 225b882a6c48900e9a15a23e4073910315848985
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9528280514be2eb2424b15a39ded3206aaca112f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537643"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104698"
 ---
 # <a name="sqldriverconnect-function"></a>Функция SQLDriverConnect
 **Соответствие стандартам**  
@@ -145,9 +144,9 @@ SQLRETURN SQLDriverConnect(
 ## <a name="comments"></a>Комментарии  
  Строка подключения имеет следующий синтаксис:  
   
- *connection-string* ::= *empty-string*[;] &#124; *attribute*[;] &#124; *attribute*; *connection-string*  
+ *Строка подключения* :: = *пустой строкой*[;] &#124; *атрибут*[;] &#124; *атрибут*; *строки подключения*  
   
- *empty-string* ::=*attribute* ::= *attribute-keyword*=*attribute-value* &#124; DRIVER=[{]*attribute-value*[}]  
+ *пустой строкой* :: =*атрибут* :: = *ключевым словом атрибутов*=*значение атрибута* &#124; ДРАЙВЕР = [{}] *значение атрибута*[}]  
   
  *attribute-keyword* ::= DSN &#124; UID &#124; PWD &#124; *driver-defined-attribute-keyword*  
   

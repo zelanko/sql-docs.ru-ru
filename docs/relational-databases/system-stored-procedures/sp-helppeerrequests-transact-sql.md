@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 37bd503e-46c4-47c6-996e-be7ffe636fe8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9a51015d8c1e6e6df7f23f32fc7febf7fe9e429f
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 5b9e2a370c9acc9c22dac7e5e60ceb10e08e46ba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537166"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137633"
 ---
 # <a name="sphelppeerrequests-transact-sql"></a>sp_helppeerrequests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ sp_helppeerrequests [ @publication = ] 'publication'
 ## <a name="arguments"></a>Аргументы  
 `[ @publication = ] 'publication'` — Имя публикации в топологии peer-to-peer, для которой были отправлены запросы состояния. *Публикация* — **sysname**, не имеет значения по умолчанию.  
   
-`[ @description = ] 'description'` Значение, которое может использоваться для идентификации запросов состояния, позволяющий позволяет фильтровать возвращенные ответы на основе пользовательской информации, предоставленной при вызове [sp_requestpeerresponse &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md). *Описание* — **nvarchar(4000)**, значение по умолчанию **%**. По умолчанию возвращается информация обо всех запросах состояния публикации. Этот параметр используется для возврата только тех запросов состояния с описанием соответствует значению аргумента в *описание*, где символьных строк сопоставляются с помощью [как &#40;Transact-SQL&#41; ](../../t-sql/language-elements/like-transact-sql.md)предложение.  
+`[ @description = ] 'description'` Значение, которое может использоваться для идентификации запросов состояния, позволяющий позволяет фильтровать возвращенные ответы на основе пользовательской информации, предоставленной при вызове [sp_requestpeerresponse &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md). *Описание* — **nvarchar(4000)** , значение по умолчанию **%** . По умолчанию возвращается информация обо всех запросах состояния публикации. Этот параметр используется для возврата только тех запросов состояния с описанием соответствует значению аргумента в *описание*, где символьных строк сопоставляются с помощью [как &#40;Transact-SQL&#41; ](../../t-sql/language-elements/like-transact-sql.md)предложение.  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
@@ -50,7 +49,7 @@ sp_helppeerrequests [ @publication = ] 'publication'
 |**идентификатор**|**int**|Идентификатор запроса.|  
 |**публикации**|**sysname**|Имя публикации, запрос состояния которой был отправлен.|  
 |**sent_date**|**datetime**|Дата и время отправления запроса состояния.|  
-|**Описание**|**nvarchar(4000)**|Пользовательская информация, которую можно использовать для идентификации запросов состояния.|  
+|**description**|**nvarchar(4000)**|Пользовательская информация, которую можно использовать для идентификации запросов состояния.|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  

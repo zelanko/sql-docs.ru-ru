@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 5d944b99-b097-491b-8cbd-b0e42b459ec0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3132b45713b3493aa2e82a48123e5f3693e6e8dc
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 023ee54178c5f303797c6db83cc646353304b051
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543824"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090275"
 ---
 # <a name="sysdmxeobjects-transact-sql"></a>Динамическое административное представление sys.dm_xe_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ ms.locfileid: "52543824"
  |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |name|**nvarchar(60)**|Имя объекта. имя является уникальным в пределах пакета для конкретного типа объектов. Не допускает значение NULL.|  
-|object_type|**nvarchar(60)**|Тип объекта. object_type является одним из следующих:<br /><br /> event<br /><br /> действие<br /><br /> target;<br /><br /> pred_source;<br /><br /> pred_compare;<br /><br /> Тип<br /><br /> Не допускает значение NULL.|  
+|object_type|**nvarchar(60)**|Тип объекта. object_type является одним из следующих:<br /><br /> event<br /><br /> действие<br /><br /> target;<br /><br /> pred_source;<br /><br /> pred_compare;<br /><br /> type<br /><br /> Не допускает значение NULL.|  
 |package_guid|**uniqueidentifier**|Идентификатор GUID пакета, который представляет это действие. Обеспечивает связь «многие к одному» со столбцом sys.dm_xe_packages.package_id. Не допускает значение NULL.|  
 |description|**nvarchar(256)**|Описание действия. Описание задается автором пакета. Не допускает значение NULL.|  
 |capabilities|**int**|Битовая карта, описывающая возможности объекта. Допускает значение NULL.|  

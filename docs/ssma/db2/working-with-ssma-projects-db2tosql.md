@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 07abef8a-28e8-4a66-927c-c9a5b8c938ef
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: d3ccc9fe24d770fa64b2bef86feabab0dd2e7fba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d2c585764e5bb7fffa55624054aecc7a4c589bbe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63244659"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086179"
 ---
 # <a name="working-with-ssma-projects-db2tosql"></a>Работа с проектами SSMA (DB2ToSQL)
 Для переноса баз данных DB2 в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], создании проекта SSMA. Проект — это файл, который содержит следующие сведения:  

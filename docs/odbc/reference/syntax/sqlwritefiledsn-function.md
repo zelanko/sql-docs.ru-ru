@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9e18f56f-1061-416b-83d4-ffeec42ab5a9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 58002ec0e8ceacae49f4d54be5d3406ea3014d59
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8b1ce34074a2326d17a199537b308a9a670d8163
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536778"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039429"
 ---
 # <a name="sqlwritefiledsn-function"></a>Функция SQLWriteFileDSN
 **Соответствие стандартам**  
@@ -62,7 +61,7 @@ BOOL SQLWriteFileDSN(
  Функция возвращает значение TRUE при успешном выполнении, FALSE в случае неудачи.  
   
 ## <a name="diagnostics"></a>Диагностика  
- Когда **SQLWriteFileDSN** возвращает значение FALSE, связанным  *\*pfErrorCode* значение можно получить, вызвав **SQLInstallerError**. В следующей таблице перечислены  *\*pfErrorCode* значения, которые могут быть возвращены **SQLInstallerError** и объясняется каждый из них в контексте этой функции.  
+ Когда **SQLWriteFileDSN** возвращает значение FALSE, связанным  *\*pfErrorCode* значение можно получить, вызвав **SQLInstallerError**. В следующей таблице перечислены *\*pfErrorCode* значения, которые могут быть возвращены **SQLInstallerError** и объясняется каждый из них в контексте этой функции.  
   
 |*\*pfErrorCode*|Ошибка|Описание|  
 |---------------------|-----------|-----------------|  

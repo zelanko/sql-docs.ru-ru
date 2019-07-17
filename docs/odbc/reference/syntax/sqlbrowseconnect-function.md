@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: b7f1be66-e6c7-4790-88ec-62b7662103c0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3af78971a17035091ab8a72bf0c9a8fe90250dd3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2960c42690a9528763321bc882bb788b437cb66a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65538189"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036200"
 ---
 # <a name="sqlbrowseconnect-function"></a>Функция SQLBrowseConnect
 **Соответствие стандартам**  
@@ -70,7 +69,7 @@ SQLRETURN SQLBrowseConnect(
  [Выход] Общее число символов (исключая конечное значение null), доступных для возврата в \* *OutConnectionString*. Если количество символов, доступных для возврата больше или равно *BufferLength*, строку подключения в \* *OutConnectionString* усекается до  *BufferLength* минус длина знак завершения null.  
   
 ## <a name="returns"></a>Возвращает  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NEED_DATA, SQL_ERROR, SQL_INVALID_HANDLE, or SQL_STILL_EXECUTING.  
+ Значение SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NEED_DATA, значение SQL_ERROR, SQL_INVALID_HANDLE или SQL_STILL_EXECUTING.  
   
 ## <a name="diagnostics"></a>Диагностика  
  Когда **SQLBrowseConnect** возвращает значение SQL_ERROR, SQL_SUCCESS_WITH_INFO или SQL_NEED_DATA, соответствующее значение SQLSTATE можно получить, вызвав **SQLGetDiagRec** с *HandleType* значение SQL_HANDLE_STMT и *дескриптор ConnectionHandle*. В следующей таблице перечислены значения SQLSTATE, обычно возвращаемые **SQLBrowseConnect** и объясняется каждый из них в контексте этой функции; описания SQLSTATE, возвращаемых диспетчером драйверов предшествует обозначение «(DM)». Возвращается связанный с каждого значения SQLSTATE значение SQL_ERROR, если не указано иное.  

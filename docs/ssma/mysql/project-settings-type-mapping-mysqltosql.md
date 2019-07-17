@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 136fdf6d-657f-447b-af41-49bbc6e0e93e
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: e0a11a0b49589c3763b5af67623c9e819038c217
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: beb82f2fd894af71bb6f291dcc6f86a995f8dd85
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63231821"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138330"
 ---
 # <a name="project-settings-type-mapping-mysqltosql"></a>Параметры проекта (сопоставление типов) (MySQLToSQL)
 Параметры сопоставления типов проекта позволяет настроить сопоставления типов по умолчанию для проекта SSMA.  
@@ -137,7 +136,7 @@ ms.locfileid: "63231821"
 |nvarchar|nvarchar [1]|  
 |nvarchar [от 0 до 1]|nvarchar [1]|  
 |nvarchar [2..4000]|nvarchar [*]|  
-|nvarchar[4001..*]|nvarchar(max)|  
+|nvarchar [4001.. *]|nvarchar(max)|  
 |real|число с плавающей запятой [53]|  
 |реальные [*.. 255] [\*.. 30]|числовые [*] [\*]|  
 |последовательный|BIGINT|  

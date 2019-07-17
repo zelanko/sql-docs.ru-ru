@@ -1,5 +1,5 @@
 ---
-title: Просмотр атрибутов в конструкторе измерений | Документы Microsoft
+title: Просмотр атрибутов в конструкторе измерений | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c8e0535a1df60b4a4e1550e2b49a02e7a60e2c04
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022961"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68179386"
 ---
-# <a name="attribute-properties---view-attributes-in-dimension-designer"></a>Свойства атрибута — Просмотр атрибутов в конструкторе измерений
+# <a name="attribute-properties---view-attributes-in-dimension-designer"></a>Свойства атрибута — просмотр атрибутов в конструкторе измерений
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Атрибуты создаются на объектах измерений. Просматривать и настраивать атрибуты можно с помощью конструктора измерений в службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Панель **Атрибуты** на вкладке **Структура измерения** конструктора измерений содержит список атрибутов в измерении. Эта панель используется для добавления, удаления или настройки атрибутов. Можно также выбрать атрибуты и использовать их как уровень в новой иерархии или добавить как уровень в существующую иерархию.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "34022961"
 |Значок|Использование атрибута|  
 |----------|---------------------|  
 |![Значок атрибута](../../analysis-services/multidimensional-models/media/as-icon-attribute.gif "значок атрибута")|Regular или AccountType|  
-|![Значок ключевого атрибута](../../analysis-services/multidimensional-models/media/as-icon-key-attribute.gif "значок ключа атрибута")|Key|  
+|![Значок ключевого атрибута](../../analysis-services/multidimensional-models/media/as-icon-key-attribute.gif "значок ключа атрибута")|Ключ|  
 |![Значок родительского атрибута](../../analysis-services/multidimensional-models/media/as-icon-parent-attribute.gif "значок родительского атрибута")|Parent|  
   
 ## <a name="see-also"></a>См. также  

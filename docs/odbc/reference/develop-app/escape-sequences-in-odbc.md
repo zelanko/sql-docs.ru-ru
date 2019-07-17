@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: cf229f21-6c38-4b5b-aca8-f1be0dfeb3d0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3866a45a2b55a5372769eacc0bb6b0eb1e5c088f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 17183a7eacdc5348eea0ddcd7aee4cc493249e77
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62942977"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051120"
 ---
 # <a name="escape-sequences-in-odbc"></a>Escape-последовательности в ODBC
 Число языковых функций, таких как внешние соединения и вызовы скалярных функций, обычно реализуются СУБД. Тем не менее синтаксисов для этих функций, как правило, должна соответствовать конкретной СУБД, в том случае, даже в том случае, если стандартный синтаксис определяются различные комитетами стандартов. По этой причине ODBC определяет управляющие последовательности, которые содержат стандартный синтаксис для следующих возможностей языка:  

@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 4ab1d48a-d57a-4e76-a08c-9627eeaf4588
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2bc916f827fb190142dd07b56485b8a9d6005d94
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cd94f90a823ba57910809a54aed470ddd0bb0010
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775262"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108861"
 ---
 # <a name="syssystemcolumns-transact-sql"></a>sys.system_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,9 +39,9 @@ ms.locfileid: "47775262"
 |**column_id**|**int**|Идентификатор столбца. Уникален в пределах объекта.<br /><br /> Идентификаторы столбца могут быть непоследовательными.|  
 |**system_type_id**|**tinyint**|Идентификатор системного типа столбца.|  
 |**user_type_id**|**int**|Идентификатор определенного пользователем типа столбца.<br /><br /> Чтобы вернуть имя типа, присоедините к [sys.types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) представления по этому столбцу каталога.|  
-|**max_length**|**smallint**|Максимальная ширина столбца (в байтах).<br /><br /> -1 = тип данных столбца — **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, или **xml**.<br /><br /> Для **текст** столбцы, **max_length** значение будет равно 16 или значение, заданное параметром **sp_tableoption** «text in row».|  
-|**Точность**|**tinyint**|Точность столбца, если он является числовым; в противном случае — 0.|  
-|**Масштаб**|**tinyint**|Масштаб столбца, если он является числовым; в противном случае — 0.|  
+|**max_length**|**smallint**|Максимальная ширина столбца (в байтах).<br /><br /> -1 = тип данных столбца — **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , или **xml**.<br /><br /> Для **текст** столбцы, **max_length** значение будет равно 16 или значение, заданное параметром **sp_tableoption** «text in row».|  
+|**precision**|**tinyint**|Точность столбца, если он является числовым; в противном случае — 0.|  
+|**масштаб**|**tinyint**|Масштаб столбца, если он является числовым; в противном случае — 0.|  
 |**collation_name**|**sysname**|Имя параметров сортировки столбца, если он символьный; в противном случае — значение NULL.|  
 |**is_nullable**|**bit**|1 = столбец может принимать значение NULL.|  
 |**is_ansi_padded**|**bit**|1 = столбец использует поведение ANSI_PADDING ON, если имеет тип данных character, binary или variant.<br /><br /> 0 = столбец имеет тип данных, отличный от character, binary или variant.|  

@@ -15,25 +15,24 @@ helpviewer_keywords:
 ms.assetid: b4d802ef-b199-4e64-b7a5-6f2b3e5e2c80
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b15aa278e2fe38afe93f5628433a6c8f4b41cd8e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8f5523c54286ed2e7cc554745dc269599115793e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63198316"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094169"
 ---
 # <a name="driver-specification-subkeys"></a>Подразделы спецификаций драйверов
 Каждый драйвер, перечисленных в подразделе драйверы ODBC содержит подраздел свои собственные. Этот подраздел содержит имя, совпадающее с именем соответствующего значения в подразделе драйверы ODBC. Значения в этом подразделе перечислены полные пути драйвера и установка драйверов GPU библиотеки DLL, значения ключевых слов драйвера, возвращенный **SQLDrivers**и счетчик использования. Как показано в следующей таблице, используются форматы значений.  
   
-|Имя|Тип данных|Данные|  
+|Name|Тип данных|Data|  
 |----------|---------------|----------|  
 |APILevel|REG_SZ|**0** &#124; **1** &#124; **2**|  
-|ConnectFunctions|REG_SZ|{**Y**&#124;**N**}{**Y**&#124;**N**}{**Y**&#124;**N**}|  
+|ConnectFunctions|REG_SZ|{**Y**&#124;**N**} {**Y**&#124;**N**} {**Y**&#124;**N**}|  
 |CreateDSN|REG_SZ|*Описание драйвера*|  
 |Драйвер|REG_SZ|*путь к библиотеке DLL драйвера*|  
 |DriverODBCVer|REG_SZ|*nn.nn*|  
-|FileExtns|REG_SZ|**\*.** *файл extension1*[ **,\*.** *file-extension2*]...|  
+|FileExtns|REG_SZ|**\*.** *файл extension1*[ **,\*.** *файл extension2*]...|  
 |FileUsage|REG_SZ|**0** &#124; **1** &#124; **2**|  
 |Установка|REG_SZ|*путь к библиотеке DLL программы установки*|  
 |SQLLevel|REG_SZ|**0** &#124; **1** &#124; **2**|  

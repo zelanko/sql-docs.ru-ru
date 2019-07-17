@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 022dfbc0-8d18-4c35-8a28-d9eb16063188
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c5d420bc68c4704705018a37c6459181481b1d7d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6c8d2d567f899c30dfe91cd35445956cd6214da9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63297465"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68125549"
 ---
 # <a name="sqlsetparam-mapping"></a>Сопоставление SQLSetParam
 **SQLSetParam** по-прежнему должны быть сопоставлены в верхней части **SQLBindParameter** как в ODBC 2. *x*. Несмотря на то, что он аналогичен **SQLBindParam**, диспетчер драйверов не соответствует **SQLSetParam** для **SQLBindParam**. Это обусловлено тем, некоторые существующие ODBC 2. *x* драйверы использовать специальное значение *BufferLength* (SQL_SETPARAM_VALUE_MAX), создает диспетчер драйверов, если он был сопоставлен **SQLSetParam** на основе  **SQLBindParameter** для определения того, если он вызывается по 1. *x* приложений ODBC.  

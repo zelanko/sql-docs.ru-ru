@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: 395245ba-0372-43ec-b9a4-a29410d85a6d
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6f0d131422aa9d901e6a92cb5c9e573a076b1e71
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d9a180c0ead9ece1345c011108249178fd36e837
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63014430"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68131452"
 ---
 # <a name="sqlgetdiagfield"></a>SQLGetDiagField
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "63014430"
   
  Драйвер ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сообщает следующие дополнительные коды динамических функций, содержащие последнюю попытку выполнения инструкции [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Код динамической функции возвращается в заголовке (запись 0) диагностического набора записей и доступен при каждом выполнении (успешном или нет).  
   
-|Код динамической функции|`Source`|  
+|Код динамической функции|Source|  
 |---------------------------|------------|  
 |SQL_DIAG_DFC_SS_ALTER_DATABASE|ALTER DATABASE, инструкция|  
 |SQL_DIAG_DFC_SS_CHECKPOINT|CHECKPOINT, инструкция|  

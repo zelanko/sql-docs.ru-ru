@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 388d400160e3fa7b3240c7a9c014bcf36ae25f3a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816678"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68212096"
 ---
 # <a name="specify-a-merge-article-resolver"></a>Определение сопоставителя статей публикации слиянием
   В этом разделе описывается определение арбитра статей публикации слиянием в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -57,7 +57,7 @@ ms.locfileid: "52816678"
     -   IIS-сервер [!INCLUDE[msCoName](../../../includes/msconame-md.md)] для подписки по запросу, которая использует веб-синхронизацию  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
- После регистрации сопоставителя дайте указание статье использовать сопоставитель на вкладке **Сопоставитель** диалогового окна **Свойства статьи — \<статья>**, которое доступно в мастере создания публикаций и в диалоговом окне **Свойства публикации — \<публикация>**. Дополнительные сведения об использовании мастера и доступе к этому диалоговому окну см. в статьях [Создание публикации](create-a-publication.md) и [Просмотр и изменение свойств публикации](view-and-modify-publication-properties.md).  
+ После регистрации сопоставителя дайте указание статье использовать сопоставитель на вкладке **Сопоставитель** диалогового окна **Свойства статьи — \<статья>** , которое доступно в мастере создания публикаций и в диалоговом окне **Свойства публикации — \<публикация>** . Дополнительные сведения об использовании мастера и доступе к этому диалоговому окну см. в статьях [Создание публикации](create-a-publication.md) и [Просмотр и изменение свойств публикации](view-and-modify-publication-properties.md).  
   
 #### <a name="to-specify-a-resolver"></a>Указание сопоставителя  
   
@@ -67,7 +67,7 @@ ms.locfileid: "52816678"
   
 3.  На странице **Свойства статьи — \<статья>** щелкните вкладку **Сопоставитель**.  
   
-4.  Выберите **Использовать пользовательский сопоставитель (зарегистрированный на распространителе):**, затем щелкните в списке сопоставитель.  
+4.  Выберите **Использовать пользовательский сопоставитель (зарегистрированный на распространителе):** , затем щелкните в списке сопоставитель.  
   
 5.  Если сопоставитель запрашивает входные данные (такие, как имя столбца), укажите их в текстовом поле **Введите данные, необходимые сопоставителю** .  
   
@@ -87,10 +87,10 @@ ms.locfileid: "52816678"
   
 2.  Чтобы определить, зарегистрирован ли нужный сопоставитель, выполните хранимую процедуру [sp_enumcustomresolvers (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql) на издателе для любой базы данных. Будет выведено описание пользовательского сопоставителя, а также идентификатор класса (CLSID) для каждого сопоставителя на основе COM, зарегистрированного на распространителе, или сведения об управляемой сборке для каждого обработчика бизнес-логики, зарегистрированного на распространителе.  
   
-3.  Если нужный пользовательский сопоставитель еще не зарегистрирован, выполните хранимую процедуру [sp_registercustomresolver (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql) на распространителе. Укажите имя для сопоставителя в параметре **@article_resolver**; для обработчика бизнес-логики это будет понятное имя сборки. Для сопоставителей на основе COM укажите идентификатор CLSID DLL-библиотеки для **@resolver_clsid**, а для обработчика бизнес-логики, укажите значение `true` для **@is_dotnet_assembly**, имя сборки для **@dotnet_assembly_name**и полное имя класса, переопределяющего <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> для **@dotnet_class_name**.  
+3.  Если нужный пользовательский сопоставитель еще не зарегистрирован, выполните хранимую процедуру [sp_registercustomresolver (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql) на распространителе. Укажите имя для сопоставителя в параметре **@article_resolver** ; для обработчика бизнес-логики это будет понятное имя сборки. Для сопоставителей на основе COM укажите идентификатор CLSID DLL-библиотеки для **@resolver_clsid** , а для обработчика бизнес-логики, укажите значение `true` для **@is_dotnet_assembly** , имя сборки для **@dotnet_assembly_name** и полное имя класса, переопределяющего <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> для **@dotnet_class_name** .  
   
     > [!NOTE]  
-    >  Если сборка обработчика бизнес-логики развернута не в том же каталоге, что и исполняемый объект агента слияния, то в каталоге приложения, синхронно запускающего агент слияния, или в глобальном кэше сборок (GAC) необходимо указать полный путь, включая имя сборки, в параметра **@dotnet_assembly_name**.  
+    >  Если сборка обработчика бизнес-логики развернута не в том же каталоге, что и исполняемый объект агента слияния, то в каталоге приложения, синхронно запускающего агент слияния, или в глобальном кэше сборок (GAC) необходимо указать полный путь, включая имя сборки, в параметра **@dotnet_assembly_name** .  
   
 4.  Если сопоставитель является сопоставителем на основе COM, сделайте следующее.  
   
@@ -124,15 +124,15 @@ ms.locfileid: "52816678"
   
 2.  На издателе выполните хранимую процедуру [sp_enumcustomresolvers (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql) и запомните имя нужного пользовательского сопоставителя в поле **value** результирующего набора.  
   
-3.  В базе данных публикации на издателе выполните процедуру [sp_changemergearticle (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Укажите значение для **article_resolver**, включая полный путь к обработчику бизнес-логики, в параметре **@property**, и имя нужного пользовательского сопоставителя из шага 2 в параметре **@value**.  
+3.  В базе данных публикации на издателе выполните процедуру [sp_changemergearticle (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Укажите значение для **article_resolver**, включая полный путь к обработчику бизнес-логики, в параметре **@property** , и имя нужного пользовательского сопоставителя из шага 2 в параметре **@value** .  
   
-4.  Чтобы изменить какие-либо необходимые входные данные для пользовательского сопоставителя, выполните хранимую процедуру [sp_changemergearticle (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) еще раз. Укажите значение для **resolver_info** в параметре **@property** и любые необходимые входные данные для пользовательского сопоставителя в параметре **@value**. Для нестандартных сопоставителей, основанных на хранимых процедурах, в параметре **@resolver_info** указывается имя хранимой процедуры. Дополнительные сведения о необходимых входных данных см. в статье о [сопоставителях на базе технологии Microsoft COM](../merge/advanced-merge-replication-conflict-com-based-resolvers.md).  
+4.  Чтобы изменить какие-либо необходимые входные данные для пользовательского сопоставителя, выполните хранимую процедуру [sp_changemergearticle (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) еще раз. Укажите значение для **resolver_info** в параметре **@property** и любые необходимые входные данные для пользовательского сопоставителя в параметре **@value** . Для нестандартных сопоставителей, основанных на хранимых процедурах, в параметре **@resolver_info** указывается имя хранимой процедуры. Дополнительные сведения о необходимых входных данных см. в статье о [сопоставителях на базе технологии Microsoft COM](../merge/advanced-merge-replication-conflict-com-based-resolvers.md).  
   
 #### <a name="to-unregister-a-custom-conflict-resolver"></a>Отмена регистрации пользовательского сопоставителя конфликтов  
   
 1.  На издателе выполните хранимую процедуру [sp_enumcustomresolvers (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql) и запомните имя пользовательского сопоставителя, которое нужно удалить, в поле **value** результирующего набора.  
   
-2.  Выполните процедуру [sp_unregistercustomresolver (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-unregistercustomresolver-transact-sql) на распространителе. Укажите полное имя пользовательского сопоставителя из шага 1 в параметре **@article_resolver**.  
+2.  Выполните процедуру [sp_unregistercustomresolver (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-unregistercustomresolver-transact-sql) на распространителе. Укажите полное имя пользовательского сопоставителя из шага 1 в параметре **@article_resolver** .  
   
 ###  <a name="TsqlExample"></a> Примеры (Transact-SQL)  
  В этом примере создается новая статья и указывается, что усредняющий сопоставитель конфликтов [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] при возникновении конфликта должен использоваться для вычисления среднего значения в столбце **UnitPrice** .  

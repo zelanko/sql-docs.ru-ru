@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b614db01d4128ec30d6d52260a781fffd69e8c8b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363816"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207021"
 ---
 # <a name="use-enhanced-date-and-time-features-ole-db"></a>Использование улучшенных функций даты и времени (OLE DB)
   В этом образце показывается, как использовать функции даты-времени, представленные в [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. В примере используется четыре новых типа даты и времени (`date`, **время**, `datetime2`, и `datetimeoffset`) для выполнения команд с параметрами и получения результирующих наборов строк.  

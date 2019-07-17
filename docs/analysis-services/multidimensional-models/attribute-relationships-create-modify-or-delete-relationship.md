@@ -1,5 +1,5 @@
 ---
-title: Создание, изменение или удаление связи атрибутов | Документы Microsoft
+title: Создание, изменение или удаление связи атрибутов | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3f209670d9d51e62e457d86507f1c2d11cc10fa2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027474"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209152"
 ---
-# <a name="attribute-relationships---create-modify-or-delete-relationship"></a>Атрибут связи - создание, изменение или удаление связи
+# <a name="attribute-relationships---create-modify-or-delete-relationship"></a>Связи атрибутов — создание, изменение или удаление связи атрибутов
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Связи атрибутов можно создавать, изменять и удалять с помощью вкладки **Связи атрибутов** конструктора измерений в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   

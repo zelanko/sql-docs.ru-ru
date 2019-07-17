@@ -1,5 +1,5 @@
 ---
-title: Определение именованных вычислений в представлении источника данных (службы Analysis Services) | Документы Microsoft
+title: Определение именованных вычислений в представлении источника данных (службы Analysis Services) | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8f0324dc3b2b2c5f250cb6c49a136a5fb7e2a06e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027001"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68178663"
 ---
 # <a name="define-named-calculations-in-a-data-source-view-analysis-services"></a>Определение именованных вычислений в представлении источника данных (службы Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -80,6 +80,6 @@ FROM
  При попытке удалить именованное вычисление приложение выдаст список объектов, определенных в проекте или базе данных, которые при удалении станут недействительными. Внимательно просмотрите список перед удалением вычисления.  
   
 ## <a name="see-also"></a>См. также  
- [Определение именованных запросов в представлении источника данных & #40; Службы Analysis Services & #41;](../../analysis-services/multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md)  
+ [Определение именованных запросов в представлении источника данных (службы Analysis Services)](../../analysis-services/multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md)  
   
   

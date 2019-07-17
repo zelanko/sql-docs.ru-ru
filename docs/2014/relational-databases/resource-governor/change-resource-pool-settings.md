@@ -14,18 +14,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6392c8211e073183b68d2d04e9c949317d6a33a9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763316"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68198943"
 ---
 # <a name="change-resource-pool-settings"></a>Изменение параметров пула ресурсов
   Можно изменить параметры пула ресурсов в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
--   **Перед началом работы**  [Ограничения](#LimitationsRestrictions), [разрешения](#Permissions)  
+-   **Перед началом:**  [ограничения](#LimitationsRestrictions), [разрешения](#Permissions)  
   
--   **Чтобы изменить параметры для пула ресурсов, с помощью:**  [SQL Server Management Studio](#ChgRPProp), [Transact-SQL](#ChgRPTSQL)  
+-   **Изменение параметров для пула ресурсов с использованием:**  [среды SQL Server Management Studio](#ChgRPProp), [Transact-SQL](#ChgRPTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   

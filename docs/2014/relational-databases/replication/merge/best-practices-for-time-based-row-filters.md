@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5df70271c281673c71fb378564f454f0822998ab
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52786146"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210714"
 ---
 # <a name="best-practices-for-time-based-row-filters"></a>Оптимальные методы для фильтров строк на основе времени
   Пользователям приложений часто требуется подмножество данных из таблицы, относящихся к определенному времени. Например, менеджеру по продажам могут понадобиться данные заказов за последнюю неделю, или планировщику событий требуются данные о событиях на следующей неделе. Во многих случаях приложения используют для этого запросы, содержащие функцию `GETDATE()`. Рассмотрим следующую инструкцию фильтра строк:  

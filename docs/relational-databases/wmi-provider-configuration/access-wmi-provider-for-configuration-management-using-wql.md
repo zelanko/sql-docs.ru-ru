@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 26499530-d93b-452b-bbe4-217ef1d11e68
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 21a18dc77a8ab1b714676cc299d26797ba0d41bd
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 2daaea77ecc69a6c3a011ce0ffdfd862f296b22a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51215489"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139429"
 ---
 # <a name="access-wmi-provider-for-configuration-management-using-wql"></a>производить доступ к поставщику WMI для управления конфигурацией с использованием WQL
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,6 +38,6 @@ ms.locfileid: "51215489"
   
 4.  Нажмите кнопку **запроса**. Введите запрос, возвращающий текущей службы, запущенные на локальном компьютере: **ВЫБЕРИТЕ \* из SqlService.** Нажмите кнопку **Применить**.  
   
-5.  Уточните запрос, добавив **ГДЕ ServiceName = «MSSQLSERVER»**.  
+5.  Уточните запрос, добавив **ГДЕ ServiceName = «MSSQLSERVER»** .  
   
   

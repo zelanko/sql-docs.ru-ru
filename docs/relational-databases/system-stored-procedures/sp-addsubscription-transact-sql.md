@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 61ddf287-1fa0-4c1a-8657-ced50cebf0e0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6a0064787eee6c3ac267b3ababcd9881e794ff2e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f2ca3505d952e1bffa68d23fe2de5b51c050640c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62998312"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096224"
 ---
 # <a name="spaddsubscription-transact-sql"></a>sp_addsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -85,10 +84,10 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @subscriber=] '*подписчика*"  
  Имя подписчика. *подписчик* — **sysname**, значение по умолчанию NULL.  
   
- [ @destination_db=] '*destination_db*'  
+ [ @destination_db=] '*destination_db*"  
  Имя целевой базы данных, в которую помещаются реплицированные данные. *destination_db* — **sysname**, значение по умолчанию NULL. Если задано значение NULL, *destination_db* присваивается имя базы данных публикации. Для издателей Oracle *destination_db* должен быть указан. Для отличных от подписчика SQL Server, укажите значение (назначение по умолчанию) для *destination_db*.  
   
- [ @sync_type=] '*sync_type*'  
+ [ @sync_type=] '*sync_type*"  
  Тип синхронизации подписки. *sync_type* — **nvarchar(255)** , и может принимать одно из следующих значений:  
   
 |Значение|Описание|  
@@ -110,13 +109,13 @@ sp_addsubscription [ @publication = ] 'publication'
 |active|Подписка инициализирована и готова к принятию изменений. Этот параметр задается, если значение *sync_type* имеет значение none, инициализации с помощью резервной копии или только поддержка репликации.|  
 |subscribed|Требуется инициализация подписки. Этот параметр задается, если значение *sync_type* выполняется автоматически.|  
   
- [ @subscription_type=] '*subscription_type*'  
+ [ @subscription_type=] '*subscription_type*"  
  Тип подписки. *subscription_type* — **nvarchar(4)** , значение по умолчанию push. Может принимать значения push или pull. Агенты распространителя принудительных подписок находятся на распространителе, а агенты распространителя подписок по запросу на подписчике. *subscription_type* может принимать значение pull для создания именованной подписки по запросу, известной издателю. Дополнительные сведения см. в статье [Подписка на публикации](../../relational-databases/replication/subscribe-to-publications.md).  
   
 > [!NOTE]  
 >  Анонимные подписки не нуждаются в использовании этой хранимой процедуры.  
   
- [ @update_mode=] '*update_mode*'  
+ [ @update_mode=] '*update_mode*"  
  — Это тип обновления. *update_mode* — **nvarchar(30)** , и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
@@ -135,7 +134,7 @@ sp_addsubscription [ @publication = ] 'publication'
 |Значение|Описание|  
 |-----------|-----------------|  
 |true|Агент распространителя не отправляет транзакции, изначально созданные у подписчика, обратно. Используется с двунаправленной репликацией транзакций. Дополнительные сведения см. в статье [Bidirectional Transactional Replication](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md).|  
-|false|Агент распространителя отправляет транзакции, изначально созданные у подписчика, обратно.|  
+|False|Агент распространителя отправляет транзакции, изначально созданные у подписчика, обратно.|  
 |NULL (по умолчанию)|Автоматически устанавливается значение true для подписчика [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и значение false для подписчика, не относящегося к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
  [ @frequency_type=] *frequency_type*  
@@ -202,10 +201,10 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @reserved=] '*зарезервированные*"  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ @enabled_for_syncmgr=] '*enabled_for_syncmgr*'  
+ [ @enabled_for_syncmgr=] '*enabled_for_syncmgr*"  
  Является ли подписку можно синхронизировать через [!INCLUDE[msCoName](../../includes/msconame-md.md)] диспетчера синхронизации Windows. *enabled_for_syncmgr* — **nvarchar(5)** , значение по умолчанию FALSE. Если это значение равно FALSE, подписка не регистрируется диспетчером синхронизации Windows. Если значение равно TRUE, подписка регистрируется диспетчером синхронизации Windows и может быть синхронизирована без запуска среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Не поддерживается для издателей Oracle.  
   
- [ @offloadagent= ] '*remote_agent_activation*'  
+ [ @offloadagent=] '*remote_agent_activation*"  
  Указывает на то, что агент может быть активирован удаленно. *remote_agent_activation* — **бит** значение по умолчанию 0.  
   
 > [!NOTE]  

@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 30f97f00-03d8-443a-9de9-9ec420b7699b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 244e8935a580a8febc483673d6d747b6cc4b7b1c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0a64db42ba04e864752559bb2d2b895625f2c9f5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659252"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122626"
 ---
 # <a name="sysfnmypermissions-transact-sql"></a>sys.fn_my_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,12 +46,12 @@ fn_my_permissions ( securable , 'securable_class' )
  Имя защищаемого объекта. Если защищаемым объектом является сам сервер или база данных, то этому аргументу должно быть присвоено значение NULL. Аргумент *securable* является скалярным выражением типа **sysname**. *защищаемый объект* может быть многочастным именем.  
   
  "*securable_class*"  
- Имя класса защищаемых объектов, для которого перечислены разрешения. *securable_class* — **sysname**. *securable_class* должно быть одно из следующих: РОЛИ приложения, сборки, АСИММЕТРИЧНЫЙ ключ, СЕРТИФИКАТ, КОНТРАКТ, базы данных, конечной ТОЧКИ, FULLTEXT CATALOG, входа, тип сообщения, объект, REMOTE SERVICE BINDING, РОЛИ, МАРШРУТА, СХЕМЫ, сервера, службы , СИММЕТРИЧНЫЙ КЛЮЧ, ТИП, ПОЛЬЗОВАТЕЛЬ, КОЛЛЕКЦИИ СХЕМ XML.  
+ Имя класса защищаемых объектов, для которого перечислены разрешения. *securable_class* — **sysname**. *securable_class* должно быть одно из следующих: РОЛИ ПРИЛОЖЕНИЯ, СБОРКИ, АСИММЕТРИЧНЫЙ КЛЮЧ, СЕРТИФИКАТ, КОНТРАКТА, БАЗЫ ДАННЫХ, КОНЕЧНОЙ ТОЧКИ, FULLTEXT CATALOG, ИМЯ ВХОДА, ТИП СООБЩЕНИЯ, ОБЪЕКТ, ПРИВЯЗКИ УДАЛЕННОЙ СЛУЖБЫ, РОЛИ, МАРШРУТА, СХЕМЫ, SERVER, СЛУЖБЫ, СИММЕТРИЧНЫЙ КЛЮЧ, ТИП, ПОЛЬЗОВАТЕЛЯ, КОЛЛЕКЦИИ XML-СХЕМ.  
   
 ## <a name="columns-returned"></a>Возвращаемые столбцы  
  В следующей таблице перечислены столбцы, **fn_my_permissions** возвращает. Каждая возвращаемая строка описывает разрешение относительно защищаемого объекта в текущем контексте безопасности. Возвращает NULL в случае неудачного завершения запроса.  
   
-|Имя столбца|Тип|Описание|  
+|Имя столбца|Type|Описание|  
 |-----------------|----------|-----------------|  
 |entity_name|**sysname**|Имя защищаемого объекта, на который предоставлены перечисленные разрешения.|  
 |subentity_name|**sysname**|Имя столбца, если у защищаемого объекта есть столбцы, в противном случае — NULL.|  

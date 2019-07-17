@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: cdeffb4a-f344-4abe-97f3-be2ede1c8e59
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6e3d83f0aa27641c9dde164f51319a0e78d456ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 88053620fa413c50a8faff4cc47cbbe1457249f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62653252"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073833"
 ---
 # <a name="odbc-service-provider-interface-spi-reference"></a>Справочник по интерфейсу службы доступа (SPI) ODBC
 В большинстве случаев ODBC определен интерфейс программирования (API). Функции в API, которые могут вызываться приложениями, и они должны быть реализованы внутри диспетчера драйверов и драйвер.  

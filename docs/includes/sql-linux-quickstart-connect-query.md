@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 549224ae30b710292324a178aa48432bde7d34ca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68215638"
+---
 ## <a name="connect-locally"></a>Локальное подключение
 
 В следующих шагах выполняется локальное подключение к новому экземпляру SQL Server с помощью **sqlcmd**.
@@ -44,7 +52,7 @@
    ```
 
 > [!TIP]
-> Подробнее о написании инструкций и запросов на языке Transact-SQL см. учебник [Tutorial: Writing Transact-SQL Statements](../t-sql/tutorial-writing-transact-sql-statements.md).
+> Дополнительные сведения о написании инструкций Transact-SQL и запросов, см. в разделе [руководства: Составление инструкций Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md).
 
 ### <a name="insert-data"></a>Вставка данных
 
@@ -108,9 +116,10 @@ QUIT
 
 |||
 |---|---|
-| [Studio данных Azure](../azure-data-studio/index.md) | Кросс платформенных графического интерфейса пользователя базы данных управления служебной программы. |
-| [mssql-cli](https://github.com/dbcli/mssql-cli/tree/master/doc) | Кросс платформенного интерфейса командной строки для выполнения команд Transact-SQL. |
+| [Azure Data Studio](../azure-data-studio/index.md) | Кросс платформенных графического интерфейса пользователя базы данных управления служебной программы. |
 | [Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md); | Редактор кода графического пользовательского интерфейса между различными платформами, выполните инструкции Transact-SQL с помощью расширения mssql. |
+| [PowerShell Core](../linux/sql-server-linux-manage-powershell-core.md) | Кросс платформенные службы автоматизации и настройки tool на основе командлетов. |
+| [mssql-cli](https://github.com/dbcli/mssql-cli/tree/master/doc) | Кросс платформенного интерфейса командной строки для выполнения команд Transact-SQL. |
 
 ## <a name="connecting-from-windows"></a>Подключение из Windows
 

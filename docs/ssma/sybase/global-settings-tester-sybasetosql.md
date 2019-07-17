@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6f0b9cea-5a24-4e42-8bbf-c4516b00da23
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 5d9bf2a94146739a743fc4c310ece1d9c4642d11
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0070dbed0b683b37c0280b9948ff4b592fea9084
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63126357"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029001"
 ---
 # <a name="global-settings-tester-sybasetosql"></a>Глобальные параметры (средство тестирования) (SybaseToSQL)
 Используйте страницу тест-инженер **глобальные параметры** диалоговое окно для задания параметров для тест-инженера SSMA.  

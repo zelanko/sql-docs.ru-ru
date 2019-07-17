@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9060aae3-3ddd-40a5-83bb-3ea7ab1ffbd7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 16468053ee1e0d09b5be37c034800c122c1d16c9
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 438fe71bcc32c63f97aea95c7105399c2ff8a479
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493295"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088494"
 ---
 # <a name="spaddschedule-transact-sql"></a>sp_add_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -92,7 +91,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**0x4**|Минуты|  
 |**0x8**|Часы|  
   
-`[ @freq_subday_interval = ] freq_subday_interval` Число *freq_subday_type* периодов должно пройти между выполнениями задания. *freq_subday_interval* — **int**, значение по умолчанию **0**. Примечание. Интервал должен составлять более 10 секунд. *freq_subday_interval* учитывается в тех случаях, где *freq_subday_type* равен **1**.  
+`[ @freq_subday_interval = ] freq_subday_interval` Число *freq_subday_type* периодов должно пройти между выполнениями задания. *freq_subday_interval* — **int**, значение по умолчанию **0**. Примечание. Интервал должен быть более 10 секунд. *freq_subday_interval* учитывается в тех случаях, где *freq_subday_type* равен **1**.  
   
 `[ @freq_relative_interval = ] freq_relative_interval` Появления задания *freq_interval* в каждом месяце, если *freq_interval* — 32 (ежемесячное относительное расписание). *freq_relative_interval* — **int**, значение по умолчанию **0**, и может принимать одно из следующих значений. *freq_relative_interval* учитывается в тех случаях, где *freq_type* не равен 32.  
   

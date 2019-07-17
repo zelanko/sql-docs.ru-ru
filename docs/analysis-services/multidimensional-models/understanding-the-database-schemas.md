@@ -1,5 +1,5 @@
 ---
-title: Основные сведения о схемах баз данных | Документы Microsoft
+title: Основные сведения о схемах баз данных | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 91a54be06727a674a16f12295fa886f869b188e4
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023481"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68164963"
 ---
 # <a name="understanding-the-database-schemas"></a>Основные сведения о схемах баз данных
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "34023481"
 > [!NOTE]  
 >  Если в измерении, на котором основана таблица измерения, имеется несколько ключевых атрибутов, то возникает ошибка.  
   
- Переводы  
+ Translations  
  Мастер формирует отдельную таблицу для переведенных значений любого атрибута, для которого требуется столбец перевода. Мастер также создает отдельный столбец для каждого из требуемых языков.  
   
 ## <a name="fact-tables"></a>Таблицы фактов  
@@ -71,7 +71,7 @@ ms.locfileid: "34023481"
   
  Если выбрано задание ссылочной целостности, то между таблицами измерений и таблицами фактов создаются ограничения ссылочной целостности.  
   
- Переводы  
+ Translations  
  Мастер формирует отдельную таблицу для переведенных значений любого свойства в группе мер, для которого требуется столбец перевода. Мастер также создает отдельный столбец для каждого из требуемых языков.  
   
 ## <a name="data-type-conversion-and-default-lengths"></a>Конвертация типов данных и длины по умолчанию  
@@ -89,6 +89,6 @@ ms.locfileid: "34023481"
   
 ## <a name="see-also"></a>См. также  
  [Основные сведения о добавочном создании](../../analysis-services/multidimensional-models/understanding-incremental-generation.md)   
- [Управление изменениями для представления источников данных и источники данных](../../analysis-services/multidimensional-models/manage-changes-to-data-source-views-and-data-sources.md)  
+ [Управление изменениями в источниках данных и представлениях источников данных](../../analysis-services/multidimensional-models/manage-changes-to-data-source-views-and-data-sources.md)  
   
   

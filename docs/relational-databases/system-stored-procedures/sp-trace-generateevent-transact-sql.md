@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3ef05bfb-b467-4403-89cc-6e77ef9247dd
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8a24bb05e8f10e2920bd206531723c228d6c1734
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: cfeacf9f3c18d3f80b7ad83a3697e33a5797ba22
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529356"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096024"
 ---
 # <a name="sptracegenerateevent-transact-sql"></a>sp_trace_generateevent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,9 +46,9 @@ sp_trace_generateevent [ @eventid = ] event_id
 ## <a name="arguments"></a>Аргументы  
 `[ @eventid = ] event_id` — Идентификатор события, которые требуется включить. *Идентификатор event_id* — **int**, не имеет значения по умолчанию. Идентификатор должен быть один из номеров событий от 82 до 91, которые представляют пользовательские события, задаются с помощью [sp_trace_setevent](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md).  
   
-`[ @userinfo = ] 'user_info'` Необязательный определенная пользователем строка, определяющая причину события. *user_info* — **nvarchar(128)**, значение по умолчанию NULL.  
+`[ @userinfo = ] 'user_info'` Необязательный определенная пользователем строка, определяющая причину события. *user_info* — **nvarchar(128)** , значение по умолчанию NULL.  
   
-`[ @userdata = ] user_data` — Это необязательные пользовательские данные для события. *user_data* — **varbinary(8000)**, значение по умолчанию NULL.  
+`[ @userdata = ] user_data` — Это необязательные пользовательские данные для события. *user_data* — **varbinary(8000)** , значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  В следующей таблице описаны значения кодов, которые могут быть возвращены пользователю при завершении хранимой процедуры.  

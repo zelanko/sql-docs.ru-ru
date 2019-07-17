@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 48f7720b-1705-402d-93ce-097ff1737877
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: deb6b0044caabeaca23f5bb7c01f976ca6b874e3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 0a852e2d9d85c6d3801c8a62fd7c1ff5accb4f8f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016845"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135298"
 ---
 # <a name="what39s-new-in-sqlxml-40-sp1"></a>Что&#39;возможности в SQLXML 4.0 с пакетом обновления 1
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -72,7 +71,7 @@ ms.locfileid: "56016845"
  SQLXML 4.0 не устанавливает MSXML. SQLXML 4.0 использует службы MSXML 6.0, которые устанавливаются в составе установки [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] или более поздней установки.  
   
 ## <a name="redistributing-sqlxml-40-sp1"></a>Распространение SQLXML 4.0 с пакетом обновления 1 (SP1)  
- Предусмотрена возможность распространять SQLXML 4.0 с пакетом обновления 1 (SP1) с помощью распространяемого пакета установщика. Один из способов установки нескольких пакетов в одном (с точки зрения пользователя) сеансе установки состоит в применении технологии построителей цепочек и загрузчиков. Дополнительные сведения см. в статьях Authoring a Custom Bootstrapper Package for Visual Studio 2005 и Adding Custom Prerequisites.  
+ Предусмотрена возможность распространять SQLXML 4.0 с пакетом обновления 1 (SP1) с помощью распространяемого пакета установщика. Один из способов установки нескольких пакетов в одном (с точки зрения пользователя) сеансе установки состоит в применении технологии построителей цепочек и загрузчиков. Дополнительные сведения см. в статьях Разработка пользовательского пакета загрузчика для Visual Studio 2005 и Добавление настраиваемых необходимых компонентов.  
   
  Если приложение планируется использовать на платформе, отличной от той, на которой оно разрабатывалось, можно скачать из центра загрузки Майкрософт версии sqlncli.msi for x64, Itanium и x86.  
   
@@ -105,7 +104,7 @@ ms.locfileid: "56016845"
   
 -   [Примеры массовой загрузки XML-документов](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/xml-bulk-load-examples-sqlxml-4-0.md)  
   
- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] представленные **дату и время —**, **DateTime2**, и **DateTimeOffset** типов данных. SQLXML 4.0 с пакетом обновления 1 (SP1) позволяет использовать эти четыре новых типа данных в качестве встроенных скалярных типов в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Native Client OLE DB Provider (SQLNCLI10), который поставляется вместе с [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] представленные **дату и время —** , **DateTime2**, и **DateTimeOffset** типов данных. SQLXML 4.0 с пакетом обновления 1 (SP1) позволяет использовать эти четыре новых типа данных в качестве встроенных скалярных типов в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Native Client OLE DB Provider (SQLNCLI10), который поставляется вместе с [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ## <a name="xml-bulk-load-changes-for-sqlxml-40-sp1"></a>Изменения в SQLXML 4.0 с пакетом обновления 1 (SP1), относящиеся к массовой загрузке XML  
   

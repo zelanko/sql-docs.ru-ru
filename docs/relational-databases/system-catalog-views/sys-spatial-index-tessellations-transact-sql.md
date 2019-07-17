@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 8b17a9a4-b57f-4220-8138-fc73581b1670
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bf65d69c7398165bed6a7a46c82bd7feea6af19e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c4f2f4b8ea0184d063a6423f27fdf2cf9c450a05
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719542"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078650"
 ---
 # <a name="sysspatialindextessellations-transact-sql"></a>sys.spatial_index_tessellations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,15 +39,15 @@ ms.locfileid: "47719542"
 |-----------------|---------------|-----------------|  
 |object_id|**int**|Идентификатор объекта, на котором определен индекс. Каждый (object_id, index_id) пары имеет соответствующую запись [sys.spatial_indexes](../../relational-databases/system-catalog-views/sys-spatial-indexes-transact-sql.md).|  
 |index_id|**int**|Идентификатор пространственного индекса, в котором определен столбец.|  
-|tessellation_scheme|**sysname**|Имя схемы тесселяции, один из: GEOMETRY_GRID, GEOGRAPHY_GRID|  
-|bounding_box_xmin|**float(53)**|Координата X левого нижнего угла ограничивающего прямоугольника поле один из: NULL = неприменимо для заданной схемы тесселяции (например, GEOGRAPHY_GRID) *n* =, если параметр tessellation_scheme имеет значение x-min GEOMETRY_GRID.                     **Примечание:** координаты, определяемые параметрами ограничивающего поле интерпретируются для каждого объекта в соответствии с его [идентификатор пространственной ссылки (SRID)](../../relational-databases/spatial/spatial-reference-identifiers-srids.md).|  
-|bounding_box_ymin|**float(53)**|Поле Y-координата левого нижнего угла ограничивающего прямоугольника, один из: NULL = неприменимо для заданной схемы тесселяции (например, GEOGRAPHY_GRID) *n* =, если параметр tessellation_scheme имеет значение y-min GEOMETRY_GRID|  
-|bounding_box_xmax|**float(53)**|Координата X в правом верхнем углу ограничивающий прямоугольник поле один из: NULL = неприменимо для заданной схемы тесселяции (например, GEOGRAPHY_GRID) *n* =, если параметр tessellation_scheme имеет значение GEOMETRY_GRID, значение координаты x-max|  
-|bounding_box_ymax|**float(53)**|Координата Y верхнего правого угла ограничивающий прямоугольник поле один из: NULL = неприменимо для заданной схемы тесселяции (например, GEOGRAPHY_GRID) *n* =, если параметр tessellation_scheme имеет значение GEOMETRY_GRID, значение координаты y-max|  
-|level_1_grid|**smallint**|Плотность сетки верхнего уровня. Если параметр tessellation_scheme имеет значение GEOMETRY_GRID или GEOGRAPHY_GRID, один из: 16 = сетка 4 на 4 (LOW) 64 = 8 службой "Сетка"-8 (MEDIUM) 256 = 16 службой "Сетка"-16 (ВЫСОКАЯ) NULL = неприменимо для заданного пространственный индекс типа или схемы тесселяции.  NULL возвращается в том случае, когда используется новая тесселяция SQL Server 11.|  
-|level_1_grid_desc|**nvarchar(60)**|Плотность сетки верхнего уровня, один из: LOW средний высокой NULL = неприменимо для заданного пространственный индекс типа или схемы тесселяции.  NULL возвращается в том случае, когда используется новая тесселяция SQL Server 11.|  
+|tessellation_scheme|**sysname**|Имя схемы тесселяции, один из: GEOMETRY_GRID GEOGRAPHY_GRID|  
+|bounding_box_xmin|**float(53)**|Координата по оси X нижнего левого угла ограничивающего прямоугольника, один из: NULL = неприменимо для заданной схемы тесселяции (например, GEOGRAPHY_GRID) *n* =, если параметр tessellation_scheme имеет значение x-min GEOMETRY_GRID.                     **Примечание.** Координаты, определяемые параметрами ограничивающего поле интерпретируются для каждого объекта в соответствии с его [идентификатор пространственной ссылки (SRID)](../../relational-databases/spatial/spatial-reference-identifiers-srids.md).|  
+|bounding_box_ymin|**float(53)**|Координата по оси Y нижнего левого угла ограничивающего прямоугольника, один из: NULL = неприменимо для заданной схемы тесселяции (например, GEOGRAPHY_GRID) *n* =, если параметр tessellation_scheme имеет значение y-min GEOMETRY_GRID|  
+|bounding_box_xmax|**float(53)**|Координата по оси X в правом верхнем углу ограничивающего прямоугольника, один из: NULL = неприменимо для заданной схемы тесселяции (например, GEOGRAPHY_GRID) *n* =, если параметр tessellation_scheme имеет значение GEOMETRY_GRID, значение координаты x-max|  
+|bounding_box_ymax|**float(53)**|Координата Y верхнего правого угла ограничивающего прямоугольника, один из: NULL = неприменимо для заданной схемы тесселяции (например, GEOGRAPHY_GRID) *n* =, если параметр tessellation_scheme имеет значение GEOMETRY_GRID, значение координаты y-max|  
+|level_1_grid|**smallint**|Плотность сетки верхнего уровня. Если параметр tessellation_scheme имеет значение GEOMETRY_GRID или GEOGRAPHY_GRID, один из:          16 = сетка 4 на 4 (LOW) 64 = 8 службой "Сетка"-8 (MEDIUM) 256 = 16 службой "Сетка"-16 (ВЫСОКАЯ) NULL = неприменимо для заданного пространственный индекс типа или схемы тесселяции.  NULL возвращается в том случае, когда используется новая тесселяция SQL Server 11.|  
+|level_1_grid_desc|**nvarchar(60)**|Плотность сетки верхнего уровня, один из: НИЗКИЙ средний высокой NULL = неприменимо для заданного пространственный индекс типа или схемы тесселяции.  NULL возвращается в том случае, когда используется новая тесселяция SQL Server 11.|  
 |level_2_grid|**smallint**|Плотность сетки второго уровня. Если параметр tessellation_scheme имеет значение GEOMETRY_GRID или GEOGRAPHY_GRID, один из: 16 = сетка 4 на 4 (LOW) 64 = 8 службой "Сетка"-8 (MEDIUM) 256 = 16 службой "Сетка"-16 (ВЫСОКАЯ) NULL = неприменимо для заданного пространственный индекс типа или схемы тесселяции.  NULL возвращается в том случае, когда используется новая тесселяция SQL Server 11.|  
-|level_2_grid_desc|**nvarchar(60)**|Плотность сетки второго уровня, один из: LOW средний высокой NULL = неприменимо для заданного пространственный индекс типа или схемы тесселяции.  NULL возвращается в том случае, когда используется новая тесселяция SQL Server 11.|  
+|level_2_grid_desc|**nvarchar(60)**|Плотность сетки второго уровня, один из: НИЗКИЙ средний высокой NULL = неприменимо для заданного пространственный индекс типа или схемы тесселяции.  NULL возвращается в том случае, когда используется новая тесселяция SQL Server 11.|  
 |level_3_grid|**smallint**|Плотность сетки третьего уровня.   Если параметр tessellation_scheme имеет значение GEOMETRY_GRID или GEOGRAPHY_GRID, один из: 16 = сетка 4 на 4 (LOW) 64 = 8 службой "Сетка"-8 (MEDIUM) 256 = 16 службой "Сетка"-16 (ВЫСОКАЯ) NULL = неприменимо для заданного пространственный индекс типа или схемы тесселяции.  NULL возвращается в том случае, когда используется новая тесселяция SQL Server 11.|  
 |level_3_grid_desc|**nvarchar(60)**|Плотность сетки третьего уровня, один из: LOW средний высокой NULL = неприменимо для заданного пространственный индекс типа или схемы тесселяции.  NULL возвращается в том случае, когда используется новая тесселяция SQL Server 11.|  
 |level_4_grid|**smallint**|Плотность сетки четвертого уровня. Если параметр tessellation_scheme имеет значение GEOMETRY_GRID или GEOGRAPHY_GRID, один из: 16 = сетка 4 на 4 (LOW) 64 = 8 службой "Сетка"-8 (MEDIUM) 256 = 16 службой "Сетка"-16 (ВЫСОКАЯ) NULL = неприменимо для заданного пространственный индекс типа или схемы тесселяции.  NULL возвращается в том случае, когда используется новая тесселяция SQL Server 11.|  

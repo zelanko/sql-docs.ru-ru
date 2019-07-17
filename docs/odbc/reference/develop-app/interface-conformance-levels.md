@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2c470e54-0600-4b2b-b1f3-9885cb28a01a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 74d4ceb4532ee09004f035958860833aef488aaa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 185e68ed8d083e3ccfbab99369f6a778766a4c09
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62446691"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138914"
 ---
 # <a name="interface-conformance-levels"></a>Уровни соответствия интерфейса
 Выравнивание предназначена для уведомлять приложение о функциях, доступных к нему от драйвера. Схема распределения, основаны на функциях достаточно не достигнуть этой цели. В ODBC 3. *x*, драйверы классифицируются на основе функций, они имеют. Поддержка компонент мог включить вспомогательные функции; Оно также может включать поле дескриптора, атрибут инструкции, значение «Y» поддержка типа данных, возвращенных **SQLGetInfo**, и т. д.  

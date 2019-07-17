@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: a2fa727e-51f2-4123-ae25-0ee28e611231
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9e0e10a6b8c15b6522e6b34ab008295fc411fcd3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a241ea92af6c1273039cc45daab232a1fbe763a3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63232064"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081842"
 ---
 # <a name="standard-programming-interface"></a>Стандартный интерфейс программирования
 Интерфейс программирования, пожалуй наиболее очевидных кандидатов для стандартизации. На самом деле, при разработке ODBC ANSI и ISO уже существующей стандартов embedded SQL и SQL модули. Несмотря на то, что стандарты существует для базы данных интерфейса командной строки, в группу доступа SQL - отраслевой Консорциум из поставщиков баз данных - рассмотрении вопроса о необходимости создания; части ODBC позже стало основой для своей работы.  

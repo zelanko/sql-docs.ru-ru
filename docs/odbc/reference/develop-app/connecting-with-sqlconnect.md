@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: b16319d2-2c2c-4341-abb5-caa9e17362b4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d89825bcfc9f885d4339874c870cbc5a29938062
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e37cef235949473beb52e0836553ca16316bc744
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63042744"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083125"
 ---
 # <a name="connecting-with-sqlconnect"></a>Подключение с помощью SQLConnect
 **SQLConnect** является простейшей функцией соединения. Он требует имя источника данных и принимает идентификатор необязательно пользователя и пароль. Он подходит для приложений, что жестко закодировать имя источника данных и не требуют идентификатор пользователя или пароль. Она также работает также для приложений, которым требуется управлять собственные «вид» или в которых нет пользовательского интерфейса. Такие приложения можно создать список источников данных с помощью **SQLDataSources**, запрашивать пользователя для источника данных, идентификатор пользователя и пароль, а затем вызвать **SQLConnect**.  

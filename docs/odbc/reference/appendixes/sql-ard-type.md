@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8d87ca10-f955-4284-8689-e9f4cc31e7ae
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 683b81f82094aa33deef86ffc19dc8c5c0a53a27
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 802040851259a8537fabcd3cc0da1afdf9b8dbe0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63270438"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68057054"
 ---
 # <a name="sqlardtype"></a>SQL_ARD_TYPE
 Идентификатор типа SQL_ARD_TYPE используется для указания, что данные в буфере будут иметь тип, указанный в поле SQL_DESC_CONCISE_TYPE Отменить. SQL_ARD_TYPE вводится в *TargetType* аргумент для вызова **SQLGetData** вместо определенный тип данных и позволяет приложению изменять данные типа буфера, изменив дескриптор поле. Это значение связывает тип данных  *\*TargetValuePtr* буфер для поля дескриптора. (SQL_ARD_TYPE не введен в вызов **SQLBindCol** или **SQLBindParameter** так, как тип привязанного буфера уже привязан к полям SQL_DESC_TYPE и SQL_DESC_CONCISE_TYPE и может быть изменено в любое время, изменив одно из этих полей.)  

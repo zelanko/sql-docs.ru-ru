@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: 0a8ccb80-c573-4418-84e5-f04a2b0e2ac1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9867946ce84163a504582c8a9575100c3c9aacd3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2a1d0c506c4a4b33d7138378032947821d4e9f3e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63069823"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093994"
 ---
 # <a name="odbc-data-sources-subkey"></a>Подраздел источников данных ODBC
 Значения в столбце подраздел источников данных ODBC списка источников данных. Формат этих значений является, как показано в следующей таблице.  
   
-|Имя|Тип данных|Данные|  
+|Name|Тип данных|Data|  
 |----------|---------------|----------|  
 |*Имя источника данных*|REG_SZ|*Описание драйвера*|  
   

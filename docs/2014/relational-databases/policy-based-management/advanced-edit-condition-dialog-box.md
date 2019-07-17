@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5849baa119174cacc99d4ab99a68de28c2966c53
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353191"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210809"
 ---
 # <a name="advanced-edit-condition-dialog-box"></a>Диалоговое окно «Расширенное редактирование» (условие)
   С помощью диалогового окна **Расширенное редактирование** создаются сложные выражения для условий управления на основе политик.  
@@ -82,7 +82,7 @@ ms.locfileid: "53353191"
 |`False()`|Bool False()<br /><br /> возвращает логическое значение FALSE.||возвращает логическое значение FALSE.|`IsDatabaseMailEnabled = False()`|  
 |`GetDate()`|DateTime GetDate()<br /><br /> возвращает системную дату.||возвращает системную дату как значение типа DateTime.|`@DateLastModified = GetDate()`|  
 |`Guid()`|Guid Guid(String *guidString*)<br /><br /> возвращает значение идентификатора GUID из строки.|*guidString* — строковое представление создаваемого идентификатора GUID.|возвращает идентификатор GUID, созданный на основе строки.|`Guid('12340000-0000-3455-0000-000000000454')`|  
-|`IsNull()`|Variant IsNull (Variant *check_expression*, Variant *replacement_value*)<br /><br /> Возвращается значение *check_expression* , если это выражение не равно NULL; в противном случае возвращается значение *replacement_value* . Если тип аргументов отличается, тип аргумента *replacement_value* неявно преобразуется в тип аргумента *check_expression*.|*check_expression* — выражение, для которого проверяется значение NULL. *check_expression* может быть любой тип, поддерживаемый управлением на основе политик: Numeric, String, Bool, DateTime, Array и Guid.<br /><br /> *replacement_value* — выражение, возвращаемое, если *check_expression* имеет значение NULL. Аргумент*replacement_value* должен иметь тип, который неявно преобразован в тип *check_expression*.|Возвращаемый тип — *check_expression* в том случае, если значение *check_expression* не равно NULL. В противном случае возвращается тип *replacement_value* .||  
+|`IsNull()`|Variant IsNull (Variant *check_expression*, Variant *replacement_value*)<br /><br /> Возвращается значение *check_expression* , если это выражение не равно NULL; в противном случае возвращается значение *replacement_value* . Если тип аргументов отличается, тип аргумента *replacement_value* неявно преобразуется в тип аргумента *check_expression*.|*check_expression* — выражение, для которого проверяется значение NULL. Выражение *check_expression* может иметь любой тип, поддерживаемый для управления на основе политик: Numeric, String, Bool, DateTime, Array и Guid.<br /><br /> *replacement_value* — выражение, возвращаемое, если *check_expression* имеет значение NULL. Аргумент*replacement_value* должен иметь тип, который неявно преобразован в тип *check_expression*.|Возвращаемый тип — *check_expression* в том случае, если значение *check_expression* не равно NULL. В противном случае возвращается тип *replacement_value* .||  
 |`Len()`|Numeric Len (*string_expression*)<br /><br /> возвращает количество символов указанного строкового выражения, исключая конечные пробелы.|*string_expression* — оцениваемое строковое выражение.|возвращает значение из категории типа данных integer.|`Len('Hello')` в этом примере возвращает значение `5` .|  
 |`Lower()`|String Lower (String *_expression*)<br /><br /> возвращает строку после преобразования всех символов верхнего регистра в нижний регистр.|*expression* — выражение исходной строки.|возвращает строку, которая представляет исходную строку после преобразования всех символов верхнего регистра в нижний регистр.|`Len('HeLlO')` в этом примере возвращает значение `'hello'` .|  
 |`Mod()`|Numeric Mod (Numeric *expression_dividend*, Numeric *expression_divisor*)<br /><br /> вычисляет целочисленный остаток после деления первого числового выражения на второе.|*expression_dividend* — делимое числовое выражение. Аргумент*expression_dividend* должен быть допустимым выражением любого типа данных из категории целочисленных или числовых.<br /><br /> *expression_divisor* — это числовое выражение, на которое делится делимое. Аргумент*expression_divisor* должен быть допустимым выражением любого типа данных из категории целочисленных или числовых.|возвращает значение из категории типа данных integer.|`Mod(Property1, 3)`|  

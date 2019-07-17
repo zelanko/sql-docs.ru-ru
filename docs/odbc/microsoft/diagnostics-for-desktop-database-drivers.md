@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1c3740eb-62c6-4009-b4b2-570fcf5661e4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d6c21af2ef3f47c05aacf4b47673ab42a170f506
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d4e7c8ea96708886f9edf54047bd2a2104ba0ec8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63128072"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68031224"
 ---
 # <a name="diagnostics-for-desktop-database-drivers"></a>Диагностика драйверов для баз данных на настольном компьютере
 Все ошибки и предупреждения не проверяются и частично проверен диспетчером драйверов обрабатываются драйвером. Драйвер также сопоставляет собственного ошибок или ошибок, возвращаемых источником данных, чтобы SQLSTATE. Каждой функции, перечисленные в *Справочник по программированию ODBC* содержит раздел «Диагностика», указывающее условия и сообщения.  

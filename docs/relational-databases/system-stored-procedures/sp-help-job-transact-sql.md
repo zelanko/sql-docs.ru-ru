@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8a8b6104-e0e4-4d07-a2c3-f4243ee0d6fa
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 509dd27a784fd14b5aefc811065b265f37c3f6c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a6c2929062451d139cc3452b6bd272dd85bac951
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62660789"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054989"
 ---
 # <a name="sphelpjob-transact-sql"></a>sp_help_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +59,7 @@ sp_help_job { [ @job_id = ] job_id
 > [!NOTE]  
 >  Для просмотра конкретного задания, либо *job_id* или *имя_задания* должен быть указан.  Пропускают как *job_id* и *имя_задания* для возврата сведений обо всех заданиях.
   
-`[ @job_aspect = ] 'job_aspect'` Отображаемое задание атрибута. *job_aspect* — **varchar(9)**, значение по умолчанию NULL, и может принимать одно из следующих значений.  
+`[ @job_aspect = ] 'job_aspect'` Отображаемое задание атрибута. *job_aspect* — **varchar(9)** , значение по умолчанию NULL, и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -70,11 +69,11 @@ sp_help_job { [ @job_id = ] job_id
 |**ДЕЙСТВИЯ**|Сведения об шаге задания|  
 |**ЦЕЛЕВЫЕ ОБЪЕКТЫ**|Сведения о цели|  
   
-`[ @job_type = ] 'job_type'` Тип заданий для включения в отчет. *job_type* — **varchar(12)**, значение по умолчанию NULL. *job_type* может быть **ЛОКАЛЬНОГО** или **МНОГОСЕРВЕРНОЙ**.  
+`[ @job_type = ] 'job_type'` Тип заданий для включения в отчет. *job_type* — **varchar(12)** , значение по умолчанию NULL. *job_type* может быть **ЛОКАЛЬНОГО** или **МНОГОСЕРВЕРНОЙ**.  
   
 `[ @owner_login_name = ] 'login_name'` Имя входа владельца задания. *login_name* — **sysname**, значение по умолчанию NULL.  
   
-`[ @subsystem = ] 'subsystem'` Имя подсистемы. *Подсистема* — **nvarchar(40)**, значение по умолчанию NULL.  
+`[ @subsystem = ] 'subsystem'` Имя подсистемы. *Подсистема* — **nvarchar(40)** , значение по умолчанию NULL.  
   
 `[ @category_name = ] 'category'` Имя категории. *Категория* — **sysname**, значение по умолчанию NULL.  
   
@@ -98,7 +97,7 @@ sp_help_job { [ @job_id = ] job_id
   
 `[ @date_last_modified = ] date_modified` Дата последнего изменения задания. *date_modified* — **datetime**, значение по умолчанию NULL.  
   
-`[ @description = ] 'description_pattern'` Описание задания. *description_pattern* — **nvarchar(512)**, значение по умолчанию NULL. *description_pattern* может включать символы-шаблоны SQL Server для сопоставления шаблонов.  
+`[ @description = ] 'description_pattern'` Описание задания. *description_pattern* — **nvarchar(512)** , значение по умолчанию NULL. *description_pattern* может включать символы-шаблоны SQL Server для сопоставления шаблонов.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
@@ -112,7 +111,7 @@ sp_help_job { [ @job_id = ] job_id
 |**originating_server**|**nvarchar(30)**|Имя сервера, от которого поступило задание.|  
 |**name**|**sysname**|Имя задания.|  
 |**включен**|**tinyint**|Показывает, разрешено ли задание к выполнению.|  
-|**Описание**|**nvarchar(512)**|Описание задания.|  
+|**description**|**nvarchar(512)**|Описание задания.|  
 |**start_step_id**|**int**|Идентификатор шага задания, с которого должно начаться выполнение.|  
 |**Категории**|**sysname**|Категория задания.|  
 |**Владелец**|**sysname**|Владелец задания.|  

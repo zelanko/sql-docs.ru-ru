@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ff837209-e2b3-481a-a48f-8530bfe53d97
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e6a3c403fde55213e093b70ced1cb6a59d15fd28
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: b6ecac979077dd83d6549b408c8c9e4d2bd4402f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537196"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122438"
 ---
 # <a name="sphelplogreaderagent-transact-sql"></a>sp_helplogreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ sp_helplogreader_agent [ [ @publisher = ] 'publisher' ]
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**идентификатор**|**int**|Идентификатор агента.|  
-|**name**|**nvarchar(100)**|Имя агента.|  
+|**name**|**Nvarchar(100)**|Имя агента.|  
 |**publisher_security_mode**|**smallint**|Режим безопасности, используемый агентом при соединении с издателем, который может быть одним из следующих:<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности<br /><br /> **1** = проверка подлинности Windows.|  
 |**publisher_login**|**sysname**|Имя входа в систему, используемое при соединении с издателем.|  
 |**publisher_password**|**nvarchar(524)**|По соображениям безопасности значение **\* \* \* \* \* \* \* \* \* \*** всегда возвращается.|  

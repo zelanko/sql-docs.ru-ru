@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 609322d265d18345e7ef39b4598cb6e1c226c97a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365079"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206694"
 ---
 # <a name="execute-a-stored-procedure-using-odbc-call-syntax-and-process-return-codes-and-output-parameters-ole-db"></a>Выполнение хранимой процедуры (с использованием синтаксиса ODBC CALL) и обработка кодов возврата и выходных параметров (OLE DB)
   Хранимые процедуры [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] могут иметь целочисленные коды возврата и выходные параметры. Коды возврата и выходные параметры передаются с сервера в последнем пакете и потому недоступны приложению до полного освобождения набора строк. Если команда возвращает несколько результатов, то данные выходного параметра будут доступны тогда, когда метод `IMultipleResults::GetResult` вернул значение DB_S_NORESULT или при полном освобождении интерфейса `IMultipleResults` (в зависимости от того, что произошло раньше).  

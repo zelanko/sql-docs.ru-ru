@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 817cd98a-4dff-4ed8-a546-f336c144d1e0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c1a6a9e45b1640a82cd15074373f162a97d9a0a6
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 49d7ac030eb8e391f083311fc0248b0f0752e72a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494085"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121021"
 ---
 # <a name="spaddoperator-transact-sql"></a>sp_add_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,20 +52,20 @@ sp_add_operator [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @name = ] 'name'` Имя оператора (получателя уведомлений). Это имя должно быть уникальным и не может содержать процент (**%**) символов. *имя* — **sysname**, не имеет значения по умолчанию.  
+`[ @name = ] 'name'` Имя оператора (получателя уведомлений). Это имя должно быть уникальным и не может содержать процент ( **%** ) символов. *имя* — **sysname**, не имеет значения по умолчанию.  
   
 `[ @enabled = ] enabled` Указывает текущее состояние оператора. *включить* — **tinyint**, значение по умолчанию **1** (включено). Если **0**, оператор не включен и не получает уведомлений.  
   
-`[ @email_address = ] 'email_address'` Адрес электронной почты оператора. Эта строка передается напрямую в систему электронной почты. *email_address* — **nvarchar(100)**, значение по умолчанию NULL.  
+`[ @email_address = ] 'email_address'` Адрес электронной почты оператора. Эта строка передается напрямую в систему электронной почты. *email_address* — **nvarchar(100)** , значение по умолчанию NULL.  
   
  Можно указать физический адрес электронной почты или псевдоним для *email_address*. Пример:  
   
- "**jdoe**«или»**jdoe@xyz.com**"  
+ "**jdoe**«или» **jdoe@xyz.com** "  
   
 > [!NOTE]  
 >  В компоненте Database Mail надо использовать адрес электронной почты.  
   
-`[ @pager_address = ] 'pager_address'` Адрес пейджера оператора. Эта строка передается напрямую в систему электронной почты. *pager_address* — **narchar(100)**, значение по умолчанию NULL.  
+`[ @pager_address = ] 'pager_address'` Адрес пейджера оператора. Эта строка передается напрямую в систему электронной почты. *pager_address* — **narchar(100)** , значение по умолчанию NULL.  
   
 `[ @weekday_pager_start_time = ] weekday_pager_start_time` Время, после которого [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агент отправляет уведомления на пейджер указанному оператору в рабочие дни с понедельника по пятницу. *weekday_pager_start_time*— **int**, значение по умолчанию **090000**, означающее 9:00:00 в 24-часовом формате и должно вводиться в формате ЧЧММСС.  
   
@@ -92,7 +91,7 @@ sp_add_operator [ @name = ] 'name'
 |**32**|Пятница|  
 |**64**|Суббота|  
   
-`[ @netsend_address = ] 'netsend_address'` Сетевой адрес оператора, которому отправляется сетевое сообщение. *netsend_address*— **nvarchar(100)**, значение по умолчанию NULL.  
+`[ @netsend_address = ] 'netsend_address'` Сетевой адрес оператора, которому отправляется сетевое сообщение. *netsend_address*— **nvarchar(100)** , значение по умолчанию NULL.  
   
 `[ @category_name = ] 'category'` Имя категории для этого оператора. *Категория* — **sysname**, значение по умолчанию NULL.  
   

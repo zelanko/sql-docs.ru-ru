@@ -33,14 +33,13 @@ helpviewer_keywords:
 ms.assetid: 4dc48762-bc12-43fb-b356-ea1b9c1e287e
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ad4e43d04c16443323358f0b84e6f26a9f9ab6bf
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d7526bd23d5b49160748eff653d0e2d9c1e07ce4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019015"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086842"
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>Вставка данных с помощью диаграмм обновления XML (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -238,7 +237,7 @@ ms.locfileid: "56019015"
   
  Столбец UnitPrice в таблице Order Details имеет **деньги** типа. Чтобы применить соответствующее преобразование типов (из **строка** тип **деньги** типа), знак доллара ($) должен быть добавлен как часть значения. Если диаграмма обновления не задана схема сопоставления, первый символ **строка** значение вычисляется. Если первый символ — символ доллара ($), применяется соответствующее преобразование.  
   
- Если диаграмма обновления указывает схему сопоставления, где столбец помечен соответственно как **dt:type="fixed.14.4»** или **SQL: DataType = «деньги»**, знак доллара ($) не является обязательным и Преобразование обрабатывается сопоставлением. Это рекомендуемый способ, который гарантирует, что соответствующее преобразование типов происходит.  
+ Если диаграмма обновления указывает схему сопоставления, где столбец помечен соответственно как **dt:type="fixed.14.4»** или **SQL: DataType = «деньги»** , знак доллара ($) не является обязательным и Преобразование обрабатывается сопоставлением. Это рекомендуемый способ, который гарантирует, что соответствующее преобразование типов происходит.  
   
 ##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>Проверка образца запроса XPath к схеме  
   

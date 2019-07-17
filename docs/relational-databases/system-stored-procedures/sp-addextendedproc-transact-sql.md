@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c0d4b47b-a855-451e-90e5-5fb2d836ebfa
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: b895692bf9ce65d9e063fb1d484cf84734897c86
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 0bc8ea22699762927a026ae4cc811500c193555c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494286"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072755"
 ---
 # <a name="spaddextendedproc-transact-sql"></a>sp_addextendedproc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,9 +43,9 @@ sp_addextendedproc [ @functname = ] 'procedure' ,
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @functname = ] 'procedure'` — Имя функции, вызываемой в библиотеке динамической компоновки (DLL). *процедура* — **nvarchar(517)**, не имеет значения по умолчанию. *процедура* может также включать имя владельца в форме *owner.function*.  
+`[ @functname = ] 'procedure'` — Имя функции, вызываемой в библиотеке динамической компоновки (DLL). *процедура* — **nvarchar(517)** , не имеет значения по умолчанию. *процедура* может также включать имя владельца в форме *owner.function*.  
   
-`[ @dllname = ] 'dll'` — Имя библиотеки DLL, содержащей функцию. *библиотеки DLL* — **varchar(255)**, не имеет значения по умолчанию. Рекомендуется указывать полный путь DLL.  
+`[ @dllname = ] 'dll'` — Имя библиотеки DLL, содержащей функцию. *библиотеки DLL* — **varchar(255)** , не имеет значения по умолчанию. Рекомендуется указывать полный путь DLL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  

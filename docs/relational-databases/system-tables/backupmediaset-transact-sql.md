@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: d9c18a93-cab9-4db8-ae09-c6bd8145ab8f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 831571621256a34611672ae6444379c375370f1a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1dbaf429acb94334540f0e147eae2808e1655309
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679282"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119347"
 ---
 # <a name="backupmediaset-transact-sql"></a>backupmediaset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "47679282"
 |**media_uuid**|**uniqueidentifier**|UUID набора носителей. Все [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] наборы носителей имеют UUID.<br /><br /> Для более ранних версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], тем не менее, если набор носителей содержит только одно семейство носителей, **media_uuid** столбец может иметь значение NULL (**media_family_count** -1).|  
 |**media_family_count**|**tinyint**|Число семейств носителей в наборе носителей. Может иметь значение NULL.|  
 |**name**|**nvarchar(128)**|Имя набора носителей. Может иметь значение NULL.<br /><br /> Дополнительные сведения см. в разделе параметров MEDIANAME и MEDIADESCRIPTION в [резервного КОПИРОВАНИЯ &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).|  
-|**Описание**|**nvarchar(255)**|Текстовое описание набора носителей. Может иметь значение NULL.<br /><br /> Дополнительные сведения см. в разделе параметров MEDIANAME и MEDIADESCRIPTION в [резервного КОПИРОВАНИЯ &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).|  
+|**description**|**nvarchar(255)**|Текстовое описание набора носителей. Может иметь значение NULL.<br /><br /> Дополнительные сведения см. в разделе параметров MEDIANAME и MEDIADESCRIPTION в [резервного КОПИРОВАНИЯ &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).|  
 |**software_name**|**nvarchar(128)**|Имя программного обеспечения резервного копирования, которое записало метку носителя. Может иметь значение NULL.|  
 |**software_vendor_id**|**int**|Идентификационный номер поставщика программного обеспечения, которое записало метку носителя резервной копии. Может иметь значение NULL.<br /><br /> Значение для [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] является шестнадцатеричным 0x1200.|  
 |**MTF_major_version**|**tinyint**|Главный номер версии формата ленты [!INCLUDE[msCoName](../../includes/msconame-md.md)], используемого для формирования этого набора носителей. Может иметь значение NULL.|  

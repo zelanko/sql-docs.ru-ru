@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9a844f429409210b1b7ba6de9784714b5af336eb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52768456"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68189159"
 ---
 # <a name="manage-job-steps"></a>Управление шагами задания
   Шаг задания — это действие, производимое заданием над базой данных или сервером. Каждое задание должно иметь, по крайней мере, один шаг. Шагами задания могут быть:  
@@ -75,7 +75,7 @@ ms.locfileid: "52768456"
   
 -   Код завершения процесса, возвращаемый при успешном выполнении команды.  
   
--   Команда для выполнения. Чтобы выполнить команду операционной системы, необходимо просто выполнить саму команду. Для внешней программы это ее имя и аргументы, например: **C:\Program Files\Microsoft SQL Server\100\Tools\Binn\sqlcmd.exe -e - q «sp_who»**  
+-   Команда для выполнения. Чтобы выполнить команду операционной системы, необходимо просто выполнить саму команду. Для внешней программы это ее имя и аргументы, например: **C:\Program Files\Microsoft SQL Server\100\Tools\Binn\sqlcmd.exe -e -q "sp_who"**  
   
     > [!NOTE]  
     >  Необходимо предоставить полный путь к исполняемой программе, если только она не размещена в каталоге, указанном в системном пути или в пути пользователя, от имени которого выполняется шаг задания.  
@@ -206,7 +206,7 @@ Set oServer = nothing
 |Описывает определение параметров для шагов заданий Transact-SQL агента Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Define Transact-SQL Job Step Options](define-transact-sql-job-step-options.md)|  
 |Описывает создание шага задания скрипта ActiveX.|[Create an ActiveX Script Job Step](create-an-activex-script-job-step.md)|  
 |Описывает процесс создания и определения шагов заданий агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , выполняющих команды и запросы служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Analysis Services.|[Create an Analysis Services Job Step](create-an-analysis-services-job-step.md)|  
-|Описывает, какое действие будет выполнять [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , если при выполнении задания происходит ошибка.|[Set Job Step Success or Failure Flow](set-job-step-success-or-failure-flow.md)|  
+|Описывает, какое действие будет выполнять [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , если при выполнении задания происходит ошибка.|[Настройка потока действий системы при успешном или неуспешном выполнении шага задания](set-job-step-success-or-failure-flow.md)|  
 |Описывает, как просмотреть сведения о шаге задания в окне «Свойства шага задания».|[Просмотр сведений о шаге задания](view-job-step-information.md)|  
 |Описывает, как удалить журнал шага задания агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Delete a Job Step Log](delete-a-job-step-log.md)|  
   

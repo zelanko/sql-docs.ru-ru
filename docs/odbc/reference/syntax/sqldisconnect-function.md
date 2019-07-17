@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9e84a58e-db48-4821-a0cd-5c711fcbe36b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 444e41699c1a61acb82acc419a2f23db6142f7bb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7c99b63800d8b007ed11c21a042edc4f51ff7c92
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537559"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003217"
 ---
 # <a name="sqldisconnect-function"></a>Функция SQLDisconnect
 **Соответствие стандартам**  
@@ -47,7 +46,7 @@ SQLRETURN SQLDisconnect(
  [Input] Дескриптор подключения  
   
 ## <a name="returns"></a>Возвращает  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, SQL_INVALID_HANDLE, or SQL_STILL_EXECUTING.  
+ Значение SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, значение SQL_ERROR, SQL_INVALID_HANDLE или SQL_STILL_EXECUTING.  
   
 ## <a name="diagnostics"></a>Диагностика  
  Когда **SQLDisconnect** возвращает значение SQL_ERROR или SQL_SUCCESS_WITH_INFO, а связанное значение SQLSTATE может быть получен путем вызова **SQLGetDiagRec** с *HandleType* из SQL_ HANDLE_DBC и *обрабатывать* из *ConnectionHandle*. В следующей таблице перечислены значения SQLSTATE, обычно возвращаемые **SQLDisconnect** и объясняется каждый из них в контексте этой функции; описания SQLSTATE, возвращаемых диспетчером драйверов предшествует обозначение «(DM)». Возвращается связанный с каждого значения SQLSTATE значение SQL_ERROR, если не указано иное.  

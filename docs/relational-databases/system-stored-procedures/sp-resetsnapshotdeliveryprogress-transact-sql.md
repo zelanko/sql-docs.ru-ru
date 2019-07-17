@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5df7d86b-d343-4d9b-88b1-74429ed092e6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c791fedcd483024c2bc6d564ce3f774fa2fded77
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: cc6205eb5487b89db55488bcdf36fbb036595d57
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530196"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68129651"
 ---
 # <a name="spresetsnapshotdeliveryprogress-transact-sql"></a>sp_resetsnapshotdeliveryprogress (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ sp_resetsnapshotdeliveryprogress [ [ @verbose_level = ] verbose_level ]
 ## <a name="arguments"></a>Аргументы  
 `[ @verbose_level = ] verbose_level` Указывает объем возвращаемых сведений. *verbose_level*— **int**, значение по умолчанию **1**. Значение **1** означает, что ошибка возвращается, если не удается получить необходимые блокировки на **MSsnapshotdeliveryprogress** таблицы, и **0** означает, что никакие ошибки не возвращаются.  
   
-`[ @drop_table = ] 'drop_table'` Является ли удалить или усечь таблицу, содержащую сведения о ходе выполнения моментального снимка. *drop_table* — **nvarchar(5)**, значение по умолчанию **FALSE**. FALSE означает, что таблица усекается, а TRUE означает, что таблица удаляется.  
+`[ @drop_table = ] 'drop_table'` Является ли удалить или усечь таблицу, содержащую сведения о ходе выполнения моментального снимка. *drop_table* — **nvarchar(5)** , значение по умолчанию **FALSE**. FALSE означает, что таблица усекается, а TRUE означает, что таблица удаляется.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  

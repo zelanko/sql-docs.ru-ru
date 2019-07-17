@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 07c803ca-299a-42c5-ba02-360b9631d15f
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1eb410d83afcc15274a271369117a46a489fbcde
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: dff71f35374df8988e73b958c8b4d476c28b8fbf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660393"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68064026"
 ---
 # <a name="fetching-a-single-row-with-irow"></a>Выборка одной строки при помощи интерфейса IRow
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "51660393"
 
   **IRow** реализацию в интерфейса [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщика OLE DB для собственного клиента была упрощена с целью повышения производительности. Интерфейс **IRow** предоставляет прямой доступ к столбцам одного объекта, представляющего собой строку. Если заранее известно, что результатом выполнения команды будет ровно одна строка, **IRow** даст возможность получить столбцы этой строки. Если в результирующий набор входит несколько строк, интерфейс **IRow** предоставит доступ только к первой.  
   
- Реализация интерфейса **IRow** не позволяет перемещаться по строке. Каждый столбец в строке осуществляется только один раз с одним исключением: столбец может осуществляться один раз для выяснения его размера и повторно для получения данных.  
+ Реализация интерфейса **IRow** не позволяет перемещаться по строке. Каждый столбец в строке осуществляется только один раз с одним исключением: Столбец может осуществляться один раз для выяснения его размера и повторно для получения данных.  
   
 > [!NOTE]  
 >  Метод **IRow::Open** поддерживает открытие только объектов типа DBGUID_STREAM или DBGUID_NULL.  

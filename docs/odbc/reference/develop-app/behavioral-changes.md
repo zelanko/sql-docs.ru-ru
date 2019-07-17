@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a17ae701-6ab6-4eaf-9e46-d3b9cd0a3a67
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: abe670570dd2219247da0c70b2b62e1de4e60341
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fc9f8dcc3782204c8bf1c9add1200e451edcf127
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63181761"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103867"
 ---
 # <a name="behavioral-changes"></a>Изменения в поведении
 Изменения поведения являются эти изменения, для которого *синтаксис* интерфейса остается тем же, но *семантику* были изменены. Чтобы эти изменения, функциональные возможности, используемые в ODBC 2. *x* ведет себя иначе, чем те же функциональные возможности в ODBC 3. *x*.  

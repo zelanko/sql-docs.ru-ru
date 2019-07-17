@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 54f36b46f75bf943ecf08aafd93a6b861c2da90a
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: b90fe62de358c226fba4b3b4a26f941c75ce5a47
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538586"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68095949"
 ---
 # <a name="sptracesetevent-transact-sql"></a>Хранимая процедура sp_trace_setevent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -206,18 +205,18 @@ sp_trace_setevent [ @traceid = ] trace_id
 |177|Audit Server Principal Management Event|Возникает при создании, изменении и удалении участников [системы безопасности] на уровне сервера.|  
 |178|Audit Database Operation Event|Возникает при таких операциях базы данных, как уведомление запроса контрольной точки или подписки.|  
 |180|Audit Database Object Access Event|Возникает при доступе к таким объектам базы данных, как схема.|  
-|181|События класса TM: Begin Tran starting|Возникает при запуске запроса BEGIN TRANSACTION.|  
-|182|События класса TM: Begin Tran completed|Возникает при завершении запроса BEGIN TRANSACTION.|  
-|183|События класса TM: Promote Tran starting|Возникает при запуске запроса PROMOTE TRANSACTION.|  
-|184|События класса TM: Promote Tran completed|Возникает при завершении запроса PROMOTE TRANSACTION.|  
-|185|События класса TM: Commit Tran starting|Возникает при запуске запроса COMMIT TRANSACTION.|  
-|186|События класса TM: Commit Tran completed|Возникает при завершении запроса COMMIT TRANSACTION.|  
-|187|События класса TM: Rollback Tran starting|Возникает при запуске запроса ROLLBACK TRANSACTION.|  
-|188|События класса TM: Rollback Tran completed|Возникает при завершении запроса ROLLBACK TRANSACTION.|  
+|181|TM. BEGIN Tran starting|Возникает при запуске запроса BEGIN TRANSACTION.|  
+|182|TM. BEGIN Tran завершена|Возникает при завершении запроса BEGIN TRANSACTION.|  
+|183|TM. Promote Tran starting|Возникает при запуске запроса PROMOTE TRANSACTION.|  
+|184|TM. Promote Tran завершена|Возникает при завершении запроса PROMOTE TRANSACTION.|  
+|185|TM. COMMIT Tran starting|Возникает при запуске запроса COMMIT TRANSACTION.|  
+|186|TM. COMMIT Tran завершена|Возникает при завершении запроса COMMIT TRANSACTION.|  
+|187|TM. ROLLBACK Tran starting|Возникает при запуске запроса ROLLBACK TRANSACTION.|  
+|188|TM. ROLLBACK Tran завершена|Возникает при завершении запроса ROLLBACK TRANSACTION.|  
 |189|Lock: Timeout (timeout > 0)|Возникает при истечении времени ожидания запроса на блокировку ресурса, например страницы.|  
-|190|Класс событий Progress Report: Online Index Operation|Сообщает о ходе выполнения операции построения в сети индекса при работающем процессе построения.|  
-|191|События класса TM: Save Tran starting|Возникает при запуске запроса SAVE TRANSACTION.|  
-|192|События класса TM: Save Tran completed|Возникает при завершении запроса SAVE TRANSACTION.|  
+|190|Progress Report: Операции с индексами в сети|Сообщает о ходе выполнения операции построения в сети индекса при работающем процессе построения.|  
+|191|TM. Сохранить Tran starting|Возникает при запуске запроса SAVE TRANSACTION.|  
+|192|TM. Save Tran завершена|Возникает при завершении запроса SAVE TRANSACTION.|  
 |193|Background Job Error|Возникает при аварийном завершении фонового задания.|  
 |194|OLEDB Provider Information|Возникает, если запускается распределенный запрос, который собирает сведения, относящиеся к соединению поставщика.|  
 |195|Mount Tape|Возникает при получении запроса на монтирование ленты.|  
@@ -315,7 +314,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
  Если *на* присваивается **0**, и *column_id* имеет значение NULL, то событие выключается OFF и все столбцы очищаются. Если *column_id* не равно null, то столбец выключается OFF.  
   
- В этой таблице показано взаимодействие между **@on** и **@columnid**.  
+ В этой таблице показано взаимодействие между **@on** и **@columnid** .  
   
 |@on|@columnid|Результат|  
 |---------|---------------|------------|  

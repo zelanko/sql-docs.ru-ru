@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: e2fdf842-5e4c-46ca-bb21-4625c3324f28
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b1d1a55d3b417ff7a0a673bda8d289a72d7c1cb1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 578c85331a65c15cb25b5d9b75b7156ab509e910
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63312854"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036410"
 ---
 # <a name="long-data-and-sqlsetpos-and-sqlbulkoperations"></a>Данные типа Long Data и функции SQLSetPos и SQLBulkOperations
 Как и в случае с параметрами в инструкции SQL, могут отправляться данные большой длины, при обновлении строки со **SQLBulkOperations** или **SQLSetPos** или при вставке строк с **SQLBulkOperations**. Данные отправляются в части, и в нескольких вызовах **SQLPutData**. Столбцы, для которых данные отправляются во время выполнения, называются *столбцов данных времени выполнения*.  

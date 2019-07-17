@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5ef1fbf7-c03d-4488-9ab2-64aae296fa4f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 13f48722b940c26cda8b29258f16f641f74d15e9
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 751f99cad3a2064dce366a90905918075cb697a7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531896"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056477"
 ---
 # <a name="spdropmergearticle-transact-sql"></a>sp_dropmergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ sp_dropmergearticle [ @publication= ] 'publication'
   
 `[ @ignore_distributor = ] ignore_distributor` Указывает, выполняется ли данная хранимая процедура без подключения к распространителю. *ignore_distributor* — **бит**, значение по умолчанию **0**.  
   
-`[ @reserved = ] reserved` Зарезервировано для использования в будущем. *зарезервированные* — **nvarchar(20)**, значение по умолчанию NULL.  
+`[ @reserved = ] reserved` Зарезервировано для использования в будущем. *зарезервированные* — **nvarchar(20)** , значение по умолчанию NULL.  
   
 `[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Включает или отключает возможность наличия недействительных моментальных снимков. *подписки потребуют* — **бит**, значение по умолчанию **0**.  
   

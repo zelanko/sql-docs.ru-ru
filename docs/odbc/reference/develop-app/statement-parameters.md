@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 58d5b166-2578-4699-a560-1f1e6d86c49a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b366ddd7a665112e6b40b814b13037a517d623a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0f3aad1537475e288cff06725b5dbd0fe2383924
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63149364"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107245"
 ---
 # <a name="statement-parameters"></a>Параметры инструкции
 Объект *параметр* — это переменная в инструкции SQL. Например предположим, что части таблицы содержит столбцы с именами PartID, описание и цена. Для добавления компонента без параметров потребует составить инструкцию SQL, такие как:  

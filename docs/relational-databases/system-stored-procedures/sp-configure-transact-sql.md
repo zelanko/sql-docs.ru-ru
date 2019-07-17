@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: d18b251d-b37a-4f5f-b50c-502d689594c8
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 23b75beb0782fc0a13155d12890cbe3a620e1733
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 8b36fffa5c1999033f0cc1902eda9c2cb4ba61d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530246"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061799"
 ---
 # <a name="spconfigure-transact-sql"></a>sp_configure (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-pdw-md.md)]
@@ -61,7 +60,7 @@ RECONFIGURE
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @configname = ] 'option_name'` — Имя параметра конфигурации. Аргумент*option_name* имеет тип **varchar(35)**, значение по умолчанию — NULL. Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] распознает любую уникальную строку, являющуюся частью имени конфигурации. Если этот параметр отсутствует, возвращается список всех параметров.  
+`[ @configname = ] 'option_name'` — Имя параметра конфигурации. Аргумент*option_name* имеет тип **varchar(35)** , значение по умолчанию — NULL. Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] распознает любую уникальную строку, являющуюся частью имени конфигурации. Если этот параметр отсутствует, возвращается список всех параметров.  
   
  Сведения о доступных параметрах конфигурации и их значениях см. в разделе [параметры конфигурации сервера &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
@@ -98,7 +97,7 @@ RECONFIGURE
   
  Инструкция RECONFIGURE выполняет динамическое обновление некоторых параметров; для обновления других параметров необходимо остановить и перезапустить сервер. Например **мин. памяти сервера** и **Макс. памяти сервера** параметры памяти сервера динамически обновляются в [!INCLUDE[ssDE](../../includes/ssde-md.md)]; таким образом, их можно изменить без перезапуска сервера. В отличие от этого изменения активного значения из **коэффициент заполнения** необходим перезапуск [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
- После выполнения инструкции RECONFIGURE для параметра конфигурации, вы увидите параметр обновлялся ли динамически, выполнив **sp_configure "***option_name***"**. Значения в **run_value** и **config_value** столбцов должны совпадать и для параметра обновляется динамически. Можно также проверить, чтобы увидеть, какие параметры обновляются динамически, просмотрев **is_dynamic** столбец **sys.configurations** представления каталога.  
+ После выполнения инструкции RECONFIGURE для параметра конфигурации, вы увидите параметр обновлялся ли динамически, выполнив **sp_configure "***option_name***"** . Значения в **run_value** и **config_value** столбцов должны совпадать и для параметра обновляется динамически. Можно также проверить, чтобы увидеть, какие параметры обновляются динамически, просмотрев **is_dynamic** столбец **sys.configurations** представления каталога.  
   
 > [!NOTE]  
 >  Если заданное *значение* слишком велико для параметра, **run_value** столбец отражен тот факт, [!INCLUDE[ssDE](../../includes/ssde-md.md)] установлено динамической памяти, вместо того чтобы использовать это параметр, который не является допустимым.  
@@ -124,7 +123,7 @@ GO
 EXEC sp_configure 'show advanced option', '1';  
 ```  
   
- Так выглядит ответное сообщение: Параметр конфигурации Show Advanced Options изменил значение 0 на значение 1. Выполните инструкцию RECONFIGURE для установки.  
+ Так выглядит ответное сообщение: «Параметр конфигурации «show advanced options» изменен с 0 на 1. Выполните инструкцию RECONFIGURE для установки.  
   
  Выполните инструкцию `RECONFIGURE` и отобразите все параметры конфигурации:  
   

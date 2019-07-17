@@ -15,20 +15,19 @@ helpviewer_keywords:
 ms.assetid: 0eafba50-02c7-46ca-a439-ef3307b935dc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3cf60ccc0e220850f7a83ed2c25db3795c1e7796
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5b37bdfae5f97a453477768aca39b801c06c0701
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63312488"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68023293"
 ---
 # <a name="positioned-update-and-delete-statements"></a>Инструкции позиционированного обновления и удаления
 Приложения могут обновить или удалить текущую строку в результирующем наборе с позиционированного обновления или инструкция delete. Позиционированного обновления и удаления инструкций поддерживаются некоторые источники данных, но не все из них. Чтобы определить ли располагается источник данных поддерживает операторы обновления и удаления, приложение вызывает **SQLGetInfo** SQL_DYNAMIC_CURSOR_ATTRIBUTES1, SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1, SQL_KEYSET_CURSOR_ Атрибутов1 или SQL_STATIC_CURSOR_ATTRIBUTES1 *InfoType* (в зависимости от типа курсора). Обратите внимание на то, что библиотека курсоров ODBC имитирует позиционированного обновления и удаления.  
   
  Чтобы использовать позиционированного обновления или инструкция delete, приложение должно создать результирующий набор с **ВЫБЕРИТЕ для обновления** инструкции. Используется следующий синтаксис этого оператора:  
   
- **SELECT** [**ALL** &#124; **DISTINCT**] *select-list*  
+ **ВЫБЕРИТЕ** [**все** &#124; **DISTINCT**] *список выбора*  
   
  **ИЗ** *таблицы список ссылок*  
   
@@ -40,9 +39,9 @@ ms.locfileid: "63312488"
   
  **ОБНОВЛЕНИЕ** *имя таблицы*  
   
- **SET** *column-identifier* **=** {*expression* &#124; **NULL**}  
+ **ЗАДАЙТЕ** *идентификатор столбца* **=** {*выражение* &#124; **NULL**}  
   
- [ **,** *column-identifier* **=** {*expression* &#124; **NULL**}]...  
+ [ **,** *идентификатор столбца* **=** {*выражение* &#124; **NULL**}]...  
   
  **WHERE CURRENT OF** *имя курсора*  
   

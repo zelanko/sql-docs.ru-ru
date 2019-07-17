@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1ca622b2-55d8-4666-b80a-8d9791cd3d3b
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: ad27017466429bba36b062a86ed4c39ff1293885
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ea6081cb68d084bf51132824a143fc6fdd544399
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62705871"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028881"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-sybase-to-sql"></a>Команды меню и другие сочетания клавиш (SybaseToSQL)
 В следующих разделах описаны сочетания клавиш для доступа к командам меню и другие сочетания клавиш, используемые в различных диалоговых окнах из SSMA для Sybase приложения.  

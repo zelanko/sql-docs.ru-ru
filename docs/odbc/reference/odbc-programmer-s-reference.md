@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b33c3c43-ae66-44a3-be17-9cd82624dd96
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c83a7de609d200da2957a65b9325d031eda49780
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fd729956ee7bb1fccf7a8fceb7a435042df4df7e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63273041"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111196"
 ---
 # <a name="odbc-programmer39s-reference"></a>Программированию ODBC&#39;Справочник
 *Справочник по программированию ODBC* содержит следующие разделы.  

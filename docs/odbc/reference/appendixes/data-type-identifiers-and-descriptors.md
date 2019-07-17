@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f0077c9b-8eb2-4b5f-8c4c-7436fdef37ab
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ec1d8f0a79f9bcd08fc74bc9d5e7fd52da4a2709
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 748f2452d20b618ae0011e2e1ac4e24af098ac06
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63241410"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019055"
 ---
 # <a name="data-type-identifiers-and-descriptors"></a>Идентификаторы и дескрипторы типа данных
 Типы данных перечислены в [типы данных SQL](../../../odbc/reference/appendixes/sql-data-types.md) и [типы данных C](../../../odbc/reference/appendixes/c-data-types.md) приведенными ранее в этом приложении являются типами «краткое» данных: Каждый идентификатор ссылается на один тип данных. Имеется однозначное соответствие между идентификатором и типом данных. Дескрипторы, однако сделать не в всегда использовать одно значение для идентификации типов данных. В некоторых случаях они используют, типом данных «verbose» и тип дополнительный код. Для всех типов данных, за исключением типов данных даты и времени и интервал идентификатор подробного совпадает со значением идентификатора тип сокращения, и значение SQL_DESC_DATETIME_INTERVAL_CODE равно 0. Для типов данных даты и времени и интервал тем не менее, типом verbose (SQL_DATETIME или SQL_INTERVAL) хранится в SQL_DESC_TYPE тип сокращения хранится в SQL_DESC_CONCISE_TYPE и дополнительный код для каждого краткого типа хранятся в SQL_DESC_DATETIME_INTERVAL_CODE. Настройка одного из этих полей влияет на остальные. Дополнительные сведения об этих полях см. в разделе [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md) описание функции.  

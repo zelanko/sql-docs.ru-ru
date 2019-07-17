@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 89f846a3-001d-496a-9843-ac9c38dc1762
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a3ecee500204303dfcbcd8e179b9cb9cb0a94bae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9ca64355a80ce8892f0ea0494e165d934d8d7a88
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63032919"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68057088"
 ---
 # <a name="rules-for-conversions"></a>Правила преобразования
 Правила в этом разделе, применяются для преобразования, включающие числовые литералы. В рамках этих правил применяются следующие термины:  
@@ -76,7 +75,7 @@ ms.locfileid: "63032919"
   
     -   Если NS меньше 0, дайте Y быть результатом:  
   
-         "-" &AMP;#124; &AMP;#124; YP  
+         "-" &#124; &#124; YP  
   
          где "&#124;&#124;" — это оператор объединения строк.  
   

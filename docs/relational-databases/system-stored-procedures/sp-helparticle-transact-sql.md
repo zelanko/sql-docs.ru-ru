@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9c4a1a88-56f1-45a0-890c-941b8e0f0799
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 43eada100fb1de531c0d16082bdf0977e479ccfb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cffdecba62283e3fc404c3630866467bc3a2b1c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63017805"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084994"
 ---
 # <a name="sphelparticle-transact-sql"></a>sp_helparticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +66,7 @@ sp_helparticle [ @publication = ] 'publication'
 |**type**|**smallint**|Тип статьи:<br /><br /> **1** = на основе журнала.<br /><br /> **3** = на основе журнала с ручным фильтром.<br /><br /> **5** = на основе журнала с ручным просмотром.<br /><br /> **7** = на основе журнала с ручным фильтром и ручным просмотром.<br /><br /> **8** = выполнение хранимой процедуры.<br /><br /> **24** = Выполнение сериализуемой хранимой процедуры.<br /><br /> **32** = хранимая процедура (только схема).<br /><br /> **64** = представление (только схема).<br /><br /> **96** = Агрегатная функция (только схема).<br /><br /> **128** = функция (только схема).<br /><br /> **257** = основанной на журнале индексированного представления.<br /><br /> **259** = основанной на журнале индексированного представления с фильтрацией вручную.<br /><br /> **261** = основанной на журнале индексированного представления с представлением вручную.<br /><br /> **263** = основанной на журнале индексированного представления с фильтрацией вручную и представлением вручную.<br /><br /> **320** = индексированное представление (только схема).<br /><br />|  
 |**status**|**tinyint**|Может быть [& (побитовое и)](../../t-sql/language-elements/bitwise-and-transact-sql.md) результат одного или более свойств статьи:<br /><br /> **0x00** = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> **0x01** = статья активна.<br /><br /> **0x08** = включить имя столбца в инструкции insert.<br /><br /> **0x16** = использовать параметризованные инструкции.<br /><br /> **0x32** = использовать параметризованные инструкции и включить имя столбца в инструкции insert.|  
 |**фильтр**|**nvarchar(257)**|Хранимая процедура, используемая для горизонтальной фильтрации таблиц. Данная хранимая процедура должна быть создана с помощью предложения FOR REPLICATION.|  
-|**Описание**|**nvarchar(255)**|Описание статьи.|  
+|**description**|**nvarchar(255)**|Описание статьи.|  
 |**insert_command**|**nvarchar(255)**|Тип команды репликации, используемый при репликационной вставке в статьи таблицы. Дополнительные сведения см. в статье [Указание способа распространения изменений для статей транзакций](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).|  
 |**update_command**|**nvarchar(255)**|Тип команды репликации, используемый при репликационном обновлении статей таблицы. Дополнительные сведения см. в статье [Указание способа распространения изменений для статей транзакций](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).|  
 |**delete_command**|**nvarchar(255)**|Тип команды репликации, используемый при репликационном удалении в статьях таблицы. Дополнительные сведения см. в статье [Указание способа распространения изменений для статей транзакций](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).|  

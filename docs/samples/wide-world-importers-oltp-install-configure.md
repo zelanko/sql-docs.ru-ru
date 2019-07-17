@@ -9,13 +9,12 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c31c6c2071d276da9b3ab0e498a090659ba589a7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 6fc303892fdefda350a2bb6513a71226264e50fe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673483"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067675"
 ---
 # <a name="installation-and-configuration"></a>Установка и настройка
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -76,7 +75,7 @@ ms.locfileid: "51673483"
 
 ### <a name="sql-server-audit"></a>подсистема аудита SQL Server
 
-Применяется к: SQL Server
+Применимо для следующих объектов: SQL Server
 
 Включение аудита в SQL Server требуется сервер конфигурации. Чтобы Подсистема аудита SQL Server для образца WideWorldImporters, выполните следующую инструкцию в базе данных:
 
@@ -86,7 +85,7 @@ ms.locfileid: "51673483"
 
 ### <a name="row-level-security"></a>Безопасность на уровне строк
 
-Применяется к: база данных Azure SQL
+Применимо для следующих объектов: База данных SQL Azure
 
 Безопасность на уровне строк не включена по умолчанию в bacpac-файл для загрузки из WideWorldImporters. Чтобы включить безопасность на уровне строк в базе данных, выполните следующую хранимую процедуру:
 

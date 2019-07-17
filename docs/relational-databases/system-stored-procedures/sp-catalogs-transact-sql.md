@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ebb29ee2-be65-4e09-9c53-e3c6d12633e1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 78a7dc76bb4d37558b061b6b13b2aef16ab26166
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0844001016f67d227b4612176b2804dcda0a3d29
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62994951"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68045938"
 ---
 # <a name="spcatalogs-transact-sql"></a>sp_catalogs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,8 +45,8 @@ sp_catalogs [ @server_name = ] 'linked_svr'
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**Catalog_name**|**nvarchar(** 128 **)**|Имя каталога|  
-|**Описание**|**nvarchar(** 4000 **)**|Описание каталога|  
+|**Catalog_name**|**nvarchar (** 128 **)**|Имя каталога|  
+|**Описание**|**nvarchar (** 4000 **)**|Описание каталога|  
   
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение SELECT для схемы.  

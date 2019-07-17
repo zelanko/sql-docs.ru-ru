@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e02e5f55032f7a5d4e11e1ee4c908e84a83e00f8
-ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58618291"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68188290"
 ---
 # <a name="custom-reports-in-management-studio"></a>Пользовательские отчеты в среде Management Studio
   Во многих узлах обозревателя объектов в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] отображается набор стандартных отчетов, созданных в [!INCLUDE[msCoName](../../includes/msconame-md.md)]. В этих отчетах сведены все обычно запрашиваемые данные о серверах. Начиная с версии [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] с пакетом обновления 2 (SP2), администраторы могут запускать настраиваемые отчеты, созданные в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] , из среды [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  

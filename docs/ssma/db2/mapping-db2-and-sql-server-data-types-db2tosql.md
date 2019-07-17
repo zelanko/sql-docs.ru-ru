@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e7e939a8-5e76-4509-beaf-5acd1cab505e
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 52322c9b3bf9d7b795458e379f5a8db65fcdbdee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1e9baab08f4295b2c51fd942f6153cc9425dd958
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63298709"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68141011"
 ---
 # <a name="mapping-db2-and-sql-server-data-types-db2tosql"></a>Сопоставление типов данных SQL Server (DB2ToSQL) и DB2
 Типы базы данных DB2 отличаются от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типы базы данных. При преобразовании объектов базы данных DB2 для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] объектов, необходимо указать способ сопоставления типов данных из DB2 в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Вы можете принять сопоставления типов данных по умолчанию, или можно настроить сопоставления, как показано в следующих разделах.  

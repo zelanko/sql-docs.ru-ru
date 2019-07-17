@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0a07b93ccdaf5512836db1c3474ad6efa3656997
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777886"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68212072"
 ---
 # <a name="specify-data-type-mappings-for-an-oracle-publisher"></a>Указание сопоставления типов данных для издателя Oracle
   В данном разделе описывается указание сопоставления типов данных для издателя Oracle в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Хотя в списке для издателей Oracle имеется набор сопоставлений типов данных, для отдельных публикаций может потребоваться создание дополнительных сопоставлений.  
@@ -33,7 +33,7 @@ ms.locfileid: "52777886"
      [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
- Укажите сопоставления типов данных на вкладке **Сопоставление данных** диалогового окна **Свойства статьи — \<статья>**. Она доступно на странице **Статьи** мастера создания публикаций и в диалоговом окне **Свойства публикации — \<публикация>**. Дополнительные сведения об использовании мастера и доступе к этому диалоговому окну см. в статьях [Создание публикации из базы данных Oracle](create-a-publication-from-an-oracle-database.md) и [Просмотр и изменение свойств публикации](view-and-modify-publication-properties.md).  
+ Укажите сопоставления типов данных на вкладке **Сопоставление данных** диалогового окна **Свойства статьи — \<статья>** . Она доступно на странице **Статьи** мастера создания публикаций и в диалоговом окне **Свойства публикации — \<публикация>** . Дополнительные сведения об использовании мастера и доступе к этому диалоговому окну см. в статьях [Создание публикации из базы данных Oracle](create-a-publication-from-an-oracle-database.md) и [Просмотр и изменение свойств публикации](view-and-modify-publication-properties.md).  
   
 #### <a name="to-specify-a-data-type-mapping"></a>Указание сопоставления типов данных  
   
@@ -56,25 +56,25 @@ ms.locfileid: "52777886"
   
 1.  Если публикация Oracle не существует, ее необходимо создать.  
   
-2.  На распространителе выполните хранимую процедуру [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql). В параметре **@use_default_datatypes** укажите значение **@use_default_datatypes**. Дополнительные сведения см. в статье [определить статью](define-an-article.md).  
+2.  На распространителе выполните хранимую процедуру [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql). В параметре **@use_default_datatypes** укажите значение **@use_default_datatypes** . Дополнительные сведения см. в статье [определить статью](define-an-article.md).  
   
 3.  Чтобы просмотреть существующие сопоставления для столбца в опубликованной статье, выполните хранимую процедуру [sp_helparticlecolumns](/sql/relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql) .  
   
-4.  На распространителе выполните хранимую процедуру [sp_changearticlecolumndatatype](/sql/relational-databases/system-stored-procedures/sp-changearticlecolumndatatype-transact-sql). Чтобы определить опубликованный столбец, укажите имя издателя Oracle в параметре **@publisher**и задайте значения параметров **@publication**, **@article**и **@column** . Укажите имя типа данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , сопоставляемого с типом **@type**и задайте значения параметров **@length**, **@precision**и **@scale**.  
+4.  На распространителе выполните хранимую процедуру [sp_changearticlecolumndatatype](/sql/relational-databases/system-stored-procedures/sp-changearticlecolumndatatype-transact-sql). Чтобы определить опубликованный столбец, укажите имя издателя Oracle в параметре **@publisher** и задайте значения параметров **@publication** , **@article** и **@column** . Укажите имя типа данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , сопоставляемого с типом **@type** и задайте значения параметров **@length** , **@precision** и **@scale** .  
   
 5.  На распространителе выполните хранимую процедуру [sp_articleview](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql). Она создаст представление, используемое для создания моментального снимка из публикации Oracle.  
   
 #### <a name="to-specify-a-mapping-as-the-default-mapping-for-a-data-type"></a>Назначение для типа данных сопоставления по умолчанию  
   
-1.  (Необязательно) На распространителе в любой базе данных выполните хранимую процедуру [sp_getdefaultdatatypemapping](/sql/relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql). Укажите значения параметров **@source_dbms**, **@source_type**, **@destination_dbms**, **@destination_version**и других параметров, необходимых для идентификации базы данных-источника. Сведения о текущем сопоставлении типа данных в целевой базе данных возвращаются в выходных параметрах.  
+1.  (Необязательно) На распространителе в любой базе данных выполните хранимую процедуру [sp_getdefaultdatatypemapping](/sql/relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql). Укажите значения параметров **@source_dbms** , **@source_type** , **@destination_dbms** , **@destination_version** и других параметров, необходимых для идентификации базы данных-источника. Сведения о текущем сопоставлении типа данных в целевой базе данных возвращаются в выходных параметрах.  
   
 2.  На распространителе в любой базе данных выполните хранимую процедуру [sp_helpdatatypemap](/sql/relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql)(необязательно). Укажите значения параметров **@source_dbms** и других параметров, необходимых для фильтрации результирующего набора. В результирующем наборе просмотрите значение параметра **mapping_id** для текущего сопоставления.  
   
 3.  На распространителе в любой базе данных выполните хранимую процедуру [sp_setdefaultdatatypemapping](/sql/relational-databases/system-stored-procedures/sp-setdefaultdatatypemapping-transact-sql)(необязательно).  
   
-    -   Если известно необходимое значение параметра **mapping_id** , полученное на шаге 2, укажите его в параметре **@mapping_id**.  
+    -   Если известно необходимое значение параметра **mapping_id** , полученное на шаге 2, укажите его в параметре **@mapping_id** .  
   
-    -   Если значение **mapping_id**неизвестно, то необходимо указать значения параметров **@source_dbms**, **@source_type**, **@destination_dbms**, **@destination_type**и других параметров, необходимых для идентификации существующего сопоставления.  
+    -   Если значение **mapping_id**неизвестно, то необходимо указать значения параметров **@source_dbms** , **@source_type** , **@destination_dbms** , **@destination_type** и других параметров, необходимых для идентификации существующего сопоставления.  
   
 #### <a name="to-find-valid-data-types-for-a-given-oracle-data-type"></a>Определение допустимых типов данных, соответствующих типу данных Oracle  
   

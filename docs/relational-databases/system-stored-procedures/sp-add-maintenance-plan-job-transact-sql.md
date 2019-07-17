@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7205855c-964f-4f55-bf75-39a55f6fe7bd
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1f941269d1e42e1adc09dce2a6937b900e0aaa13
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: ba27f90c8d2fc4c7e174333080815d56f90e48c5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54123484"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091922"
 ---
 # <a name="spaddmaintenanceplanjob-transact-sql"></a>sp_add_maintenance_plan_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,11 +44,9 @@ sp_add_maintenance_plan_job [ @plan_id = ] 'plan_id' , [ @job_id = ] 'job_id'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@plan_id =**] **"**_plan_id_**"**  
- Указывает идентификатор плана обслуживания. *plan_id* — **uniqueidentifier**, и должен быть допустимым идентификатором.  
+`[ @plan_id = ] 'plan_id'` Указывает идентификатор плана обслуживания. *plan_id* — **uniqueidentifier**, и должен быть допустимым идентификатором.  
   
- [  **@job_id =**] **"**_job_id_**"**  
- Указывает идентификатор задания, с которым связывается план обслуживания. *job_id* — **uniqueidentifier**, и должен быть допустимым идентификатором. Для создания задания или заданий выполните **sp_add_job**, или с помощью SQL Server Management Studio.  
+`[ @job_id = ] 'job_id'` Указывает идентификатор задания нужно связать с планом обслуживания. *job_id* — **uniqueidentifier**, и должен быть допустимым идентификатором. Для создания задания или заданий выполните **sp_add_job**, или с помощью SQL Server Management Studio.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  

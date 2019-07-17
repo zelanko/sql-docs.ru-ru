@@ -1,5 +1,5 @@
 ---
-title: Предоставление настраиваемого доступа к данным измерений (службы Analysis Services) | Документы Microsoft
+title: Предоставление настраиваемого доступа к данным измерений (службы Analysis Services) | Документация Майкрософт
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: eb93b4aeeaae9d659a225763286fc15a7d9f52a3
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024731"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208859"
 ---
 # <a name="grant-custom-access-to-dimension-data-analysis-services"></a>Предоставление настраиваемого доступа к данным измерений (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "34024731"
 > [!NOTE]  
 >  Следующие инструкции предполагают наличие клиентского подключения, выдающего запросы с многомерными выражениями. Если клиент использует DAX, например Power View в Power BI, безопасность измерения в результатах запроса незаметна. Дополнительные сведения см. в разделе [Основные сведения о Power View для многомерных моделей](understanding-power-view-for-multidimensional-models.md) .
       
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
  Не все меры или элементы измерения можно использовать в сценариях настраиваемого доступа. Если роль ограничивает доступ либо к мере или элементу по умолчанию, либо к мерам, являющимся частью выражений меры, то произойдет сбой подключения.  
   
  **Проверка наличия помех безопасности измерений: меры по умолчанию, элементы по умолчанию и меры, используемые в выражениях меры**  
@@ -78,7 +78,7 @@ ms.locfileid: "34024731"
   
  Можно изменить конструктор многомерных выражений для записи многомерного выражения. Дополнительные сведения см. в разделе [Конструктор многомерных выражений (службы Analysis Services — многомерные данные)](http://msdn.microsoft.com/library/fecbf093-65ea-4e1b-b637-f04876f1cb0f). На вкладке **Дополнительно** доступны следующие параметры.  
   
- **Атрибут**  
+ **Attribute**  
  Выберите атрибут, безопасность которого необходимо настроить.  
   
  **Разрешенный набор элементов**  
@@ -117,8 +117,8 @@ ms.locfileid: "34024731"
   
 ## <a name="see-also"></a>См. также  
  [Предоставление разрешений кубу или модели (службы Analysis Services)](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)   
- [Предоставление настраиваемого доступа к данным ячейки &#40;служб Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)   
- [Предоставление разрешений на структуры интеллектуального анализа данных и моделей &#40;служб Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
- [Предоставление разрешений на объект источника данных & #40; Службы Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-data-source-object-analysis-services.md)  
+ [Предоставление настраиваемого доступа к данным ячейки (службы Analysis Services)](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)   
+ [Предоставление разрешений структурам интеллектуального анализа данных и моделям интеллектуального анализа данных (службы Analysis Services)](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
+ [Предоставление разрешений объекту источника данных (службы Analysis Services)](../../analysis-services/multidimensional-models/grant-permissions-on-a-data-source-object-analysis-services.md)  
   
   

@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: d405fb8d-3b02-4327-8d45-f643df7f501a
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a3a0ad02f508aea78faa8f3da80e68f8ea6b3c7b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: 11295f953e2f3e4e237838dfdb158fd01c9fa645
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658092"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68042899"
 ---
 # <a name="changetable-transact-sql"></a>CHANGETABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -67,7 +66,7 @@ CHANGETABLE (
  *значение last_sync_version* следует проверить, чтобы убедиться, что это не слишком старый, так как некоторые или все сведения об изменениях могут быть очищены в соответствии с срока хранения, настроенным для базы данных. Дополнительные сведения см. в разделе [CHANGE_TRACKING_MIN_VALID_VERSION &#40;Transact-SQL&#41; ](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md) и [параметры ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
  ВЕРСИЯ *таблицы*, {< primary_key_values >}  
- Возвращает информацию о последнем изменении указанной строки. Значения первичного ключа должны идентифицировать строку. <primary_key_values> определяет столбцы первичного ключа и указывает значения. Имена первичных ключевых столбцов могут быть указаны в любом порядке.  
+ Возвращает информацию о последнем изменении указанной строки. Значения первичного ключа должны идентифицировать строку. < primary_key_values > определяет столбцы первичного ключа и значения. Имена первичных ключевых столбцов могут быть указаны в любом порядке.  
   
  *Таблица*  
  Пользовательская таблица для получения информации отслеживания изменений. Отслеживание изменений необходимо включить в таблице. Может использоваться имя таблицы, состоящее из одной, двух, трех или четырех частей. Имя таблицы может быть синонимом таблицы.  
@@ -75,7 +74,7 @@ CHANGETABLE (
  *column_name*  
  Указывает одно или несколько имен первичных ключевых столбцов. Несколько имен столбцов могут быть указаны в любом порядке.  
   
- *Value*  
+ *Значение*  
  Значение первичного ключа. При наличии нескольких первичных ключевых столбцов, необходимо указать значения в том же порядке, как столбцы указаны в *column_name* списка.  
   
  [AS] *table_alias* [(*псевдоним_столбца* [,... *n* ])]  

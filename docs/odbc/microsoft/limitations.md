@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: b8d71c2a-23c8-4e9b-b5f7-aca51c5a4721
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9901d2169876930a41956338bb216c1282f7bc71
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5912bf4b09a3acd50ae148f642360642fce23277
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63026836"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054109"
 ---
 # <a name="limitations"></a>Ограничения
 В этом разделе описываются ограничения драйверов ODBC для настольных баз данных, относительно следующих тем:  
   
-|Функции|Инструкции|Предложения, типы и т. д.|  
+|Функции|Операторы|Предложения, типы и т. д.|  
 |---------------|----------------|-------------------------------|  
 |[Агрегатная функция](../../odbc/microsoft/aggregate-function-limitations.md)|[Инструкция ALTER TABLE](../../odbc/microsoft/alter-table-statement-limitations.md)|[Имя столбца](../../odbc/microsoft/column-name-limitations.md)|  
 |[Скалярная функция](../../odbc/microsoft/scalar-function-limitations.md)|[Оператор CALL](../../odbc/microsoft/call-statement-limitations.md)|[Тип данных](../../odbc/microsoft/data-type-limitations.md)|  
