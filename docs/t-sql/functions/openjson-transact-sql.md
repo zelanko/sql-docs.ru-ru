@@ -19,12 +19,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 88c74779b60ae25ea381a2814b06a11b4fdd2e22
-ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
+ms.openlocfilehash: 471b4fac245dcdb1aec537ccd3e8345d99039871
+ms.sourcegitcommit: 9af07bd57b76a34d3447e9e15f8bd3b17709140a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67343857"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67624389"
 ---
 # <a name="openjson-transact-sql"></a>OPENJSON (Transact-SQL)
 
@@ -239,7 +239,10 @@ WITH (
   
      Возвращаются только свойства первого уровня. Если текст JSON имеет неправильный формат, выполнение инструкции завершается с ошибкой.  
 
-2. При вызове OPENJSON с указанием явной схемы в предложении WITH функция возвращает таблицу со схемой, заданной в предложении WITH.  
+2. При вызове OPENJSON с указанием явной схемы в предложении WITH функция возвращает таблицу со схемой, заданной в предложении WITH.
+
+> [!NOTE]  
+> Столбцы **Key**, **Value** и **Type** возвращаются только при использовании OPENJSON со схемой по умолчанию. Они недоступны с явной схемой.
 
 ## <a name="remarks"></a>Remarks  
 

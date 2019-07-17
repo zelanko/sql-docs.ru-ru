@@ -1,6 +1,6 @@
 ---
-title: Распространенные ошибки с прозрачным шифрованием данных (TDE) с помощью управляемых клиентом ключей и способы их устранения в Azure Key Vault (AKV) | Документация Майкрософт
-description: Устранение неполадок в прозрачном шифровании данных (TDE) с конфигурацией Azure Key Vault.
+title: Распространенные ошибки с прозрачным шифрованием данных (TDE) с использованием управляемых клиентом ключей в Azure Key Vault | Документация Майкрософт
+description: Устранение неполадок с прозрачным шифрованием данных (TDE) с использованием конфигурации Azure Key Vault.
 helpviewer_keywords:
 - troublshooting, tde akv
 - tde akv configuration, troubleshooting
@@ -14,114 +14,159 @@ ms.topic: conceptual
 ms.date: 04/26/2019
 ms.author: aliceku
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 1366d0a20ed39b466d1a2f6cb3e84f0f30e17f9f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f963e15d674115029fce78b98ba280fe75da2cd1
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718086"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716666"
 ---
-# <a name="common-errors-and-resolutions-with-transparent-data-encryption-tde-with-customer-managed-keys-in-azure-key-vault-akv"></a>Распространенные ошибки с прозрачным шифрованием данных (TDE) с управляемыми клиентом ключами и способы их устранения в Azure Key Vault (AKV)
+# <a name="common-errors-for-transparent-data-encryption-with-customer-managed-keys-in-azure-key-vault"></a>Распространенные ошибки с прозрачным шифрованием данных (TDE) с использованием управляемых клиентом ключей в Azure Key Vault
 
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md.md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
-Этот подраздел содержит следующие сведения:  
-  
-- Требования  
-- Как определить и устранить наиболее распространенные ошибки
+В статье описаны требования к использованию прозрачного шифрования данных (TDE) с использованием управляемых клиентом ключей в Azure Key Vault и способы определения и устранения распространенных ошибок.
 
 ## <a name="requirements"></a>Требования
-Для устранения неполадок [прозрачного шифрования данных с помощью управляемых пользователем средств защиты TDE в конфигурации AKV](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql#guidelines-for-configuring-tde-with-azure-key-vault) начнем с подтверждения следующих требований:
-- Логический сервер SQL и хранилище ключей должны находиться в одном регионе.
-- Логическое удостоверение сервера SQL, предоставленное Azure Active Directory (APPID в хранилище Azure Key Vault), ограничено клиентом в исходной подписке.  Если сервер был перемещен в другую подписку, удостоверение сервера (APPID) следует создать заново.
-- Хранилище ключей необходимо настроить настройку и запустить; см. сведения о [работоспособности ресурсов Azure](https://docs.microsoft.com/azure/service-health/resource-health-overview), чтобы проверить состояние хранилища ключей, и раздел [Группы действий](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups), чтобы подписаться на уведомления.
-- В сценарии географического аварийного восстановления оба хранилища ключей должны содержать материал ключа для успешной отработки отказа.
-- Логический сервер должен иметь удостоверение Azure Active Directory (AAD) (APPID) для проверки подлинности в хранилище ключей.
-- APPID должен иметь доступ к хранилищу ключей и упаковки, распаковки и получения разрешения на доступ к ключам, которые выбраны в качестве средства защиты TDE.
 
-Большинство проблем, возникающих при использовании прозрачного шифрования данных с AKV, возникает из-за одной из следующих ошибок конфигурации:
+Чтобы устранить неполадки с TDE с использованием средства защиты TDE в Key Vault, необходимо выполнить следующие условия:
 
-### <a name="key-vault-unavailable-or-doesnt-exist"></a>Хранилище ключей недоступно или не существует?
-- Хранилище ключей случайно удалено
-- Брандмауэр хранилища Azure Key Vault запрещает доступ к службам Майкрософт
+- Экземпляр логического сервера SQL и хранилище ключей должны находиться в одном регионе.
+- Удостоверение экземпляра логического сервера SQL, предоставленное Azure Active Directory (AppId в Azure Key Vault), должно быть клиентом в исходной подписке. Если сервер был перемещен в другую подписку из той, в которой он был создан, удостоверение сервера (AppId) нужно создать заново.
+- Хранилище ключей должно быть запущено. Сведения о том, как проверить состояние хранилища ключей, см. в статье о [работоспособности ресурсов Azure](https://docs.microsoft.com/azure/service-health/resource-health-overview). Чтобы зарегистрироваться для получения уведомлений, ознакомьтесь со сведениями о [группах действий](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups).
+- В сценариях геоизбыточного аварийного восстановления оба хранилища ключей должны содержать одинаковый ключ для успешной отработки отказа.
+- Логический сервер должен иметь удостоверение Azure AD (AppId) для аутентификации в хранилище ключей.
+- Для AppId нужно предоставить доступ к хранилищу ключей и разрешение на получение, упаковку и распаковку ключей, которые выбраны в качестве средства защиты TDE.
 
-### <a name="no-permissions-to-access-the-key-vault-or-key-doesnt-exist"></a>Нет разрешения на доступ к хранилищу ключей или ключ не существует?
-- Ключ случайно удален
-- SQL APPID случайно удален
-- SQL был перемещен в другую подписку, которой требуется новый код APPID
-- Разрешения, предоставленные APPID для ключей, недостаточны (упаковка, распаковка, получение доступа)
-- Разрешения для SQL APPID отозваны
+Дополнительные сведения см. в рекомендациях по [настройке TDE с использованием Azure Key Vault](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql#guidelines-for-configuring-tde-with-azure-key-vault).
 
+## <a name="common-misconfigurations"></a>Распространенные неправильные конфигурации
 
-В следующем разделе перечислены действия по устранению неполадок для наиболее распространенных ошибок.
+Большинство проблем, возникающих при использовании TDE с Key Vault, вызваны одной из следующих ошибок конфигурации:
 
+### <a name="the-key-vault-is-unavailable-or-doesnt-exist"></a>Хранилище ключей недоступно или не существует.
 
-## <a name="how-to-identify-and-resolve-the-most-common-errors"></a>Как определить и устранить наиболее распространенные ошибки
+- Хранилище ключей случайно удалено.
+- Брандмауэр разрешает доступ к Azure Key Vault, но запрещает доступ к службам Майкрософт.
 
-## <a name="missing-server-identity"></a>Отсутствует идентификатор сервера
-Сообщение об ошибке. "401 AzureKeyVaultNoServerIdentity — удостоверение сервера неправильно настроено на сервере. Обратитесь в службу поддержки".
+### <a name="no-permissions-to-access-the-key-vault-or-the-key-doesnt-exist"></a>Нет разрешения на доступ к хранилищу ключей или ключ не существует.
 
-Обнаружение. Чтобы убедиться, что удостоверение было назначено логическому серверу SQL, используйте следующую команду:
+- Ключ случайно удален.
+- Удостоверение AppId экземпляра логического сервера SQL Server случайно удалено.
+- Экземпляр логического сервера SQL Server перемещен в другую подписку. Если логический сервер был перемещен в другую подписку, необходимо создать новое удостоверение AppId.
+- Предоставленные для AppId разрешения использовать ключи являются недостаточными (не позволяют получать, упаковывать и распаковывать ключи).
+- Разрешения для AppId экземпляра логического сервера SQL Server были отозваны.
 
-- [Azure PowerShell Get-AzureRMSqlServer](https://docs.microsoft.com/powershell/module/AzureRM.Sql/Get-AzureRmSqlServer?view=azurermps-6.13.0) 
-- [Azure CLI az-sql-server-show](https://docs.microsoft.com/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-show)
+## <a name="identify-and-resolve-common-errors"></a>Определение и исправление распространенных ошибок
 
-Устранение рисков. Настройте удостоверение Azure Active Directory (Azure AD) (APPID) для логического сервера SQL
+В этом разделе перечислены действия по устранению распространенных ошибок.
 
-Для PowerShell: Используйте команду Set-AzureRmSqlServer с параметром [-AssignIdentity](https://docs.microsoft.com/powershell/module/azurerm.sql/set-azurermsqlserver?view=azurermps-6.13.0) 
+### <a name="missing-server-identity"></a>Отсутствует идентификатор сервера
 
-Для интерфейса командной строки: Используйте команду az sql server update с параметром [--assign_identity](https://docs.microsoft.com/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-update) 
+**Сообщение об ошибке**
 
-На портале Azure перейдите в хранилище ключей и выберите политики доступа:  
- - Используя кнопку "Добавить", добавьте для сервера APPID, созданный на предыдущем шаге. 
- - Назначьте следующие разрешения ключей: Get, Wrap и Unwrap 
+_401 AzureKeyVaultNoServerIdentity. Удостоверение сервера неправильно настроено на сервере. Обратитесь в службу поддержки._
 
-[Дополнительные сведения](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-configure?view=sql-server-2017&viewFallbackFrom=azuresqldb-current#step-1-assign-an-azure-ad-identity-to-your-server)
+**Обнаружение**
+
+Чтобы убедиться, что удостоверение было назначено экземпляру логического сервера SQL Server, используйте следующие командлет или команду:
+
+- Azure PowerShell: [Get-AzureRMSqlServer](https://docs.microsoft.com/powershell/module/AzureRM.Sql/Get-AzureRmSqlServer?view=azurermps-6.13.0) 
+
+- Azure CLI: [az-sql-server-show](https://docs.microsoft.com/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-show)
+
+**Исправление**
+
+Чтобы настроить удостоверение Azure AD (AppId), используйте следующие командлет или команду для экземпляра логического SQL Server:
+
+- Azure PowerShell: [Set-AzureRmSqlServer](https://docs.microsoft.com/powershell/module/azurerm.sql/set-azurermsqlserver?view=azurermps-6.13.0) с параметром `-AssignIdentity`.
+
+- Azure CLI: [az sql server update](https://docs.microsoft.com/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-update) с параметром `--assign_identity`.
+
+На портале Azure перейдите в хранилище ключей и выберите **Политики доступа**. Выполните следующие действия: 
+
+ 1. Нажмите кнопку **Добавить**, чтобы добавить AppId для сервера, созданного на предыдущем шаге. 
+ 1. Назначьте следующие разрешения ключей: Get, Wrap и Unwrap 
+
+Дополнительные сведения см. в руководстве по [назначению серверу удостоверения Azure Active Directory](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-configure?view=sql-server-2017&viewFallbackFrom=azuresqldb-current#step-1-assign-an-azure-ad-identity-to-your-server).
 
 > [!IMPORTANT]
-> Если логический сервер SQL был перемещен в новую подписку после начальной настройки TDE с AKV, то шаг настройки удостоверения AAD следует повторить для создания нового APPID.  Новый код APPID затем следует добавить в хранилище ключей,а также повторно назначить ему правильные разрешения. 
+> Если экземпляр логического сервера SQL Server был перемещен в другую подписку после начальной настройки TDE с Key Vault, шаг настройки удостоверения AAD следует повторить, чтобы создать новое удостоверение AppId. Затем добавьте AppId в хранилище ключей и назначьте правильные разрешения для ключа. 
 >
 
-## <a name="missing-key-vault"></a>Отсутствующее хранилище ключей
-Сообщение об ошибке: "503 AzureKeyVaultConnectionFailed — операцию не удалось завершить на сервере, так как не удалось подключиться к хранилищу Azure Key Vault".
+### <a name="missing-key-vault"></a>Отсутствующее хранилище ключей
 
-Обнаружение. Как определить URI ключа и хранилища ключей 
+**Сообщение об ошибке**
 
-Шаг 1. Для получения URI ключа на определенном логическом сервере SQL используйте следующую команду:
+_503 AzureKeyVaultConnectionFailed. Операцию не удалось завершить на сервере, так как не удалось подключиться к Azure Key Vault._
 
--[Azure PowerShell get-azurermsqlserverkeyvaultkey](https://docs.microsoft.com/powershell/module/azurerm.sql/get-azurermsqlserverkeyvaultkey?view=azurermps-6.13.0)
+**Обнаружение**
 
--[Azure CLI az-sql-server-tde-key-show](https://docs.microsoft.com/cli/azure/sql/server/tde-key?view=azure-cli-latest#az-sql-server-tde-key-show) 
+Чтобы определить URI ключа и хранилище ключей, сделайте следующее:
 
-Шаг 2. Используйте URI ключа для идентификации хранилища ключей
+1. Чтобы получить URI ключа на определенном экземпляре логического сервера SQL Server, используйте следующие командлет или команду:
 
-PowerShell. Можно проверить свойства $MyServerKeyVaultKey для получения сведений о хранилище ключей
+    - Azure PowerShell: [Get-AzureRmSqlServerKeyVaultKey](https://docs.microsoft.com/powershell/module/azurerm.sql/get-azurermsqlserverkeyvaultkey?view=azurermps-6.13.0)
 
-Интерфейс командной строки. Проверьте возвращенное средство защиты шифрования сервера на наличие сведений о хранилище ключей
+    - Azure CLI: [az-sql-server-tde-key-show](https://docs.microsoft.com/cli/azure/sql/server/tde-key?view=azure-cli-latest#az-sql-server-tde-key-show) 
 
-Устранение рисков. Убедитесь, что хранилище ключей доступно
-- Убедитесь, что хранилище ключей доступно для логического сервера SQL
-- Если хранилище ключей находится за брандмауэром, убедитесь, что установлен флажок, разрешающий службам Майкрософт доступ к хранилищу ключей
-- Если хранилище ключей было случайно удалено, настройку следует повторить с самого начала
+1. Используйте URI ключа для идентификации хранилища ключей:
+
+    - Azure PowerShell: можно изучить свойства переменной $MyServerKeyVaultKey, чтобы получить сведения о хранилище ключей.
+
+    - Azure CLI: проверьте полученное средство защиты шифрования сервера на наличие сведений о хранилище ключей.
+
+**Исправление**
+
+Убедитесь, что хранилище ключей доступно:
+
+- Убедитесь, что хранилище ключей доступно и что экземпляр логического сервера SQL Server имеет к нему доступ.
+- Если хранилище ключей защищено брандмауэром, убедитесь, что установлен флажок, разрешающий службам Майкрософт доступ к хранилищу ключей.
+- Если хранилище ключей было случайно удалено, настройку следует повторить с самого начала.
 
 
-## <a name="missing-key"></a>Отсутствует ключ 
-Сообщение об ошибке: "404 ServerKeyNotFound — запрашиваемый ключ сервера не найден в текущей подписке".
-"409 ServerKeyDoesNotExists — ключ сервера не существует".
+### <a name="missing-key"></a>Отсутствует ключ
 
-Обнаружение. Как определить URI ключа и хранилища ключей
-- Определите URI ключа, добавленного к логическому серверу SQL, с использованием командлетов для получения списка ключей из раздела "Отсутствующее хранилище ключей" выше.
+**Сообщения об ошибках**
 
-Устранение рисков. Убедитесь, что средство защиты прозрачного шифрования данных присутствует в AKV
-- Определите хранилище ключей и перейдите к нему на портале Azure
-- Убедитесь, что ключ, указанный по URI ключа, существует
+_404 ServerKeyNotFound. Запрашиваемый ключ сервера не найден в текущей подписке._ 
 
-## <a name="missing-permissions"></a>Отсутствуют разрешения 
-Сообщение об ошибке: "401 AzureKeyVaultMissingPermissions — у сервера отсутствуют необходимые разрешения для Azure Key Vault".
+_409 ServerKeyDoesNotExists. Ключ сервера не существует._
 
-Обнаружение. Как определить URI ключа и хранилища ключей
-- Определите хранилище ключей, используемое логическим сервером SQL, с использованием командлетов из раздела "Отсутствующее хранилище ключей" выше.
+**Обнаружение**
 
-Устранение рисков. Убедитесь, что логический сервер имеет разрешения в хранилище ключей и необходимые разрешения для доступа к ключу.
-- На портале Azure перейдите в хранилище ключей и выберите политики доступа; найдите APPID SQL Server.  
-  - Если APPID отсутствует, добавьте его с помощью кнопки "Добавить". 
-  - Если APPID присутствует, убедитесь, что он имеет следующие основные разрешения: Get, Wrap и Unwrap.
+Чтобы определить URI ключа и хранилище ключей, сделайте следующее:
+
+- Чтобы получить URI ключа, добавленного к экземпляру логического сервера SQL Server, используйте следующие командлет или команду в [отсутствующем хранилище ключей](#missing-key-vault): Эти команды возвращают список ключей.
+
+**Исправление**
+
+Убедитесь, что средство защиты TDE присутствует в Key Vault:
+
+1. Определите хранилище ключей и перейдите к нему на портале Azure.
+1. Убедитесь, что ключ, определенный по URI ключа, присутствует.
+
+### <a name="missing-permissions"></a>Отсутствуют разрешения
+
+**Сообщение об ошибке**
+
+_401 AzureKeyVaultMissingPermissions. У сервера отсутствуют необходимые разрешения для Azure Key Vault._
+
+**Обнаружение**
+
+Чтобы определить URI ключа и хранилище ключей, сделайте следующее: 
+
+- Чтобы определить хранилище ключей, которое использует экземпляр логического сервера SQL Server, используйте следующие командлет или команду в [отсутствующем хранилище ключей](#missing-key-vault).
+
+**Исправление**
+
+Убедитесь, что экземпляр логического сервера SQL Server имеет разрешения в хранилище ключей и необходимые разрешения для доступа к ключу.
+
+- На портале Azure перейдите в хранилище ключей и выберите **Политики доступа**. Найдите AppId экземпляра логического сервера SQL Server.  
+- Если удостоверение AppId присутствует, убедитесь, что оно имеет следующие основные разрешения: Get, Wrap и Unwrap.
+- Если AppId отсутствует, добавьте его с помощью кнопки **Добавить**. 
+
+## <a name="next-steps"></a>Следующие шаги
+
+- Дополнительные сведения см. в рекомендациях по [настройке TDE с использованием Azure Key Vault](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql#guidelines-for-configuring-tde-with-azure-key-vault).
+- См. дополнительные сведения о [работоспособности ресурсов Azure](https://docs.microsoft.com/azure/service-health/resource-health-overview).
+- См. сведения о том, как [назначить серверу удостоверение Azure AD](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-configure?view=sql-server-2017&viewFallbackFrom=azuresqldb-current#step-1-assign-an-azure-ad-identity-to-your-server).

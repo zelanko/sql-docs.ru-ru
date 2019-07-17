@@ -23,12 +23,12 @@ ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5233d1bf98d332187e38f3806a9483fee38355d0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 48b1e9b9b7c2b48736a54e255649c409d3b4bfd2
+ms.sourcegitcommit: 9af07bd57b76a34d3447e9e15f8bd3b17709140a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66506621"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67624577"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "66506621"
   
  Выбор стратегии брандмауэра является более сложной задачей и не сводится лишь к открытию или закрытию портов. При выборе стратегии брандмауэра для предприятия необходимо обязательно рассмотреть все доступные правила и параметры конфигурации. В этой статье не рассматриваются все возможные параметры брандмауэра. Рекомендуется ознакомиться со следующими документами.  
   
- [Руководство по развертыванию брандмауэра Windows ](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security-deployment-guide)    
+ [Руководство по развертыванию брандмауэра Windows](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security-deployment-guide)    
  [Руководство по проектированию для брандмауэра Windows ](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security-design-guide)    
  [Основные сведения об изоляции серверов и доменов](/windows/security/threat-protection/windows-firewall/domain-isolation-policy-design)  
   

@@ -17,12 +17,12 @@ ms.assetid: 9e583a18-5f4a-4054-bfe1-4b2a76630db6
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 7703ad7ce46c9dda59dacbc86ebbd9646b1015cf
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 5ee4fc6502b9d31d9ccade786c5cc0129c61da22
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67584492"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860551"
 ---
 # <a name="compare-execution-plans"></a>Сравнение планов выполнения
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "67584492"
      > [!TIP]
      > Все параметры масштабирования и навигации для планов выполнения работают в режиме сравнения планов. Дополнительные сведения см. в статье [Отображение фактического плана выполнения](../../relational-databases/performance/display-an-actual-execution-plan.md).
 
-5.  Справа в области по умолчанию также откроется окно двойных свойств. Свойства, которые существуют в обоих сравниваемых операторах, но отличаются друг от друга, будут помечены знаком *неравенства* (≠) для удобства.
+5.  Справа в области по умолчанию также откроется окно двойных свойств. Свойства, которые существуют в обоих сравниваемых операторах, но отличаются друг от друга, будут помечены знаком *неравенства* (&ne;) для удобства.
 
     ![Окно двойных свойств](../../relational-databases/performance/media/plancomparison-properties.png "Окно двойных свойств")  
 

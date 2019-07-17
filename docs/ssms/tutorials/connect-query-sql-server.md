@@ -1,10 +1,10 @@
 ---
-title: Подключение к экземпляру SQL Server и выполнение запросов с помощью SQL Server Management Studio (SSMS)
-description: Краткое руководство по подключению к экземпляру SQL Server с помощью SQL Server Management Studio и выполнению базовых запросов T-SQL.
+title: Подключение к экземпляру SQL Server и выполнение запросов с помощью SQL Server Management Studio (SSMS)
+description: Руководство по подключению к экземпляру SQL Server с помощью SQL Server Management Studio и выполнению базовых запросов T-SQL.
 keywords: SQL Server, SSMS, SQL Server Management Studio
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
+manager: jroth
 ms.reviewer: sstein
 ms.topic: quickstart
 ms.prod_service: sql-tools
@@ -12,16 +12,16 @@ ms.prod: sql
 ms.technology: ssms
 ms.custom: ''
 ms.date: 03/13/2018
-ms.openlocfilehash: 62646a7e2b09c4a733dde0ddff9d078cb0a3c958
-ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
+ms.openlocfilehash: 4f3e1b5e03f70aa0d552e89d3ebdd254909d7b2a
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/29/2019
-ms.locfileid: "67469231"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834965"
 ---
-# <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio-ssms"></a>Руководство. Подключение к экземпляру SQL Server и выполнение запросов с помощью SQL Server Management Studio (SSMS) 
+# <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio-ssms"></a>Руководство. Подключение к экземпляру SQL Server и выполнение запросов с помощью SQL Server Management Studio (SSMS)
 
-Это руководство научит вас подключаться к экземпляру SQL Server с использованием SQL Server Management Studio (SSMS) и выполнять некоторые базовые команды Transact-SQL (T-SQL). В статье показано, как выполнять следующие задачи.
+Это руководство научит вас подключаться к экземпляру SQL Server с использованием SQL Server Management Studio (SSMS) и выполнять некоторые базовые команды Transact-SQL (T-SQL). В статье показано, как выполнять следующие задачи:
 
 > [!div class="checklist"]
 > * Подключение к экземпляру SQL Server
@@ -54,9 +54,9 @@ ms.locfileid: "67469231"
     * В поле **Тип сервера** выберите **Ядро СУБД** (обычно это параметр по умолчанию).
     * В поле **Имя сервера** введите имя своего экземпляра SQL Server. (В этой статье используется имя экземпляра SQL2016ST и имя узла NODE5: NODE5\SQL2016ST.) Если вы не знаете, как определить имя экземпляра SQL Server, см. раздел [Дополнительные советы и рекомендации по использованию SSMS](ssms-tricks.md#determine-sql-server-name).
 
-    ![Поле "Имя сервера" с возможностью использовать экземпляр SQL Server](media/connect-query-sql-server/connection2.png)
+    * В поле **Проверка подлинности** выберите **Проверка подлинности Windows**. В этой статье используется проверка подлинности Windows, но поддерживаются также и учетные данные SQL Server. При выборе **Учетных данных SQL** отобразится запрос на ввод имени пользователя и пароля. Дополнительные сведения о типах проверки подлинности см. в разделе [Подключение к серверу (ядро СУБД)](https://docs.microsoft.com/sql/ssms/f1-help/connect-to-server-database-engine).
 
-    * В поле **Проверка подлинности** выберите **Проверка подлинности Windows**. В этой статье используется проверка подлинности Windows, но поддерживаются также и учетные данные SQL Server. При выборе **Учетных данных SQL** у вас запросят имя пользователя и пароль. Дополнительные сведения о типах проверки подлинности см. в разделе [Подключение к серверу (ядро СУБД)](https://docs.microsoft.com/sql/ssms/f1-help/connect-to-server-database-engine).
+    ![Поле "Имя сервера" с возможностью использовать экземпляр SQL Server](media/connect-query-sql-server/connection2.png)
 
     Вы также можете изменить дополнительные параметры подключения, выбрав **Параметры**. Примеры параметров подключения: база данных, к которой вы подключаетесь, время ожидания подключения и сетевой протокол. Эта статья использует во всех параметрах значения по умолчанию.
 
@@ -188,7 +188,7 @@ ms.locfileid: "67469231"
 
 1. Щелкните окно запросов правой кнопкой мыши и выберите **Подключение** > **Изменить подключение**. Снова откроется окно **Подключение к серверу**.
 
-2. Измените сервер, который использует ваш запрос. 
+2. Измените сервер, который использует ваш запрос.
 
    ![Команда "Изменить подключение"](media/connect-query-sql-server/changeconnection.png)
 
@@ -197,8 +197,9 @@ ms.locfileid: "67469231"
 
 ## <a name="next-steps"></a>Следующие шаги
 
-В следующей статье объясняется, как создавать сценарии разных объектов в SQL Server Managment Studio.
+Лучший способ познакомиться с SSMS — это поработать в среде самостоятельно. Эти статьи помогут вам ознакомиться с различными функциями SSMS.  С их помощью вы научитесь работать с компонентами SSMS и легко находить регулярно используемые функции.
 
-Дополнительные сведения см. в следующей статье:
-> [!div class="nextstepaction"]
-> [Следующие шаги](scripting-ssms.md)
+* [Создание скриптов](scripting-ssms.md)
+* [Использование шаблонов в SSMS](../template/templates-ssms.md)
+* [Конфигурация SSMS](ssms-configuration.md)
+* [Дополнительные советы и рекомендации по использованию SSMS](ssms-tricks.md)

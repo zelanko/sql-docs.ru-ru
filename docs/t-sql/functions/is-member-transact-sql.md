@@ -28,17 +28,17 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d45b1d74242476da155e387f8ec00f8e4e23278f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 94ccde1511dc2084574127190dc6f830bfd0a995
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65946979"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716585"
 ---
 # <a name="ismember-transact-sql"></a>IS_MEMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Указывает, является ли текущий пользователь членом указанной группы [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows или роли базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Указывает, является ли текущий пользователь членом указанной группы [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows или роли базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Функция IS_MEMBER не поддерживается для групп Azure Active Directory.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

@@ -1,6 +1,6 @@
 ---
-title: Дополнительные советы и рекомендации по использованию SQL Server Management Studio.
-description: Учебник, в котором приводятся некоторые дополнительные советы и рекомендации по использованию SSMS.
+title: Советы и рекомендации по использованию SQL Server Management Studio (SSMS)
+description: Из этой статьи вы узнаете, как вставлять комментарии в код и удалять их из него, использовать отступы для текста, фильтровать объекты в обозревателе объектов, получать доступ к журналу ошибок SQL Server, а также находить имя экземпляра SQL Server с помощью SQL Server Management Studio.
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: ssms
@@ -8,7 +8,7 @@ ms.prod_service: sql-tools
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: sstein
-manager: craigg
+manager: jroth
 helpviewer_keywords:
 - source controls [SQL Server Management Studio], tutorials
 - Help [SQL Server], SQL Server Management Studio
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - find sql server instance name
 ms.custom: ''
 ms.date: 03/13/2018
-ms.openlocfilehash: 4c6585e8e2c467c6e0a4a288107fd59cae64f84b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c31c8243ef74b69a5fe050e5487911138db76741
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66499423"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860648"
 ---
-# <a name="tutorial-additional-tips-and-tricks-for-using-ssms"></a>Руководство. Дополнительные советы и рекомендации по использованию SSMS
+# <a name="tips-and-tricks-for-using-sql-server-management-studio-ssms"></a>Советы и рекомендации по использованию SQL Server Management Studio (SSMS)
 
-В этом учебнике приводятся некоторые дополнительные советы по использованию SQL Server Management Studio (SSMS). В этой статье показано, как выполнить следующие действия: 
+В этой статье приводятся некоторые советы и рекомендации по использованию SQL Server Management Studio (SSMS). В этой статье показано, как выполнить следующие действия: 
 
 > [!div class="checklist"]
 > * Комментирование и раскомментирование текста на языке Transact-SQL (T-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "66499423"
 
 ## <a name="prerequisites"></a>предварительные требования
 
-Для работы с этим учебником требуется среда SQL Server Management Studio, доступ к SQL Server и база данных AdventureWorks. 
+Чтобы выполнить шаги, приведенные в этой статье, требуются среда SQL Server Management Studio, доступ к SQL Server и база данных AdventureWorks. 
 
 * Установите [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 * Установите выпуск [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
@@ -267,7 +267,7 @@ ms.locfileid: "66499423"
 
 ### <a name="if-youre-connected-to-an-alias-or-availability-group-listener"></a>При подключении к псевдониму или прослушивателю группы доступности
 
-Если вы подключились к псевдониму или прослушивателю группы доступности, то в обозревателе объектов и окне "Свойства" будут указаны сведения о них. В этом случае имя сервера SQL Server может быть недоступно напрямую, и его необходимо запросить: 
+Если вы подключились к псевдониму или прослушивателю группы доступности, то в обозревателе объектов и окне "Свойства" будут указаны сведения о них. В этом случае имя сервера SQL Server может быть недоступно напрямую, и его необходимо запросить:
 
 1. Подключитесь к серверу SQL Server.
 
@@ -282,3 +282,12 @@ ms.locfileid: "66499423"
 4. Просмотрите результаты запроса, чтобы определить имя сервера SQL Server, к которому вы подключены: 
 
     ![Определение имени сервера SQL Server с помощью запроса](media/ssms-tricks/queryservername.png)
+
+## <a name="next-steps"></a>Следующие шаги
+
+Лучший способ познакомиться с SSMS — это поработать в среде самостоятельно. Эти *руководства* и *статьи* помогут вам ознакомиться с различными функциями SSMS.  С их помощью вы научитесь работать с компонентами SSMS и легко находить регулярно используемые функции.
+
+* [Подключение к экземпляру и отправка запросов к нему](connect-query-sql-server.md)
+* [Создание скриптов](scripting-ssms.md)
+* [Использование шаблонов в SSMS](../template/templates-ssms.md)
+* [Конфигурация SSMS](ssms-configuration.md)

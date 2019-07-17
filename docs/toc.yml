@@ -5693,6 +5693,8 @@
           href: dma/dma-migrateonpremsqltosqldb.md
         - name: Перенос учетных данных SQL Server
           href: dma/dma-migrateserverlogins.md
+        - name: "Оценка размещения данных SQL\_Server для проверки готовности Базы данных\_SQL Azure"
+          href: dma/dma-assess-sql-data-estate-to-sqldb.md
         - name: Рекомендации
           href: dma/dma-bestpractices.md
         - name: Объединение отчетов с оценкой

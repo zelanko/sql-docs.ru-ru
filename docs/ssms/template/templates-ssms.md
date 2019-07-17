@@ -9,7 +9,7 @@ ms.prod: sql
 ms.technology: ssms
 ms.prod_service: sql-tools
 ms.reviewer: sstein
-manager: craigg
+manager: jroth
 helpviewer_keywords:
 - templates [SQL Server], SQL Server Management Studio
 - source controls [SQL Server Management Studio], tutorials
@@ -20,12 +20,12 @@ helpviewer_keywords:
 - scripts [SQL Server], SQL Server Management Studio
 ms.custom: ''
 ms.date: 03/13/2018
-ms.openlocfilehash: 30b40d10ec7a4da7df0bfc9e4ba1f3aa6bb68ef5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a634a106704cebd91ce74910de17166c85c6c4de
+ms.sourcegitcommit: 4181429ada1169871c2f4d73d18d2ba013007501
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822944"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67866260"
 ---
 # <a name="use-templates-in-sql-server-management-studio"></a>Использование шаблонов в SQL Server Management Studio
 
@@ -35,8 +35,9 @@ ms.locfileid: "66822944"
 
 Для работы с этим руководством требуется среда SQL Server Management Studio и доступ к SQL Server.
 
-- Установите [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
-- Установите выпуск [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
+* Установите [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+
+* Установите выпуск [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 
 ## <a name="use-template-browser"></a>Использование обозревателя шаблонов
 
@@ -108,15 +109,17 @@ ms.locfileid: "66822944"
 
 5. Щелкните правой кнопкой мыши созданный шаблон и выберите **Изменить**. Откроется новое окно запроса.
 
-6. Введите текст T-SQL, который вы хотите сохранить. 
+6. Введите текст T-SQL, который вы хотите сохранить.
 
 7. В меню **Файл** выберите пункт **Сохранить**.
 
-8. Закройте окно запроса и откройте свой новый настраиваемый шаблон. 
+8. Закройте окно запроса и откройте свой новый настраиваемый шаблон.
 
 ## <a name="next-steps"></a>Следующие шаги
 
-В следующей статье приведены дополнительные советы и рекомендации по использованию SQL Server Management Studio. 
+Лучший способ познакомиться с SSMS — это поработать в среде самостоятельно. Эти *руководства* и *статьи* помогут вам ознакомиться с различными функциями SSMS.  С их помощью вы научитесь работать с компонентами SSMS и легко находить регулярно используемые функции.
 
-> [!div class="nextstepaction"]
-> [Дополнительные советы и рекомендации по использованию SSMS](../tutorials/ssms-tricks.md)
+* [Подключение к экземпляру и отправка запросов к нему](../tutorials/connect-query-sql-server.md)
+* [Создание скриптов](../tutorials/scripting-ssms.md)
+* [Конфигурация SSMS](../tutorials/ssms-configuration.md)
+* [Дополнительные советы и рекомендации по использованию SSMS](../tutorials/ssms-tricks.md)

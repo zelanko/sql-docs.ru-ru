@@ -13,12 +13,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1e400ada65efa69dd1b3e5ccc7dbdc21f67e3674
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: edc81e7f148a2d0c2572da4902a90499baf9db7e
+ms.sourcegitcommit: 4181429ada1169871c2f4d73d18d2ba013007501
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690792"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67866282"
 ---
 # <a name="manage-trigger-security"></a>Управление безопасностью триггеров
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,14 +41,31 @@ ms.locfileid: "47690792"
 ## <a name="trigger-security-best-practices"></a>Способы защиты триггеров  
  Чтобы предотвратить выполнение кода триггера с повышенными правами доступа, примите следующие меры.  
   
+::: moniker range=">=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+
 -   Проверьте базу данных и экземпляр сервера на наличие триггеров DDL и DDL. Для этого выполните соответствующие запросы к представлениям каталогов [sys.triggers](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) и [sys.server_triggers](../../relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md) . Следующий запрос возвращает все триггеры DML и DDL уровня базы данных в текущей базе данных, а также все триггеры DDL уровня сервера на экземпляре сервера.  
   
-    ```  
+    ```sql
     SELECT type, name, parent_class_desc FROM sys.triggers  
     UNION  
     SELECT type, name, parent_class_desc FROM sys.server_triggers ;  
     ```  
+
+   > [!NOTE]
+   > Для Базы данных SQL Azure доступно только представление **sys.triggers**, если только вы не используете Управляемый экземпляр.
+
+::: moniker-end
+
+::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+
+-   Проверьте базу данных на наличие триггеров DDL и DDL. Для этого выполните соответствующие запросы к представлению каталога [sys.triggers](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md). Следующий запрос возвращает все триггеры DML и триггеры DDL уровня базы данных в текущей базе данных:  
   
+    ```sql
+    SELECT type, name, parent_class_desc FROM sys.triggers ; 
+    ```  
+  
+::: moniker-end
+
 -   С помощью инструкции [DISABLE TRIGGER](../../t-sql/statements/disable-trigger-transact-sql.md) запретите триггеры, которые могут нарушить целостность базы данных или сервера при выполнении с повышенными правами доступа. Следующая инструкция отключает все триггеры DDL уровня базы данных в текущей базе данных:  
   
     ```  

@@ -9,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f3bd726fc0320d1dd0980f9e568190e00ea08bbb
-ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
+ms.openlocfilehash: 9c833144fb94a06d4c8941dd7b39b762fc17ba3c
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/29/2019
-ms.locfileid: "67469102"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67687757"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>Новые возможности [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -315,7 +315,7 @@ ms.locfileid: "67469102"
 |Расширенная поддержка устройств с постоянной памятью.|[Гибридный буферный пул](../database-engine/configure-windows/hybrid-buffer-pool.md) |
 |Поддержка статистики columnstore в `DBCC CLONEDATABASE`.|[BLOB-объект статистики для индексов columnstore](../t-sql/database-console-commands/dbcc-clonedatabase-transact-sql.md#ctp23)|
 |В `sp_estimate_data_compression_savings` появились `COLUMNSTORE` и `COLUMNSTORE_ARCHIVE`.|[Рекомендации для индексов columnstore](../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md#considerations-for-columnstore-indexes)|
-|Службы машинного обучения поддерживаются в отказоустойчивом кластере Windows Server. |[ Новые возможности — службы машинного обучения SQL Server](../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md)|
+|Службы машинного обучения поддерживаются в отказоустойчивом кластере Windows Server. |[Новые возможности — службы машинного обучения SQL Server](../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md)|
 |Поддержка машинного обучения для моделирования на основе секций.|[Новые возможности — службы машинного обучения SQL Server](../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md) |
 |Упрощенная инфраструктура профилирования запросов включена по умолчанию |[Упрощенная инфраструктура профилирования статистики выполнения запросов версии 3](../relational-databases/performance/query-profiling-infrastructure.md#lightweight-query-execution-statistics-profiling-infrastructure-v3) |
 |Новые соединители PolyBase для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], Oracle, Teradata и MongoDB. |[Что такое PolyBase?](../relational-databases/polybase/polybase-guide.md) |

@@ -1,7 +1,7 @@
 ---
 title: Уровень совместимости инструкции ALTER DATABASE (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 05/14/2019
+ms.date: 07/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -25,12 +25,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg'
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ccc7241c6d549985df4a838ebcc8cbb2120d3eb0
-ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
+ms.openlocfilehash: 151e6573ebeb5497f2de001d57272af647f5e737
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/29/2019
-ms.locfileid: "67469196"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860686"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>Уровень совместимости инструкции ALTER DATABASE (Transact-SQL)
 
@@ -86,12 +86,12 @@ COMPATIBILITY_LEVEL { 150 | 140 | 130 | 120 | 110 | 100 | 90 | 80 }
 > [!NOTE]
 > [База данных распространителя](../../relational-databases/replication/distribution-database.md), созданная в более ранней версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и обновленная до версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] RTM или версии с пакетом обновления 1, получает уровень совместимости 90, который не поддерживается для других баз данных. Это не влияет на функциональные возможности репликации. В результате обновления до последних пакетов обновления и версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] уровень совместимости базы данных распространителя будет увеличен до уровня, соответствующего базе данных **master**.
 
-По состоянию на **январь 2018 г.** в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] для создаваемых баз данных по умолчанию применяется уровень совместимости 140. Мы не обновляем уровень совместимости для существующих баз данных. Это осуществляют заказчики по собственному усмотрению. Мы настоятельно рекомендуем заказчикам запланировать переход на последний уровень совместимости, чтобы использовать самые новые улучшения, связанные с оптимизацией запросов.
+По состоянию на **январь 2018 г.** в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] для создаваемых баз данных по умолчанию применяется уровень совместимости 140. Мы не обновляем уровень совместимости для существующих баз данных. Это осуществляют заказчики по собственному усмотрению. Мы настоятельно рекомендуем клиентам запланировать обновление до последнего уровня совместимости, чтобы они могли использовать самые новые улучшения, связанные с оптимизацией запросов.
 Если в целом вам требуется уровень 140, но по определенной причине вы предпочитаете модель [**оценки кратности**](../../relational-databases/performance/cardinality-estimation-sql-server.md) [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], соответствующую уровню совместимости 110, см. подробнее об [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) и ключевом слове `LEGACY_CARDINALITY_ESTIMATION = ON`.
 
 Дополнительные сведения о том, как оценить разницу в производительности наиболее важных запросов в двух уровнях совместимости в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], см. в разделе [Улучшенная производительность запросов для уровня совместимости 130 базы данных SQL Azure](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/05/06/improved-query-performance-with-compatibility-level-130-in-azure-sql-database/). Обратите внимание, что в этой статье описывается уровень совместимости 130 и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], но при переходе на уровень 140 для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] применяется та же методология.
 
-Выполните следующий запрос, чтобы определить версию [!INCLUDE[ssDE](../../includes/ssde-md.md)], к которой вы подключены.
+Чтобы определить версию [!INCLUDE[ssDE](../../includes/ssde-md.md)], к которой вы подключены, выполните указанный ниже запрос.
 
 ```sql
 SELECT SERVERPROPERTY('ProductVersion');
@@ -165,7 +165,7 @@ SELECT name, compatibility_level FROM sys.databases;
 > - Изменение имен столбцов в системных объектах. В [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] столбец *single_pages_kb* в представлении sys.dm_os_sys_info был переименован в *pages_kb*. Независимо от уровня совместимости запрос `SELECT single_pages_kb FROM sys.dm_os_sys_info` вызывает ошибку 207 (Недопустимое имя столбца).
 > - Удаление системных объектов. В [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] столбец `sp_dboption` был удален. Независимо от уровня совместимости инструкция `EXEC sp_dboption 'AdventureWorks2016', 'autoshrink', 'FALSE';` вызовет ошибку 2812 (Не удалось найти хранимую процедуру 'sp_dboption').
 >
-> Дополнительные сведения о критических изменениях см. в разделах [Критические изменения в функциях ядра СУБД в SQL Server 2017](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md), [Критические изменения в функциях ядра СУБД в SQL Server 2016](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md), [Критические изменения в функциях ядра СУБД в SQL Server 2014](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014), [Критические изменения в функциях ядра СУБД в SQL Server 2012](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014#Denali) и [Критические изменения в функциях ядра СУБД в SQL Server 2008](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014#KJKatmai).
+> Подробные сведения о критических изменениях см. в статьях [Критические изменения в функциях ядра СУБД в SQL Server 2017 (14.x)](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md), [Критические изменения в функциях ядра СУБД в SQL Server 2016](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md), [Discontinued Database Engine Functionality in SQL Server 2014](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014) (Неподдерживаемые функции ядра СУБД в SQL Server 2014) и в разделе [Discontinued Features in SQL Server 2012](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014#Denali) (Неподдерживаемые функции в SQL Server 2012).
 
 ## <a name="best-practices-for-upgrading-database-compatibility-level"></a>Рекомендации по обновлению уровня совместимости базы данных
 
@@ -215,7 +215,7 @@ SELECT name, compatibility_level FROM sys.databases;
 |--------------------------------------------------|-----------------------------------------|
 |Операция INSERT в инструкции INSERT-SELECT является однопоточной.|Операция INSERT в инструкции INSERT-SELECT является многопоточной или может использовать параллельный план.|
 |Запросы в таблицах, оптимизированных для памяти, выполняются в одном потоке.|Запросы в таблицах, оптимизированных для памяти, теперь могут иметь параллельные планы.|
-|Представлено в оценщике кратности SQL 2014 **CardinalityEstimationModelVersion="120"**|Дальнейшие улучшения оценки кратности в модели оценки кратности 130, видимой в плане запроса. **CardinalityEstimationModelVersion="130"**|
+|Представлено в оценщике кратности SQL 2014 **CardinalityEstimationModelVersion="120"**|Дальнейшие улучшения оценки кратности в модели оценки кратности 130, видимой в плане запроса. **CardinalityEstimationModelVersion="130"**|
 |Изменения пакетного режима и режима строки в индексах columnstore<br /><ul><li>Сортировка в таблице с индексом columnstore осуществляется в режиме строки <li>Оконные агрегатные функции выполняются в режиме строки, например `LAG` или `LEAD` <li>Запросы в таблицах columnstore с несколькими отдельными предложениями выполнялись в режиме строки <li>Запросы, выполняемые с MAXDOP 1 или последовательным планом, выполнялись в режиме строки</li></ul>| Изменения пакетного режима и режима строки в индексах columnstore<br /><ul><li>Сортировка в таблице с индексом columnstore осуществляется в пакетном режиме <li>Оконные агрегатные функции теперь выполняются в пакетном режиме, например `LAG` или `LEAD` <li>Запросы в таблицах columnstore с несколькими отдельными предложениями выполняются в пакетном режиме <li>Запросы, выполняемые с MAXDOP 1 или последовательным планом, выполняются в пакетном режиме</li></ul>|
 |Статистика может обновляться автоматически. | Логика, которая автоматически обновляет статистику, более агрессивна в больших таблицах. На практике это должно снизить число случаев, когда у клиентов возникали проблемы с производительностью при выполнении частых запросов к новым вставленным строкам, если статистика не обновлялась и не получала эти значения. |
 |Трассировка 2371 имеет значение OFF по умолчанию в [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. | [Трассировка 2371](https://blogs.msdn.microsoft.com/psssql/2016/10/04/default-auto-statistics-update-threshold-change-for-sql-server-2016/) имеет значение ON по умолчанию в [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Флаг трассировки 2371 дает средству автоматического обновления статистики инструкции делать выборку подмножества строк меньшего размера, но более эффективным образом, если в таблице очень много строк. <br/> <br/> Одно из улучшений — включение в выборку большего количества строк, которые были вставлены недавно. <br/> <br/> Еще одно улучшение — выполнение запросов во время обновления статистики, без блокировки запроса. |

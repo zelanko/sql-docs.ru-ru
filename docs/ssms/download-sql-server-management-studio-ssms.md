@@ -21,19 +21,19 @@ keywords:
 ms.assetid: adafeeef-4255-4924-8042-02f503d599ca
 author: dnethi
 ms.author: dinethi
-manager: craigg
+manager: jroth
 ms.custom: ''
 ms.date: 06/12/2019
-ms.openlocfilehash: 403ca9e5132a00f003aa67a2011d98d0044b4807
-ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
+ms.openlocfilehash: e7fb5ecb66552ef4d061c36326788f4be51255bb
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67399655"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67680382"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Скачивание SQL Server Management Studio (SSMS)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md.md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
 SQL Server Management Studio (SSMS) — это интегрированная среда для управления любой инфраструктурой SQL, от SQL Server до баз данных SQL Azure. SSMS предоставляет средства для настройки, наблюдения и администрирования экземпляров SQL Server и баз данных. С помощью SSMS можно развертывать, отслеживать и обновлять компоненты уровня данных, используемые вашими приложениями, а также создавать запросы и скрипты.
 
@@ -45,7 +45,7 @@ SSMS распространяется бесплатно!
 
 **Вышла версия SSMS 18.1. Это новейшая общедоступная версия *SQL Server Management Studio* с поддержкой [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]!**
 
-**[![скачать](../ssdt/media/download.png) Скачать SQL Server Management Studio 18.1 ](https://go.microsoft.com/fwlink/?linkid=2094583)**
+**[![скачать](../ssdt/media/download.png) Скачать SQL Server Management Studio 18.1](https://go.microsoft.com/fwlink/?linkid=2094583)**
 
 SSMS 18.1 является последней общедоступной версией SSMS. Если у вас установлена версия SSMS 18.0 (GA), установка SSMS 18.1 обновляет ее до 18.1. Если у вас установлена предыдущая *предварительная версия* SSMS 18.0, перед установкой SSMS 18.1 ее необходимо удалить.
 

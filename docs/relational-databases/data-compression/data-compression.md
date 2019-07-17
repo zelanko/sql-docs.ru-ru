@@ -24,12 +24,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2370c428d063958079e749c792a60de3b7379ee3
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 217ed3b61b3e4da943103f992340210ef8295bb0
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210533"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832934"
 ---
 # <a name="data-compression"></a>Сжатие данных
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -139,7 +139,7 @@ REBUILD PARTITION = ALL WITH (
 -   [sys.indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) — столбцы **type** и **type_desc** включают параметры CLUSTERED COLUMNSTORE и NONCLUSTERED COLUMNSTORE.  
 -   [sys.partitions (Transact-SQL)](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md) — столбцы **data_compression** и **data_compression_desc** включают параметры COLUMNSTORE и COLUMNSTORE_ARCHIVE.  
   
-Процедура [sp_estimate_data_compression_savings (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md) не применяется к индексам columnstore.  
+Процедура [sp_estimate_data_compression_savings (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md) также может применяться к индексам columnstore.  
   
 ## <a name="how-compression-affects-partitioned-tables-and-indexes"></a>Влияние сжатия на секционированные таблицы и индексы  
  При использовании сжатия данных в секционированных таблицах или индексах следует учитывать следующее.  
