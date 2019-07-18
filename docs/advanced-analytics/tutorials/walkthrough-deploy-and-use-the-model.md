@@ -7,13 +7,12 @@ ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: f1c684aff9c4b31049a04add04e8def642dca1d2
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: e79dd0bce559259863128de1d2490f0fd9197cf1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510601"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961697"
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql-server-walkthrough"></a>Развертывание модели R и использовать его в SQL Server (Пошаговое руководство)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -73,7 +72,7 @@ ms.locfileid: "58510601"
 
     + Используйте инструкцию SELECT для вызова хранимой модели из таблицы SQL. Модель извлекается из нее, как **varbinary(max)** данных, которые хранятся в переменной SQL  _\@lmodel2_и передается в качестве параметра *mod* в систему Хранимая процедура [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
-    + Данные, используемые в качестве входных данных для оценки определяется как SQL-запрос и храниться в виде строки в переменной SQL  _\@ввода_. Данные извлекаются из базы данных, сохраняются в кадре данных *InputDataSet*, это просто имя по умолчанию для входных данных [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) процедуры; вы можете определить другое имя переменной, при необходимости с помощью параметра   *_\@input_data_1_name_*.
+    + Данные, используемые в качестве входных данных для оценки определяется как SQL-запрос и храниться в виде строки в переменной SQL  _\@ввода_. Данные извлекаются из базы данных, сохраняются в кадре данных *InputDataSet*, это просто имя по умолчанию для входных данных [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) процедуры; вы можете определить другое имя переменной, при необходимости с помощью параметра * _\@input_data_1_name_* .
 
     + Для формирования оценок, хранимая процедура вызывает функцию rxPredict из **RevoScaleR** библиотеки.
 
