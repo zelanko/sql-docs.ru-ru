@@ -1,6 +1,6 @@
 ---
-title: Запустите SQL Server службы машинного обучения в контейнере | Документация Майкрософт
-description: Этом руководстве показано, как использовать службы машинного обучения SQL Server в контейнере Linux, запуск в Docker.
+title: Запуск SQL Server Службы машинного обучения в контейнере | Документация Майкрософт
+description: В этом руководстве показано, как использовать SQL Server Службы машинного обучения в контейнере Linux, работающем в DOCKER.
 author: uc-msft
 ms.author: umajay
 ms.date: 06/26/2019
@@ -9,65 +9,65 @@ ms.prod: sql
 ms.technology: linux
 ms.collection: linux-container
 moniker: '>= sql-server-linux-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: 484f4fc9e51bc8d6ec4ad6e2e75df88593672c28
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f3d3774adf4bee07269b25c3359b031ca24eb99e
+ms.sourcegitcommit: ef7834ed0f38c1712f45737018a0bfe892e894ee
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941084"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68300424"
 ---
-# <a name="run-sql-server-machine-learning-services-in-a-container"></a>Запустите SQL Server службы машинного обучения в контейнере
+# <a name="run-sql-server-machine-learning-services-in-a-container"></a>Запуск SQL Server Службы машинного обучения в контейнере
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Этот учебник посвящен построения контейнера Docker с помощью службы машинного обучения SQL Server и запуска сценариев Transact-SQL.
+В этом руководстве показано, как создать контейнер DOCKER с SQL Server Службы машинного обучения и выполнить скрипты Машинное обучение из Transact-SQL.
 
 > [!div class="checklist"]
-> * Клонируйте репозиторий mssql-docker.
-> * Создание образа контейнера SQL Server Linux со службами машинного обучения.
-> * Запустите образ контейнера SQL Server Linux со службами машинного обучения.
-> * Выполните сценарии R или Python, с помощью инструкций Transact-SQL.
-> * Остановить и удалить контейнер SQL Server Linux. 
+> * Клонировать репозиторий MSSQL-DOCKER.
+> * Создание образа контейнера SQL Server Linux с Службы машинного обучения.
+> * Запустите SQL Server образ контейнера Linux с Службы машинного обучения.
+> * Выполнение скриптов R или Python с помощью инструкций Transact-SQL.
+> * Закройте и удалите контейнер SQL Server Linux. 
 
 ## <a name="prerequisites"></a>предварительные требования
 
 * Интерфейс командной строки Git.
 * Docker Engine 1.8+ на любом поддерживаемом дистрибутиве Linux или Docker для Mac или Windows. Дополнительные сведения см. в разделе [Установка Docker](https://docs.docker.com/engine/installation/).
-* Минимум 2 ГБ места на диске.
-* Не менее 2 ГБ ОЗУ.
+* Минимум 2 ГБ дискового пространства.
+* Минимум 2 ГБ ОЗУ.
 * [Требования к системе для SQL Server на Linux](sql-server-linux-setup.md#system).
 
-## <a name="clone-the-mssql-docker-repository"></a>Клонируйте репозиторий mssql-docker
+## <a name="clone-the-mssql-docker-repository"></a>Клонирование репозитория MSSQL-DOCKER
 
-1. Откройте окно терминала bash в Linux, Mac или WSL терминал на Windows.
+1. Откройте терминал Bash в Linux/Mac или WSL терминалов в Windows.
 
-1. Создайте локальный каталог для хранения копии репозитория mssql-docker локально.
-1. Выполните команду клона git, чтобы клонировать репозиторий с mssql-docker.
+1. Создайте локальный каталог для локального хранения копии репозитория MSSQL-DOCKER.
+1. Выполните команду git clone, чтобы клонировать репозиторий MSSQL-DOCKER.
 
     ```bash
     git clone https://github.com/microsoft/mssql-docker mssql-docker
     ```
 
-## <a name="build-sql-server-linux-container-image-with-machine-learning-services"></a>Создание образа контейнера SQL Server Linux со службами машинного обучения
+## <a name="build-sql-server-linux-container-image-with-machine-learning-services"></a>Создание образа контейнера SQL Server Linux с Службы машинного обучения
 
-1. Перейдите в каталог в каталог mssql mlservices.
+1. Перейдите в каталог MSSQL-млсервицес.
 
     ```bash
     cd mssql-docker/linux/preview/examples/mssql-mlservices
     ```
 
-1. Выполните этот сценарий.
+1. Выполнение скрипта build.sh.
 
    ```bash
    ./build.sh
    ```
 
    > [!NOTE]
-   > Построение образа docker необходимо установить пакеты, которые несколько гигабайт в размере. Скрипт может занять до 20 минут для завершения в зависимости от пропускной способности сети.
+   > Для создания образа DOCKER требуется установка пакетов, размер которых составляет несколько ГБ. Выполнение сценария может занять до 20 минут в зависимости от пропускной способности сети.
 
-## <a name="run-sql-server-linux-container-image-with-machine-learning-services"></a>Запустите образ контейнера SQL Server Linux со службами машинного обучения
+## <a name="run-sql-server-linux-container-image-with-machine-learning-services"></a>Запуск SQL Server образа контейнера Linux с Службы машинного обучения
 
-1. Задать переменные среды перед запуском контейнера. Необходимо задать переменную среды PATH_TO_MSSQL каталог узла.
+1. Перед запуском контейнера задайте переменные среды. Задайте для переменной среды PATH_TO_MSSQL каталог узлов.
 
    ```bash
     export MSSQL_PID='Developer'
@@ -76,16 +76,16 @@ ms.locfileid: "67941084"
     export PATH_TO_MSSQL='/home/mssql/'
    ```
 
-1. Выполните сценарий run.sh.
+1. Выполнение скрипта run.sh.
 
    ```bash
    ./run.sh
    ```
 
-   Эта команда создает контейнер SQL Server со службами машинного обучения с Developer edition (по умолчанию). Порт SQL Server **1433** предоставляется на узле, что порт **1401**.
+   Эта команда создает контейнер SQL Server с Службы машинного обучения в выпуске Developer Edition (по умолчанию). SQL Server порт **1433** отображается на узле как порт **1401**.
 
    > [!NOTE]
-   > Процесс запуска производственными выпусками SQL Server в контейнерах, немного отличается. Дополнительные сведения см. в разделе [Запуск образов контейнеров с производственными выпусками](sql-server-linux-configure-docker.md#production). Если вы используете те же имена контейнеров и порты, остальной части этого пошагового руководства по-прежнему работает с контейнерами в рабочей среде.
+   > Процесс выполнения рабочих SQL Server выпусков в контейнерах немного отличается. Дополнительные сведения см. [в статье Настройка образов контейнеров SQL Server в DOCKER](sql-server-linux-configure-docker.md). Если вы используете те же имена и порты контейнеров, оставшаяся часть этого руководства по-прежнему работает с рабочими контейнерами.
 
 1. Для просмотра ваших контейнеров Docker используйте команду `docker ps`.
 
@@ -110,9 +110,9 @@ ms.locfileid: "67941084"
 
 [!INCLUDE [Change docker password](../includes/sql-server-linux-change-docker-password.md)]
 
-## <a name="execute-r--python-scripts-from-transact-sql"></a>Выполнение R / Python скрипты Transact-SQL
+## <a name="execute-r--python-scripts-from-transact-sql"></a>Выполнение скриптов R/Python из Transact-SQL
 
-1. Подключитесь к SQL Server в контейнере и включите параметр конфигурации внешнего скрипта, выполнив следующую инструкцию T-SQL.
+1. Подключитесь к SQL Server в контейнере и включите параметр конфигурации External script, выполнив следующую инструкцию T-SQL.
 
     ```sql
     EXEC sp_configure  'external scripts enabled', 1
@@ -120,7 +120,7 @@ ms.locfileid: "67941084"
     go
     ```
 
-1. Проверки работоспособности служб машинного обучения, выполнив следующий простой sp_execute_external_script R и Python.
+1. Убедитесь, Службы машинного обучения работает, выполнив следующую простую sp_execute_external_script R/Python.
 
     ```sql
     execute sp_execute_external_script 
@@ -150,16 +150,16 @@ ms.locfileid: "67941084"
 
 ## <a name="next-steps"></a>Следующие шаги
 
-В этом руководстве вы узнали, как сделать следующее:
+В этом руководстве вы узнали, как выполнить следующие действия.
 
 > [!div class="checklist"]
-> * Клонируйте репозиторий mssql-docker.
-> * Создание образа контейнера SQL Server Linux со службами машинного обучения.
-> * Запустите образ контейнера SQL Server Linux со службами машинного обучения.
-> * Выполните сценарии R или Python, с помощью инструкций Transact-SQL.
-> * Остановить и удалить контейнер SQL Server Linux.
+> * Клонировать репозиторий MSSQL-DOCKER.
+> * Создание образа контейнера SQL Server Linux с Службы машинного обучения.
+> * Запустите SQL Server образ контейнера Linux с Службы машинного обучения.
+> * Выполнение скриптов R или Python с помощью инструкций Transact-SQL.
+> * Закройте и удалите контейнер SQL Server Linux.
 
-Затем просмотрите другие конфигурации Docker и устранение неполадок в сценариях:
+Затем ознакомьтесь с другими сценариями настройки и устранения неполадок docker:
 
 > [!div class="nextstepaction"]
->[Руководство по настройке для SQL Server в Docker](sql-server-linux-configure-docker.md)
+>[Инструкции по настройке SQL Server в DOCKER](sql-server-linux-configure-docker.md)
