@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: a2b49dcb94210e7abb3d73d6d1d827cb9c8f8497
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
-ms.translationtype: MT
+ms.openlocfilehash: 76136d5f896e72cef7600562c83d104883713637
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63013131"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68220442"
 ---
-**Область применения:** ![Да](media/yes.png)SQL Server (начиная с 2014 с пакетом обновления 2) ![Да](media/yes.png)базы данных SQL Azure ![не](media/no.png)хранилище данных SQL Azure ![не](media/no.png) Parallel Data Warehouse 
+**Область применения:** ![Да](media/yes.png)SQL Server ![Да](media/yes.png)База данных SQL Azure ![Нет](media/no.png)Хранилище данных SQL Azure ![Нет](media/no.png)Parallel Data Warehouse 
 
