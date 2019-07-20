@@ -1,64 +1,64 @@
 ---
-title: Вычислить сводную статистику руководстве RevoScaleR - машинного обучения SQL Server
-description: Руководство о том, как вычислить статистические сводную статистику, используя язык R на SQL Server.
+title: Руководство по вычислению сводных статистических показателей RevoScaleR
+description: Пошаговое руководство по вычислению статистических сводных статистических показателей с использованием языка R на SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 945b7cb32c64c343ca7bb5ab2aab4169fd7bea24
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5f90cc0e6101e168e15ed7c1145d286f799375ac
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962281"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68344707"
 ---
-# <a name="compute-summary-statistics-in-r-sql-server-and-revoscaler-tutorial"></a>Вычислить сводную статистику в R (руководство по SQL Server и RevoScaleR)
+# <a name="compute-summary-statistics-in-r-sql-server-and-revoscaler-tutorial"></a>Сводная статистика вычислений в R (учебник по SQL Server и RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Это занятие является частью [руководстве RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) по использованию [функций RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) с SQL Server.
+Это занятие является частью [учебника RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) по использованию [функций RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) с SQL Server.
 
-Он использует источники данных и контекстов вычислений, созданных в предыдущих уроках для выполнения сложных скриптов R в нем. На этом занятии будет использовать сервер локальных и удаленных контекстов вычислений для выполнения следующих задач:
+В нем используются установленные источники данных и контексты вычислений, созданные на предыдущих занятиях, для запуска сценариев R с высоким уровнем использования в этом. На этом занятии будут использоваться контексты вычислений для локальных и удаленных серверов для следующих задач:
 
 > [!div class="checklist"]
-> * Переключить контекст вычисления для SQL Server
-> * Получить сводные статистические данные о объекты удаленных данных
-> * Вычисления локальной сводки
+> * Переключить контекст вычислений на SQL Server
+> * Получить сводную статистику по удаленным объектам данных
+> * Вычисление локальной сводки
 
-Если вы выполнили уроки, необходимо иметь эти удаленные контексты вычисления: sqlCompute и sqlComputeTrace. Продвигаясь вперед, используется будет sqlCompute и локального контекста вычислений на следующих занятиях.
+Если вы выполнили предыдущие уроки, у вас должны быть следующие удаленные контексты вычислений: sqlCompute и Склкомпутетраце. В дальнейшем вы будете использовать sqlCompute и локальный контекст вычислений на последующих занятиях.
 
-Использование среды IDE R или **Rgui** для запуска скрипта R на этом занятии.
+Используйте R IDE или **RGUI** для запуска скрипта r на этом занятии.
 
-## <a name="compute-summary-statistics-on-remote-data"></a>Вычислить сводную статистику на удаленных данных
+## <a name="compute-summary-statistics-on-remote-data"></a>Вычисление сводных статистических данных по удаленным данным
 
-Прежде чем код R можно выполнять удаленно, необходимо указать удаленного контекста вычислений. Все последующие вычисления выполняются [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] компьютере, указанном в *sqlCompute* параметра.
+Перед удаленным запуском кода R необходимо указать удаленный контекст вычислений. Все последующие вычисления выполняются на компьютере, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] указанном в параметре *sqlCompute* .
 
-Контекст вычисления остается активным, пока вы не измените его. Однако скрипты R, которые *нельзя* выполнения в контексте удаленного сервера будет автоматически запускаться локально.
+Контекст вычислений остается активным, пока вы не измените его. Однако скрипты R, которые *не могут* выполняться в контексте удаленного сервера, будут автоматически выполняться локально.
 
-Чтобы увидеть, как работает контекст вычисления, создайте сводную статистику для источника данных sqlFraudDS на удаленный экземпляр SQL Server. Этот объект источника данных был создан в [урок два](deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md) и представляющий таблицу в базе данных RevoDeepDive ccFraudSmall. 
+Чтобы увидеть, как работает контекст вычислений, создайте сводную статистику для источника данных sqlFraudDS на удаленном SQL Server. Этот объект источника данных был создан на [занятии 2](deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md) и представляет таблицу ccFraudSmall в базе данных реводипдиве. 
 
-1. Перейдите контекст вычисления для sqlCompute, созданные на предыдущем занятии:
+1. Переключить контекст вычислений на sqlCompute, созданный на предыдущем занятии:
   
     ```R
     rxSetComputeContext(sqlCompute)
     ```
 
-2. Вызовите [rxSummary](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsummary) функции и передайте требуемые аргументы, такие как формула и источник данных и присвоить переменной результаты `sumOut`.
+2. Вызовите функцию [rxSummary](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsummary) и передайте необходимые аргументы, такие как формула и источник данных, и присвойте результаты переменной `sumOut`.
   
     ```R
     sumOut <- rxSummary(formula = ~gender + balance + numTrans + numIntlTrans + creditLine, data = sqlFraudDS)
     ```
   
-    Язык R предоставляет множество функций сводки, но **rxSummary** в **RevoScaleR** поддерживает выполнение в различных контекстах удаленных вычислений, включая [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о схожих функциях см. в разделе [сводки данных, с помощью RevoScaleR](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-summaries).
+    Язык R предоставляет множество сводных функций, но **rxSummary** в **RevoScaleR** поддерживает выполнение в различных удаленных контекстах вычисления, включая [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о схожих функциях см. в разделе [сводки данных с помощью RevoScaleR](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-summaries).
   
-3. Печать содержимого sumOut на консоль.
+3. Распечатайте содержимое sumOut в консоли.
   
     ```R
     sumOut
     ```
     > [!NOTE]
-    > Если отобразится сообщение об ошибке, подождите несколько минут для выполнения перед повторным выполнением команды.
+    > При возникновении ошибки подождите несколько минут, пока не завершится выполнение команды.
 
 **Результаты**
 
@@ -91,7 +91,7 @@ Number of valid observations: 10000
     rxSetComputeContext ("local")
     ```
   
-2. При извлечении данных из SQL Server, можно часто получить более высокую производительность, увеличивая количество строк, извлекаемых каждой операцией чтения, при условии, что размер блока увеличение может быть размещено в памяти. Выполните следующую команду, чтобы увеличить значение для *rowsPerRead* параметр в источнике данных. Ранее значение параметра *rowsPerRead* было равно 5000.
+2. При извлечении данных из SQL Server часто можно получить лучшую производительность, увеличив число строк, извлеченных для каждого считывания, предполагая, что увеличенный размер блока можно разместить в памяти. Выполните следующую команду, чтобы увеличить значение параметра *rowsPerRead* в источнике данных. Ранее значение параметра *rowsPerRead* было равно 5000.
   
     ```R
     sqlServerDS1 <- RxSqlServerData(
@@ -101,7 +101,7 @@ Number of valid observations: 10000
        rowsPerRead = 10000)
     ```
 
-3. Вызовите **rxSummary** на новый источник данных.
+3. Вызовите **rxSummary** для нового источника данных.
   
     ```R
     rxSummary(formula = ~gender + balance + numTrans + numIntlTrans + creditLine, data = sqlServerDS1)
@@ -109,7 +109,7 @@ Number of valid observations: 10000
   
    Фактические результаты должны совпадать с результатами, получаемыми при запуске функции **rxSummary** в контексте компьютера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Однако операция может выполняться быстрее или медленнее. Во многом это зависит от подключения к базе данных, так как данные передаются на локальный компьютер для анализа.
 
-4. Вернитесь на удаленного контекста вычислений для следующего несколько занятий.
+4. Вернитесь к удаленному контексту вычислений для следующих нескольких уроков.
 
     ```R
     rxSetComputeContext(sqlCompute)

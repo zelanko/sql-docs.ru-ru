@@ -1,67 +1,67 @@
 ---
-title: Руководство для аналитики в базе данных, с помощью R - машинного обучения SQL Server
-description: Узнайте, как внедрить R, программный код языка в хранимых процедурах SQL Server и функций T-SQL.
+title: Руководство по аналитике в базе данных с помощью языка R
+description: Узнайте, как внедрять код языка программирования R в SQL Server хранимых процедур и функций T-SQL.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 06/13/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 8bf0485b63e341dbeff24a1974df840b0a28dfef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 64995cc5de7bb3609f1923b7755be9b33b55e764
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961892"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345904"
 ---
-# <a name="tutorial-r-data-analytics-for-sql-developers"></a>Учебник. Анализ данных R для разработчиков SQL
+# <a name="tutorial-r-data-analytics-for-sql-developers"></a>Учебник. Аналитика данных R для разработчиков SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-В этом руководстве для программистов SQL, узнайте об интеграции R путем создания и развертывания на основе R в машинном обучении решения с помощью [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) базы данных на сервере SQL Server. Вы будете использовать T-SQL, SQL Server Management Studio и экземпляр ядра СУБД с [служб машинного обучения] ([служб машинного обучения](../install/sql-machine-learning-services-windows-install.md) и поддержка языка R
+В этом руководстве для программистов SQL вы узнаете о интеграции R, создав и развернув решение для машинного обучения на базе R, используя базу данных [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) на SQL Server. Вы будете использовать T-SQL, SQL Server Management Studio и экземпляр ядра СУБД с [Службы машинного обучения] ([службы машинного обучения](../install/sql-machine-learning-services-windows-install.md) и поддержкой языка R
 
-В этом руководстве описываются функций R, используемых в данных, моделирование рабочего процесса. Шаги включают Просмотр данных, построения и обучения модели двоичной классификации и развертыванию модели. Модель, которую вы создадите прогнозирует, является ли поездку может привести tip, на основе времени дня, расстояние и место посадки. 
+В этом учебнике описываются функции R, используемые в рабочем процессе моделирования данных. Шаги включают исследование данных, сборку и обучение модели двоичной классификации и развертывание модели. Модель, которую вы создаете, прогнозирует, может ли поездка повлечь на себя подсказку на основе времени суток, расстояния поездок и выбора расположения. 
 
-Весь код R, используемый в этом руководстве упаковывается в хранимых процедурах, создания и выполнения в среде Management Studio.
+Весь код R, используемый в этом руководстве, упаковывается в хранимые процедуры, создаваемые и выполняемые в Management Studio.
 
-## <a name="background-for-sql-developers"></a>Фон для разработчиков SQL
+## <a name="background-for-sql-developers"></a>Общие сведения для разработчиков SQL
 
-Процесс создания решения машинного обучения является довольно сложна, который может включать в себя несколько средств и координации профильные специалисты по различным этапам:
+Процесс создания решения машинного обучения — это сложная задача, которая может содержать несколько средств, а также координацию экспертов в зависимости от нескольких этапов:
 
-+ Получение и очистка данных
-+ Изучение данных и создание функции, полезные для моделирования
++ получение и очистка данных
++ изучение данных и создание функций, полезных для моделирования
 + обучение и Настройка модели
 + развертывание в рабочей среде
 
-Разработка и тестирование фактический код, лучше всего выполнять с помощью выделенную среду разработки R. Тем не менее, после его полной проверки, вы можете легко развернуть его, чтобы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)] хранимые процедуры в знакомой среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
+Разработка и тестирование фактического кода лучше выполнять с помощью выделенной среды разработки R. Однако после полного тестирования скрипта его [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно легко развернуть с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)] хранимых процедур [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]в знакомой среде.
 
-Цель этого руководства в нескольких частях — введение в типичный рабочий процесс для миграции «завершения работы кода R» для SQL Server. 
+Цель этого многофакторного учебника — Введение в типичный рабочий процесс переноса "готового кода R" в SQL Server. 
 
-- [Занятие 1. Анализ и визуализация данных фигуры и распространения посредством вызова функций R в хранимые процедуры](../tutorials/sqldev-explore-and-visualize-the-data.md)
+- [Занятие 1. Просмотр и Визуализация формы данных и распределение путем вызова функций R в хранимых процедурах](../tutorials/sqldev-explore-and-visualize-the-data.md)
 
-- [Занятие 2. Создание функций данных с помощью языка R в T-SQL функции](sqldev-create-data-features-using-t-sql.md)
+- [Занятие 2. Создание функций данных с помощью R в функциях T-SQL](sqldev-create-data-features-using-t-sql.md)
   
 - [Занятие 3. Обучение и сохранение модели R с помощью функций и хранимых процедур](sqldev-train-and-save-a-model-using-t-sql.md)
   
-- [Занятие 4. Предсказания возможных результатов, с помощью модели R в хранимой процедуре](../tutorials/sqldev-operationalize-the-model.md)
+- [Занятие 4. Прогнозирование возможных результатов с помощью модели R в хранимой процедуре](../tutorials/sqldev-operationalize-the-model.md)
 
-После сохранения модели в базу данных, вызовите ее для прогнозов из [!INCLUDE[tsql](../../includes/tsql-md.md)] с помощью хранимых процедур.
+После сохранения модели в базе данных вызовите модель для прогнозов из [!INCLUDE[tsql](../../includes/tsql-md.md)] с помощью хранимых процедур.
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
-Вы можете выполнять все задачи с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)] хранимые процедуры в [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
+Все задачи можно выполнять с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)] хранимых процедур [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]в.
 
-Это руководство предполагает знакомство с основных операций базы данных, таких как создание баз данных и таблиц, импорт данных и написания SQL-запросов. Он не предполагается, что вы знаете R. Таким образом предоставляется весь код R. 
+В этом учебнике предполагается, что вы знакомы с основными операциями с базой данных, такими как создание баз данных и таблиц, импорт данных и написание запросов SQL. Это не предполагает знание R. Таким образом, предоставляется весь код R. 
 
-+ [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md#verify-installation) или [служб SQL Server 2017 машинного обучения с поддержкой R](../install/sql-machine-learning-services-windows-install.md#verify-installation)
++ [SQL Server 2016 служб r](../install/sql-r-services-windows-install.md#verify-installation) или [SQL Server 2017 службы машинного обучения с поддержкой R](../install/sql-machine-learning-services-windows-install.md#verify-installation)
 
 + [Библиотеки R](../package-management/installed-package-information.md)
 
 + [Разрешения](../security/user-permission.md)
 
-+ [Демонстрационная база данных о такси Нью-ЙОРКА](demo-data-nyctaxi-in-sql.md)
++ [Демонстрационная база данных такси Нью](demo-data-nyctaxi-in-sql.md)
 
 
 ## <a name="next-steps"></a>Следующие шаги
 
 > [!div class="nextstepaction"]
-> [Анализ и визуализация данных с помощью функций R в хранимые процедуры](../tutorials/sqldev-explore-and-visualize-the-data.md)
+> [Просмотр и визуализация данных с помощью функций R в хранимых процедурах](../tutorials/sqldev-explore-and-visualize-the-data.md)

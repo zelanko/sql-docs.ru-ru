@@ -1,58 +1,58 @@
 ---
-title: Создание рабочих процессов служб SSIS и службы SSRS с помощью R - служб машинного обучения SQL Server
-description: Сценарии интеграции, объединяя службы машинного обучения SQL Server и R Services, Reporting Services (SSRS) и SQL Server Integration Services (SSIS).
+title: Создание рабочих процессов SSIS и SSRS на языке R
+description: Сценарии интеграции объединяют SQL Server Службы машинного обучения и службы R, Reporting Services (SSRS) и SQL Server Integration Services (SSIS).
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 03/17/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: a9f3a76ac1829f529e0f3e5459ab842dcafa7c80
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 09547f5f77eae8cff0924dfdf227c31563c10abd
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962697"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345592"
 ---
-# <a name="create-ssis-and-ssrs-workflows-with-r-on-sql-server"></a>Создание рабочих процессов служб SSIS и службы SSRS с r Server в SQL Server
+# <a name="create-ssis-and-ssrs-workflows-with-r-on-sql-server"></a>Создание рабочих процессов служб SSIS и SSRS с помощью R на SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-В этой статье описывается использование внедренного скрипта R и Python, используя возможности обработки и анализа языка и данных службы машинного обучения SQL Server с две важные возможности SQL Server: SQL Server Integration Services (SSIS) и SQL Server Reporting Services SSRS. Библиотеки R и Python в SQL Server предоставляют функции, статистические и прогнозирования. Службы SSIS и службы SSRS предоставляют скоординированной преобразования ETL и визуализации, соответственно. В этой статье объясняется, как объединить все эти функции в этом шаблоне рабочего процесса:
+В этой статье объясняется, как использовать внедренный скрипт R и Python с использованием функций языка и обработки и анализа данных SQL Server Службы машинного обучения с двумя важными SQL Server функциями. SQL Server Integration Services (SSIS) и службы SSRS SQL Server Reporting Services. Библиотеки R и Python в SQL Server предоставляют статистические и прогнозирующие функции. Службы SSIS и SSRS предоставляют согласованное преобразование и визуализацию ETL соответственно. В этой статье описывается, как объединить все эти функции в этом шаблоне рабочего процесса:
 
 > [!div class="checklist"]
-> * Создать хранимую процедуру, которая содержит исполняемый файл R или Python
-> * Выполните хранимую процедуру из служб SSIS или SSRS
+> * Создание хранимой процедуры, содержащей исполняемый файл R или Python
+> * Выполнение хранимой процедуры из служб SSIS или SSRS
 
-В этой статье относятся, например направлен R и служб SSIS, но основные понятия и действия также применяются Python. Во втором разделе содержатся рекомендации и ссылки, для визуализации SSRS.
+Примеры в этой статье в основном относятся к R и SSIS, но концепции и действия применимы и к Python. Во втором разделе содержатся рекомендации и ссылки на визуализации SSRS.
 
 <a name="bkmk_ssis"></a> 
 
-## <a name="use-ssis-for-automation"></a>Для автоматизации с помощью служб SSIS
+## <a name="use-ssis-for-automation"></a>Использование служб SSIS для автоматизации
 
 Рабочие процессы для обработки и анализа данных имеют высокий уровень цикличности и содержат множество преобразований данных, в том числе масштабирование, агрегирование, вычисление вероятностей, переименование и слияние атрибутов. Исследователи данных могут выполнять такие задачи с использованием R, Python или других языков, но применение таких процессов к корпоративным данным требует беспроблемной интеграции со средствами и процессами извлечения, преобразования и загрузки данных.
 
-Так как [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] позволяет выполнять сложные операции в R через Transact-SQL и хранимых процедур, задач обработки и анализа данных можно интегрировать с существующими процессами ETL. Вместо выполнения цепочки задач с интенсивным использованием памяти, подготовки данных можно оптимизировать с помощью наиболее эффективных средств, включая [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] и [!INCLUDE[tsql](../../includes/tsql-md.md)]. 
+Поскольку [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] позволяет выполнять сложные операции в R с помощью Transact-SQL и хранимых процедур, можно интегрировать задачи обработки и анализа данных с существующими процессами ETL. Вместо того, чтобы создавать цепочку ресурсоемких задач, можно оптимизировать подготовку данных с помощью наиболее эффективных средств, включая [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] и. [!INCLUDE[tsql](../../includes/tsql-md.md)] 
 
-Далее приведено несколько идей для как можно автоматизировать обработку данных, а также моделирования конвейерах с помощью [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]:
+Ниже приведены некоторые идеи, которые помогут автоматизировать процессы обработки и моделирования данных с помощью [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]:
 
-+ Извлечение данных из локальной среды или облачных источников для создания обучающих данных 
-+ Построение и выполнение моделей R или Python как часть рабочего процесса интеграции данных
-+ Повторное Обучение моделей на регулярной основе (запланированное)
-+ Загрузить результаты из скрипта R или Python в другие назначения, таких как Excel, Power BI, Oracle и Teradata и др
-+ Задачи служб SSIS использовать для создания компонентов данных в базе данных SQL
-+ Использование условного ветвления, чтобы переключать контекст вычислений для заданий R и Python
++ Извлечение данных из локальных или облачных источников для создания обучающих данных 
++ Создание и запуск моделей R или Python в рамках рабочего процесса интеграции данных
++ Повторное обучение моделей на регулярной (запланированной) основе
++ Загрузите результаты из скрипта R или Python в другие назначения, такие как Excel, Power BI, Oracle и Teradata, чтобы наименовать несколько
++ Использование задач SSIS для создания функций данных в базе данных SQL
++ Использование условного ветвления для переключения контекста вычислений для заданий R и Python
 
 ## <a name="ssis-example"></a>Пример служб SSIS
 
-Следующий пример исходит из записи блога MSDN теперь выведенную автором Вонг Джимми этому URL-адресу: `https://blogs.msdn.microsoft.com/ssis/2016/01/11/operationalize-your-machine-learning-project-using-sql-server-2016-ssis-and-r-services/`
+Следующий пример основан на немедленно отмененной записи блога MSDN, созданной с помощью Джимми Вонг (по этому URL-адресу:`https://blogs.msdn.microsoft.com/ssis/2016/01/11/operationalize-your-machine-learning-project-using-sql-server-2016-ssis-and-r-services/`
 
-В этом примере показано, как автоматизировать задачи с помощью служб SSIS. Создайте хранимые процедуры с помощью внедренных R, с помощью SQL Server Management Studio и затем исполнение этих хранимых процедур из [задачи Выполнение T-SQL](https://docs.microsoft.com/sql/integration-services/control-flow/execute-t-sql-statement-task) в пакет служб SSIS.
+В этом примере показано, как автоматизировать задачи с помощью служб SSIS. Вы создаете хранимые процедуры с внедренным R с помощью SQL Server Management Studio, а затем выполняете эти хранимые процедуры из [задачи «Выполнение задач T-SQL](https://docs.microsoft.com/sql/integration-services/control-flow/execute-t-sql-statement-task) » в пакете служб SSIS.
 
-Чтобы приступить к выполнению в этом примере, должны быть знакомы с Management Studio, служб SSIS, конструктор служб SSIS, проектирования пакета и T-SQL. Пакет служб SSIS используются три [задачи Выполнение T-SQL](https://docs.microsoft.com/sql/integration-services/control-flow/execute-t-sql-statement-task) , вставка в таблицу данных для обучения, моделирования данных и оценки данных, чтобы получить выходные данные прогноза.
+Для пошагового выполнения этого примера необходимо ознакомиться с Management Studio, службами SSIS, конструктором служб SSIS, конструкцией пакета и T-SQL. Пакет служб SSIS использует три [задачи «Выполнение T-SQL](https://docs.microsoft.com/sql/integration-services/control-flow/execute-t-sql-statement-task) », которые вставляют обучающие данные в таблицу, моделируют данные и оценивают данные для получения выходных данных прогноза.
 
-### <a name="load-training-data"></a>Загрузки обучающих данных
+### <a name="load-training-data"></a>Загрузка данных для обучения
 
-Выполните следующий скрипт в SQL Server Management Studio, чтобы создать таблицу для хранения данных. Необходимо создать и использовать тестовую базу данных для этого упражнения. 
+Выполните следующий скрипт в SQL Server Management Studio, чтобы создать таблицу для хранения данных. Для выполнения этого упражнения необходимо создать и использовать тестовую базу данных. 
 
 ```T-SQL
 Use test-db
@@ -67,7 +67,7 @@ Create table ssis_iris (
 GO
 ```
 
-Создайте хранимую процедуру, которая загружает обучающие данные во фрейм данных. В этом примере используется встроенный набор данных Iris. 
+Создайте хранимую процедуру, которая загружает обучающие данные в кадр данных. В этом примере используется встроенный набор данных IRI. 
 
 ```T-SQL
 Create procedure load_iris
@@ -82,7 +82,7 @@ begin
 end;
 ```
 
-В конструкторе служб SSIS, создание [задача «Выполнение SQL»](https://docs.microsoft.com/sql/integration-services/control-flow/execute-sql-task) , выполняет хранимую процедуру, вы только что определили. Скрипт для **SQLStatement** удаляет существующие данные, указывающий, какие данные для вставки, а затем вызывает хранимую процедуру для предоставления данных.
+В конструкторе служб SSIS создайте [задачу «Выполнение SQL](https://docs.microsoft.com/sql/integration-services/control-flow/execute-sql-task) », которая выполняет только что определенную хранимую процедуру. Скрипт для **SQLStatement** удаляет существующие данные, указывает, какие данные следует вставить, а затем вызывает хранимую процедуру для предоставления данных.
 
 ```T-SQL
 truncate table ssis_iris;
@@ -90,11 +90,11 @@ insert into ssis_iris("Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Widt
 exec dbo.load_iris;
 ```
 
-![Вставка данных](../media/create-workflows-using-r-in-sql-server/ssis-exec-sql-insert-data.png "вставки данных")
+![Вставка данных](../media/create-workflows-using-r-in-sql-server/ssis-exec-sql-insert-data.png "Вставка данных")
 
-### <a name="generate-a-model"></a>Формирование модели
+### <a name="generate-a-model"></a>Создание модели
 
-Выполните следующий скрипт в SQL Server Management Studio, чтобы создать таблицу, в которой хранятся модели. 
+Выполните следующий скрипт в SQL Server Management Studio, чтобы создать таблицу, в которой хранится модель. 
 
 ```T-SQL
 Use test-db
@@ -107,7 +107,7 @@ Create table ssis_iris_models (
 GO
 ```
 
-Создать хранимую процедуру, которая создает линейной модели с помощью [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod). Библиотеки RevoScaleR и revoscalepy автоматически доступны в сеансы R и Python на сервере SQL Server, поэтому нет необходимости импортировать в библиотеку.
+Создайте хранимую процедуру, которая создает линейную модель с помощью [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod). Библиотеки RevoScaleR и revoscalepy автоматически доступны в сеансах R и Python на SQL Server, поэтому импортировать библиотеку не требуется.
 
 ```T-SQL
 Create procedure generate_iris_rx_model
@@ -126,7 +126,7 @@ end;
 GO
 ```
 
-В конструкторе служб SSIS, создание [задача «Выполнение SQL»](https://docs.microsoft.com/sql/integration-services/control-flow/execute-sql-task) для выполнения **generate_iris_rx_model** хранимой процедуры. Модель сериализуется и сохранении ssis_iris_models таблицу. Скрипт для **SQLStatement** выглядит следующим образом:
+В конструкторе служб SSIS создайте [задачу «Выполнение SQL](https://docs.microsoft.com/sql/integration-services/control-flow/execute-sql-task) » для выполнения хранимой процедуры **generate_iris_rx_model** . Модель сериализуется и сохраняется в таблицу ssis_iris_models. Скрипт для **SQLStatement** выглядит следующим образом:
 
 ```T-SQL
 insert into ssis_iris_models (model)
@@ -134,15 +134,15 @@ exec generate_iris_rx_model;
 update ssis_iris_models set model_name = 'rxLinMod' where model_name = 'default model';
 ```
 
-![Создает модель линейной](../media/create-workflows-using-r-in-sql-server/ssis-exec-rxlinmod.png "создает модель линейной")
+![Формирует линейную модель](../media/create-workflows-using-r-in-sql-server/ssis-exec-rxlinmod.png "Формирует линейную модель")
 
-Как контрольную точку после завершения этой задачи вы можете запрашивать ssis_iris_models, чтобы увидеть, что он содержит один двоичная модель.
+После завершения этой задачи в качестве контрольной точки можно запросить ssis_iris_models, чтобы увидеть, что она содержит одну двоичную модель.
 
-### <a name="predict-score-outcomes-using-the-trained-model"></a>Спрогнозировать результаты (оценкой), с помощью модели «обученной»
+### <a name="predict-score-outcomes-using-the-trained-model"></a>Прогнозирование (оценка) результатов с помощью "обученной" модели
 
-Теперь, когда у вас есть код, который загружает данные для обучения и создает модель, единственное действие слева использует модель для создания прогнозов. 
+Теперь, когда у вас есть код, загружающий обучающие данные и создающий модель, единственным шагом является использование модели для создания прогнозов. 
 
-Чтобы сделать это, поместите этот сценарий R в SQL-запрос для активации [rxPredict](https://docs.microsoft.com//machine-learning-server/r-reference/revoscaler/rxpredict) встроенной функции R на ssis_iris_model. Хранимая процедура вызвана **predict_species_length** выполняет эту задачу.
+Для этого добавьте сценарий R в SQL-запрос, чтобы активировать встроенную функцию R [rxPredict](https://docs.microsoft.com//machine-learning-server/r-reference/revoscaler/rxpredict) в ssis_iris_model. Эта задача достигается с помощью хранимой процедуры с именем **predict_species_length** .
 
 ```T-SQL
 Create procedure predict_species_length (@model varchar(100))
@@ -170,41 +170,41 @@ colnames(OutputDataSet) <- c("id", "Sepal.Length.Actual", "Sepal.Length.Expected
 end;
 ```
 
-В конструкторе служб SSIS, создание [задача «Выполнение SQL»](https://docs.microsoft.com/sql/integration-services/control-flow/execute-sql-task) , выполняющего **predict_species_length** хранимую процедуру для создания прогнозируемых лепестка длины.
+В конструкторе служб SSIS создайте [задачу «Выполнение SQL](https://docs.microsoft.com/sql/integration-services/control-flow/execute-sql-task) », которая выполняет хранимую процедуру **predict_species_length** для создания прогнозируемой длины лепестка.
 
 ```T-SQL
 exec predict_species_length 'rxLinMod';
 ```
 
-![Формировать прогнозы](../media/create-workflows-using-r-in-sql-server/ssis-exec-predictions.png "формирования прогнозов")
+![Сформировать прогнозы](../media/create-workflows-using-r-in-sql-server/ssis-exec-predictions.png "Сформировать прогнозы")
 
 ### <a name="run-the-solution"></a>Запуск решения
 
-В конструкторе служб SSIS нажмите клавишу F5, чтобы выполнить пакет. Вы должны увидеть результат как на следующем снимке экрана.
+В конструкторе служб SSIS нажмите клавишу F5, чтобы выполнить пакет. Вы увидите результат, аналогичный показанному на следующем снимке экрана.
 
 ![F5 для запуска в режиме отладки](../media/create-workflows-using-r-in-sql-server/ssis-exec-F5-run.png "F5 для запуска в режиме отладки")
 
 <a name="bkmk_ssrs"></a> 
 
-## <a name="use-ssrs-for-visualizations"></a>Используется для визуализации с помощью SSRS
+## <a name="use-ssrs-for-visualizations"></a>Использование SSRS для визуализаций
 
-Несмотря на то, что R можно создать диаграммы и интересные визуализации, это не хорошо интегрируются с внешними источниками данных, это означает, что каждую диаграмму и график приходится создавать отдельно. Совместное использование данных также может быть затруднено.
+Хотя R может создавать диаграммы и интересные визуализации, она не интегрирована с внешними источниками данных, что означает, что каждая диаграмма или диаграмма должна быть создана отдельно. Совместное использование данных также может быть затруднено.
 
-С помощью [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)], вы можете выполнять сложные операции в R через [!INCLUDE[tsql](../../includes/tsql-md.md)] хранимых процедур, которые легко можно использовать с помощью разнообразных средств создания отчетов, включая [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и Power BI.
+С помощью [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]можно выполнять сложные операции в R с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)] хранимых процедур, которые можно легко использовать в различных средствах корпоративного создания отчетов, включая [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и Power BI.
 
 ### <a name="ssrs-example"></a>Пример SSRS
 
 [R Graphics Device for Microsoft Reporting Services (SSRS)](https://rgraphicsdevice.codeplex.com/) (Графическое устройство R для служб Microsoft Reporting Services (SSRS))
 
-Проект CodePlex предоставляет код для создания пользовательского элемента отчета, который выполняет визуализацию графических выходных данных R в виде изображения, которое можно использовать в [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] отчеты.  С помощью пользовательского элемента отчета можно:
+Этот проект CodePlex предоставляет код, помогающий создать пользовательский элемент отчета, который визуализирует графические выходные данные R в виде изображения, которое можно использовать в [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] отчетах.  С помощью пользовательского элемента отчета можно:
 
 + опубликовать диаграммы и графики, созданные с помощью графического устройства R, на панелях мониторинга [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)];
 
 + передать параметры [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] графикам R.
 
 > [!NOTE]
-> В этом примере код, который поддерживает графическое устройство R для служб Reporting Services должны быть установлены на сервере служб Reporting Services, а также в Visual Studio. Кроме того, требуется компиляция и настройка вручную.
+> В этом примере код, поддерживающий графическое устройство R для Reporting Services, должен быть установлен на сервере Reporting Services, а также в Visual Studio. Кроме того, требуется компиляция и настройка вручную.
 
 ## <a name="next-steps"></a>Следующие шаги
 
-В примерах служб SSIS и службы SSRS в этой статье показано два случая выполнения хранимых процедур, содержащих внедренный скрипт R или Python. Ключевым моментом является то, что вы можете предоставить скрипт R или Python в любое приложение или средство, которое можно отправить запрос на выполнение хранимой процедуры. Дополнительные отсюда вывод: для служб SSIS — что можно создавать пакеты, автоматизировать и планировать широкий спектр операций, таких как получение данных, очистки, манипуляции и т. д. с помощью R или Python функции обработки и анализа данных, включенные в цепочки операций. Дополнительные сведения и идеи, см. в разделе [кода ввод в эксплуатацию R с помощью хранимых процедур в службах машинного обучения SQL Server](operationalizing-your-r-code.md).
+Примеры служб SSIS и SSRS в этой статье иллюстрируют два варианта выполнения хранимых процедур, содержащих внедренный скрипт R или Python. Ключевым мысль является то, что можно сделать скрипт R или Python доступным для любого приложения или средства, которое может отправить запрос на выполнение хранимой процедуры. Дополнительным мысльом для служб SSIS является возможность создания пакетов, автоматизирующих и планирующих широкий спектр операций, таких как получение данных, очистка, манипуляции и т. д., с помощью функций обработки и анализа данных R или Python, включенных в цепочку операций. Дополнительные сведения и идеи см. [в разделе эксплуатацию R Code using with хранимые процедуры в SQL Server службы машинного обучения](operationalizing-your-r-code.md).

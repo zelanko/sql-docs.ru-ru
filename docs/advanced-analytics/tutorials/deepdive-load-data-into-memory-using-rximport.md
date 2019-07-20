@@ -1,31 +1,31 @@
 ---
-title: Загрузка данных в памяти, с помощью функции rxImport RevoScaleR - машинного обучения SQL Server
-description: Руководство по загрузке данных с помощью языка R на SQL Server.
+title: Загрузка данных в память с помощью RevoScaleR rxImport
+description: Пошаговое руководство по загрузке данных с помощью языка R на SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 53d13c0771fd06ae8e91f4ad69fe4646a01fc770
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fb98887d9cfd3f1997ce82620eeff5df98ba6b1e
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962224"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68344670"
 ---
-# <a name="load-data-into-memory-using-rximport-sql-server-and-revoscaler-tutorial"></a>Загрузка данных в памяти, с помощью функции rxImport (руководство по SQL Server и RevoScaleR)
+# <a name="load-data-into-memory-using-rximport-sql-server-and-revoscaler-tutorial"></a>Загрузка данных в память с помощью rxImport (учебник по SQL Server и RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Это занятие является частью [руководстве RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) по использованию [функций RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) с SQL Server.
+Это занятие является частью [учебника RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) по использованию [функций RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) с SQL Server.
 
-[RxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) функция может использоваться для перемещения данных из источника данных во фрейм данных в памяти сеанса или в файл XDF на диске. Если не указать файл в качестве назначения, данные помещаются в память как кадр данных.
+Функцию [rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) можно использовать для перемещения данных из источника данных в кадр данных в памяти сеанса или в файл Xdf-на диске. Если не указать файл в качестве назначения, данные помещаются в память как кадр данных.
 
-На этом шаге вы узнаете, как получить данные из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], а затем с помощью **rxImport** функции, чтобы поместить интересующие вас данные в локальный файл. Таким образом, их можно будет повторно анализировать в локальном контексте вычисления, не выполняя запрос к базе данных еще раз.
+На этом шаге вы узнаете, как получить данные из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], а затем с помощью функции **rxImport** поместить интересующие данные в локальный файл. Таким образом, их можно будет повторно анализировать в локальном контексте вычисления, не выполняя запрос к базе данных еще раз.
 
 ## <a name="extract-a-subset-of-data-from-sql-server-to-local-memory"></a>Извлечение подмножества данных из SQL Server в локальную память
 
-Вы решили, что вы хотите проанализировать только с высокой степенью риска более подробно. Исходная таблица в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеет большой размер, поэтому вы хотите получить сведения о только что заказчиках. Вы затем загрузили эти данные во фрейм данных в памяти локальной рабочей станции.
+Вы решили, что вы хотите более подробно изучить только пользователей с высоким уровнем риска. Исходная таблица в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеет большой размер, поэтому вам нужно получить информацию только о клиентах с высоким уровнем риска. Затем эти данные загружаются в кадр данных в памяти локальной рабочей станции.
 
 1. Задайте в качестве контекста вычисления локальную рабочую станцию.
 
@@ -42,15 +42,15 @@ ms.locfileid: "67962224"
         connectionString = sqlConnString)
     ```
 
-3. Вызовите функцию [rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) для чтения данных в кадр данных в локальном сеансе R.
+3. Вызовите функцию [rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) , чтобы считать данные в кадр данных в локальном сеансе R.
 
     ```R
     highRisk <- rxImport(sqlServerProbDS)
     ```
 
-    Если операция выполнена успешно, вы увидите сообщение о состоянии следующего вида: «Прочитано строк: 35, всего строк обработано: Время 35, общее фрагмента: 0,036 секунды»
+    Если операция выполнена успешно, вы увидите сообщение о состоянии следующего вида: Прочитано строк: 35, всего обработано строк: 35, общее время фрагмента: 0,036 секунд "
 
-4. Теперь, когда наблюдения с высоким риском в кадре данных в памяти, можно использовать различные функции R для работы с кадром данных. Например можно упорядочить клиентов по оценке риска и распечатать список клиентов, которые представляют наибольший риск.
+4. Теперь, когда наблюдения с высоким уровнем риска находятся в кадре данных в памяти, можно использовать различные функции R для управления кадром данных. Например, можно заказать клиентов по рейтингу рисков и распечатать список клиентов, которые несут наибольший риск.
 
     ```R
     orderedHighRisk <- highRisk[order(-highRisk$ccFraudProb),]
@@ -74,7 +74,7 @@ ccFraudLogitScore   state gender cardholder balance numTrans numIntlTrans credit
 
 Функцию **rxImport** можно использовать не только для передачи данных, но и для их преобразования в процессе считывания. Например, можно указать количество символов для столбцов фиксированной ширины, предоставить описание переменных, задать уровни столбцов коэффициентов и даже создать уровни, которые будут использоваться после импорта.
 
-**RxImport** функция присваивает имена переменных столбцам в процессе импорта, но можно указать новые имена переменных с помощью *colInfo* параметр или изменить типы данных, с помощью *colClasses* параметра.
+Функция **rxImport** назначает имена переменных столбцам в процессе импорта, но можно указать новые имена переменных с помощью параметра *colInfo* или изменить типы данных с помощью параметра *colClasses* .
 
 Указав дополнительные операции в параметре *transforms* , можно осуществлять простейшую обработку каждого блока считываемых данных.
 

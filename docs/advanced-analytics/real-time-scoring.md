@@ -1,69 +1,69 @@
 ---
-title: Оценка с помощью sp_rxPredict хранимой процедуры - службы машинного обучения SQL Server в реальном времени
-description: Создание прогнозов с помощью sp_rxPredict, оценка входных данных к предварительно обученной модели, написанные на языке R на SQL Server.
+title: Оценка в режиме реального времени с помощью хранимой процедуры sp_rxPredict
+description: Формирование прогнозов с помощью sp_rxPredict, входных данных оценки для предварительно обученной модели, написанной на языке R на SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: cccbae1e1957baedaba665e68a3a058db69f4885
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2e9c9353acdc0a2641203788c8e4883a9accb021
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962373"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345676"
 ---
-# <a name="real-time-scoring-with-sprxpredict-in-sql-server-machine-learning"></a>Оценка с sp_rxPredict в SQL Server машинного обучения в реальном времени
+# <a name="real-time-scoring-with-sprxpredict-in-sql-server-machine-learning"></a>Оценка в реальном времени с помощью sp_rxPredict в машинном обучении SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Оценка использования в реальном времени [sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql) системные хранимые процедуры и возможности расширения CLR в SQL Server для высокой производительности прогнозов или оценки в прогнозирования рабочих нагрузок. Оценки в реальном времени от языка и выполняется без зависимостей на R или Python, запусков:. Если модель создана и обучена с использованием функций Microsoft, а затем сериализуются в двоичный формат, в SQL Server, можно использовать оценки в реальном времени для создания прогнозируемых выходных данных на новых входных данных на экземплярах SQL Server, у которых нет надстройки R или Python установлен.
+Оценка в режиме реального времени использует системную хранимую процедуру [sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql) и возможности расширения среды CLR в SQL Server для высокопроизводительных прогнозов или оценки рабочих нагрузок прогнозирования. Оценка в реальном времени не зависит от языка и выполняется без зависимостей от времени выполнения R или Python. Предполагая, что модель создана и обучена с помощью функций Майкрософт, а затем сериализована в двоичный формат в SQL Server, вы можете использовать оценку в реальном времени для создания прогнозируемых результатов для новых входных данных в экземплярах SQL Server, у которых нет надстройки R или Python. Установка.
 
-## <a name="how-real-time-scoring-works"></a>Как оценка в реальном времени работает
+## <a name="how-real-time-scoring-works"></a>Как работает Оценка в режиме реального времени
 
-Оценки в реальном времени поддерживается в SQL Server 2017 и SQL Server 2016 к конкретным типам моделей основаны на функциях RevoScaleR или MicrosoftML, такие как [rxLinMod (RevoScaleR)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)[rxNeuralNet (MicrosoftML)](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet). Собственные библиотеки C++ используется для формирования оценок, на основе ввода пользователя, для машинного обучения модели, сохраненной в специальных двоичном формате.
+Оценка в реальном времени поддерживается как в SQL Server 2017, так SQL Server 2016, в конкретных типах моделей на основе таких функций RevoScaleR или MicrosoftML, как [rxLinMod (RevoScaleR)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)[ркснеуралнет (MicrosoftML)](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet). Он использует собственные C++ библиотеки для формирования оценок на основе введенных пользователем данных, предоставленных модели машинного обучения, хранящейся в специальном двоичном формате.
 
-Поскольку обученной модели можно использовать для оценки без вызова внешней языковой среды выполнения, сокращается объем работ нескольких процессов. Это поддерживает значительно повысить производительность прогнозирования для оценки сценариев рабочей среды. Так как данные никогда не покидает SQL Server, результаты можно создается и вставляется в таблицу без преобразования любых данных между R и SQL.
+Так как обученную модель можно использовать для оценки без вызова внешней среды выполнения, затраты на несколько процессов сокращаются. Это обеспечивает гораздо более быструю производительность прогнозирования для сценариев оценки рабочей среды. Поскольку данные никогда не выходят SQL Server, их можно создать и вставить в новую таблицу без преобразования данных между R и SQL.
 
-Оценки в реальном времени — это многоэтапный процесс:
+Оценка в режиме реального времени — это многоэтапный процесс:
 
-1. Хранимая процедура, выполняющий оценки необходимо включить на основе каждой базы данных.
-2. Загрузите предварительно обученной модели в двоичном формате.
-3. Вы предоставить новые входные данные для оценки, табличном, так и для одной строки, в качестве входных данных в модели.
-4. Для формирования оценок, вызовите [sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql) хранимой процедуры.
+1. Хранимая процедура, для которой выполняется оценка, должна быть включена для каждой базы данных.
+2. Предварительно обученная модель загружается в двоичном формате.
+3. Вы предоставляете в качестве входных данных новые входные данные для оценки, табличные или отдельные строки.
+4. Чтобы создать оценки, вызовите хранимую процедуру [sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql) .
 
 ## <a name="prerequisites"></a>предварительные требования
 
-+ [Включение интеграции со средой CLR для SQL Server](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/introduction-to-sql-server-clr-integration).
++ [Включите интеграцию со средой CLR SQL Server](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/introduction-to-sql-server-clr-integration).
 
-+ [Включить оценки в реальном времени](#bkmk_enableRtScoring).
++ [Включение оценки в режиме реального времени](#bkmk_enableRtScoring).
 
-+ Обучение модели должен быть на основе заранее с помощью одного из поддерживаемых **rx** алгоритмы. Для R, в реальном времени, оценки при помощи `sp_rxPredict` работает с [RevoScaleR и MicrosoftML поддерживаются алгоритмы](#bkmk_rt_supported_algos). Для Python, см. в разделе [revoscalepy и microsoftml Поддерживаемые алгоритмы](#bkmk_py_supported_algos)
++ Модель должна заранее обучиться с помощью одного из поддерживаемых алгоритмов **приема** . Для R, оценка в режиме реального времени `sp_rxPredict` с помощью [поддерживаемых алгоритмов RevoScaleR и MicrosoftML](#bkmk_rt_supported_algos). Для Python см. раздел [Поддерживаемые алгоритмы revoscalepy и microsoftml](#bkmk_py_supported_algos) .
 
-+ Сериализация модели с использованием [rxSerialize](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel) для R, и [rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model) для Python. Эти функции сериализации оптимизированы для поддержки быстрого оценки.
++ Сериализация модели с помощью [ркссериализе](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel) для R и [rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model) для Python. Эти функции сериализации оптимизированы для поддержки быстрой оценки.
 
-+ Сохраните модель в экземпляр ядра базы данных, из которого необходимо вызвать его. Этот экземпляр не требуется расширение среды выполнения R или Python.
++ Сохраните модель в экземпляре ядра СУБД, из которого его необходимо вызвать. Этот экземпляр не обязательно должен иметь расширение среды выполнения R или Python.
 
 > [!Note]
-> Оценки в реальном времени, в настоящее время оптимизирован для быстрого прогнозирования на основе небольших наборов данных, от небольшое количество строк до сотен тысяч строк. На больших наборах данных, с помощью [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) могут выполняться быстрее.
+> Оценка в реальном времени в настоящее время оптимизирована для быстрого прогнозирования на небольших наборах данных, от нескольких строк до сотен тысяч строк. В больших наборах данных использование [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) может выполняться быстрее.
 
 <a name="bkmk_py_supported_algos"></a>
 
 ## <a name="supported-algorithms"></a>Поддерживаемые алгоритмы
 
-### <a name="python-algorithms-using-real-time-scoring"></a>Python алгоритмы, с помощью оценки в реальном времени
+### <a name="python-algorithms-using-real-time-scoring"></a>Алгоритмы Python с оценкой в режиме реального времени
 
-+ revoscalepy моделей
++ модели revoscalepy
 
   + [rx_lin_mod](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-lin-mod) \*
   + [rx_logit](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-logit) \*
-  + [rx_btrees](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-btrees) \*
-  + [rx_dtree](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-dtree) \*
-  + [rx_dforest](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-dforest) \*
+  + [rx_btrees](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-btrees)\*
+  + [rx_dtree](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-dtree)\*
+  + [rx_dforest](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-dforest)\*
   
-  Модели, отмеченные \* также поддерживают собственной оценки с помощью функции PREDICT.
+  Модели, помеченные \* также, поддерживают встроенную оценку с помощью функции Predict.
 
-+ microsoftml моделей
++ модели microsoftml
 
   + [rx_fast_trees](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-trees)
   + [rx_fast_forest](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-forest)
@@ -75,93 +75,93 @@ ms.locfileid: "67962373"
 + Преобразования, предоставляемые microsoftml
 
   + [featurize_text](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/featurize-text)
-  + [Concat](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/concat)
+  + [сцеплен](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/concat)
   + [категориальные](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical)
   + [categorical_hash](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical-hash)
 
 
 <a name="bkmk_rt_supported_algos"></a>
 
-### <a name="r-algorithms-using-real-time-scoring"></a>Алгоритмы R с помощью оценки в реальном времени
+### <a name="r-algorithms-using-real-time-scoring"></a>Алгоритмы R с использованием оценки в режиме реального времени
 
-+ RevoScaleR моделей
++ Модели RevoScaleR
 
-  + [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod) \*
-  + [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit) \*
-  + [rxBTrees](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxbtrees) \*
-  + [rxDtree](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdtree) \*
-  + [rxdForest](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdforest) \*
+  + [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)\*
+  + [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit)\*
+  + [рксбтрис](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxbtrees)\*
+  + [rxDtree](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdtree)\*
+  + [rxdForest](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdforest)\*
   
-  Модели, отмеченные \* также поддерживают собственной оценки с помощью функции PREDICT.
+  Модели, помеченные \* также, поддерживают встроенную оценку с помощью функции Predict.
 
-+ MicrosoftML моделей
++ Модели MicrosoftML
 
-  + [rxFastTrees](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees)
-  + [rxFastForest](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfastforest)
-  + [rxLogisticRegression](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxlogisticregression)
+  + [рксфасттрис](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees)
+  + [рксфастфорест](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfastforest)
+  + [ркслогистикрегрессион](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxlogisticregression)
   + [rxOneClassSvm](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxoneclasssvm)
-  + [rxNeuralNet](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet)
-  + [rxFastLinear](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfastlinear)
+  + [ркснеуралнет](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet)
+  + [рксфастлинеар](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfastlinear)
 
 + Преобразования, предоставляемые MicrosoftML
 
-  + [featurizeText](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees)
-  + [Concat](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/concat)
+  + [феатуризетекст](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees)
+  + [сцеплен](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/concat)
   + [категориальные](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categorical)
-  + [categoricalHash](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categoricalHash)
-  + [selectFeatures](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/selectFeatures)
+  + [категорикалхаш](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categoricalHash)
+  + [селектфеатурес](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/selectFeatures)
 
-### <a name="unsupported-model-types"></a>Типы модели не поддерживается
+### <a name="unsupported-model-types"></a>Неподдерживаемые типы моделей
 
-Оценки в реальном времени не использует интерпретатор; Таким образом любые функции, которые могут потребовать интерпретатора не поддерживается на этапе оценки.  Они могут включать:
+В режиме оценки в реальном времени не используется интерпретатор. Таким образом, все функции, которые могут потребовать интерпретатор, не поддерживаются на этапе оценки.  К ним могут относиться следующие:
 
-  + Моделирует использование `rxGlm` или `rxNaiveBayes` алгоритмы не поддерживаются.
+  + Модели, использующие `rxGlm` алгоритмы или `rxNaiveBayes` , не поддерживаются.
 
-  + Модели с помощью функции преобразования или формула, содержащая преобразования, такие как <code>A ~ log(B)</code> не поддерживаются в оценки в реальном времени. Чтобы использовать модель этого типа, рекомендуется выполнить преобразование входных данных перед их передачей для оценки в реальном времени.
+  + Модели, использующие функцию преобразования или формулу, содержащую преобразование, например <code>A ~ log(B)</code> , не поддерживаются в режиме оценки в реальном времени. Чтобы использовать модель этого типа, рекомендуется выполнить преобразование входных данных перед передачей данных в систему оценки в реальном времени.
 
 
 ## <a name="example-sprxpredict"></a>Пример: sp_rxPredict
 
-В этом разделе описываются шаги, необходимые для настройки **в режиме реального времени** прогноза, а также приводятся примеры на языке R того, как вызвать функцию из T-SQL.
+В этом разделе описываются шаги, необходимые для настройки прогноза в **режиме реального времени** , а также пример в языке R для вызова функции из T-SQL.
 
 <a name ="bkmk_enableRtScoring"></a> 
 
-### <a name="step-1-enable-the-real-time-scoring-procedure"></a>Шаг 1. Включить процесс оценки в режиме реального времени
+### <a name="step-1-enable-the-real-time-scoring-procedure"></a>Шаг 1. Включение процедуры оценки в режиме реального времени
 
-Необходимо включить эту функцию для каждой базы данных, который вы хотите использовать для оценки. Администратор сервера должен запустить служебную программу командной строки RegisterRExt.exe, входящий в состав пакета RevoScaleR.
+Эту функцию необходимо включить для каждой базы данных, которая будет использоваться для оценки. Администратор сервера должен запустить программу командной строки RegisterRExt. exe, которая входит в состав пакета RevoScaleR.
 
 > [!NOTE]
-> В порядке для оценки в реальном времени для работы функции SQL CLR необходимо включить в экземпляре; Кроме того база данных должна быть помечена заслуживающая доверия. При выполнении сценарий, эти действия выполняются автоматически. Тем не менее рассмотрите влияние на дополнительную безопасность, прежде чем сделать это!
+> Чтобы оценка в реальном времени работала, в экземпляре необходимо включить функциональность SQL CLR. Кроме того, база данных должна быть помечена как заслуживающая доверия. При выполнении скрипта эти действия выполняются самостоятельно. Однако прежде чем это сделать, примите во внимание дополнительные последствия для безопасности!
 
-1. Откройте командную строку с повышенными правами и перейдите к папке, где находится RegisterRExt.exe. При установке по умолчанию можно использовать следующий путь:
+1. Откройте командную строку с повышенными привилегиями и перейдите в папку, где находится RegisterRExt. exe. Следующий путь можно использовать в установке по умолчанию:
     
     `<SQLInstancePath>\R_SERVICES\library\RevoScaleR\rxLibs\x64\`
 
-2. Выполните следующую команду, подставив имя своего экземпляра и целевой базы данных, где вы хотите включить расширенные хранимые процедуры:
+2. Выполните следующую команду, подставив имя экземпляра и целевую базу данных, в которой необходимо включить расширенные хранимые процедуры:
 
     `RegisterRExt.exe /installRts [/instance:name] /database:databasename`
 
-    Например чтобы добавить расширенную хранимую процедуру CLRPredict базы данных на экземпляре по умолчанию, введите следующую команду:
+    Например, чтобы добавить расширенную хранимую процедуру в базу данных Клрпредикт на экземпляре по умолчанию, введите:
 
     `RegisterRExt.exe /installRts /database:CLRPRedict`
 
-    Имя экземпляра является необязательным, если база данных находится на экземпляре по умолчанию. Если вы используете именованный экземпляр, укажите имя экземпляра.
+    Имя экземпляра является необязательным, если база данных находится в экземпляре по умолчанию. Если используется именованный экземпляр, необходимо указать имя экземпляра.
 
-3. RegisterRExt.exe создает следующие объекты:
+3. RegisterRExt. exe создает следующие объекты:
 
-    + Доверенных сборок
-    + Хранимая процедура `sp_rxPredict`
-    + Роль базы данных, `rxpredict_users`. Администратор базы данных позволяют этой роли разрешение для пользователей, которые используют функции оценки в режиме реального времени.
+    + Доверенные сборки
+    + Хранимая процедура`sp_rxPredict`
+    + Новая роль `rxpredict_users`базы данных. Администратор базы данных может использовать эту роль для предоставления разрешений пользователям, которые используют функцию оценки в режиме реального времени.
 
-4. Добавить всех пользователей, которым необходимо запустить `sp_rxPredict` в новую роль.
+4. Добавьте всех пользователей, которым требуется выполнить `sp_rxPredict` команду для новой роли.
 
 > [!NOTE]
 > 
-> В SQL Server 2017 дополнительные меры безопасности, чтобы избежать возникновения неполадок в интеграции со средой CLR. Эти меры налагаются дополнительные ограничения на использование этой хранимой процедуры. 
+> В SQL Server 2017 для предотвращения проблем с интеграцией со средой CLR применяются дополнительные меры безопасности. Эти меры также накладывают дополнительные ограничения на использование этой хранимой процедуры. 
 
 ### <a name="step-2-prepare-and-save-the-model"></a>Шаг 2. Подготовка и сохранение модели
 
-Двоичный формат, требуемый sp\_rxPredict совпадает со значением в формат, необходимый для использования функции PREDICT. Таким образом, в коде R включают вызов [rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel)и не забудьте указать `realtimeScoringOnly = TRUE`, как показано в этом примере:
+Двоичный формат, необходимый для\_SP rxPredict, совпадает с форматом, необходимым для использования функции Predict. Поэтому в коде R включите вызов [ркссериализемодел](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel)и обязательно укажите `realtimeScoringOnly = TRUE`, как в следующем примере:
 
 ```R
 model <- rxSerializeModel(model.name, realtimeScoringOnly = TRUE)
@@ -169,9 +169,9 @@ model <- rxSerializeModel(model.name, realtimeScoringOnly = TRUE)
 
 ### <a name="step-3-call-sprxpredict"></a>Шаг 3. Вызов sp_rxPredict
 
-Вы вызываете sp\_rxPredict, как вы и другие хранимой процедуры. В текущем выпуске, хранимая процедура принимает только два параметра:  _\@модели_ для модели в двоичном формате и  _\@inputData_ для данных, используемыми при оценке, определяется как допустимый SQL-запрос.
+Метод SP\_rxPredict вызывается так же, как и любая другая хранимая процедура. В текущем выпуске хранимая процедура принимает только два параметра:  _\@модель_ для модели в двоичном формате и  _\@inputData_ для использования данных в оценке, определенных как допустимый SQL-запрос.
 
-Так как двоичный формат имеет те же данные, используется функция PREDICT, можно использовать в таблице моделей и данных из предыдущего примера.
+Так как двоичный формат используется в функции PREDICT, можно использовать модели и таблицу данных из предыдущего примера.
 
 ```sql
 DECLARE @irismodel varbinary(max)
@@ -186,16 +186,16 @@ EXEC sp_rxPredict
 
 > [!NOTE]
 > 
-> Вызов sp\_rxPredict завершается неудачей, если входные данные для оценки не входят столбцы, которые соответствуют требованиям модели. В настоящее время поддерживаются только следующие типы данных .NET: double, float, short, ushort, long, ulong и строка.
+> Вызов SP\_rxPredict завершается ошибкой, если входные данные для оценки не включают столбцы, соответствующие требованиям модели. В настоящее время поддерживаются только следующие типы данных .NET: Double, float, Short, ushort, Long, ulong и String.
 > 
-> Таким образом может потребоваться отфильтровать неподдерживаемые типы входных данных перед его использованием для оценки в реальном времени.
+> Поэтому может потребоваться отфильтровать неподдерживаемые типы во входных данных, прежде чем использовать их для оценки в реальном времени.
 > 
-> Сведения о соответствующих типов SQL, см. в разделе [сопоставления типов SQL-CLR](/dotnet/framework/data/adonet/sql/linq/sql-clr-type-mapping) или [сопоставление данных параметров CLR](https://docs.microsoft.com/sql/relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data).
+> Сведения о соответствующих типах SQL см. в разделе [Сопоставление типов SQL-CLR](/dotnet/framework/data/adonet/sql/linq/sql-clr-type-mapping) или [сопоставление данных параметров CLR](https://docs.microsoft.com/sql/relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data).
 
-## <a name="disable-real-time-scoring"></a>Отключить оценки в реальном времени
+## <a name="disable-real-time-scoring"></a>Отключение оценки в режиме реального времени
 
-Чтобы отключить функцию в режиме реального времени оценки, откройте командную строку с повышенными привилегиями и выполните следующую команду: `RegisterRExt.exe /uninstallrts /database:<database_name> [/instance:name]`
+Чтобы отключить функцию оценки в режиме реального времени, откройте командную строку с повышенными привилегиями и выполните следующую команду:`RegisterRExt.exe /uninstallrts /database:<database_name> [/instance:name]`
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Дополнительные сведения об оценке в SQL Server см. в разделе [как для создания прогнозов машинного обучения SQL Server](r/how-to-do-realtime-scoring.md).
+Дополнительные сведения об оценке в SQL Server см. в статье [Создание прогнозов в SQL Server машинного обучения](r/how-to-do-realtime-scoring.md).

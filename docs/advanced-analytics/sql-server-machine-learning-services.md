@@ -1,5 +1,5 @@
 ---
-title: 'R и Python в машинном обучении документация: службы SQL Server машинного обучения'
+title: Документация по машинному обучению R и Python
 description: R и Python в SQL Server со встроенными моделями обработки и анализа данных и алгоритмами машинного обучения, используемыми для масштабного анализа корпоративных данных.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,23 +8,23 @@ ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 16bf39172144b17b3ecb03969244f31ac4715400
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8eb391ac4b64c93de255214d748c77f44dccb1b3
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962309"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68344739"
 ---
 # <a name="sql-server-machine-learning-services"></a>Изучение служб машины SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-## <a name="sql-server-machine-learning-services-r-and-python-documentation"></a>SQL Server в машинном обучении документации по службам (R и Python)
+## <a name="sql-server-machine-learning-services-r-and-python-documentation"></a>Документация по SQL Server Службы машинного обучения (R и Python)
 
-Узнайте, как использовать внешние библиотеки и языки R и Python для резидентных реляционных данных, ознакомившись с краткими руководствами и статьями с инструкциями. Библиотеки R и Python в [службы SQL Server машинного обучения](what-is-sql-server-machine-learning.md) включают базовых распределений, моделей обработки и анализа данных, алгоритмы машинного обучения и функции для выполнения высокопроизводительной аналитики в нужном масштабе, без необходимости Передача данных по сети.
+Узнайте, как использовать внешние библиотеки и языки R и Python для резидентных реляционных данных, ознакомившись с краткими руководствами и статьями с инструкциями. Библиотеки R и Python в [SQL Server службы машинного обучения](what-is-sql-server-machine-learning.md) включают в себя базовые распределения, модели обработки и анализа данных, алгоритмы машинного обучения и функции для проведения высокопроизводительной аналитической аналитики без необходимости передачи данных по сети.
 
 ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
 > [!NOTE]
-> Документацию по Java, см. в разделе [документации расширения языка SQL Server](https://docs.microsoft.com/sql/language-extensions/language-extensions-overview).
+> Документацию по Java см. в [документации по расширениям языков SQL Server](https://docs.microsoft.com/sql/language-extensions/language-extensions-overview).
 ::: moniker-end
 
 |   |   |
@@ -41,7 +41,7 @@ ms.locfileid: "67962309"
 
 ## <a name="step-by-step-tutorials"></a>Пошаговые руководства
 
-- [Установка служб машинного обучения для SQL Server](install/sql-machine-learning-services-windows-install.md)
+- [Установка Службы машинного обучения для SQL Server](install/sql-machine-learning-services-windows-install.md)
 
 - [Руководство по выполнению R из T-SQL и хранимых процедур](tutorials/sqldev-in-database-r-for-sql-developers.md)
 

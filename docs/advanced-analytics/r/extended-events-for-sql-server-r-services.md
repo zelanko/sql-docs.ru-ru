@@ -1,24 +1,24 @@
 ---
-title: Расширенные события для наблюдения за процессами R и Python - службы машинного обучения SQL Server
+title: Расширенные события для мониторинга процессов R и Python
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: ce4aae5c9725768a9c4c85fc7aaeaf4884dfba0f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 359ed7abfb8afd9fea38b96f9d822d379d69a91e
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962660"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345614"
 ---
-# <a name="extended-events-for-sql-server-machine-learning-services"></a>Расширенные события для службы машинного обучения SQL Server
+# <a name="extended-events-for-sql-server-machine-learning-services"></a>Расширенные события для SQL Server Службы машинного обучения
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-SQL Server предоставляет набор расширенных событий для разрешения операций, связанных с [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)], а также Python или R заданиях, отправленных на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+SQL Server предоставляет набор расширенных событий для использования в операциях по [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]устранению неполадок, связанных с, а также с заданиями Python или R, отправленными в. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
-**Применимо к:**  Службы R SQL Server 2016, SQL Server 2017 службы машинного обучения
+**Применимо к:**  SQL Server 2016 служб R SQL Server 2017 Службы машинного обучения
 
 ## <a name="sql-server-events-for-machine-learning"></a>События SQL Server для машинного обучения
 
@@ -36,15 +36,15 @@ AND p.name = 'SQLSatellite';
 Общие сведения об использовании расширенных событий см. в разделе [средства расширенных событий](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events-tools).
 
 > [!TIP]
-> Для расширенных событий, созданные SQL Server, воспользуйтесь новым [SSMS XEvent profiler](https://docs.microsoft.com/sql/relational-databases/extended-events/use-the-ssms-xe-profiler). Эта новая функция в Management Studio отображает динамические средства просмотра для расширенных событий и меньше вмешивается в SQL Server, чем аналогичные трассировки Profiler.
+> Для расширенного события, создаваемого SQL Server, попробуйте создать [профилировщик XEvent для SSMS](https://docs.microsoft.com/sql/relational-databases/extended-events/use-the-ssms-xe-profiler). Эта новая функция в Management Studio отображает активное средство просмотра для расширенных событий и менее неактивно для SQL Server, чем аналогичная трассировка профилировщика.
 
-## <a name="additional-events-specific-to-machine-learning-components"></a>Дополнительные события, относящиеся к компонентов машинного обучения
+## <a name="additional-events-specific-to-machine-learning-components"></a>Дополнительные события, относящиеся к компонентам машинного обучения
 
-Доступны дополнительные расширенные события для компонентов, связанных с и использовать службы для машинного обучения SQL Server, такие как [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]и BXLServer, вспомогательный процесс, который запускает среду выполнения R. Эти дополнительные расширенные события запускаются из внешних процессов и таким образом необходимо захватить с помощью внешняя программа.
+Дополнительные расширенные события доступны для компонентов, связанных и используемых SQL Server службы машинного обучения, таких как [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)], и BXLServer, вспомогательный процесс, который запускает среду выполнения R. Эти дополнительные расширенные события запускаются из внешних процессов, поэтому они должны быть захвачены с помощью внешней программы.
 
-Дополнительные сведения о том, как это сделать, см. в разделе разделе [сбора событий из внешних процессов](#bkmk_externalevents).
+Дополнительные сведения о том, как это сделать, см. в разделе [сбор событий из внешних процессов](#bkmk_externalevents).
 
-##  <a name="bkmk_xeventtable"></a> Таблица расширенных событий
+##  <a name="bkmk_xeventtable"></a>Таблица расширенных событий
 
 |Событие|Описание|Примечания|  
 |-----------|-----------------|---------|  
@@ -59,7 +59,7 @@ AND p.name = 'SQLSatellite';
 |satellite_data_chunk_sent|Возникает при завершении отправки одного блока данных по вспомогательному соединению.|При отправке фрагмента данных событие сообщает число строк, столбцов, пакетов SNI usedm и затраченное время в миллисекундах. Эти сведения помогут вам понять, сколько времени потрачено при передаче различных типов данных и сколько пакетов использовано.|  
 |satellite_data_receive_completion|Возникает при получении необходимых данных по запросу через вспомогательное соединение.|Активируется только внешним процессом. См. инструкции по сбору событий из внешних процессов.|  
 |satellite_data_send_completion|Возникает при отправке необходимых данных для сеанса через вспомогательное соединение.||  
-|satellite_data_send_start|Возникает при запуске передачи данных.| Передача данных начинается непосредственно перед отправкой первого блока данных.|  
+|satellite_data_send_start|Вызывается при запуске передачи данных.| Передача данных начинается непосредственно перед отправкой первого фрагмента данных.|  
 |satellite_error|Используется для трассировки ошибок вспомогательного соединения SQL.||  
 |satellite_invalid_sized_message|Недопустимый размер сообщения.||  
 |satellite_message_coalesced|Используется для трассировки сообщений, объединяющихся на сетевом уровне.||  
@@ -79,25 +79,25 @@ AND p.name = 'SQLSatellite';
 |satellite_data_chunk_sent|Возникает при завершении отправки одного блока данных по вспомогательному соединению.|Содержит сведения о количестве столбцов, строк, пакетов и продолжительности отправки блока данных.|  
 |satellite_sessionId_mismatch|Непредвиденный идентификатор сеанса сообщения.||  
   
-###  <a name="bkmk_externalevents"></a> Сбор событий из внешних процессов
+###  <a name="bkmk_externalevents"></a>Сбор событий из внешних процессов
 
-Службы машинного обучения SQL Server запускают некоторые службы, которые выполняются вне процесса SQL Server. Чтобы фиксировать события, связанные с этими внешними процессами, необходимо создать файл конфигурации трассировки событий и поместите файл в том же каталоге, что и исполняемый файл для процесса.  
+SQL Server Службы машинного обучения запускает некоторые службы, работающие за пределами SQL Server процесса. Чтобы записать события, связанные с этими внешними процессами, необходимо создать файл конфигурации трассировки событий и поместить его в тот же каталог, где находится исполняемый файл для процесса.  
   
 + **[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]**   
   
-    Чтобы фиксировать события, связанные с панелью запуска, поместите файл конфигурации (*CONFIG*) в каталог Binn экземпляра SQL Server.  При установке по умолчанию будет следующим:
+    Чтобы фиксировать события, связанные с панелью запуска, поместите файл конфигурации (*CONFIG*) в каталог Binn экземпляра SQL Server.  При установке по умолчанию это будет следующее:
 
     `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\MSSQL\Binn`.  
   
-+ **BXLServer** — это вспомогательный процесс, который поддерживает возможность расширения SQL с языками внешних скриптов, например R или Python. Для каждого экземпляра внешним языком, который будет запущен отдельный экземпляр BxlServer.
++ **BXLServer** — это вспомогательный процесс, который поддерживает расширяемость SQL с использованием внешних языков скриптов, таких как R или Python. Для каждого экземпляра внешнего языка запускается отдельный экземпляр BxlServer.
   
-    Чтобы фиксировать события, связанные с BXLServer, поместите *.config* файл в каталоге установки R или Python.  При установке по умолчанию будет следующим:
+    Чтобы записать события, связанные с BXLServer, поместите файл *config* в каталог установки R или Python.  При установке по умолчанию это будет следующее:
      
     **R:** `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\R_SERVICES\library\RevoScaleR\rxLibs\x64`.  
 
     **Python:** `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\PYTHON_SERVICES\library\RevoScaleR\rxLibs\x64`.
 
-Файл конфигурации должен совпадать с именем исполняемый файл, в формате «[имя].xevents.xml». Другими словами, имя файла должно выглядеть следующим образом:
+Файл конфигурации должен иметь имя, совпадающее с именем исполняемого файла, используя формат "[имя]. XEvents. XML". Другими словами, имя файла должно выглядеть следующим образом:
 
 + `Launchpad.xevents.xml`
 + `bxlserver.xevents.xml`
@@ -120,12 +120,12 @@ AND p.name = 'SQLSatellite';
 </event_sessions>  
 ```
 
-+ Чтобы настроить трассировку, измените *имя сеанса* , заполнитель для имени файла (`[SessionName].xel`) и имена событий, которые вы хотите собирать, например, `[XEvent Name 1]`, `[XEvent Name 1]`).  
-+ Любое количество тегов пакет событий может появиться и будут собираться при условии, что атрибут имени правильный.
++ Чтобы настроить трассировку, измените заполнитель *имени сеанса* , заполнитель для имени файла (`[SessionName].xel`) и имена событий `[XEvent Name 1]`, которые требуется записать, например `[XEvent Name 1]`,).  
++ Может появиться любое количество тегов пакета событий, и они будут собраны при условии, что атрибут Name задан правильно.
 
-### <a name="example-capturing-launchpad-events"></a>Пример Фиксация событий панели запуска
+### <a name="example-capturing-launchpad-events"></a>Пример Запись событий панели запуска
 
-В следующем примере определение трассировки событий для службы панели запуска:
+В следующем примере показано определение трассировки событий для службы панели запуска.
 
 ```xml
 \<?xml version="1.0" encoding="utf-8"?>  
@@ -144,9 +144,9 @@ AND p.name = 'SQLSatellite';
 ```
 
 + Поместите файл *конфигурации* в каталог Binn экземпляра SQL Server.
-+ Этот файл должен называться `Launchpad.xevents.xml`.
++ Этот файл должен иметь имя `Launchpad.xevents.xml`.
 
-### <a name="example-capturing-bxlserver-events"></a>Пример Фиксация событий BXLServer  
+### <a name="example-capturing-bxlserver-events"></a>Пример Запись событий BXLServer  
 
 В следующем примере представлено определение трассировки событий для исполняемого файла BXLServer.
   
@@ -174,8 +174,8 @@ AND p.name = 'SQLSatellite';
 ```
 
 + Поместите файл *конфигурации* в тот же каталог, в котором находится исполняемый файл BXLServer.
-+ Этот файл должен называться `bxlserver.xevents.xml`.
++ Этот файл должен иметь имя `bxlserver.xevents.xml`.
 
 ## <a name="see-also"></a>См. также
 
-[Пользовательские отчеты Management Studio для служб машинного обучения](../../advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio.md)
+[Пользовательские отчеты Management Studio для Службы машинного обучения](../../advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio.md)

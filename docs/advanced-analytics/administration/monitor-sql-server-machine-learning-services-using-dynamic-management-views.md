@@ -1,61 +1,61 @@
 ---
-title: Наблюдение за выполнением сценария R и Python с помощью динамических административных представлений (DMV) - машинного обучения SQL Server
-description: Используйте динамические административные представления (DMV) для отслеживания выполнения внешнего скрипта R и Python в службах машинного обучения SQL Server.
+title: Мониторинг выполнения скриптов R и Python с помощью динамических административных представлений (DMV)
+description: Используйте динамические административные представления (DMV) для мониторинга выполнения внешних скриптов R и Python в SQL Server Службы машинного обучения.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/29/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 4fd41ebb8f486b6117ba3e99c080566771bd4a63
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 70c409af4e8cbca3d4005f54a0772a0fd4917381
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67963144"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345224"
 ---
-# <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>Служб монитора SQL Server машинного обучения с помощью динамических административных представлений (DMV)
+# <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>Мониторинг SQL Server Службы машинного обучения с помощью динамических административных представлений
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Используйте динамические административные представления (DMV), чтобы отслеживать выполнение внешних скриптов (R и Python), ресурсы, используемые, диагностики проблем и настройки производительности в службах машинного обучения SQL Server.
+Используйте динамические административные представления (DMV) для наблюдения за выполнением внешних скриптов (R и Python), используемых ресурсов, диагностики проблем и настройки производительности в SQL Server Службы машинного обучения.
 
-В этой статье вы найдете динамические административные представления, характерные для служб машинного обучения SQL Server. Вы также найдете примеры запросов, в которых показано:
+В этой статье вы найдете динамические административные представления, относящиеся к SQL Server Службы машинного обучения. Кроме того, вы увидите примеры запросов, которые показывают:
 
-+ Настройки и параметры конфигурации для машинного обучения
-+ Активные сеансы, выполнять внешние скрипты R или Python
-+ Статистика выполнения для внешней среды выполнения R и Python
++ Параметры и параметры конфигурации для машинного обучения
++ Активные сеансы с внешними скриптами R или Python
++ Статистика выполнения для внешней среды выполнения для R и Python
 + Счетчики производительности для внешних скриптов
-+ Использование памяти для операционной системы, SQL Server и внешних пулов ресурсов
++ Использование памяти для ОС, SQL Server и внешних пулов ресурсов
 + Конфигурация памяти для SQL Server и внешних пулов ресурсов
-+ Пулы ресурсов регулятора ресурсов, включая внешние пулы ресурсов
-+ Установленные пакеты R и Python
++ Пулы ресурсов Resource Governor, включая внешние пулы ресурсов
++ Установленные пакеты для R и Python
 
-Более общие сведения о динамических административных представлениях см. в разделе [динамические административные представления системы](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).
+Дополнительные общие сведения о динамических административных представлениях см. в статье [системные динамические управления](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).
 
 > [!TIP]
-> Пользовательские отчеты также можно отслеживать службы машинного обучения SQL Server. Дополнительные сведения см. в разделе [отслеживать машинного обучения с помощью настраиваемых отчетов в среде Management Studio](../../advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio.md).
+> Пользовательские отчеты также можно использовать для наблюдения за SQL Server Службы машинного обучения. Дополнительные сведения см. [в разделе Мониторинг машинного обучения с помощью пользовательских отчетов в Management Studio](../../advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio.md).
 
 ## <a name="dynamic-management-views"></a>Динамические административные представления
 
-При наблюдении за рабочих нагрузок машины обучения в SQL Server можно использовать следующие динамические административные представления. Для выполнения запроса динамических административных представлений, вам потребуется `VIEW SERVER STATE` разрешения на экземпляр.
+При наблюдении за рабочими нагрузками машинного обучения в SQL Server можно использовать следующие динамические административные представления. Для запроса динамических административных представлений `VIEW SERVER STATE` необходимо разрешение на экземпляр.
 
 | Динамическое административное представление | Type | Описание |
 |-------------------------|------|-------------|
 | [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) | Выполнение | Возвращает строку для каждой активной рабочей учетной записи, в которой выполняется внешний скрипт. |
 | [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md) | Выполнение | Возвращает по одной строке для каждого типа запроса внешнего скрипта. |
-| [sys.dm_os_performance_counters](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) | Выполнение | Возвращает по строке на каждый счетчик производительности, хранимый на сервере. Если вы используете условие поиска `WHERE object_name LIKE '%External Scripts%'`, эти сведения можно использовать, чтобы увидеть, сколько скриптов выполнялось, скриптов, выполненных с помощью режим проверки подлинности, или сколько R или Python вызовы были выданы на общий экземпляр. |
-| [sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) | Resource Governor | Возвращает сведения о текущем состоянии пула внешних ресурсов в регуляторе ресурсов текущей конфигурации пулов ресурсов и статистику пула ресурсов. |
-| [sys.dm_resource_governor_external_resource_pool_affinity](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md) | Resource Governor | Возвращает сведения о сходстве ЦП о текущей конфигурации пула внешних ресурсов в регуляторе ресурсов. Возвращает по одной строке для каждого планировщика [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], сопоставленного с отдельным процессором. Используйте это представление для мониторинга состояния планировщика или для определения отклонившихся от расписания задач. |
+| [sys.dm_os_performance_counters](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) | Выполнение | Возвращает по строке на каждый счетчик производительности, хранимый на сервере. Если используется условие `WHERE object_name LIKE '%External Scripts%'`поиска, эти сведения можно использовать для просмотра количества выполненных скриптов, выполнения скриптов с использованием режима проверки подлинности или количества вызовов R или Python, выданных экземпляром в целом. |
+| [sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) | Resource Governor | Возвращает сведения о текущем состоянии внешнего пула ресурсов в Resource Governor, текущую конфигурацию пулов ресурсов и статистику пула ресурсов. |
+| [sys.dm_resource_governor_external_resource_pool_affinity](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md) | Resource Governor | Возвращает сведения о сходстве ЦП с текущей внешней конфигурацией пула ресурсов в Resource Governor. Возвращает по одной строке для каждого планировщика [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], сопоставленного с отдельным процессором. Используйте это представление для мониторинга состояния планировщика или для определения отклонившихся от расписания задач. |
 
-Дополнительные сведения о мониторинге [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] экземпляров, см. в разделе [представления каталога](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md) и [Resource Governor динамические административные представления](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md).
+Сведения о мониторинге [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] экземпляров см. в разделе [представления каталога](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md) и [динамические административные представления, связанные с RESOURCE GOVERNOR](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md).
 
 ## <a name="settings-and-configuration"></a>Параметры и конфигурация
 
-Просмотр параметров настройки и конфигурации установки служб машинного обучения.
+Просмотрите параметр установки Службы машинного обучения и параметры конфигурации.
 
-![Выходные параметры и настройки запросов](media/dmv-settings-and-configuration.png "выходные параметры и настройки запросов")
+![Выходные данные запроса параметров и конфигурации](media/dmv-settings-and-configuration.png "Выходные данные запроса параметров и конфигурации")
 
-Выполните запрос ниже, чтобы получить эти выходные данные. Дополнительные сведения о представлениях и функциях, используемых см. в разделе [sys.dm_server_registry](../../relational-databases/system-dynamic-management-views/sys-dm-server-registry-transact-sql.md), [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md), и [SERVERPROPERTY](../../t-sql/functions/serverproperty-transact-sql.md).
+Чтобы получить эти выходные данные, выполните приведенный ниже запрос. Дополнительные сведения об используемых представлениях и функциях см. в разделе [sys. DM _server_registry](../../relational-databases/system-dynamic-management-views/sys-dm-server-registry-transact-sql.md), [sys. Configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)и [SERVERPROPERTY](../../t-sql/functions/serverproperty-transact-sql.md).
 
 ```sql
 SELECT CAST(SERVERPROPERTY('IsAdvancedAnalyticsInstalled') AS INT) AS IsMLServicesInstalled
@@ -79,18 +79,18 @@ WHERE name = 'external scripts enabled';
 
 | Столбец | Описание |
 |--------|-------------|
-| IsMLServicesInstalled | Возвращает 1, если службы машинного обучения SQL Server устанавливается для экземпляра. В противном случае возвращает 0. |
-| ExternalScriptsEnabled | Возвращает 1, если для экземпляра включен внешних скриптов. В противном случае возвращает 0. |
-| ImpliedAuthenticationEnabled | Возвращает 1, если подразумеваемой проверки подлинности включена. В противном случае возвращает 0. Конфигурация для неявной проверки подлинности проверяется, проверяя, существует ли имя входа для SQLRUserGroup. |
-| IsTcpEnabled | Возвращает значение 1, если протокол TCP/IP включен для экземпляра. В противном случае возвращает 0. Дополнительные сведения см. в разделе [по умолчанию сетевая конфигурация SQL Server протокол](../../database-engine/configure-windows/default-sql-server-network-protocol-configuration.md). |
+| исмлсервицесинсталлед | Возвращает значение 1, если для экземпляра установлен SQL Server Службы машинного обучения. В противном случае возвращает 0. |
+| екстерналскриптсенаблед | Возвращает значение 1, если для экземпляра включены внешние скрипты. В противном случае возвращает 0. |
+| имплиедаусентикатионенаблед | Возвращает значение 1, если включена подразумеваемая проверка подлинности. В противном случае возвращает 0. Конфигурация для неявной проверки подлинности проверяется путем проверки наличия имени входа для SQLRUserGroup. |
+| исткпенаблед | Возвращает значение 1, если для экземпляра включен протокол TCP/IP. В противном случае возвращает 0. Дополнительные сведения см. в разделе [Конфигурация сетевого протокола по умолчанию SQL Server](../../database-engine/configure-windows/default-sql-server-network-protocol-configuration.md). |
 
 ## <a name="active-sessions"></a>Активные сеансы
 
-Просмотрите активные сеансы, выполнения внешних скриптов.
+Просмотр активных сеансов, выполняющих внешние скрипты.
 
-![Выходные данные из запроса в настройках](media/dmv-active-sessions.png "выходные данные из текущих параметров запроса")
+![Выходные данные запроса активных параметров](media/dmv-active-sessions.png "Выходные данные запроса активных параметров")
 
-Выполните запрос ниже, чтобы получить эти выходные данные. Дополнительные сведения о динамических административных представлений, которые используются, см. в разделе [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md), [sys.dm_external_script_requests](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md), и [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md).
+Чтобы получить эти выходные данные, выполните приведенный ниже запрос. Дополнительные сведения об используемых динамических административных представлениях см. в разделе [sys. DM _exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md), [sys. DM _external_script_requests](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)и [sys. DM _exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md).
 
 ```sql
 SELECT r.session_id, r.blocking_session_id, r.status, DB_NAME(s.database_id) AS database_name
@@ -111,9 +111,9 @@ ON s.session_id = r.session_id;
 | blocking_session_id | Идентификатор сеанса, блокирующего данный запрос. Если этот столбец содержит значение NULL, то запрос не блокирован или сведения о сеансе блокировки недоступны (или не могут быть идентифицированы). |
 | status | Состояние запроса. |
 | database_name | Имя текущей базы данных для каждого сеанса. |
-| login_name | Имя входа SQL Server, под которой выполняется текущий сеанс. |
+| login_name | SQL Server имя входа, под которым выполняется текущий сеанс. |
 | wait_time | Если запрос в настоящий момент блокирован, в столбце содержится продолжительность текущего ожидания (в миллисекундах). Не допускает значение NULL. |
-| wait_type | Если запрос в настоящий момент блокирован, в столбце содержится тип ожидания. Сведения о типах ожиданий см. в разделе [sys.dm_os_wait_stats](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md). |
+| wait_type | Если запрос в настоящий момент блокирован, в столбце содержится тип ожидания. Дополнительные сведения о типах ожиданий см. в разделе [sys. DM _os_wait_stats](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md). |
 | last_wait_type | Если запрос был блокирован ранее, в столбце содержится тип последнего ожидания. |
 | total_elapsed_time | Общее время, истекшее с момента поступления запроса (в миллисекундах). |
 | cpu_time | Время ЦП (в миллисекундах), затраченное на выполнение запроса. |
@@ -126,11 +126,11 @@ ON s.session_id = r.session_id;
 
 ## <a name="execution-statistics"></a>Статистика выполнения.
 
-Просмотр статистики выполнения для внешней среды выполнения R и Python. Только статистика RevoScaleR, revoscalepy или функции пакета microsoftml в настоящее время доступны.
+Просмотр статистики выполнения для внешней среды выполнения для R и Python. В настоящее время доступны только статистические функции пакетов RevoScaleR, revoscalepy и microsoftml.
 
-![Выходные данные из запроса Статистика выполнения](media/dmv-execution-statistics.png "выходные данные из запроса Статистика выполнения")
+![Выходные данные запроса статистики выполнения](media/dmv-execution-statistics.png "Выходные данные запроса статистики выполнения")
 
-Выполните запрос ниже, чтобы получить эти выходные данные. Дополнительные сведения о используется динамическое административное представление, см. в разделе [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md). Запрос возвращает только те функции, которые были выполнены несколько раз.
+Чтобы получить эти выходные данные, выполните приведенный ниже запрос. Дополнительные сведения об используемом динамическом административном представлении см. в разделе [sys. DM _external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md). Запрос возвращает только те функции, которые были выполнены несколько раз.
 
 ```sql
 SELECT language, counter_name, counter_value
@@ -149,11 +149,11 @@ ORDER BY language, counter_name;
 
 ## <a name="performance-counters"></a>Счетчики производительности
 
-Просмотрите счетчики производительности, связанных с выполнением внешних скриптов.
+Просмотр счетчиков производительности, связанных с выполнением внешних скриптов.
 
-![Выходные данные производительности счетчиков запросов](media/dmv-performance-counters.png "выходные данные производительности счетчиков запросов")
+![Выходные данные запроса счетчиков производительности](media/dmv-performance-counters.png "Выходные данные запроса счетчиков производительности")
 
-Выполните запрос ниже, чтобы получить эти выходные данные. Дополнительные сведения о используется динамическое административное представление, см. в разделе [sys.dm_os_performance_counters](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md).
+Чтобы получить эти выходные данные, выполните приведенный ниже запрос. Дополнительные сведения об используемом динамическом административном представлении см. в разделе [sys. DM _os_performance_counters](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md).
 
 ```sql
 SELECT counter_name, cntr_value
@@ -161,25 +161,25 @@ FROM sys.dm_os_performance_counters
 WHERE object_name LIKE '%External Scripts%'
 ```
 
-**sys.dm_os_performance_counters** выводит следующие счетчики производительности для внешних скриптов:
+**sys. DM _os_performance_counters** выводит следующие счетчики производительности для внешних скриптов:
 
 | Счетчик | Описание |
 |---------|-------------|
-| Всего выполнений | Количество внешних процессов, запущенных с локальных или удаленных вызовов. |
-| Параллельное выполнение | Сколько раз скрипт содержал _@parallel_ спецификации и что [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] смогла создать и использовать параллельный план запроса. |
-| Потоковое выполнение | Сколько раз была вызвана функция потоковой передачи. |
-| Выполнение SQL CC | Количество внешних скриптов, выполнения которых вызов был создан удаленно и SQL Server был использован в качестве контекста вычисления. |
-| Имена входа с неявной проверкой подлинности Имена входа | Сколько раз ODBC петлевых вызовов с помощью неявной проверки подлинности; то есть [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] выполнял вызов от имени пользователя, отправившего запрос скрипта. |
-| Общее время выполнения (мс) | Время, прошедшее между вызовом и его завершением вызова. |
-| Ошибки выполнения | Количество раз, скрипты, сообщила об ошибках. Этот счетчик не включает ошибки R или Python. |
+| Всего выполнений | Количество внешних процессов, запущенных локальными или удаленными вызовами. |
+| Параллельное выполнение | Количество раз, когда сценарий включал _@parallel_ спецификацию [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] и мог создать и использовать параллельный план запроса. |
+| Потоковое выполнение | Количество раз, когда была вызвана функция потоковой передачи. |
+| Выполнение SQL CC | Количество внешних скриптов, в которых вызов был создан удаленно и SQL Server использовался в качестве контекста вычислений. |
+| Имена входа с неявной проверкой подлинности Имена входа | Количество случаев, когда вызов обратной связи ODBC был выполнен с использованием подразумеваемой проверки подлинности; то есть, [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] выполняет вызов от имени пользователя, отправляющего запрос скрипта. |
+| Общее время выполнения (мс) | Время, прошедшее между вызовом и завершением вызова. |
+| Ошибки выполнения | Количество раз, когда скрипты сообщили об ошибках. Это число не включает ошибки R или Python. |
 
 ## <a name="memory-usage"></a>Использование памяти
 
-Просмотр сведений о памяти, используемой операционной системы, SQL Server и внешние пулы.
+Просмотр сведений о памяти, используемой ОС, SQL Server и внешних пулах.
 
-![Выходные данные из запроса об использовании памяти](media/dmv-memory-usage.png "выходные данные из запроса об использовании памяти")
+![Выходные данные запроса на использование памяти](media/dmv-memory-usage.png "Выходные данные запроса на использование памяти")
 
-Выполните запрос ниже, чтобы получить эти выходные данные. Дополнительные сведения о динамических административных представлений, которые используются, см. в разделе [sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) и [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md).
+Чтобы получить эти выходные данные, выполните приведенный ниже запрос. Дополнительные сведения об используемых динамических административных представлениях см. в разделе [sys. DM _resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) и [sys. DM _os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md).
 
 ```sql
 SELECT physical_memory_kb, committed_kb
@@ -195,15 +195,15 @@ FROM sys.dm_os_sys_info;
 |--------|-------------|
 | physical_memory_kb | Общий объем физической памяти на компьютере. |
 | committed_kb | Выделенная память в килобайтах (КБ) в диспетчере памяти. Не включает зарезервированную память в диспетчере памяти. |
-| external_pool_peak_memory_kb | Сумма максимальный объем памяти, используются в килобайтах, для всех внешних пулов ресурсов. |
+| external_pool_peak_memory_kb | Сумма максимального объема используемой памяти (в килобайтах) для всех внешних пулов ресурсов. |
 
 ## <a name="memory-configuration"></a>Настройка использования памяти
 
-Просмотр сведений о конфигурации максимальный объем памяти в процентах от SQL Server и внешних пулов ресурсов. Если SQL Server выполняется со значением по умолчанию `max server memory (MB)`, он рассматривается как 100% от памяти операционной системы.
+Просмотр сведений о максимальной конфигурации памяти в процентах от SQL Server и внешних пулов ресурсов. Если SQL Server работает со значением `max server memory (MB)`по умолчанию, то оно считается 100% памяти ОС.
 
-![Выходные данные из запроса конфигурации памяти](media/dmv-memory-configuration.png "выходные данные из запроса конфигурации памяти")
+![Выходные данные запроса конфигурации памяти](media/dmv-memory-configuration.png "Выходные данные запроса конфигурации памяти")
 
-Выполните запрос ниже, чтобы получить эти выходные данные. Дополнительные сведения о представления, используемые, см. в разделе [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) и [sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md).
+Чтобы получить эти выходные данные, выполните приведенный ниже запрос. Дополнительные сведения об используемых представлениях см. в разделе [sys. Configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) и [sys. DM _resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md).
 
 ```sql
 SELECT 'SQL Server' AS name
@@ -223,15 +223,15 @@ FROM sys.dm_resource_governor_external_resource_pools AS ep;
 | Столбец | Описание |
 |--------|-------------|
 | name | Имя внешнего пула ресурсов или SQL Server. |
-| max_memory_percent | Максимальный объем памяти, который можно использовать SQL Server или внешнего пула ресурсов. |
+| max_memory_percent | Максимальный объем памяти, который может использоваться SQL Server или внешним пулом ресурсов. |
 
 ## <a name="resource-pools"></a>Пулы ресурсов
 
-В [регулятор ресурсов SQL Server](../../relational-databases/resource-governor/resource-governor.md), [пул ресурсов](../../relational-databases/resource-governor/resource-governor-resource-pool.md) представляет подмножество физических ресурсов экземпляра. Вы можете указать ограничения на объем ЦП, физических операций ввода-ВЫВОДА и памяти, что входящих запросов приложений, включая выполнение внешних скриптов, можно использовать в пуле ресурсов. Просмотр пулов ресурсов, используемых для SQL Server и внешних скриптов.
+В [SQL Server Resource Governor](../../relational-databases/resource-governor/resource-governor.md) [пул ресурсов](../../relational-databases/resource-governor/resource-governor-resource-pool.md) представляет подмножество физических ресурсов экземпляра. Вы можете указать ограничения на объем ресурсов ЦП, физических операций ввода-вывода и памяти, которые поступают на входящие запросы приложений, включая выполнение внешних скриптов, в пуле ресурсов. Просмотр пулов ресурсов, используемых для SQL Server и внешних скриптов.
 
-![Выходные данные из ресурса пулов запроса](media/dmv-resource-pools.png "выходные данные из ресурса пула запросов")
+![Выходные данные запроса пулов ресурсов](media/dmv-resource-pools.png "Выходные данные запроса пулов ресурсов")
 
-Выполните запрос ниже, чтобы получить эти выходные данные. Дополнительные сведения о динамических административных представлений, которые используются, см. в разделе [sys.dm_resource_governor_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md) и [sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md).
+Чтобы получить эти выходные данные, выполните приведенный ниже запрос. Дополнительные сведения об используемых динамических административных представлениях см. в разделе [sys. DM _resource_governor_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md) и [sys. DM _resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md).
 
 ```sql
 SELECT CONCAT ('SQL Server - ', p.name) AS pool_name
@@ -247,22 +247,22 @@ FROM sys.dm_resource_governor_external_resource_pools AS ep;
 
 | Столбец | Описание |
 |--------|-------------|
-| pool_name | Имя пула ресурсов. Пулы ресурсов SQL Server начинаются с префикса `SQL Server` и внешние пулы ресурсов имеют префикс `External Pool`.
-| total_cpu_usage_hours | Совокупное использование ЦП в миллисекундах с момента сброса статистики регулятора ресурсов. |
+| pool_name | Имя пула ресурсов. SQL Server пулы ресурсов имеют префикс `SQL Server` , а внешние пулы ресурсов имеют `External Pool`префикс.
+| total_cpu_usage_hours | Совокупное использование ЦП в миллисекундах с момента сброса статистики сброса регулятора ресурсов. |
 | read_io_completed_total | Общая сумма завершенных операций ввода-вывода с момента сброса регулятора ресурсов. |
 | write_io_completed_total | Общая сумма завершенных операций ввода-вывода записи с момента сброса регулятора ресурсов. |
 
 ## <a name="installed-packages"></a>Установленные пакеты
 
-Можно просмотреть установленные в службах машинного обучения SQL Server, выполнив сценарий R или Python, который выводит эти пакеты R и Python.
+Вы можете просмотреть пакеты R и Python, установленные в SQL Server Службы машинного обучения, выполнив сценарий R или Python, который выводит эти данные.
 
 ### <a name="installed-packages-for-r"></a>Установленные пакеты для R
 
-Просмотр пакетов R, установленных в службах машинного обучения SQL Server.
+Просмотрите пакеты R, установленные в SQL Server Службы машинного обучения.
 
-![Выходные данные из установленных пакетов для запроса R](media/dmv-installed-packages-r.png "выходные данные из установленных пакетов для запроса R")
+![Выходные данные установленных пакетов для запроса R](media/dmv-installed-packages-r.png "Выходные данные установленных пакетов для запроса R")
 
-Выполните запрос ниже, чтобы получить эти выходные данные. Использование запросов скрипт R для определения пакетов R, установленная с SQL Server.
+Чтобы получить эти выходные данные, выполните приведенный ниже запрос. В запросе используется скрипт R для определения пакетов R, установленных с помощью SQL Server.
 
 ```sql
 EXEC sp_execute_external_script @language = N'R'
@@ -272,23 +272,23 @@ WITH result sets((Package NVARCHAR(255), Version NVARCHAR(100), Depends NVARCHAR
     , License NVARCHAR(1000), LibPath NVARCHAR(2000)));
 ```
 
-Ниже приведены столбцы, возвращаемые.
+Возвращаются следующие столбцы:
 
 | Столбец | Описание |
 |--------|-------------|
 | Пакет | Имя установленного пакета. |
 | Version | Версия пакета. |
-| Зависит | Список пакетов, который зависит от установленного пакета. |
-| Лицензия | Лицензии для установленного пакета. |
-| LibPath | Каталог, где можно найти пакет. |
+| Зависит | Выводит список пакетов, от которых зависит установленный пакет. |
+| Лицензия | Лицензия для установленного пакета. |
+| Среды | Каталог, в котором можно найти пакет. |
 
 ### <a name="installed-packages-for-python"></a>Установленные пакеты для Python
 
-Просмотр пакетов Python, установленных в службах машинного обучения SQL Server.
+Просмотрите пакеты Python, установленные в SQL Server Службы машинного обучения.
 
-![Выходные данные из установленных пакетов для запроса Python](media/dmv-installed-packages-python.png "выходные данные из установленных пакетов для запроса Python")
+![Выходные данные из установленных пакетов для запроса Python](media/dmv-installed-packages-python.png "Выходные данные из установленных пакетов для запроса Python")
 
-Выполните запрос ниже, чтобы получить эти выходные данные. Запрос использовать сценарий Python для определения пакетов Python, установленная с SQL Server.
+Чтобы получить эти выходные данные, выполните приведенный ниже запрос. В запросе используется скрипт Python для определения пакетов Python, установленных с помощью SQL Server.
 
 ```sql
 EXEC sp_execute_external_script @language = N'Python'
@@ -298,18 +298,18 @@ OutputDataSet = pandas.DataFrame([(i.key, i.version, i.location) for i in pip.ge
 WITH result sets((Package NVARCHAR(128), Version NVARCHAR(128), Location NVARCHAR(1000)));
 ```
 
-Ниже приведены столбцы, возвращаемые.
+Возвращаются следующие столбцы:
 
 | Столбец | Описание |
 |--------|-------------|
 | Пакет | Имя установленного пакета. |
 | Version | Версия пакета. |
-| Location | Каталог, где можно найти пакет. |
+| Location | Каталог, в котором можно найти пакет. |
 
 ## <a name="next-steps"></a>Следующие шаги
 
 + [Управление решениями машинного обучения и их мониторинг](../../advanced-analytics/r/managing-and-monitoring-r-solutions.md)
 + [Расширенные события для машинного обучения](../../advanced-analytics/r/extended-events-for-sql-server-r-services.md)
-+ [Динамические административные представления, связанные с регулятора ресурсов](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)
++ [Динамические административные представления, связанные с Resource Governor](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)
 + [Системные динамические административные представления](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
-+ [Монитор машинного обучения с помощью настраиваемых отчетов в среде Management Studio](../../advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio.md)
++ [Мониторинг машинного обучения с помощью пользовательских отчетов в Management Studio](../../advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio.md)

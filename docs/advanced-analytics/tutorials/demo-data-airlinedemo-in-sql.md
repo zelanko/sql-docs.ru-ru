@@ -1,56 +1,56 @@
 ---
-title: Набор данных demo рейсов авиакомпании учебники SQL Server Python и R - машинного обучения SQL Server
-Description: Создание базы данных, содержащей набор данных Airline из R и Python. Этот набор данных используется в упражнения, в котором показано, как программы-оболочки для языка R или Python код в хранимую процедуру SQL Server.
+title: Демонстрационный набор данных рейса авиакомпании для SQL Server учебных материалов по Python и R
+Description: Создайте базу данных с набором данных авиакомпании из R и Python. Этот набор данных используется в упражнениях, демонстрирующих создание оболочки языка R или кода Python в SQL Server хранимой процедуре.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/22/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: d317053721d3c3288e58bcfbd467bb282020db48
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 82afddf861ecda2d25260f69e532c63a1203030b
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962125"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68344626"
 ---
-#  <a name="airline-flight-arrival-demo-data-for-sql-server-python-and-r-tutorials"></a>Авиакомпания рейсов прибытия демонстрационных данных для SQL Server Python и R руководств
+#  <a name="airline-flight-arrival-demo-data-for-sql-server-python-and-r-tutorials"></a>Демонстрационные данные о прибытии авиабилетов для SQL Server Python и R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-В этом упражнении создайте базу данных SQL Server для хранения импортированных данных из R или Python встроенные Airline demo наборов данных. R и Python дистрибутивов предоставляют эквивалентные данные, которые можно импортировать в базу данных SQL Server, с помощью Management Studio.
+В этом упражнении вы создадите базу данных SQL Server для хранения импортированных данных из встроенных демонстрационных наборов данных авиакомпании на языке R или Python. Дистрибутивы R и Python предоставляют эквивалентные данные, которые можно импортировать в SQL Server базу данных с помощью Management Studio.
 
-Для этого упражнения вам понадобится [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017) или другого средства, которые могут выполнять запросы T-SQL.
+Для выполнения этого упражнения необходимо иметь [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017) или другое средство, которое может выполнять запросы T-SQL.
 
-Учебники и примеры использования, с помощью этого набора данных включают следующее:
+Ниже приведены руководства и краткие руководства, в которых используется этот набор данных.
 
 +  [Создание модели Python с помощью revoscalepy](use-python-revoscalepy-to-create-model.md)
 
 ## <a name="create-the-database"></a>Создайте базу данных
 
-1. Запустите SQL Server Management Studio, подключитесь к экземпляру ядра базы данных, с интегрированным R или Python.  
+1. Запустите SQL Server Management Studio, подключитесь к экземпляру ядра СУБД с интеграцией R или Python.  
 
-2. В обозревателе объектов щелкните правой кнопкой мыши **баз данных** и создать новую базу данных с именем **flightdata**.
+2. В обозревателе объектов щелкните правой кнопкой мыши **базы данных** и создайте новую базу данных с именем **флигхтдата**.
 
-3. Щелкните правой кнопкой мыши **flightdata**, нажмите кнопку **задачи**, нажмите кнопку **импорта неструктурированных файлов**.
+3. Щелкните правой кнопкой мыши **флигхтдата**, выберите **задачи**, а затем импорт неструктурированного **файла**.
 
-4. Откройте файл AirlineDemoData.csv, указанный в дистрибутиве R или Python, в зависимости от того, какой язык вы установили.
+4. Откройте файл Аирлинедемодата. csv, указанный в дистрибутиве R или Python, в зависимости от установленного языка.
 
-   Для R, искать **AirlineDemoSmall.csv** в C:\Program Files\Microsoft SQL Server\MSSQL14. MSSQLSERVER\R_SERVICES\library\RevoScaleR\SampleData
+   Для R найдите файл **AirlineDemoSmall. csv** в папке C:\PROGRAM Files\Microsoft SQL Server\MSSQL14. MSSQLSERVER\R_SERVICES\library\RevoScaleR\SampleData
    
-   Для Python, найдите **AirlineDemoSmall.csv** в C:\Program Files\Microsoft SQL Server\MSSQL14. MSSQLSERVER\PYTHON_SERVICES\Lib\site packages\revoscalepy\data\sample_data
+   Для Python найдите файл **AirlineDemoSmall. csv** в папке C:\PROGRAM Files\Microsoft SQL Server\MSSQL14. MSSQLSERVER\PYTHON_SERVICES\Lib\site-packages\revoscalepy\data\sample_data
   
-При выборе файла по умолчанию заполняются значения для имени таблицы и схемы.
+При выборе файла значения по умолчанию заполняются для имени таблицы и схемы.
 
-  ![Отображение значения по умолчанию airline demo мастера импорта неструктурированных файлов](media/import-airlinedemosmall.png)
+  ![Мастер импорта неструктурированных файлов, демонстрирующий демо по умолчанию для авиакомпании](media/import-airlinedemosmall.png)
 
-Щелкните на следующих страницах, принимая значения по умолчанию, чтобы импортировать данные.
+Щелкните остальные страницы, принимая значения по умолчанию, чтобы импортировать данные.
 
 
 ## <a name="query-the-data"></a>Запрос данных
 
-В качестве шага проверки выполните запрос, чтобы убедиться, что данные были отправлены.
+В качестве шага проверки выполните запрос для подтверждения передачи данных.
 
-1. В обозревателе объектов в базах данных, щелкните правой кнопкой мыши **flightdata** базы данных, а затем запустите новый запрос.
+1. В обозревателе объектов в разделе базы данных щелкните правой кнопкой мыши базу данных **флигхтдата** и запустите новый запрос.
 
 2. Выполните некоторые простые запросы:
 
@@ -61,6 +61,6 @@ ms.locfileid: "67962125"
 
 ## <a name="next-steps"></a>Следующие шаги
 
-На следующем занятии вы создадите модель линейной регрессии на основе этих данных.
+На следующем занятии будет создана модель линейной регрессии на основе этих данных.
 
 + [Создание модели Python с помощью revoscalepy](use-python-revoscalepy-to-create-model.md)
