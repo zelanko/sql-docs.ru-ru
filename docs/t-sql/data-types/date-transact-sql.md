@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: c963e8b4-5a85-4bd0-9d48-3f8da8f6516b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 076c4927ee5f3811b9c3415c1db30cc7cfa2a6a2
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: ae7ab885ced505ccf7da03d388e8063c276fc0d9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287184"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68113714"
 ---
 # <a name="date-transact-sql"></a>date (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -107,7 +106,7 @@ ms.locfileid: "56287184"
 
 В этом разделе описывается, что происходит при преобразовании типа данных **date** в другие типы даты и времени.
   
-Преобразование в **time(n)** завершается сбоем, и появляется сообщение об ошибке 206: «Конфликт типов операндов: тип date несовместим с типом time».
+Преобразование в **time(n)** завершается сбоем, и появляется сообщение об ошибке 206: "Конфликт типов операндов: date несовместим с time".
   
 При преобразовании в **datetime** копируется дата. Следующий код демонстрирует результаты преобразования значения `date` в значение `datetime`.
   
