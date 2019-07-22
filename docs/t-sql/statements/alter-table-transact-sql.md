@@ -58,14 +58,13 @@ helpviewer_keywords:
 ms.assetid: f1745145-182d-4301-a334-18f799d361d1
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4f6c3888a97c1a4db107009fdd71e878c3e2b6f2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bf8c6b3de78a1140b1cc153418672fd5b1194e48
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66499527"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070413"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
@@ -454,9 +453,9 @@ ALTER COLUMN
 
 Тип данных в столбцах **text**, **ntext** и **image** может быть изменен только следующими способами:
 
-- **text** на **varchar(max)**, **nvarchar(max)** или **xml**;
-- **ntext** на**varchar(max)**, **nvarchar(max)** или **xml**;
-- **image** на **varbinary(max)**.
+- **text** на **varchar(max)** , **nvarchar(max)** или **xml**;
+- **ntext** на**varchar(max)** , **nvarchar(max)** или **xml**;
+- **image** на **varbinary(max)** .
 
 Некоторые изменения типов данных могут повлечь за собой изменения в данных. Например, преобразование столбца типа **nchar** или **nvarchar** в столбец типа **char** или **varchar** может привести к преобразованию расширенных символов. См. описание [CAST и CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md). Снижение точности или масштаба столбца может привести к усечению данных.
 
@@ -474,7 +473,7 @@ ALTER COLUMN
 *column_name*  
 Имя столбца, который требуется изменить, добавить или удалить. Длина имени *column_name* не может превышать 128 символов. Для новых столбцов, созданных с типом данных **timestamp**, аргумент *column_name* можно опустить. Если для столбца типа **timestamp** не указан аргумент *column_name*, используется имя **timestamp**.
 
-[ _type\_schema\_name_**.** ] _type\_name_  
+[ _type\_schema\_name_ **.** ] _type\_name_  
 Новый тип данных для изменяемого столбца либо тип данных для добавляемого столбца. Значение *type_name* нельзя задать для существующих столбцов секционированных таблиц. Тип *type_name* может иметь любое из следующих значений:
 
 - Системным типом данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
@@ -706,13 +705,13 @@ OFF
 > [!NOTE]
 > Операции с индексами в сети доступны не во всех выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделах [Выпуски и поддерживаемые функции SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md) и [Выпуски и поддерживаемые функции SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).
 
-MOVE TO { _partition\_scheme\_name_**(**_column\_name_ [ 1 **,** ...*n*] **)** | *filegroup* | **"** default **"** }  
+MOVE TO { _partition\_scheme\_name_ **(** _column\_name_ [ 1 **,** ...*n*] **)**  | *filegroup* |  **"** default **"** }  
 **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Указывает местоположение для перемещения строк данных, находящихся в настоящее время на конечном уровне кластеризованного индекса. Таблица перемещается на новое место. Этот параметр применяется только ограничениям, образующим кластеризованный индекс.
 
 > [!NOTE]
-> В этом контексте default не является ключевым словом. Это идентификатор файловой группы по умолчанию, и поэтому он должен быть заключен в разделители, например: MOVE TO **"** default **"** или MOVE TO **[** default **]**. Если указано значение **"** default **"**, то параметру QUOTED_IDENTIFIER для текущего сеанса должно быть присвоено значение ON. Это параметр по умолчанию. Дополнительные сведения см. в описании [SET QUOTED_IDENTIFIER](../../t-sql/statements/set-quoted-identifier-transact-sql.md).
+> В этом контексте default не является ключевым словом. Это идентификатор файловой группы по умолчанию, и поэтому он должен быть заключен в разделители, например: MOVE TO **"** default **"** или MOVE TO **[** default **]** . Если указано значение **"** default **"** , то параметру QUOTED_IDENTIFIER для текущего сеанса должно быть присвоено значение ON. Это параметр по умолчанию. Дополнительные сведения см. в описании [SET QUOTED_IDENTIFIER](../../t-sql/statements/set-quoted-identifier-transact-sql.md).
 
 { CHECK | NOCHECK } CONSTRAINT  
 Указывает, включено или отключено ограничение *constraint_name*. Данный параметр может использоваться только с ограничениями FOREIGN KEY и CHECK. Если указан параметр NOCHECK, то ограничение отключено и будущие вставки или обновления столбца не проверяются относительно условий ограничений. Отключить ограничения DEFAULT, PRIMARY KEY и UNIQUE нельзя.
@@ -743,7 +742,7 @@ WITH **(** TRACK_COLUMNS_UPDATED **=** { ON | **OFF** } **)**
 
 Указывает, отслеживает ли компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] обновления столбцов. Значение по умолчанию — OFF.
 
-SWITCH [ PARTITION *source_partition_number_expression* ] TO [ _schema\_name_**.** ] *target_table* [ PARTITION *target_partition_number_expression* ]  
+SWITCH [ PARTITION *source_partition_number_expression* ] TO [ _schema\_name_ **.** ] *target_table* [ PARTITION *target_partition_number_expression* ]  
 **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Переключает блок данных одним из следующих способов.
@@ -768,7 +767,7 @@ SWITCH [ PARTITION *source_partition_number_expression* ] TO [ _schema\_name_**.
 
 Некластеризованные индексы columnstore, созданные для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 CTP1 и для Базы данных SQL до версии 12, поддерживали формат только для чтения. Перед выполнением операций PARTITION необходимо перестроить некластеризованные индексы columnstore в текущий формат (с поддержкой обновления).
 
-SET **(** FILESTREAM_ON = { *partition_scheme_name* | *filestream_filegroup_name* | **"** default **"** | **"** NULL **"** }**)**  
+SET **(** FILESTREAM_ON = { *partition_scheme_name* | *filestream_filegroup_name* |  **"** default **"**  |  **"** NULL **"** } **)**  
 **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]). [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] не поддерживает `FILESTREAM`.
 
 Указывает местоположения хранения данных FILESTREAM.
@@ -781,7 +780,7 @@ SET **(** FILESTREAM_ON = { *partition_scheme_name* | *filestream_filegroup_name
 
 **"** default **"** указывает файловую группу FILESTREAM с заданным свойством DEFAULT. При отсутствии файловой группы FILESTREAM возникает ошибка.
 
-Значение **"** NULL **"** указывает на удаление всех ссылок на файловые группы FILESTREAM для таблицы. Сначала должны быть удалены все столбцы FILESTREAM. Используйте инструкцию SET FILESTREAM_ON **="** NULL **"**, чтобы удалить все данные FILESTREAM, связанные с таблицей.
+Значение **"** NULL **"** указывает на удаление всех ссылок на файловые группы FILESTREAM для таблицы. Сначала должны быть удалены все столбцы FILESTREAM. Используйте инструкцию SET FILESTREAM_ON **="** NULL **"** , чтобы удалить все данные FILESTREAM, связанные с таблицей.
 
 SET **(** SYSTEM_VERSIONING **=** { OFF | ON [ ( HISTORY_TABLE = schema_name . history_table_name [ , DATA_CONSISTENCY_CHECK = { **ON** | OFF } ]) ] } **)**  
  **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
@@ -996,7 +995,7 @@ IF EXISTS
 
 Для существующих строк используется ссылка на значение, хранящееся в метаданных, но это же значение сохраняется напрямую в каждой новой строке, которая вставляется без указания значения для этого столбца. Значение по умолчанию, хранящееся в метаданных, будет перемещено в существующую строку при ее обновлении (даже если в инструкции UPDATE не указан этот столбец), а также при перестроении таблицы или кластеризованного индекса.
 
-Столбцы типов **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, **text**, **ntext**, **image**, **hierarchyid**, **geometry**, **geography** или с пользовательским типом среды CLR нельзя добавлять в оперативном режиме. Столбец нельзя добавить в оперативном режиме, если после этой операции максимально возможный размер строки превысит ограничение в 8060 байт. В этом случае столбец добавляется в рамках операции вне сети.
+Столбцы типов **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , **xml**, **text**, **ntext**, **image**, **hierarchyid**, **geometry**, **geography** или с пользовательским типом среды CLR нельзя добавлять в оперативном режиме. Столбец нельзя добавить в оперативном режиме, если после этой операции максимально возможный размер строки превысит ограничение в 8060 байт. В этом случае столбец добавляется в рамках операции вне сети.
 
 ## <a name="parallel-plan-execution"></a>Выполнение параллельного плана
 
@@ -1036,7 +1035,7 @@ IF EXISTS
 Для удаления кластеризованного индекса временно требуется место на диске, равное размеру существующего кластеризованного индекса. Это дополнительное пространство освобождается сразу после завершения операции.
 
 > [!NOTE]
-> Параметры, перечисленные в *\<drop_clustered_constraint_option>*, применяются к кластеризованным индексам по таблицам, но не по представлениям. Также они не применяются к некластеризованным индексам.
+> Параметры, перечисленные в *\<drop_clustered_constraint_option>* , применяются к кластеризованным индексам по таблицам, но не по представлениям. Также они не применяются к некластеризованным индексам.
 
 ## <a name="replicating-schema-changes"></a>Репликация изменений схемы
 

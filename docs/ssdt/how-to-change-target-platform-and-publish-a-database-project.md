@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 6012e120-5f72-4f4f-ae6e-f9a57ae1dea7
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3a95768fd863c7584c98a5135dccef826fabbc56
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a2dd22b47da751294b60f57aaad246234004e946
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65090105"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897370"
 ---
 # <a name="how-to-change-target-platform-and-publish-a-database-project"></a>Руководство. изменить целевую платформу и опубликовать проект базы данных
 В качестве целевой версии SQL Server для проекта базы данных SQL Server Data Tools (SSDT) можно указать любой поддерживаемый экземпляр SQL Server (SQL Server 2005, 2008, 2008 R2, Microsoft SQL Server 2012 или SQL Azure). Это позволяет сосредоточить разработку базы данных в одном проекте, но при необходимости публиковать ее в нескольких экземплярах SQL Server.  

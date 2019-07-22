@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 99872c4f-40ce-4405-8fd4-44052d3bd827
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e06cc6312c88139be3d4225ddd4e92fe432f4bb3
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 3d39fcd8df1f62bd089361a9a32ef7a59aa113a4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126194"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67907692"
 ---
 # <a name="deliver-a-snapshot-through-ftp"></a>Доставка моментального снимка через FTP
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "54126194"
   
 -   Для передачи файлов моментальных снимков с использованием протокола FTP (File Transfer Protocol) необходимо настроить FTP-сервер. Дополнительные сведения см. в документации служб IIS [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
  В целях повышения безопасности рекомендуется реализовать частную виртуальную сеть (VPN) при доставке моментальных снимков по протоколу FTP через Интернет. Дополнительные сведения см. в статье [Публикация данных через Интернет с помощью виртуальных частных сетей](../../../relational-databases/replication/publish-data-over-the-internet-using-vpn.md).  
   
  Для обеспечения безопасности рекомендуется запретить анонимный вход на FTP-сервер. Агент моментальных снимков должен иметь разрешения на запись в указанный каталог, а агент распространителя или агент слияния должен иметь разрешения на чтение из этого каталога. При использовании подписок по запросу следует указать в качестве пути, соответствующего соглашению об универсальном назначении имен (UNC), общий каталог, например \\\ftpserver\home\snapshots. Дополнительные сведения см. в статье [Организация безопасности папки моментальных снимков](../../../relational-databases/replication/security/secure-the-snapshot-folder.md).  
@@ -48,7 +47,7 @@ ms.locfileid: "54126194"
  По возможности запрашивайте у пользователей учетные данные в среде выполнения приложения. Если учетные данные хранятся в файле скрипта, необходимо защитить этот файл.  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
- После настройки FTP-сервера укажите каталог и сведения безопасности для этого сервера в диалоговом окне **Свойства публикации — \<публикация>**. Дополнительные сведения о доступе к этому диалоговому окну см. в разделе [Просмотр и изменение свойств публикации](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+ После настройки FTP-сервера укажите каталог и сведения безопасности для этого сервера в диалоговом окне **Свойства публикации — \<публикация>** . Дополнительные сведения о доступе к этому диалоговому окну см. в разделе [Просмотр и изменение свойств публикации](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
 #### <a name="to-specify-ftp-information"></a>Указание сведений FTP  
   
@@ -77,7 +76,7 @@ ms.locfileid: "54126194"
   
 #### <a name="to-enable-ftp-snapshot-delivery-for-a-snapshot-or-transactional-publication"></a>Включение доставки моментальных снимков по протоколу FTP для публикации моментальных снимков или публикации транзакций  
   
-1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_addpublication](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md). Укажите параметр **@publication**, значение **true** в параметре **@enabled_for_internet**и соответствующие значения для следующих параметров:  
+1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_addpublication](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md). Укажите параметр **@publication** , значение **true** в параметре **@enabled_for_internet** и соответствующие значения для следующих параметров:  
   
     -   **@ftp_address** — адрес FTP-сервера, который используется для доставки моментального снимка;  
   
@@ -93,7 +92,7 @@ ms.locfileid: "54126194"
   
 #### <a name="to-enable-ftp-snapshot-delivery-for-a-merge-publication"></a>Включение доставки моментальных снимков по протоколу FTP для публикации слиянием  
   
-1.  На издателе в базе данных публикации выполните процедуру [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). Укажите параметр **@publication**, значение **true** в параметре **@enabled_for_internet** и соответствующие значения для следующих параметров:  
+1.  На издателе в базе данных публикации выполните процедуру [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). Укажите параметр **@publication** , значение **true** в параметре **@enabled_for_internet** и соответствующие значения для следующих параметров:  
   
     -   **@ftp_address** — адрес FTP-сервера, который используется для доставки моментального снимка;  
   
@@ -109,23 +108,23 @@ ms.locfileid: "54126194"
   
 #### <a name="to-create-a-pull-subscription-to-a-snapshot-or-transactional-publication-that-uses-ftp-snapshot-delivery"></a>Создание подписки по запросу на публикацию моментальных снимков или публикацию транзакций, использующую доставку моментальных снимков по протоколу FTP  
   
-1.  На подписчике в базе данных подписки выполните хранимую процедуру [sp_addpullsubscription](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md). Укажите параметр **@publisher** и **@publication**.  
+1.  На подписчике в базе данных подписки выполните хранимую процедуру [sp_addpullsubscription](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md). Укажите параметр **@publisher** и **@publication** .  
   
-    -   На подписчике в базе данных подписки выполните хранимую процедуру [sp_addpullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Укажите параметр **@publisher**, **@publisher_db**, **@publication**, учетные данные [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows, с которыми агент распространителя на подписчике выполняется для параметров **@job_login** и **@job_password**, а также значение **true** в параметре **@use_ftp**.  
+    -   На подписчике в базе данных подписки выполните хранимую процедуру [sp_addpullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Укажите параметр **@publisher** , **@publisher_db** , **@publication** , учетные данные [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows, с которыми агент распространителя на подписчике выполняется для параметров **@job_login** и **@job_password** , а также значение **true** в параметре **@use_ftp** .  
   
 2.  Чтобы зарегистрировать подписку по запросу, выполните на издателе в базе данных публикации хранимую процедуру [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) . Дополнительные сведения см. в статье [Создание подписки по запросу](../../../relational-databases/replication/create-a-pull-subscription.md).  
   
 #### <a name="to-create-a-pull-subscription-to-a-merge-publication-that-uses-ftp-snapshot-delivery"></a>Создание подписки по запросу на публикацию слиянием, использующую доставку моментальных снимков по протоколу FTP  
   
-1.  В базе данных подписки на издателе выполните процедуру [sp_addmergepushsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md). Укажите параметр **@publisher** и **@publication**.  
+1.  В базе данных подписки на издателе выполните процедуру [sp_addmergepushsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md). Укажите параметр **@publisher** и **@publication** .  
   
-2.  На подписчике в базе данных подписки выполните хранимую процедуру [sp_addmergepullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md). Укажите параметр **@publisher**, **@publisher_db**, **@publication**, учетные данные Windows, с которыми агент распространителя на подписчике выполняется для параметров **@job_login** и **@job_password**, а также значение **true** в параметре **@use_ftp**.  
+2.  На подписчике в базе данных подписки выполните хранимую процедуру [sp_addmergepullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md). Укажите параметр **@publisher** , **@publisher_db** , **@publication** , учетные данные Windows, с которыми агент распространителя на подписчике выполняется для параметров **@job_login** и **@job_password** , а также значение **true** в параметре **@use_ftp** .  
   
 3.  Чтобы зарегистрировать подписку по запросу, выполните на издателе в базе данных публикации хранимую процедуру [sp_addmergesubscription](../../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) . Дополнительные сведения см. в статье [Создание подписки по запросу](../../../relational-databases/replication/create-a-pull-subscription.md).  
   
 #### <a name="to-change-one-or-more-ftp-snapshot-delivery-settings-for-a-snapshot-or-transactional-publication"></a>Изменение одной или нескольких доставок моментальных снимков по протоколу FTP для публикации моментальных снимков или публикации транзакций  
   
-1.  На издателе в базе данных публикации выполните процедуру [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md). Выберите одно из следующих значений в параметре **@property** и укажите новое значение этого параметра в параметре **@value**:  
+1.  На издателе в базе данных публикации выполните процедуру [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md). Выберите одно из следующих значений в параметре **@property** и укажите новое значение этого параметра в параметре **@value** :  
   
     -   **ftp_address** — адрес FTP-сервера, который используется для доставки моментального снимка;  
   
@@ -139,11 +138,11 @@ ms.locfileid: "54126194"
   
 2.  Повторите шаг 1 для каждого изменяемого параметра FTP-соединения (необязательно).  
   
-3.  Чтобы отключить доставку моментальных снимков по протоколу FTP, выполните на издателе в базе данных публикации хранимую процедуру [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) (необязательно). Укажите значение **enabled_for_internet** в параметре **@property** и значение **false** в параметре **@value**.  
+3.  Чтобы отключить доставку моментальных снимков по протоколу FTP, выполните на издателе в базе данных публикации хранимую процедуру [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) (необязательно). Укажите значение **enabled_for_internet** в параметре **@property** и значение **false** в параметре **@value** .  
   
 #### <a name="to-change-ftp-snapshot-delivery-settings-for-a-merge-publication"></a>Изменение настроек доставки моментальных снимков по протоколу FTP для публикации слиянием  
   
-1.  В базе данных публикации на издателе выполните процедуру [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md). Выберите одно из следующих значений в параметре **@property** и укажите новое значение этого параметра в параметре **@value**:  
+1.  В базе данных публикации на издателе выполните процедуру [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md). Выберите одно из следующих значений в параметре **@property** и укажите новое значение этого параметра в параметре **@value** :  
   
     -   **ftp_address** — адрес FTP-сервера, который используется для доставки моментального снимка;  
   
@@ -157,7 +156,7 @@ ms.locfileid: "54126194"
   
 2.  Повторите шаг 1 для каждого изменяемого параметра FTP-соединения (необязательно).  
   
-3.  Чтобы отключить доставку моментальных снимков по протоколу FTP, выполните на издателе в базе данных публикации хранимую процедуру [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) (необязательно). Укажите значение **enabled_for_internet** в параметре **@property** и значение **false** в параметре **@value**.  
+3.  Чтобы отключить доставку моментальных снимков по протоколу FTP, выполните на издателе в базе данных публикации хранимую процедуру [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) (необязательно). Укажите значение **enabled_for_internet** в параметре **@property** и значение **false** в параметре **@value** .  
   
 ###  <a name="TsqlExample"></a> Примеры (Transact-SQL)  
  В следующем примере создается публикация слиянием, позволяющая подписчикам получить доступ к данным моментального снимка с помощью протокола FTP. Для доступа к общей папке FTP подписчик должен использовать защищенное VPN-соединение. Для передачи значений имени входа и пароля используются переменные скриптов**sqlcmd** . Дополнительные сведения см. в статье [Использование программы sqlcmd с переменными скрипта](../../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md).  

@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: fce5a8d4-283b-4c47-95e5-4946402550d5
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 819601e12f2e9b4179ffa966fb8e54962c9f31d4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fe295b162e6bae80294584c4a036a163d7d12dd2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65943866"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67943139"
 ---
 # <a name="concat-transact-sql"></a>CONCAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -55,9 +54,9 @@ CONCAT ( string_value1, string_value2 [, string_valueN ] )
 |Входной тип|Выходной тип и длина|  
 |---|---|
 |1. Любой аргумент<br><br />системного типа SQL CLR<br><br />пользовательского типа SQL CLR<br><br />или диспетчер конфигурации служб<br><br />`nvarchar(max)`|**nvarchar(max)**|  
-|2. В противном случае любой аргумент типа<br><br />**varbinary(max)**<br><br />или диспетчер конфигурации служб<br><br />**varchar(max)**|**varchar(max)**, если только один из параметров не представляет собой значение **nvarchar** любой длины. В этом случае `CONCAT` возвращает результат типа **nvarchar(max)**.|  
+|2. В противном случае любой аргумент типа<br><br />**varbinary(max)**<br><br />или диспетчер конфигурации служб<br><br />**varchar(max)**|**varchar(max)** , если только один из параметров не представляет собой значение **nvarchar** любой длины. В этом случае `CONCAT` возвращает результат типа **nvarchar(max)** .|  
 |3. В противном случае любой аргумент типа **nvarchar** не более 4000 символов.<br><br />( **nvarchar**(<= 4000) )|**nvarchar**(<= 4000)|  
-|4. Во всех остальных случаях|**varchar**(<= 8000) (тип **varchar** длиной не более 8000 символов), если только один из параметров не представляет собой значение nvarchar любой длины. В этом случае `CONCAT` возвращает результат типа **nvarchar(max)**.|  
+|4. Во всех остальных случаях|**varchar**(<= 8000) (тип **varchar** длиной не более 8000 символов), если только один из параметров не представляет собой значение nvarchar любой длины. В этом случае `CONCAT` возвращает результат типа **nvarchar(max)** .|  
   
 Когда `CONCAT` получает входные аргументы **nvarchar** длиной<= 4000 символов или входные аргументы **varchar** длиной <= 8000 символов, неявное преобразование может повлиять на длину результата. Другие типы данных имеют разные длины, когда они неявно преобразуются в строки. Например, значение **int** (14) имеет длину строки 12, а длина значения **float** составляет 32. Таким образом, объединение двух целых чисел возвращает результат с длиной не менее 24.
   

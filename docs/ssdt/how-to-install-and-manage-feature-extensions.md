@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9cdc8cd5-c36f-4bee-a191-87ed457803e7
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3240bd208a13342782fefeb19532fbabed7e81e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7a7d2f4fa27623a75bd49a32a7ce800801f63e9f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65099678"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929592"
 ---
 # <a name="how-to-install-and-manage-feature-extensions"></a>Руководство. Установить расширения компонентов и управлять ими
 Вы можете добавлять правила для анализа кода базы данных, условия для модульных тестов базы данных и участников создания или развертывания для расширения функциональности, которую предлагают выпуски Visual Studio, включающие SQL Server Data Tools. Но, чтобы использовать расширение компонента, его сначала необходимо установить, независимо от того, кто создал это расширение: вы сами или другой разработчик.  

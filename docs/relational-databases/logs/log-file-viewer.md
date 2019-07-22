@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a4ea7fc8-1cb2-4c98-bc86-8991c5e748b2
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b2f95f3fcc7f904ef7ff51139c71ee77fbfad213
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7c587edde597b3b1dffeb60675a1c3c5cb886bc7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47671682"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084072"
 ---
 # <a name="log-file-viewer"></a>Средство просмотра файлов журнала
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,9 +38,9 @@ ms.locfileid: "47671682"
   
 -   Удаленные планы обслуживания  
   
--   SQL Server  
+-   SQL Server  
   
--   SQL Server, агент  
+-   Агент SQL Server  
   
 -   Windows NT (это события Windows, также доступные из программы просмотра событий Windows)  
   

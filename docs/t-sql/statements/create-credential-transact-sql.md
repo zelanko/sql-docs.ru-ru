@@ -23,14 +23,13 @@ helpviewer_keywords:
 ms.assetid: d5e9ae69-41d9-4e46-b13d-404b88a32d9d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: e9fba374be6a12a440138e3fa6a70975c5d3fdd7
-ms.sourcegitcommit: 134a91ed1a59b9d57cb1e98eb1eae24f118da51e
+ms.openlocfilehash: 875b66df7f2788d253bad98b92f19c7d63393885
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57556166"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061032"
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -56,19 +55,19 @@ WITH IDENTITY = 'identity_name'
  *credential_name*  
  Указывает имя создаваемых учетных данных. Аргумент *credential_name* не может начинаться с символа номера (#). Системные учетные данные начинаются с символов ##.  При использовании подписанного URL-адреса (SAS) это имя должно соответствовать пути к контейнеру, начинаться с префикса https и не должно содержать косой черты. См. пример Г ниже.  
   
- IDENTITY **='**_identity\_name_**'**  
+ IDENTITY **='** _identity\_name_ **'**  
  Указывает имя учетной записи для использования при подключении за пределами сервера. При использовании учетных данных для доступа к хранилищу Azure Key Vault **IDENTITY** — это имя хранилища ключей. См. пример В далее. Если в учетных данных используется подписанный URL-адрес (SAS), **IDENTITY** имеет значение *SHARED ACCESS SIGNATURE*. См. пример Г ниже.  
  
 > [!IMPORTANT]
 > База данных SQL Azure поддерживает только удостоверения Azure Key Vault и удостоверения на основе подписанного URL-адреса. Удостоверения пользователей Windows не поддерживаются.
  
- SECRET **='**_secret_**'**  
+ SECRET **='** _secret_ **'**  
  Указывает секретный код, необходимый для исходящей проверки подлинности.  
   
  При использовании учетных данных для доступа к хранилищу Azure Key Vault в аргументе **SECRET** инструкции **CREATE CREDENTIAL** требуется указать *\<идентификатор клиента>* (без дефисов) и *\<секрет>* **субъекта-службы** в Azure Active Directory без пробела между ними. См. пример В далее. Если в учетных данных используется подписанный URL-адрес, **SECRET** — это токен подписанного URL-адреса. См. пример Г ниже.  Для получения дополнительных сведений см. [Занятие 1. Создание хранимой политики доступа и подписанного URL-адреса для контейнера Azure.](../../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md)  
   
  FOR CRYPTOGRAPHIC PROVIDER *cryptographic_provider_name*  
- Указывает имя, на которое ссылается *поставщик расширенного управления ключами (EKM)*. Дополнительные сведения об управлении ключами см. в статье [Расширенное управление ключами (EKM)](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
+ Указывает имя, на которое ссылается *поставщик расширенного управления ключами (EKM)* . Дополнительные сведения об управлении ключами см. в статье [Расширенное управление ключами (EKM)](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
   
 ## <a name="remarks"></a>Remarks  
 
@@ -119,7 +118,7 @@ GO
  В приведенном ниже примере создаются учетные данные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которые [!INCLUDE[ssDE](../../includes/ssde-md.md)] использует при доступе к хранилищу Azure Key Vault с помощью **Соединителя SQL Server для Microsoft Azure Key Vault**. Полный пример использования соединителя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в статье [Расширенное управление ключами с помощью хранилища ключей Azure (SQL Server)](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md).  
   
 > [!IMPORTANT]  
->  В аргументе **IDENTITY** **CREATE CREDENTIAL** необходимо указать имя хранилища ключей. Для аргумента **SECRET** инструкции **CREATE CREDENTIAL** необходимо передать *\<Код клиента>* (без дефисов) и *\<Секрет>*, не разделенные пробелом.  
+>  В аргументе **IDENTITY** **CREATE CREDENTIAL** необходимо указать имя хранилища ключей. Для аргумента **SECRET** инструкции **CREATE CREDENTIAL** необходимо передать *\<Код клиента>* (без дефисов) и *\<Секрет>* , не разделенные пробелом.  
   
  В следующем примере из **идентификатора клиента** (`EF5C8E09-4D2A-4A76-9998-D93440D8115D`) удаляются дефисы. Идентификатор клиента вводится как строка `EF5C8E094D2A4A769998D93440D8115D` , а **секрет** представляется строкой *SECRET_DBEngine*.  
   
@@ -151,7 +150,7 @@ EXEC ('CREATE CREDENTIAL Azure_EKM_TDE_cred
 > [!IMPORTANT]  
 >  Аргумент **CREDENTIAL NAME** требует, чтобы имя соответствовало пути к контейнеру, начиналось с префикса https и не содержало завершающей косой черты. Для аргумента **IDENTITY** требуется имя *SHARED ACCESS SIGNATURE*. Для аргумента **SECRET** требуется токен подписанного URL-адреса.  
 >
->  В начале секрета **SHARED ACCESS SIGNATURE** не должно быть символа **?**.
+>  В начале секрета **SHARED ACCESS SIGNATURE** не должно быть символа **?** .
   
 ```  
 USE master  

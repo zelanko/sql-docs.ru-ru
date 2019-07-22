@@ -33,13 +33,12 @@ helpviewer_keywords:
 ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1c87b0167c4810c36e6d9579a501aff2a2954d25
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3ce9b298e096666e8e87cbe83af7c1881905f7eb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726087"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67944319"
 ---
 # <a name="fuzzy-lookup-transformation"></a>преобразование «Нечеткий уточняющий запрос»
 
@@ -148,7 +147,7 @@ ms.locfileid: "65726087"
 >  Преобразование «Нечеткий уточняющий запрос» создает рабочую копию ссылочной таблицы. В этой рабочей таблице описанные ниже индексы создаются с помощью специальной таблицы, а не обычных индексов [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Преобразование не изменяет существующие исходные таблицы, если не выбран параметр **Поддерживать хранимый индекс**. Если параметр выбран, в таблице ссылок создается триггер, который обновляет рабочую таблицу и таблицу индекса уточняющего запроса при изменениях в ссылочной таблице.  
   
 > [!NOTE]  
->  Свойства **Exhaustive** и **MaxMemoryUsage** преобразования «Нечеткий уточняющий запрос» недоступны в диалоговом окне **Редактор преобразования «Нечеткий уточняющий запрос»**, но могут быть заданы с помощью диалогового окна **Расширенный редактор**. К тому же значения параметра **MaxOutputMatchesPerInput** больше 100 могут быть заданы только в окне **Расширенный редактор**. Дополнительные сведения об этих свойствах см. в подразделе «Преобразование "Нечеткий уточняющий запрос"» раздела [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md).  
+>  Свойства **Exhaustive** и **MaxMemoryUsage** преобразования «Нечеткий уточняющий запрос» недоступны в диалоговом окне **Редактор преобразования «Нечеткий уточняющий запрос»** , но могут быть заданы с помощью диалогового окна **Расширенный редактор**. К тому же значения параметра **MaxOutputMatchesPerInput** больше 100 могут быть заданы только в окне **Расширенный редактор**. Дополнительные сведения об этих свойствах см. в подразделе «Преобразование "Нечеткий уточняющий запрос"» раздела [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md).  
   
 ### <a name="options"></a>Параметры  
  **Диспетчер соединений OLE DB**  

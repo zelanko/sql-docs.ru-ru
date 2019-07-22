@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 390eef67-1a49-4185-a971-e07765be9717
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 74fe3be365919d61a7b32587f910f083cc5e846d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 30a66dbcf9126031caa84cdf0ff7623d2dd16046
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034215"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927771"
 ---
 # <a name="data-type-synonyms-transact-sql"></a>Синонимы типов данных (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,21 +34,21 @@ ms.locfileid: "56034215"
 |**char varying**|**varchar**|  
 |**character**|**char**|  
 |**character**|**char(1)**|  
-|**character(**_n_**)**|**char(n)**|  
-|**character varying(**_n_**)**|**varchar(n)**|  
+|**character(** _n_ **)**|**char(n)**|  
+|**character varying(** _n_ **)**|**varchar(n)**|  
 |**Dec**|**decimal**|  
 |**Double precision**|**float**|  
-|**float**[**(**_n_**)**] for _n_ = 1-7|**real**|  
-|**float**[**(**_n_**)**] for _n_ = 8-15|**float**|  
+|**float**[ **(** _n_ **)** ] for _n_ = 1-7|**real**|  
+|**float**[ **(** _n_ **)** ] for _n_ = 8-15|**float**|  
 |**integer**|**int**|  
-|**national character(**_n_**)**|**nchar(n)**|  
-|**national char(**_n_**)**|**nchar(n)**|  
-|**national character varying(**_n_**)**|**nvarchar(n)**|  
-|**national char varying(**_n_**)**|**nvarchar(n)**|  
+|**national character(** _n_ **)**|**nchar(n)**|  
+|**national char(** _n_ **)**|**nchar(n)**|  
+|**national character varying(** _n_ **)**|**nvarchar(n)**|  
+|**national char varying(** _n_ **)**|**nvarchar(n)**|  
 |**national text**|**ntext**|  
 |**timestamp**|rowversion|  
   
-Синонимы типов данных можно использовать вместо соответствующих базовых типов данных в инструкциях языка описания данных DDL. К таким инструкциям относятся CREATE TABLE, CREATE PROCEDURE и DECLARE *@variable*. Однако после создания объекта синонимы утрачивают силу. При создании объекта ему назначается базовый тип данных, связанный с синонимом. Никаких признаков того, что в инструкции, создавшей объект, был указан синоним, не остается.
+Синонимы типов данных можно использовать вместо соответствующих базовых типов данных в инструкциях языка описания данных DDL. К таким инструкциям относятся CREATE TABLE, CREATE PROCEDURE и DECLARE *@variable* . Однако после создания объекта синонимы утрачивают силу. При создании объекта ему назначается базовый тип данных, связанный с синонимом. Никаких признаков того, что в инструкции, создавшей объект, был указан синоним, не остается.
   
 Объектам, производным от исходного объекта, таким как столбцы результирующего набора или выражения, назначается базовый тип данных. Все функции метаданных, которые используют исходный объект и любые производные от него объекты, сообщают базовый тип данных, а не синоним, включая:
 
@@ -63,7 +62,7 @@ ms.locfileid: "56034215"
 CREATE TABLE ExampleTable (PriKey int PRIMARY KEY, VarCharCol national character varying(10))  
 ```  
   
-Столбцу `VarCharCol` назначен тип данных **nvarchar(10)**, и все следующие вызовы функций работы с метаданными будут сообщать, что этот столбец имеет тип **nvarchar(10)**. а не **national character varying(10)**.
+Столбцу `VarCharCol` назначен тип данных **nvarchar(10)** , и все следующие вызовы функций работы с метаданными будут сообщать, что этот столбец имеет тип **nvarchar(10)** . а не **national character varying(10)** .
   
 ## <a name="see-also"></a>См. также раздел
 [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)

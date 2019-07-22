@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 564e3500-c567-43dc-993b-9ab50e99cf3f
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 280d5d37ca364e32e2bd8638cdd03563a2b86f49
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: fd74479464d23ab6ce85a92babf6ba92fa8baf49
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361504"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984353"
 ---
 # <a name="deny-type-permissions-transact-sql"></a>DENY, запрет разрешений на тип (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,10 +52,10 @@ DENY permission  [ ,...n ] ON TYPE :: [ schema_name . ] type_name
   
 ## <a name="arguments"></a>Аргументы  
  *permission*  
- Обозначает разрешение, которое можно запретить для типа.  Список разрешений см. в подразделе "Примечания" далее в этом разделе.  
+ Обозначает разрешение, которое можно запретить для типа. Список разрешений см. в подразделе "Примечания" далее в этом разделе.  
   
- ON TYPE **::** [ _schema_name_**.** ] *type_name*  
- Задает тип, для которого запрещается разрешение. Квалификатор области (**::**) является обязательным. Если не указан аргумент *schema_name*, подразумевается схема по умолчанию. Если указан аргумент *schema_name*, обязательно указание квалификатора области схемы (**.**).  
+ ON TYPE **::** [ _schema_name_ **.** ] *type_name*  
+ Задает тип, для которого запрещается разрешение. Квалификатор области ( **::** ) является обязательным. Если не указан аргумент *schema_name*, подразумевается схема по умолчанию. Если указан аргумент *schema_name*, обязательно указание квалификатора области схемы ( **.** ).  
   
  TO \<database_principal>  
  Задает участника, для которого запрещается разрешение.  

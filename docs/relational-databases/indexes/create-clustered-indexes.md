@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 47148383-c2c7-4f08-a9e4-7016bf2d1d13
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 514ec88554282cf6e2cf0cc74eb1f35e77091fa9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 79ce697e86adcd7a2b11d4ec1d5f4564d51692e5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539023"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68024989"
 ---
 # <a name="create-clustered-indexes"></a>Создание кластеризованных индексов
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -88,7 +87,7 @@ ms.locfileid: "52539023"
   
 3.  В диалоговом окне **Создание индекса** на странице **Общие** введите имя нового индекса в поле **Имя индекса** .  
   
-4.  В разделе **Ключевые столбцы индекса** щелкните **Добавить…**.  
+4.  В разделе **Ключевые столбцы индекса** щелкните **Добавить…** .  
   
 5.  В диалоговом окне **Выбор столбцов из**_имя\_таблицы_ установите флажок для столбца таблицы, который следует добавить в кластеризованный индекс.  
   
@@ -100,7 +99,7 @@ ms.locfileid: "52539023"
   
 1.  В обозревателе объектов разверните базу данных, в которой необходимо создать таблицу с кластеризованным индексом.  
   
-2.  Щелкните правой кнопкой мыши папку **Таблицы** и выберите команду **Создать таблицу...**.  
+2.  Щелкните правой кнопкой мыши папку **Таблицы** и выберите команду **Создать таблицу...** .  
   
 3.  Создайте новую таблицу обычным способом. Дополнительные сведения см. в статье [Создание таблиц (компонент Database Engine)](../../relational-databases/tables/create-tables-database-engine.md).  
   

@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 8d5eec36-0013-480a-9c11-183e162e4c8e
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5b74ad99ac0ade660e524241a0368cacc92e6852
-ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
+ms.openlocfilehash: 83fbc6c183216cedcbb664a0c3a2e3a9337e1513
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59542204"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946772"
 ---
 # <a name="how-query-store-collects-data"></a>Сбор данных в хранилище запросов
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -58,7 +57,7 @@ ms.locfileid: "59542204"
   
  ![query-store-process-2processor](../../relational-databases/performance/media/query-store-process-2processor.png "query-store-process-2processor")  
   
- Чтобы свести к минимуму издержки ввода-вывода, новые данные записываются в память. Операции записи ставятся в очередь и записываются на диск позже. Сведения о запросах и планах (на схеме ниже это Plan Store) записываются на диск с минимальной задержкой. Статистика времени выполнения (Runtime Stats) хранится в памяти в течение времени, заданного параметром `DATA_FLUSH_INTERVAL_SECONDS` инструкции `SET QUERY_STORE` . Диалоговое окно хранилища запросов SSMS позволяет ввести **Интервал записи данных на диск (в минутах)**, которое преобразуется в секунды.  
+ Чтобы свести к минимуму издержки ввода-вывода, новые данные записываются в память. Операции записи ставятся в очередь и записываются на диск позже. Сведения о запросах и планах (на схеме ниже это Plan Store) записываются на диск с минимальной задержкой. Статистика времени выполнения (Runtime Stats) хранится в памяти в течение времени, заданного параметром `DATA_FLUSH_INTERVAL_SECONDS` инструкции `SET QUERY_STORE` . Диалоговое окно хранилища запросов SSMS позволяет ввести **Интервал записи данных на диск (в минутах)** , которое преобразуется в секунды.  
   
  ![query-store-process-3plan](../../relational-databases/performance/media/query-store-process-3.png "query-store-process-3plan")  
   

@@ -10,15 +10,14 @@ f1_keywords:
 ms.assetid: 1cebdbd3-cbfd-4a02-bba6-a5addf4e3ada
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
 ms.custom: ''
 ms.date: 05/23/2019
-ms.openlocfilehash: bf30a65cf0390c5b8400fe7a390520e4bdb29994
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bdefcbbfe6d5987de4ac69ab60d1e80b004a5db6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66771768"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68025450"
 ---
 # <a name="server-properties---database-settings-page"></a>Свойства сервера (страница "Параметры базы данных")
 
@@ -74,7 +73,7 @@ ms.locfileid: "66771768"
 
 Задает максимальное число минут на базу данных для восстановления баз данных. Если значение по умолчанию равно 0, оно означает автоматическую настройку, которую выполняет [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. На практике этот параметр означает время восстановления менее минуты и создание контрольных точек приблизительно раз в минуту для активно используемых баз данных. Дополнительные сведения см. в статье [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md).  
   
-### <a name="data"></a>Данные 
+### <a name="data"></a>Данные
 
 Указывает расположение файлов данных по умолчанию. Нажмите кнопку «Обзор», чтобы перейти к новому размещению по умолчанию. Вступит в действие только после перезапуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

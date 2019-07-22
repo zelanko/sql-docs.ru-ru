@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0d504e00-4ff0-4fdf-b874-85280bbd8668
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6ef6cb6bce9173a849dbe406971028e3f452767c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ba41850e214de60da9a7e64f328939e4660a9367
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65090239"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035172"
 ---
 # <a name="how-to-fix-errors"></a>Руководство. исправить ошибки
 В области «Список ошибок» отображаются ошибки развертывания или сборки. Кроме того, при изменении сущностей базы данных и их определений в списке отображаются синтаксические и семантические ошибки. Они возникают из-за того, что изменения вносятся в редакторе Transact\-SQL или конструкторе таблиц. Список ошибок обновляется динамически в процессе изменения скриптов с переходом от одной вкладки к другой. После этого можно отследить ошибки, обозначенные как требующие дальнейшего устранения.  

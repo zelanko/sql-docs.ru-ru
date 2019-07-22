@@ -12,15 +12,14 @@ helpviewer_keywords:
 ms.assetid: e78008ec-51e8-4fd1-b86f-1058a781de17
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e22a94fef64ac6b31d4a7609c01a50f11d5020bf
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 52e3d6ea8cff9d1984ee11a510a6c21833034c29
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511941"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006675"
 ---
-# <a name="example-specifying-the-xmltext-directive"></a>Пример Задание директивы XMLTEXT
+# <a name="example-specifying-the-xmltext-directive"></a>Пример Определение директивы XMLTEXT
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   Этот пример иллюстрирует, как обращение к данным переполненного столбца осуществляется при помощи директивы **XMLTEXT** в инструкции `SELECT` , использующей режим EXPLICIT.  
   

@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: c0b7d7c8-b878-4b7f-8120-d0c6917b583f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2e8a6d88387fb0674cd8d39f44a30358009e44f9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 84dfb4e9f5027650ae3a35146b13f70fd0f84a2e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503964"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68076163"
 ---
 # <a name="connect-to-microsoft-azure-storage-restore"></a>Подключение к службе хранилища Microsoft Azure (восстановление)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,10 +30,10 @@ ms.locfileid: "52503964"
  **Ключ учетной записи**  
  Укажите ключ доступа к учетной записи хранения Windows Azure.  
   
- Флажок**Использовать защищенные конечные точки (HTTPS)**   
+ Флажок**Использовать защищенные конечные точки (HTTPS)**  
  Установите этот флажок, чтобы установить безопасное соединение с хранилищем Windows Azure — рекомендуется.  
   
- Флажок**Сохранить мой ключ учетной записи**   
+ Флажок**Сохранить мой ключ учетной записи**  
  Установите этот флажок, чтобы SQL Server запоминал ключ доступа для этой учетной записи хранения.  
   
 ### <a name="sql-credential"></a>Учетные данные SQL  

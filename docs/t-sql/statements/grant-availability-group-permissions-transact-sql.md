@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 060eb839-666a-4046-9e1d-5edc9ea75a11
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 70a595b13bde3f013e07af02d0599b240a7bdbfc
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 15f7c220cbf167c91e052c18d61b2c0c579ea63e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327385"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065550"
 ---
 # <a name="grant-availability-group-permissions-transact-sql"></a>GRANT (предоставление) разрешений группы доступности (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -52,8 +51,8 @@ GRANT permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
  *permission*  
  Указывает разрешение, которое может быть предоставлено для группы доступности. Список разрешений см. в подразделе "Примечания" далее в этом разделе.  
   
- ON AVAILABILITY GROUP **::**_availability_group_name_  
- Указывает группу доступности, для которой предоставляется разрешение. Квалификатор области (**::**) является обязательным.  
+ ON AVAILABILITY GROUP **::** _availability_group_name_  
+ Указывает группу доступности, для которой предоставляется разрешение. Квалификатор области ( **::** ) является обязательным.  
   
  TO \<server_principal>  
  Указывает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имя входа, которому будут представлены разрешения.  

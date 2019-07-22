@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: da006ac9-f914-4995-a2fb-25b5d971cd90
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5ae1d8f24be52ed89e762f7a1a8963ba766b1cb5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 795ef4c95981636eec2e95bc6f85c24d7da27eb9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66270154"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065662"
 ---
 # <a name="alter-event-session-transact-sql"></a>ALTER EVENT SESSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -123,14 +122,14 @@ ON SERVER
 |*event_session_name*|Имя существующего сеанса событий.|  
 |STATE = START | STOP|Запускает или останавливает сеанс событий. Это аргумент действителен, только если к объекту сеанса событий применяется ALTER EVENT SESSION.|  
 |ADD EVENT \<event_specifier>|Связывает событие, определенное аргументом \<event_specifier>, с сеансом событий.|
-|[*event_module_guid*]*.event_package_name.event_name*|Имя события в пакете событий, где:<br /><br /> -   *event_module_guid* — идентификатор GUID для модуля, содержащего событие;<br />-   *event_package_name* — пакет, который содержит объект действия;<br />-   *event_name* — объект события.<br /><br /> События отображаются в представлении sys.dm_xe_objects со значением object_type, равным "event".|  
+|[*event_module_guid*] *.event_package_name.event_name*|Имя события в пакете событий, где:<br /><br /> -   *event_module_guid* — идентификатор GUID для модуля, содержащего событие;<br />-   *event_package_name* — пакет, который содержит объект действия;<br />-   *event_name* — объект события.<br /><br /> События отображаются в представлении sys.dm_xe_objects со значением object_type, равным "event".|  
 |SET { *event_customizable_attribute*= \<value> [ ,...*n*] }|Указывает настраиваемые атрибуты для события. Настраиваемые атрибуты отображаются в представлении sys.dm_xe_object_columns со значением column_type, равным "customizable", и object_name = *event_name*.|  
-|ACTION ( { [*event_module_guid*]*.event_package_name.action_name* [ **,**...*n*] } )|Действие, связанное с сеансом событий, где:<br /><br /> -   *event_module_guid* — идентификатор GUID для модуля, содержащего событие;<br />-   *event_package_name* — пакет, который содержит объект действия;<br />-   *action_name* — объект действия.<br /><br /> Действия отображаются в представлении sys.dm_xe_objects со значением object_type, равным "action".|  
+|ACTION ( { [*event_module_guid*] *.event_package_name.action_name* [ **,** ...*n*] } )|Действие, связанное с сеансом событий, где:<br /><br /> -   *event_module_guid* — идентификатор GUID для модуля, содержащего событие;<br />-   *event_package_name* — пакет, который содержит объект действия;<br />-   *action_name* — объект действия.<br /><br /> Действия отображаются в представлении sys.dm_xe_objects со значением object_type, равным "action".|  
 |WHERE \<predicate_expression>|Задает выражение предиката, используемое, чтобы определить необходимость обработки события. Если \<predicate_expression> имеет значение true, то обработка события продолжается действиями и целями сеанса. Если \<predicate_expression> имеет значение false, то событие удаляется сеансом прежде, чем оно будет обработано действиями и целями для сеанса. Выражения предиката ограничены 3000 символами, что является пределом для строковых аргументов.|
 |*event_field_name*|Имя поля события, которое идентифицирует источник предиката.|  
 |[event_module_guid].event_package_name.predicate_source_name|Имя глобального источника предиката, где:<br /><br /> -   *event_module_guid* — идентификатор GUID для модуля, содержащего событие;<br />-   *event_package_name* — пакет, который содержит объект предиката;<br />-   *predicate_source_name* определен в представлении sys.dm_xe_objects как object_type со значением "pred_source".|  
 |[*event_module_guid*].*event_package_name*.*predicate_compare_name*|Имя объекта предиката, связываемого с событием, где:<br /><br /> -   *event_module_guid* — идентификатор GUID для модуля, содержащего событие;<br />-   *event_package_name* — пакет, который содержит объект предиката;<br />-   *predicate_compare_name* — глобальный источник, определенный в представлении sys.dm_xe_objects со значением object_type, равным "pred_compare".|  
-|DROP EVENT \<event_specifier>|Удаляет событие, обозначенное *\<event_specifier>*. \<event_specifier> должен быть допустимым в рамках сеанса события.|  
+|DROP EVENT \<event_specifier>|Удаляет событие, обозначенное *\<event_specifier>* . \<event_specifier> должен быть допустимым в рамках сеанса события.|  
 |ADD TARGET \<event_target_specifier>|Связывает целевой объект, определенный аргументом \<event_target_specifier>, с сеансом событий.|
 |[*event_module_guid*].*event_package_name*.*target_name*|Имя целевого объекта в сеансе событий, где:<br /><br /> -   *event_module_guid* — идентификатор GUID для модуля, содержащего событие;<br />-   *event_package_name* — пакет, который содержит объект действия;<br />-   *target_name* представляет собой действие. Действия отображаются в представлении sys.dm_xe_objects как object_type со значением "target".|  
 |SET { *target_parameter_name*= \<value> [, ...*n*] }|Задает параметр целевого объекта. Параметры цели отображаются в представлении sys.dm_xe_object_columns со значением column_type, равным "customizable", и object_name = *target_name*.<br /><br /> **ПРИМЕЧАНИЕ.** Если используется цель "Кольцевой буфер", рекомендуется установить параметр цели max_memory в значение 2048 килобайт (КБ), чтобы избежать возможного усечения выходных XML-данных. Дополнительные сведения об использовании разных типов целевых объектов см. в статье [Цели расширенных событий SQL Server](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384).|  

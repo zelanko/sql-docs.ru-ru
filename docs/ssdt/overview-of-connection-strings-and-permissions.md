@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: ceff114e-a738-46ad-9785-b6647a2247f9
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 413d6ad71b70cc4ddca8205589d25e224bbcad76
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6ae4fe656cbd299d46960ec9b711de4c51d30a51
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65102034"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68064796"
 ---
 # <a name="overview-of-connection-strings-and-permissions"></a>Общие сведения о строках подключения и разрешениях
 Для запуска модульных тестов SQL Server необходимо подключиться к серверу базы данных с помощью одной или двух определенных строк подключения. Каждая строка подключения представляет учетную запись, которая имеет определенные разрешения, необходимые для выполнения задачи или набора задач конкретного скрипта, входящего в тест. Строки подключения задаются в диалоговом окне **Конфигурация теста SQL Server** или вручную путем изменения файла app.config для проекта тестов.  

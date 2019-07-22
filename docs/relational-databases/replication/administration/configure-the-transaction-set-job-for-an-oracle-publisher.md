@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: beea1a5c-0053-4971-a68f-0da53063fcbb
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 98a23215063456a8379abda8384545b5c5e8e15a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6ba894550e67896a08e14894c9ab9950f315c3f4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812862"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67939283"
 ---
 # <a name="configure-the-transaction-set-job-for-an-oracle-publisher"></a>Настройка задания для набора транзакции в издателе Oracle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,27 +30,27 @@ ms.locfileid: "47812862"
   
 1.  На издателе Oracle задайте достаточно большое значение параметра инициализации **job_queue_processes** , чтобы могло выполняться задание «Xactset». Дополнительные сведения об этом параметре см. в документации по базе данных для издателя Oracle.  
   
-2.  На распространителе выполните хранимую процедуру [sp_publisherproperty (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md). В параметре **@publisher**укажите имя издателя Oracle, в параметре **@propertyname** @propertyname **@propertyname**, а в параметре **@propertyvalue** @propertyname **@propertyvalue**.  
+2.  На распространителе выполните хранимую процедуру [sp_publisherproperty (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md). В параметре **@publisher** укажите имя издателя Oracle, в параметре **@propertyname** @propertyname **@propertyname** , а в параметре **@propertyvalue** @propertyname **@propertyvalue** .  
   
-3.  На распространителе выполните хранимую процедуру [sp_publisherproperty (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md). В параметре **@publisher**укажите имя издателя Oracle, в параметре **xactsetjobinterval** @propertyname **@propertyname**и интервал запуска задания в минутах для **@propertyvalue**.  
+3.  На распространителе выполните хранимую процедуру [sp_publisherproperty (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md). В параметре **@publisher** укажите имя издателя Oracle, в параметре **xactsetjobinterval** @propertyname **@propertyname** и интервал запуска задания в минутах для **@propertyvalue** .  
   
-4.  На распространителе выполните хранимую процедуру [sp_publisherproperty (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md). В параметре **@publisher**укажите имя издателя Oracle, в параметре **@propertyname** @propertyname **@propertyname**, а в параметре **@propertyvalue** @propertyname **@propertyvalue**.  
+4.  На распространителе выполните хранимую процедуру [sp_publisherproperty (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md). В параметре **@publisher** укажите имя издателя Oracle, в параметре **@propertyname** @propertyname **@propertyname** , а в параметре **@propertyvalue** @propertyname **@propertyvalue** .  
   
 ### <a name="to-configure-the-transaction-set-job"></a>Настройка задания набора транзакций  
   
-1.  На распространителе выполните хранимую процедуру [sp_publisherproperty (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md) (необязательно). В параметре **@publisher**. Система выдаст свойства задания **Xactset** на издателе.  
+1.  На распространителе выполните хранимую процедуру [sp_publisherproperty (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md) (необязательно). В параметре **@publisher** . Система выдаст свойства задания **Xactset** на издателе.  
   
-2.  На распространителе выполните хранимую процедуру [sp_publisherproperty (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md). В параметре **@publisher**, имя свойства набора транзакций в параметре **@propertyname**и новое значение **@propertyvalue**.  
+2.  На распространителе выполните хранимую процедуру [sp_publisherproperty (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md). В параметре **@publisher** , имя свойства набора транзакций в параметре **@propertyname** и новое значение **@propertyvalue** .  
   
 3.  Повторите шаг 2 для каждого устанавливаемого свойства задания набора транзакций (необязательно). Если меняется свойство **xactsetjobinterval** , необходимо перезапустить задание на издателе Oracle, чтобы новый интервал начал действовать.  
   
 ### <a name="to-view-properties-of-the-transaction-set-job"></a>Просмотр свойств задания набора транзакций  
   
-1.  На распространителе выполните процедуру [sp_helpxactsetjob](../../../relational-databases/system-stored-procedures/sp-helpxactsetjob-transact-sql.md). В параметре **@publisher**.  
+1.  На распространителе выполните процедуру [sp_helpxactsetjob](../../../relational-databases/system-stored-procedures/sp-helpxactsetjob-transact-sql.md). В параметре **@publisher** .  
   
 ### <a name="to-disable-the-transaction-set-job"></a>Отключение задания набора транзакций  
   
-1.  На распространителе выполните хранимую процедуру [sp_publisherproperty (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md). В параметре **@publisher**укажите имя издателя Oracle, в параметре **@propertyname** @propertyname **@propertyname**, а в параметре **@propertyvalue** @propertyname **@propertyvalue**.  
+1.  На распространителе выполните хранимую процедуру [sp_publisherproperty (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md). В параметре **@publisher** укажите имя издателя Oracle, в параметре **@propertyname** @propertyname **@propertyname** , а в параметре **@propertyvalue** @propertyname **@propertyvalue** .  
   
 ## <a name="example"></a>Пример  
  В следующем примере включается задание `Xactset` и устанавливается интервал запуска, равный трем минутам.  

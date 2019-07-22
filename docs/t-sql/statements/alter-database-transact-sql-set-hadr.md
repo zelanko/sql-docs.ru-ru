@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 20e6e803-d6d5-48d5-b626-d1e0a73d174c
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 040c30ce4c48ce8d1fc596b88bae4bc1fec242aa
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 43970780903aa0a4d5aef84f971ac230f2f26358
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533356"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065735"
 ---
 # <a name="alter-database-transact-sql-set-hadr"></a>ALTER DATABASE (Transact-SQL) SET HADR 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +57,7 @@ ALTER DATABASE database_name
  SET HADR  
  Выполняет указанную команду [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] в указанной базе данных.  
   
- { AVAILABILITY GROUP **=**_group_name_ | OFF }  
+ { AVAILABILITY GROUP **=** _group_name_ | OFF }  
  Присоединяет базу данных доступности к указанной группе доступности или исключает ее из группы, как показано ниже.  
   
  *group_name*  

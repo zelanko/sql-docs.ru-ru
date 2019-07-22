@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8e227793-11f6-47c6-99dc-ffc282f5d4bf
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 81cdc720a23c402a493776c9fba7c0da6c119e60
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 7ba560e46aaebc1aa5bc6901a3c0067fae91bdb2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126894"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085946"
 ---
 # <a name="replication-queue-reader-agent"></a>Агент чтения очереди репликации
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +63,7 @@ qrdrsvc [-?]
  **-DefinitionFile** _путь_и_имя_файла_определения_  
  Путь к файлу определения агента. Файл определения агента содержит параметры командной строки для агента. Содержимое файла анализируется как для исполняемого файла. Для указания значений параметров, содержащих произвольные символы, используются двойные кавычки (").  
   
- **-Distributor** _server_name_[**\\**_instance_name_]  
+ **-Distributor** _server_name_[ **\\** _instance_name_]  
  Имя распространителя. Укажите *имя_сервера* для экземпляра служб [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию на этом сервере. Укажите *имя_сервера*\\*имя_экземпляра* для именованного экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию на этом сервере. Если же этот параметр не указан, то используется имя экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию на локальном компьютере.  
   
  **-DistributionDB** _база_данных_распространителя_  
@@ -115,7 +114,7 @@ qrdrsvc [-?]
  **-PollingInterval** _интервал_опроса_  
  Относится только к обновлению подписок, использующих очереди на основе [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Указывает частоту (в секундах) опроса очереди [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на наличие незавершенных транзакций. Значение может находиться в диапазоне от 0 до 240 секунд. Значение по умолчанию — 5 секунд.  
   
- **-PublisherFailoverPartner** _имя_сервера_[**\\**_имя_экземпляра_]  
+ **-PublisherFailoverPartner** _имя_сервера_[ **\\** _имя_экземпляра_]  
  Указывает партнера по обеспечению отработки отказа служб [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , участвующего в сеансе зеркального отображения базы данных с базой данных публикации. Дополнительные сведения см. в статье [Database Mirroring and Replication &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md).  
   
  **-ProfileName** _имя_профиля_агента_  
