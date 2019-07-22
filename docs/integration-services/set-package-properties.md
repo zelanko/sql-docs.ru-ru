@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: 13f81c3e-2b18-4f83-b445-a2f4a2c560aa
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 072a0506d4dad9aad762cae77cad97a3bf16bdd3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9227289bd6ad587744d9025a70d625f6aedb21e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65717868"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912510"
 ---
 # <a name="set-package-properties"></a>Установка свойств пакета
 
@@ -113,7 +112,7 @@ ms.locfileid: "65717868"
 |**CreatorComputerName**|Имя компьютера, на котором был создан пакет.|  
 |**CreatorName**|Имя пользователя, создавшего пакет.|  
 |**Описание**|Описание функциональных возможностей пакета.|  
-|**Идентификатор**|Идентификатор GUID пакета, назначаемый ему при создании. Это свойство доступно только для чтения. Чтобы создать новое случайное значение свойства **ID**, выберите в раскрывающемся списке команду **\<Сформировать новый идентификатор\>**.|  
+|**Идентификатор**|Идентификатор GUID пакета, назначаемый ему при создании. Это свойство доступно только для чтения. Чтобы создать новое случайное значение свойства **ID**, выберите в раскрывающемся списке команду **\<Сформировать новый идентификатор\>** .|  
 |**Название**|Имя пакета.|  
 |**PackageType**|Тип пакета. Допустимые значения — **Default**, **DTSDesigner**, **DTSDesigner100**, **DTSWizard**, **SQLDBMaint**и **SQLReplication**. Значение по умолчанию этого свойства равно **Default**. Дополнительные сведения см. в разделе <xref:Microsoft.SqlServer.Dts.Runtime.DTSPackageType>.|  
   

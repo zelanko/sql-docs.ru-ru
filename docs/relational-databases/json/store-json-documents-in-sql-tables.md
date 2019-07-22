@@ -9,13 +9,12 @@ ms.technology: ''
 ms.topic: conceptual
 author: jovanpop-msft
 ms.author: jovanpop
-manager: craigg
-ms.openlocfilehash: 385ae3aafb58d012e6473abc0fe4b8f8f5d40eb6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4828f5fd8a655d29837dd661267c73f0082f942e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62705970"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059572"
 ---
 # <a name="store-json-documents-in-sql-server-or-sql-database"></a>Хранение документов JSON в SQL Server или базе данных SQL
 SQL Server и база данных SQL Azure имеют собственные функции JSON, позволяющие анализировать документы JSON с помощью стандартного языка SQL. Теперь вы можете хранить документы JSON в SQL Server или базе данных SQL и запрашивать данные JSON так же, как в базе данных NoSQL. Эта статья описывает возможности хранения документов JSON в SQL Server или базе данных SQL.

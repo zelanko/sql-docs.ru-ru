@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 78d7a7168f37a95cf3aac6446fa5ff9f1e263e0a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0fb23fc110efff256c8ba03cc08be8de8399c488
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64945991"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035740"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>Примеры массового импорта и экспорта XML-документов (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "64945991"
   
  Для выполнения массового импорта данных из файла в таблицу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или несекционированное представление могут использоваться следующие средства.  
   
--   Программа**bcp**   
+-   Программа**bcp**  
     Программа **bcp** может выполнять экспорт везде в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , где работает инструкция SELECT, включая секционированные представления.  
   
 -   BULK INSERT  

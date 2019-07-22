@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 640127ea0755c12a0e5746e0810017af504028d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 826f96ab6dec92053bc60b58044a21e1377f551c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725485"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081051"
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>Констант-перечислителей в выражениях свойств
 
@@ -570,7 +569,7 @@ ms.locfileid: "65725485"
 |Понятное имя в перечислении StatisticsTarget|Числовое значение|  
 |---------------------------------------|-------------------|  
 |Столбец|1|  
-|Индекс |2|  
+|Индекс|2|  
 |All|3|  
   
 ##  <a name="CommonProperties"></a> Общие свойства  

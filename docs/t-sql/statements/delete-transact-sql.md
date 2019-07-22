@@ -25,14 +25,13 @@ helpviewer_keywords:
 ms.assetid: ed6b2105-0f35-408f-ba51-e36ade7ad5b2
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0aa6dbd766f842b4c923d98702fd2780fc2652fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d0296995906f7f359a065d7ae4f61877a89a409b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62644366"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948051"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -95,7 +94,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
   
  Обобщенные табличные выражения также можно использовать в инструкциях SELECT, INSERT, UPDATE и CREATE VIEW. Дополнительные сведения см. в разделе [WITH common_table_expression (Transact-SQL)](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
- TOP **(**_expression_**)** [ PERCENT ]  
+ TOP **(** _expression_ **)** [ PERCENT ]  
  Задает количество или процент удаляемых случайных строк. *expression* может быть либо числом, либо процентом от числа строк. Строки, на которые ссылается выражение TOP, используемое с инструкциями INSERT, UPDATE и DELETE, не упорядочиваются. Дополнительные сведения см. в разделе [TOP (Transact-SQL)](../../t-sql/queries/top-transact-sql.md).  
   
  FROM  
@@ -164,7 +163,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
  *cursor_variable_name*  
  Имя переменной курсора. Переменная курсора должна содержать ссылку на курсор, обновления которого разрешены.  
   
- OPTION **(** \<query_hint> [ **,**... *n*] **)**  
+ OPTION **(** \<query_hint> [ **,** ... *n*] **)**  
  Ключевые слова, которые указывают, что указания оптимизатора применяются при настройке способа обработки инструкции компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Дополнительные сведения см. в разделе [Указания запросов (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md).  
   
 ## <a name="best-practices"></a>Рекомендации  
@@ -249,7 +248,7 @@ WHERE StandardCost > 1000.00;
 GO  
 ```  
   
- В следующем примере показано использование более сложного предложения WHERE. Предложение WHERE определяет два условия, которые должны быть выполнены для определения удаляемых строк. Значение в столбце `StandardCost` должно быть в диапазоне от `12.00` до `14.00` , а значение в столбце `SellEndDate` должно быть равно NULL. В данном примере также выводится значение из функции **@@ROWCOUNT**, которое показывает количество удаленных строк.  
+ В следующем примере показано использование более сложного предложения WHERE. Предложение WHERE определяет два условия, которые должны быть выполнены для определения удаляемых строк. Значение в столбце `StandardCost` должно быть в диапазоне от `12.00` до `14.00` , а значение в столбце `SellEndDate` должно быть равно NULL. В данном примере также выводится значение из функции **@@ROWCOUNT** , которое показывает количество удаленных строк.  
   
 ```sql
 DELETE Production.ProductCostHistory  

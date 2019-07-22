@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 28c8fec5-5feb-4c84-8d72-f2bd1ae3b40d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: 73d9030b440ff3596582339006d36a1d43c23d28
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8dbae060ee2fa2714bc7fd624a1f3aafc80959ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66774942"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67951985"
 ---
 # <a name="database-mirroring---allow-network-access---windows-authentication"></a>Разрешение сетевого доступа к зеркальному отображению базы данных с использованием проверки подлинности Windows
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

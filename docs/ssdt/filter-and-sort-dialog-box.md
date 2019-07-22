@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: f81ce28b-eaad-4c47-9efd-8f23f0f25870
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: c56ca7cf78cce14c198d78121d175159d90a6aa7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d33257f0293e90682775f11fd4ef62da74e9524e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65096926"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912790"
 ---
 # <a name="filter-and-sort-dialog-box"></a>Диалоговое окно фильтрации и сортировки
 В обозревателе объектов SQL Server вы можете щелкнуть правой кнопкой мыши таблицу или представление и выбрать **Просмотреть данные**. См. дополнительные сведения в разделе [Как просмотреть и изменить данные в таблице](../ssdt/how-to-view-and-edit-data-in-a-table.md). Начиная с выпуска SQL Server Data Tools от марта 2014 г., в **редакторе данных** появилась кнопка сортировки и фильтрации на панели инструментов. Вы можете изменять данные, которые отображаются в таблице или представлении.  

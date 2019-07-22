@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: d31367db-b7db-44c4-8df2-f1240474cf78
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 88f5919c1bd36b912c2205da2032413ec39150f1
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: fd8f7ff879e3e5a6ec2729abce4c294f69ad2c83
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579539"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68087113"
 ---
 # <a name="lesson-1-create-and-apply-an-off-by-default-policy"></a>Урок 1. Создание и применение политики, отключенной по умолчанию
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "57579539"
   
 2.  В диалоговом окне **Создание нового условия** в поле **Имя** введите **Почта отключена**.   
     1. В окне **Аспект** подтвердите выбор аспекта **Настройка контактной зоны** .
-    1. В диалоговом окне **Выражение** в поле **Поле** выберите **@DatabaseMailEnabled**, в поле **Оператор** выберите **=**, а в поле **Значение** выберите **False**.  
+    1. В диалоговом окне **Выражение** в поле **Поле** выберите **@DatabaseMailEnabled** , в поле **Оператор** выберите **=** , а в поле **Значение** выберите **False**.  
     1. Для создания условия введите его описание на странице **Описание** и нажмите кнопку **ОК** .  
 
     ![Условие отключения почты](Media/lesson-1-create-and-apply-an-off-by-default-policy/mail-off-condition.png) 

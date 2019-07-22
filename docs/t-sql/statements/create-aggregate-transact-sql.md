@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 62eebc19-9f15-4245-94fa-b3fcd64a9d42
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 3a6b17b2e157042c41690c3c2cdf6ab92cd84a09
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: d811d5d36b88024604d217f440911d0dabad2b14
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125994"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68141134"
 ---
 # <a name="create-aggregate-transact-sql"></a>CREATE AGGREGATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +78,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
  *udt_type_name*  
  Название пользовательского типа среды CLR, созданного в текущей базе данных. Если аргумент *udt_schema_name* не указан, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предполагает, что тип принадлежит к схеме текущего пользователя.  
   
- *assembly_name* [ **.**_class_name_ ]  
+ *assembly_name* [ **.** _class_name_ ]  
  Указывает сборку, с которой связывается определяемая пользователем агрегатная функция и, при необходимости, имя схемы, к которой принадлежит сборка, и имя класса в сборке, реализующего определяемую пользователем статистическую функцию. Сборка уже должна быть создана в базе данных с помощью инструкции CREATE ASSEMBLY. Параметр *class_name* должен быть допустимым идентификатором [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и совпадать с именем класса, существующим в сборке. Аргумент *class_name* может быть именем, указанным в пространстве имен, если в языке программирования, использовавшемся для написания класса, применяются пространства имен, например C#. Если аргумент *class_name* не задан, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] считает, что его значение равно значению аргумента *aggregate_name*.  
   
 ## <a name="remarks"></a>Remarks  

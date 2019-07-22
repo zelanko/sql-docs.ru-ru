@@ -11,14 +11,13 @@ helpviewer_keywords:
 ms.assetid: 9a2d358e-5b8f-4d0b-8b93-6705c009ad57
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1f468509d077ea3b03c31485c26d945d18e9b537
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 68fd54ddc0f40da91efca486759e2b55dc00cdfc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821800"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68089590"
 ---
 # <a name="dtctransaction-event-class"></a>DTCTransaction, класс событий
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ ms.locfileid: "47821800"
 |**NTUserName**|**nvarchar**|Имя пользователя Windows.|6|Да|  
 |**RequestID**|**int**|Идентификатор запроса, содержащего инструкцию.|49|Да|  
 |**ServerName**|**nvarchar**|Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , для которого производится трассировка.|26|нет|  
-|**SessionLoginName**|**nvarchar**|Имя входа пользователя, создавшего этот сеанс. Например, при подключении к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по имени "Имя_входа1" и при выполнении инструкции под именем "Имя_входа2" **SessionLoginName** содержит значение "Имя_входа1", а **LoginName** — значение "Имя_входа2". В этом столбце отображаются как имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и имена входа Windows.|64|Да|  
+|**SessionLoginName**|**nvarchar**|Имя входа пользователя, создавшего этот сеанс. Например, при подключении к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по имени Имя_входа1 и при выполнении инструкции под именем Имя_входа2 **SessionLoginName** содержит значение «Имя_входа1», а **LoginName** содержит значение «Имя_входа2». В этом столбце отображаются как имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и имена входа Windows.|64|Да|  
 |**SPID**|**int**|Идентификатор сеанса, в котором произошло событие.|12|Да|  
 |**StartTime**|**datetime**|Время начала события, если оно доступно.|14|Да|  
 |**TextData**|**ntext**|Текстовое представление UOW, уникально идентифицирующее данную транзакцию в координаторе DTC.|1|Да|  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2028ba45-4436-47ed-bf79-7c957766ea04
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 96e9da6c6bf1c394032abff79b7b869e08f4d3e9
-ms.sourcegitcommit: 032273bfbc240fe22ac6c1f6601a14a6d99573f7
+ms.openlocfilehash: 1e0c9d8d91bce3cc632e6cfd8a5f50353a55793a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55513864"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085930"
 ---
 # <a name="replication-snapshot-agent"></a>Агент моментальных снимков репликации
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -80,8 +79,8 @@ snapshot [ -?]
  **-?**  
  Выводит список всех доступных параметров.  
   
- **-Publisher** _server_name_[**\\**_instance\_name_]  
- Имя издателя. Укажите имя сервера (server_name) для экземпляра [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на этом сервере. Укажите _server\_name_**\\**_instance\_name_, чтобы обратиться к именованному экземпляру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на этом сервере.  
+ **-Publisher** _server_name_[ **\\** _instance\_name_]  
+ Имя издателя. Укажите имя сервера (server_name) для экземпляра [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на этом сервере. Укажите _server\_name_ **\\** _instance\_name_, чтобы обратиться к именованному экземпляру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на этом сервере.  
   
  **-Publication** _публикация_  
  Имя публикации. Этот параметр допустим только в том случае, если в данной публикации моментальный снимок всегда доступен для новых или повторно инициализированных подписок.  
@@ -95,10 +94,10 @@ snapshot [ -?]
  **-DefinitionFile** _def_path_and_file_name_  
  Путь к файлу определения агента. Файл определения агента содержит параметры командной строки для данного агента. Содержимое файла анализируется как для исполняемого файла. Для указания значений параметров, содержащих произвольные символы, используются двойные кавычки (").  
   
- **-Distributor** _server_name_[**\\**_instance\_name_]  
- Имя распространителя. Укажите *server_name* , чтобы использовать экземпляр сервера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию. Укажите _server\_name_**\\**_instance\_name_, чтобы обратиться к именованному экземпляру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на этом сервере.  
+ **-Distributor** _server_name_[ **\\** _instance\_name_]  
+ Имя распространителя. Укажите *server_name* , чтобы использовать экземпляр сервера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию. Укажите _server\_name_ **\\** _instance\_name_, чтобы обратиться к именованному экземпляру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на этом сервере.  
   
- **-DistributorDeadlockPriority** [**-1**|**0**|**1**]  
+ **-DistributorDeadlockPriority** [ **-1**|**0**|**1**]  
  Приоритет соединения агента моментальных снимков с распространителем при возникновении взаимоблокировки. Этот параметр указывается для разрешения взаимоблокировок, которые могут возникать между агентом моментальных снимков и пользовательскими приложениями при создании моментальных снимков.  
   
 |DistributorDeadlockPriority|Описание|  
@@ -217,7 +216,7 @@ snapshot [ -?]
  **-PublisherDB** _база_данных_издателя_  
  Имя базы данных публикации. *Этот параметр не поддерживается для издателей Oracle*.  
   
- **-PublisherDeadlockPriority** [**-1**|**0**|**1**]  
+ **-PublisherDeadlockPriority** [ **-1**|**0**|**1**]  
  Приоритет соединения агента моментальных снимков с издателем при возникновении взаимоблокировки. Этот параметр указывается для разрешения взаимоблокировок, которые могут возникать между агентом моментальных снимков и пользовательскими приложениями при создании моментальных снимков.  
   
 |Значение PublisherDeadlockPriority|Описание|  
@@ -226,7 +225,7 @@ snapshot [ -?]
 |**0** (по умолчанию)|Приоритет не назначается.|  
 |**1**|При возникновении взаимоблокировки на издателе агент моментальных снимков имеет больший приоритет.|  
   
- **-PublisherFailoverPartner** _server_name_[**\\**_instance\_name_]  
+ **-PublisherFailoverPartner** _server_name_[ **\\** _instance\_name_]  
  Указывает партнера по обеспечению отработки отказа служб [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , участвующего в сеансе зеркального отображения базы данных с базой данных публикации. Дополнительные сведения см. в статье [Зеркальное отображение и репликация баз данных (SQL Server)](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md).  
   
  **-PublisherLogin** _имя_входа_на_издателе_  

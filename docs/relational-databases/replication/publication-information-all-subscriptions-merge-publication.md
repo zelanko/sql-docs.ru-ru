@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 0f4fa946-a0d9-4d3b-b90b-53503c40fba2
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: fc5fb9ba2354c8ceb77066b5730a99949edc5ca6
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 86f2d59e142458e68fe3946f7d6f56956b6562e8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136154"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68120408"
 ---
 # <a name="publication-information-all-subscriptions-merge-publication"></a>Сведения о публикации, все подписки (публикация слиянием)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +67,7 @@ ms.locfileid: "54136154"
  Значения состояния **Срок действия скоро истекает или истек** и **Продолжительное слияние** могут отображаться только, если установлены пороги. Значение состояния **Критическое для производительности** может быть отображено только после произведения пяти синхронизаций подписок с одним типом соединения (коммутируемого или по локальной сети). Сведения по измерению производительности и установке пороговых значений см. в статьях [Наблюдение за производительностью с помощью монитора репликации](../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md) и [Настройка пороговых значений и предупреждений в мониторе репликации](../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md).  
   
  **Подписка**  
- Имя каждой подписки в виде: *SubscriberName: ИмяБазыДанныхПодписки*.  
+ Имя каждой подписки в виде: *ИмяПодписчика: ИмяБазыДанныхПодписки*.  
   
  **Понятное имя**  
  Только для версии[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версий. Описание каждой подписки. Описание вводится в диалоговое окно **Свойства подписки** или указывается с помощью параметра **@description** процедуры [sp_addmergesubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) или [sp_addmergepullsubscription](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md). Пользователи часто используют описание как «понятное имя» или псевдоним для подписки.  

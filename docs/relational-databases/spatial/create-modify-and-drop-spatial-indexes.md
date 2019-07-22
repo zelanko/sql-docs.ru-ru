@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7be26a9819fdaf5b50d6169a4d94d8c7c5b906ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1c6be1e3a8b05daf16ec845a307679620d2b1d00
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65935483"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048716"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>Создание, изменение и удаление пространственных индексов
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -65,7 +64,7 @@ ms.locfileid: "65935483"
   
 11. На странице **Пространственный** укажите значения, которые необходимо использовать для пространственных свойств индекса.  
   
-     При создании индекса для столбца типа **geometry** необходимо указать координаты **(**_X-min_**,**_Y-min_**)** и **(**_X-max_**,**_Y-max_**)** ограничивающего прямоугольника. При создании индекса для столбца типа **geography** после задания схемы тесселяции **Географическая сетка** поля ограничивающего прямоугольника становятся доступными только для чтения, так как в тесселяции географической сетки ограничивающий прямоугольник не используется.  
+     При создании индекса для столбца типа **geometry** необходимо указать координаты **(** _X-min_ **,** _Y-min_ **)** и **(** _X-max_ **,** _Y-max_ **)** ограничивающего прямоугольника. При создании индекса для столбца типа **geography** после задания схемы тесселяции **Географическая сетка** поля ограничивающего прямоугольника становятся доступными только для чтения, так как в тесселяции географической сетки ограничивающий прямоугольник не используется.  
   
      При необходимости можно указать нестандартные значения для поля **Число ячеек на объект** и для плотности сетки на любом уровне схемы тесселяции. По умолчанию количество ячеек на объект составляет 16 для [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] или 8 для [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] или более поздней версии, а плотность сетки — **Средняя** для [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   

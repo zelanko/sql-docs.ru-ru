@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 73a914ba-8b2d-4f4d-ac1b-db9bac676a30
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8a42406af2eb1a3133ffb3e6e65699f75f08bf46
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 553855ab21f9910f244a6ee0e300f66bf0e7eb74
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124474"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67939259"
 ---
 # <a name="enable-coordinated-backups-for-transactional-replication"></a>Включение скоординированного резервного копирования для репликации транзакций
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "54124474"
   
 1.  В издателе с помощью функции[DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../../t-sql/functions/databasepropertyex-transact-sql.md) получите значение свойства **IsSyncWithBackup** для базы данных издателя. Если функция возвратила значение **1**, то это означает, что скоординированное резервное копирование опубликованной базы данных уже включено.  
   
-2.  Если функция, выполненная на шаге 1, возвратила значение **0**, выполните хранимую процедуру [sp_replicationdboption &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md) в базе данных издателя в издателе. Укажите значение **sync with backup** для аргумента **@optname**и значение **true** для аргумента **@value**.  
+2.  Если функция, выполненная на шаге 1, возвратила значение **0**, выполните хранимую процедуру [sp_replicationdboption &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md) в базе данных издателя в издателе. Укажите значение **sync with backup** для аргумента **@optname** и значение **true** для аргумента **@value** .  
   
     > [!NOTE]  
     >  Если значение параметра **sync with backup** заменить на **false**, то точка усечения базы данных публикации будет обновлена после запуска агента чтения журнала или по истечении определенного интервала в случае, если агент чтения журнала выполняется постоянно. Максимальное значение интервала управляется параметром агента **–MessageInterval** , значение которого по умолчанию составляет 30 секунд.  
@@ -43,10 +42,10 @@ ms.locfileid: "54124474"
   
 1.  На распространителе с помощью функции[DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../../t-sql/functions/databasepropertyex-transact-sql.md) получите значение свойства **IsSyncWithBackup** для базы данных распространителя. Если функция возвратила значение **1**, то это означает, что скоординированное резервное копирование базы данных распространителя уже включено.  
   
-2.  Если функция, выполненная на шаге 1, возвратила значение **0**, выполните хранимую процедуру [sp_replicationdboption &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md) в базе данных распространителя на распространителе. Укажите значение **sync with backup** для аргумента **@optname** , а в параметре **true** для аргумента **@value**.  
+2.  Если функция, выполненная на шаге 1, возвратила значение **0**, выполните хранимую процедуру [sp_replicationdboption &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md) в базе данных распространителя на распространителе. Укажите значение **sync with backup** для аргумента **@optname** , а в параметре **true** для аргумента **@value** .  
   
 ### <a name="to-disable-coordinated-backups"></a>Отключение скоординированного резервного копирования  
   
-1.  В издателе в базе данных публикации или в распространителе в базе данных распространителя выполните хранимую процедуру [sp_replicationdboption &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md). Укажите значение **sync with backup** для аргумента **@optname** , а в параметре **false** для аргумента **@value**.  
+1.  В издателе в базе данных публикации или в распространителе в базе данных распространителя выполните хранимую процедуру [sp_replicationdboption &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md). Укажите значение **sync with backup** для аргумента **@optname** , а в параметре **false** для аргумента **@value** .  
   
   

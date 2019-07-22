@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c83d802c-e84e-4458-b3ca-173d9ba32f73
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 08da0ac24a7999235efc6150d313ca2bb2ae0ea7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 6ce115a0df8ca77b37a78234247174ca9f2dd006
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502198"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041470"
 ---
 # <a name="restore-the-master-database-transact-sql"></a>восстановить базу данных master (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +28,7 @@ ms.locfileid: "52502198"
   
 1.  Запустите экземпляр сервера в однопользовательском режиме.  
   
-     Дополнительные сведения об указании параметра запуска в однопользовательском режиме (**-m**) см. в разделе [Настройка параметров запуска сервера (диспетчер конфигурации SQL Server)](../../database-engine/configure-windows/scm-services-configure-server-startup-options.md).  
+     Дополнительные сведения об указании параметра запуска в однопользовательском режиме ( **-m**) см. в разделе [Настройка параметров запуска сервера (диспетчер конфигурации SQL Server)](../../database-engine/configure-windows/scm-services-configure-server-startup-options.md).  
   
 2.  Чтобы восстановить полную резервную копию базы данных **master**, используйте следующую инструкцию [RESTORE DATABASE](../../t-sql/statements/restore-statements-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] :  
   
@@ -46,7 +45,7 @@ ms.locfileid: "52502198"
  Следующий пример восстанавливает базу данных `master` в определенном по умолчанию экземпляре сервера. В этом примере предполагается, что экземпляр сервера уже работает в однопользовательском режиме. В примере запускается `sqlcmd` и выполняется инструкция `RESTORE DATABASE` , которая восстанавливает полную резервную копию базы данных `master` с дискового устройства: `Z:\SQLServerBackups\master.bak`.  
   
 > [!NOTE]  
->  Для именованного экземпляра команда **sqlcmd** должна задавать параметр **-S**_\<имя_компьютера>_\\*\<имя_экземпляра>*.  
+>  Для именованного экземпляра команда **sqlcmd** должна задавать параметр **-S** _\<имя_компьютера>_ \\ *\<имя_экземпляра>* .  
   
 ```  
   

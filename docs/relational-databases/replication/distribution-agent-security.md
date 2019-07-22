@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: de40cc21-2e58-4464-9be7-b5b90c925e9b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f13f8769a5f97bab03b9466974c649dd2c5e7129
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 5c8971810d7122bad77142d61d36820092e39a6c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135014"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68128351"
 ---
 # <a name="distribution-agent-security"></a>Безопасность агента распространителя
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "54135014"
   
 -   Если диалоговое окно открыто из мастера создания подписки, можно указать контекст, в котором агент распространителя устанавливает соединения с подписчиком (для принудительных подписок) или с распространителем (для подписок по запросу). Соединение может быть установлено путем олицетворения учетной записи Windows либо в контексте указанной учетной записи [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   Если диалоговое окно открыто из диалогового окна **Свойства подписки** , то, чтобы определить контекст, в котором агент распространителя будет устанавливать соединение, нажмите кнопку свойств (**...**) в строке **Соединение с подписчиком** или **Соединение с распространителем** в этом диалоговом окне. Дополнительные сведения о доступе к диалоговому окну **Свойства подписки** см. в статьях [Просмотр и изменение свойств принудительной подписки](../../relational-databases/replication/view-and-modify-push-subscription-properties.md) и [Просмотр и изменение свойств подписки по запросу](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md).  
+-   Если диалоговое окно открыто из диалогового окна **Свойства подписки** , то, чтобы определить контекст, в котором агент распространителя будет устанавливать соединение, нажмите кнопку свойств ( **...** ) в строке **Соединение с подписчиком** или **Соединение с распространителем** в этом диалоговом окне. Дополнительные сведения о доступе к диалоговому окну **Свойства подписки** см. в статьях [Просмотр и изменение свойств принудительной подписки](../../relational-databases/replication/view-and-modify-push-subscription-properties.md) и [Просмотр и изменение свойств подписки по запросу](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md).  
   
  Все учетные записи должны быть допустимыми, а для каждой учетной записи должен быть указан правильный пароль. Учетные записи и пароли могут быть проверены только после запуска агента.  
   

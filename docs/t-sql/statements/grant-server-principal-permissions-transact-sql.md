@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 4cbed281-5e1e-4d8b-b410-4c18a6cd0205
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 11caad507a8d8af50bae6c3d2b51807287ee694c
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 81a8422cbab7eb10d0c74ad5cd758817a665eaa6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326605"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050785"
 ---
 # <a name="grant-server-principal-permissions-transact-sql"></a>GRANT, предоставление разрешений участникам на уровне сервера (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,10 +60,10 @@ GRANT permission [ ,...n ] }
  Указывает разрешение, которое может быть выдано для имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Список разрешений см. в подразделе "Примечания" далее в этом разделе.  
   
  LOGIN **::** *SQL_Server_login*  
- Указывает имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которому предоставляется разрешение. Квалификатор области (**::**) является обязательным.  
+ Указывает имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которому предоставляется разрешение. Квалификатор области ( **::** ) является обязательным.  
   
  SERVER ROLE **::** *server_role*  
- Указывает определяемую пользователем роль сервера, которой предоставляется разрешение. Квалификатор области (**::**) является обязательным.  
+ Указывает определяемую пользователем роль сервера, которой предоставляется разрешение. Квалификатор области ( **::** ) является обязательным.  
   
  TO \<server_principal> Указывает имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или роль сервера, которой представляется разрешение.  
   

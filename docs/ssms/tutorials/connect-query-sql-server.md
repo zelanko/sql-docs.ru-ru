@@ -4,7 +4,6 @@ description: Руководство по подключению к экземп�
 keywords: SQL Server, SSMS, SQL Server Management Studio
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
 ms.reviewer: sstein
 ms.topic: quickstart
 ms.prod_service: sql-tools
@@ -12,12 +11,12 @@ ms.prod: sql
 ms.technology: ssms
 ms.custom: ''
 ms.date: 03/13/2018
-ms.openlocfilehash: 4f3e1b5e03f70aa0d552e89d3ebdd254909d7b2a
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 105bcea172a91496c664578befc33f022b5c8d9e
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834965"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68256710"
 ---
 # <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio-ssms"></a>Руководство. Подключение к экземпляру SQL Server и выполнение запросов с помощью SQL Server Management Studio (SSMS)
 

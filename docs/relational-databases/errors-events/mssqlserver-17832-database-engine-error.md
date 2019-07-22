@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: bd56ffe4-0855-4ada-8aca-251fbc6ff2ce
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c5def2cd5b24046fe41524ed26b149c335b1c1f0
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: c09e789738f8ca6633a56c36d626dd200ae70e78
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590508"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137236"
 ---
 # <a name="mssqlserver17832"></a>MSSQLSERVER_17832
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +59,7 @@ ms.locfileid: "53590508"
   
 3.  Перейдите к разделу **HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Lsa\Kerberos\Parameters**.  
   
-4.  Если параметр **MaxTokenSize** отсутствует, щелкните правой кнопкой мыши **Параметры**, выберите пункт **Создать**, а затем формат значения **DWORD (32 бита)**. Присвойте новому параметру реестра имя **MaxTokenSize**.  
+4.  Если параметр **MaxTokenSize** отсутствует, щелкните правой кнопкой мыши **Параметры**, выберите пункт **Создать**, а затем формат значения **DWORD (32 бита)** . Присвойте новому параметру реестра имя **MaxTokenSize**.  
   
 5.  Щелкните правой кнопкой мыши параметр **MaxTokenSize** и выберите команду **Изменить**.  
   

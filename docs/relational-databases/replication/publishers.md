@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 116cd6a5-32ac-4273-81a2-d184408e0f07
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e8370c989cb442de305c57e239beaff827bef37f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1813cb8f1790fc7383b4eb2fac747cb3efdcb290
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701172"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68021279"
 ---
 # <a name="publishers"></a>Издатели
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "47701172"
   
 ## <a name="options"></a>Параметры  
  **Издатели**  
- Выберите серверы, которым разрешено использование данного распространителя. Нажмите кнопку свойств (**...**) рядом с издателем для просмотра и задания дополнительных свойств.  
+ Выберите серверы, которым разрешено использование данного распространителя. Нажмите кнопку свойств ( **...** ) рядом с издателем для просмотра и задания дополнительных свойств.  
   
  **Добавить**  
  Если нужный сервер не представлен в списке, нажмите кнопку **Добавить** , чтобы добавить издателей [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или Oracle к списку доступных издателей.  

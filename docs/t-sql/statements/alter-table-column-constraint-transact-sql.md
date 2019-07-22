@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 8119b7c7-e93b-4de5-8f71-c3b7c70b993c
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 5190dcadfcef62bf01fdf8208fc102d6cfdd078a
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 25d7cc42f65e762ad0a83546aeeb5621c094636c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327485"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070465"
 ---
 # <a name="alter-table-columnconstraint-transact-sql"></a>ALTER TABLE column_constraint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -84,19 +83,19 @@ ms.locfileid: "54327485"
   
  Если кластеризованное ограничение или индекс уже созданы в таблице, значение CLUSTERED не может быть задано. Если кластеризованное ограничение или индекс уже существует в таблице, ограничения PRIMARY KEY по умолчанию имеют значение NONCLUSTERED.  
   
- Столбцы с типами данных **ntext**, **text**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml** или **image** нельзя указать в качестве столбцов для индекса.  
+ Столбцы с типами данных **ntext**, **text**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , **xml** или **image** нельзя указать в качестве столбцов для индекса.  
   
- WITH FILLFACTOR **=**_fillfactor_  
+ WITH FILLFACTOR **=** _fillfactor_  
  Указывает, насколько полно компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] должен заполнять каждую страницу индекса, используемую для хранения индексных данных. Определяемые пользователем значения коэффициента заполнения могут находиться в диапазоне от 1 до 100. Если значение не задано, по умолчанию принимается значение 0.  
   
 > [!IMPORTANT]  
 >  Описание выражения WITH FILLFACTOR = *fillfactor* как единственного параметра индекса, применимого к ограничениям PRIMARY KEY или UNIQUE, сохранено для обеспечения обратной совместимости, но в будущих выпусках это выражение документировано не будет. Другие параметры индекса можно указать в предложении [index_option](../../t-sql/statements/alter-table-index-option-transact-sql.md) инструкции ALTER TABLE.  
   
- ON { _partition_scheme_name_**(**_partition_column_name_**)** | *filegroup* | **"** default **"** } **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ ON { _partition_scheme_name_ **(** _partition_column_name_ **)**  | *filegroup* |  **"** default **"** } **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Указывает место хранения индекса, созданного для ограничения. Если определен аргумент *partition_scheme_name*, индекс разделяется на секции, которые сопоставляются с файловыми группами, определенными аргументом *partition_scheme_name*. Если указан аргумент *filegroup*, индекс создается в файловой группе с таким именем. Если указан аргумент **"** default **"** или предложение ON не определено вообще, индекс создается в той же файловой группе, что и таблица. Если при добавлении кластеризованного индекса для ограничений PRIMARY KEY или UNIQUE указано предложение ON, то вся таблица перемещается в указанную файловую группу в момент создания этого индекса.  
   
- В этом контексте default не является ключевым словом. Это идентификатор установленной по умолчанию файловой группы, который должен иметь разделители, как в выражениях ON **"** default **"** или ON **[** default **]**. Если указано значение **"** default **"**, то параметру QUOTED_IDENTIFIER для текущего сеанса должно быть присвоено значение ON. Это параметр по умолчанию. Дополнительные сведения см. в статье [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
+ В этом контексте default не является ключевым словом. Это идентификатор установленной по умолчанию файловой группы, который должен иметь разделители, как в выражениях ON **"** default **"** или ON **[** default **]** . Если указано значение **"** default **"** , то параметру QUOTED_IDENTIFIER для текущего сеанса должно быть присвоено значение ON. Это параметр по умолчанию. Дополнительные сведения см. в статье [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
  FOREIGN KEY REFERENCES  
  Ограничение, обеспечивающее ссылочную целостность данных в столбце. Ограничения FOREIGN KEY требуют, чтобы любое значение в столбце обязательно существовало в указанном столбце ссылочной таблицы.  

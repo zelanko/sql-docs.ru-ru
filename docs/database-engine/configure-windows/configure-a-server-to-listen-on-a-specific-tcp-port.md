@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2276a5ed-ae3f-4855-96d8-f5bf01890640
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: 3f3b6bfdb766ab2007591ed661fe89e81b813c04
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 48736a721cad475c6956e1715a3912481bc83c40
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66799508"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68012926"
 ---
 # <a name="configure-a-server-to-listen-on-a-specific-tcp-port"></a>Настройка сервера для прослушивания определенного TCP-порта
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ ms.locfileid: "66799508"
   
 #### <a name="to-assign-a-tcpip-port-number-to-the-sql-server-database-engine"></a>Назначение ядру СУБД SQL Server порта TCP/IP  
   
-1.  В области консоли диспетчера конфигурации SQL Server разверните узел **Сетевая конфигурация SQL Server**, **Протоколы для <имя экземпляра>\<**, а затем дважды щелкните **TCP/IP**.  
+1.  В области консоли диспетчера конфигурации SQL Server разверните узел **Сетевая конфигурация SQL Server**, **Протоколы для <имя экземпляра>\<** , а затем дважды щелкните **TCP/IP**.  
   
     > [!NOTE]  
     >  Если возникают проблемы при открытии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager, см. статью [Диспетчер конфигурации SQL Server](../../relational-databases/sql-server-configuration-manager.md).  
@@ -64,7 +63,7 @@ ms.locfileid: "66799508"
   
 5.  В области консоли выберите **Службы SQL Server**.  
   
-6.  В области сведений щелкните правой кнопкой мыши **SQL Server (**\<имя экземпляра>**)**, а затем нажмите кнопку **Перезагрузка**, чтобы остановить и перезагрузить [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+6.  В области сведений щелкните правой кнопкой мыши **SQL Server (** \<имя экземпляра> **)** , а затем нажмите кнопку **Перезагрузка**, чтобы остановить и перезагрузить [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="connecting"></a>Соединение  
 После настройки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на прослушивание определенного порта установить соединение с ним с помощью клиентского приложения можно тремя способами:  

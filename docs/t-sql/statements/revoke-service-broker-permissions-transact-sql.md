@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 70f1d938-97e2-48a4-9bc0-8be9f2f2c36d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 3b67961b62e3d6629aaa23b485a96d855fe72a9c
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 4ed6e67bbf6f3fcda872650c2d3394d6311802b3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326635"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67914219"
 ---
 # <a name="revoke-service-broker-permissions-transact-sql"></a>REVOKE, отмена разрешений для компонента Service Broker (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,19 +62,19 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  *permission*  
  Указывает разрешение, которое может быть отменено для защищаемого объекта компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Список разрешений см. в подразделе "Примечания" далее в этом разделе.  
   
- CONTRACT **::**_contract_name_  
+ CONTRACT **::** _contract_name_  
  Указывает контракт, для которого отменяется разрешение. Квалификатор области **::** является обязательным.  
   
- MESSAGE TYPE **::**_message_type_name_  
+ MESSAGE TYPE **::** _message_type_name_  
  Указывает тип сообщения, для которого отменяется разрешение. Квалификатор области **::** является обязательным.  
   
- REMOTE SERVICE BINDING **::**_remote_binding_name_  
+ REMOTE SERVICE BINDING **::** _remote_binding_name_  
  Указывает привязку удаленной службы, для которой отменяется разрешение. Квалификатор области **::** является обязательным.  
   
- ROUTE **::**_route_name_  
+ ROUTE **::** _route_name_  
  Указывает маршрут, для которого отменяется разрешение. Квалификатор области **::** является обязательным.  
   
- SERVICE **::**_message_type_name_  
+ SERVICE **::** _message_type_name_  
  Указывает службу, для которой отменяется разрешение. Квалификатор области **::** является обязательным.  
   
  *database_principal*  

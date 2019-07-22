@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 9c9479c1-9bfc-4039-837e-e53fce67723d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6c48efccdb4d32d9b471aae758e31084c7b87a7b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cab6b6114dd7ea7364df890be67579f91bee4339
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65098149"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897179"
 ---
 # <a name="how-to-create-database-objects-using-table-designer"></a>Руководство. создать объекты базы данных с помощью конструктора таблиц
 Новый узел **SQL Server** в **обозревателе объектов SQL Server** очень похож на среду SSMS не только внешним видом. В нем можно создавать объекты с помощью контекстных меню, которые работают как меню в SSMS.  
@@ -63,18 +62,18 @@ ms.locfileid: "65098149"
   
     |Имя|Тип данных|**Разрешить значения NULL**|  
     |--------|-------------|-------------------|  
-    |Идентификатор|ssNoversion|не включен|  
+    |Идентификатор|INT|не включен|  
     |Имя|nvarchar (128)|не включен|  
   
 7.  Создайте еще одну таблицу с именем **Products**. Добавьте следующие столбцы в таблицу Products с помощью сетки столбцов. Кроме того, не забудьте изменить в скрипте имя таблицы на `[dbo].[Products]`.  
   
     |Имя|Тип данных|**Разрешить значения NULL**|  
     |--------|-------------|-------------------|  
-    |Идентификатор|ssNoversion|не включен|  
+    |Идентификатор|INT|не включен|  
     |Имя|nvarchar (128)|не включен|  
-    |ShelfLife|ssNoversion|включен|  
-    |SupplierId|ssNoversion|включен|  
-    |CustomerId|ssNoversion|включен|  
+    |ShelfLife|INT|включен|  
+    |SupplierId|INT|включен|  
+    |CustomerId|INT|включен|  
   
 ### <a name="to-create-a-new-check-constraint-using-the-table-designer"></a>Создание нового проверочного ограничения с помощью конструктора таблиц  
   
