@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: ed84567f-7b91-4b44-b5b2-c400bda4590d
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c7c0c75d1bbeb25dade2bb8e333067fb244d8248
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e070cfc4b02ae52ab755306a29eb90c6afc912cf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47831002"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075501"
 ---
 # <a name="use-the-inserted-and-deleted-tables"></a>Использование таблиц inserted и deleted
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ ms.locfileid: "47831002"
 > [!NOTE]  
 >  Если действия триггера зависят от числа строк, данные в которых были изменены, воспользуйтесь проверками (например, проверкой параметра @@ROWCOUNT) при изменении данных в нескольких строках (инструкции INSERT, DELETE или UPDATE с инструкцией SELECT), а затем предпринимайте соответствующие действия.  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] не позволяет ссылаться на столбцы типов **text**, **ntext**или **image** в таблицах inserted и deleted триггеров AFTER. Однако эти типы данных включены в целях обратной совместимости. Для хранения больших данных рекомендуется использовать типы данных **varchar(max)**, **nvarchar(max)** и **varbinary(max)** . Как триггеры AFTER, так и триггеры INSTEAD OF поддерживают данные типов **varchar(max)**, **nvarchar(max)** и **varbinary(max)** в таблицах inserted и deleted. Дополнительные сведения см. в разделе [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md).  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] не позволяет ссылаться на столбцы типов **text**, **ntext**или **image** в таблицах inserted и deleted триггеров AFTER. Однако эти типы данных включены в целях обратной совместимости. Для хранения больших данных рекомендуется использовать типы данных **varchar(max)** , **nvarchar(max)** и **varbinary(max)** . Как триггеры AFTER, так и триггеры INSTEAD OF поддерживают данные типов **varchar(max)** , **nvarchar(max)** и **varbinary(max)** в таблицах inserted и deleted. Дополнительные сведения см. в разделе [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md).  
   
  **Примеры использования таблицы inserted в триггере для выполнения бизнес-правил**  
   

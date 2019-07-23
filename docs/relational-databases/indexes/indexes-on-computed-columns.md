@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 8d17ac9c-f3af-4bbb-9cc1-5cf647e994c4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: da5528a606fdfc72aec7f1b0bba4348d389f3c98
-ms.sourcegitcommit: eb1f3a2f5bc296f74545f17d20c6075003aa4c42
+ms.openlocfilehash: cf54565115df53dc7d502f48aad68f9974adebd0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52191020"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909694"
 ---
 # <a name="indexes-on-computed-columns"></a>Индексы вычисляемых столбцов
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -96,7 +95,7 @@ ms.locfileid: "52191020"
 ## <a name="data-type-requirements"></a>требования к типам данных;
   
 -   Выражение *computed_column_expression* , заданное для вычисляемого столбца, не может определять значения типов данных **text**, **ntext**или **image** .  
--   Вычисляемые столбцы, производные от типов данных **image**, **ntext**, **text**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** и **xml** , могут индексироваться, если тип данных вычисляемого столбца допускается в качестве ключевого столбца индекса.  
+-   Вычисляемые столбцы, производные от типов данных **image**, **ntext**, **text**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** и **xml** , могут индексироваться, если тип данных вычисляемого столбца допускается в качестве ключевого столбца индекса.  
 -   Вычисляемые столбцы, производные от типов данных **image**, **ntext**и **text** , могут быть неключевыми (включенными) столбцами некластеризованного индекса, если тип данных вычисляемого столбца является допустимым в качестве неключевого индексного столбца.  
 
 

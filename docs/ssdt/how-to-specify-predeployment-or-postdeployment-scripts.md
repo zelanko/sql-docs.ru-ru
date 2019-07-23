@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7f78f517-f13d-4f4b-84b9-e804cb490b2c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: be518cfacfefa76f380eefab1e45348e037cc0c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a1531bffd50bb14838e74b5315c30a870563f86f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65098473"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035012"
 ---
 # <a name="how-to-specify-predeployment-or-postdeployment-scripts"></a>Руководство. задать скрипты, выполняемые до или после развертывания
 Скрипты, выполняемые перед развертыванием и после него, выполняют инструкции Transact\-SQL до и после работы основного скрипта развертывания, который формируется на основе проекта базы данных. В проекте может быть только один скрипт, выполняемый до развертывания, и один скрипт, выполняемый после развертывания. Эти скрипты можно использовать для разных целей. Пример:  

@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: b6f3cd5a-3389-42d6-a93f-97b3ddf31b95
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8921129e8e5b7afcf3f141749bc31ec857a166e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2cd7a605fbe9d3075d4d67e1ce824664ef2747c7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65098042"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897133"
 ---
 # <a name="how-to-create-an-empty-sql-server-unit-test"></a>Руководство. создать пустой модульный тест SQL Server
 Чтобы убедиться, что изменения, внесенные в объекты баз данных, не нарушают работу функций, включите в проект базы данных модульные тесты. Следующие процедуры позволяют создавать модульные тесты SQL Server для любого объекта базы данных. SQL Server Data Tools включает дополнительную поддержку функций базы данных, триггеров и хранимых процедур. Дополнительные сведения см. в разделе [Как создавать модульные тесты SQL Server для функций, триггеров и хранимых процедур](../ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md).  

@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 2189cb5e-4460-46c5-a254-20c833ebbfec
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1905daf01b919e3e661b4c93302418c418cf7b69
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cede10b01e1300a1b354cdc5a0d1dd5f80d5a006
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62668377"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68095448"
 ---
 # <a name="add-namespaces-to-queries-with-with-xmlnamespaces"></a>Добавление пространств имен в запросы с WITH XMLNAMESPACES
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -220,7 +219,7 @@ WHERE CatalogDescription.exist('
     ) = 1  
 ```  
   
- В представленном выше запросе в прологах обоих методов (**query()** и **exist()**) объявляются одинаковые пространства имен. Пример:  
+ В представленном выше запросе в прологах обоих методов (**query()** и **exist()** ) объявляются одинаковые пространства имен. Пример:  
   
 ```  
 declare namespace pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  

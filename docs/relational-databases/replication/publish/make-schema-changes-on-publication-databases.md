@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c82c9913b75ca363d4ace1413c0c4413989c116a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: db839c3afa5b3188a7a37f0575f23d3f9ebadce7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605372"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081734"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>Внесение изменений в схемы баз данных публикации
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +92,7 @@ ms.locfileid: "47605372"
   
 -   Чтобы добавить в таблицу новый столбец и не включить его в существующую публикацию, отключите репликацию изменений схемы, а затем выполните инструкцию ALTER TABLE \<таблица> ADD \<столбец>.  
   
--   Чтобы включить имеющийся столбец в существующую публикацию, используйте [sp_articlecolumn (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md), [sp_mergearticlecolumn (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) или диалоговое окно **Свойства публикации — \<публикация>**.  
+-   Чтобы включить имеющийся столбец в существующую публикацию, используйте [sp_articlecolumn (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md), [sp_mergearticlecolumn (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) или диалоговое окно **Свойства публикации — \<публикация>** .  
   
      Дополнительные сведения см. в разделе [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md). Это потребует повторной инициализации подписок.  
   
@@ -103,7 +102,7 @@ ms.locfileid: "47605372"
   
 -   Для удаления столбца из имеющийся публикации и удаления столбца из таблицы на издателе выполните инструкцию ALTER TABLE \<таблица> DROP \<столбец>. По умолчанию столбец затем удаляется из таблицы на всех подписчиках.  
   
--   Чтобы удалить столбец из имеющейся публикации, но сохранить его в таблице на издателе, используйте [sp_articlecolumn (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md), [sp_mergearticlecolumn (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) или диалоговое окно **Свойства публикации — \<публикация>**.  
+-   Чтобы удалить столбец из имеющейся публикации, но сохранить его в таблице на издателе, используйте [sp_articlecolumn (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md), [sp_mergearticlecolumn (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) или диалоговое окно **Свойства публикации — \<публикация>** .  
   
      Дополнительные сведения см. в разделе [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md). Это потребует создания нового моментального снимка.  
   
@@ -152,7 +151,7 @@ ms.locfileid: "47605372"
         |**файловый поток**|Разрешить изменения|Блокировать изменения|Блокировать изменения|  
         |**date**, **time**, **datetime2**и **datetimeoffset**|Разрешить изменения|Разрешить изменения*|Блокировать изменения|  
   
-         * Подписчики SQL Server Compact преобразуют эти типы данных на подписчике.  
+         \* Подписчики SQL Server Compact преобразуют эти типы данных на подписчике.  
   
 -   Если при применении изменения схемы возникает ошибка (например, ошибка по причине добавления внешнего ключа, ссылающегося на таблицу, которая недоступна на подписчике), синхронизация завершается ошибкой, и подписка должна быть инициализирована повторно.  
   

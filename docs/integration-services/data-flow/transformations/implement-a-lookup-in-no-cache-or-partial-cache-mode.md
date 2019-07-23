@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 01b7fbca-5181-4d47-9f75-7f25af6b40d2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 01ceb28c3f1b52318f7099a4a1225a0b24219da3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c0b4286836f3ed7060eceee1b1201670574123cc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726047"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67944289"
 ---
 # <a name="implement-a-lookup-in-no-cache-or-partial-cache-mode"></a>Реализация уточняющего запроса в режиме «Частичное кэширование» или «Без кэширования»
 
@@ -106,7 +105,7 @@ ms.locfileid: "65726047"
      Если эта инструкция включает параметры, нажмите кнопку **Параметры** , чтобы сопоставить параметры с входными столбцами.  
   
     > [!NOTE]  
-    >  Дополнительная инструкция SQL, которую можно указать на этой странице, заменяет имя таблицы, указанное на странице **Соединение** **Редактора преобразования «Уточняющий запрос»**.  
+    >  Дополнительная инструкция SQL, которую можно указать на этой странице, заменяет имя таблицы, указанное на странице **Соединение** **Редактора преобразования «Уточняющий запрос»** .  
   
 13. Чтобы настроить вывод ошибок, перейдите на страницу **Вывод ошибок** и задайте параметры обработки ошибок. Дополнительные сведения см. в разделе [Редактор преобразования "Уточняющий запрос" (страница "Вывод ошибок")](../../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md).  
   

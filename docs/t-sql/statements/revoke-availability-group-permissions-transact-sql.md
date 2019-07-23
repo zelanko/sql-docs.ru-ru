@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 02c77378-a36d-4286-9235-d8867a2b92ad
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 201e7de473a344d0d41269b259c503dc34f2a78c
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: adbceb87d5191cd279130ca53209265cdc1c14d4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327805"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082354"
 ---
 # <a name="revoke-availability-group-permissions-transact-sql"></a>REVOKE (отзыв) разрешений группы доступности (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -53,8 +52,8 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
  *permission*  
  Указывает разрешение, которое может быть отменено для группы доступности. Список разрешений см. в подразделе "Примечания" далее в этом разделе.  
   
- ON AVAILABILITY GROUP **::**_availability_group_name_  
- Указывает группу доступности, для которой отменяется разрешение. Квалификатор области (**::**) является обязательным.  
+ ON AVAILABILITY GROUP **::** _availability_group_name_  
+ Указывает группу доступности, для которой отменяется разрешение. Квалификатор области ( **::** ) является обязательным.  
   
  { FROM | TO } \<server_principal> Указывает имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], у которого отменяется разрешение.  
   

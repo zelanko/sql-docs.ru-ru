@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: e61e830d-9fcd-45e7-b7b4-93a42155dd56
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7e4c14a1e4f0ef2196cf2cebfd5e1c531cf7878e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 59bff166871160525504e65a52648c97518a7ca7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65101949"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68110783"
 ---
 # <a name="project-oriented-offline-database-development"></a>Разработка базы данных вне сети с учетом проекта
 В этом разделе описаны функции SQL Server Data Tools (SSDT) для разработки, создания, отладки и публикации проекта базы данных.  
