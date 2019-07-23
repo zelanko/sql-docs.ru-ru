@@ -45,14 +45,13 @@ helpviewer_keywords:
 ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a22f789aa967f7a6dcb9582083bf22c5698e99e7
-ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
+ms.openlocfilehash: 84bc446438a5b8938ee84b1e741c2768636d45b2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67419071"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68141221"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -70,7 +69,7 @@ ms.locfileid: "67419071"
 
 ||||
 |---|---|---|
-|** _\* SQL Server \*_** &nbsp;|[Управляемый экземпляр Базы данных SQL<br />](backup-transact-sql.md?view=azuresqldb-mi-current)|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
+|**\* _SQL Server \*_** &nbsp;|[Управляемый экземпляр Базы данных SQL<br />](backup-transact-sql.md?view=azuresqldb-mi-current)|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
 ||||
 
 &nbsp;
@@ -435,7 +434,7 @@ BUFFERCOUNT **=** { *buffercount* |  **@** _buffercount\_variable_ } — опр
 > [!NOTE]
 > Важные сведения об использовании параметра `BUFFERCOUNT` см. в блоге [Неправильный параметр передачи данных BufferCount может привести к OOM](https://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx).
 
-MAXTRANSFERSIZE **=** { *maxtransfersize* | _ **@** maxtransfersize\_variable_ } указывает наибольший объем пакета данных в байтах для обмена данными между [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и носителем резервного набора. Поддерживаются значения, кратные 65 536 байтам (64 КБ), вплоть до 4 194 304 байт (4 МБ).
+MAXTRANSFERSIZE **=** { *maxtransfersize* |  _**@** maxtransfersize\_variable_ } указывает наибольший объем пакета данных в байтах для обмена данными между [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и носителем резервного набора. Поддерживаются значения, кратные 65 536 байтам (64 КБ), вплоть до 4 194 304 байт (4 МБ).
 
 > [!NOTE]
 > Если при создании резервных копий с помощью модуля записи SQL база данных имеет настроенный [FILESTREAM](../../relational-databases/blob/filestream-sql-server.md) или включает [файловые группы, оптимизированные для памяти](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md), то `MAXTRANSFERSIZE` во время восстановления должно быть больше или равно `MAXTRANSFERSIZE`, использованному при создании резервной копии.
@@ -931,7 +930,7 @@ WHERE r.command LIKE 'BACKUP%'
 
 > ||||
 > |---|---|---|
-> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|** _\* Управляемый экземпляр Базы данных SQL<br /> \*_** &nbsp;|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
+> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|**_\* Управляемый экземпляр Базы данных SQL<br /> \*_** &nbsp;|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
 
 &nbsp;
 
@@ -1045,7 +1044,7 @@ BUFFERCOUNT **=** { *buffercount* |  **@** _buffercount\_variable_ } — опр
 > [!NOTE]
 > Важные сведения об использовании параметра `BUFFERCOUNT` см. в блоге [Неправильный параметр передачи данных BufferCount может привести к OOM](https://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx).
 
-MAXTRANSFERSIZE **=** { *maxtransfersize* | _ **@** maxtransfersize\_variable_ } указывает наибольший объем пакета данных в байтах для обмена данными между [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и носителем резервного набора. Поддерживаются значения, кратные 65 536 байтам (64 КБ), вплоть до 4 194 304 байт (4 МБ).
+MAXTRANSFERSIZE **=** { *maxtransfersize* |  _**@** maxtransfersize\_variable_ } указывает наибольший объем пакета данных в байтах для обмена данными между [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и носителем резервного набора. Поддерживаются значения, кратные 65 536 байтам (64 КБ), вплоть до 4 194 304 байт (4 МБ).
 
 > [!NOTE]
 > Для баз данных с включенным [прозрачным шифрованием данных (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) и одним файлом данных `MAXTRANSFERSIZE` по умолчанию — 65 536 (64 КБ). Для баз данных без включенного шифрования TDE `MAXTRANSFERSIZE` по умолчанию — 1 048 576 (1 МБ) при сохранении резервных копий на диск и 65 536 (64 КБ) при использовании VDI или ленточных носителей.
@@ -1116,7 +1115,7 @@ WITH STATS = 5, COPY_ONLY;
 
 > ||||
 > |---|---|---|
-> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|[Управляемый экземпляр Базы данных SQL<br />](backup-transact-sql.md?view=azuresqldb-mi-current)|** _\* Analytics<br />Platform System (PDW) \*_** &nbsp;|
+> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|[Управляемый экземпляр Базы данных SQL<br />](backup-transact-sql.md?view=azuresqldb-mi-current)|**_\* Analytics<br />Platform System (PDW) \*_** &nbsp;|
 
 &nbsp;
 

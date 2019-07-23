@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 53b09784-bb9d-4fd4-99d3-0492b3308ac4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8aea7a5a74ae85563234c1f40f5faae1213e75de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8dcc8c4cd9908f6904d54d1d8a6f3affb1f5b6d8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66789946"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996632"
 ---
 # <a name="download-odbc-driver-for-sql-server"></a>Скачивание драйвера ODBC Driver for SQL Server
 
@@ -29,27 +28,27 @@ ms.locfileid: "66789946"
 ### <a name="linux-and-macos"></a>Linux и macOS
 
 #### <a name="debian"></a>Debian
-- [Debian 9 .deb пакетов](https://packages.microsoft.com/debian/9/prod/pool/main/m/msodbcsql17/)
-- [Debian 8 .deb пакетов](https://packages.microsoft.com/debian/8/prod/pool/main/m/msodbcsql17/)
+- [Пакеты Debian 9. deb](https://packages.microsoft.com/debian/9/prod/pool/main/m/msodbcsql17/)
+- [Пакеты Debian 8. deb](https://packages.microsoft.com/debian/8/prod/pool/main/m/msodbcsql17/)
 
 #### <a name="redhat"></a>RedHat
-- [Пакеты .rpm RedHat 7 (msodbcsql17-*)](https://packages.microsoft.com/rhel/7/prod/)
-- [Пакеты .rpm RedHat 6 (msodbcsql17-*)](https://packages.microsoft.com/rhel/6.8/prod/)
+- [Пакеты RedHat 7. rpm (msodbcsql17-*)](https://packages.microsoft.com/rhel/7/prod/)
+- [Пакеты RedHat 6. rpm (msodbcsql17-*)](https://packages.microsoft.com/rhel/6.8/prod/)
 
 #### <a name="suse"></a>Suse
-- [Пакеты .rpm SuSE 12 (msodbcsql17-*)](https://packages.microsoft.com/sles/12/prod/)
-- [Пакеты .rpm SuSE 11 (msodbcsql17-*)](https://packages.microsoft.com/sles/11/prod/)
+- [Пакеты SuSE 12. rpm (msodbcsql17-*)](https://packages.microsoft.com/sles/12/prod/)
+- [Пакеты SuSE 11. rpm (msodbcsql17-*)](https://packages.microsoft.com/sles/11/prod/)
 
 #### <a name="ubuntu"></a>Ubuntu
-- [Пакеты .deb Ubuntu 18.04](https://packages.microsoft.com/ubuntu/18.04/prod/pool/main/m/msodbcsql17/)
-- [Ubuntu 17.10 .deb пакетов](https://packages.microsoft.com/ubuntu/17.10/prod/pool/main/m/msodbcsql17/)
-- [Пакеты .deb Ubuntu 16.04](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql17/)
-- [Ubuntu 14.04 .deb пакетов](https://packages.microsoft.com/ubuntu/14.04/prod/pool/main/m/msodbcsql17/) 
+- [Пакеты Ubuntu 18,04. deb](https://packages.microsoft.com/ubuntu/18.04/prod/pool/main/m/msodbcsql17/)
+- [Пакеты Ubuntu 17,10. deb](https://packages.microsoft.com/ubuntu/17.10/prod/pool/main/m/msodbcsql17/)
+- [Пакеты Ubuntu 16,04. deb](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql17/)
+- [Пакеты Ubuntu 14,04. deb](https://packages.microsoft.com/ubuntu/14.04/prod/pool/main/m/msodbcsql17/) 
 
 #### <a name="macos"></a>macOS
-- [OS X 10.11 и macOS 10.12, 10.13 формулы Homebrew](https://github.com/Microsoft/homebrew-mssql-release)
+- [OS X 10,11 и macOS 10,12, 10,13 Homebrew формулу](https://github.com/Microsoft/homebrew-mssql-release)
 
-См. также [установке драйвера](linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
+См. также раздел [Установка драйвера](linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
 
 ## <a name="microsoft-odbc-driver-131-for-sql-server"></a>Microsoft ODBC Driver for SQL Server версии 13.1
 
@@ -61,27 +60,27 @@ ms.locfileid: "66789946"
 ### <a name="linux-and-macos"></a>Linux и macOS
 
 #### <a name="debian"></a>Debian
-- [Debian 8 .deb пакетов](https://packages.microsoft.com/debian/8/prod/pool/main/m/msodbcsql/)
+- [Пакеты Debian 8. deb](https://packages.microsoft.com/debian/8/prod/pool/main/m/msodbcsql/)
 
 #### <a name="redhat"></a>RedHat
-- [Пакеты .rpm RedHat 7 (msodbcsql-*)](https://packages.microsoft.com/rhel/7/prod/)
-- [Пакеты .rpm RedHat 6 (msodbcsql-*)](https://packages.microsoft.com/rhel/6.8/prod/)
+- [Пакеты RedHat 7. rpm (msodbcsql-*)](https://packages.microsoft.com/rhel/7/prod/)
+- [Пакеты RedHat 6. rpm (msodbcsql-*)](https://packages.microsoft.com/rhel/6.8/prod/)
 
 #### <a name="suse"></a>Suse
-- [Пакеты .rpm SuSE 12 (msodbcsql-*)](https://packages.microsoft.com/sles/12/prod/)
-- [Пакеты .rpm SuSE 11 (msodbcsql-*)](https://packages.microsoft.com/sles/11/prod/)
+- [Пакеты SuSE 12. rpm (msodbcsql-*)](https://packages.microsoft.com/sles/12/prod/)
+- [Пакеты SuSE 11. rpm (msodbcsql-*)](https://packages.microsoft.com/sles/11/prod/)
 
 #### <a name="ubuntu"></a>Ubuntu
-- [Пакеты .deb Ubuntu 17.04](https://packages.microsoft.com/ubuntu/17.04/prod/pool/main/m/msodbcsql/)
-- [Пакеты .deb Ubuntu 16.04](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/)
-- [Ubuntu 16.10 .deb пакетов](https://packages.microsoft.com/ubuntu/16.10/prod/pool/main/m/msodbcsql/)
-- [Ubuntu 15.10 .deb пакетов](https://packages.microsoft.com/ubuntu/15.10/prod/pool/main/m/msodbcsql/)
-- [Ubuntu 14.04 .deb пакетов](https://packages.microsoft.com/ubuntu/14.04/prod/pool/main/m/msodbcsql/) 
+- [Пакеты Ubuntu 17,04. deb](https://packages.microsoft.com/ubuntu/17.04/prod/pool/main/m/msodbcsql/)
+- [Пакеты Ubuntu 16,04. deb](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/)
+- [Пакеты Ubuntu 16,10. deb](https://packages.microsoft.com/ubuntu/16.10/prod/pool/main/m/msodbcsql/)
+- [Пакеты Ubuntu 15,10. deb](https://packages.microsoft.com/ubuntu/15.10/prod/pool/main/m/msodbcsql/)
+- [Пакеты Ubuntu 14,04. deb](https://packages.microsoft.com/ubuntu/14.04/prod/pool/main/m/msodbcsql/) 
 
 #### <a name="macos"></a>macOS
-- [OS X 10.11 и macOS 10.12, 10.13 формулы Homebrew](https://github.com/Microsoft/homebrew-mssql-release)
+- [OS X 10,11 и macOS 10,12, 10,13 Homebrew формулу](https://github.com/Microsoft/homebrew-mssql-release)
 
-См. также [установке драйвера](linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
+См. также раздел [Установка драйвера](linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
 
 ## <a name="microsoft-odbc-driver-13-for-sql-server"></a>Microsoft ODBC Driver for SQL Server версии 13  
 

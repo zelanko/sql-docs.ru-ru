@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9ead8470-93ba-44e3-8848-b59322e37621
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 13e2b010a193e8c610c54a5b619d8a67c9b4d2d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 167667590df0b2172e05674c462cfa9833d45acd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65097459"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912787"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan"></a>Пошаговое руководство. Расширение процесса развертывания проекта базы данных для анализа плана развертывания
 Можно создать участников развертывания для выполнения специализированных действий при развертывании проекта SQL. Предусмотрена возможность создать участников DeploymentPlanModifier и DeploymentPlanExecutor. Используйте DeploymentPlanModifier для изменения плана до его выполнения и DeploymentPlanExecutor для осуществления операций в ходе выполнения плана. В данном пошаговом руководстве будет создан DeploymentPlanExecutor с именем DeploymentUpdateReportContributor, который будет формировать отчет о действиях, выполненных при развертывании проекта. Поскольку данный участник сборки принимает параметр, управляющий формированием отчета, необходимо выполнить дополнительное действие.  

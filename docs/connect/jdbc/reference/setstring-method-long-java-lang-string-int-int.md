@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 9fb59b09-e825-46a6-ba5d-85d4a8dc143a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 604e39fcf2d8bd6bfb218fe33fda391c2b53403a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5741f8ba74009327befc8f940e1d3b37df6ef1ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66762241"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67972698"
 ---
 # <a name="setstring-method-long-javalangstring-int-int"></a>Метод setString (long, java.lang.String, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public int setString(long pos,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *Торговых терминалов*  
+ *POS*  
   
  Позиция, с которой начинается запись в объект CLOB.  
   
@@ -67,7 +66,7 @@ public int setString(long pos,
  Символьные данные перезаписываются, начиная с указанной позиции, и могут превысить исходную длину объекта CLOB. Если указать значение позиции+1, будет добавлена строка. Если указать значение позиции+2 и более (либо нулевое или отрицательное значение), то создается ошибка позиции.  
   
 ## <a name="see-also"></a>См. также:  
- [Метод setString &#40;SQLServerClob&#41;](../../../connect/jdbc/reference/setstring-method-sqlserverclob.md)   
+ [Метод &#40;setString SQLServerClob&#41;](../../../connect/jdbc/reference/setstring-method-sqlserverclob.md)   
  [Методы SQLServerClob](../../../connect/jdbc/reference/sqlserverclob-methods.md)   
  [Элементы SQLServerClob](../../../connect/jdbc/reference/sqlserverclob-members.md)   
  [Класс SQLServerClob](../../../connect/jdbc/reference/sqlserverclob-class.md)  

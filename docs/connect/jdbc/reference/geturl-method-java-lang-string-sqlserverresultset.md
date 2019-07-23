@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 105a5319-0f4c-4d08-964b-cc52f8e28ec1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e7554c761d35c6683802cfb4e5428221f697089c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a0407ac8ec711d6d7ab8b1b2fb8afa245f53049d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66769590"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67978323"
 ---
 # <a name="geturl-method-javalangstring-sqlserverresultset"></a>Метод getURL (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,12 +35,12 @@ public java.net.URL getURL(java.lang.String sColumn)
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *sColumn*  
+ *сколумн*  
   
  Значение типа **String**, содержащее имя столбца.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Объект URL-адрес.  
+ Объект URL-адреса.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -50,7 +49,7 @@ public java.net.URL getURL(java.lang.String sColumn)
  Этот метод getURL определен с помощью метода getURL в интерфейсе java.sql.ResultSet.  
   
 ## <a name="see-also"></a>См. также:  
- [Метод getURL &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/geturl-method-sqlserverresultset.md)   
+ [Метод &#40;getURL SQLServerResultSet&#41;](../../../connect/jdbc/reference/geturl-method-sqlserverresultset.md)   
  [Элементы SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Класс SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

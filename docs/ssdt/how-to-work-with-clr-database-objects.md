@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 4a28d43d-eb5e-444d-aace-5df691f38709
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 9e0abe651d44c045f3ab92c5388aa740216cff0b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a8ea668f0672a40e8af6fbb81bbce469652eeb54
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65099582"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119891"
 ---
 # <a name="how-to-work-with-clr-database-objects"></a>Руководство. работать с объектами баз данных CLR
 Помимо языка программирования Transact\-SQL, вы можете использовать языки .NET Framework для создания объектов базы данных, которые извлекают и обновляют данные. Объекты базы данных, написанные в управляемом коде, называются CLR-объектами базы данных SQL Server. Описание преимуществ использования CLR-объектов базы данных, размещенных в SQL Server, а также рекомендации по выбору между Transact\-SQL и CLR, см. в статьях [CLR Integration - Overview](../relational-databases/clr-integration/clr-integration-overview.md) (Общие сведения об интеграции со средой CLR) и [Преимущества использования управляемого кода для создания объектов баз данных](https://msdn.microsoft.com/library/k2e1fb36.aspx).  

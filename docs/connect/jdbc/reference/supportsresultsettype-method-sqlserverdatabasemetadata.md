@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: aded734f-c96e-460f-afaa-8f64a92560d7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c3438f7a17e919e905ea12e064a4d145ba16e728
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 5966367c786cc8e591103166bbe8dadb47c664f6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797420"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67968939"
 ---
 # <a name="supportsresultsettype-method-sqlserverdatabasemetadata"></a>Метод supportsResultSetType (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -59,13 +58,13 @@ public boolean supportsResultSetType(int type)
  TYPE_SS_SCROLL_DYNAMIC  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- **значение true,** Если поддерживается. В противном случае — **false**.  
+ **значение true** , если поддерживается. В противном случае — **false**.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод supportsResultSetType указывается с помощью метода supportsResultSetType в интерфейсе java.sql.DatabaseMetaData.  
+ Этот метод supportsResultSetType задается методом supportsResultSetType в интерфейсе Java. SQL. DatabaseMetaData.  
   
 ## <a name="see-also"></a>См. также:  
  [Методы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

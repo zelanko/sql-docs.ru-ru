@@ -1,5 +1,5 @@
 ---
-title: Типы пример основных данных | Документация Майкрософт
+title: Пример основных типов данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 07/31/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 59ac80cf-fc66-4493-933d-38e479c5f54d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1fc817ba5964ab1278a329520fc895ec06815baf
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: d995dc6fb4b58249abd4fc2d3fc879adc66b5b0e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66770327"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957396"
 ---
 # <a name="basic-data-types-sample"></a>Образец базовых типов данных
 
@@ -32,9 +31,9 @@ ms.locfileid: "66770327"
 
 ## <a name="requirements"></a>Требования
 
-Чтобы запустить этот пример приложения, необходимо включить в параметр classpath путь к файлу mssql-jdbc.jar. Также потребуется доступ к примеру базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]. Дополнительные сведения о том, как путь к классу см. в разделе [с помощью драйвера JDBC](../../connect/jdbc/using-the-jdbc-driver.md).
+Чтобы запустить этот пример приложения, необходимо включить в параметр classpath путь к файлу mssql-jdbc.jar. Также потребуется доступ к примеру базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]. Дополнительные сведения о настройке подкаталогов классов см. в разделе [Использование драйвера JDBC](../../connect/jdbc/using-the-jdbc-driver.md).
 
-В примере будет создать необходимые таблицы и вставьте образец данных в [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] образца базы данных:
+Образец создаст необходимую таблицу и вставит образец данных в [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] образец базы данных:
 
 > [!NOTE]  
 > Драйвер [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] включает файлы библиотек классов mssql-jdbc, которые используются в зависимости от выбранных параметров среды выполнения Java (JRE). Для получения дополнительных сведений о том, какой JAR-файл выбрать, см. статью [Требования к системе для драйвера JDBC](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).

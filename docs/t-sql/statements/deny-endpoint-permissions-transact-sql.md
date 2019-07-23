@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3ac40457-7529-4eda-95a4-5247345cc8cf
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: b2599cd81950f20b8f1771e5508318955fd8eb80
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: b7bb0f690305320f5ae0f5d4ecdeb8f59b33cb01
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326315"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114848"
 ---
 # <a name="deny-endpoint-permissions-transact-sql"></a>DENY, запрет разрешений на конечную точку (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,8 +51,8 @@ DENY permission  [ ,...n ] ON ENDPOINT :: endpoint_name
  *permission*  
  Разрешение на выполнение операций над конечной точкой, которое может быть запрещено. Список разрешений см. в подразделе "Примечания" далее в этом разделе.  
   
- ON ENDPOINT **::**_endpoint_name_  
- Конечная точка, разрешение на работу с которой блокируется. Квалификатор области (**::**) является обязательным.  
+ ON ENDPOINT **::** _endpoint_name_  
+ Конечная точка, разрешение на работу с которой блокируется. Квалификатор области ( **::** ) является обязательным.  
   
  TO \<server_principal>  
  Задает имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], для которого запрещается разрешение.  

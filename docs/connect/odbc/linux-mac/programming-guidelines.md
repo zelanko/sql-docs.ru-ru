@@ -9,13 +9,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 45d1fc9d06dd814e4ee6d80ec5ecbbe9e58d09c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f4ab43eb8fce50513ae5d9dd726a15223f0f722b
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798751"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264152"
 ---
 # <a name="programming-guidelines"></a>Указания по программированию
 
@@ -130,6 +129,8 @@ ms.locfileid: "66798751"
     > Выделенные административные соединения должны использовать проверку подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
     
 2.  Диспетчер драйверов UnixODBC возвращает "Недопустимый идентификатор атрибута или параметра" для всех атрибутов инструкции, когда они передаются через SQLSetConnectAttr. Когда в Windows SQLSetConnectAttr получает значение атрибута инструкции, он заставляет драйвер установить это значение для всех активных инструкций, являющихся дочерними элементами дескриптора соединения.  
+
+3.  При использовании драйвера с очень многопоточными приложениями проверка обработки unixODBC может стать узким местом производительности. В таких сценариях можно получить значительно больше производительности, выполнив компиляцию unixodbc с `--enable-fastvalidate` параметром. Однако следует помнить, что это может привести к сбою приложений, передающих недопустимые дескрипторы API `SQL_INVALID_HANDLE` ODBC, а не возвращать ошибки.
 
 ## <a name="see-also"></a>См. также:  
 [Часто задаваемые вопросы](../../../connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.md)

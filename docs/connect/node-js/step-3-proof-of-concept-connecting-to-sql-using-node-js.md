@@ -10,25 +10,24 @@ ms.topic: conceptual
 ms.assetid: 5d5b41b6-129a-40b1-af8b-7e8fbd4a84bb
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7f4ebdc95ec105b4905ae9886abc59afe68a1f40
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 7a462fcb1e8fe91cc2a140716968bd6b6f188ac1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66800496"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003754"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-nodejs"></a>Шаг 3. Эксперимент, подразумевающий подключение к SQL с помощью Node.js
 
-![Загрузки стрелка вниз обведены](../../ssdt/media/download.png)[загрузить драйвер Node.js SQL](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![Скачать-стрелка вниз-с кругом](../../ssdt/media/download.png)[, чтобы скачать драйвер SQL Node. js](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-В этом примере следует рассматривать подтверждение концепции только.  Пример кода упрощен для ясности и не всегда представляет рекомендации, рекомендуемые корпорацией Майкрософт. Другие примеры, которые используют те же важные функции доступны на сайте Github:
+Этот пример следует рассматривать только для подтверждения концепции.  Пример кода упрощен для ясности и не обязательно представляет лучшие методики, рекомендованные корпорацией Майкрософт. Другие примеры, использующие те же самые важные функции, доступны на сайте GitHub:
 
 - [https://github.com/tediousjs/tedious/blob/master/examples/](https://github.com/tediousjs/tedious/blob/master/examples/)
   
-## <a name="step-1-connect"></a>Шаг 1: подключение  
+## <a name="step-1-connect"></a>Шаг 1. подключение  
   
-**Новое подключение** функция используется для подключения к базе данных SQL.  
+**Новая функция подключения** используется для подключения к базе данных SQL.  
   
 ```javascript  
     var Connection = require('tedious').Connection;  
@@ -49,7 +48,7 @@ ms.locfileid: "66800496"
 ## <a name="step-2--execute-a-query"></a>Шаг 2. Выполнение запроса  
   
   
-Все инструкции SQL выполняются с помощью **new Request()** функции. Если инструкция возвращает строки, например инструкцию select, их можно получить с помощью **request.on()** функции. Если нет ни одной строки, функция request.on() возвращает пустые списки.  
+Все инструкции SQL выполняются с помощью **новой функции Request ()** . Если инструкция возвращает строки, например инструкцию SELECT, их можно получить с помощью функции **request. on ()** . Если строки отсутствуют, функция Request. on () возвращает пустые списки.  
   
   
 ```javascript  
@@ -96,9 +95,9 @@ ms.locfileid: "66800496"
     }  
 ```  
   
-## <a name="step-3-insert-a-row"></a>Шаг 3: Вставка строки  
+## <a name="step-3-insert-a-row"></a>Шаг 3. Вставка строки  
   
-В этом примере показано, как выполнить [вставить](../../t-sql/statements/insert-transact-sql.md) инструкции безопасно, передать параметры для защиты от атак [путем внедрения кода SQL](../../relational-databases/tables/primary-and-foreign-key-constraints.md) значение.    
+В этом примере вы узнаете, как безопасно выполнить инструкцию [INSERT](../../t-sql/statements/insert-transact-sql.md) , передав параметры, которые защищают приложение от [внедрения кода SQL](../../relational-databases/tables/primary-and-foreign-key-constraints.md) .    
   
   
 ```javascript  

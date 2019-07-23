@@ -1,5 +1,5 @@
 ---
-title: ISSCommandWithParameters::SetParameterProperties (OLE DB) | Документация Майкрософт
+title: 'ISSCommandWithParameters:: SetParameterProperties (OLE DB) | Документация Майкрософт'
 description: ISSCommandWithParameters::SetParameterProperties (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,13 +15,12 @@ helpviewer_keywords:
 - SetParameterProperties method
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 1dd2184a859f3bb6c0b961ac8596cdbea48d2d25
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: b9f5a3251b05453d01b2ef984c6a9ea7bde1c115
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66783865"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015383"
 ---
 # <a name="isscommandwithparameterssetparameterproperties-ole-db"></a>ISSCommandWithParameters::SetParameterProperties (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -74,7 +73,7 @@ HRESULT SetParameterProperties(
   
  `};`  
   
- Улучшения в ядро базы данных, начиная с [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] разрешить ISSCommandWithParameters::SetParameterProperties получать более точные описания ожидаемых результатов. Эти более точные результаты могут отличаться от значения, возвращаемые методом ISSCommandWithParameters::SetParameterProperties в предыдущих версиях [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [Обнаружение метаданных](../../oledb/features/metadata-discovery.md).  
+ Улучшения в ядре СУБД, начиная с [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Allow ISSCommandWithParameters:: SetParameterProperties, позволяют получить более точные описания ожидаемых результатов. Эти более точные результаты могут отличаться от значений, возвращаемых функцией ISSCommandWithParameters:: SetParameterProperties в предыдущих версиях [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [Обнаружение метаданных](../../oledb/features/metadata-discovery.md).  
   
 |Член|Описание|  
 |------------|-----------------|  

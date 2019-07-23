@@ -1,5 +1,5 @@
 ---
-title: PDO::Query | Документация Майкрософт
+title: 'PDO:: Query | Документация Майкрософт'
 ms.custom: ''
 ms.date: 08/01/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: f6f5e6d4-8ca9-4f06-89ed-de65ad3952a2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 68f06811c0c56fa46f1e3769c794d48ad0e43488
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: fb7131e96277ea05b43f30923dcc64c5be602696
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66761974"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936201"
 ---
 # <a name="pdoquery"></a>PDO::query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -52,7 +51,7 @@ PDO::SQLSRV_ATTR_QUERY_TIMEOUT также влияет на поведение P
 |---------|---------------|  
 |PDO::FETCH_COLUMN, *номер*|Запросы данных в указанном столбце. Первый столбец в таблице имеет номер 0.|  
 |PDO::FETCH_CLASS, '*имя_класса*', array( *список_аргументов* )|Создает экземпляр класса и назначает имена столбцов свойствам в классе. Если конструктор классов принимает один или несколько параметров, также можно передать *arglist*.|  
-|Значение PDO::FETCH_CLASS, "*classname*"|Назначает имена столбцов свойствам в существующем классе.|  
+|PDO:: FETCH_CLASS, "*className*"|Назначает имена столбцов свойствам в существующем классе.|  
   
 Вызовите PDOStatement::closeCursor, чтобы освободить ресурсы базы данных, связанные с объектом PDOStatement, перед повторным вызовом PDO::query.  
   

@@ -9,14 +9,13 @@ ms.topic: conceptual
 ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: = sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 9fd3ee0706e30d6a7077f22488a1f64084b5ae8a
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 2c928db781c6e7d31f07e1cea37ed80481b8fed6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58797014"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136482"
 ---
 # <a name="sql-server-2017-release-notes"></a>Заметки о выпуске SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ ms.locfileid: "58797014"
     3. Снова установите флажок **Разрешить FILESTREAM при потоковом доступе файлового ввода-вывода** для имени исходной общей папки и нажмите кнопку **Применить**.
 
 ### <a name="master-data-services-mds"></a>Службы Master Data Services (MDS)
-- **Проблема и последствия для клиентов:**  когда на странице разрешений пользователя предоставляется разрешение для корневого уровня в представлении сущностей в виде дерева, отображается ошибка `"The model permission cannot be saved. The object guid is not valid"`.
+- **Проблема и последствия для клиентов:**   когда на странице разрешений пользователя предоставляется разрешение для корневого уровня в представлении сущностей в виде дерева, отображается ошибка `"The model permission cannot be saved. The object guid is not valid"`.
 
 - **Решение:** 
   - Предоставьте разрешение для подузлов в представлении в виде дерева, а не для корневого уровня.
@@ -74,7 +73,7 @@ ms.locfileid: "58797014"
 - **Проблема и последствия для клиентов**: Параметр *runincluster* хранимой процедуры **[catalog].[create_execution]** переименован в *runinscaleout* для согласованности и удобства чтения.
 - **Решение:** Если у вас есть скрипты для запуска пакетов в Scale Out, нужно изменить имя параметра с *runincluster* на *runinscaleout*, чтобы они работали в RC1.
 
-- **Проблема и последствия для клиентов**: SQL Server Management Studio (SSMS) 17.1 и более ранние версии не могут активировать выполнение пакета в Scale Out в RC1. Сообщение об ошибке: "*@runincluster* не является параметром процедуры **create_execution**". Эта проблема будет исправлена в следующем выпуске SSMS, в версии 17.2. Версии SSMS, начиная с 17.2, поддерживают новое имя параметра и выполнение пакетов в Scale Out. 
+- **Проблема и последствия для клиентов**: SQL Server Management Studio (SSMS) 17.1 и более ранние версии не могут активировать выполнение пакета в Scale Out в RC1. Сообщение об ошибке: " *@runincluster* не является параметром процедуры **create_execution**". Эта проблема будет исправлена в следующем выпуске SSMS, в версии 17.2. Версии SSMS, начиная с 17.2, поддерживают новое имя параметра и выполнение пакетов в Scale Out. 
 - **Решение:** пока не станет доступна версия SSMS 17.2, используйте следующие инструкции:
   1. Используйте существующую версию SSMS, чтобы создать скрипт выполнения пакета.
   2. Измените в скрипте имя параметра *runincluster* на *runinscaleout*.
