@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 997c0b8e-d8d9-4eed-85b1-6baa1f8594ce
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 55b31126c7c0a64ab394f39328d0e821886b84af
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 813a0da699fe098f6086208a93e87aeab940a486
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794512"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063042"
 ---
 # <a name="delete-a-pull-subscription"></a>Удаление подписки по запросу
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,15 +66,15 @@ ms.locfileid: "47794512"
   
 #### <a name="to-delete-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>Удаление подписки по запросу на публикацию моментальных снимков или транзакций  
   
-1.  В базе данных подписчика в подписчике выполните процедуру [sp_addmergepushsubscription_agent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md). Задайте значения для параметров **@publication**, **@publisher**и **@publisher_db**.  
+1.  В базе данных подписчика в подписчике выполните процедуру [sp_addmergepushsubscription_agent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md). Задайте значения для параметров **@publication** , **@publisher** и **@publisher_db** .  
   
-2.  В издателе в базе данных публикации выполните процедуру [sp_dropsubscription (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md). Задайте значения для параметров **@publication** и **@subscriber**. Задайте значение **all** в параметре **@article**. Если распространитель недоступен, задайте значение **1** в параметре **@ignore_distributor** , чтобы удалить подписку без удаления связанных с ней объектов на распространителе (необязательно).  
+2.  В издателе в базе данных публикации выполните процедуру [sp_dropsubscription (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md). Задайте значения для параметров **@publication** и **@subscriber** . Задайте значение **all** в параметре **@article** . Если распространитель недоступен, задайте значение **1** в параметре **@ignore_distributor** , чтобы удалить подписку без удаления связанных с ней объектов на распространителе (необязательно).  
   
 #### <a name="to-delete-a-pull-subscription-to-a-merge-publication"></a>Удаление подписки по запросу на публикацию слиянием  
   
-1.  В базе данных подписчика в подписчике выполните процедуру [sp_dropmergepullsubscription (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md). Задайте значения для параметров **@publication**, **@publisher**и **@publisher_db**.  
+1.  В базе данных подписчика в подписчике выполните процедуру [sp_dropmergepullsubscription (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md). Задайте значения для параметров **@publication** , **@publisher** и **@publisher_db** .  
   
-2.  В издателе в базе данных публикации выполните процедуру [sp_dropmergesubscription (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md). Задайте значения для параметров **@publication**, **@subscriber**и **@subscriber_db**. Задайте значение **@subscription_type** в параметре **@subscription_type**. Если распространитель недоступен, задайте значение **1** в параметре **@ignore_distributor** , чтобы удалить подписку без удаления связанных с ней объектов на распространителе (необязательно).  
+2.  В издателе в базе данных публикации выполните процедуру [sp_dropmergesubscription (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md). Задайте значения для параметров **@publication** , **@subscriber** и **@subscriber_db** . Задайте значение **@subscription_type** в параметре **@subscription_type** . Если распространитель недоступен, задайте значение **1** в параметре **@ignore_distributor** , чтобы удалить подписку без удаления связанных с ней объектов на распространителе (необязательно).  
   
 ###  <a name="TsqlExample"></a> Примеры (Transact-SQL)  
  В следующем примере производится удаление подписки по запросу на публикацию транзакций. Первый пакет выполняется на подписчике, а второй — на издателе.  

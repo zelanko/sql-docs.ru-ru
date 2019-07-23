@@ -22,24 +22,23 @@ helpviewer_keywords:
 ms.assetid: 08ea66b7-624e-4d8b-86bc-750ff76cdfc5
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: abf461a516371b78a74989ac26f6b79ebbe4853b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 9811fdb3f7199e3a4cf10053f0f8c2f850a57845
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020185"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086756"
 ---
 # <a name="float-and-real-transact-sql"></a>Типы данных float и real (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Типы приблизительных числовых данных, используемые для числовых данных с плавающей запятой. Данные с плавающей запятой являются приблизительными, поэтому не все значения из диапазона могут быть отображены точно. Синонимом по стандарту ISO для типа **real** является **float(24)**.
+Типы приблизительных числовых данных, используемые для числовых данных с плавающей запятой. Данные с плавающей запятой являются приблизительными, поэтому не все значения из диапазона могут быть отображены точно. Синонимом по стандарту ISO для типа **real** является **float(24)** .
   
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Синтаксис  
-**float** [ **(**_n_**)** ] Где *n* — это количество битов, используемых для хранения мантиссы числа в формате **float** при экспоненциальном представлении. Определяет точность данных и размер для хранения. Если указан параметр *n*, это должно быть значение в диапазоне от **1** до **53**. Значение *n* по умолчанию — **53**.
+**float** [ **(** _n_ **)** ] Где *n* — это количество битов, используемых для хранения мантиссы числа в формате **float** при экспоненциальном представлении. Определяет точность данных и размер для хранения. Если указан параметр *n*, это должно быть значение в диапазоне от **1** до **53**. Значение *n* по умолчанию — **53**.
   
 |Значение *n*|Точность|Объем памяти|  
 |---|---|---|
@@ -49,7 +48,7 @@ ms.locfileid: "56020185"
 > [!NOTE]  
 >  В приложении [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] параметр *n* может принимать одно из двух возможных значений. Если **1**<=n<=**24**, *n* принимает значение **24**. Если **25**<=n<=**53**, *n* принимает значение **53**.  
   
-Тип данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **float**[**(n)**] соответствует стандарту ISO для всех значений *n* в диапазоне от **1** до **53**. Синонимом типа **double precision** является тип **float(53)**.
+Тип данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **float**[ **(n)** ] соответствует стандарту ISO для всех значений *n* в диапазоне от **1** до **53**. Синонимом типа **double precision** является тип **float(53)** .
   
 ## <a name="remarks"></a>Remarks  
   

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 69b756e0-a1df-45b3-8a24-6ded8658aefe
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 4c3f4ed7312afcd19e7244b98ba781753ee22b9f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 122630048b7e4ff9cef34c49bfde68177020630f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027541"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077914"
 ---
 # <a name="hierarchyid-data-type-method-reference"></a>Справочник по методам типа данных hierarchyid
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ ms.locfileid: "56027541"
   
 -   /0.1/0.2/  
   
-Узлы можно вставлять в любое место. Узлы, вставленные после **/1/2/**, но перед **/1/3/**, можно представить как **/1/2.5/**. Узлы, вставленные после 0, логически представлены в виде отрицательных чисел. Например, узел, расположенный перед узлом **/1/1/**, можно представить как **/1/-1/**. Узлы не должны начинаться с нулей. Например, узел **/1/1.1/** является допустимым, а узел **/1/1.01/**  — недопустим. Чтобы избежать ошибок, вставляйте узлы с помощью метода [GetDescendant](../../t-sql/data-types/getdescendant-database-engine.md).
+Узлы можно вставлять в любое место. Узлы, вставленные после **/1/2/** , но перед **/1/3/** , можно представить как **/1/2.5/** . Узлы, вставленные после 0, логически представлены в виде отрицательных чисел. Например, узел, расположенный перед узлом **/1/1/** , можно представить как **/1/-1/** . Узлы не должны начинаться с нулей. Например, узел **/1/1.1/** является допустимым, а узел **/1/1.01/**  — недопустим. Чтобы избежать ошибок, вставляйте узлы с помощью метода [GetDescendant](../../t-sql/data-types/getdescendant-database-engine.md).
   
 ## <a name="data-type-conversion"></a>Преобразование типов данных
 Тип данных **hierarchyid** можно преобразовывать в другие типы описанным ниже образом.

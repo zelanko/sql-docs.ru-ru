@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: e2429a5d-e9be-4c05-be20-414d1038a63a
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 5bc7c5c22bdad37eee4e5a711b77555088404b0e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d781778f46617a8961506fb022854835717ea0bd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62644574"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114893"
 ---
 # <a name="deny-database-principal-permissions-transact-sql"></a>DENY, запрет разрешений на участника базы данных (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -71,15 +70,15 @@ DENY permission [ ,...n ]
  Обозначает разрешение, которое можно запретить для участника базы данных. Список разрешений см. в подразделе "Примечания" далее в этом разделе.  
   
  USER ::*database_user*  
- Указывает класс и имя пользователя, для которых запрещается разрешение. Квалификатор области (**::**) является обязательным.  
+ Указывает класс и имя пользователя, для которых запрещается разрешение. Квалификатор области ( **::** ) является обязательным.  
   
  ROLE ::*database_role*  
- Указывает класс и имя роли, для которой запрещается разрешение. Квалификатор области (**::**) является обязательным.  
+ Указывает класс и имя роли, для которой запрещается разрешение. Квалификатор области ( **::** ) является обязательным.  
   
  APPLICATION ROLE ::*application_role*  
  **Применимо к**: с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
- Указывает класс и имя роли приложения, для которой запрещается разрешение. Квалификатор области (**::**) является обязательным.  
+ Указывает класс и имя роли приложения, для которой запрещается разрешение. Квалификатор области ( **::** ) является обязательным.  
   
  CASCADE  
  Указывает, что запрещаемое разрешение также запрещается для других участников, которым оно было предоставлено данным участником.  

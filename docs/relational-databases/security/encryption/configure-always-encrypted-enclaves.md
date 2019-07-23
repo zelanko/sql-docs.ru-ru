@@ -9,14 +9,13 @@ ms.technology: security
 ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 87ae14a8acaa94873b81238d998f755a8ee0a8bd
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 7fd710359f6a2d97bebd9785dd010ff586f43cd1
+ms.sourcegitcommit: 3be14342afd792ff201166e6daccc529c767f02b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67583660"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68307587"
 ---
 # <a name="configure-always-encrypted-with-secure-enclaves"></a>Настройка Always Encrypted с безопасными анклавами
 
@@ -151,7 +150,7 @@ ms.locfileid: "67583660"
 
 В настоящее время для подготовки ключей с поддержкой анклава применяются следующие ограничения:
 
-- Главные ключи столбцов с поддержкой анклава должны храниться в [хранилище сертификатов Windows](/windows/desktop/seccrypto/managing-certificates-with-certificate-stores/) или в [Azure Key Vault](/azure/key-vault/key-vault-whatis/). Хранение главных ключей столбцов с поддержкой анклава в других типах хранилищ ключей (например, в аппаратных модулях безопасности или настраиваемых хранилищах ключей) в настоящее время не поддерживается.
+- Главные ключи столбцов с поддержкой анклава должны храниться в [хранилище сертификатов Windows](/windows/desktop/seccrypto/managing-certificates-with-certificate-stores) или в [Azure Key Vault](/azure/key-vault/key-vault-whatis/). Хранение главных ключей столбцов с поддержкой анклава в других типах хранилищ ключей (например, в аппаратных модулях безопасности или настраиваемых хранилищах ключей) в настоящее время не поддерживается.
 
 ### <a name="provision-enclave-enabled-keys-using-sql-server-management-studio-ssms"></a>Подготовка ключей с поддержкой анклава с помощью SQL Server Management Studio (SSMS)
 

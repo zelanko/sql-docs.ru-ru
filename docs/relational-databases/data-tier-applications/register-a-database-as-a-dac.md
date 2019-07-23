@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cfcb3a58ee61e7cd4404ec32799fbc265acdc8f6
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 726955115dc956f2ad16e39775610deb16c445a1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591358"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68134680"
 ---
 # <a name="register-a-database-as-a-dac"></a>Регистрация базы данных в качестве приложения уровня данных
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -109,7 +108,7 @@ ms.locfileid: "53591358"
  [Использование мастера регистрации приложений уровня данных](#UsingRegisterDACWizard)  
   
 ### <a name="validating-objects"></a>Проверка объектов  
- **Проверка**  _SchemaName_ **.** _ObjectName_ **.** — отображает индикатор выполнения по мере того, как мастер проверяет зависимости полученных объектов и допустимость этих объектов для DAC. _SchemaName_**.**_ObjectName_ указывает, для какого объекта в данный момент выполняется проверка.  
+ **Проверка**  _SchemaName_ **.** _ObjectName_ **.** — отображает индикатор выполнения по мере того, как мастер проверяет зависимости полученных объектов и допустимость этих объектов для DAC. _SchemaName_ **.** _ObjectName_ указывает, для какого объекта в данный момент выполняется проверка.  
   
  **< Назад** — возврат на страницу **Задание свойств** для изменения записей.  
   

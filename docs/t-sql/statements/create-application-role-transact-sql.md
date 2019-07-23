@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 647386da-ee80-41cf-86c9-dd590f9d66b6
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: d78cd012d2a66dff8b3cfb2a4d3fba5745dfbe36
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e28bcfb7a5478dd90053094dbf38d79a41a42021
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63051711"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68141120"
 ---
 # <a name="create-application-role-transact-sql"></a>CREATE APPLICATION ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,10 +49,10 @@ CREATE APPLICATION ROLE application_role_name
  *application_role_name*  
  Указывает имя роли приложения. Это имя не должно быть уже занято для обращения к любому из участников базы данных.  
   
- PASSWORD **='**_password_**'**  
+ PASSWORD **='** _password_ **'**  
  Указывает пароль для включения роли приложения пользователями базы данных. Всегда используйте надежные пароли. *password* должен соответствовать требованиям политики паролей Windows применительно к компьютеру, на котором запущен экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- DEFAULT_SCHEMA **=**_schema\_name_  
+ DEFAULT_SCHEMA **=** _schema\_name_  
  Указывает первую схему, в которой сервер будет производить поиск при распознавании имен объектов для этой роли. Если значение DEFAULT_SCHEMA не заполнено, роль приложения будет использовать в качестве схемы по умолчанию DBO. Аргумент *schema_name* может быть схемой, которой нет в базе данных.  
   
 ## <a name="remarks"></a>Примечания  

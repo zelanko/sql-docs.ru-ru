@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 3a30b17a-3deb-446f-900a-62f88934a90f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 93cf0f8cc14722789777459f3046b773dfa4383e
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 2905877f907e932be058a07ba3a9fbbd892e7ae6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51217782"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115699"
 ---
 # <a name="maintenance-plan-reporting-and-logging-page"></a>План обслуживания (страница «Отчеты и ведение журнала»)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +28,7 @@ ms.locfileid: "51217782"
  Задайте это значение, если требуется, чтобы [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] записал отчет в текстовом файле.  
   
  **Создать новый файл**  
- Создайте новый файл отчета для каждого выполнения плана обслуживания. По умолчанию файлы отчетов записываются на тот компьютер, где установлен экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , содержащий план обслуживания, в папку, указанную во время настройки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в качестве папки журналов по умолчанию. Чтобы указать другую папку, введите полный путь папки в поле **Папка** или нажмите кнопку "Обзор" (**...**) и перейдите в нужную папку.  
+ Создайте новый файл отчета для каждого выполнения плана обслуживания. По умолчанию файлы отчетов записываются на тот компьютер, где установлен экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , содержащий план обслуживания, в папку, указанную во время настройки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в качестве папки журналов по умолчанию. Чтобы указать другую папку, введите полный путь папки в поле **Папка** или нажмите кнопку "Обзор" ( **...** ) и перейдите в нужную папку.  
   
  **Добавить к файлу**  
  Добавлять отчет после каждого выполнения плана к файлу, заданному в текстовом поле **Имя файла** . Также можно задать файл, нажав кнопку обзора и выбрав файл из диалогового окна.  

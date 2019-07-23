@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6334db3e-9297-44df-8d53-211187a95520
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b6e24af8c3117c85e2dbeb90f2482ca55db9eac6
-ms.sourcegitcommit: ec1f01b4bb54621de62ee488decf9511d651d700
+ms.openlocfilehash: 282d712f1ebb870c236917d49beb50423957b2a4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56240828"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136109"
 ---
 # <a name="manage-and-troubleshoot-stretch-database"></a>Управление Stretch Database и устранение связанных с ней неполадок
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -104,7 +103,7 @@ GO
  Чтобы изменить область всех запросов всех пользователей, запустите хранимую процедуру **sys.sp_rda_set_query_mode**. Вы можете ограничить область запросов локальными данными, отключить все запросы или восстановить параметры по умолчанию. Дополнительные сведения см. в статье [sys.sp_rda_set_query_mode](../../relational-databases/system-stored-procedures/sys-sp-rda-set-query-mode-transact-sql.md).  
    
  ### <a name="queryHints"></a>Изменение области запросов для отдельного запроса со стороны администратора  
- Чтобы изменить область отдельного запроса, отправляемого участником роли db_owner, добавьте к инструкции SELECT указание запроса **WITH ( REMOTE_DATA_ARCHIVE_OVERRIDE = *value* )**. Указание запроса REMOTE_DATA_ARCHIVE_OVERRIDE может иметь следующие значения:  
+ Чтобы изменить область отдельного запроса, отправляемого участником роли db_owner, добавьте к инструкции SELECT указание запроса **WITH ( REMOTE_DATA_ARCHIVE_OVERRIDE = *value* )** . Указание запроса REMOTE_DATA_ARCHIVE_OVERRIDE может иметь следующие значения:  
  -   **LOCAL_ONLY**. Запрашиваются только локальные данные.  
    
  -   **REMOTE_ONLY**. Запрашиваются только удаленные данные.  
@@ -121,7 +120,7 @@ GO
 ```  
    
  ## <a name="adminHints"></a>Выполнение административных обновлений и удалений  
- По умолчанию обновлять или удалять из таблицы с поддержкой Stretch строки, подходящие для переноса, или уже перенесенные строки нельзя. После устранения проблемы участник роли db_owner может выполнить операцию обновления или удаления, добавив к инструкции указание запроса **WITH ( REMOTE_DATA_ARCHIVE_OVERRIDE = *value* )**. Указание запроса REMOTE_DATA_ARCHIVE_OVERRIDE может иметь следующие значения:  
+ По умолчанию обновлять или удалять из таблицы с поддержкой Stretch строки, подходящие для переноса, или уже перенесенные строки нельзя. После устранения проблемы участник роли db_owner может выполнить операцию обновления или удаления, добавив к инструкции указание запроса **WITH ( REMOTE_DATA_ARCHIVE_OVERRIDE = *value* )** . Указание запроса REMOTE_DATA_ARCHIVE_OVERRIDE может иметь следующие значения:  
  -   **LOCAL_ONLY**. Обновляются или удаляются только локальные данные.  
    
  -   **REMOTE_ONLY**. Обновляются или удаляются только удаленные данные.  

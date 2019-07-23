@@ -12,14 +12,13 @@ ms.assetid: f8a98486-5438-44a8-b454-9e6ecbc74f83
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5798c0048d10e074f0aa64c3d50ce14027865e4a
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: cd0efece05be169ce220d6e16a4bebf10b5ca36d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657919"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082935"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>Создание и управление полнотекстовыми индексами
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -166,7 +165,7 @@ GO
  В этом примере возвращается столбец результирующего набора с именем `Unique Key Column`, в котором отображается одна строка с именем уникального ключевого столбца таблицы Document, DocumentID. Обратите внимание, что если этот запрос содержал недопустимое имя индекса, имя индекса не соответствует таблице, таблица не существует и пр., то будет возвращено значение NULL.  
 
 ## <a name="index-varbinarymax-and-xml-columns"></a>Индексирование столбцов varbinary(max) и xml  
- Если для столбца типа **varbinary(max)**, **varbinary**или **xml** создан полнотекстовый индекс, то обращаться к нему с запросами можно при использовании полнотекстовых предикатов (CONTAINS и FREETEXT) и функций (CONTAINSTABLE и FREETEXTTABLE), как и к любым другим столбцам с полнотекстовым индексом.
+ Если для столбца типа **varbinary(max)** , **varbinary**или **xml** создан полнотекстовый индекс, то обращаться к нему с запросами можно при использовании полнотекстовых предикатов (CONTAINS и FREETEXT) и функций (CONTAINSTABLE и FREETEXTTABLE), как и к любым другим столбцам с полнотекстовым индексом.
    
 ### <a name="index-varbinarymax-or-varbinary-data"></a>Индексирование данных типа varbinary(max) и varbinary  
  В одном столбце типа **varbinary(max)** или **varbinary** могут храниться документы различных типов. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает любые типы документов, для которых в операционной системе доступен установленный фильтр. Тип каждого документа определяется по расширению имени файла этого документа. Например, при работе с DOC-файлом при полнотекстовом поиске будет использоваться фильтр, который поддерживает документы Microsoft Word. Чтобы получить список доступных типов документов, выполните запрос к представлению каталога [sys.fulltext_document_types](../../relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql.md) .  

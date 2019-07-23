@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: fe0b7cbc-fe8e-4fe2-95b4-2953efff5869
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 18150e08b06e1b8f919df98e8e10b4eb43cc4b64
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a247a49aa35d4291e7f7d0f3dec978227df06ad1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727472"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68011342"
 ---
 # <a name="send-mail-task"></a>Задача «Отправка почты»
 
@@ -106,7 +105,7 @@ ms.locfileid: "65727472"
   
 ### <a name="options"></a>Параметры  
  **SMTPConnection**  
- Выберите диспетчер подключений SMTP из списка или щелкните **\<Создать соединение…>**, чтобы создать его.  
+ Выберите диспетчер подключений SMTP из списка или щелкните **\<Создать соединение…>** , чтобы создать его.  
   
 > [!IMPORTANT]  
 >  Диспетчер SMTP-соединений поддерживает только анонимную проверку подлинности и проверку подлинности Windows. Обычная проверка подлинности не поддерживается.  
@@ -154,13 +153,13 @@ ms.locfileid: "65727472"
   
 #### <a name="messagesourcetype--file-connection"></a>MessageSourceType = Соединение с файлом  
  **MessageSource**  
- Выберите диспетчер подключений файлов в списке или щелкните \<**Создать соединение...**>, чтобы создать его.  
+ Выберите диспетчер подключений файлов в списке или щелкните \<**Создать соединение...** >, чтобы создать его.  
   
  **См. также:** подробные сведения о [диспетчере файловых подключений](../../integration-services/connection-manager/file-connection-manager.md) и о [редакторе диспетчера файловых подключений](../../integration-services/connection-manager/file-connection-manager-editor.md).  
   
 #### <a name="messagesourcetype--variable"></a>MessageSourceType = Переменная  
  **MessageSource**  
- Выберите переменную в списке или щелкните \<**Создать переменную...**>, чтобы создать ее.  
+ Выберите переменную в списке или щелкните \<**Создать переменную...** >, чтобы создать ее.  
   
  **См. также:** подробные сведения о [переменных в службах Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) и о [добавлении переменной](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   

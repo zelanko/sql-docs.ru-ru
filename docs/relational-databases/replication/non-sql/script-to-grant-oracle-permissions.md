@@ -12,17 +12,16 @@ helpviewer_keywords:
 ms.assetid: d742fd30-347a-452f-b5fc-b03232360c6b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f24cf20be07ac4b632f4daa6f7f7e35278452f19
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8158aed0298afe295e82a1b240a3f24ec05b1647
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840952"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68100027"
 ---
 # <a name="script-to-grant-oracle-permissions"></a>Скрипт для предоставления разрешений Oracle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Скрипт, предложенный в этом разделе, используется во время конфигурации базы данных Oracle, которая будет публиковать данные с помощью репликации [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Этот скрипт доступен также в следующем каталоге после установки *: \<диск>*:\\\Program Files\Microsoft SQL Server\\*\<имя_экземпляра>* \MSSQL\Install\oracleadmin.sql. Дополнительные сведения о настройке базы данных Oracle см. в разделе [Настройка издателя Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md).  
+  Скрипт, предложенный в этом разделе, используется во время конфигурации базы данных Oracle, которая будет публиковать данные с помощью репликации [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Этот скрипт доступен также в следующем каталоге после установки *: \<диск>* :\\\Program Files\Microsoft SQL Server\\ *\<имя_экземпляра>* \MSSQL\Install\oracleadmin.sql. Дополнительные сведения о настройке базы данных Oracle см. в разделе [Настройка издателя Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md).  
   
 > [!NOTE]  
 >  Скрипт включает инструкцию `GRANT CREATE ANY TRIGGER TO &&AdminLogin;`, требующуюся для триггеров, которые используются репликацией транзакций. Если необходима только репликация моментальных снимков, удалите из скрипта эту строку.  

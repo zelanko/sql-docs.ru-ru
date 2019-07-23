@@ -10,13 +10,12 @@ ms.topic: language-reference
 ms.assetid: ed9d7fa3-61a1-4e21-ba43-1ead7dfc74eb
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bbe729ebef5d156f6c946e0c5cda62c1cefdcd81
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d966b147c8475b357a3239ca36654e087f9ccbeb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65717202"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068704"
 ---
 # <a name="catalogadddatatapbyguid"></a>catalog.add_data_tap_by_guid 
 
@@ -50,10 +49,10 @@ catalog add_data_tap_by_guid [ @execution_id = ] execution_id
   
  Чтобы найти строку идентификации, в [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] щелкните правой кнопкой мыши путь между двумя компонентами потока данных, а затем выберите пункт **Свойства**. Свойство **IdentificationString** отображается в окне **Свойства**.  
   
- Параметр *dataflow_path_id_string* имеет тип **nvarchar(4000)**.  
+ Параметр *dataflow_path_id_string* имеет тип **nvarchar(4000)** .  
   
  [ @data_filename = ] *data_filename*  
- Имя файла, в котором хранятся полученные данные. Если задача потока данных выполняется внутри контейнера «цикл по каждому элементу» или «цикл по элементам», то полученные данные для каждого прохода цикла хранятся в отдельных файлах. Каждому файлу добавляется префикс с номером, соответствующим итерации. Файлы отвода данных записываются в папку "*\<папка установки SQL Server>* \130\DTS\\". Параметр *data_filename* имеет тип **nvarchar(4000)**.  
+ Имя файла, в котором хранятся полученные данные. Если задача потока данных выполняется внутри контейнера «цикл по каждому элементу» или «цикл по элементам», то полученные данные для каждого прохода цикла хранятся в отдельных файлах. Каждому файлу добавляется префикс с номером, соответствующим итерации. Файлы отвода данных записываются в папку " *\<папка установки SQL Server>* \130\DTS\\". Параметр *data_filename* имеет тип **nvarchar(4000)** .  
   
  [ @max_rows = ] max_rows  
  Количество строк, полученных при отводе данных. Если это значение не задано, фиксируются все строки. Параметр max_rows имеет тип **int**.  
