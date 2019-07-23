@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 4ffd62c1-da72-4daf-832b-cc1268abf351
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: b0cb39dff8306c2fcba5bcb67f1ada2a279b35b3
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: bdda9fd3bea6454e899031c8adf706a6c1dea94f
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67686389"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263628"
 ---
 # <a name="choose-target-table-for-insert-results-dialog-box-visual-database-tools"></a>Диалоговое окно «Выбор целевой таблицы для результатов вставки» (визуальные инструменты для баз данных)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

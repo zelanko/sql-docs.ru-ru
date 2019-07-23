@@ -16,13 +16,12 @@ f1_keywords:
 ms.assetid: f35520e6-8e6e-47b1-87a3-22c0cf2cabdb
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a9da86a5e15f1b683a0e7c040cd4e6d906d54f47
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0897d9498ca93e915dba5df9c32c4544fe08767d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65090097"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097479"
 ---
 # <a name="how-to-use-rename-and-refactoring-to-make-changes-to-your-database-objects"></a>Руководство. использовать переименование и рефакторинг для внесения изменений в объекты базы данных
 В контекстном меню "Рефакторинг" в редакторе Transact\-SQL можно переименовать объект или переместить его в другую схему, а также просмотреть все затрагиваемые области, прежде чем фиксировать изменение. Кроме того, с помощью меню "Рефакторинг" можно полностью указывать все ссылки на объекты базы данных либо развертывать подстановочные знаки в инструкциях `SELECT` проекта базы данных.  

@@ -1,5 +1,5 @@
 ---
-title: Члены SQLServerPreparedStatement | Документация Майкрософт
+title: Элементы SQLServerPreparedStatement | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 2363902f-d4c6-4cd4-a5fc-86079eb9e418
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 89b4d7bedb2572c0396c3de80f000fdccdd1a2cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d99bf6118af71981ad2f45b5c7b722b458cc158c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66803005"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67970752"
 ---
 # <a name="sqlserverpreparedstatement-members"></a>Члены SQLServerPreparedStatement
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -81,7 +80,7 @@ ms.locfileid: "66803005"
 |[setClob](../../../connect/jdbc/reference/setclob-method-sqlserverpreparedstatement.md)|Задает назначенному параметру значение указанного CLOB-объекта.|  
 |[setCursorName](../../../connect/jdbc/reference/setcursorname-method-sqlserverstatement.md)|(Наследуется от [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Для имени курсора SQL задается значение типа String, которое будет использоваться последующими методами выполнения.|  
 |[SetDate](../../../connect/jdbc/reference/setdate-method-sqlserverpreparedstatement.md)|Устанавливает для указанного параметра указанное значение даты.|  
-|[setDateTimeOffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlserverpreparedstatement.md)|Задает значение указанного столбца [класс DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) значение.|  
+|[setDateTimeOffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlserverpreparedstatement.md)|Задает значение столбца, указанного в качестве значения [класса DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) .|  
 |[setDouble](../../../connect/jdbc/reference/setdouble-method-sqlserverpreparedstatement.md)|Задает назначенному параметру указанное значение **double**.|  
 |[setEscapeProcessing](../../../connect/jdbc/reference/setescapeprocessing-method-sqlserverstatement.md)|(Наследуется от [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Задается режим обработки escape-последовательностей.|  
 |[setFetchDirection](../../../connect/jdbc/reference/setfetchdirection-method-sqlserverstatement.md)|(Наследуется от [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Определяет указание для драйвера JDBC относительно направления, в котором будут обрабатываться строки результирующего набора.|  
@@ -96,7 +95,7 @@ ms.locfileid: "66803005"
 |[setNull](../../../connect/jdbc/reference/setnull-method-sqlserverpreparedstatement.md)|Устанавливает значение NULL для параметра, определяемого по заданному типу.|  
 |[setNString](../../../connect/jdbc/reference/setnstring-method-int-java-lang-string.md)|Задает назначенному параметру значение указанного объекта **String**.|  
 |[setObject](../../../connect/jdbc/reference/setobject-method-sqlserverpreparedstatement.md)|Устанавливает значение указанного параметра с помощью заданного объекта.|  
-|[setPoolable](../../../connect/jdbc/reference/setpoolable-method-sqlserverstatement.md)|(Наследуется от [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Запрашивает поддержку пулов или запрет пулов в инструкции. По умолчанию объект SQLServerPreparedStatement поддерживают.|  
+|[setPoolable](../../../connect/jdbc/reference/setpoolable-method-sqlserverstatement.md)|(Наследуется от [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Запрашивает поддержку пулов или запрет пулов в инструкции. По умолчанию объект SQLServerPreparedStatement поддается пулу при создании.|  
 |[setQueryTimeout](../../../connect/jdbc/reference/setquerytimeout-method-sqlserverstatement.md)|(Наследуется от [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Задает количество секунд, в течение которых драйвер будет ожидать выполнения объекта инструкции.|  
 |[setRef](../../../connect/jdbc/reference/setref-method-sqlserverpreparedstatement.md)|Задает назначенному параметру значение указанного объекта Ref.|  
 |[setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md)|(Наследуется от [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Задает режиму буферизации ответов для этого объекта [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) значение **String full** или **adaptive** без учета регистра.|  

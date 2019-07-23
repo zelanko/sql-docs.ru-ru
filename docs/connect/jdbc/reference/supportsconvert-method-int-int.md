@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 54741cfd-32ac-46c5-8b09-fd60fd8833d7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: dd517154b1390ae7c4ba7e4c13ce030df926958c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: ae22b0f4149536977dd3ee7c9cc21758e7dcc980
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66766329"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969602"
 ---
 # <a name="supportsconvert-method-int-int"></a>Метод supportsConvert (int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,7 +36,7 @@ public boolean supportsConvert(int fromType,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *fromType*  
+ *фромтипе*  
   
  Тип JDBC, из которого выполняется преобразование.  
   
@@ -46,13 +45,13 @@ public boolean supportsConvert(int fromType,
  Тип JDBC, в который выполняется преобразование.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- **значение true,** Если поддерживается. В противном случае — **false**.  
+ **значение true** , если поддерживается. В противном случае — **false**.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод supportsConvert указывается с помощью метода supportsConvert в интерфейсе java.sql.DatabaseMetaData.  
+ Этот метод supportsConvert задается методом supportsConvert в интерфейсе Java. SQL. DatabaseMetaData.  
   
 ## <a name="see-also"></a>См. также:  
  [Методы supportsConvert &#40;SQLServerDatabaseMetaData&#41;](../../../connect/jdbc/reference/supportsconvert-method-sqlserverdatabasemetadata.md)   

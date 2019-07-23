@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 480f21b6-50cc-4b1e-a0b0-8774ecfe94f1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 340c37a2e5e162af3ab2ae80813b14c6bab7a0f9
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 54a69c6a7ae62d96b6d2df08c671a5f8d92ced3f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66772891"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955221"
 ---
 # <a name="createstatement-method-"></a>Метод createStatement ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public java.sql.Statement createStatement()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод createStatement указывается с помощью метода createStatement в интерфейсе java.sql.Connection.  
+ Этот метод createStatement задается методом createStatement в интерфейсе Java. SQL. Connection.  
   
 ## <a name="see-also"></a>См. также:  
  [Метод createStatement (SQLServerConnection)](../../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md)   

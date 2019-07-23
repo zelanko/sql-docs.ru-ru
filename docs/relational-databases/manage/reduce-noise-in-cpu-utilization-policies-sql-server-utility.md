@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 94bf4d93-c0ff-4869-bde7-80c24866092e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 82e9cfe7afa18692376f113d31c07771a36e045d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a9fc6db57277044267a89cc89e6c196c782ea920
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674323"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115354"
 ---
 # <a name="reduce-noise-in-cpu-utilization-policies-sql-server-utility"></a>Уменьшение уровня шума в политиках загрузки ЦП (служебная программа SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ ms.locfileid: "51674323"
   
 -   Интервал сбора данных составляет 15 минут. Это значение изменить нельзя.  
   
--   Нижний порог политики загрузки процессора по умолчанию составляет 0 %. Диапазон значений параметра — от 0 до 100 %.  
+-   Нижний порог политики загрузки процессора по умолчанию составляет 0 %. Диапазон значений параметра — от 0 до 100 %.  
   
 -   Период оценки недостаточной загрузки процессора по умолчанию — 1 час. Диапазон значений параметра — от 1 дня до 1 месяца.  
   
