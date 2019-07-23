@@ -1,5 +1,5 @@
 ---
-title: Преобразования, выполняемые от клиента к серверу | Документация Майкрософт
+title: Преобразования, выполненные от клиента к серверу | Документация Майкрософт
 description: Преобразования, выполняемые при передаче от клиента к серверу
 ms.custom: ''
 ms.date: 06/14/2018
@@ -12,13 +12,12 @@ helpviewer_keywords:
 - conversions [OLE DB], client to server
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 49d474e1fcaca6c90cdec5bdfcb0a8194ce7d23f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a5a4dd3540f4171847014e6175b84bd861b7abb6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66769312"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67995136"
 ---
 # <a name="conversions-performed-from-client-to-server"></a>Преобразования, выполняемые при передаче от клиента к серверу
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "66769312"
 ## <a name="conversions"></a>Преобразования  
  В этом разделе описываются преобразования, выполняемые на клиенте. Если клиент задает точность в долях секунд для параметра, отличающуюся от определенной на сервере, клиентское преобразование может вызвать сбой, в то время как сервер завершит операцию успешно. А именно, клиент рассматривает любое усечение долей секунды как ошибку, в то время как [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] округляет значения времени до ближайшей целой секунды.  
   
- Если ICommandWithParameters::SetParameterInfo не вызывается, привязки DBTYPE_DBTIMESTAMP преобразовываются, как если бы они были **datetime2**.  
+ Если ICommandWithParameters:: SetParameterInfo не вызывается, привязки DBTYPE_DBTIMESTAMP преобразуются, как если бы они были **datetime2**.  
   
 |Полученное значение -><br /><br /> От|DBDATE (date)|DBTIME (time)|DBTIME2 (time)|DBTIMESTAMP (smalldatetime)|DBTIMESTAMP (datetime)|DBTIMESTAMP (datetime2)|DBTIMESTAMPOFFSET (datetimeoffset)|STR|WSTR|SQLVARIANT<br /><br /> (sql_variant)|  
 |----------------------|---------------------|---------------------|----------------------|-----------------------------------|------------------------------|-------------------------------|------------------------------------------|---------|----------|-------------------------------------|  
@@ -52,7 +51,7 @@ ms.locfileid: "66769312"
   
 |Символ|Значение|  
 |------------|-------------|  
-|-|Преобразование не поддерживается. Если привязка выполняется проверка, когда вызывается IAccessor::CreateAccessor, возвращается значение DBBINDSTATUS_UPSUPPORTEDCONVERSION в *rgStatus*. Если проверка метода доступа является отложенной, то устанавливается значение DBSTATUS_E_BADACCESSOR.|  
+|-|Преобразование не поддерживается. Если привязка проверяется при вызове IAccessor:: CreateAccessor, DBBINDSTATUS_UPSUPPORTEDCONVERSION возвращается в *ргстатус*. Если проверка метода доступа является отложенной, то устанавливается значение DBSTATUS_E_BADACCESSOR.|  
 |Недоступно|Неприменимо.|  
 |1|Если поддерживаемые данные недопустимы, возвращается значение DBSTATUS_E_CANTCONVERTVALUE. Входные данные проверяются до выполнения преобразований, поэтому, даже если компонент не будет обрабатываться последующим преобразованием, он должен иметь допустимое значение, чтобы это преобразование завершилось успешно.|  
 |2|Поля времени не учитываются.|  

@@ -15,24 +15,23 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, transactions
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 0a7e06fe0888767d653f40148efb324f89456460
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 2c9f3a7cd06f801555ab373e7e54fbf1b620d894
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66766216"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993970"
 ---
 # <a name="isolation-levels-ole-db"></a>Уровни изоляции (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Клиенты [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] могут управлять уровнями изоляции транзакций для соединения. Чтобы контролировать уровень изоляции транзакций, использует драйвер OLE DB для потребителя SQL Server:  
+  Клиенты [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] могут управлять уровнями изоляции транзакций для соединения. Чтобы управлять уровнем изоляции транзакций, Драйвер OLE DB для SQL Server потребителя использует:  
   
 -   Свойство DBPROP_SESS_AUTOCOMMITISOLEVELS объекта DBPROPSET_SESSION для используемого по умолчанию режима автоматической фиксации драйвера OLE DB для SQL Server.  
   
-     Драйвер OLE DB для SQL Server по умолчанию для уровня — DBPROPVAL_TI_READCOMMITTED.  
+     Драйвер OLE DB для SQL Server по умолчанию для уровня равен DBPROPVAL_TI_READCOMMITTED.  
   
 -   Параметр *isoLevel* метода **ITransactionLocal::StartTransaction** для локальных транзакций с ручной фиксацией.  
   

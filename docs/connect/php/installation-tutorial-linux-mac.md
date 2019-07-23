@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: ulvii
 ms.author: v-ulibra
 manager: v-mabarw
-ms.openlocfilehash: 90d2b5850010d49e881ea0169566fe8e7d046f0d
-ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
+ms.openlocfilehash: 7a2312a4ff6af5a11825274e3e010873ef2d3bd9
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67343910"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68256707"
 ---
 # <a name="linux-and-macos-installation-tutorial-for-the-microsoft-drivers-for-php-for-sql-server"></a>Руководство по установке драйверов Майкрософт для PHP для SQL Server в Linux и MacOS
 Следующие инструкции описывают, как установить PHP 7.x, драйвер Microsoft ODBC, Apache и драйверы Майкрософт для PHP для SQL Server в чистом окружении Ubuntu 16.04, 18.04 и 18.10, RedHat 7, Debian 8 и 9, Suse 12 и 15 или macOS 10.12, 10.13 и 10.14. В этих инструкциях рекомендуется установка драйверов с помощью PECL, но вы можете скачать предварительно созданные двоичные файлы со страницы проекта [драйверов Майкрософт для PHP для SQL Server](https://github.com/Microsoft/msphpsql/releases) на сайте GitHub и установить их по инструкциям из статьи [Loading the Microsoft Drivers for PHP for SQL Server](../../connect/php/loading-the-php-sql-driver.md) (Загрузка драйверов Майкрософт для PHP для SQL Server). Описание процесса загрузки расширений и причины, по которым расширения не добавляются в файл php.ini, см. в статье [о загрузке драйверов](../../connect/php/loading-the-php-sql-driver.md##loading-the-driver-at-php-startup).
@@ -55,7 +55,7 @@ exit
 sudo phpenmod -v 7.3 sqlsrv pdo_sqlsrv
 ```
 
-Если имеется только одна версия PHP в системе, то последний этап может быть упрощен до `phpenmod sqlsrv pdo_sqlsrv`.
+Если в системе имеется только одна версия PHP, последний шаг можно упростить до `phpenmod sqlsrv pdo_sqlsrv`.
 
 ### <a name="step-4-install-apache-and-configure-driver-loading"></a>Шаг 4. Установка Apache и настройка загрузки драйвера
 ```
@@ -156,7 +156,7 @@ exit
 sudo phpenmod -v 7.3 sqlsrv pdo_sqlsrv
 ```
 
-Если имеется только одна версия PHP в системе, то последний этап может быть упрощен до `phpenmod sqlsrv pdo_sqlsrv`.
+Если в системе имеется только одна версия PHP, последний шаг можно упростить до `phpenmod sqlsrv pdo_sqlsrv`.
 
 ### <a name="step-4-install-apache-and-configure-driver-loading"></a>Шаг 4. Установка Apache и настройка загрузки драйвера
 ```

@@ -21,13 +21,12 @@ helpviewer_keywords:
 - OLE DB, data types
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: de02099f7d54682b96713d861843b2cf5bd87ffb
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 529c3189676ce704d10a90902bd44f7f2c8e8f6c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66769658"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67995208"
 ---
 # <a name="data-type-mapping-in-rowsets-and-parameters"></a>Сопоставление типов данных в наборах строк и параметрах
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -68,7 +67,7 @@ ms.locfileid: "66769658"
 |**varchar**|DBTYPE_STR|  
 |**XML**|DBTYPE_XML|  
   
- Драйвер OLE DB для SQL Server поддерживает данные, запрашиваемые потребителем преобразования, как показано на рисунке.  
+ Драйвер OLE DB для SQL Server поддерживает преобразования данных, запрошенные потребителем, как показано на рисунке.  
   
  Объекты **sql_variant** могут хранить данные [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] любого типа, кроме text, ntext, image, varchar(max), nvarchar(max), varbinary(max), xml, timestamp и пользовательских типов данных CLR платформы Microsoft .NET Framework. Экземпляр данных sql_variant не может также иметь sql_variant в качестве базового типа данных. Например, столбец может содержать значения **smallint** в некоторых строках, значения **float** в других строках и значения **char**/**nchar** в остальных.  
   
@@ -94,9 +93,9 @@ ms.locfileid: "66769658"
   
 |||  
 |-|-|  
-|Свойство SSPROP_ALLOWNATIVEVARIANT|Тип: VT_BOOL<br /><br /> И запись: чтение и запись<br /><br /> По умолчанию: VARIANT_FALSE<br /><br /> Описание: определяет, имеют ли данные, полученные в результате выборки, тип DBTYPE_VARIANT или DBTYPE_SQLVARIANT.<br /><br /> VARIANT_TRUE: возвращается тип столбца DBTYPE_SQLVARIANT. В этом случае в буфере сохраняется структура SSVARIANT.<br /><br /> VARIANT_FALSE: возвращается столбец типа DBTYPE_VARIANT, и в буфере сохраняется структура VARIANT.|  
+|Свойство SSPROP_ALLOWNATIVEVARIANT|Тип: VT_BOOL<br /><br /> Чтение и запись в R/W<br /><br /> По умолчанию: VARIANT_FALSE<br /><br /> Описание: определяет, имеют ли данные, полученные в результате выборки, тип DBTYPE_VARIANT или DBTYPE_SQLVARIANT.<br /><br /> VARIANT_TRUE: возвращается тип столбца DBTYPE_SQLVARIANT. В этом случае в буфере сохраняется структура SSVARIANT.<br /><br /> VARIANT_FALSE: возвращается столбец типа DBTYPE_VARIANT, и в буфере сохраняется структура VARIANT.|  
   
 ## <a name="see-also"></a>См. также:  
- [Типы данных &#40;OLE DB&#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
+ [Типы &#40;данных OLE DB&#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
   
   

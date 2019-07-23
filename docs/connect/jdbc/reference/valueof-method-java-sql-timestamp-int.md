@@ -1,5 +1,5 @@
 ---
-title: Метод valueOf (java.sql.Timestamp, int) | Документация Майкрософт
+title: Метод valueOf (Java. SQL. timestamp, int) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 114f55af-62ab-4c60-8724-0affbbbbbcdc
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b3d2eb2934474b51aacddebc72230330c86bfeb0
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: c13438851fdc543a3567abdc001af5b5b9e726fc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797860"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68001570"
 ---
 # <a name="valueof-method-javasqltimestamp-int"></a>Метод valueOf (java.sql.Timestamp, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,12 +34,12 @@ public static DateTimeOffset valueOf(java.sql.Timestamp timestamp, int minutesOf
   
  Значениеjava.sql.Timestamp.  
   
- *minutesOffset*  
+ *минутесоффсет*  
   
  Смещение в минутах.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Возвращает объект DateTimeOffset, представляющий точку во времени, заданную объектом и java.sql.Timestamp с указанным смещением минутах относительно GMT.  
+ Возвращает объект DateTimeOffset, представляющий момент времени, заданный объектом Java. SQL. timestamp в заданном смещении (в минутах) от GMT.  
   
 ## <a name="see-also"></a>См. также:  
  [Класс DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md)   
