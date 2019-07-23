@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 2957af1d-62d6-4375-b214-bbba9aafcc2d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f857e90b718a93297314ee6770a54bf02106dfca
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: e02efacfad43c840550d6638dde4f46a59b399f5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797365"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67968893"
 ---
 # <a name="supportsschemasinprivilegedefinitions-method-sqlserverdatabasemetadata"></a>Метод supportsSchemasInPrivilegeDefinitions (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsSchemasInPrivilegeDefinitions()
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- **значение true,** Если поддерживается. В противном случае — **false**.  
+ **значение true** , если поддерживается. В противном случае — **false**.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод supportsSchemasInPrivilegeDefinitions указывается с помощью метода supportsSchemasInPrivilegeDefinitions в интерфейсе java.sql.DatabaseMetaData.  
+ Этот метод supportsSchemasInPrivilegeDefinitions задается методом supportsSchemasInPrivilegeDefinitions в интерфейсе Java. SQL. DatabaseMetaData.  
   
 ## <a name="see-also"></a>См. также:  
  [Методы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

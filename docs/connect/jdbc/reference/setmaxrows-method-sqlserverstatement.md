@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: cccc0667-589b-4655-8ea8-14ae8b2eb9dc
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 693214651211a74ccefa49429b7aa81dd65e48cf
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 1ff4ab9e1db2415c92d42012d45b04c57ac30b67
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66794248"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67973983"
 ---
 # <a name="setmaxrows-method-sqlserverstatement"></a>Метод setMaxRows (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +43,7 @@ public final void setMaxRows(int max)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод setMaxRows указывается с помощью метода setMaxRows в интерфейсе java.sql.Statement.  
+ Этот метод setMaxRows задается методом setMaxRows в интерфейсе Java. SQL. Statement.  
   
  Этот метод setMaxRows не влияет на динамические прокручиваемые курсоры. В этом приложении следует с помощью синтаксиса SELECT TOP N SQL ограничивать число строк, возвращаемых из потенциально больших результирующих наборов.  
   

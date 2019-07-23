@@ -1,5 +1,5 @@
 ---
-title: Метод getWarnings (SQLServerConnection) | Документация Майкрософт
+title: Метод SQLServerConnection | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 15af39bf-6285-44cc-a021-7341e7a055c4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f816cab36fbed46dbf25c83df3063a024e4abbbb
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: e92087315c468f435cf9eb22b56b587cb1743a3f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66780076"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67978111"
 ---
 # <a name="getwarnings-method-sqlserverconnection"></a>Метод getWarnings (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,15 +35,15 @@ public java.sql.SQLWarning getWarnings()
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Объект SQLWarning.  
+ Объект Склварнинг.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getWarnings указывается с помощью метода getWarnings в интерфейсе java.sql.Connection.  
+ Этот метод "Warnings" задается методом "Warnings" в интерфейсе Java. SQL. Connection.  
   
- Привязан к первой SQLWarning последующие предупреждения, которые вызываются методом getNextWarning. В случае вызова в закрытом соединении создается исключение.  
+ Последующие предупреждения помещаются в цепочку к первому Склварнинг и вызываются с помощью метода Жетнекстварнинг. В случае вызова в закрытом соединении создается исключение.  
   
 ## <a name="see-also"></a>См. также:  
  [Элементы SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

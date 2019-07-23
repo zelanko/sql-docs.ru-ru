@@ -1,5 +1,5 @@
 ---
-title: Даты и времени и наборы строк схемы | Документация Майкрософт
+title: Дата и время и наборы строк схемы | Документация Майкрософт
 description: Наборы строк даты и времени и схемы
 ms.custom: ''
 ms.date: 06/14/2018
@@ -12,13 +12,12 @@ helpviewer_keywords:
 - date/time [OLE DB], schema rowsets
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: e9ac734cbc11492074c322c21a9e7127249223a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 19524bbd935335cc0568dc499f95a794580df476
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66800686"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015689"
 ---
 # <a name="metadata---date-and-time-and-schema-rowsets"></a>Метаданные — наборы строк даты и времени и схемы
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -96,6 +95,6 @@ ms.locfileid: "66800686"
  В OLE DB для числовых и десятичных типов определяются только значения MINIMUM_SCALE и MAXIMUM_SCALE, поэтому использование этих столбцов драйвером OLE DB для SQL Server для типов time, datetime2 и datetimeoffset является нестандартным.  
   
 ## <a name="see-also"></a>См. также:  
- [Метаданные &#40;OLE DB&#41;](../../oledb/ole-db-date-time/metadata-parameter-and-rowset.md)  
+ [OLE DB &#40;метаданных&#41;](../../oledb/ole-db-date-time/metadata-parameter-and-rowset.md)  
   
   

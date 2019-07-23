@@ -1,5 +1,5 @@
 ---
-title: Метод setNClob (int, java.sql.NClob) | Документация Майкрософт
+title: Метод setNClob (int, Java. SQL. NClob) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 48c8aa2a-4185-4837-b592-830e60f8ca0b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3120c101a8c57225bc709da3066080987943d3c1
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: cfb93f1ee08a7b5791679d189a73f75c5506fda7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66800418"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67973758"
 ---
 # <a name="setnclob-method-int-javasqlnclob"></a>Метод setNClob (int, java.sql.NClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

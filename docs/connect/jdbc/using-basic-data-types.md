@@ -10,19 +10,18 @@ ms.topic: conceptual
 ms.assetid: d7044936-5b8c-4def-858c-28a11ef70a97
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 58948717ce5d9d3600bef865f75231faa1e5dea1
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 83bbe2c28e9b353e5a82fa630660756174ad0dab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66790092"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916363"
 ---
 # <a name="using-basic-data-types"></a>Использование базовых типов данных
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Драйвер [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] использует базовые типы данных JDBC для преобразования типов данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в формат языка программирования Java и обратно. Драйвер JDBC обеспечивает поддержку API JDBC 4.0, который включает в себя **SQLXML** тип данных и национальные (Юникод) типы данных, такие как **NCHAR**, **NVARCHAR**, **LONGNVARCHAR**, и **NCLOB**.  
+Драйвер [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] использует базовые типы данных JDBC для преобразования типов данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в формат языка программирования Java и обратно. Драйвер JDBC обеспечивает поддержку API JDBC 4,0, который включает тип данных **SQLXML** и типы данных National (Юникод), такие как **nchar**, **nvarchar**, **лонгнварчар**и **NCLOB**.  
   
 ## <a name="data-type-mappings"></a>Сопоставление типов данных
 
@@ -41,7 +40,7 @@ ms.locfileid: "66790092"
 | Decimal            | DECIMAL                                            | java.math.BigDecimal         |
 | FLOAT              | DOUBLE                                             | double                       |
 | image              | LONGVARBINARY                                      | byte[]                       |
-| ssNoversion                | INTEGER                                            | ssNoversion                          |
+| INT                | INTEGER                                            | INT                          |
 | money              | DECIMAL                                            | java.math.BigDecimal         |
 | NCHAR              | CHAR<br /><br /> NCHAR (Java SE 6.0)               | String                       |
 | ntext              | LONGVARCHAR<br /><br /> LONGNVARCHAR (Java SE 6.0) | String                       |
@@ -69,7 +68,7 @@ ms.locfileid: "66790092"
   
 (1) Чтобы использовать java.sql.Time с типом времени [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], нужно задать для свойства подключения **sendTimeAsDatetime** значение "false" (ложь).  
   
-(2) доступны программным образом значения **datetimeoffset** с [класс DateTimeOffset](../../connect/jdbc/reference/datetimeoffset-class.md).  
+(2) можно программно получить доступ к значениям **DateTimeOffset** с помощью [класса DateTimeOffset](../../connect/jdbc/reference/datetimeoffset-class.md).  
   
 В следующих разделах приводятся примеры использования драйвера JDBC и базовых типов данных. Более подробный пример использования базовых типов данных в приложении Java см. в разделе [Образец базовых типов данных](../../connect/jdbc/basic-data-types-sample.md).  
   
@@ -86,11 +85,11 @@ ms.locfileid: "66790092"
 [!code[JDBC#UsingBasicDataTypes2](../../connect/jdbc/codesnippet/Java/using-basic-data-types_2.java)]  
   
 > [!NOTE]  
-> GetUnicodeStream и getBigDecimal с методами масштабирования являются устаревшими и драйвером JDBC не поддерживаются.
+> GetUnicodeStream и getBigDecimal с методами Scale являются устаревшими и не поддерживаются драйвером JDBC.
 
 ## <a name="updating-data-by-data-type"></a>Обновление данных по типу данных
 
-Если вам нужно обновить значение поля в источнике данных, используйте один из обновления\<тип > методы класса SQLServerResultSet. В следующем примере для обновления данных в источнике используется метод [updateInt](../../connect/jdbc/reference/updateint-method-sqlserverresultset.md) совместно с методом [updateRow](../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md):  
+Если необходимо обновить значение поля в источнике данных, используйте один из типов обновления\<> методов класса SQLServerResultSet. В следующем примере для обновления данных в источнике используется метод [updateInt](../../connect/jdbc/reference/updateint-method-sqlserverresultset.md) совместно с методом [updateRow](../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md):  
   
 [!code[JDBC#UsingBasicDataTypes3](../../connect/jdbc/codesnippet/Java/using-basic-data-types_3.java)]  
   
@@ -103,7 +102,7 @@ ms.locfileid: "66790092"
   
 [!code[JDBC#UsingBasicDataTypes4](../../connect/jdbc/codesnippet/Java/using-basic-data-types_4.java)]  
   
-Дополнительные сведения о параметризованных запросах см. в разделе [с помощью инструкции SQL с параметрами](../../connect/jdbc/using-an-sql-statement-with-parameters.md).  
+Дополнительные сведения о параметризованных запросах см. в разделе [Использование инструкции SQL с параметрами](../../connect/jdbc/using-an-sql-statement-with-parameters.md).  
 
 ## <a name="passing-parameters-to-a-stored-procedure"></a>Передача параметров хранимой процедуре
 
@@ -114,7 +113,7 @@ ms.locfileid: "66790092"
 > [!NOTE]  
 > В данном примере возвращается результирующий набор с результатами запуска хранимой процедуры.
 
-Дополнительные сведения об использовании драйвера JDBC с хранимыми процедурами и входными параметрами см. в разделе [с помощью хранимой процедуры с входными параметрами](../../connect/jdbc/using-a-stored-procedure-with-input-parameters.md).  
+Дополнительные сведения об использовании драйвера JDBC с хранимыми процедурами и входными параметрами см. в разделе [использование хранимой процедуры с входными параметрами](../../connect/jdbc/using-a-stored-procedure-with-input-parameters.md).  
 
 ## <a name="retrieving-parameters-from-a-stored-procedure"></a>Извлечение параметров из хранимой процедуры
 
@@ -125,7 +124,7 @@ ms.locfileid: "66790092"
 > [!NOTE]  
 > В дополнение к возвращаемому параметру OUT также можно вернуть результирующий набор с результатами запуска хранимой процедуры.  
   
-Дополнительные сведения об использовании драйвера JDBC с хранимыми процедурами и выходными параметрами см. в разделе [с помощью хранимой процедуры с выходными параметрами](../../connect/jdbc/using-a-stored-procedure-with-output-parameters.md).  
+Дополнительные сведения об использовании драйвера JDBC с хранимыми процедурами и выходными параметрами см. в разделе [использование хранимой процедуры с параметрами OUTPUT](../../connect/jdbc/using-a-stored-procedure-with-output-parameters.md).  
 
 ## <a name="see-also"></a>См. также:
 

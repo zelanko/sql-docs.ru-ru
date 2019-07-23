@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 3d83675e-74ca-49d9-8461-6326773c5c8c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c5ef33d72a8d04d5c868d4673b3a2d52af1f346c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: d14c319da416990acd4dddc47843e7709895499b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66783375"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67972148"
 ---
 # <a name="seturl-method-sqlservercallablestatement"></a>Метод setURL (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,13 +36,13 @@ public void setURL(java.lang.String sCol,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *sCol*  
+ *скол*  
   
  Значение типа **String**, содержащее имя параметра.  
   
  *u*  
   
- Объект URL-адрес.  
+ Объект URL-адреса.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

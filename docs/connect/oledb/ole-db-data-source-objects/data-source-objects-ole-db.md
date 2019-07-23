@@ -1,5 +1,5 @@
 ---
-title: Источник данных объектов (OLE DB) | Документация Майкрософт
+title: Объекты источника данных (OLE DB) | Документация Майкрософт
 description: Объекты источников данных (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -18,28 +18,27 @@ helpviewer_keywords:
 - CLSID
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 45a09a47f3ee1b633ccde0276977db56e0ead711
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: e0394c5fd3b72c538904c9b8cf946316e76e6650
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66768602"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015922"
 ---
 # <a name="data-source-objects-ole-db"></a>Объекты источников данных (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Драйвер OLE DB для SQL Server использует термин "источник данных" для обозначения набора интерфейсов OLE DB, дающих возможность устанавливать соединения с хранилищем данных, например с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Создание экземпляра объекта источника данных поставщика — первая задача драйвера OLE DB для SQL Server потребителя.  
+  Драйвер OLE DB для SQL Server использует термин "источник данных" для обозначения набора интерфейсов OLE DB, дающих возможность устанавливать соединения с хранилищем данных, например с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Создание экземпляра объекта источника данных поставщика является первой задачей драйвера OLE DB для SQL Server потребителя.  
   
- Каждый поставщик OLE DB объявляет свой идентификатор класса (CLSID). Идентификатор CLSID для драйвера OLE DB для SQL Server является C /C++ GUID CLSID_MSOLEDBSQL (символ MSOLEDBSQL_CLSID будет разрешен в правильный идентификатор progid в файле msoledbsql.h, который вы ссылаетесь). Используя CLSID, потребитель может вызвать функцию OLE **CoCreateInstance** для создания экземпляра объекта источника данных.  
+ Каждый поставщик OLE DB объявляет свой идентификатор класса (CLSID). CLSID для драйвера OLE DB для SQL Server — это CLSID_MSOLEDBSQL C/C++ GUID (символ MSOLEDBSQL_CLSID будет разрешаться в правильный идентификатор ProgID в файле мсоледбскл. h, на который вы ссылаетесь). Используя CLSID, потребитель может вызвать функцию OLE **CoCreateInstance** для создания экземпляра объекта источника данных.  
   
- Драйвер OLE DB для SQL Server — это внутрипроцессный сервер. Экземпляры объектов драйвера OLE DB для SQL Server создаются с помощью макроса CLSCTX_INPROC_SERVER для указания на исполняемый контекст.  
+ Драйвер OLE DB для SQL Server является внутрипроцессного сервером. Экземпляры объектов драйвера OLE DB для SQL Server создаются с помощью макроса CLSCTX_INPROC_SERVER для указания на исполняемый контекст.  
   
  Объект источника данных драйвера OLE DB для SQL Server предоставляет интерфейсы инициализации OLE DB, которые позволяют потребителю подключаться к существующим базам данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- Все соединения, сделанные через драйвер OLE DB для SQL Server автоматически устанавливают следующие параметры:  
+ Каждое подключение, устанавливаемое с помощью драйвера OLE DB для SQL Server, автоматически задает следующие параметры:  
   
 -   SET ANSI_WARNINGS ON  
   

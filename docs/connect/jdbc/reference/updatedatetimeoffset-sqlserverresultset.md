@@ -1,5 +1,5 @@
 ---
-title: метод updateDateTimeOffset (SQLServerResultSet) | Документация Майкрософт
+title: Метод updatedatetimeoffset (SQLServerResultSet) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,20 +10,19 @@ ms.topic: conceptual
 ms.assetid: 40d7fced-cce1-4534-b794-71bc735e53e0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ade5c312691c1f6586e5d0b14253bc41c27c1490
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: ad3e197fb7e2e26a7652cf6a5aa9e6c3d0366cc1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66804208"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67999065"
 ---
 # <a name="updatedatetimeoffset-sqlserverresultset"></a>updateDateTimeOffset (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
   Этот метод добавлен в версии 3.0 драйвера [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC.  
   
- Обновляет значение указанного столбца [класс DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) значение.  
+ Обновляет значение столбца, указанного в значении [класса DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) .  
   
 ## <a name="overload-list"></a>Список перегрузок  
   

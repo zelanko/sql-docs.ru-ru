@@ -1,5 +1,5 @@
 ---
-title: По умолчанию типы данных SQL Server | Документация Майкрософт
+title: Типы данных SQL Server по умолчанию | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 65c7c211-96d3-4e65-a1de-1fe8d21348e7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 975fdc643bfd094eee2385ae345aed29ee708841
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 69c138e7eb5d2c4f6dbace0db59ce235e1c0a5f9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801467"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993657"
 ---
 # <a name="default-sql-server-data-types"></a>Типы данных SQL Server по умолчанию
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "66801467"
 |-----------------|------------------------------------------------|-----------------------------------------------------|  
 |NULL|varchar(1)|не поддерживается|  
 |Логическое значение|bit|bit|  
-|Целочисленный|ssNoversion|ssNoversion|  
+|Целочисленный|INT|INT|  
 |float|float(24)|не поддерживается|  
 |Строка (длина менее 8000 байт)|varchar(<string length>)|varchar(<string length>)|  
 |Строка (длина более 8000 байт)|varchar(max)|varchar(max)|  

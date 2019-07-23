@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: b0aef8f7-057e-4b57-892c-d120f2daed77
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c612b90db5a699df0b7e23c8591de8b6f79163d7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 11ee34cd5281fb7db564e965556ff5ee455fb7d0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797161"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67998849"
 ---
 # <a name="updateint-method-javalangstring-int"></a>Метод updateInt (java.lang.String, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,7 +42,7 @@ public void updateInt(java.lang.String columnName,
   
  *x*  
   
- **Int** значение.  
+ Целочисленное **значение.**  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -52,7 +51,7 @@ public void updateInt(java.lang.String columnName,
  Этот метод updateInt определен с помощью метода updateInt в интерфейсе java.sql.ResultSet.  
   
 ## <a name="see-also"></a>См. также:  
- [Метод updateInt &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateint-method-sqlserverresultset.md)   
+ [Метод &#40;updateInt SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateint-method-sqlserverresultset.md)   
  [Элементы SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Класс SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

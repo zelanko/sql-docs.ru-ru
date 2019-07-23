@@ -1,5 +1,5 @@
 ---
-title: Инструкции по OLE DB | Документация Майкрософт
+title: OLE DB инструкций | Документация Майкрософт
 description: Инструкции по OLE DB
 ms.custom: ''
 ms.date: 06/14/2018
@@ -12,13 +12,12 @@ helpviewer_keywords:
 - OLE DB, how-to topics
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 829ced1eb0fc37a773f67e4fea9834d9c22205de
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 5e1a6ea1debfb4a432ef63395e3e8b7fd476d891
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66791421"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015626"
 ---
 # <a name="ole-db-how-to-topics"></a>Инструкции по OLE DB
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "66791421"
   
 -   [Инструкции по обработке результатов &#40;OLE DB&#41;](../../oledb/ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
   
--   [Задание данных больших объектов &#40;OLE DB&#41;](../../oledb/ole-db-how-to/set-large-data-ole-db.md)  
+-   [Задание больших объемов данных &#40;OLE DB&#41;](../../oledb/ole-db-how-to/set-large-data-ole-db.md)  
   
 -   [Перечисление источников данных OLE DB &#40;OLE DB&#41;](../../oledb/ole-db-how-to/enumerate-ole-db-data-sources-ole-db.md)  
   
@@ -53,7 +52,7 @@ ms.locfileid: "66791421"
   
 -   [Отправка данных BLOB-объектов в SQL Server с помощью интерфейсов IROWSETFASTLOAD и ISEQUENTIALSTREAM &#40;OLE DB&#41;](../../oledb/ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md)  
   
--   [Использовать определяемые пользователем типы больших значений CLR &#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-large-clr-udts-ole-db.md)  
+-   [Использование больших определяемых &#40;пользователем типов CLR OLE DB&#41;](../../oledb/ole-db-how-to/use-large-clr-udts-ole-db.md)  
   
 -   [Отображение метаданных столбца и каталога для разреженных столбцов &#40;OLE DB&#41;](../../oledb/ole-db-how-to/display-column-and-catalog-metadata-for-sparse-columns-ole-db.md)  
   

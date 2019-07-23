@@ -1,6 +1,6 @@
 ---
-title: IBCPSession::BCPReadFmt (OLE DB) | Документация Майкрософт
-description: С помощью IBCPSession::BCPReadFmt для чтения данных из файла форматирования (OLE DB)
+title: 'IBCPSession:: BCPReadFmt (OLE DB) | Документация Майкрософт'
+description: 'Использование IBCPSession:: BCPReadFmt для чтения данных из файла форматирования (OLE DB)'
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -15,13 +15,12 @@ helpviewer_keywords:
 - BCPReadFmt method
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 46139cddfb91c974f78547794bec55251abce25c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 97274315275f11e77c458827740f44906a524ed9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66790828"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015498"
 ---
 # <a name="ibcpsessionbcpreadfmt-ole-db"></a>Метод IBCPSession::BCPReadFmt (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,13 +38,13 @@ HRESULT BCPReadFmt(
 ```  
   
 ## <a name="remarks"></a>Remarks  
- Метод **BCPReadFmt** используется для считывания данных из файла форматирования, указывающего формат данных в файле данных. Данный метод способен определить правильную версию файла форматирования. Он может автоматически определить, в каком формате находится файл форматирования — XML или формат текста по старому стилю, —и действовать соответствующим образом. Версии файла форматирования, поддерживаемые драйвером OLE DB для SQL Server BCP имеют версию 6.0 или более поздней версии.  
+ Метод **BCPReadFmt** используется для считывания данных из файла форматирования, указывающего формат данных в файле данных. Данный метод способен определить правильную версию файла форматирования. Он может автоматически определить, в каком формате находится файл форматирования — XML или формат текста по старому стилю, —и действовать соответствующим образом. Версии файлов форматирования, поддерживаемые драйвером OLE DB для SQL Server BCP, имеют версию 6,0 или более позднюю.  
   
  После того как метод **BCPReadFmt** считывает значения формата, он выполняет соответствующие вызовы методов [IBCPSession::BCPColumns](../../oledb/ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md) и [IBCPSession::BCPColFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md). Пользователю не требуется производить анализ файла форматирования и выполнять эти вызовы.  
   
  Чтобы сохранить файл форматирования, вызовите метод [IBCPSession::BCPWriteFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpwritefmt-ole-db.md) . Вызовы метода **BCPReadFmt** могут ссылаться на сохраненные форматы. Кроме того, программа массового копирования (**bcp**) может сохранять определяемые пользователем форматы данных в файлах, на которые может ссылаться метод **BCPReadFmt** .  
   
- **BCP_OPTION_DELAYREADFMT** значение *eOption* параметр [IBCPSession::BCPControl](../../oledb/ole-db-interfaces/ibcpsession-bcpcontrol-ole-db.md) изменяет поведение IBCPSession::BCPReadFmt.  
+ Значение **BCP_OPTION_DELAYREADFMT** параметра *eOption* в [IBCPSession:: BCPControl](../../oledb/ole-db-interfaces/ibcpsession-bcpcontrol-ole-db.md) изменяет поведение IBCPSession:: BCPReadFmt.  
   
 ## <a name="arguments"></a>Аргументы  
  *pwszFormatFile*[in]  

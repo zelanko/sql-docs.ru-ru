@@ -1,5 +1,5 @@
 ---
-title: Метод unwrap (SQLServerCallableStatement) | Документация Майкрософт
+title: Метод Unwrap (SQLServerCallableStatement) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: cbbf2728-b8c8-4c35-875a-6e967c8285dc
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 034fb09dec2504a2cb722e227fa5db437f6053f8
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 0dc8ddf82859b8bf47853a3d72a7461567388b87
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66799578"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67995196"
 ---
 # <a name="unwrap-method-sqlservercallablestatement"></a>Метод unwrap (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -31,7 +30,7 @@ public <T> T unwrap(Class<T> iface)
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *iface*  
+ *IFACE*  
   
  Класс типа **T**, определяющий интерфейс.  
   

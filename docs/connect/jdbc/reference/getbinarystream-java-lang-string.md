@@ -1,5 +1,5 @@
 ---
-title: метод getBinaryStream (java.lang.String) | Документация Майкрософт
+title: getBinaryStream (Java. lang. String) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 17f1ea5d-47f8-4a66-a0fc-d6554b8e3866
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8a34e90ff9765bc72e17ee091e0ff6b9901dd495
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: b450cd6a925aa5543262d70714cd36749113ed03
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66799814"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953718"
 ---
 # <a name="getbinarystream-javalangstring"></a>getBinaryStream (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public final java.io.InputStream getBinaryStream(java.lang.String paramName)
  Значение **String**, которое указывает имя параметра.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Объект, InputStream.  
+ Объект InputStream.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

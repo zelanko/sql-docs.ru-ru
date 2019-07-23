@@ -1,5 +1,5 @@
 ---
-title: Используется классификация данных с помощью драйвера Microsoft ODBC для SQL Server | Документация Майкрософт
+title: Использование классификации данных с Microsoft ODBC Driver for SQL Server | Документация Майкрософт
 ms.custom: ''
 ms.date: 07/26/2018
 ms.prod: sql
@@ -13,22 +13,22 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: v-makouz
 ms.author: v-makouz
 manager: kenvh
-ms.openlocfilehash: 0d010bcfc74011cb0e7e2864aeff97e65bf16203
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 75688cc1e5155c83501204f1634d320b9ae7d8be
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62637452"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263997"
 ---
 # <a name="data-classification"></a>Классификация данных
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
 ## <a name="overview"></a>Обзор
-Для целей управляет конфиденциальными данными, SQL Server и Azure SQL Server появилась возможность предоставить столбцы базы данных с метаданными чувствительность, которая позволяет клиентскому приложению для обработки различных типов конфиденциальных данных (например, в сфере здравоохранения, финансовых и т. д. ) в соответствии с политиками защиты данных.
+В целях управления конфиденциальными данными SQL Server и Azure SQL Server представил возможность предоставлять столбцы базы данных с метаданными чувствительности, которые позволяют клиентскому приложению работать с различными типами конфиденциальных данных (например, Health, финансовая и т. д.). ) в соответствии с политиками защиты данных.
 
-Дополнительные сведения о том, как назначить классификации со столбцами, см. в разделе [SQL данных обнаружения и классификации](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-2017).
+Дополнительные сведения о назначении классификации столбцам см. в разделе [Обнаружение и классификация данных SQL](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-2017).
 
-17\.2 драйвера Microsoft ODBC позволяет извлекать эти метаданные с помощью функции SQLGetDescField, с помощью параметров идентификатор поля SQL_CA_SS_DATA_CLASSIFICATION.
+Microsoft ODBC Driver 17,2 позволяет получать эти метаданные через SQLGetDescField, используя идентификатор поля SQL_CA_SS_DATA_CLASSIFICATION.
 
 ## <a name="format"></a>Формат
 SQLGetDescField имеет следующий синтаксис:
@@ -42,54 +42,54 @@ SQLRETURN SQLGetDescField(
      SQLINTEGER      BufferLength,  
      SQLINTEGER *    StringLengthPtr);  
 ```
-*DescriptorHandle*  
- [Вход] Дескриптор IRD (дескриптора строки реализации). Можно получить путем вызова SQLGetStmtAttr с SQL_ATTR_IMP_ROW_DESC атрибут инструкции
+*дескрипторхандле*  
+ Входной Дескриптор IRD (дескриптор строки реализации). Можно получить с помощью вызова SQLGetStmtAttr с атрибутом инструкции SQL_ATTR_IMP_ROW_DESC
   
- *RecNumber*  
+ *рекнумбер*  
  [Вход] 0
   
- *FieldIdentifier*  
- [Вход] SQL_CA_SS_DATA_CLASSIFICATION
+ *фиелдидентифиер*  
+ Входной SQL_CA_SS_DATA_CLASSIFICATION
   
  *ValuePtr*  
- [Выход] Выходной буфер
+ Проверки Выходной буфер
   
  *BufferLength*  
- [Вход] Длина выходного буфера в байтах
+ Входной Длина выходного буфера в байтах
 
- *StringLengthPtr* [выходной] указатель на буфер, в которую будет возвращено общее число байтов, доступных для возврата в *ValuePtr*.
+ *Стрингленгсптр* Проверки Указатель на буфер, в котором возвращается общее число байтов, доступных для возврата в *ValuePtr*.
  
 > [!NOTE]
-> Если размер буфера неизвестно, ее можно определить путем вызова функции SQLGetDescField с *ValuePtr* как значение NULL, а также проверки значения *StringLengthPtr*.
+> Если размер буфера неизвестен, его можно определить, вызвав SQLGetDescField с *ValuePtr* как NULL и проверив значение *стрингленгсптр*.
  
-Если сведения о классификации данных недоступны, *недопустимое поле дескриптора* будет возвращена ошибка.
+Если сведения о классификации данных недоступны, будет возвращено *недопустимое поле дескриптора* .
 
-После успешного вызова функции SQLGetDescField, буфер, на которые указывают *ValuePtr* будет содержать следующие данные:
+При успешном вызове SQLGetDescField буфер, на который указывает *ValuePtr* , будет содержать следующие данные:
 
  `nn nn [n sensitivitylabels] tt tt [t informationtypes] cc cc [c columnsensitivitys]`
 
 > [!NOTE]
-> `nn nn`, `tt tt`, и `cc cc` — многобайтовые целые числа, которые хранятся с наименее значащим байтом по младшему адресу.
+> `nn nn`, `tt tt` и`cc cc` — это многобайтовые целые числа, которые хранятся с наименьшим значащим байтом по нижнему адресу.
 
-*`sensitivitylabel`* и *`informationtype`* оба вида
+*`sensitivitylabel`* и *`informationtype`* оба имеют форму
 
  `nn [n bytes name] ii [i bytes id]`
 
-*`columnsensitivity`* имеет форму
+*`columnsensitivity`* имеет вид
 
  `nn nn [n sensitivityprops]`
 
-Для каждого столбца *(c)* , *n* 4-байтовое *`sensitivityprops`* присутствуют:
+Для каждого столбца *(c)* существуют *n* 4 байта *`sensitivityprops`* :
 
  `ss ss tt tt`
 
-s - индекс в *`sensitivitylabels`* массива, `FF FF` Если не подписан
+s-индекс в массиве *`sensitivitylabels`* , `FF FF` если он не помечен
 
-t - индекс в *`informationtypes`* массива, `FF FF` Если не подписан
+t-индекс в массиве *`informationtypes`* , `FF FF` если он не помечен
 
 
 <br><br>
-Формат данных может быть выражен как псевдо следующие структуры:
+Формат данных может выражаться в следующих псевдо-структурах:
 
 ```
 struct IDnamePair {
@@ -117,7 +117,7 @@ struct {
 
 
 ## <a name="code-sample"></a>Пример кода
-Тестирование приложения, демонстрирующий способы чтения метаданных классификации данных. В Windows его можно скомпилировать с помощью `cl /MD dataclassification.c /I (directory of msodbcsql.h) /link odbc32.lib` и выполнять с использованием строки подключения и SQL-запрос (что возвращает классифицированных столбцов) в качестве параметров:
+Тестовое приложение, которое показывает, как считывать метаданные классификации данных. В Windows его можно скомпилировать с помощью `cl /MD dataclassification.c /I (directory of msodbcsql.h) /link odbc32.lib` и выполнить со строкой подключения, а SQL-запрос (который возвращает классифицированные столбцы) в качестве параметров:
 
 ```
 #ifdef _WIN32

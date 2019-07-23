@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 9be246a7-85fa-49fc-ad79-aabe97f5b280
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a03a2ff79af2472af5d0bed31be3ad6d35f525bd
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 9774d16d09ee29723a66bf538fbb7d6a52d4e816
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798835"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67985347"
 ---
 # <a name="updatebinarystream-method-javalangstring-javaioinputstream-int"></a>Метод updateBinaryStream (java.lang.String, java.io.InputStream, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,13 +37,13 @@ public void updateBinaryStream(java.lang.String columnLabel,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *ColumnLabel состоит из*  
+ *колумнлабел*  
   
  Значение типа String, содержащее метку столбца.  
   
  *x*  
   
- Объект, InputStream.  
+ Объект InputStream.  
   
  *length*  
   
@@ -54,7 +53,7 @@ public void updateBinaryStream(java.lang.String columnLabel,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод updateBinaryStream указывается с помощью метода updateBinaryStream в интерфейсе java.sql.ResultSet.  
+ Этот метод updateBinaryStream задается методом updateBinaryStream в интерфейсе Java. SQL. Result.  
   
  Этот метод передает байты от объекта InputStream выбранным двоичным столбцам [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], таким как binary, varbinary, varbinary(max), image, xml и udt. В этом методе не поддерживается обновление символьных столбцов. Для обновления с помощью InputStream символьных столбцов используйте метод [updateAsciiStream](../../../connect/jdbc/reference/updateasciistream-method-sqlserverresultset.md).  
   

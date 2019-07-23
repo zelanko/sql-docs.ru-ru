@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 4ee82290-508d-4bff-a5c5-8a56338deef8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 31315b70f770d2f95e97d34b2064152234cae248
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: d801a0184259ae22f86ea5ec23391ef78b23ce38
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66803402"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974264"
 ---
 # <a name="setfetchdirection-method-sqlserverresultset"></a>Метод setFetchDirection (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -53,7 +52,7 @@ public void setFetchDirection(int direction)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод setFetchDirection указывается с помощью метода setFetchDirection в интерфейсе java.sql.ResultSet.  
+ Этот метод setFetchDirection задается методом setFetchDirection в интерфейсе Java. SQL. Result.  
   
  Исходное значение этого метода определяется объектом [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md), создавшим этот объект SQLServerResultSet. Направление выборки может быть изменено в любой момент.  
   

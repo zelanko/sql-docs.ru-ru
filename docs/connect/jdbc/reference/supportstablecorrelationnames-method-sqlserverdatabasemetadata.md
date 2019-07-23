@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 85d4eb84-6d0a-4671-b6e5-a7085e086fcf
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 586206f73ef0116d9087eacb3beb13ec05c929e6
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 4afcc9c8f4554375f2c87ccc0c70302c84aaa2f0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797248"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67968684"
 ---
 # <a name="supportstablecorrelationnames-method-sqlserverdatabasemetadata"></a>Метод supportsTableCorrelationNames (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsTableCorrelationNames()
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- **значение true,** Если поддерживается. В противном случае — **false**.  
+ **значение true** , если поддерживается. В противном случае — **false**.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод supportsTableCorrelationNames указывается с помощью метода supportsTableCorrelationNames в интерфейсе java.sql.DatabaseMetaData.  
+ Этот метод supportsTableCorrelationNames задается методом supportsTableCorrelationNames в интерфейсе Java. SQL. DatabaseMetaData.  
   
 ## <a name="see-also"></a>См. также:  
  [Методы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

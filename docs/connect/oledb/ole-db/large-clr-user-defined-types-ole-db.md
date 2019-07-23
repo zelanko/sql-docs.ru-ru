@@ -1,5 +1,5 @@
 ---
-title: Определяемые пользователем типы больших значений CLR (OLE DB) | Документация Майкрософт
+title: Большие определяемые пользователем типы данных CLR (OLE DB) | Документация Майкрософт
 description: Большие определяемые пользователем типы данных CLR (OLE DB)
 ms.custom: ''
 ms.date: 06/12/2018
@@ -12,13 +12,12 @@ helpviewer_keywords:
 - large CLR user-defined types [OLE DB]
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 2af61fea9909597736769eb3d28fda43753a800b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 228054b56d6b26bf4439c01363d6cad24422f938
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66795977"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015221"
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>Большие определяемые пользователем типы данных CLR (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,7 +26,7 @@ ms.locfileid: "66795977"
 
   В этой статье описываются изменения OLE DB в драйвере OLE DB для SQL Server, связанные с поддержкой больших пользовательских типов данных среды CLR.  
   
- Дополнительные сведения о поддержке больших определяемых пользователем типов CLR в драйвере OLE DB для SQL Server см. в разделе [Large CLR User-Defined типы](../../oledb/features/large-clr-user-defined-types.md). Пример, см. в разделе [использования больших определяемых пользователем типов CLR &#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-large-clr-udts-ole-db.md).  
+ Дополнительные сведения о поддержке больших определяемых пользователем типов CLR в драйвере OLE DB для SQL Server см. в разделе [большие определяемые пользователем типы данных CLR](../../oledb/features/large-clr-user-defined-types.md). Пример см. в разделе [использование больших определяемых &#40;пользователем&#41;типов CLR OLE DB](../../oledb/ole-db-how-to/use-large-clr-udts-ole-db.md).  
   
 ## <a name="data-format"></a>Формат данных  
  Драйвер OLE DB для SQL Server использует значение ~0 для представления значений с неограниченным размером типа больших объектов. Значение ~0 также представляет размер определяемых пользователем типов данных CLR, превышающий 8 000 байт.  
@@ -56,7 +55,7 @@ ms.locfileid: "66795977"
 ## <a name="icommandwithparametersgetparameterinfo"></a>ICommandWithParameters::GetParameterInfo  
  В структуру DBPARAMINFO через **prgParamInfo** возвращаются указанные ниже сведения.  
   
-|Тип параметра|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags* флаг DBPARAMFLAGS_ISLONG|  
+|Тип параметра|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags* DBPARAMFLAGS_ISLONG|  
 |--------------------|-------------|-------------------|------------------|--------------|------------------------------------|  
 |DBTYPE_UDT<br /><br /> (длина не более 8 000 байт)|"DBTYPE_UDT"|*n*|неопределенный|неопределенный|сброшен|  
 |DBTYPE_UDT<br /><br /> (длина более 8 000 байт)|"DBTYPE_UDT"|~0|неопределенный|неопределенный|набора|  
@@ -64,7 +63,7 @@ ms.locfileid: "66795977"
 ## <a name="icommandwithparameterssetparameterinfo"></a>ICommandWithParameters::SetParameterInfo  
  Сведения, предоставленные в структуре DBPARAMBINDINFO, должны соответствовать следующим требованиям.  
   
-|Тип параметра|*pwszDataSourceType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags* флаг DBPARAMFLAGS_ISLONG|  
+|Тип параметра|*пвсздатасаурцетипе*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags* DBPARAMFLAGS_ISLONG|  
 |--------------------|--------------------------|-------------------|------------------|--------------|------------------------------------|  
 |DBTYPE_UDT<br /><br /> (длина не более 8 000 байт)|DBTYPE_UDT|*n*|не учитывается|не учитывается|Должен быть задан, если параметр передается с помощью DBTYPE_IUNKNOWN.|  
 |DBTYPE_UDT<br /><br /> (длина более 8 000 байт)|DBTYPE_UDT|~0|не учитывается|не учитывается|не учитывается|  
@@ -140,7 +139,7 @@ ms.locfileid: "66795977"
 |3|Данные преобразуются из двоичных данных в шестнадцатеричную строку.|  
 |4|При использовании метода **CreateAccessor** или **GetNextRows** может быть выполнена проверка. Ошибка DB_E_ERRORSOCCURRED. Состояние привязки установлено в значение DBBINDSTATUS_UNSUPPORTEDCONVERSION.|  
 |5|Может использоваться BY_REF.|  
-|6|Параметры определяемого пользователем типа могут быть привязаны в структуре DBBINDING как DBTYPE_IUNKNOWN. Привязка к DBTYPE_IUNKNOWN показывает, что приложению необходимо обработать данные в виде потока с помощью интерфейса ISequentialStream. Если потребитель указывает *wType* в привязке как тип DBTYPE_IUNKNOWN и соответствующий столбец или выходной параметр хранимой процедуры имеет определяемый пользователем тип, драйвер OLE DB для SQL Server возвратит ISequentialStream. Для входного параметра, будет запрашивать драйвер OLE DB для SQL Server для интерфейса ISequentialStream.<br /><br /> В случае больших определяемых пользователем типов можно не привязывать длину данных определяемого пользователем типа при использовании привязки DBTYPE_IUNKNOWN. Однако для маленьких определяемых пользователем типов необходимо выполнять привязку длины. Для параметра DBTYPE_UDT можно указать большой определяемый пользователем тип, если выполняется одно или более из следующих условий.<br />*ulParamParamSize* — ~ 0.<br />В структуре DBPARAMBINDINFO установлен флаг DBPARAMFLAGS_ISLONG.<br /><br /> Для строковых данных привязка DBTYPE_IUNKNOWN разрешена только для больших определяемых пользователем типов. Можно выяснить, является ли столбец большой определяемый Пользователем тип, используя метод флагов для набора строк или команда IColumnsInfo интерфейса объекта. Столбец DBTYPE_UDT имеет большой определяемый пользователь тип, если выполняется по крайней мере одно из следующих условий.<br />Установлен флаг DBCOLUMNFLAGS_ISLONG для элемента *dwFlags* структуры DBCOLUMNINFO. <br />*ulColumnSize* является членом DBCOLUMNINFO ~ 0.|  
+|6|Параметры определяемого пользователем типа могут быть привязаны в структуре DBBINDING как DBTYPE_IUNKNOWN. Привязка к DBTYPE_IUNKNOWN показывает, что приложению необходимо обработать данные в виде потока с помощью интерфейса ISequentialStream. Если потребитель указывает *wType* в привязке как тип DBTYPE_IUNKNOWN, а соответствующий столбец или выходной параметр хранимой процедуры является определяемым пользователем типом, OLE DB драйвер для SQL Server будет возвращать ISequentialStream. Для входного параметра Драйвер OLE DB для SQL Server запрашивает интерфейс ISequentialStream.<br /><br /> В случае больших определяемых пользователем типов можно не привязывать длину данных определяемого пользователем типа при использовании привязки DBTYPE_IUNKNOWN. Однако для маленьких определяемых пользователем типов необходимо выполнять привязку длины. Для параметра DBTYPE_UDT можно указать большой определяемый пользователем тип, если выполняется одно или более из следующих условий.<br />*улпарампарамсизе* имеет значение ~ 0.<br />В структуре DBPARAMBINDINFO установлен флаг DBPARAMFLAGS_ISLONG.<br /><br /> Для строковых данных привязка DBTYPE_IUNKNOWN разрешена только для больших определяемых пользователем типов. Определить, является ли столбец большим типом UDT, можно с помощью метода IColumnsInfo:: GetColumnInfo для набора строк или интерфейса IColumnsInfo объекта Command. Столбец DBTYPE_UDT имеет большой определяемый пользователь тип, если выполняется по крайней мере одно из следующих условий.<br />Установлен флаг DBCOLUMNFLAGS_ISLONG для элемента *dwFlags* структуры DBCOLUMNINFO. <br />*ulColumnSize* член DBCOLUMNINFO имеет значение ~ 0.|  
   
  Типы DBTYPE_NULL и DBTYPE_EMPTY могут быть привязаны только для входных параметров. Они не могут быть привязаны для выходных параметров или результатов. Если они привязаны для входных параметров, состояние должно быть установлено в значение DBSTATUS_S_ISNULL для типа DBTYPE_NULL или DBSTATUS_S_DEFAULT для типа DBTYPE_EMPTY. DBTYPE_BYREF невозможно использовать с типом DBTYPE_NULL или DBTYPE_EMPTY.  
   

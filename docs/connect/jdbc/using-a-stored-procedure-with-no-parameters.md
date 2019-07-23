@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: e9470a6d-a758-4c56-96ec-7b37139e36a7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d766423b4ee2c1db4b7515c87edfa96b4b84b416
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 3dade70a033ddf2a9e20ffc09930a27e26d9a579
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66790388"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916500"
 ---
 # <a name="using-a-stored-procedure-with-no-parameters"></a>Использование хранимых процедур без параметров
 
@@ -29,7 +28,7 @@ ms.locfileid: "66790388"
 `{call procedure-name}`
 
 > [!NOTE]  
-> Дополнительные сведения об escape-последовательностях SQL см. в разделе [с помощью escape-последовательностей SQL](../../connect/jdbc/using-sql-escape-sequences.md).
+> Дополнительные сведения о escape-последовательностях SQL см. в разделе [использование escape](../../connect/jdbc/using-sql-escape-sequences.md)-последовательностей SQL.
 
 Для примера создайте следующую хранимую процедуру в образце базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]:
 

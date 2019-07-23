@@ -13,13 +13,12 @@ helpviewer_keywords:
 - stored procedures [SQL Server], RPC syntax
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 4a0691795bdca0ec24b307362c6b2137c5741362
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 749a406a071c549f47ea41ead9fdf21574e0b523
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66791269"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994724"
 ---
 # <a name="execute-stored-procedure-with-rpc-and-process-output"></a>Выполнение хранимой процедуры с использованием RPC и обработка выходных данных
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,13 +38,13 @@ ms.locfileid: "66791269"
   
 3.  Создайте набор привязок (по одной для каждого маркера параметра) с помощью массива структур DBBINDING.  
   
-4.  Создайте метод доступа для определенных параметров с помощью **IAccessor::CreateAccessor** метод. **CreateAccessor** создает метод доступа на основе набора привязок.  
+4.  Создайте метод доступа для определенных параметров с помощью метода **IAccessor:: CreateAccessor** . **CreateAccessor** создает метод доступа на основе набора привязок.  
   
 5.  Заполните структуру DBPARAMS.  
   
 6.  Выполните команду **Execute** (в данном случае это вызов хранимой процедуры).  
   
-7.  Обработайте набор строк и освободите его с помощью **IRowset::Release** метод.  
+7.  Обработать набор строк и освободить его с помощью метода **IRowset:: Release** .  
   
 8.  Обработайте значения кода возврата и выходного параметра, полученные от хранимой процедуры.  
   

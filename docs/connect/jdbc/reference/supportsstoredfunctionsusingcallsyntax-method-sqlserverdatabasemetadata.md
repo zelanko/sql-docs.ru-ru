@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0e5c0579-84b5-4717-b128-0bcd512f6022
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 053dab7055969b502a79e2e2d0250cdd98749fbe
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: cd5c761a44af410a39136942490d4f4ab6241b5e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797298"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67968775"
 ---
 # <a name="supportsstoredfunctionsusingcallsyntax-method-sqlserverdatabasemetadata"></a>Метод supportsStoredFunctionsUsingCallSyntax (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -31,13 +30,13 @@ public boolean supportsStoredFunctionsUsingCallSyntax()
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- **значение true,** Если поддерживается. В противном случае — **false**.  
+ **значение true** , если поддерживается. В противном случае — **false**.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод supportsStoredFunctionsUsingCallSyntax указывается с помощью метода supportsStoredFunctionsUsingCallSyntax в интерфейсе java.sql.DatabaseMetaData.  
+ Этот метод supportsStoredFunctionsUsingCallSyntax задается методом supportsStoredFunctionsUsingCallSyntax в интерфейсе Java. SQL. DatabaseMetaData.  
   
 ## <a name="see-also"></a>См. также:  
  [Методы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

@@ -1,5 +1,5 @@
 ---
-title: Метод getTime (int) | Документация Майкрософт
+title: Метод Time (int) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 6c13dea2-511f-48dc-b3db-2d3b72ccc9de
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 454848e471548fbd47e5a0f7985b97546ef87457
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 6e0426a89de1e3cf78f1f41e45fc35ba81816362
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66778978"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979093"
 ---
 # <a name="gettime-method-int"></a>Метод getTime (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,7 +48,7 @@ public java.sql.Time getTime(int index)
 ## <a name="remarks"></a>Remarks  
  Этот метод getTime указывается методом getTime в интерфейсе java.sql.CallableStatement.  
   
- См. в разделе диаграмму с названием «Преобразования метода считывания» в [Общие сведения о преобразованиях типов данных](../../../connect/jdbc/understanding-data-type-conversions.md) также просмотреть, какие [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] типы данных можно получить с помощью этого метода.  
+ Дополнительные [сведения о](../../../connect/jdbc/understanding-data-type-conversions.md) том, какие [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] типы данных можно получить с помощью этого метода, см. в диаграмме "преобразования методов считывания".  
   
 ## <a name="see-also"></a>См. также:  
  [Метод getTime (SQLServerCallableStatement)](../../../connect/jdbc/reference/gettime-method-sqlservercallablestatement.md)   

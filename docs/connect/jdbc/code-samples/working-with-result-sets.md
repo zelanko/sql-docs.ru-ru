@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4fc4b1c6-3075-4ad7-9244-865d9ede7ae6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 351351dd287da5b7efeb59bd9d1df97e52b30f57
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 9d33dbebaad162feb77a4cbea8de33993fc79f14
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798506"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956954"
 ---
 # <a name="working-with-result-sets"></a>Работа с результирующими наборами
 
@@ -27,7 +26,7 @@ ms.locfileid: "66798506"
 Кроме того, объект SQLServerResultSet предоставляет методы для перехода по строкам данных, получения или задания данных, содержащихся в наборе, а также для настройки различных уровней учета изменений в базовой базе данных.  
   
 > [!NOTE]  
-> Дополнительные сведения об управлении результирующими наборами, включая порядок учета изменений, см. в разделе [управление результирующие наборы с драйвером JDBC](../../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md).  
+> Дополнительные сведения об управлении результирующими наборами, включая их чувствительность к изменениям, см. в разделе [Управление результирующими наборами с помощью драйвера JDBC](../../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md).  
   
 Здесь представлены разделы, где описываются различные способы использования результирующего набора для обработки данных, содержащихся в базе данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   

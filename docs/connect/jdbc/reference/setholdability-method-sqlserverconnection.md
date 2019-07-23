@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 552eebd0-4c38-43f0-961f-35244f99109b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 60d46f8f8792eacd7f1f67a67b2fc9fc56bf5a8e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: fe53c38e1b3f1633be27f4c82a9c2edfe9820495
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66764471"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68213670"
 ---
 # <a name="setholdability-method-sqlserverconnection"></a>Метод setHoldability (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +35,7 @@ public void setHoldability(int nNewHold)
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *nNewHold*  
+ *нневхолд*  
   
  Значение **int**, содержащее один из следующих уровней возможности ожидания:  
   
@@ -48,7 +47,7 @@ public void setHoldability(int nNewHold)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод setHoldability указывается с помощью метода setHoldability в интерфейсе java.sql.Connection.  
+ Этот метод setHoldability задается методом setHoldability в интерфейсе Java. SQL. Connection.  
   
 ## <a name="see-also"></a>См. также:  
  [Элементы SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

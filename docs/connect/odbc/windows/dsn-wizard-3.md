@@ -1,5 +1,5 @@
 ---
-title: Источник данных экран мастера 3 (драйвер ODBC для SQL Server) | Документация Майкрософт
+title: Экран 3 мастера источников данных (драйвер ODBC для SQL Server) | Документация Майкрософт
 ms.custom: ''
 ms.date: 09/27/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d8220eebb82a5c0e513e14fc9b582b10183d293f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 63391969f378fdefbfa9547c079dcce4ff259e22
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797779"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936545"
 ---
 # <a name="data-source-wizard-screen-3"></a>Экран 3 мастера источников данных
 
@@ -68,19 +67,19 @@ WHERE "LastName" = 'O''Brien'
 
 ### <a name="multi-subnet-failover"></a>Отработка отказа в нескольких подсетях.
 
-Если приложение соединяется с высокого уровня доступности и аварийного восстановления (группы доступности AlwaysOn) группу доступности (AG) в разных подсетях, включение **многоподсетевой отработки отказа.** Настраивает драйвер ODBC для SQL Server для ускоренного обнаружения активного (в данный момент) сервера и подключения к нему.
+Если приложение подключается к группе доступности с высоким уровнем доступности (группы доступности AlwaysOn) в разных подсетях, включите отработку отказа для **нескольких подсетей.** Настраивает драйвер ODBC для SQL Server для ускоренного обнаружения активного (в данный момент) сервера и подключения к нему.
 
 ### <a name="transparent-network-ip-resolution"></a>Разрешение IP-адресов прозрачной сети.
 
-Изменяет поведение **многоподсетевой отработки отказа** позволяет ускорить восстановление соединения во время отработки отказа. Дополнительные сведения см. в статье [Использование разрешения IP-адресов прозрачной сети](../../../connect/odbc/using-transparent-network-ip-resolution.md).
+Изменяет поведение отработки **отказа в нескольких подсетях** , чтобы обеспечить более быстрое повторное подключение во время отработки отказа. Дополнительные сведения см. в статье [Использование разрешения IP-адресов прозрачной сети](../../../connect/odbc/using-transparent-network-ip-resolution.md).
 
 ### <a name="column-encryption"></a>Шифрование столбцов.
 
-Возможность автоматической расшифровки и шифрования передаваемых данных и из столбцов, зашифрованных с помощью [Always Encrypted](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md) функция доступна в SQL Server 2016 и более поздних версий.
+Включает автоматическую расшифровку и шифрование передачи данных в столбцах и из столбцов, зашифрованных с помощью функции [Always encrypted](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md) , доступной в SQL Server 2016 и более поздних версиях.
 
-### <a name="use-fmtonly-metadata-discovery"></a>Используйте FMTONLY обнаружение метаданных:
+### <a name="use-fmtonly-metadata-discovery"></a>Использовать обнаружение метаданных FMTONLY:
 
-Устаревший метод обнаружения метаданных SET FMTONLY используется в том случае, когда при соединении с SQL Server 2012 или более поздней версии. Включите этот параметр, только в том случае, при использовании запросов, не поддерживается [sp_describe_first_result_set](../../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md), например, содержащие временные таблицы. 
+Используйте метод обнаружения устаревших метаданных SET FMTONLY при подключении к SQL Server 2012 или более поздней версии. Включайте это только при использовании запросов, не поддерживаемых [sp_describe_first_result_set](../../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md), например, содержащих временные таблицы. 
 
 ### <a name="next"></a>Дальше
 

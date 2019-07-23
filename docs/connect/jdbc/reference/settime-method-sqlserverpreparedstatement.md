@@ -15,22 +15,21 @@ apitype: Assembly
 ms.assetid: b3a83ea3-6636-4096-842b-71b37340fa07
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c7b5ee4f45f339dc1bffc2fcbf02794e4aa004f0
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: d4b11b2d25abec8717604948101ca81d651fe822
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66767047"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67972448"
 ---
 # <a name="settime-method-sqlserverpreparedstatement"></a>Метод setTime (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
   Устанавливает указанный параметр в заданное значение времени.  
   
- Начиная с версии [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] версии 3.0 драйвера JDBC поведение этого метода изменяется параметром **sendTimeAsDatetime** свойство соединения ([заданию свойств соединения](../../../connect/jdbc/setting-the-connection-properties.md)) и [ SQLServerDataSource.setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md).  
+ Начиная с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] драйвера JDBC 3,0, поведение этого метода изменяется свойством соединения **сендтимеасдатетиме** ([заданием свойств соединения](../../../connect/jdbc/setting-the-connection-properties.md)) и [SQLServerDataSource. setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md).  
   
- Дополнительные сведения см. в разделе [java.sql.Time настройке как значения отправляются на сервер](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md).  
+ Дополнительные сведения см. в разделе [Настройка отправки значений Java. SQL. Time на сервер](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md).  
   
 ## <a name="overload-list"></a>Список перегрузок  
   

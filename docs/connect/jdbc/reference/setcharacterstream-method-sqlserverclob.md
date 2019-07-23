@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: c02778f2-6681-4a84-a58b-2bcfac4233e4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8650ffe29710670bae8d3a934cd4caceaf74f723
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: da842fbc6240b072c7fe907aaa344d8d2ff1c6e7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66795662"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974655"
 ---
 # <a name="setcharacterstream-method-sqlserverclob"></a>Метод setCharacterStream (SQLServerClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +35,7 @@ public java.io.Writer setCharacterStream(long pos)
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *Торговых терминалов*  
+ *POS*  
   
  Позиция, с которой начинается запись в объект CLOB.  
   
@@ -47,7 +46,7 @@ public java.io.Writer setCharacterStream(long pos)
  java.sql.SQLException  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод setCharacterStream указывается с помощью метода setCharacterStream в интерфейсе java.sql.Clob.  
+ Этот метод setCharacterStream задается методом setCharacterStream в интерфейсе Java. SQL. CLOB.  
   
  Символьные данные в большом двоичном объекте перезаписываются модулем записи, начиная с указанной позиции, и могут превысить начальную длину объекта CLOB. Если указать значение позиции+1, будут добавлены символы. Если указать значение позиции+2 и более (либо нулевое или отрицательное значение), то создается ошибка позиции.  
   

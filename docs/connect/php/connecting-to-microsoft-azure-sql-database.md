@@ -1,5 +1,5 @@
 ---
-title: Подключение к базе данных SQL Microsoft Azure | Документация Майкрософт
+title: Подключение к База данных SQL Microsoft Azure | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,16 +10,15 @@ ms.topic: conceptual
 ms.assetid: 75622982-1815-4d96-906c-a0494c8a0b53
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8142584ad9fdf4bd29b50ea1133f15afeb1ef8aa
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 6ff612b0d4682726f559e0a1eff41b96bd2a84f5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66795810"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993731"
 ---
 # <a name="connecting-to-microsoft-azure-sql-database"></a>Подключение к базе данных Microsoft Azure SQL
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Дополнительные сведения о подключении к базам данных SQL Azure см. в разделе [способах доступа к базе данных SQL Azure из PHP](https://azure.microsoft.com/documentation/articles/sql-database-php-how-to-use/).  
+Дополнительные сведения о подключении к базам данных SQL Azure см. в статье [как получить доступ к базе данных SQL Azure из PHP](https://azure.microsoft.com/documentation/articles/sql-database-php-how-to-use/).  
   

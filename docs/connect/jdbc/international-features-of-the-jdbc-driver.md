@@ -1,5 +1,5 @@
 ---
-title: Функции поддержки различных языков драйвера JDBC | Документация Майкрософт
+title: Международные функции драйвера JDBC | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: bbb74a1d-9278-401f-9530-7b5f45aa79de
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b555568ae93936c1f8659b52ba6bb731e8398e0f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: f5e9d6902733ea8a9cca91b4bd33adcb66708672
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66781655"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956476"
 ---
 # <a name="international-features-of-the-jdbc-driver"></a>Функции поддержки различных языков драйвера JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "66781655"
 ## <a name="handling-of-character-data"></a>Обработка символьных данных  
  Символьные данные на Java по умолчанию рассматриваются как данные в формате Юникода. Объект Java **String** представляет символьные данные в формате Юникода. Единственное исключение из этого правила в драйвере JDBC — методы считывания и задания ASCII-потока, но это особый случай, поскольку в этих методах при обработке байтовых потоков неявно предполагается использование конкретной известной кодовой страницы (ASCII).  
   
- Кроме того, драйвер JDBC обеспечивает **sendStringParametersAsUnicode** свойство строки подключения. С помощью этого свойства можно указывать, что подготовленные параметры для символьных данных были отправлены в формате ASCII или MBCS, а не в Юникоде. Дополнительные сведения о **sendStringParametersAsUnicode** свойство строки подключения, см. в разделе [заданию свойств соединения](../../connect/jdbc/setting-the-connection-properties.md).  
+ Кроме того, драйвер JDBC предоставляет свойство строки подключения **sendStringParametersAsUnicode** . С помощью этого свойства можно указывать, что подготовленные параметры для символьных данных были отправлены в формате ASCII или MBCS, а не в Юникоде. Дополнительные сведения о свойстве строки подключения **sendStringParametersAsUnicode** см. в разделе [Задание свойств соединения](../../connect/jdbc/setting-the-connection-properties.md).  
   
 ### <a name="driver-incoming-conversions"></a>Входящие преобразования драйвера  
  Текстовые данные в Юникоде, приходящие с сервера, преобразовывать не нужно. Они передаются непосредственно в Юникоде. Данные в других форматах, приходящие с сервера, преобразовываются в Юникод из кодировки для данных на уровне базы данных или столбца. Драйвер JDBC использует для выполнения этих преобразований подпрограммы Java Virtual Machine (JVM). Этим преобразованиям подвергаются все методы получения потоков строчных и символьных данных.  
@@ -47,7 +46,7 @@ ms.locfileid: "66781655"
  C другой стороны, методы для API ненациональных символов, такие как setString, setCharacterStream и setClob классов [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) и [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md), отправляют на сервер значения своих параметров в формате Юникода, только если свойство **sendStringParametersAsUnicode** имеет значение True (это значение по умолчанию).  
   
 ## <a name="non-unicode-parameters"></a>Параметры для кодировок, отличных от Юникода  
- Для достижения оптимальной производительности **CHAR**, **VARCHAR** или **LONGVARCHAR** тип параметров не в Юникоде, задайте **sendStringParametersAsUnicode** подключения свойство «false» строки и воспользуйтесь методами ненациональных символов.  
+ Для оптимальной производительности с типом **char**, **varchar** или **LONGVARCHAR** для параметров, отличных от Юникода, задайте для свойства строки подключения **sendStringParametersAsUnicode** значение "false" и используйте методы, не являющиеся национальными символами.  
   
 ## <a name="formatting-issues"></a>Особенности форматирования  
  Все форматирование локализованных данных для дат, времени и валют выполняется на уровне языка Java с помощью объекта Locale и различных методов форматирования для типов данных **Date**, **Calendar** и **Number**. В редких случаях, когда драйвер JDBC должен передать зависящие от локали конфиденциальные данные в локализованном формате, нужный инструмент форматирования используется с локалем JVM, заданным по умолчанию.  

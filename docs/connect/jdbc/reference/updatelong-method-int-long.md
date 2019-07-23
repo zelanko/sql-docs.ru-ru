@@ -1,5 +1,5 @@
 ---
-title: Метод updateLong (int, long) | Документация Майкрософт
+title: Метод updateLong (int, Long) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: f6363288-1415-4b25-8bb3-c34d6211c6d7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3387b6b5631130347baaa5f49563ffc9fb658c96
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8e8d0ad2332d1990445b8c6fb3c1ebd5914453d4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797170"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67998804"
 ---
 # <a name="updatelong-method-int-long"></a>Метод updateLong (int, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,7 +42,7 @@ public void updateLong(int index,
   
  *x*  
   
- Объект **long** значение.  
+ Значение **типа Long** .  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -52,7 +51,7 @@ public void updateLong(int index,
  Этот метод updateLong определен с помощью метода updateLong в интерфейсе java.sql.ResultSet.  
   
 ## <a name="see-also"></a>См. также:  
- [Метод updateLong &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatelong-method-sqlserverresultset.md)   
+ [Метод &#40;updateLong SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatelong-method-sqlserverresultset.md)   
  [Элементы SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Класс SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

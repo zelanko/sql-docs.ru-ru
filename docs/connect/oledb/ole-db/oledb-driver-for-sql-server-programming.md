@@ -1,5 +1,5 @@
 ---
-title: Драйвер OLE DB для программирования SQL Server | Документация Майкрософт
+title: Драйвер OLE DB для SQL Server программирования | Документация Майкрософт
 description: Программирование драйвера OLE DB для SQL Server
 ms.custom: ''
 ms.date: 06/12/2018
@@ -18,30 +18,29 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, OLE DB
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 54d0a800c3b651162edbf583c8f5e49005ed2628
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 0645659036af0b00e2cf1b62b67830ded43aecbe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66795984"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993931"
 ---
 # <a name="ole-db-driver-for-sql-server-programming"></a>Программирование драйвера OLE DB для SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Драйвер OLE DB для SQL Server — это низкоуровневый API COM, который используется для доступа к данным. Драйвер OLE DB для SQL Server рекомендуется для разработки средств, программ и низкоуровневых компонентов, требующих высокой производительности. Драйвер OLE DB для SQL Server — собственный высокопроизводительный поставщик, который напрямую обращается к протоколу потока табличных данных (TDS) [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  Драйвер OLE DB для SQL Server — это COM-API низкого уровня, который используется для доступа к данным. Драйвер OLE DB для SQL Server рекомендуется для разработки средств, программ и низкоуровневых компонентов, требующих высокой производительности. Драйвер OLE DB для SQL Server — собственный высокопроизводительный поставщик, который напрямую обращается к протоколу потока табличных данных (TDS) [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  Драйвер OLE DB для SQL Server обеспечивает поддержку OLE DB для приложений, подключающихся к [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- Драйвер OLE DB для SQL Server является 2.0-совместимой версии поставщика OLE DB.  
+ Драйвер OLE DB для SQL Server является поставщиком, соответствующим OLE DB версии 2,0.  
   
 ## <a name="in-this-section"></a>в этом разделе  
   
 -   [Создание приложения с драйвером OLE DB для SQL Server](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md)  
   
--   [Объекты источника данных &#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
+-   [Объекты &#40;источника данных OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
 -   [Команды](../../oledb/ole-db-commands/commands.md)  
   
@@ -53,7 +52,7 @@ ms.locfileid: "66795984"
   
 -   [Таблицы и индексы](../../oledb/ole-db-tables-indexes/tables-and-indexes.md)  
   
--   [Типы данных &#40;OLE DB&#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
+-   [Типы &#40;данных OLE DB&#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
   
 -   [Поддержка набора строк схемы &#40;OLE DB&#41;](../../oledb/ole-db/schema-rowset-support-ole-db.md)  
   
@@ -73,7 +72,7 @@ ms.locfileid: "66795984"
   
 -   [Поддержка разреженных столбцов &#40;OLE DB&#41;](../../oledb/ole-db/sparse-columns-support-ole-db.md)  
   
--   [Драйвер OLE DB для SQL Server &#40;OLE DB&#41; ссылки](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)  
+-   [OLE DB драйвер для SQL Server &#40;справочник&#41; по OLE DB](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)  
   
 -   [Инструкции по OLE DB](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
   

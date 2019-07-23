@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 42e49ff9-8072-44e4-ad75-c864c3a4ad8c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e1d66cdc791b927f269dfa53343b30469b254437
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 2b10b7bc63a4d3defc1d0465dd675bc9d7d6f872
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66792934"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982367"
 ---
 # <a name="getmaxbinaryliterallength-method-sqlserverdatabasemetadata"></a>Метод getMaxBinaryLiteralLength (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public int getMaxBinaryLiteralLength()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getMaxBinaryLiteralLength указывается с помощью метода getMaxBinaryLiteralLength в интерфейсе java.sql.DatabaseMetaData.  
+ Этот метод getMaxBinaryLiteralLength задается методом getMaxBinaryLiteralLength в интерфейсе Java. SQL. DatabaseMetaData.  
   
 ## <a name="see-also"></a>См. также:  
  [Методы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

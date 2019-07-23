@@ -15,13 +15,12 @@ helpviewer_keywords:
 - MSOLEDBSQL, ADO
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 1906ad25e9bb170b8979f44757ec5742ad9ec6c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b7e8ab700404aee32140bc935443e5911e4a56db
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66778044"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989239"
 ---
 # <a name="using-ado-with-ole-db-driver-for-sql-server"></a>Использование объектов ADO с драйвером OLE DB для SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,10 +29,10 @@ ms.locfileid: "66778044"
 
   Для реализации новых возможностей [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] (в частности, множественного активного результирующего набора (MARS), уведомлений о запросах, пользовательских типов данных и нового типа данных **xml**) существующие приложения, использующие объекты данных ActiveX (ADO), должны использовать драйвер OLE DB для SQL Server в качестве поставщика доступа к данным.  
   
- Чтобы позволить ADO использовать новые возможности последних версий [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], были внесены некоторые улучшения в драйвер OLE DB для SQL Server, расширяющие базовую функциональность OLE DB. Эти улучшения позволяют приложениям ADO использовать новые возможности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и применять два типа данных, появившихся в [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]: **xml** и **udt**. Эти улучшения также используют усовершенствования типов данных **varchar**, **nvarchar** и **varbinary**. Драйвер OLE DB для SQL Server добавляет свойство инициализации SSPROP_INIT_DATATYPECOMPATIBILITY к набору свойств DBPROPSET_SQLSERVERDBINIT для использования приложениями ADO, чтобы новые типы данных предоставлялись совместимым с ADO образом. Кроме того, драйвер OLE DB для SQL Server также определяет новое ключевое слово строки подключения с именем **DataTypeCompatibility** , задается в строке подключения.  
+ Чтобы позволить ADO использовать новые возможности последних версий [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], были внесены некоторые улучшения в драйвер OLE DB для SQL Server, расширяющие базовую функциональность OLE DB. Эти улучшения позволяют приложениям ADO использовать новые возможности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и применять два типа данных, появившихся в [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]: **xml** и **udt**. Эти улучшения также используют усовершенствования типов данных **varchar**, **nvarchar** и **varbinary**. Драйвер OLE DB для SQL Server добавляет свойство инициализации SSPROP_INIT_DATATYPECOMPATIBILITY к набору свойств DBPROPSET_SQLSERVERDBINIT для использования приложениями ADO, чтобы новые типы данных предоставлялись совместимым с ADO образом. Кроме того, Драйвер OLE DB для SQL Server также определяет новое ключевое слово строки подключения с именем **DataTypeCompatibility диспетчера соединений** , заданное в строке подключения.  
 
 > [!NOTE]  
->  Существующие приложения ADO могут обращаться к полям XML определяемых пользователем типов, текстовым полям больших значений и полям двоичных значений, а также обновлять их значения с помощью поставщика SQLOLEDB. Новые типы данных **varchar(max)** , **nvarchar(max)** и **varbinary(max)** увеличенного размера возвращаются как типы ADO **adLongVarChar**, **adLongVarWChar** и **adLongVarBinary** соответственно. XML-столбцы возвращаются как **adLongVarChar**, а столбцы пользовательских типов возвращаются как **adVarBinary**. Тем не менее, если вы используете драйвер OLE DB для SQL Server (MSOLEDBSQL) вместо SQLOLEDB, необходимо обязательно установите **DataTypeCompatibility** ключевое слово «80», чтобы новые типы данных правильно сопоставлялись с типами данных ADO.  
+>  Существующие приложения ADO могут обращаться к полям XML определяемых пользователем типов, текстовым полям больших значений и полям двоичных значений, а также обновлять их значения с помощью поставщика SQLOLEDB. Новые типы данных **varchar(max)** , **nvarchar(max)** и **varbinary(max)** увеличенного размера возвращаются как типы ADO **adLongVarChar**, **adLongVarWChar** и **adLongVarBinary** соответственно. XML-столбцы возвращаются как **adLongVarChar**, а столбцы пользовательских типов возвращаются как **adVarBinary**. Однако при использовании драйвера OLE DB для SQL Server (МСОЛЕДБСКЛ) вместо SQLOLEDB необходимо обязательно задать для ключевого слова **DataTypeCompatibility диспетчера соединений** значение "80", чтобы новые типы данных правильно сопоставлялись с ТИПАМИ данных ADO.  
 
 ## <a name="enabling-ole-db-driver-for-sql-server-from-ado"></a>Включение драйвера OLE DB для SQL Server из ADO  
  Чтобы обеспечить использование драйвера OLE DB для SQL Server, приложения ADO должны включать следующие ключевые слова в строки подключения:  
@@ -59,7 +58,7 @@ con.Open
 ```  
 
 ## <a name="examples"></a>Примеры  
- В следующих разделах приведены примеры того, как использовать ADO с драйвером OLE DB для SQL Server.  
+ В следующих разделах приведены примеры использования ADO с драйвером OLE DB для SQL Server.  
 
 ### <a name="retrieving-xml-column-data"></a>Получение данных XML-столбца  
  В этом примере набор записей используется для извлечения и отображения данных из XML-столбца в образце базы данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **AdventureWorks**.  

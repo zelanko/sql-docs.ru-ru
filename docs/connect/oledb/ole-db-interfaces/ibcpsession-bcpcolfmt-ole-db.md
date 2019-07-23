@@ -1,5 +1,5 @@
 ---
-title: IBCPSession::BCPColFmt (OLE DB) | Документация Майкрософт
+title: 'IBCPSession:: BCPColFmt (OLE DB) | Документация Майкрософт'
 description: IBCPSession::BCPColFmt (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,13 +15,12 @@ helpviewer_keywords:
 - BCPColFmt method
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: fdb46a6a2391c70f452d2fcf2c49045c59bd1e0a
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 76dd26d42951a95c604b8d5b3bceaff21c355be2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66791022"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994578"
 ---
 # <a name="ibcpsessionbcpcolfmt-ole-db"></a>IBCPSession::BCPColFmt (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -79,7 +78,7 @@ HRESULT BCPColFmt(
  Индекс поля из файла данных пользователя.  
   
  *eUserDataType*[in]  
- Тип данных поля из файла данных пользователя. Типы данных приведены в драйвере OLE DB для SQL Server заголовочного файла (msoledbsql.h) в формате BCP_TYPE_XXX, например BCP_TYPE_SQLINT4. Если задано значение BCP_TYPE_DEFAULT, поставщик попытается использовать тот же тип, к которому принадлежит столбец таблицы или представления. При массовом копировании из [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в файл, когда аргументу **eUserDataType** задано значение BCP_TYPE_SQLDECIMAL или BCP_TYPE_SQLNUMERIC, выполняются следующие условия.  
+ Тип данных поля из файла данных пользователя. Доступные типы данных перечислены в драйвере OLE DB для SQL Server заголовочном файле (мсоледбскл. h) с форматом BCP_TYPE_XXX, например BCP_TYPE_SQLINT4. Если задано значение BCP_TYPE_DEFAULT, поставщик попытается использовать тот же тип, к которому принадлежит столбец таблицы или представления. При массовом копировании из [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в файл, когда аргументу **eUserDataType** задано значение BCP_TYPE_SQLDECIMAL или BCP_TYPE_SQLNUMERIC, выполняются следующие условия.  
   
 -   Если тип исходного столбца отличается от decimal и numeric, то используются точность и масштаб по умолчанию.  
   

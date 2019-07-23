@@ -1,5 +1,5 @@
 ---
-title: Соединение с помощью bcp | Документация Майкрософт
+title: Подключение с помощью программы bcp | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 3eca5717-e50f-40db-be16-a1cebbdfee70
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d4eaf16d364927b8439bcf98e7ac6655d4a2f7bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1dd80df3a0f7fabec7ae9ddc51b16cb4456c7970
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66789868"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996619"
 ---
 # <a name="connecting-with-bcp"></a>Соединение с помощью bcp
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-Служебная программа [bcp](https://go.microsoft.com/fwlink/?LinkID=190626) доступна в [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на платформах Linux и macOS. На этой странице приводятся отличия от версии Windows `bcp`.
+Служебная программа [bcp](https://go.microsoft.com/fwlink/?LinkID=190626) доступна в [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на платформах Linux и macOS. На этой странице описываются отличия версии `bcp`Windows.
   
 - Признаком конца поля является символ табуляции ("\t").  
   
@@ -47,7 +46,7 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 ## <a name="available-options"></a>Доступные параметры
 В текущем выпуске доступны следующие параметры и элементы синтаксиса:  
 
-[_базы данных_ **.** ] _схемы_ **.** _таблицы_ **в** _данных\_файл_ | **out** _данных\_файла_
+[_база данных_ **.** ] _схема_ **.** _Таблица_ **в** файл данных**из** _файладанных\__  |  _\__
 
 - -a *packet_size*  
 Указывает число байтов в каждом сетевом пакете, отправляемом от сервера и к серверу.  
@@ -79,7 +78,7 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 Указывает, что пустые столбцы во время данной операции должны сохранить значение NULL вместо любых вставляемых значений столбцов по умолчанию.  
   
 - -l  
-Указывает время ожидания входа. Параметр -l задает время ожидания (в секундах) для входа в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] при попытке соединения с сервером. По умолчанию время ожидания входа составляет 15 секунд. Время ожидания входа должно быть числом в диапазоне от 0 до 65 534. Если указанное значение не является числом или выходит за пределы указанного диапазона, программа `bcp` выдает сообщение об ошибке. Значение 0 задает бесконечное время ожидания.
+Указывает время ожидания входа. Параметр -l задает время ожидания (в секундах) для входа в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] при попытке соединения с сервером. Время ожидания входа по умолчанию — 15 секунд. Время ожидания входа должно быть числом в диапазоне от 0 до 65 534. Если указанное значение не является числом или выходит за пределы указанного диапазона, программа `bcp` выдает сообщение об ошибке. Значение 0 указывает бесконечное время ожидания.
   
 - -L *last_row*  
 Указывает номер последней строки для экспорта из таблицы или импорта из файла данных.  
@@ -103,7 +102,7 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 Указывает, что массовое копирование в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] данных в денежном формате, в формате даты и времени выполняется с помощью регионального формата, определенного настройками локали клиентского компьютера.  
   
 - -S *server*  
-Указывает имя [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] экземпляр для подключения, либо если -D используется, имя источника данных.  
+Указывает имя [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] экземпляра для подключения, или если используется параметр-D, DSN.  
   
 - -t *field_terminator*  
 Указывает признак конца поля.  

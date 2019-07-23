@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9e9e7c7c6c29847fef54ac3e484e7ed7b1821f4d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 770352acd95fd2fb947e29f79230dedab575602b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801795"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956239"
 ---
 # <a name="overview-of-the-jdbc-driver"></a>Общие сведения о драйвере JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "66801795"
 |[Повторное распространение драйвера Microsoft JDBC](../../connect/jdbc/redistributing-the-microsoft-jdbc-driver.md)|Инструкции по регистрации для повторного распространения драйвер Microsoft JDBC.|  
 |[Поиск дополнительных сведений о драйвере JDBC](../../connect/jdbc/finding-additional-jdbc-driver-information.md)|Информация о том, где найти дополнительные сведения о драйвере Microsoft JDBC, включая ссылки на внешние источники.|  
 |[Матрица поддержки драйвера Microsoft JDBC для SQL Server](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md)|Матрица и политика жизненного цикла поддержки для драйвера Microsoft JDBC Driver for SQL Server.|  
-|[Ответы на вопросы о &#40;часто задаваемые вопросы о&#41; для драйвера JDBC](../../connect/jdbc/frequently-asked-questions-faq-for-jdbc-driver.md)|Часто задаваемые вопросы о драйвере Microsoft JDBC.|  
+|[Часто задаваемые &#40;вопросы&#41; о драйвере JDBC](../../connect/jdbc/frequently-asked-questions-faq-for-jdbc-driver.md)|Часто задаваемые вопросы о драйвере Microsoft JDBC.|  
 |[Зависимости компонентов Microsoft JDBC Driver для SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)|Зависимости компонентов Microsoft JDBC Driver для SQL Server.|
 
 ## <a name="see-also"></a>См. также:  

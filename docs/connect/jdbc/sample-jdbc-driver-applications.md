@@ -1,5 +1,5 @@
 ---
-title: Пример приложений драйвера JDBC | Документация Майкрософт
+title: Примеры приложений драйвера JDBC | Документация Майкрософт
 ms.custom: ''
 ms.date: 07/31/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: e136b87c-a138-45d6-8c3e-bcef94b7e483
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 385a5d46129aac81125e29b182cb5a9fdde13897
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 3227aa1fc886c72b1655fc8ef9770be2c914af3a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797846"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945838"
 ---
 # <a name="sample-jdbc-driver-applications"></a>Образец приложений драйвера JDBC
 
@@ -40,7 +39,7 @@ ms.locfileid: "66797846"
 | [Работа с типами данных (JDBC)](../../connect/jdbc/working-with-data-types-jdbc.md)                 | Эти примеры приложений показывают, как использовать методы драйвера JDPC для работы с различными типами данных в базе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].                                                                                           |
 | [Работа с результирующими наборами](../../connect/jdbc/working-with-result-sets.md)                                   | Эти примеры приложений показывают, как использовать результирующие наборы для обработки данных, содержащихся в базе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].                                                                                                         |
 | [Работа с большими объемами данных](../../connect/jdbc/working-with-large-data.md)                                     | Эти примеры приложений показывают, как использовать адаптивную буферизацию для извлечения данных большого размера из базы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и при этом избежать излишней нагрузки, связанной с использованием серверных курсоров.                                                      |
-| [Обнаружение и классификация данных SQL](../../connect/jdbc/data-discovery-classification-sample.md) | В этом образце приложения показано, как для получения данных обнаружения и классификации информация содержится в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базы данных из объекта ResultSet, с помощью драйвера JDBC.                                      |
+| [Обнаружение и классификация данных SQL](../../connect/jdbc/data-discovery-classification-sample.md) | В этом примере приложения показано, как получить сведения об обнаружении данных и классификации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , содержащиеся в базе данных, из объекта ResultSet с помощью драйвера JDBC.                                      |
   
 ## <a name="see-also"></a>См. также:
 

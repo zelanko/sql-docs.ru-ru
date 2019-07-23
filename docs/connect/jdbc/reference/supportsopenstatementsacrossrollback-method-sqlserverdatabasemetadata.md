@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 4e38b938-f39f-4c5d-9b32-4ba489535c45
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ee68785233d81b69548ffa07a5f6e9cb204d34e5
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 9ea2ba789b3b2d34671f07acad9f5a7e6636326c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66763950"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969066"
 ---
 # <a name="supportsopenstatementsacrossrollback-method-sqlserverdatabasemetadata"></a>Метод supportsOpenStatementsAcrossRollback (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsOpenStatementsAcrossRollback()
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- **значение true,** Если поддерживается. В противном случае — **false**.  
+ **значение true** , если поддерживается. В противном случае — **false**.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод supportsOpenStatementsAcrossRollback указывается с помощью метода supportsOpenStatementsAcrossRollback в интерфейсе java.sql.DatabaseMetaData.  
+ Этот метод supportsOpenStatementsAcrossRollback задается методом supportsOpenStatementsAcrossRollback в интерфейсе Java. SQL. DatabaseMetaData.  
   
 ## <a name="see-also"></a>См. также:  
  [Методы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

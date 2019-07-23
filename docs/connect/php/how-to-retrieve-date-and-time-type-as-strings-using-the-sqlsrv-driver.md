@@ -12,26 +12,25 @@ helpviewer_keywords:
 ms.assetid: 58a974ea-4daf-4e3b-98ed-9731b9c9250f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 11fa40f3cdeb93463f3e5f66975e83e5d12dd6d4
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a8c3fbd475d5f7038d36ba17a9578713c3ed1b53
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797729"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993529"
 ---
 # <a name="how-to-retrieve-date-and-time-types-as-strings-using-the-sqlsrv-driver"></a>Практическое руководство. Получение типов даты и времени в виде строк с помощью драйвера SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-При использовании драйвера SQLSRV для [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], вы можете получить типы даты и времени (**smalldatetime**, **datetime**, **даты**, **время**, **datetime2**, и **datetimeoffset**) как строки, указав следующий параметр в строке подключения или на уровне инструкций:
+При использовании драйвера sqlsrv [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]для можно получить типы даты и времени (**smalldatetime**, **DateTime**, **Date**, **time**, **datetime2**и **DateTimeOffset**) в виде строк, указав следующее. в строке соединения или на уровне инструкции:
 
 ```
 'ReturnDatesAsStrings'=>true
 ```
 
-Значение по умолчанию — **false**. Это означает, что типы **smalldatetime**, **datetime**, **date**, **time**, **datetime2** и **datetimeoffset** возвращаются как объекты [даты и времени PHP](http://php.net/manual/en/class.datetime.php). Если этот параметр имеет значение на уровне инструкций, этот параметр переопределяет параметр уровня подключения.
+Значение по умолчанию — **false**. Это означает, что типы **smalldatetime**, **datetime**, **date**, **time**, **datetime2** и **datetimeoffset** возвращаются как объекты [даты и времени PHP](http://php.net/manual/en/class.datetime.php). Если этот параметр установлен на уровне инструкции, он переопределяет настройку уровня соединения.
 
-Драйвер PDO_SQLSRV возвращает типы даты и времени в виде строки по умолчанию. Чтобы получить их, как объекты PHP DateTime, см. в разделе [как: получить типы даты и времени как PHP Datetime объектов с помощью PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)
+Драйвер PDO_SQLSRV по умолчанию возвращает типы даты и времени в виде строк. Чтобы получить их в виде объектов DateTime PHP, см [. инструкции по извлечению типов даты и времени в виде объектов PHP DateTime с помощью PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)
 
 ## <a name="example"></a>Пример
 Следующий пример показывает синтаксис, указывающий извлечение типов даты и времени в виде строк.
@@ -162,7 +161,7 @@ sqlsrv_close($conn);
 ```
 
 ## <a name="example"></a>Пример
-Параметр ReturnDatesAsStrings на уровне инструкций переопределяет параметр соответствующего подключения.
+Параметр Ретурндатесасстрингс на уровне инструкции переопределяет соответствующий параметр соединения.
 
 ```php
 <?php

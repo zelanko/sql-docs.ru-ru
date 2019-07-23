@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 7bd39d61-7461-443e-a580-753d55ef6903
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cd81d272041b492f4bcb6cbace3d92e518cfacc7
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 2cd126601c0861786ba568d9f1bc4814235b61e1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66793078"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982453"
 ---
 # <a name="getlong-method-javalangstring-sqlserverresultset"></a>Метод getLong (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public long getLong(java.lang.String columnName)
  Значение типа **String**, содержащее имя столбца.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Объект **long** значение.  
+ Значение **типа Long** .  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -52,7 +51,7 @@ public long getLong(java.lang.String columnName)
  Этот метод поддерживается только для типов данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], таких как bigint, int, smallint, tinyint и bit, которые могут безопасно возвращать целочисленные значения. Использование этого метода при работе со столбцами других типов данных приведет к возникновению исключения.  
   
 ## <a name="see-also"></a>См. также:  
- [Метод getLong &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getlong-method-sqlserverresultset.md)   
+ [Метод &#40;Long SQLServerResultSet&#41;](../../../connect/jdbc/reference/getlong-method-sqlserverresultset.md)   
  [Элементы SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Класс SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

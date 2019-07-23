@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 4db67eb7-7ff2-4fb8-8052-39f699de53ff
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0d91d6eae96ed5a12043a2698d2b3f94c7d77ae7
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: bf300da4bf6425028552d5507737cf2495bb402f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66799719"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977761"
 ---
 # <a name="iscasesensitive-method-sqlserverresultsetmetadata"></a>Метод isCaseSensitive (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public boolean isCaseSensitive(int column)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод isCaseSensitive указывается с помощью метода isCaseSensitive в интерфейсе java.sql.ResultSetMetaData.  
+ Этот метод isCaseSensitive задается методом isCaseSensitive в интерфейсе Java. SQL. ResultSetMetaData.  
   
 ## <a name="see-also"></a>См. также:  
  [Методы SQLServerResultSetMetaData](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   

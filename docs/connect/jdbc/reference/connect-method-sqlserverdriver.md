@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 43813a4c-1cc7-4659-ba27-f1786f1371eb
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0e54dedff95332d5ea62dc4dd2a79d9d8e1bec15
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 518be09d4a4929a06866eec253a49a39d7865263
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66777201"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955411"
 ---
 # <a name="connect-method-sqlserverdriver"></a>Метод connect (SQLServerDriver)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public java.sql.Connection connect(java.lang.String Url,
   
  Значение **String**, содержащее URL-адрес, который используется для подключения к базе данных.  
   
- *suppliedProperties*  
+ *супплиедпропертиес*  
   
  Набор пар строковых значений, используемых как аргументы соединения.  
   
@@ -52,7 +51,7 @@ public java.sql.Connection connect(java.lang.String Url,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод connect указывается с помощью метода connect в интерфейсе java.sql.Driver.  
+ Этот метод Connect задается методом Connect в интерфейсе Java. SQL. Driver.  
   
 ## <a name="see-also"></a>См. также:  
  [Методы SQLServerDriver](../../../connect/jdbc/reference/sqlserverdriver-methods.md)   

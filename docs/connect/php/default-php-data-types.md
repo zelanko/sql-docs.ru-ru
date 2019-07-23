@@ -1,5 +1,5 @@
 ---
-title: Default PHP Data Types | Документация Майкрософт
+title: Типы данных PHP по умолчанию | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b66c301d-3d20-45b8-a112-225d8f01c0bd
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 01f611e0c11d6a2f3671c8911d41b4c0cfeef83c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 11026bcb372759f62aa0b0d5f406a6721b65c135
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801482"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993667"
 ---
 # <a name="default-php-data-types"></a>типы данных PHP по умолчанию;
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -47,7 +46,7 @@ ms.locfileid: "66801482"
 |geography|Поток|Двоичная<sup>3</sup>|  
 |geometry|Поток|Двоичная<sup>3</sup>|  
 |изображение<sup>5</sup>|Поток<sup>2</sup>|Двоичная<sup>3</sup>|  
-|ssNoversion|Целочисленный|8-битовый символ<sup>1</sup>|  
+|INT|Целочисленный|8-битовый символ<sup>1</sup>|  
 |money|String|8-битовый символ<sup>1</sup>|  
 |NCHAR|String|8-битовый символ<sup>1</sup>|  
 |NUMERIC|String|8-битовый символ<sup>1</sup>|  
@@ -84,7 +83,7 @@ ms.locfileid: "66801482"
 
 6. Это устаревший тип, соответствующий типу nvarchar(max).
 
-7.  sql_variant не поддерживается в параметрах двунаправленного итератора или выходных данных.
+7.  sql_variant не поддерживается в двунаправленных или выходных параметрах.
 
 8.  Это устаревший тип, соответствующий типу varchar(max).  
   

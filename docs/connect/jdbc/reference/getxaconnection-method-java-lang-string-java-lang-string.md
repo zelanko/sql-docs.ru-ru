@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 276e0093-3d42-4f73-acc4-2b5b98245b40
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: db13bdb3a1039abf1b07616d4cd94001833e3600
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 23ba6bc636e5bc714a606c29a46f7b52ce1bbea4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801711"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977995"
 ---
 # <a name="getxaconnection-method-javalangstring-javalangstring"></a>Метод getXAConnection (java.lang.String, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -52,7 +51,7 @@ public javax.sql.XAConnection getXAConnection(java.lang.String user,
  java.sql.SQLException  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getXAConnection указывается с помощью метода getXAConnection в интерфейсе javax.sql.XADataSource.  
+ Этот метод getXAConnection задается методом getXAConnection в интерфейсе javax. SQL. XADataSource.  
   
 > [!NOTE]  
 >  Этот метод обычно вызывается в реализациях пула соединений XA, а не в обычном коде приложений JDBC.  

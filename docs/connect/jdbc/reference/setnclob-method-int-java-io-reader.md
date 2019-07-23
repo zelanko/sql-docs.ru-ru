@@ -1,5 +1,5 @@
 ---
-title: Метод setNClob (int, java.io.Reader) | Документация Майкрософт
+title: Метод setNClob (int, Java. IO. Reader) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9fc9938c-b821-41c7-8df7-e21cb83a46d4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 34888d11cfdf88936b65aedc210d49e1a049bbc6
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 4abac6b892ae5960e8cafc5f265d6a81081e878b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66800428"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67973783"
 ---
 # <a name="setnclob-method-int-javaioreader"></a>Метод setNClob (int, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

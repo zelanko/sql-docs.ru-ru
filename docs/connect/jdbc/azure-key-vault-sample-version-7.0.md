@@ -9,21 +9,20 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3dc2ea73b7def7bb1e91f56b094bc34af594700b
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 734d69388f644af93d794287174c19c036d278fc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66770362"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957438"
 ---
 # <a name="azure-key-vault-sample"></a>Пример Azure Key Vault
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-## <a name="sample-application-using-azure-key-vault-feature"></a>Пример приложения с помощью функции Azure Key Vault
+## <a name="sample-application-using-azure-key-vault-feature"></a>Пример приложения с использованием функции Azure Key Vault
 
-Это приложение – готов к запуску 7.0 драйвера JDBC и более поздних версий и Azure-Keyvault (версии 1.0.0), Adal4j (версии 1.6.0) и их зависимости.  Можно разрешить базовой зависимости, добавив эти библиотеки к pom-файлу проекта, как описано [здесь](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md):
+Это приложение может быть готово с помощью JDBC Driver 7,0 и более поздних версий и Azure-Keyvault (версия 1.0.0), Adal4j (версия 1.6.0) и их зависимости.  Базовые зависимости можно разрешить, добавив эти библиотеки в файл POM проекта, как описано [здесь](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md):
 
 ```java
 import java.net.URISyntaxException;

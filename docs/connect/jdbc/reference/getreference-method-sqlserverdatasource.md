@@ -1,5 +1,5 @@
 ---
-title: Метод getReference (SQLServerDataSource) | Документация Майкрософт
+title: Метод IsReference (SQLServerDataSource) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: b3fb1a97-86ee-4977-adca-c35ae199dbb3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 50eace66b5f792ce9876d56dab8768555a43392f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: c4774dcda174d5260289409053a892cc4039b4f0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66775605"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980460"
 ---
 # <a name="getreference-method-sqlserverdatasource"></a>Метод getReference (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public javax.naming.Reference getReference()
  Ссылочный объект.  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getReference указывается с помощью метода getReference в интерфейсе javax.naming.Referenceable.  
+ Этот метод IsReference задается методом IsReference в интерфейсе javax. naminging. referenced.  
   
  Если в версиях драйвера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC, предшествующих 3.0, метод SQLServerDataSource.setTrustStorePassword вызывался в объекте SQLServerDataSource, пароль присутствовал в объекте, возвращаемом SQLServerDataSource.getReference, что позволяло использовать объект для создания дополнительных соединений. В версии 3.0 драйвера JDBC необходимо установить пароль для объекта, возвращаемого SQLServerDataSource.getReference, перед установлением соединения с объектом.  
   

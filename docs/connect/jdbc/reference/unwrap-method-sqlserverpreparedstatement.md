@@ -1,5 +1,5 @@
 ---
-title: Метод unwrap (SQLServerPreparedStatement) | Документация Майкрософт
+title: Метод Unwrap (SQLServerPreparedStatement) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8e3ec950-3ac1-4c28-9e97-ddce3bd46578
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 213b3007a968d148cd3e51aa1c10476389683196
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 81e533e32504df219155259e9639c83c3be4c647
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66795605"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67985601"
 ---
 # <a name="unwrap-method-sqlserverpreparedstatement"></a>Метод unwrap (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -31,7 +30,7 @@ public <T> T unwrap(Class<T> iface)
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *iface*  
+ *IFACE*  
   
  Класс типа **T**, определяющий интерфейс.  
   
@@ -48,7 +47,7 @@ public <T> T unwrap(Class<T> iface)
   
  При вызове этого метода объект распаковывается в следующие объекты: [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) и [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).  
   
- Пример кода, см. в разделе [метод unwrap &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md).  
+ Пример кода см. в разделе [распаковка &#40;метода&#41;SQLServerCallableStatement](../../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md).  
   
  Дополнительные сведения см. в разделе [оболочки и интерфейсы](../../../connect/jdbc/wrappers-and-interfaces.md).  
   

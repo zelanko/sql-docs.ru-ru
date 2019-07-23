@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8b048371-e912-4ed1-afd7-436978f48888
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0bad06da093edd83b7df2e1c10f2b68bdca7a210
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: fbe290c558dd8c64605bad0a977657904582c696
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798665"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916259"
 ---
 # <a name="using-database-metadata"></a>Использование метаданных базы данных
 
@@ -26,7 +25,7 @@ ms.locfileid: "66798665"
 
 Чтобы создать объект SQLServerDatabaseMetaData, вы можете использовать метод [getMetaData](../../connect/jdbc/reference/getmetadata-method-sqlserverconnection.md) класса [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) для получения сведений о базе данных, к которой установлено подключение.
 
-В следующем примере открытое соединение с [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] образца базы данных передается в функцию, метод getMetaData класса SQLServerConnection используется для возврата объекта SQLServerDatabaseMetadata, а затем различные методы объекта Объект SQLServerDatabaseMetaData используются для отображения сведений о драйвера, версии драйвера, имени базы данных и версии базы данных.
+В следующем примере открытое соединение с [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] образцом базы данных передается в функцию, метод GetObject класса SQLServerConnection используется для возврата объекта SQLServerDatabaseMetadata, а затем различные методы класса Объект SQLServerDatabaseMetaData используется для вывода сведений о драйвере, версии драйвера, имени базы данных и версии базы данных.
 
 [!code[JDBC#UsingDBMetaData1](../../connect/jdbc/codesnippet/Java/using-database-metadata_1.java)]
 

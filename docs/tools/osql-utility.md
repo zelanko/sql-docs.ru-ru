@@ -23,14 +23,13 @@ helpviewer_keywords:
 ms.assetid: cf530d9e-0609-4528-8975-ab8e08e40b9a
 author: markingmyname
 ms.author: maghan
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 736375fb0877dbe8eac497e269ef8620a871917b
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: cfd8bc56a642442e1a5c5f673ca70bd86eb3ef6b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67731637"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68105750"
 ---
 # <a name="osql-utility"></a>Программа osql
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -96,7 +95,7 @@ C:\>osql
  **-E**  
  Использует доверительное соединение вместо запроса пароля.  
   
- **-S** _server\_имя_[ **\\** _экземпляр\_имя_]  
+ **-S** _имя\_сервера_[ **\\** _имяэкземпляра\__ ]  
  Указывает экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] для подключения. Укажите значение *имя_сервера* , чтобы подключиться к экземпляру компонента [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] по умолчанию на этом сервере. Укажите _имя\_сервера_ **\\** _имя\_экземпляра_, чтобы подключиться к именованному экземпляру [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на этом сервере. Если сервер не указан, программа **osql** устанавливает подключение к используемому по умолчанию экземпляру [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на локальном компьютере. Этот параметр необходим при выполнении программы **osql** с удаленного компьютера в сети.  
   
  **-H** _имя_рабочей_станции_  

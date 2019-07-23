@@ -1,5 +1,5 @@
 ---
-title: updateDateTimeOffset(int) (SQLServerResultSet) | Документация Майкрософт
+title: Метод updatedatetimeoffset (int) (SQLServerResultSet) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 21ec0054-c808-4e88-9c8d-c71b696ce658
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8deb226ee69f91a3b9e12e50c1f6a8b8ec3e6d43
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: caad3533d06ad7c00a4fb2cd8000bdd12c51acdc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66804228"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67999117"
 ---
 # <a name="updatedatetimeoffsetint-microsoftsqldatetimeoffset-sqlserverresultset"></a>updateDateTimeOffset(int, microsoft.sql.DateTimeOffset) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,13 +38,13 @@ public void updateDateTimeOffset(int index, microsoft.sql.DateTimeOffset x)
   
  *x*  
   
- Объект [класс DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) объекта.  
+ Объект [класса DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) .  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Вы можете получить [класс DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) со значением [SQLServerResultSet.getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-sqlserverresultset.md).  
+ Значение [класса DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) можно получить с помощью [SQLServerResultSet. DateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-sqlserverresultset.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Метод updateDateTimeOffset &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatedatetimeoffset-sqlserverresultset.md)   

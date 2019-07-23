@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 8cd810b1-9858-4e51-9535-239d864cd288
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 62dfa8d55e8199df6465cdfab2b62b46fcd1006f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 04f09bcd843946763fe3bb2b69cbdcd9560e7c91
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797681"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975047"
 ---
 # <a name="setboolean-method-sqlservercallablestatement"></a>Метод setBoolean (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,13 +36,13 @@ public void setBoolean(java.lang.String sCol,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *sCol*  
+ *скол*  
   
  Значение типа **String**, содержащее имя параметра.  
   
  *b*  
   
- Объект **логическое** значение, либо **true** или **false**.  
+ **Логическое** значение, **true** или **false**.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

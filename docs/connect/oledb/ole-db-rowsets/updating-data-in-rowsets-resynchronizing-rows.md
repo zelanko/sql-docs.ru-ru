@@ -15,20 +15,19 @@ helpviewer_keywords:
 - data updates [SQL Server], OLE DB
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 39119e4444b22fdbeacbf9c1e1b6db22bbf31a79
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 2f1ea1a563e986914c5fe820740776da129c3b28
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66803799"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994171"
 ---
 # <a name="updating-data-in-rowsets---resynchronizing-rows"></a>Обновление данных в наборах строк — повторная синхронизация строк
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Драйвер OLE DB для SQL Server поддерживает **IRowsetResynch** на [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживаемый курсорами только наборы строк. Интерфейс **IRowsetResynch** не предоставляется по требованию. Пользователь должен запросить этот интерфейс перед открытием набора строк.  
+  Драйвер OLE DB для SQL Server поддерживает **интерфейс irowsetresynch** только для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] наборов строк, поддерживаемых курсором. Интерфейс **IRowsetResynch** не предоставляется по требованию. Пользователь должен запросить этот интерфейс перед открытием набора строк.  
   
 ## <a name="see-also"></a>См. также:  
  [Обновление данных в наборах строк](../../oledb/ole-db-rowsets/updating-data-in-rowsets.md)  

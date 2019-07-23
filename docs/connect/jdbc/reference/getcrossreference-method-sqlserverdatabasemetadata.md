@@ -1,5 +1,5 @@
 ---
-title: Метод getCrossReference (SQLServerDatabaseMetaData) | Документация Майкрософт
+title: Метод Жеткроссреференце (SQLServerDatabaseMetaData) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 099dd0bf-b017-479d-9696-f5b06f4c6bf9
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2fc70ed3e449840793dbd32e4d2014031256f3bd
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: f23da4d83217fbed39e6dddacfe92541eae0db23
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66763013"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984215"
 ---
 # <a name="getcrossreference-method-sqlserverdatabasemetadata"></a>Метод getCrossReference (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -53,7 +52,7 @@ public java.sql.ResultSet getCrossReference(java.lang.String cat1,
   
  Значение типа **String**, содержащее имя таблицы для таблицы, которая содержит первичный ключ.  
   
- *Cat2*  
+ *cat2*  
   
  Значение типа **String**, содержащее имя каталога для таблицы, которая содержит внешний ключ.  
   
@@ -72,7 +71,7 @@ public java.sql.ResultSet getCrossReference(java.lang.String cat1,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getCrossReference указывается с помощью метода getCrossReference в интерфейсе java.sql.DatabaseMetaData.  
+ Этот метод Жеткроссреференце задается методом Жеткроссреференце в интерфейсе Java. SQL. DatabaseMetaData.  
   
  Результирующий набор, возвращаемый методом getCrossReference, включает следующие данные:  
   

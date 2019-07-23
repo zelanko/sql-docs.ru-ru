@@ -1,6 +1,6 @@
 ---
-title: MSSQL-cli | Документация Майкрософт
-description: MSSQL-cli является средством запроса интерактивной командной строки для SQL Server под управлением Windows, macOS или Linux.
+title: MSSQL-CLI | Документация Майкрософт
+description: MSSQL-CLI — это интерактивное средство запроса командной строки для SQL Server, работающее в Windows, macOS или Linux.
 ms.custom: tools|mssql-cli
 ms.date: 02/22/2018
 ms.prod: sql
@@ -9,35 +9,34 @@ ms.prod_service: sql-tools
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 366881379de71f6bab62d1c26025de2174550708
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 35cacae78e93991a340a6d102221547144e1a9ce
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67731655"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68105762"
 ---
-# <a name="mssql-cli-command-line-query-tool-for-sql-server"></a>средство командной строки запроса MSSQL-cli для SQL Server
+# <a name="mssql-cli-command-line-query-tool-for-sql-server"></a>MSSQL-средство запроса командной строки (CLI) для SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-MSSQL-cli является это интерактивное средство командной строки для выполнения запросов к SQL Server, установите его на Windows, macOS или Linux.
+MSSQL-CLI — это интерактивное средство командной строки для запроса SQL Server, установки его в Windows, macOS или Linux.
 
-## <a name="install-mssql-cli"></a>Установка mssql-cli
+## <a name="install-mssql-cli"></a>Установка MSSQL-CLI
 
-Подробные инструкции по установке, см. в разделе [руководство по установке](https://github.com/dbcli/mssql-cli/blob/master/doc/installation_guide.md), или если вы знаете pip, установить, запустив следующую команду:
+Подробные инструкции по установке см. в разделе [руководство по установке](https://github.com/dbcli/mssql-cli/blob/master/doc/installation_guide.md)или если вы умеете установить PIP, выполнив следующую команду:
 
 ```$ pip install mssql-cli```
 
-## <a name="mssql-cli-documentation"></a>Документация по MSSQL-cli
+## <a name="mssql-cli-documentation"></a>Документация по MSSQL-CLI
 
-Документация для mssql-cli находится в [репозиторий GitHub mssql-cli](https://github.com/dbcli/mssql-cli).
+Документация по MSSQL-CLI находится в репозитории [GitHub MSSQL-CLI](https://github.com/dbcli/mssql-cli).
 
-- [Главной страницы и файл сведений](https://github.com/dbcli/mssql-cli)
+- [Главная страница/файл сведений](https://github.com/dbcli/mssql-cli)
 - [Руководство по установке](https://github.com/dbcli/mssql-cli/blob/master/doc/installation_guide.md)
-- [Руководство по обнаружению](https://github.com/dbcli/mssql-cli/blob/master/doc/usage_guide.md)
+- [Рекомендации по использованию](https://github.com/dbcli/mssql-cli/blob/master/doc/usage_guide.md)
 
-Дополнительную документацию находится в [doc папку](https://github.com/dbcli/mssql-cli/tree/master/doc).
+Дополнительная документация находится в [папке doc](https://github.com/dbcli/mssql-cli/tree/master/doc).
 
 
 

@@ -1,5 +1,5 @@
 ---
-title: Метод getProcedures (SQLServerDatabaseMetaData) | Документация Майкрософт
+title: Метод WebMethod (SQLServerDatabaseMetaData) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 66c9a8b0-dc4c-4cbb-8004-c7157368cab4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6e374dd44d25a40953662cada81f6cc3d949f97c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 054ce4f6f646f873d4aff05fbe1d31aa9903ded9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66771094"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980741"
 ---
 # <a name="getprocedures-method-sqlserverdatabasemetadata"></a>Метод getProcedures (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,11 +37,11 @@ public java.sql.ResultSet getProcedures(java.lang.String sCatalog,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *sCatalog*  
+ *скаталог*  
   
  Значение типа **String**, содержащее имя каталога. Задание значения NULL для этого параметра указывает на то, что имя каталога использовать не нужно.  
   
- *sSchema*  
+ *ссчема*  
   
  Значение типа **String**, содержащее шаблон имени схемы. Задание значения NULL для этого параметра указывает на то, что имя схемы использовать не нужно.  
   
@@ -57,7 +56,7 @@ public java.sql.ResultSet getProcedures(java.lang.String sCatalog,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getProcedures указывается методом getProcedures в интерфейсе java.sql.DatabaseMetaData.  
+ Этот метод WebMethod задается методом WebMethod в интерфейсе Java. SQL. DatabaseMetaData.  
   
  Результирующий набор, возвращаемый методом getProcedures, включает следующие данные:  
   

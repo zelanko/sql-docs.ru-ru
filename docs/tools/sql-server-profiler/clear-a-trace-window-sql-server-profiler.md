@@ -1,5 +1,5 @@
 ---
-title: Очистка окна трассировки (SQL Server Profiler) | Документация Майкрософт
+title: Очистить окно трассировки (SQL Server Profiler) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8a9f0892-d812-4173-a498-abc36b230147
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 06b01efe47f01fe895f5ded00941871a37b359df
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: eece3e8477f215b683b6c460b927eaa8121a2d5e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67731535"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68105606"
 ---
 # <a name="clear-a-trace-window-sql-server-profiler"></a>очистить окно трассировки (приложение SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

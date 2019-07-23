@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: b299b20d-d1cd-45b3-91dc-dcf579498570
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c0199a2cbbeb5f01472a17ade1575031c3ad994e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: c36d7980355eed1e1a1e8f42fb53c75fdb70d0ed
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66803207"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976956"
 ---
 # <a name="jdbccompliant-method-sqlserverdriver"></a>Метод jdbcCompliant (SQLServerDriver)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public boolean jdbcCompliant()
  Значение **true**, если драйвер JDBC отвечает минимальным требованиям. В противном случае — **false**.  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод jdbcCompliant указывается в методе jdbcCompliant в интерфейсе java.sql.Driver.  
+ Этот метод jdbcCompliant задается методом jdbcCompliant в интерфейсе Java. SQL. Driver.  
   
 ## <a name="see-also"></a>См. также:  
  [Методы SQLServerDriver](../../../connect/jdbc/reference/sqlserverdriver-methods.md)   

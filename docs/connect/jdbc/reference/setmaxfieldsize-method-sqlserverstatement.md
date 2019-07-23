@@ -1,5 +1,5 @@
 ---
-title: Метод setMaxFieldSize (SQLServerStatement) | Документация Майкрософт
+title: Метод Сетмаксфиелдсизе (SQLServerStatement) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 38f7fc1d-acad-4d10-9fc8-3c0669d93b07
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 373af1b789843ca698bde40c4b4603eb7dbc500f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 8958ffe76adbea75959dd15f87db58f28f0893b2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66768768"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67973998"
 ---
 # <a name="setmaxfieldsize-method-sqlserverstatement"></a>Метод setMaxFieldSize (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +43,7 @@ public final void setMaxFieldSize(int max)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод setMaxFieldSize указывается с помощью метода setMaxFieldSize в интерфейсе java.sql.Statement.  
+ Этот метод Сетмаксфиелдсизе задается методом Сетмаксфиелдсизе в интерфейсе Java. SQL. Statement.  
   
 ## <a name="see-also"></a>См. также:  
  [Элементы SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 6419e5a8-8b3a-4d5b-8226-95865c52c723
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ad7363db0cb1de986273e59d698e2f1b00d50deb
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 08760680774b2e760b66d9e210c4ef939872444e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66779095"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67981777"
 ---
 # <a name="getmoreresults-method-int"></a>Метод getMoreResults (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -53,7 +52,7 @@ public final boolean getMoreResults(int mode)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getMoreResults указывается с помощью метода getMoreResults в интерфейсе java.sql.Statement.  
+ Этот метод getMoreResults задается методом getMoreResults в интерфейсе Java. SQL. Statement.  
   
  Если метод getMoreResults вызван перед получением результатов, то он работает в соответствии со значением аргумента *mode* и переходит к следующему результату.  
   

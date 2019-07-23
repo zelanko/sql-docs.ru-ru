@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: dbcad2e1-7508-49ff-9f6d-db11200d87b6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2f148968bd005d692871c8a2549687451fc3ee33
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: b9499dd3c146aa383f98d7ef67bcf036dd3430b8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66792680"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982183"
 ---
 # <a name="getmaxcolumnsintable-method-sqlserverdatabasemetadata"></a>Метод getMaxColumnsInTable (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public int getMaxColumnsInTable()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getMaxColumnsInTable указывается с помощью метода getMaxColumnsInTable в интерфейсе java.sql.DatabaseMetaData.  
+ Этот метод getMaxColumnsInTable задается методом getMaxColumnsInTable в интерфейсе Java. SQL. DatabaseMetaData.  
   
 ## <a name="see-also"></a>См. также:  
  [Методы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

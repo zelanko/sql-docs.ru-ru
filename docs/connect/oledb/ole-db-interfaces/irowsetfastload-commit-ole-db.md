@@ -1,5 +1,5 @@
 ---
-title: IRowsetFastLoad::Commit (OLE DB) | Документация Майкрософт
+title: 'IRowsetFastLoad:: Commit (OLE DB) | Документация Майкрософт'
 description: IRowsetFastLoad::Commit (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,20 +15,19 @@ helpviewer_keywords:
 - Commit method
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 1c1ac06ce8fe0d76858e10506d4ff6c054517f68
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: d76ad5dc881ab4f31808d738d9beacd85929d279
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66761504"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994408"
 ---
 # <a name="irowsetfastloadcommit-ole-db"></a>IRowsetFastLoad::Commit (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Обозначает конец пакета вставляемых строк и записывает эти строки в таблицу [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Примеры, см. в разделе [массового копирования данных с помощью IRowsetFastLoad &#40;OLE DB&#41; ](../../oledb/ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md) и [отправить данные больших двоичных ОБЪЕКТОВ SQL SERVER с помощью IROWSETFASTLOAD и ISEQUENTIALSTREAM &#40;OLE DB&#41;](../../oledb/ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md).  
+  Обозначает конец пакета вставляемых строк и записывает эти строки в таблицу [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Примеры см. в разделе [групповое копирование данных &#40;using&#41; IRowsetFastLoad OLE DB](../../oledb/ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md) и [Отправка данных большого двоичного объекта в SQL &#40;Server&#41;с помощью IRowsetFastLoad и ISEQUENTIALSTREAM OLE DB](../../oledb/ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -53,7 +52,7 @@ HRESULT Commit(
  Этот метод был вызван применительно к набору строк массового копирования, который ранее стал недействительным в результате выполнения метода **IRowsetFastLoad::Commit**.  
   
 ## <a name="remarks"></a>Remarks  
- Драйвер OLE DB для SQL Server набору строк массового копирования, ведет себя как набор строк в режиме отложенного обновления. По мере вставки пользователем данных строк с помощью набора строк добавленные строки обрабатываются таким же образом, как и ожидающие выполнения вставки для набора строк, поддерживающего **IRowsetUpdate**.  
+ Драйвер OLE DB для SQL Server набора строк с массовым копированием ведет себя как набор строк режима отложенного обновления. По мере вставки пользователем данных строк с помощью набора строк добавленные строки обрабатываются таким же образом, как и ожидающие выполнения вставки для набора строк, поддерживающего **IRowsetUpdate**.  
   
  Пользователь должен вызвать метод **Commit** применительно к набору строк массового копирования, чтобы записать добавленные строки в таблицу [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] таким же образом, как и при использовании метода **IRowsetUpdate::Update** для отправки ожидающих строк в экземпляр SQL Server.  
   

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 169229c7-b75d-498b-a5ac-df300424c909
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4ca7d6f7c664bb175c63c667626f87d67233efb0
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 44c9ab796c6ac0bf0d3cd48429a22d9275c01bfa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66802082"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975991"
 ---
 # <a name="registeroutparameter-method-int-int"></a>Метод registerOutParameter (int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,11 +48,11 @@ public void registerOutParameter(int index,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод registerOutParameter указывается с помощью метода registerOutParameter в интерфейсе java.sql.CallableStatement.  
+ Этот метод registerOutParameter задается методом registerOutParameter в интерфейсе Java. SQL. CallableStatement.  
   
- Начиная с версии [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] версии 3.0 драйвера JDBC, когда *sqlType* имеет тип Java.SQL.types.Time, поведение этого метода изменяется параметром **sendTimeAsDatetime** свойство соединения ([Заданию свойств соединения](../../../connect/jdbc/setting-the-connection-properties.md)) и [SQLServerDataSource.setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md).  
+ Начиная с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] драйвера JDBC 3,0, когда *sqlType* имеет тип Java. SQL. types. Time, поведение этого метода изменяется свойством соединения **сендтимеасдатетиме** ([заданием свойств соединения](../../../connect/jdbc/setting-the-connection-properties.md)) и [ SQLServerDataSource. setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md).  
   
- Дополнительные сведения см. в разделе [java.sql.Time настройке как значения отправляются на сервер](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md).  
+ Дополнительные сведения см. в разделе [Настройка отправки значений Java. SQL. Time на сервер](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Метод registerOutParameter (SQLServerCallableStatement)](../../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md)   

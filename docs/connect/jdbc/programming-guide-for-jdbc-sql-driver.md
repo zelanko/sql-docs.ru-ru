@@ -1,5 +1,5 @@
 ---
-title: Руководство по программированию для драйвера JDBC SQL | Документация Майкрософт
+title: Рекомендации по программированию для драйвера SQL JDBC | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 99f0db69-ce1a-49cf-9c24-0b9abfa4e0c3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 89a1a05011a641f233b637ace2ff02e33a74c6f4
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: db6b49afc2d7a152a2cc24d3b44f0754d043d177
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66794076"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956192"
 ---
 # <a name="programming-guide-for-jdbc-sql-driver"></a>Руководство по программированию для драйвера JDBC для SQL
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

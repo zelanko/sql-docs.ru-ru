@@ -10,21 +10,20 @@ ms.topic: conceptual
 ms.assetid: cac20b18-0a6d-4243-bbda-a5d1b9476441
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 20b63a0ffbe12f43ff943b9588e8392a90cff7e0
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 9724fb48f6ae896d9026bfec63056070e2180a8e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66800804"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992489"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-ruby"></a>Шаг 3. Эксперимент, подразумевающий подключение к SQL с помощью Ruby
 
-В этом примере следует рассматривать подтверждение концепции только.  Пример кода упрощен для ясности и не всегда представляет рекомендации, рекомендуемые корпорацией Майкрософт.  
+Этот пример следует рассматривать только для подтверждения концепции.  Пример кода упрощен для ясности и не обязательно представляет лучшие методики, рекомендованные корпорацией Майкрософт.  
   
-## <a name="step-1--connect"></a>Шаг 1: подключение  
+## <a name="step-1--connect"></a>Шаг 1. подключение  
   
-[TinyTDS::Client](https://github.com/rails-sqlserver/tiny_tds) функция используется для подключения к базе данных SQL.  
+Функция [TinyTDS:: Client](https://github.com/rails-sqlserver/tiny_tds) используется для подключения к базе данных SQL.  
   
 ``` ruby
     require 'tiny_tds'  
@@ -35,11 +34,11 @@ ms.locfileid: "66800804"
   
 ## <a name="step-2--execute-a-query"></a>Шаг 2. Выполнение запроса  
   
-Скопируйте и вставьте следующий код в пустой файл. Назовите его test.rb. Затем выполните его, введя следующую команду в командной строке:  
+Скопируйте и вставьте следующий код в пустой файл. Вызовите его Test. RB. Затем выполните его, введя следующую команду в командной строке:  
   
     ruby test.rb  
   
-В образце кода [TinyTds::Result](https://github.com/rails-sqlserver/tiny_tds) функция используется для извлечения результирующего набора из запроса к базе данных SQL. Эта функция принимает запрос и возвращает результирующий набор. Набор результатов выполняется итерация с помощью [result.each do | строка |](https://github.com/rails-sqlserver/tiny_tds).  
+В примере кода функция [TinyTds:: result](https://github.com/rails-sqlserver/tiny_tds) используется для получения результирующего набора из запроса к базе данных SQL. Эта функция принимает запрос и возвращает результирующий набор. Результаты передаются по результирующему набору [. каждый из них выполняет | Row |](https://github.com/rails-sqlserver/tiny_tds).  
   
 ``` ruby 
     require 'tiny_tds'    
@@ -53,13 +52,13 @@ ms.locfileid: "66800804"
     end  
 ```  
   
-## <a name="step-3--insert-a-row"></a>Шаг 3: Вставка строки  
+## <a name="step-3--insert-a-row"></a>Шаг 3. Вставка строки  
   
-В этом примере показано, как выполнить [вставить](../../t-sql/statements/insert-transact-sql.md) инструкции безопасно, передать параметры для защиты от атак [путем внедрения кода SQL](../../relational-databases/tables/primary-and-foreign-key-constraints.md) значение.    
+В этом примере вы узнаете, как безопасно выполнить инструкцию [INSERT](../../t-sql/statements/insert-transact-sql.md) , передав параметры, которые защищают приложение от [внедрения кода SQL](../../relational-databases/tables/primary-and-foreign-key-constraints.md) .    
   
-Чтобы использовать TinyTDS с Azure, рекомендуется выполнить несколько `SET` инструкции, чтобы изменить способ обработки определенной информации в текущий сеанс. Рекомендуется `SET` инструкции приведены в следующем образце кода. Например `SET ANSI_NULL_DFLT_ON` позволит новых столбцов, созданных допустимы значения null, даже если допустимость нулевых значений в столбце не указана явным образом.  
+Чтобы использовать TinyTDS с Azure, рекомендуется выполнить несколько `SET` инструкций, чтобы изменить способ обработки определенных сведений в текущем сеансе. Рекомендуемые `SET` инструкции приведены в примере кода. Например, позволяет `SET ANSI_NULL_DFLT_ON` создавать новые столбцы, допускающие значения NULL, даже если не указано явное состояние допустимости значений NULL в столбце.  
   
-В соответствии с Microsoft SQL Server [datetime](../../t-sql/data-types/datetime-transact-sql.md) форматирования, используйте [strftime](https://ruby-doc.org/core-2.2.0/Time.html#method-i-strftime) функция для приведения в соответствующий формат даты и времени.  
+Чтобы выполнить согласование с форматом Microsoft SQL Server [DateTime](../../t-sql/data-types/datetime-transact-sql.md) , используйте функцию [strftime](https://ruby-doc.org/core-2.2.0/Time.html#method-i-strftime) для приведения к соответствующему формату даты и времени.  
   
 ``` ruby
     require 'tiny_tds'  

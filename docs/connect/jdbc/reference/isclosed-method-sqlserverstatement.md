@@ -1,5 +1,5 @@
 ---
-title: Метод isClosed (SQLServerStatement) | Документация Майкрософт
+title: Метод OnClose (SQLServerStatement) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: e79b5b53-16b0-42a3-be4e-542a77a21e12
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5e801fe11bcf26fd474290f7cac8c660b40e5b0b
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: fe4d41448fdd65d3cb4a56f873432e747f564ef6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796556"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977702"
 ---
 # <a name="isclosed-method-sqlserverstatement"></a>Метод isClosed (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,7 +36,7 @@ public boolean isClosed()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод isClosed указывается с помощью метода isClosed в интерфейсе java.sql.Statement.  
+ Этот метод был указан методом OnClose в интерфейсе Java. SQL. Statement.  
   
 ## <a name="see-also"></a>См. также:  
  [Элементы SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

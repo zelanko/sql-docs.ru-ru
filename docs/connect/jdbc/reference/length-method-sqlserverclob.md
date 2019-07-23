@@ -1,5 +1,5 @@
 ---
-title: Метод Length (SQLServerClob) | Документация Майкрософт
+title: Метод length (SQLServerClob) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 18bea01e-7d3d-40aa-961f-2318513fab1c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d46824b0d49bd359c748d4ab9ab33f5d4b29958d
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 634e38cf6dabea5ffb65ebb3d8c442fc0b844f6a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66791755"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976874"
 ---
 # <a name="length-method-sqlserverclob"></a>Метод length (SQLServerClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public long length()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод Длина указывается длина методом в интерфейсе java.sql.Clob.  
+ Этот метод длины задается методом Length в интерфейсе Java. SQL. CLOB.  
   
 ## <a name="see-also"></a>См. также:  
  [Методы SQLServerClob](../../../connect/jdbc/reference/sqlserverclob-methods.md)   

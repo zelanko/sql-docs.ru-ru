@@ -10,24 +10,23 @@ ms.topic: conceptual
 ms.assetid: 2195ec6b-3cd1-4e57-90ba-89d111e20ea4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 31f365292a58aabc852f28cc1bd4b5cd737d94de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e3bed8e642cb480c403c3cb1596a6e0e0fd0a9c2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66773383"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67972608"
 ---
 # <a name="setstring-method-sqlservernclob"></a>Метод setString (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Записывает указанный **строка** для **NCLOB** начиная с указанной позиции.  
+  Записывает указанную **строку** в **NCLOB** , начиная с указанной позиции.  
   
 ## <a name="overload-list"></a>Список перегрузок  
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[Метод setString (long, java.lang.String) в SQLServerNClob](../../../connect/jdbc/reference/setstring-method-long-java-lang-string-sqlservernclob.md)|Записывает указанный **строка** для **NCLOB** начиная с указанной позиции.|  
+|[Метод setString (long, java.lang.String) в SQLServerNClob](../../../connect/jdbc/reference/setstring-method-long-java-lang-string-sqlservernclob.md)|Записывает указанную **строку** в **NCLOB** , начиная с указанной позиции.|  
 |[Метод setString (long, java.lang.String, int, int) (SQLServerNClob)](../../../connect/jdbc/reference/setstring-method-long-java-lang-string-int-int-sqlservernclob.md)|Записывает указанную строку в NCLOB, начиная с указанного положения на основе заданного смещения и длины.|  
   
 ## <a name="see-also"></a>См. также:  

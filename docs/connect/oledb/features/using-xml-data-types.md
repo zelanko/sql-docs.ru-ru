@@ -30,13 +30,12 @@ helpviewer_keywords:
 - COLUMNS rowset
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 8de7c74e41a3f61105c7b70cc453ee8d361ba7ff
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 0d3554363e4813dfb4b3f6cbeefec00214d5a2d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796066"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67988789"
 ---
 # <a name="using-xml-data-types"></a>Использование типов данных XML
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,7 +58,7 @@ ms.locfileid: "66796066"
  `INSERT INTO xmltable(xmlcol) VALUES(N'<?xml version="1.0" encoding="UTF-8"?><doc/>')`  
   
 ## <a name="ole-db-driver-for-sql-server"></a>Драйвер OLE DB для SQL Server 
- DBTYPE_XML — это новый тип данных, относящиеся к XML в драйвере OLE DB для SQL Server. Кроме того, к XML-данным можно получить доступ через существующие типы OLE DB: DBTYPE_BYTES, DBTYPE_WSTR, DBTYPE_BSTR, DBTYPE_XML, DBTYPE_STR, DBTYPE_VARIANT и DBTYPE_IUNKNOWN. Данные, хранимые в столбцах типа XML, можно получить из столбца в наборе строк драйвера OLE DB для SQL Server в следующих форматах:  
+ DBTYPE_XML — это новый тип данных, относящийся к XML в драйвере OLE DB для SQL Server. Кроме того, к XML-данным можно получить доступ через существующие типы OLE DB: DBTYPE_BYTES, DBTYPE_WSTR, DBTYPE_BSTR, DBTYPE_XML, DBTYPE_STR, DBTYPE_VARIANT и DBTYPE_IUNKNOWN. Данные, хранимые в столбцах типа XML, можно получить из столбца в наборе строк драйвера OLE DB для SQL Server в следующих форматах:  
   
 -   Текстовая строка.  
   
@@ -68,7 +67,7 @@ ms.locfileid: "66796066"
 > [!NOTE]  
 >  Драйвер OLE DB для SQL Server не включает в себя функции чтения SAX, но интерфейс **ISequentialStream** легко передать объектам SAX и DOM в MSXML.  
   
- Для получения больших XML-документов следует использовать интерфейс **ISequentialStream**. При работе с типами больших значений в XML используются те же технологии, что и для работы с другими типами больших значений. Дополнительные сведения см. в разделе [использование типов больших значений](../../oledb/features/using-large-value-types.md).  
+ Для получения больших XML-документов следует использовать интерфейс **ISequentialStream**. При работе с типами больших значений в XML используются те же технологии, что и для работы с другими типами больших значений. Дополнительные сведения см. [в разделе Использование типов больших значений](../../oledb/features/using-large-value-types.md).  
   
  Приложение может также получать, вставлять и изменять данные, хранящиеся в столбцах типа XML в наборе строк, через обычные интерфейсы, такие как **IRow::GetColumns**, **IRowChange::SetColumns** и **ICommand::Execute**. Как и в случае с получением, приложение может передавать текстовую строку или интерфейс **ISequentialStream** драйверу OLE DB для SQL Server.  
   
@@ -126,7 +125,7 @@ ms.locfileid: "66796066"
   
  Преобразование данных, выполняемое основными службами OLE DB (**IDataConvert**), неприменимо к типу DBTYPE_XML.  
   
- Проверка производится при отсылке данных на сервер. Проверка на стороне клиента и кодирование изменения должны обрабатываться в приложении. Рекомендуется, чтобы не обрабатывать XML-данных непосредственно, но вместо этого следует использовать модуль чтения DOM или SAX для его обработки.  
+ Проверка производится при отсылке данных на сервер. Изменения в отношении проверки и кодирования на стороне клиента должны обрабатываться приложением. Рекомендуется не обрабатывать XML-данные напрямую, но вместо этого следует использовать средство чтения DOM или SAX для их обработки.  
   
  Типы DBTYPE_NULL и DBTYPE_EMPTY могут быть привязаны только для входных параметров. Они не могут быть привязаны для выходных параметров или результатов. При привязке входных параметров следует установить состояние DBSTATUS_S_ISNULL или DBSTATUS_S_DEFAULT.  
   
@@ -135,7 +134,7 @@ ms.locfileid: "66796066"
  Привязка DBTYPE_IUNKNOWN поддерживается, как показано в приведенной выше таблице, но преобразований между типами DBTYPE_XML и DBTYPE_IUNKNOWN не существует. DBTYPE_IUNKNOWN нельзя использовать с DBTYPE_BYREF.  
   
 ### <a name="ole-db-rowset-additions-and-changes"></a>Добавления и изменения для наборов строк OLE DB  
- Драйвер OLE DB для SQL Server добавляет новые значения или изменяет многие из основных наборов строк схемы OLE DB.  
+ Драйвер OLE DB для SQL Server добавляет новые значения или изменения во многие основные OLE DB наборы строк схемы.  
   
 #### <a name="the-columns-and-procedureparameters-schema-rowsets"></a>Наборы строк схем COLUMNS и PROCEDURE_PARAMETERS  
  К наборам строк схем COLUMNS и PROCEDURE_PARAMETERS добавлены следующие столбцы:  
@@ -167,7 +166,7 @@ ms.locfileid: "66796066"
 |DBSCHEMA_XML_COLLECTIONS|4|SCHEMACOLLECTION_CATALOGNAME<br /><br /> SCHEMACOLLECTION_SCHEMANAME<br /><br /> SCHEMACOLLECTIONNAME<br /><br /> TARGETNAMESPACEURI|  
   
 ### <a name="ole-db-property-set-additions-and-changes"></a>Добавления и изменения для наборов свойств OLE DB  
- Драйвер OLE DB для SQL Server добавляет новые значения или изменяет многие из основных свойств OLE DB наборов.  
+ Драйвер OLE DB для SQL Server добавляет новые значения или изменения во многие из основных наборов свойств OLE DB.  
   
 #### <a name="the-dbpropsetsqlserverparameter-property-set"></a>Набор свойств DBPROPSET_SQLSERVERPARAMETER  
  Для поддержки типа данных **xml** при работе через OLE DB драйвер OLE DB для SQL Server реализует новый набор свойств DBPROPSET_SQLSERVERPARAMETER, содержащий следующие значения:  
@@ -190,7 +189,7 @@ ms.locfileid: "66796066"
  Подобно значениям SSPROP_PARAM, все эти свойства являются необязательными и по умолчанию пусты. SSPROP_COL_XML_SCHEMACOLLECTION_CATALOGNAME и SSPROP_COL_XML_SCHEMACOLLECTION_SCHEMANAME можно задавать только при заданном свойстве SSPROP_COL_XML_SCHEMACOLLECTIONNAME. При передаче данных в формате XML на сервер, если эти значения включены, они будут проверены на существование (допустимость) в текущей базе данных, а экземпляр данных проверяется по схеме. Во всех случаях, чтобы данные были допустимыми, эти столбцы должны быть все одновременно пусты или все одновременно заполнены.  
   
 ### <a name="ole-db-interface-additions-and-changes"></a>Добавления и изменения для интерфейсов OLE DB  
- Драйвер OLE DB для SQL Server добавляет новые значения или изменяет многие из основных интерфейсов OLE DB.  
+ Драйвер OLE DB для SQL Server добавляет новые значения или изменения во многие основные OLE DB интерфейсы.  
   
 #### <a name="the-isscommandwithparameters-interface"></a>Интерфейс ISSCommandWithParameters  
  Для поддержки типа данных **xml** при работе через OLE DB драйвер OLE DB для SQL Server содержит ряд изменений, в том числе в него добавлен интерфейс [ISSCommandWithParameters](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md). Этот новый интерфейс наследует основной интерфейс OLE DB — **ICommandWithParameters**. Помимо трех методов, наследуемых от интерфейса **ICommandWithParameters** — **GetParameterInfo**, **MapParameterNames** и **SetParameterInfo**, — интерфейс **ISSCommandWithParameters** содержит методы [GetParameterProperties](../../oledb/ole-db-interfaces/isscommandwithparameters-getparameterproperties-ole-db.md) и [SetParameterProperties](../../oledb/ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md), которые используются для обработки серверных типов данных.  

@@ -10,20 +10,19 @@ ms.topic: conceptual
 ms.assetid: 32b7217e-1f0c-473d-9a45-176daa81584e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6f0c1dae13912ea1eda5747e4646d92b803c01cf
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: af528f507f39cde948ae269d58abb2c0d9dcce46
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798282"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004277"
 ---
 # <a name="supporting-xml-data"></a>Поддержка XML-данных
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] содержит тип данных **xml**, который позволяет хранить XML-документы и фрагменты в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Тип данных **xml** — это встроенный в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип данных, несколько напоминающий другие встроенные типы данных, такие как **int** и **varchar**. Аналогично другим встроенным типам, тип данных **xml** можно использовать следующим образом: как тип переменной, тип параметра, тип возвращаемой функции или тип столбца при создании таблицы, а также в функциях CAST и CONVERT [!INCLUDE[tsql](../../includes/tsql-md.md)]. В драйвере JDBC тип данных **xml** может быть сопоставлен со строкой, байтовым массивом, потоком или объектом CLOB, BLOB или SQLXML. Строка является средством сопоставления по умолчанию.  
   
- Драйвер JDBC обеспечивает поддержку API JDBC 4.0, который реализует интерфейс SQLXML. Интерфейс SQLXML определяет методы для обмена данными XML и их обработки. **SQLXML** является типом данных JDBC 4.0 и сопоставляется с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **xml** тип данных. Следовательно, для использования типа данных SQLXMLв приложениях необходимо задать путь к классу, включающий файл sqljdbc4.jar. Если приложение использует файл sqljdbc3.jar при обращении к объекту SQLXML и его методам, возникает исключение.  
+ Драйвер JDBC обеспечивает поддержку API JDBC 4.0, который реализует интерфейс SQLXML. Интерфейс SQLXML определяет методы для обмена данными XML и их обработки. **SQLXML** — это тип данных JDBC 4,0, который сопоставляется с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]типом данных **XML** . Следовательно, для использования типа данных SQLXMLв приложениях необходимо задать путь к классу, включающий файл sqljdbc4.jar. Если приложение использует файл sqljdbc3.jar при обращении к объекту SQLXML и его методам, возникает исключение.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] всегда производит проверку XML-данных, прежде чем сохранить их в столбце базы данных. В приложениях можно использовать тип данных **SQLXML**, так как драйвер JDBC автоматически сопоставляет его с типом данных **xml**. Поддержка типа данных **SQLXML** доступна в пакете sqljdbc4.jar. Список версий JRE-файлов, поддерживаемых [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], см. в разделе [Требования к системе для драйвера JDBC](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  

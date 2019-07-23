@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: f0f798c8-cafb-4acc-b85d-2e0059c91d92
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c63c526aed7bfae6027f3a9aa028bc2a2e20fbef
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 5424de7d0d6f7bda44ec61ea61f48d63bb097c97
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66799649"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67973206"
 ---
 # <a name="setpoolable-method-sqlserverstatement"></a>Метод setPoolable (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -31,7 +30,7 @@ public void setPoolable(boolean poolable) throws SQLException
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *поддерживает пулы*  
+ *поддерживает*  
   
  Если задано значение **true**, запрашивается поддержка пулов в инструкции. Если задано значение **false**, запрашивается запрет пулов в инструкции.  
   
@@ -43,7 +42,7 @@ public void setPoolable(boolean poolable) throws SQLException
   
  Значение пула инструкций применяется к внутренним кэшам инструкций, реализованным в драйвере, и внешним кэшам инструкций, реализованным на серверах приложений и в других приложениях.  
   
- По умолчанию объект SQLServerStatement не поддерживает пулы, при создании. Объекты, SQLServerPreparedStatement и SQLServerCallableStatement, поддерживают.  
+ По умолчанию объект SQLServerStatement не может быть в пуле при создании. Объекты SQLServerPreparedStatement и SQLServerCallableStatement могут быть объединены в пул при создании.  
   
  Если этот метод вызывается для закрытой инструкции, создается исключение [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md).  
   

@@ -1,6 +1,6 @@
 ---
 title: Использование типов больших значений | Документация Майкрософт
-description: Использование типов больших значений с помощью драйвера OLE DB для SQL Server
+description: Использование типов больших значений с драйвером OLE DB для SQL Server
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -16,13 +16,12 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, large value data types
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: a8dafb5c74322c1232f71a7fe2f00b38005a536c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 2847838b37a9f5c233f649b6a712d4c0b2d150f4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66802876"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67988865"
 ---
 # <a name="using-large-value-types"></a>Использование типов больших значений
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "66802876"
 > [!NOTE]  
 >  Типы больших значений могут иметь максимальный размер от 1 до 8 КБ или они могут быть указаны как неограниченные.  
   
- Ранее только типы данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **text**, **ntext** и **image** могли достигать такой длины. Описатель **max** для типов данных **varchar**, **nvarchar** и **varbinary** сделали эти типы данных избыточными. Однако поскольку типы данных большой длины до сих пор доступны, большинство интерфейсов к компонентам доступа к данным OLE DB остаются теми же. Для обеспечения обратной совместимости с использованием предыдущих версий флаг DBCOLUMNFLAGS_ISLONG в драйвере OLE DB для SQL Server продолжает использоваться. Поставщики и драйверы, предназначенные для [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] и более поздних версий, продолжают использовать эти термины для новых типов при задании неограниченной максимальной длины.  
+ Ранее только типы данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **text**, **ntext** и **image** могли достигать такой длины. Описатель **max** для типов данных **varchar**, **nvarchar** и **varbinary** сделали эти типы данных избыточными. Однако поскольку типы данных большой длины до сих пор доступны, большинство интерфейсов к компонентам доступа к данным OLE DB остаются теми же. Для обеспечения обратной совместимости с предыдущими выпусками флаг DBCOLUMNFLAGS_ISLONG в драйвере OLE DB для SQL Server остается в использовании. Поставщики и драйверы, предназначенные для [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] и более поздних версий, продолжают использовать эти термины для новых типов при задании неограниченной максимальной длины.  
   
 > [!NOTE]  
 >  Типы данных **varchar(max)** , **nvarchar(max)** и **varbinary(max)** можно также указывать в качестве типов входных и выходных параметров хранимых процедур, типов возвращаемых значений функций или в функциях [CAST и CONVERT](../../../t-sql/functions/cast-and-convert-transact-sql.md).  
@@ -63,7 +62,7 @@ ms.locfileid: "66802876"
   
 -   Выполните привязку, указав тип DBTYPE_IUNKNOWN, и используйте потоковую передачу.  
   
- Когда сообщает максимальный размер столбца, получит драйвера OLE DB для SQL Server.  
+ При создании отчета о максимальном размере столбца Драйвер OLE DB для SQL Server выдаст следующее сообщение:  
   
 -   заданный максимальный размер, например 2000 для столбца **varchar(** 2000 **)** ; или  
   
@@ -691,7 +690,7 @@ _ExitProcessResultSet:
 }  
 ```  
   
- Дополнительные сведения о том, как драйвер OLE DB для SQL Server предоставляет типы данных больших значений, см. в разделе [большие двоичные объекты и объекты OLE](../../oledb/ole-db-blobs/blobs-and-ole-objects.md).  
+ Дополнительные сведения о том, как драйвер OLE DB для SQL Server предоставляет типы данных больших значений, см. в разделе объекты [BLOB и OLE](../../oledb/ole-db-blobs/blobs-and-ole-objects.md).  
 
   
 ## <a name="see-also"></a>См. также:  

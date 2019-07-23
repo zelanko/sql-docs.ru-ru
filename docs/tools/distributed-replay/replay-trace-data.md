@@ -1,5 +1,5 @@
 ---
-title: Воспроизведения данных трассировки | Документация Майкрософт
+title: Воспроизвести данные трассировки | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 19ff5285-fb9d-4fd1-97c4-ec72c311c384
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8717043764d67ab16217da7beecdc7bfee6515c3
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 7495e00200455be05b621124c0276d07727d58cb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67729343"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949959"
 ---
 # <a name="replay-trace-data"></a>Воспроизведение данные трассировки
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -24,7 +23,7 @@ ms.locfileid: "67729343"
   
  Параметр **replay** инструмента администрирования используется для инициирования этапа воспроизведения событий при распределенном воспроизведении. Этот этап состоит из двух частей: передача данных трассировки и запуски и синхронизация распределенного воспроизведения.  
   
- ![Распределенное воспроизведение событий](../../tools/distributed-replay/media/eventreplay.gif "распределенное воспроизведение событий")  
+ ![Воспроизведение распределенных событий](../../tools/distributed-replay/media/eventreplay.gif "Воспроизведение распределенных событий")  
   
  Данные трассировки можно воспроизводить в одном из двух режимов последовательного выполнения: в режиме нагрузки и режиме синхронизации. По умолчанию используется воспроизведение данных трассировки в режиме нагрузки. Дополнительные сведения об этапе воспроизведения событий и режимах последовательного выполнения см. в разделе [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md).  
   

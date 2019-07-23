@@ -1,5 +1,5 @@
 ---
-title: PDO::Exec | Документация Майкрософт
+title: 'PDO:: Exec | Документация Майкрософт'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 359a87c6-c13a-4518-8f23-a922e7f3b171
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5b6d3341dd3ade106495c606896b6496a9bc2f6c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 4ac158f9005f66e49082b6be288c35f96b527f39
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66762133"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993275"
 ---
 # <a name="pdoexec"></a>PDO::exec
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

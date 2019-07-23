@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 5d490edc-a223-4870-a838-784952497e5f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d102885fc235a66f5d42b7ae5100bc8905d895d2
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 8e3affcbb2181cf8979196c65a0bcd81e58c541e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66788114"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67973281"
 ---
 # <a name="setpacketsize-method-sqlserverdatasource"></a>Метод setPacketSize (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public void setPacketSize(int packetSize)
   
  Кроме того, приложению может понадобиться задавать свойство packetSize без запроса шифрования SSL. В этом случае, если сервер требует от клиента поддержку шифрования SSL, драйвер проверяет размер записи SSL поставщика безопасности по умолчанию для JVM. Если свойство packetSize превышает размер записи SSL поставщика безопасности по умолчанию для JVM, то драйвер вызывает ошибку и завершает соединение.  
   
- Дополнительные сведения об использовании SSL см. в разделе [с помощью SSL-шифрование](../../../connect/jdbc/using-ssl-encryption.md).  
+ Дополнительные сведения об использовании SSL см. в разделе [использование SSL-шифрования](../../../connect/jdbc/using-ssl-encryption.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Элементы SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

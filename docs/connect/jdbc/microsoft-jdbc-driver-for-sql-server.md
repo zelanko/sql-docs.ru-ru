@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: baf420ab-c058-4cec-a673-d7cb6397210e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f55ff68ff0e3e4fca63fa284e25fa0c4c0ae4d86
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a12209cc5782c0134c4e14723d7ce73049db1ddd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801835"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956325"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server"></a>Драйвер Microsoft JDBC для SQL Server
 
@@ -41,7 +40,7 @@ ms.locfileid: "66801835"
 * [Повышение производительности и надежности с помощью драйвера JDBC](improving-performance-and-reliability-with-the-jdbc-driver.md)  
 * [Устранение неполадок](diagnosing-problems-with-the-jdbc-driver.md)
 * [Примеры кода](sample-jdbc-driver-applications.md)
-* [Соответствие требованиям и юридические аспекты](compliance-and-legal-for-the-jdbc-sql-driver.md)  
+* [Соответствие и юридическая информация](compliance-and-legal-for-the-jdbc-sql-driver.md)  
   
 ## <a name="community"></a>Сообщество
 
@@ -49,13 +48,13 @@ ms.locfileid: "66801835"
   
 ## <a name="download"></a>Загрузить
 
-[Скачайте Microsoft JDBC Driver для SQL Server](download-microsoft-jdbc-driver-for-sql-server.md) -имеющим дополнительную информацию о проектах и многое другое.
+[Скачайте драйвер Microsoft JDBC Driver для SQL Server](download-microsoft-jdbc-driver-for-sql-server.md) — содержит дополнительные сведения о проектах Maven и многое другое.
   
 ## <a name="samples"></a>Примеры  
 
 * [Пример приложений драйвера JDBC](sample-jdbc-driver-applications.md)  
-* [Приступая к работе с Java в Windows](https://www.microsoft.com/sql-server/developer-get-started/java/windows/)
-* [Начало работы с Java в macOS](https://www.microsoft.com/sql-server/developer-get-started/java/mac/)
-* [Приступая к работе с Java на Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/java/ubuntu/)
-* [Приступая к работе с Java на Red Hat Enterprise Linux (RHEL)](https://www.microsoft.com/sql-server/developer-get-started/java/rhel/)
-* [Приступая к работе с Java на базе SUSE Linux Enterprise Server (SLES)](https://www.microsoft.com/sql-server/developer-get-started/java/sles/)
+* [начало работы с Java в Windows](https://www.microsoft.com/sql-server/developer-get-started/java/windows/)
+* [начало работы с Java в macOS](https://www.microsoft.com/sql-server/developer-get-started/java/mac/)
+* [начало работы с Java в Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/java/ubuntu/)
+* [Начало работы с Java на Red Hat Enterprise Linux (RHEL)](https://www.microsoft.com/sql-server/developer-get-started/java/rhel/)
+* [Начало работы с Java на SUSE Linux Enterprise Server (SLES)](https://www.microsoft.com/sql-server/developer-get-started/java/sles/)

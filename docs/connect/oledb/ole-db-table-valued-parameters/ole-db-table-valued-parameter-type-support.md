@@ -12,13 +12,12 @@ helpviewer_keywords:
 - table-valued parameters (OLE DB), API support (OLE DB)
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: fd7b37d6f23aeecc9c9405cd2e31f23173db7809
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: abff9abb82ad0ff54d9b1126541b98babbd6bd76
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801126"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015280"
 ---
 # <a name="ole-db-table-valued-parameter-type-support"></a>Поддержка типа возвращающего табличное значение параметра OLE DB
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "66801126"
   В этой статье описывается поддержка типов OLE DB для параметров, возвращающих табличные значения.  
   
 ## <a name="table-valued-parameter-rowset-object"></a>Объект набора строк параметра, возвращающего табличное значение  
- Можно создать специальный объект набора строк для параметров, возвращающих табличное значение. Создание объекта набора строк возвращающего табличное значение параметра с помощью ITableDefinitionWithConstraints::CreateTableWithConstraints или идентификаторах. Для этого установите элемент *eKind* параметра *pTableID* в значение DBKIND_GUID_NAME и укажите CLSID_ROWSET_INMEMORY как элемент *guid*. Имя типа сервера для возвращающих табличные значения параметра необходимо указать в *pwszName* членом *pTableID* при использовании IOpenRowset::OpenRowset. Объекта набора строк возвращающего табличное значение параметра ведет себя как обычный драйвер OLE DB для SQL Server объекта.  
+ Можно создать специальный объект набора строк для параметров, возвращающих табличное значение. Объект набора строк возвращающего табличное значение параметра создается с помощью Итабледефинитионвисконстраинтс:: Креатетаблевисконстраинтс или IOpenRowset:: OpenRowset. Для этого установите элемент *eKind* параметра *pTableID* в значение DBKIND_GUID_NAME и укажите CLSID_ROWSET_INMEMORY как элемент *guid*. Имя типа сервера для возвращающего табличное значение параметра должно быть указано в *pwszName* члене *PTableID* при использовании IOpenRowset:: OPENROWSET. Объект набора строк возвращающего табличное значение параметра ведет себя как обычный драйвер OLE DB для SQL Server объекта.  
   
 ```  
 const GUID CLSID_ROWSET_TVP =   
@@ -59,10 +58,10 @@ CoType RowsetTVP
  Прямые и обратные преобразования в тип DBTYPE_TABLE для каких-либо других типов не поддерживаются. Метод IConvertType::CanConvert возвращает значение S_FALSE для неподдерживаемого преобразования применительно к любому запросу, отличному от преобразования DBTYPE_TABLE в DBTYPE_TABLE. При этом предполагается использование параметра DBCONVERTFLAGS_PARAMETER объекта Command.  
   
 ## <a name="methods"></a>Методы  
- Сведения о методах OLE DB, которые поддерживают возвращающие табличные значения параметры, см. в разделе [OLE DB Table-Valued параметр типа поддержки &#40;методы&#41;](../../oledb/ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-methods.md).  
+ Дополнительные сведения о методах OLE DB, которые поддерживают возвращающие табличное значение параметры, OLE DB см. в разделе [методы &#40;&#41;поддержки типов](../../oledb/ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-methods.md)возвращающих табличное значение параметров.  
   
 ## <a name="properties"></a>Свойства  
- Сведения о свойствах OLE DB, которые поддерживают возвращающие табличные значения параметры, см. в разделе [OLE DB Table-Valued параметр типа поддержки &#40;свойства&#41;](../../oledb/ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-properties.md).  
+ Дополнительные сведения о OLE DB свойствах, поддерживающих возвращающие табличное значение параметры, см. в разделе OLE DB тип возвращающего табличное значение [параметра Поддержка &#40;свойств&#41;](../../oledb/ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-properties.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Возвращающие табличные значения параметры &#40;OLE DB&#41;](../../oledb/ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   

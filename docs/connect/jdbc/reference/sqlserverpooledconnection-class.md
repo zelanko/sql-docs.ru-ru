@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4c87e9d3-904a-4b86-90cc-3684034c86ee
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5cb094f135bb5e1bb25c3f7afb94517169035266
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 26b0386f0f206427580ee8ff85eb704512914106
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66791647"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67970850"
 ---
 # <a name="sqlserverpooledconnection-class"></a>Класс SQLServerPooledConnection
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,7 +36,7 @@ public final class SQLServerPoolingDataSource
 ```  
   
 ## <a name="remarks"></a>Remarks  
- Класс SQLServerPooledConnection предоставляет методы для управления пулом соединений диспетчер пула соединений. Приложения обычно не создают экземпляры таких соединений непосредственно.  
+ Класс SQLServerPooledConnection предоставляет методы для управления пулом подключений диспетчером пула соединений. Приложения обычно не создают экземпляры таких соединений непосредственно.  
   
 ## <a name="see-also"></a>См. также:  
  [Элементы SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-members.md)   

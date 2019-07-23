@@ -1,5 +1,5 @@
 ---
-title: Метод recover (SQLServerXAResource) | Документация Майкрософт
+title: Метод Recover (SQLServerXAResource) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 840ecfcf-0dd3-4b7b-976f-dc9a96cd1464
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1ca9d0fede758b99f442a9553e4266e79fa81134
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 92d7b0db997a6b77b43efb6d8104f629bb5507e3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66794031"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976020"
 ---
 # <a name="recover-method-sqlserverxaresource"></a>Метод recover (SQLServerXAResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +37,7 @@ public javax.transaction.xa.Xid[] recover(int flags)
 #### <a name="parameters"></a>Параметры  
  *flags*  
   
- **Int** значение, которое может принимать одно из следующих значений: XAResource.TMSTARTRSCAN или XAResource.TMENDRSCAN или XAResource.TMNOFLAGS или XAResource.TMSTARTTRSCAN | XAResource.TMENDRSCAN.  
+ Значение **типа int** , которое может принимать одно из следующих значений: XARESOURCE. Тмстартрскан или XARESOURCE. Тмендрскан или XARESOURCE. Тмнофлагс или XARESOURCE. тмстарттрскан | XAResource. ТМЕНДРСКАН.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Объект Xid.  
@@ -49,7 +48,7 @@ public javax.transaction.xa.Xid[] recover(int flags)
 ## <a name="remarks"></a>Remarks  
  Этот метод recover определен с помощью метода recover в интерфейсе javax.transaction.xa.XAResource.  
   
- Если параметр **флаг** не XAResource.TMSTARTRSCAN или XAResource.TMSTARTRSCAN | XAResource.TMENDRSCAN, ход выполнения должен выполняться просмотр восстановления.  
+ Если **флаг** параметра не XARESOURCE. Тмстартрскан или XARESOURCE. тмстартрскан | XAResource. ТМЕНДРСКАН, должно быть выполнено сканирование восстановления.  
   
 ## <a name="see-also"></a>См. также:  
  [Методы SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-methods.md)   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 - rowsets [OLE DB], schema
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 575ce4f2522299be723be159bb87e19f8fff1a1d
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 139186d64d2b7df6aca883a253e1f9fe3f062214
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66795961"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993895"
 ---
 # <a name="schema-rowsets---distributed-query-support"></a>Наборы строк схемы — поддержка распределенных запросов
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,6 +51,6 @@ ms.locfileid: "66795961"
   
 ## <a name="see-also"></a>См. также:  
  [Поддержка набора строк схемы &#40;OLE DB&#41;](../../oledb/ole-db/schema-rowset-support-ole-db.md)   
- [Набор строк LINKEDSERVERS &#40;OLE DB&#41;](../../oledb/ole-db/schema-rowsets-linkedservers-rowset.md)  
+ [OLE DB набора &#40;строк LINKEDSERVERS&#41;](../../oledb/ole-db/schema-rowsets-linkedservers-rowset.md)  
   
   

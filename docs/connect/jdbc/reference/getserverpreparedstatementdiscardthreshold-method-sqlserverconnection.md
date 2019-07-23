@@ -15,18 +15,17 @@ apitype: Assembly
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 22f7bf637d20b42a7dadd3397e84c826fa277a22
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 87d7f85799524e3ac7c0e4d99608ce1d82b8f2fc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66791922"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979930"
 ---
 # <a name="getserverpreparedstatementdiscardthreshold-method-sqlserverconnection"></a>Метод getServerPreparedStatementDiscardThreshold (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
- Возвращает значение **параметр serverPreparedStatementDiscardThreshold** свойство соединения. Этот параметр определяет, сколько необработанных подготовки инструкции отмены действия (процедура sp_unprepare) для подключения, по истечении которого выполняется вызов для очистки незавершенные обработчики на сервере. Если параметр может быть < = 1, unprepare для подготовленной инструкции close действия выполняются немедленно. Если он имеет значение > 1, эти вызовы будут объединены в один пакет во избежание издержки вызове процедура sp_unprepare слишком часто. Значение по умолчанию для этого параметра можно изменить, вызывающий getDefaultServerPreparedStatementDiscardThreshold().
+ Возвращает значение свойства соединения **серверпрепаредстатементдискардсрешолд** . Этот параметр определяет, сколько невыполненных операций отмены подготовленной инструкции (sp_unprepare) может быть недоступно для каждого соединения, прежде чем будет выполнен вызов очистки необработанных дескрипторов на сервере. Если параметр имеет значение < = 1, то при закрытии подготовленных инструкций немедленно выполняются неподготовительные действия. Если задано значение > 1, эти вызовы объединяются в пакеты, чтобы избежать чрезмерных затрат на вызов sp_unprepare слишком часто. Значение по умолчанию для этого параметра можно изменить, вызвав Жетдефаултсерверпрепаредстатементдискардсрешолд ().
 
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,13 +35,13 @@ public int getServerPreparedStatementDiscardThreshold()
 ```  
 
 ## <a name="return-value"></a>Возвращаемое значение
- **Int** , содержащий значение **параметр serverPreparedStatementDiscardThreshold** свойство соединения.
+ Целое **число, содержащее** значение свойства соединения **серверпрепаредстатементдискардсрешолд** .
 
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
 ## <a name="remarks"></a>Remarks  
- Этот метод, доступные в версии драйвера JDBC 6.4 и далее.
+ Этот метод доступен из драйвера JDBC версии 6,4 и далее.
  
 ## <a name="see-also"></a>См. также:  
  [Элементы SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

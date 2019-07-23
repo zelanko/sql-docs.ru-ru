@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: a117f3a3-9c25-41e1-9adb-a40e90620dd6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 52e2f0336c2c4bfbe6b14ce116c0888844afc000
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 6c2cd07b0420d8ca961c61c205c94cd19fe6666e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66784721"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67981647"
 ---
 # <a name="getncharacterstream-method-javalangstring-sqlserverresultset"></a>Метод getNCharacterStream (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -31,20 +30,20 @@ public java.io.Reader getNCharacterStream(java.lang.String columnLabel)
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *ColumnLabel состоит из*  
+ *колумнлабел*  
   
  Значение String, содержащее метку столбца.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Объект средства чтения.  
+ Объект модуля чтения.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getNCharacterStream указывается с помощью метода getNCharacterStream в интерфейсе java.sql.ResultSet.  
+ Этот метод getNCharacterStream задается методом getNCharacterStream в интерфейсе Java. SQL. Result.  
   
- Этот метод можно использовать для извлечения значения **nvarchar**, **nchar**, **nvarchar(max)** , **ntext**, или **xml** столбца в текущей строке этого [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) объекта. При попытке использования этого метода для получения значений других типов данных возникнет исключение.  
+ Этот метод можно использовать для получения значения столбца **nvarchar**, **nchar**, **nvarchar (max)** , **ntext**или **XML** в текущей строке этого объекта [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) . При попытке использования этого метода для получения значений других типов данных возникнет исключение.  
   
 ## <a name="see-also"></a>См. также:  
  [Метод getNCharacterStream (SQLServerResultSet)](../../../connect/jdbc/reference/getncharacterstream-method-sqlserverresultset.md)   

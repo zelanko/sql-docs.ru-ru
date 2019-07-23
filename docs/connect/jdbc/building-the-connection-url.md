@@ -1,5 +1,5 @@
 ---
-title: Создание URL-АДРЕСЕ соединения | Документация Майкрософт
+title: Создание URL-адреса подключения | Документация Майкрософт
 ms.custom: ''
 ms.date: 07/11/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 44996746-d373-4f59-9863-a8a20bb8024a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c0d9d79d6462300df8b96fa3ec58349c39e751cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8d26ab3b32f9830127c47b319cc0feddd532f1af
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66770273"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957377"
 ---
 # <a name="building-the-connection-url"></a>Формирование URL-адреса соединения
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ ms.locfileid: "66770273"
 -   **property** (необязательно) представляет собой одно или несколько свойств соединений. Дополнительные сведения: [Задание свойств соединения](../../connect/jdbc/setting-the-connection-properties.md). Можно указать любое свойство из списка. В качестве разделителей в списке свойств можно использовать точку с запятой (';'), при этом свойства не могут повторяться.  
   
 > [!CAUTION]  
->  В целях безопасности не рекомендуется составлять URL-адрес соединения на основе данных пользователей. В URL-адресе необходимо указывать только имя сервера и драйвер. Для указания значений имени пользователя и пароля следует использовать коллекции свойств соединения. Дополнительные сведения о безопасности в приложениях JDBC см. в разделе [защита приложений драйвера JDBC](../../connect/jdbc/securing-jdbc-driver-applications.md).  
+>  В целях безопасности не рекомендуется составлять URL-адрес соединения на основе данных пользователей. В URL-адресе необходимо указывать только имя сервера и драйвер. Для указания значений имени пользователя и пароля следует использовать коллекции свойств соединения. Дополнительные сведения о безопасности в приложениях JDBC см. в статье [Защита приложений драйвера JDBC](../../connect/jdbc/securing-jdbc-driver-applications.md).  
   
 ## <a name="connection-examples"></a>Примеры соединения  
  Подключитесь к базе данных по умолчанию на локальном компьютере с помощью имени пользователя и пароля:  
@@ -99,7 +98,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
   
  \<*каталог_установки*>\sqljdbc_\<*версия*>\\<*язык*>\auth\  
   
- Для любой операционной системы, поддерживаемые [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], см. в разделе [с помощью встроенной проверки подлинности Kerberos для подключения к SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md) описание реализованной в [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] , позволяет подключиться к приложению База данных, используя встроенную проверку подлинности по протоколу Kerberos типа 4.  
+ Сведения о любой операционной системе [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], поддерживаемой компонентом, см. в разделе [использование встроенной проверки подлинности Kerberos для подключения к SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md) для описания компонента, добавленного в [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] , который позволяет приложению подключаться к базе данных с помощью встроенной функции Проверка подлинности с типом 4 Kerberos.  
   
 > [!NOTE]  
 >  При использовании 32-разрядной виртуальной машины Java (JVM) следует использовать файл sqljdbc_auth.dll в папке x86 folder, даже если используется операционная система x64. При использовании 64-разрядной виртуальной машины и процессора x64 используйте файл sqljdbc_auth.dll в папке x64.  

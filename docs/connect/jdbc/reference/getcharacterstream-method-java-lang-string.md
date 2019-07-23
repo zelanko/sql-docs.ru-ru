@@ -1,5 +1,5 @@
 ---
-title: Метод getCharacterStream (java.lang.String) | Документация Майкрософт
+title: Метод getCharacterStream (Java. lang. String) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: cdddc572-05c1-480d-b3e5-28270001575c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a818783c51f2629464f650c2985eb20d5f320c95
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 174deb24d78821e30d69dc899c5657909241ad3d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66784861"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953285"
 ---
 # <a name="getcharacterstream-method-javalangstring"></a>Метод getCharacterStream (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,13 +40,13 @@ public java.io.Reader getCharacterStream(java.lang.String columnName)
  Значение типа **String**, содержащее имя столбца.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Объект средства чтения.  
+ Объект модуля чтения.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getCharacterStream указывается с помощью метода getCharacterStream в интерфейсе java.sql.ResultSet.  
+ Этот метод getCharacterStream задается методом getCharacterStream в интерфейсе Java. SQL. Result.  
   
  Этот метод считывает только символьные типы данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в Юникоде, такие как nchar, nvarchar, nvarchar(max) и ntext. Для любых других типов данных, включая символьные типы ASCII, будет вызываться исключение. Для считывания типов данных ASCII используйте метод [getAsciiStream](../../../connect/jdbc/reference/getasciistream-method-sqlserverresultset.md).  
   

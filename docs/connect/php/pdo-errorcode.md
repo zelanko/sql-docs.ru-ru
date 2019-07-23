@@ -1,5 +1,5 @@
 ---
-title: PDO::ErrorCode | Документация Майкрософт
+title: 'PDO:: errorCode | Документация Майкрософт'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5864b1d8-6814-41cd-a88d-415124484c13
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: bd430e026d29d0637e3b9a1543b8a89bed556bd9
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 9846867cfc6bd50568440c5c66711457754af50c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798364"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993281"
 ---
 # <a name="pdoerrorcode"></a>PDO::errorCode
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

@@ -10,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 02b5bcc9154e99ef6fe9a2c76ceff5032610dd55
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 9b4ab3a1b0d6f76cd3918b20460c41d66e9616da
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66762368"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67972769"
 ---
 # <a name="setstatementpoolingcachesize-method-sqlserverdatasource"></a>Метод setStatementPoolingCacheSize (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Задает размер кэша подготовленных инструкций для этого подключения. Работает, если disableStatementPooling имеет значение false, а значение > 0.
+  Задает размер подготовленного кэша инструкций для этого соединения. Работает, если disableStatementPooling имеет значение false и Value > 0.
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -31,15 +30,15 @@ public void setStatementPoolingCacheSize(boolean statementPoolingCacheSize);
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *значение параметра statementPoolingCacheSize*  
+ *статементпулингкачесизе*  
   
- Новое значение **значение параметра statementPoolingCacheSize** свойство соединения.  
+ Новое значение свойства соединения **статементпулингкачесизе** .  
 
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
 ## <a name="remarks"></a>Remarks  
- Этот метод, доступные в версии драйвера JDBC 6.4 и далее.
+ Этот метод доступен из драйвера JDBC версии 6,4 и далее.
  
 ## <a name="see-also"></a>См. также:  
  [Элементы SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

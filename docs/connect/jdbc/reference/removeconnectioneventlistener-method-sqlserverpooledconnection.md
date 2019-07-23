@@ -1,5 +1,5 @@
 ---
-title: Метод removeConnectionEventListener (SQLServerPooledConnection) | Документация Майкрософт
+title: Метод Ремовеконнектионевентлистенер (SQLServerPooledConnection) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 46902e89-f512-40af-a2d9-a896f03d1200
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a0714a5a0067aff66407cd340ed147b0553a3368
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: b9d2980b86704efe7e611878d373e0dd9b5cb7fa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66765532"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975756"
 ---
 # <a name="removeconnectioneventlistener-method-sqlserverpooledconnection"></a>Метод removeConnectionEventListener (SQLServerPooledConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,10 +37,10 @@ public void removeConnectionEventListener(javax.sql.ConnectionEventListener list
 #### <a name="parameters"></a>Параметры  
  *listener*  
   
- Объект ConnectionEventListener.  
+ Объект Коннектионевентлистенер.  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод removeConnectionEventListener указывается с помощью метода removeConnectionEventListener в интерфейсе javax.sql.PooledConnection.  
+ Этот метод Ремовеконнектионевентлистенер задается методом Ремовеконнектионевентлистенер в интерфейсе javax. SQL. PooledConnection.  
   
 ## <a name="see-also"></a>См. также:  
  [Методы SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-methods.md)   

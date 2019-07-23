@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 72b5c4a5-1382-4b2c-80a0-47c97c5f52d3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 11ff6a1b5c919f44bfc9cfd56e1e94ac57b673e3
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 81623f6495540e70ae44755228b0c309df957b4f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66802652"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976134"
 ---
 # <a name="preparestatement-method-javalangstring-int"></a>Метод prepareStatement (java.lang.String, int[])
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public java.sql.PreparedStatement prepareStatement(java.lang.String sql,
   
  Значение типа **String**, содержащее инструкцию SQL.  
   
- *columnIndexes*  
+ *колумниндексес*  
   
  Массив значений типа int.  
   
@@ -52,7 +51,7 @@ public java.sql.PreparedStatement prepareStatement(java.lang.String sql,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод prepareStatement указывается с помощью метода prepareStatement в интерфейсе java.sql.Connection.  
+ Этот метод prepareStatement задается методом prepareStatement в интерфейсе Java. SQL. Connection.  
   
 ## <a name="see-also"></a>См. также:  
  [Метод prepareStatement (SQLServerConnection)](../../../connect/jdbc/reference/preparestatement-method-sqlserverconnection.md)   

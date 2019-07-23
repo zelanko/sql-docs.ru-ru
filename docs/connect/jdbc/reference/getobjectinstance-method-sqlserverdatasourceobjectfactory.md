@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 0a1503e2-e991-4d70-a223-087fc63baf73
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 13da5aeb7015255f0ff4b7a540b62462439ce30d
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: de25e608c9fbdbdf6ff91d08e7a6502765bb590e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66765667"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67981050"
 ---
 # <a name="getobjectinstance-method-sqlserverdatasourceobjectfactory"></a>Метод getObjectInstance (SQLServerDataSourceObjectFactory)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -62,7 +61,7 @@ public java.lang.Object getObjectInstance(java.lang.Object ref,
  java.sql.SQLException  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getObjectInstance указывается с помощью метода getObjectInstance в интерфейсе javax.Naming.SPI.obectfactory.  
+ Этот метод getObjectInstance задается методом getObjectInstance в интерфейсе javax. Naming. SPI. Обжектфактори.  
   
 ## <a name="see-also"></a>См. также:  
  [Методы SQLServerDataSourceObjectFactory](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-methods.md)   

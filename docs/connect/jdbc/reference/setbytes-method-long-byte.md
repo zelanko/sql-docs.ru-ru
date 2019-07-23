@@ -1,5 +1,5 @@
 ---
-title: Метод setBytes (long, byte) | Документация Майкрософт
+title: Метод setBytes (длинный, байт) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: ffb8f107-0f9d-4410-957f-62b718e1e872
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f0d47be46aac25807fd9f97bb3ee40cf96ffd4fd
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 02c8e541b237cbf72fc2b3da3ed5c2b0759b0eb2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797635"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974909"
 ---
 # <a name="setbytes-method-long-byte"></a>Метод setBytes (long, byte)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,7 +36,7 @@ public int setBytes(long pos,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *Торговых терминалов*  
+ *POS*  
   
  Позиция (считая с 1) в большом двоичном объекте, с которой начинается запись данных.  
   
@@ -57,7 +56,7 @@ public int setBytes(long pos,
  Данные перезаписываются, начиная с указанной позиции, и могут превысить исходную длину большого двоичного объекта. Если указать значение позиции+1, будут добавлены байты. Если передается значение позиции+2 и более (либо нулевое или отрицательное значение), то создается ошибка позиции. Если передается массив **byte** нулевой длины, то будет возвращено нулевое значение, поскольку не записан ни один байт.  
   
 ## <a name="see-also"></a>См. также:  
- [Метод setBytes &#40;SQLServerBlob&#41;](../../../connect/jdbc/reference/setbytes-method-sqlserverblob.md)   
+ [Метод &#40;setBytes SQLServerBlob&#41;](../../../connect/jdbc/reference/setbytes-method-sqlserverblob.md)   
  [Методы SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-methods.md)   
  [Элементы SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-members.md)   
  [Класс SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-class.md)  

@@ -1,5 +1,5 @@
 ---
-title: (Драйвер ODBC для SQL Server) первый экран мастера источников данных | Документация Майкрософт
+title: Экран 1 мастера источников данных (драйвер ODBC для SQL Server) | Документация Майкрософт
 ms.custom: ''
 ms.date: 09/27/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e8c961487aaff7e6aa57ea8add571ccbc2945dee
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: f6edf465f5b853008c9bdc8c420f6e862e360593
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797786"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936606"
 ---
 # <a name="data-source-wizard-screen-1"></a>Экран 1 мастера источников данных
 

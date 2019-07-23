@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 1a576d95-7da6-4b7b-8b32-59e5b4d354c4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4923354c5f6dc013d9fee0284279bb5b6b887556
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 244c20b2fb7721d117557581068791e1a2d99d14
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801815"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956225"
 ---
 # <a name="performing-batch-operations"></a>Выполнение пакетных операций
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -25,7 +24,7 @@ ms.locfileid: "66801815"
   
  Для передачи пакетных обновлений можно использовать следующие классы: [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) и [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md). Метод [addBatch](../../connect/jdbc/reference/addbatch-method-sqlserverpreparedstatement.md) используется для добавления команды. Метод [clearBatch](../../connect/jdbc/reference/clearbatch-method-sqlserverpreparedstatement.md) используется для очистки списка команд. Метод [executeBatch](../../connect/jdbc/reference/executebatch-method-sqlserverstatement.md) используется для передачи всех команд для обработки. В качестве части пакета могут выполняться только инструкции языка описания данных DDL и языка обработки данных DML, возвращающие простой счетчик обновлений.  
   
- Метод executeBatch возвращает массив значений **int**, соответствующих счетчику обновлений каждой команды. В случае сбоя одного из команд создается BatchUpdateException и следует использовать метод getUpdateCounts BatchUpdateException класса для извлечения массива счетчиков обновления. При возникновении ошибки выполнения команды драйвер продолжает обработку остальных команд. Однако при наличии ошибки синтаксиса в команде происходит ошибка инструкций в пакете.  
+ Метод executeBatch возвращает массив значений **int**, соответствующих счетчику обновлений каждой команды. Если одна из команд завершается ошибкой, вызывается исключение Батчупдатиксцептион, и следует использовать метод Жетупдатекаунтс класса Батчупдатиксцептион для получения массива счетчика обновлений. При возникновении ошибки выполнения команды драйвер продолжает обработку остальных команд. Однако при наличии ошибки синтаксиса в команде происходит ошибка инструкций в пакете.  
   
 > [!NOTE]  
 >  Если отсутствуют счетчики обновлений, можно сначала отправить инструкцию SET NOCOUNT ON [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Это позволит уменьшить объем сетевого трафика и увеличить производительность приложений.  

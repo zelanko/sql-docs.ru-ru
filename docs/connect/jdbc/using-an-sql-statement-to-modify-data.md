@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4704199b-c0ae-4c77-8a2e-6963715b4ffb
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2da0381f06e5092a7bcdb056d88df1160486ce0f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: cbcdf01eed0114e1788f23cec3a24cf4a69329e2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66790237"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004014"
 ---
 # <a name="using-an-sql-statement-to-modify-data"></a>Использование инструкции SQL для изменения данных
 
@@ -35,7 +34,7 @@ ms.locfileid: "66790237"
 >
 > Если столбец, в который делается попытка вставить данные, содержит специальные знаки, такие как пробелы, необходимо задать вставляемые значения, даже если это значения по умолчанию. Если этого не сделать, операция вставки закончится ошибкой.
 >
-> Чтобы драйвер JDBC возвращал все счетчики обновления, включая счетчики, возвращенные сработавшими триггерами, установите свойство lastUpdateCount строки подключения в значение false. Дополнительные сведения о свойстве lastUpdateCount см. в разделе [заданию свойств соединения](../../connect/jdbc/setting-the-connection-properties.md).
+> Чтобы драйвер JDBC возвращал все счетчики обновления, включая счетчики, возвращенные сработавшими триггерами, установите свойство lastUpdateCount строки подключения в значение false. Дополнительные сведения о свойстве lastUpdateCount см. [в разделе Задание свойств соединения](../../connect/jdbc/setting-the-connection-properties.md).
 
 ## <a name="see-also"></a>См. также:
 

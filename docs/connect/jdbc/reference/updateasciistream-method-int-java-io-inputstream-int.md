@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: d07944b8-7001-49b5-b3b3-0676f71e17cf
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1e6d06f40f87464e032563158ed7331bfd85b08b
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 843cb16fab8b05ae72c502fecd171f9af2886779
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66788565"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68213654"
 ---
 # <a name="updateasciistream-method-int-javaioinputstream-int"></a>Метод updateAsciiStream (int, java.io.InputStream, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +43,7 @@ public void updateAsciiStream(int index,
   
  *x*  
   
- Объект, InputStream.  
+ Объект InputStream.  
   
  *length*  
   
@@ -54,7 +53,7 @@ public void updateAsciiStream(int index,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод updateAsciiStream указывается с помощью метода updateAsciiStream в интерфейсе java.sql.ResultSet.  
+ Этот метод updateAsciiStream задается методом updateAsciiStream в интерфейсе Java. SQL. Result.  
   
  Этот метод передает ASCII-символы (байты) из объекта InputStream в столбцы символьных значений, поддерживающие преобразование, то есть содержащие символы Юникода в диапазоне ASCII (от 0x00 до 0x7F) и соответствующие кодовым страницам 874, 932, 936, 949, 950 и с 1250 по 1258. Этот метод выполняет преобразование на целевую страницу параметров сортировки. Попытка обновления целевого столбца, не поддерживающего преобразование, приведет к возникновению исключения. В столбцах двоичных значений передаются необработанные байты.  
   

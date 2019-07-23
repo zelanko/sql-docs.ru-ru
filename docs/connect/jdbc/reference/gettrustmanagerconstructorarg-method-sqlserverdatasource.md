@@ -1,5 +1,5 @@
 ---
-title: Метод getTrustManagerConstructorArg (SQLServerDataSource) | Документация Майкрософт
+title: Метод Жеттрустманажерконструкторарг (SQLServerDataSource) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2018
 ms.prod: sql
@@ -15,18 +15,17 @@ apitype: Assembly
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 24efba087c6e2f988e25517ceffb61463b0ec935
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 8f3af347e41f3ba90b283b56d8cb2c1550b69006
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66786199"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67978592"
 ---
 # <a name="gettrustmanagerconstructorarg-method-sqlserverdatasource"></a>Метод getTrustManagerConstructorArg (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Возвращает строковое значение свойства соединения TrustManagerConstructorArg.
+  Возвращает строковое значение свойства соединения Трустманажерконструкторарг.
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,10 +35,10 @@ public java.lang.String getTrustManagerConstructorArg()
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Объект **строка** , содержащий значение свойства соединения TrustManagerConstructorArg, или значение null, если значение не задано.  
+ **Строка** , содержащая значение свойства соединения трустманажерконструкторарг, или значение null, если значение не задано.  
   
 ## <a name="remarks"></a>Remarks  
- Если не задано свойство TrustManagerClass, [getTrustManagerConstructorArg](../../../connect/jdbc/reference/gettrustmanagerconstructorarg-method-sqlserverdatasource.md) метод возвращает значение null.  
+ Если свойство TrustManagerClass не задано, метод [жеттрустманажерконструкторарг](../../../connect/jdbc/reference/gettrustmanagerconstructorarg-method-sqlserverdatasource.md) возвращает значение null.  
   
 ## <a name="see-also"></a>См. также:  
  [Элементы SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

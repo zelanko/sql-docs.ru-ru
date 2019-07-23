@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: e2b0e0f7-717c-48e6-bcd2-a325d938a833
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cd4958db78e2e35d29bcc47428295db50f7e5678
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e6c25349d6fbf9495647ae73773d984dfcd269f8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66774624"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982960"
 ---
 # <a name="getfunctioncolumns-method-sqlserverdatabasemetadata"></a>Метод getFunctionColumns (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,15 +37,15 @@ public ResultSet getFunctionColumns(java.lang.String catalog,
   
  Значение типа **String**, содержащее имя каталога. Если это пустая строка, то результат включает функции, доступные без каталога. Если это значение **NULL**, то имя каталога не используется для поиска.  
   
- *schemaPattern*  
+ *счемапаттерн*  
   
  Значение типа **String**, содержащее шаблон имени схемы. Если это пустая строка, то результат включает функции, доступные без схемы. Если это значение **NULL**, то имя схемы не используется для поиска.  
   
- *functionNamePattern*  
+ *функтионнамепаттерн*  
   
  Значение типа **String**, содержащее имя функции.  
   
- *columnNamePattern*  
+ *колумннамепаттерн*  
   
  Значение типа **String**, содержащее имя параметра.  
   
@@ -80,7 +79,7 @@ public ResultSet getFunctionColumns(java.lang.String catalog,
 |REMARKS|**String**|Примечания по параметру или столбцу.|  
 |COLUMN_DEF|**String**|Значение по умолчанию для столбца.<br /><br /> **Примечание**. Эти данные доступны только для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и определяются драйвером JDBC.|  
 |SQL_DATA_TYPE|**smallint**|Этот столбец содержит то же значение, что и столбец **DATA_TYPE**, за исключением типов данных **datetime** и ISO **interval**.<br /><br /> **Примечание**. Эти данные доступны только для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и определяются драйвером JDBC.|  
-|SQL_DATETIME_SUB|**smallint**|Дополнительный код **datetime** ISO **interval**, если значение **SQL_DATA_TYPE** равно **SQL_DATETIME** или **SQL_INTERVAL**. Для типов данных, отличных от **datetime** и ISO **интервал**, этот столбец равен NULL.<br /><br /> **Примечание**. Эти данные доступны только для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и определяются драйвером JDBC.|  
+|SQL_DATETIME_SUB|**smallint**|Дополнительный код **datetime** ISO **interval**, если значение **SQL_DATA_TYPE** равно **SQL_DATETIME** или **SQL_INTERVAL**. Для типов данных, отличных от **DateTime** и **интервалов**ISO, этот столбец имеет значение null.<br /><br /> **Примечание**. Эти данные доступны только для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и определяются драйвером JDBC.|  
 |CHAR_OCTET_LENGTH|**int**|Максимальная длина значений символьных и двоичных параметров или столбцов. Для остальных типов данных имеет значение равное NULL.|  
 |ORDINAL_POSITION|**int**|Для входных или выходных параметров представляет позицию начинающуюся с 1<br /><br /> Для результирующего набора столбцов представляет позицию столбца в результирующем наборе начинающуюся с 1.<br /><br /> Для возвращаемого значения имеет значение равное 0.|  
 |IS_NULLABLE|**String**|Определяет допустимость значений NULL для параметра или столбца.<br /><br /> Может иметь одно из следующих значений.<br /><br /> **YES**: параметр или столбец могут содержать значения NULL.<br /><br /> **NO**: параметр или столбец не могут содержать значения NULL.<br /><br /> Пустая строка (""): неизвестно.|  

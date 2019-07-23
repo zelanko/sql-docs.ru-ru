@@ -1,5 +1,5 @@
 ---
-title: Метод getCharacterStream (long, long) | Документация Майкрософт
+title: Метод getCharacterStream (длинный, длинный) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: d70f502f-f60f-436a-83e6-797a0ed71bf3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2881f3a9e0d3a4179334256aa7d2917917cf97f3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a47b7ea56873b0b502ba39a91e4d1ba30044e993
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66781329"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953259"
 ---
 # <a name="getcharacterstream-method-long-long"></a>Метод getCharacterStream (long, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -32,7 +31,7 @@ public java.io.Reader getCharacterStream(long pos,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *Торговых терминалов*  
+ *POS*  
   
  Значение **long**, определяющее смещение до первого символа извлекаемого фрагмента значения.  
   
@@ -47,7 +46,7 @@ public java.io.Reader getCharacterStream(long pos,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getCharacterStream указывается с помощью метода getCharacterStream в интерфейсе java.sql.Clob.  
+ Этот метод getCharacterStream задается методом getCharacterStream в интерфейсе Java. SQL. CLOB.  
   
 ## <a name="see-also"></a>См. также:  
  [Метод getCharacterStream (SQLServerClob)](../../../connect/jdbc/reference/getcharacterstream-method-sqlserverclob.md)   

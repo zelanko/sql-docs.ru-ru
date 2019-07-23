@@ -1,5 +1,5 @@
 ---
-title: Метод getCatalogs (SQLServerDatabaseMetaData) | Документация Майкрософт
+title: Метод Catalog (SQLServerDatabaseMetaData) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 7f8bd0f1-f340-4bb9-b559-0a6176124033
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c63d7ea85cd36f6cbc6f536e7fc7f9f20def2ad2
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 786f55e436b9582eaed875f8c7cd265b1d3e2cc5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66803956"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953457"
 ---
 # <a name="getcatalogs-method-sqlserverdatabasemetadata"></a>Метод getCatalogs (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,7 +44,7 @@ public java.sql.ResultSet getCatalogs()
  Этот метод getCatalogs определяется методом getCatalogs в интерфейсе java.sql.DatabaseMetaData.  
   
 > [!NOTE]  
->  В SQL Azure, следует подключиться к базе данных master для вызова **SQLServerDatabaseMetaData.getCatalogs**. SQL Azure не поддерживает возврат всего набора каталогов из пользовательских баз данных. **SQLServerDatabaseMetaData.getCatalogs** использует для получения каталогов представление sys.databases. См. обсуждение разрешений в [sys.database_usage (база данных SQL Azure)](../../../relational-databases/system-catalog-views/sys-database-usage-azure-sql-database.md) для понимания **SQLServerDatabaseMetaData.getCatalogs** поведение в SQL Azure.  
+>  На SQL Azure необходимо подключиться к базе данных master для вызова **SQLServerDatabaseMetaData. catalog**. SQL Azure не поддерживает возврат всего набора каталогов из пользовательских баз данных. **SQLServerDatabaseMetaData. catalog** использует представление sys. databases для получения каталогов. Сведения о разрешениях в представлении каталога [sys. database_usage (база данных SQL Azure)](../../../relational-databases/system-catalog-views/sys-database-usage-azure-sql-database.md) см. в статье поведение **SQLServerDatabaseMetaData. catalog** в SQL Azure.  
   
  Результирующий набор, возвращаемый методом getCatalogs, включает следующие данные:  
   

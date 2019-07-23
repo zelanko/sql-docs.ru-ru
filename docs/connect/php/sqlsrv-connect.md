@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 37836b49-258e-45ce-9549-b8bd85d6952d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a5cb52f4e27ea933b4988c3c8f2daee6fb90147d
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 11da2b4eca130eafe93a01315aaa1f6d9919632c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796903"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015040"
 ---
 # <a name="sqlsrvconnect"></a>sqlsrv_connect
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -41,9 +40,9 @@ sqlsrv_connect( string $serverName [, array $connectionInfo])
 #### <a name="parameters"></a>Параметры  
 *$serverName*: строка, указывающая имя сервера, с которым устанавливается соединение. В состав этой строки можно включить имя экземпляра (например, "мой_сервер\имя_экземпляра") или номер порта (например, "мой_сервер, 1521"). Полное описание значений, доступных для этого параметра, см. в разделе "Ключевые слова в строке подключения драйвера ODBC" статьи [Использование ключевых слов строки подключения с SQL Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
-Начиная с версии 3.0 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], можно также указать экземпляр LocalDB с `"(localdb)\instancename"`. Дополнительные сведения см. в разделе [поддержка LocalDB](../../connect/php/php-driver-for-sql-server-support-for-localdb.md).  
+Начиная с версии 3.0 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], можно также указать экземпляр LocalDB с `"(localdb)\instancename"`. Дополнительные сведения см. в разделе [Поддержка LocalDB](../../connect/php/php-driver-for-sql-server-support-for-localdb.md).  
   
-Кроме того, начиная с версии 3.0 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], можно указать имя виртуальной сети для подключения к группе доступности AlwaysOn. Дополнительные сведения о [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] поддержка [!INCLUDE[ssHADR](../../includes/sshadr_md.md)], см. в разделе [Поддержка высокой доступности и аварийного восстановления](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).  
+Кроме того, начиная с версии 3.0 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], можно указать имя виртуальной сети для подключения к группе доступности AlwaysOn. Дополнительные сведения о [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]поддержке см. в разделе [Поддержка высокого уровня доступности и аварийного восстановления](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).  
   
 *$connectionInfo* (необязательно): ассоциативный **массив**, содержащий атрибуты соединения (например, **array**("Database" => "AdventureWorks")). Список поддерживаемых ключей для массива см. в статье [Connection Options](../../connect/php/connection-options.md) .  
   

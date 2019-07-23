@@ -16,18 +16,17 @@ helpviewer_keywords:
 ms.assetid: 03ca1860-01ed-408c-862a-57a7355de4bf
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2ca2ae8a4c6f1e1d3c9f82a756a5c268bf52eec6
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: b5c095b74f8f299a1d5f2b15daaf95e3d5086ebd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66777766"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992675"
 ---
 # <a name="sqlsrvnumfields"></a>sqlsrv_num_fields
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Извлекает количество полей в активном результирующем наборе. Эта функция может вызываться для любой подготовленной инструкции до или после выполнения.  
+Извлекает количество полей в активном результирующем наборе. Эта функция может быть вызвана любой подготовленной инструкцией до или после выполнения.  
   
 ## <a name="syntax"></a>Синтаксис  
   

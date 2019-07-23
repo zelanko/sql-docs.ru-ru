@@ -6,16 +6,15 @@ ms.technology: report-data
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
 reviewer: ''
 ms.custom: ''
 ms.date: 03/17/2017
-ms.openlocfilehash: 60387cff118b0e809bba1e659be496c4ca2c00cc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3ec3fe9ba7641a7c60b3035ff6dc5e11cdfe3691
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66500559"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68251251"
 ---
 # <a name="add-data-from-external-data-sources-ssrs"></a>Добавление данных из внешних источников данных (службы SSRS)
   Чтобы получить данные из внешнего источника данных, используется подключение к данным. Сведения о подключении к данным обычно указываются владельцем внешнего источника данных, ответственным за предоставление разрешений и указывающим тип используемых учетных данных. Сведения о подключении к данным сохраняются в виде источника данных отчета. Тип источника данных определяет модуль обработки данных, который будет использоваться для получения данных.  

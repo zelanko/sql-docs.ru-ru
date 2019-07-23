@@ -1,5 +1,5 @@
 ---
-title: Соединение и извлечение данных | Документация Майкрософт
+title: Подключение и извлечение данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 07/31/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: ce43cc20-46a3-42ff-a3fb-75ad1ed10e08
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f76b740c9ba64439719a12d016cadaa7db2a7cc3
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 2c7e642879c095dd4d9dca4f51a936ab72c523e2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66778249"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956888"
 ---
 # <a name="connecting-and-retrieving-data"></a>Соединение и извлечение данных
 
@@ -25,7 +24,7 @@ ms.locfileid: "66778249"
 При работе с драйвером [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] есть два основных способа установить подключение к базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Во-первых, можно задать свойства подключения в URL-адресе подключения, а затем вызвать метод getConnection класса DriverManager для возвращения объекта [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md).  
   
 > [!NOTE]  
-> Список свойств соединения, поддерживаемых драйвером JDBC, см. в разделе [заданию свойств соединения](../../connect/jdbc/setting-the-connection-properties.md).  
+> Список свойств подключения, поддерживаемых драйвером JDBC, см. в разделе [Задание свойств соединения](../../connect/jdbc/setting-the-connection-properties.md).  
   
 По второму методу свойства подключения определяются с помощью методов задания класса [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) и последующего вызова метода [getConnection](../../connect/jdbc/reference/getconnection-method-sqlserverdatasource.md), возвращающего объект SQLServerConnection.  
   

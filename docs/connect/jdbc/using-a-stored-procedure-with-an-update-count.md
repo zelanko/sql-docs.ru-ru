@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 64cf4877-5995-4bfc-8865-b7618a5c8d01
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b65d882365b7424cd88fa0942674cfe0a7660795
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 4d66c19e9e033e838eac07f7140ce7864fc049e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797117"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004080"
 ---
 # <a name="using-a-stored-procedure-with-an-update-count"></a>Использование хранимых процедур со счетчиком обновлений
 
@@ -27,7 +26,7 @@ ms.locfileid: "66797117"
 После настройки вызова хранимой процедуры с помощью класса SQLServerCallableStatement можно вызывать эту хранимую процедуру с помощью метода [execute](../../connect/jdbc/reference/execute-method-sqlserverstatement.md) или [executeUpdate](../../connect/jdbc/reference/executeupdate-method-sqlserverstatement.md). Метод executeUpdate возвращает значение **int**, которое содержит количество строк, обработанных хранимой процедурой, а метод execute не возвращает это значение. Если используется метод execute и нужно получить количество обработанных строк, можно вызвать метод [getUpdateCount](../../connect/jdbc/reference/getupdatecount-method-sqlserverstatement.md) после выполнения хранимой процедуры.
 
 > [!NOTE]  
-> Чтобы драйвер JDBC возвращал все счетчики обновления, включая счетчики, возвращенные сработавшими триггерами, установите свойство lastUpdateCount строки подключения в значение false. Дополнительные сведения о свойстве lastUpdateCount см. в разделе [заданию свойств соединения](../../connect/jdbc/setting-the-connection-properties.md).
+> Чтобы драйвер JDBC возвращал все счетчики обновления, включая счетчики, возвращенные сработавшими триггерами, установите свойство lastUpdateCount строки подключения в значение false. Дополнительные сведения о свойстве lastUpdateCount см. [в разделе Задание свойств соединения](../../connect/jdbc/setting-the-connection-properties.md).
 
 В качестве примера создайте следующую таблицу и хранимую процедуру, а также вставьте образец данных в образец базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]:
 

@@ -10,19 +10,18 @@ ms.topic: conceptual
 ms.assetid: 9e78bbf3-9e9a-426d-99d3-6fa2cb33ff6b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9dc380ea7eab9876980dfc9ee1ee050ff77fa237
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c8fcc4a39edfaafd7ae66990a2f1161d781d1219
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66800245"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936348"
 ---
 # <a name="microsoft-drivers-for-php-for-sql-server"></a>Драйверы Microsoft SQL Server для PHP
 
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Драйверы Майкрософт для PHP для SQL Server включить интеграцию с SQL Server для приложений PHP. Драйверы представляют собой расширения PHP, которые позволяют считывать и записывать данные SQL Server из скриптов PHP. Драйверы предоставляют интерфейсы для доступа к данным в базах данных SQL Azure, а также во всех выпусках SQL Server 2005 и более поздней версии (включая выпуски Express). Драйверы сделать функции PHP, включая потоки PHP для считывания и записи больших объектов.  
+Драйверы Майкрософт для PHP для SQL Server обеспечивают интеграцию с SQL Server для приложений PHP. Драйверы — это расширения PHP, позволяющие считывать и записывать данные SQL Server из скриптов PHP. Драйверы предоставляют интерфейсы для доступа к данным в базах данных SQL Azure и во всех выпусках SQL Server 2005 и более поздних версий (включая Экспресс-выпуски). Драйверы используют функции PHP, включая потоки PHP, для чтения и записи больших объектов.  
   
 ## <a name="getting-started"></a>Приступая к работе  
 * [Шаг 1. Настройка среды разработки для разработки PHP](step-1-configure-development-environment-for-php-development.md)  
@@ -40,12 +39,12 @@ ms.locfileid: "66800245"
 * [Ресурсы поддержки по драйверам Майкрософт для PHP для SQL Server](support-resources-for-the-php-sql-driver.md)
   
 ## <a name="download"></a>Загрузить  
-* ![Загрузки стрелка вниз обведены](../../ssdt/media/download.png)[выполнять загрузку драйверов для PHP для SQL](download-drivers-php-sql-server.md)
+* ![Скачать-стрелка вниз-в круге](../../ssdt/media/download.png)[, чтобы скачать драйверы для PHP для SQL](download-drivers-php-sql-server.md)
   
 ## <a name="samples"></a>Примеры  
 * [Примеры кода для драйверов Microsoft для PHP для SQL Server](code-samples-for-php-sql-driver.md)
-* [Приступая к работе с PHP на Windows](https://www.microsoft.com/sql-server/developer-get-started/php/windows/)
-* [Начало работы с PHP на macOS](https://www.microsoft.com/sql-server/developer-get-started/php/mac/)
-* [Приступая к работе с PHP на Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/php/ubuntu/)
-* [Приступая к работе с PHP в Red Hat Enterprise Linux (RHEL)](https://www.microsoft.com/sql-server/developer-get-started/php/rhel/)
-* [Приступая к работе с PHP на SUSE Linux Enterprise Server (SLES)](https://www.microsoft.com/sql-server/developer-get-started/php/sles/)
+* [начало работы с PHP в Windows](https://www.microsoft.com/sql-server/developer-get-started/php/windows/)
+* [начало работы с PHP в macOS](https://www.microsoft.com/sql-server/developer-get-started/php/mac/)
+* [начало работы с PHP в Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/php/ubuntu/)
+* [Начало работы с PHP на Red Hat Enterprise Linux (RHEL)](https://www.microsoft.com/sql-server/developer-get-started/php/rhel/)
+* [Начало работы с PHP на SUSE Linux Enterprise Server (SLES)](https://www.microsoft.com/sql-server/developer-get-started/php/sles/)

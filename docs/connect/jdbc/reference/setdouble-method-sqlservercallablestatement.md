@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: c054bb84-1292-4b70-b574-2ae189cd4e68
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4ac0606af5e58c237580c240689f7940af74f83c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 2b103bae2e7de26997545d0158ec2e3c440a0c59
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801618"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68213684"
 ---
 # <a name="setdouble-method-sqlservercallablestatement"></a>Метод setDouble (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,13 +36,13 @@ public void setDouble(java.lang.String sCol,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *sCol*  
+ *скол*  
   
  Значение типа **String**, содержащее имя параметра.  
   
  *d*  
   
- Объект **двойные** значение.  
+ Значение **типа Double** .  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

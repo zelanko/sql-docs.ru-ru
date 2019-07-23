@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 18176517-2fb3-4266-924d-0f01253083d2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a23f058eea5512181bdbea277c4bccc6d1ff2616
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 995f3f0f63728d397cf51013bd5429943e9cac0c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66803385"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974397"
 ---
 # <a name="setfetchdirection-method-sqlserverstatement"></a>Метод setFetchDirection (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public final void setFetchDirection(int nDir)
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *nDir*  
+ *ндир*  
   
  Значение типа **int**, указывающее направление обработки строк, может принимать одно из следующих значений:  
   
@@ -53,7 +52,7 @@ public final void setFetchDirection(int nDir)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод setFetchDirection указывается с помощью метода setFetchDirection в интерфейсе java.sql.Statement.  
+ Этот метод setFetchDirection задается методом setFetchDirection в интерфейсе Java. SQL. Statement.  
   
 ## <a name="see-also"></a>См. также:  
  [Элементы SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

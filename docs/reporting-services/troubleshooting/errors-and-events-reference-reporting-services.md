@@ -6,16 +6,15 @@ ms.technology: troubleshooting
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/12/2019
-ms.openlocfilehash: 55246173a23d8bae7fa9aab82a527800eb8bb23a
-ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
+ms.openlocfilehash: d2d1a8c853bd4ad577dd1c0ced9aed47b15a2ee7
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67285064"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68258548"
 ---
 # <a name="errors-and-events-reference-reporting-services"></a>Справочник по ошибкам и событиям (службы Reporting Services)
 
@@ -47,7 +46,7 @@ ms.locfileid: "67285064"
 |119|Ошибка|Активация|Сервер отчетов<br /><br /> обработчик планирования и доставки|*\<Источник>* не имеет доступа к содержимому базы данных сервера отчетов.|  
 |120|Ошибка|Активация|Сервер отчетов|Не удается расшифровать симметричный ключ. Скорее всего, изменилась учетная запись, под которой выполняется служба. Дополнительные сведения см. в разделе [Настройка ключей шифрования и управление ими (диспетчер конфигураций служб SSRS)](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
 |121|Ошибка|Запуск или завершение|Сервер отчетов|Не удалось запустить службу удаленного вызова процедур (RPC).|  
-|122|Предупреждение|Доставка|обработчик планирования и доставки|Обработчику планирования и доставки не удалось подключиться к SMTP-серверу, который используется для доставки электронной почты. Дополнительные сведения о подключении к серверу SMTP см. в разделе [настройки электронной почты — Reporting Services в собственном режиме (диспетчер конфигурации)](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md).|  
+|122|Предупреждение|Доставка|обработчик планирования и доставки|Обработчику планирования и доставки не удалось подключиться к SMTP-серверу, который используется для доставки электронной почты. Дополнительные сведения о подключениях к SMTP-серверу см. в разделе [Параметры электронной почты — Reporting Services собственном режиме (Configuration Manager)](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md).|  
 |123|Предупреждение|Ведение журнала|Сервер отчетов<br /><br /> веб-портал|Серверу отчетов не удалось выполнить запись в журнал трассировки. Дополнительные сведения о журналах трассировки см. в разделе [Журнал трассировки службы сервера отчетов](../../reporting-services/report-server/report-server-service-trace-log.md).|  
 |124|Сведения|Активация|Сервер отчетов|Служба сервера отчетов не инициализирована. Дополнительные сведения см. в разделе [Инициализация сервера отчетов (диспетчер конфигураций служб SSRS)](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).|  
 |125|Сведения|Активация|Сервер отчетов|Ключ, используемый для шифрования данных, успешно извлечен. Дополнительные сведения о ключах см. в разделе [Настройка ключей шифрования и управление ими (диспетчер конфигураций служб SSRS)](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  

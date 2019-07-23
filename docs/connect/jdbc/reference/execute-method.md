@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: fa96d0f8-101b-422f-a767-405be9a5f74f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7050a26a8fe98d5069cd52a58afe501bee738499
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 9f7e87040fa74954435ed52f9923568e8bfed3fd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66802315"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954929"
 ---
 # <a name="execute-method-"></a>Метод execute ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +35,7 @@ public boolean execute()
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- **значение true,** , если инструкция возвращает результирующий набор. **false** если она возвращает счетчик обновлений или результат отсутствует.  
+ **значение true** , если инструкция возвращает результирующий набор. **значение false** , если оно возвращает число обновлений или не имеет результата.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

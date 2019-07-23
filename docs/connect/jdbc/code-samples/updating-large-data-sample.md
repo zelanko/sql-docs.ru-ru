@@ -1,5 +1,5 @@
 ---
-title: Обновление больших объемов данных образец | Документация Майкрософт
+title: Пример обновления больших данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 07/31/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 76ecc05f-a77d-40a2-bab9-91a7fcf17347
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d178f847ae9de2ca8ec9af07433c88b950fddc2f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: efde9e7254d73fcc84caeb2fce3df96bc3c88972
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66769803"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957027"
 ---
 # <a name="updating-large-data-sample"></a>Образец обновления данных большого объема
 
@@ -32,7 +31,7 @@ ms.locfileid: "66769803"
 
 ## <a name="requirements"></a>Требования
 
-Для запуска этого образца приложения также потребуется доступ к образцу базы данных [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]. Также включите в параметр classpath путь к файлу sqljdbc4.jar. Если параметр classpath не включает путь к файлу sqljdbc4.jar, то образец приложения вызовет стандартное исключение «Класс не найден». Дополнительные сведения о том, как путь к классу см. в разделе [с помощью драйвера JDBC](../../../connect/jdbc/using-the-jdbc-driver.md).
+Для запуска этого образца приложения также потребуется доступ к образцу базы данных [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]. Также включите в параметр classpath путь к файлу sqljdbc4.jar. Если параметр classpath не включает путь к файлу sqljdbc4.jar, то образец приложения вызовет стандартное исключение «Класс не найден». Дополнительные сведения о настройке подкаталогов классов см. в разделе [Использование драйвера JDBC](../../../connect/jdbc/using-the-jdbc-driver.md).
 
 > [!NOTE]  
 > Драйвер [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] содержит файлы библиотек классов sqljdbc.jar, sqljdbc4.jar, sqljdbc41.jar или sqljdbc42.jar, которые используются в зависимости от применяемых параметров среды выполнения Java (JRE). В этом образце используются методы [isWrapperFor](../../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md) и [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md), которые были введены в API-интерфейсе JDBC 4.0, для вызова методов буферизации ответов в зависимости от драйвера. Чтобы скомпилировать и выполнить этот образец, понадобится библиотека классов sqljdbc4.jar, которая обеспечивает работу JDBC 4.0. Для получения дополнительных сведений о том, какой JAR-файл выбрать, см. статью [Требования к системе для драйвера JDBC](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).

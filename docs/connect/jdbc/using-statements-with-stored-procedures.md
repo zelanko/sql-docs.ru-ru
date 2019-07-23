@@ -1,5 +1,5 @@
 ---
-title: Использование инструкций с помощью хранимых процедур | Документация Майкрософт
+title: Использование инструкций с хранимыми процедурами | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0041f9e1-09b6-4487-b052-afd636c8e89a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2dd4ead601700baefaf356840fba4184ab427ef2
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 774e79b6baa3db1c6356768de4b04226ddbc7688
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798544"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003941"
 ---
 # <a name="using-statements-with-stored-procedures"></a>Использование инструкций с хранимыми процедурами
 
@@ -33,17 +32,17 @@ ms.locfileid: "66798544"
 > [!NOTE]  
 > Дополнительные сведения о хранимых процедурах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в статье "Основные сведения о хранимых процедурах" электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-Для работы с данными в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с использованием хранимых процедур драйвер [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] содержит классы [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) и [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md). Выбор класса для использования зависит от того, какие IN (входные) или OUT (выходные) параметры требуются хранимой процедуре. Если хранимая процедура не требует параметров IN или OUT, можно использовать класс SQLServerStatement; если хранимая процедура будет вызываться несколько раз или требует только параметры IN, можно использовать класс SQLServerPreparedStatement. Если хранимая процедура требует IN и параметров OUT, следует использовать класс SQLServerCallableStatement. Необходимо использовать класс SQLServerCallableStatement только в том случае, когда хранимая процедура требует использования параметров OUT.  
+Для работы с данными в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с использованием хранимых процедур драйвер [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] содержит классы [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) и [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md). Выбор класса для использования зависит от того, какие IN (входные) или OUT (выходные) параметры требуются хранимой процедуре. Если хранимая процедура не требует параметров IN или OUT, можно использовать класс SQLServerStatement; если хранимая процедура будет вызываться несколько раз или требует только параметры IN, можно использовать класс SQLServerPreparedStatement. Если для хранимой процедуры требуются параметры IN и OUT, следует использовать класс SQLServerCallableStatement. Необходимо использовать класс SQLServerCallableStatement только в том случае, когда хранимая процедура требует использования параметров OUT.  
   
 > [!NOTE]  
-> Хранимые процедуры могут также возвращать счетчики обновлений и несколько результирующих наборов. Дополнительные сведения см. в разделе [с помощью хранимых процедур со счетчиком обновлений](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md) и [с помощью нескольких результирующих наборов](../../connect/jdbc/using-multiple-result-sets.md).  
+> Хранимые процедуры могут также возвращать счетчики обновлений и несколько результирующих наборов. Дополнительные сведения см. в разделе [использование хранимой процедуры с числом обновлений](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md) и [Использование нескольких результирующих наборов](../../connect/jdbc/using-multiple-result-sets.md).  
   
 При использовании драйвера JDBC для вызова хранимой процедуры с параметрами следует использовать escape-последовательность SQL `call` вместе с методом [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) класса [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md). Ниже приводится полный синтаксис escape-последовательности`call`:  
   
  `{[?=]call procedure-name[([parameter][,[parameter]]...)]}`  
   
 > [!NOTE]  
-> Дополнительные сведения о `call` и другие SQL escape-последовательности, см. в разделе [с помощью escape-последовательностей SQL](../../connect/jdbc/using-sql-escape-sequences.md).  
+> Дополнительные сведения о `call` и других escape-последовательностях SQL см. в разделе [использование escape](../../connect/jdbc/using-sql-escape-sequences.md)-последовательностей SQL.  
   
 В этом разделе описываются способы вызова хранимых процедур [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью драйвера JDBC и escape-последовательности SQL `call`.  
   

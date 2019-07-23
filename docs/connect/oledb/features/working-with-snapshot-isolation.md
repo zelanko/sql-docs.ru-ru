@@ -21,13 +21,12 @@ helpviewer_keywords:
 - SQLSetConnectAttr function
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 74c80e0db7a6059e9a871553f2e11c6a16360ec3
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 25d3dbaf09e5cdd6dc6726402275376766cf0591
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796023"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67988695"
 ---
 # <a name="working-with-snapshot-isolation"></a>Работа с изоляцией моментального снимка
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,29 +35,29 @@ ms.locfileid: "66796023"
 
   В [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] появился новый уровень изоляции «моментального снимка», предназначенный для повышения параллелизма приложений оперативной обработки транзакций (OLTP). В предыдущих версиях [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] параллелизм был основан исключительно на блокировках, что могло вызвать проблемы с блокировками и взаимоблокировками для некоторых приложений. Изоляция моментального снимка зависит от расширений управления версиями строк и предназначена для улучшения производительности путем исключения сценариев блокировки модулей чтения или записи.  
   
- Транзакции, запускаемые в режиме изоляции моментальных снимков, читают моментальный снимок базы данных на момент запуска транзакции. Поведение набора ключей, динамических и статических серверных курсоров, открываемых в контексте транзакции моментальных снимков, более походит на поведение статических курсоров, открытых в рамках сериализуемых транзакций. Тем не менее когда курсоры открыты не применяются блокировки уровня изоляции моментальных снимков. Этот факт может снизить блокирование на сервере.  
+ Транзакции, запускаемые в режиме изоляции моментальных снимков, читают моментальный снимок базы данных на момент запуска транзакции. Поведение набора ключей, динамических и статических серверных курсоров, открываемых в контексте транзакции моментальных снимков, более походит на поведение статических курсоров, открытых в рамках сериализуемых транзакций. Однако при открытии курсоров на уровне изоляции моментальных снимков не выполняются блокировки. Этот факт позволяет сократить число блокировок на сервере.  
   
 ## <a name="ole-db-driver-for-sql-server"></a>Драйвер OLE DB для SQL Server  
- Драйвер OLE DB для SQL Server включает расширения для использования преимуществ изоляции моментального снимка, представленные в [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. Среди этих улучшений изменения наборов свойств DBPROPSET_DATASOURCEINFO и DBPROPSET_SESSION.  
+ Драйвер OLE DB для SQL Server обладает усовершенствованиями, которые используют преимущества изоляции моментального снимка, [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]представленной в. Среди этих улучшений изменения наборов свойств DBPROPSET_DATASOURCEINFO и DBPROPSET_SESSION.  
   
 ### <a name="dbpropsetdatasourceinfo"></a>DBPROPSET_DATASOURCEINFO  
- Набор свойств DBPROPSET_DATASOURCEINFO изменен и указывает на поддержку уровня изоляции моментальных снимков благодаря добавлению значения DBPROPVAL_TI_SNAPSHOT, используемого в свойстве DBPROP_SUPPORTEDTXNISOLEVELS. Это новое значение указывает, что уровень изоляции моментального снимка поддерживается независимо от того, включено ли в базе данных управление версиями. В следующей таблице перечислены значения DBPROP_SUPPORTEDTXNISOLEVELS:  
+ Набор свойств DBPROPSET_DATASOURCEINFO изменен и указывает на поддержку уровня изоляции моментальных снимков благодаря добавлению значения DBPROPVAL_TI_SNAPSHOT, используемого в свойстве DBPROP_SUPPORTEDTXNISOLEVELS. Это новое значение указывает, что уровень изоляции моментального снимка поддерживается независимо от того, включено ли в базе данных управление версиями. В следующей таблице перечислены значения DBPROP_SUPPORTEDTXNISOLEVELS.  
   
 |Идентификатор свойства|Описание|  
 |-----------------|-----------------|  
-|DBPROP_SUPPORTEDTXNISOLEVELS|Тип: VT_I4<br /><br /> Только для чтения и запись:<br /><br /> Описание: битовая маска, указывающая поддерживаемые уровни изоляции транзакции. Сочетание может включать нуль или несколько следующих значений:<br /><br /> DBPROPVAL_TI_CHAOS<br /><br /> DBPROPVAL_TI_READUNCOMMITTED<br /><br /> DBPROPVAL_TI_BROWSE<br /><br /> DBPROPVAL_TI_CURSORSTABILITY<br /><br /> DBPROPVAL_TI_READCOMMITTED<br /><br /> DBPROPVAL_TI_REPEATABLEREAD<br /><br /> DBPROPVAL_TI_SERIALIZABLE<br /><br /> DBPROPVAL_TI_ISOLATED<br /><br /> DBPROPVAL_TI_SNAPSHOT|  
+|DBPROP_SUPPORTEDTXNISOLEVELS|Тип: VT_I4<br /><br /> R/W: только для чтения<br /><br /> Описание: битовая маска, указывающая поддерживаемые уровни изоляции транзакции. Сочетание может включать нуль или несколько следующих значений:<br /><br /> DBPROPVAL_TI_CHAOS<br /><br /> DBPROPVAL_TI_READUNCOMMITTED<br /><br /> DBPROPVAL_TI_BROWSE<br /><br /> DBPROPVAL_TI_CURSORSTABILITY<br /><br /> DBPROPVAL_TI_READCOMMITTED<br /><br /> DBPROPVAL_TI_REPEATABLEREAD<br /><br /> DBPROPVAL_TI_SERIALIZABLE<br /><br /> DBPROPVAL_TI_ISOLATED<br /><br /> DBPROPVAL_TI_SNAPSHOT|  
   
 ### <a name="dbpropsetsession"></a>Набор свойств DBPROPSET_SESSION  
  Набор свойств DBPROPSET_SESSION изменен и указывает на поддержку уровня изоляции моментальных снимков благодаря добавлению значения DBPROPVAL_TI_SNAPSHOT, используемого в свойстве DBPROP_SESS_AUTOCOMMITISOLEVELS. Это новое значение указывает, что уровень изоляции моментального снимка поддерживается независимо от того, включено ли в базе данных управление версиями. В таблице ниже приведен список значений DBPROP_SESS_AUTOCOMMITISOLEVELS.
   
 |Идентификатор свойства|Описание|  
 |-----------------|-----------------|  
-|DBPROP_SESS_AUTOCOMMITISOLEVELS|Тип: VT_I4<br /><br /> Только для чтения и запись:<br /><br /> Описание: задает битовую маску, которая указывает уровень изоляции транзакции в режиме автоматической фиксации. Значения, которые можно установить в этой битовой маске, такие же, как устанавливаемые для DBPROP_SUPPORTEDTXNISOLEVELS.|  
+|DBPROP_SESS_AUTOCOMMITISOLEVELS|Тип: VT_I4<br /><br /> R/W: только для чтения<br /><br /> Описание: задает битовую маску, которая указывает уровень изоляции транзакции в режиме автоматической фиксации. Значения, которые можно установить в этой битовой маске, такие же, как устанавливаемые для DBPROP_SUPPORTEDTXNISOLEVELS.|  
   
 > [!NOTE]  
 >  Ошибки DB_S_ERRORSOCCURRED или DB_E_ERRORSOCCURRED происходят, если значение DBPROPVAL_TI_SNAPSHOT установлено при использовании версий [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], предшествующих [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
- Сведения о поддержке изоляции моментального снимка в транзакциях см. в разделе [поддерживают локальные транзакции](../../oledb/ole-db-transactions/supporting-local-transactions.md).  
+ Сведения о поддержке изоляции моментальных снимков в транзакциях см. в разделе [Поддержка локальных транзакций](../../oledb/ole-db-transactions/supporting-local-transactions.md).  
 
   
 ## <a name="see-also"></a>См. также:  

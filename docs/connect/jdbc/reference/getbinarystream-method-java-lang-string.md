@@ -1,5 +1,5 @@
 ---
-title: Метод getBinaryStream (java.lang.String) | Документация Майкрософт
+title: Метод getBinaryStream (Java. lang. String) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 149609b5-a6de-4e23-a440-7061775d0899
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 90527a6bfe0b943441f723fd22862832f136c6ca
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a0ee14b90dd8aaffb178c81ea46e5ec914752e28
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66799799"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953697"
 ---
 # <a name="getbinarystream-method-javalangstring"></a>Метод getBinaryStream (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,13 +40,13 @@ public java.io.InputStream getBinaryStream(java.lang.String columnName)
  Значение типа **String**, содержащее имя столбца.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Объект, InputStream.  
+ Объект InputStream.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getBinaryStream указывается с помощью метода getBinaryStream в интерфейсе java.sql.ResultSet.  
+ Этот метод getBinaryStream задается методом getBinaryStream в интерфейсе Java. SQL. Result.  
   
  Этот метод можно использовать только с типами данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] binary, varbinary, varbinary(max) и image. Если использовать его с другими типами данных, будет вызвано исключение.  
   

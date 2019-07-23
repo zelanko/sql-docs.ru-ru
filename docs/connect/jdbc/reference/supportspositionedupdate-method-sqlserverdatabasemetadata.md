@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: f963fb70-377d-43f5-8d56-326591f6d3e9
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: da21e58e0decbf7e5cde83cf34d59182212232ba
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 73c85e41df64757a77bc26ff0b1a9534fdbb5ffa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797430"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969018"
 ---
 # <a name="supportspositionedupdate-method-sqlserverdatabasemetadata"></a>Метод supportsPositionedUpdate (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsPositionedUpdate()
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- **значение true,** Если поддерживается. В противном случае — **false**.  
+ **значение true** , если поддерживается. В противном случае — **false**.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод supportsPositionedUpdate указывается с помощью метода supportsPositionedUpdate в интерфейсе java.sql.DatabaseMetaData.  
+ Этот метод supportsPositionedUpdate задается методом supportsPositionedUpdate в интерфейсе Java. SQL. DatabaseMetaData.  
   
 ## <a name="see-also"></a>См. также:  
  [Методы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

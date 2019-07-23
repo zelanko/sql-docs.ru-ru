@@ -1,5 +1,5 @@
 ---
-title: Метод setTimestamp значение отметки времени | Документация Майкрософт
+title: Метод setTimestamp для значения timestamp | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: dc45b126-3196-47ff-956b-cbc897980ff8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8edb9eec2f18fc133ccb64d9b43522a06ddad25b
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: dc7ee76a87022f5ed2194027971e02f3895e8b36
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66782714"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67972368"
 ---
 # <a name="settimestamp-method-javalangstring-javasqltimestamp"></a>Метод setTimestamp (java.lang.String, java.sql.Timestamp)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,13 +36,13 @@ public void setTimestamp(java.lang.String sCol,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *sCol*  
+ *скол*  
   
  Значение типа **String**, содержащее имя параметра.  
   
  *t*  
   
- Объект метки времени.  
+ Объект timestamp.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
