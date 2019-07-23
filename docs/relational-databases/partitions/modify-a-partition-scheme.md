@@ -9,14 +9,13 @@ ms.topic: conceptual
 ms.assetid: 515de63f-dfc5-434d-9adb-f3b5992f745a
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6e3f5e060d90863292dd00e423b8dc334c8025dc
-ms.sourcegitcommit: 258c32f7e85a38aaf674da3478ae3ed10648d1f1
+ms.openlocfilehash: 9efb96c0bb54e3887f6c3fd101633a0efe664bdc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53414139"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091055"
 ---
 # <a name="modify-a-partition-scheme"></a>Изменение схемы секционирования
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ ms.locfileid: "53414139"
 ###  <a name="Restrictions"></a> Ограничения  
  Все файловые группы, на которые действует инструкция ALTER PARTITION SCHEME, должны быть в режиме «в сети».  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
 ####  <a name="Permissions"></a> Permissions  
  Для выполнения инструкции ALTER PARTITION SCHEME необходимы следующие разрешения.  

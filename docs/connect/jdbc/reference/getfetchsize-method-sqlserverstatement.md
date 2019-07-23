@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 8115ca58-8ae9-46ce-8515-7905d7bb25fe
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 54869f3c689b0c493cdaf19b86f5d95a43835929
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 22ba06688fb402fdbcd5e9afd951a668ef9c440d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66802017"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67983213"
 ---
 # <a name="getfetchsize-method-sqlserverstatement"></a>Метод getFetchSize (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public final int getFetchSize()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getFetchSize указывается методом getFetchSize в интерфейсе java.sql.Statement.  
+ Этот метод getFetchSize задается методом getFetchSize в интерфейсе Java. SQL. Statement.  
   
 ## <a name="see-also"></a>См. также:  
  [Элементы SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

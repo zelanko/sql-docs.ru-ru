@@ -1,5 +1,5 @@
 ---
-title: Набор строк метаданные параметров и | Документация Майкрософт
+title: Метаданные параметров и наборов строк | Документация Майкрософт
 description: Метаданные параметров и наборов строк
 ms.custom: ''
 ms.date: 06/14/2018
@@ -12,13 +12,12 @@ helpviewer_keywords:
 - metadata [OLE DB]
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 1109aeea10d08f3447f789698a5d464475ae4aaa
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 641859e134a5f3c3201f239023f911b79de1c11e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66769249"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67995094"
 ---
 # <a name="metadata---parameter-and-rowset"></a>Метаданные — параметры и наборы строк
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -56,7 +55,7 @@ ms.locfileid: "66769249"
 ## <a name="icommandwithparameterssetparameterinfo-and-implied-parameter-types"></a>Метод ICommandWithParameters::SetParameterInfo и неявные типы параметров  
  Сведения, предоставленные в структуре DBPARAMBINDINFO, должны соответствовать следующим требованиям.  
   
-|*pwszDataSourceType*<br /><br /> (зависит от поставщика)|*pwszDataSourceType*<br /><br /> (OLE DB, обычный)|*ulParamSize*|*bScale*|  
+|*пвсздатасаурцетипе*<br /><br /> (зависит от поставщика)|*пвсздатасаурцетипе*<br /><br /> (OLE DB, обычный)|*ulParamSize*|*bScale*|  
 |----------------------------------------------------|-------------------------------------------------|-------------------|--------------|  
 ||DBTYPE_DATE|6|Не учитывается|  
 |Дата|DBTYPE_DBDATE|6|Не учитывается|  
@@ -67,13 +66,13 @@ ms.locfileid: "66769249"
 |datetime2 или DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|16|0..7|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|0..7|  
   
- *BPrecision* параметр учитывается.  
+ Параметр *бпреЦисион* игнорируется.  
   
- Значение «DBPARAMFLAGS_SS_ISVARIABLESCALE» не учитывается при отправке данных на сервер. Приложения могут принудительно использовать унаследованные типы потоков табличных данных за счет применения имен типов "**datetime**" и "**smalldatetime**", характерных для поставщика. При соединении с серверами [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (или более поздней версии) используется формат "**datetime2**", а также при необходимости происходит неявное преобразование сервера, когда тип имеет имя "**datetime2**" или "DBTYPE_DBTIMESTAMP". *bScale* учитывается, если имена типов характерные для поставщика "**datetime**«или»**smalldatetime**" используются. В противном случае приложения необходимо убедиться, что *bScale* имеет правильное значение. Приложениях, обновленных с компонентами MDAC и драйвера OLE DB для SQL Server из [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] , использующие «DBTYPE_DBTIMESTAMP» завершится ошибкой, если они не заданы *bScale* правильно. При соединении с экземплярами сервера версии ниже [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] значение параметра *bScale*, отличное от 0 или 3 с именем "DBTYPE_DBTIMESTAMP", является ошибкой. В этом случае будет возвращено E_FAIL.  
+ Значение «DBPARAMFLAGS_SS_ISVARIABLESCALE» не учитывается при отправке данных на сервер. Приложения могут принудительно использовать унаследованные типы потоков табличных данных за счет применения имен типов "**datetime**" и "**smalldatetime**", характерных для поставщика. При соединении с серверами [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (или более поздней версии) используется формат "**datetime2**", а также при необходимости происходит неявное преобразование сервера, когда тип имеет имя "**datetime2**" или "DBTYPE_DBTIMESTAMP". *bScale* игнорируется, если используются имена типов "**DateTime**" или "**smalldatetime**", определенные поставщиком. В противном случае приложения должны убедиться, что *bScale* задан правильно. Приложения, обновленные с версии MDAC и драйвера OLE DB [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] для SQL Server с использованием "DBTYPE_DBTIMESTAMP", завершатся ошибкой, если они не заданы правильно *bScale* . При соединении с экземплярами сервера версии ниже [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] значение параметра *bScale*, отличное от 0 или 3 с именем "DBTYPE_DBTIMESTAMP", является ошибкой. В этом случае будет возвращено E_FAIL.  
   
- Когда ICommandWithParameters::SetParameterInfo не вызывается, поставщик означает тип сервера из типа привязки, как указано в IAccessor::CreateAccessor следующим образом:  
+ Если ICommandWithParameters:: SetParameterInfo не вызывается, поставщик подразумевает тип сервера из типа привязки, как указано в IAccessor:: CreateAccessor следующим образом:  
   
-|Тип привязки|*pwszDataSourceType*<br /><br /> (зависит от поставщика)|  
+|Тип привязки|*пвсздатасаурцетипе*<br /><br /> (зависит от поставщика)|  
 |------------------|----------------------------------------------------|  
 |DBTYPE_DATE|datetime2(0)|  
 |DBTYPE_DBDATE|Дата|  
@@ -83,7 +82,7 @@ ms.locfileid: "66769249"
 |DBTYPE_DBTIMESTAMPOFFSET|datetimeoffset(7)|  
   
 ## <a name="icolumnsrowsetgetcolumnsrowset"></a>IColumnsRowset::GetColumnsRowset  
- **IColumnsRowset::GetColumnsRowset** возвращает следующие столбцы:  
+ **IColumnsRowset:: жетколумнсровсет** возвращает следующие столбцы.  
   
 |Тип столбца|DBCOLUMN_TYPE|DBCOLUM_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE, DBCOLUMN_DATETIMEPRECISION|DBCOLUMN_FLAGS, DBCOLUMNFLAGS_SS_ISVARIABLESCALE|  
 |-----------------|--------------------|-------------------------|-------------------------|--------------------------------------------------|---------------------------------------------------------|  

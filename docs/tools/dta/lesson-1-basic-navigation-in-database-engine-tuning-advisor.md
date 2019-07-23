@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ad49b2e0-a5e3-49d2-80fd-9f4eaa3652cb
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 149fc4781c0a93db423a863c98f7eeaf0afcf2da
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 39183d699bfa27430a35012d353b8f3bc70d6be0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67727616"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68034772"
 ---
 # <a name="lesson-1-basic-navigation-in-database-engine-tuning-advisor"></a>Урок 1. Основы перемещения в помощнике по настройке ядра СУБД
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,25 +35,25 @@ ms.locfileid: "67727616"
 См. инструкции по [восстановлению резервной копии базы данных с помощью SSMS](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms?view=sql-server-2017).
 
   >[!NOTE]
-  > Этот учебник предназначен для пользователей, знакомых с использованием SQL Server Management Studio и основные задачи администрирования. 
+  > Этот учебник предназначен для пользователей, знакомых с использованием SQL Server Management Studio и основных задач администрирования базы данных. 
   
 
 ## <a name="launch-database-tuning-advisor"></a>Запуск помощника по настройке ядра СУБД 
 Откройте графический интерфейс пользователя (GUI) помощника по настройке ядра СУБД (DTA). При первом использовании помощника по настройке ядра СУБД для инициализации этого приложения его должен запустить член, имеющий предопределенную роль сервера **sysadmin** . После инициализации помощника по настройке ядра СУБД его могут использовать члены предопределенной роли базы данных **db_owner** для настройки тех баз данных, которыми они владеют. Дополнительные сведения об инициализации помощника по настройке ядра СУБД см. в разделе [Запуск и использование помощника по настройке ядра СУБД](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   
-1. Запустите среду SQL Server Management Studio (SSMS). В Windows **меню "Пуск"** , пункты **все программы** и найдите **SQL Server Management Studio**. 
-2. После открытия среды SSMS выберите **средства** меню и выберите **помощник по настройке СУБД**. 
+1. Запустите среду SQL Server Management Studio (SSMS). В **меню Пуск**Windows выберите пункт **все программы** и перейдите на **SQL Server Management Studio**. 
+2. После открытия среды SSMS выберите меню **Сервис** и выберите **Помощник по настройке базы данных**. 
 
-  ![Запустите DTA из SSMS](media/dta-tutorials/launch-dta.png)
+  ![Запуск DTA из SSMS](media/dta-tutorials/launch-dta.png)
 
-3. Базы данных запускает помощник по настройке и откроется **соединение с сервером** диалоговое окно. Проверьте параметры по умолчанию, а затем выберите **Connect** для подключения к серверу SQL Server.  
+3. Помощник по настройке базы данных запустится и откроет диалоговое окно **соединение с сервером** . Проверьте параметры по умолчанию и нажмите кнопку **Подключиться** , чтобы подключиться к SQL Server.  
   
 По умолчанию помощник по настройке ядра СУБД открывается в конфигурации, показанной на следующем рисунке.  
   
 ![Окно помощника по настройке ядра СУБД по умолчанию](media/dta-tutorials/dta-default-gui.png)
   
 > [!NOTE]  
-> **Монитор сеансов** вкладке отображаются имя сеанса, представляющее собой имя подключенного пользователя и текущие данные. 
+> На вкладке **Монитор сеансов** отображается имя сеанса, то есть имя подключенного пользователя и текущие данные. 
   
 При первом запуске помощника в его графическом интерфейсе пользователя отображаются две основные панели.  
   
@@ -65,7 +64,7 @@ ms.locfileid: "67727616"
 > [!NOTE]
 > Помощник по настройке ядра СУБД может принимать на входе XML-файлы, если скрипт [!INCLUDE[tsql](../../includes/tsql-md.md)] импортируется из редактора запросов среды [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Дополнительные сведения см. в разделе [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Запуск и использование помощника по настройке ядра СУБД [, в котором рассматривается запуск помощника по настройке ядра СУБД из редактора запросов среды](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   
-## <a name="configure-tool-options-and-layout"></a>Настройка параметров и вида средств 
+## <a name="configure-tool-options-and-layout"></a>Настройка параметров и макета инструментов 
 
 1.  В меню **Сервис** выберите команду **Параметры**.  
 

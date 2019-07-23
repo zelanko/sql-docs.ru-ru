@@ -13,12 +13,12 @@ ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 7adcc36bfaf41240ae5c1da0d8934ffdda67bada
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: f0820f42d95f0320dbdf843ab1715b49994cb613
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59506521"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68252125"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Службы Reporting Services с группами доступности AlwaysOn (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,25 +28,7 @@ ms.locfileid: "59506521"
  Основное преимущество применения [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] с источниками данных служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] заключается в возможности использования доступных для чтения вторичных реплик в качестве источников данных для отчетов, при этом вторичные реплики продолжают обеспечивать отработку отказа для базы данных-источника.  
   
  Общие сведения о [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] см. в разделе [Вопросы и ответы по группам доступности AlwaysOn для SQL Server 2012 (https://msdn.microsoft.com/sqlserver/gg508768)](https://msdn.microsoft.com/sqlserver/gg508768).  
-  
- **В этом разделе:**  
-  
--   [Требования, которые необходимо выполнить для использования служб Reporting Services и групп доступности AlwaysOn](#bkmk_requirements)  
-  
--   [Источники данных отчетов и группы доступности](#bkmk_reportdatasources)  
-  
--   [Конструирование отчетов и группы доступности](#bkmk_reportdesign)  
-  
--   [Базы данных сервера отчетов и группы доступности](#bkmk_reportserverdatabases)  
-  
--   -   [Различия с собственным режимом SharePoint](#bkmk_differences_in_server_mode)  
-  
-    -   [Подготовка баз данных сервера отчетов для групп доступности](#bkmk_prepare_databases)  
-  
-    -   [Действия по выполнению аварийного восстановления баз данных сервера отчетов](#bkmk_steps_to_complete_failover)  
-  
-    -   [Работа сервера отчетов при выполнении отработки отказа](#bkmk_failover_behavior)  
-  
+
 ##  <a name="bkmk_requirements"></a> Требования, которые необходимо выполнить для использования служб Reporting Services и групп доступности AlwaysOn  
  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] и Сервер отчетов Microsoft Power BI использует .NET Framework 4.0 и поддерживает свойства строки соединения для [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] при работе с источниками данных.  
   

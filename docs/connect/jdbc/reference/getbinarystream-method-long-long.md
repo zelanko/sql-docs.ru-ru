@@ -1,5 +1,5 @@
 ---
-title: Метод getBinaryStream (long, long) | Документация Майкрософт
+title: Метод getBinaryStream (длинный, длинный) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 30bc8882-04b4-4efd-95e4-7d3a2a8c1d47
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e78a745e908399efa25e6f72faff9daec2cbd8ea
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 5cc12f9e7ed7a83363766355fa5d340a459a332b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66799788"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953650"
 ---
 # <a name="getbinarystream-method-long-long"></a>Метод getBinaryStream (long, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -31,7 +30,7 @@ public java.io.InputStream getBinaryStream(long pos, long length)
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *Торговых терминалов*  
+ *POS*  
   
  Смещение до первого байта извлекаемого фрагмента значения.  
   
@@ -46,7 +45,7 @@ public java.io.InputStream getBinaryStream(long pos, long length)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getBinaryStream указывается с помощью метода getBinaryStream в интерфейсе java.sql.Blob.  
+ Этот метод getBinaryStream задается методом getBinaryStream в интерфейсе Java. SQL. BLOB.  
   
 ## <a name="see-also"></a>См. также:  
  [Методы SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-methods.md)   

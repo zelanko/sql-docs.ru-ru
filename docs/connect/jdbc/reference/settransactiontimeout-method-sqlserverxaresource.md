@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 38bf4a1a-6ad3-437c-b9ed-8792ab6dde7e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 94563e020046acac6f45b75cb9065a41a2059e30
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 481843393f15998df059bb7a732c64010b2c8bf0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66766967"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67972280"
 ---
 # <a name="settransactiontimeout-method-sqlserverxaresource"></a>Метод setTransactionTimeout (SQLServerXAResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +37,7 @@ public boolean setTransactionTimeout(int seconds)
 #### <a name="parameters"></a>Параметры  
  *секунд*  
   
- **Int** значение.  
+ Целочисленное **значение.**  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Значение **true**, если время ожидания задано успешно. В противном случае — **false**.  
@@ -47,7 +46,7 @@ public boolean setTransactionTimeout(int seconds)
  javax.transaction.xa.XAException  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод setTransactionTimeout указывается с помощью метода setTransactionTimeout в интерфейсе javax.transaction.xa.XAResource.  
+ Этот метод setTransactionTimeout задается методом setTransactionTimeout в интерфейсе javax. Transaction. XA. XAResource.  
   
 ## <a name="see-also"></a>См. также:  
  [Методы SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-methods.md)   
