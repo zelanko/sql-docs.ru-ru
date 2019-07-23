@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 137416fe-a580-424e-be79-fe946eba9e6e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e10e06460ee04abeace42af47c84270901fa1a17
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 0f7110594eb808a50fa88e22b1e38d2a4052066f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66799238"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974036"
 ---
 # <a name="setlong-method-sqlservercallablestatement"></a>Метод setLong (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,13 +36,13 @@ public void setLong(java.lang.String sCol,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *sCol*  
+ *скол*  
   
  Значение типа **String**, содержащее имя параметра.  
   
  *l*  
   
- Объект **long** значение.  
+ Значение **типа Long** .  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

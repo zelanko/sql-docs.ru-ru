@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: a34b9e90-199d-46d0-817a-a7e69387bf5f
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: dc70465eac81711cfcc3fd500c45e92f682b792c
-ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
+ms.openlocfilehash: 25df03e48d08e09033b52e4b51c11d3ecc4db4ed
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54206200"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065656"
 ---
 # <a name="alter-external-data-source-transact-sql"></a>ALTER EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +62,7 @@ ALTER EXTERNAL DATA SOURCE data_source_name
 
 TYPE = BLOB_STORAGE   
 **Применимо к:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
-Только для массовых операций — `LOCATION` должен быть допустимым URL-адресом хранилища больших двоичных объектов Azure. Не помещайте **/**, имя файла или параметры подписи общего доступа в конце URL-адреса `LOCATION`.
+Только для массовых операций — `LOCATION` должен быть допустимым URL-адресом хранилища больших двоичных объектов Azure. Не помещайте **/** , имя файла или параметры подписи общего доступа в конце URL-адреса `LOCATION`.
 Используемые учетные данные необходимо создавать, используя `SHARED ACCESS SIGNATURE` в качестве удостоверения. Дополнительные сведения о подписанных URL-адресах см. в статье [Использование подписанных URL-адресов](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1).
 
   

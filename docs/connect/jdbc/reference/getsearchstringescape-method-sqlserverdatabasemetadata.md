@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: ea0f95d0-0238-4dc8-9f26-7ff9b65f30c3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 715787197357f6d10f0d116359155c86edb07187
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 1b65281fbe6ba1f758bdd4e12ae834cee3347842
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66792052"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980049"
 ---
 # <a name="getsearchstringescape-method-sqlserverdatabasemetadata"></a>Метод getSearchStringEscape (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public java.lang.String getSearchStringEscape()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getSearchStringEscape указывается с помощью метода getSearchStringEscape в интерфейсе java.sql.DatabaseMetaData.  
+ Этот метод getSearchStringEscape задается методом getSearchStringEscape в интерфейсе Java. SQL. DatabaseMetaData.  
   
  Этот метод используется только для поиска по шаблону в метаданных. Он возвращает символ \\. В шаблоне поиска **String** можно убирать подстановочные знаки ("%" и "_"), добавляя перед ними обратную косую черту, и передавать их в виде литералов. "\\%" преобразуется в "[%]", а "\\\_" — в "[\_]".  
   

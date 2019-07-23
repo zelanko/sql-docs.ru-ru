@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 description: В этой статье вы узнаете об изменении внешнего вида веб-портала при помощи элементов фирменного стиля вашего бизнеса в пакетах фирменной символики. Для работы с пакетами фирменной символики углубленное знание каскадных таблиц стилей (CSS) не требуется.
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: d7117aa94aa2b91573f9cd3b6443bed2d212bd00
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 2303ae2f21f9bbdc9c15c2d60f62d10f65b5a624
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59506511"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68221724"
 ---
 # <a name="branding-the-web-portal"></a>Фирменная символика на веб-портале
 

@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: c117df94-f02b-403f-9383-ec5b3ac3763c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: da5e69d974f33f7eeb60e185a5a4a67dae6c01a8
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 7030f40419850454e90978168e72846331b5e865
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589698"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68134657"
 ---
 # <a name="upgrade-a-data-tier-application"></a>Обновление приложения уровня данных
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -83,7 +82,7 @@ ms.locfileid: "53589698"
   
 2.  Разверните узел **Управление** , а затем узел **Приложения уровня данных** .  
   
-3.  Щелкните правой кнопкой мыши узел с обновляемым приложением уровня данных и выберите пункт **Обновить приложение уровня данных…**.  
+3.  Щелкните правой кнопкой мыши узел с обновляемым приложением уровня данных и выберите пункт **Обновить приложение уровня данных…** .  
   
 4.  Выполните шаги в диалоговых окнах мастера.  
   

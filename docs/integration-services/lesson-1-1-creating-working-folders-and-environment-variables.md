@@ -10,13 +10,12 @@ ms.topic: tutorial
 ms.assetid: 45091ba2-ea3d-4399-9814-489d812b42cc
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9a7f1437346baa2c54801af591a5f23a208d42c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8f8c738987803390872217a0eee19682fa23c29d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65723454"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68057294"
 ---
 # <a name="lesson-1-1---creating-working-folders-and-environment-variables"></a>Занятие 1–1. Создание рабочих папок и переменных среды
 
@@ -37,7 +36,7 @@ ms.locfileid: "65723454"
   
 1.  Щелкните правой кнопкой мыши меню «Пуск» и выберите «Проводник».  
   
-2.  Щелкните **Локальный диск (С:)**.  
+2.  Щелкните **Локальный диск (С:)** .  
   
 3.  В меню **Файл** наведите указатель на пункт **Создать**, а затем выберите пункт **Папка**.  
   

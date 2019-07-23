@@ -1,5 +1,5 @@
 ---
-title: С помощью escape-последовательностей SQL | Документация Майкрософт
+title: Использование escape-последовательностей SQL | Документация Майкрософт
 ms.custom: ''
 ms.date: 07/11/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 00f9e25a-088e-4ac6-aa75-43eacace8f03
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d029bf6b0a1e50bec104879a64d9411774ffeda5
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 8cd32d41c1ebacc13004a0a5130567b7df9a09a9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798610"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005933"
 ---
 # <a name="using-sql-escape-sequences"></a>Использование escape-последовательностей SQL
 
@@ -112,7 +111,7 @@ WHERE OrderID=1025
 
 где `procedure-name` указывает имя хранимой процедуры, а `parameter` указывает параметр хранимой процедуры.  
   
-Дополнительные сведения об использовании `call` escape-последовательности с помощью хранимых процедур, см. в разделе [с помощью инструкций, с помощью хранимых процедур](../../connect/jdbc/using-statements-with-stored-procedures.md).  
+Дополнительные сведения об использовании `call` escape-последовательности с хранимыми процедурами см. в разделе [Использование инструкций с хранимыми процедурами](../../connect/jdbc/using-statements-with-stored-procedures.md).  
 
 ## <a name="outer-joins"></a>Внешние соединения
 

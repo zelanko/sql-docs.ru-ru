@@ -1,6 +1,6 @@
 ---
-title: Массовое копирование данных с использованием интерфейса IRowsetFastLoad (OLE DB) | Документация Майкрософт
-description: Массовое копирование данных в SQL Server интерфейс IRowsetFastLoad, с помощью таблицы драйвер OLE DB для SQL Server
+title: Групповое Копирование данных с использованием IRowsetFastLoad (OLE DB) | Документация Майкрософт
+description: Выполнить полное копирование данных в SQL Server таблицу с помощью интерфейса IRowsetFastLoad драйвера OLE DB для SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -15,13 +15,12 @@ helpviewer_keywords:
 - bulk copy [OLE DB], about bulk copy
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 1e4581d06d04727133f5a48f5b663a4b689755f2
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 926cc4f4d3dd1f3022c2b653a32f12ee58492b24
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66785999"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015643"
 ---
 # <a name="bulk-copy-data-using-irowsetfastload-ole-db"></a>Выполнение массового копирования данных с использованием интерфейса IRowsetFastLoad (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "66785999"
 
   Этот образец иллюстрирует использование интерфейса IRowsetFastLoad для массового копирования записей в таблицу.  
   
- Потребитель уведомляет драйвер OLE DB для SQL Server о необходимости массового копирования путем установки драйвера OLE DB для SQL Server специфические для драйвера свойства SSPROP_ENABLEFASTLOAD значение VARIANT_TRUE. Свойство установлено в источнике данных потребитель создает драйвер OLE DB для SQL Server сеанса. Новый сеанс позволяет потребителю получить доступ к **IRowsetFastLoad**.  
+ Потребитель уведомляет OLE DB драйвер SQL Server о необходимости выполнить групповое копирование, установив драйвер OLE DB для SQL Server свойству драйвера SSPROP_ENABLEFASTLOAD значение VARIANT_TRUE. Если свойство установлено в источнике данных, потребитель создает Драйвер OLE DB для SQL Server сеанса. Новый сеанс позволяет потребителю получить доступ к **IRowsetFastLoad**.  
   
  Имеется полный образец, иллюстрирующий применение интерфейса **IRowsetFastLoad** для массового копирования записей в таблицу. В этом образце в таблицу **IRFLTable** добавляется 10 записей. Необходимо создать в базе данных таблицу **IRFLTable**.  
   
@@ -43,17 +42,17 @@ ms.locfileid: "66785999"
   
 1.  Установите соединение с источником данных.  
   
-2.  Драйвер OLE DB для SQL Server специфические для драйвера свойство источника данных SSPROP_ENABLEFASTLOAD значение VARIANT_TRUE. При присвоении этому свойству значения VARIANT_TRUE созданный сеанс позволит потребителю получить доступ к **IRowsetFastLoad**.  
+2.  Задайте драйверу OLE DB для SQL Server свойства источника данных, зависящего от драйвера, SSPROP_ENABLEFASTLOAD значение VARIANT_TRUE. При присвоении этому свойству значения VARIANT_TRUE созданный сеанс позволит потребителю получить доступ к **IRowsetFastLoad**.  
   
-3.  Создайте сеанс, запрашивающий **IOpenRowset** интерфейс.  
+3.  Создайте сеанс, запрашивающий интерфейс **IOpenRowset** .  
   
 4.  Вызовите метод **IOpenRowset::OpenRowset** для открытия набора строк, включающего все строки таблицы (в которую необходимо скопировать данные с помощью операции массового копирования).  
   
-5.  Выполните необходимые привязки и создайте метод доступа **IAccessor::CreateAccessor**.  
+5.  Выполните необходимые привязки и создайте метод доступа с помощью **IAccessor:: CreateAccessor**.  
   
 6.  Задайте буфер памяти, из которого данные будут копироваться в таблицу.  
   
-7.  Вызовите **IRowsetFastLoad::InsertRow** для массового копирования данных в таблицу.  
+7.  Вызовите метод **IRowsetFastLoad:: insertRow** , чтобы выполнить массовые копирование данных в таблицу.  
   
 ## <a name="example"></a>Пример  
  В этом примере в таблицу IRFLTable добавляется 10 записей. Необходимо создать в базе данных таблицу IRFLTable. Этот образец не поддерживается на архитектуре IA64.  

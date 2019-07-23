@@ -1,6 +1,6 @@
 ---
-title: Присваивание больших данных | Документация Майкрософт
-description: Присваивание больших данных с помощью драйвера OLE DB для SQL Server
+title: Задание больших данных | Документация Майкрософт
+description: Настройка больших данных с помощью драйвера OLE DB для SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,20 +16,19 @@ helpviewer_keywords:
 - large data, OLE objects
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 5d050a978efcfc1067f8adc5a346382f5b598ff7
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 03baaafbc3fed654bcd463a2971bf1fca6712304
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66788332"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936527"
 ---
 # <a name="setting-large-data"></a>Присваивание больших данных
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Драйвере OLE DB для SQL Server данные большого двоичного ОБЪЕКТА можно задать, передав указатель на объект хранилища потребителя.  
+  С помощью драйвера OLE DB для SQL Server можно задать данные большого двоичного объекта, передав указатель на объект хранилища объекта-получателя.  
   
  Потребитель создает объект хранилища, содержащий эти данные, и передает поставщику указатель на этот объект. Поставщик считывает данные из объекта в хранилище поставщика и записывает их в столбец BLOB.  
   

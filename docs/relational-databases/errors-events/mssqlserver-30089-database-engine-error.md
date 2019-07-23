@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 188e5bde-6865-4740-a2b2-582be8f55c77
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ab9441748fce58994019c00e08225e0a59532657
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 981d0079cb6b0ce8cf423bf44e382cca119ed477
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694662"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68001941"
 ---
 # <a name="mssqlserver30089"></a>MSSQLSERVER_30089
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,5 +45,5 @@ ms.locfileid: "47694662"
 ## <a name="see-also"></a>См. также:  
 [sp_help_fulltext_system_components (Transact-SQL)](~/relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql.md)  
 [Настройка средств разбиения текста на слова и парадигматических модулей и управление ими для поиска](~/relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)  
-[Настройка поисковых фильтров и управление ими](~/relational-databases/search/configure-and-manage-filters-for-search.md)  
+[Настройка и управление фильтрами для поиска](~/relational-databases/search/configure-and-manage-filters-for-search.md)  
   

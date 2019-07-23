@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 8664bde5-86ff-4e8b-b5a6-af003316f6ad
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 49c19d1109f6105f2f081b1f85c2f188d2c02539
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b5ff9e02b15c70d08151384bb46332e8b4ea550a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65099673"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035165"
 ---
 # <a name="how-to-navigate-between-scripts"></a>Руководство. переходить между скриптами
 В редакторе Transact\-SQL для автономной разработки есть два полезных навигационных средства, с которыми знакомы пользователи Visual Studio: "Перейти к определению" и "Найти все ссылки". Например, можно щелкнуть правой кнопкой мыши имя таблицы и выбрать «Найти все ссылки», чтобы вывести список всех ссылок на таблицу в проекте. Можно дважды щелкнуть результат поиска для перехода к конкретному файлу кода. В этом файле можно еще раз щелкнуть имя таблицы правой кнопкой мыши, выбрать «Перейти к определению» и вернуться обратно к определению таблицы.  

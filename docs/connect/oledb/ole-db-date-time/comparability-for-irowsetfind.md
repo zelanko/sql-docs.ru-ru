@@ -12,13 +12,12 @@ helpviewer_keywords:
 - IRowsetFind comparability
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 52f0106cbf3a42108a3837ce5826a325229bb926
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 6750e4af88f875b7557671d628fdf2570f8dcff1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66769485"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67995152"
 ---
 # <a name="comparability-for-irowsetfind"></a>Сравнимость для IRowsetFind
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

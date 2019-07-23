@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: b39461d3-48d6-4048-8300-1a886c00756d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2682d5fe31bcd2f22eb92960ab16f70458687b55
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 5faf330b80f0d8ece7ee4482e881de9c7dd8ead9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66790356"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004065"
 ---
 # <a name="using-advanced-data-types"></a>Использование расширенных типов данных
 
@@ -48,7 +47,7 @@ ms.locfileid: "66790356"
 Драйвер JDBC реализует все методы интерфейсов java.sql.Blob, java.sql.Clob и java.sql.NClob.  
   
 > [!NOTE]  
-> Значения CLOB могут использоваться с типами данных больших значений [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версий. В частности, типы CLOB могут использоваться с **varchar(max)** и **nvarchar(max)** типы данных типов больших двоичных ОБЪЕКТОВ может использоваться с **varbinary(max)** и **изображения**  типы данных, а типы NCLOB могут использоваться с **ntext** и **nvarchar(max)** .  
+> Значения CLOB могут использоваться с типами данных больших значений [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версий. В частности, типы CLOB могут использоваться с типами данных **varchar (max)** и **nvarchar (max)** , типы больших двоичных объектов могут использоваться с типами данных **varbinary (max)** и **Image** , а типы NCLOB могут использоваться с **ntext** и **nvarchar (Max )** .  
 
 ## <a name="large-value-data-types"></a>Типы данных большого объема
 
@@ -67,7 +66,7 @@ Reader reader = rs.getCharacterStream(2);
 ```
 
 > [!NOTE]
-> Этот же подход можно использовать также для **текст**, **ntext**, и **nvarchar(max)** типов данных.  
+> Этот же подход также можно использовать для типов данных **Text**, **ntext**и **nvarchar (max)** .  
 
 Извлечь тип двоичных данных большого объема, например типа данных **varbinary(max)** из базы данных, можно несколькими способами. Эффективнее всего считать данные в виде двоичного потока следующим образом:  
 
@@ -102,7 +101,7 @@ pstmt.executeUpdate();
 ```
 
 > [!NOTE]  
-> Этот подход также может использоваться для значений, которые хранятся в **текст**, **ntext**, и **nvarchar(max)** столбцов.  
+> Этот подход также можно использовать для значений, которые хранятся в столбцах **Text**, **ntext**и **nvarchar (max)** .  
 
 При наличии на сервере библиотеки изображений и при необходимости загрузки целых двоичных файлов изображений в столбец **varbinary(max)** эффективнее всего использовать драйвер JDBC, организуя потоки напрямую следующим образом:  
 
@@ -149,7 +148,7 @@ try (Statement stmt = con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, Resul
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] содержит тип данных **xml**, который позволяет хранить XML-документы и фрагменты в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Тип данных **xml** — это встроенный в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип данных, несколько напоминающий другие встроенные типы данных, такие как **int** и **varchar**. Аналогично другим встроенным типам, типы данных **xml** можно использовать следующим образом: как тип переменной, тип параметра, тип возвращаемой функции или тип столбца при создании таблицы, а также в функциях CAST и CONVERT [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-В драйвере JDBC тип данных **xml** может быть сопоставлен со строкой, байтовым массивом, потоком или объектом CLOB, BLOB или SQLXML. По умолчанию задана строка. Для драйвера JDBC, начиная с версии 2.0, обеспечивается поддержка API-интерфейса JDBC 4.0, что позволяет использовать интерфейс SQLXML. Интерфейс SQLXML определяет методы для обмена данными XML и их обработки. **SQLXML** сопоставляется с типом данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **xml** тип данных. Дополнительные сведения о считывании XML-данных из реляционной базы данных и записи их в нее с типом данных Java **SQLXML** см. в разделе [Поддержка данных XML](../../connect/jdbc/supporting-xml-data.md).  
+В драйвере JDBC тип данных **xml** может быть сопоставлен со строкой, байтовым массивом, потоком или объектом CLOB, BLOB или SQLXML. По умолчанию задана строка. Для драйвера JDBC, начиная с версии 2.0, обеспечивается поддержка API-интерфейса JDBC 4.0, что позволяет использовать интерфейс SQLXML. Интерфейс SQLXML определяет методы для обмена данными XML и их обработки. Тип данных **SQLXML** сопоставляется с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]типом данных **XML** . Дополнительные сведения о считывании XML-данных из реляционной базы данных и записи их в нее с типом данных Java **SQLXML** см. в разделе [Поддержка данных XML](../../connect/jdbc/supporting-xml-data.md).  
   
 Благодаря реализации типа данных **xml** в драйвере JDBC обеспечена поддержка следующих возможностей:  
   
@@ -173,11 +172,11 @@ try (Statement stmt = con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, Resul
   
 ## <a name="sqlvariant-data-type"></a>Sql_variant Data Type
 
-Сведения о типе данных sql_variant, см. в разделе [использование типа данных Sql_variant](../../connect/jdbc/using-sql-variant-datatype.md).  
+Сведения о типе данных sql_variant см. [в разделе Использование типа данных sql_variant](../../connect/jdbc/using-sql-variant-datatype.md).  
 
 ## <a name="spatial-data-types"></a>Типы пространственных данных
 
-Сведения о типах пространственных данных, см. в разделе [пространственных типов данных с помощью](../../connect/jdbc/use-spatial-datatypes.md).  
+Дополнительные сведения о типах пространственных данных см. [в разделе использование пространственных типов](../../connect/jdbc/use-spatial-datatypes.md).  
 
 ## <a name="see-also"></a>См. также:
 

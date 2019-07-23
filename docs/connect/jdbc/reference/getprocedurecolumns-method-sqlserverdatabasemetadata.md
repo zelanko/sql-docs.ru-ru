@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 4f0df8fe-3cd6-46e4-ae3c-dc23c35676b2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8c71218c709921cd9180bff2b9a6b5997ae7450c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 1767519cc2f36bac4a70da84efeb8da9e2a1ec3c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66771203"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980753"
 ---
 # <a name="getprocedurecolumns-method-sqlserverdatabasemetadata"></a>Метод getProcedureColumns (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,11 +38,11 @@ public java.sql.ResultSet getProcedureColumns(java.lang.String sCatalog,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *sCatalog*  
+ *скаталог*  
   
  Значение типа **String**, содержащее имя каталога. Задание значения NULL для этого параметра указывает на то, что имя каталога использовать не нужно.  
   
- *sSchema*  
+ *ссчема*  
   
  Значение типа **String**, содержащее шаблон имени схемы. Задание значения NULL для этого параметра указывает на то, что имя схемы использовать не нужно.  
   
@@ -62,7 +61,7 @@ public java.sql.ResultSet getProcedureColumns(java.lang.String sCatalog,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getProcedureColumns указывается с помощью метода getProcedureColumns в интерфейсе java.sql.DatabaseMetaData.  
+ Этот метод getProcedureColumns задается методом getProcedureColumns в интерфейсе Java. SQL. DatabaseMetaData.  
   
  Результирующий набор, возвращаемый методом getProcedureColumns, включает следующие данные:  
   
@@ -83,7 +82,7 @@ public java.sql.ResultSet getProcedureColumns(java.lang.String sCatalog,
 |REMARKS|**String**|Описание этого столбца процедуры.<br /><br /> <br /><br /> **Примечание**. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не возвращает значение для этого столбца.|  
 |COLUMN_DEF|**String**|Значение по умолчанию для столбца.|  
 |SQL_DATA_TYPE|**smallint**|Этот столбец содержит то же значение, что и столбец **DATA_TYPE**, за исключением типов данных **datetime** и ISO **interval**.|  
-|SQL_DATETIME_SUB|**smallint**|Дополнительный код **datetime** ISO **interval**, если значение **SQL_DATA_TYPE** равно **SQL_DATETIME** или **SQL_INTERVAL**. Для типов данных, отличных от **datetime** и ISO **интервал**, этот столбец равен NULL.|  
+|SQL_DATETIME_SUB|**smallint**|Дополнительный код **datetime** ISO **interval**, если значение **SQL_DATA_TYPE** равно **SQL_DATETIME** или **SQL_INTERVAL**. Для типов данных, отличных от **DateTime** и **интервалов**ISO, этот столбец имеет значение null.|  
 |CHAR_OCTET_LENGTH|**int**|Максимальный размер столбца в байтах.|  
 |ORDINAL_POSITION|**int**|Индекс столбца в таблице.|  
 |IS_NULLABLE|**String**|Указывает, допускает ли столбец значения NULL.|  

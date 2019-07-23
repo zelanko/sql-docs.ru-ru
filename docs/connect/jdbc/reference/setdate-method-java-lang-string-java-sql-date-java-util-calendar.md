@@ -1,5 +1,5 @@
 ---
-title: Строка даты и календаря - метод setDate | Документация Майкрософт
+title: Метод setDate к дате и календарь-строка | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: fd152ad6-dd5e-49ef-b166-917371a2cba6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e2f924c8b613453dbb010d54e3dd76325faa1df8
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 0f986b7fd5faadfbd24708ec9a339d3bd2f104f0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66793964"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974577"
 ---
 # <a name="setdate-method-javalangstring-javasqldate-javautilcalendar"></a>Метод setDate (java.lang.String, java.sql.Date, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -48,7 +47,7 @@ public void setDate(java.lang.String sCol,
   
  *c*  
   
- Объект календаря.  
+ Объект Calendar.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

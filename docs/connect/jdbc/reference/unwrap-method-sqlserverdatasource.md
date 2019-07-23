@@ -1,5 +1,5 @@
 ---
-title: Метод unwrap (SQLServerDataSource) | Документация Майкрософт
+title: Метод Unwrap (SQLServerDataSource) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: eb8abe29-f3ec-4752-a590-1d5dc3e48f08
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e123c7ede812634898d72aca933dbd0150107b0c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: f8cb254ba464b0e051c00c7ac6d410c5e6da1e36
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66799393"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997285"
 ---
 # <a name="unwrap-method-sqlserverdatasource"></a>Метод unwrap (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -31,7 +30,7 @@ public <T> T unwrap(Class<T> iface)
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *iface*  
+ *IFACE*  
   
  Класс типа T, определяющий интерфейс.  
   

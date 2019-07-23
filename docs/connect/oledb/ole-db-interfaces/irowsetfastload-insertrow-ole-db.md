@@ -1,5 +1,5 @@
 ---
-title: IRowsetFastLoad::InsertRow (OLE DB) | Документация Майкрософт
+title: 'IRowsetFastLoad:: InsertRow (OLE DB) | Документация Майкрософт'
 description: IRowsetFastLoad::InsertRow (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,20 +15,19 @@ helpviewer_keywords:
 - InsertRow method
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 8acbcf78a7f8e3e108b93076d5596c0f09edd226
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: b01c63e74ee26cea327a01e3bf9a3595bc5012d8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66761486"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015448"
 ---
 # <a name="irowsetfastloadinsertrow-ole-db"></a>IRowsetFastLoad::InsertRow (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Добавляет строку в набор строк для массового копирования. Примеры, см. в разделе [массового копирования данных с помощью IRowsetFastLoad &#40;OLE DB&#41; ](../../oledb/ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md) и [отправить данные больших двоичных ОБЪЕКТОВ SQL SERVER с помощью IROWSETFASTLOAD и ISEQUENTIALSTREAM &#40;OLE DB&#41;](../../oledb/ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md).  
+  Добавляет строку в набор строк для массового копирования. Примеры см. в разделе [групповое копирование данных &#40;using&#41; IRowsetFastLoad OLE DB](../../oledb/ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md) и [Отправка данных большого двоичного объекта в SQL &#40;Server&#41;с помощью IRowsetFastLoad и ISEQUENTIALSTREAM OLE DB](../../oledb/ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -71,9 +70,9 @@ HRESULT InsertRow(
 ## <a name="remarks"></a>Remarks  
  Ошибка при преобразовании данных потребителя в тип данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для столбца приводит к тому, что драйвер OLE DB для SQL Server возвращает E_FAIL. Данные могут передаваться в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] любым методом **InsertRow** или только методом **Commit**. Приложение потребителя может вызывать метод **InsertRow** много раз с ошибочными данными, прежде чем получит уведомление, что при преобразовании типов данных произошла ошибка. Поскольку метод **Commit** гарантирует, что все данные были правильно указаны потребителем, потребитель может при необходимости использовать метод **Commit** для проверки данных.  
   
- Драйвер OLE DB для SQL Server групповое копирование наборов строк доступны только для записи. Драйвер OLE DB для SQL Server не предоставляет методов, позволяющих потребителю запрашивать набора строк. Чтобы прервать обработку, потребитель может освободить ссылку на интерфейс [IRowsetFastLoad](../../oledb/ole-db-interfaces/irowsetfastload-ole-db.md), не вызывая метод **Commit**. Невозможно получить доступ к вставленной потребителем строке, изменить ее значения или удалить ее из набора строк.  
+ Драйвер OLE DB для SQL Server наборов строк с массовым копированием является только записью. Драйвер OLE DB для SQL Server не предоставляет методы, которые позволяют потребителю обращаться к набору строк. Чтобы прервать обработку, потребитель может освободить ссылку на интерфейс [IRowsetFastLoad](../../oledb/ole-db-interfaces/irowsetfastload-ole-db.md), не вызывая метод **Commit**. Невозможно получить доступ к вставленной потребителем строке, изменить ее значения или удалить ее из набора строк.  
   
- Массово скопированные строки форматируются на сервере для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Формат строки зависит от любых параметров, которые могли быть заданы для соединения или сеанса, например ANSI_PADDING. Этот параметр включен по умолчанию для любого соединения, установленного через драйвер OLE DB для SQL Server.  
+ Массово скопированные строки форматируются на сервере для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Формат строки зависит от любых параметров, которые могли быть заданы для соединения или сеанса, например ANSI_PADDING. Этот параметр установлен по умолчанию для любого соединения, установленного с помощью драйвера OLE DB для SQL Server.  
   
 ## <a name="see-also"></a>См. также:  
  [IRowsetFastLoad &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/irowsetfastload-ole-db.md)  

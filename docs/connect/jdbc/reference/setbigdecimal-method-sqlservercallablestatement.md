@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: b50a920c-3839-40f0-9411-c60bbc2a9f34
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: bbdf6c4f9ab7e50447b887240d0f946477cbcb0c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 32a541ae426a450c23af98cf47fba3f3fff85f1b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66764884"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975251"
 ---
 # <a name="setbigdecimal-method-sqlservercallablestatement"></a>Метод setBigDecimal (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,7 +36,7 @@ public void setBigDecimal(java.lang.String sCol,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *sCol*  
+ *скол*  
   
  Значение типа **String**, содержащее имя параметра.  
   
@@ -49,7 +48,7 @@ public void setBigDecimal(java.lang.String sCol,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод setBigDecimal указывается с помощью метода setBigDecimal в интерфейсе java.sql.CallableStatement.  
+ Этот метод setBigDecimal задается методом setBigDecimal в интерфейсе Java. SQL. CallableStatement.  
   
 ## <a name="see-also"></a>См. также:  
  [Элементы SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
