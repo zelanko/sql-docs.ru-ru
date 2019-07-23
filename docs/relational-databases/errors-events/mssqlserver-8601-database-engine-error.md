@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: d8603ea1-27b7-4379-a451-744787daea66
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 887536bb343183f1535b3b29dfcec07df02b0e8e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 759e0cdbaee04f3b6c6398ea3c8acc95506f08ba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855848"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68101484"
 ---
 # <a name="mssqlserver8601"></a>MSSQLSERVER_8601
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "47855848"
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
 |Символическое имя|INVALID_INTERFACE_ERR|  
-|Текст сообщения|Внутренняя ошибка обработчика запросов: обработчику запросов не удалось получить доступ к необходимому интерфейсу.|  
+|Текст сообщения|Внутренняя ошибка обработчика запросов: Обработчик запросов не смог получить доступ к требуемому интерфейсу.|  
   
 ## <a name="explanation"></a>Объяснение  
 Внутренняя ошибка обработки: не удалось получить доступ к требуемому интерфейсу.  
