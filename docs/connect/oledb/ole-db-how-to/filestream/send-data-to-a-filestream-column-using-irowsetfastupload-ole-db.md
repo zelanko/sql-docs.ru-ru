@@ -10,13 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: efeae71efacdf7a47bbdde6f1eeca2cb2e63d99f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 1dffc95e50ffb1e7e2cba68700a26ade0a72da6a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66791462"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015568"
 ---
 # <a name="send-data-to-a-filestream-column-using-irowsetfastupload-ole-db"></a>Передача данных в столбец FILESTREAM с использованием интерфейса IRowsetFastUpload (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,10 +24,10 @@ ms.locfileid: "66791462"
 
   Этот образец использует интерфейс IRowsetFastUpload, чтобы передать от 4 МБ до 4 ГБ данных в столбец файлового потока.  
   
- Дополнительные сведения о функции filestream, см. в разделе [поддержка FILESTREAM](../../../oledb/features/filestream-support.md).  
+ Дополнительные сведения о функции FILESTREAM см. в разделе [Поддержка FILESTREAM](../../../oledb/features/filestream-support.md).  
   
 ## <a name="example"></a>Пример  
- Перед компиляцией и запуском этого образца, включите поддержку FILESTREAM ([Включение и настройка FILESTREAM](../../../../relational-databases/blob/enable-and-configure-filestream.md)).  
+ Перед компиляцией и запуском этого образца включите поддержку FILESTREAM ([включить и настроить FILESTREAM](../../../../relational-databases/blob/enable-and-configure-filestream.md)).  
   
  Убедитесь в том, что переменная среды INCLUDE включает каталог, содержащий файл msoledbsql.h.  
   

@@ -1,5 +1,5 @@
 ---
-title: Метод getHoldability (SQLServerConnection) | Документация Майкрософт
+title: Метод-Hold (SQLServerConnection) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: b1644791-c36a-4837-86c4-9299537ee1c2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 18712828793011fd37f04d86adf51c5ac83823d7
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 6f7dfc9609443febe545bd3b6ac7a6cdf75e1756
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66774542"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982929"
 ---
 # <a name="getholdability-method-sqlserverconnection"></a>Метод getHoldability (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,7 +45,7 @@ public int getHoldability()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getHoldability указывается с помощью метода getHoldability в интерфейсе java.sql.Connection.  
+ Этот метод с методом Hold задается методом Hold в интерфейсе Java. SQL. Connection.  
   
 ## <a name="see-also"></a>См. также:  
  [Элементы SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

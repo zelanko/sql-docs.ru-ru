@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4dddf885-0482-4776-8e9a-69f6c6270931
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7f27f2eadeb1c9743a83ef3ae78b011da5edf13c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: b08a6574f16159e5eebb9a95af7483b2ce7b0c84
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66784049"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996760"
 ---
 # <a name="updatecharacterstream-method-int-javaioreader"></a>Метод updateCharacterStream (int, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,17 +37,17 @@ public void updateCharacterStream(int columnIndex,
   
  *x*  
   
- Объект средства чтения.  
+ Объект модуля чтения.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод updateCharacterStream указывается с помощью метода updateCharacterStream в интерфейсе java.sql.ResultSet.  
+ Этот метод updateCharacterStream задается методом updateCharacterStream в интерфейсе Java. SQL. Result.  
   
  Этот метод передает символы Юникода от объекта средства чтения выбранным текстовым и двоичным столбцам. Сюда входят все текстовые и **двоичные** столбцы, а также столбцы **varbinary**, **varbinary(max)** , **image** и **xml**, но не входят столбцы **определяемых пользователем типов данных**.  
   
- Использование этого метода **изображение**, **текст**, и **ntext** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] типов данных может повлиять на производительность.  
+ Использование этого метода для типов данных **Image**, **Text**и **ntext** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] может повлиять на производительность.  
   
 ## <a name="see-also"></a>См. также:  
  [Метод updateCharacterStream &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatecharacterstream-method-sqlserverresultset.md)   

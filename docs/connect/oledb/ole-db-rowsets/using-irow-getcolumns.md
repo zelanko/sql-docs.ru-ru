@@ -1,6 +1,6 @@
 ---
-title: Использование метода IRow::GetColumns | Документация Майкрософт
-description: Использование метода IRow::GetColumns для доступа к всех столбцов в строке
+title: 'Использование IRow:: DataColumn | Документация Майкрософт'
+description: 'Использование IRow:: DataColumn для доступа ко всем столбцам в строке'
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 - GetColumns method
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: f210e06b3c1304251e52ad8fc3f3177fef5e5a10
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: ddec5950f9dd8acc55c8bf1b6fe751bd0f34ac1f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66803766"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015331"
 ---
 # <a name="using-irowgetcolumns"></a>Использование метода IRow::GetColumns
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

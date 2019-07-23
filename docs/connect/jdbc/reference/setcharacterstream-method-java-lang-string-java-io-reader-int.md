@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 88a8e89e-8817-4161-85b1-9a9a2fd01cdb
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 79cb8dd94e3c3c2ad8f5462e7ca984df3726479a
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 27e19162aca466235c9242d2ea4a2f65d7b33630
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66795711"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974694"
 ---
 # <a name="setcharacterstream-method-javalangstring-javaioreader-int"></a>Метод setCharacterStream (java.lang.String, java.io.Reader, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -54,7 +53,7 @@ public final void setCharacterStream(java.lang.String parameterName,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод setCharacterStream указывается с помощью метода setCharacterStream в интерфейсе java.sql.CallableStatement.  
+ Этот метод setCharacterStream задается методом setCharacterStream в интерфейсе Java. SQL. CallableStatement.  
   
  Если длина потока отличается от указанной в параметре *length*, драйвер JDBC выдаст исключение при обновлении или вставке строки.  
   

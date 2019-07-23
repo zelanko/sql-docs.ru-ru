@@ -1,5 +1,5 @@
 ---
-title: Трассировка операций драйвера | Документация Майкрософт
+title: Операция драйвера трассировки | Документация Майкрософт
 ms.custom: ''
 ms.date: 07/11/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 723aeae7-6504-4585-ba8b-3525115bea8b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d19cd119ca2d0832f3e3b7fe261245a2a55987a8
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a8e04fe67605c97e12c688e0b05b8c437b6aa182
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798255"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916686"
 ---
 # <a name="tracing-driver-operation"></a>Трассировка операций драйвера
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -26,7 +25,7 @@ ms.locfileid: "66798255"
 > [!NOTE]  
 >  Для собственного компонента (sqljdbc_xa.dll), который включен в комплект драйвера JDBC, трассировка включается стандартом BID. Дополнительные сведения о BID см. в статье [Трассировка доступа к данным в SQL Server](https://go.microsoft.com/fwlink/?LinkId=70042).  
   
- При разработке приложения вы можете выполнять вызовы объектов Logger, которые в свою очередь создают объекты LogRecord, передаваемые затем объектам Handler для обработки. Средство ведения журнала и обработчик объекты используют уровни ведения журнала, и при необходимости фильтры ведения журнала для регулирования какие LogRecords обрабатываются. Когда операции ведения журнала завершены, объекты Handler могут также использовать объекты Formatter для публикации данных журнала.  
+ При разработке приложения вы можете выполнять вызовы объектов Logger, которые в свою очередь создают объекты LogRecord, передаваемые затем объектам Handler для обработки. В средствах ведения журнала и обработчиков используются уровни ведения журнала и фильтры по выбору журналов для регулирования обрабатываемых Логрекордс. Когда операции ведения журнала завершены, объекты Handler могут также использовать объекты Formatter для публикации данных журнала.  
   
  По умолчанию, среда java.util.logging записывает выходные данные в файл. Файл журнала с выходными данными должен иметь разрешения записи для контекста, в рамках которого работает драйвер JDBC.  
   
@@ -80,7 +79,7 @@ ms.locfileid: "66798255"
   
 |Имя|Описание|  
 |----------|-----------------|  
-|AuthenticationJNI|Записывает в журнал сообщения о Windows интегрированных проблемы проверки подлинности (при **значение authenticationScheme** свойство соединения явно или неявно присваивается **NativeAuthentication**).<br /><br /> Приложение может задать уровень ведения журнала FINEST и FINE.|  
+|AuthenticationJNI|Записывает в журнал сообщения о проблемах встроенной проверки подлинности Windows (если свойство соединения **аусентикатионсчеме** явно или явно задано как **нативеаусентикатион**).<br /><br /> Приложение может задать уровень ведения журнала FINEST и FINE.|  
 |SQLServerConnection|Регистрирует сообщения в классе [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md). Приложение может задать уровень ведения журнала FINE и FINER.|  
 |SQLServerDataSource|Регистрирует сообщения в классах [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md), [SQLServerConnectionPoolDataSource](../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md) и [SQLServerPooledConnection](../../connect/jdbc/reference/sqlserverpooledconnection-class.md).<br /><br /> Приложение может задать уровень ведения журнала FINER.|  
 |InputStream|Регистрирует сообщения относительно следующих типов данных: java.io.InputStream, java.io.Reader и типы данных, которые имеют описатель максимального значения, то есть типы данных varchar, nvarchar и varbinary.<br /><br /> Приложение может задать уровень ведения журнала FINER.|  
@@ -88,7 +87,7 @@ ms.locfileid: "66798255"
 |SQLServerResultSet|Регистрирует сообщения в классе [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md). Приложение может задать уровень ведения журнала FINE, FINER и FINEST.|  
 |SQLServerStatement|Регистрирует сообщения в классе [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md). Приложение может задать уровень ведения журнала FINE, FINER и FINEST.|  
 |XA|Регистрирует сообщения для всех транзакций XA в классе [SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md). Приложение может задать уровень ведения журнала FINE и FINER.|  
-|KerbAuthentication|Регистрирует сообщения относительно проверки подлинности Kerberos типа 4 (когда **значение authenticationScheme** свойство подключения имеет значение **JavaKerberos**). Приложение может задать уровень ведения журнала FINE или FINER.|  
+|KerbAuthentication|Записывает сообщения о проверке подлинности Kerberos типа 4 (если для свойства подключения **аусентикатионсчеме** задано значение **жавакерберос**). Приложение может задать уровень ведения журнала FINE или FINER.|  
 |TDS.DATA|Регистрирует сообщения, содержащие диалог на уровне протокола TDS между драйвером и SQL Server. Подробное содержимое каждого отправленного и полученного пакета TDS вносится в журнал в виде значений ASCII или шестнадцатеричных значений. Учетные данные для входа (имена пользователей и пароли) не вносятся в журнал. Все остальные данные записываются в журнал.<br /><br /> Данная категория создает очень длинные и подробные сообщения, ее можно включить, только если установить уровень ведения журнала на FINEST.|  
 |TDS.Channel|Данная категория отслеживает действия канала связи TCP с SQL Server. Вносимые в журнал сообщения включают открытие и закрытие сокета, а также операции считывания и записи. Категория также отслеживает сообщения, связанные с установкой соединения SSL с SQL Server.<br /><br /> Эта категория может быть включена, если установить уровень ведения журнала на FINE, FINER или FINEST.|  
 |TDS.Writer|Эта категория отслеживает операции записи в канал TDS. Обратите внимание, что отслеживается длина записей, а не их содержимое. Данная категория также отслеживает отправку сигнала на сервер, запрашивающего отмену выполнения инструкции.<br /><br /> Эта категория может быть включена только установкой уровня ведения журнала FINEST.|  
@@ -100,7 +99,7 @@ ms.locfileid: "66798255"
 |SQLServerParameterMetaData|Регистрирует сообщения в классе [SQLServerParameterMetaData](../../connect/jdbc/reference/sqlserverparametermetadata-class.md). Приложение может задать уровень ведения журнала FINE.|  
 |SQLServerBlob|Регистрирует сообщения в классе [SQLServerBlob](../../connect/jdbc/reference/sqlserverblob-class.md). Приложение может задать уровень ведения журнала FINE.|  
 |SQLServerClob|Регистрирует сообщения в классе [SQLServerClob](../../connect/jdbc/reference/sqlserverclob-class.md). Приложение может задать уровень ведения журнала FINE.|  
-|SQLServerSQLXML|Регистрирует сообщения во внутреннем классе SQLServerSQLXML. Приложение может задать уровень ведения журнала FINE.|  
+|SQLServerSQLXML|Регистрирует сообщения во внутреннем классе Склсерверсклксмл. Приложение может задать уровень ведения журнала FINE.|  
 |SQLServerDriver|Регистрирует сообщения в классе [SQLServerDriver](../../connect/jdbc/reference/sqlserverdriver-class.md). Приложение может задать уровень ведения журнала FINE.|  
 |SQLServerNClob|Регистрирует сообщения в классе [SQLServerNClob](../../connect/jdbc/reference/sqlservernclob-class.md). Приложение может задать уровень ведения журнала FINE.|  
   

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: f2e6391d-9aaf-4b09-ae1c-a27c1ada6301
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3b6e8238ed5667c88275beb5015d2bff00479b50
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 69a9db6da093341264953e698cdbb1145093d9a5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796920"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980869"
 ---
 # <a name="getpooledconnection-method-javalangstring-javalangstring"></a>Метод getPooledConnection (java.lang.String, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public javax.sql.PooledConnection getPooledConnection(java.lang.String user,
   
  Значение типа **String**, содержащее имя пользователя.  
   
- *passwword*  
+ *пассвворд*  
   
  Значение типа **String**, содержащее пароль.  
   
@@ -52,7 +51,7 @@ public javax.sql.PooledConnection getPooledConnection(java.lang.String user,
  java.sql.SQLException  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getPooledConnection указывается с помощью метода getPooledConnection в интерфейсе javax.sql.ConnectionPoolDataSource.  
+ Этот метод getPooledConnection задается методом getPooledConnection в интерфейсе javax. SQL. ConnectionPoolDataSource.  
   
 ## <a name="see-also"></a>См. также:  
  [getPooledConnection](../../../connect/jdbc/reference/getpooledconnection-method-sqlserverconnectionpooldatasource.md)   

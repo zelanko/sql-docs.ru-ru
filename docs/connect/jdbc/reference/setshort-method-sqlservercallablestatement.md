@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: d7031a89-e964-4ffd-87b7-63825799435d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f2bdaf864cba4c95459a2db8f558404c42943d99
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: d4ad0910814cd4600b3d70c9037c03e1b9997888
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66782899"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67972850"
 ---
 # <a name="setshort-method-sqlservercallablestatement"></a>Метод setShort (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,13 +36,13 @@ public void setShort(java.lang.String sCol,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *sCol*  
+ *скол*  
   
  Значение типа **String**, содержащее имя параметра.  
   
  *s*  
   
- Объект **короткие** значение.  
+ **Короткое** значение.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

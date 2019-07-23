@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: c8e55377-aaea-4415-8159-938fab1b2a93
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 78e1f1f7dc025f062dc8327f050cef72fcd3d46a
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 57cf34cb0ff1071579bdeb97e7b3ce6c095459f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798896"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67985698"
 ---
 # <a name="updatebinarystream-method-int-javaioinputstream-int"></a>Метод updateBinaryStream (int, java.io.InputStream, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +43,7 @@ public void updateBinaryStream(int columnIndex,
   
  *x*  
   
- Объект, InputStream.  
+ Объект InputStream.  
   
  *length*  
   
@@ -54,7 +53,7 @@ public void updateBinaryStream(int columnIndex,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод updateBinaryStream указывается с помощью метода updateBinaryStream в интерфейсе java.sql.ResultSet.  
+ Этот метод updateBinaryStream задается методом updateBinaryStream в интерфейсе Java. SQL. Result.  
   
  Этот метод передает байты от объекта InputStream выбранным двоичным столбцам [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], таким как binary, varbinary, varbinary(max), image, xml и udt. В этом методе не поддерживается обновление символьных столбцов. Для обновления с помощью InputStream символьных столбцов используйте метод [updateAsciiStream](../../../connect/jdbc/reference/updateasciistream-method-sqlserverresultset.md).  
   

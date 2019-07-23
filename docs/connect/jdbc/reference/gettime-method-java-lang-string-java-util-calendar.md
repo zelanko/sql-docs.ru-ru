@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 3d4c67c2-a3c8-4a26-a159-89c5d63fda0b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6b9d74778d3ff1fc62b5549fbea7e0f97bf1e477
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: c6b8f6239fbc229af009fc9745b0f19ed27e7ee1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66778876"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979041"
 ---
 # <a name="gettime-method-javalangstring-javautilcalendar"></a>Метод getTime (java.lang.String, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,13 +36,13 @@ public java.sql.Time getTime(java.lang.String sCol,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *sCol*  
+ *скол*  
   
  Значение типа **String**, содержащее имя параметра.  
   
- *Клиентская лицензия*  
+ *Cal*  
   
- Объект календаря.  
+ Объект Calendar.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Объект времени.  
@@ -54,7 +53,7 @@ public java.sql.Time getTime(java.lang.String sCol,
 ## <a name="remarks"></a>Remarks  
  Этот метод getTime указывается методом getTime в интерфейсе java.sql.CallableStatement.  
   
- См. в разделе диаграмму с названием «Преобразования метода считывания» в [Общие сведения о преобразованиях типов данных](../../../connect/jdbc/understanding-data-type-conversions.md) также просмотреть, какие [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] типы данных можно получить с помощью этого метода.  
+ Дополнительные [сведения о](../../../connect/jdbc/understanding-data-type-conversions.md) том, какие [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] типы данных можно получить с помощью этого метода, см. в диаграмме "преобразования методов считывания".  
   
 ## <a name="see-also"></a>См. также:  
  [Метод getTime (SQLServerCallableStatement)](../../../connect/jdbc/reference/gettime-method-sqlservercallablestatement.md)   

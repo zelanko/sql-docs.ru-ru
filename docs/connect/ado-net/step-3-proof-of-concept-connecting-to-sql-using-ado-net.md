@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: aebe3dc6-3ee4-4d11-8e43-5d32b3f91490
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3ceea73eba8f1c01590218c106f3b2b10237408e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 743eab241fa9feb4a622054b3be48b887b804813
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66770566"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957618"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-adonet"></a>Шаг 3. Эксперимент, подразумевающий подключение к SQL с помощью ADO.NET
 
@@ -24,11 +23,11 @@ ms.locfileid: "66770566"
 - Следующая статья:&nbsp;&nbsp;&nbsp;[Шаг 4. Выполнение устойчивого подключения к SQL с помощью ADO.NET](step-4-connect-resiliently-to-sql-with-ado-net.md)  
 
   
-В этом примере кода C# следует рассматривать подтверждение концепции только. Пример кода упрощен для ясности и не всегда представляет рекомендации, рекомендуемые корпорацией Майкрософт.  
+Этот C# пример кода следует рассматривать только как доказательство концепции. Пример кода упрощен для ясности и не обязательно представляет лучшие методики, рекомендованные корпорацией Майкрософт.  
   
-## <a name="step-1-connect"></a>Шаг 1: подключение
+## <a name="step-1-connect"></a>Шаг 1. подключение
   
-Метод **SqlConnection.Open** используется для подключения к базе данных SQL.  
+Метод **SqlConnection. Open** используется для подключения к базе данных SQL.  
 
 
 ```csharp
@@ -67,10 +66,10 @@ ms.locfileid: "66770566"
 
 ## <a name="step-2--execute-a-query"></a>Шаг 2. Выполнение запроса  
   
-Метод SqlCommand.ExecuteReader:  
+Метод SqlCommand. ExecuteReader:  
   
-- Выполняет инструкцию SQL SELECT в системе SQL.  
-- Возвращает экземпляр SqlDataReader для предоставления доступа к строкам результат.  
+- Выдает инструкцию SQL SELECT в систему SQL.  
+- Возвращает экземпляр SqlDataReader для предоставления доступа к результирующим строкам.  
   
   
   
@@ -151,14 +150,14 @@ ms.locfileid: "66770566"
   
   
   
-## <a name="step-3-insert-a-row"></a>Шаг 3: Вставка строки  
+## <a name="step-3-insert-a-row"></a>Шаг 3. Вставка строки  
   
   
 В этом примере показано следующее.  
   
-- Безопасно выполните инструкцию SQL INSERT путем передачи параметров.  
+- Безопасно выполните инструкцию SQL INSERT, передав параметры.  
   - Использование параметров обеспечивает защиту от атак путем внедрения кода SQL.  
-- Извлечение значения автоматически созданный.  
+- Получение автоматически созданного значения.  
   
   
   

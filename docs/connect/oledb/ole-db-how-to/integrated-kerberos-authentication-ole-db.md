@@ -10,20 +10,19 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: c85b34035d81657a7cbfff3808bb30e46d900618
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 9829c7857ec86c7a1f623691c04b0dd0ac62bafe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66791390"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994767"
 ---
 # <a name="integrated-kerberos-authentication-ole-db"></a>Интеграция проверки подлинности Kerberos (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  В этом примере показано, как выполнить взаимную проверку подлинности Kerberos с использованием OLE DB в драйвере OLE DB для SQL Server. Данный образец работает с [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] или более поздней версией.  
+  В этом примере показано, как получить взаимную проверку подлинности Kerberos с помощью OLE DB в драйвере OLE DB для SQL Server. Данный образец работает с [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] или более поздней версией.  
   
  Дополнительные сведения об именах субъектов-служб и проверке подлинности Kerberos см. в статье [Поддержка имени участника-службы &#40;SPN&#41; в клиентских соединениях](../../oledb/features/service-principal-name-spn-support-in-client-connections.md).  
   

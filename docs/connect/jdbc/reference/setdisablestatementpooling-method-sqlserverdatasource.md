@@ -10,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6076d800c84b25d587eb73120a0e675ee1ae6ee0
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: d38f87d8aab3db18f7c4306c73769219f080a1e1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801628"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974333"
 ---
 # <a name="setdisablestatementpooling-method-sqlserverdatasource"></a>Метод setDisableStatementPooling (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Задает значение **disableStatementPooling** свойство соединения. Если значение равно false, включает пулов для использования в связи со значением значение параметра statementPoolingCacheSize > 0 инструкций.  
+  Задает значение свойства соединения **disableStatementPooling** . Если значение равно false, включает использование пула инструкций в связи со значением Статементпулингкачесизе > 0.  
 
 ## <a name="syntax"></a>Синтаксис  
   
@@ -32,13 +31,13 @@ public void setDisableStatementPooling(boolean disableStatementPooling);
 #### <a name="parameters"></a>Параметры  
  *disableStatementPooling*  
   
- Новое значение **disableStatementPooling** свойство соединения.  
+ Новое значение свойства соединения **disableStatementPooling** .  
 
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
 ## <a name="remarks"></a>Remarks  
- Этот метод, доступные в версии драйвера JDBC 6.4 и далее.
+ Этот метод доступен из драйвера JDBC версии 6,4 и далее.
  
 ## <a name="see-also"></a>См. также:  
  [Элементы SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

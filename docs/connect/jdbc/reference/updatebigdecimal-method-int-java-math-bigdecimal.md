@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 1e15de27-a490-45cd-a3a6-a49721f15a97
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 45aca6d7ff7806ed2315e4b582ce4f724927bb1b
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: ad5239c609e58750e7fd494d482ee11c62ab9cc8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798879"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67985445"
 ---
 # <a name="updatebigdecimal-method-int-javamathbigdecimal"></a>Метод updateBigDecimal (int, java.math.BigDecimal)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,7 +48,7 @@ public void updateBigDecimal(int index,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод updateBigDecimal указывается с помощью метода updateBigDecimal в интерфейсе java.sql.ResultSet.  
+ Этот метод updateBigDecimal задается методом updateBigDecimal в интерфейсе Java. SQL. Result.  
   
 ## <a name="see-also"></a>См. также:  
  [Метод updateBigDecimal (SQLServerResultSet)](../../../connect/jdbc/reference/updatebigdecimal-method-sqlserverresultset.md)   

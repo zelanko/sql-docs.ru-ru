@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 5bb96dbe-f673-41b5-911b-8f661cca071a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0cfbcf94a1211738b0cf0abb8e2657257edd09eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5b192f9055394393c48fa19eda697791ddfe3fa2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66796707"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976158"
 ---
 # <a name="preparestatement-method-javalangstring-int-int"></a>Метод prepareStatement (java.lang.String, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,7 +45,7 @@ public java.sql.PreparedStatement prepareStatement(java.lang.String sSql,
   
  Значение **int**, указывающее тип результирующего набора.  
   
- *resultSetConcurrency*  
+ *ресултсетконкурренци*  
   
  Значение **int**, указывающее тип параллелизма результирующего набора.  
   
@@ -57,7 +56,7 @@ public java.sql.PreparedStatement prepareStatement(java.lang.String sSql,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод prepareStatement указывается с помощью метода prepareStatement в интерфейсе java.sql.Connection.  
+ Этот метод prepareStatement задается методом prepareStatement в интерфейсе Java. SQL. Connection.  
   
 ## <a name="see-also"></a>См. также:  
  [Методы SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-methods.md)   

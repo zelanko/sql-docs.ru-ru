@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 92d4e3be-c3e9-4732-9a60-b57f4d0f7cb7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 160300be692ff21af1cc33c1fd6fc49d415b22e5
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 07a7a67addb10d91b011f821f5b85ed03981d055
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66790314"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916465"
 ---
 # <a name="using-adaptive-buffering"></a>Использование адаптивной буферизации
 
@@ -30,7 +29,7 @@ ms.locfileid: "66790314"
 
 - **Запрос возвращает результирующий набор очень большого объема**. Приложение может выполнить инструкцию SELECT, возвращающую больше строк, чем может уместиться в памяти приложения. В предыдущих версиях приложение должно было использовать серверный курсор, чтобы избежать ошибки OutOfMemoryError. Адаптивная буферизация обеспечивает возможность однопроходного просмотра данных в режиме только для чтения для результирующего набора произвольно большого объема без использования курсора сервера.
 
-- **В результате запроса создаются очень большие столбцы** [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) **или значения параметров OUT** [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) **.** Приложение может получить одно значение (столбец или параметр OUT), которое слишком велико, чтобы целиком поместиться в память приложения. Адаптивная буферизация позволяет клиентскому приложению извлекать такое значение в виде потока, с помощью getAsciiStream, getBinaryStream или методы getCharacterStream. Приложение извлекает значение из экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по мере чтения потока.
+- **В результате запроса создаются очень большие столбцы** [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) **или значения параметров OUT** [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) **.** Приложение может получить одно значение (столбец или параметр OUT), которое слишком велико, чтобы целиком поместиться в память приложения. Адаптивная буферизация позволяет клиентскому приложению извлекать такое значение в виде потока, используя методы getAsciiStream, getBinaryStream или getCharacterStream. Приложение извлекает значение из экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по мере чтения потока.
 
 > [!NOTE]  
 > Благодаря адаптивной буферизации драйвер JDBC помещает в буфер только необходимое количество данных. Драйвер не позволяет любому открытому методу контролировать или ограничивать размер буфера.
@@ -41,15 +40,15 @@ ms.locfileid: "66790314"
 
 Существуют три способа, с помощью которых приложение может запросить выполнение адаптивной буферизации.
 
-- Приложение может задать свойство соединения **responseBuffering** значение «adaptive». Дополнительные сведения о настройке свойств соединения, см. в разделе [заданию свойств соединения](../../connect/jdbc/setting-the-connection-properties.md).
+- Приложение может установить для свойства соединения **responseBuffering** значение "адаптивно". Дополнительные сведения о настройке свойств соединения см. в разделе [Задание свойств соединения](../../connect/jdbc/setting-the-connection-properties.md).
 
 - Приложение может использовать метод [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverdatasource.md) объекта [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) для установки режима буферизации ответов для всех подключений, созданных посредством объекта [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md).
 
 - Приложение может использовать метод [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) класса [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), чтобы установить режим буферизации ответов для определенного объекта инструкции.
 
-При использовании драйвера JDBC версии 1.2 приложения должны были приводить объект инструкции к классу [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), чтобы использовать метод [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md). В примерах кода в [большой образец данных чтения](../../connect/jdbc/reading-large-data-sample.md) и [чтение больших данных с помощью хранимой процедуры примера](../../connect/jdbc/reading-large-data-with-stored-procedures-sample.md) показана эта устаревшая практика.
+При использовании драйвера JDBC версии 1.2 приложения должны были приводить объект инструкции к классу [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), чтобы использовать метод [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md). В примерах кода в примере [считывания больших данных](../../connect/jdbc/reading-large-data-sample.md) и [чтении больших данных с помощью хранимых процедур](../../connect/jdbc/reading-large-data-with-stored-procedures-sample.md) демонстрируется это старое использование.
 
-Однако начиная с драйвера JDBC версии 2.0 приложения могут использовать методы [isWrapperFor](../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md) и [unwrap](../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md) для получения доступа к функциям, предоставляемым поставщиками, без необходимости реализации иерархии класса. Пример кода, см. в разделе [обновление большой образец данных](../../connect/jdbc/updating-large-data-sample.md) раздела.
+Однако начиная с драйвера JDBC версии 2.0 приложения могут использовать методы [isWrapperFor](../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md) и [unwrap](../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md) для получения доступа к функциям, предоставляемым поставщиками, без необходимости реализации иерархии класса. Пример кода см. в разделе [Пример обновления больших данных](../../connect/jdbc/updating-large-data-sample.md) .
 
 ## <a name="retrieving-large-data-with-adaptive-buffering"></a>Извлечение данных большого объема при помощи адаптивной буферизации
 
@@ -62,7 +61,7 @@ ms.locfileid: "66790314"
 Когда приложение использует адаптивную буферизацию, значения, извлекаемые методами get\<Type>Stream, могут быть извлечены только один раз. Если выполняется попытка вызвать какой-либо метод get\<Type> для того же столбца или параметра после вызова метода get\<Type>Stream того же объекта, возникает исключение с сообщением: "Доступ к данным уже был осуществлен, данные недоступны для этого столбца или параметра".
 
 > [!NOTE]
-> Вызов ResultSet.close() процессе обработки результирующий набор, потребуется Microsoft JDBC Driver для SQL Server для чтения и отменить все оставшиеся пакеты. Если запрос возвращает большой набор данных, и особенно в том случае, если сетевое подключение работает медленно, это может занять значительное время.
+> Вызов ResultSet. Close () в процессе обработки результирующего набора потребует от драйвера Microsoft JDBC для SQL Server чтение и удаление всех оставшихся пакетов. Это может занять значительное время, если запрос возвращает большой набор данных и особенно в случае, если сетевое подключение работает слишком долго.
 
 ## <a name="guidelines-for-using-adaptive-buffering"></a>Руководство по использованию адаптивной буферизации
 
@@ -70,7 +69,7 @@ ms.locfileid: "66790314"
 
 - Старайтесь не использовать свойство строки подключения **selectMethod=cursor**, позволяющее приложению обрабатывать результирующий набор очень большого объема. Функция адаптивной буферизации позволяет приложениям обрабатывать очень большие однопроходные результирующие наборы, доступные только для чтения, без использования серверного курсора. Обратите внимание, что задание параметра **selectMethod=cursor** оказывает влияние на все однопроходные результирующие наборы только для чтения, формируемые этим подключением. Другими словами, если приложение рутинно обрабатывает короткие результирующие наборы с несколькими строками, создание, считывание и закрытие серверного курсора для каждого результирующего набора будет использовать больше ресурсов как на стороне клиента, так и на стороне сервера, чем в случае, когда параметру **selectMethod** не присвоено значение **cursor**.
 
-- Считывайте большие текстовые или двоичные значения в виде потока с помощью getAsciiStream, getBinaryStream или методы getCharacterStream вместо getBlob или getClob методы. Начиная с версии 1.2 класс [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) предоставляет новые методы get\<Type>Stream для этой цели.
+- Чтение больших текстовых или двоичных значений в виде потоков с помощью getAsciiStream, getBinaryStream или методов getCharacterStream вместо методов Large или getClob. Начиная с версии 1.2 класс [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) предоставляет новые методы get\<Type>Stream для этой цели.
 
 - Убедитесь в том, что столбцы со значениями потенциально большого объема размещаются последними в списке столбцов в инструкции SELECT и что методы get\<Type>Stream класса [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) используются для доступа к столбцам в порядке их выбора.
 
@@ -78,9 +77,9 @@ ms.locfileid: "66790314"
 
 - Старайтесь не выполнять более одной инструкции относительно одного соединения одновременно. Выполнение другой инструкции до обработки результатов предыдущей инструкции может привести к тому, что необработанные результаты будут загружаться в память приложения.
 
-- Существуют случаи, когда использование **selectMethod = cursor** вместо **responseBuffering = адаптивной** может оказаться более эффективным, такие как:
+- Бывают случаи, когда использование **SelectMethod = Cursor** вместо **responseBuffering = адаптивно** будет более полезным, например:
 
-  - Если приложение обрабатывает однопроходной, чтения результирующий набор только для медленно, например, при считывании каждой строки после введения пользователем, с помощью **selectMethod = cursor** вместо **responseBuffering = адаптивной** может уменьшить потребление ресурсов службой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+  - Если приложение обрабатывает однопроходный результирующий набор только для чтения, например чтение каждой строки после ввода данных пользователем, использование метода **SelectMethod = Cursor** вместо **responseBuffering = Адаптивное** может помочь сократить использование [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ресурсов .
 
   - Если приложение обрабатывает два или более однопроходных результирующих набора только для чтения одновременно относительно одного подключения, использование **selectMethod=cursor** вместо **responseBuffering=adaptive** может уменьшить память, необходимую драйверу для обработки этих результирующих наборов.
 

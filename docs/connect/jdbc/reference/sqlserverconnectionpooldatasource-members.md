@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: dac0337e-8088-488c-a25a-801a2190f6ca
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ca125846062a77b19c324a50f9ed13c528f1e051
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: c1b930c13856dd6c0e0945c82364e811730ed236
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66800591"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67971591"
 ---
 # <a name="sqlserverconnectionpooldatasource-members"></a>Элементы SQLServerConnectionPoolDataSource
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -53,7 +52,7 @@ ms.locfileid: "66800591"
 |[getMultiSubnetFailover](../../../connect/jdbc/reference/getmultisubnetfailover-method-sqlserverdatasource.md)|(Наследуется от класса [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)) Возвращает значение свойства подключения **multiSubnetFailover**.|  
 |[getPooledConnection](../../../connect/jdbc/reference/getpooledconnection-method-sqlserverconnectionpooldatasource.md)|Устанавливает физическое соединение с базой данных, которое будет использоваться в пулах соединений.|  
 |[getPortNumber](../../../connect/jdbc/reference/getportnumber-method-sqlserverdatasource.md)|(Наследуется от [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)) Возвращает номер текущего порта, который используется для взаимодействия с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
-|[getReference](../../../connect/jdbc/reference/getreference-method-sqlserverconnectionpooldatasource.md)|Возвращает ссылку на этот объект источника данных.|  
+|[getReference](../../../connect/jdbc/reference/getreference-method-sqlserverconnectionpooldatasource.md)|Возвращает ссылку на этот объект DataSource.|  
 |[getSelectMethod](../../../connect/jdbc/reference/getselectmethod-method-sqlserverdatasource.md)|(Наследуется от [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)) Возвращает тип курсора по умолчанию, который используется для всех результирующих наборов, создаваемых с помощью этого объекта DataSource.|  
 |[getSendStringParametersAsUnicode](../../../connect/jdbc/reference/getsendstringparametersasunicode-method-sqlserverdatasource.md)|(Наследуется от [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)) Возвращает значение типа **Boolean**, определяющее, включена ли отправка на сервер строковых параметров в формате Юникода.|  
 |[getServerName](../../../connect/jdbc/reference/getservername-method-sqlserverdatasource.md)|(Наследуется от [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)) Возвращает имя компьютера, на котором выполняется [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  

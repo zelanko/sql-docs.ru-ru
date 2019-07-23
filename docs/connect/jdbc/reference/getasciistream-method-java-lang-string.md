@@ -1,5 +1,5 @@
 ---
-title: Метод getAsciiStream (java.lang.String) | Документация Майкрософт
+title: Метод getAsciiStream (Java. lang. String) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: b2d24a6b-f029-4691-981b-125c690b8ba5
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 01cf9fcfcf888054edc7faf350eb27957bcc971a
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: feadeaffb5fd74ebc6b2d273dca263cac16c14ce
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66800013"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954198"
 ---
 # <a name="getasciistream-method-javalangstring"></a>Метод getAsciiStream (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,13 +40,13 @@ public java.io.InputStream getAsciiStream(java.lang.String columnName)
  Значение типа **String**, содержащее имя столбца.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Объект, InputStream.  
+ Объект InputStream.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getAsciiStream указывается с помощью метода getAsciiStream в интерфейсе java.sql.ResultSet.  
+ Этот метод getAsciiStream задается методом getAsciiStream в интерфейсе Java. SQL. Result.  
   
 ## <a name="see-also"></a>См. также:  
  [Метод getAsciiStream (SQLServerResultSet)](../../../connect/jdbc/reference/getasciistream-method-sqlserverresultset.md)   

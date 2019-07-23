@@ -1,5 +1,5 @@
 ---
-title: Программирование с SQLXML | Документация Майкрософт
+title: Программирование с использованием SQLXML | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4d2cc57c-7293-4d92-b8b1-525e2b35f591
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c4e8d429490a0dd7fe8f0a259d065f1f4914dd29
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c8d88f6c9febf582aa9aca3d47931ceb72074c87
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794048"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956176"
 ---
 # <a name="programming-with-sqlxml"></a>Программирование с SQLXML.
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -28,11 +27,11 @@ ms.locfileid: "66794048"
 ## <a name="reading-and-writing-xml-data-with-sqlxml-objects"></a>Чтение и запись XML-данных с использованием объектов SQLXML  
  В следующем списке описывается использование методов API [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] для чтения и записи XML-данных с использованием объектов SQLXML.  
   
--   Для создания объекта SQLXML используйте метод [createSQLXML](../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md) класса [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md). Обратите внимание, что этот метод создает объект SQLXML без данных. Чтобы добавить **xml** данных к объекту SQLXML, вызовите один из следующих методов, указанных в интерфейсе SQLXML: setResult, setCharacterStream, setBinaryStream, или setString.  
+-   Для создания объекта SQLXML используйте метод [createSQLXML](../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md) класса [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md). Обратите внимание, что этот метод создает объект SQLXML без данных. Чтобы добавить **XML-** данные в объект SQLXML, вызовите один из следующих методов, указанных в интерфейсе SQLXML: Сетресулт, SetCharacterStream, SetBinaryStream или setString.  
   
 -   Чтобы извлечь сам объект SQLXML, используйте методы getSQLXML класса [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) или класса [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md).  
   
--   Для получения **xml** данные из объекта SQLXML, используйте один из следующих методов, указанных в интерфейсе SQLXML: getSource, getCharacterStream, getBinaryStream, или getString.  
+-   Чтобы получить **XML-** данные из объекта SQLXML, используйте один из следующих методов, указанных в интерфейсе SQLXML: GetObject, GetCharacterStream, GetBinaryStream или GetString.  
   
 -   Чтобы обновить данные **xml** в объекте SQLXML, используйте метод [updateSQLXML](../../connect/jdbc/reference/updatesqlxml-method-sqlserverresultset.md) класса [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
@@ -51,9 +50,9 @@ ms.locfileid: "66794048"
   
 |Имя метода|Объект считывания SQLXML<br /><br /> (читаемый)|Объект задания SQLXML<br /><br /> (записываемый)|  
 |-----------------|-------------------------------------------|-------------------------------------------|  
-|CallableStatement.setSQLXML()|Не поддерживается|Поддерживается|  
+|CallableStatement. setSQLXML ()|Не поддерживается|Поддерживается|  
 |CallableStatement.setObject()|Не поддерживается|Поддерживается|  
-|PreparedStatement.setSQLXML()|Не поддерживается|Поддерживается|  
+|PreparedStatement. setSQLXML ()|Не поддерживается|Поддерживается|  
 |PreparedStatement.setObject()|Не поддерживается|Поддерживается|  
 |ResultSet.updateSQLXML()|Не поддерживается|Поддерживается|  
 |ResultSet.updateObject()|Не поддерживается|Поддерживается|  
@@ -98,7 +97,7 @@ ms.locfileid: "66794048"
  Средства синтаксического анализа XML не могут обрабатывать пустые значения. Однако SQL Server позволяет приложениям извлекать и сохранять пустые значения в столбцах баз данных типа данных XML. Это означает, что если базовое значение пустое, то при синтаксическом анализе XML-данных средство синтаксического анализа вызовет исключение. При использовании выходных значений DOM драйвер JDBC обрабатывает это исключение и вызывает ошибку. При работе с выходными значениями SAX и Stax ошибка вызывается средством синтаксического анализа напрямую.  
   
 ## <a name="adaptive-buffering-and-sqlxml-support"></a>Адаптивная буферизация и поддержка SQLXML  
- Двоичные и символьные потоки, возвращаемые объектом SQLXML, поддерживают режимы адаптивной и полной буферизации. С другой стороны, если средства синтаксического анализа XML не являются потоками, они не поддерживают настройки адаптивной и полной буферизации. Дополнительные сведения об адаптивной буферизации см. в разделе [Using Adaptive Buffering](../../connect/jdbc/using-adaptive-buffering.md).  
+ Двоичные и символьные потоки, возвращаемые объектом SQLXML, поддерживают режимы адаптивной и полной буферизации. С другой стороны, если средства синтаксического анализа XML не являются потоками, они не поддерживают настройки адаптивной и полной буферизации. Дополнительные сведения о адаптивной буферизации см. [в разделе Использование адаптивной буферизации](../../connect/jdbc/using-adaptive-buffering.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Поддержка XML-данных](../../connect/jdbc/supporting-xml-data.md)  

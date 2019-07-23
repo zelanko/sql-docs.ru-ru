@@ -1,5 +1,5 @@
 ---
-title: Следующая позиция выборки | Документация Майкрософт
+title: Следующее расположение выборки | Документация Майкрософт
 description: Выборка строк — следующая позиция выборки
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,13 +15,12 @@ helpviewer_keywords:
 - rowsets [OLE DB], fetching
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: a619923c2fb144fa0572c8706edbdc6b908ad621
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 2ea743770323505c611210c0bb3acd0e93c719cd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66803186"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994187"
 ---
 # <a name="fetching-rows---next-fetch-position"></a>Выборка строк — следующая позиция выборки
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

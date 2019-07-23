@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: bfba0b49-2e1f-411d-a625-d25fad9ea12d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 05a8e57b4d531d05cdf14cb57ab164851d0c1800
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 7bfb8eee85e9eede4dcf3e47ad4ecbe13a08d2ac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798251"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004236"
 ---
 # <a name="troubleshooting-connectivity"></a>Устранение неполадок подключения
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -29,7 +28,7 @@ ms.locfileid: "66798251"
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установлен, но сетевой протокол TCP/IP не установлен для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Network Utility для [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] или диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версий.  
   
-    -   TCP/IP установлен в качестве протокола [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], но не прослушивается порт, указанный в URL-адресе для подключения к JDBC. Порт 1433 задан по умолчанию, но при установке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно настроить прослушивание любого порта. Убедитесь, что [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] прослушивает порт 1433. Кроме того, если порт был изменен, убедитесь, что порт, указанный в URL-адресе для соединения с JDBC, совпадает с измененным портом. Дополнительные сведения о URL-адрес соединения JDBC, см. в разделе [построения URL-АДРЕСЕ соединения](../../connect/jdbc/building-the-connection-url.md).  
+    -   TCP/IP установлен в качестве протокола [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], но не прослушивается порт, указанный в URL-адресе для подключения к JDBC. Порт 1433 задан по умолчанию, но при установке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно настроить прослушивание любого порта. Убедитесь, что [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] прослушивает порт 1433. Кроме того, если порт был изменен, убедитесь, что порт, указанный в URL-адресе для соединения с JDBC, совпадает с измененным портом. Дополнительные сведения о URL-адресах подключения JDBC см. [в разделе Создание URL-адреса подключения](../../connect/jdbc/building-the-connection-url.md).  
   
     -   Адрес компьютера, указанный в URL-адресе для подключения к JDBC, не содержит ссылки на сервер, где установлен и запущен [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

@@ -1,5 +1,5 @@
 ---
-title: Используйте улучшенные функции даты и времени (OLE DB) | Документация Майкрософт
+title: Использование улучшенных функций даты и времени (OLE DB) | Документация Майкрософт
 description: Использование улучшенных функций даты и времени (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -10,13 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: cb62604971ab0e16b0fe252534317b586d39ed0c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 907d810c1579229ea69d39ecb32af9f06dec01b0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66791118"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015536"
 ---
 # <a name="use-enhanced-date-and-time-features-ole-db"></a>Использование улучшенных функций даты и времени (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

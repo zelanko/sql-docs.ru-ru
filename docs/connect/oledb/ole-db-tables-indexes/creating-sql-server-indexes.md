@@ -1,6 +1,6 @@
 ---
 title: Создание индексов SQL Server | Документация Майкрософт
-description: Создание индексов SQL Server, с помощью драйвера OLE DB для SQL Server
+description: Создание индексов SQL Server с помощью драйвера OLE DB для SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,13 +16,12 @@ helpviewer_keywords:
 - adding indexes
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 90cccd51afafa5139b6519e61cb0d044413189d4
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: ca823023764a691eae0afc1e6df62bab91dd075d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801294"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015262"
 ---
 # <a name="creating-sql-server-indexes"></a>Создание индексов SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "66801294"
 
   Драйвер OLE DB для SQL Server предоставляет функцию **IIndexDefinition::CreateIndex**, позволяющую потребителям определять новые индексы в таблицах [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- Драйвер OLE DB для SQL Server создает табличные индексы в качестве индексов или ограничений. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] предоставляет право создания ограничений владельцу таблицы, владельцу базы данных и членам некоторых административных ролей. По умолчанию только владелец таблицы может создавать в ней индекс. Таким образом, успех или сбой функции **CreateIndex** зависит не только от прав доступа пользователя приложения, но и от типа создаваемого индекса.  
+ Драйвер OLE DB для SQL Server создает индексы таблицы как индексы или ограничения. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] предоставляет право создания ограничений владельцу таблицы, владельцу базы данных и членам некоторых административных ролей. По умолчанию только владелец таблицы может создавать в ней индекс. Таким образом, успех или сбой функции **CreateIndex** зависит не только от прав доступа пользователя приложения, но и от типа создаваемого индекса.  
   
  Пользователь задает имя таблицы в виде символьной строки в Юникоде в элементе *pwszName* объединения *uName* в параметре *pTableID*. Элемент *eKind* параметра *pTableID* должен быть равен DBKIND_NAME.  
   
@@ -41,29 +40,29 @@ ms.locfileid: "66801294"
   
  Потребитель указывает столбец или столбцы, входящие в индекс, по имени. Для каждой структуры DBINDEXCOLUMNDESC, используемой в функции **CreateIndex**, элемент *eKind* параметра *pColumnID* должен быть DBKIND_NAME. Имя столбца задается в виде символьной строки в Юникоде в элементе *pwszName* объединения *uName* параметра *pColumnID*.  
   
- Драйвер OLE DB для SQL Server и [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживают возрастающий порядок значений в индексе. Драйвер OLE DB для SQL Server возвращает значение E_INVALIDARG, если потребитель указывает значение DBINDEX_COL_ORDER_DESC в любой структуре DBINDEXCOLUMNDESC.  
+ Драйвер OLE DB для SQL Server и [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает сортировку по возрастанию значений в индексе. Драйвер OLE DB для SQL Server возвращает значение E_INVALIDARG, если потребитель указывает значение DBINDEX_COL_ORDER_DESC в любой структуре DBINDEXCOLUMNDESC.  
   
  Функция **CreateIndex** интерпретирует свойства индекса указанным ниже образом.  
   
 |Идентификатор свойства|Описание|  
 |-----------------|-----------------|  
-|DBPROP_INDEX_AUTOUPDATE|И запись: чтение и запись<br /><br /> По умолчанию: нет<br /><br /> Описание: Драйвер OLE DB для SQL Server не поддерживает это свойство. Попытки установить свойство в **CreateIndex** приводят к возврату значения DB_S_ERRORSOCCURRED. Элемент *dwStatus* структуры свойства указывает значение DBPROPSTATUS_BADVALUE.|  
-|DBPROP_INDEX_CLUSTERED|И запись: чтение и запись<br /><br /> По умолчанию: VARIANT_FALSE<br /><br /> Описание: Управляет кластеризацией индексов.<br /><br /> VARIANT_TRUE: Драйвер OLE DB для SQL Server пытается создать кластеризованный индекс на [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] таблицы. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает не более одного кластеризованного индекса в любой таблице.<br /><br /> VARIANT_FALSE: Драйвер OLE DB для SQL Server пытается создать некластеризованный индекс на [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] таблицы.|  
-|DBPROP_INDEX_FILLFACTOR|И запись: чтение и запись<br /><br /> По умолчанию: 0<br /><br /> Описание: указывает процент страниц индекса, используемых для хранения. Дополнительные сведения см. в разделе [CREATE INDEX](../../../t-sql/statements/create-index-transact-sql.md).<br /><br /> Тип варианта — VT_I4. Значение должно находиться в диапазоне от 1 до 100.|  
-|DBPROP_INDEX_INITIALIZE|И запись: чтение и запись<br /><br /> По умолчанию: нет<br /><br /> Описание: Драйвер OLE DB для SQL Server не поддерживает это свойство. Попытки установить свойство в **CreateIndex** приводят к возврату значения DB_S_ERRORSOCCURRED. Элемент *dwStatus* структуры свойства указывает значение DBPROPSTATUS_BADVALUE.|  
-|DBPROP_INDEX_NULLCOLLATION|И запись: чтение и запись<br /><br /> По умолчанию: нет<br /><br /> Описание: Драйвер OLE DB для SQL Server не поддерживает это свойство. Попытки установить свойство в **CreateIndex** приводят к возврату значения DB_S_ERRORSOCCURRED. Элемент *dwStatus* структуры свойства указывает значение DBPROPSTATUS_BADVALUE.|  
-|DBPROP_INDEX_NULLS|И запись: чтение и запись<br /><br /> По умолчанию: нет<br /><br /> Описание: Драйвер OLE DB для SQL Server не поддерживает это свойство. Попытки установить свойство в **CreateIndex** приводят к возврату значения DB_S_ERRORSOCCURRED. Элемент *dwStatus* структуры свойства указывает значение DBPROPSTATUS_BADVALUE.|  
-|DBPROP_INDEX_PRIMARYKEY|И запись: чтение и запись<br /><br /> Значение по умолчанию — Значение VARIANT_FALSE Описание: создает индекс в виде ссылочной целостности, ограничение PRIMARY KEY.<br /><br /> VARIANT_TRUE: индекс создается для поддержки ограничения PRIMARY KEY таблицы. Столбцы не должны иметь значений NULL.<br /><br /> VARIANT_FALSE: индекс не используется в качестве ограничения PRIMARY KEY для значений строк таблицы.|  
-|DBPROP_INDEX_SORTBOOKMARKS|И запись: чтение и запись<br /><br /> По умолчанию: нет<br /><br /> Описание: Драйвер OLE DB для SQL Server не поддерживает это свойство. Попытки установить свойство в **CreateIndex** приводят к возврату значения DB_S_ERRORSOCCURRED. Элемент *dwStatus* структуры свойства указывает значение DBPROPSTATUS_BADVALUE.|  
-|DBPROP_INDEX_TEMPINDEX|И запись: чтение и запись<br /><br /> По умолчанию: нет<br /><br /> Описание: Драйвер OLE DB для SQL Server не поддерживает это свойство. Попытки установить свойство в **CreateIndex** приводят к возврату значения DB_S_ERRORSOCCURRED. Элемент *dwStatus* структуры свойства указывает значение DBPROPSTATUS_BADVALUE.|  
-|DBPROP_INDEX_TYPE|И запись: чтение и запись<br /><br /> По умолчанию: нет<br /><br /> Описание: Драйвер OLE DB для SQL Server не поддерживает это свойство. Попытки установить свойство в **CreateIndex** приводят к возврату значения DB_S_ERRORSOCCURRED. Элемент *dwStatus* структуры свойства указывает значение DBPROPSTATUS_BADVALUE.|  
-|DBPROP_INDEX_UNIQUE|И запись: чтение и запись<br /><br /> По умолчанию: VARIANT_FALSE<br /><br /> Описание: создает индекс в виде ограничения UNIQUE для определенного столбца или столбцов.<br /><br /> VARIANT_TRUE: индекс используется для уникального ограничения значений в строках таблицы.<br /><br /> VARIANT_FALSE: индекс не используется для уникального ограничения значений строк.|  
+|DBPROP_INDEX_AUTOUPDATE|Чтение и запись в R/W<br /><br /> По умолчанию: нет<br /><br /> Описание: Драйвер OLE DB для SQL Server не поддерживает это свойство. Попытки установить свойство в **CreateIndex** приводят к возврату значения DB_S_ERRORSOCCURRED. Элемент *dwStatus* структуры свойства указывает значение DBPROPSTATUS_BADVALUE.|  
+|DBPROP_INDEX_CLUSTERED|Чтение и запись в R/W<br /><br /> По умолчанию: VARIANT_FALSE<br /><br /> Описание: управляет кластеризацией индекса.<br /><br /> VARIANT_TRUE: Драйвер OLE DB для SQL Server пытается создать кластеризованный индекс [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для таблицы. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает не более одного кластеризованного индекса в любой таблице.<br /><br /> VARIANT_FALSE: Драйвер OLE DB для SQL Server пытается создать некластеризованный индекс [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для таблицы.|  
+|DBPROP_INDEX_FILLFACTOR|Чтение и запись в R/W<br /><br /> По умолчанию: 0<br /><br /> Описание: указывает процент страниц индекса, используемых для хранения. Дополнительные сведения см. в разделе [CREATE INDEX](../../../t-sql/statements/create-index-transact-sql.md).<br /><br /> Тип варианта — VT_I4. Значение должно находиться в диапазоне от 1 до 100.|  
+|DBPROP_INDEX_INITIALIZE|Чтение и запись в R/W<br /><br /> По умолчанию: нет<br /><br /> Описание: Драйвер OLE DB для SQL Server не поддерживает это свойство. Попытки установить свойство в **CreateIndex** приводят к возврату значения DB_S_ERRORSOCCURRED. Элемент *dwStatus* структуры свойства указывает значение DBPROPSTATUS_BADVALUE.|  
+|DBPROP_INDEX_NULLCOLLATION|Чтение и запись в R/W<br /><br /> По умолчанию: нет<br /><br /> Описание: Драйвер OLE DB для SQL Server не поддерживает это свойство. Попытки установить свойство в **CreateIndex** приводят к возврату значения DB_S_ERRORSOCCURRED. Элемент *dwStatus* структуры свойства указывает значение DBPROPSTATUS_BADVALUE.|  
+|DBPROP_INDEX_NULLS|Чтение и запись в R/W<br /><br /> По умолчанию: нет<br /><br /> Описание: Драйвер OLE DB для SQL Server не поддерживает это свойство. Попытки установить свойство в **CreateIndex** приводят к возврату значения DB_S_ERRORSOCCURRED. Элемент *dwStatus* структуры свойства указывает значение DBPROPSTATUS_BADVALUE.|  
+|DBPROP_INDEX_PRIMARYKEY|Чтение и запись в R/W<br /><br /> По умолчанию: Описание VARIANT_FALSE: создает индекс как ссылочную целостность, ограничение ПЕРВИЧного ключа.<br /><br /> VARIANT_TRUE: индекс создается для поддержки ограничения PRIMARY KEY таблицы. Столбцы не должны иметь значений NULL.<br /><br /> VARIANT_FALSE: индекс не используется в качестве ограничения PRIMARY KEY для значений строк таблицы.|  
+|DBPROP_INDEX_SORTBOOKMARKS|Чтение и запись в R/W<br /><br /> По умолчанию: нет<br /><br /> Описание: Драйвер OLE DB для SQL Server не поддерживает это свойство. Попытки установить свойство в **CreateIndex** приводят к возврату значения DB_S_ERRORSOCCURRED. Элемент *dwStatus* структуры свойства указывает значение DBPROPSTATUS_BADVALUE.|  
+|DBPROP_INDEX_TEMPINDEX|Чтение и запись в R/W<br /><br /> По умолчанию: нет<br /><br /> Описание: Драйвер OLE DB для SQL Server не поддерживает это свойство. Попытки установить свойство в **CreateIndex** приводят к возврату значения DB_S_ERRORSOCCURRED. Элемент *dwStatus* структуры свойства указывает значение DBPROPSTATUS_BADVALUE.|  
+|DBPROP_INDEX_TYPE|Чтение и запись в R/W<br /><br /> По умолчанию: нет<br /><br /> Описание: Драйвер OLE DB для SQL Server не поддерживает это свойство. Попытки установить свойство в **CreateIndex** приводят к возврату значения DB_S_ERRORSOCCURRED. Элемент *dwStatus* структуры свойства указывает значение DBPROPSTATUS_BADVALUE.|  
+|DBPROP_INDEX_UNIQUE|Чтение и запись в R/W<br /><br /> По умолчанию: VARIANT_FALSE<br /><br /> Описание: создает индекс в виде ограничения UNIQUE для определенного столбца или столбцов.<br /><br /> VARIANT_TRUE: индекс используется для уникального ограничения значений в строках таблицы.<br /><br /> VARIANT_FALSE: индекс не используется для уникального ограничения значений строк.|  
   
  В специфичном для каждого поставщика множестве свойств DBPROPSET_SQLSERVERINDEX драйвер OLE DB для SQL Server определяет указанное ниже свойство, хранящее информацию об источнике данных.  
   
 |Идентификатор свойства|Описание|  
 |-----------------|-----------------|  
-|SSPROP_INDEX_XML|Тип: VT_BOOL (чтение/запись)<br /><br /> По умолчанию: VARIANT_FALSE<br /><br /> Описание: если при вызове метода IIndexDefinition::CreateIndex это свойство указывается со значением VARIANT_TRUE, создается первичный XML-индекс, соответствующий индексированному столбцу. Если это свойство имеет значение VARIANT_TRUE, параметр cIndexColumnDescs должен быть равен 1. В противном случае возникает ошибка.|  
+|SSPROP_INDEX_XML|Тип: VT_BOOL (R/W)<br /><br /> По умолчанию: VARIANT_FALSE<br /><br /> Описание: если при вызове метода IIndexDefinition::CreateIndex это свойство указывается со значением VARIANT_TRUE, создается первичный XML-индекс, соответствующий индексированному столбцу. Если это свойство имеет значение VARIANT_TRUE, параметр cIndexColumnDescs должен быть равен 1. В противном случае возникает ошибка.|  
   
  В данном примере создается индекс первичного ключа.  
   

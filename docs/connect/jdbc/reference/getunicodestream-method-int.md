@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 0de79b65-a25e-4028-9cc2-7ac02340115b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: fe3352ef2bffaed6151e163d5054b03a05c53418
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a3ee382716201c5e24b9ff7b23ae4f923ae18b77
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66765915"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67978433"
 ---
 # <a name="getunicodestream-method-int"></a>Метод getUnicodeStream (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,13 +43,13 @@ public java.io.InputStream getUnicodeStream(int columnIndex)
  Значение типа **int**, указывающее индекс столбца.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Объект, InputStream.  
+ Объект InputStream.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getUnicodeString указывается с помощью метода getUnicodeString в интерфейсе java.sql.ResultSet.  
+ Этот метод Жетуникодестринг задается методом Жетуникодестринг в интерфейсе Java. SQL. Result.  
   
 ## <a name="see-also"></a>См. также:  
  [Метод getUnicodeStream (SQLServerResultSet)](../../../connect/jdbc/reference/getunicodestream-method-sqlserverresultset.md)   

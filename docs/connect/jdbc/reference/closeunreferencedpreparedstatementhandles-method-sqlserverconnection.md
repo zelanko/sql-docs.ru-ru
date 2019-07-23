@@ -1,5 +1,5 @@
 ---
-title: Метод closeUnreferencedPreparedStatementHandles (SQLServerConnection) | Документация Майкрософт
+title: Метод Клосеунреференцедпрепаредстатеменсандлес (SQLServerConnection) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2018
 ms.prod: sql
@@ -15,18 +15,17 @@ apitype: Assembly
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3d0fb6ae351cde68956defff6081fa19f02c092e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 7256475421b8666e28eaaf03f3ff4cb9768aa289
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66777424"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955601"
 ---
 # <a name="closeunreferencedpreparedstatementhandles-method-sqlserverconnection"></a>Метод closeUnreferencedPreparedStatementHandles (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
- Заставляет отмены-подготовки запросов для любой необработанных отклоненных подготовленных инструкций для выполнения.
+ Вызывает принудительное выполнение запросов отмены подготовки для всех необработанных отброшенных подготовленных инструкций.
 
 ## <a name="syntax"></a>Синтаксис  
   
@@ -40,7 +39,7 @@ public void closeUnreferencedPreparedStatementHandles()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
 
 ## <a name="remarks"></a>Remarks  
- Этот метод, доступные в версии драйвера JDBC 6.4 и далее.
+ Этот метод доступен из драйвера JDBC версии 6,4 и далее.
  
 ## <a name="see-also"></a>См. также:  
  [Элементы SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

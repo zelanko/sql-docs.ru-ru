@@ -10,19 +10,18 @@ ms.topic: conceptual
 ms.assetid: c14fd3d2-5770-47c2-a851-cc13ddbc9bf5
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b99d260c61a8d64ed7ad64003bdf3f85c6de50ba
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 3fbf4e9b2607638d37217dc5862a36446d592b5e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67732347"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949998"
 ---
 # <a name="prepare-the-input-trace-data"></a>Подготовка входных данных трассировки
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Прежде чем начинать распределенное воспроизведение с помощью функции распределенного воспроизведения [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], необходимо подготовить входные данные трассировки, а для этого инициировать стадию предварительной подготовки с помощью средства администрирования распределенного воспроизведения. На стадии предварительной обработки контроллер распределенного воспроизведения обрабатывает данные трассировки и формирует промежуточный файл:  
   
- ![Стадия предварительной обработки распределенного воспроизведения](../../tools/distributed-replay/media/preprocess.gif "стадия предварительной обработки распределенного воспроизведения")  
+ ![Стадия предварительной обработки распределенного воспроизведения](../../tools/distributed-replay/media/preprocess.gif "Стадия предварительной обработки распределенного воспроизведения")  
   
  Дополнительные сведения о программе распределенного воспроизведения см. в разделе [Распределенное воспроизведение SQL Server](../../tools/distributed-replay/sql-server-distributed-replay.md).  
   

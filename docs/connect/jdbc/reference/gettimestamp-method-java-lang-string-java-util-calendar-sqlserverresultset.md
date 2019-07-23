@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 44474000-8951-49ee-93a5-c8cb879eaf55
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a7aa807dc1cbcbd027cd4a5c26b43509438c67ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 25731d68f767fbdd614525e5a39613fc46ae6206
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66767395"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67978832"
 ---
 # <a name="gettimestamp-method-javalangstring-javautilcalendar-sqlserverresultset"></a>Метод getTimestamp (java.lang.String, java.util.Calendar) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,12 +40,12 @@ public java.sql.Timestamp getTimestamp(java.lang.String colName,
   
  Значение типа **String**, содержащее имя столбца.  
   
- *Клиентская лицензия*  
+ *Cal*  
   
- Объект календаря.  
+ Объект Calendar.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Объект метки времени.  
+ Объект timestamp.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

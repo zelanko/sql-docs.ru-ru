@@ -10,28 +10,28 @@ helpviewer_keywords:
 - date and time types, retrieving as datetime objects
 author: yitam
 ms.author: v-yitam
-manager: mbarwin
-ms.openlocfilehash: 54e5b5c9c1ba59ed64db740fbbb1a643e7cb1b2c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: v-mabarw
+ms.openlocfilehash: 165e91cee3b0b4592f9b746f8b35b46bc73bce50
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63210439"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264569"
 ---
 # <a name="how-to-retrieve-date-and-time-types-as-php-datetime-objects-using-the-pdosqlsrv-driver"></a>Как извлечь типы даты и времени в виде объектов даты и времени PHP с помощью драйвера PDO_SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Эта функция, добавленных в версии 5.6.0, допустим только в том случае, при использовании драйвера PDO_SQLSRV для [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].
+Эта функция, добавленная в версии 5.6.0, допустима только при использовании драйвера PDO_SQLSRV для [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].
 
-### <a name="to-retrieve-date-and-time-types-as-datetime-objects"></a>Чтобы получить типы даты и времени в виде объектов DateTime
+### <a name="to-retrieve-date-and-time-types-as-datetime-objects"></a>Получение типов даты и времени в виде объектов DateTime
 
-При использовании PDO_SQLSRV, типы даты и времени (**smalldatetime**, **datetime**, **даты**, **время**, **datetime2**, и **datetimeoffset**) по умолчанию возвращается в виде строк. Атрибут PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE ни PDO::ATTR_STRINGIFY_FETCHES оказывает никакого действия. Чтобы получить типы даты и времени, как [PHP DateTime](http://php.net/manual/en/class.datetime.php) объектов, установите для атрибута соединения или инструкции `PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE` для **true** (это **false** по умолчанию).
+При использовании PDO_SQLSRV типы даты и времени (**smalldatetime**, **DateTime**, **Date**, **time**, **datetime2**и **DateTimeOffset**) по умолчанию возвращаются в виде строк. Ни PDO:: ATTR_STRINGIFY_FETCHES, ни атрибут PDO:: SQLSRV_ATTR_FETCHES_NUMERIC_TYPE не оказывает никакого влияния. Чтобы получить типы даты и времени в виде объектов [DateTime PHP](http://php.net/manual/en/class.datetime.php) , установите для атрибута `PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE` Connection или Statement **значение true** (по умолчанию **false** ).
 
 > [!NOTE]
-> Это соединение или атрибут инструкции применяется только к регулярных получение типов даты и времени, так как объекты DateTime нельзя указать в качестве выходных параметров.
+> Это соединение или атрибут инструкции применяется только к обычной выборке типов даты и времени, так как объекты DateTime не могут быть указаны в качестве выходных параметров.
 
-## <a name="example---use-the-connection-attribute"></a>Пример: используйте атрибут соединения
-Следующие примеры опустить произошла ошибка при проверке для ясности. Это показано, как задать атрибут соединения:
+## <a name="example---use-the-connection-attribute"></a>Пример. Использование атрибута Connection
+В следующих примерах не выполняется проверка ошибок для ясности. В этом примере показано, как задать атрибут Connection:
 
 ```php
 <?php
@@ -58,8 +58,8 @@ unset($conn);
 ?>
 ```
 
-## <a name="example---use-the-statement-attribute"></a>Пример - использовать атрибут инструкции
-В этом примере показано, как присвоить атрибуту инструкции:
+## <a name="example---use-the-statement-attribute"></a>Пример. Использование атрибута Statement
+В этом примере показано, как задать атрибут инструкции:
 
 ```php
 <?php
@@ -80,8 +80,8 @@ unset($conn);
 ?>
 ```
 
-## <a name="example---use-the-statement-option"></a>Пример — использования параметра инструкции
-Кроме того атрибут инструкции можно задать в качестве параметра:
+## <a name="example---use-the-statement-option"></a>Пример. Использование параметра инструкции
+Кроме того, в качестве параметра можно задать атрибут инструкции:
 
 ```php
 <?php
@@ -103,8 +103,8 @@ unset($conn);
 ?>
 ```
 
-## <a name="example---retrieve-datetime-types-as-strings"></a>Пример: извлечение типов даты и времени в виде строк
-Приведенный ниже показано, как реализовать обратное (который будет действительно необходимо, так как это значение по умолчанию: false):
+## <a name="example---retrieve-datetime-types-as-strings"></a>Пример. получение типов DateTime в виде строк
+В следующем примере показано, как добиться противоположного (что не является необходимым, так как по умолчанию имеет значение false):
 
 ```php
 <?php

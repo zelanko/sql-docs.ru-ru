@@ -1,5 +1,5 @@
 ---
-title: Метод supportsCoreSQLGrammar (SQLServerDatabaseMetaData) | Документация Майкрософт
+title: Метод Суппортскоресклграммар (SQLServerDatabaseMetaData) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 6b82f300-f906-4d11-b810-525bda4a88ee
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 95a9dd888224720874e57bc74d39bec441190e6b
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 73cbbaf8d1a3b3e6bc5e5ba7cd4b43df01c0f7f1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66766181"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969592"
 ---
 # <a name="supportscoresqlgrammar-method-sqlserverdatabasemetadata"></a>Метод supportsCoreSQLGrammar (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsCoreSQLGrammar()
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- **значение true,** Если поддерживается. В противном случае — **false**.  
+ **значение true** , если поддерживается. В противном случае — **false**.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод supportsCoreSQLGrammer указывается с помощью метода supportsCoreSQLGrammer в интерфейсе java.sql.DatabaseMetaData.  
+ Этот метод Суппортскоресклграммер задается методом Суппортскоресклграммер в интерфейсе Java. SQL. DatabaseMetaData.  
   
 ## <a name="see-also"></a>См. также:  
  [Методы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

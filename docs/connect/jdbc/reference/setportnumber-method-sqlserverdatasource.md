@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 59c5fa23-bc1a-4142-af17-70e275f0b833
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 304d63f7822990c4d8e4a9c0787c9e688c222580
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 0c171e8fb78553275d6a1f5d4bcce485a470f94a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66799628"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67973190"
 ---
 # <a name="setportnumber-method-sqlserverdatasource"></a>Метод setPortNumber (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +43,7 @@ public void setPortNumber(int portNumber)
  Номер порта — это номер порта TCP/IP, который используется при открытии соединения с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] через сокет. Если свойство portNumber не задано, то метод [getPortNumber](../../../connect/jdbc/reference/getportnumber-method-sqlserverdatasource.md) возвращает значение по умолчанию (1433).  
   
 > [!NOTE]  
->  Метод setPortNumber не выполняет проверку допустимости диапазона для переданное значение порта. Вы можете передать номер порта, который не является допустимым, например 99999, не вызовет ошибку.  
+>  Метод setPortNumber не выполняет проверку диапазона для переданного значения порта. Можно передать недопустимый номер порта, например 99999, без активации ошибки.  
   
 ## <a name="see-also"></a>См. также:  
  [Элементы SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

@@ -1,5 +1,5 @@
 ---
-title: ISSAsynchStatus::GetStatus (OLE DB) | Документация Майкрософт
+title: Метод ISSAsynchStatus::-Status (OLE DB) | Документация Майкрософт
 description: Функция ISSAsynchStatus::GetStatus (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,13 +15,12 @@ helpviewer_keywords:
 - GetStatus method
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: d22bc6d19aa4593d400b62c19f72c9fbe3745005
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 6f05b5c7c7b03fa1b68f3da5c6fbed29ed98a3c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66789752"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994375"
 ---
 # <a name="issasynchstatusgetstatus-ole-db"></a>Функция ISSAsynchStatus::GetStatus (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,10 +44,10 @@ HRESULT GetStatus(
   
 ## <a name="arguments"></a>Аргументы  
  *hChapter*[in]  
- Дескриптор главы. Если опроса объект не является объектом набора строк или операция не применяется к Глава, задается значение DB_NULL_HCHAPTER, которое обрабатывается поставщиком.  
+ Дескриптор главы. Если опрашивающий объект не является объектом набора строк или операция не применяется к главе, ей следует присвоить значение DB_NULL_HCHAPTER, которое игнорируется поставщиком.  
   
  *eOperation*[in]  
- Операция, для которой запрашивается асинхронное состояние. Следует учитывать следующее значение.  
+ Операция, для которой запрашивается асинхронное состояние. Следует использовать следующее значение:  
   
  DBASYNCHOP_OPEN — пользователь запрашивает сведения об асинхронном открытии или заполнении набора строк, или асинхронной инициализации объекта источника данных. Если поставщик соответствует OLE DB 2.5 и поддерживает прямую привязку URL-адресов, то потребитель запрашивает сведения об асинхронной инициализации или заполнении объекта источника данных, набора строк, строки или потока.  
   
@@ -127,6 +126,6 @@ HRESULT GetStatus(
   
 ## <a name="see-also"></a>См. также:  
  [Выполнение асинхронных операций](../../oledb/features/performing-asynchronous-operations.md)   
- [ISSAsynchStatus &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/issasynchstatus-ole-db.md)  
+ [Метод ISSAsynchStatus &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/issasynchstatus-ole-db.md)  
   
   

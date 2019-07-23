@@ -14,13 +14,12 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, transactions
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 0c5fc4c691902415455b2d8139b34cc39438f96d
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 8fc245cebdb106eb81af8c5ae1fba6a2bcc041b3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66795971"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015236"
 ---
 # <a name="transactions"></a>Transactions
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "66795971"
   
 -   [Поддержка распределенных транзакций](../../oledb/ole-db-transactions/supporting-distributed-transactions.md)  
   
--   [Уровни изоляции &#40;OLE DB&#41;](../../oledb/ole-db-transactions/isolation-levels-ole-db.md)  
+-   [Уровни &#40;изоляции OLE DB&#41;](../../oledb/ole-db-transactions/isolation-levels-ole-db.md)  
   
 ## <a name="see-also"></a>См. также:  
  [Программирование драйвера OLE DB для SQL Server](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  

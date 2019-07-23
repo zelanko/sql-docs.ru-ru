@@ -10,25 +10,24 @@ ms.topic: conceptual
 ms.assetid: 4bfd6e52-817d-4f0a-a33d-11466e3f0484
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e8f4c34c1b6b945c28193a549a06546ec952a5d9
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 87faa60456dd6d03f23d45346ab0dd103dc07c82
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66780366"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992515"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-pyodbc"></a>Шаг 3. Эксперимент, подразумевающий подключение к SQL с помощью pyodbc
 
-В этом примере следует рассматривать подтверждение концепции только.  Пример кода упрощен для ясности и не всегда представляет рекомендации, рекомендуемые корпорацией Майкрософт.  
+Этот пример следует рассматривать только для подтверждения концепции.  Пример кода упрощен для ясности и не обязательно представляет лучшие методики, рекомендованные корпорацией Майкрософт.  
 
-**Запустите пример сценария ниже** создайте файл с именем test.py и добавьте каждого фрагмента кода в ходе работы. 
+**Запустить пример скрипта ниже**  Создайте файл с именем test.py и добавьте каждый фрагмент кода по ходу его. 
 
 ```
 > python test.py
 ```
   
-## <a name="step-1--connect"></a>Шаг 1: подключение  
+## <a name="step-1--connect"></a>Шаг 1. подключение  
   
 ```python
 
@@ -46,9 +45,9 @@ cursor = cnxn.cursor()
 ```  
   
   
-## <a name="step-2--execute-query"></a>Шаг 2: Выполнение запроса  
+## <a name="step-2--execute-query"></a>Шаг 2. выполнение запроса  
   
-Cursor.executefunction может использоваться для извлечения результирующего набора из запроса к базе данных SQL. Эта функция фактически принимает любой запрос и возвращает результирующий набор, который может быть выполнена итерация с использованием cursor.fetchone()
+Cursor. ExecuteFunction можно использовать для получения результирующего набора из запроса к базе данных SQL. Эта функция по сути принимает любой запрос и возвращает результирующий набор, для которого можно выполнить итерацию с использованием Cursor. fetchone ().
   
   
 ```python
@@ -61,9 +60,9 @@ while row:
 
 ```  
   
-## <a name="step-3--insert-a-row"></a>Шаг 3: Вставка строки  
+## <a name="step-3--insert-a-row"></a>Шаг 3. Вставка строки  
   
-В этом примере показано, как выполнить [вставить](../../../t-sql/statements/insert-transact-sql.md) инструкции безопасно, передать параметры для защиты от атак [путем внедрения кода SQL](../../../relational-databases/tables/primary-and-foreign-key-constraints.md) значение.    
+В этом примере вы узнаете, как безопасно выполнить инструкцию [INSERT](../../../t-sql/statements/insert-transact-sql.md) , передав параметры, которые защищают приложение от [внедрения кода SQL](../../../relational-databases/tables/primary-and-foreign-key-constraints.md) .    
   
   
 ```python
@@ -79,4 +78,4 @@ while row:
   `      
   ## <a name="next-steps"></a>Следующие шаги  
   
-Дополнительные сведения см. в разделе [Центр разработчиков Python](https://azure.microsoft.com/develop/python/).
+Дополнительные сведения см. в [центре разработчиков Python](https://azure.microsoft.com/develop/python/).

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: e174eb81-d569-479e-a171-365cd6d44b6a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 673874b8019c141076c83958d73b9d4ba5846a8b
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 8803ead9f5ec779a024a0f1980b0e3dab3a746ca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66787560"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67981151"
 ---
 # <a name="getobject-method-javalangstring-javautilmap"></a>Метод getObject (java.lang.String, java.util.Map)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,13 +39,13 @@ public java.lang.Object getObject(java.lang.String sCol,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *sCol*  
+ *скол*  
   
  Значение типа **String**, содержащее имя параметра.  
   
  *m*  
   
- Объект карты.  
+ Объект Map.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Значение **Object**.  

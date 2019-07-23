@@ -12,19 +12,18 @@ helpviewer_keywords:
 ms.assetid: 8ae70041-f3d9-46e4-8fa8-31088572a9f8
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ca6a9765c7813fd0fbece4d8c392c23e2f784ec2
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 0e59ba2473ce58caebcb76521dcc191479abdb92
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728072"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065452"
 ---
 # <a name="sqllogship-application"></a>Приложение sqllogship
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Приложение **sqllogship** выполняет операции резервного копирования, обычного копирования и восстановления, а также связанные с ними задачи очистки для конфигурации доставки журналов. Операция выполняется на определенном экземпляре [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] для определенной базы данных.  
   
- ![Значок ссылки на раздел](../database-engine/configure-windows/media/topic-link.gif "значок ссылки на раздел") о синтаксических обозначениях см. в разделе [Справочник по программе командной строки &#40;СУБД&#41;](../tools/command-prompt-utility-reference-database-engine.md).  
+ ![Значок ссылки на раздел](../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") Сведения о синтаксических обозначениях см. в [справочнике &#40;по программе командной строки ядро СУБД&#41;](../tools/command-prompt-utility-reference-database-engine.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   

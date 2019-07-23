@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 5ec3571a-c7c6-4b94-a9ea-ac08adc7f978
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d9eac9547ebc146d33ea5bc498949d8fbae60eeb
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: e9f6532ca8f23a9e8d729bccc204865860e71ac9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66766388"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969687"
 ---
 # <a name="supportscatalogsinprocedurecalls-method-sqlserverdatabasemetadata"></a>Метод supportsCatalogsInProcedureCalls (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsCatalogsInProcedureCalls()
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- **значение true,** Если поддерживается. В противном случае — **false**.  
+ **значение true** , если поддерживается. В противном случае — **false**.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод supportsCatalogsInProcedureCalls указывается с помощью метода supportsCatalogsInProcedureCalls в интерфейсе java.sql.DatabaseMetaData.  
+ Этот метод supportsCatalogsInProcedureCalls задается методом supportsCatalogsInProcedureCalls в интерфейсе Java. SQL. DatabaseMetaData.  
   
 ## <a name="see-also"></a>См. также:  
  [Методы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

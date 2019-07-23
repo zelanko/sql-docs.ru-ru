@@ -1,5 +1,5 @@
 ---
-title: Образец типа данных SQLXML | Документация Майкрософт
+title: Пример типа данных SQLXML | Документация Майкрософт
 ms.custom: ''
 ms.date: 07/31/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8f2ff25b-71fd-46d7-b6de-d656095d2aad
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a2060defebee30d7f31d33fa8ada069095780c39
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 8775c93afaa84570c5f4da51672bbec6379a927f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66769825"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957056"
 ---
 # <a name="sqlxml-data-type-sample"></a>Образец типа данных SQLXML
 
@@ -39,7 +38,7 @@ ms.locfileid: "66769825"
 
 ## <a name="requirements"></a>Требования
 
-Чтобы запустить этот образец приложения, необходимо включить в параметр classpath путь к файлу sqljdbc4.jar. Если параметр classpath не включает путь к файлу sqljdbc4.jar, образец приложения вызовет исключение «Класс не найден». Дополнительные сведения о том, как путь к классу см. в разделе [с помощью драйвера JDBC](../../../connect/jdbc/using-the-jdbc-driver.md).
+Чтобы запустить этот образец приложения, необходимо включить в параметр classpath путь к файлу sqljdbc4.jar. Если параметр classpath не включает путь к файлу sqljdbc4.jar, образец приложения вызовет исключение «Класс не найден». Дополнительные сведения о настройке подкаталогов классов см. в разделе [Использование драйвера JDBC](../../../connect/jdbc/using-the-jdbc-driver.md).
 
 Кроме этого, для запуска данного примера приложения необходим доступ к образцу базы данных [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)].
 

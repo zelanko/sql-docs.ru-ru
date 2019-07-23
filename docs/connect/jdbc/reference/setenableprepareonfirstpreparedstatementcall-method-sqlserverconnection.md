@@ -15,18 +15,17 @@ apitype: Assembly
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c8458961cbd73f712b158d82c31c84372c00cde6
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 187a195a831955b65f4af113fb80e5f99308e1a5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801597"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974445"
 ---
 # <a name="setenableprepareonfirstpreparedstatementcall-method-sqlserverconnection"></a>Метод setEnablePrepareOnFirstPreparedStatementCall (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
- Задает поведение для определенного подключения экземпляра. Если значение равно false, во время первого выполнения будет вызывать sp_executesql и не Подготовка инструкции, после второго выполнения он будет вызывать sp_prepexec и настраивать дескриптором подготовленной инструкции. После выполнения вызовет sp_execute. Это избавляет от для процедура sp_unprepare для подготовленной инструкции close Если инструкция выполняется только один раз.
+ Задает поведение для конкретного экземпляра соединения. Если значение равно false, первое выполнение будет вызывать процедуру sp_executesql, а не подготавливать инструкцию, как только второе выполнение вызовет sp_prepexec и фактически настраивает подготовленный обработчик инструкции. Следующие выполнения будут вызывать sp_execute. Это освобождает необходимость sp_unprepare при выполнении подготовленной инструкции Close, если инструкция выполняется только один раз.
 
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,15 +35,15 @@ public void setEnablePrepareOnFirstPreparedStatementCall(boolean enablePrepareOn
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *enablePrepareOnFirstPreparedStatementCall*  
+ *енаблепрепареонфирстпрепаредстатементкалл*  
   
- Новое значение **enablePrepareOnFirstPreparedStatementCall** свойство соединения.  
+ Новое значение свойства соединения **енаблепрепареонфирстпрепаредстатементкалл** .  
  
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
 ## <a name="remarks"></a>Remarks  
- Этот метод, доступные в версии драйвера JDBC 6.4 и далее.
+ Этот метод доступен из драйвера JDBC версии 6,4 и далее.
  
 ## <a name="see-also"></a>См. также:  
  [Элементы SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

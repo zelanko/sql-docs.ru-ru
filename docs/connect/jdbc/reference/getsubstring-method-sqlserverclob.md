@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: bf915590-a883-4403-befa-5b5bb42f34d8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3404d7e31cdc5ed82a4a2c57af1a05354104d4bc
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 73b82c550c78d409accd423b485fc7b9825dbc8c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66787459"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979336"
 ---
 # <a name="getsubstring-method-sqlserverclob"></a>Метод getSubString (SQLServerClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,7 +36,7 @@ public java.lang.String getSubString(long pos,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *Торговых терминалов*  
+ *POS*  
   
  Первый символ извлекаемой подстроки. Первый символ находится в позиции 1.  
   
@@ -52,7 +51,7 @@ public java.lang.String getSubString(long pos,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getSubString указывается с помощью метода getSubString в интерфейсе java.sql.Clob.  
+ Этот метод getSubString задается методом getSubString в интерфейсе Java. SQL. CLOB.  
   
  При попытке получить ноль символов из объекта CLOB со значением NULL или с нулевой длиной возвращается пустая строка. При попытке получить символы любой длины, начиная с позиции, отличной от 1, в объекте CLOB нулевой длины вызывается исключение позиции.  
   

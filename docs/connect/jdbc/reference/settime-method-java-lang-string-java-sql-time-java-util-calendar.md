@@ -1,5 +1,5 @@
 ---
-title: Метод setTime значения времени и календаря | Документация Майкрософт
+title: Метод setTime для значений времени и календаря | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: ca08fea8-ee1a-49e4-a973-2923d325df79
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8c05d1558faaf8edce91a8383159abd04b6bf05d
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 2e0a493492c581150809fee6e3707cf770960462
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66773182"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67972532"
 ---
 # <a name="settime-method-javalangstring-javasqltime-javautilcalendar"></a>Метод setTime (java.lang.String, java.sql.Time, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +37,7 @@ public void setTime(java.lang.String sCol,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *sCol*  
+ *скол*  
   
  Значение типа **String**, содержащее имя параметра.  
   
@@ -48,7 +47,7 @@ public void setTime(java.lang.String sCol,
   
  *c*  
   
- Объект календаря.  
+ Объект Calendar.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -56,9 +55,9 @@ public void setTime(java.lang.String sCol,
 ## <a name="remarks"></a>Remarks  
  Этот метод setTime указывается методом setTime в интерфейсе java.sql.CallableStatement.  
   
- Начиная с версии [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] версии 3.0 драйвера JDBC поведение этого метода изменяется параметром **sendTimeAsDatetime** свойство соединения ([заданию свойств соединения](../../../connect/jdbc/setting-the-connection-properties.md)) и [ SQLServerDataSource.setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md).  
+ Начиная с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] драйвера JDBC 3,0, поведение этого метода изменяется свойством соединения **сендтимеасдатетиме** ([заданием свойств соединения](../../../connect/jdbc/setting-the-connection-properties.md)) и [SQLServerDataSource. setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md).  
   
- Дополнительные сведения см. в разделе [java.sql.Time настройке как значения отправляются на сервер](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md).  
+ Дополнительные сведения см. в разделе [Настройка отправки значений Java. SQL. Time на сервер](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Метод setTime (SQLServerCallableStatement)](../../../connect/jdbc/reference/settime-method-sqlservercallablestatement.md)   

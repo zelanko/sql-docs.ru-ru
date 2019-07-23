@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 3336d4c1-d999-43cc-b36b-ff1532e899bc
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f3729b510f4d25fb6e20496f987a9c7ccb2623d2
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a2c1a5a30c6bc303f7e2caf094e9c1d803ab6781
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66771167"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980678"
 ---
 # <a name="getprocedureterm-method-sqlserverdatabasemetadata"></a>Метод getProcedureTerm (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public java.lang.String getProcedureTerm()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getProcedureTerm указывается с помощью метода getProcedureTerm в интерфейсе java.sql.DatabaseMetaData.  
+ Этот метод getProcedureTerm задается методом getProcedureTerm в интерфейсе Java. SQL. DatabaseMetaData.  
   
 ## <a name="see-also"></a>См. также:  
  [Методы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

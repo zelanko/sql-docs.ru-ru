@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 71156863-3588-453e-b5a5-0573b2c1bebf
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 65f52e7bf154930d75f642ffc77ce5c94a3c1207
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 5b1a572d3ab2dfba9d0aa0b8284fc770f3422782
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796295"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977100"
 ---
 # <a name="iswrapperfor-method-sqlservercallablestatement"></a>Метод isWrapperFor (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -31,9 +30,9 @@ public boolean isWrapperFor(Class iface)
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *iface*  
+ *IFACE*  
   
- Объект **класс** определения интерфейса.  
+ **Класс** , определяющий интерфейс.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Значение **true**, если этот объект реализует интерфейс или упаковывает объект, реализующий интерфейс. В противном случае — **false**.  

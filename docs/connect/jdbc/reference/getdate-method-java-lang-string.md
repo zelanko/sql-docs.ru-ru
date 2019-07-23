@@ -1,5 +1,5 @@
 ---
-title: параметр метода (java.lang.String) getDate | Документация Майкрософт
+title: Метод GETDATE (Java. lang. String), параметр | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: a605bca6-d960-4756-ad14-0f42b313e60a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 16a141d40cd9c28dd2c94d9d86b2dcc16fbcab33
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: c35b9421e0b0f3feceefeed0add197c3a3627e49
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796883"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67983902"
 ---
 # <a name="getdate-method-javalangstring"></a>Метод getDate (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +35,7 @@ public java.sql.Date getDate(java.lang.String sCol)
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *sCol*  
+ *скол*  
   
  Значение типа **String**, содержащее имя параметра.  
   

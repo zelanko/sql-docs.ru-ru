@@ -1,5 +1,5 @@
 ---
-title: Команды, формирующие результаты с несколькими наборами строк | Документация Майкрософт
+title: Команды, создающие результаты с несколькими наборами строк | Документация Майкрософт
 description: Команды, формирующие результаты с несколькими наборами строк
 ms.custom: ''
 ms.date: 06/14/2018
@@ -17,13 +17,12 @@ helpviewer_keywords:
 - multiple-rowset results
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 29504408c66cb5bada0e180eeda8f41834e10288
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 5374e1ccd1024993369091b431a025676bccf1f0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66795749"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016065"
 ---
 # <a name="commands-generating-multiple-rowset-results"></a>Команды, формирующие результаты с несколькими наборами строк
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "66795749"
 -   Хранимые процедуры реализуют пакет инструкций SQL.  
   
 ## <a name="batches"></a>Пакеты  
- Драйвер OLE DB для SQL Server распознает символ точки с запятой как разделитель пакета для инструкций SQL:  
+ Драйвер OLE DB для SQL Server распознает символ точки с запятой как разделитель пакетной службы для инструкций SQL:  
   
 ```  
 WCHAR*       wSQLString = L"SELECT * FROM Categories; "  

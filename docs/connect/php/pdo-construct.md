@@ -1,5 +1,5 @@
 ---
-title: PDO::__construct | Документация Майкрософт
+title: 'PDO:: __construct | Документация Майкрософт'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3ee53aff-6fe4-44cd-a15b-51770c98c712
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2822c0f80aa342881e820b2edce2f99388efdc68
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a5a181d6e8b9a3ffbf9d65dc74cae967d6a1f40c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66772793"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936259"
 ---
 # <a name="pdoconstruct"></a>PDO::__construct
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,7 +36,7 @@ PDO::__construct($dsn [,$username [,$password [,$driver_options ]]] )
   
 *$password*: необязательно. Строка, содержащая пароль пользователя. Для подключения с использованием проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] укажите пароль. Для подключения с использованием проверки подлинности Windows укажите `""`.  
   
-*$driver_options*: необязательно. Вы можете указать атрибуты диспетчера драйверов PDO и эксклюзивные атрибуты драйвера [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]: PDO::SQLSRV_ATTR_ENCODING, PDO::SQLSRV_ATTR_DIRECT_QUERY. Недопустимый атрибут не вызывает исключение. Недопустимые атрибуты вызывают исключения при указании [PDO::setAttribute](../../connect/php/pdo-setattribute.md).  
+*$Driver _options*: необязательный. Вы можете указать атрибуты диспетчера драйверов PDO и эксклюзивные атрибуты драйвера [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]: PDO::SQLSRV_ATTR_ENCODING, PDO::SQLSRV_ATTR_DIRECT_QUERY. Недопустимый атрибут не вызывает исключение. Недопустимые атрибуты вызывают исключения при указании [PDO::setAttribute](../../connect/php/pdo-setattribute.md).  
   
 ## <a name="return-value"></a>Возвращаемое значение  
 Возвращает объект PDO. В случае сбоя возвращает объект PDOException.  
@@ -48,7 +47,7 @@ PDOException
 ## <a name="remarks"></a>Remarks  
 Объект соединения можно закрыть, установив для экземпляра значение NULL.  
   
-После подключения PDO::errorCode отображает 01000 вместо 00000.  
+После соединения PDO:: errorCode отображает 01000 вместо 00000.  
   
 Если PDO::__construct по какой-то причине не срабатывает, выдается исключение, даже если для PDO::ATTR_ERRMODE задано значение PDO::ERRMODE_SILENT.  
   

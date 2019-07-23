@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: b716ed6c-6ec3-47a7-8e6d-16cbf2469d6d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 044b2da04ac55b16507a7ab8ca8f08f0e25a56b0
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: ecfbc637db90531378d589043b637596c4ec2ee3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797237"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67968668"
 ---
 # <a name="supportstransactionisolationlevel-method-sqlserverdatabasemetadata"></a>Метод supportsTransactionIsolationLevel (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,13 +40,13 @@ public boolean supportsTransactionIsolationLevel(int level)
  Значение **int**, которое указывает уровень изоляции транзакций.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- **значение true,** Если поддерживается. В противном случае — **false**.  
+ **значение true** , если поддерживается. В противном случае — **false**.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод supportsTransactionIsolationLevel указывается с помощью метода supportsTransactionIsolationLevel в интерфейсе java.sql.DatabaseMetaData.  
+ Этот метод supportsTransactionIsolationLevel задается методом supportsTransactionIsolationLevel в интерфейсе Java. SQL. DatabaseMetaData.  
   
 ## <a name="see-also"></a>См. также:  
  [Методы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4fb5a2d3-5db6-4e62-8000-d0f486c7cf46
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 211e180d2c50b764d82aeb3c41189e4037d5408a
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 75167fbaf5bf3f24b133c1a7d1a3eb7ca4896c6b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66799776"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953913"
 ---
 # <a name="getbinarystream-method-sqlserverblob"></a>Метод getBinaryStream (SQLServerBlob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "66799776"
 |Имя|Описание|  
 |----------|-----------------|  
 |[Метод getBinaryStream ()](../../../connect/jdbc/reference/getbinarystream-method.md)|Возвращает входной поток для чтения данных из большого двоичного объекта.|  
-|[Метод getBinaryStream &#40;long, long&#41;](../../../connect/jdbc/reference/getbinarystream-method-long-long.md)|Возвращает объект входного потока, который содержит часть значения BLOB, определяемую указанной начальной позицией и длиной.|  
+|[getBinaryStream, &#40;длинный метод&#41;](../../../connect/jdbc/reference/getbinarystream-method-long-long.md)|Возвращает объект входного потока, который содержит часть значения BLOB, определяемую указанной начальной позицией и длиной.|  
   
 ## <a name="see-also"></a>См. также:  
  [Методы SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-methods.md)   

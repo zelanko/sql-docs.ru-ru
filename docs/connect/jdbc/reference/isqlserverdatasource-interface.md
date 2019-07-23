@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: ba1d3242-19ca-4321-83fe-867a4f69f1d4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9e981f46deab0973f9a6d8459b4b8578e414c70b
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 61cd0ce3e23cec94cc1d8fe0dcf0dfd1505437b3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796447"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977421"
 ---
 # <a name="isqlserverdatasource-interface"></a>Интерфейс ISQLServerDataSource
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,7 +34,7 @@ public interface ISQLServerDataSource
 ```  
   
 ## <a name="remarks"></a>Remarks  
- Этот интерфейс реализуется [класса SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md).  
+ Этот интерфейс реализуется [классом SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md).  
   
  Этот интерфейс обеспечивает доступ к следующим методам, определяемым [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]:  
   

@@ -1,5 +1,5 @@
 ---
-title: Поддержка набора строк схемы (OLE DB) | Документация Майкрософт
+title: Поддержка наборов строк схемы (OLE DB) | Документация Майкрософт
 description: Поддержка набора строк схемы (OLE DB)
 ms.custom: ''
 ms.date: 06/12/2018
@@ -16,13 +16,12 @@ helpviewer_keywords:
 - rowsets [OLE DB], schema
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: b799ebd6205ebac01f832910dff0775afe5c0a93
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 4734255bc71b7f658b15db5c615910fbf3c6f5a7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66795951"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993926"
 ---
 # <a name="schema-rowset-support-ole-db"></a>Поддержка набора строк схемы (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "66795951"
   Драйвер OLE DB для SQL Server также поддерживает возвращение информации схемы со связанного сервера при обработке распределенных запросов [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
 > [!NOTE]  
->  Несмотря на то что [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает синонимы, метаданные для синонимов не возвращается драйвером OLE DB для SQL Server.  
+>  Хотя [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает синонимы, метаданные для синонимов не возвращаются драйвером OLE DB для SQL Server.  
   
  В приведенных ниже таблицах перечисляются наборы строк схемы и столбцы ограничений, поддерживаемые драйвером OLE DB для SQL Server.  
   
@@ -57,7 +56,7 @@ ms.locfileid: "66795951"
 ## <a name="in-this-section"></a>в этом разделе  
  [Поддержка распределенных запросов в наборах строк схемы](../../oledb/ole-db/schema-rowsets-distributed-query-support.md)  
   
- [Набор строк LINKEDSERVERS &#40;OLE DB&#41;](../../oledb/ole-db/schema-rowsets-linkedservers-rowset.md)  
+ [OLE DB набора &#40;строк LINKEDSERVERS&#41;](../../oledb/ole-db/schema-rowsets-linkedservers-rowset.md)  
   
 ## <a name="see-also"></a>См. также:  
  [Программирование драйвера OLE DB для SQL Server](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)   

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5a8028bc-c877-4668-b662-0746d462040e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 96fbaf14a04203e08c620b5173bcc2df6d03cb7c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 10cd57cff29c73a2b99d1489eb122eed37859768
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66784949"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953272"
 ---
 # <a name="getcharacterstream-method-long-long-sqlservernclob"></a>Метод getCharacterStream (long, long) (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -32,7 +31,7 @@ public java.io.Reader getCharacterStream(long pos,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *Торговых терминалов*  
+ *POS*  
   
  Значение **long**, определяющее смещение до первого символа извлекаемого фрагмента значения.  
   
@@ -47,7 +46,7 @@ public java.io.Reader getCharacterStream(long pos,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getCharacterStream указывается с помощью метода getCharacterStream в интерфейсе java.sql.NClob.  
+ Этот метод getCharacterStream задается методом getCharacterStream в интерфейсе Java. SQL. NClob.  
   
 ## <a name="see-also"></a>См. также:  
  [Метод getCharacterStream (SQLServerNClob)](../../../connect/jdbc/reference/getcharacterstream-method-sqlservernclob.md)   

@@ -1,5 +1,5 @@
 ---
-title: Поддержка потоков для больших двоичных ОБЪЕКТОВ выходных параметров | Документация Майкрософт
+title: Поддержка потоковой передачи для выходных параметров BLOB-объекта | Документация Майкрософт
 description: Поддержка потоков для выходных параметров BLOB-объектов
 ms.custom: ''
 ms.date: 06/14/2018
@@ -12,13 +12,12 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, BLOBs
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 5e3f4043dcdb24be56619a9c8a66281011218689
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 0ff6386f1d2f953b2e28641edf7330ba85b9a19d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66795795"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936514"
 ---
 # <a name="streaming-support-for-blob-output-parameters"></a>Поддержка потоков для выходных параметров BLOB
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

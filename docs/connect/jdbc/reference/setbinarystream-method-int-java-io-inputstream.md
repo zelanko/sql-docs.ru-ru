@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 6c32b904-c44b-472e-a084-38f008a742b4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 97de855dd6f80b044ec8a72d30a3041aa5990705
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 483588eee0a5d1baaf7f2eda4a88372c45836d2e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66764716"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975310"
 ---
 # <a name="setbinarystream-method-int-javaioinputstream"></a>Метод setBinaryStream (int, java.io.InputStream)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,13 +37,13 @@ public final void setAsciiStream(int parameterIndex,
   
  *x*  
   
- Объект java.io.InputStream.  
+ Объект Java. IO. InputStream.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод setBinaryStream указывается с помощью метода setBinaryStream в интерфейсе java.sql.PreparedStatement.  
+ Этот метод setBinaryStream задается методом setBinaryStream в интерфейсе Java. SQL. PreparedStatement.  
   
 ## <a name="see-also"></a>См. также:  
  [Метод setBinaryStream (SQLServerPreparedStatement)](../../../connect/jdbc/reference/setbinarystream-method-sqlserverpreparedstatement.md)   

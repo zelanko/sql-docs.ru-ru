@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9e5e177c-7ed7-4d0c-8fa8-0e13daf46f4b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 141eb9e3285a0aae0575405418b55d94228f35ba
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 2f13992012a306d34063fed1f1447216df045f5d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66784131"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996738"
 ---
 # <a name="updatecharacterstream-method-javalangstring-javaioreader-long"></a>Метод updateCharacterStream (java.lang.String, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -33,13 +32,13 @@ public void updateCharacterStream(java.lang.String columnLabel,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *ColumnLabel состоит из*  
+ *колумнлабел*  
   
  Значение типа **String**, содержащее метку столбца.  
   
  *reader*  
   
- Объект средства чтения.  
+ Объект модуля чтения.  
   
  *length*  
   
@@ -49,7 +48,7 @@ public void updateCharacterStream(java.lang.String columnLabel,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод updateCharacterStream указывается с помощью метода updateCharacterStream в интерфейсе java.sql.ResultSet.  
+ Этот метод updateCharacterStream задается методом updateCharacterStream в интерфейсе Java. SQL. Result.  
   
  Этот метод передает символы Юникода от объекта средства чтения выбранным текстовым и двоичным столбцам. Сюда входят все текстовые и двоичные столбцы, а также столбцы varbinary, varbinary(max), image и XML, но не входят столбцы определяемых пользователем типов данных.  
   

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: b06a5ced-b760-4c78-b17e-854ce95a1a5c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: bccb7e0cee039ad6591acf3805f2ba70c9c7655a
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a6b68caa4abff00f113176791d06c6361c5da1e9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66763829"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953118"
 ---
 # <a name="getclientinfo-method-"></a>Метод getClientInfo ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,9 +36,9 @@ public java.util.Properties getClientInfo()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getClientInfo указывается с помощью метода getClientInfo в интерфейсе java.sql.Connection.  
+ Этот метод getClientInfo задается методом getClientInfo в интерфейсе Java. SQL. Connection.  
   
- [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] не поддерживает свойства сведений о клиенте. Таким образом этот метод возвращает пустой объект свойства.  
+ [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] не поддерживает свойства сведений о клиенте. В результате этот метод возвращает пустой объект свойств.  
   
  Аналогичным образом приложения могут использовать метод [getClientInfoProperties](../../../connect/jdbc/reference/getclientinfoproperties-method-sqlserverdatabasemetadata.md) класса [SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md) для получения списка свойств сведений о клиенте, поддерживаемых драйвером. Метод [getClientInfoProperties](../../../connect/jdbc/reference/getclientinfoproperties-method-sqlserverdatabasemetadata.md) возвращает пустой результирующий набор.  
   

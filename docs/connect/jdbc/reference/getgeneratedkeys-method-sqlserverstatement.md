@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: a3325950-0e81-4ae8-aa0c-e1f6d371adcd
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e81fe589ed70f4d3f230713290f1d7f9b338ea67
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: d47ff96fe493053e7a953cfbae53e52be95a0d62
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66774647"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982939"
 ---
 # <a name="getgeneratedkeys-method-sqlserverstatement"></a>Метод getGeneratedKeys (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,15 +35,15 @@ public final java.sql.ResultSet getGeneratedKeys()
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Объект результирующего набора.  
+ Объект ResultSet.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getGeneratedKeys указывается методом getGeneratedKeys в интерфейсе java.sql.Statement.  
+ Этот метод getGeneratedKeys задается методом getGeneratedKeys в интерфейсе Java. SQL. Statement.  
   
- Дополнительные сведения об использовании этого метода см. в разделе [с помощью автоматически формируемых ключей](../../../connect/jdbc/using-auto-generated-keys.md).  
+ Дополнительные сведения об использовании этого метода см. в разделе [использование автоматически созданных ключей](../../../connect/jdbc/using-auto-generated-keys.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Элементы SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

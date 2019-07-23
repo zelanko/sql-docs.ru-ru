@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 3836d0ab-c3fb-41ff-bb89-10389594ae51
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 88f5d294e46ddc6dc4da92e437fc4513f9a50a47
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: df27a5368dfea7f417fb84e2ebe38a8987165aec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66792012"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979973"
 ---
 # <a name="getsendstringparametersasunicode-method-sqlserverdatasource"></a>Метод getSendStringParametersAsUnicode (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public boolean getSendStringParametersAsUnicode()
 ## <a name="remarks"></a>Remarks  
  Если свойство sendStringParametersAsUnicode имеет значение **true** (значение по умолчанию), то строковые параметры отправляются на сервер в Юникоде. Если для свойства sendStringParametersAsUnicode задано значение **false**, то строковые параметры отправляются в формате ASCII/MBCS, а не в Юникоде. Если свойство sendStringParametersAsUnicode не задано, getSendStringParametersAsUnicode возвращает **true**.  
   
- Дополнительные сведения о свойстве соединения sendStringParametersAsUnicode см. в разделе [заданию свойств соединения](../../../connect/jdbc/setting-the-connection-properties.md).  
+ Дополнительные сведения о свойстве соединения sendStringParametersAsUnicode см. [в разделе Задание свойств соединения](../../../connect/jdbc/setting-the-connection-properties.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Элементы SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

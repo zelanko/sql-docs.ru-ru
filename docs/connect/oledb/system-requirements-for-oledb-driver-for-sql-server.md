@@ -15,13 +15,12 @@ helpviewer_keywords:
 - MSOLEDBSQL, system requirements
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 5e509014412bb89995602141d596ff34fa7f3572
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: cec8b2aca53f64e7a3883dbccddce1a330c8a6e5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66795861"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993777"
 ---
 # <a name="system-requirements-for-ole-db-driver-for-sql-server"></a>Требования к системе для драйвера OLE DB для SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "66795861"
 
   Чтобы использовать функции доступа к данным [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], например режим MARS, необходимо установить следующее программное обеспечение:  
 
--   Драйвер OLE DB для SQL Server на клиентском компьютере.  
+-   Драйвер OLE DB для SQL Server на клиенте.  
 
 -   экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на сервере.   
 
@@ -38,46 +37,46 @@ ms.locfileid: "66795861"
 >  Перед установкой данного программного обеспечения убедитесь, что вы вошли в систему с правами администратора.  
 
 ## <a name="operating-system-requirements"></a>Требования к операционной системе  
- Список операционных систем, поддерживающих драйвера OLE DB для SQL Server, см. в разделе [политики поддержки для драйвера OLE DB для SQL Server](../oledb/applications/support-policies-for-oledb-driver-for-sql-server.md).  
+ Список операционных систем, поддерживающих Драйвер OLE DB для SQL Server, см. в разделе [политики поддержки для драйвера OLE DB для SQL Server](../oledb/applications/support-policies-for-oledb-driver-for-sql-server.md).  
 
  ## <a name="azure-active-directory-authentication-requirements"></a>Требования для проверки подлинности Azure Active Directory  
- При использовании методов проверки подлинности Azure Active Directory с помощью драйвера OLE DB, убедитесь, что [Active Directory Authentication Library для SQL Server](https://go.microsoft.com/fwlink/?LinkID=513072) установки. ADAL не требуется для других методов проверки подлинности или операций OLE DB.
+ При использовании Azure Active Directory методов проверки подлинности с драйвером OLE DB убедитесь, что [Библиотека проверки подлинности Active Directory для SQL Server](https://go.microsoft.com/fwlink/?LinkID=513072) установлен. ADAL не требуется для других методов проверки подлинности или операций OLE DB.
 Дополнительные сведения см. в статье об [использовании Azure Active Directory](features/using-azure-active-directory.md).
 
 ## <a name="sql-server-requirements"></a>требования SQL Server  
- Чтобы использовать драйвер OLE DB для SQL Server для доступа к данным в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] баз данных, необходимо иметь экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установлен.  
+ Чтобы использовать драйвер OLE DB для SQL Server доступа к данным в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базах данных, необходимо [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установить экземпляр служб.  
 
  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] поддерживает подключения с помощью всех версий компонентов MDAC, компонентов доступа к данным Windows и всех версий драйвера OLE DB для SQL Server. Когда клиент более старой версии соединяется с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], неизвестные клиенту типы данных сервера сопоставляются типам, совместимым с версией клиента. Дополнительные сведения см. в разделе [Совместимость типов данных для версий клиента](#data-type-compatibility-for-client-versions).  
 
 ## <a name="cross-language-requirements"></a>Требования к версиям на разных языках  
- Английская версия драйвер OLE DB для SQL Server поддерживается на всех локализованных версиях поддерживаемых операционных систем. Локализованные версии драйвер OLE DB для SQL Server, поддерживаются в локализованных операционных системах, которые являются совпадает с языком локализованного драйвер OLE DB версии SQL Server. Локализованные версии драйвера OLE DB для SQL Server также поддерживаются английскими версиями операционных систем, если установлены соответствующие языковые настройки.  
+ Версия драйвера OLE DB для английского языка для SQL Server поддерживается во всех локализованных версиях поддерживаемых операционных систем. Локализованные версии драйвера OLE DB для SQL Server поддерживаются в локализованных операционных системах, имеющих тот же язык, что и локализованный драйвер OLE DB для SQL Server версии. Локализованные версии драйвера OLE DB для SQL Server также поддерживаются английскими версиями операционных систем, если установлены соответствующие языковые настройки.  
 
  Для обновлений.  
 
--   Английской версии драйвер OLE DB для SQL Server можно обновить до любой локализованной версии драйвера OLE DB для SQL Server.  
+-   Версии драйвера OLE DB для английского языка для SQL Server можно обновить до локализованной версии драйвера OLE DB для SQL Server.  
 
--   Локализованные версии драйвер OLE DB для SQL Server можно обновить до локализованных версий драйвера OLE DB для SQL Server на том же языке.  
+-   Локализованные версии драйвера OLE DB для SQL Server можно обновить до локализованных версий OLE DB драйвера для SQL Server одного и того же языка.  
 
--   Локализованная версия драйвер OLE DB для SQL Server можно обновить до английской версии драйвера OLE DB для SQL Server.  
+-   Локализованную версию драйвера OLE DB для SQL Server можно обновить до английской версии драйвера OLE DB для SQL Server.  
 
--   Локализованных версиях драйвер OLE DB для SQL Server не могут быть обновлены до локализованных драйвер OLE DB для SQL Server версии для другого локализованного языка.  
+-   Локализованные версии драйвера OLE DB для SQL Server не могут быть обновлены до локализованного OLE DB драйвера для SQL Server версий другого локализованного языка.  
 
 ## <a name="data-type-compatibility-for-client-versions"></a>Совместимость типов данных для версий клиента  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и драйвер OLE DB для SQL Server сопоставляют новые типы данных со старыми, которые совместимы с клиентами низкого уровня, как показано в таблице ниже.  
 
- Приложения OLE DB и ADO могут использовать **DataTypeCompatibility** ключевое слово строки подключения с драйвер OLE DB для SQL Server для работы со старыми типами данных. При использовании **DataTypeCompatibility=80** клиенты OLE DB соединятся с помощью версии потока табличных данных [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], а не потока табличных данных. Это значит, что для [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних типов данных преобразование низкого уровня будет выполнено сервером, а не драйвером OLE DB для SQL Server. Это также означает, что функции, доступные при соединении, будут ограничиваться набором функций [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Попытки использовать новые типы данных или функций быстро определяются по вызовам API-интерфейса и ошибкам, возвращаемым вызывающему приложению, а не по попыткам передать недопустимые запросы на сервер.   
+ OLE DB и приложения ADO могут использовать ключевое слово строки подключения **DataTypeCompatibility диспетчера соединений** с драйвером OLE DB для SQL Server для работы с более старыми типами данных. При использовании **DataTypeCompatibility=80** клиенты OLE DB соединятся с помощью версии потока табличных данных [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], а не потока табличных данных. Это значит, что для [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних типов данных преобразование низкого уровня будет выполнено сервером, а не драйвером OLE DB для SQL Server. Это также означает, что функции, доступные при соединении, будут ограничиваться набором функций [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Попытки использовать новые типы данных или функций быстро определяются по вызовам API-интерфейса и ошибкам, возвращаемым вызывающему приложению, а не по попыткам передать недопустимые запросы на сервер.   
 
 
- IDBInfo::GetKeywords всегда будет возвращать список ключевых слов, который соответствует версии сервера для подключения и не зависит от **DataTypeCompatibility**.  
+ Ключевое слово IDBInfo:: noreturn всегда возвращает список ключевых слов, соответствующий версии сервера в соединении, на который не влияет **DataTypeCompatibility диспетчера соединений**.  
 
-|Тип данных|собственный клиент SQL Server<br /><br />SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Драйвер OLE DB для SQL Server|Компоненты доступа к данным Windows, компоненты MDAC и<br /><br /> Драйвер OLE DB для приложений SQL Server OLE DB со свойством DataTypeCompatibility = 80|  
+|Тип данных|собственный клиент SQL Server<br /><br />SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Драйвер OLE DB для SQL Server|Компоненты доступа к данным Windows, компоненты MDAC и<br /><br /> Драйвер OLE DB для SQL Server OLE DB приложений с DataTypeCompatibility диспетчера соединений = 80|  
 |---------------|--------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|  
-|CLR UDT (\<= 8 КБ)|определяемый пользователем тип|определяемый пользователем тип|определяемый пользователем тип|Varbinary|  
+|Определяемый пользователем\<тип CLR (= 8 КБ)|определяемый пользователем тип|определяемый пользователем тип|определяемый пользователем тип|Varbinary|  
 |varbinary(max)|varbinary|varbinary|varbinary|image|  
 |varchar(max)|varchar|varchar|varchar|Текст|  
 |nvarchar(max)|NVARCHAR|NVARCHAR|NVARCHAR|Ntext|  
 |xml|xml|xml|xml|Ntext|  
-|CLR UDT (> 8 КБ)|varbinary|определяемый пользователем тип|определяемый пользователем тип|image|  
+|Определяемый пользователем тип CLR (> 8 КБ)|varbinary|определяемый пользователем тип|определяемый пользователем тип|image|  
 |Дата|varchar|Дата|Дата|Varchar|  
 |datetime2|varchar|datetime2|datetime2|Varchar|  
 |datetimeoffset|varchar|datetimeoffset|datetimeoffset|Varchar|  

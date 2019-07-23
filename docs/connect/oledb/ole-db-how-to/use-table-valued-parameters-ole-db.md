@@ -10,13 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 96a17c186c5eb39765d94d88310b1c77d73633b4
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 7ec89b3fdafaba7fe81849ab2ae5b2baf926ef83
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66791046"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994601"
 ---
 # <a name="use-table-valued-parameters-ole-db"></a>Использование возвращающих табличные значения параметров (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,9 +32,9 @@ ms.locfileid: "66791046"
   
 -   Использует пользовательские свойства параметра с помощью интерфейса ISSCommandWithParameters.  
   
--   Демонстрирует обработку ошибок для ошибок MSOLEDBSQL.  
+-   Показывает обработку ошибок для ошибок МСОЛЕДБСКЛ.  
   
- Дополнительные сведения о возвращающих табличные значения параметров, см. в разделе [возвращающего табличное значение параметров &#40;драйвер OLE DB для SQL Server&#41;](../../oledb/features/table-valued-parameters-oledb-driver-for-sql-server.md).  
+ Дополнительные сведения о возвращающих табличное значение параметрах см. в разделе [Параметры &#40;&#41;](../../oledb/features/table-valued-parameters-oledb-driver-for-sql-server.md), возвращающие табличное значение, OLE DB драйвер для SQL Server.  
   
 ## <a name="example"></a>Пример  
  Первый листинг кода ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) создает базу данных, используемую в примере.  

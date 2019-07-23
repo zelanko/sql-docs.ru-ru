@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 747b0308-1ce6-4eba-bdfc-af29c21c18cf
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a9fbb5f5c74a549a84e54980d585b7b5c30f61a5
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: d800d385d1df3b9cea8c8c0f4eccb29b90f64147
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798933"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67985458"
 ---
 # <a name="updateasciistream-method-javalangstring-javaioinputstream"></a>Метод updateAsciiStream (java.lang.String, java.io.InputStream)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -32,23 +31,23 @@ public void updateAsciiStream(java.lang.String columnLabel,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *ColumnLabel состоит из*  
+ *колумнлабел*  
   
  Значение типа **String**, содержащее метку столбца.  
   
  *x*  
   
- Объект, InputStream.  
+ Объект InputStream.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод updateAsciiStream указывается с помощью метода updateAsciiStream в интерфейсе java.sql.ResultSet.  
+ Этот метод updateAsciiStream задается методом updateAsciiStream в интерфейсе Java. SQL. Result.  
   
  Этот метод передает ASCII-символы (байты) из объекта InputStream в столбцы символьных значений, поддерживающие преобразование, то есть содержащие символы Юникода в диапазоне ASCII (от 0x00 до 0x7F) и соответствующие кодовым страницам 874, 932, 936, 949, 950 и с 1250 по 1258. Этот метод выполняет преобразование на целевую страницу параметров сортировки. Попытка обновления целевого столбца, не поддерживающего преобразование, приведет к возникновению исключения. В столбцах двоичных значений передаются необработанные байты.  
   
- Использование этого метода **изображение**, **текст**, и **ntext** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] типов данных может повлиять на производительность.  
+ Использование этого метода для типов данных **Image**, **Text**и **ntext** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] может повлиять на производительность.  
   
 ## <a name="see-also"></a>См. также:  
  [Метод updateAsciiStream &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateasciistream-method-sqlserverresultset.md)   

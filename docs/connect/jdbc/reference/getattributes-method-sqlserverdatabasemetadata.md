@@ -1,5 +1,5 @@
 ---
-title: Метод getAttributes (SQLServerDatabaseMetaData) | Документация Майкрософт
+title: Метод OutAttribute (SQLServerDatabaseMetaData) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 4dc784ed-4699-4197-9af5-6e03da80d14c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: fcd33cbb39286c03b5b809b847a8d8a2b8b609f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 36543107ba8acd635f0e71fde903cab2576a7b17
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66799956"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954073"
 ---
 # <a name="getattributes-method-sqlserverdatabasemetadata"></a>Метод getAttributes (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,7 +45,7 @@ public java.sql.ResultSet getAttributes(java.lang.String catalog,
   
  Значение типа **String**, содержащее имя каталога.  
   
- *schemaPattern*  
+ *счемапаттерн*  
   
  Значение типа **String**, содержащее шаблон имени схемы.  
   
@@ -54,7 +53,7 @@ public java.sql.ResultSet getAttributes(java.lang.String catalog,
   
  Значение **String**, содержащее шаблон имени типа.  
   
- *attributePattern*  
+ *аттрибутепаттерн*  
   
  Значение **String**, содержащее шаблон имени атрибута.  
   
@@ -65,7 +64,7 @@ public java.sql.ResultSet getAttributes(java.lang.String catalog,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getAttributes указывается с помощью метода getAttributes в интерфейсе java.sql.DatabaseMetaData.  
+ Этот метод OutAttribute задается методом OutAttribute в интерфейсе Java. SQL. DatabaseMetaData.  
   
 ## <a name="see-also"></a>См. также:  
  [Методы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

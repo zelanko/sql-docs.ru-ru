@@ -1,5 +1,5 @@
 ---
-title: SQL Server распределенного воспроизведения | Документация Майкрософт
+title: SQL Server распределенное воспроизведение | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 58ef7016-b105-42c2-90a0-364f411849a4
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2b1472ccbcdf888e7772bb94f47993c5e8978746
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: f71b19977746ecc52817fa0128d6f0a8e681ff5c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67729326"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949912"
 ---
 # <a name="sql-server-distributed-replay"></a>Распределенное воспроизведение SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +58,7 @@ ms.locfileid: "67729326"
   
  На следующем рисунке показана физическая архитектура распределенного воспроизведения в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- ![Распределенная архитектура воспроизведения](../../tools/distributed-replay/media/distributedreplayarch.gif "распределенная архитектура воспроизведения")  
+ ![Архитектура распределенное воспроизведение](../../tools/distributed-replay/media/distributedreplayarch.gif "Архитектура распределенное воспроизведение")  
   
 ## <a name="distributed-replay-tasks"></a>Задачи распределенного воспроизведения  
   

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 7de05cf4-3a48-4c60-9a1b-6ad2ae43d258
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 89741f02e9a2afa7c1dc8de6f76f599c70a5a45a
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 45361c22d1e453b12f8bedf2fba2a4c10f02de0d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66779861"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974184"
 ---
 # <a name="setint-method-sqlservercallablestatement"></a>Метод setInt (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,13 +36,13 @@ public void setInt(java.lang.String sCol,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *sCol*  
+ *скол*  
   
  Значение типа **String**, содержащее имя параметра.  
   
  *i*  
   
- **Int** значение.  
+ Целочисленное **значение.**  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

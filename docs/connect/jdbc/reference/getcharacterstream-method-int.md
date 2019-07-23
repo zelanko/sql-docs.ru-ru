@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 4f9f230d-be4c-469a-b3dc-f24531429aae
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ab08146bcda8d9cfa57021f141f309cacde549b9
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: c0dd69211302a10fe72fc2742cbcd8b6bda7c933
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66774295"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68213698"
 ---
 # <a name="getcharacterstream-method-int"></a>Метод getCharacterStream (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,13 +40,13 @@ public java.io.Reader getCharacterStream(int columnIndex)
  Значение типа **int**, указывающее индекс столбца.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Объект средства чтения.  
+ Объект модуля чтения.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getCharacterStream указывается с помощью метода getCharacterStream в интерфейсе java.sql.ResultSet.  
+ Этот метод getCharacterStream задается методом getCharacterStream в интерфейсе Java. SQL. Result.  
   
  Этот метод считывает только символьные типы данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в Юникоде, такие как nchar, nvarchar, nvarchar(max) и ntext. Для любых других типов данных, включая символьные типы ASCII, будет вызываться исключение. Для считывания типов данных ASCII используйте метод [getAsciiStream](../../../connect/jdbc/reference/getasciistream-method-sqlserverresultset.md).  
   

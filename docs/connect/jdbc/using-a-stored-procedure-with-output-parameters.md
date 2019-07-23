@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 1c006f27-7e99-43d5-974c-7b782659290c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4af5769f5187fd70387f89aebf07625117da9a49
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 9ee3a8d6b0a4c6514864a5990a87de9d732684d8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66790338"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916495"
 ---
 # <a name="using-a-stored-procedure-with-output-parameters"></a>Использование хранимых процедур с выходными параметрами
 
@@ -29,11 +28,11 @@ ms.locfileid: "66790338"
 `{call procedure-name[([parameter][,[parameter]]...)]}`
 
 > [!NOTE]  
-> Дополнительные сведения об escape-последовательностях SQL см. в разделе [с помощью escape-последовательностей SQL](../../connect/jdbc/using-sql-escape-sequences.md).
+> Дополнительные сведения о escape-последовательностях SQL см. в разделе [использование escape](../../connect/jdbc/using-sql-escape-sequences.md)-последовательностей SQL.
 
 При создании escape-последовательности `call` укажите параметры OUT при помощи символа "?". (символ вопросительного знака (?)). Этот символ выполняет роль заполнителя для значений параметра, которые будут возвращены из хранимой процедуры. Чтобы указать значение параметра OUT, необходимо указать тип данных всех параметров с помощью метода [registerOutParameter](../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) класса SQLServerCallableStatement до выполнения хранимой процедуры.
 
-Значение, указываемое для параметра OUT в методе registerOutParameter, должно представлять собой один из типов данных JDBC, содержащихся в java.sql.Types, который, в свою очередь, выполняет сопоставление с одним из собственных типов данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения о JDBC и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типов данных, см. в разделе [основные сведения о типах данных драйвера JDBC](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md).
+Значение, указываемое для параметра OUT в методе registerOutParameter, должно представлять собой один из типов данных JDBC, содержащихся в java.sql.Types, который, в свою очередь, выполняет сопоставление с одним из собственных типов данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения о JDBC и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типах данных см. в разделе [Основные сведения о типах данных драйвера JDBC](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md).
 
 При передаче значения методу registerOutParameter для параметра OUT необходимо указать не только тип данных, который будет использоваться для параметра, но также порядковое размещение или имя параметра в хранимой процедуре. Например, если в хранимой процедуре имеется один параметр OUT, то первое порядковое значение будет 1, а второе порядковое значение — 2.
 
@@ -83,9 +82,9 @@ public static void executeStoredProcedure(Connection con) throws SQLException {
 ```
 
 > [!NOTE]  
-> Для выполнения хранимой процедуры в этих примерах используется метод execute класса SQLServerCallableStatement. Он используется, поскольку хранимая процедура не возвратила результирующий набор. Если она возвратила результирующий набор, будет использован метод [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md).
+> В этих примерах для выполнения хранимой процедуры используется метод Execute класса SQLServerCallableStatement. Он используется, поскольку хранимая процедура не возвратила результирующий набор. Если она возвратила результирующий набор, будет использован метод [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md).
 
-Хранимые процедуры могут возвращать счетчики обновлений и несколько результирующих наборов. Драйвер [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] соответствует спецификации JDBC 3.0, которая определяет, что множественные результирующие наборы и счетчики обновления должны быть получены до получения параметров OUT. То есть приложение извлекает все объекты, результирующий набор и счетчики обновления до извлечения параметров OUT с помощью методов CallableStatement.getter. В противном случае объекты ResultSet и счетчики обновления, которые не были извлечены, будут потеряны при извлечении параметров OUT. Дополнительные сведения о счетчиках обновлений и несколько результирующих наборов, см. в разделе [использование хранимых процедур со счетчиком обновления](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md) и [с помощью нескольких результирующих наборов](../../connect/jdbc/using-multiple-result-sets.md).
+Хранимые процедуры могут возвращать счетчики обновлений и несколько результирующих наборов. Драйвер [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] соответствует спецификации JDBC 3.0, которая определяет, что множественные результирующие наборы и счетчики обновления должны быть получены до получения параметров OUT. То есть приложение должно извлечь все объекты ResultSet и счетчики обновления перед извлечением параметров OUT с помощью методов CallableStatement. Getter. В противном случае объекты ResultSet и счетчики обновления, которые не были извлечены, будут потеряны при извлечении параметров OUT. Дополнительные сведения о количестве обновлений и нескольких результирующих наборах см. в разделе [использование хранимой процедуры с числом обновлений](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md) и [Использование нескольких результирующих наборов](../../connect/jdbc/using-multiple-result-sets.md).
 
 ## <a name="see-also"></a>См. также:
 
