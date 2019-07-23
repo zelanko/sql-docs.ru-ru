@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 87b7fbaf-7149-494f-b3b2-16b468a8ebf1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4444e4988df4a922d42742c58f4bc9e439eb603f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 33f5e25d45f1e08c30f3094a9200291de9510150
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66779008"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979105"
 ---
 # <a name="gettime-method-int-javautilcalendar"></a>Метод getTime (int, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,9 +40,9 @@ public java.sql.Time getTime(int index,
   
  Значение типа **int**, указывающее индекс параметра.  
   
- *Клиентская лицензия*  
+ *Cal*  
   
- Объект календаря.  
+ Объект Calendar.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Объект времени.  
@@ -54,7 +53,7 @@ public java.sql.Time getTime(int index,
 ## <a name="remarks"></a>Remarks  
  Этот метод getTime указывается методом getTime в интерфейсе java.sql.CallableStatement.  
   
- См. в разделе диаграмму с названием «Преобразования метода считывания» в [Общие сведения о преобразованиях типов данных](../../../connect/jdbc/understanding-data-type-conversions.md) также просмотреть, какие [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] типы данных можно получить с помощью этого метода.  
+ Дополнительные [сведения о](../../../connect/jdbc/understanding-data-type-conversions.md) том, какие [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] типы данных можно получить с помощью этого метода, см. в диаграмме "преобразования методов считывания".  
   
 ## <a name="see-also"></a>См. также:  
  [Метод getTime (SQLServerCallableStatement)](../../../connect/jdbc/reference/gettime-method-sqlservercallablestatement.md)   

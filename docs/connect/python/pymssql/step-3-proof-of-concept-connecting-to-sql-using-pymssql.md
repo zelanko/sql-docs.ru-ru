@@ -10,22 +10,21 @@ ms.topic: conceptual
 ms.assetid: 2246ddeb-7c2f-46f3-8a91-cdd718d39b40
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 48ae75c5eee03cba273e65297b3652c1a2da99ec
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 27b56a20a0456bef04553c614432bde270d8e98d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66800860"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67935775"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-pymssql"></a>Шаг 3. Подтверждение концепции, подразумевающее подключение к SQL с помощью pymssql
 [!INCLUDE[Driver_Python_Download](../../../includes/driver_python_download.md)]
 
-В этом примере следует рассматривать подтверждение концепции только.  Пример кода упрощен для ясности и не всегда представляет рекомендации, рекомендуемые корпорацией Майкрософт.  
+Этот пример следует рассматривать только для подтверждения концепции.  Пример кода упрощен для ясности и не обязательно представляет лучшие методики, рекомендованные корпорацией Майкрософт.  
   
-## <a name="step-1--connect"></a>Шаг 1: подключение  
+## <a name="step-1--connect"></a>Шаг 1. подключение  
   
-[Pymssql.connect](https://pymssql.org/en/latest/ref/pymssql.html) функция используется для подключения к базе данных SQL.  
+Функция [pymssql. Connect](https://pymssql.org/en/latest/ref/pymssql.html) используется для подключения к базе данных SQL.  
   
 ```python
     import pymssql  
@@ -33,9 +32,9 @@ ms.locfileid: "66800860"
 ```  
   
   
-## <a name="step-2--execute-query"></a>Шаг 2: Выполнение запроса  
+## <a name="step-2--execute-query"></a>Шаг 2. выполнение запроса  
   
-[Cursor.execute](https://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.execute) функция может использоваться для извлечения результирующего набора из запроса к базе данных SQL. Эта функция фактически принимает любой запрос и возвращает результирующий набор, который может быть выполнена итерация с использованием [cursor.fetchone()](https://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.fetchone).  
+Функцию [cursor. Execute](https://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.execute) можно использовать для получения результирующего набора из запроса к базе данных SQL. Эта функция по сути принимает любой запрос и возвращает результирующий набор, для которого можно выполнить итерацию с использованием [cursor. fetchone ()](https://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.fetchone).  
   
   
 ```python
@@ -49,9 +48,9 @@ ms.locfileid: "66800860"
         row = cursor.fetchone()  
 ```  
   
-## <a name="step-3--insert-a-row"></a>Шаг 3: Вставка строки  
+## <a name="step-3--insert-a-row"></a>Шаг 3. Вставка строки  
   
-В этом примере показано, как выполнить [вставить](../../../t-sql/statements/insert-transact-sql.md) инструкции безопасно, передать параметры для защиты от атак [путем внедрения кода SQL](../../../relational-databases/tables/primary-and-foreign-key-constraints.md) значение.    
+В этом примере вы узнаете, как безопасно выполнить инструкцию [INSERT](../../../t-sql/statements/insert-transact-sql.md) , передав параметры, которые защищают приложение от [внедрения кода SQL](../../../relational-databases/tables/primary-and-foreign-key-constraints.md) .    
   
   
 ```python
@@ -67,13 +66,13 @@ ms.locfileid: "66800860"
     conn.close()
 ```  
   
-## <a name="step-4--rollback-a-transaction"></a>Шаг 4: Выполнить откат транзакции  
+## <a name="step-4--rollback-a-transaction"></a>Шаг 4. откат транзакции  
   
-Этот пример кода демонстрирует использование транзакций, в котором вы:  
+В этом примере кода показано использование транзакций, в которых вы:  
   
 * Начать транзакцию  
-* Вставить строку данных  
-* Откат транзакции для отмены вставки  
+* Вставка строки данных  
+* Откатить транзакцию для отмены вставки  
   
 ```python
     import pymssql  
@@ -87,4 +86,4 @@ ms.locfileid: "66800860"
     
   ## <a name="next-steps"></a>Следующие шаги  
   
-Дополнительные сведения см. в разделе [Центр разработчиков Python](https://azure.microsoft.com/develop/python/).
+Дополнительные сведения см. в [центре разработчиков Python](https://azure.microsoft.com/develop/python/).

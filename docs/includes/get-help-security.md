@@ -1,4 +1,12 @@
-##  <a name="info-tippngmediainfo-tippng-get-help"></a>![info-tip.png](media/info-tip.png) получить справку
+---
+ms.openlocfilehash: c05116da2b0949a5f54fc5bbc4812f4cacd9d78d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68231496"
+---
+##  <a name="info-tippngmediainfo-tippng-get-help"></a>![info-tip.png](media/info-tip.png) Справка
 
 - [UserVoice — предложения по улучшению SQL Server](https://feedback.azure.com/forums/908035-sql-server)
 - [Режим безопасности SQL Server — форум MSDN](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsecurity&filter=alltypes&sort=lastpostdesc)

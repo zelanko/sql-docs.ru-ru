@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: bc1218eb-ffff-44ce-8122-6e4fa7d68a79
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: 4e0bdec7737c98b8b28267344dd9b8e2acb86f1c
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: b1d4cfe23511175ab794cc505509133b4dfb745a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685552"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102127"
 ---
 # <a name="dbcc-checkalloc-transact-sql"></a>DBCC CHECKALLOC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -151,7 +150,7 @@ DBCC CHECKALLOC
 |Partition ID|Только для внутреннего применения.|  
 |Alloc Unit ID|Только для внутреннего применения.|  
 |In-row data|Страницы содержат данные индекса или кучи.|  
-|LOB data|Страницы содержат данные типа **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **text**, **ntext**, **xml** и **image**.|  
+|LOB data|Страницы содержат данные типа **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , **text**, **ntext**, **xml** и **image**.|  
 |Row-overflow data|Страницы содержат данные столбцов переменной длины, которые включают внестрочные данные.|  
   
 Инструкция DBCC CHECKALLOC возвращает следующий результирующий набор (значения могут различаться), за исключением случаев, когда указаны аргументы ESTIMATEONLY или NO_INFOMSGS.

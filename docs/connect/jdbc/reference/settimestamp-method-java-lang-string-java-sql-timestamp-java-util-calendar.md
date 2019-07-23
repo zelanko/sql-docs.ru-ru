@@ -1,5 +1,5 @@
 ---
-title: Метод setTimestamp значения отметки времени и календаря | Документация Майкрософт
+title: Метод setTimestamp для значений timestamp и Calendar | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 09dca1f9-225a-4acb-9857-9a947e0829be
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 22e8d6b8d6fe6bd4c43e012732f44916012759eb
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 58489b749e58981ea385842528b8eac0bca43780
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66768735"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67972395"
 ---
 # <a name="settimestamp-method-javalangstring-javasqltimestamp-javautilcalendar"></a>Метод setTimestamp (java.lang.String, java.sql.Timestamp, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,17 +37,17 @@ public void setTimestamp(java.lang.String sCol,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *sCol*  
+ *скол*  
   
  Значение типа **String**, содержащее имя параметра.  
   
  *x*  
   
- Объект метки времени.  
+ Объект timestamp.  
   
  *c*  
   
- Объект календаря.  
+ Объект Calendar.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

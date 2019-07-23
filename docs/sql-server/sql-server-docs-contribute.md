@@ -7,14 +7,13 @@ ms.custom: ''
 ms.topic: conceptual
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: c9855f798a7867dfd67a52a1c8452340cdf2a69a
-ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
+ms.openlocfilehash: a13421707f332ee992d07daa4e9bd337996a7dad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52439906"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136390"
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>Участие в работе над документацией по SQL Server
 
@@ -53,7 +52,7 @@ ms.locfileid: "52439906"
 - [Локальная настройка репозитория Git для документации](https://docs.microsoft.com/contribute/get-started-setup-local)
 - [Использование средств для внесения изменений](https://docs.microsoft.com/contribute/how-to-write-workflows-major)
 
-Если вы отправляете запрос на вытягивание со значительными изменениями, вы получите в GitHub комментарий с просьбой отправить **Лицензионное соглашение на участие (CLA)**. Прежде чем ваш запрос на вытягивание будет принят, необходимо заполнить веб-форму.
+Если вы отправляете запрос на вытягивание со значительными изменениями, вы получите в GitHub комментарий с просьбой отправить **Лицензионное соглашение на участие (CLA)** . Прежде чем ваш запрос на вытягивание будет принят, необходимо заполнить веб-форму.
 
 ## <a name="recognition"></a>Распознавание
 

@@ -1,5 +1,5 @@
 ---
-title: С помощью инструкции SQL без параметров | Документация Майкрософт
+title: Использование инструкции SQL без параметров | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4b0728bd-059b-4b71-895c-999335bc7427
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d63b7195e2de73292e56f9a63dcce561ca3b906e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 6161f70455e5f1c947841d0381ba1a1de3a778a9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66790221"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006014"
 ---
 # <a name="using-an-sql-statement-with-no-parameters"></a>Использование инструкции SQL без параметров
 
@@ -28,7 +27,7 @@ ms.locfileid: "66790221"
 
 [!code[JDBC#UsingSQLWithNoParams1](../../connect/jdbc/codesnippet/Java/using-an-sql-statement-w_0_1.java)]
 
-Дополнительные сведения об использовании результирующих наборов см. в разделе [управление результирующие наборы с драйвером JDBC](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md).
+Дополнительные сведения об использовании результирующих наборов см. [в разделе Управление результирующими наборами с помощью драйвера JDBC](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md).
 
 ## <a name="see-also"></a>См. также:
 

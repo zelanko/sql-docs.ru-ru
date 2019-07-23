@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 80c252fd-a8b8-4a2e-888a-059081ed4109
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 5dd029115c99ae4826bf1070a7556c7fbdcb8c55
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: c10e7259062316454e4e0ecf430f6fdb87c53caf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334611"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948105"
 ---
 # <a name="writetext-transact-sql"></a>WRITETEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +60,7 @@ WRITETEXT [BULK]
  Имя обновляемой таблицы и столбца типа **text**, **ntext** или **image**. Имена таблиц и столбцов должны соответствовать правилам для [идентификаторов](../../relational-databases/databases/database-identifiers.md). Указание имени базы данных и владельца необязательно.  
   
  *text_ptr*  
- Значение, в котором хранится указатель на данные типа **text**, **ntext** или **image**. Аргумент *text_ptr* должен иметь тип **binary(16)**. Для создания текстового указателя следует выполнить инструкцию [INSERT](../../t-sql/statements/insert-transact-sql.md) или [UPDATE](../../t-sql/queries/update-transact-sql.md) с ненулевыми данными для столбца типа **text**, **ntext** или **image**.  
+ Значение, в котором хранится указатель на данные типа **text**, **ntext** или **image**. Аргумент *text_ptr* должен иметь тип **binary(16)** . Для создания текстового указателя следует выполнить инструкцию [INSERT](../../t-sql/statements/insert-transact-sql.md) или [UPDATE](../../t-sql/queries/update-transact-sql.md) с ненулевыми данными для столбца типа **text**, **ntext** или **image**.  
   
  WITH LOG  
  Не учитывается [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ведение журнала определяется моделью восстановления, действующей для базы данных.  

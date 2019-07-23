@@ -13,19 +13,18 @@ helpviewer_keywords:
 ms.assetid: 80f15dd6-e84d-4f96-9866-5b34ea531f1e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 12fbfd6c6e6ba6e6a3bb015aed5375553fcd735f
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 8e5d686d0028b871fa163b3e1e4a1c71647ede60
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131904"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68129803"
 ---
 # <a name="synchronize-a-subscription-using-windows-synchronization-manager"></a>Синхронизация подписки с помощью диспетчера синхронизации Windows
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Диспетчер синхронизации[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows можно использовать только для синхронизации подписок на публикации Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняется на том же самом компьютере, что и диспетчер синхронизации (кроме того, его можно использовать для синхронизации файлов и веб-страниц в режиме «вне сети»). Чтобы использовать диспетчер синхронизации, необходимо выполнить следующие действия:  
   
-1.  Включите синхронизацию подписок по запросу с помощью диспетчера синхронизации Windows в диалоговом окне **Свойства подписки — \<подписчик>: \<база_данных_подписки>**. Дополнительные сведения о доступе к этому диалоговому окну см. в статье [Просмотр и изменение свойств подписки по запросу](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md).  
+1.  Включите синхронизацию подписок по запросу с помощью диспетчера синхронизации Windows в диалоговом окне **Свойства подписки — \<подписчик>: \<база_данных_подписки>** . Дополнительные сведения о доступе к этому диалоговому окну см. в статье [Просмотр и изменение свойств подписки по запросу](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md).  
   
 2.  Запустите диспетчер синхронизации из меню **Пуск** операционной системы Windows.  
   
@@ -44,7 +43,7 @@ ms.locfileid: "54131904"
   
 1.  Запустите диспетчер синхронизации одним из следующих способов:  
   
-    -   В обозревателе Internet Explorer выберите меню **Сервис**, а затем выберите пункт **Синхронизировать...**.  
+    -   В обозревателе Internet Explorer выберите меню **Сервис**, а затем выберите пункт **Синхронизировать...** .  
   
     -   Нажмите кнопку **Пуск**, укажите **Программы** или **Все программы**, выберите пункт **Стандартные**, а затем выберите пункт **Синхронизировать**.  
   

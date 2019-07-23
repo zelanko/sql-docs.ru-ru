@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d112b9c9-be9f-435c-a9e6-d21b65778fb7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 715effa0eb16a298f5064f08d2751df07bfa8677
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c10c5b34f7a3364113062821aba99e11536cc2ee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020216"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948045"
 ---
 # <a name="xml-data-type-methods"></a>Методы типа данных XML
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ FROM   Table
 ```  
   
 > [!NOTE]  
->  Методы **query()**, **value()** и **exist()** типа данных **xml** возвращают значение NULL при применении к неопределенному (NULL) экземпляру XML. Кроме того, метод **modify()** ничего не возвращает, а метод **nodes()** возвращает наборы строк и пустой набор строк для входного значения NULL.  
+>  Методы **query()** , **value()** и **exist()** типа данных **xml** возвращают значение NULL при применении к неопределенному (NULL) экземпляру XML. Кроме того, метод **modify()** ничего не возвращает, а метод **nodes()** возвращает наборы строк и пустой набор строк для входного значения NULL.  
   
 ## <a name="see-also"></a>См. также:  
  [Сравнение типизированного и нетипизированного XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   

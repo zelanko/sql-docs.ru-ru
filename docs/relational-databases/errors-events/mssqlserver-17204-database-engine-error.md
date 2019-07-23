@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 40db66f9-dd5e-478c-891e-a06d363a2552
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d8bfda451cda9b27670abc180ded16ceca7d7cab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 555a7c6f0573836ee4afb95b91ce6e8b84ac6ee5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680012"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68131686"
 ---
 # <a name="mssqlserver17204"></a>MSSQLSERVER_17204
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "47680012"
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
 |Символическое имя|DBLKIO_DEVOPENFAILED|  
-|Текст сообщения|%ls: Не удалось открыть файл %ls для номера файла %d.  Ошибка операционной системы: %ls.|  
+|Текст сообщения|%ls: не удалось открыть файл %ls для номера файла %d.  Ошибка операционной системы: %ls.|  
   
 ## <a name="explanation"></a>Объяснение  
 Программе SQL Server не удалось открыть указанный файл из-за указанной ошибки.  

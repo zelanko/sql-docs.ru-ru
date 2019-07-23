@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: fa78e2cf-3c64-49f5-93cc-a3d50b1e7d05
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e348fba8c391b438c0429c8a32e167fd810b53d8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2c2b84cb9f75987995e9e0cdbf92165fa28f61a9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65102070"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006030"
 ---
 # <a name="use-transact-sql-editor-to-edit-and-execute-scripts"></a>Использовать редактор Transact-SQL для изменения и выполнения скриптов
 В редакторе Transact\-SQL предусмотрены широкие возможности редактирования и отладки при работе со скриптами. Редактор вызывается при открытии сущности базы данных в подключенной базе данных или проекте с помощью контекстного меню **Просмотр кода**. Кроме того, он автоматически открывается при использовании контекстного меню **Создать запрос** в окне обозревателя объектов SQL Server или при добавлении нового объекта скрипта в проект базы данных.  

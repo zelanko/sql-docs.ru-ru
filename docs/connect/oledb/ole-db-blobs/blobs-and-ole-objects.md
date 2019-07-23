@@ -1,5 +1,5 @@
 ---
-title: Большие двоичные объекты и объекты OLE | Документация Майкрософт
+title: Большие двоичные объекты и OLE | Документация Майкрософт
 description: Большие двоичные объекты и объекты OLE
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,13 +16,12 @@ helpviewer_keywords:
 - large data, OLE objects
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 0cc1f42d438c7216cf9b1f6f9ee9167747447e66
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 70d3ffccfc9613434b09335944e445a2705b95c3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66800700"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67988670"
 ---
 # <a name="blobs-and-ole-objects"></a>Большие двоичные объекты и объекты OLE
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "66800700"
 
   Драйвер OLE DB для SQL Server предоставляет интерфейс **ISequentialStream** для поддержки доступа потребителя к типам данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **ntext**, **text**, **image**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** и xml как к большим двоичным объектам (BLOB). Метод **Read** интерфейса **ISequentialStream** позволяет потребителю получать большой объем данных в виде фрагментов данных, с которыми удобно работать.  
   
- Образец, демонстрирующий эту функцию, см. в разделе [набор больших данных &#40;OLE DB&#41;](../../oledb/ole-db-how-to/set-large-data-ole-db.md).  
+ Пример, демонстрирующий эту функцию, см. в разделе [Set &#40;Large&#41;Data OLE DB](../../oledb/ole-db-how-to/set-large-data-ole-db.md).  
   
  Драйвер OLE DB для SQL Server может использовать реализованный потребителем интерфейс **IStorage**, если потребитель предоставляет указатель на него в методе доступа, предназначенном для изменения данных.  
   
@@ -47,7 +46,7 @@ ms.locfileid: "66800700"
   
 -   Выполните привязку, указав тип DBTYPE_IUNKNOWN, и используйте потоковую передачу.  
   
- При привязке к DBTYPE_IUNKNOWN используется потоковая возможность ISequentialStream. Драйвер OLE DB для SQL Server поддерживает привязку выходных параметров как DBTYPE_IUNKNOWN для типов данных больших значений. Это необходимо для поддержки сценариев, где хранимая процедура возвращает эти типы данных в качестве возвращаемых значений, которые возвращаются клиенту как тип DBTYPE_IUNKNOWN.  
+ При привязке к DBTYPE_IUNKNOWN используется потоковая возможность ISequentialStream. Драйвер OLE DB для SQL Server поддерживает привязку выходных параметров в виде DBTYPE_IUNKNOWN для типов данных больших значений. Это необходимо для поддержки сценариев, в которых хранимая процедура возвращает эти типы данных в виде возвращаемых значений, которые будут возвращены клиенту как DBTYPE_IUNKNOWN.  
   
 ## <a name="storage-object-limitations"></a>Ограничения объекта хранилища  
   

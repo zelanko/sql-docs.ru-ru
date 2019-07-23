@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: d612461d-4c3f-46db-b968-ff4c80b2aa7c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 920e47391cbaaeb1e78c8a7a4f440880edab60fd
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: e32cbf975d156aae723dfbff105fe51e039dc1b5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66803226"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977023"
 ---
 # <a name="iswrapperfor-method-sqlserverxadatasource"></a>Метод isWrapperFor (SQLServerXADataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -31,9 +30,9 @@ public boolean isWrapperFor(Class iface)
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *iface*  
+ *IFACE*  
   
- Объект **класс** определения интерфейса.  
+ **Класс** , определяющий интерфейс.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Значение **true**, если этот объект реализует интерфейс или упаковывает объект, реализующий интерфейс. В противном случае — **false**.  
@@ -49,7 +48,7 @@ public boolean isWrapperFor(Class iface)
  Дополнительные сведения см. в разделе [оболочки и интерфейсы](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Метод unwrap &#40;SQLServerXADataSource&#41;](../../../connect/jdbc/reference/unwrap-method-sqlserverxadatasource.md)   
+ [Распаковка метода &#40;SQLServerXADataSource&#41;](../../../connect/jdbc/reference/unwrap-method-sqlserverxadatasource.md)   
  [Методы SQLServerXADataSource](../../../connect/jdbc/reference/sqlserverxadatasource-methods.md)   
  [Элементы SQLServerXADataSource](../../../connect/jdbc/reference/sqlserverxadatasource-members.md)   
  [Класс SQLServerXADataSource](../../../connect/jdbc/reference/sqlserverxadatasource-class.md)  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a3df6c30-1f25-45dc-b5a9-bd0e41921293
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e99b9c4fbfa9b0d20a78a9d76e4730ce46966d3b
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 1948f42f5a572a7a7737b58afab8f407932660d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511811"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078030"
 ---
 # <a name="type-directive-in-for-xml-queries"></a>Директива TYPE в запросах FOR XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +72,7 @@ GO
 ```  
   
 ### <a name="querying-results-of-a-for-xml-query"></a>Запрос к результатам запроса FOR XML  
- Запросы FOR XML возвращают XML-данные. Таким образом, можно применить методы типа **xml** , например **query()** и **value()**, к XML-данным, возвращенным запросами FOR XML.  
+ Запросы FOR XML возвращают XML-данные. Таким образом, можно применить методы типа **xml** , например **query()** и **value()** , к XML-данным, возвращенным запросами FOR XML.  
   
  В следующем запросе метод `query()` для типа данных **xml** используется с целью запроса к результатам запроса `FOR XML`. Дополнительные сведения см. в разделе [Метод query (тип данных xml)](../../t-sql/xml/query-method-xml-data-type.md).  
   
@@ -128,7 +127,7 @@ SELECT @FirstPhoneFromAdditionalContactInfo;
  Выражение пути XQuery в методе `value()` извлекает из контактных сведений первый номер телефона заказчика с идентификатором `BusinessEntityID`, равным `1`.  
   
 > [!NOTE]  
->  Если директива TYPE не указана, результат запроса FOR XML возвращается в виде данных типа **nvarchar(max)**.  
+>  Если директива TYPE не указана, результат запроса FOR XML возвращается в виде данных типа **nvarchar(max)** .  
   
 ### <a name="using-for-xml-query-results-in-insert-update-and-delete-transact-sql-dml"></a>Использование результатов запроса FOR XML в инструкциях INSERT, UPDATE и DELETE (Transact-SQL DML)  
  В следующем примере показано использование запросов FOR XML в инструкциях языка DML. В данном примере запрос `FOR XML` возвращает экземпляр типа **xml** . Инструкция `INSERT` вставляет этот экземпляр XML в таблицу.  

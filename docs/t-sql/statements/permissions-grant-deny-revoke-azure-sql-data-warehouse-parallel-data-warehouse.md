@@ -12,14 +12,13 @@ dev_langs:
 ms.assetid: 5a3b7424-408e-4cb0-8957-667ebf4596fc
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: dda1ea78f8a3c795562faa52478d736f9525a252
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: e26d8a84a93c5164fa10894bc444cfbac999a22f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327765"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68129370"
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>Разрешения: Разрешения: GRANT, DENY, REVOKE (хранилище данных SQL Azure, Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -78,7 +77,7 @@ REVOKE
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- \<permission>[ **,**...*n* ]  
+ \<permission>[ **,** ...*n* ]  
  Одно или несколько разрешений для предоставления, запрета или отмены.  
   
  ON [ \<тип_класса> :: ] *защищаемый_объект* Предложение **ON** указывает защищаемый объект для предоставления, запрета или отмены разрешений.  
@@ -88,10 +87,10 @@ REVOKE
  *securable*  
  Имя входа, база данных, таблица, представление, схема, процедура, роль или пользователь, которым необходимо предоставить или запретить или для которых необходимо отменить разрешения. Имя объекта можно указать с использованием правил именования из трех частей, которые описаны в разделе [Синтаксические обозначения Transact-SQL (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
- TO *principal* [ **,**...*n* ]  
+ TO *principal* [ **,** ...*n* ]  
  Один или несколько субъектов, которым предоставляются или для которых отклоняются или отменяются разрешения. Субъект — это имя входа, пользователь базы данных или роль базы данных.  
   
- FROM *principal* [ **,**...*n* ]  
+ FROM *principal* [ **,** ...*n* ]  
  Один или несколько субъектов, для которых отменяются разрешения.  Субъект — это имя входа, пользователь базы данных или роль базы данных. **FROM** может использоваться только в инструкции **REVOKE**. **TO** может использоваться в инструкциях **GRANT**, **DENY** или **REVOKE**.  
   
  WITH GRANT OPTION  
@@ -244,7 +243,7 @@ REVOKE
   
  ![Диаграмма разрешений безопасности APS](../../t-sql/statements/media/aps-security-perms-poster.png "Диаграмма разрешений безопасности APS")  
   
- Полноразмерную версию этой диаграммы можно скачать в разделе [Разрешения SQL Server PDW](https://go.microsoft.com/fwlink/?LinkId=244249) в разделе "Файлы" на сайте APS Yammer (или запросить ее по электронной почте **apsdoc@microsoft.com**).  
+ Полноразмерную версию этой диаграммы можно скачать в разделе [Разрешения SQL Server PDW](https://go.microsoft.com/fwlink/?LinkId=244249) в разделе "Файлы" на сайте APS Yammer (или запросить ее по электронной почте **apsdoc@microsoft.com** ).  
   
 ## <a name="default-permissions"></a>Разрешения по умолчанию  
  Разрешения по умолчанию приведены в следующем списке:  

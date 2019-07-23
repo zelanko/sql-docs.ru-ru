@@ -10,14 +10,13 @@ ms.topic: tutorial
 ms.assetid: 04521d7f-588c-4259-abc2-1a2857eb05ec
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7bfaaca6a0f3c35814264d404ceaae9daebc34d4
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 4194c869574812d9035a9b51ed44b6aa62efdbcc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58788031"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67903463"
 ---
 # <a name="selects-and-joins-from-system-views-for-extended-events-in-sql-server"></a>Использование SELECT и JOIN в системных представлениях для расширенных событий в SQL Server
 
@@ -574,8 +573,8 @@ type           package0       xml                           Well formed XML frag
 
 Следующая инструкция SELECT возвращает все поля данных, относящиеся к вашему событию.
 
-- Обратите внимание на элемент предложения WHERE: *column_type = 'data'*.
-- Кроме того, потребуется изменить значение предложения WHERE для *o.name =*.
+- Обратите внимание на элемент предложения WHERE: *column_type = 'data'* .
+- Кроме того, потребуется изменить значение предложения WHERE для *o.name =* .
 
 
 ```sql
@@ -727,8 +726,8 @@ you could put:
 
 Следующая инструкция SELECT возвращает каждый параметр для целевого объекта. Каждый параметр помечается, поэтому можно определить, является он обязательным или нет. Значения, назначаемые параметрам, влияют на поведение целевого объекта.
 
-- Обратите внимание на элемент предложения WHERE: *object_type = 'customizable'*.
-- Кроме того, потребуется изменить значение предложения WHERE для *o.name =*.
+- Обратите внимание на элемент предложения WHERE: *object_type = 'customizable'* .
+- Кроме того, потребуется изменить значение предложения WHERE для *o.name =* .
 
 
 ```sql
@@ -793,7 +792,7 @@ package0   event_file   metadatafile         unicode_string_ptr   Not_mandatory 
 Эта инструкция DMV SELECT возвращает строки данных из целевого объекта открытого сеанса событий. Данные приведены к формату XML, поэтому возвращенную ячейку можно активировать щелчком мыши для простоты отображения в среде.
 
 - Если сеанс событий остановлен, SELECT не возвратит ни одной строки.
-- Потребуется изменить значение предложения WHERE для *s.name =*.
+- Потребуется изменить значение предложения WHERE для *s.name =* .
 
 
 ```sql

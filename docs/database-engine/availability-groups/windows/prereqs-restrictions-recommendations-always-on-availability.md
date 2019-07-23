@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
-ms.openlocfilehash: 9dfc37d9dfb4cac8c30debf29890e2369cd8785b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 47ab25b42800eaf668f2b258cf51608e6d66e580
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798151"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68014478"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>Предварительные требования, ограничения и рекомендации для групп доступности Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +83,7 @@ ms.locfileid: "66798151"
   
 3.  С помощью командлета **Get-ClusterResource** найдите ресурс сетевого имени, а затем с помощью командлета **Set-ClusterParameter** задайте значение **HostRecordTTL** следующим образом:  
   
-     Get-ClusterResource "*\<имя_сетевого_ресурса>*" | Set-ClusterParameter HostRecordTTL *\<время_в_секундах>*  
+     Get-ClusterResource " *\<имя_сетевого_ресурса>* " | Set-ClusterParameter HostRecordTTL *\<время_в_секундах>*  
   
      В следующем примере для PowerShell задается значение HostRecordTTL в 300 секунд для сетевого ресурса сетевого имени `SQL Network Name (SQL35)`.  
   

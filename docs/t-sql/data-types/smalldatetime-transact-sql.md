@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: 68b74610-d54c-4c8e-b4b2-7e3747546ee0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d44e6621e4d5f9535752cf8b6f74c4dbcd404d8a
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: f4f4e7ae4f7ba11add01a0612fe9607fcb42104c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802261"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68000560"
 ---
 # <a name="smalldatetime-transact-sql"></a>smalldatetime (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -114,7 +113,7 @@ SELECT @smalldatetime AS '@smalldatetime', @datetime AS 'datetime';
 --(1 row(s) affected)  
 ```  
   
-Для преобразования в тип **datetimeoffset(n)** значение **smalldatetime** копируется в значение **datetimeoffset(n)**. Для долей секунды устанавливается значение 0; для смещения часового пояса устанавливается значение +00:0. Следующий код демонстрирует результаты преобразования значения `smalldatetime` в значение `datetimeoffset(4)`.
+Для преобразования в тип **datetimeoffset(n)** значение **smalldatetime** копируется в значение **datetimeoffset(n)** . Для долей секунды устанавливается значение 0; для смещения часового пояса устанавливается значение +00:0. Следующий код демонстрирует результаты преобразования значения `smalldatetime` в значение `datetimeoffset(4)`.
   
 ```sql
 DECLARE @smalldatetime smalldatetime = '1955-12-13 12:43:10';  
@@ -130,7 +129,7 @@ SELECT @smalldatetime AS '@smalldatetime', @datetimeoffset AS 'datetimeoffset(4)
 --(1 row(s) affected)  
 ```  
   
-При преобразовании в тип **datetime2(n)** значение **smalldatetime** копируется в значение **datetime2(n)**. Доли секунды устанавливаются в значение 0. Следующий код демонстрирует результаты преобразования значения `smalldatetime` в значение `datetime2(4)`.
+При преобразовании в тип **datetime2(n)** значение **smalldatetime** копируется в значение **datetime2(n)** . Доли секунды устанавливаются в значение 0. Следующий код демонстрирует результаты преобразования значения `smalldatetime` в значение `datetime2(4)`.
   
 ```sql
 DECLARE @smalldatetime smalldatetime = '1955-12-13 12:43:10';  

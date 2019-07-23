@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: fe20dca9-a4c1-4d32-813d-42f1782dfdd3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 00a845104de324dfc4bee50e6feba035d1592f98
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 95d92e72baa3d1f36eb76649a46bb1dcdf35cd4f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510893"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035240"
 ---
 # <a name="add-or-remove-nodes-in-a-sql-server-failover-cluster-setup"></a>Добавление или удаление узлов отказоустойчивого кластера SQL Server (программа установки)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ ms.locfileid: "52510893"
   
 1.  Вставьте установочный носитель [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , перейдите в корневую папку и дважды щелкните файл Setup.exe. Для установки из сетевого ресурса перейдите в корневую папку на этом ресурсе и дважды щелкните файл Setup.exe.  
   
-2.  Мастер установки запускает центр установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Чтобы добавить узел в существующий экземпляр отказоустойчивого кластера, в левой панели выберите **Установка**. Затем выберите **Добавление узла в кластер отработки отказа [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**.  
+2.  Мастер установки запускает центр установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Чтобы добавить узел в существующий экземпляр отказоустойчивого кластера, в левой панели выберите **Установка**. Затем выберите **Добавление узла в кластер отработки отказа [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]** .  
   
 3.  Средство проверки конфигурации системы запустит операцию обнаружения на компьютере. Чтобы продолжить, [!INCLUDE[clickOK](../../../includes/clickok-md.md)].  
   
@@ -88,9 +87,9 @@ ms.locfileid: "52510893"
   
 #### <a name="to-remove-a-node-from-an-existing-includessnoversionincludesssnoversion-mdmd-failover-cluster"></a>Удаление узла из существующего отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
   
-1.  Вставьте установочный носитель [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. В корневой папке дважды щелкните файл setup.exe. Для установки из сетевого ресурса перейдите в корневую папку на этом ресурсе и дважды щелкните файл Setup.exe.  
+1.  Вставьте установочный носитель [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . В корневой папке дважды щелкните файл setup.exe. Для установки из сетевого ресурса перейдите в корневую папку на этом ресурсе и дважды щелкните файл Setup.exe.  
   
-2.  Мастер установки запустит центр установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Чтобы удалить узел из существующего экземпляра отказоустойчивого кластера, на левой панели выберите команду **Обслуживание**, а затем **Удалить узел из отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**.  
+2.  Мастер установки запустит центр установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Чтобы удалить узел из существующего экземпляра отказоустойчивого кластера, на левой панели выберите команду **Обслуживание**, а затем **Удалить узел из отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]** .  
   
 3.  Средство проверки конфигурации системы запустит операцию обнаружения на компьютере. Чтобы продолжить, [!INCLUDE[clickOK](../../../includes/clickok-md.md)].  
   

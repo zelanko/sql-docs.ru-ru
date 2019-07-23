@@ -16,13 +16,12 @@ f1_keywords:
 ms.assetid: 7f0905a4-081c-46e2-bd7d-325b63e5c675
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: cd48c91bee175e3cc2bdb0031d70a9d8e68d95c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ce83808ac5953902f8f655c619f87feeffa4e8c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65095934"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097515"
 ---
 # <a name="how-to-use-schema-compare-to-compare-different-database-definitions"></a>Руководство. использовать сравнение схем для сопоставления различных определений баз данных
 В SQL Server Data Tools (SSDT) входит программа сравнения схем, которая позволяет сравнивать два определения базы данных.  Источником и целью сравнения может быть любое сочетание подключенной базы данных, проекта базы данных SQL Server, файла моментального снимка и файла DACPAC.  Результаты сравнения выводятся в виде набора действий, которые необходимо выполнить с целевой базой, чтобы сделать ее идентичной исходной базе.  После завершения сравнения вы можете обновить целевую базу непосредственно (если это проект или база данных) или создать скрипт обновления, выполняющий те же действия.  

@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 9be51199-78b4-4b87-ae6e-557246b7e29a
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: 02c9c35d8609a0afd150be7a645a614250755aaa
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: e6bdd627d0ce40ca44ef42c263d04beb6104edd0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685591"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68040559"
 ---
 # <a name="dbcc-tracestatus-transact-sql"></a>DBCC TRACESTATUS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ DBCC TRACESTATUS ( [ [ trace# [ ,...n ] ] [ , ] [ -1 ] ] )
 Заполнитель, показывающий, что можно задавать несколько флагов трассировки.
   
 -1  
-Отображает состояние глобально активированных флагов трассировки. Если значение –1 задано без аргумента *trace#*, то отображаются все активированные глобальные флаги трассировки.
+Отображает состояние глобально активированных флагов трассировки. Если значение –1 задано без аргумента *trace#* , то отображаются все активированные глобальные флаги трассировки.
   
 WITH NO_INFOMSGS  
 Подавляет все информационные сообщения со степенями серьезности от 0 до 10.

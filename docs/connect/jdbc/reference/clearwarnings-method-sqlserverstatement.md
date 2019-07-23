@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: b1d3a50c-3d05-44b3-b1ba-404a013fd627
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 29125e2b384dcd921d22518439a8fb7bbd01428b
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: f355974fb2d3710f50f052dc5a800c48e60a3b35
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66803609"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955684"
 ---
 # <a name="clearwarnings-method-sqlserverstatement"></a>Метод clearWarnings (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public final void clearWarnings()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод clearWarnings указывается с помощью метода clearWarnings в интерфейсе java.sql.Statement.  
+ Этот метод clearWarnings задается методом clearWarnings в интерфейсе Java. SQL. Statement.  
   
 ## <a name="see-also"></a>См. также:  
  [Элементы SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

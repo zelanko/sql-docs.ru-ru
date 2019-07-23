@@ -1,5 +1,5 @@
 ---
-title: PDOStatement::bindParam | Документация Майкрософт
+title: 'PDOStatement:: bindParam | Документация Майкрософт'
 ms.custom: ''
 ms.date: 05/22/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 65212058-2632-47a4-ba7d-2206883abf09
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d8186b87e5dde50b07aa69e4dde870d8474265bd
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: cd3332f9dc12d1cf7df22c097ab9370606985a68
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66795590"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936158"
 ---
 # <a name="pdostatementbindparam"></a>PDOStatement::bindParam
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -39,7 +38,7 @@ $*data_type*: необязательная константа PDO::PARAM_* (це
   
 $*length*: необязательная длина типа данных (целое число). С помощью PDO::SQLSRV_PARAM_OUT_DEFAULT_SIZE вы можете указать размер по умолчанию при использовании PDO::PARAM_INT или PDO::PARAM_BOOL в $*data_type*.  
   
-$*driver_options*: необязательные параметры драйвера (смешанное значение). Например, можно указать PDO::SQLSRV_ENCODING_UTF8 для привязки столбца к переменной в виде строки с кодировкой UTF-8.  
+$*driver_options*: необязательные (смешанные) параметры, относящиеся к драйверу. Например, можно указать PDO::SQLSRV_ENCODING_UTF8 для привязки столбца к переменной в виде строки с кодировкой UTF-8.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
 Значение TRUE в случае успеха, в противном случае — значение FALSE.  
@@ -100,7 +99,7 @@ echo $input1;
 ```  
   
 > [!NOTE]
-> При привязке выходной параметр с типом bigint, если значение может оказаться вне диапазона [целое число](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), использовании PDO::PARAM_INT с PDO::SQLSRV_PARAM_OUT_DEFAULT_SIZE может привести к исключению «значение вне допустимого диапазона». Таким образом вместо этого используйте значение по умолчанию PDO::PARAM_STR и укажите размер для результирующая строка имеет не более 21. Это максимальное количество цифр, включая отрицательный знак, любое значение типа bigint. 
+> При привязке выходного параметра к типу bigint, если значение может находиться за пределами диапазона целого [числа](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), использование PDO::P ARAM_INT с PDO:: SQLSRV_PARAM_OUT_DEFAULT_SIZE может привести к исключению "значение вне диапазона". Поэтому используйте вместо него по умолчанию PDO::P ARAM_STR и укажите размер результирующей строки, который не превышает 21. Это максимальное число цифр, включая отрицательный знак любого значения bigint. 
 
 ## <a name="example"></a>Пример  
 Этот пример кода показывает, как получить доступ к параметру ввода/вывода.  
