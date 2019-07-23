@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f2068636-6e53-486a-a6fc-c12de2a38424
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 5f9be8fb680fcc3ccb0138318c21bb3072035338
-ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
+ms.openlocfilehash: 7f4d77bba168f84b42aab0884369cf834af3779d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55689877"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68099232"
 ---
 # <a name="move-a-workload-group"></a>Перемещение группы рабочей нагрузки
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

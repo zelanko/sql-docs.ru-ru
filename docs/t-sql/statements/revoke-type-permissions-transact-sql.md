@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3969c7e9-ca10-4c67-971b-25d2dfccf650
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: a5a98994ab735e685e1d866ff9a28899cdef8c52
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b1932d5e174154d0c51d4693b49400aaf6282e7a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62638660"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67913915"
 ---
 # <a name="revoke-type-permissions-transact-sql"></a>REVOKE, отмена разрешения на тип (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -57,7 +56,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  Разрешение на работу с типом, которое можно отменить. Список разрешений см. в подразделе "Примечания" далее в этом разделе.  
   
  ON TYPE **::** [ *schema_name* ] **.** *type_name*  
- Тип, разрешение на работу с которым отменяется. Квалификатор области (**::**) является обязательным. Если не указан аргумент *schema_name*, подразумевается схема по умолчанию. Если указан аргумент *schema_name*, обязательно указание квалификатора области схемы (**.**).  
+ Тип, разрешение на работу с которым отменяется. Квалификатор области ( **::** ) является обязательным. Если не указан аргумент *schema_name*, подразумевается схема по умолчанию. Если указан аргумент *schema_name*, обязательно указание квалификатора области схемы ( **.** ).  
   
  { FROM | TO } \<database_principal> Задает субъекта, у которого отменяется разрешение.  
   

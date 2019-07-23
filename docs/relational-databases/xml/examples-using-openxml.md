@@ -26,15 +26,14 @@ helpviewer_keywords:
 ms.assetid: 689297f3-adb0-4d8d-bf62-cfda26210164
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c072fc97536259b16938cc36dcbc21dbbbb97b57
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 4ea3ad1c2f7cb482888f0cd4d31a91f9975745b7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511271"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67943387"
 ---
-# <a name="examples-using-openxml"></a>Примеры: использование инструкции OPENXML
+# <a name="examples-using-openxml"></a>Примеры: Использование OPENXML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   Примеры в этом подразделе иллюстрируют использование инструкции OPENXML для создания представления наборов строк XML-документа. Дополнительные сведения о синтаксисе инструкции OPENXML см. в разделе [OPENXML (Transact-SQL)](../../t-sql/functions/openxml-transact-sql.md). Примеры показывают все аспекты инструкции OPENXML, но не определяют метасвойства в ней. Дополнительные сведения о том, как использовать метасвойства в OPENXML, см. в статье [Определение метасвойств в инструкции OPENXML](../../relational-databases/xml/specify-metaproperties-in-openxml.md).  
   
@@ -97,7 +96,7 @@ LILAS      Carlos Gonzlez
   
  Поскольку элементы <`Customer`> не имеют подэлементов, то выполнение той же самой инструкции SELECT с параметром *flags* со значением **2**, которое указывает на сопоставление с использованием элементов, возвращает значения NULL столбцов **CustomerID** и **ContactName** для обоих пользователей.  
   
- Аргумент \@xmlDocument может также иметь тип **xml** или **(n)varchar(max)**.  
+ Аргумент \@xmlDocument может также иметь тип **xml** или **(n)varchar(max)** .  
   
  Если <`CustomerID`> и <`ContactName`> в XML-документе являются подэлементами, то сопоставление с использованием элементов возвращает значения:  
   
@@ -476,7 +475,7 @@ EXEC sp_xml_removedocument @docHandle
   
  В элементе *SchemaDeclaration* предложения WITH параметр *ColPattern* также задан с параметрами *ColName* и *ColType* . Необязательный параметр *ColPattern* является заданным шаблоном XPath и указывает следующее:  
   
--   шаблон XPath (**.**), указанный в виде параметра *ColPattern* для столбца **ProdID** в наборе строк, определяет контекстный узел — текущий узел. Согласно заданному шаблону *rowpattern*, он является атрибутом **ProductID** элемента <`OrderDetail`>;  
+-   шаблон XPath ( **.** ), указанный в виде параметра *ColPattern* для столбца **ProdID** в наборе строк, определяет контекстный узел — текущий узел. Согласно заданному шаблону *rowpattern*, он является атрибутом **ProductID** элемента <`OrderDetail`>;  
   
 -   шаблон *ColPattern*, **../\@Quantity**, заданный для столбца **Qty** в наборе строк, определяет атрибут **Quantity** родительского элемента, <`OrderDetail`>, узла контекстного узла \<ProductID>.  
   
@@ -525,7 +524,7 @@ ProdID      Qty         OID
 ```  
   
 ### <a name="h-specifying-an-xml-document-that-has-multiple-text-nodes"></a>З. Задание XML-документа, имеющего несколько текстовых узлов  
- При наличии нескольких текстовых узлов в XML-документе инструкция SELECT с параметром *ColPattern*, **text()**, возвращает только первый текстовый узел, а не все. Пример:  
+ При наличии нескольких текстовых узлов в XML-документе инструкция SELECT с параметром *ColPattern*, **text()** , возвращает только первый текстовый узел, а не все. Пример:  
   
 ```  
 DECLARE @h int  
@@ -578,7 +577,7 @@ FROM   OPENXML (@h, '/Root/row', 10)
 EXEC sp_xml_removedocument @h  
 ```  
   
- А именно, переменная (\@x) типа **xml** передается функции **sp_xml_preparedocument()**.  
+ А именно, переменная (\@x) типа **xml** передается функции **sp_xml_preparedocument()** .  
   
  Результат:  
   

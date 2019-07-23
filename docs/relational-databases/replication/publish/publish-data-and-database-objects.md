@@ -41,13 +41,12 @@ helpviewer_keywords:
 ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e0f959c6bc5a34fe2c2a3aec08f87f1e703749cf
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: cdf69cebcb9bae567ebaf4df898a7d6940e881b6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129014"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085345"
 ---
 # <a name="publish-data-and-database-objects"></a>Публикация данных и объектов базы данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -153,7 +152,7 @@ ms.locfileid: "54129014"
 -   При публикации объекта базы данных, зависящего от одного или нескольких других объектов базы данных, необходимо опубликовать и все связанные с ним объекты. Например, при публикации представления, зависящего от таблицы, необходимо также опубликовать и таблицу.  
   
     > [!NOTE]  
-    >  Если при добавлении статьи в публикацию слиянием, существующая статья зависит от новой статьи, то необходимо задать порядок обработки для обеих статей с помощью параметра **@processing_order** хранимой процедуры [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) и [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Рассмотрим следующий сценарий: необходимо опубликовать таблицу без публикации функции, на которую ссылается эта таблица. Если функция не будет опубликована, то таблица не сможет быть создана на подписчике. При добавлении функции к публикации: задайте значение **1** для параметра **@processing_order** хранимой процедуры **sp_addmergearticle**и значение **2** для параметра **@processing_order** хранимой процедуры **sp_changemergearticle**, указав имя таблицы в параметре **@article**. Этот порядок обработки гарантирует создание функции на подписчике до создания таблицы, которая зависит от нее. Можно использовать различные числа для каждой статьи при условии, что число для функции меньше числа для таблицы.  
+    >  Если при добавлении статьи в публикацию слиянием, существующая статья зависит от новой статьи, то необходимо задать порядок обработки для обеих статей с помощью параметра **@processing_order** хранимой процедуры [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) и [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Рассмотрим следующий сценарий: необходимо опубликовать таблицу без публикации функции, на которую ссылается эта таблица. Если функция не будет опубликована, то таблица не сможет быть создана на подписчике. При добавлении функции к публикации: задайте значение **1** для параметра **@processing_order** хранимой процедуры **sp_addmergearticle**и значение **2** для параметра **@processing_order** хранимой процедуры **sp_changemergearticle**, указав имя таблицы в параметре **@article** . Этот порядок обработки гарантирует создание функции на подписчике до создания таблицы, которая зависит от нее. Можно использовать различные числа для каждой статьи при условии, что число для функции меньше числа для таблицы.  
   
 -   Имена публикаций не могут содержать следующие символы: % * [ ] | : " ? \ / < >.  
   
@@ -182,7 +181,7 @@ ms.locfileid: "54129014"
   
 -   Для статей в публикациях, в которых используются моментальные снимки в текстовом режиме (используются для подписчиков, отличных от подписчиков[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , и подписчиков [!INCLUDE[ssEW](../../../includes/ssew-md.md)] ): по умолчанию владелец не указывается. Владельцем по умолчанию является владелец, указанный в учетной записи, используемой агентом распространителя или агентом слияния для соединения с подписчиком.  
   
- Владельца объекта можно изменить с помощью диалогового окна **Свойства статьи — \<**_cтатья_**>** и следующих хранимых процедур: **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle** и **sp_changemergearticle**. Дополнительные сведения см. в статье [Просмотр и изменение свойств публикации](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md), [Определение статьи](../../../relational-databases/replication/publish/define-an-article.md) и [Просмотр и изменение свойств статьи](../../../relational-databases/replication/publish/view-and-modify-article-properties.md).  
+ Владельца объекта можно изменить с помощью диалогового окна **Свойства статьи — \<** _cтатья_ **>** и следующих хранимых процедур: **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle** и **sp_changemergearticle**. Дополнительные сведения см. в статье [Просмотр и изменение свойств публикации](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md), [Определение статьи](../../../relational-databases/replication/publish/define-an-article.md) и [Просмотр и изменение свойств статьи](../../../relational-databases/replication/publish/view-and-modify-article-properties.md).  
   
 ### <a name="publishing-data-to-subscribers-running-previous-versions-of-sql-server"></a>Публикация данных на подписчики, использующие предыдущие версии SQL Server  
   

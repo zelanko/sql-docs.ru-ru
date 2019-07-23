@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: c4351ef5-e7d0-46e7-8367-88695e9974f8
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f1b47a38cd1fc5cc4d95b611dbafbf8d30b22878
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 4575c9cbc20faf6afa03201645b736a13325e66b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407472"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140299"
 ---
 # <a name="view-the-dependencies-of-a-table"></a>Просмотр зависимостей таблицы
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -56,7 +55,7 @@ ms.locfileid: "52407472"
   
 2.  Щелкните таблицу правой кнопкой мыши и выберите **Просмотр зависимостей**.  
   
-3.  В диалоговом окне **Зависимости объектов**_\<имя объекта\>_ выберите либо **Объекты, зависящие от** _\<имя объекта\>_, либо **Объекты, от которых**_\<имя объекта\>_**зависит от**.  
+3.  В диалоговом окне **Зависимости объектов** _\<имя объекта\>_ выберите либо **Объекты, зависящие от** _\<имя объекта\>_ , либо **Объекты, от которых** _\<имя объекта\>_ **зависит от**.  
   
 4.  Выберите объект в сетке **Зависимости** . Тип объекта (например, "Триггер" или "Хранимая процедура") появится в поле **Тип** .  
   

@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: b2aa1fc8-e7af-45d2-9f80-737543c8aa95
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a5d923201600adcf0e1bb4026e3feee28dea7e97
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 37da86b825ee68be83d0aa653005a1ea12db5ed7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327625"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050808"
 ---
 # <a name="grant-schema-permissions-transact-sql"></a>GRANT, предоставления разрешения на схему (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -79,7 +78,7 @@ AS *granting_principal*
 ## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
->  Сочетание разрешений ALTER и REFERENCE в некоторых случаях может позволить просматривать данные или выполнять несанкционированные функции. Пример: Пользователь с разрешением ALTER на таблицу и разрешением REFERENCE на функцию может создавать вычисляемый столбец на основе функции и в результате — выполнять ее. В этом случае пользователю также требуется разрешение SELECT на вычисляемый столбец.  
+>  Сочетание разрешений ALTER и REFERENCE в некоторых случаях может позволить просматривать данные или выполнять несанкционированные функции. Пример: Пользователь с разрешением ALTER на таблицу и разрешением REFERENCE на функцию может создавать вычисляемый столбец на основе функции и в результате — выполнять ее. В этом случае пользователю также требуется разрешение SELECT на вычисляемый столбец.  
   
  Схема является защищаемым объектом уровня базы данных, содержащимся в базе данных, которая является материнской по отношению к нему в иерархии разрешений. Ниже перечислены наиболее специфичные и ограниченные разрешения (вместе с наиболее общими разрешениями, из которых они вытекают), которые могут быть предоставлены для схемы.  
   

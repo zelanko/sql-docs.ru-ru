@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 24f5b85d-d6f9-415f-b09f-933b78dc0b67
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b566905aa6814d10c1551b9d96562a28b11da944
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4c4008d88a2a353ead1ddd16f678c4167ff6714d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65099649"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035094"
 ---
 # <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>Руководство. Запуск модульных тестов SQL Server из сборки Team Foundation
 Сборку Team Foundation можно использовать для запуска модульных тестов SQL Server в составе теста проверки сборки. Модульные тесты можно настроить так, чтобы сначала выполнялось развертывание базы данных, формировались тестовые данные, а затем запускались выбранные тесты. Если вы раньше не работали с построением Team Foundation Build, то перед выполнением процедур данного раздела ознакомьтесь со следующими сведениями.  

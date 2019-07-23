@@ -29,13 +29,12 @@ helpviewer_keywords:
 ms.assetid: 9f38eba6-39b1-4f1d-ba24-ee4f7e2bc969
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: 4fa7c613c98b01ecda5e535928c7e381beef8aa6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7d0e379cf9d3bc6391e6c2c921824c7162b88def
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66775716"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68025622"
 ---
 # <a name="server-configuration-options-sql-server"></a>Параметры конфигурации сервера (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -114,7 +113,7 @@ ms.locfileid: "66775716"
     |[max full-text crawl range](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md) (A)|0|256|4|  
     |[max server memory](../../database-engine/configure-windows/server-memory-server-configuration-options.md) (A, SC)|16|2147483647|2147483647|  
     |[max text repl size](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md)|0|2147483647|65536|  
-    |[max worker threads](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md) (A)|128|32767<br /><br /> 1024 является максимальным значением, рекомендуемым для 32-разрядных операционных систем [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 2048 — для 64-разрядных систем [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **Примечание**. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] — последняя версия, которая была доступна в 32-разрядной операционной системе.|0<br /><br /> При нулевом значении максимальное число рабочих потоков настраивается автоматически в зависимости от количества процессоров по формуле (256 + (*\<процессоры>*  – 4) * 8) для 32-разрядных систем [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и (512 + (*\<процессоры>*  – 4) * 8) для 64-разрядных систем [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **Примечание**. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] — последняя версия, которая была доступна в 32-разрядной операционной системе.|  
+    |[max worker threads](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md) (A)|128|32767<br /><br /> 1024 является максимальным значением, рекомендуемым для 32-разрядных операционных систем [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 2048 — для 64-разрядных систем [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **Примечание**. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] — последняя версия, которая была доступна в 32-разрядной операционной системе.|0<br /><br /> При нулевом значении максимальное число рабочих потоков настраивается автоматически в зависимости от количества процессоров по формуле (256 + ( *\<процессоры>*  – 4) * 8) для 32-разрядных систем [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и (512 + ( *\<процессоры>*  – 4) * 8) для 64-разрядных систем [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **Примечание**. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] — последняя версия, которая была доступна в 32-разрядной операционной системе.|  
     |[media retention](../../database-engine/configure-windows/configure-the-media-retention-server-configuration-option.md) (A, RR)|0|365|0|  
     |[min memory per query](../../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md) (A)|512|2147483647|1024|  
     |[min server memory](../../database-engine/configure-windows/server-memory-server-configuration-options.md) (A, SC)|0|2147483647|0|  

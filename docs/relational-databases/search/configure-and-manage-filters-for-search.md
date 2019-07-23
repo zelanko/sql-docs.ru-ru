@@ -12,23 +12,22 @@ ms.assetid: 7ccf2ee0-9854-4253-8cca-1faed43b7095
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0f7d50aac6cea5d7089ee891e533712cc64fd46b
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 5dd9719ea0f10b3bbac6aae5171a2c941cdf7e1a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973783"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093302"
 ---
 # <a name="configure-and-manage-filters-for-search"></a>Настройка поисковых фильтров и управление ими
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Индексирование документа в столбце с типом данных **varbinary**, **varbinary(max)**, **image** или **xml** требует дополнительной обработки. Такая обработка должна выполняться фильтром. Фильтр извлекает из документа текстовые данные (устранение форматирования). Затем фильтр отправляет текст в компонент средства разбиения по словам для языка, связанного со столбцом таблицы.  
+  Индексирование документа в столбце с типом данных **varbinary**, **varbinary(max)** , **image** или **xml** требует дополнительной обработки. Такая обработка должна выполняться фильтром. Фильтр извлекает из документа текстовые данные (устранение форматирования). Затем фильтр отправляет текст в компонент средства разбиения по словам для языка, связанного со столбцом таблицы.  
  
 ## <a name="filters-and-document-types"></a>Фильтры и типы документов
 Данный фильтр зависит от типа данных документа (DOC, PDF, XLS, XML и т. д.). Такие фильтры реализуют интерфейс IFilter. Для получения дополнительных сведений об этих типах документов выполните запрос к представлению каталога [sys.fulltext_document_types](../../relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql.md) .  
   
-Двоичные документы можно хранить в одном столбце **varbinary(max)** или **image** . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выбирает для каждого документа правильный фильтр в соответствии с расширением файла. Поскольку при сохранении файла в столбце типа **varbinary(max)** или **image** его расширение не отображается, расширение файла (DOC, DOCX, PDF и т. д.) нужно хранить в отдельном столбце таблицы, который называется столбцом типов. Столбец типов может иметь любой символьный тип данных и содержит расширение файла документа (например, DOC в случае документа [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word). В таблице **Document** базы данных [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)]столбец **Document** имеет тип **varbinary(max)**, а столбец **FileExtension**— тип **nvarchar(8)**.  
+Двоичные документы можно хранить в одном столбце **varbinary(max)** или **image** . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выбирает для каждого документа правильный фильтр в соответствии с расширением файла. Поскольку при сохранении файла в столбце типа **varbinary(max)** или **image** его расширение не отображается, расширение файла (DOC, DOCX, PDF и т. д.) нужно хранить в отдельном столбце таблицы, который называется столбцом типов. Столбец типов может иметь любой символьный тип данных и содержит расширение файла документа (например, DOC в случае документа [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word). В таблице **Document** базы данных [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)]столбец **Document** имеет тип **varbinary(max)** , а столбец **FileExtension**— тип **nvarchar(8)** .  
 
 **Просмотр столбца типов в существующем полнотекстовом индексе**  
   

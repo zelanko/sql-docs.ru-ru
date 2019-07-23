@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: d73c28ee-3972-4afd-af8d-ebbbd9e50793
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: dc092d095835caa5422f01c2f9a9b3a85ec94d55
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: b858cc4930cdfe9792e08c991c3ebdf8f319d0f0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334631"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948224"
 ---
 # <a name="updatetext-transact-sql"></a>UPDATETEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +60,7 @@ UPDATETEXT [BULK] { table_name.dest_column_name dest_text_ptr }
  Имя обновляемой таблицы и столбца типа **text**, **ntext** или **image**. Имена таблиц и имена столбцов должны соответствовать правилам для [идентификаторов](../../relational-databases/databases/database-identifiers.md). Указание имени базы данных и владельца необязательно.  
   
  *dest_text_ptr*  
- Значение текстового указателя (возвращается функцией TEXTPTR), который указывает на обновляемые данные типа **text**, **ntext** или **image**. Значение *dest_text_ptr* должно иметь тип **binary(** 16 **)**.  
+ Значение текстового указателя (возвращается функцией TEXTPTR), который указывает на обновляемые данные типа **text**, **ntext** или **image**. Значение *dest_text_ptr* должно иметь тип **binary(** 16 **)** .  
   
  *insert_offset*  
  Начальная позиция для обновления. Отсчет начинает с нуля. Для столбцов типа **text** или **image** *insert_offset* является числом байтов, которые необходимо пропустить с начала существующего столбца перед вставкой новых данных. Для столбцов типа **ntext** *insert_offset* является числом символов (каждый символ **ntext** занимает 2 байта). Существующие данные типа **text**, **ntext** или **image**, начиная с этой начальной позиции (отсчет начинается с нуля), сдвигаются вправо, чтобы освободить место для новых данных. При значении 0 новые данные вставляются в начало существующих данных. Если значение равно NULL, новые данные добавляются в конец существующих.  

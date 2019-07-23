@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: e57519bb-e7f4-459b-ba2f-fd42865ca91d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8db5bf0ed872ed55b2578ed106e84645f5517df8
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: f568d57f84397f0ebc4b636c4911cc51b197ebf8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58161731"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68116742"
 ---
 # <a name="contained-database-users---making-your-database-portable"></a>Пользователи автономной базы данных — создание переносимой базы данных
 
@@ -61,7 +60,7 @@ ms.locfileid: "58161731"
  Дополнительные сведения о правилах брандмауэра [!INCLUDE[ssSDS](../../includes/sssds-md.md)] см. в следующих статьях:  
   
 - [Параметры брандмауэра базы данных Azure SQL](https://msdn.microsoft.com/library/azure/ee621782.aspx)  
-- [Как Настройка параметров брандмауэра (база данных Azure SQL)](https://msdn.microsoft.com/library/azure/jj553530.aspx)  
+- [Руководство. Настройка параметров брандмауэра (база данных Azure SQL)](https://msdn.microsoft.com/library/azure/jj553530.aspx)  
 - [sp_set_firewall_rule (база данных Azure SQL)](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)  
 - [sp_set_database_firewall_rule (база данных Azure SQL)](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md)  
   

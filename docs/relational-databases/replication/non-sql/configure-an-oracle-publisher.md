@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 240c8416-c8e5-4346-8433-07e0f779099f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 19043cd42f89c16dbbab88264bf5710c50d14067
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: a77c321f5ba63e7c6db3d1aac47b6ad4b0c2027a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67586448"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020031"
 ---
 # <a name="configure-an-oracle-publisher"></a>Настройка издателя Oracle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +58,7 @@ ms.locfileid: "67586448"
 > [!NOTE]  
 >  При удалении открытого синонима **MSSQLSERVERDISTRIBUTOR** и пользователя сконфигурированной репликации Oracle с параметром **CASCADE** из издателя Oracle удаляются все объекты репликации.  
   
- Для помощи в настройке пользовательской схемы репликации предоставляется образец скрипта. Этот скрипт доступен также в следующем каталоге после установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: *\<диск>*:\\\Program Files\Microsoft SQL Server\\*\<имя_экземпляра>* \MSSQL\Install\oracleadmin.sql. Он также содержится в разделе [Script to Grant Oracle Permissions](../../../relational-databases/replication/non-sql/script-to-grant-oracle-permissions.md).  
+ Для помощи в настройке пользовательской схемы репликации предоставляется образец скрипта. Этот скрипт доступен также в следующем каталоге после установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: *\<диск>* :\\\Program Files\Microsoft SQL Server\\ *\<имя_экземпляра>* \MSSQL\Install\oracleadmin.sql. Он также содержится в разделе [Script to Grant Oracle Permissions](../../../relational-databases/replication/non-sql/script-to-grant-oracle-permissions.md).  
   
  Подключитесь к базе данных Oracle под учетной записью с правами доступа администратора базы данных (DBA) и выполните скрипт. Данный скрипт запрашивает имя пользователя и пароль для схемы администратора репликации, а также табличное пространство по умолчанию, в котором будут создаваться объекты (табличное пространство уже должно существовать в базе данных Oracle). Сведения об указании других табличных пространств для объектов см. в статье [Управление табличными пространствами Oracle](../../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md). Выберите любое имя пользователя и надежный пароль, запишите их, так как они запрашиваются позднее при настройке базы данных Oracle в качестве издателя. Рекомендуется использовать схему только для объектов, которые требуются для репликации. Не создавайте таблиц, которые будут публиковаться в этой схеме.  
   

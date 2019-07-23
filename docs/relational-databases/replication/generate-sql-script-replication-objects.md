@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b7ccc34e-1c22-44b8-8eb5-f6423af3164e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 35531770618cd0430e456b8a1c5c7880edb6c253
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ecfda7e29dc749733f950e111f6b650ee61ac38f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718462"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68128070"
 ---
 # <a name="generate-sql-script-replication-objects"></a>Диалоговое окно «Формирование скрипта SQL» (объекты репликации)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "47718462"
   
 -   **Формирование скрипта SQL**, доступ к которому осуществляется из контекстного меню папки **Репликация** и всех ее вложенных папок в среде [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. С помощью этого диалогового окна в скрипт можно помещать все объекты репликации экземпляра [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   **Формирование скрипта SQL \<имя_объекта>**, доступ к которому осуществляется из контекстного меню публикаций и подписок. С помощью этого диалогового окна в скрипт можно помещать отдельные объекты.  
+-   **Формирование скрипта SQL \<имя_объекта>** , доступ к которому осуществляется из контекстного меню публикаций и подписок. С помощью этого диалогового окна в скрипт можно помещать отдельные объекты.  
   
  Эти диалоговые окна позволяют формировать скрипты с объектами на одном экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], не осуществляют соединения с другими экземплярами для использования в скриптах связанных объектов.  
   

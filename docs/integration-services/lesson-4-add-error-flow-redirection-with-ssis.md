@@ -10,13 +10,12 @@ ms.topic: tutorial
 ms.assetid: 0c8dbda2-75e3-4278-9b4e-dcd220c92522
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0c52d5115539b35f769ce74a35887e0538526deb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3ad643a65eb83b1593b21782ad9784d5062c3899
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65721767"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055758"
 ---
 # <a name="lesson-4-add-error-flow-redirection-with-ssis"></a>Занятие 4: Добавление перенаправления потока ошибок с помощью служб SSIS
 

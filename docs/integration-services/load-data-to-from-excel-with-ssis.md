@@ -10,13 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 77125f88ed8d378a0cc2dc60ae47db641a681a95
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 38694c8637423c1ecd151d439f48bc1c0e962c04
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65720483"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054544"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>Импорт данных из Excel или экспорт данных в Excel с помощью служб SQL Server Integration Services (SSIS)
 

@@ -11,14 +11,13 @@ helpviewer_keywords:
 ms.assetid: cb93c620-4be9-4362-8bf0-af3f2048bdaf
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d1794ec1620cd4b9d0fd8c27f4fa7affc331b53d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 85996d94387fb1a20c7ae21b94307428e21819d2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626802"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68089506"
 ---
 # <a name="hash-warning-event-class"></a>Hash Warning, класс событий
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -61,7 +60,7 @@ ms.locfileid: "47626802"
 |HostName|**nvarchar**|Имя компьютера, на котором выполняется клиентская программа. Этот столбец данных заполняется, если клиент предоставляет имя узла. Чтобы определить имя узла, используйте функцию HOST_NAME.|8|Да|  
 |IntegerData|**int**|Уровень рекурсии (только рекурсия хэширования).|25|Да|  
 |IsSystem|**int**|Указывает, произошло событие в системном или в пользовательском процессе. 1 = системный, 0 = пользовательский.|60|Да|  
-|LoginName|**nvarchar**|Имя пользователя (либо защищенное имя для входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], либо учетные данные Windows в формате *\<домен>\\имя_пользователя\>*).|11|Да|  
+|LoginName|**nvarchar**|Имя пользователя (либо защищенное имя для входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], либо учетные данные Windows в формате *\<домен>\\имя_пользователя\>* ).|11|Да|  
 |LoginSid|**image**|Идентификатор безопасности вошедшего в систему пользователя. Эти сведения можно найти в представлении каталога sys.server_principals. Значение идентификатора безопасности уникально для каждого имени входа на сервере.|41|Да|  
 |NTDomainName|**nvarchar**|Домен Windows, к которому принадлежит пользователь.|7|Да|  
 |NTUserName|**nvarchar**|Имя пользователя Windows.|6|Да|  
