@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 52098678-0858-4a14-ad07-37ebbafca5fc
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: fe6bc228759f937a2da08e9599d2ee28fba99c9f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1a8170dbda2efa4b5ab9ed91692b9e3ec3a0774f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47671236"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68120474"
 ---
 # <a name="mssqlserver8974"></a>MSSQLSERVER_8974
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "47671236"
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
 |Символическое имя|DBCC3_OFF_ROW_DATA_NODE_HAS_TWO_PARENTS|  
-|Текст сообщения|Ошибка в таблице: идентификатор объекта O_ID, идентификатор индекса I_ID, идентификатор секции PN_ID, идентификатор единицы распределения A_ID (тип TYPE). На данный внестрочный узел данных на странице P_ID1, область памяти S_ID1, идентификатор текста TEXT_ID, ссылается страница P_ID2, область памяти S_ID2 и страница P_ID3, область памяти P_ID3.|  
+|Текст сообщения|Ошибка таблицы: идентификатор объекта O_ID, идентификатор индекса I_ID, идентификатор секции PN_ID, идентификатор единицы распределения A_ID (тип TYPE). На данный внестрочный узел данных на странице P_ID1, область памяти S_ID1, идентификатор текста TEXT_ID, ссылается страница P_ID2, область памяти S_ID2 и страница P_ID3, область памяти P_ID3.|  
   
 ## <a name="explanation"></a>Объяснение  
 Во внестрочном узле данных есть две записи данных или индекса, которые фиксируют его как дочерний узел. У узла может быть только один родительский узел.  

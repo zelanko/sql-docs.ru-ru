@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 7c6de71b-865c-41db-9413-ad9b3562e579
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: b97c44ae954886058f771ad0ae6571ebe611927d
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: 346044530087c40c468abe9d304231ce06220845
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361635"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984433"
 ---
 # <a name="deny-service-broker-permissions-transact-sql"></a>DENY, запрет разрешений компонента Service Broker (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,19 +57,19 @@ DENY permission  [ ,...n ] ON
  *permission*  
  Указывает разрешение, которое может быть запрещено для защищаемых элементов компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Список разрешений см. в подразделе "Примечания" далее в этом разделе.  
   
- CONTRACT **::**_contract_name_  
+ CONTRACT **::** _contract_name_  
  Указывает контракт, для которого запрещено разрешение. Квалификатор области **::** является обязательным.  
   
- MESSAGE TYPE **::**_message_type_name_  
+ MESSAGE TYPE **::** _message_type_name_  
  Указывает тип сообщений, для которого запрещено разрешение. Квалификатор области **::** является обязательным.  
   
- REMOTE SERVICE BINDING **::**_remote_binding_name_  
+ REMOTE SERVICE BINDING **::** _remote_binding_name_  
  Указывает привязку удаленной службы, для которой запрещено разрешение. Квалификатор области **::** является обязательным.  
   
- ROUTE **::**_route_name_  
+ ROUTE **::** _route_name_  
  Указывает маршрут, для которого запрещено разрешение. Квалификатор области **::** является обязательным.  
   
- SERVICE **::**_message_type_name_  
+ SERVICE **::** _message_type_name_  
  Указывает службу, для которой запрещено разрешение. Квалификатор области **::** является обязательным.  
   
  *database_principal*  

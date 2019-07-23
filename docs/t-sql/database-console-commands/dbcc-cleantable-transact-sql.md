@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: 0dbbc956-15b1-427b-812c-618a044d07fa
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: 177ef5d128bc14ee112e2b0a19e05a10f174bbc9
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 8cb3c1c0eba5c39083b6a6b39b4040639909808c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685661"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68101968"
 ---
 # <a name="dbcc-cleantable-transact-sql"></a>DBCC CLEANTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -66,7 +65,7 @@ DBCC CLEANTABLE
  Подавляет вывод всех информационных сообщений.  
   
 ## <a name="remarks"></a>Remarks  
-Инструкция DBCC CLEANTABLE освобождает место на диске после удаления столбца переменной длины. Столбец переменной длины может иметь один из следующих типов данных: **varchar**, **nvarchar**, **varchar(max)**, **nvarchar(max)**, **varbinary**, **varbinary(max)**, **text**, **ntext**, **image**, **sql_variant** и **xml**. Дисковое пространство после удаления столбца фиксированной длины не освобождается.
+Инструкция DBCC CLEANTABLE освобождает место на диске после удаления столбца переменной длины. Столбец переменной длины может иметь один из следующих типов данных: **varchar**, **nvarchar**, **varchar(max)** , **nvarchar(max)** , **varbinary**, **varbinary(max)** , **text**, **ntext**, **image**, **sql_variant** и **xml**. Дисковое пространство после удаления столбца фиксированной длины не освобождается.
 Если удаленные столбцы были сохранены в строке, инструкция DBCC CLEANTABLE освободит пространство из единицы распределения IN_ROW_DATA таблицы. Если столбцы были сохранены вне строк, пространство будет освобождено либо из единицы распределения ROW_OVERFLOW_DATA, либо из единицы распределения LOB_DATA, в зависимости от типа данных удаленного столбца. Если в результате освобождения пространства из страниц ROW_OVERFLOW_DATA или LOB_DATA была образована пустая страница, инструкция DBCC CLEANTABLE удалит эту страницу.
 Инструкция DBCC CLEANTABLE выполняется за одну или несколько транзакций. Если не указан размер пакета, команда обрабатывает всю таблицу за одну транзакцию, при этом на время обработки производится ее монопольная блокировка. Для некоторых больших таблиц длительности транзакции и необходимого размера журнала может оказаться недостаточно. Если указан размер пакета, команда выполняет серию транзакций, в каждой из которых обрабатывается указанное число строк. Инструкция DBCC CLEANTABLE не может выполняться в транзакции, вложенной в другую транзакцию.
 Эта операция выполняется с полной регистрацией.

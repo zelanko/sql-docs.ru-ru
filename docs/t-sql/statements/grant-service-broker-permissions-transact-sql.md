@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: c5579976-97c4-4123-be0c-d0b98a9e38fb
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 272702dcf1d6fa05af9c8df3fa1562a1752890ec
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 33a8623c3e098589015a00185c8ab2a895b1410b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327835"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050758"
 ---
 # <a name="grant-service-broker-permissions-transact-sql"></a>GRANT, предоставление разрешения на компонент Service Broker (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,19 +55,19 @@ GRANT permission  [ ,...n ] ON
  *permission*  
  Указывает разрешение, которое может быть предоставлено на защищаемый объект компонента Service Broker.  Перечислены ниже.  
   
- CONTRACT **::**_contract_name_  
+ CONTRACT **::** _contract_name_  
  Указывает контракт, на который предоставляется разрешение. Квалификатор области "::" является обязательным.  
   
- MESSAGE TYPE **::**_message_type_name_  
+ MESSAGE TYPE **::** _message_type_name_  
  Указывает тип сообщений, на которые предоставляется разрешение. Квалификатор области "::" является обязательным.  
   
- REMOTE SERVICE BINDING **::**_remote_binding_name_  
+ REMOTE SERVICE BINDING **::** _remote_binding_name_  
  Указывает привязку удаленной службы, на которую предоставляется разрешение. Квалификатор области "::" является обязательным.  
   
- ROUTE **::**_route_name_  
+ ROUTE **::** _route_name_  
  Указывает маршрут, на который предоставляется разрешение. Квалификатор области "::" является обязательным.  
   
- SERVICE **::**_имя_службы_  
+ SERVICE **::** _имя_службы_  
  Указывает службу, на которую предоставляется разрешение. Квалификатор области "::" является обязательным.  
   
  *database_principal*  

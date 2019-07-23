@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0c0439c5230d39ae9dc856c9e1c5c5553e250c42
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 143bba36c1f85877fd3a0504dd8345c754ec055d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65723666"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68023588"
 ---
 # <a name="install-integration-services"></a>Установка служб Integration Services
 
@@ -85,7 +84,7 @@ ms.locfileid: "65723666"
 
 Чтобы произвести полную установку служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], выберите нужные компоненты из приведенного ниже списка.
 
--   **Службы Integration Services (SSIS)**. Установите службы SSIS с помощью мастера установки SQL Server. При выборе служб SSIS устанавливаются следующие компоненты:
+-   **Службы Integration Services (SSIS)** . Установите службы SSIS с помощью мастера установки SQL Server. При выборе служб SSIS устанавливаются следующие компоненты:
 
     -   поддержка каталога SSIS в ядре СУБД SQL Server;
 
@@ -97,7 +96,7 @@ ms.locfileid: "65723666"
 
 -   **Ядро СУБД SQL Server**. Установите ядро СУБД с помощью мастера установки SQL Server. При выборе ядра СУБД можно создать и разместить базу данных каталога SSIS `SSISDB`, которая служит для хранения, выполнения и мониторинга пакетов SSIS, а также управления ими.
 
--   **SQL Server Data Tools (SSDT)**. Инструкции по скачиванию и установке SQL Server Data Tools (SSDT) см. в разделе [Скачать SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md). Установив SSDT, вы сможете разрабатывать и развертывать пакеты SSIS. В составе SSDT устанавливаются следующие компоненты:
+-   **SQL Server Data Tools (SSDT)** . Инструкции по скачиванию и установке SQL Server Data Tools (SSDT) см. в разделе [Скачать SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md). Установив SSDT, вы сможете разрабатывать и развертывать пакеты SSIS. В составе SSDT устанавливаются следующие компоненты:
 
     -   средства проектирования и разработки пакетов SSIS, включая конструктор служб SSIS;
 

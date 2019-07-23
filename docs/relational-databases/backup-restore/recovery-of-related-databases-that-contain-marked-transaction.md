@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 77a0d9c0-978a-4891-8b0d-a4256c81c3f8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a548fe7327c6e3c8ac4febca3db442490c983058
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 31ef04cc1aa02985fe699b0192c25bfbc4e88ca1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63025485"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68033524"
 ---
 # <a name="recovery-of-related--databases-that-contain-marked-transaction"></a>Восстановление связанных баз данных, которые содержат помеченную транзакцию
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,11 +62,11 @@ BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'
 ## <a name="transact-sql-syntax-for-recovering-to-a-mark"></a>Синтаксис языка Transact-SQL для восстановления до метки  
  Отметив помеченную транзакцию с помощью инструкции[RESTORE LOG](../../t-sql/statements/restore-statements-transact-sql.md), можно использовать одно из следующих предложений, чтобы остановиться на метке или перед ней.  
   
--   Используйте предложение WITH STOPATMARK = **'**_<имя_метки>_**'**, чтобы указать, что помеченная транзакция представляет собой точку восстановления.  
+-   Используйте предложение WITH STOPATMARK = **'** _<имя_метки>_ **'** , чтобы указать, что помеченная транзакция представляет собой точку восстановления.  
   
      С помощью предложения STOPATMARK выполняется накат к метке, при этом помеченная транзакция включается в накат.  
   
--   Используйте предложение WITH STOPBEFOREMARK = **'**_<имя_метки>_**'**, чтобы указать, что запись журнала непосредственно перед меткой представляет собой точку восстановления.  
+-   Используйте предложение WITH STOPBEFOREMARK = **'** _<имя_метки>_ **'** , чтобы указать, что запись журнала непосредственно перед меткой представляет собой точку восстановления.  
   
      С помощью предложения STOPBEFOREMARK выполняется накат к метке, при этом помеченная транзакция не включается в накат.  
   

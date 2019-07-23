@@ -22,14 +22,13 @@ helpviewer_keywords:
 ms.assetid: a0455b71-ca25-476e-a7a8-0770f1860bb7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 636d6979451769151725ba1743ea8a1f3238ccc9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 66d10ee997949d8415ebe3ed582f63b1994840cd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56043175"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086763"
 ---
 # <a name="datetimeoffset-transact-sql"></a>datetimeoffset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -131,7 +130,7 @@ SELECT @datetimeoffset AS '@datetimeoffset ', @date AS 'date';
   
 ```  
   
-При преобразовании в тип **time(n)** копируются час, минута, секунда и доли секунды. Значение часового пояса усекается. Если точность значения типа **datetimeoffset(n)** больше точности значения типа **time(n)**, оно округляется в сторону увеличения. Следующий код демонстрирует результаты преобразования значения `datetimeoffset(4)` в значение `time(3)`.
+При преобразовании в тип **time(n)** копируются час, минута, секунда и доли секунды. Значение часового пояса усекается. Если точность значения типа **datetimeoffset(n)** больше точности значения типа **time(n)** , оно округляется в сторону увеличения. Следующий код демонстрирует результаты преобразования значения `datetimeoffset(4)` в значение `time(3)`.
   
 ```sql
 DECLARE @datetimeoffset datetimeoffset(4) = '12-10-25 12:32:10.1237 +01:0';  
@@ -181,7 +180,7 @@ SELECT @datetimeoffset AS '@datetimeoffset', @smalldatetime AS '@smalldatetime';
 --(1 row(s) affected)  
 ```  
   
-При преобразовании в тип **datetime2(n)** дата и время копируются в значение **datetime2**, а часовой пояс усекается. Если точность значения типа **datetime2(n)** больше точности значения типа **datetimeoffset(n)**, доли секунды усекаются. Следующий код демонстрирует результаты преобразования значения `datetimeoffset(4)` в значение `datetime2(3)`.
+При преобразовании в тип **datetime2(n)** дата и время копируются в значение **datetime2**, а часовой пояс усекается. Если точность значения типа **datetime2(n)** больше точности значения типа **datetimeoffset(n)** , доли секунды усекаются. Следующий код демонстрирует результаты преобразования значения `datetimeoffset(4)` в значение `datetime2(3)`.
   
 ```sql
 DECLARE @datetimeoffset datetimeoffset(4) = '1912-10-25 12:24:32.1277 +10:0';  

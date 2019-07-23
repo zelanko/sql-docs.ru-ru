@@ -11,14 +11,13 @@ dev_langs:
 ms.assetid: 73f598cf-b02a-4dba-8d89-9fc0b55a12b8
 author: pmasl
 ms.author: umajay
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: fc06dca68c6b6a4cedc730433401076ca07b126b
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: f8c5d7ac822546d8334f1a174684f35733d9571b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59042343"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68116491"
 ---
 # <a name="dbcc-pdwshowspaceused-transact-sql"></a>DBCC PDW_SHOWSPACEUSED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -55,7 +54,7 @@ DBCC PDW_SHOWSPACEUSED ( " [ database_name . [ schema_name ] . ] | [ schema_name
 |data_space|BIGINT|Пространство, используемое для данных, в КБ.|  
 |index_space|BIGINT|Пространство, используемое для индексов, в КБ.|  
 |unused_space|BIGINT|Пространство, которое является частью зарезервированного пространства и не используется, в КБ.|  
-|pdw_node_id|ssNoversion|Вычислительный узел, который используется для данных.|  
+|pdw_node_id|INT|Вычислительный узел, который используется для данных.|  
   
 Это результирующий набор для одной таблицы.
   
@@ -66,8 +65,8 @@ DBCC PDW_SHOWSPACEUSED ( " [ database_name . [ schema_name ] . ] | [ schema_name
 |data_space|BIGINT|Пространство, используемое для данных, в КБ.||  
 |index_space|BIGINT|Пространство, используемое для индексов, в КБ.||  
 |unused_space|BIGINT|Пространство, которое является частью зарезервированного пространства и не используется, в КБ.||  
-|pdw_node_id|ssNoversion|Вычислительный узел, который применяется для предоставления сведений об использовании пространства.||  
-|distribution_id|ssNoversion|Распределение, которое применяется для предоставления сведений об использовании пространства.|Для реплицированных таблиц значение равно –1.|  
+|pdw_node_id|INT|Вычислительный узел, который применяется для предоставления сведений об использовании пространства.||  
+|distribution_id|INT|Распределение, которое применяется для предоставления сведений об использовании пространства.|Для реплицированных таблиц значение равно –1.|  
   
 ## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 ### <a name="a-dbcc-pdwshowspaceused-basic-syntax"></a>A. Базовый синтаксис DBCC PDW_SHOWSPACEUSED  

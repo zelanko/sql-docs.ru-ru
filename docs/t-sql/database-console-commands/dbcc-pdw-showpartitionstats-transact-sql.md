@@ -10,14 +10,13 @@ dev_langs:
 - TSQL
 author: pmasl
 ms.author: umajay
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 7b80b96436b8cc7346a69a8b2448ade60dd009b5
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: ac6d3ac9128c8f27a898f4b903f74d1e9ab9bb1c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59042303"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68116496"
 ---
 # <a name="dbcc-pdwshowpartitionstats-transact-sql"></a>DBCC PDW_SHOWPARTITIONSTATS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -46,12 +45,12 @@ DBCC PDW_SHOWPARTITIONSTATS ( " [ database_name . [ schema_name ] . ] | [ schema
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|partition_number|ssNoversion|Номер секции.|  
+|partition_number|INT|Номер секции.|  
 |used_page_count|BIGINT|Число страниц, используемых для данных.|  
 |reserved_page_count|BIGINT|Количество страниц, зарезервированных в секции.|  
 |row_count|BIGINT|Число строк в секции.|  
-|pdw_node_id|ssNoversion|Вычислительный узел для данных.|  
-|distribution_id|ssNoversion|Идентификатор единицы распределения для данных.|  
+|pdw_node_id|INT|Вычислительный узел для данных.|  
+|distribution_id|INT|Идентификатор единицы распределения для данных.|  
   
 ## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 ### <a name="a-dbcc-pdwshowpartitionstats-basic-syntax-examples"></a>A. Примеры базового синтаксиса DBCC PDW_SHOWPARTITIONSTATS  

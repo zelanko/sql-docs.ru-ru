@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 99f66ed9-3a75-4e38-ad7d-6c27cc3529a9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0b6b540227212058518a62debc6b113f31beab37
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: a0df5b572fe7c26f250c2172e5fa87b9fd01da85
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52394081"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68127133"
 ---
 # <a name="upgrade-a-database-using-detach-and-attach-transact-sql"></a>обновить базу данных при помощи отсоединения и присоединения (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -108,7 +107,7 @@ ms.locfileid: "52394081"
   
     В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]только что присоединенная база данных отображается в обозревателе объектов не сразу. Чтобы отобразить базу данных, щелкните в обозревателе объектов пункт **Вид** , а затем **Обновить**. Теперь, раскрыв в обозревателе объектов узел **Базы данных** , можно увидеть в списке присоединенную базу данных.  
   
-##  <a name="FollowUp"></a> Продолжение: после обновления базы данных SQL Server  
+##  <a name="FollowUp"></a> Дальнейшие действия. После обновления базы данных SQL Server  
 Если база данных содержит полнотекстовые индексы, то в процессе обновления будет произведен их импорт, сброс или перестроение в зависимости от установленного значения свойства сервера **upgrade_option** . Если при обновлении выбран режим импорта (**upgrade_option** = 2) или перестроения (**upgrade_option** = 0), полнотекстовые индексы во время обновления будут недоступны. В зависимости от объема индексируемых данных процесс импорта может занять несколько часов, а перестроение — в несколько (до десяти) раз больше. Обратите внимание, что если для обновления выбран режим «Импортировать», а полнотекстовый каталог недоступен, то связанные с ним полнотекстовые индексы будут перестроены. Чтобы изменить значение свойства сервера **upgrade_option** , следует использовать процедуру [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md).  
   
 ### <a name="dbcompat"></a> Уровень совместимости баз данных после обновления  

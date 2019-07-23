@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2e51ea06-81cb-4454-b111-da02808468e6
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: a0f114c9e2783c8989a2bb4682d488eaea087814
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 700deff13eba1ce6320a49f997c20a9b40769eee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369986"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915205"
 ---
 # <a name="performance-improvements-using-dta-recommendations"></a>Повышение производительности с помощью рекомендаций DTA
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,8 +30,8 @@ ms.locfileid: "53369986"
 Чтобы продемонстрировать преимущества рекомендаций DTA по повышению производительности рабочей нагрузки, мы поэкспериментировали с несколькими реальными рабочими нагрузками клиентов. DTA проанализировал отдельные запросы, а также полную рабочую нагрузку запросов каждой рабочей нагрузки клиентов. Рассмотрим три альтернативных варианта:
   
   1. **Только columnstore**: построение для всех таблиц только индексов columnstore без использования DTA. 
-  2. **DTA (только rowstore)**: выполнение DTA с возможностью рекомендовать только индексы rowstore.
-  3. **DTA (rowstore и columnstore)**: выполнение DTA с возможностью рекомендовать индексы rowstore и columnstore.  
+  2. **DTA (только rowstore)** : выполнение DTA с возможностью рекомендовать только индексы rowstore.
+  3. **DTA (rowstore и columnstore)** : выполнение DTA с возможностью рекомендовать индексы rowstore и columnstore.  
    
 В каждом случае мы реализовали рекомендованные индексы. Мы сообщили время ЦП (в миллисекундах), усредненное по нескольким запускам запроса или рабочей нагрузки. На графике ниже представлено время ЦП (в миллисекундах) для рабочих нагрузок в двух разных базах данных клиентов. Обратите внимание, что ось У (время ЦП) использует логарифмическую шкалу.   
 

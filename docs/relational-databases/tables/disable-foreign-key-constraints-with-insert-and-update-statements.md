@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 029168d7-085e-4b13-9b86-5644b67c6e24
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 658e2df7a42492e71d12631a68aa38a669aa60cb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 83f1489e79bee300ce6a5265d35975f4a6017766
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739482"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68031658"
 ---
 # <a name="disable-foreign-key-constraints-with-insert-and-update-statements"></a>Отключение ограничений внешнего ключа для инструкций INSERT и UPDATE
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -70,7 +69,7 @@ ms.locfileid: "47739482"
   
 #### <a name="to-disable-a-foreign-key-constraint-for-insert-and-update-statements"></a>Отключение ограничений внешнего ключа для инструкций INSERT и UPDATE  
   
-1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   

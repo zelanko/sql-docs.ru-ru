@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8d6d9954-ff6b-4e58-882e-eff0174f0d07
 author: rothja
 ms.author: jroth
-manager: jroth
-ms.openlocfilehash: a1b25ea57ef34ebe8dd0c098695a0b59b6f87472
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 94430d6b32567f7f185f1a515f8391d4ee01b3a8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66789635"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67991569"
 ---
 # <a name="always-on-availability-groups-troubleshooting-and-monitoring-guide"></a>Руководство по мониторингу и устранению неполадок в группах доступности AlwaysOn
  Это руководство поможет вам приступить к мониторингу групп доступности AlwaysOn и устранению некоторых распространенных проблем с ними. Оно предоставляет исходное содержимое, а также целевую страницу с полезной информацией, опубликованной в другом месте. Хотя это руководство не может полностью охватить все возможные проблемы с группами доступности, оно способно указать вам правильное направление для анализа первопричин и разрешения проблем. 

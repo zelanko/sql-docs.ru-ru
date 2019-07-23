@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 author: aliceku
 ms.author: aliceku
-manager: craigg
-ms.openlocfilehash: 67716270a13f71e23a0294db632ef0b0d51ca76e
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: f06a2fd1b8734701fe261cba42d66ca1652e06fc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241382"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140702"
 ---
 # <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>Обслуживание соединителя SQL Server и устранение неполадок
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -168,7 +167,7 @@ ms.locfileid: "59241382"
 
 **К каким конечным точкам нужен доступ соединителю SQL Server?** Соединитель взаимодействует с двумя конечными точками, которые необходимо внести в список разрешений. Для исходящей связи с этими службами нужен только один порт: 443 (HTTPS).
 -  login.microsoftonline.com/*:443
--  *.vault.azure.net/*:443
+-  *.vault.azure.net/* :443
   
 **Какие минимальные уровни разрешений необходимы для каждого этапа конфигурации в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]?**  
  Хотя все действия по настройке можно выполнить от имени члена предопределенной роли сервера sysadmin, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] рекомендует минимизировать используемые разрешения. В приведенном ниже списке указаны минимальные уровни разрешений для каждого действия.  

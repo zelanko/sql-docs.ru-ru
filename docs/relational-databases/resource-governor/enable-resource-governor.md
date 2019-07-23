@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4d17af53-cf11-4ce4-aab4-deda94a49836
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 282316013dad44d73e165984167f9cff224c41a6
-ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
+ms.openlocfilehash: 23ff55d4fcb9e9cf398e732376a01ab5495b2a4b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55689827"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68099250"
 ---
 # <a name="enable-resource-governor"></a>Активация регулятора ресурсов
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

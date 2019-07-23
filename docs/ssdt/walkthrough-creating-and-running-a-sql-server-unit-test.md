@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 992c1d8e-3729-438b-9ef4-cd103e28f145
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f49d7d43e136adaadb2bda5b37fa6f7e8b63f4e7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d8ed1dbfa5ffcb61200f7838753dc1681f8c6509
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65101942"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68141210"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>Пошаговое руководство. Создание и запуск модульного теста SQL Server
 С помощью этого пошагового руководства вы создадите модульный тест создать, который проверяет работу нескольких хранимых процедур. Модульные тесты SQL Server создаются для выявления ошибок кода, которые могут вызвать неверную работу приложения. Модульные тесты SQL Server и тесты приложений можно запускать в одном автоматизированном наборе тестов.  

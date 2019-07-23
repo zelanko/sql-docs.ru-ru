@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 826f513e-9ad0-46b9-87ad-7525713638c8
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: a6b7b9e2fdb8673571803e9b98de80dd1d26040f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: db85df99a2b37e2d92997dce579d77d0f31f7c0e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62659997"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082278"
 ---
 # <a name="revoke-endpoint-permissions-transact-sql"></a>REVOKE, отмена разрешений на конечные точки (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,8 +51,8 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  *permission*  
  Определяет разрешения, на конечную точку, которые могут быть предоставлены. Список разрешений см. в подразделе "Примечания" далее в этом разделе.  
   
- ON ENDPOINT **::**_endpoint_name_  
- Указывает конечную точку, на которую предоставляется разрешение. Квалификатор области (**::**) является обязательным.  
+ ON ENDPOINT **::** _endpoint_name_  
+ Указывает конечную точку, на которую предоставляется разрешение. Квалификатор области ( **::** ) является обязательным.  
   
  { FROM | TO } \<server_principal> Указывает имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], у которого отменяется разрешение.  
   

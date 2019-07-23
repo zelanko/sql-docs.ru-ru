@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4c4beea2-6cbc-4352-9db6-49ea8130bb64
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 89a6251bca61f49b5acd6803702dc44cb21584c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4233a277fa20a4bd951b717bfad0039612b5e77e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62861504"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037610"
 ---
 # <a name="create-a-database"></a>Создание базы данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -82,7 +81,7 @@ ms.locfileid: "62861504"
   
 4.  Чтобы создать базу данных, приняв все значения по умолчанию, нажмите кнопку **ОК**; иначе продолжайте выполнение следующих дополнительных шагов.  
   
-5.  Чтобы изменить имя владельца, нажмите (**…**) и выберите другого владельца.  
+5.  Чтобы изменить имя владельца, нажмите ( **…** ) и выберите другого владельца.  
   
     > [!NOTE]  
     >  Параметр **Использовать полнотекстовое индексирование** всегда установлен и недоступен (т. к. начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]все пользовательские базы данных поддерживают полнотекстовый поиск).  

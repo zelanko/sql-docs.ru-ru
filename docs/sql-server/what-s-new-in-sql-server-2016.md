@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 39be659b50c7cc068c3887a0c0139b312c46cf0b
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: a5cbc96390799219347415719ddf6754e3c33bbb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657988"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984752"
 ---
 # <a name="whats-new-in-sql-server-2016"></a>Что нового в SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]  
@@ -59,7 +58,7 @@ ms.locfileid: "58657988"
 - **[Службы R SQL Server](../advanced-analytics/r-services/what-s-new-in-sql-server-r-services.md)** интегрируют язык R, используемый для статистического анализа в SQL Server. 
 - Новое **средство проверки согласованности базы данных (DBCC)** выполняется для внутренних целей при обнаружении возможных проблем с повреждением данных.
 - **Прямой запрос**, выполняющийся перед импортом динамических внешних данных, теперь поддерживает дополнительные источники данных, включая Azure SQL, Oracle и Teradata. 
-- Реализовано множество новых **функций DAX (выражения доступа к данным)**.
+- Реализовано множество новых **функций DAX (выражения доступа к данным)** .
 - Новое пространство имен **[Microsoft.AnalysisServices.Tabular](https://msdn.microsoft.com/library/microsoft.analysisservices.tabular.aspx)** управляет экземплярами и моделями в табличном режиме. 
 - [Управляющие объекты службы Analysis Services (AMO)](https://msdn.microsoft.com/library/mt436122.aspx) переработаны и теперь содержат вторую сборку — **Microsoft.AnalysisServices.Core.dll**.
 

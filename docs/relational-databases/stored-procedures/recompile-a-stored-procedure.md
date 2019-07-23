@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: b90deb27-0099-4fe7-ba60-726af78f7c18
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 21298500f7d5bc135b8e9068c97e2928d1853b6f
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 72f0717ad537eea88948a156b5bc2756ab64b677
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67583575"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136706"
 ---
 # <a name="recompile-a-stored-procedure"></a>Перекомпиляция хранимой процедуры
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -56,7 +55,7 @@ ms.locfileid: "67583575"
 ###  <a name="Security"></a> безопасность  
   
 ####  <a name="Permissions"></a> Permissions  
- Параметр**WITH RECOMPILE**   
+ Параметр**WITH RECOMPILE**  
  Если этот параметр используется при создании определения процедуры, то необходимо разрешение CREATE PROCEDURE в базе данных и разрешение ALTER на схему, в которой создается процедура.  
   
  Если этот параметр используется в инструкции EXECUTE, требуются разрешения EXECUTE на процедуру. Разрешения на саму инструкцию EXECUTE не требуются, однако требуются разрешения на выполнение процедуры, упоминаемой в инструкции EXECUTE. Дополнительные сведения см. в разделе [EXECUTE (Transact-SQL)](../../t-sql/language-elements/execute-transact-sql.md).  
@@ -64,7 +63,7 @@ ms.locfileid: "67583575"
  Указание запроса **RECOMPILE**  
  Эта возможность используется при создании процедуры, и указание включается в инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] в процедуре. Таким образом, требуется разрешение CREATE PROCEDURE в базе данных и разрешение ALTER на схему, в которой создается процедура.  
   
- Выполнение системной хранимой процедуры**sp_recompile**   
+ Выполнение системной хранимой процедуры**sp_recompile**  
  Необходимо разрешение ALTER на указанную процедуру.  
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  

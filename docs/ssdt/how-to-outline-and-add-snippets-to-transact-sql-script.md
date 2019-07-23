@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 543e7ce7-8639-4281-8a91-85314755e5de
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 842fb0e2b111b5bcd17b26d13db15e47aa5c1ad1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c8ab757cac0622c5674bb2008b5bafbbc07c182c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65099658"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035126"
 ---
 # <a name="how-to-outline-and-add-snippets-to-transact-sql-script"></a>Руководство. формировать структуру и добавлять фрагменты кода к скриптам Transact-SQL
 В набор SQL Server Data Tools входит библиотека кода, состоящая из фрагментов кода, которые можно сразу вставить в приложение. В каждом фрагменте выполняется завершенная задача написания скриптов, например создание функции, таблицы, триггера, индекса, представления, определяемого пользователем типа данных и т. д. Вы можете вставить фрагмент в исходный код с помощью нескольких щелчков кнопкой мыши. Эти фрагменты кода повышают производительность за счет сокращения времени, затрачиваемого на ввод.  
