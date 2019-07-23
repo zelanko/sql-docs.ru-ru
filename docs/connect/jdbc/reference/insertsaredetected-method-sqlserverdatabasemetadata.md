@@ -1,5 +1,5 @@
 ---
-title: Метод insertsAreDetected (SQLServerDatabaseMetaData) | Документация Майкрософт
+title: Метод Инсертсаредетектед (SQLServerDatabaseMetaData) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: f296cc42-9d26-48c3-a360-bcf51c31f7fb
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a7d27da8ff8baf048e7890efab212b7835f4037e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 4d2889af814e7c7122c9784f5ac9a70421731c09
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801235"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977875"
 ---
 # <a name="insertsaredetected-method-sqlserverdatabasemetadata"></a>Метод insertsAreDetected (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -65,7 +64,7 @@ public boolean insertsAreDetected(int type)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод insertsAreDetected указывается с помощью метода insertsAreDetected в интерфейсе java.sql.DatabaseMetaData.  
+ Этот метод Инсертсаредетектед задается методом Инсертсаредетектед в интерфейсе Java. SQL. DatabaseMetaData.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не обнаруживает вставленные строки ни для одного типа курсора.  

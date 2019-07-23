@@ -10,13 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: c1e21c1e936b9da10fd1adfcc5afab901b0027bc
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 201314f5869b9b1aab52b2f101f2396656448f79
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66791479"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994784"
 ---
 # <a name="retrieve-data-from-a-filestream-column-using-isequentialstream-ole-db"></a>Извлечение данных из столбца FILESTREAM с помощью интерфейса ISequentialStream (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,7 +24,7 @@ ms.locfileid: "66791479"
 
   В этом образце используется интерфейс ISequentialStream в интерфейсе ICommandText, чтобы получить одну запись из столбца FILESTREAM.  
   
- Дополнительные сведения о функции filestream, см. в разделе [поддержка FILESTREAM](../../../oledb/features/filestream-support.md).  
+ Дополнительные сведения о функции FILESTREAM см. в разделе [Поддержка FILESTREAM](../../../oledb/features/filestream-support.md).  
   
 ## <a name="example"></a>Пример  
  Убедитесь в том, что переменная среды INCLUDE включает каталог, содержащий файл msoledbsql.h.  

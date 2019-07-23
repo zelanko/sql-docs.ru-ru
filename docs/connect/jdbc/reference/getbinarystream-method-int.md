@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: de22a6c4-1ba3-4ed0-91a2-bf235c2ceec3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d45d0ce6b5d6509ffd7b561352a41c69592f86b0
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: e0add171861f2ea9e021b9f9342968baf1601557
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66799811"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953703"
 ---
 # <a name="getbinarystream-method-int"></a>Метод getBinaryStream (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,13 +40,13 @@ public java.io.InputStream getBinaryStream(int columnIndex)
  Значение типа **int**, указывающее индекс столбца.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Объект, InputStream.  
+ Объект InputStream.  
   
 ## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getBinaryStream указывается с помощью метода getBinaryStream в интерфейсе java.sql.ResultSet.  
+ Этот метод getBinaryStream задается методом getBinaryStream в интерфейсе Java. SQL. Result.  
   
  Этот метод можно использовать только с типами данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] binary, varbinary, varbinary(max) и image. Если использовать его с другими типами данных, будет вызвано исключение.  
   
