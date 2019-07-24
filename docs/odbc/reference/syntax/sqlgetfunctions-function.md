@@ -1,7 +1,7 @@
 ---
 title: Функция SQLGetFunctions | Документация Майкрософт
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/18/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,6 +11,7 @@ apiname:
 - SQLGetFunctions
 apilocation:
 - sqlsrv32.dll
+- odbc32.dll
 apitype: dllExport
 f1_keywords:
 - SQLGetFunctions
@@ -19,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: 0451d2f9-0f4f-46ba-b252-670956a52183
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 86f888955e6188cd7f90e54f39eeef3723dcfbe8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: edb58ebff212e494b84aed12397def2876d3728d
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67897717"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345610"
 ---
 # <a name="sqlgetfunctions-function"></a>SQLGetFunctions, функция
-**Соответствие стандартам**  
- Представленные версии: Соответствие стандартам 1.0 ODBC: ISO-92  
+**Соответствия**  
+ Представленная версия: Соответствие стандартам ODBC 1,0: ISO 92  
   
  **Сводка**  
- **SQLGetFunctions** возвращает сведения о том, поддерживает ли драйвер определенной функции ODBC. Эта функция реализуется в диспетчере драйверов. Он также может осуществляться в драйверах. Если драйвер реализует **SQLGetFunctions**, диспетчер драйверов вызывает функцию в драйвере. В противном случае он выполняет саму функцию.  
+ **SQLGetFunctions** возвращает сведения о том, поддерживает ли драйвер определенную функцию ODBC. Эта функция реализована в диспетчере драйверов. его также можно реализовать в драйверах. Если драйвер реализует **SQLGetFunctions**, диспетчер драйверов вызывает функцию в драйвере. В противном случае он выполняет саму функцию.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,47 +45,47 @@ SQLRETURN SQLGetFunctions(
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *ConnectionHandle*  
+ *коннектионхандле*  
  [Input] Дескриптор подключения  
   
  *FunctionId*  
- [Вход] Объект **#define** значение, определяющее функции ODBC интерес; **SQL_API_ODBC3_ALL_FUNCTIONS orSQL_API_ALL_FUNCTIONS**. **SQL_API_ODBC3_ALL_FUNCTIONS** используется ODBC 3 *.x* приложения для определения поддержки ODBC 3 *.x* и более ранних функции. **SQL_API_ALL_FUNCTIONS** используется ODBC 2 *.x* приложения для определения поддержки ODBC 2 *.x* и более ранних функции.  
+ Входной Значение **#define** , определяющее интересующую функцию ODBC; **SQL_API_ODBC3_ALL_FUNCTIONS orSQL_API_ALL_FUNCTIONS**. **SQL_API_ODBC3_ALL_FUNCTIONS** используется приложением ODBC 3 *. x* для определения поддержки функций ODBC 3 *. x* и более ранних версий. **SQL_API_ALL_FUNCTIONS** используется приложением ODBC 2 *. x* для определения поддержки функций ODBC 2 *. x* и более ранних версий.  
   
- Список **#define** значений, указывающих функции ODBC, см. в таблицах «Комментарии».  
+ Список значений **#define** , которые обозначают функции ODBC, см. в таблицах в комментариях.  
   
- *SupportedPtr*  
- [Выход]  Если *FunctionId* определяет одну функцию ODBC, *SupportedPtr* точек в одном SQLUSMALLINT значение SQL_TRUE Если указанная функция поддерживается драйвером, и значение SQL_FALSE, если это не поддерживается.  
+ *суппортедптр*  
+ Проверки  Если параметр *FunctionId* определяет одну функцию ODBC, *суппортедптр* указывает на одно значение склусмаллинт, SQL_TRUE, если указанная функция поддерживается драйвером, и SQL_FALSE, если она не поддерживается.  
   
- Если *FunctionId* является SQL_API_ODBC3_ALL_FUNCTIONS, *SupportedPtr* указывает на массив SQLSMALLINT с количеством элементов, равным SQL_API_ODBC3_ALL_FUNCTIONS_SIZE. Этот массив обрабатывается диспетчером драйверов как 4000 разрядный точечный рисунок, который может использоваться для определения ли ODBC 3 *.x* или поддерживается функция earlier. Макрос SQL_FUNC_EXISTS вызывается для определения функции поддержки. (См. в разделе «Комментарии».) ODBC 3 *.x* приложение может вызвать **SQLGetFunctions** с SQL_API_ODBC3_ALL_FUNCTIONS с ODBC 3 *.x* или ODBC 2 *.x* драйвер.  
+ Если параметр *FunctionId* имеет значение SQL_API_ODBC3_ALL_FUNCTIONS, *суппортедптр* указывает на массив SQLSMALLINT с числом элементов, равным SQL_API_ODBC3_ALL_FUNCTIONS_SIZE. Этот массив обрабатывается диспетчером драйверов как 4 000-разрядный точечный рисунок, который можно использовать для определения того, поддерживается ли функция ODBC 3 *. x* или более ранней версии. Для определения поддержки функций вызывается макрос SQL_FUNC_EXISTS. (См. раздел "Комментарии".) Приложение ODBC 3 *. x* может вызывать **SQLGetFunctions** с SQL_API_ODBC3_ALL_FUNCTIONS с помощью драйвера ODBC 3 *. x* или ODBC 2 *. x* .  
   
- Если *FunctionId* является SQL_API_ALL_FUNCTIONS, *SupportedPtr* указывает на массив SQLUSMALLINT 100 элементов. Массив индексируется по **#define** значения, используемые свойством *FunctionId* для идентификации каждой функции ODBC; некоторые элементы массива являются используется и зарезервировано для использования в будущем. Элемент значение равно SQL_TRUE, если он определяет ODBC 2 *.x* или функция earlier, поддерживаемых драйвером. Это значение SQL_FALSE, если он определяет функцию ODBC, драйвер не поддерживает или не определяет функции ODBC.  
+ Если значение *FunctionId* — SQL_API_ALL_FUNCTIONS, *суппортедптр* указывает на массив склусмаллинт из 100 элементов. Массив индексируется по **#define** значениям, используемым *FunctionId* для обнаружения каждой функции ODBC. Некоторые элементы массива не используются и зарезервированы для будущего использования. Элемент — SQL_TRUE, если он определяет функцию ODBC 2 *. x* или более раннюю версию, поддерживаемую драйвером. Это SQL_FALSE, если он определяет функцию ODBC, не поддерживаемую драйвером, или не определяет функцию ODBC.  
   
- Массивы, возвращаемые в **SupportedPtr* индексация с нуля.  
+ Массивы, возвращаемые в **суппортедптр* , используют индексацию, начинающуюся с нуля.  
   
 ## <a name="returns"></a>Возвращает  
- Значение SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, значение SQL_ERROR или SQL_INVALID_HANDLE.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR или SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Диагностика  
- Когда **SQLGetFunctions** возвращает значение SQL_ERROR или SQL_SUCCESS_WITH_INFO, а связанное значение SQLSTATE можно получить, вызвав **SQLGetDiagRec** с *HandleType* из SQL_HANDLE_DBC и *обрабатывать* из *ConnectionHandle*. В следующей таблице перечислены значения SQLSTATE, обычно возвращаемые **SQLGetFunctions** и объясняется каждый из них в контексте этой функции; описания SQLSTATE, возвращаемых диспетчером драйверов предшествует обозначение «(DM)». Возвращается связанный с каждого значения SQLSTATE значение SQL_ERROR, если не указано иное.  
+ Когда **SQLGetFunctions** возвращает SQL_ERROR или SQL_SUCCESS_WITH_INFO, связанное значение SQLSTATE может быть получено путем вызова **SQLGetDiagRec** с *параметром handletype* SQL_HANDLE_DBC и маркером  *коннектионхандле*. В следующей таблице перечислены значения SQLSTATE, обычно возвращаемые функцией **SQLGetFunctions** , и объясняется каждый из них в контексте этой функции. Нотация "(DM)" предшествует описаниям SQLSTATE, возвращаемым диспетчером драйверов. Код возврата, связанный с каждым значением SQLSTATE, — это SQL_ERROR, если не указано иное.  
   
 |SQLSTATE|Ошибка|Описание|  
 |--------|-----|-----------|  
-|01000|Общее предупреждение|Специфические для драйвера информационное сообщение. (Функция возвращает значение SQL_SUCCESS_WITH_INFO).|  
-|08S01|Отказ канала связи|Сбой в канале связи между драйвером и источника данных, к которому был подключен драйвер перед обработкой функции было завершено.|  
-|HY000|Общая ошибка|Произошла ошибка, для которой было нет конкретных SQLSTATE и SQLSTATE не зависящие от реализации, который был определен. Сообщение об ошибке, возвращенные **SQLGetDiagRec** в  *\*MessageText* буфера описывает ошибку и его причины.|  
-|HY001|Ошибка выделения памяти|Драйвер не удалось выделить память, необходимую для поддержки выполнения или завершения функции.|  
-|HY010|Ошибка последовательности функций|(DM) **SQLGetFunctions** был вызван перед **SQLConnect**, **SQLBrowseConnect**, или **SQLDriverConnect**.<br /><br /> (DM) **SQLBrowseConnect** был вызван для *ConnectionHandle* и возвращается значение SQL_NEED_DATA. Эта функция была вызвана до **SQLBrowseConnect** возвращено значение SQL_SUCCESS_WITH_INFO или SQL_SUCCESS.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, или **SQLMoreResults** был вызван для *ConnectionHandle* и возвращается SQL_PARAM_DATA_ ДОСТУПНО. Прежде чем данные были получены для всех параметров потоковой вызове этой функции.|  
-|HY013|Ошибка управления памятью|Не удалось обработать вызов функции, так как базовые объекты памяти оказываются недоступны, возможно из-за нехватки памяти.|  
-|HY095|Тип функции за пределами диапазона|(DM) указан недопустимый *FunctionId* было указано значение.|  
-|HY117|Подключение будет приостановлена из-за состояние транзакции неизвестно. Только отключиться и разрешены функции, доступные только для чтения.|(DM) Дополнительные сведения о состоянии приостановки, см. в разделе [функция SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
-|HYT01|Время ожидания подключения истекло|Время ожидания подключения истекло раньше, чем ответил на запрос источника данных. Период времени ожидания задается с помощью **SQLSetConnectAttr**, sql_attr_connection_timeout не учитывается.|  
+|01000|Общее предупреждение|Информационное сообщение для конкретного драйвера. (Функция возвращает SQL_SUCCESS_WITH_INFO.)|  
+|08S01|Сбой канала связи|Канал связи между драйвером и источником данных, к которому был подключен драйвер, был неудачен до завершения обработки функции.|  
+|HY000|Общая ошибка|Произошла ошибка, для которой нет определенного SQLSTATE и для которого не определен SQLSTATE для конкретной реализации. Сообщение об ошибке, возвращаемое функцией  *\** **SQLGetDiagRec** в буфере MessageText, описывает ошибку и ее причину.|  
+|HY001|Ошибка выделения памяти|Драйверу не удалось выделить память, необходимую для поддержки выполнения или завершения функции.|  
+|HY010|Ошибка последовательности функций|(DM) **SQLGetFunctions** был вызван до **SQLConnect**, **SQLBrowseConnect**или **SQLDriverConnect**.<br /><br /> (DM) **SQLBrowseConnect** был вызван для *КОННЕКТИОНХАНДЛЕ* и вернул SQL_NEED_DATA. Эта функция была вызвана до того, как **SQLBrowseConnect** вернул SQL_SUCCESS_WITH_INFO или SQL_SUCCESS.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**или **SQLMoreResults** были вызваны для *коннектионхандле* и возвращены SQL_PARAM_DATA_AVAILABLE. Эта функция была вызвана до получения данных для всех потоковых параметров.|  
+|HY013|Ошибка управления памятью|Не удалось обработать вызов функции, так как не удалось получить доступ к базовым объектам памяти, возможно, из-за нехватки памяти.|  
+|HY095|Тип функции вне допустимого диапазона|(DM) указано недопустимое значение *FunctionId* .|  
+|HY117|Подключение приостановлено из-за неизвестного состояния транзакции. Допускаются только функции отключения и только для чтения.|(DM) Дополнительные сведения о состоянии SUSPENDED см. в разделе [функция SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
+|HYT01|Время ожидания подключения истекло|Время ожидания соединения истекло до ответа источника данных на запрос. Время ожидания соединения задается через **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
   
 ## <a name="comments"></a>Комментарии  
- **SQLGetFunctions** всегда возвращает, **SQLGetFunctions**, **SQLDataSources**, и **SQLDrivers** поддерживаются. Это делается потому, что эти функции реализованы в диспетчера драйверов. Диспетчер драйверов будут сопоставлены с соответствующей функции Юникода функцию ANSI, если функции Юникода существует и сопоставит функция Юникода с соответствующей функции ANSI, если существует функция ANSI. Сведения об использовании приложений **SQLGetFunctions**, см. в разделе [уровни соответствия интерфейса](../../../odbc/reference/develop-app/interface-conformance-levels.md).  
+ **SQLGetFunctions** всегда возвращает, что поддерживаются **SQLGetFunctions**, **SQLDataSources**и **SQLDrivers** . Это происходит потому, что эти функции реализуются в диспетчере драйверов. Диспетчер драйверов будет сопоставлять функцию ANSI с соответствующей функцией Юникода, если функция Юникода существует, и будет сопоставлять функцию Юникода с соответствующей функцией ANSI, если функция ANSI существует. Сведения о том, как приложения используют **SQLGetFunctions**, см. в разделе [уровни соответствия интерфейсов](../../../odbc/reference/develop-app/interface-conformance-levels.md).  
   
- Ниже приведен список допустимых значений для *FunctionId* для функций, которые соответствуют уровню соответствия стандартам ISO-92:  
+ Ниже приведен список допустимых значений для параметра *FunctionId* для функций, которые соответствуют уровню соответствия стандартам ISO 92.  
   
-|FunctionId значение|FunctionId значение|  
+|Значение параметра FunctionId|Значение параметра FunctionId|  
 |----------|----------|  
 |SQL_API_SQLALLOCHANDLE|SQL_API_SQLGETDESCFIELD|  
 |SQL_API_SQLBINDCOL|SQL_API_SQLGETDESCREC|  
@@ -108,16 +109,16 @@ SQLRETURN SQLGetFunctions(
 |SQL_API_SQLGETCURSORNAME|SQL_API_SQLSETSTMTATTR|  
 |SQL_API_SQLGETDATA| |  
   
- Ниже приведен список допустимых значений для *FunctionId* для функций, соответствующий требованиям к уровню соответствия стандартам Open Group:  
+ Ниже приведен список допустимых значений для параметра *FunctionId* для функций, соответствующих уровню соответствия стандарту Open Group.  
   
-|FunctionId значение|FunctionId значение|  
+|Значение параметра FunctionId|Значение параметра FunctionId|  
 |-|-|  
 |SQL_API_SQLCOLUMNS|SQL_API_SQLSTATISTICS|  
 |SQL_API_SQLSPECIALCOLUMNS|SQL_API_SQLTABLES|  
   
- Ниже приведен список допустимых значений для *FunctionId* для функций, соответствующий требованиям к уровню соответствия стандартам ODBC.  
+ Ниже приведен список допустимых значений для параметра *FunctionId* для функций, соответствующих уровню соответствия стандартам ODBC.  
   
-|FunctionId значение|FunctionId значение|  
+|Значение параметра FunctionId|Значение параметра FunctionId|  
 |-|-|  
 |SQL_API_SQLBINDPARAMETER|SQL_API_SQLNATIVESQL|  
 |SQL_API_SQLBROWSECONNECT|SQL_API_SQLNUMPARAMS|  
@@ -128,24 +129,24 @@ SQLRETURN SQLGetFunctions(
 |SQL_API_SQLFOREIGNKEYS|SQL_API_SQLTABLEPRIVILEGES|  
 |SQL_API_SQLMORERESULTS| |  
   
- [1] при работе с ODBC 2 *.x* драйвера, **SQLBulkOperations** будет возвращаться как поддерживаются только если оба из следующих условий: ODBC 2 *.x* драйвер поддерживает  **SQLSetPos**, и тип сведений SQL_POS_OPERATIONS возвращает бит SQL_POS_ADD как набор.  
+ [1] при работе с драйвером ODBC 2 *. x* **SQLBulkOperations** будет возвращен как поддерживаемый, только если выполняются оба следующих условия: драйвер ODBC 2 *. x* поддерживает функцию **SQLSetPos**, а тип сведений SQL_POS_OPERATIONS возвращает заданный бит SQL_POS_ADD.  
   
- Ниже приведен список допустимых значений для *FunctionId* для функций, появившихся в ODBC 3.8 или более поздней версии:  
+ Ниже приведен список допустимых значений для параметра *FunctionId* для функций, появившихся в ODBC 3,8 или более поздней версии.  
   
-|FunctionId значение|  
+|Значение параметра FunctionId|  
 |-|  
 |SQL_API_SQLCANCELHANDLE [2]|  
   
- [2] **SQLCancelHandle** будет возвращаться как поддерживаются, только если драйвер поддерживает оба **SQLCancel** и **SQLCancelHandle**. Если **SQLCancel** поддерживается, но **SQLCancelHandle** — нет, приложение по-прежнему может вызвать **SQLCancelHandle** для дескриптора инструкции, поскольку он будет сопоставлен с  **SQLCancel**.  
+ [2] **склканцелхандле** будет возвращен как поддерживаемый, только если драйвер поддерживает как **SQLCancel** , так и **склканцелхандле**. Если **SQLCancel** поддерживается, но **склканцелхандле** — нет, приложение по-прежнему может вызвать **склканцелхандле** в обработчике инструкции, так как он будет сопоставлен с **SQLCancel**.  
   
 ## <a name="sqlfuncexists-macro"></a>Макрос SQL_FUNC_EXISTS  
- SQL_FUNC_EXISTS (*SupportedPtr*, *FunctionID*) макрос используется для определения поддержки ODBC 3 *.x* или более ранней функции после **SQLGetFunctions**  был вызван с *FunctionId* аргумент SQL_API_ODBC3_ALL_FUNCTIONS. Приложение вызывает SQL_FUNC_EXISTS с *SupportedPtr* аргумент значение *SupportedPtr* переданный *SQLGetFunctions*и с  *FunctionID* аргумент значение **#define** для функции. SQL_FUNC_EXISTS в противном случае возвращает SQL_TRUE, если поддерживается функция and SQL_FALSE.  
+ Макрос SQL_FUNC_EXISTS (*суппортедптр*, *FunctionID*) используется для определения поддержки функций ODBC 3 *. x* или более ранних версий после вызова **SQLGetFunctions** с аргументом *FunctionID* SQL_API_ODBC3_ALL_ Функции. Приложение вызывает SQL_FUNC_EXISTS с аргументом *суппортедптр* , для которого задано значение *суппортедптр* , переданное *SQLGetFunctions*, и аргументу *FunctionID* , установленному в **#define** функции. SQL_FUNC_EXISTS возвращает SQL_TRUE, если функция поддерживается, и SQL_FALSE в противном случае.  
   
 > [!NOTE]
->  При работе с ODBC 2 *.x* драйвера ODBC 3 *.x* диспетчера драйверов вернет SQL_TRUE для **SQLAllocHandle** и **SQLFreeHandle**поскольку **SQLAllocHandle** сопоставляется **SQLAllocEnv**, **SQLAllocConnect**, или **SQLAllocStmt**, и так как **SQLFreeHandle** сопоставляется **SQLFreeEnv**, **SQLFreeConnect**, или **SQLFreeStmt**. **SQLAllocHandle** или **SQLFreeHandle** с *HandleType* аргумент SQL_HANDLE_DESC не поддерживается, тем не менее, несмотря на то, что SQL_TRUE возвращается для функций, так как нет ODBC 2 *.x* функции для сопоставления в этом случае.  
+>  При работе с драйвером ODBC 2 *. x* диспетчер драйверов ODBC 3 *. x* возвратит SQL_TRUE для **функцию SQLAllocHandle** и **SQLFreeHandle** , так как **функцию SQLAllocHandle** сопоставляется с **SQLAllocEnv**, **SQLAllocConnect** или **SQLAllocStmt**, а так как **SQLFreeHandle** сопоставляется с **SQLFreeEnv**, **SQLFreeConnect**или **SQLFreeStmt**. Однако **функцию SQLAllocHandle** или **SQLFreeHandle** с аргументом *параметром handletype* SQL_HANDLE_DESC не поддерживается, хотя для функций возвращается SQL_TRUE, так как в данном случае отсутствует функция ODBC 2 *. x* для соответствия.  
   
 ## <a name="code-example"></a>Пример кода  
- В следующих трех примерах показано, как приложение использует **SQLGetFunctions** чтобы определить, поддерживает ли драйвер **SQLTables**, **SQLColumns**, и  **SQLStatistics**. Если драйвер не поддерживает эти функции, приложение отключается от драйвера. В первом примере вызывается **SQLGetFunctions** один раз для каждой функции.  
+ В следующих трех примерах показано, как приложение использует **SQLGetFunctions** , чтобы определить, поддерживает ли драйвер **SQLTables**, **SQLColumns**и **SQLStatistics**. Если драйвер не поддерживает эти функции, приложение отключается от драйвера. Первый пример вызывает **SQLGetFunctions** один раз для каждой функции.  
   
 ```cpp  
 SQLUSMALLINT TablesExists, ColumnsExists, StatisticsExists;  
@@ -168,7 +169,7 @@ retcodeStatistics == SQL_SUCCESS && StatisticsExists == SQL_TRUE)
 SQLDisconnect(hdbc);  
 ```  
   
- Во втором примере, вызывает в приложении ODBC 3.x **SQLGetFunctions** и передает массив в котором **SQLGetFunctions** возвращает сведения обо всех ODBC 3.x и более ранних функции.  
+ Во втором примере приложение ODBC 3. x вызывает **SQLGetFunctions** и передает ему массив, в котором **SQLGetFunctions** возвращает сведения обо всех функциях ODBC 3. x и более ранних версий.  
   
 ```cpp  
 RETCODE retcodeTables, retcodeColumns, retcodeStatistics  
@@ -190,7 +191,7 @@ SQL_FUNC_EXISTS(fExists, SQL_API_SQLTABLES) == SQL_TRUE &&
 SQLDisconnect(hdbc);  
 ```  
   
- Третий пример является вызывает в приложении ODBC 2.x **SQLGetFunctions** и передает его массив из 100 элементов, в котором **SQLGetFunctions** возвращает сведения обо всех ODBC 2.x и более ранних функции.  
+ В третьем примере приложение ODBC 2. x вызывает **SQLGetFunctions** и передает ему массив элементов 100, в котором **SQLGetFunctions** возвращает сведения обо всех функциях ODBC 2. x и более ранних версий.  
   
 ```cpp  
 #define FUNCTIONS 100  
@@ -218,9 +219,9 @@ SQLDisconnect(hdbc);
   
 |Сведения о|См.|  
 |---------------------------|---------|  
-|Возвращает значение атрибута соединения|[Функция SQLGetConnectAttr](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)|  
-|Возврат сведений о драйверу или источнику данных|[Функция SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)|  
-|Возвращает значение атрибута инструкции|[Функция SQLGetStmtAttr](../../../odbc/reference/syntax/sqlgetstmtattr-function.md)|  
+|Возврат значения атрибута соединения|[Функция SQLGetConnectAttr](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)|  
+|Возврат сведений о драйвере или источнике данных|[Функция SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)|  
+|Возврат значения атрибута инструкции|[Функция SQLGetStmtAttr](../../../odbc/reference/syntax/sqlgetstmtattr-function.md)|  
   
 ## <a name="see-also"></a>См. также  
  [Справочник по API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
