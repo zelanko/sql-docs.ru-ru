@@ -1,19 +1,19 @@
 ---
 title: Настройка параметров SQL Server с помощью переменных среды
-description: В этой статье описывается, как использовать переменные среды, чтобы настраивать конкретные параметры SQL Server 2017 в Linux.
+description: В этой статье описывается, как использовать переменные среды для настройки конкретных параметров SQL Server 2017 в Linux.
 author: VanMSFT
 ms.author: vanto
-ms.date: 02/20/2018
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 2e28c995e5c2c0bb08938bf7ca73bda718c44ff7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 51589a2183043c5c8ea8d1f9bf5d4af6fcc1eea3
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67967498"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419249"
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Настройка параметров SQL Server с помощью переменных среды в Linux
 
@@ -22,21 +22,21 @@ ms.locfileid: "67967498"
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-Несколько переменных другую среду можно использовать для настройки SQL Server 2017 в Linux. Эти переменные используются в двух сценариях:
+Для настройки SQL Server 2017 в Linux можно использовать несколько различных переменных среды. Эти переменные используются в двух сценариях:
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-Несколько переменных другую среду можно использовать для настройки предварительной версии SQL Server 2019 в Linux. Эти переменные используются в двух сценариях:
+Для настройки предварительной версии SQL Server 2019 в Linux можно использовать несколько различных переменных среды. Эти переменные используются в двух сценариях:
 
 ::: moniker-end
 
-- Настройка начальной настройки с `mssql-conf setup` команды.
-- Чтобы настроить новый [контейнер SQL Server в Docker](quickstart-install-connect-docker.md).
+- Для настройки начальной настройки с помощью `mssql-conf setup` команды.
+- Настройка нового [контейнера SQL Server в DOCKER](quickstart-install-connect-docker.md).
 
 > [!TIP]
-> Если необходимо настроить SQL Server после этих сценариев установки, см. в разделе [Настройка SQL Server в Linux с использованием средство mssql-conf](sql-server-linux-configure-mssql-conf.md).
+> Если необходимо настроить SQL Server после этих сценариев установки, см. раздел [настройка SQL Server на Linux с помощью средства MSSQL-CONF](sql-server-linux-configure-mssql-conf.md).
 
 ## <a name="environment-variables"></a>Переменные среды
 
@@ -45,22 +45,22 @@ ms.locfileid: "67967498"
 
 | Переменная среды | Описание |
 |-----|-----|
-| **ACCEPT_EULA** | Примите лицензионное соглашение SQL Server, если задано любое значение (например, «Y»). |
+| **ACCEPT_EULA** | Присвойте переменной **ACCEPT_EULA** любое значение, чтобы подтвердить свое согласие с [лицензионным соглашением](https://go.microsoft.com/fwlink/?LinkId=746388). Обязательный параметр для образа SQL Server. |
 | **MSSQL_SA_PASSWORD** | Настройте пароль пользователя SA. |
-| **MSSQL_PID** | Задайте ключ SQL Server edition или продукта. Возможные значения. </br></br>**Ознакомительная версия**</br>**Разработчик**</br>**Express**</br>**Web**</br>**Standard Edition**</br>**Enterprise**</br>**Ключ продукта**</br></br>Если указывать код продукта, его необходимо в виде ###-###-###-###-###, где «#» — число или буква.|
-| **MSSQL_LCID** | Задает идентификатор языка, используемого для SQL Server. Например, 1036 — французский. |
-| **MSSQL_COLLATION** | Задает параметры сортировки по умолчанию для SQL Server. Это значение переопределяет сопоставление по умолчанию идентификатор языка (LCID) для параметров сортировки. |
-| **MSSQL_MEMORY_LIMIT_MB** | Задает максимальный объем памяти (в МБ), который можно использовать SQL Server. По умолчанию он составляет 80% от общего объема физической памяти. |
-| **MSSQL_TCP_PORT** | Настройте TCP-порт, который ожидает передачу данных SQL Server (по умолчанию 1433). |
-| **MSSQL_IP_ADDRESS** | Настройка IP-адреса. В настоящее время IP-адрес должен быть стиля IPv4 (0.0.0.0). |
-| **MSSQL_BACKUP_DIR** | Задайте расположение каталога резервного копирования по умолчанию. |
-| **MSSQL_DATA_DIR** | Перейдите в каталог, где создаются новые базы данных файлы данных SQL Server (.mdf). |
-| **MSSQL_LOG_DIR** | Перейдите в каталог, где создаются новые файлы журналов (LDF) базы данных SQL Server. |
-| **MSSQL_DUMP_DIR** | Перейдите в каталог, где SQL Server будет Депонировать дампы памяти и другие файлы для устранения неполадок по умолчанию. |
-| **MSSQL_ENABLE_HADR** | Включение группы доступности. Например "1" включена и отключена "0" |
-| **MSSQL_AGENT_ENABLED** | Включите агент SQL Server. Например «true» включен, и «false» отключена. По умолчанию агент отключен.  |
-| **MSSQL_MASTER_DATA_FILE** | Задает расположение файла данных базы данных master. Должен иметь имя **master.mdf** до первого запуска сервера SQL Server. |
-| **MSSQL_MASTER_LOG_FILE** | Задает расположение файла журнала базы данных master. Должен иметь имя **mastlog.ldf** до первого запуска сервера SQL Server. |
+| **MSSQL_PID** | Задайте выпуск SQL Server или ключ продукта. Возможные значения. </br></br>**Ознакомительная версия**</br>**Разработчик**</br>**Ражающий**</br>**Интернет**</br>**Standard Edition**</br>**Компании**</br>**Ключ продукта**</br></br>При указании ключа продукта он должен иметь вид # # # # #-# # # # #-# # # # #-# # # # #-# # # # #, где ' # '-число или буква.|
+| **MSSQL_LCID** | Задает идентификатор языка, используемый для SQL Server. Например, 1036 — французский. |
+| **MSSQL_COLLATION** | Задает параметры сортировки по умолчанию для SQL Server. Это переопределяет сопоставление по умолчанию идентификатора языка (LCID) с параметрами сортировки. |
+| **MSSQL_MEMORY_LIMIT_MB** | Задает максимальный объем памяти (в МБ), который SQL Server может использоваться. По умолчанию это 80% общего объема физической памяти. |
+| **MSSQL_TCP_PORT** | Настройте TCP-порт, который SQL Server прослушивается (по умолчанию 1433). |
+| **MSSQL_IP_ADDRESS** | Задайте IP-адрес. Сейчас IP-адрес должен быть в формате IPv4 (0.0.0.0). |
+| **MSSQL_BACKUP_DIR** | Укажите расположение каталога резервных копий по умолчанию. |
+| **MSSQL_DATA_DIR** | Измените каталог, в котором создаются новые файлы данных SQL Server базы данных (MDF). |
+| **MSSQL_LOG_DIR** | Измените каталог, в котором создаются новые файлы журнала SQL Server базы данных (LDF). |
+| **MSSQL_DUMP_DIR** | Измените каталог, где SQL Server будет замещать дампы памяти и другие файлы для устранения неполадок по умолчанию. |
+| **MSSQL_ENABLE_HADR** | Включите группу доступности. Например, "1" включен, а "0" отключен |
+| **MSSQL_AGENT_ENABLED** | Включите агент SQL Server. Например, "true" (включено) и "false" отключено. По умолчанию агент отключен.  |
+| **MSSQL_MASTER_DATA_FILE** | Задает расположение файла данных базы данных master. Должен иметь имя **master. mdf** до первого запуска SQL Server. |
+| **MSSQL_MASTER_LOG_FILE** | Задает расположение файла журнала базы данных master. Необходимо присвоить имя **mastlog. ldf** до первого запуска SQL Server. |
 | **MSSQL_ERROR_LOG_FILE** | Задает расположение файлов журнала ошибок. |
 
 ::: moniker-end
@@ -69,58 +69,58 @@ ms.locfileid: "67967498"
 
 | Переменная среды | Описание |
 |-----|-----|
-| **ACCEPT_EULA** | Примите лицензионное соглашение SQL Server, если задано любое значение (например, «Y»). |
+| **ACCEPT_EULA** | Присвойте переменной **ACCEPT_EULA** любое значение, чтобы подтвердить свое согласие с [лицензионным соглашением](https://go.microsoft.com/fwlink/?LinkId=746388). Обязательный параметр для образа SQL Server. |
 | **MSSQL_SA_PASSWORD** | Настройте пароль пользователя SA. |
-| **MSSQL_PID** | Задайте ключ SQL Server edition или продукта. Возможные значения. </br></br>**Ознакомительная версия**</br>**Разработчик**</br>**Express**</br>**Web**</br>**Standard Edition**</br>**Enterprise**</br>**Ключ продукта**</br></br>Если указывать код продукта, его необходимо в виде ###-###-###-###-###, где «#» — число или буква.|
-| **MSSQL_LCID** | Задает идентификатор языка, используемого для SQL Server. Например, 1036 — французский. |
-| **MSSQL_COLLATION** | Задает параметры сортировки по умолчанию для SQL Server. Это значение переопределяет сопоставление по умолчанию идентификатор языка (LCID) для параметров сортировки. |
-| **MSSQL_MEMORY_LIMIT_MB** | Задает максимальный объем памяти (в МБ), который можно использовать SQL Server. По умолчанию он составляет 80% от общего объема физической памяти. |
-| **MSSQL_TCP_PORT** | Настройте TCP-порт, который ожидает передачу данных SQL Server (по умолчанию 1433). |
-| **MSSQL_IP_ADDRESS** | Настройка IP-адреса. В настоящее время IP-адрес должен быть стиля IPv4 (0.0.0.0). |
-| **MSSQL_BACKUP_DIR** | Задайте расположение каталога резервного копирования по умолчанию. |
-| **MSSQL_DATA_DIR** | Перейдите в каталог, где создаются новые базы данных файлы данных SQL Server (.mdf). |
-| **MSSQL_LOG_DIR** | Перейдите в каталог, где создаются новые файлы журналов (LDF) базы данных SQL Server. |
-| **MSSQL_DUMP_DIR** | Перейдите в каталог, где SQL Server будет Депонировать дампы памяти и другие файлы для устранения неполадок по умолчанию. |
-| **MSSQL_ENABLE_HADR** | Включение группы доступности. Например "1" включена и отключена "0" |
-| **MSSQL_AGENT_ENABLED** | Включите агент SQL Server. Например «true» включен, и «false» отключена. По умолчанию агент отключен.  |
-| **MSSQL_MASTER_DATA_FILE** | Задает расположение файла данных базы данных master. Должен иметь имя **master.mdf** до первого запуска сервера SQL Server. |
-| **MSSQL_MASTER_LOG_FILE** | Задает расположение файла журнала базы данных master. Должен иметь имя **mastlog.ldf** до первого запуска сервера SQL Server. |
+| **MSSQL_PID** | Задайте выпуск SQL Server или ключ продукта. Возможные значения. </br></br>**Ознакомительная версия**</br>**Разработчик**</br>**Ражающий**</br>**Интернет**</br>**Standard Edition**</br>**Компании**</br>**Ключ продукта**</br></br>При указании ключа продукта он должен иметь вид # # # # #-# # # # #-# # # # #-# # # # #-# # # # #, где ' # '-число или буква.|
+| **MSSQL_LCID** | Задает идентификатор языка, используемый для SQL Server. Например, 1036 — французский. |
+| **MSSQL_COLLATION** | Задает параметры сортировки по умолчанию для SQL Server. Это переопределяет сопоставление по умолчанию идентификатора языка (LCID) с параметрами сортировки. |
+| **MSSQL_MEMORY_LIMIT_MB** | Задает максимальный объем памяти (в МБ), который SQL Server может использоваться. По умолчанию это 80% общего объема физической памяти. |
+| **MSSQL_TCP_PORT** | Настройте TCP-порт, который SQL Server прослушивается (по умолчанию 1433). |
+| **MSSQL_IP_ADDRESS** | Задайте IP-адрес. Сейчас IP-адрес должен быть в формате IPv4 (0.0.0.0). |
+| **MSSQL_BACKUP_DIR** | Укажите расположение каталога резервных копий по умолчанию. |
+| **MSSQL_DATA_DIR** | Измените каталог, в котором создаются новые файлы данных SQL Server базы данных (MDF). |
+| **MSSQL_LOG_DIR** | Измените каталог, в котором создаются новые файлы журнала SQL Server базы данных (LDF). |
+| **MSSQL_DUMP_DIR** | Измените каталог, где SQL Server будет замещать дампы памяти и другие файлы для устранения неполадок по умолчанию. |
+| **MSSQL_ENABLE_HADR** | Включите группу доступности. Например, "1" включен, а "0" отключен |
+| **MSSQL_AGENT_ENABLED** | Включите агент SQL Server. Например, "true" (включено) и "false" отключено. По умолчанию агент отключен.  |
+| **MSSQL_MASTER_DATA_FILE** | Задает расположение файла данных базы данных master. Должен иметь имя **master. mdf** до первого запуска SQL Server. |
+| **MSSQL_MASTER_LOG_FILE** | Задает расположение файла журнала базы данных master. Необходимо присвоить имя **mastlog. ldf** до первого запуска SQL Server. |
 | **MSSQL_ERROR_LOG_FILE** | Задает расположение файлов журнала ошибок. |
 
 ::: moniker-end
 
-## <a name="use-with-initial-setup"></a>Использование с начальной настройки
+## <a name="use-with-initial-setup"></a>Использование с начальной настройкой
 
-В этом примере выполняется `mssql-conf setup` настроить переменные среды. Указываются следующие переменные среды:
+Этот пример выполняется `mssql-conf setup` с настроенными переменными среды. Указаны следующие переменные среды:
 
-- **ACCEPT_EULA** принимает лицензионное соглашение конечного пользователя.
-- **MSSSQL_PID** указывает в свободно лицензируемым Developer Edition SQL Server для непроизводственных задач.
+- **ACCEPT_EULA** принимает лицензионное соглашение.
+- **MSSSQL_PID** указывает бесплатно лицензированный выпуск Developer SQL Server для нерабочего использования.
 - **MSSQL_SA_PASSWORD** задает надежный пароль.
-- **MSSQL_TCP_PORT** задает TCP-порта SQL Server прослушивает 1234.
+- **MSSQL_TCP_PORT** задает TCP-порт, который SQL Server прослушивать до 1234.
 
 ```bash
 sudo ACCEPT_EULA='Y' MSSQL_PID='Developer' MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>' MSSQL_TCP_PORT=1234 /opt/mssql/bin/mssql-conf setup
 ```
 
-## <a name="use-with-docker"></a>Использовать с Docker
+## <a name="use-with-docker"></a>Использование с DOCKER
 
-В этом примере команда docker использует следующие переменные среды, чтобы создать новый контейнер SQL Server:
+В этом примере команда DOCKER использует следующие переменные среды для создания нового SQL Server контейнера:
 
-- **ACCEPT_EULA** принимает лицензионное соглашение конечного пользователя.
-- **MSSSQL_PID** указывает в свободно лицензируемым Developer Edition SQL Server для непроизводственных задач.
+- **ACCEPT_EULA** принимает лицензионное соглашение.
+- **MSSSQL_PID** указывает бесплатно лицензированный выпуск Developer SQL Server для нерабочего использования.
 - **MSSQL_SA_PASSWORD** задает надежный пароль.
-- **MSSQL_TCP_PORT** задает TCP-порта SQL Server прослушивает 1234. Это означает, что вместо сопоставления порта 1433 (по умолчанию) с портом узла, настраиваемый TCP-порт должен быть сопоставлен со `-p 1234:1234` команды в этом примере.
+- **MSSQL_TCP_PORT** задает TCP-порт, который SQL Server прослушивать до 1234. Это означает, что вместо порта 1433 (по умолчанию) к порту узла пользовательский TCP-порт должен быть сопоставлен с `-p 1234:1234` командой в этом примере.
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-Если вы используете Docker в Linux и Mac OS, используйте следующий синтаксис в одинарные кавычки:
+Если вы используете DOCKER в Linux или macOS, используйте следующий синтаксис с одинарными кавычками:
 
 ```bash
 docker run -e ACCEPT_EULA=Y -e MSSQL_PID='Developer' -e MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>' -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d mcr.microsoft.com/mssql/server:2017-latest
 ```
 
-Если вы используете Docker в Windows, используйте следующий синтаксис в двойные кавычки:
+Если вы используете DOCKER в Windows, используйте следующий синтаксис с двойными кавычками:
 
 ```bash
 docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<YourStrong!Passw0rd>" -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d mcr.microsoft.com/mssql/server:2017-latest
@@ -133,13 +133,13 @@ docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<Your
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-Если вы используете Docker в Linux и Mac OS, используйте следующий синтаксис в одинарные кавычки:
+Если вы используете DOCKER в Linux или macOS, используйте следующий синтаксис с одинарными кавычками:
 
 ```bash
 docker run -e ACCEPT_EULA=Y -e MSSQL_PID='Developer' -e MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>' -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d mcr.microsoft.com/mssql/server:2019-CTP3.1-ubuntu
 ```
 
-Если вы используете Docker в Windows, используйте следующий синтаксис в двойные кавычки:
+Если вы используете DOCKER в Windows, используйте следующий синтаксис с двойными кавычками:
 
 ```bash
 docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<YourStrong!Passw0rd>" -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d mcr.microsoft.com/mssql/server:2019-CTP3.1-ubuntu
@@ -149,6 +149,6 @@ docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<Your
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Другие параметры SQL Server, не перечисленные здесь, см. в разделе [Настройка SQL Server в Linux с использованием средство mssql-conf](sql-server-linux-configure-mssql-conf.md).
+Другие параметры SQL Server, не указанные здесь, см. [в разделе настройка SQL Server на Linux с помощью средства MSSQL-CONF](sql-server-linux-configure-mssql-conf.md).
 
-Дополнительные сведения о том, как установить и запустить SQL Server в Linux см. в разделе [Установка SQL Server в Linux](sql-server-linux-setup.md).
+Дополнительные сведения об установке и запуске SQL Server на Linux см. в разделе [install SQL Server на Linux](sql-server-linux-setup.md).

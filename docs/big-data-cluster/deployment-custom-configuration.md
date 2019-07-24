@@ -1,40 +1,40 @@
 ---
-title: Настройка развертывания
+title: Настройка развертываний
 titleSuffix: SQL Server big data clusters
-description: Дополнительные сведения о настройке развертывания в кластере больших данных с файлами конфигурации.
+description: Узнайте, как настроить развертывание кластера больших данных с помощью файлов конфигурации.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 06/26/2019
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ccd7b0955cbeaa22f10a2b81515d7afd892e135e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d7559ecf9c7b17ca21c088ed531a347f88e89ee2
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67958448"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419435"
 ---
-# <a name="configure-deployment-settings-for-big-data-clusters"></a>Настройка параметров развертывания для больших данных кластеров
+# <a name="configure-deployment-settings-for-big-data-clusters"></a>Настройка параметров развертывания для кластеров больших данных
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Чтобы настроить файл конфигурации развертывания кластера, можно использовать любой редактор формата JSON, таких как VSCode. Для использования в сценариях эти изменения в целях автоматизации, используйте **раздел конфигурации bdc mssqlctl** команды. В этой статье объясняется, как настраивать развертывание кластера больших данных, изменяя файлы конфигурации развертывания. Содержит примеры по изменению конфигурации для разных сценариев. Дополнительные сведения об использовании файлов конфигурации в развертываниях см. в разделе [руководство по развертыванию](deployment-guidance.md#configfile).
+Чтобы настроить файлы конфигурации развертывания кластера, можно использовать любой редактор формата JSON, например VSCode. Чтобы внести эти изменения в скрипты для целей автоматизации, используйте команду **аздата BDC config** . В этой статье описывается настройка развертываний кластера больших данных путем изменения файлов конфигурации развертывания. В нем приводятся примеры изменения конфигурации для различных сценариев. Дополнительные сведения о том, как файлы конфигурации используются в развертываниях, см. в [руководстве](deployment-guidance.md#configfile)по развертыванию.
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-- [Установка mssqlctl](deploy-install-mssqlctl.md).
+- [Установите аздата](deploy-install-azdata.md).
 
-- В каждом из примеров в этом разделе предполагается, что вы создали копию одного из файлов стандартной конфигурации. Дополнительные сведения см. в разделе [создать пользовательский файл конфигурации](deployment-guidance.md#customconfig). Например, следующая команда создает каталог с именем `custom` , содержащий файл конфигурации развертывания JSON на основе стандартной **aks разработка и тестирование** конфигурации:
+- В каждом из примеров в этом разделе предполагается, что вы создали копию одной из стандартных конфигураций. Дополнительные сведения см. [в разделе Создание пользовательской конфигурации](deployment-guidance.md#customconfig). Например, следующая команда `custom` создает каталог с именем, который содержит два файла конфигурации развертывания JSON: **cluster. JSON** и **Control. JSON**на основе конфигурации **AKS-dev-test** по умолчанию:
 
    ```bash
-   mssqlctl bdc config init --source aks-dev-test --target custom
+   azdata bdc config init --source aks-dev-test --target custom
    ```
 
-## <a id="clustername"></a> Изменение имени кластера
+## <a id="clustername"></a>Изменение имени кластера
 
-Имя кластера — это имя кластера больших данных и пространств имен Kubernetes, который будет создан при развертывании. Он указан в следующей части файла конфигурации развертывания:
+Имя кластера — это имя кластера больших данных и пространство имен Kubernetes, которое будет создано при развертывании. Он указывается в следующей части файла конфигурации развертывания **cluster. JSON** :
 
 ```json
 "metadata": {
@@ -43,18 +43,18 @@ ms.locfileid: "67958448"
 },
 ```
 
-Следующая команда отправляет пару "ключ значение" для **--json-значения** параметр, чтобы изменить имя кластера больших данных, чтобы **тестового кластера**:
+Следующая команда отправляет пару "ключ-значение" в параметр " **--JSON-Values** ", чтобы изменить имя кластера больших данных на **Test-Cluster**:
 
 ```bash
-mssqlctl bdc config section set --config-profile custom -j "metadata.name=test-cluster"
+azdata bdc config replace --config-file custom/cluster.json --json-values "metadata.name=test-cluster"
 ```
 
 > [!IMPORTANT]
-> Имя кластера больших данных должен быть только буквенно цифровые символы в нижнем регистре, не должно быть пробелов. Все артефакты Kubernetes (контейнеры, модулей, вертикальное наборов, службы) для кластера будет создан в пространство имен с тем же именем, что и кластер указанное имя.
+> Имя кластера больших данных должно содержать только строчные буквы и цифры, без пробелов. Все артефакты Kubernetes (контейнеры, модули Pod, наборы отслеживании, службы) для кластера будут созданы в пространстве имен с тем же именем, что и у указанного имени кластера.
 
-## <a id="ports"></a> Порты обновления конечной точки
+## <a id="ports"></a>Обновление портов конечной точки
 
-Конечные точки определяются для плоскости управления, а также отдельные пулы. В следующей части в файле конфигурации показаны определения конечной точки для плоскости управления.
+Конечные точки определяются для контроллера в **Control. JSON** , а также для основного экземпляра шлюза и SQL Server в соответствующих разделах в **cluster. JSON**. В следующей части файла конфигурации **Control. JSON** показаны определения конечных точек для контроллера:
 
 ```json
 "endpoints": [
@@ -71,92 +71,133 @@ mssqlctl bdc config section set --config-profile custom -j "metadata.name=test-c
 ]
 ```
 
-В следующем примере используется встроенный JSON, чтобы изменить порт для **контроллера** конечной точки:
+В следующем примере используется встроенный JSON для изменения порта для конечной точки **контроллера** :
 
 ```bash
-mssqlctl bdc config section set --config-profile custom -j "$.spec.controlPlane.spec.endpoints[?(@.name==""Controller"")].port=30000"
+azdata bdc config replace --config-file custom/control.json --json-values "$.spec.endpoints[?(@.name==""Controller"")].port=30000"
 ```
 
-## <a id="replicas"></a> Настройка пула реплик
+## <a id="replicas"></a>Настройка реплик пула
 
-Характеристики каждого пула, например в пул носителей, определяется в файле конфигурации. Например следующий фрагмент показано определение пула хранения:
+Характеристики каждого пула, например пула носителей, определяются в файле конфигурации **cluster. JSON** . Например, в следующей части **cluster. JSON** показано определение пула носителей:
 
 ```json
 "pools": [
-    {
-        "metadata": {
-            "kind": "Pool",
-            "name": "default"
-        },
-        "spec": {
-            "type": "Storage",
-            "replicas": 2,
-            "storage": {
-               "data": {
-                  "className": "default",
-                  "accessMode": "ReadWriteOnce",
-                  "size": "15Gi"
-               },
-               "logs": {
-                  "className": "default",
-                  "accessMode": "ReadWriteOnce",
-                  "size": "10Gi"
-               }
-           },
-        }
-    }
+   {
+       "metadata": {
+           "kind": "Pool",
+           "name": "default"
+       },
+       "spec": {
+           "type": "Storage",
+           "replicas": 2
+       }
+   }
 ]
 ```
 
-Число экземпляров в пуле можно настроить, изменив **реплик** значение для каждого пула. В следующем примере используется встроенный JSON, чтобы изменить эти значения для хранения данных и пулов для `10` и `4` соответственно:
+Количество экземпляров в пуле можно настроить, изменив значение **реплик** для каждого пула. В следующем примере используется встроенный JSON для изменения этих значений хранилища и пулов данных на `10` и `4` соответственно:
 
 ```bash
-mssqlctl bdc config section set --config-profile custom -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.replicas=10"
-mssqlctl bdc config section set --config-profile custom -j "$.spec.pools[?(@.spec.type == ""Data"")].spec.replicas=4"
+azdata bdc config replace --config-file custom/cluster.json --json-values "$.spec.pools[?(@.spec.type == ""Storage"")].spec.replicas=10"
+azdata bdc config replace --config-file custom/cluster.json --json-values "$.spec.pools[?(@.spec.type == ""Data"")].spec.replicas=4"
 ```
 
-## <a id="storage"></a> Настройка хранилища
+## <a id="storage"></a>Настройка хранилища
 
-Можно также изменить класс хранения и характеристики, используемые для каждого пула. В следующем примере назначает класс пользовательского хранилища в пул носителей и обновляет размер утверждение постоянного тома для хранения данных до 100 ГБ. В этом разделе необходимо иметь в файле конфигурации, чтобы обновить параметры с помощью *набор параметров конфигурации bdc mssqlctl* команды, см. в разделе ниже, как использовать файл исправления для добавления в этом разделе:
+Также можно изменить класс хранения и характеристики, используемые для каждого пула. В следующем примере для пула носителей назначается пользовательский класс хранения, а также обновляется размер постоянного тома для хранения данных в размере 100 ГБ. Сначала создайте файл patch. JSON, как описано ниже, в дополнение  к *типу* и *репликам* .
 
+```json
+{
+  "patch": [
+    {
+      "op": "replace",
+      "path": "$.spec.pools[?(@.spec.type == 'Storage')].spec",
+      "value": {
+        "storage":{
+        "data":{
+                "size": "100Gi",
+                "className": "myStorageClass",
+                "accessMode":"ReadWriteOnce"
+                },
+        "logs":{
+                "size":"32Gi",
+                "className":"myStorageClass",
+                "accessMode":"ReadWriteOnce"
+                }
+                },
+        "type":"Storage",
+        "replicas":2
+      }
+    }
+  ]
+}
+```
+
+Затем можно использовать команду **аздата BDC config Patch** , чтобы обновить файл конфигурации **cluster. JSON** .
 ```bash
-mssqlctl bdc config section set --config-profile custom -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.storage.data.className=storage-pool-class"
-mssqlctl bdc config section set --config-profile custom -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.storage.data.size=32Gi"
+azdata bdc config patch --config-file custom/cluster.json --patch ./patch.json
 ```
 
 > [!NOTE]
-> Файл конфигурации на основе **kubeadm разработка и тестирование** не содержит определения хранения для каждого пула, но это можно добавить вручную при необходимости.
+> Файл конфигурации на основе **кубеадм-dev-test** не имеет определения хранилища для каждого пула, но при необходимости можно использовать описанный выше процесс.
 
-Дополнительные сведения о конфигурации хранилища, см. в разделе [сохранение данных с SQL Server, большие данные кластера в Kubernetes](concept-data-persistence.md).
+Дополнительные сведения о конфигурации хранилища см. [в статье сохраняемость данных с помощью SQL Server кластера больших данных в Kubernetes](concept-data-persistence.md).
 
-## <a id="sparkstorage"></a> Настройка хранилища без spark
+## <a id="sparkstorage"></a>Настройка пула носителей без Spark
 
-Также можно настроить пулы носителей для запуска без spark и создать пул отдельные spark. Это позволяет масштабирования spark compute power независимо от хранилища. Настройка пула spark, см. в разделе [пример файла JSON patch](#jsonpatch) в конце этой статьи.
+Можно также настроить пулы носителей для работы без Spark и создать отдельный пул Spark. Это позволяет масштабировать энергию вычислений Spark независимо от хранилища. Чтобы узнать, как настроить пул Spark, ознакомьтесь с [примером файла исправления JSON](#jsonpatch) в конце этой статьи.
 
-В этом разделе необходимо иметь в файле конфигурации, чтобы обновить параметры с помощью `mssqlctl cluster config set command`. Следующий файл исправления JSON показано, как добавить.
 
-По умолчанию **includeSpark** для пула носителей равное true, поэтому необходимо добавить **includeSpark** поле в конфигурации хранилища для внесения изменений:
 
-```bash
-mssqlctl cluster config section set --config-profile custom -j "$.spec.pools[?(@.spec.type == ""Storage"")].includeSpark=false"
+По умолчанию параметр **инклудеспарк** для пула носителей имеет значение true, поэтому для внесения изменений необходимо добавить поле **инклудеспарк** в конфигурацию хранилища. В следующем файле исправления JSON показано, как добавить это.
+
+```json
+{
+  "patch": [
+    {
+      "op": "replace",
+      "path": "$.spec.pools[?(@.spec.type == 'Storage')].spec",
+      "value": {
+        "type":"Storage",
+        "replicas":2,
+        "includeSpark":false
+      }
+    }
+  ]
+}
 ```
 
-## <a id="podplacement"></a> Настройка размещения pod с метками для Kubernetes
+```bash
+azdata bdc config patch --config-file custom/cluster.json --patch ./patch.json
+```
 
-Вы можете управлять pod размещение на узлах Kubernetes, определенные ресурсы с учетом различных типов требований рабочей нагрузки. Например может потребоваться убедиться, модулей POD пула хранения будут размещены на узлах с большим объемом хранилища, или главным экземплярам SQL Server размещаются на узлах, которые имеют более высокая загрузка ЦП и памяти. В этом случае следует построить разнородных кластера Kubernetes с различными типами оборудования, а затем [назначить метки узла](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/) соответствующим образом. Во время развертывания кластера больших данных можно указать одинаковые заголовки на уровне пула в файле конфигурации развертывания кластера. Затем Kubernetes позаботится о привязывая POD, содержащихся на узлах, которые соответствуют указанной метки.
+## <a id="podplacement"></a>Настройка размещения Pod с помощью меток Kubernetes
 
-В следующем примере показано, как изменить пользовательский файл конфигурации для включения параметра метка узла для главного экземпляра SQL Server. Следует отметить, что не *nodeLabel* ключа в встроенных конфигурациях, поэтому необходимо либо изменить пользовательский файл конфигурации вручную, или создать файл исправления и применить его к настраиваемый файл конфигурации.
+Вы можете управлять размещением Pod на узлах Kubernetes, имеющих определенные ресурсы, для удовлетворения различных типов требований к рабочей нагрузке. Например, может потребоваться убедиться, что модули памяти пула носителей размещаются на узлах с большим объемом хранилища, или SQL Server главные экземпляры размещаются на узлах, имеющих больше ресурсов ЦП и памяти. В этом случае вы сначала создадите разнородный кластер Kubernetes с различными типами оборудования, а затем назначите [Метки узлов](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/) соответствующим образом. Во время развертывания кластера больших данных можно указать одинаковые метки на уровне пула в файле конфигурации развертывания кластера. Kubernetes позаботится о установка соответствияи модулей Pod на узлах, соответствующих указанным меткам.
 
-Создайте файл с именем **patch.json** в текущем каталоге со следующим содержимым:
+В следующем примере показано, как изменить пользовательский файл конфигурации, включив в него параметр метки узла для SQL Server главного экземпляра. Обратите внимание, что в встроенных конфигурациях отсутствует ключ *ноделабел* , поэтому необходимо либо изменить пользовательский файл конфигурации вручную, либо создать файл исправления и применить его к пользовательскому файлу конфигурации.
+
+Создайте файл с именем **patch. JSON** в текущем каталоге со следующим содержимым:
 
 ```json
 {
   "patch": [
      {
-      "op": "add",
+      "op": "replace",
       "path": "$.spec.pools[?(@.spec.type == 'Master')].spec",
       "value": {
-      "nodeLabel": "<yourNodeLabel>"
+           "type": "Master",
+         "replicas": 1,
+         "hadrEnabled": false,
+         "endpoints": [
+            {
+             "name": "Master",
+             "serviceType": "NodePort",
+             "port": 31433
+            }
+          ],
+         "nodeLabel": "<yourNodeLabel>"
        }
     }
   ]
@@ -164,35 +205,36 @@ mssqlctl cluster config section set --config-profile custom -j "$.spec.pools[?(@
 ```
 
 ```bash
-mssqlctl bdc config section set --config-profile custom -p ./patch.json
+azdata bdc config patch --config-file custom/cluster.json --patch-file ./patch.json
 ```
 
-## <a id="jsonpatch"></a> Файлы исправления JSON
+## <a id="jsonpatch"></a>Файлы исправления JSON
 
-Файлы исправления JSON за один раз настроить несколько параметров. Дополнительные сведения об исправлениях JSON см. в разделе [исправления JSON в Python](https://github.com/stefankoegl/python-json-patch) и [JSONPath Online вычислителя](https://jsonpath.com/).
+Файлы исправлений JSON настраивают несколько параметров одновременно. Дополнительные сведения об исправлениях JSON см. [в разделе исправления JSON в Python](https://github.com/stefankoegl/python-json-patch) и в [интерактивном оценщике JSONPath](https://jsonpath.com/).
 
-Следующие **patch.json** файл выполняет следующие изменения:
+Следующий файл **patch. JSON** выполняет следующие изменения:
 
-- Обновляет порт одной конечной точки.
-- Обновляет все конечные точки (**порт** и **serviceType**).
-- Обновляет хранилище плоскости управления. Эти параметры применимы для всех компонентов кластера, если это не переопределено на уровне пула.
-- Обновляет имя класса хранения в хранилище плоскости управления.
-- Обновляет параметры пула хранилища для пула носителей.
-- Обновляет параметры Spark для пула носителей.
-- Создает кластер spark с двумя репликами для кластера
-
-```json
-{
-  "patch": [
+- Обновляет порт одной конечной точки в **Control. JSON**.
+    ```json
     {
-      "op": "replace",
-      "path": "$.spec.controlPlane.spec.endpoints[?(@.name=='Controller')].port",
-      "value": 30000
-    },
+      "patch": [
+        {
+          "op": "replace",
+          "path": "$.spec.endpoints[?(@.name=='Controller')].port",
+          "value": 30000
+        }   
+      ]
+    }
+    ```
+
+- Обновляет все конечные точки (**порт** и **serviceType**) в **Control. JSON**.
+    ```json
     {
-      "op": "replace",
-      "path": "spec.controlPlane.spec.endpoints",
-      "value": [
+      "patch": [
+        {
+          "op": "replace",
+          "path": "spec.endpoints",
+          "value": [
         {
           "serviceType": "LoadBalancer",
           "port": 30001,
@@ -203,12 +245,20 @@ mssqlctl bdc config section set --config-profile custom -p ./patch.json
             "port": 30778,
             "name": "ServiceProxy"
         }
+          ]
+        }
       ]
-    },
+    }
+    ```
+
+- Обновляет параметры хранилища контроллера в **Control. JSON**. Эти параметры применимы ко всем компонентам кластера, если они не переопределены на уровне пула.
+    ```json
     {
-      "op": "replace",
-      "path": "spec.controlPlane.spec.controlPlane",
-      "value": {
+      "patch": [
+        {
+          "op": "replace",
+          "path": "spec.storage",
+          "value": {
           "data": {
             "className": "managed-premium",
             "accessMode": "ReadWriteOnce",
@@ -220,44 +270,80 @@ mssqlctl bdc config section set --config-profile custom -p ./patch.json
             "size": "32Gi"
           }
         }
-    },
+        }   
+      ]
+    }
+    ```
+
+- Обновляет имя класса хранения в **Control. JSON**.
+    ```json
     {
-      "op": "replace",
-      "path": "spec.controlPlane.spec.storage.data.className",
-      "value": "managed-premium"
-    },
+      "patch": [
+        {
+          "op": "replace",
+          "path": "spec.storage.data.className",
+          "value": "managed-premium"
+        }   
+      ]
+    }
+    ```
+
+- Обновляет параметры хранилища пула для пула носителей в **cluster. JSON**.
+    ```json
     {
-      "op": "add",
-      "path": "$.spec.pools[?(@.spec.type == 'Storage')].spec.storage",
-      "value": {
-          "data": {
-            "className": "managed-premium",
-            "accessMode": "ReadWriteOnce",
-            "size": "100Gi"
-          },
-          "logs": {
-            "className": "managed-premium",
-            "accessMode": "ReadWriteOnce",
-            "size": "32Gi"
-          }
+      "patch": [
+        {
+          "op": "replace",
+          "path": "$.spec.pools[?(@.spec.type == 'Storage')].spec",
+          "value": {
+        "type":"Storage",
+        "replicas":2,
+        "storage":{
+        "data":{
+            "size": "100Gi",
+            "className": "myStorageClass",
+            "accessMode":"ReadWriteOnce"
+            },
+        "logs":{
+            "size":"32Gi",
+            "className":"myStorageClass",
+            "accessMode":"ReadWriteOnce"
+            }
+            }
+         }
         }
-    },
+      ]
+    }
+    ```
+
+- Обновляет параметры Spark для пула носителей в **cluster. JSON**.
+    ```json
     {
-      "op": "replace",
-      "path": "$.spec.pools[?(@.spec.type == 'Storage')].hadoop.spark",
-      "value": {
+      "patch": [
+        {
+          "op": "replace",
+          "path": "$.spec.pools[?(@.spec.type == 'Storage')].hadoop.spark",
+          "value": {
         "driverMemory": "2g",
         "driverCores": 1,
         "executorInstances": 3,
         "executorCores": 1,
         "executorMemory": "1536m"
-      }
-    },
+          }
+        }   
+      ]
+    }
+    ```
+
+- Создает пул Spark с 2 экземплярами в **cluster. JSON**.
+    ```json
     {
-      "op": "add",
-      "path": "spec.pools/-",
-      "value":
-      {
+      "patch": [
+        {
+          "op": "add",
+          "path": "spec.pools/-",
+          "value":
+          {
         "metadata": {
           "kind": "Pool",
           "name": "default"
@@ -288,21 +374,23 @@ mssqlctl bdc config section set --config-profile custom -p ./patch.json
             "executorCores": 1
           }
         }
-      }
-    }   
-  ]
-}
-```
+          }
+        } 
+      ]
+    }
+    ```
+
+
 
 > [!TIP]
-> Дополнительные сведения о структуре и параметры для изменения файла конфигурации развертывания см. в разделе [ссылка на файл конфигурации развертывания для больших данных кластеров](reference-deployment-config.md).
+> Дополнительные сведения о структуре и параметрах для изменения файла конфигурации развертывания см. в разделе [Справочник по файлам конфигурации развертывания для кластеров больших данных](reference-deployment-config.md).
 
-Используйте **mssqlctl bdc config раздел набора** для применения изменений в файл исправления JSON. В следующем примере применяется **patch.json** файл в файл конфигурации развертывания целевой **custom.json**.
+Используйте команды **конфигурации BDC аздата** , чтобы применить изменения в файле исправления JSON. В следующем примере файл **patch. JSON** применяется к целевому файлу конфигурации развертывания **Custom или Cluster. JSON**.
 
 ```bash
-mssqlctl bdc config section set --config-profile custom -p ./patch.json
+azdata bdc config patch --config-file custom/cluster.json --patch-file ./patch.json
 ```
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Дополнительные сведения об использовании файлов конфигурации при развертывании кластера больших данных, см. в разделе [развертывание больших данных в SQL Server кластеров Kubernetes](deployment-guidance.md#configfile).
+Дополнительные сведения об использовании файлов конфигурации в развертываниях кластера больших данных см. в статье [развертывание SQL Server кластеров больших данных в Kubernetes](deployment-guidance.md#configfile).

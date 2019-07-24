@@ -1,114 +1,114 @@
 ---
 title: Загрузка примера данных
 titleSuffix: SQL Server big data clusters
-description: Этом руководстве показано, как Загрузка образца данных в кластер SQL Server больших данных. Пример данных содержит реляционные данные в основной экземпляр SQL Server. Она также включает данные из HDFS в пуле носителей. Эти данные поддерживает другие руководства в этом разделе.
+description: В этом руководстве показано, как загрузить демонстрационные данные в SQL Server кластер больших данных. Образец данных включает в себя реляционные данные в экземпляре SQL Server master. Он также включает в себя данные HDFS в пуле носителей. Эти данные поддерживают другие учебники в этом разделе.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 04/23/2019
+ms.date: 07/24/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 30e3756251cc8df5ba9e14278983d44d0f6d4ef3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5b35eccece4df47cb483932386cf6a38e45d2dc8
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67957786"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419277"
 ---
-# <a name="tutorial-load-sample-data-into-a-sql-server-big-data-cluster"></a>Учебник. Загрузка образца данных в кластер SQL Server больших данных
+# <a name="tutorial-load-sample-data-into-a-sql-server-big-data-cluster"></a>Учебник. Загрузка демонстрационных данных в SQL Server кластер больших данных
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Этом руководстве объясняется, как использовать скрипт для загрузки демонстрационных данных в кластере SQL Server 2019 больших данных (Предварительная версия). Во многих других учебников в документации используется следующий образец данных.
+В этом учебнике объясняется, как использовать сценарий для загрузки демонстрационных данных в кластер больших данных SQL Server 2019 (Предварительная версия). Многие другие учебники в документации используют этот образец данных.
 
 > [!TIP]
-> Дополнительные примеры для кластера SQL Server 2019 больших данных (Предварительная версия) можно найти в [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster) репозитория GitHub. Они находятся в **sql-server-samples/samples/features/sql-big-data-cluster/** путь.
+> Дополнительные примеры для кластера больших данных SQL Server 2019 (Предварительная версия) можно найти в репозитории GitHub [SQL-Server-Samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster) . Они находятся в папке **SQL-Server-Samples/Samples/Features/SQL-Big-Data-Cluster/** Path.
 
 ## <a name="prerequisites"></a>предварительные требования
 
-- [Кластер развернутой больших данных](deployment-guidance.md)
-- [Средства работы с большими данными](deploy-big-data-tools.md)
-   - **mssqlctl**
+- [Развернутый кластер больших данных](deployment-guidance.md)
+- [Инструменты для обработки больших данных](deploy-big-data-tools.md)
+   - **аздата**
    - **kubectl**
    - **sqlcmd**
-   - **curl**
+   - **листывания**
 
-## <a id="sampledata"></a> Загрузка образца данных
+## <a id="sampledata"></a>Загрузить образец данных
 
-Далее используется сценарий начальной загрузки для загрузки резервной копии базы данных SQL Server и загрузка данных в кластере больших данных. Для удобства использования, эти действия была выведена в [Windows](#windows) и [Linux](#linux) разделы.
+Следующие шаги используются для загрузки резервной копии базы данных SQL Server и загрузки данных в кластер больших данных с помощью скрипта начальной загрузки. Чтобы упростить использование, эти действия были разбиты на разделы [Windows](#windows) и [Linux](#linux) .
 
-## <a id="windows"></a> Windows
+## <a id="windows"></a>Windows
 
-Ниже описано, как использовать клиент Windows для загрузки образца данных в кластере больших данных.
+Следующие шаги описывают использование клиента Windows для загрузки образца данных в кластер больших данных.
 
 1. Откройте новую командную строку Windows.
 
    > [!IMPORTANT]
-   > Не используйте Windows PowerShell для этих шагов. В PowerShell, скрипт завершится ошибкой, так как он будет использовать версии PowerShell **curl**.
+   > Не используйте Windows PowerShell для выполнения этих действий. В PowerShell выполнение скрипта завершится ошибкой, так как в нем будет использоваться версия, используемая в **PowerShell.**
 
-1. Используйте **curl** для загрузки начальной загрузки скрипта для образца данных.
+1. Используйте **фигурную скобку** , чтобы скачать скрипт начальной загрузки для образца данных.
 
    ```cmd
    curl -o bootstrap-sample-db.cmd "https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/bootstrap-sample-db.cmd"
    ```
 
-1. Скачайте **bootstrap пример db.sql** сценарий Transact-SQL. Этот сценарий вызывается с помощью начальной загрузки скрипта.
+1. Скачайте скрипт Transact-SQL **бутстрап-сампле-дБ. SQL** . Этот скрипт вызывается скриптом начальной загрузки.
 
    ```cmd
    curl -o bootstrap-sample-db.sql "https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/bootstrap-sample-db.sql"
    ```
 
-1. Загрузочный сценарий требует следующих позиционные параметры для больших данных кластера:
+1. Для скрипта начальной загрузки требуются следующие параметры для кластера больших данных:
 
    | Параметр | Описание |
    |---|---|
-   | < CLUSTER_NAMESPACE > | Имя присвоенное кластеру больших данных. |
+   | < CLUSTER_NAMESPACE > | Имя, присвоенное кластеру больших данных. |
    | < SQL_MASTER_IP > | IP-адрес главного экземпляра. |
-   | <SQL_MASTER_SA_PASSWORD> | Пароль системного Администратора для главного экземпляра. |
-   | <KNOX_IP> | IP-адрес шлюза HDFS или Spark. |
-   | < KNOX_PASSWORD > | Пароль для шлюза HDFS или Spark. |
+   | <SQL_MASTER_SA_PASSWORD> | Пароль SA для главного экземпляра. |
+   | <KNOX_IP> | IP-адрес шлюза HDFS/Spark. |
+   | < KNOX_PASSWORD > | Пароль для шлюза HDFS/Spark. |
 
    > [!TIP]
-   > Используйте [kubectl](cluster-troubleshooting-commands.md) найти IP-адреса для главного экземпляра SQL Server и Knox. Запустите `kubectl get svc -n <your-big-data-cluster-name>` и посмотрите на внешний IP-адреса основной экземпляр (**master-svc-external**) и Knox (**шлюз svc-external**). Имя по умолчанию кластера — **mssql-cluster**.
+   > Используйте [kubectl](cluster-troubleshooting-commands.md) , чтобы найти IP-адреса для экземпляра SQL Server master и Knox. Запустите `kubectl get svc -n <your-big-data-cluster-name>` и просмотрите внешние IP-адреса для главного экземпляра (**master-SVC-External**) и Knox (**шлюз-SVC-External**). Имя кластера по умолчанию — **MSSQL-Cluster**.
 
-1. Скрипт начальной загрузки.
+1. Запустите скрипт начальной загрузки.
 
    ```cmd
    .\bootstrap-sample-db.cmd <CLUSTER_NAMESPACE> <SQL_MASTER_IP> <SQL_MASTER_SA_PASSWORD> <KNOX_IP> <KNOX_PASSWORD>
    ```
 
-## <a id="linux"></a> Linux
+## <a id="linux"></a>Linux
 
-Ниже описывается использование клиента Linux для загрузки образца данных в кластере больших данных.
+Следующие шаги описывают использование клиента Linux для загрузки образца данных в кластер больших данных.
 
-1. Скачайте загрузочный сценарий и назначить ей разрешение.
+1. Скачайте скрипт начальной загрузки и назначьте ему разрешения исполняемого файла.
 
    ```bash
    curl -o bootstrap-sample-db.sh "https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/bootstrap-sample-db.sh"
    chmod +x bootstrap-sample-db.sh
    ```
 
-1. Скачайте **bootstrap пример db.sql** сценарий Transact-SQL. Этот сценарий вызывается с помощью начальной загрузки скрипта.
+1. Скачайте скрипт Transact-SQL **бутстрап-сампле-дБ. SQL** . Этот скрипт вызывается скриптом начальной загрузки.
 
    ```bash
    curl -o bootstrap-sample-db.sql "https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/bootstrap-sample-db.sql"
    ```
 
-1. Загрузочный сценарий требует следующих позиционные параметры для больших данных кластера:
+1. Для скрипта начальной загрузки требуются следующие параметры для кластера больших данных:
 
    | Параметр | Описание |
    |---|---|
-   | < CLUSTER_NAMESPACE > | Имя присвоенное кластеру больших данных. |
+   | < CLUSTER_NAMESPACE > | Имя, присвоенное кластеру больших данных. |
    | < SQL_MASTER_IP > | IP-адрес главного экземпляра. |
-   | <SQL_MASTER_SA_PASSWORD> | Пароль системного Администратора для главного экземпляра. |
-   | <KNOX_IP> | IP-адрес шлюза HDFS или Spark. |
-   | < KNOX_PASSWORD > | Пароль для шлюза HDFS или Spark. |
+   | <SQL_MASTER_SA_PASSWORD> | Пароль SA для главного экземпляра. |
+   | <KNOX_IP> | IP-адрес шлюза HDFS/Spark. |
+   | < KNOX_PASSWORD > | Пароль для шлюза HDFS/Spark. |
 
    > [!TIP]
-   > Используйте [kubectl](cluster-troubleshooting-commands.md) найти IP-адреса для главного экземпляра SQL Server и Knox. Запустите `kubectl get svc -n <your-big-data-cluster-name>` и посмотрите на внешний IP-адреса основной экземпляр (**master-svc-external**) и Knox (**шлюз svc-external**). Имя по умолчанию кластера — **mssql-cluster**.
+   > Используйте [kubectl](cluster-troubleshooting-commands.md) , чтобы найти IP-адреса для экземпляра SQL Server master и Knox. Запустите `kubectl get svc -n <your-big-data-cluster-name>` и просмотрите внешние IP-адреса для главного экземпляра (**master-SVC-External**) и Knox (**шлюз-SVC-External**). Имя кластера по умолчанию — **MSSQL-Cluster**.
 
-1. Скрипт начальной загрузки.
+1. Запустите скрипт начальной загрузки.
 
    ```bash
    sudo env "PATH=$PATH" ./bootstrap-sample-db.sh <CLUSTER_NAMESPACE> <SQL_MASTER_IP> <SQL_MASTER_SA_PASSWORD> <KNOX_IP> <KNOX_PASSWORD>
@@ -116,18 +116,18 @@ ms.locfileid: "67957786"
 
 ## <a name="next-steps"></a>Следующие шаги
 
-После выполнения начальной загрузки сценария, кластер больших данных содержит образцы баз данных и данные из HDFS. Следующие учебники использовать образцы данных для демонстрации возможностей кластера больших данных:
+После запуска скрипта начальной загрузки кластер больших данных будет иметь образцы баз данных и данные HDFS. В следующих учебниках используются образцы данных для демонстрации возможностей кластера больших данных.
 
-Виртуализация данных.
+Виртуализация данных:
 
-- [Учебник. Запрос HDFS в кластере SQL Server больших данных](tutorial-query-hdfs-storage-pool.md)
-- [Учебник. Запрос Oracle из больших данных кластера SQL Server](tutorial-query-oracle.md)
+- [Учебник. Запрос HDFS в SQL Server кластере больших данных](tutorial-query-hdfs-storage-pool.md)
+- [Учебник. Запрос Oracle из SQL Server кластера больших данных](tutorial-query-oracle.md)
 
 Прием данных:
 
 - [Учебник. Прием данных в пул данных SQL Server с помощью Transact-SQL](tutorial-data-pool-ingest-sql.md)
 - [Учебник. Прием данных в пул данных SQL Server с помощью заданий Spark](tutorial-data-pool-ingest-spark.md)
 
-Записные книжки:
+Компьютеры
 
-- [Учебник. Запуск записной книжки образец в кластере SQL Server 2019 больших данных](tutorial-notebook-spark.md)
+- [Учебник. Запуск примера записной книжки в кластере больших данных SQL Server 2019](tutorial-notebook-spark.md)

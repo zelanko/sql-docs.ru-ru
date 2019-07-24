@@ -21,19 +21,19 @@ ms.assetid: 0068f258-b998-4e4e-b47b-e375157c8213
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e9a23f839fcb828d9c90198d8aadffb6a8cfe0ee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 07d2e8032bb596faaac577194273760c59006645
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67896444"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68418862"
 ---
 # <a name="spquerystoreforceplan-transact-sql"></a>sp_query_store_force_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Включает принудительного использования определенного плана для конкретного запроса.  
+  Включает принудительное применение определенного плана для конкретного запроса.  
   
- Когда план выполнена принудительно для конкретного запроса, каждый раз [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обнаруживает запрос, он пытается принудительно применить план оптимизатора. Форсирование плана в случае сбоя событие XEvent порождается, и оптимизатор дано указание оптимизации обычным способом.  
+ Если план принудительно используется для конкретного запроса, каждый раз [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при возникновении запроса он пытается принудительно выполнить план в оптимизаторе. Если форсирование плана завершается неудачей, срабатывает событие XEvent, и оптимизатору предписывается оптимизация обычным способом.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,9 +45,9 @@ sp_query_store_force_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @query_id = ] query_id` Это идентификатор запроса. *query_id* — **bigint**, не имеет значения по умолчанию.  
+`[ @query_id = ] query_id`Идентификатор запроса. *query_id* имеет тип **bigint**и не имеет значения по умолчанию.  
   
-`[ @plan_id = ] plan_id` — Идентификатор принудительного плана запроса. *plan_id* — **bigint**, не имеет значения по умолчанию.  
+`[ @plan_id = ] plan_id`Идентификатор плана запроса, который необходимо принудительно применить. *plan_id* имеет тип **bigint**и не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
@@ -55,10 +55,10 @@ sp_query_store_force_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;]
 ## <a name="remarks"></a>Примечания  
   
 ## <a name="permissions"></a>Разрешения  
- Требуется **EXECUTE** разрешений в базе данных, и **вставить**, **обновление**, и **удалить** разрешение для каталога хранилища запросов Представления.  
+ Требуется разрешение **ALTER** на базу данных.
   
 ## <a name="examples"></a>Примеры  
- Следующий пример возвращает сведения о запросах в хранилище запросов.  
+ В следующем примере возвращаются сведения о запросах в хранилище запросов.  
   
 ```  
 SELECT Txt.query_text_id, Txt.query_sql_text, Pl.plan_id, Qry.*  
@@ -69,19 +69,19 @@ JOIN sys.query_store_query_text AS Txt
     ON Qry.query_text_id = Txt.query_text_id ;  
 ```  
   
- После определения query_id и plan_id, который вы хотите принудительно, используйте следующий пример, чтобы принудительно использовать план запроса.  
+ Определив query_id и plan_id, которые вы хотите форсировать, используйте следующий пример, чтобы принудительно использовать план в запросе.  
   
 ```  
 EXEC sp_query_store_force_plan 3, 3;  
 ```  
   
 ## <a name="see-also"></a>См. также  
- [sp_query_store_remove_plan &#40;Transct-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)   
- [sp_query_store_remove_query &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)   
- [sp_query_store_unforce_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)   
+ [sp_query_store_remove_plan &#40;TRANSCT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)   
+ [sp_query_store_remove_query &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)   
+ [sp_query_store_unforce_plan &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)   
  [Query Store Catalog Views (Transact-SQL) ](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)  (Представления каталогов хранилища запросов (Transact-SQL))  
  [Мониторинг производительности с использованием хранилища запросов](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
- [sp_query_store_reset_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-reset-exec-stats-transact-sql.md)   
+ [sp_query_store_reset_exec_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-reset-exec-stats-transact-sql.md)   
  [sp_query_store_flush_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql.md)  
   
   
