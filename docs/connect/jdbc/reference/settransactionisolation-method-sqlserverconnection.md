@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 6a8fa4d3-5237-40f8-8a02-b40a3d7a1131
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: bb352bf06b6fc825d1fb45406bc6aab4336d0bb0
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: e7e803e60568030eb105fa52a15bc2c2bc4b3e8d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66766862"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67972290"
 ---
 # <a name="settransactionisolation-method-sqlserverconnection"></a>Метод setTransactionIsolation (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -54,7 +53,7 @@ public void setTransactionIsolation(int level)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод setTransactionIsolation указывается с помощью метода setTransactionIsolation в интерфейсе java.sql.Connection.  
+ Этот метод setTransactionIsolation задается методом setTransactionIsolation в интерфейсе Java. SQL. Connection.  
   
  Транзакции не фиксируются, если этот метод вызван в середине транзакции.  
   
